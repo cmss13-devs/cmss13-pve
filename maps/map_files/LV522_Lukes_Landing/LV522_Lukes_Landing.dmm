@@ -192,7 +192,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "aC" = (
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
@@ -306,6 +306,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/corporate)
+"aT" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/outdoors/colony)
 "aU" = (
 /obj/structure/filingcabinet{
 	pixel_x = 7
@@ -534,7 +540,7 @@
 	dir = 4
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "bz" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/north,
@@ -587,7 +593,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "bH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -628,17 +634,22 @@
 /area/lv522_l_l/outdoors/colony)
 "bM" = (
 /obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "S"
+	icon_state = "SE-out";
+	pixel_x = 1
 	},
-/obj/structure/fence{
-	layer = 2.9
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	pixel_x = 12
 	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "bO" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
@@ -698,6 +709,16 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/indoors/corporate)
+"bV" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "bW" = (
 /obj/structure/machinery/power/port_gen/pacman/mrs,
 /turf/open/asphalt/cement,
@@ -881,7 +902,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "cy" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/prison,
@@ -1019,6 +1040,12 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/basement/colony)
+"cT" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522_l_l/outdoors/colony)
 "cU" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/prison/floor_plate,
@@ -1208,6 +1235,12 @@
 	},
 /turf/open/asphalt/cement/cement14,
 /area/lv522_l_l/outdoors/colony)
+"dA" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522_l_l/outdoors/colony)
 "dB" = (
 /obj/structure/machinery/light/double{
 	dir = 4
@@ -1273,12 +1306,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "dJ" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement15,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/floor/prison,
+/area/lv522_l_l/outdoors/colony)
 "dK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double,
@@ -1302,8 +1332,15 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/mining)
 "dO" = (
-/turf/open/asphalt/cement/cement2,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "dP" = (
 /obj/structure/closet/firecloset/full,
 /obj/effect/decal/cleanable/dirt,
@@ -1459,7 +1496,7 @@
 "el" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/auto_turf/shale/layer2,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "em" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/plate{
@@ -1508,7 +1545,7 @@
 /area/lv522_l_l/indoors/slaughterhouse)
 "er" = (
 /turf/open/asphalt/cement/cement12,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "es" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -1737,7 +1774,7 @@
 "eZ" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "fa" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -1753,18 +1790,18 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "fc" = (
-/obj/structure/stairs/perspective{
-	dir = 5;
-	icon_state = "p_stair_full"
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/obj/structure/platform/strata/metal{
-	dir = 1
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
 	},
-/obj/structure/platform/strata/metal{
-	dir = 8
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
-/turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "ff" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -1839,7 +1876,7 @@
 	layer = 2.9
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "fo" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -1950,8 +1987,18 @@
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/sec)
 "fC" = (
-/obj/structure/platform/strata/metal,
-/turf/open/asphalt/cement/cement4,
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 9;
+	pixel_y = 3
+	},
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4;
+	pixel_y = -15
+	},
+/turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "fE" = (
 /obj/structure/extinguisher_cabinet{
@@ -1998,21 +2045,15 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
 "fL" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
+/obj/structure/prop/server_equipment/yutani_server{
+	pixel_y = 21;
+	layer = 4.1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
-/obj/structure/fence{
-	layer = 2.9
-	},
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/outdoors/colony)
 "fM" = (
 /obj/structure/machinery/light/double,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -2216,12 +2257,26 @@
 "gn" = (
 /obj/structure/prop/dam/truck,
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "go" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/slaughterhouse)
+"gp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/platform/strata/metal,
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "gq" = (
 /obj/item/lightstick/red/spoke/planted,
 /turf/open/auto_turf/shale/layer2,
@@ -2243,6 +2298,23 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/sec)
+"gt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = 21
+	},
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "gu" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -2315,7 +2387,7 @@
 	layer = 2.9
 	},
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "gD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -2323,8 +2395,8 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "gE" = (
-/obj/structure/largecrate/random/barrel/true_random,
-/turf/open/auto_turf/snow/layer0,
+/obj/structure/platform_decoration/strata/metal,
+/turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "gF" = (
 /obj/structure/surface/table/almayer,
@@ -2580,7 +2652,7 @@
 "hr" = (
 /obj/structure/largecrate/random/case/small,
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "hs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double,
@@ -2636,6 +2708,16 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/slaughterhouse)
+"hB" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "hC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -2697,9 +2779,10 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "hK" = (
-/obj/structure/platform_decoration/strata/metal,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement4,
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1
+	},
+/turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "hL" = (
 /obj/structure/stairs/perspective{
@@ -2733,11 +2816,12 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
 "hN" = (
-/obj/structure/platform/strata/metal{
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
 	},
-/turf/open/asphalt/cement/cement3,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "hO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/space_heater/radiator/red{
@@ -2795,7 +2879,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "hU" = (
 /obj/vehicle/powerloader{
 	dir = 4;
@@ -2804,11 +2888,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "hV" = (
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony)
 "hW" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
@@ -2869,7 +2951,7 @@
 	},
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/snow/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "ih" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -2969,13 +3051,13 @@
 /area/lv522_l_l/basement/colony)
 "it" = (
 /obj/structure/stairs/perspective{
-	dir = 6;
+	dir = 8;
 	icon_state = "p_stair_full"
 	},
-/obj/structure/platform/strata/metal{
-	dir = 8
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair_alt"
 	},
-/turf/open/asphalt/cement/cement1,
+/turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "iu" = (
 /obj/structure/prop/invuln/minecart_tracks{
@@ -3065,7 +3147,11 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
 "iB" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "iC" = (
 /obj/structure/ladder{
@@ -3126,6 +3212,9 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"iJ" = (
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/outdoors/colony)
 "iK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/optable{
@@ -3422,6 +3511,16 @@
 	},
 /turf/open/asphalt/cement/cement14,
 /area/lv522_l_l/outdoors/colony)
+"jv" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8;
+	pixel_y = -13
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "jw" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe,
@@ -3501,6 +3600,14 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/slaughterhouse)
+"jI" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random,
+/turf/open/asphalt/cement/cement12,
+/area/lv522_l_l/outdoors/colony)
 "jJ" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -3831,7 +3938,7 @@
 "kG" = (
 /obj/structure/largecrate/random,
 /turf/open/auto_turf/shale/layer2,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "kH" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -3976,6 +4083,13 @@
 	},
 /turf/open/asphalt/cement/cement12,
 /area/lv522_l_l/outdoors/colony)
+"la" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "lb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/yellow{
@@ -4022,6 +4136,13 @@
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"lj" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -22;
+	pixel_y = 18
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "lk" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -4051,7 +4172,7 @@
 "ln" = (
 /obj/structure/prop/dam/drill,
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "lo" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
@@ -4112,7 +4233,7 @@
 	dir = 4
 	},
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "lx" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -4241,6 +4362,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
+"lP" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "lQ" = (
 /obj/structure/cargo_container/kelland/left,
 /turf/open/auto_turf/shale/layer1,
@@ -4294,6 +4421,10 @@
 /obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/dorms)
+"mc" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe,
+/area/lv522_l_l/outdoors/colony)
 "md" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	dir = 1
@@ -4343,12 +4474,8 @@
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/basement/colony)
 "mj" = (
-/obj/structure/stairs/perspective{
-	dir = 4;
-	icon_state = "p_stair_full"
-	},
-/turf/open/asphalt/cement/cement1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/floor/prison,
+/area/lv522_l_l/outdoors/colony)
 "mk" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 1;
@@ -4386,9 +4513,12 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
 "mq" = (
-/obj/structure/largecrate/random/barrel/true_random,
-/turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "mr" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -4459,11 +4589,15 @@
 /turf/open/floor/plating,
 /area/lv522_l_l/indoors/corporate)
 "mA" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 1
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
 	},
-/turf/open/asphalt/cement/cement9,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/outdoors/colony)
 "mB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/case/double,
@@ -4503,7 +4637,7 @@
 	},
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "mH" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -4547,6 +4681,10 @@
 	dir = 10
 	},
 /turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony)
+"mN" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/outdoors/colony)
 "mO" = (
 /obj/structure/grille,
@@ -4619,6 +4757,12 @@
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
+"mZ" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "na" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/void,
@@ -4719,7 +4863,7 @@
 	icon_state = "S"
 	},
 /turf/closed/wall/strata_outpost/reinforced,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "nm" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/green,
 /turf/open/floor/prison/cell_stripe/east,
@@ -5216,11 +5360,13 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
 "oB" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 8
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
 	},
-/turf/open/asphalt/cement/cement14,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "oC" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -5427,6 +5573,12 @@
 	},
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/sec)
+"pd" = (
+/obj/structure/machinery/light/double{
+	light_color = "#BB3F3F"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "pe" = (
 /obj/structure/platform_decoration/strata/metal,
 /obj/effect/decal/cleanable/dirt,
@@ -5502,6 +5654,16 @@
 	dir = 4
 	},
 /turf/open/asphalt/cement/cement3,
+/area/lv522_l_l/outdoors/colony)
+"pq" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair_alt"
+	},
+/turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony)
 "pr" = (
 /obj/effect/decal/warning_stripes{
@@ -5667,6 +5829,19 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/basement/colony)
+"pP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "pQ" = (
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/mining)
@@ -5995,13 +6170,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
 "qN" = (
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/obj/structure/platform/strata/metal,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/auto_turf/shale/layer2,
+/area/lv522_l_l/outdoors/colony)
 "qO" = (
 /obj/structure/machinery/power/apc/no_power/west,
 /obj/structure/cable/heavyduty{
@@ -6121,12 +6292,22 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "rb" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 4
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement12,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = -9
+	},
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "rc" = (
 /obj/structure/pipes/standard/simple/hidden/yellow{
 	dir = 4
@@ -6181,6 +6362,16 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/airtraffic)
+"rk" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 9;
+	pixel_y = 3
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "rl" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/indoors/airtraffic)
@@ -6484,7 +6675,7 @@
 "rX" = (
 /obj/structure/prop/dam/truck,
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "rY" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/generic,
@@ -7214,6 +7405,13 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/basement/mine)
+"tS" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "tT" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -7244,9 +7442,19 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "tW" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk/prison,
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "tX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/north,
@@ -7309,12 +7517,11 @@
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/basement/colony)
 "uh" = (
-/obj/structure/platform/strata/metal{
+/obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement3,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "ui" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -7402,18 +7609,22 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "us" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 4
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement1,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "ut" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 4
-	},
-/turf/open/asphalt/cement/cement12,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/structure/ore_box,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony)
 "uu" = (
 /obj/structure/cargo_container/kelland/left{
 	layer = 4.13;
@@ -7582,10 +7793,20 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/mine)
 "uU" = (
-/obj/structure/platform/strata/metal{
-	dir = 8
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
 	},
-/turf/open/asphalt/cement/cement1,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "uV" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -7718,6 +7939,23 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
+"vk" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = 21
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "vl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/yellow{
@@ -7730,6 +7968,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
+"vm" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -22;
+	pixel_y = 2
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "vn" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -8034,7 +8279,7 @@
 "vZ" = (
 /obj/structure/prop/dam/drill,
 /turf/open/auto_turf/snow/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "wa" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -8134,6 +8379,10 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
+"wj" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/west,
+/area/lv522_l_l/outdoors/colony)
 "wk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
@@ -8859,6 +9108,9 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/lv522_l_l/outdoors/colony)
+"ye" = (
+/turf/closed/wall/strata_ice/dirty,
+/area/lv522_l_l/outdoors/colony)
 "yg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random,
@@ -8889,6 +9141,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/airtraffic)
+"yl" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair_alt"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "ym" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -8903,7 +9165,7 @@
 	},
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "yp" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/prison/floor_plate,
@@ -8971,7 +9233,7 @@
 	pixel_y = 14
 	},
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "yz" = (
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -8980,6 +9242,23 @@
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
+"yA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "yB" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
@@ -9177,7 +9456,7 @@
 /obj/item/ore/silver,
 /obj/item/ore/silver,
 /turf/open/auto_turf/shale/layer2,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "zg" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/prison,
@@ -9204,6 +9483,12 @@
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/basement/colony)
+"zk" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "zl" = (
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/clinic)
@@ -9549,7 +9834,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Ai" = (
 /obj/docking_port/stationary/trijent_elevator{
 	height = 5;
@@ -9699,7 +9984,16 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/indoors/airtraffic)
 "AD" = (
-/turf/open/asphalt/cement/cement1,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "AE" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -9772,6 +10066,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/dorms)
+"AP" = (
+/obj/structure/prop/tower{
+	layer = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/outdoors/colony)
 "AQ" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/window/reinforced{
@@ -9903,7 +10203,7 @@
 "Bf" = (
 /obj/structure/largecrate/random,
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Bg" = (
 /obj/structure/platform_decoration/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -9946,6 +10246,27 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
+"Bo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = 21
+	},
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "Bp" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
@@ -10125,6 +10446,21 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/basement/mine)
+"BQ" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony)
+"BR" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/cargo_container/kelland/left,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "BS" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -10245,6 +10581,9 @@
 /obj/structure/prop/vehicles/crawler{
 	layer = 3.2
 	},
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
 /turf/open/auto_turf/shale/layer2,
 /area/lv522_l_l/outdoors/colony)
 "Cl" = (
@@ -10295,6 +10634,15 @@
 /obj/structure/curtain/red,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/corporate)
+"Cr" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "Cs" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -10305,6 +10653,14 @@
 "Ct" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/lv522_l_l/indoors/storage)
+"Cu" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "Cv" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -10373,14 +10729,14 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/indoors/corporate)
 "CI" = (
-/obj/structure/platform/strata/metal,
-/obj/structure/platform_decoration/strata/metal,
-/turf/open/asphalt/cement/cement4,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/structure/largecrate/random,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony)
 "CJ" = (
 /obj/structure/ore_box,
 /turf/open/auto_turf/shale/layer2,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "CK" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -10428,7 +10784,7 @@
 	pixel_y = 14
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "CR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -10499,11 +10855,12 @@
 /turf/open/asphalt/cement/cement4,
 /area/lv522_l_l/outdoors/colony)
 "CZ" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 8
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 5;
+	pixel_y = -3
 	},
-/turf/open/asphalt/cement/cement3,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "Da" = (
 /obj/structure/ladder{
 	height = 1;
@@ -10742,6 +11099,9 @@
 "DL" = (
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/slaughterhouse)
+"DM" = (
+/turf/open/floor/prison/cell_stripe/west,
+/area/lv522_l_l/outdoors/colony)
 "DN" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -10963,11 +11323,14 @@
 /area/lv522_l_l/basement/mine)
 "Et" = (
 /obj/structure/platform/strata/metal{
-	dir = 8
+	dir = 1
 	},
-/obj/structure/platform/strata/metal,
-/turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8;
+	pixel_y = -15
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "Eu" = (
 /obj/structure/machinery/light/double{
 	dir = 1;
@@ -11111,7 +11474,11 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/indoors/mining)
 "EP" = (
-/turf/open/asphalt/cement/cement14,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/structure/platform/strata/metal,
+/turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "EQ" = (
 /obj/structure/surface/table/almayer,
@@ -11421,6 +11788,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony_outskirts)
+"FD" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "FE" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -11456,6 +11830,10 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
+"FG" = (
+/obj/structure/cargo_container/kelland/left,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "FH" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -11474,14 +11852,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "FJ" = (
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/structure/prop/ice_colony/ground_wire,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "FK" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
@@ -11635,7 +12008,7 @@
 	layer = 2.9
 	},
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Gh" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
@@ -11743,7 +12116,7 @@
 	layer = 2.9
 	},
 /turf/open/auto_turf/shale/layer2,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Gx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -11918,6 +12291,14 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony_outskirts)
+"GS" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/cargo_container/kelland/right,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "GU" = (
 /obj/structure/bed/chair/comfy,
 /obj/structure/machinery/firealarm{
@@ -11981,6 +12362,23 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/basement/mine)
+"Hd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = 15
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "He" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -12340,7 +12738,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Ie" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/lv522_l_l/indoors/airtraffic)
@@ -12477,6 +12875,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/indoors/mining)
+"It" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "Iu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -12656,7 +13062,7 @@
 	pixel_y = 14
 	},
 /turf/open/auto_turf/shale/layer2,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "IR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -12734,11 +13140,18 @@
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/engineering)
 "IX" = (
-/obj/structure/platform_decoration/strata/metal,
-/obj/structure/platform_decoration/strata/metal{
-	dir = 1
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
 	},
-/turf/open/asphalt/cement/cement4,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk/prison,
+/turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "IY" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -12807,12 +13220,12 @@
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/corporate)
 "Ji" = (
-/obj/structure/platform/strata/metal{
-	dir = 8
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 6;
+	pixel_y = 18
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "Jj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/medical2,
@@ -13004,16 +13417,11 @@
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
 "JF" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 1
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
 	},
-/obj/structure/closet/crate/trashcart,
-/obj/item/trash/c_tube,
-/obj/item/trash/c_tube,
-/obj/item/trash/burger,
-/obj/item/trash/burger,
-/turf/open/asphalt/cement/cement9,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "JG" = (
 /obj/structure/machinery/power/apc/no_power/west,
 /obj/structure/cable/heavyduty{
@@ -13245,8 +13653,21 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
 "Kl" = (
-/obj/structure/largecrate/random,
-/turf/open/auto_turf/sand_white/layer0,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = 15
+	},
+/turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "Km" = (
 /obj/structure/stairs/perspective{
@@ -13352,6 +13773,9 @@
 /obj/item/ore/silver,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
+"KB" = (
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522_l_l/outdoors/colony)
 "KC" = (
 /obj/structure/machinery/light/double{
 	dir = 1;
@@ -13467,11 +13891,22 @@
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
 "KS" = (
-/obj/structure/cargo_container/kelland/left{
-	layer = 4.13
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "KT" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -13538,6 +13973,13 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/basement/colony)
+"Ld" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/obj/structure/platform/strata/metal,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "Le" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/kitchen,
@@ -13629,15 +14071,10 @@
 /turf/open/asphalt/cement/cement14,
 /area/lv522_l_l/outdoors/colony)
 "Lq" = (
-/obj/structure/fence,
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "Lr" = (
 /obj/structure/xenoautopsy/tank{
@@ -13724,9 +14161,18 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/sec)
 "LD" = (
-/obj/structure/platform_decoration/strata/metal,
-/turf/open/asphalt/cement/cement2,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "LE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -13744,7 +14190,7 @@
 /obj/item/ore/silver,
 /obj/item/ore/silver,
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "LG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/firecloset/full,
@@ -13897,11 +14343,9 @@
 /turf/open/asphalt/cement/cement15,
 /area/lv522_l_l/outdoors/colony)
 "Mc" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 4
-	},
-/turf/open/asphalt/cement/cement15,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522_l_l/outdoors/colony)
 "Me" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
@@ -14063,6 +14507,14 @@
 	},
 /turf/open/floor/strata/white_cyan1,
 /area/lv522_l_l/indoors/clinic)
+"MB" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "MC" = (
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/corporate)
@@ -14191,7 +14643,7 @@
 "MT" = (
 /obj/structure/prop/dam/truck/cargo,
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "MU" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -14314,6 +14766,22 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/corporate)
+"Nl" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "Nm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -14595,6 +15063,14 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv522_l_l/indoors/canteen)
+"NW" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "NX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -14939,11 +15415,8 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "OS" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement9,
+/obj/structure/platform_decoration/strata/metal,
+/turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "OT" = (
 /obj/structure/stairs/perspective{
@@ -15568,7 +16041,7 @@
 	layer = 2.9
 	},
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "QI" = (
 /obj/structure/prop/vehicles{
 	icon_state = "truck_damaged";
@@ -15786,8 +16259,12 @@
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/basement/colony)
 "Rk" = (
-/turf/open/asphalt/cement/cement15,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "Rl" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -15835,6 +16312,15 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/basement/mine)
+"Rp" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "Rq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -15865,6 +16351,12 @@
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/corporate)
+"Rw" = (
+/obj/structure/prop/vehicles/crawler{
+	icon_state = "crawler_covered_bed"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "Rx" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/window/reinforced{
@@ -15915,7 +16407,7 @@
 	layer = 2.9
 	},
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "RD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform_decoration/strata/metal{
@@ -16013,6 +16505,16 @@
 	},
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony)
+"RR" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "RS" = (
 /obj/structure/prop/invuln/minecart_tracks,
 /obj/effect/decal/cleanable/dirt,
@@ -16112,14 +16614,21 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/corporate)
 "Sh" = (
-/obj/structure/platform/strata/metal{
-	dir = 1
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/obj/structure/platform/strata/metal{
-	dir = 4
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "Si" = (
 /obj/structure/stairs/perspective{
@@ -16421,7 +16930,7 @@
 	layer = 2.9
 	},
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Tb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -16444,7 +16953,7 @@
 "Td" = (
 /obj/structure/prop/dam/truck,
 /turf/open/auto_turf/shale/layer2,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Te" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -16744,9 +17253,14 @@
 "TU" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_x = 9;
-	pixel_y = 3
+	pixel_y = 10
 	},
-/turf/open/auto_turf/shale/layer2,
+/obj/structure/platform/strata/metal,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4;
+	pixel_y = 8
+	},
+/turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "TV" = (
 /obj/structure/machinery/light/double{
@@ -16770,12 +17284,15 @@
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/indoors/sec)
 "TY" = (
-/obj/structure/platform_decoration/strata/metal{
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement12,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/asphalt/cement,
+/area/lv522_l_l/outdoors/colony)
 "TZ" = (
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
@@ -16946,9 +17463,11 @@
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/engineering)
 "Uv" = (
-/obj/structure/platform/strata/metal,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement4,
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "Uw" = (
 /obj/structure/closet/secure_closet/freezer/meat,
@@ -17131,9 +17650,10 @@
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/engineering)
 "UV" = (
-/obj/structure/cargo_container/kelland/right,
-/turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/structure_lattice,
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/outdoors/colony)
 "UW" = (
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/floor/prison/cell_stripe/west,
@@ -17155,15 +17675,9 @@
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
 "UZ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
+/obj/structure/prop/structure_lattice,
 /turf/open/floor/prison/floor_plate,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Va" = (
 /obj/structure/machinery/power/apc/no_power/west,
 /turf/open/floor/strata/multi_tiles,
@@ -17192,7 +17706,7 @@
 "Vg" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/sand_white/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Vh" = (
 /obj/structure/cargo_container/lockmart/right,
 /turf/open/auto_turf/sand_white/layer0,
@@ -17684,6 +18198,20 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/clinic)
+"Ww" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/platform/strata/metal,
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony)
 "Wx" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1;
@@ -17772,12 +18300,8 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/engineering)
 "WI" = (
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/outdoors/colony)
 "WJ" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -17885,6 +18409,14 @@
 /obj/structure/pipes/standard/manifold/fourway/hidden/green,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/basement/colony)
+"WW" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8;
+	pixel_y = 9
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
 "WX" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -17949,9 +18481,13 @@
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
 "Xg" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement/cement12,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/obj/structure/platform/strata/metal,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8;
+	pixel_y = 7
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "Xh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -17991,7 +18527,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Xm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -18081,6 +18617,16 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/dorms)
+"XE" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4;
+	pixel_y = -16
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "XF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/yellow,
@@ -18179,7 +18725,7 @@
 "XS" = (
 /obj/structure/prop/dam/drill,
 /turf/open/auto_turf/shale/layer1,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "XT" = (
 /obj/structure/cargo_container/kelland/left{
 	layer = 4.13
@@ -18237,6 +18783,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/mining)
+"Yb" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/turf/open/asphalt/cement,
+/area/lv522_l_l/outdoors/colony)
 "Yc" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
 /turf/open/floor/corsat/marked,
@@ -18429,6 +18983,14 @@
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/almayer/w_y1/north,
 /area/lv522_l_l/indoors/dorms)
+"YE" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4;
+	pixel_y = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony)
 "YF" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -18607,7 +19169,7 @@
 	},
 /obj/structure/largecrate/random,
 /turf/open/asphalt/cement/cement3,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Zc" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/light/double{
@@ -18645,9 +19207,13 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/outdoors/colony)
 "Zf" = (
-/obj/structure/largecrate/random,
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/kutjevo,
 /turf/open/auto_turf/snow/layer0,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "Zg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/yellow{
@@ -18818,7 +19384,7 @@
 "ZC" = (
 /obj/structure/largecrate/random,
 /turf/open/asphalt/cement/cement14,
-/area/lv522_l_l/outdoors/colony_outskirts)
+/area/lv522_l_l/outdoors/colony)
 "ZD" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/basement/colony)
@@ -38436,11 +39002,11 @@ he
 he
 ew
 ew
-ew
-ew
-ew
-ew
-ew
+he
+he
+he
+he
+he
 ew
 ew
 ew
@@ -38637,15 +39203,15 @@ he
 he
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+he
+he
+he
+he
+he
+he
+he
+he
+he
 ew
 ew
 ew
@@ -38721,11 +39287,11 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
+he
+he
+he
+he
+he
 ew
 ew
 ew
@@ -38839,6 +39405,15 @@ dR
 he
 he
 he
+he
+he
+he
+he
+he
+he
+he
+he
+he
 ew
 ew
 ew
@@ -38868,18 +39443,9 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+qh
+qh
 ew
 ew
 ew
@@ -38906,6 +39472,10 @@ ew
 ew
 ew
 ew
+he
+he
+he
+he
 ew
 ew
 ew
@@ -38918,18 +39488,14 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+he
+he
+he
+he
+dR
+dR
+he
+he
 ew
 ew
 ew
@@ -39042,6 +39608,16 @@ dR
 he
 he
 he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
 ew
 ew
 ew
@@ -39060,81 +39636,71 @@ ew
 ew
 ew
 ew
+qh
+qh
+qh
+cY
+cY
+qh
+ew
+qh
+qh
+cY
+cY
+cY
+cY
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+Yt
+Yt
+Yt
+Yt
 ew
 ew
 pi
 pi
 pi
 pi
-pi
+Uv
 dR
 DI
 dR
 dR
 dR
 dR
+he
+ew
+ew
+ew
+he
+he
+he
+he
+he
+he
+he
+ew
+ew
+ew
+he
+he
+ew
+ew
+ew
+ew
+ew
+he
+he
 dR
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
 ew
 ew
 ew
@@ -39244,6 +39810,17 @@ dR
 dR
 he
 he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
 ew
 ew
 ew
@@ -39260,38 +39837,27 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+cY
+cY
+cY
+cY
+cY
+cY
+qh
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Yt
+Yt
+Yt
+Yt
+Yt
+pi
 pi
 pi
 pi
@@ -39304,43 +39870,43 @@ dR
 dR
 dR
 dR
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+he
+he
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
 ew
 ew
 ew
@@ -39446,65 +40012,18 @@ dR
 dR
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-pi
-pi
-pi
-pi
-pi
-pi
-pi
-dR
-dR
-dR
-dR
-dR
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
 dR
 ew
 ew
@@ -39519,45 +40038,92 @@ ew
 ew
 ew
 ew
+qh
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Yt
+Yt
+Yt
+Yt
+Yt
+Yt
+pi
+pi
+pi
+pi
+pi
+pi
+pi
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+ew
+he
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+he
+he
+dR
+dR
+dR
+dR
+dR
+dR
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
 ew
 ew
 ew
@@ -39648,120 +40214,120 @@ dR
 dR
 he
 he
+he
+he
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-pi
-pi
-pi
-pi
-pi
-pi
-pi
+he
+he
+he
+he
+he
+he
+he
 dR
-dR
-dR
-dR
-dR
-dR
-dR
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
 DI
 ew
 ew
 ew
 ew
 ew
+ew
+ew
+ew
+ew
+ew
+ew
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+qh
+Iw
+Iw
+Iw
+Iw
+Yt
+Yt
+Yt
+Yt
+Yt
+Yt
+pi
+pi
+pi
+pi
+pi
+gE
+mZ
+he
+he
+OS
+Lq
+dR
+dR
+dR
+dR
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+he
+he
+he
+he
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+DI
+he
+he
+dR
+dR
+dR
 ew
 ew
 ew
@@ -39857,114 +40423,114 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-pi
-pi
-pi
-pi
-pi
-pi
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-dR
-dR
-dR
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
 he
 he
-DI
-DI
-ew
-ew
 he
 he
-ew
-ew
+he
+he
+dR
 DI
 ew
 ew
 ew
 ew
 ew
+ew
+ew
+ew
+ew
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+qh
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Yt
+Yt
+dA
+dA
+hW
+hW
+hW
+hW
+hW
+EP
+yl
+iB
+iB
+It
+Cr
+BM
+BM
+BM
+he
+dR
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+dR
+he
+he
+he
+he
+DI
+dR
+dR
+he
+he
+dR
+dR
 DI
 dR
 dR
 dR
-ew
-ew
-ew
-ew
+dR
+dR
+DI
+dR
+dR
+dR
+he
+he
+dR
+dR
 ew
 ew
 ew
@@ -40060,56 +40626,67 @@ ew
 ew
 ew
 ew
+he
+he
+he
+he
+he
+he
+dR
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-pi
-pi
-pi
-pi
-pi
 dR
 dR
 dR
-dR
-dR
-dR
+DI
+DI
+qh
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+Gy
+wY
+Iw
+Iw
+Iw
+Gy
+wY
+Iw
+Iw
+Yt
+Ic
+bM
+vk
+us
+us
+us
+us
+us
+gp
+IX
+IX
+IX
+IX
+uU
+us
+us
+AD
+Jk
+BM
+BM
+BM
+BM
+BM
+BM
+he
 dR
 dR
 dR
@@ -40120,12 +40697,29 @@ dR
 he
 he
 he
-ew
-ew
-ew
-ew
+dR
+OS
+Lq
+he
+he
+he
+OS
+Lq
+dR
+dR
+he
+he
+he
+he
+dR
+dR
 DI
 DI
+dR
+dR
+he
+he
+dR
 DI
 dR
 he
@@ -40137,36 +40731,8 @@ dR
 dR
 DI
 DI
-DI
-ew
-ew
-ew
-he
 he
 dR
-dR
-dR
-dR
-DI
-DI
-dR
-dR
-he
-he
-dR
-DI
-ew
-he
-he
-he
-dR
-dR
-dR
-dR
-DI
-DI
-ew
-ew
 ew
 ew
 dR
@@ -40264,71 +40830,6 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-pi
-pi
-pi
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-DI
-DI
-DI
-dR
-dR
-dR
-dR
 he
 he
 he
@@ -40338,31 +40839,96 @@ dR
 dR
 dR
 dR
-dR
-dR
-DI
-DI
 he
 he
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-DI
-dR
-dR
-dR
-dR
-dR
+Iw
+Iw
+qh
+qh
+qh
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+JF
+JF
+Xg
+pq
+la
+la
+la
+Zf
+Et
+JF
+JF
+Ah
+bM
+Bo
+RC
+ew
+wo
+rk
+wo
+wf
+Ld
+bV
+FD
+FD
+Cu
+Rp
+wf
+Am
+yA
+Kl
+us
+us
+us
+us
+us
+AD
+Jk
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+WW
+it
+iB
+iB
+iB
+It
+jv
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+BM
+he
 dR
 dR
 dR
@@ -40465,42 +41031,42 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+dR
+dR
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+Iw
+Iw
+Iw
+Iw
+cY
+qh
+Iw
+Iw
+Iw
+Iw
+FJ
+bM
+gt
+Ww
+tW
+tW
+tW
+tW
+tW
+Nl
+LD
+LD
+rb
+KS
 ew
 ew
 ew
@@ -40508,63 +41074,63 @@ ew
 pi
 pi
 DI
+hK
+lP
 dR
 dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
+hK
+lP
 dR
 he
-he
-he
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
+wf
+wf
+wf
+wf
+wf
+wf
+Am
+yA
+Hd
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+gp
+IX
+IX
+IX
+IX
+IX
+uU
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+us
+Sh
+YU
 dR
 dR
 dR
@@ -40667,41 +41233,41 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+dR
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+Iw
+qh
+FJ
+fc
+fn
+YE
+hB
+mq
+mq
+mq
+oB
+XE
+uh
+uh
+uh
 ew
 ew
 ew
@@ -40724,49 +41290,49 @@ dR
 dR
 dR
 dR
-dR
-dR
-dR
-dR
-dR
-dR
 he
-he
-he
-he
-dR
-dR
-dR
-dR
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
 TU
-dR
-he
-he
-he
-dR
-BL
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-he
-he
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
+RR
+tS
+tS
+tS
+MB
+fC
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+Am
+pP
+YU
 dR
 dR
 dR
@@ -40868,41 +41434,41 @@ ew
 ew
 ew
 ew
+dR
+dR
+he
+he
+he
+he
+he
+dR
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+DI
+DI
+dR
+dR
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+qh
+FJ
+fc
+Rk
+zk
+Os
+Iw
+Iw
+Iw
+zk
+Os
+Iw
+Iw
 ew
 ew
 ew
@@ -40945,7 +41511,7 @@ Ck
 Iw
 Iw
 Iw
-Iw
+zk
 RN
 dR
 dR
@@ -40966,9 +41532,9 @@ dR
 dR
 RN
 he
-he
+bY
 mn
-he
+YU
 he
 dR
 dR
@@ -41070,6 +41636,12 @@ ew
 ew
 ew
 ew
+dR
+he
+he
+he
+he
+dR
 ew
 ew
 ew
@@ -41078,33 +41650,27 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+FJ
+fc
+Rk
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
 ew
 ew
 ew
@@ -41271,6 +41837,12 @@ he
 ew
 ew
 ew
+dR
+dR
+he
+he
+he
+dR
 ew
 ew
 ew
@@ -41281,31 +41853,25 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+FJ
+fc
+Rk
+FG
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
 ew
 ew
 ew
@@ -41473,6 +42039,12 @@ he
 he
 ew
 ew
+dR
+he
+he
+he
+he
+dR
 ew
 ew
 ew
@@ -41485,28 +42057,22 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+Iw
+Iw
+Rw
+cY
+cY
+FJ
+fc
+Rk
+gO
+Iw
+Iw
+Iw
+Iw
+cY
+cY
 ew
 ew
 ew
@@ -41675,6 +42241,11 @@ dR
 he
 he
 he
+dR
+he
+he
+he
+dR
 ew
 ew
 ew
@@ -41691,24 +42262,19 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+Iw
+qh
+cY
+FJ
+fc
+Rk
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+qh
 ew
 ew
 ew
@@ -41879,6 +42445,9 @@ he
 he
 he
 he
+he
+he
+dR
 ew
 ew
 ew
@@ -41896,21 +42465,18 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+cY
+FJ
+fc
+Rk
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+qh
 ew
 ew
 ew
@@ -42083,6 +42649,7 @@ he
 he
 he
 he
+dR
 ew
 ew
 ew
@@ -42099,20 +42666,19 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+cY
+cY
+cY
+FJ
+fc
+Rk
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+qh
 ew
 ew
 ew
@@ -42301,20 +42867,20 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+cY
+qh
+cY
+cY
+FJ
+fc
+Rk
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+cY
 ew
 ew
 ew
@@ -42502,21 +43068,21 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+cY
+cY
+qh
+cY
+Iw
+FJ
+fc
+BR
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+ly
 ew
 ew
 ew
@@ -42703,22 +43269,22 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+cY
+cY
+cY
+cY
+cY
+Iw
+FJ
+fc
+GS
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
 ew
 ew
 ew
@@ -42901,26 +43467,26 @@ he
 he
 he
 he
+he
+he
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+cY
+BQ
+cY
+cY
+Iw
+Iw
+FJ
+fc
+Rk
+Iw
+CZ
+Iw
+Iw
+CZ
+cY
+nI
 ew
 ew
 ew
@@ -43105,24 +43671,24 @@ he
 he
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+he
+Iw
+pd
+nI
+nI
+ue
+ue
+ue
+ue
+ue
+ue
+nI
+ue
+mA
+mA
+ue
+nI
+nI
 ew
 ew
 ew
@@ -43308,23 +43874,23 @@ he
 he
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+Iw
+Iw
+nI
+zF
+Ds
+Ds
+Iw
+FJ
+fc
+NW
+hV
+CZ
+Iw
+Iw
+CZ
+sT
+nI
 ew
 ew
 ew
@@ -43510,23 +44076,23 @@ he
 he
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+Iw
+Iw
+kJ
+Ds
+Ds
+Iw
+Iw
+FJ
+fc
+NW
+hV
+cY
+Iw
+Iw
+Iw
+sT
+hV
 ew
 ew
 ew
@@ -43712,23 +44278,23 @@ he
 he
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+Iw
+Iw
+nI
+Ji
+Iw
+Iw
+Iw
+FJ
+fc
+NW
+cY
+cY
+cY
+Iw
+Iw
+hV
+hV
 ew
 ew
 ew
@@ -43913,24 +44479,24 @@ ew
 he
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+he
+Iw
+vm
+Ze
+Iw
+Iw
+Iw
+Iw
+ww
+eR
+eR
+eR
+dz
+Iw
+Iw
+Iw
+cY
+qN
 ew
 ew
 ew
@@ -44116,23 +44682,23 @@ he
 he
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+Iw
+Iw
+Ze
+Iw
+Iw
+Iw
+Sl
+ji
+wj
+wj
+DM
+Xe
+dz
+Iw
+Iw
+cY
+qN
 ew
 ew
 ew
@@ -44318,23 +44884,23 @@ ew
 he
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+Iw
+vm
+nI
+lj
+Iw
+Sl
+ji
+UV
+dJ
+WI
+mj
+UV
+Xe
+dz
+Iw
+cY
+qh
 ew
 ew
 ew
@@ -44519,24 +45085,24 @@ ew
 ew
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+he
+Iw
+Iw
+kJ
+Iw
+Iw
+Bv
+iJ
+dJ
+aT
+WI
+aT
+dJ
+mc
+Se
+Iw
+cY
+qh
 ew
 ew
 ew
@@ -44722,23 +45288,23 @@ ew
 he
 he
 he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+Iw
+Iw
+kJ
+Iw
+cY
+Bv
+iJ
+dJ
+aT
+AP
+fL
+dJ
+mc
+Se
+Iw
+cY
+qN
 ew
 ew
 ew
@@ -44925,22 +45491,22 @@ he
 he
 he
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+Iw
+kJ
+Iw
+cY
+Bv
+mN
+dJ
+aT
+WI
+aT
+mj
+mc
+Se
+Iw
+cY
+qN
 ew
 ew
 ew
@@ -45127,22 +45693,22 @@ he
 he
 he
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+Iw
+kJ
+eN
+Iw
+le
+Yb
+UV
+mj
+WI
+dJ
+UZ
+TY
+ET
+Iw
+hV
+CI
 ew
 ew
 ew
@@ -45270,23 +45836,23 @@ ew
 ew
 ew
 ew
-iB
-iB
-iB
-Lq
-Lq
-Lq
-Lq
-Lq
-Lq
-Lq
+nI
+nI
+nI
+ue
+ue
+ue
+ue
+ue
+ue
+ue
 nl
-Lq
-Lq
-Lq
-Lq
-Lq
-iB
+ue
+ue
+ue
+ue
+ue
+nI
 ew
 ew
 ew
@@ -45330,21 +45896,21 @@ he
 he
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+nI
+eN
+Iw
+Iw
+le
+Yb
+KB
+Mc
+Mc
+TY
+ET
+Iw
+Iw
+hV
+CI
 ew
 ew
 ew
@@ -45470,25 +46036,25 @@ ew
 ew
 ew
 ew
-iB
-iB
-iB
-iB
+nI
+nI
+nI
+nI
 kG
 Bf
-dR
-dR
-DI
+cY
+cY
+qh
 RC
-wo
+cT
 yn
-bM
+kJ
 hr
 CJ
-dR
-dR
-dR
-dR
+cY
+cY
+cY
+cY
 SM
 ew
 ew
@@ -45532,21 +46098,21 @@ he
 he
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+nI
+nI
+eN
+Iw
+Iw
+le
+RP
+RP
+RP
+ET
+cY
+Iw
+Iw
+CI
+CI
 ew
 ew
 ew
@@ -45669,28 +46235,28 @@ ew
 ew
 ew
 ew
-DI
-DI
-dR
-dR
-bM
-Kl
+qh
+qh
+cY
+cY
+kJ
+OO
 Gv
 lw
 mG
-dR
-dR
-dR
+cY
+cY
+cY
 QH
 ln
 Vg
-bM
+kJ
 gn
 hr
-dR
-dR
-dR
-dR
+cY
+cY
+cY
+cY
 Ho
 SM
 ew
@@ -45734,21 +46300,21 @@ he
 he
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+nI
+nI
+eN
+Iw
+Iw
+qh
+qh
+cY
+Iw
+CZ
+Iw
+Iw
+CZ
+CI
+nI
 ew
 ew
 ew
@@ -45869,37 +46435,37 @@ ew
 ew
 ew
 ew
-he
-he
-dR
-dR
-dR
-dR
-bM
-pi
+Iw
+Iw
+cY
+cY
+cY
+cY
+kJ
+Yt
 QH
 XS
 eZ
-dR
-dR
-dR
+cY
+cY
+cY
 gC
-hW
+dA
 Ic
-bM
-pi
+kJ
+Yt
 MT
-dR
-dR
-dR
-dR
-dR
-Ho
+cY
+cY
+cY
+cY
+cY
+ut
 el
 el
-iB
-iB
-iB
+nI
+nI
+nI
 ew
 he
 he
@@ -45937,20 +46503,20 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+nI
+ue
+ue
+ue
+ue
+ue
+ue
+nI
+ue
+mA
+mA
+ue
+nI
+nI
 ew
 ew
 ew
@@ -46070,62 +46636,62 @@ ew
 ew
 ew
 ew
-he
-he
-dR
-dR
-dR
-dR
-dR
-bM
-pi
+Iw
+Iw
+cY
+cY
+cY
+cY
+cY
+kJ
+Yt
 gC
-hW
+dA
 aB
+cY
+cY
+cY
+qh
+Yt
+Yt
+kJ
+Yt
+cY
+XT
+ut
+cY
+cY
+Iw
+Iw
+cY
+qh
+kJ
+cY
+kJ
+he
+he
+he
+he
 dR
 dR
 dR
+dR
+dR
+dR
+dR
+he
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
 DI
-pi
-pi
-bM
-pi
-dR
-KS
-Ho
-dR
-dR
-he
-he
-dR
-DI
-bM
-dR
-bM
-he
-he
-he
-he
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-DI
 dR
 dR
 dR
@@ -46139,20 +46705,20 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+CZ
+Iw
+Iw
+CZ
+Iw
+nI
 ew
 ew
 ew
@@ -46270,40 +46836,40 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-dR
-dR
-dR
-dR
-bM
+Iw
+Iw
+Iw
+cY
+cY
+cY
+cY
+cY
+cY
+kJ
 RC
-wo
+cT
 yn
-dR
-dR
+cY
+cY
 Gg
 lw
 mG
-pi
-pi
-bM
+Yt
+Yt
+kJ
 zf
 LF
-UV
-Ho
-dR
-he
-he
-he
-he
-he
-bM
-dR
-bM
+fK
+ut
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+kJ
+cY
+kJ
 he
 he
 he
@@ -46341,20 +46907,20 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
 ew
 ew
 ew
@@ -46472,40 +47038,40 @@ ew
 ew
 ew
 ew
-he
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-bM
+Iw
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+kJ
 QH
 ln
 eZ
-dR
-dR
+cY
+cY
 Ta
 XS
 eZ
-dR
-pi
-bM
+cY
+Yt
+kJ
 zf
-dR
-Ho
-dR
-dR
-he
-he
-he
-he
-he
-bM
-dR
-bM
+cY
+ut
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+kJ
+cY
+kJ
 dR
 DI
 DI
@@ -46543,20 +47109,20 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+qh
+cY
 ew
 ew
 ew
@@ -46674,40 +47240,40 @@ ew
 ew
 ew
 DI
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-bM
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+kJ
 cx
 bG
 aB
-dR
-dR
+cY
+cY
 Xl
 bG
 aB
-dR
-dR
-bM
-DI
-dR
-dR
-dR
-he
-he
-he
-he
-he
+cY
+cY
+kJ
+qh
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
 CP
-iB
-dR
-iB
+nI
+cY
+nI
 QM
 dR
 dR
@@ -46746,19 +47312,19 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+cY
+cY
+cY
+qh
+qh
+qh
+Iw
+Iw
+Iw
+Iw
+qh
+cY
 ew
 ew
 ew
@@ -46874,92 +47440,92 @@ ew
 ew
 ew
 ew
-DI
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-LD
-fL
-hN
-uh
-uh
-hN
-hN
-hN
-CZ
-EP
-dR
-dR
-bM
+qh
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Sl
+iX
+kd
+eR
+eR
+kd
+kd
+kd
+Ws
+TC
+cY
+cY
+kJ
 yy
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Ze
+Iw
+Ze
 dR
 dR
 dR
-he
-he
-he
-he
-he
-he
-UZ
-he
-UZ
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
 dR
 dR
 dR
 dR
 dR
 he
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+dR
+dR
+dR
+dR
+dR
+he
 he
 ew
 ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+qh
+cY
+cY
+cY
+cY
+cY
+cY
+qh
+Iw
+Iw
+Iw
+qh
 ew
 ew
 ew
@@ -47076,16 +47642,16 @@ ew
 ew
 ew
 ew
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-LD
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Sl
 fO
 WE
 WE
@@ -47094,51 +47660,27 @@ WE
 WE
 WE
 WE
-FJ
-Dq
-dR
-dR
-UZ
-dR
-dR
-dR
-dR
+Xe
+KX
+cY
+cY
+Ze
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Ze
+Iw
+Ze
 he
-he
-he
-he
-he
-he
-UZ
-he
-UZ
-he
 dR
 dR
-dR
-dR
-dR
-dR
-he
-he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-he
 dR
 dR
 dR
@@ -47162,6 +47704,30 @@ ew
 ew
 ew
 ew
+he
+dR
+dR
+dR
+dR
+he
+he
+ew
+ew
+ew
+ew
+ew
+ew
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+qh
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -47277,17 +47843,17 @@ ew
 ew
 ew
 ew
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-he
-Uv
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+vv
 WE
 WE
 xt
@@ -47297,54 +47863,30 @@ TZ
 PL
 WE
 WE
-MU
+Se
+cY
+cY
+Ze
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Ze
+Iw
+Ze
 dR
 dR
-UZ
 dR
 dR
 dR
 dR
 he
-he
-he
-he
-he
-he
-UZ
-he
-UZ
-dR
-dR
-dR
-dR
-dR
-dR
-he
-he
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-he
-dR
-dR
-dR
-dR
 he
 ew
 ew
@@ -47364,6 +47906,30 @@ ew
 ew
 ew
 ew
+he
+dR
+dR
+dR
+dR
+he
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+qh
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
 ew
 ew
 ew
@@ -47478,18 +48044,18 @@ ew
 ew
 ew
 ew
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-he
-Uv
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+vv
 WE
 WE
 EK
@@ -47499,23 +48065,23 @@ Sz
 LA
 tg
 WE
-MU
-DI
-dR
-bM
+Se
+qh
+cY
+kJ
 IQ
-dR
-dR
-dR
-he
-he
-he
-he
-he
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
 CP
-iB
-he
-iB
+nI
+Iw
+nI
 po
 dR
 dR
@@ -47555,17 +48121,17 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+cY
+cY
+qh
+cY
+cY
+cY
+cY
+cY
+qh
+Iw
+Iw
 ew
 ew
 ew
@@ -47680,18 +48246,18 @@ ew
 ew
 ew
 ew
-DI
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-he
-he
-Uv
+qh
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
+vv
 WE
 WE
 mu
@@ -47701,23 +48267,23 @@ eb
 dN
 Xa
 WE
-FJ
-hN
-hN
-fL
+Xe
+kd
+kd
+iX
 Zb
 ZC
-dR
-dR
-he
-he
-he
-he
-he
-he
-bM
-dR
-bM
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+kJ
+cY
+kJ
 dR
 dR
 dR
@@ -47757,16 +48323,16 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+qh
+Iw
 ew
 ew
 ew
@@ -47882,18 +48448,18 @@ ew
 ew
 ew
 ew
-he
-dR
-dR
-dR
-dR
-dR
-LD
-hN
-hN
-uh
-uh
-qN
+Iw
+cY
+cY
+cY
+cY
+cY
+Sl
+kd
+kd
+eR
+eR
+zY
 WE
 WE
 mu
@@ -47907,19 +48473,19 @@ WE
 WE
 WE
 WE
-FJ
-hV
-oB
-dR
-dR
-he
-he
-he
-he
-dR
-bM
-dR
-bM
+Xe
+YL
+dz
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+cY
+kJ
+cY
+kJ
 DI
 dR
 dR
@@ -47959,13 +48525,13 @@ ew
 ew
 ew
 ew
+cY
+cY
+cY
 ew
-ew
-ew
-ew
-ew
-ew
-ew
+DI
+DI
+DI
 ew
 ew
 ew
@@ -48084,12 +48650,12 @@ ew
 ew
 ew
 ew
-he
-DI
-dR
-dR
-dR
-dO
+Iw
+qh
+cY
+cY
+cY
+ka
 pI
 WE
 WE
@@ -48111,20 +48677,20 @@ WE
 WE
 WE
 WE
-FJ
-oB
+Xe
+dz
+cY
+Iw
+Iw
+Iw
+Iw
+cY
+kJ
+qh
+kJ
 dR
-he
-he
-he
-he
 dR
-bM
 DI
-bM
-dR
-dR
-DI
 he
 he
 he
@@ -48160,9 +48726,9 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
+dR
+dR
+dR
 ew
 ew
 ew
@@ -48286,12 +48852,12 @@ ew
 ew
 ew
 ew
-he
-he
-dR
-dR
-dR
-hK
+Iw
+Iw
+cY
+cY
+cY
+uS
 fO
 WE
 pZ
@@ -48314,16 +48880,16 @@ wW
 WE
 WE
 WE
-MU
-dR
-he
-he
-he
-he
+Se
+cY
+Iw
+Iw
+Iw
+Iw
 Bf
-iB
-iB
-iB
+nI
+nI
+nI
 dR
 dR
 he
@@ -48361,10 +48927,10 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
-ew
+dR
+dR
+dR
+dR
 ew
 ew
 ew
@@ -48488,12 +49054,12 @@ ew
 ew
 ew
 ew
-he
-he
-DI
-dR
-dR
-Uv
+Iw
+Iw
+qh
+cY
+cY
+vv
 WE
 WE
 MY
@@ -48516,11 +49082,11 @@ aM
 mm
 WE
 ed
-ut
-dR
-dR
-he
-he
+LL
+cY
+cY
+Iw
+Iw
 Bf
 Bf
 ew
@@ -48563,9 +49129,9 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
+dR
+dR
+dR
 ew
 ew
 ew
@@ -48690,12 +49256,12 @@ ew
 ew
 ew
 ew
-he
-he
-DI
-dR
-dR
-Uv
+Iw
+Iw
+qh
+cY
+cY
+vv
 WE
 WE
 MY
@@ -48719,11 +49285,11 @@ aM
 Vy
 tQ
 er
-dR
-dR
-he
-dR
-dR
+cY
+cY
+Iw
+cY
+cY
 rX
 ew
 ew
@@ -48765,9 +49331,9 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
+dR
+dR
+dR
 ew
 ew
 ew
@@ -48892,12 +49458,12 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-fC
+Iw
+Iw
+Iw
+cY
+cY
+Bv
 WE
 WE
 MY
@@ -48920,13 +49486,13 @@ eb
 eb
 Ex
 tQ
-Xg
-dR
-dR
-dR
-dR
-dR
-dR
+RH
+cY
+cY
+cY
+cY
+cY
+cY
 ew
 ew
 ew
@@ -48967,9 +49533,9 @@ he
 ew
 ew
 ew
-ew
-ew
-ew
+dR
+dR
+dR
 ew
 ew
 ew
@@ -49094,12 +49660,12 @@ ew
 ew
 ew
 ew
-he
-he
-he
-DI
-dR
-fC
+Iw
+Iw
+Iw
+qh
+cY
+Bv
 WE
 WE
 MY
@@ -49122,13 +49688,13 @@ eb
 mm
 WE
 cA
-TY
-dR
-dR
-dR
-dR
-dR
-gE
+GF
+cY
+cY
+cY
+cY
+cY
+Ds
 ew
 ew
 ew
@@ -49169,9 +49735,9 @@ ew
 ew
 ew
 ew
-ew
-ew
-ew
+dR
+dR
+dR
 ew
 ew
 ew
@@ -49296,12 +49862,12 @@ ew
 ew
 ew
 ew
-he
-he
-he
-DI
-dR
-fC
+Iw
+Iw
+Iw
+qh
+cY
+Bv
 WE
 WE
 MY
@@ -49324,13 +49890,13 @@ ec
 WE
 WE
 WE
-pw
-dR
-dR
-dR
-dR
-dR
-gE
+jI
+cY
+cY
+cY
+cY
+cY
+Ds
 ew
 ew
 ew
@@ -49369,9 +49935,9 @@ dR
 he
 he
 ew
-ew
-ew
-ew
+dR
+dR
+dR
 ew
 ew
 ew
@@ -49498,12 +50064,12 @@ ew
 ew
 ew
 ew
-he
-he
-he
-DI
-dR
-IX
+Iw
+Iw
+Iw
+qh
+cY
+BE
 xT
 WE
 MY
@@ -49526,14 +50092,14 @@ WE
 WE
 WE
 nn
-Mc
-dR
-dR
-dR
-dR
-dR
-he
-Zf
+ET
+cY
+cY
+cY
+cY
+cY
+Iw
+Vv
 ew
 ew
 ew
@@ -49571,9 +50137,9 @@ dR
 dR
 he
 he
-ew
-ew
-ew
+dR
+dR
+dR
 ew
 ew
 ew
@@ -49701,11 +50267,11 @@ ew
 ew
 ew
 ew
-he
-he
-dR
-dR
-Uv
+Iw
+Iw
+cY
+cY
+vv
 WE
 WE
 cI
@@ -49727,15 +50293,15 @@ WE
 WE
 FC
 zW
-Mc
-DI
-dR
-dR
-dR
-dR
-dR
-he
-he
+ET
+qh
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
 ew
 ew
 ew
@@ -49773,9 +50339,9 @@ dR
 dR
 he
 he
-ew
-ew
-ew
+dR
+dR
+dR
 ew
 ew
 ew
@@ -49903,11 +50469,11 @@ ew
 ew
 ew
 ew
-he
-DI
-dR
-dR
-Uv
+Iw
+qh
+cY
+cY
+vv
 WE
 WE
 WE
@@ -49929,16 +50495,16 @@ WE
 WE
 jn
 Dq
-DI
-DI
-dR
-dR
-dR
-dR
-dR
-he
-he
-he
+qh
+qh
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -49976,7 +50542,7 @@ dR
 dR
 he
 he
-ew
+dR
 ew
 ew
 ew
@@ -50105,11 +50671,11 @@ ew
 ew
 ew
 ew
-dR
-dR
-dR
-dR
-Uv
+cY
+cY
+cY
+cY
+vv
 WE
 WE
 TZ
@@ -50132,15 +50698,15 @@ WE
 WE
 MU
 Td
-mq
-dR
-dR
-dR
-dR
-dR
-dR
-he
-he
+zF
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
 ew
 ew
 ew
@@ -50307,11 +50873,11 @@ ew
 ew
 ew
 ew
-DI
-dR
-dR
-dR
-fC
+qh
+cY
+cY
+cY
+Bv
 WE
 WE
 TZ
@@ -50333,17 +50899,17 @@ WE
 WE
 WE
 MU
-DI
+qh
 rX
-mq
-dR
-dR
-dR
-dR
-dR
-he
-he
-Zf
+zF
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+Vv
 ew
 ew
 ew
@@ -50509,11 +51075,11 @@ ew
 ew
 ew
 ew
-DI
-dR
-dR
-dR
-fC
+qh
+cY
+cY
+cY
+Bv
 WE
 WE
 TZ
@@ -50535,17 +51101,17 @@ WE
 WE
 WE
 MU
-dR
-dR
-mq
-dR
-he
-DI
-dR
-dR
-dR
-he
-gE
+cY
+cY
+zF
+cY
+Iw
+qh
+cY
+cY
+cY
+Iw
+Ds
 ew
 ew
 ew
@@ -50711,11 +51277,11 @@ ew
 ew
 ew
 ew
-DI
-dR
-dR
-dR
-IX
+qh
+cY
+cY
+cY
+BE
 Pr
 WE
 TZ
@@ -50737,17 +51303,17 @@ WE
 WE
 WE
 VS
-dR
-dR
-he
-he
-he
-he
-DI
-dR
-dR
-dR
-gE
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+qh
+cY
+cY
+cY
+Ds
 ew
 ew
 ew
@@ -50913,11 +51479,11 @@ ew
 ew
 ew
 ew
-DI
-dR
-dR
-dR
-fC
+qh
+cY
+cY
+cY
+Bv
 WE
 WE
 Eh
@@ -50939,18 +51505,18 @@ WE
 WE
 WE
 pw
-dR
-dR
-he
-he
-he
-he
-he
-dR
-dR
-dR
-he
-iB
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+cY
+Iw
+nI
 ew
 ew
 ew
@@ -51115,11 +51681,11 @@ ew
 ew
 ew
 ew
-DI
-dR
-dR
-dR
-fC
+qh
+cY
+cY
+cY
+Bv
 WE
 WE
 lS
@@ -51141,19 +51707,19 @@ WE
 WE
 WE
 pw
-dR
-dR
-he
-he
-he
+cY
+cY
+Iw
+Iw
+Iw
 by
-wf
-Am
-dR
-dR
-dR
-iB
-iB
+uh
+hN
+cY
+cY
+cY
+nI
+nI
 ew
 ew
 ew
@@ -51317,11 +51883,11 @@ ew
 ew
 ew
 ew
-dR
-dR
-dR
-dR
-Uv
+cY
+cY
+cY
+cY
+vv
 WE
 WE
 FP
@@ -51341,22 +51907,22 @@ WE
 WE
 WE
 WE
-FC
-dJ
-dR
-he
-he
-he
-he
-YU
+WC
+Mb
+cY
+Iw
+Iw
+Iw
+Iw
+Rk
 vZ
-bY
-dR
-dR
-dR
-iB
-iB
-iB
+FJ
+cY
+cY
+cY
+nI
+nI
+nI
 ew
 ew
 ew
@@ -51518,12 +52084,12 @@ ew
 ew
 ew
 ew
-he
-DI
-dR
-dR
-dR
-Uv
+Iw
+qh
+cY
+cY
+cY
+vv
 WE
 WE
 Ex
@@ -51543,22 +52109,22 @@ WE
 WE
 WE
 nn
-Mc
-dR
-dR
-he
-he
-he
-he
-Jk
-BM
+ET
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+dO
+JF
 Ah
-he
-dR
-dR
-bM
-he
-bM
+Iw
+cY
+cY
+kJ
+Iw
+kJ
 ws
 he
 ew
@@ -51720,47 +52286,47 @@ ew
 ew
 ew
 ew
-he
-he
-DI
-dR
-dR
-Uv
+Iw
+Iw
+qh
+cY
+cY
+vv
 WE
 WE
 fF
 Cz
 WE
-nn
-uU
-Ji
-Ji
-uU
-uU
-Ji
-Ji
-Ji
-uU
-uU
-uU
-uU
-Mc
-dR
-dR
-DI
+YY
+CM
+FH
+FH
+CM
+CM
+FH
+FH
+FH
+CM
+CM
+CM
+CM
+ET
+cY
+cY
+qh
 by
-wf
-Am
-he
-he
-he
-he
-he
-dR
-dR
-bM
-dR
-bM
+uh
+hN
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+kJ
+cY
+kJ
 he
 he
 he
@@ -51922,47 +52488,47 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-IX
+Iw
+Iw
+Iw
+cY
+cY
+BE
 xT
 WE
 KZ
 oM
 WE
-VS
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-DI
-he
-YU
+cE
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+qh
+Iw
+Rk
 vZ
-bY
-he
-he
-he
-he
-dR
-dR
-dR
-bM
-dR
-bM
+FJ
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+cY
+kJ
+cY
+kJ
 he
 he
 he
@@ -52124,47 +52690,47 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-fC
+Iw
+Iw
+Iw
+cY
+cY
+Bv
 WE
 WE
 lA
 Is
 WE
-Sh
-hN
-hN
-hN
-hN
-hN
-oB
-dR
-dR
-dR
-DI
-he
-he
-he
-he
-he
-he
-Jk
-BM
+Mx
+kd
+kd
+kd
+kd
+kd
+dz
+cY
+cY
+cY
+qh
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+dO
+JF
 Ah
-he
-he
-he
-he
-dR
-dR
-dR
-bM
-dR
-bM
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+cY
+kJ
+cY
+kJ
 dR
 dR
 he
@@ -52326,12 +52892,12 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-fC
+Iw
+Iw
+Iw
+cY
+cY
+Bv
 WE
 WE
 lS
@@ -52343,30 +52909,30 @@ WE
 WE
 WE
 WE
-WI
-EP
-dR
-DI
+xr
+TC
+cY
+qh
 by
-wf
+uh
 ig
-he
-he
-he
-he
-he
-he
-he
-he
-he
-he
-DI
-dR
-dR
-dR
-bM
-dR
-bM
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+qh
+cY
+cY
+cY
+kJ
+cY
+kJ
 dR
 dR
 dR
@@ -52528,12 +53094,12 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-fC
+Iw
+Iw
+Iw
+cY
+cY
+Bv
 WE
 WE
 lS
@@ -52545,30 +53111,30 @@ ko
 Wk
 Ca
 WE
-FJ
-Dq
-dR
-he
-YU
+Xe
+KX
+cY
+Iw
+Rk
 vZ
-bY
-he
-he
-he
-he
-he
-he
-he
-he
-he
-he
-DI
-dR
-dR
-dR
-iB
-iB
-iB
+FJ
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+qh
+cY
+cY
+cY
+nI
+nI
+nI
 Pw
 dR
 dR
@@ -52729,13 +53295,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-dR
-Uv
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+vv
 WE
 WE
 lS
@@ -52748,26 +53314,26 @@ pQ
 lV
 WE
 WE
-MU
-dR
-he
+Se
+cY
+Iw
 hT
-BM
+JF
 Ah
-he
-he
-he
-he
-he
-he
-he
-he
-he
-he
-dR
-dR
-dR
-dR
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+cY
+cY
 ew
 ew
 ew
@@ -52931,13 +53497,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-dR
-Uv
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+vv
 WE
 WE
 lS
@@ -52950,26 +53516,26 @@ jo
 mp
 WE
 WE
-MU
-dR
-he
-he
-he
-he
-he
-he
-he
-he
-he
-he
-he
-he
-he
-he
-dR
-dR
-dR
-ew
+Se
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+cY
+ye
 ew
 ew
 ew
@@ -53133,13 +53699,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-dR
-IX
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+BE
 Pr
 WE
 KZ
@@ -53152,26 +53718,26 @@ Sz
 wV
 WE
 WE
-VS
-dR
-he
-he
-he
-he
+cE
+cY
+Iw
+Iw
+Iw
+Iw
 fn
-wf
+uh
 ig
-he
-he
-he
-he
-he
-DI
-dR
-dR
-dR
-DI
-ew
+Iw
+Iw
+Iw
+Iw
+Iw
+qh
+cY
+cY
+cY
+qh
+ye
 ew
 ew
 ew
@@ -53335,13 +53901,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-dR
-CI
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+bL
 WE
 WE
 HS
@@ -53354,27 +53920,27 @@ Sz
 wV
 WE
 WE
-VS
-dR
-DI
-he
-he
-he
-YU
+cE
+cY
+qh
+Iw
+Iw
+Iw
+Rk
 vZ
-bY
-he
-he
-he
-he
-dR
-dR
-dR
-dR
-dR
-dR
-DI
-iB
+FJ
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+cY
+cY
+cY
+cY
+qh
+nI
 ew
 ew
 ew
@@ -53537,13 +54103,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-DI
-fC
+Iw
+Iw
+Iw
+Iw
+cY
+qh
+Bv
 WE
 WE
 WE
@@ -53556,27 +54122,27 @@ fr
 XQ
 WE
 WE
-VS
-dR
-DI
-he
-he
-he
-Jk
-BM
+cE
+cY
+qh
+Iw
+Iw
+Iw
+dO
+JF
 Ah
-he
-he
-he
-DI
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-bM
+Iw
+Iw
+Iw
+qh
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+kJ
 ew
 ew
 ew
@@ -53739,13 +54305,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-DI
-Uv
+Iw
+Iw
+Iw
+Iw
+cY
+qh
+vv
 WE
 WE
 lq
@@ -53758,30 +54324,30 @@ Sz
 wV
 WE
 WE
-MU
-dR
-dR
-he
-he
-he
-he
-he
-he
-he
-he
-he
-DI
-dR
-dR
+Se
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+qh
+cY
+cY
 dR
 ew
-dR
-dR
-dR
-bM
-DI
-DI
-iB
+cY
+cY
+cY
+kJ
+qh
+qh
+nI
 ew
 dR
 dR
@@ -53941,13 +54507,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-DI
-Uv
+Iw
+Iw
+Iw
+Iw
+cY
+qh
+vv
 WE
 WE
 sS
@@ -53959,31 +54525,31 @@ WE
 Ya
 wV
 WE
-nn
-ut
-dR
-dR
-DI
-he
-he
-he
-he
-he
-he
-he
-he
-dR
-dR
-DI
+YY
+LL
+cY
+cY
+qh
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+qh
 ew
 ew
 ew
-dR
-dR
-bM
-dR
-dR
-bM
+cY
+cY
+kJ
+cY
+cY
+kJ
 GR
 dR
 dR
@@ -54143,13 +54709,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-DI
-Uv
+Iw
+Iw
+Iw
+Iw
+cY
+qh
+vv
 WE
 WE
 nB
@@ -54161,31 +54727,31 @@ WE
 Ya
 wV
 WE
-Sh
-Dq
-dR
-dR
-dR
-he
-he
-he
-he
-he
-he
-dR
-dR
-dR
-DI
-he
+Mx
+KX
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+cY
+qh
+Iw
 ew
 ew
 ew
 ew
-dR
-bM
-dR
-dR
-bM
+cY
+kJ
+cY
+cY
+kJ
 Ba
 dR
 DI
@@ -54345,13 +54911,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-DI
-Uv
+Iw
+Iw
+Iw
+cY
+cY
+qh
+vv
 WE
 WE
 WE
@@ -54364,30 +54930,30 @@ Ya
 lV
 WE
 WE
-VS
-dR
-dR
-dR
-dR
-he
-he
-he
-he
-dR
-dR
-dR
-dR
-DI
-he
+cE
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+cY
+cY
+qh
+Iw
 ew
 ew
 ew
 ew
 ew
-iB
+nI
 ew
 ew
-iB
+nI
 ew
 ew
 ew
@@ -54547,13 +55113,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-DI
-IX
+Iw
+Iw
+Iw
+cY
+cY
+qh
+BE
 xT
 WE
 Dh
@@ -54566,21 +55132,21 @@ oq
 mp
 WE
 WE
-VS
-dR
-dR
-dR
-dR
-dR
-DI
-DI
-dR
-dR
-dR
-dR
-dR
-he
-he
+cE
+cY
+cY
+cY
+cY
+cY
+qh
+qh
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
 ew
 ew
 ew
@@ -54749,13 +55315,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-dR
-fC
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+Bv
 WE
 WE
 WF
@@ -54768,22 +55334,22 @@ Sz
 lV
 WE
 WE
-VS
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-DI
-he
-he
-he
-he
+cE
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+qh
+Iw
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -54951,13 +55517,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-dR
-Uv
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+vv
 WE
 WE
 Ra
@@ -54970,22 +55536,22 @@ pQ
 lV
 WE
 WE
-VS
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-he
-he
-he
-he
+cE
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -55153,13 +55719,13 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-dR
-dR
-Uv
+Iw
+Iw
+Iw
+Iw
+cY
+cY
+vv
 WE
 WE
 Ug
@@ -55172,22 +55738,22 @@ Mj
 gc
 WE
 WE
-MU
-dR
-dR
-dR
-DI
-dR
-dR
-DI
-DI
-he
-he
-he
-he
-he
-he
-he
+Se
+cY
+cY
+cY
+qh
+cY
+cY
+qh
+qh
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -55356,12 +55922,12 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-Uv
+Iw
+Iw
+Iw
+cY
+cY
+vv
 WE
 WE
 NB
@@ -55374,22 +55940,22 @@ Sz
 TZ
 WE
 WE
-MU
-dR
-dR
-DI
+Se
+cY
+cY
+qh
 ew
 ew
-DI
-he
-he
-he
-he
-he
-he
-he
-he
-he
+qh
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -55558,12 +56124,12 @@ ew
 ew
 ew
 ew
-he
-he
-dR
-dR
-dR
-mA
+Iw
+Iw
+cY
+cY
+cY
+le
 qW
 WE
 WE
@@ -55575,23 +56141,23 @@ WE
 qr
 qr
 WE
-nn
-Mc
-dR
-dR
-dR
+YY
+ET
+cY
+cY
+cY
 ew
 ew
 ew
 ew
-he
-he
-he
-he
-he
-he
-he
-he
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -55760,14 +56326,14 @@ ew
 ew
 ew
 ew
-he
-dR
-dR
-dR
-dR
-DI
-mA
-Et
+Iw
+cY
+cY
+cY
+cY
+qh
+le
+VH
 WE
 WE
 WE
@@ -55777,22 +56343,22 @@ WE
 Ex
 uK
 WE
-VS
-dR
-dR
-dR
-he
+cE
+cY
+cY
+cY
+Iw
 ew
 ew
 ew
 ew
 ew
 ew
-he
-he
-he
-he
-he
+Iw
+Iw
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -55962,28 +56528,28 @@ ew
 ew
 ew
 ew
-he
-dR
-dR
-dR
-dR
-dR
-dR
-OS
-qW
+Iw
+cY
+cY
+cY
+cY
+cY
+cY
+aE
+vH
 WE
 WE
 WE
 WE
-fc
-mj
-mj
-it
-rb
-dR
-dR
-he
-he
+kt
+xp
+xp
+OP
+XR
+cY
+cY
+Iw
+Iw
 ew
 ew
 ew
@@ -56165,27 +56731,27 @@ ew
 ew
 ew
 ew
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-JF
-uU
-uU
-uU
-Ji
-us
-tW
-AD
-AD
-Rk
-dR
-dR
-he
-he
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cd
+CM
+CM
+CM
+FH
+ih
+ZA
+oF
+oF
+lu
+cY
+cY
+Iw
+Iw
 ew
 ew
 ew
@@ -56367,27 +56933,27 @@ ew
 ew
 ew
 ew
-he
-he
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-DI
-DI
-DI
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-he
+Iw
+Iw
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+qh
+qh
+qh
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
 ew
 ew
 ew
@@ -56570,25 +57136,25 @@ ew
 ew
 ew
 ew
-he
-he
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-he
+Iw
+Iw
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
 ew
 ew
 ew
@@ -56772,25 +57338,25 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-he
-he
-he
+Iw
+Iw
+Iw
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -56975,24 +57541,24 @@ ew
 ew
 ew
 ew
-he
-he
-he
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-dR
-DI
-DI
-DI
-he
-he
-he
-he
+Iw
+Iw
+Iw
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+qh
+qh
+qh
+Iw
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -57179,22 +57745,22 @@ ew
 ew
 ew
 ew
-he
-dR
-dR
-dR
-dR
-DI
-DI
-DI
-DI
-he
-he
-he
-he
-he
-he
-he
+Iw
+cY
+cY
+cY
+cY
+qh
+qh
+qh
+qh
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -57388,14 +57954,14 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-he
-he
-he
-he
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
+Iw
 ew
 ew
 ew
@@ -57591,11 +58157,11 @@ ew
 ew
 ew
 ew
-he
-he
-he
-he
-he
+Iw
+Iw
+Iw
+Iw
+Iw
 ew
 ew
 ew
