@@ -10409,7 +10409,13 @@
 "DX" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/storage/photo_album,
+/obj/item/storage/photo_album{
+	desc = "A collection of old photos featuring colonial marines, the Album prominently features three distinct women, A pale redhead, A small blonde marine with sharp blue eyes and an Asian marine wearing a scarf. The last page has the words 'Cherish the memories, not the ending.' written down."
+	},
+/obj/item/clothing/glasses/sunglasses/big/orange{
+	pixel_y = 11;
+	pixel_x = -5
+	},
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522_l_l/indoors/canteen)
 "DY" = (
