@@ -11273,6 +11273,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/lv522_l_l/indoors/engineering)
 "Go" = (
@@ -15009,6 +15012,9 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
+	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/lv522_l_l/indoors/engineering)
