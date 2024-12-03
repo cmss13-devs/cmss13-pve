@@ -614,9 +614,9 @@
 	switch(direction)
 		if(NORTH)
 			shift_pixel_y = -10
+			new_layer = WALL_LAYER-0.01
 		if(SOUTH)
 			shift_pixel_y = 16
-			new_layer = WALL_LAYER-0.01
 		if(WEST)
 			shift_pixel_x = 10
 		if(EAST)
