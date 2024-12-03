@@ -421,6 +421,7 @@
 /obj/item/smartgun_battery,
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
+/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "gR" = (
@@ -1163,6 +1164,16 @@
 "se" = (
 /turf/closed/shuttle/elevator/button/freight,
 /area/firefly/supply)
+"sj" = (
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Smartgunner";
+	has_cryo_gear = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/cryo_cell)
 "sz" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer/mono,
@@ -1462,6 +1473,7 @@
 /obj/item/smartgun_battery,
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
+/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_theta)
 "wW" = (
@@ -2878,6 +2890,9 @@
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
 "SV" = (
+/obj/structure/machinery/power/reactor{
+	name = "\improper S-52 fusion reactor 17"
+	},
 /turf/open/floor/almayer,
 /area/firefly/engineer)
 "Tb" = (
@@ -3333,6 +3348,20 @@
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /obj/item/clothing/under/marine/veteran/pmc,
 /obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Squad Sergeant"
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/cryo_cell)
+"Zl" = (
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Smartgunner"
+	},
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "Zo" = (
@@ -12715,7 +12744,7 @@ nn
 Vd
 Vd
 fz
-qn
+Zl
 lV
 TW
 Wg
@@ -13014,7 +13043,7 @@ DE
 UY
 UY
 lV
-ko
+sj
 Yl
 lg
 lg

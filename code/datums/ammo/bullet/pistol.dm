@@ -90,9 +90,13 @@
 	shrapnel_chance = 0
 
 // Reskinned rubber bullet used for the ES-4 CL pistol.
-/datum/ammo/bullet/pistol/rubber/stun
-	name = "stun pistol bullet"
+/datum/ammo/bullet/pistol/rubber/electrostatic
+	name = "electrostatic pistol bullet"
 	sound_override = null
+	damage = 15
+
+/datum/ammo/bullet/pistol/rubber/electrostatic/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 // Used by M1911, Deagle and KT-42
 /datum/ammo/bullet/pistol/heavy

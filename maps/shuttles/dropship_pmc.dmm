@@ -218,7 +218,7 @@
 /area/shuttle/pmc)
 "wh" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
-/obj/structure/machinery/door/airlock/hatch/cockpit/three,
+/obj/structure/machinery/door/airlock/hatch/cockpit/two,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/pmc)
 "wN" = (
@@ -532,8 +532,9 @@
 	icon_state = "S";
 	pixel_y = 2
 	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds3{
-	name = "\improper Cash Flow cargo door"
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
+	name = "\improper Cash Flow cargo door";
+	id = "aft_door"
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/shuttle/pmc)
