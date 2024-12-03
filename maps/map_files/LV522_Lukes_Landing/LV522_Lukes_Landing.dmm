@@ -295,6 +295,13 @@
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
+"arV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	light_color = "#BB3F3F"
+	},
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522_l_l/basement/colony)
 "asf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/optable{
@@ -443,6 +450,10 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/cell_charger,
 /obj/effect/spawner/random/powercell,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
 /turf/open/floor/prison,
 /area/lv522_l_l/outdoors/comms_relay)
 "ayK" = (
@@ -768,10 +779,6 @@
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
 	dir = 8
-	},
-/obj/structure/machinery/light/double{
-	dir = 1;
-	light_color = "#BB3F3F"
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/comms_relay)
@@ -6190,6 +6197,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/basement/colony)
+"gPw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	light_color = "#BB3F3F";
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/outdoors/comms_relay)
 "gPI" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -7271,6 +7286,10 @@
 /obj/structure/ladder{
 	id = "Ladder-Comms-l";
 	height = 1
+	},
+/obj/structure/machinery/light/double{
+	light_color = "#BB3F3F";
+	dir = 8
 	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/basement/colony)
@@ -9086,6 +9105,10 @@
 	},
 /turf/open/asphalt/cement/cement4,
 /area/lv522_l_l/outdoors/colony)
+"knu" = (
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/outdoors/mining)
 "knD" = (
 /obj/structure/ladder{
 	icon_state = "ladder10";
@@ -10177,6 +10200,12 @@
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/dorms)
+"lEJ" = (
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/mining)
 "lFl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/barrel/true_random,
@@ -11405,6 +11434,13 @@
 	},
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/indoors/dorms)
+"mVP" = (
+/obj/structure/prop/server_equipment/yutani_server{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/outdoors/mining)
 "mVX" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -11578,10 +11614,6 @@
 	},
 /obj/structure/platform/strata/metal{
 	dir = 4
-	},
-/obj/structure/machinery/light/double{
-	dir = 1;
-	light_color = "#BB3F3F"
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/comms_relay)
@@ -13410,16 +13442,11 @@
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/basement/mine)
 "pjq" = (
-/obj/structure/machinery/light/double{
-	dir = 1;
-	pixel_y = 9;
-	light_color = "#BB3F3F"
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
 	},
-/obj/structure/pipes/standard/simple/hidden/yellow{
-	dir = 4
-	},
-/turf/open/floor/prison/cell_stripe/east,
-/area/lv522_l_l/basement/colony)
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/mining)
 "pke" = (
 /obj/structure/platform_decoration/strata/metal,
 /turf/open/auto_turf/shale/layer1,
@@ -13860,6 +13887,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/airtraffic)
+"pNk" = (
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/mining)
 "pNn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random,
@@ -14251,9 +14284,6 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/obj/structure/machinery/light/double{
-	light_color = "#BB3F3F"
-	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/comms_relay)
 "qpr" = (
@@ -14439,6 +14469,14 @@
 	pixel_y = 18
 	},
 /turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/comms_relay)
+"qyn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
+/turf/open/floor/prison,
 /area/lv522_l_l/outdoors/comms_relay)
 "qyA" = (
 /obj/structure/platform/strata{
@@ -14975,6 +15013,16 @@
 	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/basement/colony)
+"qZd" = (
+/obj/structure/stairs/perspective{
+	dir = 10;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/mining)
 "qZk" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -15262,6 +15310,12 @@
 /obj/structure/machinery/conveyor,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
+"rtT" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/mining)
 "rus" = (
 /obj/structure/largecrate/random,
 /obj/effect/decal/cleanable/dirt,
@@ -15870,6 +15924,10 @@
 /obj/structure/ladder{
 	id = "Ladder-Comms-R";
 	height = 1
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
 	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/basement/colony)
@@ -16692,9 +16750,6 @@
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
 	dir = 8
-	},
-/obj/structure/machinery/light/double{
-	light_color = "#BB3F3F"
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/comms_relay)
@@ -17612,6 +17667,16 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
+"ubl" = (
+/obj/structure/stairs/perspective{
+	dir = 6;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/mining)
 "ubm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform/strata/metal,
@@ -17660,6 +17725,12 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
+"uij" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/mining)
 "uiQ" = (
 /obj/structure/closet/crate/trashcart,
 /obj/item/trash/burger,
@@ -46766,11 +46837,11 @@ aOF
 sRZ
 ctd
 uRp
-mAl
+gPw
 qLL
 pvE
 qLL
-mAl
+gPw
 lZS
 mEo
 sRZ
@@ -47170,7 +47241,7 @@ xVR
 ydp
 ctd
 aGG
-mAl
+qyn
 qLL
 pvE
 qLL
@@ -50727,10 +50798,10 @@ fnP
 fnP
 fnP
 fnP
+pNk
+pNk
+rtT
 lAE
-lAE
-phf
-bUS
 bUS
 qFV
 xAq
@@ -50929,10 +51000,10 @@ fnP
 fnP
 fnP
 fnP
+lWx
+lWx
+qZd
 lAE
-lAE
-phf
-bUS
 bUS
 qFV
 xAq
@@ -51131,10 +51202,10 @@ fnP
 fnP
 fnP
 fnP
+lWx
+knu
+pjq
 lAE
-lAE
-lAE
-bUS
 bUS
 qvX
 xAq
@@ -51333,10 +51404,10 @@ fnP
 fnP
 fnP
 fnP
+lWx
+mVP
+pjq
 lAE
-lAE
-lAE
-phf
 bUS
 qvX
 xAq
@@ -51535,10 +51606,10 @@ fnP
 fnP
 fnP
 fnP
+lWx
+lWx
+ubl
 lAE
-lAE
-lAE
-phf
 bUS
 qvX
 xAq
@@ -51737,10 +51808,10 @@ fnP
 fnP
 fnP
 fnP
+lEJ
+lEJ
+uij
 lAE
-lAE
-lAE
-phf
 bUS
 kOn
 hYN
@@ -62798,8 +62869,8 @@ fGo
 fGo
 fGo
 fGo
-pjq
-psN
+uxx
+arV
 fGo
 fGo
 cyH
