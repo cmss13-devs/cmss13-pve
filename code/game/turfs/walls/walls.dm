@@ -647,5 +647,5 @@
 	to_unhide.apply_effect(1, SUPERSLOW)
 	to_unhide.apply_effect(2, SLOW)
 	hiding_humans -= to_unhide
-	UnregisterSignal(hiding_human, COMSIG_MOVABLE_MOVED)
-	UnregisterSignal(hiding_human, COMSIG_LIVING_SET_BODY_POSITION)
+	UnregisterSignal(to_unhide, COMSIG_MOVABLE_MOVED)
+	UnregisterSignal(to_unhide, COMSIG_LIVING_SET_BODY_POSITION)
