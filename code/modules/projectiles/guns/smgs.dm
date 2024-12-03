@@ -438,18 +438,18 @@
 	item_state = "type64"
 
 //-------------------------------------------------------
-//GENERIC UZI //Based on the uzi submachinegun, of course.
+//The MAC has a high RPM and okay damage, but its not incredibly accurate at sustained fire...
 
 /obj/item/weapon/gun/smg/mac15
 	name = "\improper MAC-15 submachinegun"
-	desc = "A cheap, reliable design and manufacture make this ubiquitous submachinegun useful despite the age." //Includes proprietary 'full-auto' mode, banned in several Geneva Suggestions rim-wide.
+	desc = "A cheap submachine gun chambered in a high caliber handgun round. Blistering rate of fire, lethal against lightly or unarmored foes, but worthless against hard targets."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "mac15"
 	item_state = "mac15"
 
 	fire_sound = 'sound/weapons/gun_mac15.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/mac15
-	flags_gun_features = GUN_ANTIQUE|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED //|GUN_HAS_FULL_AUTO|GUN_FULL_AUTO_ON|GUN_FULL_AUTO_ONLY commented out until better fullauto code
+	flags_gun_features = GUN_ANTIQUE|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_FIREMODE_AUTOMATIC
 
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
@@ -459,9 +459,7 @@
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
-		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/lasersight, // Under
-		/obj/item/attachable/burstfire_assembly,
 		)
 	wield_delay = WIELD_DELAY_NONE
 	aim_slowdown = SLOWDOWN_ADS_NONE
@@ -472,11 +470,11 @@
 /obj/item/weapon/gun/smg/mac15/set_gun_config_values()
 	..()
 
-	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_7
+	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_2
 	fa_max_scatter = SCATTER_AMOUNT_TIER_3
 	set_fire_delay(FIRE_DELAY_TIER_12)
 	accuracy_mult = BASE_ACCURACY_MULT
-	scatter = SCATTER_AMOUNT_TIER_5
+	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
 	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_2
 

@@ -1,6 +1,5 @@
 /datum/equipment_preset/clf
 	name = FACTION_CLF
-	languages = list(LANGUAGE_SPANISH, pick_weight(LANGUAGE_ENGLISH = 5, LANGUAGE_JAPANESE = 2, LANGUAGE_SPANISH = 2, LANGUAGE_GERMAN = 2))
 	assignment = JOB_CLF
 	rank = FACTION_CLF
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -10,6 +9,7 @@
 
 /datum/equipment_preset/clf/New()
 	. = ..()
+	languages = list(LANGUAGE_SPANISH, pick_weight(list(LANGUAGE_ENGLISH = 5, LANGUAGE_JAPANESE = 2, LANGUAGE_SPANISH = 2, LANGUAGE_GERMAN = 2)))
 	access = get_access(ACCESS_LIST_CLF_BASE)
 
 /datum/equipment_preset/clf/load_name(mob/living/carbon/human/new_human, randomise)
@@ -918,12 +918,12 @@
 	access = get_access(ACCESS_LIST_CLF_ALL)
 
 /datum/equipment_preset/clf/commander/load_gear(mob/living/carbon/human/new_human)
+	spawn_rebel_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/mercenary/miner(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/command(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/black(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
-
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/dumbgunner(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_R_STORE)
 

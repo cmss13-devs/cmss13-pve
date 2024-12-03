@@ -22,6 +22,13 @@
 	scatter = SCATTER_AMOUNT_TIER_6
 	accuracy = HIT_ACCURACY_TIER_3
 
+/datum/ammo/bullet/smg/highcal
+	name = "high caliber pistol bullet"
+	damage = 40
+	effective_range_max = 7
+	penetration = -ARMOR_PENETRATION_TIER_3
+	shell_speed = AMMO_SPEED_TIER_3
+
 /datum/ammo/bullet/smg/m39
 	name = "high-velocity submachinegun bullet" //i don't want all smgs to inherit 'high velocity'
 
