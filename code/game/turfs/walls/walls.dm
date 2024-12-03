@@ -648,3 +648,10 @@
 	UnregisterSignal(to_unhide, COMSIG_MOVABLE_MOVED)
 	UnregisterSignal(to_unhide, COMSIG_LIVING_SET_BODY_POSITION)
 	to_unhide.remove_filter("cutout")
+
+/turf/closed/wall/Destroy()
+	if(hiding_humans.len)
+		for(var/mob/living/carbon/human/human in hiding_humans)
+			unhide_human(human)
+
+	return ..()
