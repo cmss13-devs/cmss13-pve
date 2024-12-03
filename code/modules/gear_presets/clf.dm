@@ -1,6 +1,6 @@
 /datum/equipment_preset/clf
 	name = FACTION_CLF
-	languages = list(LANGUAGE_SPANISH, (pick_weight(LANGUAGE_ENGLISH = 5, LANGUAGE_JAPANESE = 2, LANGUAGE_SPANISH = 2, LANGUAGE_GERMAN = 2)))
+	languages = list(LANGUAGE_SPANISH, pick_weight(LANGUAGE_ENGLISH = 5, LANGUAGE_JAPANESE = 2, LANGUAGE_SPANISH = 2, LANGUAGE_GERMAN = 2))
 	assignment = JOB_CLF
 	rank = FACTION_CLF
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
