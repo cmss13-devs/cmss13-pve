@@ -610,11 +610,9 @@
 	var/direction = get_dir(src, dropping)
 	var/shift_pixel_x = 0
 	var/shift_pixel_y = 0
-	var/new_layer
 	switch(direction)
 		if(NORTH)
 			shift_pixel_y = -10
-			new_layer = WALL_LAYER-0.01
 		if(SOUTH)
 			shift_pixel_y = 16
 		if(WEST)
@@ -629,8 +627,8 @@
 	hiding_humans[dropping] = direction
 	hiding_human.setDir(direction)
 	animate(hiding_human, pixel_x = shift_pixel_x, pixel_y = shift_pixel_y, time = 1)
-	if(new_layer)
-		hiding_human.layer = new_layer
+	if(direction == NORTH)
+		hiding_human.add_filter("cutout", 1, alpha_mask_filter(icon = icon('icons/effects/effects.dmi', "cutout")))
 	ADD_TRAIT(hiding_human, TRAIT_UNDENSE, WALL_HIDING_TRAIT)
 	RegisterSignal(hiding_human, COMSIG_MOVABLE_MOVED, PROC_REF(unhide_human), hiding_human)
 	RegisterSignal(hiding_human, COMSIG_LIVING_SET_BODY_POSITION, PROC_REF(unhide_human), hiding_human)
@@ -649,3 +647,4 @@
 	hiding_humans -= to_unhide
 	UnregisterSignal(to_unhide, COMSIG_MOVABLE_MOVED)
 	UnregisterSignal(to_unhide, COMSIG_LIVING_SET_BODY_POSITION)
+	to_unhide.remove_filter("cutout")
