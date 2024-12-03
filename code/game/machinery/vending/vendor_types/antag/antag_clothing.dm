@@ -56,9 +56,7 @@
 	spawned_gear_list = list(
 		/obj/item/clothing/suit/armor/vest,
 		/obj/item/clothing/suit/armor/bulletproof,
-		/obj/item/clothing/suit/storage/militia/brace,
 		/obj/item/clothing/suit/storage/militia,
-		/obj/item/clothing/suit/storage/militia/partial,
 		/obj/item/clothing/suit/storage/militia/vest,
 	)
 

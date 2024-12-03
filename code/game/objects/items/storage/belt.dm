@@ -2003,6 +2003,8 @@
 	can_hold = list(
 		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/m2c,
+		/obj/item/ammo_magazine/rifle/mar40/lmg,
+		/obj/item/ammo_magazine/improvised,
 	)
 
 /obj/item/storage/belt/gun/smartgunner/upp

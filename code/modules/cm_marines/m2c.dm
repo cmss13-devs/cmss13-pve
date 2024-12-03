@@ -33,7 +33,7 @@
 	item_state = "m56de"
 	max_rounds = 200
 	default_ammo = /datum/ammo/bullet/machinegun/dumbgun
-	gun_type = NULL
+	gun_type = null
 
 //STORAGE BOX FOR THE MACHINEGUN
 /obj/item/storage/box/m56d/m2c
