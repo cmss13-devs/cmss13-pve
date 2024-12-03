@@ -304,6 +304,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM headset"
 	path = /obj/item/clothing/head/headset
 
+/datum/gear/headwear/beret_red
+	display_name = "Beret, red"
+	path = /obj/item/clothing/head/beret
+
+/datum/gear/headwear/beret_black
+	display_name = "Beret, black"
+	path = /obj/item/clothing/head/beret/black
+
 /datum/gear/helmet_garb
 	category = "Helmet accessories"
 	cost = 1
