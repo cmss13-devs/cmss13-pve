@@ -15640,6 +15640,11 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/strata/white_cyan2,
 /area/lv522_l_l/indoors/clinic)
+"rRn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform_decoration/strata/metal,
+/turf/open/asphalt/cement,
+/area/lv522_l_l/outdoors/colony)
 "rTb" = (
 /obj/item/reagent_container/food/snacks/grown/wheat{
 	name = "straw"
@@ -18128,6 +18133,14 @@
 	},
 /turf/open/floor/strata/white_cyan1,
 /area/lv522_l_l/indoors/clinic)
+"uJY" = (
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/strata/metal,
+/turf/open/asphalt/cement,
+/area/lv522_l_l/outdoors/colony)
 "uJZ" = (
 /turf/open/asphalt/cement/cement15,
 /area/lv522_l_l/outdoors/mining)
@@ -49074,7 +49087,7 @@ vvk
 dTa
 sQu
 atv
-rGo
+rRn
 spF
 sqo
 eIp
@@ -49276,7 +49289,7 @@ xOi
 dTa
 dTa
 mLq
-cvr
+uJY
 dTa
 mLq
 gON
