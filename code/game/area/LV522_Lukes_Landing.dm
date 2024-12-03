@@ -68,6 +68,12 @@
 	name = "D Block - Air Traffic Tower"
 	icon_state = "blue"
 
+/area/lv522_l_l/indoors/mining
+	name = "LV522 Lukes Landing - Colony Outskirts - Mining"
+	icon_state = "blue"
+
+//Colony Outside
+
 /area/lv522_l_l/outdoors/engineering
 	name = "Outdoors - Engineering Storehouse"
 	icon_state = "mechbay"
@@ -77,8 +83,12 @@
 	name = "LV522 Lukes Landing - Colony Interior"
 	icon_state = "east"
 
-/area/lv522_l_l/indoors/mining
-	name = "LV522 Lukes Landing - Colony Outskirts - Mining"
+/area/lv522_l_l/outdoors/comms_relay
+	name = "LV522 Colony Outskirts - Communications Relay"
+	icon_state = "blue"
+
+/area/lv522_l_l/outdoors/mining
+	name = "LV522 Colony Outskirts - Mining"
 	icon_state = "blue"
 
 //colony outskirts
