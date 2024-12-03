@@ -2,7 +2,10 @@ GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 
 /proc/initialize_human_ai_conversations()
 	var/list/return_list = list()
-	for(var/subtype_convo in subtypesof(/datum/human_ai_conversation)) // init not working
+	for(var/datum/human_ai_conversation/subtype_convo as anything in subtypesof(/datum/human_ai_conversation)) // init not working
+		if(subtype_convo::amount_ai_involved == -1)
+			continue
+
 		var/datum/human_ai_conversation/new_convo = new subtype_convo
 		if(new_convo.amount_ai_involved > length(return_list))
 			return_list.len = new_convo.amount_ai_involved
@@ -12,7 +15,8 @@ GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 	return return_list
 
 /datum/human_ai_conversation
-	var/amount_ai_involved = 2
+	/// How many AI are involved in this conversation. If -1, this conversation is abstract.
+	var/amount_ai_involved = -1
 	/// P#: The AI of that number (randomly assigned when conversation is created) will say the message after the P#.
 	/// You can use || to divide one message into multiple that the AI will randomly choose between.
 	/// D #: Will delay the conversation for however many deciseconds listed.
@@ -73,6 +77,26 @@ GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 		"D 15",
 		"P1 I'm doin' pretty alright.",
 	)
+
+/datum/human_ai_conversation/smoke
+	amount_ai_involved = 2
+	conversation_data = list(
+		"P1 Hey, got a smoke?",
+		"D 20",
+		"P2 Nah, sorry man.",
+		"D 22",
+		"P1 Damn.",
+	) 
+
+/datum/human_ai_conversation/faction
+	/// What faction(s) can say this line.
+	var/list/acceptable_factions
+
+/datum/human_ai_conversation/faction/conversation_allowed(datum/human_ai_brain/brain)
+	if(brain.tied_human.faction in acceptable_factions)
+		return ..()
+	return FALSE
+
 
 /datum/human_ai_brain
 	var/in_conversation = FALSE
