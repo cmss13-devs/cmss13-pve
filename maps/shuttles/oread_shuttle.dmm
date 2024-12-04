@@ -1,0 +1,133 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/machinery/door/airlock/multi_tile/elevator,
+/turf/open/floor/almayer,
+/area/space)
+"c" = (
+/turf/open/floor/corsat/plate,
+/area/space)
+"e" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/space)
+"k" = (
+/obj/structure/catwalk/prison,
+/turf/open/space/basic,
+/area/space)
+"n" = (
+/turf/closed/shuttle/elevator{
+	dir = 9
+	},
+/area/space)
+"q" = (
+/turf/closed/shuttle/elevator{
+	dir = 5
+	},
+/area/space)
+"r" = (
+/turf/closed/shuttle/elevator,
+/area/space)
+"s" = (
+/obj/structure/catwalk/prison,
+/obj/structure/catwalk/prison,
+/turf/open/space/basic,
+/area/space)
+"A" = (
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 15
+	},
+/turf/closed/shuttle/elevator{
+	dir = 4
+	},
+/area/space)
+"C" = (
+/turf/open/floor/almayer,
+/area/space)
+"E" = (
+/turf/closed/shuttle/elevator{
+	dir = 6
+	},
+/area/space)
+"H" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/space)
+"P" = (
+/obj/structure/sign/safety/restrictedarea,
+/turf/closed/shuttle/elevator{
+	dir = 4
+	},
+/area/space)
+"Q" = (
+/turf/closed/shuttle/elevator{
+	dir = 4
+	},
+/area/space)
+"S" = (
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/floor/corsat/plate,
+/area/space)
+"Y" = (
+/obj/docking_port/mobile{
+	width = 6;
+	id = oreadshuttle;
+	name = "Elevator";
+	area_type = /area/shuttle/oread_shuttle/elevator
+	},
+/turf/closed/shuttle/elevator{
+	dir = 10
+	},
+/area/space)
+
+(1,1,1) = {"
+n
+r
+r
+r
+r
+Y
+"}
+(2,1,1) = {"
+P
+k
+e
+e
+k
+a
+"}
+(3,1,1) = {"
+Q
+S
+k
+k
+c
+C
+"}
+(4,1,1) = {"
+Q
+S
+s
+k
+c
+C
+"}
+(5,1,1) = {"
+A
+k
+H
+H
+k
+C
+"}
+(6,1,1) = {"
+q
+r
+r
+r
+r
+E
+"}
