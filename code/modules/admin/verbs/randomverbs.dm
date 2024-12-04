@@ -160,7 +160,10 @@
 		return
 
 	for(var/mob/living/carbon/human/human in world)
+		if(human.name == "Test Dummy")
+			continue
 		human.set_species("Skeleton")
+		GLOB.fallen_list += human.real_name
 
 #undef ANTIGRIEF_OPTION_ENABLED
 #undef ANTIGRIEF_OPTION_NEW_PLAYERS

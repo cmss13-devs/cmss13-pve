@@ -172,8 +172,8 @@
 	pain_type = /datum/pain/zombie
 	stamina_type = /datum/stamina/none
 	death_message = "falls down, their bones scattering across the floor..."
-	flags = NO_BREATHE|NO_CLONE_LOSS|NO_POISON|NO_NEURO|NO_SHRAPNEL
-	mob_inherent_traits = list(TRAIT_FOREIGN_BIO, TRAIT_CRAWLER)
+	flags = NO_BREATHE|NO_CLONE_LOSS|NO_POISON|NO_NEURO|NO_SHRAPNEL|NO_BLOOD
+	mob_inherent_traits = list(TRAIT_CRAWLER)
 	brute_mod = 0.6 //Minor bullet resistance
 	burn_mod = 0.1 //Lowered burn damage since it would 1-shot zombies from 2 to 0.8.
 	speech_chance  = 5
@@ -191,4 +191,6 @@
 	owner.f_style = "Shaved"
 
 /datum/species/skeleton/handle_death(mob/living/carbon/human/H)
-	H.gib()
+	for(var/obj/limb/limb in H.limbs)
+		limb.droplimb(0, 0)
+	qdel(H)
