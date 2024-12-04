@@ -214,6 +214,99 @@
 		FACTION_MERCENARY,
 		FACTION_SURVIVOR,
 	)
+	enter_ombat_lines = list(
+		"I got 'em!",
+		"I have 'em!",
+		"Hostile spotted!",
+		"Hostile spotted, engaging!",
+		"Waste them!",
+		"Needing assistance here.",
+		"Contact!",
+		"Contact, hostile!",
+		"Contact contact!",
+		"We got contact!",
+		"Enemy!",
+		"Enemy in sight!",
+		"Enemy spotted!",
+		"You...!",
+		"Visual on target.",
+		"Back me up.",
+		"Target!",
+		"Target ahead!",
+		"Target identified!",
+		"Target sighted!",
+		"There, there!",
+		"Engaging.",
+		"Engaging!",
+		"Weapons free.",
+		"Open fire.",
+		"Found 'em.",
+		"Fire at will!",
+		"Lock and load!",
+		"Eyes up- enemy sighted!",
+		"Safeties off.",
+		"Game on!",
+		"Open fire!",
+		"Got eyes on!",
+	)
+	exit_combat_lines = list(
+		"Negative on hostiles.",
+		"Location is quiet.",
+		"No visuals on enemy targets.",
+		"Observing this location.",
+		"Stay sharp.",
+		"Not done yet...",
+		"Area should be secure.",
+		"Target lost.",
+		"Lost the target.",
+	)
+	squad_member_death_lines = list(
+		"This sector isn't secure!",
+		"Friendly has expired.",
+		"Requesting immediate assistance!",
+		"We need help here!",
+		"Requesting support!",
+		"We're down one.",
+		"Facing resistance here.",
+		"Friendly's FUBAR, defensive positions!",
+	)
+	reload_lines = list(
+		"Reloading.",
+		"Reloading!",
+		"Reloading now!",
+		"Cover me, I'm reloading.",
+		"It's dry, watch my back.",
+		"I'm out, exchanging mags.",
+		"Ammo dry. I need to reload.",
+		"Mag's dry, filling up now.",
+		"Shoot-! I'm out!",
+		"*sigh",
+	)
+	reload_internal_mag_lines = list(
+		"Reloading.",
+		"Reloading!",
+		"Reload, cover!",
+		"Ammo out!",
+		"It's out.",
+		"All dry, cover me.",
+		"*sigh",
+		"Grr... give me time.",
+	)
+	grenade_thrown_lines = list(
+		"Grenade out!",
+		"Throwing a grenade!",
+		"Fire in the hole!",
+		"Grenade- cover!",
+		"Bite on this!",
+		"It's gonna get loud!",
+		"Pineapple- up!",
+		"Clear blast!",
+		"Heads up!",
+		"Catch!",
+	)
+
+/datum/human_ai_faction/wy/pmc
+	faction = FACTION_PMC
 
 /datum/human_ai_faction/wy_deathsquad
 	faction = FACTION_WY_DEATHSQUAD
