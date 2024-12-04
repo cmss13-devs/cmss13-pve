@@ -871,8 +871,10 @@ This function completely restores a damaged organ to perfect condition.
 		var/obj/organ //Dropped limb object
 		switch(body_part)
 			if(BODY_FLAG_HEAD)
-				if(owner.species.flags & IS_SYNTHETIC) //special head for synth to allow brainmob to talk without an MMI
+				if(owner.species.flags & IS_SYNTHETIC || isskeleton(owner)) //special head for synth to allow brainmob to talk without an MMI
 					organ= new /obj/item/limb/head/synth(owner.loc, owner)
+					if(isskeleton(owner))
+						organ.name = "talking skull"
 				else
 					organ= new /obj/item/limb/head(owner.loc, owner)
 				owner.drop_inv_item_on_ground(owner.glasses, null, TRUE)

@@ -1196,3 +1196,18 @@
 	if(initial(emote.sound))
 		playsound(loc, initial(emote.sound), 50, FALSE)
 	return TRUE
+
+/obj/structure/prop/fireplace
+	name = "fireplace"
+	desc = "Its an old brick fireplace. How the hell did it end up here?"
+	icon = 'icons/obj/structures/props/fireplace.dmi'
+	icon_state = "fireplace"
+	unslashable = TRUE
+	unacidable = TRUE
+	density = TRUE
+	layer = ABOVE_FLY_LAYER
+
+/obj/structure/prop/fireplace/proc/fire()
+	visible_message(SPAN_NOTICE("[src] suddenly comes to life. Flames roar, embers flicker and die out. Warm light fills the room..."))
+	set_light(13, 1, "#FF3300")
+	icon_state = "fireplace1"

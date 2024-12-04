@@ -160,3 +160,35 @@
 		if(receiving_client)
 			receiving_client.mob.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>Beheaded...</u></span><br>Your corpse will no longer rise.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
 			to_chat(receiving_client, SPAN_BOLDNOTICE(FONT_SIZE_LARGE("You've been beheaded! Your body will no longer rise.")))
+
+/datum/species/skeleton
+	group = SPECIES_HUMAN
+	name = "Skeleton"
+	name_plural = "Skeletons"
+	blood_color = BLOOD_COLOR_ZOMBIE
+	icobase = 'icons/mob/humans/species/r_skeleton.dmi'
+	deform = 'icons/mob/humans/species/r_skeleton.dmi'
+	eyes = "blank_s"
+	pain_type = /datum/pain/zombie
+	stamina_type = /datum/stamina/none
+	death_message = "falls down, their bones scattering across the floor..."
+	flags = NO_BREATHE|NO_CLONE_LOSS|NO_POISON|NO_NEURO|NO_SHRAPNEL
+	mob_inherent_traits = list(TRAIT_FOREIGN_BIO, TRAIT_CRAWLER)
+	brute_mod = 0.6 //Minor bullet resistance
+	burn_mod = 0.1 //Lowered burn damage since it would 1-shot zombies from 2 to 0.8.
+	speech_chance  = 5
+	cold_level_1 = -1  //zombies don't mind the cold
+	cold_level_2 = -1
+	cold_level_3 = -1
+	can_emote = FALSE
+	knock_down_reduction = 10
+	stun_reduction = 10
+	knock_out_reduction = 5
+	has_organ = list()
+
+/datum/species/skeleton/handle_post_spawn(mob/living/carbon/human/owner)
+	owner.h_style = "Bald"
+	owner.f_style = "Shaved"
+
+/datum/species/skeleton/handle_death(mob/living/carbon/human/H)
+	H.gib()

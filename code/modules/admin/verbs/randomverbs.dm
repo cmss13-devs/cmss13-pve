@@ -152,6 +152,16 @@
 		else
 			to_chat(src, SPAN_BOLDNOTICE("Explosive antigrief has an unknown value... you should probably fix that."))
 
+/client/proc/skeletify()
+	set category = "Game Master.Extras"
+	set name = "Skeletify"
+
+	if(!check_rights(R_ADMIN))
+		return
+
+	for(var/mob/living/carbon/human/human in world)
+		human.set_species("Skeleton")
+
 #undef ANTIGRIEF_OPTION_ENABLED
 #undef ANTIGRIEF_OPTION_NEW_PLAYERS
 #undef ANTIGRIEF_OPTION_DISABLED
