@@ -6357,6 +6357,14 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
+"gVT" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/west,
+/area/lv522_l_l/basement/colony)
 "gWs" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -6818,6 +6826,11 @@
 	dir = 4
 	},
 /turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/basement/colony)
+"hzn" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "hzw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10818,6 +10831,7 @@
 	dir = 4;
 	light_color = "#BB3F3F"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "mkn" = (
@@ -13706,6 +13720,14 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/mining)
+"pui" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/marked,
+/area/lv522_l_l/basement/colony)
 "pum" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -14526,6 +14548,11 @@
 	pixel_y = 5
 	},
 /turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
+"quE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "quM" = (
 /obj/structure/cargo_container/horizontal/blue/top,
@@ -16731,6 +16758,18 @@
 	},
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/comms_relay)
+"sTN" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/server_equipment/yutani_server{
+	density = 0;
+	pixel_y = 22
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522_l_l/basement/colony)
 "sTR" = (
 /obj/structure/machinery/light/double{
 	dir = 1;
@@ -20820,6 +20859,11 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/cell_stripe/north,
+/area/lv522_l_l/basement/colony)
+"xxO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/basement/colony)
 "xys" = (
 /obj/structure/platform/strata/metal{
@@ -80193,7 +80237,7 @@ fGo
 fGo
 fGo
 gCY
-leZ
+cys
 fGo
 fGo
 fGo
@@ -80295,7 +80339,7 @@ fGo
 fGo
 fGo
 fGo
-oDS
+gVT
 gkj
 fGo
 fGo
@@ -80321,6 +80365,32 @@ fGo
 fGo
 fGo
 fGo
+gVT
+gOV
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+oDS
+xxO
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
+fGo
 oDS
 gOV
 fGo
@@ -80348,33 +80418,7 @@ fGo
 fGo
 fGo
 oDS
-gOV
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-oDS
-gOV
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-fGo
-oDS
-gOV
+xxO
 fGo
 fGo
 fGo
@@ -80395,7 +80439,7 @@ fGo
 fGo
 fGo
 dRo
-ehv
+pui
 fGo
 fGo
 fGo
@@ -80510,7 +80554,7 @@ fGo
 fGo
 fGo
 fGo
-fIy
+sTN
 rFt
 fGo
 fGo
@@ -80562,7 +80606,7 @@ fGo
 fGo
 fGo
 fGo
-fIy
+sTN
 lVo
 fGo
 fGo
@@ -80589,7 +80633,7 @@ fGo
 fGo
 fGo
 fIy
-lVo
+quE
 fGo
 fGo
 fGo
@@ -80597,7 +80641,7 @@ fGo
 fGo
 fGo
 txH
-jcY
+gVT
 fGo
 fGo
 fGo
@@ -80752,7 +80796,7 @@ fGo
 fGo
 fGo
 umU
-bHd
+tkQ
 fGo
 fGo
 fGo
@@ -80799,7 +80843,7 @@ fGo
 fGo
 fGo
 mkj
-sHS
+hzn
 fGo
 fGo
 fGo
