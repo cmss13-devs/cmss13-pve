@@ -975,7 +975,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "mp_helmet"
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	specialty = "M10 pattern military police"
-	built_in_visors = list(new /obj/item/device/helmet_visor/security)
+	built_in_visors = list(new /obj/item/device/helmet_visor)
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/helmet/marine/MP/WO
 	name = "\improper M3 pattern chief MP helmet"
@@ -1097,11 +1098,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 //FIORINA / UA RIOT CONTROL HELMET//
 
 /obj/item/clothing/head/helmet/marine/veteran/ua_riot
-	name = "\improper RC6 helmet"
-	desc = "The standard UA Riot Control 6 helmet is of odd design, lacking a face shield by default (mounting points are available). The distinct white pattern and red emblem are synonymous with oppression throughout the rim."
+	name = "\improper M10 pattern ballistic helmet"
+	desc = "Standard issue high molecular density polymer combat helmet. Resistant to glancing hits from small arms and shrapnel. This version is stripped down, missing the typically incorporated tactical camera, IFF signal transponder, and heads up display eyepiece."
 	icon_state = "ua_riot"
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	specialty = "RC6"
 	flags_atom = NO_SNOW_TYPE
 
 // KUTJEVO HELMET
@@ -1907,3 +1906,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_inventory = BLOCKSHARPOBJ
+	clothing_traits = list(TRAIT_EAR_PROTECTION) //So I don't have to make another subtype for the rocketeers

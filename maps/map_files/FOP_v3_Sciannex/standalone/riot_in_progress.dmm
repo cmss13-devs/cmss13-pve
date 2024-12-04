@@ -181,10 +181,6 @@
 /obj/structure/window/framed/prison,
 /turf/open/floor/plating/prison,
 /area/fiorina/station/security)
-"hg" = (
-/obj/effect/landmark/corpsespawner/security/marshal,
-/turf/open/floor/prison/floor_plate,
-/area/fiorina/station/security)
 "hI" = (
 /obj/item/stack/folding_barricade,
 /turf/open/floor/prison/floor_plate,
@@ -312,7 +308,6 @@
 /area/fiorina/station/security)
 "mt" = (
 /obj/effect/spawner/random/gun/shotgun/midchance,
-/obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
 "mD" = (
@@ -413,7 +408,6 @@
 /turf/open/floor/prison,
 /area/fiorina/lz/near_lzII)
 "pV" = (
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/item/tool/kitchen/utensil/knife,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
@@ -576,10 +570,6 @@
 	dir = 8
 	},
 /obj/item/clothing/head/helmet/marine/veteran/ua_riot,
-/turf/open/floor/prison,
-/area/fiorina/station/security)
-"wW" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
 "xp" = (
@@ -806,7 +796,6 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "FQ" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
 /obj/item/weapon/gun/energy/taser,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
@@ -970,7 +959,6 @@
 /turf/open/floor/prison,
 /area/fiorina/lz/near_lzII)
 "OV" = (
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/prison,
 /area/fiorina/lz/near_lzII)
@@ -1239,7 +1227,6 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "YZ" = (
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
@@ -1404,7 +1391,7 @@ vq
 vq
 vq
 qQ
-wW
+sq
 sq
 sq
 FH
@@ -1476,7 +1463,7 @@ FH
 bm
 Su
 YH
-hg
+FH
 PA
 sq
 sq
@@ -1645,7 +1632,7 @@ Sm
 nD
 IG
 xW
-wW
+sq
 sq
 sq
 sq
