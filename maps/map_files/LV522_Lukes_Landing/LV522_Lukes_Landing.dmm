@@ -2592,6 +2592,10 @@
 "cNs" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "cOe" = (
@@ -10809,6 +10813,13 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
+"mkj" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/basement/colony)
 "mkn" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
@@ -17945,6 +17956,14 @@
 	light_color = "#BB3F3F"
 	},
 /turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/basement/colony)
+"umU" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
+/turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "umW" = (
 /obj/structure/sink{
@@ -63582,7 +63601,7 @@ ddo
 ddo
 cyH
 fGo
-sHS
+umU
 bHd
 fGo
 fGo
@@ -80680,7 +80699,7 @@ fGo
 fGo
 fGo
 fGo
-sHS
+umU
 gQw
 fGo
 fGo
@@ -80693,7 +80712,7 @@ fGo
 fGo
 fGo
 fGo
-sHS
+umU
 sWd
 fGo
 fGo
@@ -80706,7 +80725,7 @@ fGo
 fGo
 fGo
 fGo
-sHS
+umU
 bHd
 fGo
 fGo
@@ -80719,7 +80738,7 @@ fGo
 fGo
 fGo
 fGo
-sHS
+umU
 oEQ
 fGo
 fGo
@@ -80732,7 +80751,7 @@ fGo
 fGo
 fGo
 fGo
-sHS
+umU
 bHd
 fGo
 fGo
@@ -80745,7 +80764,7 @@ fGo
 fGo
 fGo
 fGo
-sHS
+umU
 bHd
 fGo
 fGo
@@ -80758,7 +80777,7 @@ fGo
 fGo
 fGo
 fGo
-sHS
+umU
 nXU
 fGo
 fGo
@@ -80771,7 +80790,7 @@ fGo
 fGo
 fGo
 fGo
-sHS
+umU
 nJv
 fGo
 fGo
@@ -80779,7 +80798,7 @@ fGo
 fGo
 fGo
 fGo
-her
+mkj
 sHS
 fGo
 fGo
