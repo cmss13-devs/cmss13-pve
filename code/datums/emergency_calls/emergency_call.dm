@@ -13,7 +13,7 @@
 /datum/game_mode/proc/ares_online()
 	var/name = "ARES Online"
 	var/input = "ARES. Online. Good morning, marines."
-	shipwide_ai_announcement(input, name, 'sound/AI/ares_online.ogg')
+	shipwide_ai_announcement(input, name)
 
 /datum/game_mode/proc/request_ert(user, ares = FALSE)
 	if(!user)
