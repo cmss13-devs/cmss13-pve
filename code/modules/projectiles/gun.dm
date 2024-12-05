@@ -1212,6 +1212,9 @@ and you're good to go.
 	if(isliving(user))
 		projectile_to_fire.def_zone = user.zone_selected
 
+	for(var/obj/item/attachable/attachie in src)
+		attachie.modify_bullet(projectile_to_fire)
+
 	play_firing_sounds(projectile_to_fire, user)
 
 	if(targloc != curloc)

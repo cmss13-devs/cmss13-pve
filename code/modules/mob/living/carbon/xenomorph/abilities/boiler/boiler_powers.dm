@@ -137,14 +137,14 @@
 
 	playsound(xeno,"acid_sizzle", 50, 1)
 
-	if(xeno.ammo == GLOB.ammo_list[/datum/ammo/xeno/boiler_gas/acid])
+	if(xeno.ammo == GLOB.ammo_list[/datum/ammo/xeno/boiler_gas/acid] || xeno.ammo == GLOB.ammo_list[/datum/ammo/xeno/acid/defiler])
 		spicy_gas = new /datum/effect_system/smoke_spread/xeno_acid
 	else if(xeno.ammo == GLOB.ammo_list[/datum/ammo/xeno/boiler_gas])
 		spicy_gas = new /datum/effect_system/smoke_spread/xeno_weaken
 	else
 		CRASH("Globber has unknown ammo [xeno.ammo]! Oh no!")
 	var/datum/cause_data/cause_data = create_cause_data("acid shroud gas", owner)
-	spicy_gas.set_up(1, 0, get_turf(xeno), null, 6, new_cause_data = cause_data)
+	spicy_gas.set_up(3, 0, get_turf(xeno), null, 6, new_cause_data = cause_data)
 	spicy_gas.start()
 	to_chat(xeno, SPAN_XENOHIGHDANGER("We dump our acid through our pores, creating a shroud of gas!"))
 

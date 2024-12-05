@@ -1642,13 +1642,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
-"afP" = (
-/obj/structure/ship_ammo/rocket/napalm{
-	pixel_y = 10
-	},
-/obj/structure/ship_ammo/rocket/napalm,
-/turf/open/floor/almayer/cargo,
-/area/golden_arrow/hangar)
 "afQ" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -3182,12 +3175,6 @@
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
-	},
-/obj/structure/ship_ammo/heavygun{
-	pixel_y = 8
-	},
-/obj/structure/ship_ammo/heavygun{
-	layer = 3.01
 	},
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
@@ -15082,7 +15069,8 @@
 	layer = 2.52
 	},
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/hangar)
 "aZf" = (
 /obj/effect/decal/warning_stripes{
@@ -16133,6 +16121,17 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"iMw" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/hangar)
 "iRi" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -16358,6 +16357,14 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
+"kKP" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/hangar)
 "kQO" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/supplydrop)
@@ -16586,6 +16593,9 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"mJs" = (
+/turf/open/floor/almayer/cargo/southwest,
+/area/golden_arrow/hangar)
 "mJI" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -17508,11 +17518,18 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
 "vRh" = (
-/obj/structure/ship_ammo/heavygun{
-	pixel_y = 8
+/obj/structure/ship_ammo/rocket/banshee/nerve{
+	pixel_y = 18
 	},
-/obj/structure/ship_ammo/heavygun{
-	layer = 3.01
+/obj/structure/ship_ammo/rocket/banshee/nerve{
+	pixel_y = 12
+	},
+/obj/structure/ship_ammo/rocket/banshee/nerve{
+	pixel_y = 6
+	},
+/obj/structure/ship_ammo/rocket/banshee/nerve,
+/obj/structure/ship_ammo/rocket/banshee/nerve{
+	pixel_y = -6
 	},
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
@@ -17580,18 +17597,6 @@
 	},
 /turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/platoonarmory)
-"wPI" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/ship_ammo/heavygun{
-	pixel_y = 8
-	},
-/obj/structure/ship_ammo/heavygun{
-	layer = 3.01
-	},
-/turf/open/floor/almayer/cargo/southwest,
-/area/golden_arrow/hangar)
 "wRv" = (
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/almayer/test_floor5,
@@ -17636,6 +17641,13 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/supply)
+"xBm" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/hangar)
 "xHO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26935,13 +26947,13 @@ adz
 adz
 adz
 adz
-afP
-amn
-afP
+aEf
+iMw
+aVD
 akb
-afP
-alT
-afP
+aEf
+kKP
+aVD
 adz
 ayX
 adz
@@ -27089,11 +27101,11 @@ ayX
 adz
 aEf
 aZb
-aEf
+aVD
 akb
 aEf
+xBm
 aWl
-aDz
 adz
 ayX
 adz
@@ -27394,7 +27406,7 @@ adz
 ajM
 vRh
 aVD
-wPI
+vRh
 aVD
 vRh
 ajI
@@ -27544,11 +27556,11 @@ adz
 ayX
 adz
 aza
-vRh
+mJs
 aVD
 akZ
 aWl
-vRh
+mJs
 acR
 adz
 ayX
