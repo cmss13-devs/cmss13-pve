@@ -315,7 +315,7 @@ Airlock Appearance Effects
 	plane = -7
 
 /obj/effect/hangar_airlock/height_mask/dropship
-	layer = 5
+	layer = 5.01
 	alpha = 0
 	plane = -6
 

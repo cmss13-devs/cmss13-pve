@@ -299,10 +299,14 @@
 		shake_camera(affected_mob, 6 SECONDS, 1)
 		shake_camera(affected_mob, 16 SECONDS, 1)
 		if(!affected_mob.buckled)
-			affected_mob.apply_effect(16, WEAKEN)
+			affected_mob.KnockDown(16)
 			affected_mob.throw_random_direction(2, spin = TRUE)
-			affected_mob.apply_armoured_damage(60, ARMOR_MELEE, BRUTE, rand_zone())
+			affected_mob.apply_armoured_damage(80, ARMOR_MELEE, BRUTE, rand_zone())
 			affected_mob.visible_message(SPAN_DANGER("[affected_mob] loses their grip on the floor, flying violenty upwards!"), SPAN_DANGER("You lose your grip on the floor, flying violenty upwards!"))
+			if(prob(DROPSHIP_TURBULENCE_BONEBREAK_PROBABILITY * 2) && istype(affected_mob, /mob/living/carbon/human))
+				var/mob/living/carbon/human/affected_human = affected_mob
+				var/obj/limb/fracturing_limb = affected_human.get_limb(pick(ALL_LIMBS))
+				fracturing_limb.fracture(100)
 
 	for(var/obj/item/affected_item in affected_items)
 		affected_item.visible_message(SPAN_DANGER("[affected_item] goes flying upwards!"))
@@ -312,6 +316,11 @@
 
 /obj/docking_port/mobile/marine_dropship/proc/turbulence()
 	if(!in_flight())
+		return
+	var/flight_time_left = timeLeft(1)
+	if(flight_time_left >= DROPSHIP_TURBULENCE_PERIOD*2)
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, turbulence)), (rand(DROPSHIP_TURBULENCE_PERIOD, min((flight_time_left/2), DROPSHIP_TURBULENCE_PERIOD))))
+	if(!prob(DROPSHIP_TURBULENCE_PROBABILITY))
 		return
 
 	// this prevents atoms from being called more than once as the proc works it way through the turfs (some may be thrown onto a turf that hasn't been called yet)
@@ -325,22 +334,22 @@
 				affected_items += I
 
 	for(var/mob/living/affected_mob in affected_mobs)
-		affected_mob.visible_message(SPAN_DANGER("The dropship jolts violently!"))
+		to_chat(affected_mob, SPAN_DANGER("The dropship jolts violently!"))
 		shake_camera(affected_mob, DROPSHIP_TURBULENCE_PERIOD, 1)
-		if(!affected_mob.buckled && prob(25))
-			affected_mob.visible_message(SPAN_DANGER("You lose your grip!"))
-			affected_mob.apply_armoured_damage(25, ARMOR_MELEE, BRUTE, rand_zone())
-			affected_mob.apply_effect(DROPSHIP_TURBULENCE_PERIOD, WEAKEN)
+		if(!affected_mob.buckled && affected_mob.m_intent == MOVE_INTENT_RUN && prob(DROPSHIP_TURBULENCE_GRIPLOSS_PROBABILITY))
+			to_chat(affected_mob, SPAN_DANGER("You lose your grip!"))
+			affected_mob.apply_armoured_damage(50, ARMOR_MELEE, BRUTE, rand_zone())
+			affected_mob.KnockDown(DROPSHIP_TURBULENCE_PERIOD * 0.1)
+			if(prob(DROPSHIP_TURBULENCE_BONEBREAK_PROBABILITY) && istype(affected_mob, /mob/living/carbon/human))
+				var/mob/living/carbon/human/affected_human = affected_mob
+				var/obj/limb/fracturing_limb = affected_human.get_limb(pick(ALL_LIMBS))
+				fracturing_limb.fracture(100)
 
 	for(var/obj/item/affected_item in affected_items)
 		affected_item.visible_message(SPAN_DANGER("[affected_item] goes flying upwards!"))
 		affected_item.throwforce *= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
 		affected_item.throw_random_direction(2, spin = TRUE)
 		affected_item.throwforce /= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
-
-	var/flight_time_left = timeLeft(1)
-	if(flight_time_left >= DROPSHIP_TURBULENCE_PERIOD*2)
-		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, turbulence)), (rand(DROPSHIP_TURBULENCE_PERIOD, (flight_time_left/2))))
 
 /obj/docking_port/stationary/marine_dropship
 	dir = NORTH
