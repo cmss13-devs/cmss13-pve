@@ -128,6 +128,7 @@
 	explosion_power = 120
 	shrapnel_count = 48
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+	arm_sound = 'sound/weapons/pinpull.ogg'
 
 /*
 //================================================

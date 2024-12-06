@@ -27,10 +27,6 @@
 	},
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
-"fd" = (
-/obj/effect/landmark/corpsespawner/security,
-/turf/open/gm/dirt,
-/area/lv624/lazarus/crashed_ship_containers)
 "fC" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/gm/dirt,
@@ -410,7 +406,7 @@ tB
 SS
 AI
 Lc
-fd
+AI
 Lc
 Lc
 Lc

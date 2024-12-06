@@ -437,12 +437,62 @@
 
 /obj/item/weapon/gun/rifle/m41aMK1/army
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper."
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/attached_gun/grenade/mk1)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/grenade/mk1)
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
 
 /obj/item/weapon/gun/rifle/m41aMK1/army/masterkey
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper. This one has a U7 underbarrel shotgun strapped to it."
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/attached_gun/shotgun)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/shotgun)
+
+//M20A Harrington rifle
+//=================================================
+//=================================================
+
+/obj/item/weapon/gun/rifle/m20a
+	name = "\improper M20A pulse rifle"
+	desc = "A predecessor to the M41A pulse rifle still utilized by the UA's Colonial Guard and various other organizations. Aside from its 10x24mm chambering, the 'Harrington' rifle is largely considered to be in every metric the polar opposite of the M41A; featuring an obsolete three-round burst mode, lower magazine size, and it uses an integrated shotgun attachment."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "m20a"
+	item_state = "m20a"
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+	fire_sound = "gun_pulse"
+	current_mag = /obj/item/ammo_magazine/rifle/m20a
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/stock/m20a,
+		/obj/item/attachable/attached_gun/shotgun,
+	)
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	wield_delay = WIELD_DELAY_NORMAL
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a)
+	map_specific_decoration = FALSE
+
+/obj/item/weapon/gun/rifle/m20a/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15)
+
+/obj/item/weapon/gun/rifle/m20a/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+	damage_falloff_mult = 0
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
 
 //----------------------------------------------
 //Special gun for the CO to replace the smartgun
@@ -1612,6 +1662,7 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/army,
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/flashlight/grip,
 	)
@@ -1650,6 +1701,10 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ext
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip)
 
+/obj/item/weapon/gun/rifle/m4ra/army
+	desc = "The M4RA battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams."
+	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ap
+	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
 
 // pve - kinda weird icon usage, uses urban M4RA sprite w/ custom attachie sprite
 /obj/item/weapon/gun/rifle/m4ra/pve
