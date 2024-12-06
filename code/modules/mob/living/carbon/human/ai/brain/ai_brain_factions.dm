@@ -214,7 +214,7 @@
 		FACTION_MERCENARY,
 		FACTION_SURVIVOR,
 	)
-	enter_ombat_lines = list(
+	enter_combat_lines = list(
 		"I got 'em!",
 		"I have 'em!",
 		"Hostile spotted!",
