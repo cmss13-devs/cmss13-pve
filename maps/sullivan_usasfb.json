@@ -1,0 +1,12 @@
+{
+    "map_name": "Sullivan AeroSpaceForce Base",
+    "short_name": "USASFB Sullivan",
+    "map_path": "map_files/Sullivan_USASFB",
+	"map_file": "Sullivan_USASFB.dmm",
+    "webmap_url": "Sullivan_USASFB",
+    "environment_traits": {
+        "COLD": true
+    },
+    "map_item_type": "/obj/item/map/lazarus_landing_map",
+    "camouflage": "snow"
+}
