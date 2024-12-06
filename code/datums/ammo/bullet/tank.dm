@@ -87,7 +87,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_8
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
 	accurate_range = 12
-	damage = 40
+	damage = 125
 	penetration = ARMOR_PENETRATION_TIER_6
 	damage_armor_punch = 1
 
