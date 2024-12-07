@@ -1,0 +1,15 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "M38 HEAP grenade rounds."
+  - rscadd: "M51A BFAB grenade rounds"
+  - rscadd: "M108 Canister grenade rounds"
+  - qol: "HEDP & HSDP finally put the DP in their name with dual fuse functionality"
+  - qol: "Changed the M40 HSDP, CCDP & HIDP into their own discrete models instead (M47 HSDP, M60 WPSI, M77 HIAM)"
+  - qol: "non-friendly claymores now have a much lower chance to detonate when attempting to defuse them"
+  - qol: "The M60 WPSI has had it's smoke adjusted to be much more lethal, as you'd expect white phosphorus smoke to be"
+  - imageadd: "Added new model_icons for the various new grenade designations"
+  - imageadd: "New active_state grenade icons added (Courtesy of Amory)"
+  - imageadd: "Added new colour-bands for the new grenade designations"
+  - imageadd: "New colour for the standard grenade box (Courtesy of Amory)"
+  - soundadd: "The grenade priming sound has been replaced with one that fits much more in-line with the film."
