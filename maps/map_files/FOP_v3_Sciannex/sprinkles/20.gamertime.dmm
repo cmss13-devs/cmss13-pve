@@ -6,7 +6,6 @@
 "aU" = (
 /obj/structure/bed/chair/comfy,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/engineer,
 /turf/open/floor/prison/darkpurple2,
 /area/template_noop)
 "bh" = (
@@ -14,7 +13,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood/oil/streak,
-/obj/effect/landmark/corpsespawner/prisoner,
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "da" = (
@@ -172,14 +170,12 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/prisoner,
 /turf/open/floor/prison/darkpurple2/west,
 /area/template_noop)
 "xP" = (
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison/darkpurple2/east,
 /area/template_noop)
 "yx" = (
@@ -251,7 +247,6 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "Lx" = (
