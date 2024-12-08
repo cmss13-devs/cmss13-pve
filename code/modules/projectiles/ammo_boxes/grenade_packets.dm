@@ -4,25 +4,11 @@
 	w_class = SIZE_MEDIUM//fits into bags
 	storage_slots = 5	//Baseline amount the mk1 UGL holds
 	can_hold = list(/obj/item/explosive/grenade)
-	foldable = null
+	foldable = TRUE
 	var/content_type
 	var/base_icon
 	var/packet_icon
 	has_gamemode_skin = FALSE
-
-/obj/item/storage/box/packet/proc/try_forced_folding(datum/source, mob/user)
-	SIGNAL_HANDLER
-
-	if(!isturf(loc))
-		return
-
-	if(length(contents))
-		return
-
-	UnregisterSignal(src, COMSIG_ITEM_DROPPED)
-	storage_close(user)
-	to_chat(user, SPAN_NOTICE("You throw away [src]."))
-	qdel(src)
 
 /obj/item/storage/box/packet/post_skin_selection()
 	base_icon = icon_state
@@ -85,8 +71,8 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	content_type = /obj/item/explosive/grenade/slug/baton
 
 /obj/item/storage/box/packet/flare
-	name = "\improper M72A1 HIPF starshell grenade packet"
-	desc = "It contains five M72A1 HIPF starshell grenades. Used for illumination."
+	name = "\improper M72A2 HIPF starshell grenade packet"
+	desc = "It contains five M72A2 HIPF starshell grenades. Used for illumination."
 	packet_icon = "hiaf-p"
 	content_type = /obj/item/explosive/grenade/high_explosive/impact/flare
 

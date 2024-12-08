@@ -377,8 +377,8 @@
 */
 
 /obj/item/explosive/grenade/high_explosive/impact/flare
-	name = "\improper M72A1 HIPF starshell grenade"
-	desc = "High-Illumination, Parachute-Flare. A small, but deceptively strong blast grenade that can penetrate appreciable quantities of armor, whilst retaining a similar casualty radius as the standard M40. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only. Due to faulty primers, it is inadvisable to fire them directly at hard surfaces like walls, landing them just in front is recommended."
+	name = "\improper M72A2 HIPF starshell grenade"
+	desc = "High-Illumination, Parachute-Flare. Fired into the air, the M72A2 releases a parachute and ignites, illuminating the surrounding area for several minutes. Longer lasting than the A1 models, is is unfortunately not as bright. Can also be fired into ceilings where it will partiall embed and serve as an overhead light source until it burns out."
 	icon_state = "grenade_hipf"
 	item_state = "grenade_hipf"
 	dangerous = TRUE	//kept so marines don't punt flare grenades up aboard the Garrow
