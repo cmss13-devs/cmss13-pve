@@ -1,6 +1,5 @@
 /datum/equipment_preset/clf
 	name = FACTION_CLF
-	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
 	assignment = JOB_CLF
 	rank = FACTION_CLF
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -10,57 +9,48 @@
 
 /datum/equipment_preset/clf/New()
 	. = ..()
+	languages = list(LANGUAGE_SPANISH, pick_weight(list(LANGUAGE_ENGLISH = 5, LANGUAGE_JAPANESE = 2, LANGUAGE_SPANISH = 2, LANGUAGE_GERMAN = 2)))
 	access = get_access(ACCESS_LIST_CLF_BASE)
 
 /datum/equipment_preset/clf/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(60;MALE, 40;FEMALE)
-	var/random_name
-	var/first_name
-	var/last_name
-	//gender checks
+	new_human.gender = pick(50;MALE,50;FEMALE)
+	var/datum/preferences/A = new
+	A.randomize_appearance(new_human)
+	var/random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
+	var/hair_color = pick(hair_colors)
+	new_human.r_hair = hair_colors[hair_color][1]
+	new_human.g_hair = hair_colors[hair_color][2]
+	new_human.b_hair = hair_colors[hair_color][3]
+	new_human.r_facial = hair_colors[hair_color][1]
+	new_human.g_facial = hair_colors[hair_color][2]
+	new_human.b_facial = hair_colors[hair_color][3]
+	var/eye_color = pick(colors)
+	new_human.r_eyes = colors[eye_color][1]
+	new_human.g_eyes = colors[eye_color][2]
+	new_human.b_eyes = colors[eye_color][3]
 	if(new_human.gender == MALE)
-		if(prob(40))
-			first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
-		else
-			first_name = "[pick(GLOB.first_names_male_clf)]"
-		new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
+		new_human.h_style = pick("Undercut", "Partly Shaved", "Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top", "Medium Fade", "High Fade", "Coffee House Cut")
+		new_human.f_style = pick("Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
 	else
-		if(prob(40))
-			first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
-		else
-			first_name = "[pick(GLOB.first_names_female_clf)]"
-	//surname
-	if(prob(35))
-		last_name = "[capitalize(randomly_generate_japanese_word(rand(1, 4)))]"
-	else
-		last_name = "[pick(GLOB.last_names_clf)]"
-	//put them together
-	random_name = "[first_name] [last_name]"
+		new_human.h_style = pick("Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top", "CIA", "Mulder", "Pvt. Redding", "Pixie Cut Left", "Pixie Cut Right", "Bun")
 	new_human.change_real_name(new_human, random_name)
-	new_human.age = rand(17,45)
-	new_human.r_hair = 25
-	new_human.g_hair = 25
-	new_human.b_hair = 35
-	new_human.r_eyes = 139
-	new_human.g_eyes = 62
-	new_human.b_eyes = 19
+	new_human.age = rand(17,50)
+
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/soldier
-	name = "CLF Soldier"
+	name = "Guerilla Fighter"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF
 	rank = JOB_CLF
-	role_comm_title = "GRL"
 
 	skills = /datum/skills/clf
 
 /datum/equipment_preset/clf/soldier/load_gear(mob/living/carbon/human/new_human)
-	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
-	var/obj/item/clothing/accessory/storage/webbing/W = new()
-	jumpsuit.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	spawn_rebel_uniform(new_human)
 	spawn_rebel_suit(new_human)
 	spawn_rebel_helmet(new_human)
 	spawn_rebel_shoes(new_human)
@@ -148,36 +138,31 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/engineer
-	name = "CLF Engineer"
+	name = "Guerilla Technician"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_ENGI
 	rank = JOB_CLF_ENGI
-	role_comm_title = "TECH"
 
 	skills = /datum/skills/clf/combat_engineer
 
 /datum/equipment_preset/clf/engineer/load_gear(mob/living/carbon/human/new_human)
 
-	var/obj/item/clothing/under/colonist/clf/M = new()
-	var/obj/item/clothing/accessory/storage/webbing/W = new()
-	M.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(M, WEAR_BODY)
-
+	spawn_rebel_uniform(new_human)
 	spawn_rebel_suit(new_human)
 	spawn_rebel_shoes(new_human)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/meson, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow, WEAR_HANDS)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/welding, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/cct, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/ert, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/low_grade_full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_R_STORE)
@@ -267,28 +252,24 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/medic
-	name = "CLF Medic"
+	name = "Guerilla Doctor"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_MEDIC
 	rank = JOB_CLF_MEDIC
-	role_comm_title = "MED"
+	role_comm_title = "Dr"
 	paygrades = list(PAY_SHORT_CDOC = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/clf/combat_medic
 
 /datum/equipment_preset/clf/medic/load_gear(mob/living/carbon/human/new_human)
 
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
-	var/obj/item/clothing/accessory/storage/surg_vest/equipped/W = new()
-	CLF.attach_accessory(new_human, W)
-	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
-
+	spawn_rebel_uniform(new_human)
 	spawn_rebel_suit(new_human)
 	spawn_rebel_helmet(new_human)
 	spawn_rebel_shoes(new_human)
 	spawn_rebel_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/equipped, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BELT)
-
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/medic(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
@@ -420,11 +401,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/specialist
-	name = "CLF Specialist"
+	name = "Guerilla Specialist"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_SPECIALIST
 	rank = JOB_CLF_SPECIALIST
-	role_comm_title = "SPC"
 	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/clf/specialist/New()
@@ -540,11 +520,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/leader
-	name = "CLF Leader"
+	name = "Guerilla Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_LEADER
 	rank = JOB_CLF_LEADER
-	role_comm_title = "LDR"
 	skills = /datum/skills/clf/leader
 
 /datum/equipment_preset/clf/leader/New()
@@ -679,7 +658,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/synth
-	name = "CLF Multipurpose Synthetic"
+	name = "Guerilla Multipurpose Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	languages = ALL_SYNTH_LANGUAGES
@@ -877,7 +856,7 @@
 	)
 
 /datum/equipment_preset/clf/synth/combat
-	name = "CLF Combat Synthetic"
+	name = "Guerilla Combat Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/clf/synth/combat/load_skills(mob/living/carbon/human/new_human)
@@ -927,12 +906,11 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/commander
-	name = "CLF Cell Commander"
+	name = "Guerilla Cell Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_COMMANDER
 	rank = JOB_CLF_COMMANDER
 	paygrades = list(PAY_SHORT_REBC = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "CMDR"
 	skills = /datum/skills/clf/commander
 
 /datum/equipment_preset/clf/commander/New()
@@ -940,17 +918,12 @@
 	access = get_access(ACCESS_LIST_CLF_ALL)
 
 /datum/equipment_preset/clf/commander/load_gear(mob/living/carbon/human/new_human)
+	spawn_rebel_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/mercenary/miner(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/command(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia/smartgun(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba/highimpact(new_human), WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba/highimpact(new_human), WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/clf(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/black(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/clf/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
-
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/dumbgunner(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_R_STORE)
 
@@ -959,9 +932,7 @@
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Combat Boots", 0, /obj/item/clothing/shoes/combat, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
 		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
-		list("CLF Smartgun Armor", 0, /obj/item/clothing/suit/storage/militia/smartgun, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Black Gloves", 0, /obj/item/clothing/gloves/black, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
-		list("CLF Smartgunner Belt", 0, /obj/item/storage/belt/gun/smartgunner/clf, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
 		list("Headset", 0, /obj/item/device/radio/headset/distress/CLF/command, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
 		list("Flashlight", 0, /obj/item/device/flashlight, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 		list("Combat Pack", 0, /obj/item/storage/backpack/lightpack, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),

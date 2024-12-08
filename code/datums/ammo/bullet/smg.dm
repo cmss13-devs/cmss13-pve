@@ -22,6 +22,13 @@
 	scatter = SCATTER_AMOUNT_TIER_6
 	accuracy = HIT_ACCURACY_TIER_3
 
+/datum/ammo/bullet/smg/highcal
+	name = "high caliber pistol bullet"
+	damage = 40
+	effective_range_max = 7
+	penetration = -ARMOR_PENETRATION_TIER_3
+	shell_speed = AMMO_SPEED_TIER_3
+
 /datum/ammo/bullet/smg/m39
 	name = "high-velocity submachinegun bullet" //i don't want all smgs to inherit 'high velocity'
 
@@ -117,16 +124,16 @@
 
 /datum/ammo/bullet/smg/mp27
 	name = "simple submachinegun bullet"
-	damage = 40
+	damage = 30
 	accurate_range = 5
 	effective_range_max = 7
 	penetration = 0
 	shell_speed = AMMO_SPEED_TIER_6
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
-	scatter = SCATTER_AMOUNT_TIER_6
-	accuracy = HIT_ACCURACY_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_7
+	accuracy = HIT_ACCURACY_TIER_3
 
-// less damage than the m39, but better falloff, range, and AP
+// Nice and controllable, and in JHP form too.
 
 /datum/ammo/bullet/smg/ppsh
 	name = "crude submachinegun bullet"
