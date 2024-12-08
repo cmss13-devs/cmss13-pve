@@ -73,13 +73,21 @@
 				if(!do_after(user, 10, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
 					return 1
 
-
 		if(affecting.get_incision_depth())
 			to_chat(user, SPAN_NOTICE("[M]'s [affecting.display_name] is cut open, you'll need more than a bandage!"))
 			return TRUE
 
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
 		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
+			if(!I.has_been_bandaged)
+				user.affected_message(M,
+					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
+					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
+					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name], <b>slowing the bleeding.</b>"))
+				I.has_been_bandaged = TRUE
+
+
 		switch(affecting.bandage())
 			if(WOUNDS_BANDAGED)
 				user.affected_message(M,
@@ -175,6 +183,15 @@
 
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
 		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+
+		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
+			if(!I.has_been_bandaged)
+				user.affected_message(M,
+					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
+					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
+					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name], <b>slowing the bleeding.</b>"))
+				I.has_been_bandaged = TRUE
+
 		switch(affecting.bandage(TRUE))
 			if(WOUNDS_BANDAGED)
 				user.affected_message(M,
