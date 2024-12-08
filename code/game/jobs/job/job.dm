@@ -41,7 +41,7 @@
 	/// If TRUE, this job will spawn w/ a cryo emergency kit during evac/red alert
 	var/gets_emergency_kit = TRUE
 
-	/// Whether or not linking your discord account can let you get prime priority for this role
+	/// Whether or not having enough playtime will allow you to primeroll
 	var/prime_priority = FALSE
 
 /datum/job/New()
