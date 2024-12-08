@@ -6,7 +6,7 @@
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	faction = FACTION_CLF
 	origin_override = ORIGIN_CIVILIAN
-	idtype = /obj/item/card/id/data
+	idtype = /obj/item/card/id/data/crime
 
 /datum/equipment_preset/clf/New()
 	. = ..()
@@ -48,11 +48,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/soldier
-	name = "CLF Soldier"
+	name = "Guerrilla Fighter"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF
 	rank = JOB_CLF
-	role_comm_title = "GRL"
 
 	skills = /datum/skills/clf
 
@@ -148,7 +147,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/engineer
-	name = "CLF Engineer"
+	name = "Guerrilla Engineer"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_ENGI
 	rank = JOB_CLF_ENGI
@@ -267,11 +266,11 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/medic
-	name = "CLF Medic"
+	name = "Guerrilla Doctor"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_MEDIC
 	rank = JOB_CLF_MEDIC
-	role_comm_title = "MED"
+	role_comm_title = "DR"
 	paygrades = list(PAY_SHORT_CDOC = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/clf/combat_medic
 
@@ -420,7 +419,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/specialist
-	name = "CLF Specialist"
+	name = "Guerrilla Specialist"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_SPECIALIST
 	rank = JOB_CLF_SPECIALIST
@@ -540,7 +539,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/leader
-	name = "CLF Leader"
+	name = "Guerrilla Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_LEADER
 	rank = JOB_CLF_LEADER
@@ -679,7 +678,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/synth
-	name = "CLF Multipurpose Synthetic"
+	name = "Guerrilla Multipurpose Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	languages = ALL_SYNTH_LANGUAGES
@@ -716,7 +715,7 @@
 	new_human.r_eyes = 139
 	new_human.g_eyes = 62
 	new_human.b_eyes = 19
-	idtype = /obj/item/card/id/data
+	idtype = /obj/item/card/id/data/crime
 
 /datum/equipment_preset/clf/synth/load_race(mob/living/carbon/human/new_human)
 	new_human.set_species(SYNTH_COLONY_GEN_ONE)
@@ -877,7 +876,7 @@
 	)
 
 /datum/equipment_preset/clf/synth/combat
-	name = "CLF Combat Synthetic"
+	name = "Guerrilla Combat Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/clf/synth/combat/load_skills(mob/living/carbon/human/new_human)
@@ -927,12 +926,12 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/commander
-	name = "CLF Cell Commander"
+	name = "Guerrilla Cell Commander"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_COMMANDER
 	rank = JOB_CLF_COMMANDER
 	paygrades = list(PAY_SHORT_REBC = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "CMDR"
+	role_comm_title = "ADMIN"
 	skills = /datum/skills/clf/commander
 
 /datum/equipment_preset/clf/commander/New()

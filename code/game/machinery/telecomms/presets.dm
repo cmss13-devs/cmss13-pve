@@ -176,7 +176,7 @@
 
 /obj/structure/machinery/telecomms/relay/preset/tower/faction/clf
 	freq_listening = CLF_FREQS
-	faction_shorthand = "CLF"
+	faction_shorthand = "GRL"
 
 /obj/structure/machinery/telecomms/relay/preset/tower/faction/pmc
 	freq_listening = PMC_FREQS

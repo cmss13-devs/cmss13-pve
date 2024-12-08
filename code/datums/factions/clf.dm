@@ -1,5 +1,5 @@
 /datum/faction/clf
-	name = "Colonial Liberation Front"
+	name = "Colonial Insurgency"
 	faction_tag = FACTION_CLF
 
 /datum/faction/clf/modify_hud_holder(image/holder, mob/living/carbon/human/human)
