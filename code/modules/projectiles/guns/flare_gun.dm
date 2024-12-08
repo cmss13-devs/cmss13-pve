@@ -13,6 +13,7 @@
 	flags_gun_features = GUN_INTERNAL_MAG|GUN_CAN_POINTBLANK
 	gun_category = GUN_CATEGORY_HANDGUN
 	attachable_allowed = list(/obj/item/attachable/scope/mini/flaregun)
+	special_chamber = TRUE
 
 	var/last_signal_flare_name
 
