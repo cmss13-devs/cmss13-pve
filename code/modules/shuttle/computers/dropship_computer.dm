@@ -26,6 +26,8 @@
 
 	var/can_change_shuttle = FALSE
 
+	var/obj/docking_port/stationary/marine_dropship/airlock/inner/active_airlock_dock
+
 /obj/structure/machinery/computer/shuttle/dropship/flight/Initialize(mapload, ...)
 	. = ..()
 	compatible_landing_zones = get_landing_zones()
@@ -371,6 +373,7 @@
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/ui_data(mob/user)
 	var/obj/docking_port/mobile/marine_dropship/shuttle = SSshuttle.getShuttle(shuttleId)
+	var/obj/docking_port/stationary/marine_dropship/docked_port = shuttle?.get_docked()
 	. = list()
 	.["shuttle_id"] = shuttle?.id
 	.["shuttle_mode"] = shuttle?.mode
@@ -407,6 +410,22 @@
 				"error" = FALSE
 			)
 		)
+
+	if(istype(docked_port, /obj/docking_port/stationary/marine_dropship/airlock))
+		if(istype(docked_port, /obj/docking_port/stationary/marine_dropship/airlock/outer))
+			var/obj/docking_port/stationary/marine_dropship/airlock/outer/outer_airlock = docked_port
+			active_airlock_dock = outer_airlock.link_to_inner
+		else
+			active_airlock_dock = docked_port
+		.["is_airlocked"] = TRUE
+		.["playing_airlock_alarm"] = active_airlock_dock.playing_airlock_alarm
+		.["opened_inner_airlock"] = active_airlock_dock.open_inner_airlock
+		.["lowered_dropship"] = active_airlock_dock.lowered_dropship
+		.["opened_outer_airlock"] = active_airlock_dock.open_outer_airlock
+		.["disengaged_clamps"] = active_airlock_dock.disengaged_clamps
+		.["processing"] = active_airlock_dock.processing
+	else
+		.["is_airlocked"] = FALSE
 
 	for(var/obj/docking_port/stationary/dock in compatible_landing_zones)
 		var/dock_reserved = FALSE
@@ -574,6 +593,73 @@
 		if ("change_shuttle")
 			var/new_shuttle = params["new_shuttle"]
 			return set_shuttle(new_shuttle)
+
+		if ("clamps")
+			if(!active_airlock_dock)
+				return FALSE
+			if(active_airlock_dock.processing)
+				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
+				return FALSE
+			if(!active_airlock_dock.open_outer_airlock || !active_airlock_dock.lowered_dropship)
+				to_chat(usr, SPAN_WARNING("The clamps can only be disengaged when the outer airlock is open and the dropship is lowered."))
+				return FALSE
+			if(shuttle.mode == SHUTTLE_RECHARGING)
+				to_chat(usr, SPAN_WARNING("The shuttle is still recharging, it would be suicide to have it fall into the grav well."))
+				return FALSE
+			to_chat(usr, SPAN_NOTICE("Engaging clamps."))
+			active_airlock_dock.update_clamps(TRUE)
+			return TRUE
+		if ("airlock_alarm")
+			if(!active_airlock_dock)
+				return FALSE
+			if(active_airlock_dock.processing)
+				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
+				return FALSE
+			if(active_airlock_dock.open_outer_airlock || active_airlock_dock.open_inner_airlock)
+				to_chat(usr, SPAN_WARNING("The airlock caution alarm cannot be engaged while an airlock is open."))
+				return FALSE
+			to_chat(usr, SPAN_NOTICE("Engaging airlock caution alarm."))
+			active_airlock_dock.update_airlock_alarm(TRUE)
+			return TRUE
+		if ("inner_airlock")
+			if(!active_airlock_dock)
+				return FALSE
+			if(active_airlock_dock.processing)
+				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
+				return FALSE
+			if(active_airlock_dock.open_outer_airlock || !active_airlock_dock.playing_airlock_alarm)
+				to_chat(usr, SPAN_WARNING("The inner airlock can be engaged only when the outer airlock is closed, and the airlock alarm is active."))
+				return FALSE
+			to_chat(usr, SPAN_NOTICE("Engaging inner airlock."))
+			active_airlock_dock.update_inner_airlock(TRUE)
+			return TRUE
+		if ("airlock_dropship")
+			if(!active_airlock_dock)
+				return FALSE
+			if(active_airlock_dock.processing)
+				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
+				return FALSE
+			if(!active_airlock_dock.open_inner_airlock)
+				to_chat(usr, SPAN_WARNING("The dropship airlock mechanism can only be engaged when the inner airlock is open."))
+				return FALSE
+			to_chat(usr, SPAN_NOTICE("Engaging dropship elevation mechanism."))
+			active_airlock_dock.update_dropship_height(TRUE)
+			return TRUE
+		if ("outer_airlock")
+			if(!active_airlock_dock)
+				return FALSE
+			if(active_airlock_dock.processing)
+				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
+				return FALSE
+			if(active_airlock_dock.open_inner_airlock || active_airlock_dock.playing_airlock_alarm)
+				to_chat(usr, SPAN_WARNING("The outer airlock can be engaged only when the inner airlock is closed and the alarm is disabled."))
+				return FALSE
+			if(active_airlock_dock.disengaged_clamps)
+				to_chat(usr, SPAN_WARNING("The outer airlock can only be closed when the dropship is securely resting on the clamps."))
+				return FALSE
+			to_chat(usr, SPAN_NOTICE("Engaging outer airlock."))
+			active_airlock_dock.update_outer_airlock(TRUE)
+			return TRUE
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/proc/set_shuttle(new_shuttle)
 	var/mob/user = usr
