@@ -686,7 +686,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	var/host_bypass = FALSE
 	if(user.client?.admin_holder?.check_for_rights(R_HOST))
-		host_bypass = FALSE
+		host_bypass = TRUE
 
 	var/HTML = "<body>"
 	HTML += "<tt><center>"
