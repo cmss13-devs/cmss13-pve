@@ -66,7 +66,7 @@ SUBSYSTEM_DEF(pathfinding)
 						for(var/atom/A as anything in L)
 							distance_between += A.xeno_ai_obstacle(current_run.agent, direction, target)
 					else
-						var/datum/component/human_ai/ai_component = current_run.agent.GetComponent(/datum/component/human_ai) // zonenote unfuck me later
+						var/datum/component/human_ai/ai_component = current_run.agent.GetComponent(/datum/component/human_ai)
 						var/datum/human_ai_brain/brain = ai_component.ai_brain
 						for(var/atom/A as anything in L)
 							distance_between += A.human_ai_obstacle(current_run.agent, brain, direction, target)

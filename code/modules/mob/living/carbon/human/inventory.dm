@@ -512,7 +512,7 @@
 	return ..()
 
 /mob/living/carbon/human/proc/get_strip_delay(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	/*/// Default delay
+	/// Default delay
 	var/target_delay = HUMAN_STRIP_DELAY
 	/// Multiplier for how quickly the user can strip things.
 	var/user_speed = user.get_skill_duration_multiplier(SKILL_CQC)
@@ -525,8 +525,7 @@
 		target_delay += (target_skills * 2)
 
 	/// Final result is overall delay * speed multiplier
-	return target_delay * user_speed*/
-	return 0 // zonenote
+	return target_delay * user_speed
 
 /mob/living/carbon/human/drop_inv_item_on_ground(obj/item/I, nomoveupdate, force)
 	remember_dropped_object(I)
