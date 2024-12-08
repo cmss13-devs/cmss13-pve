@@ -77,6 +77,16 @@
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_1
 
+/datum/ammo/bullet/smartgun/aa	//The base smartgun-bullet is kinda a woeful stand-in for AA cannon rounds, this should beef it up a bit more without being too OTT
+	name = "anti-aircraft bullet"
+	icon_state = "redbullet"
+	flags_ammo_behavior = AMMO_BALLISTIC
+
+	max_range = 18
+	accuracy = HIT_ACCURACY_TIER_5
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_6
+
 /datum/ammo/bullet/turret
 	name = "autocannon bullet"
 	icon_state = "redbullet" //Red bullets to indicate friendly fire restriction
@@ -168,7 +178,6 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 12
 	damage = 45 //7.62x51 is scary
-	penetration= ARMOR_PENETRATION_TIER_6
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pkp

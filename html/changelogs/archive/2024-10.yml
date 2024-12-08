@@ -1,0 +1,75 @@
+2024-10-01:
+  BonniePandora:
+  - bugfix: Un-typos a line of code in the loadout stuff
+2024-10-06:
+  BonniePandora:
+  - qol: Platoon Commanders can once again issue medals to those under their command
+2024-10-07:
+  GriffinMan4455:
+  - qol: Made walkman name and description more lore-ified
+2024-10-08:
+  BonniePandora:
+  - imageadd: Ported giant spider sprites from polaris
+  - imagedel: Axed the old ones present in the .dmi
+  - rscadd: Added new plush toys to the game, along with adding them to the loadout
+      selection list
+  - qol: M41 MK1 and NSG 23 magazine boxes can be carried on the back slot
+  Max-023:
+  - bugfix: Fixes green balaclava sprite
+2024-10-13:
+  Doubleumc:
+  - rscdel: removed time-based rankups from PFCs
+2024-10-21:
+  GriffinMan4455:
+  - bugfix: GAU and Laser in FS Menu work again yippeee
+2024-10-24:
+  BonniePandora:
+  - rscadd: Adds job, skills & gear presets for USASF Personnel
+  - rscadd: Adds job, skills & gear presets presets for US Army Personnel
+  - rscadd: Added Warrant Officer rank paygrades for USCMC
+  - rscadd: Orange-tinted BiMex shades added to the loadout selection
+  - spellcheck: Some typos fixes as I discovered them whilst working on this
+  - imageadd: Added new branch-patches for the Army & USASF
+  - imageadd: Added new Warrant-Officer rank-boards and changed the paygrades to use
+      them for the corresponding ranks
+  - bugfix: Synths now understand all human-spoken languages once more
+  Max-023:
+  - rscadd: 2 10x28 Ammunition Boxes added to the Golden Arrow Armory
+2024-10-25:
+  BonniePandora:
+  - imageadd: Adds in the orange BiMex shades on-mob mask-slot sprite
+  GriffinMan4455:
+  - rscadd: 'CN20 rounds for: Dropship, Mortar, OB'
+  - qol: FS Menu contains CN20 rounds for Dropship, Mortar, OB
+  - ui: FS UI, dunno if I have to mention this here though
+  - qol: Dogtags removable after 30 seconds
+2024-10-29:
+  BonniePandora:
+  - rscadd: New Army role; the gunner. Has a SAW, lots of ammo and porta-cades
+  - rscadd: Various army roles recieve backpacks with flares and other relevant supplies.
+      The medic now gets surgical line & synthgraft.
+  - bugfix: Corrected the spec_weapons skill of army troopers and USASF personnel
+  - qol: The ADS-C will no longer turn someone into swiss cheese if they stand in
+      it's line of fire
+  - rscadd: Adds new 0-value defines for skills that were missing them after the skill_default
+      changes
+  - qol: USASF Synthetic no longer freaks sentry guns out, they're directly marked
+      as being part of the Marine FACTION_GROUP
+  - bugfix: Fixes the skills for US Army & various USASF presets
+  GriffinMan4455:
+  - rscadd: CN20 does OXY damage too, now.
+  - balance: CN20 slightly redone. More TOX, less BRAIN, less EYE, new OXY damage.
+      CN Mortar does less direct explosive damage.
+  - rscdel: Removed old "CN-20 Missile" reference from FS menu that shouldn't be in
+      the missiles menu
+2024-10-31:
+  GriffinMan4455:
+  - rscadd: Made destroyed airlocks spawn an airlock assembly on the tiles they cover,
+      this includes both Airlocks and Multitiles.
+  - balance: Airlocks have much more damage_cap, meaning it takes more rounds from
+      a marine to kill them, Xeno damage unchanged.
+  Max-023:
+  - qol: Platoon Sergeant is now called Section Sergeant
+  - qol: Squad Sergeant description now references the Section Sergeant properly
+  - spellcheck: Fixed a typo in the corpsman description that implies they are part
+      of a squad, not a section or platoon.

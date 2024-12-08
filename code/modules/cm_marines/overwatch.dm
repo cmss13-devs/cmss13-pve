@@ -40,7 +40,8 @@
 /obj/structure/machinery/computer/overwatch/Initialize()
 	. = ..()
 
-	if (faction == FACTION_MARINE)
+	var/datum/squad/main_squad_path = MAIN_SHIP_PLATOON
+	if (faction == main_squad_path::faction)
 		tacmap = new /datum/tacmap/drawing(src, minimap_type)
 	else
 		tacmap = new(src, minimap_type) // Non-drawing version
@@ -218,7 +219,7 @@
 			if(mob_state == "Conscious" && (locate(/datum/effects/crit) in marine_human.effects_list))
 				mob_state = "Incapacitated"
 
-			if(!istype(marine_human.head, /obj/item/clothing/head/helmet/marine))
+			if(!marine_has_camera(marine_human))
 				has_helmet = FALSE
 
 			if(!marine_human.key || !marine_human.client)
@@ -382,12 +383,12 @@
 			if(!current_squad)
 				return TRUE
 
-			var/input = tgui_input_text(user, "Please write a message to announce to the squad:", "Squad Message")
+			var/input = tgui_input_text(user, "Please write a message to announce to the section:", "Section Message")
 			if(!input)
 				return TRUE
 
 			current_squad.send_message(input, 1) //message, adds username
-			current_squad.send_maptext(input, "Platoon Message:")
+			current_squad.send_maptext(input, "Section Message:")
 			visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("Message '[input]' sent to all Marines of platoon '[current_squad]'.")]")
 			log_overwatch("[key_name(user)] sent '[input]' to platoon [current_squad].")
 
@@ -404,14 +405,14 @@
 			if(!current_squad)
 				return TRUE
 
-			var/input = tgui_input_text(user, "Please write a message to announce to the Platoon leader:", "SL Message")
+			var/input = tgui_input_text(user, "Please write a message to announce to the Section Leader:", "SL Message")
 			if(!input)
 				return TRUE
 
 			current_squad.send_message(input, 1, 1) //message, adds username, only to leader
-			current_squad.send_maptext(input, "Platoon Sergeant Message:", 1)
-			visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("Message '[input]' sent to Platoon Sergeant [current_squad.squad_leader] of platoon '[current_squad]'.")]")
-			log_overwatch("[key_name(user)] sent '[input]' to Platoon Sergeant [current_squad.squad_leader] of squad [current_squad].")
+			current_squad.send_maptext(input, "Section Sergeant Message:", 1)
+			visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("Message '[input]' sent to Section Sergeant [current_squad.squad_leader] of platoon '[current_squad]'.")]")
+			log_overwatch("[key_name(user)] sent '[input]' to Section Sergeant [current_squad.squad_leader] of squad [current_squad].")
 
 			var/comm_paygrade = user.get_paygrade()
 
@@ -437,7 +438,7 @@
 					current_squad.send_maptext(current_squad.secondary_objective, "Secondary Objective:")
 
 		if("set_primary")
-			var/input = sanitize_control_chars(stripped_input(usr, "What will be the squad's primary objective?", "Primary Objective"))
+			var/input = sanitize_control_chars(stripped_input(usr, "What will be the section's primary objective?", "Primary Objective"))
 			if(current_squad && input)
 				current_squad.primary_objective = "[input] ([worldtime2text()])"
 				current_squad.send_message("Your primary objective has been changed to '[input]'. See Status pane for details.")
@@ -447,7 +448,7 @@
 				return TRUE
 
 		if("set_secondary")
-			var/input = sanitize_control_chars(stripped_input(usr, "What will be the squad's secondary objective?", "Secondary Objective"))
+			var/input = sanitize_control_chars(stripped_input(usr, "What will be the section's secondary objective?", "Secondary Objective"))
 			if(input)
 				current_squad.secondary_objective = input + " ([worldtime2text()])"
 				current_squad.send_message("Your secondary objective has been changed to '[input]'. See Status pane for details.")
@@ -476,7 +477,7 @@
 			switch(z_hidden)
 				if(HIDE_NONE)
 					z_hidden = HIDE_ALMAYER
-					to_chat(user, "[icon2html(src, usr)] [SPAN_NOTICE("Marines on the Almayer are now hidden.")]")
+					to_chat(user, "[icon2html(src, usr)] [SPAN_NOTICE("Marines on the deployed vessel are now hidden.")]")
 				if(HIDE_ALMAYER)
 					z_hidden = HIDE_GROUND
 					to_chat(user, "[icon2html(src, usr)] [SPAN_NOTICE("Marines on the ground are now hidden.")]")
@@ -652,13 +653,33 @@
 		cam = null
 		user.reset_view(null)
 
-//returns the helmet camera the human is wearing
-/obj/structure/machinery/computer/overwatch/proc/get_camera_from_target(mob/living/carbon/human/H)
+/// checks if the human has an overwatch camera at all
+/obj/structure/machinery/computer/overwatch/proc/marine_has_camera(mob/living/carbon/human/marine)
+	if(istype(marine.head, /obj/item/clothing/head/helmet/marine))
+		return TRUE
+	if(istype(marine.wear_l_ear, /obj/item/device/overwatch_camera) || istype(marine.wear_r_ear, /obj/item/device/overwatch_camera))
+		return TRUE
+	if(istype(marine.glasses, /obj/item/clothing/glasses/night/m56_goggles))
+		return TRUE
+	return FALSE
+/// returns the overwatch camera the human is wearing
+/obj/structure/machinery/computer/overwatch/proc/get_camera_from_target(mob/living/carbon/human/marine)
 	if(current_squad)
-		if(H && istype(H) && istype(H.head, /obj/item/clothing/head/helmet/marine))
-			var/obj/item/clothing/head/helmet/marine/helm = H.head
-			return helm.camera
-
+		if(marine && istype(marine))
+			if(istype(marine.head, /obj/item/clothing/head/helmet/marine))
+				var/obj/item/clothing/head/helmet/marine/helm = marine.head
+				return helm.camera
+			var/obj/item/device/overwatch_camera/cam_gear
+			if(istype(marine.wear_l_ear, /obj/item/device/overwatch_camera))
+				cam_gear = marine.wear_l_ear
+				return cam_gear.camera
+			if(istype(marine.wear_r_ear, /obj/item/device/overwatch_camera))
+				cam_gear = marine.wear_r_ear
+				return cam_gear.camera
+			var/obj/item/clothing/glasses/night/m56_goggles/m56_cam
+			if(istype(marine.glasses, /obj/item/clothing/glasses/night/m56_goggles))
+				m56_cam = marine.glasses
+				return m56_cam.camera
 
 // Alerts all groundside marines about the incoming OB
 /obj/structure/machinery/computer/overwatch/proc/alert_ob(turf/target)

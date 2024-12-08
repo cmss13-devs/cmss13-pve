@@ -239,6 +239,12 @@
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
+/datum/ammo/bullet/rifle/heavy/iff/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
+
 //====== 10x31 Type 71
 
 /datum/ammo/bullet/rifle/heavy/upp
@@ -253,6 +259,18 @@
 // Misc
 
 /datum/ammo/bullet/rifle/mar40
-	name = "7.62x39mm rifle bullet"
+	name = "8.8x29 rifle bullet"
 	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_2
+
+/datum/ammo/bullet/rifle/m16
+	name = "5.56x45 rifle bullet"
+	damage = 35
+
+/datum/ammo/bullet/rifle/m16/ap
+	name = "armor-piercing 5.56x45 rifle bullet"
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_5
+
+/datum/ammo/bullet/rifle/ar10
+	name = "7.62x51 rifle bullet"
+	damage = 55
