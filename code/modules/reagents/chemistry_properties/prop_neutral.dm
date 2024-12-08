@@ -162,8 +162,8 @@
 		mob.slurring = min(mob.slurring + POTENCY_MULTIPLIER_LOW * potency * delta_time, POTENCY_MULTIPLIER_HIGHEXTREMEINTER * potency)
 
 /datum/chem_property/neutral/alcoholic/process_critical(mob/living/mob, potency = 1, delta_time)
-	mob.apply_damage(POTENCY_MULTIPLIER_LOW * potency * delta_time, TOX)
-	mob.apply_damage(potency * delta_time, OXY)
+	mob.apply_damage(POTENCY_MULTIPLIER_VVLOW * potency * delta_time, TOX)
+	mob.apply_damage(POTENCY_MULTIPLIER_VLOW * potency * delta_time, OXY)
 
 	mob.confused = min(mob.confused + POTENCY_MULTIPLIER_MEDIUM * potency * delta_time, POTENCY_MULTIPLIER_EXTREME * potency)
 	mob.dizziness = min(mob.dizziness + POTENCY_MULTIPLIER_LOW * potency * delta_time, POTENCY_MULTIPLIER_EXTREME * potency)
@@ -181,7 +181,7 @@
 		var/mob/living/carbon/human/human = mob
 		var/datum/internal_organ/liver/liver = human.internal_organs_by_name["liver"]
 		if(liver)
-			liver.take_damage(POTENCY_MULTIPLIER_LOW * potency, TRUE)
+			liver.take_damage(POTENCY_MULTIPLIER_VLOW * potency, TRUE)
 
 /datum/chem_property/neutral/hallucinogenic
 	name = PROPERTY_HALLUCINOGENIC
