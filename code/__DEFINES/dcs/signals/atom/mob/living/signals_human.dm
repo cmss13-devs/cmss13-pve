@@ -72,5 +72,8 @@
 #define COMSIG_HUMAN_SHRAPNEL_REMOVED "human_shrapnel_removed"
 
 /// From /mob/living/carbon/human/UnarmedAttack()
+#define COMSIG_HUMAN_UNARMED_ATTACK "human_unarmed_attack"
+
+/// From /mob/living/carbon/human/UnarmedAttack()
 #define COMSIG_HUMAN_BEFORE_ATTACK_HAND "human_before_attack_hand"
 	#define COMPONENT_CANCEL_HUMAN_ATTACK_HAND (1<<0)
