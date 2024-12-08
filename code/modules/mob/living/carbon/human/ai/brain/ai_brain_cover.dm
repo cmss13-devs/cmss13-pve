@@ -59,7 +59,7 @@
 
 
 /datum/human_ai_brain/proc/recursive_turf_cover_scan(turf/scan_turf, list/turf_dict, cover_dir, first_iteration = TRUE)
-	if(length(turf_dict) > 200)
+	if(length(turf_dict) > 198) // Slightly lower than byond recursion limit (200)
 		return FALSE // abort if the room is too large
 
 	if(scan_turf in turf_dict)

@@ -139,3 +139,51 @@
 	new_human.put_in_active_hand(new /obj/item/weapon/gun/rifle/sniper/svd(new_human))
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+
+/datum/equipment_preset/upp/sniper
+	name = "UPP Marksman"
+
+	skills = /datum/skills/upp/specialist
+	assignment = JOB_UPP_SNIPER
+	rank = JOB_UPP_SNIPER
+	role_comm_title = "Snp"
+	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/upp/sniper/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher, WEAR_IN_BACK) //1
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/upp, WEAR_IN_BACK) //1.33
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/upp, WEAR_IN_BACK) //1.66
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy, WEAR_HEAD)
+	//body
+	var/obj/item/clothing/under/marine/veteran/UPP/UPP = new()
+	new_human.equip_to_slot_or_del(UPP, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/naval, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/heavy, WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/upp, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/C4, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
+
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/green, WEAR_FACE)
+
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
+
+	//body
+	var/obj/item/clothing/accessory/storage/black_vest/W = new()
+	UPP.attach_accessory(new_human, W)
+	for(var/i in 1 to W.hold.storage_slots)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/svd, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd, WEAR_IN_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/svd(new_human), WEAR_WAIST)
