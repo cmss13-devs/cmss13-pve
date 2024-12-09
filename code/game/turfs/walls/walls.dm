@@ -619,12 +619,16 @@
 			shift_pixel_x = 10
 		if(EAST)
 			shift_pixel_x = -10
+		else
+			return
+
 	for(var/mob/living/carbon/human/hiding in hiding_humans)
 		if(hiding_humans[hiding] == direction)
 			return
 
 	hiding_humans += dropping
 	hiding_humans[dropping] = direction
+	hiding_human.Moved() //just to be safe
 	hiding_human.setDir(direction)
 	animate(hiding_human, pixel_x = shift_pixel_x, pixel_y = shift_pixel_y, time = 1)
 	if(direction == NORTH)
