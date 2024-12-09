@@ -139,6 +139,13 @@
 	html_link = "images/9/94/New_Varadero.png"
 	color = "red"
 
+/obj/item/map/colonia_station
+
+	name = "\improper Colonia Station Map"
+	desc = "A labeled blueprint of the UPP Station Colonia"
+	html_link = "file:///C:/Users/dylan/OneDrive/Desktop/image.png"
+	color = "red"
+
 /obj/item/map/almayer
 	name = "\improper USS Almayer map"
 	desc = "A labeled blueprint of the USS Almayer"
@@ -167,6 +174,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
+		MAP_COLONIA_MARK_2 = new /obj/item/map/colonia_station
 	)
 
 //used by marine equipment machines to spawn the correct map.
