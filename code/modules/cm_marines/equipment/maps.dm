@@ -143,7 +143,7 @@
 
 	name = "\improper Colonia Station Map"
 	desc = "A labeled blueprint of the UPP Station Colonia"
-	html_link = "file:///C:/Users/dylan/OneDrive/Desktop/image.png"
+	html_link = "https://gyazo.com/232ed57dd873f0a5eb6a11bb8e5bf2c1"
 	color = "red"
 
 /obj/item/map/almayer
