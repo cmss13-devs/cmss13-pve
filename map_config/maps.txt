@@ -72,5 +72,5 @@ endmap
 map whiskey_outpost_v2
 endmap
 
-map Colonia_Mark_2
+map colonia
 endmap
