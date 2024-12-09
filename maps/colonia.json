@@ -2,7 +2,7 @@
     "map_name": "Colonia Station",
     "map_path": "map_files/Colonia_Mark_2",
     "map_file": "Colonia_Mark_2.dmm",
-    "map_item_type": "/obj/item/map/sorokyne_map",
+    "map_item_type": "/obj/item/map/colonia_station",
     "announce_text": "An automated distress signal has been recieved from Colonia Station. A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
     "traits": [{ "Ground": true }],
     "camouflage": "jungle",
