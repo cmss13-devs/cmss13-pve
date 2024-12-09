@@ -83,6 +83,7 @@
 	if(SEND_SIGNAL(A, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, src, click_parameters) & COMPONENT_CANCEL_HUMAN_ATTACK_HAND)
 		return
 
+	SEND_SIGNAL(src, COMSIG_HUMAN_UNARMED_ATTACK, A)
 	A.attack_hand(src, click_parameters)
 
 /datum/proc/handle_click(mob/living/carbon/human/user, atom/A, params) //Heres our handle click relay proc thing.
