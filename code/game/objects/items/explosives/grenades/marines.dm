@@ -23,6 +23,7 @@
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel
 	var/fire_resistance = 15 //to prevent highly controlled massive explosions
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
+	arm_sound = "sound/weapons/grenade.ogg"
 
 
 /obj/item/explosive/grenade/high_explosive/New()
@@ -106,6 +107,8 @@
 	shrapnel_count = 0
 	dual_purpose = FALSE
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+	has_arm_sound = TRUE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 
 /obj/item/explosive/grenade/high_explosive/upp
 	name = "\improper Type 6 grenade"
@@ -119,6 +122,7 @@
 	shrapnel_count = 48
 	dual_purpose = FALSE
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+	arm_sound = 'sound/weapons/pinpull.ogg'
 
 /*
 //================================================
@@ -291,6 +295,7 @@
 	flameshape = FLAMESHAPE_DEFAULT
 	radius = 2
 	fire_type = FIRE_VARIANT_DEFAULT
+	has_arm_sound = FALSE
 
 /obj/item/explosive/grenade/incendiary/impact/prime()
 	return
@@ -328,6 +333,7 @@
 	explosion_power = 100 //hedp
 	shrapnel_count = 0
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+	has_arm_sound = FALSE
 
 /obj/item/explosive/grenade/high_explosive/impact/prime()
 // We don't prime, we use launch_impact.
@@ -343,6 +349,12 @@
 		if(explosion_power)
 			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
 		qdel(src)
+
+/obj/item/explosive/grenade/high_explosive/impact/upp
+	name = "\improper VOG-73 HE grenade"
+	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one bears markings of the UPP."
+	icon_state = "grenade_40mm_upp"
+	item_state = "grenade_hedp"
 
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	name = "\improper 40mm Buckshot Shell"
@@ -453,6 +465,7 @@
 	radius = 2
 	var/shrapnel_count = 5
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel/incendiary
+	has_arm_sound = FALSE
 
 /obj/item/explosive/grenade/incendiary/airburst/prime()
 
@@ -497,6 +510,8 @@
 	var/datum/effect_system/smoke_spread/bad/smoke
 	var/smoke_radius = 3
 	dual_purpose = TRUE
+	has_arm_sound = TRUE
+	arm_sound = "sound/weapons/grenade.ogg"
 
 /obj/item/explosive/grenade/smokebomb/New()
 	..()
@@ -530,6 +545,12 @@
 		smoke.set_up(smoke_radius, 0, get_turf(src), null, 6)
 		smoke.start()
 		qdel(src)
+
+/obj/item/explosive/grenade/smokebomb/upp
+	name = "RDG-17 smoke grenade"
+	desc = "Handgrenade, smoke, model 17. Simple, old and efficient design, these grenades are produced basically everywhere for use in the UPP Armed Collective."
+	icon_state = "grenade_upp_smoke"
+	arm_sound = 'sound/weapons/pinpull.ogg'
 
 /obj/item/explosive/grenade/phosphorus
 	name = "\improper M60 WPSI grenade"
@@ -573,6 +594,7 @@
 	desc = "A deadly gas grenade found within the ranks of the UPP. Designed to spill white phosphorus on the target. It explodes 2 seconds after the pin has been pulled."
 	icon_state = "grenade_upp_wp"
 	item_state = "grenade_upp_wp"
+	arm_sound = 'sound/weapons/pinpull.ogg'
 
 /obj/item/explosive/grenade/phosphorus/clf
 	name = "\improper improvised phosphorus bomb"
@@ -847,6 +869,7 @@
 	det_time = 0 // Unused, because we don't use prime.
 	hand_throwable = FALSE
 	smoke_radius = 2
+	has_arm_sound = FALSE
 
 /obj/item/explosive/grenade/smokebomb/airburst/New()
 	..()
@@ -997,6 +1020,7 @@
 	explosion_power = 0
 	shrapnel_type = /datum/ammo/bullet/shrapnel/rubber
 	antigrief_protection = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 
 /// Baton slugs
 /obj/item/explosive/grenade/baton
@@ -1006,6 +1030,7 @@
 	item_state = "rubber_grenade"
 	hand_throwable = FALSE
 	antigrief_protection = FALSE
+	has_arm_sound = FALSE
 
 
 /obj/item/explosive/grenade/baton/flamer_fire_act()
@@ -1030,6 +1055,7 @@
 	explosion_power = 300
 	det_time = 50
 	unacidable = TRUE
+
 	arm_sound = 'sound/voice/holy_chorus.ogg'//https://www.youtube.com/watch?v=hNV5sPZFuGg
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
@@ -1042,6 +1068,7 @@
 	underslug_launchable = TRUE
 	harmful = FALSE
 	var/foam_metal_type = FOAM_METAL_TYPE_IRON
+	arm_sound = "sound/weapons/grenade.ogg"
 
 /obj/item/explosive/grenade/metal_foam/prime()
 	var/datum/effect_system/foam_spread/s = new()
@@ -1055,6 +1082,7 @@
 	name = "bursting pipe"
 	alpha = 0
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	has_arm_sound = FALSE
 
 /obj/item/explosive/grenade/incendiary/bursting_pipe
 	name = "bursting pipe"
@@ -1065,6 +1093,7 @@
 	burn_level = BURN_LEVEL_TIER_3
 	radius = 2
 	fire_type = FIRE_VARIANT_DEFAULT
+	has_arm_sound = FALSE
 
 //Royal marine grenades
 
@@ -1085,3 +1114,4 @@
 	burn_level = BURN_LEVEL_TIER_8
 	radius = 3
 	fire_type = FIRE_VARIANT_DEFAULT
+	arm_sound = "sound/weapons/grenade.ogg"
