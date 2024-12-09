@@ -588,6 +588,8 @@
 	item_state = "grenade_training"
 	underslug_launchable = TRUE
 	dual_purpose = TRUE
+	var/shrapnel_count = 16
+	var/shrapnel_type = /datum/ammo/bullet/shrapnel/incendiary/light
 	var/datum/effect_system/smoke_spread/phosphorus/smoke
 	dangerous = TRUE
 	harmful = TRUE
@@ -607,9 +609,10 @@
 	if(fuse_type == IMPACT_FUSE)
 		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
 		return
-	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+	playsound(src.loc, 'sound/effects/wp_smoke.ogg', 25, 1, 5)
 	smoke.set_up(smoke_radius, 0, get_turf(src))
 	smoke.start()
+	create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
 	qdel(src)
 
 /obj/item/explosive/grenade/phosphorus/launch_impact(atom/hit_atom)
@@ -624,6 +627,7 @@
 		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 		smoke.set_up(smoke_radius, 0, get_turf(src))
 		smoke.start()
+		create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
 		qdel(src)
 
 /obj/item/explosive/grenade/phosphorus/upp

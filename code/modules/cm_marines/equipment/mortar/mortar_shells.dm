@@ -71,6 +71,27 @@
 		cn20.start()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 35, 1, 4)
 
+/obj/item/mortar_shell/phosphorus
+	name = "\improper 80mm white-phosphorus mortar shell"
+	desc = "An 80mm mortar shell, loaded to the brim with white phosphorus. Used for both concealment via smoke and as an incendiary device."
+	icon_state = "mortar_ammo_wp"
+	var/radius = 6
+	var/flame_level = BURN_TIME_TIER_4
+	var/burn_level = BURN_LEVEL_TIER_7
+	var/flameshape = FLAMESHAPE_DEFAULT
+	var/fire_type = FIRE_VARIANT_TYPE_X //Bluefire
+
+/obj/item/mortar_shell/phosphorus/detonate(turf/T)
+	cell_explosion(T, 60, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, explosion_cause_data = cause_data)
+	spawn(6)
+		var/datum/effect_system/smoke_spread/phosphorus/wp = new()
+		wp.set_up(8, 0, T, cause_data)
+		wp.start()
+	flame_radius(cause_data, radius, T, flame_level, burn_level, flameshape, null, fire_type)
+	playsound(T, 'sound/effects/wp_smoke.ogg', 25, 1, 9)
+	sleep(1)
+	create_shrapnel(T, 48, , ,/datum/ammo/bullet/shrapnel/incendiary/heavy, null)
+
 /obj/item/mortar_shell/flare
 	name = "\improper 80mm flare/camera mortar shell"
 	desc = "An 80mm mortar shell, loaded with an illumination flare / camera combo, attached to a parachute."
