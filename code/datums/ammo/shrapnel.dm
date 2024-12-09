@@ -109,6 +109,23 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
+/datum/ammo/bullet/shrapnel/incendiary/light
+	damage = 10
+	penetration = ARMOR_PENETRATION_TIER_2
+
+/datum/ammo/bullet/shrapnel/incendiary/heavy	//Maximum warcrimes edition
+	accurate_range = 32
+	max_range = 8
+	shell_speed = AMMO_SPEED_TIER_2
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_5
+
+/datum/ammo/bullet/shrapnel/incendiary/heavy/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary/heavy)
+	))
+
 /datum/ammo/bullet/shrapnel/metal
 	name = "metal shrapnel"
 	icon_state = "shrapnelshot_bit"
