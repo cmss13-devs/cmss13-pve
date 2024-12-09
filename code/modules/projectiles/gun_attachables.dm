@@ -2900,7 +2900,7 @@ Defined in conflicts.dm of the #defines folder.
 	update_icon()
 
 /obj/item/attachable/attached_gun/grenade/reload_attachment(obj/item/explosive/grenade/G, mob/user)
-	if(!breech_open & has_breech)
+	if(!breech_open && has_breech)
 		to_chat(user, SPAN_WARNING("\The [src]'s breech must be open to load grenades! (use unique-action)"))
 		return
 	if(!istype(G) || istype(G, /obj/item/explosive/grenade/spawnergrenade/))
@@ -2921,7 +2921,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/unload_attachment(mob/user, reload_override = FALSE, drop_override = FALSE, loc_override = FALSE)
 	. = TRUE //Always uses special unloading.
-	if(!breech_open & has_breech)
+	if(!breech_open && has_breech)
 		to_chat(user, SPAN_WARNING("\The [src] is closed! You must open it to take out grenades!"))
 		return
 	if(!current_rounds)
@@ -2946,12 +2946,12 @@ Defined in conflicts.dm of the #defines folder.
 		if(user)
 			to_chat(user, SPAN_WARNING("You must hold [gun] with two hands to use \the [src]."))
 		return
-	if(breech_open & has_breech)
+	if(breech_open && has_breech)
 		if(user)
 			to_chat(user, SPAN_WARNING("You must close the breech to fire \the [src]!"))
 			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
 		return
-	if(!cocked & has_breech)
+	if(!cocked && has_breech)
 		if(user)
 			to_chat(user, SPAN_WARNING("You must cock \the [src] to fire it! (open and close the breech)"))
 			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
