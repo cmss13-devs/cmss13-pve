@@ -3,6 +3,7 @@
 	desc = "A secondary armament grenade magazine."
 	caliber = "grenade"
 	icon_state = "glauncher_2"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/vehicles.dmi'
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/grenade_container/tank_glauncher
 	max_rounds = 20

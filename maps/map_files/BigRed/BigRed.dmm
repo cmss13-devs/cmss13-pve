@@ -8,9 +8,49 @@
 	icon_state = "pwall"
 	},
 /area/space)
+"aac" = (
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/machineguns.dmi';
+	icon_state = "m41ae2";
+	name = "M41AE2 Heavy Pulse Rifle";
+	desc = "A large claw mark across this weapon indicates it is inoperable.";
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor,
+/area/bigredv2/outside/office_complex)
+"aad" = (
+/obj/structure/machinery/iv_drip,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/item/roller/bedroll{
+	pixel_x = -5;
+	pixel_y = -4
+	},
+/obj/item/stack/medical/bruise_pack{
+	pixel_x = -8;
+	pixel_y = 2
+	},
+/turf/open/floor/whitegreen/west,
+/area/bigredv2/outside/medical)
 "aae" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/outside/space_port)
+"aaf" = (
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/item/clothing/under/color/darkred,
+/turf/open/floor/freezerfloor,
+/area/bigredv2/outside/general_offices)
 "aah" = (
 /turf/open/floor/plating,
 /area/bigredv2/outside/space_port)
@@ -2649,7 +2689,8 @@
 /area/bigredv2/caves/eta/storage)
 "aWz" = (
 /obj/structure/showcase{
-	icon_state = "bus"
+	icon_state = "bus";
+	icon = 'icons/obj/structures/props/server_equipment.dmi'
 	},
 /turf/open/floor/greengrid,
 /area/bigredv2/outside/telecomm)
@@ -10652,7 +10693,8 @@
 /area/bigredv2/caves/mining)
 "gYe" = (
 /obj/structure/showcase{
-	icon_state = "bus"
+	icon_state = "bus";
+	icon = 'icons/obj/structures/props/server_equipment.dmi'
 	},
 /turf/open/floor/darkish,
 /area/bigredv2/caves/lambda/breakroom)
@@ -10751,6 +10793,15 @@
 "hcD" = (
 /obj/structure/surface/table,
 /obj/item/clothing/under/brown,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table,
+/obj/item/clothing/under/color/brown{
+	pixel_y = 7;
+	pixel_x = 12
+	},
 /turf/open/floor/freezerfloor,
 /area/bigredv2/outside/general_offices)
 "hcO" = (
@@ -11313,6 +11364,14 @@
 /area/bigredv2/outside/space_port)
 "hAQ" = (
 /obj/item/clothing/under/brown,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/item/clothing/under/color/brown{
+	pixel_x = 4;
+	pixel_y = -5
+	},
 /turf/open/floor/freezerfloor,
 /area/bigredv2/outside/general_offices)
 "hBw" = (
@@ -12822,6 +12881,15 @@
 /area/bigredv2/outside/nw)
 "iSo" = (
 /obj/structure/surface/rack,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/rack,
+/obj/item/clothing/under/color/lightbrown{
+	pixel_x = 10;
+	pixel_y = -5
+	},
 /turf/open/floor/freezerfloor,
 /area/bigredv2/outside/general_offices)
 "iSB" = (
@@ -12888,6 +12956,15 @@
 /area/bigredv2/outside/engineering)
 "iVW" = (
 /obj/item/clothing/under/darkred,
+/obj/structure/surface/rack,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/item/clothing/under/color/darkred{
+	pixel_y = 7;
+	pixel_x = 10
+	},
 /obj/structure/surface/rack,
 /turf/open/floor/freezerfloor,
 /area/bigredv2/outside/general_offices)
@@ -18075,6 +18152,18 @@
 /obj/structure/machinery/washing_machine{
 	pixel_y = 13
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/machinery/washing_machine,
+/obj/item/clothing/under/color/brown{
+	pixel_y = 11;
+	pixel_x = 7
+	},
+/obj/structure/machinery/washing_machine{
+	pixel_y = 13
+	},
 /turf/open/floor/freezerfloor,
 /area/bigredv2/outside/general_offices)
 "nrp" = (
@@ -23257,7 +23346,7 @@
 "rQs" = (
 /obj/structure/bed/sofa/south{
 	desc = "An old rusty ladder";
-	icon = 'icons/obj/structures/structures.dmi';
+	icon = 'icons/obj/structures/ladders.dmi';
 	icon_state = "ladder11";
 	name = "Old Ladder"
 	},
@@ -25584,7 +25673,8 @@
 /area/bigredv2/outside/medical)
 "tNa" = (
 /obj/structure/showcase{
-	icon_state = "bus"
+	icon_state = "bus";
+	icon = 'icons/obj/structures/props/server_equipment.dmi'
 	},
 /turf/open/floor/carpet9_4/west,
 /area/bigredv2/caves/eta/living)
@@ -27416,6 +27506,14 @@
 /area/bigredv2/outside/engineering)
 "vqn" = (
 /obj/item/clothing/under/lightbrown,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/item/clothing/under/color/lightbrown{
+	pixel_x = -7;
+	pixel_y = -4
+	},
 /turf/open/floor/freezerfloor,
 /area/bigredv2/outside/general_offices)
 "vqr" = (
@@ -29656,7 +29754,8 @@
 /area/bigredv2/caves/mining)
 "xfy" = (
 /obj/structure/showcase{
-	icon_state = "mechfab1"
+	icon = 'icons/obj/structures/machinery/research.dmi';
+	icon_state = "d_analyzer_la"
 	},
 /turf/open/floor/carpet5_1/west,
 /area/bigredv2/caves/eta/living)
@@ -47089,7 +47188,7 @@ bFS
 oYI
 tXH
 xNY
-nfp
+aad
 jLV
 oYI
 tXH
@@ -57493,7 +57592,7 @@ eWe
 gmG
 ako
 iVW
-wLG
+aaf
 jQA
 wLG
 eyK
@@ -60583,7 +60682,7 @@ asv
 asv
 bdb
 aXr
-aXr
+aac
 asv
 mJe
 hCz

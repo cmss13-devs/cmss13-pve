@@ -4,7 +4,7 @@
 /obj/item/reagent_container/food/drinks
 	name = "drink"
 	desc = "yummy"
-	icon = 'icons/obj/items/drinks.dmi'
+	icon = 'icons/obj/items/food/drinks.dmi'
 	icon_state = null
 	flags_atom = FPRINT|OPENCONTAINER
 	var/gulp_size = 5 //This is now officially broken ... need to think of a nice way to fix it.
@@ -148,6 +148,10 @@
 	desc = "A carton of 2% cow milk."
 	icon_state = "milk"
 	item_state = "carton"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_righthand.dmi',
+	)
 	center_of_mass = "x=16;y=9"
 
 /obj/item/reagent_container/food/drinks/milk/Initialize()
@@ -174,6 +178,10 @@
 	desc = "A carton of soy milk."
 	icon_state = "soymilk"
 	item_state = "carton"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_righthand.dmi',
+	)
 	center_of_mass = "x=16;y=9"
 
 /obj/item/reagent_container/food/drinks/soymilk/Initialize()
@@ -290,7 +298,7 @@
 /obj/item/reagent_container/food/drinks/cup
 	name = "plastic cup"
 	desc = "A generic red cup. Beer pong, anyone?"
-	icon = 'icons/obj/items/cup.dmi'
+	icon = 'icons/obj/items/food/drinks.dmi'
 	icon_state = "solocup"
 	throwforce = 0
 	w_class = SIZE_TINY
@@ -312,7 +320,7 @@
 /obj/item/trash/crushed_cup
 	name = "crushed cup"
 	desc = "A sad crushed and destroyed cup. It's now useless trash. What a waste."
-	icon = 'icons/obj/items/cup.dmi'
+	icon = 'icons/obj/items/food/drinks.dmi'
 	icon_state = "crushed_solocup"
 	throwforce = 0
 	w_class = SIZE_TINY
@@ -336,6 +344,10 @@
 	name = "metal flask"
 	desc = "A metal flask with a decent liquid capacity."
 	icon_state = "flask"
+	item_state_slots = list(WEAR_AS_GARB = "flask")
+	item_icons = list(
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/misc.dmi',
+		)
 	volume = 60
 	center_of_mass = "x=17;y=8"
 

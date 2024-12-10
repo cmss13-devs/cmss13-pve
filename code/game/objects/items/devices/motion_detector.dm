@@ -21,6 +21,10 @@
 	name = "M314 motion detector"
 	desc = "A military grade, hand-held motion detection device that can penetrate most anything and has an approximate range of 28 meters. Can also be utilized to scan vehicle interiors. This one is programmed to operate with USCM IFF."
 	icon = 'icons/obj/items/marine-items.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/tools_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/tools_righthand.dmi',
+	)
 	icon_state = "detector"
 	item_state = "motion_detector"
 	flags_atom = FPRINT| CONDUCT

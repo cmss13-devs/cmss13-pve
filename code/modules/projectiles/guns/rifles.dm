@@ -3,6 +3,12 @@
 /obj/item/weapon/gun/rifle
 	reload_sound = 'sound/weapons/gun_rifle_reload.ogg'
 	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/assault_rifles.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/assault_rifles.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/assault_rifles_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/assault_rifles_righthand.dmi'
+	)
 
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_LARGE
@@ -37,7 +43,7 @@
 /obj/item/weapon/gun/rifle/m41a
 	name = "\improper M41A pulse rifle MK2"
 	desc = "The standard issue rifle of the Colonial Marines. Commonly carried by most combat personnel. Uses 10x24mm caseless ammunition."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/assault_rifles.dmi'
 	icon_state = "m41a"
 	item_state = "m41a"
 	fire_sound = "gun_pulse"
@@ -111,7 +117,7 @@
 /obj/item/weapon/gun/rifle/nsg23
 	name = "\improper NSG 23 assault rifle"
 	desc = "A rare sight, this rifle is seen most commonly in the hands of Weyland-Yutani PMCs. Compared to the M41A MK2, it has noticeably improved handling and vastly improved performance at long and medium range, but compares similarly up close."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/WY/assault_rifles.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
 	fire_sound = "gun_nsg23"
@@ -187,6 +193,94 @@
 /obj/item/weapon/gun/rifle/nsg23/no_lock/stripped
 	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
 
+//-------------------------------------------------------
+//M41A PMC VARIANT
+
+/obj/item/weapon/gun/rifle/m41a/elite
+	name = "\improper M41A/2 pulse rifle"
+	desc = "A modified version M41A Pulse Rifle MK2, re-engineered for better weight, handling and accuracy. Fires precise two-round bursts. Given only to elite units."
+	icon_state = "m41a2"
+	item_state = "m41a2"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/WY/assault_rifles.dmi'
+
+	current_mag = /obj/item/ammo_magazine/rifle/ap
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
+	aim_slowdown = SLOWDOWN_ADS_QUICK
+	wield_delay = WIELD_DELAY_FAST
+	map_specific_decoration = FALSE
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
+
+	random_spawn_chance = 100
+	random_spawn_rail = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/magnetic_harness,
+	)
+	random_spawn_under = list(
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/attached_gun/flamer/advanced,
+	)
+	random_spawn_muzzle = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+	)
+
+
+/obj/item/weapon/gun/rifle/m41a/elite/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_delay(FIRE_DELAY_TIER_12)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
+
+/obj/item/weapon/gun/rifle/m41a/elite/whiteout //special version for whiteout, has preset attachments and HEAP mag loaded.
+	current_mag = /obj/item/ammo_magazine/rifle/heap
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/angledgrip, /obj/item/attachable/suppressor)
+
+/obj/item/weapon/gun/rifle/m41a/corporate
+	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition."
+	icon = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_obj.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/snow/back.dmi',
+		WEAR_J_STORE = 'icons/obj/items/weapons/guns/guns_by_map/snow/suit_slot.dmi'
+	)
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
+	map_specific_decoration = FALSE
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
+
+/obj/item/weapon/gun/rifle/m41a/corporate/no_lock //for PMC nightmares.
+	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. This one had its IFF electronics removed."
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+
+/obj/item/weapon/gun/rifle/m41a/corporate/detainer //for chem ert
+	current_mag = /obj/item/ammo_magazine/rifle/ap
+	random_spawn_rail = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/magnetic_harness,
+	)
+	random_spawn_muzzle = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/extended_barrel,
+	)
+
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/flamer/advanced)
+
+//-------------------------------------------------------
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
 /obj/item/weapon/gun/rifle/m41aMK1/xm40
@@ -194,6 +288,7 @@
 	desc = "One of the experimental predecessors to the M41 line that never saw widespread adoption beyond elite marine units. Of the rifles in the USCM inventory that are still in production, this is the only one to feature an integrated suppressor. Extremely lethal in burstfire mode."
 	icon_state = "m40sd"
 	item_state = "m40sd"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/assault_rifles.dmi'
 	reload_sound = 'sound/weapons/handling/m40sd_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m40sd_unload.ogg'
 	unacidable = TRUE
@@ -262,8 +357,8 @@
 
 /obj/item/weapon/gun/rifle/m41aMK1
 	name = "\improper M41A pulse rifle"
-	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	desc = "An older design of the Pulse Rifle commonly used by Colonial Marines. Uses 10x24mm caseless ammunition."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/assault_rifles.dmi'
 	icon_state = "m41amk1" //Placeholder.
 	item_state = "m41amk1" //Placeholder.
 	fire_sound = "gun_pulse"
@@ -513,9 +608,9 @@
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
 
 /obj/item/weapon/gun/rifle/m46c
-	name = "\improper XM46A pulse rifle"
-	desc = "An experimental improvement of the M41A from ARMAT, the XM46 incorporated a hexagonally rifled barrel, improved compensation, refined ergonomics, and the flagship offering, an intelligent fire control system. In trials it was judged to offer too little over the existing weapon at grossly higher cost, and suspiciously low parts interchange. Rarely seen outside of special mission unit service, and even then uncommon."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	name = "\improper M46C pulse rifle"
+	desc = "A prototype M46C, an experimental rifle platform built to outperform the standard M41A. Back issue only. Uses standard MK1 & MK2 rifle magazines."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/assault_rifles.dmi'
 	icon_state = "m46c"
 	item_state = "m46c"
 	fire_sound = "gun_pulse"
@@ -638,8 +733,8 @@
 
 /obj/item/weapon/gun/rifle/mar40
 	name = "\improper MAR-40 battle rifle"
-	desc = "A cheap, reliable assault rifle chambered in 8.8x29mm. Commonly found in the hands of criminals or mercenaries, or in the hands of the UPP or CLF."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	desc = "A cheap, reliable assault rifle chambered in 7.62x39mm. Commonly found in the hands of criminals or mercenaries, or in the hands of the UPP or CLF."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/assault_rifles.dmi'
 	icon_state = "mar40"
 	item_state = "mar40"
 	fire_sound = 'sound/weapons/gun_mar40.ogg'
@@ -747,8 +842,13 @@
 	desc = "A cheap, reliable LMG chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals."
 	icon_state = "mar50"
 	item_state = "mar50"
-	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
-
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/machineguns.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/machineguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/machineguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_righthand.dmi'
+	)
 	fire_sound = 'sound/weapons/gun_mar40.ogg'
 	reload_sound = 'sound/weapons/handling/gun_mar40_reload.ogg'
 	unload_sound = 'sound/weapons/handling/gun_mar40_unload.ogg'
@@ -800,8 +900,8 @@
 
 /obj/item/weapon/gun/rifle/m16
 	name = "\improper M16 rifle"
-	desc = "The manufacturer claims that these are Classic 16 assault rifles. It's another one of the clonetypes you see on the Frontier since the AR-15 patent expired over a century ago. Chambered in 5.56x45mm, popular on the Frontier for home defense and hunting. The old cased rounds can also be used till they disintegrate, if you can be bothered to police the brass."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	desc = "An old, reliable design first adopted by the U.S. military in the 1960s. Something like this belongs in a museum of war history. It is chambered in 5.56x45mm."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/assault_rifles.dmi'
 	icon_state = "m16"
 	item_state = "m16"
 
@@ -933,9 +1033,10 @@
 //awesome vietnam era special forces carbine version of the M16
 
 /obj/item/weapon/gun/rifle/xm177
-	name = "\improper XM177 carbine"
-	desc = "5.56x45mm carbine. Either this is a really cheap replica of the old XM177, someone's crappy DIY modification, or somehow an actual genuine antique which probably is worth at least a couple grand to a museum. Who knows?"
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	name = "\improper XM177E2 carbine"
+	desc = "An old design, essentially a shortened M16A1 with a collapsable stock. It is chambered in 5.56x45mm. The short length inhibits the attachment of most underbarrel attachments, and the barrel moderator prohibits the attachment of all muzzle devices."
+	desc_lore = "A carbine similar to the M16A1, with a collapsible stock and a distinct flash suppressor. A stamp on the receiver reads: 'COLT AR-15 - PROPERTY OF U.S. GOVT - XM177E2 - CAL 5.56MM' \nA design originating from the Vietnam War, the XM177, also known as the Colt Commando or GAU-5/A, was an improvement on the CAR-15 Model 607, fixing multiple issues found with the limited service of the Model 607 with Special Forces. The XM177 saw primary use with Army Special Forces and Navy Seals operating as commandos. \nHow this got here is a mystery."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/assault_rifles.dmi'
 	icon_state = "xm177"
 	item_state = "m16"
 	current_mag = /obj/item/ammo_magazine/rifle/m16
@@ -1005,7 +1106,7 @@
 	name = "\improper AR10 rifle"
 	desc = "An earlier version of the more widespread M16 rifle. Considered to be the father of the 20th century rifle. How one of these ended up here is a mystery of its own. It is chambered in 7.62x51mm."
 	desc_lore = "The AR10 was initially manufactured by the Armalite corporation (bought by Weyland-Yutani in 2002) in the 1950s. It was the first production rifle to incorporate many new and innovative features, such as a gas operated bolt and carrier system. Only 10,000 were ever produced, and the only national entities to use them were Portugal and Sudan. Since the end of the 20th century, these rifles - alongside the far more common M16 and AR15 - have floated around the less civillised areas of space, littering jungles and colony floors with their uncommon cased ammunition - a rarity since the introduction of pulse munitions. This rifle has the word \"Salazar\" engraved on its side."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/assault_rifles.dmi'
 	icon_state = "ar10"
 	item_state = "ar10"
 	fire_sound = 'sound/weapons/gun_ar10.ogg'
@@ -1141,12 +1242,16 @@
 
 /obj/item/weapon/gun/rifle/lmg
 	name = "\improper M41AE2 heavy pulse rifle"
-	desc = "Heavy barreled higher capacity variant of the M41A. Greater sustained firepower and total ammunition carried, offset by removal of the grenade launcher and worsened handling."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	desc = "A large squad support weapon capable of laying down sustained suppressing fire from a mounted position. While unstable and less accurate, it can be lugged and shot with two hands. Like it's smaller brothers, the M41A MK2 and M4RA, the M41AE2 is chambered in 10mm."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/machineguns.dmi'
 	icon_state = "m41ae2"
 	item_state = "m41ae2"
-	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
-
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/machineguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/machineguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_righthand.dmi'
+	)
 	reload_sound = 'sound/weapons/handling/hpr_reload.ogg'
 	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
 	fire_sound = "gun_pulse"
@@ -1248,8 +1353,8 @@
 
 /obj/item/weapon/gun/rifle/type71
 	name = "\improper Type 71 pulse rifle"
-	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x27mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	desc = "The primary service rifle of the UPP space forces, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 5.45x39mm. In accordance with doctrinal principles of overmatch and suppression, the rifle has a high rate of fire and a high-capacity casket magazine. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/assault_rifles.dmi'
 	icon_state = "type71"
 	item_state = "type71"
 
@@ -1354,14 +1459,19 @@
 
 //M49A Battle Rifle, standard USCM DMR
 
-/obj/item/weapon/gun/rifle/m49a
-	name = "\improper M49A battle rifle"
-	desc = "The M49A battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M49A battle rifle is perfect for reconnaissance and fire support teams.\nTakes *only* non-high-velocity M49A magazines."
-	icon_state = "m49a"
-	item_state = "m49a"
-	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
-
-	fire_sound = 'sound/weapons/gun_m49a.ogg'
+/obj/item/weapon/gun/rifle/m4ra
+	name = "\improper M4RA battle rifle"
+	desc = "The M4RA battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams.\nTakes *only* non-high-velocity M4RA magazines."
+	icon_state = "m4ra"
+	item_state = "m4ra"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/marksman_rifles.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/marksman_rifles.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/marksman_rifles.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/marksman_rifles_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/marksman_rifles_righthand.dmi'
+	)
+	fire_sound = 'sound/weapons/gun_m4ra.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 
@@ -1485,9 +1595,15 @@
 //L42A Battle Rifle
 
 /obj/item/weapon/gun/rifle/l42a
-	name = "\improper L42A pulse rifle"
-	desc = "The L42A pulse rifle, despite its age, remains a common 'sporting' rifle among UA citizens and a reliable alternative to more contemporary rifles for many mercenaries."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	name = "\improper L42A battle rifle"
+	desc = "The L42A Battle Rifle, found commonly around the frontiers of the Galaxy. It's commonly used by colonists for self defense, as well as many colonial militias, whomever they serve due to it's rugged reliability and ease of use without much training. This rifle was put up for adoption by the USCM and tested for a time, but ultimately lost to the M4RA already in service."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/marksman_rifles.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/marksman_rifles.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/marksman_rifles.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/marksman_rifles_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/marksman_rifles_righthand.dmi'
+	)
 	icon_state = "l42mk1"
 	item_state = "l42mk1"
 	fire_sound = 'sound/weapons/gun_m39.ogg'
@@ -1547,7 +1663,7 @@
 	name = "\improper ABR-40 hunting rifle"
 	desc = "The civilian version of the L42A battle rifle. Almost identical and even cross-compatible with L42 magazines, just don't take the stock off.."
 	desc_lore = "The ABR-40 was created along-side the L42A as a hunting rifle for civilians. Sporting faux wooden furniture and a legally-mandated 12 round magazine, it's still highly accurate and deadly, a favored pick of experienced hunters and retired Marines. However, it's very limited in attachment selection, only being able to fit rail attachments, and the differences in design from the L42 force an awkward pose when attempting to hold it one-handed. Removing the stock is not recommended."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/marksman_rifles.dmi'
 	icon_state = "abr40"
 	item_state = "abr40"
 	current_mag = /obj/item/ammo_magazine/rifle/l42a/abr40
@@ -1624,7 +1740,7 @@
 /obj/item/weapon/gun/rifle/rmc_f90
 	name = "\improper F903A1 Rifle"
 	desc = "The standard issue rifle of the royal marines. Uniquely the royal marines are the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/TWE/assault_rifles.dmi'
 	icon_state = "aug"
 	item_state = "aug"
 	fire_sound = "gun_pulse"
@@ -1767,8 +1883,13 @@
 	desc = "An experimental shotgun model going through testing trials in the USCM. Based on the original civilian and CMB version, the XM51 is a mag-fed, pump-action shotgun. It utilizes special 16-gauge breaching rounds which are effective at breaching walls and doors. Users are advised not to employ the weapon against soft or armored targets due to low performance of the shells."
 	icon_state = "xm51"
 	item_state = "xm51"
-	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
-
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/shotguns.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/shotguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/shotguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/shotguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/shotguns_righthand.dmi'
+	)
 	fire_sound = 'sound/weapons/gun_shotgun_xm51.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'

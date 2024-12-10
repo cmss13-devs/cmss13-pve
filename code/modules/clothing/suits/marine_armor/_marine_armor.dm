@@ -32,12 +32,12 @@
 
 /obj/item/clothing/suit/storage/marine
 	name = "\improper M3 pattern marine armor"
-	desc = "Standard USCMC issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp. \nHas some extra pouches on the sides for storage."
-	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	desc = "A standard Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a small leather pouch strapped to it for limited storage."
 	icon_state = "1"
 	item_state = "marine_armor" //Make unique states for Officer & Intel armors.
+	icon = 'icons/obj/items/clothing/suits/suits_by_map/jungle.dmi'
 	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/jungle.dmi'
 	)
 	flags_atom = FPRINT|CONDUCT
 	flags_inventory = BLOCKSHARPOBJ
@@ -104,16 +104,21 @@
 	has_light = TRUE
 	var/armor_variation = 0
 	/// The dmi where the grayscale squad overlays are contained
-	var/squad_overlay_icon = 'icons/mob/humans/onmob/suit_1.dmi'
+	var/squad_overlay_icon = 'icons/obj/items/clothing/suits/misc_ert.dmi'
 
 	var/atom/movable/marine_light/light_holder
 
 /obj/item/clothing/suit/storage/marine/Initialize(mapload)
 	. = ..()
 	if(!(flags_atom & NO_NAME_OVERRIDE))
-		name = "[specialty] armor"
+		name = "[specialty]"
+		if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+			name += " snow armor" //Leave marine out so that armors don't have to have "Marine" appended (see: generals).
+		else
+			name += " armor"
 
-	select_gamemode_skin(type)
+	if(!(flags_atom & NO_GAMEMODE_SKIN))
+		select_gamemode_skin(type)
 	armor_overlays = list("lamp") //Just one for now, can add more later.
 	if(armor_variation && mapload)
 		set_armor_style("Random")
@@ -137,14 +142,34 @@
 	armor_overlays["lamp"] = null
 	if(flags_marine_armor & ARMOR_LAMP_OVERLAY)
 		if(flags_marine_armor & ARMOR_LAMP_ON)
-			I = image('icons/obj/items/clothing/cm_suits.dmi', src, "lamp-on")
+			I = image('icons/obj/items/clothing/suits/misc_ert.dmi', src, "lamp-on")
 		else
-			I = image('icons/obj/items/clothing/cm_suits.dmi', src, "lamp-off")
+			I = image('icons/obj/items/clothing/suits/misc_ert.dmi', src, "lamp-off")
 		armor_overlays["lamp"] = I
 		overlays += I
 	else armor_overlays["lamp"] = null
 	if(user) user.update_inv_wear_suit()
 
+/obj/item/clothing/suit/storage/marine/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	if(flags_atom & MAP_COLOR_INDEX)
+		return
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("jungle")
+			icon = 'icons/obj/items/clothing/suits/suits_by_map/jungle.dmi'
+			item_icons[WEAR_JACKET] = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/jungle.dmi'
+		if("classic")
+			icon = 'icons/obj/items/clothing/suits/suits_by_map/classic.dmi'
+			item_icons[WEAR_JACKET] = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/classic.dmi'
+		if("desert")
+			icon = 'icons/obj/items/clothing/suits/suits_by_map/desert.dmi'
+			item_icons[WEAR_JACKET] = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/desert.dmi'
+		if("snow")
+			icon = 'icons/obj/items/clothing/suits/suits_by_map/snow.dmi'
+			item_icons[WEAR_JACKET] = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/snow.dmi'
+		if("urban")
+			icon = 'icons/obj/items/clothing/suits/suits_by_map/urban.dmi'
+			item_icons[WEAR_JACKET] = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/urban.dmi'
 
 /obj/item/clothing/suit/storage/marine/post_vendor_spawn_hook(mob/living/carbon/human/user) //used for randomizing/selecting a variant for armors.
 	if(!armor_variation)
@@ -301,8 +326,14 @@
 	name = "\improper M3 pattern general officer armor"
 	desc = "A well-crafted suit of M3 Pattern Armor with a gold shine. It looks very expensive, but shockingly fairly easy to carry and wear."
 	icon_state = "general"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UA.dmi'
+	)
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUM
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+	uniform_restricted = list(/obj/item/clothing/under/marine/officer/general)
 	specialty = "M3 pattern general"
 	item_state_slots = list(WEAR_JACKET = "general")
 	w_class = SIZE_MEDIUM
@@ -324,9 +355,13 @@
 	desc = "A robust, well-polished suit of armor for the Commanding Officer. Custom-made to fit its owner with special straps to operate a smartgun. Show those Marines who's really in charge."
 	icon_state = "co_officer"
 	item_state = "co_officer"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UA.dmi'
+	)
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	storage_slots = 3
-	flags_atom = NO_GAMEMODE_SKIN
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	specialty = "M3 pattern captain"
 	item_state_slots = list(WEAR_JACKET = "co_officer")
@@ -413,6 +448,10 @@
 	name = "\improper M3-VL pattern ballistics vest"
 	desc = "Up until 2182 USCM non-combat personnel were issued non-standardized ballistics vests, though the lack of IMP compatibility and suit lamps proved time and time again inefficient. This modified M3-L shell is the result of a 6-year R&D program; It provides utility, protection, AND comfort to all USCM non-combat personnel."
 	icon_state = "VL"
+	icon = 'icons/obj/items/clothing/suits/armor.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/armor.dmi'
+	)
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	flags_marine_armor = ARMOR_LAMP_OVERLAY //No squad colors when wearing this since it'd look funny.
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
@@ -431,8 +470,10 @@
 	name = "\improper M3-VL pattern flak vest"
 	desc = "Effectively a combination of the M3-VL ballistics vest and M70 flak jacket, this armor is used by primarily by flight personnel because of its combined flak and ballistic defense and high mobility. It is also typically worn by military police officers as a result of the blunt force protection offered by the aforementioned armor layering."
 	icon_state = "VL_FLAK"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UA.dmi'
+	)
 	storage_slots = 2
 
 /obj/item/clothing/suit/storage/marine/light/synvest
@@ -456,22 +497,50 @@
 
 /obj/item/clothing/suit/storage/marine/light/synvest/grey
 	icon_state = "VL_syn"
+	icon = 'icons/obj/items/clothing/suits/armor.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/armor.dmi'
+	)
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/synvest/jungle
 	icon_state = "VL_syn_camo"
+	icon = 'icons/obj/items/clothing/suits/suits_by_map/jungle.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/jungle.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/jungle_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/jungle_righthand.dmi'
+	)
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/synvest/snow
-	icon_state = "s_VL_syn_camo"
-	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+	icon_state = "VL_syn_camo"
+	icon = 'icons/obj/items/clothing/suits/suits_by_map/snow.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/snow.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/snow_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/snow_righthand.dmi'
+	)
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/suit/storage/marine/light/synvest/desert
-	icon_state = "d_VL_syn_camo"
+	icon_state = "VL_syn_camo"
+	icon = 'icons/obj/items/clothing/suits/suits_by_map/desert.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/desert.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/desert_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/desert_righthand.dmi'
+	)
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/synvest/dgrey
-	icon_state = "c_VL_syn_camo"
+	icon_state = "VL_syn_camo"
+	icon = 'icons/obj/items/clothing/suits/suits_by_map/classic.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/classic.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/classic_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/classic_righthand.dmi'
+	)
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/recon
@@ -609,6 +678,10 @@
 	name = "press body armor"
 	desc = "Body armor used by war correspondents in battles and wars across the universe."
 	icon_state = "cc_armor"
+	icon = 'icons/obj/items/clothing/suits/armor.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/armor.dmi'
+	)
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 //==================USASF & ARMY==================\\

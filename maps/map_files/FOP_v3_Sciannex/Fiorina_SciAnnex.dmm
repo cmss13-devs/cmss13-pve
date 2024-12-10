@@ -2808,7 +2808,7 @@
 /area/fiorina/tumor/servers)
 "cgX" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_v"
 	},
 /turf/open/floor/prison/darkyellow2,
@@ -5039,7 +5039,7 @@
 /area/fiorina/station/park)
 "dOg" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_h";
 	layer = 2.5;
 	pixel_y = -11
@@ -5084,7 +5084,7 @@
 /area/fiorina/station/park)
 "dQZ" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_h";
 	layer = 2.5;
 	pixel_y = -11
@@ -8230,7 +8230,7 @@
 /turf/open/floor/prison/red/west,
 /area/fiorina/station/security)
 "gdi" = (
-/obj/item/storage/belt/shotgun/full/quackers,
+/obj/item/toy/inflatable_duck,
 /obj/effect/spawner/gibspawner/human,
 /turf/open/gm/river/darkred_pool,
 /area/fiorina/station/park)
@@ -8524,7 +8524,7 @@
 /area/fiorina/station/medbay)
 "gnH" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_h";
 	layer = 2.5;
 	pixel_y = -11
@@ -11839,7 +11839,7 @@
 /area/fiorina/tumor/aux_engi)
 "iQO" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_h";
 	layer = 2.5;
 	pixel_y = -11
@@ -16086,7 +16086,7 @@
 /area/fiorina/tumor/aux_engi)
 "msI" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_h";
 	layer = 2.5;
 	pixel_y = -11
@@ -16648,7 +16648,7 @@
 /area/fiorina/station/chapel)
 "mNE" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_v"
 	},
 /turf/open/floor/prison/floor_plate/southwest,
@@ -17770,7 +17770,7 @@
 /obj/structure/prop/invuln{
 	desc = "Its eyes follow you around through the ice.";
 	dir = 4;
-	icon = 'icons/mob/xenos/queen.dmi';
+	icon = 'icons/mob/xenos/castes/tier_4/queen.dmi';
 	icon_state = "Normal Queen Knocked Down";
 	layer = 2.5;
 	name = "frozen creature";
@@ -17906,7 +17906,7 @@
 /obj/structure/prop/invuln{
 	desc = "It is slimy.";
 	dir = 4;
-	icon = 'icons/mob/xenos/sentinel.dmi';
+	icon = 'icons/mob/xenos/castes/tier_1/sentinel.dmi';
 	icon_state = "Normal Sentinel Knocked Down";
 	layer = 2.5;
 	name = "frozen creature";
@@ -17916,7 +17916,7 @@
 /obj/structure/prop/invuln{
 	desc = "He knows something that you don't.";
 	dir = 4;
-	icon = 'icons/mob/xenos/larva.dmi';
+	icon = 'icons/mob/xenos/castes/tier_0/larva.dmi';
 	icon_state = "Larva Sleeping";
 	layer = 2.5;
 	name = "frozen creature";
@@ -18336,7 +18336,7 @@
 /obj/structure/prop/invuln{
 	desc = "The underside softly pulses.";
 	dir = 4;
-	icon = 'icons/mob/xenos/xenonid_crab.dmi';
+	icon = 'icons/mob/xenonids/castes/tier_0/xenonid_crab.dmi';
 	icon_state = "facehugger_thrown";
 	layer = 2.5;
 	name = "frozen creature";
@@ -18346,7 +18346,7 @@
 /obj/structure/prop/invuln{
 	desc = "The underside softly pulses.";
 	dir = 4;
-	icon = 'icons/mob/xenos/xenonid_crab.dmi';
+	icon = 'icons/mob/xenonids/castes/tier_0/xenonid_crab.dmi';
 	icon_state = "facehugger_thrown";
 	layer = 2.5;
 	name = "frozen creature";
@@ -18356,7 +18356,7 @@
 /obj/structure/prop/invuln{
 	desc = "The underside softly pulses.";
 	dir = 4;
-	icon = 'icons/mob/xenos/xenonid_crab.dmi';
+	icon = 'icons/mob/xenonids/castes/tier_0/xenonid_crab.dmi';
 	icon_state = "facehugger_thrown";
 	layer = 2.5;
 	name = "frozen creature";
@@ -18366,7 +18366,7 @@
 /obj/structure/prop/invuln{
 	desc = "The underside softly pulses.";
 	dir = 4;
-	icon = 'icons/mob/xenos/xenonid_crab.dmi';
+	icon = 'icons/mob/xenonids/castes/tier_0/xenonid_crab.dmi';
 	icon_state = "facehugger_thrown";
 	layer = 2.5;
 	name = "frozen creature";
@@ -21253,7 +21253,7 @@
 /area/fiorina/lz/near_lzII)
 "qxT" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_h";
 	layer = 2.5;
 	pixel_y = -11
@@ -22707,11 +22707,6 @@
 /obj/item/stack/sandbags/large_stack,
 /turf/open/floor/prison/darkyellow2/west,
 /area/fiorina/station/telecomm/lz1_cargo)
-"rGa" = (
-/obj/item/storage/belt/marine/quackers,
-/obj/effect/spawner/gibspawner/human,
-/turf/open/gm/river/darkred_pool,
-/area/fiorina/station/park)
 "rGf" = (
 /turf/open/auto_turf/sand/layer1,
 /area/fiorina/station/disco)
@@ -22746,7 +22741,7 @@
 /area/fiorina/station/lowsec)
 "rHm" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_v"
 	},
 /obj/structure/machinery/light/double/blue{
@@ -26089,7 +26084,7 @@
 /area/fiorina/maintenance)
 "utv" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_h";
 	layer = 2.5;
 	pixel_y = -11
@@ -26448,7 +26443,7 @@
 /area/fiorina/tumor/civres)
 "uIJ" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_h";
 	layer = 2.5;
 	pixel_y = -11
@@ -27228,7 +27223,7 @@
 /area/fiorina/station/botany)
 "vmV" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_v"
 	},
 /obj/structure/machinery/light/double/blue{
@@ -27736,7 +27731,7 @@
 /area/fiorina/station/security/wardens)
 "vIM" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_v"
 	},
 /turf/open/floor/prison/darkyellow2/north,
@@ -29118,7 +29113,7 @@
 /area/fiorina/lz/near_lzII)
 "wKo" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_h";
 	layer = 2.5;
 	pixel_y = -11
@@ -29847,7 +29842,7 @@
 /area/fiorina/station/civres_blue)
 "xsS" = (
 /obj/effect/decal{
-	icon = 'icons/obj/items/policetape.dmi';
+	icon = 'icons/obj/items/security.dmi';
 	icon_state = "engineering_h";
 	layer = 2.5;
 	pixel_y = -11
@@ -45300,7 +45295,7 @@ hZr
 pJi
 iDH
 gNG
-rGa
+gdi
 qKl
 dRR
 tTE

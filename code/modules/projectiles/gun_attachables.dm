@@ -26,11 +26,15 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = null
 	item_state = null
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/devices_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/devices_righthand.dmi'
+	)
 	var/attach_icon //the sprite to show when the attachment is attached when we want it different from the icon_state.
 	var/pixel_shift_x = 16 //Determines the amount of pixels to move the icon state for the overlay.
 	var/pixel_shift_y = 16 //Uses the bottom left corner of the item.
 
-	flags_atom = FPRINT|CONDUCT
+	flags_atom = FPRINT|CONDUCT|MAP_COLOR_INDEX
 	matter = list("metal" = 100)
 	w_class = SIZE_SMALL
 	force = 1
@@ -282,7 +286,11 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "bayonet"
 	item_state = "combat_knife"
-	desc = "An outdated rifle bayonet issued by the USCMC. Neatly fits into boot-mounted holsters, and can- in emergencies- be utilized to dig out shrapnel."
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/knives_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/knives_righthand.dmi'
+	)
+	desc = "The standard-issue bayonet of the Colonial Marines. You can slide this knife into your boots, or attach it to the end of a rifle."
 	sharp = IS_SHARP_ITEM_ACCURATE
 	force = MELEE_FORCE_NORMAL
 	throwforce = MELEE_FORCE_WEAK
@@ -374,7 +382,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/co2_cartridge //where tf else am I gonna put this?
 	name = "\improper CO2 cartridge"
 	desc = "A cartridge of compressed CO2 for the M8 cartridge bayonet. Do not consume or puncture."
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/tank.dmi'
 	icon_state = "co2_cartridge"
 	item_state = ""
 	w_class = SIZE_TINY
@@ -688,6 +696,9 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Railmounted flashlight. Pretty generic. Surprisingly high intensity, as it's a better light source than the suit lamps of most armor systems."
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "flashlight"
+	item_icons = list(
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/misc.dmi',
+	)
 	attach_icon = "flashlight_a"
 	light_mod = 5
 	slot = "side_rail"

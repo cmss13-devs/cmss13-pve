@@ -162,7 +162,7 @@
 /obj/item/trash/cigbutt
 	name = "cigarette butt"
 	desc = "A manky old cigarette butt."
-	icon = 'icons/obj/items/clothing/masks.dmi'
+	icon = 'icons/obj/items/smoking/cigarettes.dmi'
 	icon_state = "cigbutt"
 	w_class = SIZE_TINY
 	throwforce = 1
@@ -186,6 +186,7 @@
 	name = "cigar butt"
 	desc = "A manky old cigar butt."
 	icon_state = "cigarbutt"
+	icon = 'icons/obj/items/smoking/cigars.dmi'
 
 ////////////
 ///Dishes///
@@ -242,7 +243,7 @@
 /obj/item/trash/c_tube
 	name = "cardboard tube"
 	desc = "A tube... of cardboard."
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/tools.dmi'
 	icon_state = "c_tube"
 	throwforce = 1
 	w_class = SIZE_SMALL

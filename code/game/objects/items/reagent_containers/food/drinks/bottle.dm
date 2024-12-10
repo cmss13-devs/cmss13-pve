@@ -35,7 +35,7 @@
 
 	B.icon_state = icon_state
 
-	var/icon/I = new('icons/obj/items/drinks.dmi', icon_state)
+	var/icon/I = new('icons/obj/items/food/drinks.dmi', icon_state)
 	I.Blend(B.broken_outline, ICON_OVERLAY, rand(5), 1)
 	I.SwapColor(rgb(255, 0, 220, 255), rgb(0, 0, 0, 0))
 	B.icon = I
@@ -451,6 +451,10 @@
 	desc = "Full of vitamins and deliciousness!"
 	icon_state = "orangejuice"
 	item_state = "carton"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_righthand.dmi',
+	)
 	center_of_mass = "x=16;y=7"
 	isGlass = 0
 
@@ -471,6 +475,10 @@
 	desc = "It's cream. Made from milk. What else did you think you'd find in there?"
 	icon_state = "cream"
 	item_state = "carton"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_righthand.dmi',
+	)
 	center_of_mass = "x=16;y=8"
 	isGlass = 0
 
@@ -483,6 +491,10 @@
 	desc = "Well, at least it LOOKS like tomato juice. You can't tell with all that redness."
 	icon_state = "tomatojuice"
 	item_state = "carton"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_righthand.dmi',
+	)
 	center_of_mass = "x=16;y=8"
 	isGlass = 0
 
@@ -495,6 +507,10 @@
 	desc = "Sweet-sour goodness."
 	icon_state = "limejuice"
 	item_state = "carton"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/lighting_righthand.dmi',
+	)
 	center_of_mass = "x=16;y=8"
 	isGlass = 0
 

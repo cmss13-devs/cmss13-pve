@@ -7,8 +7,12 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/event.dmi'
 	icon_state = "painless"
 	item_state = "painless"
-	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
-
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/machineguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/machineguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_righthand.dmi'
+	)
 	fire_sound = 'sound/weapons/gun_minigun.ogg'
 	cocked_sound = 'sound/weapons/gun_minigun_cocked.ogg'
 	current_mag = /obj/item/ammo_magazine/minigun
@@ -65,13 +69,17 @@
 
 //M60
 /obj/item/weapon/gun/m60
-	name = "\improper H-G Mk70 Machine Gun"
-	desc = "Part of the Henjin-Garcia repro line, the Mk70 found surprising niche in Frontier colony home defense against aggressive, largescale xenofauna. \n<b>Alt-click to open the feed tray cover for handling reloads.</b>"
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	name = "\improper M60 General Purpose Machine Gun"
+	desc = "The M60. The Pig. The Action Hero's wet dream. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/machineguns.dmi'
 	icon_state = "m60"
 	item_state = "m60"
-	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
-
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/machineguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/machineguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_righthand.dmi'
+	)
 	fire_sound = 'sound/weapons/gun_m60.ogg'
 	cocked_sound = 'sound/weapons/gun_m60_cocked.ogg'
 	current_mag = /obj/item/ammo_magazine/m60
@@ -165,11 +173,16 @@
 
 /obj/item/weapon/gun/pkp
 	name = "\improper QYJ-72 General Purpose Machine Gun"
-	desc = "The QYJ-72 is the standard GPMG of the Union of Progressive Peoples, chambered in 10x27mm, it fires a hard-hitting round with a high rate of fire. With an extremely large box at 250 rounds, the QJY-72 is designed with suppressing fire and accuracy by volume of fire at its forefront. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	desc = "The QYJ-72 is the standard GPMG of the Union of Progressive Peoples, chambered in 7.62x54mmR, it fires a hard-hitting cartridge with a high rate of fire. With an extremely large box at 250 rounds, the QJY-72 is designed with suppressing fire and accuracy by volume of fire at its forefront. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/machineguns.dmi'
 	icon_state = "qjy72"
 	item_state = "qjy72"
-
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/machineguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/machineguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_righthand.dmi'
+	)
 	fire_sound = 'sound/weapons/gun_mg.ogg'
 	cocked_sound = 'sound/weapons/gun_m60_cocked.ogg'
 	current_mag = /obj/item/ammo_magazine/pkp

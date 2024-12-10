@@ -4,7 +4,12 @@
 /obj/item/weapon/gun/revolver
 	flags_equip_slot = SLOT_WAIST
 	w_class = SIZE_MEDIUM
-	mouse_pointer = 'icons/effects/mouse_pointer/pistol_mouse.dmi'
+	item_icons = list(
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/guns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/revolvers.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/revolvers_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/revolvers_righthand.dmi'
+	)
 	matter = list("metal" = 2000)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_ONE_HAND_WIELDED
@@ -292,9 +297,9 @@
 //M44 Revolver
 
 /obj/item/weapon/gun/revolver/m44
-	name = "\improper M44 revolver"
-	desc = ".44 Magnum revolver, in limited service with the USCMC for personal defense against larger xenofauna. For best results, aim carefully."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	name = "\improper M44 combat revolver"
+	desc = "A bulky revolver, occasionally carried by assault troops and officers in the Colonial Marines, as well as civilian law enforcement. Fires .44 Magnum rounds."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/revolvers.dmi'
 	icon_state = "m44r"
 	item_state = "m44r"
 	fire_sounds = list('sound/weapons/gun_cmb_1.ogg', 'sound/weapons/gun_cmb_2.ogg')
@@ -356,7 +361,7 @@
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special
 	name = "\improper M2019 Blaster"
 	desc = "Properly known as the Pflager Katsumata Series-D Blaster, the M2019 is a relic of a handgun used by detectives and blade runners, having replaced the snub nose .38 detective special in 2019. Fires .44 custom packed sabot magnum rounds. Legally a revolver, the unconventional but robust internal design has made this model incredibly popular amongst collectors and enthusiasts."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/revolvers.dmi'
 	icon_state = "lapd_2019"
 	item_state = "highpower" //placeholder
 
@@ -436,7 +441,7 @@
 	name = "\improper Webley Mk VI service pistol"
 	desc = "A heavy top-break revolver. Bakelite grips, and older than most nations. .455 was good enough for angry tribesmen and <i>les boche</i>, and by Gum it'll do for Colonial Marines and xenomorphs as well."
 	current_mag = /obj/item/ammo_magazine/internal/revolver/webley
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/TWE/revolvers.dmi'
 	icon_state = "webley"
 	item_state = "m44r"
 	attachable_allowed = list(
@@ -456,7 +461,7 @@
 /obj/item/weapon/gun/revolver/upp
 	name = "\improper ZHNK-72 revolver"
 	desc = "The ZHNK-72 is a UPP designed revolver. The ZHNK-72 is used by the UPP armed forces in a policing role as well as limited numbers in the hands of SNCOs."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/revolvers.dmi'
 	icon_state = "zhnk72"
 	item_state = "zhnk72"
 
@@ -507,9 +512,9 @@
 //a lean mean machine, pretty inaccurate unless you play its dance.
 
 /obj/item/weapon/gun/revolver/small
-	name = "\improper .38 revolver"
-	desc = "A Frontier Special. Out here, you get a lot of smalltime companies that try to push themselves as better by upping the pressure of their ammo and fiddling with the designs to make it work. It usually means that their accuracy is awful, but the impact is impressive... if you've got the knowhow to shoot them straight."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	name = "\improper S&W .38 model 37 revolver"
+	desc = "A lean .38 made by Smith & Wesson. A timeless classic, from antiquity to the future. This specific model is known to be wildly inaccurate, yet extremely lethal."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/revolvers.dmi'
 	icon_state = "sw357"
 	item_state = "sw357"
 	fire_sound = 'sound/weapons/gun_44mag2.ogg'
@@ -545,7 +550,7 @@
 /obj/item/weapon/mateba_key
 	name = "mateba barrel key"
 	desc = "Used to swap the barrels of a mateba revolver."
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/tools.dmi'
 	icon_state = "matebakey"
 	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
 	force = 5
@@ -558,7 +563,7 @@
 /obj/item/weapon/gun/revolver/mateba
 	name = "\improper Mateba autorevolver"
 	desc = "The Mateba is a powerful, fast-firing revolver that uses its own recoil to rotate the cylinders. It fires heavy .454 rounds."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/revolvers.dmi'
 	icon_state = "mateba"
 	item_state = "mateba"
 
@@ -709,7 +714,7 @@
 /obj/item/weapon/gun/revolver/spearhead
 	name = "\improper Spearhead Armoury revolver"
 	desc = "A sleek high-quality revolver designed by Spearhead Armoury chambered in .357 commonly issued to Colonial Marshals."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/revolvers.dmi'
 	icon_state = "spearhead"
 	item_state = "spearhead"
 	fire_sound = null

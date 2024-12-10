@@ -5,9 +5,15 @@
 /obj/item/weapon/gun/launcher/rocket
 	name = "\improper rocket launcher"
 	desc = "Modelled after the iconic Carl Gustaf recoilless rifle, this heavy piece of kit can still kill things just as well as its forefather could hundreds of years ago."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi'
 	icon_state = "m5"
 	item_state = "m5"
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/rocket_launchers.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/rocket_launchers.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/rocket_launchers_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/rocket_launchers_righthand.dmi'
+	)
 	unacidable = TRUE
 	indestructible = 1
 
@@ -329,7 +335,7 @@
 /obj/item/prop/folded_anti_tank_sadar
 	name = "\improper M83 SADAR (folded)"
 	desc = "An M83 SADAR Anti-Tank RPG, compacted for easier storage. Can be unfolded with the Z key."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi'
 	icon_state = "m83a2_folded"
 	w_class = SIZE_MEDIUM
 	garbage = FALSE
@@ -360,7 +366,7 @@
 /obj/item/weapon/gun/launcher/rocket/upp
 	name = "\improper HJRA-12 Handheld Anti-Tank Grenade Launcher"
 	desc = "The HJRA-12 Handheld Anti-Tank Grenade Launcher is the standard Anti-Armor weapon of the UPP. It is designed to be easy to use and to take out or disable armored vehicles."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/rocket_launchers.dmi'
 	icon_state = "hjra12"
 	item_state = "hjra12"
 	skill_locked = FALSE

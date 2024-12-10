@@ -16,7 +16,7 @@
 /obj/structure/prop/dam/drill
 	name = "mining drill"
 	desc = "An old mining drill, seemingly used for mining. And possibly drilling."
-	icon = 'icons/obj/structures/props/drill.dmi'
+	icon = 'icons/obj/structures/props/industrial/drill.dmi'
 	icon_state = "drill"
 	bound_height = 96
 	var/on = FALSE//if this is set to on by default, the drill will start on, doi
@@ -99,7 +99,7 @@
 /obj/structure/prop/dam/torii
 	name = "torii arch"
 	desc = "A traditional Japanese archway, made out of wood, and adorned with lanterns."
-	icon = 'icons/obj/structures/props/torii.dmi'
+	icon = 'icons/obj/structures/props/furniture/torii.dmi'
 	icon_state = "torii"
 	density = FALSE
 	pixel_x = -16
@@ -202,13 +202,16 @@
 	name = "boulder"
 	icon_state = "boulder1"
 	desc = "A large rock. It's not cooking anything."
-	icon = 'icons/obj/structures/props/dam.dmi'
+	icon = 'icons/obj/structures/props/natural/vegetation/dam.dmi'
 	unslashable = TRUE
 	unacidable = TRUE
+
 /obj/structure/prop/dam/boulder/boulder1
 	icon_state = "boulder1"
+
 /obj/structure/prop/dam/boulder/boulder2
 	icon_state = "boulder2"
+
 /obj/structure/prop/dam/boulder/boulder3
 	icon_state = "boulder3"
 
@@ -216,20 +219,21 @@
 /obj/structure/prop/dam/large_boulder
 	name = "boulder"
 	desc = "A large rock. It's not cooking anything."
-	icon = 'icons/obj/structures/props/boulder_large.dmi'
+	icon = 'icons/obj/structures/props/natural/boulder_large.dmi'
 	bound_height = 64
 	bound_width = 64
 	unslashable = TRUE
 	unacidable = TRUE
 /obj/structure/prop/dam/large_boulder/boulder1
 	icon_state = "boulder_large1"
+
 /obj/structure/prop/dam/large_boulder/boulder2
 	icon_state = "boulder_large2"
 
 /obj/structure/prop/dam/wide_boulder
 	name = "boulder"
 	desc = "A large rock. It's not cooking anything."
-	icon = 'icons/obj/structures/props/boulder_wide.dmi'
+	icon = 'icons/obj/structures/props/natural/boulder_wide.dmi'
 	bound_height = 32
 	bound_width = 64
 
@@ -281,7 +285,7 @@
 
 /obj/structure/prop/turbine //maybe turn this into an actual power generation device? Would be cool!
 	name = "power turbine"
-	icon = 'icons/obj/structures/props/biomass_turbine.dmi'
+	icon = 'icons/obj/structures/props/industrial/biomass_turbine.dmi'
 	icon_state = "biomass_turbine"
 	desc = "A gigantic turbine that runs on god knows what. It could probably be turned on by someone with the correct know-how."
 	density = TRUE
@@ -318,7 +322,7 @@
 
 /obj/structure/prop/turbine_extras
 	name = "power turbine struts"
-	icon = 'icons/obj/structures/props/biomass_turbine.dmi'
+	icon = 'icons/obj/structures/props/industrial/biomass_turbine.dmi'
 	icon_state = "support_struts_r"
 	desc = "Pipes, or maybe support struts that lead into, or perhaps support that big ol' turbine."
 	density = FALSE
@@ -344,7 +348,7 @@
 
 /obj/structure/prop/power_transformer
 	name = "power transformer"
-	icon = 'icons/obj/structures/props/power_transformer.dmi'
+	icon = 'icons/obj/structures/props/industrial/power_transformer.dmi'
 	icon_state = "transformer"
 	bound_width = 64
 	bound_height = 64
@@ -446,7 +450,7 @@
 /obj/structure/prop/brazier
 	name = "brazier"
 	desc = "The fire inside the brazier emits a relatively dim glow to flashlights and flares, but nothing can replace the feeling of sitting next to a fireplace with your friends."
-	icon = 'icons/obj/structures/structures.dmi'
+	icon = 'icons/obj/structures/bonfire.dmi'
 	icon_state = "brazier"
 	density = TRUE
 	health = 150
@@ -525,7 +529,7 @@
 
 /obj/item/prop/torch_frame
 	name = "unlit torch"
-	icon = 'icons/obj/structures/structures.dmi'
+	icon = 'icons/obj/structures/bonfire.dmi'
 	desc = "It's a torch, but it's not lit or placed down. Click on a wall to place it."
 	icon_state = "torch_frame"
 
@@ -545,7 +549,7 @@
 /obj/structure/prop/brazier/campfire
 	name = "campfire"
 	desc = "A circle of stones surrounding a burning pile of wood. The fire is roaring and you can hear its crackle. You could probably stomp the fire out."
-	icon = 'icons/obj/structures/structures.dmi'
+	icon = 'icons/obj/structures/bonfire.dmi'
 	icon_state = "campfire_on"
 	density = FALSE
 	///How many tiles the heating and sound goes
@@ -811,7 +815,7 @@
 
 /obj/structure/prop/invuln/overhead
 	layer = ABOVE_FLY_LAYER
-	icon = 'icons/obj/structures/props/overhead_ducting.dmi'
+	icon = 'icons/obj/structures/props/industrial/overhead_ducting.dmi'
 	icon_state = "flammable_pipe_1"
 
 /obj/structure/prop/invuln/overhead/flammable_pipe
@@ -826,7 +830,7 @@
 /obj/structure/prop/static_tank
 	name = "liquid tank"
 	desc = "Warning, contents under pressure!"
-	icon = 'icons/obj/structures/props/generic_props.dmi'
+	icon = 'icons/obj/structures/props/industrial/generic_props.dmi'
 	icon_state = "tank"
 	density = TRUE
 	unslashable = TRUE
@@ -979,7 +983,7 @@
 /obj/structure/prop/wooden_cross
 	name = "wooden cross"
 	desc = "A wooden grave marker. Is it more respectful because someone made it by hand, or less, because it's crude and misshapen?"
-	icon = 'icons/obj/structures/props/crosses.dmi'
+	icon = 'icons/obj/structures/props/furniture/crosses.dmi'
 	icon_state = "cross1"
 	density = FALSE
 	health = 30
@@ -1099,7 +1103,7 @@
 
 /obj/structure/prop/wooden_cross/update_icon()
 	if(tagged)
-		overlays += mutable_appearance('icons/obj/structures/props/crosses.dmi', "cross_overlay")
+		overlays += mutable_appearance('icons/obj/structures/props/furniture/crosses.dmi', "cross_overlay")
 
 
 /obj/structure/prop/invuln/rope

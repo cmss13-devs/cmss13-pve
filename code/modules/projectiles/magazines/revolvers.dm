@@ -7,7 +7,7 @@
 	default_ammo = /datum/ammo/bullet/revolver
 	flags_equip_slot = NO_FLAGS
 	caliber = ".44"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/revolvers.dmi'
 	icon_state = "m44"
 	item_state = "generic_speedloader"
 	w_class = SIZE_SMALL
@@ -51,7 +51,7 @@
 /obj/item/ammo_magazine/revolver/pkd
 	name = "\improper Plfager Katsuma stripper clip (.44)"
 	desc = "Flip up the two side latches (three on PKL) and push after aligning with feed lips on blaster. Clip can be re-used."
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/revolvers.dmi'
 	icon_state = "pkd_44"
 	caliber = ".44 sabot"
 
@@ -59,7 +59,7 @@
 	name = "\improper ZHNK-72 speed loader (7.62x38mmR)"
 	default_ammo = /datum/ammo/bullet/revolver/upp
 	caliber = "7.62x38mmR"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/UPP/revolvers.dmi'
 	icon_state = "zhnk72loader"
 	gun_type = /obj/item/weapon/gun/revolver/upp
 
@@ -74,7 +74,7 @@
 	desc = "A speedloader of 6 handloaded overpressure .38 bullets. Substantial impact, but suffers from accuracy issues compared to factory ammunition. Liable to damage firearms not built to handle the chamber pressure."
 	default_ammo = /datum/ammo/bullet/revolver/small
 	caliber = ".38 +P"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/revolvers.dmi'
 	icon_state = "38"
 	max_rounds = 6
 	gun_type = /obj/item/weapon/gun/revolver/small
@@ -84,7 +84,7 @@
 	desc = "A speedloader of 6 FMJ .357 bullets, uncommonly issued to Colonial Marshals due to overpenetration risks."
 	default_ammo = /datum/ammo/bullet/revolver/small
 	caliber = ".357"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/revolvers.dmi'
 	icon_state = "cmb"
 	max_rounds = 6
 	gun_type = /obj/item/weapon/gun/revolver/spearhead
@@ -135,7 +135,7 @@
 	desc = ".455 Webley, the last decent pistol calibre. Loaded with Mk III dum-dum bullets, because Marines are not human and the Hague Conventions do not apply to them."
 	default_ammo = /datum/ammo/bullet/revolver/webley
 	caliber = ".455"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/revolvers.dmi'
 	icon_state = "357"
 	max_rounds = 6
 	gun_type = /obj/item/weapon/gun/revolver/m44/custom/webley

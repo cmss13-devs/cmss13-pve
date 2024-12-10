@@ -22,7 +22,7 @@
 	//Should item be deleted on being empty
 	var/delete_on_empty = FALSE
 	gulp_size = 10
-	icon = 'icons/obj/items/drinkcans.dmi'
+	icon = 'icons/obj/items/food/drinkcans.dmi'
 	item_icons = list(
 		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/food_lefthand.dmi',
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/food_righthand.dmi'

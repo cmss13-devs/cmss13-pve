@@ -292,6 +292,7 @@
 "eY" = (
 /obj/structure/showcase{
 	icon_state = "relay";
+	icon = 'icons/obj/structures/props/server_equipment.dmi';
 	name = "Telecommunication Relay"
 	},
 /turf/open/floor/corsat/plate,
@@ -1366,6 +1367,7 @@
 "xH" = (
 /obj/structure/showcase{
 	icon_state = "broadcast receiver";
+	icon = 'icons/obj/structures/props/server_equipment.dmi';
 	name = "Subspace Receiver"
 	},
 /turf/open/floor/corsat/plate,
@@ -1537,6 +1539,7 @@
 "AC" = (
 /obj/structure/showcase{
 	icon_state = "processor";
+	icon = 'icons/obj/structures/props/server_equipment.dmi';
 	name = "Processor Unit"
 	},
 /turf/open/floor/corsat/plate,
@@ -1811,7 +1814,8 @@
 /area/adminlevel/ert_station/weyland_station)
 "Ew" = (
 /obj/structure/showcase{
-	icon_state = "bus"
+	icon_state = "bus";
+	icon = 'icons/obj/structures/props/server_equipment.dmi'
 	},
 /turf/open/floor/corsat/plate,
 /area/adminlevel/ert_station/weyland_station)
@@ -2636,6 +2640,7 @@
 "Sg" = (
 /obj/structure/showcase{
 	icon_state = "hub";
+	icon = 'icons/obj/structures/props/server_equipment.dmi';
 	name = "Telecommunication Hub"
 	},
 /turf/open/floor/corsat/plate,

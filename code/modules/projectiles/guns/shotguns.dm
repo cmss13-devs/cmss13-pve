@@ -7,8 +7,17 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun
 	w_class = SIZE_LARGE
-	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
-
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/shotguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/shotguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/shotguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/shotguns_righthand.dmi'
+	)
+	fire_sound = 'sound/weapons/gun_shotgun.ogg'
+	reload_sound = "shell_load"
+	cocked_sound = 'sound/weapons/gun_shotgun_reload.ogg'
+	var/break_sound = 'sound/weapons/handling/gun_mou_open.ogg'
+	var/seal_sound = 'sound/weapons/handling/gun_mou_close.ogg'
 	accuracy_mult = 1.15
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	gun_category = GUN_CATEGORY_SHOTGUN
@@ -179,7 +188,7 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/merc
 	name = "custom built shotgun"
 	desc = "A cobbled-together pile of scrap and alien wood. Point end towards things you want to die. Has a burst fire feature, as if it needed it."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/shotguns.dmi'
 	icon_state = "cshotgun"
 	item_state = "cshotgun"
 
@@ -243,7 +252,7 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/combat
 	name = "\improper M120 tactical shotgun"
 	desc = "A successor to the Benelli M4 Super 90, the M120 tactical shotgun is in service with the USCM due its easy maneuverability in close quarters, 12 gauge chambering, high firerate and integrated U1 underslung grenade launcher. While not part of the standard doctrine, they are common none the less. The internal tube magazine stores 6 shells and the U1 grenade launcher stores three grenades."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/WY/shotguns.dmi'
 	icon_state = "mk221"
 	item_state = "mk221"
 
@@ -303,6 +312,7 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/combat/marsoc
 	name = "\improper XM38 tactical shotgun"
 	desc = "An ARMAT design adopted for testing by the Marine Raiders due to it's compact size, high firerate and integrated magnetic harness system. You might think the size would leave its magazine tube wanting, but through engineering magic, the XM38 is capable of holding six shells with its internal tube magazine."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/shotguns.dmi'
 	icon_state = "mk210"
 	item_state = "mk210"
 
@@ -449,7 +459,7 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/double
 	name = "\improper Spearhead Rival 78"
 	desc = "A double barrel shotgun produced by Spearhead. Archaic, sturdy, affordable. Only holds two 12g shells at a time."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/shotguns.dmi'
 	icon_state = "dshotgun"
 	item_state = "dshotgun"
 
@@ -630,15 +640,15 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/double/cane
 	name = "fancy cane"
 	desc = "An ebony cane with a fancy, seemingly-golden tip. Feels hollow to the touch."
-	icon = 'icons/obj/items/weapons/weapons.dmi'
+	icon = 'icons/obj/items/weapons/melee/canes.dmi'
 	icon_state = "fancy_cane"
 	item_state = "fancy_cane"
 	pickup_sound = null
 	drop_sound = null
 	item_icons = list(
-		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_0.dmi',
-		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_0.dmi'
-		)
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/canes_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/canes_righthand.dmi',
+	)
 	caliber = ".44"
 	gauge = ".44" // misery
 	force = 15 // hollow. also too hollow to support one's weight like normal canes
@@ -715,6 +725,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	desc = "A limited production Kerchner MOU53 triple break action classic. Respectable damage output at medium ranges, while the ARMAT M37 is the king of CQC, the Kerchner MOU53 is what hits the broadside of that barn. This specific model cannot safely fire buckshot shells."
 	icon_state = "mou"
 	item_state = "mou"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/shotguns.dmi'
 	var/max_rounds = 3
 	var/current_rounds = 0
 	fire_sound = 'sound/weapons/gun_mou53.ogg'
@@ -1023,7 +1034,7 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/pump
 	name = "Ithaca 37 pump-action shotgun"
 	desc = "A customized Ithaca 37 hunting shotgun. Its wooden stock has been replaced with a bakelite pistol grip, and its barrel and magazine tube have been cut down to half their lengths for easier handling in close quarters at the cost of magazine size, only fitting four shells and one chambered."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/shotguns.dmi'
 	icon_state = "m37"
 	item_state = "m37"
 	current_mag = /obj/item/ammo_magazine/internal/shotgun
@@ -1201,7 +1212,7 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb
 	name = "\improper HG 37-12 pump shotgun"
 	desc = "An eight-round pump action shotgun with four-round capacity dual internal tube magazines allowing for quick reloading and highly accurate fire. Standard issue shotgun of the Colonial Marshals Bureau. By toggling the shotgun tube, you can swap between the internal magazines."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/shotguns.dmi'
 	icon_state = "hg3712"
 	item_state = "hg3712"
 	fire_sound = 'sound/weapons/gun_shotgun_small.ogg'
@@ -1243,7 +1254,6 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717
 	name = "\improper M37-17 pump shotgun"
 	desc = "A military version of the iconic HG 37-12, this design can fit one extra shell in each of its dual-tube internal magazines, and fires shells with increased velocity, resulting in more damage. Issued to select USCM vessels and stations in the outer veil. A button on the side toggles the internal tubes."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m3717"
 	item_state = "m3717"
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/cmb/m3717

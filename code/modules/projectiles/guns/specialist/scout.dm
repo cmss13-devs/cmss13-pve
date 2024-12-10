@@ -1,13 +1,17 @@
 //M49A custom marksman rifle
 
-/obj/item/weapon/gun/rifle/m49a_custom
+/obj/item/weapon/gun/rifle/m4ra_custom
 	name = "\improper M49A5 battle rifle"
 	desc = "This is a further improvement upon the already rock-solid M49A. Made by the USCM armorers on Chinook station - This variant of the M49A has a specifically milled magazine well to accept A19 rounds. It sports a light-weight titantium-alloy frame, better responsive to the heavy kick of the tailor-made A19 rounds."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
-	icon_state = "m49a_custom"
-	item_state = "m49a_custom"
-	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
-
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/marksman_rifles.dmi'
+	icon_state = "m4ra_custom"
+	item_state = "m4ra_custom"
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/marksman_rifles.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/marksman_rifles.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/marksman_rifles_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/marksman_rifles_righthand.dmi'
+	)
 	unacidable = TRUE
 	indestructible = 1
 	force = 26

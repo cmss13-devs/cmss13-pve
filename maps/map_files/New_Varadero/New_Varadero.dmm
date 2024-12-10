@@ -1892,6 +1892,38 @@
 	pixel_x = -1
 	},
 /obj/item/ammo_magazine/rifle/m49a,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/structure/prop/structure_lattice{
+	density = 0;
+	desc = "Made in Little Japan.";
+	health = 300;
+	icon = 'icons/obj/items/stacks.dmi';
+	icon_state = "sheet-lizard";
+	name = "exotic bedsheet";
+	pixel_x = -1
+	},
+/obj/item/ammo_magazine/rifle/m4ra,
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "bBt" = (
@@ -8663,10 +8695,6 @@
 /area/varadero/exterior/monsoon)
 "gPk" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/head/caphat{
-	pixel_x = 2;
-	pixel_y = 9
-	},
 /obj/item/clothing/head/cmcap,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/bunks)
@@ -9681,7 +9709,7 @@
 	density = 0;
 	desc = "It is kind of pink and wavy with white lines. It has been pinned to the wall with all the care of a meticulate entomologist.";
 	health = 300;
-	icon = 'icons/obj/items/items.dmi';
+	icon = 'icons/obj/items/stacks.dmi';
 	icon_state = "sheet-mythril";
 	name = "funky wall bacon"
 	},
@@ -12113,7 +12141,7 @@
 /obj/item/weapon/pole{
 	anchored = 1;
 	desc = "It only plays auto chess. Gross.";
-	icon = 'icons/obj/items/items.dmi';
+	icon = 'icons/obj/items/toy.dmi';
 	icon_state = "game_kit";
 	name = "Thick Art LTD Gamepad"
 	},
@@ -14941,7 +14969,7 @@
 /area/varadero/exterior/lz1_near)
 "lXv" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/holostool,
+/obj/item/stool,
 /turf/open/floor/wood,
 /area/varadero/interior/beach_bar)
 "lXx" = (
@@ -21300,7 +21328,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/maintenance/south)
 "qNA" = (
-/obj/item/storage/belt/marine/quackers,
+/obj/item/toy/inflatable_duck,
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "qNX" = (

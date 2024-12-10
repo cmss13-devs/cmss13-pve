@@ -12,9 +12,9 @@
 	desc = "A box of 150 .50 BMG rounds for the M2 Heavy Machinegun System. Click the heavy machinegun while there's no ammo box loaded to reload the M2C."
 	caliber = ".50"
 	w_class = SIZE_LARGE
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
-	icon_state = "m56de"
-	item_state = "m56de"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/machineguns.dmi'
+	icon_state = "m2c"
+	item_state = "m2c"
 	max_rounds = 150
 	default_ammo = /datum/ammo/bullet/machinegun/auto
 	gun_type = null
@@ -22,8 +22,8 @@
 //STORAGE BOX FOR THE MACHINEGUN
 /obj/item/storage/box/m56d/m2c
 	name = "\improper M2C Assembly-Supply Crate"
-	desc = "A large case labelled 'M2C, .50 BMG caliber heavy machinegun', seems to be fairly heavy to hold. Contains a deadly M2C Heavy Machinegun System and its ammunition."
-	icon = 'icons/turf/whiskeyoutpost.dmi'
+	desc = "A large case labelled 'M2C, 10x28mm caliber heavy machinegun', seems to be fairly heavy to hold. contains a deadly M2C Heavy Machinegun System and its ammunition."
+	icon = 'icons/obj/structures/crates.dmi'
 	icon_state = "M56D_case"
 	w_class = SIZE_HUGE
 	storage_slots = 5
@@ -43,9 +43,9 @@
 	desc_lore = "Initially requested by the Department of Defense to substantially reinforce Colonial Guard units with high-caliber weaponry for a cheap price, this mean killing machine soon found its way into hands of mercenaries, colonists and rebels by the means of warehouse raiding or plain ole' corruption. If you're a marine and somehow found it and for some reason decided to use it... well, you better reconsider, since this thing has NO place on the modern battlefield. It requires being in a static position, takes up valuable kit space and isn't really much better than modern 10x28 caliber machineguns. Seriously, its 2182, just use a smartgun."
 	w_class = SIZE_HUGE
 	flags_equip_slot = SLOT_BACK
-	icon = 'icons/turf/whiskeyoutpost.dmi'
-	icon_state = "M56DE_gun_mount"
-	item_state = "M56DE_gun_mount"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/machineguns.dmi'
+	icon_state = "M2C_gun_mount"
+	item_state = "M2C_gun_mount"
 	var/rounds = 0
 	var/overheat_value = 0
 	var/anti_cadehugger_range = 1
@@ -172,12 +172,11 @@
 // MACHINEGUN, AUTOMATIC
 /obj/structure/machinery/m56d_hmg/auto
 	name = "\improper M2C Heavy Machinegun"
-	desc = "A deployable, heavy machine gun. The M2C is a modified M2 HB made with contemporary materials. It is capable of recoilless fire and fast-rotating. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>"
-	desc_lore = "Initially requested by DOD to substantially reinforce Colonial Guard units with high-caliber weaponry for cheap price, this mean killing machine soon found its way into hands of mercenaries, colonists and rebels by the means of warehouse raiding or plain ol' corruption. If you're a marine and somehow found it and for some reason decided to use it... better reconsider, since this thing has NO place on the modern battlefield, requiring static position, taking up valuable kit space and not really being much better than modern 10x28 caliber machineguns. Seriously, its 2182, just let it go."
-	icon = 'icons/turf/whiskeyoutpost.dmi'
-	icon_state = "M56DE"
-	icon_full = "M56DE"
-	icon_empty = "M56DE_e"
+	desc = "A deployable, heavy machine gun. The M2C 'Chimp' HB is a modified M2 HB reconfigured to fire 10x28 Caseless Tungsten rounds for USCM use. It is capable of recoilless fire and fast-rotating. However it has a debilitating overheating issue due to the poor quality of metals used in the parts, forcing it to be used in decisive, crushing engagements as a squad support weapon. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/machineguns.dmi'
+	icon_state = "M2C"
+	icon_full = "M2C"
+	icon_empty = "M2C_e"
 	rounds_max = 150
 	ammo = /datum/ammo/bullet/machinegun/auto
 	fire_delay = 2.5
@@ -220,7 +219,11 @@
 /obj/structure/machinery/m56d_hmg/auto/Initialize()
 	. = ..()
 	if(!barrel_overheat_image)
-		barrel_overheat_image = image('icons/turf/whiskeyoutpost.dmi', "+m56de_overheat")
+		barrel_overheat_image = image('icons/obj/items/weapons/guns/guns_by_faction/USCM/machineguns.dmi', "+M2C_overheat")
+
+/obj/structure/machinery/m56d_hmg/auto/Destroy()
+	QDEL_NULL_LIST(cadeblockers)
+	return ..()
 
 /obj/structure/machinery/m56d_hmg/auto/process()
 	overheat_value -= M2C_PASSIVE_COOLDOWN_AMOUNT

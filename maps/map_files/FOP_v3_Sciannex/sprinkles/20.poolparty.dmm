@@ -36,10 +36,6 @@
 /area/template_noop)
 "cq" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/head/cueball{
-	pixel_x = 32;
-	pixel_y = -2
-	},
 /obj/item/reagent_container/food/drinks/bottle/beer/craft/tuxedo{
 	pixel_x = -9;
 	pixel_y = 9
@@ -1016,7 +1012,7 @@
 /turf/open/gm/river/pool,
 /area/template_noop)
 "PL" = (
-/obj/item/storage/belt/marine/quackers,
+/obj/item/toy/inflatable_duck,
 /turf/open/gm/river/pool,
 /area/template_noop)
 "PS" = (
@@ -1027,7 +1023,7 @@
 /turf/open/floor/prison,
 /area/template_noop)
 "Qt" = (
-/obj/item/storage/belt/shotgun/full/quackers{
+/obj/item/toy/inflatable_duck{
 	layer = 3.1
 	},
 /obj/item/trash/crushed_cup{

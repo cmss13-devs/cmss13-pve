@@ -66,7 +66,7 @@
 	name = "Mk70 belt box (7.62x51mm)"
 	desc = "Limited production run by Henjin-Garcia of old Earth weapons. A 100rnd belt box for their Mk70 reproduction of the M60 GPMG."
 	caliber = "7.62x51mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/machineguns.dmi'
 	icon_state = "m60" //PLACEHOLDER
 
 	matter = list("metal" = 10000)
@@ -79,7 +79,7 @@
 	name = "QYJ-72 ammo box (10x27mm HEAP)"
 	desc = "A 250 round box of HEAP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
 	caliber = "10x27mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/UPP/machineguns.dmi'
 	icon_state = "qjy72"
 
 	matter = list("metal" = 10000)

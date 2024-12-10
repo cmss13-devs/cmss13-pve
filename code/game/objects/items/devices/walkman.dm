@@ -5,8 +5,17 @@
 	desc = "A classic-style portable audio recorder used to record or play music and audio tapes. Now when you go EVA you can bring your country jams with you!"
 	icon = 'icons/obj/items/walkman.dmi'
 	icon_state = "walkman"
+	item_icons = list(
+		WEAR_L_EAR = 'icons/mob/humans/onmob/clothing/ears.dmi',
+		WEAR_R_EAR = 'icons/mob/humans/onmob/clothing/ears.dmi',
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/ears.dmi',
+		WEAR_IN_J_STORE = 'icons/mob/humans/onmob/clothing/ears.dmi',
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/walkman.dmi',
+		)
 	w_class = SIZE_SMALL
 	flags_equip_slot = SLOT_WAIST | SLOT_EAR
+	flags_obj = OBJ_IS_HELMET_GARB
+	black_market_value = 15
 	actions_types = list(/datum/action/item_action/walkman/play_pause,/datum/action/item_action/walkman/next_song,/datum/action/item_action/walkman/restart_song)
 	var/obj/item/device/cassette_tape/tape
 	var/paused = TRUE
@@ -17,13 +26,6 @@
 	var/pl_index = 1
 	var/volume = 25
 	var/design = 1 // What kind of walkman design style to use
-	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_WAIST = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_IN_J_STORE = 'icons/mob/humans/onmob/ears.dmi'
-		)
-	black_market_value = 15
 
 /obj/item/device/walkman/Initialize()
 	. = ..()
@@ -310,6 +312,9 @@
 	desc = "A cassette tape"
 	icon = 'icons/obj/items/walkman.dmi'
 	icon_state = "cassette_flip"
+	item_icons = list(
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/walkman.dmi',
+		)
 	w_class = SIZE_SMALL
 	black_market_value = 15
 	var/side1_icon = "cassette"

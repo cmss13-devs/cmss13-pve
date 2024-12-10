@@ -10,6 +10,10 @@
 	name = "first-aid kit"
 	desc = "It's an emergency medical kit for those serious boo-boos."
 	icon = 'icons/obj/items/storage/medical.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_righthand.dmi',
+	)
 	icon_state = "firstaid"
 	var/open_state = "kit_empty"
 	throw_speed = SPEED_FAST
@@ -880,6 +884,10 @@
 	name = "\improper pill packet"
 	desc = "Contains pills. Once you take them out, they don't go back in."
 	icon_state = "pill_packet"
+	item_state_slots = list(WEAR_AS_GARB = "brutepack (bandages)")
+	item_icons = list(
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/medical.dmi',
+	)
 	bottle_lid = FALSE
 	storage_slots = 4
 	max_w_class = 0

@@ -1,5 +1,5 @@
 /obj/structure/sign
-	icon = 'icons/obj/structures/props/decals.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/decals.dmi'
 	anchored = TRUE
 	opacity = FALSE
 	density = FALSE
@@ -25,7 +25,7 @@
 /obj/item/sign
 	name = "sign"
 	desc = ""
-	icon = 'icons/obj/structures/props/decals.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/decals.dmi'
 	w_class = SIZE_MEDIUM //big
 	var/sign_state = ""
 
@@ -96,7 +96,7 @@
 //==========//
 
 /obj/structure/sign/banners
-	icon = 'icons/obj/structures/props/banners.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/banners.dmi'
 
 /obj/structure/sign/banners/happybirthdaysteve
 	name = "\improper Happy Birthday Steve banner"
@@ -121,7 +121,7 @@
 //==========//
 
 /obj/structure/sign/flag
-	icon = 'icons/obj/structures/props/flags.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/flags.dmi'
 
 /obj/structure/sign/flag/upp
 	name = "\improper Union of Progressive Peoples Flag"
@@ -166,7 +166,7 @@
 
 /obj/structure/sign/safety
 	name = "sign"
-	icon = 'icons/obj/structures/props/semiotic_standard.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/semiotic_standard.dmi'
 	desc = "A sign denoting Semiotic Standard. The Interstellar Commerce Commission requires that these symbols be placed pretty much everywhere for your safety."
 	anchored = TRUE
 	opacity = FALSE
@@ -697,5 +697,5 @@
 /obj/structure/sign/catclock
 	name = "cat clock"
 	desc = "An unbelievably creepy cat clock that surveys the room with every tick and every tock."
-	icon = 'icons/obj/structures/props/catclock.dmi'
+	icon = 'icons/obj/structures/props/furniture/catclock.dmi'
 	icon_state = "cat_clock_motion"

@@ -6,7 +6,7 @@
 	name = "\improper M4A3 magazine (9x19mm)"
 	desc = "A pistol magazine."
 	caliber = "9x19mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/pistols.dmi'
 	icon_state = "m4a3"
 	max_rounds = 12
 	w_class = SIZE_SMALL
@@ -91,6 +91,7 @@
 	name = "\improper VP70 AP magazine (9x19mm)"
 	default_ammo = /datum/ammo/bullet/pistol/ap
 	caliber = "9x19mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/WY/pistols.dmi'
 	icon_state = "vp70"
 	max_rounds = 19
 	gun_type = /obj/item/weapon/gun/pistol/vp70
@@ -126,11 +127,11 @@
 //ES-4
 
 /obj/item/ammo_magazine/pistol/es4
-	name = "\improper ES-4 stun magazine (9x19mm)"
-	default_ammo = /datum/ammo/bullet/pistol/electrostatic
-	caliber = "9x19mm"
-	desc = "Holds 19 rounds of specialized Conductive 9x19mm. Electrostatic propulsion in the ES-4 functions by propelling an cV9x19mm round, at a proportionally slower velocity to maintain a higher kinetic energy transfer rate. All this turns a penetrative round into a less-than-lethal round."
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
+	name = "\improper ES-4 stun magazine (9mm)"
+	default_ammo = /datum/ammo/bullet/pistol/rubber/stun
+	caliber = "9mm"
+	desc = "Holds 19 rounds of specialized Conductive 9mm. Electrostatic propulsion in the ES-4 functions by propelling an cV9mm round, at a proportionally slower velocity to maintain a higher kinetic energy transfer rate. All this turns a penetrative round into a less-than-lethal round."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/WY/pistols.dmi'
 	icon_state = "es4"
 	max_rounds = 19
 	gun_type = /obj/item/weapon/gun/pistol/es4
@@ -142,6 +143,7 @@
 	name = "\improper VP78 magazine (9x19mm)"
 	default_ammo = /datum/ammo/bullet/pistol/squash
 	caliber = "9x19mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/WY/pistols.dmi'
 	icon_state = "vp78"
 	max_rounds = 18
 	gun_type = /obj/item/weapon/gun/pistol/vp78
@@ -182,7 +184,7 @@
 	name = "\improper Desert Eagle magazine (.50)"
 	default_ammo = /datum/ammo/bullet/pistol/deagle
 	caliber = ".50"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/pistols.dmi'
 	icon_state = "deagle"
 	max_rounds = 7
 	gun_type = /obj/item/weapon/gun/pistol/heavy
@@ -215,7 +217,7 @@
 	name = "\improper NP92 magazine (9x18mm Makarov)"
 	default_ammo = /datum/ammo/bullet/pistol
 	caliber = "9x18mm Makarov"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/UPP/pistols.dmi'
 	icon_state = "np92mag"
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/pistol/np92
@@ -224,7 +226,7 @@
 	name = "\improper NPZ92 magazine (9x18mm Makarov)"
 	default_ammo = /datum/ammo/bullet/pistol
 	caliber = "9x18mm Makarov"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/UPP/pistols.dmi'
 	icon_state = "npz92mag"
 	max_rounds = 12
 
@@ -232,7 +234,7 @@
 	name = "\improper NPZ92 tranq magazine (9x18mm Makarov)"
 	default_ammo = /datum/ammo/bullet/pistol/tranq
 	caliber = "9x18mm Makarov"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/UPP/pistols.dmi'
 	icon_state = "npz92tranqmag"
 	max_rounds = 12
 
@@ -243,7 +245,7 @@
 	name = "\improper Type 73 magazine (7.62x25mm Tokarev)"
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = "7.62x25mm Tokarev"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/UPP/pistols.dmi'
 	icon_state = "ttmag"
 	max_rounds = 9
 	gun_type = /obj/item/weapon/gun/pistol/t73
@@ -252,7 +254,7 @@
 	name = "\improper High Impact Type 74 magazine (7.62x25mm Tokarev)"
 	default_ammo = /datum/ammo/bullet/pistol/heavy/super/highimpact/upp
 	caliber = "7.62x25mm Tokarev"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/UPP/pistols.dmi'
 	icon_state = "ttmag_impact"
 	max_rounds = 9
 	gun_type = /obj/item/weapon/gun/pistol/t73/leader
@@ -264,7 +266,7 @@
 	name = "\improper KT-42 magazine (.44)"
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".44"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/pistols.dmi'
 	icon_state = "kt42"
 	max_rounds = 16
 	gun_type = /obj/item/weapon/gun/pistol/kt42
@@ -277,7 +279,7 @@
 	desc = "A surprisingly small magazine, holding .22 bullets. No Kolibri, but it's getting there."
 	default_ammo = /datum/ammo/bullet/pistol/tiny
 	caliber = ".22"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/pistols.dmi'
 	icon_state = "holdout"
 	max_rounds = 5
 	w_class = SIZE_TINY
@@ -289,7 +291,7 @@
 	name = "Type 18 magazine (.50)"
 	default_ammo = /datum/ammo/bullet/pistol/heavy/super
 	caliber = ".50"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/pistols.dmi'
 	icon_state = "m4a3" // placeholder
 	max_rounds = 3
 	w_class = SIZE_TINY
@@ -304,7 +306,7 @@
 	name = "\improper HG-45 'Aguila' magazine (.45)"
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/pistols.dmi'
 	icon_state = "highpower"
 	max_rounds = 11
 	gun_type = /obj/item/weapon/gun/pistol/highpower
@@ -331,7 +333,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	name = "\improper Auto-9 magazine (9x19mm)"
 	default_ammo = /datum/ammo/bullet/pistol/squash
 	caliber = "9x19mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/WY/pistols.dmi'
 	icon_state = "vp70" //PLACEHOLDER
 	max_rounds = 50
 	gun_type = /obj/item/weapon/gun/pistol/auto9
@@ -358,7 +360,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	name = "\improper SU-6 Smartpistol magazine (.45)"
 	default_ammo = /datum/ammo/bullet/pistol/smart
 	caliber = ".45"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/pistols.dmi'
 	icon_state = "smartpistol"
 	max_rounds = 15
 	gun_type = /obj/item/weapon/gun/pistol/smart
@@ -370,7 +372,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	name = "\improper CZ-81 20-round magazine (.32ACP)"
 	desc = "A .32ACP caliber magazine for the CZ-81."
 	caliber = ".32ACP"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/smgs.dmi'
 	icon_state = "skorpion" //PLACEHOLDER
 	gun_type = /obj/item/weapon/gun/pistol/skorpion
 	max_rounds = 20

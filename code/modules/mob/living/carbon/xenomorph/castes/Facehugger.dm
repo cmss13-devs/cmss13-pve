@@ -61,8 +61,8 @@
 	)
 	claw_type = 0 // No claws at all
 
-	icon_xeno = 'icons/mob/xenos/facehugger.dmi'
-	icon_xenonid = 'icons/mob/xenonids/facehugger.dmi'
+	icon_xeno = 'icons/mob/xenos/castes/tier_0/facehugger.dmi'
+	icon_xenonid = 'icons/mob/xenonids/castes/tier_0/xenonid_crab.dmi'
 
 	ai_range = 24
 
