@@ -1,9 +1,9 @@
 {
-    "map_name": "Sullivan AeroSpaceForce Base",
+    "map_name": "Sullivan Aerospace Force Base",
     "short_name": "USASFB Sullivan",
     "map_path": "map_files/Sullivan_USASFB",
 	"map_file": "Sullivan_USASFB.dmm",
-    "webmap_url": "Sullivan_USASFB",
+    "webmap_url": "LV624",
     "environment_traits": {
         "COLD": true
     },

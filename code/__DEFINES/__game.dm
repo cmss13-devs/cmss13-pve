@@ -39,7 +39,7 @@
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
-#define MAP_SULLIVAN_USASFB "Sullivan USASFB"
+#define MAP_SULLIVAN_USASFB "Sullivan Aerospace Force Base"
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
