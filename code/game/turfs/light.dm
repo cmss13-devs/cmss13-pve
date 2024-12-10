@@ -12,6 +12,7 @@
 	tile_type = /obj/item/stack/tile/light
 	var/on = TRUE
 	var/state = LIGHT_FLOOR_COLOR_BLUE
+	var/list/coloredlights = list("light_on-g", "light_on-r", "light_on-y", "light_on", "light_on-p", "light_on-w")
 
 /turf/open/floor/light/get_examine_text(mob/user)
 	. = ..()
@@ -116,6 +117,10 @@
 /turf/open/floor/light/white
 	icon_state = "light_on-w"
 	state = LIGHT_FLOOR_COLOR_WHITE
+
+/turf/open/floor/light/multicolor
+	icon_state = list("cycle_all")
+	state = LIGHT_FLOOR_COLOR_BLUE
 
 /turf/open/floor/light/off
 	icon_state = "light_off"
