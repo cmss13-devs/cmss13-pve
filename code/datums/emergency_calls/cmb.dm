@@ -141,22 +141,22 @@
 	if(!leader && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(mob.client, JOB_SQUAD_LEADER, time_required_for_job))
 		leader = mob
 		to_chat(mob, SPAN_ROLE_HEADER("You are the Marine Fireteam Leader of Anchorpoint Station!"))
-		arm_equipment(mob, /datum/equipment_preset/uscm/cmb/leader, TRUE, TRUE) // placeholder
+		arm_equipment(mob, /datum/equipment_preset/uscm/leader_equipped, TRUE, TRUE) // placeholder
 	else if(smartgunners < max_smartgunners && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_SMARTGUNNER) && check_timelock(mob.client, JOB_SQUAD_SMARTGUN, time_required_for_job))
 		smartgunners++
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Smartgunner of Anchorpoint Station!"))
-		arm_equipment(mob, /datum/equipment_preset/uscm/cmb/smartgunner, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/uscm/smartgunner_equipped, TRUE, TRUE)
 	else if (medics < max_medics && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_MEDIC) && check_timelock(mob.client, JOB_SQUAD_MEDIC, time_required_for_job))
 		medics++
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Marine Corpsman of Anchorpoint Station!"))
-		arm_equipment(mob, /datum/equipment_preset/uscm/cmb/medic, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/uscm/medic_equipped, TRUE, TRUE)
 	else if(engineers < max_engineers && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_ENGINEER) && check_timelock(mob.client, JOB_SQUAD_ENGI, time_required_for_job))
 		engineers++
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Technical Specialist of Anchorpoint Station!"))
-		arm_equipment(mob, /datum/equipment_preset/uscm/cmb/rto, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/uscm/tl_equipped, TRUE, TRUE)
 	else
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Marine Rifleman of Anchorpoint Station!"))
-		arm_equipment(mob, /datum/equipment_preset/uscm/cmb, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/uscm/private_equipped, TRUE, TRUE)
 
 	print_backstory(mob)
 

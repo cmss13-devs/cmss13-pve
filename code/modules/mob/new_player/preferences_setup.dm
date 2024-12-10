@@ -321,7 +321,7 @@
 			var/list/survivor_types = pref_special_job_options[JOB_SURVIVOR] != ANY_SURVIVOR && length(SSmapping.configs[GROUND_MAP].survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]]) ? SSmapping.configs[GROUND_MAP].survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]] : SSmapping.configs[GROUND_MAP].survivor_types
 			if(length(survivor_types))
 				return pick(survivor_types)
-			return /datum/equipment_preset/survivor
+			return /datum/equipment_preset/colonist
 		if(JOB_SYNTH_SURVIVOR)
 			var/list/survivor_types = pref_special_job_options[JOB_SURVIVOR] != ANY_SURVIVOR && length(SSmapping.configs[GROUND_MAP].synth_survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]]) ? SSmapping.configs[GROUND_MAP].synth_survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]] : SSmapping.configs[GROUND_MAP].synth_survivor_types
 			if(length(survivor_types))
