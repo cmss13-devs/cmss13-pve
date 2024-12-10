@@ -8,5 +8,17 @@
         "COLD": true
     },
     "map_item_type": "/obj/item/map/lazarus_landing_map",
-    "camouflage": "snow"
+    "announce_text": "An automated distress signal has been recieved from a mining colony on border world LV-976, \"Sorokyne Outpost\". A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
+    "monkey_types": [
+        "yiren"
+    ],
+    "traits": [{ "Ground": true }],
+    "camouflage": "snow",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
 }
