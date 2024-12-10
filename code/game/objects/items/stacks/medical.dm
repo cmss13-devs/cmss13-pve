@@ -79,13 +79,7 @@
 
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
 		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
-		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
-			if(!I.has_been_bandaged)
-				user.affected_message(M,
-					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
-					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
-					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name], <b>slowing the bleeding.</b>"))
-				I.has_been_bandaged = TRUE
+
 
 
 		switch(affecting.bandage())
@@ -307,6 +301,28 @@
 			var/message = SPAN_WARNING("[user == M ? "You don't" : "[M] doesn't"] have \a [limb]!")
 			to_chat(user, message)
 			return
+		//Tourniquet functionality
+		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
+			if(!I.has_been_bandaged)
+				if(M != user)
+					var/possessive = "[user == M ? "your" : "\the [M]'s"]"
+					var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+					user.affected_message(M,
+						SPAN_HELPFUL("You <b>start applying the tourniquet</b> to [possessive] <b>[affecting.display_name]</b>."),
+						SPAN_HELPFUL("[user] <b>starts applying the tourniquet</b> to your <b>[affecting.display_name]</b>."),
+						SPAN_NOTICE("[user] start applying the tourniquet to [possessive_their] [affecting.display_name]."))
+				else
+					if((!user.hand && (affecting.name in list("r_arm", "r_hand"))) || (user.hand && (affecting.name in list("l_arm", "l_hand"))))
+						to_chat(user, SPAN_WARNING("You can't apply a tourniquet to the \
+							[affecting.name == "r_hand"||affecting.name == "l_hand" ? "hand":"arm"] you're using!"))
+						return
+				if(affecting.apply_tourniquet(src, user, M, indestructible_splints, I))
+					use(1)
+					playsound(user, 'sound/handling/splint1.ogg', 25, 1, 2)
+					return
+			else
+				var/message = "[user == M ? "Your" : "[M]'s"]"
+				to_chat(user, SPAN_WARNING("[message] [limb] already has a tourniquet!"))
 
 		if(affecting.status & LIMB_SPLINTED)
 			var/message = "[user == M ? "Your" : "[M]'s"]"
