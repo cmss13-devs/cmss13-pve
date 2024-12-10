@@ -82,11 +82,20 @@
 		"Reloading! Watch my six!",
 	)
 
+	var/list/need_healing_lines = list(
+		"I need fixing!",
+		"*medic",
+		"Doctor!",
+		"Need a medic!",
+		"Corpsman!",
+	)
+
 	var/in_combat_line_chance = 40
 	var/exit_combat_line_chance = 40
 	var/squad_member_death_line_chance = 20
 	var/grenade_thrown_line_chance = 60
 	var/reload_line_chance = 40
+	var/need_healing_line_chance = 90
 
 /datum/human_ai_brain/proc/say_in_combat_line(chance = in_combat_line_chance)
 	if(!length(enter_combat_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
@@ -115,3 +124,8 @@
 		tied_human.say(pick(reload_internal_mag_lines))
 	else
 		tied_human.say(pick(reload_lines))
+
+/datum/human_ai_brain/proc/say_need_healing_line(chance = need_healing_line_chance)
+	if(!length(need_healing_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))
+		return
+	tied_human.say(pick(need_healing_lines))

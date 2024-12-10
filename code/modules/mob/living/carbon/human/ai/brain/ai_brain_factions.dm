@@ -8,6 +8,7 @@
 	VAR_PROTECTED/list/grenade_thrown_lines = list()
 	VAR_PROTECTED/list/reload_lines = list()
 	VAR_PROTECTED/list/reload_internal_mag_lines = list()
+	VAR_PROTECTED/list/need_healing_lines = list()
 
 	VAR_PROTECTED/list/friendly_factions = list()
 	VAR_PROTECTED/list/neutral_factions = list()
@@ -30,6 +31,9 @@
 
 	if(length(reload_internal_mag_lines))
 		brain.reload_internal_mag_lines = reload_internal_mag_lines
+
+	if(length(need_healing_lines))
+		brain.need_healing_lines = need_healing_lines
 
 	brain.shoot_to_kill = shoot_to_kill
 	brain.friendly_factions = friendly_factions
@@ -284,6 +288,10 @@
 		"Damn!",
 		"Taking hits!",
 	)
+	need_healing_lines = list(
+		"Doctor!",
+		"*medic",
+	)
 
 
 /datum/human_ai_faction/wy
@@ -419,3 +427,4 @@
 	grenade_thrown_lines = list() // Wouldn't need to call this out
 	reload_lines = list() // same here
 	reload_internal_mag_lines = list()
+	need_healing_lines = list()

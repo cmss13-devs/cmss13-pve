@@ -15,7 +15,7 @@
 		return 0
 
 	var/turf/target_turf = brain.target_turf
-	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen) && brain.gun_data.offscreen_fire)
+	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen) && (brain.gun_data.maximum_range <= brain.view_distance))
 
 	if(!brain.current_target && !should_fire_offscreen)
 		return 0
@@ -54,8 +54,7 @@
 		return ONGOING_ACTION_UNFINISHED
 
 	var/mob/living/carbon/tied_human = brain.tied_human
-	if(!(primary_weapon in tied_human.get_hands()))
-		brain.unholster_primary()
+	brain.unholster_primary()
 
 	var/datum/firearm_appraisal/gun_data = brain.gun_data
 	gun_data.before_fire(primary_weapon, tied_human, brain)
@@ -73,12 +72,12 @@
 		return ONGOING_ACTION_UNFINISHED
 
 	tied_human.face_atom(target_turf)
-	tied_human.a_intent = INTENT_HARM
+	tied_human.a_intent_change(INTENT_HARM)
 
 	RegisterSignal(tied_human, COMSIG_MOB_FIRED_GUN, PROC_REF(on_gun_fire), TRUE)
 
 	// Handling point-blank through attack()
-	var/mob/living/current_target = brain.current_target
+	var/atom/movable/current_target = brain.current_target
 	if(current_target && (get_dist(tied_human, current_target) <= 1))
 		currently_firing = FALSE
 		primary_weapon.set_target(null)
@@ -121,7 +120,7 @@
 	var/turf/target_turf = brain.target_turf
 
 	var/mob/living/carbon/tied_human = brain.tied_human
-	tied_human.a_intent = INTENT_HARM
+	tied_human.a_intent_change(INTENT_HARM)
 
 	brain.shot_at = get_turf(target_turf)
 	tied_human.face_atom(target_turf)
@@ -167,12 +166,12 @@
 		shoot_next = target_turf
 
 	else if(ismob(brain.current_target))
-		var/mob/current_mob_target = brain.current_target
-		if(current_mob_target.stat == DEAD)
+		var/mob/mob_target = brain.current_target
+		if(mob_target.stat == DEAD)
 			qdel(src)
 			return
 
-		var/is_unconscious = (current_mob_target.stat == UNCONSCIOUS || (locate(/datum/effects/crit) in current_mob_target.effects_list))
+		var/is_unconscious = (mob_target.stat == UNCONSCIOUS || (locate(/datum/effects/crit) in mob_target.effects_list))
 		if(!brain.shoot_to_kill && is_unconscious)
 			brain.lose_target()
 			qdel(src)

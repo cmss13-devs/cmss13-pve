@@ -57,6 +57,7 @@ GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 
 	for(var/datum/human_ai_brain/other_brain as anything in brains_involved)
 		other_brain.in_conversation = FALSE
+		COOLDOWN_START(other_brain, conversation_success_cooldown, other_brain.conversation_success_cooldown_time)
 
 /datum/human_ai_conversation/proc/should_interrupt_conversation(datum/human_ai_brain/brain)
 	return (brain.in_combat || !brain.in_conversation || (brain.tied_human.health < HEALTH_THRESHOLD_CRIT))
@@ -86,7 +87,7 @@ GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 		"P2 Nah, sorry man.",
 		"D 22",
 		"P1 Damn.",
-	) 
+	)
 
 /datum/human_ai_conversation/faction
 	/// What faction(s) can say this line.
@@ -102,3 +103,7 @@ GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 	var/in_conversation = FALSE
 	var/conversation_start_prob = 0.75 // at 1 chance / sec, this'll mean we hit the equivalent of a 50% chance of a conversation at ~90 chances, which would take ~90 seconds
 	COOLDOWN_DECLARE(conversation_start_cooldown)
+	/// Cooldown upon a successful conversation, started on everyone involved at the end of the conversation
+	COOLDOWN_DECLARE(conversation_success_cooldown)
+	/// Length of the conversation success cooldown
+	var/conversation_success_cooldown_time = 45 SECONDS

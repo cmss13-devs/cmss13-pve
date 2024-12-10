@@ -83,6 +83,8 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		qdel(action)
 
 	ongoing_actions.Cut()
+	to_pickup.Cut()
+	lose_injured_ally()
 
 /datum/human_ai_brain/process(delta_time)
 	if(tied_human.is_mob_incapacitated())
@@ -92,15 +94,21 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		lose_target()
 		return
 
-	var/possible_target = get_target()
-	if(possible_target)
-		lose_target()
-		set_target(possible_target)
+	if(tied_human.resting)
+		tied_human.set_resting(FALSE, TRUE)
+
+	if(tied_human.buckled)
+		tied_human.set_buckled(FALSE) // AI never buckle themselves into chairs at the moment, change if this becomes the case
+
+	if(treat_allies && !found_injured_ally)
+		set_injured_ally(get_injured_ally())
+
+	if(!current_target)
+		set_target(get_target())
 
 	if(current_target)
 		enter_combat()
 
-	// Might be wise to move this off tick and instead make it signal-based
 	item_search(range(2, tied_human))
 
 	// List all allowed action types for AI to consider
@@ -157,7 +165,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	target_turf = get_turf(current_target)
 
 /datum/human_ai_brain/proc/lose_target()
-	if(istype(current_target))
+	if(current_target)
 		UnregisterSignal(current_target, COMSIG_PARENT_QDELETING)
 		UnregisterSignal(current_target, COMSIG_MOB_DEATH)
 		UnregisterSignal(current_target, COMSIG_MOVABLE_MOVED)
@@ -188,54 +196,6 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 /datum/human_ai_brain/proc/on_human_delete(datum/source, force)
 	SIGNAL_HANDLER
 	tied_human = null
-
-/datum/human_ai_brain/proc/ensure_primary_hand(obj/item/held_item)
-	if(tied_human.get_inactive_hand() == held_item)
-		tied_human.swap_hand()
-
-/datum/human_ai_brain/proc/has_ongoing_action(path)
-	if(!ispath(path))
-		return FALSE
-
-	for(var/datum/ai_action/action as anything in ongoing_actions)
-		if(istype(action, path))
-			return TRUE
-
-	return FALSE
-
-/datum/human_ai_brain/proc/set_current_order(datum/ai_order/ref)
-	if(!ref)
-		return
-
-	current_order = ref
-	current_order.brains += src
-
-/datum/human_ai_brain/proc/remove_current_order()
-	if(current_order)
-		current_order.brains -= src
-	current_order = null
-
-/// Returns TRUE if the target is friendly/neutral to us
-/datum/human_ai_brain/proc/faction_check(atom/target)
-	if(isdefenses(target))
-		var/obj/structure/machinery/defenses/defense_target = target
-		if(tied_human.faction in defense_target.faction_group)
-			return TRUE
-		return FALSE
-
-	if(ismob(target))
-		var/mob/mob_target = target
-
-		if(mob_target.faction == tied_human.faction)
-			return TRUE
-
-		if(mob_target.faction in friendly_factions)
-			return TRUE
-
-		if(mob_target.faction in neutral_factions)
-			return TRUE
-
-	return FALSE
 
 /datum/human_ai_brain/proc/setup_detection_radius()
 	if(length(detection_turfs))
@@ -319,7 +279,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		return
 
 	if(in_combat)
-		tied_human.a_intent = INTENT_DISARM
+		tied_human.a_intent_change(INTENT_DISARM)
 		lose_target()
 		say_exit_combat_line()
 		if(!sniper_home)
@@ -366,36 +326,3 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		try_cover(bullet)
 	else if(in_cover)
 		on_shot_inside_cover(bullet)
-
-/datum/human_ai_brain/proc/on_neutral_faction_betray(faction)
-	if(!tied_human.faction)
-		return
-
-	var/datum/human_ai_faction/our_faction = SShuman_ai.human_ai_factions[tied_human.faction]
-	if(!our_faction)
-		return
-
-	our_faction.remove_neutral_faction(faction)
-	our_faction.reapply_faction_data()
-
-/datum/human_ai_brain/proc/on_handcuffed(datum/source)
-	SIGNAL_HANDLER
-
-	if((tied_human.stat >= DEAD) || tied_human.client)
-		return
-
-	message_admins("AI human [tied_human.real_name] has been handcuffed while alive or unconscious.", tied_human.x, tied_human.y, tied_human.z)
-
-/datum/human_ai_brain/proc/get_ai_brain(datum/source, list/out_brain)
-	SIGNAL_HANDLER
-
-	out_brain += src
-
-
-/mob/living/carbon/human/proc/get_ai_brain()
-	RETURN_TYPE(/datum/human_ai_brain)
-
-	var/list/out_brain = list()
-	SEND_SIGNAL(src, COMSIG_HUMAN_GET_AI_BRAIN, out_brain)
-	if(length(out_brain))
-		return out_brain[1]

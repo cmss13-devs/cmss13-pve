@@ -3,17 +3,17 @@
 	action_flags = ACTION_USING_LEGS
 
 /datum/ai_action/keep_distance/get_weight(datum/human_ai_brain/brain)
-	var/mob/living/current_target = brain.current_target
-	if(!istype(current_target))
+	var/atom/movable/current_target = brain.current_target
+	if(!current_target)
 		return 0
 
-	if(!brain.primary_weapon)
+	if(!brain.primary_weapon || brain.tried_reload)
 		return 0
 
 	var/distance = get_dist(brain.tied_human, current_target)
 	var/datum/firearm_appraisal/gun_data = brain.gun_data
 
-	if(current_target.is_mob_incapacitated())
+	if(ismob(current_target) && current_target?:is_mob_incapacitated())
 		if(distance != gun_data.minimum_range)
 			return 10
 

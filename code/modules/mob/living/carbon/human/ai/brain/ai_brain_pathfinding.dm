@@ -70,7 +70,7 @@
 	if(!can_move_and_apply_move_delay())
 		return TRUE
 
-	var/list/L = LinkBlocked(tied_human, tied_human.loc, next_turf, list(tied_human, current_target), TRUE)
+	var/list/L = LinkBlocked(tied_human, tied_human.loc, next_turf, list(tied_human), TRUE)
 	L += SSpathfinding.check_special_blockers(tied_human, next_turf)
 	for(var/a in L)
 		var/atom/A = a

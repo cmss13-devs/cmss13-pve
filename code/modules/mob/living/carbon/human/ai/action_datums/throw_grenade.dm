@@ -5,7 +5,10 @@
 	var/mid_throw
 
 /datum/ai_action/throw_grenade/get_weight(datum/human_ai_brain/brain)
-	if(!brain.in_combat || !brain.grenading_allowed)
+	if(!brain.grenading_allowed)
+		return 0
+
+	if(!brain.in_combat)
 		return 0
 
 	var/turf/target_turf = brain.target_turf

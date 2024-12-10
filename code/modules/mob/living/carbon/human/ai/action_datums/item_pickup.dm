@@ -4,6 +4,9 @@
 	var/obj/item/to_pickup
 
 /datum/ai_action/item_pickup/get_weight(datum/human_ai_brain/brain)
+	if(brain.ignore_looting)
+		return 0
+
 	if(!length(brain.to_pickup))
 		return 0
 
@@ -24,6 +27,11 @@
 	. = ..()
 
 	if(QDELETED(to_pickup) || !isturf(to_pickup.loc))
+		brain.UnregisterSignal(to_pickup, COMSIG_PARENT_QDELETING)
+		brain.to_pickup -= to_pickup
+		return ONGOING_ACTION_COMPLETED
+
+	if(brain.primary_weapon && isgun(to_pickup))
 		brain.UnregisterSignal(to_pickup, COMSIG_PARENT_QDELETING)
 		brain.to_pickup -= to_pickup
 		return ONGOING_ACTION_COMPLETED

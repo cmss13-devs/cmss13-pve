@@ -91,7 +91,7 @@ PROBABILITY CALCULATIONS ARE HERE
 
 
 /// Special blockers for pathfinding or obstacle handling
-#define AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /obj/vehicle/multitile, /turf/open/space, /turf/open/gm/river)
+#define AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /mob/living, /obj/vehicle/multitile, /turf/open/space, /turf/open/gm/river)
 
 // Friend-or-foe universal check
 #define IS_SAME_HIVENUMBER(A,B) (A.hivenumber == B.hivenumber)
