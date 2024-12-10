@@ -2970,17 +2970,26 @@ Defined in conflicts.dm of the #defines folder.
 		msg_admin_niche("[key_name(user)] attempted to prime \a [G.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
 		return
 
+	if(G.dual_purpose != FALSE)
+		G.fuse_type = IMPACT_FUSE
+
 	playsound(user.loc, fire_sound, 50, 1)
 	msg_admin_attack("[key_name_admin(user)] fired an underslung grenade launcher [ADMIN_JMP_USER(user)]")
 	log_game("[key_name_admin(user)] used an underslung grenade launcher.")
 
-	var/pass_flags = NO_FLAGS
-	pass_flags |= grenade_pass_flags
-	G.det_time = min(15, G.det_time)
-	G.throw_range = max_range
-	G.activate(user, FALSE)
-	G.forceMove(get_turf(gun))
-	G.throw_atom(target, max_range, SPEED_VERY_FAST, user, null, NORMAL_LAUNCH, pass_flags)
+
+// canister nades explode immediately and don't leave the barrel of the weapon.
+	if(istype(G, /obj/item/explosive/grenade/high_explosive/airburst/canister))
+		var/obj/item/explosive/grenade/high_explosive/airburst/canister/canister_round = G
+		canister_round.canister_fire(user, target)
+	else
+		var/pass_flags = NO_FLAGS
+		pass_flags |= grenade_pass_flags
+		G.det_time = min(15, G.det_time)
+		G.throw_range = max_range
+		G.activate(user, FALSE)
+		G.forceMove(get_turf(gun))
+		G.throw_atom(target, max_range, SPEED_VERY_FAST, user, null, NORMAL_LAUNCH, pass_flags)
 	current_rounds--
 	cocked = FALSE // we have fired so uncock the gun
 	loaded_grenades.Cut(1,2)
@@ -3002,7 +3011,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/m120
 	name = "\improper PN/c 30mm underslung grenade launcher"
-	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, three round tube, chambers one."
+	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, two round tube, chambers one."
 	icon_state = "grenade-mk1"
 	attach_icon = "grenade-mk1_a"
 	current_rounds = 0
