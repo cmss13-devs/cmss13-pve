@@ -1,0 +1,24 @@
+{
+    "map_name": "Sullivan Aerospace Force Base",
+    "short_name": "USASFB Sullivan",
+    "map_path": "map_files/Sullivan_USASFB",
+	"map_file": "Sullivan_USASFB.dmm",
+    "webmap_url": "LV624",
+    "environment_traits": {
+        "COLD": true
+    },
+    "map_item_type": "/obj/item/map/lazarus_landing_map",
+    "announce_text": "An automated distress signal has been recieved from a mining colony on border world LV-976, \"Sorokyne Outpost\". A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
+    "monkey_types": [
+        "yiren"
+    ],
+    "traits": [{ "Ground": true }],
+    "camouflage": "snow",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}
