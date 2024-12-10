@@ -5219,6 +5219,11 @@
 /area/strata/ag/interior/outpost/engi{
 	name = "Engineering Reception"
 	})
+"Bv" = (
+/turf/open/floor/light/multicolor,
+/area/strata/ag/interior/dorms/bar{
+	name = "Club Eden Dance Floor"
+	})
 "Bx" = (
 /obj/structure/machinery/light,
 /turf/open/floor/strata/blue4/north{
@@ -33562,7 +33567,7 @@ nn
 nn
 yI
 mC
-cj
+Bv
 cj
 cF
 Cd
