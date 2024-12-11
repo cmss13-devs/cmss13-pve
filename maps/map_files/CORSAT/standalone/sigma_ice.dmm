@@ -240,11 +240,6 @@
 	},
 /turf/open/ice,
 /area/corsat/sigma/biodome/ice)
-"eV" = (
-/obj/effect/landmark/corpsespawner/engineer,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/asteroidfloor/north,
-/area/corsat/sigma/biodome/ice)
 "fc" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /turf/open/ice,
@@ -279,11 +274,6 @@
 /obj/structure/pipes/standard/simple/visible,
 /turf/open/floor/plating,
 /area/corsat/inaccessible)
-"fT" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/effect/landmark/corpsespawner/engineer,
-/turf/open/ice,
-/area/corsat/sigma/biodome/scrapyard)
 "gd" = (
 /obj/item/tool/shovel,
 /turf/open/auto_turf/snow/layer4,
@@ -302,11 +292,6 @@
 /area/corsat/sigma/airlock/control)
 "gr" = (
 /obj/structure/bed/nest,
-/turf/open/ice,
-/area/corsat/sigma/biodome/ice)
-"gx" = (
-/obj/structure/bed/nest,
-/obj/effect/landmark/corpsespawner/engineer,
 /turf/open/ice,
 /area/corsat/sigma/biodome/ice)
 "gB" = (
@@ -379,10 +364,6 @@
 /obj/structure/cargo_container/grant/right,
 /turf/open/auto_turf/snow/layer2,
 /area/corsat/sigma/biodome/scrapyard)
-"ih" = (
-/obj/effect/landmark/corpsespawner/pmc,
-/turf/open/floor/asteroidfloor/north,
-/area/corsat/sigma/biodome/gunrange)
 "io" = (
 /obj/effect/alien/weeds/node,
 /turf/open/ice,
@@ -606,16 +587,6 @@
 	},
 /turf/template_noop,
 /area/template_noop)
-"nB" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/effect/landmark/corpsespawner/pmc,
-/turf/open/ice,
-/area/corsat/sigma/biodome/scrapyard)
-"nI" = (
-/obj/structure/bed/nest,
-/obj/effect/landmark/corpsespawner/scientist,
-/turf/open/ice,
-/area/corsat/sigma/biodome/ice)
 "nP" = (
 /turf/open/auto_turf/snow/layer3,
 /area/corsat/sigma/biodome/scrapyard)
@@ -1150,7 +1121,6 @@
 "AJ" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/blood/oil,
-/obj/effect/landmark/corpsespawner/pmc,
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome/scrapyard)
 "AS" = (
@@ -1702,7 +1672,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/landmark/corpsespawner/pmc,
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/airlock/control)
 "ME" = (
@@ -3626,7 +3595,7 @@ TX
 cf
 TX
 TX
-fT
+Bf
 RM
 TX
 nq
@@ -4275,7 +4244,7 @@ aO
 TX
 YC
 TX
-nB
+Bf
 TX
 nq
 Zf
@@ -4710,7 +4679,7 @@ Wk
 Wk
 Wk
 Wk
-gx
+gr
 lr
 Zr
 io
@@ -4718,7 +4687,7 @@ YN
 Zr
 Zr
 lr
-nI
+gr
 Wk
 Wk
 Wk
@@ -4870,7 +4839,7 @@ Zr
 Wk
 Wk
 Wk
-nI
+gr
 fc
 lr
 Zr
@@ -4961,7 +4930,7 @@ pP
 Zr
 Zr
 fc
-gx
+gr
 Wk
 Wk
 Wk
@@ -5193,7 +5162,7 @@ Zr
 Zr
 Zr
 Wk
-nI
+gr
 fc
 Zr
 YN
@@ -5541,7 +5510,7 @@ ZL
 bN
 cJ
 bN
-ih
+bN
 At
 bN
 bN
@@ -5642,7 +5611,7 @@ hH
 hH
 hH
 hH
-eV
+jy
 jy
 hH
 hH
@@ -6186,7 +6155,7 @@ aI
 ar
 rP
 bN
-ih
+bN
 cJ
 Xm
 Xm

@@ -888,6 +888,16 @@
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 
+/obj/item/storage/pouch/medkit/full/army/fill_preset_inventory()
+	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/roller(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/bodybag/cryobag(src)
+	new /obj/item/storage/pill_bottle/imialk(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+
+
 /obj/item/storage/pouch/pressurized_reagent_canister
 	name = "Pressurized Reagent Canister Pouch"
 	max_w_class = SIZE_SMALL

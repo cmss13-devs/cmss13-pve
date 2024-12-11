@@ -281,7 +281,6 @@
 /obj/item/weapon/gun/pistol/m4a3/training{
 	name = "dented M4A3 service pistol"
 	},
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/bigredv2/outside/office_complex)
 "eG" = (
@@ -415,14 +414,6 @@
 	dir = 8
 	},
 /obj/effect/landmark/survivor_spawner/bigred_crashed_pmc,
-/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
-/area/bigredv2/outside/office_complex)
-"ld" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/bigredv2/outside/office_complex)
 "lo" = (
@@ -649,7 +640,6 @@
 /area/bigredv2/outside/se)
 "wF" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_left_to_right,
 /area/bigredv2/outside/office_complex)
 "wL" = (
@@ -1169,7 +1159,6 @@
 /area/bigredv2/outside/office_complex)
 "XG" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/pmc,
 /obj/item/weapon/gun/rifle/nsg23/no_lock,
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/bigredv2/outside/office_complex)
@@ -1709,7 +1698,7 @@ Ci
 Ir
 aN
 kB
-ld
+Nt
 zy
 QF
 Oz
