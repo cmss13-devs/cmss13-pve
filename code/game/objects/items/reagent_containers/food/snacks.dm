@@ -2626,10 +2626,8 @@
 	icon_state = "tachyon_cracker"
 	filling_color = "#728942"
 
-/obj/item/reagent_container/food/snacks/cracker/Initialize()
+/obj/item/reagent_container/food/snacks/cracker/tachyon/Initialize()
 	. = ..()
-	reagents.add_reagent("bread", 1)
-	reagents.add_reagent("sodiumchloride", 1)
 	reagents.add_reagent("carpotoxin", 1)
 
 /*
