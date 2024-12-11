@@ -481,6 +481,11 @@
 /obj/structure/machinery/disposal,
 /turf/open/floor/airless/asteroidfloor,
 /area/space)
+"dw" = (
+/obj/item/weapon/gun/pistol/clfpistol,
+/obj/effect/decal/cleanable/blood,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "dA" = (
 /obj/structure/flora/jungle/vines/light_1,
 /obj/structure/flora/jungle/vines/light_3,
@@ -7025,7 +7030,7 @@ cz
 cz
 cz
 cz
-ca
+dw
 ca
 zK
 "}
