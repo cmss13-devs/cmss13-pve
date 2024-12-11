@@ -32,16 +32,12 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/cargo_shuttle/elevator)
 "s" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.25
-	},
 /obj/structure/machinery/computer/shuttle/elevator_controller{
 	pixel_y = 32;
 	shuttleId = "garrow_cargo_elevator"
 	},
-/turf/open/floor/almayer/mono,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/shuttle/elevator/grating,
 /area/golden_arrow/cargo_shuttle/elevator)
 "t" = (
 /obj/effect/decal/cleanable/dirt,
@@ -106,7 +102,7 @@ a
 W
 "}
 (2,1,1) = {"
-i
+T
 S
 t
 t
@@ -114,40 +110,40 @@ S
 T
 "}
 (3,1,1) = {"
-E
-t
-A
-u
-t
-i
-"}
-(4,1,1) = {"
-q
-H
-A
-A
-H
-i
-"}
-(5,1,1) = {"
-q
-H
-A
-u
-H
-i
-"}
-(6,1,1) = {"
-q
-H
-A
-u
-t
-R
-"}
-(7,1,1) = {"
 m
 s
+A
+u
+t
+E
+"}
+(4,1,1) = {"
+R
+H
+A
+A
+H
+q
+"}
+(5,1,1) = {"
+i
+H
+A
+u
+H
+q
+"}
+(6,1,1) = {"
+i
+H
+A
+u
+H
+q
+"}
+(7,1,1) = {"
+T
+o
 t
 H
 o
