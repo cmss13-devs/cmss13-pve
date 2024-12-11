@@ -1390,6 +1390,7 @@
 /obj/structure/surface/rack{
 	layer = 2.5
 	},
+/obj/item/storage/firstaid,
 /turf/open/floor/almayer/plate,
 /area/space)
 "lj" = (
@@ -1524,6 +1525,11 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/almayer,
 /area/space)
+"ms" = (
+/obj/structure/surface/table/almayer,
+/obj/item/toy/dice/d20,
+/turf/open/floor/plating/bare_catwalk,
+/area/space)
 "mt" = (
 /obj/structure/surface/table/almayer,
 /obj/item/folder/blue{
@@ -1620,6 +1626,11 @@
 "mZ" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass,
 /turf/open/floor/almayer,
+/area/space)
+"nc" = (
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/largecrate/supply/medicine,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "ne" = (
 /obj/structure/filtration/machine_96x96/filtration,
@@ -1988,6 +1999,11 @@
 	pixel_x = 2
 	},
 /turf/open/floor/prison/floor_plate,
+/area/space)
+"qb" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
+/turf/open/floor/plating/bare_catwalk,
 /area/space)
 "qf" = (
 /obj/structure/surface/rack,
@@ -4514,6 +4530,11 @@
 	},
 /turf/open/floor/airless/asteroidfloor,
 /area/space)
+"Mt" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/radio,
+/turf/open/floor/plating/bare_catwalk,
+/area/space)
 "Mu" = (
 /obj/structure/platform/kutjevo{
 	dir = 8
@@ -4789,6 +4810,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/space)
+"OT" = (
+/obj/structure/surface/rack{
+	layer = 2.5
+	},
+/obj/structure/largecrate/random/mini/ammo,
+/turf/open/floor/almayer/plate,
+/area/space)
 "OZ" = (
 /obj/structure/platform{
 	layer = 3.6
@@ -4928,6 +4956,11 @@
 	pixel_y = 1
 	},
 /turf/open/floor/airless/asteroidfloor,
+/area/space)
+"Qd" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/radio,
+/turf/open/floor/almayer/plate,
 /area/space)
 "Qh" = (
 /obj/structure/closet/toolcloset,
@@ -5224,6 +5257,13 @@
 	icon_state = "platform_deco"
 	},
 /turf/open/auto_turf/strata_grass/layer1,
+/area/space)
+"Tn" = (
+/obj/structure/surface/rack{
+	layer = 2.5
+	},
+/obj/item/storage/backpack/marine/fluff,
+/turf/open/floor/almayer/plate,
 /area/space)
 "Tp" = (
 /obj/structure/closet/firecloset,
@@ -10997,7 +11037,7 @@ Ep
 ca
 dG
 Mw
-Mw
+VL
 Zt
 Zt
 mg
@@ -11327,7 +11367,7 @@ iG
 iG
 iG
 Ug
-Hr
+Qd
 Hr
 xI
 iG
@@ -11490,7 +11530,7 @@ Et
 Et
 XM
 gw
-gw
+ms
 kx
 Et
 Et
@@ -11976,8 +12016,8 @@ iG
 iG
 Tp
 lg
-lg
-lg
+Tn
+OT
 Fb
 mx
 ym
@@ -36768,7 +36808,7 @@ Mw
 lg
 Et
 iG
-gw
+Mt
 Hr
 Et
 iG
@@ -36927,10 +36967,10 @@ ca
 ca
 dG
 Mw
-lg
+Tn
 Et
 iG
-gw
+qb
 Hr
 Et
 iG
@@ -37089,7 +37129,7 @@ Oc
 Ep
 dG
 Mw
-lg
+OT
 Et
 iG
 om
@@ -37905,7 +37945,7 @@ cy
 Tj
 Tj
 Tj
-Mw
+Qo
 Mw
 yT
 ca
@@ -39619,7 +39659,7 @@ zK
 zK
 zK
 zK
-eN
+nc
 zK
 zK
 zK
