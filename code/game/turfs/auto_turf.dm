@@ -354,3 +354,28 @@
 /turf/open/auto_turf/shale/layer2
 	icon_state = "shale_2"
 	bleed_layer = 2
+
+/turf/open/auto_turf/basalt
+	layer_name = list("volcanic shale", "volcanic basalt", "basalt", "oh fuck call a coder oh my god", "oh fuck call a coder oh my god")
+	icon = 'icons/turf/floors/auto_basalt.dmi'
+	icon_prefix = "basalt"
+	baseturfs = /turf/open/lava
+
+/turf/open/auto_turf/basalt/get_dirt_type()
+	return DIRT_TYPE_BASALT
+
+/turf/open/auto_turf/basalt/layer0
+	icon_state = "basalt_0"
+	bleed_layer = 0
+
+/turf/open/auto_turf/basalt/layer3_glowing
+	icon_state = "basalt_3_glowing"
+	bleed_layer = 3
+	variant = "glowing"
+	light_range = 2
+	light_power = 0.5
+	light_color = LIGHT_COLOR_LAVA
+
+/turf/open/auto_turf/basalt/layer3
+	icon_state = "basalt_3"
+	bleed_layer = 3

@@ -1534,3 +1534,94 @@
 
 /turf/open/shuttle/vehicle/floor_3_9_1
 	icon_state = "floor_3_9_1"
+
+// LAVA
+
+/turf/open/lava
+	name = "magma"
+	icon = 'icons/turf/floors/lava.dmi'
+	icon_state = "lava"
+	var/covered_name = "catwalk"
+	var/base_state = "lava"
+	var/cover_icon_state = "catwalk"
+	var/default_name = "lava"
+	var/icon_overlay = "overlay"
+	var/covered = FALSE
+
+	light_range = 2
+	light_power = 0.75
+	light_color = LIGHT_COLOR_LAVA
+
+/turf/open/lava/catwalk
+	icon_state = "lava_catwalk"
+	covered = TRUE
+
+/turf/open/lava/catwalk/glass
+	icon_state = "lava_catwalk_glass"
+	cover_icon_state = "catwalk_glass"
+	covered = TRUE
+
+/turf/open/lava/catwalk/alt
+	icon_state = "lava_catwalk_glass_alt"
+	cover_icon_state = "catwalk_glass_alt"
+	covered = TRUE
+
+/turf/open/lava/update_icon()
+	overlays.Cut()
+	if(covered)
+		name = covered_name
+		overlays += image("icon"=src.icon,"icon_state"=cover_icon_state,"layer"=CATWALK_LAYER)
+	if(!covered)
+		name = default_name
+		overlays += image("icon"=src.icon,"icon_state"=icon_overlay,"layer"=ABOVE_MOB_LAYER)
+
+/turf/open/lava/catwalk/Initialize(mapload, ...)
+	. = ..()
+	icon_state = base_state
+
+/turf/open/lava/is_weedable()
+	return FALSE
+
+// new shit fuck yuou fuck you fuck you FUCK YOU
+
+/turf/open/lava/proc/burn(atom/movable/subject)
+	if(covered)
+		return
+	if (istype(subject, /mob/living/carbon))
+		var/mob/living/carbon/carbon_subject = subject
+		carbon_subject.fire_act()
+		carbon_subject.adjust_fire_stacks(40)
+		carbon_subject.take_overall_damage(burn = 20, used_weapon = "lava", limb_damage_chance = 80)
+		carbon_subject.update_fire()
+		carbon_subject.next_move_slowdown = 20
+		to_chat(carbon_subject, SPAN_BOLDWARNING("You fall into the lava! It burns!"))
+		return TRUE
+	if (istype(subject, /obj))
+		var/obj/obj_subject = subject
+		if(obj_subject.invisibility_value > 35 || obj_subject.unacidable = TRUE || obj_subject.indestructible = TRUE)
+			return
+		visible_message(SPAN_BOLDWARNING("[obj_subject.name] falls into the lava and begins to melt!"))
+		obj_subject.mouse_opacity = 0
+		obj_subject.density = 0
+		obj_subject.anchored = TRUE
+
+		sleep(10)
+		obj_subject.add_filter("cutout", 1, alpha_mask_filter(icon = icon('icons/effects/effects.dmi', "obj_cutaway")))
+		animate(obj_subject, pixel_y = (obj_subject.pixel_y - 7), alpha = 0, time = 35, easing = SINE_EASING)
+
+		sleep(40)
+		visible_message(SPAN_BOLDWARNING("[obj_subject.name] melts away into nothing!"))
+		qdel(obj_subject)
+
+/turf/open/lava/Entered(atom/movable/fall_into)
+	if(burn(fall_into))
+		START_PROCESSING(SSobj, src)
+
+/turf/open/lava/process(delta_time)
+	var/movables_present = 0
+	for(var/atom/movable/movable_atom in range(0, src))
+		movables_present++
+		burn(movable_atom)
+		continue
+	if(!movables_present > 0)
+		STOP_PROCESSING(SSobj, src)

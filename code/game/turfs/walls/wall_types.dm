@@ -1334,3 +1334,41 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	color = "#c5beb4"
 	desc = "Ancient beyond measure, these walls make up the hull of a vessel of non human origin. Despite this, they can be felled with plastic explosives like any other opaque blocker."
 	hull = 0
+
+/turf/closed/wall/lavaland
+	name = "lavaland"
+	icon = 'icons/turf/walls/lava_walls.dmi'
+
+/turf/closed/wall/lavaland/rock
+	name = "basalt wall"
+	desc = "A wall made up of heavy volcanic rock."
+	icon_state = "basalt_rock"
+	walltype = WALL_BASALT
+	hull = 1
+
+/turf/closed/wall/lavaland/rock/glowing
+	name = "glowing basalt"
+	desc = " A wall made up of heavy volcanic rock, glowing ever so slightly."
+	icon = 'icons/turf/walls/glowing_lava_wall.dmi'
+	light_range = 2
+	light_power = 0.5
+	light_color = LIGHT_COLOR_LAVA
+
+/turf/closed/wall/lavaland/metal
+	name = "light facility wall"
+	desc = "A facility wall battered by the ash, yet still standing."
+	icon_state = "lavaland"
+	walltype = WALL_LAVALAND
+
+/turf/closed/wall/lavaland/metal/reinforced
+	name = "facility wall"
+	icon_state = "lavaland_r"
+	damage_cap = HEALTH_WALL_REINFORCED
+	walltype = WALL_LAVALAND_R
+
+/turf/closed/wall/lavaland/metal/hull
+	name = "heavy facility wall"
+	desc = "A very heavy facility wall battered by the ash, yet still standing."
+	icon_state = "lavaland_h"
+	hull = 1
+	walltype = WALL_LAVALAND_R
