@@ -158,6 +158,13 @@
 
 	max_range = 7
 
+/obj/item/ammo_magazine/flamer_tank/weak
+	name = "incinerator tank (Weak)"
+	desc = "A fuel tank full of impure napalm, causing it to burn at a significantly lower temperature."
+	caliber = "Impure Napalm"
+	flamer_chem = "weaknapalm"
+	max_range = 5
+
 /obj/item/ammo_magazine/flamer_tank/custom
 	name = "custom incinerator tank"
 	desc = "A fuel tank used to store fuel for use in the M240 incinerator unit. This one has been modified with a pressure regulator and an internal propellant tank."

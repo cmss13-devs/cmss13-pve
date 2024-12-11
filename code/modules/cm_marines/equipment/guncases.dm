@@ -159,9 +159,19 @@
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/attachable/attached_gun/extinguisher/pyro(src)
 
+/obj/item/storage/box/guncase/flamer/weak
+	desc = "A gun case containing a M240A1 incinerator unit alongside impure napalm, cheap but should still get the job done."
+	storage_slots = 4
+
+/obj/item/storage/box/guncase/flamer/weak/fill_preset_inventory()
+	new /obj/item/weapon/gun/flamer/weak(src)
+	new /obj/item/ammo_magazine/flamer_tank/weak(src)
+	new /obj/item/ammo_magazine/flamer_tank/weak(src)
+	new /obj/item/attachable/attached_gun/extinguisher(src)
+
 /obj/item/storage/box/guncase/flamer/fuel
 	name = "\improper M240A1 fuel case"
-	desc = "A case containing four fuel canisters for the M240A1 incinerator unit."
+	desc = "A case containing six fuel canisters for the M240A1 incinerator unit."
 	icon_state = "fuelbox"
 	storage_slots = 6
 	can_hold = list(/obj/item/ammo_magazine/flamer_tank)
