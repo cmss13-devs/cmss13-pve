@@ -101,7 +101,7 @@ GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 
 /datum/human_ai_brain
 	var/in_conversation = FALSE
-	var/conversation_start_prob = 0.75 // at 1 chance / sec, this'll mean we hit the equivalent of a 50% chance of a conversation at ~90 chances, which would take ~90 seconds
+	var/conversation_start_prob = 0 //0.75 // at 1 chance / sec, this'll mean we hit the equivalent of a 50% chance of a conversation at ~90 chances, which would take ~90 seconds
 	COOLDOWN_DECLARE(conversation_start_cooldown)
 	/// Cooldown upon a successful conversation, started on everyone involved at the end of the conversation
 	COOLDOWN_DECLARE(conversation_success_cooldown)
