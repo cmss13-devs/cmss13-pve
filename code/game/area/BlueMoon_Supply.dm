@@ -44,8 +44,8 @@
 	requires_power = FALSE
 
 /area/bluemoon_supply/outdoors/deepcaves
-	name = "Deep Caves"
-	ceiling	= CEILING_METAL
+	name	=	"Deep Caves"
+	ceiling	=	CEILING_METAL
 
 /area/bluemoon_supply/outdoors/caves/river
 	name = "Cave River"
