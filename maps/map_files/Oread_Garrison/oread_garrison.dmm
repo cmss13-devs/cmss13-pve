@@ -422,6 +422,16 @@
 /obj/item/tool/wirecutters,
 /turf/open/floor/almayer/plating,
 /area/space)
+"db" = (
+/obj/structure/bed/chair{
+	pixel_y = 14
+	},
+/obj/item/device/binoculars{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/turf/open/floor/prison/floor_plate,
+/area/space)
 "de" = (
 /obj/structure/platform{
 	dir = 4
@@ -717,8 +727,24 @@
 	},
 /turf/open/gm/dirt2,
 /area/space)
+"fy" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "fz" = (
 /obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/jungle/planttop1,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
+"fF" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 1
+	},
 /obj/structure/flora/jungle/planttop1,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/space)
@@ -762,6 +788,16 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/interior/wood,
+/area/space)
+"gc" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/structure/platform{
+	layer = 3.6
+	},
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "gd" = (
 /obj/structure/platform{
@@ -884,6 +920,12 @@
 "gJ" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/jungle/vines/light_1,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
+"gK" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 1
+	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "gM" = (
@@ -1209,6 +1251,13 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/space)
+"jt" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/obj/structure/flora/jungle/plantbot1,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "jv" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_y = 6
@@ -1356,6 +1405,18 @@
 "kS" = (
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor/almayer,
+/area/space)
+"kU" = (
+/obj/structure/platform{
+	density = 0;
+	dir = 8;
+	icon_state = "platform_deco"
+	},
+/obj/structure/machinery/colony_floodlight{
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "kW" = (
 /obj/structure/bed,
@@ -1731,6 +1792,12 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/space)
+"nU" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "xgib4"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/space)
 "nY" = (
 /obj/structure/pipes/vents,
 /obj/effect/decal/warning_stripes{
@@ -2026,6 +2093,10 @@
 	},
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer/plating,
+/area/space)
+"qj" = (
+/obj/structure/barricade/handrail/wire,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "qq" = (
 /obj/structure/largecrate,
@@ -2335,6 +2406,38 @@
 /obj/item/reagent_container/food/drinks/flask,
 /turf/open/floor/hydrofloor,
 /area/space)
+"sY" = (
+/obj/structure/barricade/metal/plasteel{
+	dir = 1
+	},
+/obj/structure/barricade/metal/plasteel{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/space)
+"tc" = (
+/obj/structure/barricade/metal/plasteel{
+	dir = 8
+	},
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt{
+	pixel_y = 10;
+	pixel_x = 1;
+	randpixel = 0
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -6;
+	pixel_y = -9
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = 7
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/turf/open/floor/prison/floor_plate,
+/area/space)
 "td" = (
 /obj/structure/cargo_container/horizontal/blue/middle,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -2347,6 +2450,13 @@
 "th" = (
 /obj/structure/pipes/vents,
 /turf/open/floor/almayer,
+/area/space)
+"tj" = (
+/obj/structure/platform{
+	dir = 1;
+	layer = 2.7
+	},
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "tl" = (
 /obj/effect/decal/warning_stripes{
@@ -2639,6 +2749,13 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer/plating,
 /area/space)
+"vE" = (
+/obj/structure/barricade/metal/plasteel{
+	dir = 8
+	},
+/obj/structure/barricade/metal/plasteel,
+/turf/open/floor/prison/floor_plate,
+/area/space)
 "vG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
@@ -2686,6 +2803,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating,
+/area/space)
+"wc" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2
+	},
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "we" = (
 /obj/structure/surface/rack{
@@ -2824,6 +2948,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/airless/asteroidfloor,
+/area/space)
+"xg" = (
+/obj/structure/barricade/handrail/wire,
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "xh" = (
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
@@ -3182,6 +3313,12 @@
 	},
 /turf/open/floor/almayer,
 /area/space)
+"Ag" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "xgib6"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/space)
 "Ah" = (
 /obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/airless/asteroidfloor,
@@ -3342,6 +3479,12 @@
 	pixel_y = 1
 	},
 /turf/open/floor/almayer,
+/area/space)
+"BE" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "BF" = (
 /obj/effect/decal/warning_stripes{
@@ -3665,6 +3808,10 @@
 	},
 /turf/closed/wall/r_wall/bunker,
 /area/space)
+"DW" = (
+/obj/item/prop/helmetgarb/spent_buckshot,
+/turf/open/auto_turf/sand_white/layer0,
+/area/space)
 "Ec" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -3825,6 +3972,14 @@
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/bush/ausbushes/pointybush,
 /turf/open/auto_turf/strata_grass/layer1,
+/area/space)
+"Fo" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "xgib1";
+	pixel_x = 12;
+	pixel_y = 16
+	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/space)
 "Fq" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4112,6 +4267,19 @@
 "Ii" = (
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/space)
+"In" = (
+/obj/structure/barricade/metal/plasteel{
+	dir = 1
+	},
+/obj/structure/barricade/metal/plasteel{
+	dir = 8
+	},
+/obj/item/storage/fancy/cigarettes/lucky_strikes{
+	pixel_x = 4;
+	pixel_y = -4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/space)
 "Io" = (
 /obj/structure/platform{
 	dir = 4
@@ -4252,6 +4420,11 @@
 /obj/structure/machinery/cm_vending/sorted/medical/blood,
 /turf/open/floor/almayer/sterile_green_corner/west,
 /area/space)
+"JL" = (
+/obj/structure/barricade/handrail/wire,
+/obj/structure/flora/jungle/planttop1,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "JM" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -4289,6 +4462,15 @@
 	},
 /obj/structure/surface/table/almayer,
 /turf/open/gm/dirt2,
+/area/space)
+"Kl" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 4
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "Kn" = (
 /obj/structure/flora/jungle/vines/light_2,
@@ -4370,6 +4552,15 @@
 	pixel_y = 10
 	},
 /turf/open/gm/dirt2,
+/area/space)
+"KU" = (
+/obj/effect/decal/cleanable/blood,
+/obj/item/dogtag{
+	desc = "A fallen marine's information dog tag. It looks battered and the name is worn out.";
+	pixel_y = 2;
+	name = "faded information dog tag"
+	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/space)
 "KY" = (
 /obj/structure/bed/chair/comfy{
@@ -4598,6 +4789,13 @@
 /obj/structure/flora/jungle/plantbot1,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/space)
+"MS" = (
+/obj/structure/barricade/handrail/wire,
+/obj/structure/barricade/handrail/wire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "MT" = (
 /obj/structure/platform{
 	dir = 1
@@ -4710,6 +4908,12 @@
 /obj/structure/barricade/metal/plasteel,
 /turf/open/floor/almayer/plate,
 /area/space)
+"NC" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "xgib3"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/space)
 "NE" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -4733,6 +4937,9 @@
 "Oc" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/auto_turf/strata_grass/layer1,
+/area/space)
+"Of" = (
+/turf/open/auto_turf/sand_white/layer0,
 /area/space)
 "Oi" = (
 /obj/item/tool/wet_sign{
@@ -5027,6 +5234,10 @@
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/space)
+"QG" = (
+/obj/effect/landmark/wo_supplies/guns/common/shotgun,
+/turf/open/auto_turf/sand_white/layer0,
+/area/space)
 "QI" = (
 /obj/structure/flora/jungle/vines/heavy,
 /obj/structure/flora/jungle/vines/heavy,
@@ -5117,6 +5328,12 @@
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/almayer,
 /area/space)
+"RH" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "xgibdown1"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/space)
 "RJ" = (
 /obj/structure/pipes/vents,
 /obj/effect/decal/cleanable/dirt,
@@ -5169,6 +5386,10 @@
 	},
 /obj/structure/platform/kutjevo,
 /turf/open/gm/dirt2,
+/area/space)
+"So" = (
+/obj/item/prop/alien/hugger,
+/turf/open/auto_turf/sand_white/layer0,
 /area/space)
 "Sr" = (
 /obj/structure/flora/jungle/vines/light_1,
@@ -5361,6 +5582,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/space)
+"Uy" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/structure/platform{
+	layer = 3.6
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "UI" = (
 /obj/structure/platform{
 	dir = 4;
@@ -5383,6 +5613,12 @@
 	},
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/gm/dirt2,
+/area/space)
+"UM" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "xgib1"
+	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/space)
 "UR" = (
 /obj/structure/platform/kutjevo{
@@ -5714,6 +5950,13 @@
 /obj/structure/barricade/metal/plasteel,
 /turf/open/floor/prison/floor_plate,
 /area/space)
+"XY" = (
+/obj/structure/barricade/metal/plasteel,
+/obj/structure/barricade/metal/plasteel{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/space)
 "Ya" = (
 /obj/structure/platform{
 	dir = 1
@@ -5838,6 +6081,14 @@
 	pixel_y = 4
 	},
 /turf/open/floor/almayer/cargo,
+/area/space)
+"Zl" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "xgib2";
+	pixel_x = -9;
+	pixel_y = 11
+	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/space)
 "Zp" = (
 /obj/structure/surface/table/almayer,
@@ -9628,8 +9879,8 @@ cz
 cz
 cz
 cz
-cz
-cz
+Of
+Of
 cz
 cz
 cz
@@ -9789,10 +10040,10 @@ cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
+Of
+Of
+Of
+Of
 cz
 cz
 cz
@@ -9949,13 +10200,13 @@ cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
+Of
+Of
+Of
+Of
+Of
 cz
 cz
 cz
@@ -10110,22 +10361,22 @@ zK
 cz
 cz
 cz
+Of
+Of
+Of
+Of
+cz
+cz
+Of
+Of
+Of
 cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
+Of
 cz
 cz
 cz
@@ -10271,25 +10522,25 @@ ca
 ca
 cz
 cz
+Of
+Of
+Of
 cz
 cz
 cz
 cz
 cz
+Of
+Of
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
+Of
+Of
+Of
+Of
+Of
+Of
 cz
 cz
 cz
@@ -10432,27 +10683,27 @@ ca
 GL
 cz
 cz
+Of
+Of
+Of
 cz
 cz
 cz
 cz
 cz
 cz
+Of
+Of
+Of
+Of
+Of
+Of
+Of
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
+Of
+Of
 cz
 cz
 cz
@@ -10594,6 +10845,8 @@ ca
 ca
 cz
 cz
+Of
+Of
 cz
 cz
 cz
@@ -10602,19 +10855,17 @@ cz
 cz
 cz
 cz
+Of
+Of
+Of
 cz
 cz
 cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
 cz
 cz
 cz
@@ -10756,6 +11007,9 @@ tp
 ca
 cz
 cz
+Of
+Of
+Of
 cz
 cz
 cz
@@ -10772,11 +11026,8 @@ cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
 cz
 cz
 cz
@@ -10919,6 +11170,11 @@ ca
 cz
 cz
 cz
+Of
+Of
+Of
+Of
+Of
 cz
 cz
 cz
@@ -10932,13 +11188,8 @@ cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
 cz
 cz
 cz
@@ -11082,25 +11333,25 @@ cz
 cz
 cz
 cz
+Of
+Of
+Of
+Of
 cz
 cz
 cz
 cz
 cz
+Of
+DW
+KU
 cz
 cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
 cz
 cz
 cz
@@ -11247,22 +11498,22 @@ cz
 cz
 cz
 cz
+Of
+Of
+cz
+cz
+cz
+NC
+UM
+QG
+So
 cz
 cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
 cz
 cz
 cz
@@ -11409,22 +11660,22 @@ cz
 cz
 cz
 cz
+Of
+Of
+cz
+cz
+cz
+Of
+nU
+Fo
+Of
 cz
 cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
 cz
 cz
 cz
@@ -11571,22 +11822,22 @@ cz
 cz
 cz
 cz
+Of
+Of
+cz
+cz
+cz
+RH
+Of
 cz
 cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
+Of
+Of
 cz
 cz
 ca
@@ -11732,22 +11983,22 @@ cz
 cz
 cz
 cz
+Of
+Of
+Of
+cz
+cz
+cz
+Of
+NC
 cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
+Of
+Of
 cz
 cz
 ca
@@ -11894,20 +12145,20 @@ eN
 ca
 cz
 cz
+Of
+Of
+Of
 cz
 cz
 cz
+Ag
+Of
+Of
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
+Of
 cz
 cz
 cz
@@ -12056,19 +12307,19 @@ eN
 GP
 eN
 cz
+Of
+Of
 cz
 cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
-cz
+Of
+Zl
+Of
+Of
+Of
+Of
 cz
 cz
 cz
@@ -12219,17 +12470,17 @@ eN
 eN
 eN
 ca
+Of
 cz
 cz
 cz
 cz
 cz
 cz
-cz
-cz
-cz
-cz
-cz
+Of
+Of
+Of
+Of
 cz
 cz
 cz
@@ -36154,7 +36405,7 @@ Nm
 ON
 Nm
 Nm
-Nm
+kr
 Dz
 Mw
 ib
@@ -36640,7 +36891,7 @@ ca
 ca
 Nm
 Nm
-ON
+lv
 xj
 Mw
 Tp
@@ -36652,7 +36903,7 @@ Et
 hY
 cL
 jm
-ON
+lv
 Nm
 Nm
 Nm
@@ -37138,7 +37389,7 @@ Et
 hY
 cL
 Hy
-ON
+lv
 Nm
 ON
 Nm
@@ -37508,7 +37759,7 @@ tp
 tp
 tp
 tp
-ca
+tp
 ca
 ca
 eN
@@ -37662,14 +37913,14 @@ tp
 Ws
 tp
 tp
+fF
+jt
+BE
+BE
+BE
+BE
+xg
 tp
-tp
-tp
-tp
-tp
-tp
-AO
-Bf
 tp
 ca
 ca
@@ -37824,14 +38075,14 @@ tp
 tp
 tp
 tp
-tp
-tp
-tp
-tp
-tp
-tp
-tp
-tp
+gK
+bJ
+wc
+wc
+wc
+kU
+JL
+Bf
 tp
 tp
 ca
@@ -37986,13 +38237,13 @@ tp
 Ws
 tp
 tp
-AO
-Bf
 tp
-tp
-tp
-tp
-tp
+gc
+In
+tc
+vE
+tj
+qj
 tp
 tp
 tp
@@ -38147,14 +38398,14 @@ ON
 ca
 tp
 tp
-ca
-tp
-tp
-tp
-tp
-tp
-tp
-tp
+Nm
+Nm
+nS
+Bk
+db
+XX
+tj
+qj
 tp
 tp
 tp
@@ -38308,15 +38559,15 @@ Nm
 ON
 ON
 ca
+Nm
+Nm
 ca
-ca
-tp
-tp
-tp
-tp
-tp
-tp
-tp
+Uy
+sY
+dU
+XY
+tj
+qj
 tp
 ca
 aP
@@ -38470,15 +38721,15 @@ Nm
 Nm
 ON
 ON
-ca
+Nm
 aP
-ca
-tp
-tp
-tp
-tp
-tp
-ca
+gK
+vh
+ct
+ct
+ct
+Tl
+qj
 ca
 ca
 zK
@@ -38634,15 +38885,15 @@ Nm
 ON
 ON
 ca
+Kl
+fy
+fy
+fy
+fy
+fy
+MS
 ca
 ca
-tp
-tp
-tp
-tp
-ca
-ca
-zK
 zK
 zK
 ca
@@ -38804,7 +39055,7 @@ tp
 QF
 ca
 ca
-zK
+ca
 zK
 zK
 ca
@@ -38961,12 +39212,12 @@ Nm
 ON
 ca
 ca
+tp
+tp
+tp
 ca
 ca
 ca
-ca
-zK
-zK
 zK
 zK
 zK
@@ -39123,11 +39374,11 @@ Nm
 Nm
 ca
 GL
-ca
-Oc
+tp
+HV
 Ep
 ca
-zK
+ca
 zK
 zK
 zK
@@ -39284,8 +39535,8 @@ ca
 Nm
 ON
 Nm
-ca
-ca
+tp
+tp
 ca
 ca
 ca
@@ -39446,7 +39697,7 @@ ca
 Nm
 ON
 Nm
-ca
+tp
 ca
 dJ
 eN
