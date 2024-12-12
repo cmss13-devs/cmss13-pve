@@ -68,6 +68,13 @@
 
 //actual areas
 
+/area/usasfb_sullivan/indoors/command
+	name = "Sullivan Aerospace Force Base - Central Command"
+	minimap_color = MINIMAP_AREA_COMMAND
+
+/area/usasfb_sullivan/indoors/command/reception
+	name = "Sullivan Aerospace Force Base - Central Command - Reception"
+
 /area/usasfb_sullivan/indoors/runway_watchpost
 	name = "Sullivan Aerospace Force Base - Runway Watchpost"
 	icon_state = "outpost_sec_3"
