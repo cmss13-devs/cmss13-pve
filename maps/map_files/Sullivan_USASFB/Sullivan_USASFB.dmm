@@ -1600,7 +1600,7 @@
 /area/usasfb_sullivan/indoors/warehouse)
 "Pw" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "Hangar 1-1 Cycle South"s"
+	id = "Hangar 1-1 Cycle South"
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
