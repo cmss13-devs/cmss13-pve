@@ -423,9 +423,6 @@
 /obj/structure/largecrate/supply/supplies/water,
 /turf/open/floor/asteroidwarning,
 /area/usasfb_sullivan/indoors/warehouse)
-"mm" = (
-/turf/open/floor/asteroidwarning,
-/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "mo" = (
 /turf/open/floor/asteroidwarning/west,
 /area/usasfb_sullivan/outdoors)
@@ -1028,12 +1025,6 @@
 /obj/structure/machinery/door/window/southleft,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
-"AV" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "Hangar 1-1 Cycle South"
-	},
-/turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "AY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1439,6 +1430,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/usasfb_sullivan/indoors/warehouse)
+"Lg" = (
+/obj/structure/prop/evac,
+/turf/open/floor/asteroidfloor,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "Lr" = (
 /turf/open/floor/asteroidwarning/southwest,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
@@ -1446,9 +1441,6 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Hangar 1-2 Cycle North"
 	},
-/turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
-"LN" = (
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "LW" = (
@@ -1694,6 +1686,10 @@
 "Tw" = (
 /obj/structure/machinery/vending/snack/packaged,
 /turf/open/floor/asteroidfloor,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"TA" = (
+/obj/structure/prop/evac/usasf,
+/turf/open/floor/asteroidwarning,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "TF" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -26515,7 +26511,7 @@ tU
 Lr
 st
 st
-AV
+Pw
 yi
 MD
 MD
@@ -26761,7 +26757,7 @@ st
 st
 st
 st
-mm
+TA
 Ey
 Ea
 ok
@@ -26772,7 +26768,7 @@ st
 Co
 st
 st
-AV
+Pw
 Zj
 st
 st
@@ -26783,7 +26779,7 @@ st
 Co
 st
 st
-LN
+Lg
 Fw
 zd
 uB
@@ -27029,7 +27025,7 @@ st
 Co
 st
 st
-AV
+Pw
 Zj
 st
 st
@@ -27286,7 +27282,7 @@ st
 Co
 dA
 st
-AV
+Pw
 Zj
 st
 st
@@ -27543,7 +27539,7 @@ st
 Co
 st
 st
-AV
+Pw
 Zj
 st
 st
@@ -27800,7 +27796,7 @@ st
 qS
 Af
 st
-AV
+Pw
 Zj
 st
 st
@@ -28057,7 +28053,7 @@ Ea
 kr
 st
 st
-AV
+Pw
 Zj
 st
 st
@@ -28314,7 +28310,7 @@ st
 Co
 st
 st
-AV
+Pw
 Zj
 st
 st
@@ -28571,7 +28567,7 @@ st
 Co
 st
 st
-AV
+Pw
 Zj
 st
 st
@@ -31644,7 +31640,7 @@ st
 st
 st
 st
-mm
+TA
 Ey
 Ea
 ok
@@ -31652,7 +31648,7 @@ st
 st
 st
 st
-mm
+Co
 st
 st
 Gd
