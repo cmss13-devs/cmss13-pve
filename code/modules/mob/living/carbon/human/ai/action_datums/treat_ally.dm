@@ -26,6 +26,7 @@
 
 /datum/ai_action/treat_ally/Destroy(force, ...)
 	brain.healing_someone = FALSE
+	brain.lose_injured_ally()
 	return ..()
 
 /datum/ai_action/treat_ally/trigger_action()
@@ -37,6 +38,9 @@
 	if(!brain.found_injured_ally)
 		return ONGOING_ACTION_COMPLETED
 
+	if(!brain.healing_start_check(brain.found_injured_ally))
+		return ONGOING_ACTION_COMPLETED
+
 	if(brain.healing_someone)
 		return ONGOING_ACTION_UNFINISHED
 
@@ -46,8 +50,5 @@
 			return ONGOING_ACTION_COMPLETED
 		return ONGOING_ACTION_UNFINISHED
 
-	if(brain.healing_start_check(brain.found_injured_ally))
-		brain.start_healing(brain.found_injured_ally)
-		return ONGOING_ACTION_UNFINISHED
-
-	return ONGOING_ACTION_COMPLETED
+	brain.start_healing(brain.found_injured_ally)
+	return ONGOING_ACTION_UNFINISHED
