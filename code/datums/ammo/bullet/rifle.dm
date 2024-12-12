@@ -189,10 +189,6 @@
 	debilitate = list(0,0,0,3,0,0,0,1) // Stun,knockdown,knockout,irradiate,stutter,eyeblur,drowsy,agony
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
-	penetration = ARMOR_PENETRATION_TIER_3
-	accuracy = HIT_ACCURACY_TIER_3
-	shell_speed = AMMO_SPEED_TIER_6
-	effective_range_max = 10
 	damage_falloff = DAMAGE_FALLOFF_TIER_9
 
 /datum/ammo/bullet/rifle/heavy/dirty/ap
