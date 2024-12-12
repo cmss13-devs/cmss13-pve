@@ -4,7 +4,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "ay" = (
 /obj/vehicle/train/cargo/engine,
 /turf/open/floor/asteroidfloor,
@@ -12,7 +12,12 @@
 "az" = (
 /obj/structure/cargo_container/trijent/mid,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"aL" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/misc/flares,
+/turf/open/floor/strata/red4,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "aY" = (
 /obj/structure/machinery/light/small/blue{
 	dir = 1;
@@ -23,20 +28,15 @@
 "aZ" = (
 /obj/structure/machinery/autolathe,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "bk" = (
 /obj/structure/cargo_container/horizontal/blue/middle,
 /turf/open/floor/asteroidwarning/west,
 /area/usasfb_sullivan/indoors/warehouse)
 "bp" = (
-/obj/structure/machinery/door_control{
-	id = "Hangar Lockdown";
-	name = "Hangar Lockdown";
-	pixel_y = -2;
-	req_one_access_txt = "3;22;19"
-	},
-/turf/open/auto_turf/snow/layer1,
-/area/usasfb_sullivan/outdoors)
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/strata/red1,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "bJ" = (
 /obj/structure/surface/table,
 /obj/item/prop/almayer/flight_recorder,
@@ -48,11 +48,11 @@
 	pixel_y = 8
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "bS" = (
 /obj/structure/closet/crate/secure/phoron,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "ch" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/asteroidfloor,
@@ -70,7 +70,7 @@
 "ck" = (
 /obj/structure/cargo_container/uscm/crestus/left,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "cw" = (
 /obj/structure/surface/rack,
 /obj/item/fuel_cell/used,
@@ -88,11 +88,11 @@
 /obj/effect/decal/warning_stripes/asteroid,
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "cO" = (
 /obj/structure/cargo_container/seegson/mid,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "cS" = (
 /obj/structure/cargo_container/uscm/chinook/left,
 /turf/open/floor/asteroidwarning/southwest,
@@ -113,6 +113,15 @@
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"dj" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/asteroidfloor,
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"dk" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/tableflag/uscm,
+/turf/open/floor/strata/red4/east,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "dv" = (
 /obj/vehicle/train/cargo/trolley,
 /obj/structure/reagent_dispensers/fueltank{
@@ -142,7 +151,7 @@
 /obj/effect/decal/warning_stripes/asteroid,
 /obj/structure/largecrate/random/mini/med,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "dY" = (
 /obj/structure/largecrate/random/barrel/white,
 /obj/effect/decal/cleanable/dirt,
@@ -151,6 +160,11 @@
 "ec" = (
 /turf/open/floor/asteroidwarning/east,
 /area/usasfb_sullivan/indoors/warehouse)
+"eh" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/binoculars,
+/turf/open/floor/strata/red3/south,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "ev" = (
 /obj/structure/cargo_container/ferret/right,
 /turf/open/floor/asteroidwarning/north,
@@ -170,6 +184,10 @@
 "eS" = (
 /turf/closed/wall/mineral/silver,
 /area/usasfb_sullivan/outdoors)
+"eT" = (
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/open/floor/asteroidfloor,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "eU" = (
 /obj/structure/cargo_container/seegson/mid,
 /obj/structure/machinery/light/spot,
@@ -177,7 +195,7 @@
 /area/usasfb_sullivan/indoors/warehouse)
 "eY" = (
 /turf/open/floor/asteroidwarning/north,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "eZ" = (
 /obj/structure/machinery/firealarm{
 	dir = 4;
@@ -216,13 +234,13 @@
 	occupied = 0
 	},
 /turf/open/floor/asteroidwarning/southwest,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "gb" = (
 /obj/structure/largecrate/random/mini/wooden{
 	pixel_y = 12
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "gh" = (
 /turf/closed/wall/mineral/diamond,
 /area/usasfb_sullivan/outdoors)
@@ -241,12 +259,12 @@
 "go" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/asphalt/cement,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "gt" = (
 /obj/structure/gun_rack/m41/unloaded,
 /obj/effect/decal/warning_stripes/asteroid,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "gE" = (
 /obj/vehicle/train/cargo/trolley,
 /obj/structure/prop/ice_colony/surveying_device/measuring_device{
@@ -258,6 +276,10 @@
 /obj/structure/cargo_container/grant/left,
 /turf/open/floor/asteroidwarning/west,
 /area/usasfb_sullivan/indoors/warehouse)
+"gK" = (
+/obj/structure/prop/evac,
+/turf/open/floor/asteroidfloor,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "gN" = (
 /obj/structure/window{
 	dir = 8
@@ -266,7 +288,7 @@
 	dir = 4
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "gS" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -307,6 +329,16 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"hD" = (
+/obj/structure/largecrate/random/barrel/true_random{
+	pixel_x = -23
+	},
+/turf/open/floor/asteroidwarning/north,
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"hP" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/floor/asteroidwarning/north,
+/area/usasfb_sullivan/indoors/warehouse)
 "if" = (
 /obj/structure/cargo_container/kelland/right,
 /obj/effect/decal/cleanable/dirt,
@@ -318,15 +350,23 @@
 "ix" = (
 /obj/structure/cargo_container/wy/left,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "iy" = (
 /obj/structure/cargo_container/wy/mid,
 /turf/open/floor/asteroidwarning,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"iH" = (
+/obj/structure/prop/evac/usasf,
+/turf/open/floor/asteroidwarning,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"iI" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/southeast,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "iR" = (
 /obj/structure/cargo_container/uscm/mid,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "iT" = (
 /turf/open/asphalt/cement,
 /area/usasfb_sullivan/outdoors)
@@ -337,7 +377,7 @@
 "je" = (
 /obj/structure/largecrate/random/mini/ammo,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "jq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate,
@@ -396,7 +436,12 @@
 "ls" = (
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/floor/asteroidwarning/northeast,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"lv" = (
+/obj/structure/surface/table/almayer,
+/obj/item/roller_holder,
+/turf/open/floor/strata/red3/west,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "lx" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/sentry,
@@ -412,20 +457,26 @@
 "lW" = (
 /obj/structure/largecrate/machine,
 /turf/open/floor/asteroidwarning/northwest,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "mb" = (
 /obj/structure/machinery/light/spot{
 	dir = 8
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"me" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/tableflag/uscm2,
+/turf/open/floor/strata/red4/west,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "mh" = (
 /obj/structure/largecrate/supply/supplies/water,
 /turf/open/floor/asteroidwarning,
 /area/usasfb_sullivan/indoors/warehouse)
 "mo" = (
+/obj/structure/largecrate/supply,
 /turf/open/floor/asteroidwarning/west,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "mp" = (
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/corsat/plate,
@@ -450,8 +501,11 @@
 	pixel_y = 11;
 	pixel_x = 10
 	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = -7
+	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "na" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/barrel/true_random,
@@ -464,6 +518,15 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"nf" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/aicore/white,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "ng" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -485,7 +548,7 @@
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/phone_base/colony_net/rotary,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "nB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/barrel/true_random,
@@ -515,12 +578,22 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"oz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/northeast,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "oD" = (
 /obj/structure/fence,
 /turf/open/auto_turf/snow/layer0,
 /area/usasfb_sullivan/outdoors)
 "oT" = (
 /obj/structure/cargo_container/ferret/mid,
+/turf/open/floor/asteroidfloor,
+/area/usasfb_sullivan/indoors/warehouse)
+"oY" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
 "pc" = (
@@ -567,7 +640,7 @@
 "qf" = (
 /obj/structure/cargo_container/wy/right,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "qq" = (
 /obj/structure/largecrate/supply{
 	pixel_x = 11;
@@ -578,6 +651,16 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"qv" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/asteroidwarning/southeast,
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"qE" = (
+/obj/structure/largecrate/machine{
+	pixel_x = 5
+	},
+/turf/open/floor/asteroidwarning/north,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "qH" = (
 /obj/structure/bed/roller,
 /turf/open/floor/asteroidfloor,
@@ -585,7 +668,7 @@
 "qI" = (
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "qS" = (
 /obj/structure/largecrate,
 /turf/open/floor/asteroidwarning,
@@ -593,7 +676,7 @@
 "qV" = (
 /obj/structure/cargo_container/wy/mid,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "qY" = (
 /obj/vehicle/train/cargo/trolley,
 /obj/structure/prop/invuln/overhead_pipe,
@@ -605,11 +688,11 @@
 "rk" = (
 /obj/structure/cargo_container/uscm/crestus/mid,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "ro" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "rt" = (
 /obj/structure/prop/dam/crane/cargo{
 	dir = 4
@@ -625,11 +708,22 @@
 	dir = 8
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "ry" = (
 /obj/structure/cargo_container/uscm/right,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"rE" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/east,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"rI" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/shuttle/dropship/flight/lz1{
+	dir = 8
+	},
+/turf/open/floor/strata/red3/east,
+/area/usasfb_sullivan/outdoors/lz/console)
 "sf" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/asteroidfloor,
@@ -658,6 +752,9 @@
 "st" = (
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"su" = (
+/turf/open/floor/asteroidwarning,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "sy" = (
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/mre_pack/meal4,
@@ -688,7 +785,7 @@
 	occupied = 0
 	},
 /turf/open/floor/asteroidwarning/west,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "sU" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /obj/structure/machinery/light/spot{
@@ -698,16 +795,16 @@
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "sY" = (
 /turf/open/floor/asteroidwarning/east,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "te" = (
 /obj/structure/machinery/light/spot{
 	dir = 1
 	},
 /turf/open/floor/asteroidwarning/north,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "tg" = (
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "th" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/yellow/east,
@@ -727,7 +824,7 @@
 "tK" = (
 /obj/structure/largecrate/supply,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "tO" = (
 /obj/structure/cable/blue,
 /turf/open/floor/asteroidfloor,
@@ -744,7 +841,7 @@
 "tY" = (
 /obj/structure/closet/crate/secure/weapon,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "ug" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/tool,
@@ -777,7 +874,7 @@
 /obj/effect/decal/warning_stripes/asteroid,
 /obj/structure/largecrate/random/case/small,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "uF" = (
 /obj/structure/platform{
 	dir = 8
@@ -789,6 +886,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"uO" = (
+/turf/open/floor/strata/red1,
+/area/usasfb_sullivan/indoors/runway_watchpost)
+"uS" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "uU" = (
 /obj/structure/prop/invuln/overhead_pipe,
 /obj/structure/cable/heavyduty{
@@ -796,6 +900,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/usasfb_sullivan/indoors/warehouse)
+"uY" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/floor/asteroidfloor,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "uZ" = (
 /obj/structure/cargo_container/horizontal/blue/top,
 /turf/open/floor/asteroidfloor,
@@ -808,10 +916,20 @@
 /obj/structure/cargo_container/ferret/left,
 /turf/open/floor/asteroidwarning/northwest,
 /area/usasfb_sullivan/indoors/warehouse)
+"vS" = (
+/obj/structure/largecrate/machine{
+	pixel_x = -4
+	},
+/turf/open/floor/asteroidwarning/north,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "vX" = (
 /obj/structure/cargo_container/seegson/left,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"wb" = (
+/obj/structure/extinguisher_cabinet,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "wd" = (
 /obj/structure/largecrate/machine,
 /turf/open/floor/asteroidfloor,
@@ -850,15 +968,19 @@
 /obj/effect/decal/warning_stripes/asteroid,
 /obj/structure/largecrate/random/mini/ammo,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "xb" = (
 /obj/vehicle/train/cargo/trolley,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"xc" = (
+/obj/structure/machinery/power/apc/upgraded/power/north,
+/turf/open/floor/asteroidwarning/northwest,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "xe" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer,
 /turf/open/floor/asteroidwarning,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "xg" = (
 /obj/structure/machinery/light/small/blue{
 	dir = 1;
@@ -866,6 +988,10 @@
 	},
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"xi" = (
+/obj/structure/machinery/vending/snack/packaged,
+/turf/open/floor/strata/red4/north,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "xl" = (
 /obj/structure/surface/rack,
 /obj/item/storage/toolbox/mechanical/green,
@@ -882,7 +1008,10 @@
 	pixel_x = 5
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"xz" = (
+/turf/open/floor/asteroidwarning/northeast,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "xD" = (
 /obj/vehicle/train/cargo/engine,
 /obj/structure/cable/heavyduty{
@@ -901,6 +1030,12 @@
 	},
 /turf/open/auto_turf/snow/brown_base/layer1,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"xT" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "Hangar 1-2 Cycle South"
+	},
+/turf/closed/wall/hangar,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "xV" = (
 /obj/structure/filingcabinet{
 	pixel_y = 9;
@@ -916,6 +1051,11 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"xY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/east,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "xZ" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -973,8 +1113,13 @@
 /turf/open/auto_turf/snow/layer1,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "zn" = (
+/obj/structure/cargo_container/watatsumi/rightmid,
 /turf/open/floor/asteroidwarning,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"zC" = (
+/obj/structure/largecrate/supply,
+/turf/open/floor/asteroidwarning/north,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "zP" = (
 /obj/structure/surface/rack,
 /obj/structure/dropship_equipment/fuel/cooling_system,
@@ -989,6 +1134,11 @@
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "Af" = (
 /obj/structure/closet/coffin/woodencrate,
+/turf/open/floor/asteroidfloor,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"Ag" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "Ap" = (
@@ -1012,11 +1162,11 @@
 	pixel_x = 5
 	},
 /turf/open/floor/asteroidwarning/northeast,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "AH" = (
 /obj/structure/cargo_container/wy/left,
 /turf/open/floor/asteroidwarning,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "AK" = (
 /turf/open/floor/asteroidwarning/west,
 /area/usasfb_sullivan/indoors/warehouse)
@@ -1039,11 +1189,11 @@
 	pixel_y = 10
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Bm" = (
 /obj/structure/cargo_container/seegson/right,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Bp" = (
 /turf/closed/wall/mineral/gold,
 /area/usasfb_sullivan/outdoors)
@@ -1061,10 +1211,11 @@
 "BL" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/door_control/brbutton/alt{
-	pixel_x = 9
+	pixel_x = 9;
+	id = "Hangar 1-2 Cycle South"
 	},
 /obj/structure/machinery/door_control/brbutton/alt{
-	id = "Hangar 1-1 Cycle";
+	id = "Hangar 1-2 Cycle North";
 	pixel_x = -5
 	},
 /turf/open/floor/asteroidfloor,
@@ -1080,9 +1231,11 @@
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
 "Ci" = (
-/obj/structure/largecrate/machine,
+/obj/structure/largecrate/machine{
+	pixel_x = -8
+	},
 /turf/open/floor/asteroidwarning/north,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Cn" = (
 /obj/structure/fence,
 /turf/open/auto_turf/snow/brown_base/layer3,
@@ -1103,7 +1256,7 @@
 /area/usasfb_sullivan/indoors/warehouse)
 "CW" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
-	id = "Hangar 1-2 Cycle South"
+	id = "Hangar 1-1 Cycle South"
 	},
 /turf/open/floor/asteroidwarning/southeast,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
@@ -1112,12 +1265,27 @@
 	pixel_x = -4
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"Df" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/tableflag/uscm2,
+/turf/open/floor/strata/red4/east,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "Dq" = (
 /obj/structure/coatrack,
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"Dr" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/aicore/white,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "DA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random,
@@ -1132,6 +1300,7 @@
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "DI" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/floor/asteroidwarning,
 /area/usasfb_sullivan/indoors/warehouse)
 "DK" = (
@@ -1144,6 +1313,10 @@
 /obj/structure/cargo_container/wy/mid,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"DX" = (
+/obj/structure/cargo_container/watatsumi/mid,
+/turf/open/floor/asteroidwarning,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Ea" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/floor/asteroidfloor,
@@ -1168,23 +1341,27 @@
 	pixel_x = -10
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "EE" = (
 /obj/vehicle/powerloader{
 	dir = 8
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "EJ" = (
 /obj/structure/surface/rack,
 /obj/effect/decal/warning_stripes/asteroid,
 /obj/structure/largecrate/random/case,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "EQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning,
 /area/usasfb_sullivan/indoors/warehouse)
+"EW" = (
+/obj/structure/cargo_container/watatsumi/right,
+/turf/open/floor/asteroidwarning,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "EY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
@@ -1208,13 +1385,20 @@
 	dir = 1
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Ft" = (
 /obj/vehicle/powerloader{
 	dir = 1
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"Fv" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 11;
+	id = "Hangar 1-2 Cycle North"
+	},
+/turf/closed/wall/hangar,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "Fw" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	id = "Hangar 1-1 Cycle South"
@@ -1224,10 +1408,21 @@
 "FH" = (
 /turf/open/auto_turf/snow/layer3,
 /area/usasfb_sullivan/outdoors)
+"FP" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/asteroidwarning/east,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "FT" = (
 /obj/structure/largecrate/supply/powerloader,
 /turf/open/floor/asteroidwarning/north,
 /area/usasfb_sullivan/indoors/warehouse)
+"FV" = (
+/turf/open/floor/asteroidwarning/west,
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"Ga" = (
+/obj/structure/cargo_container/watatsumi/leftmid,
+/turf/open/floor/asteroidwarning/southwest,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Gb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/vehicle/train/cargo/trolley,
@@ -1245,7 +1440,12 @@
 "Gh" = (
 /obj/structure/cargo_container/trijent/left,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"Gk" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/binoculars,
+/turf/open/floor/strata/red4/north,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "Gv" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/door_control/brbutton/alt{
@@ -1258,6 +1458,10 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"Gx" = (
+/obj/docking_port/stationary/marine_dropship/lz1,
+/turf/open/asphalt/cement,
+/area/usasfb_sullivan/outdoors/lz/one)
 "GG" = (
 /obj/structure/prop/static_tank/fuel,
 /turf/open/floor/asteroidfloor,
@@ -1290,6 +1494,18 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"Hu" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/aicore/white,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"Hv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/north,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "Hy" = (
 /obj/structure/cargo_container/uscm/right,
 /turf/open/floor/asteroidwarning,
@@ -1309,7 +1525,7 @@
 "HE" = (
 /obj/structure/cargo_container/trijent/right,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "HJ" = (
 /obj/structure/cargo_container/grant/right,
 /turf/open/floor/asteroidwarning/southeast,
@@ -1355,7 +1571,15 @@
 "Jl" = (
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/floor/asteroidwarning/southeast,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"Js" = (
+/obj/structure/window/framed/strata/reinforced,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/usasfb_sullivan/indoors/runway_watchpost)
+"JK" = (
+/obj/structure/machinery/vending/coffee/simple,
+/turf/open/floor/strata/red4,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "JL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/dam/truck/cargo{
@@ -1395,12 +1619,12 @@
 /area/usasfb_sullivan/indoors/warehouse)
 "KE" = (
 /turf/open/floor/asteroidwarning/southwest,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "KG" = (
 /obj/structure/gun_rack/m41/recon/unloaded,
 /obj/effect/decal/warning_stripes/asteroid,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "KL" = (
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/asteroidwarning/northeast,
@@ -1430,9 +1654,11 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/usasfb_sullivan/indoors/warehouse)
-"Lg" = (
-/obj/structure/prop/evac,
-/turf/open/floor/asteroidfloor,
+"Lb" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "Hangar 1-1 Cycle South"
+	},
+/turf/closed/wall/hangar,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "Lr" = (
 /turf/open/floor/asteroidwarning/southwest,
@@ -1454,7 +1680,7 @@
 /area/usasfb_sullivan/indoors/warehouse)
 "Me" = (
 /turf/closed/wall/r_wall/bunker,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Mf" = (
 /obj/item/device/flashlight/lamp/tripod,
 /obj/effect/decal/warning_stripes/asteroid,
@@ -1473,7 +1699,7 @@
 "Mj" = (
 /obj/structure/largecrate/random/mini/med,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Mp" = (
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/usasfb_sullivan/outdoors)
@@ -1483,10 +1709,19 @@
 	pixel_y = 8
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"Mz" = (
+/turf/open/asphalt/cement,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "MD" = (
 /turf/open/floor/asteroidwarning/west,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"MP" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/open/floor/strata/red1,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "MV" = (
 /obj/structure/surface/rack,
 /turf/open/floor/asteroidfloor,
@@ -1495,12 +1730,31 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/west,
 /area/usasfb_sullivan/indoors/warehouse)
+"Nk" = (
+/obj/structure/largecrate/machine{
+	pixel_x = -16
+	},
+/turf/open/floor/asteroidwarning/north,
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Nx" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 9
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"NA" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/northeast,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"NC" = (
+/obj/structure/prop/dam/crane{
+	dir = 4
+	},
+/turf/open/floor/asteroidfloor,
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"NG" = (
+/turf/closed/wall/strata_outpost/reinforced,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "NI" = (
 /obj/structure/surface/table/almayer,
 /obj/item/paper_bin{
@@ -1513,10 +1767,14 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"NT" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "Oa" = (
 /obj/structure/largecrate/random/case,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Ol" = (
 /obj/structure/surface/table/almayer,
 /obj/item/paper/manifest,
@@ -1536,7 +1794,7 @@
 	dir = 1
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Or" = (
 /turf/open/auto_turf/snow/brown_base/layer1,
 /area/usasfb_sullivan/outdoors)
@@ -1545,11 +1803,11 @@
 	pixel_y = 7
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Oz" = (
 /obj/structure/largecrate/machine,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "OD" = (
 /obj/structure/largecrate/random/secure,
 /obj/structure/machinery/light/spot{
@@ -1562,7 +1820,7 @@
 	pixel_x = -4
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "OV" = (
 /obj/structure/cargo_container/horizontal/blue/bottom,
 /turf/open/floor/asteroidwarning,
@@ -1573,6 +1831,12 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"OZ" = (
+/obj/structure/machinery/door/airlock/almayer/security/colony{
+	dir = 2
+	},
+/turf/open/asphalt/cement,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "Pf" = (
 /obj/structure/fence,
 /obj/structure/fence,
@@ -1585,6 +1849,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/usasfb_sullivan/indoors/warehouse)
+"Ps" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin,
+/obj/item/tool/pen/fountain,
+/turf/open/floor/strata/red3/south,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "Pu" = (
 /obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door/window/southright,
@@ -1602,7 +1872,7 @@
 	dir = 1
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "PX" = (
 /obj/structure/window{
 	dir = 8
@@ -1649,7 +1919,7 @@
 "QU" = (
 /obj/structure/prop/dam/crane,
 /turf/open/asphalt/cement,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Ra" = (
 /obj/structure/largecrate,
 /turf/open/floor/asteroidfloor,
@@ -1664,21 +1934,48 @@
 /obj/structure/cargo_container/uscm/mid,
 /turf/open/floor/asteroidwarning,
 /area/usasfb_sullivan/indoors/warehouse)
+"RF" = (
+/turf/open/asphalt/cement,
+/area/usasfb_sullivan/outdoors/lz/one)
+"RO" = (
+/obj/vehicle/multitile/apc/arc/weaponless{
+	dir = 4
+	},
+/turf/open/floor/asteroidwarning,
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"RS" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/tableflag/uscm,
+/turf/open/floor/strata/red4/west,
+/area/usasfb_sullivan/indoors/runway_watchpost)
 "RT" = (
+/obj/structure/largecrate/supply,
 /turf/open/floor/asteroidwarning/northwest,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "RU" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	pixel_y = 18
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"Sj" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 11;
+	id = "Hangar 1-1 Cycle Norths"
+	},
+/turf/closed/wall/hangar,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"SA" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidfloor,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "SZ" = (
+/obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/asteroidwarning/northeast,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Tc" = (
 /turf/open/floor/asteroidwarning/southeast,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Tl" = (
 /obj/structure/cargo_container/grant/rightmid,
 /turf/open/floor/asteroidfloor,
@@ -1687,9 +1984,9 @@
 /obj/structure/machinery/vending/snack/packaged,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
-"TA" = (
-/obj/structure/prop/evac/usasf,
-/turf/open/floor/asteroidwarning,
+"Tx" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/north,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "TF" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -1705,11 +2002,17 @@
 "Uc" = (
 /obj/structure/machinery/autolathe/armylathe,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Ug" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"Un" = (
+/turf/open/floor/strata/red3/north,
+/area/usasfb_sullivan/indoors/runway_watchpost)
+"Uq" = (
+/turf/open/auto_turf/snow/layer0,
+/area/usasfb_sullivan/outdoors/lz/one)
 "Uz" = (
 /obj/structure/window/framed/hangar,
 /turf/open/auto_turf/snow/layer0,
@@ -1795,6 +2098,10 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"Xh" = (
+/obj/structure/machinery/computer/shuttle/dropship/flight/lz1,
+/turf/open/asphalt/cement,
+/area/usasfb_sullivan/outdoors)
 "Xk" = (
 /turf/open/floor/asteroidwarning/northeast,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
@@ -1841,34 +2148,36 @@
 /turf/open/floor/asteroidwarning/southeast,
 /area/usasfb_sullivan/indoors/warehouse)
 "Ye" = (
-/obj/structure/lamarr{
-	density = 0;
-	destroyed = 1;
-	icon_state = "labcageb0";
-	occupied = 0
-	},
 /turf/open/floor/asteroidwarning/northwest,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Yo" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "Yq" = (
 /obj/structure/cargo_container/uscm/right,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"Yx" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/floor/plating/plating_catwalk/aicore/white,
+/area/usasfb_sullivan/indoors/ammo_elevator)
+"YD" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/northwest,
+/area/usasfb_sullivan/indoors/hangar/one_one/one_two)
 "YN" = (
 /turf/open/auto_turf/snow/layer0,
 /area/usasfb_sullivan/outdoors)
 "YR" = (
-/obj/structure/lamarr{
-	density = 0;
-	destroyed = 1;
-	icon_state = "labcageb0";
-	occupied = 0
+/obj/structure/largecrate/machine{
+	pixel_x = -8
 	},
 /turf/open/floor/asteroidfloor,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "YW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/barrel{
@@ -1919,7 +2228,7 @@
 "ZN" = (
 /obj/structure/cargo_container/wy/right,
 /turf/open/floor/asteroidwarning,
-/area/usasfb_sullivan/outdoors)
+/area/usasfb_sullivan/indoors/ammo_elevator)
 "ZV" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Hangar 1-2 Cycle South"
@@ -12657,9 +12966,9 @@ YN
 YN
 YN
 YN
-ky
-ky
-ky
+NG
+Js
+NG
 YN
 YN
 YN
@@ -12913,39 +13222,39 @@ YN
 YN
 YN
 YN
-ky
-YN
-YN
-YN
-ky
-YN
-YN
-YN
-YN
-YN
-YN
-YN
-iT
-iT
-iT
-iT
-iT
+wb
+aL
+lv
+Df
+NG
 YN
 YN
 YN
 YN
 YN
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+YN
+YN
+RF
+RF
+RF
+RF
+RF
+Uq
+Uq
+Uq
+Uq
+Uq
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -13169,40 +13478,40 @@ YN
 YN
 YN
 YN
-ky
+NG
+JK
+uO
+uO
+uO
+dk
+NG
 YN
 YN
 YN
 YN
 YN
-ky
 YN
-YN
-YN
-YN
-YN
-YN
-iT
-iT
-iT
-iT
-iT
-YN
-YN
-YN
-YN
-YN
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+RF
+RF
+RF
+RF
+RF
+Uq
+Uq
+Uq
+Uq
+Uq
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -13426,40 +13735,40 @@ iT
 iT
 iT
 iT
+OZ
+Un
+uO
+uO
+bp
+Ps
+Js
 YN
 YN
 YN
 YN
 YN
 YN
-ky
-YN
-YN
-YN
-YN
-YN
-YN
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -13683,40 +13992,40 @@ iT
 iT
 iT
 iT
+OZ
+Un
+uO
+uO
+bp
+eh
+Js
 YN
 YN
 YN
 YN
 YN
-YN
-ky
-YN
-YN
-YN
-YN
-YN
 iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -13940,40 +14249,40 @@ YN
 YN
 YN
 YN
-ky
+NT
+xi
+uO
+MP
+uO
+RS
+NG
 YN
 YN
 YN
 YN
-YN
-ky
-YN
-YN
-YN
-YN
 iT
 iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -14198,39 +14507,39 @@ YN
 YN
 YN
 YN
-ky
+NG
+Gk
+rI
+me
+NG
 YN
 YN
 YN
-ky
-YN
-YN
-YN
 YN
 iT
 iT
 iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+Gx
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -14456,9 +14765,9 @@ YN
 YN
 YN
 YN
-ky
-ky
-ky
+NG
+Js
+NG
 YN
 YN
 YN
@@ -14467,27 +14776,27 @@ iT
 iT
 iT
 iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -14724,27 +15033,27 @@ iT
 iT
 iT
 iT
-iT
-iT
-iT
-iT
-iT
-YN
-YN
-YN
-YN
-YN
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+RF
+RF
+RF
+RF
+RF
+Uq
+Uq
+Uq
+Uq
+Uq
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -14981,27 +15290,27 @@ iT
 iT
 iT
 YN
-iT
-iT
-iT
-iT
-iT
-YN
-YN
-YN
-YN
-YN
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+RF
+RF
+RF
+RF
+RF
+Uq
+Uq
+Uq
+Uq
+Uq
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -15238,27 +15547,27 @@ iT
 iT
 YN
 YN
-iT
-iT
-iT
-iT
-iT
-YN
-YN
-YN
-YN
-YN
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+RF
+RF
+RF
+RF
+RF
+Uq
+Uq
+Uq
+Uq
+Uq
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -15495,27 +15804,27 @@ iT
 YN
 YN
 YN
-iT
-iT
-iT
-iT
-iT
-YN
-YN
-YN
-YN
-YN
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
-iT
+RF
+RF
+RF
+RF
+RF
+Uq
+Uq
+Uq
+Uq
+Uq
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
+RF
 YN
 YN
 YN
@@ -21372,7 +21681,7 @@ iT
 iT
 iT
 iT
-op
+lA
 YN
 YN
 lA
@@ -24199,7 +24508,7 @@ uB
 uB
 iT
 uB
-bp
+uB
 uB
 uB
 uB
@@ -25975,7 +26284,7 @@ fz
 BU
 BU
 uB
-xq
+Sj
 xq
 xq
 xq
@@ -26266,7 +26575,7 @@ st
 st
 st
 xq
-xq
+Lb
 fE
 fz
 fz
@@ -26491,8 +26800,8 @@ BU
 iT
 Ab
 xq
-yi
-st
+YD
+SA
 yi
 MD
 MD
@@ -26749,7 +27058,7 @@ iT
 sp
 Kl
 Zj
-st
+SA
 Zj
 Qi
 Hg
@@ -26757,12 +27066,12 @@ st
 st
 st
 st
-TA
+iH
 Ey
 Ea
 ok
-st
-st
+Hg
+Hg
 st
 st
 Co
@@ -26770,16 +27079,16 @@ st
 st
 Pw
 Zj
-st
-st
-st
-st
+Ag
+SA
+Hu
+Hu
 st
 st
 Co
 st
 st
-Lg
+gK
 Fw
 zd
 uB
@@ -27005,7 +27314,7 @@ BU
 uB
 sp
 Kl
-Zj
+Tx
 st
 Zj
 st
@@ -27027,8 +27336,8 @@ st
 st
 Pw
 Zj
-st
-st
+Ag
+SA
 st
 st
 st
@@ -27071,7 +27380,7 @@ YN
 YN
 YN
 iT
-iT
+Xh
 iT
 iT
 iT
@@ -27262,7 +27571,7 @@ BU
 uB
 sp
 Kl
-Zj
+Tx
 st
 Zj
 st
@@ -27284,8 +27593,8 @@ dA
 st
 Pw
 Zj
-st
-st
+SA
+SA
 st
 st
 st
@@ -27541,7 +27850,7 @@ st
 st
 Pw
 Zj
-st
+SA
 st
 st
 st
@@ -27709,8 +28018,8 @@ YN
 Me
 Me
 Me
-Ye
-YR
+lW
+Oz
 tg
 AH
 Me
@@ -28479,7 +28788,7 @@ iT
 YN
 YN
 Me
-eY
+Nk
 tg
 qV
 tg
@@ -28546,7 +28855,7 @@ uB
 BU
 uB
 sp
-Lx
+Kl
 Zj
 st
 Zj
@@ -28557,9 +28866,9 @@ st
 st
 XR
 Co
-Zj
-st
-st
+Tx
+SA
+SA
 st
 st
 st
@@ -28736,7 +29045,7 @@ iT
 YN
 YN
 Me
-eY
+hD
 tg
 qf
 tg
@@ -28813,9 +29122,9 @@ tI
 tI
 fJ
 tI
-in
-Xk
-tI
+iI
+NA
+rE
 tI
 tI
 tI
@@ -29000,8 +29309,8 @@ tg
 ZN
 Me
 PW
-tg
-tg
+eT
+eT
 tg
 EJ
 dR
@@ -29254,10 +29563,10 @@ eY
 tg
 rk
 tg
-zn
+su
 Me
 Ox
-tg
+eT
 tg
 tg
 tg
@@ -29511,7 +29820,7 @@ eY
 tg
 iR
 tg
-zn
+su
 Me
 bQ
 bS
@@ -29768,7 +30077,7 @@ eY
 tg
 ry
 tg
-zn
+su
 Me
 My
 bS
@@ -30021,7 +30330,7 @@ iT
 YN
 YN
 Me
-SZ
+xz
 sY
 sY
 sY
@@ -30278,8 +30587,8 @@ iT
 iT
 iT
 go
-iT
-iT
+Mz
+Mz
 aw
 aw
 QU
@@ -30535,11 +30844,11 @@ iT
 iT
 iT
 go
-iT
-iT
-iT
-iT
-iT
+Mz
+Mz
+Mz
+Mz
+Mz
 xe
 eY
 tg
@@ -30792,11 +31101,11 @@ iT
 iT
 iT
 go
-iT
-iT
-iT
-iT
-iT
+Mz
+Mz
+Mz
+Mz
+Mz
 xe
 eY
 tg
@@ -30805,7 +31114,7 @@ tg
 tg
 tg
 tg
-tg
+uY
 tg
 Me
 YN
@@ -30858,7 +31167,7 @@ Mp
 uB
 uB
 uB
-xq
+Fv
 xq
 xq
 xq
@@ -31049,11 +31358,11 @@ iT
 iT
 iT
 go
-iT
-iT
+Mz
+Mz
 aw
 aw
-iT
+Mz
 xe
 eY
 aw
@@ -31062,7 +31371,7 @@ tg
 aw
 aw
 tg
-aw
+Yx
 aw
 Me
 YN
@@ -31149,7 +31458,7 @@ st
 st
 st
 xq
-xq
+xT
 fE
 Mp
 Mp
@@ -31308,18 +31617,18 @@ YN
 Me
 RT
 mo
-mo
-mo
-KE
+FV
+FV
+Ga
 Me
-RT
+xc
 tg
 tg
 KE
 tg
 tg
 tg
-tg
+uY
 tg
 Me
 YN
@@ -31563,11 +31872,11 @@ iT
 YN
 YN
 Me
-eY
+zC
+tK
 tg
 tg
-tg
-zn
+DX
 Me
 tg
 Gh
@@ -31576,7 +31885,7 @@ tg
 tg
 tg
 tg
-tg
+dj
 tg
 Me
 YN
@@ -31638,30 +31947,30 @@ Qi
 Hg
 st
 st
-st
-st
-TA
+SA
+Ag
+iH
 Ey
 Ea
 ok
-st
-st
-st
-st
+Hg
+Hg
+SA
+Ag
 Co
 st
 st
 Gd
 Zj
 st
+SA
 st
-st
-st
-st
+nf
+Dr
 st
 Co
 st
-st
+SA
 st
 ZV
 sp
@@ -31820,8 +32129,8 @@ iT
 YN
 YN
 Me
-eY
-tg
+qE
+Yo
 tg
 tg
 zn
@@ -31829,9 +32138,9 @@ Me
 tg
 az
 EA
-tg
-tg
-tg
+uY
+uY
+dj
 tg
 tg
 tg
@@ -31903,7 +32212,7 @@ st
 st
 st
 st
-st
+SA
 st
 Co
 st
@@ -31911,15 +32220,15 @@ st
 Gd
 Zj
 st
-st
-st
+Ag
+SA
 st
 st
 st
 Co
 st
-st
-st
+Ag
+SA
 TF
 sp
 iT
@@ -32077,7 +32386,7 @@ iT
 YN
 YN
 Me
-eY
+vS
 tg
 tg
 tg
@@ -32089,8 +32398,8 @@ Bf
 Ft
 tg
 tg
-tg
-tg
+uY
+uY
 tg
 Me
 YN
@@ -32160,7 +32469,7 @@ st
 st
 st
 st
-st
+SA
 st
 Co
 st
@@ -32175,7 +32484,7 @@ st
 st
 Co
 st
-st
+Ag
 st
 TF
 sp
@@ -32347,7 +32656,7 @@ tg
 tg
 tg
 tg
-tg
+dj
 tg
 Me
 YN
@@ -32413,7 +32722,7 @@ st
 st
 Co
 Zj
-st
+SA
 st
 st
 st
@@ -32426,13 +32735,13 @@ Gd
 Zj
 st
 st
+SA
+SA
 st
-st
-st
-st
+Ag
 Co
 st
-st
+Ag
 st
 TF
 sp
@@ -32595,7 +32904,7 @@ eY
 tg
 tg
 tg
-zn
+EW
 Me
 xs
 tg
@@ -32604,7 +32913,7 @@ vX
 tg
 tg
 tg
-tg
+uY
 Op
 Me
 YN
@@ -32669,7 +32978,7 @@ st
 st
 st
 Co
-Zj
+Tx
 st
 st
 st
@@ -32683,10 +32992,10 @@ Gd
 Zj
 st
 st
+SA
 st
 st
-st
-st
+SA
 Co
 st
 st
@@ -32850,9 +33159,9 @@ YN
 Me
 eY
 tg
+NC
 tg
-tg
-zn
+su
 Me
 OO
 tg
@@ -32861,7 +33170,7 @@ cO
 tg
 tg
 tg
-tg
+uY
 gN
 Me
 YN
@@ -32900,8 +33209,8 @@ La
 Xt
 Hb
 DI
-Hb
-On
+oY
+hP
 li
 yS
 UQ
@@ -32926,7 +33235,7 @@ st
 st
 st
 Co
-Zj
+Hv
 st
 st
 st
@@ -32942,8 +33251,8 @@ st
 st
 st
 st
-st
-st
+SA
+Ag
 Co
 st
 st
@@ -33109,14 +33418,14 @@ eY
 tg
 tg
 tg
-zn
+su
 Me
 bS
 tg
 tg
 Bm
 tg
-tg
+dj
 tg
 tg
 gN
@@ -33183,7 +33492,7 @@ st
 st
 st
 Co
-Zj
+Tx
 st
 st
 st
@@ -33200,8 +33509,8 @@ st
 st
 st
 st
-st
-Co
+SA
+uS
 st
 st
 st
@@ -33366,14 +33675,14 @@ eY
 tg
 tg
 tg
-zn
+RO
 Me
 Yo
 tg
 bS
 tg
 tg
-tg
+uY
 tg
 tg
 Op
@@ -33431,7 +33740,7 @@ BU
 sp
 Lx
 st
-st
+SA
 Zj
 st
 st
@@ -33457,8 +33766,8 @@ st
 st
 ok
 st
-st
-Co
+SA
+uS
 st
 st
 st
@@ -33620,17 +33929,17 @@ YN
 Me
 Me
 SZ
+ro
+ro
 tg
-tg
-tg
-zn
+su
 Me
 CX
 Uc
 qI
 tg
 tg
-tg
+uY
 tg
 tg
 tg
@@ -33688,10 +33997,10 @@ BU
 Qv
 xq
 st
-st
-Xk
-tI
-tI
+SA
+oz
+rE
+rE
 tI
 tI
 fJ
@@ -33699,9 +34008,9 @@ tI
 in
 Xk
 tI
-tI
-tI
-tI
+rE
+xY
+xY
 tI
 tI
 in
@@ -33714,7 +34023,7 @@ tI
 tI
 tI
 tI
-tI
+rE
 in
 st
 st
@@ -33878,9 +34187,9 @@ Me
 Me
 Me
 SZ
+ro
 tg
-tg
-zn
+su
 Me
 ls
 qI
@@ -33955,10 +34264,10 @@ st
 st
 st
 st
+SA
 st
-st
-st
-st
+SA
+SA
 st
 BL
 As
@@ -34136,8 +34445,8 @@ Me
 Me
 Me
 SZ
-sY
-Tc
+FP
+qv
 Me
 Me
 Me

@@ -68,9 +68,12 @@
 
 //actual areas
 
+/area/usasfb_sullivan/indoors/runway_watchpost
+	name = "Sullivan Aerospace Force Base - Runway Watchpost"
+	icon_state = "outpost_sec_3"
+
 area/usasfb_sullivan/indoors/ammo_elevator
 	name = "Sullivan Aerospace Force Base - Ammunition Storage"
-
 
 area/usasfb_sullivan/indoors/security
 	name = "Sullivan Aerospace Force Base - Airfield Security"
