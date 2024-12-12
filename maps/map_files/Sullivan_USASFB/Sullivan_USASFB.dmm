@@ -1073,7 +1073,7 @@
 	pixel_x = 9
 	},
 /obj/structure/machinery/door_control/brbutton/alt{
-	id = Hangar 1-1 Cycle;
+	id = "Hangar 1-1 Cycle";
 	pixel_x = -5
 	},
 /turf/open/floor/asteroidfloor,
