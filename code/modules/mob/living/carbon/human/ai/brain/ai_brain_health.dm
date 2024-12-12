@@ -6,6 +6,8 @@
 		/obj/item/storage/pill_bottle/bicaridine,
 		/obj/item/storage/pill_bottle/merabica,
 		/obj/item/storage/pill_bottle/tricord,
+		/obj/item/tool/weldingtool,
+		/obj/item/stack/nanopaste,
 	)
 
 	var/static/list/burn_heal_items = list(
@@ -15,6 +17,8 @@
 		/obj/item/storage/pill_bottle/kelotane,
 		/obj/item/storage/pill_bottle/keloderm,
 		/obj/item/storage/pill_bottle/tricord,
+		/obj/item/stack/cable_coil,
+		/obj/item/stack/nanopaste,
 	)
 
 	var/static/list/tox_heal_items = list(

@@ -205,6 +205,9 @@
 				return TRUE
 
 /obj/item/stack/medical/advanced/bruise_pack/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	if(issynth(target))
+		return FALSE
+
 	for(var/obj/limb/limb as anything in target.limbs)
 		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
 			return TRUE
@@ -310,6 +313,9 @@
 				return TRUE
 
 /obj/item/stack/medical/advanced/ointment/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	if(issynth(target))
+		return FALSE
+
 	for(var/obj/limb/limb as anything in target.limbs)
 		for(var/datum/wound/wound in limb.wounds)
 			if(wound.internal || wound.damage_type == BRUTE)

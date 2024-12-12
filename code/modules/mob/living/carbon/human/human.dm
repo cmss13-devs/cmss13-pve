@@ -1193,7 +1193,7 @@
 		else
 			if(tracker_setting in squad_leader_trackers)
 				var/datum/squad/S = GLOB.RoleAuthority.squads_by_type[squad_leader_trackers[tracker_setting]]
-				H = S.squad_leader
+				H = S?.squad_leader
 				tracking_suffix = tracker_setting
 
 	if(!H || H.w_uniform?.sensor_mode != SENSOR_MODE_LOCATION)

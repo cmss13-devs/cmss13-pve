@@ -133,6 +133,7 @@
 		var/obj/item/weapon/gun/shotgun/pump/shotgun = primary_weapon
 		addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, pump_shotgun), tied_human), shotgun.pump_delay)
 		addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, start_fire), null, brain.current_target, null, null, null, TRUE), max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1) // max with fire delay
+		
 /* Basira doesn't need cocking???
 	else if(istype(primary_weapon, /obj/item/weapon/gun/boltaction))
 		var/obj/item/weapon/gun/boltaction/bolt = primary_weapon

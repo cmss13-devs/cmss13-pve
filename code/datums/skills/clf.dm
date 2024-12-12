@@ -57,7 +57,7 @@ COLONIAL LIBERATION FRONT
 	)
 
 /datum/skills/clf/sniper
-	name = "CLF Specialist"
+	name = "CLF Sniper"
 	skills = list(
 		SKILL_MEDICAL = SKILL_MEDICAL_TRAINED,
 		SKILL_CQC = SKILL_CQC_TRAINED,

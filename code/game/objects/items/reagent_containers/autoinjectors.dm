@@ -74,7 +74,7 @@
 	update_icon()
 
 /obj/item/reagent_container/hypospray/autoinjector/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
-	if(!uses_left)
+	if(!uses_left || issynth(target))
 		return FALSE
 
 	var/datum/reagent/reagent_datum = GLOB.chemical_reagents_list[chemname]
