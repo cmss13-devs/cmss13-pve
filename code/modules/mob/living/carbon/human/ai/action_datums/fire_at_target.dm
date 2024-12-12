@@ -101,6 +101,9 @@
 		if(tile.density)
 			return FALSE
 
+		if(locate(/obj/structure/machinery/door) in tile)
+			return FALSE
+
 		for(var/mob/living/carbon/human/possible_friendly in tile)
 			if(possible_friendly == tied_human)
 				continue
