@@ -14,6 +14,9 @@
 	if(!brain.primary_weapon)
 		return 0
 
+	if(!COOLDOWN_FINISHED(brain, stop_fire_cooldown))
+		return 0
+
 	var/turf/target_turf = brain.target_turf
 	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen) && (brain.gun_data.maximum_range <= brain.view_distance))
 
@@ -43,7 +46,7 @@
 	. = ..()
 
 	var/obj/item/weapon/gun/primary_weapon = brain.primary_weapon
-	if(!primary_weapon || brain.active_grenade_found)
+	if(!primary_weapon || brain.active_grenade_found || !COOLDOWN_FINISHED(brain, stop_fire_cooldown))
 		return ONGOING_ACTION_COMPLETED
 
 	var/should_fire_offscreen = (brain.target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen))
@@ -127,32 +130,10 @@
 
 	currently_firing = TRUE
 
-	var/obj/item/weapon/gun/primary_weapon = brain.primary_weapon
-	if(istype(primary_weapon, /obj/item/weapon/gun/shotgun/pump))
-		currently_firing = FALSE
-		var/obj/item/weapon/gun/shotgun/pump/shotgun = primary_weapon
-		addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, pump_shotgun), tied_human), shotgun.pump_delay)
-		addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, start_fire), null, brain.current_target, null, null, null, TRUE), max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1) // max with fire delay
-		
-/* Basira doesn't need cocking???
-	else if(istype(primary_weapon, /obj/item/weapon/gun/boltaction))
-		var/obj/item/weapon/gun/boltaction/bolt = primary_weapon
-		currently_firing = FALSE
-		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, unique_action), tied_human), 1)
-		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, unique_action), tied_human), bolt.bolt_delay + 1)
-		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, start_fire), null, brain.current_target, null, null, null, TRUE), (bolt.bolt_delay * 2) + 1)
-*/
-	else if(primary_weapon.gun_firemode == GUN_FIREMODE_SEMIAUTO)
-		currently_firing = FALSE
-		addtimer(CALLBACK(primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, brain.current_target, null, null, null, TRUE), primary_weapon.get_fire_delay())
-
-	else if(primary_weapon.gun_firemode == GUN_FIREMODE_AUTOMATIC)
-		rounds_burst_fired++
-
 	var/datum/firearm_appraisal/gun_data = brain.gun_data
 	if(brain.should_reload()) // note that bullet removal comes after comsig is triggered
 		if(gun_data?.disposable)
-			tied_human.drop_held_item(primary_weapon)
+			tied_human.drop_held_item(brain.primary_weapon)
 			brain.set_primary_weapon(null)
 		qdel(src)
 		return
@@ -196,4 +177,32 @@
 		stop_firing(brain)
 		return
 
-	primary_weapon?.set_target(shoot_next)
+	if(istype(brain.primary_weapon, /obj/item/weapon/gun/shotgun/pump))
+		currently_firing = FALSE
+		var/obj/item/weapon/gun/shotgun/pump/shotgun = brain.primary_weapon
+		addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, pump_shotgun), tied_human), shotgun.pump_delay)
+		//addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, start_fire), null, brain.current_target, null, null, null, TRUE), max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1) // max with fire delay
+		COOLDOWN_START(brain, stop_fire_cooldown, max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1)
+		stop_firing(brain)
+		qdel(src)
+		return
+
+	else if(istype(brain.primary_weapon, /obj/item/weapon/gun/boltaction))
+		var/obj/item/weapon/gun/boltaction/bolt = brain.primary_weapon
+		currently_firing = FALSE
+		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, unique_action), tied_human), 1)
+		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, unique_action), tied_human), bolt.bolt_delay + 1)
+		//addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, start_fire), null, brain.current_target, null, null, null, TRUE), (bolt.bolt_delay * 2) + 1)
+		COOLDOWN_START(brain, stop_fire_cooldown, max(bolt.bolt_delay * 2, bolt.get_fire_delay()) + 1)
+		stop_firing(brain)
+		qdel(src)
+		return
+
+	else if(brain.primary_weapon.gun_firemode == GUN_FIREMODE_SEMIAUTO)
+		currently_firing = FALSE
+		addtimer(CALLBACK(brain.primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, brain.current_target, null, null, null, TRUE), brain.primary_weapon.get_fire_delay())
+
+	else if(brain.primary_weapon.gun_firemode == GUN_FIREMODE_AUTOMATIC)
+		rounds_burst_fired++
+
+	brain.primary_weapon?.set_target(shoot_next)

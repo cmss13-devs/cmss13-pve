@@ -431,7 +431,7 @@
 
 /datum/human_ai_faction/xeno_cultist
 	faction = FACTION_XENOMORPH
-	in_combat_lines = list(
+	enter_combat_lines = list(
 		"Aha!",
 		"Found you!",
 		"Right where you are...",

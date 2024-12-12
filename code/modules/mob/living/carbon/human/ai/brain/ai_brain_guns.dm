@@ -8,6 +8,8 @@
 	var/tried_reload = FALSE
 	/// Cooldown for if we've fired too many rounds in a burst (for recoil)
 	COOLDOWN_DECLARE(fire_overload_cooldown)
+	/// Generic cooldown for things like shotgun pumping, bolt racking, etc. This stops us from firing for however long specified
+	COOLDOWN_DECLARE(stop_fire_cooldown)
 
 /datum/human_ai_brain/proc/should_reload()
 	if(!primary_weapon)
