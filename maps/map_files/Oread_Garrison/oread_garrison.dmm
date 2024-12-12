@@ -2144,6 +2144,10 @@
 "px" = (
 /turf/open/floor/almayer/dark_sterile,
 /area/space)
+"pA" = (
+/obj/structure/bed/roller,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "pF" = (
 /obj/item/flag/plantable/upp,
 /obj/item/clothing/head/uppcap/beret,
@@ -41464,7 +41468,7 @@ sk
 ca
 mK
 Sr
-ca
+pA
 zK
 zK
 "}
