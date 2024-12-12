@@ -396,6 +396,7 @@
 	playsound(user, 'sound/weapons/gun_shotgun_shell_insert.ogg', 15, TRUE)
 	stored_item = null
 	update_icon()
+	return TRUE
 
 /obj/item/clothing/shoes/update_clothing_icon()
 	if(ismob(loc))
