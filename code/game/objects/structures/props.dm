@@ -203,7 +203,6 @@
 	icon = 'icons/obj/structures/props/aerospace_planes.dmi'
 	icon_state = "evac_usaf"
 
-
 /obj/structure/prop/dam/gravestone
 	name = "grave marker"
 	desc = "A grave marker, in the traditional Japanese style."
