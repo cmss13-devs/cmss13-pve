@@ -45,6 +45,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	/// If false, cannot be assigned to a squad
 	var/can_assign_squad = TRUE
 
+	/// Ref to the latest weapon we've drawn as a melee
+	var/obj/item/drawn_melee_weapon
+
 /datum/human_ai_brain/New(mob/living/carbon/human/tied_human)
 	. = ..()
 	src.tied_human = tied_human
@@ -77,6 +80,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 	target_turf = null
 	shot_at = null
+	drawn_melee_weapon = null
 	lose_target()
 
 	for(var/action in ongoing_actions)
@@ -284,6 +288,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		say_exit_combat_line()
 		if(!sniper_home)
 			holster_primary()
+		holster_melee()
 
 	if(current_cover)
 		if(!prob(peek_cover_chance))

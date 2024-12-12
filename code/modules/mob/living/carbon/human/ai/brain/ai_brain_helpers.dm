@@ -107,6 +107,7 @@
 
 	return tied_human.equip_to_slot_if_possible(primary_weapon, WEAR_J_STORE, TRUE)
 
+/// Melee system currently only supports bootknives.
 /datum/human_ai_brain/proc/unholster_melee()
 	if(istype(tied_human.l_hand, /obj/item) || istype(tied_human.r_hand, /obj/item))
 		return TRUE
@@ -116,7 +117,24 @@
 		tied_human.drop_held_item(cur_hand)
 
 	if(tied_human.shoes)
-		return tied_human.shoes.remove_item(tied_human)
+		var/obj/item/melee_weapon = tied_human.shoes.remove_item(tied_human)
+		drawn_melee_weapon = melee_weapon
+		RegisterSignal(drawn_melee_weapon, COMSIG_ITEM_DROPPED, PROC_REF(on_melee_dropped))
+		return melee_weapon
+
+/datum/human_ai_brain/proc/holster_melee()
+	if(!drawn_melee_weapon || (drawn_melee_weapon.loc != tied_human))
+		UnregisterSignal(drawn_melee_weapon, COMSIG_ITEM_DROPPED)
+		drawn_melee_weapon = null
+		return TRUE
+
+	if(tied_human.shoes && tied_human.shoes.can_be_inserted(drawn_melee_weapon))
+		return tied_human.shoes.attempt_insert_item(tied_human, drawn_melee_weapon)
+
+	tied_human.drop_held_item(drawn_melee_weapon)
+	UnregisterSignal(drawn_melee_weapon, COMSIG_ITEM_DROPPED)
+	drawn_melee_weapon = null
+	return
 
 /datum/human_ai_brain/proc/unholster_any_weapon()
 	if(unholster_melee())
