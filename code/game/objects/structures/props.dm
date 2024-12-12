@@ -189,18 +189,19 @@
 		Update()
 
 /obj/structure/prop/evac
-	name = "EVAC-3F Multirole Fighter"
-	desc = "A state of the art EVAC-3F aerospace fighter used by the USCM. These fighters, in use by the USCM are designed to be modular and fulfil a variety of purposes. However, these aircraft have long seen better day on the Almayer, with extensive internal wiring damage and unfinished repairs to the bomb-bays."
-	icon = 'icons/obj/structures/props/aerospace_planes.dmi'
-	icon_state = "evac_uscm"
-	bound_height = 256
-	bound_width = 256
-
-/obj/structure/prop/evac/usaf
-	name = "EVAC-3O Reconnaissance Fighter"
-	desc = "High tech, silver coated EVAC-3O used by the USAF in deep recon mission. The thermal-absorbent paint alone probably costs more than your whole paycheck. Unfortunately, however, this jet was in the middle of repairs during the outbreak."
+	name = "EVAC-3R Long-Range Fighter"
+	desc = "The Alphatech Hardware EVAC-3 Series Aerospace Superiority Trans Atmospheric Fighter, also known as the EVAC-3, is a lightly armoured fighter capable of up to Mach 15. This model is configured to a one-seater, cryosleep-enabled variant for long flight-time missions."
 	icon = 'icons/obj/structures/props/aerospace_planes.dmi'
 	icon_state = "evac_usasf"
+	bound_height = 256
+	bound_width = 256
+	density = TRUE
+
+/obj/structure/prop/evac/uscm
+	name = "EVAC-3F Multirole Fighter"
+	desc = "The Alphatech Hardware EVAC-3 Series Aerospace Superiority Trans Atmospheric Fighter, also known as the EVAC-3, is a lightly armoured fighter capable of up to Mach 15. This model is visibly undergoing extensive repairs to the canopy and wings."
+	icon_state = "evac_uscm"
+
 
 /obj/structure/prop/dam/gravestone
 	name = "grave marker"
