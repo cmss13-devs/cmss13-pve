@@ -428,3 +428,77 @@
 	reload_lines = list() // same here
 	reload_internal_mag_lines = list()
 	need_healing_lines = list()
+
+/datum/human_ai_faction/xeno_cultist
+	faction = FACTION_XENOMORPH
+	in_combat_lines = list(
+		"Aha!",
+		"Found you!",
+		"Right where you are...",
+		"This won't take long.",
+		"Intruder!",
+		"Oppressor!",
+		"Infidel!",
+		"I found the oppressor!",
+		"O Ascended One, give us your strength!",
+		"Begone infidel!",
+		"Do not let them pass!",
+		"Banish them!",
+		"Silence them!",
+		"For the Ascended!",
+		"For the Hive!",
+		"You will regret this.",
+		"Begone!",
+		"This won't take long.",
+		"...!",
+	)
+	exit_combat_lines = list(
+		"It is silent.",
+		"Hush...",
+		"Nothing.",
+		"It is done. For now...",
+		"...",
+	)
+	squad_member_death_lines = list(
+		"What have you done?!",
+		"May they find purpose beyond...",
+		"This cannot be...!",
+		"Avenge them!",
+		"...",
+	)
+	reload_lines = list(
+		"Empty.",
+		"Click.",
+		"Zero.",
+		"What.",
+		"...",
+		"...!",
+	)
+	reload_internal_mag_lines = list(
+		"Empty.",
+		"Click.",
+		"Zero.",
+		"What.",
+		"...",
+		"...!",
+	)
+	grenade_thrown_lines = list(
+		"I brought a present...!",
+		"We bear gifts...!",
+		"This is for you...!",
+	)
+
+/datum/human_ai_faction/xeno_cultist/alpha
+	faction = FACTION_XENOMORPH_ALPHA
+
+/datum/human_ai_faction/xeno_cultist/bravo
+	faction = FACTION_XENOMORPH_BRAVO
+
+/datum/human_ai_faction/xeno_cultist/charlie
+	faction = FACTION_XENOMORPH_CHARLIE
+
+/datum/human_ai_faction/xeno_cultist/delta
+	faction = FACTION_XENOMORPH_DELTA
+
+/datum/human_ai_faction/xeno_cultist/corrupted
+	faction = FACTION_XENOMORPH_CORRPUTED
