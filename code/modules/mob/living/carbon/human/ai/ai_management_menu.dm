@@ -78,6 +78,18 @@
 			ui.user.client?.debug_variables(gotten_ref)
 			return TRUE
 
+		if("jump_to")
+			if(!params["ref"])
+				return
+
+			var/datum/human_ai_brain/brain = locate(params["ref"])
+
+			if(istype(ui.user, /mob/dead/observer))
+				var/mob/dead/observer/ghost = ui.user
+				if(brain.tied_human?.loc)
+					ghost.JumpToCoord(brain.tied_human.x, brain.tied_human.y, brain.tied_human.z)
+			return TRUE
+
 		if("create_squad")
 			SShuman_ai.create_new_squad()
 			return TRUE

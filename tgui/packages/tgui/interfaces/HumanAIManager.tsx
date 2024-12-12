@@ -166,6 +166,15 @@ const CreatedOrder = (props) => {
         ) : (
           <>
             <Button
+              content="JMP"
+              tooltip={order.ref}
+              onClick={() =>
+                act('jump_to', {
+                  ref: order.ref,
+                })
+              }
+            />
+            <Button
               content="VV"
               tooltip={order.ref}
               onClick={() =>
