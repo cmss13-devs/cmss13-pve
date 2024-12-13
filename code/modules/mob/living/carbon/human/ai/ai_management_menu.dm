@@ -82,12 +82,12 @@
 			if(!params["ref"])
 				return
 
-			var/datum/human_ai_brain/brain = locate(params["ref"])
+			var/mob/living/carbon/human/ai_human = locate(params["ref"])
 
 			if(istype(ui.user, /mob/dead/observer))
 				var/mob/dead/observer/ghost = ui.user
-				if(brain.tied_human?.loc)
-					ghost.JumpToCoord(brain.tied_human.x, brain.tied_human.y, brain.tied_human.z)
+				if(ai_human?.loc)
+					ghost.JumpToCoord(ai_human.x, ai_human.y, ai_human.z)
 			return TRUE
 
 		if("create_squad")

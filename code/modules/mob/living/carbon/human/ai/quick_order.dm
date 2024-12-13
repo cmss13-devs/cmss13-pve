@@ -9,7 +9,7 @@
 	var/list/ai_humans_selected = list()
 
 /datum/human_ai_quick_order/Destroy(force, ...)
-	holder.click_intercept = src
+	holder.click_intercept = null
 	cornerA = null
 	cornerB = null
 	holder.images -= preview

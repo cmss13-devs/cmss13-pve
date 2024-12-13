@@ -1971,6 +1971,7 @@
 #include "code\modules\mob\living\carbon\human\whisper.dm"
 #include "code\modules\mob\living\carbon\human\ai\ai_equipment.dm"
 #include "code\modules\mob\living\carbon\human\ai\ai_management_menu.dm"
+#include "code\modules\mob\living\carbon\human\ai\breach_placer.dm"
 #include "code\modules\mob\living\carbon\human\ai\defense_creator.dm"
 #include "code\modules\mob\living\carbon\human\ai\faction_management_panel.dm"
 #include "code\modules\mob\living\carbon\human\ai\firearm_appraisal.dm"

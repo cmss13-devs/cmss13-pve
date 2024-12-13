@@ -72,6 +72,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/cmd_admin_say, /*staff-only ooc chat*/
 	/client/proc/cmd_mod_say, /* alternate way of typing asay, no different than cmd_admin_say  */
 	/client/proc/cmd_admin_tacmaps_panel,
+	/client/proc/other_records,
 	/datum/admins/proc/toggle_ai,
 	/datum/admins/proc/toggle_human_ai,
 	/datum/admins/proc/create_human_ai_patrol,
@@ -79,11 +80,11 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/open_human_faction_management_panel,
 	/client/proc/open_human_defense_creator_panel,
 	/client/proc/create_human_ai,
-	/client/proc/other_records,
 	/client/proc/fortify_room,
 	/client/proc/make_human_ai,
 	/datum/admins/proc/create_human_ai_sniper,
 	/client/proc/quick_order_ai_approach,
+	/client/proc/place_plastic_explosives,
 	))
 
 

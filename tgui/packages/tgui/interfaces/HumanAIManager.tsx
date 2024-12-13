@@ -166,15 +166,6 @@ const CreatedOrder = (props) => {
         ) : (
           <>
             <Button
-              content="JMP"
-              tooltip={order.ref}
-              onClick={() =>
-                act('jump_to', {
-                  ref: order.ref,
-                })
-              }
-            />
-            <Button
               content="VV"
               tooltip={order.ref}
               onClick={() =>
@@ -271,6 +262,14 @@ const HumanAIReadout = (props) => {
           ) : (
             <>
               <Button
+                content="JMP"
+                onClick={() =>
+                  act('jump_to', {
+                    ref: human.ref,
+                  })
+                }
+              />
+              <Button
                 content="VV (H)"
                 tooltip={human.ref}
                 onClick={() =>
@@ -282,6 +281,7 @@ const HumanAIReadout = (props) => {
                   float: 'left',
                 }}
               />
+              <br />
               <Button
                 content="VV (B)"
                 tooltip={human.brain_ref}
