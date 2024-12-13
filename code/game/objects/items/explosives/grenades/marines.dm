@@ -562,7 +562,7 @@
 		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
 		return
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	smoke.set_up(smoke_radius, 0, get_turf(src), null, 6)
+	smoke.set_up(smoke_radius, 0, get_turf(src))
 	smoke.start()
 	qdel(src)
 
@@ -576,7 +576,7 @@
 		detonate = FALSE
 	if(active && detonate) // Active, and we reached our destination.
 		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-		smoke.set_up(smoke_radius, 0, get_turf(src), null, 6)
+		smoke.set_up(smoke_radius, 0, get_turf(src))
 		smoke.start()
 		qdel(src)
 

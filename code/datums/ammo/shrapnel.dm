@@ -115,9 +115,9 @@
 
 /datum/ammo/bullet/shrapnel/incendiary/heavy	//Maximum warcrimes edition
 	accurate_range = 32
-	max_range = 8
+	max_range = 10
 	shell_speed = AMMO_SPEED_TIER_2
-	damage = 35
+	damage = 20
 	penetration = ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/shrapnel/incendiary/heavy/set_bullet_traits()
