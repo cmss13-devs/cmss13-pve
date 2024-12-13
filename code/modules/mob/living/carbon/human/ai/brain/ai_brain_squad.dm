@@ -1,4 +1,6 @@
 /datum/human_ai_squad
+	/// Name of the squad, only visible to GMs
+	var/name
 	/// Numeric ID of the squad
 	var/id
 	/// The AI humans in the squad

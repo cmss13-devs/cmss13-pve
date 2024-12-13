@@ -8,8 +8,8 @@ type Squad = {
   order: string;
   members: string;
   ref: string;
-  primary_order: string;
   squad_leader: string;
+  name: string;
 };
 
 type AIHuman = {
@@ -363,6 +363,15 @@ const SquadReadout = (props) => {
             }
           />
         )}
+        <Button
+          content="Rename"
+          tooltip={'Set squad name, visible to GMs.'}
+          onClick={() =>
+            act('rename_squad', {
+              squad: squad.id,
+            })
+          }
+        />
         <Button.Confirm
           color="red"
           confirmContent="Confirm?"

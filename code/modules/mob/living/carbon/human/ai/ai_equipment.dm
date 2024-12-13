@@ -161,7 +161,7 @@
 
 /datum/equipment_preset/upp/sniper
 	name = "UPP Marksman"
-
+	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/upp/specialist
 	assignment = JOB_UPP_SNIPER
 	rank = JOB_UPP_SNIPER

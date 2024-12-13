@@ -48,6 +48,7 @@
 			name_list += brain.tied_human?.real_name
 		data["squads"] += list(list(
 			"id" = squad.id,
+			"name" = squad.name,
 			"members" = english_list(name_list),
 			"order" = squad.current_order?.name,
 			"ref" = REF(squad),
@@ -92,6 +93,14 @@
 
 		if("create_squad")
 			SShuman_ai.create_new_squad()
+			return TRUE
+
+		if("rename_squad")
+			if(!params["squad"])
+				return
+
+			var/datum/human_ai_squad/squad = SShuman_ai.get_squad("[params["squad"]]")
+			squad.name = tgui_input_text(ui.user, "Input new squad name", "Input")
 			return TRUE
 
 		if("assign_to_squad")
