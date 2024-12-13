@@ -24,10 +24,7 @@
 	if(brain.healing_someone)
 		return 0
 
-	if(!get_dist(brain.tied_human, brain.sniper_home))
-		return 0
-
-	return 16
+	return 12
 
 /datum/ai_action/sniper_nest/Added()
 	initial_view = brain.view_distance
