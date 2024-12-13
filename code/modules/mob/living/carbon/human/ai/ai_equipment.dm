@@ -85,7 +85,7 @@
 /datum/equipment_preset/clf/specialist/ai/flamer
 	name = "CLF Specialist - Flamer (AI)"
 
-/datum/equipment_preset/clf/specialist/ai/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/clf/specialist/ai/flamer/load_gear(mob/living/carbon/human/new_human)
 
 	//jumpsuit and their webbing
 	var/obj/item/clothing/under/colonist/clf/CLF = new()
