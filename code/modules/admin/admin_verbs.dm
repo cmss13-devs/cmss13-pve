@@ -85,6 +85,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/datum/admins/proc/create_human_ai_sniper,
 	/client/proc/quick_order_ai_approach,
 	/client/proc/place_plastic_explosives,
+	/client/proc/toggle_human_ai_tweaks,
 	))
 
 
