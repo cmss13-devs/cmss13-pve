@@ -1,0 +1,13 @@
+{
+    "map_name": "Oread Garrison",
+    "map_path": "map_files/Oread_Garrison",
+    "map_file": "Oread_Garrison.dmm",
+    "webmap_url": "Oread",
+
+    "weather_holder": "/datum/weather_ss_map_holder/lv624",
+
+    "map_item_type": "/obj/item/map/oread_map",
+
+    "camouflage": "jungle"
+
+}
