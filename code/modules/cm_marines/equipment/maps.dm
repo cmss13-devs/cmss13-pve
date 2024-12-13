@@ -146,7 +146,7 @@
 	color = "cyan"
 
 /obj/item/map/oread_map
-	name = \improper Oread Garrison map"
+	name = "\improper Oread Garrison map"
 	desc = "A distorted orbital scan of the Oread Garrison"
 	html_link = "https://imgur.com/VEUXNov"
 	color = "cyan"
