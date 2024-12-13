@@ -122,18 +122,21 @@
 		RegisterSignal(drawn_melee_weapon, COMSIG_ITEM_DROPPED, PROC_REF(on_melee_dropped))
 		return melee_weapon
 
+/datum/human_ai_brain/proc/on_melee_dropped()
+	SIGNAL_HANDLER
+
+	UnregisterSignal(drawn_melee_weapon, COMSIG_ITEM_DROPPED)
+	drawn_melee_weapon = null
+
 /datum/human_ai_brain/proc/holster_melee()
 	if(!drawn_melee_weapon || (drawn_melee_weapon.loc != tied_human))
-		UnregisterSignal(drawn_melee_weapon, COMSIG_ITEM_DROPPED)
-		drawn_melee_weapon = null
+		on_melee_dropped()
 		return TRUE
 
 	if(tied_human.shoes && tied_human.shoes.can_be_inserted(drawn_melee_weapon))
 		return tied_human.shoes.attempt_insert_item(tied_human, drawn_melee_weapon)
 
 	tied_human.drop_held_item(drawn_melee_weapon)
-	UnregisterSignal(drawn_melee_weapon, COMSIG_ITEM_DROPPED)
-	drawn_melee_weapon = null
 	return
 
 /datum/human_ai_brain/proc/unholster_any_weapon()
