@@ -1981,6 +1981,7 @@
 /obj/structure/barricade/handrail/wire{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/space)
 "oq" = (
@@ -2314,6 +2315,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating,
 /area/space)
+"qW" = (
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/colony_floodlight,
+/turf/open/floor/plating,
+/area/space)
 "qX" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/jungle/vines/light_2,
@@ -2393,6 +2399,7 @@
 /obj/structure/barricade/handrail/wire{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/space)
 "rQ" = (
@@ -2715,6 +2722,10 @@
 /obj/structure/machinery/telecomms/relay/preset/tower/mapcomms,
 /turf/open/floor/kutjevo/colors/blue,
 /area/space)
+"tP" = (
+/obj/structure/machinery/colony_floodlight,
+/turf/open/floor/plating,
+/area/space)
 "tR" = (
 /obj/structure/barricade/handrail/wire,
 /obj/effect/decal/cleanable/blood/oil,
@@ -2749,6 +2760,9 @@
 	},
 /obj/item/tool/screwdriver{
 	pixel_x = 3
+	},
+/obj/effect/spawner/prop_gun/m41aMK1{
+	pixel_y = 7
 	},
 /turf/open/floor/almayer/plate,
 /area/space)
@@ -3275,7 +3289,7 @@
 /turf/open/floor/plating,
 /area/space)
 "yj" = (
-/obj/structure/machinery/computer/supply_drop_console/limited/alternate,
+/obj/structure/prop/almayer/computers/sensor_computer2,
 /turf/open/floor/almayer/plating,
 /area/space)
 "yk" = (
@@ -4798,13 +4812,13 @@
 /area/space)
 "Jv" = (
 /obj/structure/surface/table/almayer,
-/obj/effect/spawner/prop_gun/m41aMK1{
-	pixel_y = 7
-	},
 /obj/item/tool/screwdriver,
 /obj/item/prop/helmetgarb/gunoil{
 	pixel_x = 10;
 	pixel_y = 1
+	},
+/obj/item/weapon/gun/pistol/m1911/socom{
+	pixel_y = 6
 	},
 /turf/open/floor/airless/asteroidfloor,
 /area/space)
@@ -6186,7 +6200,10 @@
 	},
 /obj/item/prop/helmetgarb/gunoil{
 	pixel_x = -10;
-	pixel_y = 6
+	pixel_y = 2
+	},
+/obj/effect/landmark/wo_supplies/guns/rare/m41aMK1{
+	pixel_y = 4
 	},
 /turf/open/floor/almayer/plate,
 /area/space)
@@ -24391,9 +24408,9 @@ ON
 ON
 ON
 ON
-ON
-Nm
-ON
+ca
+ca
+ca
 ON
 ON
 Nm
@@ -29271,7 +29288,7 @@ Mw
 eN
 eN
 dG
-Rz
+qW
 jo
 Xl
 zz
@@ -29293,7 +29310,7 @@ iB
 QW
 CD
 RU
-Rz
+qW
 To
 Nm
 Nm
@@ -31215,7 +31232,7 @@ Mw
 tp
 tp
 Mj
-Ww
+tP
 Vn
 PG
 fY
@@ -31237,7 +31254,7 @@ eu
 fY
 KH
 Vn
-Ww
+tP
 yT
 ca
 Mw
