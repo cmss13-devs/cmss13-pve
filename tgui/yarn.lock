@@ -3146,10 +3146,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dompurify@npm:^2.4.9":
-  version: 2.4.9
-  resolution: "dompurify@npm:2.4.9"
-  checksum: 10c0/cb847f5eacd9ff326dfc4566875709d050dc78c58837cc3afb83386992f6e7002295358cb9f75d66a9b638fe6da71b7d02ffa82f121713f78f7f3891394dece8
+"dompurify@npm:^2.5.4":
+  version: 2.5.8
+  resolution: "dompurify@npm:2.5.8"
+  checksum: 10c0/4101708d190b67be00350369d72619266a2e0ebb7dcab12628cf07711329b1df12239baea613df41b65cba571128e8ea4c29c442f4e2c98670a9bb5563521f03
   languageName: node
   linkType: hard
 
@@ -8300,7 +8300,7 @@ __metadata:
     "@types/node": "npm:^20.12.3"
     "@types/react": "npm:^18.2.74"
     common: "workspace:*"
-    dompurify: "npm:^2.4.9"
+    dompurify: "npm:^2.5.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     tgui: "workspace:*"
@@ -8381,7 +8381,7 @@ __metadata:
     "@types/react": "npm:^18.2.74"
     common: "workspace:*"
     dateformat: "npm:^4.6.3"
-    dompurify: "npm:^2.4.9"
+    dompurify: "npm:^2.5.4"
     highlight.js: "npm:^11.9.0"
     jest: "npm:^29.7.0"
     js-yaml: "npm:^4.1.0"
