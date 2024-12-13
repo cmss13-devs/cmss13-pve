@@ -1196,3 +1196,24 @@
 	if(initial(emote.sound))
 		playsound(loc, initial(emote.sound), 50, FALSE)
 	return TRUE
+
+//huge digger
+/obj/structure/prop/invuln/dense/excavator
+	name = "Model 30 Light Excavator"
+	desc = "Weyland-Yutani Corporation's Model 30 Light Excavator. Despite looking like a massive beast, the Model 30 is fairly light when compared to other W-Y terraforming excavators. It's designed to be able to be disassembled for transport and re-assembled on site. This one is a nice orange color."
+	icon = 'icons/obj/structures/props/digger.dmi'
+	icon_state = "digger_orange"
+	layer = ABOVE_MOB_LAYER
+
+/obj/structure/prop/invuln/dense/excavator/gray
+	desc = "Weyland-Yutani Corporation's Model 30 Light Excavator. Despite looking like a massive beast, the Model 30 is fairly light when compared to other W-Y terraforming excavators. It's designed to be able to be disassembled for transport and re-assembled on site. This one is a nice gray color."
+	icon_state = "digger_gray"
+
+/obj/structure/prop/invuln/dense/excavator/Initialize()
+	. = ..()
+	if(dir == SOUTH || NORTH)
+		bound_height = 192
+		bound_width = 96
+	if(dir == WEST || EAST)
+		bound_height = 96
+		bound_width = 192

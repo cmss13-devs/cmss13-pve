@@ -759,3 +759,22 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	desc = "Looks like some of that fruit might be edible."
 	icon_tag = "plant"
 	variations  = 7
+
+/obj/structure/flora/lavaland
+	icon = 'icons/obj/structures/props/lavaland.dmi'
+
+/obj/structure/flora/lavaland/doorknob
+	name = "doorknob mushrooms"
+	desc = "A cluster of mushrooms dubbed 'doorknobs' by the shape and silvery shine of the top."
+	icon_state = "doorknob_1"
+	icon_tag = "doorknob"
+	variations = 4
+	density = FALSE
+
+/obj/structure/flora/lavaland/bluewhale
+	name = "blue whale mushrooms"
+	desc = "Name befitting it's appearance, these mushrooms are called blue whales due to the blue-ish color and gill's visual similarity to baleen on a whale."
+	icon_state = "bluewhale_1"
+	icon_tag = "doorknob"
+	variations = 2
+	density = FALSE
