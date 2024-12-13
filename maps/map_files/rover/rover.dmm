@@ -1196,16 +1196,16 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/canteen)
 "mX" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	has_cryo_gear = 0;
+	job = "Section Sergeant"
+	},
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Platoon Sergeant"
-	},
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
 /obj/item/clothing/under/marine/standard,
+/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "mZ" = (
@@ -1530,11 +1530,11 @@
 "qI" = (
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Platoon Corpsman"
+	job = "Corpsman"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
 /obj/item/clothing/under/marine/medic/standard,
+/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "qN" = (
@@ -1650,8 +1650,8 @@
 	job = "Squad Sergeant"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
 /obj/item/clothing/under/marine/standard,
+/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "rL" = (
@@ -2221,8 +2221,8 @@
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
 /obj/item/clothing/under/marine/standard,
+/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "yP" = (
@@ -3180,8 +3180,8 @@
 	job = "Smartgunner"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
 /obj/item/clothing/under/marine/standard,
+/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Mw" = (
@@ -3190,8 +3190,8 @@
 	job = "Radio Telephone Operator"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
 /obj/item/clothing/under/marine/standard,
+/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "My" = (
@@ -4221,8 +4221,8 @@
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/device/radio/headset/almayer/sof/survivor_forecon,
 /obj/item/clothing/under/marine/standard,
+/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Zx" = (

@@ -240,47 +240,47 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/beanie/tan
 
 /datum/gear/headwear/uscm/beret_green
-	display_name = "USCM beret, green"
+	display_name = "Beret, green"
 	path = /obj/item/clothing/head/beret/cm/green
 
 /datum/gear/headwear/uscm/beret_tan
-	display_name = "USCM beret, tan"
+	display_name = "Beret, tan"
 	path = /obj/item/clothing/head/beret/cm/tan
 
 /datum/gear/headwear/uscm/beret_black
-	display_name = "USCM beret, black"
+	display_name = "Beret, black"
 	path = /obj/item/clothing/head/beret/cm/black
 
 /datum/gear/headwear/uscm/beret_white
-	display_name = "USCM beret, white"
+	display_name = "Beret, white"
 	path = /obj/item/clothing/head/beret/cm/white
 
 /datum/gear/headwear/uscm/beret_alpha
-	display_name = "USCM beret, red flash"
+	display_name = "Beret, red flash"
 	path = /obj/item/clothing/head/beret/cm/alpha
 
 /datum/gear/headwear/uscm/beret_bravo
-	display_name = "USCM beret, yellow flash"
+	display_name = "Beret, yellow flash"
 	path = /obj/item/clothing/head/beret/cm/bravo
 
 /datum/gear/headwear/uscm/beret_charlie
-	display_name = "USCM beret, purple flash"
+	display_name = "Beret, purple flash"
 	path = /obj/item/clothing/head/beret/cm/charlie
 
 /datum/gear/headwear/uscm/beret_delta
-	display_name = "USCM beret, blue flash"
+	display_name = "Beret, blue flash"
 	path = /obj/item/clothing/head/beret/cm/delta
 
 /datum/gear/headwear/uscm/beret_echo
-	display_name = "USCM beret, green flash"
+	display_name = "Beret, green flash"
 	path = /obj/item/clothing/head/beret/cm/echo
 
 /datum/gear/headwear/uscm/beret_foxtrot
-	display_name = "USCM beret, brown flash"
+	display_name = "Beret, brown flash"
 	path = /obj/item/clothing/head/beret/cm/foxtrot
 
 /datum/gear/headwear/uscm/beret_intel
-	display_name = "USCM beret, black flash"
+	display_name = "Beret, black flash"
 	path = /obj/item/clothing/head/beret/cm/intel
 
 /datum/gear/headwear/uscm/boonie_olive
@@ -288,12 +288,21 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/cmcap/boonie
 
 /datum/gear/headwear/uscm/boonie_tan
-	display_name = "USCM boonie hat, tan"
+	display_name = "USCM boonie hat, khaki"
 	path = /obj/item/clothing/head/cmcap/boonie/tan
 
 /datum/gear/headwear/uscm/cap
 	display_name = "USCM cap"
 	path = /obj/item/clothing/head/cmcap
+
+/datum/gear/headwear/uscm/cap_khaki
+	display_name = "USCM cap, khaki"
+	path = /obj/item/clothing/head/cmcap/khaki
+
+/datum/gear/headwear/uscm/cap/sulaco
+	display_name = "USS Golden Arrow cap"
+	path = /obj/item/clothing/head/sulacocap
+	cost = 1
 
 /datum/gear/headwear/uscm/cap/flap
 	display_name = "USCM flapcap"
@@ -440,6 +449,29 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM chaplain helmet patch"
 	path = /obj/item/prop/helmetgarb/chaplain_patch
 	allowed_origins = USCM_ORIGINS
+
+/datum/gear/armor
+	category = "Armor Cosmetics"
+
+/datum/gear/armor/paint_sg
+	display_name = "Black Smartgun Harness Paint"
+	path = /obj/item/clothing/accessory/paint/sg
+	cost = 0
+
+/datum/gear/armor/paint_skull
+	display_name = "M3 Pattern Skull Paint"
+	path = /obj/item/clothing/accessory/paint
+	cost = 0
+
+/datum/gear/armor/paint_heart
+	display_name = "M3 Pattern Heart Paint"
+	path = /obj/item/clothing/accessory/paint/heart
+	cost = 0
+
+/datum/gear/armor/uaflag
+	display_name = "M3 Pattern Flag Paint"
+	path = /obj/item/clothing/accessory/paint/uaflag
+	cost = 0
 
 /datum/gear/paperwork
 	category = "Paperwork"
@@ -1082,9 +1114,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 4
 
 /datum/gear/smoking/weed_joint
-	display_name = "Joint of space weed"
+	display_name = "Joint of weed"
 	path = /obj/item/clothing/mask/cigarette/weed
-	cost = 4
+	cost = 1
 
 /datum/gear/smoking/lighter
 	display_name = "Lighter, cheap"
@@ -1206,9 +1238,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 3
 
 /datum/gear/misc/flak
-	display_name = "M67 flak jacket"
+	display_name = "M67 flak jacket (Blue)"
 	path = /obj/item/clothing/accessory/flak
 	cost = 3
+
+/datum/gear/misc/flak/od
+	display_name = "M67 flak jacket (Green)"
+
+	path = /obj/item/clothing/accessory/flak/od
 
 /datum/gear/misc/servicejacket
 	display_name = "Marine Service Jacket"

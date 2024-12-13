@@ -244,16 +244,16 @@
 /////////////////////////////////////////////
 
 /obj/effect/particle_effect/smoke/phosphorus
-	time_to_live = 3
+	time_to_live = 6
 	smokeranking = SMOKE_RANK_MED
 	var/next_cough = 2 SECONDS
 	var/burn_damage = 40
-	var/applied_fire_stacks = 5
+	var/applied_fire_stacks = 3
 	var/xeno_yautja_reduction = 0.75
 	contact_affects_synths = TRUE
 
 /obj/effect/particle_effect/smoke/phosphorus/weak
-	time_to_live = 2
+	time_to_live = 4
 	smokeranking = SMOKE_RANK_MED
 	burn_damage = 30
 	xeno_yautja_reduction = 0.5
@@ -271,9 +271,13 @@
 			creature.drop_held_item()
 		creature.apply_damage(1, OXY)
 		creature.updatehealth()
+		creature.coughedtime = world.time + next_cough
 		if(creature.coughedtime < world.time)
-			creature.emote("cough")
-			creature.coughedtime = world.time + next_cough
+			if(issynth(creature))
+				creature.visible_message(SPAN_DANGER("[creature]'s skin is sloughing off!"),\
+				SPAN_DANGER("Your skin is sloughing off!"))
+			else
+				creature.emote("cough")
 
 /obj/effect/particle_effect/smoke/phosphorus/contact_skin(mob/living/carbon/creature)
 	/*if (..())
@@ -282,9 +286,9 @@
 	creature.last_damage_data = cause_data
 	if(isyautja(creature) || isxeno(creature))
 		burn_damage *= xeno_yautja_reduction
+	var/reagent = new /datum/reagent/napalm/blue()
 	creature.burn_skin(burn_damage)
-	creature.adjust_fire_stacks(applied_fire_stacks)
-	creature.fire_reagent = new /datum/reagent/napalm/ut()
+	creature.adjust_fire_stacks(applied_fire_stacks, reagent)
 	creature.IgniteMob()
 	creature.updatehealth()
 

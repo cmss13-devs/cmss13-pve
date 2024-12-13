@@ -105,7 +105,6 @@
 /turf/open/floor/carpet,
 /area/template_noop)
 "T" = (
-/obj/effect/landmark/corpsespawner/prison_security,
 /obj/item/clothing/head/helmet/warden{
 	pixel_x = -9;
 	pixel_y = 5
