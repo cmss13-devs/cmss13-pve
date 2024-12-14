@@ -677,8 +677,8 @@
 	desc = "The actual firearm in the 4-piece M56D Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	current_mag = /obj/item/ammo_magazine/smartgun/dirty
 	ammo = /obj/item/ammo_magazine/smartgun/dirty
-	ammo_primary = /datum/ammo/bullet/rifle/heavy/dirty //Toggled ammo type
-	ammo_secondary = /datum/ammo/bullet/rifle/heavy/dirty/ap ///Toggled ammo type
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/irradiated //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/irradiated ///Toggled ammo type
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 
 /obj/item/weapon/gun/smartgun/dirty/Initialize(mapload, ...)
@@ -689,6 +689,8 @@
 //TERMINATOR SMARTGUN
 /obj/item/weapon/gun/smartgun/dirty/elite
 	name = "\improper M56T 'Terminator' smartgun"
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/dirty //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/dirty/ap ///Toggled ammo type
 	desc = "The actual firearm in the 4-piece M56T Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 
 /obj/item/weapon/gun/smartgun/dirty/elite/Initialize(mapload, ...)

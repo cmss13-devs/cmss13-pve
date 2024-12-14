@@ -182,18 +182,24 @@
 	knockback(target, fired_proj, max_range = 2)
 
 // PMC Smartgun
+/datum/ammo/bullet/rifle/heavy/irradiated
+	name = "irradiated 10x28 bullet"
+	debilitate = list(0,0,0,3,0,0,0,1) // Stun,knockdown,knockout,irradiate,stutter,eyeblur,drowsy,agony
+
+/datum/ammo/bullet/rifle/heavy/ap/irradiated
+	name = "irradiated armor-piercing 10x28 bullet"
+	debilitate = list(0,0,0,3,0,0,0,1)
 
 /datum/ammo/bullet/rifle/heavy/dirty
 	name = "irradiated 10x28 bullet"
 	damage = 60
-	debilitate = list(0,0,0,3,0,0,0,1) // Stun,knockdown,knockout,irradiate,stutter,eyeblur,drowsy,agony
+	debilitate = list(0,0,0,3,0,0,0,1)
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
 	damage_falloff = DAMAGE_FALLOFF_TIER_9
 
 /datum/ammo/bullet/rifle/heavy/dirty/ap
 	name = "irradiated armor-piercing 10x28 bullet"
-	debilitate = list(0,0,0,3,0,0,0,1)
 	damage = 45
 	penetration = ARMOR_PENETRATION_TIER_8
 
