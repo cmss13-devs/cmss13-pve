@@ -196,9 +196,7 @@
 	name = "irradiated 10x28 bullet"
 	debilitate = list(0,0,0,3,0,0,0,1)
 	damage = 60
-	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
-	damage_falloff = DAMAGE_FALLOFF_TIER_9
 
 /datum/ammo/bullet/rifle/heavy/ap/dirty
 	name = "irradiated armor-piercing 10x28 bullet"
