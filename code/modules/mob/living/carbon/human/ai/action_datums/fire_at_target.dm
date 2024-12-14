@@ -101,8 +101,8 @@
 		if(tile.density)
 			return FALSE
 
-		for(var/obj/structure/machinery/door/door in tile)
-			if(door.density)
+		for(var/obj/thing in tile)
+			if(thing.density && (thing.projectile_coverage >= PROJECTILE_COVERAGE_MEDIUM))
 				return FALSE
 
 		for(var/mob/living/carbon/human/possible_friendly in tile)
