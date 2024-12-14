@@ -429,7 +429,6 @@
 /area/space)
 "cZ" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/surface/table/almayer,
 /obj/item/storage/toolbox/electrical{
 	pixel_y = 6;
 	pixel_x = -2
@@ -2516,15 +2515,6 @@
 /obj/structure/flora/jungle/vines/light_1,
 /turf/closed/wall/strata_ice/jungle,
 /area/space)
-"sB" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/turf/open/space/basic,
-/area/space)
 "sC" = (
 /obj/structure/filingcabinet{
 	pixel_x = -8
@@ -3618,7 +3608,7 @@
 /area/space)
 "AA" = (
 /obj/structure/window/framed/bunker,
-/turf/closed/wall/r_wall/bunker,
+/turf/open/floor/prison/floor_plate,
 /area/space)
 "AB" = (
 /obj/structure/flora/jungle/vines/light_1,
@@ -4748,17 +4738,6 @@
 /area/space)
 "IP" = (
 /turf/open/floor/almayer/uscm/directional/up_down/north,
-/area/space)
-"IQ" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "GammaBioAtmos";
-	name = "Access Shutter"
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "GammaBioAtmos";
-	name = "Access Shutter"
-	},
-/turf/open/floor/almayer/no_build/test_floor4,
 /area/space)
 "IX" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
@@ -24719,7 +24698,7 @@ iG
 Et
 tv
 IY
-sB
+IY
 IY
 Nm
 ON
@@ -30295,7 +30274,7 @@ ON
 Nm
 ON
 Nm
-IQ
+iQ
 Bz
 aG
 Bz
