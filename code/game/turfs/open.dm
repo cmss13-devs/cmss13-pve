@@ -1184,8 +1184,6 @@
 
 
 
-
-
 //SHUTTLE 'FLOORS'
 //not a child of turf/open/floor because shuttle floors are magic and don't behave like real floors.
 
@@ -1547,6 +1545,7 @@
 	var/default_name = "lava"
 	var/icon_overlay = "overlay"
 	var/covered = FALSE
+	var/atom/movable/vis_obj/lava_overlay/lava_holder
 
 	light_range = 2
 	light_power = 0.75
@@ -1566,14 +1565,24 @@
 	cover_icon_state = "catwalk_glass_alt"
 	covered = TRUE
 
+/atom/movable/vis_obj/lava_overlay
+	vis_flags = VIS_INHERIT_ID|VIS_INHERIT_DIR
+	icon = 'icons/turf/floors/lava.dmi'
+	layer = ABOVE_OBJ_LAYER
+	plane = GAME_PLANE
+
+
 /turf/open/lava/update_icon()
+	. = ..()
 	overlays.Cut()
 	if(covered)
+		. = ..()
 		name = covered_name
 		overlays += image("icon"=src.icon,"icon_state"=cover_icon_state,"layer"=CATWALK_LAYER)
 	if(!covered)
+		. = ..()
 		name = default_name
-		overlays += image("icon"=src.icon,"icon_state"=icon_overlay,"layer"=ABOVE_MOB_LAYER)
+		vis_contents += lava_holder
 
 /turf/open/lava/catwalk/Initialize(mapload, ...)
 	. = ..()
@@ -1598,7 +1607,7 @@
 		return TRUE
 	if (istype(subject, /obj))
 		var/obj/obj_subject = subject
-		if(obj_subject.invisibility_value > 35 || obj_subject.unacidable = TRUE || obj_subject.indestructible = TRUE)
+		if(obj_subject.invisibility > 35 || obj_subject.unacidable == TRUE || obj_subject.indestructible == TRUE)
 			return
 		visible_message(SPAN_BOLDWARNING("[obj_subject.name] falls into the lava and begins to melt!"))
 		obj_subject.mouse_opacity = 0

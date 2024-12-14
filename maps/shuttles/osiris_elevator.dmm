@@ -1,0 +1,133 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/shuttle/elevator,
+/area/shuttle/trijent_shuttle/elevator)
+"g" = (
+/turf/closed/shuttle/elevator{
+	dir = 1
+	},
+/area/shuttle/trijent_shuttle/elevator)
+"q" = (
+/obj/structure/machinery/computer/shuttle/elevator_controller{
+	pixel_y = 37
+	},
+/turf/open/shuttle/escapepod/west,
+/area/shuttle/trijent_shuttle/elevator)
+"r" = (
+/turf/closed/shuttle/elevator/gears,
+/area/shuttle/trijent_shuttle/elevator)
+"u" = (
+/turf/open/shuttle/escapepod/west,
+/area/shuttle/trijent_shuttle/elevator)
+"w" = (
+/turf/closed/shuttle/elevator{
+	dir = 4
+	},
+/area/shuttle/trijent_shuttle/elevator)
+"F" = (
+/obj/structure/machinery/door/poddoor/two_tile/four_tile/pivot{
+	base_icon_state = "hatch";
+	icon_state = "hatch1";
+	openspeed = 22;
+	name = "\improper Elevator Hatch";
+	dir = 4;
+	unacidable = 1;
+	id = "elevator"
+	},
+/turf/open/space/basic,
+/area/shuttle/trijent_shuttle/elevator)
+"H" = (
+/turf/open/shuttle/escapepod/floor4,
+/area/shuttle/trijent_shuttle/elevator)
+"I" = (
+/turf/open/space/basic,
+/area/shuttle/trijent_shuttle/elevator)
+"K" = (
+/turf/closed/shuttle/elevator{
+	dir = 5
+	},
+/area/shuttle/trijent_shuttle/elevator)
+"N" = (
+/turf/closed/shuttle/elevator{
+	dir = 9
+	},
+/area/shuttle/trijent_shuttle/elevator)
+"R" = (
+/turf/closed/shuttle/elevator/freight,
+/area/shuttle/trijent_shuttle/elevator)
+"Y" = (
+/turf/closed/shuttle/elevator{
+	dir = 6
+	},
+/area/shuttle/trijent_shuttle/elevator)
+"Z" = (
+/obj/docking_port/mobile/trijent_elevator/osiriscaverns,
+/turf/closed/shuttle/elevator{
+	dir = 10
+	},
+/area/shuttle/trijent_shuttle/elevator)
+
+(1,1,1) = {"
+N
+a
+a
+a
+a
+Z
+"}
+(2,1,1) = {"
+w
+u
+H
+H
+u
+r
+"}
+(3,1,1) = {"
+F
+u
+H
+H
+u
+R
+"}
+(4,1,1) = {"
+I
+u
+H
+H
+u
+w
+"}
+(5,1,1) = {"
+I
+u
+H
+H
+u
+w
+"}
+(6,1,1) = {"
+I
+u
+H
+H
+u
+w
+"}
+(7,1,1) = {"
+w
+q
+H
+H
+u
+r
+"}
+(8,1,1) = {"
+K
+a
+g
+g
+g
+Y
+"}

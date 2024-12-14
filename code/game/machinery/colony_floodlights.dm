@@ -309,6 +309,50 @@
 	update_icon()
 	return is_lit
 
+// ENGINEER FLOODLIGHTS
+// Engineer Floor lights
+/obj/structure/machinery/colony_floodlight_switch/engineerconsole_switch
+    name = "giant alien console"
+    icon = 'icons/obj/structures/props/engineers/consoles.dmi'
+    icon_state = "engineerconsole"
+    desc = "A giant alien console of some kind, unlike anything you've ever seen before. Who knows the purpose of this strange technology..."
+    use_power = USE_POWER_NONE
+    needs_power = FALSE
+    ispowered = TRUE
+    machinery_type_whitelist = list(/obj/structure/machinery/colony_floodlight/engineer_circular)
+
+/obj/structure/machinery/colony_floodlight_switch/engineerconsole_switch/LateInitialize()
+    . = ..()
+    stop_processing()
+
+/obj/structure/machinery/colony_floodlight_switch/engineerconsole_switch/update_icon()
+    return
+
+/obj/structure/machinery/colony_floodlight_switch/engineerconsole_switch/power_change()
+    return // It just works
+
+/obj/structure/machinery/colony_floodlight/engineer_circular
+    name = "circular light"
+    icon_state = "engineerlight_off"
+    desc = "A huge circular light"
+    icon = 'icons/obj/structures/props/engineers/light.dmi'
+    density = FALSE
+    unslashable = TRUE
+    unacidable = TRUE
+    wrenchable = FALSE
+    layer = TURF_LAYER
+    light_color =  "#00ffa0"
+    lum_value = 14
+    light_power = 6
+
+/obj/structure/machinery/colony_floodlight/engineer_circular/update_icon()
+    if(damaged)
+        icon_state = "engineerlight_off"
+    else if(is_on)
+        icon_state = "engineerlight_on"
+    else
+        icon_state = "engineerlight_off"
+
 #undef FLOODLIGHT_REPAIR_UNSCREW
 #undef FLOODLIGHT_REPAIR_CROWBAR
 #undef FLOODLIGHT_REPAIR_WELD

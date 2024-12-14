@@ -53,6 +53,7 @@ GLOBAL_LIST_INIT(all_minimap_flags, bitfield2list(MINIMAP_FLAG_ALL))
 #define MINIMAP_AREA_COLONY "#6c6767d8"
 #define MINIMAP_AREA_LZ "#ebe5e5e3"
 #define MINIMAP_AREA_CONTESTED_ZONE "#0603c4ee"
+#define MINIMAP_AREA_LAVA "#f64e24"
 
 #define MINIMAP_SQUAD_UNKNOWN "#d8d8d8"
 #define MINIMAP_SQUAD_ALPHA "#4148c8"

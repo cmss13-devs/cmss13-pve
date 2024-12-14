@@ -1211,9 +1211,39 @@
 
 /obj/structure/prop/invuln/dense/excavator/Initialize()
 	. = ..()
-	if(dir == SOUTH || NORTH)
+	if(dir & (SOUTH|NORTH))
 		bound_height = 192
 		bound_width = 96
-	if(dir == WEST || EAST)
+	else
 		bound_height = 96
 		bound_width = 192
+
+/obj/structure/prop/invuln/dense/stasiscell
+	name = "stasis cell"
+	desc = "A large vat full of a viscous green liquid. You have a feeling it's not green apple flavored. It is empty and looks to be off."
+	icon = 'icons/obj/structures/machinery/cryogenics2.dmi'
+	icon_state = "cell"
+	layer = ABOVE_MOB_LAYER
+
+/obj/structure/prop/invuln/dense/stasiscell/on
+	icon_state = "cell-on-empty"
+	desc = "A large vat full of a viscous green liquid. You have a feeling it's not green apple flavored. It is empty and appears to be on."
+
+/obj/structure/prop/invuln/dense/stasiscell/embryo1
+	icon_state = "cell-on-occupied-embryo"
+	desc = "A large vat full of a viscous green liquid. You can see some kind of embryo of sorts suspended in the middle of it."
+
+/obj/structure/prop/invuln/dense/stasiscell/stage2
+	icon_state = "cell-on-occupied-stage2"
+	desc = "A large vat full of a viscous green liquid. The outline of an under-developed torso can be seen through it, floating in the center of the pod."
+
+/obj/structure/prop/invuln/dense/stasiscell/stage3
+	icon_state = "cell-on-occupied-stage3"
+	desc = "A large vat full of a viscous green liquid. The outline of a human torso can be seen through it, floating in the center of the pod."
+
+/obj/structure/prop/invuln/dense/stasiscell/stage4
+	icon_state = "cell-on-occupied-stage4"
+	desc = "A large vat full of a viscous green liquid. The shape of a fully formed human body can be seen from within."
+
+/obj/structure/prop/invuln/dense/stasiscell/stage4/alt
+	icon_state = "cell-on-occupied"
