@@ -8,7 +8,7 @@
         "COLD": true
     },
     "map_item_type": "/obj/item/map/lazarus_landing_map",
-    "announce_text": "An automated distress signal has been recieved from a mining colony on border world LV-976, \"Sorokyne Outpost\". A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
+    "announce_text": "An automated distress signal has been recieved from the airbase artificial intelligence on border world LV-1454, \"Sullivan Aerospace Force Base\".\n\n Last Status Report - 37 hours ago.\n\n ###SHIPNAME### is enroute to investigate.",
     "monkey_types": [
         "yiren"
     ],
