@@ -4,12 +4,18 @@
 	var/datum/human_ai_brain/ai_brain
 	/// Ref to the owning human
 	var/mob/living/carbon/human/ai_human
+	var/static/human_ai_has_spawned = FALSE
 
 /datum/component/human_ai/Initialize()
 	. = ..()
 	ai_human = parent
 	if(!istype(ai_human))
 		return COMPONENT_INCOMPATIBLE
+
+	if(!human_ai_has_spawned)
+		human_ai_has_spawned = TRUE
+		SSticker.mode.toggleable_flags ^= MODE_HUMAN_AI_TWEAKS
+		message_admins("Human AI tweaks have been enabled by spawning an AI. This can be disabled with the \"Toggle Human AI Tweaks\" verb.")
 
 	ai_brain = new(ai_human)
 	GLOB.ai_humans += ai_human
