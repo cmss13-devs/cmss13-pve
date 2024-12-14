@@ -72,6 +72,9 @@
 	name = "Sullivan Aerospace Force Base - Central Command"
 	minimap_color = MINIMAP_AREA_COMMAND
 
+/area/usasfb_sullivan/indoors/command/cryosleep
+	name = "Sullivan Aerospace Force Base - Central Command - Cryosleep"
+
 /area/usasfb_sullivan/indoors/command/reception
 	name = "Sullivan Aerospace Force Base - Central Command - Reception"
 
