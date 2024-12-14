@@ -68,6 +68,9 @@
 
 //actual areas
 
+area/usasfb_sullivan/indoors/ammo_elevator
+	name = "Sullivan Aerospace Force Base - Ammunition Storage"
+
 /area/usasfb_sullivan/indoors/command
 	name = "Sullivan Aerospace Force Base - Central Command"
 	minimap_color = MINIMAP_AREA_COMMAND
@@ -91,13 +94,6 @@
 /area/usasfb_sullivan/indoors/command/reception
 	name = "Sullivan Aerospace Force Base - Central Command - Reception"
 
-/area/usasfb_sullivan/indoors/runway_watchpost
-	name = "Sullivan Aerospace Force Base - Runway Watchpost"
-	icon_state = "outpost_sec_3"
-
-area/usasfb_sullivan/indoors/ammo_elevator
-	name = "Sullivan Aerospace Force Base - Ammunition Storage"
-
 area/usasfb_sullivan/indoors/security
 	name = "Sullivan Aerospace Force Base - Airfield Security"
 	minimap_color = MINIMAP_AREA_SEC
@@ -110,6 +106,10 @@ area/usasfb_sullivan/indoors/security
 /area/usasfb_sullivan/indoors/security/confiscated
 	name = "Sullivan Aerospace Force Base - Confiscated Equipment Room"
 	icon_state = "outpost_sec_2"
+
+/area/usasfb_sullivan/indoors/security/outpost/runway_watchpost
+	name = "Sullivan Aerospace Force Base - Runway Watchpost"
+	icon_state = "outpost_sec_3"
 
 /area/usasfb_sullivan/indoors/hangar/one_one
 	name = "Sullivan Aerospace Force Base - Hangar 1-1"
