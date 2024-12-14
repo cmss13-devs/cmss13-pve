@@ -99,6 +99,28 @@ area/usasfb_sullivan/indoors/security
 	minimap_color = MINIMAP_AREA_SEC
 	icon_state = "outpost_sec_0"
 
+/area/usasfb_sullivan/indoors/engineering
+	name = "Sullivan Aerospace Force Base - Engineering"
+	icon_state = "outpost_engi_0"
+	minimap_color = MINIMAP_AREA_ENGI
+
+/area/usasfb_sullivan/indoors/engineering/comms
+	name = "Sullivan Aerospace Force Base - Engineering - Communications"
+	icon_state = "tcomms_3"
+
+/area/usasfb_sullivan/indoors/engineering/maintenance
+	name = "Sullivan Aerospace Force Base - Engineering - Vehicle Maintenance"
+	icon_state = "outpost_engi_2"
+
+/area/usasfb_sullivan/indoors/engineering/office
+	name = "Sullivan Aerospace Force Base - Engineering - Office"
+	icon_state = "outpost_engi_3"
+	minimap_color = MINIMAP_AREA_COMMAND
+
+/area/usasfb_sullivan/indoors/engineering/power
+	name = "Sullivan Aerospace Force Base - Engineering - Generator Room"
+	icon_state = "outpost_engi_4"
+
 /area/usasfb_sullivan/indoors/security/armoury
 	name = "Sullivan Aerospace Force Base - Airfield Security - Armoury"
 	icon_state = "outpost_sec_1"
