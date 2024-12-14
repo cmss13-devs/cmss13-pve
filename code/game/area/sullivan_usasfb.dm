@@ -107,9 +107,12 @@ area/usasfb_sullivan/indoors/security
 	name = "Sullivan Aerospace Force Base - Confiscated Equipment Room"
 	icon_state = "outpost_sec_2"
 
+/area/usasfb_sullivan/indoors/security/outpost
+	name = "Sullivan Aerospace Force Base - Outpost"
+	icon_state = "outpost_sec_3"
+
 /area/usasfb_sullivan/indoors/security/outpost/runway_watchpost
 	name = "Sullivan Aerospace Force Base - Runway Watchpost"
-	icon_state = "outpost_sec_3"
 
 /area/usasfb_sullivan/indoors/hangar/one_one
 	name = "Sullivan Aerospace Force Base - Hangar 1-1"
