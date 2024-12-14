@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"al" = (
+/obj/structure/machinery/vending/dinnerware,
+/turf/open/floor/strata/fake_wood,
+/area/usasfb_sullivan/indoors/command/offices)
 "aw" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -22,6 +26,9 @@
 /obj/item/ammo_box/magazine/misc/flares,
 /turf/open/floor/strata/red4,
 /area/usasfb_sullivan/indoors/runway_watchpost)
+"aQ" = (
+/turf/closed/wall/strata_outpost,
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "aX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -76,9 +83,6 @@
 /obj/item/prop/tableflag/uscm2,
 /turf/open/floor/strata/red4/west,
 /area/usasfb_sullivan/indoors/runway_watchpost)
-"bz" = (
-/turf/open/floor/carpet/edge/southeast,
-/area/usasfb_sullivan/indoors/command/commander)
 "bE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -87,10 +91,6 @@
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/usasfb_sullivan/indoors/command/cryosleep)
-"bH" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/strata/fake_wood,
-/area/usasfb_sullivan/indoors/command/offices)
 "bJ" = (
 /obj/structure/surface/table,
 /obj/item/prop/almayer/flight_recorder,
@@ -132,6 +132,9 @@
 /obj/structure/cargo_container/uscm/crestus/left,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/ammo_elevator)
+"cl" = (
+/turf/open/floor/strata/grey_multi_tiles/southwest,
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "cw" = (
 /obj/structure/surface/rack,
 /obj/item/fuel_cell/used,
@@ -243,7 +246,7 @@
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/ammo_elevator)
 "dX" = (
-/obj/structure/machinery/disposal/delivery,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/strata/grey_multi_tiles,
 /area/usasfb_sullivan/indoors/command/reception)
 "dY" = (
@@ -277,9 +280,6 @@
 "eJ" = (
 /turf/open/floor/strata/grey_multi_tiles,
 /area/usasfb_sullivan/indoors/command)
-"eL" = (
-/turf/open/floor/carpet/edge/west,
-/area/usasfb_sullivan/indoors/command/commander)
 "eN" = (
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/strata/multi_tiles/west,
@@ -347,10 +347,6 @@
 	},
 /turf/open/floor/asteroidwarning/southwest,
 /area/usasfb_sullivan/indoors/ammo_elevator)
-"fO" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/colony,
-/turf/open/floor/strata/grey_multi_tiles/southwest,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "fP" = (
 /turf/open/floor/carpet/edge/north,
 /area/usasfb_sullivan/indoors/command/commander)
@@ -378,6 +374,9 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"gj" = (
+/turf/open/floor/strata/faux_wood,
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "gk" = (
 /obj/structure/cargo_container/seegson/left,
 /turf/open/floor/asteroidwarning/southwest,
@@ -399,6 +398,17 @@
 /obj/effect/decal/warning_stripes/asteroid,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/ammo_elevator)
+"gw" = (
+/obj/structure/surface/table/almayer,
+/obj/item/trash/USCMtray{
+	pixel_x = -3
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = 7;
+	pixel_y = 11
+	},
+/turf/open/floor/strata/fake_wood,
+/area/usasfb_sullivan/indoors/command/offices)
 "gE" = (
 /obj/vehicle/train/cargo/trolley,
 /obj/structure/prop/ice_colony/surveying_device/measuring_device{
@@ -426,6 +436,11 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/ammo_elevator)
+"gQ" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/kitchen/tray,
+/turf/open/floor/strata/fake_wood,
+/area/usasfb_sullivan/indoors/command/offices)
 "gS" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -482,9 +497,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/usasfb_sullivan/indoors/command/cryosleep)
-"hF" = (
-/turf/open/floor/carpet/edge/southwest,
-/area/usasfb_sullivan/indoors/command/commander)
+"hN" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/faxmachine,
+/turf/open/floor/strata/faux_wood,
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "hR" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/tableflag/uscm2,
@@ -495,6 +512,10 @@
 /obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"id" = (
+/obj/structure/window/framed/strata,
+/turf/open/floor/strata/multi_tiles/west,
+/area/usasfb_sullivan/indoors/command/commander)
 "if" = (
 /obj/structure/cargo_container/kelland/right,
 /obj/effect/decal/cleanable/dirt,
@@ -509,6 +530,9 @@
 "in" = (
 /turf/open/floor/asteroidwarning/southeast,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"io" = (
+/turf/open/floor/carpet/edge/northeast,
+/area/usasfb_sullivan/indoors/command/commander)
 "ix" = (
 /obj/structure/cargo_container/wy/left,
 /turf/open/floor/asteroidfloor,
@@ -570,6 +594,10 @@
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"jr" = (
+/obj/structure/window/framed/strata/reinforced,
+/turf/open/floor/strata/multi_tiles/west,
+/area/usasfb_sullivan/indoors/command/offices)
 "jw" = (
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/floor/asteroidwarning/southwest,
@@ -599,7 +627,7 @@
 /area/usasfb_sullivan/indoors/command/cryosleep)
 "jP" = (
 /turf/open/floor/carpet/edge/southeast,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
+/area/usasfb_sullivan/indoors/command/commander)
 "ki" = (
 /obj/structure/cable/blue,
 /turf/open/floor/asteroidwarning,
@@ -663,7 +691,7 @@
 "lh" = (
 /obj/structure/window/framed/strata,
 /turf/open/floor/strata/multi_tiles/west,
-/area/usasfb_sullivan/indoors/command/offices)
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "li" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/asteroidfloor,
@@ -686,9 +714,6 @@
 /obj/effect/spawner/random/sentry,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
-"lz" = (
-/turf/open/floor/strata/grey_multi_tiles,
-/area/usasfb_sullivan/indoors/command/offices)
 "lA" = (
 /turf/closed/wall/hangar,
 /area/usasfb_sullivan/indoors/hangar/one_one/two_one)
@@ -803,6 +828,9 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/usasfb_sullivan/indoors/warehouse)
+"nh" = (
+/turf/open/floor/carpet/edge/northwest,
+/area/usasfb_sullivan/indoors/command/commander)
 "ni" = (
 /obj/structure/cargo_container/grant/right,
 /turf/open/floor/asteroidfloor,
@@ -896,6 +924,9 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"oB" = (
+/turf/open/floor/carpet/edge,
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "oD" = (
 /obj/structure/fence,
 /turf/open/auto_turf/snow/layer0,
@@ -918,7 +949,7 @@
 /area/usasfb_sullivan/indoors/command/offices)
 "pg" = (
 /turf/open/floor/carpet/edge/west,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
+/area/usasfb_sullivan/indoors/command/commander)
 "pi" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/toolbox,
@@ -958,9 +989,6 @@
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/closed/wall/hangar,
 /area/usasfb_sullivan/indoors/warehouse)
-"pT" = (
-/turf/closed/wall/strata_outpost,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "pY" = (
 /obj/structure/surface/rack,
 /obj/item/frame/rack,
@@ -984,10 +1012,6 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
-"qu" = (
-/obj/structure/machinery/power/apc/power/west,
-/turf/open/floor/strata/grey_multi_tiles,
-/area/usasfb_sullivan/indoors/command)
 "qv" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/asteroidwarning/southeast,
@@ -1123,6 +1147,9 @@
 	},
 /turf/open/floor/strata/faux_wood,
 /area/usasfb_sullivan/indoors/command/commander/receptionist)
+"rV" = (
+/turf/open/floor/strata/grey_multi_tiles,
+/area/usasfb_sullivan/indoors/command/commander)
 "sb" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1;
@@ -1216,6 +1243,9 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"sX" = (
+/turf/closed/wall/strata_outpost,
+/area/usasfb_sullivan/indoors/command/commander)
 "sY" = (
 /turf/open/floor/asteroidwarning/east,
 /area/usasfb_sullivan/indoors/ammo_elevator)
@@ -1236,12 +1266,26 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/yellow/east,
 /area/usasfb_sullivan/indoors/warehouse)
+"tr" = (
+/obj/item/trash/snack_bowl{
+	name = "food bowl"
+	},
+/turf/open/floor/strata/faux_wood,
+/area/usasfb_sullivan/indoors/command/commander)
 "tt" = (
 /obj/structure/largecrate{
 	pixel_y = -10
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"tx" = (
+/obj/structure/prop/invuln/dense/ice_tray{
+	pixel_x = -4;
+	dir = 5;
+	name = "litter tray"
+	},
+/turf/open/floor/strata/faux_wood,
+/area/usasfb_sullivan/indoors/command/commander)
 "tF" = (
 /turf/open/floor/corsat/plate,
 /area/usasfb_sullivan/indoors/hangar/one_one/two_one)
@@ -1269,6 +1313,12 @@
 /obj/structure/closet/crate/secure/weapon,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/ammo_elevator)
+"ub" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/usasfb_sullivan/indoors/command/offices)
 "ug" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/tool,
@@ -1422,9 +1472,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/usasfb_sullivan/indoors/command/cryosleep)
-"wA" = (
-/turf/open/floor/carpet,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
+"wE" = (
+/obj/structure/surface/table/almayer,
+/obj/item/trash/USCMtray{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/franks{
+	pixel_x = -10
+	},
+/turf/open/floor/strata/fake_wood,
+/area/usasfb_sullivan/indoors/command/offices)
 "wG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1469,6 +1527,13 @@
 /obj/structure/machinery/power/apc/upgraded/power/north,
 /turf/open/floor/asteroidwarning/northwest,
 /area/usasfb_sullivan/indoors/ammo_elevator)
+"xd" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4;
+	pixel_x = 10
+	},
+/turf/open/floor/strata/fake_wood,
+/area/usasfb_sullivan/indoors/command/offices)
 "xe" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer,
 /turf/open/floor/asteroidwarning,
@@ -1504,9 +1569,6 @@
 "xz" = (
 /turf/open/floor/asteroidwarning/northeast,
 /area/usasfb_sullivan/indoors/ammo_elevator)
-"xC" = (
-/turf/open/floor/strata/grey_multi_tiles,
-/area/usasfb_sullivan/indoors/command/commander)
 "xD" = (
 /obj/vehicle/train/cargo/engine,
 /obj/structure/cable/heavyduty{
@@ -1579,12 +1641,6 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
-"yc" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/usasfb_sullivan/indoors/command/offices)
 "yi" = (
 /turf/open/floor/asteroidwarning/northwest,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
@@ -1644,10 +1700,6 @@
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/auto_turf/snow/layer0,
 /area/usasfb_sullivan/indoors/command/reception)
-"zi" = (
-/obj/structure/window/framed/strata/reinforced,
-/turf/open/floor/strata/multi_tiles/west,
-/area/usasfb_sullivan/indoors/command/offices)
 "zn" = (
 /obj/structure/cargo_container/watatsumi/rightmid,
 /turf/open/floor/asteroidwarning,
@@ -1674,9 +1726,6 @@
 /obj/structure/dropship_equipment/fuel/cooling_system,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
-"zR" = (
-/turf/open/floor/strata/grey_multi_tiles/southwest,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "zW" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/secure_data,
@@ -1704,9 +1753,6 @@
 /obj/structure/closet/coffin/woodencrate,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
-"Ag" = (
-/turf/open/floor/strata/faux_wood,
-/area/usasfb_sullivan/indoors/command/commander)
 "Ak" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/phone_base/colony_net/rotary{
@@ -1742,6 +1788,9 @@
 	},
 /turf/open/floor/asteroidwarning/northeast,
 /area/usasfb_sullivan/indoors/ammo_elevator)
+"AF" = (
+/turf/open/floor/carpet/edge/southeast,
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "AH" = (
 /obj/structure/cargo_container/wy/left,
 /turf/open/floor/asteroidwarning,
@@ -1766,15 +1815,24 @@
 /obj/structure/machinery/door/window/southleft,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"AU" = (
+/turf/open/floor/carpet/edge/southwest,
+/area/usasfb_sullivan/indoors/command/commander)
 "AY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/north,
 /area/usasfb_sullivan/indoors/warehouse)
+"AZ" = (
+/turf/open/floor/carpet/edge/east,
+/area/usasfb_sullivan/indoors/command/commander)
 "Bc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/southeast,
 /area/usasfb_sullivan/indoors/warehouse)
+"Bd" = (
+/turf/open/floor/carpet,
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "Bf" = (
 /obj/structure/largecrate/random/mini{
 	pixel_y = 10
@@ -1821,10 +1879,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/southeast,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
-"BR" = (
-/obj/structure/machinery/power/apc/power/east,
-/turf/open/floor/strata/grey_multi_tiles,
-/area/usasfb_sullivan/indoors/command/offices)
 "BU" = (
 /turf/open/auto_turf/snow/layer2,
 /area/usasfb_sullivan/outdoors)
@@ -1873,6 +1927,10 @@
 /obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/usasfb_sullivan/indoors/command/cryosleep)
+"Cy" = (
+/obj/structure/machinery/power/apc/power/east,
+/turf/open/floor/strata/grey_multi_tiles,
+/area/usasfb_sullivan/indoors/command/offices)
 "Cz" = (
 /turf/open/auto_turf/snow/brown_base/layer4,
 /area/usasfb_sullivan/outdoors)
@@ -1986,6 +2044,10 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
+"Et" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/colony,
+/turf/open/floor/strata/grey_multi_tiles/southwest,
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "Ey" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/floor/asteroidwarning/north,
@@ -2021,12 +2083,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning,
 /area/usasfb_sullivan/indoors/warehouse)
-"ES" = (
-/turf/open/floor/carpet/edge/east,
-/area/usasfb_sullivan/indoors/command/commander)
-"EU" = (
-/turf/open/floor/carpet/edge/north,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "EW" = (
 /obj/structure/cargo_container/watatsumi/right,
 /turf/open/floor/asteroidwarning,
@@ -2143,6 +2199,9 @@
 /obj/docking_port/stationary/marine_dropship/lz1,
 /turf/open/asphalt/cement,
 /area/usasfb_sullivan/outdoors/lz/one)
+"Gz" = (
+/turf/closed/wall/strata_outpost,
+/area/usasfb_sullivan/indoors/command/offices)
 "GG" = (
 /obj/structure/prop/static_tank/fuel,
 /turf/open/floor/asteroidfloor,
@@ -2181,15 +2240,16 @@
 	},
 /turf/open/floor/strata/faux_wood,
 /area/usasfb_sullivan/indoors/command/commander)
-"Hf" = (
-/turf/closed/wall/strata_outpost,
-/area/usasfb_sullivan/indoors/command/commander)
 "Hg" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"Hj" = (
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/strata/grey_multi_tiles,
+/area/usasfb_sullivan/indoors/command)
 "Hq" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -2271,13 +2331,17 @@
 /obj/structure/prop/power_transformer,
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/usasfb_sullivan/outdoors)
-"Iq" = (
-/turf/closed/wall/strata_outpost,
-/area/usasfb_sullivan/indoors/command/offices)
 "Ix" = (
 /obj/structure/bed/sofa/vert/grey/top,
 /turf/open/floor/strata/grey_multi_tiles,
 /area/usasfb_sullivan/indoors/command/reception)
+"IC" = (
+/obj/structure/window/framed/strata,
+/turf/open/floor/strata/multi_tiles/west,
+/area/usasfb_sullivan/indoors/command/offices)
+"ID" = (
+/turf/open/floor/strata/grey_multi_tiles,
+/area/usasfb_sullivan/indoors/command/offices)
 "IE" = (
 /obj/structure/surface/table/woodentable,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -2391,6 +2455,9 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"Ku" = (
+/turf/open/floor/carpet/edge/west,
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "Kw" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -2413,6 +2480,9 @@
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/asteroidwarning/northeast,
 /area/usasfb_sullivan/indoors/warehouse)
+"KM" = (
+/turf/open/floor/carpet/edge/north,
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "KQ" = (
 /obj/structure/largecrate{
 	pixel_y = 5
@@ -2444,6 +2514,10 @@
 	},
 /turf/closed/wall/hangar,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
+"Ln" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/strata/fake_wood,
+/area/usasfb_sullivan/indoors/command/offices)
 "Lr" = (
 /turf/open/floor/asteroidwarning/southwest,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
@@ -2452,15 +2526,27 @@
 /obj/item/prop/tableflag/uscm,
 /turf/open/floor/strata/faux_wood,
 /area/usasfb_sullivan/indoors/command/commander)
+"Lv" = (
+/obj/structure/surface/table/almayer,
+/obj/item/trash/USCMtray{
+	pixel_x = 4
+	},
+/obj/item/trash/USCMtray{
+	pixel_y = 15;
+	pixel_x = -7
+	},
+/obj/item/reagent_container/food/condiment/juice/grape{
+	pixel_x = 7;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/fake_wood,
+/area/usasfb_sullivan/indoors/command/offices)
 "Lx" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Hangar 1-2 Cycle North"
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
-"LG" = (
-/turf/open/floor/carpet/edge/northwest,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "LW" = (
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/asteroidfloor,
@@ -2552,10 +2638,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/west,
 /area/usasfb_sullivan/indoors/warehouse)
-"Nu" = (
-/obj/structure/window/framed/strata,
-/turf/open/floor/strata/multi_tiles/west,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "Nx" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 9
@@ -2776,11 +2858,6 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/warehouse)
-"Qe" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/structure/machinery/faxmachine,
-/turf/open/floor/strata/faux_wood,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "Qi" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
@@ -2860,6 +2937,10 @@
 /area/usasfb_sullivan/outdoors/lz/one)
 "RI" = (
 /obj/structure/surface/table/almayer,
+/obj/item/trash/USCMtray{
+	pixel_y = 6;
+	pixel_x = 3
+	},
 /turf/open/floor/strata/fake_wood,
 /area/usasfb_sullivan/indoors/command/offices)
 "RO" = (
@@ -2957,15 +3038,15 @@
 /area/usasfb_sullivan/indoors/warehouse)
 "TR" = (
 /turf/open/floor/carpet/edge,
+/area/usasfb_sullivan/indoors/command/commander)
+"Ub" = (
+/obj/structure/machinery/power/apc/power/east,
+/turf/open/floor/strata/faux_wood,
 /area/usasfb_sullivan/indoors/command/commander/receptionist)
 "Uc" = (
 /obj/structure/machinery/autolathe/armylathe,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/ammo_elevator)
-"Uf" = (
-/obj/structure/machinery/power/apc/power/east,
-/turf/open/floor/strata/faux_wood,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "Ug" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/asteroidfloor,
@@ -3056,10 +3137,6 @@
 /obj/item/paper_bin,
 /turf/open/floor/strata/faux_wood,
 /area/usasfb_sullivan/indoors/command/commander)
-"Vn" = (
-/obj/structure/window/framed/strata,
-/turf/open/floor/strata/multi_tiles/west,
-/area/usasfb_sullivan/indoors/command/commander)
 "Vv" = (
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/floor/asteroidwarning/west,
@@ -3072,9 +3149,6 @@
 /obj/item/weapon/twohanded/folded_metal_chair,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
-"VA" = (
-/turf/open/floor/carpet/edge,
-/area/usasfb_sullivan/indoors/command/commander)
 "VB" = (
 /obj/structure/surface/table/almayer,
 /obj/item/clipboard{
@@ -3094,7 +3168,7 @@
 /area/usasfb_sullivan/indoors/warehouse)
 "VI" = (
 /turf/open/floor/strata/faux_wood,
-/area/usasfb_sullivan/indoors/command/commander/receptionist)
+/area/usasfb_sullivan/indoors/command/commander)
 "VP" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8;
@@ -3110,9 +3184,6 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/floor/asteroidfloor,
 /area/usasfb_sullivan/indoors/hangar/one_one/one_two)
-"VW" = (
-/turf/open/floor/carpet/edge/northeast,
-/area/usasfb_sullivan/indoors/command/commander)
 "VY" = (
 /turf/closed/wall/mineral/sandstone,
 /area/usasfb_sullivan/outdoors)
@@ -3288,7 +3359,7 @@
 /area/usasfb_sullivan/indoors/ammo_elevator)
 "YS" = (
 /turf/open/floor/carpet/edge/northwest,
-/area/usasfb_sullivan/indoors/command/commander)
+/area/usasfb_sullivan/indoors/command/commander/receptionist)
 "YW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/barrel{
@@ -18080,13 +18151,13 @@ YN
 YN
 YN
 YN
-Hf
-Hf
-Hf
-Hf
-Hf
-Hf
-Hf
+sX
+sX
+sX
+sX
+sX
+sX
+sX
 JX
 JX
 JX
@@ -18336,16 +18407,16 @@ oD
 YN
 YN
 YN
-Vn
-Vn
-Ag
+id
+id
+VI
 er
-Ag
-Ag
-Ag
-Hf
+VI
+VI
+VI
+sX
 UR
-qu
+Hj
 eJ
 NY
 WF
@@ -18592,15 +18663,15 @@ YN
 oD
 YN
 YN
-Vn
-Vn
-Ag
-Ag
-Ag
-Ag
+id
+id
+VI
+VI
+VI
+VI
 ut
-Ag
-Hf
+VI
+sX
 eJ
 WY
 eJ
@@ -18849,15 +18920,15 @@ YN
 oD
 YN
 YN
-Vn
-Ag
-Ag
+id
+VI
+VI
 oa
 Jq
-Ag
+VI
 He
 sk
-Vn
+id
 eJ
 WY
 eJ
@@ -19105,16 +19176,16 @@ YN
 YN
 oD
 YN
-Vn
-Vn
-Ag
+id
+id
+VI
 Ry
 Vm
 dq
 dq
 Lu
 sk
-Vn
+id
 eJ
 WY
 eJ
@@ -19362,16 +19433,16 @@ YN
 YN
 oD
 YN
-Vn
-Ag
-Ag
-Ag
+id
+tr
+VI
+VI
 lf
 lf
 lf
-Ag
+VI
 sk
-Vn
+id
 eJ
 eJ
 eJ
@@ -19619,16 +19690,16 @@ YN
 YN
 oD
 YN
-Vn
-Ag
-Ag
-YS
-eL
-eL
-eL
-hF
-Ag
-Hf
+id
+tx
+VI
+nh
+pg
+pg
+pg
+AU
+VI
+sX
 eJ
 WY
 eJ
@@ -19876,16 +19947,16 @@ YN
 YN
 oD
 YN
-Hf
+sX
 Aa
-Ag
+VI
 fP
 gL
 gL
 gL
-VA
+TR
 rL
-Hf
+sX
 eJ
 WY
 eJ
@@ -20133,16 +20204,16 @@ YN
 YN
 oD
 YN
-Hf
+sX
 mC
-Ag
+VI
 fP
 gL
 zB
 gL
-VA
+TR
 mV
-Vn
+id
 eJ
 WY
 eJ
@@ -20390,16 +20461,16 @@ YN
 YN
 oD
 YN
-Hf
+sX
 bK
-Ag
+VI
 fP
 gL
 gL
 gL
-VA
+TR
 mV
-Vn
+id
 eJ
 eJ
 eJ
@@ -20647,16 +20718,16 @@ YN
 YN
 oD
 YN
-Hf
+sX
 iS
-Ag
-VW
-ES
-ES
-ES
-bz
+VI
+io
+AZ
+AZ
+AZ
+jP
 mV
-Vn
+id
 eJ
 WY
 eJ
@@ -20904,16 +20975,16 @@ YN
 YN
 oD
 YN
-Hf
+sX
 IX
-Ag
-Ag
-Ag
-Ag
+VI
+VI
+VI
+VI
 gf
 hq
-Ag
-Hf
+VI
+sX
 eJ
 WY
 eJ
@@ -21161,16 +21232,16 @@ YN
 YN
 oD
 YN
-Hf
-Hf
-Hf
-xC
+sX
+sX
+sX
+rV
 Su
-Hf
-Hf
-Hf
-Hf
-Hf
+sX
+sX
+sX
+sX
+sX
 eJ
 WY
 eJ
@@ -21418,16 +21489,16 @@ YN
 YN
 oD
 YN
-pT
+aQ
 qm
-VI
-VI
-VI
-VI
-VI
-VI
-VI
-Nu
+gj
+gj
+gj
+gj
+gj
+gj
+gj
+lh
 eJ
 eJ
 eJ
@@ -21675,16 +21746,16 @@ YN
 YN
 oD
 YN
-Nu
-VI
-VI
-Qe
-LG
-pg
-pg
+lh
+gj
+gj
+hN
+YS
+Ku
+Ku
 jy
-VI
-Nu
+gj
+lh
 eJ
 WY
 eJ
@@ -21932,16 +22003,16 @@ YN
 YN
 oD
 YN
-Nu
-VI
+lh
+gj
 IM
 br
-EU
-wA
-wA
-TR
-VI
-pT
+KM
+Bd
+Bd
+oB
+gj
+aQ
 eJ
 WY
 eJ
@@ -22189,16 +22260,16 @@ YN
 YN
 oD
 YN
-Nu
+lh
 Sm
-VI
+gj
 rT
 rw
 uJ
 uJ
-jP
-VI
-fO
+AF
+gj
+Et
 eJ
 HF
 eJ
@@ -22446,16 +22517,16 @@ oD
 oD
 oD
 oD
-pT
-VI
-Uf
-VI
-VI
-VI
+aQ
+gj
+Ub
+gj
+gj
+gj
 ZH
-VI
-VI
-zR
+gj
+gj
+cl
 eJ
 eJ
 eJ
@@ -22703,9 +22774,9 @@ YN
 YN
 YN
 YN
-pT
-pT
-pT
+aQ
+aQ
+aQ
 pv
 pv
 pv
@@ -24505,10 +24576,10 @@ YN
 YN
 YN
 YN
-Iq
+Gz
 CG
 Wa
-lz
+ID
 pv
 uk
 uk
@@ -24757,15 +24828,15 @@ YN
 YN
 YN
 YN
-Iq
-Iq
-Iq
-Iq
-Iq
-Iq
-lz
-lz
-lz
+Gz
+Gz
+Gz
+Gz
+Gz
+Gz
+ID
+ID
+ID
 pv
 rD
 Kb
@@ -25013,16 +25084,16 @@ YN
 YN
 YN
 YN
-Iq
-Iq
+Gz
+Gz
 pf
 sC
 sC
 sC
-Iq
-lz
-lz
-lz
+Gz
+ID
+ID
+ID
 zg
 uk
 uk
@@ -25269,17 +25340,17 @@ YN
 YN
 YN
 YN
-Iq
-Iq
+Gz
+Gz
 pf
 pf
 jz
 jz
 pf
-Iq
-lz
-yc
-lz
+Gz
+ID
+ub
+ID
 rh
 bc
 uk
@@ -25526,17 +25597,17 @@ YN
 YN
 YN
 YN
-Iq
-Iq
+Gz
+Gz
 pf
 pf
 IE
 IE
 pf
-Iq
-lz
-yc
-lz
+Gz
+ID
+ub
+ID
 lK
 uk
 uk
@@ -25783,17 +25854,17 @@ YN
 YN
 YN
 YN
-Iq
+Gz
 pf
 pf
 pf
 Wh
 Wh
 pf
-Iq
-lz
-yc
-lz
+Gz
+ID
+ub
+ID
 pv
 Ix
 Kb
@@ -26040,17 +26111,17 @@ YN
 YN
 YN
 YN
-Iq
+Gz
 Yw
 sb
 pf
 NZ
 NZ
 pf
-Iq
-lz
-lz
-lz
+Gz
+ID
+ID
+ID
 pv
 uk
 uk
@@ -26297,7 +26368,7 @@ YN
 YN
 YN
 YN
-Iq
+Gz
 Tr
 sb
 pf
@@ -26305,9 +26376,9 @@ pf
 pf
 pf
 va
-lz
-yc
-lz
+ID
+ub
+ID
 pv
 eN
 eN
@@ -26554,7 +26625,7 @@ YN
 YN
 YN
 YN
-Iq
+Gz
 pf
 pf
 pf
@@ -26562,10 +26633,10 @@ pf
 pf
 pf
 Pm
-lz
-yc
-lz
-Iq
+ID
+ub
+ID
+Gz
 Mp
 fz
 fz
@@ -26811,18 +26882,18 @@ YN
 YN
 YN
 YN
-Iq
+Gz
 Tr
 sb
 pf
 jz
 jz
 pf
-Iq
-lz
-yc
-lz
-Iq
+Gz
+ID
+ub
+ID
+Gz
 uB
 uB
 uB
@@ -27068,18 +27139,18 @@ YN
 YN
 YN
 YN
-Iq
+Gz
 Tr
 sb
 pf
 IE
 IE
 sb
-Iq
-lz
-lz
-lz
-zi
+Gz
+ID
+ID
+ID
+jr
 uB
 uB
 uB
@@ -27325,18 +27396,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 pf
 pf
 pf
 cG
 Wh
 pf
-Iq
-lz
-yc
-lz
-zi
+Gz
+ID
+ub
+ID
+jr
 uB
 uB
 uB
@@ -27582,18 +27653,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 pf
 pf
 pf
 NZ
 NZ
 pf
-Iq
-lz
-yc
-lz
-Iq
+Gz
+ID
+ub
+ID
+Gz
 uB
 uB
 uB
@@ -27839,18 +27910,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 zH
 pf
-Iq
-Iq
-Iq
-Iq
-Iq
-lz
-yc
-lz
-Iq
+Gz
+Gz
+Gz
+Gz
+Gz
+ID
+ub
+ID
+Gz
 uB
 uB
 uB
@@ -28096,18 +28167,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 zW
 sb
-Iq
+Gz
 pf
 pf
 pf
 va
-lz
-lz
-lz
-Iq
+ID
+ID
+ID
+Gz
 uB
 uB
 uB
@@ -28353,18 +28424,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 mJ
 pf
-Iq
-bH
+Gz
+Ln
 pf
 pf
 Pm
-lz
-yc
-lz
-zi
+ID
+ub
+ID
+jr
 uB
 uB
 uB
@@ -28610,18 +28681,18 @@ YN
 YN
 YN
 YN
-Iq
-Iq
-Iq
-Iq
+Gz
+Gz
+Gz
+Gz
 pf
 pf
 pf
-Iq
-lz
-yc
-lz
-zi
+Gz
+ID
+ub
+ID
+jr
 uB
 uB
 uB
@@ -28867,18 +28938,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 mJ
 pf
 pf
 pf
 jz
 jz
-Iq
-lz
-yc
-lz
-Iq
+Gz
+ID
+ub
+ID
+Gz
 uB
 uB
 uB
@@ -29124,18 +29195,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 zW
 sb
 pf
 pf
 IE
 IE
-Iq
-lz
-lz
-lz
-Iq
+Gz
+ID
+ID
+ID
+Gz
 uB
 uB
 uB
@@ -29381,18 +29452,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 zH
 An
 Pt
 pf
 Wh
 Wh
-Iq
-lz
-yc
-lz
-zi
+Gz
+ID
+ub
+ID
+jr
 uB
 uB
 uB
@@ -29638,18 +29709,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 pf
 An
 Pt
 pf
 VP
 VP
-Iq
-lz
-yc
-lz
-zi
+Gz
+ID
+ub
+ID
+jr
 uB
 uB
 uB
@@ -29895,18 +29966,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 pf
 An
 Pt
 pf
 IE
 IE
-Iq
-lz
-yc
-lz
-Iq
+Gz
+ID
+ub
+ID
+Gz
 uB
 uB
 uB
@@ -30152,18 +30223,18 @@ YN
 YN
 YN
 YN
-Iq
+Gz
 pf
 pf
 pf
 pf
 Wh
 Wh
-Iq
-lz
-lz
-lz
-Iq
+Gz
+ID
+ID
+ID
+Gz
 uB
 uB
 uB
@@ -30409,18 +30480,18 @@ YN
 YN
 YN
 YN
-Iq
+Gz
 pf
 jz
 jz
 jz
 NZ
 NZ
-Iq
-lz
-yc
-lz
-zi
+Gz
+ID
+ub
+ID
+jr
 uB
 uB
 uB
@@ -30666,18 +30737,18 @@ YN
 YN
 YN
 YN
-Iq
+Gz
 pf
 IE
 IE
 IE
 vD
 yR
-Iq
-lz
-yc
-lz
-zi
+Gz
+ID
+ub
+ID
+jr
 uB
 uB
 uB
@@ -30923,18 +30994,18 @@ YN
 YN
 YN
 YN
-Iq
-Iq
-Iq
-Iq
-Iq
-Iq
-Iq
-Iq
-lz
-yc
-lz
-Iq
+Gz
+Gz
+Gz
+Gz
+Gz
+Gz
+Gz
+Gz
+ID
+ub
+ID
+Gz
 uB
 uB
 uB
@@ -31180,18 +31251,18 @@ YN
 YN
 YN
 YN
-lh
-RI
-pf
-pf
-pf
-pf
-pf
-Iq
-lz
-lz
-lz
-zi
+IC
+xd
+An
+gQ
+wE
+gw
+sb
+Gz
+ID
+ID
+ID
+jr
 uB
 uB
 uB
@@ -31437,18 +31508,18 @@ YN
 YN
 YN
 YN
-lh
-RI
-pf
-pf
-pf
-pf
+IC
+Lv
+sb
+NZ
+NZ
+NZ
 pf
 va
-lz
-yc
-lz
-zi
+ID
+ub
+ID
+jr
 uB
 uB
 uB
@@ -31694,18 +31765,18 @@ YN
 YN
 YN
 YN
-lh
+IC
 RI
-pf
+sb
 pf
 pf
 pf
 pf
 Pm
-lz
-yc
-lz
-Iq
+ID
+ub
+ID
+Gz
 uB
 uB
 uB
@@ -31951,18 +32022,18 @@ YN
 YN
 YN
 YN
-Iq
-Iq
+Gz
+Gz
+al
 pf
 pf
 pf
 pf
-pf
-Iq
-lz
-yc
-lz
-zi
+Gz
+ID
+ub
+ID
+jr
 uB
 uB
 uB
@@ -32209,17 +32280,17 @@ YN
 YN
 YN
 YN
-Iq
-Iq
+Gz
+Gz
 Oq
 pf
 pf
 NR
-Iq
-lz
-BR
-lz
-zi
+Gz
+ID
+Cy
+ID
+jr
 uB
 uB
 uB
@@ -32467,16 +32538,16 @@ YN
 YN
 YN
 YN
-Iq
-Iq
-lh
-lh
-Iq
-Iq
-Iq
-Iq
-Iq
-Iq
+Gz
+Gz
+IC
+IC
+Gz
+Gz
+Gz
+Gz
+Gz
+Gz
 uB
 uB
 uB
