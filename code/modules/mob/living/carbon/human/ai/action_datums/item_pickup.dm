@@ -10,6 +10,12 @@
 	if(!length(brain.to_pickup))
 		return 0
 
+	if(tied_human.resting)
+		return 0
+
+	if(tied_human.health < HEALTH_THRESHOLD_CRIT)
+		return 0
+
 	return 11
 
 /datum/ai_action/item_pickup/Added()
