@@ -71,12 +71,26 @@
 /area/usasfb_sullivan/indoors/command
 	name = "Sullivan Aerospace Force Base - Central Command"
 	minimap_color = MINIMAP_AREA_COMMAND
+	icon_state = "dorms_0"
+
+/area/usasfb_sullivan/indoors/command/commander
+	name = "Sullivan Aerospace Force Base - Central Command - Commanders' Office"
+	icon_state = "dorms_1"
+
+/area/usasfb_sullivan/indoors/command/commander/receptionist
+	name = "Sullivan Aerospace Force Base - Central Command - Commanders' Reception"
 
 /area/usasfb_sullivan/indoors/command/cryosleep
 	name = "Sullivan Aerospace Force Base - Central Command - Cryosleep"
+	icon_state = "dorms_2"
+
+/area/usasfb_sullivan/indoors/command/offices
+	name = "Sullivan Aerospace Force Base - Central Command - Offices"
+	icon_state = "dorms_3"
 
 /area/usasfb_sullivan/indoors/command/reception
 	name = "Sullivan Aerospace Force Base - Central Command - Reception"
+
 
 /area/usasfb_sullivan/indoors/runway_watchpost
 	name = "Sullivan Aerospace Force Base - Runway Watchpost"
