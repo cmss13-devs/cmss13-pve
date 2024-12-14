@@ -35,7 +35,7 @@
 			return
 
 		for(var/datum/human_ai_brain/brain as anything in ai_humans_selected)
-			brain.target_turf = get_turf(object)
+			brain.quick_approach = get_turf(object)
 
 		to_chat(holder, SPAN_BOLDNOTICE("Order sent."))
 		deselect_region()

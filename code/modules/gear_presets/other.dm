@@ -634,6 +634,8 @@
 /datum/equipment_preset/other/zombie/load_race(mob/living/carbon/human/new_human)
 	new_human.set_species(SPECIES_HUMAN) // Set back, so that we can get our claws again
 	new_human.set_species(SPECIES_ZOMBIE)
+	if(new_human.get_ai_brain())
+		new_human.get_ai_brain().ignore_looting = TRUE
 
 /datum/equipment_preset/other/zombie/load_gear(mob/living/carbon/human/new_human)
 	var/uniform_path = pick(/obj/item/clothing/under/colonist, /obj/item/clothing/under/colonist/ua_civvies, /obj/item/clothing/under/colonist/wy_davisone, /obj/item/clothing/under/colonist/wy_joliet_shopsteward, /obj/item/clothing/under/marine/ua_riot, /obj/item/clothing/under/suit_jacket/manager, /obj/item/clothing/under/suit_jacket/director)

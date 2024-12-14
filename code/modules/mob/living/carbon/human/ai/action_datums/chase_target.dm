@@ -12,6 +12,9 @@
 	if(brain.current_target)
 		return 0
 
+	if(get_dist(brain.target_turf, brain.tied_human) > 20)
+		return 0
+
 	return 6
 
 /datum/ai_action/chase_target/get_conflicts(datum/human_ai_brain/brain)

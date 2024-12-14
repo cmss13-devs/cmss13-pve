@@ -4,8 +4,8 @@
 	return INFINITY
 
 /atom/proc/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
-	ai_human.a_intent_change(INTENT_HARM)
-	brain.unholster_any_weapon()
+	if(!brain.unholster_any_weapon())
+		ai_human.a_intent_change(INTENT_HARM)
 	ai_human.do_click(src, "", list())
 	ai_human.face_atom(src)
 	return TRUE

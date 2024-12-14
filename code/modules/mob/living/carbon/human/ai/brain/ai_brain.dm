@@ -28,11 +28,15 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	/// Semi-permanent "order" datum. Does not expire
 	var/datum/ai_order/current_order
 
+	var/turf/quick_approach
+
 	var/list/detection_turfs = list()
 
 	var/in_combat = FALSE
 	var/combat_decay_time_min = 15 SECONDS
 	var/combat_decay_time_max = 30 SECONDS
+
+	var/cover_without_gun = FALSE
 
 	var/peek_cover_chance = 60
 
