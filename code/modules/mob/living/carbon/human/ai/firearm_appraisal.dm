@@ -197,7 +197,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	primary_weight = 7
 
 /datum/firearm_appraisal/rpg
-	minimum_range = 5
+	minimum_range = 2
 	optimal_range = 6
 	gun_types = list(
 		/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable,
