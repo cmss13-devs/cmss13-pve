@@ -10,10 +10,10 @@
 	if(!length(brain.to_pickup))
 		return 0
 
-	if(tied_human.resting)
+	if(brain.tied_human.resting)
 		return 0
 
-	if(tied_human.health < HEALTH_THRESHOLD_CRIT)
+	if(brain.tied_human.health < HEALTH_THRESHOLD_CRIT)
 		return 0
 
 	return 11
