@@ -66,7 +66,8 @@
 "al" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/machinery/door/airlock/almayer/secure/colony{
-	dir = 1
+	dir = 1;
+	name = "\improper Admin Airlock"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_2)
@@ -108,7 +109,8 @@
 /area/lv295/indoors/sublevel_1)
 "au" = (
 /obj/structure/machinery/door/airlock/almayer/secure/colony{
-	dir = 1
+	dir = 1;
+	name = "\improper Dorm Airlock"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
@@ -183,6 +185,15 @@
 	},
 /turf/open/floor/strata/white_cyan1,
 /area/lv295/indoors/sublevel_4)
+"aH" = (
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	name = "\improper Shower Room Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "aI" = (
 /turf/open/floor/almayer/research/containment/corner_var1/east,
 /area/lv295/indoors/sublevel_4)
@@ -234,6 +245,14 @@
 	},
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
+	},
+/turf/open/floor/strata/white_cyan2,
+/area/lv295/indoors/sublevel_3)
+"aO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
 	},
 /turf/open/floor/strata/white_cyan2,
 /area/lv295/indoors/sublevel_3)
@@ -560,6 +579,14 @@
 	},
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
+"bN" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Cyrocells Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "bO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -670,6 +697,13 @@
 	},
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
+"cc" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	dir = 1;
+	name = "\improper Chemlab Airlock"
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "cd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -699,9 +733,13 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv295/indoors/sublevel_2)
 "cl" = (
-/obj/structure/bed/chair/comfy,
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/strata/white_cyan2,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 4
+	},
+/obj/structure/window,
+/turf/open/floor/prison,
 /area/lv295/indoors/sublevel_3)
 "cn" = (
 /turf/closed/wall/almayer/white/hull,
@@ -728,7 +766,8 @@
 /area/lv295/indoors/sublevel_3)
 "cs" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1
+	dir = 1;
+	name = "\improper Containment Airlock"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Containment Cell L3"
@@ -810,19 +849,11 @@
 /turf/open/floor/prison,
 /area/lv295/indoors/sublevel_1)
 "cA" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/window,
-/obj/structure/window{
-	dir = 4
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	dir = 1;
+	name = "\improper Sublevel-3 Admin Airlock"
 	},
-/obj/structure/window{
-	dir = 8
-	},
-/obj/structure/machinery/prop/almayer/computer/PC{
-	dir = 1
-	},
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/strata/white_cyan2,
+/turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_3)
 "cB" = (
 /obj/structure/surface/table/almayer,
@@ -900,6 +931,10 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
 "cL" = (
@@ -975,6 +1010,12 @@
 	},
 /turf/open/floor/prison,
 /area/lv295/indoors/sublevel_1)
+"cX" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	name = "\improper Storage Airlock"
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "cY" = (
 /obj/structure/bed/chair{
 	dir = 4;
@@ -1052,7 +1093,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/surface_lab)
 "dp" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	name = "\improper Containment Airlock"
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Containment Cell Operating Table"
 	},
@@ -1185,17 +1228,8 @@
 /area/lv295/indoors/sublevel_3)
 "dK" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/filingcabinet/filingcabinet{
-	density = 0;
-	pixel_x = -8;
-	pixel_y = 16
-	},
-/obj/structure/filingcabinet/chestdrawer{
-	density = 0;
-	pixel_x = 7;
-	pixel_y = 16
-	},
-/turf/open/floor/strata/white_cyan1/east,
+/obj/structure/pipes/standard/manifold/hidden/green,
+/turf/open/floor/prison,
 /area/lv295/indoors/sublevel_3)
 "dN" = (
 /obj/structure/surface/table/almayer,
@@ -1210,6 +1244,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
+/area/lv295/indoors/sublevel_1)
+"dT" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1;
+	name = "\improper Dorms Airlock"
+	},
+/turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_1)
 "dU" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1247,7 +1288,8 @@
 /area/lv295/indoors/maint)
 "ec" = (
 /obj/structure/machinery/door/airlock/almayer/secure/colony{
-	dir = 1
+	dir = 1;
+	name = "\improper Freezer Airlock"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
@@ -1441,6 +1483,13 @@
 	},
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
+"eC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
 "eD" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/sink{
@@ -1513,7 +1562,7 @@
 	pixel_y = 16;
 	density = 0
 	},
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "eM" = (
 /obj/structure/machinery/optable,
@@ -1683,6 +1732,10 @@
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
 	},
+/obj/structure/vulture_spotter_tripod,
+/obj/item/device/camera/broadcasting{
+	pixel_y = 12
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_4)
 "fm" = (
@@ -1692,6 +1745,11 @@
 	},
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv295/indoors/sublevel_1)
+"fn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/medical3,
+/turf/open/floor/strata/white_cyan2,
+/area/lv295/indoors/sublevel_4)
 "fp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -1774,7 +1832,7 @@
 	pixel_x = 5;
 	pixel_y = 6
 	},
-/turf/open/floor/strata/white_cyan2,
+/turf/open/floor/prison,
 /area/lv295/indoors/sublevel_3)
 "fz" = (
 /obj/structure/cable/heavyduty{
@@ -1862,6 +1920,14 @@
 	},
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 6
+	},
+/turf/open/floor/strata/white_cyan1/east,
+/area/lv295/indoors/sublevel_3)
+"fK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1;
+	pixel_y = -1
 	},
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
@@ -2409,6 +2475,13 @@
 /obj/item/lightstick/red/spoke/planted,
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/lv295/outdoors/barrens)
+"hs" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	name = "\improper Stimulent Testing Room Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "hu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -2596,7 +2669,7 @@
 	light_color = "#dae2ff"
 	},
 /turf/open/floor/prison/cell_stripe/east,
-/area/lv295/indoors/surface_lab)
+/area/lv295/outdoors/compound)
 "hY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -2709,7 +2782,8 @@
 /area/shuttle/elevator2/ground)
 "iw" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
-	dir = 1
+	dir = 1;
+	name = "\improper Filing Room Airlock"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_2)
@@ -2865,6 +2939,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/lv295/outdoors/compound)
+"iX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/strata/white_cyan2,
+/area/lv295/indoors/sublevel_3)
 "iY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -3007,6 +3088,17 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_2)
+"js" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/flora/pottedplant{
+	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
+	icon_state = "pottedplant_21";
+	layer = 3.1;
+	name = "synthethic potted plant";
+	pixel_y = 14
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
 "jv" = (
 /obj/structure/closet/l3closet/virology,
 /turf/open/floor/strata/white_cyan1,
@@ -3245,6 +3337,20 @@
 "ko" = (
 /turf/closed/wall/almayer/research/containment/wall/purple,
 /area/lv295/indoors/sublevel_4)
+"kq" = (
+/obj/structure/filingcabinet/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 16;
+	layer = 3.3
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = 28;
+	id = "3_armoury";
+	pixel_x = 6
+	},
+/turf/open/floor/strata/white_cyan2,
+/area/lv295/indoors/sublevel_4)
 "kr" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -3331,6 +3437,15 @@
 	dir = 1
 	},
 /area/lv295/indoors/sublevel_3)
+"kB" = (
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	name = "\improper Holding Cell Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "kC" = (
 /obj/structure/window{
 	dir = 4
@@ -3518,7 +3633,9 @@
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv295/indoors/sublevel_3)
 "lk" = (
-/obj/structure/machinery/door/airlock/almayer/generic,
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Containment Airlock"
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
 	id = "Containment Cell A3"
@@ -3658,7 +3775,8 @@
 	pixel_y = -1
 	},
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
-	dir = 1
+	dir = 1;
+	name = "\improper Sub Level 3 Research Airlock"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_3)
@@ -3706,6 +3824,14 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_2)
+"lY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
 "ma" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -3880,6 +4006,13 @@
 	},
 /turf/open/floor/prison,
 /area/lv295/indoors/sublevel_2)
+"mE" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1;
+	name = "\improper Restroom Airlock"
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_2)
 "mH" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
@@ -3923,7 +4056,7 @@
 /obj/structure/machinery/faxmachine/corporate{
 	pixel_y = 6
 	},
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "mP" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3945,6 +4078,22 @@
 /obj/item/reagent_container/food/snacks/mre_pack/meal2,
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv295/indoors/sublevel_1)
+"mT" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Operating Room Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
+"mU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/white_cyan2,
+/area/lv295/indoors/sublevel_3)
 "mW" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -4054,12 +4203,12 @@
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv295/indoors/sublevel_1)
 "nl" = (
-/obj/structure/bed/chair/comfy{
-	dir = 1
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	dir = 1;
+	name = "\improper Locker Room Airlock"
 	},
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/strata/white_cyan2,
-/area/lv295/indoors/sublevel_3)
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "nn" = (
 /obj/structure/machinery/light/double{
 	light_color = "#BB3F3F";
@@ -4191,6 +4340,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv295/indoors/surface_lab)
+"nH" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Sublevel-3 Admin Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "nI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/autodispenser{
@@ -4384,18 +4541,10 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
 "ot" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/window,
-/obj/structure/window{
+/obj/structure/bed/chair/comfy{
 	dir = 4
 	},
-/obj/structure/window{
-	dir = 8
-	},
-/obj/structure/machinery/prop/almayer/computer/PC{
-	dir = 1
-	},
-/turf/open/floor/strata/white_cyan2,
+/turf/open/floor/prison,
 /area/lv295/indoors/sublevel_3)
 "ov" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4547,6 +4696,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv295/indoors/maint)
+"oX" = (
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	name = "\improper Armoury Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "oY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -4574,6 +4732,15 @@
 "pc" = (
 /turf/open/floor/almayer/research/containment/corner/north,
 /area/lv295/indoors/sublevel_3)
+"pe" = (
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	name = "\improper Interrogation Room Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "pf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair/comfy{
@@ -4695,7 +4862,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/lv295/outdoors/compound)
 "pD" = (
-/obj/structure/machinery/power/apc/no_power/north,
+/obj/structure/machinery/power/apc/almayer/hardened/north,
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/maint)
 "pE" = (
@@ -4711,6 +4878,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv295/indoors/maint)
+"pI" = (
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 16
+	},
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/lv295/indoors/sublevel_4)
 "pJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/filingcabinet/filingcabinet{
@@ -5104,7 +5284,7 @@
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
 	},
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "qQ" = (
 /obj/item/lightstick/red/spoke/planted,
@@ -5172,6 +5352,10 @@
 	},
 /turf/open/floor/prison,
 /area/lv295/indoors/sublevel_3)
+"rb" = (
+/obj/structure/bed/chair/comfy,
+/turf/open/floor/prison,
+/area/lv295/indoors/sublevel_3)
 "rc" = (
 /obj/structure/machinery/door/airlock/almayer/secure/colony,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -5185,6 +5369,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/outdoors/barrens)
+"rf" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/prison/cell_stripe,
+/area/lv295/indoors/sublevel_3)
 "rg" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv295/indoors/surface_lab)
@@ -5242,6 +5432,17 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1)
+"rr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/faxmachine/corporate{
+	pixel_y = 6
+	},
+/obj/structure/window{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
 "rt" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
@@ -5983,6 +6184,19 @@
 "tM" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv295/indoors/sublevel_3)
+"tN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_y = 13;
+	light_color = "#dae2ff"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/white_cyan1/east,
+/area/lv295/indoors/sublevel_3)
 "tO" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -5995,7 +6209,8 @@
 /area/lv295/indoors/maint)
 "tP" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
-	dir = 1
+	dir = 1;
+	name = "\improper Locker Room Airlock"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_1)
@@ -6045,6 +6260,16 @@
 	},
 /turf/open/floor/prison,
 /area/lv295/indoors/sublevel_1)
+"tW" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	dir = 1;
+	name = "\improper Sub Level 3 Research Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "tX" = (
 /obj/structure/platform_decoration{
 	dir = 1
@@ -6082,6 +6307,14 @@
 	},
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
+"ue" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/vulture_spotter_tripod,
+/obj/item/device/camera/broadcasting{
+	pixel_y = 12
+	},
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/lv295/indoors/sublevel_4)
 "uf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/space_heater/radiator/red{
@@ -6227,6 +6460,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = 28;
+	id = "1_armoury"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1)
@@ -6525,6 +6762,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/surface_lab)
+"vK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy{
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/lv295/indoors/sublevel_3)
 "vL" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
@@ -6603,6 +6847,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/outdoors/compound)
+"vX" = (
+/obj/structure/vulture_spotter_tripod,
+/obj/item/device/camera/broadcasting{
+	pixel_y = 12
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_4)
 "vY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -6613,6 +6864,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv295/indoors/maint)
+"wb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv295/indoors/sublevel_3)
 "wc" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo,
 /obj/structure/cargo_container/wy/left,
@@ -6674,6 +6932,10 @@
 /obj/structure/machinery/sleep_console,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
+"wp" = (
+/obj/structure/closet/secure_closet/medical2,
+/turf/open/floor/almayer/research/containment/corner_var1/east,
+/area/lv295/indoors/sublevel_4)
 "wq" = (
 /obj/structure/machinery/conveyor{
 	dir = 4;
@@ -6764,6 +7026,10 @@
 /obj/structure/bed/chair,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv295/indoors/sublevel_1)
+"wC" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv295/indoors/sublevel_3)
 "wD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -7034,7 +7300,8 @@
 /area/lv295/indoors/sublevel_2)
 "xw" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
-	dir = 1
+	dir = 1;
+	name = "\improper Sub Level 3 Research Airlock"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_3)
@@ -7053,6 +7320,15 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/strata/white_cyan2,
 /area/lv295/indoors/sublevel_4)
+"xz" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Storage Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "xA" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 9
@@ -7095,6 +7371,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/shuttle/escapepod/floor4,
 /area/lv295/indoors/maint)
+"xH" = (
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	dir = 1;
+	name = "\improper Locker Room Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "xI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/handrail{
@@ -7159,6 +7443,16 @@
 	},
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv295/indoors/sublevel_2)
+"xT" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	name = "\improper Arrivals Armoury Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "1_armoury"
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "xU" = (
 /obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/prison/cell_stripe/east,
@@ -7173,7 +7467,7 @@
 	pixel_x = -5;
 	pixel_y = 4
 	},
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "xW" = (
 /obj/structure/surface/table/almayer,
@@ -7305,7 +7599,7 @@
 	density = 0;
 	pixel_y = 16
 	},
-/turf/open/floor/strata/white_cyan2,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "yo" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7515,7 +7809,9 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/machinery/door/airlock/almayer/secure/colony,
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	name = "\improper Admin Airlock"
+	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_2)
 "yU" = (
@@ -7560,7 +7856,7 @@
 	light_color = "#dae2ff"
 	},
 /obj/structure/surface/table/almayer,
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "za" = (
 /obj/structure/surface/table/almayer,
@@ -7600,6 +7896,25 @@
 "ze" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/lv295/indoors/sublevel_2)
+"zf" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin/wy{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/tool/pen/clicky{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/structure/window{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
 "zg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -7648,6 +7963,12 @@
 	},
 /turf/open/floor/strata/white_cyan1,
 /area/lv295/indoors/sublevel_4)
+"zo" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv295/outdoors/compound)
 "zp" = (
 /obj/structure/window{
 	dir = 4
@@ -7686,6 +8007,14 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
+"zr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/white_cyan1/east,
+/area/lv295/indoors/sublevel_3)
 "zs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -7696,6 +8025,13 @@
 	},
 /turf/open/floor/prison/cell_stripe,
 /area/lv295/indoors/sublevel_2)
+"zt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
 "zu" = (
 /obj/structure/platform{
 	dir = 8
@@ -7962,6 +8298,9 @@
 "Aa" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/pouch/chem{
+	pixel_y = 5
+	},
 /turf/open/floor/almayer/research/containment/corner/east,
 /area/lv295/indoors/sublevel_4)
 "Ab" = (
@@ -8014,6 +8353,13 @@
 	pixel_y = 14
 	},
 /turf/open/floor/strata/white_cyan1/east,
+/area/lv295/indoors/sublevel_3)
+"Ah" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	dir = 1;
+	name = "\improper Security Checkpoint Airlock"
+	},
+/turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_3)
 "Aj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8286,6 +8632,14 @@
 /area/lv295/indoors/sublevel_3)
 "Ba" = (
 /obj/structure/surface/table/almayer,
+/obj/item/alienjar{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/alienjar{
+	pixel_x = -8;
+	pixel_y = 3
+	},
 /turf/open/floor/almayer/research/containment/corner/north,
 /area/lv295/indoors/sublevel_4)
 "Bb" = (
@@ -8398,6 +8752,13 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_2)
+"Bs" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	name = "\improper Holding Cell Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "Bt" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
@@ -8425,6 +8786,19 @@
 	pixel_x = 3
 	},
 /turf/open/floor/strata/white_cyan1/east,
+/area/lv295/indoors/sublevel_3)
+"Bw" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/flora/pottedplant{
+	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
+	icon_state = "pottedplant_21";
+	layer = 3.1;
+	name = "synthethic potted plant";
+	pixel_y = 14
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/window,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "Bx" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8457,6 +8831,14 @@
 /area/lv295/indoors/sublevel_4)
 "BD" = (
 /obj/structure/surface/table/almayer,
+/obj/item/newspaper{
+	pixel_y = 5;
+	pixel_x = -3
+	},
+/obj/item/newspaper{
+	pixel_y = -4;
+	pixel_x = 2
+	},
 /turf/open/floor/almayer/research/containment/floor2/west,
 /area/lv295/indoors/sublevel_4)
 "BE" = (
@@ -8714,6 +9096,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv295/indoors/sublevel_2)
+"Cp" = (
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	name = "\improper Kitchen Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "Cq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -8750,6 +9141,14 @@
 	},
 /turf/open/floor/prison,
 /area/lv295/indoors/sublevel_2)
+"Cv" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Containment Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "Cy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -8792,7 +9191,7 @@
 	density = 0
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "CE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8991,7 +9390,7 @@
 	density = 0
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "Dn" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -9071,7 +9470,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1)
 "DE" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	name = "\improper Security Office Airlock"
+	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_3)
 "DF" = (
@@ -9284,7 +9685,9 @@
 /turf/open/auto_turf/snow/brown_base/layer2,
 /area/lv295/outdoors/compound)
 "Eo" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	name = "\improper Elevator Airlock"
+	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/surface_lab)
 "Ep" = (
@@ -9585,7 +9988,7 @@
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	pixel_y = 29
 	},
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "Fk" = (
 /obj/structure/machinery/light/double/blue{
@@ -9714,7 +10117,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1)
 "FD" = (
-/obj/structure/machinery/door/airlock/almayer/generic,
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Sublevel-4 Airlock"
+	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_4)
 "FF" = (
@@ -9984,6 +10389,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1)
+"Gq" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/floor/prison/cell_stripe,
+/area/lv295/indoors/sublevel_3)
 "Gr" = (
 /obj/structure/bed/chair{
 	dir = 4;
@@ -10031,6 +10442,11 @@
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/maint)
+"GC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/window,
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
 "GF" = (
 /obj/structure/machinery/light/double{
 	light_color = "#BB3F3F"
@@ -10044,8 +10460,9 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv295/indoors/sublevel_1)
 "GH" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
-	dir = 1
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1;
+	name = "\improper Admin Airlock"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_2)
@@ -10220,6 +10637,13 @@
 "Hi" = (
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv295/indoors/sublevel_1)
+"Hk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/prison/cell_stripe,
+/area/lv295/indoors/sublevel_3)
 "Hm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -10240,10 +10664,11 @@
 	light_color = "#dae2ff"
 	},
 /turf/open/floor/prison/cell_stripe/east,
-/area/lv295/indoors/surface_lab)
+/area/lv295/outdoors/compound)
 "Ho" = (
 /obj/structure/machinery/door/airlock/almayer/secure/colony{
-	dir = 1
+	dir = 1;
+	name = "\improper Dorm Airlock"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_1)
@@ -10387,6 +10812,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/lv295/outdoors/compound)
+"HF" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Sub Level-3 Armoury Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "3_armoury"
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "HG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/handrail{
@@ -10487,7 +10923,8 @@
 /area/lv295/outdoors/compound)
 "HT" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1
+	dir = 1;
+	name = "\improper Sublevel-4 Airlock"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_4)
@@ -10562,6 +10999,14 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/outdoors/compound)
+"Ie" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/server_equipment/yutani_server{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
 "Ig" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -10685,6 +11130,20 @@
 	},
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv295/indoors/sublevel_1)
+"Is" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_y = 13;
+	light_color = "#dae2ff"
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 8;
+	pixel_y = 3
+	},
+/obj/structure/window,
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
 "It" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
@@ -10835,6 +11294,13 @@
 /obj/structure/window,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
+"IM" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1;
+	name = "\improper Site Executive Room Airlock"
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_2)
 "IN" = (
 /obj/structure/machinery/light/double{
 	light_color = "#BB3F3F";
@@ -11127,17 +11593,16 @@
 /turf/open/floor/strata/white_cyan1,
 /area/lv295/indoors/sublevel_4)
 "JI" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin/wy{
-	pixel_x = -5;
-	pixel_y = 6
-	},
-/obj/item/tool/pen/clicky{
-	pixel_x = 5;
-	pixel_y = 6
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/white_cyan2,
+/obj/structure/surface/table/almayer,
+/obj/structure/flora/pottedplant{
+	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
+	icon_state = "pottedplant_21";
+	layer = 3.1;
+	name = "synthethic potted plant";
+	pixel_y = 14
+	},
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "JJ" = (
 /turf/open/floor/plating,
@@ -11155,6 +11620,15 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/maint)
+"JN" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Research Sublevel-3 Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "JO" = (
 /obj/structure/surface/rack,
 /obj/item/reagent_container/spray/cleaner{
@@ -11269,7 +11743,7 @@
 	pixel_y = 22;
 	pixel_x = -8
 	},
-/turf/open/floor/strata/white_cyan2,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "Kk" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11288,7 +11762,8 @@
 "Kl" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
-	id = "Stimulent_Trial_Room"
+	id = "Stimulent_Trial_Room";
+	name = "\improper Containment Airlock"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Stimulent_Trial_Room"
@@ -11348,6 +11823,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1)
+"Kv" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	name = "\improper Chemlab Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "Kx" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/box/autoinjectors{
@@ -11438,7 +11920,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
 /obj/item/newspaper,
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "KL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11450,7 +11932,8 @@
 /area/lv295/indoors/surface_lab)
 "KO" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
-	dir = 1
+	dir = 1;
+	name = "\improper Engineering Room Airlock"
 	},
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -11468,6 +11951,12 @@
 	pixel_y = 14
 	},
 /turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_1)
+"KS" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "1_armoury"
+	},
+/turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_1)
 "KT" = (
 /obj/structure/machinery/door/airlock/almayer/secure/colony,
@@ -11517,6 +12006,16 @@
 /obj/structure/curtain/red,
 /turf/open/floor/plating/plating_catwalk,
 /area/lv295/indoors/sublevel_2)
+"La" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1;
+	name = "\improper Engineering Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "Lc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -11556,6 +12055,13 @@
 /obj/structure/cargo_container/kelland/right,
 /turf/open/auto_turf/snow/brown_base/layer2,
 /area/lv295/outdoors/compound)
+"Lj" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1;
+	name = "\improper Meeting Room Airlock"
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_2)
 "Lk" = (
 /obj/structure/platform,
 /obj/structure/platform/strata{
@@ -12039,7 +12545,11 @@
 "MH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1
+	dir = 1;
+	name = "\improper Armoury Airlock"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "4_armoury"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_4)
@@ -12250,18 +12760,12 @@
 /turf/open/floor/strata/white_cyan2,
 /area/lv295/indoors/sublevel_3)
 "Nn" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/window{
-	dir = 4
+/obj/structure/machinery/door_control{
+	pixel_y = 28;
+	id = "4_armoury";
+	pixel_x = 6
 	},
-/obj/structure/window{
-	dir = 8
-	},
-/obj/structure/machinery/prop/almayer/computer/PC{
-	pixel_y = 6
-	},
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/strata/white_cyan2,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "No" = (
 /obj/effect/decal/cleanable/dirt,
@@ -12331,7 +12835,7 @@
 	density = 0;
 	pixel_y = 16
 	},
-/turf/open/floor/strata/white_cyan2,
+/turf/open/floor/prison,
 /area/lv295/indoors/sublevel_3)
 "Nz" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -12468,6 +12972,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv295/indoors/surface_lab)
+"NU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/strata/white_cyan2,
+/area/lv295/indoors/sublevel_3)
 "NY" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -12784,6 +13299,15 @@
 	},
 /turf/open/floor/prison,
 /area/lv295/indoors/sublevel_2)
+"OX" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 4
+	},
+/obj/structure/window,
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
 "OY" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
@@ -12813,6 +13337,14 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/maint)
+"Pe" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Stimulent Testing Room Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "Pf" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 4
@@ -12821,7 +13353,8 @@
 /area/lv295/indoors/sublevel_2)
 "Ph" = (
 /obj/structure/machinery/door/airlock/almayer/secure/colony{
-	dir = 1
+	dir = 1;
+	name = "\improper Security Substation Airlock"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
@@ -12945,12 +13478,13 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv295/outdoors/compound)
 "PK" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 4
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 8;
+	pixel_y = 3
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/white_cyan2,
+/obj/structure/window,
+/turf/open/floor/prison,
 /area/lv295/indoors/sublevel_3)
 "PL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13026,7 +13560,9 @@
 /turf/open/floor/prison/kitchen,
 /area/lv295/indoors/sublevel_1)
 "PZ" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	name = "\improper Restrooms Airlock"
+	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_1)
@@ -13099,6 +13635,13 @@
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
 	},
+/obj/item/storage/pouch/autoinjector/full{
+	pixel_y = 8;
+	pixel_x = -4
+	},
+/obj/item/storage/pouch/autoinjector/full{
+	pixel_y = -1
+	},
 /turf/open/floor/almayer/research/containment/floor2/north,
 /area/lv295/indoors/sublevel_4)
 "Qo" = (
@@ -13165,6 +13708,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_4)
+"Qx" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	name = "\improper Arrivals Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "Qy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/handrail{
@@ -13441,7 +13991,7 @@
 	pixel_x = 5;
 	pixel_y = 6
 	},
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "Ro" = (
 /obj/structure/platform{
@@ -13458,16 +14008,23 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv295/indoors/sublevel_2)
 "Rs" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/faxmachine/corporate{
-	pixel_y = 6
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/white_cyan2,
+/obj/structure/filingcabinet/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 16
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	density = 0;
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "Rt" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1
+	dir = 1;
+	name = "\improper Containment Airlock"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Containment Cell R4"
@@ -13580,6 +14137,11 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
+"RK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/medical3,
+/turf/open/floor/strata/white_cyan1,
+/area/lv295/indoors/sublevel_4)
 "RL" = (
 /obj/structure/platform{
 	dir = 4
@@ -13687,7 +14249,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "Sa" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13886,6 +14448,14 @@
 	},
 /turf/open/floor/prison,
 /area/lv295/indoors/sublevel_2)
+"SE" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Security Checkpoint Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "SF" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /obj/effect/decal/cleanable/dirt,
@@ -14235,6 +14805,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan1,
 /area/lv295/indoors/sublevel_4)
+"TI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/prison,
+/area/lv295/indoors/sublevel_3)
 "TJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -14386,7 +14963,9 @@
 /turf/open/shuttle/escapepod/floor4,
 /area/lv295/indoors/maint)
 "Ud" = (
-/obj/structure/machinery/door/airlock/almayer/generic,
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Chem Lab Airlock"
+	},
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -14443,7 +15022,8 @@
 /area/lv295/indoors/sublevel_3)
 "Up" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
-	dir = 1
+	dir = 1;
+	name = "\improper Fitness Airlock"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_1)
@@ -14597,11 +15177,26 @@
 	pixel_y = 11
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/white_cyan2,
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
+"UI" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Storage Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_3)
 "UJ" = (
 /obj/structure/machinery/chem_dispenser/medbay,
 /turf/open/floor/strata/white_cyan1/east,
+/area/lv295/indoors/sublevel_3)
+"UM" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	name = "\improper Stimulent Testing Room Airlock";
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_3)
 "UN" = (
 /turf/open/floor/prison,
@@ -14733,17 +15328,11 @@
 /turf/open/floor/prison/cell_stripe,
 /area/lv295/indoors/maint)
 "Vo" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/window{
-	dir = 4
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	dir = 1;
+	name = "\improper Office Airlock"
 	},
-/obj/structure/window{
-	dir = 8
-	},
-/obj/structure/machinery/prop/almayer/computer/PC{
-	pixel_y = 6
-	},
-/turf/open/floor/strata/white_cyan2,
+/turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_3)
 "Vp" = (
 /obj/structure/pipes/vents/pump,
@@ -14998,6 +15587,13 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_3)
+"Wi" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2{
+	name = "\improper Overdose Observation Room Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "Wj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -15058,12 +15654,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1)
+"Wt" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/prison,
+/area/lv295/indoors/sublevel_3)
 "Ww" = (
 /obj/structure/platform,
 /turf/open/shuttle/escapepod/floor4,
 /area/lv295/indoors/maint)
 "Wx" = (
-/obj/structure/machinery/door/airlock/almayer/generic,
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Containment Airlock"
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
 	id = "Containment Cell B4"
@@ -15083,6 +15685,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_2)
+"Wz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/white_cyan2,
+/area/lv295/indoors/sublevel_3)
 "WA" = (
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/prison,
@@ -15493,7 +16102,7 @@
 	pixel_y = 16;
 	density = 0
 	},
-/turf/open/floor/strata/white_cyan2,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "XR" = (
 /obj/structure/bed/chair/comfy{
@@ -15512,6 +16121,14 @@
 /obj/structure/platform,
 /turf/open/floor/prison,
 /area/lv295/outdoors/compound)
+"XU" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "\improper Autodoc Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_3)
 "XV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -15681,7 +16298,9 @@
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv295/indoors/sublevel_2)
 "Yt" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	name = "\improper Elevator Airlock"
+	},
 /turf/open/floor/corsat/marked,
 /area/lv295/indoors/sublevel_2)
 "Yu" = (
@@ -15742,7 +16361,7 @@
 	pixel_y = 6
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "YC" = (
 /obj/effect/decal/cleanable/dirt,
@@ -15901,7 +16520,7 @@
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
 	},
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "Zb" = (
 /obj/structure/platform{
@@ -15995,6 +16614,15 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1)
+"Zn" = (
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	name = "\improper Evidence Room Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "Zq" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_y = 16
@@ -16072,7 +16700,7 @@
 	density = 0
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/white_cyan1/east,
+/turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_3)
 "ZD" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16117,6 +16745,29 @@
 	},
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv295/indoors/sublevel_2)
+"ZK" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	name = "\improper Engineering Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
+"ZL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv295/indoors/sublevel_3)
+"ZM" = (
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	name = "\improper Toilets Airlock"
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/lv295/indoors/sublevel_1)
 "ZN" = (
 /obj/structure/machinery/optable,
 /obj/effect/decal/cleanable/dirt,
@@ -24902,7 +25553,7 @@ BS
 uP
 uP
 Hn
-LY
+zo
 hX
 uP
 uP
@@ -26796,7 +27447,7 @@ ud
 hP
 ZD
 ZD
-UD
+mT
 ZD
 bV
 Nx
@@ -27204,7 +27855,7 @@ ud
 OR
 ZD
 yK
-UD
+mT
 ZD
 Jh
 Uo
@@ -27345,7 +27996,7 @@ ua
 ua
 ua
 KH
-tP
+dT
 ua
 ua
 ua
@@ -27512,7 +28163,7 @@ gm
 gm
 gm
 cL
-Lg
+tW
 gm
 hD
 hD
@@ -27720,7 +28371,7 @@ sG
 rF
 ZD
 ZD
-UD
+UI
 ZD
 GI
 Ij
@@ -27957,7 +28608,7 @@ ua
 ua
 ua
 KH
-tP
+dT
 ua
 ua
 ua
@@ -28023,7 +28674,7 @@ gm
 gm
 gm
 gm
-Ud
+JN
 gm
 gm
 gm
@@ -28569,7 +29220,7 @@ ua
 ua
 ua
 KH
-tP
+dT
 ua
 ua
 ua
@@ -28645,7 +29296,7 @@ gm
 gm
 gm
 SM
-xw
+Vo
 gm
 RB
 MM
@@ -28951,7 +29602,7 @@ gm
 gm
 gm
 gm
-Ud
+xz
 gm
 RB
 qx
@@ -29181,7 +29832,7 @@ ua
 ua
 ua
 KH
-tP
+dT
 ua
 ua
 ua
@@ -29249,7 +29900,7 @@ Qd
 hZ
 VH
 ZD
-UD
+XU
 ZD
 yK
 yK
@@ -29662,7 +30313,7 @@ nd
 PA
 qE
 yK
-sU
+Kv
 yK
 xR
 Kd
@@ -29793,7 +30444,7 @@ ua
 ua
 ua
 KH
-tP
+dT
 ua
 ua
 ua
@@ -29861,7 +30512,7 @@ Rk
 nS
 VH
 ZD
-sU
+Wi
 ZD
 xR
 yK
@@ -29870,7 +30521,7 @@ gm
 ln
 ln
 SM
-xw
+cc
 RB
 Qg
 Od
@@ -29994,7 +30645,7 @@ Tm
 Tm
 gI
 Sw
-au
+xH
 yf
 st
 lL
@@ -30060,7 +30711,7 @@ Ou
 Xj
 hZ
 sV
-UD
+bN
 qE
 yK
 bK
@@ -30114,7 +30765,7 @@ cR
 kJ
 ua
 ua
-rc
+ZM
 ua
 ua
 KV
@@ -30126,7 +30777,7 @@ ua
 ua
 ua
 wF
-KO
+La
 ua
 ua
 ua
@@ -30198,7 +30849,7 @@ Oz
 Oz
 lL
 Tl
-Ho
+nl
 ob
 GG
 Ln
@@ -30328,10 +30979,10 @@ ua
 su
 Tk
 qh
-AM
+ZK
 Cq
 Uf
-AM
+ZK
 qI
 ki
 bd
@@ -30369,7 +31020,7 @@ gm
 gm
 gm
 cL
-Lg
+tW
 gm
 gm
 gm
@@ -30420,7 +31071,7 @@ We
 dk
 ua
 ua
-rc
+aH
 ua
 ua
 qF
@@ -30472,7 +31123,7 @@ gm
 gm
 nS
 fF
-sU
+hs
 ZD
 fe
 Xv
@@ -30679,7 +31330,7 @@ pr
 gm
 gm
 SM
-xw
+UM
 gm
 Mu
 pr
@@ -30866,7 +31517,7 @@ HR
 Cn
 ua
 ua
-rc
+Zn
 XZ
 ua
 rH
@@ -30877,14 +31528,14 @@ nS
 eO
 hZ
 nS
-DE
+cX
 hZ
 pr
 eP
 gm
 aN
 ZD
-UD
+Pe
 yK
 GI
 ln
@@ -30962,11 +31613,11 @@ ua
 BT
 lU
 DR
-AM
+Qx
 Cq
 Mt
 DR
-AM
+xT
 Cq
 dU
 Oq
@@ -31056,7 +31707,7 @@ Da
 td
 yD
 ua
-rc
+pe
 ua
 ua
 ua
@@ -31068,7 +31719,7 @@ wF
 ob
 zF
 Go
-wF
+KS
 Na
 GG
 sm
@@ -31087,7 +31738,7 @@ Mw
 gm
 gm
 SM
-xw
+UM
 gm
 cb
 pr
@@ -31172,7 +31823,7 @@ QF
 vc
 ua
 ua
-rc
+oX
 XZ
 ua
 rH
@@ -31186,7 +31837,7 @@ LK
 gm
 Pw
 fF
-sU
+hs
 yK
 xR
 OR
@@ -31362,7 +32013,7 @@ Da
 td
 Da
 ua
-rc
+kB
 ua
 ua
 ua
@@ -31389,7 +32040,7 @@ RB
 RB
 gm
 sC
-Lg
+tW
 gm
 gm
 gm
@@ -32058,7 +32709,7 @@ bP
 yi
 ua
 ua
-rc
+Cp
 ua
 ua
 ua
@@ -32116,7 +32767,7 @@ fJ
 gb
 ZD
 ZD
-UD
+nH
 ml
 QW
 GZ
@@ -32412,7 +33063,7 @@ qv
 gm
 gm
 SM
-xw
+cA
 gm
 gm
 SM
@@ -32420,7 +33071,7 @@ xw
 gm
 gm
 SM
-xw
+cA
 gm
 gm
 Jq
@@ -32618,10 +33269,10 @@ gm
 Bm
 ZD
 xR
-UD
+nH
 rF
 ZD
-UD
+nH
 jx
 Jh
 rC
@@ -32820,7 +33471,7 @@ qv
 gm
 gm
 SM
-xw
+cA
 gm
 gm
 SM
@@ -32828,7 +33479,7 @@ xw
 gm
 gm
 SM
-xw
+cA
 gm
 gm
 pi
@@ -33136,7 +33787,7 @@ fJ
 RG
 ZD
 ZD
-UD
+nH
 LU
 iI
 bL
@@ -33398,7 +34049,7 @@ lb
 lb
 lb
 iU
-iw
+Lj
 lb
 lb
 lb
@@ -33407,7 +34058,7 @@ lb
 lb
 lb
 yu
-iw
+mE
 lb
 lb
 lb
@@ -33775,7 +34426,7 @@ Vd
 Ev
 oh
 Ab
-Ab
+vX
 Qw
 rw
 cn
@@ -33793,7 +34444,7 @@ lb
 lb
 lb
 yu
-iw
+GH
 lb
 lb
 lb
@@ -33806,7 +34457,7 @@ lb
 lb
 lb
 yu
-iw
+GH
 lb
 RT
 RT
@@ -34044,7 +34695,7 @@ Gm
 RB
 gm
 SM
-xw
+Ah
 gm
 gm
 SM
@@ -34070,7 +34721,7 @@ cn
 cn
 ls
 cQ
-cQ
+fn
 dj
 Di
 Vd
@@ -34253,7 +34904,7 @@ TZ
 Cg
 EW
 yK
-UD
+Cv
 ZD
 ZD
 ZD
@@ -34953,10 +35604,10 @@ ze
 bC
 Yc
 gm
-se
+GC
 YB
-bl
-se
+Bw
+Ep
 gm
 gm
 gm
@@ -35054,12 +35705,12 @@ kb
 ze
 bC
 Yc
-se
-se
-nS
-hZ
-se
-se
+Ie
+Ep
+Pz
+lV
+Ep
+rr
 gm
 se
 nS
@@ -35156,15 +35807,15 @@ kb
 ze
 bC
 Yc
-se
-ND
+ZL
 ot
-Vo
-yQ
-VB
+ot
+lV
+lV
+zf
 gm
-cO
-hZ
+tN
+aO
 dE
 ie
 Zy
@@ -35192,7 +35843,7 @@ cn
 vr
 Uy
 Vd
-hH
+kq
 cQ
 HT
 tw
@@ -35258,15 +35909,15 @@ aC
 ze
 bC
 Yc
-DF
-ND
-ot
-Vo
-yQ
-nS
+Is
+PK
+PK
+lV
+lV
+wR
 DE
-hZ
-hZ
+gw
+iX
 dE
 RX
 Ot
@@ -35360,15 +36011,15 @@ Vk
 ze
 bC
 Yc
-WH
+OX
 cl
-cA
-Nn
-nl
-bV
+cl
+LU
+LU
+Gq
 Wg
-Kd
-hZ
+wb
+iX
 dE
 gm
 gm
@@ -35408,7 +36059,7 @@ Vd
 xi
 El
 zm
-NI
+RK
 Vd
 cn
 bC
@@ -35462,22 +36113,22 @@ Gm
 ze
 bC
 Yc
-se
-nS
-nS
-hZ
-hZ
+eC
+vK
+vK
+lV
+lV
 RZ
 gm
 cK
-ZD
+NU
 KB
 QS
 Oy
 QS
 Hr
 ZD
-sU
+Bs
 Yi
 iz
 Xp
@@ -35527,7 +36178,7 @@ RT
 RT
 lb
 yu
-iw
+GH
 lb
 RT
 RT
@@ -35567,9 +36218,9 @@ Yc
 gm
 JI
 Rs
-PK
-hZ
-Tu
+oc
+lV
+zt
 gm
 se
 se
@@ -35607,7 +36258,7 @@ lC
 Vd
 dj
 OH
-NI
+RK
 Vd
 BF
 vj
@@ -35677,10 +36328,10 @@ gm
 ln
 ln
 gm
-MS
-hZ
-nS
-se
+fK
+Wz
+mU
+zr
 gm
 YO
 gm
@@ -35709,8 +36360,8 @@ gQ
 Vd
 dj
 dj
-NI
-fO
+RK
+Vd
 XC
 qs
 eM
@@ -35772,12 +36423,12 @@ gm
 UH
 gm
 yn
-hZ
-Tu
+lV
+zt
 gm
-qS
-qS
-MA
+lY
+lY
+js
 gm
 gm
 Ux
@@ -35871,16 +36522,16 @@ ze
 bC
 Yc
 Dm
-nS
+Ep
 gm
 XQ
-nS
-Tu
+Pz
+zt
 ln
-cq
-yq
+eC
+vK
 fy
-MC
+JI
 gm
 cL
 cL
@@ -35918,7 +36569,7 @@ Ul
 dp
 uo
 lD
-lD
+ue
 Ue
 cn
 bC
@@ -35935,7 +36586,7 @@ wX
 wX
 lb
 yu
-iw
+IM
 lb
 wX
 wX
@@ -35957,7 +36608,7 @@ lb
 lb
 lb
 yu
-iw
+mE
 lb
 lb
 lb
@@ -35973,15 +36624,15 @@ ze
 bC
 Yc
 CD
-nS
+Pz
 gm
 Ny
-HW
-jx
-UD
-Kd
-hZ
-ND
+TI
+Hk
+SE
+wb
+lV
+rb
 qP
 ln
 tM
@@ -36075,15 +36726,15 @@ ze
 bC
 Yc
 ZC
-PS
-UD
-yK
-Jh
+rf
+HF
+wC
+dK
 KK
 ln
-WH
-hZ
-ND
+uG
+lV
+rb
 qP
 ln
 gt
@@ -36120,7 +36771,7 @@ dj
 NI
 Ul
 ZT
-uo
+pI
 lD
 Qm
 Ue
@@ -36177,15 +36828,15 @@ ze
 bC
 Yc
 CD
-hP
+Wt
 gm
-hZ
-Mw
+Nn
+Yh
 yZ
 gm
-dK
-hZ
-ND
+Rs
+lV
+rb
 Za
 ln
 gt
@@ -36220,9 +36871,9 @@ cH
 Of
 oS
 dz
-Vd
+fO
 XC
-aI
+wp
 BD
 Ba
 Ue
@@ -36279,16 +36930,16 @@ ze
 bC
 Yc
 eL
-MS
+gt
 gm
 Kj
-qv
+Jj
 gm
 gm
 gm
 Fj
-hZ
-MS
+lV
+gt
 ln
 Ep
 lV
@@ -36390,7 +37041,7 @@ gm
 gm
 mO
 Rn
-MS
+gt
 gm
 Aj
 gt
