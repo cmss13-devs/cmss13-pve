@@ -106,7 +106,7 @@ area/usasfb_sullivan/indoors/security
 
 /area/usasfb_sullivan/indoors/engineering/comms
 	name = "Sullivan Aerospace Force Base - Engineering - Communications"
-	icon_state = "tcomms_3"
+	icon_state = "tcomms3"
 
 /area/usasfb_sullivan/indoors/engineering/maintenance
 	name = "Sullivan Aerospace Force Base - Engineering - Vehicle Maintenance"
