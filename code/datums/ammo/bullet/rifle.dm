@@ -181,15 +181,6 @@
 	target.AddComponent(/datum/component/status_effect/toxic_buildup)
 	knockback(target, fired_proj, max_range = 2)
 
-// PMC Smartgun
-/datum/ammo/bullet/rifle/heavy/irradiated
-	name = "irradiated 10x28 bullet"
-	debilitate = list(0,0,0,3,0,0,0,1) // Stun,knockdown,knockout,irradiate,stutter,eyeblur,drowsy,agony
-
-/datum/ammo/bullet/rifle/heavy/ap/irradiated
-	name = "irradiated armor-piercing 10x28 bullet"
-	debilitate = list(0,0,0,3,0,0,0,1)
-
 // Terminator Smartgun
 
 /datum/ammo/bullet/rifle/heavy/dirty
