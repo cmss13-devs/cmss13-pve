@@ -109,6 +109,13 @@
 /obj/structure/flora/bush/ausbushes/var3/brflowers,
 /turf/open/floor/grass,
 /area/space)
+"bb" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/item/lightstick/red/spoke/planted{
+	pixel_y = 6
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "bc" = (
 /obj/structure/bed/chair{
 	dir = 8;
@@ -22781,7 +22788,7 @@ ca
 eN
 ca
 ca
-ca
+jv
 tp
 tp
 JE
@@ -23601,7 +23608,7 @@ zK
 zK
 zK
 vC
-ca
+jv
 Nm
 Nm
 Nm
@@ -24717,7 +24724,7 @@ eN
 FR
 ON
 Nm
-ca
+jv
 zK
 zK
 zK
@@ -24742,7 +24749,7 @@ ca
 Nm
 Nm
 aG
-ca
+jv
 zK
 zK
 zK
@@ -25516,7 +25523,7 @@ eN
 eN
 GL
 ca
-tp
+bb
 Nj
 tp
 Nj
@@ -26358,7 +26365,7 @@ zK
 zK
 zK
 zK
-ca
+jv
 ON
 Nm
 FR
@@ -28144,7 +28151,7 @@ ON
 Nm
 FR
 vC
-ca
+jv
 zK
 zK
 zK
@@ -29270,7 +29277,7 @@ zK
 zK
 zK
 zK
-ca
+jv
 Nm
 ON
 ON
