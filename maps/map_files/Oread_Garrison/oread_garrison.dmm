@@ -502,7 +502,7 @@
 	dir = 4
 	},
 /obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "di" = (
 /obj/structure/surface/rack{
@@ -690,6 +690,14 @@
 	},
 /turf/open/floor/hydrofloor,
 /area/space)
+"eo" = (
+/obj/structure/platform{
+	density = 0;
+	dir = 1;
+	icon_state = "platform_deco"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/space)
 "ep" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
@@ -803,7 +811,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "fc" = (
 /obj/structure/flora/jungle/vines/light_2,
@@ -1536,7 +1544,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "jG" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
@@ -1570,6 +1578,12 @@
 "jV" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0_mud,
+/area/space)
+"jX" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "jY" = (
 /turf/open/floor/almayer/uscm/directional/northwest,
@@ -1759,6 +1773,14 @@
 	pixel_x = 2
 	},
 /turf/open/floor/prison/floor_plate,
+/area/space)
+"lf" = (
+/obj/structure/platform{
+	density = 0;
+	dir = 4;
+	icon_state = "platform_deco"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "lg" = (
 /obj/structure/surface/rack{
@@ -2031,6 +2053,15 @@
 "mZ" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass,
 /turf/open/floor/almayer,
+/area/space)
+"nb" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "nc" = (
 /obj/structure/flora/jungle/vines/light_2,
@@ -3134,6 +3165,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/space)
+"uf" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/space)
 "uh" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/helmetgarb/gunoil{
@@ -3908,7 +3945,7 @@
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "yW" = (
 /turf/open/gm/coast/south,
@@ -4168,6 +4205,15 @@
 "Av" = (
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/almayer,
+/area/space)
+"Aw" = (
+/obj/structure/platform{
+	layer = 3.6
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "AA" = (
 /obj/structure/window/framed/bunker,
@@ -4496,6 +4542,15 @@
 /obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/space)
+"CE" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/space)
 "CF" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -4802,6 +4857,13 @@
 	},
 /turf/open/floor/airless/asteroidfloor,
 /area/space)
+"Eg" = (
+/obj/structure/platform{
+	density = 0;
+	icon_state = "platform_deco"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/space)
 "Eh" = (
 /obj/structure/flora/jungle/vines/light_3,
 /obj/structure/flora/jungle/vines/light_1,
@@ -4876,6 +4938,10 @@
 	pixel_y = 3
 	},
 /turf/open/floor/hydrofloor,
+/area/space)
+"EJ" = (
+/obj/structure/flora/jungle/vines/light_2,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "EK" = (
 /obj/structure/platform{
@@ -5032,6 +5098,14 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/space)
+"FM" = (
+/obj/structure/platform{
+	density = 0;
+	dir = 8;
+	icon_state = "platform_deco"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/space)
 "FN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5099,7 +5173,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "Gy" = (
 /obj/effect/decal/warning_stripes{
@@ -5317,7 +5391,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "HJ" = (
 /obj/structure/surface/rack,
@@ -5644,6 +5718,12 @@
 /obj/structure/flora/bush/ausbushes/pointybush,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/space)
+"JG" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/space)
 "JL" = (
 /obj/structure/barricade/handrail/wire,
 /obj/structure/flora/jungle/planttop1,
@@ -5702,6 +5782,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/airless/asteroidfloor,
+/area/space)
+"Kc" = (
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "Kf" = (
 /obj/structure/flora/jungle/vines/heavy,
@@ -5782,6 +5865,10 @@
 	},
 /turf/open/floor/almayer/no_build/test_floor4,
 /area/space)
+"KD" = (
+/obj/structure/flora/bush/ausbushes/pointybush,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/space)
 "KE" = (
 /obj/structure/stairs/perspective{
 	dir = 10;
@@ -5814,14 +5901,6 @@
 "KO" = (
 /obj/structure/fence,
 /obj/structure/flora/jungle/vines/light_3,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/space)
-"KP" = (
-/obj/structure/flora/grass/tallgrass/jungle,
-/obj/structure/platform{
-	density = 0;
-	icon_state = "platform_deco"
-	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "KS" = (
@@ -5926,7 +6005,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "Lq" = (
 /obj/structure/flora/bush/ausbushes/pointybush,
@@ -6029,7 +6108,7 @@
 "Mj" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "Mn" = (
 /obj/structure/closet{
@@ -6092,14 +6171,14 @@
 "MK" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "MQ" = (
 /obj/structure/flora/jungle/planttop1,
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "MR" = (
 /obj/structure/flora/jungle/vines/heavy,
@@ -6266,6 +6345,13 @@
 "NK" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/almayer,
+/area/space)
+"NO" = (
+/obj/structure/platform,
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "NR" = (
 /obj/structure/flora/bush/ausbushes/ppflowers,
@@ -6952,7 +7038,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "Sj" = (
 /obj/structure/machinery/power/reactor/colony,
@@ -7055,7 +7141,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "Td" = (
 /turf/open/floor/almayer/sterile_green_side/east,
@@ -7105,7 +7191,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "Tp" = (
 /obj/structure/closet/firecloset,
@@ -7622,6 +7708,10 @@
 	},
 /turf/open/gm/dirt2,
 /area/space)
+"Xc" = (
+/obj/structure/platform,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/space)
 "Xd" = (
 /obj/structure/flora/jungle/thickbush,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -7773,6 +7863,13 @@
 	icon_state = "cargo_arrow"
 	},
 /turf/open/floor/almayer,
+/area/space)
+"Yh" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/structure/platform,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "Yi" = (
 /obj/structure/machinery/cm_vending/sorted/tech{
@@ -7993,7 +8090,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/space)
 "ZH" = (
 /obj/effect/decal/cleanable/blood,
@@ -20729,7 +20826,7 @@ ca
 tp
 tp
 tp
-KP
+Eg
 de
 Mw
 Iy
@@ -20737,8 +20834,8 @@ Iy
 Iy
 Iy
 Mw
-iw
-Wf
+CE
+FM
 ca
 ca
 ca
@@ -20782,16 +20879,16 @@ tp
 tp
 ca
 ca
-bJ
-oz
+Eg
+NO
 Mw
 Iy
 Iy
 Iy
 Iy
 Mw
-iw
-Wf
+CE
+FM
 ca
 ca
 ca
@@ -20900,7 +20997,7 @@ IJ
 Bk
 Mw
 pi
-iw
+CE
 Wf
 ca
 ca
@@ -20944,7 +21041,7 @@ tp
 ca
 ca
 bJ
-oz
+NO
 pi
 Mw
 Bk
@@ -20953,7 +21050,7 @@ Bk
 Bk
 Mw
 pi
-iw
+CE
 Wf
 ca
 ca
@@ -22025,7 +22122,7 @@ ca
 ca
 ca
 vh
-GE
+Yh
 pi
 Mw
 IJ
@@ -22087,7 +22184,7 @@ Bk
 Bk
 Mw
 pi
-RO
+nb
 Tl
 ca
 ca
@@ -22187,8 +22284,8 @@ ca
 ca
 ca
 ca
-vh
-GE
+eo
+Yh
 Mw
 dU
 DB
@@ -22248,8 +22345,8 @@ DB
 DB
 dU
 Mw
-RO
-Tl
+nb
+lf
 ca
 ca
 aP
@@ -29315,7 +29412,7 @@ ca
 ca
 ca
 ca
-bJ
+Eg
 de
 Mw
 Iy
@@ -29376,8 +29473,8 @@ Iy
 Iy
 Iy
 Mw
-iw
-Wf
+CE
+FM
 ca
 ca
 ca
@@ -29539,7 +29636,7 @@ Bk
 Bk
 Mw
 fv
-iw
+CE
 Wf
 ca
 aP
@@ -30215,18 +30312,18 @@ zK
 Mw
 ca
 eN
-eN
+EJ
 SY
-Vj
-Vj
+uf
+uf
 SY
 SY
 SY
-Vj
+uf
 SY
-Vj
-Vj
-Vj
+uf
+uf
+uf
 Gw
 ZG
 ZG
@@ -30234,12 +30331,12 @@ ZG
 Lo
 ZG
 ZG
-Vj
-Vj
+uf
+uf
 SY
 SY
 SY
-eN
+EJ
 eN
 ON
 ON
@@ -30377,7 +30474,7 @@ zK
 Mw
 eN
 eN
-dG
+Xc
 qW
 jo
 Xl
@@ -30611,7 +30708,7 @@ ON
 ca
 ca
 vh
-GE
+Yh
 fv
 Mw
 Bk
@@ -30620,7 +30717,7 @@ Bk
 Bk
 Mw
 fv
-RO
+nb
 Tl
 ca
 ca
@@ -30664,7 +30761,7 @@ tp
 tp
 tp
 vh
-OZ
+Aw
 fv
 Mw
 Bk
@@ -30673,7 +30770,7 @@ IJ
 IJ
 Mw
 fv
-RO
+nb
 Tl
 ca
 ca
@@ -30773,16 +30870,16 @@ ON
 ON
 Oc
 Ep
-vh
-GE
+eo
+Yh
 Mw
 DB
 DB
 dU
 dU
 Mw
-RO
-Tl
+nb
+lf
 ca
 ca
 ca
@@ -30826,16 +30923,16 @@ tp
 tp
 tp
 ca
-vh
-OZ
+eo
+Aw
 Mw
 dU
 dU
 DB
 DB
 Mw
-RO
-Tl
+nb
+lf
 ca
 ca
 Lz
@@ -31511,7 +31608,7 @@ zK
 Mw
 fz
 Bf
-dG
+Xc
 rC
 uo
 uo
@@ -32345,7 +32442,7 @@ fY
 Xh
 Vn
 tP
-yT
+jX
 ca
 Mw
 Mw
@@ -32483,31 +32580,31 @@ zK
 Mw
 tp
 tp
-Lz
+KD
 MQ
 Sh
-ct
-ct
-ct
-ct
-ct
+JG
+JG
+JG
+JG
+JG
 fa
 fa
-ct
+JG
 jB
-ct
+JG
 fa
-ct
-ct
+JG
+JG
 fa
 fa
-ct
-ct
+JG
+JG
 fa
 HH
 HH
-ct
-ca
+JG
+Kc
 ca
 Mw
 ea
