@@ -71,6 +71,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/bluemoon_supply/outdoors/lz_destroyed)
+"aD" = (
+/obj/structure/barricade/metal/wired,
+/obj/structure/machinery/m56d_hmg,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
 "aF" = (
 /obj/structure/machinery/door_control/brbutton{
 	pixel_x = 32;
@@ -159,6 +164,7 @@
 /obj/structure/surface/table/almayer,
 /obj/item/clothing/glasses/meson,
 /obj/structure/machinery/light/small,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/bluemoon_supply/indoors/engi)
 "bg" = (
@@ -180,6 +186,12 @@
 	},
 /turf/open/floor/prison,
 /area/bluemoon_supply/outdoors/base)
+"bj" = (
+/obj/effect/spider/cocoon{
+	icon_state = "cocoon_large1"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/deepcaves)
 "bk" = (
 /turf/closed/shuttle/dropship2/transparent{
 	icon_state = "23"
@@ -497,6 +509,10 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/darkpurple2,
 /area/bluemoon_supply/indoors/mountain_base)
+"dy" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/bluemoon_supply/indoors/storage)
 "dB" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/gm/grass/grass1,
@@ -652,6 +668,12 @@
 /obj/effect/decal/cleanable/cobweb2,
 /turf/open/floor/freezerfloor,
 /area/bluemoon_supply/outdoors/base)
+"eE" = (
+/obj/effect/spider/cocoon{
+	icon_state = "cocoon_large3"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/deepcaves)
 "eF" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 8;
@@ -671,12 +693,10 @@
 /turf/open/gm/river/desert/deep,
 /area/bluemoon_supply/outdoors/caves/river)
 "eJ" = (
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
+/obj/structure/closet/secure_closet/atmos_personal,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison,
-/area/bluemoon_supply/indoors/secondary_storage)
+/turf/open/floor/dark,
+/area/bluemoon_supply/indoors/engi)
 "eK" = (
 /obj/structure/shuttle/part/dropship2/transparent/left_outer_bottom_wing,
 /turf/open/floor/plating,
@@ -690,11 +710,9 @@
 /turf/open/floor/bcircuit,
 /area/bluemoon_supply/indoors/servers)
 "eN" = (
-/obj/effect/spawner/random/claymore/midchance{
-	dir = 8
-	},
+/obj/effect/spider/stickyweb,
 /turf/open/auto_turf/sand_white/layer0,
-/area/bluemoon_supply/outdoors/caves)
+/area/bluemoon_supply/outdoors/deepcaves)
 "eO" = (
 /obj/structure/tunnel/maint_tunnel/no_xeno_desc{
 	pixel_y = 16
@@ -832,6 +850,13 @@
 	},
 /turf/open/floor/plating,
 /area/bluemoon_supply/indoors/secondary_storage)
+"fC" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/effect/spider/stickyweb,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/deepcaves)
 "fG" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /obj/structure/prop/ice_colony/ground_wire{
@@ -1060,6 +1085,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked/southwest,
 /area/bluemoon_supply/landing_zone)
+"hh" = (
+/obj/structure/surface/rack,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
 "hi" = (
 /obj/effect/landmark/crap_item,
 /turf/open/floor/darkpurple2/north,
@@ -1075,10 +1104,11 @@
 /turf/open/floor/prison/damaged1,
 /area/bluemoon_supply/indoors/bunker_A)
 "hn" = (
-/obj/structure/machinery/m56d_hmg,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison,
-/area/bluemoon_supply/indoors/bunker_A)
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/bluemoon_supply/outdoors/landing_zone)
 "ho" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -1376,6 +1406,11 @@
 /obj/item/weapon/gun/rifle/m41aMK1/army,
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/caves)
+"jg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/photocopier,
+/turf/open/floor/darkgreencorners2,
+/area/bluemoon_supply/indoors/bunks)
 "ji" = (
 /obj/effect/spawner/random/claymore/midchance{
 	dir = 4
@@ -1442,7 +1477,7 @@
 "jE" = (
 /obj/effect/decal/cleanable/blood,
 /obj/item/weapon/gun/rifle/m4ra/army,
-/turf/open/floor/dark,
+/turf/open/floor/prison/floor_plate,
 /area/bluemoon_supply/indoors/mountain_base)
 "jG" = (
 /turf/closed/wall/rock,
@@ -1590,7 +1625,7 @@
 /area/bluemoon_supply/outdoors/lz_destroyed)
 "kD" = (
 /obj/structure/ladder{
-	height = 1;
+	height = 2;
 	icon_state = "ladder10";
 	id = "secret_entrance"
 	},
@@ -1648,6 +1683,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/bluemoon_supply/outdoors/landing_zone)
+"le" = (
+/obj/structure/surface/rack,
+/obj/structure/surface/rack,
+/obj/item/stack/cable_coil/orange{
+	pixel_y = 6
+	},
+/obj/item/stack/cable_coil/blue,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
 "lg" = (
 /obj/structure/surface/rack,
 /turf/open/auto_turf/sand_white/layer0,
@@ -1884,10 +1928,20 @@
 /obj/structure/largecrate/random/barrel,
 /turf/open/floor/prison,
 /area/bluemoon_supply/outdoors/base)
+"mK" = (
+/obj/effect/spider/cocoon,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/deepcaves)
 "mL" = (
 /obj/item/ammo_magazine/handful/shotgun,
 /turf/open/shuttle/dropship/light_grey_bottom_left,
 /area/bluemoon_supply/outdoors/lz_destroyed)
+"mO" = (
+/obj/structure/machinery/telecomms/relay/preset/tower/mapcomms{
+	pixel_x = -17
+	},
+/turf/open/floor/plating,
+/area/bluemoon_supply/outdoors/base)
 "mQ" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -1980,10 +2034,27 @@
 	},
 /turf/open/floor/plating/platebot,
 /area/bluemoon_supply/outdoors/landing_zone)
+"nk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/bluemoon_supply/outdoors/landing_zone)
 "nl" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floorscorched2,
 /area/bluemoon_supply/outdoors/base)
+"nm" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_x = 11
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
 "no" = (
 /obj/structure/sign/safety/airtraffictower{
 	pixel_x = -19
@@ -2261,15 +2332,28 @@
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/bluemoon_supply/outdoors/lz_destroyed)
+"pc" = (
+/obj/item/device/flashlight/lantern,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
 "pd" = (
-/obj/effect/spawner/random/claymore/highchance{
-	dir = 4
-	},
+/obj/structure/foamed_metal,
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/caves)
 "pe" = (
 /obj/structure/surface/table,
 /obj/item/weapon/gun/rifle/m4ra/army,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
+"pf" = (
+/obj/structure/largecrate/random/mini/small_case{
+	pixel_x = 14;
+	pixel_y = -3
+	},
+/obj/structure/largecrate/random/mini/small_case{
+	pixel_x = -9;
+	pixel_y = 10
+	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/caves)
 "pg" = (
@@ -2322,11 +2406,8 @@
 /turf/open/floor/prison,
 /area/bluemoon_supply/indoors/command)
 "pu" = (
-/obj/effect/spawner/random/claymore/midchance{
-	dir = 1
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/bluemoon_supply/outdoors/caves)
+/turf/open/floor/prison/floor_plate,
+/area/bluemoon_supply/outdoors/base)
 "pv" = (
 /turf/closed/shuttle/dropship2/transparent{
 	icon_state = "29"
@@ -2413,6 +2494,10 @@
 	},
 /turf/open/floor/prison,
 /area/bluemoon_supply/indoors/storage)
+"qa" = (
+/mob/living/simple_animal/hostile/giant_spider/nurse,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/deepcaves)
 "qd" = (
 /obj/structure/bed/chair/comfy,
 /obj/structure/machinery/light{
@@ -2487,6 +2572,10 @@
 "qB" = (
 /turf/closed/wall/mineral/gold,
 /area/space)
+"qC" = (
+/obj/structure/machinery/vending/coffee,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/base)
 "qE" = (
 /turf/open/floor/dark,
 /area/bluemoon_supply/indoors/engi)
@@ -2560,6 +2649,10 @@
 /obj/structure/cargo_container/horizontal/blue/bottom,
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/base)
+"rf" = (
+/mob/living/simple_animal/hostile/giant_spider,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/deepcaves)
 "rg" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -2717,13 +2810,12 @@
 /turf/open/floor/prison,
 /area/bluemoon_supply/indoors/storage)
 "rO" = (
-/obj/item/stack/sheet/metal{
-	amount = 50;
-	pixel_x = 4;
-	pixel_y = 4
-	},
+/obj/item/stack/sheet/metal,
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/base)
+"rR" = (
+/turf/open/floor/prison/floor_plate,
+/area/bluemoon_supply/indoors/mountain_base)
 "rT" = (
 /obj/effect/blocker/sorokyne_cold_water{
 	name = "underground_flowing_water"
@@ -2751,6 +2843,10 @@
 	},
 /turf/open/floor/darkpurple2/west,
 /area/bluemoon_supply/indoors/mountain_base)
+"rZ" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/base)
 "sa" = (
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/indoors/storage)
@@ -2929,6 +3025,13 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/shuttle/dropship/light_grey_left_to_right,
 /area/bluemoon_supply/outdoors/landing_zone)
+"tk" = (
+/obj/item/reagent_container/glass/bucket{
+	pixel_x = 4;
+	pixel_y = 9
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
 "tm" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/shuttle/dropship/light_grey_left_to_right,
@@ -3496,6 +3599,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/dark,
 /area/bluemoon_supply/indoors/vehicle)
+"wT" = (
+/obj/structure/barricade/metal/wired{
+	dir = 4
+	},
+/obj/structure/machinery/m56d_hmg{
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/bluemoon_supply/indoors/bunker_B)
 "wW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3575,9 +3687,9 @@
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/bluemoon_supply/outdoors/lz_destroyed)
 "xw" = (
-/obj/effect/spawner/random/claymore/lowchance,
+/mob/living/simple_animal/hostile/giant_spider/hunter,
 /turf/open/auto_turf/sand_white/layer0,
-/area/bluemoon_supply/outdoors/caves)
+/area/bluemoon_supply/outdoors/deepcaves)
 "xx" = (
 /turf/closed/shuttle/dropship2{
 	icon_state = "42"
@@ -3620,12 +3732,10 @@
 /turf/open/floor/prison,
 /area/bluemoon_supply/indoors/bunker_A)
 "xH" = (
-/obj/item/stack/sheet/metal{
-	amount = 30
-	},
 /obj/structure/machinery/camera/autoname{
 	dir = 4
 	},
+/obj/item/stack/sheet/metal,
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/base)
 "xI" = (
@@ -3820,6 +3930,9 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/m56d_hmg{
+	dir = 1
+	},
 /turf/open/floor/prison,
 /area/bluemoon_supply/indoors/bunker_A)
 "yV" = (
@@ -3878,9 +3991,9 @@
 /area/bluemoon_supply/indoors/bunker_A)
 "zC" = (
 /obj/structure/phone_base/colony_net{
-	phone_category = "LV522 Chances Claim";
+	phone_category = "Blue Moon Supply Depot";
 	phone_color = "red";
-	phone_id = "Colony Northern Dorms";
+	phone_id = "CIC & Air Traffic";
 	pixel_y = 26
 	},
 /obj/structure/surface/table/almayer,
@@ -4027,6 +4140,7 @@
 	dir = 4
 	},
 /obj/structure/prop/ice_colony/ground_wire,
+/mob/living/simple_animal/hostile/giant_spider,
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/deepcaves)
 "Aw" = (
@@ -4502,6 +4616,7 @@
 /area/bluemoon_supply/indoors/engi)
 "Db" = (
 /obj/structure/largecrate/random/secure,
+/obj/structure/machinery/power/apc/upgraded/power/north,
 /turf/open/floor/prison,
 /area/bluemoon_supply/indoors/secondary_storage)
 "Dc" = (
@@ -4707,12 +4822,10 @@
 /turf/open/floor/darkpurple2/north,
 /area/bluemoon_supply/indoors/mountain_base)
 "Eq" = (
-/obj/item/prop/colony/used_flare,
-/obj/effect/spawner/random/claymore/midchance{
-	dir = 4
-	},
+/obj/item/tool/wet_sign,
+/obj/effect/decal/cleanable/blood/oil,
 /turf/open/auto_turf/sand_white/layer0,
-/area/bluemoon_supply/outdoors/caves)
+/area/bluemoon_supply/outdoors/base)
 "Er" = (
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/floor4,
@@ -4760,6 +4873,13 @@
 	},
 /turf/open/floor/dark,
 /area/bluemoon_supply/indoors/armory)
+"EC" = (
+/obj/structure/prop/rock,
+/obj/effect/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/deepcaves)
 "ED" = (
 /obj/item/ammo_magazine/sentry,
 /turf/open/auto_turf/sand_white/layer0,
@@ -4779,6 +4899,10 @@
 /obj/structure/tunnel/maint_tunnel/no_xeno_desc,
 /turf/open/floor/freezerfloor,
 /area/bluemoon_supply/outdoors/base)
+"EM" = (
+/obj/structure/machinery/vending/snack,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/base)
 "EO" = (
 /obj/structure/machinery/conveyor{
 	dir = 8;
@@ -4794,7 +4918,10 @@
 /turf/open/floor/dark,
 /area/bluemoon_supply/indoors/mess)
 "ER" = (
-/obj/structure/machinery/defenses/sentry/premade/dumb,
+/obj/structure/machinery/defenses/sentry/premade/dumb{
+	health = 100;
+	health_max = 100
+	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/caves)
 "ET" = (
@@ -4820,7 +4947,7 @@
 /area/bluemoon_supply/indoors/mountain_base)
 "Fa" = (
 /obj/structure/ladder{
-	height = 1;
+	height = 2;
 	icon_state = "ladder10";
 	id = "tunnel_network"
 	},
@@ -5512,7 +5639,7 @@
 /area/bluemoon_supply/outdoors/caves)
 "Jx" = (
 /obj/structure/ladder{
-	height = 1;
+	height = 2;
 	icon_state = "ladder10";
 	id = "hidden_den"
 	},
@@ -5544,6 +5671,7 @@
 /area/bluemoon_supply/indoors/storage)
 "JF" = (
 /obj/structure/surface/table,
+/obj/effect/spawner/random/powercell,
 /turf/open/floor/prison,
 /area/bluemoon_supply/indoors/bunker_A)
 "JG" = (
@@ -5667,12 +5795,9 @@
 /turf/open/floor/plating/platebot,
 /area/bluemoon_supply/outdoors/landing_zone)
 "KD" = (
-/obj/structure/machinery/m56d_hmg{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison,
-/area/bluemoon_supply/indoors/bunker_A)
+/obj/structure/ore_box,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
 "KE" = (
 /obj/structure/cargo_container/kelland/left,
 /obj/effect/decal/cleanable/dirt,
@@ -5948,9 +6073,12 @@
 /turf/open/floor/freezerfloor,
 /area/bluemoon_supply/indoors/mountain_base)
 "MA" = (
-/mob/living/simple_animal/hostile/bear,
+/obj/structure/largecrate/random/mini/small_case{
+	pixel_x = 8;
+	pixel_y = -3
+	},
 /turf/open/auto_turf/sand_white/layer0,
-/area/bluemoon_supply/outdoors/deepcaves)
+/area/bluemoon_supply/outdoors/caves)
 "MB" = (
 /obj/structure/platform{
 	dir = 4
@@ -5983,6 +6111,10 @@
 	icon_state = "103"
 	},
 /area/bluemoon_supply/outdoors/lz_destroyed)
+"MV" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/bluemoon_supply/outdoors/base)
 "MX" = (
 /obj/item/stack/rods,
 /turf/open/auto_turf/sand_white/layer0,
@@ -6082,6 +6214,10 @@
 /obj/item/device/radio/marine,
 /turf/open/floor/dark,
 /area/bluemoon_supply/indoors/vehicle)
+"NH" = (
+/obj/item/stack/sheet/glass,
+/turf/open/gm/grass/grass1,
+/area/bluemoon_supply/indoors/mountain_base)
 "NI" = (
 /obj/structure/barricade/sandbags,
 /obj/structure/barricade/sandbags{
@@ -6272,6 +6408,12 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/base)
+"Pj" = (
+/obj/structure/largecrate/random/mini/chest/c{
+	pixel_y = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
 "Pk" = (
 /obj/structure/machinery/blackbox_recorder,
 /obj/item/prop/almayer/flight_recorder/colony{
@@ -6332,6 +6474,11 @@
 "Px" = (
 /turf/open/floor/platebot,
 /area/bluemoon_supply/indoors/vehicle)
+"PB" = (
+/obj/structure/barricade/metal/wired,
+/obj/structure/machinery/m56d_hmg,
+/turf/open/floor/prison,
+/area/bluemoon_supply/indoors/bunker_A)
 "PC" = (
 /obj/structure/prop/invuln/lattice_prop,
 /obj/effect/decal/cleanable/blood{
@@ -6432,12 +6579,8 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/deepcaves)
 "Qq" = (
-/obj/effect/landmark/static_comms{
-	pixel_x = 15;
-	pixel_y = 15
-	},
-/turf/open/floor/prison,
-/area/bluemoon_supply/outdoors/base)
+/turf/open/floor/prison/floor_plate,
+/area/bluemoon_supply/indoors/command)
 "Qr" = (
 /obj/item/weapon/gun/revolver/m44/custom,
 /turf/open/auto_turf/sand_white/layer0,
@@ -6447,9 +6590,9 @@
 /turf/open/floor/darkyellow2,
 /area/bluemoon_supply/indoors/servers)
 "Qv" = (
-/obj/structure/machinery/m56d_hmg,
-/turf/open/auto_turf/sand_white/layer0,
-/area/bluemoon_supply/outdoors/caves)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/bluemoon_supply/indoors/mountain_base)
 "Qw" = (
 /obj/structure/sink{
 	dir = 8;
@@ -6457,6 +6600,12 @@
 	},
 /turf/open/floor/freezerfloor,
 /area/bluemoon_supply/outdoors/base)
+"Qx" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/bluemoon_supply/outdoors/landing_zone)
 "Qy" = (
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
@@ -6464,6 +6613,17 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bluemoon_supply/outdoors/base)
+"QA" = (
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_x = -11
+	},
+/obj/structure/barricade/wooden{
+	dir = 4;
+	pixel_y = 4
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
 "QB" = (
 /turf/closed/shuttle/dropship3/tornado{
 	icon_state = "48"
@@ -6772,9 +6932,11 @@
 /turf/open/floor/prison,
 /area/bluemoon_supply/indoors/secondary_storage)
 "SA" = (
-/obj/structure/machinery/defenses/sentry/premade/dumb,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/bluemoon_supply/outdoors/base)
+/obj/effect/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/deepcaves)
 "SC" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood,
 /turf/open/floor/darkblue2/west,
@@ -7343,6 +7505,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/freezerfloor,
 /area/bluemoon_supply/indoors/bunks)
+"Wn" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/base)
 "Wp" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
@@ -7401,6 +7567,12 @@
 	},
 /turf/open/floor/prison,
 /area/bluemoon_supply/indoors/bunker_B)
+"WG" = (
+/obj/effect/spider/cocoon{
+	icon_state = "cocoon_large2"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/deepcaves)
 "WL" = (
 /obj/structure/bed/roller,
 /turf/open/floor/darkish,
@@ -7453,7 +7625,11 @@
 /turf/open/floor/darkred2,
 /area/bluemoon_supply/indoors/armory)
 "Xh" = (
-/obj/structure/machinery/defenses/sentry/premade/dumb,
+/obj/structure/machinery/defenses/sentry/premade/dumb{
+	omni_directional = 1;
+	health = 100;
+	health_max = 100
+	},
 /turf/open/floor/prison,
 /area/bluemoon_supply/indoors/bunker_A)
 "Xi" = (
@@ -7788,11 +7964,8 @@
 /turf/open/floor/dark,
 /area/bluemoon_supply/indoors/engi)
 "ZB" = (
-/obj/structure/machinery/m56d_hmg{
-	dir = 4
-	},
-/turf/open/floor/prison,
-/area/bluemoon_supply/indoors/bunker_A)
+/turf/open/floor/prison/floor_plate,
+/area/bluemoon_supply/indoors/storage)
 "ZC" = (
 /turf/open/floor/carpet6_2,
 /area/space)
@@ -8231,7 +8404,7 @@ jG
 jG
 jG
 cX
-cX
+WG
 zI
 jG
 jG
@@ -8353,7 +8526,7 @@ jG
 jG
 jG
 jG
-cX
+SA
 cX
 jG
 jG
@@ -8439,7 +8612,7 @@ jG
 jG
 jG
 jG
-cX
+eN
 cX
 cX
 pk
@@ -8455,7 +8628,7 @@ jG
 jG
 jG
 jG
-cX
+SA
 jG
 jG
 jG
@@ -8463,7 +8636,7 @@ jG
 jG
 jG
 jG
-cX
+SA
 pk
 cX
 cX
@@ -8508,9 +8681,9 @@ cX
 cX
 pk
 cX
-MA
 cX
 cX
+eN
 jG
 jG
 jG
@@ -8523,14 +8696,14 @@ jG
 jG
 jG
 jG
-cX
-cX
+eN
+eN
 cX
 pk
 cX
 jG
 cX
-cX
+eN
 pk
 cX
 cX
@@ -8548,7 +8721,7 @@ cX
 cX
 jG
 jG
-cX
+eN
 cX
 cX
 cX
@@ -8611,6 +8784,15 @@ cX
 cX
 cX
 cX
+qa
+cX
+jG
+cX
+cX
+cX
+bj
+cX
+cX
 cX
 cX
 jG
@@ -8622,19 +8804,10 @@ cX
 cX
 cX
 cX
-jG
 cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-MA
 cX
 jG
 jG
@@ -8655,16 +8828,16 @@ cX
 cX
 hs
 jG
-cX
+SA
 jG
 jG
 jG
 jG
 Wp
 Wp
+xw
 cX
-cX
-cX
+eN
 jG
 cX
 cX
@@ -8673,7 +8846,7 @@ cX
 cX
 qH
 cX
-cX
+SA
 jG
 jG
 WC
@@ -8711,7 +8884,7 @@ jG
 jG
 jG
 jG
-cX
+eN
 cX
 cX
 cX
@@ -8733,7 +8906,7 @@ jG
 cX
 cX
 hs
-cX
+eE
 cX
 cX
 cX
@@ -8741,7 +8914,7 @@ cX
 cX
 qH
 cX
-cX
+SA
 jG
 cX
 cX
@@ -8758,7 +8931,7 @@ pk
 cX
 cX
 cX
-cX
+SA
 jG
 jG
 cX
@@ -8826,30 +8999,10 @@ cX
 cX
 qH
 cX
-MA
-cX
-jG
-jG
-jG
-jG
-jG
-jG
-jG
-jG
-jG
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
 cX
 cX
 jG
-cX
-cX
+jG
 jG
 jG
 jG
@@ -8867,6 +9020,7 @@ cX
 cX
 cX
 cX
+jG
 cX
 cX
 jG
@@ -8874,7 +9028,26 @@ jG
 jG
 jG
 jG
-pk
+jG
+jG
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+jG
+jG
+jG
+jG
+jG
+EC
 cX
 cX
 cX
@@ -8938,7 +9111,7 @@ jG
 jG
 jG
 jG
-np
+fC
 np
 np
 cX
@@ -9017,7 +9190,7 @@ jG
 jG
 jG
 jG
-cX
+eN
 jG
 jG
 jG
@@ -9042,7 +9215,7 @@ jG
 cX
 cX
 cX
-cX
+SA
 jG
 jG
 jG
@@ -9060,7 +9233,7 @@ cX
 jG
 cX
 cX
-cX
+SA
 fG
 cX
 cX
@@ -9070,7 +9243,7 @@ jG
 jG
 jG
 jG
-cX
+eN
 cX
 Th
 cX
@@ -9109,7 +9282,7 @@ cX
 cX
 cX
 cX
-cX
+rf
 cX
 cX
 cX
@@ -9156,28 +9329,19 @@ cX
 cX
 cX
 cX
+qa
 cX
 cX
 cX
 cX
 cX
-cX
-cX
-cX
+SA
+SA
 jG
 jG
 jG
 jG
 jG
-jG
-jG
-jG
-jG
-jG
-jG
-cX
-cX
-cX
 jG
 jG
 jG
@@ -9186,6 +9350,15 @@ jG
 jG
 cX
 cX
+cX
+jG
+jG
+jG
+jG
+jG
+jG
+cX
+SA
 jG
 jG
 jG
@@ -9217,7 +9390,7 @@ cX
 cX
 cX
 jG
-cX
+eE
 cX
 cX
 cX
@@ -9258,13 +9431,13 @@ cX
 jG
 jG
 jG
-cX
+SA
 cX
 pk
 cX
 cX
 cX
-MA
+cX
 jG
 jG
 jG
@@ -9317,7 +9490,7 @@ cX
 cX
 cX
 cX
-MA
+cX
 cX
 cX
 cX
@@ -9360,10 +9533,10 @@ jG
 jG
 jG
 jG
+eN
 cX
 cX
 cX
-cX
 jG
 cX
 jG
@@ -9381,7 +9554,7 @@ jG
 jG
 jG
 cX
-cX
+mK
 cX
 jG
 jG
@@ -9465,7 +9638,7 @@ jG
 jG
 jG
 cX
-cX
+SA
 jG
 jG
 jG
@@ -11198,7 +11371,7 @@ eY
 Sn
 rj
 WD
-WD
+wT
 WD
 WD
 rj
@@ -11473,8 +11646,8 @@ eY
 eY
 ak
 ak
-MH
-MH
+Qq
+Qq
 ak
 ak
 eY
@@ -11677,8 +11850,8 @@ eY
 eY
 Uo
 no
-Dm
-Dm
+pu
+pu
 eY
 eY
 eY
@@ -11686,7 +11859,7 @@ eY
 eY
 Dm
 Dm
-Qq
+Dm
 Dm
 ZM
 ZM
@@ -11726,7 +11899,7 @@ Ac
 Mq
 CP
 kx
-Ac
+Qv
 Ac
 Ac
 Ac
@@ -11787,7 +11960,7 @@ eY
 eY
 eY
 Dm
-hv
+mO
 Dm
 Dm
 qg
@@ -11828,7 +12001,7 @@ Ac
 Ac
 Ac
 pX
-CP
+rR
 Ac
 CP
 Ac
@@ -11857,8 +12030,8 @@ Gp
 tX
 Gp
 Gp
-SV
-Gp
+dy
+ZB
 pJ
 Hs
 iy
@@ -11870,8 +12043,8 @@ SV
 Gp
 Ua
 Ne
-Gp
-Gp
+ZB
+ZB
 Gp
 ak
 eY
@@ -11924,9 +12097,9 @@ ak
 CP
 Ao
 EZ
-Je
+rR
 MI
-Je
+rR
 CM
 CP
 mF
@@ -12057,12 +12230,12 @@ ak
 bB
 eY
 eY
+Wn
 eY
 eY
 eY
-eY
-Dm
-Dm
+pu
+pu
 KZ
 mG
 Dm
@@ -12074,8 +12247,8 @@ ZM
 ZE
 Ar
 ja
-Gp
-Gp
+ZB
+ZB
 Ar
 Ar
 Ar
@@ -12128,9 +12301,9 @@ ak
 LK
 CP
 sE
-jZ
+rR
 iP
-JI
+Qv
 MD
 Ac
 CP
@@ -12740,7 +12913,7 @@ ak
 bt
 bt
 BX
-IV
+NH
 Ic
 IV
 IV
@@ -12905,7 +13078,7 @@ ZM
 qg
 Dm
 Dm
-Dm
+pu
 vv
 Zm
 Ex
@@ -13392,7 +13565,7 @@ ZM
 Dm
 FV
 jL
-KD
+sO
 sO
 qU
 JF
@@ -13406,8 +13579,8 @@ tt
 IF
 el
 el
-hn
-DI
+sO
+PB
 Qy
 eY
 eY
@@ -13482,12 +13655,12 @@ gU
 jG
 jG
 ak
+qC
 eY
 eY
 eY
 eY
-eY
-eY
+Eq
 eY
 ZM
 Dm
@@ -13517,7 +13690,7 @@ Dm
 qg
 ZM
 Dm
-ZM
+MV
 zU
 Zm
 Ex
@@ -13584,11 +13757,11 @@ gU
 jG
 jG
 ak
-eY
+EM
 eY
 Uo
 eY
-eY
+rZ
 eY
 eY
 ZM
@@ -13608,7 +13781,7 @@ xG
 Yp
 tt
 sO
-ZB
+el
 sO
 el
 DI
@@ -14763,7 +14936,7 @@ CV
 PU
 AF
 ak
-CQ
+eJ
 qE
 PU
 PU
@@ -14865,7 +15038,7 @@ AF
 PU
 AF
 ak
-qE
+PU
 qE
 qE
 qE
@@ -15016,7 +15189,7 @@ eY
 lv
 HX
 Dm
-SA
+qg
 Dm
 HX
 lv
@@ -15174,7 +15347,7 @@ qE
 qE
 PU
 qE
-qE
+PU
 Ab
 ak
 ak
@@ -15218,7 +15391,7 @@ jG
 ak
 eY
 aR
-Dm
+Iq
 Dm
 Dm
 Dm
@@ -15321,7 +15494,7 @@ ak
 eY
 aR
 Dm
-Iq
+Dm
 Dm
 Dm
 Dm
@@ -15391,7 +15564,7 @@ ak
 ak
 ak
 ZE
-ix
+jg
 bN
 ix
 bN
@@ -15425,8 +15598,8 @@ aR
 Dm
 Dm
 Dm
-Dm
 Iq
+Dm
 aR
 eY
 KG
@@ -15627,7 +15800,7 @@ ak
 eY
 lv
 Dm
-Dm
+Iq
 qg
 Dm
 Dm
@@ -15728,7 +15901,7 @@ jG
 ak
 eY
 aR
-Iq
+Dm
 Dm
 qg
 Dm
@@ -15894,8 +16067,8 @@ ak
 ak
 ak
 xe
-CP
-OG
+Ac
+SE
 ak
 Uc
 EW
@@ -15996,7 +16169,7 @@ ak
 ak
 ak
 xe
-CP
+Ac
 OG
 ak
 ak
@@ -16058,8 +16231,8 @@ Nf
 Bt
 aQ
 qn
-qn
-aQ
+nk
+Qx
 sI
 sI
 QL
@@ -16097,7 +16270,7 @@ dR
 ak
 ak
 ak
-ct
+VX
 CP
 OG
 ak
@@ -16199,7 +16372,7 @@ sC
 ak
 ak
 ak
-xe
+mm
 CP
 OG
 ak
@@ -16262,8 +16435,8 @@ Nf
 QL
 QL
 aQ
-sI
-sI
+hn
+hn
 sI
 sI
 QL
@@ -17890,7 +18063,7 @@ gm
 ak
 wN
 Tk
-hl
+Tk
 Tk
 Tk
 Tk
@@ -18095,7 +18268,7 @@ Hm
 wN
 Tk
 Tk
-hl
+Tk
 Tk
 jG
 jG
@@ -18400,10 +18573,10 @@ hr
 ak
 wN
 Tk
-gD
 Tk
 Tk
-gD
+Tk
+Tk
 Tk
 Tk
 Tk
@@ -18508,7 +18681,7 @@ Tk
 Tk
 Tk
 Tk
-gD
+Tk
 Tk
 Tk
 Ue
@@ -18816,7 +18989,7 @@ Tk
 ak
 wN
 Tk
-gD
+Tk
 Xw
 ZP
 ZP
@@ -18996,7 +19169,7 @@ jG
 jG
 jG
 jG
-hl
+Tk
 Tk
 jG
 jG
@@ -19016,8 +19189,8 @@ Tk
 Tk
 Tk
 Tk
-Qv
-Hm
+Tk
+aD
 wN
 Tk
 Tk
@@ -19039,7 +19212,7 @@ jG
 Tk
 Tk
 Tk
-xw
+Tk
 Tk
 Tk
 Tk
@@ -19122,7 +19295,7 @@ Tk
 Hm
 wN
 Tk
-gD
+Tk
 Tk
 ZP
 Tk
@@ -19344,7 +19517,7 @@ jG
 jG
 jG
 jG
-pd
+tk
 Tk
 jG
 jG
@@ -19449,7 +19622,7 @@ jG
 Tk
 Tk
 Tk
-pd
+Tk
 jG
 jG
 jG
@@ -19761,7 +19934,7 @@ jG
 jG
 jG
 jG
-Tk
+KD
 Tk
 Tk
 Tk
@@ -19870,7 +20043,7 @@ jG
 Tk
 Tk
 Tk
-Tk
+pc
 Tk
 Tk
 Tk
@@ -19955,7 +20128,7 @@ jG
 jG
 jG
 jG
-pd
+Tk
 Tk
 Tk
 Tk
@@ -20254,7 +20427,6 @@ ez
 Tk
 Tk
 Tk
-pu
 Tk
 Tk
 Tk
@@ -20262,7 +20434,8 @@ Tk
 Tk
 Tk
 Tk
-pd
+Tk
+Tk
 jG
 jG
 jG
@@ -20451,7 +20624,7 @@ jG
 jG
 jG
 jG
-hl
+Tk
 Tk
 Tk
 jG
@@ -20484,7 +20657,7 @@ jG
 pY
 jG
 Tk
-hl
+Tk
 Tk
 Tk
 Tk
@@ -20745,7 +20918,7 @@ jG
 jG
 jG
 jG
-Tk
+KD
 Tk
 Tk
 Tk
@@ -20770,7 +20943,7 @@ jG
 jG
 jG
 jG
-pd
+Tk
 Tk
 jG
 jG
@@ -20872,7 +21045,7 @@ jG
 jG
 jG
 jG
-KS
+QA
 jG
 jG
 jG
@@ -20974,7 +21147,7 @@ jG
 jG
 jG
 Tk
-Tk
+pd
 jG
 jG
 jG
@@ -21012,7 +21185,7 @@ hL
 Ck
 hL
 kV
-hL
+Ko
 eS
 xF
 yd
@@ -21075,8 +21248,8 @@ jG
 jG
 jG
 jG
-Tk
-Tk
+pd
+pd
 jG
 jG
 jG
@@ -21176,8 +21349,8 @@ jG
 jG
 jG
 jG
-Tk
-Tk
+pd
+pd
 jG
 jG
 jG
@@ -21187,8 +21360,8 @@ jG
 jG
 jG
 jG
-Tk
-Tk
+le
+hh
 ff
 pY
 jG
@@ -21199,7 +21372,7 @@ Tk
 Tk
 Tk
 Tk
-GZ
+jG
 jG
 jG
 jG
@@ -21279,7 +21452,7 @@ jG
 jG
 jG
 pd
-Tk
+pd
 jG
 jG
 jG
@@ -21288,7 +21461,7 @@ jG
 jG
 jG
 jG
-Tk
+pf
 Tk
 Tk
 ff
@@ -21380,18 +21553,18 @@ jG
 jG
 jG
 jG
-Tk
-Tk
-jG
-jG
-jG
-jG
-jG
-jG
-jG
+pd
 Tk
 jG
+jG
+jG
+jG
+jG
+jG
+jG
 Tk
+jG
+MA
 Tk
 ff
 pY
@@ -21697,7 +21870,7 @@ Tk
 Tk
 tS
 Tk
-hl
+Tk
 Tk
 JB
 jG
@@ -22072,7 +22245,7 @@ Tk
 Tk
 Tk
 Tk
-Tk
+ez
 Tk
 jG
 jG
@@ -22098,7 +22271,7 @@ Tk
 Tk
 Tk
 Tk
-Tk
+KD
 tS
 jG
 jG
@@ -22318,7 +22491,7 @@ Tk
 JL
 Tk
 Tk
-gD
+Tk
 zc
 Tk
 jG
@@ -22522,7 +22695,7 @@ Tk
 Tk
 Tk
 Tk
-Tk
+ez
 Tk
 zc
 Tk
@@ -22582,7 +22755,7 @@ jG
 Tk
 Tk
 Tk
-hl
+Tk
 Tk
 jG
 jG
@@ -22698,7 +22871,7 @@ jG
 jG
 jG
 Tk
-gD
+Tk
 tT
 ez
 Tk
@@ -22729,7 +22902,7 @@ Kp
 jG
 jG
 Tk
-gD
+Tk
 Tk
 Tk
 Tk
@@ -23196,7 +23369,7 @@ Tk
 Tk
 Tk
 Tk
-Tk
+ez
 jG
 Tk
 Tk
@@ -23332,7 +23505,7 @@ jG
 jG
 jG
 Ib
-gD
+Tk
 Tk
 Tk
 Tk
@@ -23509,7 +23682,7 @@ Tk
 Tk
 Tk
 Tk
-Tk
+ez
 jG
 jG
 jG
@@ -23726,7 +23899,7 @@ jG
 Tk
 Tk
 Tk
-JB
+Tk
 jG
 jG
 jG
@@ -23910,7 +24083,7 @@ KI
 IB
 IB
 IB
-IB
+nm
 IB
 jG
 jG
@@ -23934,7 +24107,7 @@ Tk
 ez
 jG
 jG
-JB
+Tk
 jG
 jG
 jG
@@ -23946,15 +24119,15 @@ jG
 jG
 jG
 jG
+Pj
 Tk
 Tk
 Tk
 Tk
 Tk
-Tk
 jG
 Tk
-eN
+Tk
 Tk
 Tk
 jG
@@ -24121,7 +24294,7 @@ jG
 jG
 jG
 jG
-Tk
+KD
 Tk
 Tk
 Tk
@@ -24237,7 +24410,7 @@ pY
 Ib
 Tk
 Tk
-Eq
+ai
 Tk
 Tk
 Tk
@@ -24358,7 +24531,7 @@ Tk
 Tk
 Tk
 Tk
-gD
+Tk
 Tk
 Tk
 ez
@@ -24645,8 +24818,8 @@ jG
 jG
 jG
 jG
-JB
-JB
+Tk
+Tk
 Tk
 Tk
 Tk
@@ -24747,8 +24920,8 @@ jG
 jG
 jG
 jG
-JB
-JB
+Tk
+Tk
 Tk
 Tk
 Tk
@@ -24849,8 +25022,8 @@ jG
 jG
 jG
 jG
-JB
-JB
+Tk
+Tk
 Tk
 Tk
 Tk
@@ -24957,7 +25130,7 @@ Tk
 Tk
 Tk
 Tk
-gD
+Tk
 Tk
 Tk
 Tk
@@ -27398,7 +27571,7 @@ It
 iE
 BL
 ak
-eJ
+BL
 Ec
 ak
 TS
