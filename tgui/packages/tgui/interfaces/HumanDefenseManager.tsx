@@ -7,7 +7,6 @@ import {
   Divider,
   Section,
   Stack,
-  Tabs,
   Dropdown,
   Collapsible,
 } from '../components';
@@ -20,11 +19,6 @@ type Defense = {
   image: string;
   uses_faction: BooleanLike;
   uses_turned_on: BooleanLike;
-};
-
-type CategoryHolder = {
-  category: string;
-  category_defenses: Defense[];
 };
 
 type BackendContext = {

@@ -83,8 +83,8 @@ const ExistingFaction = (props) => {
       <Section title={`${faction.name}`}>
         Shoot To Kill: {faction.shoot_to_kill}
         <Dropdown
-          selected={faction.shoot_to_kill}
-          placeholder={faction.shoot_to_kill}
+          selected={`${faction.shoot_to_kill}`}
+          placeholder={`${faction.shoot_to_kill}`}
           options={['0', '1']}
           onSelected={(value) =>
             act('set_shoot_to_kill', {

@@ -1978,6 +1978,7 @@
 #include "code\modules\mob\living\carbon\human\ai\fortify_room.dm"
 #include "code\modules\mob\living\carbon\human\ai\human_ai_interaction.dm"
 #include "code\modules\mob\living\carbon\human\ai\quick_order.dm"
+#include "code\modules\mob\living\carbon\human\ai\squad_spawner.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\action_datums.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\chase_target.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\converse.dm"

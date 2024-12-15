@@ -64,6 +64,7 @@ SUBSYSTEM_DEF(human_ai)
 	var/datum/human_ai_squad/new_squad = new
 	squads += new_squad
 	squad_id_dict["[highest_squad_id]"] = new_squad
+	return new_squad
 
 /datum/controller/subsystem/human_ai/proc/get_squad(squad_id)
 	RETURN_TYPE(/datum/human_ai_squad)

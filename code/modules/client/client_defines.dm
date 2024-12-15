@@ -143,3 +143,6 @@
 
 	/// Holds the human defense creator panel for this client
 	var/datum/human_defense_creator_menu/human_defense_menu
+
+	/// Holds the human squad spawner panel for this client
+	var/datum/human_squad_spawner_menu/human_squad_menu
