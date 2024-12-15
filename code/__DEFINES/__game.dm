@@ -28,7 +28,7 @@
 #define MAP_WHISKEY_OUTPOST "Whiskey Outpost" // Unused
 #define MAP_DESERT_DAM "Trijent Dam"  // Highpop only
 #define MAP_SOROKYNE_STRATA "Sorokyne Strata"
-#define MAP_BLUEMOON "Blue-Moon Supply Depot"
+#define MAP_BLUEMOON_SUPPLY "Blue-Moon Supply Depot"
 #define MAP_CORSAT "CORSAT" // Highpop only
 #define MAP_KUTJEVO "Kutjevo Refinery"
 #define MAP_ICE_COLONY_V1 "Ice Colony Classic"
