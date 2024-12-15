@@ -1,0 +1,14 @@
+{
+    "map_name": "BMG-290 Otogi Egress Point",
+    "short_name": "Otogi Egress",
+    "map_path": "map_files/BMG290_Otogi_Egress_Point",
+    "map_file": "BMG290_Otogi_Egress_Point.dmm",
+    "webmap_url": "NewVaradero",
+
+    "weather_holder": "/datum/weather_ss_map_holder/bmg290_otogi_egress_point",
+
+    "map_item_type": "/obj/item/map/new_varadero",
+
+    "camouflage": "jungle"
+
+}
