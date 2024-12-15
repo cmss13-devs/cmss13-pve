@@ -89,8 +89,11 @@ GLOBAL_LIST_EMPTY(human_ai_squad_presets)
 
 /datum/human_ai_squad_preset/proc/spawn_ai(turf/spawn_loc)
 	var/list/viable_turfs = list()
-	for(var/turf/open/floor/floor in range(1, spawn_loc))
-		viable_turfs += floor
+	for(var/turf/open/floor_tile in range(1, spawn_loc))
+		viable_turfs += floor_tile
+
+	if(!length(viable_turfs))
+		return
 
 	var/datum/human_ai_squad/new_squad = SShuman_ai.create_new_squad()
 
