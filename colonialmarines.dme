@@ -2542,5 +2542,4 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
-#include "maps\map_files\BMG290_Otogi_Egress_Point\BMG290_Otogi_Egress_Point.dmm"
 // END_INCLUDE
