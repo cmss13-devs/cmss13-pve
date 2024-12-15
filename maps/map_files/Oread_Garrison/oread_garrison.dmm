@@ -7457,13 +7457,6 @@
 /obj/item/tool/wrench,
 /turf/open/floor/almayer/plating,
 /area/space)
-"Wb" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	dir = 1;
-	welded = 1
-	},
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/space)
 "Wf" = (
 /obj/structure/platform{
 	density = 0;
@@ -22049,7 +22042,7 @@ Ey
 Ey
 wS
 uj
-Wb
+CX
 ud
 ud
 ud
@@ -29501,7 +29494,7 @@ Ey
 Dq
 Wi
 IG
-Wb
+CX
 IJ
 BG
 Fq
