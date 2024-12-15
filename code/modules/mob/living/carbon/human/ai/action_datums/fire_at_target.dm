@@ -139,6 +139,7 @@
 		if(gun_data?.disposable)
 			tied_human.drop_held_item(brain.primary_weapon)
 			brain.set_primary_weapon(null)
+		stop_firing(brain)
 		qdel(src)
 		return
 
@@ -147,6 +148,7 @@
 
 	if(QDELETED(brain.current_target))
 		if(!should_fire_offscreen)
+			stop_firing(brain)
 			qdel(src)
 			return
 		shoot_next = target_turf
@@ -154,6 +156,8 @@
 	else if(ismob(brain.current_target))
 		var/mob/mob_target = brain.current_target
 		if(mob_target.stat == DEAD)
+			stop_firing(brain)
+			brain.lose_target()
 			qdel(src)
 			return
 
@@ -170,6 +174,8 @@
 		return
 
 	if((get_dist(tied_human, shoot_next) > gun_data.maximum_range) && !should_fire_offscreen)
+		brain.lose_target()
+		stop_firing(brain)
 		qdel(src)
 		return
 
