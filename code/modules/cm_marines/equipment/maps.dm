@@ -145,6 +145,11 @@
 	html_link = "images/5/54/USS_Almayer.png"
 	color = "cyan"
 
+/obj/item/map/bluemoon_supply
+	name = "\improper BlueMoon Supply Hub map"
+	desc = "A blueprint of Blue-Moon Supply Hub."
+	color = "red"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -167,6 +172,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
+		MAP_BLUEMOON_SUPPLY = new /obj/item/map/bluemoon_supply(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
