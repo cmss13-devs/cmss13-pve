@@ -68,6 +68,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	GLOB.human_ai_brains += src
 	setup_detection_radius()
 	appraise_inventory()
+	tied_human.a_intent_change(INTENT_DISARM)
 
 /datum/human_ai_brain/Destroy(force, ...)
 	GLOB.human_ai_brains -= src

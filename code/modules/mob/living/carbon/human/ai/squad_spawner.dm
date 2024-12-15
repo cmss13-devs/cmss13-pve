@@ -147,7 +147,6 @@ GLOBAL_LIST_EMPTY(human_ai_squad_presets)
 		/datum/equipment_preset/clf/soldier/ai = 3,
 		/datum/equipment_preset/clf/medic = 1,
 		/datum/equipment_preset/clf/engineer/ai = 1,
-		/datum/equipment_preset/clf/synth/combat = 1,
 	)
 
 /datum/human_ai_squad_preset/clf/kill_team

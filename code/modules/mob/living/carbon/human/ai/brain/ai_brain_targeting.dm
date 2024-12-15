@@ -142,10 +142,13 @@
 	if(HAS_TRAIT(target, TRAIT_CLOAKED) && get_dist(tied_human, target) > cloak_visible_range)
 		return FALSE
 
+	if(!friendly_check(target))
+		return FALSE
+
 	return TRUE
 
-/datum/human_ai_brain/proc/friendly_check()
-	var/list/turf_list = get_line(get_turf(tied_human), get_turf(current_target))
+/datum/human_ai_brain/proc/friendly_check(atom/target)
+	var/list/turf_list = get_line(get_turf(tied_human), get_turf(target))
 	for(var/turf/tile in turf_list)
 		if(istype(tile, /turf/closed))
 			return TRUE
