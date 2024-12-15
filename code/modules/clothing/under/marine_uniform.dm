@@ -546,6 +546,15 @@
 	worn_state = "upp_uniform_service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
+/obj/item/clothing/under/marine/veteran/UPP/naval
+	name = "\improper UPP naval infantry uniform"
+	flags_armor_protection = BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	desc = "A pair of black bell bottom naval pants matched with a blue telnyashka."
+	icon_state = "upp_uniform_naval"
+	worn_state = "upp_uniform_naval"
+	flags_jumpsuit = UNIFORM_SLEEVE_CUT
+	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_HOLSTER)
+
 //=========================//Freelancer\\================================\\
 
 /obj/item/clothing/under/marine/veteran/freelancer
