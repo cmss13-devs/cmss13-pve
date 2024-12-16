@@ -270,7 +270,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 ////-------- PMC PLATOON --------//
 
-#define JOB_PMCPLAT_OW "OVERWATCH"
+#define JOB_PMCPLAT_OW "Overwatch Operator"
 #define JOB_PMCPLAT_LEADER "Operations Leader"
 #define JOB_PMCPLAT_FTL "Team Leader"
 #define JOB_PMCPLAT_SG "Heavy Weapons Specialist"
