@@ -512,7 +512,8 @@
 	icon_state = "webbing"
 	w_class = SIZE_LARGE //too big to store in other pouches
 	var/obj/item/storage/internal/hold = /obj/item/storage/internal/accessory
-	slot = ACCESSORY_SLOT_UTILITY
+	slot = list(
+		ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_UTILITY)
 	high_visibility = TRUE
 
 /obj/item/clothing/accessory/storage/Initialize()
