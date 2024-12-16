@@ -334,7 +334,7 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
-/turf/open/floor/prison/blue_plate/west,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "ajl" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -571,7 +571,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 4
 	},
-/turf/open/floor/prison/blue/southeast,
+/turf/open/floor/prison/blue/north,
 /area/bmg290/colony_interior/offices)
 "ane" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -1174,7 +1174,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 4
 	},
-/turf/open/floor/prison/blue/northeast,
+/turf/open/floor/prison/blue,
 /area/bmg290/colony_interior/offices)
 "aBO" = (
 /obj/structure/platform/kutjevo/rock,
@@ -1696,7 +1696,7 @@
 /area/shuttle/drop1/bmg290)
 "aPM" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/prison/blue/west,
 /area/bmg290/colony_interior/offices)
 "aPY" = (
 /obj/structure/surface/table/almayer,
@@ -1961,6 +1961,12 @@
 "aXn" = (
 /turf/open/floor/prison/blue/west,
 /area/bmg290/keppitz_interior/ops_center)
+"aXq" = (
+/obj/structure/prop/rock/brown{
+	dir = 8
+	},
+/turf/open/gm/dirt2,
+/area/bmg290/caverns_weakened/valley_entry)
 "aXu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump,
@@ -2059,7 +2065,7 @@
 /area/bmg290/ancie_eng/chamber2)
 "aYA" = (
 /obj/structure/machinery/light/small,
-/turf/open/floor/whitegreen_v,
+/turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "aYB" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -2148,7 +2154,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/bluecorner/west,
+/turf/open/floor/prison/blue/northeast,
 /area/bmg290/colony_interior/offices)
 "aZY" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -3091,6 +3097,14 @@
 "brj" = (
 /turf/open/asphalt,
 /area/bmg290/keppitz_exterior/cargo_section)
+"brl" = (
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/ore_box,
+/turf/open/floor/corsat/retrosquares,
+/area/bmg290/keppitz_interior_b/receiving)
 "brw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/cyan{
@@ -3452,9 +3466,7 @@
 /area/bmg290/relay_exterior/outskirts)
 "bAL" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/bluefull{
-	dir = 1
-	},
+/turf/open/floor/prison/blue/east,
 /area/bmg290/keppitz_interior/archives)
 "bAS" = (
 /obj/effect/decal/siding{
@@ -3784,9 +3796,7 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/whitegreen_v{
-	dir = 8
-	},
+/turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "bJp" = (
 /turf/open/asphalt/cement/cement12,
@@ -4090,6 +4100,11 @@
 /obj/structure/machinery/power/apc/power/west,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/bmg290/colony_interior/maintenance)
+"bPD" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/blue/west,
+/area/bmg290/keppitz_interior/archives)
 "bPG" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/north,
@@ -4629,7 +4644,7 @@
 	dir = 1
 	},
 /obj/structure/curtain/red,
-/turf/open/floor/whitegreen_v,
+/turf/open/floor/plating/plating_catwalk/aicore,
 /area/bmg290/colony_interior/main_complex)
 "cdt" = (
 /obj/structure/pipes/vents/pump{
@@ -4923,7 +4938,7 @@
 "ciZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small,
-/turf/open/floor/whitegreen_v,
+/turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "cjn" = (
 /obj/structure/platform/kutjevo/rock{
@@ -6261,6 +6276,9 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/colony_interior/main_complex)
 "cIT" = (
@@ -6401,6 +6419,15 @@
 /obj/structure/machinery/door/airlock/almayer/medical,
 /turf/open/floor/almayer/dark_sterile,
 /area/bmg290/colony_interior/medical)
+"cMW" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = -9;
+	pixel_y = 3;
+	id = "k423";
+	name = "Door 3"
+	},
+/turf/open/floor/plating,
+/area/bmg290/oob/playfulstuff)
 "cNd" = (
 /turf/open/floor/prison/darkpurple2/east,
 /area/bmg290/keppitz_interior_b/research_standard)
@@ -6494,7 +6521,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue_plate/west,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "cPa" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -6531,8 +6558,10 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/caverns/filtration_tunnel)
 "cPR" = (
-/turf/open/floor/prison/blue_plate/north,
-/area/bmg290/keppitz_interior/ops_center)
+/obj/structure/surface/table/almayer,
+/obj/item/device/lightreplacer,
+/turf/open/floor/plating,
+/area/bmg290/relay_interior/maintenance_hall)
 "cQa" = (
 /obj/item/trash/cigbutt/ucigbutt{
 	pixel_y = 13;
@@ -6575,7 +6604,7 @@
 	pixel_y = 16
 	},
 /obj/structure/curtain/red,
-/turf/open/floor/whitegreen_v,
+/turf/open/floor/plating/plating_catwalk/aicore,
 /area/bmg290/colony_interior/main_complex)
 "cQA" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
@@ -7171,9 +7200,9 @@
 /turf/open/gm/grass,
 /area/bmg290/relay_exterior/colony_nw)
 "deD" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue_plate/north,
-/area/bmg290/colony_interior/offices)
+/obj/item/lightstick/planted,
+/turf/open/gm/river/ocean,
+/area/bmg290/oob/ocean)
 "deE" = (
 /obj/structure/surface/rack,
 /obj/effect/decal/siding,
@@ -8102,7 +8131,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/prison,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "dzO" = (
 /obj/structure/platform_decoration/kutjevo,
@@ -8562,9 +8591,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
-/turf/open/floor/prison/bluefull{
-	dir = 1
-	},
+/turf/open/floor/prison/blue/west,
 /area/bmg290/keppitz_interior/archives)
 "dKQ" = (
 /obj/structure/cable/heavyduty{
@@ -8719,6 +8746,14 @@
 "dNT" = (
 /turf/open/asphalt/cement/cement1,
 /area/bmg290/relay_exterior/colony_ne)
+"dNX" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
+	},
+/turf/open/asphalt/cement,
+/area/bmg290/keppitz_exterior/mining_outside)
 "dOf" = (
 /obj/structure/bed/sofa/south{
 	desc = "A ladder access. It seems to lead deeper into the vault.";
@@ -9616,6 +9651,13 @@
 	},
 /turf/open/floor/asteroid,
 /area/bmg290/relay_exterior/colony_center)
+"egG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/relay_interior/cargo_hall)
 "egS" = (
 /obj/structure/largecrate/random/case/small{
 	pixel_y = 11;
@@ -10647,6 +10689,15 @@
 /obj/structure/prop/almayer/cannon_cable_connector,
 /turf/open/floor/almayer/plating,
 /area/shuttle/drop1/bmg290)
+"eBg" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = -9;
+	pixel_y = 3;
+	id = "k427";
+	name = "Door 7"
+	},
+/turf/open/floor/plating,
+/area/bmg290/oob/playfulstuff)
 "eBr" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 8
@@ -10680,11 +10731,15 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/blocker/invisible_wall/water,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
 	pixel_y = 24
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
 	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
@@ -10696,10 +10751,8 @@
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_center)
 "eCn" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{
-	dir = 1;
-	name = "Medbay";
-	req_one_access = null
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/research{
+	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/bmg290/keppitz_interior_b/sterilization)
@@ -11228,10 +11281,11 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/maintenance_hall)
 "eMD" = (
-/turf/open/floor/whitegreen_v{
-	dir = 4
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
-/area/bmg290/colony_interior/main_complex)
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/relay_interior/cargo_hall)
 "eMF" = (
 /obj/structure/sign/poster/safety,
 /turf/closed/wall/strata_outpost,
@@ -11456,6 +11510,7 @@
 "eRy" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/pipes/vents/pump,
+/obj/item/device/flashlight,
 /turf/open/floor/prison/darkred2/southwest,
 /area/bmg290/relay_interior/entry_hall)
 "eSa" = (
@@ -12371,7 +12426,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue_plate/west,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "fpn" = (
 /turf/open/floor/prison/floor_plate,
@@ -12865,6 +12920,15 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/turbine)
+"fAG" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = -9;
+	pixel_y = 3;
+	id = "k422";
+	name = "Door 2"
+	},
+/turf/open/floor/plating,
+/area/bmg290/oob/playfulstuff)
 "fAJ" = (
 /obj/structure/bed/chair/comfy/beige,
 /obj/structure/pipes/standard/simple/hidden/cyan,
@@ -14067,7 +14131,7 @@
 	dir = 4
 	},
 /obj/structure/barricade/handrail/strata,
-/turf/open/floor/prison/blue_plate/west,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "gcI" = (
 /turf/open/asphalt/cement/cement14,
@@ -14271,6 +14335,12 @@
 	},
 /turf/open/floor/prison/darkyellow2,
 /area/bmg290/colony_interior/engi_hall)
+"giH" = (
+/obj/structure/prop/rock/brown{
+	dir = 5
+	},
+/turf/open/gm/dirt2,
+/area/bmg290/caverns_weakened/mining_area)
 "giK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/reactor/colony{
@@ -14469,7 +14539,7 @@
 "gnS" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitegreen_v,
+/turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "gnZ" = (
 /obj/effect/decal/warning_stripes{
@@ -14485,9 +14555,8 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/bmg290/keppitz_interior_b/research_containment)
 "goP" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/prison/bluecorner,
-/area/bmg290/colony_interior/offices)
+/turf/open/floor/prison/blue/east,
+/area/bmg290/keppitz_interior/archives)
 "goT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small,
@@ -15625,8 +15694,8 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/motor_pool)
 "gRT" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	name = "Offices"
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/glass{
+	dir = 1
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
@@ -16014,12 +16083,16 @@
 /turf/open/floor/prison/bluecorner,
 /area/bmg290/colony_interior/main_complex)
 "hcx" = (
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
 "hdb" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/bluecorner/north,
+/turf/open/floor/prison/blue/southwest,
 /area/bmg290/colony_interior/offices)
 "hdh" = (
 /turf/open/floor/darkblue2/west,
@@ -16199,7 +16272,7 @@
 	pixel_x = -8;
 	pixel_y = 12
 	},
-/turf/open/floor/prison,
+/turf/open/floor/prison/blue/north,
 /area/bmg290/colony_interior/offices)
 "hgS" = (
 /turf/open/shale,
@@ -16443,6 +16516,9 @@
 /area/bmg290/caverns/halls)
 "hly" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/bmg290/relay_exterior/colony_center)
 "hlE" = (
@@ -17054,6 +17130,9 @@
 	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/keppitz_exterior_b/cave)
+"hzG" = (
+/turf/open/floor/prison/blue/southeast,
+/area/bmg290/colony_interior/offices)
 "hzL" = (
 /obj/structure/bed/chair{
 	dir = 8;
@@ -17504,7 +17583,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue_plate/west,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "hKa" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -18536,7 +18615,7 @@
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
-/turf/open/floor/prison,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "ida" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18699,6 +18778,9 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns/halls)
 "ihT" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/bmg290/relay_exterior/colony_center)
 "iio" = (
@@ -18720,7 +18802,7 @@
 /area/bmg290/relay_exterior/relay_courtyard)
 "iiE" = (
 /obj/structure/pipes/vents/pump,
-/turf/open/floor/prison/blue/southwest,
+/turf/open/floor/prison/blue/east,
 /area/bmg290/colony_interior/offices)
 "iiR" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18903,9 +18985,14 @@
 /turf/open/floor/engine/mars,
 /area/bmg290/ancie_eng/main_chamber)
 "imo" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue,
-/area/bmg290/colony_interior/offices)
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = -9;
+	pixel_y = 3;
+	id = "k426";
+	name = "Door 6"
+	},
+/turf/open/floor/plating,
+/area/bmg290/oob/playfulstuff)
 "imt" = (
 /obj/structure/platform/shiva{
 	dir = 8
@@ -18922,6 +19009,14 @@
 /obj/structure/fence,
 /turf/open/floor/grass,
 /area/bmg290/keppitz_exterior/research_camp)
+"imR" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/colony_interior/main_complex)
 "ind" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
@@ -19332,6 +19427,9 @@
 /obj/item/reagent_container/food/snacks/enchiladas,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/diner)
+"ixO" = (
+/turf/open/asphalt/cement/cement14,
+/area/bmg290/keppitz_exterior/mining_outside)
 "ixQ" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -19763,7 +19861,7 @@
 /area/bmg290/colony_interior/offices)
 "iFT" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/prison,
+/turf/open/floor/prison/blue/northwest,
 /area/bmg290/colony_interior/offices)
 "iFV" = (
 /obj/structure/disposalpipe/segment,
@@ -20642,7 +20740,7 @@
 /obj/structure/bookcase{
 	icon_state = "book-5"
 	},
-/turf/open/floor/prison/blue,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "iXw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -21363,9 +21461,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/bluefull{
-	dir = 1
-	},
+/turf/open/floor/prison/blue/northwest,
 /area/bmg290/keppitz_interior/archives)
 "joa" = (
 /obj/effect/decal/warning_stripes{
@@ -21736,6 +21832,12 @@
 	},
 /turf/open/floor/prison/blue/north,
 /area/bmg290/keppitz_interior/ops_center)
+"jxa" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/asphalt/cement,
+/area/bmg290/relay_exterior/colony_center)
 "jxt" = (
 /obj/structure/prop/server_equipment/yutani_server,
 /obj/effect/decal/cleanable/dirt,
@@ -22298,6 +22400,13 @@
 /obj/structure/surface/rack,
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
+"jJX" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/colony_interior/main_complex)
 "jKg" = (
 /turf/open/floor/cult,
 /area/bmg290/ancie_eng/hallway_section_untouched)
@@ -22513,6 +22622,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior/archives)
+"jOd" = (
+/obj/structure/machinery/colony_floodlight,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/asphalt/cement,
+/area/bmg290/relay_exterior/colony_center)
 "jOk" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -22940,6 +23056,14 @@
 	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns_weakened/mining_area)
+"jXt" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = -9;
+	pixel_y = 3;
+	id = "k421"
+	},
+/turf/open/floor/plating,
+/area/bmg290/oob/playfulstuff)
 "jXE" = (
 /obj/effect/decal/grass_overlay/grass1/inner,
 /obj/structure/flora/bush/ausbushes/ppflowers,
@@ -23110,6 +23234,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement15,
 /area/bmg290/relay_exterior/colony_sw)
+"kcK" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/grass,
+/area/bmg290/keppitz_exterior/research_camp)
 "kcL" = (
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/logistics_hub)
@@ -23227,7 +23360,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 2
 	},
-/turf/open/floor/prison/blue/north,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "kfJ" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -23507,6 +23640,9 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/barricade/handrail{
 	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/main_complex)
@@ -24327,7 +24463,11 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
 "kBC" = (
@@ -24526,7 +24666,7 @@
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
-/turf/open/floor/prison/blue_plate/west,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "kGx" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -24577,7 +24717,7 @@
 "kIn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/photocopier,
-/turf/open/floor/prison/blue,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "kIt" = (
 /obj/structure/largecrate/random/case{
@@ -25027,9 +25167,7 @@
 /area/bmg290/colony_exterior/valley_site)
 "kUm" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/prison/bluefull{
-	dir = 1
-	},
+/turf/open/floor/prison/blue/west,
 /area/bmg290/keppitz_interior/archives)
 "kUn" = (
 /obj/structure/tunnel,
@@ -25077,6 +25215,14 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/prison,
 /area/bmg290/relay_interior/turbine)
+"kVk" = (
+/obj/structure/prop/invuln/lattice_prop,
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 8
+	},
+/obj/structure/ore_box,
+/turf/open/floor/plating,
+/area/bmg290/keppitz_interior_b/receiving)
 "kVm" = (
 /obj/structure/platform{
 	density = 0;
@@ -25613,11 +25759,8 @@
 /turf/closed/wall/strata_outpost/reinforced,
 /area/bmg290/caverns_weakened/mining_area)
 "lfY" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 2;
-	name = "Dormitory"
-	},
 /obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/main_complex)
 "lfZ" = (
@@ -25692,7 +25835,7 @@
 	pixel_x = 6;
 	pixel_y = 3
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/prison/blue,
 /area/bmg290/colony_interior/offices)
 "lhl" = (
 /obj/item/device/flashlight/lamp/tripod,
@@ -25878,11 +26021,9 @@
 /turf/open/floor/asteroid,
 /area/bmg290/relay_exterior/colony_center)
 "llC" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/gm/grass,
-/area/bmg290/relay_exterior/colony_ne)
+/obj/item/lightstick/red/planted,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/colony_exterior/valley_site)
 "llD" = (
 /turf/open/floor/asteroidwarning/west,
 /area/bmg290/relay_exterior/colony_nw)
@@ -26644,6 +26785,12 @@
 	},
 /turf/open/floor/kutjevo/tan/grey_edge/west,
 /area/bmg290/colony_interior/bar)
+"lBk" = (
+/obj/structure/prop/rock/brown{
+	dir = 9
+	},
+/turf/open/gm/dirt2,
+/area/bmg290/caverns_weakened/valley_entry)
 "lBn" = (
 /obj/structure/bookcase{
 	icon_state = "book-5"
@@ -27221,6 +27368,13 @@
 /obj/structure/platform/kutjevo/rock,
 /turf/open/gm/dirt2,
 /area/bmg290/caverns_weakened/filtration_perimeter)
+"lNo" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/obj/item/lightstick/red/planted,
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "lND" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine,
@@ -27420,15 +27574,11 @@
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/cargo_drop)
 "lRi" = (
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/structure/barricade/metal{
+/obj/structure/machinery/light/small{
 	dir = 1
 	},
-/obj/structure/curtain/red,
-/turf/open/floor/white,
-/area/bmg290/colony_interior/main_complex)
+/turf/open/floor/grass,
+/area/bmg290/keppitz_exterior/research_camp)
 "lRp" = (
 /obj/structure/bed/sofa/pews/flipped,
 /obj/structure/machinery/light,
@@ -28332,10 +28482,7 @@
 /area/bmg290/keppitz_exterior/research_camp)
 "mmR" = (
 /obj/structure/platform/kutjevo/rock,
-/obj/structure/platform/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/gm/grass,
+/turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_ne)
 "mmT" = (
 /obj/structure/platform_decoration/kutjevo/rock,
@@ -28713,6 +28860,10 @@
 "mwo" = (
 /turf/open/floor/asteroidwarning/north,
 /area/bmg290/relay_exterior/colony_sw)
+"mwz" = (
+/obj/item/lightstick/red/planted,
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "mwE" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
@@ -29369,9 +29520,9 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/bmg290/relay_exterior/colony_sw)
 "mMx" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/prison/blue/north,
-/area/bmg290/colony_interior/offices)
+/obj/item/lightstick/red/planted,
+/turf/open/gm/grass,
+/area/bmg290/relay_exterior/colony_nw)
 "mMQ" = (
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/floor/grey_dark2,
@@ -29437,6 +29588,9 @@
 "mPw" = (
 /obj/structure/machinery/colony_floodlight,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_center)
 "mPx" = (
@@ -29663,13 +29817,12 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
 /area/bmg290/relay_exterior/colony_sw)
 "mUC" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 2;
-	name = "Dormitory"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
-/turf/open/floor/prison/floor_plate,
-/area/bmg290/colony_interior/main_complex)
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/bmg290/relay_interior/cargo_hall)
 "mUE" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -29917,9 +30070,7 @@
 /obj/structure/mirror{
 	pixel_x = -28
 	},
-/turf/open/floor/whitegreen_v{
-	dir = 10
-	},
+/turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "nbT" = (
 /obj/structure/largecrate/random/case/small{
@@ -30515,7 +30666,7 @@
 	name = "synthethic potted plant";
 	pixel_y = 14
 	},
-/turf/open/floor/prison/blue/north,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "nlQ" = (
 /obj/structure/extinguisher_cabinet{
@@ -30626,6 +30777,9 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/bmg290/caverns_weakened/valley_entry)
+"nom" = (
+/turf/open/floor/prison/blue,
+/area/bmg290/keppitz_interior/archives)
 "nop" = (
 /obj/structure/pipes/vents/pump{
 	dir = 1
@@ -31458,7 +31612,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/prison,
+/turf/open/floor/prison/blue/southwest,
 /area/bmg290/colony_interior/offices)
 "nJh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -31502,6 +31656,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt,
 /area/bmg290/relay_exterior/cargo_drop)
+"nLe" = (
+/turf/open/floor/prison/blue/north,
+/area/bmg290/keppitz_interior/archives)
 "nLj" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
@@ -33528,7 +33685,7 @@
 "oDj" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine/uscm,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/prison/blue,
 /area/bmg290/keppitz_interior/archives)
 "oDx" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -33611,6 +33768,7 @@
 	dir = 4
 	},
 /obj/item/storage/firstaid/regular,
+/obj/effect/spawner/random/toolbox,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior_b/acquisitions)
 "oFm" = (
@@ -33730,7 +33888,7 @@
 /turf/open/gm/river,
 /area/bmg290/ancie_eng/chamber3)
 "oHH" = (
-/turf/open/floor/prison/blue_plate,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "oIe" = (
 /obj/effect/decal/warning_stripes{
@@ -34503,6 +34661,17 @@
 /obj/structure/sign/safety/bathwomens,
 /turf/closed/wall/strata_outpost,
 /area/bmg290/colony_interior/main_complex)
+"oYV" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = 24
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/asphalt/cement,
+/area/bmg290/relay_exterior/colony_center)
 "oZk" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -35150,7 +35319,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/prison/blue,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "pof" = (
 /obj/structure/flora/jungle/vines/light_3,
@@ -35171,9 +35340,7 @@
 /obj/structure/mirror{
 	pixel_x = 28
 	},
-/turf/open/floor/whitegreen_v{
-	dir = 4
-	},
+/turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "poq" = (
 /obj/effect/decal/warning_stripes{
@@ -35342,9 +35509,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/shuttle/drop3/bmg290)
 "psA" = (
-/turf/open/floor/prison/bluefull{
-	dir = 1
-	},
+/turf/open/floor/prison/blue/west,
 /area/bmg290/keppitz_interior/archives)
 "psI" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -36020,6 +36185,12 @@
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/relay_exterior/outskirts_road)
+"pGL" = (
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/keppitz_exterior/research_camp)
 "pGM" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt,
@@ -36058,6 +36229,15 @@
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/kutjevo/grey,
 /area/bmg290/ancie_eng_weakened/breached_hall)
+"pIh" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = -9;
+	pixel_y = 3;
+	id = "k424";
+	name = "Door 4"
+	},
+/turf/open/floor/plating,
+/area/bmg290/oob/playfulstuff)
 "pIj" = (
 /obj/structure/prop/rock/black_ground{
 	dir = 9
@@ -36762,7 +36942,7 @@
 /area/bmg290/keppitz_interior_b/receiving)
 "pYw" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/whitegreen_v,
+/turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "pYy" = (
 /obj/effect/decal/warning_stripes{
@@ -37218,6 +37398,9 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/main_complex)
 "qjO" = (
@@ -37551,6 +37734,10 @@
 "qpC" = (
 /turf/open/floor/prison/bluecorner/north,
 /area/bmg290/colony_interior/offices)
+"qpD" = (
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/asphalt/cement,
+/area/bmg290/relay_exterior/colony_ne)
 "qpE" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/closed/wall/strata_ice/jungle,
@@ -37835,7 +38022,7 @@
 /area/bmg290/ancie_eng_weakened/breached_hall)
 "quw" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue/northeast,
+/turf/open/floor/prison/blue/west,
 /area/bmg290/colony_interior/offices)
 "quQ" = (
 /obj/structure/cable/heavyduty{
@@ -38416,6 +38603,14 @@
 	},
 /turf/open/floor/grass,
 /area/bmg290/keppitz_exterior/research_camp)
+"qIb" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/cameras{
+	dir = 4;
+	network = null
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/relay_interior/cargo_hall_transfer)
 "qIh" = (
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/marshal)
@@ -39018,6 +39213,15 @@
 /obj/structure/surface/table/reinforced/black,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/diner)
+"qVF" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/obj/structure/machinery/floodlight{
+	name = "Floodlight"
+	},
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/keppitz_exterior/research_camp)
 "qVG" = (
 /obj/item/stool,
 /turf/open/floor/prison/floor_plate,
@@ -39903,10 +40107,11 @@
 /turf/open/floor/grass,
 /area/bmg290/colony_interior/main_complex)
 "rph" = (
-/turf/open/floor/whitegreen_v{
+/obj/structure/prop/rock/brown{
 	dir = 8
 	},
-/area/bmg290/colony_interior/main_complex)
+/turf/open/gm/dirt2,
+/area/bmg290/caverns_weakened/mining_area)
 "rpr" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -40161,7 +40366,7 @@
 "rtZ" = (
 /obj/structure/barricade/handrail/strata,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue_plate,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "rud" = (
 /obj/structure/machinery/light/small{
@@ -40336,11 +40541,15 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior_b/garage)
 "rxh" = (
-/obj/structure/blocker/invisible_wall/water,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
 	pixel_y = 24
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
 	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
@@ -40458,7 +40667,7 @@
 	dir = 1;
 	pixel_y = 9
 	},
-/turf/open/gm/grass,
+/turf/open/asphalt/cement/cement3,
 /area/bmg290/relay_exterior/colony_ne)
 "ryX" = (
 /obj/structure/surface/table/woodentable/fancy,
@@ -40506,6 +40715,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
+"rAk" = (
+/obj/structure/machinery/floodlight{
+	name = "Floodlight"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/keppitz_exterior/research_camp)
 "rAA" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
@@ -41002,6 +41217,9 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/shuttle/drop1/bmg290)
+"rLW" = (
+/turf/open/asphalt/cement/cement3,
+/area/bmg290/keppitz_exterior/mining_outside)
 "rMc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -42913,9 +43131,13 @@
 /turf/open/asphalt,
 /area/bmg290/keppitz_exterior/cargo_section)
 "sEU" = (
+/obj/structure/platform_decoration/kutjevo,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue_plate/north,
-/area/bmg290/keppitz_interior/ops_center)
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/relay_interior/cargo_hall)
 "sFf" = (
 /obj/item/stack/sheet/plasteel/medium_stack,
 /obj/effect/decal/cleanable/dirt,
@@ -43247,7 +43469,7 @@
 	},
 /obj/item/paper_bin,
 /obj/item/tool/pen,
-/turf/open/floor/prison,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "sKI" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
@@ -43299,6 +43521,7 @@
 "sMv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
+/obj/item/device/flashlight,
 /turf/open/floor/prison/darkyellow2/north,
 /area/bmg290/relay_interior/maintenance_hall)
 "sMw" = (
@@ -43942,7 +44165,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/prison,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "tbo" = (
 /obj/structure/closet/crate/plastic,
@@ -45769,7 +45992,7 @@
 	dir = 1;
 	pixel_y = 9
 	},
-/turf/open/asphalt/cement_sunbleached,
+/turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_ne)
 "tUu" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -45849,8 +46072,12 @@
 /turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "tVi" = (
-/turf/open/floor/prison/bluecorner,
-/area/bmg290/colony_interior/offices)
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/obj/item/lightstick/red/planted,
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "tVn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/case,
@@ -46160,6 +46387,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
 	},
+/obj/structure/machinery/computer/med_data,
 /turf/open/floor/plating/wood,
 /area/bmg290/keppitz_interior_b/research_director)
 "ucS" = (
@@ -46400,7 +46628,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/asphalt/cement/cement9,
+/turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_ne)
 "uiZ" = (
 /obj/structure/surface/table/gamblingtable,
@@ -47287,7 +47515,7 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 1
 	},
-/turf/open/floor/prison/blue_plate,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "uIk" = (
 /obj/structure/sign/double/barsign,
@@ -47481,7 +47709,7 @@
 /area/bmg290/relay_exterior/cargo_drop)
 "uLG" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue_plate,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "uLL" = (
 /obj/structure/cable/heavyduty{
@@ -47536,7 +47764,7 @@
 /area/bmg290/colony_exterior/valley_site)
 "uMK" = (
 /obj/structure/machinery/computer/crew,
-/turf/open/floor/prison/blue,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "uMM" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -48072,7 +48300,7 @@
 /area/bmg290/relay_exterior/colony_center)
 "uZk" = (
 /mob/living/simple_animal/mouse/brown{
-	name = "rat"
+	name = "Remilia the Bar Rat"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/bar)
@@ -48362,7 +48590,7 @@
 	dir = 4
 	},
 /obj/structure/bed/chair/office/light,
-/turf/open/floor/prison/blue/southwest,
+/turf/open/floor/prison/blue/north,
 /area/bmg290/colony_interior/offices)
 "veM" = (
 /obj/structure/phone_base/colony_net{
@@ -48580,9 +48808,7 @@
 	pixel_x = -28
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitegreen_v{
-	dir = 8
-	},
+/turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "vhT" = (
 /obj/structure/bed/chair/comfy{
@@ -48870,14 +49096,14 @@
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/keppitz_exterior/research_camp)
 "voo" = (
-/obj/structure/barricade/metal,
-/obj/structure/toilet{
-	dir = 8;
-	pixel_y = 16
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = -9;
+	pixel_y = 3;
+	id = "k425";
+	name = "Door 5"
 	},
-/obj/structure/curtain/red,
-/turf/open/floor/white,
-/area/bmg290/colony_interior/main_complex)
+/turf/open/floor/plating,
+/area/bmg290/oob/playfulstuff)
 "vor" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/bot/mulebot,
@@ -48887,6 +49113,11 @@
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/repair_station)
+"voD" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight,
+/turf/open/floor/plating,
+/area/bmg290/relay_interior/maintenance_hall)
 "voK" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -48998,10 +49229,8 @@
 /turf/open/floor/prison,
 /area/bmg290/keppitz_interior_b/garage)
 "vqJ" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{
-	dir = 1;
-	name = "Medbay";
-	req_one_access = null
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/research{
+	dir = 1
 	},
 /turf/open/floor/corsat/retrosquareslight,
 /area/bmg290/keppitz_interior_b/sterilization)
@@ -49282,7 +49511,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 1
 	},
-/turf/open/floor/prison/blue/northwest,
+/turf/open/floor/prison/blue,
 /area/bmg290/colony_interior/offices)
 "vwJ" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -49508,7 +49737,7 @@
 "vDI" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue/north,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "vDK" = (
 /obj/structure/prop/static_tank,
@@ -49668,7 +49897,11 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
 "vGZ" = (
@@ -50263,9 +50496,7 @@
 /obj/structure/mirror{
 	pixel_x = 28
 	},
-/turf/open/floor/whitegreen_v{
-	dir = 6
-	},
+/turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "vSB" = (
 /obj/structure/platform/kutjevo,
@@ -50279,6 +50510,12 @@
 	},
 /turf/open/floor/grass,
 /area/bmg290/caverns_weakened/valley_entry)
+"vSN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/misc/flashlight,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/relay_interior/cargo_hall)
 "vSS" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/plating/wood,
@@ -50559,6 +50796,9 @@
 /obj/structure/machinery/disposal,
 /turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior/entry_hall)
+"vXR" = (
+/turf/open/asphalt/cement/cement12,
+/area/bmg290/keppitz_exterior/mining_outside)
 "vXV" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
@@ -51118,7 +51358,7 @@
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
-/turf/open/floor/prison/blue_plate/west,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "wiq" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -51975,7 +52215,6 @@
 /area/bmg290/relay_exterior/cargo_drop)
 "wBl" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/map,
 /obj/item/device/flashlight/lamp{
 	pixel_y = 14;
@@ -52400,9 +52639,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/cargo_hall)
 "wKR" = (
-/obj/structure/machinery/door/airlock/almayer/medical{
-	dir = 2
-	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/medical)
 "wKS" = (
@@ -52600,11 +52837,15 @@
 /turf/open/floor/darkblue2,
 /area/bmg290/relay_interior/data_room)
 "wQn" = (
-/obj/structure/pipes/standard/simple/hidden/green{
+/obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/turf/open/floor/prison,
-/area/bmg290/colony_interior/offices)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/relay_interior/cargo_hall)
 "wQE" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement/cement9,
@@ -53480,7 +53721,7 @@
 	pixel_x = -1
 	},
 /obj/structure/curtain/red,
-/turf/open/floor/white,
+/turf/open/floor/plating/plating_catwalk/aicore,
 /area/bmg290/colony_interior/main_complex)
 "xls" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -54327,7 +54568,11 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
 "xDG" = (
@@ -54919,8 +55164,11 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns_weakened/valley_entry)
 "xRK" = (
-/turf/open/floor/prison/blue_plate/north,
-/area/bmg290/colony_interior/offices)
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/bmg290/relay_interior/cargo_hall)
 "xRL" = (
 /obj/structure/bed/sofa/south/white/right,
 /turf/open/floor/prison/floor_plate,
@@ -54960,9 +55208,6 @@
 /area/bmg290/colony_interior/main_complex)
 "xTa" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/machinery/door/airlock/almayer/medical{
-	dir = 2
-	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/medical)
 "xTt" = (
@@ -55096,9 +55341,7 @@
 "xWM" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/bluefull{
-	dir = 1
-	},
+/turf/open/floor/prison/blue/southeast,
 /area/bmg290/keppitz_interior/archives)
 "xWR" = (
 /obj/structure/prop/invuln/ice_prefab{
@@ -55495,7 +55738,7 @@
 /area/bmg290/relay_exterior/colony_center)
 "yeF" = (
 /obj/structure/barricade/handrail/strata,
-/turf/open/floor/prison/blue_plate/west,
+/turf/open/floor/prison/bluefull,
 /area/bmg290/keppitz_interior/ops_center)
 "yeH" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony/autoname{
@@ -55507,6 +55750,7 @@
 "yeT" = (
 /obj/structure/surface/rack,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/device/flashlight,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/cargo_hall_transfer)
 "yfc" = (
@@ -55718,9 +55962,7 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/whitegreen_v{
-	dir = 4
-	},
+/turf/open/floor/white,
 /area/bmg290/colony_interior/main_complex)
 "yjQ" = (
 /turf/open/gm/coast/south_east,
@@ -55818,7 +56060,8 @@
 "ylR" = (
 /obj/structure/machinery/door/poddoor/almayer/biohazard/white{
 	id = "research_entry_gate";
-	dir = 4
+	dir = 4;
+	name = "Bisohazard Containment Airlock"
 	},
 /turf/open/floor/whiteyellow/north,
 /area/bmg290/keppitz_interior_b/sterilization)
@@ -65045,12 +65288,12 @@ bTn
 bBt
 pPp
 ijJ
-bTn
-bTn
-eBs
-gqz
-gqz
-lGL
+eMD
+eMD
+xRK
+mUC
+mUC
+egG
 bID
 iUP
 uNB
@@ -65777,13 +66020,13 @@ jsg
 jsg
 jsg
 jsg
-lGL
-gqz
-eBs
-eBs
-bTn
-rFn
-krn
+egG
+mUC
+xRK
+xRK
+eMD
+sEU
+wQn
 nal
 cIf
 nVt
@@ -66525,7 +66768,7 @@ cZo
 fea
 ijJ
 ijJ
-fQR
+vSN
 vsy
 kIt
 cxX
@@ -66551,7 +66794,7 @@ iJC
 pZn
 pYX
 pYX
-gvT
+qIb
 gvT
 gvT
 ayJ
@@ -69272,7 +69515,7 @@ nYL
 iwl
 jVk
 nYL
-nYL
+rAk
 pRB
 nYL
 euU
@@ -70256,7 +70499,7 @@ brw
 eVl
 wpJ
 ofW
-ofW
+voD
 bmE
 bmE
 wpJ
@@ -70755,7 +70998,7 @@ nYL
 nYL
 nYL
 nYL
-kzx
+owJ
 pRB
 pRB
 pRB
@@ -70813,7 +71056,7 @@ umn
 vlT
 uNc
 wpJ
-ofW
+cPR
 ofW
 dwz
 bmE
@@ -72053,7 +72296,7 @@ cHf
 nYL
 nYL
 nYL
-ceA
+qVF
 pRB
 pRB
 nYL
@@ -72384,7 +72627,7 @@ gvu
 (90,1,1) = {"
 gvu
 qSW
-cqZ
+jXt
 cqZ
 qSW
 qSW
@@ -72570,7 +72813,7 @@ gvu
 (91,1,1) = {"
 gvu
 qSW
-cqZ
+fAG
 cqZ
 qSW
 qSW
@@ -72623,7 +72866,7 @@ nYL
 uvR
 pdL
 nda
-nYL
+pGL
 nYL
 ceA
 iJe
@@ -72636,7 +72879,7 @@ nYL
 nYL
 nYL
 nYL
-dCs
+kcK
 pxn
 pxn
 uvR
@@ -72756,7 +72999,7 @@ gvu
 (92,1,1) = {"
 gvu
 qSW
-cqZ
+cMW
 cqZ
 qSW
 qSW
@@ -72942,7 +73185,7 @@ gvu
 (93,1,1) = {"
 gvu
 qSW
-cqZ
+pIh
 cqZ
 qSW
 qSW
@@ -73128,7 +73371,7 @@ gvu
 (94,1,1) = {"
 gvu
 qSW
-cqZ
+voo
 cqZ
 qSW
 qSW
@@ -73314,7 +73557,7 @@ gvu
 (95,1,1) = {"
 gvu
 qSW
-cqZ
+imo
 cqZ
 qSW
 qSW
@@ -73500,7 +73743,7 @@ gvu
 (96,1,1) = {"
 gvu
 qSW
-cqZ
+eBg
 cqZ
 qSW
 qSW
@@ -73570,7 +73813,7 @@ yfV
 tXo
 tRJ
 bHE
-pxn
+lRi
 rFH
 fRl
 fRl
@@ -75058,7 +75301,7 @@ oJS
 oJS
 oJS
 oJS
-pxn
+lRi
 pxn
 pxn
 pRB
@@ -76145,7 +76388,7 @@ xmr
 bHt
 qSW
 eza
-tGt
+kVk
 cdI
 eza
 eza
@@ -76331,7 +76574,7 @@ bHt
 bHt
 qSW
 eza
-tGt
+kVk
 mSO
 eza
 eza
@@ -77759,7 +78002,7 @@ qSW
 qSW
 kuM
 pht
-cgF
+deD
 cgF
 cgF
 cgF
@@ -77819,7 +78062,7 @@ saI
 saI
 saI
 pJN
-qsY
+brl
 pJN
 foc
 sRq
@@ -78691,7 +78934,7 @@ piz
 piz
 piz
 pht
-cgF
+deD
 cgF
 cgF
 cgF
@@ -79114,7 +79357,7 @@ tZo
 mio
 sjs
 lBn
-bAL
+aBj
 apn
 osZ
 muJ
@@ -79126,7 +79369,7 @@ pdf
 muJ
 gqM
 osZ
-kUm
+izn
 mDe
 pdf
 xVB
@@ -79307,13 +79550,13 @@ nVX
 ebq
 nXy
 tqA
-bAL
+buX
 lUJ
 dTs
 aBj
 lUJ
 tqA
-bAL
+buX
 nXy
 keu
 keu
@@ -79335,7 +79578,7 @@ xcF
 bte
 oHH
 nlW
-cPR
+nlW
 eWx
 uLG
 xCY
@@ -79807,7 +80050,7 @@ piz
 piz
 piz
 pht
-cgF
+deD
 cgF
 cgF
 cgF
@@ -80051,15 +80294,15 @@ gSc
 eCe
 inZ
 hav
-psA
-psA
-psA
+goP
+goP
+goP
 bAL
 buX
 bHq
-psA
-psA
-psA
+goP
+goP
+goP
 eVB
 pJN
 etU
@@ -80245,7 +80488,7 @@ swv
 izn
 kUm
 kUm
-xWM
+bPD
 baC
 nRO
 qxb
@@ -80416,7 +80659,7 @@ tZo
 pKI
 nXy
 nXy
-psA
+ebq
 ldA
 eFf
 omU
@@ -80427,8 +80670,8 @@ gOD
 nrh
 nXy
 nXy
-nXy
-nXy
+nom
+nLe
 nXy
 lUJ
 lUJ
@@ -80446,7 +80689,7 @@ svR
 mMY
 qqQ
 hkN
-sEU
+uhT
 aXn
 jjW
 vzk
@@ -80456,7 +80699,7 @@ aXn
 uhT
 uhT
 uhT
-cPR
+aXn
 iOb
 qGa
 jJC
@@ -80614,7 +80857,7 @@ uVv
 veF
 tBh
 oDj
-nXy
+nLe
 lUJ
 kzV
 vZN
@@ -81109,7 +81352,7 @@ piz
 piz
 jhB
 pht
-cgF
+deD
 cgF
 cgF
 cgF
@@ -82224,7 +82467,7 @@ piz
 piz
 piz
 pht
-cgF
+deD
 cgF
 cgF
 qSW
@@ -85999,9 +86242,9 @@ tLD
 tLD
 hLF
 xtJ
-mlG
-mlG
-mlG
+dNX
+dNX
+dNX
 vTN
 tLD
 hLF
@@ -86185,9 +86428,9 @@ tLD
 tLD
 hLF
 mrI
-xhc
-xhc
-xhc
+cTm
+cTm
+cTm
 maF
 jxt
 tLD
@@ -86371,9 +86614,9 @@ mlG
 mlG
 mlG
 cOt
-xhc
-xhc
-xhc
+uIm
+cTm
+vXR
 jzl
 mlG
 mlG
@@ -86557,9 +86800,9 @@ xhc
 xhc
 xhc
 xhc
-xhc
-xhc
-xhc
+uIm
+cTm
+vXR
 xhc
 xhc
 xhc
@@ -86743,9 +86986,9 @@ xhc
 xhc
 xhc
 xhc
-xhc
-xhc
-xhc
+uIm
+cTm
+vXR
 xhc
 xhc
 xhc
@@ -86809,7 +87052,7 @@ hai
 hai
 bOg
 bOg
-bOg
+mMx
 qSW
 qSW
 qSW
@@ -86929,12 +87172,12 @@ dIL
 xhc
 xhc
 xhc
-xhc
-xhc
-xhc
-xhc
-xhc
-xhc
+uIm
+cTm
+cTm
+rLW
+rLW
+ixO
 dIL
 uau
 xhc
@@ -87003,7 +87246,7 @@ hai
 hai
 hai
 bOg
-bOg
+mMx
 qSW
 qSW
 aum
@@ -87177,8 +87420,8 @@ hai
 bOg
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 bOg
 hai
@@ -87359,10 +87602,10 @@ ruR
 aum
 hai
 hai
+mMx
 bOg
 bOg
-bOg
-bOg
+aIj
 bOg
 bOg
 bOg
@@ -87547,8 +87790,8 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 bOg
 goZ
@@ -87732,8 +87975,8 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 goZ
 goZ
@@ -87917,8 +88160,8 @@ bOg
 hai
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 goZ
 goZ
@@ -88102,8 +88345,8 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 goZ
 goZ
@@ -88287,8 +88530,8 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 goZ
 goZ
@@ -88472,7 +88715,7 @@ hai
 hai
 hai
 bOg
-bOg
+aIj
 bOg
 bOg
 goZ
@@ -88842,7 +89085,7 @@ wmv
 tKJ
 bOg
 bOg
-bOg
+mMx
 bOg
 bOg
 bOg
@@ -89216,7 +89459,7 @@ bOg
 bOg
 bOg
 bOg
-bOg
+aIj
 bOg
 bOg
 goZ
@@ -89401,8 +89644,8 @@ qSW
 bOg
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 bOg
 goZ
@@ -89567,8 +89810,8 @@ rnY
 rnY
 rnY
 rnY
-rnY
-rnY
+wTa
+wTa
 rnY
 rnY
 rnY
@@ -89587,8 +89830,8 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 bOg
 goZ
@@ -89754,8 +89997,8 @@ rnY
 rnY
 rnY
 rnY
-rnY
-rnY
+wTa
+wTa
 rnY
 rnY
 qSW
@@ -89772,9 +90015,9 @@ tKJ
 bOg
 bOg
 bOg
-bOg
-bOg
-bOg
+aIj
+aIj
+aIj
 bOg
 bOg
 goZ
@@ -89941,7 +90184,7 @@ rnY
 rnY
 rnY
 rnY
-rnY
+wTa
 rnY
 rnY
 rnY
@@ -89955,11 +90198,11 @@ qSW
 qSW
 wmv
 tKJ
+mMx
 bOg
 bOg
-bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 bOg
 goZ
@@ -90030,7 +90273,7 @@ nkv
 nlE
 nAh
 qna
-tVi
+iFB
 qSt
 qSt
 soc
@@ -90127,9 +90370,9 @@ rnY
 rnY
 rnY
 rnY
-rnY
-rnY
-rnY
+wTa
+wTa
+wTa
 rnY
 qSW
 qSW
@@ -90143,8 +90386,8 @@ ruR
 aum
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 bOg
 bOg
@@ -90215,7 +90458,7 @@ qMu
 qvf
 vDI
 eHb
-goP
+eHb
 anb
 tbn
 hib
@@ -90329,9 +90572,9 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
-bOg
+aIj
+aIj
+aIj
 bOg
 bOg
 bOg
@@ -90401,7 +90644,7 @@ kcT
 nkv
 quw
 hdb
-imo
+kcT
 hgJ
 sKD
 hib
@@ -90514,10 +90757,10 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
-bOg
-bOg
+aIj
+aIj
+aIj
+aIj
 bOg
 bOg
 bOg
@@ -90587,7 +90830,7 @@ vsd
 nkv
 icV
 aBK
-deD
+kcT
 veL
 pyx
 qSt
@@ -90699,12 +90942,12 @@ pML
 bOg
 bOg
 bOg
-bOg
-bOg
-bOg
-bOg
-bOg
-bOg
+aIj
+aIj
+aIj
+aIj
+aIj
+aIj
 bOg
 bOg
 goZ
@@ -90773,7 +91016,7 @@ ipM
 ipM
 dzI
 lhe
-fEe
+vsd
 aZP
 iiE
 hib
@@ -90887,9 +91130,9 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
-bOg
+aIj
+aIj
+aIj
 bOg
 bOg
 bOg
@@ -90959,8 +91202,8 @@ eBc
 nkv
 hmC
 vwG
-xjb
-wQn
+vsd
+fLv
 kIn
 hib
 kXu
@@ -91063,7 +91306,7 @@ rnY
 rnY
 rnY
 rnY
-rnY
+wTa
 rnY
 rnY
 rnY
@@ -91073,9 +91316,9 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
-bOg
+aIj
+aIj
+aIj
 bOg
 bOg
 goZ
@@ -91143,9 +91386,9 @@ xet
 fEe
 kcT
 nkv
-iFB
-xjb
-xRK
+rTd
+hzG
+vsd
 fLv
 uMK
 qSt
@@ -91248,7 +91491,7 @@ rnY
 rnY
 rnY
 rnY
-rnY
+wTa
 rnY
 rnY
 rnY
@@ -91260,8 +91503,8 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 bOg
 bOg
@@ -91296,7 +91539,7 @@ yka
 ijw
 yka
 rQh
-qOH
+oYV
 oWf
 cIx
 qsD
@@ -91329,7 +91572,7 @@ fjM
 paz
 fAU
 qvf
-mMx
+eHb
 eHb
 eHb
 npi
@@ -91434,7 +91677,7 @@ rnY
 rnY
 rnY
 rnY
-rnY
+wTa
 rnY
 rnY
 rnY
@@ -91446,8 +91689,8 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 bOg
 bOg
@@ -91619,8 +91862,8 @@ rnY
 rnY
 rnY
 rnY
-rnY
-rnY
+wTa
+wTa
 rnY
 rnY
 rnY
@@ -91633,8 +91876,8 @@ bOg
 bOg
 bOg
 bOg
-bOg
-bOg
+aIj
+aIj
 bOg
 bOg
 goZ
@@ -91702,7 +91945,7 @@ ipM
 ipM
 ipM
 gIf
-gRT
+vsd
 gRT
 sbk
 ipM
@@ -91802,10 +92045,10 @@ rnY
 rnY
 rnY
 rnY
-rnY
-rnY
-rnY
-rnY
+wTa
+wTa
+wTa
+wTa
 rnY
 rnY
 rnY
@@ -91820,7 +92063,7 @@ vFz
 bOg
 bOg
 bOg
-bOg
+aIj
 bOg
 bOg
 goZ
@@ -91988,7 +92231,7 @@ rnY
 rnY
 rnY
 rnY
-rnY
+wTa
 rnY
 rnY
 rnY
@@ -92006,7 +92249,7 @@ nhJ
 vFz
 bOg
 bOg
-bOg
+aIj
 bOg
 bOg
 goZ
@@ -92119,7 +92362,7 @@ acv
 acv
 hhh
 jAM
-uCh
+giH
 tfw
 xKQ
 jXr
@@ -92679,7 +92922,7 @@ xlF
 uCh
 uCh
 jtP
-wsx
+acv
 acv
 acv
 acv
@@ -92710,11 +92953,11 @@ lFq
 cwD
 wTa
 pCe
-poR
+tVi
 prc
 prc
 gtA
-gtA
+mwz
 gtA
 gtA
 gtA
@@ -92988,14 +93231,14 @@ rAA
 cUu
 cUu
 cUu
-cUu
-iAV
+jJX
+imR
 qjH
 cII
 cII
 kkQ
-cUu
-iAV
+jJX
+imR
 cUu
 ktV
 aQj
@@ -93190,7 +93433,7 @@ xvp
 fRU
 uMM
 amO
-mUC
+hgb
 hgb
 ioS
 lve
@@ -93426,7 +93669,7 @@ acv
 acv
 xlF
 uCh
-uCh
+rph
 nDA
 aBO
 sKd
@@ -93458,7 +93701,7 @@ wTa
 tqE
 sEv
 wTa
-prZ
+lNo
 gtA
 qSW
 qSW
@@ -93640,7 +93883,7 @@ nkV
 jLW
 uBe
 bqM
-wTa
+llC
 wTa
 wTa
 gFr
@@ -93742,7 +93985,7 @@ vjb
 ght
 ght
 ght
-lRi
+cdj
 cdj
 uVB
 cyC
@@ -93900,7 +94143,7 @@ iwU
 srE
 iwU
 eCI
-dyj
+jxa
 vcW
 xqP
 xTC
@@ -94297,9 +94540,9 @@ waR
 lRp
 vMW
 yjL
-eMD
-eMD
-eMD
+tVf
+tVf
+tVf
 pol
 vSz
 oYN
@@ -94458,7 +94701,7 @@ iwU
 srE
 iwU
 eCI
-vto
+jOd
 hWf
 gBV
 xsa
@@ -94565,7 +94808,7 @@ efM
 jHo
 mSX
 alV
-alV
+lBk
 qSW
 qSW
 qSW
@@ -94669,9 +94912,9 @@ unn
 rly
 vMW
 bIW
-rph
-rph
-rph
+tVf
+tVf
+tVf
 vhP
 nbB
 uVB
@@ -95230,7 +95473,7 @@ lgx
 eii
 ght
 ght
-voo
+cQz
 cQz
 uVB
 cKq
@@ -95488,7 +95731,7 @@ uJE
 qSW
 qSW
 qSW
-alV
+aXq
 gcz
 nwh
 mrT
@@ -99999,8 +100242,8 @@ eQa
 qwF
 vdJ
 ryW
-xCG
-vMc
+obc
+qpD
 wAd
 wAd
 xhg
@@ -100184,8 +100427,8 @@ pYS
 rWk
 rWk
 sdo
-xCG
-xCG
+dqB
+dqB
 uiQ
 rCG
 wAd
@@ -100491,7 +100734,7 @@ fOD
 fOD
 fOD
 vID
-vID
+jKB
 fOD
 fOD
 fOD
@@ -101672,7 +101915,7 @@ oGr
 rWk
 rWk
 aeB
-llC
+dqB
 mmR
 soa
 soa
@@ -101859,7 +102102,7 @@ rWk
 rWk
 vdJ
 tTY
-soa
+mmR
 soa
 soa
 qSW
@@ -102031,7 +102274,7 @@ fOD
 fOD
 fOD
 qGp
-vID
+jKB
 hfK
 hfK
 wkN
@@ -103300,7 +103543,7 @@ uUT
 fOD
 fOD
 fOD
-jKB
+sOX
 qIt
 fOD
 fOD
@@ -103687,7 +103930,7 @@ mID
 lxq
 tSN
 mou
-sOX
+vID
 vID
 fxo
 gGR
