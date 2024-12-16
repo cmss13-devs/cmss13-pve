@@ -852,7 +852,7 @@
 	faction = FACTION_CONTRACTOR
 	faction_group = list(FACTION_CONTRACTOR)
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_RUSSIAN)
-	skills = /datum/skills/commando
+	skills = /datum/skills/pmc/specialist //allows to use all spec weapons while not having much other stuff
 	paygrades = list("")
 
 /datum/equipment_preset/mercenary/load_name(mob/living/carbon/human/new_human)
