@@ -23,7 +23,7 @@
 			ammo.hit_target(picked_atom)
 			hits++
 		sleep(delay)
-	shipwide_ai_announcement("ALERT: [hits] IMPACTED, [missed] MISSED, [intercepted] INTERCEPTED.", MAIN_AI_SYSTEM, 'sound/effects/double_klaxon.ogg')
+	shipwide_ai_announcement("ATTENTION: [hits] IMPACTED, [missed] MISSED, [intercepted] INTERCEPTED.", MAIN_AI_SYSTEM, 'sound/effects/double_klaxon.ogg')
 
 /datum/space_weapon/proc/shot_message(quantity, hit_eta)
 	return
