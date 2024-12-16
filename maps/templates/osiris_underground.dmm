@@ -3,6 +3,15 @@
 /obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest/northwest1,
 /turf/closed/wall/jockey,
 /area/space)
+"av" = (
+/obj/effect/decal/jockey/hull_angled{
+	dir = 8
+	},
+/obj/effect/decal/jockey/platform_angled{
+	dir = 8
+	},
+/turf/open/floor/jockey/outerhull/north,
+/area/space)
 "aE" = (
 /obj/effect/decal/jockey/hull_angled{
 	dir = 1
@@ -12,27 +21,27 @@
 	},
 /turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
-"aR" = (
-/obj/effect/decal/jockey/platform,
-/obj/effect/decal/jockey/platform{
-	dir = 8
-	},
-/turf/open/floor/jockey/flooring/engineer_floor9,
-/area/space)
-"by" = (
-/obj/effect/decal/jockey/hull_angled/alt{
+"aK" = (
+/obj/effect/decal/jockey/hull_angled{
 	dir = 4
 	},
+/obj/effect/decal/jockey/platform_angled{
+	dir = 4
+	},
+/turf/open/auto_turf/basalt/layer1,
+/area/space)
+"bi" = (
+/obj/effect/decal/jockey/platform_deco,
+/turf/open/auto_turf/basalt/layer1,
+/area/space)
+"bk" = (
 /obj/effect/decal/jockey/hull_angled{
-	dir = 1
+	dir = 4
 	},
 /obj/effect/decal/jockey/platform_angled{
-	dir = 1
+	dir = 4
 	},
-/turf/open/floor/jockey/flooring/engineer_floor9,
-/area/space)
-"bz" = (
-/turf/open/floor/jockey/outerhull/southwest,
+/turf/open/floor/jockey/outerhull/north,
 /area/space)
 "bJ" = (
 /turf/open/floor/jockey/flooring/engineer_floor1,
@@ -49,9 +58,6 @@
 /area/space)
 "bW" = (
 /turf/open/floor/corsat/marked,
-/area/space)
-"bY" = (
-/turf/open/floor/jockey/outerhull/southeast,
 /area/space)
 "cj" = (
 /obj/structure/prop/invuln/dense/jockey/console{
@@ -88,13 +94,8 @@
 /obj/structure/machinery/door/airlock/multi_tile/elevator/access,
 /turf/open/floor/corsat/marked,
 /area/space)
-"cW" = (
-/obj/effect/decal/jockey/hull_angled/alt{
-	dir = 8
-	},
-/obj/effect/decal/jockey/hull_angled,
-/obj/effect/decal/jockey/platform_angled,
-/turf/open/floor/jockey/flooring/engineer_floor9,
+"cL" = (
+/turf/open/floor/jockey/outerhull/southwest,
 /area/space)
 "cZ" = (
 /obj/effect/decal/jockey/platform_angled,
@@ -169,10 +170,6 @@
 	},
 /turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
-"gI" = (
-/obj/effect/decal/jockey/platform_deco,
-/turf/open/auto_turf/basalt/layer1,
-/area/space)
 "gJ" = (
 /obj/effect/decal/jockey/platform_deco{
 	dir = 4
@@ -184,6 +181,12 @@
 	dir = 8
 	},
 /turf/open/floor/jockey,
+/area/space)
+"hG" = (
+/obj/effect/decal/jockey/hull_angled{
+	dir = 4
+	},
+/turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
 "hM" = (
 /obj/effect/decal/jockey/platform_angled{
@@ -259,6 +262,12 @@
 	},
 /turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
+"kM" = (
+/obj/effect/decal/jockey/hull_angled{
+	dir = 1
+	},
+/turf/open/floor/jockey/flooring/engineer_floor9,
+/area/space)
 "kN" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/space)
@@ -288,6 +297,10 @@
 /obj/effect/decal/jockey/plating_angled,
 /turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
+"mn" = (
+/obj/effect/decal/jockey/platform_deco,
+/turf/open/floor/jockey/outerhull/north,
+/area/space)
 "mo" = (
 /turf/open/floor/jockey/pillars/north/pillar1,
 /area/space)
@@ -314,12 +327,6 @@
 /obj/effect/decal/jockey/platform,
 /turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
-"oN" = (
-/obj/effect/decal/jockey/platform_deco{
-	dir = 1
-	},
-/turf/open/auto_turf/basalt/layer1,
-/area/space)
 "oV" = (
 /obj/structure/machinery/door/airlock/multi_tile/elevator/access,
 /turf/open/floor/corsat/marked,
@@ -336,6 +343,12 @@
 	dir = 4
 	},
 /turf/open/floor/jockey/flooring/engineer_floor9,
+/area/space)
+"pm" = (
+/obj/effect/decal/jockey/platform_deco{
+	dir = 4
+	},
+/turf/open/floor/jockey/outerhull/north,
 /area/space)
 "pu" = (
 /obj/effect/decal/jockey/hull_angled{
@@ -363,6 +376,13 @@
 /area/space)
 "qv" = (
 /obj/effect/decal/jockey/platform_deco,
+/turf/open/floor/jockey/flooring/engineer_floor9,
+/area/space)
+"qZ" = (
+/obj/effect/decal/jockey/platform,
+/obj/effect/decal/jockey/platform{
+	dir = 8
+	},
 /turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
 "rd" = (
@@ -401,6 +421,12 @@
 	dir = 1
 	},
 /turf/closed/wall/jockey,
+/area/space)
+"uZ" = (
+/obj/effect/decal/jockey/hull_angled{
+	dir = 8
+	},
+/turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
 "vF" = (
 /obj/effect/decal/jockey/hull_angled/alt{
@@ -456,9 +482,8 @@
 	},
 /turf/open/floor/jockey,
 /area/space)
-"yO" = (
-/obj/effect/decal/jockey/platform_deco,
-/turf/open/floor/jockey/outerhull/north,
+"yS" = (
+/turf/open/auto_turf/basalt/layer1,
 /area/space)
 "yV" = (
 /obj/effect/decal/jockey/platform_angled{
@@ -531,15 +556,6 @@
 	},
 /turf/open/lava,
 /area/space)
-"CF" = (
-/obj/effect/decal/jockey/hull_angled{
-	dir = 4
-	},
-/obj/effect/decal/jockey/platform_angled{
-	dir = 4
-	},
-/turf/open/auto_turf/basalt/layer1,
-/area/space)
 "CG" = (
 /obj/effect/decal/jockey/platform_angled{
 	dir = 4
@@ -575,18 +591,6 @@
 	},
 /turf/open/floor/jockey/flooring/engineer_floor8,
 /area/space)
-"Ed" = (
-/obj/effect/decal/jockey/hull_angled/alt{
-	dir = 8
-	},
-/turf/open/floor/jockey/outerhull/east,
-/area/space)
-"EN" = (
-/obj/effect/decal/jockey/platform_deco{
-	dir = 1
-	},
-/turf/open/floor/jockey/outerhull/north,
-/area/space)
 "EP" = (
 /obj/effect/decal/jockey/platform_deco{
 	dir = 8
@@ -602,15 +606,6 @@
 	},
 /turf/open/floor/jockey/flooring/engineer_floor8,
 /area/space)
-"Fa" = (
-/obj/effect/decal/jockey/hull_angled{
-	dir = 8
-	},
-/obj/effect/decal/jockey/platform_angled{
-	dir = 8
-	},
-/turf/open/auto_turf/basalt/layer1,
-/area/space)
 "Fm" = (
 /obj/effect/decal/jockey/platform_angled{
 	dir = 1
@@ -623,6 +618,15 @@
 	dir = 1
 	},
 /turf/open/floor/jockey/flooring/engineer_floor9,
+/area/space)
+"FA" = (
+/obj/effect/decal/jockey/hull_angled{
+	dir = 8
+	},
+/obj/effect/decal/jockey/platform_angled{
+	dir = 8
+	},
+/turf/open/space/basic,
 /area/space)
 "Gj" = (
 /obj/effect/decal/jockey/hull_angled{
@@ -648,6 +652,12 @@
 "Hc" = (
 /obj/effect/decal/jockey/platform_angled,
 /turf/open/floor/jockey/flooring/engineer_floor1,
+/area/space)
+"Hd" = (
+/obj/effect/decal/jockey/platform_deco{
+	dir = 1
+	},
+/turf/open/auto_turf/basalt/layer1,
 /area/space)
 "Hp" = (
 /obj/effect/decal/jockey/platform_angled{
@@ -682,12 +692,6 @@
 "Ko" = (
 /turf/open/floor/jockey/pillars/north/pillar2,
 /area/space)
-"Kx" = (
-/obj/effect/decal/jockey/hull_angled{
-	dir = 1
-	},
-/turf/open/floor/jockey/flooring/engineer_floor9,
-/area/space)
 "Kz" = (
 /obj/effect/decal/jockey/platform_angled{
 	dir = 8
@@ -700,18 +704,15 @@
 	},
 /turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
-"La" = (
-/obj/effect/decal/jockey/hull_angled{
-	dir = 4
-	},
-/obj/effect/decal/jockey/platform_angled{
-	dir = 4
-	},
-/turf/open/floor/jockey/outerhull/north,
-/area/space)
 "Lc" = (
 /obj/structure/prop/invuln/dense/jockey/pod,
 /turf/open/floor/jockey/flooring/engineer_floor1,
+/area/space)
+"LD" = (
+/obj/effect/decal/jockey/platform_deco{
+	dir = 1
+	},
+/turf/open/floor/jockey/outerhull/north,
 /area/space)
 "LF" = (
 /obj/effect/decal/jockey/platform_angled{
@@ -724,6 +725,26 @@
 	dir = 4
 	},
 /turf/open/floor/jockey/flooring/engineer_floor1,
+/area/space)
+"Mj" = (
+/obj/effect/decal/jockey/hull_angled/alt{
+	dir = 4
+	},
+/obj/effect/decal/jockey/hull_angled{
+	dir = 1
+	},
+/obj/effect/decal/jockey/platform_angled{
+	dir = 1
+	},
+/turf/open/floor/jockey/flooring/engineer_floor9,
+/area/space)
+"Mk" = (
+/obj/effect/decal/jockey/hull_angled/alt{
+	dir = 8
+	},
+/obj/effect/decal/jockey/hull_angled,
+/obj/effect/decal/jockey/platform_angled,
+/turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
 "Ml" = (
 /obj/effect/decal/jockey/platform_angled{
@@ -750,21 +771,12 @@
 	},
 /turf/open/floor/jockey,
 /area/space)
+"ML" = (
+/turf/open/floor/jockey/outerhull/southeast,
+/area/space)
 "MM" = (
 /obj/structure/prop/invuln/dense/jockey/console,
 /turf/open/floor/jockey/flooring/engineer_floor1,
-/area/space)
-"Na" = (
-/obj/effect/decal/jockey/hull_angled{
-	dir = 4
-	},
-/turf/open/floor/jockey/flooring/engineer_floor9,
-/area/space)
-"Nj" = (
-/obj/effect/decal/jockey/hull_angled{
-	dir = 8
-	},
-/turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
 "Nt" = (
 /obj/structure/prop/invuln/dense/jockey/angled_pillar/southwest/southwest1,
@@ -784,15 +796,6 @@
 /area/space)
 "Of" = (
 /turf/open/floor/jockey/outerhull/north,
-/area/space)
-"ON" = (
-/obj/effect/decal/jockey/hull_angled{
-	dir = 8
-	},
-/obj/effect/decal/jockey/platform_angled{
-	dir = 8
-	},
-/turf/open/space/basic,
 /area/space)
 "OQ" = (
 /obj/effect/decal/jockey/hull_angled,
@@ -815,13 +818,6 @@
 	},
 /turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
-"Pl" = (
-/turf/open/auto_turf/basalt/layer1,
-/area/space)
-"PA" = (
-/obj/effect/decal/jockey/hull_angled,
-/turf/open/floor/jockey/flooring/engineer_floor9,
-/area/space)
 "PG" = (
 /obj/effect/decal/jockey/platform{
 	dir = 1
@@ -832,6 +828,16 @@
 /obj/effect/decal/jockey/platform{
 	dir = 4
 	},
+/turf/open/floor/jockey/flooring/engineer_floor9,
+/area/space)
+"PQ" = (
+/obj/effect/decal/jockey/hull_angled/alt{
+	dir = 8
+	},
+/turf/open/floor/jockey/outerhull/east,
+/area/space)
+"Qv" = (
+/obj/effect/decal/jockey/hull_angled,
 /turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
 "QC" = (
@@ -870,6 +876,10 @@
 	},
 /turf/open/floor/jockey/flooring/engineer_floor9,
 /area/space)
+"RA" = (
+/obj/effect/decal/jockey/platform,
+/turf/open/auto_turf/basalt/layer1,
+/area/space)
 "RC" = (
 /obj/effect/decal/jockey/hull_angled/alt{
 	dir = 1
@@ -881,6 +891,15 @@
 	dir = 8
 	},
 /turf/open/floor/jockey/flooring/engineer_floor1,
+/area/space)
+"Sc" = (
+/obj/effect/decal/jockey/hull_angled{
+	dir = 8
+	},
+/obj/effect/decal/jockey/platform_angled{
+	dir = 8
+	},
+/turf/open/auto_turf/basalt/layer1,
 /area/space)
 "Sy" = (
 /obj/effect/decal/jockey/platform{
@@ -900,10 +919,6 @@
 "Tw" = (
 /obj/structure/prop/invuln/dense/jockey/pod/flipped,
 /turf/open/floor/jockey/flooring/engineer_floor1,
-/area/space)
-"TF" = (
-/obj/effect/decal/jockey/platform,
-/turf/open/auto_turf/basalt/layer1,
 /area/space)
 "Ug" = (
 /obj/effect/decal/jockey/hull_angled/alt{
@@ -931,15 +946,6 @@
 /obj/effect/decal/jockey/platform_angled,
 /obj/effect/decal/jockey/hull_angled,
 /turf/open/floor/jockey,
-/area/space)
-"VK" = (
-/obj/effect/decal/jockey/hull_angled{
-	dir = 8
-	},
-/obj/effect/decal/jockey/platform_angled{
-	dir = 8
-	},
-/turf/open/floor/jockey/outerhull/north,
 /area/space)
 "VY" = (
 /obj/effect/decal/jockey/platform_deco,
@@ -41344,7 +41350,7 @@ AY
 Uz
 bJ
 Dv
-XK
+pm
 Uz
 Uz
 Uz
@@ -41601,7 +41607,7 @@ AY
 Uz
 Dv
 XK
-AY
+Of
 Uz
 Uz
 Uz
@@ -41858,7 +41864,7 @@ Uz
 Uz
 XK
 AY
-AY
+Of
 Uz
 Uz
 Uz
@@ -42111,11 +42117,11 @@ Uz
 Uz
 Uz
 Uz
-vF
-Kx
+qh
+kM
 AY
 AY
-AY
+Of
 Uz
 Uz
 Uz
@@ -42364,20 +42370,20 @@ Uz
 Uz
 Uz
 Uz
-vF
+qh
 mF
 mF
 mF
-Kx
+kM
 AY
 AY
 AY
-AY
+Of
 Uz
 Uz
-AY
+qh
 mF
-dD
+cr
 Uz
 AY
 AY
@@ -42615,13 +42621,13 @@ AY
 Uz
 Uz
 Uz
-vF
+qh
 mF
 mF
 mF
 mF
 mF
-Kx
+kM
 AY
 AY
 AY
@@ -42629,10 +42635,10 @@ AY
 AY
 AY
 AY
-Nj
+uZ
 mF
 mF
-Kx
+kM
 AY
 Of
 Uz
@@ -42870,9 +42876,9 @@ AY
 Uz
 Uz
 Uz
-vF
+qh
 mF
-Kx
+kM
 AY
 AY
 AY
@@ -43031,17 +43037,17 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
 Rg
 Rg
 Rg
@@ -43125,9 +43131,9 @@ AY
 AY
 Uz
 Uz
-vF
+qh
 mF
-Kx
+kM
 AY
 AY
 AY
@@ -43288,17 +43294,17 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-gI
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+bi
 Uz
 Rg
 Rg
@@ -43381,8 +43387,8 @@ AY
 Uz
 Uz
 Uz
-vF
-Kx
+qh
+kM
 AY
 AY
 AY
@@ -43545,17 +43551,17 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-gI
-CF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+bi
+aK
 Uz
 Rg
 Rg
@@ -43636,9 +43642,9 @@ AY
 AY
 Uz
 Uz
-vF
+qh
 mF
-Kx
+kM
 AY
 AY
 AY
@@ -43802,16 +43808,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-gI
-CF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+bi
+aK
 Ug
 Uz
 Rg
@@ -43862,14 +43868,14 @@ Uz
 Uz
 Uz
 Uz
-AY
-AY
-vF
+bV
+bV
+qh
 mF
 mF
 mF
 mF
-dD
+cr
 Uz
 Uz
 Uz
@@ -43892,8 +43898,8 @@ AY
 Uz
 Uz
 Uz
-vF
-Kx
+qh
+kM
 AY
 AY
 AY
@@ -44057,17 +44063,17 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-gI
-CF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+bi
+aK
 Ug
 Uz
 Uz
@@ -44117,21 +44123,21 @@ Uz
 Uz
 Uz
 Uz
-AY
-AY
-vF
+bV
+bV
+qh
 mF
-Kx
+kM
 AY
 AY
 AY
 AY
-Nj
-mF
-mF
+uZ
 mF
 mF
-dD
+mF
+mF
+cr
 Uz
 Uz
 Uz
@@ -44147,9 +44153,9 @@ AY
 AY
 Uz
 Uz
-vF
+qh
 mF
-Kx
+kM
 AY
 AY
 AY
@@ -44175,8 +44181,8 @@ AY
 AY
 AY
 AY
-Na
-pv
+hG
+Ug
 Uz
 Uz
 AY
@@ -44314,16 +44320,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-gI
-CF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+bi
+aK
 Ug
 Uz
 Uz
@@ -44373,10 +44379,10 @@ Uz
 Uz
 Uz
 Uz
-AY
-vF
+bV
+qh
 mF
-Kx
+kM
 AY
 AY
 AY
@@ -44388,9 +44394,9 @@ AY
 AY
 AY
 AY
-Nj
+uZ
 mF
-dD
+cr
 Uz
 Uz
 Uz
@@ -44403,8 +44409,8 @@ AY
 Uz
 Uz
 Uz
-vF
-Kx
+qh
+kM
 AY
 AY
 AY
@@ -44431,8 +44437,8 @@ AY
 AY
 AY
 AY
-Na
-pv
+hG
+Ug
 Uz
 Uz
 AY
@@ -44571,15 +44577,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -44631,7 +44637,7 @@ mF
 Uz
 Uz
 Uz
-Kx
+kM
 AY
 AY
 AY
@@ -44647,10 +44653,10 @@ AY
 AY
 AY
 AY
-Nj
+uZ
 mF
 mF
-dD
+cr
 Uz
 Uz
 Uz
@@ -44658,9 +44664,9 @@ Uz
 Uz
 Uz
 Uz
-vF
+qh
 mF
-Kx
+kM
 AY
 AY
 AY
@@ -44686,9 +44692,9 @@ AY
 AY
 AY
 AY
-Na
+hG
 Nv
-pv
+Ug
 Uz
 Uz
 AY
@@ -44828,15 +44834,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -44907,7 +44913,7 @@ AY
 AY
 AY
 AY
-Nj
+uZ
 mF
 mF
 mF
@@ -44915,7 +44921,7 @@ mF
 mF
 mF
 mF
-Kx
+kM
 AY
 AY
 AY
@@ -44924,7 +44930,7 @@ AY
 AY
 AY
 AY
-Na
+hG
 Nv
 Nv
 Nv
@@ -44938,12 +44944,12 @@ Nv
 Nv
 Nv
 Nv
-PA
+Qv
 AY
 AY
-Na
+hG
 Nv
-pv
+Ug
 Uz
 Uz
 Uz
@@ -45085,15 +45091,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -45145,6 +45151,7 @@ AY
 qv
 Zz
 Zz
+Zz
 AY
 AY
 AY
@@ -45177,11 +45184,10 @@ AY
 AY
 AY
 AY
-AY
-Na
+hG
 Nv
 Nv
-pv
+Ug
 Uz
 Uz
 Uz
@@ -45195,10 +45201,10 @@ Uz
 Uz
 Uz
 Uz
-Mn
+Ke
 Nv
 Nv
-pv
+Ug
 Uz
 Uz
 Uz
@@ -45342,15 +45348,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -45403,7 +45409,7 @@ pu
 Uz
 Uz
 Nv
-PA
+Qv
 AY
 AY
 AY
@@ -45433,9 +45439,9 @@ AY
 AY
 AY
 AY
-Na
+hG
 Nv
-pv
+Ug
 Uz
 Uz
 Uz
@@ -45599,15 +45605,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -45660,8 +45666,8 @@ Ug
 Uz
 Uz
 Uz
-Mn
-PA
+Ke
+Qv
 AY
 AY
 AY
@@ -45688,9 +45694,9 @@ AY
 AY
 AY
 AY
-Na
+hG
 Nv
-pv
+Ug
 Uz
 Uz
 Uz
@@ -45856,15 +45862,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -45918,8 +45924,8 @@ Uz
 Uz
 Uz
 Uz
-Mn
-PA
+Ke
+Qv
 AY
 AY
 AY
@@ -45943,9 +45949,9 @@ AY
 AY
 AY
 AY
-Na
+hG
 Nv
-pv
+Ug
 Uz
 Uz
 Uz
@@ -46113,16 +46119,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-oN
-Fa
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+Hd
+Sc
 cr
 Uz
 Uz
@@ -46176,31 +46182,31 @@ Uz
 Uz
 Uz
 Uz
-Mn
+Ke
 Nv
-PA
-Na
-Nv
-Nv
+Qv
+hG
 Nv
 Nv
 Nv
-PA
-AY
-AY
-AY
-AY
-AY
-AY
-AY
-AY
-AY
-AY
-AY
-AY
-Na
 Nv
-pv
+Nv
+Qv
+AY
+AY
+AY
+AY
+AY
+AY
+AY
+AY
+AY
+AY
+AY
+AY
+hG
+Nv
+Ug
 Uz
 Uz
 Uz
@@ -46370,17 +46376,17 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-VK
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+av
 mF
 bV
 Uz
@@ -46442,20 +46448,20 @@ Uz
 Uz
 Uz
 Uz
-Mn
+Ke
 Nv
 Nv
 Nv
 Nv
 Nv
-PA
+Qv
 AY
 AY
 AY
 AY
-Na
+hG
 Nv
-pv
+Ug
 Uz
 Uz
 Uz
@@ -46627,17 +46633,17 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-EN
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+LD
 pd
 GK
 mF
@@ -46705,12 +46711,12 @@ Uz
 Uz
 Uz
 Uz
-Mn
+Ke
 Nv
 Nv
 Nv
 Nv
-pv
+Ug
 Uz
 Uz
 Uz
@@ -46884,16 +46890,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
 Of
 AY
 xs
@@ -47141,16 +47147,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
 Of
 AY
 AY
@@ -47169,7 +47175,7 @@ Uz
 mF
 mF
 mF
-by
+Mj
 pd
 pd
 pd
@@ -47206,7 +47212,7 @@ mF
 mF
 mF
 mF
-bY
+ML
 nw
 aE
 XK
@@ -47398,16 +47404,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
 Of
 AY
 AY
@@ -47655,16 +47661,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
 Of
 AY
 AY
@@ -47912,16 +47918,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
 Of
 AY
 AY
@@ -48169,16 +48175,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
 Of
 AY
 AY
@@ -48197,7 +48203,7 @@ Uz
 Nv
 Nv
 Nv
-cW
+Mk
 Zz
 Zz
 Zz
@@ -48234,7 +48240,7 @@ Nv
 Nv
 Nv
 Nv
-bz
+cL
 jL
 OQ
 vR
@@ -48426,16 +48432,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
 Of
 AY
 qv
@@ -48683,17 +48689,17 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-yO
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+mn
 Zz
 pu
 Nv
@@ -48940,17 +48946,17 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-La
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+bk
 Nv
 bV
 Uz
@@ -49197,16 +49203,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-gI
-CF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+bi
+aK
 Ug
 Uz
 Uz
@@ -49454,15 +49460,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -49711,15 +49717,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -49968,15 +49974,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -50225,15 +50231,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -50482,15 +50488,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -50597,7 +50603,7 @@ pd
 pd
 GK
 mF
-Ed
+PQ
 Uz
 Uz
 Uz
@@ -50739,15 +50745,15 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-TF
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+RA
 Of
 Uz
 Uz
@@ -50996,16 +51002,16 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-oN
-ON
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+Hd
+FA
 cr
 Uz
 Uz
@@ -51253,17 +51259,17 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-oN
-Fa
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+yS
+Hd
+Sc
 cr
 Uz
 Uz
@@ -51516,12 +51522,12 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-oN
-Fa
+yS
+yS
+yS
+yS
+Hd
+Sc
 cr
 Uz
 Rg
@@ -51773,13 +51779,13 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-oN
-Fa
+yS
+yS
+yS
+yS
+yS
+Hd
+Sc
 Uz
 Rg
 Rg
@@ -52030,13 +52036,13 @@ Rg
 Rg
 Rg
 Rg
-Pl
-Pl
-Pl
-Pl
-Pl
-Pl
-oN
+yS
+yS
+yS
+yS
+yS
+yS
+Hd
 Uz
 Rg
 Rg
@@ -52913,7 +52919,7 @@ qv
 pu
 Nv
 OQ
-aR
+qZ
 Of
 Uz
 AY
