@@ -1295,3 +1295,4 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	money.worth = 50
 	money.update_icon()
 	new_human.equip_to_slot_or_del(money, WEAR_IN_BACK)
+
