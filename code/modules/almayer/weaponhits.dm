@@ -23,7 +23,7 @@
 			ammo.hit_target(picked_atom)
 			hits++
 		sleep(delay)
-	shipwide_ai_announcement("ATTENTION: [hits] IMPACTED, [missed] MISSED, [intercepted] INTERCEPTED.", MAIN_AI_SYSTEM, 'sound/effects/double_klaxon.ogg')
+	shipwide_ai_announcement("ATTENTION: [hits] IMPACTED. [missed] MISSED. [intercepted] INTERCEPTED.", MAIN_AI_SYSTEM, 'sound/effects/double_klaxon.ogg')
 
 /datum/space_weapon/proc/shot_message(quantity, hit_eta)
 	return
@@ -88,7 +88,7 @@
 	shakeship(5, 5, FALSE, FALSE)
 	playsound(picked_atom, "bigboom", 50, 1, 200, echo = echo_list)
 	playsound(picked_atom, pick(hit_sound), 50, 1, 200, echo = echo_list)
-	shipwide_ai_announcement("WARNING: [capitalize(name)] IMPACT REGISTERED, DAMAGE CONTROL DISPATCHED.", MAIN_AI_SYSTEM, 'sound/effects/double_klaxon.ogg')
+	shipwide_ai_announcement("WARNING: [capitalize(name)] IMPACT REGISTERED. DAMAGE CONTROL DISPATCHED.", MAIN_AI_SYSTEM, 'sound/effects/double_klaxon.ogg')
 
 /datum/space_weapon_ammo/rail_gun/stronk
 	name = "Saturation Railgun Salvo" //shitty explaination but it works ig.
@@ -119,7 +119,7 @@
 	playsound(picked_atom, "bigboom", 50, 1, 200, echo = echo_list)
 	playsound(picked_atom, pick(hit_sound), 50, 1, 200, echo = echo_list)
 	playsound(picked_atom, "pry", 25, 1, 200, echo = echo_list)
-	shipwide_ai_announcement("WARNING: [capitalize(name)] IMPACT REGISTERED, DAMAGE CONTROL DISPATCHED.", MAIN_AI_SYSTEM, 'sound/effects/double_klaxon.ogg')
+	shipwide_ai_announcement("WARNING: [capitalize(name)] IMPACT REGISTERED. DAMAGE CONTROL DISPATCHED.", MAIN_AI_SYSTEM, 'sound/effects/double_klaxon.ogg')
 
 /datum/space_weapon_ammo/rocket_launcher/swing_rockets
 	name = "EE-23 Elk Improved Antiship Missile" //NATO reporting name derivation.
@@ -142,4 +142,4 @@
 		shakeship(2, 2, FALSE, FALSE)
 		sleep(1)
 
-	shipwide_ai_announcement("WARNING: [capitalize(name)] IMPACT REGISTERED, DAMAGE CONTROL DISPATCHED.", MAIN_AI_SYSTEM, 'sound/effects/double_klaxon.ogg')
+	shipwide_ai_announcement("WARNING: [capitalize(name)] IMPACT REGISTERED. DAMAGE CONTROL DISPATCHED.", MAIN_AI_SYSTEM, 'sound/effects/double_klaxon.ogg')
