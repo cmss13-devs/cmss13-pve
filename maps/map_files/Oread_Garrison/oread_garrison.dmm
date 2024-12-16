@@ -9190,7 +9190,7 @@
 /area/Oread_Garrison/inside/messhall)
 "Rr" = (
 /obj/structure/sign/safety/coffee{
-	pixel_x = -
+	pixel_x = 0
 	},
 /obj/structure/sign/safety/food_storage{
 	pixel_x = 14
