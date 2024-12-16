@@ -549,6 +549,8 @@
 		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Type 80 Bayonet", round(scale * 5), /obj/item/attachable/bayonet/upp, null, VENDOR_ITEM_REGULAR),
+		list("Type 83 Grenade Launcher", 1, /obj/item/attachable/attached_gun/grenade/upp, null, VENDOR_ITEM_REGULAR),
+		list("VOG-73 HE Grenade Packet", 2, /obj/item/storage/box/packet/high_explosive/upp/impact, null, VENDOR_ITEM_REGULAR),
 
 		list("CLOTHING", -1, null, null),
 		list("Cap", round(scale * 5), /obj/item/clothing/head/uppcap, VENDOR_ITEM_REGULAR),

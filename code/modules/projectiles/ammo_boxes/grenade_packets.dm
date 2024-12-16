@@ -58,11 +58,21 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 
 /obj/item/storage/box/packet/high_explosive/upp
 	name = "\improper Type 6 fragmentation grenade packet"
-	desc = "It contains three Type 6 fragmentation grenades."
-	storage_slots = 3
-	icon = 'icons/obj/items/storage/kits.dmi'
-	icon_state = "woodbox"
+	desc = "It contains six Type 6 fragmentation grenades."
+	storage_slots = 6
+	icon_state = "nadeboxupp"
+	packet_icon = "upp-p" //Just so it doesn't come with the HEDP packet icon on it
 	content_type = /obj/item/explosive/grenade/high_explosive/upp
+
+/obj/item/storage/box/packet/high_explosive/upp/impact
+	name = "\improper VOG-73 fragmentation grenade packet"
+	desc = "It contains six VOG-73 fragmentation grenades."
+	content_type = /obj/item/explosive/grenade/high_explosive/impact/upp
+
+/obj/item/storage/box/packet/high_explosive/upp/smoke
+	name = "\improper RDG-17 smoke grenade packet"
+	desc = "It contains six RDG-17 smoke grenades."
+	content_type = /obj/item/explosive/grenade/smokebomb/upp
 
 /obj/item/storage/box/packet/baton
 	name = "\improper M230 LLRB grenade packet"

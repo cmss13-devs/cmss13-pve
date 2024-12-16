@@ -17,6 +17,7 @@
 	dangerous = TRUE
 	underslug_launchable = TRUE
 	dual_purpose = TRUE
+	arm_sound = 'sound/weapons/grenade.ogg'
 	var/explosion_power = 100
 	var/explosion_falloff = 20
 	var/shrapnel_count = 32
@@ -86,6 +87,7 @@
 	icon_state = "grenade_pmc"
 	item_state = "grenade_ex"
 	underslug_launchable = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	explosion_power = 200
 	shrapnel_count = 0
 	dual_purpose = FALSE
@@ -105,6 +107,7 @@
 	explosion_power = 100
 	shrapnel_count = 0
 	dual_purpose = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/high_explosive/upp
@@ -118,6 +121,7 @@
 	explosion_power = 100
 	shrapnel_count = 48
 	dual_purpose = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /*
@@ -168,6 +172,7 @@
 	underslug_launchable = FALSE
 	explosion_power = 120
 	shrapnel_count = 48
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 	arm_sound = 'sound/weapons/pinpull.ogg'
 
@@ -344,6 +349,12 @@
 			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
 		qdel(src)
 
+/obj/item/explosive/grenade/high_explosive/impact/upp
+	name = "\improper VOG-73 HE grenade"
+	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one bears markings of the UPP."
+	icon_state = "grenade_40mm_upp"
+	item_state = "grenade_hedp"
+
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	name = "\improper 40mm Buckshot Shell"
 	desc = "A classic of grenade launchers everywhere, this is a 40mm shell loaded with buckshot; very dangerous, watch your fire."
@@ -413,7 +424,7 @@
 	icon_state = "grenade_fire"
 	det_time = 40
 	item_state = "grenade_fire"
-	flags_equip_slot = SLOT_WAIST
+	arm_sound = 'sound/weapons/grenade.ogg'
 	dangerous = TRUE
 	underslug_launchable = TRUE
 	dual_purpose = TRUE
@@ -543,6 +554,7 @@
 	underslug_launchable = TRUE
 	harmful = FALSE
 	antigrief_protection = FALSE
+	arm_sound = 'sound/weapons/grenade.ogg'
 	var/datum/effect_system/smoke_spread/bad/smoke
 	var/smoke_radius = 3
 	dual_purpose = TRUE
@@ -580,6 +592,12 @@
 		smoke.start()
 		qdel(src)
 
+/obj/item/explosive/grenade/smokebomb/upp
+	name = "RDG-17 smoke grenade"
+	desc = "Handgrenade, smoke, model 17. Simple, old and efficient design, these grenades are produced basically everywhere for use in the UPP Armed Collective."
+	icon_state = "grenade_upp_smoke"
+	arm_sound = 'sound/weapons/pinpull.ogg'
+
 /obj/item/explosive/grenade/phosphorus
 	name = "\improper M60 WPSI grenade"
 	desc = "The M60 WPSI is a small, but powerful chemical compound grenade, designated as such with a white cap. Usable for both smoke-screen purposes and as an incendiary device. Two second fuse."
@@ -588,6 +606,7 @@
 	item_state = "grenade_training"
 	underslug_launchable = TRUE
 	dual_purpose = TRUE
+	arm_sound = 'sound/weapons/grenade.ogg'
 	var/shrapnel_count = 16
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel/incendiary/light
 	var/datum/effect_system/smoke_spread/phosphorus/smoke
@@ -635,6 +654,7 @@
 	desc = "A deadly gas grenade found within the ranks of the UPP. Designed to spill white phosphorus on the target. It explodes 2 seconds after the pin has been pulled."
 	underslug_launchable = FALSE
 	dual_purpose = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	icon_state = "grenade_upp_wp"
 	item_state = "grenade_upp_wp"
 
@@ -643,6 +663,7 @@
 	desc = "An improvised version of gas grenade designed to spill white phosphorus on the target. It explodes 2 seconds after the pin has been pulled."
 	underslug_launchable = FALSE
 	dual_purpose = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	icon_state = "grenade_phos_clf"
 	item_state = "grenade_phos_clf"
 
@@ -1109,6 +1130,7 @@
 	det_time = 20
 	underslug_launchable = TRUE
 	harmful = FALSE
+	arm_sound = 'sound/weapons/grenade.ogg'
 	var/foam_metal_type = FOAM_METAL_TYPE_IRON
 
 /obj/item/explosive/grenade/metal_foam/prime()
