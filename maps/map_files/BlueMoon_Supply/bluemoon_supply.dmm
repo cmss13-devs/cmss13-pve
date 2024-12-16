@@ -4114,6 +4114,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bluemoon_supply/outdoors/lz_destroyed)
+"zl" = (
+/obj/structure/powerloader_wreckage,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bluemoon_supply/outdoors/caves)
 "zw" = (
 /obj/item/stack/cable_coil/green,
 /turf/open/floor/plating/platingdmg3,
@@ -18099,10 +18103,10 @@ jG
 jG
 Tk
 Tk
-Tk
+Cr
 Tk
 oT
-Tk
+Cr
 wN
 Tk
 Tk
@@ -19372,7 +19376,7 @@ jG
 Tk
 Tk
 Tk
-Tk
+tS
 Tk
 jG
 jG
@@ -21752,7 +21756,7 @@ hL
 yd
 eS
 hL
-hL
+nV
 hL
 hL
 hL
@@ -22043,7 +22047,7 @@ jG
 jG
 jG
 jG
-Tk
+tS
 jG
 jG
 jG
@@ -22316,7 +22320,7 @@ jG
 jG
 Tk
 Tk
-Tk
+zl
 FU
 FU
 tS
@@ -22860,7 +22864,7 @@ Tk
 jG
 jG
 jG
-JB
+Tk
 Tk
 Tk
 ez
@@ -23784,7 +23788,7 @@ jG
 jG
 jG
 jG
-Tk
+tS
 Tk
 jG
 jG
@@ -24600,7 +24604,7 @@ Tk
 Tk
 Tk
 Tk
-GZ
+jG
 jG
 jG
 jG
@@ -24805,7 +24809,7 @@ Tk
 Tk
 Tk
 Tk
-Tk
+tS
 jG
 jG
 jG
