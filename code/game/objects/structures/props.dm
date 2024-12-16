@@ -1247,3 +1247,33 @@
 
 /obj/structure/prop/invuln/dense/stasiscell/stage4/alt
 	icon_state = "cell-on-occupied"
+
+/obj/structure/prop/invuln/dense/jockey
+	name = "jockey prop"
+
+/obj/structure/prop/invuln/dense/jockey/pod
+	name = "strange pod"
+	desc = "A massive alien pod made of some kind of unknown material. It looks as though as if it was grown rather than constructed. It's empty."
+	icon = 'icons/obj/structures/props/engineers/engineerPod.dmi'
+	icon_state = "pod"
+	layer = ABOVE_MOB_LAYER
+	bound_width = 64
+	bound_height = 96
+
+/obj/structure/prop/invuln/dense/jockey/pod/flipped
+	icon_state = "pod_flipped"
+
+/obj/structure/prop/invuln/dense/jockey/pod/broken
+	icon_state = "pod_broken"
+	desc = "A massive alien pod made of some kind of unknown material. It looks as though as if it was grown rather than constructed. This one appears to be empty."
+
+/obj/structure/prop/invuln/dense/jockey/pod/broken/flipped
+	icon_state = "pod_broken_flipped"
+
+/obj/structure/prop/invuln/dense/jockey/console
+	name = "strange console"
+	desc = "A large console with three separate panels. You can't seem to interface with them."
+	icon = 'icons/obj/structures/props/engineers/consoles.dmi'
+	icon_state = "engineerconsole"
+	pixel_x = -1
+	layer = BELOW_MOB_LAYER

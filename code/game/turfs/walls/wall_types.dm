@@ -1372,3 +1372,11 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "lavaland_h"
 	hull = 1
 	walltype = WALL_LAVALAND_R
+
+/turf/closed/wall/jockey
+	name = "alien structure"
+	desc = "A nigh indestructible structure, looks like nothing you can do will penetrate it."
+	icon = 'icons/turf/walls/engineership.dmi'
+	icon_state = "metal"
+	hull = TRUE
+	walltype = WALL_JOCKEY
