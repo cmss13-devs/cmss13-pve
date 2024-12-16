@@ -3741,7 +3741,7 @@
 //jockey stuff
 
 /turf/open/floor/jockey
-	name = "alien floor"
+	name = "strange floor"
 	icon = 'icons/turf/floors/engineership.dmi'
 	icon_state = "plating"
 	hull_floor = TRUE
@@ -3750,7 +3750,7 @@
 // Engineer tiles
 
 /turf/open/floor/jockey/flooring
-	desc = "A strange metal floor, unlike any metal you've seen before."
+	desc = "A strange metal floor, unlike anything you've seen before."
 	plating_type = /turf/open/floor/plating/engineer_ship
 
 /turf/open/floor/jockey/flooring/engineer_floor1
@@ -3808,7 +3808,7 @@
 
 //floor hull
 /turf/open/floor/jockey/hull
-	name = "alien structure"
+	name = "strange structure"
 	desc = "A nigh indestructible structure, looks like nothing you can do will penetrate it."
 	icon_state = "engineerwallfloor1"
 

@@ -1277,3 +1277,42 @@
 	icon_state = "engineerconsole"
 	pixel_x = -1
 	layer = BELOW_MOB_LAYER
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar
+	name = "strange pillar"
+	desc = "A strange alien pillar that extends at an angle."
+	icon = 'icons/obj/structures/props/engineers/pillarangled.dmi'
+	density = FALSE
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest
+	name = "strange pillar"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest/northwest1
+	icon_state = "engineerpillar_NW1"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest/northwest2
+	icon_state = "engineerpillar_NW2"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/southwest
+	name = "strange pillar"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/southwest/southwest1
+	icon_state = "engineerpillar_SW1"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/southwest/southwest2
+	icon_state = "engineerpillar_SW2"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade
+	name = "strange pillar"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/southwest1
+	icon_state = "engineerpillar_SW1fade"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/southwest2
+	icon_state = "engineerpillar_SW2fade"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/northwest1
+	icon_state = "engineerpillar_NW1fade"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/northwest2
+	icon_state = "engineerpillar_NW2fade"
