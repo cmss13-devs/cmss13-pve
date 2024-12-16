@@ -1296,3 +1296,162 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	money.update_icon()
 	new_human.equip_to_slot_or_del(money, WEAR_IN_BACK)
 
+
+///////////////mercs
+
+/datum/equipment_preset/mercenary
+	name = "Generic Mercenary"
+	faction = FACTION_CONTRACTOR
+	rank = "Mercenary"
+	idtype = /obj/item/card/id/cracked
+	faction = FACTION_CONTRACTOR
+	faction_group = list(FACTION_CONTRACTOR)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_RUSSIAN)
+	skills = /datum/skills/commando
+	paygrades = list("")
+
+/datum/equipment_preset/mercenary/load_name(mob/living/carbon/human/new_human)
+	new_human.gender = pick(60;MALE,40;FEMALE)
+	var/datum/preferences/A = new()
+	A.randomize_appearance(new_human)
+	var/random_name
+	random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+	new_human.change_real_name(new_human, random_name)
+	new_human.name = new_human.real_name
+	new_human.age = rand(22,45)
+
+	var/static/list/colors = list("BLACK" = list(15, 15, 25), "BROWN" = list(102, 51, 0), "AUBURN" = list(139, 62, 19))
+	var/static/list/hair_colors = colors.Copy() + list("BLONDE" = list(197, 164, 30), "CARROT" = list(174, 69, 42))
+	var/hair_color = pick(hair_colors)
+	new_human.r_hair = hair_colors[hair_color][1]
+	new_human.g_hair = hair_colors[hair_color][2]
+	new_human.b_hair = hair_colors[hair_color][3]
+	new_human.r_facial = hair_colors[hair_color][1]
+	new_human.g_facial = hair_colors[hair_color][2]
+	new_human.b_facial = hair_colors[hair_color][3]
+	var/eye_color = pick(colors)
+	new_human.r_eyes = colors[eye_color][1]
+	new_human.g_eyes = colors[eye_color][2]
+	new_human.b_eyes = colors[eye_color][3]
+	if(new_human.gender == MALE)
+		new_human.h_style = pick("Crewcut", "Shaved Head", "Buzzcut", "Undercut", "Side Undercut", "Pvt. Joker", "Marine Fade", "Low Fade", "Medium Fade", "High Fade", "No Fade", "Coffee House Cut", "Flat Top",)
+		new_human.f_style = pick("5 O'clock Shadow", "Shaved", "Full Beard", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+	else
+		new_human.h_style = pick("Ponytail 1", "Ponytail 2", "Ponytail 3", "Ponytail 4", "Pvt. Redding", "Pvt. Clarison", "Cpl. Dietrich", "Pvt. Vasquez", "Marine Bun", "Marine Bun 2", "Marine Flat Top",)
+
+
+/datum/equipment_preset/mercenary/proc/load_gun(mob/living/carbon/human/new_human)
+	return
+
+/datum/equipment_preset/mercenary/load_gear(mob/living/carbon/human/new_human)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/boiler, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ballistic, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black, WEAR_FACE)
+	var/eyewear = pick(/obj/item/clothing/glasses/sunglasses, /obj/item/clothing/glasses/sunglasses/big, /obj/item/clothing/glasses/sunglasses)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new eyewear, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
+	var/headwear = pick(/obj/item/clothing/head/cmcap/corrections, /obj/item/clothing/head/beret/cm/black/civilian, /obj/item/clothing/head/cmcap/khaki)
+	if(prob(75))
+		new_human.equip_to_slot_or_del(new headwear, WEAR_HEAD)
+	else if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_HEAD)
+
+/datum/equipment_preset/mercenary/rifle
+	name = "Generic Mercenary (Rifle)"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/mercenary/rifle/load_gear(mob/living/carbon/human/new_human)
+	..()
+	load_gun(new_human)
+
+/datum/equipment_preset/mercenary/rifle/load_gun(mob/living/carbon/human/new_human)
+	var/choice = rand(1,10)
+	switch(choice)
+		if(1 to 8) // 30%
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/carbine, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/mar40, WEAR_WAIST)
+		if(9 to 10) // 20%
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine, WEAR_WAIST)
+			for(var/i in 1 to 5)
+				new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_BELT)
+
+/datum/equipment_preset/mercenary/sniper
+	name = "Generic Mercenary (Sniper)"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/mercenary/sniper/load_gear(mob/living/carbon/human/new_human)
+	..()
+	load_gun(new_human)
+
+/datum/equipment_preset/mercenary/sniper/load_gun(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l42a/abr40, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine, WEAR_WAIST)
+	for(var/i in 1 to 5)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l42a/abr40, WEAR_IN_BELT)
+
+/datum/equipment_preset/mercenary/shotgunner
+	name = "Generic Mercenary (Shotgunner)"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/mercenary/shotgunner/load_gear(mob/living/carbon/human/new_human)
+	..()
+	load_gun(new_human)
+
+/datum/equipment_preset/mercenary/shotgunner/load_gun(mob/living/carbon/human/new_human)
+	var/shotgun = pick(/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb, /obj/item/weapon/gun/shotgun/double, /obj/item/weapon/gun/shotgun/pump)
+	new_human.equip_to_slot_or_del(new shotgun, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine, WEAR_WAIST)
+	var/ammo_count = rand(1, 5)
+	for(var/i in 1 to ammo_count)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_BELT)
+
+/datum/equipment_preset/mercenary/rocketeer
+	name = "Generic Mercenary (Rocketeer)"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/mercenary/rocketeer/load_gear(mob/living/carbon/human/new_human)
+	..()
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs, WEAR_L_EAR)
+	load_gun(new_human)
+
+/datum/equipment_preset/mercenary/rocketeer/load_gun(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/upp, WEAR_J_STORE)
+	for(var/i in 1 to 3)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/upp, WEAR_IN_BACK)
+	var/pistol = pick(/obj/item/storage/belt/gun/m44/full, /obj/item/storage/belt/gun/m4a3/full, /obj/item/storage/belt/gun/m4a3/highpower, /obj/item/storage/belt/gun/m4a3/m1911)
+	new_human.equip_to_slot_or_del(new pistol, WEAR_WAIST)
+
+/datum/equipment_preset/mercenary/leader
+	name = "Generic Mercenary (Leader)"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/mercenary/leader/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/red, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/cigarette/cigar/cohiba, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/lighter/zippo/gold, WEAR_R_STORE)
+	..()
+	load_gun(new_human)
+
+/datum/equipment_preset/mercenary/leader/load_gun(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/mateba/general, WEAR_WAIST)
+	for(var/i in 1 to 3)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba/highimpact, WEAR_IN_BACK)
+
+/obj/item/card/id/cracked
+	name = "cracked holo-badge"
+	desc = "A slice of encoded compressed fiber glass. Used for identification and access control. This one seems to be cracked and has no identification data, despite having some access."
+
+/obj/item/card/id/cracked/set_assignment(new_assignment)
+	assignment = "$#@!&@"
