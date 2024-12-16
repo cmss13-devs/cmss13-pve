@@ -994,6 +994,20 @@
 	for(var/i in 1 to 3)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba/highimpact, WEAR_IN_BACK)
 
+/datum/equipment_preset/mercenary/grenadier
+	name = "Generic Mercenary (Grenadier)"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/mercenary/grenadier/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs, WEAR_L_EAR)
+	..()
+	load_gun(new_human)
+
+/datum/equipment_preset/mercenary/grenadier/load_gun(mob/living/carbon/human/new_human)
+	var/grenades = rand(3, 7)
+	for(var/i in 1 to grenades)
+		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
+
 /obj/item/card/id/cracked
 	name = "cracked holo-badge"
 	desc = "A slice of encoded compressed fiber glass. Used for identification and access control. This one seems to be cracked and has no identification data, despite having some access."
