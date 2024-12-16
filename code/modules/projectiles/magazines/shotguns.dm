@@ -257,6 +257,13 @@ GLOBAL_LIST_INIT(shotgun_handfuls_12g, list(
 	/obj/item/ammo_magazine/handful/shotgun/beanbag
 	))
 
+GLOBAL_LIST_INIT(shotgun_handfuls_12g_reasonable, list(
+	/obj/item/ammo_magazine/handful/shotgun/slug,
+	/obj/item/ammo_magazine/handful/shotgun/buckshot,
+	/obj/item/ammo_magazine/handful/shotgun/flechette,
+	/obj/item/ammo_magazine/handful/shotgun/beanbag
+	))
+
 /obj/item/ammo_magazine/handful/shotgun
 	name = "handful of shotgun slugs (12g)"
 	icon_state = "slug_shell_5"

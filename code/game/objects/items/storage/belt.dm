@@ -847,6 +847,11 @@
 		var/random_shell_type = pick(GLOB.shotgun_handfuls_12g)
 		new random_shell_type(src)
 
+/obj/item/storage/belt/shotgun/full/random/reasonable/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		var/random_shell_type = pick(GLOB.shotgun_handfuls_12g_reasonable)
+		new random_shell_type(src)
+
 /obj/item/storage/belt/shotgun/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/ammo_magazine/shotgun))
 		var/obj/item/ammo_magazine/shotgun/M = W
