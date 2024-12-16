@@ -34,6 +34,8 @@
 	name = "inside"
 	icon_state = "purple"
 	ceiling = CEILING_REINFORCED_METAL
+	ambience_exterior = AMBIENCE_ALMAYER
+	//ambience = list('sound/ambience/shipambience.ogg)
 
 /area/Oread_Garrison/inside/command
 	icon_state = "blueold"
