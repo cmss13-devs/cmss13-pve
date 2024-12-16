@@ -1004,9 +1004,22 @@
 	load_gun(new_human)
 
 /datum/equipment_preset/mercenary/grenadier/load_gun(mob/living/carbon/human/new_human)
-	var/grenades = rand(3, 7)
+	var/grenades = rand(3, 6)
 	for(var/i in 1 to grenades)
 		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
+
+/datum/equipment_preset/mercenary/firestarter
+	name = "Generic Mercenary (Firestarter)"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/mercenary/firestarter/load_gear(mob/living/carbon/human/new_human)
+	..()
+	load_gun(new_human)
+
+/datum/equipment_preset/mercenary/firestarter/load_gun(mob/living/carbon/human/new_human)
+	var/grenades = rand(3, 6)
+	for(var/i in 1 to grenades)
+		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/molotov, WEAR_IN_BACK)
 
 /obj/item/card/id/cracked
 	name = "cracked holo-badge"
