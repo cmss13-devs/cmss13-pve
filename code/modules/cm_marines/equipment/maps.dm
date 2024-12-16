@@ -148,7 +148,7 @@
 /obj/item/map/oread_map
 	name = "\improper Oread Garrison map"
 	desc = "A distorted orbital scan of the Oread Garrison"
-	html_link = "https://imgur.com/VEUXNov"
+	html_link = ""
 	color = "cyan"
 
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
