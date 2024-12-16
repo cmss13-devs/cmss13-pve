@@ -31,7 +31,7 @@
 	minimap_color = MINIMAP_AREA_LZ
 
 /area/Oread_Garrison/inside
-	name = "inside"
+	name = "Garrison Interior"
 	icon_state = "purple"
 	ceiling = CEILING_REINFORCED_METAL
 	ambience_exterior = AMBIENCE_ALMAYER
@@ -39,38 +39,62 @@
 
 /area/Oread_Garrison/inside/command
 	icon_state = "blueold"
+	name = "Command"
 	minimap_color = MINIMAP_AREA_COMMAND
 
 /area/Oread_Garrison/inside/medical
 	icon_state = "medbay"
+	name = "Medbay"
 	minimap_color = MINIMAP_AREA_MEDBAY
 
 /area/Oread_Garrison/inside/engineering
 	icon_state = "yellow"
+	name = "Maintenance Room"
 	minimap_color = MINIMAP_AREA_ENGI
 
 /area/Oread_Garrison/inside/dorms
 	icon_state = "Sleep"
+	name = "Barracks"
 	minimap_color = MINIMAP_AREA_SEC
 
-/area/Oread_Garrison/inside/bunker
+/area/Oread_Garrison/inside/bunker1
 	icon_state = "security"
+	name = "Eastern Guardhouse"
+	minimap_color = MINIMAP_AREA_SEC
+
+/area/Oread_Garrison/inside/bunker2
+	icon_state = "security"
+	name = "Western Guardhouse"
+	minimap_color = MINIMAP_AREA_SEC
+
+/area/Oread_Garrison/inside/bunker3
+	icon_state = "security"
+	name = "Southern Guardhouse"
+	minimap_color = MINIMAP_AREA_SEC
+
+/area/Oread_Garrison/inside/entry
+	icon_state = "security"
+	name = "Main Entry"
 	minimap_color = MINIMAP_AREA_SEC
 
 /area/Oread_Garrison/inside/messhall
 	icon_state = "cafeteria"
+	name = "Messhall"
 	minimap_color = MINIMAP_AREA_COLONY
 
 /area/Oread_Garrison/inside/garage
 	icon_state = "yellow"
+	name = "Garage"
 	minimap_color = MINIMAP_AREA_ENGI
 
 /area/Oread_Garrison/inside/flag
 	icon_state = "head_quarters"
+	name = "The Flag"
 	minimap_color = MINIMAP_AREA_COMMAND
 
 /area/Oread_Garrison/inside/requisitions
 	icon_state = "quart"
+	name = "Requisitions"
 	minimap_color = MINIMAP_AREA_SEC
 
 

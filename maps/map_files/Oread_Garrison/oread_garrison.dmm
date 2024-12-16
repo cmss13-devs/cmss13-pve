@@ -270,9 +270,7 @@
 "bo" = (
 /obj/structure/sign/safety/terminal,
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "bp" = (
 /obj/structure/flora/jungle/vines/light_1,
 /obj/item/lightstick/red/spoke/planted{
@@ -375,9 +373,7 @@
 	pixel_x = -10
 	},
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "bH" = (
 /obj/structure/surface/table/almayer,
 /obj/item/clothing/head/beret/cm/black,
@@ -474,9 +470,7 @@
 	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "ca" = (
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
@@ -605,9 +599,7 @@
 	icon_state = "cargo"
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "cz" = (
 /turf/closed/wall/rock/brown,
 /area/Oread_Garrison/outside/jungle)
@@ -651,15 +643,11 @@
 "cG" = (
 /obj/structure/barricade/metal/plasteel,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "cJ" = (
 /obj/structure/sign/safety/terminal,
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "cK" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -670,9 +658,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "cP" = (
 /obj/structure/surface/table/almayer,
 /obj/item/book/manual/marine_law,
@@ -761,9 +747,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "dj" = (
 /obj/structure/sign/safety/hvac_old{
 	pixel_x = 7
@@ -917,9 +901,7 @@
 "dO" = (
 /obj/structure/gun_rack/m41,
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "dP" = (
 /obj/structure/sign/safety/opens_up{
 	pixel_x = 7
@@ -956,9 +938,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "eb" = (
 /obj/structure/largecrate/random/mini/small_case{
 	pixel_y = 8;
@@ -995,9 +975,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "ek" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
@@ -1110,9 +1088,7 @@
 /area/Oread_Garrison/outside/jungle/clearing)
 "eC" = (
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "eD" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -1297,9 +1273,7 @@
 	network = list("interrogation")
 	},
 /turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "fC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -1579,9 +1553,7 @@
 "gq" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "gs" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	req_one_access = null;
@@ -1613,9 +1585,7 @@
 /obj/structure/surface/table/almayer,
 /obj/item/device/cassette_tape/hiphop,
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "gy" = (
 /obj/structure/curtain,
 /turf/open/floor/almayer/sterile_green,
@@ -1667,9 +1637,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "gI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -1719,9 +1687,7 @@
 "gN" = (
 /obj/structure/machinery/light,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "gO" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/almayer,
@@ -1784,9 +1750,7 @@
 /obj/structure/surface/table/almayer,
 /obj/item/device/cassette_tape/heavymetal,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "gX" = (
 /obj/structure/barricade/metal{
 	dir = 1
@@ -1932,9 +1896,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "hK" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/coast/north,
@@ -1988,15 +1950,11 @@
 "hU" = (
 /obj/structure/sign/safety/terminal,
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "hY" = (
 /obj/structure/barricade/metal/plasteel,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "hZ" = (
 /obj/structure/flora/jungle/vines/light_3,
 /turf/closed/wall/strata_ice/jungle,
@@ -2007,15 +1965,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "ib" = (
 /obj/structure/machinery/vending/snack,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "ic" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/bush/ausbushes/palebush,
@@ -2081,9 +2035,7 @@
 "is" = (
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "it" = (
 /obj/structure/closet,
 /turf/open/floor/almayer,
@@ -2144,9 +2096,7 @@
 	})
 "iG" = (
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Main Entry"
-	})
+/area/Oread_Garrison/inside/entry)
 "iH" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
@@ -2175,9 +2125,7 @@
 	pixel_x = -6
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "iM" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full{
 	pixel_y = 8;
@@ -2564,9 +2512,7 @@
 	pixel_y = 13
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "ky" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/jungle/vines/light_2,
@@ -2737,9 +2683,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "lj" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	dir = 1;
@@ -2795,9 +2739,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "lv" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -2863,9 +2805,7 @@
 	},
 /obj/structure/largecrate/random/mini/ammo,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "lK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -2978,9 +2918,7 @@
 	})
 "mb" = (
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "mc" = (
 /obj/structure/sign/safety/terminal{
 	pixel_x = 7
@@ -3014,9 +2952,7 @@
 	pixel_x = 5
 	},
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "mi" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/jungle/vines/light_3,
@@ -3068,9 +3004,7 @@
 /obj/structure/surface/table/almayer,
 /obj/item/toy/dice/d20,
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "mt" = (
 /obj/structure/surface/table/almayer,
 /obj/item/folder/blue{
@@ -3101,17 +3035,13 @@
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue/clicky,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "my" = (
 /obj/structure/barricade/metal/plasteel{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "mB" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -3176,9 +3106,7 @@
 	pixel_x = 7
 	},
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "mQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -3334,9 +3262,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Main Entry"
-	})
+/area/Oread_Garrison/inside/entry)
 "nB" = (
 /obj/structure/platform{
 	layer = 3.6
@@ -3518,9 +3444,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "oo" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8
@@ -3582,9 +3506,7 @@
 	pixel_x = 7
 	},
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "oz" = (
 /obj/structure/platform,
 /obj/structure/platform{
@@ -3913,9 +3835,7 @@
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "qf" = (
 /obj/structure/surface/rack,
 /obj/item/storage/bag/trash{
@@ -4152,9 +4072,7 @@
 	pixel_x = 7
 	},
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "qU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -4450,9 +4368,7 @@
 	icon_state = "platform_stair_alt"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "so" = (
 /obj/structure/sign/safety/stairs{
 	pixel_x = 7
@@ -4563,9 +4479,7 @@
 "sH" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "sI" = (
 /turf/open/floor/kutjevo/colors/red,
 /area/Oread_Garrison/inside{
@@ -4715,9 +4629,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "tp" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -4756,9 +4668,7 @@
 	name = "Main Shutters"
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Main Entry"
-	})
+/area/Oread_Garrison/inside/entry)
 "tx" = (
 /obj/structure/platform/kutjevo{
 	dir = 8
@@ -4817,9 +4727,7 @@
 	pixel_x = 7
 	},
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "tI" = (
 /turf/open/floor/prison/floor_plate,
 /area/Oread_Garrison/inside/medical{
@@ -4959,9 +4867,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "uj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -5039,9 +4945,7 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "uA" = (
 /obj/structure/ship_ammo/heavygun{
 	pixel_y = 6;
@@ -5098,9 +5002,7 @@
 	name = "Security Airlock"
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "uK" = (
 /obj/structure/flora/jungle/vines/light_2,
 /turf/closed/wall/strata_ice/jungle,
@@ -5203,9 +5105,7 @@
 "vj" = (
 /obj/structure/machinery/vending/snack,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "vk" = (
 /obj/effect/decal/cleanable/blood,
 /obj/item/dogtag{
@@ -5228,17 +5128,13 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/light,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "vn" = (
 /obj/structure/machinery/light{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "vo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment,
@@ -5276,15 +5172,11 @@
 "vv" = (
 /obj/structure/machinery/light,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "vx" = (
 /obj/structure/machinery/power/apc/power/west,
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "vC" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/jungle/vines/light_2,
@@ -5569,9 +5461,7 @@
 	layer = 3.5
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "wL" = (
 /obj/structure/closet/crate/ammo{
 	pixel_x = -5
@@ -5798,9 +5688,7 @@
 	pixel_y = 13
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "xM" = (
 /obj/structure/barricade/metal/plasteel{
 	dir = 1
@@ -5916,9 +5804,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "yi" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8
@@ -5953,9 +5839,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "yn" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/jungle/vines/light_2,
@@ -5983,9 +5867,7 @@
 "ys" = (
 /obj/structure/pipes/vents,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Main Entry"
-	})
+/area/Oread_Garrison/inside/entry)
 "yt" = (
 /obj/structure/sign/safety/rewire{
 	pixel_x = 7;
@@ -6076,9 +5958,7 @@
 	})
 "yL" = (
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "yM" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -6321,9 +6201,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "zz" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
@@ -6369,9 +6247,7 @@
 	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "zE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -6874,9 +6750,7 @@
 	name = "Main Shutters"
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Main Entry"
-	})
+/area/Oread_Garrison/inside/entry)
 "BL" = (
 /obj/structure/platform/kutjevo{
 	dir = 1
@@ -6984,9 +6858,7 @@
 "Cg" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "Ch" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_x = 14;
@@ -7090,9 +6962,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "CC" = (
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/command{
@@ -7303,9 +7173,7 @@
 	},
 /obj/structure/machinery/power/apc/power/west,
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "Dh" = (
 /turf/open/floor/almayer/uscm/directional/up_down/southeast,
 /area/Oread_Garrison/inside/flag{
@@ -7329,9 +7197,7 @@
 	pixel_x = 7
 	},
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "Dl" = (
 /obj/structure/barricade/handrail/strata{
 	pixel_y = 9
@@ -7629,9 +7495,7 @@
 /area/Oread_Garrison/outside/jungle)
 "Et" = (
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Main Entry"
-	})
+/area/Oread_Garrison/inside/entry)
 "Eu" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/jungle/plantbot1,
@@ -7782,9 +7646,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Fa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -7797,9 +7659,7 @@
 "Fb" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Fc" = (
 /obj/structure/barricade/handrail/strata,
 /obj/effect/decal/warning_stripes{
@@ -7827,9 +7687,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "Fj" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass{
 	req_access = null;
@@ -7996,9 +7854,7 @@
 	pixel_x = 7
 	},
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "FQ" = (
 /obj/structure/platform_decoration/kutjevo,
 /obj/item/stack/sandbags_empty/full,
@@ -8171,9 +8027,7 @@
 	pixel_y = 9
 	},
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "GL" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -8231,9 +8085,7 @@
 	})
 "GY" = (
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "GZ" = (
 /obj/structure/platform{
 	density = 0;
@@ -8287,9 +8139,7 @@
 "Hg" = (
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Hh" = (
 /obj/structure/catwalk/prison,
 /obj/structure/catwalk/prison,
@@ -8368,23 +8218,17 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Hr" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Hs" = (
 /obj/structure/machinery/light{
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Hv" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -8468,9 +8312,7 @@
 	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "HJ" = (
 /obj/structure/surface/rack,
 /obj/structure/largecrate/random/case/small{
@@ -8508,9 +8350,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "HT" = (
 /obj/structure/machinery/medical_pod/autodoc{
 	dir = 1
@@ -8735,9 +8575,7 @@
 	})
 "IM" = (
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "IN" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/airless/asteroidfloor,
@@ -8807,9 +8645,7 @@
 	icon_state = "cargo"
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "IV" = (
 /obj/structure/machinery/camera/autoname,
 /turf/open/floor/prison/floor_plate,
@@ -8932,9 +8768,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "Jw" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -8971,9 +8805,7 @@
 	dir = 4
 	},
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "JE" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/grass/tallgrass/jungle,
@@ -8991,9 +8823,7 @@
 	pixel_x = 7
 	},
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "JI" = (
 /obj/structure/machinery/light,
 /turf/open/floor/almayer,
@@ -9169,9 +8999,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "Kr" = (
 /obj/structure/flora/bush/ausbushes/palebush,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -9323,9 +9151,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "La" = (
 /obj/structure/platform{
 	dir = 4
@@ -9400,18 +9226,14 @@
 	pixel_y = -3
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Li" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	dir = 1;
 	name = "Security Airlock"
 	},
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "Lj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -9492,9 +9314,7 @@
 "Lu" = (
 /obj/structure/gun_rack/m41,
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Lw" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/yellow,
@@ -9640,9 +9460,7 @@
 "Mc" = (
 /obj/structure/bed/chair,
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "Md" = (
 /obj/structure/machinery/cm_vending/sorted/tech{
 	pixel_x = -6;
@@ -9706,16 +9524,12 @@
 	dir = 4
 	},
 /turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "Mt" = (
 /obj/structure/surface/table/almayer,
 /obj/item/device/radio,
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Mu" = (
 /obj/structure/platform/kutjevo{
 	dir = 8
@@ -9741,9 +9555,7 @@
 "MD" = (
 /mob/living/simple_animal/mouse,
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "ME" = (
 /obj/structure/platform{
 	density = 0;
@@ -9939,9 +9751,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Nw" = (
 /obj/structure/tent/big,
 /obj/effect/decal/cleanable/dirt,
@@ -9956,9 +9766,7 @@
 	},
 /obj/structure/barricade/metal/plasteel,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "NC" = (
 /obj/effect/decal/cleanable/blood{
 	icon_state = "xgib3"
@@ -10050,9 +9858,7 @@
 /obj/structure/surface/rack,
 /obj/item/storage/firstaid/regular/response,
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "Ob" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /obj/effect/decal/cleanable/blood{
@@ -10221,9 +10027,7 @@
 	},
 /obj/structure/largecrate/random/mini/ammo,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "OU" = (
 /obj/structure/surface/table/almayer,
 /obj/item/paper_bin/uscm{
@@ -10242,15 +10046,11 @@
 	dir = 1
 	},
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "OY" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "OZ" = (
 /obj/structure/platform{
 	layer = 3.6
@@ -10355,9 +10155,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Main Entry"
-	})
+/area/Oread_Garrison/inside/entry)
 "Pr" = (
 /obj/structure/platform/kutjevo{
 	dir = 1
@@ -10527,9 +10325,7 @@
 	pixel_x = 7
 	},
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "PU" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/bush/ausbushes/grassybush,
@@ -10587,9 +10383,7 @@
 /obj/structure/surface/table/almayer,
 /obj/item/device/radio,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "Qe" = (
 /obj/structure/flora/jungle/vines/light_2,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -10712,9 +10506,7 @@
 	},
 /obj/structure/machinery/light,
 /turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "QC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -10888,9 +10680,7 @@
 	pixel_x = 7
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "Rn" = (
 /obj/structure/platform/kutjevo{
 	dir = 8
@@ -10925,9 +10715,7 @@
 	})
 "Rt" = (
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "Rw" = (
 /obj/structure/catwalk/prison,
 /obj/structure/catwalk/prison,
@@ -11021,9 +10809,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/inside/bunker{
-	name = "LZ Guardhouse"
-	})
+/area/Oread_Garrison/inside/bunker3)
 "RN" = (
 /turf/open/floor/grass,
 /area/Oread_Garrison/inside/flag{
@@ -11258,9 +11044,7 @@
 /area/Oread_Garrison/outside/jungle/clearing)
 "Tc" = (
 /turf/closed/wall/r_wall/bunker,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "Td" = (
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/Oread_Garrison/inside/medical{
@@ -11284,9 +11068,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Tl" = (
 /obj/structure/platform{
 	density = 0;
@@ -11311,9 +11093,7 @@
 /obj/item/storage/backpack/marine/fluff,
 /obj/structure/machinery/camera/autoname,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "To" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/jungle/vines/light_2,
@@ -11325,9 +11105,7 @@
 "Tp" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Tr" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
@@ -11367,9 +11145,7 @@
 	icon_state = "cargo"
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Tz" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -11455,9 +11231,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "TW" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/airless/asteroidfloor,
@@ -11521,9 +11295,7 @@
 "Ug" = (
 /obj/structure/bed/chair,
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "Uh" = (
 /obj/structure/platform_decoration/kutjevo,
 /obj/structure/closet/crate/plastic{
@@ -11810,9 +11582,7 @@
 	name = "Security Airlock"
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Vs" = (
 /obj/structure/sign/safety/conference_room{
 	pixel_x = 7
@@ -11908,9 +11678,7 @@
 	icon_state = "cargo"
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Western Bunker"
-	})
+/area/Oread_Garrison/inside/bunker2)
 "VN" = (
 /obj/structure/largecrate/supply/explosives,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -12034,9 +11802,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Main Entry"
-	})
+/area/Oread_Garrison/inside/entry)
 "Ww" = (
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
@@ -12118,9 +11884,7 @@
 	})
 "WI" = (
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "WK" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/barricade/handrail/strata{
@@ -12369,9 +12133,7 @@
 "XM" = (
 /obj/structure/bed/chair,
 /turf/open/floor/plating/bare_catwalk,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "XN" = (
 /obj/structure/sign/safety/storage,
 /turf/closed/wall/r_wall/bunker,
@@ -12753,9 +12515,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside/bunker{
-	name = "Eastern Bunker"
-	})
+/area/Oread_Garrison/inside/bunker1)
 "Zu" = (
 /obj/structure/machinery/light,
 /turf/open/floor/prison/floor_plate,
