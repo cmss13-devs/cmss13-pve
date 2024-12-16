@@ -91,7 +91,7 @@ OverrideTimelock(/datum/job/command/bridge, list(
 // todo: above	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
 
 	gear_preset = /datum/equipment_preset/uscm_ship/so/pmc
-	job_options = list(FIRST_LT_VARIANT = "OVERWATCH", SECOND_LT_VARIANT = "OVERLORD")
+	job_options = null
 
 /obj/effect/landmark/start/bridge/pmc
 	name = JOB_PMCPLAT_OW
