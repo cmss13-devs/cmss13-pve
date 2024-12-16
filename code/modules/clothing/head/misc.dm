@@ -237,6 +237,7 @@
 /obj/item/clothing/head/cowboy
 
 	name = "\improper cowboy hat"
+	desc = "An iconic American cowboy hat."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "cowboy_dark"
 	item_icons = list(
