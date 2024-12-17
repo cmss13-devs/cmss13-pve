@@ -30,13 +30,10 @@
 /area/Oread_Garrison/inside/engineering)
 "am" = (
 /obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
 	dir = 8
 	},
-/obj/structure/platform{
-	dir = 4
+/obj/structure/machinery/colony_floodlight{
+	pixel_x = 8
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/inside)
@@ -115,10 +112,11 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "aP" = (
@@ -173,10 +171,11 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
 /obj/structure/surface/table/reinforced/prison,
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "bh" = (
@@ -301,13 +300,18 @@
 /area/Oread_Garrison/inside)
 "bE" = (
 /obj/structure/platform/kutjevo,
-/obj/structure/barricade/sandbags{
-	dir = 4
-	},
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	dir = 4
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "bF" = (
@@ -321,10 +325,6 @@
 "bG" = (
 /obj/structure/sign/safety/ammunition{
 	pixel_x = 9
-	},
-/obj/effect/landmark/interior/spawn/telephone{
-	dir = 1;
-	pixel_x = -10
 	},
 /turf/closed/wall/r_wall/bunker,
 /area/Oread_Garrison/inside/bunker3)
@@ -378,7 +378,8 @@
 	dir = 1
 	},
 /obj/structure/barricade/sandbags{
-	dir = 1
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -426,13 +427,6 @@
 /obj/item/device/flashlight/flare/signal,
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
-"ce" = (
-/obj/structure/platform{
-	dir = 4;
-	layer = 2.8
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/inside)
 "cf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -595,15 +589,6 @@
 	},
 /turf/open/floor/almayer/sterile_green_corner/north,
 /area/Oread_Garrison/inside/medical)
-"cU" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside)
 "cV" = (
 /obj/structure/closet/coffin/woodencrate{
 	pixel_y = 4
@@ -716,6 +701,10 @@
 /obj/structure/platform/kutjevo,
 /obj/structure/surface/table/reinforced/prison{
 	pixel_y = -2
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -851,7 +840,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle/clearing)
 "el" = (
-/obj/structure/closet/crate/ammo/alt{
+/obj/structure/closet/crate/ammo/alt/flame{
 	pixel_x = 1;
 	pixel_y = -2
 	},
@@ -911,13 +900,14 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags{
-	dir = 4
-	},
 /obj/structure/bed/chair{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	dir = 4
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "ex" = (
@@ -937,6 +927,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/prison{
 	pixel_y = -2
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -1257,16 +1251,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle/clearing)
-"gd" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 4;
-	layer = 2.8
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/inside)
 "ge" = (
 /obj/structure/sign/safety/hvac_old{
 	pixel_x = 7
@@ -1290,12 +1274,13 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
 /obj/structure/largecrate/random{
 	pixel_x = -4;
 	pixel_y = -10
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
@@ -1500,17 +1485,23 @@
 	pixel_y = 8
 	},
 /obj/structure/barricade/sandbags{
-	pixel_y = -4
-	},
-/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 1;
-	pixel_y = 6
+	pixel_y = 7
 	},
 /obj/structure/barricade/sandbags{
-	dir = 8
+	icon_state = "sandbag_0";
+	dir = 4;
+	pixel_y = 3
 	},
 /obj/structure/barricade/sandbags{
-	dir = 4
+	icon_state = "sandbag_0";
+	dir = 8;
+	pixel_y = 3
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -1629,7 +1620,8 @@
 	dir = 4
 	},
 /obj/structure/barricade/sandbags{
-	dir = 1
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
@@ -1651,22 +1643,6 @@
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/coast/north,
 /area/Oread_Garrison/outside/jungle/river)
-"hL" = (
-/obj/structure/platform/kutjevo{
-	dir = 1
-	},
-/obj/structure/platform/kutjevo{
-	dir = 8
-	},
-/obj/structure/barricade/sandbags{
-	dir = 8
-	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/gm/dirt2,
-/area/Oread_Garrison/outside/jungle/clearing)
 "hM" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
@@ -1683,6 +1659,7 @@
 /area/Oread_Garrison/inside/requisitions)
 "hP" = (
 /obj/structure/pipes/standard/simple/hidden/yellow,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/sterile_green_corner,
 /area/Oread_Garrison/inside/medical)
 "hQ" = (
@@ -1907,12 +1884,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/Oread_Garrison/inside)
-"jg" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/gm/dirt2,
-/area/Oread_Garrison/inside)
 "jh" = (
 /obj/structure/platform,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -2027,6 +1998,12 @@
 	},
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
+"jF" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 5
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/Oread_Garrison/inside/medical)
 "jG" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /obj/structure/machinery/light/small{
@@ -2034,10 +2011,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/Oread_Garrison/inside/engineering)
-"jH" = (
-/obj/structure/machinery/colony_floodlight,
-/turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside)
 "jK" = (
 /obj/structure/platform{
 	dir = 8;
@@ -2087,16 +2060,18 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
 /obj/item/prop/colony/canister{
-	pixel_x = 6;
-	pixel_y = -8
+	pixel_x = 12;
+	pixel_y = -12
 	},
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/structure/largecrate/random/mini/chest{
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -8
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -2184,15 +2159,6 @@
 "kz" = (
 /turf/open/floor/hydrofloor,
 /area/Oread_Garrison/inside/messhall)
-"kA" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside)
 "kE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -2481,15 +2447,6 @@
 	},
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/garage)
-"lX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/interior/spawn/telephone{
-	dir = 8;
-	pixel_x = 20;
-	pixel_y = 6
-	},
-/turf/open/floor/airless/asteroidfloor,
-/area/Oread_Garrison/inside/command)
 "lY" = (
 /obj/structure/sign/safety/hazard{
 	pixel_x = 7
@@ -2536,6 +2493,10 @@
 /obj/item/prop/magazine/boots/n117{
 	pixel_x = -4;
 	pixel_y = 10
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
@@ -2791,15 +2752,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/inside)
-"nw" = (
-/obj/structure/platform/kutjevo{
-	dir = 4
-	},
-/obj/structure/barricade/sandbags{
-	dir = 4
-	},
-/turf/open/gm/dirt2,
-/area/Oread_Garrison/outside/jungle/clearing)
 "ny" = (
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/requisitions)
@@ -2949,6 +2901,10 @@
 	pixel_x = 4;
 	pixel_y = 4
 	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "oj" = (
@@ -3007,6 +2963,7 @@
 	},
 /obj/structure/platform,
 /obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 4
 	},
 /turf/open/gm/dirt2,
@@ -3068,10 +3025,11 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
 /obj/structure/bed/chair,
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "oL" = (
@@ -3230,11 +3188,12 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
 /obj/structure/closet/crate/construction{
 	pixel_x = 4
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -3247,6 +3206,7 @@
 	dir = 8
 	},
 /obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 8
 	},
 /turf/open/gm/dirt2,
@@ -3531,10 +3491,12 @@
 	dir = 1
 	},
 /obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 8
 	},
 /obj/structure/barricade/sandbags{
-	dir = 1
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -3882,17 +3844,20 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
-/obj/structure/barricade/sandbags{
-	dir = 4
-	},
 /obj/structure/closet/crate/secure/ammo{
-	pixel_x = -6
+	pixel_x = -9;
+	pixel_y = -5
 	},
 /obj/structure/platform/kutjevo{
 	dir = 4
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	dir = 4
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -3944,8 +3909,10 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle/clearing)
 "tf" = (
-/obj/structure/machinery/cm_vending/sorted/medical,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/medical/no_access{
+	density = 0
+	},
 /turf/open/floor/almayer/sterile_green_side,
 /area/Oread_Garrison/inside/medical)
 "tg" = (
@@ -3996,13 +3963,13 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/Oread_Garrison/inside/medical)
 "tt" = (
-/obj/structure/largecrate/random/secure{
-	pixel_x = -3;
-	pixel_y = 3
-	},
 /obj/structure/platform/kutjevo,
 /obj/structure/platform{
 	dir = 4
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
@@ -4024,10 +3991,15 @@
 	dir = 8
 	},
 /obj/structure/platform/kutjevo,
+/obj/structure/surface/table/reinforced/prison,
 /obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "ty" = (
@@ -4047,12 +4019,13 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/m56d_hmg/mg_turret{
 	dir = 1
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -4291,6 +4264,7 @@
 /area/Oread_Garrison/inside/garage)
 "uF" = (
 /obj/structure/machinery/cryo_cell,
+/obj/structure/pipes/standard/cap,
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/Oread_Garrison/inside/medical)
 "uG" = (
@@ -4501,6 +4475,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating,
 /area/Oread_Garrison/inside/engineering)
+"vS" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 9
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/Oread_Garrison/inside/medical)
 "vT" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -4813,14 +4793,15 @@
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "xr" = (
-/obj/structure/barricade/sandbags{
-	dir = 8
-	},
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
 /obj/structure/largecrate/supply/medicine{
 	pixel_x = 5
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	dir = 8
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -5256,17 +5237,10 @@
 	pixel_y = 10
 	},
 /obj/structure/platform/kutjevo,
-/turf/open/gm/dirt2,
-/area/Oread_Garrison/outside/jungle/clearing)
-"zk" = (
-/obj/structure/platform/kutjevo{
-	dir = 8
-	},
 /obj/structure/barricade/sandbags{
-	dir = 8
+	icon_state = "sandbag_0";
+	pixel_y = -7
 	},
-/obj/structure/platform/kutjevo,
-/obj/structure/surface/table/reinforced/prison,
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "zl" = (
@@ -5339,17 +5313,6 @@
 /obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
-"zA" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/platform{
-	density = 0;
-	dir = 4;
-	icon_state = "platform_deco"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/inside)
 "zB" = (
 /obj/structure/surface/rack,
 /obj/structure/closet/crate/secure/gear{
@@ -5629,6 +5592,13 @@
 	id = "South LZ";
 	pixel_y = -7
 	},
+/obj/structure/phone_base{
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 6;
+	phone_id = "Oread CIC";
+	phone_category = "Oread Garrison"
+	},
 /turf/closed/wall/r_wall/bunker,
 /area/Oread_Garrison/inside)
 "AT" = (
@@ -5686,6 +5656,21 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/Oread_Garrison/inside/engineering)
+"Bs" = (
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	dir = 8
+	},
+/turf/open/gm/dirt2,
+/area/Oread_Garrison/outside/jungle/clearing)
 "Bt" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	desc = "Righty tighty, lefty loosey!";
@@ -5774,10 +5759,11 @@
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/garage)
 "BJ" = (
-/obj/structure/barricade/sandbags{
+/obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/obj/structure/platform/kutjevo{
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 4
 	},
 /turf/open/gm/dirt2,
@@ -5796,13 +5782,15 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 8
 	},
 /obj/structure/barricade/sandbags{
-	dir = 1
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "BM" = (
@@ -5838,16 +5826,6 @@
 	},
 /turf/open/floor/hydrofloor,
 /area/Oread_Garrison/inside/messhall)
-"BU" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/inside)
 "BV" = (
 /obj/structure/toilet{
 	dir = 8
@@ -6036,6 +6014,10 @@
 /area/Oread_Garrison/outside/jungle)
 "CI" = (
 /obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "CL" = (
@@ -6145,7 +6127,8 @@
 /area/Oread_Garrison/inside/requisitions)
 "Dg" = (
 /obj/structure/extinguisher_cabinet{
-	pixel_y = 30
+	pixel_y = 30;
+	pixel_x = -6
 	},
 /obj/structure/machinery/power/apc/power/west,
 /turf/open/floor/airless/asteroidfloor,
@@ -6276,12 +6259,13 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
 /obj/structure/largecrate/random{
 	pixel_y = -10;
 	pixel_x = 3
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -6483,7 +6467,10 @@
 /turf/open/space/basic,
 /area/Oread_Garrison/inside/engineering)
 "EG" = (
-/obj/structure/machinery/cm_vending/sorted/attachments,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	req_one_access_txt = "8;12;39;40";
+	req_access = list()
+	},
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/requisitions)
 "EH" = (
@@ -6516,10 +6503,11 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "EQ" = (
@@ -6592,15 +6580,15 @@
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
 "Fk" = (
-/obj/structure/largecrate/supply/ammo{
-	pixel_y = 12;
-	pixel_x = -1
-	},
-/obj/structure/largecrate/supply/ammo{
-	pixel_y = 1;
-	pixel_x = 2
-	},
 /obj/structure/machinery/camera/autoname,
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_x = -1;
+	pixel_y = 12
+	},
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_x = 2;
+	pixel_y = 1
+	},
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
 "Fl" = (
@@ -7146,6 +7134,10 @@
 	pixel_y = 4;
 	pixel_x = -1
 	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "HM" = (
@@ -7338,12 +7330,13 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
 /obj/item/stack/sandbags/large_stack{
 	pixel_y = -6;
 	pixel_x = 10
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -7747,11 +7740,12 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags{
-	dir = 8
-	},
 /obj/structure/largecrate/random/case/double{
 	pixel_x = 7
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	dir = 8
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -8180,7 +8174,12 @@
 	},
 /obj/structure/platform/kutjevo,
 /obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 8
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = -7
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -8244,12 +8243,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle/clearing)
-"MT" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/floor/almayer/plate,
-/area/Oread_Garrison/inside)
 "MU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -8338,14 +8331,15 @@
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
 "Nr" = (
-/obj/structure/barricade/sandbags{
-	dir = 8
-	},
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/m56d_hmg/mg_turret{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 8
 	},
 /turf/open/gm/dirt2,
@@ -8540,13 +8534,10 @@
 /area/Oread_Garrison/outside/jungle)
 "OE" = (
 /obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
 	dir = 4
 	},
-/obj/structure/platform{
-	dir = 8
+/obj/structure/machinery/colony_floodlight{
+	pixel_x = -8
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/inside)
@@ -8558,9 +8549,11 @@
 	dir = 8
 	},
 /obj/structure/barricade/sandbags{
-	dir = 1
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 8
 	},
 /turf/open/gm/dirt2,
@@ -8670,11 +8663,6 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/obj/structure/platform{
-	density = 0;
-	dir = 8;
-	icon_state = "platform_deco"
-	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/Oread_Garrison/inside)
 "Pl" = (
@@ -8723,13 +8711,15 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
+/obj/structure/surface/table/reinforced/prison,
 /obj/structure/barricade/sandbags{
-	dir = 1
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "Pu" = (
@@ -9150,7 +9140,11 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
 "Rj" = (
-/obj/structure/largecrate/random/case/double,
+/obj/structure/largecrate/supply/motiondetectors,
+/obj/structure/largecrate/supply/explosives/grenades/less{
+	icon_state = "case";
+	pixel_y = 10
+	},
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
 "Rk" = (
@@ -9177,6 +9171,7 @@
 	},
 /obj/structure/platform,
 /obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 8
 	},
 /turf/open/gm/dirt2,
@@ -9200,6 +9195,16 @@
 "Rt" = (
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker2)
+"Ru" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/structure/largecrate/random/secure{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/turf/open/gm/dirt2,
+/area/Oread_Garrison/inside)
 "Rw" = (
 /obj/structure/catwalk/prison,
 /obj/structure/catwalk/prison,
@@ -9292,6 +9297,14 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/inside)
+"RR" = (
+/obj/structure/phone_base{
+	pixel_x = 6;
+	phone_category = "Oread Garrison";
+	phone_id = "LZ Guardhouse"
+	},
+/turf/closed/wall/r_wall/bunker,
+/area/Oread_Garrison/inside/bunker3)
 "RT" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine/uscm/command/capt{
@@ -9826,19 +9839,21 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Oread_Garrison/outside/jungle/clearing)
 "UL" = (
-/obj/structure/barricade/sandbags{
-	dir = 8
-	},
 /obj/structure/platform/kutjevo{
-	dir = 1
-	},
-/obj/structure/barricade/sandbags{
 	dir = 1
 	},
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
 /obj/structure/surface/table/reinforced/prison,
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	dir = 8
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "UM" = (
@@ -10361,12 +10376,13 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	dir = 1
-	},
 /obj/structure/largecrate/supply/ammo/m56d{
 	pixel_y = -3;
 	pixel_x = 1
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	pixel_y = 9
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -10525,6 +10541,10 @@
 /obj/structure/machinery/light,
 /turf/open/floor/prison/floor_plate,
 /area/Oread_Garrison/inside)
+"Yq" = (
+/obj/structure/pipes/standard/manifold/visible,
+/turf/open/floor/almayer/dark_sterile,
+/area/Oread_Garrison/inside/medical)
 "Yr" = (
 /obj/structure/machinery/vending/snack/packaged,
 /obj/structure/machinery/light{
@@ -10546,6 +10566,14 @@
 "Yt" = (
 /obj/structure/gun_rack/mk221{
 	pixel_x = -7
+	},
+/obj/item/ammo_magazine/shotgun/buckshot{
+	pixel_x = 10;
+	pixel_y = 7
+	},
+/obj/item/ammo_magazine/shotgun/buckshot{
+	pixel_x = 10;
+	pixel_y = -7
 	},
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
@@ -10629,14 +10657,15 @@
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/requisitions)
 "YQ" = (
-/obj/structure/barricade/sandbags{
-	dir = 8
-	},
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/m56d_hmg/mg_turret{
 	dir = 8
 	},
 /obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
 	dir = 8
 	},
 /turf/open/gm/dirt2,
@@ -10760,12 +10789,13 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags{
-	dir = 8
-	},
 /obj/structure/largecrate/random/case/double{
 	pixel_x = 7;
 	pixel_y = -2
+	},
+/obj/structure/barricade/sandbags{
+	icon_state = "sandbag_0";
+	dir = 8
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -23576,9 +23606,9 @@ oT
 yp
 oT
 oH
-hL
+UL
 YQ
-zk
+tx
 oH
 bW
 Sl
@@ -23749,7 +23779,7 @@ YL
 wQ
 ep
 pO
-Mu
+Bs
 oT
 oT
 oH
@@ -24065,10 +24095,10 @@ Vm
 Vm
 Vm
 Sf
-nw
-nw
-nw
-nw
+BJ
+BJ
+BJ
+BJ
 DH
 Vm
 Vm
@@ -24386,8 +24416,8 @@ Vj
 Vj
 gi
 Io
-jg
 YN
+Ru
 tt
 Vj
 Vj
@@ -26026,7 +26056,7 @@ LS
 wR
 Bu
 uF
-kq
+jF
 oM
 kq
 Xi
@@ -26188,7 +26218,7 @@ LS
 qx
 CW
 ie
-kq
+Yq
 kq
 kq
 no
@@ -26350,7 +26380,7 @@ zX
 wR
 Bu
 uF
-kq
+Yq
 kq
 kq
 tf
@@ -26512,7 +26542,7 @@ LS
 wR
 cE
 nM
-kq
+vS
 cu
 es
 ii
@@ -27817,9 +27847,9 @@ Zh
 bj
 cV
 au
-gd
-ce
-Wf
+yT
+YI
+YI
 oH
 Qt
 mY
@@ -27979,9 +28009,9 @@ NW
 Lp
 iA
 au
-MT
-jH
 yT
+YI
+YI
 jv
 Nm
 ON
@@ -28141,9 +28171,9 @@ PV
 PV
 PV
 wm
-cU
+iw
 OE
-zA
+Vj
 Xs
 ON
 ON
@@ -29113,7 +29143,7 @@ DU
 PV
 pV
 Uf
-kA
+RO
 am
 Pk
 pk
@@ -29275,9 +29305,9 @@ qp
 Tv
 oD
 au
-MT
-jH
 yT
+YI
+YI
 oH
 oH
 oH
@@ -29437,9 +29467,9 @@ vD
 Zh
 Qh
 au
-BU
-pr
-LH
+yT
+YI
+YI
 oH
 oT
 oH
@@ -32496,7 +32526,7 @@ GA
 Eo
 rd
 Yr
-lX
+IN
 fk
 GA
 cc
@@ -35167,7 +35197,7 @@ tP
 jX
 oH
 IM
-IM
+RR
 Dg
 GY
 sH
