@@ -423,3 +423,8 @@
 	name = "\improper UL2 coldweather service jacket"
 	desc = "A standard issue coldweather UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_officer"
+
+/obj/item/clothing/suit/storage/jacket/marine/upp/naval
+	name = "\improper UPP naval infantry jacket"
+	desc = "A standard issue naval infantry service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_naval"
