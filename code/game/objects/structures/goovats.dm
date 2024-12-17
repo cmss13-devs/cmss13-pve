@@ -11,6 +11,7 @@
 		/obj/item/reagent_container/pill,\
 		/obj/item/scalp,\
 		/obj/item/seeds,\
+		/mob/living/carbon,\
 	)
 
 /obj/structure/goo_vat
@@ -49,18 +50,12 @@
 	gooable_list = ORGANIC_ITEMS
 
 /obj/structure/goo_vat/attack_hand(mob/living/user)
-
 	if(locked)
 		to_chat(user, SPAN_WARNING("The lid is locked. You will need to unbolt it with a wrench!"))
 		return
 	if(!covered)
-		to_chat(user, SPAN_WARNING("There is no lid to remove."))
 		return
 	else if(covered)
-		visible_message(SPAN_DANGER("[user] begins to remove the lid from the [src]."), SPAN_NOTICE("You begin to remove the lid from the [src]."))
-		if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
-			to_chat(user, SPAN_WARNING("You were interrupted!"))
-			return
 		visible_message(SPAN_DANGER("[user] removes the lid from the [src]."), SPAN_NOTICE("You remove the lid from the [src]."))
 		var/obj/stored_obj = contents[contents.len]
 		playsound(loc, 'sound/effects/flag_raised.ogg', 25, 1)
@@ -71,11 +66,34 @@
 
 /obj/structure/goo_vat/attackby(obj/item/object as obj, mob/user as mob)
 
+	if(istype(object, /obj/item/grab))
+		var/obj/item/grab/grabbed = object
+		var/mob/living/living_mob = grabbed.grabbed_thing
+		if(!istype(grabbed.grabbed_thing, /mob/living))
+			return
+		if(fullness > (volume - 5))
+			to_chat(user, SPAN_WARNING("The [src] is too full to put [grabbed.grabbed_thing] in!"))
+			return
+		if(living_mob.stat == CONSCIOUS || living_mob.stat == UNCONSCIOUS)
+			to_chat(user, SPAN_WARNING("You wouldn't put [grabbed.grabbed_thing] into the [src] while they're alive...would you?"))
+			return FALSE
+		visible_message(SPAN_DANGER("[user] begins to shove [grabbed.grabbed_thing] into the [slurry_descriptor] slurry."), SPAN_NOTICE("You begin to shove [grabbed.grabbed_thing] into the [slurry_descriptor] slurry."))
+		if(!do_after(user, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+			to_chat(user, SPAN_WARNING("You were interrupted!"))
+			return
+		qdel(grabbed.grabbed_thing)
+		playsound(loc, "acid_sizzle", 25, 2)
+		fullness = fullness += 5
+		update_icon()
+		return
 
 	if(HAS_TRAIT(object, TRAIT_TOOL_WRENCH))
 		if(!locked)
+			if(!covered)
+				to_chat(user, SPAN_WARNING("You can't lock the lid if there is no lid!"))
+				return
 			visible_message(SPAN_DANGER("[user] begins to wrench in the locking bolts on the [src]."), SPAN_NOTICE("You begin to wrench in the locking bolts on the [src]."))
-			if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+			if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 				to_chat(user, SPAN_WARNING("You were interrupted!"))
 				return
 			playsound(loc, 'sound/items/fulton.ogg', 25, 1)
@@ -83,8 +101,11 @@
 			update_icon()
 			return
 		else
+			if(!covered)
+				to_chat(user, SPAN_WARNING("You can't unlock the lid if there is no lid!"))
+				return
 			visible_message(SPAN_DANGER("[user] begins to wrench out the locking bolts on the [src]."), SPAN_NOTICE("You begin to wrench out the locking bolts on the [src]."))
-			if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+			if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 				to_chat(user, SPAN_WARNING("You were interrupted!"))
 				return
 			playsound(loc, 'sound/items/fulton.ogg', 25, 1)
@@ -97,10 +118,6 @@
 		if(covered)
 			to_chat(user, SPAN_WARNING("The barrel already has a lid!"))
 		if(!covered)
-			visible_message(SPAN_DANGER("[user] begins to put \the [object] on the [src]."), SPAN_NOTICE("You begin to put \the [object] on the [src]."))
-			if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
-				to_chat(user, SPAN_WARNING("You were interrupted!"))
-				return
 			visible_message(SPAN_DANGER("[user] puts \the [object] on the [src]."), SPAN_NOTICE("You put \the [object] on the [src]."))
 			playsound(loc, 'sound/effects/flag_raised.ogg', 25, 1)
 			covered = TRUE
@@ -110,7 +127,6 @@
 			return
 
 	if(is_type_in_list(object, gooable_list))
-		. = ..()
 		if(locked)
 			to_chat(user, SPAN_WARNING("The [src] is locked! Use a wrench to release the locking bolts."))
 			return
@@ -121,7 +137,7 @@
 			to_chat(user, SPAN_WARNING("The [src] is full!"))
 			return
 		visible_message(SPAN_DANGER("[user] begins to drop \the [object] into the [slurry_descriptor] slurry."), SPAN_NOTICE("You begin to drop \the [object] into the [slurry_descriptor] slurry."))
-		if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+		if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 			to_chat(user, SPAN_WARNING("You were interrupted!"))
 			return
 		visible_message(SPAN_DANGER("[user] drops \the [object] into the [slurry_descriptor] slurry."), SPAN_NOTICE("You drop \the [object] into the [slurry_descriptor] slurry."))
@@ -130,7 +146,8 @@
 		fullness++
 		update_icon()
 	else
-		to_chat(user, SPAN_WARNING("[object] won't be melted by the [slurry_descriptor] slurry!"))
+		to_chat(user, SPAN_WARNING("[object] can't be melted by the [slurry_descriptor] slurry!"))
+		return
 
 /obj/structure/goo_vat/update_icon()
 	overlays.Cut()
@@ -156,7 +173,7 @@
 			overlay_fullness = "goo_2"
 		else if(fullness >=	 1)
 			overlay_fullness = "goo_1"
-			overlays += image(icon, icon_state = "[overlay_fullness]")
+		overlays += image(icon, icon_state = "[overlay_fullness]")
 	overlays += image(icon, icon_state = "[lock_overlay]")
 	overlays += image(icon, icon_state = "[fullness_overlay]")
 
