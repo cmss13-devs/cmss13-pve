@@ -52,3 +52,13 @@
 /obj/effect/landmark/start/marine/engineer/delta
 	icon_state = "engi_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/datum/job/marine/engineer/ai
+	total_positions = 2
+	spawn_positions = 2
+
+/datum/job/marine/engineer/ai/set_spawn_positions(count)
+	return spawn_positions
+
+/datum/job/marine/engineer/ai/get_total_positions(latejoin = 0)
+	return latejoin ? total_positions : spawn_positions
