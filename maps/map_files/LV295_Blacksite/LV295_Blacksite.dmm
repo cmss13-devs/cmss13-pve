@@ -488,7 +488,8 @@
 "bA" = (
 /obj/structure/prop/almayer/computers/sensor_computer2{
 	layer = 4.4;
-	pixel_y = 16
+	pixel_y = 16;
+	density = 0
 	},
 /turf/open/floor/prison,
 /area/lv295/outdoors/compound)
@@ -6063,7 +6064,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/almayer/computers/sensor_computer1{
 	pixel_y = 16;
-	layer = 4.4
+	layer = 4.4;
+	density = 0
 	},
 /turf/open/floor/prison,
 /area/lv295/outdoors/compound)
@@ -9307,10 +9309,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/sublevel_1)
-"Db" = (
-/obj/structure/largecrate/random/case,
-/turf/open/auto_turf/snow/brown_base/layer3,
-/area/lv295/outdoors/barrens)
 "Dc" = (
 /obj/structure/machinery/power/smes/buildable{
 	capacity = 1e+006;
@@ -12762,7 +12760,7 @@
 "Nn" = (
 /obj/structure/machinery/door_control{
 	pixel_y = 28;
-	id = "4_armoury";
+	id = "3_armoury";
 	pixel_x = 6
 	},
 /turf/open/floor/prison/floor_plate,
@@ -25819,7 +25817,7 @@ FA
 FA
 FA
 FA
-Db
+FA
 FA
 FA
 FA
