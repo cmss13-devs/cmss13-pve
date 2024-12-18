@@ -5309,7 +5309,9 @@
 /area/lv295/indoors/sublevel_3)
 "qT" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/prop/server_equipment/laptop,
+/obj/structure/prop/server_equipment/laptop{
+	pixel_x = -1
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv295/indoors/maint)
 "qU" = (
