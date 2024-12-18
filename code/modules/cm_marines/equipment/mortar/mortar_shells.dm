@@ -90,7 +90,7 @@
 	flame_radius(cause_data, radius, T, flame_level, burn_level, flameshape, null, fire_type)
 	playsound(T, 'sound/effects/wp_smoke.ogg', 25, 1, 9)
 	sleep(1)
-	create_shrapnel(T, 32, , ,/datum/ammo/bullet/shrapnel/incendiary/heavy, null)
+	create_shrapnel(T, 40, , ,/datum/ammo/bullet/shrapnel/incendiary/heavy, null)
 
 /obj/item/mortar_shell/flare
 	name = "\improper 80mm flare/camera mortar shell"
