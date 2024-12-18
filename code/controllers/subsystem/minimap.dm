@@ -471,7 +471,7 @@ SUBSYSTEM_DEF(minimaps)
 	var/is_observer = user.faction == FACTION_NEUTRAL && isobserver(user)
 	if(is_observer || (user.faction in FACTION_LIST_HUMANOID))
 		// Send marine maps
-		var/datum/flattened_tacmap/latest = get_tacmap_data_png(FACTION_MARINE)
+		var/datum/flattened_tacmap/latest = get_tacmap_data_png(user.faction)
 		if(latest)
 			SSassets.transport.send_assets(user.client, latest.asset_key)
 		var/datum/flattened_tacmap/unannounced = get_unannounced_tacmap_data_png(FACTION_MARINE)
