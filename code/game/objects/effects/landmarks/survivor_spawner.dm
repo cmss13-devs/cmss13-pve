@@ -49,7 +49,7 @@
 	intro_text = list("<h2>You are a survivor of a crash landing!</h2>",\
 	"<span class='notice'>You are NOT aware of the xenomorph threat.</span>",\
 	"<span class='danger'>Your primary objective is to heal up and survive. If you want to assault the hive - adminhelp.</span>")
-	story_text = "You are the leader of a squad fighting for a guerrilla movement. Your ship received a distress signal from a planetary contact. The responding team suffered a computer malfunction with the ship, and only escaped lethal wounds with the skill of the pilot. Everyone seems active and okay... for now."
+	story_text = "You are the leader of a squad fighting for an insurgency. Your ship received a distress signal from a planetary contact. The responding team suffered a computer malfunction with the ship, and only escaped lethal wounds with the skill of the pilot. Everyone seems active and okay... for now."
 	roundstart_damage_min = 2
 	roundstart_damage_max = 10
 	roundstart_damage_times = 2

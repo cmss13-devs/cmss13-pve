@@ -1,6 +1,6 @@
 #define COMMAND_ANNOUNCE "Command Announcement"
 #define UPP_COMMAND_ANNOUNCE "UPP Command Announcement"
-#define CLF_COMMAND_ANNOUNCE "Insurgent Command Announcement"
+#define CLF_COMMAND_ANNOUNCE "Insurgent Leadership Transmission"
 #define PMC_COMMAND_ANNOUNCE "PMC Command Announcement"
 #define QUEEN_ANNOUNCE "The words of the Queen reverberate in your head..."
 #define QUEEN_MOTHER_ANNOUNCE "Queen Mother Psychic Directive"

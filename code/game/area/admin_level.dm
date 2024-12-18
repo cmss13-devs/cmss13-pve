@@ -118,7 +118,7 @@
 	icon_state = "red"
 
 /area/adminlevel/ert_station/clf_station
-	name = "Guerrilla Station"
+	name = "Insurgent Station"
 	icon_state = "white"
 
 /area/adminlevel/ert_station/weyland_station

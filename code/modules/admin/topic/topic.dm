@@ -1695,12 +1695,12 @@
 		var/datum/fax/fax_message
 		switch(template_choice)
 			if("Custom")
-				var/input = input(src.owner, "Please enter a message to reply to [key_name(H)] via secure connection. NOTE: BBCode does not work, but HTML tags do! Use <br> for line breaks.", "Outgoing message from guerrilla cell", "") as message|null
+				var/input = input(src.owner, "Please enter a message to reply to [key_name(H)] via secure connection. NOTE: BBCode does not work, but HTML tags do! Use <br> for line breaks.", "Outgoing message from insurgent cell", "") as message|null
 				if(!input)
 					return
 				fax_message = new(input)
 			if("Template")
-				var/subject = input(src.owner, "Enter subject line", "Outgoing message from guerrilla cell", "") as message|null
+				var/subject = input(src.owner, "Enter subject line", "Outgoing message from insurgent cell", "") as message|null
 				if(!subject)
 					return
 				var/addressed_to = ""
@@ -1708,15 +1708,15 @@
 				if(address_option == "Sender")
 					addressed_to = "[H.real_name]"
 				else if(address_option == "Custom")
-					addressed_to = input(src.owner, "Enter Addressee Line", "Outgoing message from guerrilla cell", "") as message|null
+					addressed_to = input(src.owner, "Enter Addressee Line", "Outgoing message from insurgent cell", "") as message|null
 					if(!addressed_to)
 						return
 				else
 					return
-				var/message_body = input(src.owner, "Enter Message Body, use <p></p> for paragraphs", "Outgoing message from guerilla cell", "") as message|null
+				var/message_body = input(src.owner, "Enter Message Body, use <p></p> for paragraphs", "Outgoing message from insurgent cell", "") as message|null
 				if(!message_body)
 					return
-				var/sent_by = input(src.owner, "Enter JUST the name you are sending this from", "Outgoing message from guerrilla cell", "") as message|null
+				var/sent_by = input(src.owner, "Enter JUST the name you are sending this from", "Outgoing message from insurgent cell", "") as message|null
 				if(!sent_by)
 					return
 				fax_message = new(generate_templated_fax(0, "PROXY SITE REPEATER", subject, addressed_to, message_body, sent_by, "AUTHENTICATED ULTRA CYAN", "ring leadership"))

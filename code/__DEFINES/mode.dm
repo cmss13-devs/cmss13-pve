@@ -267,7 +267,7 @@ DEFINE_BITFIELD(whitelist_status, list(
 #define FACTION_UPP "UPP"
 #define FACTION_TWE "TWE"
 #define FACTION_WY "Wey-Yu"
-#define FACTION_CLF "Guerilla"
+#define FACTION_CLF "Insurgent"
 #define FACTION_PMC "PMC"
 #define FACTION_CONTRACTOR "VAI"
 #define FACTION_MARSHAL "Colonial Marshal"

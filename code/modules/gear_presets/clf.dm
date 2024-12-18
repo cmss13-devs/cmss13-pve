@@ -48,7 +48,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/soldier
-	name = "Guerrilla Fighter"
+	name = "Insurgent Fighter"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF
 	rank = JOB_CLF
@@ -147,7 +147,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/engineer
-	name = "Guerrilla Engineer"
+	name = "Insurgent Engineer"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_ENGI
 	rank = JOB_CLF_ENGI
@@ -266,7 +266,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/medic
-	name = "Guerrilla Doctor"
+	name = "Insurgent Doctor"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_MEDIC
 	rank = JOB_CLF_MEDIC
@@ -419,7 +419,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/specialist
-	name = "Guerrilla Specialist"
+	name = "Insurgent Specialist"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_SPECIALIST
 	rank = JOB_CLF_SPECIALIST
@@ -539,7 +539,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/leader
-	name = "Guerrilla Leader"
+	name = "Insurgent Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_LEADER
 	rank = JOB_CLF_LEADER
@@ -678,7 +678,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/synth
-	name = "Guerrilla Multipurpose Synthetic"
+	name = "Insurgent Multipurpose Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	languages = ALL_SYNTH_LANGUAGES
@@ -876,7 +876,7 @@
 	)
 
 /datum/equipment_preset/clf/synth/combat
-	name = "Guerrilla Combat Synthetic"
+	name = "Insurgent Combat Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/clf/synth/combat/load_skills(mob/living/carbon/human/new_human)
@@ -926,7 +926,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/commander
-	name = "Guerrilla Cell Commander"
+	name = "Insurgent Cell Commander"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_COMMANDER
 	rank = JOB_CLF_COMMANDER

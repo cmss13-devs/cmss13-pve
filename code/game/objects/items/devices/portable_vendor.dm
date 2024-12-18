@@ -316,6 +316,6 @@
 		list("CONTRABAND", 0, null, null, null),
 		list("W-Y PMC", 20, /obj/item/device/encryptionkey/pmc, "white", "Radio Key for Weyland-Yutani PMC Combat Comms."),
 		list("CONTRABAND: Colonial Marshals", 40, /obj/item/device/encryptionkey/cmb, "white", "Radio Key for the CMB."),
-		list("CONTRABAND: Colonial Insurgency", 40, /obj/item/device/encryptionkey/clf, "white", "Radio Key for known local guerrilla frequencies."),
+		list("CONTRABAND: Colonial Insurgency", 40, /obj/item/device/encryptionkey/clf, "white", "Radio Key for known local insurgent frequencies."),
 		list("CONTRABAND: Union of Progressive Peoples", 40, /obj/item/device/encryptionkey/upp, "white", "Radio Key for known UPP listening frequencies."),
 	)

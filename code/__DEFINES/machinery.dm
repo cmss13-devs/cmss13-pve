@@ -10,7 +10,7 @@
 
 #define HUMAN_MODE "Unarmoured Humans"
 #define UPP_MODE "UPP Conscripts"
-#define CLF_MODE "Guerillas"
+#define CLF_MODE "Insurgents"
 #define RUNNER_MODE "Xenomorph Runners"
 #define SPITTER_MODE "Xenomorph Spitters"
 #define DEFENDER_MODE "Xenomorph Defenders"

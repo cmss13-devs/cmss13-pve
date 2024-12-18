@@ -456,7 +456,7 @@ GLOBAL_LIST_EMPTY(alldepartments)
 							P.stamped += /obj/item/tool/stamp
 							P.overlays += stampoverlay
 							P.stamps += "<HR><i>This paper has been stamped by the UPP High Kommand Quantum Relay.</i>"
-						if("Guerrilla Command Quantum Relay")
+						if("Insurgent Command Quantum Relay")
 							var/image/stampoverlay = image('icons/obj/items/paper.dmi')
 							stampoverlay.icon_state = "paper_stamp-clf"
 							if(!P.stamped)

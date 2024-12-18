@@ -497,8 +497,8 @@
 					message_admins("3rd party victory: Union of Progressive Peoples")
 				else if ((headcount["CLF_headcount"] / living) > MAJORITY)
 					musical_track = pick('sound/theme/lastmanstanding_clf.ogg')
-					log_game("3rd party victory: Insurgents")
-					message_admins("3rd party victory: Insurgents")
+					log_game("3rd party victory: Insurgency")
+					message_admins("3rd party victory: Insurgency")
 				else if ((headcount["marine_headcount"] / living) > MAJORITY)
 					musical_track = pick('sound/theme/neutral_melancholy2.ogg') //This is the theme song for Colonial Marines the game, fitting
 			else
