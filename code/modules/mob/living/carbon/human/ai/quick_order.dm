@@ -29,13 +29,17 @@
 
 /datum/human_ai_quick_order/proc/InterceptClickOn(mob/user, params, atom/object)
 	var/list/modifiers = params2list(params)
-	if(LAZYACCESS(modifiers, ALT_CLICK))
+	if(LAZYACCESS(modifiers, ALT_CLICK) || LAZYACCESS(modifiers, MIDDLE_CLICK))
 		if(!length(ai_humans_selected))
 			to_chat(holder, SPAN_BOLDNOTICE("You need to have an area selected first."))
 			return
 
 		for(var/datum/human_ai_brain/brain as anything in ai_humans_selected)
-			brain.quick_approach = get_turf(object)
+			if(LAZYACCESS(modifiers, ALT_CLICK))
+				brain.quick_approach = get_turf(object)
+			else
+				brain.quick_approach = null
+				brain.target_turf = get_turf(object)
 
 		to_chat(holder, SPAN_BOLDNOTICE("Order sent."))
 		deselect_region()
@@ -97,7 +101,7 @@
 	var/datum/human_ai_quick_order/order_datum = new
 	order_datum.holder = src
 	click_intercept = order_datum
-	to_chat(src, SPAN_BOLDNOTICE("Left click two corners to select all AI in the area. Then, alt-click on where you would like them to go. To stop quick ordering, press the verb again. Will not function if GM panel is open."))
+	to_chat(src, SPAN_BOLDNOTICE("Left click two corners to select all AI in the area. Then, alt-click on where you would like them to go. Additionally, you can use middle-click to make AI approach carefully. To stop quick ordering, press the verb again. Will not function if GM panel is open."))
 
 #undef AREASELECT_CORNERA
 #undef AREASELECT_CORNERB

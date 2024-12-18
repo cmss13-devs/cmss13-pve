@@ -7,15 +7,15 @@
 
 	COOLDOWN_DECLARE(cover_search_cooldown)
 
-/datum/human_ai_brain/proc/end_cover(atom/source) // 'source' argument reserved for unregistering cade/wall/etc delete comsigs
+/datum/human_ai_brain/proc/end_cover()
 	current_cover = null
 	in_cover = FALSE
 
-/datum/human_ai_brain/proc/on_shot_inside_cover(obj/projectile/bullet)
+/datum/human_ai_brain/proc/on_shot_inside_cover(angle, atom/source)
 	// Cover isn't working. Charge!
 	end_cover()
 
-/datum/human_ai_brain/proc/try_cover(obj/projectile/bullet)
+/datum/human_ai_brain/proc/try_cover(angle, atom/source)
 	if(!COOLDOWN_FINISHED(src, cover_search_cooldown))
 		return
 
@@ -25,7 +25,7 @@
 	COOLDOWN_START(src, cover_search_cooldown, 10 SECONDS)
 
 	var/list/turf_dict = list()
-	var/cover_dir = reverse_direction(angle2dir4ai(bullet.angle))
+	var/cover_dir = reverse_direction(angle2dir4ai(angle))
 
 	recursive_turf_cover_scan(get_turf(tied_human), turf_dict, cover_dir)
 

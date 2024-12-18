@@ -6,6 +6,9 @@
 	if(!brain.current_target)
 		return 0
 
+	if(brain.sniper_home)
+		return 0
+
 	if(!brain.tried_reload && (brain.primary_weapon || length(brain.secondary_weapons)))
 		return 0
 

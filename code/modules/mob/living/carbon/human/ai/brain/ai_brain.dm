@@ -257,7 +257,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 /datum/human_ai_brain/proc/on_move(atom/oldloc, direction, forced)
 	setup_detection_radius()
 
-	if(in_cover)
+	if(in_cover && (get_dist(tied_human, current_cover) > gun_data?.minimum_range))
 		end_cover()
 
 	update_target_pos()
@@ -280,6 +280,10 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 
 	if(!in_combat)
 		say_in_combat_line()
+
+	if(isxeno(current_target))
+		try_cover(Get_Angle(current_target, tied_human), current_target)
+
 	in_combat = TRUE
 	addtimer(CALLBACK(src, PROC_REF(exit_combat)), rand(combat_decay_time_min, combat_decay_time_max), TIMER_UNIQUE | TIMER_NO_HASH_WAIT | TIMER_OVERRIDE)
 
@@ -333,6 +337,6 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		target_turf = get_turf(bullet.firer	)
 
 	if(!current_cover)
-		try_cover(bullet)
+		try_cover(bullet.angle, bullet.firer)
 	else if(in_cover)
-		on_shot_inside_cover(bullet)
+		on_shot_inside_cover(bullet.angle, bullet.firer)

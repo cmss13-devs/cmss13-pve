@@ -521,9 +521,13 @@
 	if(issynth(target))
 		return FALSE
 
-	//ai_brain.appraise_inventory() Zonenote: Maybe needed idk
-
 	if(!length(contents) || !COOLDOWN_FINISHED(ai_brain, pill_use_cooldown))
+		return FALSE
+
+	var/obj/item/reagent_container/pill/pill = contents[1]
+	var/datum/reagent/reagent_datum = GLOB.chemical_reagents_list[pill.pill_initial_reagents[1]]
+
+	if((target.reagents.get_reagent_amount(reagent_datum.id) + 15) > REAGENTS_OVERDOSE)
 		return FALSE
 
 	if(skilllock && !skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
@@ -537,8 +541,10 @@
 	if(user.put_in_active_hand(pill))
 		remove_from_storage(pill, user)
 		pill.attack(target, user)
-		COOLDOWN_START(ai_brain, pill_use_cooldown, 20 SECONDS)
+		COOLDOWN_START(ai_brain, pill_use_cooldown, 5 SECONDS)
 		sleep(ai_brain.medium_action_delay * ai_brain.action_delay_mult)
+
+	ai_brain.appraise_inventory() // For some reason it removes pill bottles from equipment_map after usage
 
 /obj/item/storage/pill_bottle/proc/choose_color(mob/user)
 	if(!user)
