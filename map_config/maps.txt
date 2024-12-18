@@ -72,5 +72,5 @@ endmap
 map whiskey_outpost_v2
 endmap
 
-map LV295_Blacksite
+map lv295_blacksite
 endmap
