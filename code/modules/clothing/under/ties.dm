@@ -512,8 +512,7 @@
 	icon_state = "webbing"
 	w_class = SIZE_LARGE //too big to store in other pouches
 	var/obj/item/storage/internal/hold = /obj/item/storage/internal/accessory
-	slot = list(
-		ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_HOLSTER)
+	slot = ACCESSORY_SLOT_UTILITY
 	high_visibility = TRUE
 
 /obj/item/clothing/accessory/storage/Initialize()
@@ -908,7 +907,6 @@
 	name = "shoulder holster"
 	desc = "A handgun holster with an attached pouch, allowing two magazines or speedloaders to be stored along with it."
 	icon_state = "holster"
-	slot = ACCESSORY_SLOT_HOLSTER
 	high_visibility = TRUE
 	hold = /obj/item/storage/internal/accessory/holster
 
