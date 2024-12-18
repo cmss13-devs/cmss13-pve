@@ -31,10 +31,16 @@
 	if(brain.current_target)
 		return ONGOING_ACTION_COMPLETED
 
+	if(!length(brain.equipment_map[HUMAN_AI_HEALTHITEMS]))
+		return ONGOING_ACTION_COMPLETED
+
+	var/mob/living/tied_human = brain.tied_human
+	if(tied_human.on_fire)
+		return ONGOING_ACTION_COMPLETED
+
 	if(brain.healing_someone)
 		return ONGOING_ACTION_UNFINISHED
 
-	var/mob/tied_human = brain.tied_human
 	if(brain.healing_start_check(tied_human))
 		brain.start_healing(tied_human)
 		return ONGOING_ACTION_UNFINISHED

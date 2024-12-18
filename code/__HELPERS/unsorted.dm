@@ -1764,6 +1764,8 @@ GLOBAL_LIST_INIT(duplicate_forbidden_vars,list(
 
 //straight directions get priority over diagonal directions in edge cases
 /proc/angle2dir4ai(angle)
+	if(isnull(angle))
+		return null
 	switch(angle) // 80/10 degrees diagonals/cardinals respectively
 		if (40 to 50)
 			return NORTHEAST

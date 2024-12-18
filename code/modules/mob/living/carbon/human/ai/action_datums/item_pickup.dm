@@ -10,11 +10,14 @@
 	if(!length(brain.to_pickup))
 		return 0
 
-	if(brain.tied_human.resting)
+	if(HAS_TRAIT_FROM(brain.tied_human, TRAIT_UNDENSE, LYING_DOWN_TRAIT))
 		return 0
 
 	if(brain.tied_human.health < HEALTH_THRESHOLD_CRIT)
 		return 0
+
+	if(!brain.primary_weapon)
+		return 16
 
 	return 11
 

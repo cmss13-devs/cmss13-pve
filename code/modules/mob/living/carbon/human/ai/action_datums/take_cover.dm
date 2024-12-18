@@ -6,7 +6,7 @@
 	if(!brain.current_cover)
 		return 0
 
-	if(brain.in_cover)
+	if(brain.in_cover && !(get_dist(brain.tied_human, brain.current_target) > brain?.gun_data?.minimum_range))
 		return 0
 
 	return 15

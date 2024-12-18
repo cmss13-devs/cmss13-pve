@@ -167,7 +167,7 @@
 		qdel(ai_human)
 		return
 
-	ai_human.face_dir(pick(GLOB.cardinals))
+	ai_human.face_dir(mob.dir)
 	ai_human.forceMove(get_turf(mob))
 	ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
 

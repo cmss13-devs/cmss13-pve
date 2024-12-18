@@ -18,7 +18,7 @@
 		return 0
 
 	var/turf/target_turf = brain.target_turf
-	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen) && (brain.gun_data.maximum_range <= brain.view_distance))
+	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen) && (brain.gun_data.maximum_range > brain.view_distance))
 
 	if(!brain.current_target && !should_fire_offscreen)
 		return 0
@@ -102,7 +102,7 @@
 			return FALSE
 
 		for(var/obj/thing in tile)
-			if((thing.projectile_coverage >= PROJECTILE_COVERAGE_MEDIUM) && (thing.unacidable))
+			if((thing.projectile_coverage >= PROJECTILE_COVERAGE_MEDIUM) && (thing.unacidable) && (thing.density))
 				return FALSE
 
 		for(var/mob/living/carbon/human/possible_friendly in tile)
