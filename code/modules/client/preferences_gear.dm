@@ -58,7 +58,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Prescription ballistic goggles, laser-shaded (brown)"
 	path = /obj/item/clothing/glasses/mgoggles/orange/prescription
 
-/datum/gear/eyewear/goggles_orange/prescription
+/datum/gear/eyewear/goggles_green/prescription
 	display_name = "Prescription ballistic goggles, laser-shaded (green)"
 	path = /obj/item/clothing/glasses/mgoggles/green/prescription
 
