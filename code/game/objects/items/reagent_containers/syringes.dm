@@ -257,12 +257,13 @@
 		if((user != target) && H.check_shields(7, "the [src.name]"))
 			return
 
-		if (target != user && target.getarmor(target_zone, ARMOR_MELEE) > 5 && prob(50))
-			for(var/mob/O in viewers(GLOB.world_view_size, user))
-				O.show_message(text(SPAN_DANGER("<B>[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!</B>")), SHOW_MESSAGE_VISIBLE)
-			user.temp_drop_inv_item(src)
-			qdel(src)
-			return
+		if(!istype(src, /obj/item/reagent_container/syringe/combat)) //with thanks to Drathek for the help here.
+			if (target != user && target.getarmor(target_zone, ARMOR_MELEE) > 5 && prob(50))
+				for(var/mob/O in viewers(GLOB.world_view_size, user))
+					O.show_message(text(SPAN_DANGER("<B>[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!</B>")), SHOW_MESSAGE_VISIBLE)
+				user.temp_drop_inv_item(src)
+				qdel(src)
+				return
 
 		for(var/mob/O in viewers(GLOB.world_view_size, user))
 			O.show_message(text(SPAN_DANGER("<B>[user] stabs [target] in \the [hit_area] with [src.name]!</B>")), SHOW_MESSAGE_VISIBLE)
@@ -284,6 +285,16 @@
 	src.add_fingerprint(usr)
 	src.update_icon()
 
+/obj/item/reagent_container/syringe/combat
+	name = "ruggedized syringe"
+	desc = "A reinforced and ruggedized syringe that will not break and is slightly less touchy."
+	icon = 'icons/obj/items/syringe.dmi'
+	item_state = "syringe_0"
+	icon_state = "0"
+	matter = list("glass" = 150)
+	amount_per_transfer_from_this = 10
+	possible_transfer_amounts = 10
+	volume = 10
 
 /obj/item/reagent_container/ld50_syringe
 	name = "Lethal Injection Syringe"
