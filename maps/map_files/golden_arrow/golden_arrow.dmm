@@ -12156,13 +12156,8 @@
 /obj/effect/decal/strata_decals/grime/grime3,
 /obj/structure/largecrate/supply/ammo{
 	name = "materials crate";
-	fill_from_loc = 1
-	},
-/obj/item/stack/sheet/metal/large_stack,
-/obj/item/stack/sheet/plasteel{
-	amount = 40;
-	pixel_x = 7;
-	pixel_y = 6
+	fill_from_loc = 1;
+	desc = "A hefty wooden crate. The label says 'Golden Arrow mistakenly provided excessive fortification materials. Please make-do with standard Sandbags from now on' "
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
@@ -15576,6 +15571,29 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
+"cBw" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/obj/structure/closet/coffin/woodencrate{
+	pixel_y = 18;
+	name = "Barbed Wire Crate (x200)";
+	desc = "A wooden crate. There's a paper packlist with shoddy handwriting, reading 'Barbed wire, for the sandbags. Since the materials are gone. Careful sticking your arm in, Alex lost a lot of blood."
+	},
+/obj/item/stack/barbed_wire/full_stack,
+/obj/item/stack/barbed_wire/full_stack,
+/obj/item/stack/barbed_wire/full_stack,
+/obj/item/stack/barbed_wire/full_stack,
+/obj/item/stack/barbed_wire/full_stack,
+/obj/item/stack/barbed_wire/full_stack,
+/obj/item/stack/barbed_wire/full_stack,
+/obj/item/stack/barbed_wire/full_stack,
+/obj/item/stack/barbed_wire/full_stack,
+/obj/item/stack/barbed_wire/full_stack,
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/golden_arrow/hangar)
 "cGQ" = (
 /turf/open/floor/corsat,
 /area/golden_arrow/cargo_shuttle/lower)
@@ -27838,7 +27856,7 @@ akb
 akb
 adz
 adz
-aSn
+cBw
 afN
 aEA
 afN
