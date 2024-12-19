@@ -170,22 +170,6 @@
 			pdcell.use(pump_cost)
 			update_icon()
 			return
-		else if(H.is_revivable() && H.stat == DEAD)
-			if(H.cpr_cooldown < world.time)
-				H.revive_grace_period += 7 SECONDS
-				H.visible_message(SPAN_NOTICE("<b>\The [src]</b> automatically performs <b>CPR</b> on <b>[H]</b>."))
-			else
-				H.visible_message(SPAN_NOTICE("<b>\The [src]</b> fails to perform CPR on <b>[H]</b>."))
-				if(prob(50))
-					var/obj/limb/E = H.get_limb("chest")
-					E.fracture(100)
-			H.cpr_cooldown = world.time + 7 SECONDS
-			pdcell.use(pump_cost)
-			update_icon()
-			return
-		else
-			end_cpr()
-			return PROCESS_KILL
 
 /obj/item/tool/portadialysis
 	name = "portable dialysis machine"
