@@ -859,7 +859,6 @@
 	new /obj/item/reagent_container/food/snacks/packaged_meal(src, second)
 	new /obj/item/reagent_container/food/snacks/packaged_meal(src, side)
 	new /obj/item/reagent_container/food/snacks/packaged_meal(src, desert)
-	new /obj/item/reagent_container/food/drinks/cans/waterbottle(src)
 	if(cookie == 1)
 		new /obj/item/reagent_container/food/snacks/fortunecookie/prefilled(src)
 	new /obj/item/storage/fancy/cigarettes/lucky_strikes_4(src)
