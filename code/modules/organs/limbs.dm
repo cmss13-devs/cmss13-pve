@@ -459,6 +459,8 @@ This function completely restores a damaged organ to perfect condition.
 		armor += owner.skills.get_skill_level(SKILL_ENDURANCE)*5
 
 	var/damage_ratio = armor_damage_reduction(GLOB.marine_organ_damage, 2*damage/3, armor, 0, 0, 0, max_damage ? (100*(max_damage - brute_dam) / max_damage) : 100)
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HUMAN_AI_TWEAKS))
+		damage_ratio *= 0.33
 	if(prob(damage_ratio) && damage > 10)
 		var/datum/wound/internal_bleeding/I = new (0)
 		add_bleeding(I, TRUE)
@@ -474,7 +476,7 @@ This function completely restores a damaged organ to perfect condition.
 	if(!is_ff && type != BURN && !(status & (LIMB_ROBOT|LIMB_SYNTHSKIN)))
 		take_damage_internal_bleeding(damage)
 
-	if(!(status & LIMB_SPLINTED_INDESTRUCTIBLE) && (status & LIMB_SPLINTED) && damage > 5 && prob(10 + damage * 2.5)) //If they have it splinted, the splint won't hold.
+	if(!(status & LIMB_SPLINTED_INDESTRUCTIBLE) && (status & LIMB_SPLINTED) && damage > 5 && prob((10 + damage * 2.5) * (MODE_HAS_TOGGLEABLE_FLAG(MODE_HUMAN_AI_TWEAKS) ? 0.33 : 1))) //If they have it splinted, the splint won't hold.
 		status &= ~LIMB_SPLINTED
 		playsound(get_turf(loc), 'sound/items/splintbreaks.ogg', 20)
 		to_chat(owner, SPAN_HIGHDANGER("The splint on your [display_name] comes apart!"))

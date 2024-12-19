@@ -257,6 +257,13 @@ GLOBAL_LIST_INIT(shotgun_handfuls_12g, list(
 	/obj/item/ammo_magazine/handful/shotgun/beanbag
 	))
 
+GLOBAL_LIST_INIT(shotgun_handfuls_12g_reasonable, list(
+	/obj/item/ammo_magazine/handful/shotgun/slug,
+	/obj/item/ammo_magazine/handful/shotgun/buckshot,
+	/obj/item/ammo_magazine/handful/shotgun/flechette,
+	/obj/item/ammo_magazine/handful/shotgun/beanbag
+	))
+
 /obj/item/ammo_magazine/handful/shotgun
 	name = "handful of shotgun slugs (12g)"
 	icon_state = "slug_shell_5"
@@ -267,6 +274,7 @@ GLOBAL_LIST_INIT(shotgun_handfuls_12g, list(
 	gun_type = /obj/item/weapon/gun/shotgun
 	handful_state = "slug_shell"
 	transfer_handful_amount = 5
+	flags_human_ai = AMMUNITION_ITEM
 
 /obj/item/ammo_magazine/handful/shotgun/slug
 
@@ -399,6 +407,7 @@ GLOBAL_LIST_INIT(shotgun_handfuls_12g, list(
 	max_rounds = 8
 	current_rounds = 8
 	gun_type = /obj/item/weapon/gun/shotgun/double/cane
+	flags_human_ai = AMMUNITION_ITEM
 
 /obj/item/ammo_magazine/handful/revolver/marksman
 	name = "handful of marksman revolver bullets (.44)"

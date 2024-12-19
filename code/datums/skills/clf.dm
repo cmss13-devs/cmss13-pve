@@ -56,6 +56,16 @@ COLONIAL LIBERATION FRONT
 		SKILL_JTAC = SKILL_JTAC_TRAINED
 	)
 
+/datum/skills/clf/sniper
+	name = "CLF Sniper"
+	skills = list(
+		SKILL_MEDICAL = SKILL_MEDICAL_TRAINED,
+		SKILL_CQC = SKILL_CQC_TRAINED,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
+		SKILL_MELEE_WEAPONS = SKILL_MELEE_TRAINED,
+		SKILL_FIREARMS = SKILL_FIREARMS_EXPERT, // (:
+	)
+
 /datum/skills/clf/leader
 	name = "CLF Leader"
 	skills = list(
