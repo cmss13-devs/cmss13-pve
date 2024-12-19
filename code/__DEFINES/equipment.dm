@@ -30,7 +30,7 @@
 /// Used for armors or uniforms that don't have a snow/desert/etc icon state set via select_gamemode_skin (not all item types currently perform this test though).
 #define NO_SNOW_TYPE (1<<11)
 
-#define INVULNERABLE (1<<12)
+#define INVULNERABLE (1<<12) // previously unfunctional, now has been co-opted to prevent things getting qdel'd by shuttle landing
 
 /// syringes can inject or drain reagents in this even if it isn't an OPENCONTAINER
 #define CAN_BE_SYRINGED (1<<13)
