@@ -63,3 +63,28 @@
 		return
 	user.mob.button_pressed_F12()
 	return TRUE
+
+/datum/keybinding/client/cursor_view_pan
+	hotkey_keys = list("V")
+	classic_keys = list("V")
+	name = "cursor_view_pan"
+	full_name = "Cursor View Pan"
+	description = "Pan your view towards your cursor"
+	keybind_signal = COMSIG_KB_CLIENT_CURSORVIEWPAN_DOWN
+
+/datum/keybinding/client/cursor_view_pan/down(client/user)
+	. = ..()
+	if(.)
+		return
+
+	user.cursor_view_pan()
+	user.cursor_view_panning = TRUE
+
+/datum/keybinding/client/cursor_view_pan/up(client/user)
+	. = ..()
+	if(.)
+		return
+
+	user.cursor_view_panning = FALSE
+	user.pixel_x = 0
+	user.pixel_y = 0
