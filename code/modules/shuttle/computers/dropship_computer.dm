@@ -631,3 +631,58 @@
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "cameras_old"
 
+/obj/structure/machinery/computer/shuttle/dropship/flight/laptop
+	name = "\improper Dropship Remote-Flight Laptop"
+	desc = "A laptop loaded with flight control software that has a customized keyboard."
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "remoteflightcomp"
+	density = FALSE
+	is_remote = TRUE
+	layer = UPPER_ITEM_LAYER
+	needs_power = TRUE
+	can_change_shuttle = TRUE
+	var/source_type = /obj/item/device/flight_laptop
+	var/has_special_table_placement = TRUE
+
+/obj/structure/machinery/computer/shuttle/dropship/flight/laptop/MouseDrop(over_object)
+	if(!has_special_table_placement)
+		return ..()
+
+	if(over_object == usr && Adjacent(usr) && has_special_table_placement)
+		if(!skillcheck(usr, SKILL_PILOT, SKILL_PILOT_UNTRAINED))
+			to_chat(usr, SPAN_WARNING("You do not know how to safely shut down the [src]..."))
+			return
+		else
+			usr.visible_message(SPAN_NOTICE("[usr] starts shutting down and packing up [src]."), \
+			SPAN_NOTICE("You begin to shut down and pack up [src]..."))
+			do_after(usr, 3 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, src)
+			playsound(usr, 'sound/machines/terminal_off.ogg', 25, FALSE)
+			collapse()
+
+/obj/structure/machinery/computer/shuttle/dropship/flight/laptop/proc/collapse(mob/living/carbon/human/user)
+	var/obj/item/device/flight_laptop = new source_type(loc)
+	if(istype(user))
+		user.visible_message(SPAN_NOTICE("[user] shuts down and packs up [src]."),
+			SPAN_NOTICE("You quickly shut down and pack up [src]."))
+		user.put_in_active_hand(flight_laptop)
+	qdel(src)
+
+// Flight laptop in hands
+/obj/item/device/flight_laptop
+	name = "\improper Dropship Remote-Flight Laptop"
+	desc = "A laptop loaded with flight control software that has a customized keyboard, all packed into an ultra-tough carry case."
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "remoteflightcomp_cl"
+	w_class = SIZE_SMALL
+	unacidable = TRUE
+	var/exproof = TRUE
+	has_special_table_placement = TRUE
+
+/obj/item/device/flight_laptop/set_to_table(obj/structure/surface/target)
+	if (do_after(usr, 1 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))
+		var/obj/structure/machinery/computer/shuttle/dropship/flight/laptop/deployed = new(target.loc)
+		usr.visible_message(SPAN_NOTICE("[usr] sets up [deployed]."), \
+			SPAN_NOTICE("You quickly set up [deployed] on the table."))
+		qdel(src)
+	else
+		to_chat(usr, SPAN_WARNING("You fail to setup the [src]"))
