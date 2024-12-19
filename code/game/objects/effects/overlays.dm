@@ -218,6 +218,15 @@
 	icon = 'icons/obj/items/weapons/projectiles.dmi'
 	icon_state = "laser_target3"
 
+/obj/effect/overlay/temp/xeno_telegraph
+	name = "incoming xeno attack"
+	anchored = TRUE
+	light_range = 0
+	effect_duration = 50
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	icon = 'icons/mob/xenos/effects.dmi'
+	icon_state = "boiler_bombard"
+
 /obj/effect/overlay/temp/emp_sparks
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "empdisable"

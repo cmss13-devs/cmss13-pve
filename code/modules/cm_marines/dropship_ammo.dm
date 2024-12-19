@@ -305,8 +305,8 @@
 /obj/structure/ship_ammo/rocket/banshee/nerve
 	name = "\improper AGM-220H air to ground missile"
 	desc = "The AGM-220 is a platform for a multitude of warheads. The H variant is specially modified to safely contain a saturation payload of CN-20 nerve agent."
-	icon_state = "banshee"
-	ammo_id = "b"
+	icon_state = "banshee_h"
+	ammo_id = "bh"
 	point_cost = 500 //changed from regular banshee even if in 99.99999% of cases PvE will never need this but I was too scared to remove it for fear of something exploding
 	fire_mission_delay = 4 //We don't care because our ammo has just 1 rocket
 
@@ -315,7 +315,7 @@
 	spawn(5)
 		cell_explosion(impact, 25, 44, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), source_mob))
 		spawn(5)
-			var/datum/effect_system/smoke_spread/cn20/cn20 = new()
+			var/datum/effect_system/smoke_spread/cn20/xeno/cn20 = new()
 			cn20.set_up(8, 0, impact, null)
 			cn20.start()
 	QDEL_IN(src, 0.5 SECONDS)

@@ -137,3 +137,5 @@ GLOBAL_VAR(obfs_x)
 GLOBAL_VAR(obfs_y)
 
 GLOBAL_VAR_INIT(ai_xeno_weeding, TRUE)
+
+GLOBAL_VAR_INIT(blackshift, FALSE)
