@@ -71,3 +71,6 @@ endmap
 
 map whiskey_outpost_v2
 endmap
+
+map lv522_lukes_landing
+endmap
