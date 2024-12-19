@@ -391,8 +391,9 @@
 
 /obj/item/storage/box/kit/heavy_support/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/lmg(src)
-	new /obj/item/ammo_magazine/rifle/lmg(src)
-	new /obj/item/ammo_magazine/rifle/lmg/holo_target(src)
+	new /obj/item/ammo_magazine/hpr_box(src)
+	new /obj/item/ammo_magazine/hpr_box/holo_target(src)
+	new /obj/item/attachable/bipod(src)
 	new /obj/item/stack/folding_barricade/three(src)
 	new /obj/item/clothing/glasses/welding(src)
 	new /obj/item/tool/weldingtool(src)
