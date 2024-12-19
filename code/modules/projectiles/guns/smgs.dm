@@ -205,7 +205,7 @@
 
 /obj/item/weapon/gun/smg/mp27
 	name = "\improper MP27 submachinegun"
-	desc = "Once a respectable weapon, now after the design files were leaked in '67 the cheaply made copies are everywhere. Lightweight and fast firing, but the poor construction of almost every copy severely hampers accuracy."
+	desc = "A low caliber submachine gun, commonly cloned on the Frontier. Even with JHP, 4.6x30mm cased rounds have bad wounding, but a high fire rate and low muzzle flip gives surprising precision."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "mp7"
 	item_state = "mp7"
@@ -232,6 +232,10 @@
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
 	aim_slowdown = SLOWDOWN_ADS_NONE
+	gun_firemode_list = list(
+		GUN_FIREMODE_SEMIAUTO,
+		GUN_FIREMODE_AUTOMATIC,
+	)
 
 
 /obj/item/weapon/gun/smg/mp27/set_gun_attachment_offsets()
@@ -239,16 +243,18 @@
 
 /obj/item/weapon/gun/smg/mp27/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_SMG)
+	set_fire_delay(FIRE_DELAY_TIER_12)
 	set_burst_delay(FIRE_DELAY_TIER_SMG)
-	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_amount(0)
 	accuracy_mult = BASE_ACCURACY_MULT
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
-	scatter = SCATTER_AMOUNT_TIER_4 + (SCATTER_AMOUNT_TIER_10 * 0.5)
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_3
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_8 + (SCATTER_AMOUNT_TIER_10 * 0.5)
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4 + SCATTER_AMOUNT_TIER_10
 	damage_mult = BASE_BULLET_DAMAGE_MULT
-	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+	fa_max_scatter = SCATTER_AMOUNT_TIER_7
+	fa_scatter_peak = 20
 
 //-------------------------------------------------------
 //PPSH //Based on the PPSh-41.
@@ -432,18 +438,18 @@
 	item_state = "type64"
 
 //-------------------------------------------------------
-//GENERIC UZI //Based on the uzi submachinegun, of course.
+//The MAC has a high RPM and okay damage, but its not incredibly accurate at sustained fire...
 
 /obj/item/weapon/gun/smg/mac15
 	name = "\improper MAC-15 submachinegun"
-	desc = "A cheap, reliable design and manufacture make this ubiquitous submachinegun useful despite the age." //Includes proprietary 'full-auto' mode, banned in several Geneva Suggestions rim-wide.
+	desc = "A cheap submachine gun chambered in a high caliber handgun round. Blistering rate of fire, lethal against lightly or unarmored foes, but worthless against hard targets."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "mac15"
 	item_state = "mac15"
 
 	fire_sound = 'sound/weapons/gun_mac15.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/mac15
-	flags_gun_features = GUN_ANTIQUE|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED //|GUN_HAS_FULL_AUTO|GUN_FULL_AUTO_ON|GUN_FULL_AUTO_ONLY commented out until better fullauto code
+	flags_gun_features = GUN_ANTIQUE|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
@@ -453,9 +459,7 @@
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
-		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/lasersight, // Under
-		/obj/item/attachable/burstfire_assembly,
 		)
 	wield_delay = WIELD_DELAY_NONE
 	aim_slowdown = SLOWDOWN_ADS_NONE
@@ -466,11 +470,11 @@
 /obj/item/weapon/gun/smg/mac15/set_gun_config_values()
 	..()
 
-	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_7
+	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_2
 	fa_max_scatter = SCATTER_AMOUNT_TIER_3
 	set_fire_delay(FIRE_DELAY_TIER_12)
 	accuracy_mult = BASE_ACCURACY_MULT
-	scatter = SCATTER_AMOUNT_TIER_5
+	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
 	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_2
 
