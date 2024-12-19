@@ -1895,21 +1895,13 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/item/storage/box/packet/high_explosive/upp,
 /obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C";
 	pixel_y = -5
 	},
+/obj/item/storage/box/packet/high_explosive/upp,
+/obj/item/storage/box/packet/high_explosive/upp,
 /obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C";
 	pixel_y = 6
 	},
 /obj/structure/closet/crate/secure/ammo{
@@ -2534,6 +2526,12 @@
 /obj/structure/ore_box{
 	name = "wooden cargo crate";
 	anchored = 1
+	},
+/obj/item/storage/box/packet/high_explosive/upp/smoke{
+	pixel_y = 15
+	},
+/obj/item/storage/box/packet/high_explosive/upp/smoke{
+	pixel_y = 21
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/supply)
@@ -4018,21 +4016,13 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/item/storage/box/packet/high_explosive/upp,
 /obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C";
 	pixel_y = -5
 	},
+/obj/item/storage/box/packet/high_explosive/upp,
+/obj/item/storage/box/packet/high_explosive/upp,
 /obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C";
 	pixel_y = 6
 	},
 /obj/structure/closet/crate/secure/ammo{

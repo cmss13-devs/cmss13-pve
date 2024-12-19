@@ -132,7 +132,8 @@
 /////////////////////////////////////////////
 
 /obj/effect/particle_effect/smoke/bad
-	time_to_live = 10
+	time_to_live = 25
+	spread_speed = 2
 	smokeranking = SMOKE_RANK_LOW
 
 /obj/effect/particle_effect/smoke/bad/Move()
@@ -149,7 +150,7 @@
 	if(issynth(affected_mob))
 		return FALSE
 
-	if(prob(20))
+	if(prob(5))
 		affected_mob.drop_held_item()
 	affected_mob.apply_damage(1, OXY)
 
@@ -308,15 +309,23 @@
 /////////////////////////////////////////////
 
 /obj/effect/particle_effect/smoke/phosphorus
-	time_to_live = 6
+	time_to_live = 12
 	smokeranking = SMOKE_RANK_MED
 	var/next_cough = 2 SECONDS
 	var/burn_damage = 40
 	var/applied_fire_stacks = 3
 	var/xeno_yautja_reduction = 0.75
 
+//WP mortar-shell smoke
+/obj/effect/particle_effect/smoke/phosphorus/strong
+	time_to_live = 18
+	spread_speed = 0.5
+	smokeranking = SMOKE_RANK_HIGH
+	next_cough = 5 SECONDS
+	applied_fire_stacks = 6
+
 /obj/effect/particle_effect/smoke/phosphorus/weak
-	time_to_live = 4
+	time_to_live = 6
 	smokeranking = SMOKE_RANK_MED
 	burn_damage = 30
 	xeno_yautja_reduction = 0.5
@@ -801,6 +810,9 @@
 
 /datum/effect_system/smoke_spread/phosphorus
 	smoke_type = /obj/effect/particle_effect/smoke/phosphorus
+
+/datum/effect_system/smoke_spread/phosphorus/strong //used by mortar shells
+	smoke_type = /obj/effect/particle_effect/smoke/phosphorus/strong
 
 /datum/effect_system/smoke_spread/phosphorus/weak
 	smoke_type = /obj/effect/particle_effect/smoke/phosphorus/weak
