@@ -90,13 +90,15 @@
 /datum/effects/bleeding/internal
 	effect_name = "internal bleeding"
 	flags = INF_DURATION | NO_PROCESS_ON_DEATH | DEL_ON_UNDEFIBBABLE
+	var/has_been_bandaged = FALSE
+	var/show_spray_immediately = TRUE
 
 /datum/effects/bleeding/internal/process_mob()
 	. = ..()
 	if(!.)
 		return FALSE
 
-	var/mob/living/carbon/affected_mob = affected_atom
+	var/mob/living/carbon/human/affected_mob = affected_atom
 	if(affected_mob.in_stasis == STASIS_IN_BAG)
 		return FALSE
 
@@ -113,7 +115,13 @@
 				return FALSE
 
 	blood_loss = max(blood_loss, 0) // Bleeding shouldn't give extra blood even if its only 1 tick
-	affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss, 0)
+	affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*0.5, 0) //
+	if(prob(10) || src.show_spray_immediately)
+		if(!src.has_been_bandaged) //If Arterial has been packed, only remove blood passively every tick
+			show_spray_immediately = FALSE
+			affected_mob.spray_blood(get_turf(affected_mob), pick(GLOB.alldirs), src.limb)
+			affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*20*(affected_mob.blood_volume/BLOOD_VOLUME_NORMAL), 0)
+
 
 	return TRUE
 
