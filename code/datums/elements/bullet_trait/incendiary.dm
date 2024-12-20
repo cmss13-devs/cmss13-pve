@@ -58,3 +58,11 @@
 		SPAN_DANGER("[projectile_target] bursts into flames!"), \
 		SPAN_XENODANGER("You burst into flames!! Auuugh! Resist to put out the flames!") \
 	)
+
+/datum/element/bullet_trait_incendiary/heavy
+	// Generic bullet trait vars
+	element_flags = ELEMENT_DETACH|ELEMENT_BESPOKE
+	id_arg_index = 2
+
+/datum/element/bullet_trait_incendiary/Attach(datum/target, reagent = /datum/reagent/napalm/blue, stacks = 20)
+	. = ..()
