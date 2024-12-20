@@ -17,7 +17,7 @@
 	var/sniper_lockon_icon = "sniper_lockon"
 	var/obj/effect/ebeam/sniper_beam_type = /obj/effect/ebeam/laser
 	var/sniper_beam_icon = "laser_beam"
-	var/skill_locked = TRUE
+	var/skill_locked = FALSE
 
 	/// Variables for Focus Fire and alternate icons for lockon and laser.
 	var/enable_aimed_shot_icon_alt = FALSE

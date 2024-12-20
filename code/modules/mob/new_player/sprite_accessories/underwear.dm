@@ -92,3 +92,17 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	icon_state = "tanga"
 	gender = NEUTER
 	camo_conforming = TRUE
+
+/datum/sprite_accessory/underwear/boxers/white
+	name = "White Boxers"
+	icon_state = "white_boxers"
+	gender = NEUTER
+	camo_conforming = FALSE
+	restricted = TRUE
+
+/datum/sprite_accessory/underwear/boxers/marine
+	name = "Marine Boxers"
+	icon_state = "marine_boxers"
+	gender = NEUTER
+	camo_conforming = FALSE
+	restricted = TRUE
