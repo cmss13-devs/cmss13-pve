@@ -9,16 +9,6 @@
 /mob/living/silicon/ai/RangedAttack(atom/A)
 	A.attack_remote(src)
 
-/mob/UnarmedAttack(atom/A)
-	if(!client || !client.remote_control)
-		return FALSE
-	A.attack_remote(src)
-
-/mob/RangedAttack(atom/A)
-	if(!client || !client.remote_control)
-		return FALSE
-	A.attack_remote(src)
-
 /atom/proc/attack_remote(mob/user as mob)
 	return
 

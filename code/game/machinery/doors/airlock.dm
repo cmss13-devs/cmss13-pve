@@ -95,9 +95,6 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 			return
 	..(user)
 
-/obj/structure/machinery/door/airlock/bumpopen(mob/living/simple_animal/user as mob)
-	..(user)
-
 /// DAMAGE CODE
 
 /obj/structure/machinery/door/airlock/get_examine_text(mob/user)
@@ -811,6 +808,12 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 	if(autoname)
 		var/area/A = get_area(loc)
 		name = A.name
+
+	if(frequency)
+		set_frequency(frequency)
+
+	update_icon()
+	start_processing()
 
 	return INITIALIZE_HINT_LATELOAD
 

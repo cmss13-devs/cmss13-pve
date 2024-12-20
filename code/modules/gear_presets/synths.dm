@@ -715,7 +715,7 @@
 /datum/equipment_preset/synth/working_joe/upp/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.change_real_name(new_human, "Dzho Automaton #[rand(100)][rand(100)]")
 
-/datum/equipment_preset/synth/working_joe/load_race(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/working_joe/upp/load_race(mob/living/carbon/human/new_human)
 	. = ..()
 	new_human.set_species(joe_type)
 	new_human.h_style = "Bald"

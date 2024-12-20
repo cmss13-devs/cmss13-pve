@@ -55,9 +55,11 @@
 	dir = SOUTH
 	valid_directions = list(SOUTH, NORTH, EAST)
 
-/obj/structure/pipes/trinary/filter/m_filter/Initialize()
-	. = ..()
-	icon_state = "m"
+/obj/structure/pipes/trinary/filter/m_filter/update_icon()
+	if(length(connected_to))
+		icon_state = "mon"
+	else
+		icon_state = "moff"
 
 /obj/structure/pipes/trinary/filter/m_filter/create_valid_directions()
 	switch(dir)
@@ -136,9 +138,11 @@
 	dir = SOUTH
 	valid_directions = list(SOUTH, NORTH, EAST)
 
-/obj/structure/pipes/trinary/mixer/m_mixer/Initialize()
-	. = ..()
-	icon_state = "m"
+/obj/structure/pipes/trinary/mixer/m_mixer/update_icon()
+	if(length(connected_to))
+		icon_state = "mon"
+	else
+		icon_state = "moff"
 
 /obj/structure/pipes/trinary/mixer/m_mixer/create_valid_directions()
 	switch(dir)

@@ -193,6 +193,18 @@
 	* mob/RangedAttack(atom,params) - used only ranged, only used for tk and laser eyes but could be changed
 */
 
+/*
+	AI ClickOn()
+
+	Note currently ai is_mob_restrained() returns 0 in all cases,
+	therefore restrained code has been removed
+
+	The AI can double click to move the camera (this was already true but is cleaner),
+	or double click a mob to track them.
+
+	Note that AI have no need for the adjacency proc, and so this proc is a lot cleaner.
+*/
+
 /mob/proc/click(atom/A, list/mods)
 	if(!client || !client.remote_control)
 		return FALSE
@@ -254,7 +266,9 @@
 	in human click code to allow glove touches only at melee range.
 */
 /mob/proc/UnarmedAttack(atom/A, proximity_flag, click_parameters)
-	return
+	if(!client || !client.remote_control)
+		return FALSE
+	A.attack_remote(src)
 
 /*
 	Ranged unarmed attack:
@@ -265,7 +279,9 @@
 	animals lunging, etc.
 */
 /mob/proc/RangedAttack(atom/A, params)
-	return
+	if(!client || !client.remote_control)
+		return FALSE
+	A.attack_remote(src)
 
 /*
 	Restrained ClickOn
