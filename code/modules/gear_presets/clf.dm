@@ -10,7 +10,7 @@
 
 /datum/equipment_preset/clf/New()
 	. = ..()
-	languages = list(LANGUAGE_SPANISH, pick_weight(list(LANGUAGE_ENGLISH = 5, LANGUAGE_JAPANESE = 3, LANGUAGE_RUSSIAN = 2, LANGUAGE_CHINESE = 2)))
+	languages += pick_weight(list(LANGUAGE_ENGLISH = 5, LANGUAGE_JAPANESE = 3, LANGUAGE_RUSSIAN = 2, LANGUAGE_CHINESE = 2))
 	access = get_access(ACCESS_LIST_CLF_BASE)
 
 /datum/equipment_preset/clf/load_name(mob/living/carbon/human/new_human, randomise)
