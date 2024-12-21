@@ -1,5 +1,6 @@
 /datum/equipment_preset/clf
 	name = FACTION_CLF
+	languages = list(LANGUAGE_SPANISH)
 	assignment = JOB_CLF
 	rank = FACTION_CLF
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
