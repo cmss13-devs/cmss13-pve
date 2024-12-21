@@ -322,6 +322,9 @@ GLOBAL_LIST_EMPTY(personal_closets)
 			if(current_gear.allowed_origins && !(new_human.origin in current_gear.allowed_origins))
 				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Invalid Origin"))
 				return
+			if(!current_gear.special_conditions)
+				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Special conditions not met."))
+				return
 			new current_gear.path(closet_to_spawn_in)
 
 	//Gives ranks to the ranked
