@@ -4,6 +4,7 @@
 	faction_group = list(FACTION_MARSHAL, FACTION_MARINE)
 	rank = JOB_CMB
 	idtype = /obj/item/card/id/deputy
+	languages = list(LANGUAGE_ENGLISH)
 	var/human_versus_human = FALSE
 	var/headset_type = /obj/item/device/radio/headset/distress/CMB/limited
 
