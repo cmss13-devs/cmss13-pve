@@ -10,7 +10,7 @@
 
 /datum/equipment_preset/cmb/New()
 	. = ..()
-	languages = list(LANGUAGE_ENGLISH, pick_weight(list(LANGUAGE_SPANISH = 5, LANGUAGE_JAPANESE = 3, LANGUAGE_RUSSIAN = 1, LANGUAGE_CHINESE = 1)))
+	languages += pick_weight(list(LANGUAGE_SPANISH = 5, LANGUAGE_JAPANESE = 3, LANGUAGE_RUSSIAN = 1, LANGUAGE_CHINESE = 1))
 	access = get_access(ACCESS_LIST_UA)
 
 /datum/equipment_preset/cmb/load_name(mob/living/carbon/human/new_human, randomise)
