@@ -316,7 +316,7 @@
 			SPAN_WARNING("You see a gush of blood spray from [src]'s [O.display_name]!"),
 			SPAN_HIGHDANGER("Blood sprays from your [O.display_name]!"),
 			SPAN_HIGHDANGER("You hear something spray violently!"))
-	for(var/i = 1 to ceil(src.blood_volume/BLOOD_VOLUME_BAD))
+	for(var/i = 1 to ceil(src.blood_volume/180))
 		T = get_step(T, spray_dir)
 		if(T.density)
 			break
