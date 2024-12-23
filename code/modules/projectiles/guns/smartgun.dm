@@ -42,7 +42,7 @@
 	var/accuracy_improvement = 0
 	var/auto_fire = 0
 	var/motion_detector = 0
-	var/drain = 20
+	var/drain = 40
 	var/range = 7
 	var/angle = 2
 	var/list/angle_list = list(180,135,90,60,30)
@@ -694,14 +694,10 @@
 	linked_human = null
 
 /obj/item/weapon/gun/smartgun/dirty
-	name = "\improper M56D 'Dirty' smartgun"
-	desc = "The actual firearm in the 4-piece M56D Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
-	current_mag = /obj/item/ammo_magazine/smartgun/dirty
-	ammo = /obj/item/ammo_magazine/smartgun/dirty
-	ammo_primary = /datum/ammo/bullet/smartgun/dirty//Toggled ammo type
-	ammo_secondary = /datum/ammo/bullet/smartgun/dirty/armor_piercing///Toggled ammo type
-	ammo_tertiary = /datum/ammo/bullet/smartgun/dirty/impdet
+	name = "\improper M56A3 'Dirty' smartgun"
+	desc = "The actual firearm in the 4-piece M56A3 Smartgun System. Ruggedized electronics and a slightly lighter frame are the only differences between this and the standard UA-issue A2 model.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
+	drain = 30	//Slightly more power effictient than the basic model
 
 /obj/item/weapon/gun/smartgun/dirty/Initialize(mapload, ...)
 	. = ..()
@@ -710,8 +706,13 @@
 
 //TERMINATOR SMARTGUN
 /obj/item/weapon/gun/smartgun/dirty/elite
-	name = "\improper M56T 'Terminator' smartgun"
-	desc = "The actual firearm in the 4-piece M56T Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	name = "\improper M56A3-T 'Terminator' smartgun"
+	current_mag = /obj/item/ammo_magazine/smartgun/dirty
+	ammo = /obj/item/ammo_magazine/smartgun/dirty
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/dirty //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/dirty ///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet/dirty
+	desc = "The actual firearm in the 4-piece M56A3-T Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 
 /obj/item/weapon/gun/smartgun/dirty/elite/Initialize(mapload, ...)
 	. = ..()
@@ -732,8 +733,8 @@
 // CLF SMARTGUN
 
 /obj/item/weapon/gun/smartgun/clf
-	name = "\improper M56B 'Freedom' smartgun"
-	desc = "The actual firearm in the 4-piece M56B Smartgun System. Essentially a heavy, mobile machinegun. This one has the CLF logo carved over the manufacturing stamp.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	name = "\improper M56A2 'Freedom' smartgun"
+	desc = "The actual firearm in the 4-piece M56A2 Smartgun System. Essentially a heavy, mobile machinegun. This one has the CLF logo carved over the manufacturing stamp.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 
 /obj/item/weapon/gun/smartgun/clf/Initialize(mapload, ...)
 	. = ..()
@@ -774,9 +775,9 @@
 	desc = "The actual firearm in the 2-piece L56A2 Smartgun System. This Variant is used by the Three World Empires Royal Marines Commando units.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	current_mag = /obj/item/ammo_magazine/smartgun/holo_targetting
 	ammo = /obj/item/ammo_magazine/smartgun/holo_targetting
-	ammo_primary = /datum/ammo/bullet/smartgun/holo_target //Toggled ammo type
-	ammo_secondary = /datum/ammo/bullet/smartgun/holo_target/ap ///Toggled ammo type
-	ammo_tertiary = /datum/ammo/bullet/smartgun/holo_target/impdet
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/holo_target //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/holo_target/ap ///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/holo_target/impdet
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "magsg"
@@ -788,6 +789,6 @@
 	MD.iff_signal = FACTION_TWE
 
 /obj/item/weapon/gun/smartgun/silenced
-	name = "XM56E smartgun"
+	name = "XM56A4 smartgun"
 	desc = "An experimental smartgun variant currently undergoing field testing. This model is outfitted with integrated suppressor and modified internal mechanism."
 	starting_attachment_types = list(/obj/item/attachable/smartbarrel/suppressed)
