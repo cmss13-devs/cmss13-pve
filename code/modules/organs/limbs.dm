@@ -1260,8 +1260,8 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 				owner.pain.apply_pain(PAIN_BONE_BREAK_SPLINTED)
 			. = TRUE
 			owner.update_med_icon()
-
-/obj/limb/proc/apply_tourniquet(obj/item/stack/medical/splint/S, mob/living/user, mob/living/carbon/human/target, indestructible_splints = FALSE, datum/effects/bleeding/internal/I)
+/*
+/obj/limb/proc/apply_tourniquet(obj/item/stack/medical/splint/S, mob/living/user, mob/living/carbon/human/target, datum/effects/bleeding/internal/I)
 	var/time_to_take = 5 SECONDS
 	if(target == user)
 		user.visible_message(SPAN_WARNING("[user] fumbles with [S]"), SPAN_WARNING("You fumble with [S]..."))
@@ -1276,7 +1276,7 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 		I.has_been_bandaged = TRUE
 		return TRUE
 	return FALSE
-
+*/
 ///called when limb is removed or robotized, any ongoing surgery and related vars are reset unless set otherwise.
 /obj/limb/proc/reset_limb_surgeries()
 	owner.incision_depths[name] = SURGERY_DEPTH_SURFACE

@@ -312,11 +312,11 @@
 
 /mob/living/carbon/human/proc/spray_blood(turf/T, spray_dir, limb)
 	var/obj/limb/O = limb
-	src.visible_message(\
+	visible_message(\
 			SPAN_WARNING("You see a gush of blood spray from [src]'s [O.display_name]!"),
 			SPAN_HIGHDANGER("Blood sprays from your [O.display_name]!"),
 			SPAN_HIGHDANGER("You hear something spray violently!"))
-	for(var/i = 1 to ceil(src.blood_volume/150))
+	for(var/i = 1 to ceil(src.blood_volume/BLOOD_VOLUME_BAD))
 		T = get_step(T, spray_dir)
 		if(T.density)
 			break
@@ -325,18 +325,13 @@
 			if(ishuman(sprayed_with_blood))
 				if(!sprayed_with_blood.body_position == LYING_DOWN)
 					sprayed_with_blood.add_mob_blood(src)
-					//if(rand_zone() == "head")
 					to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!"))
 					sprayed_with_blood.apply_effect(9, EYE_BLUR)
 					break
-
-		//var/obj/effect/decal/cleanable/blood/blood_spraying
 		var/b_color = species.blood_color
 		var/obj/effect/decal/cleanable/blood/blood_spraying = new /obj/effect/decal/cleanable/blood(T, b_color, TRUE)
 		blood_spraying.icon_state = "squirt[spray_dir]"
 		blood_spraying.pixel_x = rand(-2,2)
 		blood_spraying.pixel_y = rand(-2,2)
 		playsound(src, 'sound/effects/blood_squirt.ogg', 50, TRUE)
-
-		//blood_spraying = new /obj/effect/decal/cleanable/blood/splatter(T, b_color)
 
