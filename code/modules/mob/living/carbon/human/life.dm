@@ -12,7 +12,8 @@
 		if(hardcore)
 			qdel(src) //We just delete the corpse on WO to keep things simple and lag-free
 		return
-
+	if(!limbs.len)
+		qdel(src)
 	..()
 
 	blinded = FALSE

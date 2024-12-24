@@ -1090,3 +1090,17 @@
 	chemclass = CHEM_CLASS_SPECIAL
 	properties = list(PROPERTY_TRANSFORMATIVE = 4, PROPERTY_NUTRITIOUS = 3, PROPERTY_HEMOGENIC = 1)
 	flags = REAGENT_SCANNABLE
+
+/datum/reagent/flash_eating
+	name = "Flash Eating Bacteria"
+	id = "fbacteria"
+	description = "Solution of flash eating bacteria that can rapidly dispose of any corpse."
+	color = COLOR_PURPLE
+
+/datum/reagent/flash_eating/reaction_mob(mob/M, method=TOUCH, volume, permeable)
+	if(method == TOUCH && ishuman(M))
+		var/mob/living/carbon/human/human = M
+		for(var/obj/limb/limb in human.limbs)
+			var/obj/effect/xenomorph/acid/acid = new(limb, limb)
+			acid.ticks_left = rand(2, 4)
+

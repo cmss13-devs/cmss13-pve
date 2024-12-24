@@ -425,6 +425,11 @@
 	else if(istype(acid_t, /obj/structure/barricade))
 		pass() // Don't delete it, just damaj
 
+	else if(istype(acid_t, /obj/limb))
+		var/obj/limb/limb = acid_t
+		limb.drop_item = TRUE
+		qdel(acid_t)
+
 	else
 		for(var/mob/mob in acid_t)
 			mob.forceMove(loc)

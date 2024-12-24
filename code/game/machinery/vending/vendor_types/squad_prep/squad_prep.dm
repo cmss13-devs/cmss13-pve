@@ -373,7 +373,7 @@
 		list("USCM Uniform", floor(scale * 15), /obj/item/clothing/under/marine, VENDOR_ITEM_REGULAR),
 		list("Brown Marine Combat Gloves", floor(scale * 15), /obj/item/clothing/gloves/marine/brown, VENDOR_ITEM_REGULAR),
 		list("Black Marine Combat Gloves", floor(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
-		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils, VENDOR_ITEM_REGULAR),
+		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils/support, VENDOR_ITEM_REGULAR),
 		list("M10 Pattern Marine Helmet", floor(scale * 15), /obj/item/clothing/head/helmet/marine, VENDOR_ITEM_REGULAR),
 		list("M5 Pattern Camera Headset", floor(scale * 15), /obj/item/device/overwatch_camera, VENDOR_ITEM_REGULAR),
 
@@ -773,6 +773,7 @@
 		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("M5 'Night Raider' bayonet", round(scale * 5), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
+		list("M6 Folding Barricades", round(scale * 5), /obj/item/stack/folding_barricade/three, VENDOR_ITEM_REGULAR),
 		)
 
 
