@@ -379,10 +379,6 @@
 /turf/template_noop,
 /area/shuttle/midway)
 "DO" = (
-/obj/structure/machinery/light{
-	dir = 4;
-	pixel_x = 14
-	},
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
