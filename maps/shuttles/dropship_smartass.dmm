@@ -1,24 +1,24 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aB" = (
 /turf/open/shuttle/dropship/light_grey_bottom_right,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "aH" = (
 /obj/effect/attach_point/crew_weapon/midway,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "bG" = (
 /obj/effect/attach_point/fuel/tripoli{
 	dir = 1
 	},
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "28"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "bN" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "22"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "cb" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 26;
@@ -32,12 +32,12 @@
 	dir = 4
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "cD" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "69"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "dI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -48,32 +48,32 @@
 	pixel_y = -1
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "dN" = (
-/turf/closed/shuttle/tripoli/transparent{
+/turf/closed/shuttle/smartass/transparent{
 	icon_state = "97a"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "dX" = (
 /obj/structure/bed/chair/dropship/passenger/folded{
 	pixel_y = 8;
 	buckling_y = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "ed" = (
 /turf/template_noop,
 /area/space)
 "eD" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "30"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "eN" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "73"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "eP" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
@@ -84,106 +84,111 @@
 	dir = 8
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "fk" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/effect/attach_point/weapon/tripoli/left_wing,
+/obj/structure/shuttle/part/smartass{
 	icon_state = "61"
 	},
-/obj/effect/attach_point/weapon/tripoli/left_wing,
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "fq" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "5"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "fZ" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "71"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
+"gO" = (
+/turf/closed/shuttle/smartass{
+	icon_state = "43"
+	},
+/area/shuttle/smartass)
 "hx" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "29"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "hS" = (
-/turf/closed/shuttle/tripoli/transparent{
+/turf/closed/shuttle/smartass/transparent{
 	icon_state = "89b"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "ih" = (
-/obj/structure/shuttle/part/tripoli/transparent{
+/obj/structure/shuttle/part/smartass/transparent{
 	icon_state = "95a"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "iS" = (
-/obj/structure/shuttle/part/tripoli/gunpod_prop,
+/obj/structure/shuttle/part/smartass/gunpod_prop,
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "jD" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "lj" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/effect/attach_point/weapon/tripoli/left_fore,
+/obj/structure/shuttle/part/smartass{
 	icon_state = "85"
 	},
-/obj/effect/attach_point/weapon/tripoli/left_fore,
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "lv" = (
-/turf/closed/shuttle/tripoli/transparent{
+/turf/closed/shuttle/smartass/transparent{
 	icon_state = "86a"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "ma" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "83"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "mm" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "17"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "mr" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "26"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "nD" = (
-/obj/structure/shuttle/part/tripoli,
+/obj/structure/shuttle/part/smartass,
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "oF" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "7"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "oU" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "75"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "pw" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "34"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "qf" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "21"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "ql" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
@@ -194,122 +199,117 @@
 	dir = 4
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "qo" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "74"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "qH" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "104"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "qR" = (
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "sb" = (
 /obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
-	name = "\improper Tripoli"
+	name = "\improper Smart Ass"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "sD" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "42"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "tD" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "24"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "vJ" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/effect/attach_point/electronics/tripoli,
+/obj/structure/shuttle/part/smartass{
 	icon_state = "84"
 	},
-/obj/effect/attach_point/electronics/tripoli,
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "wy" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/effect/attach_point/weapon/tripoli/right_wing,
+/obj/structure/shuttle/part/smartass{
 	icon_state = "65"
 	},
-/obj/effect/attach_point/weapon/tripoli/right_wing,
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "wN" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "46"
 	},
 /obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
-	name = "\improper Tripoli"
+	name = "\improper Smart Ass"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "xx" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "6"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "ye" = (
 /turf/open/shuttle/dropship/light_grey_top_right,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "yB" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "4"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "yS" = (
 /obj/effect/attach_point/crew_weapon/tripoli,
-/obj/docking_port/mobile/marine_dropship/tripoli,
+/obj/docking_port/mobile/marine_dropship/smartass,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
-"yU" = (
-/turf/closed/shuttle/tripoli{
-	icon_state = "81"
-	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "zl" = (
 /turf/open/shuttle/dropship/light_grey_bottom_left,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "zu" = (
-/obj/structure/shuttle/part/tripoli/transparent/nosecone{
+/obj/structure/shuttle/part/smartass/transparent/nosecone{
 	icon_state = "102"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "zB" = (
 /turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "zC" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "72"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "zS" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "16"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "zX" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "91"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Ac" = (
-/turf/closed/shuttle/tripoli/transparent{
+/turf/closed/shuttle/smartass/transparent{
 	icon_state = "86b"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Bg" = (
 /obj/structure/phone_base{
 	dir = 4;
@@ -317,8 +317,8 @@
 	pixel_y = 12;
 	layer = 3.1;
 	phone_category = "Dropship";
-	name = "Tripoli telephone receiver";
-	phone_id = "Tripoli"
+	name = "Smart Ass telephone receiver";
+	phone_id = "Smart Ass"
 	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
 	dir = 1;
@@ -330,27 +330,26 @@
 	pixel_x = 6
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Bz" = (
-/obj/structure/machinery/camera/autoname/golden_arrow/tripoli{
+/obj/structure/machinery/camera/autoname/sulaco/smartass{
 	dir = 4
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Cb" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "8"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Cf" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "3"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Cu" = (
-/obj/structure/machinery/camera/autoname/golden_arrow/tripoli,
 /obj/structure/extinguisher_cabinet/lifeboat,
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
@@ -359,8 +358,9 @@
 	pixel_y = 26;
 	pixel_x = -10
 	},
+/obj/structure/machinery/camera/autoname/sulaco/smartass,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "CD" = (
 /obj/structure/machinery/light/double{
 	dir = 4
@@ -369,61 +369,66 @@
 	dir = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "CX" = (
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Dy" = (
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "DG" = (
-/turf/closed/shuttle/tripoli/transparent{
+/turf/closed/shuttle/smartass/transparent{
 	icon_state = "78"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "DW" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "35"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
+"Eb" = (
+/turf/closed/shuttle/smartass{
+	icon_state = "36"
+	},
+/area/shuttle/smartass)
 "Eq" = (
 /turf/open/shuttle/dropship/light_grey_top_left,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Ev" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "23"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Ew" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "67"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "EM" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "103"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Fm" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "70"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Go" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "2"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Gt" = (
-/turf/closed/shuttle/tripoli/transparent{
+/turf/closed/shuttle/smartass/transparent{
 	icon_state = "80"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Jr" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -436,12 +441,12 @@
 	dir = 4
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "JC" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "31"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "JV" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -454,64 +459,69 @@
 	dir = 8
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
+"Kj" = (
+/turf/closed/shuttle/smartass{
+	icon_state = "77"
+	},
+/area/shuttle/smartass)
 "KU" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "20"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Ly" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "25"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Mh" = (
 /obj/effect/attach_point/fuel/tripoli{
 	dir = 1
 	},
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "32"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "NV" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "38"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Oa" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "62"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Ot" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /obj/structure/machinery/door/airlock/hatch/cockpit{
 	dir = 1
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "OF" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "39"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "OI" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "49"
 	},
 /obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
-	name = "\improper Tripoli"
+	name = "\improper Smart Ass"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "OM" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/effect/attach_point/weapon/tripoli/right_fore,
+/obj/structure/shuttle/part/smartass{
 	icon_state = "90"
 	},
-/obj/effect/attach_point/weapon/tripoli/right_fore,
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "QE" = (
 /obj/structure/platform{
 	dir = 1
@@ -522,18 +532,18 @@
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Rd" = (
-/obj/structure/shuttle/part/tripoli/transparent/nosecone{
+/obj/structure/shuttle/part/smartass/transparent/nosecone{
 	icon_state = "100"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "RD" = (
-/turf/closed/shuttle/tripoli/transparent{
+/turf/closed/shuttle/smartass/transparent{
 	icon_state = "89a"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Sl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -543,33 +553,31 @@
 	icon_state = "S";
 	pixel_y = 2
 	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1{
-	name = "\improper Tripoli cargo door"
-	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds6,
 /turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Sr" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "47"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "SW" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "48"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Ur" = (
-/obj/structure/shuttle/part/tripoli{
+/obj/structure/shuttle/part/smartass{
 	icon_state = "66"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Us" = (
 /obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
-	name = "\improper Tripoli"
+	name = "\improper Smart Ass"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "VM" = (
 /obj/structure/machinery/light/double{
 	dir = 8
@@ -578,64 +586,64 @@
 	dir = 4
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "VP" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "33"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "VR" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "64"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "WS" = (
-/obj/structure/shuttle/part/tripoli/transparent{
+/obj/structure/shuttle/part/smartass/transparent{
 	icon_state = "99a"
 	},
 /turf/template_noop,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Xr" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
 	icon_state = "p_stair_full";
 	pixel_y = 22
 	},
-/obj/structure/machinery/computer/dropship_weapons/tripoli/small{
-	pixel_y = 8;
-	pixel_x = 8
-	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
 	dir = 1;
 	pixel_x = 8;
 	layer = 5
 	},
+/obj/structure/machinery/computer/dropship_weapons/smartass/small{
+	step_x = 8;
+	step_y = 8
+	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "XI" = (
-/turf/closed/shuttle/tripoli{
+/turf/closed/shuttle/smartass{
 	icon_state = "27"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "XT" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "Zf" = (
-/turf/closed/shuttle/tripoli{
-	icon_state = "43"
+/turf/closed/shuttle/smartass{
+	icon_state = "37"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "ZQ" = (
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 "ZW" = (
-/turf/closed/shuttle/tripoli{
-	icon_state = "77"
+/turf/closed/shuttle/smartass{
+	icon_state = "81"
 	},
-/area/shuttle/tripoli)
+/area/shuttle/smartass)
 
 (1,1,1) = {"
 ed
@@ -678,13 +686,13 @@ ed
 ed
 ed
 lj
-ZW
+Kj
 cb
 VM
 jD
 jD
 Sr
-sD
+Eb
 eD
 tD
 EM
@@ -750,7 +758,7 @@ ed
 ed
 ed
 OM
-yU
+ZW
 Cu
 CD
 XT
@@ -772,7 +780,7 @@ ma
 eN
 cD
 VR
-Zf
+gO
 OI
 NV
 Mh

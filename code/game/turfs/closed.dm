@@ -314,6 +314,22 @@
 /turf/closed/shuttle/tripoli/transparent
 	opacity = FALSE
 
+/turf/closed/shuttle/bugstomper
+	name = "\improper Bug Stomper"
+	icon = 'icons/turf/dropship4.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/bugstomper/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/smartass
+	name = "\improper Smart Ass"
+	icon = 'icons/turf/dropship.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/smartass/transparent
+	opacity = FALSE
+
 /turf/closed/shuttle/twe_dropship
 	name = "\improper UD4-UK"
 	icon = 'icons/turf/twedropship.dmi'

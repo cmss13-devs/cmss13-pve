@@ -125,6 +125,16 @@
 /obj/structure/machinery/camera/autoname/golden_arrow/tripoli
 	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_TRIPOLI)
 
+/obj/structure/machinery/camera/autoname/sulaco
+	name = "military-grade camera"
+	network = list(CAMERA_NET_SULACO)
+
+/obj/structure/machinery/camera/autoname/sulaco/bugstomper
+	network = list(CAMERA_NET_SULACO, CAMERA_NET_BUGSTOMPER)
+
+/obj/structure/machinery/camera/autoname/sulaco/smartass
+	network = list(CAMERA_NET_SULACO, CAMERA_NET_SMARTASS)
+
 //used by the landing camera dropship equipment. Do not place them right under where the dropship lands.
 //Should place them near each corner of your LZs.
 /obj/structure/machinery/camera/autoname/lz_camera

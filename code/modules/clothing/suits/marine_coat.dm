@@ -370,6 +370,10 @@
 	item_state = "corporate_brown"
 	has_buttons = FALSE
 
+/obj/item/clothing/suit/storage/jacket/marine/corporate/brown/leather
+	name = "brown leather jacket"
+	desc = "A brown leather jacket, perfect for covering up while scoping out a derelict colony."
+
 /obj/item/clothing/suit/storage/jacket/marine/corporate/blue
 	name = "blue suit jacket"
 	desc = "A blue suit jacket."

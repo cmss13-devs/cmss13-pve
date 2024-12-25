@@ -6,6 +6,10 @@
 	var/owner
 	var/job = "Rifleman"
 	var/has_cryo_gear = TRUE
+	var/has_officer_gear = FALSE
+	var/has_liaison_gear = FALSE
+	var/has_advisor_gear = FALSE
+	var/has_pilot_gear = FALSE
 
 /obj/structure/closet/secure_closet/marine_personal/get_examine_text(mob/user)
 	. = ..()
@@ -29,4 +33,45 @@
 	if(has_cryo_gear)
 		new /obj/item/clothing/under/marine(src)
 		new /obj/item/clothing/shoes/marine/jungle/knife(src)
-		new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
+		new /obj/item/device/radio/headset/almayer/marine(src)
+	if(has_officer_gear)
+		new /obj/item/clothing/under/marine/officer/boiler(src)
+		new /obj/item/clothing/suit/storage/jacket/marine/service(src)
+		new /obj/item/clothing/under/marine/officer/bridge(src)
+	if(has_liaison_gear)
+		new /obj/item/clothing/under/liaison_suit/outing(src)
+		new /obj/item/clothing/under/liaison_suit/outing/red(src)
+		new /obj/item/clothing/under/liaison_suit(src)
+		new /obj/item/clothing/shoes/laceup/brown(src)
+		new /obj/item/clothing/shoes/marine/civilian(src)
+		new /obj/item/device/radio/headset/almayer/marine(src)
+	if(has_advisor_gear)
+		new /obj/item/clothing/under/colonist(src)
+		new /obj/item/clothing/under/colonist/boilersuit/darkblue(src)
+		new /obj/item/clothing/under/colonist/boilersuit/khaki(src)
+		new /obj/item/clothing/suit/storage/jacket/marine/corporate/brown/leather(src)
+		new /obj/item/clothing/shoes/stompers(src)
+		new /obj/item/device/radio/headset/almayer/marine(src)
+	if(has_pilot_gear)
+		new /obj/item/clothing/under/marine/officer/pilot/pve(src)
+		new /obj/item/clothing/shoes/marine/knife(src)
+		new /obj/item/device/radio/headset/almayer/marine(src)
+
+/obj/structure/closet/secure_closet/marine_personal/platooncommander
+	job = "Platoon Commander"
+	has_officer_gear = TRUE
+
+/obj/structure/closet/secure_closet/marine_personal/liaison
+	job = "Corporate Liaison"
+	has_cryo_gear = FALSE
+	has_liaison_gear = TRUE
+
+/obj/structure/closet/secure_closet/marine_personal/advisor
+	job = "Civilian Advisor"
+	has_cryo_gear = FALSE
+	has_advisor_gear = TRUE
+
+/obj/structure/closet/secure_closet/marine_personal/pilot
+	job = "Dropship Pilot"
+	has_cryo_gear = FALSE
+	has_pilot_gear = TRUE

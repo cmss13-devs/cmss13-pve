@@ -936,6 +936,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	specialty = "M30 tactical"
 
+/obj/item/clothing/head/helmet/marine/pilot/standard
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
 /obj/item/clothing/head/helmet/upp/marinepilot/tex
 	name = "\improper custom Mk30 tactical helmet"
 	desc = "Standard flight helmet of the UA treaty forces. Probably one of the few good things that came out of the Joint Procurement Office. Eyepiece allows for augmented reality effects, giving relevant data in real time. This one has the Texan flag painted on it."

@@ -443,7 +443,7 @@
 
 /obj/structure/shuttle/part/smartass
 	name = "\improper Smart Ass"
-	icon = 'icons/turf/dropship2.dmi'
+	icon = 'icons/turf/dropship.dmi'
 	icon_state = "1"
 	opacity = TRUE
 
@@ -457,6 +457,6 @@
 /obj/structure/shuttle/part/smartass/gunpod_prop
 	name = "\improper Smart Ass"
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
-	icon = 'icons/turf/dropship4.dmi'
+	icon = 'icons/turf/dropship.dmi'
 	icon_state = "101a"
 	opacity = FALSE

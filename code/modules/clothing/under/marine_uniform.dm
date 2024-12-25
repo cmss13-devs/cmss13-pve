@@ -176,8 +176,8 @@
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/officer/pilot
-	name = "pilot officer bodysuit"
-	desc = "A bodysuit worn by pilot officers of the USCM, good for operating express elevators to hell. Some armor protection provided by the venlar armor weave against shrapnel and ballistics."
+	name = "flightsuit"
+	desc = "A bodysuit worn by pilots of the USCM, good for operating express elevators to hell. Some armor protection provided by the venlar armor weave against shrapnel and ballistics."
 	icon_state = "pilot_flightsuit"
 	item_state = "pilot_flightsuit"
 	worn_state = "pilot_flightsuit"
@@ -185,6 +185,9 @@
 	flags_atom = NO_NAME_OVERRIDE
 	flags_cold_protection = ICE_PLANET_MIN_COLD_PROT
 	suit_restricted = list(/obj/item/clothing/suit/armor/vest/pilot, /obj/item/clothing/suit/storage/marine/light/vest/dcc, /obj/item/clothing/suit/storage/jacket/marine/pilot, /obj/item/clothing/suit/storage/marine/light/vest)
+
+/obj/item/clothing/under/marine/officer/pilot/pve
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/officer/pilot/flight
 	name = "tactical pilot officer flightsuit"
