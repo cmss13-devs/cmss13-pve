@@ -9353,7 +9353,7 @@
 /area/golden_arrow/platoonprep)
 "aFo" = (
 /obj/structure/closet/secure_closet/marine_personal/platooncommander{
-	step_x = -7
+	pixel_x = -7
 	},
 /obj/structure/closet/secure_closet/marine_personal/advisor{
 	pixel_x = 8
@@ -17089,7 +17089,7 @@
 	job = "Smartgunner"
 	},
 /obj/structure/closet/secure_closet/marine_personal/liaison{
-	step_x = -7
+	pixel_x = -7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
