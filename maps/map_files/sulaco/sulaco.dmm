@@ -425,7 +425,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/cleanable/blood/oil,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -1714,14 +1713,15 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoonarmory)
 "aga" = (
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_y = 11;
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_y = 15;
 	pixel_x = -7
 	},
-/obj/item/ammo_box/magazine/vp70{
-	pixel_y = 3
+/obj/item/tool/screwdriver{
+	pixel_x = 1;
+	icon_state = "screwdriver4"
 	},
-/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "agb" = (
@@ -2933,13 +2933,6 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/hangar)
-"ako" = (
-/obj/item/tool/crowbar/red{
-	pixel_x = -13;
-	pixel_y = -13
-	},
-/turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
 "akp" = (
 /obj/structure/surface/table/almayer,
@@ -4370,10 +4363,15 @@
 	layer = 2.52
 	},
 /obj/item/clothing/suit/armor/vest/pilot/standard{
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -6
 	},
 /obj/item/clothing/suit/armor/vest/pilot/standard{
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -8
+	},
+/obj/item/attachable/stock/vp70{
+	pixel_y = 11
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
@@ -6272,16 +6270,6 @@
 /obj/item/defenses/handheld/sentry,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
-"avY" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/item/tool/wirecutters{
-	pixel_x = -8;
-	pixel_y = 18
-	},
-/turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/hangar)
 "awa" = (
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
@@ -6469,14 +6457,14 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/shotgunpump,
-/obj/item/clothing/head/helmet/marine/pilot/standard{
-	pixel_y = 12;
-	pixel_x = -7
+/obj/item/storage/box/guncase/shotgunpump/movie,
+/obj/item/clothing/head/helmet/upp/pilot/standard{
+	pixel_x = -6;
+	pixel_y = 10
 	},
-/obj/item/clothing/head/helmet/marine/pilot/standard{
-	pixel_x = 8;
-	pixel_y = 9
+/obj/item/clothing/head/helmet/upp/pilot/standard{
+	pixel_x = 7;
+	pixel_y = 12
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
@@ -7662,15 +7650,6 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/item/toy/plush/therapy/red{
-	desc = "An unapproved bootleg copy of the patented Sergeant Huggs. Looks like he's seen better days.";
-	force = 15;
-	layer = 4.1;
-	name = "Discharged Huggs";
-	pixel_y = 32;
-	throwforce = 15;
-	pixel_x = 5
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "azZ" = (
@@ -7990,6 +7969,14 @@
 "aAR" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_y = 11;
+	pixel_x = -7
+	},
+/obj/item/ammo_box/magazine/vp70{
+	pixel_y = 3
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
@@ -8472,13 +8459,6 @@
 "aCy" = (
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/synthcloset)
-"aCz" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/item/tool/warning_cone,
-/turf/open/floor/almayer/edge/smooth/corner/east,
-/area/golden_arrow/hangar)
 "aCA" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -9151,11 +9131,6 @@
 	pixel_y = -8;
 	pixel_x = 3;
 	layer = 3.1
-	},
-/obj/item/clothing/head/cmcap{
-	layer = 4.2;
-	pixel_y = 6;
-	pixel_x = 4
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
@@ -12704,10 +12679,7 @@
 	pixel_x = -11;
 	pixel_y = 5
 	},
-/obj/item/clothing/head/cmcap{
-	pixel_x = 1;
-	pixel_y = -3
-	},
+/obj/item/clothing/head/sulacocap/movie,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aRp" = (
@@ -13840,17 +13812,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
-"aVp" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	req_one_access_txt = "8;12;39;40";
-	req_access = list()
-	},
-/obj/item/reagent_container/food/drinks/cans/souto/lime{
-	pixel_y = 21;
-	pixel_x = 10
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonprep)
 "aVq" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -14652,10 +14613,7 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
-/obj/effect/spawner/prop_gun/m41aMK1{
-	pixel_y = -3;
-	pixel_x = 6
-	},
+/obj/item/clothing/gloves/marine/fingerless,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "aYq" = (
@@ -14752,14 +14710,6 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/tool/screwdriver{
-	pixel_x = 1;
-	icon_state = "screwdriver4"
-	},
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_y = 15;
-	pixel_x = -14
-	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1
 	},
@@ -25551,7 +25501,7 @@ aHV
 aPv
 aYI
 aIr
-aVp
+aQF
 afO
 aQF
 afO
@@ -30871,8 +30821,8 @@ aJZ
 aJZ
 aZf
 aHB
-aCz
-avY
+aiO
+aJZ
 aJZ
 agO
 aHB
@@ -31330,7 +31280,7 @@ abK
 aTC
 aHI
 aHI
-ako
+aHI
 abK
 aKX
 aHI
