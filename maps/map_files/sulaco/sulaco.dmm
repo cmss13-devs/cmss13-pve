@@ -6658,6 +6658,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/item/storage/belt/gun/smartgunner/garrow/alt,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "axr" = (
@@ -6982,6 +6983,7 @@
 	req_one_access = list();
 	name = "squad two smartgunner locker"
 	},
+/obj/item/storage/belt/gun/smartgunner/garrow/alt,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "ayj" = (
