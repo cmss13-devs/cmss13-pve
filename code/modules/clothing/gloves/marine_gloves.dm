@@ -26,6 +26,12 @@
 	icon_state = "brown"
 	item_state = "brown"
 
+/obj/item/clothing/gloves/marine/fingerless
+	name = "fingerless gloves"
+	desc = "A pair of black gloves. Unfortunately not insulated, but they are incredibly comfortable."
+	icon_state = "fingerless"
+	item_state = "fingerless"
+
 /obj/item/clothing/gloves/marine/specialist
 	name = "\improper B18 defensive gauntlets"
 	desc = "A pair of heavily armored gloves."

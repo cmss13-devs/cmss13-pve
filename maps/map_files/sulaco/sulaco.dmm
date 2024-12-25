@@ -5514,11 +5514,6 @@
 	icon_state = "case";
 	pixel_y = 10
 	},
-/obj/item/ammo_box/magazine/mk1{
-	layer = 3.1;
-	pixel_y = 14;
-	pixel_x = -2
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "asE" = (
@@ -7942,8 +7937,8 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aAu" = (
-/obj/structure/largecrate/supply/ammo/m41amk1,
-/obj/structure/largecrate/supply/ammo/m41amk1{
+/obj/structure/largecrate/supply/ammo/m41amk1/heap,
+/obj/structure/largecrate/supply/ammo/m41amk1/heap{
 	pixel_y = 10
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
@@ -9793,23 +9788,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aGm" = (
-/obj/item/ammo_magazine/shotgun/buckshot{
-	pixel_x = -5;
-	pixel_y = 13
-	},
-/obj/item/ammo_magazine/shotgun/buckshot{
-	pixel_x = -5;
-	pixel_y = 4
-	},
-/obj/item/ammo_magazine/shotgun{
-	pixel_x = 12;
-	pixel_y = 11
-	},
-/obj/item/ammo_magazine/shotgun{
-	pixel_x = 12;
-	pixel_y = 2
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/crowbar,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aGo" = (
@@ -10739,11 +10719,6 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/ammo_box/magazine/mk1{
-	layer = 3.1;
-	pixel_y = 13;
-	pixel_x = 3
-	},
 /obj/item/facepaint/sunscreen_stick{
 	pixel_y = 2;
 	pixel_x = -2;
@@ -10797,11 +10772,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "aJM" = (
-/obj/structure/largecrate/supply/ammo/m41amk1,
-/obj/structure/largecrate/supply/ammo/m41amk1{
+/obj/structure/largecrate/supply/ammo/m41amk1/heap{
 	pixel_x = 3;
 	pixel_y = 10
 	},
+/obj/structure/largecrate/supply/ammo/m41amk1/heap,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aJN" = (
@@ -10831,8 +10806,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "aJR" = (
-/obj/structure/largecrate/supply/ammo/m41amk1,
-/obj/structure/largecrate/supply/ammo/m41amk1{
+/obj/structure/largecrate/supply/ammo/m41amk1/heap,
+/obj/structure/largecrate/supply/ammo/m41amk1/heap{
 	pixel_x = -3;
 	pixel_y = 10
 	},
@@ -13175,11 +13150,6 @@
 /area/golden_arrow/hangar)
 "aSr" = (
 /obj/structure/largecrate/supply/motiondetectors,
-/obj/item/ammo_box/magazine/mk1{
-	layer = 3.1;
-	pixel_y = 14;
-	pixel_x = -12
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aSt" = (
@@ -15967,7 +15937,6 @@
 /obj/item/storage/box/guncase/flamer/fuel{
 	pixel_y = 8
 	},
-/obj/item/tool/crowbar,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "hbu" = (
@@ -17194,7 +17163,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "rZR" = (
-/obj/structure/gun_rack/mk221{
+/obj/structure/gun_rack/flamer/unloaded{
 	pixel_x = -11
 	},
 /obj/structure/gun_rack/flamer/unloaded{

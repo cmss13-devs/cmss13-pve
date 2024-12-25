@@ -106,6 +106,9 @@
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
+/obj/item/ammo_magazine/rifle/m41aMK1/movie
+	default_ammo = /datum/ammo/bullet/rifle/heap
+
 /obj/item/ammo_magazine/rifle/m41aMK1/incendiary
 	name = "\improper M41A MK1 incendiary magazine (10x24mm)"
 	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm incendiary rounds."
