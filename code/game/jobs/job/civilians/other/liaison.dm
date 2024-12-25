@@ -22,3 +22,16 @@
 	name = JOB_CORPORATE_LIAISON
 	icon_state = "cl_spawn"
 	job = /datum/job/civilian/liaison
+
+/datum/job/civilian/advisor
+	title = JOB_ADVISOR
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Wey-Yu corporate office"
+	selection_class = "job_ca"
+	entry_message_body = "You are the lone survivor of a xenomorph attack, making you a relevant advisor to the mission that will handle the mysterious new life form."
+
+/obj/effect/landmark/start/advisor
+	name = JOB_ADVISOR
+	icon_state = "ca_spawn"
+	job = /datum/job/civilian/advisor

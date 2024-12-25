@@ -46,6 +46,7 @@
 GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 
 #define JOB_COLONIST "Colonist"
+#define JOB_ADVISOR "Civilian Advisor"
 #define JOB_PASSENGER "Passenger"
 #define JOB_SURVIVOR "Survivor"
 #define JOB_SYNTH_SURVIVOR "Synth Survivor"
