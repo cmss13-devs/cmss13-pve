@@ -304,6 +304,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/sulacocap
 	cost = 1
 
+/datum/gear/headwear/uscm/cap/sulaco/movie
+	display_name = "USS Sulaco cap"
+	path = /obj/item/clothing/head/sulacocap/movie
+	cost = 3
+
 /datum/gear/headwear/uscm/cap/flap
 	display_name = "USCM flapcap"
 	path = /obj/item/clothing/head/cmcap/flap

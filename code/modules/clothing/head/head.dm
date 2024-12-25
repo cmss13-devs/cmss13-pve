@@ -206,6 +206,10 @@
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 
+/obj/item/clothing/head/sulacocap/movie
+	name = "\improper USS Sulaco Cap"
+	desc = "A casual cap able to be purchased and worn by Marines stationed on the USS Sulaco. While it only protects from the sun, it's much more comfortable than a helmet."
+
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
 	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
