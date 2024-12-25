@@ -144,6 +144,30 @@
 /obj/docking_port/mobile/marine_dropship/midway/get_transit_path_type()
 	return /turf/open/space/transit/dropship/midway
 
+/obj/docking_port/mobile/marine_dropship/bugstomper
+	name = "Bug Stomper"
+	id = DROPSHIP_BUGSTOMPER
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/bugstomper/get_transit_path_type()
+	return /turf/open/space/transit/dropship/bugstomper
+
+/obj/docking_port/mobile/marine_dropship/smartass
+	name = "Smart Ass"
+	id = DROPSHIP_SMARTASS
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/smartass/get_transit_path_type()
+	return /turf/open/space/transit/dropship/smartass
+
 /obj/docking_port/mobile/marine_dropship/upp
 	name = "Akademia Nauk"
 	id = DROPSHIP_UPP
@@ -443,3 +467,11 @@
 /datum/map_template/shuttle/tripoli
 	name = "Tripoli"
 	shuttle_id = DROPSHIP_TRIPOLI
+
+/datum/map_template/shuttle/bugstomper
+	name = "Bug Stomper"
+	shuttle_id = DROPSHIP_BUGSTOMPER
+
+/datum/map_template/shuttle/smartass
+	name = "smart Ass"
+	shuttle_id = DROPSHIP_SMARTASS

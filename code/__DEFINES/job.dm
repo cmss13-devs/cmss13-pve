@@ -16,6 +16,7 @@
 #define SQUAD_SOLAR "Solar Devils"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_MOVIE "2nd Battalion Bravo Team"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"

@@ -320,6 +320,7 @@
 
 /obj/structure/shuttle/part/dropship3/transparent/right_outer_bottom_wing
 	icon_state = "6"
+
 /obj/structure/shuttle/part/midway
 	name = "\improper Midway"
 	icon = 'icons/turf/dropship4.dmi'
@@ -417,5 +418,45 @@
 	name = "\improper Tripoli"
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
 	icon = 'icons/turf/dropship.dmi'
+	icon_state = "101a"
+	opacity = FALSE
+
+/obj/structure/shuttle/part/bugstomper
+	name = "\improper Bug Stomper"
+	icon = 'icons/turf/dropship4.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/bugstomper/transparent
+	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
+	opacity = FALSE
+
+/obj/structure/shuttle/part/bugstomper/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor complex."
+
+/obj/structure/shuttle/part/bugstomper/gunpod_prop
+	name = "\improper Bug Stomper"
+	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
+	icon = 'icons/turf/dropship4.dmi'
+	icon_state = "101a"
+	opacity = FALSE
+
+/obj/structure/shuttle/part/smartass
+	name = "\improper Smart Ass"
+	icon = 'icons/turf/dropship2.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/smartass/transparent
+	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
+	opacity = FALSE
+
+/obj/structure/shuttle/part/smartass/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor complex."
+
+/obj/structure/shuttle/part/smartass/gunpod_prop
+	name = "\improper Smart Ass"
+	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
+	icon = 'icons/turf/dropship4.dmi'
 	icon_state = "101a"
 	opacity = FALSE

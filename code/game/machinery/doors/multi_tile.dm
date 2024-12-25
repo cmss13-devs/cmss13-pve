@@ -348,15 +348,19 @@
 	name = "\improper Saipan crew hatch"
 	icon = 'icons/obj/structures/doors/dropship3_side2.dmi'
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4
-	name = "\improper Midway cargo door"
-	icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
-
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway
 	name = "\improper Midway crew hatch"
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone
 	name = "\improper Cyclone crew hatch"
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/bugstomper
+	name = "\improper Bug Stomper crew hatch"
+	icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/smartass
+	name = "\improper Smart Ass crew hatch"
+	icon = 'icons/obj/structures/doors/dropship1_cargo.dmi'
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp
 	name = "\improper Akademia Nauk cargo door"
