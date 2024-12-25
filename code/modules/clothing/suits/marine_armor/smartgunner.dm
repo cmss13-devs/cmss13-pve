@@ -197,3 +197,11 @@
 /obj/item/clothing/suit/marine/smartgunner/black
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	icon_state = "8fancy"
+
+/obj/item/clothing/suit/marine/smartgunner/movie
+	smartgun_back = list(
+		/obj/item/storage/large_holster/machete/smartgunner,
+		/obj/item/weapon/gun/smartgun,
+		/obj/item/weapon/gun/flamer,
+
+	)

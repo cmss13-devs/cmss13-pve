@@ -6650,15 +6650,14 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "axq" = (
-/obj/structure/closet/secure_closet/smartgunner{
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/secure_closet/smartgunner/drake{
 	req_access_txt = "14;39";
 	req_one_access = list();
 	name = "squad one smartgunner locker"
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/storage/belt/gun/smartgunner/garrow/alt,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "axr" = (
@@ -6978,12 +6977,11 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "ayi" = (
-/obj/structure/closet/secure_closet/smartgunner{
+/obj/structure/closet/secure_closet/smartgunner/vasquez{
 	req_access_txt = "14;40";
 	req_one_access = list();
 	name = "squad two smartgunner locker"
 	},
-/obj/item/storage/belt/gun/smartgunner/garrow/alt,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "ayj" = (

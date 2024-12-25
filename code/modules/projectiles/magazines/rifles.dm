@@ -107,6 +107,7 @@
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 /obj/item/ammo_magazine/rifle/m41aMK1/movie
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm M309 Armor Piercing High Explosive rounds."
 	default_ammo = /datum/ammo/bullet/rifle/heap
 
 /obj/item/ammo_magazine/rifle/m41aMK1/incendiary
