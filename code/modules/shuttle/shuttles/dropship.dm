@@ -407,7 +407,7 @@
 	roundstart_template = /datum/map_template/shuttle/midway
 
 /obj/docking_port/stationary/marine_dropship/sulaco_hangar_1
-	name = "Hangar Bay 2"
+	name = "Hangar Bay 1"
 	id = SULACO_LZ1
 	auto_open = TRUE
 	roundstart_template = /datum/map_template/shuttle/bugstomper

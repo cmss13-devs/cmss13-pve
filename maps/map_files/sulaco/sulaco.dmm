@@ -2291,14 +2291,6 @@
 	anchored = 1;
 	density = 0
 	},
-/obj/structure/prop{
-	layer = 2.1;
-	icon = 'icons/obj/items/items.dmi';
-	icon_state = "sheet-wood";
-	name = "wooden rack";
-	desc = "A wooden rack fitted to the wall.";
-	pixel_y = 35
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
@@ -3282,13 +3274,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"alt" = (
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = -6;
-	pixel_x = 2
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "alu" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
@@ -3660,12 +3645,6 @@
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/platoonarmory)
-"amJ" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/hangar)
 "amK" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -3844,13 +3823,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/motor_pool)
-"anp" = (
-/obj/structure/sign/banners/maximumeffort{
-	pixel_y = -5;
-	desc = "A large banner strung up on the wall intended to give the marines a boost in confidence."
-	},
-/turf/closed/wall/almayer,
-/area/golden_arrow/cryo_cells)
 "anr" = (
 /obj/docking_port/stationary/trijent_elevator/shipmap_elevator/one{
 	id = "garrow_vehicle_elevator_one";
@@ -3894,53 +3866,6 @@
 	pixel_y = 11
 	},
 /turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
-"anw" = (
-/obj/structure/cable{
-	layer = 2.36;
-	pixel_y = 12;
-	pixel_x = -3
-	},
-/obj/structure/cable{
-	layer = 2.36;
-	pixel_y = 12;
-	pixel_x = -1
-	},
-/obj/structure/cable{
-	layer = 2.36;
-	pixel_y = 12;
-	pixel_x = 1
-	},
-/obj/structure/cable{
-	layer = 2.36;
-	pixel_y = 12;
-	pixel_x = 3
-	},
-/obj/structure/cable{
-	icon_state = "0-2";
-	layer = 2.36;
-	pixel_y = -3;
-	pixel_x = -3
-	},
-/obj/structure/cable{
-	icon_state = "0-2";
-	layer = 2.36;
-	pixel_y = -3;
-	pixel_x = -1
-	},
-/obj/structure/cable{
-	icon_state = "0-2";
-	layer = 2.36;
-	pixel_y = -3;
-	pixel_x = 1
-	},
-/obj/structure/cable{
-	icon_state = "0-2";
-	layer = 2.36;
-	pixel_y = -3;
-	pixel_x = 3
-	},
-/turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "anx" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
@@ -4142,12 +4067,6 @@
 "aog" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/cryo_cells)
-"aoj" = (
-/obj/effect/spawner/prop_gun/anti_tank{
-	anchored = 1
-	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/briefing)
 "aok" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -5829,20 +5748,6 @@
 /obj/structure/bed/chair,
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
-"atW" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/bed{
-	can_buckle = 0;
-	desc = "A lightweight support lattice.";
-	icon = 'icons/obj/structures/structures.dmi';
-	icon_state = "latticefull";
-	layer = 2.1;
-	name = "lattice"
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/hangar)
 "atY" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -8226,15 +8131,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
-"aBo" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/item/stack/cable_coil{
-	pixel_x = 7
-	},
-/turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/hangar)
 "aBp" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -8530,19 +8426,6 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
-"aCr" = (
-/obj/item/stack/catwalk{
-	pixel_x = 4
-	},
-/obj/item/stack/catwalk{
-	pixel_x = -3;
-	pixel_y = 6
-	},
-/obj/structure/machinery/landinglight/ds1{
-	dir = 8
-	},
-/turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aCs" = (
 /obj/structure/machinery/gear{
@@ -9788,8 +9671,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aGm" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/tool/crowbar,
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = -11
+	},
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = 7
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aGo" = (
@@ -13994,19 +13881,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
-"aVx" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/stack/catwalk{
-	pixel_x = 2;
-	pixel_y = -9
-	},
-/obj/structure/machinery/landinglight/ds1/delayone{
-	dir = 8
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "aVy" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -15596,14 +15470,8 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
 "dzT" = (
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_y = 11
-	},
-/obj/item/ammo_box/magazine/vp70{
-	pixel_y = 3
-	},
 /obj/structure/machinery/power/apc/almayer/north,
-/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "dLD" = (
@@ -17162,15 +17030,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
-"rZR" = (
-/obj/structure/gun_rack/flamer/unloaded{
-	pixel_x = -11
-	},
-/obj/structure/gun_rack/flamer/unloaded{
-	pixel_x = 7
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonarmory)
 "sgG" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -24637,7 +24496,7 @@ anW
 aNz
 aaq
 aog
-anp
+aog
 aiK
 aIz
 aWc
@@ -25383,7 +25242,7 @@ aCw
 aCw
 aKs
 afv
-aoj
+azs
 aia
 akv
 ahZ
@@ -26901,7 +26760,7 @@ aEG
 aEG
 aEG
 aHZ
-rZR
+afk
 aSv
 aZV
 adl
@@ -28763,8 +28622,8 @@ agT
 agT
 agT
 aFj
-alt
-atW
+aWa
+aHu
 aHu
 aSK
 agT
@@ -30862,8 +30721,8 @@ aPl
 aaa
 abo
 air
-aVx
-aCr
+aqT
+aAJ
 abo
 air
 aPl
@@ -31014,7 +30873,7 @@ aZf
 aHB
 aCz
 avY
-aBo
+aJZ
 agO
 aHB
 ali
@@ -31165,9 +31024,9 @@ azF
 aRw
 agy
 agP
-amJ
-anw
-amJ
+azF
+azF
+azF
 agy
 agP
 aRw
