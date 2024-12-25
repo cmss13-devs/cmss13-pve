@@ -129,6 +129,9 @@
 
 #define GOLDEN_ARROW_LZ "golden arrow lz"
 
+#define SULACO_LZ1 "sulaco lz1"
+#define SULACO_LZ2 "sulaco lz2"
+
 #define DROPSHIP_FLYBY_ID "special_flight"
 #define DROPSHIP_LZ1 "dropship-lz1"
 #define DROPSHIP_LZ2 "dropship-lz2"

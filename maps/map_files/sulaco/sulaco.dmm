@@ -9300,7 +9300,7 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aED" = (
-/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
+/obj/docking_port/stationary/marine_dropship/sulaco_hangar_1,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "aEE" = (
@@ -12547,11 +12547,7 @@
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/motor_pool)
 "aQa" = (
-/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
-	name = "Hangar Bay Aft";
-	id = "golden arrow lz2";
-	roundstart_template = null
-	},
+/obj/docking_port/stationary/marine_dropship/sulaco_hangar_2,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "aQb" = (

@@ -406,6 +406,18 @@
 	auto_open = TRUE
 	roundstart_template = /datum/map_template/shuttle/midway
 
+/obj/docking_port/stationary/marine_dropship/sulaco_hangar_1
+	name = "Hangar Bay 2"
+	id = SULACO_LZ1
+	auto_open = TRUE
+	roundstart_template = /datum/map_template/shuttle/bugstomper
+
+/obj/docking_port/stationary/marine_dropship/sulaco_hangar_2
+	name = "Hangar Bay 2"
+	id = SULACO_LZ2
+	auto_open = TRUE
+	roundstart_template = /datum/map_template/shuttle/smartass
+
 /obj/docking_port/stationary/marine_dropship/crash_site
 	auto_open = TRUE
 
