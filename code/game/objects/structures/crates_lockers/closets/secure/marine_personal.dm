@@ -53,7 +53,7 @@
 	if(has_pilot_gear)
 		new /obj/item/clothing/under/marine/officer/pilot/pve(src)
 		new /obj/item/clothing/shoes/marine/knife(src)
-		new /obj/item/clothing/under/marine/officer/bridge(src)
+		new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
 
 /obj/structure/closet/secure_closet/marine_personal/platooncommander
 	job = "Platoon Commander"
