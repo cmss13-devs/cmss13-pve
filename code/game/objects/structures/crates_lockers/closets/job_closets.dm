@@ -162,9 +162,12 @@
 	new /obj/item/device/radio/headset/almayer/marine(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
 
-/obj/structure/closet/secure_closet/smartgunner/vasquez
+/obj/structure/closet/secure_closet/smartgunner_vasquez
+	name = "smartgunner locker"
+	desc = "A secure storage unit for a smartgunner."
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_SMARTPREP)
 
-/obj/structure/closet/secure_closet/smartgunner/vasquez/Initialize()
+/obj/structure/closet/secure_closet/smartgunner_vasquez/Initialize()
 	. = ..()
 	new /obj/item/weapon/gun/smartgun(src)
 	new /obj/item/smartgun_battery(src)
@@ -177,9 +180,12 @@
 	new /obj/item/clothing/accessory/storage/webbing/m56(src)
 	new /obj/item/clothing/accessory/storage/webbing/m56/grenade(src)
 
-/obj/structure/closet/secure_closet/smartgunner/drake
+/obj/structure/closet/secure_closet/smartgunner_drake
+	name = "smartgunner locker"
+	desc = "A secure storage unit for a smartgunner."
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_SMARTPREP)
 
-/obj/structure/closet/secure_closet/smartgunner/Initialize()
+/obj/structure/closet/secure_closet/smartgunner_drake/Initialize()
 	. = ..()
 	new /obj/item/weapon/gun/smartgun(src)
 	new /obj/item/smartgun_battery(src)

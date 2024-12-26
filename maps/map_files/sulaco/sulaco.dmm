@@ -6643,9 +6643,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/closet/secure_closet/smartgunner/drake{
-	req_access_txt = "14;39";
-	req_one_access = list();
+/obj/structure/closet/secure_closet/smartgunner_drake{
+	req_access_txt = "14:39";
 	name = "squad one smartgunner locker"
 	},
 /turf/open/floor/almayer/plate,
@@ -6967,8 +6966,8 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "ayi" = (
-/obj/structure/closet/secure_closet/smartgunner/vasquez{
-	req_access_txt = "14;40";
+/obj/structure/closet/secure_closet/smartgunner_vasquez{
+	req_access_txt = "14,40";
 	req_one_access = list();
 	name = "squad two smartgunner locker"
 	},

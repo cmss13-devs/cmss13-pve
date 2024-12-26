@@ -251,7 +251,7 @@
 /obj/item/storage/box/guncase/shotgunpump/movie
 	desc = "A gun case containing an unloaded Ithaca 37 pump-action shotgun, a box of 12 gauge buckshot."
 	storage_slots = 4
-	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/storage/large_holster/m37, /obj/item/ammo_magazine/shotgun/buckshot)
+	can_hold = list(/obj/item/weapon/gun/shotgun/pump, /obj/item/storage/large_holster/m37/movie, /obj/item/ammo_magazine/shotgun/buckshot)
 
 /obj/item/storage/box/guncase/shotgunpump/movie/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)
