@@ -916,7 +916,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	specialty = "M30 tactical"
 
-/obj/item/clothing/head/helmet/upp/pilot/standard
+/obj/item/clothing/head/helmet/upp/marinepilot/standard
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/upp/marinepilot/tex
