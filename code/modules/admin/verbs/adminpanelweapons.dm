@@ -56,7 +56,7 @@
 	addtimer(CALLBACK(potential_weapons[weapon_type], TYPE_PROC_REF(/datum/space_weapon, on_shot), targets, ammo_type, intercept_chance, delay), hit_eta SECONDS)
 	message_admins("[key_name_admin(src)] Fired [quantity] form [weapon_type] at the Almayer, with point defense as [intercept_chance]% with delay of [delay/10] seconds between hits")
 	if(intercept_chance)
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(shipwide_ai_announcement), "ATTENTION: TRACKING INBOUND[quantity > 1 ? "S" : ""]. FIRING AIR DEFENSE. STANDBY FOR INTERCEPT." , MAIN_AI_SYSTEM, 'sound/effects/supercapacitors_charging.ogg'), (hit_eta - 4) SECONDS)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(shipwide_ai_announcement), "ATTENTION: TRACKING INBOUND HOSTILE[quantity > 1 ? "S" : ""]. FIRING AIR DEFENSE. STANDBY FOR INTERCEPT." , MAIN_AI_SYSTEM, 'sound/effects/supercapacitors_charging.ogg'), (hit_eta - 4) SECONDS)
 
 /proc/shipside_random_turf_picker(turfquantity)
 	var/list/targets = list()
