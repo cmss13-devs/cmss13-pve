@@ -4475,7 +4475,9 @@
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker1)
 "vx" = (
-/obj/structure/machinery/power/apc/power/west,
+/obj/structure/machinery/power/apc/power/west{
+	name = "West Bunker APC"
+	},
 /turf/open/floor/plating/bare_catwalk,
 /area/Oread_Garrison/inside/bunker2)
 "vC" = (
@@ -6192,7 +6194,9 @@
 	pixel_y = 30;
 	pixel_x = -6
 	},
-/obj/structure/machinery/power/apc/power/west,
+/obj/structure/machinery/power/apc/power/west{
+	name = "South Bunker APC"
+	},
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/bunker3)
 "Dh" = (
@@ -7042,7 +7046,9 @@
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/requisitions)
 "Hg" = (
-/obj/structure/machinery/power/apc/power/south,
+/obj/structure/machinery/power/apc/power/south{
+	name = "East Bunker APC"
+	},
 /turf/open/floor/plating/bare_catwalk,
 /area/Oread_Garrison/inside/bunker1)
 "Hh" = (
