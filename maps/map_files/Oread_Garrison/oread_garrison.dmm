@@ -2414,7 +2414,9 @@
 /area/Oread_Garrison/outside/jungle/clearing)
 "lN" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/west,
+/obj/structure/machinery/power/apc/power/west{
+	name = "Medical APC"
+	},
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/Oread_Garrison/inside/medical)
 "lQ" = (
@@ -2660,7 +2662,9 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/power/apc/power/north,
+/obj/structure/machinery/power/apc/power/north{
+	name = "Engineering APC"
+	},
 /turf/open/floor/almayer/plating,
 /area/Oread_Garrison/inside/engineering)
 "mR" = (
@@ -5100,7 +5104,9 @@
 /turf/closed/wall/r_wall/bunker,
 /area/Oread_Garrison/inside/messhall)
 "yG" = (
-/obj/structure/machinery/power/apc/power/south,
+/obj/structure/machinery/power/apc/power/south{
+	name = "Barracks APC"
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -5534,7 +5540,9 @@
 /turf/open/gm/river/desert/shallow_edge/southwest,
 /area/Oread_Garrison/outside/jungle/river)
 "Av" = (
-/obj/structure/machinery/power/apc/power/north,
+/obj/structure/machinery/power/apc/power/north{
+	name = "Garage APC"
+	},
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/garage)
 "Aw" = (
@@ -5875,7 +5883,9 @@
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/command)
 "BT" = (
-/obj/structure/machinery/power/apc/power/south,
+/obj/structure/machinery/power/apc/power/south{
+	name = "Messhall APC"
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
@@ -6109,7 +6119,9 @@
 /area/Oread_Garrison/inside)
 "CV" = (
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/power/apc/power/east,
+/obj/structure/machinery/power/apc/power/east{
+	name = "Supply APC"
+	},
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/requisitions)
 "CW" = (
@@ -8304,7 +8316,9 @@
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/command)
 "MF" = (
-/obj/structure/machinery/power/apc/power/south,
+/obj/structure/machinery/power/apc/power/south{
+	name = "Central APC"
+	},
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/flag)
 "MG" = (
@@ -8672,7 +8686,9 @@
 /area/Oread_Garrison/outside/jungle/clearing)
 "OJ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/east,
+/obj/structure/machinery/power/apc/power/east{
+	name = "Command APC"
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
