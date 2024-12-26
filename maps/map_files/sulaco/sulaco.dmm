@@ -3817,13 +3817,8 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/motor_pool)
 "anr" = (
-/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/one{
-	id = "garrow_vehicle_elevator_one";
-	elevator_network = "ArrowVehicleOne";
-	name = "Vehicle Elevator One Upper";
-	airlock_area = /area/golden_arrow/vehicle_shuttle/upper
-	},
-/turf/open/floor/almayer/empty/golden_arrow/vehicle_one,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/vehicle_shuttle/upper)
 "ans" = (
 /obj/effect/decal/warning_stripes{
@@ -15131,6 +15126,10 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"bqP" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle/upper)
 "brg" = (
 /obj/structure/platform{
 	dir = 8
@@ -15424,6 +15423,12 @@
 /obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
+"dAM" = (
+/obj/vehicle/multitile/apc/movie{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle/upper)
 "dLD" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15903,6 +15908,9 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"iGt" = (
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle/upper)
 "iGx" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
@@ -16018,6 +16026,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"jTX" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle/upper)
 "jWK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -17010,7 +17022,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "srv" = (
-/turf/open/floor/almayer/empty/golden_arrow/vehicle_one,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/vehicle_shuttle/upper)
 "srO" = (
 /obj/structure/sign/safety/bulkhead_door{
@@ -32356,7 +32368,7 @@ adz
 adz
 aXP
 aAz
-srv
+anr
 srv
 srv
 srv
@@ -32508,10 +32520,10 @@ adz
 adz
 aUB
 aAz
-srv
-srv
-srv
-srv
+jTX
+bqP
+iGt
+iGt
 srv
 aSa
 aKa
@@ -32661,10 +32673,10 @@ adz
 aKQ
 aAz
 srv
-srv
-srv
-srv
-srv
+iGt
+iGt
+iGt
+anr
 aSa
 aGb
 adz
@@ -32813,9 +32825,9 @@ adz
 aCU
 aby
 srv
-srv
-srv
-srv
+iGt
+dAM
+bqP
 srv
 aRW
 aKa
@@ -32965,9 +32977,9 @@ adz
 anv
 aHl
 srv
-srv
-srv
-srv
+bqP
+bqP
+bqP
 srv
 ahF
 aKa
@@ -33117,9 +33129,9 @@ adz
 aKa
 aHl
 srv
-srv
-srv
-srv
+iGt
+bqP
+bqP
 srv
 aIS
 aKa
