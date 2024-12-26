@@ -308,15 +308,15 @@
 /////////////////////////////////////////////
 
 /obj/effect/particle_effect/smoke/phosphorus
-	time_to_live = 3
+	time_to_live = 6
 	smokeranking = SMOKE_RANK_MED
 	var/next_cough = 2 SECONDS
 	var/burn_damage = 40
-	var/applied_fire_stacks = 5
+	var/applied_fire_stacks = 3
 	var/xeno_yautja_reduction = 0.75
 
 /obj/effect/particle_effect/smoke/phosphorus/weak
-	time_to_live = 2
+	time_to_live = 4
 	smokeranking = SMOKE_RANK_MED
 	burn_damage = 30
 	xeno_yautja_reduction = 0.5
@@ -351,7 +351,7 @@
 	if(isyautja(affected_mob) || isxeno(affected_mob))
 		damage *= xeno_yautja_reduction
 
-	var/reagent = new /datum/reagent/napalm/ut()
+	var/reagent = new /datum/reagent/napalm/blue()
 	affected_mob.burn_skin(damage)
 	affected_mob.adjust_fire_stacks(applied_fire_stacks, reagent)
 	affected_mob.IgniteMob()

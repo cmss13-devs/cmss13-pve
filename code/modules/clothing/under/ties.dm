@@ -450,6 +450,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 1st Cavalry Division."
 	icon_state = "infantrypatch"
 
+/obj/item/clothing/accessory/patch/army/spook
+	name = "Army Intelligence patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 525th Army Intelligence Brigade."
+	icon_state = "spookpatch"
+
 //misc
 
 /obj/item/clothing/accessory/dogtags
@@ -492,6 +497,9 @@
 	icon_state = "s_poncho"
 	has_variation = FALSE
 
+/obj/item/clothing/accessory/poncho/green/army
+	name = "Well-worn Poncho"
+	desc = "The standard poncho has variations for every climate. Custom fitted to be attached to M3 & M4 armor variants, it is comfortable and warms or cools as needed. A trooper couldn't ask for more. Affectionately referred to as a \"woobie\"."
 
 //Ties that can store stuff
 

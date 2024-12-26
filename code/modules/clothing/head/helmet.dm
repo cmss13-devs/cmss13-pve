@@ -206,21 +206,21 @@
 GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	// TOBACCO-RELATED
 	/obj/item/tool/lighter/random = HELMET_GARB_RELAY_ICON_STATE,
-	/obj/item/tool/lighter/zippo = "helmet_lighter_zippo",
-	/obj/item/storage/box/matches = "helmet_matches",
-	/obj/item/storage/fancy/cigarettes/emeraldgreen = "helmet_cig_cig",
-	/obj/item/storage/fancy/cigarettes/kpack = "helmet_cig_kpack",
-	/obj/item/storage/fancy/cigarettes/lucky_strikes = "helmet_cig_ls",
-	/obj/item/storage/fancy/cigarettes/wypacket = "helmet_cig_wypack",
-	/obj/item/storage/fancy/cigarettes/lady_finger = "helmet_cig_lf",
-	/obj/item/storage/fancy/cigarettes/blackpack = "helmet_cig_blackpack",
-	/obj/item/storage/fancy/cigarettes/arcturian_ace = "helmet_cig_aapack",
-	/obj/item/storage/fancy/cigarettes/spirit = "helmet_cig_naspack",
-	/obj/item/storage/fancy/cigarettes/spirit/yellow = "helmet_cig_y_naspack",
-	/obj/item/storage/fancy/cigarettes/lucky_strikes_4 = "hat_cig_ls_mre",
-	/obj/item/storage/fancy/cigar/matchbook = "helmet_matches_mre",
-	/obj/item/clothing/mask/cigarette/cigar = "helmet_cig_cig",
-	/obj/item/clothing/mask/electronic_cigarette = "helmet_cig_cig",
+	/obj/item/tool/lighter/zippo = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/box/matches = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigarettes/emeraldgreen = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigarettes/kpack = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigarettes/lucky_strikes = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigarettes/wypacket = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigarettes/lady_finger = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigarettes/blackpack = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigarettes/arcturian_ace = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigarettes/spirit = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigarettes/spirit/yellow = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigarettes/lucky_strikes_4 = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/storage/fancy/cigar/matchbook = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/mask/cigarette/cigar = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/mask/electronic_cigarette = HELMET_GARB_RELAY_ICON_STATE,
 
 	// CARDS
 	/obj/item/toy/deck = "helmet_card_deck",
@@ -286,7 +286,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	// PREFERENCES GEAR
 	/obj/item/prop/helmetgarb/gunoil = "gunoil",
-	/obj/item/prop/helmetgarb/netting = "netting",
+	/obj/item/prop/helmetgarb/netting = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/prop/helmetgarb/spent_buckshot = "spent_buckshot",
 	/obj/item/prop/helmetgarb/spent_slug = "spent_slug",
 	/obj/item/prop/helmetgarb/spent_flech = "spent_flech",
@@ -319,18 +319,17 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/tool/pen/blue = "helmet_pen_blue",
 	/obj/item/tool/pen/red = "helmet_pen_red",
 	/obj/item/clothing/glasses/welding ="welding-h",
-	/obj/item/clothing/head/headband = "headbandgreen",
-	/obj/item/clothing/head/headband/tan = "headbandtan",
-	/obj/item/clothing/head/headband/red = "headbandred",
-	/obj/item/clothing/head/headband/brown = "helmet_headbandbrown",
-	/obj/item/clothing/head/headband/gray = "helmet_headbandgray",
-	/obj/item/clothing/head/headband/alpha = "helmet_headbandalpha",
-	/obj/item/clothing/head/headband/bravo = "helmet_headbandbravo",
-	/obj/item/clothing/head/headband/charlie = "helmet_headbandcharlie",
-	/obj/item/clothing/head/headband/delta = "helmet_headbanddelta",
-	/obj/item/clothing/head/headband/echo = "helmet_headbandecho",
-	/obj/item/clothing/head/headband/foxtrot = "helmet_headbandfoxtrot",
-	/obj/item/clothing/head/headband/foxtrot = "helmet_headbandintel",
+	/obj/item/clothing/head/headband = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/head/headband/tan = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/head/headband/red = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/head/headband/brown = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/head/headband/gray = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/head/headband/alpha = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/head/headband/bravo = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/head/headband/charlie = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/head/headband/delta = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/head/headband/echo = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/head/headband/foxtrot = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/tool/candle = "candle",
 	/obj/item/clothing/mask/facehugger/lamarr = "lamarr",
 	/obj/item/toy/crayon/red = "crayonred",
@@ -975,7 +974,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "mp_helmet"
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	specialty = "M10 pattern military police"
-	built_in_visors = list(new /obj/item/device/helmet_visor/security)
+	built_in_visors = list(new /obj/item/device/helmet_visor)
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/helmet/marine/MP/WO
 	name = "\improper M3 pattern chief MP helmet"
@@ -1097,11 +1097,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 //FIORINA / UA RIOT CONTROL HELMET//
 
 /obj/item/clothing/head/helmet/marine/veteran/ua_riot
-	name = "\improper RC6 helmet"
-	desc = "The standard UA Riot Control 6 helmet is of odd design, lacking a face shield by default (mounting points are available). The distinct white pattern and red emblem are synonymous with oppression throughout the rim."
+	name = "\improper M10 pattern ballistic helmet"
+	desc = "Standard issue high molecular density polymer combat helmet. Resistant to glancing hits from small arms and shrapnel. This version is stripped down, missing the typically incorporated tactical camera, IFF signal transponder, and heads up display eyepiece."
 	icon_state = "ua_riot"
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	specialty = "RC6"
 	flags_atom = NO_SNOW_TYPE
 
 // KUTJEVO HELMET
@@ -1907,3 +1905,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_inventory = BLOCKSHARPOBJ
+	clothing_traits = list(TRAIT_EAR_PROTECTION) //So I don't have to make another subtype for the rocketeers

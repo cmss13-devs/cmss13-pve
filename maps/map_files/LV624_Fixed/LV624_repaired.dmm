@@ -65,6 +65,15 @@
 /obj/effect/decal/grass_overlay/grass1/inner,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_west_caves)
+"ahh" = (
+/obj/structure/closet{
+	density = 0;
+	icon_state = "open";
+	opened = 1
+	},
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/turf/open/floor/bluecorner,
+/area/lv624/lazarus/sleep_male)
 "ahi" = (
 /obj/structure/surface/table/reinforced{
 	dir = 1;
@@ -95,18 +104,6 @@
 "ajA" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
 /area/lv624/ground/jungle/west_jungle)
-"ajD" = (
-/obj/structure/closet{
-	density = 0;
-	icon_state = "open";
-	opened = 1
-	},
-/obj/structure/window/reinforced/tinted{
-	dir = 1
-	},
-/obj/item/clothing/under/colonist,
-/turf/open/floor/bluecorner,
-/area/lv624/lazarus/sleep_male)
 "ajM" = (
 /obj/structure/flora/jungle/vines/heavy,
 /obj/structure/flora/jungle/vines/heavy,
@@ -2401,12 +2398,6 @@
 /obj/structure/flora/bush/ausbushes/ausbush,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/west_central_jungle)
-"cYs" = (
-/obj/structure/closet/cabinet,
-/obj/item/weapon/baseballbat/metal,
-/obj/item/clothing/under/colonist,
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
 "cYB" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
@@ -3404,6 +3395,11 @@
 /obj/item/prop/almayer/flight_recorder,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
+"egH" = (
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/rifle/m41aMK1,
+/turf/open/floor/greengrid,
+/area/lv624/lazarus/secure_storage)
 "egL" = (
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/floor/plating/warnplate/northwest,
@@ -3772,6 +3768,11 @@
 /obj/structure/closet/cabinet,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
+"eHk" = (
+/obj/structure/surface/rack,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/turf/open/floor/vault,
+/area/lv624/lazarus/quartstorage)
 "eIm" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/gm/dirt,
@@ -4193,22 +4194,6 @@
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/gm/grass/grass2,
 /area/lv624/lazarus/yggdrasil)
-"fkn" = (
-/obj/structure/closet{
-	density = 0;
-	icon_state = "open";
-	opened = 1
-	},
-/obj/item/device/flashlight,
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	frequency = 1469;
-	name = "General Listening Channel";
-	pixel_x = -30
-	},
-/obj/item/clothing/under/colonist,
-/turf/open/floor/purple/northwest,
-/area/lv624/lazarus/sleep_female)
 "flc" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/gm/river,
@@ -4613,11 +4598,6 @@
 "fHE" = (
 /obj/structure/surface/rack,
 /obj/item/ammo_magazine/shotgun/slugs,
-/turf/open/floor/greengrid,
-/area/lv624/lazarus/secure_storage)
-"fHO" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/rifle/m41aMK1,
 /turf/open/floor/greengrid,
 /area/lv624/lazarus/secure_storage)
 "fHW" = (
@@ -5096,11 +5076,6 @@
 /obj/structure/flora/bush/ausbushes/ppflowers,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/west_jungle)
-"giL" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m41aMK1,
-/turf/open/floor/greengrid,
-/area/lv624/lazarus/secure_storage)
 "giX" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/colony{
 	name = "\improper LZ2 Access";
@@ -9310,6 +9285,10 @@
 	},
 /turf/open/floor/greengrid,
 /area/lv624/lazarus/secure_storage)
+"lBA" = (
+/obj/structure/closet/bodybag,
+/turf/open/gm/dirt,
+/area/lv624/ground/barrens/north_east_barrens)
 "lBW" = (
 /obj/item/device/radio/intercom{
 	freerange = 1;
@@ -9586,6 +9565,12 @@
 	},
 /turf/open/floor/vault2/west,
 /area/lv624/lazarus/quartstorage)
+"lOX" = (
+/obj/structure/closet/cabinet,
+/obj/item/weapon/baseballbat/metal,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/turf/open/floor/dark,
+/area/lv624/lazarus/engineering)
 "lPg" = (
 /obj/structure/flora/jungle/vines/heavy{
 	pixel_x = -28
@@ -9826,6 +9811,11 @@
 /obj/structure/flora/bush/ausbushes/palebush,
 /turf/open/gm/dirtgrassborder/west,
 /area/lv624/ground/jungle/south_east_jungle)
+"mew" = (
+/obj/structure/surface/rack,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/turf/open/floor/dark,
+/area/lv624/lazarus/quartstorage)
 "meL" = (
 /obj/structure/flora/jungle/vines/light_3,
 /obj/structure/flora/jungle/vines/light_2,
@@ -10070,14 +10060,6 @@
 	},
 /turf/open/floor/white,
 /area/lv624/lazarus/corporate_dome)
-"mwS" = (
-/obj/structure/closet/wardrobe,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/item/clothing/under/colonist,
-/turf/open/floor/whiteblue/west,
-/area/lv624/lazarus/medbay)
 "mwV" = (
 /obj/structure/fence,
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
@@ -11417,11 +11399,6 @@
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/gm/dirtgrassborder/south,
 /area/lv624/ground/colony/north_tcomms_road)
-"onT" = (
-/obj/structure/surface/rack,
-/obj/item/clothing/under/colonist,
-/turf/open/floor/dark,
-/area/lv624/lazarus/quartstorage)
 "onX" = (
 /obj/effect/landmark/crap_item,
 /turf/open/gm/dirt,
@@ -11539,6 +11516,18 @@
 "ouL" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
 /area/lv624/ground/barrens/south_eastern_jungle_barrens)
+"ouS" = (
+/obj/structure/closet{
+	density = 0;
+	icon_state = "open";
+	opened = 1
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 1
+	},
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/turf/open/floor/bluecorner,
+/area/lv624/lazarus/sleep_male)
 "ouV" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -12615,6 +12604,14 @@
 "pVp" = (
 /turf/open/floor,
 /area/lv624/ground/barrens/containers)
+"pVv" = (
+/obj/structure/closet/wardrobe,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/turf/open/floor/whiteblue/west,
+/area/lv624/lazarus/medbay)
 "pVE" = (
 /obj/item/tool/warning_cone{
 	pixel_x = -9;
@@ -14216,22 +14213,6 @@
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /turf/open/gm/dirt,
 /area/lv624/ground/river/central_river)
-"sfk" = (
-/obj/structure/closet{
-	density = 0;
-	icon_state = "open";
-	opened = 1
-	},
-/obj/structure/window/reinforced/tinted,
-/obj/item/clothing/under/colonist,
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	frequency = 1469;
-	name = "General Listening Channel";
-	pixel_x = -30
-	},
-/turf/open/floor/purple/northwest,
-/area/lv624/lazarus/sleep_female)
 "sfO" = (
 /turf/open/gm/dirtgrassborder/north,
 /area/lv624/ground/jungle/south_east_jungle)
@@ -14495,6 +14476,11 @@
 /obj/structure/fence,
 /turf/open/floor/warning/east,
 /area/lv624/ground/barrens/east_barrens)
+"sEc" = (
+/obj/structure/surface/rack,
+/obj/item/ammo_magazine/rifle/m41aMK1,
+/turf/open/floor/greengrid,
+/area/lv624/lazarus/secure_storage)
 "sEi" = (
 /turf/open/gm/coast/beachcorner/north_west,
 /area/lv624/ground/barrens/east_barrens)
@@ -15577,11 +15563,6 @@
 /obj/effect/landmark/crap_item,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
-"ufg" = (
-/obj/structure/surface/rack,
-/obj/item/clothing/under/colonist,
-/turf/open/floor/vault,
-/area/lv624/lazarus/quartstorage)
 "ufn" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -15851,15 +15832,6 @@
 	},
 /turf/open/floor/vault2/west,
 /area/lv624/lazarus/robotics)
-"uwS" = (
-/obj/structure/closet{
-	density = 0;
-	icon_state = "open";
-	opened = 1
-	},
-/obj/item/clothing/under/colonist,
-/turf/open/floor/bluecorner,
-/area/lv624/lazarus/sleep_male)
 "uxL" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 10
@@ -16105,6 +16077,22 @@
 /obj/effect/landmark/hunter_primary,
 /turf/open/gm/river,
 /area/lv624/ground/river/east_river)
+"uNS" = (
+/obj/structure/closet{
+	density = 0;
+	icon_state = "open";
+	opened = 1
+	},
+/obj/structure/window/reinforced/tinted,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	frequency = 1469;
+	name = "General Listening Channel";
+	pixel_x = -30
+	},
+/turf/open/floor/purple/northwest,
+/area/lv624/lazarus/sleep_female)
 "uNU" = (
 /obj/structure/bed,
 /obj/structure/machinery/light,
@@ -16868,6 +16856,22 @@
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/grass/grass2,
 /area/lv624/ground/jungle/north_jungle)
+"vOe" = (
+/obj/structure/closet{
+	density = 0;
+	icon_state = "open";
+	opened = 1
+	},
+/obj/item/device/flashlight,
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	frequency = 1469;
+	name = "General Listening Channel";
+	pixel_x = -30
+	},
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/turf/open/floor/purple/northwest,
+/area/lv624/lazarus/sleep_female)
 "vOz" = (
 /turf/open/floor/plating/platebot,
 /area/lv624/lazarus/engineering)
@@ -17878,11 +17882,6 @@
 "xlJ" = (
 /turf/closed/wall/r_wall/unmeltable,
 /area/lv624/lazarus/landing_zones/lz2)
-"xlU" = (
-/obj/structure/closet/bodybag,
-/obj/effect/landmark/corpsespawner/clf,
-/turf/open/gm/dirt,
-/area/lv624/ground/barrens/north_east_barrens)
 "xnh" = (
 /obj/structure/disposalpipe/broken{
 	dir = 1
@@ -26983,7 +26982,7 @@ mAx
 mAx
 ock
 mAx
-giL
+egH
 mAx
 apA
 mAx
@@ -27207,7 +27206,7 @@ iPd
 mAx
 iLX
 mAx
-fHO
+sEc
 mAx
 rWM
 mAx
@@ -27431,7 +27430,7 @@ lBg
 mAx
 vLT
 mAx
-fHO
+sEc
 mAx
 fHE
 mAx
@@ -35660,7 +35659,7 @@ pWR
 fgp
 rMJ
 xJe
-mwS
+pVv
 geN
 oIs
 gfC
@@ -37739,7 +37738,7 @@ vjY
 eqF
 xlu
 fEH
-cYs
+lOX
 xah
 mdK
 mdK
@@ -43527,7 +43526,7 @@ oHY
 oHY
 oHY
 isZ
-uwS
+ahh
 qkx
 gye
 fya
@@ -44198,7 +44197,7 @@ hwZ
 crB
 oHY
 oHY
-ajD
+ouS
 hgw
 lzg
 gye
@@ -46352,8 +46351,8 @@ pSF
 uTG
 pSF
 pSF
-xlU
-xlU
+lBA
+lBA
 pSF
 eRG
 pSF
@@ -46435,11 +46434,11 @@ lKt
 wqj
 jRj
 lUl
-sfk
+uNS
 rti
 rti
 nmQ
-fkn
+vOe
 ptH
 mLm
 bCA
@@ -49122,7 +49121,7 @@ eul
 xYV
 xYV
 iXP
-ufg
+eHk
 xYV
 bMd
 xYV
@@ -52694,7 +52693,7 @@ xYV
 xYV
 whT
 xYV
-onT
+mew
 xYV
 cpT
 lvq

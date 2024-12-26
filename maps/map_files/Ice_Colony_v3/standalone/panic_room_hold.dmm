@@ -114,16 +114,6 @@
 "fj" = (
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
-"fx" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/obj/effect/decal/cleanable/blood{
-	layer = 3
-	},
-/obj/effect/landmark/corpsespawner/doctor,
-/turf/open/floor/shiva/multi_tiles/southeast,
-/area/shiva/interior/bar)
 "fM" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Panic Room Shutters";
@@ -141,15 +131,6 @@
 "gf" = (
 /obj/structure/closet/crate/freezer,
 /turf/open/floor/shiva/floor3,
-/area/shiva/interior/colony/s_admin)
-"gh" = (
-/obj/structure/noticeboard{
-	pixel_y = 32
-	},
-/obj/item/ammo_magazine/rifle/m41aMK1{
-	current_rounds = 0
-	},
-/turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "gk" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -271,13 +252,6 @@
 	},
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
-"lP" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/obj/effect/decal/cleanable/blood{
-	layer = 3
-	},
-/turf/open/floor/shiva/north,
-/area/shiva/interior/colony/s_admin)
 "lQ" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 8
@@ -380,15 +354,17 @@
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/floor/plating/platingdmg2,
 /area/shiva/interior/colony/s_admin)
+"ql" = (
+/obj/item/ammo_magazine/rifle/m41aMK1{
+	current_rounds = 0
+	},
+/turf/open/floor/shiva/north,
+/area/shiva/interior/colony/s_admin)
 "qT" = (
 /obj/structure/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
 	},
-/turf/open/floor/shiva/bluefull,
-/area/shiva/interior/colony/s_admin)
-"qU" = (
-/obj/effect/landmark/corpsespawner/scientist,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
 "rM" = (
@@ -447,19 +423,6 @@
 	},
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/shiva/bluefull,
-/area/shiva/interior/colony/s_admin)
-"tD" = (
-/obj/effect/decal/cleanable/vomit{
-	icon_state = "vomit_2"
-	},
-/obj/item/reagent_container/food/drinks/bottle/sake{
-	pixel_x = 9;
-	pixel_y = 17
-	},
-/obj/effect/landmark/corpsespawner/chef,
-/obj/structure/bed/bedroll,
-/obj/item/bedsheet/ce,
-/turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "tG" = (
 /obj/structure/janitorialcart,
@@ -920,16 +883,18 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
+"HK" = (
+/obj/structure/noticeboard{
+	pixel_y = 32
+	},
+/obj/item/ammo_magazine/rifle/m41aMK1{
+	current_rounds = 0
+	},
+/turf/open/floor/shiva/north,
+/area/shiva/interior/colony/s_admin)
 "Ik" = (
 /turf/open/auto_turf/snow/layer3,
 /area/shiva/exterior/junkyard)
-"Iy" = (
-/obj/effect/decal/cleanable/blood{
-	layer = 3
-	},
-/obj/effect/landmark/corpsespawner/wysec,
-/turf/open/floor/wood,
-/area/shiva/interior/colony/s_admin)
 "IB" = (
 /obj/effect/decal/cleanable/blood{
 	icon_state = "gib6"
@@ -939,12 +904,6 @@
 "IQ" = (
 /obj/structure/machinery/vending/cigarette/colony,
 /turf/open/floor/shiva/floor3,
-/area/shiva/interior/colony/s_admin)
-"Jp" = (
-/obj/item/ammo_magazine/rifle/m41aMK1{
-	current_rounds = 0
-	},
-/turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "Jv" = (
 /obj/structure/machinery/light/double{
@@ -1078,6 +1037,18 @@
 /obj/effect/landmark/survivor_spawner/shivas_panic_room_doc,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
+"NB" = (
+/obj/effect/decal/cleanable/vomit{
+	icon_state = "vomit_2"
+	},
+/obj/item/reagent_container/food/drinks/bottle/sake{
+	pixel_x = 9;
+	pixel_y = 17
+	},
+/obj/structure/bed/bedroll,
+/obj/item/bedsheet/ce,
+/turf/open/floor/shiva/floor3,
+/area/shiva/interior/colony/s_admin)
 "NC" = (
 /obj/item/lightstick/variant/planted,
 /turf/open/auto_turf/snow/layer2,
@@ -1134,6 +1105,15 @@
 "QS" = (
 /turf/open/auto_turf/snow/layer2,
 /area/shiva/exterior/junkyard)
+"Rj" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/obj/effect/decal/cleanable/blood{
+	layer = 3
+	},
+/turf/open/floor/shiva/multi_tiles/southeast,
+/area/shiva/interior/bar)
 "Rs" = (
 /obj/structure/surface/table,
 /obj/item/tool/pen/blue{
@@ -1192,6 +1172,12 @@
 	pixel_y = 10
 	},
 /turf/open/floor/shiva/floor3,
+/area/shiva/interior/colony/s_admin)
+"Sg" = (
+/obj/effect/decal/cleanable/blood{
+	layer = 3
+	},
+/turf/open/floor/wood,
 /area/shiva/interior/colony/s_admin)
 "Sl" = (
 /obj/structure/machinery/disposal/broken,
@@ -1551,7 +1537,7 @@ dF
 tk
 Kp
 XP
-qU
+dF
 ce
 ul
 dF
@@ -1600,7 +1586,7 @@ CZ
 dF
 Hx
 RS
-Jp
+ql
 dF
 of
 Td
@@ -1620,7 +1606,7 @@ zA
 do
 Hx
 Hx
-lP
+LF
 dF
 Lr
 Hx
@@ -1760,7 +1746,7 @@ CZ
 ZD
 GJ
 fM
-fx
+Rj
 BQ
 BQ
 "}
@@ -1803,7 +1789,7 @@ cO
 cO
 uh
 ce
-tD
+NB
 RQ
 uP
 IQ
@@ -1845,7 +1831,7 @@ GC
 gn
 fR
 fR
-Iy
+Sg
 jP
 GC
 Ru
@@ -1873,7 +1859,7 @@ OV
 xg
 YD
 GC
-gh
+HK
 cO
 cO
 Hx

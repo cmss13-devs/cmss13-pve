@@ -126,7 +126,7 @@
 					SPAN_WARNING("You stop disarming [src]."))
 				return
 			if(user.faction != iff_signal) //ow!
-				if(prob(75))
+				if(prob(5))
 					triggered = TRUE
 					if(tripwire)
 						var/direction = GLOB.reverse_dir[src.dir]
