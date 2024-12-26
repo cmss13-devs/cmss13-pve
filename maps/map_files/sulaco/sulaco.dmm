@@ -6448,13 +6448,13 @@
 	},
 /obj/structure/surface/table/almayer,
 /obj/item/storage/box/guncase/shotgunpump/movie,
-/obj/item/clothing/head/helmet/upp/pilot/standard{
-	pixel_x = -6;
-	pixel_y = 10
+/obj/item/clothing/head/helmet/upp/marinepilot/standard{
+	pixel_y = 11;
+	pixel_x = -7
 	},
-/obj/item/clothing/head/helmet/upp/pilot/standard{
-	pixel_x = 7;
-	pixel_y = 12
+/obj/item/clothing/head/helmet/upp/marinepilot/standard{
+	pixel_x = 8;
+	pixel_y = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
