@@ -46,7 +46,7 @@
 
 			cpr_attempt_timer = world.time + HUMAN_STRIP_DELAY * attacking_mob.get_skill_duration_multiplier(SKILL_MEDICAL)
 			if(do_after(attacking_mob, HUMAN_STRIP_DELAY * attacking_mob.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_ALL, BUSY_ICON_GENERIC, src, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
-				src.affected_message(attacking_mob,
+				affected_message(attacking_mob,
 					SPAN_HELPFUL("You feel a <b>breath of fresh air</b> enter your lungs. It feels good."),
 					SPAN_HELPFUL("You <b>perform CPR</b> on <b>[src]</b>."),
 					SPAN_NOTICE("<b>[attacking_mob]</b> performs <b>CPR</b> on <b>[src]</b>."))
