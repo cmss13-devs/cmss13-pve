@@ -354,6 +354,9 @@
 	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one bears markings of the UPP."
 	icon_state = "grenade_40mm_upp"
 	item_state = "grenade_hedp"
+	explosion_power = 120 //Slightly stronger than HEDP
+	explosion_falloff = 30 //But quicker to lose blast damage
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
 
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	name = "\improper 40mm Buckshot Shell"
