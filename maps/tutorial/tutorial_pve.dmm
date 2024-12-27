@@ -1632,7 +1632,6 @@
 /turf/open/floor/almayer/plate,
 /area/misc/tutorial)
 "rm" = (
-/obj/effect/landmark/tutorial_bottom_left,
 /turf/open/floor/plating/plating_catwalk,
 /area/misc/tutorial)
 "rr" = (
@@ -1911,6 +1910,10 @@
 	light_power = 0.5
 	},
 /turf/open/floor/almayer/edge,
+/area/misc/tutorial)
+"tZ" = (
+/obj/effect/landmark/tutorial_bottom_left,
+/turf/open/floor/almayer/plating,
 /area/misc/tutorial)
 "ug" = (
 /obj/effect/decal/cleanable/dirt{
@@ -4751,7 +4754,7 @@ ih
 ih
 ih
 ih
-ih
+tZ
 "}
 (2,1,1) = {"
 ih
