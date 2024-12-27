@@ -941,12 +941,6 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/lv522/atmos/east_reactor/east)
-"awI" = (
-/obj/item/explosive/plastic/breaching_charge{
-	unacidable = 1
-	},
-/turf/open/floor/prison,
-/area/lv522/atmos/way_in_command_centre)
 "awK" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
@@ -960,12 +954,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/north_street)
-"axg" = (
-/obj/docking_port/stationary/marine_dropship/lz2{
-	name = "LZ2: Southeast Landing Zone"
-	},
-/turf/open/floor/plating,
-/area/lv522/landing_zone_2)
 "axr" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -1111,13 +1099,6 @@
 /obj/item/prop/colony/canister,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/cargo_intake)
-"aBK" = (
-/obj/item/prop/alien/hugger{
-	pixel_x = -7;
-	pixel_y = -5
-	},
-/turf/open/floor/prison,
-/area/lv522/outdoors/colony_streets/north_street)
 "aBM" = (
 /obj/structure/platform{
 	dir = 1
@@ -1546,6 +1527,19 @@
 /obj/item/prop/colony/used_flare,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/nw_rockies)
+"aNN" = (
+/obj/structure/closet/crate,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/suit/storage/apron/overalls,
+/obj/item/clothing/suit/storage/apron/overalls,
+/obj/item/clothing/suit/storage/apron/overalls,
+/turf/open/floor/prison,
+/area/lv522/indoors/c_block/mining)
 "aNV" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -1758,10 +1752,6 @@
 /obj/item/trash/plate,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorms)
-"aSF" = (
-/obj/effect/spawner/gibspawner/human,
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/w_rockies)
 "aST" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
@@ -1956,11 +1946,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/bridges/garden_bridge)
-"aXF" = (
-/obj/effect/spawner/gibspawner/xeno,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/north_street)
 "aXH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/computer/telecomms/server{
@@ -2151,6 +2136,10 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement/cement2,
 /area/lv522/outdoors/colony_streets/central_streets)
+"bdf" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/blue/northwest,
+/area/lv522/indoors/a_block/admin)
 "bdg" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -2180,10 +2169,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/garage)
-"bdR" = (
-/obj/effect/decal/cleanable/blood/drip,
-/turf/open/floor/prison,
-/area/lv522/outdoors/colony_streets/north_west_street)
 "bdU" = (
 /obj/structure/closet/crate,
 /obj/structure/machinery/light{
@@ -2963,6 +2948,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
+"bvS" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/atmos/way_in_command_centre)
 "bvU" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/prison,
@@ -3207,6 +3203,11 @@
 /obj/structure/machinery/disposal,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
+"bDh" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
+/obj/effect/landmark/xeno_spawn,
+/turf/open/floor/corsat/brown/west,
+/area/lv522/atmos/east_reactor/south)
 "bDo" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
@@ -3500,18 +3501,6 @@
 	},
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/fitness/glass)
-"bNo" = (
-/obj/structure/surface/rack,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/camera/autoname{
-	dir = 8
-	},
-/obj/structure/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/prison/darkpurplefull2,
-/area/lv522/indoors/a_block/dorms/glass)
 "bNE" = (
 /obj/item/tank/oxygen{
 	pixel_x = 4;
@@ -4792,10 +4781,6 @@
 	},
 /turf/open/floor/whiteyellowfull/east,
 /area/lv522/oob/w_y_vault)
-"csK" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/prison/blue_plate/north,
-/area/lv522/indoors/a_block/admin)
 "csU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -4900,17 +4885,6 @@
 /obj/item/clothing/head/hardhat/white,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
-"cvY" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = 1;
-	pixel_y = -1
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/atmos/way_in_command_centre)
 "cwt" = (
 /obj/structure/window/framed/strata/reinforced,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -4985,6 +4959,21 @@
 "cya" = (
 /turf/open/floor/corsat/brown/southwest,
 /area/lv522/atmos/east_reactor/north)
+"cyg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/atmos/way_in_command_centre)
 "cyh" = (
 /obj/structure/platform{
 	dir = 8
@@ -5235,10 +5224,6 @@
 	},
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
-"cDX" = (
-/obj/item/prop/colony/used_flare,
-/turf/open/floor/prison/blue/northeast,
-/area/lv522/indoors/a_block/admin)
 "cEr" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -5540,16 +5525,6 @@
 "cNV" = (
 /turf/closed/wall/strata_outpost,
 /area/lv522/atmos/north_command_centre)
-"cOh" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/oob)
 "cOs" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -6235,12 +6210,6 @@
 	},
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/east_reactor)
-"dhy" = (
-/obj/structure/surface/table/almayer,
-/obj/item/trash/plate,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue_plate/north,
-/area/lv522/indoors/a_block/admin)
 "dhP" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 8
@@ -6485,13 +6454,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/east)
-"dnp" = (
-/obj/effect/spawner/gibspawner/human,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/prison/darkpurple2/north,
-/area/lv522/indoors/a_block/dorms)
 "dnH" = (
 /obj/structure/surface/rack,
 /obj/item/stack/sheet/mineral/diamond{
@@ -7592,11 +7554,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/filt)
-"dRV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522/indoors/a_block/admin)
+"dRT" = (
+/obj/item/prop/helmetgarb/lucky_feather{
+	pixel_x = 11;
+	pixel_y = 10
+	},
+/turf/open/floor/corsat/plate,
+/area/lv522/oob)
 "dRX" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -7976,6 +7940,13 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement/cement12,
 /area/lv522/outdoors/n_rockies)
+"edE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/open/floor/prison/blue/north,
+/area/lv522/indoors/a_block/hallway)
 "edQ" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 9
@@ -7985,6 +7956,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_west_street)
+"eem" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera/autoname{
+	dir = 4
+	},
+/turf/open/floor/prison/blue_plate/north,
+/area/lv522/indoors/a_block/admin)
 "eeo" = (
 /obj/item/storage/backpack/marine/satchel{
 	desc = "It's the heavy-duty black polymer kind. Time to take out the trash!";
@@ -8343,6 +8321,13 @@
 	},
 /turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
+"epD" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	desc = "You think you can make out the iconography of a Xenomorph.";
+	icon_state = "4"
+	},
+/turf/open/floor/corsat/brown/east,
+/area/lv522/oob)
 "epU" = (
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/north_command_centre)
@@ -8962,14 +8947,6 @@
 "eEp" = (
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/north_east_street)
-"eET" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/xeno_spawn,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor/south)
 "eEY" = (
 /turf/open/asphalt/cement/cement14,
 /area/lv522/outdoors/colony_streets/south_east_street)
@@ -9224,6 +9201,9 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/bridges/op_centre)
+"eMH" = (
+/turf/open/floor/plating/platingdmg3/west,
+/area/lv522/indoors/a_block/admin)
 "eMP" = (
 /obj/structure/prop/ice_colony/dense/planter_box{
 	dir = 8
@@ -9487,11 +9467,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_west_street)
-"eUD" = (
-/obj/structure/surface/rack,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/turf/open/floor/prison/darkpurplefull2,
-/area/lv522/indoors/a_block/dorms/glass)
 "eUL" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -9752,6 +9727,19 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/east_reactor/south)
+"fbx" = (
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = -7;
+	pixel_y = 19
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 19
+	},
+/turf/open/floor/prison/blue_plate/north,
+/area/lv522/indoors/a_block/admin)
 "fbA" = (
 /obj/structure/prop/invuln/ice_prefab/standalone{
 	icon_state = "white"
@@ -9854,6 +9842,10 @@
 /obj/structure/cargo_container/kelland/right,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
+"feT" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/indoors/a_block/admin)
 "feV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/camera/autoname,
@@ -10044,6 +10036,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
+"fjE" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/item/stack/sheet/metal,
+/turf/open/floor/prison/blue_plate/north,
+/area/lv522/indoors/a_block/admin)
 "fjJ" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
@@ -10215,6 +10214,18 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
+"fnw" = (
+/obj/structure/surface/rack,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera/autoname{
+	dir = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/prison/darkpurplefull2,
+/area/lv522/indoors/a_block/dorms/glass)
 "fnA" = (
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_west_street)
@@ -10251,6 +10262,10 @@
 /obj/item/device/analyzer,
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor)
+"fpE" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
 "fqn" = (
 /obj/structure/curtain/red,
 /obj/effect/decal/cleanable/dirt,
@@ -10272,6 +10287,11 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/west_reactor)
+"fqI" = (
+/obj/effect/spawner/gibspawner/xeno,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/colony_streets/north_street)
 "frb" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -10429,10 +10449,6 @@
 /obj/structure/bed/chair,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
-"ftQ" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/w_rockies)
 "ftT" = (
 /obj/structure/safe,
 /turf/open/floor/prison/darkbrownfull2,
@@ -10616,18 +10632,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorms)
+"fyD" = (
+/turf/open/floor/corsat/browncorner,
+/area/lv522/oob)
 "fyE" = (
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/b_block/bar)
-"fyV" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/lv522/outdoors/colony_streets/north_street)
 "fza" = (
 /obj/item/trash/barcardine,
 /obj/effect/decal/cleanable/dirt,
@@ -10750,12 +10760,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/way_in_command_centre)
-"fDu" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/prison/cell_stripe/north,
-/area/lv522/atmos/way_in_command_centre)
 "fDx" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -10814,6 +10818,11 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor)
+"fFV" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/prison,
+/area/lv522/atmos/cargo_intake)
 "fFX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -10825,13 +10834,6 @@
 	},
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/east_reactor/north)
-"fGt" = (
-/obj/effect/decal/hefa_cult_decals/d32{
-	desc = "You think you can make out the iconography of a Xenomorph.";
-	icon_state = "2"
-	},
-/turf/open/floor/corsat/brown/west,
-/area/lv522/oob)
 "fGS" = (
 /obj/structure/bed/chair,
 /obj/structure/machinery/light{
@@ -10847,6 +10849,12 @@
 /obj/structure/machinery/fuelcell_recycler/full,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/engineering)
+"fHc" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522/atmos/way_in_command_centre)
 "fHT" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -11819,6 +11827,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/casino)
+"giI" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
+/obj/effect/landmark/xeno_spawn,
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor/south)
 "giL" = (
 /obj/vehicle/train/cargo/trolley,
 /turf/open/floor/prison,
@@ -12124,9 +12138,19 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/brown/southeast,
 /area/lv522/atmos/reactor_garage)
+"gph" = (
+/turf/open/floor/corsat/browncorner/east,
+/area/lv522/oob)
 "gpr" = (
 /turf/open/floor/corsat/brown/northeast,
 /area/lv522/atmos/filt)
+"gpu" = (
+/obj/item/prop/alien/hugger{
+	pixel_x = -7;
+	pixel_y = -5
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/colony_streets/north_street)
 "gpx" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/fence,
@@ -12200,14 +12224,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorms)
-"grG" = (
-/obj/structure/largecrate/random/mini{
-	pixel_x = 9;
-	pixel_y = 12
-	},
-/obj/effect/decal/cleanable/blood/gibs,
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/north_east_street)
 "grP" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
@@ -12588,11 +12604,6 @@
 	},
 /turf/open/floor/prison/blue/north,
 /area/lv522/indoors/a_block/admin)
-"gDv" = (
-/obj/structure/surface/table/almayer,
-/obj/item/clothing/accessory/storage/black_vest,
-/turf/open/floor/prison/darkredfull2,
-/area/lv522/indoors/a_block/security)
 "gDL" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/door_control/brbutton/alt{
@@ -13051,6 +13062,13 @@
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/bridges/op_centre)
+"gQH" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/machinery/space_heater/radiator/red{
+	dir = 4
+	},
+/turf/open/floor/prison/blue_plate/north,
+/area/lv522/indoors/a_block/admin)
 "gQQ" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -13152,6 +13170,11 @@
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_street)
+"gSa" = (
+/obj/structure/surface/rack,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/turf/open/floor/prison/darkpurplefull2,
+/area/lv522/indoors/a_block/dorms/glass)
 "gSp" = (
 /obj/item/prop/colony/used_flare,
 /obj/structure/machinery/light,
@@ -13287,10 +13310,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
-"gVh" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison,
-/area/lv522/outdoors/colony_streets/north_street)
 "gVn" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -13598,9 +13617,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
-"hcG" = (
-/turf/open/floor/corsat/brown/southwest,
-/area/lv522/oob)
 "hcO" = (
 /obj/structure/platform_decoration,
 /turf/open/floor/plating,
@@ -13813,17 +13829,6 @@
 "hgP" = (
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/lv522/oob)
-"hht" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/lv522/outdoors/colony_streets/north_street)
 "hhv" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/brown/north,
@@ -14020,11 +14025,6 @@
 /obj/structure/cargo_container/watatsumi/leftmid,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/north_west_street)
-"hlP" = (
-/obj/item/prop/alien/hugger,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/kitchen)
 "hlW" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/floor_marked/southwest,
@@ -14072,12 +14072,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/landing_zone_2/ceiling)
-"hnx" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/prison/blue/north,
-/area/lv522/indoors/a_block/hallway)
 "hny" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	name = "\improper Bedroom"
@@ -14730,14 +14724,6 @@
 "hJg" = (
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/north_street)
-"hJs" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/under/colonist/boilersuit/cyan{
-	pixel_x = 5;
-	pixel_y = -6
-	},
-/turf/open/floor/carpet,
-/area/lv522/indoors/a_block/executive)
 "hJG" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
@@ -14999,6 +14985,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
+"hQu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/turf/open/floor/whiteyellowfull/east,
+/area/lv522/oob/w_y_vault)
 "hQB" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -15606,6 +15600,9 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/indoors/a_block/bridges/dorms_fitness)
+"iiG" = (
+/turf/open/floor/corsat/brown/southeast,
+/area/lv522/oob)
 "iiP" = (
 /obj/structure/platform{
 	dir = 4
@@ -16056,12 +16053,6 @@
 	},
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
-"iwM" = (
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/admin)
 "iwV" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /obj/structure/prop/ice_colony/ground_wire{
@@ -16089,13 +16080,6 @@
 "ixi" = (
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/north_west_street)
-"ixk" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = 1
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/atmos/way_in_command_centre)
 "ixp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/camera/autoname{
@@ -16104,6 +16088,12 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/admin)
+"ixC" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
+/obj/effect/landmark/xeno_spawn,
+/turf/open/floor/corsat,
+/area/lv522/atmos/east_reactor/south)
 "ixD" = (
 /turf/open/floor/corsat,
 /area/lv522/atmos/north_command_centre)
@@ -16472,6 +16462,17 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/nw_rockies)
+"iJL" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/atmos/way_in_command_centre)
 "iJN" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -16567,6 +16568,14 @@
 	},
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
+"iLG" = (
+/obj/structure/largecrate/random/mini{
+	pixel_x = 9;
+	pixel_y = 12
+	},
+/obj/effect/decal/cleanable/blood/gibs,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/colony_streets/north_east_street)
 "iMn" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
@@ -16614,10 +16623,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/reactor_garage)
-"iNx" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/w_rockies)
 "iNA" = (
 /obj/item/clothing/shoes/marine/civilian{
 	name = "steel toe boots"
@@ -16820,6 +16825,16 @@
 "iTm" = (
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/c_block/cargo)
+"iTw" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	desc = "You think you can make out the iconography of a Xenomorph.";
+	icon_state = "3"
+	},
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	pixel_y = 29
+	},
+/turf/open/floor/corsat/brown/north,
+/area/lv522/oob)
 "iTy" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/kitchen/tray{
@@ -16837,6 +16852,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/b_block/bar)
+"iTz" = (
+/obj/item/device/flashlight/flare/on,
+/obj/effect/decal/cleanable/blood,
+/obj/item/device/flashlight/flare/on,
+/obj/effect/decal/cleanable/blood,
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/nw_rockies)
 "iTD" = (
 /obj/item/trash/barcardine,
 /obj/item/tool/weldingtool,
@@ -17179,16 +17201,6 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/central_streets)
-"jef" = (
-/obj/effect/decal/hefa_cult_decals/d32{
-	desc = "You think you can make out the iconography of a Xenomorph.";
-	icon_state = "3"
-	},
-/obj/structure/machinery/computer/cameras/wooden_tv{
-	pixel_y = 29
-	},
-/turf/open/floor/corsat/brown/north,
-/area/lv522/oob)
 "jer" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -17804,10 +17816,13 @@
 /obj/effect/spawner/gibspawner/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/w_rockies)
-"jsQ" = (
-/obj/item/prop/alien/hugger,
-/turf/open/floor/prison,
-/area/lv522/atmos/cargo_intake)
+"jsS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/metal,
+/turf/open/floor/corsat,
+/area/lv522/atmos/east_reactor/south)
 "jte" = (
 /obj/structure/largecrate/random/mini{
 	layer = 3.1;
@@ -17990,6 +18005,13 @@
 	},
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/c_block/mining)
+"jvL" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/crate/weapon,
+/turf/open/floor/prison,
+/area/lv522/indoors/a_block/security)
 "jwo" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -18045,10 +18067,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
 /area/lv522/atmos/outdoor)
-"jxR" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522/indoors/a_block/admin)
 "jxW" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/browncorner,
@@ -18088,6 +18106,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
+"jzq" = (
+/obj/item/prop/colony/used_flare,
+/turf/open/floor/prison/blue/northeast,
+/area/lv522/indoors/a_block/admin)
 "jzC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/woodentable/fancy,
@@ -18232,6 +18254,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorm_north)
+"jBb" = (
+/obj/structure/surface/table/almayer,
+/obj/item/trash/plate,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/blue_plate/north,
+/area/lv522/indoors/a_block/admin)
 "jBw" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -18412,13 +18440,6 @@
 /obj/structure/largecrate/random/barrel,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
-"jEQ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/north{
-	start_charge = 20
-	},
-/turf/open/floor/prison,
-/area/lv522/indoors/a_block/kitchen)
 "jEW" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -18521,12 +18542,6 @@
 /obj/item/prop/colony/used_flare,
 /turf/open/floor/prison/blue/north,
 /area/lv522/indoors/a_block/admin)
-"jGV" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/xeno_spawn,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor/south)
 "jHb" = (
 /turf/open/gm/river,
 /area/lv522/oob)
@@ -18604,6 +18619,11 @@
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/prison/blue/southeast,
 /area/lv522/indoors/a_block/admin)
+"jJj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/colony_streets/north_street)
 "jJF" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -18651,13 +18671,6 @@
 	},
 /turf/open/asphalt/cement/cement12,
 /area/lv522/outdoors/colony_streets/north_east_street)
-"jLA" = (
-/obj/effect/decal/hefa_cult_decals/d32{
-	desc = "You think you can make out the iconography of a Xenomorph.";
-	icon_state = "4"
-	},
-/turf/open/floor/corsat/brown/east,
-/area/lv522/oob)
 "jLF" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -19348,10 +19361,6 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/plating,
 /area/lv522/oob)
-"kcz" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/turf/open/floor/corsat/brown,
-/area/lv522/atmos/east_reactor/south)
 "kcC" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /obj/structure/prop/ice_colony/ground_wire{
@@ -19511,6 +19520,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/b_block/bar)
+"kfa" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/brown/east,
+/area/lv522/atmos/east_reactor/south)
 "kfb" = (
 /obj/item/stack/rods,
 /turf/open/asphalt/cement/cement12,
@@ -19688,6 +19702,12 @@
 /obj/item/explosive/plastic,
 /turf/open/asphalt/cement/cement12,
 /area/lv522/outdoors/colony_streets/south_east_street)
+"kka" = (
+/obj/docking_port/stationary/marine_dropship/lz2{
+	name = "LZ2: Southeast Landing Zone"
+	},
+/turf/open/floor/plating,
+/area/lv522/landing_zone_2)
 "kke" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/browncorner/west,
@@ -19740,6 +19760,19 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/way_in_command_centre)
+"kli" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/gibs,
+/obj/item/prop{
+	desc = "Holy shit";
+	dir = 8;
+	icon = 'icons/mob/humans/species/r_human.dmi';
+	icon_state = "head_m";
+	name = "human head"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/indoors/a_block/bridges/corpo)
 "kll" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
@@ -19765,6 +19798,20 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/hallway)
+"klw" = (
+/obj/structure/closet/crate,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/suit/storage/apron/overalls,
+/obj/item/clothing/suit/storage/apron/overalls,
+/obj/item/clothing/suit/storage/apron/overalls,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/lv522/indoors/c_block/mining)
 "klN" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/floor/corsat/plate,
@@ -19895,6 +19942,10 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
+"koX" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
 "kpb" = (
 /obj/structure/curtain/medical,
 /turf/open/floor/strata/white_cyan2/west,
@@ -19938,6 +19989,11 @@
 /area/lv522/indoors/a_block/security)
 "kqb" = (
 /turf/closed/wall/strata_outpost,
+/area/lv522/indoors/a_block/kitchen)
+"kqn" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/kitchen)
 "kqz" = (
 /obj/structure/closet/firecloset/full,
@@ -20047,6 +20103,16 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
+"ksJ" = (
+/obj/effect/landmark/corpsespawner/forecon_spotter,
+/obj/effect/spawner/gibspawner/human,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/spawner/gibspawner/human,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/spawner/gibspawner/human,
+/obj/effect/decal/cleanable/blood,
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/nw_rockies)
 "ktc" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
@@ -20370,6 +20436,11 @@
 	},
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/hydro)
+"kzc" = (
+/obj/item/prop/alien/hugger,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/lv522/indoors/a_block/kitchen)
 "kzl" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 9
@@ -20697,6 +20768,15 @@
 /obj/structure/tunnel,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_street)
+"kHt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/lv522/outdoors/colony_streets/north_street)
 "kHu" = (
 /obj/item/clothing/mask/facehugger{
 	desc = "It has some sort of a tube at the end of its tail. What the hell is this thing?";
@@ -20835,6 +20915,12 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/garage)
+"kJQ" = (
+/obj/item/shard{
+	icon_state = "medium"
+	},
+/turf/open/floor/prison/blue/north,
+/area/lv522/indoors/a_block/admin)
 "kKd" = (
 /obj/structure/cargo_container/watatsumi/rightmid,
 /turf/open/floor/prison/floor_marked/southwest,
@@ -21221,6 +21307,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/nw_rockies)
+"kTM" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/n_rockies)
 "kTS" = (
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
@@ -21403,12 +21493,6 @@
 "kXY" = (
 /turf/open/floor/prison,
 /area/lv522/atmos/way_in_command_centre)
-"kYf" = (
-/obj/docking_port/stationary/marine_dropship/lz1{
-	name = "LZ1: Southwest Landing Zone"
-	},
-/turf/open/floor/plating,
-/area/lv522/landing_zone_1)
 "kYm" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
@@ -21493,6 +21577,11 @@
 /obj/item/storage/toolbox/mechanical/green,
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/north_west_street)
+"laN" = (
+/obj/structure/curtain/medical,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/strata/white_cyan2/west,
+/area/lv522/indoors/a_block/medical/glass)
 "laX" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 8;
@@ -21713,11 +21802,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
-"lik" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/xeno_spawn,
+"liw" = (
 /turf/open/floor/corsat/brown/west,
-/area/lv522/atmos/east_reactor/south)
+/area/lv522/oob)
 "liL" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
@@ -22165,6 +22252,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/sewer)
+"ltr" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor/south)
 "lty" = (
 /obj/structure/barricade/wooden{
 	dir = 8
@@ -22495,23 +22591,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
-"lAi" = (
-/obj/structure/largecrate/random/barrel{
-	layer = 2.7
-	},
-/obj/structure/largecrate/random/barrel{
-	layer = 2.9;
-	pixel_x = 6;
-	pixel_y = -16
-	},
-/obj/structure/largecrate/random/barrel{
-	layer = 2.9;
-	pixel_x = -17;
-	pixel_y = -9
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/north_west_street)
 "lAm" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
@@ -22521,6 +22600,11 @@
 /obj/structure/surface/rack,
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel)
+"lAy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/colony_streets/north_street)
 "lAJ" = (
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/prison/floor_marked/southwest,
@@ -22658,17 +22742,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/east_reactor/south)
-"lEA" = (
-/obj/item/ammo_magazine/sniper{
-	current_rounds = 0;
-	pixel_x = 10;
-	pixel_y = 12
-	},
-/obj/item/ammo_magazine/sniper{
-	current_rounds = 1
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/north_east_street)
 "lEI" = (
 /obj/item/stack/rods,
 /obj/structure/machinery/light{
@@ -23067,6 +23140,12 @@
 	},
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor/south)
+"lNO" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	desc = "You think you can make out the iconography of a Xenomorph."
+	},
+/turf/open/floor/corsat/brown/southeast,
+/area/lv522/oob)
 "lOi" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
@@ -23449,14 +23528,26 @@
 /obj/structure/machinery/power/port_gen/pacman/super,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
+"lXP" = (
+/obj/structure/filingcabinet/chestdrawer{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 19
+	},
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = -7;
+	pixel_y = 19
+	},
+/obj/item/shard{
+	icon_state = "medium"
+	},
+/turf/open/floor/prison/blue_plate/north,
+/area/lv522/indoors/a_block/admin)
 "lXR" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
-"lXS" = (
-/obj/structure/curtain/medical,
-/turf/open/floor/strata/white_cyan2/west,
-/area/lv522/indoors/a_block/medical/glass)
 "lXY" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -23578,6 +23669,17 @@
 	},
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo/glass)
+"mal" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/power/north{
+	start_charge = 20
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/power/north{
+	start_charge = 20
+	},
+/turf/open/floor/prison,
+/area/lv522/indoors/a_block/kitchen)
 "map" = (
 /obj/structure/machinery/conveyor,
 /turf/open/floor/corsat/browncorner/north,
@@ -23599,16 +23701,6 @@
 /obj/item/tool/pen/blue/clicky,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor/east)
-"maA" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/lv522/outdoors/colony_streets/north_street)
 "maF" = (
 /obj/effect/spawner/gibspawner/xeno,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -23961,6 +24053,10 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_east_street)
+"mkF" = (
+/obj/effect/spawner/gibspawner/human,
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
 "mkW" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -24093,12 +24189,6 @@
 	},
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/cargo)
-"mog" = (
-/obj/item/shard{
-	icon_state = "medium"
-	},
-/turf/open/floor/prison/blue/north,
-/area/lv522/indoors/a_block/admin)
 "mok" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -24278,6 +24368,16 @@
 /obj/structure/bed/chair,
 /turf/open/floor/plating,
 /area/lv522/indoors/a_block/security)
+"mtF" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_y = 5
+	},
+/obj/item/tool/pen/blue/clicky,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
+/obj/effect/landmark/xeno_spawn,
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor/south)
 "mtI" = (
 /obj/structure/flora/bush/ausbushes/ppflowers,
 /turf/open/floor/grass,
@@ -24350,9 +24450,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/cargo)
-"mvP" = (
-/turf/open/asphalt/cement/cement1,
-/area/lv522/oob)
 "mwm" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -24399,13 +24496,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement/cement9,
 /area/lv522/outdoors/colony_streets/north_west_street)
-"mxl" = (
-/obj/structure/pipes/vents/pump,
-/obj/structure/machinery/space_heater/radiator/red{
-	dir = 4
-	},
-/turf/open/floor/prison/blue_plate/north,
-/area/lv522/indoors/a_block/admin)
 "mxx" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -24774,6 +24864,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/atmos/reactor_garage)
+"mGw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/lv522/outdoors/colony_streets/north_street)
 "mGL" = (
 /obj/structure/machinery/portable_atmospherics/canister/phoron,
 /turf/open/floor/corsat/squares,
@@ -24859,6 +24960,12 @@
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/floor/grass,
 /area/lv522/indoors/a_block/garden)
+"mId" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/prison/blue/north,
+/area/lv522/indoors/a_block/hallway)
 "mIe" = (
 /obj/structure/prop/ice_colony/dense/planter_box{
 	dir = 5
@@ -25083,10 +25190,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
-"mMM" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue/northwest,
-/area/lv522/indoors/a_block/admin)
 "mNa" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -25383,11 +25486,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/garage)
-"mSw" = (
-/obj/structure/curtain/medical,
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/strata/white_cyan2/west,
-/area/lv522/indoors/a_block/medical/glass)
 "mSI" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1;
@@ -25790,16 +25888,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/security)
-"neB" = (
-/obj/effect/decal/hefa_cult_decals/d96{
-	desc = "You think you can make out the iconography of a Xenomorph?"
-	},
-/obj/effect/decal/hefa_cult_decals/d32{
-	desc = "You think you can make out the iconography of a Xenomorph.";
-	icon_state = "bee"
-	},
-/turf/open/floor/corsat/plate,
-/area/lv522/oob)
 "nfe" = (
 /obj/structure/window_frame/strata,
 /obj/item/stack/rods,
@@ -26019,12 +26107,6 @@
 	},
 /turf/open/asphalt/cement/cement9,
 /area/lv522/outdoors/colony_streets/central_streets)
-"njh" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/xeno_spawn,
-/turf/open/floor/corsat,
-/area/lv522/atmos/east_reactor/south)
 "njm" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/item/stack/sheet/wood,
@@ -26068,10 +26150,6 @@
 /obj/structure/machinery/space_heater/radiator/red,
 /turf/open/floor/strata/cyan2/east,
 /area/lv522/indoors/a_block/medical)
-"nla" = (
-/obj/effect/spawner/gibspawner/xeno,
-/turf/open/floor/prison/floor_marked/southwest,
-/area/lv522/atmos/cargo_intake)
 "nlz" = (
 /obj/structure/machinery/portable_atmospherics/canister/sleeping_agent{
 	density = 0;
@@ -26301,9 +26379,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/nw_rockies)
-"nrv" = (
-/turf/open/floor/corsat/brown/west,
-/area/lv522/oob)
 "nrP" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -26722,6 +26797,13 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/asphalt/cement/cement12,
 /area/lv522/outdoors/colony_streets/south_west_street)
+"nBV" = (
+/obj/item/prop/alien/hugger{
+	pixel_x = 13;
+	pixel_y = -5
+	},
+/turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/colony_streets/north_street)
 "nBY" = (
 /obj/item/tool/scythe,
 /turf/open/floor/prison,
@@ -27781,13 +27863,6 @@
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/bridges)
-"ocz" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/item/stack/sheet/metal,
-/turf/open/floor/prison/blue_plate/north,
-/area/lv522/indoors/a_block/admin)
 "ocD" = (
 /obj/structure/closet/crate,
 /obj/effect/decal/cleanable/dirt,
@@ -27934,6 +28009,15 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/cargo_intake)
+"ogs" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/lv522/outdoors/colony_streets/north_street)
 "ogt" = (
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/corsat/marked,
@@ -28119,6 +28203,11 @@
 	},
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/hydro)
+"olC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor/south)
 "olG" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /turf/open/floor/corsat/marked,
@@ -28553,6 +28642,12 @@
 	},
 /turf/open/asphalt/cement/cement14,
 /area/lv522/outdoors/colony_streets/central_streets)
+"oxG" = (
+/obj/structure/noticeboard{
+	pixel_y = 29
+	},
+/turf/open/floor/prison/blue_plate/north,
+/area/lv522/indoors/a_block/hallway)
 "oyf" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
@@ -28611,6 +28706,14 @@
 /obj/structure/machinery/cell_charger,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/engineering)
+"ozA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/under/colonist/boilersuit/cyan{
+	pixel_x = 5;
+	pixel_y = -6
+	},
+/turf/open/floor/carpet,
+/area/lv522/indoors/a_block/executive)
 "ozB" = (
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/bridges/corpo)
@@ -29548,6 +29651,12 @@
 "oZa" = (
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/bridges)
+"oZd" = (
+/obj/docking_port/stationary/marine_dropship/lz1{
+	name = "LZ1: Southwest Landing Zone"
+	},
+/turf/open/floor/plating,
+/area/lv522/landing_zone_1)
 "oZy" = (
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/indoors/a_block/bridges/corpo)
@@ -30476,6 +30585,13 @@
 "pvn" = (
 /turf/open/asphalt/cement/cement15,
 /area/lv522/outdoors/colony_streets/north_street)
+"pvw" = (
+/obj/item/ammo_magazine/rifle{
+	pixel_x = -10;
+	pixel_y = 9
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/nw_rockies)
 "pvA" = (
 /obj/structure/barricade/wooden{
 	dir = 1;
@@ -30943,6 +31059,10 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_east_street)
+"pFI" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/brown/southeast,
+/area/lv522/atmos/east_reactor/south)
 "pFP" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellowfull2/east,
@@ -31366,11 +31486,6 @@
 "pPC" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/outdoors/nw_rockies)
-"pPY" = (
-/obj/item/device/flashlight/flare/on,
-/obj/effect/decal/cleanable/blood,
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/nw_rockies)
 "pQd" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/structure/bed/chair/comfy/beige,
@@ -31652,10 +31767,19 @@
 /obj/effect/landmark/ert_spawns/groundside_xeno,
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/east_reactor)
+"pYm" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison,
+/area/lv522/indoors/a_block/admin)
 "pYu" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/green,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/garage)
+"pYC" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/prison,
+/area/lv522/outdoors/colony_streets/north_west_street)
 "pYN" = (
 /obj/structure/platform_decoration{
 	dir = 1
@@ -32080,13 +32204,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/lv522/indoors/b_block/bar)
-"qhS" = (
-/obj/item/prop/alien/hugger{
-	pixel_x = 13;
-	pixel_y = -5
-	},
-/turf/open/asphalt/cement/cement3,
-/area/lv522/outdoors/colony_streets/north_street)
 "qic" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/c_block/cargo)
@@ -32260,11 +32377,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/reactor_garage)
-"qmV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/stack/sheet/metal,
-/turf/open/floor/corsat,
-/area/lv522/atmos/east_reactor/south)
 "qmW" = (
 /obj/structure/surface/table/almayer{
 	dir = 4;
@@ -32464,12 +32576,6 @@
 	},
 /turf/open/floor/almayer/w_y1/north,
 /area/lv522/atmos/way_in_command_centre)
-"qtn" = (
-/obj/structure/pipes/standard/manifold/hidden/green{
-	dir = 4
-	},
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor/south)
 "qts" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
@@ -32680,6 +32786,11 @@
 	},
 /turf/open/asphalt/cement/cement12,
 /area/lv522/outdoors/colony_streets/south_east_street)
+"qzm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/indoors/a_block/admin)
 "qzu" = (
 /obj/structure/sink{
 	pixel_y = 26
@@ -32703,6 +32814,10 @@
 "qzL" = (
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/bridge)
+"qzO" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/prison/blue_plate/north,
+/area/lv522/indoors/a_block/admin)
 "qzP" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -33095,12 +33210,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_east_street)
-"qJe" = (
-/obj/effect/decal/hefa_cult_decals/d32{
-	desc = "You think you can make out the iconography of a Xenomorph."
-	},
-/turf/open/floor/corsat/brown/southeast,
-/area/lv522/oob)
 "qJy" = (
 /obj/structure/largecrate/random,
 /turf/open/auto_turf/shale/layer1,
@@ -33778,6 +33887,9 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/cargo_intake)
+"qZD" = (
+/turf/open/floor/corsat/brown/southwest,
+/area/lv522/oob)
 "qZT" = (
 /obj/item/prop/colony/usedbandage{
 	dir = 9
@@ -34005,6 +34117,16 @@
 /obj/item/tool/portadialysis,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
+"rdL" = (
+/obj/effect/decal/hefa_cult_decals/d96{
+	desc = "You think you can make out the iconography of a Xenomorph?"
+	},
+/obj/effect/decal/hefa_cult_decals/d32{
+	desc = "You think you can make out the iconography of a Xenomorph.";
+	icon_state = "bee"
+	},
+/turf/open/floor/corsat/plate,
+/area/lv522/oob)
 "rdM" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 9
@@ -34171,6 +34293,16 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/admin)
+"rix" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/oob)
 "riC" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/closet/firecloset/full,
@@ -34210,6 +34342,12 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/central_streets)
+"rjp" = (
+/obj/structure/machinery/power/apc/power/north{
+	start_charge = 20
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/indoors/a_block/admin)
 "rjO" = (
 /obj/structure/machinery/squeezer,
 /turf/open/floor/prison/greenfull/east,
@@ -34597,20 +34735,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/east_reactor)
-"rvg" = (
-/obj/structure/closet/crate,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/suit/storage/apron/overalls,
-/obj/item/clothing/suit/storage/apron/overalls,
-/obj/item/clothing/suit/storage/apron/overalls,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison,
-/area/lv522/indoors/c_block/mining)
 "rvh" = (
 /obj/effect/decal/cleanable/blood/gibs/xeno/body,
 /obj/effect/spawner/gibspawner/xeno,
@@ -34839,22 +34963,6 @@
 /obj/structure/largecrate/random,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
-"rAG" = (
-/obj/structure/filingcabinet/chestdrawer{
-	density = 0;
-	pixel_x = 8;
-	pixel_y = 19
-	},
-/obj/structure/filingcabinet{
-	density = 0;
-	pixel_x = -7;
-	pixel_y = 19
-	},
-/obj/item/shard{
-	icon_state = "medium"
-	},
-/turf/open/floor/prison/blue_plate/north,
-/area/lv522/indoors/a_block/admin)
 "rAS" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/structure/machinery/light,
@@ -35130,13 +35238,6 @@
 	},
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel)
-"rHU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/camera/autoname{
-	dir = 4
-	},
-/turf/open/floor/prison/blue_plate/north,
-/area/lv522/indoors/a_block/admin)
 "rHX" = (
 /obj/structure/closet/crate/trashcart,
 /obj/item/trash/wy_chips_pepper,
@@ -35583,6 +35684,23 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/north_west_street)
+"rUb" = (
+/obj/structure/largecrate/random/barrel{
+	layer = 2.7
+	},
+/obj/structure/largecrate/random/barrel{
+	layer = 2.9;
+	pixel_x = 6;
+	pixel_y = -16
+	},
+/obj/structure/largecrate/random/barrel{
+	layer = 2.9;
+	pixel_x = -17;
+	pixel_y = -9
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/colony_streets/north_west_street)
 "rUf" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/darkredfull2,
@@ -35735,6 +35853,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/indoors/c_block/mining)
+"rXE" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/accessory/storage/black_vest,
+/turf/open/floor/prison/darkredfull2,
+/area/lv522/indoors/a_block/security)
 "rXH" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
@@ -35799,6 +35922,9 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms/glass)
+"rYT" = (
+/turf/open/asphalt/cement/cement1,
+/area/lv522/oob)
 "rYW" = (
 /obj/structure/machinery/light,
 /obj/effect/decal/cleanable/dirt,
@@ -35971,6 +36097,10 @@
 /obj/structure/machinery/floodlight,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
+"sdn" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
+/turf/open/floor/corsat/brown,
+/area/lv522/atmos/east_reactor/south)
 "sdt" = (
 /obj/structure/cargo_container/ferret/right,
 /turf/open/asphalt/cement/cement4,
@@ -36104,6 +36234,10 @@
 /obj/item/stack/rods,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_east_street)
+"shX" = (
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
+/turf/open/floor/corsat/browncorner,
+/area/lv522/atmos/east_reactor/south)
 "sid" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -36171,8 +36305,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
-"sju" = (
-/turf/open/floor/plating/platingdmg3/west,
+"sjw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/blue/west,
 /area/lv522/indoors/a_block/admin)
 "sjy" = (
 /turf/closed/wall/strata_outpost,
@@ -36245,19 +36381,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/b_block/hydro)
-"sld" = (
-/obj/structure/closet/crate,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/suit/storage/apron/overalls,
-/obj/item/clothing/suit/storage/apron/overalls,
-/obj/item/clothing/suit/storage/apron/overalls,
-/turf/open/floor/prison,
-/area/lv522/indoors/c_block/mining)
 "slq" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -36317,13 +36440,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
-"smB" = (
-/obj/effect/spawner/gibspawner/human,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/spawner/gibspawner/human,
-/obj/effect/decal/cleanable/blood,
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/nw_rockies)
 "smN" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
@@ -36479,9 +36595,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/lv522/landing_zone_2)
-"srX" = (
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/nw_rockies)
 "ssh" = (
 /obj/structure/closet/crate/trashcart,
 /turf/open/auto_turf/sand_white/layer0,
@@ -37934,9 +38047,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/cargo_intake)
-"tdr" = (
-/turf/open/floor/corsat/browncorner/east,
-/area/lv522/oob)
 "tdv" = (
 /obj/structure/surface/rack,
 /obj/item/storage/toolbox/mechanical/green{
@@ -37961,17 +38071,6 @@
 	},
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
-"tdE" = (
-/obj/effect/decal{
-	icon = 'icons/mob/xenos/effects.dmi';
-	icon_state = "acid_weak";
-	layer = 2;
-	name = "weak acid";
-	pixel_x = -10;
-	pixel_y = 4
-	},
-/turf/open/asphalt/cement/cement3,
-/area/lv522/outdoors/colony_streets/north_street)
 "tdJ" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -38146,6 +38245,10 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/corpo/glass)
+"tif" = (
+/obj/structure/curtain/medical,
+/turf/open/floor/strata/white_cyan2/west,
+/area/lv522/indoors/a_block/medical/glass)
 "tim" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
@@ -38153,12 +38256,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/way_in_command_centre)
-"tio" = (
-/obj/structure/noticeboard{
-	pixel_y = 29
-	},
-/turf/open/floor/prison/blue_plate/north,
-/area/lv522/indoors/a_block/hallway)
 "tiF" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/mouse,
@@ -38306,9 +38403,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_east_street)
-"tlY" = (
-/turf/open/floor/corsat/browncorner,
-/area/lv522/oob)
 "tml" = (
 /obj/structure/platform{
 	dir = 1
@@ -39680,6 +39774,13 @@
 /obj/item/stack/medical/bruise_pack,
 /turf/open/floor/prison/blue,
 /area/lv522/indoors/a_block/hallway)
+"tOW" = (
+/obj/effect/spawner/gibspawner/human,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/prison/darkpurple2/north,
+/area/lv522/indoors/a_block/dorms)
 "tPb" = (
 /obj/structure/prop/structure_lattice,
 /turf/open/auto_turf/shale/layer1,
@@ -39816,11 +39917,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_west_street)
-"tSc" = (
-/obj/item/storage/backpack/marine/engineerpack/satchel,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/darkredfull2,
-/area/lv522/indoors/a_block/security)
 "tSk" = (
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_west_street)
@@ -39895,6 +39991,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/hallway)
+"tUs" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/prop{
+	desc = "Holy shit";
+	icon = 'icons/mob/humans/species/r_human.dmi';
+	icon_state = "l_foot";
+	name = "left foot";
+	pixel_x = 5;
+	pixel_y = 25
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkredfull2,
+/area/lv522/indoors/a_block/bridges/corpo)
 "tUE" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 8;
@@ -40235,6 +40344,14 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/landing_zone_1)
+"udr" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
+/obj/effect/landmark/xeno_spawn,
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor/south)
 "udA" = (
 /obj/structure/machinery/landinglight/ds2/delayone{
 	dir = 8
@@ -40372,6 +40489,13 @@
 /obj/structure/surface/rack,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
+"uhK" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	desc = "You think you can make out the iconography of a Xenomorph.";
+	icon_state = "2"
+	},
+/turf/open/floor/corsat/brown/west,
+/area/lv522/oob)
 "uhN" = (
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = 10;
@@ -40474,9 +40598,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/b_block/hydro)
-"ujT" = (
-/turf/open/floor/corsat/brown/southeast,
-/area/lv522/oob)
 "ukp" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/recharger,
@@ -40499,6 +40620,25 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/north_command_centre)
+"ula" = (
+/obj/effect/decal{
+	icon = 'icons/mob/xenos/effects.dmi';
+	icon_state = "acid_weak";
+	layer = 2;
+	name = "weak acid";
+	pixel_x = -10;
+	pixel_y = 4
+	},
+/obj/effect/decal{
+	icon = 'icons/mob/xenos/effects.dmi';
+	icon_state = "acid_weak";
+	layer = 2;
+	name = "weak acid";
+	pixel_x = -10;
+	pixel_y = 4
+	},
+/turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/colony_streets/north_street)
 "ulg" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -40734,6 +40874,23 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/security)
+"urR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/lv522/outdoors/colony_streets/north_street)
 "urU" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 2
@@ -41139,6 +41296,10 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/floor/corsat/brown/northeast,
 /area/lv522/atmos/west_reactor)
+"uCN" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/lv522/outdoors/colony_streets/north_street)
 "uCP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -41398,13 +41559,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/landing_zone_2/ceiling)
-"uJt" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/extinguisher_cabinet{
-	pixel_y = 30
-	},
-/turf/open/floor/prison/blue/north,
-/area/lv522/indoors/a_block/hallway)
 "uJy" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/prison/blue_plate/north,
@@ -41474,6 +41628,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/garage)
+"uLj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor/south)
 "uLw" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -41687,11 +41848,6 @@
 /obj/item/prop/alien/hugger,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
-"uPG" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/corsat/brown/east,
-/area/lv522/atmos/east_reactor/south)
 "uPI" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -41978,6 +42134,12 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/central_streets)
+"uWH" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	icon_state = "2"
+	},
+/turf/open/floor/corsat/brown/southwest,
+/area/lv522/oob)
 "uWN" = (
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/corsat/brown/southwest,
@@ -42259,10 +42421,6 @@
 /obj/item/folder/red,
 /turf/open/floor/whiteyellowfull/east,
 /area/lv522/indoors/a_block/corpo)
-"vdm" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/nw_rockies)
 "vds" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -42745,11 +42903,6 @@
 	},
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/hydro)
-"vpA" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue_plate/north,
-/area/lv522/indoors/a_block/admin)
 "vpD" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -42929,6 +43082,21 @@
 "vvk" = (
 /turf/open/floor/corsat/brown/southeast,
 /area/lv522/atmos/east_reactor/east)
+"vvv" = (
+/obj/structure/closet/crate,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/suit/storage/apron/overalls,
+/obj/item/clothing/suit/storage/apron/overalls,
+/obj/item/clothing/suit/storage/apron/overalls,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/prison,
+/area/lv522/indoors/c_block/mining)
 "vvA" = (
 /turf/open/asphalt/cement/cement12,
 /area/lv522/landing_zone_2)
@@ -43109,12 +43277,6 @@
 /obj/structure/machinery/bioprinter,
 /turf/open/floor/strata/cyan2/east,
 /area/lv522/indoors/a_block/medical)
-"vAh" = (
-/obj/effect/decal/hefa_cult_decals/d32{
-	icon_state = "2"
-	},
-/turf/open/floor/corsat/brown/southwest,
-/area/lv522/oob)
 "vAm" = (
 /turf/open/floor/corsat/brown,
 /area/lv522/oob)
@@ -43252,13 +43414,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/kitchen/damage)
-"vDZ" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/structure/closet/crate/weapon,
-/turf/open/floor/prison,
-/area/lv522/indoors/a_block/security)
 "vEc" = (
 /obj/structure/machinery/light,
 /obj/structure/machinery/disposal,
@@ -43369,6 +43524,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
+"vGu" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/colony_streets/north_street)
 "vGv" = (
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/shale/layer1,
@@ -43389,10 +43553,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe,
 /area/lv522/atmos/way_in_command_centre)
-"vGW" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/turf/open/floor/corsat/browncorner,
-/area/lv522/atmos/east_reactor/south)
 "vGZ" = (
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/brown/north,
@@ -43812,13 +43972,10 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/central_streets)
-"vTK" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/structure/machinery/light{
+"vTu" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
 	},
-/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "vTO" = (
@@ -43958,21 +44115,6 @@
 	},
 /turf/open/floor/bcircuit,
 /area/lv522/indoors/a_block/admin)
-"vWz" = (
-/obj/structure/closet/crate,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/suit/storage/apron/overalls,
-/obj/item/clothing/suit/storage/apron/overalls,
-/obj/item/clothing/suit/storage/apron/overalls,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/prison,
-/area/lv522/indoors/c_block/mining)
 "vWI" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/prison,
@@ -44133,14 +44275,6 @@
 /obj/structure/closet/athletic_mixed,
 /turf/open/floor/strata/blue1,
 /area/lv522/indoors/a_block/dorm_north)
-"waa" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out";
-	pixel_x = -1;
-	pixel_y = -1
-	},
-/turf/open/floor/whiteyellowfull/east,
-/area/lv522/oob/w_y_vault)
 "wao" = (
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
@@ -44236,10 +44370,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/landing_zone_1)
-"wev" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/corsat/brown/southeast,
-/area/lv522/atmos/east_reactor/south)
 "wex" = (
 /obj/effect/decal/cleanable/blood/gibs/xeno,
 /obj/effect/decal/cleanable/dirt,
@@ -44989,11 +45119,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/north_east_street)
-"wvb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue/west,
-/area/lv522/indoors/a_block/admin)
 "wvd" = (
 /obj/structure/prop/dam/crane/damaged,
 /turf/open/auto_turf/sand_white/layer0,
@@ -45081,6 +45206,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/admin)
+"wyV" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/blue_plate/north,
+/area/lv522/indoors/a_block/admin)
 "wze" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
@@ -45141,6 +45271,17 @@
 	},
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/hallway)
+"wBk" = (
+/obj/item/ammo_magazine/sniper{
+	current_rounds = 0;
+	pixel_x = 10;
+	pixel_y = 12
+	},
+/obj/item/ammo_magazine/sniper{
+	current_rounds = 1
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/colony_streets/north_east_street)
 "wBx" = (
 /obj/structure/machinery/landinglight/ds2/delayone{
 	dir = 1
@@ -45210,6 +45351,23 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/bar)
+"wCV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/atmos/cargo_intake)
 "wDa" = (
 /turf/open/floor/prison,
 /area/lv522/landing_zone_2)
@@ -45747,6 +45905,11 @@
 	},
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/ceiling)
+"wQQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/way_in_command_centre)
 "wRc" = (
 /obj/structure/machinery/power/apc/power/north{
 	start_charge = 20
@@ -45886,16 +46049,6 @@
 /obj/structure/closet/toolcloset,
 /turf/open/floor/plating,
 /area/lv522/oob)
-"wUR" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin{
-	pixel_y = 5
-	},
-/obj/item/tool/pen/blue/clicky,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/xeno_spawn,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor/south)
 "wUX" = (
 /obj/item/stack/tile/plasteel,
 /obj/structure/prop/ice_colony/ground_wire{
@@ -45937,6 +46090,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/landing_zone_2/ceiling)
+"wWc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/atmos/way_in_command_centre)
 "wWe" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
@@ -45991,19 +46155,6 @@
 /obj/structure/cargo_container/horizontal/blue/bottom,
 /turf/open/floor/plating/platebot,
 /area/lv522/indoors/c_block/cargo)
-"wXH" = (
-/obj/structure/filingcabinet{
-	density = 0;
-	pixel_x = -7;
-	pixel_y = 19
-	},
-/obj/structure/filingcabinet/chestdrawer{
-	density = 0;
-	pixel_x = 8;
-	pixel_y = 19
-	},
-/turf/open/floor/prison/blue_plate/north,
-/area/lv522/indoors/a_block/admin)
 "wXI" = (
 /obj/structure/prop/structure_lattice,
 /obj/structure/stairs/perspective{
@@ -46741,6 +46892,15 @@
 "xqp" = (
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/landing_zone_1)
+"xqF" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/effect/landmark/xeno_spawn,
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor/south)
 "xrk" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/prison/floor_marked/southwest,
@@ -47068,10 +47228,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
-"xyd" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/asphalt/cement/cement1,
-/area/lv522/outdoors/n_rockies)
 "xyn" = (
 /obj/structure/prop/vehicles/crawler{
 	dir = 8;
@@ -47202,13 +47358,6 @@
 	},
 /turf/open/floor/strata/blue1,
 /area/lv522/indoors/a_block/dorm_north)
-"xCa" = (
-/obj/item/prop/helmetgarb/lucky_feather{
-	pixel_x = 11;
-	pixel_y = 10
-	},
-/turf/open/floor/corsat/plate,
-/area/lv522/oob)
 "xCd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -47501,19 +47650,6 @@
 "xIv" = (
 /turf/open/floor/prison,
 /area/lv522/outdoors/colony_streets/north_east_street)
-"xIE" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/prop{
-	desc = "Holy shit";
-	icon = 'icons/mob/humans/species/r_human.dmi';
-	icon_state = "l_foot";
-	name = "left foot";
-	pixel_x = 5;
-	pixel_y = 25
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/darkredfull2,
-/area/lv522/indoors/a_block/bridges/corpo)
 "xIW" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
@@ -48799,19 +48935,6 @@
 	},
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/bridges/op_centre)
-"ymg" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/gibs,
-/obj/item/prop{
-	desc = "Holy shit";
-	dir = 8;
-	icon = 'icons/mob/humans/species/r_human.dmi';
-	icon_state = "head_m";
-	name = "human head"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/lv522/indoors/a_block/bridges/corpo)
 
 (1,1,1) = {"
 bMX
@@ -51624,7 +51747,7 @@ sRA
 sRA
 sRA
 sRA
-iNx
+koX
 sRA
 sRA
 sRA
@@ -51854,7 +51977,7 @@ sRA
 sRA
 sRA
 sRA
-iNx
+koX
 sRA
 sRA
 sRA
@@ -52084,7 +52207,7 @@ sRA
 sRA
 sRA
 sRA
-iNx
+koX
 sRA
 sRA
 sRA
@@ -52265,7 +52388,7 @@ vtc
 uWO
 uWO
 gEB
-pPY
+iTz
 uWO
 oip
 uWO
@@ -52305,7 +52428,7 @@ sRA
 sRA
 sRA
 sRA
-iNx
+koX
 sRA
 sRA
 sRA
@@ -52314,7 +52437,7 @@ sRA
 sRA
 uiK
 uiK
-ftQ
+fpE
 sRA
 sRA
 sRA
@@ -52493,7 +52616,7 @@ uWO
 uWO
 gEB
 uWO
-smB
+ksJ
 cpy
 cpy
 uWO
@@ -52862,7 +52985,7 @@ nFj
 nFj
 nFj
 nFj
-kYf
+oZd
 nFj
 nFj
 nFj
@@ -52947,7 +53070,7 @@ tta
 tta
 mPW
 tta
-srX
+pvw
 xpg
 cpy
 cpy
@@ -52998,7 +53121,7 @@ sRA
 sRA
 uiK
 uiK
-aSF
+mkF
 ien
 sgs
 xLl
@@ -53685,7 +53808,7 @@ sgs
 eiZ
 xGa
 xLq
-bdR
+pYC
 rum
 qLP
 wQN
@@ -54783,7 +54906,7 @@ tta
 tta
 uWO
 iTW
-cPi
+uWO
 uWO
 tta
 tta
@@ -55004,7 +55127,7 @@ bIJ
 tCU
 tCU
 ogr
-eyD
+ogr
 ogr
 tCU
 tCU
@@ -55461,7 +55584,7 @@ uWO
 cnC
 cnC
 cnC
-nla
+cnC
 cnC
 cnC
 uWO
@@ -55681,7 +55804,7 @@ uWO
 uWO
 rKB
 lwC
-enS
+eaE
 cnC
 eaE
 eaE
@@ -55910,9 +56033,9 @@ rKB
 lwC
 eaE
 esV
-bex
 eaE
-gSw
+eaE
+eaE
 eaE
 nTO
 eaE
@@ -56365,7 +56488,7 @@ ppv
 eaE
 xpn
 eaE
-jsQ
+eaE
 uWO
 cWf
 gwt
@@ -56594,7 +56717,7 @@ cnC
 eaE
 eaE
 uWO
-vdm
+uWO
 uWO
 eaE
 eaE
@@ -56820,12 +56943,12 @@ eaE
 cnC
 eaE
 eaE
-gSw
+eaE
 eaE
 eaE
 gIv
 eaE
-nla
+cnC
 eaE
 eaE
 uWO
@@ -57043,7 +57166,7 @@ uWO
 uWO
 rKB
 lwC
-enS
+eaE
 cnC
 eaE
 eaE
@@ -57275,7 +57398,7 @@ wbM
 dBC
 dTv
 eaE
-jsQ
+eaE
 eaE
 heB
 eaE
@@ -57501,12 +57624,12 @@ eaE
 cnC
 eaE
 eaE
-bex
 eaE
 eaE
 eaE
 eaE
-wtc
+eaE
+cnC
 eaE
 eaE
 eaE
@@ -57725,7 +57848,7 @@ uWO
 rKB
 lwC
 eaE
-phX
+cnC
 eaE
 eaE
 eaE
@@ -57734,7 +57857,7 @@ eaE
 eaE
 eaE
 cnC
-enS
+eaE
 eaE
 eaE
 uWO
@@ -57958,7 +58081,7 @@ eaE
 eaE
 eaE
 eaE
-bex
+eaE
 eaE
 rOM
 eaE
@@ -58199,7 +58322,7 @@ vtc
 uWO
 uWO
 ien
-lAi
+rUb
 eyM
 gfi
 hEx
@@ -58639,7 +58762,7 @@ eaE
 eaE
 eaE
 tfP
-jsQ
+eaE
 eaE
 cnC
 eaE
@@ -58866,8 +58989,8 @@ hfS
 hfS
 hfS
 hfS
-hfS
-hfS
+fFV
+fFV
 nyP
 hfS
 hfS
@@ -59318,7 +59441,7 @@ tfP
 eaE
 eaE
 giL
-bex
+eaE
 eaE
 eaE
 eaE
@@ -60452,10 +60575,10 @@ bIJ
 tfP
 ogr
 ogr
-cOh
-cOh
+rix
+rix
 ogr
-ogr
+wCV
 ogr
 dbC
 eyD
@@ -60679,9 +60802,9 @@ tfP
 tfP
 cpy
 sNC
-mvP
-mvP
-xyd
+rYT
+rYT
+kTM
 sNC
 sNC
 tfP
@@ -60742,7 +60865,7 @@ weR
 nLm
 nLm
 nLm
-dnp
+tOW
 dNm
 tUM
 rGn
@@ -62787,7 +62910,7 @@ rLa
 wqC
 mYL
 gGW
-xXN
+qEi
 oFW
 lzT
 nLm
@@ -63478,7 +63601,7 @@ aFN
 mQq
 aFN
 sMV
-eUD
+gSa
 rLa
 qct
 fjP
@@ -63705,7 +63828,7 @@ rId
 nwj
 gZt
 pZF
-bNo
+fnw
 nLm
 iFK
 lsD
@@ -65269,10 +65392,10 @@ hJg
 hJg
 kVz
 etB
-qhS
+nBV
 gMs
 hJg
-tdE
+ula
 hJg
 meX
 ugV
@@ -65492,7 +65615,7 @@ fjr
 ugV
 hNR
 kJd
-maA
+urR
 mok
 mok
 vHj
@@ -65500,7 +65623,7 @@ vHj
 vHj
 vxK
 mok
-fyV
+kHt
 rWO
 pqk
 ugV
@@ -65727,7 +65850,7 @@ uUd
 uUd
 uUd
 adh
-fkL
+ogs
 bAy
 pqk
 ugV
@@ -65944,13 +66067,13 @@ fjr
 fjr
 fjr
 fjr
-hNR
+vGu
 mdS
 pUS
 uUd
-aBK
+gpu
 uAa
-gVh
+uCN
 uAa
 uAa
 uUd
@@ -66175,9 +66298,9 @@ nKZ
 mdS
 pUS
 uUd
-aXF
+fqI
 uUd
-adh
+jJj
 adh
 xEZ
 uUd
@@ -66400,7 +66523,7 @@ cpy
 xDz
 bAn
 kJd
-hht
+mGw
 qYa
 tYT
 tYT
@@ -66634,7 +66757,7 @@ awR
 wbg
 wbg
 wbg
-awR
+lAy
 wbg
 pvn
 fjr
@@ -68002,8 +68125,8 @@ lxc
 pan
 wTp
 fsW
-gDv
-gDv
+rXE
+rXE
 sjy
 gkK
 gmg
@@ -68224,7 +68347,7 @@ tpa
 tpa
 sjy
 sjy
-vDZ
+jvL
 kRb
 kBk
 iJu
@@ -68632,14 +68755,14 @@ pns
 gpC
 pns
 vFi
-pns
+bvS
 umi
 opS
 fer
 hzI
 har
 jbn
-awI
+kXY
 kXY
 kWS
 kWS
@@ -68865,7 +68988,7 @@ opS
 vGS
 kwg
 iZS
-cvY
+iJL
 kWn
 sTf
 kXY
@@ -69305,7 +69428,7 @@ gDO
 kwg
 jkJ
 kwg
-ixk
+wWc
 meY
 kWn
 bXe
@@ -69316,7 +69439,7 @@ saC
 kWn
 fRY
 opS
-fDu
+fHc
 hzI
 kXY
 biu
@@ -69511,7 +69634,7 @@ fJz
 aci
 bZx
 trX
-eET
+udr
 eQJ
 tiQ
 tiQ
@@ -69595,7 +69718,7 @@ sjy
 sjy
 sjy
 kqb
-jEQ
+mal
 pNs
 srJ
 lxL
@@ -69755,7 +69878,7 @@ qjG
 pwC
 oUq
 kkO
-nyr
+cyg
 iZS
 jkJ
 wrO
@@ -69974,7 +70097,7 @@ evt
 saC
 saC
 saC
-njh
+ixC
 yaj
 qjG
 qjG
@@ -70415,12 +70538,12 @@ oZI
 pqO
 dfb
 lmY
-wUR
+mtF
 lEK
 trX
 lyN
-vTK
-jGV
+xqF
+giI
 mYC
 gof
 gof
@@ -71106,7 +71229,7 @@ uOv
 nAy
 saC
 saC
-lik
+bDh
 bZx
 qjG
 qjG
@@ -71121,7 +71244,7 @@ mhG
 kwg
 jkJ
 wrO
-eQq
+wQQ
 oUq
 oUq
 olG
@@ -71867,7 +71990,7 @@ bhs
 big
 sbV
 ucM
-veP
+kqn
 sbV
 ave
 mKf
@@ -72091,7 +72214,7 @@ uDb
 xxs
 fdP
 coj
-hlP
+kzc
 lxL
 oLd
 wTr
@@ -72472,7 +72595,7 @@ hCM
 lmh
 saC
 saC
-vGW
+shX
 bnI
 gof
 xQc
@@ -73388,7 +73511,7 @@ mPY
 dfb
 xQc
 xQc
-kNH
+uLj
 slL
 uZj
 fVS
@@ -73438,7 +73561,7 @@ tsN
 sjy
 sjy
 sjy
-tSc
+lCX
 uDb
 uDb
 xtO
@@ -73632,7 +73755,7 @@ bQw
 bjd
 gdA
 fri
-waa
+hQu
 wYN
 cqo
 tbW
@@ -74066,7 +74189,7 @@ dfb
 gnL
 hLu
 oZI
-kcz
+sdn
 dfb
 dfb
 seF
@@ -74116,8 +74239,8 @@ tQi
 gwb
 gwb
 xZz
-ymg
-xIE
+kli
+tUs
 gAx
 fdP
 xxs
@@ -75872,10 +75995,10 @@ gof
 qql
 swH
 tYg
-uPG
+kfa
 tYg
-wev
-qtn
+pFI
+vTu
 bec
 pHT
 pHT
@@ -75927,7 +76050,7 @@ wWe
 jBw
 xjF
 wZl
-hJs
+ozA
 wgW
 wgW
 ydb
@@ -76345,7 +76468,7 @@ uQQ
 gof
 wrh
 pqO
-qmV
+jsS
 urH
 qjG
 bjd
@@ -76711,12 +76834,12 @@ vpe
 rSu
 jas
 jas
-vWz
+vvv
 ncJ
 myE
 qHr
 vpe
-sld
+aNN
 beS
 bWv
 bWv
@@ -76937,13 +77060,13 @@ eso
 vpe
 bgY
 jas
-vWz
+vvv
 vpe
 vpe
 vpe
 eso
 vpe
-rvg
+klw
 jas
 jas
 mwn
@@ -77240,7 +77363,7 @@ fYF
 rVs
 bAU
 loY
-tkn
+ltr
 tVC
 oZI
 oZI
@@ -77248,7 +77371,7 @@ oZI
 kXk
 gof
 efn
-nAA
+olC
 uQQ
 nAA
 teW
@@ -78877,7 +79000,7 @@ fvs
 tDS
 tDS
 oiV
-ocz
+fjE
 uan
 rvB
 uan
@@ -79799,7 +79922,7 @@ pVo
 wGY
 hJG
 mEz
-jxR
+feT
 jUn
 jUn
 bJK
@@ -80046,7 +80169,7 @@ iLw
 frP
 xUT
 tHa
-mSw
+laN
 eBz
 pEj
 jyz
@@ -80239,7 +80362,7 @@ fvs
 tdj
 kNk
 cOR
-cDX
+jzq
 bOz
 bOz
 vqC
@@ -80273,7 +80396,7 @@ tTK
 eOX
 tHl
 uOG
-lXS
+tif
 qHP
 hPp
 fgm
@@ -80465,7 +80588,7 @@ vGp
 fvs
 tDS
 tDS
-wXH
+fbx
 oRT
 scC
 cbs
@@ -80718,7 +80841,7 @@ wJR
 lEI
 gdO
 gdO
-uJt
+edE
 oVR
 rXS
 eKC
@@ -81165,11 +81288,11 @@ xkH
 iMn
 bYK
 oRT
-rHU
+eem
 oRT
 wJR
-vpA
-vpA
+wyV
+wyV
 gdO
 iwZ
 ptg
@@ -82067,8 +82190,8 @@ crU
 wJR
 wJR
 dCy
-mxl
-csK
+gQH
+qzO
 gsG
 ylY
 wGY
@@ -82291,10 +82414,10 @@ pZo
 bRm
 tdj
 nCW
-mMM
+bdf
 qQK
 gng
-wvb
+sjw
 vPa
 sWr
 pVo
@@ -82306,7 +82429,7 @@ ppd
 jWe
 vlr
 gdO
-tio
+oxG
 wlD
 cNU
 rdT
@@ -82521,20 +82644,20 @@ hyW
 atE
 ngY
 oGF
-dRV
+qzm
 sWr
 sWr
 oMi
 nUl
 rDq
 tDS
-iwM
+rjp
 ccy
 rmx
 ixp
 gdO
 gdO
-hnx
+mId
 uuH
 tov
 hGr
@@ -83198,10 +83321,10 @@ qSH
 umR
 bRm
 tDS
-rAG
+lXP
 xXE
 nSG
-azJ
+pYm
 azJ
 lHY
 mBc
@@ -83880,7 +84003,7 @@ umR
 bRm
 tdj
 kNk
-mog
+kJQ
 oGF
 dkq
 iBr
@@ -84012,9 +84135,9 @@ saC
 tiQ
 tiQ
 szE
-fGt
+uhK
 jGy
-nrv
+liw
 ctM
 tiQ
 tiQ
@@ -84243,7 +84366,7 @@ eqG
 eqG
 eqG
 eWN
-vAh
+uWH
 tiQ
 tiQ
 ezp
@@ -84334,7 +84457,7 @@ tWE
 bRm
 tDS
 hyW
-sju
+eMH
 ngY
 iIs
 lHV
@@ -84471,7 +84594,7 @@ bCQ
 vGA
 bCQ
 eCh
-hcG
+qZD
 eof
 mUZ
 tKx
@@ -84563,7 +84686,7 @@ sjW
 jAz
 atE
 sWr
-sju
+eMH
 sWr
 oNe
 hfy
@@ -84574,7 +84697,7 @@ xXE
 ngY
 ngY
 nUl
-dhy
+jBb
 gdO
 wlh
 irI
@@ -84692,7 +84815,7 @@ saC
 saC
 tiQ
 tiQ
-jef
+iTw
 bCQ
 akM
 akM
@@ -84801,7 +84924,7 @@ jZa
 aUF
 bOz
 pPx
-vpA
+wyV
 gdO
 dwV
 qeg
@@ -84921,11 +85044,11 @@ tiQ
 aNV
 efo
 bHO
-neB
-xCa
+rdL
+dRT
 jPW
 pVO
-ujT
+iiG
 tiQ
 mUZ
 cNA
@@ -85112,7 +85235,7 @@ xYA
 xYA
 xYA
 xYA
-axg
+kka
 xYA
 xYA
 xYA
@@ -85146,12 +85269,12 @@ saC
 saC
 tiQ
 ulg
-tdr
+gph
 ufl
 eqG
 eqG
-tlY
-qJe
+fyD
+lNO
 tiQ
 tiQ
 qdL
@@ -85376,7 +85499,7 @@ tiQ
 uJE
 hxS
 xvq
-jLA
+epD
 gDe
 tiQ
 tiQ
@@ -86134,7 +86257,7 @@ ien
 mRs
 rMR
 qSH
-lEA
+wBk
 qSH
 qSH
 vGp
@@ -87265,7 +87388,7 @@ qSH
 qSH
 qSH
 ien
-grG
+iLG
 rMR
 qSH
 oQC
