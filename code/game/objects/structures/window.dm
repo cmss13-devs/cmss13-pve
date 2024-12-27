@@ -817,6 +817,15 @@
 	health = 40
 	window_frame = /obj/structure/window_frame/shiva
 
+/obj/structure/window/framed/prefab
+	name = "poly-kevlon framed window"
+	icon = 'icons/turf/walls/ice_colony/shiva_windows.dmi'
+	icon_state = "prefab_window0"
+	basestate = "prefab_window"
+	desc = "A semi-transparent (not entirely opaque) pane of material set into a poly-kevlon frame. Very smashable."
+	health = 40
+	window_frame = /obj/structure/window_frame/prefab
+
 //Solaris windows
 
 /obj/structure/window/framed/solaris

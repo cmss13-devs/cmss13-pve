@@ -100,6 +100,31 @@
 
 //*****************************************************************************************************/
 
+/datum/equipment_preset/synth/uscm/usasf
+	name = "USASF Synthetic"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	faction = FACTION_NAVY
+	faction_group = FACTION_LIST_MARINE
+	idtype = /obj/item/card/id/gold
+	assignment = JOB_NAVY_SYNTH
+	rank = "Synthetic"
+	role_comm_title = "USASF Syn"
+
+/datum/equipment_preset/synth/uscm/usasf/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel
+	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
+		back_item = /obj/item/storage/backpack/industrial
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+//*****************************************************************************************************/
+
 /datum/equipment_preset/synth/survivor
 	name = "Survivor - Synthetic - Classic Joe"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -143,6 +168,7 @@
 
 /datum/equipment_preset/synth/survivor/pmc/New()
 	. = ..()
+	name = "Survivor - Synthetic - PMC JOE ABSTRACT"
 	access = get_access(ACCESS_LIST_WY_PMC)
 
 /datum/equipment_preset/synth/survivor/wy
@@ -341,7 +367,7 @@
 		WEAR_WAIST = /obj/item/storage/belt/marine,
 		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran,
 		WEAR_R_HAND = /obj/item/storage/pouch/flare/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/upp/knife,
+		WEAR_FEET = /obj/item/clothing/shoes/marine/upp,
 		WEAR_L_HAND = /obj/item/storage/large_holster/katana/full
 	)
 
@@ -387,7 +413,7 @@
 		WEAR_IN_BACK = /obj/item/reagent_container/food/drinks/bottle/grenadine,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/wcoat,
 		WEAR_IN_JACKET = /obj/item/reagent_container/food/drinks/bottle/rum,
-		WEAR_HANDS = /obj/item/clothing/gloves/marine/black,
+		WEAR_HANDS = /obj/item/clothing/gloves/marine,
 		WEAR_R_HAND = /obj/item/storage/beer_pack,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
 		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
@@ -495,7 +521,7 @@
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/black,
 		WEAR_IN_JACKET = /obj/item/weapon/telebaton,
 		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran/pmc,
-		WEAR_FEET = /obj/item/clothing/shoes/veteran/pmc/knife,
+		WEAR_FEET = /obj/item/clothing/shoes/marine/civilian,
 		WEAR_L_HAND = /obj/item/storage/large_holster/machete/full
 	)
 
@@ -517,7 +543,7 @@
 		WEAR_IN_BACK = /obj/item/device/taperecorder,
 		WEAR_WAIST = /obj/item/storage/belt/utility/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/botanic_leather,
-		WEAR_FEET = /obj/item/clothing/shoes/dress,
+		WEAR_FEET = /obj/item/clothing/shoes/laceup,
 		WEAR_R_HAND = /obj/item/clipboard,
 		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
 	)
@@ -541,7 +567,7 @@
 		WEAR_WAIST = /obj/item/clipboard,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/yellow,
 		WEAR_IN_JACKET = /obj/item/device/taperecorder,
-		WEAR_FEET = /obj/item/clothing/shoes/dress,
+		WEAR_FEET = /obj/item/clothing/shoes/laceup,
 		WEAR_R_HAND = /obj/item/device/camera,
 		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
 	)
@@ -605,8 +631,10 @@
 	return
 
 /datum/equipment_preset/synth/working_joe/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = null
+	new_human.underwear = null
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mt(new_human), WEAR_L_EAR)
@@ -682,6 +710,52 @@
 
 /datum/equipment_preset/synth/working_joe/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.change_real_name(new_human, "Working Joe #[rand(100)][rand(100)]")
+
+/datum/equipment_preset/synth/working_joe/upp
+	name = "UPP Dzho Automaton"
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_UPP
+	faction_group = list(FACTION_UPP)
+	assignment = "Dzho Automaton"
+
+/datum/equipment_preset/synth/working_joe/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	var/random_overalls= rand(1,3)
+	switch(random_overalls)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/apron/overalls/tan(new_human), WEAR_JACKET)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/apron/overalls/red(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/white(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/joe(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/hugetank, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/etool(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/lightreplacer(new_human.back), WEAR_IN_R_STORE)
+
+/datum/equipment_preset/synth/working_joe/upp/load_name(mob/living/carbon/human/new_human, randomise)
+	new_human.change_real_name(new_human, "Dzho Automaton #[rand(100)][rand(100)]")
+
+/datum/equipment_preset/synth/working_joe/load_race(mob/living/carbon/human/new_human)
+	. = ..()
+	new_human.set_species(joe_type)
+	new_human.h_style = "Bald"
+	new_human.f_style = "Shaved"
+	if(prob(25))
+		new_human.grad_style = "None" //No gradients for Working Joes
+		new_human.h_style = "Shoulder-length Hair" //Added the chance of hair as per Monkeyfist lore accuracy
+	new_human.r_eyes = 0
+	new_human.g_eyes = 0
+	new_human.b_eyes = 0
+	new_human.r_hair = 100
+	new_human.g_hair = 88
+	new_human.b_hair = 74
+	new_human.r_facial = 255
+	new_human.g_facial = 255
+	new_human.b_facial = 255
 
 //*****************************************************************************************************/
 

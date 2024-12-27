@@ -27,13 +27,14 @@
 
 GLOBAL_LIST_INIT(grenade_packets, list(
 	/obj/item/storage/box/packet/high_explosive,
+	/obj/item/storage/box/packet/high_explosive/upp,
 	/obj/item/storage/box/packet/baton_slug,
 	/obj/item/storage/box/packet/flare,
 	/obj/item/storage/box/packet/hornet,
 	/obj/item/storage/box/packet/incendiary,
 	/obj/item/storage/box/packet/smoke,
 	/obj/item/storage/box/packet/foam,
-	/obj/item/storage/box/packet/phosphorus,
+	/obj/item/storage/box/packet/phosphorus/strong,
 	/obj/item/storage/box/packet/phosphorus/upp,
 	/obj/item/storage/box/packet/m15,
 	/obj/item/storage/box/packet/airburst_he,
@@ -41,10 +42,19 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	))
 
 /obj/item/storage/box/packet/high_explosive
-	name = "\improper HEDP grenade packet"
-	desc = "It contains three HEDP high explosive grenades."
+	name = "\improper M40 HEDP grenade packet"
+	desc = "It contains three M40 HEDP high explosive grenades."
 	icon_state = "hedp_packet"
+	storage_slots = 5
 	content_type = /obj/item/explosive/grenade/high_explosive
+
+/obj/item/storage/box/packet/high_explosive/upp
+	name = "\improper Type 6 fragmentation grenade packet"
+	desc = "It contains three Type 6 fragmentation grenades."
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "woodbox"
+
+	content_type = /obj/item/explosive/grenade/high_explosive/upp
 
 /obj/item/storage/box/packet/baton_slug
 	name = "\improper HIRR baton slug packet"
@@ -65,14 +75,14 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	content_type = /obj/item/explosive/grenade/high_explosive/airburst/hornet_shell
 
 /obj/item/storage/box/packet/incendiary
-	name = "\improper HIDP grenade packet"
-	desc = "It contains three HIDP incendiary grenades."
+	name = "\improper M77 HIAM grenade packet"
+	desc = "It contains three M77 HIAM incendiary grenades."
 	icon_state = "hidp_packet"
 	content_type = /obj/item/explosive/grenade/incendiary
 
 /obj/item/storage/box/packet/smoke
-	name = "\improper HSDP grenade packet"
-	desc = "It contains three HSDP smoke grenades."
+	name = "\improper M47 HSDP grenade packet"
+	desc = "It contains three M47 HSDP smoke grenades."
 	icon_state = "hsdp_packet"
 	content_type = /obj/item/explosive/grenade/smokebomb
 
@@ -83,8 +93,8 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	content_type = /obj/item/explosive/grenade/phosphorus/weak
 
 /obj/item/storage/box/packet/phosphorus/strong
-	name = "\improper CCDP grenade packet"
-	desc = "It contains three CCDP chemical compound grenades."
+	name = "\improper M60 WPSI grenade packet"
+	desc = "It contains three M60 WPSI chemical compound grenades."
 	icon_state = "ccdp_packet"
 	content_type = /obj/item/explosive/grenade/phosphorus
 

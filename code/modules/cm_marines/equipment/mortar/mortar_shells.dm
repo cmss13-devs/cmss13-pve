@@ -58,6 +58,19 @@
 	flame_radius(cause_data, radius, T, flame_level, burn_level, flameshape, null, fire_type)
 	playsound(T, 'sound/weapons/gun_flamethrower2.ogg', 35, 1, 4)
 
+/obj/item/mortar_shell/nerve
+	name = "\improper 80mm nerve gas mortar shell"
+	desc = "An 80mm mortar shell, loaded with a CN-20 nerve agent canister. Perfect for regional pacification."
+	icon_state = "mortar_ammo_inc"
+
+/obj/item/mortar_shell/nerve/detonate(turf/T)
+	cell_explosion(T, 65, 95, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, null)
+	spawn(5)
+		var/datum/effect_system/smoke_spread/cn20/cn20 = new()
+		cn20.set_up(5, 0, T, null)
+		cn20.start()
+	playsound(src.loc, 'sound/effects/smoke.ogg', 35, 1, 4)
+
 /obj/item/mortar_shell/flare
 	name = "\improper 80mm flare/camera mortar shell"
 	desc = "An 80mm mortar shell, loaded with an illumination flare / camera combo, attached to a parachute."
@@ -168,7 +181,7 @@
 
 /obj/item/mortar_shell/flamer_fire_act(dam, datum/cause_data/flame_cause_data)
 	addtimer(VARSET_CALLBACK(src, burning, FALSE), 5 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_DELETE_ME)
-	
+
 	if(burning)
 		return
 	burning = TRUE
@@ -200,7 +213,7 @@
 
 		addtimer(CALLBACK(src, PROC_REF(explode), cause_data), 5 SECONDS)
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), (src)), 5.5 SECONDS)
-		
+
 
 /obj/item/mortar_shell/proc/explode(flame_cause_data)
 	cell_explosion(src, 100, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, flame_cause_data)

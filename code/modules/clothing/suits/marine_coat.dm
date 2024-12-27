@@ -31,7 +31,7 @@
 		/obj/item/storage/belt/gun/m44,
 		/obj/item/storage/belt/gun/mateba,
 		/obj/item/storage/belt/gun/smartpistol,
-
+		/obj/item/storage/belt/gun/type47,
 		/obj/item/device/flashlight,
 		/obj/item/device/healthanalyzer,
 		/obj/item/device/radio,
@@ -377,6 +377,13 @@
 	item_state = "corporate_blue"
 	has_buttons = FALSE
 
+/obj/item/clothing/suit/storage/jacket/marine/corporate/grey
+	name = "grey suit jacket"
+	desc = "A grey suit jacket."
+	icon_state = "corporate_grey"
+	item_state = "corporate_grey"
+	has_buttons = FALSE
+
 /obj/item/clothing/suit/storage/jacket/marine/bomber
 	name = "khaki bomber jacket"
 	desc = "A khaki bomber jacket popular among stationeers and blue-collar workers everywhere."
@@ -398,3 +405,26 @@
 	icon_state = "jacket_grey"
 	item_state = "jacket_grey"
 	has_buttons = FALSE
+
+//==================UPP==================\\
+
+/obj/item/clothing/suit/storage/jacket/marine/upp
+	name = "\improper UPP service uniform jacket"
+	desc = "A UPP service uniform jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_service"
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/suit/storage/jacket/marine/upp/mss
+	name = "\improper MSS uniform jacket"
+	desc = "A Ministry of Space Security service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_mss"
+
+/obj/item/clothing/suit/storage/jacket/marine/upp/coldweather
+	name = "\improper UL2 coldweather service jacket"
+	desc = "A standard issue coldweather UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
+	icon_state = "upp_coat_officer"
+
+/obj/item/clothing/suit/storage/jacket/marine/upp/naval
+	name = "\improper UPP naval infantry jacket"
+	desc = "A standard issue naval infantry service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_naval"
