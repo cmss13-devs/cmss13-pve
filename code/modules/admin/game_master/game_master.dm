@@ -160,7 +160,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	// Communication stuff
 	data["radio_clarity"] = GLOB.radio_communication_clarity
 	data["radio_clarity_example"] = stars("The quick brown fox jumped over the lazy dog.", GLOB.radio_communication_clarity)
-
+	data["xenos_spawned"] = GLOB.xenos_spawned
+	data["xenos_died"] = GLOB.xenos_died
 	return data
 
 /datum/game_master/ui_static_data(mob/user)
@@ -352,6 +353,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			for(var/i = 1 to xeno_spawn_count)
 				new spawning_xeno_type(spawn_turf, null, selected_hive, !spawn_ai)
+			GLOB.xenos_spawned += xeno_spawn_count
 
 			return TRUE
 
