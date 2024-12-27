@@ -61,10 +61,10 @@
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	jumpsuit.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
-	spawn_rebel_suit(new_human)
-	spawn_rebel_helmet(new_human)
-	spawn_rebel_shoes(new_human)
-	spawn_rebel_gloves(new_human)
+	add_rebel_suit(new_human)
+	add_rebel_ua_helmet(new_human)
+	add_rebel_shoes(new_human)
+	add_rebel_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
@@ -73,9 +73,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
 	if(prob(50))
-		spawn_rebel_smg(new_human)
+		add_rebel_smg(new_human)
 	else
-		spawn_rebel_rifle(new_human)
+		add_rebel_rifle(new_human)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 
@@ -163,8 +163,8 @@
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
 
-	spawn_rebel_suit(new_human)
-	spawn_rebel_shoes(new_human)
+	add_rebel_suit(new_human)
+	add_rebel_shoes(new_human)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/meson, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow, WEAR_HANDS)
@@ -182,8 +182,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/low_grade_full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_R_STORE)
 
-	spawn_rebel_weapon(new_human)
-	spawn_rebel_weapon(new_human,1)
+	add_rebel_weapon(new_human)
+	add_rebel_weapon(new_human,1)
 
 /datum/equipment_preset/clf/engineer/get_antag_clothing_equipment()
 	return list(
@@ -282,10 +282,10 @@
 	CLF.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
 
-	spawn_rebel_suit(new_human)
-	spawn_rebel_helmet(new_human)
-	spawn_rebel_shoes(new_human)
-	spawn_rebel_gloves(new_human)
+	add_rebel_suit(new_human)
+	add_rebel_ua_helmet(new_human)
+	add_rebel_shoes(new_human)
+	add_rebel_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BELT)
 
@@ -307,7 +307,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large(new_human), WEAR_R_STORE)
 
-	spawn_rebel_smg(new_human)
+	add_rebel_smg(new_human)
 
 /datum/equipment_preset/clf/medic/get_antag_clothing_equipment()
 	return list(
@@ -465,11 +465,11 @@
 	if(prob(75))
 		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied(new_human), WEAR_IN_BACK)
 		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied(new_human), WEAR_IN_BACK)
-		spawn_rebel_specialist_weapon(new_human, 10)
+		add_rebel_specialist_weapon(new_human, 10)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied(new_human), WEAR_IN_JACKET)
 		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied(new_human), WEAR_IN_JACKET)
-		spawn_weapon(/obj/item/weapon/gun/lever_action/r4t, /obj/item/ammo_magazine/handful/lever_action, new_human)
+		add_weapon(/obj/item/weapon/gun/lever_action/r4t, /obj/item/ammo_magazine/handful/lever_action, new_human)
 
 /datum/equipment_preset/clf/specialist/get_antag_clothing_equipment()
 	return list(
@@ -579,7 +579,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
 
-	spawn_weapon(/obj/item/weapon/gun/rifle/mar40, /obj/item/ammo_magazine/rifle/mar40, new_human)
+	add_weapon(/obj/item/weapon/gun/rifle/mar40, /obj/item/ammo_magazine/rifle/mar40, new_human)
 
 /datum/equipment_preset/clf/leader/get_antag_clothing_equipment()
 	return list(
