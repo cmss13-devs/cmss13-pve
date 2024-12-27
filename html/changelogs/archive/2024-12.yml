@@ -52,3 +52,24 @@
       per shot.
   - bugfix: PMC smartgunner loadout now properly spawns with its imager, allowing
       IFF to be used.
+2024-12-27:
+  AmoryBlaine:
+  - rscadd: Two cowboy hats, two fedoras.
+  - rscdel: unused legacy hat icons.
+  BonniePandora:
+  - qol: Adjusts the OD limit for alcoholic drinks
+  - qol: Adjusts the buildup rate of damage from overdosing and critical overdosing
+      on alcohol
+  Ediblebomb:
+  - spellcheck: Removes the warning to CPR slower than you actually have to.
+  ILikeToGammon:
+  - balance: Increased GAU Multipurpose ammo damage by 50
+  - balance: Increased GAU Multipurpose ammo Penetration by 5
+  - balance: Changed GAU Multipurpose ammo bullet spread range from 3 to 2
+  - balance: Changed GAU Multipurpose ammo travelling time from default 10 seconds
+      to 5 seconds
+  - balance: Increased GAU Armor Piercing ammo damage by 50
+  - balance: Changed GAU Armor Piercing ammo travelling time to 6 seconds
+  - balance: Changed Mini Rocket travelling time to 4 seconds
+  private-tristan:
+  - bugfix: Chances Claim [Forecon] can now be properly selected by GMs
