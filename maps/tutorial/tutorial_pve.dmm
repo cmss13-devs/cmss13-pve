@@ -896,7 +896,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/structure/window/framed/almayer,
+/obj/structure/window/framed/almayer/hull,
 /turf/open/floor/plating,
 /area/misc/tutorial)
 "jt" = (
@@ -1685,7 +1685,9 @@
 /obj/structure/machinery/door/airlock/almayer/secure{
 	name = "\improper Platoon Commander's Quarters";
 	req_access = list();
-	req_one_access_txt = "19;12"
+	req_one_access_txt = "19;12";
+	indestructible = 1;
+	unacidable = 1
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/misc/tutorial)
@@ -3825,7 +3827,7 @@
 /turf/open/floor/almayer/edge/smooth/endcap_left/west,
 /area/misc/tutorial)
 "Oj" = (
-/obj/structure/window/framed/almayer,
+/obj/structure/window/framed/almayer/hull,
 /turf/open/floor/plating,
 /area/misc/tutorial)
 "Ok" = (

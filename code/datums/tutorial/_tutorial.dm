@@ -261,5 +261,5 @@ GLOBAL_LIST_EMPTY_TYPED(ongoing_tutorials, /datum/tutorial)
 /datum/map_template/tutorial/pve
 	name = "PvE Tutorial Zone (45x21)"
 	mappath = "maps/tutorial/tutorial_pve.dmm"
-	width = 45
-	height = 21
+	width = 74
+	height = 30
