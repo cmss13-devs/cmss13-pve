@@ -11,7 +11,6 @@
 	/// is it currently on fire and about to explode?
 	var/burning = FALSE
 
-
 /obj/item/mortar_shell/Destroy()
 	. = ..()
 	cause_data = null
@@ -80,6 +79,14 @@
 	new /obj/item/device/flashlight/flare/on/illumination(T)
 	playsound(T, 'sound/weapons/gun_flare.ogg', 50, 1, 4)
 	deploy_camera(T)
+
+/obj/item/mortar_shell/ap
+	name = "\improper 80mm antitank mortar shell"
+	desc = "An 80mm mortar shell, loaded with an armor-piercing explosive charge."
+	icon_state = "mortar_ammo_ap"
+
+/obj/item/mortar_shell/ap/detonate(turf/T)
+	cell_explosion(T, 2400, 2400, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
 /obj/item/mortar_shell/custom
 	name = "\improper 80mm custom mortar shell"

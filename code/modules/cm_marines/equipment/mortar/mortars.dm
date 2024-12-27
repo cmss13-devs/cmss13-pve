@@ -36,6 +36,8 @@
 
 	var/obj/structure/machinery/computer/cameras/mortar/internal_camera
 
+	var/kit_type = /obj/item/mortar_kit
+
 /obj/structure/mortar/Initialize()
 	. = ..()
 	// Makes coords appear as 0 in UI
@@ -157,6 +159,9 @@
 			return TRUE
 
 		if("operate_cam")
+			internal_camera.tgui_interact(user)
+
+		if("fire_mortar")
 			internal_camera.tgui_interact(user)
 
 /obj/structure/mortar/proc/handle_target(mob/user, temp_targ_x = 0, temp_targ_y = 0, manual = FALSE)
@@ -307,7 +312,7 @@
 			user.visible_message(SPAN_NOTICE("[user] undeploys [src]."), \
 				SPAN_NOTICE("You undeploy [src]."))
 			playsound(loc, 'sound/items/Deconstruct.ogg', 25, 1)
-			var/obj/item/mortar_kit/mortar = new /obj/item/mortar_kit(loc)
+			var/obj/item/mortar_kit/mortar = new kit_type(loc)
 			mortar.name = src.name
 			qdel(src)
 
@@ -410,6 +415,7 @@
 	icon_state = "mortar_m402_carry"
 	unacidable = TRUE
 	w_class = SIZE_HUGE //No dumping this in a backpack. Carry it, fatso
+	var/mortar_type = /obj/structure/mortar
 
 /obj/item/mortar_kit/Initialize(...)
 	. = ..()
@@ -436,7 +442,7 @@
 		SPAN_NOTICE("You start deploying [src]."))
 	playsound(deploy_turf, 'sound/items/Deconstruct.ogg', 25, 1)
 	if(do_after(user, 4 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-		var/obj/structure/mortar/mortar = new /obj/structure/mortar(deploy_turf)
+		var/obj/structure/mortar/mortar = new mortar_type(deploy_turf)
 		if(!is_ground_level(deploy_turf.z))
 			mortar.ship_side = TRUE
 			user.visible_message(SPAN_NOTICE("[user] deploys [src]."), \
@@ -448,3 +454,128 @@
 		mortar.name = src.name
 		mortar.setDir(user.dir)
 		qdel(src)
+
+/obj/structure/mortar/himat
+	name = "M112 HIMAT"
+	desc = "A man-portable two-stage missile launcher. While capable of being fired manually, what truly sets this apart from standard boom-tubes is it's onboard fire-control systems. While deployed on a baseplate and supporting bipod stand it will attempt to link with any local USCM sensor matrix, allowing it to automatically track, identify and request to fire upon hostile targets in range."
+	kit_type = /obj/item/mortar_kit/himat
+	var/obj/item/mortar_shell/loaded_shell = null
+	var/id
+
+/obj/structure/mortar/himat/attackby(obj/item/item, mob/user)
+	if(istype(item, /obj/item/mortar_shell))
+		var/obj/item/mortar_shell/mortar_shell = item
+		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+			to_chat(user, SPAN_WARNING("You don't have the training to fire [src]."))
+			return
+		if(busy)
+			to_chat(user, SPAN_WARNING("Someone else is currently using [src]."))
+			return
+
+		if(ship_side)
+			var/crash_occurred = (SSticker?.mode?.is_in_endgame)
+			if(crash_occurred)
+				travel_time = 0.5 SECONDS
+			else
+				to_chat(user, SPAN_RED("You realize how bad of an idea this is and quickly stop."))
+				return
+		if(!loaded_shell)
+			user.visible_message(SPAN_NOTICE("[user] starts loading \a [mortar_shell.name] into [src]."),
+			SPAN_NOTICE("You start loading \a [mortar_shell.name] into [src]."))
+			playsound(loc, 'sound/weapons/gun_mortar_reload.ogg', 50, 1)
+			busy = TRUE
+			var/success = do_after(user, 1.5 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE)
+			busy = FALSE
+			if(success)
+				user.visible_message(SPAN_NOTICE("[user] loads \a [mortar_shell.name] into [src]."),
+				SPAN_NOTICE("You load \a [mortar_shell.name] into [src]."))
+				user.drop_inv_item_to_loc(mortar_shell, src)
+				busy = FALSE
+				mortar_shell.cause_data = create_cause_data(initial(mortar_shell.name), user, src)
+				mortar_shell.forceMove(src)
+				loaded_shell = mortar_shell
+
+	if(HAS_TRAIT(item, TRAIT_TOOL_WRENCH))
+		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+			to_chat(user, SPAN_WARNING("You don't have the training to undeploy [src]."))
+			return
+		if(fixed)
+			to_chat(user, SPAN_WARNING("[src]'s supports are bolted and welded into the floor. It looks like it's going to be staying there."))
+			return
+		if(busy)
+			to_chat(user, SPAN_WARNING("Someone else is currently using [src]."))
+			return
+		if(firing)
+			to_chat(user, SPAN_WARNING("[src]'s barrel is still steaming hot. Wait a few seconds and stop firing it."))
+			return
+		playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
+		user.visible_message(SPAN_NOTICE("[user] starts undeploying [src]."), \
+				SPAN_NOTICE("You start undeploying [src]."))
+		if(do_after(user, 4 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+			user.visible_message(SPAN_NOTICE("[user] undeploys [src]."), \
+				SPAN_NOTICE("You undeploy [src]."))
+			playsound(loc, 'sound/items/Deconstruct.ogg', 25, 1)
+			var/obj/item/mortar_kit/mortar = new kit_type(loc)
+			mortar.name = src.name
+			qdel(src)
+
+	if(HAS_TRAIT(item, TRAIT_TOOL_SCREWDRIVER))
+		if(do_after(user, 1 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+			user.visible_message(SPAN_NOTICE("[user] toggles the targeting computer on [src]."), \
+				SPAN_NOTICE("You toggle the targeting computer on [src]."))
+			computer_enabled = !computer_enabled
+			playsound(loc, 'sound/machines/switch.ogg', 25, 1)
+
+	if(HAS_TRAIT(item, TRAIT_TOOL_MULTITOOL))
+		var/new_id = tgui_input_text(user, "Select ID (4 characters)", "HIMAT ID", id)
+		if(!new_id || !istext(new_id))
+			return
+
+		if(length(new_id) != 4)
+			to_chat(src, SPAN_NOTICE("ID must be 4 characters long."))
+			return
+		id = new_id
+
+	if(istype(item, /obj/item/device/binoculars/range/designator))
+		if(!id)
+			to_chat(user, SPAN_WARNING("[src] must have an ID before connecting. Use multitool to set ID."))
+			return
+
+		var/obj/item/device/binoculars/range/designator/desig = item
+		if(src in desig.connected_himats)
+			to_chat(user, SPAN_WARNING("[src] is already connected to this designator."))
+			return
+		desig.connected_himats += src
+		to_chat(user, SPAN_WARNING("[src] successfully connected. ID: [id]."))
+
+
+/obj/structure/mortar/himat/handle_shell(turf/target, obj/item/mortar_shell/shell)
+	if(!loaded_shell)
+		return FALSE
+
+	var/turf/mortar_turf = get_turf(src)
+	mortar_turf.ceiling_debris_check(2)
+	playsound(loc, 'sound/weapons/gun_mortar_fire.ogg', 50, 1)
+	visible_message("[icon2html(src, viewers(src))] [SPAN_DANGER("The [name] fires!")]")
+
+	for(var/mob/mob in range(7))
+		shake_camera(mob, 3, 1)
+	firing = TRUE
+	flick(icon_state + "_fire", src)
+	spawn(travel_time+rand(1, 10))
+	..()
+	loaded_shell = null
+	return TRUE
+
+/obj/structure/mortar/himat/attack_hand(mob/user)
+	if(loaded_shell)
+		visible_message(SPAN_NOTICE("[user] begins removing [loaded_shell] from [src]".))
+		if(do_after(user, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+			loaded_shell.forceMove(get_turf(src))
+			loaded_shell = null
+			visible_message(SPAN_NOTICE("[user] removes [loaded_shell] from [src]".))
+
+/obj/item/mortar_kit/himat
+	name = "\improper M112 HIMAT"
+	desc = "An automatic, crew-operated mortar system intended to rain down 80mm goodness on anything it's aimed at. Needs to be set down first"
+	mortar_type = /obj/structure/mortar/himat

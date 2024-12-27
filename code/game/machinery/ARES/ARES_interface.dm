@@ -25,6 +25,8 @@
 	var/datum/ares_datacore/datacore
 
 	COOLDOWN_DECLARE(printer_cooldown)
+	COOLDOWN_DECLARE(bioscan_cooldown)
+	var/bioscan_enabled = FALSE
 
 /obj/structure/machinery/computer/ares_console/proc/link_systems(datum/ares_link/new_link = GLOB.ares_link, override)
 	if(link && !override)
@@ -295,6 +297,12 @@
 			last_login = "No User"
 			authentication = ARES_ACCESS_LOGOUT
 
+		if("bioscan")
+			if(!COOLDOWN_FINISHED(src, bioscan_cooldown))
+				to_chat(user, SPAN_WARNING("Bioscan sensors are realligning. Time left: [COOLDOWN_SECONDSLEFT(src, bioscan_cooldown)] seconds!."))
+				return
+			COOLDOWN_START(src, bioscan_cooldown, 15 MINUTES)
+			GLOB.bioscan_data.ares_bioscan(1, 5)
 		if("home")
 			last_menu = current_menu
 			current_menu = "main"
