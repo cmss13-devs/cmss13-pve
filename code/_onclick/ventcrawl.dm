@@ -97,6 +97,9 @@
 		playsound(src, pick('sound/effects/alien_ventpass1.ogg', 'sound/effects/alien_ventpass2.ogg'), 35, 1)
 		forceMove(vent_found)
 		update_pipe_icons(vent_found)
+		if(isskeleton(src))
+			var/obj/effect/particle_effect/smoke/smoke = new(get_turf(vent_found))
+			smoke.color = "#000000"
 	else
 		to_chat(src, SPAN_WARNING("This vent is not connected to anything."))
 

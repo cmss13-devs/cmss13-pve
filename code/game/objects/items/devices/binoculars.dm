@@ -61,7 +61,7 @@
 	var/laser_cooldown = 0
 	var/cooldown_duration = 200 //20 seconds
 	var/obj/effect/overlay/temp/laser_coordinate/coord
-	var/target_acquisition_delay = 100 //10 seconds
+	var/target_acquisition_delay = 3 //10 seconds
 	var/rangefinder_popup = TRUE //Whether coordinates are displayed in a separate popup window.
 	var/last_x = "UNKNOWN"
 	var/last_y = "UNKNOWN"
@@ -213,6 +213,12 @@
 	/// Normally used for the red CAS dot overlay.
 	var/cas_laser_overlay = "laser_cas"
 
+	var/list/connected_himats = list()
+	var/himat_id = 1
+	var/barrage_mode = FALSE
+
+	actions_types = list(/datum/action/item_action/fire_himat, /datum/action/item_action/switch_himat, /datum/action/item_action/himat_barrage)
+
 /obj/item/device/binoculars/range/designator/Initialize()
 	. = ..()
 	tracking_id = ++GLOB.cas_tracking_id_increment
@@ -246,6 +252,13 @@
 	if(laser)
 		QDEL_NULL(laser)
 		to_chat(user, SPAN_WARNING("You stop lasing."))
+
+/obj/item/device/binoculars/range/designator/attackby(obj/item/item, mob/user)
+	if(HAS_TRAIT(item, TRAIT_TOOL_MULTITOOL))
+		to_chat(user, SPAN_WARNING("You begin flushing connection data..."))
+		if(do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+			connected_himats.Cut()
+		to_chat(user, SPAN_WARNING("You successfully flush connection data."))
 
 /obj/item/device/binoculars/range/designator/verb/toggle_mode()
 	set category = "Object"
@@ -349,6 +362,65 @@
 			if(!do_after(user, 30, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 				QDEL_NULL(laser)
 				break
+
+/datum/action/item_action/fire_himat/New(Target, obj/item/holder)
+	. = ..()
+	name = "Fire HIMATs"
+	action_icon_state = "designator_mortar"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/fire_himat/action_activate()
+	. = ..()
+	var/obj/item/device/binoculars/range/designator/desig = holder_item
+	var/howmanyhimats = 0
+	if(!desig.range_mode && desig.laser && desig.connected_himats.len)
+		if(desig.barrage_mode)
+			for(var/obj/structure/mortar/himat/himat in desig.connected_himats)
+				if(himat.handle_shell(get_turf(desig.laser), himat.loaded_shell))
+					howmanyhimats++
+			to_chat(usr, SPAN_NOTICE("Command sent. Fired: [howmanyhimats] shells."))
+		else
+			var/obj/structure/mortar/himat/himat = desig.connected_himats[desig.himat_id]
+			if(himat.handle_shell(get_turf(desig.laser), himat.loaded_shell))
+				to_chat(usr, SPAN_NOTICE("Command sent. Fired: HIMAT [himat.id]."))
+
+/datum/action/item_action/switch_himat/New(Target, obj/item/holder)
+	. = ..()
+	name = "Switch HIMAT"
+	action_icon_state = "designator_swap_mortar"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/switch_himat/action_activate()
+	. = ..()
+	var/obj/item/device/binoculars/range/designator/desig = holder_item
+	desig.himat_id++
+	if(desig.himat_id > desig.connected_himats.len)
+		desig.himat_id = 1
+	var/obj/structure/mortar/himat/selected_himat = desig.connected_himats[desig.himat_id]
+	to_chat(usr, SPAN_NOTICE("Selected HIMAT ID: [selected_himat.id]"))
+
+/datum/action/item_action/himat_barrage/New(Target, obj/item/holder)
+	. = ..()
+	name = "Switch Barrage Mode"
+	action_icon_state = "designator_one_weapon"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/himat_barrage/action_activate()
+	. = ..()
+	var/obj/item/device/binoculars/range/designator/desig = holder_item
+	desig.barrage_mode = !desig.barrage_mode
+	button.overlays.Cut()
+	if(desig.barrage_mode)
+		action_icon_state = "designator_all_weapons"
+	else
+		action_icon_state = "designator_one_weapon"
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 //IMPROVED LASER DESIGNATER, faster cooldown, faster target acquisition, can be found only in scout spec kit
 /obj/item/device/binoculars/range/designator/scout

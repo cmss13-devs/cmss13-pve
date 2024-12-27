@@ -98,6 +98,7 @@ export const GameMasterSpawningPanel = (props, context) => {
             </Stack.Item>
           </Stack>
         </Stack.Item>
+        <Stack.Item mt={1}>Xenos Spawned: {data.xenos_spawned}. Xenos Died: {data.xenos_died}.</Stack.Item>
         <Stack.Item>
           <Stack>
             <Stack.Item>
