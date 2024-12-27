@@ -1,0 +1,5 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - rscadd: "New palettes, civilian binos redesign"
+  - rscdel: "Unused map variances"
