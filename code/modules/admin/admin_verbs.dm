@@ -336,6 +336,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	if(CLIENT_HAS_RIGHTS(src, R_BUILDMODE))
 		add_verb(src, /client/proc/togglebuildmodeself)
 		add_verb(src, /client/proc/toggle_game_master)
+		add_verb(src, /client/proc/set_xeno_amount)
 		add_verb(src, /client/proc/open_resin_panel)
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
@@ -373,6 +374,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		GLOB.admin_verbs_default,
 		/client/proc/togglebuildmodeself,
 		/client/proc/toggle_game_master,
+		/client/proc/set_xeno_amount,
 		/client/proc/open_resin_panel,
 		/client/proc/open_sound_panel,
 		/client/proc/toggle_join_xeno,

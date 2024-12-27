@@ -298,11 +298,16 @@
 			authentication = ARES_ACCESS_LOGOUT
 
 		if("bioscan")
+			if(!bioscan_enabled)
+				to_chat(user, SPAN_WARNING("Unable to process user request at this time. Contact your system administrator."))
+				return
+
 			if(!COOLDOWN_FINISHED(src, bioscan_cooldown))
-				to_chat(user, SPAN_WARNING("Bioscan sensors are realligning. Time left: [COOLDOWN_SECONDSLEFT(src, bioscan_cooldown)] seconds!."))
+				to_chat(user, SPAN_WARNING("Bioscan sensors are realligning. Time left: [COOLDOWN_SECONDSLEFT(src, bioscan_cooldown)] seconds!"))
 				return
 			COOLDOWN_START(src, bioscan_cooldown, 15 MINUTES)
-			GLOB.bioscan_data.ares_bioscan(1, 5)
+			spawn(rand(50, 100))
+			fake_bioscan()
 		if("home")
 			last_menu = current_menu
 			current_menu = "main"

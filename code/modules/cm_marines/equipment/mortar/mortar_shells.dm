@@ -42,6 +42,15 @@
 	sleep(2)
 	cell_explosion(T, 60, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
+/obj/item/mortar_shell/training
+	name = "\improper 80mm training mortar shell"
+	desc = "An 80mm mortar shell, designed to light up the area of impact with short-lived burning ash. Used during training exercises."
+	icon_state = "mortar_ammo_training"
+
+/obj/item/mortar_shell/training/detonate(turf/T)
+	create_shrapnel(T, 10, shrapnel_type = /datum/ammo/flare/starshell, cause_data = cause_data)
+	new /obj/item/mortar_shell(T)
+
 /obj/item/mortar_shell/incendiary
 	name = "\improper 80mm incendiary mortar shell"
 	desc = "An 80mm mortar shell, loaded with a Type B napalm charge. Perfect for long-range area denial."
@@ -289,3 +298,11 @@
 
 /obj/structure/closet/crate/secure/mortar_ammo/mortar_kit/hvh/clf
 	jtac_key_type = /obj/item/device/encryptionkey/clf/engi
+
+/obj/structure/closet/crate/secure/mortar_ammo/himat
+	name = "\improper M112 HIMAT crate"
+	desc = "A crate containing a HIMAT."
+
+/obj/structure/closet/crate/secure/mortar_ammo/himat/Initialize()
+	. = ..()
+	new /obj/item/mortar_kit/himat(src)

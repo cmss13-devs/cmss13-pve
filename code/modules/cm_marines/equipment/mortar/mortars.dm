@@ -569,11 +569,11 @@
 
 /obj/structure/mortar/himat/attack_hand(mob/user)
 	if(loaded_shell)
-		visible_message(SPAN_NOTICE("[user] begins removing [loaded_shell] from [src]".))
+		visible_message(SPAN_NOTICE("[user] begins removing [loaded_shell] from [src]."))
 		if(do_after(user, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 			loaded_shell.forceMove(get_turf(src))
 			loaded_shell = null
-			visible_message(SPAN_NOTICE("[user] removes [loaded_shell] from [src]".))
+			visible_message(SPAN_NOTICE("[user] removes [loaded_shell] from [src]."))
 
 /obj/item/mortar_kit/himat
 	name = "\improper M112 HIMAT"

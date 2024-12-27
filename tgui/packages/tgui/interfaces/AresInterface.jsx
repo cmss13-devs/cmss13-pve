@@ -190,7 +190,7 @@ const MainMenu = (props) => {
             <Stack.Item>
               <Button
                 tooltip="Request bioscan."
-                icon="magnifying-glass"
+                icon="satellite-dish"
                 ml="auto"
                 px="2rem"
                 width="25vw"

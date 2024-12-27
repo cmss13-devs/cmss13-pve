@@ -27,6 +27,16 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	if(src)
 		open_game_master_panel(src)
 
+/client/proc/set_xeno_amount()
+	set name = "Set Xeno Amount"
+	set category = "Game Master.Extras"
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(src)
+		var/new_amount = tgui_input_number(usr, "How Many Xenos?!?!", "Xenos Count", 1000, 9999999, 0)
+		GLOB.xenos_per_mission = new_amount
+
 // Spawn stuff
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
 #define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
