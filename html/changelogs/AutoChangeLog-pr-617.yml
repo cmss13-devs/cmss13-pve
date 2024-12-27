@@ -1,4 +1,0 @@
-author: "private-tristan"
-delete-after: True
-changes:
-  - bugfix: "Chances Claim [Forecon] can now be properly selected by GMs"
