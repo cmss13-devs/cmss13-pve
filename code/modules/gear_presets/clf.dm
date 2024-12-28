@@ -19,7 +19,7 @@
 	var/random_name
 	var/first_name
 	var/last_name
-	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18))
+	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10))
 	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10))
 	var/hair_color = pick(hair_colors)
 	new_human.r_hair = hair_colors[hair_color][1]
