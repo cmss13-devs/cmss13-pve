@@ -73,3 +73,7 @@
   - balance: Changed Mini Rocket travelling time to 4 seconds
   private-tristan:
   - bugfix: Chances Claim [Forecon] can now be properly selected by GMs
+2024-12-28:
+  AmoryBlaine:
+  - rscadd: New palettes, civilian binos redesign
+  - rscdel: Unused map variances
