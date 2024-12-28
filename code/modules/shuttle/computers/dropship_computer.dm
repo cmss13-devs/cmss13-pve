@@ -642,13 +642,9 @@
 	needs_power = TRUE
 	can_change_shuttle = TRUE
 	var/source_type = /obj/item/device/flight_laptop
-	var/has_special_table_placement = TRUE
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/laptop/MouseDrop(over_object)
-	if(!has_special_table_placement)
-		return ..()
-
-	if(over_object == usr && Adjacent(usr) && has_special_table_placement)
+	if(over_object == usr && Adjacent(usr))
 		if(!skillcheck(usr, SKILL_PILOT, SKILL_PILOT_UNTRAINED))
 			to_chat(usr, SPAN_WARNING("You do not know how to safely shut down the [src]..."))
 			return
@@ -675,7 +671,6 @@
 	icon_state = "remoteflightcomp_cl"
 	w_class = SIZE_SMALL
 	unacidable = TRUE
-	var/exproof = TRUE
 	has_special_table_placement = TRUE
 
 /obj/item/device/flight_laptop/set_to_table(obj/structure/surface/target)
@@ -686,3 +681,6 @@
 		qdel(src)
 	else
 		to_chat(usr, SPAN_WARNING("You fail to setup the [src]"))
+
+/obj/item/device/flight_laptop/ex_act()
+	return
