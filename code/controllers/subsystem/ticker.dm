@@ -200,6 +200,9 @@ SUBSYSTEM_DEF(ticker)
 	if(CONFIG_GET(flag/autooocmute))
 		GLOB.ooc_allowed = FALSE
 
+	if(CONFIG_GET(flag/autoloocmute))
+		GLOB.looc_allowed = FALSE
+
 	round_start_time = world.time
 
 	CHECK_TICK

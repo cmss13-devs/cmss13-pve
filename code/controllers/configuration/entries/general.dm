@@ -173,6 +173,8 @@ Administrative related.
 
 /datum/config_entry/flag/autooocmute
 
+/datum/config_entry/flag/autoloocmute
+
 /datum/config_entry/flag/mentor_tools // Extra tooling for mentors that might otherwise be staff only
 	config_entry_value = FALSE
 

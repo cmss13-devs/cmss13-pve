@@ -173,6 +173,9 @@ USEALIENWHITELIST
 ## Automute the OOC channel. OOC mutes itself at round-start and unmutes itself at round-end.
 AUTOOOCMUTE
 
+## Automute the LOOC channel. LOOC mutes itself at round-start and unmutes itself at round-end.
+AUTOLOOCMUTE
+
 ## Uncomment to enable the script that posts runtimes to GitLab
 ## Before you do so, make sure to set up the required environment vars:
 ##     1. GITLAB_RUNTIMES_PID - The Project ID of the project where the issues should be posted. Found on the details page of the project, directly under the project name.
