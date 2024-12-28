@@ -921,6 +921,14 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
+/obj/item/attachable/sling //Purely cosmetic
+	name = "two-point sling"
+	desc = "A traditional strip of toughened nylon fabric with clips on either end for attaching to suitable mounting points on most longarms in the UA armed forces arsenals."
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
+	icon_state = "pve-sling"
+	attach_icon = "pve-sling_a"
+	slot = "rail"
+
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
