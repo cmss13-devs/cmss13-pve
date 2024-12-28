@@ -24,7 +24,7 @@
 	add_survivor_weapon_pistol(new_human)
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier
-	name = "Rebel, Guerilla (Veteran)"
+	name = "Rebel, Soldier"
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
@@ -47,18 +47,27 @@
 	//head
 	add_rebel_ua_helmet(new_human)
 	//uniform
-	add_rebel_uniform(new_human)
+	add_rebel_ua_uniform(new_human)
 	//jacket
-	add_rebel_suit(new_human)
+	add_rebel_ua_suit(new_human)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
 	//limbs
-	add_rebel_shoes(new_human)
-	add_rebel_gloves(new_human)
-	add_rebel_weapon(new_human)
+	add_rebel_ua_shoes(new_human)
+	if(prob(35))
+		add_rebel_gloves(new_human)
+	if(prob(35))
+		add_rebel_ua_pistol(new_human)
+	else if(prob(85))
+		add_rebel_ua_rifle(new_human)
+	else
+		add_rebel_ua_shotgun(new_human)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
 /datum/equipment_preset/colonist/bluecollar/rebel/medic
-	name = "Rebel, Guerilla (Medic)"
+	name = "Rebel, Medic"
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
@@ -72,7 +81,7 @@
 /datum/equipment_preset/colonist/bluecollar/rebel/medic/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/tech(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
@@ -85,17 +94,20 @@
 	//head
 	add_rebel_ua_helmet(new_human)
 	//uniform
-	add_rebel_uniform(new_human)
+	add_rebel_ua_uniform(new_human)
 	//jacket
-	add_rebel_suit(new_human)
+	add_rebel_ua_suit(new_human)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
 	//limbs
-	add_rebel_shoes(new_human)
-	add_rebel_weapon(new_human)
+	add_rebel_ua_shoes(new_human)
+	add_rebel_ua_weapon(new_human)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
 /datum/equipment_preset/colonist/bluecollar/rebel/at
-	name = "Rebel, Guerilla (Anti-Tank)"
+	name = "Rebel, Anti-Tank"
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
@@ -109,7 +121,7 @@
 /datum/equipment_preset/colonist/bluecollar/rebel/at/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/intel/chestrig(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -120,10 +132,10 @@
 	//head
 	add_rebel_ua_helmet(new_human)
 	//uniform
-	add_rebel_uniform(new_human)
+	add_rebel_ua_uniform(new_human)
 	//jacket
-	add_rebel_suit(new_human)
+	add_rebel_ua_suit(new_human)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/vp70_near_empty(new_human), WEAR_WAIST)
 	//limbs
-	add_rebel_shoes(new_human)
+	add_rebel_ua_shoes(new_human)

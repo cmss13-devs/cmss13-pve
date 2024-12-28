@@ -1072,8 +1072,8 @@
 
 //CLF Headsets
 /obj/item/device/radio/headset/distress/CLF
-	name = "CLF headset"
-	desc = "A special headset used by small groups of trained operatives. Or terrorists. To access the colony channel use :o."
+	name = "colony headset"
+	desc = "A standard headset used by colonists, but this one has been tampered with. To access the colony channel use :o."
 	frequency = CLF_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	has_hud = TRUE

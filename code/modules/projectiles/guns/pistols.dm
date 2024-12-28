@@ -108,6 +108,15 @@
 
 //VP70 - Counterpart to M1911, offers burst and capacity ine exchange of low accuracy and damage.
 
+/obj/item/weapon/gun/pistol/m4a3/twe
+	name = "\improper TWE pistol"
+	desc = "It's an m4a3 designed in the TWE."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "l54"
+	item_state = "l54"
+	fire_sound = "vp70"
+	current_mag = /obj/item/ammo_magazine/pistol
+
 /obj/item/weapon/gun/pistol/vp70
 	name = "\improper VP70 M5 service pistol"
 	desc = "Standard issue semi-automatic USCM service pistol. Recently replacing the M4A3, it retains its predecessor's 9mm chambering but offers both a higher magazine capacity and a 3-round burst selector."

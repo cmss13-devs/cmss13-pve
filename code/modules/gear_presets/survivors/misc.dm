@@ -92,7 +92,7 @@
 	name = "CLF Survivor (Cold)"
 
 //children of spawn rebel shoes proc
-/datum/equipment_preset/survivor/clf/cold/add_rebel_suit(mob/living/carbon/human/human)
+/datum/equipment_preset/survivor/clf/cold/add_rebel_ua_suit(mob/living/carbon/human/human)
 	if(!istype(human))
 		return
 	var/suitpath = pick(
@@ -117,7 +117,7 @@
 	human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 
 //children of spawn rebel shoes proc
-/datum/equipment_preset/survivor/clf/cold/add_rebel_shoes(mob/living/carbon/human/human)
+/datum/equipment_preset/survivor/clf/cold/add_rebel_ua_shoes(mob/living/carbon/human/human)
 	if(!istype(human))
 		return
 	var/shoespath = /obj/item/clothing/shoes/combat
