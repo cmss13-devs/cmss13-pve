@@ -1537,7 +1537,7 @@
 	job = "Corpsman"
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine/medic/standard,
+/obj/item/clothing/under/marine/standard,
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)

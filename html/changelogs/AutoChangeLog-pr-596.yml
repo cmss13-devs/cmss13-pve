@@ -1,0 +1,6 @@
+author: "DexterDude"
+delete-after: True
+changes:
+  - balance: "Changes prime rolls to now work with anyone with 25 human hours"
+  - qol: "Tutorial no longer is suggested to new players"
+  - qol: "New players now have +2 weight between 0-5 hours and +1 weight for 5-8 hours."
