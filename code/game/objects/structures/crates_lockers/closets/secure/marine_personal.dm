@@ -45,7 +45,7 @@
 		new /obj/item/clothing/shoes/laceup/brown(src)
 		new /obj/item/clothing/shoes/marine/civilian(src)
 	if(has_advisor_gear)
-		new /obj/item/clothing/under/colonist(src)
+		new /obj/item/clothing/under/ripley(src)
 		new /obj/item/clothing/under/colonist/boilersuit/darkblue(src)
 		new /obj/item/clothing/under/colonist/boilersuit/khaki(src)
 		new /obj/item/clothing/suit/storage/jacket/marine/corporate/brown/leather(src)
