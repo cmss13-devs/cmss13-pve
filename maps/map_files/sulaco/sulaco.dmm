@@ -3189,7 +3189,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = 8;
-	job = "Dropship Pilot"
+	job = "Section Sergeant"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -15417,10 +15417,6 @@
 /obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
-"dFJ" = (
-/obj/structure/dropship_equipment/weapon/minirocket_pod,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
 "dLD" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15496,6 +15492,14 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/supply)
+"etv" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "exb" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/firstaid/fire{
@@ -15704,6 +15708,16 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
+"gph" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Corpsman"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "gqG" = (
 /obj/structure/machinery/door_control{
 	id = "lowerstorage3";
@@ -15732,22 +15746,6 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
-"gxt" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
-"gCy" = (
-/obj/structure/pipes/standard/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/structure/dropship_equipment/weapon/rocket_pod,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
 "gNW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -15826,6 +15824,15 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
+"hlE" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "hwm" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
@@ -15916,6 +15923,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"iuE" = (
+/obj/structure/dropship_equipment/weapon/minirocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "iGx" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
@@ -15950,6 +15961,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"jdn" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "jnX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -16268,6 +16288,13 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
+"maO" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/dropship_equipment/weapon/minirocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "mhB" = (
 /obj/structure/sign/safety/five{
 	pixel_y = -24
@@ -16658,15 +16685,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
-"pdZ" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "pFO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -17243,14 +17261,6 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/vehicle_shuttle/upper)
-"uDa" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff"
-	},
-/obj/structure/dropship_equipment/weapon/rocket_pod,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
 "uEm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -17270,13 +17280,6 @@
 	},
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/supply)
-"uRv" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/dropship_equipment/weapon/minirocket_pod,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
 "uVo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -17396,6 +17399,13 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
+"wrI" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "wAd" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -21904,7 +21914,7 @@ ttD
 aZw
 amS
 azT
-aoU
+gph
 aog
 alc
 aZw
@@ -26954,7 +26964,7 @@ adz
 afs
 akt
 acZ
-uDa
+etv
 ayx
 akt
 aEM
@@ -27106,7 +27116,7 @@ adz
 auN
 aeR
 aBQ
-dFJ
+iuE
 aVb
 art
 aZy
@@ -27258,7 +27268,7 @@ adz
 aNR
 aDk
 atD
-gCy
+wrI
 aQL
 aDk
 aDk
@@ -27410,7 +27420,7 @@ adz
 aSI
 aBg
 aVf
-uRv
+maO
 aLu
 art
 aEf
@@ -33162,7 +33172,7 @@ aEG
 aEG
 aEG
 adz
-pdZ
+hlE
 aHl
 abM
 aGi
@@ -33466,7 +33476,7 @@ aEG
 aEG
 aEG
 adz
-gxt
+jdn
 aEW
 avT
 ayk
