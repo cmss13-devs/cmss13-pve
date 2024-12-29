@@ -37,6 +37,10 @@
 	icon_state = "tl_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+/obj/effect/landmark/start/marine/tl/movie
+	icon_state = "tl_spawn_alpha"
+	squad = SQUAD_MOVIE
+
 /datum/job/marine/tl/ai
 	total_positions = 2
 	spawn_positions = 2

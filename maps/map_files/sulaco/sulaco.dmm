@@ -720,7 +720,7 @@
 "acV" = (
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/medic/alpha,
+/obj/effect/landmark/start/marine/medic/movie,
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/cryo_cells)
 "acX" = (
@@ -892,7 +892,7 @@
 "adA" = (
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/start/marine/movie,
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/cryo_cells)
 "adB" = (
@@ -3676,7 +3676,7 @@
 "amP" = (
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/tl/alpha,
+/obj/effect/landmark/start/marine/tl/movie,
 /turf/open/floor/almayer/edge/northeast,
 /area/golden_arrow/cryo_cells)
 "amQ" = (
@@ -5445,7 +5445,7 @@
 "asK" = (
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/start/marine/movie,
 /turf/open/floor/almayer/edge/southeast,
 /area/golden_arrow/cryo_cells)
 "asL" = (
@@ -6821,11 +6821,6 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
-"axL" = (
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
-/turf/open/floor/almayer/edge/southeast,
 /area/golden_arrow/cryo_cells)
 "axM" = (
 /obj/structure/machinery/light/double/blue{
@@ -9396,11 +9391,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
-"aFy" = (
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
-/turf/open/floor/almayer/edge/east,
-/area/golden_arrow/cryo_cells)
 "aFz" = (
 /turf/open/floor/almayer/uscm/directional/up_down/west,
 /area/golden_arrow/hangar)
@@ -11080,7 +11070,7 @@
 "aLw" = (
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/tl/alpha,
+/obj/effect/landmark/start/marine/tl/movie,
 /turf/open/floor/almayer/edge/southeast,
 /area/golden_arrow/cryo_cells)
 "aLy" = (
@@ -12535,7 +12525,7 @@
 "aQQ" = (
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/smartgunner/alpha,
+/obj/effect/landmark/start/marine/smartgunner/movie,
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/cryo_cells)
 "aQR" = (
@@ -15195,7 +15185,7 @@
 "bAd" = (
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/leader/alpha,
+/obj/effect/landmark/start/marine/leader/movie,
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/cryo_cells)
 "bDB" = (
@@ -20408,8 +20398,8 @@ aMo
 abh
 azh
 atc
-aFy
-axL
+adA
+asK
 aUY
 aWh
 aEG

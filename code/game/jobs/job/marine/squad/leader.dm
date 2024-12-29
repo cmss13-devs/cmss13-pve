@@ -50,6 +50,10 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	icon_state = "leader_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+/obj/effect/landmark/start/marine/leader/movie
+	icon_state = "leader_spawn_alpha"
+	squad = SQUAD_MOVIE
+
 /datum/job/marine/leader/ai
 	total_positions = 1
 	spawn_positions = 1
