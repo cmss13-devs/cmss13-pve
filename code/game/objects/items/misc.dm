@@ -439,6 +439,6 @@
 /obj/item/iff_collar/attackby(obj/item/W, mob/living/user)
 	if(istype(/obj/item/card/id))
 		var/obj/item/card/id/card = W
-		faction = W.faction
-		faction_group = W.faction_group
+		faction = card.faction
+		faction_group = card.faction_group
 		to_chat(user, SPAN_NOTICE("[src]'s IFF tag copies IFF information from your [card]."))
