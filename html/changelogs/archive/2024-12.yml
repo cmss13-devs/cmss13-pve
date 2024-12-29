@@ -73,3 +73,19 @@
   - balance: Changed Mini Rocket travelling time to 4 seconds
   private-tristan:
   - bugfix: Chances Claim [Forecon] can now be properly selected by GMs
+2024-12-28:
+  AmoryBlaine:
+  - rscadd: New palettes, civilian binos redesign
+  - rscdel: Unused map variances
+2024-12-29:
+  AmoryBlaine:
+  - rscadd: overhaul of USCM gear presets, clothing, ect
+  - rscdel: PvP centric presets for marines
+  AndroBetel:
+  - rscadd: Wall leaning.
+  DexterDude:
+  - balance: Changes prime rolls to now work with anyone with 25 human hours
+  - qol: Tutorial no longer is suggested to new players
+  - qol: New players now have +2 weight between 0-5 hours and +1 weight for 5-8 hours.
+  mesnomer:
+  - config: define UPLOAD_LIMIT value doubled (10485760 to 20971520)
