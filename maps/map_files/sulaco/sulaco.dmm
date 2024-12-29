@@ -5581,15 +5581,6 @@
 "atm" = (
 /turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/cryo_cells)
-"atn" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "ato" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/soap/deluxe{
@@ -6647,15 +6638,6 @@
 	pixel_x = -5
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
-"axp" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "axq" = (
 /obj/effect/decal/cleanable/dirt{
@@ -15435,6 +15417,10 @@
 /obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
+"dFJ" = (
+/obj/structure/dropship_equipment/weapon/minirocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "dLD" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15746,6 +15732,22 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
+"gxt" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"gCy" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "gNW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -16656,6 +16658,15 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
+"pdZ" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "pFO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -17232,6 +17243,14 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/vehicle_shuttle/upper)
+"uDa" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "uEm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -17251,6 +17270,13 @@
 	},
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/supply)
+"uRv" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/dropship_equipment/weapon/minirocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "uVo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -26928,7 +26954,7 @@ adz
 afs
 akt
 acZ
-alT
+uDa
 ayx
 akt
 aEM
@@ -27080,7 +27106,7 @@ adz
 auN
 aeR
 aBQ
-aVD
+dFJ
 aVb
 art
 aZy
@@ -27232,7 +27258,7 @@ adz
 aNR
 aDk
 atD
-akG
+gCy
 aQL
 aDk
 aDk
@@ -27384,7 +27410,7 @@ adz
 aSI
 aBg
 aVf
-aRG
+uRv
 aLu
 art
 aEf
@@ -33136,7 +33162,7 @@ aEG
 aEG
 aEG
 adz
-axp
+pdZ
 aHl
 abM
 aGi
@@ -33440,7 +33466,7 @@ aEG
 aEG
 aEG
 adz
-atn
+gxt
 aEW
 avT
 ayk
