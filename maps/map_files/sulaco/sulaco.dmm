@@ -5581,6 +5581,15 @@
 "atm" = (
 /turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/cryo_cells)
+"atn" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "ato" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/soap/deluxe{
@@ -6638,6 +6647,15 @@
 	pixel_x = -5
 	},
 /turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"axp" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "axq" = (
 /obj/effect/decal/cleanable/dirt{
@@ -11222,6 +11240,10 @@
 	id = "garrow_vehicle_elevator_one";
 	name = "safety rail control"
 	},
+/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
+/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
+/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
+/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aLS" = (
@@ -13609,6 +13631,7 @@
 	pixel_y = 35;
 	name = "\improper vehicle elevator one control panel"
 	},
+/obj/item/hardpoint/primary/dualcannon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aUI" = (
@@ -14467,6 +14490,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/item/hardpoint/secondary/frontalcannon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aXR" = (
@@ -33112,7 +33136,7 @@ aEG
 aEG
 aEG
 adz
-aKa
+axp
 aHl
 abM
 aGi
@@ -33416,7 +33440,7 @@ aEG
 aEG
 aEG
 adz
-aKa
+atn
 aEW
 avT
 ayk
