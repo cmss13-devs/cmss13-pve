@@ -11216,6 +11216,12 @@
 	id = "vehiclebay1";
 	name = "vehicle bay blast door control"
 	},
+/obj/structure/machinery/door_control{
+	pixel_y = -10;
+	pixel_x = -26;
+	id = "garrow_vehicle_elevator_one";
+	name = "safety rail control"
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aLS" = (
