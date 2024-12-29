@@ -333,6 +333,90 @@
 	transverse  =  3
 	long    =  0
 
+// BUG STOMPER
+/obj/effect/attach_point/weapon/bugstomper
+	ship_tag = DROPSHIP_BUGSTOMPER
+
+/obj/effect/attach_point/weapon/bugstomper/left_wing
+	name = "port wing weapon attach point"
+	icon_state = "equip_base_l_wing"
+	attach_id = 1
+	dir = WEST
+	firing_arc_min = -3
+	firing_arc_max =  3
+	transverse  = -3
+	long    =  0
+
+/obj/effect/attach_point/weapon/bugstomper/left_fore
+	name = "port fore weapon attach point"
+	attach_id = 2
+	dir = NORTH
+	firing_arc_min = -6
+	firing_arc_max =  0
+	transverse  =  0
+	long    =  0
+
+/obj/effect/attach_point/weapon/bugstomper/right_fore
+	name = "starboard fore weapon attach point"
+	attach_id = 3
+	dir = NORTH
+	firing_arc_min =  0
+	firing_arc_max =  6
+	transverse  =  0
+	long    =  0
+
+/obj/effect/attach_point/weapon/bugstomper/right_wing
+	name = "starboard wing weapon attach point"
+	icon_state = "equip_base_r_wing";
+	attach_id = 4
+	dir = EAST
+	firing_arc_min = -3
+	firing_arc_max =  3
+	transverse  =  3
+	long    =  0
+
+// SMART ASS
+/obj/effect/attach_point/weapon/smartass
+	ship_tag = DROPSHIP_SMARTASS
+
+/obj/effect/attach_point/weapon/smartass/left_wing
+	name = "port wing weapon attach point"
+	icon_state = "equip_base_l_wing"
+	attach_id = 1
+	dir = WEST
+	firing_arc_min = -3
+	firing_arc_max =  3
+	transverse  = -3
+	long    =  0
+
+/obj/effect/attach_point/weapon/smartass/left_fore
+	name = "port fore weapon attach point"
+	attach_id = 2
+	dir = NORTH
+	firing_arc_min = -6
+	firing_arc_max =  0
+	transverse  =  0
+	long    =  0
+
+/obj/effect/attach_point/weapon/smartass/right_fore
+	name = "starboard fore weapon attach point"
+	attach_id = 3
+	dir = NORTH
+	firing_arc_min =  0
+	firing_arc_max =  6
+	transverse  =  0
+	long    =  0
+
+/obj/effect/attach_point/weapon/smartass/right_wing
+	name = "starboard wing weapon attach point"
+	icon_state = "equip_base_r_wing";
+	attach_id = 4
+	dir = EAST
+	firing_arc_min = -3
+	firing_arc_max =  3
+	transverse  =  3
+	long    =  0
+
 //attach points
 
 /obj/effect/attach_point/crew_weapon
@@ -372,6 +456,12 @@
 /obj/effect/attach_point/crew_weapon/tripoli
 	ship_tag = DROPSHIP_TRIPOLI
 
+/obj/effect/attach_point/crew_weapon/bugstomper
+	ship_tag = DROPSHIP_BUGSTOMPER
+
+/obj/effect/attach_point/crew_weapon/smartass
+	ship_tag = DROPSHIP_SMARTASS
+
 /obj/effect/attach_point/electronics
 	name = "electronic system attach point"
 	base_category = DROPSHIP_ELECTRONICS
@@ -401,6 +491,13 @@
 
 /obj/effect/attach_point/electronics/tripoli
 	ship_tag = DROPSHIP_TRIPOLI
+
+/obj/effect/attach_point/electronics/bugstomper
+	ship_tag = DROPSHIP_BUGSTOMPER
+
+/obj/effect/attach_point/electronics/smartass
+	ship_tag = DROPSHIP_SMARTASS
+
 /obj/effect/attach_point/fuel
 	name = "engine system attach point"
 	icon = 'icons/obj/structures/props/almayer_props64.dmi'
@@ -416,7 +513,6 @@
 /obj/effect/attach_point/fuel/dropship3
 	ship_tag = DROPSHIP_SAIPAN
 
-
 /obj/effect/attach_point/fuel/midway
 	ship_tag = DROPSHIP_MIDWAY
 
@@ -431,6 +527,12 @@
 
 /obj/effect/attach_point/fuel/tripoli
 	ship_tag = DROPSHIP_TRIPOLI
+
+/obj/effect/attach_point/fuel/bugstomper
+	ship_tag = DROPSHIP_BUGSTOMPER
+
+/obj/effect/attach_point/fuel/smartass
+	ship_tag = DROPSHIP_SMARTASS
 
 /obj/effect/attach_point/computer
 	base_category = DROPSHIP_COMPUTER
@@ -458,3 +560,9 @@
 
 /obj/effect/attach_point/computer/tripoli
 	ship_tag = DROPSHIP_TYPHOON
+
+/obj/effect/attach_point/computer/bugstomper
+	ship_tag = DROPSHIP_BUGSTOMPER
+
+/obj/effect/attach_point/computer/smartass
+	ship_tag = DROPSHIP_SMARTASS

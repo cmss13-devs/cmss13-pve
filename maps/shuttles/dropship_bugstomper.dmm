@@ -22,7 +22,7 @@
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "cK" = (
-/obj/effect/attach_point/crew_weapon/midway{
+/obj/effect/attach_point/crew_weapon/bugstomper{
 	attach_id = 7
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
@@ -53,10 +53,10 @@
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "eS" = (
-/obj/effect/attach_point/fuel/midway{
+/obj/effect/attach_point/fuel/bugstomper{
+	dir = 1;
 	pixel_x = -32;
-	attach_id = 11;
-	dir = 1
+	attach_id = 11
 	},
 /turf/closed/shuttle/bugstomper{
 	icon_state = "33"
@@ -90,10 +90,10 @@
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "hO" = (
-/obj/effect/attach_point/weapon/midway/right_wing,
 /obj/structure/shuttle/part/bugstomper/transparent{
 	icon_state = "65"
 	},
+/obj/effect/attach_point/weapon/bugstomper/right_wing,
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "if" = (
@@ -299,10 +299,10 @@
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "yO" = (
-/obj/effect/attach_point/weapon/midway/left_wing,
 /obj/structure/shuttle/part/bugstomper/transparent{
 	icon_state = "61"
 	},
+/obj/effect/attach_point/weapon/bugstomper/left_wing,
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "zm" = (
@@ -322,10 +322,10 @@
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/bugstomper)
 "Aw" = (
-/obj/effect/attach_point/electronics/midway,
 /obj/structure/shuttle/part/bugstomper/transparent{
 	icon_state = "91"
 	},
+/obj/effect/attach_point/electronics/bugstomper,
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "Bk" = (
@@ -459,10 +459,10 @@
 /turf/template_noop,
 /area/template_noop)
 "Ln" = (
-/obj/effect/attach_point/crew_weapon/midway{
+/obj/docking_port/mobile/marine_dropship/bugstomper,
+/obj/effect/attach_point/crew_weapon/bugstomper{
 	attach_id = 7
 	},
-/obj/docking_port/mobile/marine_dropship/bugstomper,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/bugstomper)
 "Lr" = (
@@ -471,17 +471,17 @@
 	},
 /area/shuttle/bugstomper)
 "LZ" = (
-/obj/effect/attach_point/electronics/midway,
 /obj/structure/shuttle/part/bugstomper/transparent{
 	icon_state = "84"
 	},
+/obj/effect/attach_point/electronics/bugstomper,
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "Mw" = (
-/obj/effect/attach_point/weapon/midway/left_fore,
 /obj/structure/shuttle/part/bugstomper/transparent{
 	icon_state = "85"
 	},
+/obj/effect/attach_point/weapon/bugstomper/left_fore,
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "NK" = (
@@ -525,9 +525,9 @@
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "Tf" = (
-/obj/effect/attach_point/fuel/midway{
-	attach_id = 10;
-	dir = 1
+/obj/effect/attach_point/fuel/bugstomper{
+	dir = 1;
+	attach_id = 10
 	},
 /turf/closed/shuttle/bugstomper{
 	icon_state = "28"
@@ -540,10 +540,10 @@
 /turf/open/shuttle/dropship/light_grey_top_right,
 /area/shuttle/bugstomper)
 "UI" = (
-/obj/effect/attach_point/weapon/midway/right_fore,
 /obj/structure/shuttle/part/bugstomper/transparent{
 	icon_state = "90"
 	},
+/obj/effect/attach_point/weapon/bugstomper/right_fore,
 /turf/template_noop,
 /area/shuttle/bugstomper)
 "Vi" = (
