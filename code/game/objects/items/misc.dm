@@ -424,3 +424,21 @@
 
 /obj/item/rappel_harness/extract/normandy
 	shuttle_id = DROPSHIP_NORMANDY
+
+/obj/item/iff_collar
+	name = "IFF collar"
+	desc = "Seemingly handmade pet collar with adjustable buckle. Can be easily and securily put on almost any small animal."
+	desc_lore = "While such uncontrolled usage of military IFF equipment is surely illegal, many marines make these collars themselves even under threat of court-marshalling - and you would do the same after seeing a cute kitty get vaporized by two sentries simultaneously.\nIFF-protection is, however, still not perfect, so be cautious around pets when using high-calibre automated machineguns."
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "collar"
+	w_class = SIZE_TINY
+	var/faction = "USCM"
+	var/faction_group = FACTION_LIST_MARINE
+	var/max_mob_size = MOB_SIZE_SMALL
+
+/obj/item/iff_collar/attackby(obj/item/W, mob/living/user)
+	if(istype(/obj/item/card/id))
+		var/obj/item/card/id/card = W
+		faction = W.faction
+		faction_group = W.faction_group
+		to_chat(user, SPAN_NOTICE("[src]'s IFF tag copies IFF information from your [card]."))

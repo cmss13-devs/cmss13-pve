@@ -1230,3 +1230,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM PT Shorts"
 	path = /obj/item/clothing/under/shorts/red/uscm
 	cost = 1
+
+/datum/gear/misc/iff_collar
+	display_name = "Pet IFF Collar"
+	path = /obj/item/iff_collar
+	cost = 2
