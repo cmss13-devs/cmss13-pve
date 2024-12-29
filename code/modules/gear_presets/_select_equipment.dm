@@ -597,51 +597,6 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/storage/belt/marine)
 	new_human.equip_to_slot_or_del(new beltpath, WEAR_WAIST)
 
-
-/datum/equipment_preset/proc/add_rebel_ua_weapon(atom/M, sidearm = 0, ammo_amount = 5)
-	if(!M) return
-
-	var/list/rebel_firearms = list(
-		/obj/item/weapon/gun/shotgun/combat = /obj/item/ammo_magazine/handful/shotgun/slug,
-		/obj/item/weapon/gun/shotgun/pump = /obj/item/ammo_magazine/handful/shotgun/buckshot,
-		/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
-		/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
-		/obj/item/weapon/gun/rifle/l42a = /obj/item/ammo_magazine/rifle/l42a,
-		/obj/item/weapon/gun/rifle/l42a = /obj/item/ammo_magazine/rifle/l42a,
-		/obj/item/weapon/gun/rifle/l42a = /obj/item/ammo_magazine/rifle/l42a,
-		/obj/item/weapon/gun/rifle/m41aMK1 = /obj/item/ammo_magazine/rifle/m41aMK1,
-		)
-
-	//no guns in sidearms list, we don't want players spawning with a gun in hand.
-	var/list/rebel_sidearms = list(
-		/obj/item/attachable/bayonet = null,
-		/obj/item/attachable/bayonet/upp = null,
-		/obj/item/attachable/bayonet/rmc = null,
-		/obj/item/explosive/grenade/custom/ied = null,
-		/obj/item/explosive/grenade/custom/ied = null,
-		/obj/item/storage/pill_bottle/tramadol/skillless = null,
-		/obj/item/explosive/grenade/phosphorus = null,
-		/obj/item/clothing/glasses/welding = null,
-		/obj/item/storage/belt/utility/full = null,
-		/obj/item/storage/belt/utility/full = null,
-		/obj/item/storage/bible = null,
-		/obj/item/weapon/baseballbat = null,
-		/obj/item/weapon/baseballbat/metal = null,
-		/obj/item/explosive/grenade/high_explosive = null,
-		/obj/item/explosive/grenade/smokebomb = null,
-		/obj/item/tool/hatchet = null,
-		/obj/item/tool/hatchet = null,
-		/obj/item/weapon/twohanded/fireaxe = null,
-		/obj/item/weapon/twohanded/spear = null
-		)
-
-	var/gunpath = sidearm? pick(rebel_sidearms) : pick(rebel_firearms)
-	var/ammopath = sidearm? rebel_sidearms[gunpath] : rebel_firearms[gunpath]
-
-	add_weapon(gunpath, ammopath, M, sidearm, ammo_amount)
-
-	return 1
-
 /datum/equipment_preset/proc/add_rebel_specialist_weapon(atom/M, ammo_amount = 4)
 	if(!M) return
 
@@ -656,6 +611,8 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	add_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
+
+//*****************************************************************************************************/
 
 //TWE GUNS
 GLOBAL_LIST_INIT(rebel_twe_shotguns, list(
@@ -719,8 +676,9 @@ GLOBAL_LIST_INIT(rebel_twe_pistols, list(
 
 	return 1
 
-//UA GUNS
+//*****************************************************************************************************/
 
+//UA GUNS
 
 GLOBAL_LIST_INIT(rebel_ua_shotguns, list(
 	/obj/item/weapon/gun/shotgun/combat = /obj/item/ammo_magazine/handful/shotgun/slug,
@@ -775,6 +733,9 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	add_weapon(gunpath, ammopath, M, ammo_amount)
 
 	return 1
+
+//*****************************************************************************************************/
+
 //MERC SHIT
 /datum/equipment_preset/proc/add_merc_helmet(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return

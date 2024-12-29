@@ -101,7 +101,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
 	//limbs
 	add_rebel_ua_shoes(new_human)
-	add_rebel_ua_weapon(new_human)
+	if(prob(35))
+		add_rebel_gloves(new_human)
+	if(prob(85))
+		add_rebel_ua_pistol(new_human)
+	else if(prob(35))
+		add_rebel_ua_rifle(new_human)
+	else
+		add_rebel_ua_shotgun(new_human)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -136,6 +143,7 @@
 	//jacket
 	add_rebel_ua_suit(new_human)
 	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/vp70_near_empty(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
 	//limbs
 	add_rebel_ua_shoes(new_human)
+	add_rebel_ua_pistol(new_human)
