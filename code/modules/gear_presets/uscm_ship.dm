@@ -75,7 +75,7 @@
 	rank = JOB_CORPORATE_LIAISON
 	paygrades = list(PAY_SHORT_WYC2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_WYC3 = JOB_PLAYTIME_TIER_2, PAY_SHORT_WYC4 = JOB_PLAYTIME_TIER_3, PAY_SHORT_WYC5 = JOB_PLAYTIME_TIER_4)
 	role_comm_title = "CL"
-	skills = /datum/skills/civilian
+	skills = /datum/skills/civilian/burke
 
 	minimap_icon = "cl"
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIVILIAN
@@ -1139,7 +1139,7 @@
 	rank = JOB_ADVISOR
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CA"
-	skills = /datum/skills/civilian
+	skills = /datum/skills/civilian/ripley
 
 	minimap_icon = "ca"
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIVILIAN
