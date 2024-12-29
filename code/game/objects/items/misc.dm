@@ -437,7 +437,7 @@
 	var/max_mob_size = MOB_SIZE_SMALL
 
 /obj/item/iff_collar/attackby(obj/item/W, mob/living/user)
-	if(istype(/obj/item/card/id))
+	if(istype(W, /obj/item/card/id))
 		var/obj/item/card/id/card = W
 		faction = card.faction
 		faction_group = card.faction_group
