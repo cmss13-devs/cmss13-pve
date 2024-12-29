@@ -428,7 +428,7 @@
 /obj/item/iff_collar
 	name = "IFF collar"
 	desc = "Seemingly handmade pet collar with adjustable buckle. Can be easily and securily put on almost any small animal."
-	desc_lore = "While such uncontrolled usage of military IFF equipment is surely illegal, many marines make these collars themselves even under threat of court-marshalling - and you would do the same after seeing a cute kitty get vaporized by two sentries simultaneously.\nIFF-protection is, however, still not perfect, so be cautious around pets when using high-calibre automated machineguns."
+	desc_lore = "While such uncontrolled usage of military IFF equipment is surely illegal, many marines make these collars themselves even under threat of court-marshalling - and you would do the same after seeing a cute kitty get vaporized by two sentries simultaneously.\nIFF-protection, however, is still not perfect, so be cautious around pets when using high-calibre automated machineguns."
 	icon = 'icons/obj/items/items.dmi'
 	icon_state = "collar"
 	w_class = SIZE_TINY
