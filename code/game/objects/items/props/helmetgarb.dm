@@ -60,6 +60,12 @@
 	icon_state = "camocover"
 	flags_obj = OBJ_NO_HELMET_BAND
 
+/obj/item/prop/helmetgarb/m3band //for those who want the band but don't want to shove something else onto their helmet
+	name = "\improper M3 Pattern Helmet Band"
+	desc = "An M3 pattern helmet band meant to secure camoflauge covers to the M10 helmet, as well as commonly used to hold out of regulation items."
+	icon_state = "m3band"
+	flags_obj = OBJ_NO_HELMET_BAND
+
 /obj/item/prop/helmetgarb/camocover/snow
 	name = "snow helmet cover"
 	icon_state = "s_camocover"

@@ -309,6 +309,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM headband, cyan green"
 	path = /obj/item/clothing/head/headband/echo
 
+/datum/gear/headwear/uscm/helmetband
+	display_name = "M3 Pattern Helmet Band"
+	path = /obj/item/prop/helmetgarb/m3band
+
 /datum/gear/headwear/uscm/headset
 	display_name = "USCM headset"
 	path = /obj/item/clothing/head/headset
