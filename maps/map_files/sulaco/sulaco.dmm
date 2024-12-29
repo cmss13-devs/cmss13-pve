@@ -1630,7 +1630,7 @@
 /area/golden_arrow/hangar)
 "afO" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access_txt = "8;12;39;40";
+	req_one_access_txt = "8;12;23;39;40";
 	req_one_access = list()
 	},
 /turf/open/floor/almayer,
@@ -12489,7 +12489,7 @@
 /area/golden_arrow/cryo_cells)
 "aQF" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	req_one_access_txt = "8;12;39;40";
+	req_one_access_txt = "8;12;23;39;40";
 	req_access = list()
 	},
 /turf/open/floor/almayer,
@@ -15214,6 +15214,10 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/hangar)
+"bFn" = (
+/obj/structure/dropship_equipment/weapon/minirocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "bMl" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/poddoor/almayer{
@@ -15417,6 +15421,14 @@
 /obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
+"dFh" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "dLD" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15492,14 +15504,6 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/supply)
-"etv" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff"
-	},
-/obj/structure/dropship_equipment/weapon/rocket_pod,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
 "exb" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/firstaid/fire{
@@ -15602,6 +15606,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
+"fqE" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Corpsman"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "frq" = (
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = -7;
@@ -15708,16 +15722,6 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
-"gph" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Corpsman"
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
 "gqG" = (
 /obj/structure/machinery/door_control{
 	id = "lowerstorage3";
@@ -15824,15 +15828,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
-"hlE" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "hwm" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
@@ -15923,10 +15918,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"iuE" = (
-/obj/structure/dropship_equipment/weapon/minirocket_pod,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
 "iGx" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
@@ -15961,15 +15952,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
-"jdn" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "jnX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -16288,13 +16270,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
-"maO" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/dropship_equipment/weapon/minirocket_pod,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
 "mhB" = (
 /obj/structure/sign/safety/five{
 	pixel_y = -24
@@ -16425,6 +16400,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"mXu" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/dropship_equipment/weapon/minirocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "ngb" = (
 /obj/structure/machinery/recharge_station,
 /obj/effect/decal/cleanable/dirt{
@@ -17077,6 +17059,13 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer/aicore/glowing,
 /area/golden_arrow/ai_interface)
+"sst" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "svL" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Four Blast Door";
@@ -17109,6 +17098,24 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/engineering)
+"sVj" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"tdz" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "tjT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -17399,13 +17406,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
-"wrI" = (
-/obj/structure/pipes/standard/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/structure/dropship_equipment/weapon/rocket_pod,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
 "wAd" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -21914,7 +21914,7 @@ ttD
 aZw
 amS
 azT
-gph
+fqE
 aog
 alc
 aZw
@@ -26964,7 +26964,7 @@ adz
 afs
 akt
 acZ
-etv
+dFh
 ayx
 akt
 aEM
@@ -27116,7 +27116,7 @@ adz
 auN
 aeR
 aBQ
-iuE
+bFn
 aVb
 art
 aZy
@@ -27268,7 +27268,7 @@ adz
 aNR
 aDk
 atD
-wrI
+sst
 aQL
 aDk
 aDk
@@ -27420,7 +27420,7 @@ adz
 aSI
 aBg
 aVf
-maO
+mXu
 aLu
 art
 aEf
@@ -33172,7 +33172,7 @@ aEG
 aEG
 aEG
 adz
-hlE
+tdz
 aHl
 abM
 aGi
@@ -33476,7 +33476,7 @@ aEG
 aEG
 aEG
 adz
-jdn
+sVj
 aEW
 avT
 ayk
