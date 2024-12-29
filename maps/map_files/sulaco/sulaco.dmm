@@ -359,8 +359,9 @@
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
-/obj/structure/machinery/door/poddoor/railing/open{
-	dir = 2
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2;
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer/black,
 /area/golden_arrow/vehicle_shuttle/upper)
@@ -2179,7 +2180,9 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "ahF" = (
-/obj/structure/machinery/door/poddoor/railing/open,
+/obj/structure/machinery/door/poddoor/railing{
+	id = "garrow_vehicle_elevator_one"
+	},
 /turf/open/floor/almayer/black/north,
 /area/golden_arrow/vehicle_shuttle/upper)
 "ahH" = (
@@ -4634,8 +4637,9 @@
 /area/golden_arrow/synthcloset)
 "aqj" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/poddoor/railing/open{
-	dir = 4
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4;
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer/black/east,
 /area/golden_arrow/vehicle_shuttle/upper)
@@ -5569,7 +5573,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/door/poddoor/railing/open,
+/obj/structure/machinery/door/poddoor/railing{
+	id = "garrow_vehicle_elevator_one"
+	},
 /turf/open/floor/almayer/black/north,
 /area/golden_arrow/vehicle_shuttle/upper)
 "atm" = (
@@ -6212,8 +6218,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/door/poddoor/railing/open{
-	dir = 8
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8;
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer/black/west,
 /area/golden_arrow/vehicle_shuttle/upper)
@@ -6737,8 +6744,9 @@
 	layer = 2.52
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/poddoor/railing/open{
-	dir = 4
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4;
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer/black/east,
 /area/golden_arrow/vehicle_shuttle/upper)
@@ -6973,8 +6981,9 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
 "ayk" = (
-/obj/structure/machinery/door/poddoor/railing/open{
-	dir = 8
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8;
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer/black/west,
 /area/golden_arrow/vehicle_shuttle/upper)
@@ -7824,8 +7833,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/machinery/door/poddoor/railing/open{
-	dir = 2
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2;
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer/black,
 /area/golden_arrow/vehicle_shuttle/upper)
@@ -8239,8 +8249,9 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/machinery/door/poddoor/railing/open{
-	dir = 4
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4;
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer/black/east,
 /area/golden_arrow/vehicle_shuttle/upper)
@@ -9896,8 +9907,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "aHl" = (
-/obj/structure/machinery/door/poddoor/railing/open{
-	dir = 2
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2;
+	id = "garrow_vehicle_elevator_one"
 	},
 /turf/open/floor/almayer/black,
 /area/golden_arrow/vehicle_shuttle/upper)
@@ -10319,7 +10331,9 @@
 	layer = 2.52
 	},
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/door/poddoor/railing/open,
+/obj/structure/machinery/door/poddoor/railing{
+	id = "garrow_vehicle_elevator_one"
+	},
 /turf/open/floor/almayer/black/north,
 /area/golden_arrow/vehicle_shuttle/upper)
 "aIT" = (
@@ -10819,7 +10833,6 @@
 	dir = 1;
 	light_color = "#dae2ff"
 	},
-/obj/item/hardpoint/primary/dualcannon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aKv" = (
@@ -12880,7 +12893,9 @@
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
 	},
-/obj/structure/machinery/door/poddoor/railing/open,
+/obj/structure/machinery/door/poddoor/railing{
+	id = "garrow_vehicle_elevator_one"
+	},
 /turf/open/floor/almayer/black/north,
 /area/golden_arrow/vehicle_shuttle/upper)
 "aRX" = (
@@ -12892,7 +12907,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/machinery/door/poddoor/railing/open,
+/obj/structure/machinery/door/poddoor/railing{
+	id = "garrow_vehicle_elevator_one"
+	},
 /turf/open/floor/almayer/black/north,
 /area/golden_arrow/vehicle_shuttle/upper)
 "aSd" = (
@@ -13586,8 +13603,6 @@
 	pixel_y = 35;
 	name = "\improper vehicle elevator one control panel"
 	},
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
-/obj/item/ammo_magazine/hardpoint/flare_launcher,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aUI" = (
@@ -14446,9 +14461,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aXR" = (
@@ -15311,13 +15323,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
-"cDJ" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/hardpoint/secondary/frontalcannon,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "cGQ" = (
 /turf/open/floor/corsat,
 /area/golden_arrow/cargo_shuttle/lower)
@@ -16960,16 +16965,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
-"sdf" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
-/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
-/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
-/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "sgG" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -33111,7 +33106,7 @@ aEG
 aEG
 aEG
 adz
-cDJ
+aKa
 aHl
 abM
 aGi
@@ -33415,7 +33410,7 @@ aEG
 aEG
 aEG
 adz
-sdf
+aKa
 aEW
 avT
 ayk
