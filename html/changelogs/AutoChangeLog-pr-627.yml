@@ -1,0 +1,4 @@
+author: "mesnomer"
+delete-after: True
+changes:
+  - config: "define UPLOAD_LIMIT value doubled (10485760 to 20971520)"

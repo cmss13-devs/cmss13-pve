@@ -1,0 +1,5 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - rscadd: "overhaul of USCM gear presets, clothing, ect"
+  - rscdel: "PvP centric presets for marines"

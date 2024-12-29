@@ -1,5 +1,0 @@
-author: "AmoryBlaine"
-delete-after: True
-changes:
-  - rscadd: "Two cowboy hats, two fedoras."
-  - rscdel: "unused legacy hat icons."
