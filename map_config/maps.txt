@@ -73,3 +73,6 @@ endmap
 
 map whiskey_outpost_v2
 endmap
+
+map canyon_32b
+endmap

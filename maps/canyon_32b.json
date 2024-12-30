@@ -1,0 +1,13 @@
+{
+    "map_name": "Canyon 32B",
+    "map_path": "map_files/Canyon_32B",
+    "map_file": "Canyon_32B.dmm",
+    "webmap_url": "Shivas",
+    "environment_traits": {
+        "COLD": true
+    },
+    "weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
+    "map_item_type": "/obj/item/map/ice_colony_map",
+    "traits": [{ "Ground": true }],
+    "camouflage": "snow"
+}
