@@ -16,6 +16,8 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "kicks"
+	status_flags = list(CANSTUN, CANKNOCKDOWN, CANKNOCKOUT, CANDAZE, CANSLOW)
+	layer = 3.5
 	var/turns_since_scan = 0
 	/// The target src is moving towards during its hunt.
 	var/mob/living/movement_target
