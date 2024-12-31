@@ -145,6 +145,12 @@
 	html_link = "images/5/54/USS_Almayer.png"
 	color = "cyan"
 
+/obj/item/map/taipei_map
+	name = "\improper Taipei Station Map"
+	desc = "Voted Okay-est Spaceport 2164"
+	html_link = ""
+	color = "red"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
