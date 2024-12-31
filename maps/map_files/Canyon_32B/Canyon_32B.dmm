@@ -52,13 +52,27 @@
 	},
 /turf/open/auto_turf/ice/layer1,
 /area/canyon32B/interior/overhang)
+"aq" = (
+/obj/structure/barricade/snow{
+	dir = 8
+	},
+/obj/item/snowball{
+	pixel_y = -7;
+	pixel_x = -1
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "aw" = (
 /obj/structure/curtain/red,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/overwatch)
 "aA" = (
-/obj/structure/blocker/fog,
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
 "aD" = (
@@ -131,6 +145,15 @@
 /obj/structure/cable/heavyduty,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/gatehouse/southern)
+"bc" = (
+/obj/structure/barricade/snow{
+	dir = 4
+	},
+/obj/item/snowball{
+	pixel_y = 0
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "bd" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -173,6 +196,10 @@
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
+"bR" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/auto_turf/snow/layer1,
+/area/canyon32B/exterior/north)
 "bS" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -370,6 +397,13 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/gatehouse/northern)
+"dV" = (
+/obj/structure/prop/dam/truck{
+	dir = 4;
+	icon_state = "truck_snow"
+	},
+/turf/open/auto_turf/snow/layer2,
+/area/canyon32B/exterior/north)
 "dX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -730,6 +764,9 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
+"hL" = (
+/turf/open/auto_turf/snow/layer1,
+/area/canyon32B/exterior/north)
 "hM" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -769,12 +806,39 @@
 "ic" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/gatehouse/pillbox_alpha)
+"ig" = (
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_y = 15;
+	pixel_x = -14
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/north)
 "il" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
+"im" = (
+/obj/structure/barricade/snow{
+	dir = 1
+	},
+/obj/structure/barricade/snow{
+	dir = 8
+	},
+/obj/item/snowball{
+	pixel_y = -10;
+	pixel_x = 4
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
+"iq" = (
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_y = 21;
+	pixel_x = 10
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/north)
 "ir" = (
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/unloading)
@@ -1060,7 +1124,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/mess)
 "me" = (
-/obj/structure/blocker/fog,
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/south)
 "mi" = (
@@ -1121,6 +1189,13 @@
 "mN" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/gatehouse/pillbox_bravo)
+"mO" = (
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_y = 21;
+	pixel_x = 10
+	},
+/turf/open/auto_turf/ice/layer1,
+/area/canyon32B/OOB)
 "mT" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -1233,6 +1308,16 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/hallway)
+"of" = (
+/obj/structure/barricade/snow{
+	dir = 8
+	},
+/obj/item/snowball{
+	pixel_y = -6;
+	pixel_x = 10
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "oq" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
 /turf/open/floor/almayer/test_floor4,
@@ -1417,7 +1502,11 @@
 /turf/open/floor/almayer/edge/southeast,
 /area/canyon32B/interior/bunker/mess)
 "qG" = (
-/obj/structure/blocker/fog,
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/north)
 "qH" = (
@@ -1762,8 +1851,23 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
+"vN" = (
+/obj/structure/barricade/snow{
+	dir = 4
+	},
+/obj/structure/barricade/snow,
+/obj/item/snowball{
+	pixel_y = 10;
+	pixel_x = -6
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "wc" = (
-/obj/structure/blocker/fog,
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/north)
 "wp" = (
@@ -1789,6 +1893,10 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/detainment)
+"wt" = (
+/obj/structure/prop/brazier/frame/full/campfire/smolder,
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/north)
 "ww" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -1844,6 +1952,53 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/bunks)
+"xL" = (
+/obj/structure/barricade/snow{
+	dir = 4
+	},
+/obj/structure/barricade/snow,
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "xN" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -1975,6 +2130,10 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
+"yR" = (
+/obj/structure/tunnel,
+/turf/open/auto_turf/ice/layer1,
+/area/canyon32B/OOB)
 "yW" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -2101,6 +2260,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/unloading)
+"AE" = (
+/obj/structure/barricade/snow,
+/obj/item/snowball{
+	pixel_y = 12;
+	pixel_x = 6
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "AG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/sentry_holder{
@@ -2127,6 +2294,12 @@
 /obj/item/reagent_container/food/snacks/bloodsoup,
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
+"Bi" = (
+/obj/structure/barricade/snow{
+	dir = 4
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "Br" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northeast,
@@ -2187,7 +2360,10 @@
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/mess)
 "BP" = (
-/obj/structure/machinery/power/reactor,
+/obj/structure/machinery/power/reactor{
+	require_fusion_cell = 0;
+	breakable = 0
+	},
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
@@ -2250,6 +2426,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/hallway)
+"Cw" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood,
+/turf/open/auto_turf/ice/layer1,
+/area/canyon32B/OOB)
+"Cx" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/north)
 "CC" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 4
@@ -2368,12 +2553,27 @@
 "Ep" = (
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/checkpoint)
+"Eq" = (
+/obj/item/stack/sheet/wood/large_stack{
+	pixel_y = 26;
+	pixel_x = -32
+	},
+/turf/open/auto_turf/snow/layer2,
+/area/canyon32B/exterior/north)
 "Et" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/prison/floor_marked,
 /area/canyon32B/interior/bunker/unloading)
+"Ez" = (
+/obj/item/folded_tent/big{
+	pixel_x = 12;
+	pixel_y = -15;
+	layer = 3.04
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/north)
 "EB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -2404,6 +2604,16 @@
 "EO" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/gatehouse/northern)
+"ES" = (
+/obj/structure/barricade/snow{
+	dir = 1
+	},
+/obj/item/snowball{
+	pixel_y = -14;
+	pixel_x = -6
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "Fa" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/almayer/dark_sterile,
@@ -2493,6 +2703,9 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
+"Gf" = (
+/turf/open/auto_turf/ice/layer1,
+/area/canyon32B/OOB)
 "Gg" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -2551,6 +2764,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/unloading)
+"Hn" = (
+/obj/structure/barricade/snow,
+/obj/item/snowball{
+	pixel_y = 8;
+	pixel_x = -5
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "Hp" = (
 /obj/structure/ladder{
 	id = "Reactor East"
@@ -2573,7 +2794,11 @@
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
 "HL" = (
-/obj/structure/blocker/fog,
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/north)
 "HN" = (
@@ -2643,7 +2868,11 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
 "In" = (
-/obj/structure/blocker/fog,
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/south)
 "Io" = (
@@ -2658,6 +2887,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/unloading)
+"Iu" = (
+/obj/item/snowball{
+	pixel_y = -7;
+	pixel_x = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "Iw" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 1;
@@ -2774,6 +3010,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/mess)
+"Kg" = (
+/obj/item/snowball{
+	pixel_y = 11;
+	pixel_x = 11
+	},
+/obj/item/prop/tableflag/uscm{
+	pixel_x = -16;
+	pixel_y = 20
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "Kl" = (
 /obj/structure/closet/secure_closet,
 /obj/structure/machinery/light/double/blue{
@@ -2859,6 +3106,17 @@
 	},
 /turf/open/floor/almayer/test_floor5,
 /area/canyon32B/interior/bunker/medbay)
+"Lq" = (
+/obj/structure/barricade/snow{
+	dir = 8
+	},
+/obj/structure/barricade/snow,
+/obj/item/snowball{
+	pixel_y = 9;
+	pixel_x = 5
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "Lr" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -2872,6 +3130,20 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/unloading)
+"Lu" = (
+/obj/item/snowball{
+	pixel_y = -4;
+	pixel_x = 7
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
+"Lw" = (
+/obj/item/snowball{
+	pixel_y = 11;
+	pixel_x = 11
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "Lx" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/armory)
@@ -2957,6 +3229,9 @@
 /obj/structure/window/framed/prefab,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
+"MA" = (
+/turf/open/auto_turf/snow/layer2,
+/area/canyon32B/exterior/north)
 "MB" = (
 /obj/structure/machinery/door/airlock/almayer/medical{
 	dir = 1
@@ -3020,7 +3295,11 @@
 /turf/open/floor/almayer,
 /area/canyon32B/interior/gatehouse/northern)
 "Nt" = (
-/obj/structure/blocker/fog,
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
 /obj/structure/flora/tree/pine,
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
@@ -3068,6 +3347,19 @@
 "NO" = (
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/north)
+"NW" = (
+/obj/structure/barricade/snow{
+	dir = 1
+	},
+/obj/structure/barricade/snow{
+	dir = 4
+	},
+/obj/item/snowball{
+	pixel_y = -12;
+	pixel_x = -12
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "NZ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -3227,6 +3519,16 @@
 /obj/structure/bed/chair,
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
+"PH" = (
+/obj/structure/barricade/snow{
+	dir = 1
+	},
+/obj/item/snowball{
+	pixel_y = -10;
+	pixel_x = 6
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "PP" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -3307,6 +3609,12 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
+"QP" = (
+/obj/structure/barricade/snow{
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "QX" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
@@ -3371,11 +3679,19 @@
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/gatehouse/pillbox_bravo)
 "Rv" = (
-/obj/structure/blocker/fog,
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/south)
 "RE" = (
-/obj/structure/blocker/fog,
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/north)
 "RF" = (
@@ -3421,6 +3737,20 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/hallway)
+"Sd" = (
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_y = 21;
+	pixel_x = 10
+	},
+/turf/open/auto_turf/snow/layer2,
+/area/canyon32B/exterior/north)
+"Se" = (
+/obj/item/snowball{
+	pixel_y = -8;
+	pixel_x = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "Sh" = (
 /obj/structure/bed/chair/wood/normal{
 	dir = 4
@@ -3612,6 +3942,17 @@
 /obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/gatehouse/pillbox_alpha)
+"Uo" = (
+/obj/item/snowball{
+	pixel_y = -4;
+	pixel_x = 7
+	},
+/obj/item/prop/tableflag/uscm2{
+	pixel_x = 16;
+	pixel_y = 20
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "UG" = (
 /obj/structure/closet/secure_closet{
 	pixel_y = -1;
@@ -3705,15 +4046,68 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/engineering/power)
+"Vu" = (
+/obj/structure/barricade/snow{
+	dir = 1
+	},
+/obj/structure/barricade/snow{
+	dir = 4
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/snowball{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "VC" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	pixel_y = -1
+	},
+/obj/structure/bed/chair/wood/normal,
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
 	},
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 1;
-	pixel_y = 15
+	pixel_y = 22
 	},
-/obj/structure/bed/chair/wood/normal,
 /turf/open/floor/wood,
 /area/canyon32B/exterior/south/bar)
 "VF" = (
@@ -3836,9 +4230,61 @@
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
 "WC" = (
-/obj/structure/machinery/power/reactor,
+/obj/structure/machinery/power/reactor{
+	require_fusion_cell = 0;
+	breakable = 0
+	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/engineering/power)
+"WE" = (
+/obj/structure/barricade/snow{
+	dir = 1
+	},
+/obj/structure/barricade/snow{
+	dir = 8
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "WH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -3929,6 +4375,53 @@
 /obj/structure/bed/stool,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
+"XN" = (
+/obj/structure/barricade/snow{
+	dir = 8
+	},
+/obj/structure/barricade/snow,
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/snowball{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "XV" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -3954,7 +4447,7 @@
 "YC" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 1;
-	pixel_y = 15
+	pixel_y = 22
 	},
 /turf/open/floor/wood,
 /area/canyon32B/exterior/south/bar)
@@ -4004,7 +4497,10 @@
 /turf/open/floor/almayer,
 /area/canyon32B/interior/gatehouse/southern)
 "Zo" = (
-/obj/structure/machinery/power/reactor,
+/obj/structure/machinery/power/reactor{
+	require_fusion_cell = 0;
+	breakable = 0
+	},
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
@@ -5058,6 +5554,10 @@ CK
 CK
 CK
 CK
+Sk
+CK
+CK
+Sk
 CK
 CK
 CK
@@ -5075,16 +5575,12 @@ CK
 CK
 CK
 CK
+Sk
 CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
+Sk
 CK
 aA
 "}
@@ -5558,6 +6054,7 @@ xf
 xf
 CK
 CK
+Sk
 CK
 CK
 CK
@@ -5565,26 +6062,25 @@ CK
 CK
 CK
 CK
+Sk
+CK
+CK
+CK
+Sk
 CK
 CK
 CK
 CK
+Sk
+CK
+CK
+CK
+Sk
 CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
+Sk
 CK
 CK
 CK
@@ -6064,6 +6560,7 @@ CK
 CK
 CK
 CK
+Sk
 CK
 CK
 CK
@@ -6088,8 +6585,7 @@ CK
 CK
 CK
 CK
-CK
-CK
+Sk
 aA
 "}
 (5,1,1) = {"
@@ -6580,7 +7076,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 CK
@@ -7089,10 +7585,10 @@ CK
 CK
 CK
 CK
+Sk
 CK
 CK
-CK
-CK
+Sk
 CK
 aA
 "}
@@ -8096,7 +8592,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -8599,7 +9095,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (10,1,1) = {"
@@ -9602,7 +10098,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -10607,7 +11103,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (14,1,1) = {"
@@ -11108,7 +11604,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -12112,7 +12608,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -12615,7 +13111,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (18,1,1) = {"
@@ -13115,7 +13611,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -14121,7 +14617,7 @@ CK
 Sk
 CK
 CK
-CK
+Sk
 aA
 "}
 (21,1,1) = {"
@@ -15125,7 +15621,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (23,1,1) = {"
@@ -15626,7 +16122,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -16630,7 +17126,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -17635,7 +18131,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (28,1,1) = {"
@@ -19140,7 +19636,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -20145,7 +20641,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (33,1,1) = {"
@@ -21147,7 +21643,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -21651,7 +22147,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (36,1,1) = {"
@@ -22654,7 +23150,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -23658,7 +24154,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -24663,7 +25159,7 @@ CK
 Sk
 CK
 CK
-CK
+Sk
 aA
 "}
 (42,1,1) = {"
@@ -25665,7 +26161,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -26671,7 +27167,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (46,1,1) = {"
@@ -27673,7 +28169,7 @@ Sk
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -29181,7 +29677,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (51,1,1) = {"
@@ -30182,7 +30678,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 CK
@@ -32190,10 +32686,10 @@ CK
 CK
 CK
 CK
+Sk
 CK
 CK
-CK
-CK
+Sk
 aA
 "}
 (57,1,1) = {"
@@ -33697,7 +34193,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -34201,7 +34697,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (61,1,1) = {"
@@ -35705,7 +36201,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -38217,7 +38713,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (69,1,1) = {"
@@ -39219,7 +39715,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -40225,7 +40721,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (73,1,1) = {"
@@ -40725,7 +41221,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -42233,7 +42729,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (77,1,1) = {"
@@ -43237,7 +43733,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (79,1,1) = {"
@@ -45736,6 +46232,7 @@ CK
 CK
 CK
 CK
+Sk
 CK
 CK
 CK
@@ -45746,8 +46243,7 @@ CK
 CK
 CK
 CK
-CK
-CK
+Sk
 aA
 "}
 (84,1,1) = {"
@@ -46244,7 +46740,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 CK
@@ -46748,9 +47244,9 @@ CK
 CK
 CK
 CK
+CK
+CK
 Sk
-CK
-CK
 CK
 aA
 "}
@@ -47253,7 +47749,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (87,1,1) = {"
@@ -48253,7 +48749,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 CK
@@ -48759,7 +49255,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (90,1,1) = {"
@@ -49763,7 +50259,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (92,1,1) = {"
@@ -50263,7 +50759,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -51268,7 +51764,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -52273,7 +52769,7 @@ Sk
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (97,1,1) = {"
@@ -53778,7 +54274,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -54281,7 +54777,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (101,1,1) = {"
@@ -55787,7 +56283,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (104,1,1) = {"
@@ -57293,7 +57789,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (107,1,1) = {"
@@ -58798,7 +59294,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -59301,7 +59797,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (111,1,1) = {"
@@ -60304,7 +60800,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -61306,7 +61802,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 CK
@@ -61811,7 +62307,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (116,1,1) = {"
@@ -62815,7 +63311,7 @@ CK
 Sk
 CK
 CK
-CK
+Sk
 aA
 "}
 (118,1,1) = {"
@@ -63817,7 +64313,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -64321,7 +64817,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (121,1,1) = {"
@@ -66329,7 +66825,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (125,1,1) = {"
@@ -67835,7 +68331,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (128,1,1) = {"
@@ -69340,7 +69836,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -70847,7 +71343,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (134,1,1) = {"
@@ -71347,7 +71843,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -72352,7 +72848,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -73357,7 +73853,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (139,1,1) = {"
@@ -73858,7 +74354,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -74862,7 +75358,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -75365,7 +75861,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (143,1,1) = {"
@@ -75865,7 +76361,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -76869,7 +77365,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -77373,7 +77869,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (147,1,1) = {"
@@ -78377,7 +78873,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (149,1,1) = {"
@@ -78427,10 +78923,10 @@ xf
 xf
 xf
 xf
-xf
-xf
-xf
-xf
+Gf
+Gf
+Gf
+Gf
 NO
 NO
 NO
@@ -78928,13 +79424,13 @@ xf
 xf
 xf
 xf
-xf
-xf
-xf
-xf
-xf
+Gf
+Gf
+Gf
+mO
+Gf
 NO
-NO
+Cx
 NO
 NO
 NO
@@ -79380,7 +79876,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -79429,13 +79925,13 @@ xf
 xf
 xf
 xf
-xf
-xf
-xf
-xf
-xf
-xf
-xf
+yR
+Cw
+Gf
+Gf
+Gf
+Gf
+Gf
 NO
 NO
 NO
@@ -79881,7 +80377,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 CK
 aA
@@ -79931,13 +80427,13 @@ xf
 xf
 xf
 xf
+Gf
+Gf
+Gf
+Gf
 xf
 xf
 xf
-xf
-xf
-xf
-xf
 NO
 NO
 NO
@@ -79965,7 +80461,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 Bt
 dq
 dq
@@ -80385,7 +80881,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (153,1,1) = {"
@@ -80442,6 +80938,7 @@ xf
 xf
 NO
 NO
+ig
 NO
 NO
 NO
@@ -80466,8 +80963,7 @@ NO
 NO
 NO
 NO
-NO
-NO
+MA
 NO
 Bt
 GU
@@ -80886,7 +81382,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 CK
 aA
 "}
@@ -80969,7 +81465,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -81389,7 +81885,7 @@ CK
 CK
 CK
 CK
-CK
+Sk
 aA
 "}
 (155,1,1) = {"
@@ -81470,8 +81966,8 @@ NO
 NO
 NO
 NO
-NO
-NO
+MA
+MA
 NO
 NO
 NO
@@ -81972,7 +82468,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -82474,7 +82970,7 @@ NO
 NO
 VJ
 NO
-NO
+MA
 NO
 NO
 NO
@@ -82954,6 +83450,7 @@ xf
 xf
 NO
 NO
+ig
 NO
 NO
 NO
@@ -82975,8 +83472,7 @@ NO
 NO
 NO
 NO
-NO
-NO
+MA
 NO
 NO
 NO
@@ -83478,7 +83974,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -83980,7 +84476,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -84481,8 +84977,8 @@ NO
 NO
 NO
 NO
-NO
-NO
+MA
+MA
 NO
 NO
 NO
@@ -84983,7 +85479,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -85485,7 +85981,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -85987,7 +86483,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -86470,6 +86966,7 @@ xf
 xf
 NO
 NO
+ig
 NO
 NO
 NO
@@ -86488,8 +86985,7 @@ NO
 NO
 NO
 NO
-NO
-NO
+MA
 NO
 NO
 NO
@@ -86990,8 +87486,8 @@ NO
 NO
 NO
 NO
-NO
-NO
+MA
+MA
 NO
 NO
 NO
@@ -87492,7 +87988,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -87994,7 +88490,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -88496,7 +88992,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -88998,7 +89494,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -89484,6 +89980,7 @@ xf
 xf
 NO
 NO
+ig
 NO
 NO
 NO
@@ -89499,8 +89996,7 @@ NO
 NO
 NO
 NO
-NO
-NO
+MA
 NO
 NO
 NO
@@ -90001,8 +90497,8 @@ NO
 NO
 NO
 NO
-NO
-NO
+MA
+MA
 NO
 NO
 NO
@@ -90503,7 +90999,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -91005,7 +91501,7 @@ NO
 NO
 NO
 NO
-NO
+MA
 NO
 NO
 NO
@@ -91506,8 +92002,8 @@ NO
 NO
 NO
 NO
-NO
-NO
+Ez
+dV
 NO
 NO
 NO
@@ -91997,19 +92493,19 @@ xf
 NO
 NO
 NO
+ig
 NO
 NO
 NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
-NO
-NO
+MA
+MA
+MA
+MA
+MA
+Eq
 NO
 NO
 NO
@@ -92506,11 +93002,11 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
+MA
+hL
+hL
+hL
+MA
 NO
 NO
 NO
@@ -93006,13 +93502,13 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
-NO
-NO
+iq
+ig
+Sd
+bR
+wt
+hL
+MA
 NO
 NO
 NO
@@ -93506,15 +94002,15 @@ NO
 NO
 NO
 NO
+ig
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
-NO
+MA
+hL
+hL
+hL
+MA
 NO
 NO
 NO
@@ -94012,11 +94508,11 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
+MA
+MA
+MA
+MA
+MA
 NO
 NO
 NO
@@ -123274,10 +123770,10 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+im
+aq
+of
+Lq
 CK
 CK
 CK
@@ -123776,10 +124272,10 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+PH
+Se
+Lu
+AE
 CK
 CK
 CK
@@ -124278,10 +124774,10 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+ES
+Iu
+Kg
+Hn
 CK
 CK
 CK
@@ -124780,10 +125276,10 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+NW
+bc
+bc
+vN
 CK
 CK
 CK
@@ -127290,10 +127786,10 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+Vu
+Bi
+Bi
+xL
 CK
 CK
 CK
@@ -130302,10 +130798,10 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+WE
+QP
+QP
+XN
 CK
 CK
 CK
@@ -132812,10 +133308,10 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+im
+aq
+of
+Lq
 CK
 CK
 CK
@@ -133314,10 +133810,10 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+PH
+Se
+Uo
+AE
 CK
 CK
 CK
@@ -133816,10 +134312,10 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+ES
+Iu
+Lw
+Hn
 CK
 CK
 CK
@@ -134318,10 +134814,10 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+NW
+bc
+bc
+vN
 CK
 CK
 CK
