@@ -51,7 +51,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/auto_turf/ice/layer1,
-/area/space)
+/area/canyon32B/interior/overhang)
 "aw" = (
 /obj/structure/curtain/red,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -61,6 +61,16 @@
 /obj/structure/blocker/fog,
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
+"aD" = (
+/obj/structure/machinery/sentry_holder{
+	dir = 4;
+	pixel_x = -24;
+	req_access = list(9)
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/almayer,
+/area/canyon32B/interior/gatehouse/pillbox_bravo)
 "aG" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 1;
@@ -96,7 +106,7 @@
 "aQ" = (
 /obj/structure/barricade/handrail/kutjevo,
 /turf/open/floor/wood,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "aT" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/device/flashlight/lamp/green,
@@ -120,7 +130,7 @@
 /obj/structure/machinery/power/apc/almayer/east,
 /obj/structure/cable/heavyduty,
 /turf/open/floor/almayer,
-/area/canyon32B/interior/southern_gatehouse)
+/area/canyon32B/interior/gatehouse/southern)
 "bd" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -171,7 +181,7 @@
 /area/canyon32B/exterior/checkpoint)
 "bY" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "co" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/med_data/laptop{
@@ -209,7 +219,7 @@
 	icon_state = "1-2-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "cz" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
@@ -221,15 +231,16 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "cE" = (
 /obj/structure/machinery/door_control{
 	id = "Pillbox Alpha";
 	name = "Pillbox Alpha Shutter Control";
-	pixel_x = -5
+	pixel_x = -5;
+	req_access = list(9)
 	},
 /turf/closed/wall/shiva/prefabricated/reinforced,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_alpha)
 "cS" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -260,7 +271,7 @@
 /area/canyon32B/exterior/checkpoint)
 "dd" = (
 /turf/open/auto_turf/snow/layer2,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "de" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/tool/kitchen/rollingpin{
@@ -345,7 +356,7 @@
 	layer = 2.97
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "dS" = (
 /obj/structure/filingcabinet/medical{
 	pixel_x = 7;
@@ -354,10 +365,11 @@
 /obj/structure/closet/secure_closet{
 	pixel_y = -1;
 	pixel_x = -8;
-	name = "Confiscated Items Locker"
+	name = "Confiscated Items Locker";
+	req_access = list(9)
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/northern_gatehouse)
+/area/canyon32B/interior/gatehouse/northern)
 "dX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -544,12 +556,13 @@
 	dir = 4
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "gs" = (
 /obj/structure/closet/secure_closet{
 	pixel_y = 14;
 	pixel_x = 8;
-	name = "Confiscated Items Locker"
+	name = "Confiscated Items Locker";
+	req_access = list(9)
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/filingcabinet/medical{
@@ -585,7 +598,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "gL" = (
 /obj/structure/bed{
 	can_buckle = 0
@@ -667,7 +680,7 @@
 	pixel_y = -13
 	},
 /turf/open/auto_turf/ice/layer1,
-/area/space)
+/area/canyon32B/interior/overhang)
 "hn" = (
 /obj/structure/machinery/medical_pod/autodoc{
 	dir = 1;
@@ -752,7 +765,10 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/radiator_tile2,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_alpha)
+"ic" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/canyon32B/interior/gatehouse/pillbox_alpha)
 "il" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
@@ -861,7 +877,7 @@
 	pixel_y = -5
 	},
 /turf/open/floor/almayer/plating,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "ka" = (
 /obj/structure/bed/chair{
 	can_buckle = 0;
@@ -914,14 +930,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/radiator_tile2,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_bravo)
 "kU" = (
 /obj/structure/machinery/autolathe,
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/engineering)
 "ld" = (
 /turf/open/asphalt/cement/cement3,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "le" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -943,7 +959,7 @@
 	height = -1
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "lo" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/decal/cleanable/dirt,
@@ -977,7 +993,7 @@
 	pixel_y = 19
 	},
 /turf/open/auto_turf/ice/layer1,
-/area/space)
+/area/canyon32B/interior/overhang)
 "lD" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -1089,7 +1105,7 @@
 	pixel_y = 19
 	},
 /turf/open/auto_turf/ice/layer1,
-/area/space)
+/area/canyon32B/interior/overhang)
 "mF" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 1;
@@ -1106,10 +1122,10 @@
 	dir = 8
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/northern_gatehouse)
+/area/canyon32B/interior/gatehouse/northern)
 "mN" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_bravo)
 "mT" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -1119,14 +1135,14 @@
 	light_color = "#dae2ff"
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/northern_gatehouse)
+/area/canyon32B/interior/gatehouse/northern)
 "mV" = (
 /obj/structure/machinery/power/apc/almayer/west,
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/northern_gatehouse)
+/area/canyon32B/interior/gatehouse/northern)
 "mY" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4-8"
@@ -1172,7 +1188,7 @@
 /area/canyon32B/interior/bunker/detainment)
 "ny" = (
 /turf/open/floor/wood,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "nK" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -1236,7 +1252,7 @@
 	pixel_y = 17
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "oz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -1246,7 +1262,7 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "oD" = (
 /turf/open/asphalt/cement/cement12,
 /area/canyon32B/exterior/north)
@@ -1275,7 +1291,7 @@
 /area/canyon32B/interior/bar)
 "oN" = (
 /turf/open/asphalt/cement,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "oQ" = (
 /obj/item/storage/box/explosive_mines{
 	pixel_y = -1;
@@ -1309,6 +1325,10 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/engineering)
+"pa" = (
+/obj/item/stack/sheet/wood/large_stack,
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/checkpoint)
 "pl" = (
 /obj/structure/bed{
 	can_buckle = 0
@@ -1367,7 +1387,7 @@
 	dir = 4
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "qd" = (
 /obj/structure/window_frame/prefab,
 /obj/structure/machinery/door/poddoor/almayer{
@@ -1375,7 +1395,7 @@
 	id = "Pillbox Bravo"
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_bravo)
 "qf" = (
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/armory)
@@ -1427,7 +1447,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/canyon32B/interior/northern_gatehouse)
+/area/canyon32B/interior/gatehouse/northern)
 "qQ" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/reagent_container/food/drinks/milk,
@@ -1542,12 +1562,13 @@
 /area/canyon32B/interior/bunker/detainment)
 "sB" = (
 /turf/open/asphalt/cement/cement1,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "sO" = (
 /obj/structure/closet/secure_closet{
 	pixel_y = -1;
 	pixel_x = 8;
-	name = "Confiscated Items Locker"
+	name = "Confiscated Items Locker";
+	req_access = list(9)
 	},
 /obj/structure/pipes/vents/scrubber,
 /obj/effect/decal/cleanable/dirt,
@@ -1559,7 +1580,7 @@
 	},
 /obj/structure/barricade/snow,
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "sS" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -1786,7 +1807,7 @@
 /area/canyon32B/exterior/checkpoint)
 "wJ" = (
 /turf/open/floor/almayer,
-/area/canyon32B/interior/northern_gatehouse)
+/area/canyon32B/interior/gatehouse/northern)
 "wK" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/almayer,
@@ -1796,7 +1817,7 @@
 /area/canyon32B/OOB)
 "xg" = (
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "xh" = (
 /obj/structure/window_frame/prefab,
 /obj/structure/machinery/door/poddoor/almayer{
@@ -1804,7 +1825,7 @@
 	id = "Pillbox Alpha"
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_alpha)
 "xs" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	dir = 4;
@@ -1815,7 +1836,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_bravo)
 "xC" = (
 /obj/structure/closet/secure_closet,
 /obj/structure/machinery/light/double/blue{
@@ -1855,14 +1876,14 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "xT" = (
 /obj/structure/stairs/perspective/kutjevo{
 	dir = 5;
 	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "xU" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
@@ -1890,7 +1911,7 @@
 /obj/structure/machinery/door/airlock/almayer/medical{
 	dir = 1;
 	req_one_access = null;
-	req_access = list(9)
+	req_access = null
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -2037,7 +2058,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/canyon32B/interior/southern_gatehouse)
+/area/canyon32B/interior/gatehouse/southern)
 "Aa" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/southwest,
@@ -2082,10 +2103,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/unloading)
+"AG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/sentry_holder{
+	dir = 4;
+	pixel_x = -24;
+	req_access = list(9)
+	},
+/turf/open/floor/almayer,
+/area/canyon32B/interior/gatehouse/pillbox_alpha)
 "AL" = (
 /obj/structure/barricade/snow,
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "AQ" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/firstaid/regular{
@@ -2151,7 +2181,7 @@
 	icon_state = "1-2-8"
 	},
 /turf/open/floor/almayer,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_alpha)
 "BO" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -2167,7 +2197,7 @@
 	light_range = 3
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "BQ" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -2212,7 +2242,7 @@
 /area/canyon32B/interior/bunker/overwatch)
 "Cu" = (
 /turf/open/floor/almayer,
-/area/canyon32B/interior/southern_gatehouse)
+/area/canyon32B/interior/gatehouse/southern)
 "Cv" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -2227,7 +2257,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/southern_gatehouse)
+/area/canyon32B/interior/gatehouse/southern)
 "CF" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/bathroom)
@@ -2272,7 +2302,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
 	},
-/turf/open/auto_turf/snow/layer3,
+/turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
 "Dh" = (
 /obj/effect/decal/warning_stripes{
@@ -2297,7 +2327,7 @@
 	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "DF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -2307,7 +2337,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "DN" = (
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
@@ -2369,13 +2399,13 @@
 	dir = 1
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "EM" = (
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/north)
 "EO" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
-/area/canyon32B/interior/northern_gatehouse)
+/area/canyon32B/interior/gatehouse/northern)
 "Fa" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/almayer/dark_sterile,
@@ -2430,6 +2460,17 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
+"Fy" = (
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	dir = 4;
+	req_one_access = null;
+	req_access = list(9)
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/canyon32B/interior/gatehouse/pillbox_alpha)
 "FK" = (
 /obj/structure/machinery/power/apc/almayer/west,
 /obj/structure/machinery/space_heater/radiator/red{
@@ -2468,7 +2509,7 @@
 	dir = 1
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "Gu" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	req_one_access = list()
@@ -2502,7 +2543,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/wood,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "GU" = (
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/north)
@@ -2546,7 +2587,8 @@
 /obj/structure/machinery/computer/secure_data{
 	dir = 8;
 	pixel_y = 0;
-	layer = 3.1
+	layer = 3.1;
+	req_access = list(9)
 	},
 /obj/structure/machinery/door_control{
 	pixel_y = 10;
@@ -2555,7 +2597,7 @@
 	pixel_x = -1
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/southern_gatehouse)
+/area/canyon32B/interior/gatehouse/southern)
 "HQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -2598,7 +2640,7 @@
 	},
 /obj/structure/bed/chair/wood/normal,
 /turf/open/floor/wood,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "Ij" = (
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
@@ -2633,7 +2675,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/auto_turf/ice/layer1,
-/area/space)
+/area/canyon32B/interior/overhang)
 "IB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -2855,10 +2897,7 @@
 	pixel_x = -10;
 	pixel_y = 15
 	},
-/obj/item/device/toner{
-	pixel_y = -1;
-	pixel_x = 4
-	},
+/obj/item/stack/sheet/wood/large_stack,
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/storage)
 "LE" = (
@@ -2873,7 +2912,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
 	},
-/turf/open/auto_turf/snow/layer3,
+/turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
 "LP" = (
 /obj/structure/bed{
@@ -2944,7 +2983,7 @@
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/device/flashlight/lamp/green,
 /turf/open/floor/wood,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "MP" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -2977,11 +3016,11 @@
 	dir = 1
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "No" = (
 /obj/structure/window/framed/prefab,
 /turf/open/floor/almayer,
-/area/canyon32B/interior/northern_gatehouse)
+/area/canyon32B/interior/gatehouse/northern)
 "Nt" = (
 /obj/structure/blocker/fog,
 /obj/structure/flora/tree/pine,
@@ -3015,7 +3054,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "NJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -3155,7 +3194,7 @@
 	icon_state = "1-2-4"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "Pg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -3328,10 +3367,11 @@
 /obj/structure/machinery/door_control{
 	id = "Pillbox Bravo";
 	name = "Pillbox Bravo Shutter Control";
-	pixel_x = -5
+	pixel_x = -5;
+	req_access = list(9)
 	},
 /turf/closed/wall/shiva/prefabricated/reinforced,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_bravo)
 "Rv" = (
 /obj/structure/blocker/fog,
 /turf/open/asphalt/cement/cement3,
@@ -3356,7 +3396,7 @@
 	icon_state = "1-2-4"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "RN" = (
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/mess)
@@ -3433,7 +3473,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "SM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -3460,7 +3500,7 @@
 	},
 /obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/almayer/plating,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "SY" = (
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/mess)
@@ -3476,7 +3516,7 @@
 /area/canyon32B/interior/bunker/medbay)
 "Tl" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
-/area/canyon32B/interior/southern_gatehouse)
+/area/canyon32B/interior/gatehouse/southern)
 "Tm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -3516,7 +3556,7 @@
 /area/canyon32B/exterior/south)
 "TG" = (
 /turf/open/auto_turf/ice/layer1,
-/area/space)
+/area/canyon32B/interior/overhang)
 "TL" = (
 /obj/structure/largecrate/supply/supplies/mre{
 	layer = 3.1;
@@ -3539,7 +3579,7 @@
 "TT" = (
 /obj/structure/window/framed/prefab,
 /turf/open/floor/almayer,
-/area/canyon32B/interior/southern_gatehouse)
+/area/canyon32B/interior/gatehouse/southern)
 "TU" = (
 /obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer/edge/north,
@@ -3557,7 +3597,7 @@
 	height = -1
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "Uc" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/hallway)
@@ -3568,15 +3608,18 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/sentry_holder{
 	dir = 4;
-	pixel_x = -24
+	pixel_x = -24;
+	req_access = list(9)
 	},
+/obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/almayer,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_alpha)
 "UG" = (
 /obj/structure/closet/secure_closet{
 	pixel_y = -1;
 	pixel_x = -8;
-	name = "Confiscated Items Locker"
+	name = "Confiscated Items Locker";
+	req_access = list(9)
 	},
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/edge/southwest,
@@ -3590,14 +3633,15 @@
 /obj/structure/closet/secure_closet{
 	pixel_y = 14;
 	pixel_x = 8;
-	name = "Confiscated Items Locker"
+	name = "Confiscated Items Locker";
+	req_access = list(9)
 	},
 /obj/structure/filingcabinet/medical{
 	pixel_x = -8;
 	pixel_y = 17
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/southern_gatehouse)
+/area/canyon32B/interior/gatehouse/southern)
 "UL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -3628,7 +3672,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "Vm" = (
 /obj/structure/barricade/snow{
 	dir = 8
@@ -3662,7 +3706,7 @@
 	dir = 2
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "VC" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
@@ -3673,15 +3717,16 @@
 	},
 /obj/structure/bed/chair/wood/normal,
 /turf/open/floor/wood,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "VF" = (
 /obj/structure/machinery/sentry_holder{
 	dir = 4;
-	pixel_x = -24
+	pixel_x = -24;
+	req_access = list(9)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_bravo)
 "VI" = (
 /obj/structure/machinery/door/window/southleft,
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -3689,13 +3734,15 @@
 	pixel_y = 10;
 	pixel_x = 8;
 	name = "Outer Lockdown Control";
-	id = "Bunker Outer"
+	id = "Bunker Outer";
+	req_access = list(9)
 	},
 /obj/structure/machinery/door_control{
 	pixel_y = 10;
 	pixel_x = -7;
 	id = "Bunker Inner";
-	name = "Inner Lockdown Control"
+	name = "Inner Lockdown Control";
+	req_access = list(9)
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -3711,7 +3758,7 @@
 	dir = 4
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "VT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/overwatch/almayer{
@@ -3793,7 +3840,7 @@
 "WC" = (
 /obj/structure/machinery/power/reactor,
 /turf/open/floor/almayer,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "WH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -3869,7 +3916,8 @@
 	dir = 4;
 	pixel_y = 7;
 	layer = 3.1;
-	pixel_x = -1
+	pixel_x = -1;
+	req_access = list(9)
 	},
 /obj/structure/machinery/door_control{
 	pixel_y = -3;
@@ -3878,7 +3926,7 @@
 	pixel_x = 1
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/northern_gatehouse)
+/area/canyon32B/interior/gatehouse/northern)
 "XB" = (
 /obj/structure/bed/stool,
 /turf/open/floor/wood,
@@ -3911,7 +3959,7 @@
 	pixel_y = 15
 	},
 /turf/open/floor/wood,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "YK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3921,14 +3969,14 @@
 	icon_state = "1-2-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "YM" = (
 /obj/structure/stairs/perspective/kutjevo{
 	dir = 4;
 	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/snow/layer0,
-/area/canyon32B/exterior/bar)
+/area/canyon32B/exterior/south/bar)
 "YN" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -3943,7 +3991,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/space)
+/area/canyon32B/interior/gatehouse/pillbox_bravo)
 "Zf" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/detainment)
@@ -3956,7 +4004,7 @@
 	light_color = "#dae2ff"
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/southern_gatehouse)
+/area/canyon32B/interior/gatehouse/southern)
 "Zo" = (
 /obj/structure/machinery/power/reactor,
 /obj/structure/machinery/light/small{
@@ -3966,7 +4014,7 @@
 	light_range = 3
 	},
 /turf/open/floor/almayer,
-/area/canyon32B/interior/bunker/power)
+/area/canyon32B/interior/bunker/engineering/power)
 "Zy" = (
 /obj/structure/machinery/vending/cigarette{
 	pixel_x = 4;
@@ -114139,13 +114187,13 @@ yI
 yI
 yI
 yI
-yI
-yI
+DN
+DN
 DN
 DN
 CZ
 DN
-yI
+DN
 xf
 xf
 xf
@@ -114641,14 +114689,14 @@ yI
 yI
 yI
 LF
-hO
-hO
+vD
+vD
 vD
 vD
 HK
 vD
-hO
-hO
+vD
+vD
 De
 yI
 yI
@@ -115141,15 +115189,15 @@ yI
 yI
 yI
 yI
-mN
-xs
-mN
-yI
+ic
+Fy
+ic
+DN
 DN
 DN
 CZ
 DN
-yI
+DN
 mN
 xs
 mN
@@ -115642,11 +115690,11 @@ yI
 yI
 yI
 yI
-mN
+ic
 cE
 BN
-mN
-mN
+ic
+ic
 DN
 DN
 CZ
@@ -116144,17 +116192,17 @@ yI
 yI
 yI
 yI
-mN
-Ul
+ic
+AG
 ia
 Ul
-mN
+ic
 DN
 DN
 CZ
 DN
 mN
-VF
+aD
 kR
 VF
 mN
@@ -116646,11 +116694,11 @@ yI
 yI
 yI
 yI
-mN
+ic
 xh
 xh
 xh
-mN
+ic
 DN
 DN
 CZ
@@ -126183,7 +126231,7 @@ yM
 yM
 yM
 yM
-yI
+yM
 yI
 yI
 yI
@@ -126684,9 +126732,9 @@ yI
 yI
 yI
 yI
-yI
-yI
-yI
+yM
+yM
+yM
 yI
 yI
 yI
@@ -127187,8 +127235,8 @@ yI
 yI
 yI
 yI
-yI
-yI
+yM
+yM
 yI
 yI
 yI
@@ -127201,7 +127249,7 @@ hO
 hO
 hO
 hO
-hO
+vD
 zY
 aZ
 Cu
@@ -127690,8 +127738,8 @@ hw
 hw
 hw
 yI
-yI
-yI
+yM
+yM
 yI
 yI
 yI
@@ -127703,7 +127751,7 @@ yI
 yI
 yI
 yI
-yI
+DN
 Tl
 Tl
 TT
@@ -129697,7 +129745,7 @@ No
 No
 EO
 EO
-yI
+DN
 yI
 yI
 yI
@@ -130199,7 +130247,7 @@ XA
 wJ
 mV
 qO
-hO
+vD
 hO
 hO
 hO
@@ -132222,7 +132270,7 @@ yI
 yI
 yI
 yM
-DN
+pa
 DN
 CR
 DN
