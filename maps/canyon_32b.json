@@ -7,7 +7,6 @@
         "COLD": true
     },
     "weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
-    "map_item_type": "/obj/item/map/ice_colony_map",
     "traits": [{ "Ground": true }],
     "camouflage": "snow"
 }
