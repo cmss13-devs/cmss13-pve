@@ -5,7 +5,7 @@
 	icon_state = "console"
 	unacidable = TRUE
 	exproof = TRUE
-	needs_power = FALSE
+	needs_power = TRUE //Standalone terminal is gonna be reliant on area power, we don't need to really care for balance r.e. xenos remote-hijacking a bird
 	var/override_being_removed = FALSE
 
 	// Admin disabled
@@ -639,7 +639,7 @@
 	density = FALSE
 	is_remote = TRUE
 	layer = UPPER_ITEM_LAYER
-	needs_power = TRUE
+	needs_power = FALSE
 	can_change_shuttle = TRUE
 	var/source_type = /obj/item/device/flight_laptop
 
