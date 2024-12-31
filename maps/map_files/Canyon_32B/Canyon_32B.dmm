@@ -932,7 +932,9 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/canyon32B/interior/gatehouse/pillbox_bravo)
 "kU" = (
-/obj/structure/machinery/autolathe,
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
+	req_one_access = list()
+	},
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/engineering)
 "ld" = (
