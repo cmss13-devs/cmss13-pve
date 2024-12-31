@@ -387,7 +387,7 @@
 /area/canyon32B/interior/bunker/unloading)
 "eb" = (
 /obj/structure/window/framed/prefab,
-/turf/open/space/basic,
+/turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/detainment)
 "ec" = (
 /obj/item/reagent_container/food/condiment/sugar,
@@ -1014,13 +1014,6 @@
 	},
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/checkpoint)
-"lL" = (
-/obj/structure/machinery/door/airlock/almayer/secure/glass{
-	dir = 1;
-	req_access = list(9)
-	},
-/turf/open/floor/almayer/test_floor4,
-/area/canyon32B/interior/bunker/detainment)
 "lM" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
@@ -1556,9 +1549,12 @@
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/storage)
 "sA" = (
-/obj/structure/window/framed/prefab,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/space/basic,
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	dir = 1;
+	req_access = list(9)
+	},
+/turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/detainment)
 "sB" = (
 /turf/open/asphalt/cement/cement1,
@@ -101636,7 +101632,7 @@ xf
 Zf
 rE
 nw
-lL
+eb
 Br
 sO
 Zf
