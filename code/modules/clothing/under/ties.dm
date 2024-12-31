@@ -907,7 +907,6 @@
 	name = "shoulder holster"
 	desc = "A handgun holster with an attached pouch, allowing two magazines or speedloaders to be stored along with it."
 	icon_state = "holster"
-	slot = ACCESSORY_SLOT_HOLSTER
 	high_visibility = TRUE
 	hold = /obj/item/storage/internal/accessory/holster
 
@@ -1118,6 +1117,12 @@
 	item_state = "neckguard"
 	slot = ACCESSORY_SLOT_DECORNECK
 
+/obj/item/clothing/accessory/pads/neckguard/uacg
+	desc = "An attachable neck guard option for the M3 armor set worn by the UACG."
+	icon_state = "neckguard_uacg"
+	item_state = "neckguard_uacg"
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/accessory/pads/greaves
 	name = "\improper M3 Shin Guards"
 	desc = "A set shinguards designed to be worn in conjuction with M3 pattern armor."
@@ -1138,6 +1143,14 @@
 	icon_state = "groinplate"
 	item_state = "groinplate"
 	slot = ACCESSORY_SLOT_DECORGROIN
+
+/obj/item/clothing/accessory/pads/groin/uacg
+	name = "\improper M3 Groin Plate"
+	desc = "A plate designed to attach to M3 chestpiece to protect the babymakers of the Corps. Standardized protection of the UACG often seen worn than not."
+	icon_state = "groinplate_uacg"
+	item_state = "groinplate_uacg"
+	slot = ACCESSORY_SLOT_DECORGROIN
+	flags_atom = NO_SNOW_TYPE
 
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
@@ -1181,6 +1194,7 @@
 	icon_state = "m3webbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/storage/webbing/m3/Initialize(mapload)
 	. = ..()
@@ -1206,6 +1220,17 @@
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg/m39,
 	)
+
+//Partial Pre-load For Props
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/mk1
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/mk1
+
+/obj/item/storage/internal/accessory/webbing/m3mag/mk1/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+
+//===
 
 /obj/item/clothing/accessory/storage/webbing/m3/shotgun
 	name = "\improper M3 Pattern Shell Webbing"
@@ -1253,10 +1278,20 @@
 	desc = "A set of magazine webbing made in an alternative configuration for standard M3 Pattern armor. This one is exclusively issued to Force Reconnoissance units."
 	icon_state = "m3rwebbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon
-	flags_atom = NO_SNOW_TYPE
 
 /obj/item/storage/internal/accessory/webbing/m3mag/recon
 	storage_slots = 4
+
+//Partial Pre-load For Props
+//===
+/obj/item/clothing/accessory/storage/webbing/m3/recon/mk1
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1
+
+/obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+
+//===
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
 	name = "\improper M3-R Pattern Grenade Webbing"
@@ -1305,8 +1340,20 @@
 		select_gamemode_skin(type)
 	update_icon()
 
+//Partial Pre-load For Props
+
+/obj/item/clothing/accessory/storage/webbing/m56/preset
+	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
+
 /obj/item/storage/internal/accessory/black_vest/m56
 	storage_slots = 3
+
+/obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
+	new /obj/item/storage/box/MRE(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+
+//===
 
 /obj/item/clothing/accessory/storage/webbing/m56/grenade
 	name = "\improper Clip-on Grenade Band"
