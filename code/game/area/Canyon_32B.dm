@@ -44,7 +44,7 @@
 	name = "Checkpoint Four - Pillbox Bravo"
 
 /area/canyon32B/interior/overhang
-	name = "Checkpoint Four - Surface"
+	name = "Checkpoint Four - Bunker Entrance"
 	icon_state = "blue"
 	ceiling = CEILING_UNDERGROUND_ALLOW_CAS
 
@@ -58,7 +58,7 @@
 
 /area/canyon32B/interior/bunker/hallway
 	name = "Checkpoint Four - Main Hallway"
-	sound_environment = SOUND_ENVIRONMENT_STONE_CORRIDOR
+	sound_environment = SOUND_ENVIRONMENT_HALLWAY
 	icon_state = "hallC1"
 
 /area/canyon32B/interior/bunker/unloading
@@ -118,4 +118,4 @@
 	icon_state = "south"
 
 /area/canyon32B/exterior/south/bar
-	name = "Canyon 32B - Bar"
+	name = "Canyon 32B - Bar Parking Lot"
