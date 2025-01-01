@@ -245,7 +245,6 @@ can cause issues with ammo types getting mixed up during the burst.
 
 	fire_sound = "gun_shotgun_tactical"
 	firesound_volume = 20
-
 	flags_equip_slot = SLOT_BACK
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat
 	attachable_allowed = list(
@@ -298,14 +297,8 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/combat/cmb
 	name = "\improper M120 tactical shotgun"
 	desc = "A successor to the Benelli M4 Super 90, the M120 tactical shotgun is in service with the USCM due its easy maneuverability in close quarters, 12 gauge chambering, high firerate and integrated U1 underslung grenade launcher. While not part of the standard doctrine, they are common none the less. The internal tube magazine stores 6 shells and the U1 grenade launcher stores three grenades."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "mk221_cmb"
 	item_state = "mk221"
-
-	fire_sound = "gun_shotgun_tactical"
-	firesound_volume = 20
-
-	flags_equip_slot = SLOT_BACK
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
 	attachable_allowed = /obj/item/attachable/stock/tactical
 	starting_attachment_types = list(/obj/item/attachable/stock/tactical)
