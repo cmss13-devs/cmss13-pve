@@ -149,7 +149,7 @@
 	name = "\improper LV-670 Map"
 	desc = "A blueprint detailing the layout of a Wey-Yu facility."
 	html_link = ""
-	color: "red"
+	color = "red"
 
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
