@@ -1692,12 +1692,6 @@
 	dir = 6
 	},
 /area/lv522/indoors/a_block/kitchen)
-"ed" = (
-/obj/structure/blocker/forcefield/human{
-	visible = 0
-	},
-/turf/open/space/basic,
-/area/lv522/indoors/a_block/kitchen)
 "ee" = (
 /obj/structure/largecrate/random,
 /turf/open/asphalt,
@@ -169002,12 +168996,12 @@ Ol
 sj
 sj
 sj
-gq
-gq
-gq
-gq
-gq
-gq
+uf
+uf
+uf
+uf
+uf
+uf
 uf
 uf
 uf
@@ -169505,11 +169499,11 @@ pG
 jf
 sj
 sj
-gq
-gq
-gq
-gq
-gq
+uf
+uf
+uf
+uf
+uf
 uf
 uf
 uf
@@ -170008,10 +170002,10 @@ pG
 jf
 sj
 sj
-gq
-gq
-gq
-gq
+uf
+uf
+uf
+uf
 uf
 uf
 uf
@@ -170511,9 +170505,9 @@ pG
 sj
 sj
 sj
-gq
-gq
-gq
+uf
+uf
+uf
 uf
 uf
 uf
@@ -171014,8 +171008,8 @@ pG
 sj
 sj
 sj
-gq
-gq
+uf
+uf
 uf
 uf
 uf
@@ -171517,7 +171511,7 @@ pG
 sj
 sj
 sj
-gq
+uf
 uf
 uf
 uf
@@ -184571,11 +184565,11 @@ pG
 sj
 sj
 sj
-gq
-gq
-gq
-gq
-gq
+uf
+uf
+uf
+uf
+uf
 uf
 uf
 uf
@@ -185074,10 +185068,10 @@ pG
 sj
 sj
 sj
-gq
-gq
-gq
-gq
+uf
+uf
+uf
+uf
 uf
 uf
 uf
@@ -185577,9 +185571,9 @@ Ol
 sj
 sj
 sj
-gq
-gq
-gq
+uf
+uf
+uf
 uf
 uf
 uf
@@ -186080,8 +186074,8 @@ mn
 sj
 sj
 sj
-gq
-gq
+uf
+uf
 uf
 uf
 uf
@@ -186582,8 +186576,8 @@ TD
 TD
 sj
 sj
-ed
-ed
+Vx
+Vx
 Vx
 uf
 uf
