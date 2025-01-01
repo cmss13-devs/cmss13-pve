@@ -21,7 +21,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "acu" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4;
@@ -69,7 +69,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "aex" = (
 /obj/structure/sink/kitchen{
 	dir = 4;
@@ -77,7 +77,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "aeB" = (
 /obj/structure/closet/crate/radiation,
 /obj/structure/largecrate/random/case{
@@ -203,7 +203,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "ajD" = (
 /obj/structure/bed/sofa/vert/white/top,
 /obj/effect/decal/cleanable/dirt,
@@ -253,7 +253,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "alc" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
@@ -279,7 +279,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "amB" = (
 /obj/structure/platform,
 /obj/structure/barricade/handrail/strata,
@@ -380,10 +380,9 @@
 "ass" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/light{
-	light_color = #00008B;
-	light_power = .5
+	light_color = "#38a9fd"
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "atd" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
@@ -554,7 +553,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "azb" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -642,7 +641,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "aDG" = (
 /turf/open/floor/kutjevo/colors/red/edge{
 	dir = 1
@@ -798,7 +797,7 @@
 "aLh" = (
 /obj/structure/window/reinforced,
 /turf/open/floor/prison/darkredcorners2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "aLy" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /obj/effect/decal/cleanable/dirt,
@@ -872,6 +871,7 @@
 /area/taipei/maints/south)
 "aOx" = (
 /obj/item/trash/hotdog,
+/obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
 "aON" = (
@@ -970,7 +970,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "aSY" = (
 /turf/closed/shuttle/elevator/gears,
 /area/taipei/elevator/arrivals)
@@ -994,7 +994,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkredcorners2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "aTD" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -1007,14 +1007,14 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "aTY" = (
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
 /obj/structure/bed/sofa/south,
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "aUj" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
@@ -1032,7 +1032,7 @@
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "aWs" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -1207,7 +1207,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "bbQ" = (
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
@@ -1267,7 +1267,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "beN" = (
 /turf/open/floor/kutjevo/tan/alt_edge,
 /area/taipei/atrium)
@@ -1533,7 +1533,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "bqq" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
@@ -1566,7 +1566,7 @@
 /area/taipei/maints/south)
 "brs" = (
 /turf/open/blank,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "brv" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -1682,6 +1682,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/biodome,
 /area/taipei/atrium/hotel)
+"bwE" = (
+/turf/closed/mineral,
+/area/taipei/theatre)
 "bwN" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
@@ -1811,7 +1814,7 @@
 /obj/structure/pipes/vents,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet7_3/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "bBD" = (
 /obj/structure/machinery/light/blue{
 	dir = 8
@@ -2005,7 +2008,7 @@
 "bHx" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/chapel_carpet/doubleside,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "bHG" = (
 /obj/structure/platform{
 	dir = 8
@@ -2051,7 +2054,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "bKY" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/drinks/cans/aspen,
@@ -2064,7 +2067,7 @@
 	light_power = .75
 	},
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "bLA" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 8
@@ -2079,7 +2082,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "bMk" = (
 /obj/structure/platform{
 	dir = 8
@@ -2155,9 +2158,7 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
 "bPx" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer/open{
-	dir = 2
-	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium/bookstore)
 "bQM" = (
@@ -2205,7 +2206,7 @@
 /area/taipei/hangar)
 "bVs" = (
 /turf/closed/wall/almayer,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "bVt" = (
 /obj/structure/machinery/camera/autoname{
 	dir = 4
@@ -2500,7 +2501,7 @@
 	},
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/blue/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "cgV" = (
 /obj/structure/machinery/computer/shuttle/elevator_controller,
 /turf/closed/wall/biodome,
@@ -2509,7 +2510,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "chl" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -2600,7 +2601,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "cjq" = (
 /turf/open/floor/mech_bay_recharge_floor/shuttle_landing_lights,
 /area/taipei/reactor)
@@ -2806,7 +2807,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "csy" = (
 /obj/structure/stairs/perspective,
 /obj/effect/decal/cleanable/dirt,
@@ -2991,7 +2992,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "cyC" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1;
@@ -3172,7 +3173,7 @@
 /turf/open/floor/prison/blue{
 	dir = 8
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "cGq" = (
 /obj/structure/prop/turbine,
 /obj/structure/prop/turbine_extras/left,
@@ -3383,6 +3384,10 @@
 	dir = 4
 	},
 /area/taipei/atrium/restaurant)
+"cPE" = (
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/plating/asteroidfloor/north,
+/area/taipei/hangar)
 "cPG" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname,
 /obj/effect/decal/cleanable/dirt,
@@ -3466,7 +3471,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "cSO" = (
 /obj/structure/cargo_container/kelland/left{
 	pixel_x = 12;
@@ -3497,15 +3502,15 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet11_12/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "cUh" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-4-8"
+/obj/structure/surface/table,
+/obj/structure/machinery/light{
+	dir = 4;
+	light_power = .50
 	},
-/obj/structure/pipes/standard/manifold/hidden/supply,
-/obj/structure/machinery/power/apc/power/south,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/taipei/maints/south)
+/turf/open/floor/strata/faux_wood,
+/area/taipei/atrium/hotel)
 "cUw" = (
 /obj/structure/surface/table,
 /obj/item/toy/desk/fan{
@@ -3530,7 +3535,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/prison/bluecorner/west,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "cVj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/grant/right,
@@ -3603,7 +3608,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "dap" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -3731,7 +3736,7 @@
 	},
 /obj/item/storage/briefcase,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "deX" = (
 /obj/structure/cargo_container/hd/mid/alt,
 /turf/open/floor/plating/asteroidfloor/north,
@@ -3772,6 +3777,7 @@
 /obj/structure/platform_decoration,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
 "dij" = (
@@ -3936,7 +3942,7 @@
 	pixel_x = 4
 	},
 /turf/open/floor/prison/blue,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "doY" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 8;
@@ -3991,7 +3997,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/west,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "dtY" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -4021,7 +4027,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/cigbutt/ucigbutt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "duV" = (
 /obj/structure/surface/table,
 /obj/item/trash/ceramic_plate,
@@ -4089,7 +4095,7 @@
 /obj/structure/machinery/light,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet13_5/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "dvO" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -4188,6 +4194,17 @@
 	},
 /turf/open/floor/kutjevo/tan/alt_edge,
 /area/taipei/atrium)
+"dxT" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/asteroidwarning/east,
+/area/taipei/maints/south)
 "dyr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4224,7 +4241,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "dBp" = (
 /obj/structure/machinery/body_scanconsole{
 	dir = 8
@@ -4316,14 +4333,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet7_3/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "dGa" = (
 /turf/open/floor/kutjevo/tan/alt_edge/northeast,
 /area/taipei/atrium)
 "dGp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/biodome,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "dGJ" = (
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
@@ -4344,14 +4361,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkred2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "dHP" = (
 /obj/structure/machinery/light{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkred2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "dIb" = (
 /obj/structure/barricade/handrail/strata,
 /obj/structure/platform,
@@ -4418,7 +4435,7 @@
 /obj/item/reagent_container/food/drinks/shaker,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "dJX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4494,7 +4511,7 @@
 	},
 /obj/item/storage/pill_bottle/spaceacillin/skillless,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "dOO" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice4";
@@ -4543,7 +4560,7 @@
 /turf/open/floor/prison/blue{
 	dir = 8
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "dPm" = (
 /obj/structure/machinery/light{
 	unacidable = 1;
@@ -4599,7 +4616,7 @@
 /turf/open/floor/prison/blue{
 	dir = 8
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "dSv" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -4627,7 +4644,7 @@
 /obj/structure/sign/poster/music,
 /obj/structure/mirror,
 /turf/closed/wall/biodome,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "dSW" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	dir = 8
@@ -4692,11 +4709,9 @@
 /turf/open/gm/empty,
 /area/taipei/reactor)
 "dXc" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Underground Visitor Entrance"
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/floor/whitered{
 	dir = 1
 	},
@@ -5055,8 +5070,8 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/maints/north)
 "ejA" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/floor/whitered{
 	dir = 1
 	},
@@ -5144,13 +5159,13 @@
 	dir = 1
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "eoj" = (
 /obj/structure/pipes/vents/pump{
 	dir = 1
 	},
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "eoO" = (
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/hotel)
@@ -5224,6 +5239,10 @@
 /area/taipei/maints/south)
 "equ" = (
 /obj/structure/machinery/power/smes/buildable/charged,
+/obj/structure/machinery/power/smes/buildable/charged{
+	pixel_x = 0;
+	pixel_y = 16
+	},
 /turf/open/floor/prison,
 /area/taipei/reactor)
 "eqY" = (
@@ -5369,7 +5388,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/drinks/bottle/vodka,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "ezN" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -5408,7 +5427,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "eBz" = (
 /obj/structure/platform{
 	dir = 1
@@ -5425,7 +5444,7 @@
 "eCr" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkred2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "eCv" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -5475,7 +5494,7 @@
 	dir = 4
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "eDn" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -5506,13 +5525,13 @@
 	dir = 4
 	},
 /turf/open/floor/prison/bluecorner/west,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "eDM" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/cigbutt/ucigbutt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "eEb" = (
 /turf/open/floor/kutjevo/multi_tiles/southwest,
 /area/taipei/atrium)
@@ -5610,9 +5629,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "eIq" = (
-/obj/docking_port/stationary/marine_dropship,
+/obj/docking_port,
 /turf/open/floor/plating,
 /area/taipei/hangar/landingzone)
 "eIR" = (
@@ -5622,7 +5641,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/prison/darkbrowncorners2/southwest,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "eKu" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 3
@@ -5676,7 +5695,7 @@
 "eNX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "eOh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5769,7 +5788,7 @@
 	dir = 1
 	},
 /turf/open/floor/prison/darkred2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "eSC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor,
@@ -6118,7 +6137,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "fgE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6405,7 +6424,7 @@
 /obj/item/trash/cigbutt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "frY" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -6508,7 +6527,7 @@
 /area/taipei/maints/south)
 "fwT" = (
 /turf/closed/wall/biodome,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "fxe" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -6781,7 +6800,7 @@
 /obj/structure/bed/sofa/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "fOo" = (
 /obj/structure/machinery/conveyor,
 /obj/structure/prop/invuln/lattice_prop{
@@ -7068,7 +7087,7 @@
 /turf/open/floor/prison/blue{
 	dir = 8
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "gak" = (
 /obj/structure/barricade/handrail/kutjevo{
 	layer = 3.05
@@ -7097,10 +7116,10 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "gbt" = (
 /turf/closed/wall/biodome,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "gbD" = (
 /turf/open/floor/corsat/marked,
 /area/taipei/elevator/arrivals)
@@ -7142,7 +7161,7 @@
 "gdg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "gds" = (
 /obj/structure/window/reinforced/ultra{
 	dir = 4
@@ -7155,7 +7174,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "gdN" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -7281,7 +7300,7 @@
 	dir = 8
 	},
 /turf/open/floor/prison/darkredcorners2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "gnu" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -7612,7 +7631,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "gCN" = (
 /obj/structure/platform,
 /obj/structure/cable/heavyduty{
@@ -7626,7 +7645,6 @@
 	},
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/prison,
 /area/taipei/maints/south)
 "gEA" = (
@@ -7656,11 +7674,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "gFL" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/carpet15_15/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "gFX" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -7695,7 +7713,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "gHA" = (
 /obj/structure/surface/rack{
 	pixel_x = -5
@@ -7712,6 +7730,10 @@
 	pixel_x = 18
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/food/drinks/bottle/whiskey{
+	pixel_x = -10;
+	pixel_y = 9
+	},
 /turf/open/floor/bar,
 /area/taipei/atrium/store)
 "gHK" = (
@@ -8091,7 +8113,7 @@
 	dir = 8
 	},
 /turf/open/floor/prison/darkbrowncorners2/southwest,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "heo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8144,7 +8166,7 @@
 /obj/item/trash/crushed_cup,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet10_8/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "hhI" = (
 /obj/structure/bed/chair/comfy/alpha{
 	dir = 1
@@ -8173,7 +8195,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
 	},
-/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison,
 /area/taipei/maints/north)
 "hjy" = (
@@ -8222,7 +8243,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "hmJ" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
@@ -8323,15 +8344,10 @@
 /turf/open/floor/corsat/marked,
 /area/taipei/maints/north)
 "hrp" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = -8
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/plating/asteroidfloor,
-/area/taipei/maints/north)
+/turf/open/floor/prison,
+/area/taipei/hangar)
 "hrv" = (
 /obj/structure/blocker/invisible_wall,
 /turf/closed/wall/almayer/outer,
@@ -8354,7 +8370,7 @@
 /obj/item/trash/cigbutt,
 /obj/item/trash/cigbutt,
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "hrQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/faux_wood,
@@ -8365,6 +8381,10 @@
 	pixel_y = 10
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	dir = 4;
+	light_power = .50
+	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/hotel)
 "hsz" = (
@@ -8466,7 +8486,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "hvy" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
@@ -8496,7 +8516,7 @@
 	light_power = .75
 	},
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "hyf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -8536,6 +8556,11 @@
 	},
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
+"hAl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/warning_cone,
+/turf/open/floor/plating/asteroidwarning/west,
+/area/taipei/maints/north)
 "hBn" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -8765,7 +8790,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "hJS" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -8811,7 +8836,7 @@
 /area/taipei/maints/north)
 "hLc" = (
 /turf/open/floor/prison/darkbrowncorners2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "hLu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8826,7 +8851,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "hMB" = (
 /obj/structure/machinery/conveyor{
 	dir = 9;
@@ -8894,7 +8919,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "hON" = (
 /turf/open/floor/corsat/marked,
 /area/taipei/elevator/departures)
@@ -8919,7 +8944,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "hSG" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -8933,13 +8958,10 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
 "hTw" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Underground Visitor Entrance"
-	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
-/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "hTM" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -9011,7 +9033,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "hWH" = (
 /obj/structure/prop/almayer/computers/sensor_computer2,
 /turf/open/floor/prison,
@@ -9139,7 +9161,7 @@
 /obj/item/ashtray/glass,
 /obj/item/trash/cigbutt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "idY" = (
 /obj/structure/machinery/washing_machine{
 	pixel_y = 13;
@@ -9270,7 +9292,7 @@
 	dir = 4
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "iiq" = (
 /obj/structure/platform{
 	dir = 4
@@ -9439,11 +9461,8 @@
 /turf/open/floor/kutjevo/multi_tiles/west,
 /area/taipei/atrium)
 "ivo" = (
-/obj/item/tool/wet_sign{
-	pixel_x = -3;
-	pixel_y = 2
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/tool/warning_cone,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
 "ivC" = (
@@ -9508,7 +9527,7 @@
 	light_power = .50
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "iwv" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/cargo)
@@ -9536,11 +9555,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "ixH" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet15_15/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "iyX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9567,7 +9586,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "izW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light_switch{
@@ -9619,7 +9638,7 @@
 "iDf" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "iDD" = (
 /obj/structure/machinery/light/blue{
 	dir = 4
@@ -9760,7 +9779,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "iJD" = (
 /turf/closed/wall/biodome,
 /area/taipei/atrium/hotel)
@@ -9858,7 +9877,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "iPf" = (
 /obj/structure/machinery/light/spot{
 	dir = 1
@@ -9892,7 +9911,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkred2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "iQx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9915,7 +9934,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "iRX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -10060,7 +10079,7 @@
 "iYe" = (
 /obj/structure/machinery/light,
 /turf/open/floor/carpet13_5,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "iYm" = (
 /obj/structure/surface/table/holotable,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -10346,7 +10365,7 @@
 /area/taipei/maints/south)
 "jgX" = (
 /obj/structure/window/framed/prison/reinforced,
-/turf/closed/wall/r_wall/bunker,
+/turf/open/space/basic,
 /area/taipei/cmb)
 "jhe" = (
 /obj/effect/decal/warning_stripes{
@@ -10396,7 +10415,7 @@
 	pixel_y = -10
 	},
 /turf/closed/wall/almayer,
-/area/taipei/maints/north)
+/area/taipei/club)
 "jiy" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -10458,12 +10477,10 @@
 /turf/open/floor,
 /area/taipei/atrium/laundry)
 "jku" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Underground Visitor Entrance"
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium/bookstore)
 "jkG" = (
@@ -10497,7 +10514,7 @@
 	req_one_access = null
 	},
 /turf/open/floor/corsat/marked,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "jop" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -10582,15 +10599,13 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
 "jvg" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = -8
+/obj/structure/surface/table,
+/obj/structure/machinery/light{
+	dir = 8;
+	light_power = .50
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/south,
-/turf/open/floor/plating/asteroidfloor,
-/area/taipei/maints/south)
+/turf/open/floor/strata/faux_wood,
+/area/taipei/atrium/hotel)
 "jvs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -10632,6 +10647,19 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/asteroid,
 /area/taipei/maints/south)
+"jxb" = (
+/obj/structure/barricade/handrail/strata{
+	pixel_y = -4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/maints/south)
 "jya" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /obj/structure/flora/bush/ausbushes/grassybush{
@@ -10653,7 +10681,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "jyx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -10692,7 +10720,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "jAx" = (
 /obj/structure/platform{
 	dir = 1
@@ -10779,13 +10807,13 @@
 "jEl" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet13_5/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "jEJ" = (
 /obj/structure/barricade/handrail/kutjevo,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "jEM" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -10906,7 +10934,6 @@
 "jKm" = (
 /obj/structure/cable/heavyduty,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/prison,
 /area/taipei/maints/south)
 "jKu" = (
@@ -11010,7 +11037,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "jPj" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -11056,7 +11083,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "jSY" = (
 /obj/structure/window/framed/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -11072,6 +11099,11 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/prison,
 /area/taipei/cargo)
+"jTh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/warning_cone,
+/turf/open/floor/asteroidwarning,
+/area/taipei/maints/north)
 "jTj" = (
 /obj/structure/bed/chair/bolted{
 	dir = 1
@@ -11093,7 +11125,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "jVD" = (
 /obj/structure/machinery/elevator_strut/top,
 /turf/open/gm/empty,
@@ -11185,14 +11217,12 @@
 /turf/open/floor/bar,
 /area/taipei/atrium/store)
 "kaR" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Underground Visitor Entrance"
-	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "kbx" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/colors,
@@ -11434,7 +11464,7 @@
 	},
 /obj/structure/machinery/door/airlock/almayer/maint/autoname,
 /turf/open/floor/corsat/marked,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "kms" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -11474,7 +11504,7 @@
 	},
 /obj/item/trash/cigbutt/cigarbutt,
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "knG" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/maints/south)
@@ -11527,7 +11557,7 @@
 "koO" = (
 /obj/item/trash/cigbutt/ucigbutt,
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "koW" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -11603,7 +11633,7 @@
 	pixel_x = 4
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "kum" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -11617,7 +11647,7 @@
 "kuT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet13_5,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "kuZ" = (
 /turf/open/floor/prison,
 /area/taipei/maints/south)
@@ -11664,7 +11694,7 @@
 "kxn" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "kxp" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -11686,7 +11716,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/window/reinforced,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "kya" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -11875,20 +11905,13 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/biodome,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "kEu" = (
-/obj/structure/barricade/handrail/strata{
-	pixel_y = -4
+/obj/structure/machinery/light{
+	dir = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/taipei/maints/north)
+/turf/open/floor/kutjevo/tan,
+/area/taipei/atrium)
 "kEV" = (
 /obj/structure/machinery/door/airlock/multi_tile/elevator/research,
 /obj/structure/machinery/door/airlock/multi_tile/elevator/access,
@@ -11910,7 +11933,7 @@
 /obj/structure/pipes/vents/scrubber,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "kHz" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -11933,7 +11956,7 @@
 /area/taipei/reactor)
 "kJO" = (
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "kKt" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /turf/open/auto_turf/strata_grass/layer1{
@@ -11977,7 +12000,7 @@
 "kMg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkred2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "kMk" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -12045,7 +12068,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison,
 /area/taipei/maints/north)
 "kPG" = (
@@ -12139,12 +12161,12 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "kSV" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "kTm" = (
 /obj/structure/bed/chair/comfy/alpha{
 	dir = 1
@@ -12224,7 +12246,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "kWJ" = (
 /obj/structure/platform{
 	layer = 3.1
@@ -12300,6 +12322,11 @@
 /obj/structure/platform/stair_cut/alt,
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/maints/south)
+"kZf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/warning_cone,
+/turf/open/floor/plating/asteroidwarning/east,
+/area/taipei/maints/north)
 "laO" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice4";
@@ -12330,7 +12357,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/window/reinforced,
 /turf/open/floor/prison/bluecorner/west,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "leH" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/barricade/handrail/strata{
@@ -12377,7 +12404,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "lgD" = (
 /obj/structure/platform/kutjevo{
 	dir = 1
@@ -12387,7 +12414,7 @@
 	dir = 8
 	},
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "lgN" = (
 /obj/structure/platform{
 	dir = 1
@@ -12439,7 +12466,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "liU" = (
 /obj/structure/machinery/light/double{
 	dir = 8
@@ -12630,6 +12657,10 @@
 /turf/closed/wall/almayer,
 /area/taipei/maints/south)
 "lqv" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	light_power = .25
+	},
 /turf/open/floor/kutjevo/colors/red/inner_corner{
 	dir = 4
 	},
@@ -12648,7 +12679,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "lsf" = (
 /turf/closed/wall/almayer/white/hull,
 /area/taipei/atrium/medbay)
@@ -12687,7 +12718,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "ltv" = (
 /obj/structure/surface/table,
 /obj/item/toy/desk/dippingbird{
@@ -12761,7 +12792,7 @@
 	pixel_x = -5
 	},
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "lwq" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname,
 /obj/effect/decal/cleanable/dirt,
@@ -12901,7 +12932,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "lBY" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -12928,6 +12959,10 @@
 /turf/open/floor/prison,
 /area/taipei/maints/north)
 "lCh" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	light_power = .25
+	},
 /turf/open/floor/kutjevo/colors/red/inner_corner,
 /area/taipei/atrium)
 "lCt" = (
@@ -13044,7 +13079,7 @@
 /area/taipei/maints/north)
 "lGx" = (
 /turf/open/floor/prison/darkred2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "lGP" = (
 /obj/structure/window/framed/almayer/white,
 /obj/item/cpr_dummy{
@@ -13132,7 +13167,7 @@
 "lJu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkredcorners2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "lKe" = (
 /obj/structure/stairs/perspective/kutjevo{
 	dir = 4;
@@ -13171,14 +13206,14 @@
 	dir = 8
 	},
 /turf/open/floor/prison/darkbrowncorners2/southwest,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "lLD" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "lLE" = (
 /obj/structure/platform{
 	layer = 2.7;
@@ -13298,7 +13333,7 @@
 /area/taipei/hangar)
 "lSk" = (
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "lSq" = (
 /obj/structure/bed/chair/office/light{
 	dir = 1
@@ -13315,17 +13350,17 @@
 "lTp" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "lTI" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkredcorners2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "lUk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "lUO" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -13397,7 +13432,7 @@
 "lYS" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "lZD" = (
 /obj/structure/platform{
 	layer = 2.7;
@@ -13439,7 +13474,7 @@
 	pixel_y = 30
 	},
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "maN" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
 /obj/structure/machinery/door/poddoor/almayer/closed,
@@ -13447,9 +13482,9 @@
 /turf/open/floor/corsat/marked,
 /area/taipei/cmb)
 "mbc" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /turf/open/floor/asteroidplating,
 /area/taipei/atrium/store)
 "mbn" = (
@@ -13506,7 +13541,7 @@
 	light_power = .25
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "mdJ" = (
 /turf/open/floor/plating/asteroidwarning/west,
 /area/taipei/reactor)
@@ -13543,6 +13578,11 @@
 /obj/structure/cargo_container/watatsumi/mid,
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
+"mfA" = (
+/obj/item/weapon/broken_bottle,
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/floor/bar,
+/area/taipei/atrium/store)
 "mfT" = (
 /obj/structure/lattice,
 /obj/item/lightstick/red/spoke/planted,
@@ -13560,7 +13600,7 @@
 	dir = 4
 	},
 /turf/open/floor/asteroid,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "mgc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow"
@@ -13740,7 +13780,7 @@
 "mmZ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/biodome,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "mnw" = (
 /obj/item/tool/mop{
 	pixel_x = -22;
@@ -13907,12 +13947,13 @@
 	dir = 5
 	},
 /turf/open/floor/carpet13_5/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "muT" = (
 /obj/structure/pipes/vents,
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison,
 /area/taipei/telecomms)
 "mvh" = (
@@ -13999,7 +14040,7 @@
 "mAf" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "mAV" = (
 /obj/structure/machinery/medical_pod/bodyscanner,
 /turf/open/floor/kutjevo/colors/cyan/inner_corner/west,
@@ -14025,7 +14066,7 @@
 	dir = 1
 	},
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "mBI" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -14109,7 +14150,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "mEH" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -14158,7 +14199,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "mGh" = (
 /obj/structure/bed/sofa/vert/white/bot,
 /turf/open/floor/kutjevo/tan,
@@ -14233,7 +14274,7 @@
 /area/taipei/hangar)
 "mMa" = (
 /turf/open/floor/carpet13_5,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "mMx" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2;
@@ -14295,7 +14336,7 @@
 /area/taipei/hangar)
 "mPR" = (
 /turf/open/floor/prison/darkred2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "mQE" = (
 /obj/structure/flora/pottedplant/random{
 	pixel_x = 0;
@@ -14405,7 +14446,7 @@
 	},
 /obj/item/trash/buritto,
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "mWy" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/toy/desk/newtoncradle{
@@ -14423,10 +14464,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/light{
-	light_color = #00008B;
-	light_power = .5
+	light_color = "#38a9fd"
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "mXX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/colors/red/edge{
@@ -14451,7 +14491,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/southwest,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "mZM" = (
 /obj/structure/platform_decoration,
 /obj/structure/platform_decoration{
@@ -14476,7 +14516,6 @@
 	icon_state = "0-8"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/east,
 /turf/open/floor/prison,
 /area/taipei/maints/south)
 "naz" = (
@@ -14548,7 +14587,7 @@
 "nbG" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "nbW" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 8;
@@ -14610,7 +14649,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkredcorners2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "nec" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -14627,7 +14666,7 @@
 "nek" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "neY" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -14703,7 +14742,7 @@
 /obj/structure/machinery/door/window/brigdoor/southleft,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "njs" = (
 /obj/structure/flora/pottedplant{
 	desc = "How did that get in there?";
@@ -14740,7 +14779,7 @@
 	light_power = .25
 	},
 /turf/open/floor/carpet7_3/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "nkn" = (
 /obj/structure/surface/rack,
 /obj/item/bodybag,
@@ -14754,6 +14793,24 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
 /area/taipei/cmb)
+"nkF" = (
+/obj/structure/surface/rack{
+	pixel_x = 4
+	},
+/obj/structure/surface/rack{
+	pixel_y = 16;
+	pixel_x = 4
+	},
+/obj/item/reagent_container/food/drinks/bottle/whiskey{
+	pixel_x = -1;
+	pixel_y = 16
+	},
+/obj/item/reagent_container/food/drinks/bottle/whiskey{
+	pixel_x = 8;
+	pixel_y = 25
+	},
+/turf/open/floor/bar,
+/area/taipei/atrium/store)
 "nkR" = (
 /obj/structure/lattice,
 /obj/structure/prop/static_tank,
@@ -14783,7 +14840,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "nnh" = (
 /obj/structure/largecrate/random/secure,
 /obj/effect/decal/cleanable/dirt,
@@ -14880,7 +14937,8 @@
 /area/taipei/reactor)
 "nug" = (
 /obj/structure/window/framed/almayer/white,
-/turf/closed/wall/almayer/white/reinforced,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open,
+/turf/open/space/basic,
 /area/taipei/atrium/medbay)
 "nuJ" = (
 /obj/structure/surface/table,
@@ -14959,7 +15017,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroid,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "nwx" = (
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
@@ -15064,7 +15122,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "nCA" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -15199,7 +15257,7 @@
 	pixel_x = -5
 	},
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "nJy" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -15281,7 +15339,7 @@
 "nPP" = (
 /obj/structure/machinery/door/window/brigdoor/southleft,
 /turf/open/floor/prison/darkredcorners2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "nPW" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_22";
@@ -15507,7 +15565,7 @@
 /turf/open/floor/prison/blue{
 	dir = 8
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "nWA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/trijent/mid,
@@ -15584,7 +15642,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/west,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "obk" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -15796,7 +15854,7 @@
 	pixel_x = -8
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "oiM" = (
 /obj/structure/toilet{
 	pixel_y = 12
@@ -15863,6 +15921,7 @@
 "okm" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/floor/kutjevo/tan,
 /area/taipei/atrium/offices)
 "okM" = (
@@ -15912,7 +15971,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/door/window/brigdoor/southright,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "ole" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
@@ -16012,7 +16071,7 @@
 /obj/structure/surface/table,
 /obj/item/clothing/under/swimsuit/green,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "ooB" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/alt_edge/northeast,
@@ -16087,7 +16146,7 @@
 "osU" = (
 /obj/structure/sign/safety/maint,
 /turf/closed/wall/almayer,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "oty" = (
 /obj/structure/machinery/door/airlock/multi_tile/elevator/access,
 /turf/open/floor/corsat/marked,
@@ -16103,7 +16162,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "oud" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet9_4,
@@ -16309,6 +16368,9 @@
 /obj/structure/sign/safety/elevator,
 /turf/closed/wall/biodome,
 /area/taipei/atrium)
+"oEr" = (
+/turf/closed/mineral,
+/area/taipei/reactor)
 "oEH" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth,
@@ -16355,7 +16417,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet6_2,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "oIc" = (
 /obj/structure/flora/grass/desert/lightgrass_3,
 /obj/effect/decal/grass_overlay/grass1/inner,
@@ -16456,7 +16518,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "oMS" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -16538,7 +16600,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/darkred2,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "oSi" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -16633,7 +16695,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "oVF" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -16701,7 +16763,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/west,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "oXI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -16734,6 +16796,7 @@
 "oYS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/floor/kutjevo/tan,
 /area/taipei/atrium/offices)
 "oZJ" = (
@@ -16777,6 +16840,9 @@
 /obj/structure/cargo_container/trijent/left,
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
+"pbd" = (
+/turf/closed/wall/almayer/outer,
+/area/taipei/club)
 "pbt" = (
 /obj/structure/prop/turbine,
 /obj/structure/prop/turbine_extras/left,
@@ -16855,7 +16921,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "pdt" = (
 /obj/structure/sink{
 	dir = 1;
@@ -16871,10 +16937,9 @@
 	pixel_y = 14
 	},
 /turf/open/floor/light{
-	light_color = #00008B;
-	light_power = .5
+	light_color = "#38a9fd"
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "pdA" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -16891,7 +16956,7 @@
 	dir = 8
 	},
 /turf/open/floor/prison/darkredcorners2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "pdP" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -16987,7 +17052,7 @@
 /obj/structure/sign/poster/pinup,
 /obj/structure/mirror,
 /turf/closed/wall/biodome,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "pig" = (
 /obj/structure/surface/table,
 /obj/structure/window/reinforced{
@@ -17022,7 +17087,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "plc" = (
 /obj/structure/machinery/washing_machine{
 	pixel_y = 13;
@@ -17129,7 +17194,7 @@
 "poQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/west,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "ppk" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/floor/corsat/marked,
@@ -17151,7 +17216,7 @@
 /area/taipei/hangar)
 "pqL" = (
 /turf/open/floor/prison/chapel_carpet/doubleside,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "pqP" = (
 /obj/structure/toilet{
 	pixel_y = 15;
@@ -17263,7 +17328,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "pvI" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -17282,6 +17347,7 @@
 "pwz" = (
 /obj/structure/window/framed/almayer/white,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/closed/wall/almayer/white/reinforced,
 /area/taipei/atrium/medbay)
 "pwM" = (
@@ -17295,7 +17361,7 @@
 /obj/structure/pipes/vents,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet7_3/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "pxr" = (
 /obj/structure/blocker/forcefield/human{
 	icon = 'icons/'
@@ -17341,7 +17407,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "pzg" = (
 /obj/structure/platform/shiva/catwalk,
 /obj/structure/platform/shiva/catwalk{
@@ -17350,7 +17416,7 @@
 /obj/item/trash/cigbutt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "pzh" = (
 /obj/effect/elevator,
 /obj/structure/prop/invuln/lattice_prop{
@@ -17539,14 +17605,14 @@
 	pixel_x = -5
 	},
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "pHQ" = (
 /obj/structure/sign/banners/united_americas_flag{
 	pixel_y = 28
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "pIu" = (
 /obj/item/storage/briefcase{
 	pixel_y = -13;
@@ -17638,10 +17704,9 @@
 /area/taipei/atrium)
 "pLb" = (
 /turf/open/floor/light{
-	light_color = #00008B;
-	light_power = .5
+	light_color = "#38a9fd"
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "pLt" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
@@ -17652,14 +17717,14 @@
 	light_power = .25
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "pLA" = (
 /obj/structure/machinery/door/window/brigdoor/southright,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/prison/darkbrowncorners2/southwest,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "pLN" = (
 /turf/open/floor/carpet11_12/west,
 /area/taipei/atrium/hotel)
@@ -17687,7 +17752,7 @@
 "pMv" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "pMJ" = (
 /obj/item/lightstick/red/variant/planted,
 /turf/open/gm/empty,
@@ -17776,7 +17841,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/cigbutt/ucigbutt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "pOp" = (
 /obj/item/trash/popcorn{
 	dir = 1;
@@ -17797,7 +17862,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "pOq" = (
 /turf/open/floor/plating,
 /area/taipei/hangar/landingzone)
@@ -17910,7 +17975,7 @@
 	dir = 8
 	},
 /turf/open/floor/prison/darkredcorners2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "pTu" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/window/reinforced/toughened{
@@ -18032,7 +18097,7 @@
 	pixel_x = 10
 	},
 /turf/closed/wall/almayer,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "pZD" = (
 /obj/structure/machinery/light/double{
 	dir = 1
@@ -18139,7 +18204,7 @@
 /obj/structure/sign/poster/io,
 /obj/structure/mirror,
 /turf/closed/wall/biodome,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "qgs" = (
 /obj/structure/platform{
 	dir = 1
@@ -18186,7 +18251,7 @@
 	pixel_x = -5
 	},
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qjd" = (
 /obj/structure/platform{
 	layer = 2.7;
@@ -18199,7 +18264,7 @@
 	pixel_y = -3
 	},
 /turf/closed/wall/almayer,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qjJ" = (
 /obj/structure/sign/safety/opens_up,
 /turf/closed/wall/almayer,
@@ -18254,7 +18319,7 @@
 "qkq" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qkv" = (
 /obj/item/stool{
 	pixel_y = 12;
@@ -18262,7 +18327,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qky" = (
 /turf/closed/wall/almayer,
 /area/taipei/atrium/hotel)
@@ -18340,8 +18405,9 @@
 "qou" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/power/west,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qpi" = (
 /obj/structure/toilet{
 	pixel_y = 12
@@ -18372,7 +18438,7 @@
 /turf/open/floor/prison/blue{
 	dir = 8
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qpY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -18543,7 +18609,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qyk" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 6;
@@ -18612,7 +18678,7 @@
 /obj/structure/machinery/door/window/brigdoor/southright,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "qBL" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_21";
@@ -18678,10 +18744,9 @@
 /obj/item/spacecash/c20,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/light{
-	light_color = #00008B;
-	light_power = .5
+	light_color = "#38a9fd"
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qDy" = (
 /obj/structure/machinery/deployable,
 /turf/closed/mineral,
@@ -18745,7 +18810,7 @@
 /obj/structure/pipes/vents/scrubber,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/west,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qHh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -18807,6 +18872,7 @@
 	name = "\improper Medical Bay";
 	req_one_access = null
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/floor/kutjevo,
 /area/taipei/atrium/medbay)
 "qJh" = (
@@ -18830,7 +18896,7 @@
 	pixel_y = 22
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qJJ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
@@ -18906,7 +18972,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "qOn" = (
 /obj/structure/platform,
 /obj/structure/barricade/handrail/strata,
@@ -19064,7 +19130,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroid,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "qTZ" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -19151,7 +19217,7 @@
 /obj/structure/sign/poster/hunk,
 /obj/structure/mirror,
 /turf/closed/wall/biodome,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "qYe" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -19261,7 +19327,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "rfk" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -19273,7 +19339,7 @@
 "rfD" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkredcorners2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "rfT" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -19406,7 +19472,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "rkA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -19434,14 +19500,14 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "rlh" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /turf/open/floor/prison/darkredcorners2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "rly" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_x = -9;
@@ -19495,7 +19561,7 @@
 /area/taipei/maints/south)
 "rnW" = (
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "rnX" = (
 /obj/structure/cargo_container/arious/leftmid,
 /obj/structure/prop/invuln/lattice_prop{
@@ -19549,7 +19615,6 @@
 /obj/structure/machinery/power/terminal{
 	dir = 4
 	},
-/obj/structure/machinery/power/apc/power/east,
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/prison,
 /area/taipei/maints/south)
@@ -19576,7 +19641,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "rqT" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -19610,7 +19675,7 @@
 "rrE" = (
 /obj/structure/curtain/red,
 /turf/open/floor/asteroidplating,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "rrU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning,
@@ -19920,7 +19985,7 @@
 	pixel_y = -10
 	},
 /turf/closed/wall/almayer/outer,
-/area/taipei/maints/north)
+/area/taipei/club)
 "rEc" = (
 /obj/structure/largecrate/random/barrel/blue{
 	pixel_x = -10
@@ -20129,7 +20194,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "rKL" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -20162,7 +20227,7 @@
 /turf/open/floor/prison/blue{
 	dir = 8
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "rLX" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 6;
@@ -20217,7 +20282,7 @@
 "rNR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "rOq" = (
 /obj/structure/barricade/handrail/type_b{
 	dir = 4;
@@ -20305,7 +20370,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "rRE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/barrel/true_random{
@@ -20413,7 +20478,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/carpet15_15/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "rVb" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
 /obj/structure/flora/bush/ausbushes/var3/sunnybush{
@@ -20516,7 +20581,7 @@
 /obj/structure/curtain/red,
 /obj/item/trash/crushed_cup,
 /turf/open/floor/carpet7_3/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "rZT" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
@@ -20533,7 +20598,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "sao" = (
 /obj/structure/cargo_container/arious/leftmid,
 /turf/open/floor/asteroidwarning,
@@ -20614,15 +20679,15 @@
 /turf/open/floor/kutjevo/colors/red/inner_corner,
 /area/taipei/cmb)
 "seS" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/terminal{
+	dir = 1
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
+/obj/structure/machinery/power/terminal{
+	dir = 1
 	},
-/obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/taipei/maints/south)
+/area/taipei/reactor)
 "sfA" = (
 /obj/structure/sink{
 	dir = 1;
@@ -20689,7 +20754,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/darkredcorners2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "shQ" = (
 /obj/structure/platform{
 	dir = 1
@@ -20714,7 +20779,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "sjh" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidwarning/east,
@@ -20747,7 +20812,7 @@
 /area/taipei/atrium/medbay)
 "sjQ" = (
 /turf/closed/wall/almayer,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "skD" = (
 /obj/structure/bed/sofa/south/white,
 /obj/effect/decal/cleanable/dirt,
@@ -20761,10 +20826,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/light{
-	light_color = #00008B;
-	light_power = .5
+	light_color = "#38a9fd"
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "skO" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -20823,7 +20887,7 @@
 /turf/open/floor/prison/blue{
 	dir = 8
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "snK" = (
 /turf/open/floor/kutjevo/colors/cyan/edge,
 /area/taipei/atrium/medbay)
@@ -20869,7 +20933,7 @@
 	dir = 8
 	},
 /turf/open/floor/asteroid,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "sqd" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -20890,7 +20954,7 @@
 	dir = 1
 	},
 /turf/open/floor/prison/darkredcorners2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "sqO" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/restraint/handcuffs/zip{
@@ -20925,11 +20989,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "srJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkred2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "ssc" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -20939,6 +21003,7 @@
 "ssB" = (
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/power/east,
 /turf/open/floor/almayer/edge/east,
 /area/taipei/hangar/cargoshuttle)
 "ssE" = (
@@ -21173,7 +21238,7 @@
 /turf/open/floor/prison/blue{
 	dir = 8
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "sFd" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/effect/decal/cleanable/dirt,
@@ -21186,7 +21251,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "sFS" = (
 /turf/open/floor/asteroidwarning/north,
 /area/taipei/maints/south)
@@ -21410,7 +21475,7 @@
 /obj/structure/window/framed/corsat/cell,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "sPt" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -21566,7 +21631,7 @@
 	dir = 1
 	},
 /turf/open/floor/prison/chapel_carpet/doubleside,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "sVa" = (
 /obj/structure/platform,
 /obj/effect/decal/cleanable/dirt,
@@ -21600,7 +21665,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/west,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "sVA" = (
 /obj/structure/closet/secure_closet/medical2{
 	pixel_x = 9;
@@ -21645,7 +21710,7 @@
 "sYX" = (
 /obj/structure/machinery/light,
 /turf/open/floor/carpet13_5/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "sZf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -21823,7 +21888,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "ten" = (
 /obj/structure/bed{
 	pixel_x = 0;
@@ -22054,12 +22119,12 @@
 "tnX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "toi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "toC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -22162,7 +22227,7 @@
 /obj/structure/machinery/light,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet13_5,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "trY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -22174,7 +22239,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "tsy" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -22201,12 +22266,12 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "tuF" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /turf/open/floor/asteroidplating,
 /area/taipei/atrium/store)
 "tuI" = (
@@ -22246,7 +22311,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/west,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "tvQ" = (
 /obj/structure/platform{
 	dir = 1
@@ -22277,7 +22342,7 @@
 	pixel_x = -5
 	},
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "twU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -22501,10 +22566,10 @@
 	pixel_x = -5
 	},
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "tHU" = (
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "tIH" = (
 /obj/structure/surface/table,
 /obj/structure/window/reinforced,
@@ -22559,7 +22624,7 @@
 /obj/item/clothing/under/stripper/mankini,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "tMF" = (
 /obj/structure/platform/kutjevo/smooth{
 	luminosity = 15
@@ -22574,7 +22639,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "tMI" = (
 /obj/structure/toilet{
 	pixel_y = 12
@@ -22752,7 +22817,7 @@
 /obj/structure/closet/cabinet,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "tSZ" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -22819,7 +22884,7 @@
 	dir = 1
 	},
 /turf/open/floor/corsat/marked,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "tYp" = (
 /obj/structure/window/framed/corsat,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
@@ -22846,7 +22911,7 @@
 	dir = 8
 	},
 /turf/open/floor/prison/darkbrowncorners2/southwest,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "uaq" = (
 /turf/closed/wall/almayer,
 /area/taipei/atrium/offices)
@@ -22856,7 +22921,7 @@
 	dir = 8
 	},
 /turf/open/floor/carpet9_4/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "ubP" = (
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/kutjevo/tan,
@@ -23007,7 +23072,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "ujx" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -23200,7 +23265,7 @@
 	dir = 9
 	},
 /turf/open/floor/carpet13_5,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "upf" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -23307,7 +23372,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/kutjevo/fake_wood,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "utK" = (
 /obj/structure/surface/rack{
 	pixel_x = 4
@@ -23318,6 +23383,12 @@
 	},
 /turf/open/floor/bar,
 /area/taipei/atrium/store)
+"utQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/warning_cone,
+/turf/open/floor/plating/asteroidfloor,
+/area/taipei/maints/north)
 "utX" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
@@ -23365,7 +23436,7 @@
 	dir = 3
 	},
 /turf/closed/wall/almayer,
-/area/space)
+/area/taipei/theatre)
 "uwK" = (
 /obj/structure/platform/stair_cut/alt,
 /obj/structure/stairs/perspective{
@@ -23432,7 +23503,7 @@
 /obj/structure/machinery/camera,
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "uyN" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -23541,7 +23612,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "uGe" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -23591,7 +23662,7 @@
 "uIK" = (
 /obj/structure/window/reinforced,
 /turf/open/floor/prison/darkbrowncorners2/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "uIO" = (
 /obj/structure/surface/table,
 /obj/structure/window/reinforced{
@@ -23687,6 +23758,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/telecomms)
+"uQf" = (
+/obj/structure/surface/table,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	dir = 8;
+	light_power = .50
+	},
+/turf/open/floor/strata/faux_wood,
+/area/taipei/atrium/hotel)
 "uQW" = (
 /obj/structure/sign/safety/bathunisex,
 /turf/closed/wall/biodome,
@@ -23725,7 +23805,7 @@
 /area/taipei/maints/south)
 "uSc" = (
 /turf/open/floor/prison/darkred2,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "uSs" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
@@ -23882,7 +23962,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/prison/darkredcorners2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "vcZ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/bar,
@@ -23967,6 +24047,18 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor,
 /area/taipei/atrium/laundry)
+"vhw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/food/drinks/bottle/vodka{
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka{
+	pixel_x = -17;
+	pixel_y = 23
+	},
+/turf/open/floor/bar,
+/area/taipei/atrium/store)
 "vhM" = (
 /obj/structure/machinery/door/airlock/almayer/generic/autoname{
 	dir = 1
@@ -24028,6 +24120,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/maints/south)
+"vkA" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/asteroidfloor/north,
+/area/taipei/hangar)
 "vlp" = (
 /obj/structure/machinery/light/double{
 	dir = 4
@@ -24106,7 +24205,7 @@
 /obj/effect/decal/cleanable/vomit,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "vqo" = (
 /turf/closed/wall/r_wall/prison,
 /area/taipei/cmb)
@@ -24176,7 +24275,7 @@
 /turf/open/floor/prison/blue{
 	dir = 8
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "vtK" = (
 /obj/structure/platform{
 	layer = 2.7;
@@ -24198,7 +24297,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "vvv" = (
 /obj/structure/cargo_container/kelland/left{
 	pixel_x = 4;
@@ -24278,7 +24377,6 @@
 	dir = 6
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison,
 /area/taipei/maints/north)
 "vwH" = (
@@ -24289,7 +24387,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet11_12/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "vwX" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -24337,7 +24435,7 @@
 "vAE" = (
 /obj/item/spacecash/c20,
 /turf/open/floor/light/broken,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "vBq" = (
 /obj/structure/bed/chair/comfy/alpha{
 	dir = 1
@@ -24359,7 +24457,7 @@
 	light_power = .50
 	},
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "vBx" = (
 /obj/structure/machinery/light/blue{
 	dir = 4
@@ -24449,7 +24547,7 @@
 	dir = 1
 	},
 /turf/open/floor/corsat/marked,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "vDl" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -24484,6 +24582,8 @@
 	},
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
+"vEr" = (
+/turf/closed/wall/biodome)
 "vEU" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -24499,7 +24599,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "vFI" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
@@ -24510,7 +24610,7 @@
 "vGe" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkred2,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "vGr" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -24518,7 +24618,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "node"
 	},
-/obj/structure/machinery/power/apc/power/south,
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom{
 	dir = 4
 	},
@@ -24572,7 +24671,7 @@
 	light_power = .25
 	},
 /turf/open/floor/carpet11_12/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "vJq" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -24594,7 +24693,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom{
 	dir = 4
 	},
-/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/maints/north)
 "vKR" = (
@@ -24613,7 +24711,7 @@
 /obj/item/spacecash/c10,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "vME" = (
 /obj/structure/noticeboard{
 	pixel_y = 32
@@ -24824,7 +24922,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "vTd" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 8
@@ -24852,7 +24950,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/carpet13_5/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "vUm" = (
 /obj/structure/bed/chair/comfy/alpha{
 	dir = 8
@@ -24928,7 +25026,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "vZD" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/floor/corsat/marked,
@@ -24963,7 +25061,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "wbN" = (
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -24988,6 +25086,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/endcap_left/west,
 /area/taipei/hangar/cargoshuttle)
+"wcn" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/almayer,
+/area/taipei/atrium/hotel)
 "wcS" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -25134,6 +25236,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
 /area/taipei/atrium/restaurant)
+"wfD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/asteroidfloor/north,
+/area/taipei/hangar)
 "wfQ" = (
 /obj/structure/cargo_container/arious/rightmid,
 /obj/structure/prop/invuln/lattice_prop{
@@ -25269,7 +25376,7 @@
 	pixel_x = -5
 	},
 /turf/open/floor/prison/bluecorner/north,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "wkA" = (
 /obj/structure/phone_base{
 	dir = 1
@@ -25280,7 +25387,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/chem_dispenser/soda,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "wly" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -25423,7 +25530,7 @@
 "wuw" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet14_10/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "wuF" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -25447,7 +25554,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "wwD" = (
 /obj/structure/platform/kutjevo/smooth{
 	luminosity = 15
@@ -25465,7 +25572,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "wxB" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -25526,7 +25633,7 @@
 /area/taipei/hangar/cargoshuttle)
 "wAj" = (
 /turf/open/floor/prison/darkredcorners2/east,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "wAm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -25639,7 +25746,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "wFN" = (
 /obj/structure/stairs/perspective{
 	dir = 8
@@ -25725,7 +25832,7 @@
 /obj/structure/machinery/chem_dispenser/soda,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "wJI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -25868,7 +25975,7 @@
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkredcorners2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "wUA" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/alt_edge/northwest,
@@ -25898,7 +26005,7 @@
 "wVX" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "wWa" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -25912,7 +26019,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "wWp" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -25950,7 +26057,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet11_12/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "wXh" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -26014,6 +26121,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
+"wYE" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/open,
+/turf/open/floor/kutjevo,
+/area/taipei/atrium/medbay)
 "wZw" = (
 /obj/item/spacecash/c10{
 	pixel_y = 4;
@@ -26021,7 +26132,7 @@
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "wZZ" = (
 /obj/structure/bed/sofa/vert/white/bot,
 /turf/open/floor/plating/asteroidfloor,
@@ -26065,12 +26176,12 @@
 "xaP" = (
 /obj/structure/curtain/red,
 /turf/open/floor/carpet7_3/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "xbd" = (
 /obj/structure/pipes/vents/scrubber,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "xck" = (
 /obj/structure/machinery/door/window/brigdoor/southleft,
 /obj/effect/decal/cleanable/dirt,
@@ -26116,7 +26227,7 @@
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "xeN" = (
 /obj/structure/machinery/door/poddoor/almayer/locked,
 /obj/structure/blocker/forcefield/human,
@@ -26169,7 +26280,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/cigbutt/ucigbutt,
 /turf/open/floor/prison/blue/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "xgS" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -26228,7 +26339,7 @@
 "xiK" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/southwest,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "xiT" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -26285,7 +26396,7 @@
 "xjG" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/light/broken,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "xjW" = (
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
@@ -26317,9 +26428,7 @@
 /turf/open/floor/kutjevo/colors/red/edge,
 /area/taipei/cmb)
 "xlJ" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Underground Visitor Entrance"
-	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/floor/whitered{
 	dir = 1
@@ -26383,7 +26492,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "xou" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -26455,7 +26564,7 @@
 /obj/item/trash/cigbutt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/east,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "xrQ" = (
 /obj/structure/surface/table,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -26472,7 +26581,7 @@
 "xsp" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/prison/darkbrowncorners2/southwest,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "xsr" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
@@ -26498,7 +26607,7 @@
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /turf/open/floor/carpet15_15/west,
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "xtP" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -26525,7 +26634,7 @@
 "xuJ" = (
 /obj/structure/sign/poster/blacklight,
 /turf/closed/wall/almayer,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "xvJ" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -26564,7 +26673,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "xwt" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
@@ -26792,7 +26901,7 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "xDs" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -26925,6 +27034,7 @@
 /area/taipei/maints/north)
 "xJD" = (
 /obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /turf/open/floor/kutjevo/tan,
 /area/taipei/atrium/offices)
 "xJK" = (
@@ -27009,7 +27119,7 @@
 	dir = 8
 	},
 /turf/open/floor/prison/darkredcorners2/north,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "xOK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair{
@@ -27395,7 +27505,7 @@
 	dir = 8
 	},
 /turf/open/floor/prison/bluecorner,
-/area/taipei/atrium/club)
+/area/taipei/club)
 "yfC" = (
 /obj/structure/pipes/vents,
 /obj/effect/decal/cleanable/dirt,
@@ -27457,7 +27567,7 @@
 	dir = 8
 	},
 /turf/open/floor/carpet5_1/west,
-/area/taipei/atrium/theatre)
+/area/taipei/theatre)
 "yiF" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -27485,10 +27595,9 @@
 "yjz" = (
 /obj/item/spacecash/c20,
 /turf/open/floor/light{
-	light_color = #00008B;
-	light_power = .5
+	light_color = "#38a9fd"
 	},
-/area/taipei/atrium/club)
+/area/taipei/club)
 "yjJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -35532,7 +35641,7 @@ fdU
 fnB
 fnB
 xJD
-bej
+kEu
 kzi
 kzi
 cEr
@@ -35957,7 +36066,7 @@ kRV
 vSl
 mTi
 bXl
-gCt
+wYE
 sdS
 wrB
 nCN
@@ -36138,7 +36247,7 @@ cuq
 cKu
 uaq
 uaq
-bej
+kEu
 bej
 bej
 cEr
@@ -39156,7 +39265,7 @@ iQr
 lGZ
 lRT
 aqL
-hrp
+xBP
 vQx
 uvp
 wuF
@@ -39402,7 +39511,7 @@ fnG
 mBI
 vim
 dtY
-jvg
+lEC
 bzQ
 dvy
 bzQ
@@ -40348,7 +40457,7 @@ wJp
 tau
 hKJ
 gje
-vUH
+utQ
 vQx
 vQx
 aNh
@@ -40751,7 +40860,7 @@ wJp
 wJp
 xeN
 blu
-wBC
+jTh
 vQx
 jOE
 bNd
@@ -41144,7 +41253,7 @@ bkG
 cGF
 cHI
 equ
-njf
+seS
 ehP
 sCY
 kYI
@@ -41827,14 +41936,14 @@ sjQ
 sjQ
 kmf
 sjQ
-tuY
-tuY
-tuY
-tuY
-tuY
-tuY
-tuY
-tuY
+bwE
+bwE
+bwE
+bwE
+bwE
+bwE
+bwE
+bwE
 uwC
 kQD
 bEU
@@ -41957,8 +42066,8 @@ qjY
 kYI
 yhR
 yhR
-tuY
-tuY
+oEr
+oEr
 aqL
 aqL
 aqL
@@ -42225,7 +42334,7 @@ ejY
 cEB
 jIA
 hDM
-utK
+nkF
 aKV
 gbt
 lgm
@@ -42428,7 +42537,7 @@ cEB
 ryw
 kRY
 gHA
-cEB
+mfA
 pic
 aej
 uoV
@@ -42629,7 +42738,7 @@ vcZ
 cEB
 cEB
 hDM
-vcZ
+vhw
 vcZ
 gbt
 kJO
@@ -43053,7 +43162,7 @@ dbC
 uot
 doI
 uot
-fzp
+jxb
 qgs
 rrU
 lQJ
@@ -44448,7 +44557,7 @@ qqj
 cEB
 jeM
 xiV
-gbt
+ttc
 gbt
 wuw
 try
@@ -44650,7 +44759,7 @@ ttc
 ttc
 ttc
 ttc
-gbt
+ttc
 gbt
 wuw
 ixH
@@ -46412,7 +46521,7 @@ vQx
 jOE
 nOk
 xDs
-aqL
+bVs
 bVs
 bVs
 bVs
@@ -46614,7 +46723,7 @@ vQx
 jOE
 amB
 xDs
-aqL
+bVs
 qJh
 iif
 bJY
@@ -46685,7 +46794,7 @@ mgb
 cUe
 rrE
 xYs
-cUh
+mpN
 uot
 doI
 uot
@@ -46816,7 +46925,7 @@ alr
 jEe
 qSj
 pnr
-lGZ
+pbd
 liI
 qNy
 rqN
@@ -47018,7 +47127,7 @@ vQx
 jrf
 amB
 foW
-aqL
+bVs
 deH
 eNX
 iPe
@@ -47074,20 +47183,20 @@ tuY
 tuY
 tuY
 tuY
-gbt
+vEr
 sjQ
 sjQ
 joa
 sjQ
-tuY
-tuY
-tuY
-tuY
-tuY
-tuY
-tuY
-tuY
-tuY
+bwE
+bwE
+bwE
+bwE
+bwE
+bwE
+bwE
+bwE
+bwE
 uot
 iaN
 uot
@@ -47220,7 +47329,7 @@ vQx
 lng
 amB
 xDs
-aqL
+bVs
 bVs
 bVs
 bVs
@@ -48230,7 +48339,7 @@ vQx
 jOE
 amB
 lmv
-aqL
+bVs
 bVs
 bVs
 bVs
@@ -49302,10 +49411,10 @@ aOi
 gKn
 gKn
 hDR
-ogc
+jvg
 ces
 eZE
-jZK
+uQf
 hYm
 iJD
 iJD
@@ -49646,7 +49755,7 @@ tcp
 sjh
 sjh
 bFJ
-sjh
+kZf
 xKO
 rdf
 bFJ
@@ -49916,7 +50025,7 @@ gKn
 gKn
 lfa
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -50049,7 +50158,7 @@ fDw
 vbr
 mDD
 mDD
-mDD
+hAl
 mDD
 mDD
 ook
@@ -50118,7 +50227,7 @@ gKn
 gKn
 xpT
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -50320,7 +50429,7 @@ eoO
 jZK
 iJD
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -50521,8 +50630,8 @@ eoO
 gKn
 ogc
 iJD
-ltx
-ltx
+qky
+qky
 iQr
 iQr
 iQr
@@ -50719,11 +50828,11 @@ hDR
 hsj
 hYm
 eZE
-ogc
+cUh
 ces
 iJD
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -50924,8 +51033,8 @@ iJD
 bwz
 bwz
 iJD
-ltx
-ltx
+qky
+qky
 iQr
 iQr
 iQr
@@ -51125,8 +51234,8 @@ dov
 kin
 koZ
 iJD
-ltx
-ltx
+qky
+qky
 iQr
 iQr
 iQr
@@ -51327,7 +51436,7 @@ aQg
 bwz
 fWG
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -51529,7 +51638,7 @@ iJD
 iJD
 iJD
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -51731,7 +51840,7 @@ dov
 fql
 koZ
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -51933,7 +52042,7 @@ mnA
 bwz
 xBS
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -52135,7 +52244,7 @@ bwz
 iJD
 bwz
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -52337,7 +52446,7 @@ dov
 kin
 koZ
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -52539,7 +52648,7 @@ mnA
 bwz
 bGo
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -52741,7 +52850,7 @@ vgg
 bwz
 iJD
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -52943,7 +53052,7 @@ dov
 fql
 aON
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -53145,7 +53254,7 @@ tgu
 iJD
 bGo
 bwz
-ltx
+qky
 iQr
 iQr
 iQr
@@ -53347,7 +53456,7 @@ vgg
 iJD
 bwz
 bwz
-tyZ
+wcn
 iQr
 iQr
 iQr
@@ -53549,7 +53658,7 @@ iLJ
 kin
 knT
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -53751,7 +53860,7 @@ tgu
 bwz
 bGo
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -53953,7 +54062,7 @@ iJD
 bwz
 bwz
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -54155,7 +54264,7 @@ dov
 kin
 koZ
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -54357,7 +54466,7 @@ aQg
 bwz
 fWG
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -54559,7 +54668,7 @@ bwz
 iJD
 iJD
 iJD
-ltx
+qky
 iQr
 iQr
 iQr
@@ -55731,7 +55840,7 @@ iQr
 iQr
 iQr
 aqL
-kEu
+hsW
 gvH
 oty
 nZf
@@ -55753,7 +55862,7 @@ igm
 nWK
 huQ
 bbQ
-seS
+iXI
 uot
 iQr
 iQr
@@ -57362,7 +57471,7 @@ tPV
 cOS
 tPV
 emO
-qtT
+dxT
 nGI
 mpX
 qtT
@@ -60134,7 +60243,7 @@ apD
 apD
 apD
 pew
-aof
+cPE
 xKG
 rqJ
 dNF
@@ -61588,7 +61697,7 @@ rqJ
 rqJ
 sgE
 fLE
-nvl
+hrp
 pCy
 nvl
 mpR
@@ -61782,7 +61891,7 @@ pOq
 flb
 krw
 itE
-qoj
+vkA
 xKG
 rqJ
 rqJ
@@ -62592,7 +62701,7 @@ mPE
 dqM
 shQ
 xKG
-rqJ
+wfD
 rqJ
 aof
 rqJ
