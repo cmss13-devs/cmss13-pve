@@ -702,10 +702,6 @@
 /obj/structure/machinery/disposal,
 /turf/open/floor/corsat/retrosquareslight,
 /area/LV670/inside)
-"dN" = (
-/turf/open/desert/riverbed,
-/turf/open/desert/riverbed,
-/area/LV670/outside)
 "dP" = (
 /obj/item/device/flashlight/lantern,
 /turf/open/floor/wood,
@@ -1386,7 +1382,6 @@
 /turf/open/desert/dirt/dirt2,
 /area/LV670/outside)
 "hG" = (
-/obj/structure/surface/table/almayer,
 /obj/structure/surface/table/almayer,
 /obj/item/tool/pen,
 /obj/item/paper_bin,
@@ -3513,19 +3508,8 @@
 /area/LV670/inside)
 "sQ" = (
 /obj/structure/surface/table/woodentable,
-/obj/structure/surface/table/woodentable,
-/obj/structure/surface/table/woodentable,
 /obj/item/ashtray/bronze,
 /turf/open/floor/wood,
-/area/LV670/inside)
-"sR" = (
-/obj/structure/machinery/landinglight/ds2/delaytwo{
-	dir = 1
-	},
-/obj/structure/machinery/landinglight/ds2/delaytwo{
-	dir = 1
-	},
-/turf/open/floor/corsat/squares,
 /area/LV670/inside)
 "sS" = (
 /obj/structure/surface/table/almayer,
@@ -4607,7 +4591,6 @@
 /area/LV670/inside)
 "yk" = (
 /obj/structure/machinery/recharge_station,
-/obj/structure/machinery/recharge_station,
 /turf/open/floor/corsat/brown/northwest,
 /area/LV670/inside)
 "yl" = (
@@ -4896,11 +4879,6 @@
 /obj/structure/surface/rack,
 /obj/structure/machinery/light,
 /turf/open/floor/corsat/purplewhite,
-/area/LV670/inside)
-"zZ" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/structure/surface/table/woodentable/fancy,
-/turf/open/floor/wood,
 /area/LV670/inside)
 "Aa" = (
 /obj/structure/machinery/shower{
@@ -17880,7 +17858,7 @@ Cb
 gO
 Pt
 Pt
-dN
+Pt
 Pt
 Pt
 Pt
@@ -19090,7 +19068,7 @@ cd
 cd
 cd
 Wn
-sR
+Dr
 yL
 dv
 HP
@@ -19772,7 +19750,7 @@ Pt
 uv
 yH
 yH
-zZ
+KW
 BK
 yH
 yH
