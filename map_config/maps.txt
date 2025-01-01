@@ -71,3 +71,6 @@ endmap
 
 map whiskey_outpost_v2
 endmap
+
+map lv670_raijin_springs
+endmap

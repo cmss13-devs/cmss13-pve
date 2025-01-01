@@ -145,6 +145,12 @@
 	html_link = "images/5/54/USS_Almayer.png"
 	color = "cyan"
 
+/obj/item/map/lv670_map
+	name = "\improper LV-670 Map"
+	desc = "A blueprint detailing the layout of a Wey-Yu facility."
+	html_link = ""
+	color: "red"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -167,6 +173,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
+		MAP_LV670_RAIJIN_SPRINGS = new /obj/item/map/lv670_map(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
