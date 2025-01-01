@@ -1010,7 +1010,7 @@
 	languages = list(LANGUAGE_ENGLISH)
 	assignment = JOB_WY_GOON
 	rank = JOB_WY_GOON
-	paygrade = "WEY-GOON"
+//	paygrade = "WEY-GOON"
 
 /datum/equipment_preset/corpse/pmc/hybrisa_goon/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/WY, WEAR_L_EAR)
@@ -1042,7 +1042,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_WY_GOON_LEAD
 	rank = JOB_WY_GOON_LEAD
-	paygrade = "WEY-GOON-L"
+//	paygrade = "WEY-GOON-L"
 
 /datum/equipment_preset/corpse/pmc/hybrisa_goon/lead/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/WY, WEAR_L_EAR)
@@ -1284,7 +1284,7 @@
 
 	name = "Corpse - CMB Police Officer"
 	assignment = "CMB Affiliated Officer"
-	paygrade = "GS-9"
+//	paygrade = "GS-9"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	idtype = /obj/item/card/id/deputy
 
@@ -1293,7 +1293,7 @@
 	var/choice = rand(1,10)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/cmb_officer, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/sec, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/handcuffs, WEAR_IN_BACK)
+//	new_human.equip_to_slot_or_del(new /obj/item/handcuffs, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/full, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud/blue, WEAR_EYES)

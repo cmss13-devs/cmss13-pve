@@ -328,7 +328,7 @@
 	name = "Survivor - Hybrisa - CMB Police Officer"
 	assignment = "CMB Affiliated Officer"
 	role_comm_title = "CMB DEP"
-	paygrade = "GS-9"
+//	paygrade = "GS-9"
 	skills = /datum/skills/civilian/survivor/marshal
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	idtype = /obj/item/card/id/deputy
@@ -341,7 +341,7 @@
 	var/choice = rand(1,10)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/cmb_officer, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/sec, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/handcuffs, WEAR_IN_BACK)
+//	new_human.equip_to_slot_or_del(new /obj/item/handcuffs, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/full, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud/blue, WEAR_EYES)
@@ -434,7 +434,7 @@
 	name = "Survivor - Hybrisa - Emergency Medical Technician - Paramedic"
 	assignment = "Emergency Medical Technician - Paramedic"
 	role_comm_title = "PARA"
-	paygrade = "CPARA"
+//	paygrade = "CPARA"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	assignment = "EMT - Paramedic"
 	skills = /datum/skills/civilian/survivor/paramedic
@@ -765,7 +765,7 @@
 	rank = JOB_EXECUTIVE
 	skills = /datum/skills/civilian/survivor
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
-	paygrade = "WYC3"
+//	paygrade = "WYC3"
 	faction_group = list(FACTION_WY, FACTION_SURVIVOR)
 	idtype = /obj/item/card/id/silver/clearance_badge/cl
 	access = list(ACCESS_CIVILIAN_PUBLIC,ACCESS_CIVILIAN_COMMAND,ACCESS_WY_GENERAL,ACCESS_WY_COLONIAL,ACCESS_WY_EXEC,)
@@ -905,7 +905,7 @@
 	assignment = "Weyland-Yutani - Commercial Pilot"
 	skills = /datum/skills/civilian/survivor/wy_pilot
 	role_comm_title = "WY-PO"
-	paygrade = "WYPO2"
+//	paygrade = "WYPO2"
 	faction_group = list(FACTION_WY, FACTION_SURVIVOR)
 	idtype = /obj/item/card/id/captains_spare
 	flags = EQUIPMENT_PRESET_START_OF_ROUND

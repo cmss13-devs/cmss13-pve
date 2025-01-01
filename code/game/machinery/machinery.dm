@@ -91,7 +91,7 @@ Class Procs:
 //  IDLE -- machine is using power at its idle power level
 //  ACTIVE -- machine is using power at its active power level
 
-GLOBAL_LIST_EMPTY(machines)
+//GLOBAL_LIST_EMPTY(machines)
 
 /obj/structure/machinery
 	name = "machinery"
@@ -146,7 +146,7 @@ GLOBAL_LIST_EMPTY(machines)
 	if(A)
 		A.remove_machine(src) //takes care of removing machine from power usage
 	if(breaker_switch)
-		breaker_switch.machinery_list -= src
+//		breaker_switch.machinery_list -= src
 		breaker_switch = null
 	. = ..()
 
@@ -385,7 +385,7 @@ GLOBAL_LIST_EMPTY(machines)
 	unslashable = TRUE
 	unacidable = TRUE
 	wrenchable = FALSE
-	
+
 /obj/structure/machinery/fuelpump/ex_act(severity)
 	return
 

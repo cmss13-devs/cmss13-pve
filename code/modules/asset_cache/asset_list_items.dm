@@ -398,7 +398,7 @@
 		qdel(temp_gun)
 		if(icon_state && isnull(sprites[icon_state]))
 			// downgrade this to a log_debug if we don't want missing lineart to be a lint
-			stack_trace("[current_gun] does not have a valid lineart icon state, icon=[icon_file], icon_state=[json_encode(icon_state)]")
+			log_debug("[current_gun] does not have a valid lineart icon state, icon=[icon_file], icon_state=[json_encode(icon_state)]")
 
 	..()
 

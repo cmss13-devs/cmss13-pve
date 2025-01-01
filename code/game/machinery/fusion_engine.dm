@@ -21,7 +21,7 @@
 	throwpass = FALSE
 
 	///Whether the reactor is functional
-	var/is_on = TRUE
+//	var/is_on = TRUE
 	///Whether the reactor is on the ship
 	var/is_ship_reactor = FALSE
 	///If the generator is overloaded
