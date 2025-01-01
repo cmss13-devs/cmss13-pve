@@ -18,3 +18,10 @@
 	icon_state = "blue"
 	ceiling = "CEILING_METAL"
 	minimap_color = MINIMAP_AREA_COLONY
+
+/area/LV670/landing_zone
+	icon_state = "red"
+	ceiling = "CEILING_NONE"
+	is_resin_allowed = FALSE
+	is_landing_zone = TRUE
+	minimap_color = MINIMAP_AREA_LZ
