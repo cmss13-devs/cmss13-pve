@@ -116,6 +116,10 @@
 				border_rk = "command"
 			if(JOB_CHIEF_REQUISITION)
 				marine_rk = "ro"
+			if(JOB_CARGO_CHIEF)
+				marine_rk = "cc"
+			if(JOB_ARMORER)
+				marine_rk = "armrr"
 			if(JOB_CARGO_TECH)
 				marine_rk = "ct"
 			if(JOB_CHIEF_ENGINEER)

@@ -408,7 +408,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/qm
-	name = "USCM Quartermaster (QM)"
+	name = "USCM Logistics Officer"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	idtype = /obj/item/card/id/dogtag
@@ -424,15 +424,14 @@
 	)
 	assignment = JOB_CHIEF_REQUISITION
 	rank = JOB_CHIEF_REQUISITION
-	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_3)
-	role_comm_title = "QM"
-	minimum_age = 27
+	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_1)
+	role_comm_title = "Logi. Off."
 	skills = /datum/skills/RO
 
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 	minimap_icon = list("ct" = MINIMAP_ICON_COLOR_HEAD)
 
-	utility_under = list(/obj/item/clothing/under/rank/qm_suit)
+	utility_under = list(/obj/item/clothing/under/marine/officer/qm_suit)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
@@ -446,9 +445,9 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/qm_suit(new_human), WEAR_BODY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/service/aso(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/RO(new_human), WEAR_JACKET)
 	//waist
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
@@ -457,18 +456,39 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
 
+/datum/equipment_preset/uscm_ship/qm/lesser_rank
+	name = "USCM Logistics Chief"
+	paygrades = list(PAY_SHORT_MW2 = JOB_PLAYTIME_TIER_0)
+	assignment = JOB_CARGO_CHIEF
+	rank = JOB_CARGO_CHIEF
+	role_comm_title = "Logi. Chief"
+
+/datum/equipment_preset/uscm_ship/qm/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/cargo(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/service(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/cargo
-	name = "USCM Cargo Technician (CT)"
+	name = "USCM Logistics Specialist"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
 
 	access = list(ACCESS_MARINE_CARGO)
 	assignment = JOB_CARGO_TECH
 	rank = JOB_CARGO_TECH
-	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_3)
-	role_comm_title = "CT"
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Logi. Spec."
 	skills = /datum/skills/CT
 
 	minimap_icon = "ct"
@@ -488,7 +508,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/cargo(new_human), WEAR_BODY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest(new_human), WEAR_JACKET)
 	//waist
@@ -499,6 +519,40 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/uscm_ship/armorer
+	name = "USCM Armorer"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	idtype = /obj/item/card/id/dogtag
+
+	access = list(ACCESS_MARINE_CARGO)
+	assignment = JOB_ARMORER
+	rank = JOB_ARMORER
+	paygrades = list(PAY_SHORT_MW1 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Armorer"
+	skills = /datum/skills/armorer
+
+/datum/equipment_preset/uscm_ship/armorer/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/cargo(new_human), WEAR_BODY)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3/custom(new_human), WEAR_IN_R_STORE)
 
 //*****************************************************************************************************/
 

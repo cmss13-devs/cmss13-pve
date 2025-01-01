@@ -47,6 +47,13 @@
 	entry_message_body = "You're part of the elite 7th Para-Rescue Battalion, equipped with high-end kit and the skills to drop feet first into hell from the back of dropships and help allied units in great need of assistance. Hoo-yah!"
 	return ..()
 
+//USASF Officers
+
+/datum/job/seaman/pilot
+	title = JOB_NAVY_PILOT
+	gear_preset = /datum/equipment_preset/usasf/pilot
+	gear_preset_secondary = /datum/equipment_preset/usasf/pilot/lesser_rank
+
 /datum/job/seaman/jtac
 	title = JOB_NAVY_JTAC
 	gear_preset = /datum/equipment_preset/usasf/jtac

@@ -6,7 +6,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	///Gives the sailors their radios
 	var/headset_type = /obj/item/device/radio/headset/distress/USASF
-	idtype = /obj/item/card/id/dogtag
+	idtype = /obj/item/card/id/ //Shipboard duties & loose-hanging items do NOT mix
 
 /datum/equipment_preset/usasf/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE,40;FEMALE)
@@ -171,6 +171,7 @@
 	role_comm_title = "ParaTech"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/para_tech
+	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/usasf/helljumper/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command/attache, WEAR_L_EAR)
@@ -207,6 +208,7 @@
 	role_comm_title = "JFO"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/jtac
+	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/usasf/jtac/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command/attache, WEAR_L_EAR)
@@ -237,6 +239,43 @@
 /datum/equipment_preset/usasf/jtac/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_NE9 = JOB_PLAYTIME_TIER_0)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/usasf/pilot
+	name = "USASF Pilot"
+	assignment = JOB_NAVY_PILOT
+	rank = JOB_NAVY_PILOT
+	paygrades = list(PAY_SHORT_NO1)
+	role_comm_title = "Pilot"
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/navypilot
+	idtype = /obj/item/card/id/dogtag
+
+/datum/equipment_preset/usasf/pilot/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat/navy, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_BELT)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/parachute, WEAR_BACK)
+
+/datum/equipment_preset/usasf/pilot/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_NW1 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 

@@ -39,6 +39,10 @@
 	title = JOB_ARMY_MT
 	gear_preset = /datum/equipment_preset/usa/mainttech
 
+/datum/job/trooper/cargotech
+	title = JOB_ARMY_CT
+	gear_preset = /datum/equipment_preset/usa/cargotech
+
 /datum/job/trooper/medic
 	title = JOB_ARMY_MEDIC
 	gear_preset = /datum/equipment_preset/usa/medic
@@ -51,6 +55,8 @@
 	title = JOB_ARMY_SNCO
 	gear_preset = /datum/equipment_preset/usa/snco
 	gear_preset_secondary = /datum/equipment_preset/usa/snco/lesser_rank
+
+//Army Officers
 
 /datum/job/trooper/lt
 	title = JOB_ARMY_LT
@@ -66,3 +72,7 @@
 	title = JOB_ARMY_RESEARCHER
 	gear_preset = /datum/equipment_preset/usa/researcher
 	gear_preset_secondary = /datum/equipment_preset/usa/researcher/lesser_rank
+
+/datum/job/trooper/cargoofficer
+	title = JOB_ARMY_QM
+	gear_preset = /datum/equipment_preset/usa/cargoofficer

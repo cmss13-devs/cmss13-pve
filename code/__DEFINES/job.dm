@@ -117,8 +117,10 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_ENGINEER_ROLES   /datum/timelock/engineer
 #define JOB_ENGINEER_ROLES_LIST  list(JOB_SQUAD_ENGI, JOB_MAINT_TECH, JOB_ORDNANCE_TECH, JOB_CHIEF_ENGINEER)
 
-#define JOB_CHIEF_REQUISITION "Quartermaster"
-#define JOB_CARGO_TECH "Cargo Technician"
+#define JOB_CHIEF_REQUISITION "Logistics Officer"
+#define JOB_CARGO_CHIEF "Logistics Chief"
+#define JOB_ARMORER "Armorer"
+#define JOB_CARGO_TECH "Logistics Specialist"
 #define JOB_REQUISITION_ROLES    /datum/timelock/requisition
 #define JOB_REQUISITION_ROLES_LIST   list(JOB_CHIEF_REQUISITION, JOB_CARGO_TECH)
 
@@ -202,12 +204,14 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_ARMY_ATFIRE "Army AT Gunner"
 #define JOB_ARMY_ENGI "Army Combat Engineering Technician"
 #define JOB_ARMY_MT "Army Technical Engineer"
+#define JOB_ARMY_CT "Army Logistics Specialist"
 #define JOB_ARMY_MEDIC "Army Combat Medical Technician"
 #define JOB_ARMY_NCO "Army Fireteam Lead"
 #define JOB_ARMY_SNCO "Army Squad Leader"
 #define JOB_ARMY_LT "Army Lieutenant"
 #define JOB_ARMY_INTEL "Army Intelligence Officer"
 #define JOB_ARMY_RESEARCHER "Army Science Officer"
+#define JOB_ARMY_QM "Army Logistics Officer"
 
 //-------- USASF --------//
 #define JOB_NAVY_CREWMAN "USASF Crewman"
@@ -217,6 +221,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_NAVY_JTAC "USASF Orbital Fire-Support Liason Officer"
 #define JOB_NAVY_PARA_TECH "USASF Para-Rescue Support Technician"
 #define JOB_NAVY_SYNTH "USASF Support Synthetic"
+#define JOB_NAVY_PILOT "USASF Pilot"
 #define JOB_NAVY_CHIEF_ENGINEER "USASF Engineering Duty Officer"
 #define JOB_NAVY_FLIGHT_BOSS "USASF Flight-Deck Officer"
 #define JOB_NAVY_SO "USASF Duty Officer"

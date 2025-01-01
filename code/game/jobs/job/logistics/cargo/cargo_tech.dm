@@ -29,3 +29,11 @@
 	name = JOB_CARGO_TECH
 	icon_state = "ct_spawn"
 	job = /datum/job/logistics/cargo
+
+/datum/job/logistics/chief
+	title = JOB_CARGO_CHIEF
+	gear_preset = /datum/equipment_preset/uscm_ship/qm/lesser_rank
+
+/datum/job/logistics/armorer
+	title = JOB_ARMORER
+	gear_preset = /datum/equipment_preset/uscm_ship/armorer

@@ -349,6 +349,35 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool, WEAR_IN_BACK)
 
 
+/datum/equipment_preset/usa/cargotech
+	name = "Army Logistics Supply Specialist"
+	assignment = JOB_ARMY_CT
+	rank = JOB_ARMY_CT
+	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Logi. Spec."
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/cargotech
+
+/datum/equipment_preset/usa/cargotech/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/cargo, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/yellow, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)
+
+
 /datum/equipment_preset/usa/medic
 	name = "Army Combat Medical Technician"
 	assignment = JOB_ARMY_MEDIC
@@ -582,3 +611,30 @@
 	paygrades = list(PAY_SHORT_AO2 = JOB_PLAYTIME_TIER_0)
 
 
+/datum/equipment_preset/usa/cargoofficer
+	name = "Army Logistics Supply Officer"
+	assignment = JOB_ARMY_QM
+	rank = JOB_ARMY_QM
+	paygrades = list(PAY_SHORT_AO2 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Logi. Off."
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/cargoofficer
+
+/datum/equipment_preset/usa/cargoofficer/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/qm_suit, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/blue, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)
