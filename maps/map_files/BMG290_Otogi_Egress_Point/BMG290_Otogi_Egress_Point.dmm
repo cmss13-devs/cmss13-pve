@@ -31,7 +31,6 @@
 	req_one_access_txt = "91;92";
 	req_access = null
 	},
-/obj/structure/blocker/invisible_wall,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/plating/icefloor,
 /area/bmg290/colony_interior/logistics_hub)
@@ -64,6 +63,12 @@
 /obj/structure/barricade/handrail,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/maintenance_hall)
+"act" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/bmg290/caverns/ridgeline)
 "acv" = (
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns_weakened/mining_area)
@@ -146,11 +151,13 @@
 "aew" = (
 /obj/structure/closet{
 	pixel_x = -8;
-	pixel_y = -2
+	pixel_y = -2;
+	can_be_stacked = 1
 	},
 /obj/structure/closet{
 	pixel_x = 8;
-	pixel_y = -2
+	pixel_y = -2;
+	can_be_stacked = 1
 	},
 /turf/open/floor/prison/green/southwest,
 /area/bmg290/colony_interior/main_complex)
@@ -159,7 +166,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -181,6 +188,13 @@
 	},
 /turf/open/floor/grey_dark2,
 /area/bmg290/keppitz_exterior/research_camp)
+"aeN" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "afe" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -189,13 +203,20 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/turbine)
 "afi" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
@@ -214,6 +235,12 @@
 "afJ" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/bmg290/caverns/halls)
+"agd" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/colony_interior/filtration_station)
 "agh" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/bmg290/keppitz_interior_b/cargo_area)
@@ -228,6 +255,12 @@
 "agm" = (
 /turf/open/floor/prison/darkpurple2,
 /area/bmg290/keppitz_exterior/research_camp)
+"agp" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "agv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster{
@@ -385,12 +418,16 @@
 /turf/open/gm/dirtgrassborder/desert2,
 /area/bmg290/relay_exterior/beach_bar)
 "ajQ" = (
-/obj/structure/prop/structure_lattice{
-	dir = 1;
-	health = 300
-	},
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
+	},
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
+	layer = 3.2;
+	name = "Television set";
+	network = null;
+	pixel_x = 0;
+	pixel_y = 27
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/bmg290/colony_interior/bar)
@@ -588,6 +625,16 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bmg290/relay_exterior/outskirts_road)
+"ant" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/machinery/portable_atmospherics/hydroponics{
+	draw_warnings = 0;
+	health = null;
+	indestructible = 1;
+	unacidable = 1
+	},
+/turf/open/asphalt/cement/cement4,
+/area/bmg290/relay_exterior/colony_nw)
 "anQ" = (
 /obj/structure/platform{
 	dir = 1
@@ -679,6 +726,9 @@
 "apN" = (
 /turf/open/gm/dirt,
 /area/bmg290/oob/ocean)
+"apR" = (
+/turf/closed/wall/shiva/prefabricated/red,
+/area/bmg290/caverns/halls)
 "apW" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 10
@@ -963,8 +1013,20 @@
 /area/bmg290/colony_interior/logistics_hub)
 "axx" = (
 /obj/structure/platform/kutjevo,
+/obj/structure/machinery/portable_atmospherics/hydroponics{
+	draw_warnings = 0;
+	health = null;
+	indestructible = 1;
+	unacidable = 1
+	},
 /turf/open/asphalt/cement/cement2,
 /area/bmg290/relay_exterior/colony_nw)
+"axz" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/ridgeline)
 "axA" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 9
@@ -980,6 +1042,23 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior/entry_hall)
+"axX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate{
+	pixel_x = -8;
+	pixel_y = 15
+	},
+/turf/open/asphalt/cement/cement3,
+/area/bmg290/relay_interior/cargo_hall_transfer)
+"axZ" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "aye" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 9
@@ -1053,7 +1132,7 @@
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/beach_roadside)
 "azV" = (
-/obj/structure/machinery/door/airlock/glass/colony,
+/obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/chapel)
 "azX" = (
@@ -1545,7 +1624,6 @@
 /turf/open/floor/prison,
 /area/bmg290/relay_exterior/colony_ne)
 "aLK" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
 	climb_delay = 1;
@@ -1554,6 +1632,14 @@
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/disposals)
@@ -1663,13 +1749,20 @@
 /turf/open/floor/vault,
 /area/bmg290/relay_exterior/colony_nw)
 "aOQ" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/entry_hall)
@@ -1768,6 +1861,9 @@
 	dir = 8
 	},
 /obj/structure/barricade/handrail/strata,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/caverns/filtration_tunnel)
 "aRk" = (
@@ -1802,6 +1898,12 @@
 	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns/halls)
+"aRI" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "aRO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/constructable_frame,
@@ -1816,7 +1918,6 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
 	climb_delay = 1;
@@ -1824,6 +1925,14 @@
 	},
 /obj/structure/prop/almayer/cannon_cables{
 	name = "\improper Cables"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
@@ -1851,6 +1960,13 @@
 	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns_weakened/filtration_perimeter)
+"aSN" = (
+/obj/structure/tunnel/maint_tunnel{
+	pixel_y = 6
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "aTH" = (
 /obj/structure/machinery/vending/sovietsoda{
 	icon_state = "sovietsoda-broken";
@@ -1942,6 +2058,12 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/relay_interior_b/relay_courtyard_cargo)
+"aWw" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/bmg290/caverns/ridgeline)
 "aWX" = (
 /obj/structure/platform/kutjevo/smooth{
 	climb_delay = 1;
@@ -2013,7 +2135,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -2179,6 +2301,15 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/main_complex)
+"bat" = (
+/obj/structure/barricade/metal{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/coagulation/icon0_5,
+/area/bmg290/caverns/filtration_tunnel)
 "baC" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -2232,13 +2363,20 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
@@ -2409,10 +2547,17 @@
 /turf/open/floor/asteroid,
 /area/bmg290/relay_exterior/colony_center)
 "beR" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/disposals)
@@ -2636,7 +2781,6 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
@@ -2650,6 +2794,14 @@
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
@@ -2798,7 +2950,7 @@
 /area/bmg290/relay_interior_b/beach_house_clean)
 "blv" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
-	color = 666699
+	color = "#424a50"
 	},
 /turf/open/floor/cult,
 /area/bmg290/ancie_eng/secondary_chamber)
@@ -3198,13 +3350,26 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/strata/multi_tiles,
 /area/bmg290/colony_interior/marshal)
+"btL" = (
+/mob/living/simple_animal/cow{
+	name = "Jaune"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/relay_exterior/colony_nw)
 "bui" = (
 /obj/structure/machinery/computer/turbine_computer,
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/caverns/filtration_tunnel)
 "buy" = (
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/keppitz_interior/ops_center)
 "buR" = (
@@ -3393,7 +3558,14 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/relay_interior/turbine)
 "byX" = (
@@ -3835,7 +4007,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/prison/cell_stripe/west,
 /area/bmg290/keppitz_interior/mining_hub)
 "bJV" = (
 /obj/structure/surface/table/almayer,
@@ -4079,10 +4251,17 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/shuttle/drop2/bmg290)
 "bOV" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
@@ -4123,6 +4302,12 @@
 	},
 /turf/closed/wall/rock/brown,
 /area/bmg290/oob/blocker)
+"bPV" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "bQi" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	layer = 2.98
@@ -4185,6 +4370,12 @@
 "bSo" = (
 /turf/open/floor/prison/darkyellow2/northwest,
 /area/bmg290/relay_interior/maintenance_hall)
+"bSp" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns_weakened/mining_area)
 "bSH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4265,11 +4456,11 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior_b/cargo_area)
 "bVh" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/window/reinforced/tinted{
 	dir = 8;
-	color = 666699
+	color = "#666699"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/keppitz_interior_b/research_standard)
 "bVq" = (
@@ -4357,6 +4548,7 @@
 "bXV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
+/obj/item/storage/box/wy_mre,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/east_bridge)
 "bXW" = (
@@ -4621,6 +4813,7 @@
 /area/bmg290/relay_interior/entry_hall)
 "ccY" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/wood_broken6,
 /area/bmg290/relay_interior_b/beach_house_dirty)
 "cda" = (
@@ -4877,7 +5070,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -4919,6 +5112,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/filtration_station)
 "ciO" = (
@@ -5321,6 +5515,10 @@
 /obj/structure/window/framed/chigusa,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior_b/acquisitions)
+"coX" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/keppitz_exterior_b/cave)
 "coY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -5338,6 +5536,11 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/asteroid,
 /area/bmg290/colony_interior/motor_pool)
+"cpF" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lantern,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/halls)
 "cpI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -5508,6 +5711,14 @@
 	},
 /turf/open/floor/asteroidplating,
 /area/bmg290/colony_interior/motor_pool)
+"ctl" = (
+/obj/structure/window/reinforced/tinted{
+	dir = 8;
+	color = "#666699"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/bmg290/keppitz_interior_b/research_standard)
 "ctp" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 8
@@ -5525,6 +5736,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/bmg290/keppitz_interior_b/garage)
+"ctB" = (
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/relay_exterior/colony_nw)
 "ctD" = (
 /obj/structure/platform{
 	density = 0;
@@ -5559,7 +5774,11 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
 /turf/open/floor/almayer/empty,
 /area/bmg290/ancie_eng/deep_site)
 "cuG" = (
@@ -5878,7 +6097,19 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/lattice,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
 "cBi" = (
@@ -6012,6 +6243,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/cargo_hall)
+"cDV" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/darkyellow2/east,
+/area/bmg290/caverns/filtration_tunnel)
 "cDW" = (
 /obj/structure/machinery/landinglight/ds1/delayone,
 /turf/open/floor/plating,
@@ -6366,6 +6603,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_exterior/mining_outside)
+"cKD" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/darkyellow2/east,
+/area/bmg290/caverns/filtration_tunnel)
 "cKL" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 6
@@ -6555,6 +6796,9 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/caverns/filtration_tunnel)
 "cPR" = (
@@ -6608,7 +6852,7 @@
 /area/bmg290/colony_interior/main_complex)
 "cQA" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
-	color = 666699
+	color = "#424a50"
 	},
 /turf/open/floor/cult,
 /area/bmg290/ancie_eng/hallway_section_untouched)
@@ -6770,10 +7014,10 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns/halls)
 "cUN" = (
-/obj/structure/machinery/door/airlock/glass/colony,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
+/obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/prison/blue/north,
 /area/bmg290/colony_interior/shop)
 "cUO" = (
@@ -6786,6 +7030,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt,
 /area/bmg290/relay_exterior/relay_courtyard)
+"cUP" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "cUQ" = (
 /obj/structure/machinery/constructable_frame,
 /obj/structure/machinery/light/small{
@@ -6967,6 +7219,17 @@
 	},
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/relay_exterior/outskirts)
+"cYK" = (
+/obj/structure/largecrate{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/obj/structure/largecrate{
+	pixel_x = -10;
+	pixel_y = -11
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/bmg290/relay_interior/cargo_hall_transfer)
 "cZa" = (
 /turf/open/floor/prison/cell_stripe/east,
 /area/bmg290/relay_interior/maintenance_hall)
@@ -7071,6 +7334,12 @@
 /obj/structure/platform/kutjevo/smooth,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/beach_roadside)
+"dbh" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "dbn" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -7138,6 +7407,13 @@
 	},
 /turf/open/floor/prison/blue/north,
 /area/bmg290/colony_interior/shop)
+"dcP" = (
+/obj/structure/blocker/fog,
+/obj/structure/prop/rock/brown{
+	dir = 4
+	},
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
+/area/bmg290/oob/playfulstuff)
 "dcZ" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -7199,6 +7475,11 @@
 	},
 /turf/open/gm/grass,
 /area/bmg290/relay_exterior/colony_nw)
+"deu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/relay_interior_b/beach_house_dirty)
 "deD" = (
 /obj/item/lightstick/planted,
 /turf/open/gm/river/ocean,
@@ -7488,7 +7769,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/west,
 /area/bmg290/oob/ocean)
@@ -7542,6 +7823,15 @@
 "dnd" = (
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/keppitz_exterior/mining_outside)
+"dng" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "dnh" = (
 /obj/structure/barricade/handrail/kutjevo,
 /obj/effect/decal/cleanable/dirt,
@@ -7944,6 +8234,12 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/asphalt,
 /area/bmg290/relay_exterior/east_bridge)
+"dwm" = (
+/mob/living/simple_animal/cow{
+	name = "Won"
+	},
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/relay_exterior/colony_nw)
 "dwr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -8090,6 +8386,7 @@
 /obj/item/weapon/dart/green,
 /obj/item/weapon/dart,
 /obj/item/weapon/dart,
+/obj/item/storage/box/wy_mre,
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/colony_interior/bar)
 "dyM" = (
@@ -8352,7 +8649,7 @@
 /area/bmg290/colony_exterior/valley_site)
 "dEX" = (
 /obj/structure/prop/invuln/overhead_pipe,
-/obj/structure/machinery/door/poddoor/railing{
+/obj/structure/machinery/door/poddoor/railing/open{
 	dir = 4;
 	id = "research_exit_gate"
 	},
@@ -8448,12 +8745,24 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
@@ -8778,7 +9087,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -9070,6 +9379,11 @@
 /area/bmg290/relay_interior/server_room)
 "dVl" = (
 /obj/structure/window/framed/strata/hull,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/flight_control)
 "dVq" = (
@@ -9164,7 +9478,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -9403,7 +9717,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/east,
 /area/bmg290/oob/ocean)
@@ -9469,6 +9783,16 @@
 "ecp" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/bmg290/colony_exterior/valley_site)
+"ecq" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_y = -5
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "ecy" = (
 /obj/structure/barricade/handrail/strata,
 /obj/effect/decal/cleanable/dirt,
@@ -9483,7 +9807,7 @@
 /area/bmg290/colony_interior/main_complex)
 "edq" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
-	color = 666699
+	color = "#424a50"
 	},
 /turf/open/floor/grey_dark2,
 /area/bmg290/ancie_eng_weakened/hallway_section)
@@ -9532,6 +9856,12 @@
 	},
 /turf/open/auto_turf/shale/layer0_plate,
 /area/bmg290/ancie_eng_weakened/breached_hall)
+"eez" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/caverns/filtration_tunnel)
 "eeT" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
@@ -9668,6 +9998,10 @@
 	pixel_x = 8;
 	pixel_y = -1
 	},
+/obj/item/storage/box/wy_mre{
+	pixel_x = -8;
+	pixel_y = -6
+	},
 /turf/open/floor/kutjevo/grey,
 /area/bmg290/ancie_eng/deep_site)
 "ehp" = (
@@ -9730,6 +10064,7 @@
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_center)
 "eij" = (
+/obj/structure/fence,
 /turf/open/gm/dirtgrassborder/west,
 /area/bmg290/relay_exterior/colony_nw)
 "ein" = (
@@ -9745,6 +10080,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/shuttle/drop3/bmg290)
+"eiw" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 5
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/ridgeline)
 "eiC" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 1
@@ -10046,10 +10387,17 @@
 /turf/open/floor/podhatch/northwest,
 /area/bmg290/relay_interior/turbine)
 "eoW" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/disposals)
@@ -10323,7 +10671,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -10505,6 +10853,10 @@
 "exy" = (
 /turf/open/asphalt,
 /area/bmg290/keppitz_interior_b/garage)
+"exA" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/gm/river/ocean,
+/area/bmg290/oob/ocean)
 "exH" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/bmg290/ancie_eng/deep_site)
@@ -10544,6 +10896,28 @@
 	},
 /turf/open/asphalt/cement_sunbleached,
 /area/shuttle/drop2/bmg290)
+"eyI" = (
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 6;
+	pixel_x = 0;
+	dir = 4
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 1;
+	pixel_x = 0;
+	dir = 4
+	},
+/turf/open/gm/river/ocean,
+/area/bmg290/caverns/filtration_tunnel)
 "eyL" = (
 /obj/structure/coatrack,
 /turf/open/floor/strata/fake_wood,
@@ -10651,9 +11025,16 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/obj/structure/lattice,
 /obj/structure/platform/strata/metal{
 	dir = 8
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
@@ -10773,6 +11154,12 @@
 /obj/structure/prop/rock/brown,
 /turf/open/gm/coast/east,
 /area/bmg290/relay_exterior/beach)
+"eCv" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "eCC" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 5
@@ -11074,7 +11461,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/north,
 /area/bmg290/oob/ocean)
@@ -11248,6 +11635,9 @@
 /area/bmg290/relay_exterior/colony_center)
 "eMb" = (
 /obj/structure/ore_box,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "eMc" = (
@@ -11701,7 +12091,19 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
 "eXD" = (
@@ -11890,9 +12292,16 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/entry_hall)
@@ -12122,9 +12531,17 @@
 	},
 /turf/open/asphalt,
 /area/bmg290/relay_exterior/relay_courtyard)
+"fhy" = (
+/obj/structure/pipes/standard/manifold/hidden/green,
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "fhM" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
-	color = 666699
+	color = "#424a50"
 	},
 /turf/open/floor/grey_dark2,
 /area/bmg290/ancie_eng/main_chamber)
@@ -12350,7 +12767,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -12412,6 +12829,10 @@
 "foA" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/shuttle/drop1/bmg290)
+"foF" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "fpb" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -12485,11 +12906,18 @@
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_sw)
 "fqC" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/disposals)
@@ -12839,9 +13267,16 @@
 /obj/structure/platform/strata/metal{
 	dir = 1
 	},
-/obj/structure/lattice,
 /obj/structure/platform/strata/metal{
 	dir = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
@@ -13433,8 +13868,15 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/disposalpipe/segment,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
 "fMM" = (
@@ -13495,7 +13937,7 @@
 /area/bmg290/relay_exterior/relay_courtyard)
 "fOg" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/colony_interior/chapel)
 "fOs" = (
 /obj/structure/surface/rack,
@@ -13647,7 +14089,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -14177,6 +14619,42 @@
 	},
 /turf/open/floor/asteroid,
 /area/bmg290/relay_interior_b/relay_courtyard_cargo)
+"gdG" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/coagulation/icon8_6,
+/area/bmg290/caverns/filtration_tunnel)
+"gdS" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4;
+	climb_delay = 1;
+	layer = 2.99
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 6;
+	pixel_x = 0;
+	dir = 4
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 1;
+	pixel_x = 0;
+	dir = 4
+	},
+/turf/open/gm/river,
+/area/bmg290/caverns/filtration_tunnel)
 "gev" = (
 /obj/structure/prop/rock/black_ground/dense,
 /turf/open/shale,
@@ -14357,6 +14835,13 @@
 /mob/living/simple_animal/lizard,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bmg290/relay_exterior/outskirts)
+"gjM" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 16;
+	pixel_y = 0
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "gjU" = (
 /obj/structure/barricade/handrail{
 	dir = 1;
@@ -14617,6 +15102,11 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "gqz" = (
@@ -14852,8 +15342,15 @@
 /area/bmg290/relay_interior/cargo_hall_transfer)
 "gwq" = (
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
 /obj/structure/machinery/light,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/keppitz_interior/ops_center)
 "gws" = (
@@ -14977,7 +15474,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -15003,6 +15500,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_sw)
+"gzj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/deployable/barrier,
+/turf/open/asphalt/cement,
+/area/bmg290/relay_exterior/colony_center)
 "gzk" = (
 /turf/open/floor/cult,
 /area/bmg290/ancie_eng_weakened/antechamber)
@@ -15457,7 +15959,14 @@
 /area/bmg290/relay_exterior/colony_nw)
 "gKJ" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -6;
+	pixel_y = 12
+	},
+/obj/item/storage/box/wy_mre{
+	pixel_x = 6;
+	pixel_y = 0
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/maintenance_hall)
 "gKX" = (
@@ -15479,7 +15988,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -15535,6 +16044,15 @@
 "gMN" = (
 /turf/open/floor/prison/darkbrowncorners3/west,
 /area/bmg290/colony_interior/logistics_hub)
+"gMW" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin/wy{
+	pixel_x = -2;
+	pixel_y = 7
+	},
+/obj/item/tool/pen/blue/clicky,
+/turf/open/floor/corsat/retrosquares,
+/area/bmg290/keppitz_interior_b/acquisitions)
 "gMY" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_x = 13
@@ -15643,7 +16161,7 @@
 "gPO" = (
 /obj/structure/bed,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior_b/beach_house_clean)
 "gQk" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -15743,7 +16261,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast,
 /area/bmg290/oob/ocean)
@@ -15888,7 +16406,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -16132,7 +16650,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -16208,6 +16726,13 @@
 	},
 /turf/open/shale,
 /area/bmg290/ancie_eng/deep_site)
+"hfw" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "hfz" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
 /turf/open/floor/prison/floor_plate,
@@ -16272,6 +16797,7 @@
 	pixel_x = -8;
 	pixel_y = 12
 	},
+/obj/item/storage/box/wy_mre,
 /turf/open/floor/prison/blue/north,
 /area/bmg290/colony_interior/offices)
 "hgS" = (
@@ -16409,9 +16935,18 @@
 /area/bmg290/relay_interior/entry_hall)
 "hjl" = (
 /obj/structure/surface/table/almayer,
-/obj/effect/spawner/random/toy,
-/obj/effect/spawner/random/toy,
-/obj/effect/spawner/random/toy,
+/obj/effect/spawner/random/toy{
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/effect/spawner/random/toy{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/obj/effect/spawner/random/toy{
+	pixel_x = -3;
+	pixel_y = 10
+	},
 /turf/open/floor/kutjevo/tan/multi_tiles/southeast,
 /area/bmg290/colony_interior/shop)
 "hjn" = (
@@ -16451,7 +16986,14 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
 "hjF" = (
@@ -16461,6 +17003,10 @@
 "hjH" = (
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/bar)
+"hjL" = (
+/obj/structure/machinery/deployable/barrier,
+/turf/open/asphalt/cement/cement4,
+/area/bmg290/relay_exterior/colony_center)
 "hjV" = (
 /obj/structure/machinery/vending/cola,
 /turf/open/floor/prison,
@@ -16540,7 +17086,6 @@
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_nw)
 "hlH" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
 	climb_delay = 1;
@@ -16555,6 +17100,14 @@
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = 6
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/maintenance)
@@ -16624,6 +17177,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_center)
+"hnb" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/shuttle/drop1/bmg290)
 "hnd" = (
 /obj/structure/machinery/landinglight/ds1/delaythree,
 /obj/effect/decal/warning_stripes{
@@ -16716,6 +17275,11 @@
 /obj/structure/prop/dam/truck/cargo,
 /turf/open/asphalt,
 /area/bmg290/relay_exterior/beach_roadside)
+"hpe" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/deployable/barrier,
+/turf/open/asphalt/cement/cement2,
+/area/bmg290/relay_exterior/colony_center)
 "hph" = (
 /obj/structure/prop/rock/brown,
 /turf/open/gm/dirt,
@@ -16835,7 +17399,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/west,
 /area/bmg290/oob/ocean)
@@ -17140,6 +17704,17 @@
 	},
 /turf/open/floor/carpet,
 /area/bmg290/caverns_weakened/valley_entry)
+"hzV" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "hzW" = (
 /obj/structure/platform{
 	dir = 1
@@ -17485,6 +18060,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/beach_roadside)
+"hIy" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "hIB" = (
 /obj/structure/closet/secure_closet/atmos_personal,
 /turf/open/floor/prison/floor_plate,
@@ -17524,6 +18106,12 @@
 /obj/effect/decal/warning_stripes,
 /turf/open/floor/plating,
 /area/bmg290/oob/playfulstuff)
+"hIR" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/ridgeline)
 "hIY" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 5
@@ -17763,6 +18351,9 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns/filtration_tunnel)
 "hMN" = (
@@ -17935,7 +18526,11 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
 /turf/open/floor/almayer/empty,
 /area/bmg290/ancie_eng/deep_site)
 "hQw" = (
@@ -18009,8 +18604,19 @@
 /obj/item/trash/uscm_mre,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/shed)
+"hSq" = (
+/obj/structure/ore_box,
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "hSy" = (
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
 "hSB" = (
@@ -18211,6 +18817,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement2,
 /area/bmg290/oob/playfulstuff)
+"hWR" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "hWU" = (
 /obj/effect/decal/cleanable/cobweb2,
 /obj/effect/decal/cleanable/dirt,
@@ -18464,12 +19076,14 @@
 /obj/structure/closet/secure_closet/miner{
 	density = 0;
 	pixel_y = 18;
-	pixel_x = 7
+	pixel_x = 7;
+	can_be_stacked = 1
 	},
 /obj/structure/closet/secure_closet/miner{
 	density = 0;
 	pixel_y = 18;
-	pixel_x = -7
+	pixel_x = -7;
+	can_be_stacked = 1
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior/mining_hub)
@@ -18783,6 +19397,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/bmg290/relay_exterior/colony_center)
+"ihX" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "iio" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/bmg290/relay_exterior/east_bridge)
@@ -18816,6 +19436,11 @@
 /turf/open/floor/prison,
 /area/bmg290/relay_interior/entry_hall)
 "ijl" = (
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "ijq" = (
@@ -18823,7 +19448,6 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
@@ -18834,6 +19458,14 @@
 /obj/structure/prop/structure_lattice{
 	dir = 1;
 	health = 300
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
@@ -19104,6 +19736,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/maintenance_hall)
+"iol" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -14;
+	pixel_y = 11
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "ion" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -19115,6 +19754,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_exterior/colony_ne)
+"ioD" = (
+/obj/structure/pipes/standard/manifold/hidden/green,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "ioS" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -19286,6 +19932,10 @@
 	},
 /turf/open/auto_turf/shale/layer0_plate,
 /area/bmg290/ancie_eng_weakened/breached_hall)
+"iuO" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/halls)
 "iuS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -19563,6 +20213,16 @@
 "izL" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2,
 /area/bmg290/relay_exterior/colony_sw)
+"izN" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "izU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -19836,12 +20496,20 @@
 /area/bmg290/colony_interior/shop)
 "iFp" = (
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/caverns/filtration_tunnel)
@@ -19875,6 +20543,33 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/bmg290/relay_interior_b/relay_substation)
+"iGy" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 6;
+	pixel_x = 0;
+	dir = 4
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 1;
+	pixel_x = 0;
+	dir = 4
+	},
+/turf/open/gm/river,
+/area/bmg290/caverns/filtration_tunnel)
 "iHs" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/toolbox,
@@ -20057,11 +20752,18 @@
 /turf/open/asphalt,
 /area/bmg290/relay_interior/cargo_hall)
 "iJo" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
 	climb_delay = 1;
 	layer = 2.99
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/disposals)
@@ -20328,7 +21030,6 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/prop/almayer/cannon_cables{
 	name = "\improper Cables"
@@ -20337,6 +21038,14 @@
 	dir = 1;
 	climb_delay = 1;
 	layer = 2.99
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
@@ -20350,6 +21059,7 @@
 /area/bmg290/colony_exterior/valley_site)
 "iOX" = (
 /obj/structure/surface/table/almayer,
+/obj/item/storage/box/wy_mre,
 /turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior/entry_hall)
 "iOY" = (
@@ -20367,8 +21077,15 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/colony_interior/main_complex)
 "iPx" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/disposals)
 "iPP" = (
@@ -20426,7 +21143,6 @@
 /area/bmg290/caverns/filtration_tunnel)
 "iPX" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer,
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/logistics_hub)
 "iQe" = (
@@ -20877,6 +21593,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior/mining_hub)
+"jai" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 18;
+	pixel_y = 20
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "jaC" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /obj/effect/decal/cleanable/dirt,
@@ -21108,12 +21831,19 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = 6
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/maintenance)
@@ -21215,7 +21945,19 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
 "jiy" = (
@@ -21876,10 +22618,11 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/diner)
 "jyt" = (
-/obj/effect/vehicle_spawner/van/decrepit,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid,
-/area/bmg290/relay_interior/cargo_hall_transfer)
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "jyM" = (
 /turf/open/asphalt/cement/cement9,
 /area/bmg290/keppitz_exterior/cargo_section)
@@ -21894,6 +22637,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/interior/wood/alt,
 /area/bmg290/relay_exterior/beach_bar)
+"jyV" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns_weakened/filtration_perimeter)
 "jyZ" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/reagent_container/food/drinks/drinkingglass{
@@ -21959,7 +22708,6 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
@@ -21969,12 +22717,21 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
 "jAE" = (
-/obj/structure/machinery/door/poddoor/railing{
+/obj/structure/desertdam/decals/road_stop{
 	dir = 8;
-	id = "oto_railgate"
+	icon_state = "stop_decal5";
+	pixel_x = -2
 	},
 /turf/open/floor/asteroidplating,
 /area/bmg290/relay_exterior/colony_center)
@@ -22025,7 +22782,6 @@
 /turf/open/floor/asteroid,
 /area/bmg290/relay_interior/cargo_hall)
 "jCi" = (
-/obj/structure/lattice,
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
@@ -22038,6 +22794,14 @@
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
@@ -22126,7 +22890,14 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/maintenance)
 "jDL" = (
@@ -22167,6 +22938,13 @@
 /obj/structure/closet/crate,
 /turf/open/floor/kutjevo/grey,
 /area/bmg290/ancie_eng/deep_site)
+"jEC" = (
+/obj/structure/barricade/handrail/strata,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/caverns/filtration_tunnel)
 "jEJ" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 1
@@ -22260,7 +23038,7 @@
 /area/bmg290/colony_interior/motor_pool)
 "jGC" = (
 /obj/structure/prop/invuln/overhead_pipe,
-/obj/structure/machinery/door/poddoor/railing{
+/obj/structure/machinery/door/poddoor/railing/open{
 	dir = 8;
 	id = "research_entry_gate"
 	},
@@ -22491,7 +23269,14 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/keppitz_interior/ops_center)
 "jLN" = (
@@ -22583,9 +23368,24 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-4"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
@@ -22687,6 +23487,9 @@
 /obj/structure/prop/broken_ladder{
 	pixel_y = 20
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/plating,
 /area/bmg290/caverns/filtration_tunnel)
 "jPM" = (
@@ -22701,6 +23504,11 @@
 /area/bmg290/ancie_eng_weakened/breached_hall)
 "jQg" = (
 /obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "jQi" = (
@@ -23167,10 +23975,6 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns_weakened/mining_area)
 "jZZ" = (
-/obj/structure/prop/structure_lattice{
-	dir = 1;
-	health = 300
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -23234,6 +24038,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement15,
 /area/bmg290/relay_exterior/colony_sw)
+"kcs" = (
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/caverns/filtration_tunnel)
 "kcK" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 6
@@ -23250,6 +24061,12 @@
 /obj/structure/machinery/computer/arcade,
 /turf/open/floor/kutjevo/tan/grey_edge,
 /area/bmg290/colony_interior/bar)
+"kcQ" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/turf/open/floor/grass,
+/area/bmg290/keppitz_exterior/cargo_section)
 "kcT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -23284,6 +24101,12 @@
 "kdF" = (
 /turf/open/gm/dirtgrassborder/west,
 /area/bmg290/relay_exterior/outskirts)
+"kdY" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/darkyellow2/east,
+/area/bmg290/caverns/filtration_tunnel)
 "kei" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/prison/floor_plate,
@@ -23334,6 +24157,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/motor_pool)
+"kfl" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/toy/katana,
+/obj/item/storage/box/wy_mre,
+/turf/open/floor/plating/wood,
+/area/bmg290/keppitz_interior_b/research_standard)
 "kft" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 9
@@ -23400,8 +24230,15 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
 "kgn" = (
@@ -23700,6 +24537,13 @@
 	},
 /turf/open/shale,
 /area/bmg290/ancie_eng/hallway_section_untouched)
+"klE" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -12;
+	pixel_y = 26
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "klS" = (
 /obj/structure/platform/kutjevo{
 	dir = 8
@@ -23811,6 +24655,12 @@
 	},
 /turf/open/floor/coagulation/icon5_8,
 /area/bmg290/relay_exterior/colony_ne)
+"koW" = (
+/mob/living/simple_animal/mouse/white{
+	name = "Philly the Filtration Mouse"
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns_weakened/filtration_perimeter)
 "kpp" = (
 /turf/open/floor/prison/blue/west,
 /area/bmg290/colony_interior/offices)
@@ -23861,11 +24711,18 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /obj/structure/platform/kutjevo/smooth,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
 "kqs" = (
@@ -23901,6 +24758,12 @@
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/marshal)
+"krb" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 9
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/ridgeline)
 "krk" = (
 /obj/structure/sign/safety/flightcontrol,
 /turf/closed/wall/strata_outpost/reinforced/hull,
@@ -24016,6 +24879,10 @@
 	},
 /turf/open/gm/river,
 /area/bmg290/keppitz_interior_b/research_standard)
+"ktb" = (
+/obj/structure/closet/crate/miningcar,
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "ktc" = (
 /turf/open/asphalt/cement/cement12,
 /area/bmg290/relay_exterior/relay_courtyard)
@@ -24091,10 +24958,7 @@
 /area/bmg290/relay_exterior/cargo_drop)
 "ktR" = (
 /obj/structure/blocker/fog,
-/obj/structure/platform/kutjevo/rock{
-	dir = 1
-	},
-/turf/open/gm/river/shallow_ocean_shallow_ocean,
+/turf/closed/wall/rock/brown,
 /area/bmg290/oob/playfulstuff)
 "ktS" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -24323,6 +25187,16 @@
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior/mining_hub)
+"kyh" = (
+/obj/structure/prop/rock/brown{
+	dir = 4
+	},
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 14;
+	pixel_y = -3
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "kyo" = (
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/shed)
@@ -24540,10 +25414,12 @@
 /area/bmg290/relay_interior_b/relay_courtyard_cargo)
 "kCG" = (
 /obj/structure/closet/l3closet/scientist{
-	pixel_x = 7
+	pixel_x = 7;
+	can_be_stacked = 1
 	},
 /obj/structure/closet/l3closet/scientist{
-	pixel_x = -7
+	pixel_x = -7;
+	can_be_stacked = 1
 	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/bmg290/keppitz_interior_b/sterilization)
@@ -24591,6 +25467,10 @@
 	},
 /turf/open/gm/dirtgrassborder/grassdirt_corner2,
 /area/bmg290/relay_exterior/outskirts)
+"kEe" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/halls)
 "kEf" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 10
@@ -24681,6 +25561,27 @@
 	},
 /turf/open/gm/river,
 /area/bmg290/caverns/filtration_tunnel)
+"kGL" = (
+/obj/structure/prop/structure_lattice{
+	dir = 1;
+	health = 300
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 6;
+	pixel_x = 0;
+	dir = 4
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 1;
+	pixel_x = 0;
+	dir = 4
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/caverns/filtration_tunnel)
 "kHq" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
@@ -24747,7 +25648,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/beachcorner,
 /area/bmg290/oob/ocean)
@@ -25370,6 +26271,9 @@
 	invisibility = 101;
 	name = "Invisible Human Barrier"
 	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
 /turf/open/gm/river,
 /area/bmg290/caverns/filtration_tunnel)
 "kXK" = (
@@ -25525,6 +26429,11 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "lbb" = (
@@ -25596,6 +26505,7 @@
 /area/bmg290/relay_exterior/east_bridge)
 "lcr" = (
 /obj/structure/platform_decoration/kutjevo,
+/obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
 /area/shuttle/drop1/bmg290)
 "lcC" = (
@@ -25682,6 +26592,11 @@
 /obj/item/storage/firstaid/regular{
 	pixel_x = -23
 	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns/filtration_tunnel)
 "leH" = (
@@ -25737,6 +26652,12 @@
 /obj/structure/prop/dam/truck/cargo,
 /turf/open/asphalt,
 /area/bmg290/relay_exterior/relay_courtyard)
+"lfP" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "lfR" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
 	dir = 1
@@ -25803,11 +26724,18 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/keppitz_interior/ops_center)
 "lgC" = (
-/obj/structure/machinery/door/airlock/glass/colony,
+/obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/prison/blue,
 /area/bmg290/colony_interior/shop)
 "lgE" = (
@@ -25884,7 +26812,11 @@
 /area/bmg290/colony_interior/main_complex)
 "lhX" = (
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
 /turf/open/floor/almayer/empty,
 /area/bmg290/ancie_eng/deep_site)
 "lia" = (
@@ -26032,7 +26964,6 @@
 /turf/open/asphalt,
 /area/bmg290/relay_exterior/cargo_drop)
 "llJ" = (
-/obj/structure/blocker/invisible_wall,
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
 	access_modified = 1;
 	dir = 1;
@@ -26091,6 +27022,11 @@
 	},
 /turf/open/floor/grass,
 /area/bmg290/colony_exterior/valley_site)
+"lmD" = (
+/obj/structure/machinery/light/small,
+/obj/structure/closet/crate/miningcar/yellow,
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns_weakened/mining_area)
 "lmV" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -26157,7 +27093,14 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
 "lok" = (
@@ -26194,7 +27137,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -26611,7 +27554,14 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/relay_interior/turbine)
 "lxt" = (
@@ -26691,7 +27641,14 @@
 	dir = 10;
 	pixel_y = 16
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/shuttle/drop1/bmg290)
 "lyK" = (
@@ -26742,6 +27699,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/shuttle/drop1/bmg290)
+"lzy" = (
+/obj/structure/prop/rock/brown{
+	dir = 10
+	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "lzH" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement14,
@@ -26834,6 +27800,22 @@
 /obj/structure/flora/jungle/vines,
 /turf/open/gm/grass,
 /area/bmg290/keppitz_exterior/cargo_section)
+"lCp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate{
+	pixel_x = -3;
+	pixel_y = 11
+	},
+/obj/structure/largecrate{
+	pixel_x = -11;
+	pixel_y = -1
+	},
+/obj/structure/largecrate{
+	pixel_x = -13;
+	pixel_y = 20
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/colony_interior/logistics_hub)
 "lCr" = (
 /turf/open/floor/prison/darkyellow2/north,
 /area/bmg290/relay_interior/server_room)
@@ -26992,7 +27974,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/retrosquares,
+/turf/open/floor/prison/cell_stripe/east,
 /area/bmg290/keppitz_interior_b/receiving)
 "lGp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -27056,7 +28038,7 @@
 /area/bmg290/relay_exterior/colony_ne)
 "lHx" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
-	color = 666699
+	color = "#424a50"
 	},
 /turf/open/floor/cult,
 /area/bmg290/ancie_eng/chamber3)
@@ -27102,7 +28084,7 @@
 /area/bmg290/keppitz_interior_b/garage)
 "lIs" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
-	color = 666699
+	color = "#424a50"
 	},
 /turf/open/floor/grey_dark2,
 /area/bmg290/ancie_eng/chamber2)
@@ -27113,11 +28095,13 @@
 "lJk" = (
 /obj/structure/closet{
 	pixel_x = -8;
-	pixel_y = -2
+	pixel_y = -2;
+	can_be_stacked = 1
 	},
 /obj/structure/closet{
 	pixel_x = 8;
-	pixel_y = -2
+	pixel_y = -2;
+	can_be_stacked = 1
 	},
 /turf/open/floor/prison/green,
 /area/bmg290/colony_interior/main_complex)
@@ -27141,16 +28125,9 @@
 /turf/open/floor/almayer/plating,
 /area/shuttle/drop1/bmg290)
 "lJJ" = (
-/obj/structure/closet{
-	pixel_x = 8;
-	pixel_y = -2
-	},
-/obj/structure/closet{
-	pixel_x = -8;
-	pixel_y = -2
-	},
-/turf/open/floor/prison/green,
-/area/bmg290/colony_interior/main_complex)
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "lJL" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 6;
@@ -27296,12 +28273,14 @@
 /obj/structure/closet/secure_closet/miner{
 	density = 0;
 	pixel_y = 9;
-	pixel_x = -8
+	pixel_x = -8;
+	can_be_stacked = 1
 	},
 /obj/structure/closet/secure_closet/miner{
 	density = 0;
 	pixel_y = 18;
-	pixel_x = 8
+	pixel_x = 8;
+	can_be_stacked = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -27325,7 +28304,9 @@
 /turf/open/floor/strata/white_cyan2/west,
 /area/bmg290/colony_interior/diner)
 "lMt" = (
-/mob/living/simple_animal/parrot,
+/mob/living/simple_animal/parrot{
+	name = "Perchins The Beach Bar Parr"
+	},
 /turf/open/gm/grass,
 /area/bmg290/relay_exterior/beach_roadside)
 "lMy" = (
@@ -27375,6 +28356,10 @@
 /obj/item/lightstick/red/planted,
 /turf/open/floor/grass,
 /area/bmg290/colony_exterior/valley_site)
+"lNx" = (
+/obj/structure/prop/dam/drill,
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "lND" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine,
@@ -27392,10 +28377,17 @@
 	layer = 2.99
 	},
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
 	pixel_y = 16
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/shuttle/drop3/bmg290)
@@ -27408,7 +28400,7 @@
 /area/bmg290/caverns/ridgeline)
 "lNZ" = (
 /obj/structure/prop/invuln/overhead_pipe,
-/obj/structure/machinery/door/poddoor/railing{
+/obj/structure/machinery/door/poddoor/railing/open{
 	dir = 4;
 	id = "research_exit_gate"
 	},
@@ -27427,6 +28419,13 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/bmg290/relay_exterior/colony_ne)
+"lOo" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -13;
+	pixel_y = 48
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "lOA" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_22";
@@ -27448,7 +28447,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -27463,11 +28462,18 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/prop/structure_lattice{
 	dir = 1;
 	health = 300
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
@@ -27501,7 +28507,6 @@
 	dir = 1
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer,
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/logistics_hub)
 "lPw" = (
@@ -27562,6 +28567,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/logistics_hub)
+"lRb" = (
+/mob/living/simple_animal/cow{
+	name = "Guan"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/relay_exterior/colony_nw)
 "lRh" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -27582,7 +28593,7 @@
 "lRp" = (
 /obj/structure/bed/sofa/pews/flipped,
 /obj/structure/machinery/light,
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/colony_interior/chapel)
 "lRs" = (
 /obj/structure/surface/table/almayer,
@@ -27790,6 +28801,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior_b/research_standard)
+"lWR" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -12;
+	pixel_y = 20
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/area1)
 "lWT" = (
 /obj/structure/prop/rock/black_ground/dense{
 	dir = 8
@@ -27826,14 +28844,14 @@
 /area/bmg290/relay_exterior/outskirts_road)
 "lYo" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/window/reinforced/tinted{
-	dir = 8;
-	color = 666699
-	},
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/window/reinforced/tinted{
+	dir = 8;
+	color = "#666699"
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz_interior/archives)
 "lYr" = (
@@ -27979,7 +28997,14 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/relay_interior/turbine)
 "mcv" = (
@@ -28005,6 +29030,11 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "mcP" = (
@@ -28018,6 +29048,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/podhatch/southwest,
 /area/bmg290/relay_interior/turbine)
+"mdm" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "mdv" = (
 /obj/structure/machinery/vending/snack{
 	density = 0;
@@ -28044,6 +29081,17 @@
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior/maintenance_hall)
+"mdE" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
+	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/turf/open/floor/grass,
+/area/bmg290/keppitz_exterior/mining_outside)
 "mdJ" = (
 /obj/structure/window/framed/corsat,
 /obj/structure/curtain/red,
@@ -28231,6 +29279,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroid,
 /area/bmg290/relay_exterior/relay_courtyard)
+"mhN" = (
+/obj/structure/prop/invuln/ice_prefab/standalone,
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/ridgeline)
 "mig" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -28688,6 +29740,15 @@
 /obj/structure/machinery/colony_floodlight,
 /turf/open/asphalt/cement/cement3,
 /area/bmg290/relay_exterior/colony_center)
+"mrO" = (
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/gm/river,
+/area/bmg290/caverns/filtration_tunnel)
 "mrT" = (
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns_weakened/valley_entry)
@@ -28842,6 +29903,12 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bmg290/relay_exterior/colony_ne)
+"mvm" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/turf/open/floor/grass,
+/area/bmg290/keppitz_exterior/cargo_section)
 "mvp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -28952,7 +30019,14 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/maintenance)
 "myH" = (
@@ -29137,7 +30211,6 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
 	pixel_y = 16
@@ -29146,6 +30219,14 @@
 	dir = 8;
 	pixel_x = -11;
 	pixel_y = 10
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/shuttle/drop3/bmg290)
@@ -29350,6 +30431,9 @@
 	pixel_y = 18;
 	pixel_x = -9
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns/filtration_tunnel)
 "mIG" = (
@@ -29422,7 +30506,7 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns_weakened/valley_entry)
 "mKw" = (
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/colony_interior/chapel)
 "mKx" = (
 /obj/structure/platform/kutjevo/rock{
@@ -29523,6 +30607,13 @@
 /obj/item/lightstick/red/planted,
 /turf/open/gm/grass,
 /area/bmg290/relay_exterior/colony_nw)
+"mMy" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 14;
+	pixel_y = 0
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "mMQ" = (
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/floor/grey_dark2,
@@ -29581,6 +30672,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/west,
 /area/bmg290/keppitz_interior/ops_center)
+"mPj" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/prop/server_equipment/laptop/on,
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/ridgeline)
 "mPq" = (
 /obj/structure/prop/rock/brown,
 /turf/open/asphalt/cement_sunbleached,
@@ -29791,6 +30887,14 @@
 	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns/halls)
+"mUf" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/halls)
 "mUh" = (
 /obj/structure/prop/almayer/computers/sensor_computer1,
 /turf/open/floor/almayer_hull/blackfull,
@@ -29832,7 +30936,14 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/keppitz_interior/ops_center)
 "mUF" = (
@@ -30040,7 +31151,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -30287,6 +31398,7 @@
 /obj/structure/machinery/door/window{
 	dir = 8
 	},
+/obj/item/storage/box/wy_mre,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/logistics_station)
 "neT" = (
@@ -30439,7 +31551,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/west,
 /area/bmg290/oob/ocean)
@@ -30502,9 +31614,16 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/lattice,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
@@ -30518,7 +31637,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding2"
 	},
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior_b/beach_house_clean)
 "niV" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -30567,7 +31686,6 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
@@ -30575,6 +31693,14 @@
 	name = "\improper Cables"
 	},
 /obj/structure/platform/kutjevo/smooth,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
 "njU" = (
@@ -30622,7 +31748,6 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
@@ -30631,6 +31756,14 @@
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
@@ -30696,6 +31829,9 @@
 /obj/structure/bed/chair/office/light{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns/filtration_tunnel)
 "nmo" = (
@@ -30711,6 +31847,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/beach_roadside)
+"nmY" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns_weakened/filtration_perimeter)
 "nnb" = (
 /obj/item/spacecash/c1000,
 /obj/structure/safe,
@@ -30826,6 +31971,20 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/shuttle/drop1/bmg290)
+"npd" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = 24
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/head/hardhat,
+/obj/item/clothing/head/hardhat{
+	pixel_x = 12;
+	pixel_y = 5
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns_weakened/mining_area)
 "nph" = (
 /obj/structure/prop/rock/brown{
 	dir = 10
@@ -30948,7 +32107,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -30988,9 +32147,16 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/machinery/light/small{
 	dir = 1
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
@@ -31153,6 +32319,13 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_center)
+"nwR" = (
+/obj/structure/machinery/portable_atmospherics/canister/air,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "nwY" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 1
@@ -31251,7 +32424,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/turf/open/floor/prison/chapel_carpet,
+/turf/open/floor/strata/faux_wood,
 /area/bmg290/colony_interior/chapel)
 "nAh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -31460,6 +32633,12 @@
 	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/keppitz_exterior_b/cave)
+"nFb" = (
+/mob/living/simple_animal/lizard{
+	name = "Leslie the Valley Lizard"
+	},
+/turf/open/gm/grass,
+/area/bmg290/colony_exterior/valley_site)
 "nFD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -31622,6 +32801,15 @@
 "nJC" = (
 /turf/open/asphalt/cement/cement2,
 /area/bmg290/relay_exterior/relay_courtyard)
+"nJT" = (
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "nJX" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /obj/structure/cable/heavyduty{
@@ -31819,7 +33007,14 @@
 /area/bmg290/ancie_eng/deep_site)
 "nNA" = (
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
 "nND" = (
@@ -31885,7 +33080,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -32058,9 +33253,17 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
 /turf/open/floor/almayer/empty,
 /area/bmg290/ancie_eng/deep_site)
+"nSu" = (
+/obj/structure/ore_box,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/halls)
 "nSz" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
@@ -32073,7 +33276,7 @@
 "nSA" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/mouse/brown{
-	name = "rat"
+	name = "Ratigula the Trash Rat"
 	},
 /turf/open/floor/podhatch/northwest,
 /area/bmg290/colony_interior/disposals)
@@ -32081,7 +33284,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/colony_interior/chapel)
 "nSM" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -32387,7 +33590,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -32509,6 +33712,9 @@
 /area/bmg290/relay_exterior/colony_sw)
 "obU" = (
 /obj/structure/closet/secure_closet/atmos_personal,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/darkyellow2/east,
 /area/bmg290/caverns/filtration_tunnel)
 "obV" = (
@@ -32839,6 +34045,13 @@
 	},
 /turf/open/floor/asteroid,
 /area/bmg290/relay_exterior/outskirts_road)
+"ojO" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/strata,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns_weakened/mining_area)
 "okb" = (
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/oob/playfulstuff)
@@ -32996,7 +34209,7 @@
 /area/bmg290/relay_interior/cargo_hall)
 "oob" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
-	color = 666699
+	color = "#424a50"
 	},
 /turf/open/floor/cult,
 /area/bmg290/ancie_eng/main_chamber)
@@ -33101,7 +34314,11 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
 /turf/open/floor/almayer/empty,
 /area/bmg290/ancie_eng/deep_site)
 "ord" = (
@@ -33131,9 +34348,31 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/gm/river,
 /area/bmg290/relay_interior/turbine)
+"orq" = (
+/obj/structure/prop/rock/brown{
+	dir = 1;
+	pixel_x = -3;
+	pixel_y = 10
+	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 9
+	},
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -10;
+	pixel_y = 7
+	},
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "orr" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_10";
@@ -33285,6 +34524,13 @@
 "otR" = (
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/bmg290/relay_exterior/colony_sw)
+"otY" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 11;
+	pixel_y = 28
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "oub" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/cyan,
@@ -33491,7 +34737,6 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/relay_exterior/relay_courtyard)
 "oyj" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -33500,6 +34745,14 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/disposals)
@@ -33607,6 +34860,13 @@
 	},
 /turf/open/floor/darkblue2/north,
 /area/bmg290/relay_interior/data_room)
+"oBw" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "oBx" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_x = -8;
@@ -33826,7 +35086,19 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/structure/lattice,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
 "oGC" = (
@@ -34299,7 +35571,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -34471,11 +35743,18 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/smooth,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
 "oWa" = (
@@ -34604,7 +35883,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/beachcorner2,
 /area/bmg290/oob/ocean)
@@ -34885,7 +36164,7 @@
 /area/bmg290/keppitz_exterior/research_camp)
 "pdQ" = (
 /obj/structure/prop/invuln/overhead_pipe,
-/obj/structure/machinery/door/poddoor/railing{
+/obj/structure/machinery/door/poddoor/railing/open{
 	dir = 8;
 	id = "research_entry_gate"
 	},
@@ -35621,6 +36900,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/cargo_hall_transfer)
+"pur" = (
+/obj/structure/machinery/floodlight{
+	name = "Floodlight"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/halls)
 "puE" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -35765,7 +37050,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/bmg290/oob/ocean)
@@ -35966,12 +37251,19 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/disposalpipe/segment,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
 	climb_delay = 1;
 	layer = 2.99
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
@@ -36037,6 +37329,7 @@
 	pixel_y = 6
 	},
 /obj/item/ammo_box/magazine/misc/mre/empty,
+/obj/item/storage/box/wy_mre,
 /turf/open/gm/dirt,
 /area/bmg290/relay_exterior/beach)
 "pCA" = (
@@ -36055,7 +37348,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
@@ -36063,6 +37355,14 @@
 	dir = 1;
 	climb_delay = 1;
 	layer = 2.99
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/disposals)
@@ -36078,6 +37378,18 @@
 /area/bmg290/caverns/filtration_tunnel)
 "pDp" = (
 /obj/structure/surface/table/almayer,
+/obj/item/clothing/suit/storage/hazardvest{
+	pixel_x = 4;
+	pixel_y = -7
+	},
+/obj/item/clothing/suit/storage/hazardvest{
+	pixel_x = -4;
+	pixel_y = 8
+	},
+/obj/item/clothing/suit/storage/hazardvest{
+	pixel_x = 8;
+	pixel_y = 12
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior/mining_hub)
 "pDt" = (
@@ -36248,6 +37560,10 @@
 "pIk" = (
 /turf/open/gm/coast/beachcorner2/north_west,
 /area/bmg290/oob/ocean)
+"pIF" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "pJb" = (
 /turf/open/floor/prison,
 /area/bmg290/keppitz_interior_b/research_containment)
@@ -36372,7 +37688,14 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
 "pLq" = (
@@ -36456,7 +37779,7 @@
 	icon_state = "siding2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior_b/beach_house_clean)
 "pMY" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -36505,6 +37828,11 @@
 	},
 /turf/open/floor/whiteyellow/north,
 /area/bmg290/keppitz_interior_b/sterilization)
+"pOM" = (
+/obj/structure/surface/rack,
+/obj/item/ammo_box/magazine/misc/flashlight,
+/turf/open/asphalt/cement/cement4,
+/area/bmg290/relay_exterior/colony_center)
 "pOQ" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -36648,9 +37976,16 @@
 	dir = 8;
 	pixel_y = 16
 	},
-/obj/structure/lattice,
 /obj/structure/machinery/light/small{
 	dir = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/shuttle/drop1/bmg290)
@@ -36754,7 +38089,7 @@
 	dir = 1;
 	pixel_y = 20
 	},
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/colony_interior/chapel)
 "pTN" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -36781,6 +38116,12 @@
 	},
 /turf/open/asphalt/cement/cement1,
 /area/bmg290/relay_exterior/beach)
+"pUu" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "pUw" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -36912,6 +38253,17 @@
 	},
 /turf/open/floor/asteroid,
 /area/bmg290/relay_exterior/outskirts_road)
+"pXP" = (
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/gm/river/ocean,
+/area/bmg290/caverns/filtration_tunnel)
 "pXU" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/bmg290/keppitz_interior_b/sterilization)
@@ -37352,7 +38704,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/shuttle/drop3/bmg290)
 "qiC" = (
-/obj/structure/machinery/power/apc/power/west,
+/obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns/filtration_tunnel)
 "qiT" = (
@@ -37409,6 +38761,15 @@
 	},
 /turf/open/shale,
 /area/bmg290/ancie_eng_weakened/breached_hall)
+"qjP" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "qjT" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/device/megaphone,
@@ -37529,7 +38890,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -37563,16 +38924,16 @@
 /area/bmg290/relay_interior_b/beach_house_clean)
 "qmh" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior_b/beach_house_clean)
 "qmk" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/window/reinforced/tinted{
-	dir = 8;
-	color = 666699
-	},
 /obj/structure/machinery/computer/emails{
 	dir = 4
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 8;
+	color = "#666699"
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz_interior/archives)
@@ -37638,9 +38999,11 @@
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/keppitz_exterior/research_camp)
 "qnL" = (
-/obj/structure/machinery/door/poddoor/railing{
+/obj/structure/machinery/deployable/barrier,
+/obj/structure/desertdam/decals/road_stop{
 	dir = 4;
-	id = "oto_railgate"
+	icon_state = "stop_decal5";
+	pixel_x = 4
 	},
 /turf/open/floor/asteroidplating,
 /area/bmg290/relay_exterior/colony_center)
@@ -37743,8 +39106,10 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/bmg290/relay_exterior/outskirts)
 "qpI" = (
-/turf/open/floor/prison/chapel_carpet,
-/area/bmg290/colony_interior/chapel)
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/wy_mre,
+/turf/open/floor/prison/kitchen,
+/area/bmg290/relay_interior/entry_hall)
 "qpP" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/asphalt/cement_sunbleached,
@@ -37763,7 +39128,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -37965,6 +39330,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/retrosquares,
 /area/bmg290/keppitz_interior_b/receiving)
+"qtw" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/turf/open/floor/grass,
+/area/bmg290/keppitz_exterior/cargo_section)
 "qty" = (
 /obj/structure/platform/kutjevo,
 /obj/structure/platform/kutjevo/smooth{
@@ -38105,6 +39476,19 @@
 "qwM" = (
 /turf/open/floor/kutjevo/grey,
 /area/bmg290/ancie_eng_weakened/antechamber)
+"qwT" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 5
+	},
+/turf/open/floor/grass,
+/area/bmg290/keppitz_exterior/cargo_section)
+"qwU" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "qxb" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -38125,7 +39509,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/west,
 /area/bmg290/oob/ocean)
@@ -38140,9 +39524,21 @@
 /turf/open/floor/prison,
 /area/bmg290/colony_interior/substation)
 "qxJ" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo{
 	dir = 1
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
@@ -38150,6 +39546,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/bmg290/keppitz_interior_b/receiving)
+"qxX" = (
+/mob/living/simple_animal/cow{
+	name = "Juan"
+	},
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/relay_exterior/colony_nw)
 "qyd" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -38170,7 +39572,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -38324,7 +39726,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -38409,9 +39811,6 @@
 /area/bmg290/relay_interior/entry_hall)
 "qDW" = (
 /obj/structure/surface/table/reinforced,
-/obj/structure/machinery/door_control/railings{
-	id = "oto_railgate"
-	},
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
 	layer = 2.991
@@ -38534,6 +39933,17 @@
 /obj/structure/prop/ice_colony/surveying_device,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/ancie_eng_weakened/breached_hall)
+"qGY" = (
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/gm/river/ocean,
+/area/bmg290/caverns/filtration_tunnel)
 "qHh" = (
 /obj/structure/cargo_container/kelland/left,
 /obj/effect/decal/cleanable/dirt,
@@ -38578,6 +39988,9 @@
 /area/bmg290/keppitz_exterior/research_camp)
 "qHH" = (
 /obj/structure/machinery/portable_atmospherics/canister/air,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/plating,
 /area/bmg290/caverns/filtration_tunnel)
 "qHK" = (
@@ -38671,7 +40084,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/west,
 /area/bmg290/oob/ocean)
@@ -38725,6 +40138,9 @@
 "qJJ" = (
 /obj/structure/prop/rock/brown{
 	dir = 9
+	},
+/obj/structure/prop/invuln/ice_prefab/trim{
+	dir = 8
 	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns/ridgeline)
@@ -39097,6 +40513,12 @@
 /obj/structure/fence,
 /turf/open/gm/grass,
 /area/bmg290/oob/playfulstuff)
+"qTp" = (
+/obj/structure/prop/invuln/ice_prefab/trim{
+	dir = 4
+	},
+/turf/closed/wall/rock/brown,
+/area/bmg290/oob/blocker)
 "qTt" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 6
@@ -39406,6 +40828,9 @@
 "rat" = (
 /obj/structure/surface/rack,
 /obj/item/tool/pickaxe/plasmacutter,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "rau" = (
@@ -39438,11 +40863,18 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
 	climb_delay = 1;
 	layer = 2.99
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/entry_hall)
@@ -39550,6 +40982,12 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/strata/floor3,
 /area/shuttle/drop1/bmg290)
+"reB" = (
+/mob/living/simple_animal/crab{
+	name = "Crabberot the Waterfall Crab"
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/oob/playfulstuff)
 "reD" = (
 /obj/structure/prop/rock/black_ground,
 /turf/open/shale,
@@ -39564,7 +41002,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -39704,7 +41142,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior_b/beach_house_clean)
 "rhu" = (
 /obj/structure/prop/rock/black_ground,
@@ -39994,6 +41432,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/beach_roadside)
+"rnp" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "rns" = (
 /obj/structure/prop/rock/black_ground{
 	dir = 5
@@ -40586,6 +42030,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_exterior/cargo_section)
+"rxU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/largecrate/random/case{
+	pixel_x = 3;
+	pixel_y = 12
+	},
+/turf/open/asphalt/cement/cement3,
+/area/bmg290/relay_interior/cargo_hall_transfer)
 "rxZ" = (
 /obj/structure/platform/kutjevo{
 	dir = 8
@@ -40909,6 +42362,15 @@
 /obj/item/trash/kepler,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_ne)
+"rEk" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "rEp" = (
 /turf/open/floor/prison,
 /area/bmg290/keppitz_interior/ops_center)
@@ -40933,7 +42395,6 @@
 	density = 0;
 	pixel_y = 18
 	},
-/obj/effect/spawner/random/attachment,
 /obj/effect/spawner/random/attachment,
 /turf/open/floor/prison,
 /area/bmg290/colony_interior/logistics_station)
@@ -41467,6 +42928,14 @@
 	icon_state = "stool_alt"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
+	layer = 3.2;
+	name = "Television set";
+	network = null;
+	pixel_x = 1;
+	pixel_y = 28
+	},
 /turf/open/floor/prison/bluecorner,
 /area/bmg290/colony_interior/bar)
 "rSN" = (
@@ -41546,6 +43015,15 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/bmg290/relay_exterior/beach)
+"rUY" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "rVf" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 5
@@ -41730,7 +43208,6 @@
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/keppitz_exterior/research_camp)
 "rYS" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
 	climb_delay = 1;
@@ -41742,6 +43219,14 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
 "rYT" = (
@@ -41751,13 +43236,20 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
 	},
 /obj/structure/prop/structure_lattice{
 	dir = 1;
 	health = 300
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
@@ -42144,6 +43636,15 @@
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/maintenance_hall)
+"siq" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "sit" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -42221,11 +43722,11 @@
 /turf/open/floor/engine/mars,
 /area/bmg290/ancie_eng/main_chamber)
 "skD" = (
-/obj/structure/machinery/door/airlock/almayer/maint/colony/autoname{
-	dir = 1;
-	req_one_access = null
-	},
 /obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/structure/machinery/door/airlock/almayer/secure/autoname{
+	req_access = null;
+	dir = 2
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/entry_hall)
 "skR" = (
@@ -42311,9 +43812,16 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/substation)
@@ -42349,6 +43857,17 @@
 	},
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/cargo_drop)
+"smZ" = (
+/obj/structure/largecrate/random/case/double{
+	pixel_x = 3;
+	pixel_y = 12
+	},
+/obj/structure/largecrate/random/case/double{
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/ridgeline)
 "sng" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 10
@@ -42517,10 +44036,8 @@
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_ne)
 "sqo" = (
-/obj/structure/bed/chair/comfy,
-/mob/living/simple_animal/crab,
-/turf/open/asphalt/cement_sunbleached,
-/area/bmg290/oob/playfulstuff)
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/halls)
 "sqp" = (
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass,
@@ -42844,13 +44361,26 @@
 	},
 /turf/open/asphalt,
 /area/bmg290/relay_exterior/colony_center)
+"sxp" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/darkyellow2/west,
+/area/bmg290/caverns/filtration_tunnel)
 "sxu" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/disposalpipe/segment,
 /obj/structure/platform/kutjevo/smooth,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
 "sxI" = (
@@ -43215,6 +44745,10 @@
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/cargo_hall)
+"sGz" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "sGI" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -43227,6 +44761,9 @@
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "sGS" = (
 /obj/structure/surface/rack,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "sGW" = (
@@ -43296,7 +44833,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/oob/ocean)
@@ -43480,6 +45017,12 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
+/obj/structure/machinery/portable_atmospherics/hydroponics{
+	draw_warnings = 0;
+	health = null;
+	indestructible = 1;
+	unacidable = 1
+	},
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/relay_exterior/colony_nw)
 "sLh" = (
@@ -43622,7 +45165,7 @@
 /area/bmg290/relay_exterior/outskirts_road)
 "sON" = (
 /mob/living/simple_animal/mouse/brown{
-	name = "rat"
+	name = "Reelie the Relay Rat"
 	},
 /turf/open/floor/plating,
 /area/bmg290/oob/playfulstuff)
@@ -43630,8 +45173,17 @@
 /obj/structure/tunnel/maint_tunnel{
 	pixel_y = 6
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns/filtration_tunnel)
+"sPF" = (
+/obj/structure/machinery/floodlight{
+	name = "Floodlight"
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/ridgeline)
 "sPG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -44019,7 +45571,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -44104,7 +45656,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -44168,9 +45720,17 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "tbo" = (
-/obj/structure/closet/crate/plastic,
-/turf/open/asphalt/cement_sunbleached,
-/area/bmg290/oob/playfulstuff)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/case{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/structure/largecrate/random/case{
+	pixel_x = 7;
+	pixel_y = 20
+	},
+/turf/open/floor/asteroid,
+/area/bmg290/relay_interior/cargo_hall_transfer)
 "tbz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -44359,6 +45919,10 @@
 /obj/structure/prop/ice_colony/soil_net,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/bmg290/ancie_eng_weakened/antechamber)
+"tgK" = (
+/obj/structure/prop/rock,
+/turf/open/floor/grass,
+/area/bmg290/keppitz_exterior/cargo_section)
 "tgO" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
@@ -44491,7 +46055,7 @@
 /area/bmg290/colony_interior/power_plant)
 "tkQ" = (
 /obj/structure/bed/sofa/pews/flipped,
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/colony_interior/chapel)
 "tkZ" = (
 /obj/structure/fence,
@@ -44558,7 +46122,14 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/keppitz_interior/ops_center)
 "tlL" = (
@@ -44582,7 +46153,7 @@
 /area/bmg290/colony_interior/main_complex)
 "tmj" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
-	color = 666699
+	color = "#424a50"
 	},
 /turf/open/floor/cult,
 /area/bmg290/ancie_eng/chamber2)
@@ -44648,9 +46219,16 @@
 	dir = 10;
 	pixel_y = 16
 	},
-/obj/structure/lattice,
 /obj/structure/prop/almayer/cannon_cables{
 	name = "\improper Cables"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/shuttle/drop3/bmg290)
@@ -44885,6 +46463,12 @@
 	},
 /turf/open/asphalt/cement/cement12,
 /area/bmg290/relay_exterior/cargo_drop)
+"ttl" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "ttn" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -44911,6 +46495,11 @@
 /obj/structure/machinery/vending/cigarette/colony,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_ne)
+"ttG" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/wy_mre,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/keppitz_interior/research_rest_area)
 "ttH" = (
 /obj/structure/stairs/perspective{
 	color = "#6b675e";
@@ -45088,7 +46677,14 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/keppitz_interior/ops_center)
 "tyQ" = (
@@ -45490,17 +47086,13 @@
 	pixel_x = 1;
 	pixel_y = -1
 	},
-/obj/item/clothing/under/colonist{
-	pixel_x = 9;
-	pixel_y = -4
-	},
-/obj/item/clothing/under/colonist{
-	pixel_x = -7;
-	pixel_y = 3
-	},
 /obj/item/clothing/under/navy/tech{
 	pixel_x = -1;
 	pixel_y = -8
+	},
+/obj/item/clothing/under/rank/synthetic/flight{
+	pixel_x = 9;
+	pixel_y = -5
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/bmg290/colony_interior/shop)
@@ -45702,7 +47294,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
 	},
-/turf/open/gm/river/shallow_ocean_shallow_ocean,
+/turf/closed/wall/rock/brown,
 /area/bmg290/oob/playfulstuff)
 "tMN" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -45711,7 +47303,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -45851,7 +47443,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/sofa,
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior_b/beach_house_clean)
 "tQF" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
@@ -45866,7 +47458,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/bmg290/oob/ocean)
@@ -45893,6 +47485,13 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior_b/cargo_area)
+"tRR" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_y = -12
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns_weakened/mining_area)
 "tRW" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 16
@@ -46107,6 +47706,15 @@
 /obj/structure/platform/kutjevo/rock,
 /turf/open/gm/grass,
 /area/bmg290/relay_exterior/east_bridge)
+"tWd" = (
+/obj/structure/prop/invuln/ice_prefab/roof_greeble{
+	icon_state = "flagpole";
+	layer = 4.11;
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/ridgeline)
 "tWi" = (
 /obj/effect/decal/siding{
 	icon_state = "siding4"
@@ -46251,7 +47859,6 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
 "tZw" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
 	climb_delay = 1;
@@ -46261,6 +47868,14 @@
 	dir = 1;
 	climb_delay = 1;
 	layer = 2.99
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/disposals)
@@ -46359,6 +47974,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement3,
 /area/bmg290/relay_exterior/colony_ne)
+"ubP" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/darkyellow2/east,
+/area/bmg290/caverns/filtration_tunnel)
 "uca" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement4,
@@ -46383,6 +48004,10 @@
 	},
 /turf/open/gm/dirt,
 /area/bmg290/relay_exterior/beach)
+"ucx" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/floor/grass,
+/area/bmg290/colony_exterior/valley_site)
 "ucK" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
@@ -46414,7 +48039,13 @@
 /turf/open/gm/river,
 /area/bmg290/relay_exterior/beach_roadside)
 "udl" = (
-/turf/open/gm/river/ocean,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns/filtration_tunnel)
 "udp" = (
 /obj/structure/prop/rock/brown,
@@ -46477,6 +48108,10 @@
 	},
 /turf/open/gm/coast/beachcorner/north_west,
 /area/bmg290/colony_exterior/valley_site)
+"uey" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "ueV" = (
 /obj/structure/barricade/handrail/kutjevo,
 /turf/open/asphalt/cement/cement12,
@@ -46661,6 +48296,15 @@
 	},
 /turf/open/gm/grass,
 /area/bmg290/colony_exterior/valley_site)
+"ukA" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/bmg290/caverns/ridgeline)
 "ukJ" = (
 /obj/structure/bed/sofa,
 /obj/structure/machinery/light{
@@ -46746,6 +48390,11 @@
 	},
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
@@ -46928,6 +48577,13 @@
 /obj/structure/inflatable/door,
 /turf/open/floor/grey_dark2,
 /area/bmg290/ancie_eng_weakened/hallway_section)
+"uqW" = (
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "urA" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 5
@@ -46955,8 +48611,20 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
+"usn" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -12;
+	pixel_y = 23
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "usx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -46965,10 +48633,7 @@
 /turf/open/floor/strata/floor3,
 /area/shuttle/drop3/bmg290)
 "usG" = (
-/obj/structure/prop/rock/brown{
-	dir = 5
-	},
-/turf/open/asphalt/cement_sunbleached,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/bmg290/caverns/ridgeline)
 "usI" = (
 /turf/closed/wall/cult,
@@ -47014,7 +48679,6 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns/filtration_tunnel)
 "uuz" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
@@ -47023,6 +48687,19 @@
 	},
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
@@ -47171,6 +48848,15 @@
 /obj/item/device/flashlight,
 /turf/open/floor/interior/wood/alt,
 /area/bmg290/relay_exterior/beach_bar)
+"uys" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/bmg290/caverns/filtration_tunnel)
 "uyx" = (
 /obj/structure/largecrate{
 	pixel_x = 9;
@@ -47455,7 +49141,6 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
@@ -47463,6 +49148,14 @@
 /obj/structure/prop/structure_lattice{
 	dir = 1;
 	health = 300
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
@@ -47498,6 +49191,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/turbine)
+"uHA" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 9
+	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/bmg290/caverns/ridgeline)
 "uHI" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/warnplate/east,
@@ -47582,7 +49287,14 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/entry_hall)
 "uJd" = (
@@ -47861,7 +49573,7 @@
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
 	invisibility = 101;
-	name = "Invisible Human Barrier"
+	name = "Height Difference"
 	},
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/bmg290/oob/ocean)
@@ -48005,7 +49717,7 @@
 /area/bmg290/keppitz_interior_b/receiving)
 "uRT" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
-	color = 666699
+	color = "#424a50"
 	},
 /turf/open/floor/cult,
 /area/bmg290/ancie_eng/chamber1)
@@ -48093,7 +49805,14 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/entry_hall)
 "uUl" = (
@@ -48381,7 +50100,11 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
 /turf/open/floor/almayer/empty,
 /area/bmg290/ancie_eng/deep_site)
 "vbk" = (
@@ -48432,7 +50155,7 @@
 /area/bmg290/relay_interior_b/beach_house_dirty)
 "vcf" = (
 /obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/colony_interior/chapel)
 "vcl" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
@@ -48494,6 +50217,17 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/colony_interior/bar)
+"vdr" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
+	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 9
+	},
+/turf/open/floor/grass,
+/area/bmg290/keppitz_exterior/mining_outside)
 "vdF" = (
 /obj/structure/largecrate/random/case{
 	pixel_y = 11
@@ -48556,9 +50290,16 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
@@ -48615,11 +50356,18 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
 	climb_delay = 1;
 	layer = 2.99
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/disposals)
@@ -48670,6 +50418,11 @@
 /area/bmg290/relay_interior/cargo_hall)
 "vft" = (
 /obj/structure/window/framed/strata/hull,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/server_room)
 "vfJ" = (
@@ -48751,6 +50504,12 @@
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/plating/wood,
 /area/bmg290/keppitz_interior_b/research_director)
+"vgt" = (
+/mob/living/simple_animal/mouse{
+	name = "Capernicus the Cave Mouse"
+	},
+/turf/open/floor/plating,
+/area/bmg290/oob/playfulstuff)
 "vgu" = (
 /obj/structure/platform_decoration,
 /obj/effect/decal/cleanable/dirt,
@@ -48836,11 +50595,11 @@
 /area/bmg290/colony_interior/medical)
 "vin" = (
 /obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp,
 /obj/structure/window/reinforced/tinted{
 	dir = 8;
-	color = 666699
+	color = "#666699"
 	},
-/obj/item/device/flashlight/lamp,
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz_interior/archives)
 "viA" = (
@@ -48998,6 +50757,10 @@
 	dir = 1;
 	pixel_x = -10;
 	pixel_y = 6
+	},
+/obj/structure/largecrate{
+	pixel_x = -5;
+	pixel_y = -6
 	},
 /turf/open/asphalt/cement/cement3,
 /area/bmg290/relay_interior/cargo_hall_transfer)
@@ -49160,6 +50923,11 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "vpt" = (
@@ -49194,6 +50962,7 @@
 	pixel_y = -13
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/asteroid,
 /area/bmg290/relay_interior/cargo_hall_transfer)
 "vqn" = (
@@ -49287,7 +51056,11 @@
 /area/bmg290/relay_interior/maintenance_hall)
 "vrK" = (
 /obj/structure/platform_decoration/kutjevo,
-/obj/structure/blocker/invisible_wall/water,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
 /turf/open/floor/almayer/empty,
 /area/bmg290/ancie_eng/deep_site)
 "vrW" = (
@@ -49451,6 +51224,19 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/bmg290/relay_interior/entry_hall)
+"vvy" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/head/hardhat,
+/obj/item/clothing/head/hardhat{
+	pixel_x = 10;
+	pixel_y = 9
+	},
+/obj/item/clothing/head/hardhat{
+	pixel_x = -22;
+	pixel_y = 6
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns_weakened/mining_area)
 "vvF" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -49524,9 +51310,16 @@
 	dir = 8;
 	pixel_y = 16
 	},
-/obj/structure/lattice,
 /obj/structure/prop/almayer/cannon_cables{
 	name = "\improper Cables"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/shuttle/drop1/bmg290)
@@ -49543,7 +51336,14 @@
 	dir = 1
 	},
 /obj/structure/platform/strata/metal,
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/relay_interior/turbine)
 "vxg" = (
@@ -49685,6 +51485,16 @@
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/relay_exterior/beach_bar)
+"vCs" = (
+/obj/structure/surface/rack,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/rack{
+	density = 0;
+	pixel_y = 18
+	},
+/obj/item/storage/box/wy_mre,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/colony_interior/logistics_hub)
 "vCA" = (
 /obj/structure/prop/rock/brown,
 /turf/open/gm/grass,
@@ -49699,6 +51509,7 @@
 "vCO" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/USCMtray,
+/obj/item/storage/box/wy_mre,
 /turf/open/floor/interior/wood/alt,
 /area/bmg290/relay_exterior/beach_bar)
 "vCQ" = (
@@ -49758,6 +51569,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/shuttle/drop1/bmg290)
+"vDU" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns_weakened/mining_area)
 "vEc" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -50033,7 +51848,6 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/obj/structure/lattice,
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	icon_state = "flammable_pipe_3";
 	pixel_x = 12;
@@ -50043,6 +51857,14 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
 	pixel_y = 16
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/shuttle/drop3/bmg290)
@@ -50392,6 +52214,11 @@
 /area/bmg290/keppitz_interior_b/research)
 "vQn" = (
 /obj/structure/blocker/fog,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "vQB" = (
@@ -50415,6 +52242,7 @@
 	dir = 8;
 	pixel_y = -5
 	},
+/obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns/filtration_tunnel)
 "vRe" = (
@@ -50644,7 +52472,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/relay_interior_b/relay_courtyard_cargo)
 "vUQ" = (
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior_b/beach_house_clean)
 "vUT" = (
 /obj/structure/surface/table/almayer,
@@ -50674,10 +52502,11 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/engi_hall)
 "vVl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/firecloset,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
 /turf/open/floor/prison/floor_plate,
-/area/bmg290/relay_interior/server_room)
+/area/bmg290/caverns/filtration_tunnel)
 "vVn" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 8
@@ -50803,6 +52632,11 @@
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
@@ -50979,6 +52813,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement2,
 /area/bmg290/relay_exterior/colony_nw)
+"way" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -9;
+	pixel_y = -2
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/area1)
 "waA" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /obj/effect/decal/cleanable/dirt,
@@ -51014,7 +52855,7 @@
 /obj/structure/bed/sofa/pews/flipped{
 	dir = 1
 	},
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/colony_interior/chapel)
 "waW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -51045,7 +52886,6 @@
 /area/bmg290/colony_interior/engi_hall)
 "wbq" = (
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
 /obj/structure/prop/almayer/cannon_cables{
 	name = "\improper Cables"
 	},
@@ -51053,6 +52893,19 @@
 	dir = 1;
 	climb_delay = 1;
 	layer = 2.99
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
@@ -51073,12 +52926,12 @@
 /area/bmg290/relay_exterior/colony_center)
 "wbQ" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/window/reinforced/tinted{
-	dir = 8;
-	color = 666699
-	},
 /obj/item/device/flashlight/lamp,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/window/reinforced/tinted{
+	dir = 8;
+	color = "#666699"
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz_interior/archives)
 "wbX" = (
@@ -51287,9 +53140,16 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/lattice,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4-8"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/colony_interior/substation)
@@ -51347,7 +53207,7 @@
 	},
 /obj/structure/surface/table/almayer,
 /obj/structure/window/reinforced/tinted{
-	color = 666699
+	color = "#666699"
 	},
 /turf/open/floor/plating/wood,
 /area/bmg290/colony_interior/main_complex)
@@ -51403,7 +53263,7 @@
 /area/bmg290/relay_interior/entry_hall)
 "wjr" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
-	color = 666699
+	color = "#424a50"
 	},
 /turf/open/floor/cult,
 /area/bmg290/ancie_eng_weakened/hallway_section)
@@ -51616,7 +53476,8 @@
 "wnv" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/device/flashlight/lamp/candelabra{
-	pixel_y = 19
+	pixel_y = 4;
+	pixel_x = 0
 	},
 /turf/open/floor/corsat/squareswood,
 /area/bmg290/colony_interior/chapel)
@@ -51751,6 +53612,10 @@
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/relay_exterior/outskirts)
+"wqA" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns_weakened/filtration_perimeter)
 "wqJ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -51889,6 +53754,11 @@
 	dir = 4;
 	pixel_y = -12
 	},
+/obj/item/paper_bin{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/obj/item/tool/pen/blue/clicky,
 /turf/open/floor/almayer/dark_sterile,
 /area/bmg290/keppitz_interior/research_rest_area)
 "wtq" = (
@@ -51958,8 +53828,11 @@
 /turf/open/asphalt/cement/cement2,
 /area/bmg290/relay_exterior/colony_ne)
 "wuI" = (
-/turf/closed/wall/wood,
-/area/bmg290/caverns_weakened/mining_area)
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/caverns/filtration_tunnel)
 "wuJ" = (
 /obj/structure/girder/reinforced,
 /obj/structure/platform/kutjevo,
@@ -52046,12 +53919,19 @@
 /area/bmg290/keppitz_exterior/research_camp)
 "wwx" = (
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
@@ -52070,6 +53950,9 @@
 /area/bmg290/colony_interior/bar)
 "wxh" = (
 /obj/structure/largecrate/random/case/double,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "wxi" = (
@@ -52118,7 +54001,6 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/bmg290/ancie_eng_weakened/breached_hall)
 "wyN" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
 	climb_delay = 1;
@@ -52129,6 +54011,14 @@
 	},
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/entry_hall)
@@ -52566,7 +54456,14 @@
 	layer = 2.99
 	},
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/entry_hall)
 "wJt" = (
@@ -52609,6 +54506,11 @@
 "wKh" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
@@ -52850,6 +54752,10 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement/cement9,
 /area/bmg290/relay_exterior/colony_center)
+"wQS" = (
+/obj/structure/surface/table/almayer,
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns_weakened/mining_area)
 "wQU" = (
 /obj/structure/flora/bush/ausbushes/var3/brflowers,
 /turf/open/floor/grass,
@@ -53157,6 +55063,14 @@
 "wXt" = (
 /turf/open/floor/prison/darkpurplecorners2/north,
 /area/bmg290/keppitz_interior_b/research_containment)
+"wXz" = (
+/obj/structure/platform/kutjevo/smooth{
+	climb_delay = 1;
+	layer = 2.99
+	},
+/obj/item/reagent_container/food/snacks/grown/wheat,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/relay_exterior/colony_nw)
 "wXB" = (
 /obj/structure/pipes/standard/tank/oxygen,
 /turf/open/asphalt/cement_sunbleached,
@@ -53207,6 +55121,9 @@
 /turf/open/floor/prison/darkbrown2/west,
 /area/bmg290/colony_interior/logistics_hub)
 "wYq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/plating,
 /area/bmg290/caverns/filtration_tunnel)
 "wYy" = (
@@ -53371,6 +55288,11 @@
 "xcC" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/paper_bin/wy{
+	pixel_x = -2;
+	pixel_y = 7
+	},
+/obj/item/tool/pen/blue/clicky,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz_interior_b/research_containment)
 "xcE" = (
@@ -53463,9 +55385,16 @@
 	layer = 2.99
 	},
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/lattice,
 /obj/structure/prop/almayer/cannon_cables{
 	name = "\improper Cables"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/entry_hall)
@@ -53790,6 +55719,13 @@
 	},
 /turf/open/floor/grass,
 /area/bmg290/keppitz_exterior/research_camp)
+"xmW" = (
+/obj/structure/blocker/fog,
+/obj/structure/prop/rock/brown{
+	dir = 9
+	},
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
+/area/bmg290/oob/playfulstuff)
 "xnj" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -53957,13 +55893,14 @@
 	icon_state = "Synthetic_Template";
 	name = "Display synthetic"
 	},
-/obj/item/clothing/under/colonist{
-	pixel_y = -2
-	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/under/rank/synthetic/flight{
+	pixel_x = 0;
+	pixel_y = -2
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/colony_interior/shop)
 "xrc" = (
@@ -53977,12 +55914,14 @@
 /obj/structure/closet/secure_closet/miner{
 	density = 0;
 	pixel_y = 14;
-	pixel_x = -8
+	pixel_x = -8;
+	can_be_stacked = 1
 	},
 /obj/structure/closet/secure_closet/miner{
 	density = 0;
 	pixel_y = 18;
-	pixel_x = 7
+	pixel_x = 7;
+	can_be_stacked = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -54188,8 +56127,7 @@
 /turf/open/floor/plating/wood,
 /area/bmg290/keppitz_interior_b/research_standard)
 "xuL" = (
-/obj/structure/prop/fishing,
-/turf/open/asphalt/cement_sunbleached,
+/turf/closed/wall/rock/red,
 /area/bmg290/oob/playfulstuff)
 "xuM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -54220,9 +56158,12 @@
 /turf/open/floor/grey_dark2,
 /area/bmg290/ancie_eng/chamber2)
 "xvk" = (
-/obj/item/device/binoculars,
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 14;
+	pixel_y = 23
+	},
 /turf/open/asphalt/cement_sunbleached,
-/area/bmg290/oob/playfulstuff)
+/area/bmg290/keppitz_exterior_b/cave)
 "xvm" = (
 /obj/docking_port/stationary/marine_dropship/lz2{
 	name = "LZ2 Otogi Outskirts"
@@ -54231,7 +56172,7 @@
 /area/shuttle/drop2/bmg290)
 "xvp" = (
 /obj/structure/window/reinforced/tinted{
-	color = 666699
+	color = "#666699"
 	},
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_22"
@@ -54331,7 +56272,7 @@
 /turf/closed/wall/strata_outpost,
 /area/bmg290/colony_interior/disposals)
 "xwE" = (
-/turf/open/gm/river/shallow_ocean_shallow_ocean,
+/turf/closed/wall/rock/brown,
 /area/bmg290/oob/playfulstuff)
 "xwI" = (
 /obj/structure/window/framed/strata,
@@ -54373,7 +56314,7 @@
 /obj/structure/machinery/computer/cameras/wooden_tv/broadcast{
 	pixel_y = 3
 	},
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay_interior_b/beach_house_clean)
 "xxI" = (
 /obj/structure/girder/displaced,
@@ -54392,6 +56333,7 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/bmg290/caverns/ridgeline)
 "xyn" = (
+/obj/structure/machinery/colony_floodlight,
 /turf/open/floor/asteroidwarning,
 /area/bmg290/colony_exterior/valley_site)
 "xyq" = (
@@ -54475,6 +56417,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/oob/playfulstuff)
+"xBK" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/floor/grass,
+/area/bmg290/keppitz_exterior/cargo_section)
 "xBM" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
@@ -54534,6 +56482,10 @@
 "xCG" = (
 /turf/open/gm/grass,
 /area/bmg290/relay_exterior/colony_ne)
+"xCS" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/prison,
+/area/bmg290/caverns/filtration_tunnel)
 "xCY" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -54583,12 +56535,12 @@
 /area/bmg290/keppitz_exterior/research_camp)
 "xEh" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/window/reinforced/tinted{
-	dir = 8;
-	color = 666699
-	},
 /obj/structure/barricade/handrail/strata{
 	dir = 1
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 8;
+	color = "#666699"
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz_interior/archives)
@@ -54607,6 +56559,15 @@
 	},
 /turf/open/floor/asteroidplating,
 /area/bmg290/relay_exterior/cargo_drop)
+"xEH" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/coagulation/icon0_5,
+/area/bmg290/caverns/filtration_tunnel)
 "xEJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -54642,9 +56603,16 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/machinery/light/small{
 	dir = 1
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/gm/river/ocean,
 /area/bmg290/relay_interior/turbine)
@@ -54806,10 +56774,22 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/caverns/filtration_tunnel)
 "xIM" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo{
 	dir = 1
+	},
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Height Difference"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay_interior/server_room)
@@ -55152,6 +57132,14 @@
 	},
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/relay_exterior/colony_center)
+"xRt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/colony_interior/logistics_hub)
 "xRI" = (
 /obj/structure/largecrate/random/mini{
 	pixel_y = 12;
@@ -55297,7 +57285,14 @@
 	pixel_x = 12;
 	pixel_y = 16
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/shuttle/drop1/bmg290)
 "xVK" = (
@@ -55401,7 +57396,6 @@
 /turf/open/floor/rampbottom/north,
 /area/bmg290/relay_exterior/colony_nw)
 "xYl" = (
-/obj/structure/lattice,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
 	climb_delay = 1;
@@ -55414,6 +57408,15 @@
 	},
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
 	},
 /turf/open/floor/plating,
 /area/bmg290/caverns/filtration_tunnel)
@@ -55478,7 +57481,7 @@
 /turf/open/floor/plating/warnplate/north,
 /area/bmg290/colony_interior/logistics_hub)
 "xZg" = (
-/obj/structure/closet/emcloset,
+/obj/structure/closet/firecloset,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/server_room)
 "xZn" = (
@@ -55556,7 +57559,14 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/lattice,
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
 /turf/open/floor/plating,
 /area/bmg290/relay_exterior/colony_center)
 "ybe" = (
@@ -55578,7 +57588,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/floor/plating/wood,
+/turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/colony_interior/chapel)
 "ybv" = (
 /obj/structure/surface/table/almayer,
@@ -55641,6 +57651,11 @@
 /area/bmg290/relay_exterior/colony_center)
 "ycA" = (
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0;
+	invisibility = 101;
+	name = "Invisible Human Barrier"
+	},
 /turf/open/gm/river/ocean,
 /area/bmg290/caverns_weakened/filtration_perimeter)
 "ycD" = (
@@ -55821,6 +57836,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/bmg290/relay_exterior/colony_center)
+"ygF" = (
+/obj/structure/fence,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/keppitz_exterior/cargo_section)
 "ygH" = (
 /obj/structure/machinery/computer/telecomms/traffic,
 /turf/open/floor/prison/floor_plate,
@@ -55855,6 +57874,10 @@
 /obj/structure/machinery/blackbox_recorder,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay_interior/server_room)
+"yhv" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "yhA" = (
 /turf/open/floor/asteroidwarning/north,
 /area/bmg290/relay_exterior/colony_nw)
@@ -55916,7 +57939,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/flight_control)
 "yjp" = (
-/turf/open/floor/prison/chapel_carpet/doubleside/north,
+/turf/open/floor/strata/faux_wood,
 /area/bmg290/colony_interior/chapel)
 "yjr" = (
 /obj/effect/decal/grass_overlay/grass1,
@@ -55990,6 +58013,12 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/keppitz_exterior/research_camp)
+"ykk" = (
+/obj/structure/machinery/floodlight{
+	name = "Floodlight"
+	},
+/turf/open/asphalt/cement_sunbleached,
+/area/bmg290/caverns/halls)
 "ykn" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/effect/decal/cleanable/dirt,
@@ -56210,43 +58239,43 @@ gvu
 gvu
 gvu
 gvu
+xwE
+xwE
+xwE
+xwE
+xwE
 gvu
 gvu
 gvu
 gvu
 gvu
 gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
 fFa
 jYe
 gfT
@@ -56432,7 +58461,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 bQO
 pUE
 fyP
@@ -56618,7 +58647,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 dai
 fyP
 fyP
@@ -56804,7 +58833,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 rPe
 fyP
 fyP
@@ -56990,7 +59019,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 rPe
 fyP
 fyP
@@ -57176,7 +59205,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 uOx
 fyP
 fyP
@@ -57362,7 +59391,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 ved
 fyP
 qTk
@@ -57548,7 +59577,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 ved
 lZW
 rWG
@@ -57734,7 +59763,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 dai
 lZW
 cBA
@@ -57920,7 +59949,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 bQO
 aHH
 moj
@@ -58106,7 +60135,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 euB
@@ -58292,7 +60321,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 euB
@@ -58392,7 +60421,7 @@ kXr
 ccU
 ccU
 kXr
-osr
+qpI
 swV
 eXU
 hiU
@@ -58478,7 +60507,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 euB
@@ -58664,7 +60693,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 euB
@@ -58850,7 +60879,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 euB
@@ -59036,7 +61065,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 euB
@@ -59222,7 +61251,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 euB
@@ -59408,7 +61437,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 euB
@@ -59594,7 +61623,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 sdS
 euB
@@ -59780,7 +61809,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 euB
@@ -59966,7 +61995,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 fyP
@@ -60152,7 +62181,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 rTh
 iYM
@@ -60338,7 +62367,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 bri
 dRA
@@ -60524,7 +62553,7 @@ fnz
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 hsP
 esR
@@ -60710,7 +62739,7 @@ fnz
 cgF
 cgF
 cgF
-gvu
+xwE
 euB
 loV
 hdB
@@ -60896,7 +62925,7 @@ fnz
 fnz
 cgF
 cgF
-gvu
+xwE
 euB
 sOy
 ewN
@@ -61082,7 +63111,7 @@ cgF
 fnz
 cgF
 cgF
-gvu
+xwE
 euB
 euB
 euB
@@ -61268,7 +63297,7 @@ cgF
 fnz
 cgF
 cgF
-gvu
+xwE
 uOx
 hdB
 okb
@@ -61454,7 +63483,7 @@ cgF
 fnz
 cgF
 cgF
-gvu
+xwE
 ved
 okb
 okb
@@ -61640,7 +63669,7 @@ cgF
 fnz
 cgF
 cgF
-gvu
+xwE
 ved
 okb
 okb
@@ -61826,7 +63855,7 @@ cgF
 fnz
 cgF
 cgF
-gvu
+xwE
 dai
 okb
 dRA
@@ -62012,7 +64041,7 @@ cgF
 fnz
 fnz
 cgF
-gvu
+xwE
 ved
 okb
 okb
@@ -62198,7 +64227,7 @@ cgF
 cgF
 fnz
 cgF
-gvu
+xwE
 dai
 hdB
 okb
@@ -62384,7 +64413,7 @@ cgF
 cgF
 fnz
 cgF
-gvu
+xwE
 dai
 hdB
 okb
@@ -62570,7 +64599,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 bQO
 aHH
 hdB
@@ -62756,7 +64785,7 @@ cgF
 cgF
 cgF
 fnz
-gvu
+xwE
 bpV
 ktf
 aCB
@@ -62942,15 +64971,15 @@ cgF
 cgF
 cgF
 fnz
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
-gvu
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
+xwE
 "}
 (38,1,1) = {"
 gvu
@@ -63136,7 +65165,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 "}
 (39,1,1) = {"
 gvu
@@ -63322,7 +65351,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 "}
 (40,1,1) = {"
 gvu
@@ -63508,7 +65537,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 "}
 (41,1,1) = {"
 gvu
@@ -63694,7 +65723,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 "}
 (42,1,1) = {"
 gvu
@@ -63880,7 +65909,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 "}
 (43,1,1) = {"
 gvu
@@ -64066,7 +66095,7 @@ cgF
 cgF
 cgF
 cgF
-gvu
+xwE
 "}
 (44,1,1) = {"
 gvu
@@ -64252,7 +66281,7 @@ fnz
 cgF
 cgF
 cgF
-gvu
+xwE
 "}
 (45,1,1) = {"
 gvu
@@ -64438,7 +66467,7 @@ fnz
 cgF
 cgF
 cgF
-gvu
+xwE
 "}
 (46,1,1) = {"
 gvu
@@ -64624,7 +66653,7 @@ fnz
 cgF
 cgF
 cgF
-gvu
+xwE
 "}
 (47,1,1) = {"
 gvu
@@ -64810,7 +66839,7 @@ fnz
 cgF
 cgF
 cgF
-gvu
+xwE
 "}
 (48,1,1) = {"
 gvu
@@ -64996,7 +67025,7 @@ fnz
 fnz
 fnz
 fnz
-gvu
+xwE
 "}
 (49,1,1) = {"
 gvu
@@ -65182,7 +67211,7 @@ cgF
 fnz
 fnz
 fnz
-gvu
+xwE
 "}
 (50,1,1) = {"
 gvu
@@ -65368,7 +67397,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (51,1,1) = {"
 gvu
@@ -65492,7 +67521,7 @@ lkW
 lkW
 lkW
 pPP
-jyt
+pPP
 cNT
 lkW
 pPP
@@ -65554,7 +67583,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (52,1,1) = {"
 gvu
@@ -65740,7 +67769,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (53,1,1) = {"
 gvu
@@ -65873,7 +67902,7 @@ lkW
 pPP
 lkW
 vqh
-pPP
+tbo
 lkW
 lkW
 pzW
@@ -65926,7 +67955,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (54,1,1) = {"
 gvu
@@ -66059,8 +68088,8 @@ nNK
 nNK
 nNK
 iNh
-bHl
-bHl
+rxU
+axX
 bHl
 eih
 dxj
@@ -66112,7 +68141,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (55,1,1) = {"
 gvu
@@ -66228,7 +68257,7 @@ rkv
 kMg
 kMg
 ayJ
-sfa
+cYK
 sfa
 jon
 pqo
@@ -66298,7 +68327,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (56,1,1) = {"
 gvu
@@ -66484,7 +68513,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (57,1,1) = {"
 gvu
@@ -66670,7 +68699,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (58,1,1) = {"
 gvu
@@ -66856,7 +68885,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (59,1,1) = {"
 gvu
@@ -67042,7 +69071,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (60,1,1) = {"
 gvu
@@ -67228,7 +69257,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (61,1,1) = {"
 gvu
@@ -67414,7 +69443,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (62,1,1) = {"
 gvu
@@ -67600,7 +69629,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (63,1,1) = {"
 gvu
@@ -67718,7 +69747,7 @@ oOJ
 dac
 oOJ
 vCQ
-vVl
+vCQ
 xQU
 mCD
 oOJ
@@ -67786,7 +69815,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (64,1,1) = {"
 gvu
@@ -67972,7 +70001,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (65,1,1) = {"
 gvu
@@ -68158,7 +70187,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (66,1,1) = {"
 gvu
@@ -68344,7 +70373,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (67,1,1) = {"
 gvu
@@ -68482,7 +70511,7 @@ qSW
 qSW
 qSW
 qSW
-lfE
+ktR
 rFB
 nph
 cgF
@@ -68530,7 +70559,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (68,1,1) = {"
 gvu
@@ -68669,7 +70698,7 @@ qSW
 qSW
 qSW
 iZp
-lfE
+ktR
 rFB
 cgF
 pLu
@@ -68716,7 +70745,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (69,1,1) = {"
 gvu
@@ -68855,8 +70884,8 @@ qSW
 qSW
 tle
 qcV
-lfE
-lfE
+ktR
+xmW
 rFB
 pLu
 cgF
@@ -68902,7 +70931,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (70,1,1) = {"
 gvu
@@ -69042,7 +71071,7 @@ tle
 tle
 lYM
 iZp
-lfE
+ktR
 rFB
 rlf
 cgF
@@ -69088,7 +71117,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (71,1,1) = {"
 gvu
@@ -69225,11 +71254,11 @@ vcl
 qSW
 tle
 tle
-xvk
+tle
 tle
 qcV
 lfE
-lfE
+ktR
 rlf
 cgF
 cgF
@@ -69274,7 +71303,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (72,1,1) = {"
 gvu
@@ -69410,12 +71439,12 @@ sRF
 vcl
 qSW
 tle
+reB
 tle
-sqo
-xuL
+tle
 qcV
 xwE
-lfE
+dcP
 rlf
 cgF
 gcv
@@ -69460,7 +71489,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (73,1,1) = {"
 gvu
@@ -69597,11 +71626,11 @@ vcl
 qSW
 qSW
 tle
-tbo
 tle
-qcV
+tle
+xwE
 lfE
-lfE
+ktR
 rlf
 cgF
 cgF
@@ -69646,7 +71675,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (74,1,1) = {"
 gvu
@@ -69832,7 +71861,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (75,1,1) = {"
 gvu
@@ -69971,7 +72000,7 @@ qSW
 qSW
 tle
 cbx
-tMM
+ktR
 rFB
 cgF
 pLu
@@ -70018,7 +72047,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (76,1,1) = {"
 gvu
@@ -70204,7 +72233,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (77,1,1) = {"
 gvu
@@ -70390,7 +72419,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (78,1,1) = {"
 gvu
@@ -70576,7 +72605,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (79,1,1) = {"
 gvu
@@ -70734,7 +72763,7 @@ cgF
 cgF
 cgF
 cgF
-naS
+exA
 nOi
 pEQ
 pEQ
@@ -70762,7 +72791,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (80,1,1) = {"
 gvu
@@ -70948,7 +72977,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (81,1,1) = {"
 gvu
@@ -71134,7 +73163,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (82,1,1) = {"
 gvu
@@ -71320,7 +73349,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (83,1,1) = {"
 gvu
@@ -71506,7 +73535,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (84,1,1) = {"
 gvu
@@ -71692,7 +73721,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (85,1,1) = {"
 gvu
@@ -71878,7 +73907,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (86,1,1) = {"
 gvu
@@ -72064,7 +74093,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (87,1,1) = {"
 gvu
@@ -72250,7 +74279,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (88,1,1) = {"
 gvu
@@ -72436,7 +74465,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (89,1,1) = {"
 gvu
@@ -72622,7 +74651,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (90,1,1) = {"
 gvu
@@ -72808,7 +74837,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (91,1,1) = {"
 gvu
@@ -72994,7 +75023,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (92,1,1) = {"
 gvu
@@ -73180,7 +75209,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (93,1,1) = {"
 gvu
@@ -73366,7 +75395,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (94,1,1) = {"
 gvu
@@ -73552,7 +75581,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (95,1,1) = {"
 gvu
@@ -73738,7 +75767,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (96,1,1) = {"
 gvu
@@ -73924,7 +75953,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (97,1,1) = {"
 gvu
@@ -73955,7 +75984,7 @@ lob
 kXz
 pVO
 bIj
-iHS
+gMW
 saz
 drE
 rTr
@@ -74110,7 +76139,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (98,1,1) = {"
 gvu
@@ -74296,7 +76325,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (99,1,1) = {"
 gvu
@@ -74482,7 +76511,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (100,1,1) = {"
 gvu
@@ -74668,7 +76697,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (101,1,1) = {"
 gvu
@@ -74854,7 +76883,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (102,1,1) = {"
 gvu
@@ -74926,7 +76955,7 @@ oJS
 mtZ
 jNj
 fca
-iDA
+ttG
 snB
 dYT
 pxn
@@ -75040,7 +77069,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (103,1,1) = {"
 gvu
@@ -75167,7 +77196,7 @@ fiE
 pva
 tOK
 fiE
-qpE
+qed
 fiE
 fiE
 fiE
@@ -75226,7 +77255,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (104,1,1) = {"
 gvu
@@ -75412,7 +77441,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (105,1,1) = {"
 gvu
@@ -75536,7 +77565,7 @@ qSW
 qSW
 pva
 pva
-qpE
+qed
 fiE
 kBd
 kBd
@@ -75598,7 +77627,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (106,1,1) = {"
 gvu
@@ -75784,7 +77813,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (107,1,1) = {"
 gvu
@@ -75970,7 +77999,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (108,1,1) = {"
 gvu
@@ -76084,8 +78113,8 @@ eXR
 tMz
 pJs
 iZd
-lJU
-lJU
+pva
+pva
 iZd
 iZd
 iZd
@@ -76095,7 +78124,7 @@ fiE
 fiE
 gjx
 kBd
-qpE
+qed
 fiE
 jPa
 qSW
@@ -76156,7 +78185,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (109,1,1) = {"
 gvu
@@ -76270,8 +78299,8 @@ pes
 pes
 tMz
 pJs
-lJU
-lJU
+pva
+pva
 lZf
 kdF
 kdF
@@ -76342,7 +78371,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (110,1,1) = {"
 gvu
@@ -76466,7 +78495,7 @@ iZd
 bOA
 pva
 jwP
-lJU
+fiE
 pva
 wqo
 wmv
@@ -76528,7 +78557,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (111,1,1) = {"
 gvu
@@ -76680,7 +78709,7 @@ oQf
 oQf
 wrD
 opX
-opX
+deu
 plr
 hDE
 nPr
@@ -76714,7 +78743,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (112,1,1) = {"
 gvu
@@ -76900,7 +78929,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (113,1,1) = {"
 gvu
@@ -77086,7 +79115,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (114,1,1) = {"
 gvu
@@ -77272,7 +79301,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (115,1,1) = {"
 gvu
@@ -77307,7 +79336,7 @@ cye
 cye
 cye
 cye
-pAD
+kfl
 kdb
 bxi
 qSW
@@ -77458,7 +79487,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (116,1,1) = {"
 gvu
@@ -77644,7 +79673,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (117,1,1) = {"
 gvu
@@ -77830,7 +79859,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (118,1,1) = {"
 gvu
@@ -78016,7 +80045,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (119,1,1) = {"
 gvu
@@ -78202,7 +80231,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (120,1,1) = {"
 gvu
@@ -78388,7 +80417,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (121,1,1) = {"
 gvu
@@ -78574,7 +80603,7 @@ cgF
 msD
 fnz
 fnz
-gvu
+xwE
 "}
 (122,1,1) = {"
 gvu
@@ -78760,7 +80789,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (123,1,1) = {"
 gvu
@@ -78946,7 +80975,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (124,1,1) = {"
 gvu
@@ -78976,7 +81005,7 @@ oRr
 kyM
 xoJ
 bVh
-bVh
+ctl
 bVh
 xoJ
 kyM
@@ -79132,7 +81161,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (125,1,1) = {"
 gvu
@@ -79318,7 +81347,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (126,1,1) = {"
 gvu
@@ -79504,7 +81533,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (127,1,1) = {"
 gvu
@@ -79690,7 +81719,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (128,1,1) = {"
 gvu
@@ -79876,7 +81905,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (129,1,1) = {"
 gvu
@@ -80062,7 +82091,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (130,1,1) = {"
 gvu
@@ -80248,7 +82277,7 @@ cgF
 cgF
 fnz
 fnz
-gvu
+xwE
 "}
 (131,1,1) = {"
 gvu
@@ -80434,7 +82463,7 @@ cgF
 cgF
 qSW
 qSW
-gvu
+xwE
 "}
 (132,1,1) = {"
 gvu
@@ -80620,7 +82649,7 @@ cgF
 qSW
 qSW
 qSW
-gvu
+xwE
 "}
 (133,1,1) = {"
 gvu
@@ -80806,7 +82835,7 @@ qSW
 qSW
 qSW
 qSW
-gvu
+xwE
 "}
 (134,1,1) = {"
 gvu
@@ -80992,7 +83021,7 @@ qSW
 qSW
 qSW
 qSW
-gvu
+xwE
 "}
 (135,1,1) = {"
 gvu
@@ -81178,7 +83207,7 @@ qSW
 qSW
 qSW
 qSW
-gvu
+xwE
 "}
 (136,1,1) = {"
 gvu
@@ -81364,7 +83393,7 @@ qSW
 qSW
 qSW
 qSW
-gvu
+xwE
 "}
 (137,1,1) = {"
 gvu
@@ -81383,7 +83412,7 @@ bjc
 bjc
 bjc
 bjc
-bjc
+coX
 qSW
 qSW
 qSW
@@ -81550,7 +83579,7 @@ qSW
 qSW
 qSW
 qSW
-gvu
+xwE
 "}
 (138,1,1) = {"
 gvu
@@ -81566,7 +83595,7 @@ qSW
 qSW
 qSW
 bjc
-bjc
+xvk
 bjc
 bjc
 bjc
@@ -81736,7 +83765,7 @@ qSW
 qSW
 qSW
 qSW
-gvu
+xwE
 "}
 (139,1,1) = {"
 gvu
@@ -81922,7 +83951,7 @@ xeF
 xeF
 qSW
 qSW
-gvu
+xwE
 "}
 (140,1,1) = {"
 gvu
@@ -82108,7 +84137,7 @@ xeF
 xeF
 xeF
 qSW
-gvu
+xuL
 "}
 (141,1,1) = {"
 gvu
@@ -82294,7 +84323,7 @@ rQo
 xeF
 xeF
 crz
-gvu
+xuL
 "}
 (142,1,1) = {"
 gvu
@@ -82480,7 +84509,7 @@ tDy
 rQo
 xeF
 crz
-gvu
+xuL
 "}
 (143,1,1) = {"
 gvu
@@ -82666,7 +84695,7 @@ rWY
 tDy
 oeI
 xcO
-gvu
+xuL
 "}
 (144,1,1) = {"
 gvu
@@ -82852,7 +84881,7 @@ rWY
 rWY
 rWY
 qSW
-gvu
+xuL
 "}
 (145,1,1) = {"
 gvu
@@ -83425,7 +85454,7 @@ qSW
 qSW
 rWY
 qSW
-rWY
+jai
 rWY
 rWY
 rWY
@@ -83614,7 +85643,7 @@ rWY
 rWY
 rWY
 rWY
-rWY
+gjM
 qSW
 rWY
 rWY
@@ -84787,7 +86816,7 @@ qSW
 qSW
 qSW
 qSW
-vHF
+gbA
 qnP
 iyQ
 gaJ
@@ -84972,8 +87001,8 @@ qSW
 qSW
 qSW
 qSW
-vHF
-vHF
+gbA
+gbA
 vHF
 iyQ
 gaJ
@@ -85158,8 +87187,8 @@ qSW
 qSW
 qSW
 qSW
-vHF
-vHF
+gbA
+mvm
 vHF
 aHu
 awQ
@@ -85344,8 +87373,8 @@ qSW
 qSW
 qSW
 qSW
-vHF
-vHF
+xBK
+tgK
 vHF
 vHF
 vHF
@@ -85530,10 +87559,10 @@ qSW
 qSW
 qSW
 qSW
-qSW
-vHF
-vHF
-vHF
+frG
+xBK
+gbA
+qtw
 vHF
 vHF
 qnP
@@ -85717,10 +87746,10 @@ qSW
 qSW
 qSW
 qSW
-vHF
-vHF
-vHF
-vHF
+kcQ
+qwT
+gbA
+gbA
 vHF
 vHF
 qSW
@@ -85905,8 +87934,8 @@ qSW
 qSW
 qSW
 cUo
-cUo
-cUo
+ygF
+ygF
 cUo
 qSW
 qSW
@@ -86090,9 +88119,9 @@ qSW
 qSW
 qSW
 qSW
-gtA
-gtA
-gtA
+rCt
+wTa
+wTa
 gtA
 qSW
 qSW
@@ -86272,14 +88301,14 @@ qSW
 qSW
 qSW
 qSW
-qSW
-qSW
-gtA
-gtA
-gtA
-gtA
-gtA
-gtA
+frG
+frG
+pUu
+orq
+wTa
+prZ
+wTa
+poR
 gtA
 qSW
 qSW
@@ -86458,16 +88487,16 @@ qSW
 qSW
 qSW
 qSW
+pUu
 gtA
 gtA
+gkk
+prZ
 gtA
-gtA
-gtA
-gtA
-gtA
-gtA
-gtA
-qSW
+wTa
+wTa
+ucx
+frG
 qSW
 qSW
 qSW
@@ -86618,8 +88647,8 @@ uIm
 cTm
 vXR
 jzl
-mlG
-mlG
+vdr
+mdE
 mlG
 mlG
 mlG
@@ -86643,17 +88672,17 @@ fcv
 qSW
 qSW
 qSW
+pUu
+wTa
+wTa
 gtA
 gtA
+ttl
+lfP
+gkk
+wTa
 gtA
-gtA
-gtA
-gtA
-gtA
-gtA
-gtA
-gtA
-qSW
+frG
 qSW
 qSW
 qSW
@@ -86780,7 +88809,7 @@ qSW
 qSW
 qSW
 qSW
-fIf
+lWR
 fIf
 fIf
 fIf
@@ -86795,20 +88824,20 @@ xhc
 xhc
 xhc
 xhc
-xhc
-xhc
-xhc
-xhc
+dnd
+dnd
+dnd
+mag
 xhc
 uIm
 cTm
 vXR
 xhc
-xhc
-xhc
-xhc
-xhc
-xhc
+oCB
+dnd
+dnd
+dnd
+mag
 xhc
 dik
 dbw
@@ -86833,12 +88862,12 @@ tnb
 tnb
 tnb
 lFq
-qSW
-qSW
+frG
+frG
+ihX
 gtA
 gtA
-gtA
-gtA
+ttl
 qSW
 qSW
 qSW
@@ -86981,10 +89010,10 @@ qSW
 xhc
 xhc
 xhc
-xhc
-xhc
-xhc
-xhc
+oCB
+dnd
+dnd
+dnd
 xhc
 uIm
 cTm
@@ -86992,9 +89021,9 @@ vXR
 xhc
 xhc
 xhc
-xhc
-xhc
-xhc
+oCB
+dnd
+dnd
 xhc
 dEl
 nul
@@ -87020,11 +89049,11 @@ wmv
 wmv
 qSW
 qSW
-qSW
+frG
+pUu
 gtA
-gtA
-gtA
-gtA
+ttl
+pIF
 qSW
 qSW
 qSW
@@ -87070,11 +89099,11 @@ kpr
 umc
 vto
 cyd
+xgD
 jAE
 jAE
 jAE
-jAE
-jAE
+xgD
 piN
 vto
 umc
@@ -87156,7 +89185,7 @@ fIf
 fIf
 fIf
 fIf
-fIf
+way
 qSW
 qSW
 qSW
@@ -87207,9 +89236,9 @@ wmv
 wmv
 wmv
 dDa
-gtA
-gtA
-gtA
+wTa
+wTa
+agp
 qSW
 qSW
 qSW
@@ -87388,13 +89417,13 @@ gZk
 dbz
 wmv
 wmv
-wmv
-wmv
-wmv
+krb
+uqA
+hIR
 wmv
 dDa
-gtA
-gtA
+wTa
+wTa
 gtA
 qSW
 qSW
@@ -87442,11 +89471,11 @@ umc
 mPQ
 umc
 tKH
+xgD
 qnL
 qnL
 qnL
-qnL
-qnL
+xgD
 kpr
 umc
 mPQ
@@ -87573,14 +89602,14 @@ eFL
 uga
 wmv
 wmv
-wmv
-wmv
-wmv
-wmv
+krb
+uqA
+ukA
+uqA
 wmv
 dDa
-gtA
-gtA
+wTa
+lzy
 qSW
 qSW
 qSW
@@ -87758,11 +89787,11 @@ eFL
 eFL
 nVQ
 wmv
-wmv
-wmv
-wmv
-wmv
-wmv
+krb
+uqA
+uHA
+uqA
+axz
 wmv
 qSW
 qSW
@@ -87944,10 +89973,10 @@ eFL
 eFL
 nVQ
 wmv
-wmv
-wmv
+uqA
+act
 usG
-qSW
+frG
 qSW
 qSW
 qSW
@@ -88130,9 +90159,9 @@ eFL
 aMb
 fwc
 wmv
-wmv
-wmv
-qSW
+uqA
+usG
+frG
 qSW
 qSW
 qSW
@@ -88316,8 +90345,8 @@ eFL
 nVQ
 wmv
 wmv
-wmv
-wmv
+uqA
+aWw
 qSW
 qSW
 wmv
@@ -88366,8 +90395,8 @@ emj
 kEi
 bOg
 bOg
-rLp
-nnD
+hpe
+gzj
 wJv
 rHj
 qDW
@@ -88484,8 +90513,8 @@ wUk
 wUk
 xhc
 xhc
-xhc
-xhc
+dnd
+dnd
 krP
 flc
 bMq
@@ -88502,10 +90531,10 @@ nCF
 kKD
 wmv
 wmv
-wmv
-wmv
-wmv
-wmv
+eiw
+uqA
+uqA
+sPF
 wmv
 wmv
 wmv
@@ -88552,7 +90581,7 @@ trG
 yaw
 bOg
 bOg
-kpr
+hjL
 nnD
 nnD
 qMW
@@ -88669,8 +90698,8 @@ wUk
 wUk
 rvK
 xhc
-xhc
-xhc
+dnd
+dnd
 tLD
 hLF
 flc
@@ -88738,7 +90767,7 @@ bOg
 bOg
 bOg
 bOg
-kpr
+pOM
 dyj
 nnD
 bfn
@@ -88854,8 +90883,8 @@ phX
 xhc
 xhc
 uau
-xhc
-xhc
+dnd
+dnd
 tLD
 tLD
 flc
@@ -88874,7 +90903,7 @@ hhJ
 wgH
 qJJ
 wmv
-wmv
+mhN
 wmv
 wmv
 wmv
@@ -89039,8 +91068,8 @@ phX
 phX
 xhc
 xhc
-xhc
-xhc
+dnd
+dnd
 tLD
 tLD
 flc
@@ -89058,8 +91087,8 @@ hhJ
 bYK
 rnY
 qSW
-qSW
-wmv
+qTp
+tWd
 wmv
 wmv
 wmv
@@ -89223,9 +91252,9 @@ phX
 ttK
 pAJ
 cDB
-xhc
-xhc
-xhc
+dnd
+dnd
+dnd
 tLD
 tLD
 flc
@@ -89246,7 +91275,7 @@ qSW
 qSW
 qSW
 qSW
-wmv
+mPj
 wmv
 cGU
 lVJ
@@ -89409,8 +91438,8 @@ rWl
 dik
 dbw
 djl
-xhc
-xhc
+dnd
+dnd
 tLD
 tLD
 flc
@@ -89432,7 +91461,7 @@ iAe
 qSW
 qSW
 qSW
-wmv
+smZ
 wmv
 wZs
 rnY
@@ -89613,7 +91642,7 @@ iAe
 iAe
 iAe
 iAe
-iAe
+nFb
 iAe
 iAe
 iAe
@@ -89766,7 +91795,7 @@ qSW
 qSW
 qSW
 qSW
-acv
+qcc
 qSW
 qSW
 qSW
@@ -89799,7 +91828,7 @@ iAe
 iAe
 iAe
 iAe
-iAe
+rnY
 iAe
 iAe
 iAe
@@ -89807,7 +91836,7 @@ iAe
 iAe
 iAe
 rnY
-rnY
+aUX
 rnY
 rnY
 wTa
@@ -89952,7 +91981,7 @@ pDF
 pDF
 qSW
 qSW
-acv
+bSp
 xlF
 qSW
 qSW
@@ -90508,7 +92537,7 @@ acv
 acv
 pDF
 pyI
-acv
+eYF
 acv
 xlF
 uCh
@@ -90701,7 +92730,7 @@ uCh
 uCh
 qSW
 qSW
-cTo
+npd
 cTo
 uEh
 qtW
@@ -90721,7 +92750,7 @@ rnY
 rnY
 rnY
 rnY
-rnY
+aUX
 rnY
 rnY
 aHs
@@ -90875,7 +92904,7 @@ fIf
 qSW
 qSW
 qSW
-acv
+pyI
 acv
 acv
 sKd
@@ -90887,7 +92916,7 @@ dKc
 qSW
 qSW
 qSW
-acv
+wQS
 acv
 sKd
 cqO
@@ -91062,7 +93091,7 @@ aJM
 qSW
 qSW
 qSW
-acv
+pyI
 acv
 acv
 acv
@@ -91073,7 +93102,7 @@ acv
 qSW
 qSW
 jtP
-acv
+vvy
 acv
 pDF
 cqO
@@ -91116,7 +93145,7 @@ iAe
 iAe
 iAe
 rnY
-rnY
+aUX
 rnY
 rnY
 rnY
@@ -91249,8 +93278,8 @@ qSW
 rjR
 rjR
 rjR
-acv
-acv
+qcc
+kVS
 acv
 acv
 uQy
@@ -91284,7 +93313,7 @@ iAe
 iAe
 bvP
 rnY
-rnY
+aUX
 rnY
 rnY
 wTa
@@ -91441,7 +93470,7 @@ acv
 acv
 acv
 acv
-acv
+eYF
 qSW
 qSW
 uCh
@@ -91627,7 +93656,7 @@ cBD
 acv
 acv
 acv
-acv
+eYF
 qSW
 qSW
 jtP
@@ -91661,7 +93690,7 @@ rnY
 rnY
 rnY
 rnY
-rnY
+aUX
 rnY
 rnY
 aHs
@@ -91813,7 +93842,7 @@ nPa
 aBO
 mnQ
 acv
-wuI
+qcc
 qSW
 qSW
 qSW
@@ -91996,10 +94025,10 @@ krq
 bHy
 seA
 seA
-wuI
+qcc
 mJc
 pzl
-wuI
+qcc
 qSW
 qSW
 qSW
@@ -92185,7 +94214,7 @@ mZU
 xIE
 pDF
 cEN
-wuI
+qcc
 qSW
 qSW
 qSW
@@ -93109,7 +95138,7 @@ tmp
 qSW
 nDA
 aBO
-liZ
+acv
 acv
 acv
 acv
@@ -93302,7 +95331,7 @@ acv
 acv
 acv
 acv
-wuI
+qcc
 qSW
 qSW
 qcc
@@ -93475,9 +95504,9 @@ qSW
 qSW
 qSW
 qSW
-acv
-acv
-acv
+pDF
+sKd
+sKd
 rjR
 qSW
 dKc
@@ -93656,17 +95685,17 @@ rWY
 rWY
 rWY
 rWY
-rWY
+cUJ
 qSW
 qSW
 qSW
 qSW
-acv
-acv
-acv
-acv
-acv
-acv
+sKd
+ihb
+pDF
+pDF
+sKd
+ojO
 xlF
 uCh
 rph
@@ -93832,14 +95861,14 @@ gvu
 gvu
 qZp
 cqZ
-cqZ
+vgt
 cqZ
 qZp
 qSW
 qSW
 qSW
 qSW
-tAC
+kyh
 rWY
 rWY
 rWY
@@ -93847,9 +95876,9 @@ rWY
 qSW
 qSW
 qSW
-acv
-acv
-acv
+sKd
+pDF
+vDU
 acv
 acv
 acv
@@ -93927,12 +95956,12 @@ aIj
 rVL
 sWO
 vHe
-aIj
+ctB
 oJh
 rVL
 aIj
 dGL
-rVL
+dwm
 oWH
 vKY
 ixH
@@ -93977,7 +96006,7 @@ wWf
 wWf
 vcf
 mKw
-qpI
+yjp
 mKw
 mKw
 mzr
@@ -94034,12 +96063,12 @@ qSW
 qSW
 qSW
 qSW
+pyI
+pyI
 acv
 acv
-acv
-acv
-acv
-acv
+lmD
+qcc
 lXI
 dKc
 xKQ
@@ -94115,11 +96144,11 @@ dGL
 cma
 oJh
 phR
-dGL
+lRb
 dGL
 dGL
 rVL
-oWH
+wXz
 vKY
 vrB
 aez
@@ -94176,7 +96205,7 @@ aYA
 uVB
 mVt
 nlT
-lJJ
+lJk
 vNp
 fRU
 kcb
@@ -94224,8 +96253,8 @@ qSW
 qSW
 acv
 acv
-acv
-acv
+pyI
+pyI
 acv
 acv
 acv
@@ -94548,7 +96577,7 @@ vSz
 oYN
 vNO
 iKt
-lJJ
+lJk
 uVB
 fMy
 kcb
@@ -94570,7 +96599,7 @@ rWY
 rWY
 umP
 qSW
-gvu
+xuL
 "}
 (208,1,1) = {"
 gvu
@@ -94603,7 +96632,7 @@ acv
 acv
 sKd
 sKd
-sKd
+vDU
 qSW
 qSW
 qSW
@@ -94675,7 +96704,7 @@ dGL
 dGL
 rVL
 rVL
-aIj
+btL
 lAo
 vSe
 gxg
@@ -94756,7 +96785,7 @@ rWY
 rWY
 rWY
 dSD
-gvu
+xuL
 "}
 (209,1,1) = {"
 gvu
@@ -94858,7 +96887,7 @@ qSW
 qSW
 vHe
 rVL
-rVL
+qxX
 bGN
 aIj
 bOg
@@ -94920,7 +96949,7 @@ nbB
 uVB
 mVt
 wNV
-lJJ
+lJk
 uVB
 iAi
 kcb
@@ -94942,7 +96971,7 @@ clQ
 qSW
 rWY
 dSD
-gvu
+xuL
 "}
 (210,1,1) = {"
 gvu
@@ -95045,7 +97074,7 @@ qSW
 qSW
 dtA
 aIj
-aIj
+ctB
 bOg
 bOg
 bOg
@@ -95128,7 +97157,7 @@ hlK
 rWY
 rWY
 dSD
-gvu
+xuL
 "}
 (211,1,1) = {"
 gvu
@@ -95235,7 +97264,7 @@ gxg
 mvW
 bOg
 bOg
-gFj
+ant
 gxg
 gxg
 uwj
@@ -95314,7 +97343,7 @@ lDY
 vCB
 rWY
 qSW
-gvu
+xuL
 "}
 (212,1,1) = {"
 gvu
@@ -95348,7 +97377,7 @@ acv
 acv
 acv
 rWY
-rWY
+lOo
 tGr
 uJE
 gCZ
@@ -95500,7 +97529,7 @@ uJt
 hlK
 mEW
 qSW
-gvu
+xwE
 "}
 (213,1,1) = {"
 gvu
@@ -95686,7 +97715,7 @@ uJt
 uJt
 qSW
 qSW
-gvu
+xwE
 "}
 (214,1,1) = {"
 gvu
@@ -95762,9 +97791,9 @@ qSW
 qSW
 qSW
 qSW
-rWY
-rWY
-rWY
+sqo
+sqo
+sqo
 qSW
 qSW
 qSW
@@ -95872,7 +97901,7 @@ wLm
 uJt
 qSW
 qSW
-gvu
+xwE
 "}
 (215,1,1) = {"
 gvu
@@ -95901,11 +97930,11 @@ fIf
 fIf
 qSW
 qSW
+tRR
 acv
-acv
 rWY
 rWY
-rWY
+otY
 rWY
 wpz
 cpW
@@ -95948,14 +97977,14 @@ qSW
 qSW
 qSW
 rWY
-rWY
-rWY
-rWY
-rWY
-rWY
+sqo
+lNx
+sqo
+hSq
+hSq
 qSW
 rWY
-rWY
+klE
 rWY
 rWY
 rWY
@@ -96058,7 +98087,7 @@ qzS
 plQ
 plQ
 qSW
-gvu
+xuL
 "}
 (216,1,1) = {"
 gvu
@@ -96087,7 +98116,7 @@ qSW
 qSW
 qSW
 qSW
-acv
+qcc
 rWY
 rWY
 qSW
@@ -96134,9 +98163,9 @@ qSW
 qSW
 rWY
 rWY
-rWY
-rWY
-rWY
+sqo
+sqo
+kEe
 rWY
 rWY
 rWY
@@ -96244,7 +98273,7 @@ eNf
 tyt
 bMc
 vxx
-gvu
+xuL
 "}
 (217,1,1) = {"
 gvu
@@ -96321,14 +98350,14 @@ qSW
 rWY
 rWY
 rWY
+pur
 rWY
 rWY
 rWY
 rWY
 rWY
 rWY
-rWY
-rWY
+cUJ
 rWY
 rWY
 rWY
@@ -96430,7 +98459,7 @@ rbe
 vMD
 dPe
 czT
-gvu
+xuL
 "}
 (218,1,1) = {"
 gvu
@@ -96475,7 +98504,7 @@ rWY
 rWY
 rWY
 rWY
-rWY
+usn
 mrT
 mrT
 mrT
@@ -96503,10 +98532,10 @@ qSW
 qSW
 qSW
 qSW
-rWY
-rWY
-rWY
-rWY
+wvC
+uAc
+uAc
+uAc
 qSW
 rWY
 rWY
@@ -96616,7 +98645,7 @@ gxR
 dJL
 dPe
 czT
-gvu
+xuL
 "}
 (219,1,1) = {"
 gvu
@@ -96689,10 +98718,10 @@ qSW
 qSW
 qSW
 qSW
-rWY
-rWY
-rWY
-rWY
+cpW
+cpW
+cpW
+cpW
 qSW
 rWY
 rWY
@@ -96802,7 +98831,7 @@ rbe
 vMD
 dPe
 czT
-gvu
+xuL
 "}
 (220,1,1) = {"
 gvu
@@ -96988,7 +99017,7 @@ ppA
 eYP
 laC
 fkJ
-gvu
+xuL
 "}
 (221,1,1) = {"
 gvu
@@ -97021,20 +99050,20 @@ qSW
 wSE
 rWY
 rWY
-rWY
-rWY
+hSq
+hSq
 qSW
 qSW
 qSW
-rWY
-rWY
+hSq
+ktb
 rWY
 rWY
 qSW
 rWY
 rWY
 rWY
-rWY
+mMy
 mrT
 mrT
 rnQ
@@ -97174,7 +99203,7 @@ pas
 plQ
 plQ
 plQ
-gvu
+xuL
 "}
 (222,1,1) = {"
 gvu
@@ -97251,7 +99280,7 @@ rWY
 rWY
 rWY
 rWY
-rWY
+cUP
 rWY
 rWY
 rWY
@@ -97360,7 +99389,7 @@ plQ
 plQ
 plQ
 plQ
-gvu
+xwE
 "}
 (223,1,1) = {"
 gvu
@@ -97435,10 +99464,10 @@ qSW
 jCc
 qSW
 qSW
-rWY
-rWY
-rWY
-rWY
+nSu
+nSu
+apR
+ktb
 rWY
 rWY
 rWY
@@ -97546,7 +99575,7 @@ plQ
 plQ
 plQ
 plQ
-gvu
+xwE
 "}
 (224,1,1) = {"
 gvu
@@ -97623,7 +99652,7 @@ qSW
 qSW
 qSW
 qSW
-rWY
+cpF
 rWY
 rWY
 rWY
@@ -97732,7 +99761,7 @@ klo
 piU
 bqk
 plQ
-gvu
+xwE
 "}
 (225,1,1) = {"
 gvu
@@ -97809,8 +99838,8 @@ qSW
 qSW
 qSW
 qSW
-rWY
-rWY
+iuO
+yhv
 rWY
 rWY
 rWY
@@ -97918,7 +99947,7 @@ piU
 piU
 piU
 plQ
-gvu
+xwE
 "}
 (226,1,1) = {"
 gvu
@@ -97951,7 +99980,7 @@ uJE
 oGS
 bgw
 rWY
-rWY
+iol
 rWY
 rWY
 rWY
@@ -98104,7 +100133,7 @@ piU
 piU
 piU
 plQ
-gvu
+xwE
 "}
 (227,1,1) = {"
 gvu
@@ -98189,7 +100218,7 @@ rWY
 rWY
 rWY
 rWY
-rWY
+apR
 rWY
 qSW
 qSW
@@ -98290,7 +100319,7 @@ sDM
 bkt
 sgF
 plQ
-gvu
+xwE
 "}
 (228,1,1) = {"
 gvu
@@ -98375,7 +100404,7 @@ rWY
 rWY
 rWY
 rWY
-rWY
+mUf
 rWY
 rWY
 qSW
@@ -98476,7 +100505,7 @@ guO
 fxI
 veo
 plQ
-gvu
+xwE
 "}
 (229,1,1) = {"
 gvu
@@ -98507,7 +100536,7 @@ tGr
 uJE
 gCZ
 rWY
-rWY
+otY
 rWY
 rWY
 rWY
@@ -98560,8 +100589,8 @@ rWY
 rWY
 rWY
 rWY
-rWY
-rWY
+yhv
+sqo
 rWY
 rWY
 qSW
@@ -98662,7 +100691,7 @@ ssj
 vGn
 uJt
 plQ
-gvu
+xwE
 "}
 (230,1,1) = {"
 gvu
@@ -98746,9 +100775,9 @@ rWY
 rWY
 rWY
 rWY
-rWY
-rWY
-rWY
+sqo
+sqo
+sqo
 rWY
 qSW
 qSW
@@ -98848,7 +100877,7 @@ iSv
 uJt
 uJt
 plQ
-gvu
+xwE
 "}
 (231,1,1) = {"
 gvu
@@ -98932,9 +100961,9 @@ wSE
 rWY
 rWY
 rWY
-rWY
-rWY
-rWY
+sqo
+lNx
+sqo
 qSW
 qSW
 xCG
@@ -99034,7 +101063,7 @@ uJt
 uJt
 rWY
 qSW
-gvu
+xwE
 "}
 (232,1,1) = {"
 gvu
@@ -99118,9 +101147,9 @@ qSW
 rWY
 rWY
 rWY
-rWY
-rWY
-rWY
+sqo
+sqo
+sqo
 qSW
 qSW
 xCG
@@ -99220,7 +101249,7 @@ uJt
 rWY
 rWY
 qSW
-gvu
+xwE
 "}
 (233,1,1) = {"
 gvu
@@ -99305,7 +101334,7 @@ qSW
 qSW
 qSW
 qSW
-rWY
+ykk
 snm
 qSW
 qSW
@@ -99406,7 +101435,7 @@ rWY
 rWY
 rWY
 qSW
-gvu
+xwE
 "}
 (234,1,1) = {"
 gvu
@@ -99592,7 +101621,7 @@ rWY
 rWY
 rWY
 qSW
-gvu
+xwE
 "}
 (235,1,1) = {"
 gvu
@@ -99647,11 +101676,11 @@ fNH
 slY
 rqQ
 slY
+jyV
+jyV
+jyV
 slY
-slY
-slY
-slY
-slY
+wqA
 wFz
 qSW
 qSW
@@ -99778,7 +101807,7 @@ rWY
 rWY
 qSW
 qSW
-gvu
+xwE
 "}
 (236,1,1) = {"
 gvu
@@ -99830,7 +101859,7 @@ rWY
 rWY
 rWY
 fNH
-slY
+wqA
 slY
 slY
 slY
@@ -99964,10 +101993,10 @@ rWY
 rWY
 rWY
 qSW
-gvu
+xwE
 "}
 (237,1,1) = {"
-gvu
+xuL
 qSW
 slY
 slY
@@ -100016,8 +102045,8 @@ rWY
 rWY
 rWY
 fNH
-slY
-slY
+jyV
+jyV
 slY
 slY
 slY
@@ -100047,8 +102076,8 @@ vID
 hfK
 iPW
 hfK
-hfK
-vID
+jyt
+uqW
 vID
 vdJ
 vdJ
@@ -100150,10 +102179,10 @@ lrC
 eVy
 rWY
 qSW
-gvu
+xwE
 "}
 (238,1,1) = {"
-gvu
+xuL
 sGN
 slY
 slY
@@ -100203,7 +102232,7 @@ qSW
 qSW
 fOD
 fOD
-ivF
+nmY
 ivF
 mwL
 mwL
@@ -100216,26 +102245,26 @@ qSW
 qSW
 fOD
 fOD
-hfK
-hfK
-vID
-xIL
-xIL
-xIL
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-sOX
+hIy
+axZ
+qiC
+lJJ
+lJJ
+lJJ
+qiC
+qiC
+qiC
+qiC
+qiC
+qiC
+qiC
+qiC
+aSN
 xYl
 iFp
-xIL
-xIL
-vID
+lJJ
+lJJ
+uey
 vdJ
 bCV
 eQa
@@ -100336,10 +102365,10 @@ rWY
 lDY
 qSW
 qSW
-gvu
+xwE
 "}
 (239,1,1) = {"
-gvu
+xuL
 sGN
 slY
 ulr
@@ -100402,7 +102431,8 @@ qSW
 fOD
 fOD
 hfK
-hfK
+qjP
+udl
 vID
 vID
 vID
@@ -100411,20 +102441,19 @@ vID
 vID
 vID
 vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
+wuI
+wuI
+wuI
+wuI
+wuI
+wuI
+wuI
+wuI
+wuI
 vID
 bby
 pYS
-rWk
+agd
 rWk
 sdo
 dqB
@@ -100490,7 +102519,7 @@ bqi
 bqi
 bqi
 mkW
-mkW
+hnb
 cjs
 mkW
 bqi
@@ -100522,10 +102551,10 @@ rWY
 qSW
 qSW
 qSW
-gvu
+xwE
 "}
 (240,1,1) = {"
-gvu
+xuL
 sGN
 slY
 vLc
@@ -100576,20 +102605,20 @@ fOD
 fOD
 tSN
 vID
-hfK
-hfK
-hfK
-hfK
+jyt
+jyt
+jyt
+jyt
 vID
 bYs
 fOD
 fOD
 fOD
 fOD
-hfK
-hfK
-vID
-uqz
+jyt
+dbh
+udl
+eez
 dbn
 dbn
 dbn
@@ -100610,8 +102639,8 @@ dbn
 pRV
 rWk
 oGr
-rWk
-rWk
+agd
+agd
 aeB
 uvM
 uvM
@@ -100708,10 +102737,10 @@ rWY
 rWY
 qSW
 qSW
-gvu
+xwE
 "}
 (241,1,1) = {"
-gvu
+xuL
 sGN
 slY
 vLc
@@ -100759,21 +102788,21 @@ qSW
 fOD
 fOD
 vID
-vQZ
-vID
-vID
-vID
-xIL
-xIL
-vID
-vID
-vID
+ecq
+qiC
+qiC
+hfw
+qwU
+qwU
+hfw
+qiC
+qiC
 vQZ
 qiC
 lem
-vID
-vID
-vID
+hfw
+hfw
+aRI
 uqz
 vPt
 rKR
@@ -100797,7 +102826,7 @@ rKR
 vdJ
 xqw
 rWk
-rWk
+agd
 vdJ
 nGS
 nGS
@@ -100894,10 +102923,10 @@ wke
 lrC
 cib
 qSW
-gvu
+xwE
 "}
 (242,1,1) = {"
-gvu
+xuL
 sGN
 ulr
 msi
@@ -100914,13 +102943,13 @@ glV
 glV
 idd
 qOn
-hfK
+jyt
 hfK
 iPW
 xIL
 xIL
-hfK
-hfK
+sGz
+jyt
 uUT
 uUT
 fOD
@@ -100943,14 +102972,14 @@ qSW
 qSW
 fOD
 fOD
-hfK
+foF
+vVl
+udl
 vID
 vID
 vID
-vID
-vID
-vID
-vID
+wuI
+wuI
 vID
 vID
 vID
@@ -101080,10 +103109,10 @@ lMK
 rWY
 cUL
 qSW
-gvu
+xwE
 "}
 (243,1,1) = {"
-gvu
+xuL
 xiq
 msi
 glV
@@ -101104,12 +103133,12 @@ hfK
 hfK
 vID
 vID
+wuI
+jyt
+jyt
 vID
-hfK
-hfK
 vID
-vID
-vID
+uey
 fOD
 fOD
 qSW
@@ -101119,9 +103148,9 @@ vZx
 vID
 vID
 vID
-vID
-vID
-uuv
+wuI
+wuI
+nwR
 fOD
 qSW
 qSW
@@ -101129,9 +103158,9 @@ qSW
 fOD
 fOD
 hfK
-hfK
-vID
-uqz
+rnp
+udl
+eez
 vPt
 dbn
 dbn
@@ -101266,10 +103295,10 @@ cib
 rWY
 rWY
 qSW
-gvu
+xwE
 "}
 (244,1,1) = {"
-gvu
+xuL
 vQn
 ijl
 ijl
@@ -101287,15 +103316,15 @@ glV
 idd
 olV
 bui
-dbn
-dbn
-ljj
-ljj
+xEH
+xEH
+bat
+bat
 dbn
 dbn
 ipD
 vID
-vID
+rEk
 vID
 fOD
 fOD
@@ -101305,17 +103334,17 @@ uuv
 vID
 xIL
 hfK
-hfK
-hfK
-jKB
+jyt
+jyt
+mdm
 fOD
 fOD
 fOD
 fOD
 fOD
 hfK
-hfK
-vID
+axZ
+udl
 uqz
 vPt
 rKR
@@ -101325,7 +103354,7 @@ rKR
 rKR
 rKR
 rtm
-vPt
+kGL
 fLg
 rKR
 rKR
@@ -101335,7 +103364,7 @@ rKR
 ola
 kXJ
 gWm
-kXJ
+mrO
 vNv
 vNv
 vNv
@@ -101452,10 +103481,10 @@ rWY
 rWY
 rWY
 qSW
-gvu
+xuL
 "}
 (245,1,1) = {"
-gvu
+xuL
 vQn
 ijl
 ijl
@@ -101481,26 +103510,26 @@ rKR
 rKR
 vPt
 uqz
-vID
-vID
-vID
-vID
-vID
+siq
+hfw
+qiC
+qiC
+qiC
 vQZ
-vID
-vID
-xIL
-xIL
-xIL
-vID
-vID
+qiC
+qiC
+lJJ
+lJJ
+lJJ
+qiC
+qiC
 vQZ
-vID
-vID
-vID
-vID
-vID
-vID
+qiC
+qiC
+qiC
+hfw
+qiC
+udl
 uqz
 vPt
 efY
@@ -101511,7 +103540,7 @@ kDd
 kDd
 kDd
 dcB
-oUe
+iGy
 cvl
 kDd
 kDd
@@ -101520,7 +103549,7 @@ kDd
 kDd
 kXJ
 gWm
-kXJ
+mrO
 evp
 jYW
 jYW
@@ -101540,7 +103569,7 @@ jYW
 jYW
 vdJ
 gwB
-rWk
+agd
 rWk
 vdJ
 cnq
@@ -101638,10 +103667,10 @@ umP
 rWY
 rWY
 wpO
-gvu
+xuL
 "}
 (246,1,1) = {"
-gvu
+xuL
 pvn
 hNG
 glV
@@ -101668,6 +103697,9 @@ ojH
 efY
 vPt
 uqz
+wuI
+wuI
+wuI
 vID
 vID
 vID
@@ -101677,11 +103709,8 @@ vID
 vID
 vID
 vID
-vID
-vID
-vID
-vID
-vID
+wuI
+wuI
 vID
 vID
 vID
@@ -101697,6 +103726,7 @@ gWm
 gWm
 gWm
 gWm
+eyI
 gWm
 gWm
 gWm
@@ -101704,8 +103734,7 @@ gWm
 gWm
 gWm
 gWm
-gWm
-kXJ
+mrO
 evp
 efY
 vPt
@@ -101726,7 +103755,7 @@ qXt
 hRU
 bby
 pYS
-rWk
+agd
 rWk
 sdo
 dxm
@@ -101824,10 +103853,10 @@ qSW
 rWY
 rWY
 wpO
-gvu
+xuL
 "}
 (247,1,1) = {"
-gvu
+xuL
 sGN
 kvy
 hNG
@@ -101843,14 +103872,14 @@ gqa
 ijl
 ijl
 ijl
-udl
+gWm
 lit
 gWm
 gWm
 gWm
 gWm
 gWm
-gWm
+pXP
 ojH
 efY
 vPt
@@ -101858,14 +103887,14 @@ dbn
 dbn
 ljj
 ljj
-ljj
-dbn
+bat
+xEH
 fkx
-uqz
+eez
 uqz
 uqz
 dbn
-dbn
+xEH
 dbn
 ljj
 vZb
@@ -101877,13 +103906,13 @@ efY
 ola
 kXJ
 gWm
-kXJ
+mrO
 vNv
 vNv
 vNv
 vNv
 pJJ
-kGx
+gdS
 jMK
 vNv
 vNv
@@ -101901,9 +103930,9 @@ hfK
 hfK
 hfK
 hfK
-vID
-vID
-vID
+wuI
+wuI
+wuI
 vID
 vID
 vID
@@ -102010,10 +104039,10 @@ cUL
 rWY
 rWY
 qSW
-gvu
+xuL
 "}
 (248,1,1) = {"
-gvu
+xuL
 sGN
 slY
 kvy
@@ -102036,8 +104065,8 @@ vNv
 vNv
 vNv
 vNv
-gWm
-gWm
+qGY
+pXP
 ojH
 rKR
 rKR
@@ -102047,7 +104076,7 @@ rKR
 rKR
 rKR
 qty
-woL
+uys
 uqz
 wHn
 oVK
@@ -102062,14 +104091,14 @@ rKR
 ola
 kXJ
 gWm
-kXJ
+mrO
 evp
 jYW
 jYW
 jYW
 jYW
 jlc
-vPt
+kGL
 tMU
 jYW
 jYW
@@ -102080,26 +104109,26 @@ jYW
 jYW
 vPt
 uqz
-vID
-vID
-vID
-ixf
-xIL
-xIL
-vID
-vID
-vID
-hfK
-xIL
+vVl
+hfw
+hfw
+hzV
+qwU
+qwU
+qiC
+hfw
+hfw
+oBw
+qwU
 xYl
 iFp
-xIL
-vID
-vID
+lJJ
+qiC
+uey
 vdJ
 xqw
 rWk
-rWk
+agd
 vdJ
 tTY
 mmR
@@ -102196,10 +104225,10 @@ kDe
 rWY
 qSW
 neT
-gvu
+xuL
 "}
 (249,1,1) = {"
-gvu
+xuL
 sGN
 slY
 slY
@@ -102223,8 +104252,8 @@ jYW
 jYW
 jYW
 jCz
-gWm
-gWm
+qGY
+pXP
 kDd
 kDd
 kDd
@@ -102234,7 +104263,7 @@ kDd
 kDd
 ems
 woL
-uqz
+eez
 wHn
 qrn
 kDd
@@ -102247,7 +104276,7 @@ kDd
 kDd
 kXJ
 gWm
-kXJ
+mrO
 evp
 efY
 vPt
@@ -102265,9 +104294,9 @@ qXt
 qXt
 qXt
 uvC
-vID
-hfK
-hfK
+vVl
+fhy
+jyt
 fOD
 fOD
 fOD
@@ -102285,7 +104314,7 @@ vID
 vdJ
 xMC
 rWk
-rWk
+agd
 vdJ
 qSW
 qSW
@@ -102382,10 +104411,10 @@ kiS
 kDe
 rWY
 wpO
-gvu
+xuL
 "}
 (250,1,1) = {"
-gvu
+xuL
 qSW
 vPN
 slY
@@ -102410,7 +104439,7 @@ qXt
 vPt
 efY
 jCz
-gWm
+qGY
 gWm
 gWm
 gWm
@@ -102420,7 +104449,7 @@ gWm
 gWm
 trs
 woL
-uqz
+eez
 wHn
 scR
 gWm
@@ -102432,27 +104461,27 @@ gWm
 gWm
 gWm
 gWm
-kXJ
+mrO
 evp
 efY
 vPt
 uqz
-vID
-vID
-vID
-hfK
-hfK
-hfK
-hfK
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-hfK
-hfK
+vVl
+qiC
+qiC
+xCS
+xCS
+xCS
+oBw
+hfw
+qiC
+qiC
+rUY
+hfw
+hfw
+qiC
+dng
+foF
 fOD
 fOD
 qSW
@@ -102471,7 +104500,7 @@ qGp
 vdJ
 sud
 rWk
-rWk
+agd
 vdJ
 qSW
 soa
@@ -102568,7 +104597,7 @@ rWY
 kiS
 kDe
 wpO
-gvu
+xuL
 "}
 (251,1,1) = {"
 gvu
@@ -102587,10 +104616,10 @@ glV
 glV
 fCl
 dJs
-qOn
+nJT
 vID
 vID
-vID
+wuI
 vID
 vID
 uqz
@@ -102607,7 +104636,7 @@ vNv
 vuU
 woL
 uqz
-wHn
+jEC
 lcR
 vNv
 vNv
@@ -102622,19 +104651,19 @@ evp
 efY
 vPt
 uqz
-vID
-vID
+vVl
+udl
 ixf
 vID
 hfK
 hfK
-hfK
-hfK
-vID
-vID
+jyt
+jyt
+wuI
+wuI
 ixf
-vID
-vID
+eCv
+wuI
 hfK
 jnc
 jnc
@@ -102657,7 +104686,7 @@ qSW
 vdJ
 ciI
 rWk
-rWk
+agd
 vdJ
 qSW
 qSW
@@ -102754,7 +104783,7 @@ rWY
 rWY
 kiS
 qSW
-gvu
+xuL
 "}
 (252,1,1) = {"
 gvu
@@ -102773,11 +104802,11 @@ glV
 glV
 oWN
 hkV
-qOn
+nJT
 vID
-vID
-ixf
-vID
+wuI
+izN
+wuI
 vID
 vID
 uqz
@@ -102793,7 +104822,7 @@ jYW
 mlU
 woL
 uqz
-wHn
+jEC
 glg
 jYW
 jYW
@@ -102807,8 +104836,8 @@ jYW
 jYW
 vPt
 uqz
-vID
-vID
+vVl
+ioD
 vID
 fOD
 vID
@@ -102819,7 +104848,7 @@ lCx
 lCx
 lCx
 fOD
-vID
+eCv
 oox
 fOD
 fOD
@@ -102940,7 +104969,7 @@ cUL
 rWY
 rWY
 qSW
-gvu
+xwE
 "}
 (253,1,1) = {"
 gvu
@@ -102964,7 +104993,7 @@ vID
 fOD
 fOD
 fOD
-vID
+wuI
 vID
 vID
 lpl
@@ -102974,12 +105003,12 @@ qXt
 wGO
 wGO
 wGO
-qXt
-qXt
-qXt
+gdG
+gdG
+gdG
 uqz
 uqz
-uqz
+eez
 voU
 qXt
 qXt
@@ -102992,20 +105021,20 @@ qXt
 qXt
 qXt
 uvC
-vID
-vID
-vID
+vVl
+udl
+uey
 fOD
 fOD
 vID
 vID
-vID
+wuI
 mdV
 bYs
 lVv
 skU
 vID
-hfK
+hWR
 hfK
 fOD
 fOD
@@ -103151,47 +105180,47 @@ qSW
 qSW
 fOD
 fOD
-vID
-vID
-vID
-vID
-hfK
-hfK
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-vID
-hfK
-vID
-vID
-vID
-vID
-vID
-vID
-vID
+uey
+qiC
+hfw
+hfw
+oBw
+oBw
+qiC
+qiC
+qiC
+qiC
+hfw
+hfw
+hfw
+qiC
+qiC
+qiC
+qiC
+qiC
+qiC
+qiC
+xCS
+qiC
+qiC
+qiC
+qiC
+qiC
+qiC
+aRI
 vID
 fOD
 fOD
 eDq
 vID
 vID
-vID
+wuI
 qVm
 tfy
 nmi
-vID
+wuI
 hfK
-hfK
+hWR
 hfK
 hIB
 fOD
@@ -103199,7 +105228,7 @@ qSW
 qSW
 slY
 slY
-slY
+koW
 slY
 slY
 qSW
@@ -103254,8 +105283,8 @@ iKR
 nqL
 nqL
 tbI
-nZO
-qPX
+vCs
+xRt
 qlf
 qPX
 vbP
@@ -103343,41 +105372,41 @@ eIM
 vID
 hfK
 hfK
-hfK
-xIL
-xIL
+jyt
+bPV
+bPV
 lCg
 iyC
 iyC
 iyC
 iyC
 hMD
-vID
+wuI
 vID
 ixf
 vID
 hfK
-hfK
-hfK
+jyt
+jyt
 hfK
 hfK
 vID
-vID
-vID
-vID
+wuI
+wuI
+wuI
 fOD
 fOD
 fOD
 dIV
 vID
 vID
-vID
+wuI
 hdA
 vID
 vID
 vID
 hfK
-hfK
+hWR
 hfK
 hIB
 fOD
@@ -103441,7 +105470,7 @@ nqL
 nqL
 iuS
 gGF
-qPX
+lCp
 dYD
 kcL
 nZO
@@ -103538,7 +105567,7 @@ ubt
 cPO
 aRh
 ajp
-vID
+wuI
 uUT
 fOD
 fOD
@@ -103559,12 +105588,12 @@ nYc
 nYc
 nYc
 nYc
-nYc
-nYc
-nYc
-nYc
-nYc
-nYc
+cDV
+cKD
+cKD
+cKD
+kdY
+ubP
 obU
 fOD
 qSW
@@ -103721,8 +105750,8 @@ qSW
 fOD
 tLv
 fZx
-uqz
-uqz
+kcs
+eez
 dsl
 vID
 wnk
@@ -103740,18 +105769,18 @@ wYq
 wYq
 wYq
 dGB
-vID
+wuI
 vID
 vID
 vID
 wxY
-myt
+sxp
 myt
 vLL
 vID
 vID
-vID
-vID
+wuI
+wuI
 fOD
 qSW
 qSW
@@ -103881,7 +105910,7 @@ qSW
 qSW
 qSW
 qSW
-glV
+msi
 ijl
 ijl
 oWN
@@ -103930,8 +105959,8 @@ mID
 lxq
 tSN
 mou
-vID
-vID
+wuI
+aeN
 fxo
 gGR
 tet
@@ -104252,11 +106281,11 @@ gvu
 gvu
 gvu
 gvu
-gvu
-gvu
-gvu
-gvu
-gvu
+xuL
+xuL
+xuL
+xuL
+xuL
 gvu
 gvu
 gvu

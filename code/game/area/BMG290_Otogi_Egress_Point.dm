@@ -470,7 +470,7 @@
 	name = "Unknown Area"
 	icon_state = "mechbay"
 
-/area/bmg290/oob/ocean
+/area/bmg290/relay_exterior/ocean
 	name = "Otogi Waters"
 	icon_state = "blue-red2"
 
