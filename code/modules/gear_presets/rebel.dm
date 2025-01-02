@@ -4,7 +4,7 @@
 	faction_group = FACTION_LIST_CLF
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc
-	access = list(ACCESS_CIVILIAN_PUBLIC)
+	access = list(ACCESS_LIST_CLF_BASE)
 
 /datum/equipment_preset/colonist/bluecollar/rebel/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"

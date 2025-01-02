@@ -5,10 +5,11 @@
 	skills = /datum/skills/pfc
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	origin_override = ORIGIN_CIVILIAN
-	access = list(ACCESS_CIVILIAN_PUBLIC)
+	access = list(ACCESS_LIST_CLF_BASE)
 
 /datum/equipment_preset/clf/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(50;MALE, 50;FEMALE)
+	new_human.skin_color = "Pale 1"
 	var/random_name
 	var/first_name
 	var/last_name
@@ -31,7 +32,7 @@
 			first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
 		else
 			first_name = "[pick(GLOB.first_names_male_clf)]"
-		new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
+		new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right")
 		new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "5 O'clock Shadow", "7 O'clock Shadow",)
 	else
 		if(prob(90))
@@ -328,8 +329,6 @@
 	if(prob(65))
 		add_facewrap(new_human)
 	//head
-	if(prob(85))
-		add_rebel_twe_helmet(new_human)
 	//uniform
 	add_rebel_twe_uniform(new_human)
 	//jacket
