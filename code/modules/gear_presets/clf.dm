@@ -222,7 +222,7 @@
 	//uniform
 	add_rebel_twe_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light(new_human), WEAR_JACKET)
+	add_rebel_twe_suit(new_human)
 	//waist
 	if(prob(50))
 		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
