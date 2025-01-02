@@ -1156,7 +1156,7 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/naval, WEAR_BODY)
 	//jacket
@@ -1168,6 +1168,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/revolver, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat, WEAR_HANDS)
 
 /datum/equipment_preset/upp/police/mss/goon/armed
 	name = "UPP MSS Goon (Armed - SMG)"
@@ -1180,7 +1181,7 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/naval, WEAR_BODY)
 	//jacket
@@ -1192,11 +1193,12 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
 	for(var/i in 1 to 5)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon, WEAR_IN_BELT)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/pps43, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/bizon, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat, WEAR_HANDS)
 
 /datum/equipment_preset/upp/police/mss/goon/armed/shotgun
 	name = "UPP MSS Goon (Armed - Shotgun)"
@@ -1209,7 +1211,7 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/naval, WEAR_BODY)
 	//jacket
@@ -1226,6 +1228,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat, WEAR_HANDS)
 
 /datum/equipment_preset/upp/police/mss/goon/armed/heavy
 	name = "UPP MSS Goon (Armed - Heavy)"
@@ -1238,7 +1241,7 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/alt, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/naval, WEAR_BODY)
 	//jacket
@@ -1250,8 +1253,9 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
 	for(var/i in 1 to 5)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71 , WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_BELT)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat, WEAR_HANDS)
