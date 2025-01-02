@@ -3006,6 +3006,20 @@ Defined in conflicts.dm of the #defines folder.
 	max_range = 10
 	attachment_firing_delay = 15
 
+/obj/item/attachable/attached_gun/grenade/mk1/pump(mob/user) //for want of a better proc name
+	if(breech_open) // if it was ALREADY open
+		breech_open = FALSE
+		if(current_rounds)
+			cocked = TRUE // by closing the gun we have cocked it and readied it to fire
+		to_chat(user, SPAN_NOTICE("You bring \the [src]'s pump forward, cocking it!"))
+		playsound(src, close_sound, 15, 1)
+	else
+		breech_open = TRUE
+		cocked = FALSE
+		to_chat(user, SPAN_NOTICE("You bring \the [src]'s pump back!"))
+		playsound(src, open_sound, 15, 1)
+	update_icon()
+
 /obj/item/attachable/attached_gun/grenade/mk1/reload_attachment(obj/item/explosive/grenade/G, mob/user)
 	if(breech_open)
 		to_chat(user, SPAN_WARNING("\The [src]'s loading port is covered, put the pump forward! (use unique-action)"))
@@ -3034,6 +3048,29 @@ Defined in conflicts.dm of the #defines folder.
 	if(!current_rounds)
 		to_chat(user, SPAN_WARNING("It's empty!"))
 		return
+
+/obj/item/attachable/attached_gun/grenade/mk1/fire_attachment(atom/target,obj/item/weapon/gun/gun,mob/living/user)
+	if(!(gun.flags_item & WIELDED))
+		if(user)
+			to_chat(user, SPAN_WARNING("You must hold [gun] with two hands to use \the [src]."))
+		return
+	if(breech_open)
+		if(user)
+			to_chat(user, SPAN_WARNING("You must close the chamber to fire \the [src]!"))
+			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
+		return
+	if(!cocked)
+		if(user)
+			to_chat(user, SPAN_WARNING("You must pump \the [src] to fire it!"))
+			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
+		return
+	if(get_dist(user,target) > max_range)
+		to_chat(user, SPAN_WARNING("Too far to fire the attachment!"))
+		playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
+		return
+
+	if(current_rounds > 0 && ..())
+		prime_grenade(target,gun,user)
 
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
