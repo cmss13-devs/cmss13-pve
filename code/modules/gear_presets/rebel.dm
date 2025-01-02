@@ -60,7 +60,7 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	if(prob(35))
+	if(prob(10))
 		add_rebel_ua_pistol(new_human)
 	else if(prob(85))
 		add_rebel_ua_rifle(new_human)
