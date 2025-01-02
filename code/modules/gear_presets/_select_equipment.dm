@@ -464,7 +464,6 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/under/colonist/boilersuit/white,
 		/obj/item/clothing/under/colonist/workwear/blue,
 		/obj/item/clothing/under/colonist/workwear/khaki,
-		/obj/item/clothing/under/colonist/workwear/green,
 		/obj/item/clothing/under/marine/veteran/UPP,
 		)
 	var/obj/item/clothing/under/uniform = new uniformpath
@@ -549,6 +548,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/head/headband/rebel,
 		/obj/item/clothing/head/headband/rebel,
 		/obj/item/clothing/head/headband/rebel,
+		/obj/item/clothing/head/uppcap/beret/guerilla,
 		/obj/item/clothing/head/helmet/marine/veteran/royal_marine,
 		)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
@@ -567,7 +567,6 @@ GLOBAL_LIST_EMPTY(personal_closets)
 /datum/equipment_preset/proc/add_rebel_twe_shoes(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
 	var/shoespath = pick(
-		/obj/item/clothing/shoes/white,
 		/obj/item/clothing/shoes/marine/civilian,
 		/obj/item/clothing/shoes/marine/civilian/brown,
 		/obj/item/clothing/shoes/marine/rmc,

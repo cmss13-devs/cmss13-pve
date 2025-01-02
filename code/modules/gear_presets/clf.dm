@@ -223,8 +223,10 @@
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light(new_human), WEAR_JACKET)
 	//waist
-	if(prob(75))
+	if(prob(50))
 		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
 	//limbs
 	add_rebel_twe_shoes(new_human)
 	if(prob(75))
@@ -265,7 +267,7 @@
 	if(prob(65))
 		add_facewrap(new_human)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/red(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/guerilla(new_human), WEAR_HEAD)
 	//uniform
 	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
 	var/random_uniform = rand(1,2)
@@ -284,10 +286,8 @@
 	add_rebel_twe_shoes(new_human)
 	if(prob(75))
 		add_rebel_twe_smg(new_human)
-	else if(prob(85))
-		add_rebel_twe_rifle(new_human)
 	else
-		add_rebel_twe_shotgun(new_human)
+		add_rebel_twe_rifle(new_human)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -411,7 +411,7 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/red(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/guerilla(new_human), WEAR_HEAD)
 	//uniform
 	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
 	var/random_uniform = rand(1,2)
@@ -422,7 +422,7 @@
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/smartgun(new_human), WEAR_JACKET)
 	//waist
 	if(prob(75))
 		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
