@@ -23030,7 +23030,7 @@
 /area/bmg290/colony_interior/motor_pool)
 "jGC" = (
 /obj/structure/prop/invuln/overhead_pipe,
-/obj/structure/machinery/door/poddoor/railing/open{
+/obj/structure/machinery/door/poddoor/railing/preopened{
 	dir = 8;
 	id = "research_entry_gate"
 	},
@@ -28392,7 +28392,7 @@
 /area/bmg290/caverns/ridgeline)
 "lNZ" = (
 /obj/structure/prop/invuln/overhead_pipe,
-/obj/structure/machinery/door/poddoor/railing/open{
+/obj/structure/machinery/door/poddoor/railing/preopened{
 	dir = 4;
 	id = "research_exit_gate"
 	},
