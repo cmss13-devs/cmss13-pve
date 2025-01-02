@@ -10302,7 +10302,7 @@
 	id = "research_entry_gate";
 	dir = 4
 	},
-/turf/open/floor/whiteyellow,
+/turf/open/floor/corsat/marked,
 /area/bmg290/keppitz_interior_b/sterilization)
 "emQ" = (
 /obj/effect/decal/warning_stripes{
@@ -23034,7 +23034,7 @@
 	dir = 8;
 	id = "research_entry_gate"
 	},
-/turf/open/floor/whiteyellow/east,
+/turf/open/floor/whiteyellowfull,
 /area/bmg290/keppitz_interior_b/sterilization)
 "jGF" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -28396,7 +28396,7 @@
 	dir = 4;
 	id = "research_exit_gate"
 	},
-/turf/open/floor/whiteyellow/west,
+/turf/open/floor/whiteyellowfull,
 /area/bmg290/keppitz_interior_b/sterilization)
 "lOi" = (
 /obj/effect/decal/cleanable/dirt,
@@ -37810,7 +37810,7 @@
 	id = "research_exit_gate";
 	dir = 8
 	},
-/turf/open/floor/whiteyellow/north,
+/turf/open/floor/corsat/marked,
 /area/bmg290/keppitz_interior_b/sterilization)
 "pOM" = (
 /obj/structure/surface/rack,
@@ -47679,13 +47679,6 @@
 	},
 /turf/open/floor/asteroid,
 /area/bmg290/relay_exterior/outskirts_road)
-"tVz" = (
-/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
-	id = "research_exit_gate";
-	dir = 8
-	},
-/turf/open/floor/whiteyellow,
-/area/bmg290/keppitz_interior_b/sterilization)
 "tVG" = (
 /obj/structure/platform/kutjevo/rock,
 /turf/open/gm/grass,
@@ -58076,7 +58069,7 @@
 	dir = 4;
 	name = "Bisohazard Containment Airlock"
 	},
-/turf/open/floor/whiteyellow/north,
+/turf/open/floor/corsat/marked,
 /area/bmg290/keppitz_interior_b/sterilization)
 "ylY" = (
 /obj/structure/machinery/colony_floodlight,
@@ -78419,7 +78412,7 @@ tYN
 bdc
 oxZ
 nHL
-tVz
+pOL
 pOL
 nHL
 nHL
