@@ -984,6 +984,20 @@
 	var/pistol = pick(/obj/item/storage/belt/gun/m44/full, /obj/item/storage/belt/gun/m4a3/full, /obj/item/storage/belt/gun/m4a3/highpower, /obj/item/storage/belt/gun/m4a3/m1911)
 	new_human.equip_to_slot_or_del(new pistol, WEAR_WAIST)
 
+/datum/equipment_preset/mercenary/sadar
+	name = "Generic Mercenary (SADAR)"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/mercenary/sadar/load_gear(mob/living/carbon/human/new_human)
+	..()
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs, WEAR_L_EAR)
+	load_gun(new_human)
+
+/datum/equipment_preset/mercenary/sadar/load_gun(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable, WEAR_J_STORE)
+	var/pistol = pick(/obj/item/storage/belt/gun/m44/full, /obj/item/storage/belt/gun/m4a3/full, /obj/item/storage/belt/gun/m4a3/highpower, /obj/item/storage/belt/gun/m4a3/m1911)
+	new_human.equip_to_slot_or_del(new pistol, WEAR_WAIST)
+
 /datum/equipment_preset/mercenary/leader
 	name = "Generic Mercenary (Leader)"
 	flags = EQUIPMENT_PRESET_EXTRA
