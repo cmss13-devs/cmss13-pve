@@ -8647,14 +8647,6 @@
 	},
 /turf/open/gm/grass,
 /area/bmg290/colony_exterior/valley_site)
-"dEX" = (
-/obj/structure/prop/invuln/overhead_pipe,
-/obj/structure/machinery/door/poddoor/railing/open{
-	dir = 4;
-	id = "research_exit_gate"
-	},
-/turf/open/floor/whiteyellow/northwest,
-/area/bmg290/keppitz_interior_b/sterilization)
 "dFh" = (
 /turf/open/floor/grey_dark2,
 /area/bmg290/ancie_eng_weakened/breached_hall)
@@ -23042,7 +23034,7 @@
 	dir = 8;
 	id = "research_entry_gate"
 	},
-/turf/open/floor/whiteyellow/southeast,
+/turf/open/floor/whiteyellow/east,
 /area/bmg290/keppitz_interior_b/sterilization)
 "jGF" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -28404,7 +28396,7 @@
 	dir = 4;
 	id = "research_exit_gate"
 	},
-/turf/open/floor/whiteyellow/southwest,
+/turf/open/floor/whiteyellow/west,
 /area/bmg290/keppitz_interior_b/sterilization)
 "lOi" = (
 /obj/effect/decal/cleanable/dirt,
@@ -36162,14 +36154,6 @@
 "pdL" = (
 /turf/closed/wall/shiva/prefabricated/orange,
 /area/bmg290/keppitz_exterior/research_camp)
-"pdQ" = (
-/obj/structure/prop/invuln/overhead_pipe,
-/obj/structure/machinery/door/poddoor/railing/open{
-	dir = 8;
-	id = "research_entry_gate"
-	},
-/turf/open/floor/whiteyellow/northeast,
-/area/bmg290/keppitz_interior_b/sterilization)
 "pdV" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -78622,7 +78606,7 @@ bdc
 oxZ
 kkY
 jGC
-pdQ
+jGC
 hYy
 jyf
 oJS
@@ -79366,7 +79350,7 @@ bdc
 nHL
 xXp
 lNZ
-dEX
+lNZ
 dPg
 jyf
 oJS
