@@ -74,7 +74,7 @@
 	var/random_pistol = rand(0,1)
 	switch(random_pistol)
 		if(0)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3/twe(new_human.back), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/l54(new_human.back), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol(new_human), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol(new_human), WEAR_IN_BACK)
 
@@ -89,7 +89,7 @@
 	//head
 
 	//uniform
-	add_rebel_twe_uniform(new_human)
+	add_civilian_uniform(new_human)
 	//jacket
 	if(prob(95))
 		add_civilian_jacket(new_human)
