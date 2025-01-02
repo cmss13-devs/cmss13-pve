@@ -169,7 +169,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "aez" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -482,7 +482,7 @@
 /area/bmg290/keppitz_exterior/research_camp)
 "ali" = (
 /turf/open/gm/coast/beachcorner2,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "all" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -725,7 +725,7 @@
 /area/bmg290/relay_exterior/colony_ne)
 "apN" = (
 /turf/open/gm/dirt,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "apR" = (
 /turf/closed/wall/shiva/prefabricated/red,
 /area/bmg290/caverns/halls)
@@ -2138,7 +2138,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "aYb" = (
 /obj/structure/bed/chair{
 	buckling_y = 6;
@@ -2957,7 +2957,7 @@
 "blK" = (
 /obj/structure/prop/rock/brown,
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "blM" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 6
@@ -4274,7 +4274,7 @@
 /area/bmg290/relay_exterior/colony_center)
 "bPx" = (
 /turf/open/gm/coast/beachcorner/north_east,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "bPz" = (
 /obj/structure/machinery/power/apc/power/west,
 /turf/open/floor/prison/darkyellowfull2/east,
@@ -5008,7 +5008,7 @@
 /area/bmg290/colony_interior/shed)
 "cgF" = (
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "cgH" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -12
@@ -5073,7 +5073,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "cif" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -6917,7 +6917,7 @@
 "cRO" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/gm/coast/south_east,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "cRR" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/gm/grass,
@@ -6990,7 +6990,7 @@
 /obj/item/storage/backpack/ivan,
 /obj/structure/prop/brazier/campfire,
 /turf/open/gm/dirt,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "cUo" = (
 /obj/structure/fence,
 /turf/open/floor/grass,
@@ -7483,7 +7483,7 @@
 "deD" = (
 /obj/item/lightstick/planted,
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "deE" = (
 /obj/structure/surface/rack,
 /obj/effect/decal/siding,
@@ -7772,7 +7772,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/west,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "dlt" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/gm/grass,
@@ -9090,7 +9090,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "dOz" = (
 /turf/open/floor/prison,
 /area/bmg290/colony_interior/flight_control)
@@ -9481,7 +9481,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "dWC" = (
 /obj/effect/decal/grass_overlay/grass1,
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -9720,7 +9720,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/east,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "ebl" = (
 /turf/open/asphalt/cement/cement3,
 /area/bmg290/keppitz_exterior/cargo_section)
@@ -10674,7 +10674,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "euz" = (
 /obj/effect/decal/siding,
 /turf/open/asphalt/cement/cement4,
@@ -10856,14 +10856,14 @@
 "exA" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "exH" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/bmg290/ancie_eng/deep_site)
 "exK" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/gm/coast/east,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "exW" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_y = -7;
@@ -11464,7 +11464,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/north,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "eHo" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt,
@@ -11954,7 +11954,7 @@
 /obj/structure/blocker/fog,
 /obj/structure/blocker/invisible_wall,
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "eTY" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /obj/structure/prop/ice_colony/ground_wire{
@@ -12770,11 +12770,11 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "fnz" = (
 /obj/structure/blocker/fog,
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "fnC" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
@@ -14092,7 +14092,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "fRK" = (
 /obj/structure/prop/rock,
 /turf/open/auto_turf/strata_grass,
@@ -14226,7 +14226,7 @@
 "fUo" = (
 /obj/effect/overlay/palmtree_l,
 /turf/open/gm/dirt,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "fUN" = (
 /turf/open/floor/prison,
 /area/bmg290/keppitz_interior/mining_hub)
@@ -14554,7 +14554,7 @@
 	dir = 8
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "gcz" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /turf/open/gm/dirt2,
@@ -15432,7 +15432,7 @@
 /area/bmg290/relay_exterior/colony_center)
 "gxP" = (
 /turf/open/gm/coast/beachcorner/south_west,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "gxR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroid,
@@ -15477,7 +15477,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "gyx" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 1
@@ -15991,7 +15991,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "gLg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N"
@@ -16264,7 +16264,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "gSM" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 5
@@ -16409,7 +16409,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "gWf" = (
 /turf/open/auto_turf/shale/layer0_plate,
 /area/bmg290/ancie_eng/chamber1)
@@ -16653,7 +16653,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "hdS" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/shield/riot,
@@ -17283,7 +17283,7 @@
 "hph" = (
 /obj/structure/prop/rock/brown,
 /turf/open/gm/dirt,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "hpx" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 9
@@ -17402,7 +17402,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/west,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "hte" = (
 /obj/structure/flora/jungle/vines/light_2,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -23172,7 +23172,7 @@
 	name = "Invisible Human Barrier"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "jJV" = (
 /obj/item/reagent_container/glass/bucket/janibucket,
 /obj/structure/surface/rack,
@@ -23477,7 +23477,7 @@
 "jPn" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "jPs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/colony_floodlight,
@@ -25651,7 +25651,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/beachcorner,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "kII" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 5
@@ -27140,7 +27140,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "loV" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/oob/playfulstuff)
@@ -28450,7 +28450,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "lOD" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -28713,7 +28713,7 @@
 "lUt" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "lUv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small,
@@ -29806,7 +29806,7 @@
 /area/bmg290/colony_exterior/valley_site)
 "msD" = (
 /turf/closed/wall/rock/brown,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "msE" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -31154,7 +31154,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "nbf" = (
 /obj/structure/blocker/forcefield/human{
 	alpha = 0;
@@ -31554,7 +31554,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/west,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "nhC" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 8
@@ -31990,7 +31990,7 @@
 	dir = 10
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "npi" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/prison/floor_plate,
@@ -32110,7 +32110,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "nrV" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -33083,7 +33083,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "nOl" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/redcorner,
@@ -33593,7 +33593,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "nZB" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/handrail/kutjevo{
@@ -35449,7 +35449,7 @@
 /area/bmg290/relay_exterior/colony_ne)
 "oPy" = (
 /turf/open/gm/coast/beachcorner2/south_west,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "oPC" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/effect/decal/cleanable/dirt,
@@ -35574,7 +35574,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "oSy" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 10
@@ -35886,7 +35886,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/beachcorner2,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "oYc" = (
 /obj/structure/prop/almayer/computers/sensor_computer1{
 	name = "computer"
@@ -37008,7 +37008,7 @@
 	dir = 6
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "pxp" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -37053,7 +37053,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/beachcorner2/north_east,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "pyx" = (
 /obj/structure/machinery/computer/emails{
 	dir = 1;
@@ -37559,7 +37559,7 @@
 /area/bmg290/ancie_eng_weakened/breached_hall)
 "pIk" = (
 /turf/open/gm/coast/beachcorner2/north_west,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "pIF" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/floor/grass,
@@ -37718,7 +37718,7 @@
 	pixel_y = -8
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "pLv" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -12
@@ -38893,7 +38893,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "qlQ" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1
@@ -39013,7 +39013,7 @@
 /area/bmg290/keppitz_exterior/cargo_section)
 "qnU" = (
 /turf/open/gm/coast/south,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "qof" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 4
@@ -39131,7 +39131,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "qqr" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 8
@@ -39512,7 +39512,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/west,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "qxF" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 6
@@ -39575,7 +39575,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "qyx" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
@@ -39729,7 +39729,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "qCj" = (
 /obj/structure/window/framed/strata/reinforced,
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -39894,7 +39894,7 @@
 /obj/structure/blocker/invisible_wall,
 /obj/structure/blocker/invisible_wall,
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "qFS" = (
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz_exterior/research_camp)
@@ -40087,7 +40087,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/west,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "qIW" = (
 /obj/structure/platform/kutjevo,
 /turf/open/floor/asteroid,
@@ -40311,7 +40311,7 @@
 /obj/effect/overlay/palmtree_r,
 /obj/structure/prop/rock/brown_degree,
 /turf/open/gm/dirt,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "qOs" = (
 /obj/structure/surface/table/almayer,
 /obj/item/clipboard,
@@ -40892,7 +40892,7 @@
 /area/bmg290/relay_exterior/east_bridge)
 "rbw" = (
 /turf/open/gm/coast/beachcorner2/north_east,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "rbL" = (
 /obj/structure/surface/table/almayer,
 /obj/item/device/lightreplacer,
@@ -41005,7 +41005,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "reW" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
@@ -41334,7 +41334,7 @@
 	pixel_y = -8
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "rli" = (
 /obj/structure/sign/poster/ad,
 /turf/closed/wall/strata_outpost/reinforced,
@@ -42446,7 +42446,7 @@
 /area/bmg290/relay_exterior/outskirts_road)
 "rFB" = (
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "rFH" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/floor/grass,
@@ -43266,7 +43266,7 @@
 /area/bmg290/relay_interior_b/relay_courtyard_cargo)
 "rZj" = (
 /turf/open/gm/coast/west,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "rZo" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
@@ -44836,7 +44836,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "sIa" = (
 /obj/structure/closet/emcloset,
 /obj/effect/decal/cleanable/dirt,
@@ -45574,7 +45574,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "sXU" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 1
@@ -45659,7 +45659,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "sZU" = (
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor/prison/floor_plate,
@@ -47306,7 +47306,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "tMP" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/spawner/random/tool,
@@ -47461,7 +47461,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "tQY" = (
 /turf/open/gm/dirt,
 /area/bmg290/relay_exterior/beach)
@@ -49576,7 +49576,7 @@
 	name = "Height Difference"
 	},
 /turf/open/gm/coast/beachcorner2/north_east,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "uPs" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/device/flashlight/lamp/green,
@@ -52236,7 +52236,7 @@
 /area/bmg290/relay_exterior/colony_sw)
 "vQE" = (
 /turf/open/gm/coast,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "vQZ" = (
 /obj/structure/machinery/light/double{
 	dir = 8;
@@ -52877,7 +52877,7 @@
 "wbg" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/gm/coast/beachcorner2/north_east,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "wbi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -55174,7 +55174,7 @@
 /area/bmg290/colony_exterior/valley_site)
 "wZC" = (
 /turf/open/gm/coast/beachcorner/north_west,
-/area/bmg290/oob/ocean)
+/area/bmg290/relay_exterior/ocean)
 "wZF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -74621,8 +74621,8 @@ wyJ
 iQu
 wrI
 qIC
-msD
-msD
+qSW
+qSW
 cgF
 cgF
 cgF
@@ -74808,8 +74808,8 @@ tVG
 pEQ
 pEQ
 pEQ
-msD
-msD
+qSW
+qSW
 cgF
 cgF
 cgF
@@ -74995,8 +74995,8 @@ qSW
 pEQ
 pEQ
 pEQ
-msD
-msD
+qSW
+qSW
 cgF
 cgF
 cgF
@@ -75182,8 +75182,8 @@ qSW
 pEQ
 pEQ
 pEQ
-msD
-msD
+qSW
+qSW
 cgF
 cgF
 cgF
@@ -75368,8 +75368,8 @@ qSW
 qSW
 dJr
 dJr
-msD
-msD
+qSW
+qSW
 cgF
 cgF
 cgF
