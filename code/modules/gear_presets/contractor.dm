@@ -893,7 +893,10 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/boiler, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ballistic, WEAR_JACKET)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/civghillie, WEAR_JACKET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ballistic, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
 	if(prob(50))
@@ -906,11 +909,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
-	var/headwear = pick(/obj/item/clothing/head/cmcap/corrections, /obj/item/clothing/head/beret/cm/black/civilian, /obj/item/clothing/head/cmcap/khaki)
-	if(prob(75))
-		new_human.equip_to_slot_or_del(new headwear, WEAR_HEAD)
-	else if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_HEAD)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/civghillie, WEAR_HEAD)
+	else
+		var/headwear = pick(/obj/item/clothing/head/cmcap/corrections, /obj/item/clothing/head/beret/cm/black/civilian, /obj/item/clothing/head/cmcap/khaki)
+		if(prob(75))
+			new_human.equip_to_slot_or_del(new headwear, WEAR_HEAD)
+		else if(prob(50))
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_HEAD)
 
 /datum/equipment_preset/mercenary/rifle
 	name = "Generic Mercenary (Rifle)"
