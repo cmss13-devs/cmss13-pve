@@ -1,0 +1,491 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/briefing)
+"b" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/briefing)
+"c" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/tableflag{
+	pixel_x = 3;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"d" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"e" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_left,
+/area/golden_arrow/briefing)
+"g" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/briefing)
+"h" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/golden_arrow/briefing)
+"i" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	icon_state = "shuttle";
+	layer = 2.97;
+	name = "Tactical Map Display";
+	pixel_y = 21
+	},
+/obj/structure/noticeboard{
+	pixel_y = 30;
+	pixel_x = -21
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"j" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/briefing)
+"k" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/briefing)
+"l" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/tableflag/uscm{
+	pixel_y = 2;
+	pixel_x = -3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"m" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"n" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/briefing)
+"o" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/briefing)
+"p" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/structure/machinery/firealarm{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/briefing)
+"q" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
+"r" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/cable{
+	icon_state = "0-8";
+	layer = 2.36
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"s" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/briefing)
+"t" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"u" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/structure/stairs/perspective,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"v" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/structure/machinery/light_switch{
+	pixel_x = -24;
+	on = 0
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/briefing)
+"x" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/briefing)
+"y" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/briefing)
+"z" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 8;
+	pixel_x = 16
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/briefing)
+"A" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/pipes/vents/pump{
+	dir = 8;
+	pixel_x = -16
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/briefing)
+"B" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/briefing)
+"C" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right,
+/area/golden_arrow/briefing)
+"D" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/briefing)
+"F" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/briefing)
+"G" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/corner/north,
+/area/golden_arrow/briefing)
+"J" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/bed/chair,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"K" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 28
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"L" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right/north,
+/area/golden_arrow/briefing)
+"M" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"N" = (
+/obj/structure/sign/safety/rewire{
+	pixel_x = 32
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"O" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/structure/stairs/perspective,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"Q" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"R" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/disposal,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_left/north,
+/area/golden_arrow/briefing)
+"S" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/briefing)
+"X" = (
+/obj/structure/surface/table/almayer,
+/obj/item/notepad/black{
+	pixel_y = 4
+	},
+/obj/item/tool/pen{
+	pixel_x = -16;
+	pixel_y = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"Y" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/briefing)
+"Z" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+
+(1,1,1) = {"
+k
+k
+k
+k
+k
+k
+k
+k
+k
+"}
+(2,1,1) = {"
+k
+J
+m
+u
+e
+Y
+Y
+v
+L
+"}
+(3,1,1) = {"
+k
+i
+Q
+l
+b
+y
+o
+s
+a
+"}
+(4,1,1) = {"
+k
+K
+Q
+Z
+g
+F
+n
+z
+h
+"}
+(5,1,1) = {"
+k
+d
+Q
+X
+B
+A
+x
+x
+G
+"}
+(6,1,1) = {"
+k
+r
+M
+c
+S
+Y
+Y
+Y
+j
+"}
+(7,1,1) = {"
+k
+t
+N
+O
+C
+Y
+p
+D
+R
+"}
+(8,1,1) = {"
+k
+k
+k
+k
+k
+k
+k
+q
+q
+"}

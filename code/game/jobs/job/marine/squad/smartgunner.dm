@@ -62,6 +62,10 @@
 	icon_state = "smartgunner_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+/obj/effect/landmark/start/marine/smartgunner/movie
+	icon_state = "smartgunner_spawn_alpha"
+	squad = SQUAD_MOVIE
+
 /datum/job/marine/smartgunner/ai
 	total_positions = 2
 	spawn_positions = 2

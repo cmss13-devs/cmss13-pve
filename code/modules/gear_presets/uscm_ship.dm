@@ -75,7 +75,7 @@
 	rank = JOB_CORPORATE_LIAISON
 	paygrades = list(PAY_SHORT_WYC2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_WYC3 = JOB_PLAYTIME_TIER_2, PAY_SHORT_WYC4 = JOB_PLAYTIME_TIER_3, PAY_SHORT_WYC5 = JOB_PLAYTIME_TIER_4)
 	role_comm_title = "CL"
-	skills = /datum/skills/civilian
+	skills = /datum/skills/civilian/burke
 
 	minimap_icon = "cl"
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIVILIAN
@@ -151,17 +151,6 @@
 /datum/equipment_preset/uscm_ship/liaison/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_LIAISON)
-
-/datum/equipment_preset/uscm_ship/liaison/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/satchel/lockable/liaison
-	//There is no suitable backpack for a CL really...
-	//if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		//back_item = /obj/item/storage/backpack
-
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcl(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/ivy(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 //*****************************************************************************************************/
 
@@ -968,17 +957,11 @@
 	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_PREP)
 	assignment = JOB_DROPSHIP_PILOT
 	rank = JOB_DROPSHIP_PILOT
-	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "DP"
 	skills = /datum/skills/pilot
 
 	minimap_icon = "pilot"
-
-/datum/equipment_preset/uscm_ship/dp/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 
 //*****************************************************************************************************/
 
@@ -1019,7 +1002,7 @@
 	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_PREP)
 	assignment = JOB_DROPSHIP_CREW_CHIEF
 	rank = JOB_DROPSHIP_CREW_CHIEF
-	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_3)
+	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "DCC"
 	skills = /datum/skills/crew_chief
 
@@ -1027,12 +1010,6 @@
 
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
-
-/datum/equipment_preset/uscm_ship/dcc/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 
 //*****************************************************************************************************/
 
@@ -1139,3 +1116,44 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+
+/datum/equipment_preset/uscm_ship/chef/load_rank(mob/living/carbon/human/new_human)
+	if(new_human.client)
+		if(get_job_playtime(new_human.client, rank) < JOB_PLAYTIME_TIER_1)
+			return "ME1"
+	return paygrades
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/uscm_ship/ripley
+	name = "Civilian Advisor"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND
+
+	idtype = /obj/item/card/id/silver/cl
+	access = list(
+		ACCESS_MARINE_COMMAND,
+		ACCESS_MARINE_ALPHA,
+		ACCESS_CIVILIAN_COMMAND,
+	)
+	assignment = JOB_ADVISOR
+	rank = JOB_ADVISOR
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "CA"
+	skills = /datum/skills/civilian/ripley
+
+	minimap_icon = "ca"
+	minimap_background = MINIMAP_ICON_BACKGROUND_CIVILIAN
+
+	utility_under = list(/obj/item/clothing/under/colonist)
+	utility_shoes = list(/obj/item/clothing/shoes/stompers)
+	utility_extra = list(/obj/item/clothing/under/liaison_suit/blue)
+
+	dress_under = list(/obj/item/clothing/under/colonist)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/corporate/brown/leather)
+	dress_hat = list()
+	dress_gloves = list()
+	dress_shoes = list(/obj/item/clothing/shoes/stompers)
+
+/datum/equipment_preset/uscm_ship/ripley/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_MARINE_LIAISON)

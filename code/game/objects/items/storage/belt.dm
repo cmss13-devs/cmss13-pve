@@ -1951,6 +1951,9 @@
 	if(istype(item, /obj/item/ammo_magazine/smartgun))
 		magazines--
 
+/obj/item/storage/belt/gun/smartgunner/garrow/alt
+	icon_state = "sgbeltalt"
+
 #undef MAXIMUM_MAGAZINE_COUNT
 
 /obj/item/storage/belt/gun/smartgunner/pmc

@@ -352,11 +352,27 @@
 	name = "\improper Midway cargo door"
 	icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
 
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds5
+	name = "\improper Bug Stomper cargo door"
+	icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds6
+	name = "\improper Smart Ass cargo door"
+	icon = 'icons/obj/structures/doors/dropship1_cargo.dmi'
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway
 	name = "\improper Midway crew hatch"
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone
 	name = "\improper Cyclone crew hatch"
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/bugstomper
+	name = "\improper Bug Stomper crew hatch"
+	icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/smartass
+	name = "\improper Smart Ass crew hatch"
+	icon = 'icons/obj/structures/doors/dropship1_cargo.dmi'
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp
 	name = "\improper Akademia Nauk cargo door"

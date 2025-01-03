@@ -164,6 +164,11 @@
 /obj/structure/largecrate/supply/ammo/m41amk1/forecon
 	supplies = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon = 20)
 
+/obj/structure/largecrate/supply/ammo/m41amk1/heap
+	name = "\improper M41A magazine case (x20)"
+	desc = "An ammunition case containing 20 M41A magazines."
+	supplies = list(/obj/item/ammo_magazine/rifle/m41aMK1/movie = 20)
+
 /obj/structure/largecrate/supply/ammo/m41a_box
 	name = "\improper M41A ammunition box case (x4)"
 	desc = "An ammunition case containing four M41A 600 round boxes of ammunition."

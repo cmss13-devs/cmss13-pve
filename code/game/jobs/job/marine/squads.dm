@@ -196,6 +196,16 @@
 	roundstart = FALSE
 	locked = TRUE
 
+/datum/squad/marine/movie
+	name = SQUAD_MOVIE
+	equipment_color = "#4148c8"
+	chat_color = "#828cff"
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = ALPHA_FREQ
+	minimap_color = MINIMAP_SQUAD_ALPHA
+	use_stripe_overlay = FALSE
+	usable = TRUE
+
 /datum/squad/marine/cryo
 	name = SQUAD_MARINE_CRYO
 	equipment_color = "#c47a50"

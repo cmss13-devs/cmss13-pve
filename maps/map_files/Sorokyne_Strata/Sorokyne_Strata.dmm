@@ -32492,7 +32492,6 @@
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
-/obj/effect/landmark/wo_supplies/storage/m56d,
 /obj/structure/machinery/door/window/eastright{
 	dir = 2
 	},

@@ -22,3 +22,17 @@
 	name = JOB_CORPORATE_LIAISON
 	icon_state = "cl_spawn"
 	job = /datum/job/civilian/liaison
+
+/datum/job/civilian/advisor
+	title = JOB_ADVISOR
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm_ship/ripley
+	supervisors = "the Wey-Yu corporate office"
+	selection_class = "job_ca"
+	entry_message_body = "You are a survivor of a relevant catastrophic event involving a xenomorph and have been brought onboard to assist the Marines with understanding the threat of the XX-121 'Xenomorph'. While not a combatant or an Officer, you must assist said individuals with wiping out this new lifeform and the grave danger it presents."
+
+/obj/effect/landmark/start/advisor
+	name = JOB_ADVISOR
+	icon_state = "ca_spawn"
+	job = /datum/job/civilian/advisor

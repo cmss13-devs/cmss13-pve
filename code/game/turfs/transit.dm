@@ -292,6 +292,14 @@
 	shuttle_tag = DROPSHIP_UPP
 	dir = SOUTH
 
+/turf/open/space/transit/dropship/bugstomper
+	shuttle_tag = DROPSHIP_BUGSTOMPER
+	dir = SOUTH
+
+/turf/open/space/transit/dropship/smartass
+	shuttle_tag = DROPSHIP_SMARTASS
+	dir = SOUTH
+
 /turf/open/space/transit/south
 	dir = SOUTH
 

@@ -252,6 +252,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/sulacocap
 	cost = 1
 
+/datum/gear/headwear/uscm/cap/sulaco/movie
+	display_name = "USS Sulaco cap"
+	path = /obj/item/clothing/head/sulacocap/movie
+	cost = 3
+
 /datum/gear/headwear/uscm/cap/flap_jungle
 	display_name = "USCM expedition flapcap, jungle"
 	path = /obj/item/clothing/head/cmcap/flap
@@ -303,6 +308,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/headwear/uscm/headband_echo
 	display_name = "USCM headband, cyan green"
 	path = /obj/item/clothing/head/headband/echo
+
+/datum/gear/headwear/uscm/helmetband
+	display_name = "M3 Pattern Helmet Band"
+	path = /obj/item/prop/helmetgarb/m3band
 
 /datum/gear/headwear/uscm/headset
 	display_name = "USCM headset"
@@ -1165,12 +1174,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 1 //The cadmium poisoning pays for the discounted cost longterm
 	allowed_origins = USCM_ORIGINS
 
-/datum/gear/misc/dogtags
-	display_name = "Attachable Dogtags"
-	path = /obj/item/clothing/accessory/dogtags
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
-	allowed_origins = USCM_ORIGINS
+/datum/gear/misc/fingerlessgloves
+	display_name = "Fingerless Gloves"
+	path = /obj/item/clothing/gloves/marine/fingerless
+	cost = 2
 
 /datum/gear/misc/patch_uscm
 	display_name = "USCM shoulder patch"

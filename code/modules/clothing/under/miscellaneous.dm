@@ -117,6 +117,12 @@
 	icon_state = "kutjevo_drysuit"
 	item_state = "kutjevo_drysuit"
 
+/obj/item/clothing/under/ripley
+	name = "freight flightsuit"
+	desc = "An old style flightsuit worn by Warrant Officers employed in Weyland-Yutani commercial freight operations. This one is very worn through, with faded patches sown into it of a ship likely long gone."
+	icon_state = "ripley"
+	item_state = "ripley"
+	flags_jumpsuit = UNIFORM_JACKET_REMOVABLE
 
 /obj/item/clothing/under/soviet
 	name = "soviet uniform"

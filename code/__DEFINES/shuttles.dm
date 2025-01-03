@@ -121,11 +121,16 @@
 #define DROPSHIP_TORNADO "dropship_tornado"
 #define DROPSHIP_TYPHOON "dropship_typhoon"
 #define DROPSHIP_TRIPOLI "dropship_tripoli"
+#define DROPSHIP_BUGSTOMPER "dropship_bugstomper"
+#define DROPSHIP_SMARTASS "dropship_smartass"
 
 #define ALMAYER_DROPSHIP_LZ1 "almayer-hangar-lz1"
 #define ALMAYER_DROPSHIP_LZ2 "almayer-hangar-lz2"
 
 #define GOLDEN_ARROW_LZ "golden arrow lz"
+
+#define SULACO_LZ1 "sulaco lz1"
+#define SULACO_LZ2 "sulaco lz2"
 
 #define DROPSHIP_FLYBY_ID "special_flight"
 #define DROPSHIP_LZ1 "dropship-lz1"

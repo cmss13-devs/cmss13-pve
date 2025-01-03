@@ -74,6 +74,15 @@
 /obj/item/storage/large_holster/m37/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)
 
+/obj/item/storage/large_holster/m37/movie
+	name = "\improper Custom leather scabbard"
+	desc = "A large leather holster fitted for an old model shotgun. It has a sling that allows it to be secured to the back for easy storage."
+	icon_state = "moviem37_holster"
+	can_hold = list(
+		/obj/item/weapon/gun/shotgun/pump,
+	)
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/large_holster/machete
 	name = "\improper H5 pattern M2132 machete scabbard"
 	desc = "A large leather scabbard used to carry a M2132 machete. It can be strapped to the back or the armor."
