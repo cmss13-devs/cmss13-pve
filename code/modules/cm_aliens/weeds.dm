@@ -175,7 +175,7 @@
 
 	var/mob/living/crossing_mob = atom_movable
 
-	var/weed_slow = weed_strength
+	var/weed_slow = weed_strength / 4
 
 	if(crossing_mob.ally_of_hivenumber(linked_hive.hivenumber))
 		if( (crossing_mob.hivenumber != linked_hive.hivenumber) && prob(7)) // small chance for allied mobs to get a message indicating this
@@ -377,7 +377,7 @@
 	else
 		to_chat(user, SPAN_WARNING("You cut \the [src] away with \the [attacking_item]."))
 
-	var/damage = (attacking_item.force * attacking_item.demolition_mod) / 3
+	var/damage = ((attacking_item.force / 8 ) * attacking_item.demolition_mod) / 3
 	playsound(loc, "alien_resin_break", 25)
 
 	if(iswelder(attacking_item))
