@@ -1259,7 +1259,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
 /datum/equipment_preset/colonist/japanese/prisoner
-	name = "Prisoner"
+	name = "TWE Prisoner"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	assignment = "Inmate"
@@ -1299,14 +1299,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ballistic, WEAR_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/l54, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/l54, WEAR_IN_BELT)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/l54, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/colonist/japanese/security/weyland
 	name = "TWE Civilian Security Guard, Wey-Yu"
@@ -1365,8 +1365,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest, WEAR_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/l54, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/l54, WEAR_IN_BELT)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt/l54, WEAR_R_STORE)
