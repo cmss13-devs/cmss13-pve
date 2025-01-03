@@ -200,6 +200,16 @@
 	siemens_coefficient = 0.7
 
 
+/obj/item/clothing/head/helmet/civghillie
+	name = "ghillie hood"
+	desc = "A camouflage hood made out of venlar. "
+	icon_state = "s_ghillie_coif"
+	item_state = "s_ghillie_coif"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
 //===========================//MARINES HELMETS\\=================================\\
 //=======================================================================\\
 

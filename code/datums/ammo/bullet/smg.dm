@@ -142,6 +142,6 @@
 	damage = 35
 	accurate_range = 7
 	effective_range_max = 10
-	penetration = -ARMOR_PENETRATION_TIER_4
+	penetration = 0
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_6

@@ -519,3 +519,17 @@
 	flags_inv_hide = NO_FLAGS
 	siemens_coefficient = 0.6
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+
+/obj/item/clothing/suit/armor/civghillie
+	name = "ghillie suit"
+	desc = "Some makeshift ghillie suit with armor inserts."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
+	)
+	icon_state = "s_ghillie_armor"
+	item_state = "s_ghillie_armor"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_inv_hide = HIDEJUMPSUIT

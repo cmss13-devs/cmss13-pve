@@ -247,7 +247,7 @@
 	accurate_range = 8
 	max_range = 10
 	damage = 75
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = 0
 	shell_speed = AMMO_SPEED_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
