@@ -1,4 +1,4 @@
-/mob/living/carbon/human/Initialize(mapload, new_species = null)
+/mob/living/carbon/human/Initialize(mapload, new_species = null, ai = FALSE)
 	blood_type = pick(7;"O-", 38;"O+", 6;"A-", 34;"A+", 2;"B-", 9;"B+", 1;"AB-", 3;"AB+")
 	GLOB.human_mob_list += src
 	GLOB.alive_human_list += src
@@ -1066,6 +1066,8 @@
 	default_lighting_alpha = species.default_lighting_alpha
 	update_sight()
 
+	SEND_SIGNAL(src, COMSIG_HUMAN_SET_SPECIES, new_species)
+
 	if(species)
 		return TRUE
 	else
@@ -1191,7 +1193,7 @@
 		else
 			if(tracker_setting in squad_leader_trackers)
 				var/datum/squad/S = GLOB.RoleAuthority.squads_by_type[squad_leader_trackers[tracker_setting]]
-				H = S.squad_leader
+				H = S?.squad_leader
 				tracking_suffix = tracker_setting
 
 	if(!H || H.w_uniform?.sensor_mode != SENSOR_MODE_LOCATION)
