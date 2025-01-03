@@ -327,7 +327,7 @@
 "aol" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/structure/machinery/camera{
 	dir = 8
@@ -585,7 +585,7 @@
 "aAh" = (
 /obj/structure/machinery/light{
 	dir = 8;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/wood_broken4,
@@ -1116,7 +1116,7 @@
 "aZk" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1535,7 +1535,7 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/strata/fake_wood,
 /area/taipei/atrium/offices)
@@ -1547,7 +1547,7 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/west,
@@ -3487,7 +3487,7 @@
 /obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/hotel)
@@ -4416,7 +4416,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/reactor/chamber)
@@ -4530,7 +4530,7 @@
 	dir = 4;
 	light_color = #00008B;
 	pixel_x = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/prison/blue{
 	dir = 8
@@ -6484,7 +6484,7 @@
 "fvi" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan,
@@ -6687,7 +6687,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/asteroidwarning/west,
 /area/taipei/maints/north)
@@ -6836,7 +6836,7 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/west,
@@ -6870,7 +6870,7 @@
 "fRb" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
@@ -7355,7 +7355,7 @@
 "gqB" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
@@ -8344,7 +8344,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/hotel)
@@ -9475,7 +9475,7 @@
 	dir = 4;
 	light_color = "#dae2ff";
 	pixel_x = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/prison,
 /area/taipei/club)
@@ -9971,7 +9971,7 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -10094,7 +10094,7 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/faux_wood,
@@ -10559,7 +10559,7 @@
 /obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 8;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/hotel)
@@ -11749,7 +11749,7 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -11934,7 +11934,7 @@
 "kHO" = (
 /obj/structure/machinery/light{
 	brightness = 3;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -12106,7 +12106,7 @@
 "kRG" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/plating/asteroidwarning/west,
 /area/taipei/reactor)
@@ -12856,7 +12856,7 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan,
@@ -16494,7 +16494,7 @@
 "oMS" = (
 /obj/structure/machinery/light{
 	dir = 8;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -17872,7 +17872,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	brightness = 3;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/reactor/chamber)
@@ -18760,7 +18760,7 @@
 	dir = 4;
 	light_color = #00008B;
 	pixel_x = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/structure/machinery/camera,
 /obj/structure/pipes/vents/scrubber,
@@ -20032,7 +20032,7 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/asteroidwarning/west,
 /area/taipei/maints/south)
@@ -22170,7 +22170,7 @@
 "tqI" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -23721,7 +23721,7 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/colors/cyan/inner_corner/north,
@@ -23744,7 +23744,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 8;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/hotel)
@@ -23848,7 +23848,7 @@
 "uVl" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -24155,7 +24155,7 @@
 /obj/item/toy/desk/newtoncradle,
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/faux_wood,
@@ -24435,7 +24435,7 @@
 	dir = 4;
 	light_color = "#dae2ff";
 	pixel_x = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/prison,
 /area/taipei/club)
@@ -25303,7 +25303,7 @@
 "wiw" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/structure/machinery/door/window/ultra{
 	dir = 2
@@ -25452,7 +25452,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 8;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/plating/asteroidwarning/east,
 /area/taipei/reactor)
@@ -26240,7 +26240,7 @@
 "xfS" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/kutjevo/grey/plate,
 /area/taipei/cmb)
@@ -26346,7 +26346,7 @@
 "xiX" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	light_power = .50
+	light_power = 0.5
 	},
 /obj/structure/machinery/camera{
 	dir = 8
@@ -27250,7 +27250,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 8;
-	light_power = .50
+	light_power = 0.5
 	},
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/reactor/chamber)
