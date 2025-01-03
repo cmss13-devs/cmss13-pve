@@ -10,18 +10,10 @@
 /datum/job/seaman/skittle
 	title = JOB_NAVY_SKITTLE
 	gear_preset = /datum/equipment_preset/usasf/crew/flight
-	gear_preset_secondary = /datum/equipment_preset/usasf/crew/flight/green
 
 /datum/job/seaman/skittle/on_config_load()
 	entry_message_body = "You are a part of the flight-deck operations crew aboard a USASF vessel, working to prepare and keep aerospace craft in fighting condition. Hoo-yah!"
 	return ..()
-
-/datum/job/seaman/skittle/purpwhite
-	gear_preset = /datum/equipment_preset/usasf/crew/flight/purple
-	gear_preset_secondary = /datum/equipment_preset/usasf/crew/flight/white
-
-/datum/job/seaman/skittle/blue
-	gear_preset = /datum/equipment_preset/usasf/crew/flight/blue
 
 /datum/job/seaman/medic
 	title = JOB_NAVY_MEDIC

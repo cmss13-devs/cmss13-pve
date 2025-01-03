@@ -69,50 +69,51 @@
 	..()
 
 /datum/equipment_preset/usasf/crew/flight
-	name = "USASF Flight-Deck Crewman (Red)"
-	assignment = JOB_NAVY_SKITTLE
+	name = "USASF Flight-Deck Crewman"
 	rank = JOB_NAVY_SKITTLE
 	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Ordnc"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/flight_crew
 
+/datum/equipment_preset/usasf/crew/flight/get_assignment(mob/living/carbon/human/new_human)
+	if(prob(20))
+		return "USASF Flight-Deck Ordnance Crewman"
+	if(prob(20))
+		return "USASF Flight-Deck Maintenance Crewman"
+	if(prob(20))
+		return "USASF Flight-Deck Fuel Crewman"
+	if(prob(20))
+		return "USASF Flight-Deck Safety Crewman"
+	return "USASF Flight-Deck Handler Crewman"
+
+#define USAF_ORDNANCE_CREW "USASF Flight-Deck Ordnance Crewman"
+#define USAF_MAINT_CREW "USASF Flight-Deck Maintenance Crewman"
+#define USAF_FUEL_CREW "USASF Flight-Deck Fuel Crewman"
+#define USAF_SAFETY_CREW "USASF Flight-Deck Safety Crewman"
+#define USAF_HANDLER_CREW "USASF Flight-Deck Handler Crewman"
+
 /datum/equipment_preset/usasf/crew/flight/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot, WEAR_HEAD)
-	..()
+    new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot, WEAR_HEAD)
+    var/flight_deck_vest = pick(USAF_ORDNANCE_CREW ,USAF_MAINT_CREW,USAF_FUEL_CREW,USAF_SAFETY_CREW,USAF_HANDLER_CREW)
+    switch(flight_deck_vest)
+        if(USAF_ORDNANCE_CREW)
+            new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf, WEAR_JACKET)
+        if(USAF_MAINT_CREW)
+            new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/green, WEAR_JACKET)
+        if(USAF_FUEL_CREW)
+            new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/purple, WEAR_JACKET)
+        if(USAF_SAFETY_CREW)
+            new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/white, WEAR_JACKET)
+        if(USAF_HANDLER_CREW)
+            new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/blue, WEAR_JACKET)
+    ..()
+#undef USAF_ORDNANCE_CREW
+#undef USAF_MAINT_CREW
+#undef USAF_FUEL_CREW
+#undef USAF_SAFETY_CREW
+#undef USAF_HANDLER_CREW
 
-/datum/equipment_preset/usasf/crew/flight/green
-	name = "USASF Flight-Deck Crewman (green)"
-	role_comm_title = "Mntnc"
-
-/datum/equipment_preset/usasf/crew/flight/green/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/green, WEAR_JACKET)
-	..()
-
-/datum/equipment_preset/usasf/crew/flight/purple
-	name = "USASF Flight-Deck Crewman (purple)"
-	role_comm_title = "Fuel"
-
-/datum/equipment_preset/usasf/crew/flight/purple/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/purple, WEAR_JACKET)
-	..()
-
-/datum/equipment_preset/usasf/crew/flight/white
-	name = "USASF Flight-Deck Crewman (white)"
-	role_comm_title = "Sfty"
-
-/datum/equipment_preset/usasf/crew/flight/white/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/white, WEAR_JACKET)
-	..()
-
-/datum/equipment_preset/usasf/crew/flight/blue
-	name = "USASF Flight-Deck Crewman (blue)"
-	role_comm_title = "Hndlr"
-
-/datum/equipment_preset/usasf/crew/flight/blue/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/blue, WEAR_JACKET)
-	..()
 
 //*****************************************************************************************************/
 
