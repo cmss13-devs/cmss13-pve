@@ -1,0 +1,4 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - bugfix: "opacity on secure door"
