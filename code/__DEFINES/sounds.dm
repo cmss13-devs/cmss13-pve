@@ -92,6 +92,7 @@
 #define AMBIENCE_MALL 'sound/ambience/medbay1.ogg'
 #define AMBIENCE_CAVE 'sound/ambience/desert.ogg'
 #define AMBIENCE_YAUTJA 'sound/ambience/yautja_ship.ogg'
+#define AMBIENCE_AICORE 'sound/ambience/ai_interface.ogg'
 
 #define SOUND_MARINE_DRUMS 'sound/effects/drums.ogg'
 
