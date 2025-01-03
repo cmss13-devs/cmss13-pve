@@ -856,35 +856,6 @@
 	//limbs
 	add_worker_shoe(new_human)
 
-/datum/equipment_preset/colonist/japanese/bluecollar/spanish
-	name = "TWE Civilian Colonist, Blue-Collar (Spanish)"
-	languages = list(LANGUAGE_SPANISH)
-
-/datum/equipment_preset/colonist/japanese/construction
-	name = "TWE Civilian Colonist, Blue-Collar (Construction)"
-	assignment = "Construction Worker"
-	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
-	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/civilian
-	access = list(ACCESS_CIVILIAN_PUBLIC)
-
-/datum/equipment_preset/colonist/japanese/construction/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
-	//back
-	add_random_satchel(new_human)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
-	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/hardhat(new_human), WEAR_HEAD)
-	//uniform
-	add_worker_uniform(new_human)
-	//jacket
-	add_worker_jacket(new_human)
-	//limbs
-	add_worker_shoe(new_human)
-
 /datum/equipment_preset/colonist/japanese/cook
 	name = "TWE Civilian Colonist, Blue-Collar (Cook)"
 	assignment = "Cook"
