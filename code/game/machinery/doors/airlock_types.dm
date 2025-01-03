@@ -412,7 +412,7 @@
 /obj/structure/machinery/door/airlock/almayer/secure/glass
 	name = "\improper Secure Airlock"
 	icon = 'icons/obj/structures/doors/securedoor_glass.dmi'
-	opacity = 0
+	opacity = FALSE
 
 /obj/structure/machinery/door/airlock/almayer/secure/colony
 	req_access = null
