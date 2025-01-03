@@ -4,7 +4,7 @@
 /area/taipei
 	ceiling = CEILING_DEEP_UNDERGROUND_METAL
 	ceiling_muffle = FALSE
-	powernet_name = "Taipei"
+	powernet_name = "ground"
 	can_build_special = TRUE
 	icon_state = "lv-626"
 	ambience_exterior = AMBIENCE_SHIP
@@ -13,11 +13,11 @@
 
 /area/taipei/underground
 	always_unpowered = 1
-	name = "asteroid"
+	name = "\improper Asteroid"
 	icon_state = "caves"
 
-/area/taipei/atrium/club
-	name = "The Velvet Tassle"
+/area/taipei/club
+	name = "\improper Velvet Tassle"
 	icon_state = "blue"
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 
@@ -63,7 +63,7 @@
 	icon_state = "yellow"
 	sound_environment = SOUND_ENVIRONMENT_HANGAR
 	soundscape_playlist = SCAPE_PL_HANGAR
-	soundscape_interval = 120
+	soundscape_interval = 30
 
 /area/taipei/hangar/landingzone
 	name = "\improper Landing Zone One"
@@ -71,8 +71,10 @@
 	icon_state = "lv-626"
 
 /area/taipei/telecomms
-	name = "Telecommunications"
+	name = "\improper Telecommunications"
 	icon_state = "purple"
+	soundscape_playlist = SCAPE_PL_AICORE
+	soundscape_interval = 5
 	sound_environment = SOUND_ENVIRONMENT_GENERIC
 
 /area/taipei/atrium/laundry
@@ -81,11 +83,11 @@
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 
 /area/taipei/atrium/store
-	name = "Conveniance-Mart"
+	name = "\improper Conveniance-Mart"
 	icon_state = "req"
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 
-/area/taipei/atrium/theatre
+/area/taipei/theatre
 	name = "\improper Movie Star"
 	icon_state = "almayer"
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
@@ -96,24 +98,29 @@
 	sound_environment = SOUND_ENVIRONMENT_LIVINGROOM
 
 /area/taipei/reactor
-	name = "Reactor Control Room"
+	name = "\improper Reactor Control Room"
 	icon_state = "upperengineering"
 	sound_environment = SOUND_ENVIRONMENT_GENERIC
 	soundscape_playlist = SCAPE_PL_ENG
-	soundscape_interval = 25
+	soundscape_interval = 15
+
+/area/taipei/reactor/chamber
+	name = "\improper Reactor Chamber"
+	icon_state = "green"
+	sound_environment = SOUND_ENVIRONMENT_MOUNTAINS
 
 /area/taipei/atrium/restaurant
-	name = "Sal's Noodles"
+	name = "\improper Sal's Noodles"
 	icon_state = "pink"
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 
 /area/taipei/atrium/bookstore
-	name = "Lots'o'Books"
+	name = "\improper Lots'o'Books"
 	icon_state = "yellow"
 	sound_environment = SOUND_ENVIRONMENT_LIVINGROOM
 
 /area/taipei/hangar/cargoshuttle
-	name = "Cargo Skiff"
+	name = "\improper Cargo Skiff"
 	icon_state = "green"
 	sound_environment = SOUND_ENVIRONMENT_HALLWAY
 
@@ -128,6 +135,6 @@
 	name = "\improper Departures Elevator"
 
 /area/taipei/atrium/hotel
-	name = "Short Stay Room and Board"
+	name = "\improper Short Stay Room and Board"
 	icon_state = "green"
 	sound_environment = SOUND_ENVIRONMENT_CARPETED_HALLWAY

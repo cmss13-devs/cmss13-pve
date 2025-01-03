@@ -1,8 +1,8 @@
 {
     "map_name": "Taipei Way-Station",
     "short_name": "Taipei Station",
-    "map_path": "map_files/Taipei_Station",
-    "map_file": "Taipei_Station.dmm",
+    "map_path": "map_files/taipei_station",
+    "map_file": "taipei_station.dmm",
     "map_item_type": "/obj/item/map/taipei_map",
     "traits": [{ "ground": true}],
     "camouflage": "jungle",
