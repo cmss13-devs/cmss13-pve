@@ -1,6 +1,5 @@
 {
-    "map_name": "O'Bannon's World - Oread Garrison",
-    "short_name": "Oread Garrison",
+    "map_name": "Oread Garrison",
     "map_path": "map_files/Oread_Garrison",
     "map_file": "Oread_Garrison.dmm",
     "map_item_type": "/obj/item/map/oread_map",
