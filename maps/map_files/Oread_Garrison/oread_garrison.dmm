@@ -492,18 +492,20 @@
 /turf/open/floor/almayer/sterile_green_side,
 /area/Oread_Garrison/inside/medical)
 "cy" = (
-/obj/structure/closet/crate/ammo{
-	pixel_x = -7;
-	pixel_y = 3
-	},
-/obj/structure/closet/crate/ammo{
-	pixel_x = 2
-	},
-/obj/structure/closet/crate/ammo{
-	pixel_y = 12
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
+	},
+/obj/structure/largecrate/supply/motiondetectors{
+	pixel_y = 8;
+	pixel_x = -7
+	},
+/obj/structure/largecrate/supply/explosives/grenades/less{
+	icon_state = "case";
+	pixel_x = 2
+	},
+/obj/structure/largecrate/supply/ammo/m56d{
+	pixel_y = 12;
+	pixel_x = -2
 	},
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker1)
@@ -2295,9 +2297,16 @@
 /obj/structure/surface/rack{
 	layer = 2.5
 	},
-/obj/item/storage/firstaid/regular/response,
+/obj/item/storage/firstaid/regular/response{
+	pixel_y = -2;
+	pixel_x = -2
+	},
 /obj/structure/machinery/light{
 	dir = 1
+	},
+/obj/item/storage/firstaid/regular/response{
+	pixel_x = 4;
+	pixel_y = 2
 	},
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker1)
@@ -4127,9 +4136,9 @@
 /obj/structure/largecrate/supply/ammo{
 	pixel_x = 3
 	},
-/obj/effect/landmark/wo_supplies/guns/rare/hpr{
-	pixel_y = 4;
-	pixel_x = 12
+/obj/item/weapon/gun/rifle/m41aMK1{
+	pixel_x = 14;
+	pixel_y = 2
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
@@ -8384,8 +8393,8 @@
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/requisitions)
 "MX" = (
-/obj/effect/landmark/wo_supplies/storage/mines,
 /obj/structure/flora/jungle/vines/light_2,
+/obj/item/storage/box/explosive_mines,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
 "MY" = (
@@ -8726,7 +8735,13 @@
 /obj/structure/surface/rack{
 	layer = 2.5
 	},
-/obj/structure/largecrate/random/mini/ammo,
+/obj/structure/closet/crate/ammo{
+	pixel_y = 6
+	},
+/obj/item/defenses/handheld/sentry,
+/obj/item/ammo_magazine/sentry{
+	layer = 3.01
+	},
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker1)
 "OU" = (
@@ -9190,7 +9205,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
 "QG" = (
-/obj/effect/landmark/wo_supplies/guns/common/shotgun,
+/obj/item/weapon/gun/shotgun/pump,
 /turf/open/auto_turf/sand_white/layer0,
 /area/Oread_Garrison/outside/jungle)
 "QH" = (
@@ -9658,8 +9673,8 @@
 /obj/structure/surface/rack{
 	layer = 2.5
 	},
-/obj/item/storage/backpack/marine/fluff,
 /obj/structure/machinery/camera/autoname,
+/obj/item/ammo_box/magazine/misc/mre,
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker1)
 "To" = (
@@ -9700,11 +9715,14 @@
 /turf/closed/wall/r_wall/bunker,
 /area/Oread_Garrison/inside)
 "Ty" = (
-/obj/structure/largecrate/random/case/double{
-	pixel_x = -2
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
+	},
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_x = 2
+	},
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_y = 10
 	},
 /turf/open/floor/plating/bare_catwalk,
 /area/Oread_Garrison/inside/bunker1)
