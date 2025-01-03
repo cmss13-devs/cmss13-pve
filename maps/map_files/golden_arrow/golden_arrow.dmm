@@ -2656,18 +2656,6 @@
 /area/golden_arrow/cryo_cells)
 "ajq" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/canteen_tray{
-	pixel_y = 8
-	},
-/obj/item/storage/canteen_tray{
-	pixel_y = 10
-	},
-/obj/item/storage/canteen_tray{
-	pixel_y = 12
-	},
-/obj/item/storage/canteen_tray{
-	pixel_y = 14
-	},
 /obj/structure/vehicle_locker/cabinet/utensils{
 	pixel_x = -7;
 	pixel_y = 27
@@ -14250,16 +14238,15 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aXh" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{
-	name = "\improper Emergency Infirmary";
-	req_one_access = null
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "\improper Hypersleep Bay"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -15562,6 +15549,9 @@
 	pixel_y = 8;
 	pixel_x = 3
 	},
+/obj/item/clothing/head/helmet/marine/medic{
+	pixel_y = -9
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "cWH" = (
@@ -16394,38 +16384,6 @@
 /area/golden_arrow/lower_cargo)
 "fSy" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/canteen_tray{
-	pixel_y = 8;
-	pixel_x = -7
-	},
-/obj/item/storage/canteen_tray{
-	pixel_y = 10;
-	pixel_x = -7
-	},
-/obj/item/storage/canteen_tray{
-	pixel_y = 12;
-	pixel_x = -7
-	},
-/obj/item/storage/canteen_tray{
-	pixel_y = 14;
-	pixel_x = -7
-	},
-/obj/item/storage/canteen_tray{
-	pixel_y = 8;
-	pixel_x = 13
-	},
-/obj/item/storage/canteen_tray{
-	pixel_y = 10;
-	pixel_x = 13
-	},
-/obj/item/storage/canteen_tray{
-	pixel_y = 12;
-	pixel_x = 13
-	},
-/obj/item/storage/canteen_tray{
-	pixel_y = 14;
-	pixel_x = 13
-	},
 /obj/structure/vehicle_locker/cabinet/cups{
 	pixel_y = 27;
 	pixel_x = -8
@@ -16433,6 +16391,30 @@
 /obj/structure/vehicle_locker/cabinet/cups/flip{
 	pixel_x = 7;
 	pixel_y = 27
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = 12;
+	pixel_y = 8
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = -7;
+	pixel_y = 11
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = 12;
+	pixel_y = 11
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = 12;
+	pixel_y = 14
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)

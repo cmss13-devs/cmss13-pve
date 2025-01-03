@@ -84,18 +84,6 @@
 	new /obj/item/attachable/mateba/long/dark(src)
 	new /obj/item/weapon/mateba_key(src)
 
-// pve canteen tray
-
-/obj/item/storage/canteen_tray
-	name = "canteen tray"
-	desc = "A thin aluminum tray meant for eating food off of."
-	icon = 'icons/obj/items/food_canteen.dmi'
-	icon_state = "tray"
-	storage_slots = 3
-	can_hold = list(
-		/obj/item/reagent_container/food/snacks/canteen/main,
-		/obj/item/reagent_container/food/snacks/canteen/side,
-	)
 //6 pack
 
 /obj/item/storage/beer_pack

@@ -391,10 +391,3 @@
 /obj/item/reagent_container/food/drinks/plasticcup
 	name = "plastic cup"
 	desc = "A decent sized plastic cup, perfect aboard starships for it's capacity to deal with careless handling by roughnecks."
-	icon_state = "plasticcup"
-
-/obj/item/reagent_container/food/drinks/plasticcup/clear
-	name = "clear plastic cup"
-	desc = "A decent sized plastic cup, perfect aboard starships for it's capacity to deal with careless handling by roughnecks. This one is clear, allowing you to see the contents."
-	icon_state = "plasticcup"
-
