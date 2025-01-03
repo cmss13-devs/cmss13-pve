@@ -2057,7 +2057,7 @@
 	dir = 8;
 	light_color = "#00008B";
 	pixel_x = -5;
-	light_power = .75
+	light_power = 0.75
 	},
 /turf/open/floor/prison/blue/east,
 /area/taipei/club)
@@ -8474,7 +8474,7 @@
 	dir = 8;
 	light_color = "#00008B";
 	pixel_x = -5;
-	light_power = .75
+	light_power = 0.75
 	},
 /turf/open/floor/prison/blue/east,
 /area/taipei/club)
@@ -25038,7 +25038,7 @@
 	dir = 8;
 	light_color = "#00008B";
 	pixel_x = -5;
-	light_power = .75
+	light_power = 0.75
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
