@@ -130,7 +130,7 @@
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/utility_vest(new_human), WEAR_JACKET)
 	//waist
-	if(prob(75))
+	if(prob(85))
 		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/upp/at(new_human), WEAR_IN_BELT)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/upp/at(new_human), WEAR_IN_BELT)
