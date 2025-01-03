@@ -884,10 +884,10 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
 "eu" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 8
 	},
-/obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "ew" = (
@@ -1536,10 +1536,10 @@
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
 "hj" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 8
 	},
-/obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "hk" = (
@@ -1928,10 +1928,10 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Oread_Garrison/outside/jungle/clearing)
 "jo" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 4
 	},
-/obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "jq" = (
@@ -2864,8 +2864,8 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/Oread_Garrison/outside/jungle)
 "nV" = (
-/obj/structure/machinery/landinglight/ds1/delayone,
 /obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1/delaytwo,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "nY" = (
@@ -2887,6 +2887,12 @@
 /obj/structure/flora/jungle/vines/light_3,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
+"oc" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/Oread_Garrison/outside/jungle/landing_zone)
 "od" = (
 /obj/structure/barricade/metal/plasteel{
 	dir = 1
@@ -2899,6 +2905,12 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
+"og" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/Oread_Garrison/outside/jungle/landing_zone)
 "oh" = (
 /obj/structure/platform{
 	density = 0;
@@ -5032,10 +5044,10 @@
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker2)
 "yi" = (
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "yj" = (
@@ -5376,10 +5388,10 @@
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker2)
 "zz" = (
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1{
 	dir = 4
 	},
-/obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "zB" = (
@@ -6030,10 +6042,10 @@
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/command)
 "CD" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4
 	},
-/obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "CE" = (
@@ -6113,6 +6125,14 @@
 	},
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/command)
+"CO" = (
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/platform{
+	density = 0;
+	icon_state = "platform_deco"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Oread_Garrison/outside/jungle/clearing)
 "CP" = (
 /obj/structure/sign/safety/bathunisex{
 	pixel_x = 7
@@ -6578,6 +6598,11 @@
 /area/Oread_Garrison/inside/messhall)
 "EJ" = (
 /obj/structure/flora/jungle/vines/light_2,
+/obj/structure/platform{
+	density = 0;
+	dir = 8;
+	icon_state = "platform_deco"
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "EK" = (
@@ -6657,6 +6682,12 @@
 /obj/structure/machinery/cm_vending/sorted/medical/chemistry,
 /turf/open/floor/almayer/sterile_green_side,
 /area/Oread_Garrison/inside/medical)
+"Fh" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/Oread_Garrison/outside/jungle/landing_zone)
 "Fi" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -7541,10 +7572,10 @@
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/command)
 "IX" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1{
 	dir = 1
 	},
-/obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "IZ" = (
@@ -7774,6 +7805,11 @@
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
 "Kc" = (
+/obj/structure/platform{
+	density = 0;
+	dir = 4;
+	icon_state = "platform_deco"
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "Ke" = (
@@ -7893,6 +7929,11 @@
 /area/Oread_Garrison/inside/garage)
 "KD" = (
 /obj/structure/flora/bush/ausbushes/pointybush,
+/obj/structure/platform{
+	density = 0;
+	dir = 1;
+	icon_state = "platform_deco"
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "KE" = (
@@ -8792,10 +8833,10 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/inside)
 "Pa" = (
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1{
 	dir = 8
 	},
-/obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "Pb" = (
@@ -8994,8 +9035,8 @@
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
 "PL" = (
-/obj/structure/machinery/landinglight/ds1,
 /obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1/delayone,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "PN" = (
@@ -9935,10 +9976,10 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
 "Ur" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "Ut" = (
@@ -10496,14 +10537,14 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/inside)
 "Xh" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
-	dir = 8
-	},
 /obj/structure/prop/invuln/remote_console_pod,
 /obj/structure/machinery/computer/shuttle/dropship/flight/lz1{
 	density = 1;
 	layer = 3.5;
 	pixel_y = -9
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
@@ -10521,10 +10562,10 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle/river)
 "Xl" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
 	},
-/obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "Xm" = (
@@ -10797,10 +10838,10 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/inside)
 "YJ" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8
 	},
-/obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating,
 /area/Oread_Garrison/outside/jungle/landing_zone)
 "YL" = (
@@ -33261,7 +33302,7 @@ zK
 Mw
 oH
 Mk
-EJ
+CO
 SY
 uf
 uf
@@ -33429,11 +33470,10 @@ jo
 Xl
 zz
 Ur
-RU
 iB
+QW
 zz
 CD
-RU
 iB
 QW
 PX
@@ -33444,8 +33484,9 @@ PX
 RU
 iB
 QW
+PX
 CD
-RU
+iB
 qW
 To
 Nm
@@ -33748,7 +33789,7 @@ Mw
 Mk
 Mk
 MK
-xq
+vJ
 Ww
 Ww
 Ww
@@ -33770,7 +33811,7 @@ Ww
 Ww
 Ww
 Ww
-qE
+og
 FL
 Nm
 Nm
@@ -33910,7 +33951,7 @@ Mw
 wb
 Mk
 Mj
-rC
+xq
 Gl
 Gl
 Gl
@@ -34094,7 +34135,7 @@ Ww
 Gl
 Ww
 Ww
-qE
+Fh
 jm
 wz
 Nm
@@ -34234,7 +34275,7 @@ Mw
 Mk
 oT
 Mj
-vJ
+Ti
 Ww
 Ww
 Ww
@@ -34256,7 +34297,7 @@ Ww
 Gl
 Ww
 Ww
-qE
+oc
 IF
 IF
 ON
@@ -34396,7 +34437,7 @@ Mw
 oH
 oT
 Mj
-xq
+vJ
 Ww
 Ww
 Ww
@@ -34418,7 +34459,7 @@ Gl
 Ww
 Ww
 Ww
-qE
+og
 IF
 IF
 ON
@@ -34558,7 +34599,7 @@ Mw
 fz
 pZ
 Xc
-rC
+xq
 Ww
 Ww
 Ww
@@ -34720,7 +34761,7 @@ Mw
 oT
 oT
 Mj
-Ti
+rC
 Ww
 Ww
 Ww
@@ -34742,7 +34783,7 @@ Ww
 Gl
 Ww
 Ww
-qE
+Fh
 Hy
 rH
 Nm
@@ -34882,7 +34923,7 @@ Mw
 PY
 oT
 Mj
-vJ
+Ti
 Gl
 Ww
 Ww
@@ -34904,7 +34945,7 @@ Ww
 Ww
 Gl
 Ww
-qE
+oc
 Ya
 ON
 Nm
@@ -35044,7 +35085,7 @@ Mw
 oH
 Ai
 Mj
-xq
+vJ
 Gl
 Gl
 Gl
@@ -35066,7 +35107,7 @@ Ww
 Ww
 Gl
 Gl
-qE
+oc
 Ya
 ON
 oH
@@ -35206,7 +35247,7 @@ Mw
 oT
 oT
 Mj
-rC
+xq
 Ww
 mR
 Ww
@@ -35228,7 +35269,7 @@ Ww
 Ww
 mR
 Ww
-qE
+og
 FL
 oH
 oH
@@ -35369,27 +35410,27 @@ oT
 oT
 Mj
 tP
+KH
 Vn
 PG
 fY
 KH
-Vn
 eu
 Pa
+fY
 KH
 Vn
-PG
 Pa
 YJ
-Vn
-PG
-yi
 KH
+Vn
+yi
+fY
 hj
 eu
-fY
+PG
 Xh
-Vn
+KH
 tP
 jX
 oH
