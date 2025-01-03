@@ -13,7 +13,7 @@
 	throw_range = 15
 	throw_speed = SPEED_VERY_FAST
 	/// If FALSE won't change icon_state to a camo marine bino.
-	var/uses_camo = TRUE
+	var/uses_camo = FALSE
 	var/zoom_offset = 11
 	var/view_range = 12
 

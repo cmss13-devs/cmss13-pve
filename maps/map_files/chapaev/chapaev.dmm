@@ -3997,12 +3997,12 @@
 	can_block_movement = 0;
 	has_cryo_gear = 0
 	},
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/clothing/under/marine/veteran/UPP/boiler,
 /obj/item/clothing/accessory/patch/upp/naval,
 /obj/item/clothing/accessory/patch/upp,
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp,
+/obj/item/clothing/under/marine/veteran/UPP/naval,
+/obj/item/clothing/suit/storage/jacket/marine/upp/naval,
 /turf/open/floor/corsat,
 /area/golden_arrow/cryo_cells)
 "Ja" = (
