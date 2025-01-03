@@ -2932,7 +2932,8 @@
 "IP" = (
 /obj/structure/machinery/vending/cola{
 	pixel_y = 25;
-	pixel_x = -22
+	pixel_x = -22;
+	can_block_movement = 0
 	},
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
