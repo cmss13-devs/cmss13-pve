@@ -3129,12 +3129,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/ship_ammo/heavygun{
-	pixel_y = 8
-	},
-/obj/structure/ship_ammo/heavygun{
-	layer = 3.01
-	},
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
 "ala" = (
@@ -7010,15 +7004,23 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "ayC" = (
-/obj/vehicle/powerloader{
-	dir = 4
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7
+/obj/structure/ship_ammo/heavygun{
+	layer = 3.01
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/ship_ammo/heavygun{
+	pixel_y = 8
+	},
+/obj/structure/ship_ammo/heavygun{
+	pixel_y = 17
+	},
+/obj/structure/ship_ammo/heavygun{
+	layer = 3.01;
+	pixel_y = 9
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "ayD" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -16649,6 +16651,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
+/obj/structure/closet/crate,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supplydrop)
 "gSr" = (
@@ -20649,6 +20652,18 @@
 /obj/item/ammo_box/rounds/smartgun,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
+"vPN" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/vehicle/powerloader{
+	dir = 4
+	},
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/golden_arrow/hangar)
 "vQy" = (
 /obj/structure/machinery/door_control{
 	pixel_y = -21;
@@ -20660,12 +20675,6 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/prep_hallway)
 "vRh" = (
-/obj/structure/ship_ammo/heavygun{
-	pixel_y = 8
-	},
-/obj/structure/ship_ammo/heavygun{
-	layer = 3.01
-	},
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
 "vXI" = (
@@ -20872,12 +20881,6 @@
 "wPI" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
-	},
-/obj/structure/ship_ammo/heavygun{
-	pixel_y = 8
-	},
-/obj/structure/ship_ammo/heavygun{
-	layer = 3.01
 	},
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -32030,7 +32033,7 @@ adz
 akt
 akt
 acZ
-ayC
+alT
 acP
 aEM
 akt
@@ -33269,7 +33272,7 @@ age
 adz
 ajH
 aey
-asm
+vPN
 agY
 bEj
 adz
@@ -33604,7 +33607,7 @@ atq
 ahl
 ahl
 adz
-aHu
+ayC
 aHu
 aqL
 aWa
