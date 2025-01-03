@@ -20285,10 +20285,6 @@
 	},
 /turf/open/floor/prison,
 /area/taipei/maints/north)
-"rQg" = (
-/obj/item/holder/mouse/gray,
-/turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor/chamber)
 "rQp" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -43456,7 +43452,7 @@ gua
 gua
 bkG
 lqR
-rQg
+lqR
 lqR
 tCd
 dJX
