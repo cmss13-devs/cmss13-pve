@@ -1,6 +1,0 @@
-author: "private-tristan"
-delete-after: True
-changes:
-  - balance: "PMC and RMC smartguns now use irradiated/holotarget 10x28mm instead of snowflake SG bullets, meaning damage has also been increased to standard levels."
-  - balance: "Terminator smartguns now also use irradiated 10x28mm, and do more damage per shot."
-  - bugfix: "PMC smartgunner loadout now properly spawns with its imager, allowing IFF to be used."
