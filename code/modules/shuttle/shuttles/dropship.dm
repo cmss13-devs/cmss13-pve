@@ -5,6 +5,10 @@
 	dwidth = 5
 	dheight = 10
 
+	landing_sound = 'sound/effects/dropship_flight_end.ogg'
+	ignition_sound = 'sound/effects/dropship_flight_start.ogg'
+	ambience_flight = 'sound/effects/dropship_flight_recurr.ogg'
+
 	preferred_direction = SOUTH
 	callTime = DROPSHIP_TRANSIT_DURATION
 	rechargeTime = SHUTTLE_RECHARGE
@@ -31,6 +35,10 @@
 	var/automated_timer
 	var/datum/cas_signal/paradrop_signal
 
+	var/is_airlocked
+
+	//do you want turbulence?
+	var/turbulence = TRUE
 
 /obj/docking_port/mobile/marine_dropship/Initialize(mapload)
 	. = ..()
@@ -107,6 +115,8 @@
 		in_flyby = TRUE
 	if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
 		SSticker.mode.ds_first_drop(src)
+	if(turbulence)
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, turbulence)), DROPSHIP_TURBULENCE_START_PERIOD)
 
 /obj/docking_port/mobile/marine_dropship/beforeShuttleMove(turf/newT, rotation, move_mode, obj/docking_port/mobile/moving_dock)
 	. = ..()
@@ -238,8 +248,8 @@
 	if(mode == SHUTTLE_PREARRIVAL && !dropzone.landing_lights_on)
 		if(istype(destination, /obj/docking_port/stationary/marine_dropship))
 			dropzone.turn_on_landing_lights()
-		playsound(dropzone.return_center_turf(), landing_sound, 60, 0)
-		playsound(return_center_turf(), landing_sound, 60, 0)
+		playsound(dropzone.return_center_turf(), landing_sound, 50, 0)
+		playsound(return_center_turf(), landing_sound, 50, 0, SOUND_CHANNEL_DROPSHIP)
 
 	automated_check()
 
@@ -272,6 +282,74 @@
 	else
 		SSshuttle.moveShuttle(id, automated_hangar_id, TRUE)
 	ai_silent_announcement("Dropship '[name]' departing.")
+
+/obj/docking_port/mobile/marine_dropship/proc/dropship_freefall()
+	// this prevents atoms from being called more than once as the proc works it way through the turfs (some may be thrown onto a turf that hasn't been called yet)
+	var/list/affected_mobs = list()
+	var/list/affected_items = list()
+	for(var/area/internal_area in shuttle_areas)
+		for(var/turf/internal_turf in internal_area)
+			for(var/mob/living/M in internal_turf)
+				affected_mobs += M
+			for(var/obj/item/I in internal_turf)
+				affected_items += I
+
+	for(var/mob/living/affected_mob in affected_mobs)
+		to_chat(affected_mob, SPAN_DANGER("The dropship jolts violently as it enters freefall!"))
+		shake_camera(affected_mob, 6 SECONDS, 1)
+		shake_camera(affected_mob, 16 SECONDS, 1)
+		if(!affected_mob.buckled)
+			affected_mob.KnockDown(16)
+			affected_mob.throw_random_direction(2, spin = TRUE)
+			affected_mob.apply_armoured_damage(80, ARMOR_MELEE, BRUTE, rand_zone())
+			affected_mob.visible_message(SPAN_DANGER("[affected_mob] loses their grip on the floor, flying violenty upwards!"), SPAN_DANGER("You lose your grip on the floor, flying violenty upwards!"))
+			if(prob(DROPSHIP_TURBULENCE_BONEBREAK_PROBABILITY * 2) && istype(affected_mob, /mob/living/carbon/human))
+				var/mob/living/carbon/human/affected_human = affected_mob
+				var/obj/limb/fracturing_limb = affected_human.get_limb(pick(ALL_LIMBS))
+				fracturing_limb.fracture(100)
+
+	for(var/obj/item/affected_item in affected_items)
+		affected_item.visible_message(SPAN_DANGER("[affected_item] goes flying upwards!"))
+		affected_item.throwforce *= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
+		affected_item.throw_random_direction(2, spin = TRUE)
+		affected_item.throwforce /= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
+
+/obj/docking_port/mobile/marine_dropship/proc/turbulence()
+	if(!in_flight())
+		return
+	var/flight_time_left = timeLeft(1)
+	if(flight_time_left >= DROPSHIP_TURBULENCE_PERIOD*2)
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, turbulence)), (rand(DROPSHIP_TURBULENCE_PERIOD, min((flight_time_left/2), DROPSHIP_TURBULENCE_PERIOD))))
+	if(!prob(DROPSHIP_TURBULENCE_PROBABILITY))
+		return
+
+	// this prevents atoms from being called more than once as the proc works it way through the turfs (some may be thrown onto a turf that hasn't been called yet)
+	var/list/affected_mobs = list()
+	var/list/affected_items = list()
+	for(var/area/internal_area in shuttle_areas)
+		for(var/turf/internal_turf in internal_area)
+			for(var/mob/living/M in internal_turf)
+				affected_mobs += M
+			for(var/obj/item/I in internal_turf)
+				affected_items += I
+
+	for(var/mob/living/affected_mob in affected_mobs)
+		to_chat(affected_mob, SPAN_DANGER("The dropship jolts violently!"))
+		shake_camera(affected_mob, DROPSHIP_TURBULENCE_PERIOD, 1)
+		if(!affected_mob.buckled && affected_mob.m_intent == MOVE_INTENT_RUN && prob(DROPSHIP_TURBULENCE_GRIPLOSS_PROBABILITY))
+			to_chat(affected_mob, SPAN_DANGER("You lose your grip!"))
+			affected_mob.apply_armoured_damage(50, ARMOR_MELEE, BRUTE, rand_zone())
+			affected_mob.KnockDown(DROPSHIP_TURBULENCE_PERIOD * 0.1)
+			if(prob(DROPSHIP_TURBULENCE_BONEBREAK_PROBABILITY) && istype(affected_mob, /mob/living/carbon/human))
+				var/mob/living/carbon/human/affected_human = affected_mob
+				var/obj/limb/fracturing_limb = affected_human.get_limb(pick(ALL_LIMBS))
+				fracturing_limb.fracture(100)
+
+	for(var/obj/item/affected_item in affected_items)
+		affected_item.visible_message(SPAN_DANGER("[affected_item] goes flying upwards!"))
+		affected_item.throwforce *= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
+		affected_item.throw_random_direction(2, spin = TRUE)
+		affected_item.throwforce /= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
 
 /obj/docking_port/stationary/marine_dropship
 	dir = NORTH
