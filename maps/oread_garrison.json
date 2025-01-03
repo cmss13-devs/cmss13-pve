@@ -1,17 +1,14 @@
 {
-    "map_name": "Oread Garrison",
+    "map_name": "OBW - Oread Garrison",
+    "short_name": "Oread Garrison",
     "map_path": "map_files/Oread_Garrison",
     "map_file": "Oread_Garrison.dmm",
+
     "map_item_type": "/obj/item/map/oread_map",
+
     "traits": [{ "Ground": true }],
+
     "camouflage": "jungle",
-    "environment_traits": { "Fog": true },
-    "announce_text": "A USCM force stationed on O'Bannon's World has failed their routine check-in, communications are spotty at best down there so it could be a false alarm. A response team from the ###SHIPNAME### will be dispatched shortly to investigate, and confirm the status of Oread Garrison.",
-    "gamemodes": [
-        "Distress Signal",
-        "Hunter Games",
-        "Hive Wars",
-        "Faction Clash",
-        "Infection"
-    ]
+
+    "environment_traits": { "Fog": true }
 }
