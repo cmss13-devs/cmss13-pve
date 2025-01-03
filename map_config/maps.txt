@@ -74,5 +74,5 @@ endmap
 map whiskey_outpost_v2
 endmap
 
-map taipei_station
+map Taipei_Station
 endmap
