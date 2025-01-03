@@ -19,6 +19,13 @@
 /obj/structure/flora/jungle/vines/light_3,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle/clearing)
+"aj" = (
+/obj/item/storage/box/guncase/flamer/fuel{
+	pixel_y = 56;
+	pixel_x = 4
+	},
+/turf/open/floor/airless/asteroidfloor,
+/area/Oread_Garrison/inside/dorms)
 "ak" = (
 /obj/effect/landmark/lv624/fog_blocker{
 	time_to_dispel = 999999999
@@ -912,7 +919,8 @@
 "ey" = (
 /obj/structure/surface/rack,
 /obj/structure/closet/crate/secure/mortar_ammo{
-	pixel_y = 5
+	pixel_y = 5;
+	req_one_access = null
 	},
 /turf/open/floor/almayer/cargo,
 /area/Oread_Garrison/inside/requisitions)
@@ -9363,10 +9371,6 @@
 	},
 /obj/structure/closet/secure_closet/squad_sergeant{
 	pixel_x = -7
-	},
-/obj/item/storage/box/guncase/flamer/fuel{
-	pixel_y = 24;
-	pixel_x = 4
 	},
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
@@ -27725,7 +27729,7 @@ zP
 zP
 He
 Ut
-QU
+aj
 QU
 yI
 xD
@@ -28049,7 +28053,7 @@ zP
 zP
 ri
 Rj
-QU
+aj
 QU
 qQ
 xD
