@@ -98,11 +98,16 @@
 	sound_environment = SOUND_ENVIRONMENT_LIVINGROOM
 
 /area/taipei/reactor
-	name = "Reactor Control Room"
+	name = "\improper Reactor Control Room"
 	icon_state = "upperengineering"
 	sound_environment = SOUND_ENVIRONMENT_GENERIC
 	soundscape_playlist = SCAPE_PL_ENG
 	soundscape_interval = 15
+
+/area/taipei/reactor/chamber
+	name = "\improper Reactor Chamber"
+	icon_state = "green"
+	sound_environment = SOUND_ENVIRONMENT_MOUNTAINS
 
 /area/taipei/atrium/restaurant
 	name = "\improper Sal's Noodles"

@@ -28,7 +28,7 @@
 	pixel_x = -1
 	},
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "acM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -300,8 +300,8 @@
 /area/taipei/atrium)
 "ans" = (
 /obj/structure/prop/turbine,
-/turf/open/space/basic,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "anz" = (
 /obj/effect/decal/cleanable/cobweb2/dynamic,
 /obj/effect/decal/cleanable/dirt,
@@ -459,23 +459,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
-"avR" = (
-/obj/structure/platform{
-	layer = 2.7;
-	dir = 4
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = -8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison,
-/area/taipei/cargo)
 "awf" = (
 /obj/structure/platform_decoration,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "awh" = (
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
@@ -656,6 +643,11 @@
 	id = "vehicle_elevator_railing"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -1
+	},
 /turf/open/floor/prison,
 /area/taipei/cargo)
 "aFw" = (
@@ -1082,13 +1074,9 @@
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice8";
-	pixel_x = 16;
-	pixel_y = 24
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/prison,
 /area/taipei/cargo)
 "aYp" = (
@@ -1212,11 +1200,11 @@
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
 	},
-/turf/open/gm/empty,
+/turf/open/void,
 /area/taipei/maints/south)
 "bcJ" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer,
+/turf/closed/wall/almayer/outer,
 /area/taipei/reactor)
 "bdi" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -1337,8 +1325,8 @@
 "bkG" = (
 /obj/structure/platform,
 /obj/structure/barricade/handrail/strata,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "bkU" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -1726,6 +1714,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/grey_edge/west,
 /area/taipei/atrium/offices)
+"byz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/prison,
+/area/taipei/maints/north)
 "byS" = (
 /obj/structure/bed{
 	pixel_x = 0;
@@ -1987,8 +1980,8 @@
 "bGR" = (
 /obj/structure/machinery/elevator_strut/bottom,
 /obj/item/lightstick/red/variant/planted,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "bGX" = (
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
@@ -2310,8 +2303,8 @@
 	pixel_y = 6;
 	dir = 3
 	},
-/turf/open/space/basic,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "cac" = (
 /obj/structure/sink{
 	dir = 1;
@@ -2324,9 +2317,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/colors,
 /area/taipei/cmb)
-"caH" = (
-/turf/open/floor/asteroid,
-/area/taipei/cargo)
 "caU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -2602,9 +2592,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/west,
 /area/taipei/theatre)
-"cjq" = (
-/turf/open/floor/mech_bay_recharge_floor/shuttle_landing_lights,
-/area/taipei/reactor)
 "cjC" = (
 /obj/structure/machinery/light/blue{
 	dir = 8
@@ -2661,8 +2648,8 @@
 /area/taipei/maints/south)
 "clj" = (
 /obj/structure/prop/invuln/overhead_pipe,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "clS" = (
 /obj/structure/machinery/light,
 /turf/open/floor/prison,
@@ -3191,14 +3178,14 @@
 /obj/item/lightstick/red/variant/planted{
 	light_range = 5
 	},
-/turf/open/space/basic,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "cGF" = (
 /obj/structure/platform,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "cHC" = (
 /obj/item/stool{
 	icon_state = "stool_alt"
@@ -3207,13 +3194,6 @@
 	dir = 4
 	},
 /area/taipei/atrium/restaurant)
-"cHI" = (
-/obj/structure/window/framed/almayer,
-/obj/structure/blocker/forcefield/human{
-	icon = 'icons/'
-	},
-/turf/open/floor/prison,
-/area/taipei/reactor)
 "cHV" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -3725,8 +3705,8 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "deH" = (
 /obj/item/storage/secure/safe{
 	pixel_y = 29
@@ -4158,18 +4138,13 @@
 "dwY" = (
 /obj/structure/prop/turbine,
 /obj/item/lightstick/red/variant/planted,
-/turf/open/floor/mech_bay_recharge_floor,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "dxb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
 	pixel_y = 1;
 	pixel_x = 1
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice4";
-	pixel_x = -16;
-	pixel_y = 24
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -4267,8 +4242,8 @@
 "dCp" = (
 /obj/structure/machinery/elevator_strut/bottom,
 /obj/structure/prop/invuln/overhead_pipe,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "dCF" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -4312,8 +4287,8 @@
 	pixel_x = 16;
 	pixel_y = 0
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "dET" = (
 /obj/item/lightstick/red/spoke/planted,
 /obj/effect/decal/warning_stripes{
@@ -4418,7 +4393,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "dJA" = (
 /obj/structure/window/framed/corsat,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
@@ -4444,7 +4419,7 @@
 	light_power = .50
 	},
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "dLf" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -4675,8 +4650,8 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/pipes/standard/simple/hidden/supply/no_boom{
-	dir = 4
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
 	},
 /turf/open/floor/prison,
 /area/taipei/cargo)
@@ -4706,8 +4681,8 @@
 	pixel_x = -8;
 	pixel_y = 0
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "dXc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
@@ -4724,6 +4699,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/prison,
 /area/taipei/cargo)
 "dXu" = (
@@ -4966,8 +4942,8 @@
 /area/taipei/maints/south)
 "egf" = (
 /obj/item/lightstick/red/spoke/planted,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "egt" = (
 /obj/structure/machinery/light,
 /obj/effect/decal/cleanable/dirt,
@@ -5418,9 +5394,6 @@
 	},
 /turf/open/floor/mech_bay_recharge_floor,
 /area/taipei/cargo)
-"eAu" = (
-/turf/open/space/basic,
-/area/taipei/cargo)
 "eAQ" = (
 /obj/item/stool{
 	pixel_y = 15
@@ -5631,7 +5604,7 @@
 /turf/open/floor/prison/bluecorner/north,
 /area/taipei/club)
 "eIq" = (
-/obj/docking_port,
+/obj/docking_port/stationary/marine_dropship/lz1,
 /turf/open/floor/plating,
 /area/taipei/hangar/landingzone)
 "eIR" = (
@@ -5865,9 +5838,21 @@
 /turf/open/floor/prison/cell_stripe,
 /area/taipei/atrium/hotel)
 "eWE" = (
-/obj/structure/machinery/door/airlock/almayer/maint/colony/autoname,
-/turf/closed/wall/almayer,
-/area/taipei/reactor)
+/obj/structure/platform{
+	layer = 2.7;
+	dir = 4
+	},
+/obj/structure/platform,
+/obj/structure/platform_decoration{
+	dir = 6
+	},
+/obj/structure/barricade/handrail/strata,
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	pixel_x = -1
+	},
+/turf/open/void/vehicle,
+/area/taipei/reactor/chamber)
 "eWQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5918,8 +5903,8 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "eZE" = (
 /obj/structure/bed/chair/comfy{
 	pixel_y = -2
@@ -5932,11 +5917,7 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
 "eZX" = (
-/obj/structure/surface/table/reinforced,
-/obj/structure/machinery/chem_dispenser/soda/beer{
-	pixel_y = 8;
-	dir = 4
-	},
+/obj/structure/machinery/cm_vending/sorted/boozeomat,
 /turf/open/floor/bar,
 /area/taipei/atrium/restaurant)
 "faq" = (
@@ -5988,8 +5969,8 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/turf/open/floor/mech_bay_recharge_floor,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "fby" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -6088,8 +6069,8 @@
 	pixel_y = 7
 	},
 /obj/item/lightstick/red/variant/planted,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "feT" = (
 /obj/structure/bed/sofa/south/white,
 /turf/open/floor/plating/asteroidfloor,
@@ -6129,7 +6110,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "fgw" = (
 /obj/item/stool{
 	pixel_y = 8;
@@ -6576,8 +6557,8 @@
 /obj/item/lightstick/red/variant/planted{
 	light_range = 5
 	},
-/turf/open/space/basic,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "fBF" = (
 /obj/structure/bed/sofa/south/white/left{
 	pixel_y = 16
@@ -6902,8 +6883,8 @@
 	dir = 4;
 	pixel_x = -1
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "fRG" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -6972,6 +6953,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/prison,
 /area/taipei/cargo)
 "fVU" = (
@@ -7486,11 +7468,11 @@
 	pixel_y = 6;
 	dir = 3
 	},
-/turf/open/space/basic,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "gua" = (
-/turf/open/space/basic,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "guf" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -7523,7 +7505,7 @@
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
 "gvH" = (
-/turf/open/gm/empty,
+/turf/open/void,
 /area/taipei/maints/north)
 "gwB" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -7563,11 +7545,6 @@
 	layer = 2.7;
 	dir = 4
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = -8
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -7589,14 +7566,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/restaurant)
-"gAi" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = -8
-	},
-/turf/open/floor/asteroid,
-/area/taipei/cargo)
 "gAS" = (
 /turf/open/floor/kutjevo/tan/grey_inner_edge/east,
 /area/taipei/atrium)
@@ -7647,9 +7616,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/taipei/maints/south)
-"gEA" = (
-/turf/open/floor/almayer/empty,
-/area/taipei/reactor)
 "gEE" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -8137,8 +8103,8 @@
 	pixel_x = -16;
 	pixel_y = 24
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "hgl" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -8287,11 +8253,6 @@
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
 	id = "vehicle_elevator_railing_aux"
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = -8
 	},
 /turf/open/floor/prison,
 /area/taipei/cargo)
@@ -8526,11 +8487,6 @@
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
 	id = "vehicle_elevator_railing_aux"
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = -8
 	},
 /turf/open/floor/prison,
 /area/taipei/cargo)
@@ -8934,11 +8890,6 @@
 	},
 /turf/open/space/basic,
 /area/space)
-"hRn" = (
-/obj/structure/prop/turbine,
-/obj/item/lightstick/red/variant/planted,
-/turf/open/gm/empty,
-/area/taipei/reactor)
 "hSu" = (
 /obj/item/stool{
 	pixel_y = 14
@@ -9011,7 +8962,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "hVs" = (
 /obj/item/lightstick/red/spoke/planted,
 /obj/effect/decal/warning_stripes{
@@ -9413,7 +9364,7 @@
 /obj/structure/platform,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "itE" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -9714,8 +9665,8 @@
 	pixel_x = 13;
 	pixel_y = 0
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "iGJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/toolbox/electrical{
@@ -10129,7 +10080,8 @@
 /area/taipei/maints/south)
 "jal" = (
 /obj/effect/elevator,
-/turf/open/space/basic,
+/obj/effect/elevator/animation_overlay,
+/turf/open/void,
 /area/taipei/cargo)
 "jav" = (
 /obj/structure/bookcase{
@@ -10275,8 +10227,8 @@
 	dir = 10
 	},
 /obj/structure/barricade/handrail/strata,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "jes" = (
 /obj/structure/curtain/medical,
 /obj/structure/cable/heavyduty{
@@ -10382,6 +10334,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -1
+	},
 /turf/open/floor/prison,
 /area/taipei/cargo)
 "jhE" = (
@@ -10623,8 +10580,8 @@
 	pixel_x = -1
 	},
 /obj/item/lightstick/red/spoke/planted,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "jvY" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -11128,7 +11085,7 @@
 /area/taipei/theatre)
 "jVD" = (
 /obj/structure/machinery/elevator_strut/top,
-/turf/open/gm/empty,
+/turf/open/void,
 /area/taipei/maints/north)
 "jVM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11429,6 +11386,34 @@
 	},
 /turf/open/floor/prison,
 /area/taipei/cargo)
+"klC" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/item/stack/cable_coil{
+	pixel_x = 7
+	},
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/siding{
+	icon_state = "siding10"
+	},
+/obj/effect/decal/siding{
+	icon_state = "siding5"
+	},
+/mob/living/simple_animal/mouse{
+	desc = "One day, while doing nothing particularly out of the ordinary, because of natural laws he was completely powerless to understand or intuit, he was instantly killed in a horrifying way by forces vastly in excess of anything he was ever designed to experience, for no reason, to no ones particular surprise or upset. In this we are more like him than different";
+	health = -10;
+	name = "burnt mouse"
+	},
+/obj/effect/decal/strata_decals/grime/grime3,
+/obj/item/stack/catwalk{
+	pixel_x = 10;
+	pixel_y = 10
+	},
+/turf/open/floor/plating,
+/area/taipei/maints/north)
 "klI" = (
 /obj/structure/surface/rack{
 	pixel_x = -5
@@ -11595,8 +11580,8 @@
 	pixel_x = -12;
 	pixel_y = 0
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "kqv" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -11754,8 +11739,8 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "kAA" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -11890,14 +11875,15 @@
 /turf/open/floor/prison,
 /area/taipei/cargo)
 "kDQ" = (
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 4;
-	id = "vehicle_elevator_railing_aux"
+/obj/structure/platform{
+	layer = 2.7;
+	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice4";
-	pixel_x = -16;
-	pixel_y = 24
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -1
 	},
 /turf/open/floor/prison,
 /area/taipei/cargo)
@@ -11953,7 +11939,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "kJO" = (
 /turf/open/floor/carpet14_10/west,
 /area/taipei/theatre)
@@ -12251,10 +12237,7 @@
 /obj/structure/platform{
 	layer = 3.1
 	},
-/obj/structure/window/framed/almayer,
-/obj/structure/blocker/forcefield/human{
-	icon = 'icons/'
-	},
+/obj/structure/window/framed/almayer/hull,
 /turf/open/floor/prison,
 /area/taipei/reactor)
 "kWK" = (
@@ -12397,8 +12380,8 @@
 	dir = 8
 	},
 /obj/item/lightstick/red/spoke/planted,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "lgm" = (
 /obj/structure/pipes/vents,
 /obj/effect/decal/cleanable/dirt,
@@ -12665,6 +12648,9 @@
 	dir = 4
 	},
 /area/taipei/atrium)
+"lqR" = (
+/turf/open/floor/plating/asteroidfloor/north,
+/area/taipei/reactor/chamber)
 "lrH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/shutters/almayer,
@@ -12763,8 +12749,8 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "luW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -12844,8 +12830,8 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "lxO" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -13198,8 +13184,8 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "lLw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -13406,15 +13392,15 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "lXo" = (
 /obj/structure/machinery/elevator_strut/bottom,
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = -8;
 	pixel_y = 0
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "lXI" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -13586,8 +13572,8 @@
 "mfT" = (
 /obj/structure/lattice,
 /obj/item/lightstick/red/spoke/planted,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "mgb" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -13811,11 +13797,12 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/prison,
 /area/taipei/cargo)
 "moD" = (
 /obj/structure/machinery/elevator_strut/bottom,
-/turf/open/gm/empty,
+/turf/open/void,
 /area/taipei/maints/north)
 "moK" = (
 /obj/structure/surface/rack{
@@ -13902,8 +13889,8 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "msJ" = (
 /obj/structure/machinery/light/blue,
 /obj/structure/coatrack{
@@ -14098,8 +14085,8 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "mDl" = (
 /obj/structure/bed/sofa/vert/white/bot,
 /obj/effect/decal/cleanable/dirt,
@@ -14288,8 +14275,8 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "mNy" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	dir = 8
@@ -14598,8 +14585,8 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "ncn" = (
 /obj/structure/stairs/perspective{
 	dir = 8
@@ -14814,8 +14801,8 @@
 "nkR" = (
 /obj/structure/lattice,
 /obj/structure/prop/static_tank,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "nkV" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -15042,8 +15029,8 @@
 /area/taipei/hangar)
 "nxk" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony/autoname,
-/turf/closed/wall/almayer,
-/area/space)
+/turf/closed/wall/almayer/outer,
+/area/taipei/reactor)
 "nxq" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -15115,7 +15102,7 @@
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
 	},
-/turf/open/gm/empty,
+/turf/open/void,
 /area/taipei/maints/south)
 "nCy" = (
 /obj/structure/machinery/light{
@@ -15288,9 +15275,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/maints/north)
-"nLW" = (
-/turf/open/floor/mech_bay_recharge_floor,
-/area/taipei/reactor)
 "nNw" = (
 /obj/structure/bed/chair/comfy/alpha{
 	dir = 4
@@ -15526,7 +15510,7 @@
 	pixel_y = -11
 	},
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "nUs" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -15643,17 +15627,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner/west,
 /area/taipei/club)
-"obk" = (
-/obj/structure/barricade/handrail/strata{
-	dir = 8
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice8";
-	pixel_x = 16;
-	pixel_y = 24
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/taipei/cargo)
 "obs" = (
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
@@ -15673,11 +15646,8 @@
 /obj/structure/platform{
 	layer = 3.1
 	},
-/obj/structure/window/framed/almayer,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/blocker/forcefield/human{
-	icon = 'icons/'
-	},
+/obj/structure/window/framed/almayer/hull,
 /turf/open/floor/prison,
 /area/taipei/reactor)
 "ocK" = (
@@ -16086,7 +16056,7 @@
 "opt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer,
+/turf/closed/wall/almayer/outer,
 /area/taipei/reactor)
 "opZ" = (
 /obj/structure/closet/secure_closet/detective{
@@ -16222,12 +16192,14 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
 "ovS" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = -8
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
-/turf/open/space/basic,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/cargo)
 "oxM" = (
 /obj/structure/window/framed/prison/cell,
@@ -16767,6 +16739,7 @@
 "oXI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/tool/warning_cone,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/maints/north)
 "oYd" = (
@@ -16860,8 +16833,8 @@
 /obj/item/lightstick/red/variant/planted{
 	light_range = 5
 	},
-/turf/open/space/basic,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "pbP" = (
 /obj/structure/barricade/metal{
 	dir = 8;
@@ -16897,11 +16870,6 @@
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 8;
 	id = "supply_elevator_railing"
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = -8
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -17363,10 +17331,7 @@
 /turf/open/floor/carpet7_3/west,
 /area/taipei/theatre)
 "pxr" = (
-/obj/structure/blocker/forcefield/human{
-	icon = 'icons/'
-	},
-/obj/structure/window/framed/almayer,
+/obj/structure/window/framed/almayer/hull,
 /turf/open/floor/prison,
 /area/taipei/reactor)
 "pxG" = (
@@ -17417,15 +17382,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluecorner,
 /area/taipei/club)
-"pzh" = (
-/obj/effect/elevator,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = -8
-	},
-/turf/open/floor/asteroid,
-/area/taipei/cargo)
 "pzk" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 8;
@@ -17755,8 +17711,8 @@
 /area/taipei/club)
 "pMJ" = (
 /obj/item/lightstick/red/variant/planted,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "pMK" = (
 /obj/structure/platform_decoration{
 	dir = 1
@@ -17766,8 +17722,8 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "pMR" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -17871,8 +17827,8 @@
 /turf/open/floor/kutjevo/tan,
 /area/taipei/elevator/arrivals)
 "pOK" = (
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/cargo)
 "pPy" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -17919,7 +17875,7 @@
 	light_power = .50
 	},
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "pRe" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -18125,8 +18081,8 @@
 	pixel_x = 16;
 	pixel_y = 6
 	},
-/turf/open/floor/mech_bay_recharge_floor,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "qaS" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /obj/effect/decal/cleanable/dirt,
@@ -19202,9 +19158,23 @@
 /turf/open/floor/prison,
 /area/taipei/maints/south)
 "qXz" = (
-/obj/structure/prop/turbine,
-/turf/open/floor/mech_bay_recharge_floor,
-/area/taipei/reactor)
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 8
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4;
+	id = "vehicle_elevator_railing_aux"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice4";
+	pixel_x = -16;
+	pixel_y = 31
+	},
+/turf/open/floor/prison,
+/area/taipei/cargo)
 "qXE" = (
 /turf/open/floor/plating/wood_broken2,
 /area/taipei/atrium/bookstore)
@@ -19258,8 +19228,8 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "qZy" = (
 /obj/structure/platform,
 /obj/structure/barricade/handrail/strata,
@@ -19368,8 +19338,8 @@
 	},
 /obj/structure/lattice,
 /obj/item/lightstick/red/spoke/planted,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "rgP" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -19540,8 +19510,8 @@
 	pixel_y = 6
 	},
 /obj/item/lightstick/red/variant/planted,
-/turf/open/floor/mech_bay_recharge_floor,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "rmW" = (
 /turf/open/floor/kutjevo/tan/multi_tiles,
 /area/taipei/atrium)
@@ -19791,9 +19761,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/pipes/standard/simple/hidden/supply/no_boom{
-	dir = 4
-	},
+/obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/prison,
 /area/taipei/cargo)
 "rxA" = (
@@ -19870,16 +19838,17 @@
 /turf/open/floor/prison,
 /area/taipei/hangar)
 "rAv" = (
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "vehicle_elevator_railing_aux"
+/obj/structure/barricade/handrail/strata{
+	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
+	icon_state = "lattice8";
 	pixel_x = 16;
-	pixel_y = -8
+	pixel_y = 31
 	},
-/turf/open/floor/prison,
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/cargo)
 "rBh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -20100,8 +20069,8 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "rIm" = (
 /obj/structure/platform{
 	layer = 2.7;
@@ -20116,8 +20085,8 @@
 	dir = 4;
 	pixel_x = -1
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "rIo" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -20294,7 +20263,7 @@
 "rOz" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "rOH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -20316,6 +20285,10 @@
 	},
 /turf/open/floor/prison,
 /area/taipei/maints/north)
+"rQg" = (
+/obj/item/holder/mouse/gray,
+/turf/open/floor/plating/asteroidfloor/north,
+/area/taipei/reactor/chamber)
 "rQp" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -20566,7 +20539,7 @@
 	pixel_y = -4
 	},
 /obj/structure/machinery/elevator_strut/bottom,
-/turf/open/gm/empty,
+/turf/open/void,
 /area/taipei/maints/south)
 "rZo" = (
 /obj/effect/decal/grass_overlay/grass1/inner,
@@ -20668,8 +20641,8 @@
 	pixel_y = 6;
 	dir = 3
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "seC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/grant/rightmid,
@@ -21141,8 +21114,8 @@
 	pixel_y = -15
 	},
 /obj/item/lightstick/red/spoke/planted,
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "sBy" = (
 /obj/structure/platform{
 	dir = 1
@@ -21494,8 +21467,8 @@
 /obj/structure/platform_decoration{
 	dir = 1
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "sQC" = (
 /obj/structure/stairs/perspective{
 	dir = 4
@@ -21697,6 +21670,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
+"sYq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/asteroidfloor/north,
+/area/taipei/reactor/chamber)
 "sYW" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -22281,6 +22259,7 @@
 /obj/structure/machinery/camera/autoname{
 	dir = 8
 	},
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/prison,
 /area/taipei/cargo)
 "tuM" = (
@@ -22400,10 +22379,6 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/taipei/hangar/cargoshuttle)
-"tyZ" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer,
-/area/space)
 "tzy" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -22466,6 +22441,10 @@
 /obj/structure/machinery/light/double,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
+"tCd" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/asteroidfloor/north,
+/area/taipei/reactor/chamber)
 "tDQ" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -22477,8 +22456,8 @@
 	pixel_y = 6;
 	dir = 3
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "tEq" = (
 /obj/structure/machinery/washing_machine{
 	pixel_x = -4;
@@ -22834,8 +22813,8 @@
 "tTn" = (
 /obj/structure/prop/power_transformer,
 /obj/structure/lattice,
-/turf/open/space/basic,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "tTE" = (
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
@@ -22865,8 +22844,8 @@
 /obj/structure/prop/invuln/lattice_prop,
 /obj/structure/prop/power_transformer,
 /obj/structure/prop/structure_lattice,
-/turf/open/space/basic,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "tWa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -23031,6 +23010,12 @@
 	},
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
+"uiE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/boozeomat,
+/turf/open/floor/prison,
+/area/taipei/club)
 "uiH" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4;
@@ -23202,7 +23187,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "unz" = (
 /obj/item/lightstick/red/spoke/planted,
 /obj/effect/decal/warning_stripes{
@@ -23698,8 +23683,8 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "uKQ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -23954,7 +23939,7 @@
 /obj/structure/platform_decoration,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "vcF" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
@@ -24399,8 +24384,8 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "vxs" = (
 /turf/closed/shuttle/ert{
 	icon_state = "twe3"
@@ -24589,6 +24574,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/cargo)
 "vFc" = (
@@ -24655,7 +24641,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "vIE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet5_1/west,
@@ -26100,8 +26086,8 @@
 	pixel_x = -16;
 	pixel_y = 24
 	},
-/turf/open/gm/empty,
-/area/taipei/reactor)
+/turf/open/void,
+/area/taipei/reactor/chamber)
 "wYi" = (
 /obj/structure/machinery/disposal{
 	density = 0;
@@ -27018,7 +27004,7 @@
 /obj/effect/decal/strata_decals/grime/grime2,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "xJr" = (
 /obj/structure/surface/table/woodentable,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -27271,7 +27257,7 @@
 	light_power = .50
 	},
 /turf/open/floor/plating/asteroidfloor/north,
-/area/taipei/reactor)
+/area/taipei/reactor/chamber)
 "xUP" = (
 /obj/structure/machinery/computer/shuttle/ert/broken,
 /obj/structure/blocker/invisible_wall,
@@ -27572,6 +27558,7 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/cargo)
 "yja" = (
@@ -27607,6 +27594,11 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 16;
+	pixel_y = -1
+	},
 /turf/open/floor/prison,
 /area/taipei/cargo)
 "yjZ" = (
@@ -38008,12 +38000,12 @@ iQr
 iQr
 iQr
 iQr
-ltx
-ltx
-ltx
+yhR
+yhR
+yhR
 nxk
-ltx
-ltx
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -38210,14 +38202,14 @@ tkR
 tkR
 tkR
 tkR
-tkR
+yhR
 ffX
-wJp
-wJp
-wJp
+tCd
+tCd
+tCd
 bcJ
-tkR
-tkR
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -38405,22 +38397,22 @@ tkR
 tkR
 tkR
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 bkG
 acu
 hVi
 acu
-bfm
+lqR
 xUk
-wJp
-tkR
-tkR
+tCd
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -38604,26 +38596,26 @@ iQr
 tkR
 tkR
 tkR
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 sPB
 lxH
 lxH
 jem
 hVi
 hVi
-wJp
-bfm
-tkR
-tkR
+tCd
+lqR
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -38804,29 +38796,29 @@ iQr
 iQr
 tkR
 tkR
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 lfN
 wXY
 acu
-vzG
-wJp
-tkR
-tkR
+sYq
+tCd
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -39005,30 +38997,30 @@ iQr
 iQr
 tkR
 tkR
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 pMK
 jem
 hVi
-wJp
-wJp
-tkR
+tCd
+tCd
+yhR
 iQr
 iQr
 iQr
@@ -39206,32 +39198,32 @@ iQr
 iQr
 iQr
 tkR
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 egf
 mMG
 sPB
 jem
-wJp
+tCd
 kHO
-tkR
-tkR
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -39408,32 +39400,32 @@ iQr
 iQr
 tkR
 tkR
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 qZd
-pOK
+gua
 bkG
 acu
-vzG
+sYq
 bcJ
-tkR
+yhR
 iQr
 iQr
 iQr
@@ -39609,33 +39601,33 @@ apD
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 bGR
 dEt
 feF
-pOK
-pOK
+gua
+gua
 rgI
 rHV
 lLn
 luj
 jem
-wJp
-wJp
-tkR
+tCd
+tCd
+yhR
 yhR
 yhR
 yhR
@@ -39811,32 +39803,32 @@ iQr
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 pMJ
-pOK
+gua
 pMJ
-pOK
-pOK
+gua
+gua
 mfT
 dem
-pOK
-pOK
+gua
+gua
 bkG
 nUg
-vzG
+sYq
 yhR
 yhR
 sLp
@@ -40013,29 +40005,29 @@ iQr
 iQr
 tkR
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 hfD
-pOK
-pOK
+gua
+gua
 bkG
 vIr
 vcm
@@ -40214,30 +40206,30 @@ apD
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 egf
 mMG
-pOK
-pOK
+gua
+gua
 sPB
 jem
 itw
@@ -40416,34 +40408,34 @@ apD
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 clj
 dCp
-nLW
-nLW
-hRn
+gua
+gua
+dwY
 mrU
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
 mMG
-pOK
-pOK
-pOK
+gua
+gua
+gua
 bkG
 cGF
-cHI
+pxr
 bwN
 ceo
 ehP
@@ -40618,22 +40610,22 @@ apD
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 clj
 clj
-cjq
-qXz
-nLW
+gua
+ans
+gua
 dwY
 qan
 eZv
@@ -40645,7 +40637,7 @@ lLn
 lLn
 bkG
 itw
-cHI
+pxr
 mlF
 frf
 ehP
@@ -40820,17 +40812,17 @@ apD
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 clj
 dCp
 gua
@@ -40840,14 +40832,14 @@ ans
 pbt
 tTn
 tVc
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
 bkG
 itw
-cHI
+pxr
 kgq
 njf
 ehP
@@ -41022,17 +41014,17 @@ apD
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 dXb
 dXb
 gua
@@ -41049,7 +41041,7 @@ tDQ
 tDQ
 sen
 itw
-cHI
+pxr
 kgq
 njf
 ehP
@@ -41224,34 +41216,34 @@ apD
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 dXb
 lXo
-cjq
-qXz
-nLW
+gua
+ans
+gua
 rms
 fbc
 nkR
-pOK
+gua
 egf
 hfD
 kqo
-pOK
-pOK
+gua
+gua
 bkG
 cGF
-cHI
+pxr
 equ
 seS
 ehP
@@ -41426,34 +41418,34 @@ apD
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 dXb
 dXb
-nLW
-nLW
-hRn
+gua
+gua
+dwY
 nbW
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
 mMG
-pOK
-pOK
-pOK
+gua
+gua
+gua
 bkG
 cGF
-cHI
+pxr
 rTe
 ygF
 ehP
@@ -41628,34 +41620,34 @@ apD
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 egf
 mMG
-pOK
-pOK
+gua
+gua
 awf
 rIm
 itw
-cHI
+pxr
 vDb
 nrm
 eys
@@ -41831,29 +41823,29 @@ iQr
 iQr
 tkR
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 qZd
-pOK
-pOK
+gua
+gua
 bkG
 xJn
 lWe
@@ -42033,32 +42025,32 @@ iQr
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 bGR
 dEt
 feF
-pOK
-pOK
+gua
+gua
 rgI
 rHV
 lLn
 lLn
 bkG
 dJx
-vzG
+sYq
 yhR
 yhR
 lZU
@@ -42168,18 +42160,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -42235,33 +42227,33 @@ apD
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 pMJ
-pOK
+gua
 pMJ
-pOK
-pOK
+gua
+gua
 mfT
 dem
-pOK
+gua
 awf
 rIm
-wJp
-vzG
-tkR
+tCd
+sYq
+yhR
 yhR
 sXD
 sGs
@@ -42370,18 +42362,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -42438,30 +42430,30 @@ iQr
 iQr
 tkR
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 hfD
-pOK
+gua
 bkG
 rOz
-wJp
+tCd
 opt
 yhR
 cqH
@@ -42572,18 +42564,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -42640,31 +42632,31 @@ iQr
 iQr
 iQr
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 egf
 mMG
 awf
 rIm
-wJp
+tCd
 pQW
-tkR
+yhR
 yhR
 tkR
 kYI
@@ -42774,18 +42766,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -42843,30 +42835,30 @@ iQr
 iQr
 tkR
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 kzK
 rIm
-wJp
-wJp
-wJp
-tkR
+tCd
+tCd
+tCd
+yhR
 iQr
 yhR
 yhR
@@ -42976,18 +42968,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -43046,29 +43038,29 @@ iQr
 iQr
 tkR
 tkR
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 awf
 jvB
 uJs
-bfm
-bfm
-wJp
-tkR
-tkR
+lqR
+lqR
+tCd
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -43178,18 +43170,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -43250,26 +43242,26 @@ iQr
 tkR
 tkR
 tkR
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 awf
 fRl
 fRl
-rIm
-bfm
-wJp
-vzG
-wJp
-tkR
-tkR
+eWE
+lqR
+tCd
+sYq
+tCd
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -43380,18 +43372,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -43455,22 +43447,22 @@ tkR
 tkR
 tkR
 tkR
-gEA
-pOK
-pOK
-pOK
-pOK
-pOK
-pOK
+gua
+gua
+gua
+gua
+gua
+gua
+gua
 bkG
-bfm
-bfm
-bfm
-wJp
+lqR
+rQg
+lqR
+tCd
 dJX
-wJp
-tkR
-tkR
+tCd
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -43582,18 +43574,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -43664,14 +43656,14 @@ tkR
 tkR
 tkR
 tkR
-tkR
+yhR
 unn
-vzG
-vzG
-wJp
-tkR
-tkR
-tkR
+sYq
+sYq
+tCd
+yhR
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -43784,18 +43776,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -43866,12 +43858,12 @@ iQr
 iQr
 iQr
 iQr
-tkR
-tkR
-tkR
-eWE
-tkR
-tkR
+yhR
+yhR
+yhR
+nxk
+yhR
+yhR
 iQr
 iQr
 iQr
@@ -43986,10 +43978,6 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
 tuY
 tuY
@@ -43997,7 +43985,11 @@ tuY
 tuY
 tuY
 tuY
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -44188,18 +44180,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -44390,18 +44382,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -44592,18 +44584,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -44794,18 +44786,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -44996,10 +44988,6 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
 tuY
 tuY
@@ -45007,7 +44995,11 @@ tuY
 tuY
 tuY
 tuY
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -45198,18 +45190,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -45400,18 +45392,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
 tuY
-pjr
-pjr
 tuY
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -45602,18 +45594,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
 tuY
 tuY
 tuY
-pjr
-pjr
 tuY
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -45804,18 +45796,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
 tuY
 tuY
 tuY
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -46006,18 +45998,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -46208,18 +46200,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
 tuY
 tuY
 tuY
 tuY
 tuY
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -46410,18 +46402,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -46612,18 +46604,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -46814,18 +46806,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
-pjr
 tuY
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -47016,18 +47008,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -47218,18 +47210,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -47420,18 +47412,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -47622,18 +47614,18 @@ iQr
 iQr
 iQr
 iQr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -48545,7 +48537,7 @@ eYD
 qDd
 oMS
 uUW
-aIC
+byz
 aIC
 foW
 tYd
@@ -48747,7 +48739,7 @@ kCg
 klI
 wAI
 moK
-jEX
+klC
 ltG
 ouF
 iDf
@@ -48962,7 +48954,7 @@ vBs
 wls
 eDc
 aTL
-wwN
+uiE
 bVs
 iQr
 iQr
@@ -50187,7 +50179,7 @@ pWD
 fuE
 iQr
 iQr
-ltx
+brZ
 brZ
 oAr
 eOl
@@ -50203,7 +50195,7 @@ eOl
 eOl
 jEW
 bQM
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -50389,7 +50381,7 @@ fuE
 iQr
 iQr
 iQr
-ltx
+brZ
 brZ
 pPz
 oAr
@@ -50405,7 +50397,7 @@ nZZ
 uTb
 pPz
 brZ
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -50591,7 +50583,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 brZ
 oAr
 jEW
@@ -50607,7 +50599,7 @@ eOl
 jEW
 jEW
 brZ
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -50793,7 +50785,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 pPz
 oAr
 eOl
@@ -50809,7 +50801,7 @@ eOl
 eOl
 jEW
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -50995,7 +50987,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 pPz
 jEW
 nZZ
@@ -51011,7 +51003,7 @@ jEW
 eOl
 eOl
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -51197,7 +51189,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 eCz
 oAr
 jEW
@@ -51213,7 +51205,7 @@ jEW
 eOl
 jEW
 eCz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -51399,7 +51391,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 brZ
 bQM
 amQ
@@ -51415,7 +51407,7 @@ jEW
 iXB
 bQM
 urd
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -51601,7 +51593,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 pPz
 jEW
 jEW
@@ -51617,7 +51609,7 @@ jEW
 jEW
 jEW
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -51803,7 +51795,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 pPz
 ifL
 ihA
@@ -51819,7 +51811,7 @@ ihA
 rhs
 dij
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -51984,12 +51976,12 @@ joE
 eAs
 pfy
 hnP
-kDQ
+mtx
 kDG
 mtx
 kDG
 jhe
-kDG
+qXz
 wmR
 kDG
 wmR
@@ -52005,7 +51997,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 gjh
 yfb
 oNt
@@ -52021,7 +52013,7 @@ dtZ
 oNt
 bVt
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -52185,17 +52177,17 @@ iQr
 joE
 olB
 wsx
-ovS
-eAu
-eAu
-eAu
+pOK
+pOK
+pOK
+pOK
 jal
 aEq
-caH
-caH
-caH
-caH
-pzh
+pOK
+pOK
+pOK
+pOK
+jal
 iOi
 nCX
 joE
@@ -52207,7 +52199,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 gjh
 oNt
 dtZ
@@ -52223,7 +52215,7 @@ oNt
 oNt
 jEW
 eCz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -52387,17 +52379,17 @@ iQr
 joE
 ruS
 mMx
-ovS
-eAu
-eAu
-eAu
-eAu
+pOK
+pOK
+pOK
+pOK
+pOK
 aEq
-caH
-caH
-caH
-caH
-gAi
+pOK
+pOK
+pOK
+pOK
+pOK
 iOi
 ruS
 joE
@@ -52409,7 +52401,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 gjh
 dtZ
 qvZ
@@ -52425,7 +52417,7 @@ oNt
 qvZ
 oAr
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -52589,17 +52581,17 @@ iQr
 joE
 ruS
 mMx
-ovS
-eAu
-eAu
-eAu
-eAu
+pOK
+pOK
+pOK
+pOK
+pOK
 aEq
-caH
-caH
-caH
-caH
-gAi
+pOK
+pOK
+pOK
+pOK
+pOK
 aYq
 oyv
 joE
@@ -52611,7 +52603,7 @@ iQr
 iQr
 iQr
 iQr
-tyZ
+bQM
 eCz
 lQQ
 lQQ
@@ -52627,7 +52619,7 @@ eXw
 eXw
 jEU
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -52791,17 +52783,17 @@ iQr
 joE
 ruS
 mMx
-ovS
-eAu
-eAu
-eAu
-eAu
+pOK
+pOK
+pOK
+pOK
+pOK
 aEq
-caH
-caH
-caH
-caH
-gAi
+pOK
+pOK
+pOK
+pOK
+pOK
 tUg
 qrl
 joE
@@ -52813,7 +52805,7 @@ iQr
 iQr
 iQr
 iQr
-tyZ
+bQM
 eCz
 xEO
 xEO
@@ -52829,7 +52821,7 @@ xEO
 awh
 nsc
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -52993,17 +52985,17 @@ iQr
 joE
 ruS
 mMx
-ovS
-eAu
-eAu
-eAu
-eAu
+pOK
+pOK
+pOK
+pOK
+pOK
 aEq
-caH
-caH
-caH
-caH
-gAi
+pOK
+pOK
+pOK
+pOK
+pOK
 tUg
 oyv
 joE
@@ -53015,7 +53007,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 eCz
 dtZ
 dtZ
@@ -53031,7 +53023,7 @@ dtZ
 oNt
 jEW
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -53195,7 +53187,7 @@ joE
 ajs
 wxB
 hZU
-rAv
+nkd
 nkd
 nkd
 nkd
@@ -53217,7 +53209,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 pPz
 oNt
 oNt
@@ -53233,7 +53225,7 @@ qvZ
 oNt
 eOl
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -53397,12 +53389,12 @@ joE
 wIz
 uqp
 jOB
-avR
+isO
 isO
 isO
 isO
 jOB
-isO
+kDQ
 jOB
 isO
 isO
@@ -53419,7 +53411,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 eCz
 pEQ
 ihA
@@ -53435,7 +53427,7 @@ rhs
 ihA
 adM
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -53600,12 +53592,12 @@ isO
 dVp
 mow
 dXn
-obk
+yiF
 yiF
 yiF
 vEU
 fVD
-vEU
+rAv
 vEU
 vEU
 yiF
@@ -53621,7 +53613,7 @@ iQr
 iQr
 iQr
 iQr
-tyZ
+bQM
 pPz
 jEW
 oAr
@@ -53637,7 +53629,7 @@ jEW
 nZZ
 jEW
 eCz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -53823,7 +53815,7 @@ iQr
 iQr
 iQr
 iQr
-tyZ
+bQM
 bQM
 urd
 tGI
@@ -53839,7 +53831,7 @@ wYs
 wwD
 urd
 brZ
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -54025,7 +54017,7 @@ iQr
 iQr
 iQr
 iQr
-tyZ
+bQM
 eCz
 qMW
 ulA
@@ -54041,7 +54033,7 @@ oTa
 oYd
 alc
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -54227,7 +54219,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 pPz
 jEW
 eOl
@@ -54243,7 +54235,7 @@ aLB
 jEW
 jEW
 eCz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -54411,9 +54403,9 @@ wfu
 pdA
 fmQ
 pdA
-fmQ
+ovS
 fer
-fmQ
+ovS
 pCX
 fmQ
 fmQ
@@ -54429,7 +54421,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 pPz
 eOl
 jEW
@@ -54445,7 +54437,7 @@ eOl
 jEW
 jEW
 eCz
-ltx
+brZ
 iQr
 iQr
 iQr
@@ -54631,7 +54623,7 @@ iQr
 iQr
 iQr
 iQr
-ltx
+brZ
 pPz
 jEW
 oAr
@@ -54647,7 +54639,7 @@ jEW
 eOl
 oAr
 pPz
-ltx
+brZ
 iQr
 iQr
 iQr
