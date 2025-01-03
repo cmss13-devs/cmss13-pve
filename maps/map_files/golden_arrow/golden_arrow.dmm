@@ -15683,6 +15683,10 @@
 	pixel_x = 1;
 	layer = 3.2
 	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 2;
+	pixel_y = -5
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "dAO" = (
