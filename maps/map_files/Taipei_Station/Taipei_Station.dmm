@@ -2055,7 +2055,7 @@
 /obj/item/trash/cigbutt/ucigbutt,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
-	light_color = #00008B;
+	light_color = "#00008B";
 	pixel_x = -5;
 	light_power = .75
 	},
@@ -4528,7 +4528,7 @@
 "dPk" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
-	light_color = #00008B;
+	light_color = "#00008B";
 	pixel_x = 4;
 	light_power = 0.5
 	},
@@ -8472,7 +8472,7 @@
 /obj/item/ashtray/glass,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
-	light_color = #00008B;
+	light_color = "#00008B";
 	pixel_x = -5;
 	light_power = .75
 	},
@@ -18758,7 +18758,7 @@
 "qHf" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
-	light_color = #00008B;
+	light_color = "#00008B";
 	pixel_x = 4;
 	light_power = 0.5
 	},
@@ -25036,7 +25036,7 @@
 /obj/item/reagent_container/food/drinks/cans/beer,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
-	light_color = #00008B;
+	light_color = "#00008B";
 	pixel_x = -5;
 	light_power = .75
 	},
