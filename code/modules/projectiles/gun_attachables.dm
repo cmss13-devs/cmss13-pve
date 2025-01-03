@@ -3006,6 +3006,72 @@ Defined in conflicts.dm of the #defines folder.
 	max_range = 10
 	attachment_firing_delay = 15
 
+/obj/item/attachable/attached_gun/grenade/mk1/pump(mob/user) //for want of a better proc name
+	if(breech_open) // if it was ALREADY open
+		breech_open = FALSE
+		if(current_rounds)
+			cocked = TRUE // by closing the gun we have cocked it and readied it to fire
+		to_chat(user, SPAN_NOTICE("You bring \the [src]'s pump forward, cocking it!"))
+		playsound(src, close_sound, 15, 1)
+	else
+		breech_open = TRUE
+		cocked = FALSE
+		to_chat(user, SPAN_NOTICE("You bring \the [src]'s pump back!"))
+		playsound(src, open_sound, 15, 1)
+	update_icon()
+
+/obj/item/attachable/attached_gun/grenade/mk1/reload_attachment(obj/item/explosive/grenade/G, mob/user)
+	if(breech_open)
+		to_chat(user, SPAN_WARNING("\The [src]'s loading port is covered, put the pump forward! (use unique-action)"))
+		return
+	if(!istype(G) || istype(G, /obj/item/explosive/grenade/spawnergrenade/))
+		to_chat(user, SPAN_WARNING("[src] doesn't accept that type of grenade."))
+		return
+	if(!G.active) //can't load live grenades
+		if(!G.underslug_launchable)
+			to_chat(user, SPAN_WARNING("[src] doesn't accept that type of grenade."))
+			return
+		if(current_rounds >= max_rounds)
+			to_chat(user, SPAN_WARNING("[src] is full."))
+		else
+			playsound(user, 'sound/weapons/grenade_insert.wav', 25, 1)
+			current_rounds++
+			loaded_grenades += G
+			to_chat(user, SPAN_NOTICE("You load \the [G] into \the [src]."))
+			user.drop_inv_item_to_loc(G, src)
+
+/obj/item/attachable/attached_gun/grenade/mk1/unload_attachment(mob/user, reload_override = FALSE, drop_override = FALSE, loc_override = FALSE)
+	. = TRUE //Always uses special unloading.
+	if(breech_open)
+		to_chat(user, SPAN_WARNING("\The [src] is closed! You must open it to take out grenades!"))
+		return
+	if(!current_rounds)
+		to_chat(user, SPAN_WARNING("It's empty!"))
+		return
+
+/obj/item/attachable/attached_gun/grenade/mk1/fire_attachment(atom/target,obj/item/weapon/gun/gun,mob/living/user)
+	if(!(gun.flags_item & WIELDED))
+		if(user)
+			to_chat(user, SPAN_WARNING("You must hold [gun] with two hands to use \the [src]."))
+		return
+	if(breech_open)
+		if(user)
+			to_chat(user, SPAN_WARNING("You must close the chamber to fire \the [src]!"))
+			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
+		return
+	if(!cocked)
+		if(user)
+			to_chat(user, SPAN_WARNING("You must pump \the [src] to fire it!"))
+			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
+		return
+	if(get_dist(user,target) > max_range)
+		to_chat(user, SPAN_WARNING("Too far to fire the attachment!"))
+		playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
+		return
+
+	if(current_rounds > 0 && ..())
+		prime_grenade(target,gun,user)
+
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
 	attach_icon = "green_grenade-mk1_a"
