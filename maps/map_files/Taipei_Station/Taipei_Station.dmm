@@ -14343,7 +14343,7 @@
 	pixel_y = 16
 	},
 /obj/structure/surface/table/almayer{
-	color = #96918c
+	color = "#96918c"
 	},
 /obj/structure/machinery/light/spot{
 	dir = 1
