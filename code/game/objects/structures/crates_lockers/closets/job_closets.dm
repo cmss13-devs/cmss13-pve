@@ -83,7 +83,7 @@
 /obj/structure/closet/secure_closet/platoon_sergeant/Initialize()
 	. = ..()
 	new /obj/item/clothing/head/helmet/marine/leader(src)
-	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/binoculars/range/designator/sergeant(src)
 	new /obj/item/device/whistle(src)
 
 /obj/structure/closet/secure_closet/platoon_sergeant_forecon
