@@ -174,14 +174,15 @@
 	dir = 8;
 	layer = 2.7
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "bg" = (
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = 9
 	},
@@ -304,7 +305,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/sandbags/wired{
 	dir = 4;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = 4
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 2;
@@ -346,7 +348,7 @@
 	density = 0;
 	icon_state = "platform_deco"
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "bM" = (
 /obj/structure/bed/chair{
@@ -372,16 +374,6 @@
 /obj/item/weapon/gun/rifle/type71,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
-"bT" = (
-/obj/structure/platform/kutjevo{
-	dir = 1
-	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	pixel_y = 9
-	},
-/turf/open/gm/dirt2,
-/area/Oread_Garrison/outside/jungle/clearing)
 "bU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -447,7 +439,7 @@
 	layer = 2.7
 	},
 /obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "cl" = (
 /obj/structure/surface/rack,
@@ -484,12 +476,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/sterile_green,
 /area/Oread_Garrison/inside/medical)
-"ct" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/outside/jungle/clearing)
 "cu" = (
 /obj/structure/pipes/vents,
 /turf/open/floor/almayer/dark_sterile,
@@ -778,7 +764,7 @@
 /turf/closed/wall/r_wall/bunker,
 /area/Oread_Garrison/inside/engineering)
 "dU" = (
-/obj/structure/barricade/metal/plasteel{
+/obj/structure/barricade/metal/wired{
 	dir = 4
 	},
 /turf/open/floor/prison/floor_plate,
@@ -833,6 +819,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/command)
+"ei" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Oread_Garrison/inside)
 "ej" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -1196,7 +1188,7 @@
 	dir = 8;
 	icon_state = "platform_deco"
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "fS" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
@@ -1258,7 +1250,7 @@
 /obj/structure/platform{
 	layer = 3.6
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "ge" = (
 /obj/structure/sign/safety/hvac_old{
@@ -1287,7 +1279,8 @@
 	pixel_x = -4;
 	pixel_y = -10
 	},
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = 9
 	},
@@ -1582,7 +1575,8 @@
 /obj/structure/platform/kutjevo{
 	layer = 2.99
 	},
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = -7
 	},
@@ -1655,7 +1649,8 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = 9
 	},
@@ -1916,7 +1911,7 @@
 /area/Oread_Garrison/inside)
 "jh" = (
 /obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "jj" = (
 /obj/structure/machinery/vending/coffee,
@@ -2047,7 +2042,7 @@
 	layer = 2.7
 	},
 /obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "jM" = (
 /obj/structure/sign/prop2{
@@ -2265,7 +2260,7 @@
 	pixel_x = -6;
 	pixel_y = -4
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "kW" = (
 /obj/structure/bed,
@@ -2282,10 +2277,6 @@
 "la" = (
 /obj/structure/platform/kutjevo{
 	dir = 4
-	},
-/obj/structure/platform/kutjevo{
-	dir = 6;
-	layer = 3.5
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -2535,7 +2526,8 @@
 	pixel_x = -4;
 	pixel_y = 10
 	},
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = -7
 	},
@@ -2809,14 +2801,14 @@
 /obj/structure/platform{
 	layer = 3.6
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/inside)
 "nD" = (
 /obj/structure/platform{
 	dir = 4;
 	layer = 2.7
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "nE" = (
 /obj/structure/sign/prop1,
@@ -2947,11 +2939,12 @@
 /area/Oread_Garrison/inside/command)
 "oi" = (
 /obj/structure/platform/kutjevo,
-/obj/structure/barricade/sandbags{
+/obj/structure/largecrate/supply/ammo/shotgun,
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = -7
 	},
-/obj/structure/largecrate/supply/ammo/shotgun,
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "oj" = (
@@ -3005,13 +2998,11 @@
 /turf/open/gm/coast,
 /area/Oread_Garrison/outside/jungle/river)
 "ov" = (
-/obj/structure/platform/kutjevo{
-	dir = 4
-	},
 /obj/structure/platform,
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
 	icon_state = "sandbag_0";
-	dir = 4
+	pixel_y = 4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
@@ -3087,7 +3078,7 @@
 	dir = 8;
 	layer = 2.7
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "oQ" = (
 /obj/structure/closet/firecloset,
@@ -3237,10 +3228,6 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	pixel_y = 9
-	},
 /obj/structure/closet/crate/construction{
 	pixel_x = 4
 	},
@@ -3253,22 +3240,17 @@
 	pixel_x = 10
 	},
 /obj/item/stack/sheet/metal/large_stack,
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
+	icon_state = "sandbag_0";
+	pixel_y = 9
+	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
 "pL" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/garage)
-"pO" = (
-/obj/structure/platform/kutjevo{
-	dir = 8
-	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 8
-	},
-/turf/open/gm/dirt2,
-/area/Oread_Garrison/outside/jungle/clearing)
 "pP" = (
 /obj/structure/bed/chair{
 	can_buckle = 0;
@@ -3423,7 +3405,7 @@
 	dir = 8;
 	layer = 2.7
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "qB" = (
 /obj/structure/sign/poster/propaganda,
@@ -3545,11 +3527,12 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 8
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
 	},
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = 9
 	},
@@ -3958,18 +3941,15 @@
 /turf/open/floor/hydrofloor,
 /area/Oread_Garrison/inside/messhall)
 "sY" = (
-/obj/structure/barricade/metal/plasteel{
+/obj/structure/barricade/metal/wired{
 	dir = 1
 	},
-/obj/structure/barricade/metal/plasteel{
+/obj/structure/barricade/metal/wired{
 	dir = 4
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Oread_Garrison/outside/jungle/clearing)
 "tc" = (
-/obj/structure/barricade/metal/plasteel{
-	dir = 8
-	},
 /obj/item/trash/cigbutt,
 /obj/item/trash/cigbutt{
 	pixel_y = 10;
@@ -3986,6 +3966,9 @@
 /obj/item/trash/cigbutt{
 	pixel_x = 7;
 	pixel_y = 7
+	},
+/obj/structure/barricade/metal/wired{
+	dir = 8
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -4019,7 +4002,7 @@
 	dir = 1;
 	layer = 2.7
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "tl" = (
 /obj/effect/decal/warning_stripes{
@@ -4058,18 +4041,13 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = -7
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
-"tu" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/outside/jungle/clearing)
 "tv" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "South Gate";
@@ -4083,11 +4061,13 @@
 	},
 /obj/structure/platform/kutjevo,
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
 	icon_state = "sandbag_0";
-	dir = 8
+	pixel_y = 4
 	},
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = -7
 	},
@@ -4392,7 +4372,7 @@
 	density = 0;
 	icon_state = "platform_deco"
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "uZ" = (
 /obj/structure/surface/table/almayer,
@@ -4434,7 +4414,7 @@
 	dir = 1;
 	icon_state = "platform_deco"
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "vi" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4530,10 +4510,10 @@
 /turf/open/floor/almayer/plating,
 /area/Oread_Garrison/inside/engineering)
 "vE" = (
-/obj/structure/barricade/metal/plasteel{
+/obj/structure/barricade/metal/wired{
 	dir = 8
 	},
-/obj/structure/barricade/metal/plasteel,
+/obj/structure/barricade/metal/wired,
 /turf/open/floor/prison/floor_plate,
 /area/Oread_Garrison/outside/jungle/clearing)
 "vG" = (
@@ -4551,7 +4531,7 @@
 	dir = 4;
 	layer = 2.7
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "vR" = (
 /obj/effect/decal/warning_stripes{
@@ -4613,7 +4593,7 @@
 	dir = 4;
 	layer = 2
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "we" = (
 /obj/structure/surface/rack{
@@ -4886,12 +4866,12 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 8
-	},
 /obj/structure/largecrate/supply/medicine/medkits{
 	pixel_x = 6
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -4954,7 +4934,7 @@
 "xF" = (
 /obj/structure/platform,
 /obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/inside)
 "xG" = (
 /obj/structure/flora/grass/tallgrass/jungle,
@@ -5328,16 +5308,17 @@
 	dir = 4;
 	layer = 2.7
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "zj" = (
 /obj/structure/platform/kutjevo,
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	pixel_y = -7
-	},
 /obj/structure/largecrate/supply/explosives/mines{
 	pixel_y = 2
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
+	icon_state = "sandbag_0";
+	pixel_y = -7
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -5560,7 +5541,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/inside)
 "An" = (
 /obj/structure/sign/safety/terminal{
@@ -5781,21 +5762,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/Oread_Garrison/inside/engineering)
-"Bs" = (
-/obj/structure/platform/kutjevo{
-	dir = 8
-	},
-/obj/structure/platform/kutjevo,
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	pixel_y = -7
-	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 8
-	},
-/turf/open/gm/dirt2,
-/area/Oread_Garrison/outside/jungle/clearing)
 "Bt" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	desc = "Righty tighty, lefty loosey!";
@@ -5882,16 +5848,6 @@
 /obj/structure/machinery/computer/supplycomp/vehicle,
 /turf/open/floor/almayer,
 /area/Oread_Garrison/inside/garage)
-"BJ" = (
-/obj/structure/platform/kutjevo{
-	dir = 4
-	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 4
-	},
-/turf/open/gm/dirt2,
-/area/Oread_Garrison/outside/jungle/clearing)
 "BK" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "North Gate";
@@ -6401,7 +6357,8 @@
 	pixel_y = -10;
 	pixel_x = 3
 	},
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = 9
 	},
@@ -6596,7 +6553,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "ED" = (
 /turf/open/floor/almayer/uscm/directional/up_down/northeast,
@@ -6890,7 +6847,6 @@
 /turf/closed/wall/r_wall/bunker,
 /area/Oread_Garrison/inside/bunker1)
 "FQ" = (
-/obj/structure/platform_decoration/kutjevo,
 /obj/item/stack/sandbags_empty/full,
 /turf/open/auto_turf/sand_white/layer1,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -7309,14 +7265,15 @@
 /area/Oread_Garrison/inside/requisitions)
 "HL" = (
 /obj/structure/platform/kutjevo,
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	pixel_y = -7
-	},
 /obj/structure/largecrate/supply/ammo/m41amk1,
 /obj/structure/largecrate/supply/ammo/m41amk1{
 	pixel_y = 10;
 	pixel_x = -4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
+	icon_state = "sandbag_0";
+	pixel_y = -7
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -7417,15 +7374,15 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
 "In" = (
-/obj/structure/barricade/metal/plasteel{
-	dir = 1
-	},
-/obj/structure/barricade/metal/plasteel{
-	dir = 8
-	},
 /obj/item/storage/fancy/cigarettes/lucky_strikes{
 	pixel_x = 4;
 	pixel_y = -4
+	},
+/obj/structure/barricade/metal/wired{
+	dir = 1
+	},
+/obj/structure/barricade/metal/wired{
+	dir = 8
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -7945,13 +7902,13 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 8
-	},
 /obj/structure/largecrate/supply/ammo/shotgun{
 	pixel_x = 12;
 	layer = 3.1
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -8259,13 +8216,6 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
 "LJ" = (
-/obj/structure/platform/kutjevo{
-	dir = 6;
-	layer = 3.5
-	},
-/obj/structure/platform/kutjevo{
-	dir = 4
-	},
 /obj/structure/closet/crate/plastic{
 	pixel_y = 12;
 	pixel_x = -12
@@ -8275,6 +8225,16 @@
 /obj/item/weapon/twohanded/folded_metal_chair,
 /obj/item/weapon/twohanded/folded_metal_chair,
 /obj/item/weapon/twohanded/folded_metal_chair,
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0";
+	pixel_y = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/Oread_Garrison/outside/jungle/clearing)
 "LK" = (
@@ -8352,6 +8312,12 @@
 	},
 /turf/closed/wall/r_wall/bunker,
 /area/Oread_Garrison/inside/engineering)
+"Mf" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Oread_Garrison/inside)
 "Mg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -8393,7 +8359,8 @@
 /obj/structure/platform/kutjevo,
 /obj/structure/barricade/sandbags/wired{
 	dir = 8;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = 4
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 2;
@@ -8502,7 +8469,7 @@
 	dir = 4
 	},
 /obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/inside)
 "Na" = (
 /turf/open/floor/kutjevo/colors/yellow,
@@ -8565,12 +8532,18 @@
 /obj/structure/machinery/m56d_hmg/mg_turret{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 8
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
+"Ns" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Oread_Garrison/inside)
 "Nt" = (
 /obj/structure/largecrate/supply/medicine/medkits,
 /turf/open/floor/almayer,
@@ -8598,6 +8571,10 @@
 "Nz" = (
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/Oread_Garrison/outside/jungle/river)
+"NA" = (
+/obj/structure/platform,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Oread_Garrison/inside)
 "NC" = (
 /obj/effect/decal/cleanable/blood{
 	icon_state = "xgib3"
@@ -8782,13 +8759,14 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = 9
-	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 8
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -8868,15 +8846,6 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker2)
-"OZ" = (
-/obj/structure/platform{
-	layer = 3.6
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/inside)
 "Pa" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/machinery/landinglight/ds1{
@@ -8964,13 +8933,14 @@
 	dir = 4
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = 9
-	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -9434,9 +9404,10 @@
 	dir = 8
 	},
 /obj/structure/platform,
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
 	icon_state = "sandbag_0";
-	dir = 8
+	pixel_y = 4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
@@ -9765,14 +9736,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker1)
-"Tl" = (
-/obj/structure/platform{
-	density = 0;
-	dir = 4;
-	icon_state = "platform_deco"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/outside/jungle/clearing)
 "Tm" = (
 /obj/structure/machinery/light,
 /obj/structure/disposalpipe/segment{
@@ -9978,7 +9941,6 @@
 /turf/open/floor/almayer/plate,
 /area/Oread_Garrison/inside/bunker2)
 "Uh" = (
-/obj/structure/platform_decoration/kutjevo,
 /obj/structure/closet/crate/plastic{
 	pixel_x = 12;
 	pixel_y = -1
@@ -10001,7 +9963,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "Uk" = (
 /obj/effect/decal/warning_stripes{
@@ -10081,11 +10043,7 @@
 /obj/structure/platform{
 	layer = 3.6
 	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/Oread_Garrison/outside/jungle/clearing)
-"Uz" = (
-/obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle/clearing)
 "UB" = (
 /obj/structure/largecrate/supply/ammo{
@@ -10109,11 +10067,12 @@
 	dir = 8
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 8
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
 	},
-/obj/structure/barricade/sandbags{
+/obj/structure/barricade/sandbags/wired{
+	dir = 2;
 	icon_state = "sandbag_0";
 	pixel_y = 9
 	},
@@ -10352,14 +10311,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/asphalt/cement,
-/area/Oread_Garrison/inside)
-"Wf" = (
-/obj/structure/platform{
-	density = 0;
-	dir = 8;
-	icon_state = "platform_deco"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/inside)
 "Wg" = (
 /obj/structure/disposalpipe/segment{
@@ -10642,7 +10593,7 @@
 	dir = 4;
 	icon_state = "platform_deco"
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "Xp" = (
 /obj/structure/stairs/perspective{
@@ -10687,7 +10638,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/inside)
 "XK" = (
 /obj/structure/sign/safety/stairs{
@@ -10746,17 +10697,17 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/inside)
 "XX" = (
-/obj/structure/barricade/metal/plasteel,
+/obj/structure/barricade/metal/wired,
 /turf/open/floor/prison/floor_plate,
 /area/Oread_Garrison/outside/jungle/clearing)
 "XY" = (
-/obj/structure/barricade/metal/plasteel,
-/obj/structure/barricade/metal/plasteel{
+/obj/structure/barricade/metal/wired{
 	dir = 4
 	},
+/obj/structure/barricade/metal/wired,
 /turf/open/floor/prison/floor_plate,
 /area/Oread_Garrison/outside/jungle/clearing)
 "XZ" = (
@@ -10944,9 +10895,9 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 8
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -10978,7 +10929,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "YW" = (
 /obj/structure/machinery/light{
@@ -11009,7 +10960,7 @@
 	dir = 1;
 	icon_state = "platform_deco"
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/outside/jungle)
 "Ze" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11085,12 +11036,12 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags{
-	icon_state = "sandbag_0";
-	dir = 8
-	},
 /obj/structure/largecrate/supply/explosives/grenades{
 	pixel_x = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -23716,14 +23667,14 @@ PY
 oT
 Ov
 Ov
-GZ
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Wf
+Eg
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+FM
 Vt
 Os
 oH
@@ -23769,14 +23720,14 @@ oT
 oT
 YI
 YI
-GZ
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Wf
+Eg
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+FM
 YI
 YI
 aP
@@ -24038,7 +23989,7 @@ Qk
 oH
 oH
 oH
-GZ
+Eg
 de
 Ft
 au
@@ -24049,7 +24000,7 @@ Yn
 au
 pi
 CE
-Wf
+FM
 oH
 oH
 oH
@@ -24073,12 +24024,12 @@ ep
 xr
 Qy
 ax
-pO
+lB
 YL
 wQ
 ep
-pO
-Bs
+lB
+Mu
 oT
 oT
 oH
@@ -24091,7 +24042,7 @@ oT
 oT
 oH
 oH
-GZ
+Eg
 NO
 Ft
 au
@@ -24102,7 +24053,7 @@ Yn
 au
 pi
 CE
-Wf
+FM
 oH
 oH
 oH
@@ -24200,7 +24151,7 @@ oH
 oH
 oH
 oH
-dG
+NA
 au
 au
 au
@@ -24211,7 +24162,7 @@ Wy
 au
 au
 au
-yT
+ei
 oH
 oH
 oH
@@ -24227,7 +24178,7 @@ yT
 oH
 oT
 oT
-bT
+Be
 Vm
 Vm
 Vm
@@ -24253,7 +24204,7 @@ oH
 oH
 oH
 oH
-dG
+NA
 au
 au
 au
@@ -24264,7 +24215,7 @@ Wy
 au
 au
 au
-yT
+ei
 oH
 oH
 oT
@@ -24362,7 +24313,7 @@ oH
 oH
 oH
 oH
-dG
+NA
 od
 BD
 Wy
@@ -24373,7 +24324,7 @@ NZ
 Wy
 BD
 ed
-yT
+ei
 oH
 oH
 oH
@@ -24394,10 +24345,10 @@ Vm
 Vm
 Vm
 Sf
-BJ
-BJ
-BJ
-BJ
+El
+El
+El
+El
 DH
 Vm
 Vm
@@ -24415,7 +24366,7 @@ Oc
 Qk
 oH
 oH
-dG
+NA
 od
 BD
 Wy
@@ -24426,7 +24377,7 @@ Wy
 Wy
 BD
 ed
-yT
+ei
 oH
 oT
 oT
@@ -24524,7 +24475,7 @@ oT
 oH
 oT
 oH
-dG
+NA
 od
 lw
 NZ
@@ -24535,7 +24486,7 @@ IJ
 NZ
 wR
 ed
-yT
+ei
 oH
 wb
 oH
@@ -24560,7 +24511,7 @@ kl
 oT
 aP
 kl
-bT
+Be
 Vm
 Vm
 pP
@@ -24577,7 +24528,7 @@ oH
 oH
 oH
 oH
-dG
+NA
 od
 IJ
 Wy
@@ -24588,7 +24539,7 @@ wR
 Wy
 IJ
 ed
-yT
+ei
 UZ
 oT
 oT
@@ -24686,7 +24637,7 @@ oT
 oT
 DQ
 oH
-dG
+NA
 xM
 IJ
 NZ
@@ -24739,7 +24690,7 @@ Vj
 Vj
 Vj
 Vj
-oz
+NO
 od
 wR
 Wy
@@ -24750,7 +24701,7 @@ wR
 NZ
 wR
 ed
-yT
+ei
 oH
 oT
 oT
@@ -24848,7 +24799,7 @@ yp
 oT
 oH
 aP
-dG
+NA
 dL
 Lm
 Hh
@@ -24912,7 +24863,7 @@ PC
 Wy
 Lm
 ed
-yT
+ei
 oH
 oH
 oT
@@ -25074,7 +25025,7 @@ Wy
 au
 au
 au
-yT
+ei
 oH
 oH
 oT
@@ -25172,7 +25123,7 @@ wb
 oH
 oH
 oH
-nv
+eo
 Yh
 Ft
 au
@@ -25236,7 +25187,7 @@ Yn
 au
 pi
 nb
-LH
+lf
 oH
 oH
 oH
@@ -25498,11 +25449,11 @@ oH
 oH
 YI
 YI
-nv
+eo
 Am
-pr
-pr
-GE
+Ns
+Ns
+Yh
 au
 NG
 ud
@@ -25554,11 +25505,11 @@ Fq
 BG
 wR
 au
-RO
-pr
-pr
-pr
-LH
+nb
+Ns
+Ns
+Ns
+lf
 YI
 YI
 oH
@@ -28093,7 +28044,7 @@ OI
 Ky
 Qy
 ax
-pO
+lB
 Rn
 au
 zP
@@ -28251,7 +28202,7 @@ oH
 Ai
 oT
 PY
-bT
+Be
 ZV
 Vm
 Vm
@@ -28899,7 +28850,7 @@ oH
 Nu
 oT
 oH
-bT
+Be
 Vm
 Vm
 Vm
@@ -29061,7 +29012,7 @@ oH
 oT
 oT
 wb
-bT
+Be
 Vm
 Vm
 Vm
@@ -32302,10 +32253,10 @@ oH
 UZ
 YI
 YI
-GZ
-Vj
-Vj
-Vj
+Eg
+Mf
+Mf
+Mf
 MY
 au
 NG
@@ -32358,11 +32309,11 @@ BG
 ud
 Yn
 au
-iw
-Vj
-Vj
-Vj
-Wf
+CE
+Mf
+Mf
+Mf
+FM
 Ov
 Ov
 oT
@@ -32624,7 +32575,7 @@ oH
 oH
 oH
 oH
-GZ
+Eg
 de
 ti
 au
@@ -32688,7 +32639,7 @@ Yn
 au
 fv
 CE
-Wf
+FM
 oH
 aP
 oH
@@ -32786,7 +32737,7 @@ oH
 yM
 yM
 oH
-dG
+NA
 au
 au
 au
@@ -32850,7 +32801,7 @@ Wy
 au
 au
 au
-yT
+ei
 oH
 oH
 oH
@@ -32948,7 +32899,7 @@ oH
 oH
 yM
 yM
-dG
+NA
 od
 BD
 Wy
@@ -33012,7 +32963,7 @@ Wy
 Wy
 BD
 ed
-yT
+ei
 oH
 oH
 oH
@@ -33110,7 +33061,7 @@ oH
 oH
 aP
 oH
-dG
+NA
 od
 wR
 NZ
@@ -33163,7 +33114,7 @@ pr
 pr
 pr
 pr
-OZ
+Aw
 od
 wR
 KB
@@ -33174,7 +33125,7 @@ wR
 NZ
 wR
 ed
-yT
+ei
 oH
 wb
 oH
@@ -33272,7 +33223,7 @@ oH
 oH
 aP
 oH
-dG
+NA
 od
 wR
 NZ
@@ -33283,7 +33234,7 @@ IJ
 Wy
 IJ
 ed
-yT
+ei
 oH
 oH
 oH
@@ -33336,7 +33287,7 @@ wR
 NZ
 lw
 ed
-yT
+ei
 oH
 wb
 oH
@@ -33434,7 +33385,7 @@ oH
 oH
 oH
 oH
-dG
+NA
 od
 Lm
 NZ
@@ -33445,7 +33396,7 @@ NZ
 Wy
 Lm
 ed
-yT
+ei
 oH
 UZ
 oH
@@ -33498,7 +33449,7 @@ Wy
 NZ
 AE
 ed
-yT
+ei
 oH
 aP
 oH
@@ -33596,7 +33547,7 @@ ON
 jv
 oH
 oH
-dG
+NA
 au
 au
 au
@@ -33607,7 +33558,7 @@ Hh
 au
 au
 au
-yT
+ei
 oH
 oH
 oH
@@ -33660,7 +33611,7 @@ NZ
 iE
 au
 au
-yT
+ei
 oH
 oH
 oH
@@ -33758,7 +33709,7 @@ ON
 ON
 oH
 oH
-nv
+eo
 Yh
 ti
 au
@@ -33769,7 +33720,7 @@ Yn
 au
 fv
 nb
-LH
+lf
 oH
 oH
 PY
@@ -33811,7 +33762,7 @@ DQ
 oT
 oT
 oT
-nv
+eo
 YS
 ti
 au
@@ -33822,7 +33773,7 @@ dE
 au
 fv
 nb
-LH
+lf
 oH
 oH
 oH
@@ -34084,14 +34035,14 @@ ON
 oH
 YI
 YI
-nv
-pr
-pr
-pr
-pr
-pr
-pr
-LH
+eo
+Ns
+Ns
+Ns
+Ns
+Ns
+Ns
+lf
 YI
 YI
 oT
@@ -34137,14 +34088,14 @@ oT
 oT
 YI
 YI
-nv
-pr
-pr
-pr
-pr
-pr
-pr
-LH
+eo
+Ns
+Ns
+Ns
+Ns
+Ns
+Ns
+lf
 YI
 YI
 oH
@@ -41246,7 +41197,7 @@ ON
 oH
 aP
 oH
-Uz
+Xc
 mb
 Nv
 XM
@@ -41742,7 +41693,7 @@ WI
 eC
 WI
 hY
-tu
+jX
 oH
 jv
 oH
@@ -42056,7 +42007,7 @@ oH
 oH
 oH
 jv
-Uz
+Xc
 mb
 lg
 eC
@@ -42552,7 +42503,7 @@ WI
 eC
 WI
 hY
-tu
+jX
 oH
 oH
 oH
@@ -43727,10 +43678,10 @@ Nm
 aP
 gK
 vh
-ct
-ct
-ct
-Tl
+JG
+JG
+JG
+Kc
 qj
 oH
 ca
