@@ -11943,12 +11943,6 @@
 "kJO" = (
 /turf/open/floor/carpet14_10/west,
 /area/taipei/theatre)
-"kKt" = (
-/obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/auto_turf/strata_grass/layer1{
-	light_range = .
-	},
-/area/taipei/atrium)
 "kKS" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -43114,7 +43108,7 @@ aWF
 nIY
 sIl
 iQS
-kKt
+mSG
 eAp
 dxP
 jEW
