@@ -70,22 +70,12 @@
 
 /datum/equipment_preset/usasf/crew/flight
 	name = "USASF Flight-Deck Crewman"
+	assignment = JOB_NAVY_SKITTLE
 	rank = JOB_NAVY_SKITTLE
 	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Ordnc"
+	role_comm_title = "Flight Crew"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/flight_crew
-
-/datum/equipment_preset/usasf/crew/flight/get_assignment(mob/living/carbon/human/new_human)
-	if(prob(20))
-		return "USASF Flight-Deck Ordnance Crewman"
-	if(prob(20))
-		return "USASF Flight-Deck Maintenance Crewman"
-	if(prob(20))
-		return "USASF Flight-Deck Fuel Crewman"
-	if(prob(20))
-		return "USASF Flight-Deck Safety Crewman"
-	return "USASF Flight-Deck Handler Crewman"
 
 #define USAF_ORDNANCE_CREW "USASF Flight-Deck Ordnance Crewman"
 #define USAF_MAINT_CREW "USASF Flight-Deck Maintenance Crewman"
