@@ -5,7 +5,7 @@
 	allow_additional = 1
 	scaled = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
-	gear_preset = /datum/equipment_preset/uscm/spec
+	gear_preset = /datum/equipment_preset/uscm/specialist_equipped
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are the very rare and valuable weapon expert</a>, trained to use special equipment. You can serve a variety of roles, so choose carefully."
 
 /datum/job/marine/specialist/set_spawn_positions(count)

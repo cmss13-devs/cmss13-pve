@@ -34,7 +34,6 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "f" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
 /obj/effect/decal/cleanable/blood,
 /obj/item/restraint/handcuffs/zip{
 	pixel_y = -12

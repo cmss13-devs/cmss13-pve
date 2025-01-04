@@ -1,0 +1,91 @@
+2024-12-01:
+  BonniePandora:
+  - bugfix: Lets the UPP heavy armour rig store rifle magazines and such
+  - rscadd: Adds the Mk-214 Tactical Atomic Demolition Munition, an alternative way
+      of nuking a site from the ground
+  - imageadd: Adds new sprites for the TADM, worn, loose & undeployed and deployed
+  DexterDude:
+  - bugfix: fixes dropship door direction
+2024-12-02:
+  AmoryBlaine, Zenith/Hybrisa PR:
+  - rscadd: Adds large quantity of new clothes and loadout presets
+  - rscdel: Removes all old colonist and survivor presets
+  - qol: GMside, easier organization of colonist props by 'civilian'
+  - balance: Balances props around PvE gameplay and probable usage.
+  - bugfix: Simplifies loadout RNG selection for UPP and UA colonists
+  - code_imp: Aforementioned preset code
+  - refactor: Aforementioned preset code
+  - imagedel: Unused vanilla legacy icons
+2024-12-08:
+  AndroBetel:
+  - balance: Reduced pistol calibers' AP values
+  BonniePandora:
+  - rscadd: M38 HEAP grenade rounds.
+  - rscadd: M51A BFAB grenade rounds
+  - rscadd: M108 Canister grenade rounds
+  - qol: HEDP & HSDP finally put the DP in their name with dual fuse functionality
+  - qol: Changed the M40 HSDP, CCDP & HIDP into their own discrete models instead
+      (M47 HSDP, M60 WPSI, M77 HIAM)
+  - qol: non-friendly claymores now have a much lower chance to detonate when attempting
+      to defuse them
+  - qol: The M60 WPSI has had it's smoke adjusted to be much more lethal, as you'd
+      expect white phosphorus smoke to be
+  - imageadd: Added new model_icons for the various new grenade designations
+  - imageadd: New active_state grenade icons added (Courtesy of Amory)
+  - imageadd: Added new colour-bands for the new grenade designations
+  - imageadd: New colour for the standard grenade box (Courtesy of Amory)
+  - soundadd: The grenade priming sound has been replaced with one that fits much
+      more in-line with the film.
+2024-12-15:
+  Amoryblaine:
+  - rscadd: Naval Infantry uniform
+2024-12-24:
+  Max-023:
+  - imageadd: Several new icons specifically for UPP/Pilot helmets for commonly used
+      garb items.
+  SpartanBobby:
+  - maptweak: Fixes wrong dropship Typhoon walls on Dropship Tornado
+  private-tristan:
+  - balance: PMC and RMC smartguns now use irradiated/holotarget 10x28mm instead of
+      snowflake SG bullets, meaning damage has also been increased to standard levels.
+  - balance: Terminator smartguns now also use irradiated 10x28mm, and do more damage
+      per shot.
+  - bugfix: PMC smartgunner loadout now properly spawns with its imager, allowing
+      IFF to be used.
+2024-12-27:
+  AmoryBlaine:
+  - rscadd: Two cowboy hats, two fedoras.
+  - rscdel: unused legacy hat icons.
+  BonniePandora:
+  - qol: Adjusts the OD limit for alcoholic drinks
+  - qol: Adjusts the buildup rate of damage from overdosing and critical overdosing
+      on alcohol
+  Ediblebomb:
+  - spellcheck: Removes the warning to CPR slower than you actually have to.
+  ILikeToGammon:
+  - balance: Increased GAU Multipurpose ammo damage by 50
+  - balance: Increased GAU Multipurpose ammo Penetration by 5
+  - balance: Changed GAU Multipurpose ammo bullet spread range from 3 to 2
+  - balance: Changed GAU Multipurpose ammo travelling time from default 10 seconds
+      to 5 seconds
+  - balance: Increased GAU Armor Piercing ammo damage by 50
+  - balance: Changed GAU Armor Piercing ammo travelling time to 6 seconds
+  - balance: Changed Mini Rocket travelling time to 4 seconds
+  private-tristan:
+  - bugfix: Chances Claim [Forecon] can now be properly selected by GMs
+2024-12-28:
+  AmoryBlaine:
+  - rscadd: New palettes, civilian binos redesign
+  - rscdel: Unused map variances
+2024-12-29:
+  AmoryBlaine:
+  - rscadd: overhaul of USCM gear presets, clothing, ect
+  - rscdel: PvP centric presets for marines
+  AndroBetel:
+  - rscadd: Wall leaning.
+  DexterDude:
+  - balance: Changes prime rolls to now work with anyone with 25 human hours
+  - qol: Tutorial no longer is suggested to new players
+  - qol: New players now have +2 weight between 0-5 hours and +1 weight for 5-8 hours.
+  mesnomer:
+  - config: define UPLOAD_LIMIT value doubled (10485760 to 20971520)

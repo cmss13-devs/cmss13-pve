@@ -210,9 +210,9 @@
 //MAR-40 AK CLONE //AK47 and FN FAL together as one.
 
 /obj/item/ammo_magazine/rifle/mar40
-	name = "\improper MAR magazine (7.62x39mm)"
-	desc = "A 7.62x39mm magazine for the MAR series of firearms."
-	caliber = "7.62x39mm"
+	name = "\improper MAR magazine (8.8x29mm)"
+	desc = "A 8.8x29mm magazine for the MAR series of firearms."
+	caliber = "8.8x29mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "mar40"
 	default_ammo = /datum/ammo/bullet/rifle/mar40
@@ -221,16 +221,16 @@
 	w_class = SIZE_MEDIUM
 
 /obj/item/ammo_magazine/rifle/mar40/extended
-	name = "\improper MAR extended magazine (7.62x39mm)"
-	desc = "A 7.62x39mm MAR magazine, this one carries more rounds than the average magazine."
+	name = "\improper MAR extended magazine (8.8x29mm)"
+	desc = "A 8.8x29mm magazine, this one carries more rounds than the average magazine."
 	max_rounds = 60
 	bonus_overlay = "mar40_ex"
 	icon_state = "mar40_extended"
 
 /obj/item/ammo_magazine/rifle/mar40/lmg
-	name = "\improper MAR drum magazine (7.62x39mm)"
-	desc = "A 7.62x39mm drum magazine for the MAR-50 LMG."
-	caliber = "7.62x39mm"
+	name = "\improper MAR drum magazine (8.8x29mm)"
+	desc = "A 8.8x29mm drum magazine for the MAR-50 LMG."
+	caliber = "8.8x29mm"
 	icon_state = "mar50"
 	max_rounds = 100
 	gun_type = /obj/item/weapon/gun/rifle/mar40/lmg
@@ -244,7 +244,7 @@
 	caliber = "5.56x45mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "m16"
-	default_ammo = /datum/ammo/bullet/rifle
+	default_ammo = /datum/ammo/bullet/rifle/m16
 	max_rounds = 20
 	gun_type = /obj/item/weapon/gun/rifle/m16
 	w_class = SIZE_MEDIUM
@@ -257,7 +257,6 @@
 	caliber = "5.56x45mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "m16"
-	default_ammo = /datum/ammo/bullet/rifle
 	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/rifle/m16
 	w_class = SIZE_MEDIUM
@@ -268,7 +267,7 @@
 	name = "\improper M16 AP magazine"
 	desc = "An AP 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 20 rounds."
 	caliber = "5.56x45mm"
-	default_ammo = /datum/ammo/bullet/rifle/ap
+	default_ammo = /datum/ammo/bullet/rifle/m16/ap
 	max_rounds = 20
 	gun_type = /obj/item/weapon/gun/rifle/m16
 	w_class = SIZE_MEDIUM
@@ -283,7 +282,7 @@
 	caliber = "7.62x51mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "ar10"
-	default_ammo = /datum/ammo/bullet/rifle
+	default_ammo = /datum/ammo/bullet/rifle/ar10
 	max_rounds = 20
 	gun_type = /obj/item/weapon/gun/rifle/ar10
 	w_class = SIZE_MEDIUM
@@ -438,6 +437,19 @@
 	default_ammo = /datum/ammo/bullet/rifle/holo_target/hunting
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
+//M20A
+
+/obj/item/ammo_magazine/rifle/m20a
+	name = "\improper M20A magazine (10x24mm)"
+	desc = "A 10mm assault rifle magazine."
+	caliber = "10x24mm"
+	icon_state = "m20a"
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 40
+	gun_type = /obj/item/weapon/gun/rifle/m20a
+	w_class = SIZE_MEDIUM
+	ammo_band_icon = "+m20a_band"
+	ammo_band_icon_empty = "+m20a_band_e"
 //-------------------------------------------------------
 // NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
 
