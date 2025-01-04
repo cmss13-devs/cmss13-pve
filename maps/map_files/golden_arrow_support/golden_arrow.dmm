@@ -10547,8 +10547,12 @@
 /area/golden_arrow/hangar)
 "Os" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/flamer/fuel{
-	pixel_y = 8
+/obj/item/storage/box/guncase/heavy/m4ra_pve{
+	pixel_y = 18
+	},
+/obj/item/storage/box/guncase/heavy/shotgun{
+	pixel_y = 6;
+	pixel_x = 9
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)

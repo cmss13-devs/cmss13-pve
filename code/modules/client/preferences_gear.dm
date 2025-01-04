@@ -1235,3 +1235,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM PT Shorts"
 	path = /obj/item/clothing/under/shorts/red/uscm
 	cost = 1
+
+/datum/gear/misc/minesweeper
+	display_name = "Minesweeper Game"
+	path = /obj/item/toy/minesweeper
+	cost = 2
