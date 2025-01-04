@@ -3043,7 +3043,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/attached_gun/grenade/mk1/unload_attachment(mob/user, reload_override = FALSE, drop_override = FALSE, loc_override = FALSE)
 	. = TRUE //Always uses special unloading.
 	if(breech_open)
-		to_chat(user, SPAN_WARNING("\The pump is covering the loading port! You must put it forward to take out grenades!"))
+		to_chat(user, SPAN_WARNING("\The [src]'s loading port is covered, put the pump forward! (use unique-action)"))
 		return
 	if(!current_rounds)
 		to_chat(user, SPAN_WARNING("It's empty!"))
