@@ -48,14 +48,16 @@ Backend Procs
 /obj/docking_port/stationary/marine_dropship/airlock/outer/Initialize(mapload)
 	. = ..()
 	var/obj/effect/projector/P = locate(/obj/effect/projector) in loc // its an odd way to piggyback off an existing system, but if you've messed up the projectors this will tell you (and you're hardly going to be making custom airlocks that often.)
-	if(!roundstart_template)
-		unregister()
 	if(P)
 		var/link_to_inner_loc = locate(x + P.vector_x, y + P.vector_y, z + P.vector_z)
 		link_to_inner = locate(/obj/docking_port/stationary/marine_dropship/airlock/inner) in link_to_inner_loc
 		link_to_inner.link_to_outer = src
 	else
 		WARNING("Outer Airlock Docking Port: [name] could not link to its inner counterpart, this is because the projector on its tile is not properly linked. THE AIRLOCK WILL NOT WORK.")
+	if(link_to_inner.roundstart_template)
+		unregister()
+	else
+		link_to_inner.update_outer_airlock(TRUE)
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/on_arrival(obj/docking_port/mobile/arriving_shuttle)
 	. = ..()
@@ -72,7 +74,7 @@ Backend Procs
 /obj/docking_port/stationary/marine_dropship/airlock/outer/on_departure(obj/docking_port/mobile/departing_shuttle)
 	. = ..()
 	if(!registered)
-		register()
+		register(TRUE)
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/get_inner_airlock_turfs()
 	// we want to ensure all the turfs are /turf/open/floor/hangar_airlock
@@ -231,6 +233,10 @@ Player Interactablility Procs
 		docked_mobile = get_docked()
 	else
 		docked_mobile = link_to_outer.get_docked()
+	if(!docked_mobile)
+		processing = FALSE
+		WARNING("No dropship to raise height with!")
+		return
 	omnibus_sound_play(lowered_dropship ? 'sound/machines/asrs_lowering.ogg' : 'sound/machines/asrs_raising.ogg', 60)
 	for(var/bideciseconds, bideciseconds <= 45, bideciseconds++)
 		if(lowered_dropship)
@@ -261,6 +267,10 @@ Player Interactablility Procs
 	if(invert)
 		disengaged_clamps = disengaged_clamps ? FALSE : TRUE
 	var/obj/docking_port/mobile/marine_dropship/docked_mobile = link_to_outer.get_docked()
+	if(!docked_mobile)
+		processing = FALSE
+		WARNING("No dropship to unclamp in [link_to_outer.name]!")
+		return
 	playsound(docked_mobile.return_center_turf(), 'sound/effects/dropship_flight_airlocked_start.ogg', 50, sound_range = docked_mobile.dheight)
 	sleep(3 SECONDS)
 	if(disengaged_clamps)
