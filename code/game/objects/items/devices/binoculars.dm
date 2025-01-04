@@ -14,6 +14,8 @@
 	throw_speed = SPEED_VERY_FAST
 	/// If FALSE won't change icon_state to a camo marine bino.
 	var/uses_camo = FALSE
+	var/zoom_offset = 11
+	var/view_range = 12
 
 
 	//matter = list("metal" = 50,"glass" = 50)
@@ -30,7 +32,7 @@
 	if(SEND_SIGNAL(user, COMSIG_BINOCULAR_ATTACK_SELF, src))
 		return
 
-	zoom(user, 11, 12)
+	zoom(user, zoom_offset, view_range)
 
 /obj/item/device/binoculars/dropped(/obj/item/item, mob/user)
 	. = ..()
@@ -421,6 +423,23 @@
 	else
 		action_icon_state = "designator_one_weapon"
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+//pve binocs
+/obj/item/device/binoculars/range/monocular
+	name = "tactical monocular"
+	desc = "A military-grade monocular equipped with rangefinding capabilities. Capable of withstanding a pretty hefty beating. Ctrl + Click turf to acquire it's coordinates. Ctrl + Click rangefinder to stop lasing."
+	icon_state = "advanced_monocular"
+	uses_camo = FALSE
+	range_laser_overlay = FALSE
+	zoom_offset = 8
+	view_range = 9
+
+/obj/item/device/binoculars/range/designator/sergeant
+	name = "tactical binoculars"
+	desc = "A laser designator issued to USCM command elements. It has two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes."
+	icon_state = "advanced_binoculars"
+	range_laser_overlay = "adv_laser_range"
+	cas_laser_overlay = "adv_laser_cas"
+	uses_camo = FALSE
 
 //IMPROVED LASER DESIGNATER, faster cooldown, faster target acquisition, can be found only in scout spec kit
 /obj/item/device/binoculars/range/designator/scout
