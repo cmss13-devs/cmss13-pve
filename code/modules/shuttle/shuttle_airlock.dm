@@ -9,12 +9,12 @@ Docking Port Definitions
 	var/lowered_dropship = FALSE
 	var/open_outer_airlock = FALSE
 	var/disengaged_clamps = FALSE
-	var/obj/docking_port/stationary/marine_dropship/airlock/outer/link_to_outer
+	var/obj/docking_port/stationary/marine_dropship/airlock/outer/linked_outer
 	var/floodlight_color = "#dae2ff"
 	var/obj/effect/hangar_airlock/inner/inner_airlock
 	var/obj/effect/hangar_airlock/outer/outer_airlock
-	var/list/dropship_height_masks = list()
-	var/list/floodlights = list()
+	var/list/dropship_height_masks = null
+	var/list/floodlights = null
 	var/list/inner_airlock_turfs = null
 	var/list/outer_airlock_turfs = null
 	auto_open = TRUE
@@ -31,7 +31,7 @@ Docking Port Definitions
 /obj/docking_port/stationary/marine_dropship/airlock/outer
 	name = "Hangar Airlock Outer"
 	id = GENERIC_A_O
-	var/obj/docking_port/stationary/marine_dropship/airlock/inner/link_to_inner
+	var/obj/docking_port/stationary/marine_dropship/airlock/inner/linked_inner
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/golden_arrow_one
 	name = "Golden Arrow Hangar Airlock 1 Outer"
@@ -47,52 +47,37 @@ Backend Procs
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/Initialize(mapload)
 	. = ..()
-	var/obj/effect/projector/P = locate(/obj/effect/projector) in loc // its an odd way to piggyback off an existing system, but if you've messed up the projectors this will tell you (and you're hardly going to be making custom airlocks that often.)
-	if(P)
-		var/link_to_inner_loc = locate(x + P.vector_x, y + P.vector_y, z + P.vector_z)
-		link_to_inner = locate(/obj/docking_port/stationary/marine_dropship/airlock/inner) in link_to_inner_loc
-		link_to_inner.link_to_outer = src
-	else
-		WARNING("Outer Airlock Docking Port: [name] could not link to its inner counterpart, this is because the projector on its tile is not properly linked. THE AIRLOCK WILL NOT WORK.")
-	if(link_to_inner.roundstart_template)
+	var/obj/effect/projector/projector_proxy = locate(/obj/effect/projector) in loc // its an odd way to piggyback off an existing system, but if you've messed up the projectors this will tell you (and you're hardly going to be making custom airlocks that often.)
+	if(projector_proxy)
+		linked_inner = locate(/obj/docking_port/stationary/marine_dropship/airlock/inner) in locate(x + projector_proxy.vector_x, y + projector_proxy.vector_y, z + projector_proxy.vector_z)
+		if(!linked_inner)
+			WARNING("[name] could not link to its inner counterpart (likely due to incorrectly offset projectors). THE AIRLOCK WILL NOT WORK.")
+			return
+		linked_inner.linked_outer = src
+	if(linked_inner.roundstart_template)
 		unregister()
 	else
-		link_to_inner.update_outer_airlock(TRUE)
+		addtimer(CALLBACK(linked_inner, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_outer_airlock)), 0.1 SECONDS)
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/on_arrival(obj/docking_port/mobile/arriving_shuttle)
 	. = ..()
 	if(registered)
 		unregister()
-	link_to_inner.disengaged_clamps = FALSE
-	link_to_inner.lowered_dropship = TRUE
-	SSfz_transitions.fire()
-	for(var/turf/T in arriving_shuttle.return_turfs())
-		if(istype(T, /turf/open/shuttle) && T.clone)
-			T.clone.layer = 1.93
-			T.clone.color = "#000000"
+	linked_inner.disengaged_clamps = FALSE
+	linked_inner.lowered_dropship = TRUE
+	for(var/turf/open/shuttle/shuttle_turf in arriving_shuttle.return_turfs())
+		if(shuttle_turf.clone)
+			shuttle_turf.clone.layer = 1.93
+			shuttle_turf.clone.color = "#000000"
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/on_departure(obj/docking_port/mobile/departing_shuttle)
 	. = ..()
 	if(!registered)
 		register(TRUE)
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/get_inner_airlock_turfs()
-	// we want to ensure all the turfs are /turf/open/floor/hangar_airlock
-	inner_airlock_turfs = list()
-	for(var/turf/T in return_turfs())
-		if(istype(T, /turf/open/floor/hangar_airlock/inner) || istype(T, /turf/open/shuttle) || istype(T, /turf/closed/shuttle))
-			new /obj/effect/hangar_airlock/height_mask(T)
-			inner_airlock_turfs += T
-			// as clones are generated after other map objects are spawned, the most intelligent way to locate actual objects (the airlock effects themselves) is by doing this.
-			if(T.contents.len >= 1)
-				if(!istype(T.contents[1],/atom/movable/clone))
-					// this is (hopefully) only passed through once per docking port so we can afford to be somewhat uneconomical,
-					for(var/A in T.contents)
-						if(istype(A, /obj/effect/hangar_airlock/inner))
-							inner_airlock = A
-
 /obj/docking_port/stationary/marine_dropship/airlock/inner/Initialize()
 	. = ..()
+	dropship_height_masks = list()
 	if(!roundstart_template)
 		unregister()
 
@@ -102,38 +87,41 @@ Backend Procs
 		unregister()
 	auto_open = FALSE // when the dropship that is originally loaded is auto_opened, any further landing dropships will have people onboard to decide to whether or not they want the doors open (which stops people charging out the opened doors when the airlocks are open)
 	var/list/dropship_turfs = arriving_shuttle.return_turfs()
-	for(var/turf/dropship_turf in dropship_turfs)
+	for(var/turf/dropship_turf as anything in dropship_turfs)
 		if(istype(dropship_turf, /turf/open/shuttle) || istype(dropship_turf, /turf/closed/shuttle))
 			var/obj/effect/hangar_airlock/height_mask/dropship/dropship_height_mask = new /obj/effect/hangar_airlock/height_mask/dropship(dropship_turf)
 			dropship_height_masks += dropship_height_mask
 			continue
-		if(istype(dropship_turf, /turf/open/floor/hangar_airlock/inner) && dropship_turf.contents.len) // although checking contents[1] is a bit sloppy, this avoids a lot of recurrances of the for loop (as clones are not objects and are added to the contents list after real objects.)
-			if(istype(dropship_turf.contents[1], /obj))
-				for(var/dropship_obj in dropship_turf.contents)
-					if(istype(dropship_obj, /obj/structure/shuttle/part))
-						var/obj/structure/dropship_part = dropship_obj
-						var/obj/effect/hangar_airlock/height_mask/dropship/dropship_part_height_mask = new /obj/effect/hangar_airlock/height_mask/dropship(dropship_turf)
-						dropship_part_height_mask.icon = dropship_part.icon
-						dropship_part_height_mask.icon_state = dropship_part.icon_state
-						dropship_part_height_mask.color = "#000000"
-						dropship_height_masks += dropship_part_height_mask
+		if(istype(dropship_turf, /turf/open/floor/hangar_airlock/inner))
+			var/obj/structure/shuttle/part/dropship_part = locate(/obj/structure/shuttle/part) in dropship_turf.contents
+			if(!dropship_part)
+				continue
+			var/obj/effect/hangar_airlock/height_mask/dropship/dropship_part_height_mask = new /obj/effect/hangar_airlock/height_mask/dropship(dropship_turf)
+			dropship_part_height_mask.icon = dropship_part.icon
+			dropship_part_height_mask.icon_state = dropship_part.icon_state
+			dropship_part_height_mask.color = "#000000"
+			dropship_height_masks += dropship_part_height_mask
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/get_inner_airlock_turfs()
+	inner_airlock_turfs = list()
+	for(var/turf/turf as anything in return_turfs())
+		if(!istype(turf, /turf/open/floor/hangar_airlock/inner) && !istype(turf, /turf/open/shuttle) && !istype(turf, /turf/closed/shuttle))
+			continue
+		new /obj/effect/hangar_airlock/height_mask(turf)
+		inner_airlock_turfs += turf
+		if(turf.contents.len && !istype(turf.contents[1], /atom/movable/clone))
+			for(var/obj/effect/hangar_airlock/inner/hangar_airlock in turf.contents)
+				inner_airlock = hangar_airlock
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/get_outer_airlock_turfs()
-	// we want to ensure all the turfs are /turf/open/floor/hangar_airlock
 	outer_airlock_turfs = list()
-	var/turfs_in_bounds = link_to_outer.return_turfs()
-	for(var/turf/T in turfs_in_bounds)
-		if(istype(T, /turf/open/floor/hangar_airlock/outer))
-			outer_airlock_turfs += T
-			// as clones are generated after other map objects are spawned, the most intelligent way to locate actual objects (the airlock effects themselves) is by doing this.
-			if(T.contents.len >= 1)
-				if(istype(T.contents[1],/atom/movable/clone))
-					continue
-				// this is (hopefully) only passed through once per docking port so we can afford to be somewhat uneconomical,
-				for(var/A in T.contents)
-					if(istype(A, /obj/effect/hangar_airlock/outer))
-						outer_airlock = A
-
+	for(var/turf/turf as anything in linked_outer.return_turfs())
+		if(!istype(turf, /turf/open/floor/hangar_airlock/outer) && !istype(turf, /turf/open/shuttle) && !istype(turf, /turf/closed/shuttle))
+			continue
+		outer_airlock_turfs += turf
+		if(turf.contents.len && !istype(turf.contents[1], /atom/movable/clone))
+			for(var/obj/effect/hangar_airlock/outer/hangar_airlock in turf.contents)
+				outer_airlock = hangar_airlock
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_airlock_transition(airlock_type, open, airlock_turfs, obj/effect/hangar_airlock/airlock, end_decisecond)
 	var/deciseconds = 0
@@ -147,7 +135,7 @@ Backend Procs
 	for(deciseconds=1, deciseconds<end_decisecond, deciseconds++)
 		if(!(deciseconds % 10))
 			airlock.icon_state = "[airlock_type]_[transition]_[deciseconds/10]s"
-		for(var/turf/open/floor/hangar_airlock/T in airlock_turfs)
+		for(var/turf/open/floor/hangar_airlock/T as anything in airlock_turfs)
 			if(deciseconds == T.frame_threshold)
 				T.open = open
 				for(var/atom/movable/AM in T.contents)
@@ -161,7 +149,7 @@ Backend Procs
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_sound_play(sound_effect, volume)
 	playsound(src, sound_effect, volume, sound_range = 15)
-	playsound(link_to_outer, sound_effect, volume, sound_range = 15)
+	playsound(linked_outer, sound_effect, volume, sound_range = 15)
 
 /*#############################################################################
 Player Interactablility Procs
@@ -176,27 +164,27 @@ Player Interactablility Procs
 	if(!outer_airlock_turfs)
 		get_outer_airlock_turfs()
 	if(playing_airlock_alarm)
+		var/atom/movable/lighting_mask/rotating_toggleable/activating_rotating_light
 		var/obj/structure/machinery/floodlight/landing/activating_floodlight
-		for(activating_floodlight in floodlights)
+		for(activating_floodlight as anything in floodlights)
 			sleep(1.5 SECONDS)
 			QDEL_NULL(activating_floodlight.static_light)
 			activating_floodlight.light_system = MOVABLE_LIGHT
 			floodlight_color = activating_floodlight.light_color
 			activating_floodlight.set_light(10, 2, LIGHT_COLOR_BLUE, /atom/movable/lighting_mask/rotating_toggleable)
 			omnibus_sound_play('sound/machines/switch.ogg', 60)
-		var/atom/movable/lighting_mask/rotating_toggleable/activating_rotating_light
-		for(activating_floodlight in floodlights)
+		for(activating_floodlight as anything in floodlights)
 			sleep(0.5 SECONDS)
 			activating_rotating_light = activating_floodlight.light.our_mask
 			activating_rotating_light.toggle(TRUE)
 	else
-		var/obj/structure/machinery/floodlight/landing/deactivating_floodlight
 		var/atom/movable/lighting_mask/rotating_toggleable/deactivating_rotating_light
-		for(deactivating_floodlight in floodlights)
+		var/obj/structure/machinery/floodlight/landing/deactivating_floodlight
+		for(deactivating_floodlight as anything in floodlights)
 			sleep(1.5 SECONDS)
 			deactivating_rotating_light = deactivating_floodlight.light.our_mask
 			deactivating_rotating_light.toggle(FALSE)
-		for(deactivating_floodlight in floodlights)
+		for(deactivating_floodlight as anything in floodlights)
 			sleep(0.5 SECONDS)
 			QDEL_NULL(deactivating_floodlight.light)
 			deactivating_floodlight.light_system = STATIC_LIGHT
@@ -211,7 +199,7 @@ Player Interactablility Procs
 		open_inner_airlock = open_inner_airlock ? FALSE : TRUE
 	if(!inner_airlock_turfs)
 		get_inner_airlock_turfs()
-	var/obj/effect/projector/projector_type = locate(/obj/effect/projector) in link_to_outer.loc
+	var/obj/effect/projector/projector_type = locate(/obj/effect/projector) in linked_outer.loc
 	if(open_inner_airlock)
 		SSfz_transitions.toggle_selective_update(open_inner_airlock, projector_type) // start updating the projectors
 		omnibus_airlock_transition("inner", TRUE, inner_airlock_turfs, inner_airlock, 50)
@@ -228,22 +216,24 @@ Player Interactablility Procs
 		get_inner_airlock_turfs()
 	if(!outer_airlock_turfs)
 		get_outer_airlock_turfs()
+
 	var/obj/docking_port/mobile/docked_mobile
 	if(lowered_dropship)
 		docked_mobile = get_docked()
 	else
-		docked_mobile = link_to_outer.get_docked()
+		docked_mobile = linked_outer.get_docked()
 	if(!docked_mobile)
 		processing = FALSE
 		WARNING("No dropship to raise height with!")
 		return
+
 	omnibus_sound_play(lowered_dropship ? 'sound/machines/asrs_lowering.ogg' : 'sound/machines/asrs_raising.ogg', 60)
 	for(var/bideciseconds, bideciseconds <= 45, bideciseconds++)
 		if(lowered_dropship)
 			for(var/obj/effect/hangar_airlock/height_mask/dropship/transitioning_height_mask in dropship_height_masks)
 				transitioning_height_mask.alpha += 3
 		sleep(2 DECISECONDS)
-	docked_mobile.initiate_docking(lowered_dropship ? link_to_outer : src)
+	docked_mobile.initiate_docking(lowered_dropship ? linked_outer : src)
 	for(var/obj/effect/hangar_airlock/height_mask/qdeling_height_mask in dropship_height_masks)
 		dropship_height_masks -= qdeling_height_mask
 		qdel(qdeling_height_mask)
@@ -266,11 +256,12 @@ Player Interactablility Procs
 	processing = TRUE
 	if(invert)
 		disengaged_clamps = disengaged_clamps ? FALSE : TRUE
-	var/obj/docking_port/mobile/marine_dropship/docked_mobile = link_to_outer.get_docked()
+	var/obj/docking_port/mobile/marine_dropship/docked_mobile = linked_outer.get_docked()
 	if(!docked_mobile)
 		processing = FALSE
-		WARNING("No dropship to unclamp in [link_to_outer.name]!")
+		WARNING("No dropship to unclamp in [linked_outer.name]!")
 		return
+
 	playsound(docked_mobile.return_center_turf(), 'sound/effects/dropship_flight_airlocked_start.ogg', 50, sound_range = docked_mobile.dheight)
 	sleep(3 SECONDS)
 	if(disengaged_clamps)
@@ -404,7 +395,7 @@ Airlock Turf Interactability Procs
 		qdel(AM)
 
 /*#############################################################################
-Instanced to Defined Turf Definitions (I hate ScrapeAway edition)
+Turf Definitions From Instances
 #############################################################################*/
 
 /turf/open/floor/almayer/plate/hangar_1

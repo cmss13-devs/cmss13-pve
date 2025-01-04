@@ -284,20 +284,12 @@
 	ai_silent_announcement("Dropship '[name]' departing.")
 
 /obj/docking_port/mobile/marine_dropship/proc/dropship_freefall()
-	// this prevents atoms from being called more than once as the proc works it way through the turfs (some may be thrown onto a turf that hasn't been called yet)
-	var/list/affected_mobs = list()
-	var/list/affected_items = list()
-	for(var/area/internal_area in shuttle_areas)
-		for(var/turf/internal_turf in internal_area)
-			for(var/mob/living/M in internal_turf)
-				affected_mobs += M
-			for(var/obj/item/I in internal_turf)
-				affected_items += I
+	var/list/affected_list = turbulence_sort_affected()
 
-	for(var/mob/living/affected_mob in affected_mobs)
+	for(var/mob/living/affected_mob as anything in affected_list["mobs"])
 		to_chat(affected_mob, SPAN_DANGER("The dropship jolts violently as it enters freefall!"))
-		shake_camera(affected_mob, 6 SECONDS, 1)
-		shake_camera(affected_mob, 16 SECONDS, 1)
+		shake_camera(affected_mob, 10 SECONDS, 1)
+		shake_camera(affected_mob, 25 SECONDS, 1)
 		if(!affected_mob.buckled)
 			affected_mob.KnockDown(16)
 			affected_mob.throw_random_direction(2, spin = TRUE)
@@ -308,11 +300,7 @@
 				var/obj/limb/fracturing_limb = affected_human.get_limb(pick(ALL_LIMBS))
 				fracturing_limb.fracture(100)
 
-	for(var/obj/item/affected_item in affected_items)
-		affected_item.visible_message(SPAN_DANGER("[affected_item] goes flying upwards!"))
-		affected_item.throwforce *= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
-		affected_item.throw_random_direction(2, spin = TRUE)
-		affected_item.throwforce /= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
+	turbulence_item_handle(affected_list["items"])
 
 /obj/docking_port/mobile/marine_dropship/proc/turbulence()
 	if(!in_flight())
@@ -323,17 +311,9 @@
 	if(!prob(DROPSHIP_TURBULENCE_PROBABILITY))
 		return
 
-	// this prevents atoms from being called more than once as the proc works it way through the turfs (some may be thrown onto a turf that hasn't been called yet)
-	var/list/affected_mobs = list()
-	var/list/affected_items = list()
-	for(var/area/internal_area in shuttle_areas)
-		for(var/turf/internal_turf in internal_area)
-			for(var/mob/living/M in internal_turf)
-				affected_mobs += M
-			for(var/obj/item/I in internal_turf)
-				affected_items += I
+	var/list/affected_list = turbulence_sort_affected()
 
-	for(var/mob/living/affected_mob in affected_mobs)
+	for(var/mob/living/affected_mob as anything in affected_list["mobs"])
 		to_chat(affected_mob, SPAN_DANGER("The dropship jolts violently!"))
 		shake_camera(affected_mob, DROPSHIP_TURBULENCE_PERIOD, 1)
 		if(!affected_mob.buckled && affected_mob.m_intent == MOVE_INTENT_RUN && prob(DROPSHIP_TURBULENCE_GRIPLOSS_PROBABILITY))
@@ -345,11 +325,26 @@
 				var/obj/limb/fracturing_limb = affected_human.get_limb(pick(ALL_LIMBS))
 				fracturing_limb.fracture(100)
 
-	for(var/obj/item/affected_item in affected_items)
+	turbulence_item_handle(affected_list["items"])
+
+/obj/docking_port/mobile/marine_dropship/proc/turbulence_item_handle(affected_items) // the logic for turbulence and freefall, when handling items, is equivelant
+	for(var/obj/item/affected_item as anything in affected_items)
 		affected_item.visible_message(SPAN_DANGER("[affected_item] goes flying upwards!"))
 		affected_item.throwforce *= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
 		affected_item.throw_random_direction(2, spin = TRUE)
 		affected_item.throwforce /= DROPSHIP_TURBULENCE_THROWFORCE_MULTIPLIER
+
+/obj/docking_port/mobile/marine_dropship/proc/turbulence_sort_affected()
+	// this prevents atoms from being called more than once as the proc works it way through the turfs (some may be thrown onto a turf that hasn't been called yet)
+	var/list/affected_mobs = list()
+	var/list/affected_items = list()
+	for(var/area/internal_area in shuttle_areas)
+		for(var/turf/internal_turf in internal_area)
+			for(var/mob/living/M in internal_turf)
+				affected_mobs += M
+			for(var/obj/item/I in internal_turf)
+				affected_items += I
+	return list("mobs" = affected_mobs, "items" = affected_items)
 
 /obj/docking_port/stationary/marine_dropship
 	dir = NORTH

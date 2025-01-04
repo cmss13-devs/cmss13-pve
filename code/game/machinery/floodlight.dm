@@ -94,22 +94,24 @@
 
 /obj/structure/machinery/floodlight/landing/airlock
 
-	var/hangar_dock_path = /obj/docking_port/stationary/marine_dropship/airlock/inner
+	var/linked_inner_id = null
+	var/obj/docking_port/stationary/marine_dropship/airlock/inner/linked_inner = null
 
 /obj/structure/machinery/floodlight/landing/airlock/Initialize(mapload, ...)
 	. = ..()
-	var/obj/docking_port/stationary/marine_dropship/airlock/inner/hangar_dock = locate(hangar_dock_path)
-	if(hangar_dock)
-		hangar_dock.floodlights += src
+	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_port in SSshuttle.stationary)
+		if(inner_port.id == linked_inner_id)
+			linked_inner = inner_port
+			linked_inner.floodlights += src
+			break
 
 /obj/structure/machinery/floodlight/landing/airlock/Destroy()
-	var/obj/docking_port/stationary/marine_dropship/airlock/inner/hangar_dock = locate(hangar_dock_path)
-	if(hangar_dock)
-		hangar_dock.floodlights -= src
+	if(linked_inner)
+		linked_inner.floodlights -= src
 	. = ..()
 
 /obj/structure/machinery/floodlight/landing/airlock/golden_arrow_one
-	hangar_dock_path = /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one
+	linked_inner = GOLDEN_ARROW_A1_I
 
 /obj/structure/machinery/floodlight/landing/airlock/golden_arrow_two
-	hangar_dock_path = /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_two
+	linked_inner = GOLDEN_ARROW_A2_I

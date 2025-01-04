@@ -414,7 +414,7 @@
 	if(istype(docked_port, /obj/docking_port/stationary/marine_dropship/airlock))
 		if(istype(docked_port, /obj/docking_port/stationary/marine_dropship/airlock/outer))
 			var/obj/docking_port/stationary/marine_dropship/airlock/outer/outer_airlock = docked_port
-			active_airlock_dock = outer_airlock.link_to_inner
+			active_airlock_dock = outer_airlock.linked_inner
 		else
 			active_airlock_dock = docked_port
 		.["is_airlocked"] = TRUE
