@@ -140,3 +140,8 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 	desc = "It is a machine that pumps fuel around the ship."
 	invisibility = 101
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/structure/blocker/invisible_wall/directional
+	name = "directional blocker"
+	icon_state = "invisible_wall_directional"
+	flags_atom = ON_BORDER
