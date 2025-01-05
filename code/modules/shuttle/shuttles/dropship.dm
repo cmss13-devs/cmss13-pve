@@ -288,8 +288,8 @@
 
 	for(var/mob/living/affected_mob as anything in affected_list["mobs"])
 		to_chat(affected_mob, SPAN_DANGER("The dropship jolts violently as it enters freefall!"))
-		shake_camera(affected_mob, 10 SECONDS, 1)
-		shake_camera(affected_mob, 25 SECONDS, 1)
+		shake_camera(affected_mob, DROPSHIP_TURBULENCE_PERIOD, 1)
+		shake_camera(affected_mob, DROPSHIP_TURBULENCE_PERIOD * 3, 1)
 		if(!affected_mob.buckled)
 			affected_mob.KnockDown(16)
 			affected_mob.throw_random_direction(2, spin = TRUE)

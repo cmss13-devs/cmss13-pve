@@ -238,6 +238,17 @@
 #define DROPSHIP_TURBULENCE_PROBABILITY 50
 #define DROPSHIP_TURBULENCE_BONEBREAK_PROBABILITY 10
 
+//Dropship Airlocks
+#define DROPSHIP_AIRLOCK_DECLAMP_PERIOD 3 SECONDS // tied to the 'sound/effects/dropship_flight_airlocked_start.ogg' sfx
+#define DROPSHIP_AIRLOCK_HEIGHT_TRANSITION 9 SECONDS // tied to 'sound/machines/asrs_lowering.ogg' & 'sound/machines/asrs_raising.ogg' sfx
+#define DROPSHIP_AIRLOCK_FLOODLIGHT_TRANSITION 1.5 SECONDS // quickly compounded by the amount of floodlights
+#define DROPSHIP_AIRLOCK_TRANSITION_PERIOD 5 SECONDS // tied to ''sound/machines/centrifuge.ogg' & the animations of the dropship airlocks
+#define DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT x + DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT_X, y + DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT_Y, z // for readability
+#define DROPSHIP_AIRLOCK_BLOCK locate(DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT), locate(x - DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT_X, y - DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT_Y, z) // for readability
+#define DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT_X -7 // unlikely to change, still helpful in readability
+#define DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT_Y -12 // unlikely to change, still helpful in readability
+#define DROPSHIP_AIRLOCK_TILE_RANGE_FROM_CENTRE 11 // what tile range (not including the centre dock port tile) would you search to encompass all of the airlock
+
 //=================================================
 #define HOSTILE_STANCE_IDLE 1
 #define HOSTILE_STANCE_ALERT 2

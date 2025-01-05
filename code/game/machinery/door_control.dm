@@ -265,3 +265,32 @@
 /obj/structure/machinery/door_control/cl/quarter/windows
 	name = "Quarter Windows Shutters"
 	id = "cl_quarter_windows"
+
+/obj/structure/machinery/door_control/dropship_airlock
+	name = "emergency hatch release"
+	var/linked_inner_id = null
+	var/obj/docking_port/stationary/marine_dropship/airlock/inner/linked_inner = null
+
+/obj/structure/machinery/door_control/dropship_airlock/Initialize(mapload, ...)
+	. = ..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/machinery/door_control/dropship_airlock/LateInitialize()
+	. = ..()
+	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock as anything in GLOB.dropship_airlock_inners)
+		if(linked_inner_id == inner_airlock.id)
+			linked_inner = inner_airlock
+			linked_inner.door_controls += src
+
+/obj/structure/machinery/door_control/dropship_airlock/Destroy()
+	if(linked_inner)
+		linked_inner.door_controls -= src
+	. = ..()
+
+/obj/structure/machinery/door_control/dropship_airlock/use_button(mob/living/user, force)
+	if(linked_inner.open_outer_airlock)
+		to_chat(user, SPAN_WARNING("Locked out while the outer airlock is open."))
+		flick(initial(icon_state) + "-denied",src)
+		return
+	. = ..()
+

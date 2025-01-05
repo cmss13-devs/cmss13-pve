@@ -99,19 +99,31 @@
 
 /obj/structure/machinery/floodlight/landing/airlock/Initialize(mapload, ...)
 	. = ..()
-	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_port in SSshuttle.stationary)
-		if(inner_port.id == linked_inner_id)
-			linked_inner = inner_port
+	QDEL_NULL(static_light)
+	light_system = MOVABLE_LIGHT
+	set_light(10, 2, LIGHT_COLOR_BLUE, /atom/movable/lighting_mask/rotating_toggleable)
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/machinery/floodlight/landing/airlock/LateInitialize()
+	. = ..()
+	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock as anything in GLOB.dropship_airlock_inners)
+		if(linked_inner_id == inner_airlock.id)
+			linked_inner = inner_airlock
 			linked_inner.floodlights += src
-			break
 
 /obj/structure/machinery/floodlight/landing/airlock/Destroy()
 	if(linked_inner)
 		linked_inner.floodlights -= src
 	. = ..()
 
+/obj/structure/machinery/floodlight/landing/airlock/proc/toggle_rotating()
+	if(istype(light.our_mask, /atom/movable/lighting_mask/rotating_toggleable))
+		var/atom/movable/lighting_mask/rotating_toggleable/rotating_mask = light.our_mask
+		playsound(src, 'sound/machines/switch.ogg', 60, sound_range = 15)
+		rotating_mask.toggle()
+
 /obj/structure/machinery/floodlight/landing/airlock/golden_arrow_one
-	linked_inner = GOLDEN_ARROW_A1_I
+	linked_inner_id = GOLDEN_ARROW_A1_I
 
 /obj/structure/machinery/floodlight/landing/airlock/golden_arrow_two
-	linked_inner = GOLDEN_ARROW_A2_I
+	linked_inner_id = GOLDEN_ARROW_A2_I

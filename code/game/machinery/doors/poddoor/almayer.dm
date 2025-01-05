@@ -61,3 +61,31 @@
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor
 	density = TRUE
 	opacity = TRUE
+
+/obj/structure/machinery/door/poddoor/almayer/airlock
+	density = TRUE
+	opacity = TRUE
+	unacidable = TRUE
+	indestructible = TRUE
+	var/linked_inner_id = null
+	var/obj/docking_port/stationary/marine_dropship/airlock/inner/linked_inner = null
+
+/obj/structure/machinery/door/poddoor/almayer/airlock/Initialize()
+	. = ..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/machinery/door/poddoor/almayer/airlock/LateInitialize()
+	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock as anything in GLOB.dropship_airlock_inners)
+		if(linked_inner_id == inner_airlock.id)
+			linked_inner = inner_airlock
+			linked_inner.poddoors += src
+
+/obj/structure/machinery/door/poddoor/almayer/airlock/Destroy()
+	if(linked_inner)
+		linked_inner.poddoors -= src
+	. = ..()
+
+/obj/structure/machinery/door/poddoor/almayer/airlock/open()
+	if(linked_inner.open_outer_airlock)
+		return
+	. = ..()
