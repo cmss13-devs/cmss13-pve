@@ -21,6 +21,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	"sterile",
 	"whitefull"
 ))
+
 #define MAX_SAVE_SLOTS 20
 
 /datum/preferences
