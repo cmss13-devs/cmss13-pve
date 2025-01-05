@@ -1,4 +1,4 @@
 author: "AmoryBlaine"
 delete-after: True
 changes:
-  - bugfix: "opacity on secure door"
+  - rscadd: "M20A racks, unloaded variant of M20A"
