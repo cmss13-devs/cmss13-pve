@@ -36,7 +36,7 @@
 //more specialised stuff
 /proc/sanitize_gender(gender,neuter=0,plural=0, default="male")
 	switch(gender)
-		if(MALE, FEMALE)return gender
+		if(MALE, FEMALE, NONBINARY)return gender
 		if(NEUTER)
 			if(neuter) return gender
 			else return default

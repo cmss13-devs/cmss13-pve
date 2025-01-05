@@ -268,7 +268,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					return
 	if(!ooccolor)
 		ooccolor = CONFIG_GET(string/ooc_color_normal)
-	gender = pick(MALE, FEMALE)
+	gender = pick(MALE, FEMALE, NONBINARY)
 	real_name = random_name(gender)
 	gear = list()
 
@@ -347,7 +347,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 			dat += "<h2><b><u>Physical Information:</u></b>"
 			dat += "<a href='?_src_=prefs;preference=all;task=random'>&reg;</A></h2>"
 			dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'><b>[age]</b></a><br>"
-			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'><b>[gender == MALE ? "Male" : "Female"]</b></a><br>"
+			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender;task=input'><b>[char_gend]</b></a><br>"
 			dat += "<b>Skin Color:</b> <a href='?_src_=prefs;preference=skin_color;task=input'><b>[skin_color]</b></a><br>"
 			dat += "<b>Body Size:</b> <a href='?_src_=prefs;preference=body_size;task=input'><b>[body_size]</b></a><br>"
 			dat += "<b>Body Muscularity:</b> <a href='?_src_=prefs;preference=body_type;task=input'><b>[body_type]</b></a><br>"
