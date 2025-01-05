@@ -1,735 +1,5 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"af" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "34"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"aP" = (
-/obj/structure/stairs/perspective,
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"bm" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "21"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"cK" = (
-/obj/effect/attach_point/crew_weapon/midway{
-	attach_id = 7
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"dd" = (
-/turf/open/shuttle/dropship/light_grey_bottom_right,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"dB" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "7"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"dD" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "22"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"dE" = (
-/turf/closed/shuttle/midway{
-	icon_state = "36"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"eu" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "2"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"eS" = (
-/obj/effect/attach_point/fuel/midway{
-	pixel_x = -32;
-	attach_id = 11;
-	dir = 1
-	},
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "33"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"fF" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"gw" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "46"
-	},
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "41"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"hl" = (
-/turf/closed/shuttle/midway{
-	icon_state = "24"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"hL" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "95a"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"hO" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "65"
-	},
-/obj/effect/attach_point/weapon/midway/right_wing,
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"if" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "27"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"kL" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_y = 26;
-	pixel_x = -8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"ls" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "35"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"lC" = (
-/turf/closed/shuttle/midway{
-	icon_state = "104"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"mh" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "8"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"mA" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"mE" = (
-/obj/structure/shuttle/part/midway/transparent,
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"mG" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "41"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"od" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "89b"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"oy" = (
-/obj/structure/bed/chair/dropship/passenger/folded{
-	pixel_y = 8;
-	buckling_y = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"oB" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/obj/structure/machinery/light/double{
-	dir = 4;
-	pixel_y = -5
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"oG" = (
-/obj/structure/shuttle/part/midway/gunpod_prop,
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"ro" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "80"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"rq" = (
-/turf/closed/shuttle/midway{
-	icon_state = "77"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"rr" = (
-/turf/closed/shuttle/midway{
-	icon_state = "103"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"rR" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "32"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"sl" = (
-/turf/closed/shuttle/midway{
-	icon_state = "31"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"ti" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "86b"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"tP" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "6"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"tT" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/obj/structure/machinery/light/double{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"ul" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "40"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"us" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = 2
-	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4{
-	id = "aft_door"
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"ut" = (
-/obj/structure/shuttle/part/midway/transparent/nosecone{
-	icon_state = "102"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"ux" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "89a"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"vD" = (
-/obj/structure/stairs/perspective{
-	dir = 1;
-	icon_state = "p_stair_full";
-	pixel_y = 22
-	},
-/obj/structure/machinery/computer/dropship_weapons/midway/small{
-	pixel_y = 8;
-	pixel_x = 8
-	},
-/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
-	dir = 1;
-	pixel_x = 8;
-	layer = 5
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"vN" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "86a"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"wB" = (
-/turf/closed/shuttle/midway{
-	icon_state = "83"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"xp" = (
-/turf/closed/shuttle/midway{
-	icon_state = "62"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"ym" = (
-/turf/closed/shuttle/midway{
-	icon_state = "69"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"yB" = (
-/turf/closed/shuttle/midway{
-	icon_state = "54"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"yH" = (
-/obj/structure/shuttle/part/midway/transparent/nosecone{
-	icon_state = "100"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"yN" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "4"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"yO" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "61"
-	},
-/obj/effect/attach_point/weapon/midway/left_wing,
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"zm" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "23"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"zG" = (
-/obj/structure/machinery/light/double{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Aa" = (
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/obj/structure/machinery/door/airlock/hatch/cockpit/four,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Aw" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "91"
-	},
-/obj/effect/attach_point/electronics/midway,
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Bk" = (
-/turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Bn" = (
-/turf/closed/shuttle/midway{
-	icon_state = "30"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"BI" = (
-/turf/closed/shuttle/midway{
-	icon_state = "47"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"BS" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "38"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"BU" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "20"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Ci" = (
-/obj/structure/vehicle_locker/movie{
-	pixel_y = 20;
-	layer = 2.9
-	},
-/turf/open/shuttle/dropship/light_grey_top_left,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"CX" = (
-/obj/structure/stairs/perspective,
-/obj/structure/platform{
-	dir = 4;
-	layer = 2.7
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Db" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "26"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Dg" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "70"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"DO" = (
-/obj/structure/machinery/light{
-	dir = 4;
-	pixel_x = 14
-	},
-/obj/structure/machinery/light/double{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Ed" = (
-/turf/closed/shuttle/midway{
-	icon_state = "25"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Fd" = (
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Fu" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "74"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Gf" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "99a"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Gk" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_y = 26;
-	pixel_x = 8
-	},
-/obj/structure/extinguisher_cabinet/lifeboat{
-	pixel_y = 27;
-	pixel_x = -4
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Hj" = (
-/turf/closed/shuttle/midway{
-	icon_state = "75"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Hz" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "3"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Ji" = (
-/turf/closed/shuttle/midway{
-	icon_state = "64"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Jn" = (
-/obj/structure/machinery/camera/autoname/golden_arrow/midway{
-	dir = 4;
-	pixel_x = -23
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Jq" = (
-/turf/closed/shuttle/midway{
-	icon_state = "72"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Ks" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "71"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Kw" = (
-/turf/template_noop,
-/area/template_noop)
-"Ln" = (
-/obj/effect/attach_point/crew_weapon/midway{
-	attach_id = 7
-	},
-/obj/docking_port/mobile/marine_dropship/midway,
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Lr" = (
-/turf/closed/shuttle/midway{
-	icon_state = "48"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"LZ" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "84"
-	},
-/obj/effect/attach_point/electronics/midway,
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Mw" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "85"
-	},
-/obj/effect/attach_point/weapon/midway/left_fore,
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"NK" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Pc" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "78"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"PG" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "97a"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"PW" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Qk" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "15"
-	},
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "40"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"SZ" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "5"
-	},
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Tf" = (
-/obj/effect/attach_point/fuel/midway{
-	attach_id = 10;
-	dir = 1
-	},
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "28"
-	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"TE" = (
-/turf/open/shuttle/dropship/light_grey_bottom_left,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Uj" = (
-/obj/structure/vehicle_locker/movie{
-	pixel_y = 20;
-	layer = 2.9
-	},
-/turf/open/shuttle/dropship/light_grey_top_right,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"UI" = (
-/obj/structure/shuttle/part/midway/transparent{
-	icon_state = "90"
-	},
-/obj/effect/attach_point/weapon/midway/right_fore,
-/turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Vi" = (
+"ak" = (
 /obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
 	dir = 1;
 	pixel_x = 6;
@@ -756,24 +26,515 @@
 	breakable = 0
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Vu" = (
+/area/shuttle/midway)
+"aG" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "3"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"bH" = (
+/turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
+/area/shuttle/midway)
+"bU" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "15"
+	},
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "40"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"cG" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 7
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"cY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4{
+	id = "aft_door"
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/area/shuttle/midway)
+"dL" = (
+/obj/structure/shuttle/part/midway/transparent/nosecone{
+	icon_state = "100"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"dM" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "46"
+	},
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "41"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"ei" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "85"
+	},
+/obj/effect/attach_point/weapon/midway/left_fore,
+/turf/template_noop,
+/area/shuttle/midway)
+"em" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"eC" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"fa" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = 8
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_y = 27;
+	pixel_x = -4
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"fN" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = -8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"gh" = (
+/turf/closed/shuttle/midway{
+	icon_state = "81"
+	},
+/area/shuttle/midway)
+"hm" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "66"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"hG" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "78"
+	},
+/area/shuttle/midway)
+"iL" = (
+/obj/structure/shuttle/part/midway/transparent,
+/turf/template_noop,
+/area/shuttle/midway)
+"iS" = (
+/obj/structure/shuttle/part/midway/transparent/nosecone{
+	icon_state = "102"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"jW" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "35"
+	},
+/area/shuttle/midway)
+"kd" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"kD" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "74"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"mI" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "4"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"mS" = (
+/turf/closed/shuttle/midway{
+	icon_state = "48"
+	},
+/area/shuttle/midway)
+"nt" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"nx" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "34"
+	},
+/area/shuttle/midway)
+"nz" = (
+/turf/closed/shuttle/midway{
+	icon_state = "30"
+	},
+/area/shuttle/midway)
+"nQ" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "95a"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"oj" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "86b"
+	},
+/area/shuttle/midway)
+"pb" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "29"
+	},
+/area/shuttle/midway)
+"pK" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"qd" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "21"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"qE" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "22"
+	},
+/area/shuttle/midway)
+"rv" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "8"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"rB" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "39"
+	},
+/area/shuttle/midway)
+"su" = (
+/turf/open/shuttle/dropship/light_grey_bottom_right,
+/area/shuttle/midway)
+"sD" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full";
+	pixel_y = 22
+	},
+/obj/structure/machinery/computer/dropship_weapons/midway/small{
+	pixel_y = 8;
+	pixel_x = 8
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
+	dir = 1;
+	pixel_x = 8;
+	layer = 5
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"sY" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"tt" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "26"
+	},
+/area/shuttle/midway)
+"tI" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"tV" = (
+/turf/closed/shuttle/midway{
+	icon_state = "24"
+	},
+/area/shuttle/midway)
+"ud" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "99a"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"va" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "41"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"vk" = (
+/turf/closed/shuttle/midway{
+	icon_state = "72"
+	},
+/area/shuttle/midway)
+"vA" = (
+/obj/effect/attach_point/fuel/midway{
+	attach_id = 10;
+	dir = 1
+	},
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "28"
+	},
+/area/shuttle/midway)
+"vE" = (
+/turf/closed/shuttle/midway{
+	icon_state = "36"
+	},
+/area/shuttle/midway)
+"wi" = (
+/turf/closed/shuttle/midway{
+	icon_state = "54"
+	},
+/area/shuttle/midway)
+"wx" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "38"
+	},
+/area/shuttle/midway)
+"xK" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "61"
+	},
+/obj/effect/attach_point/weapon/midway/left_wing,
+/turf/template_noop,
+/area/shuttle/midway)
+"zk" = (
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"Ay" = (
+/turf/closed/shuttle/midway{
+	icon_state = "62"
+	},
+/area/shuttle/midway)
+"AE" = (
+/turf/open/shuttle/dropship/light_grey_bottom_left,
+/area/shuttle/midway)
+"AG" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "84"
+	},
+/obj/effect/attach_point/electronics/midway,
+/turf/template_noop,
+/area/shuttle/midway)
+"CV" = (
+/turf/closed/shuttle/midway{
+	icon_state = "83"
+	},
+/area/shuttle/midway)
+"DK" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"DN" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "65"
+	},
+/obj/effect/attach_point/weapon/midway/right_wing,
+/turf/template_noop,
+/area/shuttle/midway)
+"EB" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "91"
+	},
+/obj/effect/attach_point/electronics/midway,
+/turf/template_noop,
+/area/shuttle/midway)
+"Fa" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "71"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"FD" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/machinery/door/airlock/hatch/cockpit/four,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"GU" = (
+/obj/effect/attach_point/fuel/midway{
+	pixel_x = -32;
+	attach_id = 11;
+	dir = 1
+	},
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "33"
+	},
+/area/shuttle/midway)
+"HK" = (
 /turf/closed/shuttle/midway{
 	icon_state = "67"
 	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"VU" = (
+/area/shuttle/midway)
+"Jj" = (
+/turf/closed/shuttle/midway{
+	icon_state = "104"
+	},
+/area/shuttle/midway)
+"Jr" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "23"
+	},
+/area/shuttle/midway)
+"Jw" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "5"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"Kw" = (
+/turf/template_noop,
+/area/template_noop)
+"KT" = (
+/turf/closed/shuttle/midway{
+	icon_state = "69"
+	},
+/area/shuttle/midway)
+"KX" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"KZ" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"Ls" = (
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 20;
+	layer = 2.9
+	},
+/turf/open/shuttle/dropship/light_grey_top_right,
+/area/shuttle/midway)
+"LC" = (
+/obj/structure/bed/chair/dropship/passenger/folded{
+	pixel_y = 8;
+	buckling_y = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"MF" = (
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"NP" = (
+/turf/closed/shuttle/midway{
+	icon_state = "47"
+	},
+/area/shuttle/midway)
+"Om" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "80"
+	},
+/area/shuttle/midway)
+"Oq" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 7
+	},
+/obj/docking_port/mobile/marine_dropship/midway,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"OH" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "7"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"Pr" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "20"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"PC" = (
+/turf/closed/shuttle/midway{
+	icon_state = "31"
+	},
+/area/shuttle/midway)
+"Qo" = (
 /turf/closed/shuttle/midway{
 	icon_state = "73"
 	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"WF" = (
+/area/shuttle/midway)
+"RE" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "27"
+	},
+/area/shuttle/midway)
+"RM" = (
+/turf/closed/shuttle/midway{
+	icon_state = "75"
+	},
+/area/shuttle/midway)
+"Se" = (
+/turf/closed/shuttle/midway{
+	icon_state = "103"
+	},
+/area/shuttle/midway)
+"Sk" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "97a"
+	},
+/area/shuttle/midway)
+"Sw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = 2
@@ -783,43 +544,90 @@
 	pixel_y = -1
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"XS" = (
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Yr" = (
-/turf/closed/shuttle/midway{
-	icon_state = "81"
+/area/shuttle/midway)
+"Tl" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "86a"
 	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Zr" = (
+/area/shuttle/midway)
+"TU" = (
+/turf/closed/shuttle/midway{
+	icon_state = "64"
+	},
+/area/shuttle/midway)
+"Ub" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"UY" = (
 /obj/structure/shuttle/part/midway/transparent{
-	icon_state = "66"
+	icon_state = "6"
 	},
 /turf/template_noop,
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"Zu" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "29"
+/area/shuttle/midway)
+"VW" = (
+/turf/closed/shuttle/midway{
+	icon_state = "25"
 	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
-"ZZ" = (
-/turf/closed/shuttle/midway/transparent{
-	icon_state = "39"
+/area/shuttle/midway)
+"We" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "2"
 	},
-/area/shuttle/midway{
-	base_lighting_alpha = 0
-	})
+/turf/template_noop,
+/area/shuttle/midway)
+"WC" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "89b"
+	},
+/area/shuttle/midway)
+"WL" = (
+/turf/closed/shuttle/midway{
+	icon_state = "77"
+	},
+/area/shuttle/midway)
+"Xe" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "32"
+	},
+/area/shuttle/midway)
+"Xj" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "70"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"Xx" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "40"
+	},
+/turf/template_noop,
+/area/shuttle/midway)
+"YZ" = (
+/obj/structure/shuttle/part/midway/gunpod_prop,
+/turf/template_noop,
+/area/shuttle/midway)
+"Zx" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "90"
+	},
+/obj/effect/attach_point/weapon/midway/right_fore,
+/turf/template_noop,
+/area/shuttle/midway)
+"ZD" = (
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 20;
+	layer = 2.9
+	},
+/turf/open/shuttle/dropship/light_grey_top_left,
+/area/shuttle/midway)
+"ZF" = (
+/turf/closed/shuttle/midway/transparent{
+	icon_state = "89a"
+	},
+/area/shuttle/midway)
 
 (1,1,1) = {"
 Kw
@@ -827,105 +635,105 @@ Kw
 Kw
 Kw
 Kw
-Ks
-Zr
-yO
+Fa
+hm
+xK
 Kw
-ul
-af
-Tf
-dD
-BU
+Xx
+nx
+vA
+qE
+Pr
 Kw
-mE
+iL
 "}
 (2,1,1) = {"
 Kw
 Kw
 Kw
-LZ
-Hj
-Jq
-Vu
-xp
-dE
-gw
-ls
-Zu
-zm
-bm
+AG
+RM
+vk
+HK
+Ay
+vE
+dM
+jW
+pb
+Jr
+qd
 Kw
-eu
+We
 "}
 (3,1,1) = {"
 Kw
 Kw
 Kw
-Mw
-Yr
-Gk
-mA
-tT
-mA
-BI
-dE
-Bn
-hl
-rr
-dB
-Hz
+ei
+gh
+fa
+Ub
+KZ
+Ub
+NP
+vE
+nz
+tV
+Se
+OH
+aG
 "}
 (4,1,1) = {"
-yH
-hL
-ti
-vN
-Pc
-Ci
-XS
-TE
-CX
-NK
-XS
-Jn
-zG
-us
+dL
+nQ
+oj
+Tl
+hG
+ZD
+zk
+AE
+pK
+tI
+zk
+DK
+nt
+cY
 Kw
 Kw
 "}
 (5,1,1) = {"
-oG
-PG
-Vi
-vD
-Aa
-Bk
-oy
-Bk
-Ln
-fF
-Fd
-cK
-Fd
-WF
+YZ
+Sk
+ak
+sD
+FD
+bH
+LC
+bH
+Oq
+KX
+MF
+cG
+MF
+Sw
 Kw
 Kw
 "}
 (6,1,1) = {"
-ut
-Gf
-od
-ux
-ro
-Uj
-XS
-dd
-aP
-NK
-XS
-XS
-DO
-WF
+iS
+ud
+WC
+ZF
+Om
+Ls
+zk
+su
+kd
+tI
+zk
+zk
+sY
+Sw
 Kw
 Kw
 "}
@@ -933,37 +741,37 @@ Kw
 Kw
 Kw
 Kw
-UI
-rq
-kL
-PW
-oB
-PW
-Lr
-yB
-sl
-Ed
-lC
-mh
-yN
+Zx
+WL
+fN
+eC
+em
+eC
+mS
+wi
+PC
+VW
+Jj
+rv
+mI
 "}
 (8,1,1) = {"
 Kw
 Kw
 Kw
-Aw
-wB
-VU
-ym
-Ji
-yB
-Qk
-BS
-rR
-Db
-BU
+EB
+CV
+Qo
+KT
+TU
+wi
+bU
+wx
+Xe
+tt
+Pr
 Kw
-SZ
+Jw
 "}
 (9,1,1) = {"
 Kw
@@ -971,15 +779,15 @@ Kw
 Kw
 Kw
 Kw
-Fu
-Dg
-hO
+kD
+Xj
+DN
 Kw
-mG
-ZZ
-eS
-if
-bm
+va
+rB
+GU
+RE
+qd
 Kw
-tP
+UY
 "}
