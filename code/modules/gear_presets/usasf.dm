@@ -84,20 +84,20 @@
 #define USAF_HANDLER_CREW "USASF Flight-Deck Handler Crewman"
 
 /datum/equipment_preset/usasf/crew/flight/load_gear(mob/living/carbon/human/new_human)
-    new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot, WEAR_HEAD)
-    var/flight_deck_vest = pick(USAF_ORDNANCE_CREW ,USAF_MAINT_CREW,USAF_FUEL_CREW,USAF_SAFETY_CREW,USAF_HANDLER_CREW)
-    switch(flight_deck_vest)
-        if(USAF_ORDNANCE_CREW)
-            new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf, WEAR_JACKET)
-        if(USAF_MAINT_CREW)
-            new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/green, WEAR_JACKET)
-        if(USAF_FUEL_CREW)
-            new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/purple, WEAR_JACKET)
-        if(USAF_SAFETY_CREW)
-            new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/white, WEAR_JACKET)
-        if(USAF_HANDLER_CREW)
-            new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/blue, WEAR_JACKET)
-    ..()
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot, WEAR_HEAD)
+	var/flight_deck_vest = pick(USAF_ORDNANCE_CREW ,USAF_MAINT_CREW,USAF_FUEL_CREW,USAF_SAFETY_CREW,USAF_HANDLER_CREW)
+	switch(flight_deck_vest)
+		if(USAF_ORDNANCE_CREW)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf, WEAR_JACKET)
+		if(USAF_MAINT_CREW)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/green, WEAR_JACKET)
+		if(USAF_FUEL_CREW)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/purple, WEAR_JACKET)
+		if(USAF_SAFETY_CREW)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/white, WEAR_JACKET)
+		if(USAF_HANDLER_CREW)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/blue, WEAR_JACKET)
+	..()
 #undef USAF_ORDNANCE_CREW
 #undef USAF_MAINT_CREW
 #undef USAF_FUEL_CREW
@@ -275,7 +275,7 @@
 	assignment = JOB_NAVY_SO
 	rank = JOB_NAVY_SO
 	paygrades = list(PAY_SHORT_NO3)
-	role_comm_title = "Duty Off."
+	role_comm_title = "DutyOff"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/officer
 	idtype = /obj/item/card/id/silver
@@ -321,7 +321,7 @@
 	assignment = JOB_NAVY_CHIEF_ENGINEER
 	rank = JOB_NAVY_CHIEF_ENGINEER
 	paygrades = list(PAY_SHORT_NO4)
-	role_comm_title = "LCDR."
+	role_comm_title = "EngDO"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/navycengi
 	idtype = /obj/item/card/id/silver
@@ -348,7 +348,7 @@
 	assignment = JOB_NAVY_CO
 	rank = JOB_NAVY_CO
 	paygrades = list(PAY_SHORT_NO6)
-	role_comm_title = "CAPT."
+	role_comm_title = "CAPT"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/navycommander
 	idtype = /obj/item/card/id/gold
@@ -369,4 +369,4 @@
 /datum/equipment_preset/usasf/CO/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_NO5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "CDR."
+	role_comm_title = "CDR"

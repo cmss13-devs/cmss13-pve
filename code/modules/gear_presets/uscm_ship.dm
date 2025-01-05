@@ -425,7 +425,7 @@
 	assignment = JOB_CHIEF_REQUISITION
 	rank = JOB_CHIEF_REQUISITION
 	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_1)
-	role_comm_title = "Logi. Off."
+	role_comm_title = "LO"
 	skills = /datum/skills/RO
 
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
@@ -461,7 +461,7 @@
 	paygrades = list(PAY_SHORT_MW2 = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_CARGO_CHIEF
 	rank = JOB_CARGO_CHIEF
-	role_comm_title = "Logi. Chief"
+	role_comm_title = "LC"
 
 /datum/equipment_preset/uscm_ship/qm/lesser_rank/load_gear(mob/living/carbon/human/new_human)
 
@@ -488,7 +488,7 @@
 	assignment = JOB_CARGO_TECH
 	rank = JOB_CARGO_TECH
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Logi. Spec."
+	role_comm_title = "LogiSpc"
 	skills = /datum/skills/CT
 
 	minimap_icon = "ct"

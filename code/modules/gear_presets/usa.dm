@@ -86,11 +86,10 @@
 	spawn_army_fluff_items(new_human)
 
 /datum/equipment_preset/usa/trooper/grenadier
-	name = parent_type::name + " (grenadier)"
 	name = "Army Grenadier"
 	assignment = JOB_ARMY_PROPIPE
 	rank = JOB_ARMY_PROPIPE
-	role_comm_title = "GRNDR"
+	role_comm_title = "GRDR"
 
 /datum/equipment_preset/usa/trooper/grenadier/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/grenade/army, WEAR_WAIST)
@@ -114,7 +113,7 @@
 	assignment = JOB_ARMY_MARKSMAN
 	rank = JOB_ARMY_MARKSMAN
 	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "MRKMN"
+	role_comm_title = "DM"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/trooper	//Trooper but with a scoped rifle
 
@@ -156,7 +155,7 @@
 	assignment = JOB_ARMY_GUNNER
 	rank = JOB_ARMY_GUNNER
 	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "LGNR"
+	role_comm_title = "L-Gnr"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/trooper	//trooper with a big gun, no fancy skills
 
@@ -194,7 +193,7 @@
 	assignment = JOB_ARMY_SMARTGUNNER
 	rank = JOB_ARMY_SMARTGUNNER
 	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "HGNR"
+	role_comm_title = "H-Gnr"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/heavygunner
 
@@ -229,7 +228,7 @@
 	assignment = JOB_ARMY_ATFIRE
 	rank = JOB_ARMY_ATFIRE
 	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "AT GNR."
+	role_comm_title = "AT-Gnr"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/trooper	//Trooper with a toob, nothing fancy needed
 
@@ -262,7 +261,7 @@
 	assignment = JOB_ARMY_ATLOAD
 	rank = JOB_ARMY_ATLOAD
 	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "AT LDR."
+	role_comm_title = "AT-Ldr"
 
 /datum/equipment_preset/usa/ATgunner/loader/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
@@ -320,7 +319,7 @@
 	assignment = JOB_ARMY_MT
 	rank = JOB_ARMY_MT
 	paygrades = list(PAY_SHORT_AE5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "T. Eng."
+	role_comm_title = "TechEng"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/mainttech
 
@@ -354,7 +353,7 @@
 	assignment = JOB_ARMY_CT
 	rank = JOB_ARMY_CT
 	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Logi. Spec."
+	role_comm_title = "LogiSpc"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/cargotech
 
@@ -499,7 +498,7 @@
 	assignment = JOB_ARMY_LT
 	rank = JOB_ARMY_LT
 	paygrades = list(PAY_SHORT_AO2 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Plt. Off."
+	role_comm_title = "PltOff"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/lt
 
@@ -540,7 +539,7 @@
 	assignment = JOB_ARMY_INTEL
 	rank = JOB_ARMY_INTEL
 	paygrades = list(PAY_SHORT_AO2 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Intel Off."
+	role_comm_title = "IntelOff"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/lt
 
@@ -583,7 +582,7 @@
 	assignment = JOB_ARMY_RESEARCHER
 	rank = JOB_ARMY_RESEARCHER
 	paygrades = list(PAY_SHORT_AO3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Science Off."
+	role_comm_title = "SciOff"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/lt
 	idtype = /obj/item/card/id/silver
@@ -616,7 +615,7 @@
 	assignment = JOB_ARMY_QM
 	rank = JOB_ARMY_QM
 	paygrades = list(PAY_SHORT_AO2 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Logi. Off."
+	role_comm_title = "LogiOff"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/cargoofficer
 
