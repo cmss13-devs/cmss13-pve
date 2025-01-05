@@ -42,3 +42,6 @@
   - bugfix: Cigarette packs now show
   mesnomer:
   - rscdel: Removed salt from prepackaged MRE components
+2025-01-05:
+  SpartanBobby:
+  - maptweak: Adds security console to Golden Arrow shared office
