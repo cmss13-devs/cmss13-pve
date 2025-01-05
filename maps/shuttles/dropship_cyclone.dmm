@@ -3,7 +3,9 @@
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "86b"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "aD" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
@@ -17,41 +19,55 @@
 	pixel_x = -2
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "aP" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "3"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "aX" = (
 /obj/structure/shuttle/part/cyclone/transparent/nosecone{
 	icon_state = "102"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "ba" = (
 /obj/docking_port/mobile/marine_dropship/cyclone,
 /turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "bw" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "90"
 	},
 /obj/effect/attach_point/weapon/cyclone/right_fore,
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "cj" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "95a"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "cR" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "39"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "cW" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
@@ -60,7 +76,9 @@
 	dir = 4
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "dx" = (
 /obj/effect/attach_point/fuel/cyclone{
 	dir = 1
@@ -68,85 +86,117 @@
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "32"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "dN" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "42"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "ef" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "el" = (
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "eQ" = (
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "eT" = (
 /obj/structure/shuttle/part/cyclone/transparent,
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "fo" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "40"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "fr" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "30"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "fy" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "91"
 	},
 /obj/effect/attach_point/electronics/cyclone,
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "fF" = (
 /turf/open/shuttle/dropship/light_grey_bottom_right,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "gx" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/cyclone{
 	dir = 4;
 	pixel_x = -23
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "hd" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "33"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "hu" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "6"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "hS" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "41"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "hV" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "21"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "iO" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "8"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "lm" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
@@ -155,23 +205,31 @@
 	dir = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "lV" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "18"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "mI" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "67"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "mO" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "71"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "nQ" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
@@ -181,16 +239,22 @@
 	pixel_x = 23
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "ob" = (
 /obj/structure/stairs/perspective,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "od" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "23"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "oP" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -207,18 +271,24 @@
 	layer = 5
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "oZ" = (
 /obj/structure/shuttle/part/cyclone/transparent/nosecone{
 	icon_state = "100"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "pb" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "62"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "pj" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "9"
@@ -227,16 +297,22 @@
 	icon_state = "41"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "py" = (
 /turf/open/shuttle/dropship/light_grey_top_left,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "pz" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "66"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "pJ" = (
 /obj/effect/attach_point/fuel/cyclone{
 	dir = 1
@@ -244,82 +320,114 @@
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "28"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "qs" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "47"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "qN" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "25"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "qX" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "48"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "rf" = (
 /turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "ro" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "99a"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "rB" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "29"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "sa" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "73"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "sA" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "37"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "ta" = (
 /obj/structure/bed/chair/dropship/passenger/folded{
 	pixel_y = 8;
 	buckling_y = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "tu" = (
 /turf/open/shuttle/dropship/light_grey_top_right,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "tU" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "24"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "uH" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "72"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "vt" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "86a"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "vH" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "34"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "vT" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "5"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "wk" = (
 /turf/template_noop,
 /area/space)
@@ -327,7 +435,9 @@
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "35"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "xD" = (
 /obj/structure/machinery/computer/shuttle/dropship/flight/small{
 	pixel_y = 16;
@@ -348,26 +458,34 @@
 	pixel_y = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "xY" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "85"
 	},
 /obj/effect/attach_point/weapon/cyclone/left_fore,
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "yy" = (
 /obj/structure/machinery/door/airlock/hatch/cockpit/two{
 	dir = 1
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "zz" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "80"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "zC" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
@@ -377,17 +495,23 @@
 	pixel_x = -10
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "zG" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "31"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "zH" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "38"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Ax" = (
 /obj/structure/shuttle/part/dropship2/lower_right_wall{
 	name = "\improper Cyclone"
@@ -396,44 +520,60 @@
 	icon_state = "40"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "AP" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "83"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Bt" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "89a"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "BI" = (
 /turf/open/shuttle/dropship/light_grey_bottom_left,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Cb" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "74"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Cf" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "7"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Da" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "20"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Df" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "4"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Ea" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -444,65 +584,87 @@
 	pixel_y = -1
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "EP" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "75"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "GE" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "43"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "GJ" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "27"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Hg" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "69"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "HS" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "IP" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "61"
 	},
 /obj/effect/attach_point/weapon/cyclone/left_wing,
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "IZ" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "70"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Kv" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "81"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "MU" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "84"
 	},
 /obj/effect/attach_point/electronics/cyclone,
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "NS" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
 	dir = 4
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Oi" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -517,88 +679,120 @@
 	name = "\improper Cyclone cargo door"
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "QN" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "65"
 	},
 /obj/effect/attach_point/weapon/cyclone/right_wing,
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "QS" = (
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Rj" = (
 /obj/structure/shuttle/part/cyclone/gunpod_prop,
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Sl" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "77"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Uo" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "64"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "VV" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
 	dir = 8
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Wr" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "26"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Ws" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "19"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "Wv" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "22"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "XH" = (
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "XU" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "97a"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "XY" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "89b"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "YL" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "36"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "ZG" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "2"
 	},
 /turf/template_noop,
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 "ZU" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "78"
 	},
-/area/shuttle/cyclone)
+/area/shuttle/cyclone{
+	base_lighting_alpha = 0
+	})
 
 (1,1,1) = {"
 wk
