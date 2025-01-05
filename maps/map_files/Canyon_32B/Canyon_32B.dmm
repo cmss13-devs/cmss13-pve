@@ -143,7 +143,7 @@
 "aZ" = (
 /obj/structure/machinery/power/apc/almayer/east,
 /obj/structure/cable/heavyduty,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/gatehouse/southern)
 "bc" = (
 /obj/structure/barricade/snow{
@@ -196,6 +196,15 @@
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
+"bP" = (
+/obj/structure/flora/bush/snow{
+	icon_state = "snowbush_2"
+	},
+/obj/structure/flora/bush/snow{
+	icon_state = "snowbush_2"
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/north)
 "bR" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/auto_turf/snow/layer1,
@@ -395,7 +404,7 @@
 	name = "Confiscated Items Locker";
 	req_access = list(9)
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/edge/southeast,
 /area/canyon32B/interior/gatehouse/northern)
 "dV" = (
 /obj/structure/prop/dam/truck{
@@ -678,6 +687,9 @@
 	},
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
+"gU" = (
+/turf/open/auto_turf/ice/layer0,
+/area/canyon32B/interior/overhang)
 "gV" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/mess)
@@ -713,7 +725,7 @@
 	pixel_x = 6;
 	pixel_y = -13
 	},
-/turf/open/auto_turf/ice/layer1,
+/turf/open/auto_turf/ice/layer2,
 /area/canyon32B/interior/overhang)
 "hn" = (
 /obj/structure/machinery/medical_pod/autodoc{
@@ -964,6 +976,12 @@
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer/edge/southwest,
 /area/canyon32B/interior/bunker/bunks)
+"km" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/auto_turf/ice/layer0,
+/area/canyon32B/interior/overhang)
 "ks" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -1167,7 +1185,7 @@
 	pixel_x = 6;
 	pixel_y = 19
 	},
-/turf/open/auto_turf/ice/layer1,
+/turf/open/auto_turf/ice/layer0,
 /area/canyon32B/interior/overhang)
 "mF" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
@@ -1184,7 +1202,8 @@
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 8
 	},
-/turf/open/floor/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/gatehouse/northern)
 "mN" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -1204,14 +1223,15 @@
 	dir = 4;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/gatehouse/northern)
 "mV" = (
 /obj/structure/machinery/power/apc/almayer/west,
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/edge/southwest,
 /area/canyon32B/interior/gatehouse/northern)
 "mY" = (
 /obj/structure/cable/heavyduty{
@@ -1557,6 +1577,10 @@
 "qW" = (
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/unloading)
+"qZ" = (
+/obj/structure/flora/bush/snow,
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/south)
 "rb" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
 	dir = 2
@@ -1594,6 +1618,12 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/detainment)
+"rF" = (
+/obj/structure/flora/bush/snow{
+	icon_state = "snowbush_3"
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/checkpoint)
 "rH" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -1634,6 +1664,12 @@
 	},
 /turf/open/floor/almayer/test_floor5,
 /area/canyon32B/interior/bunker/medbay)
+"sp" = (
+/obj/structure/flora/bush/snow{
+	icon_state = "snowbush_2"
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/south)
 "su" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	dir = 4;
@@ -1921,7 +1957,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/checkpoint)
 "wJ" = (
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/gatehouse/northern)
 "wK" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -2141,7 +2177,7 @@
 /area/canyon32B/interior/bunker/entrance)
 "yR" = (
 /obj/structure/tunnel,
-/turf/open/auto_turf/ice/layer1,
+/turf/open/auto_turf/ice/layer0,
 /area/canyon32B/OOB)
 "yW" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -2173,6 +2209,9 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/entrance)
+"zg" = (
+/turf/open/auto_turf/ice/layer2,
+/area/canyon32B/interior/overhang)
 "zk" = (
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
@@ -2424,7 +2463,8 @@
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/overwatch)
 "Cu" = (
-/turf/open/floor/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/gatehouse/southern)
 "Cv" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -2448,7 +2488,7 @@
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 4
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/gatehouse/southern)
 "CF" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -2828,7 +2868,8 @@
 	id = "Southern Gate";
 	pixel_x = -1
 	},
-/turf/open/floor/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/southeast,
 /area/canyon32B/interior/gatehouse/southern)
 "HQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -3235,6 +3276,9 @@
 	},
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
+"Ms" = (
+/turf/open/auto_turf/ice/layer2,
+/area/canyon32B/OOB)
 "Mx" = (
 /obj/structure/window/framed/prefab,
 /turf/open/floor/almayer,
@@ -3280,6 +3324,12 @@
 "MS" = (
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/south)
+"MV" = (
+/obj/structure/flora/bush/snow{
+	icon_state = "snowbush_3"
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/south)
 "MZ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -3294,6 +3344,12 @@
 "Ne" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/engineering)
+"Nf" = (
+/obj/structure/flora/bush/snow{
+	icon_state = "snowbush_2"
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/north)
 "Nm" = (
 /obj/structure/platform/kutjevo{
 	dir = 1
@@ -3418,6 +3474,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/mess)
+"Oj" = (
+/obj/structure/flora/bush/snow{
+	icon_state = "snowbush_2"
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/checkpoint)
 "Op" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -3506,6 +3568,11 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/hallway)
+"Pl" = (
+/obj/structure/flora/bush/snow,
+/obj/structure/flora/bush/snow,
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/south)
 "Pw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -3578,6 +3645,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/bunks)
+"Qi" = (
+/turf/open/auto_turf/ice/layer0,
+/area/canyon32B/OOB)
 "Qs" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -3734,6 +3804,10 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/medbay)
+"RU" = (
+/obj/structure/flora/bush/snow,
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/checkpoint)
 "RX" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -3989,7 +4063,8 @@
 	pixel_x = -8;
 	pixel_y = 17
 	},
-/turf/open/floor/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/gatehouse/southern)
 "UL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -4003,6 +4078,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/entrance)
+"UX" = (
+/obj/structure/flora/bush/snow,
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/north)
 "Vi" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/effect/decal/cleanable/dirt,
@@ -4379,7 +4458,8 @@
 	id = "Northern Gate";
 	pixel_x = 1
 	},
-/turf/open/floor/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/gatehouse/northern)
 "XB" = (
 /obj/structure/bed/stool,
@@ -4504,7 +4584,8 @@
 	dir = 8;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/southwest,
 /area/canyon32B/interior/gatehouse/southern)
 "Zo" = (
 /obj/structure/machinery/power/reactor{
@@ -79434,9 +79515,9 @@ xf
 xf
 xf
 xf
+Qi
 Gf
-Gf
-Gf
+Qi
 mO
 Gf
 NO
@@ -79937,11 +80018,11 @@ xf
 xf
 yR
 Cw
+Ms
 Gf
 Gf
 Gf
-Gf
-Gf
+Qi
 NO
 NO
 NO
@@ -80437,7 +80518,7 @@ xf
 xf
 xf
 xf
-Gf
+Ms
 Gf
 Gf
 Gf
@@ -111151,7 +111232,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -111682,7 +111763,7 @@ xf
 xf
 xf
 TG
-TG
+gU
 Ix
 TG
 xf
@@ -112158,6 +112239,7 @@ NO
 NO
 NO
 NO
+Nf
 NO
 NO
 NO
@@ -112165,7 +112247,6 @@ NO
 NO
 NO
 NO
-NO
 xf
 xf
 xf
@@ -112183,7 +112264,7 @@ xf
 xf
 xf
 xf
-TG
+zg
 TG
 Ix
 TG
@@ -112658,16 +112739,16 @@ NO
 NO
 NO
 NO
+UX
 NO
 NO
 NO
+UX
 NO
 NO
 NO
-NO
-NO
-NO
-NO
+Nf
+UX
 NO
 NO
 NO
@@ -112687,7 +112768,7 @@ xf
 xf
 TG
 TG
-Ix
+km
 TG
 xf
 xf
@@ -113666,7 +113747,7 @@ NO
 VJ
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -113691,7 +113772,7 @@ xf
 xf
 DN
 TG
-Ix
+km
 TG
 xf
 xf
@@ -114159,6 +114240,10 @@ NO
 NO
 NO
 NO
+Nf
+NO
+NO
+Nf
 NO
 NO
 NO
@@ -114167,11 +114252,7 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -114182,7 +114263,7 @@ hw
 yI
 yI
 yI
-yI
+RU
 yI
 yI
 yI
@@ -114676,7 +114757,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -114718,8 +114799,8 @@ CK
 CK
 CK
 CK
-CK
-CK
+qZ
+sp
 CK
 CK
 CK
@@ -115170,10 +115251,10 @@ NO
 NO
 NO
 NO
+UX
 NO
 NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -115187,7 +115268,7 @@ yI
 yI
 yI
 yI
-yI
+RU
 yI
 yI
 yI
@@ -115219,9 +115300,9 @@ CK
 CK
 CK
 CK
+qZ
 CK
-CK
-CK
+qZ
 CK
 CK
 CK
@@ -115666,16 +115747,16 @@ NO
 NO
 NO
 NO
+UX
+NO
+NO
+Nf
 NO
 NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -115690,7 +115771,7 @@ zL
 yI
 yI
 yI
-yI
+Oj
 yI
 yI
 ic
@@ -115707,28 +115788,28 @@ xs
 mN
 yI
 yI
+RU
 yI
 yI
 yI
-yI
-yI
+rF
 hw
 CK
 CK
 CK
 CK
 CK
+qZ
 CK
 CK
 CK
 CK
 CK
+sp
 CK
 CK
 CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -116183,7 +116264,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 hw
@@ -116211,11 +116292,15 @@ mN
 yI
 yI
 yI
-yI
+Oj
 yI
 yI
 hw
 CK
+sp
+CK
+CK
+qZ
 CK
 CK
 CK
@@ -116232,11 +116317,7 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
+MV
 CK
 CK
 CK
@@ -116671,18 +116752,18 @@ NO
 NO
 NO
 NO
+Nf
+NO
+NO
+NO
+Nf
 NO
 NO
 NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -116711,7 +116792,7 @@ kR
 VF
 mN
 yI
-yI
+Oj
 yI
 yI
 yI
@@ -116722,7 +116803,7 @@ CK
 CK
 CK
 CK
-CK
+sp
 CK
 CK
 CK
@@ -117179,14 +117260,14 @@ NO
 NO
 NO
 NO
+Nf
+NO
+NO
+Nf
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -117194,7 +117275,7 @@ hw
 yI
 yI
 yI
-yI
+RU
 yI
 yI
 yI
@@ -117214,24 +117295,24 @@ qd
 mN
 yI
 yI
+RU
 yI
 yI
-yI
-yI
+Oj
 hw
 CK
+qZ
 CK
 CK
+qZ
+qZ
+sp
 CK
 CK
+MV
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -117697,7 +117778,7 @@ yI
 yI
 yI
 yI
-yI
+Oj
 yI
 yI
 yI
@@ -117718,20 +117799,20 @@ yI
 yI
 yI
 yI
-yI
-yI
+RU
+RU
 hw
 CK
 CK
 CK
+qZ
 CK
 CK
 CK
 CK
 CK
 CK
-CK
-CK
+MV
 CK
 CK
 CK
@@ -118176,15 +118257,15 @@ NO
 NO
 NO
 NO
+Nf
+NO
+NO
+UX
 NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -118196,15 +118277,15 @@ NO
 NO
 hw
 yI
+RU
 yI
 yI
 yI
 yI
+RU
 yI
 yI
-yI
-yI
-yI
+Oj
 yI
 yI
 DN
@@ -118226,6 +118307,10 @@ hw
 CK
 CK
 CK
+qZ
+CK
+CK
+sp
 CK
 CK
 CK
@@ -118233,11 +118318,7 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -118683,7 +118764,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -118703,7 +118784,7 @@ yI
 yI
 yI
 yI
-yI
+RU
 yI
 yI
 yI
@@ -118714,9 +118795,9 @@ DN
 CZ
 DN
 yI
+RU
 yI
-yI
-yI
+RU
 yI
 yI
 yI
@@ -118726,6 +118807,7 @@ yI
 yI
 hw
 CK
+sp
 CK
 CK
 CK
@@ -118736,11 +118818,10 @@ CK
 CK
 CK
 CK
+MV
+qZ
 CK
-CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -119187,13 +119268,13 @@ NO
 NO
 NO
 NO
+Nf
+NO
+Nf
 NO
 NO
 NO
-NO
-NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -119209,7 +119290,7 @@ yI
 yI
 yI
 yI
-yI
+RU
 yI
 DN
 DN
@@ -119220,8 +119301,8 @@ yI
 yI
 yI
 yI
-yI
-yI
+Oj
+Oj
 yI
 yI
 yI
@@ -119231,16 +119312,16 @@ CK
 CK
 CK
 CK
+sp
 CK
 CK
 CK
 CK
 CK
 CK
+sp
 CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -119684,6 +119765,12 @@ NO
 NO
 NO
 NO
+Nf
+NO
+NO
+NO
+Nf
+UX
 NO
 NO
 NO
@@ -119692,19 +119779,13 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
-NO
-NO
+UX
 NO
 hw
 yI
 yI
 yI
-yI
+rF
 yI
 yI
 yI
@@ -119719,14 +119800,14 @@ CZ
 DN
 yI
 yI
+rF
+rF
 yI
 yI
 yI
 yI
 yI
-yI
-yI
-yI
+RU
 yI
 hw
 CK
@@ -119735,15 +119816,15 @@ CK
 Sk
 CK
 CK
+qZ
+CK
+qZ
 CK
 CK
 CK
+sp
 CK
-CK
-CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -120184,6 +120265,7 @@ NO
 NO
 NO
 NO
+UX
 NO
 NO
 NO
@@ -120196,8 +120278,7 @@ NO
 NO
 NO
 NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -120208,8 +120289,8 @@ yI
 yI
 yI
 yI
-yI
-yI
+Oj
+Oj
 yI
 yI
 yI
@@ -120224,9 +120305,9 @@ yI
 yI
 yI
 yI
+rF
 yI
-yI
-yI
+RU
 yI
 yI
 yI
@@ -120238,6 +120319,7 @@ CK
 CK
 CK
 CK
+sp
 CK
 CK
 CK
@@ -120248,8 +120330,7 @@ CK
 CK
 CK
 CK
-CK
-CK
+qZ
 CK
 CK
 CK
@@ -120692,7 +120773,7 @@ NO
 NO
 NO
 NO
-NO
+UX
 NO
 NO
 NO
@@ -120707,7 +120788,7 @@ NO
 hw
 yI
 yI
-yI
+RU
 yI
 yI
 yI
@@ -120723,7 +120804,7 @@ CZ
 DN
 yI
 yI
-yI
+RU
 yI
 yI
 yI
@@ -120734,6 +120815,7 @@ yI
 yI
 hw
 CK
+MV
 CK
 CK
 CK
@@ -120742,8 +120824,7 @@ CK
 CK
 CK
 CK
-CK
-CK
+qZ
 CK
 CK
 CK
@@ -121198,7 +121279,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -121217,7 +121298,7 @@ yI
 yI
 yI
 yI
-yI
+Oj
 yI
 DN
 DN
@@ -121228,18 +121309,18 @@ yI
 yI
 yI
 yI
+RU
 yI
 yI
 yI
-yI
-yI
+Oj
 yI
 hw
 CK
 CK
+MV
 CK
-CK
-CK
+qZ
 CK
 CK
 CK
@@ -121714,7 +121795,7 @@ yI
 yI
 yI
 yI
-yI
+RU
 yI
 yI
 yI
@@ -121728,7 +121809,7 @@ DN
 yI
 yI
 yI
-yI
+Oj
 yI
 yI
 yI
@@ -121737,7 +121818,7 @@ yI
 yI
 yI
 hw
-CK
+qZ
 CK
 CK
 CK
@@ -122194,6 +122275,10 @@ NO
 NO
 NO
 NO
+Nf
+NO
+NO
+Nf
 NO
 NO
 NO
@@ -122203,11 +122288,7 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
+UX
 NO
 NO
 hw
@@ -122232,15 +122313,25 @@ yI
 yI
 yI
 yI
+RU
 yI
 yI
-yI
-yI
+RU
 yI
 yI
 hw
 CK
 CK
+qZ
+sp
+CK
+CK
+qZ
+CK
+qZ
+sp
+CK
+qZ
 CK
 CK
 CK
@@ -122250,17 +122341,7 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
+MV
 CK
 CK
 CK
@@ -122701,7 +122782,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -122748,10 +122829,10 @@ CK
 CK
 CK
 CK
+sp
 CK
 CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -123205,11 +123286,11 @@ NO
 NO
 NO
 NO
+UX
 NO
 NO
 NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -123236,7 +123317,7 @@ yI
 yI
 yI
 yI
-yI
+Oj
 yI
 yI
 yI
@@ -123252,7 +123333,7 @@ CK
 CK
 CK
 CK
-CK
+qZ
 CK
 CK
 CK
@@ -123702,7 +123783,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -123721,7 +123802,7 @@ yI
 yI
 yI
 yI
-yI
+Oj
 yI
 yI
 yI
@@ -123736,7 +123817,7 @@ DN
 yI
 yI
 yI
-yI
+Oj
 yI
 yI
 yI
@@ -123752,15 +123833,15 @@ CK
 CK
 CK
 CK
+qZ
+sp
 CK
 CK
 CK
+sp
 CK
 CK
-CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -124200,6 +124281,7 @@ NO
 NO
 NO
 NO
+UX
 NO
 NO
 NO
@@ -124207,8 +124289,7 @@ NO
 NO
 NO
 NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -124227,7 +124308,7 @@ yI
 yI
 yI
 yI
-yI
+Oj
 yI
 yI
 yI
@@ -124250,6 +124331,7 @@ hw
 CK
 CK
 CK
+qZ
 CK
 CK
 CK
@@ -124259,9 +124341,8 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
+sp
+sp
 CK
 CK
 CK
@@ -124704,7 +124785,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -124738,18 +124819,24 @@ DN
 CZ
 DN
 yI
+Oj
 yI
 yI
 yI
+Oj
 yI
 yI
 yI
-yI
-yI
-yI
+RU
 yI
 hw
 CK
+sp
+sp
+CK
+CK
+CK
+sp
 CK
 CK
 CK
@@ -124757,14 +124844,8 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
+qZ
+sp
 CK
 CK
 CK
@@ -125214,7 +125295,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -125720,7 +125801,7 @@ NO
 NO
 NO
 NO
-NO
+UX
 NO
 NO
 NO
@@ -125733,8 +125814,8 @@ cX
 yM
 yI
 yI
-yI
-yI
+RU
+RU
 yI
 yI
 DN
@@ -125742,13 +125823,13 @@ DN
 CZ
 DN
 yI
+RU
 yI
 yI
+rF
 yI
 yI
-yI
-yI
-yI
+rF
 yI
 yI
 yI
@@ -125764,7 +125845,7 @@ CK
 CK
 CK
 CK
-CK
+sp
 CK
 CK
 CK
@@ -126210,7 +126291,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -126259,13 +126340,13 @@ CK
 CK
 CK
 CK
+MV
+sp
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+MV
+sp
 CK
 CK
 CK
@@ -126711,17 +126792,17 @@ NO
 NO
 NO
 NO
+UX
+NO
+NO
+Nf
 NO
 NO
 NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -126747,7 +126828,7 @@ CZ
 DN
 yI
 yI
-yI
+Oj
 yI
 yI
 Tl
@@ -126765,7 +126846,7 @@ CK
 CK
 CK
 CK
-CK
+sp
 CK
 CK
 CK
@@ -127211,6 +127292,7 @@ NO
 NO
 NO
 NO
+Nf
 NO
 NO
 NO
@@ -127218,10 +127300,9 @@ NO
 NO
 NO
 NO
+UX
 NO
-NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -127234,7 +127315,7 @@ hw
 yI
 yI
 yI
-yI
+RU
 yI
 yM
 yM
@@ -127266,9 +127347,9 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
+sp
+MV
+sp
 CK
 CK
 CK
@@ -127726,7 +127807,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -127737,7 +127818,7 @@ yI
 yI
 yI
 yI
-yI
+Oj
 yI
 yM
 yM
@@ -127763,7 +127844,7 @@ yI
 hw
 CK
 CK
-CK
+qZ
 CK
 CK
 CK
@@ -128265,8 +128346,8 @@ hw
 hw
 CK
 CK
-CK
-CK
+sp
+sp
 CK
 CK
 CK
@@ -130237,8 +130318,8 @@ NO
 NO
 NO
 NO
-NO
-NO
+bP
+Nf
 NO
 NO
 NO
@@ -130260,10 +130341,10 @@ DN
 CZ
 DN
 yI
+Oj
 yI
 yI
-yI
-yI
+RU
 hw
 hw
 hw
@@ -130275,7 +130356,7 @@ CK
 CK
 CK
 CK
-CK
+sp
 CK
 CK
 CK
@@ -130725,6 +130806,7 @@ NO
 NO
 NO
 NO
+Nf
 NO
 NO
 NO
@@ -130733,17 +130815,16 @@ NO
 NO
 NO
 NO
+UX
 NO
 NO
 NO
 NO
+UX
 NO
 NO
 NO
-NO
-NO
-NO
-NO
+Nf
 hw
 yI
 No
@@ -131230,16 +131311,16 @@ NO
 NO
 NO
 NO
+Nf
+NO
+NO
+UX
 NO
 NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -131257,7 +131338,7 @@ yI
 yI
 yI
 yI
-yI
+Oj
 yI
 DN
 DN
@@ -131279,12 +131360,12 @@ CK
 CK
 CK
 CK
+qZ
 CK
 CK
+sp
 CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -131730,6 +131811,7 @@ NO
 NO
 NO
 NO
+Nf
 NO
 NO
 NO
@@ -131738,8 +131820,7 @@ NO
 NO
 NO
 NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -131767,7 +131848,7 @@ DN
 DN
 yI
 yI
-yI
+Oj
 yI
 yM
 yM
@@ -131782,21 +131863,21 @@ CK
 CK
 CK
 CK
+MV
+CK
+CK
+CK
+CK
+sp
+CK
+CK
+qZ
 CK
 CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
+qZ
 CK
 CK
 CK
@@ -132235,6 +132316,7 @@ NO
 NO
 NO
 NO
+UX
 NO
 NO
 NO
@@ -132247,8 +132329,7 @@ NO
 NO
 NO
 NO
-NO
-NO
+UX
 NO
 hw
 yI
@@ -132268,7 +132349,7 @@ DN
 DN
 DN
 yI
-yI
+RU
 yI
 yI
 yM
@@ -132285,13 +132366,13 @@ CK
 CK
 CK
 CK
+qZ
+CK
+sp
 CK
 CK
 CK
-CK
-CK
-CK
-CK
+qZ
 CK
 CK
 CK
@@ -132741,12 +132822,12 @@ NO
 NO
 NO
 NO
+Nf
 NO
 NO
 NO
 NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -132757,7 +132838,7 @@ yI
 yI
 yI
 yI
-yI
+Oj
 yI
 yI
 yI
@@ -132782,15 +132863,15 @@ yM
 yI
 hw
 CK
+qZ
 CK
 CK
 CK
 CK
 CK
 CK
-CK
-CK
-CK
+qZ
+sp
 CK
 CK
 CK
@@ -133236,15 +133317,15 @@ NO
 NO
 NO
 NO
+UX
+UX
 NO
 NO
 NO
 NO
 NO
 NO
-NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -133288,6 +133369,9 @@ CK
 CK
 CK
 CK
+sp
+CK
+sp
 CK
 CK
 CK
@@ -133297,11 +133381,8 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
+sp
+sp
 CK
 CK
 CK
@@ -133744,6 +133825,8 @@ NO
 NO
 NO
 NO
+UX
+Nf
 NO
 NO
 NO
@@ -133751,9 +133834,7 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
+Nf
 NO
 NO
 hw
@@ -133791,6 +133872,7 @@ CK
 CK
 CK
 CK
+sp
 CK
 CK
 CK
@@ -133799,9 +133881,8 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
+sp
+qZ
 CK
 CK
 CK
@@ -134250,9 +134331,9 @@ NO
 NO
 NO
 NO
+UX
 NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -134304,11 +134385,11 @@ CK
 CK
 CK
 CK
+MV
 CK
 CK
-CK
-CK
-CK
+sp
+sp
 CK
 CK
 CK
@@ -134744,6 +134825,7 @@ NO
 NO
 NO
 NO
+Nf
 NO
 NO
 NO
@@ -134753,8 +134835,7 @@ NO
 NO
 NO
 NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -134805,7 +134886,7 @@ CK
 CK
 CK
 CK
-CK
+sp
 CK
 CK
 CK
@@ -135243,6 +135324,14 @@ NO
 NO
 NO
 NO
+Nf
+Nf
+NO
+NO
+NO
+NO
+NO
+UX
 NO
 NO
 NO
@@ -135251,15 +135340,7 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
-NO
-NO
-NO
-NO
+Nf
 NO
 NO
 hw
@@ -135287,7 +135368,7 @@ DN
 DN
 DN
 yI
-yI
+RU
 yI
 yI
 hw
@@ -135305,7 +135386,7 @@ CK
 CK
 CK
 CK
-CK
+MV
 CK
 CK
 CK
@@ -135749,13 +135830,13 @@ NO
 NO
 NO
 NO
+Nf
 NO
 NO
 NO
 NO
 NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -135791,21 +135872,21 @@ DN
 yI
 yI
 yI
-yI
+Oj
 hw
 CK
 CK
 CK
 CK
+sp
 CK
 CK
 CK
 CK
+sp
 CK
 CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -136257,12 +136338,12 @@ NO
 NO
 NO
 NO
+Nf
+Nf
 NO
 NO
 NO
-NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -136290,13 +136371,14 @@ DN
 DN
 DN
 DN
-yI
+RU
 yI
 yI
 yI
 hw
 CK
 CK
+sp
 CK
 CK
 CK
@@ -136304,14 +136386,13 @@ CK
 CK
 CK
 CK
+qZ
+CK
+sp
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -136752,6 +136833,11 @@ NO
 NO
 NO
 NO
+UX
+NO
+NO
+NO
+Nf
 NO
 NO
 NO
@@ -136761,12 +136847,7 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
-NO
+Nf
 NO
 hw
 yI
@@ -136799,6 +136880,22 @@ yI
 hw
 CK
 CK
+qZ
+CK
+MV
+CK
+CK
+Sk
+CK
+CK
+CK
+CK
+CK
+CK
+sp
+CK
+CK
+CK
 CK
 CK
 CK
@@ -136808,23 +136905,7 @@ Sk
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-Sk
-CK
-CK
-CK
-CK
+MV
 CK
 CK
 CK
@@ -137253,10 +137334,10 @@ NO
 NO
 NO
 NO
+UX
 NO
 NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -137302,6 +137383,7 @@ hw
 CK
 CK
 CK
+sp
 CK
 CK
 CK
@@ -137309,12 +137391,11 @@ CK
 CK
 CK
 CK
+sp
 CK
 CK
 CK
-CK
-CK
-CK
+qZ
 CK
 CK
 CK
@@ -137753,6 +137834,7 @@ NO
 NO
 NO
 NO
+Nf
 NO
 NO
 NO
@@ -137763,9 +137845,8 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
+UX
+UX
 NO
 NO
 NO
@@ -137823,7 +137904,7 @@ CK
 CK
 Sk
 CK
-CK
+sp
 CK
 CK
 CK
@@ -138262,22 +138343,22 @@ NO
 NO
 NO
 NO
+Nf
+Nf
+Nf
 NO
 NO
 NO
 NO
 NO
+Nf
 NO
-NO
-NO
-NO
-NO
-NO
+UX
 NO
 hw
 yI
+Oj
 yI
-yI
 DN
 DN
 DN
@@ -138299,9 +138380,9 @@ DN
 DN
 DN
 yI
+RU
 yI
-yI
-yI
+RU
 hw
 CK
 CK
@@ -138311,6 +138392,13 @@ CK
 CK
 CK
 CK
+MV
+qZ
+CK
+CK
+CK
+sp
+sp
 CK
 CK
 CK
@@ -138322,14 +138410,7 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -138758,6 +138839,11 @@ NO
 NO
 NO
 NO
+Nf
+NO
+NO
+NO
+UX
 NO
 NO
 NO
@@ -138765,19 +138851,14 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
-NO
-NO
+Nf
+Nf
 NO
 NO
 NO
 NO
 hw
-yI
+RU
 yI
 yI
 DN
@@ -138816,7 +138897,7 @@ CK
 CK
 CK
 CK
-CK
+sp
 CK
 CK
 CK
@@ -139270,7 +139351,7 @@ NO
 NO
 NO
 NO
-NO
+UX
 NO
 NO
 NO
@@ -139303,7 +139384,7 @@ DN
 DN
 DN
 yI
-yI
+Oj
 yI
 yI
 hw
@@ -139312,6 +139393,12 @@ CK
 CK
 CK
 CK
+sp
+CK
+CK
+MV
+CK
+sp
 CK
 CK
 CK
@@ -139324,13 +139411,7 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
+qZ
 CK
 CK
 CK
@@ -139764,6 +139845,12 @@ NO
 NO
 NO
 NO
+Nf
+NO
+NO
+NO
+NO
+Nf
 NO
 NO
 NO
@@ -139772,13 +139859,7 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
-NO
-NO
+Nf
 NO
 hw
 yI
@@ -139812,7 +139893,7 @@ hw
 CK
 CK
 CK
-CK
+qZ
 CK
 CK
 CK
@@ -140275,7 +140356,7 @@ NO
 NO
 NO
 NO
-NO
+UX
 NO
 NO
 NO
@@ -140305,7 +140386,7 @@ yI
 yI
 yI
 yI
-yI
+Oj
 yI
 yI
 yI
@@ -140315,10 +140396,10 @@ CK
 CK
 CK
 CK
+qZ
+sp
 CK
-CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -140767,6 +140848,11 @@ NO
 NO
 NO
 NO
+Nf
+NO
+NO
+NO
+UX
 NO
 NO
 NO
@@ -140775,12 +140861,7 @@ NO
 NO
 NO
 NO
-NO
-NO
-NO
-NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -140795,7 +140876,7 @@ yI
 yI
 yI
 yI
-yI
+RU
 yI
 yI
 yI
@@ -141271,13 +141352,13 @@ NO
 NO
 NO
 NO
+Nf
 NO
 NO
 NO
 NO
 NO
-NO
-NO
+Nf
 NO
 NO
 NO
@@ -141294,6 +141375,7 @@ yI
 yI
 yI
 yI
+RU
 yI
 yI
 yI
@@ -141301,8 +141383,7 @@ yI
 yI
 yI
 yI
-yI
-yI
+Oj
 yI
 yI
 yI
@@ -141330,12 +141411,12 @@ CK
 CK
 CK
 CK
+qZ
+CK
+sp
 CK
 CK
-CK
-CK
-CK
-CK
+Pl
 CK
 CK
 CK
@@ -141773,12 +141854,12 @@ NO
 NO
 NO
 NO
+Nf
+Nf
 NO
 NO
 NO
-NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -141793,6 +141874,18 @@ yI
 yI
 yI
 yI
+Oj
+yI
+yI
+yI
+yI
+yI
+rF
+yI
+yI
+yI
+yI
+Oj
 yI
 yI
 yI
@@ -141800,19 +141893,7 @@ yI
 yI
 yI
 yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
+rF
 yI
 yI
 yI
@@ -141823,19 +141904,19 @@ CK
 CK
 CK
 CK
+sp
+CK
+sp
+CK
+CK
+CK
+MV
 CK
 CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
+qZ
 CK
 CK
 CK
@@ -142276,17 +142357,17 @@ VJ
 NO
 NO
 NO
+UX
+UX
 NO
 NO
 NO
 NO
 NO
 NO
+Nf
 NO
-NO
-NO
-NO
-NO
+UX
 NO
 NO
 NO
@@ -142332,16 +142413,16 @@ CK
 CK
 CK
 CK
+MV
 CK
-CK
-CK
-CK
+sp
+sp
 CK
 CK
 CK
 Sk
 CK
-CK
+sp
 CK
 CK
 CK
@@ -142780,7 +142861,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -142795,6 +142876,21 @@ NO
 hw
 yI
 yI
+RU
+yI
+yI
+yI
+yI
+RU
+yI
+yI
+yI
+Oj
+yI
+yI
+yI
+yI
+RU
 yI
 yI
 yI
@@ -142802,28 +142898,14 @@ yI
 yI
 yI
 yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
-yI
+Oj
 yI
 yI
 hw
 CK
 CK
 CK
+qZ
 CK
 CK
 CK
@@ -142835,8 +142917,7 @@ CK
 CK
 CK
 CK
-CK
-CK
+MV
 CK
 CK
 CK
@@ -143285,7 +143366,7 @@ NO
 NO
 NO
 NO
-NO
+Nf
 NO
 NO
 NO
@@ -143300,19 +143381,19 @@ yI
 yI
 yI
 yI
+rF
 yI
 yI
 yI
 yI
 yI
+rF
 yI
 yI
 yI
 yI
 yI
-yI
-yI
-yI
+Oj
 yI
 yI
 yI
@@ -143329,6 +143410,12 @@ CK
 CK
 CK
 CK
+qZ
+CK
+CK
+CK
+CK
+sp
 CK
 CK
 CK
@@ -143337,13 +143424,7 @@ CK
 CK
 CK
 CK
-CK
-CK
-CK
-CK
-CK
-CK
-CK
+MV
 CK
 CK
 CK
@@ -143816,7 +143897,7 @@ zL
 yI
 yI
 yI
-yI
+RU
 yI
 yI
 yI
@@ -143839,6 +143920,7 @@ CK
 CK
 CK
 CK
+qZ
 CK
 CK
 CK
@@ -143846,8 +143928,7 @@ CK
 CK
 CK
 CK
-CK
-CK
+sp
 CK
 CK
 CK
@@ -144331,6 +144412,7 @@ CK
 CK
 CK
 CK
+qZ
 CK
 CK
 CK
@@ -144343,8 +144425,7 @@ CK
 CK
 CK
 CK
-CK
-CK
+qZ
 CK
 CK
 CK
@@ -144831,7 +144912,7 @@ yI
 hw
 CK
 CK
-CK
+sp
 CK
 CK
 CK
@@ -145347,7 +145428,7 @@ CK
 CK
 CK
 CK
-CK
+sp
 CK
 CK
 CK
@@ -145839,7 +145920,7 @@ CK
 CK
 CK
 CK
-CK
+qZ
 CK
 CK
 CK
