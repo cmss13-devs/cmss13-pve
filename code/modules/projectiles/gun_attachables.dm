@@ -2751,6 +2751,7 @@ Defined in conflicts.dm of the #defines folder.
 	// Some attachments may be fired. So here are the variables related to that.
 	/// Ammo to fire the attachment with
 	var/datum/ammo/ammo = null
+	var/obj/projectile/in_chamber = null
 	var/max_range = 0 //Determines # of tiles distance the attachable can fire, if it's not a projectile.
 	var/last_fired //When the attachment was last fired.
 	var/attachment_firing_delay = 0 //the delay between shots, for attachments that fires stuff
@@ -2958,7 +2959,7 @@ Defined in conflicts.dm of the #defines folder.
 		playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
 		return
 
-	if(current_rounds > 0 && ..())
+	if(current_rounds > 0 && ..() || in_chamber && ..())
 		prime_grenade(target,gun,user)
 
 /obj/item/attachable/attached_gun/grenade/proc/prime_grenade(atom/target,obj/item/weapon/gun/gun,mob/living/user)
@@ -3002,34 +3003,45 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "grenade-mk1_a"
 	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
 	current_rounds = 0
-	max_rounds = 5
+	max_rounds = 4
 	max_range = 10
 	attachment_firing_delay = 15
 
 /obj/item/attachable/attached_gun/grenade/mk1/pump(mob/user) //for want of a better proc name
 	if(breech_open) // if it was ALREADY open
 		breech_open = FALSE
-		if(current_rounds)
-			cocked = TRUE // by closing the gun we have cocked it and readied it to fire
+		if(current_rounds && !in_chamber)
+			in_chamber = loaded_grenades[length(loaded_grenades)]
+			current_rounds--
+			loaded_grenades.Cut(1,2)
 		to_chat(user, SPAN_NOTICE("You bring \the [src]'s pump forward, cocking it!"))
 		playsound(src, close_sound, 15, 1)
 	else
 		breech_open = TRUE
-		cocked = FALSE
+		if(in_chamber) //eject the chambered round
+			var/obj/item/explosive/grenade/new_grenade = in_chamber
+			in_chamber = null
+			new_grenade.forceMove(get_turf(src))
 		to_chat(user, SPAN_NOTICE("You bring \the [src]'s pump back!"))
 		playsound(src, open_sound, 15, 1)
 	update_icon()
 
 /obj/item/attachable/attached_gun/grenade/mk1/reload_attachment(obj/item/explosive/grenade/G, mob/user)
-	if(breech_open)
-		to_chat(user, SPAN_WARNING("\The [src]'s loading port is covered, put the pump forward! (use unique-action)"))
-		return
 	if(!istype(G) || istype(G, /obj/item/explosive/grenade/spawnergrenade/))
 		to_chat(user, SPAN_WARNING("[src] doesn't accept that type of grenade."))
 		return
 	if(!G.active) //can't load live grenades
 		if(!G.underslug_launchable)
 			to_chat(user, SPAN_WARNING("[src] doesn't accept that type of grenade."))
+			return
+		if(breech_open)
+			if(!in_chamber)
+				in_chamber = G
+				to_chat(user, SPAN_NOTICE("You load \the [G] into \the [src]'s chamber."))
+				playsound(user, 'sound/weapons/grenade_insert.wav', 25, 1)
+				user.drop_inv_item_to_loc(G, src)
+			else
+				to_chat(user, SPAN_WARNING("\The [src]'s loading port is covered, put the pump forward! (use unique-action)"))
 			return
 		if(current_rounds >= max_rounds)
 			to_chat(user, SPAN_WARNING("[src] is full."))
@@ -3062,28 +3074,35 @@ Defined in conflicts.dm of the #defines folder.
 	SPAN_NOTICE("You unload \a [nade] from \the [src]."), null, 4, CHAT_TYPE_COMBAT_ACTION)
 	playsound(user, unload_sound, 30, 1)
 
-/obj/item/attachable/attached_gun/grenade/mk1/fire_attachment(atom/target,obj/item/weapon/gun/gun,mob/living/user)
-	if(!(gun.flags_item & WIELDED))
-		if(user)
-			to_chat(user, SPAN_WARNING("You must hold [gun] with two hands to use \the [src]."))
-		return
-	if(breech_open)
-		if(user)
-			to_chat(user, SPAN_WARNING("You must close the chamber to fire \the [src]!"))
-			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
-		return
-	if(!cocked)
-		if(user)
-			to_chat(user, SPAN_WARNING("You must pump \the [src] to fire it!"))
-			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
-		return
-	if(get_dist(user,target) > max_range)
-		to_chat(user, SPAN_WARNING("Too far to fire the attachment!"))
-		playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
+/obj/item/attachable/attached_gun/grenade/mk1/prime_grenade(atom/target,obj/item/weapon/gun/gun,mob/living/user)
+	set waitfor = 0
+	var/obj/item/explosive/grenade/G = in_chamber
+	in_chamber = null
+
+	if(G.antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(G, user))
+		to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from firing!"))
+		msg_admin_niche("[key_name(user)] attempted to prime \a [G.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
 		return
 
-	if(current_rounds > 0 && ..())
-		prime_grenade(target,gun,user)
+	if(G.dual_purpose != FALSE)
+		G.fuse_type = IMPACT_FUSE
+
+	playsound(user.loc, fire_sound, 50, 1)
+	msg_admin_attack("[key_name_admin(user)] fired an underslung grenade launcher [ADMIN_JMP_USER(user)]")
+	log_game("[key_name_admin(user)] used an underslung grenade launcher.")
+
+// canister nades explode immediately and don't leave the barrel of the weapon.
+	if(istype(G, /obj/item/explosive/grenade/high_explosive/airburst/canister))
+		var/obj/item/explosive/grenade/high_explosive/airburst/canister/canister_round = G
+		canister_round.canister_fire(user, target)
+	else
+		var/pass_flags = NO_FLAGS
+		pass_flags |= grenade_pass_flags
+		G.det_time = min(15, G.det_time)
+		G.throw_range = max_range
+		G.activate(user, FALSE)
+		G.forceMove(get_turf(gun))
+		G.throw_atom(target, max_range, SPEED_VERY_FAST, user, null, NORMAL_LAUNCH, pass_flags)
 
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
