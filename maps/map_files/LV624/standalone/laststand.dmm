@@ -124,11 +124,6 @@
 	},
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
-"aU" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/chef,
-/turf/open/floor/wood,
-/area/lv624/ground/caves/north_central_caves)
 "aV" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/wood,
@@ -139,11 +134,6 @@
 /area/lv624/ground/caves/north_central_caves)
 "ba" = (
 /obj/item/weapon/gun/rifle/m41aMK1,
-/turf/open/floor/wood,
-/area/lv624/ground/caves/north_central_caves)
-"bb" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/security/liaison,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "bd" = (
@@ -239,7 +229,6 @@
 /area/lv624/ground/caves/north_central_caves)
 "pS" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wysec,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "qW" = (
@@ -468,7 +457,7 @@ Cw
 bf
 UK
 bf
-bb
+pS
 bf
 hf
 aA
@@ -563,7 +552,7 @@ ah
 bf
 bf
 aV
-aU
+pS
 fH
 bf
 tE

@@ -300,7 +300,7 @@
 		/obj/item/device/reagent_scanner,
 		/obj/item/device/analyzer/plant_analyzer,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/medical/lifesaver/standard
 	has_gamemode_skin = FALSE
@@ -533,39 +533,45 @@
 /obj/item/storage/belt/security/MP/CMB
 	name = "\improper CMB duty belt"
 	desc = "The black duty belt used to carry the instruments of a Colonial Marshal. It is a heavy police belt with several pouches to contain various law enforcement items."
-	storage_slots = 8
+	storage_slots = 6
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 30
 
 /obj/item/storage/belt/security/MP/CMB/full/revolver/fill_preset_inventory()
-	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/ammo_magazine/revolver/spearhead(src)
 	new /obj/item/ammo_magazine/revolver/spearhead(src)
 
 /obj/item/storage/belt/security/MP/CMB/full/highpower/fill_preset_inventory()
-	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/ammo_magazine/pistol/highpower(src)
 	new /obj/item/ammo_magazine/pistol/highpower(src)
 
 /obj/item/storage/belt/security/MP/CMB/synth/fill_preset_inventory()
-	new /obj/item/explosive/grenade/flashbang(src)
 	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/device/clue_scanner(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/explosive/grenade/flashbang(src)
+
+/obj/item/storage/belt/security/MP/colonist
+	name = "duty belt"
+	desc = "The black security duty belt. It is a heavy police belt with several pouches to contain various law enforcement items."
+	storage_slots = 5
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 30
+
+/obj/item/storage/belt/security/MP/colonist/fill_preset_inventory()
+	new /obj/item/weapon/baton(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/restraint/handcuffs(src)
 
 /obj/item/storage/belt/marine
 	name = "\improper M276 pattern ammo load rig"
@@ -593,7 +599,7 @@
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/marine/standard
 	has_gamemode_skin = FALSE
@@ -826,7 +832,7 @@
 	max_storage_space = 28
 	can_hold = list(/obj/item/ammo_magazine/handful)
 	flap = FALSE
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/shotgun/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -1278,7 +1284,7 @@
 		/obj/item/weapon/gun/pistol/smart,
 		/obj/item/ammo_magazine/pistol/smart,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/m4a3/standard
 	has_gamemode_skin = FALSE
@@ -1431,8 +1437,8 @@
 	name = "\improper M276 pattern XM51 holster rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
 	icon_state = "xm51_holster"
-	has_gamemode_skin = TRUE
-	gun_has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
+	gun_has_gamemode_skin = FALSE
 	storage_slots = 8
 	max_w_class = 5
 	can_hold = list(
@@ -1488,7 +1494,7 @@
 		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = -1,
@@ -1625,7 +1631,7 @@
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the powerful Mateba magnum revolver, along with five small pouches for speedloaders. It was included with the mail-order USCM edition of the Mateba autorevolver in the early 2170s."
 	icon_state = "cmateba_holster"
 	item_state = "marinebelt"
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/mateba/cmateba/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/cmateba())
@@ -1809,7 +1815,7 @@
 		/obj/item/weapon/gun/pistol/smart,
 		/obj/item/ammo_magazine/pistol/smart,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartpistol/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/smart())
@@ -1890,7 +1896,7 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/standard
 	has_gamemode_skin = FALSE
@@ -1960,9 +1966,16 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/pmc/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+
+/obj/item/storage/belt/gun/smartgunner/wo/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
@@ -1982,7 +1995,7 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/whiteout/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/pmc())
@@ -2004,7 +2017,7 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/clf/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba())
@@ -2045,7 +2058,7 @@
 		/obj/item/mortar_shell,
 	)
 	bypass_w_limit = list(/obj/item/mortar_shell)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/utility
 	name = "\improper M276 pattern combat toolbelt rig"

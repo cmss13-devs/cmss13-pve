@@ -148,10 +148,6 @@
 /obj/item/frame/rack,
 /turf/open/floor/prison/redfull,
 /area/template_noop)
-"aQ" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/floor_plate,
-/area/template_noop)
 "aR" = (
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall/r_wall/prison,
@@ -178,10 +174,6 @@
 	pixel_y = -15
 	},
 /turf/open/floor/prison/floor_plate,
-/area/template_noop)
-"aZ" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison,
 /area/template_noop)
 "UA" = (
 /obj/structure/bed/chair{
@@ -232,7 +224,7 @@ aP
 aa
 "}
 (5,1,1) = {"
-aZ
+ac
 ab
 aJ
 aE
@@ -253,7 +245,7 @@ ae
 "}
 (7,1,1) = {"
 UA
-aQ
+ap
 ah
 av
 ax

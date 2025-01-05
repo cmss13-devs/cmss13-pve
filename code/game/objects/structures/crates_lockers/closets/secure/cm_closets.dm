@@ -309,7 +309,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	new /obj/item/clothing/under/rank/qm_suit(src)
 	new /obj/item/clothing/shoes/marine(src)
 	new /obj/item/storage/belt/marine(src)
-	new /obj/item/clothing/head/cmcap/req(src)
+	new /obj/item/clothing/head/cmcap/khaki(src)
 	new /obj/item/device/flashlight(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
 
