@@ -491,6 +491,11 @@
 	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
 
+/obj/item/weapon/gun/rifle/m20a/unloaded
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	current_mag = null
+	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
+
 //----------------------------------------------
 //Special gun for the CO to replace the smartgun
 
@@ -1723,7 +1728,9 @@
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
 
-
+/obj/item/weapon/gun/rifle/m4ra/pve/unloaded
+	current_mag = null
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
 //-------------------------------------------------------
 
