@@ -206,22 +206,29 @@ FORENSIC SCANNER
 			last_health_display = new(connected_to)
 		else
 			last_health_display.target_mob = connected_to
-		SStgui.close_user_uis(connected_from, src)
-		last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
-		last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien)
+
+		connected_from = get_atom_on_turf(src)
+		to_world("a")
+		update_beam()
+		if(ishuman(connected_from))
+			SStgui.close_user_uis(connected_from, src)
+			last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
+			last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien)
+			src.add_fingerprint()
+			to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals."))
 		if(report_delay_counter >= report_delay_threshold)
 			buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
 			report_delay_counter = -1
 			if(buffer_for_report.len > 40)
 				buffer_for_report.Cut(1,3)
 		report_delay_counter++
-	to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals."))
 	playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
-	src.add_fingerprint()
 	return
 
 /// proc health_scan was a legacy proc for to_chat messages on health analysers. health_scan_table is retrofitted to have parity with the TGUI scan so it can record info for reports
 /mob/living/proc/health_scan_table(mob/living/carbon/human/user, ignore_delay = FALSE, show_limb_damage = TRUE, show_browser = TRUE, alien = FALSE, do_checks = TRUE) // ahem. FUCK WHOEVER CODED THIS SHIT AS NUMBERS AND NOT DEFINES.
+//fix this later or it might crash, idk
+	/*
 	if(do_checks)
 		if((user.getBrainLoss() >= 60) && prob(50))
 			to_chat(user, SPAN_WARNING("You try to analyze the floor's vitals!"))
@@ -257,7 +264,7 @@ FORENSIC SCANNER
 			user.show_message(SPAN_DANGER("<b>Warning: Blood Level ERROR: --% --cl.Type: ERROR"))
 			user.show_message(SPAN_NOTICE("Subject's pulse: [SET_CLASS("-- bpm", INTERFACE_RED)]"))
 			return
-
+*/
 	var/dat = ""
 	// Calculate damage amounts
 	var/fake_oxy = max(rand(1,40), src.getOxyLoss(), (300 - (src.getToxLoss() + src.getFireLoss() + src.getBruteLoss())))
@@ -276,7 +283,6 @@ FORENSIC SCANNER
 	//dat += "[SET_CLASS("Oxygen", INTERFACE_BLUE)]-[SET_CLASS("Toxin", INTERFACE_GREEN)]-[SET_CLASS("Burns", INTERFACE_ORANGE)]-[SET_CLASS("Brute", INTERFACE_RED)]<td>"
 	dat += "[SET_CLASS(OX, INTERFACE_BLUE)] - [SET_CLASS(TX, INTERFACE_GREEN)] - [SET_CLASS(BU, INTERFACE_ORANGE)] - [SET_CLASS(BR, INTERFACE_RED)]\n"
 	//dat += "\tUntreated: {B}=Burns,{T}=Trauma,{F}=Fracture\n"
-
 
 	// Show specific limb damage
 	if(istype(src, /mob/living/carbon/human) && show_limb_damage)
@@ -467,7 +473,12 @@ FORENSIC SCANNER
 	icon_state = "Medical_scanner"
 	overlays -= image(icon, src, "+running")
 	update_beam()
-
+/*
+/obj/item/device/healthanalyzer/soul/dropped(mob/user)
+	. = ..()
+	connected_from = src
+	update_beam()
+*/
 /obj/item/device/healthanalyzer/alien
 	name = "\improper YMX scanner"
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
