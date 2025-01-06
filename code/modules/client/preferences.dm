@@ -763,7 +763,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					b_color = "orange"
 					priority_text = "LOW"
 
-			if(j == PRIME_PRIORITY && !host_bypass && (!job.prime_priority || !user.client?.player_data?.discord_link_id || user.client?.get_total_human_playtime() < JOB_PLAYTIME_TIER_1))
+			if(j == PRIME_PRIORITY && !host_bypass && (!job.prime_priority || user.client?.get_total_human_playtime() < JOB_PLAYTIME_TIER_2))
 				continue
 
 			HTML += "<a class='[j == cur_priority ? b_color : "inactive"]' href='?_src_=prefs;preference=job;task=input;text=[job.title];target_priority=[j];'>[priority_text]</a>"
