@@ -121,6 +121,14 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/dorms)
+"hs" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
 "hx" = (
 /obj/structure/bed{
 	can_buckle = 0
@@ -290,6 +298,10 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/dorms)
 "rL" = (
@@ -328,12 +340,12 @@
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
-	pixel_y = -15
+	pixel_y = -10
 	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
 	pixel_x = 16;
-	pixel_y = 16
+	pixel_y = 22
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
@@ -361,16 +373,11 @@
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
-	pixel_y = -15
+	pixel_y = -10
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "uc" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
-	},
 /obj/item/trash/crushed_cup{
 	pixel_x = -7;
 	icon = 'icons/obj/items/drinkcans.dmi';
@@ -379,22 +386,27 @@
 	name = "\improper Weyland-Yutani Lite";
 	pixel_y = 19
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "uU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
@@ -474,27 +486,34 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/dorms)
 "BN" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/obj/item/trash/hotdog{
+	pixel_y = -8
+	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
 	pixel_x = 16;
-	pixel_y = -15
+	pixel_y = -10
 	},
-/obj/effect/decal/strata_decals/grime/grime4,
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/dorms)
 "BV" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/decal/cleanable/vomit,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
-	pixel_y = -15
+	pixel_y = -10
 	},
-/obj/effect/decal/cleanable/vomit,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
 "CD" = (
@@ -553,6 +572,9 @@
 	icon_state = "0-4";
 	layer = 2.36
 	},
+/obj/item/trash/chips{
+	pixel_y = 26
+	},
 /turf/open/floor/almayer/edge/southwest,
 /area/golden_arrow/dorms)
 "Jx" = (
@@ -597,16 +619,6 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice2";
-	pixel_x = 16;
-	pixel_y = 16
-	},
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
 	},
@@ -618,6 +630,11 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "Nu" = (
@@ -625,6 +642,14 @@
 	dir = 8
 	},
 /obj/effect/decal/strata_decals/grime/grime3,
+/obj/item/prop{
+	icon = 'icons/obj/items/weapons/weapons.dmi';
+	icon_state = "snowball";
+	name = "pong ball";
+	desc = "A small, round, white ball used for playing beer pong.";
+	pixel_x = -7;
+	pixel_y = 7
+	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/dorms)
 "Ok" = (
@@ -665,6 +690,7 @@
 	layer = 2.52
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/item/trash/semki,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "QO" = (
@@ -785,7 +811,7 @@
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
 	pixel_x = 16;
-	pixel_y = -15
+	pixel_y = -10
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/dorms)
@@ -851,7 +877,7 @@ sP
 uU
 uc
 Za
-pa
+hs
 Mv
 BV
 BN
