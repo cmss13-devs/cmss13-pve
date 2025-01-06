@@ -630,6 +630,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/overwatch)
+"gE" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/processor{
+	pixel_y = 3;
+	pixel_x = -2
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/canyon32B/interior/bunker/mess)
 "gG" = (
 /turf/open/asphalt/cement/cement14,
 /area/canyon32B/exterior/north)
@@ -687,9 +695,6 @@
 	},
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"gU" = (
-/turf/open/auto_turf/ice/layer0,
-/area/canyon32B/interior/overhang)
 "gV" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/mess)
@@ -725,7 +730,7 @@
 	pixel_x = 6;
 	pixel_y = -13
 	},
-/turf/open/auto_turf/ice/layer2,
+/turf/open/auto_turf/ice/layer1,
 /area/canyon32B/interior/overhang)
 "hn" = (
 /obj/structure/machinery/medical_pod/autodoc{
@@ -852,7 +857,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/north)
 "ir" = (
-/turf/open/floor/almayer/edge/north,
+/turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/unloading)
 "ix" = (
 /obj/structure/prop/brazier/campfire{
@@ -895,6 +900,12 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
+"jd" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/canyon32B/exterior/checkpoint)
 "jf" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2;
@@ -976,12 +987,6 @@
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer/edge/southwest,
 /area/canyon32B/interior/bunker/bunks)
-"km" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/auto_turf/ice/layer0,
-/area/canyon32B/interior/overhang)
 "ks" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -996,6 +1001,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/hallway)
+"kN" = (
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/turf/open/asphalt/cement/cement1,
+/area/canyon32B/exterior/north)
 "kR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -1057,12 +1076,11 @@
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
 "lr" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food{
-	pixel_y = 20;
-	pixel_x = -6;
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/chem_dispenser/canteen{
+	pixel_y = 16;
 	can_block_movement = 0
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/mess)
 "ly" = (
@@ -1147,6 +1165,25 @@
 	icon = 'icons/effects/effects.dmi';
 	icon_state = "smoke"
 	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15;
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/south)
 "mi" = (
@@ -1185,7 +1222,7 @@
 	pixel_x = 6;
 	pixel_y = 19
 	},
-/turf/open/auto_turf/ice/layer0,
+/turf/open/auto_turf/ice/layer1,
 /area/canyon32B/interior/overhang)
 "mF" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
@@ -1338,6 +1375,13 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
+"oi" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/canyon32B/exterior/checkpoint)
 "oq" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
 /turf/open/floor/almayer/test_floor4,
@@ -1399,15 +1443,13 @@
 	},
 /obj/item/storage/box/explosive_mines{
 	pixel_y = -4;
-	pixel_x = -5
+	pixel_x = -5;
+	layer = 3.03
 	},
 /obj/item/storage/box/explosive_mines{
 	pixel_x = 6;
-	pixel_y = -7
-	},
-/obj/item/storage/box/explosive_mines{
-	pixel_x = -1;
-	pixel_y = 8
+	pixel_y = -7;
+	layer = 3.04
 	},
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 1;
@@ -1416,6 +1458,11 @@
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
 	light_color = "#dae2ff"
+	},
+/obj/item/storage/box/explosive_mines{
+	pixel_x = -1;
+	pixel_y = 8;
+	layer = 3.05
 	},
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/armory)
@@ -1431,6 +1478,25 @@
 	name = "fog";
 	icon = 'icons/effects/effects.dmi';
 	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15;
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
@@ -1536,6 +1602,25 @@
 	icon = 'icons/effects/effects.dmi';
 	icon_state = "smoke"
 	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15;
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/north)
 "qH" = (
@@ -1575,7 +1660,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
 "qW" = (
-/turf/open/floor/almayer/edge,
+/turf/open/floor/almayer/edge/southeast,
 /area/canyon32B/interior/bunker/unloading)
 "qZ" = (
 /obj/structure/flora/bush/snow,
@@ -1781,6 +1866,12 @@
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/canyon32B/interior/bunker/entrance)
+"tV" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/checkpoint)
 "ug" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -1912,6 +2003,25 @@
 	name = "fog";
 	icon = 'icons/effects/effects.dmi';
 	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15;
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
 	},
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/north)
@@ -2093,6 +2203,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/unloading)
+"xZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/checkpoint)
 "yc" = (
 /obj/structure/bed,
 /obj/structure/machinery/light/double/blue{
@@ -2117,6 +2233,20 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/medbay)
+"yj" = (
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/turf/open/asphalt/cement,
+/area/canyon32B/exterior/north)
 "yq" = (
 /obj/structure/flora/tree/pine,
 /turf/open/snow/layer2,
@@ -2209,12 +2339,23 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/entrance)
-"zg" = (
-/turf/open/auto_turf/ice/layer2,
-/area/canyon32B/interior/overhang)
 "zk" = (
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
+"zl" = (
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/turf/open/asphalt/cement/cement3,
+/area/canyon32B/exterior/north)
 "zr" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -2329,6 +2470,20 @@
 /obj/structure/barricade/snow,
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south/bar)
+"AO" = (
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/south)
 "AQ" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/firstaid/regular{
@@ -2430,8 +2585,7 @@
 /area/canyon32B/interior/bunker/hallway)
 "BR" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food{
-	pixel_y = 20;
-	pixel_x = -5;
+	pixel_y = 16;
 	can_block_movement = 0
 	},
 /turf/open/floor/almayer/edge/north,
@@ -2639,6 +2793,14 @@
 "EG" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/microwave,
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = -1;
+	pixel_y = 12
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
 "EL" = (
@@ -2827,6 +2989,9 @@
 	},
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/engineering)
+"Hu" = (
+/turf/open/floor/shiva/radiator_tile2,
+/area/canyon32B/exterior/checkpoint)
 "HI" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -2847,6 +3012,25 @@
 	name = "fog";
 	icon = 'icons/effects/effects.dmi';
 	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15;
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
 	},
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/north)
@@ -2923,6 +3107,25 @@
 	icon = 'icons/effects/effects.dmi';
 	icon_state = "smoke"
 	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15;
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/south)
 "Io" = (
@@ -2960,6 +3163,33 @@
 	},
 /turf/open/auto_turf/ice/layer1,
 /area/canyon32B/interior/overhang)
+"IA" = (
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15;
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/south)
 "IB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -3231,7 +3461,7 @@
 /area/canyon32B/interior/bunker/entrance)
 "LF" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "2-4"
+	icon_state = "1-2-4"
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
@@ -3251,6 +3481,33 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/overwatch)
+"LY" = (
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15;
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/north)
 "LZ" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/light/small{
@@ -3276,9 +3533,6 @@
 	},
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"Ms" = (
-/turf/open/auto_turf/ice/layer2,
-/area/canyon32B/OOB)
 "Mx" = (
 /obj/structure/window/framed/prefab,
 /turf/open/floor/almayer,
@@ -3367,6 +3621,25 @@
 	icon_state = "smoke"
 	},
 /obj/structure/flora/tree/pine,
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15;
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
 "Nx" = (
@@ -3530,6 +3803,20 @@
 	},
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/unloading)
+"OS" = (
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/north)
 "OT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3605,6 +3892,26 @@
 	pixel_x = 6
 	},
 /turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
+"PL" = (
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
 "PP" = (
 /obj/structure/cable/heavyduty{
@@ -3763,6 +4070,25 @@
 	name = "fog";
 	icon = 'icons/effects/effects.dmi';
 	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15;
+	pixel_y = 15
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
 	},
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/south)
@@ -3943,6 +4269,30 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/entrance)
+"Tq" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/item/light_bulb/tube,
+/obj/structure/closet/crate,
+/turf/open/floor/prison/floor_marked,
+/area/canyon32B/interior/bunker/unloading)
 "Tr" = (
 /turf/closed/wall/wood,
 /area/canyon32B/interior/bar)
@@ -4254,6 +4604,20 @@
 	phone_id = "Checkpoint Four - Overwatch Office";
 	name = "overwatch receiver";
 	phone_category = "Checkpoint Four"
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = -11;
+	pixel_x = 8;
+	id = "Bunker Inner";
+	name = "Inner Lockdown Control";
+	req_access = list(9)
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = 1;
+	pixel_x = 8;
+	name = "Outer Lockdown Control";
+	id = "Bunker Outer";
+	req_access = list(9)
 	},
 /turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/bunker/overwatch)
@@ -4645,12 +5009,40 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
+"ZM" = (
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_x = 15
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/south)
 "ZQ" = (
 /obj/structure/machinery/power/monitor{
 	name = "Main Power Grid Monitoring"
 	},
 /turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/bunker/engineering)
+"ZR" = (
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke"
+	},
+/obj/structure/blocker/invisible_wall{
+	name = "fog";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "smoke";
+	pixel_y = 15
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/canyon32B/exterior/north)
 "ZU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northwest,
@@ -5673,7 +6065,7 @@ xf
 xf
 xf
 xf
-aA
+ZM
 "}
 (3,1,1) = {"
 xf
@@ -6170,12 +6562,12 @@ xf
 xf
 xf
 xf
-aA
-aA
-aA
-aA
-aA
-aA
+ZM
+IA
+IA
+IA
+IA
+IA
 "}
 (4,1,1) = {"
 xf
@@ -6671,13 +7063,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (5,1,1) = {"
 xf
@@ -7173,13 +7565,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (6,1,1) = {"
 xf
@@ -7675,13 +8067,13 @@ CK
 CK
 CK
 CK
-aA
+IA
 oU
-aA
-aA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (7,1,1) = {"
 xf
@@ -8177,13 +8569,13 @@ CK
 CK
 CK
 Sk
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (8,1,1) = {"
 xf
@@ -8679,13 +9071,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (9,1,1) = {"
 xf
@@ -9181,13 +9573,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (10,1,1) = {"
 xf
@@ -9683,13 +10075,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (11,1,1) = {"
 xf
@@ -10185,13 +10577,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (12,1,1) = {"
 xf
@@ -10687,13 +11079,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (13,1,1) = {"
 xf
@@ -11189,13 +11581,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (14,1,1) = {"
 xf
@@ -11691,13 +12083,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (15,1,1) = {"
 xf
@@ -12193,13 +12585,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (16,1,1) = {"
 xf
@@ -12695,13 +13087,13 @@ Sk
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (17,1,1) = {"
 xf
@@ -13197,13 +13589,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (18,1,1) = {"
 xf
@@ -13699,13 +14091,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (19,1,1) = {"
 xf
@@ -14201,13 +14593,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (20,1,1) = {"
 xf
@@ -14703,13 +15095,13 @@ CK
 CK
 CK
 CK
-aA
-aA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 oU
-aA
+IA
 "}
 (21,1,1) = {"
 xf
@@ -15205,13 +15597,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (22,1,1) = {"
 xf
@@ -15707,13 +16099,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (23,1,1) = {"
 xf
@@ -16209,13 +16601,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (24,1,1) = {"
 xf
@@ -16711,13 +17103,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (25,1,1) = {"
 xf
@@ -17213,13 +17605,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (26,1,1) = {"
 xf
@@ -17715,13 +18107,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (27,1,1) = {"
 xf
@@ -18217,13 +18609,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (28,1,1) = {"
 xf
@@ -18719,13 +19111,13 @@ CK
 CK
 Sk
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (29,1,1) = {"
 xf
@@ -19221,13 +19613,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (30,1,1) = {"
 xf
@@ -19723,13 +20115,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (31,1,1) = {"
 xf
@@ -20225,13 +20617,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (32,1,1) = {"
 xf
@@ -20727,13 +21119,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (33,1,1) = {"
 xf
@@ -21229,13 +21621,13 @@ CK
 CK
 CK
 CK
-aA
+IA
 oU
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 "}
 (34,1,1) = {"
 xf
@@ -21731,13 +22123,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (35,1,1) = {"
 xf
@@ -22233,13 +22625,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (36,1,1) = {"
 xf
@@ -22735,13 +23127,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (37,1,1) = {"
 xf
@@ -23237,13 +23629,13 @@ Sk
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (38,1,1) = {"
 xf
@@ -23739,13 +24131,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (39,1,1) = {"
 xf
@@ -24241,13 +24633,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (40,1,1) = {"
 xf
@@ -24743,13 +25135,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (41,1,1) = {"
 xf
@@ -25245,13 +25637,13 @@ CK
 CK
 CK
 CK
-aA
-aA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 oU
-aA
+IA
 "}
 (42,1,1) = {"
 xf
@@ -25747,13 +26139,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (43,1,1) = {"
 xf
@@ -26249,13 +26641,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (44,1,1) = {"
 xf
@@ -26751,13 +27143,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (45,1,1) = {"
 xf
@@ -27253,13 +27645,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (46,1,1) = {"
 xf
@@ -27755,13 +28147,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (47,1,1) = {"
 xf
@@ -28257,16 +28649,16 @@ CK
 CK
 CK
 Sk
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (48,1,1) = {"
-RE
+OS
 xf
 xf
 xf
@@ -28759,22 +29151,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (49,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -29261,22 +29653,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (50,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -29763,22 +30155,22 @@ CK
 CK
 Sk
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (51,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -30265,22 +30657,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (52,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -30767,22 +31159,22 @@ CK
 CK
 CK
 CK
-aA
-aA
+IA
+IA
 oU
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 "}
 (53,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -31270,21 +31662,21 @@ CK
 CK
 CK
 oU
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (54,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -31771,22 +32163,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (55,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -32273,22 +32665,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (56,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -32775,22 +33167,22 @@ CK
 CK
 CK
 CK
-aA
-aA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 oU
-aA
+IA
 "}
 (57,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -33277,22 +33669,22 @@ CK
 Sk
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (58,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -33780,21 +34172,21 @@ CK
 CK
 CK
 oU
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (59,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -34281,22 +34673,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (60,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -34783,22 +35175,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (61,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -35285,22 +35677,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (62,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -35787,22 +36179,22 @@ CK
 CK
 Sk
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (63,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -36289,22 +36681,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (64,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -36791,22 +37183,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (65,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -37293,22 +37685,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (66,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -37795,22 +38187,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (67,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -38297,22 +38689,22 @@ CK
 CK
 CK
 CK
-aA
+IA
 oU
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 "}
 (68,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -38799,22 +39191,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (69,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -39301,22 +39693,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (70,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -39803,16 +40195,16 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (71,1,1) = {"
-wc
+zl
 wc
 wc
 wc
@@ -40305,16 +40697,16 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (72,1,1) = {"
-HL
+yj
 HL
 HL
 HL
@@ -40807,16 +41199,16 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (73,1,1) = {"
-qG
+kN
 qG
 qG
 qG
@@ -41309,22 +41701,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (74,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -41811,22 +42203,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (75,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -42313,22 +42705,22 @@ CK
 Sk
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (76,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -42815,22 +43207,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (77,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -43317,22 +43709,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (78,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -43819,22 +44211,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (79,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -44330,13 +44722,13 @@ Rv
 Rv
 "}
 (80,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -44832,13 +45224,13 @@ In
 In
 "}
 (81,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -45334,13 +45726,13 @@ me
 me
 "}
 (82,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -45827,22 +46219,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (83,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -46329,22 +46721,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (84,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -46832,21 +47224,21 @@ CK
 CK
 CK
 oU
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (85,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -47333,22 +47725,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (86,1,1) = {"
-RE
-RE
-RE
-RE
-RE
-RE
-RE
+OS
+LY
+LY
+LY
+LY
+LY
+LY
 NO
 NO
 NO
@@ -47835,22 +48227,22 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (87,1,1) = {"
 RE
-RE
-RE
-RE
-RE
-RE
-RE
+ZR
+ZR
+ZR
+ZR
+ZR
+ZR
 NO
 NO
 NO
@@ -48337,13 +48729,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (88,1,1) = {"
 xf
@@ -48839,13 +49231,13 @@ CK
 CK
 CK
 CK
-aA
+IA
 oU
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 "}
 (89,1,1) = {"
 xf
@@ -49341,13 +49733,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (90,1,1) = {"
 xf
@@ -49843,13 +50235,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (91,1,1) = {"
 xf
@@ -50345,13 +50737,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (92,1,1) = {"
 xf
@@ -50847,13 +51239,13 @@ CK
 CK
 Sk
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (93,1,1) = {"
 xf
@@ -51349,13 +51741,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (94,1,1) = {"
 xf
@@ -51851,13 +52243,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (95,1,1) = {"
 xf
@@ -52353,13 +52745,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (96,1,1) = {"
 xf
@@ -52855,13 +53247,13 @@ CK
 CK
 CK
 CK
-aA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (97,1,1) = {"
 xf
@@ -53357,13 +53749,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (98,1,1) = {"
 xf
@@ -53859,13 +54251,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (99,1,1) = {"
 xf
@@ -54361,13 +54753,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (100,1,1) = {"
 xf
@@ -54863,13 +55255,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (101,1,1) = {"
 xf
@@ -55365,13 +55757,13 @@ CK
 Sk
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (102,1,1) = {"
 xf
@@ -55867,13 +56259,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (103,1,1) = {"
 xf
@@ -56369,13 +56761,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (104,1,1) = {"
 xf
@@ -56871,13 +57263,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (105,1,1) = {"
 xf
@@ -57373,13 +57765,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (106,1,1) = {"
 xf
@@ -57875,13 +58267,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (107,1,1) = {"
 xf
@@ -58377,13 +58769,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (108,1,1) = {"
 xf
@@ -58879,13 +59271,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (109,1,1) = {"
 xf
@@ -59381,13 +59773,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (110,1,1) = {"
 xf
@@ -59883,13 +60275,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (111,1,1) = {"
 xf
@@ -60385,13 +60777,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (112,1,1) = {"
 xf
@@ -60887,13 +61279,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (113,1,1) = {"
 xf
@@ -61389,13 +61781,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (114,1,1) = {"
 xf
@@ -61891,13 +62283,13 @@ CK
 CK
 CK
 CK
-aA
-aA
+IA
+IA
 oU
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 "}
 (115,1,1) = {"
 xf
@@ -62393,13 +62785,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (116,1,1) = {"
 xf
@@ -62895,13 +63287,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (117,1,1) = {"
 xf
@@ -63397,13 +63789,13 @@ CK
 CK
 CK
 CK
-aA
-aA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 oU
-aA
+IA
 "}
 (118,1,1) = {"
 xf
@@ -63899,13 +64291,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (119,1,1) = {"
 xf
@@ -64401,13 +64793,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (120,1,1) = {"
 xf
@@ -64903,13 +65295,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (121,1,1) = {"
 xf
@@ -65405,13 +65797,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (122,1,1) = {"
 xf
@@ -65907,13 +66299,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (123,1,1) = {"
 xf
@@ -66409,13 +66801,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (124,1,1) = {"
 xf
@@ -66911,13 +67303,13 @@ CK
 Sk
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (125,1,1) = {"
 xf
@@ -67413,13 +67805,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (126,1,1) = {"
 xf
@@ -67915,13 +68307,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (127,1,1) = {"
 xf
@@ -68417,13 +68809,13 @@ CK
 CK
 Sk
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (128,1,1) = {"
 xf
@@ -68919,13 +69311,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (129,1,1) = {"
 xf
@@ -69421,12 +69813,12 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
 Nt
 "}
 (130,1,1) = {"
@@ -69923,13 +70315,13 @@ Sk
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (131,1,1) = {"
 xf
@@ -70425,13 +70817,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (132,1,1) = {"
 xf
@@ -70927,13 +71319,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (133,1,1) = {"
 xf
@@ -71429,13 +71821,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (134,1,1) = {"
 xf
@@ -71931,13 +72323,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (135,1,1) = {"
 xf
@@ -72433,13 +72825,13 @@ CK
 CK
 Sk
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (136,1,1) = {"
 xf
@@ -72935,13 +73327,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (137,1,1) = {"
 xf
@@ -73437,13 +73829,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (138,1,1) = {"
 xf
@@ -73939,13 +74331,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (139,1,1) = {"
 xf
@@ -74441,13 +74833,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (140,1,1) = {"
 xf
@@ -74943,13 +75335,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (141,1,1) = {"
 xf
@@ -75445,13 +75837,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (142,1,1) = {"
 xf
@@ -75947,13 +76339,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (143,1,1) = {"
 xf
@@ -76449,13 +76841,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (144,1,1) = {"
 xf
@@ -76951,13 +77343,13 @@ CK
 CK
 CK
 CK
-aA
-aA
+IA
+IA
 oU
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 "}
 (145,1,1) = {"
 xf
@@ -77453,13 +77845,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (146,1,1) = {"
 xf
@@ -77955,13 +78347,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (147,1,1) = {"
 xf
@@ -78457,13 +78849,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (148,1,1) = {"
 xf
@@ -78959,13 +79351,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (149,1,1) = {"
 xf
@@ -79461,13 +79853,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
+IA
+IA
 "}
 (150,1,1) = {"
 xf
@@ -79515,9 +79907,9 @@ xf
 xf
 xf
 xf
-Qi
 Gf
-Qi
+Gf
+Gf
 mO
 Gf
 NO
@@ -79963,13 +80355,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (151,1,1) = {"
 xf
@@ -80018,7 +80410,7 @@ xf
 xf
 yR
 Cw
-Ms
+Gf
 Gf
 Gf
 Gf
@@ -80465,13 +80857,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
+IA
+IA
+IA
 oU
-aA
-aA
-aA
+IA
+IA
+IA
 "}
 (152,1,1) = {"
 xf
@@ -80518,7 +80910,7 @@ xf
 xf
 xf
 xf
-Ms
+Gf
 Gf
 Gf
 Gf
@@ -80967,13 +81359,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
-aA
+IA
+IA
+IA
+IA
+IA
 oU
-aA
+IA
 "}
 (153,1,1) = {"
 xf
@@ -81469,13 +81861,13 @@ CK
 CK
 CK
 CK
-aA
-aA
-aA
-aA
+PL
+IA
+IA
+IA
 oU
-aA
-aA
+IA
+IA
 "}
 (154,1,1) = {"
 xf
@@ -81972,12 +82364,12 @@ xf
 xf
 xf
 aA
-aA
-aA
-aA
-aA
+AO
+AO
+PL
+IA
 oU
-aA
+IA
 "}
 (155,1,1) = {"
 xf
@@ -82477,9 +82869,9 @@ xf
 xf
 xf
 aA
-aA
-aA
-aA
+AO
+AO
+AO
 "}
 (156,1,1) = {"
 xf
@@ -92192,9 +92584,9 @@ Xc
 RN
 RN
 JU
-Fa
-hI
 de
+hI
+gE
 gV
 xf
 xf
@@ -105240,7 +105632,7 @@ Pw
 XV
 Aw
 Ts
-Et
+Tq
 OL
 ht
 xf
@@ -111763,7 +112155,7 @@ xf
 xf
 xf
 TG
-gU
+TG
 Ix
 TG
 xf
@@ -112264,7 +112656,7 @@ xf
 xf
 xf
 xf
-zg
+TG
 TG
 Ix
 TG
@@ -112768,7 +113160,7 @@ xf
 xf
 TG
 TG
-km
+Ix
 TG
 xf
 xf
@@ -113762,8 +114154,8 @@ yI
 yI
 yI
 yI
-yI
-yI
+Hu
+oi
 xf
 xf
 xf
@@ -113772,7 +114164,7 @@ xf
 xf
 DN
 TG
-km
+Ix
 TG
 xf
 xf
@@ -114263,9 +114655,9 @@ hw
 yI
 yI
 yI
-RU
 yI
-yI
+Hu
+jd
 yI
 yI
 yI
@@ -114767,7 +115159,7 @@ yI
 yI
 yI
 yI
-yI
+xZ
 yI
 yI
 yI
@@ -115269,10 +115661,10 @@ yI
 yI
 yI
 RU
-yI
-yI
-yI
-yI
+tV
+hO
+hO
+hO
 LF
 vD
 vD

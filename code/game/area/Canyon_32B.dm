@@ -14,6 +14,7 @@
 /area/canyon32B/interior
 	ceiling = CEILING_METAL
 	sound_environment = SOUND_ENVIRONMENT_ROOM
+	temperature = T20C
 
 /area/canyon32B/exterior
 	soundscape_playlist = SCAPE_PL_WIND
