@@ -194,9 +194,8 @@ FORENSIC SCANNER
 		bad_disconnect()
 		return PROCESS_KILL
 	*/
-	//if we're further than 1 tile away or we're not on a turf stop doing stuff
-	if(!(get_dist(src, connected_to) <= 3 && isturf(connected_to.loc)))
-		bad_disconnect()
+	//if we're further than 3 tile away to stop doing stuff
+	if(check_if_too_far())
 		return PROCESS_KILL
 
 	if(!popup_window)
@@ -414,12 +413,16 @@ FORENSIC SCANNER
 	dat = replacetext(dat, "class='scannerburnb'", "style='font-weight: bold;' class='[INTERFACE_ORANGE]'")
 	return dat
 
-/obj/item/device/healthanalyzer/soul/proc/update_beam()
+/obj/item/device/healthanalyzer/soul/proc/update_beam(new_beam = TRUE)
 	if(current_beam)
 		QDEL_NULL(current_beam)
-	else if(connected_from && connected_to)
+	if(connected_from && connected_to && new_beam)
 		current_beam = connected_from.beam(connected_to, "iv_tube")
 
+/obj/item/device/healthanalyzer/soul/proc/check_if_too_far()
+	if(!(get_dist(src, connected_to) <= 3 && isturf(connected_to.loc)))
+		disconnect(TRUE)
+		return TRUE
 
 /obj/item/device/healthanalyzer/soul/attack(mob/living/M, mob/living/user)
 	if(M == user)
@@ -427,14 +430,7 @@ FORENSIC SCANNER
 		return
 
 	if(connected_to == M)
-		STOP_PROCESSING(SSobj, src)
-		user.visible_message("[user] detaches [src] from [connected_to].", \
-			"You detach [src] from [connected_to].")
-		//connected_to.active_transfusions -= src
-		connected_to.base_pixel_x = 0
-		connected_to = null
-		connected_from = null
-		update_beam()
+		disconnect()
 		return
 
 	if(user.action_busy)
@@ -447,7 +443,6 @@ FORENSIC SCANNER
 	if(istype(M, /mob/living/carbon/human))
 		connected_to = M
 		connected_from = user
-		//connected_to.active_transfusions += src
 		connected_to.base_pixel_x = 5
 		START_PROCESSING(SSobj, src)
 		report_delay_counter = report_delay_threshold
@@ -458,27 +453,35 @@ FORENSIC SCANNER
 		update_beam()
 
 ///Used to standardize effects of a blood bag disconnecting improperly
-/obj/item/device/healthanalyzer/soul/proc/bad_disconnect()
+/obj/item/device/healthanalyzer/soul/proc/disconnect(bad_disconnect = FALSE)
+	STOP_PROCESSING(SSobj, src)
 	if(!connected_to)
 		return
-
-	connected_to.visible_message("[src] breaks free of [connected_to]!", "[src] is pulled out of you!")
-	connected_to.apply_damage(3, BRUTE, pick("r_arm", "l_arm"))
-	if(connected_to.pain.feels_pain)
-		connected_to.emote("pain")
-	//connected_to.active_transfusions -= src
+	if(bad_disconnect)
+		connected_to.visible_message("[src] breaks free of [connected_to]!", "[src] is pulled out of you!")
+		connected_to.apply_damage(3, BRUTE, pick("r_arm", "l_arm"))
+		if(connected_to.pain.feels_pain)
+			connected_to.emote("pain")
+	else
+		connected_from.visible_message("[connected_from] detaches [src] from [connected_to].", \
+			"You detach [src] from [connected_to].")
 	connected_to.base_pixel_x = 0
 	connected_to = null
 	connected_from = null
 	icon_state = "Medical_scanner"
 	overlays -= image(icon, src, "+running")
-	update_beam()
-/*
+	update_beam(FALSE)
+
 /obj/item/device/healthanalyzer/soul/dropped(mob/user)
 	. = ..()
 	connected_from = src
-	update_beam()
-*/
+	update_beam(TRUE)
+
+/obj/item/device/healthanalyzer/soul/pickup(mob/user)
+	. = ..()
+	connected_from = user
+	update_beam(TRUE)
+
 /obj/item/device/healthanalyzer/alien
 	name = "\improper YMX scanner"
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
