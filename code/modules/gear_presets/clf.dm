@@ -395,7 +395,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/clf/commander
 	idtype = /obj/item/card/id/dogtag
-	assignment = "Revolutionary Cell Commander"
+	assignment = "Revolutionary Commander"
 
 /datum/equipment_preset/clf/commander/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
