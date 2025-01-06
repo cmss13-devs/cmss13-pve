@@ -25,7 +25,13 @@
 	///Does it launch its grenades in a low arc or a high? Do they strike people in their path, or fly beyond?
 	var/is_lobbing = FALSE
 	///Verboten munitions. This is a blacklist. Anything in this list isn't loadable.
-	var/disallowed_grenade_types = list(/obj/item/explosive/grenade/spawnergrenade, /obj/item/explosive/grenade/alien, /obj/item/explosive/grenade/incendiary/molotov, /obj/item/explosive/grenade/flashbang)
+	var/disallowed_grenade_types = list(/obj/item/explosive/grenade/spawnergrenade,
+										/obj/item/explosive/grenade/alien,
+										/obj/item/explosive/grenade/nerve_gas,
+										/obj/item/explosive/grenade/incendiary/bursting_pipe,
+										/obj/item/explosive/grenade/xeno_acid_grenade,
+										/obj/item/explosive/grenade/incendiary/molotov,
+										/obj/item/explosive/grenade/flashbang)
 	///What is this weapon permitted to fire? This is a whitelist. Anything in this list can be fired. Anything.
 	var/valid_munitions = list(/obj/item/explosive/grenade)
 
@@ -175,7 +181,7 @@
 	SPAN_WARNING("[to_firer]"), message_flags = CHAT_TYPE_WEAPON_USE)
 	playsound(user.loc, fire_sound, 50, 1)
 
-	var/angle = round(Get_Angle(user,target))
+	var/angle = floor(Get_Angle(user,target))
 	muzzle_flash(angle,user)
 	simulate_recoil(0, user)
 
@@ -194,6 +200,12 @@
 
 	msg_admin_attack("[key_name_admin(user)] fired a grenade ([fired.name]) from \a ([name]).")
 	log_game("[key_name_admin(user)] used a grenade ([name]).")
+
+// canister rounds explode before leaving the barrel of the launcher.
+	if(istype(fired, /obj/item/explosive/grenade/high_explosive/airburst/canister))
+		var/obj/item/explosive/grenade/high_explosive/airburst/canister/canister_round = fired
+		canister_round.canister_fire(user, target)
+		return
 
 	fired.throw_range = 20
 	fired.det_time = min(10, fired.det_time)
@@ -222,6 +234,7 @@
 	update_icon()
 
 /datum/action/item_action/toggle_firing_level/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/launcher/grenade/G = holder_item
 	if(!ishuman(owner))
 		return
@@ -317,7 +330,7 @@
 /obj/item/weapon/gun/launcher/grenade/m81/riot
 	name = "\improper M81 riot grenade launcher"
 	desc = "A lightweight, single-shot low-angle grenade launcher to launch tear gas grenades. Used by the Colonial Marines Military Police during riots."
-	valid_munitions = list(/obj/item/explosive/grenade/custom/teargas)
+	valid_munitions = list(/obj/item/explosive/grenade/custom/teargas, /obj/item/explosive/grenade/slug/baton)
 	preload = /obj/item/explosive/grenade/custom/teargas
 
 //-------------------------------------------------------
@@ -330,9 +343,10 @@
 	icon_state = "m79"
 	item_state = "m79"
 	flags_equip_slot = SLOT_BACK
-	preload = /obj/item/explosive/grenade/slug/baton
+	preload = null
 	is_lobbing = TRUE
 	actions_types = list(/datum/action/item_action/toggle_firing_level)
+	valid_munitions = list(/obj/item/explosive/grenade/baton/m79, /obj/item/explosive/grenade/smokebomb/airburst, /obj/item/explosive/grenade/high_explosive/airburst/starshell, /obj/item/explosive/grenade/incendiary/impact, /obj/item/explosive/grenade/high_explosive/impact, /obj/item/explosive/grenade/high_explosive/airburst/buckshot)
 
 	fire_sound = 'sound/weapons/handling/m79_shoot.ogg'
 	cocked_sound = 'sound/weapons/handling/m79_break_open.ogg'

@@ -76,20 +76,14 @@
 	new /obj/item/clothing/shoes/black(src)
 
 /obj/structure/closet/secure_closet/platoon_sergeant
-	name = "platoon sergeant locker"
-	desc = "A secure storage unit for the platoon sergeant."
+	name = "section sergeant locker"
+	desc = "A secure storage unit for the section sergeant."
 	req_one_access = list(ACCESS_MARINE_LEADER)
 
 /obj/structure/closet/secure_closet/platoon_sergeant/Initialize()
 	. = ..()
-	new /obj/item/weapon/gun/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/clothing/head/helmet/marine/leader(src)
-	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/binoculars/range/designator/sergeant(src)
 	new /obj/item/device/whistle(src)
 
 /obj/structure/closet/secure_closet/platoon_sergeant_forecon
@@ -99,12 +93,6 @@
 
 /obj/structure/closet/secure_closet/platoon_sergeant_forecon/Initialize()
 	. = ..()
-	new /obj/item/weapon/gun/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/whistle(src)
 
@@ -115,7 +103,6 @@
 
 /obj/structure/closet/secure_closet/squad_sergeant/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/helmet/marine/rto(src)
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/whistle(src)
 
@@ -138,14 +125,14 @@
 	. = ..()
 	new /obj/item/weapon/gun/smartgun(src)
 	new /obj/item/smartgun_battery(src)
-	new /obj/item/clothing/suit/storage/marine/smartgunner(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/clothing/suit/marine/smartgunner(src)
+	new /obj/item/storage/belt/gun/smartgunner/garrow(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
+	new /obj/item/storage/large_holster/machete/smartgunner/full(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56/grenade(src)
 
 /obj/structure/closet/secure_closet/smartgunner_forecon
 	name = "smartgunner locker"
@@ -156,14 +143,14 @@
 	. = ..()
 	new /obj/item/weapon/gun/smartgun(src)
 	new /obj/item/smartgun_battery(src)
-	new /obj/item/clothing/suit/storage/marine/smartgunner/standard(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/clothing/suit/marine/smartgunner/standard(src)
+	new /obj/item/storage/belt/gun/smartgunner/garrow(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
+	new /obj/item/storage/large_holster/machete/smartgunner/full(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56/grenade(src)
 
 /obj/structure/closet/cryo/Initialize()
 	. = ..()

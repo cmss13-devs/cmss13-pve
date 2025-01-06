@@ -1,11 +1,35 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"cw" = (
+"aA" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -9
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -12
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
+"cO" = (
 /obj/structure/machinery/door/airlock/dropship_hatch/upp{
 	id = "port_door"
 	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"cS" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464847"
 	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"cU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 12;
+	pixel_y = 29
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ds_upp)
 "di" = (
 /turf/closed/shuttle/ert{
@@ -13,105 +37,71 @@
 	opacity = 0
 	},
 /area/shuttle/ds_upp)
-"ev" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_x = 12;
-	pixel_y = 29
-	},
-/obj/structure/machinery/camera/autoname/golden_arrow/midway{
-	network = list("Chapaev","Akademia Nauk")
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"ex" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/camera/autoname/golden_arrow/midway{
-	dir = 4;
-	pixel_x = -23;
-	network = list("Chapaev","Akademia Nauk")
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"fz" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_x = 12;
-	pixel_y = 29
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"fC" = (
-/obj/structure/machinery/computer/cameras/dropship/midway{
-	network = list("Akademia Nauk","Laser Targets");
-	name = "\improper 'Akademia Nauk' camera controls"
-	},
-/obj/structure/blocker/invisible_wall,
-/obj/structure/phone_base{
-	pixel_y = 32;
-	name = "Akademia Nauk Telephone";
-	phone_category = "Dropship";
-	phone_id = "Akademia Nauk"
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"fX" = (
+"ey" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
-"he" = (
-/obj/structure/machinery/light{
-	dir = 1;
-	pixel_y = 11
+"eE" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
 	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"ft" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 9;
+	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -15
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ds_upp)
 "hg" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp9"
 	},
 /area/shuttle/ds_upp)
-"is" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/light{
+"hS" = (
+/obj/structure/bed/chair/vehicle{
 	dir = 4;
-	pixel_x = 14
+	pixel_x = -9
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
 	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
-"jh" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/light{
+"iN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"jZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = -1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
+"kt" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 8;
-	pixel_x = -14
+	pixel_x = 23;
+	network = list("Chapaev","Akademia Nauk")
 	},
-/turf/open/floor/strata{
+/obj/structure/barricade/handrail/strata{
 	dir = 4;
-	icon_state = "floor3"
+	can_buckle = 1
 	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "ld" = (
 /obj/effect/attach_point/weapon/midway/left_wing{
@@ -121,55 +111,33 @@
 	icon_state = "upp201"
 	},
 /area/shuttle/ds_upp)
+"lf" = (
+/obj/structure/machinery/light{
+	dir = 1;
+	pixel_y = 11
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
 "lm" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp1"
 	},
 /area/shuttle/ds_upp)
-"mu" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/shuttle/ds_upp)
-"nA" = (
-/turf/open/floor/strata{
+"nZ" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
 	dir = 4;
-	icon_state = "floor3"
+	pixel_x = -23;
+	network = list("Chapaev","Akademia Nauk")
 	},
-/area/shuttle/ds_upp)
-"nS" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
-	pixel_y = 1
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
 	},
-/obj/structure/bed/chair/vehicle{
-	dir = 4;
-	pixel_x = -9
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = -12
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"of" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "pv" = (
 /turf/closed/shuttle/ert{
@@ -182,55 +150,175 @@
 	icon_state = "T61"
 	},
 /area/shuttle/ds_upp)
-"rX" = (
-/obj/structure/machinery/light{
-	dir = 4;
-	pixel_x = 14
+"rr" = (
+/obj/structure/machinery/computer/dropship_weapons/midway{
+	name = "\improper 'Akademia Nauk' weapons controls";
+	shuttle_tag = "dropship_upp";
+	faction = "UPP";
+	req_one_access = list(235,240)
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
-"rZ" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/light{
-	dir = 4;
-	pixel_x = 14
+"si" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 9;
+	dir = 8
 	},
-/obj/structure/machinery/camera/autoname/golden_arrow/midway{
-	pixel_x = -6;
-	pixel_y = -16
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
-"sC" = (
+"um" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 12
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"wi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1;
+	pixel_x = -1
+	},
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp{
 	id = "aft_door"
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"wO" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp201"
 	},
 /area/shuttle/ds_upp)
-"sP" = (
-/obj/structure/bed/chair/vehicle{
+"xc" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp_rightengine"
+	},
+/area/shuttle/ds_upp)
+"xv" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"xE" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp4"
+	},
+/area/shuttle/ds_upp)
+"Ab" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 7;
+	ship_tag = "dropship_upp"
+	},
+/obj/structure/barricade/handrail/strata{
+	can_buckle = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/ds_upp)
+"AK" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp21"
+	},
+/area/shuttle/ds_upp)
+"BD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"BT" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_2";
+	opacity = 0
+	},
+/area/shuttle/ds_upp)
+"CV" = (
+/obj/structure/barricade/handrail/strata{
 	dir = 4;
-	pixel_x = -9
+	can_buckle = 1
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	name = "\improper MinZdrav dispenser";
+	desc = "A wall-mounted medical equipment dispenser. Provided by Ministry of Health of UPP, it contains a small quantity of emergency supplies.";
+	pixel_x = 30
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"DG" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_2";
+	opacity = 0
+	},
+/area/shuttle/ds_upp)
+"Ek" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 7;
+	ship_tag = "dropship_upp"
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/ds_upp)
+"Fc" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"Fz" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_3";
+	opacity = 0
+	},
+/area/shuttle/ds_upp)
+"FF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
+"FG" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	layer = 6
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
-	pixel_x = -12
+	pixel_x = 1
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ds_upp)
-"tx" = (
+"FY" = (
+/obj/structure/stairs{
+	layer = 2.1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"Gn" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"GH" = (
 /obj/structure/machinery/computer/shuttle/dropship/flight,
 /obj/structure/blocker/invisible_wall,
 /obj/item/frame/camera{
@@ -239,135 +327,7 @@
 	name = "broken dashcam";
 	desc = "Welp, no more funny crash vids..."
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"us" = (
-/obj/structure/machinery/door/airlock/hatch/cockpit/upp,
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/shuttle/ds_upp)
-"wO" = (
-/turf/closed/shuttle/ert{
-	icon_state = "upp201"
-	},
-/area/shuttle/ds_upp)
-"wQ" = (
-/obj/structure/machinery/door/airlock/dropship_hatch/upp{
-	dir = 8;
-	id = "starboard_door"
-	},
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
-/area/shuttle/ds_upp)
-"xc" = (
-/turf/closed/shuttle/ert{
-	icon_state = "upp_rightengine"
-	},
-/area/shuttle/ds_upp)
-"xE" = (
-/turf/closed/shuttle/ert{
-	icon_state = "upp4"
-	},
-/area/shuttle/ds_upp)
-"xZ" = (
-/obj/effect/attach_point/crew_weapon/midway{
-	attach_id = 7;
-	ship_tag = "dropship_upp"
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"yy" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/camera/autoname/golden_arrow/midway{
-	dir = 8;
-	pixel_x = 23;
-	network = list("Chapaev","Akademia Nauk")
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"zL" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_x = 12
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"AK" = (
-/turf/closed/shuttle/ert{
-	icon_state = "upp21"
-	},
-/area/shuttle/ds_upp)
-"BT" = (
-/turf/closed/shuttle/ert{
-	icon_state = "rightengine_2";
-	opacity = 0
-	},
-/area/shuttle/ds_upp)
-"Cw" = (
-/obj/structure/machinery/light{
-	dir = 8;
-	pixel_x = -14
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"Dn" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"DG" = (
-/turf/closed/shuttle/ert{
-	icon_state = "leftengine_2";
-	opacity = 0
-	},
-/area/shuttle/ds_upp)
-"Fd" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 9;
-	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = -15
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"Fz" = (
-/turf/closed/shuttle/ert{
-	icon_state = "rightengine_3";
-	opacity = 0
-	},
-/area/shuttle/ds_upp)
-"GR" = (
-/obj/structure/stairs,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
 "GY" = (
 /obj/docking_port/mobile/marine_dropship/upp,
@@ -392,12 +352,11 @@
 	icon_state = "upp3"
 	},
 /area/shuttle/ds_upp)
-"HV" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+"IK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ds_upp)
 "Jo" = (
 /obj/effect/attach_point/weapon/midway/left_fore,
@@ -409,17 +368,26 @@
 "Jy" = (
 /turf/template_noop,
 /area/template_noop)
-"JD" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_x = -30
+"JN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = -13;
+	pixel_y = 29
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ds_upp)
-"My" = (
+"Ko" = (
+/obj/structure/machinery/light{
+	dir = 1;
+	pixel_y = 11
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"Kv" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8;
 	pixel_y = 7
@@ -428,10 +396,28 @@
 	pixel_x = 8;
 	pixel_y = 7
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"LD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
 	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
+"LW" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -9
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "MF" = (
 /turf/closed/shuttle/ert{
@@ -443,15 +429,16 @@
 	icon_state = "uppwall"
 	},
 /area/shuttle/ds_upp)
-"OB" = (
+"Ou" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/upp,
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"OE" = (
 /obj/effect/attach_point/crew_weapon/midway{
-	attach_id = 9;
+	attach_id = 8;
 	ship_tag = "dropship_upp"
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ds_upp)
 "PQ" = (
 /obj/effect/attach_point/weapon/midway/right_wing{
@@ -461,43 +448,90 @@
 	icon_state = "upp251"
 	},
 /area/shuttle/ds_upp)
-"RL" = (
+"Qk" = (
+/obj/structure/machinery/computer/cameras/dropship/midway{
+	network = list("Akademia Nauk","Laser Targets");
+	name = "\improper 'Akademia Nauk' camera controls"
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/phone_base{
+	pixel_y = 32;
+	name = "Akademia Nauk Telephone";
+	phone_category = "Dropship";
+	phone_id = "Akademia Nauk";
+	networks_receive = list("UPP");
+	networks_transmit = list("UPP")
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"RX" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	pixel_x = -6;
+	pixel_y = -16
+	},
 /obj/structure/bed/chair/dropship/pilot{
-	dir = 1
+	dir = 1;
+	layer = 6
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
 	},
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ds_upp)
-"Sf" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
-	pixel_x = 30
-	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"Sg" = (
+"Sn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
-	pixel_x = -13;
+	pixel_x = 12;
 	pixel_y = 29
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	network = list("Chapaev","Akademia Nauk")
 	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "Sx" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp5"
 	},
 /area/shuttle/ds_upp)
-"SF" = (
+"Th" = (
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
+"Tq" = (
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"TG" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp23"
+	},
+/area/shuttle/ds_upp)
+"TO" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 9;
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"Wy" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 9;
+	ship_tag = "dropship_upp"
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/ds_upp)
+"Xb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_x = 19
@@ -506,38 +540,11 @@
 	icon_state = "S";
 	pixel_x = -5
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"TG" = (
-/turf/closed/shuttle/ert{
-	icon_state = "upp23"
-	},
-/area/shuttle/ds_upp)
-"TN" = (
-/obj/structure/machinery/computer/dropship_weapons/midway{
-	name = "\improper 'Akademia Nauk' weapons controls";
-	shuttle_tag = "dropship_upp";
-	faction = "UPP";
-	req_one_access = list(235,240)
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "floor3"
-	},
-/area/shuttle/ds_upp)
-"Uw" = (
-/turf/open/floor/strata{
-	icon_state = "floor2"
-	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "Xe" = (
 /obj/effect/attach_point/weapon/midway/left_fore,
@@ -551,15 +558,47 @@
 	icon_state = "T151"
 	},
 /area/shuttle/ds_upp)
-"XO" = (
-/obj/effect/attach_point/crew_weapon/midway{
-	attach_id = 8;
-	ship_tag = "dropship_upp"
+"XE" = (
+/obj/structure/barricade/handrail/strata{
+	can_buckle = 1
 	},
-/turf/open/floor/strata{
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ds_upp)
+"Ya" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"Yn" = (
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
+"YJ" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	name = "\improper MinZdrav dispenser";
+	desc = "A wall-mounted medical equipment dispenser. Provided by Ministry of Health of UPP, it contains a small quantity of emergency supplies.";
+	pixel_x = -30
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ds_upp)
+"Zh" = (
+/obj/structure/machinery/light{
 	dir = 4;
-	icon_state = "floor3"
+	pixel_x = 14
 	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "Zm" = (
 /turf/closed/shuttle/ert{
@@ -584,8 +623,8 @@ Jy
 Jy
 Jy
 ld
-cw
-cw
+cO
+cO
 MF
 pv
 Zn
@@ -604,8 +643,8 @@ Jy
 Xe
 wO
 ZO
-Uw
-Uw
+LD
+LD
 Zm
 xE
 xE
@@ -623,16 +662,16 @@ wO
 xE
 xE
 AK
-he
-XO
-nA
-HV
-ex
-jh
-JD
-HV
-nA
-GR
+lf
+OE
+Yn
+Tq
+nZ
+xv
+YJ
+eE
+Gn
+FY
 Zm
 xE
 xE
@@ -640,79 +679,79 @@ lm
 "}
 (4,1,1) = {"
 AK
-fC
-jh
+Qk
+FG
 HB
-Uw
-of
-zL
-Fd
-Fd
-Fd
-Fd
-fz
-nA
-Dn
-nA
-Cw
-nA
-sC
+Th
+Ya
+um
+ft
+ft
+ft
+ft
+cU
+XE
+cS
+jZ
+LW
+hS
+wi
 "}
 (5,1,1) = {"
 HB
-tx
-RL
-us
-mu
-My
-SF
+GH
+Th
+Ou
+iN
+Kv
+Xb
 Nh
 Nh
 GY
 Nh
-ev
-xZ
-Dn
-HV
-HV
-HV
-HV
+Sn
+Ab
+cS
+Ek
+Th
+Th
+Yn
 "}
 (6,1,1) = {"
 AK
-TN
-rZ
+rr
+RX
 HB
-Uw
-fX
-nA
-nS
-sP
-sP
-sP
-Sg
-nA
-Dn
-nA
-rX
-nA
-nA
+Th
+ey
+Yn
+aA
+aA
+aA
+aA
+JN
+XE
+cS
+IK
+TO
+si
+BD
 "}
 (7,1,1) = {"
 Hk
 Sx
 Sx
 AK
-he
-OB
-nA
-HV
-yy
-is
-Sf
-HV
-nA
-GR
+Ko
+Wy
+Yn
+Tq
+kt
+Zh
+CV
+Fc
+Gn
+FY
 hg
 Sx
 Sx
@@ -724,8 +763,8 @@ Jy
 Jo
 Hk
 TG
-Uw
-Uw
+FF
+FF
 hg
 Sx
 Sx
@@ -744,8 +783,8 @@ Jy
 Jy
 Jy
 PQ
-wQ
-wQ
+cO
+cO
 xc
 Fz
 di

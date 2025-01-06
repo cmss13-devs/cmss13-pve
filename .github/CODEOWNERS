@@ -26,6 +26,8 @@
 
 # Zonespace
 
+/code/datums/tutorial/ @Zonespace27
 /code/modules/admin/verbs/SDQL2/ @Zonespace27
+/maps/tutorial/ @Zonespace27
 
 # MULTIPLE OWNERS

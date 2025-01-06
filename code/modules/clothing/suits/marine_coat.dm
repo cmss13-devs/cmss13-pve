@@ -24,14 +24,14 @@
 		/obj/item/storage/fancy/cigarettes,
 		/obj/item/tool/lighter,
 		/obj/item/weapon/baton,
-		/obj/item/handcuffs,
+		/obj/item/restraint/handcuffs,
 		/obj/item/device/binoculars,
 		/obj/item/attachable/bayonet,
 		/obj/item/storage/belt/gun/m4a3,
 		/obj/item/storage/belt/gun/m44,
 		/obj/item/storage/belt/gun/mateba,
 		/obj/item/storage/belt/gun/smartpistol,
-
+		/obj/item/storage/belt/gun/type47,
 		/obj/item/device/flashlight,
 		/obj/item/device/healthanalyzer,
 		/obj/item/device/radio,
@@ -68,9 +68,6 @@
 
 /obj/item/clothing/suit/storage/jacket/marine/Initialize()
 	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
-		select_gamemode_skin(type)
-		initial_icon_state = icon_state
 	if(has_buttons)
 		verbs += /obj/item/clothing/suit/storage/jacket/marine/proc/toggle
 
@@ -79,15 +76,26 @@
 	name = "marine service jacket"
 	desc = "A USCMC service jacket, usually officer issue. While technically armored to frag/handgun ammunition, it's best if you don't try your luck."
 	has_buttons = TRUE
+	flags_atom = NO_SNOW_TYPE
 	icon_state = "coat_officer"
+	initial_icon_state = "coat_officer"
 
 /obj/item/clothing/suit/storage/jacket/marine/pilot
 	name = "\improper M70B1 light flak jacket"
 	desc = "M70 variant that reduces bulk and protective for ergonomics. Consider this to have the same amount of protection from flak as an officer's service jacket."
 	icon_state = "pilot_alt"
 	has_buttons = TRUE
-	flags_atom = NO_SNOW_TYPE
 	initial_icon_state = "pilot_alt"
+
+/obj/item/clothing/suit/storage/jacket/marine/RO
+	name = "quartermaster jacket"
+	desc = "A green jacket worn by USCM personnel. The back has the flag of the United Americas on it."
+	icon_state = "RO_jacket"
+	icon = 'icons/obj/items/clothing/suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi'
+	)
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/suit/storage/jacket/marine/service/mp
 	name = "military police service jacket"
@@ -243,6 +251,11 @@
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR)
 
+/obj/item/clothing/suit/storage/jacket/marine/provost/chief
+	name = "\improper Provost Command Jacket"
+	desc = "A crisp jacket with the Provost sigil."
+	icon_state = "provostci_jacket"
+
 /obj/item/clothing/suit/storage/jacket/marine/provost/coat
 	name = "\improper Provost Coat"
 	desc = "The crisp coat of a Provost Officer."
@@ -278,15 +291,29 @@
 	icon_state = "o_jacket"
 	item_state = "o_jacket"
 
-//==================War Correspondent==================\\
+//==================Combat Correspondent==================\\
 
 /obj/item/clothing/suit/storage/jacket/marine/reporter
 	name = "combat correspondent jacket"
 	desc = "A jacket for the most fashionable war correspondents."
-	icon = 'icons/mob/humans/onmob/contained/war_correspondent.dmi'
-	icon_state = "wc_suit"
-	item_state = "wc_suit"
-	contained_sprite = TRUE
+	icon_state = "cc_brown"
+	item_state = "cc_brown"
+	flags_atom = NO_SNOW_TYPE
+	has_buttons = FALSE
+
+/obj/item/clothing/suit/storage/jacket/marine/reporter/green
+	icon_state = "cc_green"
+	item_state = "cc_green"
+
+
+/obj/item/clothing/suit/storage/jacket/marine/reporter/black
+	icon_state = "cc_black"
+	item_state = "cc_black"
+
+/obj/item/clothing/suit/storage/jacket/marine/reporter/blue
+	icon_state = "cc_blue"
+	item_state = "cc_blue"
+
 
 //==================Corporate Liaison==================\\
 
@@ -295,8 +322,8 @@
 	desc = "A casual brown vest."
 	icon_state = "vest_brown"
 	item_state = "vest_brown"
-	has_buttons = FALSE
 	flags_atom = NO_SNOW_TYPE
+	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/vest/tan
 	name = "tan vest"
@@ -317,8 +344,8 @@
 	desc = "A khaki suit jacket."
 	icon_state = "corporate_ivy"
 	item_state = "corporate_ivy"
-	has_buttons = FALSE
 	flags_atom = NO_SNOW_TYPE
+	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/corporate/formal
 	name = "formal suit jacket"
@@ -348,13 +375,20 @@
 	item_state = "corporate_blue"
 	has_buttons = FALSE
 
+/obj/item/clothing/suit/storage/jacket/marine/corporate/grey
+	name = "grey suit jacket"
+	desc = "A grey suit jacket."
+	icon_state = "corporate_grey"
+	item_state = "corporate_grey"
+	has_buttons = FALSE
+
 /obj/item/clothing/suit/storage/jacket/marine/bomber
 	name = "khaki bomber jacket"
 	desc = "A khaki bomber jacket popular among stationeers and blue-collar workers everywhere."
 	icon_state = "jacket_khaki"
 	item_state = "jacket_khaki"
-	has_buttons = FALSE
 	flags_atom = NO_SNOW_TYPE
+	has_buttons = FALSE
 
 /obj/item/clothing/suit/storage/jacket/marine/bomber/red
 	name = "red bomber jacket"
@@ -369,3 +403,26 @@
 	icon_state = "jacket_grey"
 	item_state = "jacket_grey"
 	has_buttons = FALSE
+
+//==================UPP==================\\
+
+/obj/item/clothing/suit/storage/jacket/marine/upp
+	name = "\improper UPP service uniform jacket"
+	desc = "A UPP service uniform jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_service"
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/suit/storage/jacket/marine/upp/mss
+	name = "\improper MSS uniform jacket"
+	desc = "A Ministry of Space Security service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_mss"
+
+/obj/item/clothing/suit/storage/jacket/marine/upp/coldweather
+	name = "\improper UL2 coldweather service jacket"
+	desc = "A standard issue coldweather UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
+	icon_state = "upp_coat_officer"
+
+/obj/item/clothing/suit/storage/jacket/marine/upp/naval
+	name = "\improper UPP naval infantry jacket"
+	desc = "A standard issue naval infantry service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_naval"

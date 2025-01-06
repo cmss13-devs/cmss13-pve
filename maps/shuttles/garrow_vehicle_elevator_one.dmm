@@ -1,0 +1,147 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+"c" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle)
+"i" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/railing{
+	pixel_y = 22;
+	shuttleId = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle)
+"o" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/docking_port/mobile/trijent_elevator/shipmap_elevator,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+"p" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle)
+"q" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+"s" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle)
+"u" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+"A" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle)
+"C" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+"K" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle)
+"O" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+"R" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/vehicle_shuttle)
+"T" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/vehicle_shuttle)
+
+(1,1,1) = {"
+C
+c
+c
+c
+o
+"}
+(2,1,1) = {"
+T
+u
+a
+a
+s
+"}
+(3,1,1) = {"
+i
+a
+a
+a
+K
+"}
+(4,1,1) = {"
+p
+a
+O
+u
+s
+"}
+(5,1,1) = {"
+p
+u
+u
+u
+s
+"}
+(6,1,1) = {"
+p
+a
+u
+u
+s
+"}
+(7,1,1) = {"
+q
+A
+A
+A
+R
+"}

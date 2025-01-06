@@ -12,7 +12,7 @@
 //Note, for Watatsumi, Grant, and Arious, "left" and "leftmid" are both the left end of the container, but "left" is generic and "leftmid" has the Sat Mover mark on it
 /obj/structure/cargo_container/watatsumi
 	name = "Watatsumi Cargo Container"
-	desc = "A huge industrial shipping container.\nThis one is from Watatsumi, a manufacturer of a variety of electronical and mechanical products.\nAtleast, that is what is says on the container. You have literally never heard of this company before."
+	desc = "A huge industrial shipping container.\nThis one is from Watatsumi, a manufacturer of a variety of electronical and mechanical products.\nAt least, that is what is says on the container. You have literally never heard of this company before."
 
 /obj/structure/cargo_container/watatsumi/left
 	icon_state = "watatsumi_l"
@@ -171,6 +171,125 @@
 
 /obj/structure/cargo_container/seegson/right
 	icon_state = "seegson_r"
+
+/obj/structure/cargo_container/canc
+	name = "CANC Cargo Container"
+	desc = "A huge industrial shipping container.\nThis one is from the Chinese/Asian–Nation Cooperative, which was absorded into the UPP. Their massive industrial output has ensured that cargo containers bearing their symbols and name won't be disappearing any time soon."
+/obj/structure/cargo_container/canc/left
+	icon_state = "canc_g_l"
+
+/obj/structure/cargo_container/canc/mid
+	icon_state = "canc_g_m"
+
+/obj/structure/cargo_container/canc/right
+	icon_state = "canc_g_r"
+
+/obj/structure/cargo_container/canc/tan
+	name = "CANC Cargo Container"
+	desc = "A huge industrial shipping container.\nThis one is from the Chinese/Asian–Nation Cooperative, which was absorded into the UPP. Their massive industrial output has ensured that cargo containers bearing their symbols and name won't be disappearing any time soon."
+
+/obj/structure/cargo_container/canc/tan/left
+	icon_state = "canc_t_l"
+
+/obj/structure/cargo_container/canc/tan/mid
+	icon_state = "canc_t_m"
+
+/obj/structure/cargo_container/canc/tan/right
+	icon_state = "canc_t_r"
+
+/obj/structure/cargo_container/upp
+	name = "UPP Cargo Container"
+	desc = "A huge industrial shipping container.\nThis one is from the Union of Progressive Peoples, as indicated by the massive symbol on the side."
+
+/obj/structure/cargo_container/upp/left
+	icon_state = "upp_l"
+
+/obj/structure/cargo_container/upp/mid
+	icon_state = "upp_m"
+
+/obj/structure/cargo_container/upp/right
+	icon_state = "upp_r"
+
+/obj/structure/cargo_container/upp/tan
+	name = "UPP Cargo Container"
+	desc = "A huge industrial shipping container.\nThis one is from the Union of Progressive Peoples, as indicated by the massive symbol on the side."
+
+/obj/structure/cargo_container/upp/tan/left
+	icon_state = "upp_t_l"
+
+/obj/structure/cargo_container/upp/tan/mid
+	icon_state = "upp_t_m"
+
+/obj/structure/cargo_container/upp/tan/right
+	icon_state = "upp_t_r"
+
+/obj/structure/cargo_container/upp/mk6
+	name = "Ministry of Space Security Cargo Container"
+	desc = "A huge industrial shipping container.\nThis one belongs to the UPP's Ministry of Space Security."
+
+/obj/structure/cargo_container/upp/mk6/left
+	icon_state = "mk6_l"
+
+/obj/structure/cargo_container/upp/mk6/mid
+	icon_state = "mk6_m"
+
+/obj/structure/cargo_container/upp/mk6/right
+	icon_state = "mk6_r"
+
+/obj/structure/cargo_container/uscm
+	name = "United States Colonial Marines Cargo Container"
+	desc = "A huge industrial shipping container.\nThis one belongs to the UA's United States Marine Corps."
+
+/obj/structure/cargo_container/uscm/sanfran/left
+	name = "United States Colonial Marines Cargo Container"
+
+	icon_state = "uscm1_l"
+
+/obj/structure/cargo_container/uscm/sanfran/mid
+	icon_state = "uscm1_m"
+
+/obj/structure/cargo_container/uscm/borodino/left
+	name = "United States Colonial Marines Cargo Container"
+
+	icon_state = "uscm2_l"
+
+/obj/structure/cargo_container/uscm/borodino/mid
+	icon_state = "uscm2_m"
+
+/obj/structure/cargo_container/uscm/tartarus/left
+	name = "United States Colonial Marines Cargo Container"
+
+	icon_state = "uscm3_l"
+
+/obj/structure/cargo_container/uscm/tartarus/mid
+	icon_state = "uscm3_m"
+
+/obj/structure/cargo_container/uscm/chinook/left
+	name = "United States Colonial Marines Cargo Container"
+
+	icon_state = "uscm4_l"
+
+/obj/structure/cargo_container/uscm/chinook/mid
+	icon_state = "uscm4_m"
+
+/obj/structure/cargo_container/uscm/crestus/left
+	name = "United States Colonial Marines Cargo Container"
+
+	icon_state = "uscm5_l"
+
+/obj/structure/cargo_container/uscm/crestus/mid
+	icon_state = "uscm5_m"
+
+/obj/structure/cargo_container/uscm/micor/left
+	name = "United States Colonial Marines Cargo Container"
+
+	icon_state = "uscm6_l"
+
+/obj/structure/cargo_container/uscm/mid
+	icon_state = "uscm_m"
+
+/obj/structure/cargo_container/uscm/right
+	icon_state = "uscm_r"
 
 /obj/structure/cargo_container/attack_hand(mob/user as mob)
 

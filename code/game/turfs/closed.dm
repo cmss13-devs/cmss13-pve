@@ -276,7 +276,7 @@
 
 /turf/closed/shuttle/midway
 	name = "\improper Midway"
-	icon = 'icons/turf/dropship.dmi'
+	icon = 'icons/turf/dropship4.dmi'
 	icon_state = "1"
 
 /turf/closed/shuttle/midway/transparent
@@ -290,6 +290,30 @@
 /turf/closed/shuttle/cyclone/transparent
 	opacity = FALSE
 
+/turf/closed/shuttle/typhoon
+	name = "\improper Typhoon"
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/typhoon/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/tornado
+	name = "\improper Tornado"
+	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/tornado/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/tripoli
+	name = "\improper Tripoli"
+	icon = 'icons/turf/dropship.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/tripoli/transparent
+	opacity = FALSE
+
 /turf/closed/shuttle/twe_dropship
 	name = "\improper UD4-UK"
 	icon = 'icons/turf/twedropship.dmi'
@@ -298,11 +322,18 @@
 /turf/closed/shuttle/twe_dropship/transparent
 	opacity = FALSE
 
-/turf/closed/shuttle/dropship2/tornado
-	name = "\improper Tornado"
+/turf/closed/shuttle/dropship3
+	name = "\improper Saipan"
 	icon = 'icons/turf/dropship3.dmi'
+	icon_state = "1"
 
-/turf/closed/shuttle/dropship2/tornado/typhoon
+/turf/closed/shuttle/dropship3/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/dropship3/tornado
+	name = "\improper Tornado"
+
+/turf/closed/shuttle/dropship3/tornado/typhoon
 	name = "\improper Typhoon"
 
 /turf/closed/shuttle/escapepod

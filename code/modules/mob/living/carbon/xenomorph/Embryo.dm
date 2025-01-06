@@ -78,6 +78,9 @@
 	process_growth(delta_time)
 
 /obj/item/alien_embryo/proc/process_growth(delta_time)
+	//Tutorial embryos do not progress.
+	if(hivenumber == XENO_HIVE_TUTORIAL)
+		return
 	var/datum/hive_status/hive = GLOB.hive_datum[hivenumber]
 	//Low temperature seriously hampers larva growth (as in, way below livable), so does stasis
 	if(!hive.hardcore) // Cannot progress if the hive has entered hardcore mode.
@@ -160,7 +163,7 @@
 /obj/item/alien_embryo/proc/become_larva()
 	// We do not allow chest bursts on the Centcomm Z-level, to prevent
 	// stranded players from admin experiments and other issues
-	if(!affected_mob || is_admin_level(affected_mob.z))
+	if(!affected_mob || should_block_game_interaction(affected_mob))
 		return
 
 	stage = 6 // Increase the stage value to prevent this proc getting repeated
@@ -188,7 +191,7 @@
 
 	if(!picked)
 		// Get a candidate from observers
-		var/list/candidates = get_alien_candidates(hive)
+		var/list/candidates = get_alien_candidates(hive, abomination = (isyautja(affected_mob) || (flags_embryo & FLAG_EMBRYO_PREDATOR)))
 		if(candidates && length(candidates))
 			// If they were facehugged by a player thats still in queue, they get second dibs on the new larva.
 			if(hugger_ckey)
@@ -260,7 +263,7 @@
 		new_xeno.key = picked.key
 
 		if(new_xeno.client)
-			new_xeno.client.change_view(world_view_size)
+			new_xeno.client.change_view(GLOB.world_view_size)
 			if(new_xeno.client.prefs?.toggles_flashing & FLASH_POOLSPAWN)
 				window_flash(new_xeno.client)
 
@@ -294,7 +297,7 @@
 	if(victim.chestburst || loc != victim)
 		return
 	victim.chestburst = TRUE
-	to_chat(src, SPAN_DANGER("You start bursting out of [victim]'s chest!"))
+	to_chat(src, SPAN_DANGER("We start bursting out of [victim]'s chest!"))
 	if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 		victim.apply_effect(20, DAZE)
 	victim.visible_message(SPAN_DANGER("\The [victim] starts shaking uncontrollably!"), \
@@ -336,24 +339,25 @@
 		victim.attack_log += "\[[time_stamp()]\]<font color='orange'> Was chestbursted in [get_area_name(larva_embryo)] at X[victim.x], Y[victim.y], Z[victim.z]. The larva was [key_name(larva_embryo)].</font>"
 
 		if(burstcount)
-			step(larva_embryo, pick(cardinal))
+			step(larva_embryo, pick(GLOB.cardinals))
 
-		if(round_statistics)
-			round_statistics.total_larva_burst++
+		if(GLOB.round_statistics && (ishuman(victim)) && (SSticker.current_state == GAME_STATE_PLAYING) && (ROUND_TIME > 1 MINUTES))
+			GLOB.round_statistics.total_larva_burst++
 		GLOB.larva_burst_by_hive[hive] = (GLOB.larva_burst_by_hive[hive] || 0) + 1
 		burstcount++
 
 		if(!larva_embryo.ckey && larva_embryo.burrowable && loc && is_ground_level(loc.z) && (locate(/obj/structure/bed/nest) in loc) && hive.living_xeno_queen && hive.living_xeno_queen.z == loc.z)
 			larva_embryo.visible_message(SPAN_XENODANGER("[larva_embryo] quickly burrows into the ground."))
-			if(round_statistics && !larva_embryo.statistic_exempt)
-				round_statistics.track_new_participant(faction, -1) // keep stats sane
+			if(GLOB.round_statistics && !larva_embryo.statistic_exempt)
+				GLOB.round_statistics.track_new_participant(faction, -1) // keep stats sane
 			hive.stored_larva++
 			hive.hive_ui.update_burrowed_larva()
 			qdel(larva_embryo)
 
 		if(!victim.first_xeno)
-			to_chat(larva_embryo, SPAN_XENOHIGHDANGER("The Queen's will overwhelms your instincts..."))
-			to_chat(larva_embryo, SPAN_XENOHIGHDANGER("\"[hive.hive_orders]\""))
+			if(hive.hive_orders)
+				to_chat(larva_embryo, SPAN_XENOHIGHDANGER("The Queen's will overwhelms our instincts..."))
+				to_chat(larva_embryo, SPAN_XENOHIGHDANGER("\"[hive.hive_orders]\""))
 			log_attack("[key_name(victim)] chestbursted in [get_area_name(larva_embryo)] at X[victim.x], Y[victim.y], Z[victim.z]. The larva was [key_name(larva_embryo)].") //this is so that admins are not spammed with los logs
 
 	for(var/obj/item/alien_embryo/AE in victim)

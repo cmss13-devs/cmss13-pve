@@ -13,7 +13,9 @@
 	throw_range = 15
 	throw_speed = SPEED_VERY_FAST
 	/// If FALSE won't change icon_state to a camo marine bino.
-	var/uses_camo = TRUE
+	var/uses_camo = FALSE
+	var/zoom_offset = 11
+	var/view_range = 12
 
 
 	//matter = list("metal" = 50,"glass" = 50)
@@ -30,7 +32,7 @@
 	if(SEND_SIGNAL(user, COMSIG_BINOCULAR_ATTACK_SELF, src))
 		return
 
-	zoom(user, 11, 12)
+	zoom(user, zoom_offset, view_range)
 
 /obj/item/device/binoculars/dropped(/obj/item/item, mob/user)
 	. = ..()
@@ -123,7 +125,7 @@
 			to_chat(user, SPAN_WARNING("INVALID TARGET: target must be on the surface."))
 			return FALSE
 		if(user.sight & SEE_TURFS)
-			var/list/turf/path = getline2(user, targeted_atom, include_from_atom = FALSE)
+			var/list/turf/path = get_line(user, targeted_atom, include_start_atom = FALSE)
 			for(var/turf/T in path)
 				if(T.opacity)
 					to_chat(user, SPAN_WARNING("There is something in the way of the laser!"))
@@ -215,7 +217,7 @@
 
 /obj/item/device/binoculars/range/designator/Initialize()
 	. = ..()
-	tracking_id = ++cas_tracking_id_increment
+	tracking_id = ++GLOB.cas_tracking_id_increment
 
 /obj/item/device/binoculars/range/designator/Destroy()
 	QDEL_NULL(laser)
@@ -350,17 +352,38 @@
 				QDEL_NULL(laser)
 				break
 
+//pve binocs
+/obj/item/device/binoculars/range/monocular
+	name = "tactical monocular"
+	desc = "A military-grade monocular equipped with rangefinding capabilities. Capable of withstanding a pretty hefty beating. Ctrl + Click turf to acquire it's coordinates. Ctrl + Click rangefinder to stop lasing."
+	icon_state = "advanced_monocular"
+	uses_camo = FALSE
+	range_laser_overlay = FALSE
+	zoom_offset = 8
+	view_range = 9
+
+/obj/item/device/binoculars/range/designator/sergeant
+	name = "tactical binoculars"
+	desc = "A laser designator issued to USCM command elements. It has two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes."
+	icon_state = "advanced_binoculars"
+	range_laser_overlay = "adv_laser_range"
+	cas_laser_overlay = "adv_laser_cas"
+	uses_camo = FALSE
+
 //IMPROVED LASER DESIGNATER, faster cooldown, faster target acquisition, can be found only in scout spec kit
 /obj/item/device/binoculars/range/designator/scout
 	name = "scout laser designator"
 	desc = "An improved laser designator, issued to USCM scouts, with two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes."
+	unacidable = TRUE
+	indestructible = TRUE
 	cooldown_duration = 80
 	target_acquisition_delay = 30
 
 /obj/item/device/binoculars/range/designator/spotter
 	name = "spotter's laser designator"
 	desc = "A specially-designed laser designator, issued to USCM spotters, with two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes. Additionally, a trained spotter can laze targets for a USCM marksman, increasing the speed of target acquisition. A targeting beam will connect the binoculars to the target, but it may inherit the user's cloak, if possible."
-
+	unacidable = TRUE
+	indestructible = TRUE
 	var/is_spotting = FALSE
 	var/spotting_time = 10 SECONDS
 	var/spotting_cooldown_delay = 5 SECONDS
@@ -400,6 +423,7 @@
 	COOLDOWN_START(designator, spotting_cooldown, 0)
 
 /datum/action/item_action/specialist/spotter_target/action_activate()
+	. = ..()
 	if(!ishuman(owner))
 		return
 	var/mob/living/carbon/human/human = owner
@@ -445,7 +469,7 @@
 	human.face_atom(target)
 
 	///Add a decisecond to the default 1.5 seconds for each two tiles to hit.
-	var/distance = round(get_dist(target, human) * 0.5)
+	var/distance = floor(get_dist(target, human) * 0.5)
 	var/f_spotting_time = designator.spotting_time + distance
 
 	designator.is_spotting = TRUE

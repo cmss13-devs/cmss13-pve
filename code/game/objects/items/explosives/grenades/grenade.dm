@@ -1,3 +1,6 @@
+#define TIMED_FUSE 0
+#define IMPACT_FUSE 1
+
 /obj/item/explosive/grenade
 	name = "grenade"
 	desc = "A hand-held grenade, with an adjustable timer."
@@ -15,13 +18,16 @@
 	var/det_time = 40
 	var/dangerous = FALSE //Make an danger overlay for humans?
 	var/arm_sound = 'sound/weapons/armbomb.ogg'
-	var/has_arm_sound = TRUE
+	var/has_arm_sound = FALSE
 	var/underslug_launchable = FALSE
 	var/hand_throwable = TRUE
 	harmful = TRUE //Is it harmful? Are they banned for synths?
 	antigrief_protection = TRUE //Should it be checked by antigrief?
 	ground_offset_x = 7
 	ground_offset_y = 6
+	var/dual_purpose = FALSE
+	var/fuse_type = TIMED_FUSE
+
 
 /obj/item/explosive/grenade/Initialize()
 	. = ..()
@@ -36,7 +42,7 @@
 		to_chat(user, SPAN_WARNING("You don't have the dexterity to do this!"))
 		return FALSE
 
-	if(harmful && !user.allow_gun_usage)
+	if(harmful && ishuman(user) && !user.allow_gun_usage)
 		to_chat(user, SPAN_WARNING("Your programming prevents you from using this!"))
 		return FALSE
 
@@ -82,7 +88,8 @@
 	if(initial(dangerous))
 		var/nade_sound
 		if(has_species(user, "Human"))
-			nade_sound = user.gender == FEMALE ? get_sfx("female_fragout") : get_sfx("male_fragout")
+			nade_sound = get_sfx("sound/weapons/grenade.ogg")	///In a perfect world, we'd make the M40 style grenades use this sound and the rest retain the old callout
+			//nade_sound = user.gender == FEMALE ? get_sfx("female_fragout") : get_sfx("male_fragout") ///But this is not a perfect world. Keeping this here in case someone wants to do that
 		else if(ismonkey(user))
 			nade_sound = sound('sound/voice/monkey_scream.ogg')
 		if(nade_sound)
