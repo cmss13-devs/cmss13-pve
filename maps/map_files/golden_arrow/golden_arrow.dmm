@@ -1790,6 +1790,15 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/m4ra/heap{
+	pixel_y = 9;
+	pixel_x = 4
+	},
+/obj/item/ammo_box/magazine/m4ra/heap{
+	pixel_y = -5;
+	pixel_x = 4
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "agq" = (
@@ -5366,6 +5375,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
+"asF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/gun_rack/m41/unloaded,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "asJ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -8108,6 +8125,20 @@
 	light_color = "#C02526";
 	color = "#C02526"
 	},
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	name = "high-explosive mortar-shell crate"
+	},
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he,
+/obj/item/mortar_shell/he,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "aBK" = (
@@ -10658,6 +10689,23 @@
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 1
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/rounds/heap{
+	pixel_y = 9;
+	pixel_x = 13
+	},
+/obj/item/ammo_box/rounds/heap{
+	pixel_y = -5;
+	pixel_x = 13
+	},
+/obj/item/ammo_box/magazine/m41ae2/heap{
+	pixel_y = 9;
+	pixel_x = -10
+	},
+/obj/item/ammo_box/magazine/m41ae2/heap{
+	pixel_y = -5;
+	pixel_x = -10
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
@@ -15075,6 +15123,23 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
+"bmP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = -11
+	},
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = 7
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "bnm" = (
 /obj/structure/machinery/disposal{
 	density = 0;
@@ -15084,6 +15149,29 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"bnS" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/secure_closet/security{
+	icon_broken = "base";
+	icon_closed = "base";
+	icon_locked = "base";
+	icon_off = "base";
+	icon_opened = "base";
+	icon_state = "base";
+	req_one_access = list(290);
+	icon = 'icons/obj/structures/props/misc.dmi';
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one has a collection of M83A2 SADAR launchers within, three in total."
+	},
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "bqs" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -15917,6 +16005,20 @@
 	},
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/golden_arrow/medical)
+"emC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_y = -8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "eow" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -15952,6 +16054,21 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"eqq" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1
+	},
+/obj/structure/gun_rack/m41/unloaded,
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "eqr" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Three Blast Door";
@@ -16295,6 +16412,26 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
+"fDu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526"
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 13
+	},
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = -3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "fFO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -16316,6 +16453,36 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"fJM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/security{
+	icon_broken = "base";
+	icon_closed = "base";
+	icon_locked = "base";
+	icon_off = "base";
+	icon_opened = "base";
+	icon_state = "base";
+	req_one_access = list(290);
+	icon = 'icons/obj/structures/props/misc.dmi';
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one holds an M5 RPG, a helmet with ear-baffles, a rocket-pack and spare rockets within."
+	},
+/obj/item/ammo_magazine/rocket,
+/obj/item/ammo_magazine/rocket,
+/obj/item/ammo_magazine/rocket/ap,
+/obj/item/ammo_magazine/rocket/wp,
+/obj/item/weapon/gun/launcher/rocket,
+/obj/item/clothing/head/helmet/marine/M3T,
+/obj/item/storage/backpack/marine/rocketpack,
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "fJT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -16675,6 +16842,26 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"gUZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/closet/secure_closet/security{
+	icon_broken = "base";
+	icon_closed = "base";
+	icon_locked = "base";
+	icon_off = "base";
+	icon_opened = "base";
+	icon_state = "base";
+	req_one_access = list(290);
+	icon = 'icons/obj/structures/props/misc.dmi';
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one holds a pair of M41AE2 heavy pulse rifles inside."
+	},
+/obj/item/weapon/gun/rifle/lmg,
+/obj/item/weapon/gun/rifle/lmg,
+/obj/item/ammo_box/magazine/m41ae2,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "gWb" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
@@ -16685,6 +16872,27 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
+"gXq" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1
+	},
+/obj/item/storage/box/nade_box/canister,
+/obj/item/storage/box/nade_box/canister,
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	desc = "A crate containing two boxes of M108 Canister-shot grenades.";
+	name = "M108 Canister grenade crate"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "gZt" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -16818,6 +17026,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"hsr" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = 7
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "huw" = (
 /obj/structure/roof/cargocrane_tracks/tjoint2{
 	pixel_y = 14
@@ -16888,6 +17103,29 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
+"hAz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/closet/secure_closet/security{
+	icon_broken = "base";
+	icon_closed = "base";
+	icon_locked = "base";
+	icon_off = "base";
+	icon_opened = "base";
+	icon_state = "base";
+	req_one_access = list(290);
+	icon = 'icons/obj/structures/props/misc.dmi';
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one has a collection of M83A2 SADAR launchers within, five in total."
+	},
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "hCn" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -17018,6 +17256,38 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/edge/east,
+/area/golden_arrow/lower_cargo)
+"igj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/security{
+	icon_broken = "base";
+	icon_closed = "base";
+	icon_locked = "base";
+	icon_off = "base";
+	icon_opened = "base";
+	icon_state = "base";
+	req_one_access = list(290);
+	icon = 'icons/obj/structures/props/misc.dmi';
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one holds an M5 RPG, a helmet with ear-baffles, a rocket-pack and spare rockets within."
+	},
+/obj/item/ammo_magazine/rocket,
+/obj/item/ammo_magazine/rocket,
+/obj/item/ammo_magazine/rocket/ap,
+/obj/item/ammo_magazine/rocket/wp,
+/obj/item/weapon/gun/launcher/rocket,
+/obj/item/clothing/head/helmet/marine/M3T,
+/obj/item/storage/backpack/marine/rocketpack,
+/turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "ijg" = (
 /obj/structure/cable/heavyduty{
@@ -17359,6 +17629,29 @@
 "jKX" = (
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/lower_cargo)
+"jLT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_magazine/sentry{
+	pixel_y = -5;
+	pixel_x = -8
+	},
+/obj/item/ammo_magazine/sentry{
+	pixel_y = -5;
+	pixel_x = 10
+	},
+/obj/item/ammo_magazine/sentry{
+	pixel_y = 6;
+	pixel_x = -8
+	},
+/obj/item/ammo_magazine/sentry{
+	pixel_y = 6;
+	pixel_x = 10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "jSb" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -17387,6 +17680,28 @@
 "jXa" = (
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/briefing)
+"jXf" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/structure/closet/secure_closet/security{
+	icon_broken = "base";
+	icon_closed = "base";
+	icon_locked = "base";
+	icon_off = "base";
+	icon_opened = "base";
+	icon_state = "base";
+	req_one_access = list(290);
+	icon = 'icons/obj/structures/props/misc.dmi';
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one has a collection of M83A2 SADAR launchers within, five in total."
+	},
+/obj/item/prop/folded_anti_tank_sadar,
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "jYS" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17535,6 +17850,20 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"kFC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_y = -8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "kGg" = (
 /obj/structure/platform{
 	dir = 4;
@@ -17550,6 +17879,16 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
+"kGv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/gun_rack/m41/unloaded,
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "kIR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -17571,6 +17910,21 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
+"kLc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/item/storage/box/nade_box/bfab,
+/obj/item/storage/box/nade_box/bfab{
+	pixel_x = -4
+	},
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	name = "M51A BFAB grenade crate";
+	desc = "A crate containing two boxes of M51A Bounding Airburst frag grenades."
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "kNp" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -18013,6 +18367,22 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
+"mlQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/obj/item/storage/box/nade_box,
+/obj/item/storage/box/nade_box,
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	name = "M40 HEDP grenade crate";
+	desc = "A crate containing two boxes of M40 High-Explosive, Dual-Purpose grenades."
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "mnT" = (
 /obj/effect/decal/siding{
 	icon_state = "siding2"
@@ -18271,6 +18641,14 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
+"mOf" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/item/mortar_kit,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "mQb" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -18320,6 +18698,32 @@
 	pixel_y = 16
 	},
 /obj/structure/disposalpipe/trunk,
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
+"naa" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526"
+	},
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/structure/closet/secure_closet/security{
+	icon_broken = "base";
+	icon_closed = "base";
+	icon_locked = "base";
+	icon_off = "base";
+	icon_opened = "base";
+	icon_state = "base";
+	req_one_access = list(290);
+	icon = 'icons/obj/structures/props/misc.dmi';
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one has a collection of M83A2 SADAR launchers within, five in total."
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "naw" = (
@@ -18637,6 +19041,26 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"nUB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526"
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_y = -8
+	},
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_y = 10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "nUJ" = (
 /obj/structure/cargo_container/uscm/right{
 	color = "#898988";
@@ -18714,6 +19138,21 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
+"oje" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	name = "frag mortar-shell crate"
+	},
+/obj/item/mortar_shell/frag,
+/obj/item/mortar_shell/frag,
+/obj/item/mortar_shell/frag,
+/obj/item/mortar_shell/frag,
+/obj/item/mortar_shell/frag,
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "ojW" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
@@ -18887,6 +19326,48 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"oMo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/item/storage/box/nade_box/phophorus,
+/obj/item/storage/box/nade_box/phophorus,
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	name = "M60 WPSI grenade crate";
+	desc = "A crate containing two boxes of M60 White-Phosphorus, Smoke/Incendiary grenades."
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
+"oOp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/almayer_B{
+	pixel_x = -2
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
+"oQy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/item/storage/box/nade_box/heap,
+/obj/item/storage/box/nade_box/heap,
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	name = "M38 HEAP grenade crate";
+	desc = "A crate containing two boxes of M38 High-Explosive, Armor-Piercing grenades."
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "oRK" = (
 /obj/structure/roof/cargocrane_tracks/cross{
 	pixel_y = 14
@@ -19279,6 +19760,19 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
+"qgS" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_y = -8
+	},
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_y = 10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "qiX" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -19338,6 +19832,22 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
+"qni" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_y = -8
+	},
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_y = 10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "qwH" = (
 /turf/open/floor/plating,
 /area/golden_arrow/lower_cargo)
@@ -19366,6 +19876,26 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/lower_cargo)
+"qIr" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526"
+	},
+/obj/item/storage/box/nade_box/incen,
+/obj/item/storage/box/nade_box/incen,
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	name = "M77 HIAM grenade crate";
+	desc = "A crate containing two boxes of M77 High-explosive-Incendiary, Anti-Mobility grenades."
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "qJe" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
@@ -19438,6 +19968,20 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"qYU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	name = "white-phosphorus mortar-shell crate";
+	desc = "An explosives crate. The fact this one is suspiciously empty fills you with a feeling of deep dread."
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "qZf" = (
 /obj/vehicle/powerloader{
 	dir = 8
@@ -19490,6 +20034,29 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
+"rkA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/closet/secure_closet/security{
+	icon_broken = "base";
+	icon_closed = "base";
+	icon_locked = "base";
+	icon_off = "base";
+	icon_opened = "base";
+	icon_state = "base";
+	req_one_access = list(290);
+	icon = 'icons/obj/structures/props/misc.dmi';
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one houses an M42A sniper rifle and munitions for it within."
+	},
+/obj/item/ammo_magazine/sniper,
+/obj/item/ammo_magazine/sniper,
+/obj/item/ammo_magazine/sniper,
+/obj/item/ammo_magazine/sniper,
+/obj/item/ammo_magazine/sniper,
+/obj/item/weapon/gun/rifle/sniper/M42A,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "rll" = (
@@ -19702,6 +20269,25 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"rVc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/belt/gun/mortarbelt,
+/obj/item/storage/belt/gun/mortarbelt{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "rVt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -19798,6 +20384,27 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer/mono,
+/area/golden_arrow/lower_cargo)
+"siH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/backpack/marine/mortarpack{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/storage/backpack/marine/mortarpack{
+	pixel_y = 2;
+	pixel_x = 8
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "skM" = (
 /obj/effect/decal/cleanable/dirt{
@@ -20164,6 +20771,19 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"tyH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/fuel{
+	pixel_y = -3
+	},
+/obj/item/storage/box/guncase/heavy/fuel{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "tBe" = (
 /obj/structure/platform{
 	dir = 4;
@@ -20391,6 +21011,22 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"uQH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 13
+	},
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = -3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "uUf" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -20511,6 +21147,45 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
+"vvp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	name = "camera/flare mortar-shell crate"
+	},
+/obj/item/mortar_shell/flare,
+/obj/item/mortar_shell/flare,
+/obj/item/mortar_shell/flare,
+/obj/item/mortar_shell/flare,
+/obj/item/mortar_shell/flare,
+/obj/item/mortar_shell/flare,
+/obj/item/mortar_shell/flare,
+/obj/item/mortar_shell/flare,
+/obj/item/mortar_shell/flare,
+/obj/item/mortar_shell/flare,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
+"vwd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/m56b{
+	pixel_y = 9;
+	pixel_x = -1
+	},
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = -5;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "vzH" = (
 /obj/structure/prop/almayer/ai_wallmonitor,
 /turf/open/floor/almayer/aicore/glowing,
@@ -20973,6 +21648,22 @@
 "xxa" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"xxn" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_y = -8
+	},
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "xzY" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door"
@@ -21121,6 +21812,24 @@
 	pixel_y = 14
 	},
 /turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/lower_cargo)
+"ylD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/crate/explosives{
+	anchored = 1;
+	name = "incendiary mortar-shell crate"
+	},
+/obj/item/mortar_shell/incendiary,
+/obj/item/mortar_shell/incendiary,
+/obj/item/mortar_shell/incendiary,
+/obj/item/mortar_shell/incendiary,
+/obj/item/mortar_shell/incendiary,
+/turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 
 (1,1,1) = {"
@@ -25226,13 +25935,13 @@ tDA
 uPX
 uPX
 aXB
-uPX
+asF
 uPX
 mKT
 odf
 tDA
 xTf
-uPX
+emC
 aXB
 uPX
 uPX
@@ -25240,7 +25949,7 @@ mpf
 xJl
 aZR
 uPX
-uPX
+kFC
 aXB
 aXB
 auu
@@ -25395,29 +26104,29 @@ aEG
 aEG
 aEG
 aXB
-pFO
+kLc
 jKX
 lDX
 cwD
 hKW
 lAv
-pFO
+oQy
 aXB
-cTL
+kGv
 eqM
 ozf
 xxa
 bcc
 pWS
-cTL
+uQH
 aXB
-cTL
+vwd
 eqM
 lDX
 cwD
 bcc
 pWS
-cTL
+qni
 aXB
 qRO
 aZp
@@ -25572,21 +26281,21 @@ aEG
 aEG
 aEG
 aXB
-uZy
+gXq
 arD
 avB
 mWO
 pRD
 aAe
-aBI
+qIr
 aXB
-uZy
+eqq
 arD
 avB
 mWO
 pRD
 aAe
-aBI
+fDu
 aXB
 aKb
 egO
@@ -25594,7 +26303,7 @@ avB
 kdA
 lPW
 aAe
-aBI
+nUB
 aXB
 aiv
 alA
@@ -25749,21 +26458,21 @@ aEG
 aEG
 aEG
 aXB
-ago
+mlQ
 jKX
 lDX
 vCJ
 bcc
 pWS
-pFO
+oMo
 aXB
-ago
+oOp
 jKX
 lDX
 vCJ
 bcc
 pWS
-pFO
+jLT
 aXB
 ago
 jKX
@@ -25771,7 +26480,7 @@ ozf
 ezh
 bcc
 pWS
-pFO
+qgS
 aXB
 aPG
 wGV
@@ -25934,13 +26643,13 @@ nEn
 iRi
 iRi
 aXB
-pPo
+bmP
 iRi
 fpt
 vCJ
 nEn
 aRv
-iRi
+tyH
 aXB
 pPo
 iRi
@@ -25948,7 +26657,7 @@ aUE
 ezh
 nEn
 aRv
-aRv
+xxn
 aXB
 aXB
 wBW
@@ -27879,7 +28588,7 @@ mpf
 vCJ
 aZR
 uPX
-uPX
+hAz
 aXB
 iTu
 xTf
@@ -27887,7 +28596,7 @@ mpf
 vCJ
 aZR
 xTf
-uPX
+vvp
 aXB
 iTu
 uPX
@@ -28050,21 +28759,21 @@ aEG
 aEG
 aEG
 aXB
-pFO
+rkA
 jKX
 ozf
 vCJ
 bcc
 pWS
-pFO
+jXf
 aXB
-pFO
+mOf
 jKX
 lDX
 vCJ
 bcc
 pWS
-pFO
+oje
 aXB
 pFO
 jKX
@@ -28227,15 +28936,15 @@ aEG
 aEG
 aEG
 aXB
-uZy
+igj
 arD
 avB
 aQf
 pRD
 aAe
-aGZ
+naa
 aXB
-uZy
+rVc
 arD
 avB
 aQf
@@ -28404,21 +29113,21 @@ aEG
 aEG
 aEG
 aXB
-ate
+fJM
 eqM
 ozf
 cwD
 bcc
 pWS
-cTL
+bnS
 aXB
-ate
+siH
 eqM
 lDX
 cwD
 bcc
 pWS
-cTL
+ylD
 aXB
 ate
 jKX
@@ -28587,7 +29296,7 @@ fpt
 nnZ
 nEn
 iRi
-iRi
+gUZ
 aXB
 iRi
 iRi
@@ -28595,7 +29304,7 @@ aUE
 pcD
 kDp
 aRv
-aRv
+qYU
 aXB
 aRv
 aRv
@@ -32722,7 +33431,7 @@ aej
 aOp
 aDj
 umc
-exo
+hsr
 fAo
 eGR
 hjV
