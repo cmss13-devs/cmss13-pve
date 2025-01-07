@@ -52853,8 +52853,7 @@
 "wjU" = (
 /obj/structure/surface/rack,
 /obj/structure/machinery/power/apc/fully_broken/no_cell{
-	dir = 8;
-	pixel_x = -30
+	dir = 8
 	},
 /turf/open/floor/prison,
 /area/bmg290/relay_interior_b/beach_house_dirty)
