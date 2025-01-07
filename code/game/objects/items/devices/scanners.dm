@@ -148,12 +148,14 @@ FORENSIC SCANNER
 	mid_sounds = list('sound/items/healthanalyzer_oxygen_alarm.ogg' = 1)
 	mid_length = 1 SECONDS
 	volume = 4
+	extra_range = 14
 
 /datum/looping_sound/healthanalyzer_heart_beeping //This will be instanced and the sounds changed because I might as well
 	start_sound = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
 	mid_sounds = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
 	mid_length = 2.388 SECONDS
-	volume = 6
+	volume = 4
+	extra_range = 14
 /*
 /datum/looping_sound/healthanalyzer_heart_beeping_bad
 	start_sound = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
