@@ -12,7 +12,12 @@
 	. = ..()
 	new_human.mob_flags |= MUTINEER
 	new_human.hud_set_squad()
+	for(var/datum/action/human_action/activable/mutineer/A in new_human.actions)
+		A.remove_from(new_human)
 
+	var/list/abilities = subtypesof(/datum/action/human_action/activable/mutineer)
+	for(var/type in abilities)
+		give_action(new_human, type)
 	to_chat(new_human, SPAN_HIGHDANGER("<hr>You are now a Mutineer!"))
 	to_chat(new_human, SPAN_DANGER("Please check the rules to see what you can and can't do as a mutineer.<hr>"))
 
