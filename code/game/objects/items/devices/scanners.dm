@@ -147,13 +147,13 @@ FORENSIC SCANNER
 	start_sound = list('sound/items/healthanalyzer_oxygen_alarm.ogg' = 1)
 	mid_sounds = list('sound/items/healthanalyzer_oxygen_alarm.ogg' = 1)
 	mid_length = 1 SECONDS
-	volume = 5
+	volume = 4
 
 /datum/looping_sound/healthanalyzer_heart_beeping //This will be instanced and the sounds changed because I might as well
 	start_sound = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
 	mid_sounds = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
 	mid_length = 2.388 SECONDS
-	volume = 20
+	volume = 6
 /*
 /datum/looping_sound/healthanalyzer_heart_beeping_bad
 	start_sound = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
@@ -195,10 +195,10 @@ FORENSIC SCANNER
 	var/datum/beam/current_beam
 	var/datum/looping_sound/healthanalyzer_oxygen_beeping/oxygen_alarm_loop
 	var/datum/looping_sound/healthanalyzer_heart_beeping/heart_rate_loop
-	var/test = 5
 /obj/item/device/healthanalyzer/soul/Initialize()
 	. = ..()
 	heart_rate_loop = new(src)
+	oxygen_alarm_loop = new(src)
 
 /obj/item/device/healthanalyzer/soul/verb/print_report_verb()
 	set name = "Print Report"
@@ -266,20 +266,26 @@ FORENSIC SCANNER
 	report_delay_counter++
 	//playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
 	//Modify the health analyzers own beeping sounds depending on what is happening
-	test = connected_to.health - connected_to.halloss
-	if(test >= 40)
+	var/health_percentage = connected_to.health - connected_to.halloss
+	// if oxyloss is more than half of the remaining damage to instant death, make a different beep
+	var/midpoint = abs(((connected_to.getBruteLoss() + connected_to.getFireLoss() + connected_to.getToxLoss()) + (HEALTH_THRESHOLD_DEAD-100)) / 2)
+	if (connected_to.oxyloss >= midpoint)
+		oxygen_alarm_loop.start()
+	else
+		oxygen_alarm_loop.stop()
+	if(health_percentage >= 40)
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
 		heart_rate_loop.mid_length = 2.388 SECONDS
-	if(test < 40)
+	if(health_percentage < 40)
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
 		heart_rate_loop.mid_length = 1.402 SECONDS
-	if(test < -20)
+	if(health_percentage < -20)
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
 		heart_rate_loop.mid_length = 0.492 SECONDS
-	if(test < -120)
+	if(health_percentage < -120)
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
 		heart_rate_loop.mid_length = 0.408 SECONDS
@@ -517,6 +523,7 @@ FORENSIC SCANNER
 /obj/item/device/healthanalyzer/soul/proc/disconnect(bad_disconnect = FALSE)
 	STOP_PROCESSING(SSobj, src)
 	heart_rate_loop.stop()
+	oxygen_alarm_loop.stop()
 	if(!connected_to)
 		return
 	if(bad_disconnect)
