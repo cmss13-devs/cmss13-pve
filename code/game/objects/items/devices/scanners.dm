@@ -143,6 +143,63 @@ FORENSIC SCANNER
 	last_scan = null // reset the data
 	to_chat(usr, "The scanner [popup_window ? "now" : "no longer"] shows results on the hud.")
 
+/datum/looping_sound/healthanalyzer_oxygen_beeping //This will be instanced and the sounds changed because I might as well
+	start_sound = list('sound/items/healthanalyzer_oxygen_alarm.ogg' = 1)
+	mid_sounds = list('sound/items/healthanalyzer_oxygen_alarm.ogg' = 1)
+	mid_length = 1 SECONDS
+	volume = 5
+
+/datum/looping_sound/healthanalyzer_heart_beeping //This will be instanced and the sounds changed because I might as well
+	start_sound = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
+	mid_sounds = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
+	mid_length = 2.388 SECONDS
+	volume = 20
+/*
+/datum/looping_sound/healthanalyzer_heart_beeping_bad
+	start_sound = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
+	mid_sounds = start_sound
+	mid_length = 1.402 SECONDS
+	volume = 20
+
+/datum/looping_sound/healthanalyzer_heart_beeping_very_bad
+	start_sound = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
+	mid_sounds = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
+	mid_length = 0.492 SECONDS
+	volume = 20
+
+/datum/looping_sound/healthanalyzer_heart_beeping_severe
+	start_sound = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
+	mid_sounds = start_sound
+	mid_length = 0.408 SECONDS
+	volume = 20
+
+/datum/looping_sound/healthanalyzer_heart_beeping_flatline
+	start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
+	mid_sounds = start_sound
+	mid_length = 1.446 SECONDS
+	volume = 20
+*/
+
+/obj/item/device/healthanalyzer/soul
+	icon = 'icons/obj/items/Medical Scanner new.dmi'
+	icon_state = "Medical_scanner"
+	item_state = "analyzer"
+	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
+	w_class = SIZE_LARGE
+	var/mode = 1
+	var/report_delay_counter = 0
+	var/report_delay_threshold = 3 //every three processes, record to report buffer
+	var/mob/living/carbon/human/connected_to
+	var/mob/living/carbon/human/connected_from
+	var/blood_type = null
+	var/datum/beam/current_beam
+	var/datum/looping_sound/healthanalyzer_oxygen_beeping/oxygen_alarm_loop
+	var/datum/looping_sound/healthanalyzer_heart_beeping/heart_rate_loop
+	var/test = 5
+/obj/item/device/healthanalyzer/soul/Initialize()
+	. = ..()
+	heart_rate_loop = new(src)
+
 /obj/item/device/healthanalyzer/soul/verb/print_report_verb()
 	set name = "Print Report"
 	set category = "Object"
@@ -163,20 +220,6 @@ FORENSIC SCANNER
 	print_report.update_icon()
 	user.put_in_hands(print_report)
 	user.visible_message("\The [src] spits out a piece of paper.")
-
-/obj/item/device/healthanalyzer/soul
-	icon = 'icons/obj/items/Medical Scanner new.dmi'
-	icon_state = "Medical_scanner"
-	item_state = "analyzer"
-	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
-	w_class = SIZE_LARGE
-	var/mode = 1
-	var/report_delay_counter = 0
-	var/report_delay_threshold = 3 //every three processes, record to report buffer
-	var/mob/living/carbon/human/connected_to
-	var/mob/living/carbon/human/connected_from
-	var/blood_type = null
-	var/datum/beam/current_beam
 
 /obj/item/device/healthanalyzer/soul/process()
 	//if we're not connected to anything stop doing stuff
@@ -199,10 +242,10 @@ FORENSIC SCANNER
 		disconnect(TRUE)
 		return PROCESS_KILL
 
-
 	if(ishuman(connected_from))
 		if(!popup_window)
-			last_scan = connected_from.show_message(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+			last_scan = connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)
+			to_chat(connected_from, SPAN_NOTICE(last_scan))
 		else
 			if (!last_health_display)
 				last_health_display = new(connected_to)
@@ -214,12 +257,36 @@ FORENSIC SCANNER
 		src.add_fingerprint()
 		to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals."))
 	if(report_delay_counter >= report_delay_threshold)
-		buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
-		report_delay_counter = -1
+		if(findtext(last_scan,"<table")) //don't run health_scan_table a second time if the data was already gathered this tick
+			buffer_for_report.Add(last_scan)
+		buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)) //Using TGUI mode, gather data
+		report_delay_counter = -1 //reset counter
 		if(buffer_for_report.len > 40)
-			buffer_for_report.Cut(1,3)
+			buffer_for_report.Cut(1,3) //stop memory leak, maybe
 	report_delay_counter++
-	playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
+	//playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
+	//Modify the health analyzers own beeping sounds depending on what is happening
+	test = connected_to.health - connected_to.halloss
+	if(test >= 40)
+		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
+		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
+		heart_rate_loop.mid_length = 2.388 SECONDS
+	if(test < 40)
+		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
+		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
+		heart_rate_loop.mid_length = 1.402 SECONDS
+	if(test < -20)
+		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
+		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
+		heart_rate_loop.mid_length = 0.492 SECONDS
+	if(test < -120)
+		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
+		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
+		heart_rate_loop.mid_length = 0.408 SECONDS
+	if(connected_to.stat > 1)
+		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
+		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
+		heart_rate_loop.mid_length = 5 SECONDS
 	return
 
 /// proc health_scan was a legacy proc for to_chat messages on health analysers. health_scan_table is retrofitted to have parity with the TGUI scan so it can record info for reports
@@ -438,6 +505,7 @@ FORENSIC SCANNER
 		connected_from = user
 		connected_to.base_pixel_x = 5
 		START_PROCESSING(SSobj, src)
+		heart_rate_loop.start()
 		report_delay_counter = report_delay_threshold
 		user.visible_message("[user] attaches \the [src] to [connected_to].", \
 			"You attach \the [src] to [connected_to].")
@@ -448,6 +516,7 @@ FORENSIC SCANNER
 ///Used to standardize effects of a blood bag disconnecting improperly
 /obj/item/device/healthanalyzer/soul/proc/disconnect(bad_disconnect = FALSE)
 	STOP_PROCESSING(SSobj, src)
+	heart_rate_loop.stop()
 	if(!connected_to)
 		return
 	if(bad_disconnect)
