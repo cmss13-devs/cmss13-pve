@@ -6206,6 +6206,10 @@
 	pixel_x = -9;
 	pixel_y = 2
 	},
+/obj/item/storage/pouch/pistol{
+	pixel_x = 10;
+	pixel_y = 8
+	},
 /turf/open/floor/plating/wood,
 /area/bmg290/colony_interior/offices)
 "cFk" = (
@@ -17927,6 +17931,15 @@
 	},
 /turf/open/floor/grass,
 /area/bmg290/keppitz_exterior/research_camp)
+"hJe" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_21";
+	layer = 3.1;
+	pixel_y = 2;
+	pixel_x = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/colony_interior/offices)
 "hJg" = (
 /turf/open/floor/prison/darkyellow2/southwest,
 /area/bmg290/relay_interior_b/relay_substation)
@@ -35564,12 +35577,13 @@
 /turf/open/floor/almayer/empty,
 /area/bmg290/ancie_eng/chamber2)
 "oZA" = (
-/obj/item/storage/briefcase{
-	fill_from_loc = 1
+/obj/item/spacecash/c1000{
+	pixel_y = 6
 	},
 /obj/item/spacecash/c1000{
 	pixel_y = 6
 	},
+/obj/structure/safe,
 /obj/item/spacecash/c1000{
 	pixel_y = 6
 	},
@@ -36818,9 +36832,6 @@
 "pBe" = (
 /obj/item/stack/folding_barricade/three,
 /obj/item/stack/folding_barricade/three,
-/obj/structure/largecrate{
-	name = "camp supply crate"
-	},
 /obj/item/roller/bedroll,
 /obj/item/roller/bedroll,
 /obj/item/roller/bedroll,
@@ -36830,6 +36841,7 @@
 /obj/item/ammo_box/magazine/misc/mre,
 /obj/item/storage/box/lightstick/red,
 /obj/item/ammo_box/magazine/misc/flares,
+/obj/structure/closet/crate/secure/gear,
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/relay_interior/entry_hall)
 "pBk" = (
@@ -40859,19 +40871,15 @@
 /turf/open/floor/asteroidwarning/northeast,
 /area/bmg290/relay_exterior/colony_sw)
 "rkp" = (
-/obj/structure/flora/pottedplant{
-	icon_state = "pottedplant_21";
-	layer = 3.1;
-	pixel_y = 22;
-	pixel_x = 2
-	},
 /obj/structure/safe,
 /obj/item/ammo_magazine/revolver/heavy,
 /obj/item/ammo_magazine/revolver/heavy,
 /obj/item/ammo_magazine/revolver,
 /obj/item/ammo_magazine/revolver,
-/obj/item/storage/box/guncase/m44,
 /obj/item/reagent_container/food/drinks/bottle/davenport,
+/obj/item/weapon/gun/revolver/m44,
+/obj/item/ammo_magazine/revolver/marksman,
+/obj/item/ammo_magazine/revolver/marksman,
 /turf/open/floor/prison/blue/west,
 /area/bmg290/colony_interior/offices)
 "rku" = (
@@ -44589,6 +44597,14 @@
 /obj/item/tool/pen,
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
+	},
+/obj/item/tool/pen{
+	pixel_x = -10;
+	pixel_y = 9
+	},
+/obj/item/tool/pen{
+	pixel_x = 6;
+	pixel_y = 13
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony_interior/offices)
@@ -92317,7 +92333,7 @@ rkp
 kpp
 kpp
 xjb
-vsd
+hJe
 nkv
 icV
 aBK
@@ -102138,7 +102154,7 @@ uDP
 hMN
 hMN
 hMN
-nqL
+hMN
 hMN
 xdL
 duQ
@@ -102882,7 +102898,7 @@ pGZ
 hMN
 hMN
 hMN
-nqL
+hMN
 hMN
 kfW
 jUQ
@@ -103626,7 +103642,7 @@ nyW
 hMN
 hMN
 hMN
-nqL
+hMN
 hMN
 xei
 xei
@@ -104370,7 +104386,7 @@ pGZ
 hMN
 hMN
 hMN
-nqL
+hMN
 hMN
 kcL
 kcL
