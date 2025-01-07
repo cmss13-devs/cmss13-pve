@@ -148,7 +148,7 @@ FORENSIC SCANNER
 	set category = "Object"
 	set src in usr
 
-	if (usr.is_mob_incapacitated())
+	if(usr.is_mob_incapacitated())
 		return
 	print_report(usr)
 
@@ -157,9 +157,9 @@ FORENSIC SCANNER
 		to_chat(user, "There is no scan data to print.")
 		return
 	var/obj/item/paper/print_report = new /obj/item/paper
-	print_report.info += "Device ID:" + serial_number + "\n" + jointext(buffer_for_report,ascii2text(60) + "br>")
-	print_report.info_links += jointext(buffer_for_report,ascii2text(60) + "br>")
-	print_report.updateinfolinks()
+	print_report.info += "Device ID:" + serial_number + "\n" + jointext(buffer_for_report,"<br>")
+	//print_report.info_links += jointext(buffer_for_report,"<br>")
+	//print_report.updateinfolinks()
 	print_report.update_icon()
 	user.put_in_hands(print_report)
 	user.visible_message("\The [src] spits out a piece of paper.")
@@ -195,32 +195,30 @@ FORENSIC SCANNER
 		return PROCESS_KILL
 	*/
 	//if we're further than 3 tile away to stop doing stuff
-	if(check_if_too_far())
+	if(!(get_dist(src, connected_to) <= 3))
+		disconnect(TRUE)
 		return PROCESS_KILL
 
-	if(!popup_window)
-		last_scan = connected_to.health_scan(connected_from, FALSE, TRUE, popup_window, alien)
-	else
-		if (!last_health_display)
-			last_health_display = new(connected_to)
-		else
-			last_health_display.target_mob = connected_to
 
-		connected_from = get_atom_on_turf(src)
-		to_world("a")
-		update_beam()
-		if(ishuman(connected_from))
-			SStgui.close_user_uis(connected_from, src)
-			last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
-			last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien)
-			src.add_fingerprint()
-			to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals."))
-		if(report_delay_counter >= report_delay_threshold)
-			buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
-			report_delay_counter = -1
-			if(buffer_for_report.len > 40)
-				buffer_for_report.Cut(1,3)
-		report_delay_counter++
+	if(ishuman(connected_from))
+		if(!popup_window)
+			last_scan = connected_from.show_message(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+		else
+			if (!last_health_display)
+				last_health_display = new(connected_to)
+			else
+				last_health_display.target_mob = connected_to
+				SStgui.close_user_uis(connected_from, src)
+				last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
+				last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien)
+		src.add_fingerprint()
+		to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals."))
+	if(report_delay_counter >= report_delay_threshold)
+		buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+		report_delay_counter = -1
+		if(buffer_for_report.len > 40)
+			buffer_for_report.Cut(1,3)
+	report_delay_counter++
 	playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
 	return
 
@@ -418,11 +416,6 @@ FORENSIC SCANNER
 		QDEL_NULL(current_beam)
 	if(connected_from && connected_to && new_beam)
 		current_beam = connected_from.beam(connected_to, "iv_tube")
-
-/obj/item/device/healthanalyzer/soul/proc/check_if_too_far()
-	if(!(get_dist(src, connected_to) <= 3 && isturf(connected_to.loc)))
-		disconnect(TRUE)
-		return TRUE
 
 /obj/item/device/healthanalyzer/soul/attack(mob/living/M, mob/living/user)
 	if(M == user)
