@@ -1148,7 +1148,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					var/medmsg = input(usr,"Set your medical notes here.","Medical Records",html_decode(med_record)) as message
 
 					if(medmsg != null)
-						medmsg = copytext(medmsg, 1, MAX_PAPER_MESSAGE_LEN)
+						medmsg = copytext(medmsg, 1, MAX_BOOK_MESSAGE_LEN)
 						medmsg = html_encode(medmsg)
 
 						med_record = medmsg
@@ -1158,7 +1158,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					var/secmsg = input(usr,"Set your security notes here.","Security Records",html_decode(sec_record)) as message
 
 					if(secmsg != null)
-						secmsg = copytext(secmsg, 1, MAX_PAPER_MESSAGE_LEN)
+						secmsg = copytext(secmsg, 1, MAX_BOOK_MESSAGE_LEN)
 						secmsg = html_encode(secmsg)
 
 						sec_record = secmsg
@@ -1167,7 +1167,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					var/genmsg = input(usr,"Set your employment notes here.","Employment Records",html_decode(gen_record)) as message
 
 					if(genmsg != null)
-						genmsg = copytext(genmsg, 1, MAX_PAPER_MESSAGE_LEN)
+						genmsg = copytext(genmsg, 1, MAX_BOOK_MESSAGE_LEN)
 						genmsg = html_encode(genmsg)
 
 						gen_record = genmsg

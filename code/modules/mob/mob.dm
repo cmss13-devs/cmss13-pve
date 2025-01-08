@@ -395,7 +395,7 @@
 	var/msg = input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",html_decode(flavor_text)) as message|null
 
 	if(msg != null)
-		msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+		msg = copytext(msg, 1, MAX_PAPER_MESSAGE_LEN)
 		msg = html_encode(msg)
 
 		flavor_text = msg
