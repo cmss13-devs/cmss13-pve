@@ -1534,7 +1534,7 @@
 	set desc = "Sets a description which will be shown when someone examines you."
 	set category = "IC"
 
-	pose =  strip_html(input(usr, "This is [src]. \He is...", "Pose", null)  as text)
+	pose =  strip_html(input(usr, "This is [src]. \He is...", "Pose", null)  as message)
 
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"
