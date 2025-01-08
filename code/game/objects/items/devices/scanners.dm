@@ -257,8 +257,8 @@ FORENSIC SCANNER
 				last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
 				last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien)
 		src.add_fingerprint()
-		to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals."))
 	if(report_delay_counter >= report_delay_threshold)
+		to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals.")) //lol
 		if(findtext(last_scan,"<table")) //don't run health_scan_table a second time if the data was already gathered this tick
 			buffer_for_report.Add(last_scan)
 		buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)) //Using TGUI mode, gather data
