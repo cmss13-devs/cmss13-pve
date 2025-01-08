@@ -240,3 +240,4 @@
 	victim.apply_armoured_damage(damage, penetration = penetration, def_zone = pick(target_limbs))
 	victim.KnockDown(15)
 	victim.Stun(15)
+
