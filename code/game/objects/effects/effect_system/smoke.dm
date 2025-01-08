@@ -510,6 +510,7 @@
 		affect(human)
 
 /obj/effect/particle_effect/smoke/tear/affect(mob/living/carbon/human/creature)
+	. = ..()
 	if(!istype(creature) || issynth(creature) || creature.stat == DEAD || isyautja(creature))
 		return FALSE
 
@@ -528,7 +529,7 @@
 		creature.AdjustEyeBlind(10)
 		creature.apply_effect(3, STUN)
 		creature.apply_effect(3, WEAKEN)
-
+		return TRUE
 //////////////////////////////////////
 // FLASHBANG SMOKE
 ////////////////////////////////////
