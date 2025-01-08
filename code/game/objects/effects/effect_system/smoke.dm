@@ -522,14 +522,15 @@
 	if(skillcheck(creature, SKILL_POLICE, SKILL_POLICE_SKILLED))
 		creature.AdjustEyeBlur(5)
 		to_chat(creature, SPAN_WARNING("Your training protects you from the tear gas!"))
-	else
-		creature.emote("scream")
-		to_chat(creature, SPAN_WARNING("You're feel the sting of the tear gas!"))
-		creature.AdjustEyeBlur(25)
-		creature.AdjustEyeBlind(10)
-		creature.apply_effect(3, STUN)
-		creature.apply_effect(3, WEAKEN)
-		return TRUE
+		return
+
+	creature.emote("scream")
+	to_chat(creature, SPAN_WARNING("You're feel the sting of the tear gas!"))
+	creature.AdjustEyeBlur(25)
+	creature.AdjustEyeBlind(10)
+	creature.apply_effect(3, STUN)
+	creature.apply_effect(3, WEAKEN)
+	return
 //////////////////////////////////////
 // FLASHBANG SMOKE
 ////////////////////////////////////
