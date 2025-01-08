@@ -93,6 +93,16 @@ SUBSYSTEM_DEF(nightmare)
 	var/datum/nmcontext/context = contexts[NIGHTMARE_CTX_GLOBAL]
 	return context.set_scenario_value(name, value)
 
+/// Returns a list of all currently set values for the scenario.
+/datum/controller/subsystem/nightmare/proc/get_scenario_list(stype)
+	var/datum/nmcontext/context = contexts[stype]
+	return context.scenario
+
+/// Returns all scenario keys and their possible values for that stype as an associated list of lists.
+/datum/controller/subsystem/nightmare/proc/get_directory(stype)
+	var/datum/nmcontext/context = contexts[stype]
+	return context.directory
+
 /// Reads a JSON file, returns a branch nmnode representing contents of file
 /datum/controller/subsystem/nightmare/proc/load_file(filename, tag)
 	RETURN_TYPE(/datum/nmnode/branch)
