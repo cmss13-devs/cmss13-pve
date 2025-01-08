@@ -46,6 +46,15 @@
 	else
 		icon_state = "[initial(icon_state)]_0"
 
+/obj/structure/gun_rack/proc/empty_out(number_to_remove = max_stored)
+	number_to_remove = min(length(contents), number_to_remove) //We don't want our specified mumber, if provided, to be greater than what is actually inside the rack.
+	for(var/i in src)
+		if(!number_to_remove--)
+			break
+		qdel(i)
+
+	update_icon()
+
 /obj/structure/gun_rack/m41
 	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1
 	populate_type = /obj/item/weapon/gun/rifle/m41aMK1

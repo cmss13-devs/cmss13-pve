@@ -6,6 +6,8 @@
 	var/list/scenario = list()
 	/// Config values used internally relevant to context
 	var/list/config = list()
+
+	var/list/directory = list()
 	/// Scheduler task type
 	var/scheduler_type = /datum/nmtask/scheduler
 	/// Holder for tasks to execute in the context

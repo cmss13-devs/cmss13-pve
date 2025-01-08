@@ -218,30 +218,12 @@
 		* were in other lists as well, so I cut it. /N
 		*/
 
-		if("flicker_light")
-			var/areas_to_flicker[]
-			switch(params["area_to_flicker"])
-				areas_to_flicker = list(text2path(params["area_to_flicker"]))
-
-			// The list should always have a length, and at least one thing in it, even if it's null.
-			var/obj/structure/machinery/light/area_light_bulb
-
-			for(var/i in areas_to_flicker)
-				maint_area = locate(i)
-				if(maint_area) //Could be that we can't find it.
-					for(area_light_bulb in maint_area)
-						if(prob(70))
-							area_light_bulb.flicker(rand(5,10))
-
 		if("toggle_poddoor")
 			var/obj/structure/machinery/door/poddoor/pod_door
 			var/signal_id = params["signal_id"]
 			for(pod_door in GLOB.machines)
 				if(pod_door.z in possible_maps)
-					if(pod_door.density)
-						pod_door.open(TRUE) //Forced.
-					else
-						pod_door.close(TRUE)
+					pod_door.toggle_pod_door(signal_id)
 
 		if("toggle_airlock")
 			var/obj/structure/machinery/door/airlock/airlock_door
@@ -453,7 +435,7 @@
 					var/obj/structure/surface/table/table
 					for(table in world)
 						if(table.z == selected_z_level && prob(specified_percentage_to_break))
-							if(prob(35) && table.flip(pick(1,2,4,8), skip_straight_check=FALSE, batch_flip=TRUE))
+							if(prob(35) && table.flip(pick(1,2,4,8), skip_straight_check=FALSE))
 								continue//We'll try to flip it normally. Hide the message so it doesn't spam us.
 							else
 								table.deconstruct(FALSE) //If that doesn't work, we deconstruct it instead.
