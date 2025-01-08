@@ -3013,7 +3013,7 @@ Defined in conflicts.dm of the #defines folder.
 		if(current_rounds && !in_chamber)
 			in_chamber = loaded_grenades[length(loaded_grenades)]
 			current_rounds--
-			loaded_grenades.Cut(1,2)
+			loaded_grenades.Cut(length(loaded_grenades))
 		to_chat(user, SPAN_NOTICE("You bring \the [src]'s pump forward, cocking it!"))
 		playsound(src, close_sound, 15, 1)
 	else
@@ -3078,6 +3078,9 @@ Defined in conflicts.dm of the #defines folder.
 	set waitfor = 0
 	var/obj/item/explosive/grenade/G = in_chamber
 	in_chamber = null
+
+	if(!in_chamber)
+		return
 
 	if(G.antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(G, user))
 		to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from firing!"))
