@@ -895,11 +895,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 
-/datum/equipment_preset/uscm_ship/dp/full/alt
+/datum/equipment_preset/uscm_ship/dp/alt
 	name = "USCM Dropship Pilot (Comp. Suit)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
-/datum/equipment_preset/uscm_ship/dp/full/alt/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm_ship/dp/alt/load_gear(mob/living/carbon/human/new_human)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight(new_human), WEAR_BODY)
 	..()
