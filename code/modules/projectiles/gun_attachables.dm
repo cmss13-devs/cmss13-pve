@@ -3241,6 +3241,9 @@ Defined in conflicts.dm of the #defines folder.
 			return
 	to_chat(user, SPAN_WARNING("[src] only accepts shotgun buckshot."))
 
+/obj/item/attachable/attached_gun/shotgun/m20a/unloaded
+	current_rounds = 0
+
 /obj/item/attachable/attached_gun/shotgun/m20a
 	name = "\improper U3 underbarrel shotgun"
 	desc = "An ARMAT U3 tactical shotgun. Integrated into the M20A Harrington rifle. Only capable of loading up to five buckshot shells."
@@ -3248,6 +3251,7 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "masterkey_a"
 	flags_attach_features = ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON
 	hidden = TRUE
+
 
 /obj/item/attachable/attached_gun/shotgun/m20a/set_bullet_traits()
 	return
