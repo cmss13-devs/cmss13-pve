@@ -188,9 +188,9 @@
 
 /obj/item/frame/rack/attackby(obj/item/W, mob/user)
 	..()
-	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+/* 	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 		new /obj/item/stack/sheet/metal(get_turf(src))
-		qdel(src)
+		qdel(src) */
 
 /obj/item/frame/rack/attack_self(mob/user)
 	..()
