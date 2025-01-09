@@ -20,9 +20,9 @@
 /obj/item/frame/table/attackby(obj/item/W, mob/user)
 
 	..()
-	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+/* 	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 		new /obj/item/stack/sheet/metal(user.loc)
-		qdel(src)
+		qdel(src) */
 
 	if(istype(W, /obj/item/stack/rods))
 		var/obj/item/stack/rods/R = W
