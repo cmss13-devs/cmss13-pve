@@ -24176,7 +24176,6 @@
 /turf/open/floor/wood/ship,
 /area/almayer/engineering/ce_room)
 "iKP" = (
-/obj/effect/landmark/start/pilot/cas_pilot,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/pilotbunks)
 "iKR" = (
@@ -24663,7 +24662,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/maint/upper/u_m_p)
 "iTD" = (
-/obj/effect/landmark/start/auxiliary_officer,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/bridgebunks)
 "iTI" = (
