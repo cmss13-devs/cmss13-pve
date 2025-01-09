@@ -1,0 +1,4 @@
+author: "SpartanBobby and idk how made LV617 but his darkness overlay tile is cool as fuck"
+delete-after: True
+changes:
+  - rscadd: "Adds a ladder that looks like a rope, A teleport vector that hurts you to simulate falling and the \"darkness\" overlay tile from LV617"
