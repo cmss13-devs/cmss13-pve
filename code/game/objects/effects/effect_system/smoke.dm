@@ -501,6 +501,44 @@
 	if(prob(stun_chance))
 		creature.apply_effect(1, WEAKEN)
 
+/////////////////////////////////////////////
+// Tear Gas
+/////////////////////////////////////////////
+
+/obj/effect/particle_effect/smoke/tear
+	name = "Tear Gas"
+	smokeranking = SMOKE_RANK_HIGH
+	color = "#a82620" // rgb: 179, 16, 8
+	alpha = 75
+	opacity = FALSE
+	time_to_live = 60
+
+/obj/effect/particle_effect/smoke/tear/Move()
+	. = ..()
+	for(var/mob/living/carbon/human/human in get_turf(src))
+		affect(human)
+
+/obj/effect/particle_effect/smoke/tear/affect(mob/living/carbon/human/creature)
+	. = ..()
+	if(!istype(creature) || issynth(creature) || creature.stat == DEAD || isyautja(creature))
+		return FALSE
+
+	if(creature.wear_mask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
+		return FALSE
+	if(creature.head.flags_inventory & BLOCKGASEFFECT)
+		return FALSE
+
+	if(skillcheck(creature, SKILL_POLICE, SKILL_POLICE_SKILLED))
+		creature.AdjustEyeBlur(5)
+		to_chat(creature, SPAN_WARNING("Your training protects you from the tear gas!"))
+	else
+		to_chat(creature, SPAN_WARNING("You're feel the sting of the tear gas!"))
+		creature.AdjustEyeBlur(25)
+
+	creature.emote("scream")
+	creature.AdjustEyeBlind(10)
+	creature.apply_effect(3, STUN)
+	creature.apply_effect(3, WEAKEN)
 
 //////////////////////////////////////
 // FLASHBANG SMOKE
@@ -825,6 +863,9 @@
 
 /datum/effect_system/smoke_spread/LSD
 	smoke_type = /obj/effect/particle_effect/smoke/LSD
+
+/datum/effect_system/smoke_spread/tear
+	smoke_type = /obj/effect/particle_effect/smoke/tear
 
 // XENO SMOKES
 
