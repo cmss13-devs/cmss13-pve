@@ -1,4 +1,0 @@
-author: "mesnomer"
-delete-after: True
-changes:
-  - rscdel: "Removed salt from prepackaged MRE components"
