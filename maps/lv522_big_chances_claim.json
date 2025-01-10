@@ -4,7 +4,7 @@
 	"map_path": "map_files/LV522_Big_Chances_Claim",
 	"map_file": "LV522_Big_Chances_Claim.dmm",
     "webmap_url": "LV552",
-    "weather_holder": "/datum/weather_ss_map_holder/lv522_chances_claim",
+    "weather_holder": "/datum/weather_ss_map_holder/lv522_lukes_landing",,
     "map_item_type": "/obj/item/map/lv522_map",
     "camouflage": "jungle"
 }
