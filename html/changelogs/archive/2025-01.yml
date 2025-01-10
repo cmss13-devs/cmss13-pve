@@ -50,3 +50,9 @@
   - rscadd: M20A racks, unloaded variant of M20A
   SpartanBobby:
   - maptweak: Adds two APC storage containers to the UD4 Midway
+2025-01-09:
+  SpartanBobby:
+  - maptweak: Fixes Rover layering issue
+  SpartanBobby and idk how made LV617 but his darkness overlay tile is cool as fuck:
+  - rscadd: Adds a ladder that looks like a rope, A teleport vector that hurts you
+      to simulate falling and the "darkness" overlay tile from LV617
