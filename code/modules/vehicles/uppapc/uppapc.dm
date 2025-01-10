@@ -116,11 +116,11 @@
 	if(!camera)
 		camera = new /obj/structure/machinery/camera/vehicle(src)
 	if(change_tag)
-		camera.c_tag = "#[rand(1,100)] M777 \"[nickname]\" APC"
+		camera.c_tag = "#[rand(1,100)] XSL-68 \"[nickname]\""
 		if(camera_int)
 			camera_int.c_tag = camera.c_tag + " interior"
 	else
-		camera.c_tag = "#[rand(1,100)] M777 APC"
+		camera.c_tag = "#[rand(1,100)] XSL-68"
 		if(camera_int)
 			camera_int.c_tag = camera.c_tag + " interior"
 
