@@ -17477,6 +17477,40 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
+"jji" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/obj/structure/closet/secure_closet/security{
+	icon_broken = "base";
+	icon_closed = "base";
+	icon_locked = "base";
+	icon_off = "base";
+	icon_opened = "base";
+	icon_state = "base";
+	req_one_access = list(290);
+	icon = 'icons/obj/structures/props/misc.dmi';
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one is filled with a sections-worth of NVG optics that can be mounted on the standard M10 helmet."
+	},
+/obj/item/device/helmet_visor/night_vision,
+/obj/item/device/helmet_visor/night_vision,
+/obj/item/device/helmet_visor/night_vision,
+/obj/item/device/helmet_visor/night_vision,
+/obj/item/device/helmet_visor/night_vision,
+/obj/item/device/helmet_visor/night_vision,
+/obj/item/device/helmet_visor/night_vision,
+/obj/item/device/helmet_visor/night_vision,
+/obj/item/device/helmet_visor/night_vision,
+/obj/item/device/helmet_visor/night_vision,
+/obj/item/device/helmet_visor/night_vision,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "jlb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -19587,6 +19621,24 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
+"pPv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/closet/secure_closet/security{
+	icon_broken = "base";
+	icon_closed = "base";
+	icon_locked = "base";
+	icon_off = "base";
+	icon_opened = "base";
+	icon_state = "base";
+	req_one_access = list(290);
+	icon = 'icons/obj/structures/props/misc.dmi';
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. There's a sizeable case with a stylised M4RA painted across it sitting inside."
+	},
+/obj/item/storage/box/guncase/heavy/m4ra_pve,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/lower_cargo)
 "pPT" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -20049,7 +20101,7 @@
 	icon_state = "base";
 	req_one_access = list(290);
 	icon = 'icons/obj/structures/props/misc.dmi';
-	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one houses an M42A sniper rifle and munitions for it within."
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one houses an M42A sniper rifle and munitions for it, alongside a spotting scope within."
 	},
 /obj/item/ammo_magazine/sniper,
 /obj/item/ammo_magazine/sniper,
@@ -20057,6 +20109,8 @@
 /obj/item/ammo_magazine/sniper,
 /obj/item/ammo_magazine/sniper,
 /obj/item/weapon/gun/rifle/sniper/M42A,
+/obj/item/pamphlet/skill/spotter,
+/obj/item/device/binoculars/range/designator/spotter,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "rll" = (
@@ -28582,7 +28636,7 @@ aEG
 aEG
 aEG
 aXB
-iTu
+jji
 uPX
 mpf
 vCJ
@@ -29290,7 +29344,7 @@ aEG
 aEG
 aEG
 aXB
-iRi
+pPv
 aRv
 fpt
 nnZ
