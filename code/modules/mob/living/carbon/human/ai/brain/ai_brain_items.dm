@@ -33,6 +33,8 @@
 
 	var/static/important_storage_slots_bitflag = SLOT_BACK | SLOT_WAIST | SLOT_STORE | SLOT_OCLOTHING | SLOT_ICLOTHING
 
+	var/has_nightvision = FALSE
+
 /datum/human_ai_brain/proc/get_object_from_loc(object_loc)
 	RETURN_TYPE(/obj/item/storage)
 
@@ -119,6 +121,9 @@
 	if(!primary_weapon && isgun(equipment) && (slot == WEAR_J_STORE))
 		set_primary_weapon(equipment)
 
+	if(istype(equipment, /obj/item/clothing/glasses/night) && (slot == WEAR_EYES))
+		has_nightvision = TRUE
+
 /datum/human_ai_brain/proc/on_item_unequip(datum/source, obj/item/equipment, slot)
 	SIGNAL_HANDLER
 
@@ -128,6 +133,9 @@
 
 	if(isgun(equipment))
 		appraise_inventory(FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)
+
+	if(istype(equipment, /obj/item/clothing/glasses/night) && (slot == WEAR_EYES))
+		has_nightvision = FALSE
 
 /datum/human_ai_brain/proc/recalculate_containers()
 	container_refs = list()

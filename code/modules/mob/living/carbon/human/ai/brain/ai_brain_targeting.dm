@@ -25,6 +25,19 @@
 	var/list/dir_cone = reverse_nearby_direction(reverse_direction(tied_human.dir))
 	var/rear_view_penalty = scope_vision ? view_distance / 7 - 1 : 0
 
+	var/list/view_list = list()
+	for(var/mob/living/viewing_mob in view(view_distance, tied_human))
+		if(viewing_mob == tied_human)
+			continue
+
+		if(!has_nightvision)
+			for(var/turf/open/nearby_turf in range(1, viewing_mob))
+				if(nearby_turf.luminosity || nearby_turf.dynamic_lumcount)
+					view_list += viewing_mob
+					break
+		else
+			view_list += viewing_mob
+
 	for(var/mob/living/carbon/potential_target as anything in GLOB.alive_mob_list)
 		if(!istype(potential_target))
 			continue
@@ -35,7 +48,8 @@
 		if(!can_target(potential_target))
 			continue
 
-		if(!(tied_human in viewers(view_distance, potential_target)))
+		//if(!(tied_human in viewers(view_distance, potential_target)))
+		if(!(potential_target in view_list))
 			continue
 
 		var/distance = get_dist(tied_human, potential_target)
