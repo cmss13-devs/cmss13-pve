@@ -206,8 +206,8 @@
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 5
 
-/obj/item/trash/teargasgrenade
+/obj/item/trash/gasgrenade
 	name = "spent Tear Gas grenade"
-	desc = "A used canister grenade of nonlethal Tear gas. This is trash."
+	desc = "A used gas grenade canister, no way to tell what was once inside it now. This is trash."
 	icon = 'icons/obj/items/weapons/grenade.dmi'
 	icon_state = "flashbang2_spent"
