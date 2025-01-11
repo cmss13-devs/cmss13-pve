@@ -73,7 +73,7 @@
 	assignment = JOB_NAVY_SKITTLE
 	rank = JOB_NAVY_SKITTLE
 	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Flight Crew"
+	role_comm_title = "DckCrw"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/flight_crew
 

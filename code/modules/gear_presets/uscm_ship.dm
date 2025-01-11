@@ -531,7 +531,7 @@
 	assignment = JOB_ARMORER
 	rank = JOB_ARMORER
 	paygrades = list(PAY_SHORT_MW1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Armorer"
+	role_comm_title = "ARM"
 	skills = /datum/skills/armorer
 
 /datum/equipment_preset/uscm_ship/armorer/load_gear(mob/living/carbon/human/new_human)
