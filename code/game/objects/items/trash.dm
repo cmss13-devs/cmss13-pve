@@ -205,3 +205,9 @@
 	w_class = SIZE_SMALL
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 5
+
+/obj/item/trash/teargasgrenade
+	name = "spent Tear Gas grenade"
+	desc = "A used canister grenade of nonlethal Tear gas. This is trash."
+	icon = 'icons/obj/items/weapons/grenade.dmi'
+	icon_state = "flashbang2_spent"

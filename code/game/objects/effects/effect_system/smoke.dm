@@ -511,7 +511,7 @@
 	color = "#a82620" // rgb: 179, 16, 8
 	alpha = 75
 	opacity = FALSE
-	time_to_live = 60
+	time_to_live = 180
 
 /obj/effect/particle_effect/smoke/tear/Move()
 	. = ..()
@@ -534,11 +534,10 @@
 	else
 		to_chat(creature, SPAN_WARNING("You're feel the sting of the tear gas!"))
 		creature.AdjustEyeBlur(25)
+		creature.AdjustEyeBlind(10)
 
 	creature.emote("scream")
-	creature.AdjustEyeBlind(10)
-	creature.apply_effect(3, STUN)
-	creature.apply_effect(3, WEAKEN)
+	creature.apply_effect(3, SLOW)
 
 //////////////////////////////////////
 // FLASHBANG SMOKE

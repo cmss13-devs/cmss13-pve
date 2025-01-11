@@ -949,8 +949,9 @@
 
 /obj/item/explosive/grenade/tear/prime()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	tear_gas.set_up(tear_gas_radius, 0, get_turf(src), null, 6)
+	tear_gas.set_up(tear_gas_radius, 0, get_turf(src), null, 90)
 	tear_gas.start()
+	new /obj/item/trash/teargasgrenade(get_turf(src))
 	qdel(src)
 
 /*
