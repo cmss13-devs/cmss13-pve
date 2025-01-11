@@ -172,7 +172,7 @@
 ** PRESETS SPAWNERS
 */
 /obj/effect/vehicle_spawner/uppapc
-	name = "APC Transport Spawner"
+	name = "UPP XSL Spawner"
 	icon = 'icons/obj/vehicles/apc.dmi'
 	icon_state = "apc_base"
 	pixel_x = -48
@@ -183,7 +183,7 @@
 	spawn_vehicle()
 	qdel(src)
 
-//PRESET: FPWs, no hardpoints
+//PRESET: no hardpoints
 /obj/effect/vehicle_spawner/apc/uppapc/spawn_vehicle()
 	var/obj/vehicle/multitile/apc/uppapc/APC = new (loc)
 
@@ -192,8 +192,28 @@
 	handle_direction(APC)
 	APC.update_icon()
 
-	return APC
-//PRESET: A small minigun, wheels installed
+//PRESET: only wheels installed
+/obj/effect/vehicle_spawner/apc/uppapc/plain/load_hardpoints(obj/vehicle/multitile/apc/uppapc/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
+
+//PRESET: default hardpoints, destroyed
+/obj/effect/vehicle_spawner/apc/uppapc/decrepit/spawn_vehicle()
+	var/obj/vehicle/multitile/apc/uppapc/APC = new (loc)
+
+	load_misc(APC)
+	load_hardpoints(APC)
+	handle_direction(APC)
+	load_damage(APC)
+	APC.update_icon()
+
+/obj/effect/vehicle_spawner/apc/uppapc/decrepit/load_hardpoints(obj/vehicle/multitile/apc/uppapc/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/apc_turret)
+	for(var/obj/item/hardpoint/holder/apc_turret/TT in V.hardpoints)
+		TT.add_hardpoint(new /obj/item/hardpoint/primary/gshk_minigun)
+		break
+
+//PRESET: default hardpoints, installed minigun
 /obj/effect/vehicle_spawner/apc/uppapc/minigun/load_hardpoints(obj/vehicle/multitile/apc/uppapc/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/apc_turret)
