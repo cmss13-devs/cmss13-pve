@@ -573,6 +573,7 @@
 #include "code\datums\entities\player_times.dm"
 #include "code\datums\entities\ticket.dm"
 #include "code\datums\entities\logs\player_times_log.dm"
+#include "code\datums\factions\army.dm"
 #include "code\datums\factions\clf.dm"
 #include "code\datums\factions\cmb.dm"
 #include "code\datums\factions\contractor.dm"
