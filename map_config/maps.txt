@@ -74,7 +74,7 @@ endmap
 map whiskey_outpost_v2
 endmap
 
-map lv522_big_chances_claim
+map lv522_chances_claim_lukes_landing
 endmap
 
 map lv522_lukes_landing
