@@ -1,3 +1,6 @@
+GLOBAL_LIST_EMPTY(projectors)
+GLOBAL_LIST_EMPTY(deselected_projectors)
+
 /obj/effect/projector
 	density = FALSE
 	unacidable = TRUE
@@ -7,6 +10,7 @@
 	var/vector_x = 0
 	var/vector_y = 0
 	var/vector_z = 0
+	var/firing_id = null
 	var/mask_layer = null // all actual layers are divided by 10 and then subtracted from the mask layer.
 	var/movables_projection_plane = -6 //necessary to change when making a movable go under a turf (whose plane is -7)
 	var/modify_turf = TRUE
@@ -15,27 +19,25 @@
 	icon = 'icons/landmarks.dmi'
 	icon_state = "projector"//for map editor
 
+/obj/effect/projector/Initialize(mapload, ...)
+	. = ..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/projector/LateInitialize()
+	. = ..()
+	if(SSfz_transitions.selective_update[firing_id])
+		GLOB.projectors.Add(src)
+	else
+		GLOB.deselected_projectors.Add(src)
+
 /obj/effect/projector/onShuttleMove(turf/newT, turf/oldT, list/movement_force, move_dir, obj/docking_port/stationary/old_dock, obj/docking_port/mobile/moving_dock)
 	return TRUE
 	// we don't want projectors moving
 
-// defined so we can deselect their firing for performance and also so we can spawn them in after/before dropships interact with projectors
-/obj/effect/projector/bay_one
-	name = "Bay One"
-	vector_x = 33
-	vector_y = -82
+/obj/effect/projector/airlock
+	modify_turf = FALSE
 	mask_layer = 1.9
 	movables_projection_plane = -7
-	modify_turf = FALSE
 	projected_mouse_opacity = 0
 	projected_opacity = 0
-
-/obj/effect/projector/bay_two
-	name = "Bay Two"
-	vector_x = 33
-	vector_y = -75
-	mask_layer = 1.9
-	movables_projection_plane = -7
-	modify_turf = FALSE
-	projected_mouse_opacity = 0
-	projected_opacity = 0
+	firing_id = "airlock"

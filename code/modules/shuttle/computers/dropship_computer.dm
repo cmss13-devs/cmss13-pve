@@ -597,69 +597,33 @@
 		if ("clamps")
 			if(!active_airlock_dock)
 				return FALSE
-			if(active_airlock_dock.processing)
-				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
-				return FALSE
-			if(!active_airlock_dock.open_outer_airlock || !active_airlock_dock.lowered_dropship)
-				to_chat(usr, SPAN_WARNING("The clamps can only be disengaged when the outer airlock is open and the dropship is lowered."))
-				return FALSE
-			if(shuttle.mode == SHUTTLE_RECHARGING)
-				to_chat(usr, SPAN_WARNING("The shuttle is still recharging, it would be suicide to have it fall into the grav well."))
-				return FALSE
-			to_chat(usr, SPAN_NOTICE("Engaging clamps."))
-			active_airlock_dock.update_clamps(TRUE)
-			return TRUE
+			var/list/returned_list = active_airlock_dock.update_clamps(TRUE)
+			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
+			return returned_list["successful"]
 		if ("airlock_alarm")
 			if(!active_airlock_dock)
 				return FALSE
-			if(active_airlock_dock.processing)
-				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
-				return FALSE
-			if(active_airlock_dock.open_outer_airlock || active_airlock_dock.open_inner_airlock)
-				to_chat(usr, SPAN_WARNING("The airlock caution alarm cannot be engaged while an airlock is open."))
-				return FALSE
-			to_chat(usr, SPAN_NOTICE("Engaging airlock caution alarm."))
-			active_airlock_dock.update_airlock_alarm(TRUE)
-			return TRUE
+			var/list/returned_list = active_airlock_dock.update_airlock_alarm(TRUE)
+			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
+			return returned_list["successful"]
 		if ("inner_airlock")
 			if(!active_airlock_dock)
 				return FALSE
-			if(active_airlock_dock.processing)
-				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
-				return FALSE
-			if(active_airlock_dock.open_outer_airlock || !active_airlock_dock.playing_airlock_alarm)
-				to_chat(usr, SPAN_WARNING("The inner airlock can be engaged only when the outer airlock is closed, and the airlock alarm is active."))
-				return FALSE
-			to_chat(usr, SPAN_NOTICE("Engaging inner airlock."))
-			active_airlock_dock.update_inner_airlock(TRUE)
-			return TRUE
+			var/list/returned_list = active_airlock_dock.update_inner_airlock(TRUE)
+			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
+			return returned_list["successful"]
 		if ("airlock_dropship")
 			if(!active_airlock_dock)
 				return FALSE
-			if(active_airlock_dock.processing)
-				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
-				return FALSE
-			if(!active_airlock_dock.open_inner_airlock)
-				to_chat(usr, SPAN_WARNING("The dropship airlock mechanism can only be engaged when the inner airlock is open."))
-				return FALSE
-			to_chat(usr, SPAN_NOTICE("Engaging dropship elevation mechanism."))
-			active_airlock_dock.update_dropship_height(TRUE)
-			return TRUE
+			var/list/returned_list = active_airlock_dock.update_dropship_height(TRUE)
+			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
+			return returned_list["successful"]
 		if ("outer_airlock")
 			if(!active_airlock_dock)
 				return FALSE
-			if(active_airlock_dock.processing)
-				to_chat(usr, SPAN_WARNING("The computer is already processing a command to the airlock."))
-				return FALSE
-			if(active_airlock_dock.open_inner_airlock || active_airlock_dock.playing_airlock_alarm)
-				to_chat(usr, SPAN_WARNING("The outer airlock can be engaged only when the inner airlock is closed and the alarm is disabled."))
-				return FALSE
-			if(active_airlock_dock.disengaged_clamps)
-				to_chat(usr, SPAN_WARNING("The outer airlock can only be closed when the dropship is securely resting on the clamps."))
-				return FALSE
-			to_chat(usr, SPAN_NOTICE("Engaging outer airlock."))
-			active_airlock_dock.update_outer_airlock(TRUE)
-			return TRUE
+			var/list/returned_list = active_airlock_dock.update_outer_airlock(TRUE)
+			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
+			return returned_list["successful"]
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/proc/set_shuttle(new_shuttle)
 	var/mob/user = usr

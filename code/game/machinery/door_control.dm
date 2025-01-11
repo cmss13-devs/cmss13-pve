@@ -267,8 +267,8 @@
 	id = "cl_quarter_windows"
 
 /obj/structure/machinery/door_control/dropship_airlock
-	name = "emergency hatch release"
-	var/linked_inner_id = null
+	name = "maintenance hatch release"
+	var/linked_inner_dropship_airlock_id = "generic"
 	var/obj/docking_port/stationary/marine_dropship/airlock/inner/linked_inner = null
 
 /obj/structure/machinery/door_control/dropship_airlock/Initialize(mapload, ...)
@@ -277,8 +277,8 @@
 
 /obj/structure/machinery/door_control/dropship_airlock/LateInitialize()
 	. = ..()
-	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock as anything in GLOB.dropship_airlock_inners)
-		if(linked_inner_id == inner_airlock.id)
+	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock in GLOB.dropship_airlock_docking_ports)
+		if(linked_inner_dropship_airlock_id == inner_airlock.dropship_airlock_id)
 			linked_inner = inner_airlock
 			linked_inner.door_controls += src
 
@@ -288,9 +288,14 @@
 	. = ..()
 
 /obj/structure/machinery/door_control/dropship_airlock/use_button(mob/living/user, force)
-	if(linked_inner.open_outer_airlock)
+	if(linked_inner?.open_outer_airlock)
 		to_chat(user, SPAN_WARNING("Locked out while the outer airlock is open."))
 		flick(initial(icon_state) + "-denied",src)
 		return
 	. = ..()
 
+/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_one
+	linked_inner_dropship_airlock_id = GOLDEN_ARROW_AIRLOCK_ONE
+
+/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_two
+	linked_inner_dropship_airlock_id = GOLDEN_ARROW_AIRLOCK_TWO

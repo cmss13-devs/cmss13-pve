@@ -92,38 +92,38 @@
 	. = ..()
 	icon_state = "floor_flood0[light_on]"
 
-/obj/structure/machinery/floodlight/landing/airlock
+/obj/structure/machinery/floodlight/landing/dropship_airlock
 
-	var/linked_inner_id = null
+	var/linked_inner_dropship_airlock_id = "generic"
 	var/obj/docking_port/stationary/marine_dropship/airlock/inner/linked_inner = null
 
-/obj/structure/machinery/floodlight/landing/airlock/Initialize(mapload, ...)
+/obj/structure/machinery/floodlight/landing/dropship_airlock/Initialize(mapload, ...)
 	. = ..()
 	QDEL_NULL(static_light)
 	light_system = MOVABLE_LIGHT
 	set_light(10, 2, LIGHT_COLOR_BLUE, /atom/movable/lighting_mask/rotating_toggleable)
 	return INITIALIZE_HINT_LATELOAD
 
-/obj/structure/machinery/floodlight/landing/airlock/LateInitialize()
+/obj/structure/machinery/floodlight/landing/dropship_airlock/LateInitialize()
 	. = ..()
-	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock as anything in GLOB.dropship_airlock_inners)
-		if(linked_inner_id == inner_airlock.id)
+	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock in GLOB.dropship_airlock_docking_ports)
+		if(linked_inner_dropship_airlock_id == inner_airlock.dropship_airlock_id)
 			linked_inner = inner_airlock
 			linked_inner.floodlights += src
 
-/obj/structure/machinery/floodlight/landing/airlock/Destroy()
+/obj/structure/machinery/floodlight/landing/dropship_airlock/Destroy()
 	if(linked_inner)
 		linked_inner.floodlights -= src
 	. = ..()
 
-/obj/structure/machinery/floodlight/landing/airlock/proc/toggle_rotating()
+/obj/structure/machinery/floodlight/landing/dropship_airlock/proc/toggle_rotating()
 	if(istype(light.our_mask, /atom/movable/lighting_mask/rotating_toggleable))
 		var/atom/movable/lighting_mask/rotating_toggleable/rotating_mask = light.our_mask
 		playsound(src, 'sound/machines/switch.ogg', 60, sound_range = 15)
 		rotating_mask.toggle()
 
-/obj/structure/machinery/floodlight/landing/airlock/golden_arrow_one
-	linked_inner_id = GOLDEN_ARROW_A1_I
+/obj/structure/machinery/floodlight/landing/dropship_airlock/golden_arrow_one
+	linked_inner_dropship_airlock_id = GOLDEN_ARROW_AIRLOCK_ONE
 
-/obj/structure/machinery/floodlight/landing/airlock/golden_arrow_two
-	linked_inner_id = GOLDEN_ARROW_A2_I
+/obj/structure/machinery/floodlight/landing/dropship_airlock/golden_arrow_two
+	linked_inner_dropship_airlock_id = GOLDEN_ARROW_AIRLOCK_TWO

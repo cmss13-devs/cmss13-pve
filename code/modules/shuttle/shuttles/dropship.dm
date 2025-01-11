@@ -248,8 +248,8 @@
 	if(mode == SHUTTLE_PREARRIVAL && !dropzone.landing_lights_on)
 		if(istype(destination, /obj/docking_port/stationary/marine_dropship))
 			dropzone.turn_on_landing_lights()
-		playsound(dropzone.return_center_turf(), landing_sound, 50, 0)
-		playsound(return_center_turf(), landing_sound, 50, 0, SOUND_CHANNEL_DROPSHIP)
+		playsound(dropzone.return_center_turf(), landing_sound, 100, channel = SOUND_CHANNEL_DROPSHIP, vol_cat = VOLUME_AMB)
+		playsound(return_center_turf(), landing_sound, 100, 0, channel = SOUND_CHANNEL_DROPSHIP, vol_cat = VOLUME_AMB)
 
 	automated_check()
 
@@ -283,13 +283,22 @@
 		SSshuttle.moveShuttle(id, automated_hangar_id, TRUE)
 	ai_silent_announcement("Dropship '[name]' departing.")
 
+/obj/docking_port/mobile/marine_dropship/proc/redefine_ambience_flight(new_ambience_flight)
+	ambience_flight = new_ambience_flight
+	update_ambience()
+
 /obj/docking_port/mobile/marine_dropship/proc/dropship_freefall()
+	var/stored_ambience_flight = ambience_flight
+	addtimer(CALLBACK(src, PROC_REF(redefine_ambience_flight), stored_ambience_flight), DROPSHIP_TURBULENCE_FREEFALL_PERIOD)
+	ambience_flight = null // a hacky solution but it would seem any other plausible solution would be more hacky
+	update_ambience()
+
 	var/list/affected_list = turbulence_sort_affected()
 
 	for(var/mob/living/affected_mob as anything in affected_list["mobs"])
 		to_chat(affected_mob, SPAN_DANGER("The dropship jolts violently as it enters freefall!"))
-		shake_camera(affected_mob, DROPSHIP_TURBULENCE_PERIOD, 1)
-		shake_camera(affected_mob, DROPSHIP_TURBULENCE_PERIOD * 3, 1)
+		shake_camera(affected_mob, DROPSHIP_TURBULENCE_FREEFALL_PERIOD / 3, 1)
+		shake_camera(affected_mob, DROPSHIP_TURBULENCE_FREEFALL_PERIOD, 1)
 		if(!affected_mob.buckled)
 			affected_mob.KnockDown(16)
 			affected_mob.throw_random_direction(2, spin = TRUE)

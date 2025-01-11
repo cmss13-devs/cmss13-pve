@@ -627,14 +627,14 @@
 	var/obj/docking_port/stationary/S = get_docked()
 	S?.on_dock_ignition(src)
 	if(ignition_sound)
-		playsound(return_center_turf(), ignition_sound, 50, 0, SOUND_CHANNEL_DROPSHIP)
+		playsound(return_center_turf(), ignition_sound, 100, 0, channel = SOUND_CHANNEL_DROPSHIP, vol_cat = VOLUME_AMB)
 	return
 
 /obj/docking_port/mobile/proc/on_prearrival()
 	if(destination)
 		destination.on_prearrival(src)
 	if(!istype(src, /obj/docking_port/mobile/marine_dropship))
-		playsound(return_center_turf(), landing_sound, 50, 0, SOUND_CHANNEL_DROPSHIP)
+		playsound(return_center_turf(), landing_sound, 100, 0, channel = SOUND_CHANNEL_DROPSHIP, vol_cat = VOLUME_AMB)
 	return
 
 /obj/docking_port/mobile/proc/on_crash()
@@ -1037,7 +1037,7 @@
 		else
 			return FALSE // hmm
 	*/
-	// A smarter way of doing this I hope (that also helps when a shuttle is idle but in transit)
+	// A replacement way a part of the logic for dropship airlocks (for when a shuttle is idle but in transit)
 	if(istype(get_docked(), /obj/docking_port/stationary/transit))
 		return TRUE
 	return FALSE
