@@ -1892,9 +1892,7 @@
 /obj/structure/machinery/door/airlock/almayer/generic{
 	name = "Bathroom"
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "aFW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2051,12 +2049,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/fitness)
-"aJr" = (
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "w-y2"
-	},
-/area/lv522/oob/w_y_vault)
 "aJy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/engineering_electrical,
@@ -2140,10 +2132,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/admin)
 "aLG" = (
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "w-y0"
-	},
+/turf/open/floor/almayer/plating,
 /area/lv522/oob/w_y_vault)
 "aLK" = (
 /obj/structure/barricade/handrail{
@@ -2481,9 +2470,7 @@
 	light_power = 0.6;
 	light_range = 4
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "aSH" = (
 /obj/structure/bed/chair/comfy{
@@ -3457,9 +3444,7 @@
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522/indoors/c_block/cargo)
 "bhL" = (
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/fitness)
 "bhS" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -3686,9 +3671,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "bmv" = (
 /obj/structure/pipes/standard/simple/hidden/yellow{
@@ -5670,10 +5653,7 @@
 	icon_state = "S";
 	pixel_y = -1
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
+/turf/open/floor/sandstone,
 /area/lv522/oob/w_y_vault)
 "cbp" = (
 /obj/structure/machinery/squeezer,
@@ -9165,9 +9145,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "djO" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -10605,9 +10583,7 @@
 	pixel_y = 16
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "dJD" = (
 /obj/structure/platform/strata,
@@ -14908,9 +14884,7 @@
 	light_range = 4;
 	light_power = 0.6
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "fmQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18247,10 +18221,7 @@
 	pixel_x = -1;
 	pixel_y = -1
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
+/turf/open/floor/sandstone,
 /area/lv522/oob/w_y_vault)
 "gzA" = (
 /obj/structure/platform_decoration/mineral{
@@ -19640,9 +19611,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "haF" = (
 /obj/structure/machinery/colony_floodlight{
@@ -22076,9 +22045,7 @@
 	dir = 8
 	},
 /obj/structure/prop/almayer/computers/sensor_computer1,
-/turf/open/floor{
-	icon_state = "bcircuit"
-	},
+/turf/open/floor/bcircuit,
 /area/lv522/atmos/east_reactor)
 "hVb" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -22092,9 +22059,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "bcircuit"
-	},
+/turf/open/floor/bcircuit,
 /area/lv522/atmos/east_reactor)
 "hVw" = (
 /obj/structure/window/framed/prefab,
@@ -22307,9 +22272,7 @@
 	dir = 4
 	},
 /obj/structure/prop/almayer/computers/sensor_computer1,
-/turf/open/floor{
-	icon_state = "bcircuit"
-	},
+/turf/open/floor/bcircuit,
 /area/lv522/atmos/east_reactor)
 "hYw" = (
 /obj/structure/bed/sofa/south/grey/left{
@@ -26178,9 +26141,7 @@
 	name = "Bathroom";
 	req_one_access_txt = "100"
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "jow" = (
 /obj/structure/platform/strata/metal{
@@ -29838,9 +29799,7 @@
 	dir = 8;
 	pixel_x = -11
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "kzS" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -29865,9 +29824,7 @@
 /area/lv522_l_l/indoors/dorms)
 "kAD" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/fitness)
 "kAH" = (
 /obj/structure/pipes/standard/simple/hidden/yellow,
@@ -30734,9 +30691,7 @@
 	name = "Bathroom";
 	req_one_access_txt = "100"
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "kRJ" = (
 /obj/effect/decal/warning_stripes{
@@ -35999,12 +35954,6 @@
 	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/basement/colony)
-"mNI" = (
-/turf/open/floor/almayer{
-	dir = 1;
-	icon_state = "w-y1"
-	},
-/area/lv522/oob/w_y_vault)
 "mNR" = (
 /obj/structure/prop/ice_colony/dense/planter_box{
 	dir = 9
@@ -37432,9 +37381,7 @@
 	},
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "niK" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -38466,10 +38413,7 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
+/turf/open/floor/sandstone,
 /area/lv522/oob/w_y_vault)
 "nCM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -38634,9 +38578,7 @@
 /obj/structure/machinery/door/airlock/almayer/generic{
 	name = "Showeroom"
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "nFb" = (
 /obj/structure/machinery/computer3/server/rack,
@@ -39100,9 +39042,7 @@
 	pixel_y = 16
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "nNx" = (
 /obj/structure/machinery/light/double{
@@ -39364,6 +39304,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/security)
+"nQZ" = (
+/turf/open/floor/bcircuit,
+/area/lv522/atmos/east_reactor)
 "nRc" = (
 /obj/structure/platform_decoration/mineral{
 	dir = 4;
@@ -39393,9 +39336,7 @@
 	can_block_movement = 0;
 	can_be_stacked = 1
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/fitness)
 "nRy" = (
 /obj/structure/closet/fireaxecabinet{
@@ -39923,10 +39864,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
+/turf/open/floor/sandstone,
 /area/lv522/oob/w_y_vault)
 "oao" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly,
@@ -41843,9 +41781,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "oIN" = (
 /obj/structure/bed/chair{
@@ -43204,9 +43140,7 @@
 	pixel_x = -11
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "pgo" = (
 /obj/structure/filingcabinet{
@@ -45203,9 +45137,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "pSK" = (
 /obj/structure/machinery/light/double/blue{
@@ -45257,9 +45189,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "pUs" = (
 /obj/structure/prop/ice_colony/ground_wire,
@@ -45543,9 +45473,7 @@
 	can_be_stacked = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/fitness)
 "pYh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -50313,9 +50241,7 @@
 	name = "Bathroom";
 	req_one_access_txt = "100"
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "rCh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -50641,9 +50567,7 @@
 	dir = 4;
 	pixel_x = 11
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "rIF" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -52228,9 +52152,7 @@
 	pixel_y = 16
 	},
 /obj/structure/pipes/vents/pump,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "skg" = (
 /obj/structure/surface/table/almayer,
@@ -52510,10 +52432,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
+/turf/open/floor/sandstone,
 /area/lv522/oob/w_y_vault)
 "spu" = (
 /obj/structure/machinery/colony_floodlight{
@@ -54871,10 +54790,7 @@
 	pixel_x = 1;
 	pixel_y = -1
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
+/turf/open/floor/sandstone,
 /area/lv522/oob/w_y_vault)
 "tbO" = (
 /obj/structure/prop/invuln/darkness,
@@ -57011,10 +56927,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
+/turf/open/floor/sandstone,
 /area/lv522/oob/w_y_vault)
 "tMk" = (
 /obj/structure/reagent_dispensers/fueltank/gas/hydrogen,
@@ -57403,9 +57316,7 @@
 	light_range = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/fitness)
 "tUg" = (
 /obj/structure/cargo_container/kelland/right,
@@ -64470,10 +64381,7 @@
 	pixel_x = 1;
 	pixel_y = 1
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "whiteyellowfull"
-	},
+/turf/open/floor/sandstone,
 /area/lv522/oob/w_y_vault)
 "wka" = (
 /obj/effect/decal/cleanable/blood,
@@ -65339,9 +65247,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "wCJ" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -69667,9 +69573,7 @@
 	dir = 9
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "silverfull"
-	},
+/turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
 "ybM" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -170749,7 +170653,7 @@ hDa
 hDa
 hDa
 mRh
-kHX
+nQZ
 kHX
 kHX
 kHX
@@ -171566,7 +171470,7 @@ hDa
 hDa
 hDa
 mRh
-kHX
+nQZ
 kHX
 kHX
 kHX
@@ -314685,7 +314589,7 @@ uAa
 edQ
 cLk
 cbn
-mNI
+aLG
 tLX
 uIe
 edQ
@@ -315502,7 +315406,7 @@ uAa
 edQ
 iwV
 cbn
-aJr
+aLG
 tLX
 uIe
 edQ
