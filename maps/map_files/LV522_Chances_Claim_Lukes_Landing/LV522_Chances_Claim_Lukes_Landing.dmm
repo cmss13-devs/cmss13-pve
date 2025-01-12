@@ -11983,8 +11983,7 @@
 	icon_state = "W"
 	},
 /obj/structure/platform_decoration{
-	dir = 8;
-	tag = "icon-platform_deco (EAST)"
+	dir = 8
 	},
 /obj/effect/projector{
 	name = "Almayer_Down3";
@@ -12913,8 +12912,7 @@
 	icon_state = "W"
 	},
 /obj/structure/platform_decoration{
-	dir = 8;
-	tag = "icon-platform_deco (EAST)"
+	dir = 8
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -15874,8 +15872,7 @@
 	icon_state = "W"
 	},
 /obj/structure/platform_decoration{
-	dir = 8;
-	tag = "icon-platform_deco (EAST)"
+	dir = 8
 	},
 /obj/structure/prop/invuln/darkness,
 /obj/effect/step_trigger/clone_cleaner,
@@ -33521,8 +33518,7 @@
 	icon_state = "W"
 	},
 /obj/structure/platform_decoration{
-	dir = 8;
-	tag = "icon-platform_deco (EAST)"
+	dir = 8
 	},
 /turf/open/floor/prison/bright_clean,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -45436,8 +45432,7 @@
 	icon_state = "W"
 	},
 /obj/structure/platform_decoration{
-	dir = 8;
-	tag = "icon-platform_deco (EAST)"
+	dir = 8
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/n_rockies)
@@ -50915,8 +50910,7 @@
 	icon_state = "W"
 	},
 /obj/structure/platform_decoration{
-	dir = 8;
-	tag = "icon-platform_deco (EAST)"
+	dir = 8
 	},
 /obj/effect/projector{
 	name = "Almayer_Down3";
@@ -53152,8 +53146,7 @@
 	icon_state = "W"
 	},
 /obj/structure/platform_decoration{
-	dir = 8;
-	tag = "icon-platform_deco (EAST)"
+	dir = 8
 	},
 /turf/open/floor/prison/bright_clean,
 /area/lv522/outdoors/n_rockies)
