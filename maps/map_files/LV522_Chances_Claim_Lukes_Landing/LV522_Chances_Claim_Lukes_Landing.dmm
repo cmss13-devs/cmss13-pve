@@ -20847,9 +20847,6 @@
 /obj/structure/surface/table{
 	color = "#8B7B5B"
 	},
-/obj/structure/surface/table{
-	color = "#8B7B5B"
-	},
 /obj/item/reagent_container/food/drinks/bottle/gin{
 	pixel_y = 11;
 	pixel_x = 5
@@ -59135,15 +59132,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/admin)
-"uwY" = (
-/obj/structure/window/framed/strata/reinforced,
-/obj/structure/machinery/door/poddoor/shutters/almayer/open{
-	id = "HydroStorm";
-	name = "\improper Storm Shutters";
-	dir = 4
-	},
-/turf/closed/wall/strata_outpost/reinforced/hull,
-/area/lv522/indoors/b_block/hydro)
 "uxs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -61215,9 +61203,6 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/outdoors/colony)
 "vgs" = (
-/obj/structure/surface/table{
-	color = "#8B7B5B"
-	},
 /obj/structure/surface/table{
 	color = "#8B7B5B"
 	},
@@ -311984,7 +311969,7 @@ wpF
 wpF
 dFz
 dFz
-bju
+wpF
 wpF
 wpF
 wpF
@@ -312782,7 +312767,7 @@ uAa
 uAa
 uAa
 uAa
-bju
+wpF
 wpF
 wpF
 wpF
@@ -313599,7 +313584,7 @@ uAa
 uAa
 uAa
 uAa
-bju
+wpF
 wpF
 wpF
 wpF
@@ -314416,7 +314401,7 @@ uAa
 uAa
 uAa
 uAa
-bju
+wpF
 wpF
 wpF
 wpF
@@ -315233,7 +315218,7 @@ uAa
 uAa
 uAa
 uAa
-bju
+wpF
 wpF
 wpF
 mHI
@@ -316050,7 +316035,7 @@ uAa
 uAa
 uAa
 uAa
-bju
+wpF
 wpF
 mHI
 mHI
@@ -447897,7 +447882,7 @@ ckw
 oeU
 oeU
 oeU
-uwY
+oeU
 ckw
 tOK
 tOK
