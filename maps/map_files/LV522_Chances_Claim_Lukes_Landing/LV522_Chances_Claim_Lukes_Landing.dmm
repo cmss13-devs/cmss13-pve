@@ -10244,6 +10244,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
+"dEl" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/turf/open/floor/tdome,
+/area/lv522/atmos/sewer)
 "dEm" = (
 /obj/structure/prop/dam/truck,
 /turf/open/auto_turf/shale/layer1,
@@ -35182,6 +35189,9 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/landing_zone_1/ceiling)
+"mxN" = (
+/turf/open/floor/tdome,
+/area/lv522/atmos/sewer)
 "mxO" = (
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/bright_clean,
@@ -44630,6 +44640,12 @@
 	},
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/indoors/canteen)
+"pHY" = (
+/obj/structure/ladder{
+	id = "sec armoury"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/atmos/sewer)
 "pIw" = (
 /obj/structure/cargo_container/kelland/left,
 /turf/open/floor/corsat/squares,
@@ -49058,7 +49074,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/ladder,
+/obj/structure/ladder{
+	height = 1;
+	id = "sec armoury"
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/west_reactor)
 "rgv" = (
@@ -56345,15 +56364,10 @@
 	light_power = 0.6;
 	light_range = 4
 	},
-/obj/structure/machinery/deployable/barrier,
-/obj/structure/machinery/deployable/barrier,
-/obj/structure/machinery/deployable/barrier,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/machinery/deployable/barrier,
-/obj/structure/machinery/deployable/barrier,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/security)
 "tDS" = (
@@ -64446,6 +64460,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/security)
+"wjK" = (
+/obj/structure/machinery/deployable/barrier,
+/turf/open/floor/tdome,
+/area/lv522/atmos/sewer)
 "wjP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -68555,15 +68573,14 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522/outdoors/n_rockies)
 "xJA" = (
-/obj/structure/machinery/deployable/barrier,
-/obj/structure/machinery/deployable/barrier,
-/obj/structure/machinery/deployable/barrier,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/machinery/deployable/barrier,
-/obj/structure/machinery/deployable/barrier,
+/obj/structure/ladder{
+	height = 1;
+	id = "sec armoury"
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/security)
 "xJB" = (
@@ -295917,12 +295934,12 @@ mPj
 mPj
 mPj
 mPj
-mPj
-mPj
-mPj
-mPj
-mPj
-mPj
+wjK
+wjK
+wjK
+mxN
+dEl
+pHY
 mPj
 mPj
 mPj
@@ -296734,12 +296751,12 @@ mPj
 mPj
 mPj
 mPj
-mPj
-mPj
-mPj
-mPj
-mPj
-mPj
+wjK
+wjK
+wjK
+mxN
+dEl
+wBw
 mPj
 mPj
 mPj
@@ -297551,12 +297568,12 @@ mPj
 mPj
 mPj
 mPj
-mPj
-mPj
-mPj
-mPj
-mPj
-mPj
+wjK
+wjK
+mxN
+mxN
+dEl
+wBw
 mPj
 mPj
 mPj
@@ -298368,12 +298385,12 @@ mPj
 mPj
 mPj
 mPj
-mPj
-mPj
-mPj
-mPj
-mPj
-mPj
+wjK
+wjK
+mxN
+mxN
+dEl
+wBw
 mPj
 mPj
 mPj
@@ -300003,10 +300020,10 @@ mPj
 mPj
 mPj
 mPj
-mPj
-mPj
-mPj
-mPj
+mxN
+mxN
+mxN
+mxN
 mPj
 mPj
 mPj
@@ -300819,12 +300836,12 @@ mPj
 mPj
 mPj
 mPj
-mPj
-mPj
-mPj
-mPj
-mPj
-mPj
+mxN
+mxN
+mxN
+mxN
+mxN
+mxN
 mPj
 mPj
 mPj
@@ -301636,12 +301653,12 @@ mPj
 mPj
 mPj
 mPj
-mPj
-mPj
-mPj
-mPj
-mPj
-mPj
+mxN
+mxN
+mxN
+mxN
+mxN
+mxN
 mPj
 mPj
 mPj
@@ -302453,12 +302470,12 @@ mPj
 mPj
 mPj
 mPj
-mPj
-mPj
-mPj
-mPj
-mPj
-mPj
+mxN
+mxN
+mxN
+mxN
+mxN
+mxN
 mPj
 mPj
 mPj
@@ -303271,10 +303288,10 @@ mPj
 mPj
 mPj
 mPj
-mPj
-mPj
-mPj
-mPj
+mxN
+mxN
+mxN
+mxN
 mPj
 mPj
 mPj
