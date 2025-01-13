@@ -494,12 +494,6 @@
 "bA" = (
 /turf/open/floor/prison,
 /area/calliope/bunker/fuel_depot)
-"bC" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	id = "highway_west"
-	},
-/turf/open/floor/plating,
-/area/calliope/oob/gate)
 "bF" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "Heavy Shutter";
@@ -2693,12 +2687,6 @@
 	},
 /turf/open/asphalt,
 /area/calliope/highway/checkpoint)
-"it" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	id = "highway_northb"
-	},
-/turf/open/floor/plating,
-/area/calliope/oob/gate)
 "iw" = (
 /obj/structure/flora/bush/desert/cactus/multiple{
 	icon_state = "cacti_10"
@@ -4900,6 +4888,12 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope/highway/northbound)
+"pG" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "highway_northb"
+	},
+/turf/open/floor/plating,
+/area/calliope/oob/gate)
 "pH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/power/east,
@@ -5516,6 +5510,12 @@
 /obj/structure/pipes/standard/manifold/fourway/hidden/supply,
 /turf/open/floor/prison/whitegreen/east,
 /area/calliope/bunker/hospital)
+"rz" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "highway_west"
+	},
+/turf/open/floor/plating,
+/area/calliope/oob/gate)
 "rA" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -5897,7 +5897,6 @@
 /area/calliope/bunker/abandoned_section)
 "sY" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/surface/table/almayer,
 /obj/effect/decal/siding,
 /obj/item/reagent_container/food/condiment/peppermill{
 	pixel_x = -5;
@@ -6033,14 +6032,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/calliope/bunker/hospital)
-"tt" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Shutter";
-	id = "highway_ghost";
-	dir = 4
-	},
-/turf/open/asphalt/cement,
-/area/calliope/oob/gate)
 "tu" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/asphalt/cement/cement4,
@@ -7093,6 +7084,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/cafeteria)
+"wP" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "highway_south"
+	},
+/turf/open/floor/plating,
+/area/calliope/oob/gate)
 "wQ" = (
 /obj/structure/bed{
 	can_buckle = 0;
@@ -7333,10 +7330,7 @@
 	pixel_x = -2;
 	pixel_y = -8
 	},
-/turf/open/asphalt{
-	pixel_x = 0;
-	pixel_y = 0
-	},
+/turf/open/asphalt,
 /area/calliope/bunker/sterlingtransfer)
 "xB" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
@@ -8199,6 +8193,21 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
+"Ab" = (
+/obj/structure/machinery/door_control{
+	pixel_x = 22;
+	id = "shed2";
+	name = "Shutter Control";
+	pixel_y = 13
+	},
+/obj/structure/machinery/door_control{
+	pixel_x = 22;
+	id = "shed";
+	name = "Shutter Control";
+	pixel_y = -10
+	},
+/turf/open/asphalt/cement/cement7,
+/area/calliope/highway/northbound)
 "Ac" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -8329,6 +8338,12 @@
 /obj/structure/platform,
 /turf/open/floor/coagulation/icon8_0,
 /area/calliope/bunker/fuel_depot)
+"Au" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "highway_ghost"
+	},
+/turf/open/floor/plating,
+/area/calliope/oob/gate)
 "Av" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/window/reinforced/toughened{
@@ -11124,12 +11139,6 @@
 /obj/structure/machinery/light/blue,
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/cafeteria)
-"IN" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	id = "highway_north"
-	},
-/turf/open/floor/plating,
-/area/calliope/oob/gate)
 "IQ" = (
 /obj/structure/machinery/light/spot/blue{
 	pixel_x = 16
@@ -11353,7 +11362,7 @@
 /area/calliope/bunker/entry_checkpoint)
 "JH" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
-	id = "b-ball";
+	id = "shed";
 	name = "Shed Shutters";
 	dir = 8
 	},
@@ -11716,12 +11725,6 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope/highway/southbound)
-"KK" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	id = "highway_south"
-	},
-/turf/open/floor/plating,
-/area/calliope/oob/gate)
 "KM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/blue{
@@ -13347,12 +13350,6 @@
 /obj/item/storage/pouch/cassette,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/holding)
-"PB" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	id = "highway_ghost"
-	},
-/turf/open/floor/plating,
-/area/calliope/oob/gate)
 "PD" = (
 /obj/structure/flora/bush/desert{
 	icon_state = "tree_3"
@@ -15805,6 +15802,14 @@
 /obj/item/storage/backpack,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/exterior_buildings/north_buildings)
+"WY" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Heavy Shutter";
+	id = "highway_ghost";
+	dir = 4
+	},
+/turf/open/asphalt/cement,
+/area/calliope/oob/gate)
 "WZ" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/plating,
@@ -16131,6 +16136,12 @@
 	},
 /turf/open/asphalt,
 /area/calliope/highway/checkpoint)
+"XS" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "highway_north"
+	},
+/turf/open/floor/plating,
+/area/calliope/oob/gate)
 "XU" = (
 /obj/structure/machinery/door/poddoor/almayer/blended/aicore{
 	name = "Blastdoor";
@@ -16570,6 +16581,14 @@
 "Zw" = (
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/command)
+"Zx" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "shed2";
+	name = "Shed Shutters";
+	dir = 8
+	},
+/turf/open/floor/corsat/marked,
+/area/calliope/exterior_buildings/north_buildings)
 "Zy" = (
 /obj/structure/machinery/landinglight/ds1/spoke{
 	pixel_x = -8;
@@ -18047,7 +18066,7 @@ Wz
 Wz
 Wz
 Yx
-bC
+rz
 Yx
 yr
 UE
@@ -24582,7 +24601,7 @@ oB
 oB
 oB
 oB
-it
+pG
 Yx
 Sg
 Sg
@@ -27341,7 +27360,7 @@ yH
 ql
 gO
 oB
-KK
+wP
 oB
 oB
 oB
@@ -41970,7 +41989,7 @@ oB
 oB
 oB
 oB
-IN
+XS
 Yx
 Wz
 Wz
@@ -43530,7 +43549,7 @@ ic
 ps
 ps
 ps
-ps
+Ab
 ps
 ps
 ps
@@ -43779,9 +43798,9 @@ dp
 FT
 Sg
 wg
-JH
-JH
-JH
+Zx
+Zx
+Zx
 wg
 JH
 JH
@@ -47943,7 +47962,7 @@ Yx
 ag
 Yx
 Yx
-tt
+WY
 hJ
 hJ
 Yx
@@ -48192,7 +48211,7 @@ Wz
 Wz
 Wz
 Yx
-PB
+Au
 ag
 yr
 UE
