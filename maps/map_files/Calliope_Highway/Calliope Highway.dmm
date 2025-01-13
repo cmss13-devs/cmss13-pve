@@ -2185,7 +2185,7 @@
 /obj/structure/noticeboard{
 	pixel_x = 0;
 	pixel_y = 25;
-	desc = "Calliope Passage Highway: [NE - King's Hill (Route 44)] [NW - Way Station (Route 45)] [S - Shigure Port (Route 44)]";
+	desc = "Calliope Passage Highway, northwest - 45/46 northeast - 44 ";
 	name = "signage";
 	color = "#99ccff"
 	},
