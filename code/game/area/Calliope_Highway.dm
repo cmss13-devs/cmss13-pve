@@ -19,6 +19,12 @@
 /area/calliope/bunker_exterior_buildings
 	name = "Sterling Outer"
 	ceiling = CEILING_METAL
+/area/calliope/oob
+	name = "oob"
+	ceiling = CEILING_DEEP_UNDERGROUND
+/area/calliope/oob_o
+	name = "open oob"
+	ceiling = CEILING_NONE
 //===============================================SHUTTLES
 /area/calliope/shuttles/drop1
 	name = "Sterling Outpost - Checkpoint Landing"
