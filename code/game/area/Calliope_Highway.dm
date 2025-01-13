@@ -110,3 +110,16 @@
 /area/calliope/bunker/engineering
 	name = "Engineering"
 	icon_state = "engine_smes"
+/area/calliope/bunker/holding
+	name = "Holding Cell"
+	icon_state = "security"
+//================================================================================OOB
+/area/calliope/oob/mountain
+	name = "oob"
+	icon_state = "cave2"
+/area/calliope/oob/gate
+	name = "Highway Entry"
+	icon_state = "bluered"
+/area/calliope/oob_o/playground
+	name = "Out of Bounds Fun"
+	icon_state = "yellow"
