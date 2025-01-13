@@ -475,3 +475,29 @@
 	name = "Atmospheric Processor - Garage"
 	icon_state = "green"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
+
+//Megamap
+
+/area/lv522/indoors/garrison
+	name = "LV522 - Colonial Garrison Canteen"
+	icon_state = "green"
+
+/area/lv522/indoors/garrison/storage
+	name = "LV522 - Colonial Garrison Storage"
+	icon_state = "red"
+
+/area/lv522/indoors/garrison/barracks
+	name = "LV522 - Colonial Garrison Barracks"
+	icon_state = "blue"
+
+/area/lv522/indoors/garrison/gas
+	name = "LV522 - Barrens Gas Station"
+	icon_state = "blue"
+
+/area/lv522/indoors/garrison/engi
+	name = "LV522 - Colonial Garrison Engineering Prefab"
+	icon_state = "yellow"
+
+/area/lv522/outdoors/garrison/
+	name = "LV522 - Colonial Garrison Comms Relay"
+	icon_state = "yellow"
