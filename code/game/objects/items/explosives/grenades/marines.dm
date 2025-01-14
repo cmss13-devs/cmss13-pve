@@ -174,7 +174,7 @@
 	shrapnel_count = 48
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
-	arm_sound = 'sound/weapons/pinpull.ogg'
+
 
 /*
 +//================================================
@@ -864,6 +864,7 @@
 	underslug_launchable = FALSE
 	harmful = TRUE
 	antigrief_protection = TRUE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	/// The nerve gas datum
 	var/datum/effect_system/smoke_spread/cn20/nerve_gas
 	/// The typepath of the nerve gas
@@ -905,6 +906,7 @@
 	underslug_launchable = FALSE
 	harmful = TRUE
 	antigrief_protection = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	var/datum/effect_system/smoke_spread/LSD/LSD_gas
 	var/LSD_gas_radius = 4
 
@@ -938,6 +940,7 @@
 	underslug_launchable = FALSE
 	harmful = TRUE
 	antigrief_protection = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	var/datum/effect_system/smoke_spread/tear/tear_gas
 	var/tear_gas_radius = 4
 
