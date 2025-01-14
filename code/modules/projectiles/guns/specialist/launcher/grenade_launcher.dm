@@ -330,8 +330,8 @@
 /obj/item/weapon/gun/launcher/grenade/m81/riot
 	name = "\improper M81 riot grenade launcher"
 	desc = "A lightweight, single-shot low-angle grenade launcher to launch tear gas grenades. Used by the Colonial Marines Military Police during riots."
-	valid_munitions = list(/obj/item/explosive/grenade/custom/teargas, /obj/item/explosive/grenade/slug/baton)
-	preload = /obj/item/explosive/grenade/custom/teargas
+	valid_munitions = list(/obj/item/explosive/grenade/tear/marine, /obj/item/explosive/grenade/slug/baton)
+	preload = /obj/item/explosive/grenade/tear/marine
 
 //-------------------------------------------------------
 //M79 Grenade Launcher subtype of the M81

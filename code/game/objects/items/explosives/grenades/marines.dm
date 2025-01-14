@@ -380,9 +380,9 @@
 	icon_state = "grenade_chem"
 	item_state = "grenade_chem"
 	explosion_power = 250
-	explosion_falloff = 40
+	explosion_falloff = 200
 	shrapnel_count = 0
-	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /*
 //================================================
@@ -579,6 +579,7 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	smoke.set_up(smoke_radius, 0, get_turf(src))
 	smoke.start()
+	new /obj/item/trash/grenade(get_turf(src))
 	qdel(src)
 
 /obj/item/explosive/grenade/smokebomb/launch_impact(atom/hit_atom)
@@ -883,7 +884,7 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 6)
 	nerve_gas.start()
-	new /obj/item/trash/gasgrenade(get_turf(src))
+	new /obj/item/trash/grenade/gas(get_turf(src))
 	qdel(src)
 
 /obj/item/explosive/grenade/nerve_gas/xeno
@@ -920,7 +921,7 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	LSD_gas.set_up(LSD_gas_radius, 0, get_turf(src), null, 6)
 	LSD_gas.start()
-	new /obj/item/trash/gasgrenade(get_turf(src))
+	new /obj/item/trash/grenade/gas(get_turf(src))
 	qdel(src)
 
 /*
@@ -929,7 +930,7 @@
 //================================================
 */
 /obj/item/explosive/grenade/tear
-	name = "\improper Tear Gas grenade"
+	name = "\improper tear gas grenade"
 	desc = "A canister grenade of nonlethal Tear gas. It is set to detonate in 4 seconds."
 	icon_state = "flashbang2"//temp icon
 	det_time = 40
@@ -953,7 +954,24 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	tear_gas.set_up(tear_gas_radius, 0, get_turf(src), null, 90)
 	tear_gas.start()
-	new /obj/item/trash/gasgrenade(get_turf(src))
+	new /obj/item/trash/grenade/gas(get_turf(src))
+	qdel(src)
+
+/obj/item/explosive/grenade/tear/marine
+	name = "\improper M66 teargas grenade"
+	desc = "Tear gas grenade used for nonlethal riot control. Please wear adequate gas protection."
+	icon_state = "grenade_gas"
+	det_time = 40
+	item_state = "grenade_phos"//temp icon
+	underslug_launchable = TRUE
+	tear_gas_radius = 5
+	arm_sound = 'sound/weapons/grenade.ogg'
+
+/obj/item/explosive/grenade/tear/marine/prime()
+	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+	tear_gas.set_up(tear_gas_radius, 0, get_turf(src), null, 90)
+	tear_gas.start()
+	new /obj/item/trash/grenade/gas/marine(get_turf(src))
 	qdel(src)
 
 /*
