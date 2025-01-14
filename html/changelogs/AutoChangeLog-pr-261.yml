@@ -1,0 +1,4 @@
+author: "Doubleumc"
+delete-after: True
+changes:
+  - balance: "weeds no longer heal AI xenos, need a channeled action to remove"
