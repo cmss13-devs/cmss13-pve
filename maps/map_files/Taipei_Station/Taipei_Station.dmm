@@ -29,6 +29,17 @@
 	},
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/reactor/chamber)
+"acC" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	pixel_x = 10;
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/taipei/elevator/departures)
 "acM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -295,6 +306,16 @@
 	},
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
+"ank" = (
+/obj/structure/barricade/handrail/strata{
+	pixel_y = -4
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 195;
+	vector_y = -11
+	},
+/turf/open/void,
+/area/taipei/maints/south)
 "ans" = (
 /obj/structure/prop/turbine,
 /turf/open/void,
@@ -374,6 +395,11 @@
 	},
 /turf/open/floor/kutjevo,
 /area/taipei/atrium/medbay)
+"asl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "ass" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/light{
@@ -1076,6 +1102,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/prison,
 /area/taipei/cargo)
+"aYk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/mineral,
+/area/taipei/underground)
 "aYp" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -1195,6 +1226,10 @@
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
 	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 190;
+	vector_y = -55
+	},
 /turf/open/void,
 /area/taipei/maints/south)
 "bcJ" = (
@@ -1288,6 +1323,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/maints/north)
+"bhV" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/almayer/outer,
+/area/taipei/elevator/arrivals)
 "biK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -1661,13 +1700,24 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan,
 /area/taipei/atrium)
+"bwv" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526"
+	},
+/turf/open/floor/plating,
+/area/taipei/elevator/departures)
 "bwz" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/biodome,
 /area/taipei/atrium/hotel)
 "bwE" = (
-/turf/closed/mineral,
-/area/taipei/theatre)
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_y = 29;
+	damage = 200
+	},
+/turf/open/void,
+/area/taipei/cargo)
 "bwN" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
@@ -2287,7 +2337,6 @@
 /area/taipei/atrium/offices)
 "bZz" = (
 /obj/structure/prop/power_transformer,
-/obj/structure/lattice,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
@@ -2390,6 +2439,11 @@
 	},
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
+"cdM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/hazard,
+/turf/closed/wall/almayer,
+/area/taipei/cargo)
 "ceo" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4;
@@ -2782,6 +2836,20 @@
 	},
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/maints/south)
+"crk" = (
+/obj/structure/machinery/gear{
+	id = "supply_elevator_gear"
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "csj" = (
 /obj/structure/platform_decoration/shiva/catwalk{
 	dir = 1
@@ -2956,8 +3024,8 @@
 /area/taipei/maints/north)
 "cxI" = (
 /obj/item/paper{
-	pixel_x = -21;
-	pixel_y = 8
+	pixel_x = -23;
+	pixel_y = -7
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/faux_wood,
@@ -3329,11 +3397,9 @@
 /obj/structure/bookcase{
 	pixel_x = -3
 	},
-/obj/structure/bookcase{
-	pixel_x = -3;
-	pixel_y = 21
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/prop/magazine/book/theartofwar,
+/obj/item/prop/magazine/book/borntokill,
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/bookstore)
 "cOS" = (
@@ -3687,14 +3753,17 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/maints/north)
 "dem" = (
-/obj/structure/lattice,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16;
-	pixel_y = 24
+/obj/structure/machinery/gear{
+	id = "supply_elevator_gear"
 	},
-/turf/open/void,
-/area/taipei/reactor/chamber)
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	pixel_x = 0;
+	pixel_y = -1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "deH" = (
 /obj/item/storage/secure/safe{
 	pixel_y = 29
@@ -3899,8 +3968,12 @@
 /turf/open/floor/carpet5_1,
 /area/taipei/atrium/hotel)
 "doI" = (
-/turf/closed/mineral,
-/area/taipei/maints/south)
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_y = 27;
+	damage = 200
+	},
+/turf/open/void,
+/area/taipei/cargo)
 "doK" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 8
@@ -4627,6 +4700,11 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/maints/south)
+"dUt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating,
+/area/taipei/elevator/departures)
 "dVp" = (
 /obj/structure/platform,
 /obj/structure/platform_decoration{
@@ -4888,6 +4966,10 @@
 	},
 /turf/open/floor/kutjevo/tan/alt_inner_edge,
 /area/taipei/atrium)
+"eeC" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/taipei/elevator/arrivals)
 "eeF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5324,6 +5406,13 @@
 	},
 /turf/open/floor/prison,
 /area/taipei/reactor)
+"eyu" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 190;
+	vector_y = -55
+	},
+/turf/open/void,
+/area/taipei/maints/north)
 "eyX" = (
 /obj/structure/prop/almayer/computers/sensor_computer2,
 /turf/open/floor/prison,
@@ -5509,6 +5598,10 @@
 /obj/item/trash/cigbutt/ucigbutt,
 /turf/open/floor/kutjevo/tan,
 /area/taipei/atrium/offices)
+"eEt" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/almayer/outer,
+/area/taipei/elevator/departures)
 "eEy" = (
 /obj/structure/platform{
 	dir = 1
@@ -5750,6 +5843,11 @@
 	},
 /turf/open/floor/prison,
 /area/taipei/hangar)
+"eTi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "eTy" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/wood/ship,
@@ -5874,7 +5972,6 @@
 /area/taipei/hangar)
 "eZv" = (
 /obj/structure/prop/power_transformer,
-/obj/structure/lattice,
 /obj/structure/prop/static_tank,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -6157,17 +6254,9 @@
 /turf/open/floor/kutjevo/colors/cyan/edge/east,
 /area/taipei/atrium/medbay)
 "fih" = (
-/obj/structure/bookcase{
-	pixel_x = 3;
-	pixel_y = 20
-	},
-/obj/structure/bookcase{
-	pixel_x = 3;
-	pixel_y = 42
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/faux_wood,
-/area/taipei/atrium/bookstore)
+/obj/effect/decal/cleanable/cobweb2,
+/turf/open/floor/plating,
+/area/taipei/elevator/departures)
 "fjx" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 8
@@ -6246,6 +6335,14 @@
 "fnG" = (
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/maints/south)
+"fnX" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating,
+/area/taipei/elevator/departures)
 "foy" = (
 /turf/open/floor/bar,
 /area/taipei/atrium/restaurant)
@@ -7471,6 +7568,10 @@
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
 "gvH" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 195;
+	vector_y = 11
+	},
 /turf/open/void,
 /area/taipei/maints/north)
 "gxp" = (
@@ -7734,6 +7835,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
+/area/taipei/maints/north)
+"gMi" = (
+/obj/structure/machinery/elevator_strut/top,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 190;
+	vector_y = 60
+	},
+/turf/open/void,
 /area/taipei/maints/north)
 "gMD" = (
 /turf/open/floor/kutjevo/colors/cyan/inner_corner/north,
@@ -8648,6 +8757,9 @@
 "hIg" = (
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/bookstore)
+"hIk" = (
+/turf/open/floor/plating,
+/area/taipei/elevator/departures)
 "hIz" = (
 /obj/structure/platform{
 	layer = 2.7;
@@ -8656,19 +8768,9 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/maints/north)
 "hIA" = (
-/obj/structure/bookcase{
-	pixel_x = 9;
-	pixel_y = 20
-	},
 /obj/item/prop/magazine/book/bladerunner{
 	pixel_x = -9;
 	pixel_y = 12
-	},
-/obj/structure/bookcase{
-	density = 0;
-	icon_state = "book-5";
-	pixel_x = 9;
-	pixel_y = 42
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -9240,12 +9342,11 @@
 /turf/open/floor/kutjevo/colors,
 /area/taipei/cmb)
 "inP" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 8;
-	name = "\improper Hangar Lockdown Blast Door"
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
 /area/taipei/hangar)
 "ipj" = (
@@ -9833,6 +9934,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidwarning/northwest,
 /area/taipei/hangar)
+"iSc" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = 8;
+	pixel_y = 24
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/icefloor/asteroidplating,
+/area/taipei/atrium)
 "iSC" = (
 /turf/closed/wall/almayer/outer,
 /area/taipei/telecomms)
@@ -10023,6 +10136,10 @@
 "jal" = (
 /obj/effect/elevator,
 /obj/effect/elevator/animation_overlay,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_y = 29;
+	damage = 200
+	},
 /turf/open/void,
 /area/taipei/cargo)
 "jav" = (
@@ -10030,15 +10147,15 @@
 	pixel_x = 3;
 	pixel_y = 20
 	},
-/obj/structure/bookcase{
-	pixel_x = 3;
-	pixel_y = 42
-	},
 /obj/structure/machinery/light{
 	dir = 4;
 	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/pamphlet/language/spanish{
+	pixel_x = 8;
+	pixel_y = 16
+	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/bookstore)
 "jaM" = (
@@ -10638,6 +10755,11 @@
 	},
 /turf/open/floor/floor4,
 /area/taipei/atrium/restaurant)
+"jBI" = (
+/obj/structure/machinery/elevator_strut/bottom,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/taipei/elevator/departures)
 "jBY" = (
 /turf/closed/shuttle/ert{
 	icon_state = "leftengine_3";
@@ -10996,6 +11118,10 @@
 /area/taipei/theatre)
 "jVD" = (
 /obj/structure/machinery/elevator_strut/top,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 195;
+	vector_y = 11
+	},
 /turf/open/void,
 /area/taipei/maints/north)
 "jVM" = (
@@ -11612,6 +11738,14 @@
 /obj/structure/window/reinforced,
 /turf/open/floor/prison/bluecorner/east,
 /area/taipei/club)
+"kxZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/warning_cone{
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/plating/asteroidfloor,
+/area/taipei/atrium)
 "kya" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -11695,17 +11829,20 @@
 /obj/effect/overlay/palmtree_r,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/taipei/atrium)
+"kBS" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "kBV" = (
 /obj/structure/bookcase{
 	pixel_x = -8
 	},
-/obj/structure/bookcase{
-	density = 0;
-	icon_state = "book-5";
-	pixel_y = 21;
-	pixel_x = -8
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/toy/desk/newtoncradle{
+	pixel_x = -8;
+	pixel_y = 14
+	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/bookstore)
 "kBW" = (
@@ -12999,6 +13136,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/north,
 /area/taipei/maints/south)
+"lHO" = (
+/turf/open/floor/plating,
+/area/taipei/elevator/arrivals)
 "lIh" = (
 /obj/structure/bed/chair/comfy{
 	buckling_y = 2;
@@ -13117,6 +13257,14 @@
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/taipei/atrium)
+"lMF" = (
+/obj/effect/elevator,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_y = 27;
+	damage = 200
+	},
+/turf/open/void,
+/area/taipei/cargo)
 "lMG" = (
 /obj/structure/sign/catclock,
 /obj/effect/decal/cleanable/dirt,
@@ -13323,6 +13471,11 @@
 /obj/structure/closet/cabinet,
 /turf/open/floor/prison,
 /area/taipei/club)
+"lZm" = (
+/obj/structure/machinery/elevator_strut/bottom,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/taipei/elevator/arrivals)
 "lZD" = (
 /obj/structure/platform{
 	layer = 2.7;
@@ -13474,10 +13627,9 @@
 /turf/open/floor/bar,
 /area/taipei/atrium/store)
 "mfT" = (
-/obj/structure/lattice,
-/obj/item/lightstick/red/spoke/planted,
-/turf/open/void,
-/area/taipei/reactor/chamber)
+/obj/structure/machinery/elevator_strut/bottom,
+/turf/open/floor/plating,
+/area/taipei/elevator/arrivals)
 "mgb" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -13706,6 +13858,10 @@
 /area/taipei/cargo)
 "moD" = (
 /obj/structure/machinery/elevator_strut/bottom,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 195;
+	vector_y = 11
+	},
 /turf/open/void,
 /area/taipei/maints/north)
 "moK" = (
@@ -13932,6 +14088,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrowncorners2/west,
 /area/taipei/theatre)
+"mAU" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	pixel_x = 10;
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/taipei/elevator/arrivals)
 "mAV" = (
 /obj/structure/machinery/medical_pod/bodyscanner,
 /turf/open/floor/kutjevo/colors/cyan/inner_corner/west,
@@ -14193,6 +14360,10 @@
 	dir = 6
 	},
 /area/taipei/cmb)
+"mOj" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/taipei/elevator/departures)
 "mOz" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
 /obj/effect/decal/cleanable/dirt,
@@ -14701,7 +14872,6 @@
 /turf/open/floor/bar,
 /area/taipei/atrium/store)
 "nkR" = (
-/obj/structure/lattice,
 /obj/structure/prop/static_tank,
 /turf/open/void,
 /area/taipei/reactor/chamber)
@@ -15004,6 +15174,10 @@
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
 	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 190;
+	vector_y = -55
+	},
 /turf/open/void,
 /area/taipei/maints/south)
 "nCy" = (
@@ -15070,12 +15244,6 @@
 "nDZ" = (
 /obj/structure/bookcase{
 	pixel_x = -14
-	},
-/obj/structure/bookcase{
-	density = 0;
-	icon_state = "book-5";
-	pixel_x = -14;
-	pixel_y = 21
 	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/bookstore)
@@ -15324,9 +15492,9 @@
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/bookstore)
 "nSn" = (
-/obj/structure/bookcase{
-	pixel_x = -8;
-	pixel_y = 21
+/obj/item/pamphlet/language/spanish{
+	pixel_x = -3;
+	pixel_y = -13
 	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/bookstore)
@@ -15603,6 +15771,10 @@
 	},
 /turf/open/floor/prison,
 /area/taipei/reactor)
+"oeA" = (
+/obj/structure/machinery/elevator_strut/bottom,
+/turf/open/floor/plating,
+/area/taipei/elevator/departures)
 "oeU" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -16241,6 +16413,11 @@
 /obj/structure/sign/safety/elevator,
 /turf/closed/wall/biodome,
 /area/taipei/atrium)
+"oEg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "oEr" = (
 /turf/closed/mineral,
 /area/taipei/reactor)
@@ -17017,6 +17194,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidwarning/east,
 /area/taipei/maints/south)
+"pot" = (
+/obj/structure/barricade/handrail/strata{
+	pixel_y = -4
+	},
+/obj/structure/machinery/elevator_strut/bottom,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 195;
+	vector_y = -11
+	},
+/turf/open/void,
+/area/taipei/maints/south)
 "pow" = (
 /obj/structure/platform{
 	dir = 1
@@ -17198,6 +17386,13 @@
 	},
 /turf/open/floor/prison,
 /area/taipei/telecomms)
+"pvR" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 190;
+	vector_y = 60
+	},
+/turf/open/void,
+/area/taipei/maints/north)
 "pws" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
@@ -17302,6 +17497,14 @@
 "pzV" = (
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/prison,
+/area/taipei/maints/north)
+"pAJ" = (
+/obj/structure/machinery/elevator_strut/bottom,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 190;
+	vector_y = 60
+	},
+/turf/open/void,
 /area/taipei/maints/north)
 "pBd" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -17470,10 +17673,6 @@
 "pIB" = (
 /obj/structure/bookcase{
 	pixel_x = -14
-	},
-/obj/structure/bookcase{
-	pixel_x = -14;
-	pixel_y = 21
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -17714,6 +17913,14 @@
 /turf/open/floor/kutjevo/tan,
 /area/taipei/elevator/arrivals)
 "pOK" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_y = 27;
+	damage = 200
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_y = 27;
+	damage = 200
+	},
 /turf/open/void,
 /area/taipei/cargo)
 "pPy" = (
@@ -18019,6 +18226,11 @@
 	},
 /turf/open/floor/plating/asteroidwarning/east,
 /area/taipei/maints/south)
+"qeF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "qeW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -19221,7 +19433,6 @@
 	pixel_x = 16;
 	pixel_y = 9
 	},
-/obj/structure/lattice,
 /obj/item/lightstick/red/spoke/planted,
 /turf/open/void,
 /area/taipei/reactor/chamber)
@@ -19268,6 +19479,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
+"rhw" = (
+/obj/structure/machinery/elevator_strut/top,
+/obj/structure/barricade/handrail/strata{
+	pixel_y = -4
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 195;
+	vector_y = -11
+	},
+/turf/open/void,
+/area/taipei/maints/south)
 "rhI" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -19313,6 +19535,13 @@
 	},
 /turf/open/floor/kutjevo/tan/alt_edge/east,
 /area/taipei/atrium)
+"rke" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "rkp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidwarning/east,
@@ -19396,6 +19625,9 @@
 "rmW" = (
 /turf/open/floor/kutjevo/tan/multi_tiles,
 /area/taipei/atrium)
+"rns" = (
+/turf/closed/wall/almayer/outer,
+/area/taipei/elevator/departures)
 "rnB" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -19587,10 +19819,6 @@
 	icon_state = "book-5";
 	pixel_y = 20;
 	pixel_x = 9
-	},
-/obj/structure/bookcase{
-	pixel_x = 9;
-	pixel_y = 42
 	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/bookstore)
@@ -19939,7 +20167,6 @@
 /turf/open/floor/prison,
 /area/taipei/reactor)
 "rHV" = (
-/obj/structure/lattice,
 /obj/structure/prop/structure_lattice{
 	pixel_x = 16;
 	pixel_y = 0
@@ -19984,6 +20211,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning,
 /area/taipei/maints/south)
+"rIG" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526"
+	},
+/turf/open/floor/plating,
+/area/taipei/elevator/arrivals)
 "rIO" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 7
@@ -20315,6 +20549,10 @@
 	dir = 8
 	},
 /area/taipei/cmb)
+"rUJ" = (
+/obj/structure/sign/safety/hazard,
+/turf/closed/wall/almayer,
+/area/taipei/cargo)
 "rUR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/supply,
@@ -20333,6 +20571,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/multi_tiles,
 /area/taipei/atrium)
+"rVi" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "rVs" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
@@ -20407,6 +20650,10 @@
 	pixel_y = -4
 	},
 /obj/structure/machinery/elevator_strut/bottom,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 190;
+	vector_y = -55
+	},
 /turf/open/void,
 /area/taipei/maints/south)
 "rZo" = (
@@ -20544,6 +20791,10 @@
 	},
 /turf/open/floor/floor4,
 /area/taipei/atrium/restaurant)
+"sfM" = (
+/obj/structure/sign/safety/hazard,
+/turf/closed/wall/almayer,
+/area/taipei/maints/south)
 "sgg" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -21355,39 +21606,37 @@
 /turf/open/floor/kutjevo/tan/grey_edge/east,
 /area/taipei/atrium/offices)
 "sRq" = (
-/obj/item/storage/toolbox/electrical{
-	pixel_y = 8
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable{
-	icon_state = "0-2";
 	layer = 2.36;
-	pixel_y = -3;
+	pixel_y = 12;
 	pixel_x = -3
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
 	layer = 2.36;
-	pixel_y = -3;
+	pixel_y = 12;
 	pixel_x = -1
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
 	layer = 2.36;
-	pixel_y = -3;
+	pixel_y = 12;
 	pixel_x = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
 	layer = 2.36;
-	pixel_y = -3;
+	pixel_y = 12;
 	pixel_x = 3
 	},
-/obj/item/stack/cable_coil/cut{
-	pixel_x = 12;
-	pixel_y = -8
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 14;
+	pixel_y = 16
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/item/stack/cable_coil{
+	pixel_x = 9;
+	pixel_y = -4
+	},
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/taipei/atrium)
 "sSo" = (
@@ -21549,6 +21798,19 @@
 /obj/structure/machinery/light,
 /turf/open/floor/carpet13_5/west,
 /area/taipei/theatre)
+"sZc" = (
+/obj/structure/machinery/gear{
+	id = "supply_elevator_gear"
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "sZf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -21832,8 +22094,9 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
 "tjp" = (
-/turf/closed/wall/biodome,
-/area/space)
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating,
+/area/taipei/elevator/departures)
 "tjr" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -22173,6 +22436,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/taipei/cargo)
+"txP" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/mineral,
+/area/space)
 "tym" = (
 /obj/structure/stairs/perspective{
 	dir = 8
@@ -22526,6 +22793,17 @@
 /obj/structure/platform/stair_cut,
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/maints/south)
+"tOs" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_y = 29;
+	damage = 200
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_y = 29;
+	damage = 200
+	},
+/turf/open/void,
+/area/taipei/cargo)
 "tOt" = (
 /obj/structure/prop/dam/truck/cargo,
 /obj/effect/decal/cleanable/dirt,
@@ -22641,7 +22919,6 @@
 /area/taipei/maints/north)
 "tTn" = (
 /obj/structure/prop/power_transformer,
-/obj/structure/lattice,
 /turf/open/void,
 /area/taipei/reactor/chamber)
 "tTE" = (
@@ -22903,7 +23180,8 @@
 /area/taipei/maints/south)
 "ujM" = (
 /obj/item/paper{
-	pixel_x = -59
+	pixel_x = -69;
+	pixel_y = 5
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/faux_wood,
@@ -23561,6 +23839,10 @@
 /obj/structure/prop/almayer/computers/sensor_computer3,
 /turf/open/floor/prison,
 /area/taipei/atrium)
+"uNu" = (
+/obj/structure/sign/safety/hazard,
+/turf/closed/wall/almayer,
+/area/taipei/maints/north)
 "uOD" = (
 /turf/open/floor/kutjevo/multi_tiles/east,
 /area/taipei/atrium)
@@ -23626,6 +23908,19 @@
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison,
 /area/taipei/cargo)
+"uSy" = (
+/obj/structure/machinery/gear{
+	id = "supply_elevator_gear"
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "uTb" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname{
 	dir = 2
@@ -23647,6 +23942,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/taipei/hangar)
+"uUs" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "uUy" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/light,
@@ -23983,12 +24282,12 @@
 /area/taipei/maints/south)
 "vor" = (
 /obj/structure/surface/table/holotable,
-/obj/item/toy/desk/newtoncradle,
 /obj/structure/machinery/light{
 	dir = 4;
 	light_power = 0.5
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/newspaper,
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/bookstore)
 "vox" = (
@@ -24784,6 +25083,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
 /area/taipei/maints/north)
+"vVn" = (
+/turf/closed/wall/almayer/outer,
+/area/taipei/elevator/arrivals)
 "vVN" = (
 /obj/structure/barricade/handrail/strata{
 	pixel_y = -4
@@ -24815,10 +25117,6 @@
 "vXP" = (
 /obj/structure/bookcase{
 	pixel_x = -3
-	},
-/obj/structure/bookcase{
-	pixel_x = -3;
-	pixel_y = 21
 	},
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/bookstore)
@@ -24959,6 +25257,11 @@
 	},
 /turf/closed/wall/almayer/outer,
 /area/taipei/maints/south)
+"wds" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating,
+/area/taipei/elevator/arrivals)
 "wdD" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -25017,11 +25320,10 @@
 /turf/closed/wall/almayer,
 /area/taipei/maints/north)
 "wfb" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 8;
-	name = "\improper Hangar Lockdown Blast Door"
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4
+	},
 /turf/open/floor/corsat/marked,
 /area/taipei/hangar)
 "wft" = (
@@ -27015,6 +27317,11 @@
 	},
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
+"xTh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/supply/medicine/medkits,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "xTm" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice8";
@@ -27127,6 +27434,19 @@
 	dir = 8
 	},
 /area/taipei/atrium/restaurant)
+"xXQ" = (
+/obj/structure/machinery/gear{
+	id = "supply_elevator_gear"
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	pixel_x = 0;
+	pixel_y = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/taipei/cargo)
 "xYg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -36634,15 +36954,15 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+rns
+rns
+rns
+rns
+rns
+rns
+rns
+rns
 iQr
 lGZ
 uZU
@@ -36696,15 +37016,15 @@ bzQ
 qWl
 bzQ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+rns
+rns
+rns
+rns
+rns
+rns
+rns
+rns
 iQr
 iQr
 iQr
@@ -36836,16 +37156,16 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+oeA
+hIk
+mOj
+mOj
+mOj
+hIk
+oeA
+rns
+slJ
 lGZ
 kjv
 jVD
@@ -36894,20 +37214,20 @@ pdD
 pdD
 pdD
 lBe
-nCx
+rhw
 xJh
 bzQ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+oeA
+tjp
+mOj
+mOj
+mOj
+hIk
+oeA
+rns
+slJ
 iQr
 iQr
 iQr
@@ -37038,15 +37358,15 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+hIk
+mOj
+hIk
+mOj
+mOj
+mOj
+mOj
+rns
 iQr
 lGZ
 tRV
@@ -37096,19 +37416,19 @@ cwG
 cwG
 rmf
 tmq
-bbQ
+ank
 dTd
 bzQ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+hIk
+mOj
+hIk
+mOj
+mOj
+mOj
+mOj
+rns
 iQr
 iQr
 iQr
@@ -37240,16 +37560,16 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+acC
+mOj
+dUt
+mOj
+mOj
+mOj
+bwv
+rns
+slJ
 lGZ
 vJY
 gvH
@@ -37298,20 +37618,20 @@ ajD
 mGh
 rxL
 kEV
-bbQ
+ank
 vGr
 bzQ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+acC
+mOj
+mOj
+mOj
+mOj
+mOj
+bwv
+rns
+slJ
 iQr
 iQr
 iQr
@@ -37442,16 +37762,16 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+hIk
+mOj
+hIk
+mOj
+mOj
+mOj
+mOj
+rns
+slJ
 lGZ
 cBB
 gvH
@@ -37500,20 +37820,20 @@ onB
 onB
 krj
 hON
-bbQ
+ank
 xJh
 bzQ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+hIk
+mOj
+hIk
+mOj
+mOj
+mOj
+mOj
+rns
+slJ
 iQr
 iQr
 iQr
@@ -37644,16 +37964,16 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+mOj
+mOj
+mOj
+mOj
+mOj
+mOj
+mOj
+rns
+slJ
 lGZ
 cBB
 gvH
@@ -37702,20 +38022,20 @@ onB
 onB
 rxL
 hON
-bbQ
+ank
 xJh
 bzQ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+mOj
+mOj
+mOj
+mOj
+mOj
+mOj
+mOj
+rns
+slJ
 iQr
 iQr
 iQr
@@ -37846,16 +38166,16 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+acC
+mOj
+mOj
+mOj
+mOj
+mOj
+fnX
+rns
+slJ
 lGZ
 kjv
 gvH
@@ -37904,20 +38224,20 @@ ajD
 dxd
 aim
 hON
-bbQ
+ank
 xJh
 bzQ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+acC
+mOj
+mOj
+mOj
+mOj
+mOj
+bwv
+rns
+slJ
 iQr
 iQr
 iQr
@@ -38048,15 +38368,15 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+oeA
+mOj
+mOj
+mOj
+mOj
+mOj
+jBI
+rns
 iQr
 lGZ
 nTf
@@ -38106,19 +38426,19 @@ qzs
 qzs
 uHy
 tmq
-rZm
+pot
 dTd
 bzQ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+oeA
+mOj
+mOj
+mOj
+mOj
+mOj
+jBI
+rns
 iQr
 iQr
 iQr
@@ -38250,15 +38570,15 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+fih
+hIk
+mOj
+mOj
+mOj
+mOj
+mOj
+rns
 iQr
 lGZ
 kjv
@@ -38308,19 +38628,19 @@ pdD
 pdD
 pdD
 wBf
-bbQ
+ank
 xJh
 bzQ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+hIk
+hIk
+mOj
+mOj
+mOj
+mOj
+mOj
+rns
 iQr
 iQr
 iQr
@@ -38452,15 +38772,15 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+rns
+rns
+eEt
+eEt
+eEt
+rns
+rns
+rns
 iQr
 lGZ
 aJo
@@ -38514,15 +38834,15 @@ bzQ
 qWl
 bzQ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+rns
+rns
+rns
+eEt
+eEt
+eEt
+rns
+rns
+rns
 iQr
 iQr
 iQr
@@ -38656,11 +38976,11 @@ iQr
 iQr
 iQr
 iQr
+slJ
+slJ
 iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -38718,11 +39038,11 @@ bzQ
 iQr
 iQr
 iQr
+slJ
+slJ
 iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -39636,8 +39956,8 @@ gua
 pMJ
 gua
 gua
-mfT
-dem
+egf
+mMG
 gua
 gua
 bkG
@@ -41742,14 +42062,14 @@ sjQ
 sjQ
 kmf
 sjQ
-bwE
-bwE
-bwE
-bwE
-bwE
-bwE
-bwE
-bwE
+iQr
+iQr
+iQr
+iQr
+iQr
+iQr
+iQr
+iQr
 uwC
 kQD
 bEU
@@ -41903,7 +42223,7 @@ lzK
 hsO
 iGO
 ryI
-fih
+hrQ
 nDZ
 xhX
 pIB
@@ -41956,7 +42276,7 @@ sjQ
 uot
 sAI
 uot
-doI
+iQr
 bzQ
 wLW
 enm
@@ -42060,8 +42380,8 @@ gua
 pMJ
 gua
 gua
-mfT
-dem
+egf
+mMG
 gua
 awf
 rIm
@@ -42158,7 +42478,7 @@ xaP
 xYs
 gDd
 uot
-doI
+iQr
 uot
 fzp
 qgs
@@ -42360,7 +42680,7 @@ brs
 uot
 iXI
 uot
-doI
+iQr
 uot
 omJ
 qgs
@@ -42562,7 +42882,7 @@ brs
 iDW
 iXI
 uot
-doI
+iQr
 uot
 omJ
 qgs
@@ -42764,7 +43084,7 @@ brs
 iDW
 sAI
 uot
-doI
+iQr
 bzQ
 wLW
 enm
@@ -42966,7 +43286,7 @@ brs
 uot
 dbC
 uot
-doI
+iQr
 uot
 jxb
 qgs
@@ -43168,7 +43488,7 @@ brs
 uot
 jSa
 uot
-doI
+iQr
 uot
 omJ
 qgs
@@ -43370,7 +43690,7 @@ brs
 uot
 iaN
 uot
-doI
+iQr
 uot
 nvS
 oup
@@ -43572,7 +43892,7 @@ brs
 uot
 afc
 uot
-doI
+iQr
 bzQ
 wKk
 wdp
@@ -43774,7 +44094,7 @@ brs
 uot
 omI
 uot
-doI
+iQr
 uot
 fzp
 cqR
@@ -43976,7 +44296,7 @@ brs
 uot
 iaN
 uot
-doI
+iQr
 uot
 nvS
 qgs
@@ -44178,7 +44498,7 @@ rrE
 xYs
 tei
 uot
-doI
+iQr
 uot
 omJ
 qgs
@@ -44380,7 +44700,7 @@ sjQ
 uot
 sAI
 uot
-doI
+iQr
 bzQ
 wLW
 wdp
@@ -44582,7 +44902,7 @@ rZr
 xYs
 tei
 uot
-doI
+iQr
 uot
 ljU
 qgs
@@ -44784,7 +45104,7 @@ brs
 uot
 iaN
 uot
-doI
+iQr
 iDW
 nvS
 rNz
@@ -44986,7 +45306,7 @@ brs
 uot
 jPj
 uot
-doI
+iQr
 iDW
 tTE
 qgs
@@ -45188,7 +45508,7 @@ brs
 uot
 sAI
 uot
-doI
+iQr
 bzQ
 wLW
 wdp
@@ -45390,7 +45710,7 @@ brs
 uot
 iaN
 uot
-doI
+iQr
 uot
 wQm
 oup
@@ -45592,7 +45912,7 @@ brs
 uot
 iXI
 uot
-doI
+iQr
 uot
 bGX
 cqR
@@ -45794,7 +46114,7 @@ brs
 uot
 dbC
 uot
-doI
+iQr
 uot
 omJ
 qgs
@@ -45996,7 +46316,7 @@ brs
 uot
 afc
 uot
-doI
+iQr
 bzQ
 qqa
 wdp
@@ -46198,7 +46518,7 @@ brs
 uot
 iaN
 uot
-doI
+iQr
 uot
 wQm
 rNz
@@ -46400,7 +46720,7 @@ brs
 uot
 iaN
 uot
-doI
+iQr
 uot
 nvS
 cqR
@@ -46602,7 +46922,7 @@ rrE
 xYs
 mpN
 uot
-doI
+iQr
 uot
 nvS
 qgs
@@ -46804,7 +47124,7 @@ sjQ
 uot
 sAI
 uot
-doI
+iQr
 bzQ
 qqa
 wdp
@@ -46983,30 +47303,30 @@ ipj
 eOl
 jEW
 jEW
-tjp
-tuY
-tuY
-tuY
-tuY
-tuY
+pPz
+iQr
+iQr
+iQr
+iQr
+iQr
 vEr
 sjQ
 sjQ
 joa
 sjQ
-bwE
-bwE
-bwE
-bwE
-bwE
-bwE
-bwE
-bwE
-bwE
+iQr
+iQr
+iQr
+iQr
+iQr
+iQr
+iQr
+iQr
+iQr
 uot
 iaN
 uot
-doI
+iQr
 uot
 fzp
 bmh
@@ -47185,7 +47505,7 @@ jEW
 jEW
 oAr
 mYx
-uot
+ouu
 uot
 bzQ
 uot
@@ -48531,11 +48851,11 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -48732,12 +49052,12 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -48934,12 +49254,12 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -49136,12 +49456,12 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -49338,12 +49658,12 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -49540,11 +49860,11 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -49742,12 +50062,12 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -49944,11 +50264,11 @@ iQr
 iQr
 iQr
 iQr
+slJ
 iQr
+slJ
 iQr
-iQr
-iQr
-iQr
+slJ
 iQr
 iQr
 iQr
@@ -50148,9 +50468,9 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -50348,12 +50668,12 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+aYk
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -50541,21 +50861,21 @@ iQr
 iQr
 iQr
 iQr
+slJ
+slJ
+slJ
+slJ
+iQr
+slJ
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -50743,24 +51063,24 @@ iQr
 iQr
 iQr
 iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
+iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
 iQr
 iQr
 iQr
@@ -50779,7 +51099,7 @@ iQr
 joE
 joE
 joE
-ajs
+cdM
 wIz
 dnZ
 sBy
@@ -50789,7 +51109,7 @@ uAt
 ndy
 aTD
 jUx
-joE
+rUJ
 joE
 joE
 joE
@@ -50945,21 +51265,21 @@ iQr
 iQr
 iQr
 iQr
+slJ
+slJ
 iQr
+slJ
+slJ
+slJ
+slJ
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -51147,22 +51467,22 @@ iQr
 iQr
 iQr
 iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -51349,20 +51669,20 @@ iQr
 iQr
 iQr
 iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -51552,21 +51872,21 @@ iQr
 iQr
 iQr
 iQr
+slJ
 iQr
 iQr
+slJ
+iQr
+slJ
 iQr
 iQr
+slJ
+slJ
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -51754,26 +52074,26 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
+slJ
+slJ
+slJ
+tMt
+tMt
+hbh
+hbh
+hbh
+hbh
+hbh
+slJ
+tMt
+tMt
+hbh
+hbh
+hbh
+hbh
+hbh
 iQr
 lGZ
 wBC
@@ -51961,21 +52281,21 @@ iQr
 iQr
 iQr
 iQr
+hbh
+sZc
+mhw
+rVi
+mhw
+dem
+hbh
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+hbh
+sZc
+mhw
+mhw
+mhw
+dem
+hbh
 iQr
 lGZ
 vRB
@@ -51991,17 +52311,17 @@ iQr
 joE
 olB
 wsx
-pOK
-pOK
-pOK
-pOK
+bwE
+bwE
+bwE
+bwE
 jal
 aEq
-pOK
-pOK
-pOK
-pOK
-jal
+doI
+doI
+doI
+doI
+lMF
 iOi
 nCX
 joE
@@ -52163,21 +52483,21 @@ iQr
 iQr
 iQr
 iQr
+hbh
+qeF
+mhw
+mhw
+kBS
+iwv
+hbh
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+hbh
+mhw
+mhw
+iwv
+iwv
+mhw
+hbh
 iQr
 lGZ
 vRB
@@ -52193,17 +52513,17 @@ iQr
 joE
 ruS
 mMx
-pOK
-pOK
-pOK
-pOK
-pOK
+bwE
+bwE
+bwE
+bwE
+bwE
 aEq
-pOK
-pOK
-pOK
-pOK
-pOK
+doI
+doI
+doI
+doI
+doI
 iOi
 ruS
 joE
@@ -52365,21 +52685,21 @@ iQr
 iQr
 iQr
 iQr
+hbh
+qeF
+uUs
+mhw
+mhw
+iwv
+hbh
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+hbh
+mhw
+mhw
+mhw
+mhw
+asl
+hbh
 iQr
 lGZ
 cBl
@@ -52395,17 +52715,17 @@ iQr
 joE
 ruS
 mMx
-pOK
-pOK
-pOK
-pOK
-pOK
+tOs
+bwE
+bwE
+bwE
+bwE
 aEq
 pOK
-pOK
-pOK
-pOK
-pOK
+doI
+doI
+doI
+doI
 aYq
 oyv
 joE
@@ -52567,21 +52887,21 @@ iQr
 iQr
 iQr
 iQr
+hbh
+mhw
+mhw
+mhw
+mhw
+iwv
+hbh
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+hbh
+rke
+mhw
+iwv
+xTh
+eTi
+hbh
 iQr
 lGZ
 vRB
@@ -52597,17 +52917,17 @@ iQr
 joE
 ruS
 mMx
-pOK
-pOK
-pOK
-pOK
-pOK
+bwE
+bwE
+bwE
+bwE
+bwE
 aEq
-pOK
-pOK
-pOK
-pOK
-pOK
+doI
+doI
+doI
+doI
+doI
 tUg
 qrl
 joE
@@ -52769,21 +53089,21 @@ iQr
 iQr
 iQr
 iQr
+hbh
+uSy
+mhw
+mhw
+iwv
+dem
+hbh
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+hbh
+crk
+iwv
+mhw
+oEg
+xXQ
+hbh
 iQr
 lGZ
 vRB
@@ -52799,17 +53119,17 @@ iQr
 joE
 ruS
 mMx
-pOK
-pOK
-pOK
-pOK
-pOK
+bwE
+bwE
+bwE
+bwE
+bwE
 aEq
-pOK
-pOK
-pOK
-pOK
-pOK
+doI
+doI
+doI
+doI
+doI
 tUg
 oyv
 joE
@@ -52971,21 +53291,21 @@ iQr
 iQr
 iQr
 iQr
+hbh
+hbh
+hbh
+hbh
+hbh
+hbh
+hbh
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+hbh
+hbh
+hbh
+hbh
+hbh
+hbh
+hbh
 iQr
 lGZ
 wBC
@@ -54849,7 +55169,7 @@ bFq
 qbR
 jEW
 jEW
-jEW
+iSc
 sRq
 dwX
 aaw
@@ -54906,17 +55226,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
+tuY
 pjr
 pjr
 pjr
@@ -54980,15 +55300,15 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+vVn
+vVn
+vVn
+vVn
+vVn
+vVn
+vVn
+vVn
+vVn
 iQr
 iQr
 iQr
@@ -55052,8 +55372,8 @@ lGZ
 oAr
 jEW
 oAr
+kxZ
 ivo
-jEW
 bzQ
 bzQ
 bzQ
@@ -55108,17 +55428,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+vVn
+vVn
+vVn
+vVn
+vVn
+vVn
+vVn
+vVn
+vVn
+tuY
 pjr
 pjr
 pjr
@@ -55182,16 +55502,16 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+vVn
+mfT
+lHO
+eeC
+eeC
+eeC
+lHO
+mfT
+vVn
+slJ
 iQr
 iQr
 iQr
@@ -55241,9 +55561,9 @@ iQr
 iQr
 iQr
 iQr
-aqL
+uNu
 kWK
-jVD
+gMi
 wsc
 wSu
 wSu
@@ -55265,7 +55585,7 @@ wSu
 enl
 nCx
 xiT
-uot
+sfM
 iQr
 iQr
 iQr
@@ -55310,17 +55630,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+vVn
+mfT
+lHO
+eeC
+eeC
+eeC
+lHO
+mfT
+vVn
+txP
 pjr
 pjr
 apD
@@ -55384,15 +55704,15 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+vVn
+lHO
+eeC
+lHO
+eeC
+eeC
+eeC
+eeC
+vVn
 iQr
 iQr
 iQr
@@ -55445,7 +55765,7 @@ iQr
 iQr
 aqL
 hsW
-gvH
+pvR
 aSY
 neY
 frb
@@ -55512,17 +55832,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+vVn
+lHO
+eeC
+lHO
+eeC
+eeC
+eeC
+eeC
+vVn
+tuY
 pjr
 pjr
 apD
@@ -55586,16 +55906,16 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+vVn
+mAU
+eeC
+eeC
+eeC
+eeC
+eeC
+rIG
+vVn
+slJ
 iQr
 iQr
 iQr
@@ -55647,7 +55967,7 @@ iQr
 iQr
 aqL
 hsW
-gvH
+pvR
 oty
 nZf
 pOr
@@ -55714,17 +56034,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+vVn
+mAU
+eeC
+eeC
+eeC
+eeC
+wds
+rIG
+vVn
+txP
 pjr
 pjr
 apD
@@ -55788,16 +56108,16 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+vVn
+lHO
+eeC
+lHO
+eeC
+eeC
+eeC
+eeC
+vVn
+slJ
 iQr
 iQr
 iQr
@@ -55849,7 +56169,7 @@ iQr
 iQr
 aqL
 nwx
-gvH
+pvR
 gbD
 goT
 kcf
@@ -55916,17 +56236,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+vVn
+lHO
+eeC
+lHO
+eeC
+eeC
+eeC
+eeC
+vVn
+txP
 pjr
 pjr
 apD
@@ -55990,16 +56310,16 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+vVn
+eeC
+eeC
+eeC
+eeC
+eeC
+eeC
+eeC
+vVn
+slJ
 iQr
 iQr
 iQr
@@ -56051,7 +56371,7 @@ iQr
 iQr
 aqL
 hsW
-gvH
+pvR
 gbD
 nZf
 qzx
@@ -56118,17 +56438,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+vVn
+eeC
+eeC
+eeC
+eeC
+eeC
+eeC
+eeC
+vVn
+txP
 pjr
 pjr
 apD
@@ -56192,16 +56512,16 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+vVn
+mAU
+eeC
+eeC
+eeC
+eeC
+eeC
+rIG
+vVn
+slJ
 iQr
 iQr
 iQr
@@ -56253,7 +56573,7 @@ iQr
 iQr
 aqL
 hsW
-gvH
+eyu
 gbD
 nZf
 iLk
@@ -56320,17 +56640,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+vVn
+mAU
+eeC
+eeC
+eeC
+eeC
+eeC
+rIG
+vVn
+txP
 pjr
 apD
 apD
@@ -56394,15 +56714,15 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+vVn
+mfT
+eeC
+eeC
+eeC
+wds
+eeC
+lZm
+vVn
 iQr
 iQr
 iQr
@@ -56455,7 +56775,7 @@ iQr
 iQr
 aqL
 hsW
-moD
+pAJ
 aSY
 rma
 gjX
@@ -56522,17 +56842,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+vVn
+mfT
+eeC
+eeC
+eeC
+eeC
+eeC
+lZm
+vVn
+tuY
 pjr
 apD
 apD
@@ -56596,15 +56916,15 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+vVn
+lHO
+lHO
+eeC
+eeC
+eeC
+eeC
+eeC
+vVn
 iQr
 iQr
 iQr
@@ -56657,7 +56977,7 @@ iQr
 iQr
 aqL
 epL
-gvH
+pvR
 qii
 wSu
 wSu
@@ -56724,17 +57044,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+vVn
+lHO
+lHO
+eeC
+eeC
+eeC
+eeC
+eeC
+vVn
+tuY
 pjr
 apD
 apD
@@ -56798,15 +57118,15 @@ iQr
 iQr
 iQr
 iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
-iQr
+vVn
+vVn
+vVn
+bhV
+bhV
+bhV
+vVn
+vVn
+vVn
 iQr
 iQr
 iQr
@@ -56860,13 +57180,13 @@ iQr
 aqL
 emK
 lGZ
-rEP
-rEP
-rEP
-rEP
-rEP
-rEP
-rEP
+lGZ
+lGZ
+lGZ
+lGZ
+lGZ
+lGZ
+lGZ
 oAr
 jEW
 jEW
@@ -56926,17 +57246,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+vVn
+vVn
+vVn
+bhV
+bhV
+bhV
+vVn
+vVn
+vVn
+tuY
 pjr
 apD
 apD
@@ -57002,11 +57322,11 @@ iQr
 iQr
 iQr
 iQr
+slJ
+slJ
 iQr
-iQr
-iQr
-iQr
-iQr
+slJ
+slJ
 iQr
 iQr
 iQr
@@ -57059,7 +57379,7 @@ lGZ
 vvG
 aqL
 lGZ
-aqL
+uNu
 eCV
 lGZ
 vQx
@@ -57083,7 +57403,7 @@ vim
 vim
 bzQ
 qts
-uot
+sfM
 bzQ
 uot
 uot
@@ -57128,17 +57448,17 @@ pjr
 pjr
 pjr
 pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
-pjr
+tuY
+tuY
+tuY
+txP
+txP
+tuY
+txP
+txP
+tuY
+tuY
+tuY
 pjr
 apD
 apD
