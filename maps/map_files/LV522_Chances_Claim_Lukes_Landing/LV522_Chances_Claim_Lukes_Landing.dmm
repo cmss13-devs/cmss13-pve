@@ -20684,10 +20684,9 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/basement/colony)
 "gFy" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
+/obj/effect/step_trigger/teleporter_vector{
 	vector_x = 192
 	},
-/obj/structure/prop/invuln/darkness,
 /obj/structure/platform/mineral{
 	dir = 4;
 	color = "#464D4B"
@@ -20695,6 +20694,7 @@
 /obj/structure/platform/mineral{
 	color = "#464D4B"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/lv522/atmos/east_reactor)
 "gFz" = (
@@ -33012,14 +33012,14 @@
 /turf/open/floor/strata/multi_tiles,
 /area/lv522_l_l/indoors/storage)
 "kqj" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
+/obj/effect/step_trigger/teleporter_vector{
 	vector_x = 192
 	},
-/obj/structure/prop/invuln/darkness,
 /obj/structure/platform/mineral{
 	dir = 1;
 	color = "#464D4B"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/lv522/atmos/east_reactor)
 "kqw" = (
@@ -39607,10 +39607,9 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "mzf" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
+/obj/effect/step_trigger/teleporter_vector{
 	vector_x = 192
 	},
-/obj/structure/prop/invuln/darkness,
 /obj/structure/platform/mineral{
 	dir = 1;
 	color = "#464D4B"
@@ -39619,6 +39618,7 @@
 	dir = 4;
 	color = "#464D4B"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/lv522/atmos/east_reactor)
 "mzg" = (
@@ -44707,10 +44707,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/dorms)
 "oaj" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
+/obj/effect/step_trigger/teleporter_vector{
 	vector_x = 192
 	},
-/obj/structure/prop/invuln/darkness,
 /obj/structure/platform/mineral{
 	dir = 1;
 	color = "#464D4B"
@@ -44719,6 +44718,7 @@
 	color = "#464D4B";
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/lv522/atmos/east_reactor)
 "oan" = (
@@ -58512,13 +58512,13 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_street)
 "shY" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
+/obj/effect/step_trigger/teleporter_vector{
 	vector_x = 192
 	},
-/obj/structure/prop/invuln/darkness,
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/lv522/atmos/east_reactor)
 "sid" = (
@@ -66552,14 +66552,14 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/c_block/mining)
 "uCa" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
+/obj/effect/step_trigger/teleporter_vector{
 	vector_x = 192
 	},
-/obj/structure/prop/invuln/darkness,
 /obj/structure/platform_decoration/mineral{
 	dir = 1;
 	color = "#464D4B"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/lv522/atmos/east_reactor)
 "uCb" = (
@@ -69699,10 +69699,9 @@
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/basement/mine)
 "vyO" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
+/obj/effect/step_trigger/teleporter_vector{
 	vector_x = 192
 	},
-/obj/structure/prop/invuln/darkness,
 /obj/structure/platform/mineral{
 	color = "#464D4B";
 	dir = 8
@@ -69710,6 +69709,7 @@
 /obj/structure/platform/mineral{
 	color = "#464D4B"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/lv522/atmos/east_reactor)
 "vzg" = (
@@ -132632,7 +132632,7 @@ nTl
 nTl
 gYo
 kqj
-ych
+lEd
 elx
 xRB
 klL
