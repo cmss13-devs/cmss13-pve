@@ -501,3 +501,13 @@
 /area/lv522/outdoors/garrison/
 	name = "LV522 - Colonial Garrison Comms Relay"
 	icon_state = "yellow"
+
+/area/lv522/basement
+	name = "Chances Claim - Underground"
+	icon_state = "cliff_blocked"
+	ceiling = CEILING_REINFORCED_METAL
+
+/area/lv522/basement/colony
+	name = "Chances Claim - Colony Sublevel"
+	icon_state = "red"
+	requires_power = FALSE
