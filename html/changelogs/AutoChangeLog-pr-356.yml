@@ -1,0 +1,5 @@
+author: "KoishiVibe"
+delete-after: True
+changes:
+  - balance: "bottles of 'regular' drugs hold 180u, bottles of 'special' drugs hold 135u."
+  - balance: "syringes are slower without training BUT USABLE. with training they are much faster."
