@@ -1216,3 +1216,13 @@
 	mouse_opacity = 0
 	layer = 6
 	density = 0
+
+/obj/structure/prop/invuln/prop_fog
+	name = "Fog"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "smoke"
+	opacity = TRUE
+	layer = 6
+	density = 0
+	mouse_opacity = 0
+	opacity = 0
