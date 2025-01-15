@@ -71,6 +71,9 @@
 	pickup_sound = null
 	drop_sound = null
 
+/obj/item/clothing/head/beret/black
+	icon_state = "beret_black"
+
 //Security
 /obj/item/clothing/head/beret/sec
 	name = "security beret"

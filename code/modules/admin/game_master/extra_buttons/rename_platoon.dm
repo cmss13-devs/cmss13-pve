@@ -67,6 +67,9 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 
 
 /proc/change_dropship_camo(camo, mob/renamer)
+	var/obj/docking_port/mobile/marine_dropship/midway/port = locate(/obj/docking_port/mobile/marine_dropship/midway)
+	var/area/area_to_change = get_area(port)
+
 	var/turf_icon
 	var/cargo_icon
 	var/cockpit_icon
@@ -82,25 +85,35 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 			cockpit_icon = 'icons/obj/structures/doors/dropship2_pilot.dmi'
 		if(DROPSHIP_CAMO_URBAN)
 			turf_icon = 'icons/turf/dropship3.dmi'
-			cargo_icon = 'icons/obj/structures/doors/dropship2_cargo.dmi'
-			cockpit_icon = 'icons/obj/structures/doors/dropship2_pilot.dmi'
+			cargo_icon = 'icons/obj/structures/doors/dropship3_cargo.dmi'
+			cockpit_icon = 'icons/obj/structures/doors/dropship3_pilot.dmi'
 		if(DROPSHIP_CAMO_JUNGLE)
 			turf_icon = 'icons/turf/dropship4.dmi'
 			cargo_icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
 			cockpit_icon = 'icons/obj/structures/doors/dropship4_pilot.dmi'
 
-	for(var/turf/closed/shuttle/midway/midway_turfs in world)
-		if(istype(midway_turfs.loc, /area/shuttle/midway))
-			midway_turfs.icon = turf_icon
-	for(var/obj/structure/shuttle/part/midway/midway_parts in world)
-		var/turf/turf_to_check = get_turf(midway_parts)
-		if(istype(turf_to_check.loc, /area/shuttle/midway))
-			midway_parts.icon = turf_icon
-	for(var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/cargo in world)
-		var/turf/turf_to_check = get_turf(cargo)
-		if(istype(turf_to_check.loc, /area/shuttle/midway))
-			cargo.icon = cargo_icon
-	for(var/obj/structure/machinery/door/airlock/hatch/cockpit/cockpit in world)
-		var/turf/turf_to_check = get_turf(cockpit)
-		if(istype(turf_to_check.loc, /area/shuttle/midway))
-			cockpit.icon = cockpit_icon
+	for(var/turf/closed/shuttle/midway/midway_turfs in area_to_change)
+		midway_turfs.icon = turf_icon
+	for(var/obj/structure/shuttle/part/midway/midway_parts in area_to_change)
+		midway_parts.icon = turf_icon
+	for(var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/cargo in area_to_change)
+		cargo.icon = cargo_icon
+	for(var/obj/structure/machinery/door/airlock/hatch/cockpit/cockpit in area_to_change)
+		cockpit.icon = cockpit_icon
+
+/proc/change_dropship_name(name, mob/renamer)
+	var/obj/docking_port/mobile/marine_dropship/midway/port = locate(/obj/docking_port/mobile/marine_dropship/midway)
+	port.name = name
+	var/area/area_to_change = get_area(port)
+	area_to_change.name = "Dropship [name]"
+	for(var/turf/closed/shuttle/midway/midway_turfs in area_to_change)
+		midway_turfs.name = name
+	for(var/obj/structure/shuttle/part/midway/midway_parts in area_to_change)
+		midway_parts.name = name
+	for(var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/cargo in area_to_change)
+		cargo.name = "[name] cargo door"
+	for(var/obj/structure/machinery/computer/dropship_weapons/midway/console in area_to_change)
+		console.name = "'[name]' weapons controls"
+
+	for(var/obj/structure/machinery/camera/autoname/golden_arrow/midway/camera in area_to_change)
+		camera.c_tag = "Dropship [name] #[camera.autonumber]"
