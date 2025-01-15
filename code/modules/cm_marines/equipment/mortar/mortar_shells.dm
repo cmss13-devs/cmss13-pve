@@ -197,13 +197,13 @@
 	for(var/i = 1 to number_of_airburst)
 		sleep(1)
 		var/turf/impact_tile = pick(turf_list)
-		create_shrapnel(impact_tile, 60, shrapnel_type = /datum/ammo/bullet/shrapnel/heavy, cause_data = cause_data)
+		create_shrapnel(impact_tile, 60, shrapnel_type = /datum/ammo/bullet/shrapnel/himat, cause_data = cause_data)
 		cell_explosion(impact_tile, 20, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
 /obj/item/mortar_shell/incendiary/himat
 	name = "HIMAT IN missile"
 	desc = "This is a small, two-stage missile used by HIMAT launcher. This one has an incendiary package, covering area of impact with burning flames."
-	icon_state = "missile_in"
+	icon_state = "missile_inc"
 	radius = 7
 	flame_level = BURN_TIME_TIER_5 + 5
 	burn_level = BURN_LEVEL_TIER_5
@@ -332,3 +332,15 @@
 
 /obj/structure/closet/crate/secure/mortar_ammo/mortar_kit/hvh/clf
 	jtac_key_type = /obj/item/device/encryptionkey/clf/engi
+
+/obj/structure/closet/crate/secure/mortar_ammo/himat
+	name = "\improper M112 HIMAT crate"
+	desc = "A crate containing a basic set of a HIMAT launcher and some additional tools."
+	req_one_access = list()
+
+/obj/structure/closet/crate/secure/mortar_ammo/himat/Initialize()
+	. = ..()
+	new /obj/item/mortar_kit/himat(src)
+	new /obj/item/device/binoculars/range/designator/monocular(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/device/multitool(src)

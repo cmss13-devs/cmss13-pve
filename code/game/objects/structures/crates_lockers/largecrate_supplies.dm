@@ -246,6 +246,31 @@
 	desc = "A case containing twenty-five 80mm flare mortar shells."
 	supplies = list(/obj/item/mortar_shell/flare = 25)
 
+/obj/structure/largecrate/supply/explosives/himat
+	name = "HIMAT missiles case (x25)"
+	desc = "A case containing twenty-five HIMAT missiles."
+	supplies = list(/obj/item/mortar_shell/himat = 25)
+
+/obj/structure/largecrate/supply/explosives/himat_training
+	name = "HIMAT training missiles case (x25)"
+	desc = "A case containing twenty-five HIMAT training missiles."
+	supplies = list(/obj/item/mortar_shell/himat/training = 25)
+
+/obj/structure/largecrate/supply/explosives/himat_explosive
+	name = "HIMAT HE missiles case (x25)"
+	desc = "A case containing twenty-five HE HIMAT missiles."
+	supplies = list(/obj/item/mortar_shell/himat/explosive = 25)
+
+/obj/structure/largecrate/supply/explosives/himat_antipersonnel
+	name = "HIMAT AP missiles case (x25)"
+	desc = "A case containing twenty-five anti-personnel HIMAT missiles."
+	supplies = list(/obj/item/mortar_shell/himat/antipersonnel = 25)
+
+/obj/structure/largecrate/supply/explosives/himat_incendiary
+	name = "HIMAT INC missiles case (x25)"
+	desc = "A case containing twenty-five incendiary HIMAT missiles."
+	supplies = list(/obj/item/mortar_shell/incendiary/himat = 25)
+
 
 /obj/structure/largecrate/supply/supplies
 	name = "supplies crate"
