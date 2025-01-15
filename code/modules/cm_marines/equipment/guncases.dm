@@ -167,12 +167,6 @@
 	new /obj/item/weapon/gun/flamer/weak(src)
 	new /obj/item/ammo_magazine/flamer_tank/weak(src)
 	new /obj/item/ammo_magazine/flamer_tank/weak(src)
-	new /obj/item/attachable/attached_gun/extinguisher(src)
-
-/obj/item/storage/box/guncase/flamer/fuel
-	name = "\improper M240A1 fuel case"
-	desc = "A case containing six fuel canisters for the M240A1 incinerator unit."
-	icon_state = "fuelbox"
 
 //------------ heavy cases
 
