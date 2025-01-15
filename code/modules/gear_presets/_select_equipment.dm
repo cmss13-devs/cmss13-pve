@@ -246,7 +246,7 @@
 				qdel(R)
 
 	if(flags & EQUIPMENT_PRESET_MARINE)
-		var/playtime = get_job_playtime(new_human.client, rank)
+/* 		var/playtime = get_job_playtime(new_human.client, rank) */
 		var/medal_type
 
 /* 		switch(playtime)
