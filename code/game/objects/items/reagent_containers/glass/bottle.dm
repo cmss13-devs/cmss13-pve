@@ -438,3 +438,13 @@
 	. = ..()
 	reagents.add_reagent("adrenaline", 60)
 	update_icon()
+
+/obj/item/reagent_container/glass/bottle/water
+	name = "\improper distilled water bottle"
+	desc = "A small bottle. Contains distilled water, not all that different from regular water." //"I can't lie to you about your odds of a successful resuscitation, but you have my sympathies"
+	volume = 60
+
+/obj/item/reagent_container/glass/bottle/epinephrine/Initialize()
+	. = ..()
+	reagents.add_reagent("water", 60)
+	update_icon()

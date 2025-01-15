@@ -496,3 +496,13 @@
 	reagents.add_reagent("anti_toxin", 8)
 	mode = SYRINGE_INJECT
 	update_icon()
+
+/obj/item/reagent_container/syringe/leporazine
+	name = "syringe (temperature stablization)"
+	desc = "Contains leporazine - used to stabilize body temperature."
+
+/obj/item/reagent_container/syringe/antitoxin/Initialize()
+	. = ..()
+	reagents.add_reagent("leporazine", 15)
+	mode = SYRINGE_INJECT
+	update_icon()
