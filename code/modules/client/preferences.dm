@@ -254,6 +254,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	var/platoon_name = "Sun Riders"
 	/// Dropship camo used when spawning as LT
 	var/dropship_camo = DROPSHIP_CAMO_JUNGLE
+	/// Dropship name used when spawning as LT
+	var/dropship_name = "Midway"
 
 /datum/preferences/New(client/C)
 	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
@@ -452,6 +454,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 			dat += "<h2><b><u>Platoon Settings:</u></b></h2>"
 			dat += "<b>Platoon Name:</b> <a href='?_src_=prefs;preference=plat_name;task=input'><b>[platoon_name]</b></a><br>"
 			dat += "<b>Dropship Camo:</b> <a href='?_src_=prefs;preference=dropship_camo;task=input'><b>[dropship_camo]</b></a><br>"
+			dat += "<b>Dropship Name:</b> <a href='?_src_=prefs;preference=dropship_name;task=input'><b>[dropship_name]</b></a><br>"
 			dat += "</div>"
 
 		if(MENU_XENOMORPH)
@@ -763,7 +766,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					b_color = "orange"
 					priority_text = "LOW"
 
-			if(j == PRIME_PRIORITY && !host_bypass && (!job.prime_priority || !user.client?.player_data?.discord_link_id || user.client?.get_total_human_playtime() < JOB_PLAYTIME_TIER_1))
+			if(j == PRIME_PRIORITY && !host_bypass && (!job.prime_priority || user.client?.get_total_human_playtime() < JOB_PLAYTIME_TIER_2))
 				continue
 
 			HTML += "<a class='[j == cur_priority ? b_color : "inactive"]' href='?_src_=prefs;preference=job;task=input;text=[job.title];target_priority=[j];'>[priority_text]</a>"
@@ -1321,6 +1324,13 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 					if (new_camo)
 						dropship_camo = new_camo
+
+				if("dropship_name")
+					var/raw_name = input(user, "Choose your Platoon's Dropship name:", "Character Preference")  as text|null
+					if(length(raw_name) > 10 || !length(raw_name)) // Check to ensure that the user entered text (rather than cancel.)
+						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+					else
+						dropship_name = raw_name
 
 				if("synth_name")
 					var/raw_name = input(user, "Choose your Synthetic's name:", "Character Preference")  as text|null
