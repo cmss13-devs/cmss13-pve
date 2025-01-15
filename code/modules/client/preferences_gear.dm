@@ -812,6 +812,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "M2100 Machete"
 	path = /obj/item/storage/large_holster/machete/arnold/weak
 
+/datum/gear/weapon/tracer_unit
+	display_name = "Tracer Unit"
+	cost = 3
+	path = /obj/item/attachable/tracer
+
 /datum/gear/drink
 	category = "Canned drinks"
 
@@ -1230,3 +1235,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM PT Shorts"
 	path = /obj/item/clothing/under/shorts/red/uscm
 	cost = 1
+
+/datum/gear/misc/minesweeper
+	display_name = "Minesweeper Game"
+	path = /obj/item/toy/minesweeper
+	cost = 2

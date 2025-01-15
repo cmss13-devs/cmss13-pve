@@ -11,9 +11,8 @@
 	var/ert_dispatched = FALSE
 
 /datum/game_mode/proc/ares_online()
-	var/name = "ARES Online"
-	var/input = "ARES. Online. Good morning, marines."
-	shipwide_ai_announcement(input, name, 'sound/AI/ares_online.ogg')
+	to_chat(world, SPAN_NOTICE("<font_size=6>As you get out of your ol' freezerinos, you feel your ship come alive around you. The floor is cold, and the lights make your eyes watery. Ah..."))
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), world, SPAN_BOLD("<b>[GLOB.blackshift ? "Suddenly, you feel terrible. Bad omen." : "Another day in the Corps."]</b>")), 3 SECONDS)
 
 /datum/game_mode/proc/request_ert(user, ares = FALSE)
 	if(!user)

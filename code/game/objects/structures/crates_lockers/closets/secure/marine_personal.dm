@@ -27,6 +27,14 @@
 /obj/structure/closet/secure_closet/marine_personal/Initialize()
 	. = ..()
 	if(has_cryo_gear)
-		new /obj/item/clothing/under/marine(src)
-		new /obj/item/clothing/shoes/marine/jungle/knife(src)
-		new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
+		spawn_cryo_gear()
+
+/obj/structure/closet/secure_closet/marine_personal/proc/spawn_cryo_gear()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
+
+/obj/structure/closet/secure_closet/marine_personal/support/spawn_cryo_gear()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/support(src)
