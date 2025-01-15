@@ -249,7 +249,7 @@
 		var/playtime = get_job_playtime(new_human.client, rank)
 		var/medal_type
 
-		switch(playtime)
+/* 		switch(playtime)
 			if(JOB_PLAYTIME_TIER_1 to JOB_PLAYTIME_TIER_2)
 				medal_type = /obj/item/clothing/accessory/medal/bronze/service
 			if(JOB_PLAYTIME_TIER_2 to JOB_PLAYTIME_TIER_3)
@@ -258,7 +258,7 @@
 				medal_type = /obj/item/clothing/accessory/medal/gold/service
 			if(JOB_PLAYTIME_TIER_4 to INFINITY)
 				medal_type = /obj/item/clothing/accessory/medal/platinum/service
-
+ */
 		if(!new_human.client.prefs.playtime_perks)
 			medal_type = null
 
