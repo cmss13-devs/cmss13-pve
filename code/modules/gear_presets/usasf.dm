@@ -41,7 +41,7 @@
 	rank = JOB_NAVY_CREWMAN
 	assignment = JOB_NAVY_CREWMAN
 	paygrades = list(PAY_SHORT_NE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Crew"
+	role_comm_title = "CR"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/ship_crew
 
@@ -73,7 +73,7 @@
 	assignment = JOB_NAVY_SKITTLE
 	rank = JOB_NAVY_SKITTLE
 	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "DckCrw"
+	role_comm_title = "FltCR"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/flight_crew
 
@@ -238,7 +238,7 @@
 	assignment = JOB_NAVY_PILOT
 	rank = JOB_NAVY_PILOT
 	paygrades = list(PAY_SHORT_NO1)
-	role_comm_title = "Pilot"
+	role_comm_title = "PLT"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/navypilot
 	idtype = /obj/item/card/id/dogtag
@@ -275,7 +275,7 @@
 	assignment = JOB_NAVY_SO
 	rank = JOB_NAVY_SO
 	paygrades = list(PAY_SHORT_NO3)
-	role_comm_title = "DutyOff"
+	role_comm_title = "DtyO"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/officer
 	idtype = /obj/item/card/id/silver
@@ -299,7 +299,7 @@
 	assignment = JOB_NAVY_FLIGHT_BOSS
 	rank = JOB_NAVY_FLIGHT_BOSS
 	paygrades = list(PAY_SHORT_NO2)
-	role_comm_title = "Flight Boss"
+	role_comm_title = "FB"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/flightboss
 
@@ -321,7 +321,7 @@
 	assignment = JOB_NAVY_CHIEF_ENGINEER
 	rank = JOB_NAVY_CHIEF_ENGINEER
 	paygrades = list(PAY_SHORT_NO4)
-	role_comm_title = "EngDO"
+	role_comm_title = "EngDtyO"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/navycengi
 	idtype = /obj/item/card/id/silver

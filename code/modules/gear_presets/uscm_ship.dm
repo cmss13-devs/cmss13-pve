@@ -865,7 +865,7 @@
 	assignment = JOB_DROPSHIP_PILOT
 	rank = JOB_DROPSHIP_PILOT
 	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Pilot"
+	role_comm_title = "PLT"
 	skills = /datum/skills/pilot
 
 	minimap_icon = "pilot"
