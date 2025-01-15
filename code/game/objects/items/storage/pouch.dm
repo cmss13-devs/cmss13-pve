@@ -190,7 +190,7 @@
 
 /obj/item/storage/pouch/firstaid
 	name = "first-aid pouch"
-	desc = "It contains, by default, autoinjectors. But it may also hold ointments, bandages, and pill packets."
+	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, and pill packets."
 	icon_state = "firstaid"
 	storage_slots = 4
 	can_hold = list(
@@ -511,6 +511,10 @@
 		new /obj/item/ammo_magazine/rifle/ap(src)
 
 /obj/item/storage/pouch/magazine/large/pmc_sg/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/smartgun(src)
+
+/obj/item/storage/pouch/magazine/large/wo_sg/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/smartgun/dirty(src)
 
@@ -887,6 +891,16 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
+
+/obj/item/storage/pouch/medkit/full/army/fill_preset_inventory()
+	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/roller(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/bodybag/cryobag(src)
+	new /obj/item/storage/pill_bottle/imialk(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+
 
 /obj/item/storage/pouch/pressurized_reagent_canister
 	name = "Pressurized Reagent Canister Pouch"

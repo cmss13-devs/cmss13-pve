@@ -168,6 +168,7 @@
 
 /datum/equipment_preset/synth/survivor/pmc/New()
 	. = ..()
+	name = "Survivor - Synthetic - PMC JOE ABSTRACT"
 	access = get_access(ACCESS_LIST_WY_PMC)
 
 /datum/equipment_preset/synth/survivor/wy
