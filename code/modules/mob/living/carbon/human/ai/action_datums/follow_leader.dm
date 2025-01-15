@@ -10,6 +10,9 @@
 	if(brain.is_squad_leader)
 		return 0
 
+	if(brain.hold_position)
+		return 0
+
 	if(length(brain.to_pickup))
 		return 0
 

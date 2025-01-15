@@ -34,14 +34,8 @@
 			to_chat(holder, SPAN_BOLDNOTICE("You need to have an area selected first."))
 			return
 
-		for(var/datum/human_ai_brain/brain as anything in ai_humans_selected)
-			if(LAZYACCESS(modifiers, ALT_CLICK))
-				brain.quick_approach = get_turf(object)
-			else
-				brain.quick_approach = null
-				brain.target_turf = get_turf(object)
+		do_order(user, params, object)
 
-		to_chat(holder, SPAN_BOLDNOTICE("Order sent."))
 		deselect_region()
 
 	else if(LAZYACCESS(modifiers, LEFT_CLICK))
@@ -86,6 +80,24 @@
 
 	to_chat(holder, SPAN_BOLDNOTICE("[length(ai_humans_selected)] AI selected in region."))
 
+/datum/human_ai_quick_order/proc/do_order(mob/user, params, atom/object)
+	return
+
+
+/datum/human_ai_quick_order/approach
+
+/datum/human_ai_quick_order/approach/do_order(mob/user, params, atom/object)
+	var/list/modifiers = params2list(params)
+	for(var/datum/human_ai_brain/brain as anything in ai_humans_selected)
+		brain.hold_position = FALSE
+		if(LAZYACCESS(modifiers, ALT_CLICK))
+			brain.quick_approach = get_turf(object)
+		else
+			brain.quick_approach = null
+			brain.target_turf = get_turf(object)
+
+	to_chat(holder, SPAN_BOLDNOTICE("Order sent."))
+
 /client/proc/quick_order_ai_approach()
 	set name = "Quick Order: Approach"
 	set category = "Game Master.HumanAI"
@@ -95,13 +107,46 @@
 
 	if(istype(click_intercept, /datum/human_ai_quick_order))
 		QDEL_NULL(click_intercept)
-		to_chat(src, SPAN_BOLDNOTICE("Quick ordering stopped."))
+		to_chat(src, SPAN_BOLDNOTICE("Current order stopped."))
 		return
 
-	var/datum/human_ai_quick_order/order_datum = new
+	var/datum/human_ai_quick_order/approach/order_datum = new
 	order_datum.holder = src
 	click_intercept = order_datum
 	to_chat(src, SPAN_BOLDNOTICE("Left click two corners to select all AI in the area. Then, alt-click on where you would like them to go. Additionally, you can use middle-click to make AI approach carefully. To stop quick ordering, press the verb again. Will not function if GM panel is open."))
+
+/datum/human_ai_quick_order/hold_position
+
+/datum/human_ai_quick_order/hold_position/do_order(mob/user, params, atom/object)
+	var/list/modifiers = params2list(params)
+	for(var/datum/human_ai_brain/brain as anything in ai_humans_selected)
+		if(LAZYACCESS(modifiers, ALT_CLICK))
+			brain.hold_position = TRUE
+		else
+			brain.hold_position = FALSE
+
+	if(LAZYACCESS(modifiers, ALT_CLICK))
+		to_chat(holder, SPAN_BOLDNOTICE("Selected AI now holding position."))
+	else
+		to_chat(holder, SPAN_BOLDNOTICE("Selected AI now no longer holding position."))
+
+/client/proc/quick_order_ai_hold_position()
+	set name = "Quick Order: Hold Position"
+	set category = "Game Master.HumanAI"
+
+	if(!check_rights(R_DEBUG))
+		return
+
+	if(istype(click_intercept, /datum/human_ai_quick_order))
+		QDEL_NULL(click_intercept)
+		to_chat(src, SPAN_BOLDNOTICE("Current order stopped."))
+		return
+
+	var/datum/human_ai_quick_order/hold_position/order_datum = new
+	order_datum.holder = src
+	click_intercept = order_datum
+	to_chat(src, SPAN_BOLDNOTICE("Left click two corners to select all AI in the area. Alt-clicking will cause them to hold position. Middle-clicking will stop them from holding position. To stop quick ordering, press the verb again. Will not function if GM panel is open."))
+
 
 #undef AREASELECT_CORNERA
 #undef AREASELECT_CORNERB

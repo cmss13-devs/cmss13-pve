@@ -52,6 +52,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	/// Ref to the latest weapon we've drawn as a melee
 	var/obj/item/drawn_melee_weapon
 
+	/// If true, the AI will not move at all
+	var/hold_position = FALSE
+
 /datum/human_ai_brain/New(mob/living/carbon/human/tied_human)
 	. = ..()
 	src.tied_human = tied_human

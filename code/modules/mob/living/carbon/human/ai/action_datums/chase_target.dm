@@ -12,6 +12,9 @@
 	if(brain.current_target)
 		return 0
 
+	if(brain.hold_position)
+		return 0
+
 	if(get_dist(brain.target_turf, brain.tied_human) > 20)
 		return 0
 

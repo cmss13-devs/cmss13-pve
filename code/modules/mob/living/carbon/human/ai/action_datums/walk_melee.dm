@@ -6,6 +6,9 @@
 	if(!brain.current_target)
 		return 0
 
+	if(brain.hold_position)
+		return 0
+
 	if(brain.sniper_home)
 		return 0
 

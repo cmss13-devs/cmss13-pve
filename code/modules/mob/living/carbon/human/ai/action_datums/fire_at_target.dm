@@ -102,7 +102,7 @@
 			return FALSE
 
 		for(var/obj/thing in tile)
-			if((thing.projectile_coverage >= PROJECTILE_COVERAGE_MEDIUM) && (thing.unacidable) && (thing.density))
+			if((thing.projectile_coverage >= PROJECTILE_COVERAGE_MEDIUM) && thing.unacidable && thing.density)
 				return FALSE
 
 		for(var/mob/living/carbon/human/possible_friendly in tile)
