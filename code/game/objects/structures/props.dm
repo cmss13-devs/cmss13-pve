@@ -1221,7 +1221,6 @@
 	name = "Fog"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "smoke"
-	opacity = TRUE
 	layer = 6
 	density = 0
 	mouse_opacity = 0
