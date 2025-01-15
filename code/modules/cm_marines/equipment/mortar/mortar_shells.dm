@@ -11,6 +11,7 @@
 	/// is it currently on fire and about to explode?
 	var/burning = FALSE
 
+
 /obj/item/mortar_shell/Destroy()
 	. = ..()
 	cause_data = null
@@ -42,15 +43,6 @@
 	sleep(2)
 	cell_explosion(T, 60, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
-/obj/item/mortar_shell/training
-	name = "\improper 80mm training mortar shell"
-	desc = "An 80mm mortar shell, designed to light up the area of impact with short-lived burning ash. Used during training exercises."
-	icon_state = "mortar_ammo_training"
-
-/obj/item/mortar_shell/training/detonate(turf/T)
-	create_shrapnel(T, 10, shrapnel_type = /datum/ammo/flare/starshell, cause_data = cause_data)
-	new /obj/item/mortar_shell(T)
-
 /obj/item/mortar_shell/incendiary
 	name = "\improper 80mm incendiary mortar shell"
 	desc = "An 80mm mortar shell, loaded with a Type B napalm charge. Perfect for long-range area denial."
@@ -74,7 +66,7 @@
 /obj/item/mortar_shell/nerve/detonate(turf/T)
 	cell_explosion(T, 65, 95, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, null)
 	spawn(5)
-		var/datum/effect_system/smoke_spread/cn20/xeno/cn20 = new()
+		var/datum/effect_system/smoke_spread/cn20/cn20 = new()
 		cn20.set_up(5, 0, T, null)
 		cn20.start()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 35, 1, 4)
@@ -88,14 +80,6 @@
 	new /obj/item/device/flashlight/flare/on/illumination(T)
 	playsound(T, 'sound/weapons/gun_flare.ogg', 50, 1, 4)
 	deploy_camera(T)
-
-/obj/item/mortar_shell/ap
-	name = "\improper 80mm antitank mortar shell"
-	desc = "An 80mm mortar shell, loaded with an armor-piercing explosive charge."
-	icon_state = "mortar_ammo_ap"
-
-/obj/item/mortar_shell/ap/detonate(turf/T)
-	cell_explosion(T, 2400, 2400, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
 /obj/item/mortar_shell/custom
 	name = "\improper 80mm custom mortar shell"
@@ -298,11 +282,3 @@
 
 /obj/structure/closet/crate/secure/mortar_ammo/mortar_kit/hvh/clf
 	jtac_key_type = /obj/item/device/encryptionkey/clf/engi
-
-/obj/structure/closet/crate/secure/mortar_ammo/himat
-	name = "\improper M112 HIMAT crate"
-	desc = "A crate containing a HIMAT."
-
-/obj/structure/closet/crate/secure/mortar_ammo/himat/Initialize()
-	. = ..()
-	new /obj/item/mortar_kit/himat(src)
