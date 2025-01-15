@@ -187,7 +187,7 @@ FORENSIC SCANNER
 	icon_state = "Medical_scanner"
 	item_state = "analyzer"
 	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
-	w_class = SIZE_LARGE
+	w_class = SIZE_MEDIUM
 	var/mode = 1
 	var/report_delay_counter = 0
 	var/report_delay_threshold = 3 //every three processes, record to report buffer
