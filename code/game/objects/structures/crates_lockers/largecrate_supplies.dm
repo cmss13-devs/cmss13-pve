@@ -246,16 +246,6 @@
 	desc = "A case containing twenty-five 80mm flare mortar shells."
 	supplies = list(/obj/item/mortar_shell/flare = 25)
 
-/obj/structure/largecrate/supply/explosives/mortar_ap
-	name = "80mm AP mortar shell case (x25)"
-	desc = "A case containing twenty-five 80mm AP mortar shells."
-	supplies = list(/obj/item/mortar_shell/ap = 25)
-
-/obj/structure/largecrate/supply/explosives/mortar_training
-	name = "80mm training mortar shell case (x25)"
-	desc = "A case containing twenty-five 80mm training mortar shells."
-	supplies = list(/obj/item/mortar_shell/training = 25)
-
 /obj/structure/largecrate/supply/supplies
 	name = "supplies crate"
 	icon_state = "secure_crate"
