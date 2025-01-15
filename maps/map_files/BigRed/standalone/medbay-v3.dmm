@@ -108,7 +108,6 @@
 "hv" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/damaged5/west,
 /area/bigredv2/outside/medical)
 "hA" = (
@@ -126,7 +125,6 @@
 "hQ" = (
 /obj/structure/machinery/optable,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/corpsespawner/wygoon,
 /obj/item/reagent_container/food/snacks/margheritaslice,
 /turf/open/floor/white,
 /area/bigredv2/outside/medical)
@@ -230,7 +228,6 @@
 /area/bigredv2/outside/medical)
 "lk" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/plating/platingdmg3,
 /area/bigredv2/outside/medical)
 "lD" = (
@@ -484,13 +481,6 @@
 /obj/item/ammo_casing/bullet,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
-"ur" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/landmark/corpsespawner/doctor,
-/turf/open/floor/white,
-/area/bigredv2/outside/medical)
 "uv" = (
 /obj/structure/machinery/light,
 /turf/open/floor/asteroidwarning/north,
@@ -508,7 +498,6 @@
 "vg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/plating/platingdmg3,
 /area/bigredv2/outside/medical)
 "vr" = (
@@ -658,12 +647,6 @@
 /obj/item/stack/sheet/metal,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
-"yZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/platingdmg1,
-/area/bigredv2/outside/medical)
 "zQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_casing/shell,
@@ -805,11 +788,6 @@
 "Gd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/crap_item,
-/turf/open/floor/platingdmg1,
-/area/bigredv2/outside/medical)
-"Go" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "Gr" = (
@@ -1112,11 +1090,6 @@
 /obj/item/device/healthanalyzer,
 /turf/open/floor/whitegreenfull,
 /area/bigredv2/outside/medical)
-"PH" = (
-/obj/effect/landmark/corpsespawner/doctor,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/white,
-/area/bigredv2/outside/medical)
 "Qc" = (
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/whitebluefull/northeast,
@@ -1127,7 +1100,6 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "Qn" = (
@@ -1576,7 +1548,7 @@ GH
 aj
 hA
 Fb
-PH
+Re
 JC
 Iv
 aa
@@ -1784,7 +1756,7 @@ yH
 Mf
 Of
 Ma
-Go
+xT
 BO
 xT
 BO
@@ -2016,7 +1988,7 @@ oE
 BY
 RR
 CP
-yZ
+BY
 Dh
 Re
 Us
@@ -2163,7 +2135,7 @@ nt
 sQ
 qd
 ND
-ur
+Gr
 WW
 Xy
 ap

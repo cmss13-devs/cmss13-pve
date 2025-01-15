@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 26
+#define SAVEFILE_VERSION_MAX 27
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -164,6 +164,13 @@
 		var/relation
 		S["nanotrasen_relation"] >> relation
 		S["weyland_yutani_relation"] << relation
+
+	if(savefile_version < 27)
+		var/old_pref_armor
+		S["preferred_armor"] >> old_pref_armor
+		if(!(old_pref_armor in GLOB.armor_style_list))
+			preferred_armor = "Random"
+		S["preferred_armor"] << preferred_armor
 
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
@@ -608,6 +615,7 @@
 
 	S["ds_camo"] >> dropship_camo
 	S["plat_name"] >> platoon_name
+	S["ds_name"] >> dropship_name
 
 	S.Unlock()
 
@@ -660,6 +668,7 @@
 
 	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : "Sun Riders"
 	dropship_camo = sanitize_inlist(dropship_camo, GLOB.dropship_camos, initial(dropship_camo))
+	dropship_name = dropship_name ? sanitize_text(dropship_name, initial(dropship_name)) : "Midway"
 
 	alternate_option = sanitize_integer(alternate_option, 0, 2, initial(alternate_option))
 	if(!job_preference_list)
@@ -774,6 +783,7 @@
 
 	S["ds_camo"] << dropship_camo
 	S["plat_name"] << platoon_name
+	S["ds_name"] << dropship_name
 
 	S.Unlock()
 

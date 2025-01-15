@@ -67,12 +67,7 @@
 		list("Breaching Charge", floor(scale * 2), /obj/item/explosive/plastic/breaching_charge, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
-		list("Black Webbing Vest", floor(scale * 2), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
-		list("Brown Webbing Vest", floor(scale * 2), /obj/item/clothing/accessory/storage/black_vest/brown_vest, VENDOR_ITEM_REGULAR),
-		list("Shoulder Holster", floor(scale * 1.5), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
-		list("Webbing", floor(scale * 5), /obj/item/clothing/accessory/storage/webbing, VENDOR_ITEM_REGULAR),
-		list("Knife Webbing", floor(scale * 1), /obj/item/clothing/accessory/storage/knifeharness, VENDOR_ITEM_REGULAR),
-		list("Drop Pouch", floor(scale * 2), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", floor(scale * 5), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
 		list("External Webbing", floor(scale * 5), /obj/item/clothing/suit/storage/webbing, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACKS", -1, null, null),
@@ -464,7 +459,6 @@
 
 		list("BOOTS", -1, null, null),
 		list("Marine Combat Boots", 20, /obj/item/clothing/shoes/marine, VENDOR_ITEM_REGULAR),
-		list("Marine Brown Combat Boots", 5, /obj/item/clothing/shoes/marine/brown, VENDOR_ITEM_REGULAR),
 		list("Marine Jungle Combat Boots", 5, /obj/item/clothing/shoes/marine/jungle, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACKS", -1, null, null),
@@ -481,18 +475,14 @@
 		list("M10 Pattern Marine Helmet", 20, /obj/item/clothing/head/helmet/marine, VENDOR_ITEM_REGULAR),
 		list("M10 Pattern Technician Helmet", 20, /obj/item/clothing/head/helmet/marine/tech, VENDOR_ITEM_REGULAR),
 		list("M10 Pattern Corpman Helmet", 20, /obj/item/clothing/head/helmet/marine/medic, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Carrier Marine Armor", 20, /obj/item/clothing/suit/storage/marine/medium/carrier, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Padded Marine Armor", 20, /obj/item/clothing/suit/storage/marine/medium/padded, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Padless Marine Armor", 20, /obj/item/clothing/suit/storage/marine/medium/padless, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Ridged Marine Armor", 20, /obj/item/clothing/suit/storage/marine/medium/padless_lines, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Skull Marine Armor", 20, /obj/item/clothing/suit/storage/marine/medium/skull, VENDOR_ITEM_REGULAR),
-		list("M3-EOD Pattern Heavy Armor", 10, /obj/item/clothing/suit/storage/marine/heavy, VENDOR_ITEM_REGULAR),
-		list("M3-L Pattern Light Armor", 10, /obj/item/clothing/suit/storage/marine/light, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Marine Armor", 20, /obj/item/clothing/suit/marine, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Ridged Marine Armor", 20, /obj/item/clothing/suit/marine/lines, VENDOR_ITEM_REGULAR),
+		list("M3-EOD Pattern Heavy Armor", 10, /obj/item/clothing/suit/marine/heavy, VENDOR_ITEM_REGULAR),
+		list("M3-L Pattern Light Armor", 10, /obj/item/clothing/suit/marine/light, VENDOR_ITEM_REGULAR),
 
 		list("GLOVES", -1, null, null),
-		list("Marine Combat Gloves", 40, /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
-		list("Marine Black Combat Gloves", 40, /obj/item/clothing/gloves/marine/black, VENDOR_ITEM_REGULAR),
-		list("Marine Brown Combat Gloves", 20, /obj/item/clothing/gloves/marine/brown, VENDOR_ITEM_REGULAR),
+		list("Combat Gloves", 40, /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
+		list("Brown Combat Gloves", 20, /obj/item/clothing/gloves/marine/brown, VENDOR_ITEM_REGULAR),
 
 		list("RADIO", -1, null, null),
 		list("Alpha Squad Radio Encryption Key", 5, /obj/item/device/encryptionkey/alpha, VENDOR_ITEM_REGULAR),

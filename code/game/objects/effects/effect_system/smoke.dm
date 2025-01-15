@@ -308,15 +308,15 @@
 /////////////////////////////////////////////
 
 /obj/effect/particle_effect/smoke/phosphorus
-	time_to_live = 3
+	time_to_live = 6
 	smokeranking = SMOKE_RANK_MED
 	var/next_cough = 2 SECONDS
 	var/burn_damage = 40
-	var/applied_fire_stacks = 5
+	var/applied_fire_stacks = 3
 	var/xeno_yautja_reduction = 0.75
 
 /obj/effect/particle_effect/smoke/phosphorus/weak
-	time_to_live = 2
+	time_to_live = 4
 	smokeranking = SMOKE_RANK_MED
 	burn_damage = 30
 	xeno_yautja_reduction = 0.5
@@ -351,7 +351,7 @@
 	if(isyautja(affected_mob) || isxeno(affected_mob))
 		damage *= xeno_yautja_reduction
 
-	var/reagent = new /datum/reagent/napalm/ut()
+	var/reagent = new /datum/reagent/napalm/blue()
 	affected_mob.burn_skin(damage)
 	affected_mob.adjust_fire_stacks(applied_fire_stacks, reagent)
 	affected_mob.IgniteMob()
@@ -423,16 +423,17 @@
 		xeno_creature.AddComponent(/datum/component/status_effect/interference, 10, 10)
 		xeno_creature.blinded = TRUE
 	else
-		creature.apply_damage(12, TOX)
-		creature.apply_damage(2, BRAIN)
-		lungs.take_damage(2)
+		creature.apply_damage(18, TOX)
+		creature.apply_damage(0.75, BRAIN)
+		creature.apply_damage(1, OXY)
+		lungs.take_damage(1)
 
 	creature.SetEarDeafness(max(creature.ear_deaf, floor(effect_amt*1.5))) //Paralysis of hearing system, aka deafness
 	if(!xeno_creature) //Eye exposure damage
 		to_chat(creature, SPAN_DANGER("Your eyes sting. You can't see!"))
 		creature.SetEyeBlind(floor(effect_amt/3))
 
-		eyes.take_damage(2)
+		eyes.take_damage(1)
 	if(human_creature && creature.coughedtime < world.time && !creature.stat) //Coughing/gasping
 		creature.coughedtime = world.time + 1.5 SECONDS
 		if(prob(50))
@@ -440,7 +441,7 @@
 		else
 			creature.emote("gasp")
 
-	var/stun_chance = 20
+	var/stun_chance = 10
 	if(xeno_affecting)
 		stun_chance = 35
 	if(prob(stun_chance))

@@ -407,8 +407,8 @@
 	user_head?.vis_contents -= mob_glass_overlay
 
 /obj/item/clothing/glasses/mgoggles
-	name = "marine ballistic goggles"
-	desc = "Standard issue USCM goggles. While commonly found mounted atop M10 pattern helmets, they are also capable of preventing insects, dust, and other things from getting into one's eyes."
+	name = "ballistic goggles"
+	desc = "A pair of Sun, Wind, and Dust Goggles featuring standard clear lenses rated for ballistic protection."
 	icon_state = "mgoggles"
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
@@ -422,55 +422,55 @@
 	garbage = FALSE
 
 /obj/item/clothing/glasses/mgoggles/prescription
-	name = "prescription marine ballistic goggles"
-	desc = "Standard issue USCM goggles. Mostly used to decorate one's helmet. Contains prescription lenses in case you weren't sure if they were lame or not."
+	name = "prescription ballistic goggles"
+	desc = "A pair of Sun, Wind, and Dust Goggles featuring specially ordered custom clear prescription lenses rated for ballistic protection."
 	icon_state = "mgoggles"
 	prescription = TRUE
 
 /obj/item/clothing/glasses/mgoggles/black
-	name = "black marine ballistic goggles"
-	desc = "Standard issue USCM goggles. While commonly found mounted atop M10 pattern helmets, they are also capable of preventing insects, dust, and other things from getting into one's eyes. This one has black tinted lenses."
+	name = "sun-shaded ballistic goggles"
+	desc = "A pair of Sun, Wind, and Dust Goggles featuring dark sunshade lenses rated for ballistic protection."
 	icon_state = "mgogglesblk"
 	active_icon_state = "mgogglesblk_down"
 	inactive_icon_state = "mgogglesblk"
+	eye_protection = EYE_PROTECTION_FLASH
 
 /obj/item/clothing/glasses/mgoggles/black/prescription
-	name = "prescription black marine ballistic goggles"
-	desc = "Standard issue USCM goggles. While commonly found mounted atop M10 pattern helmets, they are also capable of preventing insects, dust, and other things from getting into one's eyes. This one has black tinted lenses. ntop of that, these ones contain prescription lenses."
-	icon_state = "mgogglesblk"
-	active_icon_state = "mgogglesblk_down"
-	inactive_icon_state = "mgogglesblk"
+	name = "prescription sun-shaded ballistic goggles"
+	desc = "A pair of Sun, Wind, and Dust Goggles featuring specially ordered custom dark sunshade prescription lenses rated for ballistic protection."
 	prescription = TRUE
 
 /obj/item/clothing/glasses/mgoggles/orange
-	name = "orange marine ballistic goggles"
-	desc = "Standard issue USCM goggles. While commonly found mounted atop M10 pattern helmets, they are also capable of preventing insects, dust, and other things from getting into one's eyes. This one has amber colored day lenses."
+	name = "laser-shaded ballistic goggles"
+	desc = "A pair of Sun, Wind, and Dust Goggles featuring brown lenses rated for ballistic and laser protection."
 	icon_state = "mgogglesorg"
 	active_icon_state = "mgogglesorg_down"
 	inactive_icon_state = "mgogglesorg"
+	eye_protection = EYE_PROTECTION_FLASH
 
 /obj/item/clothing/glasses/mgoggles/orange/prescription
-	name = "prescription orange marine ballistic goggles"
-	desc = "Standard issue USCM goggles. While commonly found mounted atop M10 pattern helmets, they are also capable of preventing insects, dust, and other things from getting into one's eyes. This one has amber colored day lenses."
+	name = "prescription laser-shaded ballistic goggles"
+	desc = "A pair of Sun, Wind, and Dust Goggles featuring specially ordered custom brown prescription lenses rated for ballistic and laser protection."
 	icon_state = "mgogglesorg"
 	active_icon_state = "mgogglesorg_down"
 	inactive_icon_state = "mgogglesorg"
 	prescription = TRUE
 
-/obj/item/clothing/glasses/mgoggles/v2
-	name = "M1A1 marine ballistic goggles"
-	desc = "Newer issue USCM goggles. While commonly found mounted atop M10 pattern helmets, they are also capable of preventing insects, dust, and other things from getting into one's eyes. This version has larger lenses."
-	icon_state = "mgoggles2"
-	active_icon_state = "mgoggles2_down"
-	inactive_icon_state = "mgoggles2"
+/obj/item/clothing/glasses/mgoggles/green
+	name = "laser-shaded ballistic goggles"
+	desc = "A pair of Sun, Wind, and Dust Goggles featuring brown lenses rated for ballistic and laser protection."
+	icon_state = "mgogglesgrn"
+	active_icon_state = "mgogglesgrn_down"
+	inactive_icon_state = "mgogglesgrn"
+	eye_protection = EYE_PROTECTION_FLASH
 
-/obj/item/clothing/glasses/mgoggles/v2/prescription
-	name = "prescription M1A1 marine ballistic goggles"
-	desc = "Newer issue USCM goggles. While commonly found mounted atop M10 pattern helmets, they are also capable of preventing insects, dust, and other things from getting into one's eyes. This version has larger lenses."
-	icon_state = "mgoggles2"
-	active_icon_state = "mgoggles2_down"
-	inactive_icon_state = "mgoggles2"
-	prescription = TRUE
+/obj/item/clothing/glasses/mgoggles/green/prescription
+	name = "prescription laser-shaded ballistic goggles"
+	desc = "A pair of Sun, Wind, and Dust Goggles featuring specially ordered custom brown prescription lenses rated for ballistic and laser protection."
+	icon_state = "mgogglesgrn"
+	active_icon_state = "mgogglesgrn_down"
+	inactive_icon_state = "mgogglesgrn"
+	eye_protection = EYE_PROTECTION_FLASH
 
 /obj/item/clothing/glasses/mgoggles/on_enter_storage(obj/item/storage/internal/S)
 	..()
@@ -534,6 +534,18 @@
 			REMOVE_TRAIT(user, TRAIT_NEARSIGHTED_EQUIPMENT, TRAIT_SOURCE_EQUIPMENT(/obj/item/clothing/glasses/mgoggles/prescription))
 
 	attached_item.update_icon()
+
+/obj/item/clothing/glasses/mgoggles/upp
+	name = "UPP ballistic goggles"
+	desc = "Standard issue ballistic goggles for UPP Infantry. While commonly found mounted atop their pattern helmets, they are also capable of preventing insects, dust, and other things from getting into one's eyes."
+	icon_state = "mgogglesupp"
+	active_icon_state = "mgogglesupp_down"
+	inactive_icon_state = "mgogglesupp"
+
+/obj/item/clothing/glasses/mgoggles/upp/prescription
+	name = "prescription UPP ballistic goggles"
+	prescription = TRUE
+
 
 //welding goggles
 
@@ -645,6 +657,11 @@
 	clothing_traits = list(TRAIT_BIMEX)
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
+/obj/item/clothing/glasses/sunglasses/big/orange
+	name = "\improper BiMex shooting shades"
+	desc = "An expensive pair of BiMex branded, orange-tinted sunglasses. Largely produced for members of the US Army to protect their eyes from dust during range-time, but some pairs find their way onto the private market."
+	icon_state = "bigorangesunglasses"
+	item_state = "bigorangesunglasses"
 
 /obj/item/clothing/glasses/sunglasses/aviator
 	name = "aviator shades"

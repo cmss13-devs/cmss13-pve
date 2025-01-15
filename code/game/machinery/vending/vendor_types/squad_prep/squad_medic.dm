@@ -125,22 +125,20 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 //------------CLOTHING VENDOR---------------
 
 GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
-		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
-		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Standard Marine Apparel", 0, list(/obj/item/clothing/under/marine/medic, /obj/item/clothing/shoes/marine/knife, /obj/item/clothing/gloves/marine, /obj/item/device/radio/headset/almayer/marine), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
-		list("Combat Sterile Gloves", 0, /obj/item/clothing/gloves/marine/medical, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_REGULAR),
 		list("MRE", 0, /obj/item/storage/box/MRE, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 
+
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
-		list("Light Armor", 0, /obj/item/clothing/suit/storage/marine/light, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
-		list("Medium Armor", 0, /obj/item/clothing/suit/storage/marine/medium, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
-		list("Heavy Armor", 0, /obj/item/clothing/suit/storage/marine/heavy, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("Medium Armor", 0, /obj/item/clothing/suit/marine, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+
+		list("ARMOR PAINT (CHOOSE 1)", 0, null, null, null),
+		list("Red Cross Paint", 0, /obj/item/clothing/accessory/paint/medic, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
 
 		list("HELMET (CHOOSE 1)", 0, null, null, null),
 		list("M10 Corpsman Helmet", 0, /obj/item/clothing/head/helmet/marine/medic, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
-		list("M10 White Corpsman Helmet", 0, /obj/item/clothing/head/helmet/marine/medic/white, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
+		list("M10 Helmet", 0, /obj/item/clothing/head/helmet/marine, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
@@ -177,10 +175,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("Brown Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest/brown_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
-		list("Black Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Magazine Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/mag, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Shotgun Shell Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/shotgun, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern M40 Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/m40, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3 Pattern Small Pouch Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/small, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
 		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Webbing", 0, /obj/item/clothing/accessory/storage/webbing, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 	))
 
@@ -237,14 +237,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
 		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
-		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
-		list("Standard Apparel", 0, list(/obj/item/clothing/gloves/marine/veteran/upp, /obj/item/clothing/head/helmet/marine/veteran/UPP), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
-		list("Combat Sterile Gloves", 0, /obj/item/clothing/gloves/marine/medical, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
-		list("Ration", 0, /obj/item/reagent_container/food/snacks/upp, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
-
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
-		list("Support Armor", 0, /obj/item/clothing/suit/storage/marine/faction/UPP/support, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
-		list("Personal Armor", 0, /obj/item/clothing/suit/storage/marine/faction/UPP, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("6B72-03 Combat Vest", 0, /obj/item/clothing/suit/storage/marine/faction/UPP/light, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+		list("6B90 Carapace Armor", 0, /obj/item/clothing/suit/storage/marine/faction/UPP, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
@@ -299,14 +294,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_forecon_medic, list(
 		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
 		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
-		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
-		list("Standard Marine Apparel", 0, list(/obj/item/clothing/gloves/marine), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
-		list("Combat Sterile Gloves", 0, /obj/item/clothing/gloves/marine/medical, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
-		list("MRE", 0, /obj/item/storage/box/MRE, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
-
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
-		list("Light Armor", 0, /obj/item/clothing/suit/storage/marine/light/standard, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
-		list("M3-R Armor", 0, /obj/item/clothing/suit/storage/marine/rto/forecon, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+		list("M3-R Armor", 0, /obj/item/clothing/suit/marine/rto/forecon, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic/standard, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
@@ -341,11 +330,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_forecon_medic, list(
 		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("Brown Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest/brown_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
-		list("Black Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Webbing", 0, /obj/item/clothing/accessory/storage/webbing, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern Shotgun Shell Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern M40 Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/m40, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("M3-R Pattern Corpsman Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/medic, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
 		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/clothing/medic/forecon

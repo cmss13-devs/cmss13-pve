@@ -373,15 +373,12 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/attached_gun/grenade/mk1,
 		/obj/item/attachable/stock/rifle/collapsible,
-		/obj/item/attachable/attached_gun/shotgun,
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -434,6 +431,70 @@
 
 /obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded
 	current_mag = null
+
+/obj/item/weapon/gun/rifle/m41aMK1/army
+	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper."
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/grenade/mk1)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
+
+/obj/item/weapon/gun/rifle/m41aMK1/army/masterkey
+	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper. This one has a U7 underbarrel shotgun strapped to it."
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/shotgun)
+
+//M20A Harrington rifle
+//=================================================
+//=================================================
+
+/obj/item/weapon/gun/rifle/m20a
+	name = "\improper M20A pulse rifle"
+	desc = "A predecessor to the M41A pulse rifle still utilized by the UA's Colonial Guard and various other organizations. Aside from its 10x24mm chambering, the 'Harrington' rifle is largely considered to be in every metric the polar opposite of the M41A; featuring an obsolete three-round burst mode, lower magazine size, and it uses an integrated shotgun attachment."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "m20a"
+	item_state = "m20a"
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+	fire_sound = "gun_pulse"
+	current_mag = /obj/item/ammo_magazine/rifle/m20a
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/stock/m20a,
+		/obj/item/attachable/attached_gun/shotgun,
+	)
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	wield_delay = WIELD_DELAY_NORMAL
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a)
+	map_specific_decoration = FALSE
+
+/obj/item/weapon/gun/rifle/m20a/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15)
+
+/obj/item/weapon/gun/rifle/m20a/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+	damage_falloff_mult = 0
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+
+/obj/item/weapon/gun/rifle/m20a/unloaded
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	current_mag = null
+	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
 //----------------------------------------------
 //Special gun for the CO to replace the smartgun
@@ -691,7 +752,7 @@
 
 /obj/item/weapon/gun/rifle/mar40
 	name = "\improper MAR-40 battle rifle"
-	desc = "A cheap, reliable assault rifle chambered in 7.62x39mm. Commonly found in the hands of criminals or mercenaries, or in the hands of the UPP or CLF."
+	desc = "A cheap, reliable assault rifle chambered in 8.8x29mm. Commonly found in the hands of criminals or mercenaries, or in the hands of the UPP or CLF."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "mar40"
 	item_state = "mar40"
@@ -720,28 +781,6 @@
 		/obj/item/attachable/attached_gun/shotgun,
 		/obj/item/attachable/scope/slavic,
 	)
-	random_spawn_chance = 38
-	random_spawn_rail = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex/,
-		/obj/item/attachable/scope/slavic,
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_spawn_under = list(
-		/obj/item/attachable/gyro,
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/extinguisher,
-		/obj/item/attachable/attached_gun/shotgun,
-		/obj/item/attachable/burstfire_assembly,
-	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/compensator,
-	)
-
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
 	start_automatic = TRUE
 
@@ -766,13 +805,13 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 
 /obj/item/weapon/gun/rifle/mar40/tactical
-	desc = "A cheap, reliable assault rifle chambered in 7.62x39mm. Commonly found in the hands of criminals or mercenaries, or in the hands of the UPP or CLF. This one has been equipped with an after-market ammo-counter."
+	desc = "A cheap, reliable assault rifle chambered in 8.8x29mm. Commonly found in the hands of criminals or mercenaries, or in the hands of the UPP or CLF. This one has been equipped with an after-market ammo-counter."
 	starting_attachment_types = list(/obj/item/attachable/angledgrip, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness)
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
 
 /obj/item/weapon/gun/rifle/mar40/carbine
 	name = "\improper MAR-30 battle carbine"
-	desc = "A cheap, reliable carbine chambered in 7.62x39mm. Commonly found in the hands of criminals or mercenaries."
+	desc = "A cheap, reliable carbine chambered in 8.8x29mm. Commonly found in the hands of criminals or mercenaries."
 	icon_state = "mar30"
 	item_state = "mar30"
 	fire_sound = 'sound/weapons/gun_mar40.ogg'
@@ -803,26 +842,6 @@
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
 	)
-	random_spawn_chance = 35
-	random_spawn_rail = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex/,
-		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_spawn_under = list(
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/attached_gun/extinguisher,
-		/obj/item/attachable/attached_gun/shotgun,
-		/obj/item/attachable/lasersight,
-	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/extended_barrel,
-	)
 
 /obj/item/weapon/gun/rifle/mar40/carbine/set_gun_config_values()
 	..()
@@ -833,13 +852,13 @@
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 
 /obj/item/weapon/gun/rifle/mar40/carbine/tactical
-	desc = "A cheap, reliable carbine chambered in 7.62x39mm. Commonly found in the hands of criminals or mercenaries. This one has been equipped with an after-market ammo-counter."
+	desc = "A cheap, reliable carbine chambered in 8.8x29mm. Commonly found in the hands of criminals or mercenaries. This one has been equipped with an after-market ammo-counter."
 	starting_attachment_types = list(/obj/item/attachable/verticalgrip, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness)
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
 
 /obj/item/weapon/gun/rifle/mar40/lmg
 	name = "\improper MAR-50 light machine gun"
-	desc = "A cheap, reliable LMG chambered in 7.62x39mm. Commonly found in the hands of slightly better funded criminals."
+	desc = "A cheap, reliable LMG chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals."
 	icon_state = "mar50"
 	item_state = "mar50"
 	fire_sound = 'sound/weapons/gun_mar40.ogg'
@@ -885,7 +904,7 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 
 /obj/item/weapon/gun/rifle/mar40/lmg/tactical
-	desc = "A cheap, reliable LMG chambered in 7.62x39mm. Commonly found in the hands of slightly better funded criminals. This one has been equipped with an after-market ammo-counter."
+	desc = "A cheap, reliable LMG chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals. This one has been equipped with an after-market ammo-counter."
 	starting_attachment_types = list(/obj/item/attachable/mar50barrel, /obj/item/attachable/bipod, /obj/item/attachable/magnetic_harness)
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
 //-------------------------------------------------------
@@ -1286,6 +1305,13 @@
 /obj/item/weapon/gun/rifle/lmg/tactical/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
+
+/obj/item/weapon/gun/rifle/lmg/army
+	current_mag = /obj/item/ammo_magazine/rifle/lmg/ap
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel, /obj/item/attachable/bipod)
+/obj/item/weapon/gun/rifle/lmg/army/set_gun_config_values()
+	..()
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
 //-------------------------------------------------------
 
 
@@ -1529,7 +1555,7 @@
 	fire_sound = "gun_silenced"
 	wield_delay = 0 //Ends up being .5 seconds due to scope
 	inherent_traits = list(TRAIT_GUN_SILENCED)
-	current_mag = /obj/item/ammo_magazine/rifle/type71/ap
+	current_mag = /obj/item/ammo_magazine/rifle/type71
 	attachable_allowed = list(
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/verticalgrip/upp,
@@ -1596,6 +1622,7 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/army,
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/flashlight/grip,
 	)
@@ -1634,6 +1661,10 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ext
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip)
 
+/obj/item/weapon/gun/rifle/m4ra/army
+	desc = "The M4RA battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams."
+	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ap
+	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
 
 // pve - kinda weird icon usage, uses urban M4RA sprite w/ custom attachie sprite
 /obj/item/weapon/gun/rifle/m4ra/pve
@@ -1694,7 +1725,9 @@
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
 
-
+/obj/item/weapon/gun/rifle/m4ra/pve/unloaded
+	current_mag = null
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
 //-------------------------------------------------------
 
@@ -1734,7 +1767,7 @@
 	wield_delay = WIELD_DELAY_VERY_FAST
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	starting_attachment_types = list(/obj/item/attachable/stock/carbine)
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/rifle/l42a/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 10)

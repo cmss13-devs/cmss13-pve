@@ -60,6 +60,21 @@
 /obj/item/ammo_box/magazine/heap/empty
 	empty = TRUE
 
+//-----------------------M20A Rifle Mag Boxes-----------------------
+
+/obj/item/ammo_box/magazine/m20a
+	name = "magazine box (M20A x 10)"
+	icon_state = "base_m41"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_reg"
+	overlay_content = "_reg"
+	overlay_gun_type = "_m20a"
+	magazine_type = /obj/item/ammo_magazine/rifle/m20a
+
+/obj/item/ammo_box/magazine/m20a/empty
+
+	empty = TRUE
+
 //-----------------------M39 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m39
@@ -556,8 +571,9 @@
 
 /obj/item/ammo_box/magazine/mk1
 	name = "magazine box (M41A MK1 x 10)"
+	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_reg_mk1"
-	overlay_gun_type = "_mk1"
+	overlay_gun_type = "_m41"
 	overlay_content = "_reg"
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1
 	allowed_magazines = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon)
@@ -566,14 +582,12 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/mk1/ap
-	name = "magazine box (M41A MK1 AP x 10)"
-	flags_equip_slot = SLOT_BACK
+	name = "magazine box (AP M41A MK1 x 10)"
 	overlay_ammo_type = "_ap_mk1"
 	overlay_content = "_ap"
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/ap
 
 /obj/item/ammo_box/magazine/mk1/ap/empty
-	empty = TRUE
 
 /obj/item/ammo_box/magazine/mk1/heap
 	name = "magazine box (HEAP M41A MK1 X 10)"
@@ -593,10 +607,68 @@
 /obj/item/ammo_box/magazine/mk1/rubber/empty
 	empty = TRUE
 
+//-----------------------LARGE M41A MK1 Rifle Mag Boxes-----------------------
+
+/obj/item/ammo_box/magazine/mk1/large
+	name = "magazine box (M41A MK1 x 32)"
+	icon_state = "base_large"
+	overlay_ammo_type = "_reglarge"
+	overlay_gun_type = "_blank"
+	overlay_content = "_reglarge"
+	limit_per_tile = 1
+	flags_equip_slot = null
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1
+	num_of_magazines = 32
+	allowed_magazines = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon)
+	var/move_delay_mult = 2
+
+/obj/item/ammo_box/magazine/mk1/large/pickup(mob/user, silent)
+	. = ..()
+	RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
+
+/obj/item/ammo_box/magazine/mk1/large/proc/handle_movedelay(mob/user, list/movedata)
+	SIGNAL_HANDLER
+	if(locate(/obj/item/ammo_box/magazine/mk1/large) in user.contents)
+		movedata["move_delay"] += move_delay_mult
+
+/obj/item/ammo_box/magazine/mk1/large/dropped(mob/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
+
+/obj/item/ammo_box/magazine/mk1/large/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/mk1/large/ap
+	name = "magazine box (AP M41A MK1 x 32)"
+	overlay_ammo_type = "_aplarge"
+	overlay_content = "_aplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/ap
+
+/obj/item/ammo_box/magazine/mk1/large/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/mk1/large/heap
+	name = "magazine box (HEAP M41A MK1 x 32)"
+	overlay_ammo_type = "_heaplarge"
+	overlay_content = "_heaplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/heap
+
+/obj/item/ammo_box/magazine/mk1/large/heap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/mk1/large/rubber
+	name = "magazine box (Rubber M41A MK1 x 32)"
+	overlay_ammo_type = "_rubberlarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/rubber
+
+/obj/item/ammo_box/magazine/mk1/large/rubber/empty
+	empty = TRUE
+
 //-----------------------NSG 23 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/nsg23
 	name = "magazine box (NSG 23 x 16)"
+	flags_equip_slot = SLOT_BACK
 	icon_state = "base_nsg23"
 	overlay_gun_type = "_nsg23"
 	overlay_content = "_reg"
@@ -681,6 +753,21 @@
 /obj/item/ammo_box/magazine/type73/impact/empty
 	empty = TRUE
 
+//-----------------------NP92 Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/np92
+	name = "\improper magazine box (NP92 x 16)"
+	icon_state = "base_type73"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_type71_reg"
+	overlay_gun_type = "_np92"
+	overlay_content = "_type71_reg"
+	num_of_magazines = 16
+	magazine_type = /obj/item/ammo_magazine/pistol/np92
+
+/obj/item/ammo_box/magazine/np92/empty
+
+	empty = TRUE
 
 //-----------------------AR10 Rifle Mag Box-----------------------
 
