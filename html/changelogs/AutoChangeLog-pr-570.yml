@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - rscadd: "PLTCO can now rename their platoon's dropship"
