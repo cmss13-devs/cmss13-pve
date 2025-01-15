@@ -65,16 +65,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/corpo)
-"aco" = (
-/obj/structure/platform_decoration/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "acq" = (
 /obj/structure/prop/invuln/darkness,
 /turf/open/space,
@@ -292,16 +282,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/clinic)
-"afP" = (
-/obj/structure/platform_decoration/strata{
-	dir = 1
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/n_rockies)
 "afU" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/prison,
@@ -838,13 +818,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement4,
 /area/lv522_l_l/outdoors/colony_outskirts)
-"aoy" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement15,
-/area/lv522/outdoors/colony_streets/south_street)
 "aoF" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 8
@@ -1106,20 +1079,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/basement/colony)
-"atF" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "atL" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -1271,17 +1230,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
-"avY" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/security)
 "awl" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
@@ -1535,27 +1483,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_street)
-"azF" = (
-/obj/structure/pipes/standard/manifold/hidden/green{
-	dir = 1
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/south_street)
 "azJ" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/yellowfull,
 /area/lv522/indoors/a_block/admin)
-"azN" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/cell_stripe/west,
-/area/lv522/outdoors/colony_streets/south_street)
 "azR" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
 /turf/open/floor/corsat/marked,
@@ -1921,13 +1852,6 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_street)
-"aFe" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/closed/wall/solaris,
-/area/lv522/outdoors/n_rockies)
 "aFq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/rack,
@@ -2051,21 +1975,6 @@
 	dir = 8
 	},
 /turf/open/floor/prison,
-/area/lv522/outdoors/colony_streets/south_street)
-"aGV" = (
-/obj/item/storage/backpack/marine/satchel{
-	desc = "It's the heavy-duty black polymer kind. Time to take out the trash!";
-	icon = 'icons/obj/janitor.dmi';
-	icon_state = "trashbag3";
-	name = "trash bag";
-	pixel_x = -4;
-	pixel_y = 6
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_street)
 "aHd" = (
 /obj/structure/window/framed/strata/reinforced,
@@ -2536,10 +2445,6 @@
 	dir = 1;
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/asphalt/cement/cement9,
 /area/lv522/outdoors/colony_streets/south_street)
 "aQU" = (
@@ -3002,7 +2907,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /turf/open/void,
 /area/lv522/indoors/a_block/admin)
@@ -3992,7 +3897,7 @@
 	},
 /obj/effect/projector{
 	vector_x = -192;
-	name = "-192_projector_copy"
+	name = "z_192_projector_copy"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/basement/colony)
@@ -4814,14 +4719,6 @@
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/corpo)
-"bEr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/admin)
 "bEE" = (
 /obj/structure/toilet{
 	dir = 1
@@ -4960,19 +4857,8 @@
 	color = "#464D4B";
 	dir = 8
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
-"bHo" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison,
-/area/lv522/outdoors/colony_streets/south_street)
 "bHA" = (
 /turf/closed/shuttle{
 	dir = 1;
@@ -5270,16 +5156,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony_outskirts)
-"bMI" = (
-/obj/structure/cargo_container/arious/right{
-	color = "#aeaeae"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/south_street)
 "bML" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -5315,13 +5191,6 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/b_block/hydro)
-"bNe" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer2,
-/area/lv522/outdoors/colony_streets/south_street)
 "bNf" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 2;
@@ -5500,14 +5369,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/basement/colony)
-"bQJ" = (
-/obj/structure/flora/jungle/plantbot1,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv522/indoors/a_block/security)
 "bQN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -5715,18 +5576,6 @@
 "bUJ" = (
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/corpo)
-"bUU" = (
-/obj/structure/machinery/floodlight/landing{
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	light_range = 3
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison,
-/area/lv522/outdoors/colony_streets/south_street)
 "bUZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump,
@@ -5759,10 +5608,6 @@
 "bWd" = (
 /obj/structure/flora/jungle/planttop1,
 /obj/structure/flora/bush/ausbushes/ppflowers,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv522/indoors/a_block/security)
 "bWh" = (
@@ -5815,10 +5660,6 @@
 /obj/structure/platform_decoration/mineral{
 	dir = 1;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
@@ -5935,10 +5776,6 @@
 /obj/structure/platform/mineral{
 	dir = 1;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv522/indoors/a_block/security)
@@ -6739,10 +6576,6 @@
 	dir = 4;
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
 "cof" = (
@@ -6945,16 +6778,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/west_reactor)
-"cqA" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 1
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/south_street)
 "cqH" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -7393,7 +7216,7 @@
 "cxP" = (
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -7654,7 +7477,7 @@
 /obj/structure/prop/invuln/darkness,
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/structure/platform/mineral{
 	color = "#464D4B"
@@ -7969,13 +7792,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_street)
-"cHk" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/n_rockies)
 "cHr" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -8009,10 +7825,6 @@
 	dir = 4;
 	color = "#464D4B";
 	layer = 3.3
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -8244,7 +8056,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/structure/platform/mineral{
 	dir = 4;
@@ -8292,13 +8104,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
-"cMj" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "cMo" = (
 /obj/structure/closet/emcloset,
 /obj/structure/machinery/light/double{
@@ -8428,17 +8233,6 @@
 	},
 /turf/open/asphalt/cement/cement12,
 /area/lv522_l_l/outdoors/colony)
-"cOq" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement1,
-/area/lv522/outdoors/colony_streets/south_street)
 "cOs" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
@@ -8545,17 +8339,6 @@
 	},
 /turf/open/floor/yellowfull,
 /area/lv522/indoors/c_block/garage)
-"cQr" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement12,
-/area/lv522/outdoors/colony_streets/south_street)
 "cQu" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -9728,7 +9511,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -192;
-	name = "-192_teleporter_vector"
+	name = "neg_192_teleporter_vector"
 	},
 /turf/open/floor/prison,
 /area/lv522/basement/colony)
@@ -9824,20 +9607,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/outdoors/engineering)
-"djV" = (
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "djX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -10343,7 +10112,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /turf/open/void,
 /area/lv522/indoors/a_block/admin)
@@ -10488,17 +10257,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
-"dvz" = (
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement3,
-/area/lv522/outdoors/colony_streets/south_street)
 "dvI" = (
 /obj/structure/platform_decoration/strata/metal,
 /obj/effect/decal/cleanable/dirt,
@@ -10662,10 +10420,6 @@
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B";
 	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/fitness)
@@ -10870,17 +10624,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/admin)
-"dBA" = (
-/obj/structure/machinery/colony_floodlight{
-	layer = 6;
-	light_color = "#dae2ff"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/corsat/marked,
-/area/lv522/outdoors/colony_streets/south_street)
 "dBC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -11374,10 +11117,6 @@
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/south_street)
 "dJP" = (
@@ -11438,17 +11177,6 @@
 	dir = 4;
 	pixel_x = 8;
 	pixel_y = -5
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
-"dKy" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -12395,10 +12123,6 @@
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
 "dXX" = (
@@ -12690,10 +12414,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_street)
 "ecQ" = (
@@ -12854,14 +12574,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
-"efR" = (
-/obj/structure/platform/strata,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/n_rockies)
 "efS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -13930,13 +13642,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/cargo)
-"eBj" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/admin)
 "eBq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -13997,14 +13702,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/engineering)
-"eCd" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/south_street)
 "eCN" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/green,
 /turf/open/floor/prison/cell_stripe/east,
@@ -14048,23 +13745,6 @@
 	},
 /turf/open/floor/almayer/sterile_green,
 /area/lv522/indoors/a_block/medical)
-"eDH" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "eDI" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
@@ -14630,21 +14310,6 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_street)
-"eNt" = (
-/obj/structure/stairs/perspective{
-	dir = 6;
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement1,
-/area/lv522/outdoors/colony_streets/south_street)
 "eNy" = (
 /obj/structure/phone_base/colony_net{
 	phone_category = "LV522 Chances Claim";
@@ -14857,17 +14522,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/medical)
-"eRa" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement15,
-/area/lv522/outdoors/colony_streets/south_street)
 "eRg" = (
 /turf/open/floor/corsat,
 /area/lv522/atmos/sewer)
@@ -15411,10 +15065,6 @@
 	dir = 4;
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv522/indoors/a_block/security)
 "fbd" = (
@@ -15511,21 +15161,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/yellowfull,
 /area/lv522/indoors/c_block/garage)
-"fde" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv522/indoors/a_block/security)
 "fdh" = (
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
@@ -15685,10 +15320,6 @@
 "fgD" = (
 /obj/structure/platform/mineral{
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
@@ -16081,21 +15712,6 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/fitness)
-"fnI" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/structure/platform_decoration,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "fnP" = (
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
@@ -16345,13 +15961,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/basement/colony)
-"fte" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/closed/wall/solaris,
-/area/lv522/outdoors/colony_streets/south_street)
 "fts" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -16737,16 +16346,6 @@
 /obj/item/tool/kitchen/knife/butcher,
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv522_l_l/indoors/slaughterhouse)
-"fBI" = (
-/obj/structure/platform_decoration/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement2,
-/area/lv522/outdoors/colony_streets/south_street)
 "fBK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -16851,17 +16450,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/basement/colony)
-"fDg" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "fDi" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -18153,16 +17741,6 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/landing_zone_1/tunnel)
-"fYK" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 5
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "fYQ" = (
 /obj/structure/platform/mineral{
 	dir = 1;
@@ -18544,10 +18122,6 @@
 	color = "#464D4B";
 	dir = 8
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/south_street)
 "gec" = (
@@ -18674,17 +18248,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/basement/colony)
-"gfO" = (
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/security)
 "gga" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -19051,7 +18614,7 @@
 /obj/structure/prop/invuln/darkness,
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/structure/platform/mineral{
 	dir = 4;
@@ -19232,17 +18795,6 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/closed/wall/strata_outpost,
 /area/lv522/indoors/c_block/cargo)
-"goQ" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement1,
-/area/lv522/outdoors/colony_streets/south_street)
 "goS" = (
 /obj/structure/machinery/light/double{
 	dir = 1;
@@ -19877,7 +19429,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/corsat/marked,
@@ -19971,17 +19523,6 @@
 	},
 /turf/open/floor/whitebluefull,
 /area/lv522/indoors/a_block/dorms)
-"gBM" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/security)
 "gBU" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -20063,10 +19604,6 @@
 /area/lv522_l_l/indoors/mining)
 "gDG" = (
 /obj/structure/bed/chair/wheelchair,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_street)
 "gDL" = (
@@ -20373,17 +19910,6 @@
 	},
 /turf/open/gm/river,
 /area/lv522/basement/colony)
-"gIY" = (
-/obj/structure/platform_decoration/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/security)
 "gIZ" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 1;
@@ -20500,10 +20026,6 @@
 "gLa" = (
 /obj/structure/cargo_container/lockmart/left{
 	color = "#aeaeae"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -21443,10 +20965,6 @@
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/fitness)
 "haX" = (
@@ -21474,10 +20992,6 @@
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B";
 	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv522/indoors/a_block/security)
@@ -21552,17 +21066,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
-"hcp" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement1,
-/area/lv522/outdoors/colony_streets/south_street)
 "hcq" = (
 /obj/structure/machinery/power/port_gen/pacman,
 /obj/effect/decal/warning_stripes{
@@ -21983,27 +21486,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/canteen)
-"hjx" = (
-/obj/structure/fence{
-	layer = 2.9
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "hjy" = (
 /obj/item/lightstick/red/spoke/planted,
 /turf/open/auto_turf/shale/layer2,
@@ -22193,14 +21675,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
-"hlr" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv522/indoors/a_block/security)
 "hlw" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -22223,7 +21697,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /turf/open/void,
 /area/lv522/indoors/a_block/fitness)
@@ -22793,10 +22267,6 @@
 	color = "#464D4B"
 	},
 /obj/effect/step_trigger/clone_cleaner,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522/indoors/a_block/security)
 "hxs" = (
@@ -23412,13 +22882,6 @@
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/admin)
-"hIc" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/closed/wall/strata_ice/dirty,
-/area/lv522/outdoors/n_rockies)
 "hIg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -24011,10 +23474,6 @@
 "hSs" = (
 /obj/structure/cargo_container/kelland/left{
 	layer = 4.13
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/floor/prison,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -24613,21 +24072,6 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
-"iaR" = (
-/obj/structure/stairs/perspective{
-	dir = 9;
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform_decoration/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "ibk" = (
 /obj/structure/prop/almayer/computers/sensor_computer1,
 /turf/open/floor/prison/sterile_white,
@@ -24917,17 +24361,6 @@
 "ieT" = (
 /turf/closed/wall/strata_ice/dirty,
 /area/lv522_l_l/outdoors/colony)
-"ieW" = (
-/obj/structure/stairs/perspective{
-	dir = 1;
-	icon_state = "p_stair_full"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement4,
-/area/lv522/outdoors/colony_streets/south_street)
 "ifd" = (
 /obj/structure/machinery/faxmachine,
 /obj/structure/surface/table/almayer,
@@ -25265,13 +24698,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/hydro)
-"iiX" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement3,
-/area/lv522/outdoors/colony_streets/south_street)
 "ijc" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -25765,29 +25191,10 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
-"isP" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison,
-/area/lv522/outdoors/colony_streets/south_street)
 "itc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/medical)
-"itl" = (
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv522/indoors/a_block/security)
 "itp" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
@@ -25816,16 +25223,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_street)
-"itB" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/closed/shuttle{
-	dir = 1;
-	icon_state = "pwall"
-	},
-/area/lv522/oob)
 "itM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -25842,10 +25239,6 @@
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B";
 	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -26025,10 +25418,6 @@
 /obj/structure/platform/mineral{
 	color = "#464D4B";
 	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
@@ -26262,10 +25651,6 @@
 /obj/structure/platform/mineral{
 	dir = 4;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -26863,10 +26248,6 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
 "iHG" = (
@@ -26971,7 +26352,7 @@
 "iKc" = (
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/structure/prop/invuln/darkness,
 /obj/structure/platform_decoration/mineral{
@@ -27355,16 +26736,6 @@
 "iQW" = (
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/mining)
-"iRa" = (
-/obj/structure/platform_decoration/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "iRm" = (
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /obj/structure/prop/invuln/lattice_prop{
@@ -28314,10 +27685,6 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_street)
 "jhQ" = (
@@ -28474,16 +27841,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/corpo)
-"jkU" = (
-/obj/structure/platform_decoration/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement4,
-/area/lv522/outdoors/colony_streets/south_street)
 "jle" = (
 /obj/structure/pipes/standard/simple/hidden/purple{
 	dir = 4
@@ -29781,7 +29138,7 @@
 /obj/structure/platform/stair_cut/alt,
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/corsat/marked,
@@ -30172,16 +29529,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/outdoors/colony_streets/south_street)
-"jIq" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/n_rockies)
 "jIG" = (
 /obj/item/tool/wet_sign{
 	pixel_x = -11;
@@ -30298,7 +29645,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -192;
-	name = "-192_teleporter_vector"
+	name = "neg_192_teleporter_vector"
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/sewer)
@@ -30610,13 +29957,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/slaughterhouse)
-"jPB" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement1,
-/area/lv522/outdoors/colony_streets/south_street)
 "jQa" = (
 /obj/structure/prop/dam/crane{
 	icon_state = "tractor";
@@ -31779,10 +31119,6 @@
 	dir = 4;
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
 "kiW" = (
@@ -31979,17 +31315,6 @@
 "klx" = (
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522/indoors/c_block/garage)
-"kly" = (
-/obj/structure/platform_decoration/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement12,
-/area/lv522/outdoors/colony_streets/south_street)
 "klA" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -32089,7 +31414,7 @@
 "knj" = (
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -32281,19 +31606,6 @@
 /obj/structure/barricade/handrail/wire,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/mining)
-"kpP" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "kpT" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -32314,7 +31626,7 @@
 /obj/structure/platform/stair_cut,
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/corsat/marked,
@@ -32594,7 +31906,7 @@
 "kvQ" = (
 /obj/effect/projector{
 	vector_x = -192;
-	name = "-192_projector_copy"
+	name = "z_192_projector_copy"
 	},
 /turf/closed/shuttle{
 	dir = 1;
@@ -34138,21 +33450,6 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/storage)
-"kYh" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "kYk" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -34814,14 +34111,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/basement/colony)
-"ljS" = (
-/obj/structure/cargo_container/kelland/left,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison,
-/area/lv522/outdoors/colony_streets/south_street)
 "lki" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -34893,10 +34182,6 @@
 /area/lv522_l_l/outdoors/comms_relay)
 "lll" = (
 /obj/structure/platform,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -34906,20 +34191,6 @@
 "lls" = (
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/slaughterhouse)
-"llB" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "llG" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -35228,16 +34499,6 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/b_block/hydro)
-"lqz" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/security)
 "lra" = (
 /turf/open/void,
 /area/lv522/oob)
@@ -35309,17 +34570,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/indoors/airtraffic)
-"lsH" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "ltg" = (
 /obj/structure/cargo_container/kelland/right,
 /turf/open/auto_turf/sand_white/layer0,
@@ -35754,16 +35004,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/medical)
-"lBv" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "lBC" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -36690,10 +35930,6 @@
 	color = "#464D4B";
 	dir = 8
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/colony_streets/south_street)
 "lRh" = (
@@ -36751,17 +35987,6 @@
 "lSu" = (
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522/atmos/filt)
-"lSv" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement4,
-/area/lv522/outdoors/colony_streets/south_street)
 "lSC" = (
 /obj/structure/platform_decoration/strata/metal,
 /turf/open/asphalt/cement/cement3,
@@ -37854,10 +37079,6 @@
 	color = "#464D4B";
 	dir = 8
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/south_street)
 "mmV" = (
@@ -37999,10 +37220,6 @@
 /obj/structure/platform/mineral{
 	dir = 4;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -38571,10 +37788,6 @@
 	color = "#464D4B";
 	dir = 8
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_street)
 "mya" = (
@@ -38865,17 +38078,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/corpo)
-"mCI" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv522/indoors/a_block/security)
 "mDd" = (
 /turf/open/floor/prison/cell_stripe,
 /area/lv522/indoors/garrison)
@@ -38984,7 +38186,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /turf/open/void,
 /area/lv522/indoors/a_block/admin)
@@ -39064,17 +38266,6 @@
 /obj/structure/window/framed/prefab,
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
-"mHd" = (
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/south_street)
 "mHi" = (
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/slaughterhouse)
@@ -39131,10 +38322,6 @@
 /area/lv522_l_l/outdoors/colony_outskirts)
 "mHU" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv522/indoors/a_block/security)
 "mHZ" = (
@@ -39159,13 +38346,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/basement/colony)
-"mIG" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "mIO" = (
 /obj/structure/machinery/vending/coffee,
 /obj/structure/machinery/light/double/blue{
@@ -39616,20 +38796,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/lv522/indoors/lone_buildings/engineering)
-"mPO" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "mPP" = (
 /obj/structure/machinery/light/double{
 	dir = 4
@@ -40478,13 +39644,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/basement/colony)
-"ncr" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement4,
-/area/lv522/outdoors/colony_streets/south_street)
 "ncs" = (
 /obj/structure/pipes/standard/simple/hidden/yellow{
 	dir = 4
@@ -40634,10 +39793,6 @@
 /obj/structure/platform/mineral{
 	dir = 4;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -41467,10 +40622,6 @@
 	dir = 1;
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/south_street)
 "npT" = (
@@ -41862,21 +41013,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
-"nvT" = (
-/obj/structure/stairs/perspective{
-	dir = 5;
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement1,
-/area/lv522/outdoors/colony_streets/south_street)
 "nvU" = (
 /obj/structure/prop/invuln/darkness,
 /obj/effect/step_trigger/clone_cleaner,
@@ -41964,14 +41100,6 @@
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
-"nyb" = (
-/obj/structure/closet/crate/trashcart,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/south_street)
 "nyc" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -42135,10 +41263,6 @@
 	color = "#464D4B";
 	dir = 8
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_street)
 "nCx" = (
@@ -42193,20 +41317,6 @@
 	},
 /obj/structure/platform/mineral{
 	color = "#464D4B"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
-"nDm" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -42318,7 +41428,7 @@
 /obj/structure/prop/invuln/darkness,
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B";
@@ -42847,17 +41957,6 @@
 	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/dorms)
-"nOg" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv522/indoors/a_block/security)
 "nOl" = (
 /obj/structure/platform/mineral{
 	color = "#464D4B"
@@ -43837,10 +42936,6 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/clone_cleaner,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522/indoors/a_block/security)
 "odg" = (
@@ -44900,17 +43995,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/east_reactor)
-"ouS" = (
-/obj/structure/platform_decoration/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "ouT" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/closed/wall/strata_outpost/reinforced/hull,
@@ -44975,10 +44059,6 @@
 /obj/structure/platform/mineral{
 	dir = 4;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
@@ -45324,21 +44404,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/kitchen)
-"oBy" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "oBD" = (
 /obj/structure/bed/chair/comfy,
 /obj/structure/machinery/firealarm{
@@ -45376,10 +44441,6 @@
 	icon_state = "W"
 	},
 /obj/structure/platform_decoration,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -45462,13 +44523,6 @@
 "oDe" = (
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/storage)
-"oDg" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement9,
-/area/lv522/outdoors/colony_streets/south_street)
 "oDj" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/glass{
 	dir = 1
@@ -46554,10 +45608,6 @@
 	color = "#464D4B";
 	dir = 8
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/south_street)
 "oVK" = (
@@ -46635,7 +45685,7 @@
 /obj/structure/prop/invuln/darkness,
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /turf/open/void,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -46873,7 +45923,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -192;
-	name = "-192_teleporter_vector"
+	name = "neg_192_teleporter_vector"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/basement/colony)
@@ -47363,20 +46413,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/dorms)
-"pgz" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "pgB" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -48195,17 +47231,6 @@
 /obj/structure/machinery/portable_atmospherics/hydroponics,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/hydro)
-"ptM" = (
-/obj/structure/stairs/perspective{
-	dir = 4;
-	icon_state = "p_stair_full"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement1,
-/area/lv522/outdoors/colony_streets/south_street)
 "ptU" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
@@ -48285,10 +47310,6 @@
 	},
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
@@ -48453,7 +47474,7 @@
 	},
 /obj/effect/projector{
 	vector_x = -192;
-	name = "-192_projector_copy"
+	name = "z_192_projector_copy"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/basement/colony)
@@ -48512,20 +47533,6 @@
 "pAN" = (
 /turf/open/floor/prison/bright_clean,
 /area/lv522/atmos/east_reactor)
-"pAW" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/structure/platform_decoration/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement9,
-/area/lv522/outdoors/colony_streets/south_street)
 "pAX" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -49349,20 +48356,8 @@
 	dir = 4;
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/south_street)
-"pOu" = (
-/obj/effect/step_trigger/clone_cleaner,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/n_rockies)
 "pOA" = (
 /obj/structure/bookcase{
 	density = 0;
@@ -49473,17 +48468,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/sewer)
-"pQw" = (
-/obj/structure/platform_decoration/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/south_street)
 "pQx" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/corsat/squares,
@@ -49885,13 +48869,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/corporate)
-"pWU" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer2,
-/area/lv522/outdoors/n_rockies)
 "pXb" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/corsat/marked,
@@ -51176,10 +50153,6 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 1
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_street)
 "qqk" = (
@@ -51237,17 +50210,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/mining)
-"qrt" = (
-/obj/structure/platform/strata,
-/obj/structure/platform/strata{
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/n_rockies)
 "qru" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/window/reinforced{
@@ -53553,17 +52515,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/garrison/storage)
-"rbq" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/south_street)
 "rbw" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -54249,10 +53200,6 @@
 	dir = 4;
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/colony_streets/south_street)
 "rly" = (
@@ -54772,20 +53719,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement1,
 /area/lv522_l_l/outdoors/colony)
-"ruI" = (
-/obj/structure/machinery/colony_floodlight{
-	layer = 4.3
-	},
-/obj/structure/platform_decoration/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement9,
-/area/lv522/outdoors/colony_streets/south_street)
 "ruJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/rack,
@@ -54822,24 +53755,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/dark_sterile,
 /area/lv522/indoors/a_block/medical)
-"rvc" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/platform_decoration{
-	dir = 1
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "rvg" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -55423,17 +54338,6 @@
 /obj/structure/largecrate/random,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
-"rGh" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "rGu" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -55533,10 +54437,6 @@
 /obj/structure/platform/mineral{
 	dir = 4;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv522/indoors/a_block/security)
@@ -55806,10 +54706,6 @@
 /obj/structure/cargo_container/lockmart/mid{
 	color = "#aeaeae"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_street)
 "rMC" = (
@@ -55952,22 +54848,6 @@
 /obj/structure/machinery/light/double,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/indoors/corporate)
-"rPh" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "rPm" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -56425,10 +55305,6 @@
 	dir = 4;
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_street)
 "rVV" = (
@@ -56471,7 +55347,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/structure/platform/mineral{
 	color = "#464D4B";
@@ -56613,13 +55489,6 @@
 	},
 /turf/open/floor/whitebluefull,
 /area/lv522/indoors/c_block/mining)
-"rZI" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/closed/wall/strata_ice/dirty,
-/area/lv522/indoors/a_block/corpo)
 "rZK" = (
 /obj/structure/platform/mineral{
 	dir = 1;
@@ -56911,13 +55780,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/comms_relay)
-"see" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv522/indoors/a_block/security)
 "seh" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
@@ -57014,17 +55876,6 @@
 /obj/item/lightstick/red/spoke/planted{
 	pixel_x = 11;
 	pixel_y = 25
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
-"sgG" = (
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -57799,10 +56650,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_street)
 "ssx" = (
@@ -57889,21 +56736,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
-"suh" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "suv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -58077,14 +56909,6 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/lv522/indoors/c_block/garage)
-"swO" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "sxg" = (
 /obj/structure/pipes/standard/simple/hidden/purple{
 	dir = 4
@@ -58429,17 +57253,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/yellowfull,
 /area/lv522/indoors/lone_buildings/chunk)
-"sDe" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/security)
 "sDh" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 8
@@ -58715,40 +57528,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/basement/colony)
-"sHq" = (
-/obj/structure/fence{
-	layer = 2.9
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
-"sHs" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "sHv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/yellow{
@@ -58974,14 +57753,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/dorms)
-"sKJ" = (
-/obj/structure/cargo_container/kelland/right,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison,
-/area/lv522/outdoors/colony_streets/south_street)
 "sKS" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/item/prop/colony/canister{
@@ -59130,17 +57901,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/outdoors/colony_outskirts)
-"sNj" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement9,
-/area/lv522/outdoors/colony_streets/south_street)
 "sNk" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/machinery/light/double{
@@ -59383,16 +58143,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/oob/w_y_vault)
-"sPO" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement4,
-/area/lv522/outdoors/colony_streets/south_street)
 "sPX" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/prison/floor_plate,
@@ -59470,10 +58220,6 @@
 /obj/structure/platform_decoration/mineral{
 	dir = 1;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -59946,10 +58692,6 @@
 	dir = 8
 	},
 /obj/structure/platform/strata,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
 "taH" = (
@@ -60042,7 +58784,7 @@
 /obj/structure/prop/invuln/darkness,
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/structure/platform/mineral{
 	color = "#464D4B";
@@ -60985,17 +59727,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/dorms)
-"tqD" = (
-/obj/structure/platform_decoration/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement14,
-/area/lv522/outdoors/colony_streets/south_street)
 "tqF" = (
 /obj/structure/platform/mineral{
 	color = "#464D4B";
@@ -61621,10 +60352,6 @@
 /area/lv522_l_l/indoors/dorms)
 "tBW" = (
 /obj/structure/platform_decoration/strata,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
 "tCC" = (
@@ -62043,17 +60770,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/slaughterhouse)
-"tJD" = (
-/obj/structure/stairs/perspective{
-	dir = 1;
-	icon_state = "p_stair_full"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "tJM" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	id = "MiningShutterNorth";
@@ -62461,10 +61177,6 @@
 "tOV" = (
 /obj/structure/cargo_container/arious/leftmid{
 	color = "#aeaeae"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -62891,10 +61603,6 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/colony_streets/south_street)
 "tXa" = (
@@ -63034,10 +61742,6 @@
 /obj/structure/platform_decoration/mineral{
 	dir = 4;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -63211,10 +61915,6 @@
 	},
 /obj/structure/platform/mineral{
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -63710,7 +62410,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -192;
-	name = "-192_teleporter_vector"
+	name = "neg_192_teleporter_vector"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/basement/colony)
@@ -63829,7 +62529,7 @@
 "ulM" = (
 /obj/effect/projector{
 	vector_x = -192;
-	name = "-192_projector_copy"
+	name = "z_192_projector_copy"
 	},
 /turf/open/floor/prison/cell_stripe,
 /area/lv522/basement/colony)
@@ -65136,21 +63836,6 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony)
-"uEh" = (
-/obj/structure/machinery/colony_floodlight{
-	pixel_x = -1;
-	pixel_y = -5
-	},
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement12,
-/area/lv522/outdoors/colony_streets/south_street)
 "uEl" = (
 /obj/structure/platform/mineral{
 	color = "#464D4B"
@@ -66269,10 +64954,6 @@
 	color = "#464D4B";
 	dir = 8
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
 "uVg" = (
@@ -66449,17 +65130,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/dorms)
-"uWQ" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement/cement12,
-/area/lv522/outdoors/colony_streets/south_street)
 "uWT" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics,
 /obj/effect/decal/cleanable/dirt,
@@ -66599,20 +65269,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/west_reactor)
-"uYU" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv522/indoors/a_block/security)
 "uYW" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -67053,23 +65709,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/corporate)
-"vha" = (
-/obj/structure/fence{
-	layer = 2.9
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "vhq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -67434,16 +66073,6 @@
 /obj/item/stack/sheet/cardboard/full_stack,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/cargo)
-"vmR" = (
-/obj/structure/pipes/standard/manifold/hidden/green{
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "vmT" = (
 /obj/structure/platform_decoration/mineral{
 	dir = 1;
@@ -67883,13 +66512,6 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/west_reactor)
-"vvB" = (
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/south_street)
 "vvH" = (
 /obj/structure/flag/plantable/ua{
 	pixel_y = 24;
@@ -67898,18 +66520,6 @@
 /obj/item/lightstick/red/spoke/planted,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony_outskirts)
-"vwh" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/platform,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "vwk" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/prison,
@@ -68002,10 +66612,6 @@
 "vxG" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 1
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -68294,20 +66900,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
-"vCB" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/outdoors/colony_streets/south_street)
 "vCE" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -69190,10 +67782,6 @@
 /obj/structure/cargo_container/lockmart/right{
 	color = "#aeaeae"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_street)
 "vQI" = (
@@ -69496,7 +68084,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/corsat/marked,
@@ -69783,16 +68371,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/lv522/indoors/a_block/security)
-"vZV" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 10
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/lv522/outdoors/colony_streets/south_street)
 "way" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -70009,30 +68587,9 @@
 /obj/structure/machinery/photocopier,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/corpo)
-"wcP" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "wcR" = (
 /obj/item/tool/crowbar,
 /turf/open/asphalt/cement/cement15,
-/area/lv522/outdoors/colony_streets/south_street)
-"wcU" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_street)
 "wdd" = (
 /obj/effect/decal/warning_stripes{
@@ -70235,17 +68792,6 @@
 "wgu" = (
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/outdoors/colony_outskirts)
-"wgw" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/colony_streets/south_street)
 "wgR" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
@@ -70271,10 +68817,6 @@
 /obj/structure/platform/mineral{
 	dir = 4;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/admin)
@@ -70848,14 +69390,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/basement/colony)
-"wrj" = (
-/obj/effect/step_trigger/clone_cleaner,
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/closed/wall/strata_ice/dirty,
-/area/lv522/outdoors/n_rockies)
 "wrt" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	dir = 10
@@ -70973,17 +69507,6 @@
 	},
 /turf/open/asphalt/cement/cement12,
 /area/lv522/outdoors/colony_streets/south_street)
-"wsZ" = (
-/obj/structure/platform/mineral{
-	dir = 4;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/shale/layer1,
-/area/lv522/outdoors/n_rockies)
 "wtg" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -71075,16 +69598,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/n_rockies)
-"wuv" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv522/indoors/a_block/security)
 "wuz" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -71821,10 +70334,6 @@
 	},
 /obj/structure/platform/mineral{
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
@@ -73289,10 +71798,6 @@
 /obj/structure/platform/mineral{
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
 "xfL" = (
@@ -73339,7 +71844,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -385;
-	name = "-385_teleporter_vector"
+	name = "neg_385_teleporter_vector"
 	},
 /turf/open/void,
 /area/lv522/indoors/a_block/fitness)
@@ -74199,17 +72704,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/garrison)
-"xuQ" = (
-/obj/structure/platform_decoration/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/security)
 "xuS" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/prison/kitchen,
@@ -74382,16 +72876,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_street)
-"xxP" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "xxT" = (
 /obj/structure/bed/chair/comfy,
 /obj/effect/decal/cleanable/dirt,
@@ -74541,21 +73025,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/lv522/landing_zone_1/ceiling)
-"xzu" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv522/indoors/a_block/security)
 "xzS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/purple{
@@ -74745,10 +73214,6 @@
 /obj/structure/platform/mineral{
 	dir = 4;
 	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
 	},
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -75400,17 +73865,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
-"xND" = (
-/obj/structure/machinery/colony_floodlight{
-	layer = 6;
-	light_color = "#dae2ff"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/corsat/marked,
-/area/lv522/indoors/a_block/security)
 "xNJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform_decoration/mineral{
@@ -75965,10 +74419,6 @@
 	dir = 4;
 	color = "#464D4B"
 	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_street)
 "xXh" = (
@@ -76394,21 +74844,6 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/east_reactor)
-"ycv" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464D4B"
-	},
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/asphalt/cement,
-/area/lv522/outdoors/colony_streets/south_street)
 "ycz" = (
 /obj/structure/platform/mineral{
 	color = "#464D4B"
@@ -76617,16 +75052,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/sewer)
-"ygF" = (
-/obj/structure/platform_decoration/mineral{
-	color = "#464D4B"
-	},
-/obj/effect/projector{
-	vector_x = 385;
-	name = "385_projector_copy"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/security)
 "ygJ" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/glass{
 	name = "\improper A-Block Dorms And Office Airlock";
@@ -131868,10 +130293,10 @@ wpA
 xAO
 lIa
 aHd
-cQr
-cMj
-pAW
-atF
+rHB
+aVg
+wiS
+rYq
 hFY
 hFY
 wTu
@@ -132685,11 +131110,11 @@ cte
 xAO
 lIa
 aHd
-kly
-cMj
-lBv
-sNj
-atF
+ixK
+aVg
+cjE
+bdL
+rYq
 hFY
 hFY
 pVH
@@ -133458,15 +131883,15 @@ syO
 gaj
 gaj
 syO
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-pOu
-wrj
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+syO
+gxx
 syO
 gaj
 syO
@@ -133502,12 +131927,12 @@ cte
 xAO
 kUR
 uNl
-uWQ
-cMj
-lBv
-cMj
-sNj
-atF
+xOB
+aVg
+cjE
+aVg
+bdL
+rYq
 hFY
 cZO
 cZO
@@ -134271,33 +132696,33 @@ qYy
 qYy
 eSO
 syO
-jJt
-jJt
-cHk
-cHk
-hIc
-jJt
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
-hIc
-jJt
-cHk
-cHk
-jJt
-jJt
-jJt
-cHk
-cHk
-jJt
-jJt
-fte
-bNe
-vvB
-sPO
+eSO
+eSO
+wgh
+wgh
+qYy
+eSO
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
+qYy
+eSO
+wgh
+wgh
+eSO
+eSO
+eSO
+wgh
+wgh
+eSO
+eSO
+oow
+jvo
+jdq
+ewf
 uNl
 xtb
 bBt
@@ -134319,14 +132744,14 @@ cte
 xAO
 lIa
 aHd
-cQr
-cMj
-lBv
-cMj
-cMj
-sNj
-goQ
-hcp
+rHB
+aVg
+cjE
+aVg
+aVg
+bdL
+ncg
+rQg
 aUO
 nxb
 ncg
@@ -135088,32 +133513,32 @@ qYy
 qYy
 eSO
 syO
-jJt
-jJt
-jJt
-cHk
-cHk
-jJt
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-cHk
-cHk
-cHk
-jJt
-jJt
-cHk
-jJt
-jJt
-jJt
-fte
+eSO
+eSO
+eSO
+wgh
+wgh
+eSO
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+wgh
+wgh
+wgh
+eSO
+eSO
+wgh
+eSO
+eSO
+eSO
+oow
 jhv
-vvB
+jdq
 sRj
 aHd
 oUn
@@ -135136,14 +133561,14 @@ cte
 xAO
 lIa
 aHd
-kly
-cMj
-lBv
-cMj
-cMj
-vvB
-vvB
-vvB
+ixK
+aVg
+cjE
+aVg
+aVg
+jdq
+jdq
+jdq
 uTu
 jdq
 aVg
@@ -135905,33 +134330,33 @@ wgh
 qYy
 qYy
 gxx
-jJt
-jJt
-jJt
-jJt
-cHk
-jJt
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-cHk
-cHk
-cHk
-jJt
-jJt
-jJt
-jJt
-aFe
-fte
-fte
-aGV
-sPO
+eSO
+eSO
+eSO
+eSO
+wgh
+eSO
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+wgh
+wgh
+wgh
+eSO
+eSO
+eSO
+eSO
+lrm
+oow
+oow
+twi
+ewf
 uNl
 mjW
 oLU
@@ -135953,14 +134378,14 @@ iec
 yaz
 gty
 uNl
-uWQ
-cMj
-vZV
-eCd
-eCd
-eCd
-swO
-eCd
+xOB
+aVg
+esw
+lhC
+lhC
+lhC
+eDS
+lhC
 vUz
 lhC
 eDS
@@ -136722,33 +135147,33 @@ eSO
 eSO
 eSO
 gxx
-jJt
-jJt
-jJt
-jJt
-cHk
-jJt
-hIc
-cHk
-jJt
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-jJt
-jJt
-cHk
-jJt
-jJt
-jJt
-jJt
-jJt
-fte
-cMj
-cMj
-sPO
+eSO
+eSO
+eSO
+eSO
+wgh
+eSO
+qYy
+wgh
+eSO
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+eSO
+eSO
+wgh
+eSO
+eSO
+eSO
+eSO
+eSO
+oow
+aVg
+aVg
+ewf
 uNl
 xOC
 xOC
@@ -136770,14 +135195,14 @@ uNl
 xOC
 uNl
 ixc
-uEh
-vvB
-vvB
-vvB
-cMj
-cMj
-cMj
-cMj
+sFp
+jdq
+jdq
+jdq
+aVg
+aVg
+aVg
+aVg
 uTu
 jdq
 jdq
@@ -137539,37 +135964,37 @@ eSO
 eSO
 eSO
 syO
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-cHk
-jJt
-jJt
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-pWU
-jJt
-fte
-cMj
-cMj
-sNj
-sHq
-hcp
-jPB
-mIG
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+wgh
+eSO
+eSO
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+noT
+eSO
+oow
+aVg
+aVg
+bdL
+pdd
+rQg
+oIu
+tOo
 lCX
 myP
 vsG
@@ -137583,18 +136008,18 @@ adk
 qfD
 vJu
 cbB
-ycv
+uOA
 npQ
-goQ
-goQ
-eRa
-vvB
-cMj
-cMj
-cMj
-cMj
-vvB
-vvB
+ncg
+ncg
+vdp
+jdq
+aVg
+aVg
+aVg
+aVg
+jdq
+jdq
 uTu
 eBq
 bBB
@@ -138356,37 +136781,37 @@ eSO
 eSO
 eSO
 syO
-jJt
-jJt
-jJt
-jJt
-jJt
-cHk
-cHk
-jJt
-jJt
-hIc
-hIc
-hIc
-hIc
-cHk
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-fte
-fte
-fte
-cMj
-cMj
-vha
-vvB
-vvB
-ncr
+eSO
+eSO
+eSO
+eSO
+eSO
+wgh
+wgh
+eSO
+eSO
+qYy
+qYy
+qYy
+qYy
+wgh
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+oow
+oow
+oow
+aVg
+aVg
+lKl
+jdq
+jdq
+mnb
 lCX
 rqd
 rMi
@@ -138400,18 +136825,18 @@ suI
 hhe
 vKF
 cbB
-uWQ
-cMj
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-vvB
-vvB
-vvB
+xOB
+aVg
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+jdq
+jdq
+jdq
 uTu
 fgk
 oFz
@@ -139173,37 +137598,37 @@ eSO
 eSO
 eSO
 syO
+eSO
+eSO
+wgh
+wgh
+eSO
+wgh
+qYy
+eSO
+qYy
+qYy
+qYy
+qYy
+eSO
+wgh
+eSO
+eSO
+eSO
+eSO
+eSO
+noT
+eSO
+eSO
+eSO
 jJt
-jJt
-cHk
-cHk
-jJt
-cHk
-hIc
-jJt
-hIc
-hIc
-hIc
-hIc
-jJt
-cHk
-jJt
-jJt
-jJt
-jJt
-jJt
-pWU
-jJt
-jJt
-jJt
-jJt
-vvB
-vvB
-vvB
-vha
-vvB
-vvB
-jkU
+jdq
+jdq
+jdq
+lKl
+jdq
+jdq
+tWt
 lCX
 qxp
 xqd
@@ -139217,18 +137642,18 @@ dyW
 haL
 vLu
 cbB
-uWQ
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-cMj
-vvB
-vvB
+xOB
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+aVg
+jdq
+jdq
 uTu
 uwv
 wiU
@@ -139990,37 +138415,37 @@ eSO
 eSO
 eSO
 syO
-jJt
-jJt
-cHk
-cHk
-jJt
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-cHk
-jJt
-jJt
-jJt
-jJt
-jJt
-pWU
-pWU
-jJt
-jJt
-jJt
-vvB
-vvB
-bNe
-vha
-vvB
-vvB
-sPO
+eSO
+eSO
+wgh
+wgh
+eSO
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+wgh
+eSO
+eSO
+eSO
+eSO
+eSO
+noT
+noT
+eSO
+eSO
+eSO
+jdq
+jdq
+jvo
+lKl
+jdq
+jdq
+ewf
 uNl
 uNl
 mLs
@@ -140034,18 +138459,18 @@ gQB
 bip
 uNl
 uNl
-uWQ
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-cMj
-cMj
+xOB
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+aVg
+aVg
 uTu
 jdq
 jdq
@@ -140807,62 +139232,62 @@ eSO
 eSO
 eSO
 syO
-cHk
-cHk
-jJt
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-cHk
-jJt
-jJt
-jJt
-jJt
-jJt
+wgh
+wgh
+eSO
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+wgh
+eSO
+eSO
+eSO
+eSO
+eSO
 dXP
-wsZ
-wsZ
-wsZ
-wsZ
-wsZ
-mHd
-mHd
+pUR
+pUR
+pUR
+pUR
+pUR
+evU
+evU
 izt
-hjx
-pQw
-vvB
-sNj
-goQ
-nvT
-ptM
-ptM
-eNt
-goQ
-mPO
+daF
+btx
+jdq
+bdL
+ncg
+rxu
+smY
+smY
+kwc
+ncg
+nfe
 uNl
 uNl
 uNl
 uNl
 uNl
 ixc
-uEh
-vvB
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-cMj
-cMj
+sFp
+jdq
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+aVg
+aVg
 tWr
 aVg
 aVg
@@ -141624,23 +140049,23 @@ wgh
 eSO
 eSO
 syO
-jJt
-jJt
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-cHk
-cHk
-jJt
-jJt
-jJt
-jJt
-jJt
+eSO
+eSO
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+wgh
+wgh
+eSO
+eSO
+eSO
+eSO
+eSO
 dXP
 ovQ
 jSV
@@ -141652,34 +140077,34 @@ jSV
 jSV
 jSV
 ajs
-wgw
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-sNj
+hbD
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+bdL
 jEq
 jEq
 jEq
 jEq
 jEq
 jEq
-eRa
-vvB
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-cMj
-cMj
+vdp
+jdq
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+aVg
+aVg
 tWr
 aVg
 aVg
@@ -142441,22 +140866,22 @@ wgh
 eSO
 eSO
 syO
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-jJt
-cHk
-cHk
-cHk
-jJt
-jJt
-jJt
-jJt
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+eSO
+wgh
+wgh
+wgh
+eSO
+eSO
+eSO
+eSO
 tBW
 xfx
 ajs
@@ -142470,33 +140895,33 @@ wrC
 jSV
 mxY
 tYF
-vvB
-vvB
-vvB
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
+jdq
+jdq
+jdq
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
 sYJ
 sYJ
 sYJ
 sYJ
 sYJ
 sYJ
-vvB
-vvB
-vvB
-cMj
-vvB
-vvB
-vvB
-cMj
-cMj
-fBI
-dvz
-dvz
+jdq
+jdq
+jdq
+aVg
+jdq
+jdq
+jdq
+aVg
+aVg
+qbu
+cWS
+cWS
 aWN
 cWS
 cWS
@@ -143258,24 +141683,24 @@ eSO
 eSO
 eSO
 gxx
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-jJt
-cHk
-jJt
-cHk
-jJt
-jJt
-jJt
-jJt
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+eSO
+wgh
+eSO
+wgh
+eSO
+eSO
+eSO
+eSO
 tBW
 iHB
-hIc
+qYy
 jSV
 wrC
 wrC
@@ -143286,31 +141711,31 @@ wrC
 wrC
 jSV
 moR
-pQw
-vvB
-vvB
-cMj
-cMj
-cMj
-cMj
-vvB
-bNe
-fBI
+btx
+jdq
+jdq
+aVg
+aVg
+aVg
+aVg
+jdq
+jvo
+qbu
 ftU
 ftU
 ftU
 ftU
 ftU
 ftU
-tqD
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-fBI
+uFp
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+qbu
 xXf
 ote
 ote
@@ -144075,24 +142500,24 @@ eSO
 eSO
 eSO
 syO
-jJt
-jJt
-jJt
-hIc
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
+eSO
+eSO
+eSO
+qYy
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
 dXP
-wsZ
-wsZ
-wsZ
-wsZ
+pUR
+pUR
+pUR
+pUR
 cob
-hIc
-hIc
+qYy
+qYy
 jSV
 wrC
 wrC
@@ -144103,31 +142528,31 @@ wrC
 wdY
 ajs
 ajs
-wgw
-vvB
-vvB
-cMj
-cMj
-cMj
-cMj
-cMj
-bNe
-sPO
+hbD
+jdq
+jdq
+aVg
+aVg
+aVg
+aVg
+aVg
+jvo
+ewf
 jSV
 jSV
 jSV
 jSV
 jSV
 jSV
-suh
-tqD
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-sPO
+aHH
+uFp
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+ewf
 ote
 ote
 sjJ
@@ -144892,16 +143317,16 @@ eSO
 eSO
 eSO
 syO
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
 fgD
 jSV
 jSV
@@ -144920,15 +143345,15 @@ wrC
 wrC
 ajs
 lRb
-rbq
-vvB
-vvB
-cMj
-cMj
-fBI
-dvz
-dvz
-dvz
+cbQ
+jdq
+jdq
+aVg
+aVg
+qbu
+cWS
+cWS
+cWS
 neO
 jSV
 wrC
@@ -144938,13 +143363,13 @@ wrC
 jSV
 jSV
 rVo
-dvz
-dvz
-tqD
-vvB
-vvB
-fBI
-nDm
+cWS
+cWS
+uFp
+jdq
+jdq
+qbu
+waQ
 ote
 nlS
 lON
@@ -145709,16 +144134,16 @@ eSO
 wgh
 wgh
 gaj
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
 fgD
 jSV
 wrC
@@ -145738,11 +144163,11 @@ wrC
 ajs
 rll
 itP
-vvB
-cMj
-cMj
-cMj
-sPO
+jdq
+aVg
+aVg
+aVg
+ewf
 jSV
 jSV
 jSV
@@ -145757,10 +144182,10 @@ jSV
 jSV
 jSV
 jSV
-uWQ
-vvB
-vvB
-sPO
+xOB
+jdq
+jdq
+ewf
 ote
 ote
 kSZ
@@ -146526,16 +144951,16 @@ wgh
 wgh
 wgh
 syO
-jJt
-jJt
-jJt
-cHk
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
+eSO
+eSO
+eSO
+wgh
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
 fgD
 jSV
 wrC
@@ -146554,12 +144979,12 @@ wrC
 wrC
 jSV
 ajs
-lsH
-cMj
-cMj
-cMj
-cMj
-sPO
+reh
+aVg
+aVg
+aVg
+aVg
+ewf
 jSV
 wrC
 wrC
@@ -146574,10 +144999,10 @@ wrC
 wrC
 wrC
 jSV
-uWQ
-vvB
-fBI
-nDm
+xOB
+jdq
+qbu
+waQ
 ote
 sjy
 sjy
@@ -147343,16 +145768,16 @@ eSO
 eSO
 eSO
 syO
-jJt
-jJt
-jJt
-cHk
-cHk
-jJt
-cHk
-jJt
-jJt
-jJt
+eSO
+eSO
+eSO
+wgh
+wgh
+eSO
+wgh
+eSO
+eSO
+eSO
 fgD
 jSV
 wrC
@@ -147370,13 +145795,13 @@ wrC
 wrC
 wrC
 jSV
-kYh
-dKy
-cMj
-cMj
-cMj
-cMj
-sPO
+sEJ
+nXN
+aVg
+aVg
+aVg
+aVg
+ewf
 jSV
 wrC
 wrC
@@ -147391,9 +145816,9 @@ wrC
 wrC
 wrC
 jSV
-uWQ
-vvB
-sPO
+xOB
+jdq
+ewf
 ote
 ote
 mhn
@@ -148160,17 +146585,17 @@ eSO
 eSO
 eSO
 syO
-jJt
-jJt
-jJt
-jJt
-jJt
-cHk
-cHk
-cHk
-jJt
-jJt
-jIq
+eSO
+eSO
+eSO
+eSO
+eSO
+wgh
+wgh
+wgh
+eSO
+eSO
+phg
 jSV
 wrC
 wrC
@@ -148187,13 +146612,13 @@ wrC
 wrC
 wrC
 jSV
-lsH
-cMj
-cMj
-cMj
-cMj
-cMj
-sPO
+reh
+aVg
+aVg
+aVg
+aVg
+aVg
+ewf
 jSV
 wrC
 wrC
@@ -148208,9 +146633,9 @@ wrC
 wrC
 wrC
 jSV
-wcP
-iiX
-xxP
+rZK
+yhR
+bYV
 ote
 hOL
 oLz
@@ -148977,17 +147402,17 @@ eSO
 qYy
 eSO
 syO
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-cHk
-cHk
-cHk
-cHk
-jIq
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+wgh
+wgh
+wgh
+wgh
+phg
 jSV
 wrC
 wrC
@@ -149794,16 +148219,16 @@ eSO
 qYy
 eSO
 syO
-jJt
-jJt
-hIc
-hIc
-jJt
-jJt
-jJt
-cHk
-cHk
-cHk
+eSO
+eSO
+qYy
+qYy
+eSO
+eSO
+eSO
+wgh
+wgh
+wgh
 fgD
 jSV
 wrC
@@ -150611,16 +149036,16 @@ qYy
 qYy
 eSO
 syO
-jJt
-jJt
-hIc
-hIc
-hIc
-jJt
-jJt
-jJt
-cHk
-cHk
+eSO
+eSO
+qYy
+qYy
+qYy
+eSO
+eSO
+eSO
+wgh
+wgh
 fgD
 jSV
 wrC
@@ -151428,17 +149853,17 @@ qYy
 qYy
 eSO
 syO
-jJt
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-jJt
-jIq
+eSO
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+eSO
+phg
 jSV
 jSV
 wrC
@@ -152245,16 +150670,16 @@ qYy
 eSO
 eSO
 syO
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-jJt
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+eSO
 bXr
 ivQ
 jSV
@@ -153062,17 +151487,17 @@ qYy
 eSO
 eSO
 syO
-hIc
-hIc
-hIc
-hIc
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
+qYy
+qYy
+qYy
+qYy
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
 fgD
 jSV
 wrC
@@ -153879,17 +152304,17 @@ qYy
 eSO
 eSO
 gxx
-hIc
-hIc
-hIc
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
+qYy
+qYy
+qYy
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
 fgD
 cwt
 jSV
@@ -153906,12 +152331,12 @@ wrC
 wrC
 wrC
 ajs
-oBy
-ouS
-cMj
-vvB
-vvB
-vvB
+aPw
+amc
+aVg
+jdq
+jdq
+jdq
 ubT
 jSV
 wrC
@@ -154696,24 +153121,24 @@ eSO
 eSO
 eSO
 gxx
-hIc
-hIc
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
+qYy
+qYy
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
 bXr
 bHl
 bHl
 bHl
 uUX
-hIc
-hIc
+qYy
+qYy
 ajs
 jSV
 wrC
@@ -154724,12 +153149,12 @@ wrC
 wrC
 ajs
 pGh
-wgw
-vvB
-vvB
-vvB
-vvB
-sPO
+hbD
+jdq
+jdq
+jdq
+jdq
+ewf
 jSV
 wrC
 wrC
@@ -155513,25 +153938,25 @@ eSO
 eSO
 eSO
 gxx
-hIc
-jJt
-jJt
-jJt
-jJt
-hIc
-jJt
-cHk
-cHk
-jJt
-jJt
-jJt
-jJt
-jJt
-jJt
+qYy
+eSO
+eSO
+eSO
+eSO
+qYy
+eSO
+wgh
+wgh
+eSO
+eSO
+eSO
+eSO
+eSO
+eSO
 pvo
 kiV
-hIc
-rZI
+qYy
+iOi
 ajs
 wrC
 wrC
@@ -155541,12 +153966,12 @@ wrC
 wdY
 ajs
 lRb
-rbq
-vvB
-vvB
-vvB
-vvB
-sPO
+cbQ
+jdq
+jdq
+jdq
+jdq
+ewf
 jSV
 wrC
 wrC
@@ -156330,21 +154755,21 @@ eSO
 eSO
 eSO
 gxx
-hIc
-jJt
-jJt
-jJt
-jJt
-hIc
-hIc
-jJt
-cHk
-jJt
-cHk
-jJt
-jJt
-jJt
-jJt
+qYy
+eSO
+eSO
+eSO
+eSO
+qYy
+qYy
+eSO
+wgh
+eSO
+wgh
+eSO
+eSO
+eSO
+eSO
 fgD
 jSV
 jSV
@@ -156358,12 +154783,12 @@ wdY
 wdY
 ajs
 rll
-pQw
-vvB
-vvB
-vvB
-vvB
-sPO
+btx
+jdq
+jdq
+jdq
+jdq
+ewf
 jSV
 wrC
 wrC
@@ -157147,21 +155572,21 @@ eSO
 eSO
 qYy
 gxx
-hIc
-jJt
-jJt
-jJt
-jJt
-jJt
-hIc
-hIc
-cHk
-cHk
-cHk
-cHk
-jJt
-jJt
-jJt
+qYy
+eSO
+eSO
+eSO
+eSO
+eSO
+qYy
+qYy
+wgh
+wgh
+wgh
+wgh
+eSO
+eSO
+eSO
 wHA
 jSV
 wrC
@@ -157175,12 +155600,12 @@ wdY
 wdY
 ajs
 wdY
-wgw
-vvB
-vvB
-vvB
-vvB
-sPO
+hbD
+jdq
+jdq
+jdq
+jdq
+ewf
 jSV
 wrC
 wrC
@@ -157964,21 +156389,21 @@ eSO
 eSO
 qYy
 gxx
-hIc
-jJt
-jJt
-jJt
-jJt
-jJt
-hIc
-hIc
-hIc
-hIc
-cHk
-cHk
-jJt
-jJt
-jJt
+qYy
+eSO
+eSO
+eSO
+eSO
+eSO
+qYy
+qYy
+qYy
+qYy
+wgh
+wgh
+eSO
+eSO
+eSO
 fgD
 jSV
 wrC
@@ -157992,12 +156417,12 @@ wdY
 wdY
 ajs
 mxY
-rbq
-vvB
-vvB
-vvB
-vvB
-sPO
+cbQ
+jdq
+jdq
+jdq
+jdq
+ewf
 jSV
 wrC
 wrC
@@ -158781,21 +157206,21 @@ eSO
 eSO
 qYy
 gxx
-hIc
-jJt
-jJt
-jJt
-jJt
-jJt
-hIc
-hIc
-hIc
-hIc
-hIc
-cHk
-cHk
-jJt
-jJt
+qYy
+eSO
+eSO
+eSO
+eSO
+eSO
+qYy
+qYy
+qYy
+qYy
+qYy
+wgh
+wgh
+eSO
+eSO
 fgD
 jSV
 wrC
@@ -158809,12 +157234,12 @@ wdY
 wdY
 ajs
 moR
-pQw
-vvB
-vvB
-vvB
-vvB
-sPO
+btx
+jdq
+jdq
+jdq
+jdq
+ewf
 jSV
 wrC
 wrC
@@ -159598,21 +158023,21 @@ wgh
 eSO
 qYy
 gxx
-hIc
-jJt
-cHk
-jJt
-jJt
-jJt
-hIc
-hIc
-hIc
-hIc
-hIc
-cHk
-cHk
-jJt
-jJt
+qYy
+eSO
+wgh
+eSO
+eSO
+eSO
+qYy
+qYy
+qYy
+qYy
+qYy
+wgh
+wgh
+eSO
+eSO
 fgD
 jSV
 jSV
@@ -160415,24 +158840,24 @@ wgh
 eSO
 eSO
 gxx
-hIc
-hIc
-cHk
-jJt
-jJt
-jJt
-jJt
-jJt
-hIc
-hIc
-jJt
-jJt
-jJt
-jJt
-jJt
+qYy
+qYy
+wgh
+eSO
+eSO
+eSO
+eSO
+eSO
+qYy
+qYy
+eSO
+eSO
+eSO
+eSO
+eSO
 bXr
 taz
-hIc
+qYy
 iOi
 ajs
 ajs
@@ -161232,33 +159657,33 @@ eSO
 eSO
 eSO
 syO
-hIc
-hIc
-cHk
-cHk
-jJt
-jJt
-jJt
-jJt
-hIc
-hIc
-hIc
-jJt
-jJt
-jJt
-jJt
+qYy
+qYy
+wgh
+wgh
+eSO
+eSO
+eSO
+eSO
+qYy
+qYy
+qYy
+eSO
+eSO
+eSO
+eSO
 tBW
 iHB
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
 gxx
 fIU
-fte
+oow
 gwX
 eBq
 bBB
@@ -162049,33 +160474,33 @@ eSO
 eSO
 eSO
 syO
-jJt
-hIc
-cHk
-cHk
-cHk
-jJt
-jJt
-jJt
-jJt
-hIc
-hIc
-jJt
-jJt
-jJt
+eSO
+qYy
+wgh
+wgh
+wgh
+eSO
+eSO
+eSO
+eSO
+qYy
+qYy
+eSO
+eSO
+eSO
 tBW
 iHB
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
 gxx
 oow
-fte
+oow
 qSR
 fgk
 oFz
@@ -162877,22 +161302,22 @@ syO
 syO
 syO
 gxx
-hIc
-cHk
-jJt
-efR
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
+qYy
+wgh
+eSO
+pFK
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
 gxx
 fIU
-fte
+oow
 lsc
 utN
 wiU
@@ -163694,23 +162119,23 @@ eSO
 eSO
 eSO
 gxx
-hIc
-cHk
-jJt
-efR
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
+qYy
+wgh
+eSO
+pFK
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
 gxx
-fte
-fte
-fte
+oow
+oow
+oow
 lsc
 oow
 jvo
@@ -164511,23 +162936,23 @@ wgh
 wgh
 eSO
 gxx
-hIc
-cHk
-jJt
-afP
-qrt
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
+qYy
+wgh
+eSO
+whV
+dJD
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
 gxx
-fte
-fte
-fte
+oow
+oow
+oow
 qSR
 oow
 oow
@@ -165328,23 +163753,23 @@ wgh
 wgh
 eSO
 gxx
-hIc
-cHk
-cHk
-cHk
-efR
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
+qYy
+wgh
+wgh
+wgh
+pFK
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
 gxx
-fte
-fte
-fte
+oow
+oow
+oow
 gxx
 oow
 gxx
@@ -166145,19 +164570,19 @@ wgh
 wgh
 eSO
 syO
-hIc
-cHk
-cHk
-cHk
-efR
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
-hIc
+qYy
+wgh
+wgh
+wgh
+pFK
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
+qYy
 hTo
 gxx
 gxx
@@ -171088,8 +169513,8 @@ lHq
 sYv
 sYv
 iUP
-fDg
-fDg
+sYv
+sYv
 dZx
 osF
 eHO
@@ -171905,8 +170330,8 @@ tOo
 tOo
 sPA
 joK
-mIG
-mIG
+tOo
+tOo
 dZx
 osF
 wSw
@@ -172722,8 +171147,8 @@ tOo
 tOo
 sPA
 joK
-mIG
-mIG
+tOo
+tOo
 dZx
 jCc
 wSw
@@ -173539,8 +171964,8 @@ tOo
 sPA
 sPA
 joK
-mIG
-iRa
+tOo
+nKm
 dZx
 dHj
 wSw
@@ -174356,8 +172781,8 @@ tOo
 sPA
 sPA
 joK
-mIG
-xxP
+tOo
+bYV
 ote
 sjy
 jCc
@@ -175173,8 +173598,8 @@ tOo
 sPA
 aKR
 aKR
-mIG
-iaR
+tOo
+rIr
 ote
 mfV
 wSw
@@ -175975,10 +174400,10 @@ jdq
 jdq
 jdq
 vWh
-wcU
-vvB
-sNj
-mPO
+ujF
+jdq
+bdL
+nfe
 aKR
 aKR
 aKR
@@ -175989,9 +174414,9 @@ ukL
 aKR
 aKR
 aKR
-mIG
-jPB
-tJD
+tOo
+oIu
+imT
 oub
 gCj
 wSw
@@ -176792,23 +175217,23 @@ jxl
 jxl
 jxl
 oOD
-wcU
-vvB
-vvB
-sNj
-goQ
-goQ
+ujF
+jdq
+jdq
+bdL
+ncg
+ncg
 nCe
-jPB
+oIu
 tOV
-jPB
-jPB
+oIu
+oIu
 gLa
-jPB
-jPB
-aoy
-cMj
-ieW
+oIu
+oIu
+lyD
+aVg
+sPh
 mak
 gCj
 wSw
@@ -177609,22 +176034,22 @@ jdq
 jdq
 jdq
 uTu
-wcU
-vvB
-vvB
-vvB
-vvB
-vvB
+ujF
+jdq
+jdq
+jdq
+jdq
+jdq
 ecq
-vvB
-bMI
-vvB
-vvB
+jdq
+vik
+jdq
+jdq
 rMu
-cMj
-cMj
-cMj
-cMj
+aVg
+aVg
+aVg
+aVg
 dJN
 ote
 vmB
@@ -178426,23 +176851,23 @@ jdq
 jdq
 jdq
 uTu
-wcU
-vvB
-vvB
-vvB
-vvB
-vvB
+ujF
+jdq
+jdq
+jdq
+jdq
+jdq
 ecq
-nyb
+lmc
 gDG
-vvB
-cMj
+jdq
+aVg
 vQD
-vvB
-cMj
-cMj
-vvB
-sPO
+jdq
+aVg
+aVg
+jdq
+ewf
 ote
 sjy
 osF
@@ -179243,38 +177668,38 @@ oow
 jdq
 jdq
 uTu
-wcU
-cMj
-vvB
-vvB
-vvB
-vvB
+ujF
+aVg
+jdq
+jdq
+jdq
+jdq
 ecq
 jhv
-vvB
-cMj
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
-lSv
+jdq
+aVg
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
+gMG
 dZx
 mfV
 wSw
 wSw
 mfV
 cjp
-xzu
-nOg
-nOg
-nOg
-nOg
-nOg
-nOg
-nOg
-uYU
+rQL
+ubH
+ubH
+ubH
+ubH
+ubH
+ubH
+ubH
+rgS
 cjp
 mfV
 isz
@@ -180060,38 +178485,38 @@ jdq
 jdq
 jdq
 uTu
-wcU
-cMj
-cMj
-vvB
-vvB
-vvB
-vCB
-vvB
-vvB
-cMj
-cMj
-cMj
-cMj
-vvB
-vvB
-vvB
-ncr
+ujF
+aVg
+aVg
+jdq
+jdq
+jdq
+dbc
+jdq
+jdq
+aVg
+aVg
+aVg
+aVg
+jdq
+jdq
+jdq
+mnb
 dZx
 rLd
 qzD
 qzD
 rLd
 cjp
-mCI
-hlr
+heK
+mtI
 mHU
-ygF
-gfO
-gIY
+mUG
+ngK
+mnz
 bWd
-bQJ
-wuv
+oTY
+gLc
 cjp
 osF
 isz
@@ -180877,23 +179302,23 @@ jdq
 jdq
 jdq
 uTu
-azF
-swO
-swO
-swO
-eCd
-eCd
+kUh
+eDS
+eDS
+eDS
+lhC
+lhC
 ssj
-eCd
-fYK
-cMj
-cMj
-cMj
-cMj
-vvB
-vvB
-vvB
-jkU
+lhC
+mWY
+aVg
+aVg
+aVg
+aVg
+jdq
+jdq
+jdq
+tWt
 dZx
 tzH
 sIa
@@ -180901,14 +179326,14 @@ tzF
 vVD
 cjp
 bZH
-bQJ
-see
-lqz
-xND
-avY
+oTY
+fkj
+mVi
+oik
+tAu
 mHU
-see
-wuv
+fkj
+gLc
 cjp
 osF
 ujI
@@ -181692,40 +180117,40 @@ oow
 oow
 qSR
 uTu
-vvB
-vvB
-wcU
-cMj
-cMj
-cMj
-cMj
-vvB
+jdq
+jdq
+ujF
+aVg
+aVg
+aVg
+aVg
+jdq
 ecq
-vvB
-lBv
-cMj
-cMj
-cMj
-cMj
-vvB
-vvB
-fBI
-nDm
+jdq
+cjE
+aVg
+aVg
+aVg
+aVg
+jdq
+jdq
+qbu
+waQ
 ote
 ote
 geB
 bCx
 ote
 ote
-fde
+koN
 hbb
 mHU
-xuQ
-sDe
-gBM
-see
-hlr
-wuv
+pFF
+qsU
+kmF
+fkj
+mtI
+gLc
 cjp
 osF
 ujI
@@ -182509,24 +180934,24 @@ eSO
 oow
 uTu
 oCn
-sHs
-rPh
-lBv
-cMj
-cMj
-cMj
-vvB
-vvB
+bBB
+eyy
+cjE
+aVg
+aVg
+aVg
+jdq
+jdq
 ecq
-cMj
-lBv
-cMj
-cMj
-cMj
-vvB
-vvB
-fBI
-djV
+aVg
+cjE
+aVg
+aVg
+aVg
+jdq
+jdq
+qbu
+xsd
 pKX
 ote
 ote
@@ -182535,13 +180960,13 @@ ote
 ote
 ote
 ote
-fde
-itl
-itl
-itl
+koN
+nIu
+nIu
+nIu
 fba
-itl
-itl
+nIu
+nIu
 rHP
 ote
 osF
@@ -183326,23 +181751,23 @@ eSO
 oow
 uTu
 lll
-dBA
-kpP
-lBv
-cMj
-cMj
-vvB
-vvB
-fBI
+oFz
+nMB
+cjE
+aVg
+aVg
+jdq
+jdq
+qbu
 cHz
-dvz
+cWS
 xCH
 pOm
-dvz
-dvz
-dvz
-dvz
-djV
+cWS
+cWS
+cWS
+cWS
+xsd
 jln
 jln
 dRL
@@ -184142,15 +182567,15 @@ eSO
 oow
 oow
 qSR
-rvc
-pgz
-eDH
-lBv
-vvB
-vvB
-vvB
-fBI
-nDm
+uwv
+wiU
+hJq
+cjE
+jdq
+jdq
+jdq
+qbu
+waQ
 jln
 jln
 jln
@@ -184959,14 +183384,14 @@ eSO
 eSO
 oow
 uTu
-vvB
-cMj
-cMj
-lBv
-vvB
-vvB
-vvB
-sPO
+jdq
+aVg
+aVg
+cjE
+jdq
+jdq
+jdq
+ewf
 jln
 jln
 dRL
@@ -185776,14 +184201,14 @@ eSO
 eSO
 oow
 uTu
-vvB
-cMj
-cMj
-wcU
-vvB
-vvB
-vvB
-sPO
+jdq
+aVg
+aVg
+ujF
+jdq
+jdq
+jdq
+ewf
 jln
 dRL
 dRL
@@ -185811,7 +184236,7 @@ ews
 xZD
 dRL
 jln
-bEr
+nvd
 eTo
 pVo
 oNX
@@ -186593,14 +185018,14 @@ eSO
 oow
 oow
 qSR
-vvB
-cMj
-vvB
-lBv
-vvB
-vvB
-vvB
-sPO
+jdq
+aVg
+jdq
+cjE
+jdq
+jdq
+jdq
+ewf
 jln
 dRL
 dRL
@@ -186628,7 +185053,7 @@ vCv
 dRL
 dRL
 jln
-bEr
+nvd
 eTo
 pVo
 oNX
@@ -187410,14 +185835,14 @@ eSO
 eSO
 oow
 uTu
-vvB
-vvB
-vvB
-wcU
-vvB
-vvB
-vvB
-sPO
+jdq
+jdq
+jdq
+ujF
+jdq
+jdq
+jdq
+ewf
 jln
 dRL
 dRL
@@ -188227,14 +186652,14 @@ eSO
 eSO
 oow
 uTu
-vvB
-vvB
-vvB
-wcU
-vvB
-vvB
-vvB
-sPO
+jdq
+jdq
+jdq
+ujF
+jdq
+jdq
+jdq
+ewf
 jln
 dRL
 dRL
@@ -189044,14 +187469,14 @@ eSO
 oow
 oow
 oow
-vvB
-vvB
-vvB
-wcU
-vvB
-vvB
-vvB
-sPO
+jdq
+jdq
+jdq
+ujF
+jdq
+jdq
+jdq
+ewf
 jln
 dRL
 dRL
@@ -189861,14 +188286,14 @@ eSO
 eSO
 oow
 uTu
-vvB
-vvB
-vvB
-wcU
-vvB
-vvB
-vvB
-sPO
+jdq
+jdq
+jdq
+ujF
+jdq
+jdq
+jdq
+ewf
 jln
 dRL
 dRL
@@ -190678,14 +189103,14 @@ eSO
 eSO
 oow
 uTu
-vvB
-vvB
-vvB
-wcU
-vvB
-vvB
-vvB
-sPO
+jdq
+jdq
+jdq
+ujF
+jdq
+jdq
+jdq
+ewf
 jln
 jln
 dRL
@@ -191496,14 +189921,14 @@ oow
 oow
 qSR
 jdq
-vvB
-vvB
-wcU
-vvB
-vvB
-vvB
-sNj
-atF
+jdq
+jdq
+ujF
+jdq
+jdq
+jdq
+bdL
+rYq
 jln
 jln
 jln
@@ -192312,14 +190737,14 @@ eSO
 eSO
 oow
 uTu
-vvB
-vvB
-vvB
-vZV
-vmR
-swO
-eCd
-swO
+jdq
+jdq
+jdq
+esw
+eFx
+eDS
+lhC
+eDS
 aQQ
 oVF
 oVF
@@ -192329,7 +190754,7 @@ oVF
 oVF
 oVF
 geb
-atF
+rYq
 jln
 dRL
 dRL
@@ -193129,24 +191554,24 @@ eSO
 eSO
 oow
 uTu
-vvB
-cMj
-cMj
-cMj
-lBv
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
-wcU
-sPO
+jdq
+aVg
+aVg
+aVg
+cjE
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
+ujF
+ewf
 jln
 dRL
 dRL
@@ -193164,7 +191589,7 @@ hjI
 dtx
 dRL
 jln
-eBj
+ene
 eTo
 pVo
 oNX
@@ -193946,24 +192371,24 @@ eSO
 oow
 oow
 qSR
-vvB
-cMj
-cMj
-cMj
-lBv
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
-wcU
-sPO
+jdq
+aVg
+aVg
+aVg
+cjE
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
+ujF
+ewf
 jln
 dRL
 dRL
@@ -193981,7 +192406,7 @@ hjI
 qBJ
 dRL
 jln
-eBj
+ene
 eTo
 pVo
 oNX
@@ -194770,17 +193195,17 @@ uTu
 uTu
 uTu
 uTu
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-vvB
-vvB
-vvB
-wcU
-sPO
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+jdq
+jdq
+jdq
+ujF
+ewf
 jln
 dRL
 dRL
@@ -195588,16 +194013,16 @@ jdq
 jdq
 uTu
 uTu
-cMj
-cMj
-cMj
-cMj
-cMj
-vvB
-vvB
-vvB
-wcU
-sPO
+aVg
+aVg
+aVg
+aVg
+aVg
+jdq
+jdq
+jdq
+ujF
+ewf
 jln
 dRL
 dRL
@@ -195615,7 +194040,7 @@ exh
 wGr
 dRL
 jln
-bEr
+nvd
 eTo
 wPL
 ivj
@@ -196406,15 +194831,15 @@ jdq
 jvo
 uTu
 uTu
-cMj
-cMj
-cMj
-cMj
-cMj
-vvB
-vvB
-wcU
-sPO
+aVg
+aVg
+aVg
+aVg
+aVg
+jdq
+jdq
+ujF
+ewf
 jln
 dRL
 dRL
@@ -196432,7 +194857,7 @@ ews
 dRL
 dRL
 jln
-bEr
+nvd
 xWR
 wPL
 ivj
@@ -197224,14 +195649,14 @@ jvo
 jvo
 uTu
 tWr
-cMj
-cMj
-cMj
-vvB
-vvB
-vvB
-wcU
-sPO
+aVg
+aVg
+aVg
+jdq
+jdq
+jdq
+ujF
+ewf
 jln
 dRL
 dRL
@@ -198041,14 +196466,14 @@ jdq
 jvo
 uTu
 tWr
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
-wcU
-sPO
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
+ujF
+ewf
 jln
 dRL
 dRL
@@ -198858,14 +197283,14 @@ jdq
 jdq
 uTu
 tWr
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
-wcU
-sPO
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
+ujF
+ewf
 jln
 dRL
 dRL
@@ -199675,14 +198100,14 @@ jdq
 jdq
 uTu
 tWr
-cMj
-vvB
-vvB
-vvB
-cMj
-cMj
-wcU
-sPO
+aVg
+jdq
+jdq
+jdq
+aVg
+aVg
+ujF
+ewf
 jln
 dRL
 dRL
@@ -200492,14 +198917,14 @@ jdq
 jdq
 uTu
 uTu
-vvB
-vvB
-vvB
-cMj
-cMj
-cMj
-lBv
-sPO
+jdq
+jdq
+jdq
+aVg
+aVg
+aVg
+cjE
+ewf
 jln
 dRL
 dRL
@@ -201308,15 +199733,15 @@ jvo
 jdq
 uTu
 uTu
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-cMj
-lBv
-sPO
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+aVg
+cjE
+ewf
 jln
 dRL
 dRL
@@ -202124,16 +200549,16 @@ jvo
 jvo
 jdq
 uTu
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-lBv
-sPO
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+cjE
+ewf
 jln
 dRL
 dRL
@@ -202941,16 +201366,16 @@ jvo
 jdq
 jdq
 uTu
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-lBv
-sPO
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+cjE
+ewf
 jln
 dRL
 dRL
@@ -203758,16 +202183,16 @@ jdq
 jdq
 jdq
 uTu
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-lBv
-sPO
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+cjE
+ewf
 jln
 dRL
 dRL
@@ -204575,16 +203000,16 @@ aVg
 jdq
 jdq
 uTu
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-lBv
-sPO
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+cjE
+ewf
 jln
 dRL
 dRL
@@ -205392,16 +203817,16 @@ aVg
 aVg
 jdq
 uTu
-vvB
-vvB
-vvB
-vvB
-vvB
-fnI
-sHs
-rPh
-lBv
-sPO
+jdq
+jdq
+jdq
+jdq
+jdq
+eBq
+bBB
+eyy
+cjE
+ewf
 jln
 jln
 dRL
@@ -206209,17 +204634,17 @@ aVg
 jdq
 jdq
 lsc
-vvB
-vvB
-vvB
-vvB
-vvB
-vwh
-dBA
-kpP
-lBv
-lSv
-atF
+jdq
+jdq
+jdq
+jdq
+jdq
+fgk
+oFz
+nMB
+cjE
+gMG
+rYq
 jln
 dRL
 dRL
@@ -207026,17 +205451,17 @@ jdq
 jdq
 jvo
 uTu
-vvB
-bNe
-vvB
-vvB
-vvB
-rvc
-pgz
-eDH
-lBv
-ncr
-xxP
+jdq
+jvo
+jdq
+jdq
+jdq
+uwv
+wiU
+hJq
+cjE
+mnb
+bYV
 jln
 jln
 dRL
@@ -207843,18 +206268,18 @@ jdq
 jdq
 jdq
 lsc
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-lBv
-oDg
-rGh
-atF
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+cjE
+bCy
+fAq
+rYq
 jln
 jln
 jln
@@ -208660,32 +207085,32 @@ jdq
 jdq
 jvo
 uTu
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-cMj
-lBv
-cMj
-oDg
-cOq
-goQ
-goQ
-goQ
-goQ
-goQ
-goQ
-goQ
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+aVg
+cjE
+aVg
+bCy
+nxb
+ncg
+ncg
+ncg
+ncg
+ncg
+ncg
+ncg
 mmE
-goQ
-goQ
-goQ
-goQ
-goQ
-mPO
+ncg
+ncg
+ncg
+ncg
+ncg
+nfe
 pFc
 jhp
 vhq
@@ -209477,15 +207902,15 @@ aVg
 jdq
 jdq
 uTu
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-vvB
-vZV
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+jdq
+esw
 qqe
 qqe
 qqe
@@ -209499,10 +207924,10 @@ qqe
 qqe
 qqe
 tWY
-bNe
-bNe
-vvB
-sPO
+jvo
+jvo
+jdq
+ewf
 pFc
 qDd
 vhq
@@ -210294,32 +208719,32 @@ aVg
 jdq
 jdq
 uTu
-vvB
-vvB
-bNe
-vvB
-cMj
-cMj
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-cMj
-lBv
-vvB
-vvB
-vvB
-sPO
+jdq
+jdq
+jvo
+jdq
+aVg
+aVg
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+aVg
+cjE
+jdq
+jdq
+jdq
+ewf
 pFc
 pFc
 tDS
@@ -211111,33 +209536,33 @@ aVg
 aVg
 aVg
 uTu
-vvB
-vvB
-vvB
-aco
-sgG
-sgG
-sgG
-sgG
-sgG
-sgG
-sgG
-ouS
-vvB
-cMj
-vvB
-vvB
-vvB
-vvB
-vvB
-cMj
-cMj
-lBv
-cMj
-vvB
-vvB
-ruI
-atF
+jdq
+jdq
+jdq
+udi
+xoj
+xoj
+xoj
+xoj
+xoj
+xoj
+xoj
+amc
+jdq
+aVg
+jdq
+jdq
+jdq
+jdq
+jdq
+aVg
+aVg
+cjE
+aVg
+jdq
+jdq
+fWV
+rYq
 pFc
 ene
 mhm
@@ -211928,33 +210353,33 @@ aVg
 aVg
 aVg
 tWr
-cMj
-aco
-sgG
-llB
-bUU
-azN
-azN
-azN
-azN
-azN
-bUU
-oBy
-sgG
-ouS
-vvB
-bNe
-vvB
-vvB
-vvB
-vvB
-cMj
-lBv
-cMj
-vvB
-vvB
-vvB
-sPO
+aVg
+udi
+xoj
+pKn
+gvH
+ukp
+ukp
+ukp
+ukp
+ukp
+gvH
+aPw
+xoj
+amc
+jdq
+jvo
+jdq
+jdq
+jdq
+jdq
+aVg
+cjE
+aVg
+jdq
+jdq
+jdq
+ewf
 gJc
 ene
 pVo
@@ -212745,33 +211170,33 @@ aVg
 aVg
 aVg
 tWr
-aco
-llB
-bHo
-isP
-bHo
-bHo
-bHo
-bHo
-bHo
-bHo
-bHo
-bHo
-ljS
-oBy
-ouS
-vvB
-bNe
-vvB
-vvB
-vvB
-vvB
-lBv
-cMj
-cMj
-vvB
-vvB
-lSv
+udi
+pKn
+bZB
+vqe
+bZB
+bZB
+bZB
+bZB
+bZB
+bZB
+bZB
+bZB
+bgc
+aPw
+amc
+jdq
+jvo
+jdq
+jdq
+jdq
+jdq
+cjE
+aVg
+aVg
+jdq
+jdq
+gMG
 olA
 ngY
 pVo
@@ -213562,32 +211987,32 @@ aVg
 aVg
 udi
 cfM
-llB
-bHo
-bHo
-bHo
-bHo
-bHo
-bHo
-bHo
-bHo
-bHo
-bHo
-bHo
-sKJ
+pKn
+bZB
+bZB
+bZB
+bZB
+bZB
+bZB
+bZB
+bZB
+bZB
+bZB
+bZB
+sFT
 hSs
-oBy
-sgG
-ouS
-cMj
-vvB
-vvB
-vvB
-vZV
+aPw
+xoj
+amc
+aVg
+jdq
+jdq
+jdq
+esw
 qqe
-cqA
-cqA
-cqA
+eVA
+eVA
+eVA
 vxG
 vxT
 leV
@@ -214393,19 +212818,19 @@ mjh
 mjh
 umQ
 sFT
-bHo
-bHo
-oBy
-sgG
-ouS
-vvB
-vvB
-cMj
-cMj
-vvB
-vvB
-vvB
-ncr
+bZB
+bZB
+aPw
+xoj
+amc
+jdq
+jdq
+aVg
+aVg
+jdq
+jdq
+jdq
+mnb
 uts
 ngY
 ene
@@ -391592,7 +390017,7 @@ bMX
 bMX
 bMX
 bMX
-itB
+bMX
 kvQ
 bMX
 bMX
