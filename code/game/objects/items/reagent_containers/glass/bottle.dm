@@ -209,6 +209,17 @@
 	. = ..()
 	reagents.add_reagent("anti_toxin", 150)
 
+/obj/item/reagent_container/glass/bottle/water
+	name = "\improper distilled water bottle"
+	desc = "A small glossy bottle of distilled water, not all that different from regular water."
+	icon = 'icons/obj/items/chemistry.dmi'
+	icon_state = "bottle2"
+	amount_per_transfer_from_this = 150
+
+/obj/item/reagent_container/glass/bottle/water/Initialize()
+	. = ..()
+	reagents.add_reagent("water", 150)
+
 /obj/item/reagent_container/glass/bottle/mutagen
 	name = "unstable mutagen bottle"
 	desc = "A small bottle of unstable mutagen. Randomly changes the DNA structure of whoever comes in contact."
