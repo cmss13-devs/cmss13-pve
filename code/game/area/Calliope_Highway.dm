@@ -31,26 +31,32 @@
 	icon_state = "shuttle"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
+	base_lighting_alpha = 175
 /area/calliope/shuttles/drop2
 	name = "Calliope Highway - Northern Approach"
 	icon_state = "shuttle2"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
+	base_lighting_alpha = 175
 /area/calliope/shuttles/drop3
 	name = "Calliope Highway - Southern Approach"
 	icon_state = "shuttle2"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
+	base_lighting_alpha = 175
 //===============================================HIGHWAY
 /area/calliope/highway/northbound
 	name = "Calliope Highway Northbound"
 	icon_state = "north"
+	base_lighting_alpha = 175
 /area/calliope/highway/southbound
 	name = "Calliope Highway Southbound"
 	icon_state = "south"
+	base_lighting_alpha = 175
 /area/calliope/highway/checkpoint
 	name = "Calliope Highway Checkpoint"
 	icon_state = "central"
+	base_lighting_alpha = 175
 /area/calliope/exterior_buildings/north_buildings
 	name = "Calliope Highway Building"
 	icon_state = "storage"

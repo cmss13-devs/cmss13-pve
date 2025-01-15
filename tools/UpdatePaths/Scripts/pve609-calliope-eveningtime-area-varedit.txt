@@ -1,0 +1,6 @@
+/area/calliope/highway/checkpoint{base_lighting_alpha=175;} : /area/calliope/highway/checkpoint
+/area/calliope/highway/northbound{base_lighting_alpha=175;} : /area/calliope/highway/northbound
+/area/calliope/highway/southbound{base_lighting_alpha=175;} : /area/calliope/highway/southbound
+/area/calliope/shuttles/drop1{base_lighting_alpha=175;} : /area/calliope/shuttles/drop1
+/area/calliope/shuttles/drop2{base_lighting_alpha=175;} : /area/calliope/shuttles/drop2
+/area/calliope/shuttles/drop3{base_lighting_alpha=175;} : /area/calliope/shuttles/drop3
