@@ -754,6 +754,13 @@
 	color = "#995555"
 	name = "pool"
 
+/turf/open/gm/river/dark_water
+	color = "#4d4d4d"
+	name = "fuel"
+
+/turf/open/gm/river/dark_water/no_overlay
+	no_overlay = TRUE
+
 /turf/open/gm/river/red
 	color = "#995555"
 
@@ -768,9 +775,15 @@
 	color = "#dae3e2"
 	base_river_slowdown = 4 // VERY. SLOW.
 
+/turf/open/gm/river/ocean/no_overlay
+	no_overlay = TRUE
+
 /turf/open/gm/river/ocean/deep_ocean
 	name = "deep ocean"
 	default_name = "deep ocean"
+
+/turf/open/gm/river/ocean/deep_ocean/no_overlay
+	no_overlay = TRUE
 
 /turf/open/gm/river/ocean/Entered(atom/movable/AM)
 	. = ..()
