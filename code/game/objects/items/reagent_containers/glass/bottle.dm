@@ -444,7 +444,7 @@
 	desc = "A small bottle. Contains distilled water, not all that different from regular water." //"I can't lie to you about your odds of a successful resuscitation, but you have my sympathies"
 	volume = 60
 
-/obj/item/reagent_container/glass/bottle/epinephrine/Initialize()
+/obj/item/reagent_container/glass/bottle/water/Initialize()
 	. = ..()
 	reagents.add_reagent("water", 60)
 	update_icon()
