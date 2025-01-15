@@ -151,9 +151,9 @@ FORENSIC SCANNER
 	extra_range = 14
 
 /datum/looping_sound/healthanalyzer_heart_beeping //This will be instanced and the sounds changed because I might as well
-	start_sound = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
-	mid_sounds = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
-	mid_length = 2.388 SECONDS
+	start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
+	mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
+	mid_length = 0.9 SECONDS
 	volume = 4
 	extra_range = 14
 /*
@@ -240,7 +240,7 @@ FORENSIC SCANNER
 		return PROCESS_KILL
 	*/
 	//if we're further than 3 tile away to stop doing stuff
-	if(!(get_dist(src, connected_to) <= 3))
+	if(!(get_dist(src, connected_to) <= 2))
 		disconnect(TRUE)
 		return PROCESS_KILL
 
@@ -261,7 +261,8 @@ FORENSIC SCANNER
 		to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals.")) //lol
 		if(findtext(last_scan,"<table")) //don't run health_scan_table a second time if the data was already gathered this tick
 			buffer_for_report.Add(last_scan)
-		buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)) //Using TGUI mode, gather data
+		else
+			buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)) //Using TGUI mode, gather data again...
 		report_delay_counter = -1 //reset counter
 		if(buffer_for_report.len > 40)
 			buffer_for_report.Cut(1,3) //stop memory leak, maybe
@@ -278,23 +279,23 @@ FORENSIC SCANNER
 	if(health_percentage >= 40)
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
-		heart_rate_loop.mid_length = 2.388 SECONDS
+		heart_rate_loop.mid_length = 0.703 SECONDS
 	if(health_percentage < 40)
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
-		heart_rate_loop.mid_length = 1.402 SECONDS
+		heart_rate_loop.mid_length = 0.499 SECONDS
 	if(health_percentage < -20)
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
-		heart_rate_loop.mid_length = 0.492 SECONDS
+		heart_rate_loop.mid_length = 0.550 SECONDS
 	if(health_percentage < -120)
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
-		heart_rate_loop.mid_length = 0.408 SECONDS
+		heart_rate_loop.mid_length = 0.374 SECONDS
 	if(connected_to.stat > 1)
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
-		heart_rate_loop.mid_length = 5 SECONDS
+		heart_rate_loop.mid_length = 3.110 SECONDS
 	return
 
 /// proc health_scan was a legacy proc for to_chat messages on health analysers. health_scan_table is retrofitted to have parity with the TGUI scan so it can record info for reports
