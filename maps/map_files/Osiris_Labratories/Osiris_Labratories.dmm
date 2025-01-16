@@ -1866,8 +1866,7 @@
 /area/lv314/outdoors/caverns/north)
 "iV" = (
 /obj/structure/bed/chair{
-	dir = 4;
-	tag = "icon-chair (EAST)"
+	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/lv314/indoors/osiris/elevator)
@@ -7247,8 +7246,7 @@
 	dir = 8
 	},
 /obj/structure/bed/chair{
-	dir = 4;
-	tag = "icon-chair (EAST)"
+	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/lv314/indoors/osiris/elevator)
