@@ -611,8 +611,7 @@
 /area/space)
 "ru" = (
 /obj/structure/bed/chair{
-	dir = 4;
-	tag = "icon-chair (EAST)"
+	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/space)
@@ -1394,8 +1393,7 @@
 	dir = 8
 	},
 /obj/structure/bed/chair{
-	dir = 4;
-	tag = "icon-chair (EAST)"
+	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/space)
