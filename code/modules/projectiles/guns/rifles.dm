@@ -1293,8 +1293,8 @@
 	fa_max_scatter = SCATTER_AMOUNT_TIER_1
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
-	scatter = SCATTER_AMOUNT_TIER_3
-	burst_scatter_mult = -SCATTER_AMOUNT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_5
+	burst_scatter_mult = -SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_1
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
