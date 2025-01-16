@@ -286,7 +286,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	// PREFERENCES GEAR
 	/obj/item/prop/helmetgarb/gunoil = "gunoil",
-	/obj/item/prop/helmetgarb/netting = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/prop/helmetgarb/netting = "netting",
 	/obj/item/prop/helmetgarb/spent_buckshot = "spent_buckshot",
 	/obj/item/prop/helmetgarb/spent_slug = "spent_slug",
 	/obj/item/prop/helmetgarb/spent_flech = "spent_flech",
