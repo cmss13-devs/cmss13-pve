@@ -225,7 +225,7 @@
 		/obj/item/storage/pill_bottle/packet/tramadol,
 		/obj/item/stack/medical/ointment,
 		/obj/item/stack/medical/splint,
-		/obj/item/device/healthanalyzer,
+		/obj/item/device/healthanalyzer/soul,
 		/obj/item/stack/medical/advanced/ointment,
 		/obj/item/stack/medical/advanced/bruise_pack,
 		/obj/item/tool/extinguisher/mini,

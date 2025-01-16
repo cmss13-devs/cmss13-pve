@@ -242,7 +242,7 @@
 	var/list/chem_refill = list(
 		/obj/item/reagent_container/hypospray/autoinjector/bicaridine,
 		/obj/item/reagent_container/hypospray/autoinjector/dexalinp,
-		/obj/item/reagent_container/hypospray/autoinjector/adrenaline,,
+		/obj/item/reagent_container/hypospray/autoinjector/adrenaline,
 		/obj/item/reagent_container/hypospray/autoinjector/inaprovaline,
 		/obj/item/reagent_container/hypospray/autoinjector/kelotane,
 		/obj/item/reagent_container/hypospray/autoinjector/oxycodone,
@@ -818,8 +818,8 @@
 		list("Ointment", 4, /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
 		list("Medical Splints", 4, /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
 
-		//list("UTILITY", -1, null, null),
-		//list("HF2 Health Analyzer", 2, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR)
+		list("UTILITY", -1, null, null),
+		list("Rebreather", 2, /obj/item/clothing/mask/rebreather, VENDOR_ITEM_REGULAR)
 	)
 
 	chem_refill_volume = 250
@@ -859,7 +859,7 @@
 		list("Pain-Stop Autoinjector", 8, /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol, VENDOR_ITEM_REGULAR),
 
 		list("DEVICES", -1, null, null),
-		list("Health Analyzer", 8, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
+		list("Health Analyzer", 2, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
 		list("FIELD SUPPLIES", -1, null, null),
 		list("Burn Kit", 8, /obj/item/stack/medical/advanced/ointment, VENDOR_ITEM_REGULAR),
 		list("Trauma Kit", 8, /obj/item/stack/medical/advanced/bruise_pack, VENDOR_ITEM_REGULAR),

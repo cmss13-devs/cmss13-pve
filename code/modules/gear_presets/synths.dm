@@ -204,7 +204,7 @@
 		WEAR_BACK = /obj/item/storage/backpack/satchel/med,
 		WEAR_IN_BACK = /obj/item/roller/surgical,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/blue,
-		WEAR_IN_JACKET = /obj/item/device/healthanalyzer,
+		WEAR_R_HAND = /obj/item/device/healthanalyzer/soul,
 		WEAR_WAIST = /obj/item/storage/belt/medical/lifesaver/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/latex,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
@@ -228,12 +228,13 @@
 		WEAR_IN_BACK = /obj/item/tool/extinguisher/mini,
 		WEAR_IN_BACK = /obj/item/roller,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr,
-		WEAR_IN_JACKET = /obj/item/device/healthanalyzer,
+		WEAR_IN_JACKET = /obj/item/reagent_container/hypospray/autoinjector/adrenaline,
 		WEAR_WAIST = /obj/item/storage/belt/medical/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/latex,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
 		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
 		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
+		WEAR_R_HAND = /obj/item/device/healthanalyzer/soul,
 	)
 
 	survivor_variant = MEDICAL_SURVIVOR
@@ -249,6 +250,7 @@
 		WEAR_IN_BACK = /obj/item/reagent_container/glass/beaker/vial/random/good,
 		WEAR_IN_BACK = /obj/item/paper/research_notes/good,
 		WEAR_JACKET = /obj/item/clothing/suit/bio_suit,
+		WEAR_IN_JACKET = /obj/item/evidencebag,
 		WEAR_WAIST = /obj/item/storage/belt/medical/lifesaver/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/black,
 		WEAR_R_HAND = /obj/item/device/motiondetector,
@@ -347,7 +349,7 @@
 		WEAR_IN_BACK = /obj/item/reagent_container/food/snacks/wy_chips/pepper,
 		WEAR_IN_BACK = /obj/item/storage/box/pdt_kit,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/bomber/alt,
-		WEAR_IN_JACKET = /obj/item/device/healthanalyzer,
+		WEAR_IN_JACKET = /obj/item/notepad,
 		WEAR_WAIST = /obj/item/reagent_container/spray/cleaner,
 		WEAR_R_HAND = /obj/item/storage/fancy/crayons,
 		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
