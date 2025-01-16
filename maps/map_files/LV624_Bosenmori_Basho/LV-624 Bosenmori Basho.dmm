@@ -242,9 +242,7 @@
 /area/bosenmori/interior_regular/engineering)
 "akV" = (
 /obj/structure/window/reinforced,
-/turf/open/floor/almayer{
-	icon_state = "tcomms"
-	},
+/turf/open/floor/almayer/tcomms,
 /area/bosenmori/interior_heavy/secured_armory)
 "akW" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -2157,9 +2155,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/floor/almayer{
-	icon_state = "tcomms"
-	},
+/turf/open/floor/almayer/tcomms,
 /area/bosenmori/interior_heavy/secured_armory)
 "bMM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -9429,9 +9425,7 @@
 	layer = 3.3;
 	pixel_y = 4
 	},
-/turf/open/floor/almayer{
-	icon_state = "tcomms"
-	},
+/turf/open/floor/almayer/tcomms,
 /area/bosenmori/interior_heavy/secured_armory)
 "ijH" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/colony{
@@ -14115,9 +14109,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/telecomms/bus/preset_one,
-/turf/open/floor/almayer{
-	icon_state = "tcomms"
-	},
+/turf/open/floor/almayer/tcomms,
 /area/bosenmori/interior_heavy/secured_armory)
 "mhr" = (
 /obj/structure/machinery/colony_floodlight,

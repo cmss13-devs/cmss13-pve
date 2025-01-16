@@ -39,4 +39,4 @@
 /area/bosenmori/mountain/temple_proper{base_lighting_alpha=20;} : /area/bosenmori/mountain/temple_proper
 /area/bosenmori/mountain/temple_ruins{base_lighting_alpha=20;} : /area/bosenmori/mountain/temple_ruins
 /area/bosenmori/mountain/clearing{base_lighting_alpha=35;} : /area/bosenmori/mountain/clearing
-
+/turf/open/floor/almayer{icon_state="tcomms";} : /turf/open/floor/almayer/tcomms
