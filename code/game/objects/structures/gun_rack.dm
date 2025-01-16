@@ -70,6 +70,20 @@
 /obj/structure/gun_rack/type71/empty
 	initial_stored = 0
 
+/obj/structure/gun_rack/ag80
+	icon_state = "ag80"
+	desc = "Some off-branded gun rack. Per SOF and UPPA regulations, weapons should be stored in secure safes and only given out when necessary. Of course, most (but not all!) units overlook this regulation, only storing their firearms in safes when inspection arrives."
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/ag80
+	populate_type = /obj/item/weapon/gun/rifle/ag80
+
+/obj/structure/gun_rack/ag80/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/ag80/unloaded
+
+/obj/structure/gun_rack/ag80/empty
+	initial_stored = 0
+
 /obj/structure/gun_rack/apc
 	name = "APC ammo compartment"
 	icon_state = "frontal"
@@ -140,3 +154,5 @@
 
 /obj/structure/gun_rack/mk221/empty
 	initial_stored = 0
+
+
