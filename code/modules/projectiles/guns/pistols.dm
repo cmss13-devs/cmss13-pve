@@ -119,7 +119,7 @@
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	attachable_allowed = null
 
-/obj/item/weapon/gun/pistol/m4a3/set_gun_attachment_offsets()
+/obj/item/weapon/gun/pistol/l54/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
 
 
