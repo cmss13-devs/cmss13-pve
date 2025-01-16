@@ -5114,7 +5114,7 @@
 /obj/structure/machinery/power/apc{
 	cell_type = /obj/item/cell/high;
 	dir = 1;
-	pixel_y = 28
+	pixel_y = 25
 	},
 /turf/open/floor/plating,
 /area/bosenmori/interior_heavy/secured_armory)
@@ -5341,7 +5341,7 @@
 /obj/structure/machinery/power/apc{
 	cell_type = /obj/item/cell/high;
 	dir = 1;
-	pixel_y = 24
+	pixel_y = 25
 	},
 /turf/open/floor/plating,
 /area/bosenmori/mountain/clearing)
@@ -15840,7 +15840,7 @@
 /obj/structure/machinery/power/apc{
 	cell_type = /obj/item/cell/high;
 	dir = 1;
-	pixel_y = 24
+	pixel_y = 25
 	},
 /turf/open/floor/plating,
 /area/bosenmori/mountain/river)
@@ -19158,7 +19158,7 @@
 /obj/structure/machinery/power/apc{
 	cell_type = /obj/item/cell/high;
 	dir = 1;
-	pixel_y = 24
+	pixel_y = 25
 	},
 /turf/open/floor/plating,
 /area/bosenmori/mountain/temple_ruins)
@@ -19601,7 +19601,7 @@
 /obj/structure/machinery/power/apc{
 	cell_type = /obj/item/cell/high;
 	dir = 1;
-	pixel_y = 24
+	pixel_y = 25
 	},
 /turf/open/floor/plating,
 /area/bosenmori/mountain/temple_proper)
@@ -21376,7 +21376,7 @@
 /obj/structure/machinery/power/apc{
 	cell_type = /obj/item/cell/high;
 	dir = 4;
-	pixel_x = 28
+	pixel_x = 25
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -22383,7 +22383,7 @@
 /obj/structure/machinery/power/apc{
 	cell_type = /obj/item/cell/high;
 	dir = 1;
-	pixel_y = 28
+	pixel_y = 25
 	},
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_regular/store)
