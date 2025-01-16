@@ -25925,7 +25925,6 @@
 /obj/structure/machinery/computer/secure_data{
 	dir = 8;
 	req_access = null;
-	faction = "Colonist";
 	req_one_access = "104"
 	},
 /turf/open/floor/prison/sterile_white,
