@@ -19,6 +19,8 @@
 			if(JOB_SQUAD_TEAM_LEADER) marine_rk = "tl"
 			if(JOB_SQUAD_MEDIC) marine_rk = "med"
 			if(JOB_SQUAD_SMARTGUN) marine_rk = "gun"
+			if(JOB_SQUAD_SPOTTER) marine_rk = "ass"
+			if(JOB_SQUAD_LOADER) marine_rk = "load"
 			if(JOB_XO) marine_rk = "xo"
 			if(JOB_CO) marine_rk = "co"
 			if(JOB_GENERAL) marine_rk = "general"
@@ -222,6 +224,10 @@
 			// Check squad marines here too, for the unique ones
 			if(JOB_SQUAD_ENGI)
 				marine_rk = "engi"
+			if(JOB_SQUAD_SPOTTER)
+				marine_rk = "ass"
+			if(JOB_SQUAD_LOADER)
+				marine_rk = "load"
 			if(JOB_SQUAD_MEDIC)
 				marine_rk = "med"
 			if(JOB_SQUAD_SPECIALIST)

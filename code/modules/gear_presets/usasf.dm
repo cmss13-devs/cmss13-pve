@@ -85,6 +85,7 @@
 
 /datum/equipment_preset/usasf/crew/flight/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles, WEAR_IN_HELMET)
 	var/flight_deck_vest = pick(USAF_ORDNANCE_CREW ,USAF_MAINT_CREW,USAF_FUEL_CREW,USAF_SAFETY_CREW,USAF_HANDLER_CREW)
 	switch(flight_deck_vest)
 		if(USAF_ORDNANCE_CREW)

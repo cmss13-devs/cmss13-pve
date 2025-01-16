@@ -23,6 +23,8 @@
 #define JOB_SQUAD_ENGI "Combat Engineer"
 #define JOB_SQUAD_MEDIC "Corpsman"
 #define JOB_SQUAD_SPECIALIST "Weapons Specialist"
+#define JOB_SQUAD_SPOTTER "Spotter"
+#define JOB_SQUAD_LOADER "Weapons Loader"
 #define JOB_SQUAD_TEAM_LEADER "Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN "Smartgunner"
 #define JOB_SQUAD_ROLES /datum/timelock/squad
