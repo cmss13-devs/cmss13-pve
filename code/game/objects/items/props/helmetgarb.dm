@@ -20,7 +20,6 @@
 	name = "combat netting"
 	desc = "Probably combat netting for a helmet. Probably just an extra hairnet that got ordered for the phantom Almayer cooking staff. Probably useless."
 	icon_state = "netting"
-	flags_obj = OBJ_NO_HELMET_BAND
 
 /obj/item/prop/helmetgarb/spent_buckshot
 	name = "spent buckshot"
@@ -52,13 +51,11 @@
 	name = "raincover"
 	desc = "The standard M10 combat helmet is already water-resistant at depths of up to 10 meters. This makes the top potentially water-proof. At least it's something."
 	icon_state = "raincover"
-	flags_obj = OBJ_NO_HELMET_BAND
 
 /obj/item/prop/helmetgarb/camocover
 	name = "jungle helmet cover"
 	desc = "A cover that goes over the top of an M10 pattern helmet to camoflauge it without needing the use of paints."
 	icon_state = "camocover"
-	flags_obj = OBJ_NO_HELMET_BAND
 
 /obj/item/prop/helmetgarb/camocover/snow
 	name = "snow helmet cover"
