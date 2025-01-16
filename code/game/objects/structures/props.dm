@@ -1287,7 +1287,7 @@
 	name = "strange pillar"
 	desc = "A strange alien pillar that extends at an angle."
 	icon = 'icons/obj/structures/props/engineers/pillarangled.dmi'
-	icon_state = NULL
+	icon_state = "placeholder"
 	density = FALSE
 
 /obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest
