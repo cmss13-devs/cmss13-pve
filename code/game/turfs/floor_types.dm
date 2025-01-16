@@ -3751,7 +3751,7 @@
 
 /turf/open/floor/jockey/flooring
 	desc = "A strange metal floor, unlike anything you've seen before."
-	plating_type = /turf/open/floor/plating/engineer_ship
+	plating_type = /turf/open/floor/jockey
 
 /turf/open/floor/jockey/flooring/engineer_floor1
 	icon_state = "engineer_metalfloor_3"
