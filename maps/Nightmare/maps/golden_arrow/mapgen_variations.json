@@ -1,4 +1,6 @@
 [
-    { "type": "map_variations",   "landmark": "briefing",       "path": "briefing/",        "chance": 0 },
-    { "type": "map_variations",   "landmark": "dorms",          "path": "dorms/",           "chance": 0 }
+    { "type": "map_variations",   "landmark": "briefing",       "path": "briefing/",                                "chance": 0.5 },
+    { "type": "map_variations",   "landmark": "dorms",          "path": "dorms/",                                   "chance": 0.2 },
+    { "type": "map_variations",   "landmark": "medbay",          "path": "medbay/",                                 "chance": 0.2 },
+    { "type": "map_variations",   "landmark": "storage_northeast",          "path": "storage_northeast/",           "chance": 0.5 }
 ]
