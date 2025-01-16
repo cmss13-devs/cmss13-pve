@@ -447,13 +447,13 @@
 /obj/item/weapon/gun/rifle/ag80
 	name = "\improper AG80 pulse rifle"
 	desc = "Pulse action 10x23mm caseless assault rifle of the UPPAC Naval Infantry."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "ag80" //Placeholder.
 	item_state = "ag80" //Placeholder.
 	fire_sound = "gun_pulse"
 	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
+	current_mag = /obj/item/ammo_magazine/rifle/ag80
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
@@ -461,18 +461,17 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/attached_gun/grenade/mk1,
 		/obj/item/attachable/stock/rifle/collapsible,
-		/obj/item/attachable/attached_gun/shotgun,
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1, /obj/item/attachable/stock/rifle/collapsible)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/ag80/collapsible)
 	start_automatic = TRUE
 
-/obj/item/weapon/gun/rifle/m41aMK1/set_gun_attachment_offsets()
+/obj/item/weapon/gun/rifle/ag80/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14)
 
 
-/obj/item/weapon/gun/rifle/m41aMK1/set_gun_config_values()
+/obj/item/weapon/gun/rifle/ag80/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
@@ -484,6 +483,7 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
 //M20A Harrington rifle
 //=================================================
 //=================================================
@@ -1362,7 +1362,6 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type71"
 	item_state = "type71"
-
 	fire_sound = 'sound/weapons/gun_type71.ogg'
 	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'

@@ -128,6 +128,17 @@
 	icon_state = "m41a_mk1_recon"
 	current_rounds = 95
 	bonus_overlay = "m41a_mk1_recon_overlay"
+
+/obj/item/ammo_magazine/rifle/ag80
+	name = "\improper AG80 magazine (10x23mm)"
+	desc = "A long curved rectangular box magazine for the M41A. Holds 75 caseless 10x23mm rounds."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "ag80"
+	max_rounds = 75
+	gun_type = /obj/item/weapon/gun/rifle/ag80
+	default_ammo = /datum/ammo/bullet/rifle
+	ammo_band_icon = "+ag80_band"
+	ammo_band_icon_empty = "+ag80_band_e"
 //-------------------------------------------------------
 //M4RA, l42 reskin, same stats as before but different, lore friendly, shell.
 
