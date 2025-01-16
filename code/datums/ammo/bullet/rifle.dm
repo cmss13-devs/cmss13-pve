@@ -181,6 +181,43 @@
 	target.AddComponent(/datum/component/status_effect/toxic_buildup)
 	knockback(target, fired_proj, max_range = 2)
 
+// Terminator Smartgun
+
+/datum/ammo/bullet/rifle/heavy/dirty
+	name = "irradiated 10x28 bullet"
+	debilitate = list(0,0,0,3,0,0,0,1)
+	damage = 60
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
+
+/datum/ammo/bullet/rifle/heavy/ap/dirty
+	name = "irradiated armor-piercing 10x28 bullet"
+	debilitate = list(0,0,0,3,0,0,0,1)
+	damage = 45
+
+// RMC Smartgun
+
+/datum/ammo/bullet/rifle/heavy/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks and less damage
+	name = "holo-targeting 10x28 bullet"
+	damage = 50
+	/// inflicts this many holo stacks per bullet hit
+	var/holo_stacks = 15
+	/// modifies the default cap limit of 100 by this amount
+	var/bonus_damage_cap_increase = 0
+	/// multiplies the default drain of 5 holo stacks per second by this amount
+	var/stack_loss_multiplier = 1
+
+/datum/ammo/bullet/rifle/heavy/holo_target/on_hit_mob(mob/hit_mob, obj/projectile/bullet)
+	. = ..()
+	hit_mob.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time, bonus_damage_cap_increase, stack_loss_multiplier)
+
+/datum/ammo/bullet/rifle/heavy/holo_target/ap
+	name = "holo-targetting armor-piercing 10x28 bullet"
+	icon_state = "bullet"
+
+	accuracy = HIT_ACCURACY_TIER_2
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_8
+
 // Custom Specialist M4RA rounds
 
 /datum/ammo/bullet/rifle/heavy/spec

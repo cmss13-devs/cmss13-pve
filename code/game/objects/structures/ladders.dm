@@ -275,3 +275,12 @@
 	unslashable = TRUE
 	unacidable = TRUE
 	layer = LADDER_LAYER
+
+/obj/structure/ladder/rope
+	name = "rope"
+	desc = "A sturdy rope."
+	icon = 'icons/obj/structures/props/almayer_props.dmi'
+	icon_state = "rope"
+
+/obj/structure/ladder/rope/update_icon()
+	return
