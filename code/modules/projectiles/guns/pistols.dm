@@ -123,19 +123,15 @@
 	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
 
 
-/obj/item/weapon/gun/pistol/m4a3/set_gun_config_values()
+/obj/item/weapon/gun/pistol/l54/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_fire_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT
-
-/obj/item/weapon/gun/pistol/l54/set_gun_config_values()
-
-	set_fire_delay(FIRE_DELAY_TIER_10)
 
 /obj/item/weapon/gun/pistol/vp70
 	name = "\improper VP70 M5 service pistol"
