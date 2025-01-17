@@ -197,6 +197,9 @@
 			pass_flags |= PASS_MOB_THRU_HUMAN|PASS_MOB_IS_OTHER|PASS_OVER
 		else
 			pass_flags |= PASS_MOB_THRU|PASS_HIGH_OVER
+	if(fired.dual_purpose != FALSE)
+		fired.fuse_type = IMPACT_FUSE
+	fired.arm_sound = null
 
 	msg_admin_attack("[key_name_admin(user)] fired a grenade ([fired.name]) from \a ([name]).")
 	log_game("[key_name_admin(user)] used a grenade ([name]).")

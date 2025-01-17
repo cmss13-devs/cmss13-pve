@@ -19,7 +19,7 @@
 	dual_purpose = TRUE
 	arm_sound = 'sound/weapons/grenade.ogg'
 	var/explosion_power = 100
-	var/explosion_falloff = 20
+	var/explosion_falloff = 30
 	var/shrapnel_count = 32
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel
 	var/fire_resistance = 15 //to prevent highly controlled massive explosions
@@ -79,7 +79,7 @@
 	icon_state = "m40_2"
 	item_state = "grenade_hedp2"
 	explosion_power = 150
-	explosion_falloff = 40
+	explosion_falloff = 50
 
 /obj/item/explosive/grenade/high_explosive/pmc
 	name = "\improper M12 blast grenade"
@@ -355,7 +355,7 @@
 	icon_state = "grenade_40mm_upp"
 	item_state = "grenade_hedp"
 	explosion_power = 120 //Slightly stronger than HEDP
-	explosion_falloff = 30 //But quicker to lose blast damage
+	explosion_falloff = 40 //But quicker to lose blast damage
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
 
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
@@ -577,7 +577,7 @@
 		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
 		return
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	smoke.set_up(smoke_radius, 0, get_turf(src))
+	smoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
 	smoke.start()
 	new /obj/item/trash/grenade(get_turf(src))
 	qdel(src)
@@ -592,8 +592,9 @@
 		detonate = FALSE
 	if(active && detonate) // Active, and we reached our destination.
 		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-		smoke.set_up(smoke_radius, 0, get_turf(src))
+		smoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
 		smoke.start()
+		new /obj/item/trash/grenade(get_turf(src))
 		qdel(src)
 
 /obj/item/explosive/grenade/smokebomb/upp
@@ -616,7 +617,7 @@
 	var/datum/effect_system/smoke_spread/phosphorus/smoke
 	dangerous = TRUE
 	harmful = TRUE
-	var/smoke_radius = 4
+	var/smoke_radius = 3
 
 /obj/item/explosive/grenade/phosphorus/Destroy()
 	QDEL_NULL(smoke)
@@ -633,7 +634,7 @@
 		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
 		return
 	playsound(src.loc, 'sound/effects/wp_smoke.ogg', 25, 1, 5)
-	smoke.set_up(smoke_radius, 0, get_turf(src))
+	smoke.set_up(smoke_radius, 0, get_turf(src), null, 25)
 	smoke.start()
 	create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
 	qdel(src)
@@ -648,7 +649,7 @@
 		detonate = FALSE
 	if(active && detonate) // Active, and we reached our destination.
 		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-		smoke.set_up(smoke_radius, 0, get_turf(src))
+		smoke.set_up(smoke_radius, 0, get_turf(src), null, 25)
 		smoke.start()
 		create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
 		qdel(src)
@@ -942,7 +943,7 @@
 	antigrief_protection = FALSE
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	var/datum/effect_system/smoke_spread/tear/tear_gas
-	var/tear_gas_radius = 4
+	var/tear_gas_radius = 3
 
 /obj/item/explosive/grenade/tear/Initialize()
 	. = ..() //if it ain't broke don't fix it
@@ -967,7 +968,7 @@
 	det_time = 40
 	item_state = "grenade_phos"//temp icon
 	underslug_launchable = TRUE
-	tear_gas_radius = 5
+	tear_gas_radius = 4
 	arm_sound = 'sound/weapons/grenade.ogg'
 
 /obj/item/explosive/grenade/tear/marine/prime()

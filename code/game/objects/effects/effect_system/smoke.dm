@@ -309,7 +309,7 @@
 /////////////////////////////////////////////
 
 /obj/effect/particle_effect/smoke/phosphorus
-	time_to_live = 12
+	time_to_live = 25
 	smokeranking = SMOKE_RANK_MED
 	var/next_cough = 2 SECONDS
 	var/burn_damage = 40
@@ -318,14 +318,14 @@
 
 //WP mortar-shell smoke
 /obj/effect/particle_effect/smoke/phosphorus/strong
-	time_to_live = 18
+	time_to_live = 40
 	spread_speed = 0.5
 	smokeranking = SMOKE_RANK_HIGH
 	next_cough = 5 SECONDS
 	applied_fire_stacks = 6
 
 /obj/effect/particle_effect/smoke/phosphorus/weak
-	time_to_live = 6
+	time_to_live = 15
 	smokeranking = SMOKE_RANK_MED
 	burn_damage = 30
 	xeno_yautja_reduction = 0.5

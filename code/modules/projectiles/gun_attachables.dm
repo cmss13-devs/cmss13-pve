@@ -2975,6 +2975,7 @@ Defined in conflicts.dm of the #defines folder.
 
 	if(G.dual_purpose != FALSE)
 		G.fuse_type = IMPACT_FUSE
+	G.arm_sound = null
 
 	playsound(user.loc, fire_sound, 50, 1)
 	msg_admin_attack("[key_name_admin(user)] fired an underslung grenade launcher [ADMIN_JMP_USER(user)]")

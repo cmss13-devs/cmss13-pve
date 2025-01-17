@@ -39,7 +39,7 @@
 	icon_state = "mortar_ammo_frag"
 
 /obj/item/mortar_shell/frag/detonate(turf/T)
-	create_shrapnel(T, 60, cause_data = cause_data)
+	create_shrapnel(T, 60, , , /datum/ammo/bullet/shrapnel/heavy, cause_data = cause_data)
 	sleep(2)
 	cell_explosion(T, 60, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
@@ -85,7 +85,7 @@
 	cell_explosion(T, 30, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, explosion_cause_data = cause_data)
 	spawn(5)
 		var/datum/effect_system/smoke_spread/phosphorus/strong/wp = new()
-		wp.set_up(6, 0, T, cause_data)
+		wp.set_up(6, 0, T, cause_data, 40)
 		wp.start()
 	flame_radius(cause_data, radius, T, flame_level, burn_level, flameshape, null, fire_type)
 	playsound(T, 'sound/effects/wp_smoke.ogg', 25, 1, 9)
