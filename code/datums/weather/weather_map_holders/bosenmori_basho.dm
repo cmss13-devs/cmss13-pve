@@ -1,4 +1,4 @@
-/datum/weather_ss_map_holder/bosenmori
+/datum/weather_ss_map_holder/bosenmori_basho
 	name = "Calliope Highway Map Holder"
 
 	min_time_between_events = 20 MINUTES
@@ -9,8 +9,8 @@
 		/datum/weather_event/sand,
 	)
 
-/datum/weather_ss_map_holder/bosenmori/should_affect_area(area/A)
+/datum/weather_ss_map_holder/bosenmori_basho/should_affect_area(area/A)
 	return !CEILING_IS_PROTECTED(A.ceiling, CEILING_GLASS)
 
-/datum/weather_ss_map_holder/bosenmori/should_start_event()
+/datum/weather_ss_map_holder/bosenmori_basho/should_start_event()
 	return prob(PROB_WEATHER_BIG_RED)
