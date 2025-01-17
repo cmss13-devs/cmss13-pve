@@ -5,15 +5,6 @@
     "environment_traits": {
         "COLD": true
     },
-    "survivor_types": [
-        "/datum/equipment_preset/survivor/corporate/shiva",
-        "/datum/equipment_preset/survivor/doctor/shiva",
-        "/datum/equipment_preset/survivor/scientist/shiva",
-        "/datum/equipment_preset/survivor/engineer/shiva",
-        "/datum/equipment_preset/survivor/security/shiva",
-        "/datum/equipment_preset/survivor/clf",
-        "/datum/equipment_preset/survivor/civilian"
-    ],
     "defcon_triggers": [
         3300,
         2100,
