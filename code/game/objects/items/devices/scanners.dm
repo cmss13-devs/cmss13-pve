@@ -183,7 +183,7 @@ FORENSIC SCANNER
 */
 
 /obj/item/device/healthanalyzer/soul
-	icon = 'icons/obj/items/Medical Scanner new.dmi'
+	icon = 'icons/obj/items/Medical Scanner.dmi'
 	icon_state = "Medical_scanner"
 	item_state = "analyzer"
 	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
@@ -223,27 +223,7 @@ FORENSIC SCANNER
 	user.put_in_hands(print_report)
 	user.visible_message("\The [src] spits out a piece of paper.")
 
-/obj/item/device/healthanalyzer/soul/process()
-	//if we're not connected to anything stop doing stuff
-	if(!connected_to)
-		return PROCESS_KILL
-
-	/*if we're not on a human stop doing stuff
-	if(!ishuman(loc))
-		bad_disconnect()
-		return PROCESS_KILL
-
-	//if we're not being held in a hand stop doing stuff
-	var/mob/living/carbon/human/current_human = loc
-	if(!(current_human.l_hand == src || current_human.r_hand == src))
-		bad_disconnect()
-		return PROCESS_KILL
-	*/
-	//if we're further than 3 tile away to stop doing stuff
-	if(!(get_dist(src, connected_to) <= 2))
-		disconnect(TRUE)
-		return PROCESS_KILL
-
+/obj/item/device/healthanalyzer/soul/proc/perform_scan_and_report()
 	if(ishuman(connected_from))
 		if(!popup_window)
 			last_scan = connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)
@@ -267,6 +247,29 @@ FORENSIC SCANNER
 		if(buffer_for_report.len > 40)
 			buffer_for_report.Cut(1,3) //stop memory leak, maybe
 	report_delay_counter++
+
+/obj/item/device/healthanalyzer/soul/process()
+	//if we're not connected to anything stop doing stuff
+	if(!connected_to)
+		return PROCESS_KILL
+
+	/*if we're not on a human stop doing stuff
+	if(!ishuman(loc))
+		bad_disconnect()
+		return PROCESS_KILL
+
+	//if we're not being held in a hand stop doing stuff
+	var/mob/living/carbon/human/current_human = loc
+	if(!(current_human.l_hand == src || current_human.r_hand == src))
+		bad_disconnect()
+		return PROCESS_KILL
+	*/
+	//if we're further than 3 tile away to stop doing stuff
+	if(!(get_dist(src, connected_to) <= 3))
+		disconnect(TRUE)
+		return PROCESS_KILL
+	update_beam(TRUE)
+	perform_scan_and_report()
 	//playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
 	//Modify the health analyzers own beeping sounds depending on what is happening
 	var/health_percentage = connected_to.health - connected_to.halloss
@@ -488,6 +491,7 @@ FORENSIC SCANNER
 	return dat
 
 /obj/item/device/healthanalyzer/soul/proc/update_beam(new_beam = TRUE)
+	connected_from = get_atom_on_turf(src)
 	if(current_beam)
 		QDEL_NULL(current_beam)
 	if(connected_from && connected_to && new_beam)
@@ -521,6 +525,7 @@ FORENSIC SCANNER
 		icon_state = "Medical_scanner_open"
 		overlays += image(icon, src, "+running")
 		update_beam()
+		perform_scan_and_report()
 
 ///Used to standardize effects of a blood bag disconnecting improperly
 /obj/item/device/healthanalyzer/soul/proc/disconnect(bad_disconnect = FALSE)
@@ -552,7 +557,7 @@ FORENSIC SCANNER
 /obj/item/device/healthanalyzer/soul/pickup(mob/user)
 	. = ..()
 	connected_from = user
-	update_beam(TRUE)
+	addtimer(CALLBACK(src, PROC_REF(update_beam), TRUE), 0)
 
 /obj/item/device/healthanalyzer/alien
 	name = "\improper YMX scanner"
