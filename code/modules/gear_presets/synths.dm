@@ -233,7 +233,7 @@
 		WEAR_HANDS = /obj/item/clothing/gloves/latex,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
 		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
+		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe,
 		WEAR_R_HAND = /obj/item/device/healthanalyzer/soul,
 	)
 
