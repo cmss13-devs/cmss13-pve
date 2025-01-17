@@ -465,8 +465,11 @@
 			if(!shuttle)
 				return FALSE
 			if(shuttle.mode != SHUTTLE_IDLE && (shuttle.mode != SHUTTLE_CALL && !shuttle.destination))
-				to_chat(usr, SPAN_WARNING("You can't move to a new destination right now."))
+				to_chat(usr, SPAN_WARNING("You cannot move to a new destination right now."))
 				return TRUE
+			if(istype(shuttle.get_docked(), /obj/docking_port/stationary/marine_dropship/airlock))
+				to_chat(usr, SPAN_WARNING("You cannot move out of the dropship airlock without declamping."))
+				return FALSE
 
 			var/is_optimised = FALSE
 			// automatically apply optimisation if user is a pilot
@@ -476,7 +479,7 @@
 			var/dock_id = params["target"]
 			if(dock_id == DROPSHIP_FLYBY_ID)
 				if(!skillcheck(user, SKILL_PILOT, SKILL_PILOT_TRAINED))
-					to_chat(user, SPAN_WARNING("You don't have the skill to perform a flyby."))
+					to_chat(user, SPAN_WARNING("You do not have the skill to perform a flyby."))
 					return FALSE
 				update_equipment(is_optimised, TRUE)
 				to_chat(user, SPAN_NOTICE("You begin the launch sequence for a flyby."))
@@ -506,6 +509,8 @@
 				if(dock == other_shuttle.destination)
 					dock_reserved = TRUE
 					break
+			if(!dock.registered)
+				to_chat(user, SPAN_WARNING("\The [dock] is unresponsive."))
 			if(dock_reserved)
 				to_chat(user, SPAN_WARNING("\The [dock] is currently in use."))
 				return TRUE
@@ -548,6 +553,11 @@
 				to_chat(user, SPAN_WARNING("The dropships main controls are not accepting the order."))
 				playsound(loc, 'sound/machines/terminal_error.ogg', KEYBOARD_SOUND_VOLUME, 1)
 				return
+
+			if(istype(SSshuttle.getDock(almayer_lz), /obj/docking_port/stationary/marine_dropship/airlock/outer))
+				shuttle.flags_automated_airlock_presence |= DROPSHIP_HANGAR_DOCK_IS_AIRLOCK
+			if(istype(SSshuttle.getDock(ground_lz), /obj/docking_port/stationary/marine_dropship/airlock/outer))
+				shuttle.flags_automated_airlock_presence |= DROPSHIP_LZ_DOCK_IS_AIRLOCK
 
 			shuttle.automated_hangar_id = almayer_lz
 			shuttle.automated_lz_id = ground_lz
@@ -595,32 +605,52 @@
 			return set_shuttle(new_shuttle)
 
 		if ("clamps")
-			if(!active_airlock_dock)
+			if(!active_airlock_dock || !shuttle)
 				return FALSE
+			if(shuttle.automated_delay && shuttle.automated_hangar_id && shuttle.automated_lz_id)
+				var/confirm_automatic_override = tgui_alert(usr, "Are you sure you want to send a command to the clamps? It will, if conflicting, override and destroy all and destroy automatic pilot commands.", "Override Autopilot", list("Yes", "No"))
+				if(confirm_automatic_override != "Yes")
+					return FALSE
 			var/list/returned_list = active_airlock_dock.update_clamps(TRUE)
 			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
 			return returned_list["successful"]
 		if ("airlock_alarm")
-			if(!active_airlock_dock)
+			if(!active_airlock_dock || !shuttle)
 				return FALSE
+			if(shuttle.automated_delay && shuttle.automated_hangar_id && shuttle.automated_lz_id)
+				var/confirm_automatic_override = tgui_alert(usr, "Are you sure you want to send a command to the airlock alarms? It will, if conflicting, override and destroy all automatic pilot commands.", "Override Autopilot", list("Yes", "No"))
+				if(confirm_automatic_override != "Yes")
+					return FALSE
 			var/list/returned_list = active_airlock_dock.update_airlock_alarm(TRUE)
 			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
 			return returned_list["successful"]
 		if ("inner_airlock")
-			if(!active_airlock_dock)
+			if(!active_airlock_dock || !shuttle)
 				return FALSE
+			if(shuttle.automated_delay && shuttle.automated_hangar_id && shuttle.automated_lz_id)
+				var/confirm_automatic_override = tgui_alert(usr, "Are you sure you want to send a command to inner airlock? It will, if conflicting, override and destroy all automatic pilot commands.", "Override Autopilot", list("Yes", "No"))
+				if(confirm_automatic_override != "Yes")
+					return FALSE
 			var/list/returned_list = active_airlock_dock.update_inner_airlock(TRUE)
 			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
 			return returned_list["successful"]
 		if ("airlock_dropship")
-			if(!active_airlock_dock)
+			if(!active_airlock_dock || !shuttle)
 				return FALSE
+			if(shuttle.automated_delay && shuttle.automated_hangar_id && shuttle.automated_lz_id)
+				var/confirm_automatic_override = tgui_alert(usr, "Are you sure you want to send a command to raise the dropship? It will, if conflicting, override and destroy all automatic pilot commands.", "Override Autopilot", list("Yes", "No"))
+				if(confirm_automatic_override != "Yes")
+					return FALSE
 			var/list/returned_list = active_airlock_dock.update_dropship_height(TRUE)
 			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
 			return returned_list["successful"]
 		if ("outer_airlock")
-			if(!active_airlock_dock)
+			if(!active_airlock_dock || !shuttle)
 				return FALSE
+			if(shuttle.automated_delay && shuttle.automated_hangar_id && shuttle.automated_lz_id)
+				var/confirm_automatic_override = tgui_alert(usr, "Are you sure you want to send a command to the outer airlock? It will, if conflicting, override and destroy all automatic pilot commands.", "Override Autopilot", list("Yes", "No"))
+				if(confirm_automatic_override != "Yes")
+					return FALSE
 			var/list/returned_list = active_airlock_dock.update_outer_airlock(TRUE)
 			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
 			return returned_list["successful"]

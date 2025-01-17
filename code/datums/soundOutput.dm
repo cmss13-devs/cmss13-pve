@@ -67,7 +67,7 @@
 	var/status_flags = SOUND_STREAM
 	var/target_ambience = ambience_override
 	var/presumptive_sound_channel = SOUND_CHANNEL_AMBIENCE
-	var/should_wait = TRUE
+	var/should_wait = FALSE
 
 	if(!(owner.prefs.toggles_sound & SOUND_AMBIENCE))
 		if(!force_update)
@@ -86,6 +86,7 @@
 		soundscape_playlist = target_area.soundscape_playlist
 		if(istype(target_area, /area/shuttle))
 			presumptive_sound_channel = SOUND_CHANNEL_DROPSHIP
+			should_wait = TRUE
 
 	var/sound/S = sound(null,1,should_wait,presumptive_sound_channel)
 

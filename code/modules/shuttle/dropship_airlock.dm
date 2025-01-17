@@ -36,8 +36,10 @@ Docking Port Definitions
 	var/list/poddoors = null
 
 	var/obj/docking_port/mobile/marine_dropship/docked_mobile = null // not a regularly updated variable
+	var/automatic_process_stage_change = 0
+	var/automatic_process_stage = FALSE
 	COOLDOWN_DECLARE(dropship_airlock_cooldown)
-	auto_open = TRUE // this meaning for dropship doors
+	auto_open = TRUE // for dropship doors
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/golden_arrow_one
 	name = "Golden Arrow Hangar Airlock 1 Inner"
@@ -118,11 +120,56 @@ Backend Procs
 	omnibus_sound_play('sound/machines/centrifuge.ogg', 60)
 
 	COOLDOWN_START(src, dropship_airlock_cooldown, end_decisecond)
-	addtimer(CALLBACK(src, PROC_REF(delayed_airlock_transition), airlock_type, open, airlock_turfs, airlock, end_decisecond, transition), 0.1 SECONDS)
+	INVOKE_NEXT_TICK(src, PROC_REF(delayed_airlock_transition), airlock_type, open, airlock_turfs, airlock, end_decisecond, transition)
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_sound_play(sound_effect)
-	playsound(src, sound_effect, 100, vol_cat = VOLUME_AMB)
-	playsound(linked_outer, sound_effect, 100, vol_cat = VOLUME_AMB)
+	playsound(src, sound_effect, 100, vol_cat = VOLUME_SFX)
+	playsound(linked_outer, sound_effect, 100, vol_cat = VOLUME_SFX)
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/end_of_interaction()
+	COOLDOWN_RESET(src, dropship_airlock_cooldown)
+	if(automatic_process_stage_change)
+		addtimer(CALLBACK(src, PROC_REF(automatic_process)), DROPSHIP_AIRLOCK_AUTOMATIC_DELAY)
+		return
+	processing = FALSE
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/automatic_process(command = FALSE)
+	switch(command)
+		if(DROPSHIP_AIRLOCK_GO_UP)
+			automatic_process_stage = 2
+			automatic_process_stage_change = 1
+		if(DROPSHIP_AIRLOCK_GO_DOWN)
+			automatic_process_stage = 7
+			automatic_process_stage_change = -1
+	var/list/return_list
+	switch(automatic_process_stage)
+		if(8) // going up cleanup
+			automatic_process_stage_change = 0
+			automatic_process_stage = 0
+			processing = FALSE
+		if(7)
+			return_list = update_airlock_alarm(TRUE)
+		if(6)
+			return_list = update_inner_airlock(TRUE)
+		if(5)
+			return_list = update_dropship_height(TRUE)
+		if(4)
+			return_list = update_inner_airlock(TRUE)
+		if(3)
+			return_list = update_airlock_alarm(TRUE)
+		if(2)
+			return_list = update_outer_airlock(TRUE)
+		if(1) // going down cleanup
+			automatic_process_stage_change = 0
+			automatic_process_stage = 0
+			return_list = update_clamps(TRUE)
+		if(0) // no command
+			return
+	if(return_list)
+		. = return_list
+		if(!return_list["successful"])
+			return
+	automatic_process_stage += automatic_process_stage_change
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/Initialize(mapload)
 	. = ..()
@@ -148,7 +195,7 @@ Backend Procs
 	if(linked_inner.roundstart_template)
 		unregister()
 	else
-		addtimer(CALLBACK(linked_inner, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_outer_airlock), TRUE), 0.1 SECONDS)
+		INVOKE_NEXT_TICK(linked_inner, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_outer_airlock), TRUE)
 
 /obj/docking_port/stationary/marine_dropship/airlock/outer/on_arrival(obj/docking_port/mobile/arriving_shuttle)
 	. = ..()
@@ -156,17 +203,21 @@ Backend Procs
 		unregister()
 	linked_inner.disengaged_clamps = FALSE
 	linked_inner.lowered_dropship = TRUE
+	SSfz_transitions.fire()
+	handle_obscuring_shuttle_turfs()
+	if(!istype(arriving_shuttle, /obj/docking_port/mobile/marine_dropship))
+		return
+	var/obj/docking_port/mobile/marine_dropship/arriving_dropship = arriving_shuttle
+	if((src.id == arriving_dropship.automated_hangar_id || src.id == arriving_dropship.automated_lz_id) && arriving_dropship.automated_delay)
+		linked_inner.automatic_process(DROPSHIP_AIRLOCK_GO_UP)
+
+/obj/docking_port/stationary/marine_dropship/airlock/outer/proc/handle_obscuring_shuttle_turfs()
 	for(var/turf/open/shuttle/shuttle_turf in block(DROPSHIP_AIRLOCK_BOUNDS))
 		if(shuttle_turf.clone)
 			shuttle_turf.clone.layer = 1.93
 			shuttle_turf.clone.color = "#000000"
 
-/obj/docking_port/stationary/marine_dropship/airlock/outer/on_departure(obj/docking_port/mobile/departing_shuttle)
-	. = ..()
-	if(!registered)
-		register(TRUE)
-
-/obj/docking_port/stationary/marine_dropship/airlock/outer/proc/get_outer_airlock_turfs() // why is this the only newly defined proc for the outer? well I'd prefer to keep DROPSHIP_AIRLOCK_BLOCK as a constant, which relies upon calling src, and I doubt this is ever going to be expected to be callable from the controller obj (the inner airlock)
+/obj/docking_port/stationary/marine_dropship/airlock/outer/proc/get_outer_airlock_turfs()
 	linked_inner.outer_airlock_turfs = list()
 	var/list/offset_to_inner_coordinates = list("x" = (linked_inner.x - src.x), "y" = (linked_inner.y - src.y), "z" = (linked_inner.z - src.z))
 	for(var/turf/turf as anything in block(DROPSHIP_AIRLOCK_BOUNDS))
@@ -182,7 +233,7 @@ Backend Procs
 		new_projector.vector_z = offset_to_inner_coordinates["z"]
 
 /*#############################################################################
-Timer Induced/Looping Procs
+Backend Timer Delayed/Looping Procs
 #############################################################################*/
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/delayed_airlock_alarm()
@@ -190,12 +241,12 @@ Timer Induced/Looping Procs
 		docked_mobile = get_docked()
 		if(docked_mobile)
 			docked_mobile.door_control.control_doors("unlock", "all")
-	processing = FALSE
+	end_of_interaction()
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/delayed_airlock_transition(airlock_type, open, airlock_turfs, obj/effect/hangar_airlock/airlock, end_decisecond, transition)
 	if(COOLDOWN_FINISHED(src, dropship_airlock_cooldown))
 		airlock.icon_state = "[transition]"
-		processing = FALSE
+		end_of_interaction()
 		return
 	var/decisecond = (end_decisecond - COOLDOWN_TIMELEFT(src, dropship_airlock_cooldown))
 	if(!(decisecond % 10))
@@ -209,7 +260,7 @@ Timer Induced/Looping Procs
 					T.Entered(AM)
 			T.clean_cleanables()
 			T.can_bloody = !open
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, delayed_airlock_transition), airlock_type, open, airlock_turfs, airlock, end_decisecond, transition), 0.1 SECONDS)
+	INVOKE_NEXT_TICK(src, PROC_REF(delayed_airlock_transition), airlock_type, open, airlock_turfs, airlock, end_decisecond, transition)
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/delayed_height_decrease()
 	if(COOLDOWN_FINISHED(src, dropship_airlock_cooldown))
@@ -217,25 +268,24 @@ Timer Induced/Looping Procs
 		for(var/obj/effect/hangar_airlock/height_mask/qdeling_height_mask as anything in dropship_height_masks)
 			dropship_height_masks -= qdeling_height_mask
 			qdel(qdeling_height_mask)
-		COOLDOWN_RESET(src, dropship_airlock_cooldown)
-		processing = FALSE
+		end_of_interaction()
 		return
 	var/alpha_reiteration = (DROPSHIP_AIRLOCK_HEIGHT_TRANSITION - COOLDOWN_TIMELEFT(src, dropship_airlock_cooldown)) * 2
 	for(var/obj/effect/hangar_airlock/height_mask/dropship/transitioning_height_mask as anything in dropship_height_masks)
 		transitioning_height_mask.alpha = alpha_reiteration
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, delayed_height_decrease)), 0.1 SECONDS)
+	INVOKE_NEXT_TICK(src, PROC_REF(delayed_height_decrease))
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/delayed_height_increase()
 	docked_mobile.initiate_docking(src)
-	processing = FALSE
+	end_of_interaction()
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/delayed_disengage_clamps()
 	if(!docked_mobile.assigned_transit)
 		SSshuttle.generate_transit_dock(docked_mobile)
 	docked_mobile.set_mode(SHUTTLE_IDLE)
 	docked_mobile.initiate_docking(docked_mobile.assigned_transit)
-	addtimer(CALLBACK(docked_mobile, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, dropship_freefall)), 0.1 SECONDS)
-	processing = FALSE
+	INVOKE_NEXT_TICK(docked_mobile, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, dropship_freefall))
+	end_of_interaction()
 
 /*#############################################################################
 Player Interactablility Procs
@@ -290,6 +340,7 @@ Player Interactablility Procs
 		.["to_chat"] = "Closing inner airlock."
 	else
 		SSfz_transitions.toggle_selective_update(!open_inner_airlock, dropship_airlock_id) // start updating the projectors
+		linked_outer.handle_obscuring_shuttle_turfs()
 		omnibus_airlock_transition("inner", TRUE, inner_airlock_turfs, inner_airlock_effect, 50)
 		.["to_chat"] = "Opening inner airlock."
 	if(invert)
@@ -355,11 +406,15 @@ Player Interactablility Procs
 		linked_outer.get_outer_airlock_turfs()
 	if(open_outer_airlock)
 		omnibus_airlock_transition("outer", FALSE, outer_airlock_turfs, outer_airlock_effect, DROPSHIP_AIRLOCK_TRANSITION_PERIOD)
+		if(registered)
+			linked_outer.unregister()
 		.["to_chat"] = "Closing outer airlock."
 	else
 		for(var/obj/structure/machinery/door/poddoor/almayer/airlock/poddoor as anything in poddoors)
 			poddoor.close()
 		omnibus_airlock_transition("outer", TRUE, outer_airlock_turfs, outer_airlock_effect, DROPSHIP_AIRLOCK_TRANSITION_PERIOD)
+		if(!registered)
+			linked_outer.register(TRUE)
 		.["to_chat"] = "Opening outer airlock."
 	if(invert)
 		open_outer_airlock = open_outer_airlock ? FALSE : TRUE
@@ -388,7 +443,7 @@ Player Interactablility Procs
 	if(disengaged_clamps)
 		.["to_chat"] = "Engaging clamps."
 	else
-		playsound(docked_mobile.return_center_turf(), 'sound/effects/dropship_flight_airlocked_start.ogg', 100, sound_range = docked_mobile.dheight, vol_cat = VOLUME_AMB, channel = SOUND_CHANNEL_DROPSHIP)
+		playsound(docked_mobile.return_center_turf(), 'sound/effects/dropship_flight_airlocked_start.ogg', 100, sound_range = docked_mobile.dheight, vol_cat = VOLUME_SFX, channel = SOUND_CHANNEL_DROPSHIP)
 		addtimer(CALLBACK(src, PROC_REF(delayed_disengage_clamps), docked_mobile), DROPSHIP_AIRLOCK_DECLAMP_PERIOD)
 		.["to_chat"] = "Disengaging clamps."
 	if(invert)

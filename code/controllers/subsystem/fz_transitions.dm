@@ -14,7 +14,7 @@ SUBSYSTEM_DEF(fz_transitions)
 	return ..()
 
 /datum/controller/subsystem/fz_transitions/Initialize()
-	selective_update = list(null = 1)
+	selective_update = list("generic" = 1)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/fz_transitions/fire(resumed = FALSE)

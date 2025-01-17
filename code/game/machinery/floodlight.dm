@@ -119,7 +119,7 @@
 /obj/structure/machinery/floodlight/landing/dropship_airlock/proc/toggle_rotating()
 	if(istype(light.our_mask, /atom/movable/lighting_mask/rotating_toggleable))
 		var/atom/movable/lighting_mask/rotating_toggleable/rotating_mask = light.our_mask
-		playsound(src, 'sound/machines/switch.ogg', 60, sound_range = 15)
+		playsound(src, 'sound/machines/switch.ogg', 100, vol_cat = VOLUME_SFX)
 		rotating_mask.toggle()
 
 /obj/structure/machinery/floodlight/landing/dropship_airlock/golden_arrow_one

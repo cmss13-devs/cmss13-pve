@@ -10,7 +10,7 @@ GLOBAL_LIST_EMPTY(deselected_projectors)
 	var/vector_x = 0
 	var/vector_y = 0
 	var/vector_z = 0
-	var/firing_id = null
+	var/firing_id = "generic"
 	var/mask_layer = null // all actual layers are divided by 10 and then subtracted from the mask layer.
 	var/movables_projection_plane = -6 //necessary to change when making a movable go under a turf (whose plane is -7)
 	var/modify_turf = TRUE
