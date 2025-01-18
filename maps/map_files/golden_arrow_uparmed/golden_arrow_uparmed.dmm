@@ -19360,6 +19360,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"oLI" = (
+/obj/item/paper{
+	info = To open the lockers in the room below, remove the entry in the req_one_access list. After that, anyone will be able to open them;
+	name = "LOCKER INSTRUCTIONS"
+	},
+/turf/open/space/basic,
+/area/space)
 "oMo" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -19634,7 +19641,7 @@
 	icon_state = "base";
 	req_one_access = list(290);
 	icon = 'icons/obj/structures/props/misc.dmi';
-	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. There's a sizeable case with a stylised M4RA painted across it sitting inside."
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. There's a sizeable case with 'R-2' painted across it sitting inside."
 	},
 /obj/item/storage/box/guncase/heavy/m4ra_pve,
 /turf/open/floor/almayer/plate,
@@ -28634,7 +28641,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+oLI
 aXB
 jji
 uPX

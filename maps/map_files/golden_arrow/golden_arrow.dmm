@@ -16747,6 +16747,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"hhl" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = 7
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "hhG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -32722,7 +32729,7 @@ aej
 aOp
 aDj
 umc
-exo
+hhl
 fAo
 eGR
 hjV
