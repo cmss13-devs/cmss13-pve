@@ -661,6 +661,27 @@
 	to_chat(user, SPAN_WARNING("You finish flaying [current_limb]."))
 	current_limb.flayed = TRUE
 
+/obj/item/weapon/yautja/knife/marine
+	name = "\improper extremely sharp M5 'Night Raider' bayonet"
+	desc = "USCMC standard issue combat knife. Can be put into boot holster, but not attached to a rifle. This one is incredibly sharp. Can also be used to extract shrapnel..."
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "bayonet"
+	item_state = "combat_knife"
+	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
+	flags_item = CAN_DIG_SHRAPNEL
+	flags_equip_slot = SLOT_FACE
+	flags_armor_protection = SLOT_FACE
+	sharp = IS_SHARP_ITEM_ACCURATE
+	force = MELEE_FORCE_TIER_5
+	w_class = SIZE_TINY
+	throwforce = MELEE_FORCE_TIER_6
+	throw_speed = SPEED_VERY_FAST
+	throw_range = 6
+	hitsound = 'sound/weapons/slash.ogg'
+	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	actions_types = list(/datum/action/item_action/toggle/use)
+	unacidable = TRUE
+
 /*#########################################
 ########### Two Handed Weapons ############
 #########################################*/
