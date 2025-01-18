@@ -424,10 +424,12 @@
 	unacidable = TRUE
 	w_class = SIZE_HUGE //No dumping this in a backpack. Carry it, fatso
 	var/mortar_type = /obj/structure/mortar
+	var/has_camo = TRUE
 
 /obj/item/mortar_kit/Initialize(...)
 	. = ..()
-	select_gamemode_skin(type)
+	if(has_camo)
+		select_gamemode_skin(type)
 
 /obj/item/mortar_kit/ex_act(severity)
 	switch(severity)
@@ -472,6 +474,7 @@
 	warning_text = "A MISSILE IS COMING DOWN"
 	warning_text = "A MISSILE IS ABOUT TO IMPACT"
 	travel_time = 2 SECONDS
+	has_camo = FALSE
 	var/obj/item/mortar_shell/loaded_shell = null
 	var/id
 
@@ -576,6 +579,10 @@
 
 	for(var/mob/mob in range(7))
 		shake_camera(mob, 3, 1)
+		if(ishuman(mob) && !HAS_TRAIT(mob, TRAIT_EAR_PROTECTION))
+			var/mob/living/carbon/human/human = mob
+			human.SetEarDeafness(max(human.ear_deaf, 25))
+			to_chat(human, SPAN_WARNING("Augh!! \The [src]'s launch blast resonates extremely loudly in your ears! You probably should have worn some sort of ear protection..."))
 	firing = TRUE
 	flick(icon_state + "_fire", src)
 	spawn(travel_time+rand(1, 10))
@@ -600,3 +607,4 @@
 		WEAR_BACK = "himat",
 	)
 	mortar_type = /obj/structure/mortar/himat
+	has_camo = FALSE

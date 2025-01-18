@@ -204,7 +204,7 @@
 	name = "HIMAT IN missile"
 	desc = "This is a small, two-stage missile used by HIMAT launcher. This one has an incendiary package, covering area of impact with burning flames."
 	icon_state = "missile_inc"
-	radius = 7
+	radius = 5
 	flame_level = BURN_TIME_TIER_5 + 5
 	burn_level = BURN_LEVEL_TIER_5
 	flameshape = FLAMESHAPE_DEFAULT
@@ -344,3 +344,4 @@
 	new /obj/item/device/binoculars/range/designator/monocular(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/device/multitool(src)
+	new /obj/item/clothing/ears/earmuffs(src)

@@ -427,7 +427,7 @@
 
 //pve binocs
 /obj/item/device/binoculars/range/monocular
-	name = "tactical monocular"
+	name = "rangefinder monocular"
 	desc = "A military-grade monocular equipped with rangefinding capabilities. Capable of withstanding a pretty hefty beating. Ctrl + Click turf to acquire it's coordinates. Ctrl + Click rangefinder to stop lasing."
 	icon_state = "advanced_monocular"
 	uses_camo = FALSE
