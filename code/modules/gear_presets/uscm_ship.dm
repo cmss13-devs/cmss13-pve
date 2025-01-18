@@ -706,6 +706,7 @@
 
 	do_rename_platoon(new_human.client.prefs.platoon_name)
 	change_dropship_camo(new_human.client.prefs.dropship_camo)
+	change_dropship_name(new_human.client.prefs.dropship_name)
 
 /datum/equipment_preset/uscm_ship/so/upp
 	name = "UPP Platoon Commander (PltCo)"
