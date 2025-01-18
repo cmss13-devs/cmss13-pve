@@ -135,6 +135,7 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "ag80"
 	max_rounds = 75
+	caliber = "10x23mm"
 	gun_type = /obj/item/weapon/gun/rifle/ag80
 	default_ammo = /datum/ammo/bullet/rifle
 	ammo_band_icon = "+ag80_band"

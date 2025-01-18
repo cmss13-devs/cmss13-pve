@@ -464,7 +464,7 @@
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/ag80/collapsible)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/ag80/collapsible, /obj/item/attachable/reddot)
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/ag80/set_gun_attachment_offsets()
