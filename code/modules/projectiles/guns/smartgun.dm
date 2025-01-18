@@ -42,7 +42,7 @@
 	var/accuracy_improvement = 0
 	var/auto_fire = 0
 	var/motion_detector = 0
-	var/drain = 40
+	var/drain = 50
 	var/range = 7
 	var/angle = 2
 	var/list/angle_list = list(180,135,90,60,30)
@@ -358,12 +358,12 @@
 		ammo = ammo_tertiary
 		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire impact-detonating rounds, which stagger most enemies on hit and slow them down.")
 		balloon_alert(user, "firing impact-detonating")
-		drain += 60
+		drain += 10
 	else
 		ammo = ammo_primary
 		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire highly precise rounds. These rounds are accurate and cost less power to operate.")
 		balloon_alert(user, "firing highly precise")
-		drain -= 110
+		drain -= 60
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	var/datum/action/item_action/smartgun/toggle_ammo_type/TAT = locate(/datum/action/item_action/smartgun/toggle_ammo_type) in actions
 	TAT.update_icon()

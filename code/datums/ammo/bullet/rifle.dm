@@ -158,7 +158,7 @@
 /datum/ammo/bullet/rifle/heavy/impdet
 	name = "impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 30
+	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 

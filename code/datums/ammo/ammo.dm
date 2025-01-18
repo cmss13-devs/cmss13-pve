@@ -178,12 +178,11 @@
 /datum/ammo/proc/slowdown(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(isxeno(living_mob))
 		var/mob/living/carbon/xenomorph/xeno = living_mob
-		if(xeno.caste.tier > 3 || (xeno.caste.tier == 0 && xeno.mob_size >= MOB_SIZE_IMMOBILE))
-			return //King & queen should remain unaffected
+		if(xeno.caste.tier > 2 || (xeno.caste.tier == 0 && xeno.mob_size >= MOB_SIZE_XENO))
+			return //tier 3 and big tier 0 (like queen) are not affected
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
-		target.apply_effect(1, SUPERSLOW)
-		target.apply_effect(3, SLOW)
+		target.apply_effect(4, SUPERSLOW)
 		to_chat(target, SPAN_XENODANGER("You are slowed by the sudden impact!"))
 	else
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
