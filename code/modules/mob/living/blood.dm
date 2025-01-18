@@ -311,13 +311,32 @@
 		O = new(T)
 
 /mob/living/carbon/human/proc/spray_blood(turf/T, spray_dir, limb)
+	var/angle = rand(0,360)
 	var/obj/limb/O = limb
+	var/newdir
+	if(angle > 337.5 || angle <= 22.5)
+		newdir = 8  // WEST
+	if(angle > 22.5 && angle <= 67.5)
+		newdir = 9  // NORTHWEST
+	if(angle > 67.5 && angle <= 112.5)
+		newdir = 1  // NORTH
+	if(angle > 112.5 && angle <= 157.5)
+		newdir = 9  // NORTHWEST
+	if(angle > 157.5 && angle <= 202.5)
+		newdir = 4  // EAST
+	if(angle > 202.5 && angle <= 247.5)
+		newdir = 6  // SOUTHEAST
+	if(angle > 247.5 && angle <= 292.5)
+		newdir = 2  // SOUTH
+	if(angle > 292.5 && angle <= 337.5)
+		newdir = 10  // SOUTHWEST
+
 	visible_message(\
 			SPAN_WARNING("You see a gush of blood spray from [src]'s [O.display_name]!"),
 			SPAN_HIGHDANGER("Blood sprays from your [O.display_name]!"),
 			SPAN_HIGHDANGER("You hear something spray violently!"))
-	for(var/i = 1 to ceil(src.blood_volume/180))
-		T = get_step(T, spray_dir)
+	for(var/i = 1 to 2)
+		T = get_step(T, newdir)
 		if(T.density)
 			break
 		for(var/A in T)
@@ -328,10 +347,34 @@
 					to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!"))
 					sprayed_with_blood.apply_effect(9, EYE_BLUR)
 					break
-		var/b_color = species.blood_color
-		var/obj/effect/decal/cleanable/blood/blood_spraying = new /obj/effect/decal/cleanable/blood(T, b_color, TRUE)
-		blood_spraying.icon_state = "squirt[spray_dir]"
-		blood_spraying.pixel_x = rand(-2,2)
-		blood_spraying.pixel_y = rand(-2,2)
+		var/reverse_odd_numbered_decals
+		if(i % 2 != 0)
+			reverse_odd_numbered_decals = 1
+		else
+			reverse_odd_numbered_decals = -1
+		var/theloc
+		var/offset_to_avoid_loc_overlap = 0
+		/*if(reverse_odd_numbered_decals == 1)
+			theloc = get_step(src, 1)
+			offset_to_avoid_loc_overlap = -32
+		else
+			theloc = src.loc
+			offset_to_avoid_loc_overlap = 0*/
+		var/obj/effect/decal/cleanable/blood/squirt/blood_spraying = new /obj/effect/decal/cleanable/blood/squirt(src.loc)
+		blood_spraying.pixel_y = (((((32*sin(angle)))*i)+offset_to_avoid_loc_overlap))
+		blood_spraying.pixel_x = (((((32*cos(angle)))*reverse_odd_numbered_decals)*i)*reverse_odd_numbered_decals)*-1
+		//var/new_T = locate(T.x + blood_spraying)
+		blood_spraying.apply_transform(turn(transform,angle))
+		if(!src.body_position == LYING_DOWN)
+			blood_spraying.icon_state = "squirt4"
+		else
+			blood_spraying.icon_state = "squirt1"
+		blood_spraying.color = get_blood_color()
+		to_world(angle)
+		//blood_spraying.pixel_x = rand(-2,2)
+		//blood_spraying.pixel_y = rand(-2,2)
 		playsound(src, 'sound/effects/blood_squirt.ogg', 50, TRUE)
+
+/obj/effect/decal/cleanable/blood/squirt
+	allow_this_to_overlap = TRUE
 
