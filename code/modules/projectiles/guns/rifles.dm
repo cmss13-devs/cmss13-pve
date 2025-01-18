@@ -457,18 +457,21 @@
 	current_mag = /obj/item/ammo_magazine/rifle/ag80
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
-		/obj/item/attachable/reddot,
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/flashlight,
-		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/scope/upp,
+		/obj/item/attachable/scope/mini/upp,
 		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/attached_gun/grenade/ag80
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/ag80/collapsible, /obj/item/attachable/reddot)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/ag80/collapsible, /obj/item/attachable/reflex/upp, /obj/item/attachable/attached_gun/grenade/ag80)
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/ag80/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 22, "under_x" = 21, "under_y" = 14, "stock_x" = 22, "stock_y" = 14)
 
 /obj/item/weapon/gun/rifle/ag80/set_gun_config_values()
 	..()

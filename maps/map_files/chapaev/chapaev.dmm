@@ -249,25 +249,6 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
 "cb" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = -6;
-	pixel_y = 11
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = 2;
-	pixel_y = 11
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = -3;
-	pixel_y = 24
-	},
-/obj/item/ammo_magazine/minigun{
-	desc = "A huge ammo drum for a huge gun. Your platoon got issued with magazines first which happened several months ago. When will the miniguns come, you wonder?";
-	name = "GSh-7.62 rotating ammo drum (7.62x51mm)";
-	pixel_x = 4;
-	pixel_y = 5
-	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
@@ -277,6 +258,12 @@
 	icon_state = "lattice2";
 	pixel_x = 16;
 	pixel_y = 16
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/type73,
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 11;
+	pixel_x = -3
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
@@ -802,9 +789,16 @@
 "gc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/np92{
-	pixel_y = 10
+	pixel_y = 10;
+	pixel_x = 4
 	},
-/obj/item/ammo_box/magazine/type73,
+/obj/item/ammo_box/magazine/type73{
+	pixel_x = 3
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = -7;
+	pixel_y = 12
+	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
 "gd" = (
@@ -1034,6 +1028,9 @@
 /obj/item/attachable/bayonet/upp{
 	pixel_x = -9;
 	pixel_y = 2
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = 8
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
@@ -1428,31 +1425,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "mg" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/closet/crate/freezer/cooler{
-	pixel_y = 9;
-	pixel_x = 7;
-	can_block_movement = 0;
-	anchored = 1
-	},
-/obj/item/snowball{
-	pixel_y = 9;
-	pixel_x = 5
-	},
-/obj/item/reagent_container/food/snacks/bearmeat{
-	pixel_y = 8;
-	pixel_x = 6;
-	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the NODs you traded?"
-	},
-/obj/item/reagent_container/food/snacks/bearmeat{
-	pixel_y = 14;
-	pixel_x = 6;
-	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the incinerators you traded?"
-	},
-/obj/structure/prop/ice_colony/hula_girl{
-	pixel_x = -7;
-	pixel_y = 12
-	},
+/obj/structure/gun_rack/ag80/unloaded,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
 "mk" = (
@@ -3520,12 +3493,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/prep_hallway)
 "DD" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/np92{
-	pixel_y = 11;
-	pixel_x = -3
-	},
-/obj/item/ammo_box/magazine/type73,
+/obj/structure/gun_rack/ag80/unloaded,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
 "DH" = (
