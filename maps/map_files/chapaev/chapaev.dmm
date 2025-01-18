@@ -1761,12 +1761,8 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
 "py" = (
-/obj/item/clothing/accessory/armband,
 /obj/item/device/whistle,
 /obj/item/device/binoculars/range/designator,
-/obj/item/weapon/gun/rifle/type71/carbine{
-	current_mag = null
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -4061,6 +4057,9 @@
 	name = "secure Type 6 grenade crate";
 	color = "#979b6d"
 	},
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/squad_two)
 "Js" = (
@@ -4901,6 +4900,9 @@
 	pixel_x = 16;
 	pixel_y = 16
 	},
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/squad_one)
 "TF" = (
@@ -4978,7 +4980,6 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Ur" = (
-/obj/item/clothing/accessory/armband,
 /obj/item/device/whistle,
 /obj/item/device/binoculars/range/designator,
 /obj/item/weapon/gun/rifle/type71/carbine{

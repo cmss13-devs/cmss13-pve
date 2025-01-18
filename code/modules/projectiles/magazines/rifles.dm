@@ -131,10 +131,10 @@
 
 /obj/item/ammo_magazine/rifle/ag80
 	name = "\improper AG80 magazine (10x23mm)"
-	desc = "A compact rectangular box magazine for the AG80. Holds 75 caseless 10x23mm rounds."
+	desc = "A compact rectangular box magazine for the AG80. Holds 95 caseless 10x23mm rounds."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "ag80"
-	max_rounds = 75
+	max_rounds = 95
 	caliber = "10x23mm"
 	gun_type = /obj/item/weapon/gun/rifle/ag80
 	default_ammo = /datum/ammo/bullet/rifle

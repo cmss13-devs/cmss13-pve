@@ -400,7 +400,7 @@
 //-----------------------Type71 Rifle Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/type71
-	name = "magazine box (Type71 x 10)"
+	name = "magazine box (Type71 x 14)"
 	icon_state = "base_type71"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_type71_reg"
@@ -413,7 +413,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type71/ap
-	name = "magazine box (Type71 AP x 10)"
+	name = "magazine box (Type71 AP x 14)"
 	overlay_ammo_type = "_type71_ap"
 	overlay_content = "_type71_ap"
 	magazine_type = /obj/item/ammo_magazine/rifle/type71/ap
@@ -422,7 +422,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type71/heap
-	name = "magazine box (Type71 HEAP x 10)"
+	name = "magazine box (Type71 HEAP x 14)"
 	overlay_ammo_type = "_type71_heap"
 	overlay_content = "_type71_heap"
 	magazine_type = /obj/item/ammo_magazine/rifle/type71/heap
@@ -439,9 +439,8 @@
 	overlay_ammo_type = "_type71_reg"
 	overlay_gun_type = "_ag80"
 	overlay_content = "_type71_reg"
-	num_of_magazines = 14
+	num_of_magazines = 10
 	magazine_type = /obj/item/ammo_magazine/rifle/ag80
-
 
 //-----------------------Nailgun Mag Box-----------------------
 
