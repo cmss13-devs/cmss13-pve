@@ -13102,7 +13102,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/prop/almayer/computer/PC{
+/obj/structure/machinery/computer/secure_data/noaccess{
 	dir = 4
 	},
 /turf/open/floor/almayer,
