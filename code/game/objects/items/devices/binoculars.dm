@@ -445,7 +445,7 @@
 
 /obj/item/device/binoculars/range/designator/monocular
 	name = "tactical monocular"
-	desc = "Two-mode tactical monocular, developed alongside M112 HIMAT, even though other tactical optical devices can be connected to them. Use red IR laser mode to laze for HIMAT strike. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes."
+	desc = "Two-mode tactical monocular, developed alongside M112 HIMAT, even though other tactical optical devices can be connected to them. Use IR laser mode to laze for HIMAT strike. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes."
 	icon_state = "advanced_monocular"
 	range_laser_overlay = "adv_laser_range"
 	cas_laser_overlay = "adv_laser_cas"
