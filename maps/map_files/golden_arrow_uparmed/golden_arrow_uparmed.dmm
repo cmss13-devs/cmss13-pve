@@ -19362,7 +19362,7 @@
 /area/golden_arrow/briefing)
 "oLI" = (
 /obj/item/paper{
-	info = To open the lockers in the room below, remove the entry in the req_one_access list. After that, anyone will be able to open them;
+	info = "To open the lockers in the room below, remove the entry in the req_one_access list. After that, anyone will be able to open them";
 	name = "LOCKER INSTRUCTIONS"
 	},
 /turf/open/space/basic,
