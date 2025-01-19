@@ -8488,13 +8488,6 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
-"aCU" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/hardpoint/locomotion/apc_wheels,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "aCV" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -9176,10 +9169,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
-"aFc" = (
-/obj/item/hardpoint/locomotion/apc_wheels/arc,
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/motor_pool)
 "aFd" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
@@ -32861,7 +32850,7 @@ ayX
 ayX
 adz
 aGv
-aFc
+aGv
 aBB
 aBB
 aDG
@@ -38946,7 +38935,7 @@ adz
 adz
 adz
 adz
-aCU
+aKa
 aby
 srv
 srv
