@@ -152,3 +152,19 @@
 	name = "Out of Bounds Fun"
 	icon_state = "yellow"
 	base_lighting_alpha = 175
+//=================================================================================UNDERGROUND BUNKERS
+/area/calliope/bunker/engineering_under
+	name = "Generator Station"
+	icon_state = "engineering"
+/area/calliope/bunker/north_section
+	name = "Maintenance Hallway"
+	icon_state = "lower hull"
+/area/calliope/bunker/cargo_under
+	name = "Sterling Cargo Storage"
+	icon_state = "storage"
+/area/calliope/bunker/south_section
+	name = "Maintenance Hallway"
+	icon_state = "lower hull"
+/area/calliope/bunker/escape
+	name = "Emergency Escape Hatch"
+	icon_state = "evac"
