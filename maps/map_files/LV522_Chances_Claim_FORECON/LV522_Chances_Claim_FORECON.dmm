@@ -39584,7 +39584,7 @@
 	icon_state = "Synthetic_Template";
 	name = "Display synthetic"
 	},
-/obj/item/clothing/under/CM_uniform{
+/obj/item/clothing/under/cmb{
 	pixel_y = -2
 	},
 /obj/structure/window/reinforced,

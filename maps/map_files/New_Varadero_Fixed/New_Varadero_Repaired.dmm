@@ -3928,7 +3928,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /obj/item/clothing/suit/armor/vest,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/security)
@@ -24383,7 +24383,7 @@
 /obj/structure/bedsheetbin{
 	icon_state = "linenbin-empty"
 	},
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "uHD" = (
