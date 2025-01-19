@@ -48,7 +48,7 @@
 /datum/equipment_preset/cmb/standard
 	name = "CMB - Colonial Marshals Deputy"
 	paygrades = list(PAY_SHORT_CMBD = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "CMB Dep."
+	role_comm_title = "CMB Dep"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Office of Colonial Marshals Deputy"
 	rank = JOB_CMB
@@ -99,6 +99,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CMB/limited, WEAR_L_EAR)
 	//head
 	if(prob(65))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
+	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/CMB, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/cmb, WEAR_BODY)
@@ -112,9 +115,37 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/CMB/full/revolver, WEAR_WAIST)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	add_combat_gloves(new_human)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
+	var/choice = rand(1,10)
+	switch(choice)
+		if(1 to 6)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_L_HAND)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large, WEAR_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
+		if(7 to 9)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_L_HAND)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+		if(10)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_L_HAND)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 
 //*****************************************************************************************************/
 
@@ -122,7 +153,7 @@
 	name = "CMB - Colonial Marshal"
 	paygrades = list(PAY_SHORT_CMBM = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/marshal
-	role_comm_title = "CMB Mar."
+	role_comm_title = "CMB Mar"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Colonial Marshal"
 	rank = JOB_CMB_TL
@@ -166,7 +197,7 @@
 	name = "CMB - Support Synthetic"
 	paygrades = list(PAY_SHORT_CMBS = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/deputy
-	role_comm_title = "CMB Syn"
+	role_comm_title = "CMB Synth"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "CMB Investigative Synthetic"
 	rank = JOB_CMB_SYN
@@ -238,7 +269,7 @@
 	name = "CMB - Interstellar Commerce Commission Liaison"
 	paygrades = list(PAY_SHORT_ICCL = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/silver/cl
-	role_comm_title = "ICC Rep."
+	role_comm_title = "ICC Rep"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	assignment = "Interstellar Commerce Commission Liaison"
