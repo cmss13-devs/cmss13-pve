@@ -24,8 +24,8 @@
 
 /datum/paygrade/cmb/icc/liaison
 	paygrade = PAY_SHORT_ICCL
-	name = "Interstellar Commerce Commission Corporate Liaison"
-	prefix = "Exec."
+	name = "Interstellar Commerce Commission Liaison"
+	prefix = "Agent"
 
 /datum/paygrade/cmb/observer
 	paygrade = PAY_SHORT_IHRO

@@ -289,7 +289,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_CMB "CMB Deputy"
 #define JOB_CMB_TL "CMB Marshal"
 #define JOB_CMB_SYN "CMB Investigative Synthetic"
-#define JOB_CMB_ICC "Interstellar Commerce Commission Corporate Liaison"
+#define JOB_CMB_ICC "Interstellar Commerce Commission Liaison"
 #define JOB_CMB_OBS "Interstellar Human Rights Observer"
 
 #define CMB_GRUNT_LIST list(JOB_CMB, JOB_CMB_TL)

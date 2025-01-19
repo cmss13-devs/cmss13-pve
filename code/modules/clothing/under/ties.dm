@@ -983,10 +983,10 @@
 	icon_state = "holster"
 
 /obj/item/clothing/accessory/storage/holster/waist
-	name = "shoulder holster"
-	desc = "A handgun holster. Made of expensive leather."
-	icon_state = "holster"
-	item_state = "holster_low"
+	name = "waist holster"
+	desc = "A handgun holster."
+	icon_state = "holster_hip"
+	item_state = "holster_hip"
 
 /*
 	Holobadges are worn on the belt or neck, and can be used to show that the holder is an authorized
