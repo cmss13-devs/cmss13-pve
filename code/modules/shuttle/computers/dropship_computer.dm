@@ -220,15 +220,42 @@
 
 		playsound(loc, 'sound/machines/terminal_success.ogg', KEYBOARD_SOUND_VOLUME, 1)
 		if(shuttle.mode == SHUTTLE_IDLE && !is_ground_level(shuttle.z))
-			var/result = SSshuttle.moveShuttle(shuttleId, linked_lz, TRUE)
-			if(result != DOCKING_SUCCESS)
-				to_chat(xeno, SPAN_WARNING("The metal bird can not land here. It might be currently occupied!"))
-				return
-			to_chat(xeno, SPAN_NOTICE("You command the metal bird to come down. Clever girl."))
-			xeno_announcement(SPAN_XENOANNOUNCE("Our Queen has commanded the metal bird to the hive at [linked_lz]."), xeno.hivenumber, XENO_GENERAL_ANNOUNCE)
-			log_ares_flight("Unknown", "Remote launch signal for [shuttle.name] received. Authentication garbled.")
-			log_ares_security("Security Alert", "Remote launch signal for [shuttle.name] received. Authentication garbled.")
-			return
+			if(istype(shuttle.get_docked(), /obj/docking_port/stationary/marine_dropship/airlock))
+				var/number_to_call = 0
+				var/dock = shuttle.get_docked()
+				var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock
+				if(istype(dock, /obj/docking_port/stationary/marine_dropship/airlock/inner))
+					inner_airlock = dock
+				else if(istype(dock, /obj/docking_port/stationary/marine_dropship/airlock/outer))
+					var/obj/docking_port/stationary/marine_dropship/airlock/outer/outer_airlock = dock
+					inner_airlock = outer_airlock.linked_inner
+				inner_airlock.processing = TRUE
+				inner_airlock.disable_manual_input = TRUE
+
+				if(inner_airlock.open_outer_airlock)
+					addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_outer_airlock), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
+					number_to_call += 1
+				if(inner_airlock.lowered_dropship)
+					addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_inner_airlock), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
+					number_to_call += 1
+				else
+					inner_airlock.update_inner_airlock(TRUE, TRUE)
+					number_to_call += 1
+					addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_dropship_height), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
+					number_to_call += 1
+					addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_inner_airlock), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
+					number_to_call += 1
+				addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_outer_airlock), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
+				number_to_call += 1
+				addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_clamps), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
+				number_to_call += 1
+				log_ares_flight("Unknown", "Safety override exit signal for [inner_airlock.name] received. Authentication garbled.")
+				log_ares_security("Security Alert", "Safety override exit signal for [inner_airlock.name] received. Authentication garbled.")
+				to_chat(xeno, "You command-override the airlock to begin exiting the shuttle with all speed. The screen reads T-[number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD * 0.1]...")
+				addtimer(CALLBACK(src, PROC_REF(alien_call_dropship), xeno, shuttle, inner_airlock), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
+			else
+				alien_call_dropship(xeno, shuttle)
+
 		if(shuttle.destination && shuttle.destination.id != linked_lz)
 			to_chat(xeno, "The shuttle not ready. The screen reads T-[shuttle.timeLeft(10)]. Have patience.")
 			return
@@ -242,6 +269,18 @@
 			to_chat(xeno, "The shuttle is launching.")
 			return
 
+/obj/structure/machinery/computer/shuttle/dropship/flight/proc/alien_call_dropship(mob/living/carbon/xenomorph/xeno, obj/docking_port/mobile/shuttle, obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock)
+	var/result = SSshuttle.moveShuttle(shuttleId, linked_lz, TRUE)
+	if(result != DOCKING_SUCCESS)
+		to_chat(xeno, SPAN_WARNING("The metal bird can not land here. It might be currently occupied!"))
+		return
+	if(inner_airlock)
+		inner_airlock.disable_manual_input = FALSE
+	to_chat(xeno, SPAN_NOTICE("You command the metal bird to come down. Clever girl."))
+	xeno_announcement(SPAN_XENOANNOUNCE("Our Queen has commanded the metal bird to the hive at [linked_lz]."), xeno.hivenumber, XENO_GENERAL_ANNOUNCE)
+	log_ares_flight("Unknown", "Remote launch signal for [shuttle.name] received. Authentication garbled.")
+	log_ares_security("Security Alert", "Remote launch signal for [shuttle.name] received. Authentication garbled.")
+	return
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/attack_alien(mob/living/carbon/xenomorph/xeno)
 	// if the shuttleid is null or the shuttleid references a shuttle that has been removed from play, pick one
@@ -385,9 +424,9 @@
 	.["can_fly_by"] = !is_remote
 	.["can_set_automated"] = is_remote
 	.["automated_control"] = list(
-		"is_automated" = shuttle?.automated_hangar_id != null || shuttle?.automated_lz_id != null,
-		"hangar_lz" = shuttle?.automated_hangar_id,
-		"ground_lz" = shuttle?.automated_lz_id
+		"is_automated" = shuttle?.automated_hangar != null || shuttle?.automated_lz != null,
+		"hangar_lz" = shuttle?.automated_hangar?.id,
+		"ground_lz" = shuttle?.automated_lz?.id
 	)
 	.["primary_lz"] = SSticker.mode.active_lz?.linked_lz
 	if(shuttle?.destination)
@@ -554,13 +593,26 @@
 				playsound(loc, 'sound/machines/terminal_error.ogg', KEYBOARD_SOUND_VOLUME, 1)
 				return
 
-			if(istype(SSshuttle.getDock(almayer_lz), /obj/docking_port/stationary/marine_dropship/airlock/outer))
+			var/almayer_dock = SSshuttle.getDock(almayer_lz)
+			var/ground_dock = SSshuttle.getDock(ground_lz)
+
+			if(istype(almayer_dock, /obj/docking_port/stationary/marine_dropship/airlock/outer))
+				var/obj/docking_port/stationary/marine_dropship/airlock/outer/outer_airlock = almayer_dock
+				if(!outer_airlock.linked_inner.test_conditions(FALSE, FALSE, FALSE, null, FALSE))
+					to_chat(user, SPAN_WARNING("The selected lz airlock is unable to recieve automatic commands. It has recieved manual commands that upsets its neutral state."))
+					playsound(loc, 'sound/machines/terminal_error.ogg', KEYBOARD_SOUND_VOLUME, 1)
+					return
 				shuttle.flags_automated_airlock_presence |= DROPSHIP_HANGAR_DOCK_IS_AIRLOCK
-			if(istype(SSshuttle.getDock(ground_lz), /obj/docking_port/stationary/marine_dropship/airlock/outer))
+			if(istype(ground_dock, /obj/docking_port/stationary/marine_dropship/airlock/outer))
+				var/obj/docking_port/stationary/marine_dropship/airlock/outer/outer_airlock = ground_dock
+				if(!outer_airlock.linked_inner.test_conditions(FALSE, FALSE, FALSE, null, FALSE))
+					to_chat(user, SPAN_WARNING("The selected hangar airlock is unable to recieve automatic commands. It has recieved manual commands that upsets its neutral state."))
+					playsound(loc, 'sound/machines/terminal_error.ogg', KEYBOARD_SOUND_VOLUME, 1)
+					return
 				shuttle.flags_automated_airlock_presence |= DROPSHIP_LZ_DOCK_IS_AIRLOCK
 
-			shuttle.automated_hangar_id = almayer_lz
-			shuttle.automated_lz_id = ground_lz
+			shuttle.automated_hangar = almayer_dock
+			shuttle.automated_lz = ground_dock
 			shuttle.automated_delay = delay
 			playsound(loc, get_sfx("terminal_button"), KEYBOARD_SOUND_VOLUME, 1)
 			log_ares_flight(user.name, "Enabled autopilot for Dropship [shuttle.name].")
@@ -571,8 +623,8 @@
 		if("disable-automate")
 			if(!shuttle)
 				return FALSE
-			shuttle.automated_hangar_id = null
-			shuttle.automated_lz_id = null
+			shuttle.automated_hangar = null
+			shuttle.automated_lz = null
 			shuttle.automated_delay = null
 			playsound(loc, get_sfx("terminal_button"), KEYBOARD_SOUND_VOLUME, 1)
 			log_ares_flight(user.name, "Disabled autopilot for Dropship [shuttle.name].")
@@ -607,51 +659,51 @@
 		if ("clamps")
 			if(!active_airlock_dock || !shuttle)
 				return FALSE
-			if(shuttle.automated_delay && shuttle.automated_hangar_id && shuttle.automated_lz_id)
+			if(shuttle.automated_delay && shuttle.automated_hangar && shuttle.automated_lz)
 				var/confirm_automatic_override = tgui_alert(usr, "Are you sure you want to send a command to the clamps? It will, if conflicting, override and destroy all and destroy automatic pilot commands.", "Override Autopilot", list("Yes", "No"))
 				if(confirm_automatic_override != "Yes")
 					return FALSE
-			var/list/returned_list = active_airlock_dock.update_clamps(TRUE)
+			var/list/returned_list = active_airlock_dock.update_clamps(active_airlock_dock.disengaged_clamps ? FALSE : TRUE)
 			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
 			return returned_list["successful"]
 		if ("airlock_alarm")
 			if(!active_airlock_dock || !shuttle)
 				return FALSE
-			if(shuttle.automated_delay && shuttle.automated_hangar_id && shuttle.automated_lz_id)
+			if(shuttle.automated_delay && shuttle.automated_hangar && shuttle.automated_lz)
 				var/confirm_automatic_override = tgui_alert(usr, "Are you sure you want to send a command to the airlock alarms? It will, if conflicting, override and destroy all automatic pilot commands.", "Override Autopilot", list("Yes", "No"))
 				if(confirm_automatic_override != "Yes")
 					return FALSE
-			var/list/returned_list = active_airlock_dock.update_airlock_alarm(TRUE)
+			var/list/returned_list = active_airlock_dock.update_airlock_alarm(active_airlock_dock.playing_airlock_alarm ? FALSE : TRUE)
 			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
 			return returned_list["successful"]
 		if ("inner_airlock")
 			if(!active_airlock_dock || !shuttle)
 				return FALSE
-			if(shuttle.automated_delay && shuttle.automated_hangar_id && shuttle.automated_lz_id)
+			if(shuttle.automated_delay && shuttle.automated_hangar && shuttle.automated_lz)
 				var/confirm_automatic_override = tgui_alert(usr, "Are you sure you want to send a command to inner airlock? It will, if conflicting, override and destroy all automatic pilot commands.", "Override Autopilot", list("Yes", "No"))
 				if(confirm_automatic_override != "Yes")
 					return FALSE
-			var/list/returned_list = active_airlock_dock.update_inner_airlock(TRUE)
+			var/list/returned_list = active_airlock_dock.update_inner_airlock(active_airlock_dock.open_inner_airlock ? FALSE : TRUE)
 			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
 			return returned_list["successful"]
 		if ("airlock_dropship")
 			if(!active_airlock_dock || !shuttle)
 				return FALSE
-			if(shuttle.automated_delay && shuttle.automated_hangar_id && shuttle.automated_lz_id)
+			if(shuttle.automated_delay && shuttle.automated_hangar && shuttle.automated_lz)
 				var/confirm_automatic_override = tgui_alert(usr, "Are you sure you want to send a command to raise the dropship? It will, if conflicting, override and destroy all automatic pilot commands.", "Override Autopilot", list("Yes", "No"))
 				if(confirm_automatic_override != "Yes")
 					return FALSE
-			var/list/returned_list = active_airlock_dock.update_dropship_height(TRUE)
+			var/list/returned_list = active_airlock_dock.update_dropship_height(active_airlock_dock.lowered_dropship ? FALSE : TRUE)
 			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
 			return returned_list["successful"]
 		if ("outer_airlock")
 			if(!active_airlock_dock || !shuttle)
 				return FALSE
-			if(shuttle.automated_delay && shuttle.automated_hangar_id && shuttle.automated_lz_id)
+			if(shuttle.automated_delay && shuttle.automated_hangar && shuttle.automated_lz)
 				var/confirm_automatic_override = tgui_alert(usr, "Are you sure you want to send a command to the outer airlock? It will, if conflicting, override and destroy all automatic pilot commands.", "Override Autopilot", list("Yes", "No"))
 				if(confirm_automatic_override != "Yes")
 					return FALSE
-			var/list/returned_list = active_airlock_dock.update_outer_airlock(TRUE)
+			var/list/returned_list = active_airlock_dock.update_outer_airlock(active_airlock_dock.open_outer_airlock ? FALSE : TRUE)
 			to_chat(usr, returned_list["successful"] ? SPAN_NOTICE(returned_list["to_chat"]) : SPAN_WARNING(returned_list["to_chat"]))
 			return returned_list["successful"]
 

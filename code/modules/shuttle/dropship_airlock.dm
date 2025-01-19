@@ -15,6 +15,7 @@ Docking Port Definitions
 	var/dropship_airlock_id = "generic" // id that links it to outer, and objs.
 
 	// variables changed during the process of using the airlock, changed once its related proc is complete.
+	var/disable_manual_input = FALSE // mostly for hijack
 	var/processing = FALSE // TRUE whilst the user interface procs and timer-induced procs are running
 	var/playing_airlock_alarm = FALSE
 	var/open_inner_airlock = FALSE
@@ -69,178 +70,198 @@ Docking Port Definitions
 	dropship_airlock_id = GOLDEN_ARROW_AIRLOCK_TWO
 
 /*#############################################################################
-Backend Procs
+Player Interactablility Procs
 #############################################################################*/
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/Initialize(mapload)
-	. = ..()
-	GLOB.dropship_airlock_docking_ports.Add(src)
-	dropship_height_masks = list()
-	floodlights = list()
-	door_controls = list()
-	poddoors = list()
-	inner_airlock_effect = new /obj/effect/hangar_airlock/inner(locate(DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT))
-	new /obj/effect/hangar_airlock/outline(locate(DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT))
-	if(!roundstart_template)
-		unregister()
-
-/obj/docking_port/stationary/marine_dropship/airlock/inner/on_arrival(obj/docking_port/mobile/arriving_shuttle)
-	. = ..()
-	if(registered)
-		unregister()
-	auto_open = FALSE // when the dropship that is originally loaded is auto_opened, any further landing dropships will have people onboard to decide to whether or not they want the doors open (which stops people charging out the opened doors when the airlock is open)
-	var/list/dropship_turfs = arriving_shuttle.return_turfs()
-	for(var/turf/dropship_turf as anything in dropship_turfs)
-		if(istype(dropship_turf, /turf/open/shuttle) || istype(dropship_turf, /turf/closed/shuttle))
-			var/obj/effect/hangar_airlock/height_mask/dropship/dropship_height_mask = new /obj/effect/hangar_airlock/height_mask/dropship(dropship_turf)
-			dropship_height_masks += dropship_height_mask
-			continue
-		if(istype(dropship_turf, /turf/open/floor/hangar_airlock/inner))
-			var/obj/structure/shuttle/part/dropship_part = locate(/obj/structure/shuttle/part) in dropship_turf.contents
-			if(!dropship_part)
-				continue
-			var/obj/effect/hangar_airlock/height_mask/dropship/dropship_part_height_mask = new /obj/effect/hangar_airlock/height_mask/dropship(dropship_turf)
-			dropship_part_height_mask.icon = dropship_part.icon
-			dropship_part_height_mask.icon_state = dropship_part.icon_state
-			dropship_part_height_mask.color = "#000000"
-			dropship_height_masks += dropship_part_height_mask
-
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/get_inner_airlock_turfs()
-	inner_airlock_turfs = list()
-	for(var/turf/turf as anything in block(DROPSHIP_AIRLOCK_BOUNDS))
-		if(!istype(turf, /turf/open/floor/hangar_airlock/inner) && !istype(turf, /turf/open/shuttle) && !istype(turf, /turf/closed/shuttle))
-			continue
-		new /obj/effect/hangar_airlock/height_mask(turf)
-		inner_airlock_turfs += turf
-
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_airlock_transition(airlock_type, open, airlock_turfs, obj/effect/hangar_airlock/airlock, end_decisecond)
-	var/transition = open ? "open" : "close"
-	airlock.icon_state = "[transition]_0s"
-
-	omnibus_sound_play('sound/machines/centrifuge.ogg', 60)
-
-	COOLDOWN_START(src, dropship_airlock_cooldown, end_decisecond)
-	INVOKE_NEXT_TICK(src, PROC_REF(delayed_airlock_transition), airlock_type, open, airlock_turfs, airlock, end_decisecond, transition)
-
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_sound_play(sound_effect)
-	playsound(src, sound_effect, 100, vol_cat = VOLUME_SFX)
-	playsound(linked_outer, sound_effect, 100, vol_cat = VOLUME_SFX)
-
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/end_of_interaction()
-	COOLDOWN_RESET(src, dropship_airlock_cooldown)
-	if(automatic_process_stage_change)
-		addtimer(CALLBACK(src, PROC_REF(automatic_process)), DROPSHIP_AIRLOCK_AUTOMATIC_DELAY)
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_airlock_alarm(play = playing_airlock_alarm, forced = FALSE)
+	. = list("successful" = FALSE, "to_chat" = "ERROR. DROPSHIP AIRLOCK ALARM NOT FUNCTIONING. FILE A BUG REPORT.")
+	if(play == playing_airlock_alarm)
+		end_of_interaction()
+		.["successful"] = TRUE
 		return
-	processing = FALSE
-
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/automatic_process(command = FALSE)
-	switch(command)
-		if(DROPSHIP_AIRLOCK_GO_UP)
-			automatic_process_stage = 2
-			automatic_process_stage_change = 1
-		if(DROPSHIP_AIRLOCK_GO_DOWN)
-			automatic_process_stage = 7
-			automatic_process_stage_change = -1
-	var/list/return_list
-	switch(automatic_process_stage)
-		if(8) // going up cleanup
-			automatic_process_stage_change = 0
-			automatic_process_stage = 0
-			processing = FALSE
-		if(7)
-			return_list = update_airlock_alarm(TRUE)
-		if(6)
-			return_list = update_inner_airlock(TRUE)
-		if(5)
-			return_list = update_dropship_height(TRUE)
-		if(4)
-			return_list = update_inner_airlock(TRUE)
-		if(3)
-			return_list = update_airlock_alarm(TRUE)
-		if(2)
-			return_list = update_outer_airlock(TRUE)
-		if(1) // going down cleanup
-			automatic_process_stage_change = 0
-			automatic_process_stage = 0
-			return_list = update_clamps(TRUE)
-		if(0) // no command
+	if(!forced)
+		if(processing && !automatic_process_stage_change)
+			.["to_chat"] = "The computer is already processing a command to the airlock."
 			return
-	if(return_list)
-		. = return_list
-		if(!return_list["successful"])
+		if(open_outer_airlock)
+			.["to_chat"] = "The airlock alarm cannot be engaged while the outer airlock is open."
 			return
-	automatic_process_stage += automatic_process_stage_change
+		if(open_inner_airlock)
+			.["to_chat"] = "The airlock alarm cannot be engaged while the inner airlock is open."
+			return
 
-/obj/docking_port/stationary/marine_dropship/airlock/outer/Initialize(mapload)
-	. = ..()
-	GLOB.dropship_airlock_docking_ports.Add(src)
-	return INITIALIZE_HINT_LATELOAD
+	processing = TRUE
+	if(!inner_airlock_turfs)
+		get_inner_airlock_turfs()
+	if(!outer_airlock_turfs)
+		linked_outer.get_outer_airlock_turfs()
+	var/obj/structure/machinery/floodlight/landing/dropship_airlock/floodlight
+	var/floodlight_increment = 1
+	for(floodlight as anything in floodlights)
+		addtimer(CALLBACK(floodlight, TYPE_PROC_REF(/obj/structure/machinery/floodlight/landing/dropship_airlock, toggle_rotating)), DROPSHIP_AIRLOCK_FLOODLIGHT_TRANSITION * floodlight_increment)
+		floodlight_increment += 1
+	addtimer(CALLBACK(src, PROC_REF(delayed_airlock_alarm)), DROPSHIP_AIRLOCK_FLOODLIGHT_TRANSITION * floodlight_increment)
+	.["to_chat"] = play ? "Beginning rotation of airlock caution lights." : "Ending rotation of airlock caution lights."
+	playing_airlock_alarm = play
+	.["successful"] = TRUE
 
-/obj/docking_port/stationary/marine_dropship/airlock/outer/LateInitialize()
-	. = ..()
-	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_port in GLOB.dropship_airlock_docking_ports)
-		if(inner_port.dropship_airlock_id == dropship_airlock_id)
-			linked_inner = inner_port
-	if(!linked_inner)
-		WARNING("[name] could not link to its inner counterpart. THE AIRLOCK WILL NOT WORK.")
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_inner_airlock(open = open_inner_airlock, forced = FALSE)
+	. = list("successful" = FALSE, "to_chat" = "ERROR. DROPSHIP AIRLOCK INNER NOT FUNCTIONING. FILE A BUG REPORT.")
+	if(open == open_inner_airlock)
+		end_of_interaction()
+		.["successful"] = TRUE
 		return
-	linked_inner.linked_outer = src
-	var/turf/airlock_effect_turf = locate(DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT)
-	linked_inner.outer_airlock_effect = new /obj/effect/hangar_airlock/outer(airlock_effect_turf)
-	var/obj/effect/projector/airlock/new_projector = new /obj/effect/projector/airlock(airlock_effect_turf)
-	new_projector.firing_id = dropship_airlock_id
-	new_projector.vector_x = linked_inner.x - src.x
-	new_projector.vector_y = linked_inner.y - src.y
-	new_projector.vector_z = linked_inner.z - src.z
-	if(linked_inner.roundstart_template)
-		unregister()
+	if(!forced)
+		if(processing && !automatic_process_stage_change)
+			.["to_chat"] = "The computer is already processing a command to the airlock."
+			return
+		if(open_outer_airlock)
+			.["to_chat"] = "The inner airlock cannot be engaged while the outer airlock is open."
+			return
+		if(!playing_airlock_alarm)
+			.["to_chat"] = "The inner airlock can only be engaged when the airlock alarm is playing."
+			return
+
+	processing = TRUE
+	if(!inner_airlock_turfs)
+		get_inner_airlock_turfs()
+	if(open)
+		SSfz_transitions.toggle_selective_update(open, dropship_airlock_id) // start updating the projectors
+		linked_outer.handle_obscuring_shuttle_turfs()
+		omnibus_airlock_transition("inner", TRUE, inner_airlock_turfs, inner_airlock_effect, DROPSHIP_AIRLOCK_DOOR_PERIOD)
+		.["to_chat"] = "Opening inner airlock."
 	else
-		INVOKE_NEXT_TICK(linked_inner, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_outer_airlock), TRUE)
+		omnibus_airlock_transition("inner", FALSE, inner_airlock_turfs, inner_airlock_effect, DROPSHIP_AIRLOCK_DOOR_PERIOD)
+		addtimer(CALLBACK(SSfz_transitions, TYPE_PROC_REF(/datum/controller/subsystem/fz_transitions, toggle_selective_update), open, dropship_airlock_id), DROPSHIP_AIRLOCK_DOOR_PERIOD)
+		SSfz_transitions.toggle_selective_update(!open_inner_airlock, dropship_airlock_id) // stop updating the projectors
+		.["to_chat"] = "Closing inner airlock."
+	open_inner_airlock = open
+	.["successful"] = TRUE
 
-/obj/docking_port/stationary/marine_dropship/airlock/outer/on_arrival(obj/docking_port/mobile/arriving_shuttle)
-	. = ..()
-	if(registered)
-		unregister()
-	linked_inner.disengaged_clamps = FALSE
-	linked_inner.lowered_dropship = TRUE
-	SSfz_transitions.fire()
-	handle_obscuring_shuttle_turfs()
-	if(!istype(arriving_shuttle, /obj/docking_port/mobile/marine_dropship))
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_dropship_height(lower = lowered_dropship, forced = FALSE)
+	. = list("successful" = FALSE, "to_chat" = "ERROR. DROPSHIP AIRLOCK HEIGHT CHANGE NOT FUNCTIONING. FILE A BUG REPORT.")
+	if(lower == lowered_dropship)
+		end_of_interaction()
+		.["successful"] = TRUE
 		return
-	var/obj/docking_port/mobile/marine_dropship/arriving_dropship = arriving_shuttle
-	if((src.id == arriving_dropship.automated_hangar_id || src.id == arriving_dropship.automated_lz_id) && arriving_dropship.automated_delay)
-		linked_inner.automatic_process(DROPSHIP_AIRLOCK_GO_UP)
+	if(!forced)
+		if(processing && !automatic_process_stage_change)
+			.["to_chat"] = "The computer is already processing a command to the airlock."
+			return
+		if(!open_inner_airlock)
+			.["to_chat"] = "The inner airlock must be open for the mechanism to change the dropship altitude."
+			return
 
-/obj/docking_port/stationary/marine_dropship/airlock/outer/proc/handle_obscuring_shuttle_turfs()
-	for(var/turf/open/shuttle/shuttle_turf in block(DROPSHIP_AIRLOCK_BOUNDS))
-		if(shuttle_turf.clone)
-			shuttle_turf.clone.layer = 1.93
-			shuttle_turf.clone.color = "#000000"
+	if(lower)
+		docked_mobile = get_docked()
+		if(linked_outer.get_docked())
+			.["to_chat"] = "Cannot lower the dropship while there is another dropship in the airlock."
+			return
+	else
+		docked_mobile = linked_outer.get_docked()
+		if(get_docked())
+			.["to_chat"] = "Cannot raise the dropship while there is another dropship ontop of the airlock."
+			return
+	if(!docked_mobile)
+		.["to_chat"] = "ERROR. UNEXPECTED ATTEMPT TO CHANGE DROPSHIP AIRLOCK HEIGHT. FILE A BUG REPORT."
+		return
+	if(!inner_airlock_turfs)
+		get_inner_airlock_turfs()
+	if(!outer_airlock_turfs)
+		linked_outer.get_outer_airlock_turfs()
 
-/obj/docking_port/stationary/marine_dropship/airlock/outer/proc/get_outer_airlock_turfs()
-	linked_inner.outer_airlock_turfs = list()
-	var/list/offset_to_inner_coordinates = list("x" = (linked_inner.x - src.x), "y" = (linked_inner.y - src.y), "z" = (linked_inner.z - src.z))
-	for(var/turf/turf as anything in block(DROPSHIP_AIRLOCK_BOUNDS))
-		if(!istype(turf, /turf/open/floor/hangar_airlock/outer) && !istype(turf, /turf/open/shuttle) && !istype(turf, /turf/closed/shuttle))
-			continue
-		linked_inner.outer_airlock_turfs += turf
-		if(locate(/obj/effect/projector/airlock) in turf.contents)
-			continue
-		var/obj/effect/projector/airlock/new_projector = new /obj/effect/projector/airlock(turf)
-		new_projector.firing_id = dropship_airlock_id
-		new_projector.vector_x = offset_to_inner_coordinates["x"]
-		new_projector.vector_y = offset_to_inner_coordinates["y"]
-		new_projector.vector_z = offset_to_inner_coordinates["z"]
+	processing = TRUE
+	omnibus_sound_play(lowered_dropship ? 'sound/machines/asrs_lowering.ogg' : 'sound/machines/asrs_raising.ogg')
+	if(lower)
+		COOLDOWN_START(src, dropship_airlock_cooldown, DROPSHIP_AIRLOCK_HEIGHT_TRANSITION)
+		delayed_height_decrease()
+		.["to_chat"] = "Lowering dropship into the airlock."
+	else
+		addtimer(CALLBACK(src, PROC_REF(delayed_height_increase)), DROPSHIP_AIRLOCK_HEIGHT_TRANSITION)
+		.["to_chat"] = "Raising dropship from the airlock."
+	lowered_dropship = lower
+	.["successful"] = TRUE
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_outer_airlock(open = open_outer_airlock, forced = FALSE)
+	. = list("successful" = FALSE, "to_chat" = "ERROR. DROPSHIP AIRLOCK OUTER NOT FUNCTIONING. FILE A BUG REPORT.")
+	if(open == open_outer_airlock)
+		end_of_interaction()
+		.["successful"] = TRUE
+		return
+	if(!forced)
+		if(processing && !automatic_process_stage_change)
+			.["to_chat"] = "The computer is already processing a command to the airlock."
+			return
+		if(open_inner_airlock)
+			.["to_chat"] = "Cannot engage the outer airlock while the inner airlock is open."
+			return
+		if(playing_airlock_alarm)
+			.["to_chat"] = "Cannot engage the outer airlock while the airlock alarm is playing."
+			return
+		if(disengaged_clamps)
+			.["to_chat"] = "Cannot engage the outer airlock without the dropship resting securely on its clamps."
+			return
+
+	processing = TRUE
+	if(!outer_airlock_turfs)
+		linked_outer.get_outer_airlock_turfs()
+	if(open)
+		for(var/obj/structure/machinery/door/poddoor/almayer/airlock/poddoor as anything in poddoors)
+			poddoor.close()
+		omnibus_airlock_transition("outer", TRUE, outer_airlock_turfs, outer_airlock_effect, DROPSHIP_AIRLOCK_DOOR_PERIOD)
+		if(!registered)
+			linked_outer.register(TRUE)
+		.["to_chat"] = "Opening outer airlock."
+	else
+		omnibus_airlock_transition("outer", FALSE, outer_airlock_turfs, outer_airlock_effect, DROPSHIP_AIRLOCK_DOOR_PERIOD)
+		if(registered)
+			linked_outer.unregister()
+		.["to_chat"] = "Closing outer airlock."
+	open_outer_airlock = open
+	.["successful"] = TRUE
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_clamps(disengage = disengaged_clamps, forced = FALSE)
+	. = list("successful" = FALSE, "to_chat" = "ERROR. DROPSHIP AIRLOCK CLAMPS NOT FUNCTIONING. FILE A BUG REPORT.")
+	docked_mobile = linked_outer.get_docked()
+	if(disengage == disengaged_clamps)
+		end_of_interaction()
+		.["successful"] = TRUE
+		return
+	if(!docked_mobile)
+		.["to_chat"] = "No dropship for the clamps to disengage with."
+		return
+	if(!forced)
+		if(processing && !automatic_process_stage_change)
+			.["to_chat"] = "The computer is already processing a command to the airlock."
+			return
+		if(!open_outer_airlock)
+			.["to_chat"] = "The clamps can only be disengaged when the outer airlock is open."
+			return
+		if(!lowered_dropship)
+			.["to_chat"] = "The clamps can only be disengaged when the dropship is lowered."
+			return
+		if(docked_mobile.mode == SHUTTLE_RECHARGING)
+			.["to_chat"] = "The dropship is still recharging. It would be suicide to have it fly into a grav well without proper engine control."
+			return
+
+	processing = TRUE
+	if(disengage)
+		playsound(docked_mobile.return_center_turf(), 'sound/effects/dropship_flight_airlocked_start.ogg', 100, sound_range = docked_mobile.dheight, vol_cat = VOLUME_SFX, channel = SOUND_CHANNEL_DROPSHIP)
+		addtimer(CALLBACK(src, PROC_REF(delayed_disengage_clamps), docked_mobile), DROPSHIP_AIRLOCK_DECLAMP_PERIOD)
+		.["to_chat"] = "Disengaging clamps."
+	else
+		.["to_chat"] = "Engaging clamps."
+	disengaged_clamps = disengage
+	.["successful"] = TRUE
 
 /*#############################################################################
 Backend Timer Delayed/Looping Procs
 #############################################################################*/
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/delayed_airlock_alarm()
-	if(!playing_airlock_alarm)
-		docked_mobile = get_docked()
-		if(docked_mobile)
-			docked_mobile.door_control.control_doors("unlock", "all")
+	docked_mobile = get_docked()
+	if(docked_mobile)
+		docked_mobile.door_control.control_doors(playing_airlock_alarm ? "lock" : "unlock", "all")
 	end_of_interaction()
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/delayed_airlock_transition(airlock_type, open, airlock_turfs, obj/effect/hangar_airlock/airlock, end_decisecond, transition)
@@ -288,167 +309,196 @@ Backend Timer Delayed/Looping Procs
 	end_of_interaction()
 
 /*#############################################################################
-Player Interactablility Procs
+New Backend Procs
 #############################################################################*/
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_airlock_alarm(invert = FALSE)
-	. = list("successful" = FALSE, "to_chat" = "ERROR. DROPSHIP AIRLOCK ALARM NOT FUNCTIONING. FILE A BUG REPORT.")
-	if(processing)
-		.["to_chat"] = "The computer is already processing a command to the airlock."
-		return
-	if(open_outer_airlock)
-		.["to_chat"] = "The airlock alarm cannot be engaged while the outer airlock is open."
-		return
-	if(open_inner_airlock)
-		.["to_chat"] = "The airlock alarm cannot be engaged while the inner airlock is open."
-		return
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/get_inner_airlock_turfs()
+	inner_airlock_turfs = list()
+	for(var/turf/turf as anything in block(DROPSHIP_AIRLOCK_BOUNDS))
+		if(!istype(turf, /turf/open/floor/hangar_airlock/inner) && !istype(turf, /turf/open/shuttle) && !istype(turf, /turf/closed/shuttle))
+			continue
+		new /obj/effect/hangar_airlock/height_mask(turf)
+		inner_airlock_turfs += turf
 
-	processing = TRUE
-	if(!inner_airlock_turfs)
-		get_inner_airlock_turfs()
-	if(!outer_airlock_turfs)
-		linked_outer.get_outer_airlock_turfs()
-	var/obj/structure/machinery/floodlight/landing/dropship_airlock/floodlight
-	var/floodlight_increment = 1
-	for(floodlight as anything in floodlights)
-		addtimer(CALLBACK(floodlight, TYPE_PROC_REF(/obj/structure/machinery/floodlight/landing/dropship_airlock, toggle_rotating)), DROPSHIP_AIRLOCK_FLOODLIGHT_TRANSITION * floodlight_increment)
-		floodlight_increment += 1
-	addtimer(CALLBACK(src, PROC_REF(delayed_airlock_alarm)), DROPSHIP_AIRLOCK_FLOODLIGHT_TRANSITION * floodlight_increment)
-	.["to_chat"] = playing_airlock_alarm ? "Ending rotation of airlock caution lights." : "Beginning rotation of airlock caution lights."
-	if(invert)
-		playing_airlock_alarm = playing_airlock_alarm ? FALSE : TRUE
-	.["successful"] = TRUE
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_airlock_transition(airlock_type, open, airlock_turfs, obj/effect/hangar_airlock/airlock, end_decisecond)
+	var/transition = open ? "open" : "close"
+	airlock.icon_state = "[transition]_0s"
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_inner_airlock(invert = FALSE)
-	. = list("successful" = FALSE, "to_chat" = "ERROR. DROPSHIP AIRLOCK INNER NOT FUNCTIONING. FILE A BUG REPORT.")
-	if(processing)
-		.["to_chat"] = "The computer is already processing a command to the airlock."
-		return
-	if(open_outer_airlock)
-		.["to_chat"] = "The inner airlock cannot be engaged while the outer airlock is open."
-		return
-	if(!playing_airlock_alarm)
-		.["to_chat"] = "The inner airlock can only be engaged when the airlock alarm is playing."
-		return
+	omnibus_sound_play('sound/machines/centrifuge.ogg')
 
-	processing = TRUE
-	if(!inner_airlock_turfs)
-		get_inner_airlock_turfs()
-	if(open_inner_airlock)
-		omnibus_airlock_transition("inner", FALSE, inner_airlock_turfs, inner_airlock_effect, 50)
-		SSfz_transitions.toggle_selective_update(!open_inner_airlock, dropship_airlock_id) // stop updating the projectors
-		.["to_chat"] = "Closing inner airlock."
-	else
-		SSfz_transitions.toggle_selective_update(!open_inner_airlock, dropship_airlock_id) // start updating the projectors
-		linked_outer.handle_obscuring_shuttle_turfs()
-		omnibus_airlock_transition("inner", TRUE, inner_airlock_turfs, inner_airlock_effect, 50)
-		.["to_chat"] = "Opening inner airlock."
-	if(invert)
-		open_inner_airlock = open_inner_airlock ? FALSE : TRUE
-	.["successful"] = TRUE
+	COOLDOWN_START(src, dropship_airlock_cooldown, end_decisecond)
+	INVOKE_NEXT_TICK(src, PROC_REF(delayed_airlock_transition), airlock_type, open, airlock_turfs, airlock, end_decisecond, transition)
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_dropship_height(invert = FALSE)
-	. = list("successful" = FALSE, "to_chat" = "ERROR. DROPSHIP AIRLOCK HEIGHT CHANGE NOT FUNCTIONING. FILE A BUG REPORT.")
-	if(processing)
-		.["to_chat"] = "The computer is already processing a command to the airlock."
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_sound_play(sound_effect)
+	playsound(src, sound_effect, 100, vol_cat = VOLUME_AMB)
+	playsound(linked_outer, sound_effect, 100, vol_cat = VOLUME_AMB)
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/end_of_interaction()
+	COOLDOWN_RESET(src, dropship_airlock_cooldown)
+	if(automatic_process_stage_change)
+		addtimer(CALLBACK(src, PROC_REF(automatic_process)), DROPSHIP_AIRLOCK_AUTOMATIC_DELAY)
 		return
-	if(!open_inner_airlock)
-		.["to_chat"] = "The inner airlock must be open for the mechanism to change the dropship altitude."
-		return
-	if(lowered_dropship)
-		docked_mobile = linked_outer.get_docked()
-		if(get_docked())
-			.["to_chat"] = "Cannot raise the dropship while there is another dropship ontop of the airlock."
+	if(!disable_manual_input)
+		processing = FALSE
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/test_conditions(test_alarm = null, test_inner = null, test_height = null, test_outer = null, test_clamps = null)
+	if(test_alarm != null && test_alarm != playing_airlock_alarm)
+		return FALSE
+	if(test_inner != null && test_inner != open_inner_airlock)
+		return FALSE
+	if(test_height != null && test_height != lowered_dropship)
+		return FALSE
+	if(test_outer != null && test_outer != open_outer_airlock)
+		return FALSE
+	if(test_clamps != null && test_clamps != disengaged_clamps)
+		return FALSE
+	return TRUE
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/automatic_process(command = FALSE)
+	if(automatic_process_stage_change && command)
+		return list("successful" = FALSE, "to_chat" = "A second command has been sent before the first one was resolved.")
+	switch(command)
+		if(DROPSHIP_AIRLOCK_GO_UP)
+			automatic_process_stage = 2
+			automatic_process_stage_change = 1
+		if(DROPSHIP_AIRLOCK_GO_DOWN)
+			automatic_process_stage = 8
+			automatic_process_stage_change = -1
+	var/list/return_list
+	switch(automatic_process_stage)
+		if(9) // going up cleanup
+			automatic_process_stage_change = 0
+			automatic_process_stage = 0
+			processing = FALSE
+		if(8)
+			return_list = update_outer_airlock(FALSE)
+		if(7)
+			return_list = update_airlock_alarm(playing_airlock_alarm ? FALSE : TRUE)
+		if(6)
+			return_list = update_inner_airlock(open_inner_airlock ? FALSE : TRUE)
+		if(5)
+			return_list = update_dropship_height(lowered_dropship ? FALSE : TRUE)
+		if(4)
+			return_list = update_inner_airlock(open_inner_airlock ? FALSE : TRUE)
+		if(3)
+			return_list = update_airlock_alarm(playing_airlock_alarm ? FALSE : TRUE)
+		if(2)
+			return_list = update_outer_airlock(open_outer_airlock ? FALSE : TRUE)
+		if(1) // going down cleanup
+			automatic_process_stage_change = 0
+			automatic_process_stage = 0
+			processing = FALSE
+			return_list = update_clamps(TRUE)
+		if(0) // no command
 			return
-	else
-		docked_mobile = get_docked()
-		if(linked_outer.get_docked())
-			.["to_chat"] = "Cannot lower the dropship while there is another dropship in the airlock."
+	if(return_list)
+		. = return_list
+		if(!return_list["successful"])
+			log_ares_flight("Automatic","Automatic processing of \the [name] has been interrupted because [lowertext(return_list["to_chat"])]")
+			ai_silent_announcement("Automatic processing on \the [name] has been interrupted because [lowertext(return_list["to_chat"])]")
+			automatic_process_stage_change = 0
+			automatic_process_stage = 0
+			processing = FALSE
 			return
-	if(!docked_mobile)
-		.["to_chat"] = "ERROR. UNEXPECTED ATTEMPT TO CHANGE DROPSHIP AIRLOCK HEIGHT. FILE A BUG REPORT."
-		return
-	if(!inner_airlock_turfs)
-		get_inner_airlock_turfs()
-	if(!outer_airlock_turfs)
-		linked_outer.get_outer_airlock_turfs()
+	automatic_process_stage += automatic_process_stage_change
 
-	processing = TRUE
-	omnibus_sound_play(lowered_dropship ? 'sound/machines/asrs_lowering.ogg' : 'sound/machines/asrs_raising.ogg', 60)
-	if(lowered_dropship)
-		addtimer(CALLBACK(src, PROC_REF(delayed_height_increase)), DROPSHIP_AIRLOCK_HEIGHT_TRANSITION)
-		.["to_chat"] = "Raising dropship from the airlock."
+/obj/docking_port/stationary/marine_dropship/airlock/outer/proc/handle_obscuring_shuttle_turfs()
+	for(var/turf/open/shuttle/shuttle_turf in block(DROPSHIP_AIRLOCK_BOUNDS))
+		if(shuttle_turf.clone)
+			shuttle_turf.clone.layer = 1.93
+			shuttle_turf.clone.color = "#000000"
+
+/obj/docking_port/stationary/marine_dropship/airlock/outer/proc/get_outer_airlock_turfs()
+	linked_inner.outer_airlock_turfs = list()
+	var/list/offset_to_inner_coordinates = list("x" = (linked_inner.x - src.x), "y" = (linked_inner.y - src.y), "z" = (linked_inner.z - src.z))
+	for(var/turf/turf as anything in block(DROPSHIP_AIRLOCK_BOUNDS))
+		if(!istype(turf, /turf/open/floor/hangar_airlock/outer) && !istype(turf, /turf/open/shuttle) && !istype(turf, /turf/closed/shuttle))
+			continue
+		linked_inner.outer_airlock_turfs += turf
+		if(locate(/obj/effect/projector/airlock) in turf.contents)
+			continue
+		var/obj/effect/projector/airlock/new_projector = new /obj/effect/projector/airlock(turf)
+		new_projector.firing_id = dropship_airlock_id
+		new_projector.vector_x = offset_to_inner_coordinates["x"]
+		new_projector.vector_y = offset_to_inner_coordinates["y"]
+		new_projector.vector_z = offset_to_inner_coordinates["z"]
+
+/*#############################################################################
+. = ..() Backend Procs
+#############################################################################*/
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/Initialize(mapload)
+	. = ..()
+	GLOB.dropship_airlock_docking_ports.Add(src)
+	dropship_height_masks = list()
+	floodlights = list()
+	door_controls = list()
+	poddoors = list()
+	inner_airlock_effect = new /obj/effect/hangar_airlock/inner(locate(DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT))
+	new /obj/effect/hangar_airlock/outline(locate(DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT))
+	if(!roundstart_template)
+		unregister()
+
+/obj/docking_port/stationary/marine_dropship/airlock/inner/on_arrival(obj/docking_port/mobile/arriving_shuttle)
+	. = ..()
+	if(registered)
+		unregister()
+	auto_open = FALSE // when the dropship that is originally loaded is auto_opened, any further landing dropships will have people onboard to decide to whether or not they want the doors open (which stops people charging out the opened doors when the airlock is open)
+	var/list/dropship_turfs = arriving_shuttle.return_turfs()
+	for(var/turf/dropship_turf as anything in dropship_turfs)
+		if(istype(dropship_turf, /turf/open/shuttle) || istype(dropship_turf, /turf/closed/shuttle))
+			var/obj/effect/hangar_airlock/height_mask/dropship/dropship_height_mask = new /obj/effect/hangar_airlock/height_mask/dropship(dropship_turf)
+			dropship_height_masks += dropship_height_mask
+			continue
+		if(istype(dropship_turf, /turf/open/floor/hangar_airlock/inner))
+			var/obj/structure/shuttle/part/dropship_part = locate(/obj/structure/shuttle/part) in dropship_turf.contents
+			if(!dropship_part)
+				continue
+			var/obj/effect/hangar_airlock/height_mask/dropship/dropship_part_height_mask = new /obj/effect/hangar_airlock/height_mask/dropship(dropship_turf)
+			dropship_part_height_mask.icon = dropship_part.icon
+			dropship_part_height_mask.icon_state = dropship_part.icon_state
+			dropship_part_height_mask.color = "#000000"
+			dropship_height_masks += dropship_part_height_mask
+
+/obj/docking_port/stationary/marine_dropship/airlock/outer/Initialize(mapload)
+	. = ..()
+	GLOB.dropship_airlock_docking_ports.Add(src)
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/docking_port/stationary/marine_dropship/airlock/outer/LateInitialize()
+	. = ..()
+	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_port in GLOB.dropship_airlock_docking_ports)
+		if(inner_port.dropship_airlock_id == dropship_airlock_id)
+			linked_inner = inner_port
+	if(!linked_inner)
+		WARNING("[name] could not link to its inner counterpart. THE AIRLOCK WILL NOT WORK.")
+		return
+	linked_inner.linked_outer = src
+	var/turf/airlock_effect_turf = locate(DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT)
+	linked_inner.outer_airlock_effect = new /obj/effect/hangar_airlock/outer(airlock_effect_turf)
+	var/obj/effect/projector/airlock/new_projector = new /obj/effect/projector/airlock(airlock_effect_turf)
+	new_projector.firing_id = dropship_airlock_id
+	new_projector.vector_x = linked_inner.x - src.x
+	new_projector.vector_y = linked_inner.y - src.y
+	new_projector.vector_z = linked_inner.z - src.z
+	if(linked_inner.roundstart_template)
+		unregister()
 	else
-		COOLDOWN_START(src, dropship_airlock_cooldown, DROPSHIP_AIRLOCK_HEIGHT_TRANSITION)
-		delayed_height_decrease()
-		.["to_chat"] = "Lowering dropship into the airlock."
-	if(invert)
-		lowered_dropship = lowered_dropship ? FALSE : TRUE
-	.["successful"] = TRUE
+		INVOKE_NEXT_TICK(linked_inner, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_outer_airlock), TRUE)
 
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_outer_airlock(invert = FALSE)
-	. = list("successful" = FALSE, "to_chat" = "ERROR. DROPSHIP AIRLOCK OUTER NOT FUNCTIONING. FILE A BUG REPORT.")
-	if(processing)
-		.["to_chat"] = "The computer is already processing a command to the airlock."
+/obj/docking_port/stationary/marine_dropship/airlock/outer/on_arrival(obj/docking_port/mobile/arriving_shuttle)
+	. = ..()
+	if(registered)
+		unregister()
+	linked_inner.disengaged_clamps = FALSE
+	linked_inner.lowered_dropship = TRUE
+	SSfz_transitions.fire()
+	handle_obscuring_shuttle_turfs()
+	if(!istype(arriving_shuttle, /obj/docking_port/mobile/marine_dropship))
 		return
-	if(open_inner_airlock)
-		.["to_chat"] = "Cannot engage the outer airlock while the inner airlock is open."
-		return
-	if(playing_airlock_alarm)
-		.["to_chat"] = "Cannot engage the outer airlock while the airlock alarm is playing."
-		return
-	if(disengaged_clamps)
-		.["to_chat"] = "Cannot engage the outer airlock without the dropship resting securely on its clamps."
-		return
-
-	processing = TRUE
-	if(!outer_airlock_turfs)
-		linked_outer.get_outer_airlock_turfs()
-	if(open_outer_airlock)
-		omnibus_airlock_transition("outer", FALSE, outer_airlock_turfs, outer_airlock_effect, DROPSHIP_AIRLOCK_TRANSITION_PERIOD)
-		if(registered)
-			linked_outer.unregister()
-		.["to_chat"] = "Closing outer airlock."
-	else
-		for(var/obj/structure/machinery/door/poddoor/almayer/airlock/poddoor as anything in poddoors)
-			poddoor.close()
-		omnibus_airlock_transition("outer", TRUE, outer_airlock_turfs, outer_airlock_effect, DROPSHIP_AIRLOCK_TRANSITION_PERIOD)
-		if(!registered)
-			linked_outer.register(TRUE)
-		.["to_chat"] = "Opening outer airlock."
-	if(invert)
-		open_outer_airlock = open_outer_airlock ? FALSE : TRUE
-	.["successful"] = TRUE
-
-/obj/docking_port/stationary/marine_dropship/airlock/inner/proc/update_clamps(invert = FALSE)
-	. = list("successful" = FALSE, "to_chat" = "ERROR. DROPSHIP AIRLOCK CLAMPS NOT FUNCTIONING. FILE A BUG REPORT.")
-	if(processing)
-		.["to_chat"] = "The computer is already processing a command to the airlock."
-		return
-	if(!open_outer_airlock)
-		.["to_chat"] = "The clamps can only be disengaged when the outer airlock is open."
-		return
-	if(!lowered_dropship)
-		.["to_chat"] = "The clamps can only be disengaged when the dropship is lowered."
-		return
-	docked_mobile = linked_outer.get_docked()
-	if(!docked_mobile)
-		.["to_chat"] = "No dropship for the clamps to disengage with."
-		return
-	if(docked_mobile.mode == SHUTTLE_RECHARGING)
-		.["to_chat"] = "The dropship is still recharging. It would be suicide to have it fly into a grav well without proper engine control."
-		return
-
-	processing = TRUE
-	if(disengaged_clamps)
-		.["to_chat"] = "Engaging clamps."
-	else
-		playsound(docked_mobile.return_center_turf(), 'sound/effects/dropship_flight_airlocked_start.ogg', 100, sound_range = docked_mobile.dheight, vol_cat = VOLUME_SFX, channel = SOUND_CHANNEL_DROPSHIP)
-		addtimer(CALLBACK(src, PROC_REF(delayed_disengage_clamps), docked_mobile), DROPSHIP_AIRLOCK_DECLAMP_PERIOD)
-		.["to_chat"] = "Disengaging clamps."
-	if(invert)
-		disengaged_clamps = disengaged_clamps ? FALSE : TRUE
-	.["successful"] = TRUE
+	var/obj/docking_port/mobile/marine_dropship/arriving_dropship = arriving_shuttle
+	if((src == arriving_dropship.automated_hangar || src == arriving_dropship.automated_lz) && arriving_dropship.automated_delay && !linked_inner.processing)
+		linked_inner.automatic_process(DROPSHIP_AIRLOCK_GO_UP)
 
 /*#############################################################################
 Airlock Appearance Effects

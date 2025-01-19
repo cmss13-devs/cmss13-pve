@@ -26,16 +26,17 @@
 #define DROPSHIP_TURBULENCE_BONEBREAK_PROBABILITY 10
 
 //Dropship Airlocks
+#define DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD 14 SECONDS // !!! MUST BE THE MAXIMUM TIME VALUE (ASIDE FROM AUTOMATIC DELAY) BELOW. RECOMMENDED YOU SET IT 5 SECONDS AHEAD DUE TO SYNCING REASONS
 #define DROPSHIP_AIRLOCK_DECLAMP_PERIOD 3 SECONDS // tied to the 'sound/effects/dropship_flight_airlocked_start.ogg' sfx
 #define DROPSHIP_AIRLOCK_HEIGHT_TRANSITION 9 SECONDS // tied to 'sound/machines/asrs_lowering.ogg' & 'sound/machines/asrs_raising.ogg' sfx
 #define DROPSHIP_AIRLOCK_FLOODLIGHT_TRANSITION 1.5 SECONDS // quickly compounded by the amount of floodlights
-#define DROPSHIP_AIRLOCK_TRANSITION_PERIOD 5 SECONDS // tied to ''sound/machines/centrifuge.ogg' & the animations of the dropship airlocks
+#define DROPSHIP_AIRLOCK_DOOR_PERIOD 5 SECONDS // tied to ''sound/machines/centrifuge.ogg' & the animations of the dropship airlocks
+#define DROPSHIP_AIRLOCK_AUTOMATIC_DELAY 5 SECONDS
 #define DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT x + -7, y + -12, z// for readability
 #define DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_NE_BOUND x - -7, y - -12, z // for readability
 #define DROPSHIP_AIRLOCK_BOUNDS locate(DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_EFFECT), locate(DROPSHIP_AIRLOCK_FROM_DOCKPORT_TO_NE_BOUND) // for readability
 #define DROPSHIP_AIRLOCK_GO_DOWN "down" // automated process command
 #define DROPSHIP_AIRLOCK_GO_UP "up" // automated process command
-#define DROPSHIP_AIRLOCK_AUTOMATIC_DELAY 10 SECONDS //an arbitary value not tied to anything
 
 //Bitflags for checking which automated docks are airlocks
 #define DROPSHIP_HANGAR_DOCK_IS_AIRLOCK (1<<0)

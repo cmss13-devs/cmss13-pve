@@ -14992,6 +14992,10 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
+"bEe" = (
+/obj/structure/machinery/ares/cpu,
+/turf/open/floor/almayer/aicore/glowing,
+/area/golden_arrow/ai_interface)
 "bEj" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_y = -29
@@ -16610,6 +16614,10 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
+"hqj" = (
+/obj/structure/machinery/ares/processor,
+/turf/open/floor/almayer/aicore/glowing,
+/area/golden_arrow/ai_interface)
 "hqq" = (
 /turf/closed/wall/almayer/outer/gear,
 /area/golden_arrow/cargo_shuttle/lower)
@@ -17255,6 +17263,10 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/lower_cargo)
+"jSK" = (
+/obj/structure/machinery/ares/processor/apollo,
+/turf/open/floor/almayer/aicore/glowing,
+/area/golden_arrow/ai_interface)
 "jVu" = (
 /obj/structure/pipes/vents/scrubber,
 /obj/effect/decal/warning_stripes{
@@ -17415,6 +17427,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
+"kzV" = (
+/obj/structure/machinery/ares/processor/interface,
+/turf/open/floor/almayer/aicore/glowing,
+/area/golden_arrow/ai_interface)
 "kBG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/nade_box{
@@ -26392,9 +26408,9 @@ aEG
 aEG
 "}
 (30,1,1) = {"
-aEG
-aEG
-aEG
+rRA
+rRA
+rRA
 rRA
 rRA
 rRA
@@ -26569,8 +26585,8 @@ aEG
 aEG
 "}
 (31,1,1) = {"
-aEG
-aEG
+rRA
+jSK
 rRA
 rRA
 rRA
@@ -26746,8 +26762,8 @@ aEG
 aEG
 "}
 (32,1,1) = {"
-aEG
-aEG
+rRA
+kzV
 rRA
 rRA
 rRA
@@ -27454,8 +27470,8 @@ aEG
 aEG
 "}
 (36,1,1) = {"
-aEG
-aEG
+rRA
+bEe
 rRA
 rRA
 rRA
@@ -27631,8 +27647,8 @@ aEG
 aEG
 "}
 (37,1,1) = {"
-aEG
-aEG
+rRA
+hqj
 rRA
 rRA
 rRA
@@ -27808,9 +27824,9 @@ aEG
 aEG
 "}
 (38,1,1) = {"
-aEG
-aEG
-aEG
+rRA
+rRA
+rRA
 rRA
 rRA
 rRA

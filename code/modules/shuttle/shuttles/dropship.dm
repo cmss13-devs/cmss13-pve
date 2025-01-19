@@ -29,8 +29,9 @@
 	var/list/obj/structure/dropship_equipment/equipments = list()
 
 	// dropship automated target
-	var/automated_hangar_id
-	var/automated_lz_id
+	var/automated_target
+	var/obj/docking_port/stationary/automated_hangar
+	var/obj/docking_port/stationary/automated_lz
 	var/automated_delay
 	var/automated_timer
 	var/flags_automated_airlock_presence = NO_FLAGS
@@ -246,21 +247,21 @@
 	if(mode == SHUTTLE_PREARRIVAL && !dropzone.landing_lights_on)
 		if(istype(destination, /obj/docking_port/stationary/marine_dropship))
 			dropzone.turn_on_landing_lights()
-		playsound(dropzone.return_center_turf(), landing_sound, 100, 0, channel = SOUND_CHANNEL_DROPSHIP, vol_cat = VOLUME_SFX)
-		playsound(return_center_turf(), landing_sound, 100, 0, channel = SOUND_CHANNEL_DROPSHIP, vol_cat = VOLUME_SFX)
+		playsound(dropzone.return_center_turf(), landing_sound, channel = SOUND_CHANNEL_DROPSHIP, vol_cat = VOLUME_SFX)
+		playsound(return_center_turf(), landing_sound, channel = SOUND_CHANNEL_DROPSHIP, vol_cat = VOLUME_SFX)
 
 	automated_check()
 
 	hijack?.check()
 
 /obj/docking_port/mobile/marine_dropship/proc/automated_check()
-	if(!automated_hangar_id || !automated_lz_id || !automated_delay)
+	if(!automated_hangar || !automated_lz || !automated_delay)
 		return
 
 	var/obj/structure/machinery/computer/shuttle/dropship/flight/root_console = getControlConsole()
 	if(root_console.dropship_control_lost)
-		automated_hangar_id = null
-		automated_lz_id = null
+		automated_hangar = null
+		automated_lz = null
 		automated_delay = null
 		return
 
@@ -269,21 +270,22 @@
 		var/is_hangar_dock_ready = TRUE
 		var/obj/docking_port/stationary/marine_dropship/airlock/outer/outer_airlock_dock
 		if(flags_automated_airlock_presence & DROPSHIP_HANGAR_DOCK_IS_AIRLOCK)
-			outer_airlock_dock = SSshuttle.getDock(automated_hangar_id)
+			outer_airlock_dock = automated_hangar
 			if(outer_airlock_dock?.linked_inner?.processing)
 				return
-			if(!outer_airlock_dock?.linked_inner?.open_outer_airlock && !istype(get_docked(), /obj/docking_port/stationary/marine_dropship/airlock/inner))
+			if(outer_airlock_dock?.linked_inner?.test_conditions(test_outer = FALSE) && !istype(get_docked(), /obj/docking_port/stationary/marine_dropship/airlock/inner))
 				is_hangar_dock_ready = FALSE
 		if(flags_automated_airlock_presence & DROPSHIP_LZ_DOCK_IS_AIRLOCK)
-			outer_airlock_dock = SSshuttle.getDock(automated_lz_id)
+			outer_airlock_dock = automated_lz
 			if(outer_airlock_dock?.linked_inner?.processing)
 				return
-			if(!outer_airlock_dock?.linked_inner?.open_outer_airlock && !istype(get_docked(), /obj/docking_port/stationary/marine_dropship/airlock/inner))
+			if(outer_airlock_dock?.linked_inner?.test_conditions(test_outer = FALSE) && !istype(get_docked(), /obj/docking_port/stationary/marine_dropship/airlock/inner))
 				is_lz_dock_ready = FALSE
 		if(!is_lz_dock_ready || !is_hangar_dock_ready)
-			log_ares_flight("Automatic","automatic dropship flight has been disabled due to a lack of response from dropship airlock(s).")
-			automated_hangar_id = null
-			automated_lz_id = null
+			log_ares_flight("Automatic","Automatic dropship flight on [name] has been disabled due to a lack of response from a dropship airlock.")
+			ai_silent_announcement("Automatic dropship flight on [name] has been disabled due to a lack of response from a dropship airlock.")
+			automated_hangar = null
+			automated_lz = null
 			automated_delay = null
 			return
 
@@ -293,7 +295,7 @@
 
 /obj/docking_port/mobile/marine_dropship/proc/automated_fly()
 	automated_timer = null
-	if(!automated_hangar_id || !automated_lz_id || !automated_delay)
+	if(!automated_hangar || !automated_lz || !automated_delay)
 		return
 	var/obj/structure/machinery/computer/shuttle/dropship/flight/root_console = getControlConsole()
 	if(root_console.dropship_control_lost)
@@ -301,26 +303,40 @@
 	if(mode != SHUTTLE_IDLE)
 		return
 	var/obj/docking_port/stationary/dockedAt = get_docked()
-	if(flags_automated_airlock_presence)
+	if(!automated_target)
+		if(dockedAt.id == automated_hangar.id)
+			automated_target = automated_lz.id
+		else if (dockedAt.id == automated_lz.id)
+			automated_target = automated_hangar.id
+	if(flags_automated_airlock_presence && istype(dockedAt, /obj/docking_port/stationary/marine_dropship/airlock))
 		var/list/return_list = null
+		var/obj/docking_port/stationary/marine_dropship/airlock/inner/dockedAt_airlock_inner
+		var/obj/docking_port/stationary/marine_dropship/airlock/outer/dockedAt_airlock_outer
 		if(istype(dockedAt, /obj/docking_port/stationary/marine_dropship/airlock/inner))
-			var/obj/docking_port/stationary/marine_dropship/airlock/inner/dockedAt_airlock_inner = dockedAt
-			return_list = dockedAt_airlock_inner.automatic_process(DROPSHIP_AIRLOCK_GO_DOWN)
+			dockedAt_airlock_inner = dockedAt
 		if(istype(dockedAt, /obj/docking_port/stationary/marine_dropship/airlock/outer))
-			var/obj/docking_port/stationary/marine_dropship/airlock/outer/dockedAt_airlock_outer = dockedAt
-			return_list = dockedAt_airlock_outer.linked_inner.update_clamps(TRUE)
+			dockedAt_airlock_outer = dockedAt
+			dockedAt_airlock_inner = dockedAt_airlock_outer.linked_inner
+		if(dockedAt_airlock_inner.processing)
+			return
+		if(dockedAt_airlock_inner.linked_outer.id == automated_hangar.id)
+			automated_target = automated_lz.id
+		else if(dockedAt_airlock_inner.linked_outer.id == automated_lz.id)
+			automated_target = automated_hangar.id
+		if(!dockedAt_airlock_outer) // is the dockedAt inner
+			return_list = dockedAt_airlock_inner.automatic_process(DROPSHIP_AIRLOCK_GO_DOWN)
 		if(return_list)
 			if(!return_list["successful"])
-				log_ares_flight("Automatic","automatic dropship flight has been disabled because [return_list["to_chat"]]")
-				automated_hangar_id = null
-				automated_lz_id = null
+				log_ares_flight("Automatic","Automatic dropship flight on \the [name] has been disabled because [lowertext(return_list["to_chat"])]")
+				ai_silent_announcement("Automatic dropship flight on \the [name] has been disabled because [lowertext(return_list["to_chat"])]")
+				automated_hangar = null
+				automated_lz = null
 				automated_delay = null
 			return
-	if(dockedAt.id == automated_hangar_id || (istype(dockedAt, /obj/docking_port/stationary/transit) && flags_automated_airlock_presence & DROPSHIP_HANGAR_DOCK_IS_AIRLOCK))
-		SSshuttle.moveShuttle(id, automated_lz_id, TRUE)
-	else
-		SSshuttle.moveShuttle(id, automated_hangar_id, TRUE)
-	ai_silent_announcement("Dropship '[name]' departing.")
+	if(automated_target)
+		SSshuttle.moveShuttle(id, automated_target, TRUE)
+		automated_target = null
+		ai_silent_announcement("Dropship '[name]' departing.")
 
 /obj/docking_port/mobile/marine_dropship/proc/dropship_freefall()
 	var/list/affected_list = turbulence_sort_affected()

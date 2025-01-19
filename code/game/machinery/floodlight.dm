@@ -96,6 +96,7 @@
 
 	var/linked_inner_dropship_airlock_id = "generic"
 	var/obj/docking_port/stationary/marine_dropship/airlock/inner/linked_inner = null
+	var/toggled
 
 /obj/structure/machinery/floodlight/landing/dropship_airlock/Initialize(mapload, ...)
 	. = ..()
