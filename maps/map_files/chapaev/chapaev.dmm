@@ -1620,7 +1620,7 @@
 /area/golden_arrow/canteen)
 "oa" = (
 /obj/item/clothing/suit/storage/marine/faction/UPP/jacket,
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
+/obj/item/clothing/suit/marine/lamp,
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access_txt = "240";
