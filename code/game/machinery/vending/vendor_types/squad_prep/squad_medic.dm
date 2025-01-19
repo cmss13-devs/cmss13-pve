@@ -355,6 +355,11 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 		list("Pill Bottle (Nitrogen-Water)", 40, /obj/item/storage/pill_bottle/nitrogenwater, null, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Dexalin+)", 40, /obj/item/storage/pill_bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Iron)", 40, /obj/item/storage/pill_bottle/iron, null, VENDOR_ITEM_REGULAR),
+
+		list("LIQUID BOTTLES", 0, null, null, null),
+		list("Liquid Bottle (Imidazoline-Alkysine)", 40, /obj/item/reagent_container/glass/bottle/imialk, null, VENDOR_ITEM_REGULAR),
+		list("Liquid Bottle (Meralyne-Bicardine)", 40, /obj/item/reagent_container/glass/bottle/merabica, null, VENDOR_ITEM_REGULAR),
+		list("Liquid Bottle (Kelotane-Dermaline)", 40, /obj/item/reagent_container/glass/bottle/keloderm, null, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/gear/medic_chemical

@@ -209,6 +209,45 @@
 	. = ..()
 	reagents.add_reagent("anti_toxin", 150)
 
+/obj/item/reagent_container/glass/bottle/imialk
+	name = "\improper Imidazoline-Alkysine bottle"
+	desc = "A small bottle of imidazoline and alkysine, used to heal brain and eye damage."
+	icon = 'icons/obj/items/chemistry.dmi'
+	icon_state = "bottle19"
+	volume = 135
+	amount_per_transfer_from_this = 135
+
+/obj/item/reagent_container/glass/bottle/imialk/Initialize()
+	. = ..()
+	reagents.add_reagent("imidazoline", 67.5)
+	reagents.add_reagent("alkysine", 67.5)
+
+/obj/item/reagent_container/glass/bottle/merabica
+	name = "\improper Meralyne-Bicaridine bottle"
+	desc = "A small bottle of meralyne and bicaridine. Rapidly heals brute damage."
+	icon = 'icons/obj/items/chemistry.dmi'
+	icon_state = "bottle17"
+	volume = 135
+	amount_per_transfer_from_this = 135
+
+/obj/item/reagent_container/glass/bottle/merabica/Initialize()
+	. = ..()
+	reagents.add_reagent("bicaridine", 67.5)
+	reagents.add_reagent("meralyne", 67.5)
+
+/obj/item/reagent_container/glass/bottle/keloderm
+	name = "\improper Kelotane-Dermaline bottle"
+	desc = "A small bottle of Kelotane & Dermaline, a pair of burn regrowth drugs."
+	icon = 'icons/obj/items/chemistry.dmi'
+	icon_state = "bottle15"
+	volume = 135
+	amount_per_transfer_from_this = 135
+
+/obj/item/reagent_container/glass/bottle/keloderm/Initialize()
+	. = ..()
+	reagents.add_reagent("kelotane", 67.5)
+	reagents.add_reagent("dermaline", 67.5)
+
 /obj/item/reagent_container/glass/bottle/mutagen
 	name = "unstable mutagen bottle"
 	desc = "A small bottle of unstable mutagen. Randomly changes the DNA structure of whoever comes in contact."
