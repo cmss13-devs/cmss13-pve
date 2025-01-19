@@ -785,7 +785,7 @@
 
 /turf/open/gm/river/ocean/deep_ocean/no_overlay
 	no_overlay = TRUE
-	light_range = 0.3
+	light_range = 0.95
 
 /turf/open/gm/river/ocean/Entered(atom/movable/AM)
 	. = ..()
@@ -879,7 +879,7 @@
 /turf/open/gm/river/no_overlay_lighted
 	no_overlay = TRUE
 	supports_surgery = FALSE
-	light_range = 0.3
+	light_range = 0.95
 
 
 
