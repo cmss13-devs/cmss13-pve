@@ -1198,7 +1198,7 @@
 	icon_state = "nav_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/usasf)
 	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = MOB_HUD_FACTION_NAVY
 
 /obj/item/device/radio/headset/distress/USASF/attache
 	desc = "A sleek headset used by members of the United States Aerospace Force, manufactured in Sol. Low profile and surprisngly comfortable. Featured channels include: ; - USASF, :o - Colony, :a Local USCM Forces."
@@ -1225,7 +1225,7 @@
 	icon_state = "arm_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/army)
 	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = MOB_HUD_FACTION_ARMY
 
 /obj/item/device/radio/headset/distress/army/attache
 	desc = "A robust headset used by members of the United States Army. Built to outlast those it's issued to. Featured channels include: ; - US Army, :o - Colony, :a Local USCM Forces."

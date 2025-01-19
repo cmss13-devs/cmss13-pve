@@ -100,9 +100,9 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/synth/uscm/usasf
+/datum/equipment_preset/synth/usasf
 	name = "USASF Synthetic"
-	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_NAVY
 	faction_group = FACTION_LIST_MARINE
 	idtype = /obj/item/card/id/gold
@@ -110,7 +110,7 @@
 	rank = "Synthetic"
 	role_comm_title = "USASF Syn"
 
-/datum/equipment_preset/synth/uscm/usasf/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/usasf/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/industrial

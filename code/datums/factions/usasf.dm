@@ -24,7 +24,7 @@
 		if(JOB_NAVY_PARA_TECH)
 			hud_icon_state = "para"
 		if(JOB_NAVY_SYNTH)
-			hud_icon_state = "synth"
+			hud_icon_state = "syn"
 		if(JOB_NAVY_PILOT)
 			hud_icon_state = "pilot"
 		if(JOB_NAVY_CHIEF_ENGINEER)

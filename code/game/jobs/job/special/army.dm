@@ -9,7 +9,7 @@
 
 /datum/job/trooper/grenadier
 	title = JOB_ARMY_PROPIPE
-	gear_preset = /datum/equipment_preset/usa/trooper/grenadier
+	gear_preset = /datum/equipment_preset/usa/grenadier
 
 /datum/job/trooper/marksman
 	title = JOB_ARMY_MARKSMAN

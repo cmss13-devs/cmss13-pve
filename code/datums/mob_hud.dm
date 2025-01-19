@@ -12,6 +12,8 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	MOB_HUD_XENO_HOSTILE = new /datum/mob_hud/xeno_hostile(),
 	MOB_HUD_FACTION_MARINE = new /datum/mob_hud/faction(),
 	MOB_HUD_FACTION_OBSERVER = new /datum/mob_hud/faction/observer(),
+	MOB_HUD_FACTION_ARMY = new /datum/mob_hud/faction/army(),
+	MOB_HUD_FACTION_NAVY = new /datum/mob_hud/faction/navy(),
 	MOB_HUD_FACTION_UPP = new /datum/mob_hud/faction/upp(),
 	MOB_HUD_FACTION_WY = new /datum/mob_hud/faction/wy(),
 	MOB_HUD_FACTION_TWE = new /datum/mob_hud/faction/twe(),
@@ -196,6 +198,12 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	var/faction = target.faction
 	if(faction == faction_to_check || isobserver(user) || isyautja(user))
 		..()
+
+/datum/mob_hud/faction/army
+	faction_to_check = FACTION_ARMY
+
+/datum/mob_hud/faction/navy
+	faction_to_check = FACTION_NAVY
 
 /datum/mob_hud/faction/upp
 	faction_to_check = FACTION_UPP

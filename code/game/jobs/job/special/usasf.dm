@@ -71,7 +71,7 @@
 
 /datum/job/seaman/synth
 	title = JOB_NAVY_SYNTH
-	gear_preset = /datum/equipment_preset/synth/uscm/usasf
+	gear_preset = /datum/equipment_preset/synth/usasf
 
 /datum/job/seaman/CO
 	title = JOB_NAVY_CO
