@@ -146,6 +146,18 @@
 	. = ..()
 	reagents.add_reagent("dexalin", 180)
 
+/obj/item/reagent_container/glass/bottle/dexalinplus
+	name = "\improper Dexalin+ bottle"
+	desc = "A small bottle filled with dexalin+. Hyper-condensed microcapsules quickly release oxygen into the bloodstream, immediately offsetting the effects of O2 deprivation."
+	icon = 'icons/obj/items/chemistry.dmi'
+	icon_state = "bottle10"
+	volume = 135
+	amount_per_transfer_from_this = 135
+
+/obj/item/reagent_container/glass/bottle/dexalinplus/Initialize()
+	. = ..()
+	reagents.add_reagent("dexalinp", 135)
+
 /obj/item/reagent_container/glass/bottle/spaceacillin
 	name = "\improper Spaceacillin bottle"
 	desc = "A small bottle. Contains spaceacillin - used to treat infected wounds."
@@ -237,7 +249,7 @@
 
 /obj/item/reagent_container/glass/bottle/keloderm
 	name = "\improper Kelotane-Dermaline bottle"
-	desc = "A small bottle of Kelotane & Dermaline, a pair of burn regrowth drugs."
+	desc = "A small bottle of kelotane & dermaline, a pair of burn regrowth drugs."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle15"
 	volume = 135

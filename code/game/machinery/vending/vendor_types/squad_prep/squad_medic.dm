@@ -360,6 +360,7 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 		list("Liquid Bottle (Imidazoline-Alkysine)", 40, /obj/item/reagent_container/glass/bottle/imialk, null, VENDOR_ITEM_REGULAR),
 		list("Liquid Bottle (Meralyne-Bicardine)", 40, /obj/item/reagent_container/glass/bottle/merabica, null, VENDOR_ITEM_REGULAR),
 		list("Liquid Bottle (Kelotane-Dermaline)", 40, /obj/item/reagent_container/glass/bottle/keloderm, null, VENDOR_ITEM_REGULAR),
+		list("Liquid Bottle (Dexalin+)", 40, /obj/item/reagent_container/glass/bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/gear/medic_chemical
