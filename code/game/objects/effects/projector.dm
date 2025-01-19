@@ -30,6 +30,13 @@ GLOBAL_LIST_EMPTY(deselected_projectors)
 	else
 		GLOB.deselected_projectors.Add(src)
 
+/obj/effect/projector/Destroy()
+	. = ..()
+	if(SSfz_transitions.selective_update[firing_id])
+		GLOB.projectors -= src
+	else
+		GLOB.deselected_projectors -= src
+
 /obj/effect/projector/onShuttleMove(turf/newT, turf/oldT, list/movement_force, move_dir, obj/docking_port/stationary/old_dock, obj/docking_port/mobile/moving_dock)
 	return TRUE
 	// we don't want projectors moving
