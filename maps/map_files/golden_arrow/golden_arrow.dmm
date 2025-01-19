@@ -5267,6 +5267,10 @@
 	pixel_y = 27;
 	pixel_x = 4
 	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_y = 13;
+	pixel_x = -3
+	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/platoon_commander_rooms)
 "asj" = (
