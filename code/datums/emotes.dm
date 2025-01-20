@@ -87,7 +87,7 @@
 	if(params && message_param)
 		msg = select_param(user, params)
 
-	msg = replace_pronoun(user, msg)
+	//msg = replace_pronoun(user, msg)
 
 	if(say_message)
 		user.say(say_message)
@@ -209,7 +209,7 @@
  * * msg - The string to modify.
  *
  * Returns the modified msg string.
- */
+
 /datum/emote/proc/replace_pronoun(mob/user, msg)
 	if(findtext(msg, "their"))
 		msg = replacetext(msg, "their", user.p_their())
@@ -220,7 +220,7 @@
 	if(findtext(msg, "%s"))
 		msg = replacetext(msg, "%s", user.p_s())
 	return msg
-
+ */
 /**
  * Selects the message type to override the message with.
  *
