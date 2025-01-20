@@ -944,8 +944,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper M10 ghillie helmet"
 	desc = "M10 helmet fitted with thermal camouflage ghillie strips. Used and customized by USCMC Scout Snipers."
 	icon_state = "ghillie_coif"
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	flags_inventory = BLOCKSHARPOBJ
-	flags_inv_hide = HIDEEARS|HIDETOPHAIR|HIDEFACE
+	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_GARB_OVERLAY
 	specialty = "M10 ghillie"
 

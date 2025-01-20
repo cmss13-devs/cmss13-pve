@@ -198,63 +198,63 @@
 /obj/item/ammo_box/magazine/xm51/empty
 	empty = TRUE
 
-//-----------------------m17a2 Battle Rifle Mag Boxes-----------------------
+//-----------------------L42A Battle Rifle Mag Boxes-----------------------
 
-/obj/item/ammo_box/magazine/m17a2
-	name = "magazine box (m17a2 x 16)"
+/obj/item/ammo_box/magazine/l42a
+	name = "magazine box (L42A x 16)"
 	icon_state = "base_l42"
 	flags_equip_slot = SLOT_BACK
 	overlay_gun_type = "_l42"
 	num_of_magazines = 16
-	magazine_type = /obj/item/ammo_magazine/rifle/m17a2
+	magazine_type = /obj/item/ammo_magazine/rifle/l42a
 
-/obj/item/ammo_box/magazine/m17a2/empty
+/obj/item/ammo_box/magazine/l42a/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m17a2/ap
-	name = "magazine box (AP m17a2 x 16)"
+/obj/item/ammo_box/magazine/l42a/ap
+	name = "magazine box (AP L42A x 16)"
 	overlay_ammo_type = "_ap"
 	overlay_content = "_ap"
-	magazine_type = /obj/item/ammo_magazine/rifle/m17a2/ap
+	magazine_type = /obj/item/ammo_magazine/rifle/l42a/ap
 
-/obj/item/ammo_box/magazine/m17a2/ap/empty
+/obj/item/ammo_box/magazine/l42a/ap/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m17a2/le
-	name = "magazine box (LE m17a2 x 16)"
+/obj/item/ammo_box/magazine/l42a/le
+	name = "magazine box (LE L42A x 16)"
 	overlay_ammo_type = "_le"
 	overlay_content = "_le"
-	magazine_type = /obj/item/ammo_magazine/rifle/m17a2/le
+	magazine_type = /obj/item/ammo_magazine/rifle/l42a/le
 
-/obj/item/ammo_box/magazine/m17a2/le/empty
+/obj/item/ammo_box/magazine/l42a/le/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m17a2/ext
-	name = "magazine box (Ext m17a2 x 12)"
+/obj/item/ammo_box/magazine/l42a/ext
+	name = "magazine box (Ext L42A x 12)"
 	overlay_ammo_type = "_ext"
 	overlay_content = "_reg"
 	num_of_magazines = 12
-	magazine_type = /obj/item/ammo_magazine/rifle/m17a2/extended
+	magazine_type = /obj/item/ammo_magazine/rifle/l42a/extended
 
-/obj/item/ammo_box/magazine/m17a2/ext/empty
+/obj/item/ammo_box/magazine/l42a/ext/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m17a2/incen
-	name = "magazine box (Incen m17a2 x 16)"
+/obj/item/ammo_box/magazine/l42a/incen
+	name = "magazine box (Incen L42A x 16)"
 	overlay_ammo_type = "_incen"
 	overlay_content = "_incen"
-	magazine_type = /obj/item/ammo_magazine/rifle/m17a2/incendiary
+	magazine_type = /obj/item/ammo_magazine/rifle/l42a/incendiary
 
-/obj/item/ammo_box/magazine/m17a2/incen/empty
+/obj/item/ammo_box/magazine/l42a/incen/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m17a2/heap
-	name = "magazine box (HEAP m17a2 x 16)"
+/obj/item/ammo_box/magazine/l42a/heap
+	name = "magazine box (HEAP L42A x 16)"
 	overlay_ammo_type = "_heap"
 	overlay_content = "_heap"
-	magazine_type = /obj/item/ammo_magazine/rifle/m17a2/heap
+	magazine_type = /obj/item/ammo_magazine/rifle/l42a/heap
 
-/obj/item/ammo_box/magazine/m17a2/heap/empty
+/obj/item/ammo_box/magazine/l42a/heap/empty
 	empty = TRUE
 
 //-----------------------M16 Rifle Mag Box-----------------------

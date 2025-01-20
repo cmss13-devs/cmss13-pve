@@ -243,11 +243,11 @@ GLOBAL_LIST_INIT_TYPED(cardboard_recipes, /datum/stack_recipe, list ( \
 		new/datum/stack_recipe("empty magazine box (M39 Incen)", /obj/item/ammo_box/magazine/m39/incen/empty), \
 		new/datum/stack_recipe("empty magazine box (M39 LE)", /obj/item/ammo_box/magazine/m39/le/empty), \
 		null, \
-		new/datum/stack_recipe("empty magazine box (m17a2)", /obj/item/ammo_box/magazine/m17a2/empty), \
-		new/datum/stack_recipe("empty magazine box (m17a2 AP)", /obj/item/ammo_box/magazine/m17a2/ap/empty), \
-		new/datum/stack_recipe("empty magazine box (m17a2 Ext)", /obj/item/ammo_box/magazine/m17a2/ext/empty), \
-		new/datum/stack_recipe("empty magazine box (m17a2 Incen)", /obj/item/ammo_box/magazine/m17a2/incen/empty), \
-		new/datum/stack_recipe("empty magazine box (m17a2 LE)", /obj/item/ammo_box/magazine/m17a2/le/empty), \
+		new/datum/stack_recipe("empty magazine box (L42A)", /obj/item/ammo_box/magazine/l42a/empty), \
+		new/datum/stack_recipe("empty magazine box (L42A AP)", /obj/item/ammo_box/magazine/l42a/ap/empty), \
+		new/datum/stack_recipe("empty magazine box (L42A Ext)", /obj/item/ammo_box/magazine/l42a/ext/empty), \
+		new/datum/stack_recipe("empty magazine box (L42A Incen)", /obj/item/ammo_box/magazine/l42a/incen/empty), \
+		new/datum/stack_recipe("empty magazine box (L42A LE)", /obj/item/ammo_box/magazine/l42a/le/empty), \
 		null, \
 		new/datum/stack_recipe("empty magazine box (M4RA)", /obj/item/ammo_box/magazine/m4ra/empty), \
 		new/datum/stack_recipe("empty magazine box (M4RA AP)", /obj/item/ammo_box/magazine/m4ra/ap/empty), \

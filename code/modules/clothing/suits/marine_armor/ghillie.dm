@@ -1,18 +1,13 @@
 #define FULL_CAMOUFLAGE_ALPHA 15
 
-/obj/item/clothing/suit/marine/ghillie
+/obj/item/clothing/suit/storage/marine/ghillie
 	name = "\improper M45 pattern ghillie armor"
 	desc = "A lightweight ghillie camouflage suit, used by USCM snipers on recon missions. Very lightweight, but doesn't protect much."
 	icon_state = "ghillie_armor"
-	armor_melee = CLOTHING_ARMOR_LOW
-	armor_bullet = CLOTHING_ARMOR_LOW
-	armor_laser = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_LOW
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_rad = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	flags_marine_armor = ARMOR_LAMP_OVERLAY
+	flags_item = MOB_LOCK_ON_EQUIP
 	specialty = "M45 pattern ghillie"
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PONCHO)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
@@ -29,13 +24,13 @@
 
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/specialist/prepare_position)
 
-/obj/item/clothing/suit/marine/ghillie/dropped(mob/user)
+/obj/item/clothing/suit/storage/marine/ghillie/dropped(mob/user)
 	if(ishuman(user) && !issynth(user))
 		deactivate_camouflage(user, FALSE)
 
 	. = ..()
 
-/obj/item/clothing/suit/marine/ghillie/verb/camouflage()
+/obj/item/clothing/suit/storage/marine/ghillie/verb/camouflage()
 	set name = "Prepare Position"
 	set desc = "Use the ghillie suit and the nearby environment to become near invisible."
 	set category = "Object"
@@ -87,7 +82,7 @@
 	anim(H.loc, H, 'icons/mob/mob.dmi', null, "cloak", null, H.dir)
 
 
-/obj/item/clothing/suit/marine/ghillie/proc/deactivate_camouflage(mob/user)
+/obj/item/clothing/suit/storage/marine/ghillie/proc/deactivate_camouflage(mob/user)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/H = user
 	if(!istype(H))
@@ -116,7 +111,7 @@
 
 	H.visible_message(SPAN_DANGER("[H]'s camouflage fails!"), SPAN_WARNING("Your camouflage fails!"), max_distance = 4)
 
-/obj/item/clothing/suit/marine/ghillie/proc/fade_in(mob/user)
+/obj/item/clothing/suit/storage/marine/ghillie/proc/fade_in(mob/user)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/H = user
 	if(camo_active)
@@ -127,13 +122,13 @@
 		addtimer(CALLBACK(src, PROC_REF(fade_out_finish), H), camouflage_break, TIMER_OVERRIDE|TIMER_UNIQUE)
 		animate(H, alpha = full_camo_alpha + 5, time = camouflage_break, easing = LINEAR_EASING, flags = ANIMATION_END_NOW)
 
-/obj/item/clothing/suit/marine/ghillie/proc/fade_out_finish(mob/living/carbon/human/H)
+/obj/item/clothing/suit/storage/marine/ghillie/proc/fade_out_finish(mob/living/carbon/human/H)
 	if(camo_active && H.wear_suit == src)
 		to_chat(H, SPAN_BOLDNOTICE("The smoke clears and your position is once again hidden completely!"))
 		animate(H, alpha = full_camo_alpha)
 		current_camo = full_camo_alpha
 
-/obj/item/clothing/suit/marine/ghillie/proc/handle_mob_move_or_look(mob/living/mover, actually_moving, direction, specific_direction)
+/obj/item/clothing/suit/storage/marine/ghillie/proc/handle_mob_move_or_look(mob/living/mover, actually_moving, direction, specific_direction)
 	SIGNAL_HANDLER
 
 	if(camo_active && actually_moving)
@@ -157,12 +152,12 @@
 
 /datum/action/item_action/specialist/prepare_position/action_activate()
 	. = ..()
-	var/obj/item/clothing/suit/marine/ghillie/GS = holder_item
+	var/obj/item/clothing/suit/storage/marine/ghillie/GS = holder_item
 	GS.camouflage()
 
 #undef FULL_CAMOUFLAGE_ALPHA
 
-/obj/item/clothing/suit/marine/ghillie/forecon
+/obj/item/clothing/suit/storage/marine/ghillie/forecon
 	name = "UDEP Thermal Poncho"
 	desc = "UDEP or the Ultra Diffusive Environmental Poncho is a camouflaged rain-cover worn to protect against the elements and chemical spills. It's commonly treated with an infrared absorbing coating, making a marine almost invisible in the rain. Favoured by USCM specialists for it's comfort and practicality."
 	icon_state = "mercenary_miner_armor"

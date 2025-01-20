@@ -1731,18 +1731,18 @@
 
 //-------------------------------------------------------
 
-//m17a2 Battle Rifle
+//L42A Battle Rifle
 
-/obj/item/weapon/gun/rifle/m17a2
+/obj/item/weapon/gun/rifle/l42a
 	name = "\improper M17A2 pulse rifle"
-	desc = "The M17A2 pulse rifle, despite its age- having been the predecessor to the infamous M20 Harrington rifle- remains a common 'sporting' rifle among UA citizens and a reliable alternative to more contemporary rifles for many mercenaries. Chambered in 10x22."
+	desc = "The M17A2 pulse rifle, despite its age- having been the predecessor to the infamous M20 Harrington rifle- remains a common 'sporting' rifle among UA citizens and a reliable alternative to more contemporary rifles for many mercenaries."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "l42mk1"
 	item_state = "l42mk1"
 	fire_sound = 'sound/weapons/gun_m39.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/rifle/m17a2
+	current_mag = /obj/item/ammo_magazine/rifle/l42a
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/bayonet,
@@ -1769,10 +1769,10 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/carbine)
 	map_specific_decoration = FALSE
 
-/obj/item/weapon/gun/rifle/m17a2/set_gun_attachment_offsets()
+/obj/item/weapon/gun/rifle/l42a/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 10)
 
-/obj/item/weapon/gun/rifle/m17a2/set_gun_config_values()
+/obj/item/weapon/gun/rifle/l42a/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_7)
 	set_burst_amount(0)
@@ -1783,23 +1783,23 @@
 	damage_falloff_mult = 0
 	scatter = SCATTER_AMOUNT_TIER_8
 
-/obj/item/weapon/gun/rifle/m17a2/training
-	current_mag = /obj/item/ammo_magazine/rifle/m17a2/rubber
+/obj/item/weapon/gun/rifle/l42a/training
+	current_mag = /obj/item/ammo_magazine/rifle/l42a/rubber
 
 //-------------------------------------------------------
 //-------------------------------------------------------
 //ABR-40 hunting rifle
 
-// Civilian version of the M17A2, used for hunting, and also by undersupplied paramilitary groups.
+// Civilian version of the L42A, used for hunting, and also by undersupplied paramilitary groups.
 
-/obj/item/weapon/gun/rifle/m17a2/abr40
+/obj/item/weapon/gun/rifle/l42a/abr40
 	name = "\improper ABR-40 hunting rifle"
-	desc = "The civilian version of the M17A2 battle rifle. Almost identical and even cross-compatible with L42 magazines, just don't take the stock off.."
-	desc_lore = "The ABR-40 was created along-side the M17A2 as a hunting rifle for civilians. Sporting faux wooden furniture and a legally-mandated 12 round magazine, it's still highly accurate and deadly, a favored pick of experienced hunters and retired Marines. However, it's very limited in attachment selection, only being able to fit rail attachments, and the differences in design from the L42 force an awkward pose when attempting to hold it one-handed. Removing the stock is not recommended."
+	desc = "The civilian version of the L42A battle rifle. Almost identical and even cross-compatible with L42 magazines, just don't take the stock off.."
+	desc_lore = "The ABR-40 was created along-side the L42A as a hunting rifle for civilians. Sporting faux wooden furniture and a legally-mandated 12 round magazine, it's still highly accurate and deadly, a favored pick of experienced hunters and retired Marines. However, it's very limited in attachment selection, only being able to fit rail attachments, and the differences in design from the L42 force an awkward pose when attempting to hold it one-handed. Removing the stock is not recommended."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "abr40"
 	item_state = "abr40"
-	current_mag = /obj/item/ammo_magazine/rifle/m17a2/abr40
+	current_mag = /obj/item/ammo_magazine/rifle/l42a/abr40
 	attachable_allowed = list(
 		//Barrel,
 		/obj/item/attachable/bayonet,
@@ -1825,19 +1825,19 @@
 	civilian_usable_override = TRUE
 
 // Identical to the L42 in stats, *except* for extra recoil and scatter that are nulled by keeping the stock on.
-/obj/item/weapon/gun/rifle/m17a2/abr40/set_gun_config_values()
+/obj/item/weapon/gun/rifle/l42a/abr40/set_gun_config_values()
 	..()
 	accuracy_mult = (BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5) - HIT_ACCURACY_MULT_TIER_10
 	recoil = RECOIL_AMOUNT_TIER_4
 	scatter = (SCATTER_AMOUNT_TIER_8) + SCATTER_AMOUNT_TIER_5
 
 
-/obj/item/weapon/gun/rifle/m17a2/abr40/tactical
-	desc = "The civilian version of the M17A2 battle rifle that is often wielded by Marines. Almost identical and even cross-compatible with M17A2 magazines, just don't take the stock off. This rifle seems to have unique tacticool blue-black furniture alongside some miscellaneous aftermarket modding."
-	desc_lore = "The ABR-40 was created after the striking popularity of the M17A2 battle rifle as a hunting rifle for civilians, and naturally fell into the hands of many underfunded paramilitary groups and insurrections in turn, due to its smooth and simple handling and cross-compatibility with M17A2 magazines."
+/obj/item/weapon/gun/rifle/l42a/abr40/tactical
+	desc = "The civilian version of the L42A battle rifle that is often wielded by Marines. Almost identical and even cross-compatible with L42 magazines, just don't take the stock off. This rifle seems to have unique tacticool blue-black furniture alongside some miscellaneous aftermarket modding."
+	desc_lore = "The ABR-40 was created after the striking popularity of the L42 battle rifle as a hunting rifle for civilians, and naturally fell into the hands of many underfunded paramilitary groups and insurrections in turn, due to its smooth and simple handling and cross-compatibility with L42A magazines."
 	icon_state = "abr40_tac"
 	item_state = "abr40_tac"
-	current_mag = /obj/item/ammo_magazine/rifle/m17a2/ap
+	current_mag = /obj/item/ammo_magazine/rifle/l42a/ap
 	attachable_allowed = list(
 		//Barrel,
 		/obj/item/attachable/suppressor,

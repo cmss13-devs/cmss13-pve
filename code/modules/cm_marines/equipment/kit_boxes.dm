@@ -53,7 +53,7 @@
 
 /obj/item/storage/box/spec/sniper/fill_preset_inventory()
 	// sniper
-	new /obj/item/clothing/suit/marine/ghillie(src)
+	new /obj/item/clothing/suit/storage/marine/ghillie(src)
 	new /obj/item/clothing/head/helmet/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/m42_night_goggles(src)
 	new /obj/item/ammo_magazine/sniper(src)
@@ -73,7 +73,7 @@
 /obj/item/storage/box/spec/sniper/anti_materiel/fill_preset_inventory()
 	name = "\improper AMR equipment case"
 	desc = "A large case containing an experimental XM43E1, a set of M45 ghillie armor and helmet, an M42 scout sight, ammunition, a set of spotter gear, and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
-	new /obj/item/clothing/suit/marine/ghillie(src)
+	new /obj/item/clothing/suit/storage/marine/ghillie(src)
 	new /obj/item/clothing/head/helmet/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/m42_night_goggles(src)
 	new /obj/item/weapon/gun/rifle/sniper/XM43E1(src)
@@ -538,7 +538,7 @@
 
 /obj/item/storage/box/kit/spotter/fill_preset_inventory()
 	new /obj/item/clothing/head/helmet/marine/ghillie(src)
-	new /obj/item/clothing/suit/marine/ghillie(src)
+	new /obj/item/clothing/suit/storage/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/m42_night_goggles/spotter(src)
 	new /obj/item/storage/backpack/marine/smock(src)
 	new /obj/item/device/binoculars/range/designator/spotter(src)

@@ -19032,7 +19032,7 @@
 /turf/closed/wall/mineral/bone_resin,
 /area/lv522/oob)
 "jUg" = (
-/obj/item/ammo_box/magazine/m17a2/ap/empty,
+/obj/item/ammo_box/magazine/l42a/ap/empty,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/security)
 "jUn" = (
@@ -37515,7 +37515,7 @@
 "sPn" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/m17a2,
+/obj/item/ammo_box/magazine/l42a,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
 "sPs" = (

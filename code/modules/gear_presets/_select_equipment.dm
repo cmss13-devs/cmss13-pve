@@ -694,9 +694,9 @@ GLOBAL_LIST_INIT(rebel_ua_shotguns, list(
 GLOBAL_LIST_INIT(rebel_ua_rifles, list(
 	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
 	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
-	/obj/item/weapon/gun/rifle/m17a2 = /obj/item/ammo_magazine/rifle/m17a2,
-	/obj/item/weapon/gun/rifle/m17a2 = /obj/item/ammo_magazine/rifle/m17a2,
-	/obj/item/weapon/gun/rifle/m17a2 = /obj/item/ammo_magazine/rifle/m17a2,
+	/obj/item/weapon/gun/rifle/l42a = /obj/item/ammo_magazine/rifle/l42a,
+	/obj/item/weapon/gun/rifle/l42a = /obj/item/ammo_magazine/rifle/l42a,
+	/obj/item/weapon/gun/rifle/l42a = /obj/item/ammo_magazine/rifle/l42a,
 	/obj/item/weapon/gun/rifle/m41aMK1 = /obj/item/ammo_magazine/rifle/m41aMK1
 	))
 

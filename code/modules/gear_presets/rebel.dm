@@ -62,10 +62,12 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	if(prob(5))
+	if(prob(10))
 		add_rebel_ua_pistol(new_human)
-	else
+	else if(prob(85))
 		add_rebel_ua_rifle(new_human)
+	else
+		add_rebel_ua_shotgun(new_human)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -188,9 +190,7 @@
 	//limbs
 	add_rebel_ua_shoes(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable(new_human), WEAR_R_HAND)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+
 
 /datum/equipment_preset/colonist/bluecollar/rebel/commander
 	name = "Rebel, Cell Commander"

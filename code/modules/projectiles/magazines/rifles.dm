@@ -350,77 +350,79 @@
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 //-------------------------------------------------------
-//m17a2 Battle Rifle
+//L42A Battle Rifle
 
-/obj/item/ammo_magazine/rifle/m17a2
-	name = "\improper m17a2 magazine (10x22mm)"
-	desc = "A 10mm assault rifle magazine."
-	caliber = "10x22mm"
+/obj/item/ammo_magazine/rifle/l42a
+	name = "\improper L42A magazine (10x24mm)"
+	desc = "A 10mm battle rifle magazine."
+	caliber = "10x24mm"
 	icon_state = "l42mk1"
 	bonus_overlay = "l42_mag_overlay"
-	default_ammo = /datum/ammo/bullet/smg/m39
-	max_rounds = 75
-	gun_type = /obj/item/weapon/gun/rifle/m17a2
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 25
+	gun_type = /obj/item/weapon/gun/rifle/l42a
 	w_class = SIZE_MEDIUM
 	ammo_band_icon = "+l42mk1_band"
 	ammo_band_icon_empty = "+l42mk1_band_e"
 
-/obj/item/ammo_magazine/rifle/m17a2/ap
-	name = "\improper m17a2 AP magazine (10x22mm)"
-	desc = "A 10mm assault rifle armor piercing magazine."
-	default_ammo = /datum/ammo/bullet/smg/ap
+/obj/item/ammo_magazine/rifle/l42a/ap
+	name = "\improper L42A AP magazine (10x24mm)"
+	desc = "A 10mm battle rifle armor piercing magazine."
+	default_ammo = /datum/ammo/bullet/rifle/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
-/obj/item/ammo_magazine/rifle/m17a2/le
-	name = "\improper m17a2 LE magazine (10x22mm)"
-	desc = "A 10mm assault rifle armor shredding magazine."
-	default_ammo = /datum/ammo/bullet/smg/le
+/obj/item/ammo_magazine/rifle/l42a/le
+	name = "\improper L42A LE magazine (10x24mm)"
+	desc = "A 10mm battle rifle armor shredding magazine."
+	default_ammo = /datum/ammo/bullet/rifle/le
 	ammo_band_color = AMMO_BAND_COLOR_LIGHT_EXPLOSIVE
 
-/obj/item/ammo_magazine/rifle/m17a2/rubber
-	name = "m17a2 rubber magazine (10x22mm)"
-	default_ammo = /datum/ammo/bullet/smg/rubber
+/obj/item/ammo_magazine/rifle/l42a/rubber
+	name = "L42A rubber magazine (10x24mm)"
+	default_ammo = /datum/ammo/bullet/rifle/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
-/obj/item/ammo_magazine/rifle/m17a2/heap
-	name = "\improper m17a2 HEAP (10x22mm)"
-	desc = "A 10mm assault rifle high explosive armor piercing magazine."
-	default_ammo = /datum/ammo/bullet/smg/heap
+/obj/item/ammo_magazine/rifle/l42a/heap
+	name = "\improper L42A HEAP (10x24mm)"
+	desc = "A 10mm battle rifle high explosive armor piercing magazine."
+	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
-/obj/item/ammo_magazine/rifle/m17a2/penetrating
-	name = "\improper m17a2 wall-penetrating magazine (10x22mm)"
-	default_ammo = /datum/ammo/bullet/smg/ap/penetrating
+/obj/item/ammo_magazine/rifle/l42a/penetrating
+	name = "\improper L42A wall-penetrating magazine (10x24mm)"
+	default_ammo = /datum/ammo/bullet/rifle/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
-/obj/item/ammo_magazine/rifle/m17a2/toxin
-	name = "\improper m17a2 toxin magazine (10x22mm)"
-	desc = "A 10mm assault rifle toxin magazine."
-	default_ammo = /datum/ammo/bullet/smg/ap/toxin
+/obj/item/ammo_magazine/rifle/l42a/toxin
+	name = "\improper L42A toxin magazine (10x24mm)"
+	desc = "A 10mm battle rifle toxin magazine."
+	default_ammo = /datum/ammo/bullet/rifle/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
-/obj/item/ammo_magazine/rifle/m17a2/extended
-	name = "\improper m17a2 extended magazine (10x22mm)"
-	desc = "A 10mm assault rifle extended magazine."
+/obj/item/ammo_magazine/rifle/l42a/extended
+	name = "\improper L42A extended magazine (10x24mm)"
+	desc = "A 10mm battle rifle extended magazine."
+	caliber = "10x24mm"
 	icon_state = "l42mk1_extended"
 	bonus_overlay = "l42_ex_overlay"
-	default_ammo = /datum/ammo/bullet/smg/m39
-	max_rounds = 99
-	gun_type = /obj/item/weapon/gun/rifle/m17a2
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 35
+	gun_type = /obj/item/weapon/gun/rifle/l42a
 	w_class = SIZE_MEDIUM
 
-/obj/item/ammo_magazine/rifle/m17a2/incendiary
-	name = "\improper m17a2 incendiary magazine (10x24mm)"
-	desc = "A 10mm assault rifle incendiary magazine."
-	caliber = "10x22mm"
-	default_ammo = /datum/ammo/bullet/smg/incendiary
-	gun_type = /obj/item/weapon/gun/rifle/m17a2
+/obj/item/ammo_magazine/rifle/l42a/incendiary
+	name = "\improper L42A incendiary magazine (10x24mm)"
+	desc = "A 10mm battle rifle incendiary magazine."
+	caliber = "10x24mm"
+	default_ammo = /datum/ammo/bullet/rifle/incendiary
+	max_rounds = 20
+	gun_type = /obj/item/weapon/gun/rifle/l42a
 	w_class = SIZE_MEDIUM
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
-/obj/item/ammo_magazine/rifle/m17a2/abr40
+/obj/item/ammo_magazine/rifle/l42a/abr40
 	name = "\improper ABR-40 magazine (10x24mm)"
-	desc = "An ABR-40 magazine loaded with full metal jacket ammunition, for use at the firing range or while hunting. Theoretically cross-compatible with an m17a2 assault rifle."
+	desc = "An ABR-40 magazine loaded with full metal jacket ammunition, for use at the firing range or while hunting. Theoretically cross-compatible with an L42A battle rifle."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "abr40"
 	bonus_overlay = "abr40_mag_overlay"
@@ -429,9 +431,9 @@
 	ammo_band_icon = "+abr40_band"
 	ammo_band_icon_empty = "+abr40_band_e"
 
-/obj/item/ammo_magazine/rifle/m17a2/abr40/holo_target
+/obj/item/ammo_magazine/rifle/l42a/abr40/holo_target
 	name = "\improper ABR-40 holotargeting magazine (10x24mm)"
-	desc = "An ABR-40 magazine loaded with holo-targeting ammunition, primarily utilized to highlight hunting targets for easier target capture. Theoretically cross-compatible with an m17a2 assault rifle."
+	desc = "An ABR-40 magazine loaded with holo-targeting ammunition, primarily utilized to highlight hunting targets for easier target capture. Theoretically cross-compatible with an L42A battle rifle."
 	default_ammo = /datum/ammo/bullet/rifle/holo_target/hunting
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 

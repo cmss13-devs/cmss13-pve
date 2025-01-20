@@ -2891,7 +2891,7 @@
 /area/adminlevel/chinook/offices)
 "kW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/m17a2,
+/obj/item/ammo_box/magazine/l42a,
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/sec)
 "kX" = (
@@ -11846,12 +11846,12 @@
 /obj/structure/window/reinforced/ultra,
 /obj/structure/machinery/door/window/ultra{
 	dir = 8;
-	name = "m17a2 execution rifles";
+	name = "L42A execution rifles";
 	req_access_txt = "2;3;12;19"
 	},
-/obj/item/weapon/gun/rifle/m17a2,
-/obj/item/weapon/gun/rifle/m17a2,
-/obj/item/weapon/gun/rifle/m17a2,
+/obj/item/weapon/gun/rifle/l42a,
+/obj/item/weapon/gun/rifle/l42a,
+/obj/item/weapon/gun/rifle/l42a,
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/sec)
 "Wt" = (
