@@ -30,7 +30,7 @@
 	if(!(flags_atom & NO_NAME_OVERRIDE))
 		name = "[specialty]"
 		if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-			name += " snow uniform"
+			name += " cold-weather uniform"
 		else
 			name += " uniform"
 	if(!(flags_atom & NO_SNOW_TYPE))
@@ -42,12 +42,6 @@
 		to_chat(user, SPAN_WARNING("The sensors in \the [src] can't be modified."))
 		return
 	. = ..()
-
-/obj/item/clothing/under/marine/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
-	. = ..()
-	for(var/i in map_variants_roll_accessories)
-		if(findtext(icon_state, i, 1, 3))
-			flags_jumpsuit |= UNIFORM_DO_NOT_HIDE_ACCESSORIES
 
 /obj/item/clothing/under/marine/standard
 	flags_atom = NO_SNOW_TYPE
@@ -451,12 +445,11 @@
 //=========================//Marine Raiders\\================================\\
 
 /obj/item/clothing/under/marine/veteran/marsoc
-	name = "SOF Uniform"
-	desc = "MARSOC standard uniform, in a dark camouflage pattern. Venlar liners provide slight protection from ballistics or blades."
+	name = "black uniform"
+	desc = "Black BDU utilized by USCM forces on night operations."
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	icon_state = "marsoc"
-	worn_state = "marsoc"
-	specialty = "sof uniform"
+	icon_state = "marsoc_jumpsuit"
+	worn_state = "marsoc_jumpsuit"
 	flags_item = NO_SNOW_TYPE
 
 //=========================//PMC\\================================\\
@@ -545,6 +538,15 @@
 	icon_state = "upp_uniform_service"
 	worn_state = "upp_uniform_service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/marine/veteran/UPP/naval
+	name = "\improper UPP naval infantry uniform"
+	flags_armor_protection = BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	desc = "A pair of black bell bottom naval pants matched with a blue telnyashka."
+	icon_state = "upp_uniform_naval"
+	worn_state = "upp_uniform_naval"
+	flags_jumpsuit = UNIFORM_SLEEVE_CUT
+	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_HOLSTER)
 
 //=========================//Freelancer\\================================\\
 

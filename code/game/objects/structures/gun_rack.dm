@@ -140,3 +140,19 @@
 
 /obj/structure/gun_rack/mk221/empty
 	initial_stored = 0
+
+/obj/structure/gun_rack/m20a
+	name = "M20A pulse rifle rack"
+	icon_state = "m20a"
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/m20a
+	populate_type = /obj/item/weapon/gun/rifle/m20a
+
+/obj/structure/gun_rack/m20a/empty
+	initial_stored = 0
+
+/obj/structure/gun_rack/m20a/unloaded
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/m20a/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/m20a/unloaded

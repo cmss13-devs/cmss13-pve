@@ -137,6 +137,7 @@
 	name = "\improper 25mm multipurpose ammunition crate"
 	icon_state = "30mm_crate"
 	desc = "A 400rnd reinforced crate of Armor Piercing High Explosive and Incendiary 25mm ammunition for use with the GAU-113 rotary autocannon. Best used against light structures, personnel in the open, or thinskin vehicles. Entirely ineffective against heavier armor."
+	travelling_time = 50
 	equipment_type = /obj/structure/dropship_equipment/weapon/heavygun
 	ammo_count = 400
 	max_ammo_count = 400
@@ -144,10 +145,10 @@
 	ammo_used_per_firing = 40
 	point_cost = 275
 	fire_mission_delay = 2
-	var/bullet_spread_range = 3 //how far from the real impact turf can bullets land
+	var/bullet_spread_range = 2 //how far from the real impact turf can bullets land
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel/gau //For siming 30mm bullet impacts.
-	var/directhit_damage = 105 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
-	var/penetration = 10 //AP value pretty much
+	var/directhit_damage = 150 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
+	var/penetration = 15 //AP value pretty much
 
 /obj/structure/ship_ammo/heavygun/get_examine_text(mob/user)
 	. = ..()
@@ -199,11 +200,11 @@
 	ammo_count = 400
 	max_ammo_count = 400
 	ammo_used_per_firing = 40
-	bullet_spread_range = 4
+	bullet_spread_range = 3
 	point_cost = 325
 	fire_mission_delay = 2
 	shrapnel_type = /datum/ammo/bullet/shrapnel/gau/at
-	directhit_damage = 80 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
+	directhit_damage = 100 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
 	penetration = 40 //AP value pretty much
 
 //laser battery
@@ -391,7 +392,7 @@
 	ammo_count = 6
 	max_ammo_count = 6
 	ammo_name = "minirocket"
-	travelling_time = 80 //faster than 30mm cannon, slower than real rockets
+	travelling_time = 40 //faster than 30mm cannon, slower than real rockets
 	transferable_ammo = TRUE
 	point_cost = 300
 	fire_mission_delay = 3 //high cooldown

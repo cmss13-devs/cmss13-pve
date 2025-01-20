@@ -11,7 +11,7 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 40
-	penetration= ARMOR_PENETRATION_TIER_2
+	penetration= -ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pistol/tiny
@@ -30,7 +30,7 @@
 	name = "hollowpoint pistol bullet"
 
 	damage = 55 //hollowpoint is strong
-	penetration = 0 //hollowpoint can't pierce armor!
+	penetration = -ARMOR_PENETRATION_TIER_5 //hollowpoint can't pierce armor!
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3 //hollowpoint causes shrapnel
 
 // Used by M4A3 AP and mod88
@@ -39,7 +39,7 @@
 
 	damage = 25
 	accuracy = HIT_ACCURACY_TIER_2
-	penetration= ARMOR_PENETRATION_TIER_8
+	penetration= ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pistol/ap/penetrating
