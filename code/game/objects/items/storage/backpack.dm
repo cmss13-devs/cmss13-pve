@@ -417,8 +417,8 @@
 //=======================================================================\\
 
 /obj/item/storage/backpack/marine
-	name = "\improper lightweight IMP backpack"
-	desc = "The standard-issue pack of the USCM and US Army forces. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 armor."
+	name = "\improper surplus USCM backpack"
+	desc = "An outdated backpack system utilized by the USCM prior to the Marine 70 program. The basic design still remains as the basis for various specialized backpacks still in service in the USCM."
 	icon_state = "marinepack"
 	item_state = "marinepack"
 	has_gamemode_skin = FALSE //replace this with the atom_flag NO_SNOW_TYPE at some point, just rename it to like, NO_MAP_VARIANT_SKIN
@@ -1183,3 +1183,61 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/intel/chestrig/army
 	name = "\improper Army expedition chestrig"
 	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to intelligence officers."
+
+//==========================// IMP BACKPACK \\================================\\
+//=======================================================================\\
+
+#define ATTACHABLE_ITEMS list(\
+		/obj/item/tool/shovel/etool,\
+		/obj/item/roller/bedroll,\
+		/obj/item/prop/folded_anti_tank_sadar,\
+	)
+
+/obj/item/storage/backpack/marine/imp
+	name = "\improper IMP backpack"
+	desc = "A lightweight backpack developed for the Marine 70 program, dubbed the IMP (Individual Mounting Points) backpack. There are various clips around the backpack to attach specialized gear to. MMB to attach items to it."
+	icon_state = "imp"
+	item_state = "imp"
+	has_gamemode_skin = FALSE
+	xeno_types = null
+	var/attachable_items = ATTACHABLE_ITEMS
+
+	//list of all attached items
+	var/list/bag_attachments
+	//list of all pouch attachments
+	var/list/pouch_attachments
+
+/obj/item/storage/backpack/marine/imp/attack_hand(mob/user, list/mods)
+	if(mods["ctrl"])
+		if(!CAN_PICKUP(user, src))
+			return ..()
+		insert_attachable(user)
+		return TRUE
+	return ..()
+
+/obj/item/storage/backpack/marine/imp/clicked(mob/user, list/mods)
+	if(mods["ctrl"])
+		if(!CAN_PICKUP(user, src))
+			return ..()
+		insert_attachable(user)
+		return TRUE
+	return ..()
+
+/obj/item/storage/backpack/marine/imp/insert_attachable(obj/item/subject_item, mob/user)
+	if(istype(subject_item, /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable))
+		to_chat(user, SPAN_WARNING("You'll need to fold the [subject_item] before attaching it to the [src]."))
+		return
+	if(istype(subject_item, attachable_items))
+		if(istype(subject_item, /obj/item/tool/shovel/etool && !subject_item.folded))
+			to_chat(user, SPAN_WARNING("You'll need to fold the [subject_item] before attaching it to the [src]."))
+		user.drop_inv_item_to_loc(subject_item, src)
+		bag_attachments += subject_item
+		update_icon()
+	if(istype(subject_item, /obj/item/storage/pouch))
+		user.drop_inv_item_to_loc(subject_item, src)
+		pouch_attachments += subject_item
+		update_icon()
+	else
+		to_chat(user, SPAN_WARNING("You can't attach [subject_item] to the [src]"))
+
+#undef ATTACHABLE_ITEMS
