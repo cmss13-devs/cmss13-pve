@@ -358,7 +358,7 @@
 	name = "vial"
 	desc = "A small glass vial. Can hold up to 30 units."
 	icon_state = "vial"
-	volume = 60
+	volume = 30
 	amount_per_transfer_from_this = 10
 	matter = list()
 	possible_transfer_amounts = list(5,10,15,25,30)
@@ -371,7 +371,7 @@
 
 /obj/item/reagent_container/glass/beaker/vial/epinephrine/Initialize()
 	. = ..()
-	reagents.add_reagent("adrenaline", 60)
+	reagents.add_reagent("adrenaline", 30)
 	update_icon()
 
 /obj/item/reagent_container/glass/beaker/vial/tricordrazine
@@ -379,7 +379,7 @@
 
 /obj/item/reagent_container/glass/beaker/vial/tricordrazine/Initialize()
 	. = ..()
-	reagents.add_reagent("tricordrazine", 60)
+	reagents.add_reagent("tricordrazine", 30)
 	update_icon()
 
 /obj/item/reagent_container/glass/beaker/vial/sedative
@@ -387,7 +387,7 @@
 
 /obj/item/reagent_container/glass/beaker/vial/sedative/Initialize()
 	. = ..()
-	reagents.add_reagent("chloralhydrate", 60)
+	reagents.add_reagent("chloralhydrate", 30)
 	update_icon()
 
 /obj/item/reagent_container/glass/beaker/vial/random
@@ -410,7 +410,7 @@
 							prob(5);pick(GLOB.chemical_gen_classes_list["T4"]),\
 							prob(15);"")
 	if(random_chem)
-		reagents.add_reagent(random_chem, 60)
+		reagents.add_reagent(random_chem, 30)
 		update_icon()
 
 /obj/item/reagent_container/glass/beaker/vial/random/good/Initialize()

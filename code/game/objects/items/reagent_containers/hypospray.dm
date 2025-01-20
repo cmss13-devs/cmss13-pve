@@ -52,7 +52,7 @@
 /obj/item/reagent_container/hypospray/proc/hypounload()
 	flags_atom ^= OPENCONTAINER //So that reagents can't be added to the now-empty hypo.
 	if(reagents.total_volume)
-		reagents.trans_to(mag, reagents.total_volume) //Might bug if a vial was varedited to hold more than 60u or a hypo edited to have a larger volume. Should still function but some reagents would vanish.
+		reagents.trans_to(mag, reagents.total_volume) //Might bug if a vial was varedited to hold more than 30u or a hypo edited to have a larger volume. Should still function but some reagents would vanish.
 	mag.update_icon()
 	mag = null
 	update_icon()
@@ -62,7 +62,7 @@
 	flags_atom |= OPENCONTAINER
 	playsound(loc, 'sound/weapons/handling/safety_toggle.ogg', 25, 1, 6)
 	if(V.reagents.total_volume)
-		V.reagents.trans_to(src, V.reagents.total_volume) //Might bug if a vial was varedited to hold more than 60u or a hypo edited to have a larger volume. Should still function but some reagents would vanish.
+		V.reagents.trans_to(src, V.reagents.total_volume) //Might bug if a vial was varedited to hold more than 30u or a hypo edited to have a larger volume. Should still function but some reagents would vanish.
 	mag = V
 	update_icon()
 
