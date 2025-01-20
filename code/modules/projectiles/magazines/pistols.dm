@@ -167,7 +167,7 @@
 
 /obj/item/ammo_magazine/pistol/heavy
 	name = "\improper Desert Eagle magazine (.50)"
-	default_ammo = /datum/ammo/bullet/pistol/deagle
+	default_ammo = /datum/ammo/bullet/pistol/heavy/super
 	caliber = ".50"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "deagle"
