@@ -1203,11 +1203,11 @@ GLOBAL_LIST_INIT(cm_vending_gear_corresponding_types_list, list(
 		/obj/item/ammo_box/magazine/m4ra/ap/empty = /obj/item/ammo_box/magazine/m4ra/ap,
 		/obj/item/ammo_box/magazine/m4ra/incen/empty = /obj/item/ammo_box/magazine/m4ra/incen,
 
-		/obj/item/ammo_box/magazine/l42a/empty = /obj/item/ammo_box/magazine/l42a,
-		/obj/item/ammo_box/magazine/l42a/ap/empty = /obj/item/ammo_box/magazine/l42a/ap,
-		/obj/item/ammo_box/magazine/l42a/ext/empty = /obj/item/ammo_box/magazine/l42a/ext,
-		/obj/item/ammo_box/magazine/l42a/incen/empty = /obj/item/ammo_box/magazine/l42a/incen,
-		/obj/item/ammo_box/magazine/l42a/le/empty = /obj/item/ammo_box/magazine/l42a/le,
+		/obj/item/ammo_box/magazine/m17a2/empty = /obj/item/ammo_box/magazine/m17a2,
+		/obj/item/ammo_box/magazine/m17a2/ap/empty = /obj/item/ammo_box/magazine/m17a2/ap,
+		/obj/item/ammo_box/magazine/m17a2/ext/empty = /obj/item/ammo_box/magazine/m17a2/ext,
+		/obj/item/ammo_box/magazine/m17a2/incen/empty = /obj/item/ammo_box/magazine/m17a2/incen,
+		/obj/item/ammo_box/magazine/m17a2/le/empty = /obj/item/ammo_box/magazine/m17a2/le,
 
 		/obj/item/ammo_box/magazine/empty = /obj/item/ammo_box/magazine,
 		/obj/item/ammo_box/magazine/ap/empty = /obj/item/ammo_box/magazine/ap,

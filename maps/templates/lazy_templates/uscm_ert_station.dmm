@@ -2416,7 +2416,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "Ch" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/weapon/gun/rifle/l42a/training,
+/obj/item/weapon/gun/rifle/m17a2/training,
 /turf/open/floor/almayer/red/north,
 /area/adminlevel/ert_station/uscm_station)
 "Cj" = (

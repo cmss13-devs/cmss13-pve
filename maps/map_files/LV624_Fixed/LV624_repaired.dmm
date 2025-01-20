@@ -10584,7 +10584,7 @@
 /turf/open/floor/dark,
 /area/lv624/lazarus/comms)
 "nds" = (
-/obj/item/weapon/gun/rifle/l42a/abr40,
+/obj/item/weapon/gun/rifle/m17a2/abr40,
 /obj/structure/barricade/sandbags,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
@@ -14455,7 +14455,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_jungle)
 "syc" = (
-/obj/item/ammo_magazine/rifle/l42a/abr40,
+/obj/item/ammo_magazine/rifle/m17a2/abr40,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
 "syl" = (
@@ -16331,7 +16331,7 @@
 /turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
 "veW" = (
-/obj/item/ammo_magazine/rifle/l42a/abr40,
+/obj/item/ammo_magazine/rifle/m17a2/abr40,
 /obj/structure/barricade/sandbags,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)

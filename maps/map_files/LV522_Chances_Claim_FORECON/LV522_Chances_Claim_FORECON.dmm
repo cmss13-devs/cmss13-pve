@@ -1425,10 +1425,10 @@
 	dir = 1
 	},
 /obj/structure/closet/crate/weapon,
-/obj/item/weapon/gun/rifle/l42a,
-/obj/item/weapon/gun/rifle/l42a,
-/obj/item/weapon/gun/rifle/l42a,
-/obj/item/weapon/gun/rifle/l42a,
+/obj/item/weapon/gun/rifle/m17a2,
+/obj/item/weapon/gun/rifle/m17a2,
+/obj/item/weapon/gun/rifle/m17a2,
+/obj/item/weapon/gun/rifle/m17a2,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/security)
 "aIp" = (
@@ -20279,7 +20279,7 @@
 /turf/closed/wall/mineral/bone_resin,
 /area/lv522/oob)
 "jUg" = (
-/obj/item/ammo_box/magazine/l42a/ap/empty,
+/obj/item/ammo_box/magazine/m17a2/ap/empty,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/security)
 "jUn" = (
@@ -25703,7 +25703,7 @@
 /area/lv522/outdoors/colony_streets/north_east_street)
 "mnU" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_magazine/rifle/l42a/extended{
+/obj/item/ammo_magazine/rifle/m17a2/extended{
 	current_rounds = 0
 	},
 /turf/open/floor/prison,
@@ -28851,7 +28851,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/item/weapon/gun/rifle/l42a{
+/obj/item/weapon/gun/rifle/m17a2{
 	current_mag = null
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -39782,7 +39782,7 @@
 "sPn" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/l42a,
+/obj/item/ammo_box/magazine/m17a2,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
 "sPs" = (

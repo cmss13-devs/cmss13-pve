@@ -375,7 +375,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "kk" = (
-/obj/item/ammo_box/magazine/l42a,
+/obj/item/ammo_box/magazine/m17a2,
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
 "ko" = (
@@ -480,7 +480,7 @@
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/item/weapon/gun/rifle/l42a{
+/obj/item/weapon/gun/rifle/m17a2{
 	pixel_y = 7
 	},
 /turf/open/floor/wood,

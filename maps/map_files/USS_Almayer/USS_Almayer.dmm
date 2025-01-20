@@ -9686,10 +9686,10 @@
 /area/almayer/hallways/lower/starboard_umbilical)
 "dHS" = (
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/rifle/l42a{
+/obj/item/weapon/gun/rifle/m17a2{
 	pixel_y = 6
 	},
-/obj/item/weapon/gun/rifle/l42a,
+/obj/item/weapon/gun/rifle/m17a2,
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/upper/u_m_s)
 "dHU" = (
@@ -17336,7 +17336,7 @@
 /obj/structure/surface/rack,
 /obj/item/stack/cable_coil,
 /obj/item/attachable/flashlight/grip,
-/obj/item/ammo_box/magazine/l42a{
+/obj/item/ammo_box/magazine/m17a2{
 	pixel_y = 14
 	},
 /turf/open/floor/almayer/plate,
@@ -22211,8 +22211,8 @@
 "ibX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/weapon/gun/rifle/l42a,
-/obj/item/weapon/gun/rifle/l42a{
+/obj/item/weapon/gun/rifle/m17a2,
+/obj/item/weapon/gun/rifle/m17a2{
 	pixel_y = 6
 	},
 /turf/open/floor/almayer/plate,
@@ -39566,11 +39566,11 @@
 /area/almayer/medical/medical_science)
 "ocv" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/weapon/gun/rifle/l42a{
+/obj/item/weapon/gun/rifle/m17a2{
 	pixel_y = 6
 	},
-/obj/item/weapon/gun/rifle/l42a,
-/obj/item/weapon/gun/rifle/l42a{
+/obj/item/weapon/gun/rifle/m17a2,
+/obj/item/weapon/gun/rifle/m17a2{
 	pixel_y = -6
 	},
 /turf/open/floor/almayer/plate,
@@ -40594,28 +40594,28 @@
 /area/almayer/shipboard/brig/starboard_hallway)
 "otH" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0;
 	pixel_x = -6;
 	pixel_y = 7
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0;
 	pixel_x = -6;
 	pixel_y = -3
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0;
 	pixel_x = 5;
 	pixel_y = 9
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0;
 	pixel_x = 5;
 	pixel_y = -3
 	},
 /obj/structure/noticeboard{
-	desc = "The note is haphazardly attached to the cork board by what looks like a bent firing pin. 'The order has come in to perform end of life service checks on all L42A service rifles, any that are defective are to be dis-assembled and packed into a crate and sent to to the cargo hold. L42A service rifles that are in working order after servicing, are to be locked in secure cabinets ready to be off-loaded at Chinook. Scheduled end of life service for the L42A -  Complete'";
+	desc = "The note is haphazardly attached to the cork board by what looks like a bent firing pin. 'The order has come in to perform end of life service checks on all m17a2 service rifles, any that are defective are to be dis-assembled and packed into a crate and sent to to the cargo hold. m17a2 service rifles that are in working order after servicing, are to be locked in secure cabinets ready to be off-loaded at Chinook. Scheduled end of life service for the m17a2 -  Complete'";
 	pixel_y = 29
 	},
 /turf/open/floor/almayer/plate,
@@ -43330,7 +43330,7 @@
 	pixel_x = -7;
 	pixel_y = 12
 	},
-/obj/item/weapon/gun/rifle/l42a{
+/obj/item/weapon/gun/rifle/m17a2{
 	pixel_x = 17;
 	pixel_y = 6
 	},
@@ -43967,10 +43967,10 @@
 "pDG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/weapon/gun/rifle/l42a{
+/obj/item/weapon/gun/rifle/m17a2{
 	pixel_y = 6
 	},
-/obj/item/weapon/gun/rifle/l42a,
+/obj/item/weapon/gun/rifle/m17a2,
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/upper/u_m_s)
 "pDR" = (
@@ -57460,52 +57460,52 @@
 	dir = 1
 	},
 /obj/structure/closet/crate,
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/l42a/ap{
+/obj/item/ammo_magazine/rifle/m17a2/ap{
 	current_rounds = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -59810,8 +59810,8 @@
 /area/almayer/maint/hull/lower/l_a_p)
 "vhM" = (
 /obj/structure/closet/crate,
-/obj/item/ammo_box/magazine/l42a,
-/obj/item/ammo_box/magazine/l42a,
+/obj/item/ammo_box/magazine/m17a2,
+/obj/item/ammo_box/magazine/m17a2,
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/upper/u_m_s)
 "vhS" = (
@@ -67708,7 +67708,7 @@
 	},
 /obj/item/tool/screwdriver,
 /obj/item/bananapeel{
-	desc = "An experimental B8 Smart-Scope. Based on the technologies used in the Smart Gun by ARMAT, this sight has integrated IFF systems. It can only attach to the L42A Battle Rifle, M44 Combat Revolver, and M46C Pulse Rifle. This one appears to be covered in gun oil";
+	desc = "An experimental B8 Smart-Scope. Based on the technologies used in the Smart Gun by ARMAT, this sight has integrated IFF systems. It can only attach to the m17a2 Battle Rifle, M44 Combat Revolver, and M46C Pulse Rifle. This one appears to be covered in gun oil";
 	icon = 'icons/obj/items/weapons/guns/attachments.dmi';
 	icon_state = "iffbarrel";
 	name = "Broken B8 Smart-Scope";

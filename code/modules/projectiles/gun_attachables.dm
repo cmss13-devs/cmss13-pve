@@ -2268,7 +2268,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/carbine
 	name = "\improper L42 synthetic stock"
-	desc = "A special issue stock made of sturdy, yet lightweight materials. Attaches to the L42A Battle Rifle. Not effective as a blunt force weapon."
+	desc = "A special issue stock made of sturdy, yet lightweight materials. Attaches to the m17a2 Battle Rifle. Not effective as a blunt force weapon."
 	slot = "stock"
 	size_mod = 1
 	icon_state = "l42stock"
@@ -2292,7 +2292,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/carbine/wood
 	name = "\improper ABR-40 \"wooden\" stock"
-	desc = "The default \"wooden\" stock for the ABR-40 hunting rifle, the civilian version of the military L42A battle rifle. Theoretically compatible with an L42. Wait, did you just take the stock out of a weapon with no grip...? Great job, genius."
+	desc = "The default \"wooden\" stock for the ABR-40 hunting rifle, the civilian version of the military m17a2 battle rifle. Theoretically compatible with an L42. Wait, did you just take the stock out of a weapon with no grip...? Great job, genius."
 	icon_state = "abr40stock"
 	attach_icon = "abr40stock_a"
 	melee_mod = 6

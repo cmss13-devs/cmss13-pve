@@ -433,7 +433,7 @@
 		/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
 		/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
 		/obj/item/weapon/gun/rifle/ar10 = /obj/item/ammo_magazine/rifle/ar10,
-		/obj/item/weapon/gun/rifle/l42a/abr40 = /obj/item/ammo_magazine/rifle/l42a/abr40,
+		/obj/item/weapon/gun/rifle/m17a2/abr40 = /obj/item/ammo_magazine/rifle/m17a2/abr40,
 		/obj/item/weapon/gun/rifle/nsg23/no_lock/stripped = /obj/item/ammo_magazine/rifle/nsg23
 		)
 

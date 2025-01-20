@@ -29,7 +29,7 @@
 /datum/faction/clf/get_antag_guns_snowflake_equipment()
 	return list(
 		list("PRIMARY FIREARMS", 0, null, null, null),
-		list("ABR-40 Hunting Rifle", 30, /obj/item/weapon/gun/rifle/l42a/abr40, null, VENDOR_ITEM_REGULAR),
+		list("ABR-40 Hunting Rifle", 30, /obj/item/weapon/gun/rifle/m17a2/abr40, null, VENDOR_ITEM_REGULAR),
 		list("Basira-Armstrong Bolt-Action", 15, /obj/item/weapon/gun/boltaction, null, VENDOR_ITEM_REGULAR),
 		list("Double Barrel Shotgun", 30, /obj/item/weapon/gun/shotgun/double, null, VENDOR_ITEM_REGULAR),
 		list("HG 37-12 Pump Shotgun", 30, /obj/item/weapon/gun/shotgun/double/sawn, null, VENDOR_ITEM_REGULAR),
@@ -43,7 +43,7 @@
 		list("Sawn-Off Shotgun", 30, /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb, null, VENDOR_ITEM_REGULAR),
 
 		list("PRIMARY AMMUNITION", 0, null, null, null),
-		list("ABR-40 Magazine (10x24mm)", 20, /obj/item/ammo_magazine/rifle/l42a/abr40, null, VENDOR_ITEM_REGULAR),
+		list("ABR-40 Magazine (10x24mm)", 20, /obj/item/ammo_magazine/rifle/m17a2/abr40, null, VENDOR_ITEM_REGULAR),
 		list("Basira-Armstrong Magazine (6.5mm)", 5, /obj/item/ammo_magazine/rifle/boltaction, null, VENDOR_ITEM_REGULAR),
 		list("Box Of Buckshot Shells", 10, /obj/item/ammo_magazine/shotgun/buckshot, null, VENDOR_ITEM_REGULAR),
 		list("Box Of Flechette Shells", 10, /obj/item/ammo_magazine/shotgun/flechette, null, VENDOR_ITEM_REGULAR),
@@ -97,7 +97,7 @@
 /datum/faction/clf/get_antag_guns_sorted_equipment()
 	return list(
 		list("PRIMARY FIREARMS", -1, null, null),
-		list("ABR-40 Hunting Rifle", 30, /obj/item/weapon/gun/rifle/l42a/abr40, null, VENDOR_ITEM_REGULAR),
+		list("ABR-40 Hunting Rifle", 30, /obj/item/weapon/gun/rifle/m17a2/abr40, null, VENDOR_ITEM_REGULAR),
 		list("Basira-Armstrong Bolt-Action", 15, /obj/item/weapon/gun/boltaction, null, VENDOR_ITEM_REGULAR),
 		list("Double Barrel Shotgun", 20, /obj/item/weapon/gun/shotgun/double, VENDOR_ITEM_REGULAR),
 		list("HG 37-12 Pump Shotgun", 20, /obj/item/weapon/gun/shotgun/double/sawn, VENDOR_ITEM_REGULAR),
@@ -111,7 +111,7 @@
 		list("Sawn-Off Shotgun", 20, /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb, VENDOR_ITEM_REGULAR),
 
 		list("PRIMARY AMMUNITION", -1, null, null),
-		list("ABR-40 Magazine (10x24mm)", 20, /obj/item/ammo_magazine/rifle/l42a/abr40, null, VENDOR_ITEM_REGULAR),
+		list("ABR-40 Magazine (10x24mm)", 20, /obj/item/ammo_magazine/rifle/m17a2/abr40, null, VENDOR_ITEM_REGULAR),
 		list("Basira-Armstrong Magazine (6.5mm)", 5, /obj/item/ammo_magazine/rifle/boltaction, null, VENDOR_ITEM_REGULAR),
 		list("Box Of Buckshot Shells", 15, /obj/item/ammo_magazine/shotgun/buckshot, VENDOR_ITEM_REGULAR),
 		list("Box Of Flechette Shells", 15, /obj/item/ammo_magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
