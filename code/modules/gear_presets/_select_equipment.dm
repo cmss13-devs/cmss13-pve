@@ -209,7 +209,7 @@
 	if(!T)
 		return
 	if(is_mainship_level(T.z))
-		add_vanity_in_personal_lockers(new_human, mob_client)
+		spawn_vanity_in_personal_lockers(new_human, mob_client)
 	else
 		load_vanity(new_human, mob_client)
 
@@ -296,8 +296,8 @@
 
 GLOBAL_LIST_EMPTY(personal_closets)
 
-/datum/equipment_preset/proc/add_vanity_in_personal_lockers(mob/living/carbon/human/new_human, client/mob_client)
-	var/obj/structure/closet/secure_closet/marine_personal/closet_to_add_in
+/datum/equipment_preset/proc/spawn_vanity_in_personal_lockers(mob/living/carbon/human/new_human, client/mob_client)
+	var/obj/structure/closet/secure_closet/marine_personal/closet_to_spawn_in
 	if(!new_human?.client?.prefs?.gear)
 		return//We want to equip them with custom stuff second, after they are equipped with everything else.
 	for(var/obj/structure/closet/secure_closet/marine_personal/closet in GLOB.personal_closets)
@@ -306,10 +306,10 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		if(new_human.job != closet.job)
 			continue
 		closet.owner = new_human.real_name
-		closet_to_add_in = closet
-		closet_to_add_in.name = "[closet_to_add_in.owner]'s personal locker"
+		closet_to_spawn_in = closet
+		closet_to_spawn_in.name = "[closet_to_spawn_in.owner]'s personal locker"
 		break
-	if(!closet_to_add_in)
+	if(!closet_to_spawn_in)
 		load_vanity(new_human, mob_client)
 		return
 
@@ -325,6 +325,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 			if(!current_gear.special_conditions())
 				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Special conditions not met."))
 				return
+			new current_gear.path(closet_to_spawn_in)
 
 	//Gives ranks to the ranked
 	var/current_rank = paygrades[1]
@@ -334,7 +335,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	if(current_rank)
 		var/rankpath = get_rank_pins(current_rank)
 		if(rankpath)
-			new rankpath(closet_to_add_in)
+			new rankpath(closet_to_spawn_in)
 
 	if(flags & EQUIPMENT_PRESET_MARINE)
 		var/playtime = get_job_playtime(new_human.client, assignment)
@@ -354,14 +355,14 @@ GLOBAL_LIST_EMPTY(personal_closets)
 			medal_type = null
 
 		if(medal_type)
-			var/obj/item/clothing/accessory/medal/medal = new medal_type(closet_to_add_in)
+			var/obj/item/clothing/accessory/medal/medal = new medal_type(closet_to_spawn_in)
 			medal.recipient_name = new_human.real_name
 			medal.recipient_rank = current_rank
 
 
 	//Gives glasses to the vision impaired
 	if(new_human.disabilities & NEARSIGHTED)
-		new /obj/item/clothing/glasses/regular(closet_to_add_in)
+		new /obj/item/clothing/glasses/regular(closet_to_spawn_in)
 
 	for(var/datum/view_record/medal_view/medal as anything in DB_VIEW(/datum/view_record/medal_view, DB_COMP("player_id", DB_EQUALS, new_human.client.player_data.id)))
 		if(!medal)
@@ -373,13 +374,13 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		var/obj/item/clothing/accessory/medal/given_medal
 		switch(medal.medal_type)
 			if(MARINE_CONDUCT_MEDAL)
-				given_medal = new /obj/item/clothing/accessory/medal/bronze/conduct(closet_to_add_in)
+				given_medal = new /obj/item/clothing/accessory/medal/bronze/conduct(closet_to_spawn_in)
 			if(MARINE_BRONZE_HEART_MEDAL)
-				given_medal = new /obj/item/clothing/accessory/medal/bronze/heart(closet_to_add_in)
+				given_medal = new /obj/item/clothing/accessory/medal/bronze/heart(closet_to_spawn_in)
 			if(MARINE_VALOR_MEDAL)
-				given_medal = new /obj/item/clothing/accessory/medal/silver/valor(closet_to_add_in)
+				given_medal = new /obj/item/clothing/accessory/medal/silver/valor(closet_to_spawn_in)
 			if(MARINE_HEROISM_MEDAL)
-				given_medal = new /obj/item/clothing/accessory/medal/gold/heroism(closet_to_add_in)
+				given_medal = new /obj/item/clothing/accessory/medal/gold/heroism(closet_to_spawn_in)
 			else
 				return FALSE
 		given_medal.recipient_name = medal.recipient_name
