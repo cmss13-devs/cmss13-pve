@@ -35,7 +35,8 @@
 									/obj/item/device/motiondetector,
 									/obj/item/ammo_magazine/hardpoint,
 									/obj/item/tool/weldpack,
-									/obj/item/ammo_box/magazine
+									/obj/item/ammo_box,
+									/obj/item/storage/box
 									)
 	flags_atom |= USES_HEARING
 
