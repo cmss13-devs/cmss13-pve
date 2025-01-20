@@ -126,6 +126,8 @@
 	fired_flare.visible_message(SPAN_WARNING("\A [fired_flare] bursts into brilliant light in the sky!"))
 	fired_flare.invisibility = INVISIBILITY_MAXIMUM
 	fired_flare.mouse_opacity = FALSE
+	fire_flare.indestructible = TRUE
+	fire_flare.unacidable = TRUE
 	playsound(user.loc, fire_sound, 50, 1)
 
 	var/obj/effect/flare_light/light_effect = new (fired_flare, fired_flare.light_range, fired_flare.light_power, fired_flare.light_color)
