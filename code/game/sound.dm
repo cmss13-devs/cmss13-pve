@@ -416,6 +416,8 @@
 			if("gun_silenced")
 				sound = pick('sound/weapons/gun_silenced_shot1.ogg','sound/weapons/gun_silenced_shot2.ogg')
 			if("gun_pulse")
+				sound = pick('sound/weapons/gun_m41a_1f.ogg','sound/weapons/gun_m41a_2f.ogg','sound/weapons/gun_m41a_3f.ogg','sound/weapons/gun_m41a_4f.ogg','sound/weapons/gun_m41a_5f.ogg','sound/weapons/gun_m41a_6f.ogg')
+			if("gun_oldpulse")
 				sound = pick('sound/weapons/gun_m41a_1.ogg','sound/weapons/gun_m41a_2.ogg','sound/weapons/gun_m41a_3.ogg','sound/weapons/gun_m41a_4.ogg','sound/weapons/gun_m41a_5.ogg','sound/weapons/gun_m41a_6.ogg')
 			if("gun_smartgun")
 				sound = pick('sound/weapons/gun_smartgun1.ogg', 'sound/weapons/gun_smartgun2.ogg', 'sound/weapons/gun_smartgun3.ogg', 'sound/weapons/gun_smartgun4.ogg')

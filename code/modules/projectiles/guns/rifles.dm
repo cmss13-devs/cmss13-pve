@@ -453,7 +453,7 @@
 	item_state = "m20a"
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	fire_sound = "gun_pulse"
+	fire_sound = "gun_oldpulse"
 	current_mag = /obj/item/ammo_magazine/rifle/m20a
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
