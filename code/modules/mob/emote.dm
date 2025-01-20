@@ -56,7 +56,7 @@
 	key_third_person = "custom"
 	keybind = FALSE
 
-/datum/emote/custom/run_emote(mob/user, params, type_override, intentional = FALSE, prefix)
+/datum/emote/custom/run_emote(mob/user, params, type_override, intentional = FALSE, prefix, keep_pronouns = TRUE)
 	if(user.client && user.client.prefs.muted & MUTE_IC)
 		to_chat(user, SPAN_DANGER("You cannot emote (muted)."))
 		return

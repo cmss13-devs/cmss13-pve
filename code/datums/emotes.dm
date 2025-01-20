@@ -18,6 +18,10 @@
 	var/message = ""
 	///Message displayed for audible emotes if someone's deaf. Only use this if key_third_person can't be acceptably used.
 	///ie. if someone says *medic and someone's deaf, they'd receive [X] calls for a medic! silently.,  which is not ideal.
+
+	/// Message after any alterations, like pronoun replacement for predefined emotes
+	var/msg =""
+
 	var/alt_message
 	/// Message with %t at the end to allow adding params to the message, like for mobs doing an emote relatively to something else.
 	var/message_param = ""
@@ -79,15 +83,16 @@
  *
  * Returns TRUE if it was able to run the emote, FALSE otherwise.
  */
-/datum/emote/proc/run_emote(mob/user, params, type_override, intentional = FALSE)
+/datum/emote/proc/run_emote(mob/user, params, type_override, intentional = FALSE, prefix, keep_pronouns = FALSE)
 	. = TRUE
 	if(!can_run_emote(user, TRUE, intentional))
 		return FALSE
-	var/msg = select_message_type(user, message, intentional)
+	msg = select_message_type(user, message, intentional)
 	if(params && message_param)
 		msg = select_param(user, params)
-
-	//msg = replace_pronoun(user, msg)
+	//
+	if(!keep_pronouns)
+		msg	 = replace_pronoun(user, msg)
 
 	if(say_message)
 		user.say(say_message)
@@ -166,7 +171,7 @@
  * * group - The list of people that will see this emote being
  */
 /datum/emote/proc/run_langchat(mob/user, list/group)
-	user.langchat_speech(message, group, GLOB.all_languages, skip_language_check = TRUE, additional_styles = list("emote", "langchat_small"))
+	user.langchat_speech(msg, group, GLOB.all_languages, skip_language_check = TRUE, additional_styles = list("emote", "langchat_small"))
 
 /**
  * For handling emote cooldown, return true to allow the emote to happen.
@@ -209,7 +214,7 @@
  * * msg - The string to modify.
  *
  * Returns the modified msg string.
-
+ */
 /datum/emote/proc/replace_pronoun(mob/user, msg)
 	if(findtext(msg, "their"))
 		msg = replacetext(msg, "their", user.p_their())
@@ -220,7 +225,7 @@
 	if(findtext(msg, "%s"))
 		msg = replacetext(msg, "%s", user.p_s())
 	return msg
- */
+
 /**
  * Selects the message type to override the message with.
  *
