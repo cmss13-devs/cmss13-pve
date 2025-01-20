@@ -94,6 +94,10 @@
 /obj/item/weapon/gun/smg/m39/training
 	current_mag = /obj/item/ammo_magazine/smg/m39/rubber
 
+/obj/item/weapon/gun/smg/m39/solidstock
+	starting_attachment_types = list(/obj/item/attachable/stock/smg)
+
+
 //-------------------------------------------------------
 
 /obj/item/weapon/gun/smg/m39/elite

@@ -54,45 +54,45 @@
 /obj/item/ammo_box/rounds/smartgun/empty
 	empty = TRUE
 
-//----------------10x20mm Ammunition Boxes (for M39 SMG)------------------
+//----------------9mm Ammunition Boxes (for Viper 9 SMG)------------------
 
 /obj/item/ammo_box/rounds/smg
-	name = "\improper SMG HV ammunition box (10x20mm)"
-	desc = "A 10x20mm ammunition box. Used to refill M39 HV and extended magazines. It comes with a leather strap allowing to wear it on the back."
-	caliber = "10x20mm"
+	name = "\improper SMG ammunition box (9mm)"
+	desc = "A 9mm ammunition box. It comes with a leather strap allowing to wear it on the back."
+	caliber = "9mm"
 	icon_state = "base_m39"
 	overlay_content = "_hv"
-	default_ammo = /datum/ammo/bullet/smg/m39
+	default_ammo = /datum/ammo/bullet/pistol
 
 /obj/item/ammo_box/rounds/smg/empty
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/smg/ap
-	name = "\improper SMG ammunition box (10x20mm AP)"
-	desc = "A 10x20mm armor-piercing ammunition box. Used to refill M39 AP magazines. It comes with a leather strap allowing to wear it on the back."
-	caliber = "10x20mm"
+	name = "\improper SMG ammunition box (9mm AP)"
+	desc = "A 9mm armor-piercing ammunition box. It comes with a leather strap allowing to wear it on the back."
+	caliber = "9mm"
 	overlay_content = "_ap"
-	default_ammo = /datum/ammo/bullet/smg/ap
+	default_ammo = /datum/ammo/bullet/pistol/ap
 
 /obj/item/ammo_box/rounds/smg/ap/empty
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/smg/le
-	name = "\improper SMG ammunition box (10x20mm LE)"
-	desc = "A 10x20mm armor-shredding ammunition box. Used to refill M39 LE magazines. It comes with a leather strap allowing to wear it on the back."
-	caliber = "10x20mm"
+	name = "\improper SMG ammunition box (9mm LE)"
+	desc = "A 9mm armor-shredding ammunition box. It comes with a leather strap allowing to wear it on the back."
+	caliber = "9mm"
 	overlay_content = "_le"
-	default_ammo = /datum/ammo/bullet/smg/le
+	default_ammo = /datum/ammo/bullet/pistol/le
 
 /obj/item/ammo_box/rounds/smg/le/empty
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/smg/incen
-	name = "\improper SMG ammunition box (10x20mm Incen)"
-	desc = "A 10x20mm incendiary ammunition box. Used to refill M39 incendiary magazines. It comes with a leather strap allowing to wear it on the back."
-	caliber = "10x20mm"
+	name = "\improper SMG ammunition box (9mm Incen)"
+	desc = "A 9mm incendiary ammunition box. It comes with a leather strap allowing to wear it on the back."
+	caliber = "9mm"
 	overlay_content = "_incen"
-	default_ammo = /datum/ammo/bullet/smg/incendiary
+	default_ammo = /datum/ammo/bullet/pistol/incendiary
 	bullet_amount = 400 //Incen is OP
 	max_bullet_amount = 400
 
@@ -100,9 +100,9 @@
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/smg/heap
-	name = "SMG ammunition box (10x20mm HEAP)"
-	desc = "A 10x20mm armor-piercing high-explosive ammunition box. Used to refill M39 HEAP magazines. It comes with a leather strap allowing to wear it on the back."
-	caliber = "10x20mm"
+	name = "SMG ammunition box (9mm HEAP)"
+	desc = "A 9mm armor-piercing high-explosive ammunition box. It comes with a leather strap allowing to wear it on the back."
+	caliber = "9mm"
 	overlay_content = "_heap"
 	default_ammo = /datum/ammo/bullet/smg/heap
 
