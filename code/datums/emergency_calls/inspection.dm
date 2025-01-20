@@ -343,7 +343,7 @@
 	else if(!icc_liaison && will_spawn_icc_liaison && check_timelock(mob.client, JOB_CORPORATE_LIAISON, time_required_for_job))
 		icc_liaison = mob
 		to_chat(mob, SPAN_ROLE_HEADER("You are a CMB-attached Interstellar Commerce Commission Liaison!"))
-		arm_equipment(mob, /datum/equipment_preset/cmb/liaison/black_market, TRUE, TRUE) //ICC CL gets a custom item
+		arm_equipment(mob, /datum/equipment_preset/cmb/liaison, TRUE, TRUE) //ICC CL gets a custom item
 	else
 		to_chat(mob, SPAN_ROLE_HEADER("You are a CMB Deputy!"))
 		arm_equipment(mob, /datum/equipment_preset/cmb/standard, TRUE, TRUE)
