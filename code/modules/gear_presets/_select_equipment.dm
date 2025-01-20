@@ -325,7 +325,6 @@ GLOBAL_LIST_EMPTY(personal_closets)
 			if(!current_gear.special_conditions())
 				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Special conditions not met."))
 				return
-			new current_gear.path(closet_to_spawn_in)
 
 	//Gives ranks to the ranked
 	var/current_rank = paygrades[1]
