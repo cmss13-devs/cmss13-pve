@@ -153,12 +153,21 @@
 	name = "armor-piercing 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 40
-	penetration = ARMOR_PENETRATION_TIER_8
+	penetration = ARMOR_PENETRATION_TIER_7
+
+/datum/ammo/bullet/rifle/heavy/impdet
+	name = "impact-detonating 10x28 bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_2
+	damage_falloff = DAMAGE_FALLOFF_TIER_5
+
+/datum/ammo/bullet/rifle/heavy/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 /datum/ammo/bullet/rifle/heavy/heap
-	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	name = "high explosive armor-piercing 10x28 bullet"
-	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	damage = 70
 	penetration = ARMOR_PENETRATION_TIER_10
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
@@ -194,6 +203,11 @@
 	debilitate = list(0,0,0,3,0,0,0,1)
 	damage = 45
 
+/datum/ammo/bullet/rifle/heavy/impdet/dirty
+	name = "irradiated mpact-detonating 10x28 bullet"
+	damage = 35
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
+
 // RMC Smartgun
 
 /datum/ammo/bullet/rifle/heavy/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks and less damage
@@ -217,6 +231,16 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_8
+
+/datum/ammo/bullet/rifle/heavy/holo_target/impdet
+	name = "holo-targetting impact-detonating 10x28 bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	damage = 28
+	penetration = ARMOR_PENETRATION_TIER_2
+	damage_falloff = DAMAGE_FALLOFF_TIER_5
+
+/datum/ammo/bullet/rifle/heavy/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 // Custom Specialist M4RA rounds
 
