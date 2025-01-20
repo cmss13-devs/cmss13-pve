@@ -41133,7 +41133,6 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/engineering)
 "ttf" = (
-/obj/effect/landmark/corpsespawner/forecon_spotter,
 /obj/item/weapon/gun/rifle/m41a{
 	current_mag = null
 	},

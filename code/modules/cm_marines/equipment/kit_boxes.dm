@@ -29,13 +29,8 @@
 /obj/item/storage/box/spec/demolitionist/fill_preset_inventory()
 	new /obj/item/clothing/suit/storage/marine/M3T(src)
 	new /obj/item/clothing/head/helmet/marine/M3T(src)
-	new /obj/item/clothing/head/helmet/marine/M3T(src)
-	new /obj/item/storage/backpack/marine/rocketpack(src)
-	new /obj/item/storage/backpack/marine/rocketpack(src)
 	new /obj/item/weapon/gun/launcher/rocket(src)
 	new /obj/item/ammo_magazine/rocket(src)
-	new /obj/item/ammo_magazine/rocket(src)
-	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/wp(src)
 	new /obj/item/weapon/gun/pistol/vp78(src)
@@ -44,7 +39,32 @@
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/device/binoculars(src)
+	// loader
+	new /obj/item/storage/box/kit/loader(src)
 
+/obj/item/storage/box/kit/loader
+	name = "\improper Loader Kit"
+	desc = "A large kit containing all the supplies needed to turn a marine into the loading assistant for an M5 RPG operator.\
+	\nA little infographic series shows how reloading should be done:\
+	\nStep One: Grab the Rocket\
+	\nStep Two: Position yourself behind the M5 operator\
+	\nStep Three: Ensure the operator is wielding their Launcher\
+	\nStep Four: Load the Rocket into the Launcher\
+	\nStep Five: Stand clear of the back-blast"
+	pro_case_overlay = "loader"
+
+/obj/item/storage/box/kit/loader/fill_preset_inventory()
+	// wearables
+	new /obj/item/clothing/head/helmet/marine/M3T(src)
+	new /obj/item/storage/backpack/marine/rocketpack(src)
+	// most the ammo
+	new /obj/item/ammo_magazine/rocket(src)
+	new /obj/item/ammo_magazine/rocket(src)
+	new /obj/item/ammo_magazine/rocket/ap(src)
+	new /obj/item/ammo_magazine/rocket/ap(src)
+	new /obj/item/ammo_magazine/rocket/wp(src)
+	// skills
+	new /obj/item/pamphlet/skill/loader(src)
 
 /obj/item/storage/box/spec/sniper
 	name = "\improper Sniper equipment case"

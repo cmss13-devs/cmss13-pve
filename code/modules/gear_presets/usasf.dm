@@ -6,7 +6,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	///Gives the sailors their radios
 	var/headset_type = /obj/item/device/radio/headset/distress/USASF
-	idtype = /obj/item/card/id/dogtag
+	idtype = /obj/item/card/id/ //Shipboard duties & loose-hanging items do NOT mix
 
 /datum/equipment_preset/usasf/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE,40;FEMALE)
@@ -41,7 +41,7 @@
 	rank = JOB_NAVY_CREWMAN
 	assignment = JOB_NAVY_CREWMAN
 	paygrades = list(PAY_SHORT_NE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Crew"
+	role_comm_title = "CR"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/ship_crew
 
@@ -69,50 +69,42 @@
 	..()
 
 /datum/equipment_preset/usasf/crew/flight
-	name = "USASF Flight-Deck Crewman (Red)"
+	name = "USASF Flight-Deck Crewman"
 	assignment = JOB_NAVY_SKITTLE
 	rank = JOB_NAVY_SKITTLE
 	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Ordnc"
+	role_comm_title = "FltCR"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/flight_crew
 
+#define USAF_ORDNANCE_CREW "USASF Flight-Deck Ordnance Crewman"
+#define USAF_MAINT_CREW "USASF Flight-Deck Maintenance Crewman"
+#define USAF_FUEL_CREW "USASF Flight-Deck Fuel Crewman"
+#define USAF_SAFETY_CREW "USASF Flight-Deck Safety Crewman"
+#define USAF_HANDLER_CREW "USASF Flight-Deck Handler Crewman"
+
 /datum/equipment_preset/usasf/crew/flight/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles, WEAR_EYES)
+	var/flight_deck_vest = pick(USAF_ORDNANCE_CREW ,USAF_MAINT_CREW,USAF_FUEL_CREW,USAF_SAFETY_CREW,USAF_HANDLER_CREW)
+	switch(flight_deck_vest)
+		if(USAF_ORDNANCE_CREW)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf, WEAR_JACKET)
+		if(USAF_MAINT_CREW)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/green, WEAR_JACKET)
+		if(USAF_FUEL_CREW)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/purple, WEAR_JACKET)
+		if(USAF_SAFETY_CREW)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/white, WEAR_JACKET)
+		if(USAF_HANDLER_CREW)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/blue, WEAR_JACKET)
 	..()
+#undef USAF_ORDNANCE_CREW
+#undef USAF_MAINT_CREW
+#undef USAF_FUEL_CREW
+#undef USAF_SAFETY_CREW
+#undef USAF_HANDLER_CREW
 
-/datum/equipment_preset/usasf/crew/flight/green
-	name = "USASF Flight-Deck Crewman (green)"
-	role_comm_title = "Mntnc"
-
-/datum/equipment_preset/usasf/crew/flight/green/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/green, WEAR_JACKET)
-	..()
-
-/datum/equipment_preset/usasf/crew/flight/purple
-	name = "USASF Flight-Deck Crewman (purple)"
-	role_comm_title = "Fuel"
-
-/datum/equipment_preset/usasf/crew/flight/purple/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/purple, WEAR_JACKET)
-	..()
-
-/datum/equipment_preset/usasf/crew/flight/white
-	name = "USASF Flight-Deck Crewman (white)"
-	role_comm_title = "Sfty"
-
-/datum/equipment_preset/usasf/crew/flight/white/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/white, WEAR_JACKET)
-	..()
-
-/datum/equipment_preset/usasf/crew/flight/blue
-	name = "USASF Flight-Deck Crewman (blue)"
-	role_comm_title = "Hndlr"
-
-/datum/equipment_preset/usasf/crew/flight/blue/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/blue, WEAR_JACKET)
-	..()
 
 //*****************************************************************************************************/
 
@@ -171,6 +163,7 @@
 	role_comm_title = "ParaTech"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/para_tech
+	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/usasf/helljumper/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command/attache, WEAR_L_EAR)
@@ -190,10 +183,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/navy, WEAR_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/tactical, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/parachute, WEAR_BACK)
 
@@ -207,6 +200,7 @@
 	role_comm_title = "JFO"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/jtac
+	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/usasf/jtac/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command/attache, WEAR_L_EAR)
@@ -227,10 +221,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/navy, WEAR_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/tactical, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/rto/navy, WEAR_BACK)
 
@@ -240,12 +234,49 @@
 
 //*****************************************************************************************************/
 
+/datum/equipment_preset/usasf/pilot
+	name = "USASF Pilot"
+	assignment = JOB_NAVY_PILOT
+	rank = JOB_NAVY_PILOT
+	paygrades = list(PAY_SHORT_NO1)
+	role_comm_title = "PLT"
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/navypilot
+	idtype = /obj/item/card/id/dogtag
+
+/datum/equipment_preset/usasf/pilot/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat/navy, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_BELT)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/parachute, WEAR_BACK)
+
+/datum/equipment_preset/usasf/pilot/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_NW1 = JOB_PLAYTIME_TIER_0)
+
+//*****************************************************************************************************/
+
 /datum/equipment_preset/usasf/officer
 	name = "USASF Duty Officer"
 	assignment = JOB_NAVY_SO
 	rank = JOB_NAVY_SO
 	paygrades = list(PAY_SHORT_NO3)
-	role_comm_title = "Duty Off."
+	role_comm_title = "DtyO"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/officer
 	idtype = /obj/item/card/id/silver
@@ -269,7 +300,7 @@
 	assignment = JOB_NAVY_FLIGHT_BOSS
 	rank = JOB_NAVY_FLIGHT_BOSS
 	paygrades = list(PAY_SHORT_NO2)
-	role_comm_title = "Flight Boss"
+	role_comm_title = "FB"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/flightboss
 
@@ -279,6 +310,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/yellow, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/botanic_leather/generic, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full, WEAR_WAIST)
@@ -291,7 +323,7 @@
 	assignment = JOB_NAVY_CHIEF_ENGINEER
 	rank = JOB_NAVY_CHIEF_ENGINEER
 	paygrades = list(PAY_SHORT_NO4)
-	role_comm_title = "LCDR."
+	role_comm_title = "EngDtyO"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/navycengi
 	idtype = /obj/item/card/id/silver
@@ -318,7 +350,7 @@
 	assignment = JOB_NAVY_CO
 	rank = JOB_NAVY_CO
 	paygrades = list(PAY_SHORT_NO6)
-	role_comm_title = "CAPT."
+	role_comm_title = "CAPT"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/navycommander
 	idtype = /obj/item/card/id/gold
@@ -339,4 +371,4 @@
 /datum/equipment_preset/usasf/CO/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_NO5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "CDR."
+	role_comm_title = "CDR"
