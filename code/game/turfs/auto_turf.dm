@@ -95,6 +95,7 @@
 //Kutjevo & Trijent sand
 /turf/open/auto_turf/sand
 	layer_name = list("red dirt", "sand", "rocky sand", "this layer does not exist", "call a coder")
+	footstep_sound = "sand_footstep"
 
 /turf/open/auto_turf/sand/insert_self_into_baseturfs()
 	baseturfs += /turf/open/auto_turf/sand/layer0
@@ -120,6 +121,7 @@
 	layer_name = list("aged igneous", "wind swept dunes", "warn a coder", "warn a coder", "warn a coder")
 	icon_state = "varadero_1"
 	icon_prefix = "varadero"
+	footstep_sound = "sand_footstep"
 
 /turf/open/auto_turf/sand_white/get_dirt_type()
 	return DIRT_TYPE_SAND
@@ -127,6 +129,7 @@
 /turf/open/auto_turf/sand_white/layer0
 	icon_state = "varadero_0"
 	bleed_layer = 0
+	footstep_sound = "dirt_footstep"
 
 /turf/open/auto_turf/sand_white/layer1
 	icon_state = "varadero_1"
@@ -139,6 +142,7 @@
 	icon_state = "ice_0"
 	icon_prefix = "ice"
 	layer_name = list("cracked permafrost","permafrost","glacial permafrost","warn a coder","warn a coder")
+	footstep_sound = "ice_footstep"
 
 /turf/open/auto_turf/ice/insert_self_into_baseturfs()
 	baseturfs += /turf/open/auto_turf/ice/layer0
@@ -165,6 +169,7 @@
 	icon_state = "snow_0"
 	icon_prefix = "snow"
 	layer_name = list("icy dirt", "shallow snow", "deep snow", "very deep snow", "rock filled snow")
+	footstep_sound = "snow_footstep"
 
 /turf/open/auto_turf/snow/insert_self_into_baseturfs()
 	baseturfs += /turf/open/auto_turf/snow/layer0
@@ -172,7 +177,9 @@
 /turf/open/auto_turf/snow/get_dirt_type()
 	if(bleed_layer)
 		return DIRT_TYPE_SNOW
+		footstep_sound = "snow_footstep"
 	else
+		footstep_sound = "dirt_footstep"
 		return DIRT_TYPE_GROUND
 
 /turf/open/auto_turf/snow/is_weedable()
@@ -246,6 +253,7 @@
 /turf/open/auto_turf/snow/layer0 //still have to manually define the layers for the editor
 	icon_state = "snow_0"
 	bleed_layer = 0
+	footstep_sound = "dirt_footstep"
 
 /turf/open/auto_turf/snow/layer1
 	icon_state = "snow_1"
@@ -269,6 +277,7 @@
 /turf/open/auto_turf/snow/brown_base
 	icon_state = "snow_b_0"
 	icon_prefix = "snow_b"
+	footstep_sound = "dirt_footstep"
 
 /turf/open/auto_turf/snow/brown_base/insert_self_into_baseturfs()
 	baseturfs += /turf/open/auto_turf/snow/brown_base/layer0
@@ -299,6 +308,7 @@
 	icon_prefix = "grass"
 	layer_name = list("ground","lush thick grass")
 	desc = "grass, dirt, mud, and other assorted high moisture cave flooring."
+	footstep_sound = "grass_footstep"
 
 /turf/open/auto_turf/strata_grass/insert_self_into_baseturfs()
 	baseturfs += /turf/open/auto_turf/strata_grass/layer0
@@ -313,12 +323,14 @@
 	bleed_layer = 0
 	variant = "mud"
 	variant_prefix_name = "muddy"
+	footstep_sound = "dirt_footstep"
 
 /turf/open/auto_turf/strata_grass/layer0_mud_alt
 	icon_state = "grass_0_mud_alt"
 	bleed_layer = 0
 	variant = "mud_alt"
 	variant_prefix_name = "muddy"
+	footstep_sound = "mud_footstep"
 
 /turf/open/auto_turf/strata_grass/layer1
 	icon_state = "grass_1"
@@ -330,6 +342,7 @@
 	layer_name = list("wind blown dirt", "volcanic plate rock", "volcanic plate and rock", "this layer does not exist")
 	icon = 'icons/turf/floors/auto_shale.dmi'
 	icon_prefix = "shale"
+	footstep_sound = "rock_footstep"
 
 /turf/open/auto_turf/shale/get_dirt_type()
 	return DIRT_TYPE_SHALE

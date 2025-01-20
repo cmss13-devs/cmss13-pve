@@ -176,6 +176,7 @@
 	name = "grass"
 	icon = 'icons/turf/floors/floors.dmi'
 	icon_state = "grass1"
+	footstep_sound = "grass_footstep"
 
 /turf/open/organic/grass/astroturf
 	desc = "It'll get in your shoes no matter what you do."

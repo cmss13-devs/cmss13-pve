@@ -3757,7 +3757,7 @@
 
 /turf/open/floor/wood
 	icon_state = "wood"
-	footstep_sound "wood_footstep"
+	footstep_sound = "wood_footstep"
 
 /turf/open/floor/yellowfull
 	icon_state = "yellowfull"
