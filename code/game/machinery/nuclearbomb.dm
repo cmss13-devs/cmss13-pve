@@ -394,12 +394,19 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	safety = TRUE
 
 	playsound(src, 'sound/machines/Alarm.ogg', 75, 0, 30)
-	world << pick('sound/theme/nuclear_detonation1.ogg','sound/theme/nuclear_detonation2.ogg')
+	world << pick('sound/theme/nuclear_klaxon.ogg')
 
-	for(var/mob/current_mob as anything in GLOB.mob_list)
-		var/turf/current_turf = get_turf(current_mob)
-		if(current_turf?.z == z && current_mob.stat != DEAD)
-			shake_camera(current_mob, 110, 4)
+	var/list/humans_other = GLOB.human_mob_list + GLOB.dead_mob_list
+	var/list/humans_uscm = list()
+	for(var/mob/current_mob as anything in humans_other)
+		if(current_mob.stat != CONSCIOUS || isyautja(current_mob))
+			humans_other -= current_mob
+			continue
+		if(current_mob.faction == FACTION_MARINE || current_mob.faction == FACTION_SURVIVOR) //separating marines from other factions. Survs go here too
+			humans_uscm += current_mob
+			humans_other -= current_mob
+	announcement_helper("IMMINENT NUCLEAR DETONATION.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/effects/ob_alert.ogg')
+	announcement_helper("IMMINENT NUCLEAR BLAST, DUCK AND COVER IMMEDIATELY.", "Colony Alert System", humans_other, 'sound/effects/ob_alert.ogg')
 
 	sleep(10 SECONDS)
 
@@ -424,7 +431,9 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 		for(var/obj/item/alien_embryo/embryo in current_mob)
 			qdel(embryo)
 
-	cell_explosion(loc, 500, 150, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name)))
+	cell_explosion(loc, 500, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name)))
+	announcement_helper("NUCLEAR DETONATION DETECTED.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
+	announcement_helper("NUCLEAR DETONATION DETECTED.", "Colony Alert System", humans_other, 'sound/misc/notice1.ogg')
 	qdel(src)
 	return TRUE
 
