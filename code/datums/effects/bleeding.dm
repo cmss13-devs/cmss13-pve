@@ -2,7 +2,7 @@
 #define CRYO_BLOOD_REDUCTION 0.67
 #define THWEI_BLOOD_REDUCTION 0.75
 #define BLOOD_ADD_PENALTY 1.5
-#define BLOOD_SPRAY_LOSS_MULTIPLIER 100
+#define BLOOD_SPRAY_LOSS_MULTIPLIER 30
 
 /datum/effects/bleeding
 	effect_name = "bleeding"
@@ -117,11 +117,23 @@
 
 	blood_loss = max(blood_loss, 0) // Bleeding shouldn't give extra blood even if its only 1 tick
 	affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*0.5, 0) //
-	if(prob(3) || show_spray_immediately)
+	if(prob(10) || show_spray_immediately)
 		if(!has_been_bandaged) //If Arterial has been packed, only remove blood passively every tick
 			show_spray_immediately = FALSE
 			affected_mob.spray_blood(get_turf(affected_mob), pick(GLOB.alldirs), limb)
 			affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*BLOOD_SPRAY_LOSS_MULTIPLIER*(affected_mob.blood_volume/BLOOD_VOLUME_NORMAL), 0)
+		else
+			if(prob(15))
+				has_been_bandaged = FALSE
+				affected_mob.visible_message(\
+			SPAN_WARNING("The gauze on [affected_mob]'s [limb.display_name] is soaked through!"),
+			SPAN_HIGHDANGER("The gauze is soaked through on your [limb.display_name]!"),
+			null) //fix later
+
+				var/obj/item/prop/colony/usedbandage/bloody_bandage = new /obj/item/prop/colony/usedbandage(affected_mob.loc)
+				bloody_bandage.dir = pick(4,10)
+				bloody_bandage.pixel_x = pick(rand(8,18), rand(-8,-18))
+				bloody_bandage.pixel_y = pick(rand(8, 18), rand(-8,-18))
 
 
 	return TRUE
