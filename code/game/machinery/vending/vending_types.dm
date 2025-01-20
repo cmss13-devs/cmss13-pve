@@ -265,7 +265,7 @@
 	products = list(
 		/obj/item/restraint/handcuffs/zip = 40,
 		/obj/item/explosive/grenade/flashbang = 20,
-		/obj/item/explosive/grenade/custom/teargas = 40,
+		/obj/item/explosive/grenade/tear/marine = 40,
 		/obj/item/ammo_magazine/smg/m39/rubber = 40,
 		/obj/item/ammo_magazine/pistol/rubber = 40,
 		/obj/item/ammo_magazine/pistol/vp70/rubber = 40,

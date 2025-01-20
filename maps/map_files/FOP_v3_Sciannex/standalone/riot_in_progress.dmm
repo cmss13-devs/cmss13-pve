@@ -118,6 +118,10 @@
 /obj/structure/machinery/photocopier,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
+"fl" = (
+/obj/item/explosive/grenade/tear/marine,
+/turf/open/floor/prison,
+/area/fiorina/station/security)
 "fs" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -919,7 +923,6 @@
 /obj/structure/reagent_dispensers/peppertank{
 	pixel_y = 30
 	},
-/obj/item/explosive/grenade/custom/teargas,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "MX" = (
@@ -1393,7 +1396,7 @@ vq
 qQ
 sq
 sq
-sq
+fl
 FH
 PA
 sq

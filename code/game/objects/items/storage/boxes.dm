@@ -777,8 +777,8 @@
 	icon_state = "teargas_nade_placeholder"
 	model_icon = "model_m66"
 	type_icon = null
-	can_hold = list(/obj/item/explosive/grenade/custom/teargas)
-	grenade_type = /obj/item/explosive/grenade/custom/teargas
+	can_hold = list(/obj/item/explosive/grenade/tear/marine)
+	grenade_type = /obj/item/explosive/grenade/tear/marine
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/box/nade_box/tear_gas/fill_preset_inventory()

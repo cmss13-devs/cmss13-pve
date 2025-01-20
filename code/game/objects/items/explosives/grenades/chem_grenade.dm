@@ -176,7 +176,7 @@
 
 
 
-
+/*	Commented out in favour of teargas that isn't handled via contact
 /obj/item/explosive/grenade/custom/teargas
 	name = "\improper M66 teargas grenade"
 	desc = "Tear gas grenade used for nonlethal riot control. Please wear adequate gas protection."
@@ -220,7 +220,7 @@
 		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
 		return
 	..()
-
+*/
 
 /obj/item/explosive/grenade/custom/ied
 	name = "improvised explosive device"

@@ -18,7 +18,7 @@
 	var/det_time = 40
 	var/dangerous = FALSE //Make an danger overlay for humans?
 	var/arm_sound = 'sound/weapons/armbomb.ogg'
-	var/has_arm_sound = FALSE
+	var/has_arm_sound = TRUE
 	var/underslug_launchable = FALSE
 	var/hand_throwable = TRUE
 	harmful = TRUE //Is it harmful? Are they banned for synths?
@@ -85,6 +85,7 @@
 	SPAN_WARNING("You prime \a [name]!"))
 	msg_admin_attack("[key_name(user)] primed \a grenade ([name]) in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
 	user.attack_log += text("\[[time_stamp()]\] <font color='red'> [key_name(user)] primed \a grenade ([name]) at ([src.loc.x],[src.loc.y],[src.loc.z])</font>")
+/*
 	if(initial(dangerous))
 		var/nade_sound
 		if(has_species(user, "Human"))
@@ -94,7 +95,7 @@
 			nade_sound = sound('sound/voice/monkey_scream.ogg')
 		if(nade_sound)
 			playsound(user, nade_sound, 35)
-
+*/
 	var/mob/living/carbon/C = user
 	if(istype(C) && !C.throw_mode)
 		C.toggle_throw_mode(THROW_MODE_NORMAL)
