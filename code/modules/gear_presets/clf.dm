@@ -5,7 +5,10 @@
 	skills = /datum/skills/pfc
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	origin_override = ORIGIN_CIVILIAN
-	access = list(ACCESS_LIST_CLF_BASE)
+
+/datum/equipment_preset/clf/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE)
 
 /datum/equipment_preset/clf/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(50;MALE, 50;FEMALE)
