@@ -69,6 +69,8 @@
 			. = "she"
 		if(MALE)
 			. = "he"
+		if(NONBINARY)
+			. = "they"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -81,6 +83,8 @@
 			. = "her"
 		if(MALE)
 			. = "his"
+		if(NONBINARY)
+			. = "their"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -93,6 +97,8 @@
 			. = "hers"
 		if(MALE)
 			. = "his"
+		if(NONBINARY)
+			. = "their"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -105,6 +111,8 @@
 			. = "her"
 		if(MALE)
 			. = "him"
+		if(NONBINARY)
+			. = "their"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -158,6 +166,8 @@
 			. = "she"
 		if(MALE)
 			. = "he"
+		if(NONBINARY)
+			. = "they"
 		if(PLURAL)
 			. = "they"
 	if(capitalized)
