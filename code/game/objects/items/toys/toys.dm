@@ -241,6 +241,7 @@
 /obj/item/toy/prize
 	icon_state = "ripleytoy"
 	var/cooldown = 0
+	w_class = SIZE_SMALL
 
 //all credit to skasi for toy mech fun ideas
 /obj/item/toy/prize/attack_self(mob/user)
