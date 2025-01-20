@@ -15555,9 +15555,6 @@
 	pixel_y = 8;
 	pixel_x = 3
 	},
-/obj/item/clothing/head/helmet/marine/medic{
-	pixel_y = -9
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "cWH" = (
