@@ -13,7 +13,7 @@
 	var/scorchedness = 0 //how scorched is this turf 0 to 3
 	var/icon_state_before_scorching //this is really dumb, blame the mappers...
 	var/footstep_sound
-	var/barefoot_sound = parent_type::footstep_sound
+	var/barefoot_sound = "barefoot_footstep"
 
 /turf/open/Initialize(mapload, ...)
 	. = ..()
