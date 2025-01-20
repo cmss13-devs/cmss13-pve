@@ -1244,3 +1244,12 @@
 	icon_state = "armcom_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/army/command/attache)
 	volume = RADIO_VOLUME_CRITICAL
+
+/obj/item/device/radio/headset/distress/guard
+	name = "\improper Colonial Guard radio headset"
+	desc = "A robust headset used by members of the UA's Colonial Guard. Built to outlast those it's issued to. Featured channels include: ; - Colonial Guard, :o - Colony."
+	frequency = GRD_FREQ
+	icon_state = "generic_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/guard)
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_MARINE
