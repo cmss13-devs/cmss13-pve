@@ -23,11 +23,12 @@
 		/obj/item/attachable/magnetic_harness,
 	)
 
-	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
 	var/datum/effect_system/smoke_spread/smoke
 
 	flags_item = TWOHANDED|NO_CRYO_STORE
-	var/skill_locked = TRUE
+	flags_equip_slot = SLOT_BACK //The fact you can't carry the tube across your back is daft? Hello?
+	var/skill_locked = FALSE
 
 /obj/item/weapon/gun/launcher/rocket/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -203,6 +204,12 @@
 		mob.emote("pain")
 
 //-------------------------------------------------------
+//Army version, just reflavoured description
+
+/obj/item/weapon/gun/launcher/rocket/army
+	desc = "The M5 RPG is a common squad-level anti-armor weapon used by the US Army. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
+
+//-------------------------------------------------------
 //M5 RPG'S MEAN FUCKING COUSIN
 
 /obj/item/weapon/gun/launcher/rocket/m57a4
@@ -294,6 +301,14 @@
 /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable/unload()
 	to_chat(usr, SPAN_WARNING("You cannot unload \the [src]!"))
 	return
+
+/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/sadar/scope = new(src)
+	scope.hidden = TRUE
+	scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	scope.Attach(src)
+	update_attachable(scope.slot)
 
 //folded version of the sadar
 /obj/item/prop/folded_anti_tank_sadar

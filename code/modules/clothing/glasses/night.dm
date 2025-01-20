@@ -58,13 +58,13 @@
 	gender = NEUTER
 	desc = "A headset and night vision goggles system for the M42 Scout Rifle. Allows highlighted imaging of surroundings. Click it to toggle."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
-	icon_state = "m42_goggles"
-	deactive_state = "m42_goggles_0"
+	icon_state = "m56_goggles"
+	deactive_state = "m56_goggles_0"
 	vision_flags = SEE_TURFS
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_item = NO_CRYO_STORE
 
 /obj/item/clothing/glasses/night/m42_night_goggles/spotter
 	name = "\improper M42 spotter sight"
@@ -89,22 +89,34 @@
 /obj/item/clothing/glasses/night/m56_goggles
 	name = "\improper M56 head mounted sight"
 	gender = NEUTER
-	desc = "A headset and goggles system for the M56 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
+	desc = "A headset and optic system for the M56 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
 	toggleable = TRUE
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/m56_goggles/far_sight)
 	vision_flags = SEE_TURFS
+	flags_inventory = SMARTGUN_OPTIC
 	fullscreen_vision = null
 	eye_protection = EYE_PROTECTION_FLAVOR
 	req_skill = SKILL_SPEC_WEAPONS
 	req_skill_level = SKILL_SPEC_SMARTGUN
+	var/obj/structure/machinery/camera/camera
 
 	var/far_sight = FALSE
 	var/obj/item/weapon/gun/smartgun/linked_smartgun = null
 
+/obj/item/clothing/glasses/night/m56_goggles/Initialize(mapload)
+	. = ..()
+	camera = new /obj/structure/machinery/camera/overwatch(src)
+
+/obj/item/clothing/glasses/night/m56_goggles/equipped(mob/living/carbon/human/mob, slot)
+	if(camera)
+		camera.c_tag = mob.name
+	..()
+
 /obj/item/clothing/glasses/night/m56_goggles/Destroy()
+	QDEL_NULL(camera)
 	linked_smartgun = null
 	disable_far_sight()
 	return ..()

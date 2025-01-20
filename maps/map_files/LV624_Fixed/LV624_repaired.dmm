@@ -104,7 +104,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/bluecorner,
 /area/lv624/lazarus/sleep_male)
 "ajM" = (
@@ -2404,7 +2404,7 @@
 "cYs" = (
 /obj/structure/closet/cabinet,
 /obj/item/weapon/baseballbat/metal,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/dark,
 /area/lv624/lazarus/engineering)
 "cYB" = (
@@ -4206,7 +4206,7 @@
 	name = "General Listening Channel";
 	pixel_x = -30
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/purple/northwest,
 /area/lv624/lazarus/sleep_female)
 "flc" = (
@@ -10075,7 +10075,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/whiteblue/west,
 /area/lv624/lazarus/medbay)
 "mwV" = (
@@ -11419,7 +11419,7 @@
 /area/lv624/ground/colony/north_tcomms_road)
 "onT" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/dark,
 /area/lv624/lazarus/quartstorage)
 "onX" = (
@@ -14223,7 +14223,7 @@
 	opened = 1
 	},
 /obj/structure/window/reinforced/tinted,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/item/device/radio/intercom{
 	freerange = 1;
 	frequency = 1469;
@@ -15579,7 +15579,7 @@
 /area/lv624/lazarus/main_hall)
 "ufg" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/vault,
 /area/lv624/lazarus/quartstorage)
 "ufn" = (
@@ -15857,7 +15857,7 @@
 	icon_state = "open";
 	opened = 1
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/bluecorner,
 /area/lv624/lazarus/sleep_male)
 "uxL" = (
@@ -17708,7 +17708,7 @@
 /area/lv624/ground/river/east_river)
 "wWs" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/loadout/clf,
+/obj/item/storage/box/loadout/CLF_loadout,
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "wXg" = (
@@ -17880,7 +17880,6 @@
 /area/lv624/lazarus/landing_zones/lz2)
 "xlU" = (
 /obj/structure/closet/bodybag,
-/obj/effect/landmark/corpsespawner/clf,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
 "xnh" = (

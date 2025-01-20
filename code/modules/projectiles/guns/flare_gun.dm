@@ -128,6 +128,9 @@
 	fired_flare.mouse_opacity = FALSE
 	fire_flare.indestructible = TRUE
 	fire_flare.unacidable = TRUE
+	fired_flare.fuel = 3 MINUTES
+	fired_flare.light_range = 6
+	fired_flare.light_power = 3
 	playsound(user.loc, fire_sound, 50, 1)
 
 	var/obj/effect/flare_light/light_effect = new (fired_flare, fired_flare.light_range, fired_flare.light_power, fired_flare.light_color)
@@ -148,7 +151,7 @@
 	desc = "You are not supposed to see this. Please report it."
 	icon_state = "" //No sprite
 	invisibility = INVISIBILITY_MAXIMUM
-	light_system = STATIC_LIGHT
+	light_system = MOVABLE_LIGHT
 
 /obj/effect/flare_light/Initialize(mapload, light_range, light_power, light_color)
 	. = ..()

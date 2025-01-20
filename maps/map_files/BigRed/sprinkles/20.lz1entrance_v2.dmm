@@ -447,11 +447,6 @@
 "cb" = (
 /turf/open/mars/mars_dirt_14,
 /area/bigredv2/outside/nw)
-"cc" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/engineer,
-/turf/open/floor/dark,
-/area/bigredv2/outside/space_port)
 "Dc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/template_noop,
@@ -797,7 +792,7 @@ bl
 ai
 aq
 aA
-cc
+aK
 aw
 bc
 ai

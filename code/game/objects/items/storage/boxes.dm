@@ -603,12 +603,12 @@
 
 /obj/item/storage/box/m94
 	name = "\improper M94 marking flare pack"
-	desc = "A packet of twenty one M94 Marking Flares. Carried by USCM soldiers to light dark areas that cannot be reached with the usual TNR Shoulder Lamp."
+	desc = "A packet of fourteen M94 Marking Flares. Carried by USCM soldiers to light dark areas that cannot be reached with the usual TNR Shoulder Lamp."
 	icon_state = "m94"
 	icon = 'icons/obj/items/storage/packets.dmi'
 	w_class = SIZE_MEDIUM
-	storage_slots = 21
-	max_storage_space = 21
+	storage_slots = 14
+	max_storage_space = 14
 	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
 
 /obj/item/storage/box/m94/fill_preset_inventory()
@@ -624,7 +624,7 @@
 
 /obj/item/storage/box/m94/signal
 	name = "\improper M89-S signal flare pack"
-	desc = "A packet of twenty one M89-S Signal Marking Flares."
+	desc = "A packet of fourteen M89-S Signal Marking Flares."
 	icon_state = "m89"
 
 /obj/item/storage/box/m94/signal/fill_preset_inventory()
@@ -651,7 +651,7 @@
 	var/model_icon = "model_m40"
 	var/type_icon = "hedp"
 	var/grenade_type = /obj/item/explosive/grenade/high_explosive
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/box/nade_box/Initialize()
 	. = ..()
@@ -697,19 +697,53 @@
 	can_hold = list(/obj/item/explosive/grenade/high_explosive/frag)
 	grenade_type = /obj/item/explosive/grenade/high_explosive/frag
 
-/obj/item/storage/box/nade_box/phophorus
-	name = "\improper M40 CCDP grenade box"
-	desc = "A secure box holding 25 M40 CCDP chemical compound grenade. High explosive, don't store near the flamer fuel."
+/obj/item/storage/box/nade_box/bfab
+	name = "\improper M51A BFAB grenade box"
+	desc = "A secure box holding 25 M51A Bounding Fragmentation, Air-Burst grenades. Highly explosive, don't store near the flamer fuel."
+	model_icon = "model_m51a"
+	type_icon = "bfab"
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/tmfrag)
+	grenade_type = /obj/item/explosive/grenade/high_explosive/tmfrag
+
+/obj/item/storage/box/nade_box/heap
+	name = "\improper M38 HEAP grenade box"
+	desc = "A secure box holding 25 M38 High-Explosive, Armour-Piercing grenades. Highly explosive, don't store near the flamer fuel."
+	model_icon = "model_m38"
 	type_icon = "ccdp"
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/impact/heap)
+	grenade_type = /obj/item/explosive/grenade/high_explosive/impact/heap
+
+/obj/item/storage/box/nade_box/smoke
+	name = "\improper M47 HSDP grenade box"
+	desc = "A secure box holding 25 M47 HSDP smoke grenades. Flammable, don't store near the flamer fuel."
+	model_icon = "model_m47"
+	type_icon = "smoke"
+	can_hold = list(/obj/item/explosive/grenade/smokebomb)
+	grenade_type = /obj/item/explosive/grenade/smokebomb
+
+/obj/item/storage/box/nade_box/phophorus
+	name = "\improper M60 WPSI grenade box"
+	desc = "A secure box holding 25 M60 White-Phosphorus, Smoke/Incendiary chemical compound grenades. Highly flammable and explosive, don't store near the flamer fuel."
+	model_icon = "model_m60"
+	type_icon = "phos"
 	can_hold = list(/obj/item/explosive/grenade/phosphorus)
 	grenade_type = /obj/item/explosive/grenade/phosphorus
 
 /obj/item/storage/box/nade_box/incen
-	name = "\improper M40 HIDP grenade box"
-	desc = "A secure box holding 25 M40 HIDP white incendiary grenades. Highly flammable, don't store near the flamer fuel."
+	name = "\improper M77 HIAM grenade box"
+	desc = "A secure box holding 25 M77 HIAM incendiary grenades. Highly flammable, don't store near the flamer fuel."
+	model_icon = "model_m77"
 	type_icon = "hidp"
 	can_hold = list(/obj/item/explosive/grenade/incendiary)
 	grenade_type = /obj/item/explosive/grenade/incendiary
+
+/obj/item/storage/box/nade_box/canister
+	name = "\improper M108 canister grenade box"
+	desc = "A secure box holding 25 M108 canister grenades. Flammable, don't store near the flamer fuel."
+	model_icon = "model_m108"
+	type_icon = "buck"
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/airburst/canister)
+	grenade_type = /obj/item/explosive/grenade/high_explosive/airburst/canister
 
 /obj/item/storage/box/nade_box/airburst
 	name = "\improper M74 AGM-F grenade box"
@@ -726,7 +760,6 @@
 	type_icon = "agmi"
 	can_hold = list(/obj/item/explosive/grenade/incendiary/airburst)
 	grenade_type = /obj/item/explosive/grenade/incendiary/airburst
-
 
 /obj/item/storage/box/nade_box/training
 	name = "\improper M07 training grenade box"
@@ -826,7 +859,6 @@
 	new /obj/item/reagent_container/food/snacks/packaged_meal(src, second)
 	new /obj/item/reagent_container/food/snacks/packaged_meal(src, side)
 	new /obj/item/reagent_container/food/snacks/packaged_meal(src, desert)
-	new /obj/item/reagent_container/food/drinks/cans/waterbottle(src)
 	if(cookie == 1)
 		new /obj/item/reagent_container/food/snacks/fortunecookie/prefilled(src)
 	new /obj/item/storage/fancy/cigarettes/lucky_strikes_4(src)

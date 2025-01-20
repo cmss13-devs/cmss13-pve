@@ -1,5 +1,5 @@
-#define CANVAS_COOLDOWN_TIME 4 MINUTES
-#define FLATTEN_MAP_COOLDOWN_TIME 3 MINUTES
+#define CANVAS_COOLDOWN_TIME 10 SECONDS
+#define FLATTEN_MAP_COOLDOWN_TIME 10 SECONDS
 
 /**
  *  # Minimaps subsystem
@@ -539,7 +539,9 @@ SUBSYSTEM_DEF(minimaps)
 		qdel(svg_store_overlay)
 		debug_log("SVG coordinates for [faction] are not implemented!")
 
-#define can_draw(faction, user) ((faction == FACTION_MARINE && skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT)) || (faction == XENO_HIVE_NORMAL && isqueen(user)))
+/datum/tacmap/drawing/proc/can_draw(faction, mob/user)
+	var/datum/squad/main_squad_path = MAIN_SHIP_PLATOON
+	return ((faction == main_squad_path::faction && skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_NOVICE)) || (faction == XENO_HIVE_NORMAL && isqueen(user)))
 
 /datum/controller/subsystem/minimaps/proc/fetch_tacmap_datum(zlevel, flags)
 	var/hash = "[zlevel]-[flags]"
@@ -739,7 +741,7 @@ SUBSYSTEM_DEF(minimaps)
 	old_map = get_tacmap_data_png(faction)
 	current_svg = get_tacmap_data_svg(faction)
 
-	var/use_live_map = skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) || is_xeno
+	var/use_live_map = skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_NOVICE) || is_xeno
 
 	if(use_live_map && !map_holder)
 		var/level = SSmapping.levels_by_trait(targeted_ztrait)
@@ -1071,4 +1073,3 @@ SUBSYSTEM_DEF(minimaps)
 
 #undef CANVAS_COOLDOWN_TIME
 #undef FLATTEN_MAP_COOLDOWN_TIME
-#undef can_draw

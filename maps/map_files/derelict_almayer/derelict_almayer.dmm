@@ -15460,7 +15460,6 @@
 /area/almayer/squads/alpha)
 "fBT" = (
 /obj/structure/surface/table/almayer,
-/obj/item/clothing/head/helmet/marine/pilot,
 /turf/open/floor/almayer/redfull,
 /area/almayer/living/offices/flight)
 "fCl" = (
@@ -41088,10 +41087,6 @@
 	pixel_y = -7
 	},
 /obj/item/tool/crowbar,
-/obj/item/clothing/head/helmet/marine/pilot{
-	pixel_x = -7;
-	pixel_y = 13
-	},
 /obj/item/device/camera{
 	pixel_x = 7
 	},
@@ -56185,7 +56180,7 @@
 	pixel_y = -7
 	},
 /obj/item/tool/crowbar,
-/obj/item/clothing/head/helmet/marine/pilottex{
+/obj/item/clothing/head/helmet/upp/marinepilot/tex{
 	pixel_x = -7;
 	pixel_y = 13
 	},
