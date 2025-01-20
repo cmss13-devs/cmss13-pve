@@ -176,8 +176,8 @@
 
 /turf/open/auto_turf/snow/get_dirt_type()
 	if(bleed_layer)
-		return DIRT_TYPE_SNOW
 		footstep_sound = "snow_footstep"
+		return DIRT_TYPE_SNOW
 	else
 		footstep_sound = "dirt_footstep"
 		return DIRT_TYPE_GROUND
