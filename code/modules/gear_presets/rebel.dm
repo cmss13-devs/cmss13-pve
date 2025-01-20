@@ -27,7 +27,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier
-	name = "Rebel, Soldier"
+	name = "Rebel, Soldier (Rifle)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -48,6 +48,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	if(prob(45))
+		add_facewrap(new_human)
 	//head
 	add_rebel_ua_helmet(new_human)
 	//uniform
@@ -64,6 +66,38 @@
 		add_rebel_ua_pistol(new_human)
 	else
 		add_rebel_ua_rifle(new_human)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+
+/datum/equipment_preset/colonist/bluecollar/rebel/soldier/shotgun
+	name = "Rebel, Soldier (Shotgun)"
+
+/datum/equipment_preset/colonist/bluecollar/rebel/soldier/shotgun/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
+	//face
+	if(prob(45))
+		add_facewrap(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	//head
+	add_rebel_ua_helmet(new_human)
+	//uniform
+	add_rebel_ua_uniform(new_human)
+	//jacket
+	add_rebel_ua_suit(new_human)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	//limbs
+	add_rebel_ua_shoes(new_human)
+	if(prob(35))
+		add_rebel_gloves(new_human)
+	add_rebel_ua_shotgun(new_human)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -93,6 +127,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
 	//face
+	if(prob(45))
+		add_facewrap(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 	//head
 	add_rebel_ua_helmet(new_human)
@@ -108,10 +144,8 @@
 		add_rebel_gloves(new_human)
 	if(prob(85))
 		add_rebel_ua_pistol(new_human)
-	else if(prob(35))
-		add_rebel_ua_rifle(new_human)
 	else
-		add_rebel_ua_shotgun(new_human)
+		add_rebel_ua_rifle(new_human)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -140,6 +174,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/prop/folded_anti_tank_sadar(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/folded_anti_tank_sadar(new_human), WEAR_IN_BACK)
 	//face
+	if(prob(45))
+		add_facewrap(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 	//head
 	add_rebel_ua_helmet(new_human)
@@ -223,6 +259,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
 	//face
+	if(prob(45))
+		add_facewrap(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 	//head
 	add_rebel_ua_helmet(new_human)
