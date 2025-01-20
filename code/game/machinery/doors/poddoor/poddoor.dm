@@ -12,6 +12,7 @@
 	closed_layer = PODDOOR_CLOSED_LAYER
 	///How many tiles the shutter occupies
 	var/shutter_length = 1
+	var/signal_id
 
 /obj/structure/machinery/door/poddoor/Initialize()
 	. = ..()
@@ -71,6 +72,12 @@
 	open()
 	return TRUE
 
+/obj/structure/machinery/door/poddoor/proc/toggle_pod_door(signal_id)
+	if(id == signal_id)
+		if(density)
+			INVOKE_ASYNC(src, PROC_REF(open))
+		else
+			INVOKE_ASYNC(src, PROC_REF(close))
 
 /obj/structure/machinery/door/poddoor/try_to_activate_door(mob/user)
 	return

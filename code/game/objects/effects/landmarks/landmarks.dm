@@ -76,6 +76,10 @@
 	LAZYREMOVE(GLOB.ert_spawns[type], src)
 	return ..()
 
+/obj/effect/landmark/tunnel_ambush
+	name = "xeno ambush"
+	icon_state = "xeno_ambush"
+
 // Nightmare insert locations
 /obj/effect/landmark/nightmare
 	name = "Nightmare Insert"
