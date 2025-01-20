@@ -1119,11 +1119,6 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/space)
-"na" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/item/hardpoint/locomotion/apc_wheels,
-/turf/open/floor/almayer/plating/northeast,
-/area/adminlevel/ert_station/uscm_station)
 "nc" = (
 /obj/structure/pipes/vents/pump/siphon/on{
 	dir = 1;
@@ -8943,7 +8938,7 @@ kZ
 kZ
 zK
 cz
-na
+VI
 sd
 JI
 yf
