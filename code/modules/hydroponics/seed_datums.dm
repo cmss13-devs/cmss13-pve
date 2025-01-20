@@ -245,7 +245,7 @@ GLOBAL_LIST_EMPTY(gene_tag_masks)   // Gene obfuscation for delicious trial and 
 			"rezadone",
 			"ethylredoxrazine",
 			"cyanide",
-			"mindbreaker",
+			"diethylamide",
 			"stoxin"
 			)
 
