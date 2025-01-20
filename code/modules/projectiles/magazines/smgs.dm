@@ -13,7 +13,7 @@
 	desc = "A 9mm submachinegun magazine."
 	caliber = "9mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
-	icon_state = "m39_HV"
+	icon_state = "m39"
 	max_rounds = 48
 	w_class = SIZE_MEDIUM
 	gun_type = /obj/item/weapon/gun/smg/m39
