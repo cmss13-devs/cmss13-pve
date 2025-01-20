@@ -83,12 +83,22 @@
 	universal_speak = FALSE
 	universal_understand = TRUE
 
+	var/obj/item/iff_collar/collar
+	var/initial_collar = null
+
 /mob/living/simple_animal/Initialize()
 	. = ..()
 	SSmob.living_misc_mobs += src
+	if(initial_collar)
+		collar = new initial_collar(src)
+		faction = collar.faction
+		faction_group = collar.faction_group
+	else
+		verbs.Remove(/mob/living/simple_animal/verb/remove_collar)
 
 /mob/living/simple_animal/Destroy()
 	SSmob.living_misc_mobs -= src
+	QDEL_NULL(collar)
 	return ..()
 
 /mob/living/simple_animal/Login()
@@ -106,6 +116,8 @@
 
 /mob/living/simple_animal/get_examine_text(mob/user)
 	. = ..()
+	if(collar)
+		. += SPAN_NOTICE("It has [collar] on.")
 	if(stat == DEAD)
 		. += SPAN_BOLDWARNING("[user == src ? "You are" : "It is"] DEAD. Kicked the bucket.")
 	else
@@ -391,6 +403,20 @@
 			else
 				gib()
 			return
+	if(istype(O, /obj/item/iff_collar))
+		if(collar)
+			to_chat(user, SPAN_WARNING("[src] already has a collar on!"))
+			return
+		var/obj/item/iff_collar/col = O
+		if(mob_size > col.max_mob_size)
+			return
+		user.drop_inv_item_to_loc(col, src)
+		visible_message(SPAN_NOTICE("[user] puts [col] on [src]!"))
+		collar = col
+		faction = col.faction
+		faction_group = col.faction_group
+		verbs.Add(/mob/living/simple_animal/verb/remove_collar)
+		return
 	..()
 
 
@@ -475,5 +501,18 @@
 	if(user && error_msg)
 		to_chat(user, SPAN_WARNING("You aren't sure how to inject this animal!"))
 	return FALSE
+
+/mob/living/simple_animal/verb/remove_collar()
+	set name = "Remove Collar"
+	set desc = "Remove the collar off this animal."
+	set category = "Object"
+	set src in oview(1)
+
+	collar.forceMove(get_turf(src))
+	visible_message(SPAN_NOTICE("[usr] takes [collar] off [src]!"))
+	collar = null
+	faction = initial(faction)
+	faction_group = initial(faction_group)
+	verbs.Remove(/mob/living/simple_animal/verb/remove_collar)
 
 #undef OVERLAY_FIRE_LAYER
