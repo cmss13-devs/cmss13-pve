@@ -184,6 +184,7 @@
 
 /turf/open/floor/plating/wood
 	icon_state = "wood"
+	footstep_sound = "wood_footstep"
 
 /turf/open/floor/plating/wood_broken2
 	icon_state = "wood-broken2"
@@ -1391,6 +1392,7 @@
 	icon_state = "grass1"
 	tile_type = /obj/item/stack/tile/grass
 	tool_flags = null
+	footstep_sound = "grass_footstep"
 
 /turf/open/floor/grass/Initialize(mapload, ...)
 	. = ..()
@@ -1423,6 +1425,7 @@
 	icon_state = "carpet"
 	tile_type = /obj/item/stack/tile/carpet
 	tool_flags = REMOVE_SCREWDRIVER
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/carpet/Initialize(mapload, ...)
 	. = ..()
@@ -3381,54 +3384,63 @@
 
 /turf/open/floor/carpet10_8
 	icon_state = "carpet10-8"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/carpet10_8/west
 	dir = WEST
 
 /turf/open/floor/carpet11_12
 	icon_state = "carpet11-12"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/carpet11_12/west
 	dir = WEST
 
 /turf/open/floor/carpet13_5
 	icon_state = "carpet13-5"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/carpet13_5/west
 	dir = WEST
 
 /turf/open/floor/carpet14_10
 	icon_state = "carpet14-10"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/carpet14_10/west
 	dir = WEST
 
 /turf/open/floor/carpet15_15
 	icon_state = "carpet15-15"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/carpet15_15/west
 	dir = WEST
 
 /turf/open/floor/carpet5_1
 	icon_state = "carpet5-1"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/carpet5_1/west
 	dir = WEST
 
 /turf/open/floor/carpet6_2
 	icon_state = "carpet6-2"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/carpet6_2/west
 	dir = WEST
 
 /turf/open/floor/carpet7_3
 	icon_state = "carpet7-3"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/carpet7_3/west
 	dir = WEST
 
 /turf/open/floor/carpet9_4
 	icon_state = "carpet9-4"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/carpet9_4/west
 	dir = WEST
@@ -3438,24 +3450,28 @@
 
 /turf/open/floor/damaged2
 	icon_state = "damaged2"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/damaged2/west
 	dir = WEST
 
 /turf/open/floor/damaged3
 	icon_state = "damaged3"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/damaged3/west
 	dir = WEST
 
 /turf/open/floor/damaged4
 	icon_state = "damaged4"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/damaged4/west
 	dir = WEST
 
 /turf/open/floor/damaged5
 	icon_state = "damaged5"
+	footstep_sound = "carpet_footstep"
 
 /turf/open/floor/damaged5/west
 	dir = WEST
@@ -3741,6 +3757,7 @@
 
 /turf/open/floor/wood
 	icon_state = "wood"
+	footstep_sound "wood_footstep"
 
 /turf/open/floor/yellowfull
 	icon_state = "yellowfull"
