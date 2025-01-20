@@ -200,6 +200,14 @@
 	if(isxeno(M))
 		M.apply_effect(0.4, SLOW)
 
+/datum/ammo/bullet/shrapnel/himat
+	accurate_range = 8
+	max_range = 8
+	damage = 75
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	accuracy = HIT_ACCURACY_TIER_MAX
+	icon_state = "shrapnel_light"
+
 /*
 //========
 					CAS 30mm impacters
