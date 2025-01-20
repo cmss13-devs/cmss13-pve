@@ -154,7 +154,7 @@
 	human_ai_menu.tgui_interact(mob)
 
 /client/proc/create_human_ai()
-	set name = "Create Human AI"
+	set name = "Create Human AI - Expanded"
 	set category = "Game Master.HumanAI"
 
 	if(!check_rights(R_DEBUG))

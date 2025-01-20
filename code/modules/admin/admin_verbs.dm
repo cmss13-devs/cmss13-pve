@@ -88,6 +88,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/place_plastic_explosives,
 	/client/proc/toggle_human_ai_tweaks,
 	/client/proc/open_human_squad_spawner_panel,
+	/client/proc/open_human_ai_spawner_panel,
 	))
 
 

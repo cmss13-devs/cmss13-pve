@@ -12,7 +12,7 @@
 	if(!istype(ai_human))
 		return COMPONENT_INCOMPATIBLE
 
-	if(!human_ai_has_spawned)
+	if(!human_ai_has_spawned && !(SSticker.mode.toggleable_flags & MODE_HUMAN_AI_TWEAKS))
 		human_ai_has_spawned = TRUE
 		SSticker.mode.toggleable_flags ^= MODE_HUMAN_AI_TWEAKS
 		message_admins("Human AI tweaks have been enabled by spawning an AI. This can be disabled with the \"Toggle Human AI Tweaks\" verb.")

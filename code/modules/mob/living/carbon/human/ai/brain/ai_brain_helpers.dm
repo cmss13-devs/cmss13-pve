@@ -129,7 +129,10 @@
 	drawn_melee_weapon = null
 
 /datum/human_ai_brain/proc/holster_melee()
-	if(!drawn_melee_weapon || (drawn_melee_weapon.loc != tied_human))
+	if(!drawn_melee_weapon)
+		return TRUE
+
+	if(drawn_melee_weapon.loc != tied_human)
 		on_melee_dropped()
 		return TRUE
 
@@ -137,7 +140,7 @@
 		return tied_human.shoes.attempt_insert_item(tied_human, drawn_melee_weapon)
 
 	tied_human.drop_held_item(drawn_melee_weapon)
-	return
+	return FALSE
 
 /datum/human_ai_brain/proc/unholster_any_weapon()
 	if(unholster_melee())

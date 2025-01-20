@@ -1661,6 +1661,9 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ext
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip)
 
+/obj/item/weapon/gun/rifle/m4ra/marksman
+	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom, /obj/item/attachable/extended_barrel)
+
 /obj/item/weapon/gun/rifle/m4ra/army
 	desc = "The M4RA battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams."
 	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ap
