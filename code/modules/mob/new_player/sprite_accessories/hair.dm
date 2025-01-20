@@ -828,3 +828,4 @@
 	name = "Emo Fringe"
 	icon_state = "hair_emo_fringe"
 	gender = FEMALE
+	
