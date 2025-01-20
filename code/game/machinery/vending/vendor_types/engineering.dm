@@ -207,6 +207,6 @@
 
 		list("MISCELLANOUS", -1, null, null),
 		list("Anesthetic Tank", 2, /obj/item/tank/anesthetic, VENDOR_ITEM_REGULAR),
-		list("Health Analyzer", 2, /obj/item/device/healthanalyzer, VENDOR_ITEM_REGULAR)
+		list("Health Diagnostic Equipment", 2, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR)
 	)
 
