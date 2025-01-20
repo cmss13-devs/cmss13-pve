@@ -14,6 +14,7 @@
 	var/toggle_off_sound = 'sound/machines/click.ogg'
 	var/active = TRUE
 	flags_inventory = COVEREYES
+	flags_obj = OBJ_IS_HELMET_GARB
 	flags_equip_slot = SLOT_EYES
 	flags_armor_protection = BODY_FLAG_EYES
 	var/deactive_state
