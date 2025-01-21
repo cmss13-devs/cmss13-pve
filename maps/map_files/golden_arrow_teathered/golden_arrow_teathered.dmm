@@ -23857,18 +23857,6 @@
 	},
 /turf/open/floor/almayer/silverfull,
 /area/adminlevel/ert_station/uscm_station)
-"pfN" = (
-/obj/structure/machinery/light,
-/obj/structure/machinery/door_control{
-	id = "qm_warehouse";
-	name = "RO Warehouse Shutters";
-	pixel_x = 0;
-	pixel_y = -30;
-	pixel_z = 0;
-	req_one_access_txt = "2;21"
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "pgV" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -123594,7 +123582,7 @@ cbK
 cbK
 cbK
 cbK
-pfN
+wDR
 iTz
 iMp
 cbK
