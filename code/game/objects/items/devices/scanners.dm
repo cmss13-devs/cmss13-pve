@@ -509,7 +509,7 @@ FORENSIC SCANNER
 	if(user.action_busy)
 		return
 
-	if(!do_after(user, skillcheck(user, SKILL_SURGERY, SKILL_SURGERY_NOVICE) ? (1 SECONDS) * user.get_skill_duration_multiplier(SKILL_SURGERY) : (8 SECONDS), INTERRUPT_ALL, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
+	if(!do_after(user, skillcheck(user, SKILL_SURGERY, SKILL_SURGERY_NOVICE) ? (0.2 SECONDS) * user.get_skill_duration_multiplier(SKILL_SURGERY) : (2 SECONDS), INTERRUPT_ALL, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
 		to_chat(user, SPAN_WARNING("You were interrupted before you could finish!"))
 		return
 
