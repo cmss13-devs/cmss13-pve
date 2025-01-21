@@ -673,7 +673,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "upp_g8pouch"
 	has_gamemode_skin = FALSE
 
-//this preset is for the US Army machinegunner. It
+//this preset is for the US Army machinegunner.
+/obj/item/storage/backpack/general_belt/army
+	desc = "A small light pouch that can be fitted around the waist or back. Used as a mass pouch for bulkier magazines."
+//this fills the preset's ammo belt
 /obj/item/storage/backpack/general_belt/army/fill_preset_inventory()
 		new /obj/item/ammo_magazine/hpr_box/ap (src)
 		new /obj/item/ammo_magazine/hpr_box/ap (src)
