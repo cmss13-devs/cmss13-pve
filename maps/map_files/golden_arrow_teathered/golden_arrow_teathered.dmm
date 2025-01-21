@@ -18640,9 +18640,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/almayer/command/cic)
-"fWu" = (
-/turf/open/space/basic,
-/area/golden_arrow/engineering)
 "fWz" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -48476,13 +48473,13 @@ lGH
 hwm
 wAd
 oTo
-fWu
+aIC
 hhQ
 ayS
 ayS
 ayS
 afx
-fWu
+aIC
 kjn
 kbQ
 tkm
@@ -48778,13 +48775,13 @@ nBF
 cxa
 bPy
 kQO
-fWu
+aIC
 pPt
 ayS
 ayS
 ayS
 qcH
-fWu
+aIC
 ngb
 mpM
 tkm
@@ -49384,9 +49381,9 @@ kQO
 kQO
 aIC
 aIC
-fWu
-fWu
-fWu
+aIC
+aIC
+aIC
 aIC
 aIC
 gwS
