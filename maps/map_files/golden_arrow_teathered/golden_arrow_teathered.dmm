@@ -233,12 +233,6 @@
 "aaV" = (
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoonprep)
-"aaZ" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "abb" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer,
@@ -1309,9 +1303,6 @@
 	pixel_y = 25;
 	layer = 2.96
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
 /obj/structure/machinery/light_switch{
 	pixel_y = 28;
 	pixel_x = 4;
@@ -1986,20 +1977,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/hangar)
-"ahi" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
 "ahj" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt{
@@ -2607,9 +2584,6 @@
 	pixel_y = 5;
 	buckling_y = 5
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "ajs" = (
@@ -2895,9 +2869,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "akv" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
 	},
@@ -4378,9 +4349,6 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/motor_pool)
 "apI" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
 	},
@@ -5244,12 +5212,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
-"asJ" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/motor_pool)
 "asK" = (
 /obj/effect/landmark/start/marine/leader/alpha,
 /obj/effect/landmark/late_join/alpha,
@@ -6608,9 +6570,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 1
@@ -6657,15 +6616,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
-"axX" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/motor_pool)
 "axY" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer,
@@ -8124,9 +8074,6 @@
 "aCs" = (
 /obj/structure/machinery/gear{
 	id = "garrow_vehicle_elevator_one"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -13179,12 +13126,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"aUL" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/turf/open/floor/almayer/edge/smooth/corner,
-/area/golden_arrow/motor_pool)
 "aUM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -15021,9 +14962,6 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/supply)
 "byT" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
 	},
@@ -15239,10 +15177,6 @@
 /obj/item/reagent_container/hypospray,
 /obj/item/storage/pill_bottle/antitox,
 /obj/structure/surface/table/almayer,
-/obj/structure/pipes/standard/simple/hidden{
-	dir = 6;
-	tag = "icon-intact (SOUTHEAST)"
-	},
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
 "bRe" = (
@@ -15402,13 +15336,6 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
-"bZq" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 10;
-	tag = "icon-intact-supply (SOUTHWEST)"
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "bZA" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/almayer/plate,
@@ -15459,13 +15386,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
-"cdK" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4;
-	tag = "icon-intact-supply (NORTH)"
-	},
-/turf/open/floor/almayer,
-/area/adminlevel/ert_station/uscm_station)
 "cdX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -15575,9 +15495,6 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "ckD" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
@@ -16569,9 +16486,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "dRV" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-4"
 	},
@@ -16813,13 +16727,6 @@
 /obj/structure/machinery/r_n_d/organic_analyzer,
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
-"emC" = (
-/obj/structure/pipes/standard/simple/hidden{
-	dir = 5;
-	tag = "icon-intact (NORTHEAST)"
-	},
-/turf/open/floor/almayer/dark_sterile,
-/area/adminlevel/ert_station/uscm_station)
 "eow" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -16920,14 +16827,6 @@
 "ewl" = (
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/briefing)
-"ewT" = (
-/obj/structure/window/framed/almayer/hull,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4;
-	tag = "icon-intact-supply (NORTH)"
-	},
-/turf/open/floor/almayer/test_floor4,
-/area/adminlevel/ert_station/uscm_station)
 "exa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -17184,13 +17083,6 @@
 	},
 /obj/structure/platform,
 /turf/open/floor/almayer,
-/area/adminlevel/ert_station/uscm_station)
-"eRp" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 1;
-	tag = "icon-intact-supply (NORTH)"
-	},
-/turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "eSv" = (
 /obj/structure/machinery/door/airlock/almayer/marine/alpha/engineer{
@@ -18854,9 +18746,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "huW" = (
@@ -19519,9 +19408,6 @@
 "iGx" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
 	},
 /obj/structure/machinery/computer/working_joe{
 	layer = 3.3;
@@ -21159,26 +21045,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/lower_cargo)
-"lyf" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 10;
-	tag = "icon-intact-supply (SOUTHWEST)"
-	},
-/turf/open/floor/almayer/cargo_arrow,
-/area/adminlevel/ert_station/uscm_station)
 "lyQ" = (
 /obj/structure/machinery/faxmachine{
 	req_one_access_txt = "1;200"
 	},
 /obj/structure/surface/table/woodentable,
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
-"lyU" = (
-/obj/structure/machinery/light/small{
-	dir = 4;
-	icon_state = "bulb1";
-	tag = "icon-bulb1 (EAST)"
-	},
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "lzB" = (
@@ -22079,9 +21950,6 @@
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
@@ -23152,14 +23020,6 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
-"ohL" = (
-/obj/structure/machinery/light{
-	dir = 1;
-	icon_state = "tube1";
-	tag = "icon-tube1 (NORTH)"
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "ohY" = (
 /obj/structure/cargo_container/uscm/chinook/mid{
 	color = "#898988";
@@ -23293,9 +23153,6 @@
 "osR" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -23553,11 +23410,6 @@
 /area/adminlevel/ert_station/uscm_station)
 "oRi" = (
 /obj/structure/closet/walllocker/emerglocker/east,
-/obj/structure/machinery/light/small{
-	dir = 4;
-	icon_state = "bulb1";
-	tag = "icon-bulb1 (EAST)"
-	},
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
@@ -24103,10 +23955,6 @@
 /area/adminlevel/ert_station/uscm_station)
 "pUs" = (
 /obj/structure/machinery/pipedispenser,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 5;
-	tag = "icon-intact-supply (EAST)"
-	},
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "pWJ" = (
@@ -25224,13 +25072,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
-"rIX" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4;
-	tag = "icon-intact-supply (NORTH)"
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "rJz" = (
 /obj/structure/machinery/cm_vending/clothing/marine/delta{
 	name = "Delta Engineer Equipment Locker"
@@ -25554,9 +25395,6 @@
 	phone_category = "Golden Arrow";
 	phone_id = "Lower Supply Bay";
 	pixel_x = -6
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
@@ -26931,14 +26769,6 @@
 /obj/item/clothing/glasses/hud/health,
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/dark_sterile,
-/area/adminlevel/ert_station/uscm_station)
-"uBC" = (
-/obj/structure/window/framed/almayer/hull,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 1;
-	tag = "icon-intact-supply (NORTH)"
-	},
-/turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
 "uDz" = (
 /obj/structure/window/reinforced{
@@ -28773,11 +28603,6 @@
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
 "xTC" = (
-/obj/structure/machinery/disposal/deliveryChute{
-	dir = 4;
-	icon_state = "intake";
-	tag = "icon-intake (EAST)"
-	},
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -28855,14 +28680,8 @@
 /area/golden_arrow/lower_cargo)
 "yef" = (
 /obj/structure/barricade/handrail,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
@@ -34920,7 +34739,7 @@ aAt
 abW
 acb
 bUF
-ahi
+abW
 aiL
 aOs
 ajU
@@ -46643,7 +46462,7 @@ azp
 aqP
 aqP
 aqP
-aUL
+all
 apn
 aPE
 aqP
@@ -49059,7 +48878,7 @@ aDG
 aVL
 aGv
 aag
-axX
+ach
 aue
 ach
 aqP
@@ -50308,7 +50127,7 @@ aqL
 aWa
 aRF
 aWa
-aaZ
+alu
 azD
 axE
 ayD
@@ -51475,7 +51294,7 @@ aBB
 ayO
 aGv
 akF
-asJ
+aqP
 aue
 ach
 aqP
@@ -58342,7 +58161,7 @@ cbK
 cbK
 jTE
 iTz
-ohL
+iMp
 cbK
 iMp
 iTz
@@ -99556,7 +99375,7 @@ lRS
 lRS
 nVa
 pND
-emC
+uIa
 lSf
 msH
 tAJ
@@ -123727,7 +123546,7 @@ nUF
 iTz
 lpN
 dCJ
-lyU
+iMp
 sjY
 oUR
 iTz
@@ -125833,7 +125652,7 @@ rHq
 iTz
 urE
 peH
-uBC
+bbL
 pUs
 iTz
 iTz
@@ -126136,7 +125955,7 @@ iTz
 gCj
 lwt
 bbL
-bZq
+iMp
 hjv
 ckh
 kQj
@@ -126439,10 +126258,10 @@ iTz
 iTz
 iTz
 iMp
-cdK
 cbK
 cbK
-lyf
+cbK
+xRg
 tzu
 cFW
 iTz
@@ -126739,8 +126558,8 @@ jOb
 iTz
 dxy
 peH
-uBC
-eRp
+bbL
+iMp
 wRC
 wDR
 iTz
@@ -127044,8 +126863,8 @@ lwt
 bbL
 iMp
 bLm
-eRp
-uBC
+iMp
+bbL
 peH
 bcb
 iTz
@@ -127345,7 +127164,7 @@ iTz
 iTz
 iTz
 iMp
-cdK
+cbK
 iMp
 bbL
 lwt
@@ -127645,8 +127464,8 @@ cSd
 iTz
 rxr
 peH
-uBC
-eRp
+bbL
+iMp
 wRC
 iMp
 iTz
@@ -127950,8 +127769,8 @@ lwt
 bbL
 iMp
 bLm
-eRp
-uBC
+iMp
+bbL
 peH
 pcR
 iTz
@@ -128251,7 +128070,7 @@ lLv
 iTz
 iTz
 pTt
-cdK
+cbK
 iMp
 bbL
 lwt
@@ -128553,7 +128372,7 @@ lLv
 mKv
 iMp
 iMp
-cdK
+cbK
 wFP
 iTz
 iTz
@@ -128856,8 +128675,8 @@ mky
 cbK
 cbK
 bLm
-eRp
-uBC
+iMp
+bbL
 peH
 uYa
 iTz
@@ -129157,7 +128976,7 @@ lLv
 vZU
 iMp
 wPX
-rIX
+iMp
 wEG
 bbL
 lwt
@@ -129459,7 +129278,7 @@ lLv
 vZU
 iTz
 iTz
-ewT
+bbL
 iTz
 iTz
 lLv
