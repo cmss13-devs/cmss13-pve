@@ -81,7 +81,7 @@
 	name = LANGUAGE_PORTUGUESE
 	desc = "The third most common language spoken in the UA."
 	speech_verb = "dice"
-	ask_verb = "cuestiona"
+	ask_verb = "pregunta"
 	exclaim_verb = "grita"
 	color = "portuguese"
 	key = "6"
@@ -91,9 +91,9 @@
 /datum/language/french
 	name = LANGUAGE_FRENCH
 	desc = "The most spoken language on Earth. Vive la France."
-	speech_verb = "dice"
-	ask_verb = "cuestiona"
-	exclaim_verb = "grita"
+	speech_verb = "proclaims"
+	ask_verb = "inquires"
+	exclaim_verb = "bellows"
 	color = "french"
 	key = "7"
 
@@ -108,7 +108,7 @@
 	color = "filipino"
 	key = "f"
 
-	syllables = list("o", "de", "e", "que", "um", "para", "com", "por", "seu", "outro", "ele", "já", "eiro", "bem", "bom", "só", "iço", "iça", "lho", "lha", "ção", "pois", "hoje", "ém", "hão", "três", "ela", "aço", "aça", "ça", "você", "ança", "lhe", "lher", "lado", "fim", "nem", "são", "vir", "sem", "sim", "nó", "se", "em", "até", "esse", "nosso", "eu", "dois", "ar", "mal", "não", "muito", "bém", "mais", "en", "tão", "lá", "aí", "ou")
+	syllables = list("pu", "ta", "ka", "ma", "y", "th", "ay", "nang", "ng", "la", "ra", "wan", "ts", "ko", "sh", "dy", "ryo", "gu", "gha", "itì", "aso", "ge", "i", "bon", "uta", "oya", "yi", "kas", "yug", "to", "to", "pi", "ba", "ran", "mpi", "sal", "ku", "no", "kan", "yan", "mai", "sa", "ging", "kung", "lang", "ito", "sa", "kar", "oon", "sang", "ari", "gus")
 
 
 /datum/language/commando
