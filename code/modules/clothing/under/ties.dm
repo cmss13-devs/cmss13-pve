@@ -1260,6 +1260,36 @@
 		/obj/item/ammo_magazine/handful/shotgun,
 	)
 
+//Pre-load For Army Props
+//===
+/obj/item/clothing/accessory/storage/webbing/m3/small/army
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
+	new /obj/item/storage/box/MRE(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyalt
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
+	new /obj/item/storage/box/MRE(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyleader
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
+	new /obj/item/storage/box/MRE(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/device/binoculars/range/designator(src)
+
+//===
+
 /obj/item/clothing/accessory/storage/webbing/m3/m40
 	name = "\improper M3 Pattern Grenade Webbing"
 	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40 grenades."
