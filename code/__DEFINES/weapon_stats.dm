@@ -325,5 +325,7 @@ Fire Variant = Markers for special fire types that behave outside of chemfire co
 #define FIRE_VARIANT_DEFAULT 0
 ///"Type B" Armor Shredding Greenfire: Burn Time T5, Burn Level T2, Slows on Tile, Increased Tile Damage, Easier Extinguishing.
 #define FIRE_VARIANT_TYPE_B 1
+///"Type X" Bluefire: Burn Time T4, Burn Level T7. Hellish concoction
+#define FIRE_VARIANT_TYPE_X 2
 // Lowers burn damage to humans
 #define HUMAN_BURN_DIVIDER 5
