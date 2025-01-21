@@ -413,7 +413,7 @@
 		else
 			blood_spraying.icon_state = "squirt1"
 		blood_spraying.color = get_blood_color()
-		to_world(angle)
+		//to_world(angle)
 		//blood_spraying.pixel_x = rand(-2,2)
 		//blood_spraying.pixel_y = rand(-2,2)
 		playsound(src, 'sound/effects/blood_squirt.ogg', 50, TRUE)
