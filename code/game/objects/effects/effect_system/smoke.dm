@@ -415,22 +415,11 @@
 	alpha = 75
 	opacity = FALSE
 	time_to_live = 180
+	contact_affects_synths = FALSE
 
-/obj/effect/particle_effect/smoke/tear/Move()
-	. = ..()
-	for(var/mob/living/carbon/human/human in get_turf(src))
-		affect(human)
-
-/obj/effect/particle_effect/smoke/tear/affect(mob/living/carbon/human/creature)
-	. = ..()
-	if(!istype(creature) || issynth(creature) || creature.stat == DEAD || isyautja(creature))
-		return FALSE
-
-	if(creature.wear_mask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
-		return FALSE
-	if(creature.head.flags_inventory & BLOCKGASEFFECT)
-		return FALSE
-
+/obj/effect/particle_effect/smoke/tear/contact_eyes(mob/living/carbon/creature)
+	if(..())
+		return
 	if(skillcheck(creature, SKILL_POLICE, SKILL_POLICE_SKILLED))
 		creature.AdjustEyeBlur(5)
 		to_chat(creature, SPAN_WARNING("Your training protects you from the tear gas!"))
