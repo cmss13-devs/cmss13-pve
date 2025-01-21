@@ -45,7 +45,7 @@
 	if(distance > 10)
 		return FALSE
 
-	if(captee_stat == CONSCIOUS && !(locate(/datum/effects/crit) in parent_mob.effects_list))
+	if(captee_stat == CONSCIOUS && !((locate(/datum/effects/crit) in parent_mob.effects_list) && !((parent_mob.status_flags & CANKNOCKOUT))))
 		return FALSE
 
 	if(isxeno(pulledby) && pulledby != checked_xeno)
