@@ -273,7 +273,7 @@
 	faction = FACTION_COLONIST
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian
-	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_WY_GENERAL, ACCESS_WY_COLONIAL, ACCESS_WY_EXEC)
+	access = list(ACCESS_CIVILIAN_PUBLIC)
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/colonist/whitecollar/exec/get_assignment(mob/living/carbon/human/new_human)
@@ -596,7 +596,7 @@
 	assignment = "Weyland-Yutani Corporate Security Officer"
 	paygrades = list(PAY_SHORT_CPO = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
-	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_GENERAL, ACCESS_WY_SECURITY)
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_SECURITY)
 
 /datum/equipment_preset/colonist/security/weyland/load_gear(mob/living/carbon/human/new_human)
 
@@ -604,7 +604,7 @@
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/WY, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/blue(new_human), WEAR_ACCESSORY)
