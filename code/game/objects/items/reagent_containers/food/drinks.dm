@@ -388,3 +388,7 @@
 	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Either issued as corporate standard, or bought as a souvenir for people who love the Company oh so dearly. Probably the former."
 	icon_state = "wycup"
 
+/obj/item/reagent_container/food/drinks/plasticcup
+	name = "plastic cup"
+	icon_state = "plasticcup"
+	desc = "A decent sized plastic cup, perfect aboard starships for it's capacity to deal with careless handling by roughnecks."

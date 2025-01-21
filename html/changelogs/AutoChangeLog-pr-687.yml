@@ -1,0 +1,4 @@
+author: "DexterDude"
+delete-after: True
+changes:
+  - config: "stalebot 14 days before stale and 14 before closing"
