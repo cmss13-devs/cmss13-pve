@@ -2749,8 +2749,7 @@
 	dir = 2
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/plating,
 /area/adminlevel/ert_station/uscm_station)
@@ -10291,14 +10290,6 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "aIB" = (
-/obj/structure/prop/invuln{
-	icon = 'icons/obj/structures/structures.dmi';
-	icon_state = "ladder11";
-	pixel_y = 10;
-	desc = "A sturdy metal ladder.";
-	name = "ladder";
-	density = 0
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -15237,8 +15228,7 @@
 	name = "\improper Engineering Storage"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -15402,8 +15392,7 @@
 /area/golden_arrow/supply)
 "bsS" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -15577,6 +15566,16 @@
 "bBB" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cargo_shuttle/upper)
+"bCe" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/silverfull,
+/area/adminlevel/ert_station/uscm_station)
 "bCt" = (
 /obj/structure/ladder{
 	height = 1;
@@ -15639,16 +15638,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
-"bFT" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/machinery/keycard_auth{
-	pixel_x = 30;
-	pixel_y = 30
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "bFY" = (
 /obj/item/storage/box/wy_mre,
 /obj/structure/surface/table/almayer,
@@ -16078,18 +16067,6 @@
 /obj/structure/machinery/cryopod/right,
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
-"ciE" = (
-/obj/structure/prop/invuln{
-	density = 1;
-	desc = "Floating cells are reserved for highly dangerous criminals. Whoever is out there is probably best left out there.";
-	dir = 4;
-	icon = 'icons/obj/structures/doors/maintdoor.dmi';
-	icon_state = "door_closed";
-	layer = 2.5;
-	name = "cell door"
-	},
-/turf/open/floor/almayer/test_floor4,
-/area/adminlevel/ert_station/uscm_station)
 "cjS" = (
 /obj/structure/machinery/power/monitor,
 /turf/open/floor/almayer/plate,
@@ -16205,8 +16182,7 @@
 /area/golden_arrow/supply)
 "cqH" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
 	dir = 1;
@@ -16470,8 +16446,7 @@
 	dir = 1
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -16496,15 +16471,6 @@
 /area/golden_arrow/cargo_shuttle/upper)
 "cUC" = (
 /obj/structure/surface/table/woodentable,
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
-"cUI" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 8
-	},
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "cUK" = (
@@ -16556,10 +16522,6 @@
 	},
 /obj/structure/platform{
 	dir = 4
-	},
-/obj/structure/platform{
-	dir = 9;
-	icon_state = "platform_deco"
 	},
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
@@ -16618,9 +16580,6 @@
 	icon_state = "ladderdown";
 	id = "hall3"
 	},
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
 /obj/structure/machinery/camera/autoname,
 /turf/open/floor/almayer/cargo,
 /area/adminlevel/ert_station/uscm_station)
@@ -16675,8 +16634,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "dfL" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	id = "Medbay";
@@ -16708,13 +16666,6 @@
 	health = 80
 	},
 /turf/open/floor/almayer/cargo,
-/area/adminlevel/ert_station/uscm_station)
-"dhd" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
-/obj/structure/machinery/door/firedoor/border_only/almayer,
-/turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
 "dhv" = (
 /obj/structure/platform_decoration,
@@ -16977,9 +16928,6 @@
 /area/adminlevel/ert_station/uscm_station)
 "dCy" = (
 /obj/structure/surface/table/woodentable,
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
 /obj/structure/machinery/faxmachine{
 	density = 0;
 	req_one_access_txt = "200"
@@ -17383,8 +17331,7 @@
 	id = "engine_electrical_maintenance"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -17582,13 +17529,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
-"eto" = (
-/obj/structure/supply_drop/alpha,
-/obj/structure/machinery/camera/autoname{
-	dir = 8
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "euH" = (
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_x = -23
@@ -17693,12 +17633,6 @@
 	},
 /obj/structure/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/engine,
-/area/adminlevel/ert_station/uscm_station)
-"eCw" = (
-/obj/structure/machinery/keycard_auth{
-	pixel_x = 30
-	},
-/turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "eEr" = (
 /obj/item/reagent_container/food/snacks/monkeyburger,
@@ -18188,13 +18122,6 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
-"fnH" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
-/obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "foG" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer,
 /obj/structure/machinery/door/airlock/almayer/maint{
@@ -18229,8 +18156,7 @@
 	opacity = 0
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/generic/corporate{
 	dir = 1
@@ -18371,14 +18297,6 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
-"fxg" = (
-/obj/structure/machinery/disposal,
-/obj/structure/disposalpipe/trunk,
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "fxp" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/roof/cargocrane_tracks/vertical{
@@ -18416,7 +18334,6 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "fyV" = (
-/obj/structure/supply_drop/delta,
 /obj/structure/noticeboard{
 	pixel_x = 30;
 	pixel_y = 0
@@ -18464,9 +18381,7 @@
 "fDJ" = (
 /obj/structure/closet/walllocker/emerglocker/south,
 /obj/structure/machinery/light,
-/obj/structure/platform{
-	icon_state = "platform_deco"
-	},
+/obj/structure/platform_decoration,
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "fFl" = (
@@ -18522,8 +18437,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "fJO" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/marine/requisitions{
 	dir = 2;
@@ -18665,8 +18579,7 @@
 /area/golden_arrow/lower_cargo)
 "fRA" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/marine/charlie{
 	dir = 1
@@ -18758,9 +18671,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "fWu" = (
-/turf/closed/wall/almayer/outer{
-	blend_objects = list(/obj/structure/window_frame,/obj/structure/window/framed)
-	},
+/turf/open/space/basic,
 /area/golden_arrow/engineering)
 "fWz" = (
 /obj/effect/decal/cleanable/dirt{
@@ -18847,8 +18758,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "gdd" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
 	dir = 1;
@@ -18867,8 +18777,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "ghb" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/engineering{
 	dir = 1;
@@ -19293,8 +19202,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "gRx" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -19424,17 +19332,6 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer,
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
-"gZA" = (
-/obj/structure/prop/invuln{
-	desc = "That looks like it doesn't open easily.";
-	dir = 1;
-	icon = 'icons/obj/structures/doors/blastdoors_shutters.dmi';
-	icon_state = "pdoor";
-	layer = 2.5;
-	name = "Pod Door"
-	},
-/turf/open/floor/almayer/test_floor4,
-/area/adminlevel/ert_station/uscm_station)
 "gZQ" = (
 /obj/item/toy/deck,
 /obj/structure/surface/table/almayer,
@@ -19492,8 +19389,7 @@
 /area/golden_arrow/engineering)
 "hcT" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/marine/alpha{
 	dir = 1
@@ -19622,9 +19518,7 @@
 /area/golden_arrow/supply)
 "hkJ" = (
 /obj/structure/morgue{
-	dir = 8;
-	icon_state = "morgue1";
-	tag = "icon-morgue1 (WEST)"
+	dir = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
@@ -19983,8 +19877,7 @@
 /area/golden_arrow/motor_pool)
 "hMU" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	id = "Medbay";
@@ -20021,9 +19914,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/platform{
-	icon_state = "platform_deco"
-	},
+/obj/structure/platform_decoration,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
 "hPz" = (
@@ -20275,8 +20166,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "ihJ" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
 	dir = 2;
@@ -20537,8 +20427,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "iJO" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/window/framed/almayer/hull,
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -20725,8 +20614,7 @@
 /area/golden_arrow/lower_cargo)
 "iTx" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
@@ -21076,8 +20964,7 @@
 	opacity = 0
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/window/framed/almayer/hull,
 /turf/open/floor/almayer/test_floor4,
@@ -21164,8 +21051,7 @@
 /area/golden_arrow/lower_cargo)
 "jBL" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer/test_floor4,
@@ -21411,16 +21297,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"jWT" = (
-/obj/structure/prop/invuln{
-	desc = "Floating cells are reserved for highly dangerous criminals. Whoever is out there is probably best left out there.";
-	icon = 'icons/obj/structures/doors/maintdoor.dmi';
-	icon_state = "door_closed";
-	layer = 2.5;
-	name = "cell door"
-	},
-/turf/open/floor/almayer/test_floor4,
-/area/adminlevel/ert_station/uscm_station)
 "jXa" = (
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/briefing)
@@ -21460,8 +21336,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "jZY" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/security/glass{
 	dir = 2;
@@ -21841,8 +21716,7 @@
 /area/golden_arrow/lower_cargo)
 "kEm" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /turf/open/floor/almayer/test_floor4,
@@ -22100,19 +21974,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
-"lgc" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
-"lgM" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
-/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "lhe" = (
 /obj/structure/platform{
 	dir = 1
@@ -22130,14 +21991,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
 "lju" = (
-/obj/structure/prop/invuln{
-	desc = "That looks like it doesn't open easily.";
-	dir = 8;
-	icon = 'icons/obj/structures/doors/blastdoors_shutters.dmi';
-	icon_state = "pdoor";
-	layer = 2.5;
-	name = "Pod Door"
-	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
 "ljN" = (
@@ -22442,13 +22295,6 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
-"lFx" = (
-/obj/structure/supply_drop/bravo,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "lFA" = (
 /obj/structure/closet/walllocker/emerglocker/north,
 /turf/open/floor/almayer/dark_sterile,
@@ -22617,9 +22463,6 @@
 /area/adminlevel/ert_station/uscm_station)
 "lPA" = (
 /obj/structure/bed/chair,
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "lPH" = (
@@ -22639,8 +22482,7 @@
 /area/golden_arrow/lower_cargo)
 "lQS" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/medical{
 	dir = 2;
@@ -22852,9 +22694,6 @@
 /obj/item/tool/pen,
 /obj/item/tool/stamp/captain{
 	name = "commander's rubber stamp"
-	},
-/obj/structure/machinery/keycard_auth{
-	pixel_x = -30
 	},
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/plate,
@@ -23113,8 +22952,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "mtw" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/security/glass{
 	dir = 2;
@@ -23484,8 +23322,7 @@
 	dir = 2
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -23671,9 +23508,7 @@
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
 "ncr" = (
-/obj/structure/platform{
-	icon_state = "platform_deco"
-	},
+/obj/structure/platform_decoration,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
 "neo" = (
@@ -24215,8 +24050,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "nPC" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -24273,8 +24107,7 @@
 /area/golden_arrow/lower_cargo)
 "nUT" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/security/glass{
 	dir = 2;
@@ -24288,17 +24121,6 @@
 /area/adminlevel/ert_station/uscm_station)
 "nVa" = (
 /turf/closed/wall/almayer/white/hull,
-/area/adminlevel/ert_station/uscm_station)
-"nVI" = (
-/obj/structure/prop/invuln{
-	desc = "That looks like it doesn't open easily.";
-	dir = 1;
-	icon = 'icons/obj/structures/doors/blastdoors_shutters.dmi';
-	icon_state = "pdoor";
-	layer = 2.5;
-	name = "Pod Door"
-	},
-/turf/closed/wall/almayer/outer,
 /area/adminlevel/ert_station/uscm_station)
 "nVP" = (
 /obj/item/reagent_container/food/snacks/hotdog,
@@ -24526,8 +24348,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "okA" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 2;
@@ -24625,8 +24446,7 @@
 /area/golden_arrow/lower_cargo)
 "oth" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/engineering{
 	dir = 2;
@@ -24762,8 +24582,7 @@
 	opacity = 0
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer/test_floor4,
@@ -24775,10 +24594,6 @@
 /obj/structure/platform,
 /obj/structure/platform{
 	dir = 4
-	},
-/obj/structure/platform{
-	dir = 6;
-	icon_state = "platform_deco"
 	},
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
@@ -25139,8 +24954,7 @@
 "pmd" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	id = "Medbay";
@@ -25543,6 +25357,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
+"pWJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/silverfull,
+/area/adminlevel/ert_station/uscm_station)
 "pWS" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -25602,8 +25423,7 @@
 /area/golden_arrow/supplydrop)
 "pXy" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -25952,8 +25772,7 @@
 	name = "\improper Chow Hall"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -26007,8 +25826,7 @@
 "qAF" = (
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/almayer/open{
 	id = "Secure Gate";
@@ -26154,12 +25972,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
-"qPk" = (
-/obj/structure/machinery/status_display{
-	req_one_access_txt = "19;200"
-	},
-/turf/open/floor/almayer,
-/area/adminlevel/ert_station/uscm_station)
 "qQb" = (
 /obj/structure/surface/rack,
 /obj/structure/machinery/light{
@@ -26374,8 +26186,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "rfe" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 2;
@@ -26546,8 +26357,7 @@
 /area/golden_arrow/supply)
 "rpD" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/marine/bravo{
 	dir = 1
@@ -27207,9 +27017,6 @@
 	icon_state = "tube1"
 	},
 /obj/structure/closet/emcloset,
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
 "sqc" = (
@@ -27603,9 +27410,6 @@
 	icon_state = "pipe-t";
 	tag = "icon-pipe-t (EAST)"
 	},
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
 "sRk" = (
@@ -27707,8 +27511,7 @@
 	name = "\improper Chow Hall"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -27970,8 +27773,7 @@
 "txz" = (
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/almayer/open{
 	id = "bridge blast";
@@ -28019,26 +27821,13 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
-"tyS" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
-/obj/structure/machinery/door/firedoor/border_only/almayer,
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 8;
-	id = "port blast";
-	name = "Blast Doors"
-	},
-/turf/open/floor/almayer/test_floor4,
-/area/adminlevel/ert_station/uscm_station)
 "tzu" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 2;
 	name = "Maintenance Hatch"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -28118,8 +27907,7 @@
 	req_one_access_txt = "1;6"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -28234,8 +28022,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "tPe" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/airlock/almayer/marine/requisitions{
@@ -28322,9 +28109,8 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/platform{
-	dir = 8;
-	icon_state = "platform_deco"
+/obj/structure/platform_decoration{
+	dir = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
@@ -28353,8 +28139,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "tXT" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/test_floor4,
@@ -28623,8 +28408,7 @@
 "uwS" = (
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -28711,8 +28495,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "uGs" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/almayer/open{
 	id = "port blast";
@@ -29103,7 +28886,8 @@
 /obj/structure/surface/table/woodentable,
 /obj/structure/machinery/computer/skills{
 	density = 0;
-	req_one_access = list(200)
+	req_one_access = list(200);
+	dir = 4
 	},
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
@@ -29133,8 +28917,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "vox" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 2;
@@ -29377,8 +29160,7 @@
 	id = "ex_chamber"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -29395,9 +29177,8 @@
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/supply)
 "vHZ" = (
-/obj/structure/platform{
-	dir = 8;
-	icon_state = "platform_deco"
+/obj/structure/platform_decoration{
+	dir = 8
 	},
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
@@ -29653,8 +29434,7 @@
 /area/golden_arrow/engineering)
 "wnE" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/engineering{
 	dir = 1
@@ -29708,8 +29488,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "wsU" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper  Marine Armory"
@@ -29816,8 +29595,7 @@
 	name = "\improper Engineering Workshop"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -29920,8 +29698,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "wMA" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 2
@@ -30158,10 +29935,6 @@
 /obj/structure/platform,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
-"xcd" = (
-/obj/structure/supply_drop/charlie,
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "xch" = (
 /obj/structure/bed/chair{
 	dir = 1;
@@ -30290,8 +30063,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "xnf" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	id = "Medbay";
@@ -30326,13 +30098,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
-"xpS" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep,
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "xsE" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/platform{
@@ -30472,8 +30237,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "xEM" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -30698,8 +30462,7 @@
 	name = "\improper Briefing Room"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	tag = "icon-door_open"
+	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
@@ -44840,7 +44603,7 @@ tUg
 jOb
 mRA
 fPu
-qPk
+cbK
 vCj
 mkx
 iTz
@@ -49351,7 +49114,7 @@ lRS
 lRS
 aDh
 nVa
-hkJ
+iMp
 bmC
 hkJ
 hkJ
@@ -54222,27 +53985,27 @@ jOb
 lLg
 jfM
 xAR
-fhz
-vHN
-fhz
+bCe
+pWJ
+bCe
 cwn
 kYF
 xAR
-fhz
-vHN
-vHN
+bCe
+pWJ
+pWJ
 cwn
 kYF
 xAR
-fhz
-fhz
-vHN
+bCe
+bCe
+pWJ
 voX
 kYF
 xAR
-fhz
-fhz
-fhz
+bCe
+bCe
+bCe
 voX
 vdf
 xAR
@@ -96633,7 +96396,7 @@ lRS
 lRS
 lLv
 lLv
-lgc
+iMp
 klv
 cbK
 bnB
@@ -97842,7 +97605,7 @@ iJr
 lLv
 chN
 iMp
-bFT
+qaR
 cbK
 nlK
 nlK
@@ -98440,7 +98203,7 @@ iAe
 iAe
 iAe
 iAe
-nVa
+lLv
 lLv
 lLv
 lLv
@@ -98746,7 +98509,7 @@ iAe
 jKL
 iJE
 iTz
-fxg
+xGf
 mdG
 lWx
 bsS
@@ -104190,7 +103953,7 @@ iTz
 iTz
 iTz
 iTz
-lgc
+iMp
 klv
 xRg
 nUT
@@ -112034,7 +111797,7 @@ jOb
 sLm
 iTz
 iTz
-lgc
+iMp
 cbK
 cbK
 cbK
@@ -115054,7 +114817,7 @@ chY
 uIa
 gZQ
 iTz
-lgc
+iMp
 rqr
 rqr
 rqr
@@ -116575,7 +116338,7 @@ cbK
 cbK
 iMp
 iTz
-xpS
+cYh
 tII
 cbK
 cbK
@@ -116857,12 +116620,12 @@ uIa
 uIa
 iTz
 iTz
-dhd
+ljN
 ljN
 iTz
 iTz
 iTz
-dhd
+ljN
 ljN
 iTz
 iTz
@@ -121095,7 +120858,7 @@ klv
 cbK
 nYD
 iTz
-lgM
+pQW
 xRg
 ghb
 xeX
@@ -122889,7 +122652,7 @@ lRS
 lRS
 lRS
 iJr
-nVI
+lLv
 iMp
 jOb
 jOb
@@ -123191,7 +122954,7 @@ lRS
 lRS
 lRS
 iJr
-nVI
+lLv
 iMp
 jOb
 jOb
@@ -123493,7 +123256,7 @@ lRS
 lRS
 lRS
 iJr
-nVI
+lLv
 iMp
 jOb
 jOb
@@ -123795,7 +123558,7 @@ lRS
 lRS
 lRS
 iJr
-nVI
+lLv
 iMp
 jOb
 jOb
@@ -124097,7 +123860,7 @@ lRS
 lRS
 lRS
 iJr
-nVI
+lLv
 iMp
 jOb
 jOb
@@ -124399,7 +124162,7 @@ lRS
 lRS
 lRS
 iJr
-nVI
+lLv
 iMp
 jOb
 jOb
@@ -124420,7 +124183,7 @@ dkJ
 iKK
 wRR
 iTz
-tyS
+idV
 idV
 idV
 iTz
@@ -124701,7 +124464,7 @@ lRS
 lRS
 lRS
 iJr
-nVI
+lLv
 iMp
 jOb
 jOb
@@ -125003,7 +124766,7 @@ lRS
 lRS
 lRS
 iJr
-nVI
+lLv
 iMp
 iMp
 iMp
@@ -125305,7 +125068,7 @@ lRS
 lRS
 lRS
 iJr
-nVI
+lLv
 cbK
 cbK
 cbK
@@ -125607,16 +125370,16 @@ lRS
 lRS
 lRS
 iJr
-nVI
+lLv
 bZA
 fLe
 qQw
 jOl
 bmC
 cQJ
-eto
-lFx
-xcd
+wPX
+gFN
+iMp
 fyV
 vce
 iMp
@@ -126211,7 +125974,7 @@ lRS
 lRS
 lRS
 iJr
-jWT
+lju
 eTs
 lLv
 bPS
@@ -126223,7 +125986,7 @@ cjS
 cCC
 ucb
 iTz
-fnH
+goe
 cKD
 kaY
 ukA
@@ -126232,7 +125995,7 @@ iTz
 wZf
 hKn
 iTz
-cUI
+qgB
 rEl
 iTz
 xGf
@@ -127118,14 +126881,14 @@ lRS
 lRS
 lLv
 lLv
-ciE
+lju
 iTz
 iTz
 jOb
 hps
 soU
 iTz
-eCw
+iMp
 jOl
 iMp
 iTz
@@ -127419,7 +127182,7 @@ lRS
 lRS
 lRS
 lRS
-gZA
+lju
 jOb
 xTC
 bbL
