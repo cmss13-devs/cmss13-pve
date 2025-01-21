@@ -673,8 +673,9 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "upp_g8pouch"
 	has_gamemode_skin = FALSE
 
+//this preset is for the US Army machinegunner. It
 /obj/item/storage/backpack/general_belt/army/fill_preset_inventory()
-	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
 		new /obj/item/ammo_magazine/hpr_box/ap (src)
 
 // Scout Cloak
