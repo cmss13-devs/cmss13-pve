@@ -1179,10 +1179,6 @@
 /area/golden_arrow/supply)
 "aek" = (
 /obj/structure/machinery/power/smes/buildable,
-/obj/structure/machinery/power/smes/buildable{
-	pixel_y = 16;
-	layer = 4.5
-	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
 "ael" = (
@@ -1343,12 +1339,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
-"aeP" = (
-/obj/structure/machinery/power/smes/buildable{
-	dir = 8
-	},
-/turf/open/floor/almayer/plating,
-/area/adminlevel/ert_station/uscm_station)
 "aeQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap{
@@ -15775,11 +15765,6 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
 "bPS" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "Disposals";
-	pixel_y = 30
-	},
 /obj/structure/machinery/pipedispenser/disposal,
 /turf/open/floor/almayer/plating,
 /area/adminlevel/ert_station/uscm_station)
@@ -15862,14 +15847,6 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "bUd" = (
-/obj/structure/machinery/power/smes/buildable{
-	capacity = 5e+007;
-	charge = 5e+007;
-	chargelevel = 200000;
-	dir = 4;
-	name = "Core Power Unit";
-	output = 150000
-	},
 /obj/structure/machinery/camera/autoname{
 	dir = 4
 	},
@@ -16840,15 +16817,6 @@
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
-"dlQ" = (
-/obj/structure/machinery/power/apc{
-	dir = 8;
-	name = "Hangar Bay";
-	pixel_x = -30;
-	pixel_y = 0
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "dlU" = (
 /obj/item/paper_bin,
 /obj/item/tool/pen/red/clicky,
@@ -16963,11 +16931,6 @@
 "dvX" = (
 /obj/structure/machinery/light{
 	dir = 1
-	},
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "Medbay Storage";
-	pixel_y = 30
 	},
 /obj/structure/machinery/camera/autoname,
 /turf/open/floor/almayer/dark_sterile,
@@ -17584,17 +17547,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
-"emH" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "EVA";
-	pixel_y = 30
-	},
-/obj/structure/surface/rack,
-/obj/item/tank/oxygen,
-/obj/item/clothing/mask/breath,
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "eow" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -17810,12 +17762,6 @@
 /turf/open/floor/engine,
 /area/adminlevel/ert_station/uscm_station)
 "eCw" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "Chief Engineer's Quarters";
-	pixel_y = 30;
-	pixel_z = 0
-	},
 /obj/structure/machinery/keycard_auth{
 	pixel_x = 30
 	},
@@ -18434,11 +18380,6 @@
 /turf/open/floor/almayer/cargo,
 /area/adminlevel/ert_station/uscm_station)
 "fus" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "Engineering Hall";
-	pixel_y = 30
-	},
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -18864,14 +18805,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
-"fSH" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "Medbay Storage";
-	pixel_y = 30
-	},
-/turf/open/floor/almayer/dark_sterile,
-/area/adminlevel/ert_station/uscm_station)
 "fTh" = (
 /obj/structure/machinery/power/apc{
 	dir = 4;
@@ -18932,14 +18865,6 @@
 /obj/structure/machinery/door/airlock/almayer/marine/charlie,
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
-"fYm" = (
-/obj/structure/machinery/power/apc{
-	dir = 4;
-	name = "Executive Quarters";
-	pixel_x = 30
-	},
-/turf/open/floor/almayer,
-/area/adminlevel/ert_station/uscm_station)
 "fYO" = (
 /obj/item/device/radio/intercom{
 	anyai = 1;
@@ -18969,18 +18894,6 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/adminlevel/ert_station/uscm_station)
-"gal" = (
-/obj/structure/machinery/power/apc{
-	dir = 4;
-	name = "Officer's Quarters";
-	pixel_x = 30;
-	pixel_y = 0
-	},
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/almayer/plating,
 /area/adminlevel/ert_station/uscm_station)
 "gbf" = (
 /obj/structure/disposalpipe/segment{
@@ -19047,16 +18960,6 @@
 	req_one_access = null
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/adminlevel/ert_station/uscm_station)
-"gdX" = (
-/obj/structure/machinery/power/apc{
-	dir = 8;
-	name = "Cryogenic Storage";
-	pixel_x = -30
-	},
-/obj/item/device/flashlight/flare,
-/obj/structure/surface/table/almayer,
-/turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
 "gfa" = (
 /obj/structure/closet/hydrant{
@@ -19557,13 +19460,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
-"gWS" = (
-/obj/structure/machinery/power/apc{
-	name = "Solar Array 2";
-	pixel_y = -30
-	},
-/turf/open/floor/almayer/plating,
-/area/adminlevel/ert_station/uscm_station)
 "gWT" = (
 /obj/structure/machinery/vending/sovietsoda,
 /turf/open/floor/almayer/plate,
@@ -19811,12 +19707,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "hjv" = (
-/obj/structure/machinery/power/apc{
-	dir = 8;
-	name = "Atmospherics";
-	pixel_x = -30;
-	start_charge = 90
-	},
 /obj/structure/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
@@ -20053,14 +19943,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
-"hyM" = (
-/obj/structure/machinery/power/apc{
-	dir = 4;
-	name = "Operating Theatre 1";
-	pixel_x = 30
-	},
-/turf/open/floor/almayer/dark_sterile,
-/area/adminlevel/ert_station/uscm_station)
 "hzM" = (
 /obj/structure/machinery/alarm{
 	pixel_y = 30
@@ -20116,14 +19998,6 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/plating,
-/area/adminlevel/ert_station/uscm_station)
-"hFz" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "Marine Prep";
-	pixel_y = 30
-	},
-/turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "hGc" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -21263,6 +21137,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"jqk" = (
+/obj/structure/machinery/medical_pod/bodyscanner{
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/adminlevel/ert_station/uscm_station)
 "jqz" = (
 /obj/structure/machinery/door/airlock/almayer/marine/delta,
 /turf/open/floor/almayer/test_floor4,
@@ -21987,13 +21867,6 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
-"kqu" = (
-/obj/structure/machinery/power/smes/buildable{
-	dir = 8
-	},
-/obj/structure/machinery/light,
-/turf/open/floor/almayer/plating,
-/area/adminlevel/ert_station/uscm_station)
 "krZ" = (
 /obj/structure/machinery/telecomms/server{
 	use_power = 0
@@ -22054,17 +21927,6 @@
 "kxJ" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
-/area/adminlevel/ert_station/uscm_station)
-"kyg" = (
-/obj/structure/machinery/power/apc{
-	dir = 4;
-	name = "Operating Theatre 2";
-	pixel_x = 30
-	},
-/obj/structure/machinery/bioprinter{
-	stored_metal = 1000
-	},
-/turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
 "kzu" = (
 /obj/structure/machinery/computer/overwatch,
@@ -22290,15 +22152,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "kWq" = (
-/obj/structure/machinery/power/smes/buildable{
-	charge = 5e+006;
-	chargelevel = 150000;
-	chargemode = 1;
-	cur_coils = 4;
-	dir = 4;
-	name = "Main Battery Unit";
-	output = 50000
-	},
+/obj/structure/machinery/power/smes/buildable,
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer/plating,
 /area/adminlevel/ert_station/uscm_station)
@@ -23178,15 +23032,6 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
-"mey" = (
-/obj/structure/machinery/power/apc{
-	dir = 8;
-	name = "Telecomms Monitoring";
-	pixel_x = -30;
-	pixel_y = 0
-	},
-/turf/open/floor/almayer,
-/area/adminlevel/ert_station/uscm_station)
 "mfc" = (
 /obj/structure/machinery/door/window/brigdoor/southright{
 	id = "Cell 4";
@@ -23524,18 +23369,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
-"mAR" = (
-/obj/structure/machinery/power/smes/buildable{
-	charge = 5e+006;
-	chargelevel = 150000;
-	chargemode = 1;
-	cur_coils = 4;
-	dir = 4;
-	name = "Main battery Unit";
-	output = 50000
-	},
-/turf/open/floor/almayer/plating,
-/area/adminlevel/ert_station/uscm_station)
 "mCo" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -23729,6 +23562,12 @@
 /mob/living/simple_animal/bat{
 	name = "Unknown Spacecraft"
 	},
+/obj/structure/machinery/power/apc{
+	dir = 4;
+	name = "AI Chamber";
+	pixel_x = 30;
+	pixel_y = 0
+	},
 /turf/open/floor/plating/prison,
 /area/adminlevel/ert_station/uscm_station)
 "mJp" = (
@@ -23823,15 +23662,6 @@
 	layer = 2.52
 	},
 /turf/open/floor/shiva/radiator_tile2,
-/area/adminlevel/ert_station/uscm_station)
-"mMJ" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "Lower Deck Maintenance";
-	pixel_x = 0;
-	pixel_y = 30
-	},
-/turf/open/floor/almayer/cargo_arrow/west,
 /area/adminlevel/ert_station/uscm_station)
 "mMR" = (
 /obj/structure/machinery/cm_vending/clothing/marine/charlie{
@@ -24150,14 +23980,6 @@
 	dir = 8
 	},
 /turf/open/floor/almayer,
-/area/adminlevel/ert_station/uscm_station)
-"nlO" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "Medbay";
-	pixel_y = 30
-	},
-/turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
 "nlR" = (
 /obj/structure/platform,
@@ -24547,16 +24369,6 @@
 	},
 /obj/structure/machinery/suit_storage_unit,
 /turf/open/floor/almayer,
-/area/adminlevel/ert_station/uscm_station)
-"nMk" = (
-/obj/structure/machinery/power/apc{
-	dir = 8;
-	name = "Cafeteria";
-	pixel_x = -30
-	},
-/obj/item/reagent_container/spray/cleaner,
-/obj/structure/surface/table/almayer,
-/turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "nNL" = (
 /obj/structure/sign/safety/two{
@@ -25501,17 +25313,6 @@
 	},
 /turf/open/floor/engine,
 /area/adminlevel/ert_station/uscm_station)
-"peJ" = (
-/obj/structure/machinery/power/apc{
-	name = "Captain's Quarters";
-	pixel_y = -30
-	},
-/obj/structure/machinery/light,
-/obj/structure/machinery/camera/autoname{
-	dir = 1
-	},
-/turf/open/floor/almayer,
-/area/adminlevel/ert_station/uscm_station)
 "pfn" = (
 /obj/structure/machinery/suit_storage_unit/standard_unit{
 	pixel_x = -1
@@ -25683,14 +25484,6 @@
 /obj/structure/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
-"pzu" = (
-/obj/structure/machinery/power/apc{
-	dir = 4;
-	name = "Medbay Hallway";
-	pixel_x = 30
 	},
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
@@ -26008,15 +25801,6 @@
 	},
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/lower_cargo)
-"pWX" = (
-/obj/structure/machinery/power/apc{
-	dir = 4;
-	name = "Deck 2 Hallway";
-	pixel_x = 34;
-	pixel_y = 0
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/adminlevel/ert_station/uscm_station)
 "pXl" = (
 /obj/structure/machinery/door_control{
 	pixel_y = 32;
@@ -26693,15 +26477,6 @@
 	pixel_y = 0
 	},
 /turf/open/floor/plating,
-/area/adminlevel/ert_station/uscm_station)
-"qTU" = (
-/obj/structure/machinery/power/apc{
-	dir = 2;
-	name = "Telecomms";
-	pixel_x = 0;
-	pixel_y = -30
-	},
-/turf/open/floor/almayer/plating,
 /area/adminlevel/ert_station/uscm_station)
 "qUi" = (
 /obj/structure/bed/chair{
@@ -27959,14 +27734,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"sEv" = (
-/obj/structure/machinery/power/apc{
-	dir = 8;
-	name = "Central Hall 2";
-	pixel_x = -30
-	},
-/turf/open/floor/almayer/plate,
-/area/adminlevel/ert_station/uscm_station)
 "sGD" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -29004,14 +28771,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
-"uhY" = (
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "Solar Array";
-	pixel_y = 30
-	},
-/turf/open/floor/almayer/plating,
-/area/adminlevel/ert_station/uscm_station)
 "uin" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -29269,15 +29028,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "uEp" = (
-/obj/structure/machinery/power/smes/buildable{
-	charge = 3e+006;
-	chargelevel = 100000;
-	chargemode = 1;
-	cur_coils = 4;
-	dir = 4;
-	name = "Main Battery Unit";
-	output = 50000
-	},
+/obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/almayer/plating,
 /area/adminlevel/ert_station/uscm_station)
 "uGj" = (
@@ -30194,15 +29945,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
-"wgx" = (
-/obj/structure/machinery/power/apc{
-	dir = 4;
-	name = "AI Chamber";
-	pixel_x = 30;
-	pixel_y = 0
-	},
-/turf/open/floor/almayer,
-/area/adminlevel/ert_station/uscm_station)
 "whY" = (
 /obj/structure/machinery/light,
 /obj/item/storage/fancy/cigarettes/wypacket,
@@ -30717,6 +30459,10 @@
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/almayer/plating,
 /area/adminlevel/ert_station/uscm_station)
+"wXX" = (
+/obj/structure/machinery/medical_pod/sleeper,
+/turf/open/floor/almayer/dark_sterile,
+/area/adminlevel/ert_station/uscm_station)
 "wYO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -31028,12 +30774,6 @@
 /obj/item/ammo_magazine/pistol,
 /obj/item/ammo_magazine/pistol,
 /obj/item/weapon/gun/pistol/m4a3,
-/obj/structure/machinery/power/apc{
-	dir = 1;
-	name = "Firing Range";
-	pixel_x = 0;
-	pixel_y = 30
-	},
 /obj/structure/machinery/camera/autoname,
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/plate,
@@ -45165,7 +44905,7 @@ cbK
 jTE
 iTz
 xof
-qTU
+jOb
 iTz
 ksA
 ksA
@@ -46675,7 +46415,7 @@ jOM
 lFN
 iTz
 dtH
-mey
+cbK
 cbK
 cbK
 cbK
@@ -47883,7 +47623,7 @@ cbK
 hJK
 bDL
 xeX
-wgx
+cbK
 niU
 bmC
 cbK
@@ -51805,7 +51545,7 @@ cbK
 kxp
 jBL
 bmC
-pWX
+bLY
 bmC
 ozj
 iMp
@@ -54520,7 +54260,7 @@ nvP
 iTz
 cbK
 iMp
-dlQ
+iMp
 lFN
 lFN
 pXr
@@ -63280,7 +63020,7 @@ vtE
 lLv
 lLv
 iTz
-mMJ
+lFN
 slM
 lFN
 iTz
@@ -99676,7 +99416,7 @@ uIa
 uIa
 iAe
 ekL
-fYm
+cbK
 gzT
 iMp
 cbK
@@ -99692,7 +99432,7 @@ iMp
 kCl
 cbK
 cbK
-peJ
+dqJ
 iTz
 lCB
 hVK
@@ -101481,13 +101221,13 @@ nVa
 iAe
 xhA
 uIa
-hyM
+uIa
 ojN
 uIa
 iAe
 xhA
 kYi
-kyg
+dtK
 uIa
 ydw
 iAe
@@ -103297,10 +103037,10 @@ uIa
 xGp
 uIa
 uIa
+jqk
 uIa
 uIa
-uIa
-uIa
+jqk
 hMU
 iMp
 cbK
@@ -104515,7 +104255,7 @@ cbK
 xRg
 wMA
 jOb
-gal
+mqX
 jOb
 wMA
 xeX
@@ -106914,9 +106654,9 @@ lRS
 lRS
 lRS
 nVa
+wXX
 uIa
-uIa
-uIa
+wXX
 uIa
 uIa
 uIa
@@ -106930,7 +106670,7 @@ kOi
 bmC
 cbK
 gRx
-pzu
+iMp
 qaR
 iMp
 gRx
@@ -107518,7 +107258,7 @@ lRS
 lRS
 lRS
 nVa
-nlO
+uIa
 uIa
 uIa
 uIa
@@ -107536,7 +107276,7 @@ cbK
 jEk
 iMp
 pXr
-sEv
+iMp
 jEk
 cbK
 lFN
@@ -107820,9 +107560,9 @@ lRS
 lRS
 lRS
 nVa
+wXX
 uIa
-uIa
-uIa
+wXX
 uIa
 uIa
 gdd
@@ -109028,7 +108768,7 @@ lRS
 lRS
 lRS
 nVa
-fSH
+uIa
 uIa
 uIa
 uIa
@@ -110548,7 +110288,7 @@ iJr
 iJr
 iJr
 lLv
-aeP
+jOb
 jOb
 jOb
 rdx
@@ -110562,7 +110302,7 @@ iTz
 jOb
 jOb
 jOb
-kqu
+dtM
 dSl
 iJr
 lRS
@@ -110850,7 +110590,7 @@ iJr
 iJr
 lLv
 lLv
-uhY
+jOb
 jOb
 wCv
 wCv
@@ -110864,7 +110604,7 @@ xVq
 jOb
 jOb
 jOb
-gWS
+jOb
 dSl
 iJr
 iJr
@@ -113868,7 +113608,7 @@ iTz
 gJr
 xtb
 mCo
-gdX
+neo
 fcN
 iTz
 iTz
@@ -119318,7 +119058,7 @@ hhv
 cbK
 kxJ
 cCC
-nMk
+sMS
 iTz
 dso
 cbK
@@ -119622,7 +119362,7 @@ xTv
 kxJ
 kWp
 iTz
-hFz
+iMp
 cbK
 cbK
 ech
@@ -128082,7 +127822,7 @@ iyf
 jOb
 jOb
 iTz
-emH
+dja
 cbK
 iMp
 fdn
@@ -128369,7 +128109,7 @@ dSM
 iTz
 iTz
 iTz
-mAR
+uEp
 uEp
 kWq
 iTz
@@ -130184,7 +129924,7 @@ hZI
 jOb
 jOb
 jOb
-bTm
+jOb
 jOb
 jOb
 jOb
