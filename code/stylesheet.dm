@@ -152,6 +152,8 @@ h1.alert, h2.alert {color: #000000;}
 .german {color: #858F1E; font-family: 'Times New Roman', Times, serif}
 .spanish {color: #CF982B;}
 .portuguese {color: #974c0e;}
+.french {color: #1b3272;}
+.filipino {color: #551d6e;}
 .ruspatois {color: #258687}
 .japanese {color: #0047A0}
 .commando {color: #FE9B24; font-style: bold;}

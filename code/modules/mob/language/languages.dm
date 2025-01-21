@@ -79,7 +79,7 @@
 
 /datum/language/portuguese
 	name = LANGUAGE_PORTUGUESE
-	desc = "The third most common language spoken in the UA as a result of Brazil's massive population."
+	desc = "The third most common language spoken in the UA."
 	speech_verb = "dice"
 	ask_verb = "cuestiona"
 	exclaim_verb = "grita"
@@ -87,6 +87,29 @@
 	key = "6"
 
 	syllables = list("o", "de", "e", "que", "um", "para", "com", "por", "seu", "outro", "ele", "já", "eiro", "bem", "bom", "só", "iço", "iça", "lho", "lha", "ção", "pois", "hoje", "ém", "hão", "três", "ela", "aço", "aça", "ça", "você", "ança", "lhe", "lher", "lado", "fim", "nem", "são", "vir", "sem", "sim", "nó", "se", "em", "até", "esse", "nosso", "eu", "dois", "ar", "mal", "não", "muito", "bém", "mais", "en", "tão", "lá", "aí", "ou")
+
+/datum/language/french
+	name = LANGUAGE_FRENCH
+	desc = "The most spoken language on Earth. Vive la France."
+	speech_verb = "dice"
+	ask_verb = "cuestiona"
+	exclaim_verb = "grita"
+	color = "french"
+	key = "7"
+
+	syllables = list("la", "là", "pou", "tu", "cou", "fou", "sous", "chou", "je", "ro", "po", "me", "âge", "île", "ni", "moi", "ami", "pâtes", "fromage", "vin", "coup", "grâce", "rôle", "et", "beau", "cuit", "clé", "eau", "lit", "pain", "plus", "trop", "agi", "bien", "songé", "cure", "vite", "dur", "vide", "cru", "bas", "ta", "pis", "pire", "mieux", "meilleur", "bien", "mauvais", "à", "belle", "mur", "sac", "chez", "ai", "pomme", "que", "longe", "genre", "mon", "gérée", "série", "erreur", "ira", "jeu", "jou", "pu", "puis", "qui", "que", "côté", "côte", "vie", "ville", "sur", "tard", "les", "des", "voix", "pluie", "pont", "pot", "roue", "peu", "sec", "vis", "où", "ou", "seul", "mienne", "os", "né", "mort", "trou", "pâle", "tue", "cher", "en", "incroyable", "on", "un", "eu", "au", "œil", "aide", "oui", "non", "si", "été", "nez", "près", "après", "mûr", "sûr", "croît", "ère", "lui", "tâche")
+
+/datum/language/filipino
+	name = LANGUAGE_FILIPINO
+	desc = "The fourth most common language spoken in the UA."
+	speech_verb = "dice"
+	ask_verb = "cuestiona"
+	exclaim_verb = "grita"
+	color = "filipino"
+	key = "f"
+
+	syllables = list("o", "de", "e", "que", "um", "para", "com", "por", "seu", "outro", "ele", "já", "eiro", "bem", "bom", "só", "iço", "iça", "lho", "lha", "ção", "pois", "hoje", "ém", "hão", "três", "ela", "aço", "aça", "ça", "você", "ança", "lhe", "lher", "lado", "fim", "nem", "são", "vir", "sem", "sim", "nó", "se", "em", "até", "esse", "nosso", "eu", "dois", "ar", "mal", "não", "muito", "bém", "mais", "en", "tão", "lá", "aí", "ou")
+
 
 /datum/language/commando
 	name = LANGUAGE_TSL
