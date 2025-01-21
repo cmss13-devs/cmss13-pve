@@ -21282,14 +21282,6 @@
 /area/adminlevel/ert_station/uscm_station)
 "lzB" = (
 /obj/structure/bed/chair/office/dark,
-/obj/structure/machinery/door_control{
-	id = "ROlobby1";
-	name = "RO Line 1 Shutters";
-	pixel_x = -30;
-	pixel_y = 0;
-	pixel_z = 0;
-	req_one_access_txt = "1;21"
-	},
 /obj/structure/machinery/flasher_button{
 	id = "req";
 	name = "flash activation switch";
@@ -23704,17 +23696,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
-"oSj" = (
-/obj/structure/machinery/door_control{
-	id = "qm_warehouse";
-	name = "RO Warehouse Shutters";
-	pixel_x = -30;
-	pixel_y = 0;
-	pixel_z = 0;
-	req_one_access_txt = "1;21"
-	},
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/adminlevel/ert_station/uscm_station)
 "oSq" = (
 /obj/structure/machinery/camera/autoname{
 	dir = 1
@@ -24066,14 +24047,6 @@
 /area/golden_arrow/engineering)
 "pHi" = (
 /obj/structure/bed/chair/office/dark,
-/obj/structure/machinery/door_control{
-	id = "ROlobby2";
-	name = "RO Line 2 Shutters";
-	pixel_x = 30;
-	pixel_y = -30;
-	pixel_z = 0;
-	req_one_access_txt = "1;21"
-	},
 /obj/structure/machinery/flasher_button{
 	id = "req";
 	name = "flash activation switch";
@@ -122717,7 +122690,7 @@ cbK
 rNX
 xRg
 hRT
-oSj
+xeX
 rud
 dkJ
 iKK
