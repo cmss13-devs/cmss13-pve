@@ -1641,10 +1641,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/multi_tile/strata{
 	color = "#8B9490";
 	name = "\improper Briefing Room";
-	req_one_access_txt = "230"
+	req_one_access_txt = "230";
+	dir = 1
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
@@ -2081,14 +2082,6 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
-"rH" = (
-/obj/structure/machinery/door/airlock/strata/circular{
-	color = "#8B9490";
-	name = "\improper Briefing Room";
-	req_one_access_txt = "230"
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/briefing)
 "rM" = (
 /obj/structure/largecrate/random/case{
 	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy,/obj/item/ammo_magazine/shotgun/slug/heavy);
@@ -15075,7 +15068,7 @@ rk
 fh
 fh
 fh
-rH
+jL
 oc
 cT
 cT
