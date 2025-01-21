@@ -18071,7 +18071,6 @@
 /area/adminlevel/ert_station/uscm_station)
 "gqb" = (
 /obj/structure/machinery/computer3/powermonitor,
-/obj/structure/surface/table,
 /obj/structure/surface/table/almayer,
 /obj/structure/platform{
 	dir = 4
@@ -19789,12 +19788,6 @@
 	},
 /turf/open/floor/almayer/cargo_arrow,
 /area/adminlevel/ert_station/uscm_station)
-"jmb" = (
-/obj/structure/machinery/door/firedoor/border_only/almayer,
-/obj/structure/machinery/door/airlock/almayer/maint,
-/obj/structure/machinery/door/firedoor/border_only/almayer,
-/turf/open/floor/almayer/test_floor4,
-/area/adminlevel/ert_station/uscm_station)
 "jmu" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -19830,7 +19823,6 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "jmZ" = (
-/obj/structure/machinery/cell_charger,
 /obj/structure/machinery/cell_charger,
 /obj/item/device/flashlight,
 /obj/item/tool/wrench,
@@ -60270,9 +60262,9 @@ iMp
 wDR
 iTz
 iTz
-jmb
+gkB
 iTz
-jmb
+gkB
 iTz
 iTz
 iMp
