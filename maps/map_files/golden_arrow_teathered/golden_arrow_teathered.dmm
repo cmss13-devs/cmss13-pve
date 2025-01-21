@@ -26792,18 +26792,6 @@
 /turf/open/floor/almayer/plating,
 /area/adminlevel/ert_station/uscm_station)
 "roO" = (
-/obj/structure/machinery/power/smes/batteryrack/substation{
-	capacity = 1e+006;
-	charge = 1e+006;
-	chargelevel = 15000;
-	chargemode = 1;
-	dir = 4;
-	input_level_max = 15000;
-	name = "Bridge Power Substation";
-	output = 15000;
-	output_level_max = 15000;
-	unacidable = 1
-	},
 /obj/structure/window/reinforced{
 	dir = 4
 	},
