@@ -63,6 +63,27 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
+"aq" = (
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator,
+/obj/item/weapon/gun/rifle/type71/carbine{
+	current_mag = null
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/obj/structure/closet/secure_closet{
+	name = "squad sergeant locker";
+	req_access_txt = "244;238"
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/squad_two)
 "ax" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -248,25 +269,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
-"cb" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice2";
-	pixel_x = 16;
-	pixel_y = 16
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/type73,
-/obj/item/ammo_box/magazine/np92{
-	pixel_y = 11;
-	pixel_x = -3
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/squad_two)
 "cc" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
@@ -421,6 +423,19 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"dh" = (
+/obj/structure/ore_box{
+	name = "wooden cargo crate";
+	anchored = 1
+	},
+/obj/item/storage/box/packet/high_explosive/upp/smoke{
+	pixel_y = 15
+	},
+/obj/item/storage/box/packet/high_explosive/upp/smoke{
+	pixel_y = 21
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/supply)
 "dm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/faxmachine{
@@ -786,21 +801,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/supply)
-"gc" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/np92{
-	pixel_y = 10;
-	pixel_x = 4
-	},
-/obj/item/ammo_box/magazine/type73{
-	pixel_x = 3
-	},
-/obj/structure/prop/ice_colony/hula_girl{
-	pixel_x = -7;
-	pixel_y = 12
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/squad_one)
 "gd" = (
 /obj/structure/cargo_container/hd/mid{
 	opacity = 0
@@ -898,6 +898,27 @@
 	dir = 8
 	},
 /area/golden_arrow/briefing)
+"hb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/item/storage/box/packet/high_explosive/upp,
+/obj/item/storage/box/packet/high_explosive/upp{
+	pixel_y = -5
+	},
+/obj/item/storage/box/packet/high_explosive/upp,
+/obj/item/storage/box/packet/high_explosive/upp,
+/obj/item/storage/box/packet/high_explosive/upp{
+	pixel_y = 6
+	},
+/obj/structure/closet/crate/secure/ammo{
+	name = "secure Type 6 grenade crate";
+	color = "#979b6d";
+	desc = "A secure crate."
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/squad_two)
 "hk" = (
 /obj/structure/machinery/cryopod/big/flipped{
 	pixel_x = -8;
@@ -1015,23 +1036,6 @@
 /turf/open/floor/corsat,
 /area/golden_arrow/canteen)
 "is" = (
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/dorms)
-"iy" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/large_shrapnel/at_rocket_dud{
-	drop_sensitivity = 0;
-	impact_sensitivity = 1;
-	pixel_x = -6;
-	pixel_y = 13
-	},
-/obj/item/attachable/bayonet/upp{
-	pixel_x = -9;
-	pixel_y = 2
-	},
-/obj/structure/prop/ice_colony/hula_girl{
-	pixel_x = 8
-	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
 "iA" = (
@@ -1356,6 +1360,23 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/squad_one)
+"ls" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/large_shrapnel/at_rocket_dud{
+	drop_sensitivity = 0;
+	impact_sensitivity = 1;
+	pixel_x = -6;
+	pixel_y = 13
+	},
+/obj/item/attachable/bayonet/upp{
+	pixel_x = -9;
+	pixel_y = 2
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = 8
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/dorms)
 "lv" = (
 /obj/structure/machinery/conveyor,
 /obj/structure/machinery/conveyor{
@@ -1424,10 +1445,6 @@
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
-"mg" = (
-/obj/structure/gun_rack/ag80/unloaded,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/squad_one)
 "mk" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -1637,6 +1654,27 @@
 "og" = (
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_sergeant)
+"oi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/item/storage/box/packet/high_explosive/upp,
+/obj/item/storage/box/packet/high_explosive/upp{
+	pixel_y = -5
+	},
+/obj/item/storage/box/packet/high_explosive/upp,
+/obj/item/storage/box/packet/high_explosive/upp,
+/obj/item/storage/box/packet/high_explosive/upp{
+	pixel_y = 6
+	},
+/obj/structure/closet/crate/secure/ammo{
+	name = "secure Type 6 grenade crate";
+	color = "#979b6d";
+	desc = "A secure crate."
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/squad_one)
 "oj" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Maintenance Tunnels"
@@ -1663,6 +1701,33 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
+"oo" = (
+/obj/structure/closet/crate/secure/ammo{
+	name = "secure Type 6 grenade crate";
+	color = "#979b6d"
+	},
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/squad_one)
 "os" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/platoon_commander_rooms)
@@ -1760,19 +1825,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
-"py" = (
-/obj/item/device/whistle,
-/obj/item/device/binoculars/range/designator,
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/closet/secure_closet{
-	name = "squad sergeant locker";
-	req_access_txt = "244;237"
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/squad_one)
 "pz" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -1866,35 +1918,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
-"qw" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C";
-	pixel_y = -5
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C";
-	pixel_y = 6
-	},
-/obj/structure/closet/crate/secure/ammo{
-	name = "secure Type 6 grenade crate";
-	color = "#979b6d";
-	desc = "A secure crate."
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/squad_one)
 "qy" = (
 /obj/structure/largecrate/random/case{
 	stuff = list(/obj/item/stack/sandbags/large_stack);
@@ -2507,13 +2530,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
-"vA" = (
-/obj/structure/ore_box{
-	name = "wooden cargo crate";
-	anchored = 1
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/supply)
 "vC" = (
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
@@ -3488,10 +3504,6 @@
 /obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/prep_hallway)
-"DD" = (
-/obj/structure/gun_rack/ag80/unloaded,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/squad_two)
 "DH" = (
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
@@ -3626,6 +3638,21 @@
 	},
 /turf/open/floor/corsat,
 /area/golden_arrow/prep_hallway)
+"Fn" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 10;
+	pixel_x = 4
+	},
+/obj/item/ammo_box/magazine/type73{
+	pixel_x = 3
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = -7;
+	pixel_y = 12
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/squad_one)
 "Fu" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3936,6 +3963,10 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
+"IJ" = (
+/obj/structure/gun_rack/ag80/unloaded,
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/squad_two)
 "IS" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/dorms)
@@ -3991,35 +4022,6 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
-"Jd" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C";
-	pixel_y = -5
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C";
-	pixel_y = 6
-	},
-/obj/structure/closet/crate/secure/ammo{
-	name = "secure Type 6 grenade crate";
-	color = "#979b6d";
-	desc = "A secure crate."
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/squad_two)
 "Jf" = (
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -4045,23 +4047,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
-"Jl" = (
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/closet/crate/secure/ammo{
-	name = "secure Type 6 grenade crate";
-	color = "#979b6d"
-	},
-/obj/item/ammo_box/magazine/ag80,
-/obj/item/ammo_box/magazine/ag80,
-/obj/item/ammo_box/magazine/ag80,
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/squad_two)
 "Js" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
@@ -4182,6 +4167,25 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
+"KO" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/type73,
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 11;
+	pixel_x = -3
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/squad_two)
 "La" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
@@ -4487,6 +4491,23 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
+"OY" = (
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/crate/secure/ammo{
+	name = "secure Type 6 grenade crate";
+	color = "#979b6d"
+	},
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/squad_two)
 "Pf" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -4504,6 +4525,10 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
+"Ps" = (
+/obj/structure/gun_rack/ag80/unloaded,
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/squad_one)
 "Py" = (
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/floor2,
@@ -4588,6 +4613,19 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"QA" = (
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/closet/secure_closet{
+	name = "squad sergeant locker";
+	req_access_txt = "244;237"
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/squad_one)
 "QB" = (
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
@@ -4878,33 +4916,6 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
-"TD" = (
-/obj/structure/closet/crate/secure/ammo{
-	name = "secure Type 6 grenade crate";
-	color = "#979b6d"
-	},
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice2";
-	pixel_x = 16;
-	pixel_y = 16
-	},
-/obj/item/ammo_box/magazine/ag80,
-/obj/item/ammo_box/magazine/ag80,
-/obj/item/ammo_box/magazine/ag80,
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/squad_one)
 "TF" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata/multi_tiles/west,
@@ -4979,27 +4990,6 @@
 /obj/item/trash/cigbutt/bcigbutt,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
-"Ur" = (
-/obj/item/device/whistle,
-/obj/item/device/binoculars/range/designator,
-/obj/item/weapon/gun/rifle/type71/carbine{
-	current_mag = null
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice1";
-	pixel_x = 16;
-	pixel_y = -15
-	},
-/obj/structure/closet/secure_closet{
-	name = "squad sergeant locker";
-	req_access_txt = "244;238"
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/squad_two)
 "Us" = (
 /obj/structure/cargo_container/upp/mk6/right{
 	opacity = 0
@@ -12766,11 +12756,11 @@ tZ
 tZ
 tZ
 ei
-gc
+Fn
 Fc
 Fc
 Fc
-py
+QA
 ww
 uB
 wj
@@ -12778,11 +12768,11 @@ og
 Ut
 fB
 NU
-cb
+KO
 Oq
 Oq
 Oq
-Ur
+aq
 IS
 IS
 IS
@@ -12918,7 +12908,7 @@ tZ
 cH
 xL
 ww
-mg
+Ps
 Fc
 xZ
 Fc
@@ -12930,7 +12920,7 @@ og
 aZ
 Gz
 NU
-DD
+IJ
 ID
 ML
 QB
@@ -13088,7 +13078,7 @@ qq
 rB
 wp
 CM
-iy
+ls
 cI
 gF
 is
@@ -13222,7 +13212,7 @@ jF
 lA
 YU
 ww
-TD
+oo
 Ze
 dK
 Ze
@@ -13234,7 +13224,7 @@ Wi
 Ut
 hv
 NU
-Jl
+OY
 QB
 Jt
 QB
@@ -13378,7 +13368,7 @@ lq
 Yc
 Kt
 wo
-qw
+oi
 ww
 Wf
 Kw
@@ -13390,7 +13380,7 @@ tm
 CV
 Mz
 bu
-Jd
+hb
 CM
 LR
 GH
@@ -15981,7 +15971,7 @@ uk
 kU
 kU
 kU
-vA
+dh
 Tr
 mV
 mV
