@@ -357,7 +357,7 @@
 				break
 		if(acid_t) layer = acid_t.layer
 		else
-			acid_t = get_turf(loc)x
+			acid_t = get_turf(loc)
 
 /obj/effect/xenomorph/acid/Destroy()
 	acid_t = null
