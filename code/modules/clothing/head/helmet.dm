@@ -286,7 +286,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	// PREFERENCES GEAR
 	/obj/item/prop/helmetgarb/gunoil = "gunoil",
-	/obj/item/prop/helmetgarb/netting = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/prop/helmetgarb/netting = "netting",
 	/obj/item/prop/helmetgarb/spent_buckshot = "spent_buckshot",
 	/obj/item/prop/helmetgarb/spent_slug = "spent_slug",
 	/obj/item/prop/helmetgarb/spent_flech = "spent_flech",
@@ -824,6 +824,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	specialty = "M10 pattern medic white"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
+
+/obj/item/clothing/head/helmet/marine/medic/plain
+	desc = "M10 combat helmet issued to marine hospital corpsmen. Identical to the standard marine M10, with the exception of the integrated medical optic sight."
+	icon_state = "helmet"
+	specialty = "M10 pattern medic"
 
 /obj/item/clothing/head/helmet/marine/covert
 	name = "\improper M10 covert helmet"
