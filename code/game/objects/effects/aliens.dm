@@ -357,8 +357,7 @@
 				break
 		if(acid_t) layer = acid_t.layer
 		else
-			animate(src, alpha = 0, 1 SECONDS)
-			QDEL_IN(src, 1 SECONDS) //No point in keeping it if it's not melting anything.
+			acid_t = get_turf(loc)x
 
 /obj/effect/xenomorph/acid/Destroy()
 	acid_t = null
