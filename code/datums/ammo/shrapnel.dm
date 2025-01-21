@@ -123,7 +123,7 @@
 /datum/ammo/bullet/shrapnel/incendiary/heavy/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary/heavy)
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, reagent = /datum/reagent/napalm/blue)
 	))
 
 /datum/ammo/bullet/shrapnel/metal
