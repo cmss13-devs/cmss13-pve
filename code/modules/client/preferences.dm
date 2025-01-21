@@ -1122,7 +1122,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					ShowChoices(user)
 					return
 				if("general")
-					var/msg = input(usr,"Give a physical description of your character. This will be shown regardless of clothing.","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
+					var/msg = input(usr,"Give a physical description of your character. This will be shown regardless of clothing. Character limit is [MAX_FLAVOR_MESSAGE_LEN]","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
 					if(msg != null)
 						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 						msg = html_encode(msg)
@@ -1145,7 +1145,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 			switch(href_list["task"])
 				if("med_record")
-					var/medmsg = input(usr,"Set your medical notes here.","Medical Records",html_decode(med_record)) as message
+					var/medmsg = input(usr,"Set your medical notes here, character limit is [MAX_RECORDS_MESSAGE_LEN].","Medical Records",html_decode(med_record)) as message
 
 					if(medmsg != null)
 						medmsg = copytext(medmsg, 1, MAX_RECORDS_MESSAGE_LEN)
@@ -1155,7 +1155,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 						SetRecords(user)
 
 				if("sec_record")
-					var/secmsg = input(usr,"Set your security notes here.","Security Records",html_decode(sec_record)) as message
+					var/secmsg = input(usr,"Set your security notes here, character limit is [MAX_RECORDS_MESSAGE_LEN].","Security Records",html_decode(sec_record)) as message
 
 					if(secmsg != null)
 						secmsg = copytext(secmsg, 1, MAX_RECORDS_MESSAGE_LEN)
@@ -1164,7 +1164,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 						sec_record = secmsg
 						SetRecords(user)
 				if("gen_record")
-					var/genmsg = input(usr,"Set your employment notes here.","Employment Records",html_decode(gen_record)) as message
+					var/genmsg = input(usr,"Set your employment notes here, character limit is [MAX_RECORDS_MESSAGE_LEN].","Employment Records",html_decode(gen_record)) as message
 
 					if(genmsg != null)
 						genmsg = copytext(genmsg, 1, MAX_RECORDS_MESSAGE_LEN)
@@ -1412,7 +1412,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 						return
 					predator_skin_color = new_skin_color
 				if("pred_flavor_text")
-					var/pred_flv_raw = input(user, "Choose your Predator's flavor text:", "Flavor Text", predator_flavor_text) as message
+					var/pred_flv_raw = input(user, "Choose your Predator's flavor text, character limit is [MAX_FLAVOR_MESSAGE_LEN]:", "Flavor Text", predator_flavor_text) as message
 					if(!pred_flv_raw)
 						predator_flavor_text = ""
 						return
