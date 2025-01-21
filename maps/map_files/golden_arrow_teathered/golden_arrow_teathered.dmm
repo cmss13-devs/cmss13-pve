@@ -113,14 +113,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/item/map/current_map,
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/map/current_map{
-	pixel_y = 2
-	},
-/obj/item/map/current_map{
-	pixel_y = 4
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "aax" = (
@@ -20866,7 +20859,6 @@
 	pixel_x = 6
 	},
 /obj/item/folder/white,
-/obj/item/map/current_map,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
 "kTr" = (
