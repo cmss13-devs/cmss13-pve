@@ -1,6 +1,6 @@
 
 /datum/equipment_preset/colonist
-	name = FACTION_COLONIST
+	name = "American Colonist"
 	languages = list(LANGUAGE_ENGLISH)
 	faction = FACTION_COLONIST
 	skills = /datum/skills/civilian
@@ -728,6 +728,7 @@
 // SPANISH COLONISTS//
 
 /datum/equipment_preset/colonist/spanish
+	name = "LatAm Colonist"
 	languages = list(LANGUAGE_SPANISH)
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -1423,7 +1424,7 @@
 // JAPANESE COLONISTS//
 
 /datum/equipment_preset/colonist/japanese
-	name = FACTION_COLONIST
+	name = "TWE Colonist"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
