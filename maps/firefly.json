@@ -1,0 +1,9 @@
+{
+    "map_name": "USCSS Firefly",
+    "map_path": "map_files/firefly",
+    "map_file": "firefly.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/firefly/",
+    "platoon": "/datum/squad/marine/pmc"
+}
