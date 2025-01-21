@@ -45,11 +45,6 @@
 	applyable = TRUE
 	cost = 1
 
-/datum/character_trait/language/portuguese
-	language_name = LANGUAGE_PORTUGUESE
-	applyable = TRUE
-	cost = 1
-
 /datum/character_trait/language/ruspatois
 	language_name = LANGUAGE_RUSPATOIS
 	applyable = TRUE
