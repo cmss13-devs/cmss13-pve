@@ -182,9 +182,6 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return TRUE
 
-/mob/living/silicon/proc/ai_can_target(mob/living/carbon/xenomorph/X)
-	return FALSE
-
 /mob/living/carbon/human/ai_check_stat(mob/living/carbon/xenomorph/X)
 	. = ..()
 	if(isfacehugger(X))
