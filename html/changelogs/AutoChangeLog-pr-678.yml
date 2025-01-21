@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - bugfix: "Sentry Guns no longer target Sentry Gun Laptops"
