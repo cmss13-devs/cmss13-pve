@@ -1124,13 +1124,13 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 				if("general")
 					var/msg = input(usr,"Give a physical description of your character. This will be shown regardless of clothing.","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
 					if(msg != null)
-						msg = copytext(msg, 1, MAX_PAPER_MESSAGE_LEN)
+						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 						msg = html_encode(msg)
 					flavor_texts[href_list["task"]] = msg
 				else
 					var/msg = input(usr,"Set the flavor text for your [href_list["task"]].","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
 					if(msg != null)
-						msg = copytext(msg, 1, MAX_PAPER_MESSAGE_LEN)
+						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 						msg = html_encode(msg)
 					flavor_texts[href_list["task"]] = msg
 			SetFlavorText(user)
@@ -1148,7 +1148,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					var/medmsg = input(usr,"Set your medical notes here.","Medical Records",html_decode(med_record)) as message
 
 					if(medmsg != null)
-						medmsg = copytext(medmsg, 1, MAX_BOOK_MESSAGE_LEN)
+						medmsg = copytext(medmsg, 1, MAX_RECORDS_MESSAGE_LEN)
 						medmsg = html_encode(medmsg)
 
 						med_record = medmsg
@@ -1158,7 +1158,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					var/secmsg = input(usr,"Set your security notes here.","Security Records",html_decode(sec_record)) as message
 
 					if(secmsg != null)
-						secmsg = copytext(secmsg, 1, MAX_BOOK_MESSAGE_LEN)
+						secmsg = copytext(secmsg, 1, MAX_RECORDS_MESSAGE_LEN)
 						secmsg = html_encode(secmsg)
 
 						sec_record = secmsg
@@ -1167,7 +1167,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					var/genmsg = input(usr,"Set your employment notes here.","Employment Records",html_decode(gen_record)) as message
 
 					if(genmsg != null)
-						genmsg = copytext(genmsg, 1, MAX_BOOK_MESSAGE_LEN)
+						genmsg = copytext(genmsg, 1, MAX_RECORDS_MESSAGE_LEN)
 						genmsg = html_encode(genmsg)
 
 						gen_record = genmsg
@@ -1416,7 +1416,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					if(!pred_flv_raw)
 						predator_flavor_text = ""
 						return
-					predator_flavor_text = strip_html(pred_flv_raw, MAX_MESSAGE_LEN)
+					predator_flavor_text = strip_html(pred_flv_raw, MAX_FLAVOR_MESSAGE_LEN)
 
 				if("commander_status")
 					var/list/options = list("Normal" = WHITELIST_NORMAL)

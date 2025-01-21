@@ -709,7 +709,7 @@
 			else
 				var/msg = input(usr,"Update the flavor text for your [href_list["flavor_change"]].","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]])) as message
 				if(msg != null)
-					msg = copytext(msg, 1, MAX_PAPER_MESSAGE_LEN)
+					msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 					msg = html_encode(msg)
 				flavor_texts[href_list["flavor_change"]] = msg
 				set_flavor()
