@@ -1302,9 +1302,10 @@
 		/obj/item/explosive/grenade/high_explosive,
 		/obj/item/explosive/grenade/incendiary,
 		/obj/item/explosive/grenade/smokebomb,
-		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
-		/obj/item/explosive/grenade/high_explosive/frag,
-		/obj/item/explosive/grenade/phosphorus/weak,
+		/obj/item/explosive/grenade/high_explosive/airburst/canister,
+		/obj/item/explosive/grenade/high_explosive/impact/heap,
+		/obj/item/explosive/grenade/high_explosive/tmfrag,
+		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
 	)
 
@@ -1402,8 +1403,9 @@
 		/obj/item/explosive/grenade/high_explosive,
 		/obj/item/explosive/grenade/incendiary,
 		/obj/item/explosive/grenade/smokebomb,
-		/obj/item/explosive/grenade/high_explosive/airburst/starshell,
-		/obj/item/explosive/grenade/high_explosive/frag,
-		/obj/item/explosive/grenade/phosphorus/weak,
+		/obj/item/explosive/grenade/high_explosive/airburst/canister,
+		/obj/item/explosive/grenade/high_explosive/impact/heap,
+		/obj/item/explosive/grenade/high_explosive/tmfrag,
+		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
 	)
