@@ -17,6 +17,16 @@
 	var/list/affecting // the list of all items that will be moved this ptick
 	var/id = "" // the control ID - must match controller ID
 
+/obj/structure/machinery/conveyor/start_processing()
+	if(!machine_processing)
+		machine_processing = 1
+		START_PROCESSING(SSfastobj, src)
+
+/obj/structure/machinery/conveyor/stop_processing()
+	if(machine_processing)
+		machine_processing = 0
+		STOP_PROCESSING(SSfastobj, src)
+
 /obj/structure/machinery/conveyor/centcom_auto
 	id = "round_end_belt"
 
