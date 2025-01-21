@@ -308,6 +308,13 @@ Defined in conflicts.dm of the #defines folder.
 	..()
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
 
+/obj/item/attachable/bayonet/kabar
+	name = "\improper KA-BAR combat knife"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "bayonet_classic"
+	item_state = "combat_knife"
+	desc = "Old school Marine Corps fighting knife. The iconic look of the knife has seen it remain popular among marines well after its replacement as standard-issue."
+
 /obj/item/attachable/bayonet/upp_replica
 	name = "\improper Type 80 bayonet"
 	icon_state = "upp_bayonet"

@@ -773,6 +773,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	category = "Weapons"
 	cost = 4
 
+/datum/gear/weapon/kabar
+	display_name = "KA-BAR combat knife"
+	path = /obj/item/attachable/bayonet/kabar
+
 /datum/gear/weapon/type_80_Bayonet
 	display_name = "Type 80 Bayonet"
 	path = /obj/item/attachable/bayonet/upp_replica
