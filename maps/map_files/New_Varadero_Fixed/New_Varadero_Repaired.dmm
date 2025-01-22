@@ -1832,7 +1832,7 @@
 /obj/item/stack/sheet/mineral/plastic{
 	amount = 3
 	},
-/obj/item/weapon/gun/rifle/m4ra,
+/obj/item/weapon/gun/rifle/m49a,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "bzQ" = (
@@ -1893,7 +1893,7 @@
 	name = "exotic bedsheet";
 	pixel_x = -1
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "bAF" = (
@@ -11199,7 +11199,7 @@
 /area/varadero/exterior/lz1_near)
 "jhS" = (
 /obj/structure/bedsheetbin,
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /obj/structure/machinery/storm_siren{
 	dir = 4;
 	pixel_x = -3
@@ -21897,7 +21897,7 @@
 	pixel_x = -2;
 	pixel_y = 8
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "srg" = (
@@ -26537,7 +26537,7 @@
 /obj/structure/bedsheetbin{
 	icon_state = "linenbin-empty"
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "wpG" = (
@@ -28417,14 +28417,14 @@
 /area/varadero/interior/hall_N)
 "xXp" = (
 /obj/structure/closet/crate/ammo/alt,
-/obj/item/ammo_magazine/rifle/m4ra{
+/obj/item/ammo_magazine/rifle/m49a{
 	pixel_x = 5
 	},
-/obj/item/ammo_magazine/rifle/m4ra{
+/obj/item/ammo_magazine/rifle/m49a{
 	pixel_y = -5;
 	pixel_x = -8
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /obj/item/ammo_magazine/rifle{
 	pixel_x = 5;
 	pixel_y = 4

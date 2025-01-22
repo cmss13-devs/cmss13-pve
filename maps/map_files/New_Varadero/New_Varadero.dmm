@@ -1878,7 +1878,7 @@
 	name = "exotic bedsheet";
 	pixel_x = -1
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "bBt" = (
@@ -8597,7 +8597,7 @@
 	pixel_x = -2;
 	pixel_y = 8
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "gNA" = (
@@ -21959,7 +21959,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/maintenance/north)
 "rmW" = (
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/bunks)
 "rnb" = (
@@ -27061,7 +27061,7 @@
 /area/varadero/interior_protected/vessel)
 "vvz" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/item/weapon/gun/rifle/m4ra,
+/obj/item/weapon/gun/rifle/m49a,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "vvA" = (
@@ -27231,7 +27231,7 @@
 /area/varadero/interior/hall_SE)
 "vCZ" = (
 /obj/structure/bedsheetbin,
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /obj/structure/machinery/storm_siren{
 	dir = 4;
 	pixel_x = -3
@@ -30152,14 +30152,14 @@
 /area/varadero/interior/chapel)
 "xXp" = (
 /obj/structure/closet/crate/ammo/alt,
-/obj/item/ammo_magazine/rifle/m4ra{
+/obj/item/ammo_magazine/rifle/m49a{
 	pixel_x = 5
 	},
-/obj/item/ammo_magazine/rifle/m4ra{
+/obj/item/ammo_magazine/rifle/m49a{
 	pixel_y = -5;
 	pixel_x = -8
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /obj/item/ammo_magazine/rifle{
 	pixel_x = 5;
 	pixel_y = 4

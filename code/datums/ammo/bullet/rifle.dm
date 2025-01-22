@@ -218,7 +218,7 @@
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_8
 
-// Custom Specialist M4RA rounds
+// Custom Specialist M49A rounds
 
 /datum/ammo/bullet/rifle/heavy/spec
 	name = "high velocity 10x28 bullet"

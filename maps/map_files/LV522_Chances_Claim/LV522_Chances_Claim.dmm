@@ -22431,7 +22431,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "lwZ" = (
-/obj/item/ammo_box/magazine/m4ra/ap/empty,
+/obj/item/ammo_box/magazine/m49a/ap/empty,
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
 	},

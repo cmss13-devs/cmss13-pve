@@ -5968,10 +5968,10 @@
 /obj/structure/closet/secure_closet{
 	name = "\improper Execution Firearms"
 	},
-/obj/item/weapon/gun/rifle/m4ra,
-/obj/item/weapon/gun/rifle/m4ra,
-/obj/item/weapon/gun/rifle/m4ra,
-/obj/item/ammo_box/magazine/m4ra,
+/obj/item/weapon/gun/rifle/m49a,
+/obj/item/weapon/gun/rifle/m49a,
+/obj/item/weapon/gun/rifle/m49a,
+/obj/item/ammo_box/magazine/m49a,
 /turf/open/floor/almayer/plate,
 /area/almayer/shipboard/brig/execution_storage)
 "cnQ" = (
@@ -20646,7 +20646,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/maint/upper/u_a_s)
 "hAn" = (
-/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m4ra_rifle,
+/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m49a_rifle,
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
@@ -21100,7 +21100,7 @@
 /turf/open/floor/almayer,
 /area/almayer/hallways/lower/starboard_aft_hallway)
 "hIQ" = (
-/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m4ra_rifle,
+/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m49a_rifle,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/shipboard/brig/armory)
 "hIR" = (

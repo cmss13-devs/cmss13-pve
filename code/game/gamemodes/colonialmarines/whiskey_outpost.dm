@@ -452,8 +452,8 @@
 								/obj/item/ammo_box/rounds/smg/ap,
 								/obj/item/ammo_box/magazine/ap,
 								/obj/item/ammo_box/magazine/ext,
-								/obj/item/ammo_box/magazine/m4ra/ap,
-								/obj/item/ammo_box/magazine/m4ra/ap,
+								/obj/item/ammo_box/magazine/m49a/ap,
+								/obj/item/ammo_box/magazine/m49a/ap,
 								/obj/item/ammo_box/magazine/m39/ap,
 								/obj/item/ammo_box/magazine/m39/ext,
 				)
@@ -753,10 +753,10 @@
 							/obj/item/ammo_magazine/flamer_tank/large,
 							fuel)
 		if(7) // Scout
-			spawnitems = list(/obj/item/ammo_magazine/rifle/m4ra/custom,
-							/obj/item/ammo_magazine/rifle/m4ra/custom,
-							/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
-							/obj/item/ammo_magazine/rifle/m4ra/custom/impact)
+			spawnitems = list(/obj/item/ammo_magazine/rifle/m49a/custom,
+							/obj/item/ammo_magazine/rifle/m49a/custom,
+							/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
+							/obj/item/ammo_magazine/rifle/m49a/custom/impact)
 	crate.storage_capacity = 60
 	for(var/path in spawnitems)
 		new path(crate)

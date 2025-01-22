@@ -136,53 +136,53 @@
 /obj/item/ammo_box/magazine/m39/heap/empty
 	empty = TRUE
 
-//-----------------------M4RA Battle Rifle Mag Boxes-----------------------
+//-----------------------M49A Battle Rifle Mag Boxes-----------------------
 
-/obj/item/ammo_box/magazine/m4ra
-	name = "magazine box (M4RA x 16)"
-	icon_state = "base_m4ra"
+/obj/item/ammo_box/magazine/m49a
+	name = "magazine box (M49A x 16)"
+	icon_state = "base_m49a"
 	flags_equip_slot = SLOT_BACK
-	overlay_gun_type = "_m4ra"
+	overlay_gun_type = "_m49a"
 	num_of_magazines = 16
-	magazine_type = /obj/item/ammo_magazine/rifle/m4ra
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a
 
-/obj/item/ammo_box/magazine/m4ra/empty
+/obj/item/ammo_box/magazine/m49a/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m4ra/ap
-	name = "magazine box (AP M4RA x 16)"
+/obj/item/ammo_box/magazine/m49a/ap
+	name = "magazine box (AP M49A x 16)"
 	overlay_ammo_type = "_ap"
 	overlay_content = "_ap"
-	magazine_type = /obj/item/ammo_magazine/rifle/m4ra/ap
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/ap
 
-/obj/item/ammo_box/magazine/m4ra/ap/empty
+/obj/item/ammo_box/magazine/m49a/ap/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m4ra/ext
-	name = "magazine box (Ext M4RA x 12)"
+/obj/item/ammo_box/magazine/m49a/ext
+	name = "magazine box (Ext M49A x 12)"
 	overlay_ammo_type = "_ext"
 	num_of_magazines = 12
-	magazine_type = /obj/item/ammo_magazine/rifle/m4ra/ext
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/ext
 
-/obj/item/ammo_box/magazine/m4ra/ext/empty
+/obj/item/ammo_box/magazine/m49a/ext/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m4ra/incen
-	name = "magazine box (Incen M4RA x 16)"
+/obj/item/ammo_box/magazine/m49a/incen
+	name = "magazine box (Incen M49A x 16)"
 	overlay_ammo_type = "_incen"
 	overlay_content = "_incen"
-	magazine_type = /obj/item/ammo_magazine/rifle/m4ra/incendiary
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/incendiary
 
-/obj/item/ammo_box/magazine/m4ra/incen/empty
+/obj/item/ammo_box/magazine/m49a/incen/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m4ra/heap
-	name = "magazine box (HEAP M4RA x 16)"
+/obj/item/ammo_box/magazine/m49a/heap
+	name = "magazine box (HEAP M49A x 16)"
 	overlay_ammo_type = "_heap"
 	overlay_content = "_heap"
-	magazine_type = /obj/item/ammo_magazine/rifle/m4ra/heap
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/heap
 
-/obj/item/ammo_box/magazine/m4ra/heap/empty
+/obj/item/ammo_box/magazine/m49a/heap/empty
 	empty = TRUE
 
 //-----------------------XM51 Breaching Scattergun Mag Box-----------------------

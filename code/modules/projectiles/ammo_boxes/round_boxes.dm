@@ -1,10 +1,10 @@
 //-----------------------AMMUNITION BOXES (LOOSE AMMO)-----------------------
 
-//----------------10x24mm Ammunition Boxes (for M41 family, M4RA, and L42)------------------
+//----------------10x24mm Ammunition Boxes (for M41 family, M49A, and L42)------------------
 
 /obj/item/ammo_box/rounds/ap
 	name = "\improper rifle ammunition box (10x24mm AP)"
-	desc = "A 10x24mm armor-piercing ammunition box. Used to refill M41A MK2, and M4RA AP magazines. It comes with a leather strap allowing to wear it on the back."
+	desc = "A 10x24mm armor-piercing ammunition box. Used to refill M41A MK2, and M49A AP magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_ap"
 	default_ammo = /datum/ammo/bullet/rifle/ap
 
@@ -22,7 +22,7 @@
 
 /obj/item/ammo_box/rounds/incen
 	name = "\improper rifle ammunition box (10x24mm Incen)"
-	desc = "A 10x24mm incendiary ammunition box. Used to refill M41A MK2 and M4RA incendiary magazines. It comes with a leather strap allowing to wear it on the back."
+	desc = "A 10x24mm incendiary ammunition box. Used to refill M41A MK2 and M49A incendiary magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_incen"
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	bullet_amount = 400 //Incen is OP

@@ -51,12 +51,12 @@
 /datum/supply_packs_asrs/ammo_mag_box_ap
 	reference_package = /datum/supply_packs/ammo_mag_box_ap
 
-/datum/supply_packs_asrs/ammo_m4ra_mag_box
-	reference_package = /datum/supply_packs/ammo_m4ra_mag_box
+/datum/supply_packs_asrs/ammo_m49a_mag_box
+	reference_package = /datum/supply_packs/ammo_m49a_mag_box
 	cost = ASRS_VERY_LOW_WEIGHT
 
-/datum/supply_packs_asrs/ammo_m4ra_mag_box_ap
-	reference_package = /datum/supply_packs/ammo_m4ra_mag_box_ap
+/datum/supply_packs_asrs/ammo_m49a_mag_box_ap
+	reference_package = /datum/supply_packs/ammo_m49a_mag_box_ap
 
 /datum/supply_packs_asrs/ammo_shell_box
 	reference_package = /datum/supply_packs/ammo_shell_box

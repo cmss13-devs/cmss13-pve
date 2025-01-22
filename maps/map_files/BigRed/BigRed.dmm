@@ -16068,7 +16068,7 @@
 /turf/open/mars/mars_dirt_9,
 /area/bigredv2/outside/n)
 "lyi" = (
-/obj/item/weapon/gun/rifle/m4ra,
+/obj/item/weapon/gun/rifle/m49a,
 /obj/effect/decal/cleanable/blood{
 	dir = 8;
 	icon_state = "gib6";
