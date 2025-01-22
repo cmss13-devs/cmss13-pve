@@ -1,8 +1,11 @@
 /datum/human_ai_brain
+	/// If an AI takes out an item from their equipment_map, the place it was last stored is added to this dict
 	var/list/equipped_items_original_loc = list()
 
+	/// A list of items that the AI is trying to pick up
 	var/list/obj/item/to_pickup = list()
 
+	/// If TRUE, the AI won't try to pick up anything
 	var/ignore_looting = FALSE
 
 	/// list("object_type" = list(object_ref = "slot")
@@ -13,6 +16,7 @@
 		HUMAN_AI_TOOLS = list(),
 	)
 
+	/// Dict of "storage type" : storage ref
 	var/list/container_refs = list(
 		"belt" = null,
 		"backpack" = null,
@@ -22,6 +26,7 @@
 		"uniform" = null,
 	)
 
+	/// Static list of storage slots that the AI pays attention to for inventory appraisal
 	var/static/list/important_storage_slots = list(
 		WEAR_BACK,
 		WEAR_WAIST,
@@ -31,10 +36,13 @@
 		WEAR_BODY,
 	)
 
+	/// Bitflag equivalent of important_storage_slots
 	var/static/important_storage_slots_bitflag = SLOT_BACK | SLOT_WAIST | SLOT_STORE | SLOT_OCLOTHING | SLOT_ICLOTHING
 
+	/// If TRUE, the AI ignores darkness when it comes to determining vision
 	var/has_nightvision = FALSE
 
+/// Given a "storage type", returns the storage item
 /datum/human_ai_brain/proc/get_object_from_loc(object_loc)
 	RETURN_TYPE(/obj/item/storage)
 
@@ -58,6 +66,7 @@
 				storage_object = storage_accessory.hold
 	return storage_object
 
+/// Given a location and a reference, puts a referenced object into the AI's hand if possible
 /datum/human_ai_brain/proc/equip_item_from_equipment_map(object_type, obj/item/object_ref)
 	if(!object_type || !object_ref)
 		return
@@ -71,6 +80,7 @@
 
 	return tied_human.put_in_active_hand(object_ref)
 
+/// Given an object path and where it may be stored, returns a ref to that object if it exists
 /datum/human_ai_brain/proc/get_item_from_equipment_map_path(object_path, object_type)
 	return (locate(object_path) in equipment_map[object_type])
 
@@ -137,6 +147,7 @@
 	if(istype(equipment, /obj/item/clothing/glasses/night) && (slot == WEAR_EYES))
 		has_nightvision = FALSE
 
+/// Reappraises what storage items the AI has
 /datum/human_ai_brain/proc/recalculate_containers()
 	container_refs = list()
 	if(isstorage(tied_human.belt))
@@ -156,6 +167,7 @@
 			container_refs["uniform"] = storage_accessory.hold
 
 /// Currently doesn't support recursive storage
+/// Used to determine what the AI has in their inventory
 /datum/human_ai_brain/proc/appraise_inventory(belt = TRUE, back = TRUE, pocket_l = TRUE, pocket_r = TRUE, armor = TRUE, uniform = TRUE)
 	if(previous_faction != tied_human.faction)
 		previous_faction = tied_human.faction
@@ -443,7 +455,7 @@
 			if(thing.flags_human_ai & GRENADE_ITEM)
 				add_to_pickup(thing)
 
-			if(thing.flags_human_ai & TOOL_ITEM) // zonenote: they can pick up 1 billion crowbars
+			if(thing.flags_human_ai & TOOL_ITEM)
 				add_to_pickup(thing)
 
 /datum/human_ai_brain/proc/add_to_pickup(obj/item/thing)

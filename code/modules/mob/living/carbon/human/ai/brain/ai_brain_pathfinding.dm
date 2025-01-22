@@ -1,13 +1,21 @@
 /datum/human_ai_brain
+	/// Delay timer for when the AI can next move, based on the tied_human's move delay
 	var/ai_move_delay = 0
+	/// The list of turfs that the AI is trying to move through
 	var/list/current_path
+	/// The next turf in current_path that the AI is moving to
 	var/turf/current_path_target
+	/// How long to wait if the AI can't find a path
 	var/path_update_period = (0.5 SECONDS)
+	/// If TRUE, pathfinding has failed to find a path and a cooldown will soon begin.
 	var/no_path_found = FALSE
+	/// The farthest that the AI will try to pathfind
 	var/max_travel_distance = HUMAN_AI_MAX_PATHFINDING_RANGE
+	/// Time storage for the next time a pathfinding path can try to be generated
 	var/next_path_generation = 0
 	/// Amount of times no path found has occured
 	var/no_path_found_amount = 0
+	///
 	var/ai_timeout_time = 0
 
 	/// The time interval between calculating new paths if we cannot find a path

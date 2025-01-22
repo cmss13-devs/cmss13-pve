@@ -16,6 +16,7 @@
 
 	COOLDOWN_DECLARE(fire_offscreen)
 
+/// Locates a viable target within vision
 /datum/human_ai_brain/proc/get_target()
 	var/list/viable_targets = list()
 	var/atom/movable/closest_target
@@ -161,6 +162,7 @@
 
 	return TRUE
 
+/// Given a target, checks if there are any (not laying down) friendlies in a line between the AI and the target
 /datum/human_ai_brain/proc/friendly_check(atom/target)
 	var/list/turf_list = get_line(get_turf(tied_human), get_turf(target))
 	for(var/turf/tile in turf_list)

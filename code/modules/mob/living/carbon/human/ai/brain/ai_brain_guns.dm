@@ -1,5 +1,7 @@
 /datum/human_ai_brain
+	/// The firearm the AI is using as its primary weapon
 	var/obj/item/weapon/gun/primary_weapon
+	/// Any other firearms the AI has that it considers "secondary"
 	var/list/obj/item/weapon/gun/secondary_weapons = list()
 	//var/obj/item/weapon/primary_melee
 	/// Appraisal datum

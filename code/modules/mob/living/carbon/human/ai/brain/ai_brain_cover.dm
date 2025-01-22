@@ -20,6 +20,7 @@
 	// Cover isn't working. Charge!
 	end_cover()
 
+/// Try to get the AI to find a suitable cover tile based on the angle a projectile came from.
 /datum/human_ai_brain/proc/try_cover(angle, atom/source)
 	if(!COOLDOWN_FINISHED(src, cover_search_cooldown))
 		return
@@ -41,7 +42,7 @@
 	cover_processing(turf_dict)
 	squad_cover_processing(turf_dict)
 
-
+/// If an AI decides to go into cover, any squadmates in their view range will process on the same view dictionary so as to help with performance
 /datum/human_ai_brain/proc/squad_cover_processing(list/turf_dict)
 	if(!squad_id)
 		return
@@ -60,12 +61,11 @@
 		if(brain.tied_human.is_mob_incapacitated())
 			continue
 
-		brain.squad_covering = TRUE
 		COOLDOWN_START(brain, cover_search_cooldown, 15 SECONDS)
 
 		brain.cover_processing(turf_dict, TRUE)
 
-
+/// Recursively searches each tile nearby (up to 198 tiles, nearly BYOND's recursion limit) and determines how suitable it is as cover, giving it a numerical score and adding it to turf_dict
 /datum/human_ai_brain/proc/recursive_turf_cover_scan(turf/scan_turf, list/turf_dict, cover_dir, first_iteration = TRUE)
 	if(length(turf_dict) > 198) // Slightly lower than byond recursion limit (200)
 		return FALSE // abort if the room is too large
@@ -147,5 +147,3 @@
 		current_cover = best_cover
 		if(!from_squad)
 			squad_cover_processing(FALSE, turf_dict)
-
-	squad_covering = FALSE

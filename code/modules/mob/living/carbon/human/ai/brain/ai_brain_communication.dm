@@ -1,4 +1,5 @@
 /datum/human_ai_brain
+	/// Lines potentially said when an AI enters combat
 	var/list/enter_combat_lines = list(
 		"CONTACT!",
 		"Contact!",
@@ -30,6 +31,7 @@
 		"*warcry",
 	)
 
+	/// Lines potentially said when an AI exits combat
 	var/list/exit_combat_lines = list(
 		"CEASE FIRE!",
 		"Cease fire!",
@@ -44,6 +46,7 @@
 		"Might be more- Keep your eyes peeled.",
 	)
 
+	/// Lines potentially said when an AI's squadmate dies
 	var/list/squad_member_death_lines = list(
 		"FUCK!",
 		"SHIT!",
@@ -59,6 +62,7 @@
 		"THEY GOT THEM!",
 	)
 
+	/// Lines potentially said when an AI throws a grenade
 	var/list/grenade_thrown_lines = list(
 		"GRENADE!",
 		"THROWING GRENADE!",
@@ -68,6 +72,7 @@
 		"DELIVERY, MOTHERFUCKER!",
 	)
 
+	/// Lines potentially said when an AI reloads a magazine-fed gun
 	var/list/reload_lines = list(
 		"RELOADING!",
 		"Reloading!",
@@ -83,6 +88,7 @@
 		"RED!",
 	)
 
+	/// Lines potentially said when an AI reloads a tube-fed gun
 	var/list/reload_internal_mag_lines = list(
 		"RELOADING!",
 		"Reloading!",
@@ -95,6 +101,7 @@
 		"RED!",
 	)
 
+	/// Currently unused
 	var/list/need_healing_lines = list(
 		"FUCK ME!",
 		"FUCK!",
@@ -115,11 +122,17 @@
 		"NEED MORPHINE!",
 	)
 
+	/// Chance that an AI says a voiceline when entering combat
 	var/in_combat_line_chance = 40
+	/// Chance that an AI says a voiceline when exiting combat
 	var/exit_combat_line_chance = 40
+	/// Chance that an AI says a voiceline when a squadmember dies
 	var/squad_member_death_line_chance = 20
+	/// Chance that an AI says a voiceline when they throw a grenade
 	var/grenade_thrown_line_chance = 60
+	/// Chance that an AI says a voiceline when they reload a gun
 	var/reload_line_chance = 40
+	/// Currently unused
 	var/need_healing_line_chance = 90
 
 /datum/human_ai_brain/proc/say_in_combat_line(chance = in_combat_line_chance)

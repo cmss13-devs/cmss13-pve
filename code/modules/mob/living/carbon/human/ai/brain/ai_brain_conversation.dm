@@ -1,8 +1,9 @@
 GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 
+/// Populates the AI conversation data structure
 /proc/initialize_human_ai_conversations()
 	var/list/return_list = list()
-	for(var/datum/human_ai_conversation/subtype_convo as anything in subtypesof(/datum/human_ai_conversation)) // init not working
+	for(var/datum/human_ai_conversation/subtype_convo as anything in subtypesof(/datum/human_ai_conversation))
 		if(subtype_convo::amount_ai_involved == -1)
 			continue
 
@@ -28,6 +29,7 @@ GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 		"P1 Random||Chance||Messages"
 	)
 
+/// Processes a conversation with other nearby AI.
 /datum/human_ai_conversation/proc/initiate_conversation(list/brains_involved)
 	if(!length(brains_involved))
 		return
@@ -59,9 +61,11 @@ GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 		other_brain.in_conversation = FALSE
 		COOLDOWN_START(other_brain, conversation_success_cooldown, other_brain.conversation_success_cooldown_time)
 
+/// Simple check to see if a conversation should stop at a given line
 /datum/human_ai_conversation/proc/should_interrupt_conversation(datum/human_ai_brain/brain)
 	return (brain.in_combat || !brain.in_conversation || (brain.tied_human.health < HEALTH_THRESHOLD_CRIT))
 
+/// Check to be overridden to see if an AI should be able to start a conversation
 /datum/human_ai_conversation/proc/conversation_allowed(datum/human_ai_brain/brain)
 	return TRUE
 
@@ -100,7 +104,10 @@ GLOBAL_LIST_INIT(human_ai_conversations, initialize_human_ai_conversations())
 
 
 /datum/human_ai_brain
+	/// If TRUE, this AI is currently in a conversation with others
 	var/in_conversation = FALSE
+	/// The chance that the AI will try to initiate a conversation. Trying to initiate a conversation is on a 1 second cooldown, so this is really every 5 ticks
+	/// Disabled until more conversations are added
 	var/conversation_start_prob = 0 //0.75 // at 1 chance / sec, this'll mean we hit the equivalent of a 50% chance of a conversation at ~90 chances, which would take ~90 seconds
 	COOLDOWN_DECLARE(conversation_start_cooldown)
 	/// Cooldown upon a successful conversation, started on everyone involved at the end of the conversation

@@ -1,5 +1,7 @@
 /datum/human_ai_faction
+	/// What actual faction is this faction tied to
 	var/faction = FACTION_NEUTRAL
+	/// If FALSE, the AI will not intentionally kill enemies. The enemies may still be killed by crossfire, explosives, etc.
 	VAR_PROTECTED/shoot_to_kill = TRUE
 
 	VAR_PROTECTED/list/enter_combat_lines = list()
@@ -13,6 +15,7 @@
 	VAR_PROTECTED/list/friendly_factions = list()
 	VAR_PROTECTED/list/neutral_factions = list()
 
+/// Given an AI brain, apply all the faction's data to the AI.
 /datum/human_ai_faction/proc/apply_faction_data(datum/human_ai_brain/brain)
 	if(length(enter_combat_lines))
 		brain.enter_combat_lines = enter_combat_lines
@@ -39,11 +42,13 @@
 	brain.friendly_factions = friendly_factions
 	brain.neutral_factions = neutral_factions
 
+/// Reapplies the faction's data to all AI that belong to this faction
 /datum/human_ai_faction/proc/reapply_faction_data()
 	for(var/datum/human_ai_brain/brain in GLOB.human_ai_brains)
 		if(brain.tied_human?.faction == faction)
 			apply_faction_data(brain)
 
+/// Given a faction string, makes this faction friendly to them.
 /datum/human_ai_faction/proc/add_friendly_faction(faction)
 	if(faction in friendly_factions)
 		return
@@ -52,6 +57,7 @@
 		neutral_factions -= faction
 	reapply_faction_data()
 
+/// Given a faction string, makes this faction neutral to them.
 /datum/human_ai_faction/proc/add_neutral_faction(faction)
 	if(faction in neutral_factions)
 		return
@@ -60,28 +66,34 @@
 		friendly_factions -= faction
 	reapply_faction_data()
 
+/// Given a faction string, removes a faction's friendly status, making them hostile instead.
 /datum/human_ai_faction/proc/remove_friendly_faction(faction)
 	if(!(faction in friendly_factions))
 		return
 	friendly_factions -= faction
 	reapply_faction_data()
 
+/// Given a faction string, removes a faction's neutral status, making them hostile instead.
 /datum/human_ai_faction/proc/remove_neutral_faction(faction)
 	if(!(faction in neutral_factions))
 		return
 	neutral_factions -= faction
 	reapply_faction_data()
 
+/// Getter for friendly_factions
 /datum/human_ai_faction/proc/get_friendly_factions()
 	return friendly_factions
 
+/// Getter for neutral_factions
 /datum/human_ai_faction/proc/get_neutral_factions()
 	return neutral_factions
 
+/// Setter for shoot_to_kill
 /datum/human_ai_faction/proc/set_shoot_to_kill(new_kill = TRUE)
 	shoot_to_kill = new_kill
 	reapply_faction_data()
 
+/// Getter for shoot_to_kill
 /datum/human_ai_faction/proc/get_shoot_to_kill()
 	return shoot_to_kill
 
@@ -258,7 +270,7 @@
 		FACTION_TWE,
 		FACTION_SURVIVOR,
 	)
-	enter_combat_lines = list( // zonenote: tweak these. They're entirely the stereotype of "communist russkie" when we can do better than that. also languages
+	enter_combat_lines = list(
 		"*warcry",
 		"For the UPP!",
 		"Die, you animal!",

@@ -1,4 +1,5 @@
 /datum/human_ai_brain
+	/// What items the AI considers when trying to heal brute damage
 	var/static/list/brute_heal_items = list(
 		/obj/item/stack/medical/advanced/bruise_pack,
 		/obj/item/reagent_container/hypospray/autoinjector/bicaridine,
@@ -10,6 +11,7 @@
 		/obj/item/stack/nanopaste,
 	)
 
+	/// What items the AI considers when trying to heal burn damage
 	var/static/list/burn_heal_items = list(
 		/obj/item/stack/medical/advanced/ointment,
 		/obj/item/reagent_container/hypospray/autoinjector/kelotane,
@@ -21,6 +23,7 @@
 		/obj/item/stack/nanopaste,
 	)
 
+	/// What items the AI considers when trying to heal toxin damage
 	var/static/list/tox_heal_items = list(
 		/obj/item/reagent_container/hypospray/autoinjector/dylovene,
 		/obj/item/reagent_container/hypospray/autoinjector/tricord,
@@ -28,6 +31,7 @@
 		/obj/item/storage/pill_bottle/tricord,
 	)
 
+	/// What items the AI considers when trying to heal oxygen damage
 	var/static/list/oxy_heal_items = list(
 		/obj/item/reagent_container/hypospray/autoinjector/dexalinp,
 		/obj/item/reagent_container/hypospray/autoinjector/tricord,
@@ -36,15 +40,18 @@
 		/obj/item/storage/pill_bottle/tricord,
 	)
 
+	/// What items the AI considers when trying to fix bleeding
 	var/static/list/bleed_heal_items = list(
 		/obj/item/stack/medical/advanced/bruise_pack,
 		/obj/item/stack/medical/bruise_pack,
 	)
 
+	/// What items the AI considers when trying to fix bonebreaks
 	var/static/list/bonebreak_heal_items = list(
 		/obj/item/stack/medical/splint,
 	)
 
+	/// What items the AI considers when trying to reduce pain
 	var/static/list/painkiller_items = list(
 		/obj/item/reagent_container/hypospray/autoinjector/tramadol,
 		/obj/item/reagent_container/hypospray/autoinjector/oxycodone,
@@ -59,7 +66,7 @@
 	var/pain_percentage_threshold = 1
 
 	/// Are we currently treating someone?
-	var/healing_someone
+	var/healing_someone = FALSE
 
 	/// Should we try and treat injured friends
 	var/treat_allies = TRUE
