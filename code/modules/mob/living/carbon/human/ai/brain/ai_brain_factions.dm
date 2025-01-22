@@ -304,7 +304,27 @@
 		"Doctor!",
 		"*medic",
 	)
-
+	grenade_thrown_lines = list(
+		"EAT THIS!",
+		"Grenade!",
+		"Throwing bomb!",
+		"*warcry",
+		"This is for you, invader!",
+	)
+	reload_internal_mag_lines = list(
+		"Reloading!",
+		"Out of ammo!",
+		"It's out, reloading!",
+		"I hope this won't take long!",
+		"Empty!",
+    )
+	reload_lines = list(
+		"Reloading!",
+		"Out of ammo!",
+		"It's out, reloading!",
+		"I hope this won't take long!",
+		"Empty!",
+    )
 
 /datum/human_ai_faction/wy
 	faction = FACTION_WY
