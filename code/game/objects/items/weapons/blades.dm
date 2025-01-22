@@ -399,11 +399,11 @@
 	return TRUE
 
 /obj/item/weapon/knife
-	name = "\improper M7 'Night Raider' fighting knife"
+	name = "\improper M7 fighting knife"
 	icon = 'icons/obj/items/weapons/weapons.dmi'
 	icon_state = "knife_gerber"
 	item_state = "knife_gerber"
-	desc = "A standard issue USCMC fighting knife. Neatly fits into boot-mounted holsters, and can- in emergencies- but utilized to dig out shrapnel."
+	desc = "A standard issue USCMC fighting knife produced by the Kershaw-Gerber company. Neatly fits into boot-mounted holsters, and can- in emergencies- be utilized to dig out shrapnel."
 	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
 	flags_equip_slot = SLOT_WAIST
 	flags_equip_slot = SLOT_FACE
@@ -424,7 +424,7 @@
 	name = "\improper KA-BAR utility knife"
 	icon_state = "kabar_knife"
 	item_state = "kabar_knife"
-	desc = "An old school Marine Corps combat knife. The iconic look of the knife and its association with the Corps' cultural history has seen it remain popular among marines well after its replacement as standard-issue. Fits neatly into boot-mounted holsters, and can- in emergencies- but utilized to dig out shrapnel."
+	desc = "An old school Marine Corps combat knife. The iconic look of the knife and its association with the Corps' cultural history has seen it remain popular among marines well after its replacement as standard-issue. Fits neatly into boot-mounted holsters, and can- in emergencies- be utilized to dig out shrapnel."
 
 /obj/item/weapon/knife/bowie
 	name = "\improper Bowie fighting knife"
@@ -437,3 +437,9 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_speed = 8
+
+/obj/item/weapon/knife/sas
+	name = "\improper Fairbairn-Sykes fighting knife"
+	icon_state = "knife_fairbairn"
+	item_state = "knife_gerber"
+	desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
