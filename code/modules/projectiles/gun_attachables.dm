@@ -922,6 +922,14 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
+/obj/item/attachable/sling //Purely cosmetic
+	name = "two-point sling"
+	desc = "A traditional strip of toughened nylon fabric with clips on either end for attaching to suitable mounting points on most longarms in the UA armed forces arsenals."
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
+	icon_state = "pve-sling"
+	attach_icon = "pve-sling_a"
+	slot = "rail"
+
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
@@ -1181,6 +1189,32 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/mini/army
 	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
 	zoom_offset = 4
+
+// PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
+
+/obj/item/attachable/scope/pve
+	name = "AN/RVS-52 CCD television sight system"
+	desc = "An ARMAT designed 3x magnification weapon sight, allows for greater accuracy at range and under low-light conditions. The mounting brackets are designed to fit on the most commonly-used rifles of the USCM. This one looks like it's been in service since the start of the Linna 349 campaign."
+	icon_state = "pvescope"
+	zoom_offset = 3
+	zoom_viewsize = 7
+	allows_movement = TRUE
+	var/dynamic_aim_slowdown = SLOWDOWN_ADS_MINISCOPE_DYNAMIC
+
+/obj/item/attachable/scope/pve/New()
+	..()
+	delay_mod = 0
+	delay_scoped_nerf = FIRE_DELAY_TIER_SMG
+	damage_falloff_scoped_buff = -0.2
+
+/obj/item/attachable/scope/pve/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
+	. = ..()
+	if(G.zoom)
+		G.slowdown += dynamic_aim_slowdown
+
+/obj/item/attachable/scope/pve/remove_scoped_buff(mob/living/carbon/user, obj/item/weapon/gun/G)
+	G.slowdown -= dynamic_aim_slowdown
+	..()
 
 /obj/item/attachable/scope/mini_iff
 	name = "B8 Smart-Scope"
@@ -2840,6 +2874,7 @@ Defined in conflicts.dm of the #defines folder.
 	var/cocked = TRUE // has the UGL been cocked via opening and closing the breech?
 	var/open_sound = 'sound/weapons/handling/ugl_open.ogg'
 	var/close_sound = 'sound/weapons/handling/ugl_close.ogg'
+	var/has_breech = TRUE
 
 /obj/item/attachable/attached_gun/grenade/Initialize()
 	. = ..()
@@ -2856,6 +2891,8 @@ Defined in conflicts.dm of the #defines folder.
 	else . += "It's empty."
 
 /obj/item/attachable/attached_gun/grenade/unique_action(mob/user)
+	if(!has_breech)
+		return
 	if(!ishuman(usr))
 		return
 	if(user.is_mob_incapacitated() || !isturf(usr.loc))
@@ -2898,7 +2935,7 @@ Defined in conflicts.dm of the #defines folder.
 	update_icon()
 
 /obj/item/attachable/attached_gun/grenade/reload_attachment(obj/item/explosive/grenade/G, mob/user)
-	if(!breech_open)
+	if(has_breech && !breech_open)
 		to_chat(user, SPAN_WARNING("\The [src]'s breech must be open to load grenades! (use unique-action)"))
 		return
 	if(!istype(G) || istype(G, /obj/item/explosive/grenade/spawnergrenade/))
@@ -2919,7 +2956,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/unload_attachment(mob/user, reload_override = FALSE, drop_override = FALSE, loc_override = FALSE)
 	. = TRUE //Always uses special unloading.
-	if(!breech_open)
+	if(has_breech && !breech_open)
 		to_chat(user, SPAN_WARNING("\The [src] is closed! You must open it to take out grenades!"))
 		return
 	if(!current_rounds)
@@ -2944,12 +2981,12 @@ Defined in conflicts.dm of the #defines folder.
 		if(user)
 			to_chat(user, SPAN_WARNING("You must hold [gun] with two hands to use \the [src]."))
 		return
-	if(breech_open)
+	if(has_breech && breech_open)
 		if(user)
 			to_chat(user, SPAN_WARNING("You must close the breech to fire \the [src]!"))
 			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
 		return
-	if(!cocked)
+	if(has_breech && !cocked)
 		if(user)
 			to_chat(user, SPAN_WARNING("You must cock \the [src] to fire it! (open and close the breech)"))
 			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
@@ -2973,6 +3010,7 @@ Defined in conflicts.dm of the #defines folder.
 
 	if(G.dual_purpose != FALSE)
 		G.fuse_type = IMPACT_FUSE
+	G.arm_sound = null
 
 	playsound(user.loc, fire_sound, 50, 1)
 	msg_admin_attack("[key_name_admin(user)] fired an underslung grenade launcher [ADMIN_JMP_USER(user)]")
@@ -3035,6 +3073,20 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/attached_gun/grenade/m203/Initialize()
 	. = ..()
 	grenade_pass_flags = NO_FLAGS
+
+/obj/item/attachable/attached_gun/grenade/upp
+	name = "\improper Type 83 overslung grenade launcher"
+	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures. Can be quickly swapped to using the 'Toggle-Attachment' keybind."
+	icon_state = "type83"
+	attach_icon = "type83_a"
+	current_rounds = 0
+	max_rounds = 1
+	max_range = 14
+	attachment_firing_delay = 5
+	slot = "special"
+	pixel_shift_x = 0
+	pixel_shift_y = 0
+	has_breech = FALSE
 
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
 /obj/item/attachable/attached_gun/flamer
