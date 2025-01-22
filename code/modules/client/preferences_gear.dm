@@ -779,11 +779,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon/kabar
 	display_name = "KA-BAR utility knife"
-	path = 	/obj/item/weapon/knife/kabar
+	path = 	/obj/item/weapon/knife/marine/kabar
 
 /datum/gear/weapon/bowie
 	display_name = "Bowie fighting knife"
-	path = 	/obj/item/weapon/knife/bowie
+	path = 	/obj/item/weapon/knife/marine/bowie
 	cost = 6
 
 /datum/gear/weapon/type_80_Bayonet
