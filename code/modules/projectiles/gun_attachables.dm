@@ -2431,7 +2431,7 @@ Defined in conflicts.dm of the #defines folder.
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
 /obj/item/attachable/m49a_barrel/pve
-	name = "M49A-R2 muzzle break"
+	name = "M49A6 muzzle break"
 	icon_state = "pve_m49a_barrel"
 	attach_icon = "pve_m49a_barrel"
 

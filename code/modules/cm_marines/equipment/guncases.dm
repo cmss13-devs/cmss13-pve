@@ -238,8 +238,8 @@
 		overlays += image(icon, "+stock")
 
 /obj/item/storage/box/guncase/heavy/m49a_pve
-	name = "\improper M49A-R2 battle rifle case"
-	desc = "A large case for storing an M49A-R2, a modified USCM battle rifle equipped with depleted uranium bullets."
+	name = "\improper M49A6 battle rifle case"
+	desc = "A large case for storing an M49A6, a modified USCM battle rifle equipped with depleted uranium bullets."
 	icon_state = "r2case"
 	storage_slots = 7
 	can_hold = list(/obj/item/weapon/gun/rifle/m49a/pve, /obj/item/ammo_magazine/rifle/m49a/pve)

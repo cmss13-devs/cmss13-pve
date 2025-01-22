@@ -1,7 +1,7 @@
 //M49A custom marksman rifle
 
 /obj/item/weapon/gun/rifle/m49a_custom
-	name = "\improper M49A custom battle rifle"
+	name = "\improper M49A5 battle rifle"
 	desc = "This is a further improvement upon the already rock-solid M49A. Made by the USCM armorers on Chinook station - This variant of the M49A has a specifically milled magazine well to accept A19 rounds. It sports a light-weight titantium-alloy frame, better responsive to the heavy kick of the tailor-made A19 rounds."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m49a_custom"
