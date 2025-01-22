@@ -397,3 +397,43 @@
 	poor_bastard.apply_damage(rand(1,5), BRUTE, "head", src)
 	poor_bastard.update_hair()
 	return TRUE
+
+/obj/item/weapon/knife
+	name = "\improper M7 'Night Raider' fighting knife"
+	icon = 'icons/obj/items/weapons/weapons.dmi'
+	icon_state = "knife_gerber"
+	item_state = "knife_gerber"
+	desc = "A standard issue USCMC fighting knife. Neatly fits into boot-mounted holsters, and can- in emergencies- but utilized to dig out shrapnel."
+	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
+	flags_equip_slot = SLOT_WAIST
+	flags_equip_slot = SLOT_FACE
+	flags_armor_protection = SLOT_FACE
+	flags_item = CAN_DIG_SHRAPNEL
+	w_class = SIZE_SMALL
+	edge = 1
+	sharp = IS_SHARP_ITEM_ACCURATE
+	force = MELEE_FORCE_NORMAL
+	throwforce = MELEE_FORCE_NORMAL
+	throw_speed = SPEED_VERY_FAST
+	throw_range = 6
+	hitsound = 'sound/weapons/slash.ogg'
+	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_speed = 9
+
+/obj/item/weapon/knife/kabar
+	name = "\improper KA-BAR utility knife"
+	icon_state = "kabar_knife"
+	item_state = "kabar_knife"
+	desc = "An old school Marine Corps combat knife. The iconic look of the knife and its association with the Corps' cultural history has seen it remain popular among marines well after its replacement as standard-issue. Fits neatly into boot-mounted holsters, and can- in emergencies- but utilized to dig out shrapnel."
+
+/obj/item/weapon/knife/bowie
+	name = "\improper Bowie fighting knife"
+	icon_state = "knife_bowie"
+	item_state = "knife_bowie"
+	desc = "A large, devastating fighting knife of the old American west. Now THIS is a knife."
+	w_class = SIZE_MEDIUM
+	force = MELEE_FORCE_STRONG
+	throwforce = MELEE_FORCE_TIER_4
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_speed = 8

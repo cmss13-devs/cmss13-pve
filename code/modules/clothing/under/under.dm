@@ -354,9 +354,10 @@
 	REMOVE_TRAIT(src, TRAIT_CLOTHING_HOOD, TRAIT_SOURCE_CLOTHING)
 
 /obj/item/clothing/under/attackby(obj/item/B, mob/user)
-	if(istype(B, /obj/item/attachable/bayonet) && (user.a_intent == INTENT_HARM))
+	if(istype(B,/obj/item/weapon/knife) && (user.a_intent == INTENT_HARM))
 		cut_suit_jacket(TRUE, user, B)
-
+	if(istype(B,/obj/item/attachable/bayonet) && (user.a_intent == INTENT_HARM))
+		cut_suit_jacket(TRUE, user, B)
 	else if(loc == user && istype(B, /obj/item/clothing/under) && src != B && ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.w_uniform == src)

@@ -274,11 +274,11 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "m40sd_suppressor_a"
 
 /obj/item/attachable/bayonet
-	name = "\improper M5 'Night Raider' bayonet"
+	name = "\improper M11 bayonet"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "bayonet"
 	item_state = "combat_knife"
-	desc = "USCMC standard issue combat knife. Can be put into boot holster or affixed to the bayonet lug of a rifle. Can also be used to extract shrapnel..."
+	desc = "A rifle bayonet issued by the USCMC. Neatly fits into boot-mounted holsters, and can- in emergencies- but utilized to dig out shrapnel."
 	sharp = IS_SHARP_ITEM_ACCURATE
 	force = MELEE_FORCE_NORMAL
 	throwforce = MELEE_FORCE_NORMAL
@@ -307,13 +307,6 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/bayonet/New()
 	..()
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
-
-/obj/item/attachable/bayonet/kabar
-	name = "\improper KA-BAR combat knife"
-	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
-	icon_state = "bayonet_classic"
-	item_state = "combat_knife"
-	desc = "Old school Marine Corps fighting knife. The iconic look of the knife has seen it remain popular among marines well after its replacement as standard-issue."
 
 /obj/item/attachable/bayonet/upp_replica
 	name = "\improper Type 80 bayonet"
