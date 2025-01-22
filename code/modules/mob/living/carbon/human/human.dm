@@ -1011,7 +1011,7 @@
 	set name = "View Crew Manifest"
 	set category = "IC"
 
-	if(job in GLOB.ROLES_AI)
+	if(job in GLOB.ROLES_USCM)
 		var/dat = GLOB.data_core.get_manifest()
 		show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
 	else
