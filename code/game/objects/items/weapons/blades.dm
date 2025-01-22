@@ -405,8 +405,7 @@
 	item_state = "knife_gerber"
 	desc = "A standard issue USCMC fighting knife developed by the Kershaw-Gerber company, a subsidiary of Armat Battlefield Systems. Neatly fits into boot-mounted holsters, and can- in emergencies- be utilized to dig out shrapnel."
 	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
-	flags_equip_slot = SLOT_WAIST
-	flags_equip_slot = SLOT_FACE
+	flags_equip_slot = SLOT_WAIST|SLOT_FACE
 	flags_armor_protection = SLOT_FACE
 	flags_item = CAN_DIG_SHRAPNEL
 	w_class = SIZE_SMALL
@@ -433,10 +432,10 @@
 	desc = "A large, devastating fighting knife of the old American west. Not an antique in of itself, but a high quality piece of equipment for the discerning outdoorsman. Now THIS is a knife."
 	w_class = SIZE_MEDIUM
 	force = MELEE_FORCE_STRONG
-	throwforce = MELEE_FORCE_TIER_4
+	throwforce = MELEE_FORCE_WEAK
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	attack_speed = 8
+	attack_speed = 9
 
 /obj/item/weapon/knife/sas
 	name = "\improper Fairbairn-Sykes fighting knife"
