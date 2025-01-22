@@ -543,11 +543,11 @@ GLOBAL_LIST_EMPTY(personal_closets)
 /datum/equipment_preset/proc/add_rebel_twe_helmet(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
 	var/helmetpath = pick(
-		/obj/item/clothing/head/hardhat/white,
-		/obj/item/clothing/head/hardhat/white,
-		/obj/item/clothing/head/hardhat/white,
-		/obj/item/clothing/head/hardhat/white,
-		/obj/item/clothing/head/hardhat/white,
+		/obj/item/clothing/head/helmet/construction,
+		/obj/item/clothing/head/helmet/construction,
+		/obj/item/clothing/head/helmet/construction,
+		/obj/item/clothing/head/helmet/construction,
+		/obj/item/clothing/head/helmet/construction,
 		/obj/item/clothing/head/headband/red,
 		/obj/item/clothing/head/headband/red,
 		/obj/item/clothing/head/headband/rebel,
