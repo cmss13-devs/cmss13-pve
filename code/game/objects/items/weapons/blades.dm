@@ -398,12 +398,12 @@
 	poor_bastard.update_hair()
 	return TRUE
 
-/obj/item/weapon/knife
-	name = "\improper M7 fighting knife"
+/obj/item/weapon/knife/marine
+	name = "\improper M13 fighting knife"
 	icon = 'icons/obj/items/weapons/weapons.dmi'
 	icon_state = "knife_gerber"
 	item_state = "knife_gerber"
-	desc = "A standard issue USCMC fighting knife produced by the Kershaw-Gerber company. Neatly fits into boot-mounted holsters, and can- in emergencies- be utilized to dig out shrapnel."
+	desc = "A standard issue USCMC fighting knife developed by the Kershaw-Gerber company, a subsidiary of Armat Battlefield Systems. Neatly fits into boot-mounted holsters, and can- in emergencies- be utilized to dig out shrapnel."
 	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
 	flags_equip_slot = SLOT_WAIST
 	flags_equip_slot = SLOT_FACE
@@ -430,7 +430,7 @@
 	name = "\improper Bowie fighting knife"
 	icon_state = "knife_bowie"
 	item_state = "knife_bowie"
-	desc = "A large, devastating fighting knife of the old American west. Now THIS is a knife."
+	desc = "A large, devastating fighting knife of the old American west. Not an antique in of itself, but a high quality piece of equipment for the discerning outdoorsman. Now THIS is a knife."
 	w_class = SIZE_MEDIUM
 	force = MELEE_FORCE_STRONG
 	throwforce = MELEE_FORCE_TIER_4
