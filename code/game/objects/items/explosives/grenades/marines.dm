@@ -980,37 +980,6 @@
 
 /*
 //================================================
-			Tear Gas Grenades
-//================================================
-*/
-/obj/item/explosive/grenade/tear
-	name = "\improper Tear Gas grenade"
-	desc = "A canister grenade of nonlethal Tear gas. It is set to detonate in 4 seconds."
-	icon_state = "flashbang2"//temp icon
-	det_time = 40
-	item_state = "grenade_phos_clf"//temp icon
-	underslug_launchable = FALSE
-	harmful = TRUE
-	antigrief_protection = FALSE
-	var/datum/effect_system/smoke_spread/tear/tear_gas
-	var/tear_gas_radius = 4
-
-/obj/item/explosive/grenade/tear/Initialize()
-	. = ..() //if it ain't broke don't fix it
-	tear_gas = new /datum/effect_system/smoke_spread/tear
-	tear_gas.attach(src)
-
-/obj/item/explosive/grenade/tear/Destroy()
-	QDEL_NULL(tear_gas)
-	return ..()
-
-/obj/item/explosive/grenade/tear/prime()
-	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	tear_gas.set_up(tear_gas_radius, 0, get_turf(src), null, 6)
-	tear_gas.start()
-	qdel(src)
-/*
-//================================================
 			Airburst Smoke Grenades
 //================================================
 */
