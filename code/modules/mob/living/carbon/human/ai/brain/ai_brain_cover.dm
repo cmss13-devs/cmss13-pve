@@ -8,6 +8,11 @@
 	COOLDOWN_DECLARE(cover_search_cooldown)
 
 /datum/human_ai_brain/proc/end_cover()
+#if defined(TESTING) || defined(HUMAN_AI_TESTING)
+	if(current_cover)
+		current_cover.color = null
+		current_cover.maptext = null
+#endif
 	current_cover = null
 	in_cover = FALSE
 
@@ -94,10 +99,6 @@
 
 		if(get_dir(current_target, scan_turf) in get_related_directions(cover_dir))
 			turf_dict[scan_turf] -= 20
-
-#ifdef TESTING
-	//sleep(1)
-#endif
 
 	for(var/cardinal in shuffle(GLOB.cardinals))
 		var/turf/nearby_turf = get_step(scan_turf, cardinal)

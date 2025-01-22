@@ -154,8 +154,8 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 			continue
 
 		ongoing_actions += new action_type(src)
-#ifdef TESTING
-		message_admins("action of type [action_type] was added to [tied_human.real_name]")
+#if defined(TESTING) || defined(HUMAN_AI_TESTING)
+		//message_admins("action of type [action_type] was added to [tied_human.real_name]")
 #endif
 
 	for(var/datum/ai_action/action as anything in ongoing_actions)

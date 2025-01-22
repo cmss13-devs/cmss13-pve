@@ -394,9 +394,10 @@
 		return
 	to_chat(user, SPAN_NOTICE("You slide [stored_item] out of [src]."))
 	playsound(user, 'sound/weapons/gun_shotgun_shell_insert.ogg', 15, TRUE)
+	. = stored_item
 	stored_item = null
 	update_icon()
-	return TRUE
+	return .
 
 /obj/item/clothing/shoes/update_clothing_icon()
 	if(ismob(loc))

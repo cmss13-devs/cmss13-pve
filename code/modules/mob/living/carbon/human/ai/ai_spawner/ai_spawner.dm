@@ -79,12 +79,12 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 		to_chat(src, SPAN_WARNING("The round hasn't started yet!"))
 		return
 
-	if(human_squad_menu)
-		human_squad_menu.tgui_interact(mob)
+	if(human_spawn_menu)
+		human_spawn_menu.tgui_interact(mob)
 		return
 
-	human_squad_menu = new /datum/human_ai_spawner_menu(src)
-	human_squad_menu.tgui_interact(mob)
+	human_spawn_menu = new /datum/human_ai_spawner_menu(src)
+	human_spawn_menu.tgui_interact(mob)
 
 
 /datum/human_ai_equipment_preset

@@ -22,6 +22,10 @@
 	if(!length(brain.equipment_map[HUMAN_AI_HEALTHITEMS]))
 		return 0
 
+	var/datum/human_ai_brain/ally_brain = brain.found_injured_ally.get_ai_brain()
+	if(ally_brain.cant_be_treated_stacks >= ally_brain.treatment_stack_threshold)
+		return 0
+
 	return 2
 
 /datum/ai_action/treat_ally/Destroy(force, ...)
@@ -50,5 +54,9 @@
 			return ONGOING_ACTION_COMPLETED
 		return ONGOING_ACTION_UNFINISHED
 
-	brain.start_healing(brain.found_injured_ally)
+	if(!brain.start_healing(brain.found_injured_ally))
+		var/datum/human_ai_brain/ally_brain = brain.found_injured_ally.get_ai_brain()
+		if(ally_brain)
+			ally_brain.cant_be_treated_stacks++
+
 	return ONGOING_ACTION_UNFINISHED

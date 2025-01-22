@@ -39,7 +39,8 @@
 	removing.squad_id = null
 	removing.is_squad_leader = FALSE
 	ai_in_squad -= removing
-	UnregisterSignal(removing?.tied_human, COMSIG_MOB_DEATH)
+	if(removing.tied_human)
+		UnregisterSignal(removing.tied_human, COMSIG_MOB_DEATH)
 	UnregisterSignal(removing, COMSIG_PARENT_QDELETING)
 
 /datum/human_ai_squad/proc/set_current_order(datum/ai_order/order)

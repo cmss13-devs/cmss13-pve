@@ -146,3 +146,6 @@
 
 	/// Holds the human squad spawner panel for this client
 	var/datum/human_squad_spawner_menu/human_squad_menu
+
+	/// Holds the human squad spawner panel for this client
+	var/datum/human_ai_spawner_menu/human_spawn_menu

@@ -16,6 +16,9 @@
 	if(!length(brain.equipment_map[HUMAN_AI_HEALTHITEMS]))
 		return 0
 
+	if(brain.cant_be_treated_stacks >= brain.treatment_stack_threshold)
+		return 0
+
 	if(!brain.healing_start_check(brain.tied_human))
 		return 0
 
@@ -42,7 +45,8 @@
 		return ONGOING_ACTION_UNFINISHED
 
 	if(brain.healing_start_check(tied_human))
-		brain.start_healing(tied_human)
+		if(!brain.start_healing(tied_human))
+			brain.cant_be_treated_stacks++
 		return ONGOING_ACTION_UNFINISHED
 
 	return ONGOING_ACTION_COMPLETED
