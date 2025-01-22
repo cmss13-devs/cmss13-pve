@@ -160,6 +160,10 @@
 	if(!check_rights(R_DEBUG))
 		return
 
+	if(!SSticker.mode)
+		to_chat(src, SPAN_WARNING("The round hasn't started yet!"))
+		return
+
 	var/mob/living/carbon/human/ai_human = new()
 	ai_human.AddComponent(/datum/component/human_ai)
 

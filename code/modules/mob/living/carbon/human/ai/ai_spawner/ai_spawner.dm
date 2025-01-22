@@ -75,6 +75,10 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 	if(!check_rights(R_DEBUG))
 		return
 
+	if(!SSticker.mode)
+		to_chat(src, SPAN_WARNING("The round hasn't started yet!"))
+		return
+
 	if(human_squad_menu)
 		human_squad_menu.tgui_interact(mob)
 		return
