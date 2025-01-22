@@ -774,7 +774,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 4
 
 /datum/gear/weapon/bayonet
-	display_name = "M11 bayonet"
+	display_name = "M5 bayonet"
 	path = 	/obj/item/attachable/bayonet
 
 /datum/gear/weapon/kabar

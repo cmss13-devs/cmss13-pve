@@ -431,11 +431,10 @@
 	item_state = "knife_bowie"
 	desc = "A large, devastating fighting knife of the old American west. Not an antique in of itself, but a high quality piece of equipment for the discerning outdoorsman. Now THIS is a knife."
 	w_class = SIZE_MEDIUM
-	force = MELEE_FORCE_STRONG
+	force = MELEE_FORCE_TIER_6
 	throwforce = MELEE_FORCE_WEAK
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	attack_speed = 9
 
 /obj/item/weapon/knife/marine/sas
 	name = "\improper Fairbairn-Sykes fighting knife"
