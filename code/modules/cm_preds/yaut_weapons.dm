@@ -526,7 +526,7 @@
 			victim.apply_damage(15, BRUTE, limb, sharp = FALSE)
 		victim.add_flay_overlay(stage = 1)
 
-		var/datum/flaying_datum/flay_datum = new(victim)
+		new /datum/flaying_datum(victim)
 		SEND_SIGNAL(victim, COMSIG_HUMAN_FLAY_ATTEMPT, user, src, TRUE)
 	else
 		to_chat(user, SPAN_WARNING("You were interrupted before you could finish your work!"))
