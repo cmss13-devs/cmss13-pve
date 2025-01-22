@@ -422,8 +422,8 @@
 
 /obj/item/weapon/knife/kabar
 	name = "\improper KA-BAR utility knife"
-	icon_state = "kabar_knife"
-	item_state = "kabar_knife"
+	icon_state = "knife_kabar"
+	item_state = "knife_kabar"
 	desc = "An old school Marine Corps combat knife. The iconic look of the knife and its association with the Corps' cultural history has seen it remain popular among marines well after its replacement as standard-issue. Fits neatly into boot-mounted holsters, and can- in emergencies- be utilized to dig out shrapnel."
 
 /obj/item/weapon/knife/bowie
