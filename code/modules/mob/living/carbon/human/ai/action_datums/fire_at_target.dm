@@ -17,16 +17,15 @@
 	if(!COOLDOWN_FINISHED(brain, stop_fire_cooldown))
 		return 0
 
-	var/turf/target_turf = brain.target_turf
 	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen) && (brain.gun_data.maximum_range > brain.view_distance))
 
 	if(!brain.current_target && !should_fire_offscreen)
 		return 0
 
-	if((get_dist(brain.tied_human, target_turf) > brain.view_distance) && !should_fire_offscreen)
+	if((get_dist(brain.tied_human, brain.target_turf) > brain.view_distance) && !should_fire_offscreen)
 		return 0
 
-	if(!firing_line_check(brain, target_turf))
+	if(!firing_line_check(brain, brain.target_turf))
 		return 0
 
 	if(brain.should_reload())
