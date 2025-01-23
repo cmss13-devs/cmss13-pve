@@ -915,17 +915,16 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	light_range = 5 //slightly higher
 	specialty = "M4 pattern marine"
-
-/obj/item/clothing/suit/marine/rto/intel
-	name = "\improper XM4 pattern intelligence officer armor"
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer, /obj/item/clothing/under/marine/officer/intel)
-	specialty = "XM4 pattern intel"
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_DECORKNEE)
 
 /obj/item/clothing/suit/marine/rto/forecon
 	name = "\improper M3-R pattern recon armor"
 	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. Issued mostly to recon units."
 	icon_state = "4"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 
 /obj/item/clothing/suit/marine/rto/forecon/Initialize(mapload)
 	. = ..()
@@ -962,8 +961,6 @@
 	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
 	movement_compensation = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 
 /obj/item/clothing/suit/marine/medium/rto/navy/Initialize(mapload)
 	. = ..()
@@ -978,8 +975,6 @@
 	name = "\improper M4 pattern trooper armor"
 	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board. Surprisingly uncomfortable, even compared to the old M3 series armor. At least it's compatible with attachable components of the M3 series."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_DECORKNEE)
 
 /obj/item/clothing/suit/marine/medium/rto/army/Initialize(mapload)
 	. = ..()
@@ -993,74 +988,3 @@
 	src.attach_accessory(null, armguards, TRUE)
 	var/obj/item/clothing/accessory/pads/kneepads/knees = new()
 	src.attach_accessory(null, knees, TRUE)
-
-/obj/item/clothing/suit/marine/medium/rto/army/md
-	name = "\improper XM4 pattern 'battlefield-awareness' armor"
-	desc = "The XM4 experimental armor provides capable protection combined with an experimental integrated motion tracker."
-	desc_lore = "ARMAT Perfection. The XM4 Soldier Awareness System mixes M4-style hard armor and a distributed series of motion sensors clipped onto the breastplate. When connected to any HUD optic, it replicates the effects of an M314 Motion Detector unit, increasing user situational awareness. It is currently undergoing field trials by intelligence operatives and those whose duties detract from constant situational awareness."
-	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/army/toggle_motion_detector)
-	var/motion_detector = FALSE
-	var/obj/item/device/motiondetector/xm4/proximity
-	var/long_range_cooldown = 2
-	var/recycletime = 120
-
-/datum/action/item_action/army/action_activate()
-	. = ..()
-	if(!ishuman(owner))
-		return
-
-/datum/action/item_action/army/update_button_icon()
-	return
-
-/datum/action/item_action/army/toggle_motion_detector/New(Target, obj/item/holder)
-	. = ..()
-	name = "Toggle Motion Detector"
-	action_icon_state = "motion_detector"
-	button.name = name
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
-
-/datum/action/item_action/army/toggle_motion_detector/action_activate()
-	. = ..()
-	var/obj/item/clothing/suit/marine/medium/rto/army/md/recon = holder_item
-	recon.toggle_motion_detector(owner)
-
-/datum/action/item_action/army/toggle_motion_detector/proc/update_icon()
-	if(!holder_item)
-		return
-	var/obj/item/clothing/suit/marine/medium/rto/army/md/recon = holder_item
-	if(recon.motion_detector)
-		button.icon_state = "template_on"
-	else
-		button.icon_state = "template"
-
-/obj/item/clothing/suit/marine/medium/rto/army/md/process()
-	if(!motion_detector)
-		STOP_PROCESSING(SSobj, src)
-	if(motion_detector)
-		recycletime--
-		if(!recycletime)
-			recycletime = initial(recycletime)
-			proximity.refresh_blip_pool()
-		long_range_cooldown--
-		if(long_range_cooldown)
-			return
-		long_range_cooldown = initial(long_range_cooldown)
-		proximity.scan()
-
-/obj/item/clothing/suit/marine/medium/rto/army/md/proc/toggle_motion_detector(mob/user)
-	to_chat(user,SPAN_NOTICE("You [motion_detector? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s motion detector."))
-	if(!motion_detector)
-		playsound(loc,'sound/items/detector_turn_on.ogg', 25, 1)
-	else
-		playsound(loc,'sound/items/detector_turn_off.ogg', 25, 1)
-	motion_detector = !motion_detector
-	var/datum/action/item_action/army/toggle_motion_detector/TMD = locate(/datum/action/item_action/army/toggle_motion_detector) in actions
-	TMD.update_icon()
-	motion_detector()
-
-/obj/item/clothing/suit/marine/medium/rto/army/md/proc/motion_detector()
-	if(motion_detector)
-		START_PROCESSING(SSobj, src)
-	else
-		STOP_PROCESSING(SSobj, src)
