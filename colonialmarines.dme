@@ -1807,7 +1807,6 @@
 #include "code\modules\gear_presets\colonist.dm"
 #include "code\modules\gear_presets\contractor.dm"
 #include "code\modules\gear_presets\corpses.dm"
-#include "code\modules\gear_presets\dust_raider.dm"
 #include "code\modules\gear_presets\dutch.dm"
 #include "code\modules\gear_presets\fun.dm"
 #include "code\modules\gear_presets\other.dm"
