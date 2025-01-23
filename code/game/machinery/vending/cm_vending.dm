@@ -1042,8 +1042,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 	.["vendor_type"] = "sorted"
 	.["displayed_categories"] = vendor_user_inventory_list(user, null, 4)
 
-/obj/structure/machinery/cm_vending/sorted/MouseDrop_T(obj/item/B, mob/user)
-	var/obj/item/A = B
+/obj/structure/machinery/cm_vending/sorted/MouseDrop_T(atom/movable/A, mob/user)
 	if(inoperable())
 		return
 	if(user.stat || user.is_mob_restrained())
@@ -1084,12 +1083,10 @@ GLOBAL_LIST_EMPTY(vending_products)
 			SPAN_NOTICE("You finish stocking [src] with supplies."))
 			//return
 
-	//if(istype(A, /obj/item))
-	to_world("stock")
-	stock(A, user)
+	if(istype(A, /obj/item))
+		stock(A, user)
 
 /obj/structure/machinery/cm_vending/sorted/proc/stock(obj/item/item_to_stock, mob/user)
-	to_world("stock2")
 	var/list/stock_listed_products = get_listed_products(user)
 	for(var/list/vendspec as anything in stock_listed_products)
 		if(item_to_stock.type == vendspec[3])
