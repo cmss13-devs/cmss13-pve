@@ -75,9 +75,6 @@
 	desc = "A pair of standard issue black UPP Naval Infantry combat boots."
 	spawn_item_type = /obj/item/attachable/bayonet/upp
 
-/obj/item/clothing/shoes/marine/upp_knife
-	spawn_item_type = /obj/item/attachable/bayonet/upp
-
 /obj/item/clothing/shoes/marine/upp/guard
 	desc = "A pair of standard issue brown UPP Territorial Guard combat boots."
 	icon_state = "marine_brown"
@@ -95,13 +92,9 @@
 	name = "\improper RMC combat boots"
 	desc = "A pair of standard issue black Royal Marine Commando combat boots."
 	icon_state = "marine"
-/obj/item/clothing/shoes/marine/rmc/New()
-	..()
-	var/obj/item/attachable/bayonet/upp/knife = new(src)
-	knife.name = "\improper Fairbairn-Sykes fighting knife"
-	knife.desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
-	stored_item = knife
-	update_icon()
+/obj/item/clothing/shoes/marine/rmc/knife
+	spawn_item_type = /obj/item/weapon/knife/marine/sas
+
 
 /obj/item/clothing/shoes/marine/civilian
 	name = "rugged boots"
