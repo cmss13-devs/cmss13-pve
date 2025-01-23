@@ -535,7 +535,7 @@
 
 /obj/item/clothing/accessory/storage/MouseDrop(obj/over_object as obj)
 	if (has_suit || hold)
-		return
+		..(over_object)
 
 	if (hold.handle_mousedrop(usr, over_object))
 		..(over_object)

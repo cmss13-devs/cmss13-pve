@@ -514,7 +514,7 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/stock(obj/item/item_to_stock, mob/user)
 	var/list/R
 	for(R in (listed_products))
-		if(item_to_stock.type == R[3] && !istype(item_to_stock,/obj/item/storage))
+		if(item_to_stock.type == R[3])
 			//Marine armor handling
 			if(istype(item_to_stock, /obj/item/clothing/suit/storage/marine))
 				var/obj/item/clothing/suit/storage/marine/AR = item_to_stock
@@ -527,6 +527,17 @@
 				if(H.pockets && length(H.pockets.contents))
 					to_chat(user, SPAN_WARNING("\The [H] has something inside it. Empty it before restocking."))
 					return
+			else if(istype(item_to_stock, /obj/item/storage))
+				if(length(item_to_stock.contents))
+					to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
+					return
+				var/new_type = item_to_stock.type
+				var/atom/temp_container = new new_type(src)
+				var/temp_contents = temp_container.contents
+
+				to_world("test")
+				if(length(temp_contents))
+					return FALSE
 
 			if(item_to_stock.loc == user) //Inside the mob's inventory
 				if(item_to_stock.flags_item & WIELDED)

@@ -1005,7 +1005,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 	.["vendor_type"] = "sorted"
 	.["displayed_categories"] = vendor_user_inventory_list(user, null, 4)
 
-/obj/structure/machinery/cm_vending/sorted/MouseDrop_T(atom/movable/A, mob/user)
+/obj/structure/machinery/cm_vending/sorted/MouseDrop_T(obj/item/B, mob/user)
+	var/obj/item/A = B
 	if(inoperable())
 		return
 	if(user.stat || user.is_mob_restrained())
@@ -1018,41 +1019,40 @@ GLOBAL_LIST_EMPTY(vending_products)
 	// Try to bulk restock using a container
 	if(istype(A, /obj/item/storage))
 		var/obj/item/storage/container = A
-		if(!length(container.contents))
-			return
-		if(being_restocked)
-			to_chat(user, SPAN_WARNING("[src] is already being restocked, you will get in the way!"))
-			return
+		if (length(container.contents)) //check if the bag is supposed to be empty coming out of the vendor
 
-		user.visible_message(SPAN_NOTICE("[user] starts stocking a bunch of supplies into [src]."), \
-		SPAN_NOTICE("You start stocking a bunch of supplies into [src]."))
-		being_restocked = TRUE
-
-		for(var/obj/item/item in container.contents)
-			if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC, src))
-				being_restocked = FALSE
-				user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with supplies."), \
-				SPAN_NOTICE("You stop stocking [src] with supplies."))
+			if(being_restocked)
+				to_chat(user, SPAN_WARNING("[src] is already being restocked, you will get in the way!"))
 				return
-			if(QDELETED(item) || item.loc != container)
-				being_restocked = FALSE
-				user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with supplies."), \
-				SPAN_NOTICE("You stop stocking [src] with supplies."))
-				return
-			stock(item, user)
 
-		being_restocked = FALSE
-		user.visible_message(SPAN_NOTICE("[user] finishes stocking [src] with supplies."), \
-		SPAN_NOTICE("You finish stocking [src] with supplies."))
-		return
+			user.visible_message(SPAN_NOTICE("[user] starts stocking a bunch of supplies into [src]."), \
+			SPAN_NOTICE("You start stocking a bunch of supplies into [src], because [A] isn't empty."))
+			being_restocked = TRUE
 
-	if(istype(A, /obj/item))
-		stock(A, user)
+			for(var/obj/item/item in container.contents)
+				if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC, src))
+					being_restocked = FALSE
+					user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with supplies."), \
+					SPAN_NOTICE("You stop stocking [src] with supplies."))
+					return
+				if(QDELETED(item) || item.loc != container)
+					being_restocked = FALSE
+					user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with supplies."), \
+					SPAN_NOTICE("You stop stocking [src] with supplies."))
+					return
+				stock(item, user)
+
+			being_restocked = FALSE
+			user.visible_message(SPAN_NOTICE("[user] finishes stocking [src] with supplies."), \
+			SPAN_NOTICE("You finish stocking [src] with supplies."))
+			//return
+
+	//if(istype(A, /obj/item))
+	to_world("stock")
+	stock(A, user)
 
 /obj/structure/machinery/cm_vending/sorted/proc/stock(obj/item/item_to_stock, mob/user)
-	if(istype(item_to_stock, /obj/item/storage))
-		return FALSE
-
+	to_world("stock2")
 	var/list/stock_listed_products = get_listed_products(user)
 	for(var/list/vendspec as anything in stock_listed_products)
 		if(item_to_stock.type == vendspec[3])
@@ -1076,6 +1076,15 @@ GLOBAL_LIST_EMPTY(vending_products)
 			else if(istype(item_to_stock, /obj/item/stack))
 				var/obj/item/stack/item_stack = item_to_stock
 				partial_stacks = item_stack.amount % item_stack.max_amount
+
+			else if(istype(item_to_stock, /obj/item/storage))
+				var/new_type = item_to_stock.type
+				var/atom/temp_container = new new_type(src)
+				var/temp_contents = temp_container.contents
+
+				to_world("test")
+				if(length(temp_contents))
+					return FALSE
 
 			if(!additional_restock_checks(item_to_stock, user, vendspec))
 				// the error message needs to go in the proc
