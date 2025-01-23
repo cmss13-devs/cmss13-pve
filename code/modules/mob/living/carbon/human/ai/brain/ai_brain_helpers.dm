@@ -40,12 +40,6 @@
 
 /// Returns TRUE if the target is friendly/neutral to us
 /datum/human_ai_brain/proc/faction_check(atom/target)
-	if(isdefenses(target))
-		var/obj/structure/machinery/defenses/defense_target = target
-		if(tied_human.faction in defense_target.faction_group)
-			return TRUE
-		return FALSE
-
 	if(ismob(target))
 		var/mob/mob_target = target
 
@@ -57,6 +51,12 @@
 
 		if(mob_target.faction in neutral_factions)
 			return TRUE
+
+	if(isdefenses(target))
+		var/obj/structure/machinery/defenses/defense_target = target
+		if(tied_human.faction in defense_target.faction_group)
+			return TRUE
+		return FALSE
 
 	return FALSE
 
