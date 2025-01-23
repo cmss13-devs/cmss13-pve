@@ -317,14 +317,14 @@
 		"It's out, reloading!",
 		"I hope this won't take long!",
 		"Empty!",
-    )
+	)
 	reload_lines = list(
 		"Reloading!",
 		"Out of ammo!",
 		"It's out, reloading!",
 		"I hope this won't take long!",
 		"Empty!",
-    )
+	)
 
 /datum/human_ai_faction/wy
 	faction = FACTION_WY
