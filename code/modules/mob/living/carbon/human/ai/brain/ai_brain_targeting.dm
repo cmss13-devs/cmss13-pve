@@ -165,14 +165,12 @@
 /// Given a target, checks if there are any (not laying down) friendlies in a line between the AI and the target
 /datum/human_ai_brain/proc/friendly_check(atom/target)
 	var/list/turf_list = get_line(get_turf(tied_human), get_turf(target))
+	turf_list.Cut(1, 2) // starting turf
 	for(var/turf/tile in turf_list)
 		if(istype(tile, /turf/closed))
 			return TRUE
 
 		for(var/mob/living/carbon/human/possible_friendly in tile)
-			if(tied_human == possible_friendly)
-				continue
-
 			if(possible_friendly.body_position == LYING_DOWN)
 				continue
 
