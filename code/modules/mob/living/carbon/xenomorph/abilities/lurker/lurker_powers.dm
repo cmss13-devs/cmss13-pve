@@ -329,11 +329,11 @@
 	if(xeno.can_not_harm(target_carbon))
 		return
 
-	if(!(HAS_TRAIT(target_carbon, TRAIT_KNOCKEDOUT) || target_carbon.stat == UNCONSCIOUS)) //called knocked out because for some reason .stat seems to have a delay .
+	if(!xeno.Adjacent(target_carbon))
 		to_chat(xeno, SPAN_XENOHIGHDANGER("We can only headbite an unconscious, adjacent target!"))
 		return
 
-	if(!xeno.Adjacent(target_carbon))
+	if(!(HAS_TRAIT(target_carbon, TRAIT_KNOCKEDOUT) || target_carbon.stat == UNCONSCIOUS || (locate(/datum/effects/crit) in target_carbon.effects_list))) //called knocked out because for some reason .stat seems to have a delay .
 		to_chat(xeno, SPAN_XENOHIGHDANGER("We can only headbite an unconscious, adjacent target!"))
 		return
 
