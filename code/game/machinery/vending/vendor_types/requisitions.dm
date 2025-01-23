@@ -166,11 +166,11 @@
 		list("Box of High-Capacity Power Cells", 0, /obj/item/ammo_box/magazine/misc/power_cell, VENDOR_ITEM_REGULAR),
 		list("Nailgun Magazine Box (7x45mm)", floor(scale * 2), /obj/item/ammo_box/magazine/nailgun, VENDOR_ITEM_REGULAR)
 		)
-
+/*
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/stock(obj/item/item_to_stock, mob/user)
-	if(istype(item_to_stock, /obj/item/storage) && !istype(item_to_stock, /obj/item/storage/box/m94) && !istype(item_to_stock, /obj/item/storage/large_holster/machete))
-		to_chat(user, SPAN_WARNING("Can't restock \the [item_to_stock]."))
-		return
+	//if(istype(item_to_stock, /obj/item/storage) && !istype(item_to_stock, /obj/item/storage/box/m94) && !istype(item_to_stock, /obj/item/storage/large_holster/machete))
+	//	to_chat(user, SPAN_WARNING("Can't restock \the [item_to_stock]."))
+	//	return
 
 	//this below is in case we have subtype of an object, that SHOULD be treated as parent object (like /empty ammo box)
 	var/corrected_path = return_corresponding_type(item_to_stock.type)
@@ -198,7 +198,7 @@
 				update_derived_ammo_and_boxes_on_add(R)
 			updateUsrDialog()
 			return //We found our item, no reason to go on.
-
+*/
 //Special cargo-specific vendor with vending offsets
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/cargo
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_LOAD_AMMO_BOXES | VEND_STOCK_DYNAMIC //We want to vend to turf not hand, since we are in requisitions
@@ -510,7 +510,7 @@
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/vend_fail()
 	return
-
+/*
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/stock(obj/item/item_to_stock, mob/user)
 	var/list/R
 	for(R in (listed_products))
@@ -528,16 +528,16 @@
 					to_chat(user, SPAN_WARNING("\The [H] has something inside it. Empty it before restocking."))
 					return
 			else if(istype(item_to_stock, /obj/item/storage))
-				if(length(item_to_stock.contents))
-					to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
-					return
 				var/new_type = item_to_stock.type
 				var/atom/temp_container = new new_type(src)
 				var/temp_contents = temp_container.contents
-
-				to_world("test")
+				qdel(temp_container)
 				if(length(temp_contents))
+					to_chat(user, SPAN_WARNING("You cannot restock pouches that are prefilled by the vendor!"))
 					return FALSE
+				else if(length(item_to_stock.contents))
+					to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
+					return
 
 			if(item_to_stock.loc == user) //Inside the mob's inventory
 				if(item_to_stock.flags_item & WIELDED)
@@ -556,7 +556,7 @@
 				update_derived_ammo_and_boxes_on_add(R)
 			updateUsrDialog()
 			return //We found our item, no reason to go on.
-
+*/
 //------------TRAINING WEAPONS RACK---------------
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep/training //Nonlethal stuff for events.

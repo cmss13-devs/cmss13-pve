@@ -328,6 +328,41 @@ GLOBAL_LIST_EMPTY(vending_products)
 			if(user)
 				to_chat(user, SPAN_WARNING("\The [H] has something inside it. Empty it before restocking."))
 			return FALSE
+	//MREs
+	else if(istype(item_to_stock, /obj/item/storage/box/MRE))
+		var/obj/item/storage/box/MRE/mre_to_stock = item_to_stock
+		if(mre_to_stock.isopened)
+			to_chat(user, SPAN_WARNING("[item_to_stock] was already opened and isn't suitable for storing in [src]."))
+			return
+	//catch all storage handling, only works on items that start empty!
+	else if(istype(item_to_stock, /obj/item/storage))
+		var/new_type = item_to_stock.type
+		var/atom/temp_container = new new_type(src)
+		var/temp_contents = temp_container.contents
+		//qdel(temp_container)
+		if(length(temp_contents))
+			to_chat(user, SPAN_WARNING("You cannot restock pouches that are prefilled by the vendor!"))
+			return FALSE
+		else if(length(item_to_stock.contents))
+			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
+			return FALSE
+	//these checks were moved from /obj/structure/machinery/cm_vending/proc/stock()
+	else if(istype(item_to_stock, /obj/item/device/defibrillator))
+		var/obj/item/device/defibrillator/defib = item_to_stock
+		if(!defib.dcell)
+			to_chat(user, SPAN_WARNING("[item_to_stock] needs a cell in it to be restocked!"))
+			return FALSE
+		if(defib.dcell.charge < defib.dcell.maxcharge)
+			to_chat(user, SPAN_WARNING("[item_to_stock] needs to be fully charged to restock it!"))
+			return FALSE
+
+	else if(istype(item_to_stock, /obj/item/cell))
+		var/obj/item/cell/cell = item_to_stock
+		if(cell.charge < cell.maxcharge)
+			to_chat(user, SPAN_WARNING("[item_to_stock] needs to be fully charged to restock it!"))
+			return FALSE
+
+
 	return TRUE //Item IS good to restock!
 
 //------------MAINTENANCE PROCS---------------
@@ -1058,33 +1093,15 @@ GLOBAL_LIST_EMPTY(vending_products)
 		if(item_to_stock.type == vendspec[3])
 
 			var/partial_stacks = 0
-			if(istype(item_to_stock, /obj/item/device/defibrillator))
-				var/obj/item/device/defibrillator/defib = item_to_stock
-				if(!defib.dcell)
-					to_chat(user, SPAN_WARNING("[item_to_stock] needs a cell in it to be restocked!"))
-					return FALSE
-				if(defib.dcell.charge < defib.dcell.maxcharge)
-					to_chat(user, SPAN_WARNING("[item_to_stock] needs to be fully charged to restock it!"))
-					return FALSE
-
-			else if(istype(item_to_stock, /obj/item/cell))
-				var/obj/item/cell/cell = item_to_stock
-				if(cell.charge < cell.maxcharge)
-					to_chat(user, SPAN_WARNING("[item_to_stock] needs to be fully charged to restock it!"))
-					return FALSE
+			if (!check_if_item_is_good_to_restock(item_to_stock, user))
+				return
 
 			else if(istype(item_to_stock, /obj/item/stack))
 				var/obj/item/stack/item_stack = item_to_stock
 				partial_stacks = item_stack.amount % item_stack.max_amount
 
-			else if(istype(item_to_stock, /obj/item/storage))
-				var/new_type = item_to_stock.type
-				var/atom/temp_container = new new_type(src)
-				var/temp_contents = temp_container.contents
-
-				to_world("test")
-				if(length(temp_contents))
-					return FALSE
+			if(!check_if_item_is_good_to_restock(item_to_stock, user))
+				return FALSE
 
 			if(!additional_restock_checks(item_to_stock, user, vendspec))
 				// the error message needs to go in the proc
@@ -1111,7 +1128,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 				partial_product_stacks[item_to_stock.type] = combined_stacks % item_stack.max_amount
 			else
 				vendspec[2]++
-			update_derived_ammo_and_boxes_on_add(vendspec)
+			if(vend_flags & VEND_LOAD_AMMO_BOXES)
+				update_derived_ammo_and_boxes_on_add(vendspec)
 			updateUsrDialog()
 			return TRUE //We found our item, no reason to go on.
 
