@@ -1,6 +1,5 @@
-import { BooleanLike, classes } from 'common/react';
-import { useState } from 'react';
 import { useBackend } from '../backend';
+import { BooleanLike, classes } from 'common/react';
 import {
   Box,
   Button,
@@ -11,6 +10,7 @@ import {
   Collapsible,
 } from '../components';
 import { Window } from '../layouts';
+import { useState } from 'react';
 
 type Defense = {
   name: string;
@@ -41,7 +41,7 @@ export const HumanDefenseManager = (props) => {
             <Stack.Item grow mr={1}>
               <Section fill height="100%">
                 {Object.keys(defenses).map((dictKey) => (
-                  <Collapsible title={dictKey} color="good">
+                  <Collapsible title={dictKey} key={dictKey} color="good">
                     {defenses[dictKey].map((defense) => (
                       <div style={{ paddingBottom: '12px' }} key={defense.path}>
                         <Button

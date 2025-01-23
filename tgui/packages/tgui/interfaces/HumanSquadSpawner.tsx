@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import { useBackend } from '../backend';
 import { Button, Divider, Section, Stack, Collapsible } from '../components';
 import { Window } from '../layouts';
+import { useState } from 'react';
 
 type Squad = {
   name: string;
@@ -26,7 +26,7 @@ export const HumanSquadSpawner = (props) => {
             <Stack.Item grow mr={1}>
               <Section fill height="100%">
                 {Object.keys(squads).map((dictKey) => (
-                  <Collapsible title={dictKey} color="good">
+                  <Collapsible title={dictKey} key={dictKey} color="good">
                     {squads[dictKey].map((squad) => (
                       <div style={{ paddingBottom: '12px' }} key={squad.path}>
                         <Button
@@ -54,9 +54,7 @@ export const HumanSquadSpawner = (props) => {
                     <Stack.Item>
                       Contains:
                       {chosenSquad.contents.map((content) => (
-                        <>
-                          <div>{content}</div>
-                        </>
+                        <div>{content}</div>
                       ))}
                     </Stack.Item>
                     <Stack.Item>

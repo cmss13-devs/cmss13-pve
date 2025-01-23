@@ -1,7 +1,8 @@
-import { useBackend, useLocalState } from '../backend';
+import { useBackend } from '../backend';
+import { BooleanLike } from 'common/react';
 import { Button, Dropdown, Section, Stack, Divider } from '../components';
 import { Window } from '../layouts';
-import { BooleanLike } from 'common/react';
+import { useState } from 'react';
 
 type Faction = {
   name: string;
@@ -19,10 +20,7 @@ type BackendContext = {
 
 const FactionContext = (props, context) => {
   const { data, act } = useBackend<BackendContext>();
-  const [selectedToCreateFaction, setSelectedToCreateFaction] = useLocalState(
-    'selected_to_create_faction',
-    '',
-  );
+  const [selectedToCreateFaction, setSelectedToCreateFaction] = useState('');
   return (
     <Stack fill vertical>
       <div>
@@ -30,7 +28,7 @@ const FactionContext = (props, context) => {
           style={{
             float: 'left',
             display: 'inline-block',
-            'padding-right': '6px',
+            paddingRight: '6px',
           }}
         >
           <Dropdown
@@ -43,7 +41,7 @@ const FactionContext = (props, context) => {
           style={{
             float: 'left',
             display: 'inline-block',
-            'padding-right': '6px',
+            paddingRight: '6px',
           }}
         >
           <Button
@@ -60,7 +58,7 @@ const FactionContext = (props, context) => {
       <Divider />
       <div>
         {data.factions.map((faction) => (
-          <ExistingFaction faction={faction} id={faction.ref} />
+          <ExistingFaction faction={faction} key={faction.ref} />
         ))}
       </div>
     </Stack>
@@ -76,8 +74,8 @@ const ExistingFaction = (props) => {
       style={{
         float: 'left',
         display: 'inline-block',
-        'padding-right': '6px',
-        'padding-bottom': '6px',
+        paddingRight: '6px',
+        paddingBottom: '6px',
       }}
     >
       <Section title={`${faction.name}`}>

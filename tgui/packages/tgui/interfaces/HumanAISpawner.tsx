@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import { useBackend } from '../backend';
 import { Button, Divider, Section, Stack, Collapsible } from '../components';
 import { Window } from '../layouts';
+import { useState } from 'react';
 
 type AIEquipmentPreset = {
   name: string;
@@ -25,7 +25,7 @@ export const HumanAISpawner = (props) => {
             <Stack.Item grow mr={1}>
               <Section fill height="100%">
                 {Object.keys(presets).map((dictKey) => (
-                  <Collapsible title={dictKey} color="good">
+                  <Collapsible title={dictKey} key={dictKey} color="good">
                     {presets[dictKey].map((squad) => (
                       <div style={{ paddingBottom: '12px' }} key={squad.path}>
                         <Button
