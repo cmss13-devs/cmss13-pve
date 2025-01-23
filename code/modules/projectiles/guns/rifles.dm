@@ -888,14 +888,14 @@
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
 
-/obj/item/weapon/gun/rifle/mar40//set_gun_attachment_offsets()
+/obj/item/weapon/gun/rifle/mar40/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 16, "rail_y" = 20, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
 
-/obj/item/weapon/gun/rifle/mar40//set_gun_config_values()
+/obj/item/weapon/gun/rifle/mar40/lmg/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_)
+	set_fire_delay(FIRE_DELAY_TIER_LMG)
 	set_burst_amount(BURST_AMOUNT_TIER_5)
-	set_burst_delay(FIRE_DELAY_TIER_)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_6
@@ -905,7 +905,7 @@
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 	recoil = RECOIL_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/rifle/mar40//tactical
+/obj/item/weapon/gun/rifle/mar40/lmg/tactical
 	desc = "A cheap, reliable  chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals. This one has been equipped with an after-market ammo-counter."
 	starting_attachment_types = list(/obj/item/attachable/mar50barrel, /obj/item/attachable/bipod, /obj/item/attachable/magnetic_harness)
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
@@ -1675,8 +1675,8 @@
 
 // pve - kinda weird icon usage, uses urban M49A sprite w/ custom attachie sprite
 /obj/item/weapon/gun/rifle/m49a/pve
-	name = "\improper M49A-R2 battle rifle"
-	desc = "The M49A-R2 is a souped-up M49A, the result of an ARMAT upgrade program that didn't pan out in huge numbers. Its main attraction is the ability to chamber and fire devastating <b>A19 depleted uranium rounds,</b> infamous for their overpenetration abilities and toxic effects on anyone unfortunate enough to survive a hit. The thicker barrel, of course, also has no issue with non-HV ammo."
+	name = "\improper M49A6 battle rifle"
+	desc = "The M49A6 is a souped-up M49A, the result of an ARMAT upgrade program that didn't pan out in huge numbers. Its main attraction is the ability to chamber and fire devastating <b>A19 depleted uranium rounds,</b> infamous for their overpenetration abilities and toxic effects on anyone unfortunate enough to survive a hit. The thicker barrel, of course, also has no issue with non-HV ammo."
 	desc_lore = "The USCMC was not terribly enthusiastic about unproven hand-held plasma weaponry. Before the XM99A was eventually adopted into use, the USCMC instead sought out a traditional squad-portable, precision, armor-piercing weapon, and contracted ARMAT to upgrade their M49A platform to be capable of firing advanced AP rounds. They succeeded- sort of. <BR> <BR>  The R2 was rejected for several reasons. It's a killer, but also a piece of junk. It kicks hard enough that precision sights simply don't stay zeroed, and its oversized muzzle-device extends an already long barrel-length. Additionally, A19 ammo, already expensive, was driven to absurd highs by the ammunition's specs. Depleted uranium is expensive...and cutting the service life of the M49A's barrel in half is even more expensive. <BR> <BR> Those that were made, however, are still service-ready and were issued where the XM99A was unavailable due to its production only just starting."
 	icon = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_obj.dmi'
 	icon_state = "m49a"
