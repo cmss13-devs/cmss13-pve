@@ -20587,8 +20587,6 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
-"vvY" = (
-)
 "vwQ" = (
 /turf/open/floor/hangar_airlock/outer/frame19,
 /area/golden_arrow/motor_pool)
@@ -29807,7 +29805,7 @@ lJp
 lJp
 nik
 aGv
-vvY
+aGv
 aBB
 aBB
 aDG
