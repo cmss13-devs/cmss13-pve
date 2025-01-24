@@ -135,6 +135,7 @@
 	icon_state = "grenade_hefa"
 	item_state = "grenade_hefa"
 	explosion_power = 40
+	shrapnel_type = /datum/ammo/bullet/shrapnel/light/dense
 	shrapnel_count = 48
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
