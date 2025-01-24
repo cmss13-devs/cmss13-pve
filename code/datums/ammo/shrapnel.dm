@@ -111,16 +111,6 @@
 	damage = 15
 	penetration = -ARMOR_PENETRATION_TIER_3
 
-/datum/ammo/bullet/shrapnel/incendiary/light/dense
-	flags_ammo_behavior = AMMO_STOPPED_BY_COVER
-
-/datum/ammo/bullet/shrapnel/incendiary/light/dense/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
-	))
-
-
 /datum/ammo/bullet/shrapnel/incendiary/heavy	//Maximum warcrimes edition
 	accurate_range = 32
 	max_range = 8
@@ -152,6 +142,17 @@
 	penetration = 0
 	shell_speed = AMMO_SPEED_TIER_1
 	shrapnel_chance = 0
+
+/datum/ammo/bullet/shrapnel/light/dense
+	flags_ammo_behavior = AMMO_STOPPED_BY_COVER
+	damage = 25
+
+/datum/ammo/bullet/shrapnel/light/dense/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
 
 /datum/ammo/bullet/shrapnel/light/human
 	name = "human bone fragments"
