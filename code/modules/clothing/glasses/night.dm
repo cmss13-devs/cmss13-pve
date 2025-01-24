@@ -217,7 +217,7 @@
 	actions_types = list(/datum/action/item_action/toggle)
 	darkness_view = 12
 	vision_flags = 0
-	lighting_alpha = 255
+	lighting_alpha = 150
 	flags_inventory = null
 
 //this version has no farsight and NV, but is mostly there as a flavor item.
