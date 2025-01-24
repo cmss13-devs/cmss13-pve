@@ -16976,6 +16976,20 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"iMS" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/item/tool/warning_cone{
+	pixel_y = 3;
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/motor_pool)
 "iNi" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -17542,6 +17556,13 @@
 	},
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/hangar)
+"lbD" = (
+/obj/item/tool/warning_cone{
+	pixel_y = 3;
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
 "lff" = (
 /obj/structure/largecrate/supply/floodlights{
 	pixel_y = -9
@@ -20587,6 +20608,20 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
+"vvY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/tool/warning_cone{
+	pixel_y = 3;
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/motor_pool)
 "vwQ" = (
 /turf/open/floor/hangar_airlock/outer/frame19,
 /area/golden_arrow/motor_pool)
@@ -28747,7 +28782,7 @@ alz
 aUq
 aGv
 aGv
-aGv
+lbD
 aGv
 aag
 aeV
@@ -29103,7 +29138,7 @@ aWS
 aWS
 aaQ
 aBV
-aEO
+iMS
 adk
 ahA
 abD
@@ -29634,7 +29669,7 @@ aAA
 aAA
 adx
 aPE
-aAT
+vvY
 aCZ
 aBE
 atE
@@ -29810,7 +29845,7 @@ aBB
 aBB
 aDG
 aVL
-aGv
+lbD
 aag
 axX
 aue
