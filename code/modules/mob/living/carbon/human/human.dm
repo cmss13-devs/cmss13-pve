@@ -161,14 +161,16 @@
 		AdjustEarDeafness(severity * 0.5)
 
 	/// Reduces effects by armor value.
-	var/bomb_armor_mult = ((CLOTHING_ARMOR_HARDCORE - bomb_armor) * 0.01)
+	// now also generally more aggressive reduction by blast armor of knock and out effects
+	var/bomb_armor_mult = ((CLOTHING_ARMOR_HARDCORE - bomb_armor) * 0.05)
 
 	if(severity >= 30)
-		flash_eyes(flash_timer = 4 SECONDS * bomb_armor_mult)
+	// cutting this in half from previous 4
+		flash_eyes(flash_timer = 2 SECONDS * bomb_armor_mult)
 
 	// Stuns are multiplied by 1 reduced by their medium armor value. So a medium of 30 would mean a 30% reduction.
 	var/knockdown_value = severity * 0.1
-	var/knockdown_minus_armor = min(knockdown_value * bomb_armor_mult, 1 SECONDS)
+	var/knockdown_minus_armor = min(knockdown_value * bomb_armor_mult, 1 SECONDS) //this defines versus bomb armor and caps it out at 1 second.
 	var/obj/item/item1 = get_active_hand()
 	var/obj/item/item2 = get_inactive_hand()
 	apply_effect(floor(knockdown_minus_armor), WEAKEN)
