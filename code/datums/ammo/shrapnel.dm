@@ -15,7 +15,7 @@
 	damage = 25
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = -ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_2
 	shrapnel_chance = 5
 
@@ -42,7 +42,6 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
 	damage = 65
 	penetration = 0
-	penetration = ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_1
 	damage_armor_punch = 1
 	pen_armor_punch = 0
@@ -101,7 +100,6 @@
 
 	shell_speed = AMMO_SPEED_TIER_1
 	damage = 20
-	penetration = ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/shrapnel/incendiary/set_bullet_traits()
 	. = ..()
@@ -111,7 +109,7 @@
 
 /datum/ammo/bullet/shrapnel/incendiary/light
 	damage = 10
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = -ARMOR_PENETRATION_TIER_3
 
 /datum/ammo/bullet/shrapnel/incendiary/heavy	//Maximum warcrimes edition
 	accurate_range = 32
@@ -134,14 +132,14 @@
 	damage = 30
 	shrapnel_chance = 15
 	accuracy = HIT_ACCURACY_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_2
 
 /datum/ammo/bullet/shrapnel/light // weak shrapnel
 	name = "light shrapnel"
 	icon_state = "shrapnel_light"
 
 	damage = 10
-	penetration = ARMOR_PENETRATION_TIER_1
+	penetration = 0
 	shell_speed = AMMO_SPEED_TIER_1
 	shrapnel_chance = 0
 
