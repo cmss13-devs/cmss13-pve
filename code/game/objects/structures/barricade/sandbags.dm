@@ -25,7 +25,7 @@
 	else if(dir == NORTH)
 		pixel_y = 7
 
-	..(loc, user)
+	. = ..(loc, user)
 
 	for(var/i = 1 to amount-1)
 		increment_build_stage()
@@ -139,6 +139,7 @@
 	. = ..(loc, user, direction, amount = 5)
 
 /obj/structure/barricade/sandbags/wired/Initialize(mapload, mob/user)
+	. = ..()
 	health = BARRICADE_SANDBAG_TRESHOLD_5
 	maxhealth = BARRICADE_SANDBAG_TRESHOLD_5
 	maxhealth += 50
@@ -149,7 +150,6 @@
 	build_stage = BARRICADE_SANDBAG_5
 	update_icon()
 	climbable = FALSE
-	. = ..()
 
 /obj/structure/barricade/sandbags/wired/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
