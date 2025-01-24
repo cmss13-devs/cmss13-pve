@@ -130,12 +130,11 @@
 //================================================
 */
 /obj/item/explosive/grenade/high_explosive/frag
-	name = "\improper M24 HEFA grenade"
-	desc = "The M24 High Explosive Fragmentation Antipersonnel grenade is an antipersonnel defensive multirole 30mm grenade. Its dense cloud of light fragments struggle to overcome armor, but produce great effect against personnel."
+	name = "\improper M40 HEFA grenade"
+	desc = "High-Explosive Fragmenting-Antipersonnel. A small, but deceptively strong fragmentation grenade that has been phasing out the M15 fragmentation grenades alongside the M40 HEDP. Capable of being loaded in the M92 Launcher, or thrown by hand."
 	icon_state = "grenade_hefa"
 	item_state = "grenade_hefa"
 	explosion_power = 40
-	shrapnel_type = /datum/ammo/bullet/shrapnel/light/dense
 	shrapnel_count = 48
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 

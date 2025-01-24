@@ -142,20 +142,6 @@
 	penetration = 0
 	shell_speed = AMMO_SPEED_TIER_1
 	shrapnel_chance = 0
-// dense light shrapnel is used by the M40 HEFA. It's highly effective against soft targets but much less potent against hard.
-/datum/ammo/bullet/shrapnel/light/dense
-	flags_ammo_behavior = AMMO_STOPPED_BY_COVER
-	max_range = 8
-	damage = 45
-	damage_var_high = PROJECTILE_VARIANCE_TIER_5
-	penetration = -ARMOR_PENETRATION_TIER_3
-
-/datum/ammo/bullet/shrapnel/light/dense/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
-	))
-
 
 /datum/ammo/bullet/shrapnel/light/human
 	name = "human bone fragments"
