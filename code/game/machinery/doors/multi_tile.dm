@@ -645,3 +645,10 @@
 	icon = 'icons/obj/structures/doors/2x1almayerdoor_glass.dmi'
 	opacity = FALSE
 	glass = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/strata
+	name = "Secure Airlock"
+	icon = 'icons/obj/structures/doors/strata/strata_2x1.dmi'
+	opacity = TRUE
+	glass = FALSE
+	openspeed = 4

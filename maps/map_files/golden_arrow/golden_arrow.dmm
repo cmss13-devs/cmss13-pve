@@ -5226,6 +5226,10 @@
 	pixel_y = 27;
 	pixel_x = 4
 	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_y = 13;
+	pixel_x = -3
+	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/platoon_commander_rooms)
 "asj" = (
@@ -6280,6 +6284,10 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -1
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (
@@ -8308,13 +8316,6 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
-"aCU" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/hardpoint/locomotion/apc_wheels,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "aCV" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -8984,10 +8985,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
-"aFc" = (
-/obj/item/hardpoint/locomotion/apc_wheels/arc,
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/motor_pool)
 "aFd" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
@@ -15319,9 +15316,6 @@
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
 	pixel_y = 8;
 	pixel_x = 3
-	},
-/obj/item/clothing/head/helmet/marine/medic{
-	pixel_y = -9
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
@@ -39093,7 +39087,7 @@ adz
 adz
 adz
 adz
-aCU
+aKa
 aby
 srv
 srv
