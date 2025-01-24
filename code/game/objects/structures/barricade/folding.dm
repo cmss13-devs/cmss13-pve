@@ -290,7 +290,8 @@
 
 	linkable = FALSE
 
-/obj/structure/barricade/plasteel/metal/wired/New()
+/obj/structure/barricade/plasteel/metal/wired/Initialize(mapload, mob/user)
+	. = ..()
 	can_wire = FALSE
 	is_wired = TRUE
 	climbable = FALSE

@@ -39,6 +39,7 @@
 	current_order = null
 
 /// Returns TRUE if the target is friendly/neutral to us
+/// This is THE hottest proc that Human AI invokes, so please be careful in adding more to it
 /datum/human_ai_brain/proc/faction_check(atom/target)
 	if(ismob(target))
 		var/mob/mob_target = target

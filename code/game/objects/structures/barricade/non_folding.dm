@@ -294,7 +294,7 @@
 	barricade_type = "new_plasteel"
 	repair_materials = list("plasteel" = 0.45)
 
-/obj/structure/barricade/metal/plasteel/wired/New()
+/obj/structure/barricade/metal/plasteel/wired/Initialize(mapload, mob/user)
 	maxhealth += 50
 	update_health(-50)
 	can_wire = FALSE

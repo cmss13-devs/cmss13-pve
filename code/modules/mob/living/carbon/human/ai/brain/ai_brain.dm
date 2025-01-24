@@ -80,6 +80,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	RegisterSignal(tied_human, COMSIG_HUMAN_BULLET_ACT, PROC_REF(on_shot))
 	RegisterSignal(tied_human, COMSIG_HUMAN_HANDCUFFED, PROC_REF(on_handcuffed))
 	RegisterSignal(tied_human, COMSIG_HUMAN_GET_AI_BRAIN, PROC_REF(get_ai_brain))
+	RegisterSignal(tied_human, COMSIG_HUMAN_SET_SPECIES, PROC_REF(on_species_change))
 	GLOB.human_ai_brains += src
 	setup_detection_radius()
 	appraise_inventory()
@@ -222,6 +223,13 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	SIGNAL_HANDLER
 	tied_human = null
 
+/datum/human_ai_brain/proc/on_species_change(datum/source, new_species)
+	SIGNAL_HANDLER
+	if((new_species == SPECIES_YAUTJA) || (new_species == SPECIES_ZOMBIE))
+		ignore_looting = TRUE
+	else
+		ignore_looting = FALSE
+
 /datum/human_ai_brain/proc/setup_detection_radius()
 	if(length(detection_turfs))
 		clear_detection_radius()
@@ -351,7 +359,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		set_target(bullet.firer)
 	else
 		COOLDOWN_START(src, fire_offscreen, 4 SECONDS)
-		target_turf = get_turf(bullet.firer	)
+		target_turf = get_turf(bullet.firer)
 
 	if(!current_cover)
 		try_cover(bullet.angle, bullet.firer)

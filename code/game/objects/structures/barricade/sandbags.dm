@@ -16,7 +16,7 @@
 	var/build_stage = BARRICADE_SANDBAG_1
 	metallic = FALSE
 
-/obj/structure/barricade/sandbags/New(loc, mob/user, direction, amount = 1)
+/obj/structure/barricade/sandbags/Initialize(loc, mob/user, direction, amount = 1)
 	if(direction)
 		setDir(direction)
 
@@ -135,10 +135,10 @@
 
 /obj/structure/barricade/sandbags/full
 
-/obj/structure/barricade/sandbags/full/New(loc, mob/user, direction, amount = 5)
-	. = ..()
+/obj/structure/barricade/sandbags/full/Initialize(mapload, mob/user, direction, amount = 5)
+	. = ..(loc, user, direction, amount = 5)
 
-/obj/structure/barricade/sandbags/wired/New()
+/obj/structure/barricade/sandbags/wired/Initialize(mapload, mob/user)
 	health = BARRICADE_SANDBAG_TRESHOLD_5
 	maxhealth = BARRICADE_SANDBAG_TRESHOLD_5
 	maxhealth += 50

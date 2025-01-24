@@ -31,9 +31,9 @@
 		if(viewing_mob == tied_human)
 			continue
 
-		if(!has_nightvision)
+		if(!has_nightvision && (get_dist(viewing_mob, tied_human) > 1))
 			for(var/turf/open/nearby_turf in range(1, viewing_mob))
-				if(nearby_turf.luminosity || nearby_turf.dynamic_lumcount)
+				if(nearby_turf.luminosity || (nearby_turf.dynamic_lumcount >= 1))
 					view_list += viewing_mob
 					break
 		else

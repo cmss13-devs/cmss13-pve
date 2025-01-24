@@ -65,7 +65,7 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 			ai_human.face_dir(ui.user.dir)
 			ai_human.forceMove(get_turf(ui.user))
 
-			//ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
+			ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
 			return TRUE
 
 /client/proc/open_human_ai_spawner_panel()
@@ -88,10 +88,11 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 
 
 /datum/human_ai_equipment_preset
+	/// The GM-visible name of the equipment preset
 	var/name = ""
+	/// A short description of what the preset does. Including important equipment or usecases is a good idea
 	var/desc = ""
+	/// What faction the preset is related to
 	var/faction = FACTION_NEUTRAL
+	/// The /datum/equipment_preset that this preset should create
 	var/path
-
-//datum/human_ai_equipment_preset/proc/on_spawn(mob/living/carbon/human/new_human, datum/human_ai_brain/brain)
-//	return

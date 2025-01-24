@@ -48,7 +48,7 @@ export const HumanSquadSpawner = (props) => {
             <Divider vertical />
             <Stack.Item width="30%">
               <Section title="Selected Squad">
-                {chosenSquad !== null ? (
+                {chosenSquad !== null && (
                   <Stack vertical>
                     <Stack.Item>{chosenSquad.description}</Stack.Item>
                     <Stack.Item>
@@ -71,8 +71,6 @@ export const HumanSquadSpawner = (props) => {
                       </Button>
                     </Stack.Item>
                   </Stack>
-                ) : (
-                  <div />
                 )}
               </Section>
             </Stack.Item>

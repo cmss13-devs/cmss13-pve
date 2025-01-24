@@ -184,13 +184,13 @@
 		return
 
 	if(QDELETED(mob))
-		return //mob is garbage collected
+		return
 
 	if(mob.GetComponent(/datum/component/human_ai))
 		to_chat(usr, SPAN_WARNING("[mob] already has an assigned AI."))
 		return
 
-	if(mob.ckey && alert("This mob is being controlled by [mob.ckey]. Are you sure you wish to add AI to it?","Make AI","Yes","No") != "Yes")
+	if(mob.ckey && tgui_alert("This mob is being controlled by [mob.ckey]. Are you sure you wish to add AI to it?","Make AI", list("Yes","No")) != "Yes")
 		return
 
 	mob.AddComponent(/datum/component/human_ai)

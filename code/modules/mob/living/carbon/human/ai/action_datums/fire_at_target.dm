@@ -17,7 +17,7 @@
 	if(!COOLDOWN_FINISHED(brain, stop_fire_cooldown))
 		return 0
 
-	var/should_fire_offscreen = (target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen) && (brain.gun_data.maximum_range > brain.view_distance))
+	var/should_fire_offscreen = (brain.target_turf && !COOLDOWN_FINISHED(brain, fire_offscreen) && (brain.gun_data.maximum_range > brain.view_distance))
 
 	if(!brain.current_target && !should_fire_offscreen)
 		return 0

@@ -63,7 +63,7 @@ export const HumanDefenseManager = (props) => {
             <Divider vertical />
             <Stack.Item width="30%">
               <Section title="Selected Defense">
-                {chosenDefense !== null ? (
+                {chosenDefense !== null && (
                   <Stack vertical>
                     <Stack.Item>
                       <div
@@ -153,8 +153,6 @@ export const HumanDefenseManager = (props) => {
                       </Button>
                     </Stack.Item>
                   </Stack>
-                ) : (
-                  <div />
                 )}
               </Section>
             </Stack.Item>
