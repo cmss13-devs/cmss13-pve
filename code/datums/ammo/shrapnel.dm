@@ -131,7 +131,7 @@
 	damage = 30
 	shrapnel_chance = 15
 	accuracy = HIT_ACCURACY_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/shrapnel/light // weak shrapnel
 	name = "light shrapnel"
