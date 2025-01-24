@@ -185,7 +185,7 @@
 
 /obj/item/device/helmet_visor/night_vision
 	name = "night vision optic"
-	desc = "An insertable visor HUD into a standard USCM helmet. This type gives a form of night vision and is standard issue in units with regular funding."
+	desc = "A visor and camera system for the M10 and related combat helmets. It provides night vision capabilities."
 	icon_state = "nvg_sight"
 	hud_type = null
 	action_icon_string = "nvg_sight_down"
@@ -196,17 +196,17 @@
 	/// The internal battery for the visor
 	var/obj/item/cell/high/power_cell
 
-	/// About 5 minutes active use charge (hypothetically)
-	var/power_use = 33
+	// I feel like gamerunners would like to uh. Be able to hand people these and not worry about their batteries dying.
+	var/power_use = 10
 
 	/// The alpha of darkness we set to for the mob while the visor is on, not completely fullbright but see-able
-	var/lighting_alpha = 100
+	var/lighting_alpha = 150
 
 	/// A slight glowing green light while the NVG is activated, is initialized as in the attached_helmet's contents
 	var/atom/movable/nvg_light/on_light
 
 	/// Whether or not the sight uses on_light and produces light
-	var/visor_glows = TRUE
+	var/visor_glows = FALSE
 
 /obj/item/device/helmet_visor/night_vision/Initialize(mapload, ...)
 	. = ..()
@@ -289,21 +289,6 @@
 		user.see_in_dark = 12
 	user.lighting_alpha = lighting_alpha
 	user.sync_lighting_plane_alpha()
-
-/obj/item/device/helmet_visor/night_vision/proc/change_view(mob/user, new_size)
-	SIGNAL_HANDLER
-	if(new_size > 7) // cannot use binos with NVO
-		var/obj/item/clothing/head/helmet/marine/attached_helmet = loc
-		if(!istype(attached_helmet))
-			return
-		deactivate_visor(attached_helmet, user)
-		to_chat(user, SPAN_NOTICE("You deactivate [src] on [attached_helmet]."))
-		playsound_client(user.client, toggle_off_sound, null, 75)
-		attached_helmet.active_visor = null
-		attached_helmet.update_icon()
-		var/datum/action/item_action/cycle_helmet_huds/cycle_action = locate() in attached_helmet.actions
-		if(cycle_action)
-			cycle_action.set_default_overlay()
 
 #undef NVG_VISOR_USAGE
 
