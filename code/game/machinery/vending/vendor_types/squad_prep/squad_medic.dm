@@ -50,10 +50,6 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 		list("M40 HIDP Incendiary Packet (x3 grenades)", 18, /obj/item/storage/box/packet/incendiary, null, VENDOR_ITEM_REGULAR),
 		list("M40 WPDP White Phosphorus Packet (x3 grenades)", 18, /obj/item/storage/box/packet/phosphorus, null, VENDOR_ITEM_REGULAR),
 		list("M40 HSDP Smoke Packet (x3 grenades)", 9, /obj/item/storage/box/packet/smoke, null, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-Frag Airburst Packet (x3 airburst grenades)", 20, /obj/item/storage/box/packet/airburst_he, null, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-Incendiary Airburst Packet (x3 airburst grenades)", 20, /obj/item/storage/box/packet/airburst_incen, null, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-Smoke Airburst Packet (x3 airburst grenades)", 10, /obj/item/storage/box/packet/airburst_smoke, null, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-Hornet Airburst Packet (x3 airburst grenades", 20, /obj/item/storage/box/packet/hornet, null, VENDOR_ITEM_REGULAR),
 		list("M20 Mine Box (x5 mines)", 20, /obj/item/storage/box/explosive_mines, null, VENDOR_ITEM_REGULAR),
 		list("G2 Electroshock Grenade Packet (x3 grenades)",  16, /obj/item/storage/box/packet/sebb, null, VENDOR_ITEM_REGULAR),
 
@@ -125,18 +121,13 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 //------------CLOTHING VENDOR---------------
 
 GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
-		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
-		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-
-		list("ARMOR (CHOOSE 1)", 0, null, null, null),
-		list("Medium Armor", 0, /obj/item/clothing/suit/marine, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
 
 		list("ARMOR PAINT (CHOOSE 1)", 0, null, null, null),
 		list("Red Cross Paint", 0, /obj/item/clothing/accessory/paint/medic, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
 
 		list("HELMET (CHOOSE 1)", 0, null, null, null),
-		list("M10 Corpsman Helmet", 0, /obj/item/clothing/head/helmet/marine/medic, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
-		list("M10 Helmet", 0, /obj/item/clothing/head/helmet/marine, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
+		list("M10 Helmet (Red Cross)", 0, /obj/item/clothing/head/helmet/marine/medic, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
+		list("M10 Helmet (Plain)", 0, /obj/item/clothing/head/helmet/marine/medic/plain, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),

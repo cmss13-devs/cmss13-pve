@@ -13,6 +13,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 		if(G.display_name in GLOB.gear_datums_by_name)
 			log_debug("Duplicate gear datum name: [G.display_name].")
 			continue
+		if(!G.special_conditions())
+			continue
 		LAZYSET(GLOB.gear_datums_by_category[G.category], "[G.display_name] [G.cost == 1 ? "(1 point)" : "([G.cost] points)"]", G)
 		GLOB.gear_datums_by_name[G.display_name] = G
 
@@ -24,6 +26,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	var/slot // Slot to equip to, if any.
 	var/list/allowed_roles   // Roles that can spawn with this item.
 	var/list/allowed_origins
+
+/datum/gear/proc/special_conditions()
+	return TRUE
 
 /datum/gear/eyewear
 	category = "Eyewear"
@@ -46,37 +51,21 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Prescription Glasses"
 	path = /obj/item/clothing/glasses/regular/hipster
 
-/datum/gear/eyewear/goggles
-	display_name = "Ballistic goggles"
-	path = /obj/item/clothing/glasses/mgoggles
-
 /datum/gear/eyewear/prescription_goggles
 	display_name = "Prescription ballistic goggles"
 	path = /obj/item/clothing/glasses/mgoggles/prescription
 
-/datum/gear/eyewear/goggles_black
-	display_name = "Ballistic goggles, black"
-	path = /obj/item/clothing/glasses/mgoggles/black
-
 /datum/gear/eyewear/goggles_black/prescription
-	display_name = "Prescription ballistic goggles, black"
+	display_name = "Prescription ballistic goggles, sun-shaded"
 	path = /obj/item/clothing/glasses/mgoggles/black/prescription
 
-/datum/gear/eyewear/goggles_orange
-	display_name = "Ballistic goggles, orange"
-	path = /obj/item/clothing/glasses/mgoggles/orange
-
 /datum/gear/eyewear/goggles_orange/prescription
-	display_name = "Prescription ballistic goggles, orange"
+	display_name = "Prescription ballistic goggles, laser-shaded (brown)"
 	path = /obj/item/clothing/glasses/mgoggles/orange/prescription
 
-/datum/gear/eyewear/goggles2
-	display_name = "Ballistic goggles, M1A1"
-	path = /obj/item/clothing/glasses/mgoggles/v2
-
-/datum/gear/eyewear/goggles2/prescription
-	display_name = "Prescription ballistic goggles, M1A1"
-	path = /obj/item/clothing/glasses/mgoggles/v2/prescription
+/datum/gear/eyewear/goggles_green/prescription
+	display_name = "Prescription ballistic goggles, laser-shaded (green)"
+	path = /obj/item/clothing/glasses/mgoggles/green/prescription
 
 /datum/gear/eyewear/bimex_shades
 	display_name = "BiMex personal shades"
@@ -208,12 +197,28 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 3
 	slot = WEAR_HEAD
 
+/datum/gear/headwear/uscm/santa_hat
+	display_name = "santa hat, red"
+	path = /obj/item/clothing/head/santa
+	cost = 1
+
+/datum/gear/headwear/uscm/santa_hat/special_conditions()
+	return is_month(12) && (is_day(21) || is_day(22) || is_day(23) || is_day(24) || is_day(25) || is_day(26))
+
+/datum/gear/headwear/uscm/santa_hat_green
+	display_name = "santa hat, green"
+	path = /obj/item/clothing/head/santa/green
+	cost = 1
+
+/datum/gear/headwear/uscm/santa_hat_green/special_conditions()
+	return is_month(12) && (is_day(21) || is_day(22) || is_day(23) || is_day(24) || is_day(25) || is_day(26))
+
 /datum/gear/headwear/durag_black
 	display_name = "Durag, black"
 	path = /obj/item/clothing/head/durag/black
 
 /datum/gear/headwear/durag
-	display_name = "Durag, mission specific"
+	display_name = "Durag, jungle"
 	path = /obj/item/clothing/head/durag
 
 /datum/gear/headwear/uscm
@@ -239,74 +244,46 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM beanie, tan"
 	path = /obj/item/clothing/head/beanie/tan
 
-/datum/gear/headwear/uscm/beret_green
-	display_name = "Beret, green"
-	path = /obj/item/clothing/head/beret/cm/green
-
-/datum/gear/headwear/uscm/beret_tan
-	display_name = "Beret, tan"
-	path = /obj/item/clothing/head/beret/cm/tan
-
-/datum/gear/headwear/uscm/beret_black
-	display_name = "Beret, black"
-	path = /obj/item/clothing/head/beret/cm/black
-
-/datum/gear/headwear/uscm/beret_white
-	display_name = "Beret, white"
-	path = /obj/item/clothing/head/beret/cm/white
-
-/datum/gear/headwear/uscm/beret_alpha
-	display_name = "Beret, red flash"
-	path = /obj/item/clothing/head/beret/cm/alpha
-
-/datum/gear/headwear/uscm/beret_bravo
-	display_name = "Beret, yellow flash"
-	path = /obj/item/clothing/head/beret/cm/bravo
-
-/datum/gear/headwear/uscm/beret_charlie
-	display_name = "Beret, purple flash"
-	path = /obj/item/clothing/head/beret/cm/charlie
-
-/datum/gear/headwear/uscm/beret_delta
-	display_name = "Beret, blue flash"
-	path = /obj/item/clothing/head/beret/cm/delta
-
-/datum/gear/headwear/uscm/beret_echo
-	display_name = "Beret, green flash"
-	path = /obj/item/clothing/head/beret/cm/echo
-
-/datum/gear/headwear/uscm/beret_foxtrot
-	display_name = "Beret, brown flash"
-	path = /obj/item/clothing/head/beret/cm/foxtrot
-
-/datum/gear/headwear/uscm/beret_intel
-	display_name = "Beret, black flash"
-	path = /obj/item/clothing/head/beret/cm/intel
-
-/datum/gear/headwear/uscm/boonie_olive
-	display_name = "USCM boonie hat, olive"
+/datum/gear/headwear/uscm/boonie_jungle
+	display_name = "USCM boonie hat, jungle"
 	path = /obj/item/clothing/head/cmcap/boonie
 
-/datum/gear/headwear/uscm/boonie_tan
-	display_name = "USCM boonie hat, khaki"
+/datum/gear/headwear/uscm/boonie_desert
+	display_name = "USCM boonie hat, desert"
 	path = /obj/item/clothing/head/cmcap/boonie/tan
 
+/datum/gear/headwear/uscm/boonie_snow
+	display_name = "USCM boonie hat, snow"
+	path = /obj/item/clothing/head/cmcap/boonie/snow
+
 /datum/gear/headwear/uscm/cap
-	display_name = "USCM cap"
+	display_name = "USCM cap, jungle"
 	path = /obj/item/clothing/head/cmcap
 
-/datum/gear/headwear/uscm/cap_khaki
-	display_name = "USCM cap, khaki"
+/datum/gear/headwear/uscm/cap_desert
+	display_name = "USCM cap, desert"
 	path = /obj/item/clothing/head/cmcap/khaki
+
+/datum/gear/headwear/uscm/cap_snow
+	display_name = "USCM cap, snow"
+	path = /obj/item/clothing/head/cmcap/snow
 
 /datum/gear/headwear/uscm/cap/sulaco
 	display_name = "USS Golden Arrow cap"
 	path = /obj/item/clothing/head/sulacocap
 	cost = 1
 
-/datum/gear/headwear/uscm/cap/flap
-	display_name = "USCM flapcap"
+/datum/gear/headwear/uscm/cap/flap_jungle
+	display_name = "USCM expedition flapcap, jungle"
 	path = /obj/item/clothing/head/cmcap/flap
+
+/datum/gear/headwear/uscm/cap/flap_desert
+	display_name = "USCM expedition flapcap, desert"
+	path = /obj/item/clothing/head/cmcap/flap/desert
+
+/datum/gear/headwear/uscm/cap/flap_snow
+	display_name = "USCM expedition flapcap, snow"
+	path = /obj/item/clothing/head/cmcap/flap/snow
 
 /datum/gear/headwear/uscm/headband_brown
 	display_name = "USCM headband, brown"
@@ -351,6 +328,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/headwear/uscm/headset
 	display_name = "USCM headset"
 	path = /obj/item/clothing/head/headset
+
+/datum/gear/headwear/beret_red
+	display_name = "Beret, red"
+	path = /obj/item/clothing/head/beret
+
+/datum/gear/headwear/beret_black
+	display_name = "Beret, black"
+	path = /obj/item/clothing/head/beret/black
 
 /datum/gear/helmet_garb
 	category = "Helmet accessories"
@@ -1247,7 +1232,22 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 	path = /obj/item/clothing/accessory/flak/od
 
-/datum/gear/misc/servicejacket
-	display_name = "Marine Service Jacket"
-	path = /obj/item/clothing/suit/storage/jacket/marine/service
+/datum/gear/misc/windbreaker_green
+	display_name = "Windbreaker, Green"
+	path = /obj/item/clothing/suit/storage/windbreaker/windbreaker_green
 	cost = 3
+
+/datum/gear/misc/windbreaker_khaki
+	display_name = "Windbreaker, Brown"
+	path = /obj/item/clothing/suit/storage/windbreaker/windbreaker_brown
+	cost = 3
+
+/datum/gear/misc/windbreaker_blue
+	display_name = "Windbreaker, Blue"
+	path = /obj/item/clothing/suit/storage/windbreaker/windbreaker_blue
+	cost = 3
+
+/datum/gear/misc/shorts
+	display_name = "USCM PT Shorts"
+	path = /obj/item/clothing/under/shorts/red/uscm
+	cost = 1
