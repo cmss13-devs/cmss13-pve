@@ -402,6 +402,16 @@
 	reagents.add_reagent("nutriment", 15)
 	bitesize = 5
 
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal9
+	name = "\improper UPP Prepared Meal (Meatballs)"
+	desc = "A prepackaged meal for UPP troops containing marinated Königsberger Klopse meatballs, a creamy sauce, some spinach, and a scoop of rice. One of the better options out of the pre-packaged meals and is rarely ever in stock."
+	icon_state = "upp_meatballs"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal9/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 5
+
 /obj/item/storage/box/pizza
 	name = "food delivery box"
 	desc = "A space-age food storage device, capable of keeping food extra fresh. Actually, it's just a box."
