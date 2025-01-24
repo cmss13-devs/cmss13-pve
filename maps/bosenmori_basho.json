@@ -2,10 +2,10 @@
     "map_name": "Bosenmori Basho",
     "short_name": "Bosenmori",
     "map_path": "map_files/LV624_Bosenmori_Basho",
-    "map_file": "LV624 Bosenmori Basho.dmm",
-    "webmap_url": "lv624",
+    "map_file": "LV624_Bosenmori_Basho.dmm",
+    "webmap_url": "LV624",
 
-    "weather_holder": "/datum/weather_ss_map_holder/bosenmori",
+    "weather_holder": "/datum/weather_ss_map_holder/bosenmori_basho",
 
     "map_item_type": "/obj/item/map/lazarus_landing_map",
 
