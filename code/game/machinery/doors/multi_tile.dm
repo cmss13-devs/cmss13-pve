@@ -652,3 +652,14 @@
 	opacity = TRUE
 	glass = FALSE
 	openspeed = 4
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_green
+	name = "Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_green.dmi'
+	opacity = FALSE
+	glass = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_green/glass
+	name = "Glass Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_green.dmi'
+	glass = TRUE

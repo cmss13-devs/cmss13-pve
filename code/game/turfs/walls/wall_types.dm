@@ -1344,3 +1344,34 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	color = "#c5beb4"
 	desc = "Ancient beyond measure, these walls make up the hull of a vessel of non human origin. Despite this, they can be felled with plastic explosives like any other opaque blocker."
 	hull = 0
+
+/turf/closed/wall/upp_wall
+	name = "ribbed outpost walls"
+	icon = 'icons/turf/walls/upp_green.dmi'
+	icon_state = "uppwall_interior"
+	desc = "A thick and chunky metal wall covered in jagged ribs."
+	walltype = WALL_UPP_GREEN
+	damage_cap = HEALTH_WALL_REINFORCED
+
+/turf/closed/wall/upp_wall/hull
+	name = "ribbed outpost walls"
+	icon = 'icons/turf/walls/upp_green.dmi'
+	icon_state = "uppwall_hull"
+	desc = "A thick and chunky metal wall covered in jagged ribs."
+	hull = 1
+
+/turf/closed/wall/upp_wall/grey
+	name = "bare outpost walls"
+	icon = 'icons/turf/walls/upp_grey.dmi'
+	icon_state = "uppwall_interior_alt"
+	desc = "A thick and chunky metal wall. The surface is barren and imposing."
+	walltype = WALL_UPP_GREY
+	damage_cap = HEALTH_WALL_REINFORCED
+
+/turf/closed/wall/upp_wall/grey/hull
+	name = "bare outpost walls"
+	icon = 'icons/turf/walls/upp_grey.dmi'
+	icon_state = "uppwall_alt_hull"
+	desc = "A thick and chunky metal wall. The surface is barren and imposing."
+	hull = 1
+
