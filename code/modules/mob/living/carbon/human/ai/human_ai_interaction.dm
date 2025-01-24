@@ -203,16 +203,6 @@
 
 	return SENTRY_PENALTY
 
-
-/////////////////////////////
-//      WINDOW FRAME       //
-/////////////////////////////
-/*obj/structure/window_frame/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)
-	if(buildstacktype && brain.get_tool_from_equipment_map(TRAIT_TOOL_WRENCH))
-		return ..()
-	return WINDOW_FRAME_PENALTY*/
-
-
 /////////////////////////////
 //       BARRICADES        //
 /////////////////////////////
