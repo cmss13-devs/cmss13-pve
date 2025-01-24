@@ -161,8 +161,8 @@
 
 
 /obj/item/storage/box/uscm_mre
-	name = "\improper USCM meal ready to eat"
-	desc = "<B>Instructions:</B> Extract food using maximum firepower. Eat.\n\nOn the box is a picture of a shouting Squad Leader. \n\"YOU WILL EAT YOUR NUTRIENT GOO AND YOU WILL ENJOY IT, MAGGOT.\""
+	name = "\improper stabilized meal box"
+	desc = "A box of pre-prepared shelf stable meals."
 	icon_state = "mre1"
 
 /obj/item/storage/box/uscm_mre/Initialize()
@@ -203,7 +203,7 @@
 /obj/item/reagent_container/food/snacks/protein_pack2
 	name = "strawberry Preemptive Action nutrition bar"
 	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The strawberry coating is definitely oversweetened."
-	icon_state = "yummers"
+	icon_state = "yummers2"
 	filling_color = "#ff00cc"
 	w_class = SIZE_TINY
 
@@ -215,7 +215,7 @@
 /obj/item/reagent_container/food/snacks/protein_pack3
 	name = "vanilla Preemptive Action nutrition bar"
 	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The vanilla is overpoweringly strong, but there's not enough sweetener to cover the bitter aftertaste of the filling."
-	icon_state = "yummers"
+	icon_state = "yummers3"
 	filling_color = "#e6e6e6"
 	w_class = SIZE_TINY
 
