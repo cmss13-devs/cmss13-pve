@@ -203,6 +203,7 @@
 /obj/item/reagent_container/food/snacks/protein_pack2
 	name = "strawberry Preemptive Action nutrition bar"
 	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The strawberry coating is definitely oversweetened."
+	//TODO: ACTUAL SPRITES
 	icon_state = "yummers2"
 	filling_color = "#ff00cc"
 	w_class = SIZE_TINY
@@ -215,6 +216,7 @@
 /obj/item/reagent_container/food/snacks/protein_pack3
 	name = "vanilla Preemptive Action nutrition bar"
 	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The vanilla is overpoweringly strong, but there's not enough sweetener to cover the bitter aftertaste of the filling."
+	//TODO: ACTUAL SPRITES
 	icon_state = "yummers3"
 	filling_color = "#e6e6e6"
 	w_class = SIZE_TINY
@@ -228,7 +230,8 @@
 	name = "\improper generic MRE pack"
 	trash = /obj/item/trash/USCMtray
 	w_class = SIZE_SMALL
-
+// HOLY SHIT THIS CRAP HASN'T BEEN TOUCHED SINCE THE FUCKING ALPHA?
+//TODO: Better meal sprites. These work even if they don't line up properly.
 /obj/item/reagent_container/food/snacks/mre_pack/meal1
 	name = "\improper mechanically prepared meal (chili and cornbread)"
 	desc = "An autochef prepared meal meant to imitate 'Southern' cuisine, whatever that means. Contains aggressively overseasoned chili with reconstituted beans, dry crumbly cornbread, and something that might've been gazpacho once."
@@ -283,7 +286,9 @@
 /obj/item/reagent_container/food/snacks/mre_pack/meal6
 	name = "\improper mechanically prepared meal (vegetarian tofu)"
 	desc = "An autochef prepared meal of some surprisingly well fried tofu, stale crackers, and underseasoned breadsticks. On the side is a protein bar in mediocre strawberry."
-	icon_state = "MREf"
+	//placeholder until tofu sprite.
+	//TODO: Kick that fucking 'CM Dev 7 Years Ago' asshole's fucking ass. Also get an actual sprite.
+	icon_state = "MREe"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6/Initialize()
 	. = ..()
