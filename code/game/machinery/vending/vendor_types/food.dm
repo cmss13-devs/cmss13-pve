@@ -26,6 +26,17 @@
 		list("W-Y Flask", 5, /obj/item/reagent_container/food/drinks/flask/weylandyutani, VENDOR_ITEM_REGULAR)
 	)
 
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp/populate_product_list(scale)
+	listed_products = list(
+		list("PREPARED MEALS", -1, null, null),
+		list("UPP Prepared Meal (Luncheon)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal6, VENDOR_ITEM_REGULAR),
+		list("UPP Prepared Meal (Shrimp)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal7, VENDOR_ITEM_REGULAR),
+		list("UPP Prepared Meal (Cuban Rice)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal8, VENDOR_ITEM_REGULAR),
+		list("UPP Survival Ration", 50, /obj/item/reagent_container/food/snacks/upp, VENDOR_ITEM_REGULAR),
+		list("WATER", -1, null, null),
+		list("Canteen", 10, /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
+	)
+
 /obj/structure/machinery/cm_vending/sorted/marine_food/tutorial
 	hackable = FALSE
 	wrenchable = FALSE

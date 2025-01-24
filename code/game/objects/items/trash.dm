@@ -187,6 +187,13 @@
 	icon = 'icons/obj/items/food_canteen.dmi'
 	icon_state = "tray"
 
+/obj/item/trash/UPPtray
+	name = "\improper UPP Tray"
+	desc = "Finished with its tour of duty."
+	icon = 'icons/obj/items/food.dmi'
+	icon_state = "upp_tray"
+
+
 //////////
 ///Misc///
 //////////

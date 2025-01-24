@@ -1225,7 +1225,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
 "jZ" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food{
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
 	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -2096,7 +2096,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
 "rT" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food{
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
 	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
 	},
 /obj/structure/machinery/light/small{
