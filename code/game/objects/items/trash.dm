@@ -182,8 +182,8 @@
 	icon_state = "tray"
 
 /obj/item/trash/USCMtray
-	name = "\improper USCM Tray"
-	desc = "Finished with its tour of duty."
+	name = "\improper empty meal tray"
+	desc = "An empty meal tray made of a space age alloy. Commonly seen on the frontier and in military service."
 	icon = 'icons/obj/items/food_canteen.dmi'
 	icon_state = "tray"
 

@@ -189,8 +189,8 @@
 
 
 /obj/item/reagent_container/food/snacks/protein_pack
-	name = "stale USCM protein bar"
-	desc = "The most fake-looking protein bar you have ever laid eyes on, covered in a substitution chocolate. The powder used to make these is a substitute of a substitute of whey substitute."
+	name = "Preemptive Action nutrition bar"
+	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The chocolate tastes a bit artificial and the vitamins are barely covered up by the stevia sweetener."
 	icon_state = "yummers"
 	filling_color = "#ED1169"
 	w_class = SIZE_TINY
@@ -203,13 +203,12 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack
 	name = "\improper generic MRE pack"
-	//trash = /obj/item/trash/USCMtray
-	trash = null
+	trash = /obj/item/trash/USCMtray
 	w_class = SIZE_SMALL
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1
-	name = "\improper USCM Prepared Meal (cornbread)"
-	desc = "A tray of standard USCM food. Stale cornbread, tomato paste and some green goop fill this tray."
+	name = "\improper mechanically prepared meal (chili and cornbread)"
+	desc = "An autochef prepared meal meant to imitate 'Southern' cuisine, whatever that means. Contains aggressively overseasoned chili with reconstituted beans, dry crumbly cornbread, and something that might've been gazpacho once."
 	icon_state = "MREa"
 	filling_color = "#ED1169"
 
@@ -219,8 +218,8 @@
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2
-	name = "\improper USCM Prepared Meal (pork)"
-	desc = "A tray of standard USCM food. Partially raw pork, goopy corn and some watery mashed potatoes fill this tray."
+	name = "\improper mechanically prepared meal (ham and potatoes)"
+	desc = "An autochef prepared meal of slightly undercooked ham, surprisingly good reconstituted potato wedges made with real potato powder, artificial fruit puree, and stale crackers."
 	icon_state = "MREb"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2/Initialize()
@@ -229,8 +228,8 @@
 	bitesize = 2
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal3
-	name = "\improper USCM Prepared Meal (pasta)"
-	desc = "A tray of standard USCM food. Overcooked spaghetti, waterlogged carrots and two french fries fill this tray."
+	name = "\improper mechanically prepared meal (spaghetti)"
+	desc = "An autochef prepared meal of oversalted spaghetti in sauce and square 'beef meatballs'. On the side are perfectly baked breadsticks, an unevenly warmed hotdog, and some bland applesauce."
 	icon_state = "MREc"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal3/Initialize()
@@ -239,38 +238,50 @@
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal4
-	name = "\improper USCM Prepared Meal (pizza)"
-	desc = "A tray of standard USCM food. Cold pizza, wet green beans and a shitty egg fill this tray. Get something other than pizza, lardass."
+	name = "\improper mechanically prepared meal (pizza)"
+	desc = "An autochef prepared meal of underseasoned cheese pizza dotted with little bits of sausage. On the side are some concerningly wet scrambled reconstituted eggs and sautee'd broccoli with a little freezer burn."
 	icon_state = "MREd"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal4/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 8)
-	bitesize = 1
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5
-	name = "\improper USCM Prepared Meal (chicken)"
-	desc = "A tray of standard USCM food. Moist chicken, dry rice and a mildly depressed piece of broccoli fill this tray."
+	name = "\improper mechanically prepared meal (chicken)"
+	desc = "An autochef prepared meal of some potentially undercooked apparently halal roast chicken slices, an unidentified sauce, mixed nuts trail mix, overcooked brown rice, and a tube of cherry-flavored halal jelly that tastes pretty heavily of vitamins."
 	icon_state = "MREe"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 10)
+	reagents.add_reagent("nutriment", 9)
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6
-	name = "\improper USCM Prepared Meal (tofu)"
-	desc = "The USCM doesn't serve tofu you grass sucking hippie. The flag signifies your defeat."
+	name = "\improper mechanically prepared meal (vegetarian tofu)"
+	desc = "An autochef prepared meal of some surprisingly well fried tofu, stale crackers, and underseasoned breadsticks. On the side is a protein bar in mediocre strawberry."
 	icon_state = "MREf"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 2)
-	bitesize = 1
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
+
+/* gotta get a sprite for this thing
+/obj/item/reagent_container/food/snacks/mre_pack/meal7
+	name = "\improper mechanically prepared meal (macaroni and cheese)"
+	desc = "An autochef prepared meal of concerningly viscous macaroni and cheese. On the side is sautee'd broccoli with some freezer burn, a tube of cherry-and-vitamin flavor jelly, and a packet of mixed nuts trail mix."
+	icon_state = "MREmc"
+
+/obj/item/reagent_container/food/snacks/mre_pack/meal7/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
+*/
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1
-	name = "\improper USCM M25 'X-MAS' Meal: Sugar Cookies"
-	desc = "The USCM M25 Sugar Cookies Meal was designed to give marines a feeling of Christmas joy. But to the bemusement of superior officers, the costs-savings measure of simply fabricating protein bars in the shape of cookies with chocolate substitute chips and the replacement of the expected milk with artificially colored water did not go over well with most marines."
+	name = "\improper mechanically prepared meal (sugar cookies)"
+	desc = "An autochef prepared meal of overbaked sugar cookies, a packet of what claims to be cherry cobbler, and a spiced dipping sauce that's divisive as to whether or not it goes with the cookies. On the side is a moist fruit-swirl bread roll."
 	icon_state = "mreCookies"
 	black_market_value = 10
 
@@ -281,8 +292,8 @@
 	bitesize = 8
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas2
-	name = "\improper USCM M25 'X-MAS' Meal: Gingerbread Cookies"
-	desc = "The USCM M25 Gingerbread Cookies Meal was designed to give marines convenient and cheap access to gingerbread cookies as a replacement for annual gingerbread making classes due to rising expenses and comically low success rates for the Basic Holidays Festivities Course. However, due to cost saving measures, these cookies seldom inspire happiness, nor holiday spirit."
+	name = "\improper mechanically prepared meal (gingerbread and vanilla cake)"
+	desc = "An autochef prepared meal of some oddly soft gingerbread cookies and a fairly undersweetened vanilla cake. There's a protein bar on the side and a tube of cherry flavored vitamin filled jelly."
 	icon_state = "mreGingerbread"
 	black_market_value = 10
 
@@ -293,8 +304,8 @@
 	bitesize = 8
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas3
-	name = "\improper USCM M25 'X-MAS' Meal: Fruitcake"
-	desc = "The USCM M25 Fruitcake Meal was the third meal designed by an officers' committee as part of the M25 Project; this shows through the terrible hardness and tartness of the bread and raisined fruits. It can be logically deduced that the people who vended this option are worse than the Grinch and the Miser combined, along with the people who designed and prepared this fruitcake."
+	name = "\improper mechanically prepared meal (fruitcake)"
+	desc = "An autochef prepared meal of a fruitcake and applesauce. The fruitcake tastes of vitamins but is shockingly palatable even still, while the applesauce is... there?"
 	icon_state = "mreFruitcake"
 	black_market_value = 10
 
@@ -305,11 +316,21 @@
 	bitesize = 8
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving
-	name = "\improper USCM Prepared Meal (turkey)"
-	desc = "A tray of standard USCM food. A few slices of turkey and some regenerated mashed potatos with a rather viscous gravy on top. A classic, if rather half-hearted, Thanksgiving meal."
+	name = "\improper mechanically prepared meal (turkey and potato)"
+	desc = "An autochef prepared meal of roast turkey slices and reconstituted potato wedges made from real potato powder. Cherry cobbler in a tube on the side and some bland applesauce in a sealed cup."
 	icon_state = "MREe"
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 10)
+	bitesize = 3
+
+/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2
+	name = "\improper mechanically prepared meal (turkey and potato)"
+	desc = "An autochef prepared meal of roast turkey slices and reconstituted potato wedges made from real potato powder. Cherry cobbler in a tube on the side and some bland applesauce in a sealed cup."
+	icon_state = "MREe"
+
+/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 10)
 	bitesize = 3
