@@ -212,11 +212,21 @@
 	else
 		button.icon_state = "template"
 
+//this version is for spawning alongside NV visors. Useful for if some dunderhead wants to larp and take no helmet.
+/obj/item/clothing/glasses/night/m56_goggles/only_nightvision
+	actions_types = list(/datum/action/item_action/toggle)
+	darkness_view = 12
+	vision_flags = 0
+	lighting_alpha = 255
+	flags_inventory = null
+
+//this version has no farsight and NV, but is mostly there as a flavor item.
 /obj/item/clothing/glasses/night/m56_goggles/no_nightvision
 	actions_types = list(/datum/action/item_action/toggle)
 	darkness_view = 0
 	vision_flags = 0
 	lighting_alpha = 255
+	flags_inventory = null
 
 /obj/item/clothing/glasses/night/m56_goggles/whiteout
 	name = "\improper M56T head mounted sight"

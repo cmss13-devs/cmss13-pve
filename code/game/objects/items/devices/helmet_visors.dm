@@ -267,10 +267,6 @@
 	if(!.)
 		return
 
-	if(user.client.view > 7)
-		to_chat(user, SPAN_WARNING("You cannot use [src] while using optics."))
-		return FALSE
-
 	if(!NVG_VISOR_USAGE(FALSE))
 		to_chat(user, SPAN_NOTICE("Your [src] is out of power! You'll need to recharge it."))
 		return FALSE
