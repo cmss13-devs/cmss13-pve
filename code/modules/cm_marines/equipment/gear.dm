@@ -189,10 +189,10 @@
 
 
 /obj/item/reagent_container/food/snacks/protein_pack
-	name = "Preemptive Action nutrition bar"
+	name = "chocolate Preemptive Action nutrition bar"
 	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The chocolate tastes a bit artificial and the vitamins are barely covered up by the stevia sweetener."
 	icon_state = "yummers"
-	filling_color = "#ED1169"
+	filling_color = "#b85014"
 	w_class = SIZE_TINY
 
 /obj/item/reagent_container/food/snacks/protein_pack/Initialize()
@@ -200,6 +200,29 @@
 	reagents.add_reagent("nutriment", 8)
 	bitesize = 4
 
+/obj/item/reagent_container/food/snacks/protein_pack2
+	name = "strawberry Preemptive Action nutrition bar"
+	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The strawberry coating is definitely oversweetened."
+	icon_state = "yummers"
+	filling_color = "#ff00cc"
+	w_class = SIZE_TINY
+
+/obj/item/reagent_container/food/snacks/protein_pack2/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 8)
+	bitesize = 4
+
+/obj/item/reagent_container/food/snacks/protein_pack3
+	name = "vanilla Preemptive Action nutrition bar"
+	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The vanilla is overpoweringly strong, but there's not enough sweetener to cover the bitter aftertaste of the filling."
+	icon_state = "yummers"
+	filling_color = "#e6e6e6"
+	w_class = SIZE_TINY
+
+/obj/item/reagent_container/food/snacks/protein_pack/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 8)
+	bitesize = 4
 
 /obj/item/reagent_container/food/snacks/mre_pack
 	name = "\improper generic MRE pack"
@@ -326,8 +349,18 @@
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2
-	name = "\improper mechanically prepared meal (turkey and potato)"
-	desc = "An autochef prepared meal of roast turkey slices and reconstituted potato wedges made from real potato powder. Cherry cobbler in a tube on the side and some bland applesauce in a sealed cup."
+	name = "\improper mechanically prepared meal (steak and potato)"
+	desc = "An autochef prepared meal of rare steak slices and reconstituted potato wedges made from real potato powder. Cherry cobbler in a tube on the side and some bland applesauce in a sealed cup."
+	icon_state = "MREe"
+
+/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 10)
+	bitesize = 3
+
+/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving3
+	name = "\improper mechanically prepared meal (shrimp and rice)"
+	desc = "An autochef prepared meal of stir fried imitation shrimp and overcooked brown rice. Some mixed nuts trail mix and an unidentified sauce are on the side."
 	icon_state = "MREe"
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2/Initialize()
