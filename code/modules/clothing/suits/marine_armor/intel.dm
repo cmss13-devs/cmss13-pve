@@ -15,6 +15,10 @@
 	proximity = new(src)
 	update_icon()
 
+/obj/item/clothing/suit/marine/medium/rto/md/Destroy()
+	QDEL_NULL(proximity)
+	return ..()
+
 /datum/action/item_action/intel/action_activate()
 	. = ..()
 	if(!ishuman(owner))
@@ -82,7 +86,7 @@
 	desc_lore = "ARMAT Perfection. The XM4 Soldier Awareness System mixes M4-style hard armor and a distributed series of motion sensors clipped onto the breastplate. When connected to any HUD optic, it replicates the effects of an M314 Motion Detector unit, increasing user situational awareness. It is currently undergoing field trials by intelligence operatives and those whose duties detract from constant situational awareness."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
-/obj/item/clothing/suit/marine/medium/rto/md/Initialize(mapload, ...)
+/obj/item/clothing/suit/marine/medium/rto/md/army/Initialize(mapload, ...)
 	. = ..()
 	proximity = new(src)
 	var/obj/item/clothing/accessory/pads/groin/crotchplate = new()
