@@ -321,3 +321,18 @@
 
 /obj/structure/window_frame/corsat/security
 	window_type = /obj/structure/window/framed/corsat/security
+
+/obj/structure/window_frame/upp
+	name = "military grade window frame"
+	reinforced = TRUE
+
+/obj/structure/window_frame/upp/green
+	icon = 'icons/turf/walls/upp_green_windows.dmi'
+	icon_state = "uppwall_window0_frame"
+	basestate = "uppwall_window"
+
+
+/obj/structure/window_frame/upp/grey
+	icon = 'icons/turf/walls/upp_grey_windows.dmi'
+	icon_state = "uppwall_window0_frame"
+	basestate = "uppwall_window"

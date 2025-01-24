@@ -385,7 +385,7 @@
 #define WALL_HUNTERSHIP "metal"//DMI specific name
 #define WALL_AICORE "aiwall"
 #define WALL_UPP_GREEN "uppwall_interior"
-#define WALL_UPP_GREY "uppwall_interior_alt"
+#define WALL_UPP_GREY "uppwall_interior"
 
 //Defines for dropship weapon gimbals
 #define GIMBAL_LEFT -1

@@ -302,6 +302,10 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
+"cr" = (
+/obj/effect/landmark/late_join/upp,
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/cryo_cells)
 "cs" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/drinks/coffeecup{
@@ -375,6 +379,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat,
 /area/golden_arrow/briefing)
+"cM" = (
+/turf/closed/wall/upp_wall/grey,
+/area/golden_arrow/cryo_cells)
 "cN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -391,7 +398,7 @@
 /turf/open/floor/corsat,
 /area/golden_arrow/cryo_cells)
 "cT" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/canteen)
 "cZ" = (
 /obj/structure/machinery/disposal{
@@ -640,7 +647,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
 "fh" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/briefing)
 "fi" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -732,13 +739,7 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/prop/magazine/book{
-	desc = "It's not a mandatory reading material in UPP, but it's still encouraged to memorize certain quotes from this book.";
-	name = "Quotations from Chairman Mao Tse-tung";
-	pixel_y = 4;
-	pixel_x = -2;
-	icon_state = "littleredbook"
-	},
+/obj/item/prop/magazine/book/littleredbook,
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -950,10 +951,6 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/structure/machinery/cryopod/big/flipped{
-	pixel_x = -8;
-	pixel_y = 6
-	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "hN" = (
@@ -1058,10 +1055,15 @@
 	name = "\improper MinZdrav Blood Dispenser";
 	desc = "The MinZdrav Blood Pack Dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!"
 	},
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/medical)
 "iO" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat,
 /area/golden_arrow/cryo_cells)
 "iP" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -1692,7 +1694,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "os" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_commander_rooms)
 "ot" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -2027,7 +2029,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/briefing)
 "rl" = (
 /obj/structure/machinery/power/apc/almayer/west,
@@ -2125,7 +2127,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_sergeant)
 "sc" = (
 /obj/structure/cargo_container/upp/mk6/left{
@@ -2469,7 +2471,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
 "vb" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/engineering)
 "vc" = (
 /obj/structure/machinery/power/apc/almayer/south{
@@ -2558,9 +2560,6 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
 /area/golden_arrow/engineering)
-"vN" = (
-/turf/closed/wall/strata_outpost/reinforced,
-/area/golden_arrow/supply)
 "vO" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/shower{
@@ -2681,7 +2680,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "ww" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/squad_one)
 "wy" = (
 /obj/structure/machinery/power/terminal{
@@ -2757,7 +2756,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "wV" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/synthcloset)
 "wW" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
@@ -2958,7 +2957,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "yH" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/hangar)
 "yK" = (
 /obj/structure/machinery/recharge_station{
@@ -3268,6 +3267,10 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
+"Bp" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/golden_arrow/cryo_cells)
 "Bu" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
@@ -3376,13 +3379,7 @@
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/prop/magazine/book{
-	desc = "It's not a mandatory reading material in UPP, but it's still encouraged to memorize certain quotes from this book.";
-	name = "Quotations from Chairman Mao Tse-tung";
-	pixel_y = 4;
-	pixel_x = -2;
-	icon_state = "littleredbook"
-	},
+/obj/item/prop/magazine/book/littleredbook,
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -3424,10 +3421,10 @@
 /turf/open/floor/corsat,
 /area/golden_arrow/cryo_cells)
 "CK" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/medical)
 "CM" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/dorms)
 "CN" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3627,9 +3624,6 @@
 "EU" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
-	},
-/obj/structure/machinery/microwave{
-	pixel_y = 8
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
@@ -3888,6 +3882,17 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
+"HI" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/door/airlock/strata/circular{
+	color = "#8B9490";
+	name = "\improper Maintenance Access";
+	dir = 1;
+	req_one_access_txt = "230"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/corsat,
+/area/golden_arrow/cryo_cells)
 "HM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -4212,6 +4217,34 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"Lr" = (
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/item/prop/magazine/book/uppbooklet,
+/obj/structure/closet/crate/secure/ammo{
+	name = "secure surplus crate";
+	color = "#979b6d";
+	desc = "A secure crate."
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/supply)
 "Lt" = (
 /obj/structure/machinery/power/terminal{
 	dir = 8
@@ -4429,7 +4462,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/engineering)
 "NU" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/squad_two)
 "Oa" = (
 /obj/structure/machinery/pipedispenser,
@@ -4524,12 +4557,6 @@
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
-"PA" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "\improper Hangar Lockdown Blast Door"
-	},
-/turf/open/space/basic,
-/area/golden_arrow/hangar)
 "PB" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -4630,6 +4657,9 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"QL" = (
+/turf/closed/wall/upp_wall/grey,
+/area/golden_arrow/supply)
 "QR" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
@@ -4660,7 +4690,7 @@
 /turf/open/floor/corsat,
 /area/golden_arrow/engineering)
 "Rf" = (
-/obj/structure/window/framed/strata/reinforced,
+/obj/structure/window/framed/upp/grey,
 /turf/open/floor/corsat,
 /area/golden_arrow/medical)
 "Ri" = (
@@ -4707,13 +4737,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/supply)
-"RG" = (
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/obj/effect/landmark/start/bridge/upp,
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/cryo_cells)
 "RL" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -4862,7 +4885,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Tf" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_sergeant)
 "Ti" = (
 /obj/structure/surface/rack{
@@ -4960,10 +4983,6 @@
 	},
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
-	},
-/obj/structure/machinery/cryopod/big{
-	pixel_x = -9;
-	pixel_y = 6
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
@@ -5125,6 +5144,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
+"Vy" = (
+/obj/structure/machinery/conveyor{
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/space)
 "Vz" = (
 /obj/item/device/lightreplacer{
 	pixel_x = -5
@@ -5265,6 +5290,11 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"WC" = (
+/obj/effect/landmark/start/bridge/upp,
+/obj/effect/landmark/late_join/upp,
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/cryo_cells)
 "WG" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -5331,6 +5361,14 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
+"XE" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat,
+/area/golden_arrow/cryo_cells)
 "XH" = (
 /obj/item/clothing/mask/cigarette{
 	desc = "A hand-rolled cigarette lacking a filter."
@@ -5390,17 +5428,6 @@
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
-"Yf" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/airlock/strata/circular{
-	color = "#8B9490";
-	name = "\improper Maintenance Access";
-	dir = 1;
-	req_one_access_txt = "230"
-	},
-/turf/open/floor/corsat,
-/area/golden_arrow/cryo_cells)
 "Yg" = (
 /obj/structure/ore_box{
 	name = "wooden cargo crate";
@@ -13965,7 +13992,7 @@ mV
 mV
 mV
 mV
-PA
+oB
 DL
 wq
 wq
@@ -14019,16 +14046,16 @@ uc
 gF
 is
 Rr
-iO
-iO
-iO
-iO
+cM
+cM
+cM
+cM
+zX
+zX
 zX
 zX
 aB
 jG
-mV
-mV
 mV
 mV
 mV
@@ -14117,7 +14144,7 @@ mV
 mV
 mV
 mV
-PA
+oB
 DL
 wq
 wq
@@ -14159,28 +14186,28 @@ yR
 oV
 jB
 cT
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
 Cm
 dw
 Cm
+cM
 iO
-iO
+Bp
+cM
 Bd
 jG
-mV
-mV
 mV
 mV
 mV
@@ -14269,7 +14296,7 @@ mV
 mV
 mV
 mV
-PA
+oB
 DL
 wq
 wq
@@ -14316,23 +14343,23 @@ fK
 vr
 zg
 Fu
-iO
+cM
 ON
 oA
 vO
 oA
 wn
-iO
+cM
 yZ
 bs
 Uz
 bs
 Cm
-iO
+Cm
+WC
+cM
 JA
 jG
-mV
-mV
 mV
 mV
 mV
@@ -14421,7 +14448,7 @@ mV
 mV
 mV
 mV
-PA
+oB
 DL
 wq
 wq
@@ -14480,7 +14507,9 @@ NO
 Ud
 cm
 LG
-iO
+cr
+ON
+cM
 fi
 jG
 jG
@@ -14488,8 +14517,6 @@ xW
 jG
 jG
 jG
-mV
-mV
 mV
 mV
 mV
@@ -14573,7 +14600,7 @@ mV
 mV
 mV
 mV
-PA
+oB
 DL
 wq
 wq
@@ -14620,19 +14647,21 @@ cR
 aJ
 cR
 sn
-iO
+cM
 Tu
-iO
-iO
-iO
+cM
+cM
+cM
 TR
 Ie
 xe
 Ez
-RG
+Bo
 sp
 cR
-Yf
+cR
+cR
+HI
 Re
 SL
 Ac
@@ -14640,8 +14669,6 @@ fU
 Ol
 iI
 jG
-mV
-mV
 mV
 mV
 mV
@@ -14725,7 +14752,7 @@ mV
 mV
 mV
 mV
-PA
+oB
 DL
 wq
 wq
@@ -14784,7 +14811,9 @@ aA
 hM
 aA
 fC
-iO
+cr
+ON
+cM
 fi
 vb
 vb
@@ -14792,8 +14821,6 @@ Js
 jG
 jG
 jG
-mV
-mV
 mV
 mV
 mV
@@ -14877,7 +14904,7 @@ mV
 mV
 mV
 mV
-PA
+oB
 DL
 wq
 wq
@@ -14924,26 +14951,26 @@ jq
 Sb
 GY
 Cu
-iO
+cM
 pC
 CJ
 rX
 CJ
 vc
-iO
+cM
 hk
 bs
 UW
 bs
 hk
-iO
+hk
+cr
+cM
 BD
 vb
 XH
 Jg
 jG
-mV
-mV
 mV
 mV
 mV
@@ -15029,7 +15056,7 @@ mV
 mV
 mV
 mV
-PA
+oB
 DL
 wq
 wq
@@ -15071,32 +15098,32 @@ Xv
 jh
 dD
 cT
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
-iO
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
+cM
 hk
 tM
 hk
-iO
-iO
+cM
+XE
+Bp
+cM
 fi
 vb
 vb
 WI
 jG
 jG
-mV
-mV
 mV
 mV
 mV
@@ -15181,7 +15208,7 @@ mV
 mV
 mV
 mV
-PA
+oB
 DL
 wq
 wq
@@ -15230,12 +15257,14 @@ Qt
 Rq
 HF
 Xj
-vN
+QL
 Kh
 fT
 wh
 TX
-iO
+cM
+zX
+zX
 zX
 zX
 zX
@@ -15247,8 +15276,6 @@ vb
 gO
 Js
 jG
-mV
-mV
 mV
 mV
 mV
@@ -15393,14 +15420,14 @@ kE
 kE
 kE
 kE
+kE
+kE
 sg
 pE
 jG
 jG
 xW
 jG
-mV
-mV
 mV
 mV
 mV
@@ -15534,22 +15561,22 @@ bN
 Xl
 uj
 aP
-vN
+QL
 qW
 Li
 RF
 Li
 SZ
 Tr
-vN
-vN
-vN
-vN
-vN
-rb
-Tr
-mV
-mV
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+Vy
+Rc
 mV
 mV
 mV
@@ -15685,8 +15712,8 @@ CK
 Qg
 CK
 yl
-vN
-vN
+QL
+QL
 xj
 HD
 HD
@@ -15700,8 +15727,8 @@ kE
 kE
 lv
 Tr
-mV
-mV
+Rc
+Rc
 mV
 mV
 mV
@@ -15838,12 +15865,12 @@ vC
 CK
 yF
 vt
-vN
-vN
+QL
+QL
 xV
 xV
 xV
-vN
+QL
 Tr
 Tr
 Tr
@@ -15990,7 +16017,7 @@ Vd
 CK
 la
 OJ
-vN
+QL
 uk
 kU
 kU
@@ -16142,9 +16169,9 @@ rz
 CK
 tc
 OJ
-vN
+QL
 im
-Ra
+Lr
 Ra
 Ra
 Wz
@@ -16294,7 +16321,7 @@ ge
 CK
 Ti
 ed
-vN
+QL
 rM
 wI
 wI
