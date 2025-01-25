@@ -365,21 +365,7 @@
 /obj/item/weapon/gun/rifle/sniper/M42A/silenced
 	name = "\improper M42A2 SSR"
 	desc = "The M42A2 Suppressed Scoped Rifle (SSR for short), is a heavy sniper rifle manufactured by Armat Systems. Modified with an integral suppressor, it has a scope system and fires armor penetrating rounds out of a 15-round magazine.\n'Peace Through Superior Firepower'"
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
-	icon_state = "m42a"
-	item_state = "m42a"
-	unacidable = TRUE
-	indestructible = 1
-	fire_sound = 'sound/weapons/gun_sniper.ogg'
-	current_mag = /obj/item/ammo_magazine/sniper
-	force = 12
-	wield_delay = WIELD_DELAY_HORRIBLE //Ends up being 1.6 seconds due to scope
-	zoomdevicename = "scope"
-	attachable_allowed = list(/obj/item/attachable/bipod)
 	starting_attachment_types = list(/obj/item/attachable/supsniperbarrel)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
-	map_specific_decoration = FALSE
-	flags_item = TWOHANDED|NO_CRYO_STORE
 
 /obj/item/weapon/gun/rifle/sniper/XM43E1
 	name = "\improper XM43E1 experimental anti-materiel rifle"
