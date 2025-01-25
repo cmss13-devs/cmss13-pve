@@ -121,6 +121,14 @@
 	icon_locked = "secure_locked_ammo"
 	icon_unlocked = "secure_unlocked_ammo"
 
+/obj/structure/closet/crate/secure/upp
+	name = "secure military crate"
+	desc = "A secure military crate"
+	icon_state = "uppsecure_locked_ammo"
+	icon_opened = "uppsecure_open_ammo"
+	icon_locked = "uppsecure_locked_ammo"
+	icon_unlocked = "uppsecure_unlocked_ammo"
+
 /obj/structure/closet/crate/secure/explosives
 	name = "explosives crate"
 	desc = "An explosives crate"

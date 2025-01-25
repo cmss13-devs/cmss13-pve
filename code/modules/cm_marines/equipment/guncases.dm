@@ -237,6 +237,27 @@
 	if(locate(/obj/item/attachable/stock/shotgun) in contents)
 		overlays += image(icon, "+stock")
 
+/obj/item/storage/box/guncase/heavy/shotgun/type23
+	name = "\improper KS29 shotgun case"
+	desc = "A case for storing an Ithaca 37 pump-action shotgun, an antique from a bygone era of human history."
+	icon_state = "ks29case"
+	storage_slots = 1
+	can_hold = list(/obj/item/weapon/gun/shotgun/type23)
+
+/obj/item/storage/box/guncase/heavy/shotgun/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/type23/unloaded(src)
+
+/obj/item/storage/box/guncase/heavy/shotgun/type23/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "bigcase_lid_open")
+	else
+		overlays += image(icon, "ks29case_lid")
+		return
+	if(locate(/obj/item/weapon/gun/shotgun/type23) in contents)
+		overlays += image(icon, "+ks29")
+
+
 /obj/item/storage/box/guncase/heavy/m4ra_pve
 	name = "\improper M4RA-R2 battle rifle case"
 	desc = "A large case for storing an M4RA-R2, a modified USCM battle rifle equipped with depleted uranium bullets."
