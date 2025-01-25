@@ -40,19 +40,10 @@
 			view_list += viewing_mob
 
 	for(var/mob/living/carbon/potential_target as anything in view_list)
-		if(!istype(potential_target))
-			continue
-
-		if(tied_human.z != potential_target.z)
-			continue
-
 		if(!can_target(potential_target))
 			continue
 
 		var/distance = get_dist(tied_human, potential_target)
-		if(distance > view_distance)
-			continue
-
 		if(scope_vision && (distance > 7) && !(get_dir(tied_human, potential_target) in dir_cone))
 			continue
 
