@@ -195,12 +195,12 @@
 	if(!brute_heal)
 		return
 
+	clear_main_hand()
 	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, brute_heal))
 		healing_someone = FALSE
 		return
 
 	. = TRUE
-	clear_main_hand()
 	healing_someone = TRUE
 	sleep(short_action_delay * action_delay_mult)
 	brute_heal.ai_use(tied_human, src, target)
@@ -226,12 +226,12 @@
 	if(!bleed_heal)
 		return
 
+	clear_main_hand()
 	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, bleed_heal))
 		healing_someone = FALSE
 		return
 
 	. = TRUE
-	clear_main_hand()
 	healing_someone = TRUE
 	sleep(short_action_delay * action_delay_mult)
 	bleed_heal.ai_use(tied_human, src, target)
@@ -257,12 +257,12 @@
 	if(!bone_heal)
 		return
 
+	clear_main_hand()
 	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, bone_heal))
 		healing_someone = FALSE
 		return
 
 	. = TRUE
-	clear_main_hand()
 	healing_someone = TRUE
 	sleep(short_action_delay * action_delay_mult)
 	bone_heal.ai_use(tied_human, src, target)
@@ -288,12 +288,12 @@
 	if(!burn_heal)
 		return
 
+	clear_main_hand()
 	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, burn_heal))
 		healing_someone = FALSE
 		return
 
 	. = TRUE
-	clear_main_hand()
 	healing_someone = TRUE
 	sleep(short_action_delay * action_delay_mult)
 	burn_heal.ai_use(tied_human, src, target)
@@ -319,12 +319,12 @@
 	if(!painkiller)
 		return
 
+	clear_main_hand()
 	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, painkiller))
 		healing_someone = FALSE
 		return
 
 	. = TRUE
-	clear_main_hand()
 	healing_someone = TRUE
 	sleep(short_action_delay * action_delay_mult)
 	painkiller.ai_use(tied_human, src, target)
@@ -350,12 +350,12 @@
 	if(!tox_heal)
 		return
 
+	clear_main_hand()
 	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, tox_heal))
 		healing_someone = FALSE
 		return
 
 	. = TRUE
-	clear_main_hand()
 	healing_someone = TRUE
 	sleep(short_action_delay * action_delay_mult)
 	tox_heal.ai_use(tied_human, src, target)
@@ -381,12 +381,12 @@
 		healing_someone = FALSE
 		return
 
+	clear_main_hand()
 	if(!equip_item_from_equipment_map(HUMAN_AI_HEALTHITEMS, oxy_heal))
 		healing_someone = FALSE
 		return
 
 	. = TRUE
-	clear_main_hand()
 	healing_someone = TRUE
 	sleep(short_action_delay * action_delay_mult)
 	oxy_heal.ai_use(tied_human, src, target)

@@ -200,7 +200,7 @@
 
 /client/proc/toggle_human_ai_tweaks()
 	set name = "Toggle Human AI Tweaks"
-	set category = "Game Master.HumanAI"
+	set category = "Game Master.Flags"
 
 	if(!admin_holder || !check_rights(R_MOD, FALSE))
 		return

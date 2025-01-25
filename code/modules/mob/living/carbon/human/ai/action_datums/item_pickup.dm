@@ -16,6 +16,12 @@
 	if(brain.tied_human.health < HEALTH_THRESHOLD_CRIT)
 		return 0
 
+	if(brain.tied_human.l_hand.flags_item & NODROP)
+		return 0
+
+	if(brain.tied_human.r_hand.flags_item & NODROP)
+		return 0
+
 	if(!brain.primary_weapon)
 		return 16
 

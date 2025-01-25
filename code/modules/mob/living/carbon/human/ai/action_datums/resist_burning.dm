@@ -17,7 +17,7 @@
 
 	if(locate(/obj/flamer_fire) in get_turf(brain.tied_human))
 		brain.try_cover()
-		return ONGOING_ACTION_UNFINISHED
+		return ONGOING_ACTION_COMPLETED
 
 	INVOKE_ASYNC(tied_human, TYPE_VERB_REF(/mob/living, resist))
 	return ONGOING_ACTION_UNFINISHED

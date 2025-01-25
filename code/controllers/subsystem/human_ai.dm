@@ -37,7 +37,7 @@ SUBSYSTEM_DEF(human_ai)
 
 /datum/admins/proc/toggle_human_ai()
 	set name = "Toggle Human AI"
-	set category = "Game Master.HumanAI"
+	set category = "Game Master.Flags"
 
 	if(!check_rights(R_DEBUG))
 		return
