@@ -1,5 +1,12 @@
 import { useBackend } from '../backend';
-import { Button, Divider, Section, Stack, Collapsible } from '../components';
+import {
+  Button,
+  Box,
+  Divider,
+  Section,
+  Stack,
+  Collapsible,
+} from '../components';
 import { Window } from '../layouts';
 import { useState } from 'react';
 
@@ -27,7 +34,7 @@ export const HumanAISpawner = (props) => {
                 {Object.keys(presets).map((dictKey) => (
                   <Collapsible title={dictKey} key={dictKey} color="good">
                     {presets[dictKey].map((squad) => (
-                      <div style={{ paddingBottom: '12px' }} key={squad.path}>
+                      <Box pb={12} key={squad.path}>
                         <Button
                           fontSize="15px"
                           textAlign="center"
@@ -38,7 +45,7 @@ export const HumanAISpawner = (props) => {
                         >
                           {squad.name}
                         </Button>
-                      </div>
+                      </Box>
                     ))}
                   </Collapsible>
                 ))}
