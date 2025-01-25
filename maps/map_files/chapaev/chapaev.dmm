@@ -192,6 +192,37 @@
 	pixel_y = 6;
 	pixel_x = 2
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/structure/bed/chair{
+	dir = 4;
+	pixel_y = 6;
+	pixel_x = 2
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = 8
+	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
 "bF" = (
@@ -858,6 +889,22 @@
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/machinery/disposal{
+	pixel_y = 14
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
@@ -1753,6 +1800,14 @@
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
+"qH" = (
+/obj/structure/machinery/door/airlock/strata/circular{
+	color = "#8B9490";
+	name = "\improper Port Hallway";
+	req_one_access_txt = "230"
+	},
+/turf/closed/wall/upp_wall/grey,
+/area/golden_arrow/briefing)
 "qN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -18040,7 +18095,7 @@ os
 os
 os
 fh
-fh
+qH
 fh
 cT
 cT
