@@ -1209,7 +1209,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 1
 	},
-/obj/structure/bed/chair/office/dark,
+/obj/structure/bed/chair/comfy/teal,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "lZ" = (
@@ -2313,12 +2313,6 @@
 /area/golden_arrow/briefing)
 "vz" = (
 /obj/structure/pipes/vents/pump,
-/obj/structure/machinery/light/small{
-	light_power = 0.8;
-	light_range = 2;
-	light_color = "#e7c0a4";
-	invisibility = 100
-	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
 "vC" = (
@@ -3932,6 +3926,15 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"LD" = (
+/obj/structure/machinery/light/small{
+	light_power = 0.8;
+	light_range = 2;
+	light_color = "#e7c0a4";
+	invisibility = 100
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/canteen)
 "LI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -4532,35 +4535,6 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "Rn" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_magazine/shotgun/slug/heavy{
-	pixel_y = 15;
-	pixel_x = -3
-	},
-/obj/item/ammo_magazine/shotgun/slug/heavy{
-	pixel_y = 15;
-	pixel_x = -3
-	},
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/ammo_magazine/shotgun/buckshot/heavy{
-	pixel_x = -4;
-	pixel_y = -1
-	},
-/obj/item/ammo_magazine/shotgun/buckshot/heavy{
-	pixel_x = -4;
-	pixel_y = -1
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
 	pixel_x = 5;
@@ -18541,10 +18515,10 @@ cT
 vG
 Lh
 ls
-ls
+LD
 vz
 Ns
-ls
+LD
 QR
 Vi
 cT
