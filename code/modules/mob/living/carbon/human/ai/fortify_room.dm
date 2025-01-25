@@ -45,23 +45,28 @@
 			continue
 
 		if((locate(/obj/structure/window_frame) in nearby_turf) || (locate(/obj/structure/window) in nearby_turf))
+			var/should_place = TRUE
 			for(var/obj/structure/barricade/existing_cade in scan_turf)
 				if(existing_cade.dir == cardinal)
-					goto next_recurse
+					should_place = FALSE
+					break
 
-			var/obj/structure/barricade/cade = new cade_type(scan_turf)
-			cade.setDir(cardinal)
+			if(should_place)
+				var/obj/structure/barricade/cade = new cade_type(scan_turf)
+				cade.setDir(cardinal)
 
 		if(folding_cade_type && (locate(/obj/structure/machinery/door) in nearby_turf))
+			var/should_place = TRUE
 			for(var/obj/structure/barricade/existing_cade in scan_turf)
 				if(existing_cade.dir == cardinal)
-					goto next_recurse
+					should_place = FALSE
+					break
 
-			var/obj/structure/barricade/plasteel/cade = new folding_cade_type(scan_turf)
-			cade.setDir(cardinal)
-			cade.open(cade) // this closes it
+			if(should_place)
+				var/obj/structure/barricade/plasteel/cade = new folding_cade_type(scan_turf)
+				cade.setDir(cardinal)
+				cade.open(cade) // this closes it
 
-		next_recurse:
-			if(!recursive_turf_room_fortify(nearby_turf, turf_list, cade_type, folding_cade_type))
-				return FALSE
+		if(!recursive_turf_room_fortify(nearby_turf, turf_list, cade_type, folding_cade_type))
+			return FALSE
 	return TRUE
