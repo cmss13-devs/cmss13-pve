@@ -2588,7 +2588,7 @@
 /area/golden_arrow/canteen)
 "ya" = (
 /obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy, /obj/item/ammo_magazine/shotgun/buckshot/heavy/slug);
+	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy, /obj/item/ammo_magazine/shotgun/slug/heavy);
 	parts_type = /obj/item/stack/sheet/metal;
 	pixel_x = 1
 	},
