@@ -182,112 +182,124 @@
 	// snowflake secondary weapon in suit storage check
 	if(isgun(tied_human.s_store) && (tied_human.s_store != primary_weapon))
 		add_secondary_weapon(tied_human.s_store)
-		goto back_statement
 
 	tried_reload = FALSE // We don't really need to do this in a smart way
 	if(belt)
-		if(isgun(tied_human.belt) && (tied_human.belt != primary_weapon))
-			add_secondary_weapon(tied_human.belt)
-			goto back_statement
+		appraise_belt()
 
-		if(!istype(tied_human.belt, /obj/item/storage)) // belts can be backpacks, don't ask
-			goto back_statement
+	if(back)
+		appraise_back()
 
-		for(var/id in equipment_map)
-			for(var/obj/item/item as anything in equipment_map[id])
-				if(equipment_map[id][item] != "belt")
-					continue
+	if(pocket_l)
+		appraise_left_pocket()
 
-				equipment_map[id] -= item
+	if(pocket_r)
+		appraise_right_pocket()
 
-		RegisterSignal(tied_human.belt, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-		item_slot_appraisal_loop(tied_human.belt, "belt")
+	if(armor)
+		appraise_armor()
 
-	back_statement:
-		if(back)
-			if(isgun(tied_human.back) && (tied_human.back != primary_weapon))
-				add_secondary_weapon(tied_human.back)
-				goto l_pocket_statement
+	if(uniform && isclothing(tied_human.w_uniform))
+		appraise_uniform()
 
-			if(!istype(tied_human.back, /obj/item/storage/backpack))
-				goto l_pocket_statement
+/datum/human_ai_brain/proc/appraise_belt()
+	if(isgun(tied_human.belt) && (tied_human.belt != primary_weapon))
+		add_secondary_weapon(tied_human.belt)
+		return
 
-			for(var/id in equipment_map)
-				for(var/obj/item/item as anything in equipment_map[id])
-					if(equipment_map[id][item] != "backpack")
-						continue
+	if(!istype(tied_human.belt, /obj/item/storage)) // belts can be backpacks, don't ask
+		return
 
-					equipment_map[id] -= item
+	for(var/id in equipment_map)
+		for(var/obj/item/item as anything in equipment_map[id])
+			if(equipment_map[id][item] != "belt")
+				continue
 
-			RegisterSignal(tied_human.back, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-			item_slot_appraisal_loop(tied_human.back, "backpack")
+			equipment_map[id] -= item
 
-	l_pocket_statement:
-		if(pocket_l)
-			if(!istype(tied_human.l_store, /obj/item/storage/pouch))
-				goto r_pocket_statement
+	RegisterSignal(tied_human.belt, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+	item_slot_appraisal_loop(tied_human.belt, "belt")
 
-			for(var/id in equipment_map)
-				for(var/obj/item/item as anything in equipment_map[id])
-					if(equipment_map[id][item] != "left_pocket")
-						continue
+/datum/human_ai_brain/proc/appraise_back()
+	if(isgun(tied_human.back) && (tied_human.back != primary_weapon))
+		add_secondary_weapon(tied_human.back)
+		return
 
-					equipment_map[id] -= item
+	if(!istype(tied_human.back, /obj/item/storage/backpack))
+		return
 
-			RegisterSignal(tied_human.l_store, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-			item_slot_appraisal_loop(tied_human.l_store, "left_pocket")
+	for(var/id in equipment_map)
+		for(var/obj/item/item as anything in equipment_map[id])
+			if(equipment_map[id][item] != "backpack")
+				continue
 
-	r_pocket_statement:
-		if(pocket_r)
-			if(!istype(tied_human.r_store, /obj/item/storage/pouch))
-				goto armor_statement
+			equipment_map[id] -= item
 
-			for(var/id in equipment_map)
-				for(var/obj/item/item as anything in equipment_map[id])
-					if(equipment_map[id][item] != "right_pocket")
-						continue
+	RegisterSignal(tied_human.back, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+	item_slot_appraisal_loop(tied_human.back, "backpack")
 
-					equipment_map[id] -= item
+/datum/human_ai_brain/proc/appraise_left_pocket()
+	if(!istype(tied_human.l_store, /obj/item/storage/pouch))
+		return
 
-			RegisterSignal(tied_human.r_store, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-			item_slot_appraisal_loop(tied_human.r_store, "right_pocket")
+	for(var/id in equipment_map)
+		for(var/obj/item/item as anything in equipment_map[id])
+			if(equipment_map[id][item] != "left_pocket")
+				continue
 
-	armor_statement:
-		if(armor)
-			if(!istype(tied_human.wear_suit, /obj/item/clothing/suit/storage))
-				goto uniform_statement
+			equipment_map[id] -= item
 
-			if(istype(tied_human.wear_suit, /obj/item/clothing/suit/storage/marine) && tied_human.loc) // being in nullspace makes lights play weirdly
-				var/obj/item/clothing/suit/storage/marine/marine_armor = tied_human.wear_suit
-				if(!marine_armor.light_on)
-					marine_armor.turn_light(tied_human, TRUE)
+	RegisterSignal(tied_human.l_store, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+	item_slot_appraisal_loop(tied_human.l_store, "left_pocket")
 
-			var/obj/item/clothing/suit/storage/storage_suit = tied_human.wear_suit
-			for(var/id in equipment_map)
-				for(var/obj/item/item as anything in equipment_map[id])
-					if(equipment_map[id][item] != "armor")
-						continue
+/datum/human_ai_brain/proc/appraise_right_pocket()
+	if(!istype(tied_human.r_store, /obj/item/storage/pouch))
+		return
 
-					equipment_map[id] -= item
+	for(var/id in equipment_map)
+		for(var/obj/item/item as anything in equipment_map[id])
+			if(equipment_map[id][item] != "right_pocket")
+				continue
 
-			RegisterSignal(storage_suit, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-			item_slot_appraisal_loop(storage_suit.pockets, "armor")
+			equipment_map[id] -= item
 
-	uniform_statement:
-		if(uniform && isclothing(tied_human.w_uniform))
-			var/obj/item/clothing/accessory/storage/located_storage = locate(/obj/item/clothing/accessory/storage) in tied_human.w_uniform.accessories
-			if(!located_storage)
-				return
+	RegisterSignal(tied_human.r_store, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+	item_slot_appraisal_loop(tied_human.r_store, "right_pocket")
 
-			for(var/id in equipment_map)
-				for(var/obj/item/item as anything in equipment_map[id])
-					if(equipment_map[id][item] != "uniform")
-						continue
+/datum/human_ai_brain/proc/appraise_armor()
+	if(!istype(tied_human.wear_suit, /obj/item/clothing/suit/storage))
+		return
 
-					equipment_map[id] -= item
+	if(istype(tied_human.wear_suit, /obj/item/clothing/suit/storage/marine) && tied_human.loc) // being in nullspace makes lights play weirdly
+		var/obj/item/clothing/suit/storage/marine/marine_armor = tied_human.wear_suit
+		if(!marine_armor.light_on)
+			marine_armor.turn_light(tied_human, TRUE)
 
-			RegisterSignal(located_storage, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-			item_slot_appraisal_loop(located_storage.hold, "uniform")
+	var/obj/item/clothing/suit/storage/storage_suit = tied_human.wear_suit
+	for(var/id in equipment_map)
+		for(var/obj/item/item as anything in equipment_map[id])
+			if(equipment_map[id][item] != "armor")
+				continue
+
+			equipment_map[id] -= item
+
+	RegisterSignal(storage_suit, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+	item_slot_appraisal_loop(storage_suit.pockets, "armor")
+
+/datum/human_ai_brain/proc/appraise_uniform()
+	var/obj/item/clothing/accessory/storage/located_storage = locate(/obj/item/clothing/accessory/storage) in tied_human.w_uniform.accessories
+	if(!located_storage)
+		return
+
+	for(var/id in equipment_map)
+		for(var/obj/item/item as anything in equipment_map[id])
+			if(equipment_map[id][item] != "uniform")
+				continue
+
+			equipment_map[id] -= item
+
+	RegisterSignal(located_storage, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
+	item_slot_appraisal_loop(located_storage.hold, "uniform")
 
 /datum/human_ai_brain/proc/item_slot_appraisal_loop(obj/item/container_to_loop, slot_to_assign)
 	for(var/obj/item/inv_item as anything in container_to_loop)
