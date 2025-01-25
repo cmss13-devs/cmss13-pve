@@ -124,6 +124,13 @@
 	dir = 8;
 	network = list("Corporate")
 	},
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
+	layer = 3.2;
+	name = "Television set";
+	network = null;
+	pixel_x = 0
+	},
 /turf/open/floor/kutjevo/multi_tiles/east,
 /area/bosenmori/interior_glass/fitness)
 "afV" = (
@@ -925,6 +932,10 @@
 /area/bosenmori/interior_glass/corporate)
 "aNA" = (
 /obj/structure/surface/table/reinforced,
+/obj/item/storage/secure/briefcase{
+	pixel_x = 9;
+	pixel_y = 6
+	},
 /turf/open/floor/warning,
 /area/bosenmori/shuttles/drop1)
 "aNE" = (
@@ -1234,7 +1245,8 @@
 /area/bosenmori/interior_glass/shipment)
 "aZo" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/glass/autoname{
-	dir = 2
+	dir = 2;
+	req_one_access = "200"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -2154,13 +2166,13 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_regular/operations)
 "bKO" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#ffe6e6"
-	},
-/obj/structure/machinery/prop/almayer/computer/PC,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/sterile_white,
-/area/bosenmori/interior_regular/operations)
+/obj/structure/largecrate/random/mini{
+	pixel_x = -9;
+	pixel_y = 7
+	},
+/turf/open/floor/warningcorner/north,
+/area/bosenmori/shuttles/drop1)
 "bKV" = (
 /turf/closed/wall/shiva/prefabricated,
 /area/bosenmori/mountain/mining)
@@ -2781,6 +2793,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_regular/engineering)
+"cos" = (
+/obj/structure/surface/table/woodentable{
+	color = "#8B7B5B"
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/bosenmori/mountain/pilgrim)
 "coG" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -2970,6 +2988,13 @@
 /obj/structure/fence,
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/river)
+"cxN" = (
+/obj/structure/machinery/prop/almayer/computer{
+	dir = 4;
+	pixel_x = -15
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/mining)
 "cyf" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -2981,7 +3006,9 @@
 /area/bosenmori/interior_glass/tree)
 "cyA" = (
 /obj/structure/machinery/sensortower{
-	pixel_y = 10
+	pixel_y = -1;
+	layer = 6;
+	pixel_x = -7
 	},
 /turf/open/floor/bot/north,
 /area/bosenmori/mountain/field_post)
@@ -3097,7 +3124,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/outside/south_area)
 "cEA" = (
-/obj/structure/prop/almayer/computers/sensor_computer2,
+/obj/structure/prop/server_equipment/yutani_server/off,
 /turf/open/floor/bot/north,
 /area/bosenmori/mountain/field_post)
 "cEG" = (
@@ -3142,6 +3169,12 @@
 /obj/structure/foamed_metal,
 /turf/open/floor/plating/platebot,
 /area/bosenmori/outside/cargo)
+"cGC" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/mining)
 "cGI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -3216,6 +3249,12 @@
 	},
 /turf/open/auto_turf/sand/layer1,
 /area/bosenmori/outside/cargo)
+"cIU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced,
+/obj/item/device/t_scanner,
+/turf/open/floor/warning/north,
+/area/bosenmori/shuttles/drop1)
 "cJg" = (
 /obj/structure/platform/kutjevo/rock{
 	color = "#9494b8"
@@ -3524,6 +3563,15 @@
 "cXx" = (
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/mountain/field_post)
+"cXL" = (
+/obj/structure/flora/grass/tallgrass/desert{
+	color = "#bfff00"
+	},
+/obj/structure/machinery/light/blue{
+	dir = 4
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/bosenmori/outside/north_area)
 "cXO" = (
 /obj/structure/fence,
 /turf/open/auto_turf/sand_white/layer0,
@@ -4425,6 +4473,23 @@
 /obj/item/tool/crew_monitor,
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_heavy/secured_armory)
+"dEK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet{
+	can_be_stacked = 1;
+	pixel_x = -8;
+	pixel_y = 10
+	},
+/obj/structure/closet{
+	can_be_stacked = 1;
+	pixel_x = 8;
+	pixel_y = 10
+	},
+/obj/item/clothing/suit/chef/classic,
+/obj/item/clothing/suit/chef/classic,
+/obj/item/clothing/suit/chef/classic,
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_glass/food_processing)
 "dEN" = (
 /obj/structure/platform/kutjevo/smooth,
 /turf/open/gm/river/no_overlay,
@@ -4849,11 +4914,6 @@
 	light_color = "#dae2ff";
 	dir = 8
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 8;
-	layer = 5.2
-	},
 /turf/open/floor/prison/greenblue,
 /area/bosenmori/interior_glass/food_processing)
 "ecD" = (
@@ -5224,6 +5284,11 @@
 /obj/structure/closet/crate/miningcar/yellow{
 	layer = 3.01
 	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	pixel_y = 5;
+	layer = 3.1
+	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/mountain/mining)
 "ewT" = (
@@ -5360,11 +5425,6 @@
 /area/bosenmori/mountain/clearing)
 "eAx" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 8;
-	layer = 5.2
-	},
 /turf/open/floor/prison/greenblue,
 /area/bosenmori/interior_glass/food_processing)
 "eAG" = (
@@ -5525,6 +5585,13 @@
 	},
 /turf/open/auto_turf/sand/layer1,
 /area/bosenmori/outside/west_barrens)
+"eGa" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/strata/faux_wood,
+/area/bosenmori/mountain/pilgrim)
 "eGl" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/glass/autoname{
@@ -5637,6 +5704,7 @@
 	pixel_x = 0;
 	pixel_y = 3
 	},
+/obj/item/tool/weldpack,
 /turf/open/floor/plating,
 /area/bosenmori/outside/cargo)
 "eJy" = (
@@ -5813,6 +5881,25 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/bosenmori/mountain/temple_proper)
+"eQu" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#ffe6e6"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 13;
+	pixel_y = 11
+	},
+/obj/item/reagent_container/food/drinks/coffee{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/item/ashtray/plastic{
+	pixel_y = -1;
+	pixel_x = 17
+	},
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_regular/operations)
 "eRh" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /obj/structure/prop/ice_colony/ground_wire{
@@ -5842,6 +5929,13 @@
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/mountain/temple_ruins)
+"eRP" = (
+/obj/item/tool/warning_cone{
+	pixel_x = 10;
+	pixel_y = 12
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/mining)
 "eRW" = (
 /obj/structure/bed/chair{
 	buckling_y = 18;
@@ -6640,6 +6734,13 @@
 "fBQ" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/bosenmori/interior_glass/tree)
+"fCi" = (
+/obj/structure/largecrate/random/case/small{
+	pixel_x = 10;
+	pixel_y = -4
+	},
+/turf/open/floor,
+/area/bosenmori/shuttles/drop1)
 "fCv" = (
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/up{
@@ -8278,6 +8379,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_glass/food_processing)
 "hdq" = (
@@ -8645,6 +8747,18 @@
 /obj/structure/surface/table/reinforced{
 	dir = 1;
 	color = "#8B7B5B"
+	},
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
+	layer = 3.2;
+	name = "Television set";
+	network = null;
+	pixel_x = 13;
+	dir = 1;
+	pixel_y = -2
+	},
+/obj/structure/window/reinforced{
+	layer = 3.8
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_glass/cargo)
@@ -9093,6 +9207,13 @@
 "hIR" = (
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/west_area)
+"hJd" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/obj/item/tool/weldingtool/simple,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_glass/filtration)
 "hJl" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -9298,6 +9419,10 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/mountain/temple_proper)
+"hUt" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/pilgrim)
 "hUM" = (
 /obj/structure/largecrate/random{
 	pixel_x = -1;
@@ -9772,6 +9897,20 @@
 "inE" = (
 /turf/open/desert/desert_shore/shore_corner1/west,
 /area/bosenmori/outside/east_barrens)
+"inG" = (
+/obj/structure/window/framed/solaris/reinforced,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice4";
+	pixel_x = -16;
+	pixel_y = 24
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 24;
+	pixel_x = 16
+	},
+/turf/open/floor/plating,
+/area/bosenmori/interior_glass/food_processing)
 "ioL" = (
 /obj/structure/platform/kutjevo/rock{
 	color = "#9494b8"
@@ -10615,6 +10754,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/device/autopsy_scanner,
+/obj/item/device/flashlight/pen,
 /turf/open/floor/prison/whitepurplecorner/east,
 /area/bosenmori/interior_regular/research)
 "jay" = (
@@ -10882,11 +11022,6 @@
 	light_color = "#dae2ff";
 	dir = 4
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 8;
-	layer = 5.2
-	},
 /turf/open/floor/prison/greenblue/southeast,
 /area/bosenmori/interior_glass/food_processing)
 "jnU" = (
@@ -11123,11 +11258,6 @@
 "jwA" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 8;
-	layer = 5.2
 	},
 /turf/open/floor/prison/greenblue,
 /area/bosenmori/interior_glass/food_processing)
@@ -11800,6 +11930,19 @@
 	},
 /turf/open/gm/dirt,
 /area/bosenmori/mountain/temple_ruins)
+"jTW" = (
+/obj/structure/closet{
+	can_be_stacked = 1;
+	pixel_x = -8;
+	pixel_y = 10
+	},
+/obj/structure/closet{
+	can_be_stacked = 1;
+	pixel_x = 8;
+	pixel_y = 10
+	},
+/turf/open/floor/prison/bright_clean2,
+/area/bosenmori/interior_glass/food_processing)
 "jUb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -11845,6 +11988,14 @@
 /obj/effect/glowshroom,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/mountain/clearing)
+"jVZ" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice8";
+	pixel_x = 16;
+	pixel_y = 24
+	},
+/turf/closed/wall/solaris/reinforced,
+/area/bosenmori/interior_glass/food_processing)
 "jWd" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
@@ -12252,11 +12403,6 @@
 "kqk" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 8;
-	layer = 5.2
-	},
 /turf/open/floor/prison/greenblue,
 /area/bosenmori/interior_glass/food_processing)
 "krk" = (
@@ -12513,6 +12659,7 @@
 	light_color = "#dae2ff";
 	light_power = 0.25
 	},
+/obj/effect/spawner/random/toolbox,
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_glass/corporate)
 "kCp" = (
@@ -12984,6 +13131,7 @@
 	pixel_y = 6
 	},
 /obj/item/clothing/glasses/welding,
+/obj/item/tool/weldpack,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/engineering)
 "kUT" = (
@@ -13390,6 +13538,10 @@
 /obj/structure/inflatable/popped/door,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/mountain/abandoned)
+"lpl" = (
+/obj/structure/machinery/colony_floodlight,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/outside/west_area)
 "lpZ" = (
 /obj/structure/prop/static_tank/fuel,
 /turf/open/floor/asteroidwarning/north,
@@ -13562,6 +13714,10 @@
 "lvj" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
+	},
+/obj/structure/sign/catclock{
+	pixel_x = -26;
+	pixel_y = 4
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_glass/living)
@@ -13996,7 +14152,7 @@
 /area/bosenmori/outside/cargo)
 "lOe" = (
 /obj/structure/sign/poster/hunk{
-	pixel_x = -9;
+	pixel_x = -10;
 	pixel_y = 34
 	},
 /obj/structure/sign/poster/pinup{
@@ -14012,6 +14168,10 @@
 	pixel_y = 5
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	dir = 1
+	},
 /turf/open/floor/strata/faux_wood,
 /area/bosenmori/mountain/pilgrim)
 "lOi" = (
@@ -15382,6 +15542,8 @@
 	pixel_x = -3;
 	pixel_y = 11
 	},
+/obj/item/clothing/suit/bio_suit/general,
+/obj/item/clothing/head/bio_hood/general,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_regular/research)
 "naO" = (
@@ -15545,6 +15707,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/mountain/mining)
+"nhS" = (
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	dir = 1
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/bosenmori/mountain/pilgrim)
 "njw" = (
 /obj/structure/prop/dam/truck{
 	dir = 4
@@ -15748,17 +15917,23 @@
 	color = "#ffe6e6"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_container/food/drinks/coffeecup/wy{
-	pixel_x = -8;
-	pixel_y = 11
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 4;
+	pixel_x = 5;
+	pixel_y = 19;
+	layer = 2.98
 	},
-/obj/item/reagent_container/food/drinks/coffee{
-	pixel_x = -6;
-	pixel_y = 0
+/obj/structure/machinery/computer/communications/simple{
+	dir = 4;
+	pixel_x = 5;
+	pixel_y = 5;
+	layer = 2.99
 	},
-/obj/item/ashtray/plastic{
-	pixel_y = -5;
-	pixel_x = 5
+/obj/structure/machinery/computer/atmos_alert{
+	layer = 2.99;
+	dir = 4;
+	pixel_x = 5;
+	pixel_y = -9
 	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_regular/operations)
@@ -16237,12 +16412,19 @@
 /area/bosenmori/mountain/field_post)
 "nQw" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/storage/surgical_tray,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer{
+	pixel_x = 5;
+	pixel_y = 16
+	},
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = -1;
 	pixel_y = 17
 	},
+/obj/item/tool/surgery/scalpel/laser/improved{
+	pixel_x = -6;
+	pixel_y = -2
+	},
+/obj/item/tool/surgery/circular_saw,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/research)
 "nQx" = (
@@ -16284,6 +16466,10 @@
 /area/bosenmori/outside/south_area)
 "nST" = (
 /obj/structure/surface/table/reinforced,
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = -4;
+	pixel_y = 10
+	},
 /turf/open/floor/warning/north,
 /area/bosenmori/shuttles/drop1)
 "nSX" = (
@@ -16299,6 +16485,15 @@
 "nUb" = (
 /turf/open/floor/plating,
 /area/bosenmori/mountain/temple_proper)
+"nUx" = (
+/obj/structure/window/framed/solaris/reinforced,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 24;
+	pixel_x = 16
+	},
+/turf/open/floor/plating,
+/area/bosenmori/interior_glass/food_processing)
 "nUy" = (
 /obj/structure/cargo_container/horizontal/blue/middle{
 	pixel_x = 3
@@ -16631,8 +16826,13 @@
 /turf/closed/wall/mineral/sandstone/runed,
 /area/bosenmori/mountain/temple_ruins)
 "olN" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 24;
+	pixel_x = 16
+	},
 /turf/closed/wall/solaris/reinforced,
-/area/space)
+/area/bosenmori/interior_glass/food_processing)
 "olQ" = (
 /obj/structure/platform{
 	layer = 3.01
@@ -16815,7 +17015,7 @@
 	req_one_access = "101"
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
-/area/space)
+/area/bosenmori/interior_glass/cargo)
 "oxX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/warning/southwest,
@@ -17465,6 +17665,7 @@
 	pixel_x = -2;
 	pixel_y = 15
 	},
+/obj/item/tool/weldingtool/simple,
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/mountain/mining)
 "oXX" = (
@@ -17612,11 +17813,6 @@
 /turf/open/gm/dirt,
 /area/bosenmori/mountain/temple_ruins)
 "pek" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 18;
-	pixel_x = 0
-	},
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
 	},
@@ -17635,6 +17831,12 @@
 	},
 /turf/open/auto_turf/sand/layer1,
 /area/bosenmori/outside/east_area)
+"pfg" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/mining)
 "pfP" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -17672,7 +17874,8 @@
 /obj/structure/filingcabinet/chestdrawer{
 	density = 0;
 	pixel_x = -8;
-	pixel_y = 17
+	pixel_y = 17;
+	layer = 3.2
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/research)
@@ -17819,6 +18022,7 @@
 	pixel_x = 5;
 	pixel_y = 12
 	},
+/obj/item/weapon/gun/pistol/vp70/unloaded,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/research)
 "pop" = (
@@ -18218,6 +18422,15 @@
 /obj/structure/machinery/door/airlock/almayer/generic/autoname,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/mountain/mining)
+"pFk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced,
+/obj/structure/largecrate/random/mini/small_case{
+	pixel_x = -2;
+	pixel_y = 12
+	},
+/turf/open/floor/warning,
+/area/bosenmori/shuttles/drop1)
 "pFH" = (
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
@@ -18931,6 +19144,9 @@
 /area/bosenmori/outside/north_barrens)
 "qnD" = (
 /obj/structure/prop/structure_lattice,
+/obj/structure/machinery/light/small/blue{
+	pixel_y = -1
+	},
 /turf/open/gm/river/desert/shallow_edge/north,
 /area/bosenmori/interior_glass/filtration)
 "qol" = (
@@ -19084,19 +19300,19 @@
 	pixel_y = -5
 	},
 /obj/item/paper_bin/wy{
-	pixel_x = 8;
-	pixel_y = 10
+	pixel_x = 5;
+	pixel_y = 11
 	},
 /obj/item/paper_bin{
 	pixel_y = 9;
-	pixel_x = -6
+	pixel_x = -7
 	},
 /obj/structure/surface/table/reinforced/prison{
 	color = "#ffe6e6"
 	},
 /obj/item/tool/pen/clicky{
-	pixel_x = 6;
-	pixel_y = -1
+	pixel_x = 2;
+	pixel_y = 0
 	},
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
@@ -19247,6 +19463,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_regular/telecommunication)
+"qxA" = (
+/obj/item/tool/warning_cone{
+	pixel_x = -9;
+	pixel_y = 16
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4;
+	pixel_x = -1;
+	pixel_y = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/mining)
 "qxK" = (
 /obj/structure/cargo_container/horizontal/blue/bottom{
 	color = "#77b300";
@@ -19345,6 +19573,10 @@
 	},
 /turf/open/auto_turf/strata_grass,
 /area/bosenmori/mountain/pilgrim)
+"qDb" = (
+/obj/structure/prop/static_tank,
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/mining)
 "qDx" = (
 /obj/structure/barricade/handrail/strata{
 	can_buckle = 1
@@ -19366,6 +19598,12 @@
 "qDR" = (
 /turf/closed/wall/solaris,
 /area/bosenmori/interior_glass/cargo)
+"qDV" = (
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/bosenmori/mountain/pilgrim)
 "qEk" = (
 /obj/item/trash/semki,
 /turf/open/auto_turf/sand/layer0,
@@ -19396,8 +19634,6 @@
 	pixel_y = -2
 	},
 /obj/item/gift,
-/obj/effect/spawner/random/attachment,
-/obj/effect/spawner/random/attachment,
 /turf/open/floor/dark,
 /area/bosenmori/interior_glass/corporate)
 "qGa" = (
@@ -19666,6 +19902,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/store)
+"qNX" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/mining)
 "qNY" = (
 /obj/structure/platform{
 	dir = 8;
@@ -20478,6 +20721,10 @@
 	dir = 1;
 	pixel_y = 0
 	},
+/obj/item/ammo_magazine/pistol/vp70/toxin{
+	pixel_x = 12;
+	pixel_y = 16
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_regular/research)
 "rCv" = (
@@ -20649,6 +20896,10 @@
 "rIH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced,
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = 11;
+	pixel_y = 4
+	},
 /turf/open/floor/warning/north,
 /area/bosenmori/shuttles/drop1)
 "rIV" = (
@@ -20872,9 +21123,14 @@
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_10";
 	pixel_x = 0;
-	pixel_y = 10
+	pixel_y = 10;
+	layer = 2.9
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/ice_colony/flamingo{
+	pixel_x = 1;
+	pixel_y = 14
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/living)
 "rTU" = (
@@ -21555,11 +21811,6 @@
 /area/bosenmori/interior_glass/living)
 "swm" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics,
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 8;
-	layer = 5.2
-	},
 /turf/open/floor/prison/greenblue,
 /area/bosenmori/interior_glass/food_processing)
 "swp" = (
@@ -21926,6 +22177,12 @@
 "sLk" = (
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bosenmori/shuttles/drop2)
+"sLE" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/outside/north_barrens)
 "sLN" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00";
@@ -22177,6 +22434,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/retrosquareslight,
 /area/bosenmori/interior_glass/fitness)
+"sXJ" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bosenmori/mountain/field_post)
 "sYd" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -22382,6 +22643,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/shipment)
+"tih" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/mining)
 "tij" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -22389,6 +22659,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_glass/nexus)
+"tiu" = (
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 8
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	pixel_y = 5;
+	layer = 3.1
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/mining)
 "tjn" = (
 /obj/structure/closet,
 /obj/item/clothing/under/colonist/prison_boiler,
@@ -22688,6 +22969,14 @@
 	pixel_y = 4
 	},
 /obj/item/tool/pen,
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
+	layer = 3.2;
+	name = "Television set";
+	network = null;
+	pixel_x = 0;
+	pixel_y = 30
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/hospital)
 "tvh" = (
@@ -23002,8 +23291,8 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/server_equipment/laptop/on{
-	pixel_x = 11;
-	pixel_y = 22;
+	pixel_x = 14;
+	pixel_y = 21;
 	layer = 3.01
 	},
 /turf/open/floor/prison/floor_plate,
@@ -23627,6 +23916,18 @@
 /obj/structure/prop/dam/boulder/boulder3,
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/shuttles/drop2)
+"ukf" = (
+/obj/structure/bed/chair,
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
+	layer = 3.2;
+	name = "Television set";
+	network = null;
+	pixel_x = 1;
+	pixel_y = 28
+	},
+/turf/open/floor/interior/tatami,
+/area/bosenmori/interior_glass/nexus)
 "ukj" = (
 /obj/item/stool{
 	icon_state = "stool_alt";
@@ -24018,7 +24319,9 @@
 /turf/open/floor/greengrid,
 /area/bosenmori/interior_glass/corporate)
 "uxq" = (
-/obj/structure/closet,
+/obj/structure/closet{
+	can_be_stacked = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/plate,
 /area/bosenmori/interior_glass/fitness)
@@ -24242,6 +24545,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/outside/south_area)
+"uFg" = (
+/obj/structure/largecrate/random/mini{
+	pixel_x = 12;
+	pixel_y = -7
+	},
+/turf/open/floor,
+/area/bosenmori/shuttles/drop1)
 "uFh" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -24554,7 +24864,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
-/area/space)
+/area/bosenmori/interior_glass/cargo)
 "uWg" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -24612,11 +24922,13 @@
 /turf/closed/wall/mineral/sandstone/runed/decor,
 /area/bosenmori/mountain/temple_ruins)
 "uYz" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/surface/table/almayer,
+/obj/structure/prop/server_equipment/laptop/closed{
+	pixel_x = -13;
+	pixel_y = 4
 	},
-/turf/closed/wall/solaris/reinforced,
-/area/space)
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/mountain/mining)
 "uYD" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00";
@@ -24757,6 +25069,11 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/east_barrens)
+"vgm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/server_equipment/broken,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/mountain/abandoned)
 "vgP" = (
 /obj/structure/prop/dam/boulder/boulder2,
 /turf/open/auto_turf/sand/layer0,
@@ -25018,6 +25335,16 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/south_area)
+"vtz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced,
+/obj/structure/largecrate/random/mini{
+	pixel_x = 4;
+	pixel_y = 11;
+	layer = 3.1
+	},
+/turf/open/floor/warning,
+/area/bosenmori/shuttles/drop1)
 "vtF" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 1
@@ -25047,6 +25374,11 @@
 "vuA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced,
+/obj/item/device/t_scanner,
+/obj/item/device/clue_scanner{
+	pixel_x = 14;
+	pixel_y = 7
+	},
 /turf/open/floor/warning,
 /area/bosenmori/shuttles/drop1)
 "vvk" = (
@@ -25956,12 +26288,10 @@
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/north_area)
 "wqp" = (
-/obj/structure/machinery/computer/operating{
-	pixel_y = 17;
-	density = 0
+/turf/closed/wall/rock{
+	color = "#967e73"
 	},
-/turf/open/floor/prison/sterile_white,
-/area/bosenmori/interior_glass/hospital)
+/area/bosenmori/interior_glass/shipment)
 "wqx" = (
 /turf/open/floor/kutjevo/plate,
 /area/bosenmori/mountain/temple_proper)
@@ -32138,7 +32468,7 @@ hzn
 hzn
 vPy
 vPy
-nLU
+qxA
 ftt
 ftt
 ftt
@@ -32366,7 +32696,7 @@ hzn
 vPy
 vPy
 vPy
-nLU
+qNX
 nLU
 nLU
 nLU
@@ -32594,8 +32924,8 @@ hzn
 kFF
 vPy
 vPy
-nLU
-nLU
+qNX
+eRP
 nLU
 hzn
 nLU
@@ -32823,7 +33153,7 @@ hzn
 vPy
 vPy
 vPy
-nLU
+qNX
 nLU
 nLU
 nLU
@@ -32979,7 +33309,7 @@ oCg
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (22,1,1) = {"
 bJY
@@ -33207,7 +33537,7 @@ oCg
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (23,1,1) = {"
 bJY
@@ -33435,7 +33765,7 @@ sUH
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (24,1,1) = {"
 bJY
@@ -33663,7 +33993,7 @@ sUH
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (25,1,1) = {"
 bJY
@@ -33891,7 +34221,7 @@ oIH
 oIH
 oCg
 oCg
-fqJ
+oCg
 "}
 (26,1,1) = {"
 bJY
@@ -34119,7 +34449,7 @@ oIH
 hJw
 oCg
 oCg
-fqJ
+oCg
 "}
 (27,1,1) = {"
 bJY
@@ -34136,9 +34466,9 @@ hxX
 edN
 kHo
 wFV
-rtR
-rtR
-rtR
+vgm
+vgm
+vgm
 bvS
 bvS
 bvS
@@ -34347,7 +34677,7 @@ oIH
 hJw
 hJw
 oCg
-fqJ
+oCg
 "}
 (28,1,1) = {"
 bJY
@@ -34575,7 +34905,7 @@ oCg
 oCg
 hJw
 hJw
-fqJ
+oCg
 "}
 (29,1,1) = {"
 bJY
@@ -34803,7 +35133,7 @@ oCg
 hJw
 hJw
 oCg
-fqJ
+oCg
 "}
 (30,1,1) = {"
 bJY
@@ -35031,7 +35361,7 @@ oCg
 oCg
 uEH
 oCg
-fqJ
+oCg
 "}
 (31,1,1) = {"
 bJY
@@ -35102,8 +35432,8 @@ nLU
 nLU
 cfe
 hzn
-nLU
-nLU
+cGC
+cGC
 nLU
 ftt
 jgI
@@ -35259,7 +35589,7 @@ oCg
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (32,1,1) = {"
 bJY
@@ -35332,8 +35662,8 @@ hzn
 hzn
 wmS
 nhN
-nLU
-nLU
+tih
+cGC
 yff
 ftt
 ftt
@@ -35487,7 +35817,7 @@ oCg
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (33,1,1) = {"
 bJY
@@ -35715,7 +36045,7 @@ oCg
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (34,1,1) = {"
 bJY
@@ -35790,7 +36120,7 @@ vPy
 vPy
 nLU
 uiU
-yff
+tiu
 nLU
 ftt
 ftt
@@ -35943,7 +36273,7 @@ eTj
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (35,1,1) = {"
 bJY
@@ -36018,7 +36348,7 @@ vPy
 vPy
 xSG
 cJg
-yff
+tiu
 nLU
 ftt
 ftt
@@ -36171,7 +36501,7 @@ oIH
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (36,1,1) = {"
 bJY
@@ -36245,7 +36575,7 @@ vPy
 iMZ
 hzn
 hzn
-nLU
+pfg
 yff
 nLU
 ftt
@@ -36399,7 +36729,7 @@ oCg
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (37,1,1) = {"
 bJY
@@ -36627,7 +36957,7 @@ oCg
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (38,1,1) = {"
 bJY
@@ -36855,7 +37185,7 @@ oCg
 oCg
 oCg
 oCg
-fqJ
+oCg
 "}
 (39,1,1) = {"
 bJY
@@ -37083,7 +37413,7 @@ oCg
 eIo
 mIz
 oCg
-fqJ
+oCg
 "}
 (40,1,1) = {"
 bJY
@@ -37311,7 +37641,7 @@ oCg
 eIo
 exI
 oCg
-fqJ
+oCg
 "}
 (41,1,1) = {"
 bJY
@@ -37539,7 +37869,7 @@ oCg
 eIo
 nZK
 oCg
-fqJ
+oCg
 "}
 (42,1,1) = {"
 bJY
@@ -37767,7 +38097,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (43,1,1) = {"
 bJY
@@ -37995,7 +38325,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (44,1,1) = {"
 bJY
@@ -38223,7 +38553,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (45,1,1) = {"
 bJY
@@ -38451,7 +38781,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (46,1,1) = {"
 bJY
@@ -38679,7 +39009,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (47,1,1) = {"
 bJY
@@ -38907,7 +39237,7 @@ nCF
 iDc
 iDc
 nCF
-fqJ
+nCF
 "}
 (48,1,1) = {"
 bJY
@@ -38977,7 +39307,7 @@ ftt
 ftt
 cfe
 cfe
-ftt
+qDb
 ftt
 rNd
 nLU
@@ -39135,7 +39465,7 @@ nCF
 iDc
 iDc
 nCF
-fqJ
+nCF
 "}
 (49,1,1) = {"
 bJY
@@ -39204,7 +39534,7 @@ ftt
 ftt
 lWK
 gKB
-gKB
+cxN
 mvf
 ftt
 rNd
@@ -39363,7 +39693,7 @@ tXX
 tXX
 iDc
 iDc
-fqJ
+nCF
 "}
 (50,1,1) = {"
 bJY
@@ -39430,7 +39760,7 @@ nLU
 nLU
 ftt
 ftt
-lWK
+uYz
 gKB
 gKB
 mvf
@@ -39533,7 +39863,7 @@ pJp
 pmw
 bpJ
 ofH
-lsA
+pwe
 mRw
 mRw
 lsA
@@ -39591,7 +39921,7 @@ tXX
 tXX
 tXX
 iDc
-fqJ
+nCF
 "}
 (51,1,1) = {"
 bJY
@@ -39761,7 +40091,7 @@ nJQ
 kBI
 pYN
 cEh
-lsA
+pwe
 mRw
 fmV
 xps
@@ -39819,7 +40149,7 @@ tXX
 tXX
 tXX
 iDc
-fqJ
+nCF
 "}
 (52,1,1) = {"
 bJY
@@ -39989,7 +40319,7 @@ lsA
 tGp
 tGp
 ugy
-lsA
+pwe
 jww
 fmV
 cVK
@@ -40047,7 +40377,7 @@ mlY
 tXX
 tXX
 iDc
-fqJ
+nCF
 "}
 (53,1,1) = {"
 bJY
@@ -40217,7 +40547,7 @@ pPd
 xol
 vXr
 oJw
-lsA
+pwe
 jww
 fmV
 mRw
@@ -40275,7 +40605,7 @@ mlY
 tXX
 tXX
 tXX
-fqJ
+nCF
 "}
 (54,1,1) = {"
 bJY
@@ -40445,8 +40775,8 @@ dsz
 vXr
 oJw
 oJw
-lsA
-lsA
+pwe
+pwe
 ocR
 mRw
 lsA
@@ -40503,7 +40833,7 @@ mlY
 mlY
 tXX
 tXX
-fqJ
+nCF
 "}
 (55,1,1) = {"
 bJY
@@ -40662,7 +40992,7 @@ jgA
 ctd
 aaM
 iPz
-lsA
+pwe
 pwe
 pwe
 pwe
@@ -40674,7 +41004,7 @@ aDx
 aKe
 mRw
 lvj
-lsA
+pwe
 qmB
 jww
 lsA
@@ -40731,7 +41061,7 @@ mlY
 mlY
 mlY
 tXX
-fqJ
+nCF
 "}
 (56,1,1) = {"
 bJY
@@ -40959,7 +41289,7 @@ mlY
 mlY
 mlY
 nCF
-fqJ
+nCF
 "}
 (57,1,1) = {"
 bJY
@@ -41187,7 +41517,7 @@ oIj
 oIj
 mlY
 nCF
-fqJ
+nCF
 "}
 (58,1,1) = {"
 bJY
@@ -41358,7 +41688,7 @@ pYN
 dCx
 tyH
 cIE
-lsA
+pwe
 fmV
 pPK
 lsA
@@ -41415,7 +41745,7 @@ oIj
 oIj
 mlY
 nCF
-fqJ
+nCF
 "}
 (59,1,1) = {"
 bJY
@@ -41574,7 +41904,7 @@ jgA
 ctd
 ctd
 enI
-lsA
+pwe
 pwe
 pwe
 pwe
@@ -41586,7 +41916,7 @@ pYN
 xbc
 xLD
 rJa
-lsA
+pwe
 nDi
 kHi
 lsA
@@ -41643,7 +41973,7 @@ gMB
 oIj
 mlY
 mlY
-fqJ
+nCF
 "}
 (60,1,1) = {"
 bJY
@@ -41814,7 +42144,7 @@ oDk
 gVe
 pxE
 pSt
-lsA
+pwe
 mxA
 pPK
 lsA
@@ -41871,7 +42201,7 @@ oIj
 oIj
 oIj
 mlY
-fqJ
+nCF
 "}
 (61,1,1) = {"
 bJY
@@ -42099,7 +42429,7 @@ oIj
 jGY
 oIj
 mlY
-fqJ
+nCF
 "}
 (62,1,1) = {"
 bJY
@@ -42308,7 +42638,7 @@ qPg
 xlY
 xlY
 xlY
-oCn
+lpl
 oCn
 qkh
 iih
@@ -42327,7 +42657,7 @@ oIj
 oIj
 jpA
 ecb
-fqJ
+nCF
 "}
 (63,1,1) = {"
 bJY
@@ -42486,7 +42816,7 @@ cVt
 qQM
 qQM
 rLt
-lsA
+pwe
 pwe
 pwe
 pwe
@@ -42498,7 +42828,7 @@ eDJ
 tCe
 pwe
 azy
-lsA
+pwe
 oMR
 hPI
 lsA
@@ -42555,7 +42885,7 @@ oIj
 oIj
 oPp
 caz
-fqJ
+nCF
 "}
 (64,1,1) = {"
 bJY
@@ -42725,8 +43055,8 @@ jmz
 oJw
 oJw
 vXr
-lsA
-lsA
+pwe
+pwe
 fmV
 hPI
 lsA
@@ -42783,7 +43113,7 @@ dea
 oIj
 oPp
 caz
-fqJ
+nCF
 "}
 (65,1,1) = {"
 bJY
@@ -42953,7 +43283,7 @@ oJw
 vXr
 vXr
 vXr
-lsA
+pwe
 jww
 fmV
 hPI
@@ -43011,7 +43341,7 @@ oIj
 oIj
 oPp
 caz
-fqJ
+nCF
 "}
 (66,1,1) = {"
 bJY
@@ -43181,7 +43511,7 @@ lsA
 tGp
 tGp
 cNh
-lsA
+pwe
 jww
 qmB
 oKd
@@ -43239,7 +43569,7 @@ qkh
 oIj
 oPp
 caz
-fqJ
+nCF
 "}
 (67,1,1) = {"
 bJY
@@ -43409,7 +43739,7 @@ pTF
 pYN
 pYN
 ycx
-lsA
+pwe
 mRw
 pAT
 eHe
@@ -43467,7 +43797,7 @@ iih
 oIj
 ppv
 tyY
-fqJ
+nCF
 "}
 (68,1,1) = {"
 bJY
@@ -43637,7 +43967,7 @@ hXZ
 kBI
 qrA
 ofH
-lsA
+pwe
 mRw
 uyK
 lsA
@@ -43695,7 +44025,7 @@ iih
 oIj
 oIj
 mlY
-fqJ
+nCF
 "}
 (69,1,1) = {"
 bJY
@@ -43923,7 +44253,7 @@ iih
 oIj
 oIj
 mlY
-fqJ
+nCF
 "}
 (70,1,1) = {"
 bJY
@@ -44151,7 +44481,7 @@ qkh
 kPP
 oIj
 mlY
-fqJ
+nCF
 "}
 (71,1,1) = {"
 bJY
@@ -44379,7 +44709,7 @@ nCF
 nCF
 mlY
 mlY
-fqJ
+nCF
 "}
 (72,1,1) = {"
 bJY
@@ -44607,7 +44937,7 @@ nCF
 nCF
 tXX
 tXX
-fqJ
+nCF
 "}
 (73,1,1) = {"
 bJY
@@ -44835,7 +45165,7 @@ tXX
 tXX
 tXX
 tXX
-fqJ
+nCF
 "}
 (74,1,1) = {"
 bJY
@@ -44937,11 +45267,11 @@ gwc
 gwc
 gwc
 opz
-opz
+hUt
 tMR
 tMR
 vOR
-nyH
+sLE
 nyH
 aaM
 pjY
@@ -44969,7 +45299,7 @@ sss
 bnW
 ctd
 jxF
-wqp
+ryF
 mjc
 ggp
 ceV
@@ -45063,7 +45393,7 @@ iDc
 tXX
 tXX
 nCF
-fqJ
+nCF
 "}
 (75,1,1) = {"
 bJY
@@ -45291,7 +45621,7 @@ iDc
 iDc
 iDc
 nCF
-fqJ
+nCF
 "}
 (76,1,1) = {"
 bJY
@@ -45386,7 +45716,7 @@ yeh
 hnN
 sxB
 rbu
-rHS
+eGa
 tjR
 gYm
 gYm
@@ -45519,7 +45849,7 @@ iDc
 iDc
 tXX
 nCF
-fqJ
+nCF
 "}
 (77,1,1) = {"
 bJY
@@ -45747,7 +46077,7 @@ iDc
 tXX
 tXX
 nCF
-fqJ
+nCF
 "}
 (78,1,1) = {"
 bJY
@@ -45975,7 +46305,7 @@ tXX
 tXX
 tXX
 tXX
-fqJ
+nCF
 "}
 (79,1,1) = {"
 bJY
@@ -46203,7 +46533,7 @@ tXX
 tXX
 tXX
 mlY
-fqJ
+nCF
 "}
 (80,1,1) = {"
 bJY
@@ -46431,7 +46761,7 @@ tXX
 tXX
 mlY
 mlY
-fqJ
+nCF
 "}
 (81,1,1) = {"
 bJY
@@ -46659,7 +46989,7 @@ nCF
 mlY
 mlY
 oIj
-fqJ
+nCF
 "}
 (82,1,1) = {"
 bJY
@@ -46760,11 +47090,11 @@ vNv
 bHO
 gwc
 gwc
-opz
+hUt
 tMR
 tMR
 vOR
-nyH
+sLE
 nyH
 nyH
 pjY
@@ -46887,7 +47217,7 @@ mlY
 mlY
 oIj
 oIj
-fqJ
+nCF
 "}
 (83,1,1) = {"
 bJY
@@ -47021,7 +47351,7 @@ nSH
 mLo
 nyH
 jxF
-wqp
+ryF
 yiu
 ryF
 ceV
@@ -47115,7 +47445,7 @@ mlY
 oIj
 gMB
 jpA
-fqJ
+nCF
 "}
 (84,1,1) = {"
 bJY
@@ -47205,13 +47535,13 @@ opz
 opz
 opz
 tjR
+nhS
+cos
+cos
 uQm
-uQm
-uQm
-uQm
-uQm
-uQm
-uQm
+cos
+cos
+qDV
 tjR
 opz
 opz
@@ -47343,7 +47673,7 @@ mlY
 oIj
 jpA
 caz
-fqJ
+nCF
 "}
 (85,1,1) = {"
 bJY
@@ -47571,7 +47901,7 @@ fgx
 jpA
 caz
 caz
-fqJ
+nCF
 "}
 (86,1,1) = {"
 bJY
@@ -47799,7 +48129,7 @@ fgx
 caz
 caz
 wDY
-fqJ
+nCF
 "}
 (87,1,1) = {"
 bJY
@@ -47946,7 +48276,7 @@ kKq
 smD
 kJM
 eco
-heX
+inG
 rLt
 qQM
 hxb
@@ -48027,7 +48357,7 @@ fgx
 ppv
 wDY
 oIj
-fqJ
+nCF
 "}
 (88,1,1) = {"
 bJY
@@ -48165,16 +48495,16 @@ qKp
 cMp
 quh
 ukP
-bix
-bix
-iDt
 eoO
+eoO
+iDt
+bix
 kjn
 eoO
 eoO
 ocl
 swm
-heX
+nUx
 rLt
 qQM
 hxb
@@ -48255,7 +48585,7 @@ fgx
 oIj
 oIj
 oIj
-fqJ
+nCF
 "}
 (89,1,1) = {"
 bJY
@@ -48402,7 +48732,7 @@ dNW
 coG
 mAC
 jwA
-bfd
+olN
 iXR
 qQM
 hxb
@@ -48483,7 +48813,7 @@ fgx
 oIj
 dea
 oIj
-fqJ
+nCF
 "}
 (90,1,1) = {"
 bJY
@@ -48621,16 +48951,16 @@ bfd
 cKy
 cKy
 cKy
-eoO
-eoO
-eoO
-eoO
+jTW
+bix
+bix
+bix
 cKy
 hPx
 iDt
 ocl
 swm
-heX
+nUx
 rLt
 qQM
 hxb
@@ -48711,7 +49041,7 @@ oIj
 blO
 oIj
 oIj
-fqJ
+nCF
 "}
 (91,1,1) = {"
 bJY
@@ -48849,16 +49179,16 @@ efv
 efv
 efv
 cKy
-wWG
+dEK
 gOU
 vKz
-vKz
+wWG
 cKy
 pFc
 iDt
 ocl
 kqk
-heX
+nUx
 rLt
 qQM
 hxb
@@ -48939,7 +49269,7 @@ oIj
 oIj
 mlY
 mlY
-fqJ
+nCF
 "}
 (92,1,1) = {"
 bJY
@@ -49086,7 +49416,7 @@ uTB
 iDt
 dFI
 eAx
-bfd
+olN
 rLt
 qQM
 hxb
@@ -49167,7 +49497,7 @@ oIj
 mlY
 mlY
 nCF
-fqJ
+nCF
 "}
 (93,1,1) = {"
 bJY
@@ -49314,7 +49644,7 @@ pJk
 iDt
 ocl
 kqk
-heX
+nUx
 rLt
 qQM
 hxb
@@ -49395,7 +49725,7 @@ mlY
 mlY
 tXX
 nCF
-fqJ
+nCF
 "}
 (94,1,1) = {"
 bJY
@@ -49542,7 +49872,7 @@ lRE
 lzn
 ocl
 swm
-heX
+nUx
 rLt
 qQM
 hxb
@@ -49623,7 +49953,7 @@ mlY
 tXX
 tXX
 nCF
-fqJ
+nCF
 "}
 (95,1,1) = {"
 bJY
@@ -49770,7 +50100,7 @@ anE
 iDt
 nOo
 jnB
-bfd
+jVZ
 rLt
 qQM
 hxb
@@ -49851,7 +50181,7 @@ tXX
 tXX
 nCF
 nCF
-fqJ
+nCF
 "}
 (96,1,1) = {"
 bJY
@@ -50079,7 +50409,7 @@ tXX
 tXX
 nCF
 nCF
-fqJ
+nCF
 "}
 (97,1,1) = {"
 bJY
@@ -50182,11 +50512,11 @@ joV
 joV
 cXx
 cXx
-cXx
+sXJ
 xJi
 xJi
 vOR
-nyH
+sLE
 ctd
 rzS
 uBE
@@ -50307,7 +50637,7 @@ tXX
 tXX
 nCF
 nCF
-fqJ
+nCF
 "}
 (98,1,1) = {"
 bJY
@@ -50535,7 +50865,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (99,1,1) = {"
 bJY
@@ -50763,7 +51093,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (100,1,1) = {"
 bJY
@@ -50991,7 +51321,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (101,1,1) = {"
 bJY
@@ -51219,7 +51549,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (102,1,1) = {"
 bJY
@@ -51447,7 +51777,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (103,1,1) = {"
 bJY
@@ -51675,7 +52005,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (104,1,1) = {"
 bJY
@@ -51903,7 +52233,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (105,1,1) = {"
 bJY
@@ -52131,7 +52461,7 @@ tXX
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (106,1,1) = {"
 bJY
@@ -52359,7 +52689,7 @@ tXX
 tXX
 nCF
 nCF
-fqJ
+nCF
 "}
 (107,1,1) = {"
 bJY
@@ -52587,7 +52917,7 @@ tXX
 tXX
 nCF
 nCF
-fqJ
+nCF
 "}
 (108,1,1) = {"
 bJY
@@ -52815,7 +53145,7 @@ tXX
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (109,1,1) = {"
 bJY
@@ -53043,7 +53373,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (110,1,1) = {"
 bJY
@@ -53204,7 +53534,7 @@ nJj
 nJj
 shQ
 eAR
-eAR
+cXL
 eAR
 eAR
 xXA
@@ -53271,7 +53601,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (111,1,1) = {"
 bJY
@@ -53499,7 +53829,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (112,1,1) = {"
 bJY
@@ -53727,7 +54057,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (113,1,1) = {"
 bJY
@@ -53888,7 +54218,7 @@ kAR
 sxf
 oIv
 qQM
-qQM
+gmY
 qQM
 qQM
 qQM
@@ -53955,7 +54285,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (114,1,1) = {"
 bJY
@@ -54183,7 +54513,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (115,1,1) = {"
 bJY
@@ -54411,7 +54741,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (116,1,1) = {"
 bJY
@@ -54639,7 +54969,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (117,1,1) = {"
 bJY
@@ -54867,7 +55197,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (118,1,1) = {"
 bJY
@@ -55067,7 +55397,7 @@ qpy
 ipT
 sJU
 qpy
-wHd
+ukf
 oRq
 uVh
 lQS
@@ -55095,7 +55425,7 @@ tXX
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (119,1,1) = {"
 bJY
@@ -55323,7 +55653,7 @@ tXX
 tXX
 nCF
 nCF
-fqJ
+nCF
 "}
 (120,1,1) = {"
 bJY
@@ -55551,7 +55881,7 @@ tXX
 tXX
 nCF
 nCF
-fqJ
+nCF
 "}
 (121,1,1) = {"
 bJY
@@ -55665,7 +55995,7 @@ hWt
 xVf
 pFZ
 eKn
-num
+hJd
 lDn
 kbb
 pKk
@@ -55779,7 +56109,7 @@ tXX
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (122,1,1) = {"
 bJY
@@ -56007,7 +56337,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (123,1,1) = {"
 bJY
@@ -56184,7 +56514,7 @@ rLt
 rLt
 nJj
 gfN
-xCd
+eQu
 nwA
 qtK
 bKs
@@ -56235,7 +56565,7 @@ nCF
 nCF
 nCF
 nCF
-fqJ
+nCF
 "}
 (124,1,1) = {"
 bJY
@@ -56412,7 +56742,7 @@ fSW
 nJj
 nJj
 gfN
-bKO
+xCd
 aNh
 haF
 jtn
@@ -56463,7 +56793,7 @@ xSK
 xSK
 xSK
 nCF
-fqJ
+nCF
 "}
 (125,1,1) = {"
 bJY
@@ -56691,7 +57021,7 @@ heh
 jSu
 xSK
 nCF
-fqJ
+nCF
 "}
 (126,1,1) = {"
 bJY
@@ -56919,7 +57249,7 @@ bkJ
 jil
 xSK
 nCF
-fqJ
+nCF
 "}
 (127,1,1) = {"
 bJY
@@ -57147,7 +57477,7 @@ ssW
 heh
 xSK
 nCF
-fqJ
+nCF
 "}
 (128,1,1) = {"
 bJY
@@ -57375,7 +57705,7 @@ xCh
 oLQ
 xSK
 xSK
-fqJ
+wqp
 "}
 (129,1,1) = {"
 bJY
@@ -57603,7 +57933,7 @@ yeY
 oLQ
 vpu
 xSK
-fqJ
+wqp
 "}
 (130,1,1) = {"
 bJY
@@ -57831,7 +58161,7 @@ ffA
 iDe
 vpu
 xSK
-fqJ
+wqp
 "}
 (131,1,1) = {"
 bJY
@@ -58059,7 +58389,7 @@ fru
 hIE
 eEp
 xSK
-fqJ
+wqp
 "}
 (132,1,1) = {"
 bJY
@@ -58287,7 +58617,7 @@ xCh
 kSp
 kSp
 xSK
-fqJ
+wqp
 "}
 (133,1,1) = {"
 bJY
@@ -58515,7 +58845,7 @@ ukj
 oLQ
 xSK
 xSK
-fqJ
+wqp
 "}
 (134,1,1) = {"
 bJY
@@ -58681,7 +59011,7 @@ kLW
 dRv
 uNF
 lJh
-olN
+bCq
 bCq
 kKf
 dfz
@@ -58742,8 +59072,8 @@ qan
 lrx
 iUR
 xSK
-fqJ
-fqJ
+wqp
+wqp
 "}
 (135,1,1) = {"
 bJY
@@ -58909,7 +59239,7 @@ cRv
 ojs
 nbj
 nbj
-olN
+bCq
 bBj
 vrL
 vrL
@@ -58970,8 +59300,8 @@ tIu
 inh
 qrb
 xSK
-fqJ
-fqJ
+wqp
+wqp
 "}
 (136,1,1) = {"
 bJY
@@ -59198,8 +59528,8 @@ oLQ
 fuL
 oLQ
 xSK
-fqJ
-fqJ
+wqp
+wqp
 "}
 (137,1,1) = {"
 bJY
@@ -59426,8 +59756,8 @@ xSK
 xSK
 xSK
 xSK
-fqJ
-fqJ
+wqp
+wqp
 "}
 (138,1,1) = {"
 bJY
@@ -59593,7 +59923,7 @@ cRv
 cRv
 nbj
 uKO
-uYz
+pFf
 ptw
 bxm
 bxm
@@ -59650,10 +59980,10 @@ wxi
 wxi
 wxi
 xSK
-fqJ
-fqJ
-fqJ
-fqJ
+wqp
+wqp
+wqp
+wqp
 fqJ
 fqJ
 "}
@@ -59821,7 +60151,7 @@ cRv
 nbj
 kOg
 aRi
-uYz
+pFf
 bCq
 kKf
 nkP
@@ -60300,14 +60630,14 @@ wzx
 dAg
 nBC
 vRz
-rIH
+cIU
 lRK
 dAg
 ueE
 qsj
 wRm
 dAg
-dAg
+fCi
 vuA
 vRz
 wRm
@@ -60505,7 +60835,7 @@ bCq
 bCq
 pib
 wnh
-uYz
+pFf
 bCq
 kKf
 kTh
@@ -60536,7 +60866,7 @@ pla
 wRm
 lRK
 lRK
-vuA
+pFk
 ili
 wRm
 dAg
@@ -60991,8 +61321,8 @@ ueE
 gDq
 qOk
 lRK
-dAg
-vuA
+uFg
+vtz
 kbg
 wRm
 dAg
@@ -61220,7 +61550,7 @@ kha
 jrA
 dAg
 dAg
-iRP
+bKO
 kha
 jrA
 dAg
@@ -62951,7 +63281,7 @@ tNu
 vIn
 dvO
 vAx
-lDx
+nfE
 dvO
 dvO
 vAx
@@ -63179,7 +63509,7 @@ tNu
 tNu
 tNu
 ewT
-uWL
+fZC
 eCh
 dvO
 uAd
@@ -63616,7 +63946,7 @@ frJ
 frJ
 frJ
 frJ
-cHP
+ngc
 frJ
 gjK
 gjK
@@ -63843,9 +64173,9 @@ xDn
 xDn
 xDn
 frJ
-cHP
+ngc
 dil
-cHP
+ngc
 gjK
 gjK
 gjK
@@ -64070,9 +64400,9 @@ gjK
 xDn
 xDn
 frJ
-cHP
-cHP
-ldi
+ngc
+ngc
+irp
 frJ
 frJ
 gjK
@@ -64970,8 +65300,8 @@ cjz
 cjz
 xGB
 xGB
-maP
-maP
+xGB
+xGB
 ndg
 cjz
 cjz
@@ -65194,13 +65524,13 @@ cjz
 cjz
 cjz
 cjz
-maP
+cjz
 xGB
 xGB
 vYO
 dbI
-maP
-maP
+xGB
+xGB
 cjz
 cjz
 cjz
@@ -66108,7 +66438,7 @@ cjz
 cjz
 maP
 maP
-maP
+cjz
 cjz
 cjz
 cjz
