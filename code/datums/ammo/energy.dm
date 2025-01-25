@@ -155,8 +155,8 @@
 
 	damage = 55
 
-	accurate_range = 8
-	max_range = 8
+	accurate_range = 24
+	max_range = 24
 
 	var/vehicle_slowdown_time = 5 SECONDS
 
