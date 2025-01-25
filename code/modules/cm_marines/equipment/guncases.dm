@@ -239,18 +239,18 @@
 
 /obj/item/storage/box/guncase/heavy/shotgun/type23
 	name = "\improper KS29 shotgun case"
-	desc = "A case for storing an Ithaca 37 pump-action shotgun, an antique from a bygone era of human history."
+	desc = "A case for storing a KS29 combat shotgun."
 	icon_state = "ks29case"
-	storage_slots = 1
+	storage_slots = 2
 	can_hold = list(/obj/item/weapon/gun/shotgun/type23)
-
+	max_w_class = SIZE_MASSIVE
 /obj/item/storage/box/guncase/heavy/shotgun/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/type23/unloaded(src)
 
 /obj/item/storage/box/guncase/heavy/shotgun/type23/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "bigcase_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "ks29case_lid")
 		return
