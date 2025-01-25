@@ -39,7 +39,7 @@
 		else
 			view_list += viewing_mob
 
-	for(var/mob/living/carbon/potential_target as anything in GLOB.alive_mob_list)
+	for(var/mob/living/carbon/potential_target as anything in view_list)
 		if(!istype(potential_target))
 			continue
 
@@ -47,10 +47,6 @@
 			continue
 
 		if(!can_target(potential_target))
-			continue
-
-		//if(!(tied_human in viewers(view_distance, potential_target)))
-		if(!(potential_target in view_list))
 			continue
 
 		var/distance = get_dist(tied_human, potential_target)
