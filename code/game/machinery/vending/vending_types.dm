@@ -234,36 +234,21 @@
 	)
 
 /obj/structure/machinery/vending/cigarette/upp
-	name = "cigarette machine"
 	desc = "A state-owned cigarette vendor. Its drab colour was chosen to discourage purchases, but its existence is an admittance to the necessity for such machines to exist in the first place."
-	product_slogans = NULL
-	product_ads = NULL
-	vend_delay = 1.4 SECONDS
+	product_slogans = ""
+	product_ads = ""
 	icon_state = "china_cig_vending"
 	products = list(
-		/obj/item/storage/fancy/cigarettes/laika = 10
+		/obj/item/storage/fancy/cigarettes/laika = 10,
 		/obj/item/storage/box/matches = 15,
 		/obj/item/tool/lighter/zippo = 10,
 	)
 	prices = list(
-		/obj/item/storage/fancy/cigarettes/laika = 45
+		/obj/item/storage/fancy/cigarettes/laika = 45,
 		/obj/item/storage/box/matches = 1,
 		/obj/item/tool/lighter/zippo = 25,
 	)
 	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
-
-/obj/structure/machinery/vending/cigarette/free
-	product_slogans = ""
-	product_ads = ""
-	products = list(
-		/obj/item/storage/fancy/cigarettes/lucky_strikes = 50,
-		/obj/item/storage/fancy/cigar/tarbacktube = 20,
-		/obj/item/storage/box/matches = 15,
-		/obj/item/tool/lighter/random = 25,
-		/obj/item/tool/lighter/zippo = 10,
-	)
-	premium = list()
-	prices = list()
 
 /obj/structure/machinery/vending/security
 	name = "\improper ColMarTech Military Police Vendor"
