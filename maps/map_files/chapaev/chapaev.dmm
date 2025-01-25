@@ -192,31 +192,6 @@
 	pixel_y = 6;
 	pixel_x = 2
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4
-	},
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = 3
-	},
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 4
-	},
-/obj/structure/bed/chair{
-	dir = 4;
-	pixel_y = 6;
-	pixel_x = 2
-	},
 /obj/structure/bed/chair{
 	can_buckle = 0;
 	dir = 4;
@@ -884,16 +859,6 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "iA" = (
-/obj/structure/machinery/disposal{
-	pixel_y = 14
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/disposal{
 	pixel_y = 14
 	},
@@ -1806,7 +1771,7 @@
 	name = "\improper Port Hallway";
 	req_one_access_txt = "230"
 	},
-/turf/closed/wall/upp_wall/grey,
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "qN" = (
 /obj/effect/decal/warning_stripes{
@@ -2112,12 +2077,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
-"tN" = (
-/obj/structure/machinery/door/airlock/multi_tile/strata{
-	dir = 1
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/briefing)
 "tO" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
@@ -3093,13 +3052,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
-"Cw" = (
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/briefing)
 "CB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -4259,7 +4211,7 @@
 	pixel_y = 26;
 	can_block_movement = 0
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/medical)
 "Oj" = (
 /obj/structure/barricade/handrail/strata{
@@ -4492,6 +4444,9 @@
 /obj/structure/machinery/door/poddoor/almayer/open,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/canteen)
+"Qt" = (
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/medical)
 "Qu" = (
 /obj/structure/cargo_container/canc/tan/right,
 /turf/open/floor/strata/floor3,
@@ -18247,7 +18202,7 @@ rt
 qX
 QI
 bE
-Cw
+rt
 EP
 cT
 qx
@@ -18986,18 +18941,18 @@ yH
 CK
 CK
 Oi
-CT
+Qt
 CK
 CK
-CT
-CT
+Qt
+Qt
 CK
 CK
 Qg
 CK
 CK
 PS
-tN
+rt
 fh
 fh
 fh
@@ -19007,8 +18962,8 @@ fh
 rt
 rt
 fh
-rt
-rt
+fh
+fh
 cT
 cT
 jo
@@ -19310,7 +19265,7 @@ ZS
 ZS
 Nq
 RM
-fh
+rt
 DI
 aY
 he
