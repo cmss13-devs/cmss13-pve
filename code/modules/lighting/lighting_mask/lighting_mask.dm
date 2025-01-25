@@ -142,6 +142,7 @@
 ///rotating light mask, but only pointing in one direction
 /atom/movable/lighting_mask/rotating_conical
 	icon_state = "light_conical_rotating"
+	var/transform_time = 0
 
 /atom/movable/lighting_mask/ex_act(severity, target)
 	return

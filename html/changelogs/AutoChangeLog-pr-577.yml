@@ -1,5 +1,0 @@
-author: "BonniePandora"
-delete-after: True
-changes:
-  - qol: "Adjusts the OD limit for alcoholic drinks"
-  - qol: "Adjusts the buildup rate of damage from overdosing and critical overdosing on alcohol"

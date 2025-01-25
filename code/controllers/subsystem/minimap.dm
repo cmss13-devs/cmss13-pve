@@ -541,7 +541,7 @@ SUBSYSTEM_DEF(minimaps)
 
 /datum/tacmap/drawing/proc/can_draw(faction, mob/user)
 	var/datum/squad/main_squad_path = MAIN_SHIP_PLATOON
-	return ((faction == main_squad_path::faction && skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT)) || (faction == XENO_HIVE_NORMAL && isqueen(user)))
+	return ((faction == main_squad_path::faction && skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_NOVICE)) || (faction == XENO_HIVE_NORMAL && isqueen(user)))
 
 /datum/controller/subsystem/minimaps/proc/fetch_tacmap_datum(zlevel, flags)
 	var/hash = "[zlevel]-[flags]"
@@ -741,7 +741,7 @@ SUBSYSTEM_DEF(minimaps)
 	old_map = get_tacmap_data_png(faction)
 	current_svg = get_tacmap_data_svg(faction)
 
-	var/use_live_map = skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) || is_xeno
+	var/use_live_map = skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_NOVICE) || is_xeno
 
 	if(use_live_map && !map_holder)
 		var/level = SSmapping.levels_by_trait(targeted_ztrait)

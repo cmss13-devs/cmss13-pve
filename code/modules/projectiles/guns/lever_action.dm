@@ -366,8 +366,8 @@ their unique feature is that a direct hit will buff your damage and firerate
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AMMO_COUNTER
 	levering_sprite = null
 	flags_gun_lever_action = USES_STREAKS
-	lever_name = "chambering button"
-	lever_message = "<i>You press the chambering button.<i>"
+	lever_name = "cartridge"
+	lever_message = "<i>You load another cartridge.<i>"
 	current_mag = /obj/item/ammo_magazine/internal/lever_action/xm88
 	default_caliber = ".458"
 	hit_buff_reset_cooldown = 2 SECONDS //how much time after a direct hit until streaks reset
@@ -476,7 +476,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 
 /obj/item/weapon/gun/lever_action/xm88/apply_hit_buff()
 	lever_sound = lever_super_sound
-	lever_message = "<b><i>You quickly press the [lever_name]!<i><b>"
+	lever_message = "<b><i>You quickly load another [lever_name]!<i><b>"
 	last_fired = world.time - buff_fire_reduc //to shoot the next round faster
 	set_fire_delay(FIRE_DELAY_TIER_3)
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4

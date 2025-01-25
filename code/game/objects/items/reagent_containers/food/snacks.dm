@@ -2620,6 +2620,16 @@
 	reagents.add_reagent("bread", 1)
 	reagents.add_reagent("sodiumchloride", 1)
 
+/obj/item/reagent_container/food/snacks/cracker/tachyon
+	name = "Cracker"
+	desc = "It's a salted cracker that looks to have gone through a tachyon shunt. It looks fine...right?"
+	icon_state = "tachyon_cracker"
+	filling_color = "#728942"
+
+/obj/item/reagent_container/food/snacks/cracker/tachyon/Initialize()
+	. = ..()
+	reagents.add_reagent("carpotoxin", 1)
+
 /*
 *PIZZA.
 *object parent for all the object pizza give the number of slice produce and the filling color.
@@ -3429,17 +3439,14 @@
 			icon_state = "entree"
 			desc = "An MRE entree component. Contains the main course for nutrients. This one is [flavor]."
 			reagents.add_reagent("nutriment", 14)
-			reagents.add_reagent("sodiumchloride", 6)
 		if("cracker", "cheese spread", "rice onigiri", "mashed potatoes", "risotto")
 			icon_state = "side"
 			desc = "An MRE side component. Contains a side, to be eaten alongside the main. This one is [flavor]."
 			reagents.add_reagent("nutriment", 6)
-			reagents.add_reagent("sodiumchloride", 2)
 		if("biscuit", "meatballs", "pretzels", "peanuts", "sushi")
 			icon_state = "snack"
 			desc = "An MRE snack component. Contains a light snack in case you weren't feeling terribly hungry. This one is [flavor]."
 			reagents.add_reagent("nutriment", 4)
-			reagents.add_reagent("sodiumchloride", 2)
 		if("spiced apples", "chocolate brownie", "sugar cookie", "coco bar", "flan", "honey flan")
 			icon_state = "dessert"
 			desc = "An MRE side component. Contains a sweet dessert, to be eaten after the main (or before, if you're rebellious). This one is [flavor]."

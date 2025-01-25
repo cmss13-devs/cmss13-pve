@@ -249,13 +249,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	// EYEWEAR
 	/obj/item/clothing/glasses/mgoggles = HELMET_GARB_RELAY_ICON_STATE,
-	/obj/item/clothing/glasses/mgoggles/v2 = HELMET_GARB_RELAY_ICON_STATE,
-	/obj/item/clothing/glasses/mgoggles/v2/prescription = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/prescription = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/black = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/black/prescription = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/orange = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/orange/prescription = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/glasses/mgoggles/green = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/glasses/mgoggles/green/prescription = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/upp = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/upp/prescription = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/sunglasses = "sunglasses",
@@ -286,7 +286,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	// PREFERENCES GEAR
 	/obj/item/prop/helmetgarb/gunoil = "gunoil",
-	/obj/item/prop/helmetgarb/netting = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/prop/helmetgarb/netting = "netting",
 	/obj/item/prop/helmetgarb/spent_buckshot = "spent_buckshot",
 	/obj/item/prop/helmetgarb/spent_slug = "spent_slug",
 	/obj/item/prop/helmetgarb/spent_flech = "spent_flech",
@@ -294,6 +294,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/prop/helmetgarb/prescription_bottle = "prescription_bottle",
 	/obj/item/prop/helmetgarb/raincover = "raincover",
 	/obj/item/prop/helmetgarb/camocover = "camocover",
+	/obj/item/prop/helmetgarb/camocover/desert = "d_camocover",
+	/obj/item/prop/helmetgarb/camocover/snow = "s_camocover",
 	/obj/item/prop/helmetgarb/rabbitsfoot = "rabbitsfoot",
 	/obj/item/prop/helmetgarb/rosary = "helmet_rosary", // This one was already in the game for some reason, but never had an object
 	/obj/item/prop/helmetgarb/lucky_feather = "lucky_feather",
@@ -425,11 +427,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/Initialize(mapload, new_protection[] = list(MAP_ICE_COLONY = ICE_PLANET_MIN_COLD_PROT))
 	. = ..()
 	if(!(flags_atom & NO_NAME_OVERRIDE))
-		name = "[specialty]"
-		if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-			name += " snow helmet"
-		else
-			name += " helmet"
+		name = "[specialty] helmet"
 
 	if(!(flags_atom & NO_SNOW_TYPE))
 		select_gamemode_skin(type, null, new_protection)
@@ -827,6 +825,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 
+/obj/item/clothing/head/helmet/marine/medic/plain
+	desc = "M10 combat helmet issued to marine hospital corpsmen. Identical to the standard marine M10, with the exception of the integrated medical optic sight."
+	icon_state = "helmet"
+	specialty = "M10 pattern medic"
+
 /obj/item/clothing/head/helmet/marine/covert
 	name = "\improper M10 covert helmet"
 	desc = "An M10 marine helmet version designed for use in darkened environments. It is coated with a special anti-reflective paint."
@@ -916,10 +919,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/M3T
 	name = "\improper M10-R bombardier helmet"
 	icon_state = "sadar_helmet"
-	desc = "M10 combat helmet fitted with enhanced suspension liner and improved hearing protection, for firing high-concussion weapons like the M5 RPG."
+	desc = "M10 combat helmet fitted with enhanced suspension liner and improved hearing protection, for firing high-concussion weapons like the M5 RPG. Also issued to Vehicle Crewmen."
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	armor_bomb = CLOTHING_ARMOR_HIGH
-	specialty = "M3-T bombardier"
+	specialty = "M3-R bombardier"
 	flags_inventory = BLOCKSHARPOBJ
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	unacidable = TRUE
@@ -972,7 +975,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A special variant of the M10 Pattern Helmet worn by the Military Police of the USCM. Whether you're facing a crime syndicate or a mutiny, this bucket will keep your brains intact."
 	icon_state = "mp_helmet"
 	item_state = "mp_helmet"
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	specialty = "M10 pattern military police"
 	built_in_visors = list(new /obj/item/device/helmet_visor)
 	flags_atom = NO_SNOW_TYPE
