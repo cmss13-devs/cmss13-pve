@@ -233,6 +233,23 @@
 
 	)
 
+/obj/structure/machinery/vending/cigarette/upp
+	desc = "A state-owned cigarette vendor. Its drab colour was chosen to discourage purchases, but its existence is an admittance to the necessity for such machines to exist in the first place."
+	product_slogans = ""
+	product_ads = ""
+	icon_state = "china_cig_vending"
+	products = list(
+		/obj/item/storage/fancy/cigarettes/laika = 10,
+		/obj/item/storage/box/matches = 15,
+		/obj/item/tool/lighter/zippo = 10,
+	)
+	prices = list(
+		/obj/item/storage/fancy/cigarettes/laika = 45,
+		/obj/item/storage/box/matches = 1,
+		/obj/item/tool/lighter/zippo = 25,
+	)
+	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
+
 /obj/structure/machinery/vending/security
 	name = "\improper ColMarTech Military Police Vendor"
 	desc = "A USCM Military Police vendor."
