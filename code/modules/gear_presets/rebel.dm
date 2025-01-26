@@ -2,7 +2,7 @@
 	name = "UA Rebel, Guerilla"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction_group = FACTION_LIST_CLF
-	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc
 	access = list(ACCESS_LIST_CLF_BASE)
 
@@ -28,13 +28,13 @@
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier
 	name = "UA Rebel, Soldier (Rifle)"
-	assignment = "Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
 
-
+/datum/equipment_preset/colonist/bluecollar/rebel/soldier/get_assignment(mob/living/carbon/human/new_human)
+	return "Rifleman"
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -130,7 +130,7 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	add_rebel_ua_shotgun(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/weak(new_human), WEAR_R_HAND)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -139,7 +139,9 @@
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier/leader
 	name = "UA Rebel, Soldier (Squad Leader)"
-	assignment = "Squad Leader"
+
+/datum/equipment_preset/colonist/bluecollar/rebel/soldier/leader/get_assignment(mob/living/carbon/human/new_human)
+	return "Squad Leader"
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier/leader/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -268,19 +270,15 @@
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
-	assignment = "Commander"
+
+/datum/equipment_preset/colonist/bluecollar/rebel/commander/get_assignment(mob/living/carbon/human/new_human)
+	return "Commander"
 
 /datum/equipment_preset/colonist/bluecollar/rebel/commander/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
 	//head
 	//uniform
 	var/obj/item/clothing/under/marine/officer/boiler/uniform = new()
@@ -292,21 +290,27 @@
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/leader(new_human), WEAR_JACKET)
+	if(prob(85))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner(new_human), WEAR_JACKET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/black(new_human), WEAR_JACKET)
+
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
 	//limbs
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun(new_human), WEAR_R_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/clf(new_human), WEAR_R_HAND)
 
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun, WEAR_IN_R_STORE)
 
-/datum/equipment_preset/colonist/bluecollar/rebel/sniper
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
+
+/* /datum/equipment_preset/colonist/bluecollar/rebel/sniper
 	name = "UA Rebel, Sniper (M42A)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
@@ -349,3 +353,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_R_STORE)
+ */

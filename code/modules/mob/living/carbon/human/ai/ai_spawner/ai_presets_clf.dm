@@ -1,5 +1,5 @@
 /datum/human_ai_equipment_preset/clf
-	faction = FACTION_CLF
+	faction = "Insurrectionists"
 
 /datum/human_ai_equipment_preset/clf/soldier
 	name = "TWE Rebel, Soldier (Rifle)"
@@ -40,7 +40,6 @@
 	name = "TWE Rebel Cell Commander"
 	desc = "Armed with a M56B smartgun."
 	path = /datum/equipment_preset/clf/commander
-
 
 //UA Rebels
 

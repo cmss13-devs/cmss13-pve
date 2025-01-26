@@ -1,6 +1,7 @@
 /datum/equipment_preset/clf
 	name = FACTION_CLF
 	languages = list(LANGUAGE_JAPANESE)
+	flags = EQUIPMENT_PRESET_EXTRA
 	faction_group = FACTION_LIST_CLF
 	skills = /datum/skills/pfc
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -310,7 +311,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/weak, WEAR_IN_BELT)
 	//limbs
 	add_rebel_twe_shoes(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/weak(new_human))
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/weak(new_human), WEAR_R_HAND)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -565,7 +566,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/upp(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/guerilla(new_human), WEAR_HEAD)
 	//uniform
@@ -584,8 +584,10 @@
 		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
 	//limbs
 	add_rebel_twe_shoes(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/rmc(new_human), WEAR_R_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/clf(new_human), WEAR_R_HAND)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun/holo_targetting, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun, WEAR_IN_R_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
