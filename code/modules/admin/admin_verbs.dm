@@ -312,7 +312,8 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/cmd_admin_delete,
 	/datum/admins/proc/togglesleep,
 	/client/proc/debug_variables,
-	/client/proc/debug_global_variables
+	/client/proc/debug_global_variables,
+	/client/proc/make_human_ai,
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_teleport, list(
