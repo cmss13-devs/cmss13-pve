@@ -1,5 +1,5 @@
 /datum/equipment_preset/colonist/bluecollar/rebel
-	name = "Rebel, Guerilla"
+	name = "UA Rebel, Guerilla"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction_group = FACTION_LIST_CLF
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -27,16 +27,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier
-	name = "Rebel, Soldier (Rifle)"
+	name = "UA Rebel, Soldier (Rifle)"
+	assignment = "Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/get_assignment(mob/living/carbon/human/new_human)
-	if(prob(85))
-		return "Rifleman"
-	return "Squad Leader"
+
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -62,18 +60,17 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	if(prob(10))
+	if(prob(5))
 		add_rebel_ua_pistol(new_human)
-	else if(prob(85))
-		add_rebel_ua_rifle(new_human)
 	else
-		add_rebel_ua_shotgun(new_human)
+		add_rebel_ua_rifle(new_human)
+
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier/shotgun
-	name = "Rebel, Soldier (Shotgun)"
+	name = "UA Rebel, Soldier (Shotgun)"
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier/shotgun/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -106,9 +103,9 @@
 
 
 /datum/equipment_preset/colonist/bluecollar/rebel/soldier/flamer
-	name = "Rebel, Soldier (Incinerator)"
+	name = "UA Rebel, Soldier (Incinerator)"
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/shotgun/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/colonist/bluecollar/rebel/soldier/flamer/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
@@ -127,7 +124,8 @@
 	//jacket
 	add_rebel_ua_suit(new_human)
 	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/weak, WEAR_IN_BELT)
 	//limbs
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
@@ -136,9 +134,48 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/weak, WEAR_IN_R_STORE)
+
+
+/datum/equipment_preset/colonist/bluecollar/rebel/soldier/leader
+	name = "UA Rebel, Soldier (Squad Leader)"
+	assignment = "Squad Leader"
+
+/datum/equipment_preset/colonist/bluecollar/rebel/soldier/leader/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
+	//face
+	if(prob(45))
+		add_facewrap(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	//head
+	add_rebel_ua_helmet(new_human)
+	//uniform
+	add_rebel_ua_uniform(new_human)
+	//jacket
+	add_rebel_ua_suit(new_human)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	//limbs
+	add_rebel_ua_shoes(new_human)
+	if(prob(35))
+		add_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1(new_human), WEAR_R_HAND)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+
 
 /datum/equipment_preset/colonist/bluecollar/rebel/medic
-	name = "Rebel, Medic"
+	name = "UA Rebel, Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -186,7 +223,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
 /datum/equipment_preset/colonist/bluecollar/rebel/at
-	name = "Rebel, Anti-Tank"
+	name = "UA Rebel, Anti-Tank"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -226,7 +263,7 @@
 
 
 /datum/equipment_preset/colonist/bluecollar/rebel/commander
-	name = "Rebel, Cell Commander"
+	name = "UA Rebel, Cell Commander"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -243,6 +280,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
 	//head
 	//uniform
 	var/obj/item/clothing/under/marine/officer/boiler/uniform = new()
@@ -261,18 +299,15 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	if(prob(10))
-		add_rebel_ua_pistol(new_human)
-	else if(prob(85))
-		add_rebel_ua_rifle(new_human)
-	else
-		add_rebel_ua_shotgun(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun(new_human), WEAR_R_HAND)
+
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/colonist/bluecollar/rebel/sniper
-	name = "Rebel, Sniper"
+	name = "UA Rebel, Sniper (M42A)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -291,6 +326,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BACK)
 	//face
 	if(prob(45))
 		add_facewrap(new_human)
@@ -303,17 +340,12 @@
 	add_rebel_ua_suit(new_human)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/lever_action/xm88, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/lever_action/xm88, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/lever_action/xm88, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/lever_action/xm88, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/lever_action/xm88, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/lever_action/xm88, WEAR_IN_BELT)
 	//limbs
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lever_action/xm88/built, WEAR_R_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/M42A(new_human), WEAR_R_HAND)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_R_STORE)

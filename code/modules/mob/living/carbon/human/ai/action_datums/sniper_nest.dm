@@ -74,6 +74,7 @@
 	var/static/list/sniper_equipment_presets = list(
 		/datum/equipment_preset/clf/soldier/bolt::name = /datum/equipment_preset/clf/soldier/bolt,
 		/datum/equipment_preset/clf/soldier/svd::name = /datum/equipment_preset/clf/soldier/svd,
+		/datum/equipment_preset/colonist/bluecollar/rebel/sniper::name = /datum/equipment_preset/colonist/bluecollar/rebel/sniper,
 		/datum/equipment_preset/pmc/pmc_sniper::name = /datum/equipment_preset/pmc/pmc_sniper,
 		/datum/equipment_preset/upp/sniper::name = /datum/equipment_preset/upp/sniper,
 		/datum/equipment_preset/uscm/specialist_equipped/sniper::name = /datum/equipment_preset/uscm/specialist_equipped/sniper,
