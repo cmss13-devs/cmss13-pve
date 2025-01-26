@@ -79,7 +79,7 @@
 	icon_state = "buckshot"
 	accurate_range_min = 0
 	//targets bomb armor by AMMO_ROCKET. Stupid, but it works.
-	flags_ammo_behavior = AMMO_ROCKET|AMMO_STOPPED_BY_COVER
+	flags_ammo_behavior = AMMO_ROCKET|AMMO_PRONETARGET|AMMO_STOPPED_BY_COVER
 
 	accuracy = HIT_ACCURACY_TIER_MAX
 	accurate_range = 14
