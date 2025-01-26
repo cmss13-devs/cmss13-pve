@@ -715,7 +715,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/gunpath = pick(GLOB.rebel_ua_shotguns)
 	var/ammopath = GLOB.rebel_ua_shotguns[gunpath]
 
-	add_weapon(gunpath, ammopath, M, ammo_amount)
+	add_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
@@ -725,7 +725,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/gunpath = pick(GLOB.rebel_ua_rifles)
 	var/ammopath = GLOB.rebel_ua_rifles[gunpath]
 
-	add_weapon(gunpath, ammopath, M, ammo_amount)
+	add_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
