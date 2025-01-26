@@ -8,13 +8,16 @@
 	icon_state = "m20"
 	force = 5
 	w_class = SIZE_SMALL
-	//layer = MOB_LAYER - 0.1 //You can't just randomly hide claymores under boxes. Booby-trapping bodies is fine though
+	// whoever commented that they wanted to prevent claymores from being hidden was a wholeass bitch.
+	//layer = MOB_LAYER - 0.1
 	throwforce = 5
 	throw_range = 6
 	throw_speed = SPEED_VERY_FAST
-	unacidable = TRUE
+	// lol. funni.
+	//unacidable = TRUE
 	flags_atom = FPRINT|CONDUCT
-	antigrief_protection = TRUE
+	// kino fragging rp.
+	//antigrief_protection = TRUE
 	allowed_sensors = list(/obj/item/device/assembly/prox_sensor)
 	max_container_volume = 120
 	reaction_limits = list( "max_ex_power" = 105, "base_ex_falloff" = 60, "max_ex_shards" = 32,
@@ -170,7 +173,8 @@
 			return
 		else
 			..()
-			use_dir = FALSE // Claymore defaults to radial in these case. Poor man C4
+			// that's stupid. also prevents people from triggering it manually which is cool.
+			//use_dir = FALSE // Claymore defaults to radial in these case. Poor man C4
 			triggered = TRUE // Delegating the tripwire/crossed function to the sensor.
 
 
@@ -223,7 +227,8 @@
 
 	if(!customizable)
 		create_shrapnel(loc, 60, dir, angle, /datum/ammo/bullet/shrapnel/claymore, cause_data)
-		cell_explosion(loc, 60, 30, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		// a claymore is essentially a block of C4 with metal in the front. Shit's fuckin nasty.
+		cell_explosion(loc, 120, 70, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
 		qdel(src)
 	else
 		. = ..()
@@ -306,7 +311,7 @@
 
 /obj/item/explosive/mine/pmc
 	name = "\improper M20P Claymore anti-personnel mine"
-	desc = "The M20P Claymore is a directional proximity triggered anti-personnel mine designed by Armat Systems for use by the United States Colonial Marines. It has been modified for use by the Wey-Yu PMC forces."
+	desc = "The M20P Claymore is a directional anti-personnel smart mine modified for corporate PMC use. Generates 120 degree cone of shrapnel if a valid target crosses before or over it. On its face, it reads \"FRONT TOWARD ENEMY\"."
 	icon_state = "m20p"
 	iff_signal = FACTION_PMC
 	hard_iff_lock = TRUE

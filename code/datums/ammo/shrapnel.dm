@@ -80,13 +80,14 @@
 	accurate_range_min = 0
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
 
-	accuracy = HIT_ACCURACY_TIER_10
-	accurate_range = 32
-	max_range = 8
+	accuracy = HIT_ACCURACY_TIER_MAX
+	accurate_range = 7
+	max_range = 14
 	damage = 40
-	damage_var_low = 0
-	damage_var_high = 0
-	penetration = 0
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_5
+	//justifying the AP as being the sheer density of stuff ig.
+	penetration = ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_2
 	shrapnel_chance = 10
 
