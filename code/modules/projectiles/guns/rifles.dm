@@ -888,6 +888,9 @@
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
 
+/obj/item/weapon/gun/rifle/mar40/lmg/get_mouse_pointer()
+	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
+
 /obj/item/weapon/gun/rifle/mar40/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 16, "rail_y" = 20, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
 
@@ -1283,6 +1286,9 @@
 	gun_category = GUN_CATEGORY_HEAVY
 	start_automatic = TRUE
 
+/obj/item/weapon/gun/rifle/lmg/get_mouse_pointer()
+	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
+
 /obj/item/weapon/gun/rifle/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
 
@@ -1642,6 +1648,9 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	//map_specific_decoration = TRUE
 
+/obj/item/weapon/gun/rifle/m4ra/get_mouse_pointer()
+	return 'icons/effects/mouse_pointer/sniper_mouse.dmi'
+
 /obj/item/weapon/gun/rifle/m4ra/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 21, "under_x" = 30, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "special_x" = 37, "special_y" = 16)
 
@@ -1670,6 +1679,9 @@
 /obj/item/weapon/gun/rifle/m4ra/tactical
 	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ext
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip)
+
+/obj/item/weapon/gun/rifle/m4ra/marksman
+	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom, /obj/item/attachable/extended_barrel)
 
 /obj/item/weapon/gun/rifle/m4ra/army
 	desc = "The M4RA battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams."
@@ -2060,6 +2072,9 @@
 	var/burst_count = 0 //To detect when the burst fire is near its end.
 	COOLDOWN_DECLARE(allow_message)
 	COOLDOWN_DECLARE(allow_pump)
+
+/obj/item/weapon/gun/rifle/xm51/get_mouse_pointer()
+	return 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/xm51/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 18, "rail_x" = 12, "rail_y" = 20, "under_x" = 24, "under_y" = 13, "stock_x" = 15, "stock_y" = 16)

@@ -12,6 +12,7 @@
 	throw_range = 7
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_WAIST
+	flags_human_ai = GRENADE_ITEM
 	hitsound = 'sound/weapons/smash.ogg'
 	allowed_sensors = list(/obj/item/device/assembly/timer)
 	max_container_volume = 60
@@ -148,3 +149,23 @@
 	walk(src, null, null)
 	..()
 	return
+
+/obj/item/explosive/grenade/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	return TRUE
+
+/obj/item/explosive/grenade/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, turf/target_turf)
+	sleep(ai_brain.short_action_delay * ai_brain.action_delay_mult)
+	attack_self(user)
+	user.toggle_throw_mode(THROW_MODE_NORMAL)
+	ai_brain.ensure_primary_hand(src)
+	sleep(det_time * 0.4)
+	if(QDELETED(src) || (loc != user))
+		return
+
+	ai_brain.say_grenade_thrown_line()
+	sleep(det_time * 0.4)
+	if(QDELETED(src) || (loc != user))
+		return
+
+	user.face_atom(target_turf)
+	user.throw_item(target_turf)
