@@ -1677,12 +1677,12 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m49a/ext
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip)
 
-/obj/item/weapon/gun/rifle/m4ra/marksman
+/obj/item/weapon/gun/rifle/m49a/marksman
 	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom, /obj/item/attachable/extended_barrel)
 
-/obj/item/weapon/gun/rifle/m4ra/army
+/obj/item/weapon/gun/rifle/m49a/army
 	desc = "The M4RA battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams."
-	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ap
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/ap
 	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
 
 // pve - kinda weird icon usage, uses urban M49A sprite w/ custom attachie sprite
