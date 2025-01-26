@@ -11,7 +11,7 @@
 	height = 1;
 	id = "eng1"
 	},
-/turf/open/floor/strata/floor3,
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/engineering)
 "at" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -21,6 +21,21 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
+"ay" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "aC" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -170,6 +185,14 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
+"bz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 8;
+	pixel_x = -2
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/canteen)
 "bE" = (
 /obj/structure/bed/chair{
 	can_buckle = 0;
@@ -198,7 +221,9 @@
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
 /area/golden_arrow/briefing)
 "bF" = (
 /obj/effect/decal/warning_stripes{
@@ -241,6 +266,12 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "co" = (
@@ -271,10 +302,11 @@
 /area/golden_arrow/dorms)
 "cD" = (
 /obj/structure/pipes/vents/scrubber,
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_color = "#832121";
-	light_range = 3
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -282,6 +314,19 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
+"cL" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1;
+	pixel_y = 3
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
 "cM" = (
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/cryo_cells)
@@ -297,11 +342,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
-"dl" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating,
-/area/golden_arrow/cryo_cells)
 "dp" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -521,6 +561,19 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
+"eR" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "eV" = (
 /obj/structure/disposalpipe/junction{
 	dir = 2;
@@ -531,6 +584,10 @@
 /area/golden_arrow/dorms)
 "eW" = (
 /obj/structure/machinery/power/apc/almayer/east,
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_y = -2
+	},
 /turf/open/floor/strata{
 	icon_state = "floor3"
 	},
@@ -654,6 +711,7 @@
 	icon_state = "E"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
 "fS" = (
@@ -752,6 +810,10 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"hh" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/engineering)
 "hj" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -830,6 +892,14 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/platoon_commander_rooms)
+"im" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 2
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/canteen)
 "iq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -945,7 +1015,6 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Weapons Locker";
 	id = "armory";
-	pixel_y = -4;
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -1055,6 +1124,12 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
+"kj" = (
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_y = 30
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/engineering)
 "kl" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -1087,6 +1162,19 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
+"kH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1;
+	pixel_y = 3
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
 "kL" = (
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
@@ -1113,6 +1201,12 @@
 	color = "#8B9490"
 	},
 /obj/structure/machinery/cell_charger,
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 8
+	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "lj" = (
@@ -1136,6 +1230,14 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
+"lq" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/briefing)
 "ls" = (
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
@@ -1147,6 +1249,12 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = 2
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -1228,22 +1336,27 @@
 /obj/structure/bed/chair/comfy/teal,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
-"lZ" = (
-/obj/structure/machinery/pipedispenser,
-/obj/structure/machinery/light/small{
-	dir = 4;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 4
-	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/hangar)
 "mb" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
+"mh" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "mn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -1261,6 +1374,16 @@
 /area/golden_arrow/briefing)
 "mz" = (
 /turf/closed/wall/upp_wall/grey/hull,
+/area/golden_arrow/briefing)
+"mB" = (
+/obj/structure/largecrate/random/barrel/red{
+	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "mH" = (
 /obj/structure/pipes/vents/pump{
@@ -1354,6 +1477,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
 "ni" = (
@@ -1451,7 +1575,7 @@
 	pixel_y = -2
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/strata/multi_tiles/southwest,
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/cryo_cells)
 "of" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -1478,6 +1602,15 @@
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/prep_hallway)
+"op" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
 "or" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -1587,11 +1720,6 @@
 /area/golden_arrow/platoon_sergeant)
 "pe" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/faxmachine{
-	name = "\improper UPP Military Fax Machine";
-	network = "UPP Encrypted Network";
-	target_department = "UPP High Command"
-	},
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
@@ -1678,6 +1806,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 2
+	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/platoon_sergeant)
 "pU" = (
@@ -1717,27 +1850,15 @@
 /obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
-"qv" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/item/paper_bin{
-	pixel_y = 6;
-	pixel_x = -6
-	},
-/obj/item/prop/flower_vase/redwhiteflowers{
-	pixel_x = 6
-	},
-/obj/item/prop{
-	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
-	icon = 'icons/obj/items/paper.dmi';
-	icon_state = "newspaper";
-	name = "Kosmicheskaya Pravda";
-	pixel_x = -7;
+"qq" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
 	pixel_y = 2
 	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/platoon_commander_rooms)
+/turf/closed/wall/upp_wall/grey,
+/area/golden_arrow/engineering)
 "qx" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -1767,6 +1888,11 @@
 	name = "gym mat";
 	pixel_y = 7;
 	pixel_x = -6
+	},
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -1798,33 +1924,8 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Weapons Locker";
-	id = "armory";
-	pixel_y = -4;
-	dir = 4
-	},
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/prep_hallway)
-"qX" = (
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4
-	},
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = 3
-	},
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4;
-	pixel_x = 2;
-	pixel_y = 6
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/briefing)
 "ri" = (
 /obj/structure/closet{
 	name = "emergency closet";
@@ -1837,6 +1938,14 @@
 /obj/item/clothing/mask/gas/military/upp,
 /obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
+/area/golden_arrow/briefing)
+"rm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
 "rq" = (
 /obj/structure/machinery/door/airlock/strata/circular{
@@ -1867,6 +1976,12 @@
 "rw" = (
 /obj/structure/toilet{
 	dir = 4
+	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
@@ -1911,6 +2026,17 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
+"rG" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
 "rK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -2014,10 +2140,6 @@
 	},
 /obj/item/tool/wrench,
 /obj/item/tool/weldingtool/hugetank,
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_color = "#832121"
-	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "tg" = (
@@ -2335,6 +2457,12 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "vz" = (
@@ -2375,6 +2503,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/pipes/standard/manifold/visible/supply,
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
 "vN" = (
@@ -2478,6 +2607,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
+"wB" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
 "wK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -2502,10 +2640,11 @@
 /area/golden_arrow/hangar)
 "wU" = (
 /obj/structure/pipes/vents/scrubber,
-/obj/structure/machinery/light/small{
-	dir = 4;
-	light_color = "#832121";
-	light_range = 3
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -2547,15 +2686,15 @@
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
 "xu" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
-	pixel_x = 13;
-	pixel_y = 10
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
@@ -2563,6 +2702,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
 "xF" = (
@@ -2702,6 +2842,7 @@
 /obj/structure/machinery/power/monitor{
 	name = "Core Power Monitoring"
 	},
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
 "zs" = (
@@ -2717,6 +2858,11 @@
 "zt" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 8;
+	pixel_x = -2
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
@@ -2740,17 +2886,23 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "zI" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
-	pixel_x = 13;
-	pixel_y = 10
-	},
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 5;
 	dir = 8
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 2
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
@@ -2820,6 +2972,22 @@
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/prep_hallway)
+"AY" = (
+/obj/structure/largecrate/supply/ammo/type71{
+	parts_type = /obj/item/stack/sheet/metal;
+	pixel_x = 1
+	},
+/obj/structure/largecrate/supply/ammo/type71{
+	pixel_y = 11;
+	pixel_x = 2;
+	parts_type = /obj/item/stack/sheet/metal
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
 "Ba" = (
 /obj/effect/decal/warning_stripes{
@@ -2949,7 +3117,6 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Weapons Locker";
 	id = "armory";
-	pixel_y = -4;
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -3081,11 +3248,6 @@
 	color = "#8B9490"
 	},
 /obj/item/tool/crowbar,
-/obj/structure/machinery/light/small{
-	light_power = 0.8;
-	light_range = 4;
-	light_color = "#e7c0a4"
-	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "CK" = (
@@ -3192,6 +3354,27 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
+"Di" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 2
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
 "Dl" = (
 /obj/structure/machinery/disposal{
 	density = 0;
@@ -3255,6 +3438,18 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 2
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "DH" = (
@@ -3280,9 +3475,6 @@
 	color = "#8B9490"
 	},
 /obj/item/storage/toolbox/mechanical,
-/obj/structure/machinery/light/small{
-	light_color = "#832121"
-	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Eo" = (
@@ -3321,6 +3513,12 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "EE" = (
@@ -3339,6 +3537,14 @@
 	layer = 2.5
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/briefing)
+"EH" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "EP" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -3430,15 +3636,15 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
 "FF" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
-	pixel_x = 13;
-	pixel_y = 10
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
@@ -3450,6 +3656,13 @@
 	icon_state = "S"
 	},
 /turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/prep_hallway)
+"Gi" = (
+/obj/structure/largecrate/random/barrel/red{
+	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
 "Go" = (
 /obj/structure/bed/chair/comfy/beige{
@@ -3604,6 +3817,23 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
+"Ho" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 10
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
 "Hw" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4;
@@ -3631,6 +3861,14 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
+"HW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 8;
+	pixel_x = -2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/platoon_sergeant)
 "HY" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
@@ -3645,6 +3883,10 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
+"Ib" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/engineering)
 "Id" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -3656,6 +3898,15 @@
 	light_range = 5
 	},
 /turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/prep_hallway)
+"If" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "Ih" = (
 /obj/structure/machinery/disposal{
@@ -3720,6 +3971,17 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
+"IM" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "IN" = (
 /obj/structure/largecrate/random/case{
 	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy, /obj/item/ammo_magazine/shotgun/slug/heavy);
@@ -3853,6 +4115,14 @@
 	},
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/medical)
+"Kt" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_y = -2
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/canteen)
 "Ky" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -3869,6 +4139,12 @@
 	dir = 4
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
 "KC" = (
@@ -3943,6 +4219,9 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
+"Ly" = (
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/engineering)
 "LA" = (
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
@@ -4156,6 +4435,7 @@
 /obj/item/clothing/mask/gas/military/upp{
 	pixel_y = 2
 	},
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
 "NG" = (
@@ -4163,7 +4443,9 @@
 	dir = 1;
 	pixel_y = 10
 	},
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
 /area/golden_arrow/briefing)
 "NI" = (
 /obj/structure/disposalpipe/segment{
@@ -4231,9 +4513,6 @@
 /area/golden_arrow/engineering)
 "Oa" = (
 /obj/structure/machinery/pipedispenser,
-/obj/structure/machinery/light/small{
-	light_color = "#832121"
-	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Oi" = (
@@ -4447,6 +4726,14 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"Qb" = (
+/obj/structure/machinery/vending/cigarette/upp{
+	pixel_y = 16;
+	can_block_movement = 0;
+	pixel_x = -4
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "Qg" = (
 /obj/structure/machinery/door/airlock/strata/circular{
 	color = "#8B9490";
@@ -4455,6 +4742,15 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
+"Qh" = (
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 4
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "Qj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -4514,6 +4810,33 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"Qz" = (
+/obj/structure/largecrate/random/case{
+	stuff = list(/obj/item/weapon/gun/revolver/upp = /obj/item/ammo_magazine/revolver/upp, /obj/item/weapon/gun/pistol/np92 = /obj/item/ammo_magazine/pistol/np92,/obj/item/weapon/gun/rifle/sniper/svd = /obj/item/ammo_magazine/sniper/svd, /obj/item/weapon/gun/smg/pps43 = /obj/item/ammo_magazine/smg/pps43);
+	parts_type = /obj/item/stack/sheet/metal;
+	pixel_x = 1
+	},
+/obj/structure/largecrate/random/case{
+	stuff = list(/obj/item/weapon/shield/riot/metal,/obj/item/weapon/classic_baton);
+	parts_type = /obj/item/stack/sheet/metal;
+	pixel_y = 11;
+	pixel_x = -1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/structure/barricade/handrail/strata{
+	layer = 3.5
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/golden_arrow/prep_hallway)
 "QI" = (
 /obj/structure/bed/chair{
 	can_buckle = 0;
@@ -4531,7 +4854,9 @@
 	pixel_x = 2;
 	pixel_y = 6
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
 /area/golden_arrow/briefing)
 "QJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -4803,8 +5128,19 @@
 /obj/structure/pipes/standard/manifold/visible/supply{
 	dir = 1
 	},
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
+"ST" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/faxmachine{
+	name = "\improper UPP Military Fax Machine";
+	network = "UPP Encrypted Network";
+	target_department = "UPP High Command";
+	pixel_y = 8
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/platoon_commander_rooms)
 "Tb" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -4814,10 +5150,6 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
-"Tc" = (
-/obj/structure/machinery/light_construct/small,
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/hangar)
 "Tf" = (
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_sergeant)
@@ -4829,6 +5161,21 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"Tu" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/prep_hallway)
 "TE" = (
 /obj/item/clothing/glasses/hud/health{
 	pixel_x = 7;
@@ -4872,7 +5219,9 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
 /area/golden_arrow/briefing)
 "TV" = (
 /obj/structure/surface/table/almayer{
@@ -4899,6 +5248,13 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
+"TX" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "Uj" = (
 /obj/structure/machinery/light/small{
 	light_color = "#832121";
@@ -4986,6 +5342,13 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
+"UL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_y = -2
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/canteen)
 "UM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -5015,15 +5378,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
-"Vp" = (
-/obj/structure/machinery/light/small{
-	dir = 1;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 4
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms)
 "Vu" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -5169,15 +5523,20 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "WY" = (
 /obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
+	dir = 8;
+	icon_state = "lattice12";
 	pixel_x = 13;
-	pixel_y = 10;
-	layer = 5.2
+	pixel_y = 2
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
@@ -5218,9 +5577,10 @@
 /area/golden_arrow/cryo_cells)
 "XI" = (
 /obj/structure/machinery/vending/cigarette/upp{
-	pixel_y = 14
+	pixel_y = 16;
+	can_block_movement = 0
 	},
-/turf/open/floor/strata/floor3,
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "XJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -5246,10 +5606,10 @@
 /area/golden_arrow/platoon_sergeant)
 "XN" = (
 /obj/structure/prop/invuln/lattice_prop{
-	dir = 4;
-	icon_state = "lattice-simple";
+	dir = 8;
+	icon_state = "lattice8";
 	pixel_x = 13;
-	pixel_y = 10
+	pixel_y = 2
 	},
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/prep_hallway)
@@ -5329,7 +5689,6 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Weapons Locker";
 	id = "armory";
-	pixel_y = -4;
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -5382,6 +5741,14 @@
 "YU" = (
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
+"Zj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/platoon_sergeant)
 "Zl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -5410,6 +5777,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
+"Zy" = (
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/golden_arrow/briefing)
 "ZC" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -16329,7 +16701,7 @@ HY
 HY
 Tf
 At
-gt
+Zj
 lO
 Nv
 CM
@@ -16600,7 +16972,7 @@ YE
 uU
 uU
 tu
-Bn
+IM
 yH
 tH
 DL
@@ -16633,7 +17005,7 @@ uR
 Tf
 Tf
 TW
-gt
+HW
 gt
 gt
 CM
@@ -17081,7 +17453,7 @@ KT
 cU
 cU
 rw
-qv
+jF
 os
 gH
 Go
@@ -17201,9 +17573,9 @@ yb
 yb
 yb
 DL
-DL
-DL
 tS
+DL
+DL
 DL
 yb
 yb
@@ -17223,7 +17595,7 @@ jf
 jf
 jf
 jf
-XN
+cU
 Yn
 BB
 BB
@@ -17232,8 +17604,8 @@ BB
 BB
 AA
 cU
-Vp
-YU
+sO
+CW
 RU
 jF
 ZL
@@ -17384,8 +17756,8 @@ LA
 LA
 Id
 cU
-sO
-CW
+os
+os
 os
 jF
 eN
@@ -17536,8 +17908,8 @@ gS
 LA
 rK
 cU
-os
-os
+ST
+YU
 os
 IC
 os
@@ -17701,7 +18073,7 @@ zt
 Ww
 iq
 QZ
-ZS
+TX
 ZS
 nI
 ZS
@@ -17711,7 +18083,7 @@ fs
 CB
 ZS
 QZ
-ZS
+mh
 nI
 ZS
 Gu
@@ -17853,7 +18225,7 @@ UM
 fh
 DI
 aY
-aY
+wB
 Rh
 hC
 aY
@@ -17863,7 +18235,7 @@ vV
 Rh
 LO
 aY
-aY
+rG
 hC
 Rh
 aY
@@ -17998,7 +18370,7 @@ pe
 lU
 eW
 ij
-jL
+rm
 Nq
 rt
 ri
@@ -18161,7 +18533,7 @@ qG
 UJ
 co
 tI
-vG
+bz
 iu
 cT
 zv
@@ -18288,9 +18660,9 @@ Ia
 Bg
 Bg
 cU
-Bg
-Bg
-Ia
+Gi
+AY
+Qz
 Ff
 AJ
 Bg
@@ -18299,11 +18671,11 @@ cU
 pZ
 xR
 UG
-rt
-qX
+Zy
+QI
 QI
 bE
-rt
+Zy
 EP
 cT
 qx
@@ -18342,7 +18714,7 @@ cM
 vb
 vb
 XY
-vb
+qq
 vb
 XD
 BQ
@@ -18439,7 +18811,7 @@ Ff
 Ff
 kL
 kL
-kL
+Tu
 kL
 kL
 Ff
@@ -18452,10 +18824,10 @@ ZS
 ZS
 ze
 NG
-jL
-ZS
-jL
-ZS
+Zy
+Zy
+Zy
+Zy
 xR
 cT
 eO
@@ -18466,9 +18838,9 @@ nu
 nu
 tg
 nn
-tg
+Kt
 Qr
-LO
+cL
 lp
 Jq
 dR
@@ -18527,9 +18899,9 @@ mV
 BQ
 dM
 vb
-YA
-LP
-wO
+kj
+hh
+Ly
 PD
 YA
 GU
@@ -18591,7 +18963,7 @@ Ff
 Ff
 Ff
 Ff
-Ff
+If
 Ff
 Ff
 Ff
@@ -18607,7 +18979,7 @@ uM
 Nq
 Nq
 Nq
-rt
+Zy
 QV
 cT
 eO
@@ -18624,9 +18996,9 @@ Pl
 jL
 cM
 SS
-dl
+mb
 nd
-dl
+mb
 vH
 cM
 dY
@@ -18743,7 +19115,7 @@ Ff
 Ff
 kL
 kL
-kL
+op
 kL
 kL
 Ff
@@ -18756,10 +19128,10 @@ ZS
 ZS
 Yz
 NG
-jL
-ZS
-jL
-ZS
+Zy
+Zy
+Zy
+Zy
 xR
 cT
 eO
@@ -18770,9 +19142,9 @@ KF
 KF
 cq
 QR
-cq
+UL
 jT
-DI
+kH
 Gs
 Zv
 nN
@@ -18832,8 +19204,8 @@ BQ
 dM
 vb
 XI
-wO
-GU
+Ly
+Ib
 PD
 wO
 wO
@@ -18908,10 +19280,10 @@ Bh
 xR
 lQ
 rt
-jL
-rt
+Zy
+Zy
 TS
-rt
+Zy
 xR
 cT
 qx
@@ -19073,7 +19445,7 @@ qG
 XV
 pu
 tI
-vG
+im
 GG
 cT
 zv
@@ -19206,9 +19578,9 @@ vC
 CK
 DI
 aY
+lq
 Rh
-Rh
-aY
+Ho
 aY
 aY
 Rh
@@ -19232,7 +19604,7 @@ OK
 ty
 QS
 VW
-Wh
+mB
 fr
 yS
 ri
@@ -19358,9 +19730,9 @@ Vd
 CK
 ZS
 ZS
+TX
 ZS
-ZS
-mZ
+ay
 ZS
 ZS
 ZS
@@ -19376,7 +19748,7 @@ aY
 aY
 Rh
 Rh
-aY
+Di
 aY
 mX
 fh
@@ -19384,7 +19756,7 @@ rt
 aM
 bN
 bN
-tO
+EH
 tO
 bN
 mu
@@ -19528,7 +19900,7 @@ mZ
 ZS
 ZS
 ZS
-ZS
+eR
 mZ
 Md
 Lp
@@ -19536,7 +19908,7 @@ Ca
 ER
 mZ
 ZS
-ZS
+TX
 ZS
 Gu
 aC
@@ -19937,9 +20309,9 @@ DL
 DL
 DL
 DL
-DL
-DL
 Uj
+DL
+DL
 oU
 rx
 rx
@@ -20248,7 +20620,7 @@ PG
 xa
 xa
 xa
-Tc
+Jf
 yH
 tH
 DL
@@ -20692,7 +21064,7 @@ cd
 gy
 yH
 yH
-Jf
+Qb
 Jf
 Jf
 mU
@@ -20853,8 +21225,8 @@ yH
 yH
 yH
 yH
-lZ
-Jf
+Oa
+Qh
 Jf
 yH
 yH

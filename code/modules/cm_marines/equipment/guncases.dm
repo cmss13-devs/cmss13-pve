@@ -243,9 +243,10 @@
 	icon_state = "ks29case"
 	storage_slots = 2
 	can_hold = list(/obj/item/weapon/gun/shotgun/type23)
-	max_w_class = SIZE_MASSIVE
+	max_w_class = SIZE_HUGE
 /obj/item/storage/box/guncase/heavy/shotgun/fill_preset_inventory()
-	new /obj/item/weapon/gun/shotgun/type23/unloaded(src)
+	new /obj/item/weapon/gun/shotgun/type23/unloaded/stored(src)
+	new /obj/item/attachable/stock/type23(src)
 
 /obj/item/storage/box/guncase/heavy/shotgun/type23/update_icon()
 	overlays.Cut()
@@ -256,7 +257,6 @@
 		return
 	if(locate(/obj/item/weapon/gun/shotgun/type23) in contents)
 		overlays += image(icon, "+ks29")
-
 
 /obj/item/storage/box/guncase/heavy/m4ra_pve
 	name = "\improper M4RA-R2 battle rifle case"
