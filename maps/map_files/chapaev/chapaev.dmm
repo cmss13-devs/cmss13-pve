@@ -393,6 +393,17 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
+"dJ" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/prep_hallway)
 "dM" = (
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
@@ -568,6 +579,12 @@
 	dir = 8;
 	icon_state = "lattice12";
 	pixel_x = 13;
+	pixel_y = 2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 45;
 	pixel_y = 2
 	},
 /turf/open/floor/strata/multi_tiles/west,
@@ -1067,6 +1084,10 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
 "jF" = (
@@ -1905,6 +1926,16 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"qI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/prep_hallway)
 "qN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1917,6 +1948,14 @@
 	},
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/prep_hallway)
+"qU" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "ri" = (
 /obj/structure/closet{
 	name = "emergency closet";
@@ -2220,6 +2259,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"tR" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/briefing)
 "tS" = (
 /obj/structure/machinery/light/small{
 	light_color = "#832121";
@@ -2454,6 +2499,12 @@
 	pixel_x = 13;
 	pixel_y = 2
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 45;
+	pixel_y = 2
+	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "vz" = (
@@ -2477,11 +2528,6 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
 "vH" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1;
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
 /obj/structure/sign{
 	desc = "Comrade! Don't forget to return your state-issued items to your assigned locker before returning to hypersleep!";
 	icon_state = "securearea";
@@ -2739,6 +2785,14 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/canteen)
+"xY" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/briefing)
 "ya" = (
 /obj/structure/largecrate/random/case{
 	stuff = list(/obj/item/ammo_magazine/shotgun/buckshot/heavy, /obj/item/ammo_magazine/shotgun/slug/heavy);
@@ -2790,6 +2844,17 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/hangar)
+"yN" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/plating,
+/area/golden_arrow/prep_hallway)
 "yS" = (
 /obj/structure/largecrate/random/case{
 	stuff = list(/obj/item/weapon/gun/revolver/upp = /obj/item/ammo_magazine/revolver/upp, /obj/item/weapon/gun/pistol/np92 = /obj/item/ammo_magazine/pistol/np92,/obj/item/weapon/gun/rifle/sniper/svd = /obj/item/ammo_magazine/sniper/svd, /obj/item/weapon/gun/smg/pps43 = /obj/item/ammo_magazine/smg/pps43);
@@ -2925,13 +2990,6 @@
 	},
 /turf/open/floor/mech_bay_recharge_floor,
 /area/golden_arrow/hangar)
-"At" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	name = "ship-grade camera";
-	network = list("Chapaev")
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_sergeant)
 "Az" = (
 /obj/structure/machinery/door/airlock/strata/circular{
 	dir = 1;
@@ -3457,6 +3515,10 @@
 "DL" = (
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
+"DS" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/prep_hallway)
 "DX" = (
 /obj/structure/machinery/door/poddoor/almayer/open,
 /turf/open/floor/strata/floor3/east,
@@ -3706,6 +3768,26 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
+"GE" = (
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 10
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/cryo_cells)
 "GF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -3825,6 +3907,15 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
+"Hp" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/cryo_cells)
 "Hw" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4;
@@ -3837,6 +3928,10 @@
 "Hy" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/medical)
+"HI" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/prep_hallway)
 "HM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -3887,6 +3982,9 @@
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 5
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -4002,6 +4100,14 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"IW" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "IX" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -4163,6 +4269,18 @@
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
 /area/golden_arrow/medical)
+"KP" = (
+/obj/item/storage/backpack/marine/ammo_rack{
+	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
+	name = "\improper makeshift ammo rack";
+	pixel_y = 17
+	},
+/obj/structure/largecrate/supply/ammo/type71{
+	pixel_y = 7;
+	parts_type = /obj/item/stack/sheet/metal
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/prep_hallway)
 "KT" = (
 /obj/structure/surface/rack{
 	color = "#8B9490"
@@ -4292,6 +4410,12 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
+"Mm" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/prep_hallway)
 "Mr" = (
 /obj/structure/machinery/cm_vending/clothing/medic/upp,
 /obj/item/clothing/head/uppcap{
@@ -4378,6 +4502,15 @@
 	light_power = 0.8;
 	light_range = 5;
 	dir = 1
+	},
+/obj/structure/largecrate/supply/ammo/type71{
+	parts_type = /obj/item/stack/sheet/metal;
+	pixel_x = 1
+	},
+/obj/structure/largecrate/supply/ammo/type71{
+	pixel_y = 11;
+	pixel_x = 2;
+	parts_type = /obj/item/stack/sheet/metal
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
@@ -4674,6 +4807,14 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"PL" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "PO" = (
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
@@ -4798,17 +4939,6 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Qz" = (
-/obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/weapon/gun/revolver/upp = /obj/item/ammo_magazine/revolver/upp, /obj/item/weapon/gun/pistol/np92 = /obj/item/ammo_magazine/pistol/np92,/obj/item/weapon/gun/rifle/sniper/svd = /obj/item/ammo_magazine/sniper/svd, /obj/item/weapon/gun/smg/pps43 = /obj/item/ammo_magazine/smg/pps43);
-	parts_type = /obj/item/stack/sheet/metal;
-	pixel_x = 1
-	},
-/obj/structure/largecrate/random/case{
-	stuff = list(/obj/item/weapon/shield/riot/metal,/obj/item/weapon/classic_baton);
-	parts_type = /obj/item/stack/sheet/metal;
-	pixel_y = 11;
-	pixel_x = -1
-	},
 /obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
@@ -4822,6 +4952,9 @@
 	light_range = 5
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/random/barrel/red{
+	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
 "QI" = (
@@ -5085,6 +5218,21 @@
 /obj/structure/machinery/iv_drip,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
+"SN" = (
+/obj/structure/machinery/shower{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/cryo_cells)
 "SP" = (
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
 	roundstart_template = /datum/map_template/shuttle/upp
@@ -5263,6 +5411,9 @@
 	light_power = 0.8;
 	light_range = 5
 	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
 "Us" = (
@@ -5271,6 +5422,18 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"Uw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
 "UF" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -16679,7 +16842,7 @@ gZ
 HY
 HY
 Tf
-At
+gt
 Zj
 lO
 Nv
@@ -17885,7 +18048,7 @@ kC
 kC
 gS
 LA
-rK
+qI
 cU
 ST
 YU
@@ -18064,7 +18227,7 @@ ZS
 QZ
 mh
 nI
-ZS
+IW
 Gu
 hW
 pg
@@ -18189,7 +18352,7 @@ LA
 LA
 sj
 LJ
-rK
+qI
 cU
 oR
 nF
@@ -18202,7 +18365,7 @@ aY
 aY
 UM
 fh
-DI
+Uw
 aY
 wB
 Rh
@@ -18332,12 +18495,12 @@ LA
 LA
 LA
 xM
-LA
+Mm
 Uq
 XN
 Np
-LA
-xM
+KP
+dJ
 LA
 IJ
 LA
@@ -18526,7 +18689,7 @@ cM
 cM
 vm
 eP
-ua
+GE
 eP
 vN
 cM
@@ -18645,7 +18808,7 @@ Qz
 Ff
 AJ
 Bg
-Ia
+yN
 cU
 pZ
 xR
@@ -18678,7 +18841,7 @@ Fu
 cM
 SE
 SE
-SE
+Hp
 SE
 SE
 cM
@@ -18797,7 +18960,7 @@ Ff
 Ff
 Fj
 kL
-kL
+DS
 cU
 ZS
 ZS
@@ -18830,7 +18993,7 @@ it
 Az
 vE
 Vu
-Vu
+SN
 Vu
 Me
 Es
@@ -18949,7 +19112,7 @@ Ff
 Ff
 Fj
 Ff
-Ff
+HI
 cU
 Nq
 Nq
@@ -18972,7 +19135,7 @@ QR
 Vi
 cT
 Pl
-jL
+xY
 cM
 SS
 mb
@@ -19410,9 +19573,9 @@ fh
 fh
 fh
 fh
-fh
-rt
-rt
+tR
+tR
+tR
 fh
 fh
 fh
@@ -19707,7 +19870,7 @@ Ph
 lX
 Vd
 CK
-ZS
+PL
 ZS
 TX
 ZS
@@ -19888,7 +20051,7 @@ ER
 mZ
 ZS
 TX
-ZS
+qU
 Gu
 aC
 jN
