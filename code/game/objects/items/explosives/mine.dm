@@ -228,8 +228,7 @@
 	if(!customizable)
 		create_shrapnel(loc, 60, dir, angle, /datum/ammo/bullet/shrapnel/claymore, cause_data)
 		// a claymore is essentially a block of C4 with metal in the front. Shit's fuckin nasty.
-		cell_explosion(loc, 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
-		cell_explosion(loc, 300, 160, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		cell_explosion(loc, 120, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
 		qdel(src)
 	else
 		. = ..()
