@@ -10,6 +10,7 @@
 	icon_state = "m240"
 	item_state = "m240"
 	mouse_pointer = 'icons/effects/mouse_pointer/flamer_mouse.dmi'
+
 	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	fire_sound = ""

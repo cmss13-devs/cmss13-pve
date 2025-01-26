@@ -8,6 +8,8 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "boltaction"
 	item_state = "hunting"
+	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
+
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_LARGE
 	force = 5
@@ -26,16 +28,17 @@
 		/obj/item/attachable/stock/hunting,
 	)
 	starting_attachment_types = list(/obj/item/attachable/stock/hunting, /obj/item/attachable/scope/mini/hunting)
-	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
 	aim_slowdown = SLOWDOWN_ADS_RIFLE
 	wield_delay = WIELD_DELAY_NORMAL
 	civilian_usable_override = TRUE
 	unacidable = TRUE // Like other 1-of-a-kind weapons, it can't be gotten rid of that fast
 	indestructible = TRUE
+
 	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
 	fire_sound = 'sound/weapons/gun_boltaction.ogg'
 	var/open_bolt_sound ='sound/weapons/handling/gun_boltaction_open.ogg'
 	var/close_bolt_sound ='sound/weapons/handling/gun_boltaction_close.ogg'
+
 	var/bolted = TRUE // FALSE IS OPEN, TRUE IS CLOSE
 	var/bolt_delay
 	var/recent_cycle //world.time to see when they last bolted it.

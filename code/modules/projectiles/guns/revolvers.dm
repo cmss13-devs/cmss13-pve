@@ -24,6 +24,7 @@
 	var/spin_sound = 'sound/effects/spin.ogg'
 	var/thud_sound = 'sound/effects/thud.ogg'
 	var/list/cylinder_click = list('sound/weapons/gun_empty.ogg')
+
 	var/trick_delay = 4 SECONDS
 	var/recent_trick //So they're not spamming tricks.
 	var/russian_roulette = 0 //God help you if you do this.
