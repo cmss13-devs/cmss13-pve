@@ -82,8 +82,8 @@
 	flags_ammo_behavior = AMMO_ROCKET|AMMO_STOPPED_BY_COVER
 
 	accuracy = HIT_ACCURACY_TIER_MAX
-	accurate_range = 7
-	max_range = 14
+	accurate_range = 14
+	max_range = 20
 	damage = 40
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_5
