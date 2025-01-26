@@ -8,6 +8,7 @@
 	force = MELEE_FORCE_STRONG
 	throwforce = MELEE_FORCE_WEAK
 	sharp = IS_SHARP_ITEM_BIG
+	flags_human_ai = MELEE_WEAPON_ITEM
 	edge = 1
 	w_class = SIZE_LARGE
 	hitsound = 'sound/weapons/bladeslice.ogg'
