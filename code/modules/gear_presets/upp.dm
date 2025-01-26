@@ -404,6 +404,7 @@
 /datum/equipment_preset/upp/officer
 	name = "UPP Lieutenant"
 	flags = EQUIPMENT_PRESET_EXTRA
+
 	skills = /datum/skills/upp/officer
 	assignment = JOB_UPP_LT_OFFICER
 	role_comm_title = "LT"
@@ -434,37 +435,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
-
-
-/datum/equipment_preset/upp/officer/naval
-	name = "UPP Lieutenant (Naval Infantry)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/upp/officer
-	assignment = JOB_UPP_LT_OFFICER
-	role_comm_title = "LT"
-	rank = JOB_UPP_LT_OFFICER
-	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
-	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
-	idtype = /obj/item/card/id/dogtag
-
-/datum/equipment_preset/upp/officer/naval/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/naval(new_human), WEAR_BODY)
-	var/obj/item/clothing/under/marine/veteran/UPP/naval/uniform = new()
-
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/naval, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/np92(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/upp/officer/senior
 	name = "UPP Senior Lieutenant"
