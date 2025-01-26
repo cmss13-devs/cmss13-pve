@@ -4,20 +4,9 @@
 /obj/item/weapon/gun/revolver
 	flags_equip_slot = SLOT_WAIST
 	w_class = SIZE_MEDIUM
-
+	mouse_pointer = 'icons/effects/mouse_pointer/pistol_mouse.dmi'
 	matter = list("metal" = 2000)
-	fire_sound = 'sound/weapons/gun_44mag_v4.ogg'
-	reload_sound = 'sound/weapons/gun_44mag_speed_loader.wav'
-	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
-	unload_sound = 'sound/weapons/gun_44mag_open_chamber.wav'
-	var/chamber_close_sound = 'sound/weapons/gun_44mag_close_chamber.wav'
-	var/hand_reload_sound = 'sound/weapons/gun_revolver_load3.ogg'
-	var/spin_sound = 'sound/effects/spin.ogg'
-	var/thud_sound = 'sound/effects/thud.ogg'
-	var/trick_delay = 4 SECONDS
-	var/list/cylinder_click = list('sound/weapons/gun_empty.ogg')
-	var/recent_trick //So they're not spamming tricks.
-	var/russian_roulette = 0 //God help you if you do this.
+
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_ONE_HAND_WIELDED
 	gun_category = GUN_CATEGORY_HANDGUN
 	wield_delay = WIELD_DELAY_VERY_FAST //If you modify your revolver to be two-handed, it will still be fast to aim
@@ -26,13 +15,23 @@
 	has_open_icon = TRUE
 	current_mag = /obj/item/ammo_magazine/internal/revolver
 
+	fire_sound = 'sound/weapons/gun_44mag_v4.ogg'
+	reload_sound = 'sound/weapons/gun_44mag_speed_loader.wav'
+	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
+	unload_sound = 'sound/weapons/gun_44mag_open_chamber.wav'
+	var/chamber_close_sound = 'sound/weapons/gun_44mag_close_chamber.wav'
+	var/hand_reload_sound = 'sound/weapons/gun_revolver_load3.ogg'
+	var/spin_sound = 'sound/effects/spin.ogg'
+	var/thud_sound = 'sound/effects/thud.ogg'
+	var/list/cylinder_click = list('sound/weapons/gun_empty.ogg')
+	var/trick_delay = 4 SECONDS
+	var/recent_trick //So they're not spamming tricks.
+	var/russian_roulette = 0 //God help you if you do this.
+
 /obj/item/weapon/gun/revolver/Initialize(mapload, spawn_empty)
 	. = ..()
 	if(current_mag)
 		replace_cylinder(current_mag.current_rounds)
-
-/obj/item/weapon/gun/revolver/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/pistol_mouse.dmi'
 
 /obj/item/weapon/gun/revolver/set_gun_config_values()
 	..()

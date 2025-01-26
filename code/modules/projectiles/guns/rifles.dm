@@ -863,6 +863,8 @@
 	desc = "A cheap, reliable LMG chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals."
 	icon_state = "mar50"
 	item_state = "mar50"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
+
 	fire_sound = 'sound/weapons/gun_mar40.ogg'
 	reload_sound = 'sound/weapons/handling/gun_mar40_reload.ogg'
 	unload_sound = 'sound/weapons/handling/gun_mar40_unload.ogg'
@@ -887,9 +889,6 @@
 	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
-
-/obj/item/weapon/gun/rifle/mar40/lmg/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/mar40/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 16, "rail_y" = 20, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
@@ -1259,10 +1258,12 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m41ae2"
 	item_state = "m41ae2"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 	reload_sound = 'sound/weapons/handling/hpr_reload.ogg'
 	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
 	fire_sound = 'sound/weapons/gun_hpr.ogg'
+
 	aim_slowdown = SLOWDOWN_ADS_LMG
 	current_mag = /obj/item/ammo_magazine/rifle/lmg
 	starting_attachment_types = list(/obj/item/attachable/bipod)
@@ -1286,12 +1287,8 @@
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WIELDED_FIRING_ONLY|GUN_SUPPORT_PLATFORM
 	gun_category = GUN_CATEGORY_HEAVY
 
-/obj/item/weapon/gun/rifle/lmg/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
-
 /obj/item/weapon/gun/rifle/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 23, "under_y" = 12, "stock_x" = 24, "stock_y" = 12)
-
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_config_values()
 	..()
@@ -1307,7 +1304,6 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
-
 
 /obj/item/weapon/gun/rifle/lmg/tactical
 	current_mag = /obj/item/ammo_magazine/rifle/lmg/ap
@@ -1613,9 +1609,12 @@
 	desc = "The M4RA battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams.\nTakes *only* non-high-velocity M4RA magazines."
 	icon_state = "m4ra"
 	item_state = "m4ra"
+	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
+
 	fire_sound = 'sound/weapons/gun_m4ra.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+
 	current_mag = /obj/item/ammo_magazine/rifle/m4ra
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -1644,9 +1643,6 @@
 	wield_delay = WIELD_DELAY_VERY_FAST
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	//map_specific_decoration = TRUE
-
-/obj/item/weapon/gun/rifle/m4ra/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/sniper_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/m4ra/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 21, "under_x" = 30, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "special_x" = 37, "special_y" = 16)
@@ -2036,9 +2032,12 @@
 	desc = "An experimental shotgun model going through testing trials in the USCM. Based on the original civilian and CMB version, the XM51 is a mag-fed, pump-action shotgun. It utilizes special 16-gauge breaching rounds which are effective at breaching walls and doors. Users are advised not to employ the weapon against soft or armored targets due to low performance of the shells."
 	icon_state = "xm51"
 	item_state = "xm51"
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+
 	fire_sound = 'sound/weapons/gun_shotgun_xm51.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+
 	current_mag = /obj/item/ammo_magazine/rifle/xm51
 	attachable_allowed = list(
 		/obj/item/attachable/bayonet,
@@ -2066,9 +2065,6 @@
 	var/burst_count = 0 //To detect when the burst fire is near its end.
 	COOLDOWN_DECLARE(allow_message)
 	COOLDOWN_DECLARE(allow_pump)
-
-/obj/item/weapon/gun/rifle/xm51/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/xm51/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 18, "rail_x" = 12, "rail_y" = 20, "under_x" = 24, "under_y" = 13, "stock_x" = 15, "stock_y" = 16)
