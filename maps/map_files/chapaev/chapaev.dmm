@@ -221,9 +221,7 @@
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
 "bF" = (
 /obj/effect/decal/warning_stripes{
@@ -588,9 +586,7 @@
 	icon_state = "door_warning";
 	pixel_y = -2
 	},
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
 "fa" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -1313,11 +1309,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
-"lU" = (
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
-/area/golden_arrow/platoon_commander_rooms)
 "lW" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
@@ -4313,9 +4304,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
 "MF" = (
 /obj/effect/decal/warning_stripes{
@@ -4443,9 +4432,7 @@
 	dir = 1;
 	pixel_y = 10
 	},
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
 "NI" = (
 /obj/structure/disposalpipe/segment{
@@ -4854,9 +4841,7 @@
 	pixel_x = 2;
 	pixel_y = 6
 	},
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
 "QJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -5072,9 +5057,7 @@
 	name = "\improper Platoon Commander's Office";
 	req_one_access_txt = "241"
 	},
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/space/basic,
 /area/golden_arrow/platoon_commander_rooms)
 "Ss" = (
 /obj/effect/landmark/late_join/upp,
@@ -5219,9 +5202,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
 "TV" = (
 /obj/structure/surface/table/almayer{
@@ -5778,9 +5759,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
 "Zy" = (
-/turf/open/floor/strata{
-	icon_state = "floor3"
-	},
+/turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
 "ZC" = (
 /obj/structure/bed/chair{
@@ -18062,7 +18041,7 @@ rK
 GN
 Ct
 YU
-lU
+jF
 ZH
 gI
 os
@@ -18216,7 +18195,7 @@ oR
 nF
 XU
 MD
-lU
+jF
 os
 Ih
 aY
@@ -18367,7 +18346,7 @@ cU
 TE
 YU
 pe
-lU
+jF
 eW
 ij
 rm
