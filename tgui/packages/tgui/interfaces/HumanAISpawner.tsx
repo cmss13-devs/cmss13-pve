@@ -1,14 +1,15 @@
+import { useState } from 'react';
+
 import { useBackend } from '../backend';
 import {
-  Button,
   Box,
+  Button,
+  Collapsible,
   Divider,
   Section,
   Stack,
-  Collapsible,
 } from '../components';
 import { Window } from '../layouts';
-import { useState } from 'react';
 
 type AIEquipmentPreset = {
   name: string;

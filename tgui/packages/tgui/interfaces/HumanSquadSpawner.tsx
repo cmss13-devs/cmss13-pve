@@ -1,7 +1,8 @@
-import { useBackend } from '../backend';
-import { Button, Divider, Section, Stack, Collapsible } from '../components';
-import { Window } from '../layouts';
 import { useState } from 'react';
+
+import { useBackend } from '../backend';
+import { Button, Collapsible, Divider, Section, Stack } from '../components';
+import { Window } from '../layouts';
 
 type Squad = {
   name: string;

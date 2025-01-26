@@ -1,8 +1,9 @@
-import { useBackend } from '../backend';
 import { BooleanLike } from 'common/react';
-import { Button, Dropdown, Section, Stack, Divider } from '../components';
-import { Window } from '../layouts';
 import { useState } from 'react';
+
+import { useBackend } from '../backend';
+import { Button, Divider, Dropdown, Section, Stack } from '../components';
+import { Window } from '../layouts';
 
 type Faction = {
   name: string;

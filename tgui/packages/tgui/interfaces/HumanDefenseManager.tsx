@@ -1,16 +1,17 @@
-import { useBackend } from '../backend';
 import { BooleanLike, classes } from 'common/react';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
 import {
   Box,
   Button,
+  Collapsible,
   Divider,
+  Dropdown,
   Section,
   Stack,
-  Dropdown,
-  Collapsible,
 } from '../components';
 import { Window } from '../layouts';
-import { useState } from 'react';
 
 type Defense = {
   name: string;
