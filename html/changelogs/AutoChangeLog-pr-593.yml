@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Adds in a new method of remotely calling in the dropship; a movielike laptop in a carry case that has it's own internal power supply"
+  - balance: "Standalone remote-flight computers now rely upon area power"
+  - imageadd: "Sprites for the above, item, deployed & off/inactive and deployed & on/active"

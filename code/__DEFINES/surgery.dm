@@ -95,6 +95,7 @@ See also /datum/surgery_step/cut_larval_pseudoroots, /datum/surgery_step/retract
 	/obj/item/tool/surgery/scalpel/pict_system = SURGERY_TOOL_MULT_SUBOPTIMAL,\
 	/obj/item/attachable/bayonet = SURGERY_TOOL_MULT_SUBSTITUTE,\
 	/obj/item/tool/kitchen/knife = SURGERY_TOOL_MULT_SUBSTITUTE,\
+	/obj/item/weapon/knife = SURGERY_TOOL_MULT_SUBSTITUTE,\
 	/obj/item/shard = SURGERY_TOOL_MULT_AWFUL\
 	)
 

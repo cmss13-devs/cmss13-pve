@@ -112,7 +112,10 @@
 	name = "\improper United Americas flag"
 	desc = "A flag of the United Americas. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "uaflag"
-
+/obj/structure/sign/banners/united_americas_worn
+	name = "\improper United Americas flag"
+	desc = "A very worn flag of the United Americas. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "uaflag_worn"
 //============//
 //  Flags    //
 //==========//
@@ -149,7 +152,14 @@
 	name = "\improper Worn Union of Progressive Peoples flag"
 	desc = "A very worn flag of the Union of Progressive Peoples. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "uppflag_worn"
-
+/obj/structure/sign/banners/usa_flag
+	name = "\improper Worn United States of America flag"
+	desc = "A flag of the United States of America. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "usaflag"
+/obj/structure/sign/banners/usa_worn
+	name = "\improper Worn United States of America flag"
+	desc = "A very worn flag of the United States of America. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "usaflag_worn"
 //=====================//
 // SEMIOTIC STANDARD  //
 //===================//
