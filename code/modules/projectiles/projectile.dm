@@ -839,7 +839,7 @@
 /mob/living/proc/get_projectile_hit_chance(obj/projectile/P)
 	//This checks to see if a mob is lying down. If they are a bullet has very poor chances to hit them.
 	//with many thanks to ihatethisengine2.
-	if((body_position == LYING_DOWN && !(P.flag_behavior & AMMO_PRONETARGET)|| HAS_TRAIT(src, TRAIT_NO_STRAY)) && src != P.original)
+	if((body_position == LYING_DOWN && !(P.projectile_flags & PROJECTILE_SHRAPNEL)|| HAS_TRAIT(src, TRAIT_NO_STRAY)) && src != P.original)
 		return FALSE
 	var/ammo_flags = P.ammo.flags_ammo_behavior | P.projectile_override_flags
 	if(ammo_flags & AMMO_XENO)
