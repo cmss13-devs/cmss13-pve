@@ -290,6 +290,7 @@ Defined in conflicts.dm of the #defines folder.
 	flags_equip_slot = SLOT_FACE
 	flags_armor_protection = SLOT_FACE
 	flags_item = CAN_DIG_SHRAPNEL
+	flags_human_ai = MELEE_WEAPON_ITEM
 
 	attach_icon = "bayonet_a"
 	melee_mod = 20
