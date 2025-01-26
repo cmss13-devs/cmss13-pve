@@ -221,7 +221,7 @@
 	filling_color = "#e6e6e6"
 	w_class = SIZE_TINY
 
-/obj/item/reagent_container/food/snacks/protein_pack/Initialize()
+/obj/item/reagent_container/food/snacks/protein_pack3/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 8)
 	bitesize = 4
