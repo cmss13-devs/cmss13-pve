@@ -378,22 +378,17 @@
 /obj/structure/machinery/chem_dispenser/canteen/upp
 	name = "liquid dispenser"
 	desc = "A liquid dispenser, capable of making a variety of drinks to consume from a mixture of water and instant flavoring juice and caffeine additives."
-	icon = 'icons/obj/structures/machinery/uppvending_32x64.dmi'
-	icon_state = "drink"
+	icon_state = "uppdrink"
 	ui_title = "AutoDrink Dispenser"
-	dispensable_reagents = list(
-		"water",
-		"coffee",
-		"cream",
-		"tea",
-		"milk",
-		"soymilk",
-		"orangejuice",
-		"limejuice",
-		"watermelonjuice",
-		"tomatojuice",
-		"carrotjuice",
-		"berryjuice",
-		"grapejuice",
-		"lemonjuice",
-	)
+
+/obj/structure/machinery/chem_dispenser/canteen/upp/update_icon()
+	. = ..()
+	overlays.Cut()
+	if(!beaker)
+		return
+
+	overlays += "+beaker"
+	if(inoperable())
+		return
+
+	overlays += "+onlightupp"

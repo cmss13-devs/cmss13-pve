@@ -29,8 +29,7 @@
 /obj/structure/machinery/cm_vending/sorted/marine_food/upp
 	name = "\improper food dispenser"
 	desc = "An food dispenser, capable of distributing food containing all the essential vitamins and nutrients anyone could ever need."
-	icon = 'icons/obj/structures/machinery/uppvending_32x64.dmi'
-	icon_state = "food"
+	icon_state = "uppfood"
 
 /obj/structure/machinery/cm_vending/sorted/marine_food/upp/populate_product_list(scale)
 	listed_products = list(
