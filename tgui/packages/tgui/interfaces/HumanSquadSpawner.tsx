@@ -54,7 +54,7 @@ export const HumanSquadSpawner = (props) => {
                     <Stack.Item>
                       Contains:
                       {chosenSquad.contents.map((content) => (
-                        <div>{content}</div>
+                        <div key={content}>{content}</div>
                       ))}
                     </Stack.Item>
                     <Stack.Item>
