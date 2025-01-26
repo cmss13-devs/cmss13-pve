@@ -78,7 +78,8 @@
 	name = "claymore pellet"
 	icon_state = "buckshot"
 	accurate_range_min = 0
-	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
+	//targets bomb armor by AMMO_ROCKET. Stupid, but it works.
+	flags_ammo_behavior = AMMO_ROCKET|AMMO_STOPPED_BY_COVER
 
 	accuracy = HIT_ACCURACY_TIER_MAX
 	accurate_range = 7
