@@ -637,7 +637,7 @@ GLOBAL_LIST_INIT(rebel_twe_rifles, list(
 	))
 
 GLOBAL_LIST_INIT(rebel_twe_pistols, list(
-	/obj/item/weapon/gun/pistol/l54 = /obj/item/ammo_magazine/pistol,
+	/obj/item/weapon/gun/pistol/l54 = /obj/item/ammo_magazine/pistol/l54,
 	/obj/item/weapon/gun/pistol/highpower = /obj/item/ammo_magazine/pistol/highpower
 	))
 
