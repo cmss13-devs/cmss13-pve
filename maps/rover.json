@@ -4,6 +4,6 @@
     "map_file": "rover.dmm",
     "webmap_url": "GoldenArrow",
     "traits": [{"Marine Main Ship": true}],
-    "nightmare_path": "maps/Nightmare/maps/golden_arrow/",
+    "nightmare_path": "maps/Nightmare/maps/rover/",
     "platoon": "/datum/squad/marine/forecon"
 }

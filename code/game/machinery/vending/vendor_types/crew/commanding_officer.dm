@@ -32,6 +32,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_commanding_officer, list(
 		list("HEDP Grenade Pack", 15, /obj/item/storage/box/packet/high_explosive, null, VENDOR_ITEM_REGULAR),
 		list("HEFA Grenade Pack", 15, /obj/item/storage/box/packet/hefa, null, VENDOR_ITEM_REGULAR),
 		list("WP Grenade Pack", 15, /obj/item/storage/box/packet/phosphorus, null, VENDOR_ITEM_REGULAR),
+		list("G2 Electroshock Grenade Packet (x3 grenades)",  15, /obj/item/storage/box/packet/sebb, null, VENDOR_ITEM_REGULAR),
 
 		list("RAIL ATTACHMENTS", 0, null, null, null),
 		list("Red-Dot Sight", 15, /obj/item/attachable/reddot, null, VENDOR_ITEM_REGULAR),
@@ -84,7 +85,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_commanding_officer, list(
 		list("COMBAT EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Commanding Officer's M3 Armor", 0, /obj/item/clothing/suit/storage/marine/MP/CO, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Commanding Officer's M10 Helmet", 0, /obj/item/clothing/head/helmet/marine/CO, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
-		list("Commanding Officer's Gloves", 0, /obj/item/clothing/gloves/marine/techofficer/commander, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
+		list("Combat Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Marine Combat Boots", 0, /obj/item/clothing/shoes/marine/knife, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),

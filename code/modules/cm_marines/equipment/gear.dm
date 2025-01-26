@@ -4,8 +4,8 @@
 
 /obj/item/device/flashlight/combat
 	name = "combat flashlight"
-	desc = "A Flashlight designed to be held in the hand, or attached to a rifle"
-	icon_state = "flashlight"
+	desc = "A Flashlight designed to be held in the hand, or attached to a rifle, has better bulb compared to a normal flashlight."
+	icon_state = "combat_flashlight"
 	item_state = "flashlight"
 	light_range = 5 //Pretty luminous, but still a flashlight that fits in a pocket
 
@@ -108,7 +108,7 @@
 			continue
 		mobs_can_store += H
 	var/mob/living/carbon/human/mob_to_store
-	if(mobs_can_store.len)
+	if(length(mobs_can_store))
 		mob_to_store = pick(mobs_can_store)
 		mob_to_store.forceMove(src)
 		mob_to_store.unset_interaction()
@@ -149,15 +149,6 @@
 		return FALSE
 	. = ..()
 	handle_cloaking()
-
-/obj/item/coin/marine
-	name = "marine specialist weapon token"
-	desc = "Insert this into a specialist vendor in order to access a single highly dangerous weapon."
-	icon_state = "coin_platinum"
-
-/obj/item/coin/marine/attackby(obj/item/W as obj, mob/user as mob) //To remove attaching a string functionality
-	return
-
 /obj/structure/broken_apc
 	name = "\improper M577 armored personnel carrier"
 	desc = "A large, armored behemoth capable of ferrying marines around. \nThis one is sitting nonfunctional."
@@ -331,8 +322,8 @@
 	. = ..()
 	pixel_y = rand(-3,3)
 	pixel_x = rand(-3,3)
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
 	var/randsnack
 	for(var/i = 1 to 3)
 		randsnack = rand(0,5)
@@ -364,9 +355,9 @@
 	. = ..()
 	pixel_y = rand(-3,3)
 	pixel_x = rand(-3,3)
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
 	new /obj/item/reagent_container/food/drinks/coffee(src)
 	var/randsnack = rand(0,5)
 	switch(randsnack)
@@ -380,3 +371,37 @@
 			new /obj/item/reagent_container/food/snacks/cookie(src)
 		if(5)
 			new /obj/item/reagent_container/food/snacks/chocolatebar(src)
+
+/obj/item/device/overwatch_camera
+	name = "M5 Camera Gear"
+	desc = "A camera and associated headgear designed to allow marine commanders to see what their troops can see. A more robust version of this equipment is integrated into all standard USCM combat helmets."
+	icon = 'icons/obj/items/clothing/glasses.dmi'
+	icon_state = "overwatch_gear"
+	item_icons = list(
+		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
+		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
+	)
+	item_state_slots = list(
+		WEAR_L_EAR = "cam_gear",
+		WEAR_R_EAR = "cam_gear",
+	)
+	flags_equip_slot = SLOT_EAR
+	var/obj/structure/machinery/camera/camera
+
+/obj/item/device/overwatch_camera/Initialize(mapload, ...)
+	. = ..()
+	camera = new /obj/structure/machinery/camera/overwatch(src)
+
+/obj/item/device/overwatch_camera/Destroy()
+	QDEL_NULL(camera)
+	return ..()
+
+/obj/item/device/overwatch_camera/equipped(mob/living/carbon/human/mob, slot)
+	if(camera)
+		camera.c_tag = mob.name
+	..()
+
+/obj/item/device/overwatch_camera/dropped(mob/user)
+	if(camera)
+		camera.c_tag = "Unknown"
+	..()

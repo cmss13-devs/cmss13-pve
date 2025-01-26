@@ -216,3 +216,28 @@
 		to_chat(A, SPAN_DANGER("You get lost into the depths of space, never to be seen again."))
 		qdel(A)
 
+/obj/effect/step_trigger/teleporter_vector/damage //you take damage and are stunned when you step on it, think falling down elevatorshaft or second story of a building
+	var/damage = 30
+	var/penetration = 50
+	var/target_limbs = list(
+		"l_leg",
+		"l_foot",
+		"r_leg",
+		"r_foot"
+	)
+
+/obj/effect/step_trigger/teleporter_vector/damage/Trigger(atom/movable/atom)
+	. = ..()
+
+	var/mob/living/carbon/victim = atom
+	if(!istype(victim))
+		return
+
+	if(victim.pain.feels_pain)
+		victim.pain.apply_pain(PAIN_BONE_BREAK / 2) // like a bone break but not as bad
+		victim.emote("pain")
+
+	victim.apply_armoured_damage(damage, penetration = penetration, def_zone = pick(target_limbs))
+	victim.KnockDown(15)
+	victim.Stun(15)
+

@@ -1,3 +1,6 @@
+#define TIMED_FUSE 0
+#define IMPACT_FUSE 1
+
 /obj/item/explosive/grenade
 	name = "grenade"
 	desc = "A hand-held grenade, with an adjustable timer."
@@ -22,6 +25,9 @@
 	antigrief_protection = TRUE //Should it be checked by antigrief?
 	ground_offset_x = 7
 	ground_offset_y = 6
+	var/dual_purpose = FALSE
+	var/fuse_type = TIMED_FUSE
+
 
 /obj/item/explosive/grenade/Initialize()
 	. = ..()
@@ -36,7 +42,7 @@
 		to_chat(user, SPAN_WARNING("You don't have the dexterity to do this!"))
 		return FALSE
 
-	if(harmful && !user.allow_gun_usage)
+	if(harmful && ishuman(user) && !user.allow_gun_usage)
 		to_chat(user, SPAN_WARNING("Your programming prevents you from using this!"))
 		return FALSE
 
@@ -79,15 +85,6 @@
 	SPAN_WARNING("You prime \a [name]!"))
 	msg_admin_attack("[key_name(user)] primed \a grenade ([name]) in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
 	user.attack_log += text("\[[time_stamp()]\] <font color='red'> [key_name(user)] primed \a grenade ([name]) at ([src.loc.x],[src.loc.y],[src.loc.z])</font>")
-	if(initial(dangerous))
-		var/nade_sound
-		if(has_species(user, "Human"))
-			nade_sound = user.gender == FEMALE ? get_sfx("female_fragout") : get_sfx("male_fragout")
-		else if(ismonkey(user))
-			nade_sound = sound('sound/voice/monkey_scream.ogg')
-		if(nade_sound)
-			playsound(user, nade_sound, 35)
-
 	var/mob/living/carbon/C = user
 	if(istype(C) && !C.throw_mode)
 		C.toggle_throw_mode(THROW_MODE_NORMAL)

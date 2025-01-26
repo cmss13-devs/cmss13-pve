@@ -5,20 +5,20 @@
 		alert("Invalid mob")
 		return
 
-	var/rank_list = list("Custom", "Weyland-Yutani") + RoleAuthority.roles_by_name
+	var/rank_list = list("Custom", "Weyland-Yutani") + GLOB.RoleAuthority.roles_by_name
 
 	var/newrank = tgui_input_list(usr, "Select new rank for [H]", "Change the mob's rank and skills", rank_list)
 	if (!newrank)
 		return
-	if(!H)
+	if(QDELETED(H))
 		return
-	var/obj/item/card/id/I = H.wear_id
+	var/obj/item/card/id/I = H.get_idcard()
 
-	if(RoleAuthority.roles_by_name[newrank])
-		var/datum/job/J = RoleAuthority.roles_by_name[newrank]
+	if(GLOB.RoleAuthority.roles_by_name[newrank])
+		var/datum/job/J = GLOB.RoleAuthority.roles_by_name[newrank]
 		H.comm_title = J.get_comm_title()
 		H.set_skills(J.get_skills())
-		if(istype(I))
+		if(I)
 			I.access = J.get_access()
 			I.rank = J.title
 			I.assignment = J.disp_title
@@ -44,39 +44,39 @@
 				H.faction = FACTION_WY
 				H.faction_group = FACTION_LIST_WY
 
-				var/newskillset = tgui_input_list(usr, "Select a skillset", "Skill Set", (list("Keep Skillset") +RoleAuthority.roles_by_name))
+				var/newskillset = tgui_input_list(usr, "Select a skillset", "Skill Set", (list("Keep Skillset") +GLOB.RoleAuthority.roles_by_name))
 				if(!newskillset || newskillset == "Keep Skillset")
 					return
 
-				if(!H)
+				if(QDELETED(H))
 					return
 
-				var/datum/job/J = RoleAuthority.roles_by_name[newskillset]
+				var/datum/job/J = GLOB.RoleAuthority.roles_by_name[newskillset]
 				H.set_skills(J.get_skills())
 
 			if("Custom")
 				var/newcommtitle = input("Write the custom title appearing on comms chat (e.g. Spc)", "Comms title") as null|text
 				if(!newcommtitle)
 					return
-				if(!H)
+				if(QDELETED(H))
 					return
 
 				H.comm_title = newcommtitle
 
-				if(!istype(I) || I != H.wear_id)
+				if(!I || I != H.get_idcard())
 					to_chat(usr, "The mob has no id card, unable to modify ID and chat title.")
 				else
 					var/newchattitle = input("Write the custom title appearing in chat (e.g. SGT)", "Chat title") as null|text
 					if(!newchattitle)
 						return
-					if(!H || I != H.wear_id)
+					if(QDELETED(H) || I != H.get_idcard())
 						return
 
 					I.paygrade = newchattitle
 					var/IDtitle = input("Write the custom title on your ID (e.g. Squad Specialist)", "ID title") as null|text
 					if(!IDtitle)
 						return
-					if(!H || I != H.wear_id)
+					if(QDELETED(H) || I != H.get_idcard())
 						return
 
 					I.rank = IDtitle
@@ -88,17 +88,17 @@
 					new_faction = FACTION_NEUTRAL
 				H.faction = new_faction
 
-				var/newskillset = tgui_input_list(usr, "Select a skillset", "Skill Set", RoleAuthority.roles_by_name)
+				var/newskillset = tgui_input_list(usr, "Select a skillset", "Skill Set", GLOB.RoleAuthority.roles_by_name)
 				if(!newskillset)
 					return
 
-				if(!H)
+				if(QDELETED(H))
 					return
 
-				var/datum/job/J = RoleAuthority.roles_by_name[newskillset]
+				var/datum/job/J = GLOB.RoleAuthority.roles_by_name[newskillset]
 				H.set_skills(J.get_skills())
 
-/client/proc/cmd_admin_dress(mob/M)
+/client/proc/cmd_admin_dress(mob/M in GLOB.mob_list)
 	set category = null
 	set name = "Select Equipment"
 
@@ -151,19 +151,19 @@
 
 //note: when adding new dresscodes, on top of adding a proper skills_list, make sure the ID given has
 //a rank that matches a job title unless you want the human to bypass the skill system.
-/proc/arm_equipment(mob/living/carbon/human/M, dresscode, randomise = FALSE, count_participant = FALSE, client/mob_client, show_job_gear = TRUE)
+/proc/arm_equipment(mob/living/carbon/human/M, dresscode, randomise = FALSE, count_participant = FALSE, client/mob_client, show_job_gear = TRUE, late_join)
 	if(ispath(dresscode))
 		if(!GLOB.gear_path_presets_list)
 			CRASH("arm_equipment !gear_path_presets_list")
 		if(!GLOB.gear_path_presets_list[dresscode])
 			CRASH("arm_equipment !gear_path_presets_list[dresscode]")
-		GLOB.gear_path_presets_list[dresscode].load_preset(M, randomise, count_participant, mob_client, show_job_gear)
+		GLOB.gear_path_presets_list[dresscode].load_preset(M, randomise, count_participant, mob_client, show_job_gear, late_join)
 	else
 		if(!GLOB.gear_name_presets_list)
 			CRASH("arm_equipment !gear_path_presets_list")
 		if(!GLOB.gear_name_presets_list[dresscode])
 			CRASH("arm_equipment !gear_path_presets_list[dresscode]")
-		GLOB.gear_name_presets_list[dresscode].load_preset(M, randomise, count_participant, mob_client, show_job_gear)
+		GLOB.gear_name_presets_list[dresscode].load_preset(M, randomise, count_participant, mob_client, show_job_gear, late_join)
 
 	if(M.faction)
 		M.check_event_info(M.faction)

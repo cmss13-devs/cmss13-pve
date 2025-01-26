@@ -76,21 +76,32 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 
 /////////////////////////////
-//    Poddoors/shutters    //
+//         PODDDOORS       //
 /////////////////////////////
 /obj/structure/machinery/door/poddoor/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	. = ..()
 	if(!.)
-		return
-
-	if(!(stat & NOPOWER))
-		return
-
-	if(operating)
-		return
+		return INFINITY
 
 	if(unacidable)
-		return
+		return INFINITY
+
+	if(!(stat & NOPOWER))
+		return INFINITY
+
+	return DOOR_PENALTY
+
+
+/////////////////////////////
+//         SHUTTERS        //
+/////////////////////////////
+/obj/structure/machinery/door/poddoor/shutters/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return INFINITY
+
+	if(unacidable)
+		return INFINITY
 
 	return DOOR_PENALTY
 
@@ -104,13 +115,26 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 		return
 
 	if(locked || welded || isElectrified())
-		return INFINITY
+		return LOCKED_DOOR_PENALTY
 
 	if(isfacehugger(X))
 		return -1 // We LOVE going under doors!
 
 	return DOOR_PENALTY
 
+////////////////////////////////////////
+//         AIRLOCK ASSEMBLIES         //
+////////////////////////////////////////
+
+/obj/structure/airlock_assembly/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	if(isfacehugger(X))
+		return -1 // We LOVE going under doors!
+
+	return DOOR_PENALTY
 
 /////////////////////////////
 //         TABLES          //
@@ -127,8 +151,34 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 //          MOBS           //
 /////////////////////////////
 /mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
-	return stat == CONSCIOUS
+//	if(X.target_unconscious)
+//		return TRUE
+	return X.target_unconscious || stat == CONSCIOUS && !(locate(/datum/effects/crit) in effects_list)
 
+/////////////////////////////
+//         CARBON          //
+/////////////////////////////
+/mob/living/carbon/proc/ai_can_target(mob/living/carbon/xenomorph/X)
+	if(!ai_check_stat(X))
+		return FALSE
+
+	if(X.can_not_harm(src))
+		return FALSE
+
+	if(alpha <= 45 && get_dist(X, src) > 2)
+		return FALSE
+
+	if(isfacehugger(X))
+		if(status_flags & XENO_HOST)
+			return FALSE
+
+		if(istype(wear_mask, /obj/item/clothing/mask/facehugger))
+			return FALSE
+
+	else if(HAS_TRAIT(src, TRAIT_NESTED))
+		return FALSE
+
+	return TRUE
 
 /////////////////////////////
 //         HUMANS         //
@@ -150,13 +200,9 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 /mob/living/carbon/human/ai_can_target(mob/living/carbon/xenomorph/X)
 	. = ..()
-	if(!.)
-		return FALSE
 
 	if(species.flags & IS_SYNTHETIC)
 		return FALSE
-
-	return TRUE
 
 /mob/living/carbon/human/ai_check_stat(mob/living/carbon/xenomorph/X)
 	. = ..()
@@ -221,6 +267,16 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return SENTRY_PENALTY
 
+/////////////////////////////
+//       STRUCTURE         //
+/////////////////////////////
+/// Allows this xenomorph to climb most structures that can be climbed, if they are capable of it.
+/obj/structure/xeno_ai_act(mob/living/carbon/xenomorph/X)
+	if(X.ai_movement_handler.do_climb_structures && can_climb(X))
+		do_climb(X)
+	else
+		X.do_click(src, "", list())
+	return TRUE
 
 /////////////////////////////
 //      WINDOW FRAME       //

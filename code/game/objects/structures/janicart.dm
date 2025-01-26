@@ -1,8 +1,8 @@
 /obj/structure/janitorialcart
 	name = "janitorial cart"
-	desc = "The ultimate in janitorial carts! Has space for water, mops, signs, trash bags, and more!"
+	desc = "A blue janitorial cart that has space for water, mops, signs, and trash bags."
 	icon = 'icons/obj/janitor.dmi'
-	icon_state = "cart"
+	icon_state = "cart_blue"
 	anchored = FALSE
 	density = TRUE
 	drag_delay = 1
@@ -16,6 +16,9 @@
 	var/obj/item/reagent_container/glass/bucket/janibucket/mybucket
 	var/signs = 0 //maximum capacity hardcoded below
 
+/obj/structure/janitorialcart/brown
+	desc = "A brown janitorial cart that has space for water, mops, signs, and trash bags."
+	icon_state = "cart_brown"
 
 /obj/structure/janitorialcart/New()
 	..()

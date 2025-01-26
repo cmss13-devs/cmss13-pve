@@ -8,7 +8,7 @@
 	entry_message_body = "You have the <a href='"+WIKI_PLACEHOLDER+"'>equipment and skill</a> to build fortifications, reroute power lines, and bunker down. Your squaddies will look to you when it comes to construction in the field of battle."
 
 /datum/job/marine/engineer/set_spawn_positions(count)
-	for(var/datum/squad/sq in RoleAuthority.squads)
+	for(var/datum/squad/sq in GLOB.RoleAuthority.squads)
 		if(sq)
 			sq.max_engineers = engi_slot_formula(count)
 
@@ -21,7 +21,7 @@
 		total_positions_so_far = slots
 
 	if(latejoin)
-		for(var/datum/squad/sq in RoleAuthority.squads)
+		for(var/datum/squad/sq in GLOB.RoleAuthority.squads)
 			if(sq)
 				sq.max_engineers = slots
 
@@ -31,10 +31,6 @@
 	title = JOB_WO_SQUAD_ENGINEER
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/wo/marine/engineer
-
-AddTimelock(/datum/job/marine/engineer, list(
-	JOB_SQUAD_ROLES = 1 HOURS
-))
 
 /obj/effect/landmark/start/marine/engineer
 	name = JOB_SQUAD_ENGI

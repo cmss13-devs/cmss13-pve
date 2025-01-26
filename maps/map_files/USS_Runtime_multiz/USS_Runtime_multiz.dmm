@@ -1,74 +1,52 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "c" = (
 /obj/effect/landmark/start/marine/tl,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "d" = (
 /obj/structure/ladder{
 	height = 2;
 	id = "run1"
 	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "e" = (
 /obj/effect/landmark/start/researcher,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "g" = (
 /obj/effect/landmark/start/intel,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "h" = (
 /obj/effect/landmark/start/pilot,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "j" = (
 /obj/effect/landmark/start/liaison,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "k" = (
 /obj/effect/landmark/start/captain,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "m" = (
 /obj/effect/projector{
 	name = "runtime_down";
 	vector_z = -1
 	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "n" = (
 /obj/effect/landmark/start/executive,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "o" = (
 /obj/effect/landmark/start/marine/engineer,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "p" = (
 /obj/structure/stairs{
@@ -79,129 +57,80 @@
 	name = "runtime_up";
 	vector_z = 1
 	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "q" = (
 /obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "r" = (
 /obj/effect/landmark/start/crew_chief,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
-/area/event)
-"s" = (
-/obj/structure/stairs{
-	dir = 1
-	},
-/obj/structure/stairs{
-	dir = 1
-	},
-/obj/effect/step_trigger/teleporter_vector{
-	name = "runtime_down";
-	vector_z = -1
-	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "u" = (
 /obj/effect/landmark/start/requisition,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "v" = (
 /obj/effect/landmark/start/police,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "w" = (
 /obj/effect/landmark/start/cargo,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "x" = (
 /obj/effect/landmark/start/maint,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "y" = (
 /obj/effect/landmark/start/working_joe,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "z" = (
 /obj/effect/landmark/start/marine/spec,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "A" = (
 /obj/effect/projector{
 	name = "runtime_up";
 	vector_z = 1
 	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "B" = (
 /obj/structure/ladder{
 	height = 2;
 	id = "run2"
 	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "C" = (
 /obj/effect/landmark/start/doctor,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "D" = (
 /obj/effect/landmark/start/marine/smartgunner,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "E" = (
 /obj/effect/landmark/start/professor,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "F" = (
 /turf/closed/wall/r_wall/bunker,
 /area/event)
 "G" = (
 /obj/effect/landmark/start/marine/leader,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "H" = (
 /obj/effect/landmark/start/marine,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "I" = (
 /obj/effect/landmark/start/synthetic,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "J" = (
 /obj/structure/stairs{
@@ -212,48 +141,34 @@
 	name = "runtime_down";
 	vector_z = -1
 	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "L" = (
 /obj/structure/ladder{
 	height = 1;
 	id = "run2"
 	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "M" = (
 /obj/effect/landmark/late_join,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "N" = (
 /obj/effect/landmark/start/senior,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "O" = (
 /obj/effect/landmark/start/marine/medic,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "P" = (
 /obj/effect/landmark/start/engineering,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "Q" = (
 /obj/effect/landmark/start/nurse,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "R" = (
 /obj/structure/stairs{
@@ -263,9 +178,7 @@
 	name = "runtime_down";
 	vector_z = -1
 	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "S" = (
 /obj/structure/stairs{
@@ -275,48 +188,34 @@
 	name = "runtime_up";
 	vector_z = 1
 	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "T" = (
 /obj/effect/landmark/start/warrant,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "V" = (
 /obj/structure/ladder{
 	height = 1;
 	id = "run1"
 	},
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "W" = (
 /obj/effect/landmark/start/bridge,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "X" = (
 /obj/effect/landmark/start/chef,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "Y" = (
 /obj/effect/landmark/start/warden,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 "Z" = (
 /obj/effect/landmark/start/otech,
-/turf/open/floor/almayer{
-	icon_state = "plating"
-	},
+/turf/open/floor/almayer/plating,
 /area/event)
 
 (1,1,1) = {"
@@ -728,8 +627,8 @@ a
 a
 F
 R
-s
-s
+R
+R
 m
 m
 F

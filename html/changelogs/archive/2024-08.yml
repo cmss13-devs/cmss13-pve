@@ -1,0 +1,132 @@
+2024-08-01:
+  Doubleumc:
+  - ui: reduced size of Discord button
+2024-08-06:
+  Doubleumc:
+  - rscadd: Added Buckled, Handcuffed and Legcuffed screen alerts
+  - balance: Due to backend change, all KO/KD/Stuns may behave differently timing
+      wise. This is of course subject to adjustments.
+  - balance: Knockdowns are not inherently incapacitating anymore and many sources
+      of it have been updated to also stun to make up for it.
+  - bugfix: KO/KD/Stuns do not artificially and randomly ''stack'' due to incorrect
+      timer offset calculation anymore.
+  - bugfix: Stuns now correctly apply Stun reduction values instead of Knockdown reductions.
+  - bugfix: Crawling can now be interrupted by a normal move, if you are fit enough
+      to do so.
+  - bugfix: Dazed screen effect now applies immediately
+  - bugfix: Stuttering now starts properly when dazed
+  - rscdel: Removed an old, goofy and unused decade old horse mask
+  - rscadd: maintenance stations stun when exiting like closets
+  - bugfix: converts flash, flashbang to TG effect system, fixing issue(s)
+  - refactor: complete overhaul of just about every TGUI interface
+  - rscadd: added parachutes
+  - rscadd: added holocards to the squad hud
+  - rscadd: falling out a dropship throws you to the surface
+  Merrgear:
+  - rscadd: 'added more cigarette options in the loadout, along with a golden zippo
+
+      :cl:'
+2024-08-10:
+  Doubleumc:
+  - qol: Adds the ability to hide your action buttons
+  - bugfix: Fixed 'hidden' action buttons being shown to observing players.
+  - qol: Made any observers transfer over when a Xenomorph evolves/de-evolves.
+  - rscadd: Added 'observe' functionality to Xenomorphs, allowing observers to view
+      the target's UI.
+  - rscadd: Made observing a player also show their action buttons.
+  - spellcheck: Made observers see the marine version of CAS warnings, rather than
+      the xeno one.
+  - qol: Made open TGUI windows transfer over when a xeno player evolves.
+  - bugfix: Fixed observing a monkey/farwa/stok/etc. locking the camera onto it.
+  - bugfix: Observer minimap should no longer occasionally show wrong / no map.
+  - code_imp: environmental reverb applies more reliably and only to positional sounds
+  - bugfix: Notifications should no longer emit light.
+  - bugfix: Sprite-click shots onto Xenos are no longer affected by limb-targeting
+      penalty, because it was an accuracy debuff when there is no inherent benefit
+      to targeting Xeno limbs.
+  - rscadd: Locking down dropship's doors closes them before locking.
+  - bugfix: Fix handling of sentry_computer deletion
+  - refactor: Refactored the overlay_lighting component to better handle objects deleting
+  - bugfix: Fix putting lights in bags somereason keeping the light on
+  - refactor: sentry laptop now uses camera manager component
+  - bugfix: less lag from xenos pathfinding unreachable targets
+  - rscadd: Added GM button to toggle AI xeno weeding
+  Kitsunemitsu:
+  - rscadd: Added 3 more railgun types
+  - balance: Railgun now changes it's stats based off the altitude
+  sunofang:
+  - rscadd: Due to budget increases, Close Air Support now has ammo.
+  - admin: Added a fire support menu for GM's to use.
+2024-08-11:
+  private-tristan:
+  - balance: M56D has been buffed with more damage, accuracy, and firerate.
+2024-08-18:
+  BonniePandora:
+  - rscadd: Adds a Golden-Arrow specific sub-set of the smartgunners sidearm belt
+  - rscadd: Adds the above to the corresponding lockers, both on the standard & FORECON
+      smartgunner ones
+  Doubleumc:
+  - rscadd: Added 1 hour squad role timelocks for PltSgt, PltCo
+  - admin: '"Start Round" can start a delayed round'
+  nauticall:
+  - rscadd: Added a quick "Command Announcement" button for Game Masters, available
+      in the GM tab.
+  sunofang:
+  - admin: Spawn menu no longer populates by default, and doesnt cause you to lag.
+  xDanilcusx:
+  - bugfix: AI can track through electrified/locked/welded doors
+  - code_imp: AI now doesn't swipe on poddoors and shutters, opening them instead
+2024-08-19:
+  Doubleumc:
+  - bugfix: fixed WeaponStats TGUI
+2024-08-20:
+  Doubleumc:
+  - bugfix: Fixed the 88 Mod 4 pistol's holster sprite.
+  - admin: bitfields for MODE_NO_XENO_EVOLVE, MODE_HARDCORE_PERMA, and MODE_NO_JOIN_AS_XENO
+      now work
+2024-08-21:
+  DexterDude:
+  - rscadd: Added something
+2024-08-22:
+  BonniePandora:
+  - maptweak: Expanded the galley of the Golden Arrow.
+2024-08-24:
+  BonniePandora:
+  - rscadd: Added various condiment packets of powedered juices, milk & egg to the
+      code
+  - rscadd: Added corresponding reactions for the new powdered substances where needed
+  - rscadd: Sprites for the condiment packets, some taken from Bay, others edited
+      by me from Bay sprites
+  - qol: MRE's now contain a juice packet alongside their typical contents
+  - maptweak: Replaces the magic freezer and it's perishable contents with a locker
+      full of the non-perishable replacements
+  DexterDude:
+  - rscadd: Added something
+  private-tristan:
+  - rscadd: ports TG strip menu
+2024-08-26:
+  sunofang:
+  - admin: Added infinite weather options.
+2024-08-27:
+  Max-023:
+  - rscadd: Helmet cover item, added to the squad prep vendor
+  - imageadd: Helmet cover sprites
+  Meatstuff882:
+  - rscadd: 'The utility vendor now has knives in it.
+
+      :cl:'
+2024-08-29:
+  AndroBetel:
+  - rscadd: Water now helps you regen blood.
+  - rscadd: Vomiting now removes some reagents, helping negate OD effects.
+  - balance: Vulture no longer has minimum range requirements to hit bugs.
+  - rscadd: Adds restricted underwear.
+  Doubleumc:
+  - code_imp: changed slotting - new players and players that got skipped previous
+      rounds have a higher chance to get a slot
+  - code_imp: AI caches valid targets for better performance
+  Merrgear:
+  - qol: made crit less boring
+  - code_imp: 'changed the crit code to not knock you unconcious
+
+      :cl:'

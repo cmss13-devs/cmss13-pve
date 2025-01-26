@@ -8,6 +8,9 @@
 	var/home_locate_range = 15
 	var/turf/home_turf
 
+	/// Should the alien try climbing barricades and other structures, if able?
+	var/do_climb_structures = FALSE
+
 /datum/xeno_ai_movement/New(mob/living/carbon/xenomorph/parent)
 	. = ..()
 	if(!parent)
@@ -139,7 +142,7 @@
 			if(istype(touching_turf, /turf/closed/shuttle))
 				continue
 
-			if(get_dir(potential_nest, touching_turf) in diagonals)
+			if(get_dir(potential_nest, touching_turf) in GLOB.diagonals)
 				continue
 
 			potential_weeded_wall = touching_turf

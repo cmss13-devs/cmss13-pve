@@ -29,7 +29,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 // Spawn stuff
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
-#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
+#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
 #define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
@@ -117,7 +117,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	current_submenus = list()
 
 	game_master_phone = new(null)
-	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DO_NOT_DISTURB_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
+	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DND_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
 
 	game_master_client.click_intercept = src
 
@@ -342,7 +342,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 					qdel(object)
 				return TRUE
 
-			var/spawning_xeno_type = RoleAuthority.get_caste_by_text(selected_xeno)
+			var/spawning_xeno_type = GLOB.RoleAuthority.get_caste_by_text(selected_xeno)
 
 			if(!spawning_xeno_type)
 				to_chat(user, SPAN_NOTICE(SPAN_BOLD("Unable to find xeno type by name: [selected_xeno]")))

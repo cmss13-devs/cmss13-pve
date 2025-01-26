@@ -26,7 +26,7 @@
 /datum/component/iff_fire_prevention/proc/check_firing_lane(obj/firing_weapon, obj/projectile/projectile_to_fire, atom/target, mob/living/user)
 	SIGNAL_HANDLER
 
-	var/angle = get_angle(user, target)
+	var/angle = Get_Angle(user, target)
 
 	var/range_to_check = user.get_maximum_view_range()
 
@@ -37,7 +37,7 @@
 	if(!starting_turf || !extended_target_turf)
 		return COMPONENT_CANCEL_GUN_BEFORE_FIRE
 
-	var/list/checked_turfs = getline2(starting_turf, extended_target_turf)
+	var/list/checked_turfs = get_line(starting_turf, extended_target_turf)
 
 	//Don't shoot yourself, thanks
 	if(target == user)

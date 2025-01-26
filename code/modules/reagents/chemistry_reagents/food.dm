@@ -54,7 +54,7 @@
 	flags = REAGENT_NO_GENERATION
 
 /datum/reagent/nutriment/grown/vegetable
-	name = "Vegetable"
+	name = "Vegetables"
 	id = "vegetable"
 	description = "Some sort of vegetable."
 	flags = REAGENT_NO_GENERATION
@@ -150,7 +150,7 @@
 	chemclass = CHEM_CLASS_RARE
 	properties = list(PROPERTY_HYPERTHERMIC = 1)
 
-/datum/reagent/condensedcapsaicin/reaction_mob(mob/living/M, method=TOUCH, volume)
+/datum/reagent/condensedcapsaicin/reaction_mob(mob/living/M, method=TOUCH, volume, permeable)
 	if(!istype(M, /mob/living) || has_species(M,"Horror"))
 		return
 
@@ -184,7 +184,7 @@
 	id = "sodiumchloride"
 	description = "A salt made of sodium chloride. Commonly used to season food."
 	reagent_state = SOLID
-	color = "#FFFFFF" // rgb: 255,255,255
+	color = COLOR_WHITE
 	chemfiresupp = TRUE
 	intensitymod = 0.1
 	burncolor = "#ffff00"
@@ -227,7 +227,7 @@
 	id = "sprinkles"
 	description = "Multi-colored little bits of sugar, commonly found on donuts. Loved by cops."
 	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#FF00FF" // rgb: 255, 0, 255
+	color = COLOR_MAGENTA
 	properties = list(PROPERTY_NUTRITIOUS = 2)
 	flags = REAGENT_NO_GENERATION
 
@@ -288,7 +288,7 @@
 	description = "The most widely consumed staple food on Earth. Rice is the most important grain with regard to human nutrition and caloric intake."
 	reagent_state = SOLID
 	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#FFFFFF" // rgb: 0, 0, 0
+	color = COLOR_WHITE
 	properties = list(PROPERTY_NUTRITIOUS = 2)
 
 /datum/reagent/cherryjelly
@@ -304,6 +304,86 @@
 	name = "Honey"
 	id = "honey"
 	description = "Honey is a natural sweet, viscous food substance composed of mainly fructose and glucose."
-	color = "#FFFF00"
+	color = COLOR_YELLOW
 	chemclass = CHEM_CLASS_RARE
+	flags = REAGENT_NO_GENERATION
+
+/datum/reagent/dehydrated_juice
+	name = "Mystery Juice Powder"
+	id = "dehydrated_juice"
+	description = "Powderized fruit-juice ready to be mixed with water. Smells of artificial bananas."
+	reagent_state = SOLID
+	color = "#863333" // rgb: 175, 175, 0
+	chemclass = CHEM_CLASS_COMMON
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+	flags = REAGENT_NO_GENERATION
+
+/datum/reagent/dehydrated_orange_juice
+	name = "Orange Juice Powder"
+	id = "dehydrated_orange_juice"
+	description = "Powderized orange-juice ready to be mixed with water. Smells of, surprise surprise, oranges."
+	reagent_state = SOLID
+	color = "#E78108" // rgb: 231, 129, 8
+	chemclass = CHEM_CLASS_COMMON
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+	flags = REAGENT_NO_GENERATION
+
+/datum/reagent/dehydrated_apple_juice
+	name = "Apple Juice Powder"
+	id = "dehydrated_apple_juice"
+	description = "Powderized apple-juice ready to be mixed with water. Smells of, surprise surprise, apples."
+	reagent_state = SOLID
+	color = "#365E30" // rgb: 54, 94, 48
+	chemclass = CHEM_CLASS_COMMON
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+	flags = REAGENT_NO_GENERATION
+
+/datum/reagent/dehydrated_watermelon_juice
+	name = "Watermelon Juice Powder"
+	id = "dehydrated_watermelon_juice"
+	description = "Powderized watermelon-juice ready to be mixed with water. Smells of, surprise surprise, watermelons."
+	reagent_state = SOLID
+	color = "#863333" // rgb: 134, 51, 51
+	chemclass = CHEM_CLASS_COMMON
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+	flags = REAGENT_NO_GENERATION
+
+/datum/reagent/dehydrated_grape_juice
+	name = "Grape Juice Powder"
+	id = "dehydrated_grape_juice"
+	description = "Powderized grape-juice ready to be mixed with water. Smells of, surprise surprise, grapes."
+	reagent_state = SOLID
+	color = "#863333" // rgb: 134, 51, 51
+	chemclass = CHEM_CLASS_COMMON
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+	flags = REAGENT_NO_GENERATION
+
+/datum/reagent/dehydrated_pineapple_juice
+	name = "Pineapple Juice Powder"
+	id = "dehydrated_pineapple_juice"
+	description = "Powderized pineapple-juice ready to be mixed with water. Smells of, surprise surprise, pineapples."
+	reagent_state = SOLID
+	color = "#FFC000" // rgb: 255, 192, 0
+	chemclass = CHEM_CLASS_COMMON
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+	flags = REAGENT_NO_GENERATION
+
+/datum/reagent/dehydrated_egg_powder
+	name = "Powdered Egg"
+	id = "dehydrated_egg_powder"
+	description = "Powderized egg-whites and egg-yolk ready to be mixed with water."
+	reagent_state = SOLID
+	color = "#FFFFFF" // rgb: 255,255,255
+	chemclass = CHEM_CLASS_COMMON
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+	flags = REAGENT_NO_GENERATION
+
+/datum/reagent/dehydrated_milk_powder
+	name = "Dehydrated Milk Powder"
+	id = "dehydrated_milk_powder"
+	description = "Dehydrated milk-product powder waiting to be mixed with water."
+	reagent_state = SOLID
+	color = "#DFDFDF" // rgb: 223, 223, 223
+	chemclass = CHEM_CLASS_COMMON
+	properties = list(PROPERTY_NUTRITIOUS = 2)
 	flags = REAGENT_NO_GENERATION

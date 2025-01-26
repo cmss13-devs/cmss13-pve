@@ -29,16 +29,7 @@
 	min_n2 = 0
 	max_n2 = 0
 	unsuitable_atoms_damage = 15
-	var/corpse = /obj/effect/landmark/corpsespawner/realpirate
-	var/weapon1 = /obj/item/weapon/energy/sword/pirate
 
 	faction = FACTION_PIRATE
 
-/mob/living/simple_animal/hostile/pirate/death()
-	..()
-	if(corpse)
-		new corpse (src.loc)
-	if(weapon1)
-		new weapon1 (src.loc)
-	qdel(src)
-	return
+

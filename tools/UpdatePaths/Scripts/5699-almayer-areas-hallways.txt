@@ -1,0 +1,9 @@
+/area/almayer/hallways/vehiclehangar : /area/almayer/hallways/lower/vehiclehangar{@OLD}
+/area/almayer/hallways/exoarmor : /area/almayer/hallways/lower/vehiclehangar{@OLD}
+/area/almayer/hallways/repair_bay : /area/almayer/hallways/lower/repair_bay{@OLD}
+/area/almayer/hallways/starboard_umbilical : /area/almayer/hallways/lower/starboard_umbilical{@OLD}
+/area/almayer/hallways/port_umbilical : /area/almayer/hallways/lower/port_umbilical{@OLD}
+/area/almayer/hallways/aft_hallway : /area/almayer/hallways/upper/aft_hallway{@OLD}
+/area/almayer/hallways/stern_hallway : /area/almayer/hallways/upper/stern_hallway{@OLD}
+/area/almayer/hallways/port_hallway : /area/almayer/hallways/lower/port_midship_hallway{@OLD}
+/area/almayer/hallways/starboard_hallway : /area/almayer/hallways/lower/starboard_midship_hallway{@OLD}

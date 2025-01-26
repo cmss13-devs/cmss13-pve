@@ -41,7 +41,7 @@
 	if(Proj.ammo.damage_type == HALLOSS || Proj.damage <= 0 || ammo_flags == AMMO_ENERGY)
 		return 0
 
-	health -= Proj.damage * 0.3
+	health -= Proj.damage * 0.02
 	..()
 	healthcheck()
 	return 1
@@ -62,7 +62,7 @@
 		tforce = 40
 	else if(isobj(AM))
 		var/obj/item/I = AM
-		tforce = I.throwforce
+		tforce = I.throwforce/10 //Adjust higher if needed to stop knife-throwing bampots
 	health = max(0, health - tforce)
 	healthcheck()
 
@@ -153,6 +153,10 @@
 					M.apply_damage(20)
 					health -= 50
 
+			M.attack_log += text("\[[time_stamp()]\] <font color='orange'>was slammed against [src] by [key_name(user)]</font>")
+			user.attack_log += text("\[[time_stamp()]\] <font color='red'>slammed [key_name(M)] against [src]</font>")
+			msg_admin_attack("[key_name(user)] slammed [key_name(M)] against [src] at [get_area_name(M)]", M.loc.x, M.loc.y, M.loc.z)
+
 			healthcheck(1, 1, M) //The person thrown into the window literally shattered it
 		return
 
@@ -168,12 +172,23 @@
 			SPAN_NOTICE("You cut through [src] with [W]."))
 			cut_grille()
 		return
+
+	if(istype(W, /obj/item/attachable/bayonet) && get_dist(src, user) < 2)
+		user.visible_message(SPAN_NOTICE("[user] starts cutting through [src] with [W]."),
+		SPAN_NOTICE("You start cutting through [src] with [W]."))
+		playsound(src.loc, 'sound/items/Wirecutter.ogg', 25, 1)
+		if(do_after(user, 210 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+			playsound(loc, 'sound/items/Wirecutter.ogg', 25, 1)
+			user.visible_message(SPAN_NOTICE("[user] cuts through [src] with [W]."),
+			SPAN_NOTICE("You cut through [src] with [W]."))
+			cut_grille()
+		return
 	else
 		switch(W.damtype)
 			if("fire")
-				health -= W.force
+				health -= W.force * W.demolition_mod
 			if("brute")
-				health -= W.force * 0.1
+				health -= W.force * W.demolition_mod * 0.1
 		healthcheck(1, 1, user, W)
 		..()
 
@@ -210,7 +225,7 @@
 //This proc is used to update the icons of nearby windows.
 /obj/structure/fence/proc/update_nearby_icons()
 	update_icon()
-	for(var/direction in cardinal)
+	for(var/direction in GLOB.cardinals)
 		for(var/obj/structure/fence/W in get_step(src, direction))
 			W.update_icon()
 
@@ -231,6 +246,6 @@
 
 /obj/structure/fence/fire_act(exposed_temperature, exposed_volume)
 	if(exposed_temperature > T0C + 800)
-		health -= round(exposed_volume / 100)
+		health -= floor(exposed_volume / 100)
 		healthcheck(0) //Don't make hit sounds, it's dumb with fire/heat
 	..()

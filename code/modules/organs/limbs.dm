@@ -20,7 +20,7 @@
 	var/display_name
 
 	var/list/datum/wound/wounds = list()
-	var/number_wounds = 0 // cache the number of wounds, which is NOT wounds.len!
+	var/number_wounds = 0 // cache the number of wounds, which is NOT length(wounds)!
 
 	var/tmp/perma_injury = 0
 
@@ -349,9 +349,9 @@
 				possible_points += parent
 			if(children)
 				possible_points += children
-			if(forbidden_limbs.len)
+			if(length(forbidden_limbs))
 				possible_points -= forbidden_limbs
-			if(possible_points.len)
+			if(length(possible_points))
 				//And pass the damage around, but not the chance to cut the limb off.
 				var/obj/limb/target = pick(possible_points)
 				if(brute_reduced_by == -1)
@@ -368,8 +368,9 @@
 
 	//If limb was damaged before and took enough damage, try to cut or tear it off
 	var/no_perma_damage = owner.status_flags & NO_PERMANENT_DAMAGE
-	if(previous_brute > 0 && !is_ff && body_part != BODY_FLAG_CHEST && body_part != BODY_FLAG_GROIN && !no_limb_loss && !no_perma_damage)
-		if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier))
+	var/no_bone_break = owner.chem_effect_flags & CHEM_EFFECT_RESIST_FRACTURE
+	if(previous_brute > 0 && !is_ff && body_part != BODY_FLAG_CHEST && body_part != BODY_FLAG_GROIN && !no_limb_loss && !no_perma_damage && !no_bone_break)
+		if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier) && (status & LIMB_BROKEN))
 			var/cut_prob = brute/max_damage * 5
 			if(prob(cut_prob))
 				limb_delimb(damage_source)
@@ -476,20 +477,20 @@ This function completely restores a damaged organ to perfect condition.
 	if(!(status & LIMB_SPLINTED_INDESTRUCTIBLE) && (status & LIMB_SPLINTED) && damage > 5 && prob(10 + damage * 2.5)) //If they have it splinted, the splint won't hold.
 		status &= ~LIMB_SPLINTED
 		playsound(get_turf(loc), 'sound/items/splintbreaks.ogg', 20)
-		to_chat(owner, SPAN_DANGER("The splint on your [display_name] comes apart!"))
+		to_chat(owner, SPAN_HIGHDANGER("The splint on your [display_name] comes apart!"))
 		owner.pain.apply_pain(PAIN_BONE_BREAK_SPLINTED)
 		owner.update_med_icon()
 
 	// first check whether we can widen an existing wound
 	var/datum/wound/W
-	if(wounds.len > 0 && prob(max(50+(number_wounds-1)*10,90)))
+	if(length(wounds) > 0 && prob(max(50+(number_wounds-1)*10,90)))
 		if((type == CUT || type == BRUISE) && damage >= 5)
 			//we need to make sure that the wound we are going to worsen is compatible with the type of damage...
 			var/compatible_wounds[] = new
 			for(W in wounds)
 				if(W.can_worsen(type, damage)) compatible_wounds += W
 
-			if(compatible_wounds.len)
+			if(length(compatible_wounds))
 				W = pick(compatible_wounds)
 				W.open_wound(damage)
 				if(type != BURN)
@@ -550,6 +551,7 @@ This function completely restores a damaged organ to perfect condition.
 
 
 /obj/limb/proc/remove_all_bleeding(external = FALSE, internal = FALSE)
+	SEND_SIGNAL(src, COMSIG_LIMB_STOP_BLEEDING, external, internal)
 	if(external)
 		for(var/datum/effects/bleeding/external/B in bleeding_effects_list)
 			qdel(B)
@@ -581,8 +583,9 @@ This function completely restores a damaged organ to perfect condition.
 	if(brute_dam || burn_dam)
 		return TRUE
 	if(knitting_time > 0)
-		return 1
-	return 0
+		return TRUE
+	update_wounds()
+	return FALSE
 
 /obj/limb/process()
 
@@ -651,7 +654,7 @@ This function completely restores a damaged organ to perfect condition.
 			//configurable regen speed woo, no-regen hardcore or instaheal hugbox, choose your destiny
 			heal_amt = heal_amt * CONFIG_GET(number/organ_regeneration_multiplier)
 			// amount of healing is spread over all the wounds
-			heal_amt = heal_amt / (wounds.len + 1)
+			heal_amt = heal_amt / (length(wounds) + 1)
 			// making it look prettier on scanners
 			heal_amt = round(heal_amt,0.1)
 
@@ -798,7 +801,7 @@ This function completely restores a damaged organ to perfect condition.
 		if(istype(E, /obj/limb/chest) || istype(E, /obj/limb/groin) || istype(E, /obj/limb/head))
 			continue
 		limbs_to_remove += E
-	if(limbs_to_remove.len)
+	if(length(limbs_to_remove))
 		var/obj/limb/L = pick(limbs_to_remove)
 		var/limb_name = L.display_name
 		L.droplimb(0, delete_limb)
@@ -955,7 +958,7 @@ This function completely restores a damaged organ to perfect condition.
 
 			if(organ)
 				//Throw organs around
-				var/lol = pick(cardinal)
+				var/lol = pick(GLOB.cardinals)
 				step(organ,lol)
 
 		owner.update_body() //Among other things, this calls update_icon() and updates our visuals.
@@ -964,7 +967,13 @@ This function completely restores a damaged organ to perfect condition.
 		// OK so maybe your limb just flew off, but if it was attached to a pair of cuffs then hooray! Freedom!
 		release_restraints()
 
-		if(vital) owner.death(cause)
+		if(vital)
+			var/mob/caused_mob
+			if(istype(cause, /mob))
+				caused_mob = cause
+			if(!istype(cause, /datum/cause_data))
+				cause = create_cause_data("lost vital limb", caused_mob)
+			owner.death(cause)
 
 /*
 			HELPERS
@@ -1094,7 +1103,7 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 
 	//if the chance was not set by what called fracture(), the endurance check is done instead
 	if(bonebreak_probability == null) //bone break chance is based on endurance, 25% for survivors, erts, 100% for most everyone else.
-		bonebreak_probability = 100 / Clamp(owner.skills?.get_skill_level(SKILL_ENDURANCE)-1,1,100) //can't be zero
+		bonebreak_probability = 100 / clamp(owner.skills?.get_skill_level(SKILL_ENDURANCE)-1,1,100) //can't be zero
 
 	var/list/bonebreak_data = list("bonebreak_probability" = bonebreak_probability)
 	SEND_SIGNAL(owner, COMSIG_HUMAN_BONEBREAK_PROBABILITY, bonebreak_data)
@@ -1415,7 +1424,6 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 	has_stump_icon = TRUE
 	splint_icon_amount = 4
 	bandage_icon_amount = 4
-	var/disfigured = 0 //whether the head is disfigured.
 
 	var/eyes_r
 	var/eyes_g
@@ -1453,25 +1461,6 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 							mob/attack_source = null,\
 							brute_reduced_by = -1, burn_reduced_by = -1)
 	. = ..()
-	if (!disfigured)
-		if (brute_dam > 50 || brute_dam > 40 && prob(50))
-			disfigure("brute")
-		if (burn_dam > 40)
-			disfigure("burn")
-
-/obj/limb/head/proc/disfigure(type = "brute")
-	if (disfigured)
-		return
-	if(type == "brute")
-		owner.visible_message(SPAN_DANGER("You hear a sickening cracking sound coming from \the [owner]'s face."), \
-		SPAN_DANGER("<b>Your face becomes an unrecognizible mangled mess!</b>"), \
-		SPAN_DANGER("You hear a sickening crack."))
-	else
-		owner.visible_message(SPAN_DANGER("[owner]'s face melts away, turning into a mangled mess!"), \
-		SPAN_DANGER("<b>Your face melts off!</b>"), \
-		SPAN_DANGER("You hear a sickening sizzle."))
-	disfigured = 1
-	owner.name = owner.get_visible_name()
 
 /obj/limb/head/reset_limb_surgeries()
 	for(var/zone in list("head", "eyes", "mouth"))
@@ -1514,7 +1503,7 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 /obj/limb/head/limb_delimb(damage_source)
 	var/obj/item/clothing/head/helmet/owner_helmet = owner.head
 
-	if(!istype(owner_helmet) || !owner.allow_gun_usage)
+	if(!istype(owner_helmet) || (issynth(owner) && !owner.allow_gun_usage))
 		droplimb(0, 0, damage_source)
 		return
 
@@ -1523,5 +1512,5 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 
 	owner.visible_message("[owner]'s [owner_helmet] goes flying off from the impact!", SPAN_USERDANGER("Your [owner_helmet] goes flying off from the impact!"))
 	owner.drop_inv_item_on_ground(owner_helmet)
-	INVOKE_ASYNC(owner_helmet, TYPE_PROC_REF(/atom/movable, throw_atom), pick(range(get_turf(loc), 1)), 1, SPEED_FAST)
+	INVOKE_ASYNC(owner_helmet, TYPE_PROC_REF(/atom/movable, throw_atom), pick(range(1, get_turf(loc))), 1, SPEED_FAST)
 	playsound(owner, 'sound/effects/helmet_noise.ogg', 100)

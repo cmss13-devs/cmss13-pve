@@ -1,0 +1,4483 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ab" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/strata/floor2,
+/area/adminlevel/ert_station/upp_station)
+"ag" = (
+/obj/structure/largecrate/random/barrel/blue,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"ah" = (
+/obj/structure/machinery/door/airlock/almayer/medical/colony{
+	name = "\improper Morgue"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"an" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"au" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/space,
+/area/space)
+"aU" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/adminlevel/ert_station/upp_station)
+"aV" = (
+/obj/item/stack/catwalk,
+/obj/item/stack/catwalk,
+/obj/item/tool/wrench,
+/obj/structure/disposalpipe/segment,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 16;
+	pixel_y = 13
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -16;
+	pixel_y = 13
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"bi" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"bU" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 6
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement14,
+/area/adminlevel/ert_station/upp_station)
+"bV" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/surgical_tray,
+/turf/open/floor/strata/white_cyan4/south,
+/area/adminlevel/ert_station/upp_station)
+"ci" = (
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"cn" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/strata/floorscorched2,
+/area/adminlevel/ert_station/upp_station)
+"cq" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/clothing/gloves/latex,
+/obj/item/clothing/mask/surgical{
+	desc = "A sterile mask designed to help prevent the spread of diseases. This one has already been used.";
+	name = "used sterile mask"
+	},
+/turf/open/floor/strata/white_cyan3/east,
+/area/adminlevel/ert_station/upp_station)
+"ct" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/trash/plate{
+	pixel_y = 2
+	},
+/obj/item/trash/plate{
+	pixel_y = 4
+	},
+/obj/item/trash/plate{
+	pixel_y = 6
+	},
+/obj/item/trash/plate{
+	pixel_y = 8
+	},
+/obj/item/trash/plate{
+	pixel_y = 10
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"cB" = (
+/obj/structure/machinery/cryopod/right{
+	pixel_y = 6
+	},
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"cC" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 29
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"cE" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"cN" = (
+/obj/structure/reagent_dispensers/water_cooler/walk_past{
+	pixel_y = 18
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement2,
+/area/adminlevel/ert_station/upp_station)
+"cR" = (
+/obj/structure/largecrate/random/barrel/green,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"cS" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/clipboard,
+/obj/item/paper,
+/obj/item/tool/lighter{
+	pixel_y = 2;
+	pixel_x = -9
+	},
+/obj/item/tool/pen/blue,
+/turf/open/floor/strata/green3/northeast,
+/area/adminlevel/ert_station/upp_station)
+"da" = (
+/turf/closed/shuttle/elevator{
+	dir = 5
+	},
+/area/adminlevel/ert_station/upp_station)
+"di" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 8
+	},
+/obj/structure/platform_decoration/kutjevo,
+/turf/open/space,
+/area/space)
+"dr" = (
+/turf/open/floor/strata/white_cyan4/east,
+/area/adminlevel/ert_station/upp_station)
+"ds" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"du" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/strata/green4/east,
+/area/adminlevel/ert_station/upp_station)
+"dW" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"ed" = (
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/upp_station)
+"ep" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/white_cyan4/south,
+/area/adminlevel/ert_station/upp_station)
+"ey" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 9
+	},
+/turf/open/floor/prison/darkyellowfull2,
+/area/adminlevel/ert_station/upp_station)
+"ez" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"eA" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine/colony{
+	name = "Shuttle Bay"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"eG" = (
+/turf/open/floor/corsat/squares,
+/area/adminlevel/ert_station/upp_station)
+"eR" = (
+/obj/structure/machinery/sleep_console,
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/strata/white_cyan3,
+/area/adminlevel/ert_station/upp_station)
+"eS" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	icon_state = "abed"
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13;
+	icon_state = "abed"
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.2
+	},
+/turf/open/floor/strata/blue1,
+/area/adminlevel/ert_station/upp_station)
+"eV" = (
+/obj/structure/platform_decoration/kutjevo,
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"eY" = (
+/obj/structure/barricade/handrail{
+	dir = 1;
+	icon_state = "hr_kutjevo";
+	name = "solar lattice"
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/space,
+/area/space)
+"fa" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 9
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"fc" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 4
+	},
+/turf/open/space/basic,
+/area/space)
+"fe" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/clothing/mask/rebreather/scarf,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"fh" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/phone_base/rotary{
+	name = "UPP Station";
+	phone_category = "UPP";
+	phone_id = "UPP Station";
+	do_not_disturb = 2
+	},
+/turf/open/floor/strata/floor2,
+/area/adminlevel/ert_station/upp_station)
+"fp" = (
+/turf/open/floor/strata/red3/north,
+/area/adminlevel/ert_station/upp_station)
+"fr" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata/white_cyan3/northwest,
+/area/adminlevel/ert_station/upp_station)
+"ft" = (
+/obj/structure/surface/rack,
+/obj/item/clothing/gloves/yellow,
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"fA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"fF" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/reagent_container/food/drinks/bottle/vodka{
+	pixel_y = 4;
+	pixel_x = 5
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen{
+	pixel_y = 7;
+	pixel_x = -5
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka,
+/turf/open/floor/strata/green3/east,
+/area/adminlevel/ert_station/upp_station)
+"fG" = (
+/obj/structure/bed/roller,
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/strata/white_cyan4/south,
+/area/adminlevel/ert_station/upp_station)
+"fM" = (
+/obj/structure/girder/reinforced,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"fT" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_y = 13;
+	pixel_x = -10
+	},
+/obj/structure/machinery/portable_atmospherics/canister/phoron,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/upp_station)
+"fY" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass/colony{
+	name = "Engineering";
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"ga" = (
+/obj/structure/closet/bodybag,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/cyan1/east,
+/area/adminlevel/ert_station/upp_station)
+"gg" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"gh" = (
+/turf/open/floor/solarpanel,
+/area/space)
+"gx" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"gN" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/trash/plate,
+/obj/item/reagent_container/food/snacks/upp,
+/turf/open/floor/strata/green3/east,
+/area/adminlevel/ert_station/upp_station)
+"gR" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/reagent_container/food/snacks/upp{
+	pixel_y = 1;
+	pixel_x = -3
+	},
+/obj/item/reagent_container/food/snacks/upp{
+	pixel_y = 10;
+	pixel_x = 2
+	},
+/obj/item/reagent_container/food/snacks/upp{
+	pixel_y = 4;
+	pixel_x = 3
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka{
+	pixel_y = 9;
+	pixel_x = -7
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/strata/blue1,
+/area/adminlevel/ert_station/upp_station)
+"hd" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"he" = (
+/obj/structure/largecrate/random/barrel/green,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"hp" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"hA" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/space/basic,
+/area/space)
+"hB" = (
+/obj/structure/machinery/optable,
+/obj/item/tank/anesthetic,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/strata/white_cyan2,
+/area/adminlevel/ert_station/upp_station)
+"hK" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/turf/open/floor/strata/green4/east,
+/area/adminlevel/ert_station/upp_station)
+"hR" = (
+/obj/structure/machinery/cm_vending/sorted/medical/no_access{
+	req_access = null
+	},
+/turf/open/floor/strata/white_cyan3/north,
+/area/adminlevel/ert_station/upp_station)
+"hV" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	layer = 2.5
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"ii" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"ij" = (
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"iy" = (
+/turf/open/asphalt/cement/cement12,
+/area/adminlevel/ert_station/upp_station)
+"iF" = (
+/obj/structure/machinery/door/airlock/almayer/security/colony{
+	dir = 8;
+	name = "\improper Brig Cell"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"iL" = (
+/turf/open/floor/strata/white_cyan3/southwest,
+/area/adminlevel/ert_station/upp_station)
+"iP" = (
+/obj/structure/machinery/iv_drip,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/white_cyan4/west,
+/area/adminlevel/ert_station/upp_station)
+"iS" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"ji" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/strata/green3/west,
+/area/adminlevel/ert_station/upp_station)
+"jo" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"jt" = (
+/obj/structure/lattice,
+/obj/structure/platform_decoration/kutjevo,
+/turf/open/space/basic,
+/area/space)
+"jH" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 10
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"jK" = (
+/obj/structure/machinery/cryopod/right,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"jQ" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/item/tool/mop{
+	pixel_x = -6;
+	pixel_y = 24
+	},
+/turf/open/floor/strata/floor2,
+/area/adminlevel/ert_station/upp_station)
+"jR" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13;
+	icon_state = "abed"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	icon_state = "abed"
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.2
+	},
+/turf/open/floor/almayer/plate,
+/area/adminlevel/ert_station/upp_station)
+"jV" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"jW" = (
+/turf/open/floor/strata/green3,
+/area/adminlevel/ert_station/upp_station)
+"kb" = (
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	dir = 1;
+	name = "\improper Toilet"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"km" = (
+/obj/structure/closet/firecloset,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"kq" = (
+/obj/structure/bed/chair,
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"kr" = (
+/obj/structure/machinery/gibber{
+	pixel_y = 10
+	},
+/obj/structure/surface/table/reinforced,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"kv" = (
+/turf/open/floor/almayer/test_floor4,
+/area/adminlevel/ert_station/upp_station)
+"kJ" = (
+/obj/structure/machinery/chem_master,
+/turf/open/floor/strata/white_cyan3,
+/area/adminlevel/ert_station/upp_station)
+"kN" = (
+/obj/item/tool/weldingtool,
+/obj/item/clothing/glasses/welding,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"kW" = (
+/obj/structure/bed/chair/office/light{
+	dir = 8
+	},
+/turf/open/floor/strata/green3,
+/area/adminlevel/ert_station/upp_station)
+"lb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"le" = (
+/obj/structure/machinery/door_control{
+	pixel_y = 6;
+	name = "Command Shutters Button";
+	id = "upp_command"
+	},
+/turf/closed/wall/strata_outpost/reinforced,
+/area/adminlevel/ert_station/upp_station)
+"lj" = (
+/obj/structure/machinery/medical_pod/sleeper,
+/turf/open/floor/strata/white_cyan3,
+/area/adminlevel/ert_station/upp_station)
+"lo" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -16;
+	pixel_y = 13
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 16;
+	pixel_y = 13
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"ls" = (
+/obj/structure/bed/chair/comfy/black,
+/turf/open/floor/strata/red3/south,
+/area/adminlevel/ert_station/upp_station)
+"lz" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine/colony{
+	name = "Station Hallway"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"lC" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 12;
+	pixel_y = 12
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/turf/open/floor/strata/green3,
+/area/adminlevel/ert_station/upp_station)
+"lE" = (
+/obj/structure/machinery/photocopier,
+/turf/open/floor/strata/green1,
+/area/adminlevel/ert_station/upp_station)
+"lQ" = (
+/obj/item/tool/wet_sign,
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/strata/red3/south,
+/area/adminlevel/ert_station/upp_station)
+"lV" = (
+/obj/structure/closet{
+	name = "boxing attire"
+	},
+/obj/item/clothing/under/shorts/green,
+/obj/item/clothing/under/shorts/green,
+/obj/item/clothing/under/shorts/grey,
+/obj/item/clothing/under/shorts/grey,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/asphalt/cement/cement1/north,
+/area/adminlevel/ert_station/upp_station)
+"mh" = (
+/obj/item/tool/wet_sign,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/turf/open/floor/strata/floor2,
+/area/adminlevel/ert_station/upp_station)
+"mr" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/vents/pump{
+	dir = 1;
+	id_tag = "mining_outpost_pump"
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"mx" = (
+/obj/structure/target{
+	name = "punching bag"
+	},
+/turf/open/asphalt/cement/cement4,
+/area/adminlevel/ert_station/upp_station)
+"mz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"mJ" = (
+/obj/structure/lattice,
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/space/basic,
+/area/space)
+"ni" = (
+/obj/structure/machinery/bioprinter{
+	stored_metal = 1000
+	},
+/turf/open/floor/strata/white_cyan4/north,
+/area/adminlevel/ert_station/upp_station)
+"nu" = (
+/turf/open/floor/strata/red1,
+/area/adminlevel/ert_station/upp_station)
+"nw" = (
+/obj/structure/machinery/iv_drip,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/strata/white_cyan3/southwest,
+/area/adminlevel/ert_station/upp_station)
+"nC" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"nU" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/device/flashlight/lamp/green{
+	pixel_y = -3;
+	pixel_x = 16
+	},
+/turf/open/floor/strata/green3/north,
+/area/adminlevel/ert_station/upp_station)
+"ou" = (
+/turf/open/floor/strata/green3/west,
+/area/adminlevel/ert_station/upp_station)
+"ow" = (
+/obj/item/stack/catwalk,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"oO" = (
+/obj/structure/closet/boxinggloves,
+/turf/open/asphalt/cement/cement9,
+/area/adminlevel/ert_station/upp_station)
+"oP" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	icon_state = "hr_kutjevo";
+	name = "solar lattice"
+	},
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"oS" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 8
+	},
+/turf/open/space/basic,
+/area/space)
+"pe" = (
+/obj/structure/girder/displaced,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"ph" = (
+/obj/structure/closet/crate/ammo/alt/flame,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/upp_station)
+"pj" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine/colony{
+	name = "Station Hallway"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"po" = (
+/turf/closed/wall/strata_outpost/reinforced,
+/area/adminlevel/ert_station/upp_station)
+"pu" = (
+/obj/effect/decal/cleanable/blood{
+	layer = 3
+	},
+/turf/open/asphalt/cement,
+/area/adminlevel/ert_station/upp_station)
+"px" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/colony,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"pF" = (
+/turf/open/floor/strata/white_cyan3/northwest,
+/area/adminlevel/ert_station/upp_station)
+"pH" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/strata/damaged3,
+/area/adminlevel/ert_station/upp_station)
+"pJ" = (
+/obj/structure/bed/chair,
+/turf/open/floor/strata/green3/west,
+/area/adminlevel/ert_station/upp_station)
+"pK" = (
+/obj/structure/monorail{
+	name = "launch track"
+	},
+/turf/open/floor/plating/prison,
+/area/space)
+"pN" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 1
+	},
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"pU" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 16;
+	pixel_y = 13
+	},
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"pW" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 5
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"pX" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"qw" = (
+/obj/structure/bookcase{
+	icon_state = "book-5";
+	pixel_y = 18;
+	pixel_x = 2;
+	density = 0
+	},
+/turf/open/floor/strata/green3/north,
+/area/adminlevel/ert_station/upp_station)
+"qy" = (
+/obj/structure/bed/chair/comfy/lime{
+	dir = 4
+	},
+/turf/open/floor/strata/green3/east,
+/area/adminlevel/ert_station/upp_station)
+"qA" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/platform_decoration/strata/metal,
+/obj/structure/curtain/open/black,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"qC" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/red4/west,
+/area/adminlevel/ert_station/upp_station)
+"qK" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/cyan1/east,
+/area/adminlevel/ert_station/upp_station)
+"qQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"qR" = (
+/obj/structure/machinery/shower{
+	pixel_y = 21
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/adminlevel/ert_station/upp_station)
+"qU" = (
+/turf/closed/shuttle/elevator,
+/area/adminlevel/ert_station/upp_station)
+"qX" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = -22;
+	name = "Toilet Shutters Button";
+	id = "upp_toilet"
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/adminlevel/ert_station/upp_station)
+"rb" = (
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"rs" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"rB" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"rF" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/attachable/bayonet/upp{
+	pixel_y = 9;
+	pixel_x = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"rT" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cm_vending/clothing/antag{
+	name = "\improper Response Team Automated Equipment Rack";
+	pixel_y = -32;
+	density = 0
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"rZ" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/strata/green3,
+/area/adminlevel/ert_station/upp_station)
+"so" = (
+/turf/open/floor/strata/white_cyan3/south,
+/area/adminlevel/ert_station/upp_station)
+"sr" = (
+/obj/structure/lattice,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/space/basic,
+/area/space)
+"sA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"sC" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/asphalt/cement,
+/area/adminlevel/ert_station/upp_station)
+"sG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"sL" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"sN" = (
+/obj/structure/filingcabinet{
+	layer = 2.9
+	},
+/turf/open/floor/strata/green1,
+/area/adminlevel/ert_station/upp_station)
+"sT" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/communications{
+	dir = 4
+	},
+/turf/open/floor/strata/green1,
+/area/adminlevel/ert_station/upp_station)
+"sU" = (
+/obj/structure/window/framed/strata,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"tm" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	pixel_y = 5;
+	pixel_x = 8
+	},
+/obj/item/storage/box/drinkingglasses,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"tv" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"tA" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata/purp3/east,
+/area/adminlevel/ert_station/upp_station)
+"tQ" = (
+/obj/structure/bed{
+	icon_state = "abed"
+	},
+/turf/open/floor/strata/white_cyan2,
+/area/adminlevel/ert_station/upp_station)
+"ud" = (
+/obj/structure/closet/crate,
+/turf/open/floor/strata/orange_edge/east,
+/area/adminlevel/ert_station/upp_station)
+"ue" = (
+/obj/structure/lattice,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	icon_state = "hr_kutjevo";
+	name = "solar lattice"
+	},
+/turf/open/space/basic,
+/area/space)
+"um" = (
+/obj/structure/platform/strata/metal,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"ux" = (
+/obj/structure/machinery/cryopod/right{
+	layer = 3.1;
+	pixel_y = 13
+	},
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"uL" = (
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"uN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"uP" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"vi" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/box/bodybags,
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/adminlevel/ert_station/upp_station)
+"vj" = (
+/obj/structure/bed/chair,
+/turf/open/floor/strata/green3/east,
+/area/adminlevel/ert_station/upp_station)
+"vy" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/trash/plate,
+/obj/item/reagent_container/food/snacks/upp,
+/turf/open/floor/strata/green3/west,
+/area/adminlevel/ert_station/upp_station)
+"vz" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/antag_guns{
+	hacked = 1;
+	name = "\improper Response Team Automated Guns Rack";
+	use_power = 0;
+	use_snowflake_points = 1;
+	density = 0;
+	pixel_x = 32
+	},
+/turf/open/floor/strata/blue3/north,
+/area/adminlevel/ert_station/upp_station)
+"vA" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/obj/structure/largecrate/random/secure,
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"vK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"vN" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"vS" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"vW" = (
+/obj/structure/machinery/door/airlock/almayer/maint/colony{
+	name = "\improper Cryo Cells"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"vZ" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	icon_state = "hr_kutjevo";
+	name = "solar lattice"
+	},
+/turf/open/space/basic,
+/area/space)
+"wj" = (
+/turf/open/floor/strata/green3/east,
+/area/adminlevel/ert_station/upp_station)
+"wr" = (
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison{
+	layer = 2.2
+	},
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 8;
+	icon_state = "p_stair_sn_full_cap";
+	layer = 2.5
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"ww" = (
+/obj/structure/machinery/cm_vending/gear/antag{
+	hacked = 1;
+	name = "\improper Response Team Automated Gear Rack";
+	use_snowflake_points = 1;
+	pixel_y = -32;
+	density = 0
+	},
+/turf/open/floor/strata/blue3/west,
+/area/adminlevel/ert_station/upp_station)
+"wH" = (
+/turf/open/floor/strata/blue4,
+/area/adminlevel/ert_station/upp_station)
+"wL" = (
+/obj/structure/reagent_dispensers/water_cooler/stacks{
+	density = 0;
+	pixel_x = -9;
+	pixel_y = 19
+	},
+/turf/open/floor/strata/green4,
+/area/adminlevel/ert_station/upp_station)
+"xg" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/strata/floor2,
+/area/adminlevel/ert_station/upp_station)
+"xj" = (
+/obj/structure/girder,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"xn" = (
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"xr" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 9
+	},
+/turf/open/floor/prison/darkyellowfull2,
+/area/adminlevel/ert_station/upp_station)
+"xJ" = (
+/turf/open/floor/strata/floor2,
+/area/adminlevel/ert_station/upp_station)
+"xW" = (
+/obj/structure/machinery/washing_machine,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"ya" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"yk" = (
+/obj/structure/bed/chair/comfy/lime{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/strata/green3/east,
+/area/adminlevel/ert_station/upp_station)
+"ym" = (
+/turf/closed/shuttle/elevator/gears,
+/area/adminlevel/ert_station/upp_station)
+"yp" = (
+/obj/structure/closet/secure_closet/brig{
+	name = "Spare Prison Uniforms";
+	req_one_access = null
+	},
+/turf/open/floor/strata/red1,
+/area/adminlevel/ert_station/upp_station)
+"yt" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/space,
+/area/space)
+"yI" = (
+/turf/open/floor/strata/green4,
+/area/adminlevel/ert_station/upp_station)
+"za" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/curtain/open/black,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"zn" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"zq" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 9
+	},
+/turf/open/asphalt/cement/cement12,
+/area/adminlevel/ert_station/upp_station)
+"zs" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"zI" = (
+/obj/structure/machinery/light/double/blue,
+/obj/structure/largecrate/random/barrel/blue,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"zP" = (
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"Aq" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine/colony{
+	name = "Shuttle Bay"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Ar" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/structure/largecrate/black_market/confiscated_weaponry,
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"Au" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 6
+	},
+/turf/open/floor/greengrid,
+/area/adminlevel/ert_station/upp_station)
+"Aw" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/red4/east,
+/area/adminlevel/ert_station/upp_station)
+"Ax" = (
+/obj/structure/machinery/computer/cameras/almayer_network/vehicle{
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Ay" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 5
+	},
+/turf/open/floor/greengrid,
+/area/adminlevel/ert_station/upp_station)
+"AN" = (
+/turf/open/space/basic,
+/area/space)
+"AP" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight,
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"AU" = (
+/obj/structure/monorail{
+	dir = 9;
+	name = "launch track"
+	},
+/turf/open/space/basic,
+/area/space)
+"AW" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = -1
+	},
+/obj/structure/closet/crate/trashcart,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/upp_station)
+"AX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Bm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"Bp" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Bq" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/cyan{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Bt" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/cyan{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Bu" = (
+/obj/structure/morgue{
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/adminlevel/ert_station/upp_station)
+"Bv" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/paper_bin{
+	pixel_y = 10
+	},
+/obj/item/tool/stamp{
+	pixel_y = 10
+	},
+/turf/open/floor/strata/green3,
+/area/adminlevel/ert_station/upp_station)
+"Bw" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/space/basic,
+/area/space)
+"BB" = (
+/obj/effect/landmark/wo_supplies/storage/m56d,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"BH" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/fourway/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"BK" = (
+/obj/structure/surface/rack,
+/obj/item/tool/weldpack{
+	pixel_x = 5
+	},
+/obj/item/tool/weldpack{
+	pixel_x = -2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"BN" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/reagent_container/food/snacks/upp,
+/turf/open/floor/strata/red3/north,
+/area/adminlevel/ert_station/upp_station)
+"BW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"BY" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Cb" = (
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"Cp" = (
+/turf/closed/wall/rock/brown,
+/area/adminlevel/ert_station/upp_station)
+"CJ" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13;
+	icon_state = "abed"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	icon_state = "abed"
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.2
+	},
+/turf/open/floor/strata/blue1,
+/area/adminlevel/ert_station/upp_station)
+"CX" = (
+/obj/item/reagent_container/glass/bucket/janibucket{
+	pixel_x = -1;
+	pixel_y = 13
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Di" = (
+/turf/open/floor/strata/red4/north,
+/area/adminlevel/ert_station/upp_station)
+"Dq" = (
+/obj/structure/machinery/medical_pod/bodyscanner,
+/turf/open/floor/strata/white_cyan3/north,
+/area/adminlevel/ert_station/upp_station)
+"Dv" = (
+/turf/closed/wall/strata_outpost,
+/area/adminlevel/ert_station/upp_station)
+"DN" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/obj/structure/largecrate/black_market/confiscated_equipment,
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"El" = (
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/adminlevel/ert_station/upp_station)
+"Em" = (
+/obj/structure/largecrate/random/barrel/green,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 16;
+	pixel_y = 13
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 13
+	},
+/turf/open/floor/strata/green3/east,
+/area/adminlevel/ert_station/upp_station)
+"Es" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass/colony{
+	name = "Engineering"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Et" = (
+/turf/open/floor/strata/red3/south,
+/area/adminlevel/ert_station/upp_station)
+"EG" = (
+/obj/structure/largecrate/supply,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"EH" = (
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 18
+	},
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 18
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/strata/green4/north,
+/area/adminlevel/ert_station/upp_station)
+"EI" = (
+/obj/structure/largecrate/random/barrel/white,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"EK" = (
+/obj/structure/largecrate/random/barrel/green,
+/turf/open/floor/strata/orange_edge/east,
+/area/adminlevel/ert_station/upp_station)
+"ES" = (
+/obj/structure/window/framed/strata/reinforced,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Fu" = (
+/turf/open/floor/strata/white_cyan2,
+/area/adminlevel/ert_station/upp_station)
+"Fy" = (
+/obj/structure/largecrate/random/barrel/blue,
+/turf/open/floor/prison/floor_marked/west,
+/area/adminlevel/ert_station/upp_station)
+"FF" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/platform/strata/metal,
+/obj/structure/pipes/standard/manifold/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"FM" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"FQ" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine/colony{
+	name = "Station Hallway"
+	},
+/turf/open/floor/strata/floor2,
+/area/adminlevel/ert_station/upp_station)
+"FY" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/strata/red3/south,
+/area/adminlevel/ert_station/upp_station)
+"Ga" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Gb" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/greengrid,
+/area/adminlevel/ert_station/upp_station)
+"Gl" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 9
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Gm" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/strata/green4/west,
+/area/adminlevel/ert_station/upp_station)
+"Gt" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Gu" = (
+/obj/structure/lattice,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/space/basic,
+/area/space)
+"Gx" = (
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 18
+	},
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 18
+	},
+/turf/open/floor/strata/green4/north,
+/area/adminlevel/ert_station/upp_station)
+"Gy" = (
+/turf/open/floor/strata/red3/west,
+/area/adminlevel/ert_station/upp_station)
+"GE" = (
+/turf/closed/shuttle/elevator{
+	dir = 6
+	},
+/area/adminlevel/ert_station/upp_station)
+"GI" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"GL" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage/antag,
+/turf/open/floor/greengrid,
+/area/adminlevel/ert_station/upp_station)
+"GN" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/platform/strata/metal,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"GV" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/facepaint/black,
+/turf/open/floor/strata/blue1,
+/area/adminlevel/ert_station/upp_station)
+"GX" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement12,
+/area/adminlevel/ert_station/upp_station)
+"Hc" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 4
+	},
+/obj/structure/platform_decoration/kutjevo{
+	dir = 1
+	},
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"Hh" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 12;
+	pixel_y = 12
+	},
+/turf/open/floor/strata/floor2,
+/area/adminlevel/ert_station/upp_station)
+"Hl" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Hm" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/strata/orange_icorner/north,
+/area/adminlevel/ert_station/upp_station)
+"Hx" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cm_vending/sorted/tech/comp_storage/antag,
+/turf/open/floor/greengrid,
+/area/adminlevel/ert_station/upp_station)
+"HD" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/reagent_container/food/snacks/upp,
+/obj/item/reagent_container/food/snacks/upp,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"HE" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/toy/dice{
+	pixel_x = 10;
+	pixel_y = 9
+	},
+/obj/item/toy/deck{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/turf/open/floor/strata/green4/north,
+/area/adminlevel/ert_station/upp_station)
+"HK" = (
+/obj/structure/machinery/chem_dispenser,
+/obj/item/reagent_container/glass/beaker/bluespace,
+/turf/open/floor/strata/white_cyan3,
+/area/adminlevel/ert_station/upp_station)
+"HN" = (
+/obj/structure/closet/secure_closet/freezer/fridge/full,
+/obj/item/reagent_container/food/condiment/enzyme,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"HQ" = (
+/obj/structure/platform/strata/metal,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"HT" = (
+/turf/open/floor/strata/white_cyan3/northeast,
+/area/adminlevel/ert_station/upp_station)
+"HX" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/strata/white_cyan2/west,
+/area/adminlevel/ert_station/upp_station)
+"Ie" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/strata/green3/west,
+/area/adminlevel/ert_station/upp_station)
+"IB" = (
+/turf/open/floor/strata/green4/west,
+/area/adminlevel/ert_station/upp_station)
+"IC" = (
+/obj/structure/barricade/handrail{
+	dir = 1;
+	icon_state = "hr_kutjevo";
+	name = "solar lattice"
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/space,
+/area/space)
+"IV" = (
+/obj/structure/bedsheetbin{
+	icon_state = "linenbin-empty";
+	name = "solar lattice";
+	pixel_y = 6
+	},
+/turf/open/floor/almayer_hull,
+/area/space)
+"Jb" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/folder/black,
+/obj/item/tool/pen,
+/turf/open/floor/strata/green3,
+/area/adminlevel/ert_station/upp_station)
+"Jd" = (
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	req_access = null
+	},
+/turf/open/floor/strata/white_cyan3/north,
+/area/adminlevel/ert_station/upp_station)
+"Jm" = (
+/obj/structure/surface/table/reinforced,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Jp" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Jy" = (
+/obj/structure/largecrate/random/case/small,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/strata/orange_edge/east,
+/area/adminlevel/ert_station/upp_station)
+"Jz" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"JR" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/turf/open/floor/strata/floorscorched1,
+/area/adminlevel/ert_station/upp_station)
+"Kj" = (
+/obj/structure/barricade/handrail{
+	dir = 1;
+	icon_state = "hr_kutjevo";
+	name = "solar lattice"
+	},
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/floor/almayer_hull,
+/area/space)
+"Kn" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/asphalt/cement,
+/area/adminlevel/ert_station/upp_station)
+"Ko" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"Kq" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Toilet Shutters";
+	id = "upp_toilet"
+	},
+/obj/structure/window/framed/strata/hull,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Kr" = (
+/obj/item/stack/catwalk,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"KC" = (
+/obj/structure/machinery/blackbox_recorder,
+/turf/open/floor/strata/green1,
+/area/adminlevel/ert_station/upp_station)
+"KE" = (
+/turf/open/asphalt/cement/cement4,
+/area/adminlevel/ert_station/upp_station)
+"KP" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1;
+	id_tag = "mining_outpost_pump"
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/adminlevel/ert_station/upp_station)
+"KR" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"KS" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/device/megaphone,
+/turf/open/floor/strata/green3/north,
+/area/adminlevel/ert_station/upp_station)
+"KW" = (
+/obj/structure/machinery/power/apc/antag{
+	dir = 1
+	},
+/turf/open/floor/strata/green4,
+/area/adminlevel/ert_station/upp_station)
+"Lg" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Lo" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Lq" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/turf/open/floor/strata/green3/north,
+/area/adminlevel/ert_station/upp_station)
+"Ly" = (
+/obj/structure/machinery/computer/emails{
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"LG" = (
+/obj/structure/lattice,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/space/basic,
+/area/space)
+"LI" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/space/basic,
+/area/space)
+"LR" = (
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Mc" = (
+/obj/structure/monorail{
+	name = "launch track"
+	},
+/turf/open/space/basic,
+/area/space)
+"Mt" = (
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/space/basic,
+/area/space)
+"Mv" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 13
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 16;
+	pixel_y = 13
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"Mx" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/large_holster/machete/full,
+/turf/open/floor/strata/white_cyan4/north,
+/area/adminlevel/ert_station/upp_station)
+"My" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 6
+	},
+/turf/open/floor/prison/darkyellowfull2,
+/area/adminlevel/ert_station/upp_station)
+"MS" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/strata/red3/north,
+/area/adminlevel/ert_station/upp_station)
+"MV" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 5
+	},
+/turf/open/floor/strata/white_cyan4/south,
+/area/adminlevel/ert_station/upp_station)
+"Nj" = (
+/obj/structure/bed/chair/comfy/lime{
+	dir = 8
+	},
+/turf/open/floor/strata/green3/west,
+/area/adminlevel/ert_station/upp_station)
+"Nk" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Ns" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Nv" = (
+/obj/structure/morgue,
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/adminlevel/ert_station/upp_station)
+"NH" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/strata/green4/east,
+/area/adminlevel/ert_station/upp_station)
+"NN" = (
+/turf/open/floor/strata/damaged3,
+/area/adminlevel/ert_station/upp_station)
+"NQ" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	icon_state = "hr_kutjevo";
+	name = "solar lattice"
+	},
+/turf/open/space/basic,
+/area/space)
+"NU" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/curtain/medical,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Ol" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine/colony{
+	name = "Station Hallway";
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Ot" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/white_cyan4/east,
+/area/adminlevel/ert_station/upp_station)
+"Ov" = (
+/obj/structure/closet/crate/ammo,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/upp_station)
+"OA" = (
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 8;
+	icon_state = "p_stair_sn_full_cap";
+	layer = 2.5
+	},
+/obj/effect/decal/strata_decals/catwalk/prison{
+	layer = 2.2
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"OD" = (
+/obj/structure/machinery/body_scanconsole,
+/turf/open/floor/strata/white_cyan3/north,
+/area/adminlevel/ert_station/upp_station)
+"OE" = (
+/obj/structure/largecrate/random/secure,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"OH" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/communications{
+	dir = 4
+	},
+/turf/open/floor/strata/green4/west,
+/area/adminlevel/ert_station/upp_station)
+"OK" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/autolathe/full,
+/turf/open/floor/greengrid,
+/area/adminlevel/ert_station/upp_station)
+"OX" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement3,
+/area/adminlevel/ert_station/upp_station)
+"Pa" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/recharger,
+/obj/item/device/defibrillator,
+/turf/open/floor/strata/white_cyan3/north,
+/area/adminlevel/ert_station/upp_station)
+"Pb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"Pg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 6
+	},
+/turf/open/floor/prison/darkyellowfull2,
+/area/adminlevel/ert_station/upp_station)
+"Pj" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/floor/almayer_hull,
+/area/space)
+"Pm" = (
+/obj/structure/closet/boxinggloves,
+/turf/open/asphalt/cement/cement1/north,
+/area/adminlevel/ert_station/upp_station)
+"Pu" = (
+/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access{
+	req_access = null
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/strata/white_cyan3/north,
+/area/adminlevel/ert_station/upp_station)
+"PI" = (
+/turf/open/floor/almayer_hull,
+/area/space)
+"PK" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/colony{
+	name = "\improper Elevator Airlock";
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/upp_station)
+"PM" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 13
+	},
+/obj/structure/machinery/door_control/brbutton{
+	pixel_y = 26;
+	id = "funny";
+	name = "Elevator Button";
+	desc = "A remote control-switch for the elevator. This one seems broken."
+	},
+/obj/structure/closet/crate/ammo,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/upp_station)
+"PU" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/turf/open/floor/strata/purp3/east,
+/area/adminlevel/ert_station/upp_station)
+"PY" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/strata/green4/west,
+/area/adminlevel/ert_station/upp_station)
+"PZ" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/tool/kitchen/tray,
+/obj/item/tool/kitchen/knife{
+	pixel_x = 3
+	},
+/obj/item/tool/kitchen/knife/butcher{
+	pixel_x = -8
+	},
+/obj/item/tool/kitchen/rollingpin,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Qa" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Qj" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = -1
+	},
+/obj/structure/closet/crate/ammo/alt,
+/turf/open/floor/corsat/plate,
+/area/adminlevel/ert_station/upp_station)
+"Qn" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/crowbar,
+/obj/item/storage/bible,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"QG" = (
+/turf/closed/shuttle/elevator{
+	dir = 10
+	},
+/area/adminlevel/ert_station/upp_station)
+"QM" = (
+/obj/structure/bed/chair/comfy/black,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"Rc" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/strata/green3,
+/area/adminlevel/ert_station/upp_station)
+"Re" = (
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Rf" = (
+/turf/open/asphalt/cement,
+/area/adminlevel/ert_station/upp_station)
+"Rh" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/recharger,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"Rk" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/platebot,
+/area/adminlevel/ert_station/upp_station)
+"Rq" = (
+/obj/structure/bed{
+	icon_state = "abed"
+	},
+/turf/open/floor/strata/white_cyan3/west,
+/area/adminlevel/ert_station/upp_station)
+"Ry" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 13
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"RB" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"RO" = (
+/obj/structure/closet/firecloset,
+/turf/open/floor/strata/green4/east,
+/area/adminlevel/ert_station/upp_station)
+"RR" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"RU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/closed/wall/strata_outpost/reinforced,
+/area/adminlevel/ert_station/upp_station)
+"Sp" = (
+/turf/open/floor/strata/purp3/east,
+/area/adminlevel/ert_station/upp_station)
+"Sq" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage/antag,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/greengrid,
+/area/adminlevel/ert_station/upp_station)
+"SF" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/strata/white_cyan2,
+/area/adminlevel/ert_station/upp_station)
+"SN" = (
+/obj/structure/largecrate/random/barrel/white,
+/turf/open/floor/strata/orange_icorner/west,
+/area/adminlevel/ert_station/upp_station)
+"SP" = (
+/obj/structure/largecrate/random/barrel/yellow,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/strata/green4/north,
+/area/adminlevel/ert_station/upp_station)
+"SS" = (
+/obj/docking_port/stationary/emergency_response/idle_port3,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Th" = (
+/turf/open/floor/strata/white_cyan3/west,
+/area/adminlevel/ert_station/upp_station)
+"Tt" = (
+/obj/structure/largecrate/random/barrel/white,
+/turf/open/floor/strata/green3/east,
+/area/adminlevel/ert_station/upp_station)
+"Tx" = (
+/obj/structure/bed/chair/comfy/lime{
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/strata/green3/west,
+/area/adminlevel/ert_station/upp_station)
+"Tz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/tool/pickaxe/diamonddrill,
+/turf/open/floor/plating/platebot,
+/area/adminlevel/ert_station/upp_station)
+"TA" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/obj/item/storage/toolbox/electrical,
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"TJ" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"TL" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"TM" = (
+/obj/structure/barricade/handrail{
+	dir = 1;
+	icon_state = "hr_kutjevo";
+	name = "solar lattice"
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/space/basic,
+/area/space)
+"TU" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/belt/medical/lifesaver/upp/full,
+/turf/open/floor/strata/white_cyan3/north,
+/area/adminlevel/ert_station/upp_station)
+"Um" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/cyan{
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 13
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Uo" = (
+/turf/closed/shuttle/elevator{
+	dir = 9
+	},
+/area/adminlevel/ert_station/upp_station)
+"Uv" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"UB" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Command Shutters";
+	id = "upp_command"
+	},
+/obj/structure/window/framed/strata/hull,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"UE" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"UH" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/strata/green3/west,
+/area/adminlevel/ert_station/upp_station)
+"US" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"UT" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine/colony{
+	name = "Station Hallway"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"UU" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"UV" = (
+/obj/structure/monorail{
+	dir = 4;
+	name = "launch track"
+	},
+/turf/open/space/basic,
+/area/space)
+"Vg" = (
+/turf/open/floor/strata/green3/northwest,
+/area/adminlevel/ert_station/upp_station)
+"Vp" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Vx" = (
+/turf/closed/shuttle/elevator{
+	dir = 4
+	},
+/area/adminlevel/ert_station/upp_station)
+"VA" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 12;
+	pixel_y = 12
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 12
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"VE" = (
+/obj/structure/largecrate/random/barrel/green,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/strata/green3/east,
+/area/adminlevel/ert_station/upp_station)
+"VI" = (
+/turf/closed/wall/rock/brown,
+/area/space)
+"VK" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/strata/green3/east,
+/area/adminlevel/ert_station/upp_station)
+"VR" = (
+/obj/structure/prop/almayer/missile_tube{
+	icon_state = "missiletubesouth";
+	name = "\improper AT-87 ASAT launcher system";
+	desc = "Cold launch tubes that can fire a few varieties of missiles out of them, the most common being the AT-87 ASAT 11K223 ?Spigot? missile used against satellites and other spacecraft and the 11K221 ?Konkurs? missile which is used for ground attack."
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/adminlevel/ert_station/upp_station)
+"We" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Command Shutters";
+	id = "upp_command";
+	dir = 4
+	},
+/obj/structure/window/framed/strata/hull,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Wf" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/bedsheetbin{
+	pixel_y = 6
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/strata/blue1,
+/area/adminlevel/ert_station/upp_station)
+"Wi" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"Wr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Wu" = (
+/turf/open/floor/strata/cyan1/east,
+/area/adminlevel/ert_station/upp_station)
+"Wy" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/device/flashlight,
+/obj/item/attachable/bayonet/upp,
+/turf/open/asphalt/cement/cement15,
+/area/adminlevel/ert_station/upp_station)
+"WQ" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"Xb" = (
+/obj/structure/monorail{
+	dir = 5;
+	name = "launch track"
+	},
+/turf/open/space/basic,
+/area/space)
+"Xj" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/processor{
+	pixel_y = 10
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/adminlevel/ert_station/upp_station)
+"Xk" = (
+/turf/open/floor/strata/red3/east,
+/area/adminlevel/ert_station/upp_station)
+"Xr" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/reagent_container/glass/bucket,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 9
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"Xv" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata/green3/west,
+/area/adminlevel/ert_station/upp_station)
+"Xy" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"XB" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/ashtray/glass,
+/obj/item/trash/cigbutt/cigarbutt{
+	pixel_x = 6;
+	pixel_y = 13
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -10;
+	pixel_y = 13
+	},
+/turf/open/floor/strata/floor2,
+/area/adminlevel/ert_station/upp_station)
+"XI" = (
+/turf/open/floor/strata/floorscorched2,
+/area/adminlevel/ert_station/upp_station)
+"XU" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 13
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"Yd" = (
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/adminlevel/ert_station/upp_station)
+"Ye" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/restraint/handcuffs{
+	pixel_x = -4;
+	pixel_y = 1
+	},
+/obj/item/restraint/handcuffs,
+/turf/open/floor/strata/red1,
+/area/adminlevel/ert_station/upp_station)
+"Yh" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Yk" = (
+/obj/item/clothing/suit/chef/classic,
+/obj/item/clothing/gloves/latex,
+/obj/item/clothing/head/chefhat,
+/obj/structure/surface/table/reinforced,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"YH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/cyan{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/adminlevel/ert_station/upp_station)
+"YK" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/space/basic,
+/area/space)
+"YX" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Zj" = (
+/obj/structure/platform_decoration/strata/metal,
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Zu" = (
+/turf/open/floor/strata/blue3/west,
+/area/adminlevel/ert_station/upp_station)
+"Zw" = (
+/obj/structure/bed{
+	icon_state = "abed"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"Zy" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 13
+	},
+/turf/open/floor/strata/green3/west,
+/area/adminlevel/ert_station/upp_station)
+"ZD" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/open/floor/strata/floor3/east,
+/area/adminlevel/ert_station/upp_station)
+"ZH" = (
+/obj/structure/lattice,
+/obj/structure/platform_decoration/kutjevo{
+	dir = 8
+	},
+/turf/open/space/basic,
+/area/space)
+
+(1,1,1) = {"
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+GI
+GI
+GI
+GI
+Cp
+Cp
+Cp
+Cp
+GI
+GI
+eV
+YK
+YK
+YK
+oS
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+"}
+(2,1,1) = {"
+AN
+AN
+AN
+AN
+GI
+AN
+GI
+AN
+AN
+jt
+LG
+LG
+LG
+LG
+LG
+ZH
+GI
+GI
+GI
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+VI
+uL
+gh
+gh
+gh
+oP
+GI
+GI
+GI
+AN
+AN
+AN
+AN
+"}
+(3,1,1) = {"
+AN
+AN
+AN
+GI
+GI
+GI
+GI
+GI
+GI
+mJ
+gh
+gh
+gh
+gh
+gh
+ue
+AN
+GI
+Cp
+Cp
+Cp
+Uo
+qU
+qU
+qU
+qU
+QG
+Cp
+Mt
+gh
+IV
+gh
+NQ
+Cp
+Cp
+GI
+GI
+AN
+AN
+AN
+"}
+(4,1,1) = {"
+AN
+AN
+GI
+GI
+El
+We
+We
+El
+AN
+mJ
+gh
+gh
+gh
+gh
+gh
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Vx
+fT
+ed
+ed
+AW
+Vx
+Cp
+Cp
+gh
+gh
+gh
+Cp
+Cp
+Cp
+Cp
+GI
+GI
+AN
+AN
+"}
+(5,1,1) = {"
+AN
+GI
+GI
+El
+El
+sT
+sT
+El
+El
+El
+Gu
+Gu
+Gu
+Gu
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+ym
+Ov
+eG
+eG
+ph
+ym
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+GI
+AN
+AN
+"}
+(6,1,1) = {"
+GI
+GI
+El
+El
+KW
+UH
+UH
+du
+sN
+El
+El
+El
+El
+El
+El
+Cp
+Cp
+Cp
+Dv
+fM
+Dv
+Vx
+PM
+ed
+ed
+Qj
+Vx
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+AN
+AN
+"}
+(7,1,1) = {"
+GI
+El
+El
+wL
+Vg
+Yd
+xn
+jW
+lE
+po
+BB
+vA
+DN
+AP
+po
+Cp
+ij
+he
+kN
+Ns
+cn
+da
+qU
+ed
+PK
+qU
+GE
+Cp
+Cp
+Cp
+po
+fM
+fM
+po
+po
+Cp
+Cp
+Cp
+Cp
+AN
+"}
+(8,1,1) = {"
+AN
+UB
+yk
+qy
+qy
+nC
+pX
+jW
+KC
+po
+zP
+vA
+Ar
+zP
+po
+ij
+ag
+NN
+zP
+JR
+Kr
+Wr
+LR
+Yd
+xn
+EI
+po
+Cp
+Cp
+po
+po
+Hx
+GL
+Sq
+po
+Cp
+Cp
+Cp
+Cp
+AN
+"}
+(9,1,1) = {"
+AN
+UB
+nU
+XB
+Bv
+Vp
+xn
+le
+po
+po
+Sp
+PU
+tA
+Sp
+po
+Qa
+My
+Xy
+ow
+aV
+pH
+Wr
+zP
+xn
+Yd
+cR
+po
+po
+fM
+po
+OK
+Au
+Gb
+Ay
+pe
+Cp
+Cp
+Cp
+Cp
+AN
+"}
+(10,1,1) = {"
+AN
+UB
+KS
+fh
+Jb
+Vp
+Yd
+jW
+px
+Yd
+xn
+XU
+Ko
+Yd
+FQ
+Pg
+ey
+XI
+Cp
+Cp
+cE
+Tz
+Rk
+vK
+xn
+zI
+po
+TL
+LR
+po
+CX
+Vp
+xJ
+xg
+xj
+Cp
+Cp
+Cp
+Cp
+AN
+"}
+(11,1,1) = {"
+AN
+UB
+Tx
+Nj
+Nj
+Bt
+UE
+UE
+Uv
+UE
+Bq
+UU
+Ga
+UE
+UE
+xr
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+rb
+rs
+Yd
+xn
+pj
+mh
+xJ
+Es
+nC
+Xr
+BK
+YX
+po
+Cp
+Cp
+Cp
+GI
+AN
+"}
+(12,1,1) = {"
+GI
+El
+El
+Gx
+wj
+VK
+wj
+OH
+po
+xJ
+Vp
+pU
+Cb
+po
+po
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+RB
+UE
+UE
+UE
+lo
+UE
+Uv
+Bp
+jQ
+ft
+KR
+po
+Cp
+Cp
+Cp
+GI
+AN
+"}
+(13,1,1) = {"
+GI
+Cp
+po
+po
+po
+po
+Lq
+kW
+po
+LR
+Ol
+po
+po
+po
+po
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+fM
+po
+po
+po
+po
+po
+cC
+xJ
+EG
+OE
+po
+Cp
+Cp
+GI
+GI
+AN
+"}
+(14,1,1) = {"
+GI
+Cp
+po
+BN
+Zw
+po
+qw
+jW
+po
+xJ
+Vp
+po
+ci
+Fy
+TA
+gg
+km
+Cp
+Cp
+po
+po
+po
+EK
+EK
+SN
+Hm
+Jy
+ud
+ud
+po
+Nk
+fY
+po
+po
+po
+Cp
+Cp
+GI
+AN
+AN
+"}
+(15,1,1) = {"
+Cp
+Cp
+po
+Di
+Xk
+po
+EH
+IB
+po
+Hh
+VA
+po
+Hl
+ya
+ya
+ya
+ya
+ya
+ya
+ya
+sG
+ya
+ya
+ya
+ya
+ya
+ya
+ya
+RR
+po
+Bt
+lQ
+Gy
+Aw
+po
+El
+AN
+GI
+AN
+AN
+"}
+(16,1,1) = {"
+Cp
+po
+po
+ES
+iF
+po
+po
+po
+po
+ab
+Vp
+po
+mz
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+zs
+po
+Vp
+Et
+nu
+nu
+VR
+El
+GI
+GI
+AN
+AN
+"}
+(17,1,1) = {"
+Cp
+po
+Ye
+fp
+nC
+UE
+Bq
+UE
+lz
+UE
+BH
+Aq
+fA
+kv
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+SS
+kv
+YH
+Aq
+Bp
+Et
+QM
+Ax
+po
+El
+Mc
+pK
+Mc
+Xb
+"}
+(18,1,1) = {"
+Cp
+po
+yp
+MS
+Vp
+vN
+US
+Yd
+LR
+Yd
+Vp
+LR
+qQ
+kv
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+kv
+ez
+LR
+Vp
+Et
+nu
+nu
+VR
+El
+AN
+GI
+AN
+UV
+"}
+(19,1,1) = {"
+Cp
+po
+po
+po
+za
+po
+po
+po
+po
+hK
+Vp
+po
+uN
+kv
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+kv
+Bm
+po
+uP
+ls
+Ly
+po
+po
+El
+AN
+GI
+AN
+UV
+"}
+(20,1,1) = {"
+Cp
+Cp
+po
+FM
+Vp
+CJ
+Wf
+eS
+po
+Rc
+Vp
+po
+Pb
+kv
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+kv
+ds
+po
+Vp
+Et
+nu
+nu
+VR
+El
+AN
+GI
+AN
+UV
+"}
+(21,1,1) = {"
+Cp
+El
+po
+FM
+Lo
+UE
+mr
+rT
+po
+lC
+VA
+po
+uN
+kv
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+kv
+Bm
+po
+uP
+Et
+QM
+Ax
+po
+El
+AN
+GI
+AN
+UV
+"}
+(22,1,1) = {"
+GI
+El
+xW
+Yd
+dW
+jR
+GV
+jR
+po
+jW
+Vp
+eA
+BW
+kv
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+kv
+iS
+eA
+Vp
+Et
+nu
+nu
+VR
+El
+Mc
+pK
+Mc
+AU
+"}
+(23,1,1) = {"
+GI
+El
+po
+po
+wH
+Zu
+Zu
+ww
+po
+jW
+Bt
+Uv
+fA
+kv
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+kv
+YH
+Uv
+BH
+FY
+Xk
+qC
+po
+El
+GI
+GI
+AN
+AN
+"}
+(24,1,1) = {"
+GI
+Cp
+Cp
+po
+vz
+CJ
+gR
+CJ
+po
+Gm
+Vp
+po
+mz
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+zs
+po
+qA
+po
+po
+po
+po
+El
+Cp
+GI
+GI
+AN
+"}
+(25,1,1) = {"
+GI
+Cp
+El
+po
+po
+po
+po
+po
+po
+LR
+Ol
+po
+hV
+sA
+lb
+sA
+sA
+sA
+sA
+sA
+lb
+sA
+sA
+sA
+sA
+sA
+lb
+sA
+Gl
+po
+GN
+HD
+xn
+xn
+BY
+Dv
+Cp
+Cp
+GI
+AN
+"}
+(26,1,1) = {"
+GI
+GI
+El
+qR
+HX
+kb
+Lg
+xn
+xn
+xn
+Vp
+po
+po
+RU
+RU
+RU
+RU
+RU
+RU
+RU
+RU
+RU
+RU
+RU
+RU
+RU
+RU
+RU
+po
+po
+GN
+Rh
+jo
+pW
+PZ
+Dv
+Cp
+Cp
+Cp
+AN
+"}
+(27,1,1) = {"
+AN
+GI
+Kq
+aU
+qX
+Dv
+Bt
+UE
+Jp
+UE
+Ga
+UE
+Um
+UE
+Bq
+UE
+UT
+UE
+UE
+Ry
+bi
+UE
+Bq
+UE
+bi
+UE
+UE
+Bq
+bi
+UE
+FF
+ct
+Yd
+hd
+Jm
+Dv
+Cp
+Cp
+Cp
+AN
+"}
+(28,1,1) = {"
+AN
+GI
+El
+Cp
+Cp
+Dv
+ah
+Dv
+Dv
+Ie
+RO
+xn
+Mv
+jV
+Vp
+xn
+LR
+yI
+ou
+Zy
+ou
+ji
+Xv
+pJ
+vy
+vy
+NH
+tv
+Yd
+LR
+gx
+OA
+ii
+fa
+Yk
+Dv
+Cp
+Cp
+Cp
+AN
+"}
+(29,1,1) = {"
+AN
+GI
+Cp
+Cp
+Cp
+Dv
+Vp
+vi
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+hd
+hp
+Dv
+SP
+Tt
+Em
+VE
+cS
+ZD
+kq
+tm
+rF
+rZ
+tv
+Yd
+LR
+Zj
+wr
+Yd
+Yh
+HN
+Dv
+Cp
+Cp
+GI
+AN
+"}
+(30,1,1) = {"
+AN
+GI
+GI
+Cp
+Cp
+fM
+Vp
+Nv
+Nv
+Nv
+Dv
+fG
+Th
+dr
+Vp
+Wu
+Dv
+Dv
+Dv
+Dv
+Dv
+HE
+wj
+vj
+fF
+gN
+PY
+Bt
+an
+Re
+HQ
+Xj
+Yd
+sL
+rB
+Cp
+Cp
+ZH
+GI
+AN
+"}
+(31,1,1) = {"
+AN
+AN
+AN
+Cp
+Cp
+Cp
+Vp
+Wu
+Wu
+qK
+Dv
+hR
+Fu
+HK
+Bt
+UE
+NU
+UE
+MV
+dr
+Dv
+Dv
+cN
+OX
+OX
+bU
+Jz
+Bp
+vN
+xn
+um
+kr
+zn
+xn
+Cp
+Cp
+PI
+sr
+AN
+AN
+"}
+(32,1,1) = {"
+AN
+AN
+AN
+Cp
+Cp
+Dv
+Lo
+UE
+UE
+KP
+Dv
+TU
+Fu
+kJ
+Vp
+ep
+Dv
+bV
+fr
+iL
+Ot
+Dv
+mx
+Kn
+sC
+zq
+Dv
+vW
+Dv
+Dv
+Dv
+Dv
+Cp
+Cp
+Cp
+Mt
+PI
+Bw
+AN
+AN
+"}
+(33,1,1) = {"
+AN
+AN
+AN
+Cp
+Cp
+Dv
+Dv
+Wu
+Wu
+ga
+Dv
+Pa
+Fu
+lj
+Vp
+Dq
+sU
+Jd
+SF
+hB
+so
+Dv
+mx
+pu
+Kn
+iy
+Dv
+TJ
+AX
+AX
+fe
+Dv
+Cp
+Cp
+GI
+uL
+PI
+Bw
+AN
+AN
+"}
+(34,1,1) = {"
+AN
+AN
+AN
+AN
+Cp
+Cp
+Dv
+Bu
+Bu
+Bu
+Dv
+Pu
+Fu
+eR
+Vp
+OD
+sU
+ni
+HT
+Fu
+so
+Dv
+KE
+Rf
+Rf
+GX
+Dv
+jH
+Gt
+dW
+Qn
+Dv
+Cp
+GI
+AN
+Mt
+PI
+Bw
+AN
+AN
+"}
+(35,1,1) = {"
+AN
+AN
+AN
+AN
+AN
+Cp
+Dv
+Dv
+fM
+fM
+Dv
+Dv
+tQ
+nw
+Rq
+pF
+Dv
+Dv
+Mx
+cq
+iP
+Dv
+oO
+lV
+Pm
+Wy
+Dv
+jK
+ux
+cB
+Cp
+Cp
+Cp
+GI
+AN
+Mt
+PI
+Bw
+AN
+AN
+"}
+(36,1,1) = {"
+AN
+AN
+AN
+AN
+AN
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Dv
+Cp
+Cp
+Cp
+di
+yt
+WQ
+yt
+hA
+PI
+Bw
+AN
+AN
+"}
+(37,1,1) = {"
+AN
+AN
+AN
+AN
+AN
+AN
+GI
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+gh
+gh
+gh
+TM
+gh
+gh
+gh
+IC
+PI
+Bw
+AN
+AN
+"}
+(38,1,1) = {"
+AN
+AN
+AN
+AN
+AN
+AN
+GI
+GI
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+uL
+gh
+IV
+gh
+Kj
+gh
+IV
+gh
+Pj
+PI
+Bw
+AN
+AN
+"}
+(39,1,1) = {"
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+GI
+GI
+GI
+GI
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+GI
+GI
+uL
+gh
+gh
+gh
+vZ
+gh
+gh
+gh
+eY
+LI
+fc
+AN
+AN
+"}
+(40,1,1) = {"
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+GI
+GI
+GI
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+GI
+GI
+GI
+GI
+GI
+AN
+pN
+vS
+Wi
+vS
+Hc
+vS
+Wi
+au
+fc
+AN
+AN
+AN
+AN
+"}

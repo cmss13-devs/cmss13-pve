@@ -24,6 +24,7 @@
 
 /mob/living/Destroy()
 	GLOB.living_mob_list -= src
+	cleanup_status_effects()
 	pipes_shown = null
 
 	. = ..()
@@ -33,6 +34,17 @@
 	QDEL_NULL(pain)
 	QDEL_NULL(stamina)
 	QDEL_NULL(hallucinations)
+	status_effects = null
+
+/// Clear all running status effects assuming deletion
+/mob/living/proc/cleanup_status_effects()
+	PROTECTED_PROC(TRUE)
+	if(length(status_effects))
+		for(var/datum/status_effect/S as anything in status_effects)
+			if(S?.on_remove_on_mob_delete) //the status effect calls on_remove when its mob is deleted
+				qdel(S)
+			else
+				S?.be_replaced()
 
 /mob/living/proc/initialize_pain()
 	pain = new /datum/pain(src)
@@ -54,7 +66,7 @@
 /mob/living/proc/burn_skin(burn_amount)
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src //make this damage method divide the damage to be done among all the body parts, then burn each body part for that much damage. will have better effect then just randomly picking a body part
-		var/divided_damage = (burn_amount)/(H.limbs.len)
+		var/divided_damage = (burn_amount)/(length(H.limbs))
 		var/extradam = 0 //added to when organ is at max dam
 		for(var/obj/limb/affecting in H.limbs)
 			if(!affecting) continue
@@ -62,9 +74,6 @@
 				H.UpdateDamageIcon()
 		H.updatehealth()
 		return 1
-
-	else if(isAI(src))
-		return 0
 
 /mob/living/proc/adjustBodyTemp(actual, desired, incrementboost)
 	var/temperature = actual
@@ -168,34 +177,34 @@
 
 		var/pull_dir = get_dir(src, pulling)
 
-		if(grab_level >= GRAB_CARRY)
-			switch(grab_level)
-				if(GRAB_CARRY)
-					var/direction_to_face = EAST
+		switch(grab_level)
+			if(GRAB_CARRY)
+				var/direction_to_face = EAST
 
-					if(direct & WEST)
-						direction_to_face = WEST
+				if(direct & WEST)
+					direction_to_face = WEST
 
-					pulling.Move(NewLoc, direction_to_face)
-					var/mob/living/pmob = pulling
-					if(istype(pmob))
-						SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, direction_to_face, direction_to_face)
-				else
-					pulling.Move(NewLoc, direct)
-		else if(get_dist(src, pulling) > 1 || ((pull_dir - 1) & pull_dir)) //puller and pullee more than one tile away or in diagonal position
-			var/pulling_dir = get_dir(pulling, T)
-			pulling.Move(T, pulling_dir) //the pullee tries to reach our previous position
-			if(pulling && get_dist(src, pulling) > 1) //the pullee couldn't keep up
-				stop_pulling()
-			else
+				pulling.Move(NewLoc, direction_to_face)
 				var/mob/living/pmob = pulling
 				if(istype(pmob))
-					SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, pulling_dir, pulling_dir)
-				if(!(flags_atom & DIRLOCK))
-					setDir(turn(direct, 180)) //face the pullee
+					SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, direction_to_face, direction_to_face)
+			if(GRAB_CHOKE)
+				pulling.Move(NewLoc, direct)
+			else
+				if(get_dist(src, pulling) > 1 || ((pull_dir - 1) & pull_dir)) //puller and pullee more than one tile away or in diagonal position
+					var/pulling_dir = get_dir(pulling, T)
+					pulling.Move(T, pulling_dir) //the pullee tries to reach our previous position
+					if(pulling && get_dist(src, pulling) > 1) //the pullee couldn't keep up
+						stop_pulling()
+					else
+						var/mob/living/pmob = pulling
+						if(istype(pmob))
+							SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, pulling_dir, pulling_dir)
+						if(!(flags_atom & DIRLOCK))
+							setDir(turn(direct, 180)) //face the pullee
 
 	if(pulledby && get_dist(src, pulledby) > 1)//separated from our puller and not in the middle of a diagonal move.
-		pulledby.stop_pulling()
+		pulledby.stop_pulling(TRUE) /// Mob was likely bumped by the pulledby. Can lead to additional checking, if we don't want the victim to get out of jail for free.
 
 	if (s_active && !( s_active in contents ) && get_turf(s_active) != get_turf(src)) //check !( s_active in contents ) first so we hopefully don't have to call get_turf() so much.
 		s_active.storage_close(src)
@@ -207,27 +216,48 @@
 	if(back && (back.flags_item & ITEM_OVERRIDE_NORTHFACE))
 		update_inv_back()
 
-
-
 /mob/proc/resist_grab(moving_resist)
 	return //returning 1 means we successfully broke free
 
 /mob/living/resist_grab(moving_resist)
 	if(!pulledby)
 		return
-	if(pulledby.grab_level)
-		if(prob(50))
-			playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
-			visible_message(SPAN_DANGER("[src] has broken free of [pulledby]'s grip!"), null, null, 5)
-			pulledby.stop_pulling()
-			return 1
-		if(moving_resist && client) //we resisted by trying to move
-			visible_message(SPAN_DANGER("[src] struggles to break free of [pulledby]'s grip!"), null, null, 5)
-			client.next_movement = world.time + (10*pulledby.grab_level) + client.move_delay
-	else
-		pulledby.stop_pulling()
-		return 1
 
+	switch(pulledby.grab_level)
+		if(GRAB_AGGRESSIVE to GRAB_CHOKE)
+			/// Probably could use some refactoring for the CQC skill, traits, and the like.
+			if(prob(50))
+				playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
+				visible_message(SPAN_DANGER("[src] has broken free of [pulledby]'s grip!"), null, null, 5)
+				pulledby.stop_pulling()
+				return TRUE
+			if(moving_resist && client) //we resisted by trying to move
+				visible_message(SPAN_DANGER("[src] struggles to break free of [pulledby]'s grip!"), null, null, 5)
+				client.next_movement = world.time + (10*pulledby.grab_level) + client.move_delay
+		if(GRAB_XENO) /// Specific to some xenomorphs.
+			if(HAS_TRAIT(src, TRAIT_SUPER_STRONG)) /// Superstrength means you get out of jail for free.
+				. = TRUE
+			else
+				/// If the living mob is skilled in CQC, they will get a bonus to escape the grab, 7% per skill level, or 35% if maxed out.
+				var/skill_bonus = (skills?.get_skill_level(SKILL_CQC)) * 7
+				/// Then we need to determine if they loosen the grip or escape outright, or struggle in vain.
+				if(prob((65 - SKILL_CQC_MAX * 7) + skill_bonus)) /// At most a 65% chance to escape outright.
+					. = TRUE
+				else
+					if(prob((100 - SKILL_CQC_MAX * 7) + skill_bonus)) /// Maximum 100% to loosen the grip.
+						visible_message(SPAN_DANGER("[src] loosens [pulledby]'s grip!"), null, null, 5)
+						pulledby.grab_level = GRAB_PASSIVE /// Loosens the grab into a passive grab, being able to escape on the next go.
+					else
+						visible_message(SPAN_DANGER("[src] struggles to break free of [pulledby]'s grip!"), null, null, 5)
+					client.next_movement = world.time + (10 * GRAB_XENO) + client.move_delay /// Grab level may get reset, so we want to keep it at a good delay.
+
+			if(.) /// Our living mob successfully broke away.
+				playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
+				visible_message(SPAN_DANGER("[src] has broken free of [pulledby]'s grip!"), null, null, 5)
+				pulledby.stop_pulling()
+		else
+			pulledby.stop_pulling()
+			return TRUE
 
 /mob/living/movement_delay()
 	. = ..()
@@ -389,7 +419,10 @@
 /mob/living/launch_towards(datum/launch_metadata/LM)
 	if(src)
 		SEND_SIGNAL(src, COMSIG_MOB_MOVE_OR_LOOK, TRUE, dir, dir)
-	if(!istype(LM) || !LM.target || !src || buckled)
+	if(!istype(LM) || !LM.target || !src)
+		return
+	if(buckled)
+		LM.invoke_end_throw_callbacks(src)
 		return
 	if(pulling)
 		stop_pulling() //being thrown breaks pulls.
@@ -433,16 +466,19 @@
 /mob/proc/flash_eyes()
 	return
 
-/mob/living/flash_eyes(intensity = EYE_PROTECTION_FLASH, bypass_checks, type = /atom/movable/screen/fullscreen/flash, flash_timer = 40)
-	if( bypass_checks || (get_eye_protection() < intensity && !(sdisabilities & DISABILITY_BLIND)))
-		overlay_fullscreen("flash", type)
+/mob/living/flash_eyes(intensity = EYE_PROTECTION_FLASH, bypass_checks, flash_timer = 40, type = /atom/movable/screen/fullscreen/flash, dark_type = /atom/movable/screen/fullscreen/flash/dark)
+	if(bypass_checks || (get_eye_protection() < intensity && !(sdisabilities & DISABILITY_BLIND)))
+		if(client?.prefs?.flash_overlay_pref == FLASH_OVERLAY_DARK)
+			overlay_fullscreen("flash", dark_type)
+		else
+			overlay_fullscreen("flash", type)
 		spawn(flash_timer)
 			clear_fullscreen("flash", 20)
 		return TRUE
 
 /mob/living/create_clone_movable(shift_x, shift_y)
 	..()
-	src.clone.hud_list = new /list(src.hud_list.len)
+	src.clone.hud_list = new /list(length(src.hud_list))
 	for(var/h in src.hud_possible) //Clone HUD
 		src.clone.hud_list[h] = new /image("loc" = src.clone, "icon" = src.hud_list[h].icon)
 
@@ -495,6 +531,7 @@
 //			REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
 //			remove_from_alive_mob_list()
 //			add_to_dead_mob_list()
+	update_layer() // Force update layers so that lying down works as intended upon death. This is redundant otherwise. Replace this by trait signals
 
 /**
  * Changes the inclination angle of a mob, used by humans and others to differentiate between standing up and prone positions.
@@ -577,12 +614,16 @@
 	drop_l_hand()
 	drop_r_hand()
 	add_temp_pass_flags(PASS_MOB_THRU)
+	update_layer()
+
+/// Updates the layer the mob is on based on its current status. This can result in redundant updates. Replace by trait signals eventually
+/mob/living/proc/update_layer()
 	//so mob lying always appear behind standing mobs, but dead ones appear behind living ones
 	if(pulledby && pulledby.grab_level == GRAB_CARRY)
 		layer = ABOVE_MOB_LAYER
-	else if (stat == DEAD)
+	else if (body_position == LYING_DOWN && stat == DEAD)
 		layer = LYING_DEAD_MOB_LAYER // Dead mobs should layer under living ones
-	else if(layer == initial(layer)) //to avoid things like hiding larvas.
+	else if(body_position == LYING_DOWN && layer == initial(layer)) //to avoid things like hiding larvas. //i have no idea what this means
 		layer = LYING_LIVING_MOB_LAYER
 
 /// Called when mob changes from a standing position into a prone while lacking the ability to stand up at the moment.

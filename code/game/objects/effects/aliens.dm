@@ -106,14 +106,16 @@
 		// Humans?
 		if(isliving(atm)) //For extinguishing mobs on fire
 			var/mob/living/M = atm
-			M.ExtinguishMob()
+
+			if(M != cause_data.resolve_mob())
+				M.ExtinguishMob()
+
 			if(M.stat == DEAD) // NO. DAMAGING. DEAD. MOBS.
 				continue
 			if (iscarbon(M))
 				var/mob/living/carbon/C = M
 				if (C.ally_of_hivenumber(hivenumber))
 					continue
-
 				apply_spray(M)
 				M.apply_armoured_damage(get_xeno_damage_acid(M, damage_amount), ARMOR_BIO, BURN) // Deal extra damage when first placing ourselves down.
 
@@ -123,6 +125,10 @@
 			var/obj/vehicle/multitile/V = atm
 			V.handle_acidic_environment(src)
 			continue
+		if (istype(loc, /turf/open))
+			var/turf/open/scorch_turf_target = loc
+			if(scorch_turf_target.scorchable)
+				scorch_turf_target.scorch(damage_amount)
 
 	START_PROCESSING(SSobj, src)
 	addtimer(CALLBACK(src, PROC_REF(die)), time_to_live)
@@ -144,15 +150,15 @@
 
 /obj/effect/xenomorph/spray/Crossed(AM as mob|obj)
 	..()
-	if(ishuman(AM))
-		var/mob/living/carbon/human/H = AM
-		if(H.ally_of_hivenumber(hivenumber))
-			return
-		apply_spray(AM)
-	else if (isxeno(AM))
-		var/mob/living/carbon/xenomorph/X = AM
-		if (X.hivenumber != hivenumber)
-			apply_spray(AM)
+	if(AM == cause_data.resolve_mob())
+		return
+
+	if(isliving(AM))
+		var/mob/living/living_mob = AM
+		if(living_mob.ally_of_hivenumber(hivenumber))
+			living_mob.ExtinguishMob()
+		else
+			apply_spray(living_mob)
 	else if(isVehicleMultitile(AM))
 		var/obj/vehicle/multitile/V = AM
 		V.handle_acidic_environment(src)
@@ -296,7 +302,7 @@
 	/// Factor of duration between acid progression
 	var/acid_delay = 1
 	/// How much fuel the acid drains from the flare every acid tick
-	var/flare_damage = 500
+	var/flare_damage = 600
 	var/barricade_damage = 40
 	var/in_weather = FALSE
 
@@ -305,7 +311,7 @@
 	name = "weak acid"
 	acid_delay = 2.5 //250% delay (40% speed)
 	barricade_damage = 20
-	flare_damage = 150
+	flare_damage = 180
 	icon_state = "acid_weak"
 
 //Superacid
@@ -313,8 +319,14 @@
 	name = "strong acid"
 	acid_delay = 0.4 //40% delay (250% speed)
 	barricade_damage = 100
-	flare_damage = 1875
+	flare_damage = 2250
 	icon_state = "acid_strong"
+
+//Similar to strong acid, just not quite as strong other than barricade damage.
+/obj/effect/xenomorph/acid/spatter
+	acid_delay = 0.6
+	barricade_damage = 100
+	flare_damage = 1000
 
 /obj/effect/xenomorph/acid/Initialize(mapload, atom/target)
 	. = ..()
@@ -326,11 +338,30 @@
 	handle_weather()
 	RegisterSignal(SSdcs, COMSIG_GLOB_WEATHER_CHANGE, PROC_REF(handle_weather))
 	RegisterSignal(acid_t, COMSIG_PARENT_QDELETING, PROC_REF(cleanup))
-	START_PROCESSING(SSeffects, src)
+	START_PROCESSING(SSoldeffects, src)
+
+/obj/effect/xenomorph/acid/spatter/Initialize(mapload, atom/target)
+	. = ..()
+	if(!acid_t)
+		var/obj/structure/barricade/B = locate() in loc
+		if(B && !B.unacidable) acid_t = B
+		else
+			for(var/obj/O in loc) //Find the first thing.
+				if(istype(O, /obj/vehicle/multitile))
+					var/obj/vehicle/multitile/acid_vehicle = O
+					acid_vehicle.take_damage_type(100 / src.acid_delay, "acid", src)
+					visible_message(SPAN_XENOWARNING("\the [acid_vehicle] is burnt by the strong acid blood!"))
+					continue //We just damaged it, to not break proc would completely melt the vehicle.
+				if(O.unacidable || istype(O, /obj/effect)) continue //Not unacidable things or effects. Don't want to melt xenogibs.
+				acid_t = O
+				break
+		if(acid_t) layer = acid_t.layer
+		else
+			acid_t = get_turf(loc)
 
 /obj/effect/xenomorph/acid/Destroy()
 	acid_t = null
-	STOP_PROCESSING(SSeffects, src)
+	STOP_PROCESSING(SSoldeffects, src)
 	. = ..()
 
 /obj/effect/xenomorph/acid/proc/cleanup()
@@ -422,8 +453,11 @@
 	else
 		for(var/mob/mob in acid_t)
 			mob.forceMove(loc)
-		qdel(acid_t)
-	qdel(src)
+		animate(acid_t, alpha = 0, 1 SECONDS)
+		QDEL_IN(acid_t, 1 SECONDS)
+
+	animate(src, alpha = 0, 1 SECONDS)
+	QDEL_IN(src, 1 SECONDS)
 
 /obj/effect/xenomorph/boiler_bombard
 	name = "???"
@@ -489,29 +523,32 @@
 /obj/effect/xenomorph/xeno_telegraph
 	name = "???"
 	desc = ""
-	icon_state = "xeno_telegraph_red"
+	icon_state = "xeno_telegraph_base"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-/obj/effect/xenomorph/xeno_telegraph/New(loc, ttl = 10)
+/// Icon is by default a white sprite, provide an rgb hex code #RRGGBB argument to change.
+/obj/effect/xenomorph/xeno_telegraph/New(loc, ttl = 10, color = null)
 	..(loc)
+	if(color)
+		src.color = color
 	QDEL_IN(src, ttl)
 
 /obj/effect/xenomorph/xeno_telegraph/red
-	icon_state = "xeno_telegraph_red"
+	color = COLOR_DARK_RED
 
 /obj/effect/xenomorph/xeno_telegraph/brown
-	icon_state = "xeno_telegraph_brown"
+	color = COLOR_BROWN
 
 /obj/effect/xenomorph/xeno_telegraph/green
-	icon_state = "xeno_telegraph_green"
+	color = COLOR_LIGHT_GREEN
 
-/obj/effect/xenomorph/xeno_telegraph/brown/abduct_hook
+/// This has a brown icon state and does not have a color overlay by default.
+/obj/effect/xenomorph/xeno_telegraph/abduct_hook
 	icon_state = "xeno_telegraph_abduct_hook_anim"
 
-/obj/effect/xenomorph/xeno_telegraph/brown/lash
+/// This has a brown icon state and does not have a color overlay by default.
+/obj/effect/xenomorph/xeno_telegraph/lash
 	icon_state = "xeno_telegraph_lash"
-
-
 
 /obj/effect/xenomorph/acid_damage_delay
 	name = "???"
@@ -592,7 +629,7 @@
 
 		total_hits++
 
-	var/datum/action/xeno_action/activable/boiler_trap/trap = get_xeno_action_by_type(linked_xeno, /datum/action/xeno_action/activable/boiler_trap)
+	var/datum/action/xeno_action/activable/boiler_trap/trap = get_action(linked_xeno, /datum/action/xeno_action/activable/boiler_trap)
 
 	trap.reduce_cooldown(total_hits*4 SECONDS)
 

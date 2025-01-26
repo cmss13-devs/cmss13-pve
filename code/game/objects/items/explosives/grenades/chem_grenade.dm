@@ -1,5 +1,5 @@
 /obj/item/explosive/grenade/custom
-	name = "Custom grenade"
+	name = "custom grenade"
 	icon_state = "grenade_custom"
 	desc = "A custom chemical grenade with an M40 casing. This one is made to fit into underslung grenade launchers, but can also be thrown by hand."
 	w_class = SIZE_SMALL
@@ -17,7 +17,7 @@
 	..()
 
 /obj/item/explosive/grenade/custom/large
-	name = "Large Custom Grenade"
+	name = "large custom grenade"
 	desc = "A custom chemical grenade with an M15 casing. This casing has a higher explosive capacity than the M40 variant."
 	icon_state = "large_grenade_custom"
 	allowed_containers = list(/obj/item/reagent_container/glass)
@@ -33,7 +33,7 @@
 
 
 /obj/item/explosive/grenade/custom/metal_foam
-	name = "Metal-Foam Grenade"
+	name = "metal-foam grenade"
 	desc = "Used for emergency sealing of air breaches."
 	assembly_stage = ASSEMBLY_LOCKED
 	harmful = FALSE
@@ -56,7 +56,7 @@
 	update_icon()
 
 /obj/item/explosive/grenade/custom/incendiary
-	name = "Incendiary Grenade"
+	name = "incendiary grenade"
 	desc = "Used for clearing rooms of living things."
 	assembly_stage = ASSEMBLY_LOCKED
 	has_blast_wave_dampener = FALSE
@@ -79,7 +79,7 @@
 	update_icon()
 
 /obj/item/explosive/grenade/custom/flare
-	name = "M40-F flare grenade"
+	name = "\improper M40-F flare grenade"
 	desc = "Chemical flare in a grenade form, designed for compatibility with most standard issue launchers."
 	assembly_stage = ASSEMBLY_LOCKED
 	has_blast_wave_dampener = FALSE
@@ -103,7 +103,7 @@
 	update_icon()
 
 /obj/item/explosive/grenade/custom/large/flare
-	name = "M15-F flare grenade"
+	name = "\improper M15-F flare grenade"
 	desc = "Chemical flare in a grenade form, expanded variant. The casing is too large to fit most launchers."
 	assembly_stage = ASSEMBLY_LOCKED
 	has_blast_wave_dampener = FALSE
@@ -173,54 +173,6 @@
 	containers += B1
 	containers += B2
 	update_icon()
-
-
-
-
-/obj/item/explosive/grenade/custom/teargas
-	name = "\improper M66 teargas grenade"
-	desc = "Tear gas grenade used for nonlethal riot control. Please wear adequate gas protection."
-	assembly_stage = ASSEMBLY_LOCKED
-	harmful = FALSE
-	has_blast_wave_dampener = FALSE
-	antigrief_protection = FALSE
-
-/obj/item/explosive/grenade/custom/teargas/Initialize()
-	if(type == /obj/item/explosive/grenade/custom/teargas) // ugly but we only want to change base level teargas
-		if(SSticker.mode && MODE_HAS_FLAG(MODE_FACTION_CLASH))
-			new /obj/item/explosive/grenade/flashbang/noskill(loc)
-			return INITIALIZE_HINT_QDEL
-		else if(SSticker.current_state < GAME_STATE_PLAYING)
-			RegisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP, PROC_REF(replace_teargas))
-	. = ..()
-	var/obj/item/reagent_container/glass/beaker/B1 = new(src)
-	var/obj/item/reagent_container/glass/beaker/B2 = new(src)
-
-	B1.reagents.add_reagent("condensedcapsaicin", 25)
-	B1.reagents.add_reagent("potassium", 25)
-	B2.reagents.add_reagent("phosphorus", 25)
-	B2.reagents.add_reagent("sugar", 25)
-
-	detonator = new/obj/item/device/assembly_holder/timer_igniter(src, 4 SECONDS) //~4 second timer
-
-	containers += B1
-	containers += B2
-
-	update_icon()
-
-/obj/item/explosive/grenade/custom/teargas/proc/replace_teargas()
-	if(MODE_HAS_FLAG(MODE_FACTION_CLASH))
-		new /obj/item/explosive/grenade/flashbang/noskill(loc)
-		qdel(src)
-	UnregisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP)
-
-
-/obj/item/explosive/grenade/custom/teargas/attack_self(mob/user)
-	if(!skillcheck(user, SKILL_POLICE, SKILL_POLICE_SKILLED))
-		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
-		return
-	..()
-
 
 /obj/item/explosive/grenade/custom/ied
 	name = "improvised explosive device"
