@@ -118,7 +118,7 @@
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_reg"
 	caliber = "10x27mm"
-	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
+	default_ammo = /datum/ammo/bullet/rifle/upp
 
 /obj/item/ammo_box/rounds/type71/empty
 	empty = TRUE
@@ -129,7 +129,7 @@
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_ap"
-	default_ammo = /datum/ammo/bullet/rifle/heavy/ap/upp
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap
 
 /obj/item/ammo_box/rounds/type71/ap/empty
 	empty = TRUE
@@ -140,7 +140,7 @@
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_heap"
-	default_ammo = /datum/ammo/bullet/rifle/heavy/heap/upp
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 
 /obj/item/ammo_box/rounds/type71/heap/empty
 	empty = TRUE
