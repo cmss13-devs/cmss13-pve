@@ -8,16 +8,13 @@
 	icon_state = "m20"
 	force = 5
 	w_class = SIZE_SMALL
-	// whoever commented that they wanted to prevent claymores from being hidden was a wholeass bitch.
-	//layer = MOB_LAYER - 0.1
+	// whoever commented that they wanted to prevent claymores from being hidden was a dork (derogatory).
 	throwforce = 5
 	throw_range = 6
 	throw_speed = SPEED_VERY_FAST
-	// lol. funni.
-	//unacidable = TRUE
+	// claymores are now acidable.
 	flags_atom = FPRINT|CONDUCT
-	// kino fragging rp.
-	//antigrief_protection = TRUE
+	// antigrief off. kino fragging rp.
 	allowed_sensors = list(/obj/item/device/assembly/prox_sensor)
 	max_container_volume = 120
 	reaction_limits = list( "max_ex_power" = 105, "base_ex_falloff" = 60, "max_ex_shards" = 32,
