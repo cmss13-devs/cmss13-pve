@@ -39,7 +39,7 @@
 	icon_state = "qjy72"
 
 	matter = list("metal" = 10000)
-	default_ammo = /datum/ammo/bullet/rifle/heavy/heap/upp
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 	max_rounds = 250
 	reload_delay = 12
 	gun_type = /obj/item/weapon/gun/pkp

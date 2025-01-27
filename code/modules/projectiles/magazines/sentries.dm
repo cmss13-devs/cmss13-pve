@@ -26,7 +26,7 @@
 	icon_state = "sentry"
 	caliber = "10x27mm"
 	max_rounds = 350
-	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
+	default_ammo = /datum/ammo/bullet/rifle/upp
 
 /obj/item/ammo_magazine/sentry/shotgun
 	name = "12g buckshot drum"
