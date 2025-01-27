@@ -79,10 +79,6 @@
 /obj/item/trash/boonie,
 /turf/open/floor/prison/sterile_white/southwest,
 /area/fiorina/station/medbay)
-"adC" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/redfull,
-/area/fiorina/station/security)
 "adD" = (
 /obj/structure/bed/roller,
 /obj/structure/machinery/iv_drip{
@@ -1851,10 +1847,6 @@
 /obj/item/tool/scythe,
 /turf/open/floor/prison/blue_plate/west,
 /area/fiorina/station/botany)
-"brC" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/floor_plate,
-/area/fiorina/station/lowsec)
 "brI" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1
@@ -3709,7 +3701,6 @@
 	icon_state = "4"
 	},
 /obj/item/prop/helmetgarb/flair_initech,
-/obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison,
 /area/fiorina/station/medbay)
 "cPK" = (
@@ -4475,10 +4466,6 @@
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/prison/yellow/northwest,
 /area/fiorina/station/disco)
-"drj" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/darkyellow2/west,
-/area/fiorina/lz/near_lzI)
 "dro" = (
 /obj/structure/closet/l3closet/general,
 /turf/open/floor/prison,
@@ -6195,10 +6182,6 @@
 "eDn" = (
 /turf/closed/wall/r_wall/prison_unmeltable,
 /area/fiorina/station/central_ring)
-"eDv" = (
-/obj/effect/landmark/corpsespawner/prison_security,
-/turf/open/floor/prison/whitegreenfull/southwest,
-/area/fiorina/station/medbay)
 "eDJ" = (
 /obj/item/explosive/grenade/incendiary/molotov,
 /turf/open/floor/prison/red/east,
@@ -6207,10 +6190,6 @@
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_nest,
 /turf/open/floor/prison/whitegreen/northeast,
 /area/fiorina/tumor/ice_lab)
-"eDY" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/sterile_white/southwest,
-/area/fiorina/station/medbay)
 "eEd" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_sn_full_cap"
@@ -7636,10 +7615,6 @@
 /obj/item/stack/sheet/wood,
 /turf/open/floor/prison/whitepurple/southeast,
 /area/fiorina/station/research_cells)
-"fGd" = (
-/obj/effect/landmark/corpsespawner/prisoner,
-/turf/open/gm/river/darkred_pool,
-/area/fiorina/station/park)
 "fGe" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -8175,10 +8150,6 @@
 	},
 /turf/open/floor/plating/prison,
 /area/fiorina/lz/near_lzII)
-"fZB" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/floor_plate,
-/area/fiorina/station/security)
 "fZD" = (
 /obj/item/tool/warning_cone,
 /turf/open/floor/wood,
@@ -10085,7 +10056,6 @@
 /obj/structure/bed/chair/office/light{
 	dir = 4
 	},
-/obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/wood,
 /area/fiorina/lz/near_lzI)
 "hvF" = (
@@ -10264,7 +10234,6 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/lz/near_lzII)
 "hDq" = (
-/obj/effect/landmark/corpsespawner/engineer,
 /obj/effect/decal/cleanable/blood,
 /turf/open/auto_turf/sand/layer1,
 /area/fiorina/tumor/civres)
@@ -10348,10 +10317,6 @@
 /obj/item/stack/sandbags,
 /turf/open/floor/prison/kitchen,
 /area/fiorina/station/power_ring)
-"hIg" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/whitegreen/west,
-/area/fiorina/station/medbay)
 "hIM" = (
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/prison/cell_stripe/east,
@@ -11358,7 +11323,6 @@
 	layer = 3.5
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/prison_security,
 /turf/open/floor/wood,
 /area/fiorina/station/park)
 "ivB" = (
@@ -11713,7 +11677,6 @@
 "iKG" = (
 /obj/structure/bed/chair,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/prison_security,
 /turf/open/floor/prison,
 /area/fiorina/station/park)
 "iKP" = (
@@ -12057,10 +12020,6 @@
 "iXL" = (
 /turf/open/floor/prison,
 /area/fiorina/station/telecomm/lz1_tram)
-"iYl" = (
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/prison/whitepurple/north,
-/area/fiorina/station/research_cells)
 "iYC" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -12073,7 +12032,6 @@
 /area/fiorina/station/central_ring)
 "iYX" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/effect/landmark/corpsespawner/doctor,
 /turf/open/floor/prison/bluefull,
 /area/fiorina/station/civres_blue)
 "jah" = (
@@ -12659,10 +12617,6 @@
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_core,
 /turf/open/floor/plating/prison,
 /area/fiorina/tumor/fiberbush)
-"jyP" = (
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/plating/prison,
-/area/fiorina/station/medbay)
 "jyR" = (
 /obj/structure/largecrate/supply/supplies/tables_racks,
 /turf/open/floor/prison,
@@ -13225,7 +13179,6 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/effect/landmark/corpsespawner/security/liaison,
 /turf/open/floor/prison/darkbrown2/east,
 /area/fiorina/station/park)
 "jUs" = (
@@ -13833,10 +13786,6 @@
 "kvx" = (
 /obj/effect/landmark/monkey_spawn,
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/fiorina/station/medbay)
-"kvH" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/whitegreenfull/southwest,
 /area/fiorina/station/medbay)
 "kvT" = (
 /obj/item/tool/shovel/spade,
@@ -15170,7 +15119,6 @@
 /area/fiorina/station/park)
 "lFc" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/security/liaison,
 /turf/open/floor/wood,
 /area/fiorina/station/park)
 "lGm" = (
@@ -15917,7 +15865,6 @@
 /obj/structure/bed{
 	icon_state = "abed"
 	},
-/obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/telecomm/lz1_cargo)
 "mle" = (
@@ -16024,10 +15971,6 @@
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security/wardens)
-"moW" = (
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/plating/prison,
-/area/fiorina/tumor/servers)
 "moY" = (
 /obj/item/trash/used_stasis_bag,
 /turf/open/floor/prison/floor_plate,
@@ -16820,10 +16763,6 @@
 	},
 /turf/open/floor/prison/yellow/southwest,
 /area/fiorina/station/disco)
-"mUe" = (
-/obj/effect/landmark/corpsespawner/engineer,
-/turf/open/floor/prison/bluecorner/north,
-/area/fiorina/station/power_ring)
 "mUp" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -17364,10 +17303,6 @@
 /obj/item/stack/rods,
 /turf/open/floor/plating/prison,
 /area/fiorina/station/civres_blue)
-"nrq" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison,
-/area/fiorina/station/disco)
 "nrL" = (
 /obj/structure/barricade/sandbags{
 	icon_state = "sandbag_0";
@@ -18179,10 +18114,6 @@
 	},
 /turf/open/floor/prison,
 /area/fiorina/tumor/servers)
-"ocX" = (
-/obj/effect/landmark/corpsespawner/engineer,
-/turf/open/floor/prison/bluefull,
-/area/fiorina/station/power_ring)
 "odo" = (
 /turf/open/floor/prison/yellowcorner,
 /area/fiorina/station/lowsec)
@@ -19388,10 +19319,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/oob)
-"oWz" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison,
-/area/fiorina/lz/near_lzI)
 "oWF" = (
 /obj/structure/machinery/door/airlock/prison_hatch/autoname,
 /turf/open/floor/plating/prison,
@@ -20001,10 +19928,6 @@
 	pixel_y = 13
 	},
 /turf/open/floor/plating/prison,
-/area/fiorina/tumor/civres)
-"pxj" = (
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/prison/greenfull/east,
 /area/fiorina/tumor/civres)
 "pxk" = (
 /obj/structure/closet/cabinet,
@@ -21535,7 +21458,6 @@
 	dir = 1;
 	pixel_y = 21
 	},
-/obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison/whitegreen/north,
 /area/fiorina/station/medbay)
 "qFE" = (
@@ -21802,10 +21724,6 @@
 /obj/item/stack/rods/plasteel,
 /turf/open/floor/prison/darkyellow2/northeast,
 /area/fiorina/lz/near_lzI)
-"qRT" = (
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/prison/greenfull/northwest,
-/area/fiorina/tumor/civres)
 "qSp" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -23439,10 +23357,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/disco)
-"sdG" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison/floor_plate/southwest,
-/area/fiorina/station/telecomm/lz1_cargo)
 "sdK" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/device/flashlight/lamp{
@@ -25461,10 +25375,6 @@
 "tOc" = (
 /turf/open/floor/wood,
 /area/fiorina/station/disco)
-"tOh" = (
-/obj/effect/landmark/corpsespawner/prisoner,
-/turf/open/gm/river/red_pool,
-/area/fiorina/station/park)
 "tOp" = (
 /obj/structure/window/framed/prison/cell,
 /turf/open/floor/plating/prison,
@@ -25647,10 +25557,6 @@
 /obj/structure/platform_decoration,
 /turf/open/floor/prison/blue/southeast,
 /area/fiorina/station/power_ring)
-"tVV" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/plating/prison,
-/area/fiorina/station/lowsec)
 "tVW" = (
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/prison/yellow/southwest,
@@ -25915,10 +25821,6 @@
 /obj/item/clothing/gloves/boxing,
 /turf/open/floor/prison/yellow/southwest,
 /area/fiorina/station/lowsec)
-"ugT" = (
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/plating/prison,
-/area/fiorina/tumor/aux_engi)
 "uha" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/paper_bin{
@@ -26235,7 +26137,6 @@
 /area/fiorina/station/research_cells)
 "uuj" = (
 /obj/item/trash/uscm_mre,
-/obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison/darkyellow2/west,
 /area/fiorina/station/flight_deck)
 "uuD" = (
@@ -26375,10 +26276,6 @@
 	},
 /turf/open/floor/prison/bluefull,
 /area/fiorina/station/power_ring)
-"uAk" = (
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/prison/floor_plate,
-/area/fiorina/tumor/servers)
 "uAN" = (
 /obj/effect/decal/hefa_cult_decals/d32{
 	icon_state = "2"
@@ -26635,10 +26532,6 @@
 "uMw" = (
 /turf/open/floor/wood,
 /area/fiorina/station/security/wardens)
-"uMJ" = (
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/prison/darkpurple2/north,
-/area/fiorina/tumor/servers)
 "uMV" = (
 /obj/effect/landmark/yautja_teleport,
 /turf/open/floor/prison/floor_plate,
@@ -28001,10 +27894,6 @@
 /obj/item/storage/pill_bottle/kelotane/skillless,
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/fiorina/tumor/ice_lab)
-"vOj" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
-/turf/open/floor/prison,
-/area/fiorina/station/security)
 "vOz" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/prison,
@@ -30935,10 +30824,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/flight_deck)
-"yhQ" = (
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/prison/floor_plate,
-/area/fiorina/tumor/civres)
 "yhR" = (
 /obj/structure/sign/prop3{
 	desc = "Enlist in the Penal Battalions today! The USCM 3rd Fleet features a subset of UA sanctioned penal battalions, drawing from inmate popualtions across the colonies. Mostly New Argentina though."
@@ -40261,7 +40146,7 @@ oeb
 xHV
 dIo
 vRz
-pxj
+dCc
 wSn
 dIo
 xHV
@@ -40889,7 +40774,7 @@ dXG
 lLe
 dXG
 dXG
-qRT
+oVR
 oVR
 oVR
 oVR
@@ -41309,7 +41194,7 @@ oeb
 swU
 oeb
 oeb
-yhQ
+oeb
 dCc
 dCc
 oeb
@@ -42180,7 +42065,7 @@ oVR
 kUj
 kUj
 oVR
-qRT
+oVR
 cvC
 cvC
 xwL
@@ -43038,7 +42923,7 @@ kZv
 fpn
 kZv
 rGq
-ugT
+rGq
 rGq
 rGq
 kZv
@@ -44248,7 +44133,7 @@ agi
 agi
 hoZ
 hoZ
-moW
+hoZ
 hoZ
 hoZ
 agi
@@ -45637,7 +45522,7 @@ hCH
 xGf
 oLg
 vjk
-fGd
+qKl
 qKl
 xdk
 sud
@@ -45849,7 +45734,7 @@ wbI
 tTE
 iDH
 gNG
-tOh
+rcL
 gdi
 xdk
 nUo
@@ -46062,7 +45947,7 @@ tTE
 iDH
 gNG
 rcL
-fGd
+qKl
 xdk
 tTE
 iDH
@@ -48677,7 +48562,7 @@ hoZ
 hoZ
 hoZ
 sqs
-moW
+hoZ
 njx
 njx
 nKj
@@ -52500,11 +52385,11 @@ ekn
 xgo
 iOM
 qQO
-uAk
+sqs
 njx
 siR
 aHO
-uMJ
+siR
 iOM
 njx
 siR
@@ -56568,7 +56453,7 @@ lBf
 lBf
 hBH
 lBf
-hIg
+lBf
 oME
 uuS
 cfV
@@ -58259,7 +58144,7 @@ jWi
 hjL
 bNf
 jnh
-jyP
+mEO
 cfV
 dWg
 hVI
@@ -59319,7 +59204,7 @@ qNY
 gMD
 aTV
 qdC
-eDv
+eoy
 cfV
 uuS
 hVI
@@ -60666,7 +60551,7 @@ fnB
 fnB
 cUJ
 hVG
-vOj
+fnB
 yft
 dpI
 fGe
@@ -61091,7 +60976,7 @@ cUJ
 gRE
 gFs
 nZx
-fZB
+cUJ
 hVG
 yft
 fnB
@@ -61226,7 +61111,7 @@ hVI
 uPU
 jWi
 jWi
-eDY
+jWi
 jWi
 jWi
 vBT
@@ -62482,7 +62367,7 @@ fjh
 jWi
 hVI
 lpV
-kvH
+eoy
 jWi
 eoy
 ygv
@@ -62582,7 +62467,7 @@ gRE
 fnB
 yiS
 del
-vOj
+fnB
 cUJ
 hVG
 cUJ
@@ -63427,7 +63312,7 @@ oXv
 oXv
 gIB
 mja
-adC
+gRE
 gRE
 cUJ
 gRE
@@ -67582,7 +67467,7 @@ cKa
 wCp
 chv
 cKa
-iYl
+gRI
 fqe
 hdl
 cKa
@@ -67627,7 +67512,7 @@ blG
 kqC
 kqC
 kqC
-tVV
+vRA
 vRA
 oFI
 gLJ
@@ -70388,7 +70273,7 @@ jWn
 hAI
 fbK
 cfE
-brC
+tra
 urp
 tra
 mrp
@@ -71854,7 +71739,7 @@ qsy
 lDA
 ecM
 nSx
-nrq
+gqe
 uVQ
 gqe
 gqe
@@ -72470,7 +72355,7 @@ hxq
 etr
 ivl
 ivl
-sdG
+ivl
 ivl
 ivl
 ivl
@@ -74229,7 +74114,7 @@ bnr
 kfa
 eQS
 ifT
-mUe
+eQb
 eHR
 uiX
 lCH
@@ -75017,7 +74902,7 @@ cUg
 oUg
 iuy
 ojJ
-sdG
+ivl
 ivl
 gqp
 etr
@@ -75707,7 +75592,7 @@ mxQ
 lAS
 uTk
 uQf
-ocX
+kfa
 uQf
 kfa
 kfa
@@ -76930,7 +76815,7 @@ bQM
 kPz
 xDw
 tFn
-drj
+tYz
 uNY
 dOX
 xmp
@@ -77364,7 +77249,7 @@ acH
 wSu
 tYz
 acH
-drj
+tYz
 cUj
 uRA
 oeQ
@@ -78811,7 +78696,7 @@ cAW
 cAW
 xDw
 fgo
-oWz
+hKI
 hKI
 hKI
 tFn

@@ -19,8 +19,8 @@
 	burncolor = "#6897f7"
 	burncolormod = 2
 	properties = list(PROPERTY_ALCOHOLIC = 5, PROPERTY_FUELING = 3, PROPERTY_OXIDIZING = 3, PROPERTY_FLOWING = 2)
-	overdose = HIGH_REAGENTS_OVERDOSE
-	overdose_critical = HIGH_REAGENTS_OVERDOSE_CRITICAL
+	overdose = VHIGH_REAGENTS_OVERDOSE	//I weep for every corpsman on greenshifts
+	overdose_critical = VHIGH_REAGENTS_OVERDOSE_CRITICAL
 	///higher numbers mean the booze will have an effect faster.
 	var/boozepwr = 5
 	///If it's a normal drink, let them drink a bit before they start feeling it.

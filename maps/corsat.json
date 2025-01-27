@@ -7,17 +7,6 @@
         "COLD": true,
         "InSpace": true
     },
-    "survivor_types": [
-        "/datum/equipment_preset/survivor/scientist/corsat",
-        "/datum/equipment_preset/survivor/scientist/corsat",
-        "/datum/equipment_preset/survivor/goon",
-        "/datum/equipment_preset/survivor/doctor/corsat",
-        "/datum/equipment_preset/survivor/security/corsat",
-        "/datum/equipment_preset/survivor/interstellar_commerce_commission_liaison/corsat",
-        "/datum/equipment_preset/survivor/engineer/corsat",
-        "/datum/equipment_preset/survivor/clf",
-        "/datum/equipment_preset/survivor/civilian"
-    ],
     "defcon_triggers": [
         3300,
         2100,

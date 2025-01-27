@@ -23,11 +23,12 @@
 		/obj/item/attachable/magnetic_harness,
 	)
 
-	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
 	var/datum/effect_system/smoke_spread/smoke
 
 	flags_item = TWOHANDED|NO_CRYO_STORE
-	var/skill_locked = TRUE
+	flags_equip_slot = SLOT_BACK //The fact you can't carry the tube across your back is daft? Hello?
+	var/skill_locked = FALSE
 
 /obj/item/weapon/gun/launcher/rocket/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -201,6 +202,12 @@
 		mob.KnockDown(knockdown_amount)
 		mob.apply_effect(6, STUTTER)
 		mob.emote("pain")
+
+//-------------------------------------------------------
+//Army version, just reflavoured description
+
+/obj/item/weapon/gun/launcher/rocket/army
+	desc = "The M5 RPG is a common squad-level anti-armor weapon used by the US Army. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
 
 //-------------------------------------------------------
 //M5 RPG'S MEAN FUCKING COUSIN

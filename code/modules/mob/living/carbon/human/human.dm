@@ -700,16 +700,16 @@
 				close_browser(src, "flavor_changes")
 				return
 			if("general")
-				var/msg = input(usr,"Update the general description of your character. This will be shown regardless of clothing, and may include OOC notes and preferences.","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]])) as message
+				var/msg = input(usr,"Update the general description of your character. This will be shown regardless of clothing, and may include OOC notes and preferences. Character limit is [MAX_FLAVOR_MESSAGE_LEN].","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]])) as message
 				if(msg != null)
-					msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+					msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 					msg = html_encode(msg)
 				flavor_texts[href_list["flavor_change"]] = msg
 				return
 			else
 				var/msg = input(usr,"Update the flavor text for your [href_list["flavor_change"]].","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]])) as message
 				if(msg != null)
-					msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+					msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 					msg = html_encode(msg)
 				flavor_texts[href_list["flavor_change"]] = msg
 				set_flavor()
@@ -1066,6 +1066,8 @@
 	default_lighting_alpha = species.default_lighting_alpha
 	update_sight()
 
+	SEND_SIGNAL(src, COMSIG_HUMAN_SET_SPECIES, new_species)
+
 	if(species)
 		return TRUE
 	else
@@ -1191,7 +1193,7 @@
 		else
 			if(tracker_setting in squad_leader_trackers)
 				var/datum/squad/S = GLOB.RoleAuthority.squads_by_type[squad_leader_trackers[tracker_setting]]
-				H = S.squad_leader
+				H = S?.squad_leader
 				tracking_suffix = tracker_setting
 
 	if(!H || H.w_uniform?.sensor_mode != SENSOR_MODE_LOCATION)
@@ -1534,7 +1536,7 @@
 	set desc = "Sets a description which will be shown when someone examines you."
 	set category = "IC"
 
-	pose =  strip_html(input(usr, "This is [src]. \He is...", "Pose", null)  as text)
+	pose =  strip_html(input(usr, "This is [src]. \He is...", "Pose", null)  as message)
 
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"

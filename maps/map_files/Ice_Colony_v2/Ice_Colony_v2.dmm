@@ -1839,10 +1839,6 @@
 	},
 /turf/open/auto_turf/snow/layer2,
 /area/ice_colony/exterior/surface/valley/southeast)
-"anG" = (
-/obj/effect/landmark/corpsespawner/miner,
-/turf/open/floor/plating,
-/area/ice_colony/surface/mining)
 "anH" = (
 /obj/structure/surface/table,
 /obj/effect/landmark/crap_item,
@@ -2354,12 +2350,12 @@
 /area/ice_colony/surface/dorms)
 "asu" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/wood,
 /area/ice_colony/surface/dorms)
 "asx" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/effect/landmark/good_item,
 /turf/open/floor/wood,
 /area/ice_colony/surface/dorms)
@@ -2427,7 +2423,7 @@
 /area/ice_colony/exterior/surface/clearing/pass)
 "atm" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/effect/landmark/crap_item,
 /turf/open/floor/wood,
 /area/ice_colony/surface/dorms)
@@ -2519,7 +2515,6 @@
 /turf/open/floor/grass,
 /area/ice_colony/surface/hydroponics/lobby)
 "atS" = (
-/obj/effect/landmark/corpsespawner/miner,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/wood,
 /area/ice_colony/surface/dorms)
@@ -2643,7 +2638,6 @@
 /turf/open/auto_turf/snow/layer3,
 /area/ice_colony/exterior/surface/clearing/south)
 "avw" = (
-/obj/effect/landmark/corpsespawner/engineer,
 /obj/effect/decal/cleanable/blood,
 /turf/open/auto_turf/snow/layer3,
 /area/ice_colony/exterior/surface/clearing/south)
@@ -2857,7 +2851,7 @@
 "awT" = (
 /obj/structure/closet/cabinet,
 /obj/item/storage/toolbox/emergency,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/wood,
 /area/ice_colony/surface/dorms)
 "awU" = (
@@ -4048,7 +4042,6 @@
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
-/obj/effect/landmark/corpsespawner/bridgeofficer,
 /turf/open/floor/wood,
 /area/ice_colony/surface/command/crisis)
 "aIO" = (
@@ -4078,7 +4071,6 @@
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
-/obj/effect/landmark/corpsespawner/doctor,
 /turf/open/floor/wood,
 /area/ice_colony/surface/command/crisis)
 "aIX" = (
@@ -8346,7 +8338,6 @@
 /obj/structure/bed/chair/wood/normal{
 	dir = 8
 	},
-/obj/effect/landmark/corpsespawner/engineer,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/carpet,
 /area/ice_colony/underground/crew/leisure)
@@ -10876,7 +10867,6 @@
 	icon_state = "3"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/landmark/corpsespawner/engineer,
 /turf/open/floor/dark2,
 /area/ice_colony/surface/engineering)
 "dYB" = (
@@ -11966,7 +11956,6 @@
 /turf/open/floor/darkyellow2/north,
 /area/ice_colony/underground/engineering/locker)
 "frz" = (
-/obj/effect/landmark/corpsespawner/doctor,
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
@@ -13390,7 +13379,6 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/hangar/alpha)
 "hhs" = (
-/obj/effect/landmark/corpsespawner/miner,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/icefloor/warnplate,
 /area/ice_colony/surface/requesitions)
@@ -13743,7 +13731,6 @@
 /turf/open/floor/whitered/east,
 /area/ice_colony/underground/medical/treatment)
 "hCh" = (
-/obj/effect/landmark/corpsespawner/bridgeofficer,
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
@@ -16685,7 +16672,6 @@
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
-/obj/effect/landmark/corpsespawner/russian,
 /turf/open/floor/darkred2/west,
 /area/ice_colony/surface/command/checkpoint)
 "lni" = (
@@ -17453,7 +17439,6 @@
 /obj/structure/machinery/shower{
 	dir = 8
 	},
-/obj/effect/landmark/corpsespawner/bridgeofficer,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/freezerfloor,
 /area/ice_colony/surface/dorms/restroom_e)
@@ -17645,7 +17630,6 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/effect/landmark/corpsespawner/russian,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/dark2,
 /area/ice_colony/underground/security/armory)
@@ -17848,7 +17832,6 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/hangar/hallway)
 "mGR" = (
-/obj/effect/landmark/corpsespawner/russian,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/dark2,
 /area/ice_colony/underground/research)
@@ -19900,7 +19883,6 @@
 "psM" = (
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
-/obj/effect/landmark/corpsespawner/scientist,
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
@@ -21584,7 +21566,6 @@
 /area/ice_colony/surface/dorms/canteen)
 "rtt" = (
 /obj/structure/bed,
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/darkyellow2/northeast,
 /area/ice_colony/underground/security/brig)
@@ -21905,7 +21886,6 @@
 /obj/structure/pipes/vents/pump{
 	dir = 1
 	},
-/obj/effect/landmark/corpsespawner/miner,
 /turf/open/floor/freezerfloor,
 /area/ice_colony/surface/bar/bar)
 "rSz" = (
@@ -26179,7 +26159,6 @@
 /area/ice_colony/underground/crew/morgue)
 "wUW" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/scientist,
 /turf/open/floor/dark2,
 /area/ice_colony/underground/hallway/south_east)
 "wVY" = (
@@ -26352,7 +26331,6 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/corpsespawner/miner,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/white,
 /area/ice_colony/underground/reception/toilet_men)
@@ -26781,7 +26759,6 @@
 /area/ice_colony/underground/hallway/north_west)
 "xGV" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/scientist,
 /turf/open/floor/white,
 /area/ice_colony/surface/clinic/treatment)
 "xHf" = (
@@ -84501,7 +84478,7 @@ alE
 oJQ
 amb
 amb
-anG
+amb
 aog
 aoO
 amb

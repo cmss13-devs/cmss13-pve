@@ -31,10 +31,6 @@
 /obj/structure/bed/chair/comfy/black,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
-"au" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/carpet,
-/area/bigredv2/outside/admin_building)
 "aB" = (
 /obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/on,
@@ -100,7 +96,6 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
 "bc" = (
@@ -136,10 +131,6 @@
 	},
 /obj/item/storage/toolbox/syndicate,
 /turf/open/floor/darkred2/east,
-/area/bigredv2/outside/admin_building)
-"fR" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "gb" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
@@ -473,7 +464,7 @@ ab
 Jy
 aD
 Od
-fR
+WP
 as
 WP
 Li
@@ -520,7 +511,7 @@ WP
 (6,1,1) = {"
 NX
 jH
-au
+aQ
 aW
 aL
 aS

@@ -252,7 +252,7 @@
 	icon_state = "secure_crate"
 
 /obj/structure/largecrate/supply/supplies/flares
-	name = "Flare supply crate (x525)"
+	name = "Flare supply crate (x320)"
 	desc = "A supply crate containing two crates of flares."
 	supplies = list(/obj/item/ammo_box/magazine/misc/flares = 2)
 

@@ -48,7 +48,6 @@
 /turf/open/floor/platingdmg1,
 /area/lv624/lazarus/medbay)
 "il" = (
-/obj/effect/landmark/corpsespawner/doctor,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/white,
 /area/lv624/lazarus/medbay)
@@ -95,7 +94,6 @@
 /area/lv624/lazarus/medbay)
 "mV" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/doctor,
 /turf/open/floor/plating/platingdmg3,
 /area/lv624/lazarus/medbay)
 "nG" = (
@@ -334,7 +332,6 @@
 /turf/open/floor/plating/platingdmg3,
 /area/lv624/lazarus/medbay)
 "LP" = (
-/obj/effect/landmark/corpsespawner/doctor,
 /obj/effect/decal/cleanable/blood,
 /obj/item/weapon/gun/pistol/holdout,
 /turf/open/floor/whiteblue/east,
@@ -417,7 +414,6 @@
 "Xm" = (
 /obj/item/stack/sheet/metal,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/engineer,
 /turf/open/floor/plating/platingdmg3,
 /area/lv624/lazarus/medbay)
 "XA" = (
@@ -435,7 +431,7 @@
 /turf/open/floor/plating/platingdmg3,
 /area/lv624/lazarus/medbay)
 "XR" = (
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/platingdmg1,
 /area/lv624/lazarus/medbay)

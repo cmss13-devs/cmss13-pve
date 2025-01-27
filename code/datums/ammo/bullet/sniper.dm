@@ -16,7 +16,7 @@
 	max_range = 32
 	scatter = 0
 	damage = 70
-	penetration= ARMOR_PENETRATION_TIER_10
+	penetration= ARMOR_PENETRATION_TIER_5
 	shell_speed = AMMO_SPEED_TIER_6
 	damage_falloff = 0
 
@@ -88,7 +88,7 @@
 /datum/ammo/bullet/sniper/crude
 	name = "crude sniper bullet"
 	damage = 42
-	penetration = ARMOR_PENETRATION_TIER_6
+	penetration = -ARMOR_PENETRATION_TIER_2
 
 /datum/ammo/bullet/sniper/crude/on_hit_mob(mob/M, obj/projectile/P)
 	. = ..()

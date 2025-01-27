@@ -39,7 +39,7 @@
 #define RADIO_CHANNEL_SPECIAL "special"
 #define RADIO_CHANNEL_USASF "USASF"
 #define RADIO_CHANNEL_US_ARMY "US Army"
-
+#define RADIO_CHANNEL_UA_GUARD "UA Colonial Guard"
 //CLF Comms
 #define RADIO_CHANNEL_CLF_GEN "CLF"
 #define RADIO_CHANNEL_CLF_CMD "CLF Command"

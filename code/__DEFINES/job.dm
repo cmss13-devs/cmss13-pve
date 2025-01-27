@@ -194,12 +194,20 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 //-------- US Army --------//
 #define JOB_ARMY_TROOPER "Army Trooper"
+#define JOB_ARMY_PROPIPE "Army Grenadier"
 #define JOB_ARMY_GUNNER "Army Gunner"
-#define JOB_ARMY_ENGI "Army Sapper"
-#define JOB_ARMY_MEDIC "Army Medic"
+#define JOB_ARMY_SMARTGUNNER "Army Heavy Gunner"
+#define JOB_ARMY_MARKSMAN "Army Marksman"
+#define JOB_ARMY_ATLOAD "Army AT Loader"
+#define JOB_ARMY_ATFIRE "Army AT Gunner"
+#define JOB_ARMY_ENGI "Army Combat Engineering Technician"
+#define JOB_ARMY_MT "Army Technical Engineer"
+#define JOB_ARMY_MEDIC "Army Combat Medical Technician"
 #define JOB_ARMY_NCO "Army Fireteam Lead"
 #define JOB_ARMY_SNCO "Army Squad Leader"
 #define JOB_ARMY_LT "Army Lieutenant"
+#define JOB_ARMY_INTEL "Army Intelligence Officer"
+#define JOB_ARMY_RESEARCHER "Army Science Officer"
 
 //-------- USASF --------//
 #define JOB_NAVY_CREWMAN "USASF Crewman"
@@ -302,6 +310,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UPP_ENGI "Sapper"
 #define JOB_UPP_MEDIC "Sanitar"
 #define JOB_UPP_SPECIALIST "Serzhant"
+#define JOB_UPP_SNIPER "Marksman"
 #define JOB_UPP_LEADER "Master Serzhant"
 #define JOB_UPP_POLICE "Politsiya"
 #define JOB_UPP_SUPPLY "Logistics Technician"

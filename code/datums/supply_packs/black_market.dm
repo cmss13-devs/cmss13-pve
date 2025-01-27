@@ -1278,7 +1278,7 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 			var/mob/living/carbon/human/corpse = new (loc)
 			corpse.create_hud() //Need to generate hud before we can equip anything apparently...
 
-			var/corpse_type = pick(/datum/equipment_preset/corpse/clf/burst, /datum/equipment_preset/corpse/clf)
+			var/corpse_type = pick(/datum/equipment_preset/corpse/bluecollar, /datum/equipment_preset/corpse/whitecollar)
 			arm_equipment(corpse, corpse_type, TRUE, FALSE) // I didn't choose the shitcode life, the shitcode life chose me
 
 			loot_message = SPAN_HIGHDANGER("IT'S A CORPSE!!")

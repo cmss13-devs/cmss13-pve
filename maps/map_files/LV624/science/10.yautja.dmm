@@ -341,7 +341,6 @@
 /area/lv624/lazarus/research)
 "RJ" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/landmark/corpsespawner/scientist,
 /turf/open/floor/whitepurple/northeast,
 /area/lv624/lazarus/research)
 "Si" = (
@@ -351,7 +350,6 @@
 /area/lv624/lazarus/research)
 "Ug" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/landmark/corpsespawner/scientist,
 /turf/open/floor/white,
 /area/lv624/lazarus/research)
 "Wk" = (

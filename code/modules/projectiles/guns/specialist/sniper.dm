@@ -17,13 +17,15 @@
 	var/sniper_lockon_icon = "sniper_lockon"
 	var/obj/effect/ebeam/sniper_beam_type = /obj/effect/ebeam/laser
 	var/sniper_beam_icon = "laser_beam"
-	var/skill_locked = TRUE
+	var/skill_locked = FALSE
 
 	/// Variables for Focus Fire and alternate icons for lockon and laser.
 	var/enable_aimed_shot_icon_alt = FALSE
 	var/sniper_lockon_icon_max = "sniper_lockon_intense"
 	var/sniper_beam_icon_max = "laser_beam_intense"
 
+/obj/item/weapon/gun/rifle/sniper/get_mouse_pointer()
+	return 'icons/effects/mouse_pointer/sniper_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/sniper/get_examine_text(mob/user)
 	. = ..()
@@ -316,7 +318,6 @@
 	item_state = "m42a"
 	unacidable = TRUE
 	indestructible = 1
-
 	fire_sound = 'sound/weapons/gun_sniper.ogg'
 	current_mag = /obj/item/ammo_magazine/sniper
 	force = 12
@@ -325,8 +326,7 @@
 	attachable_allowed = list(/obj/item/attachable/bipod)
 	starting_attachment_types = list(/obj/item/attachable/sniperbarrel)
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
-	map_specific_decoration = TRUE
-
+	map_specific_decoration = FALSE
 	flags_item = TWOHANDED|NO_CRYO_STORE
 
 /obj/item/weapon/gun/rifle/sniper/M42A/verb/toggle_scope_zoom_level()

@@ -134,9 +134,10 @@
 //30mm gun
 
 /obj/structure/ship_ammo/heavygun
-	name = "\improper PGU-100 Multi-Purpose 30mm ammo crate"
+	name = "\improper 25mm multipurpose ammunition crate"
 	icon_state = "30mm_crate"
-	desc = "A crate full of PGU-100 30mm Multi-Purpose ammo designed to penetrate light (non reinforced) structures, as well as shred infantry, IAVs, LAVs, IMVs, and MRAPs. Works in large areas for use on Class 4 and superior alien insectoid infestations, as well as fitting within the armaments allowed for use against a tier 4 insurgency as well as higher tiers. However, it lacks armor penetrating capabilities, for which Anti-Tank 30mm ammo is needed. Can be loaded into the GAU-21 30mm cannon."
+	desc = "A 400rnd reinforced crate of Armor Piercing High Explosive and Incendiary 25mm ammunition for use with the GAU-113 rotary autocannon. Best used against light structures, personnel in the open, or thinskin vehicles. Entirely ineffective against heavier armor."
+	travelling_time = 50
 	equipment_type = /obj/structure/dropship_equipment/weapon/heavygun
 	ammo_count = 400
 	max_ammo_count = 400
@@ -144,10 +145,10 @@
 	ammo_used_per_firing = 40
 	point_cost = 275
 	fire_mission_delay = 2
-	var/bullet_spread_range = 3 //how far from the real impact turf can bullets land
+	var/bullet_spread_range = 2 //how far from the real impact turf can bullets land
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel/gau //For siming 30mm bullet impacts.
-	var/directhit_damage = 105 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
-	var/penetration = 10 //AP value pretty much
+	var/directhit_damage = 150 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
+	var/penetration = 15 //AP value pretty much
 
 /obj/structure/ship_ammo/heavygun/get_examine_text(mob/user)
 	. = ..()
@@ -192,18 +193,18 @@
 
 
 /obj/structure/ship_ammo/heavygun/antitank
-	name = "\improper PGU-105 30mm Anti-tank ammo crate"
+	name = "\improper 25mm armor piercing ammunition crate"
 	icon_state = "30mm_crate_hv"
-	desc = "A crate full of PGU-105 Specialized 30mm APFSDS Titanium-Tungsten alloy penetrators, made for countering peer and near peer APCs, IFVs, and MBTs in CAS support. It is designed to penetrate up to the equivalent 1350mm of RHA when launched from a GAU-21. It is much less effective against soft targets however, in which case 30mm ball ammunition is recommended. WARNING: discarding petals from the ammunition can be harmful if the dropship does not pull out at the needed speeds. Please consult page 3574 of the manual, available for order at any ARMAT store. Can be loaded into the GAU-21 30mm cannon."
+	desc = "A 400rnd reinforced crate of 25mm subcaliber armor piercing discarding sabot ammunition. Reduced effect on structures or personnel in the open, but excellent against armor, entrenched personnel, and other hard targets."
 	travelling_time = 60
 	ammo_count = 400
 	max_ammo_count = 400
 	ammo_used_per_firing = 40
-	bullet_spread_range = 4
+	bullet_spread_range = 3
 	point_cost = 325
 	fire_mission_delay = 2
 	shrapnel_type = /datum/ammo/bullet/shrapnel/gau/at
-	directhit_damage = 80 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
+	directhit_damage = 100 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
 	penetration = 40 //AP value pretty much
 
 //laser battery
@@ -211,7 +212,7 @@
 /obj/structure/ship_ammo/laser_battery
 	name = "\improper BTU-17/LW Hi-Cap Laser Battery"
 	icon_state = "laser_battery"
-	desc = "A high-capacity laser battery used to power laser beam weapons.  Can be loaded into the LWU-6B Laser Cannon."
+	desc = "A high-capacity laser battery used to power laser beam weapons.  Can be loaded into the AN/AEQ-22 laser system."
 	travelling_time = 10
 	ammo_count = 100
 	max_ammo_count = 100
@@ -275,8 +276,8 @@
 
 //this one is air-to-air only
 /obj/structure/ship_ammo/rocket/widowmaker
-	name = "\improper AIM-224B 'Widowmaker'"
-	desc = "The AIM-224B missile is a retrofit of the latest in air-to-air missile technology. Earning the nickname of 'Widowmaker' from various dropship pilots after improvements to its guidance warhead prevents it from being jammed leading to its high kill rate. Not well suited for ground bombardment but its high velocity makes it reach its target quickly. This one has been modified to be a free-fall bomb as a result of dropship ammo shortages. Can be loaded into the LAU-444 Guided Missile Launcher."
+	name = "\improper AIM-90E 'Headlock' air to air missile"
+	desc = "The AIM-90E is an all-aspect multimodal homing missile. An intelligently fuzed 34 explosive dart payload makes it excellent against airborne targets, however the optical/RADAR seeker can also engage softer ground targets. The E variant improves countermeasure rejection and improves high altitude intercept performance."
 	icon_state = "single"
 	travelling_time = 30 //not powerful, but reaches target fast
 	ammo_id = ""
@@ -289,8 +290,8 @@
 	QDEL_IN(src, 0.5 SECONDS)
 
 /obj/structure/ship_ammo/rocket/banshee
-	name = "\improper AGM-227 'Banshee'"
-	desc = "The AGM-227 missile is a mainstay of the overhauled dropship fleet against any mobile or armored ground targets. It's earned the nickname of 'Banshee' from the sudden wail that it emits right before hitting a target. Useful to clear out large areas. Can be loaded into the LAU-444 Guided Missile Launcher."
+	name = "\improper AGM-220C 'Hellhound II' tactical missile"
+	desc = "The AGM-220C is a multipurpose air to ground missile intended for point targets. Terminal homing is provided by an infrared/active RADAR seeker complex, with intelligent fusing determining optimum impact geometry. The C variant improves the RADAR and countermeasure rejection logic."
 	icon_state = "banshee"
 	ammo_id = "b"
 	point_cost = 300
@@ -303,8 +304,8 @@
 	QDEL_IN(src, 0.5 SECONDS)
 
 /obj/structure/ship_ammo/rocket/banshee/nerve
-	name = "\improper AGM-227/C 'Honest John'"
-	desc = "The AGM-227 Banshee platform is an effective vehicle for a variety of warheads. While most rockets contain just a high-explosive charge, or an incendiary gel mixture for wide-area destruction, the 'Honest John' carries a 38kg CN-20 nerve gas warhead. USCMCWC greatly recommends MOPP gear be worn while handling."
+	name = "\improper AGM-220H air to ground missile"
+	desc = "The AGM-220 is a platform for a multitude of warheads. The H variant is specially modified to safely contain a saturation payload of CN-20 nerve agent."
 	icon_state = "banshee"
 	ammo_id = "b"
 	point_cost = 500 //changed from regular banshee even if in 99.99999% of cases PvE will never need this but I was too scared to remove it for fear of something exploding
@@ -322,8 +323,8 @@
 
 
 /obj/structure/ship_ammo/rocket/keeper
-	name = "\improper GBU-67 'Keeper II'"
-	desc = "The GBU-67 'Keeper II' is the latest in a generation of laser guided weaponry that spans all the way back to the 20th century. Earning its nickname from a shortening of 'Peacekeeper' which comes from the program that developed its guidance system and the various uses of it during peacekeeping conflicts. Its payload is designed to devastate armored targets. Can be loaded into the LAU-444 Guided Missile Launcher."
+	name = "\improper Mk.89 SGW smart bomb"
+	desc = "The Mk.89 SGW is a lowcost alternative to the AGM-220C, iterating on the Mk.88 before it. Infrared seeker, 120mm shaped charge, foldout fins, and a rocket motor. The '89 improves motor burn time and incorporates a basic chaff decoy package."
 	icon_state = "paveway"
 	travelling_time = 20 //A fast payload due to its very tight blast zone
 	ammo_id = "k"
@@ -336,8 +337,8 @@
 	QDEL_IN(src, 0.5 SECONDS)
 
 /obj/structure/ship_ammo/rocket/harpoon
-	name = "\improper AGM-184 'Harpoon II'"
-	desc = "The AGM-184 Harpoon II is an Anti-Ship Missile, designed and used to effectively take down enemy ships with a huge blast wave with low explosive power. This one is modified to use ground signals and can be seen as a cheaper alternative to conventional ordnance. Can be loaded into the LAU-444 Guided Missile Launcher."
+	name = "\improper AGM-220M 'Hellhound II' fragmentation tactical missile"
+	desc = "The AGM-220M incorporates a blast-fragmentation warhead with intelligent fuzing set by the dropship at launch. Destonation is set for variable airburst against soft targets or impact against hardened ones. Ineffective against reinforced structures or medium to heavy armor"
 	icon_state = "harpoon"
 	ammo_id = "s"
 	travelling_time = 50
@@ -350,9 +351,9 @@
 	QDEL_IN(src, 0.5 SECONDS)
 
 /obj/structure/ship_ammo/rocket/napalm
-	name = "\improper AGM-99 'Napalm'"
-	desc = "The AGM-99 'Napalm' is an incendiary missile used to turn specific targeted areas into giant balls of fire for a long time. Can be loaded into the LAU-444 Guided Missile Launcher."
-	icon_state = "napalm"
+	name = "\improper AGM-220M 'Hellhound II' incendiary tactical missile"
+	desc = "An AGM-220 series weapon with an incendiary payload. Best in defoliant and antipersonnel roles, but worthless against armor."
+	icon_state = "napalm" //maybe i should just change the goddamn thing to be the same sprite and recolor them or something.
 	ammo_id = "n"
 	point_cost = 500
 	fire_mission_delay = 0 //0 means unusable
@@ -364,9 +365,9 @@
 	QDEL_IN(src, 0.5 SECONDS)
 
 /obj/structure/ship_ammo/rocket/thermobaric
-	name = "\improper BLU-200 'Dragons Breath'"
-	desc = "The BLU-200 Dragons Breath a thermobaric fuel-air bomb. The aerosolized fuel mixture creates a vacuum when ignited causing serious damage to those in its way. Can be loaded into the LAU-444 Guided Missile Launcher."
-	icon_state = "fatty"
+	name = "\improper AGM-220N 'Hellhound II' thermobaric tactical missile"
+	desc = "The AGM-220N is the real monster of the series. It carries a metal augmented charge, generating a thermobaric explosion proven to decisively defeat personnel, light vehicles, and structures, regardless of their entrenchement status. Against armor, the effects are less impressive."
+	icon_state = "napalm" //screw it, this one i AM changing.
 	ammo_id = "f"
 	travelling_time = 50
 	point_cost = 300
@@ -383,15 +384,15 @@
 //minirockets
 
 /obj/structure/ship_ammo/minirocket
-	name = "\improper AGR-59 'Mini-Mike'"
-	desc = "The AGR-59 'Mini-Mike' minirocket is a cheap and efficient means of putting hate down range. Though rockets lack a guidance package, it makes up for it in ammunition count. Can be loaded into the LAU-229 Rocket Pod."
+	name = "\improper M362 70mm blast-frag rocket"
+	desc = "The M362 blast fragmentation warhead for the Mk.10 'Zeus' unguided rocket system is a good choice for antipersonnel or light structure defeat work. A larger salvo size also enables some class of air defense saturation."
 	icon_state = "minirocket"
 	icon = 'icons/obj/structures/props/almayer_props.dmi'
 	equipment_type = /obj/structure/dropship_equipment/weapon/minirocket_pod
 	ammo_count = 6
 	max_ammo_count = 6
 	ammo_name = "minirocket"
-	travelling_time = 80 //faster than 30mm cannon, slower than real rockets
+	travelling_time = 40 //faster than 30mm cannon, slower than real rockets
 	transferable_ammo = TRUE
 	point_cost = 300
 	fire_mission_delay = 3 //high cooldown
@@ -420,8 +421,8 @@
 
 
 /obj/structure/ship_ammo/minirocket/incendiary
-	name = "\improper AGR-59-I 'Mini-Mike'"
-	desc = "The AGR-59-I 'Mini-Mike' incendiary minirocket is a cheap and efficient means of putting hate down range AND setting them on fire! Though rockets lack a guidance package, it makes up for it in ammunition count. Can be loaded into the LAU-229 Rocket Pod."
+	name = "\improper M322 70mm incendiary rocket"
+	desc = "Strinctly speaking, the M322 incendiary warhead for the Mk.10 Zeus is no longer supposed to be in service. However, some stocks still exist. Great for antistructure and defoliant work, but poor hard target defeat."
 	icon_state = "minirocket_inc"
 	point_cost = 500
 	fire_mission_delay = 3 //high cooldown
@@ -432,8 +433,8 @@
 		fire_spread(impact, create_cause_data(initial(name), source_mob), 3, 25, 20, "#EE6515")
 
 /obj/structure/ship_ammo/sentry
-	name = "\improper A/C-49-P Air Deployable Sentry"
-	desc = "An omni-directional sentry, capable of defending an area from lightly armored hostile incursion. Can be loaded into the LAG-14 Internal Sentry Launcher."
+	name = "\improper UA/571-P paradrop sentry weapons system"
+	desc = "The UA/571-P is a variant of the standard UA/571-C, intended for airborne deployment. In this manner it can be used for area denial, early warning, and limited reconnaissance."
 	icon_state = "launchable_sentry"
 	equipment_type = /obj/structure/dropship_equipment/weapon/launch_bay
 	ammo_count = 1
@@ -455,10 +456,7 @@
 	qdel(src)
 
 /obj/structure/ship_ammo/sentry/can_fire_at(turf/impact, mob/user)
-	for(var/obj/structure/machinery/defenses/def in urange(4, impact))
-		to_chat(user, SPAN_WARNING("The selected drop site is too close to another deployed defense!"))
-		return FALSE
-	if(istype(impact, /turf/closed))
+	if(istype(impact, /turf/closed))// keeping this as a safety. However, being avble to paradrop the suckers wherever you want is much in line, no? :)
 		to_chat(user, SPAN_WARNING("The selected drop site is a sheer wall!"))
 		return FALSE
 	return TRUE

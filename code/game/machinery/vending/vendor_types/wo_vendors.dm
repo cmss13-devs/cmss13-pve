@@ -89,7 +89,6 @@
 
 		list("MISCELLANEOUS", -1, null, null, null),
 		list("Ballistic goggles", floor(scale * 5), /obj/item/clothing/glasses/mgoggles, VENDOR_ITEM_REGULAR),
-		list("M1A1 Ballistic goggles", floor(scale * 5), /obj/item/clothing/glasses/mgoggles/v2, VENDOR_ITEM_REGULAR),
 		list("Prescription ballistic goggles", floor(scale * 5), /obj/item/clothing/glasses/mgoggles/prescription, VENDOR_ITEM_REGULAR),
 		list("Marine RPG glasses", floor(scale * 5), /obj/item/clothing/glasses/regular, VENDOR_ITEM_REGULAR),
 		list("M10 Helmet Netting", floor(scale * 5), /obj/item/prop/helmetgarb/netting, VENDOR_ITEM_REGULAR),

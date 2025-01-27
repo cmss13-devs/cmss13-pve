@@ -8,7 +8,7 @@
 	harmful = FALSE
 
 	//skill required to use
-	var/skill_requirement = SKILL_POLICE_SKILLED
+	var/skill_requirement = SKILL_POLICE_DEFAULT	//Default is 0 skill, should allow any and all to use
 
 	//ignores ship anti-grief system
 	antigrief_protection = FALSE
@@ -136,7 +136,7 @@
 		to_chat(M, SPAN_HELPFUL("Your gear protects you from the worst of the 'bang'."))
 
 	M.Stun(weaken_amount)
-	M.KnockDown(weaken_amount)	
+	M.KnockDown(weaken_amount)
 	M.KnockOut(paralyze_amount)
 	if(deafen_amount)
 		M.SetEarDeafness(max(M.ear_deaf, deafen_amount))

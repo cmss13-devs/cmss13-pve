@@ -274,22 +274,23 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "m40sd_suppressor_a"
 
 /obj/item/attachable/bayonet
-	name = "\improper M5 'Night Raider' bayonet"
+	name = "\improper M5 bayonet"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "bayonet"
 	item_state = "combat_knife"
-	desc = "USCMC standard issue combat knife. Can be put into boot holster or affixed to the bayonet lug of a rifle. Can also be used to extract shrapnel..."
+	desc = "An outdated rifle bayonet issued by the USCMC. Neatly fits into boot-mounted holsters, and can- in emergencies- be utilized to dig out shrapnel."
 	sharp = IS_SHARP_ITEM_ACCURATE
 	force = MELEE_FORCE_NORMAL
-	throwforce = MELEE_FORCE_NORMAL
+	throwforce = MELEE_FORCE_WEAK
 	throw_speed = SPEED_VERY_FAST
-	throw_range = 6
+	throw_range = 5
 	hitsound = 'sound/weapons/slash.ogg'
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_speed = 9
 	flags_equip_slot = SLOT_FACE
 	flags_armor_protection = SLOT_FACE
 	flags_item = CAN_DIG_SHRAPNEL
+	flags_human_ai = MELEE_WEAPON_ITEM
 
 	attach_icon = "bayonet_a"
 	melee_mod = 20
@@ -346,7 +347,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/bayonet/van_bandolier
 	name = "\improper Fairbairn-Sykes fighting knife"
-	desc = "This isn't for dressing game or performing camp chores. It's almost certainly not an original. Almost."
+	desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
 
 /obj/item/attachable/bayonet/co2/update_icon()
 	icon_state = "co2_knife[filled ? "-f" : ""]"
@@ -921,6 +922,14 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
+/obj/item/attachable/sling //Purely cosmetic
+	name = "two-point sling"
+	desc = "A traditional strip of toughened nylon fabric with clips on either end for attaching to suitable mounting points on most longarms in the UA armed forces arsenals."
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
+	icon_state = "pve-sling"
+	attach_icon = "pve-sling_a"
+	slot = "rail"
+
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
@@ -1176,6 +1185,36 @@ Defined in conflicts.dm of the #defines folder.
 	name = "M83A2 SADAR sight assembly"
 	desc = "SADAR sight system."
 	zoom_offset = 3
+
+/obj/item/attachable/scope/mini/army
+	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
+	zoom_offset = 4
+
+// PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
+
+/obj/item/attachable/scope/pve
+	name = "AN/RVS-52 CCD television sight system"
+	desc = "An ARMAT designed 3x magnification weapon sight, allows for greater accuracy at range and under low-light conditions. The mounting brackets are designed to fit on the most commonly-used rifles of the USCM. This one looks like it's been in service since the start of the Linna 349 campaign."
+	icon_state = "pvescope"
+	zoom_offset = 3
+	zoom_viewsize = 7
+	allows_movement = TRUE
+	var/dynamic_aim_slowdown = SLOWDOWN_ADS_MINISCOPE_DYNAMIC
+
+/obj/item/attachable/scope/pve/New()
+	..()
+	delay_mod = 0
+	delay_scoped_nerf = FIRE_DELAY_TIER_SMG
+	damage_falloff_scoped_buff = -0.2
+
+/obj/item/attachable/scope/pve/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
+	. = ..()
+	if(G.zoom)
+		G.slowdown += dynamic_aim_slowdown
+
+/obj/item/attachable/scope/pve/remove_scoped_buff(mob/living/carbon/user, obj/item/weapon/gun/G)
+	G.slowdown -= dynamic_aim_slowdown
+	..()
 
 /obj/item/attachable/scope/mini_iff
 	name = "B8 Smart-Scope"
@@ -2097,6 +2136,21 @@ Defined in conflicts.dm of the #defines folder.
 	gun.recalculate_attachment_bonuses()
 	gun.update_overlays(src, "stock")
 
+/obj/item/attachable/stock/m20a
+	name = "\improper M20A stock"
+	desc = "The M20A's standard polymer collapsible stock. When extended, it improves scatter, accuracy, and recoil, but slightly hinders agility."
+	slot = "stock"
+	melee_mod = 5
+	size_mod = 1
+	icon_state = "m20astock"
+	attach_icon = "m20astock_a"
+	pixel_shift_x = 40
+	pixel_shift_y = 14
+	hud_offset_mod = 3
+
+/obj/item/attachable/stock/m20a/New()
+	..()
+
 /obj/item/attachable/stock/m16
 	name = "\improper M16 bump stock"
 	desc = "Technically illegal in the state of California."
@@ -2820,6 +2874,7 @@ Defined in conflicts.dm of the #defines folder.
 	var/cocked = TRUE // has the UGL been cocked via opening and closing the breech?
 	var/open_sound = 'sound/weapons/handling/ugl_open.ogg'
 	var/close_sound = 'sound/weapons/handling/ugl_close.ogg'
+	var/has_breech = TRUE
 
 /obj/item/attachable/attached_gun/grenade/Initialize()
 	. = ..()
@@ -2836,6 +2891,8 @@ Defined in conflicts.dm of the #defines folder.
 	else . += "It's empty."
 
 /obj/item/attachable/attached_gun/grenade/unique_action(mob/user)
+	if(!has_breech)
+		return
 	if(!ishuman(usr))
 		return
 	if(user.is_mob_incapacitated() || !isturf(usr.loc))
@@ -2878,7 +2935,7 @@ Defined in conflicts.dm of the #defines folder.
 	update_icon()
 
 /obj/item/attachable/attached_gun/grenade/reload_attachment(obj/item/explosive/grenade/G, mob/user)
-	if(!breech_open)
+	if(has_breech && !breech_open)
 		to_chat(user, SPAN_WARNING("\The [src]'s breech must be open to load grenades! (use unique-action)"))
 		return
 	if(!istype(G) || istype(G, /obj/item/explosive/grenade/spawnergrenade/))
@@ -2899,7 +2956,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/unload_attachment(mob/user, reload_override = FALSE, drop_override = FALSE, loc_override = FALSE)
 	. = TRUE //Always uses special unloading.
-	if(!breech_open)
+	if(has_breech && !breech_open)
 		to_chat(user, SPAN_WARNING("\The [src] is closed! You must open it to take out grenades!"))
 		return
 	if(!current_rounds)
@@ -2924,12 +2981,12 @@ Defined in conflicts.dm of the #defines folder.
 		if(user)
 			to_chat(user, SPAN_WARNING("You must hold [gun] with two hands to use \the [src]."))
 		return
-	if(breech_open)
+	if(has_breech && breech_open)
 		if(user)
 			to_chat(user, SPAN_WARNING("You must close the breech to fire \the [src]!"))
 			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
 		return
-	if(!cocked)
+	if(has_breech && !cocked)
 		if(user)
 			to_chat(user, SPAN_WARNING("You must cock \the [src] to fire it! (open and close the breech)"))
 			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
@@ -2951,17 +3008,27 @@ Defined in conflicts.dm of the #defines folder.
 		msg_admin_niche("[key_name(user)] attempted to prime \a [G.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
 		return
 
+	if(G.dual_purpose != FALSE)
+		G.fuse_type = IMPACT_FUSE
+	G.arm_sound = null
+
 	playsound(user.loc, fire_sound, 50, 1)
 	msg_admin_attack("[key_name_admin(user)] fired an underslung grenade launcher [ADMIN_JMP_USER(user)]")
 	log_game("[key_name_admin(user)] used an underslung grenade launcher.")
 
-	var/pass_flags = NO_FLAGS
-	pass_flags |= grenade_pass_flags
-	G.det_time = min(15, G.det_time)
-	G.throw_range = max_range
-	G.activate(user, FALSE)
-	G.forceMove(get_turf(gun))
-	G.throw_atom(target, max_range, SPEED_VERY_FAST, user, null, NORMAL_LAUNCH, pass_flags)
+
+// canister nades explode immediately and don't leave the barrel of the weapon.
+	if(istype(G, /obj/item/explosive/grenade/high_explosive/airburst/canister))
+		var/obj/item/explosive/grenade/high_explosive/airburst/canister/canister_round = G
+		canister_round.canister_fire(user, target)
+	else
+		var/pass_flags = NO_FLAGS
+		pass_flags |= grenade_pass_flags
+		G.det_time = min(15, G.det_time)
+		G.throw_range = max_range
+		G.activate(user, FALSE)
+		G.forceMove(get_turf(gun))
+		G.throw_atom(target, max_range, SPEED_VERY_FAST, user, null, NORMAL_LAUNCH, pass_flags)
 	current_rounds--
 	cocked = FALSE // we have fired so uncock the gun
 	loaded_grenades.Cut(1,2)
@@ -2972,6 +3039,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Standard pump action underslung grenade launcher. Fits the M41A, four round tube, chambers one."
 	icon_state = "grenade-mk1"
 	attach_icon = "grenade-mk1_a"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
 	current_rounds = 0
 	max_rounds = 5
 	max_range = 10
@@ -2983,9 +3051,10 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/m120
 	name = "\improper PN/c 30mm underslung grenade launcher"
-	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, three round tube, chambers one."
+	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, two round tube, chambers one."
 	icon_state = "grenade-mk1"
 	attach_icon = "grenade-mk1_a"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
 	current_rounds = 0
 	max_rounds = 3
 	max_range = 10
@@ -3004,6 +3073,20 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/attached_gun/grenade/m203/Initialize()
 	. = ..()
 	grenade_pass_flags = NO_FLAGS
+
+/obj/item/attachable/attached_gun/grenade/upp
+	name = "\improper Type 83 overslung grenade launcher"
+	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures. Can be quickly swapped to using the 'Toggle-Attachment' keybind."
+	icon_state = "type83"
+	attach_icon = "type83_a"
+	current_rounds = 0
+	max_rounds = 1
+	max_range = 14
+	attachment_firing_delay = 5
+	slot = "special"
+	pixel_shift_x = 0
+	pixel_shift_y = 0
+	has_breech = FALSE
 
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
 /obj/item/attachable/attached_gun/flamer
@@ -3210,6 +3293,21 @@ Defined in conflicts.dm of the #defines folder.
 					qdel(mag)
 			return
 	to_chat(user, SPAN_WARNING("[src] only accepts shotgun buckshot."))
+
+/obj/item/attachable/attached_gun/shotgun/m20a/unloaded
+	current_rounds = 0
+
+/obj/item/attachable/attached_gun/shotgun/m20a
+	name = "\improper U3 underbarrel shotgun"
+	desc = "An ARMAT U3 tactical shotgun. Integrated into the M20A Harrington rifle. Only capable of loading up to five buckshot shells."
+	icon_state = "masterkey"
+	attach_icon = "masterkey_a"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON
+	hidden = TRUE
+
+
+/obj/item/attachable/attached_gun/shotgun/m20a/set_bullet_traits()
+	return
 
 /obj/item/attachable/attached_gun/extinguisher
 	name = "HME-12 underbarrel extinguisher"
