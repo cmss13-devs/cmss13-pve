@@ -2001,6 +2001,7 @@
 #include "code\modules\mob\living\carbon\human\ai\ai_spawner\ai_presets_clf.dm"
 #include "code\modules\mob\living\carbon\human\ai\ai_spawner\ai_presets_freelancer.dm"
 #include "code\modules\mob\living\carbon\human\ai\ai_spawner\ai_presets_upp.dm"
+#include "code\modules\mob\living\carbon\human\ai\ai_spawner\ai_presets_uscm.dm"
 #include "code\modules\mob\living\carbon\human\ai\ai_spawner\ai_spawner.dm"
 #include "code\modules\mob\living\carbon\human\ai\brain\ai_brain.dm"
 #include "code\modules\mob\living\carbon\human\ai\brain\ai_brain_communication.dm"
