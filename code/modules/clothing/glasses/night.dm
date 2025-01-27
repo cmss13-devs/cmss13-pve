@@ -218,7 +218,7 @@
 	darkness_view = 12
 	vision_flags = 0
 	lighting_alpha = 150
-	flags_inventory = null
+	flags_inventory = NONE
 
 //this version has no farsight and NV, but is mostly there as a flavor item.
 /obj/item/clothing/glasses/night/m56_goggles/no_nightvision
@@ -226,7 +226,7 @@
 	darkness_view = 0
 	vision_flags = 0
 	lighting_alpha = 255
-	flags_inventory = null
+	flags_inventory = NONE
 
 /obj/item/clothing/glasses/night/m56_goggles/whiteout
 	name = "\improper M56T head mounted sight"
