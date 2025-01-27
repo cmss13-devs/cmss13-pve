@@ -4,7 +4,8 @@
 	dir = 1;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
-	light_range = 4
+	light_range = 4;
+	pixel_y = 10
 	},
 /obj/structure/machinery/cm_vending/sorted/marine_food/upp,
 /turf/open/floor/strata/multi_tiles,
@@ -1475,7 +1476,8 @@
 	dir = 1;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
-	light_range = 4
+	light_range = 4;
+	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/canteen)
@@ -3541,13 +3543,14 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/hangar)
 "DG" = (
+/obj/structure/machinery/chem_dispenser/canteen/upp,
 /obj/structure/machinery/light/small{
 	dir = 1;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
-	light_range = 4
+	light_range = 4;
+	pixel_y = 10
 	},
-/obj/structure/machinery/chem_dispenser/canteen/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/canteen)
 "DH" = (
