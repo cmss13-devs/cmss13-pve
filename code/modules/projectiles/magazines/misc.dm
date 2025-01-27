@@ -32,9 +32,9 @@
 	gun_type = /obj/item/weapon/gun/m60
 
 /obj/item/ammo_magazine/pkp
-	name = "QYJ-72 ammo box (10x31mm HEAP)"
-	desc = "A 250 round box of HEAP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x31mm."
-	caliber = "10x31mm"
+	name = "QYJ-72 ammo box (10x27mm HEAP)"
+	desc = "A 250 round box of HEAP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
+	caliber = "10x27mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "qjy72"
 
