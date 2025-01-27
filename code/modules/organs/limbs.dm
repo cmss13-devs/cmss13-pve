@@ -86,8 +86,6 @@
 	/// defines which sprite the limb should use if dimorphic, set in [/obj/limb/proc/update_limb()]
 	var/limb_gender = MALE
 
-	var/drop_item = FALSE
-
 
 /obj/limb/Initialize(mapload, obj/limb/P, mob/mob_owner)
 	. = ..()
@@ -117,7 +115,7 @@
 /obj/limb/process()
 		return 0
 
-/obj/limb/Destroy(drop_item = FALSE)
+/obj/limb/Destroy()
 	if(parent)
 		parent.children -= src
 	parent = null
@@ -138,78 +136,13 @@
 
 	splinted_icon = null
 
-	if(drop_item)
-		switch(body_part)
-			if(BODY_FLAG_HEAD)
-				owner.drop_inv_item_on_ground(owner.glasses, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.head, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.wear_l_ear, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.wear_r_ear, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.wear_mask, null, TRUE)
-				owner.h_style = "Bald"
-				owner.f_style = "Shaved"
-				owner.update_hair()
-				if(owner.species)
-					owner.species.handle_head_loss(owner)
-			if(BODY_FLAG_ARM_RIGHT)
-				if(owner.w_uniform)
-					var/obj/item/clothing/under/U = owner.w_uniform
-					U.removed_parts |= body_part
-					owner.update_inv_w_uniform()
-			if(BODY_FLAG_ARM_LEFT)
-				if(owner.w_uniform)
-					var/obj/item/clothing/under/U = owner.w_uniform
-					U.removed_parts |= body_part
-					owner.update_inv_w_uniform()
-			if(BODY_FLAG_LEG_RIGHT)
-				if(owner.w_uniform)
-					var/obj/item/clothing/under/U = owner.w_uniform
-					U.removed_parts |= body_part
-					owner.update_inv_w_uniform()
-			if(BODY_FLAG_LEG_LEFT)
-				if(owner.w_uniform)
-					var/obj/item/clothing/under/U = owner.w_uniform
-					U.removed_parts |= body_part
-					owner.update_inv_w_uniform()
-			if(BODY_FLAG_HAND_RIGHT)
-				owner.drop_inv_item_on_ground(owner.gloves, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.r_hand, null, TRUE)
-			if(BODY_FLAG_HAND_LEFT)
-				owner.drop_inv_item_on_ground(owner.gloves, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.l_hand, null, TRUE)
-			if(BODY_FLAG_FOOT_RIGHT)
-				owner.drop_inv_item_on_ground(owner.shoes, null, TRUE)
-			if(BODY_FLAG_CHEST)
-				owner.drop_inv_item_on_ground(owner.wear_suit, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.w_uniform, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.belt, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.wear_id, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.r_store, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.l_store, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.back, null, TRUE)
-				owner.undershirt = null
-			if(BODY_FLAG_GROIN)
-				owner.drop_inv_item_on_ground(owner.belt, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.r_store, null, TRUE)
-				owner.drop_inv_item_on_ground(owner.l_store, null, TRUE)
-				owner.underwear = null
-			if(BODY_FLAG_FOOT_LEFT)
-				owner.drop_inv_item_on_ground(owner.shoes, null, TRUE)
-
-	owner.update_body() //Among other things, this calls update_icon() and updates our visuals.
-	owner.update_med_icon()
-
 	if(owner && owner.limbs)
 		owner.limbs -= src
 		owner.limbs_to_process -= src
 		owner.update_body()
-	if(vital)
-		owner.death(create_cause_data("lost vital limb", "Destroyed"))
 	owner = null
 
 	QDEL_NULL_LIST(wounds)
-
-
 
 	return ..()
 
@@ -940,10 +873,8 @@ This function completely restores a damaged organ to perfect condition.
 		var/obj/organ //Dropped limb object
 		switch(body_part)
 			if(BODY_FLAG_HEAD)
-				if(owner.species.flags & IS_SYNTHETIC || isskeleton(owner)) //special head for synth to allow brainmob to talk without an MMI
+				if(owner.species.flags & IS_SYNTHETIC) //special head for synth to allow brainmob to talk without an MMI
 					organ= new /obj/item/limb/head/synth(owner.loc, owner)
-					if(isskeleton(owner))
-						organ.name = "talking skull"
 				else
 					organ= new /obj/item/limb/head(owner.loc, owner)
 				owner.drop_inv_item_on_ground(owner.glasses, null, TRUE)
