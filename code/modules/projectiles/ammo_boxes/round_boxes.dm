@@ -147,11 +147,11 @@
 
 /obj/item/ammo_box/rounds/pkp
 	name = "large rifle ammunition box (10x27mm)"
-	desc = "A 10x27mm machinegun ammunition box. Used to mostly to refill QYJ-72 box magazines. It comes with a leather strap allowing to wear it on the back."
+	desc = "A 10x27mm machinegun ammunition box. Used to mostly to refill Type 71 and QYJ-72 box magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_pkp"
 	overlay_content = "_type71_reg"
-	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
+	default_ammo = /datum/ammo/bullet/rifle/upp
 	bullet_amount = 1500
 	max_bullet_amount = 1500
 	caliber = "10x27mm"
