@@ -1374,7 +1374,9 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
 "mf" = (
-/obj/structure/window/framed/upp/grey,
+/obj/structure/window/framed/upp/grey{
+	icon_state = "uppwall_window"
+	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
 "mi" = (
