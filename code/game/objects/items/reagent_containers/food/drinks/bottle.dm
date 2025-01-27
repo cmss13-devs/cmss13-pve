@@ -165,10 +165,6 @@
 	icon_state = "vodkabottle"
 	center_of_mass = "x=17;y=3"
 
-/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya/Initialize()
-	. = ..()
-	reagents.add_reagent("vodka", 100)
-
 //chess bottles
 
 /obj/item/reagent_container/food/drinks/bottle/vodka/chess
