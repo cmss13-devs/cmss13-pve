@@ -198,6 +198,7 @@
 /obj/item/reagent_container/food/snacks/protein_pack/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 8)
+	reagents.add_reagent("coco", 8)
 	bitesize = 4
 
 /obj/item/reagent_container/food/snacks/protein_pack2
@@ -211,6 +212,7 @@
 /obj/item/reagent_container/food/snacks/protein_pack2/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 8)
+	reagents.add_reagent("strawberrypowder", 8)
 	bitesize = 4
 
 /obj/item/reagent_container/food/snacks/protein_pack3
@@ -224,6 +226,7 @@
 /obj/item/reagent_container/food/snacks/protein_pack3/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 8)
+	reagents.add_reagent("vanilla", 8)
 	bitesize = 4
 
 /obj/item/reagent_container/food/snacks/mre_pack
