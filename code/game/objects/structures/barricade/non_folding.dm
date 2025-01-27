@@ -117,12 +117,12 @@
 							to_chat(user, SPAN_NOTICE("You applied a biohazardous upgrade."))
 						if(BARRICADE_UPGRADE_BRUTE)
 							brute_multiplier = 0.75
-							brute_projectile_multiplier = 0.75
+							brute_projectile_multiplier = 0.375
 							upgraded = BARRICADE_UPGRADE_BRUTE
 							to_chat(user, SPAN_NOTICE("You applied a reinforced upgrade."))
 						if(BARRICADE_UPGRADE_ANTIFF)
 							explosive_multiplier = 0.5
-							brute_projectile_multiplier = 0.5
+							brute_projectile_multiplier = 0.25
 							burn_flame_multiplier = 0.5
 							upgraded = BARRICADE_UPGRADE_ANTIFF
 							to_chat(user, SPAN_NOTICE("You applied a composite upgrade."))
@@ -157,12 +157,12 @@
 							to_chat(user, SPAN_NOTICE("You applied a biohazardous upgrade."))
 						if(BARRICADE_UPGRADE_BRUTE)
 							brute_multiplier = 0.75
-							brute_projectile_multiplier = 0.75
+							brute_projectile_multiplier = 0.375
 							upgraded = BARRICADE_UPGRADE_BRUTE
 							to_chat(user, SPAN_NOTICE("You applied a reinforced upgrade."))
 						if(BARRICADE_UPGRADE_ANTIFF)
 							explosive_multiplier = 0.5
-							brute_projectile_multiplier = 0.5
+							brute_projectile_multiplier = 0.25
 							burn_flame_multiplier = 0.5
 							upgraded = BARRICADE_UPGRADE_ANTIFF
 							to_chat(user, SPAN_NOTICE("You applied a composite upgrade."))
@@ -266,14 +266,14 @@
 
 	return ..()
 
-/obj/structure/barricade/metal/wired/New()
+/obj/structure/barricade/metal/wired/Initialize(mapload, mob/user)
+	. = ..()
 	maxhealth += 50
 	update_health(-50)
 	can_wire = FALSE
 	is_wired = TRUE
 	climbable = FALSE
 	update_icon()
-	return ..()
 
 /obj/structure/barricade/metal/wired/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
@@ -294,3 +294,16 @@
 	barricade_type = "new_plasteel"
 	repair_materials = list("plasteel" = 0.45)
 
+/obj/structure/barricade/metal/plasteel/wired/Initialize(mapload, mob/user)
+	maxhealth += 50
+	update_health(-50)
+	can_wire = FALSE
+	is_wired = TRUE
+	climbable = FALSE
+	update_icon()
+	return ..()
+
+/obj/structure/barricade/metal/plasteel/wired/initialize_pass_flags(datum/pass_flags_container/PF)
+	..()
+	flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
+	flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB
