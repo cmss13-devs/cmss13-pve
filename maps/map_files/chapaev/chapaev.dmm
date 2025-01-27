@@ -27,7 +27,6 @@
 /area/golden_arrow/platoon_commander_rooms)
 "ah" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/rounds/type71/heap,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "aq" = (
