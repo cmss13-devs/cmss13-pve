@@ -163,7 +163,7 @@
 	name = "\improper Stolichnaya Vodka"
 	desc = "A premier export from the UPP member state of Russia. Because of meticulous enforcement of state regulations, it is considered one of the highest quality vodkas available."
 	icon_state = "vodkabottle"
-	center_of_mass = "x=17;y=3"
+	
 
 //chess bottles
 
