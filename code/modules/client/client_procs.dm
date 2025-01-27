@@ -458,6 +458,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	QDEL_NULL(soundOutput)
 	QDEL_NULL(obj_window)
 	QDEL_NULL(game_master_menu)
+	QDEL_NULL(human_ai_menu)
 	if(prefs)
 		prefs.owner = null
 		QDEL_NULL(prefs.preview_dummy)
