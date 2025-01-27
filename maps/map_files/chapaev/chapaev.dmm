@@ -6,7 +6,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/canteen)
 "ah" = (
@@ -449,7 +449,7 @@
 	dir = 4;
 	name = "\improper Maintenance Tunnels"
 	},
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Maintenance Access";
 	dir = 8;
 	req_one_access_txt = "230"
@@ -636,15 +636,13 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "fj" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
-	color = "#8B9490";
 	name = "\improper Locker Room";
 	req_one_access_txt = "230"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/poddoor/almayer/open,
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/cryo_cells)
 "fk" = (
 /obj/structure/machinery/power/apc/almayer/east,
@@ -969,11 +967,11 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
 "hC" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Canteen";
 	req_one_access_txt = "230"
 	},
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/canteen)
 "hF" = (
 /obj/structure/largecrate/random/case{
@@ -1240,13 +1238,13 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "km" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
 	name = "\improper Canteen";
 	req_one_access_txt = "230"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/cryo_cells)
 "kn" = (
 /obj/structure/disposalpipe/segment{
@@ -1471,35 +1469,39 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
+"mS" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
+/obj/structure/machinery/light/small{
+	dir = 1;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/canteen)
 "mV" = (
 /turf/open/space/basic,
 /area/space)
 "mY" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
 	name = "\improper Canteen";
 	req_one_access_txt = "230"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/cryo_cells)
 "mZ" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Latrine";
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/dorms)
-"na" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/hangar)
 "ni" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -1693,7 +1695,7 @@
 	light_range = 4;
 	light_color = "#e7c0a4"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "oW" = (
 /obj/item/clipboard{
@@ -2102,12 +2104,11 @@
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
 "sh" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
 	name = "\improper Port Hallway";
 	req_one_access_txt = "230"
 	},
-/obj/structure/machinery/door/poddoor/almayer/open,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "so" = (
@@ -2296,6 +2297,13 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3/east,
+/area/golden_arrow/briefing)
+"tc" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Other Sections"
+	},
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "te" = (
 /obj/structure/foamed_metal,
@@ -2615,15 +2623,15 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
 "wl" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Latrine";
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/dorms)
 "wm" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/canteen)
 "wq" = (
@@ -2654,13 +2662,12 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "wx" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
 	name = "\improper Canteen";
 	req_one_access_txt = "230"
 	},
-/obj/structure/machinery/door/poddoor/almayer/open,
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/canteen)
 "wA" = (
 /obj/structure/machinery/light/double{
@@ -2848,7 +2855,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "xM" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 8;
 	color = "#8B9490";
 	name = "\improper Platoon Sergeant's Bunk";
@@ -2857,12 +2864,12 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
 "xX" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Platoon Medic Office";
 	dir = 1;
 	req_one_access_txt = "231;242"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/medical)
 "ya" = (
 /obj/effect/decal/warning_stripes{
@@ -3009,7 +3016,7 @@
 	dir = 4;
 	name = "\improper Maintenance Tunnels"
 	},
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Maintenance Access";
 	dir = 8;
 	req_one_access_txt = "230"
@@ -3075,14 +3082,14 @@
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/platoon_commander_rooms)
 "zC" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Bunk Room";
 	req_one_access_txt = "230"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/dorms)
 "zN" = (
 /turf/open/floor/strata/multi_tiles/west,
@@ -3159,7 +3166,7 @@
 	name = "ship-grade camera";
 	network = list("Chapaev")
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "At" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -3182,7 +3189,6 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
 "Ay" = (
-/obj/structure/machinery/door/poddoor/almayer/open,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/hangar)
 "Az" = (
@@ -3210,7 +3216,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "AA" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Port Hallway";
 	req_one_access_txt = "230"
 	},
@@ -3271,20 +3277,13 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
-"AT" = (
-/obj/structure/machinery/door/airlock/strata/circular{
-	name = "\improper Platoon Commander's Office";
-	req_one_access_txt = "241"
-	},
-/turf/open/space/basic,
-/area/golden_arrow/platoon_commander_rooms)
 "AW" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Latrine";
 	dir = 1;
 	req_one_access_txt = "241"
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
 "Bf" = (
 /obj/structure/machinery/medical_pod/autodoc{
@@ -3326,7 +3325,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
 "Ce" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 8;
 	name = "\improper Sergeants Room";
 	req_one_access_txt = "240;244"
@@ -3334,7 +3333,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_sergeant)
 "Ch" = (
 /obj/structure/surface/table/almayer{
@@ -3425,11 +3424,11 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "CX" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Platoon Commander's Office";
 	req_one_access_txt = "241"
 	},
-/turf/open/floor/strata/floor3,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
 "Da" = (
 /obj/structure/disposalpipe/segment{
@@ -3476,7 +3475,8 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/strata/multi_tiles,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
 "Dh" = (
 /obj/structure/disposalpipe/segment,
@@ -3540,6 +3540,16 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/hangar)
+"DG" = (
+/obj/structure/machinery/light/small{
+	dir = 1;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/structure/machinery/chem_dispenser/canteen/upp,
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/canteen)
 "DH" = (
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
@@ -3720,7 +3730,7 @@
 /area/golden_arrow/briefing)
 "FT" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Maintenance Access";
 	dir = 1;
 	req_one_access_txt = "230"
@@ -3760,10 +3770,7 @@
 	icon_state = "E";
 	pixel_x = 2
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4
-	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "Gd" = (
 /obj/structure/disposalpipe/segment,
@@ -3996,16 +4003,14 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "Hw" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
-	color = "#8B9490";
 	name = "\improper Locker Room";
 	req_one_access_txt = "230"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/poddoor/almayer/open,
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/cryo_cells)
 "Hy" = (
 /obj/structure/mirror{
@@ -4111,17 +4116,16 @@
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_x = 32
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "Ik" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
 	name = "\improper Canteen";
 	req_one_access_txt = "230"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/structure/machinery/door/poddoor/almayer/open,
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/canteen)
 "Io" = (
 /obj/vehicle/powerloader/jd{
@@ -4165,7 +4169,6 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
 "Iw" = (
-/obj/structure/machinery/door/poddoor/almayer/open,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
 "Ix" = (
@@ -4239,7 +4242,7 @@
 /obj/structure/bed/chair/comfy{
 	dir = 4
 	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "Jk" = (
 /obj/structure/noticeboard{
@@ -4645,7 +4648,7 @@
 /area/golden_arrow/canteen)
 "MG" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Maintenance Access";
 	dir = 1;
 	req_one_access_txt = "230"
@@ -4956,11 +4959,11 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "Pl" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Platoon Medic Office";
 	req_one_access_txt = "231;242"
 	},
-/turf/open/floor/strata/floor3,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/medical)
 "Pu" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -5126,12 +5129,12 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "QO" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
 	name = "\improper Platoon Commander's Office";
 	req_one_access_txt = "240;241"
 	},
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
 "QS" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp{
@@ -5219,9 +5222,6 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4
-	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/medical)
 "RP" = (
@@ -5261,7 +5261,7 @@
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Maintenance Tunnels"
 	},
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Maintenance Access";
 	dir = 1;
 	req_one_access_txt = "230"
@@ -5306,6 +5306,16 @@
 	},
 /turf/open/space/basic,
 /area/space)
+"So" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Other Sections"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
 "Sv" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -5426,9 +5436,6 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/hangar)
 "Th" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4
-	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "Tl" = (
@@ -5690,14 +5697,13 @@
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
 "VI" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
 	name = "\improper Port Hallway";
 	req_one_access_txt = "230"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/structure/machinery/door/poddoor/almayer/open,
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "VJ" = (
 /obj/effect/landmark/late_join/upp,
@@ -5917,10 +5923,7 @@
 	icon_state = "E";
 	pixel_x = 2
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "Yi" = (
 /turf/open/floor/strata/floor2,
@@ -5939,14 +5942,13 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
 "Yp" = (
-/obj/structure/machinery/door/airlock/strata/circular{
+/obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
 	name = "\improper Starboard Hallway";
 	req_one_access_txt = "230"
 	},
-/obj/structure/machinery/door/poddoor/almayer/open,
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/strata/multi_tiles/west,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "Yv" = (
 /obj/structure/foamed_metal,
@@ -5986,12 +5988,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
-"YD" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4
-	},
-/turf/open/floor/corsat/marked,
-/area/golden_arrow/hangar)
 "YE" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -6050,9 +6046,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	layer = 2.5
-	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/medical)
@@ -17336,7 +17329,7 @@ XL
 eS
 up
 gt
-gt
+PO
 Rs
 qh
 tv
@@ -17746,17 +17739,17 @@ Mj
 Mj
 Mj
 Mj
-YD
-YD
-YD
+Ay
+Ay
+Ay
 Mj
 Mj
 Mj
 Mj
 Mj
-YD
-YD
-YD
+Ay
+Ay
+Ay
 Mj
 Mj
 Mj
@@ -18111,8 +18104,8 @@ Rs
 jp
 XE
 ru
-wW
-nO
+tc
+So
 ru
 ru
 cG
@@ -18846,7 +18839,7 @@ Jv
 Jv
 Jv
 xp
-AT
+CX
 xp
 xp
 xp
@@ -19311,7 +19304,7 @@ Hf
 oH
 SB
 gL
-wm
+mS
 BQ
 gm
 gs
@@ -19615,7 +19608,7 @@ aL
 oH
 fP
 gL
-ac
+DG
 ec
 oP
 xy
@@ -20786,17 +20779,17 @@ Mj
 Mj
 Mj
 Mj
-YD
-YD
-YD
+Ay
+Ay
+Ay
 Mj
 Mj
 Mj
 Mj
 Mj
-na
-na
-na
+DL
+DL
+DL
 Mj
 Mj
 Mj

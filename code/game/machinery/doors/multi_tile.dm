@@ -663,3 +663,15 @@
 	name = "Glass Airlock"
 	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_green.dmi'
 	glass = TRUE
+
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_grey
+	name = "Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_grey.dmi'
+	opacity = FALSE
+	glass = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass
+	name = "Glass Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_grey.dmi'
+	glass = TRUE

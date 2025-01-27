@@ -941,8 +941,8 @@
 
 /obj/structure/machinery/door/airlock/upp_green
 	name = "\improper Airlock"
-	icon = 'icons/obj/structures/doors/upp/uppdoor_green.dmi' //Whoever made it so each door is it's own sheet and doesn't dynamically use overlays ought to be drawn and quartered.
-	req_access = null // Colony side airlocks should not have any sort of access.
+	icon = 'icons/obj/structures/doors/upp/uppdoor_green.dmi'
+	req_access = null
 	req_one_access = null
 
 /obj/structure/machinery/door/airlock/upp_green/window
@@ -950,9 +950,14 @@
 	opacity = FALSE
 	glass = TRUE
 
-/* /obj/structure/machinery/door/airlock/upp_grey
+/obj/structure/machinery/door/airlock/upp_grey
 	name = "\improper Airlock"
-	icon = 'icons/obj/structures/doors/upp/uppdoor_green.dmi' //Whoever made it so each door is it's own sheet and doesn't dynamically use overlays ought to be drawn and quartered.
-	req_access = null // Colony side airlocks should not have any sort of access.
-	req_one_access = null */
+	icon = 'icons/obj/structures/doors/upp/uppdoor_grey.dmi'
+	req_access = null
+	req_one_access = null
+
+/obj/structure/machinery/door/airlock/upp_grey/window
+	icon = 'icons/obj/structures/doors/upp/uppdoor_glass_grey.dmi'
+	opacity = FALSE
+	glass = TRUE
 
