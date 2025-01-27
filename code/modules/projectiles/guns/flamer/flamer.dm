@@ -41,6 +41,9 @@
 	. = ..()
 	update_icon()
 
+/obj/item/weapon/gun/flamer/get_mouse_pointer()
+	return 'icons/effects/mouse_pointer/flamer_mouse.dmi'
+
 /obj/item/weapon/gun/flamer/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 11, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0)
 
@@ -150,6 +153,8 @@
 				unleash_foam(target, user)
 			else
 				unleash_flame(target, user)
+		current_mag.current_rounds = current_mag.get_ammo_percent()
+		SEND_SIGNAL(user, COMSIG_MOB_FIRED_GUN, src)
 		return AUTOFIRE_CONTINUE
 	return NONE
 
@@ -381,6 +386,13 @@
 
 /obj/item/weapon/gun/flamer/deathsquad/standard
 	current_mag = /obj/item/ammo_magazine/flamer_tank
+
+/obj/item/weapon/gun/flamer/weak
+	current_mag = /obj/item/ammo_magazine/flamer_tank/weak
+
+/obj/item/weapon/gun/flamer/weak/set_gun_config_values()
+	. = ..()
+	set_fire_delay(FIRE_DELAY_TIER_5) // less full auto
 
 /obj/item/weapon/gun/flamer/M240T
 	name = "\improper M240-T incinerator unit"
