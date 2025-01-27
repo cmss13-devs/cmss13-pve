@@ -2331,20 +2331,6 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/canteen)
-"tI" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
-	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/turf/open/space/basic,
-/area/space)
 "tO" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
@@ -4950,17 +4936,6 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
-"Pb" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
-	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
-	},
-/turf/open/space/basic,
-/area/space)
 "Pk" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -14938,7 +14913,7 @@ mV
 mV
 mV
 mV
-tI
+mV
 mV
 mV
 mV
@@ -15090,7 +15065,7 @@ mV
 mV
 mV
 mV
-Pb
+mV
 mV
 mV
 mV
@@ -15242,7 +15217,7 @@ mV
 mV
 mV
 mV
-Pb
+mV
 mV
 mV
 mV
@@ -15394,7 +15369,7 @@ mV
 mV
 mV
 mV
-Pb
+mV
 mV
 mV
 mV
@@ -15546,7 +15521,7 @@ mV
 mV
 mV
 mV
-tI
+mV
 mV
 mV
 mV
