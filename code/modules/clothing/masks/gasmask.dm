@@ -31,17 +31,43 @@
 	icon_state = "kutjevo_respirator"
 	item_state = "kutjevo_respirator"
 
-/obj/item/clothing/mask/gas/m5
-	name = "\improper M5 standalone gasmask"
-	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear. This one is the alternative variant meant for Marines not in combat kit."
-	icon_state = "m5_gasmask"
-	item_state = "m5_gasmask"
+/obj/item/clothing/mask/gas/military
+	name = "\improper M5 gasmask"
+	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear."
+	icon_state = "m5"
+	item_state = "m5"
+	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
 
-/obj/item/clothing/mask/gas/upp
-	name = "\improper PMK-63 gasmask"
-	desc = "The Union service mask issued to backline troops not prepared for combat."
-	icon_state = "upp_gasmask"
-	item_state = "upp_gasmask"
+/obj/item/clothing/mask/gas/military/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
+	..()
+	if(!istype(helmet_internal_inventory))
+		return
+	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
+
+	if(!istype(helmet_item))
+		return
+
+	helmet_item.flags_inventory |= BLOCKGASEFFECT
+	helmet_item.flags_inv_hide |= HIDEFACE
+
+/obj/item/clothing/mask/gas/military/on_exit_storage(obj/item/storage/internal/helmet_internal_inventory)
+	..()
+	if(!istype(helmet_internal_inventory))
+		return
+	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
+
+	if(!istype(helmet_item))
+		return
+
+	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
+	helmet_item.flags_inv_hide &= ~(HIDEFACE)
+
+/obj/item/clothing/mask/gas/military/upp
+	name = "\improper ShMB/4 gasmask"
+	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
+	icon_state = "pfb"
+	item_state = "pfb"
 
 /obj/item/clothing/mask/gas/pve_mopp
 	name = "\improper M2 MOPP mask"

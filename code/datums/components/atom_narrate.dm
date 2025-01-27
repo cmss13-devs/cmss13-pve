@@ -44,7 +44,7 @@
 		qdel(src)
 		return
 
-	var/list/heard = get_mobs_in_view(world_view_size, atom_parent)
+	var/list/heard = get_mobs_in_view(GLOB.world_view_size, atom_parent)
 
 	switch(narration_type)
 		if(NARRATION_METHOD_SAY)

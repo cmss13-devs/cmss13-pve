@@ -13,14 +13,17 @@
 
 /obj/item/reagent_container/food/drinks/on_reagent_change()
 	if (gulp_size < 5) gulp_size = 5
-	else gulp_size = max(round(reagents.total_volume / 5), 5)
+	else gulp_size = max(floor(reagents.total_volume / 5), 5)
 
 /obj/item/reagent_container/food/drinks/attack(mob/M, mob/user)
 	var/datum/reagents/R = src.reagents
-	var/fillevel = gulp_size
 
 	if(!R.total_volume || !R)
 		to_chat(user, SPAN_DANGER("The [src.name] is empty!"))
+		return FALSE
+
+	if(HAS_TRAIT(M, TRAIT_CANNOT_EAT))
+		to_chat(user, SPAN_DANGER("[user == M ? "You are" : "[M] is"] unable to drink!"))
 		return FALSE
 
 	if(M == user)
@@ -54,13 +57,6 @@
 		if(reagents.total_volume)
 			reagents.set_source_mob(user)
 			reagents.trans_to_ingest(M, gulp_size)
-
-		if(isrobot(user)) //Cyborg modules that include drinks automatically refill themselves, but drain the borg's cell
-			var/mob/living/silicon/robot/bro = user
-			bro.cell.use(30)
-			var/refill = R.get_master_reagent_id()
-			spawn(1 MINUTES)
-				R.add_reagent(refill, fillevel)
 
 		playsound(M.loc,'sound/items/drink.ogg', 15, 1)
 		return TRUE
@@ -98,27 +94,8 @@
 			to_chat(user, SPAN_DANGER("[target] is full."))
 			return
 
-
-
-		var/datum/reagent/refill
-		var/datum/reagent/refillName
-		if(isrobot(user))
-			refill = reagents.get_master_reagent_id()
-			refillName = reagents.get_master_reagent_name()
-
 		var/trans = src.reagents.trans_to(target, amount_per_transfer_from_this)
 		to_chat(user, SPAN_NOTICE(" You transfer [trans] units of the solution to [target]."))
-
-		if(isrobot(user)) //Cyborg modules that include drinks automatically refill themselves, but drain the borg's cell
-			var/mob/living/silicon/robot/bro = user
-			var/chargeAmount = max(30,4*trans)
-			bro.cell.use(chargeAmount)
-			to_chat(user, "Now synthesizing [trans] units of [refillName]...")
-
-
-			spawn(30 SECONDS)
-				reagents.add_reagent(refill, trans)
-				to_chat(user, "Cyborg [src] refilled.")
 
 	return ..()
 
@@ -225,6 +202,28 @@
 /obj/item/reagent_container/food/drinks/tea/Initialize()
 	. = ..()
 	reagents.add_reagent("tea", 30)
+
+/obj/item/reagent_container/food/drinks/tea/upp
+	name = "\improper insulated container"
+	desc = "A small, reusable, insulated container for holding liquids with a sip lid."
+	icon_state = "tea_upp"
+	item_state = "coffee"
+	center_of_mass = "x=16;y=14"
+
+/obj/item/reagent_container/food/drinks/tea/upp/Initialize()
+	. = ..()
+	reagents.add_reagent("tea", 30)
+
+/obj/item/reagent_container/food/drinks/water
+	name = "\improper insulated container"
+	desc = "A small, reusable, insulated container for holding liquids with a sip lid."
+	icon_state = "tea_upp"
+	item_state = "coffee"
+	center_of_mass = "x=16;y=14"
+
+/obj/item/reagent_container/food/drinks/water/Initialize()
+	. = ..()
+	reagents.add_reagent("water", 30)
 
 /obj/item/reagent_container/food/drinks/ice
 	name = "ice cup"
@@ -411,3 +410,7 @@
 	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Either issued as corporate standard, or bought as a souvenir for people who love the Company oh so dearly. Probably the former."
 	icon_state = "wycup"
 
+/obj/item/reagent_container/food/drinks/plasticcup
+	name = "plastic cup"
+	icon_state = "plasticcup"
+	desc = "A decent sized plastic cup, perfect aboard starships for it's capacity to deal with careless handling by roughnecks."

@@ -329,7 +329,7 @@
 	var/mags_min = 1
 	var/list/guns = list(
 		/obj/item/weapon/gun/pistol/b92fs = /obj/item/ammo_magazine/pistol/b92fs,
-		/obj/item/weapon/gun/revolver/cmb = /obj/item/ammo_magazine/revolver/cmb,
+		/obj/item/weapon/gun/revolver/spearhead = /obj/item/ammo_magazine/revolver/spearhead,
 		/obj/item/weapon/gun/pistol/highpower = /obj/item/ammo_magazine/pistol/highpower,
 		/obj/item/weapon/gun/pistol/m1911 = /obj/item/ammo_magazine/pistol/m1911,
 		/obj/item/weapon/gun/revolver/small = /obj/item/ammo_magazine/revolver/small,
@@ -342,9 +342,9 @@
 	var/gunpath = pick(guns)
 	var/ammopath
 	if(istype(gunpath, /obj/item/weapon/gun/shotgun))
-		ammopath = pick(shotgun_boxes_12g)
+		ammopath = pick(GLOB.shotgun_boxes_12g)
 	else if(istype(gunpath, /obj/item/weapon/gun/launcher/grenade))
-		ammopath = pick(grenade_packets)
+		ammopath = pick(GLOB.grenade_packets)
 	else
 		ammopath = guns[gunpath]
 	spawn_weapon_on_floor(gunpath, ammopath, rand(mags_min, mags_max))
@@ -358,7 +358,7 @@
 	if(gunpath)
 		gun = new gunpath(spawnloc)
 		if(scatter)
-			var/direction = pick(alldirs)
+			var/direction = pick(GLOB.alldirs)
 			var/turf/turf = get_step(gun, direction)
 			if(!turf || turf.density)
 				return
@@ -368,7 +368,7 @@
 			ammo = new ammopath(spawnloc)
 			if(scatter)
 				for(i=0, i<rand(1,3), i++)
-					var/direction = pick(alldirs)
+					var/direction = pick(GLOB.alldirs)
 					var/turf/turf = get_step(ammo, direction)
 					if(!turf || turf.density)
 						break
@@ -388,9 +388,9 @@
 		/obj/item/weapon/gun/pistol/b92fs = /obj/item/ammo_magazine/pistol/b92fs,
 		/obj/item/weapon/gun/pistol/b92fs = /obj/item/ammo_magazine/pistol/b92fs,
 		/obj/item/weapon/gun/pistol/b92fs = /obj/item/ammo_magazine/pistol/b92fs,
-		/obj/item/weapon/gun/revolver/cmb = /obj/item/ammo_magazine/revolver/cmb,
-		/obj/item/weapon/gun/revolver/cmb = /obj/item/ammo_magazine/revolver/cmb,
-		/obj/item/weapon/gun/revolver/cmb = /obj/item/ammo_magazine/revolver/cmb,
+		/obj/item/weapon/gun/revolver/spearhead = /obj/item/ammo_magazine/revolver/spearhead,
+		/obj/item/weapon/gun/revolver/spearhead = /obj/item/ammo_magazine/revolver/spearhead,
+		/obj/item/weapon/gun/revolver/spearhead = /obj/item/ammo_magazine/revolver/spearhead,
 		/obj/item/weapon/gun/pistol/highpower = /obj/item/ammo_magazine/pistol/highpower,
 		/obj/item/weapon/gun/pistol/highpower = /obj/item/ammo_magazine/pistol/highpower,
 		/obj/item/weapon/gun/pistol/highpower = /obj/item/ammo_magazine/pistol/highpower,

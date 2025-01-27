@@ -82,13 +82,12 @@
 		syringestab(target, user)
 		return
 
-	var/injection_time = 2 SECONDS
+	var/injection_time = 10 SECONDS
 	if(user.skills)
-		if(!skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
-			to_chat(user, SPAN_WARNING("You aren't trained to use syringes..."))
-			return
+		if(!skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_TRAINED))
+			to_chat(user, SPAN_WARNING("You aren't trained to use syringes... better go slow."))
 		else
-			injection_time = (injection_time*user.get_skill_duration_multiplier(SKILL_MEDICAL))
+			injection_time = ((injection_time/5)*user.get_skill_duration_multiplier(SKILL_MEDICAL))
 
 
 	switch(mode)
@@ -258,20 +257,20 @@
 			return
 
 		if (target != user && target.getarmor(target_zone, ARMOR_MELEE) > 5 && prob(50))
-			for(var/mob/O in viewers(world_view_size, user))
+			for(var/mob/O in viewers(GLOB.world_view_size, user))
 				O.show_message(text(SPAN_DANGER("<B>[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!</B>")), SHOW_MESSAGE_VISIBLE)
 			user.temp_drop_inv_item(src)
 			qdel(src)
 			return
 
-		for(var/mob/O in viewers(world_view_size, user))
+		for(var/mob/O in viewers(GLOB.world_view_size, user))
 			O.show_message(text(SPAN_DANGER("<B>[user] stabs [target] in \the [hit_area] with [src.name]!</B>")), SHOW_MESSAGE_VISIBLE)
 
 		if(affecting.take_damage(3))
 			target:UpdateDamageIcon()
 
 	else
-		for(var/mob/O in viewers(world_view_size, user))
+		for(var/mob/O in viewers(GLOB.world_view_size, user))
 			O.show_message(text(SPAN_DANGER("<B>[user] stabs [target] with [src.name]!</B>")), SHOW_MESSAGE_VISIBLE)
 		target.take_limb_damage(3)// 7 is the same as crowbar punch
 

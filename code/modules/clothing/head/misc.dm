@@ -224,9 +224,29 @@
 
 /obj/item/clothing/head/fedora
 	name = "\improper fedora"
-	icon_state = "fedora"
-	item_state = "fedora"
-	desc = "A sharp, stylish hat."
+	desc = "Considered outdated professionalwear by most."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "fedora_dark"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
+/obj/item/clothing/head/fedora/light
+	icon_state = "fedora_light"
+
+/obj/item/clothing/head/cowboy
+
+	name = "\improper cowboy hat"
+	desc = "An iconic American cowboy hat."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "cowboy_dark"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+	desc = "A finely made cowboy hat."
+
+/obj/item/clothing/head/cowboy/light
+	icon_state = "cowboy_light"
 
 /obj/item/clothing/head/feathertrilby
 	name = "\improper feather trilby"
@@ -271,3 +291,13 @@
 	siemens_coefficient = 2
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	anti_hug = 10 //Lel
+
+/obj/item/clothing/head/santa
+	name = "\improper santa hat"
+	icon_state = "santa_hat_red"
+	item_state = "santa_hat_red"
+	desc = "Ho ho ho. Merry Christmas!"
+
+/obj/item/clothing/head/santa/green
+	icon_state = "santa_hat_green"
+	item_state = "santa_hat_green"

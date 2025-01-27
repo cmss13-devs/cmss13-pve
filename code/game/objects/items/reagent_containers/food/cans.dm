@@ -38,7 +38,6 @@
 		to_chat(user, SPAN_NOTICE("You need to open the drink!"))
 		return
 	var/datum/reagents/R = src.reagents
-	var/fillevel = gulp_size
 
 	if(!R.total_volume || !R)
 		if(M == user && M.a_intent == INTENT_HARM && M.zone_selected == "head")
@@ -79,13 +78,6 @@
 		if(reagents.total_volume)
 			reagents.set_source_mob(user)
 			reagents.trans_to_ingest(M, gulp_size)
-
-		if(isrobot(user)) //Cyborg modules that include drinks automatically refill themselves, but drain the borg's cell
-			var/mob/living/silicon/robot/bro = user
-			bro.cell.use(30)
-			var/refill = R.get_master_reagent_id()
-			spawn(1 MINUTES)
-				R.add_reagent(refill, fillevel)
 
 		playsound(M.loc,'sound/items/drink.ogg', 15, 1)
 		return 1

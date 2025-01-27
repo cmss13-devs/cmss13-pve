@@ -59,7 +59,7 @@
 	icon_state = "blue_skull_balaclava"
 	item_state = "blue_skull_balaclava"
 	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEALLHAIR|HIDEEARS
+	flags_inv_hide = HIDEALLHAIR
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 
@@ -75,7 +75,7 @@
 	icon_state = "coif"
 	item_state = "coif"
 	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEALLHAIR|HIDEEARS
+	flags_inv_hide = HIDEALLHAIR
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	var/pulled = FALSE

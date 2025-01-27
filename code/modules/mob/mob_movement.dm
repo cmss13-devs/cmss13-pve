@@ -56,9 +56,6 @@
 
 	if(istype(mob, /mob/living/carbon))
 		mob.swap_hand()
-	if(istype(mob,/mob/living/silicon/robot))
-		var/mob/living/silicon/robot/R = mob
-		R.cycle_modules()
 	return
 
 
@@ -71,8 +68,7 @@
 
 /client/verb/drop_item()
 	set hidden = TRUE
-	if(!isrobot(mob))
-		mob.drop_item_v()
+	mob.drop_item_v()
 	return
 
 
@@ -179,7 +175,7 @@
 			move_delay += mob.next_move_slowdown
 			mob.next_move_slowdown = 0
 
-		mob.cur_speed = Clamp(10/(move_delay + 0.5), MIN_SPEED, MAX_SPEED)
+		mob.cur_speed = clamp(10/(move_delay + 0.5), MIN_SPEED, MAX_SPEED)
 		next_movement = world.time + MINIMAL_MOVEMENT_INTERVAL // We pre-set this now for the crawling case. If crawling do_after fails, next_movement would be set after the attempt end instead of now.
 
 		//Try to crawl first
@@ -193,7 +189,7 @@
 				for(var/zone in extremities)
 					if(!(human.get_limb(zone)))
 						extremities.Remove(zone)
-				if(extremities.len < 4)
+				if(length(extremities) < 4)
 					return
 			//now crawl
 			mob.crawling = TRUE
@@ -206,7 +202,7 @@
 		mob.move_intentionally = TRUE
 		moving = TRUE
 		if(mob.confused)
-			mob.Move(get_step(mob, pick(cardinal)))
+			mob.Move(get_step(mob, pick(GLOB.cardinals)))
 		else
 			. = ..()
 
@@ -263,12 +259,12 @@
 
 		if(istype(src,/mob/living/carbon/human/))  // Only humans can wear magboots, so we give them a chance to.
 			var/mob/living/carbon/human/H = src
-			if((istype(turf,/turf/open/floor)) && (src.lastarea.has_gravity == 0) && !(istype(H.shoes, /obj/item/clothing/shoes/magboots) && (H.shoes.flags_inventory & NOSLIPPING)))
+			if((istype(turf,/turf/open/floor)) && !(istype(H.shoes, /obj/item/clothing/shoes/magboots) && (H.shoes.flags_inventory & NOSLIPPING)))
 				continue
 
 
 		else
-			if((istype(turf,/turf/open/floor)) && (src.lastarea && src.lastarea.has_gravity == 0)) // No one else gets a chance.
+			if(istype(turf,/turf/open/floor)) // No one else gets a chance.
 				continue
 
 
@@ -303,5 +299,5 @@
 	if(stat)
 		prob_slip = 0  // Changing this to zero to make it line up with the comment.
 
-	prob_slip = round(prob_slip)
+	prob_slip = floor(prob_slip)
 	return(prob_slip)

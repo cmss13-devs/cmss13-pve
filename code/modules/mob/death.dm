@@ -61,7 +61,7 @@
 	jitteriness = 0
 
 	if(client)
-		client.change_view(world_view_size) //just so we never get stuck with a large view somehow
+		client.change_view(GLOB.world_view_size) //just so we never get stuck with a large view somehow
 
 	if(s_active) //Close inventory screens.
 		s_active.storage_close(src)
@@ -99,7 +99,7 @@
 	med_hud_set_status()
 
 	update_icons()
-	SEND_SIGNAL(src, COMSIG_MOB_DEATH)
+	SEND_SIGNAL(src, COMSIG_MOB_DEATH, gibbed)
 	return 1
 
 /mob/proc/handle_death_cause(datum/cause_data/cause_data, turf/death_loc)

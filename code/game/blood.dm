@@ -37,6 +37,9 @@
 	blood_overlay.color = b_color
 
 /mob/living/carbon/human/add_blood(b_color = "#830303", blood_flags = BLOOD_ALL)
+	if(b_color == BLOOD_COLOR_XENO || b_color == BLOOD_COLOR_XENO_ROYAL)
+		return FALSE
+
 	if(blood_flags & BLOOD_BODY)
 		if(wear_suit)
 			wear_suit.add_blood(b_color)

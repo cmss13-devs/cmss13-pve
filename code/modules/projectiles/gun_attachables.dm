@@ -31,7 +31,7 @@ Defined in conflicts.dm of the #defines folder.
 	var/pixel_shift_y = 16 //Uses the bottom left corner of the item.
 
 	flags_atom =  FPRINT|CONDUCT
-	matter = list("metal" = 2000)
+	matter = list("metal" = 100)
 	w_class = SIZE_SMALL
 	force = 1
 	var/slot = null //"muzzle", "rail", "under", "stock", "special"
@@ -274,22 +274,23 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "m40sd_suppressor_a"
 
 /obj/item/attachable/bayonet
-	name = "\improper M5 'Night Raider' bayonet"
+	name = "\improper M5 bayonet"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "bayonet"
 	item_state = "combat_knife"
-	desc = "USCMC standard issue combat knife. Can be put into boot holster or affixed to the bayonet lug of a rifle. Can also be used to extract shrapnel..."
+	desc = "An outdated rifle bayonet issued by the USCMC. Neatly fits into boot-mounted holsters, and can- in emergencies- be utilized to dig out shrapnel."
 	sharp = IS_SHARP_ITEM_ACCURATE
 	force = MELEE_FORCE_NORMAL
-	throwforce = MELEE_FORCE_NORMAL
+	throwforce = MELEE_FORCE_WEAK
 	throw_speed = SPEED_VERY_FAST
-	throw_range = 6
+	throw_range = 5
 	hitsound = 'sound/weapons/slash.ogg'
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_speed = 9
 	flags_equip_slot = SLOT_FACE
 	flags_armor_protection = SLOT_FACE
 	flags_item = CAN_DIG_SHRAPNEL
+	flags_human_ai = MELEE_WEAPON_ITEM
 
 	attach_icon = "bayonet_a"
 	melee_mod = 20
@@ -344,6 +345,10 @@ Defined in conflicts.dm of the #defines folder.
 	throw_range = 7
 	pry_delay = 1 SECONDS
 
+/obj/item/attachable/bayonet/van_bandolier
+	name = "\improper Fairbairn-Sykes fighting knife"
+	desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
+
 /obj/item/attachable/bayonet/co2/update_icon()
 	icon_state = "co2_knife[filled ? "-f" : ""]"
 	attach_icon = "co2_bayonet[filled ? "-f" : ""]_a"
@@ -352,16 +357,16 @@ Defined in conflicts.dm of the #defines folder.
 	if(istype(W, /obj/item/co2_cartridge))
 		if(!filled)
 			filled = TRUE
-			user.visible_message(SPAN_NOTICE("[user] slots a CO2 cartridge into [src]. A second later, \he apparently looks dismayed."), SPAN_WARNING("You slot a fresh CO2 cartridge into [src] and snap the slot cover into place. Only then do you realize \the [W]'s valve broke inside \the [src]. Fuck."))
+			user.visible_message(SPAN_NOTICE("[user] slots a CO2 cartridge into [src]. A second later, \he apparently looks dismayed."), SPAN_WARNING("You slot a fresh CO2 cartridge into [src] and snap the slot cover into place. Only then do you realize [W]'s valve broke inside [src]. Fuck."))
 			playsound(src, 'sound/machines/click.ogg')
 			qdel(W)
 			update_icon()
 			return
 		else
-			user.visible_message(SPAN_WARNING("[user] fiddles with \the [src]. \He looks frustrated."), SPAN_NOTICE("No way man! You can't seem to pry the existing container out of \the [src]... try a screwdriver?"))
+			user.visible_message(SPAN_WARNING("[user] fiddles with [src]. \He looks frustrated."), SPAN_NOTICE("No way man! You can't seem to pry the existing container out of [src]... try a screwdriver?"))
 			return
 	if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER) && do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD))
-		user.visible_message(SPAN_WARNING("[user] screws with \the [src], using \a [W]. \He looks very frustrated."), SPAN_NOTICE("You try to pry the cartridge out of the [src], but it's stuck damn deep. Piece of junk..."))
+		user.visible_message(SPAN_WARNING("[user] screws with [src], using \a [W]. \He looks very frustrated."), SPAN_NOTICE("You try to pry the cartridge out of [src], but it's stuck damn deep. Piece of junk..."))
 		return
 	..()
 
@@ -493,6 +498,20 @@ Defined in conflicts.dm of the #defines folder.
 	hud_offset_mod = -3
 
 /obj/item/attachable/sniperbarrel/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
+	scatter_mod = -SCATTER_AMOUNT_TIER_8
+
+/obj/item/attachable/pmc_sniperbarrel
+	name = "sniper barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "pmc_sniperbarrel"
+	desc = "A heavy barrel. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = -3
+
+/obj/item/attachable/pmc_sniperbarrel/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
 	scatter_mod = -SCATTER_AMOUNT_TIER_8
@@ -903,6 +922,14 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
+/obj/item/attachable/sling //Purely cosmetic
+	name = "two-point sling"
+	desc = "A traditional strip of toughened nylon fabric with clips on either end for attaching to suitable mounting points on most longarms in the UA armed forces arsenals."
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
+	icon_state = "pve-sling"
+	attach_icon = "pve-sling_a"
+	slot = "rail"
+
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
@@ -1054,6 +1081,7 @@ Defined in conflicts.dm of the #defines folder.
 	button.name = name
 
 /datum/action/item_action/toggle_zoom_level/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/G = holder_item
 	var/obj/item/attachable/scope/variable_zoom/S = G.attachments["rail"]
 	S.toggle_zoom_level()
@@ -1152,6 +1180,41 @@ Defined in conflicts.dm of the #defines folder.
 	..()
 	select_gamemode_skin(type)
 	attach_icon = icon_state
+
+/obj/item/attachable/scope/mini/sadar
+	name = "M83A2 SADAR sight assembly"
+	desc = "SADAR sight system."
+	zoom_offset = 3
+
+/obj/item/attachable/scope/mini/army
+	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
+	zoom_offset = 4
+
+// PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
+
+/obj/item/attachable/scope/pve
+	name = "AN/RVS-52 CCD television sight system"
+	desc = "An ARMAT designed 3x magnification weapon sight, allows for greater accuracy at range and under low-light conditions. The mounting brackets are designed to fit on the most commonly-used rifles of the USCM. This one looks like it's been in service since the start of the Linna 349 campaign."
+	icon_state = "pvescope"
+	zoom_offset = 3
+	zoom_viewsize = 7
+	allows_movement = TRUE
+	var/dynamic_aim_slowdown = SLOWDOWN_ADS_MINISCOPE_DYNAMIC
+
+/obj/item/attachable/scope/pve/New()
+	..()
+	delay_mod = 0
+	delay_scoped_nerf = FIRE_DELAY_TIER_SMG
+	damage_falloff_scoped_buff = -0.2
+
+/obj/item/attachable/scope/pve/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
+	. = ..()
+	if(G.zoom)
+		G.slowdown += dynamic_aim_slowdown
+
+/obj/item/attachable/scope/pve/remove_scoped_buff(mob/living/carbon/user, obj/item/weapon/gun/G)
+	G.slowdown -= dynamic_aim_slowdown
+	..()
 
 /obj/item/attachable/scope/mini_iff
 	name = "B8 Smart-Scope"
@@ -1273,6 +1336,19 @@ Defined in conflicts.dm of the #defines folder.
 	QDEL_NULL(scope_element)
 	return ..()
 
+/obj/item/attachable/vulture_scope/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	var/new_attach_icon
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
+		if("desert")
+			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
+		if("classic")
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+		if("urban")
+			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
+
 /obj/item/attachable/vulture_scope/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -1304,7 +1380,7 @@ Defined in conflicts.dm of the #defines folder.
 	switch(action)
 		if("adjust_dir")
 			var/direction = params["offset_dir"]
-			if(!(direction in alldirs) || !scoping || !scope_user)
+			if(!(direction in GLOB.alldirs) || !scoping || !scope_user)
 				return
 
 			var/mob/scoper = scope_user.resolve()
@@ -1321,7 +1397,7 @@ Defined in conflicts.dm of the #defines folder.
 
 		if("adjust_position")
 			var/direction = params["position_dir"]
-			if(!(direction in alldirs) || !scoping || !scope_user)
+			if(!(direction in GLOB.alldirs) || !scoping || !scope_user)
 				return
 
 			var/mob/scoper = scope_user.resolve()
@@ -1388,7 +1464,7 @@ Defined in conflicts.dm of the #defines folder.
 	return TRUE
 
 /obj/item/attachable/vulture_scope/proc/get_offset_dirs()
-	var/list/possible_dirs = alldirs.Copy()
+	var/list/possible_dirs = GLOB.alldirs.Copy()
 	if(scope_offset_x >= scope_drift_max)
 		possible_dirs -= list(NORTHEAST, EAST, SOUTHEAST)
 	else if(scope_offset_x <= -scope_drift_max)
@@ -1405,7 +1481,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/vulture_scope/proc/get_adjust_dirs()
 	if(!scoping)
 		return list()
-	var/list/possible_dirs = alldirs.Copy()
+	var/list/possible_dirs = GLOB.alldirs.Copy()
 	var/turf/current_turf = get_turf(src)
 	var/turf/scope_tile = locate(scope_x, scope_y, current_turf.z)
 	var/mob/scoper = scope_user.resolve()
@@ -1589,7 +1665,7 @@ Defined in conflicts.dm of the #defines folder.
 	scoper.clear_fullscreen("vulture")
 	scoper.client.remove_from_screen(scope_element)
 	scoper.see_in_dark -= darkness_view
-	scoper.lighting_alpha = 127
+	scoper.lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 	scoper.sync_lighting_plane_alpha()
 	QDEL_NULL(scope_element)
 	recalculate_scope_pos()
@@ -1663,6 +1739,7 @@ Defined in conflicts.dm of the #defines folder.
 /datum/action/item_action/vulture
 
 /datum/action/item_action/vulture/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/gun_holder = holder_item
 	var/obj/item/attachable/vulture_scope/scope = gun_holder.attachments["rail"]
 	if(!istype(scope))
@@ -1727,8 +1804,8 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
 
 /obj/item/attachable/stock/shotgun
-	name = "\improper M37 wooden stock"
-	desc = "A non-standard heavy wooden stock for the M37 Shotgun. More cumbersome than the standard issue stakeout, but reduces recoil and improves accuracy. Allegedly makes a pretty good club in a fight too."
+	name = "\improper Ithaca 37 wooden stock"
+	desc = "A standard wooden stock for the Ithaca pump-action shotgun. More cumbersome than the standard issue stakeout, but reduces recoil and improves accuracy. Allegedly makes a pretty good club in a fight too."
 	slot = "stock"
 	icon_state = "stock"
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -1749,8 +1826,6 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
 	//but at the same time you are slow when 2 handed
 	aim_speed_mod = CONFIG_GET(number/slowdown_med)
-
-	matter = list("wood" = 2000)
 
 	select_gamemode_skin(type)
 
@@ -1816,6 +1891,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/stock/vulture
 	name = "\improper M707 heavy stock"
 	icon_state = "vulture_stock"
+	attach_icon = "vulture_stock"
 	hud_offset_mod = 3
 
 /obj/item/attachable/stock/vulture/Initialize(mapload, ...)
@@ -1823,9 +1899,22 @@ Defined in conflicts.dm of the #defines folder.
 	select_gamemode_skin(type)
 	// Doesn't give any stat additions due to the gun already having really good ones, and this is unremovable from the gun itself
 
+/obj/item/attachable/stock/vulture/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	var/new_attach_icon
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
+		if("desert")
+			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
+		if("classic")
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+		if("urban")
+			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
+
 /obj/item/attachable/stock/tactical
-	name = "\improper MK221 tactical stock"
-	desc = "A metal stock made for the MK221 tactical shotgun."
+	name = "\improper M120 tactical stock"
+	desc = "A metal stock made for the M120 tactical shotgun."
 	icon_state = "tactical_stock"
 	hud_offset_mod = 6
 
@@ -1858,6 +1947,33 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_5
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_10
+
+/obj/item/attachable/stock/type23/wood
+	name = "\improper KS-29 wooden stock"
+	desc = "A standard heavy wooden stock for the KS-29 riot shotgun. Allegedly makes a pretty good club in a fight too."
+	slot = "stock"
+	icon_state = "type23_wood"
+	wield_delay_mod = WIELD_DELAY_FAST
+	pixel_shift_x = 32
+	pixel_shift_y = 15
+	hud_offset_mod = 6 //*Very* long sprite.
+	flags_attach_features = NO_FLAGS
+
+/obj/item/attachable/stock/type23/wood/New()
+	..()
+	//it makes stuff much better when two-handed
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
+	recoil_mod = -RECOIL_AMOUNT_TIER_4
+	scatter_mod = -SCATTER_AMOUNT_TIER_8
+	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+	//it makes stuff much worse when one handed
+	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
+	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
+	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
+	//but at the same time you are slow when 2 handed
+	aim_speed_mod = CONFIG_GET(number/slowdown_med)
+
+	matter = list("wood" = 2000)
 
 /obj/item/attachable/stock/slavic
 	name = "wooden stock"
@@ -2020,6 +2136,21 @@ Defined in conflicts.dm of the #defines folder.
 	gun.recalculate_attachment_bonuses()
 	gun.update_overlays(src, "stock")
 
+/obj/item/attachable/stock/m20a
+	name = "\improper M20A stock"
+	desc = "The M20A's standard polymer collapsible stock. When extended, it improves scatter, accuracy, and recoil, but slightly hinders agility."
+	slot = "stock"
+	melee_mod = 5
+	size_mod = 1
+	icon_state = "m20astock"
+	attach_icon = "m20astock_a"
+	pixel_shift_x = 40
+	pixel_shift_y = 14
+	hud_offset_mod = 3
+
+/obj/item/attachable/stock/m20a/New()
+	..()
+
 /obj/item/attachable/stock/m16
 	name = "\improper M16 bump stock"
 	desc = "Technically illegal in the state of California."
@@ -2107,9 +2238,46 @@ Defined in conflicts.dm of the #defines folder.
 	flags_attach_features = NO_FLAGS
 	hud_offset_mod = 2
 
-/obj/item/attachable/stock/mod88
-	name = "\improper Mod 88 burst stock"
-	desc = "Increases the fire rate and burst amount on the Mod 88. Some versions act as a holster for the weapon when un-attached. This is a test item and should not be used in normal gameplay (yet)."
+/obj/item/attachable/stock/xm51
+	name = "\improper XM51 stock"
+	desc = "A specialized stock designed for XM51 breaching shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter. Integrated mechanisms inside the stock allow use of a devastating two-shot burst. This comes at a cost of the gun becoming too unwieldy to holster, worse handling and mobility."
+	icon_state = "xm51_stock"
+	attach_icon = "xm51_stock_a"
+	wield_delay_mod = WIELD_DELAY_FAST
+	hud_offset_mod = 3
+	melee_mod = 10
+
+/obj/item/attachable/stock/xm51/Initialize(mapload, ...)
+	. = ..()
+	select_gamemode_skin(type)
+	//it makes stuff much better when two-handed
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
+	recoil_mod = -RECOIL_AMOUNT_TIER_4
+	scatter_mod = -SCATTER_AMOUNT_TIER_8
+	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_4
+	//and allows for burst-fire
+	burst_mod = BURST_AMOUNT_TIER_2
+	//but it makes stuff much worse when one handed
+	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_5
+	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_5
+	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_6
+	//and makes you slower
+	aim_speed_mod = CONFIG_GET(number/slowdown_med)
+
+/obj/item/attachable/stock/xm51/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	var/new_attach_icon
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
+		if("desert")
+			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
+		if("classic")
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+
+/obj/item/attachable/stock/vp70
+	name = "\improper VP70 burst stock"
+	desc = "Increases the fire rate and burst amount on the VP70. Some versions act as a holster for the weapon when un-attached. This is a test item and should not be used in normal gameplay (yet)."
 	icon_state = "mod88_stock"
 	attach_icon = "mod88_stock_a"
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -2118,7 +2286,7 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 2
 	melee_mod = 5
 
-/obj/item/attachable/stock/mod88/New()
+/obj/item/attachable/stock/vp70/New()
 	..()
 	//2h
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
@@ -2208,7 +2376,7 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
-/obj/item/attachable/m4ra_barrel/New()
+/* /obj/item/attachable/m4ra_barrel/New()
 	..()
 	select_gamemode_skin(type)
 
@@ -2221,7 +2389,7 @@ Defined in conflicts.dm of the #defines folder.
 		if("desert")
 			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
 		if("classic")
-			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon */
 
 /obj/item/attachable/m4ra_barrel_custom
 	name = "custom M4RA barrel"
@@ -2328,6 +2496,33 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/type71/New()
 	..()
+
+/obj/item/attachable/stock/m60
+	name = "M60 stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "m60_stock"
+	attach_icon = "m60_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 15
+	size_mod = 0
+
+
+/obj/item/attachable/stock/ppsh
+	name = "PPSh-17b stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "ppsh17b_stock"
+	attach_icon = "ppsh17b_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 10
+	size_mod = 0
+
+
 
 /obj/item/attachable/stock/smg
 	name = "submachinegun stock"
@@ -2665,7 +2860,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "U1 grenade launcher"
 	desc = "A weapon-mounted, reloadable grenade launcher."
 	icon_state = "grenade"
-	attach_icon = "grenade_a"
+	attach_icon = "grenade"
 	w_class = SIZE_MEDIUM
 	current_rounds = 0
 	max_rounds = 3
@@ -2679,6 +2874,7 @@ Defined in conflicts.dm of the #defines folder.
 	var/cocked = TRUE // has the UGL been cocked via opening and closing the breech?
 	var/open_sound = 'sound/weapons/handling/ugl_open.ogg'
 	var/close_sound = 'sound/weapons/handling/ugl_close.ogg'
+	var/has_breech = TRUE
 
 /obj/item/attachable/attached_gun/grenade/Initialize()
 	. = ..()
@@ -2695,6 +2891,8 @@ Defined in conflicts.dm of the #defines folder.
 	else . += "It's empty."
 
 /obj/item/attachable/attached_gun/grenade/unique_action(mob/user)
+	if(!has_breech)
+		return
 	if(!ishuman(usr))
 		return
 	if(user.is_mob_incapacitated() || !isturf(usr.loc))
@@ -2737,7 +2935,7 @@ Defined in conflicts.dm of the #defines folder.
 	update_icon()
 
 /obj/item/attachable/attached_gun/grenade/reload_attachment(obj/item/explosive/grenade/G, mob/user)
-	if(!breech_open)
+	if(has_breech && !breech_open)
 		to_chat(user, SPAN_WARNING("\The [src]'s breech must be open to load grenades! (use unique-action)"))
 		return
 	if(!istype(G) || istype(G, /obj/item/explosive/grenade/spawnergrenade/))
@@ -2758,7 +2956,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/unload_attachment(mob/user, reload_override = FALSE, drop_override = FALSE, loc_override = FALSE)
 	. = TRUE //Always uses special unloading.
-	if(!breech_open)
+	if(has_breech && !breech_open)
 		to_chat(user, SPAN_WARNING("\The [src] is closed! You must open it to take out grenades!"))
 		return
 	if(!current_rounds)
@@ -2783,12 +2981,12 @@ Defined in conflicts.dm of the #defines folder.
 		if(user)
 			to_chat(user, SPAN_WARNING("You must hold [gun] with two hands to use \the [src]."))
 		return
-	if(breech_open)
+	if(has_breech && breech_open)
 		if(user)
 			to_chat(user, SPAN_WARNING("You must close the breech to fire \the [src]!"))
 			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
 		return
-	if(!cocked)
+	if(has_breech && !cocked)
 		if(user)
 			to_chat(user, SPAN_WARNING("You must cock \the [src] to fire it! (open and close the breech)"))
 			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
@@ -2810,17 +3008,27 @@ Defined in conflicts.dm of the #defines folder.
 		msg_admin_niche("[key_name(user)] attempted to prime \a [G.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
 		return
 
+	if(G.dual_purpose != FALSE)
+		G.fuse_type = IMPACT_FUSE
+	G.arm_sound = null
+
 	playsound(user.loc, fire_sound, 50, 1)
 	msg_admin_attack("[key_name_admin(user)] fired an underslung grenade launcher [ADMIN_JMP_USER(user)]")
 	log_game("[key_name_admin(user)] used an underslung grenade launcher.")
 
-	var/pass_flags = NO_FLAGS
-	pass_flags |= grenade_pass_flags
-	G.det_time = min(15, G.det_time)
-	G.throw_range = max_range
-	G.activate(user, FALSE)
-	G.forceMove(get_turf(gun))
-	G.throw_atom(target, max_range, SPEED_VERY_FAST, user, null, NORMAL_LAUNCH, pass_flags)
+
+// canister nades explode immediately and don't leave the barrel of the weapon.
+	if(istype(G, /obj/item/explosive/grenade/high_explosive/airburst/canister))
+		var/obj/item/explosive/grenade/high_explosive/airburst/canister/canister_round = G
+		canister_round.canister_fire(user, target)
+	else
+		var/pass_flags = NO_FLAGS
+		pass_flags |= grenade_pass_flags
+		G.det_time = min(15, G.det_time)
+		G.throw_range = max_range
+		G.activate(user, FALSE)
+		G.forceMove(get_turf(gun))
+		G.throw_atom(target, max_range, SPEED_VERY_FAST, user, null, NORMAL_LAUNCH, pass_flags)
 	current_rounds--
 	cocked = FALSE // we have fired so uncock the gun
 	loaded_grenades.Cut(1,2)
@@ -2831,14 +3039,26 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Standard pump action underslung grenade launcher. Fits the M41A, four round tube, chambers one."
 	icon_state = "grenade-mk1"
 	attach_icon = "grenade-mk1_a"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
 	current_rounds = 0
 	max_rounds = 5
 	max_range = 10
-	attachment_firing_delay = 30
+	attachment_firing_delay = 15
 
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
 	attach_icon = "green_grenade-mk1_a"
+
+/obj/item/attachable/attached_gun/grenade/m120
+	name = "\improper PN/c 30mm underslung grenade launcher"
+	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, two round tube, chambers one."
+	icon_state = "grenade-mk1"
+	attach_icon = "grenade-mk1_a"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	current_rounds = 0
+	max_rounds = 3
+	max_range = 10
+	attachment_firing_delay = 15
 
 /obj/item/attachable/attached_gun/grenade/m203 //M16 GL, only DD have it.
 	name = "\improper M203 Grenade Launcher"
@@ -2853,6 +3073,20 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/attached_gun/grenade/m203/Initialize()
 	. = ..()
 	grenade_pass_flags = NO_FLAGS
+
+/obj/item/attachable/attached_gun/grenade/upp
+	name = "\improper Type 83 overslung grenade launcher"
+	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures. Can be quickly swapped to using the 'Toggle-Attachment' keybind."
+	icon_state = "type83"
+	attach_icon = "type83_a"
+	current_rounds = 0
+	max_rounds = 1
+	max_range = 14
+	attachment_firing_delay = 5
+	slot = "special"
+	pixel_shift_x = 0
+	pixel_shift_y = 0
+	has_breech = FALSE
 
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
 /obj/item/attachable/attached_gun/flamer
@@ -2922,7 +3156,7 @@ Defined in conflicts.dm of the #defines folder.
 			current_rounds += transfered_rounds
 			FT.current_rounds -= transfered_rounds
 
-			var/amount_of_reagents = FT.reagents.reagent_list.len
+			var/amount_of_reagents = length(FT.reagents.reagent_list)
 			var/amount_removed_per_reagent = transfered_rounds / amount_of_reagents
 			for(var/datum/reagent/R in FT.reagents.reagent_list)
 				R.volume -= amount_removed_per_reagent
@@ -2952,7 +3186,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/flamer/proc/unleash_flame(atom/target, mob/living/user)
 	set waitfor = 0
-	var/list/turf/turfs = getline2(user,target)
+	var/list/turf/turfs = get_line(user,target)
 	var/distance = 0
 	var/turf/prev_T
 	var/stop_at_turf = FALSE
@@ -3059,6 +3293,21 @@ Defined in conflicts.dm of the #defines folder.
 					qdel(mag)
 			return
 	to_chat(user, SPAN_WARNING("[src] only accepts shotgun buckshot."))
+
+/obj/item/attachable/attached_gun/shotgun/m20a/unloaded
+	current_rounds = 0
+
+/obj/item/attachable/attached_gun/shotgun/m20a
+	name = "\improper U3 underbarrel shotgun"
+	desc = "An ARMAT U3 tactical shotgun. Integrated into the M20A Harrington rifle. Only capable of loading up to five buckshot shells."
+	icon_state = "masterkey"
+	attach_icon = "masterkey_a"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON
+	hidden = TRUE
+
+
+/obj/item/attachable/attached_gun/shotgun/m20a/set_bullet_traits()
+	return
 
 /obj/item/attachable/attached_gun/extinguisher
 	name = "HME-12 underbarrel extinguisher"
@@ -3168,21 +3417,29 @@ Defined in conflicts.dm of the #defines folder.
 		to_chat(user, SPAN_WARNING("\The [gun] doesn't have enough fuel to launch a projectile!"))
 		return
 
+	if(istype(flamer_reagent, /datum/reagent/foaming_agent/stabilized))
+		to_chat(user, SPAN_WARNING("This chemical will clog the nozzle!"))
+		return
+
+	if(istype(gun.current_mag, /obj/item/ammo_magazine/flamer_tank/smoke)) // you can't fire smoke like a projectile!
+		to_chat(user, SPAN_WARNING("[src] can't be used with this fuel tank!"))
+		return
+
 	gun.last_fired = world.time
 	gun.current_mag.reagents.remove_reagent(flamer_reagent.id, FLAME_REAGENT_USE_AMOUNT * fuel_per_projectile)
 
 	var/obj/projectile/P = new(src, create_cause_data(initial(name), user, src))
 	var/datum/ammo/flamethrower/ammo_datum = new projectile_type
-	ammo_datum.flamer_reagent_type = flamer_reagent.type
+	ammo_datum.flamer_reagent_id = flamer_reagent.id
 	P.generate_bullet(ammo_datum)
 	P.icon_state = "naptha_ball"
-	P.color = flamer_reagent.color
+	P.color = flamer_reagent.burncolor
 	P.hit_effect_color = flamer_reagent.burncolor
 	P.fire_at(target, user, user, max_range, AMMO_SPEED_TIER_2, null)
 	var/turf/user_turf = get_turf(user)
 	playsound(user_turf, pick(fire_sounds), 50, TRUE)
 
-	to_chat(user, SPAN_WARNING("The gauge reads: <b>[round(gun.current_mag.get_ammo_percent())]</b>% fuel remaining!"))
+	to_chat(user, SPAN_WARNING("The gauge reads: <b>[floor(gun.current_mag.get_ammo_percent())]</b>% fuel remaining!"))
 
 /obj/item/attachable/verticalgrip
 	name = "vertical grip"
@@ -3290,6 +3547,10 @@ Defined in conflicts.dm of the #defines folder.
 	var/bipod_deployed = FALSE
 	/// If this should anchor the user while in use
 	var/heavy_bipod = FALSE
+	// Are switching to full auto when deploying the bipod
+	var/full_auto_switch = FALSE
+	// Store our old firemode so we can switch to it when undeploying the bipod
+	var/old_firemode = null
 
 /obj/item/attachable/bipod/New()
 	..()
@@ -3300,16 +3561,33 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_mod = SCATTER_AMOUNT_TIER_9
 	recoil_mod = RECOIL_AMOUNT_TIER_5
 
-/obj/item/attachable/bipod/Attach(obj/item/weapon/gun/G)
+/obj/item/attachable/bipod/Attach(obj/item/weapon/gun/gun, mob/user)
 	..()
 
-	RegisterSignal(G, COMSIG_ITEM_DROPPED, PROC_REF(handle_drop))
+	if((GUN_FIREMODE_AUTOMATIC in gun.gun_firemode_list) || (gun.flags_gun_features & GUN_SUPPORT_PLATFORM))
+		var/given_action = FALSE
+		if(user && (gun == user.l_hand || gun == user.r_hand))
+			give_action(user, /datum/action/item_action/bipod/toggle_full_auto_switch, src, gun)
+			given_action = TRUE
+		if(!given_action)
+			new /datum/action/item_action/bipod/toggle_full_auto_switch(src, gun)
+
+	RegisterSignal(gun, COMSIG_ITEM_DROPPED, PROC_REF(handle_drop))
 
 /obj/item/attachable/bipod/Detach(mob/user, obj/item/weapon/gun/detaching_gub, drop_attachment = TRUE)
 	UnregisterSignal(detaching_gub, COMSIG_ITEM_DROPPED)
 
+	//clear out anything related to full auto switching
+	full_auto_switch = FALSE
+	old_firemode = null
+	for(var/item_action in detaching_gub.actions)
+		var/datum/action/item_action/bipod/toggle_full_auto_switch/target_action = item_action
+		if(target_action.target == src)
+			qdel(item_action)
+			break
+
 	if(bipod_deployed)
-		undeploy_bipod(detaching_gub)
+		undeploy_bipod(detaching_gub, user)
 	..()
 
 /obj/item/attachable/bipod/update_icon()
@@ -3323,60 +3601,62 @@ Defined in conflicts.dm of the #defines folder.
 	if(istype(loc, /obj/item/weapon/gun))
 		var/obj/item/weapon/gun/gun = loc
 		gun.update_attachable(slot)
-		for(var/datum/action/A as anything in gun.actions)
-			A.update_button_icon()
+		for(var/datum/action/item_action as anything in gun.actions)
+			if(!istype(item_action, /datum/action/item_action/bipod/toggle_full_auto_switch))
+				item_action.update_button_icon()
 
-/obj/item/attachable/bipod/proc/handle_drop(obj/item/weapon/gun/G, mob/living/carbon/human/user)
+/obj/item/attachable/bipod/proc/handle_drop(obj/item/weapon/gun/gun, mob/living/carbon/human/user)
 	SIGNAL_HANDLER
 
 	UnregisterSignal(user, COMSIG_MOB_MOVE_OR_LOOK)
 
 	if(bipod_deployed)
-		undeploy_bipod(G)
+		undeploy_bipod(gun, user)
 		user.apply_effect(1, SUPERSLOW)
 		user.apply_effect(2, SLOW)
 
-/obj/item/attachable/bipod/proc/undeploy_bipod(obj/item/weapon/gun/G)
-	REMOVE_TRAIT(G, TRAIT_GUN_BIPODDED, "attached_bipod")
+/obj/item/attachable/bipod/proc/undeploy_bipod(obj/item/weapon/gun/gun, mob/user)
+	REMOVE_TRAIT(gun, TRAIT_GUN_BIPODDED, "attached_bipod")
 	bipod_deployed = FALSE
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
 	recoil_mod = RECOIL_AMOUNT_TIER_5
 	burst_scatter_mod = 0
 	delay_mod = FIRE_DELAY_TIER_12
-	G.recalculate_attachment_bonuses()
-	G.stop_fire()
-	var/mob/living/user
-	if(isliving(G.loc))
-		user = G.loc
-		SEND_SIGNAL(user, COMSIG_MOB_UNDEPLOYED_BIPOD)
-		UnregisterSignal(user, COMSIG_MOB_MOVE_OR_LOOK)
+	//if we are no longer on full auto, don't bother switching back to the old firemode
+	if(full_auto_switch && gun.gun_firemode == GUN_FIREMODE_AUTOMATIC && gun.gun_firemode != old_firemode)
+		gun.do_toggle_firemode(user, null, old_firemode)
 
-	if(G.flags_gun_features & GUN_SUPPORT_PLATFORM)
-		G.remove_firemode(GUN_FIREMODE_AUTOMATIC)
+	gun.recalculate_attachment_bonuses()
+	gun.stop_fire()
+	SEND_SIGNAL(user, COMSIG_MOB_UNDEPLOYED_BIPOD)
+	UnregisterSignal(user, COMSIG_MOB_MOVE_OR_LOOK)
+
+	if(gun.flags_gun_features & GUN_SUPPORT_PLATFORM)
+		gun.remove_firemode(GUN_FIREMODE_AUTOMATIC)
 
 	if(heavy_bipod)
 		user.anchored = FALSE
 
-	if(!QDELETED(G))
+	if(!QDELETED(gun))
 		playsound(user,'sound/items/m56dauto_rotate.ogg', 55, 1)
 		update_icon()
 
-/obj/item/attachable/bipod/activate_attachment(obj/item/weapon/gun/G,mob/living/user, turn_off)
+/obj/item/attachable/bipod/activate_attachment(obj/item/weapon/gun/gun, mob/living/user, turn_off)
 	if(turn_off)
 		if(bipod_deployed)
-			undeploy_bipod(G)
+			undeploy_bipod(gun, user)
 	else
-		var/obj/support = check_bipod_support(G, user)
+		var/obj/support = check_bipod_support(gun, user)
 		if(!support&&!bipod_deployed)
 			to_chat(user, SPAN_NOTICE("You start deploying [src] on the ground."))
-			if(!do_after(user, 15, INTERRUPT_ALL, BUSY_ICON_HOSTILE, G,INTERRUPT_DIFF_LOC))
+			if(!do_after(user, 15, INTERRUPT_ALL, BUSY_ICON_HOSTILE, gun, INTERRUPT_DIFF_LOC))
 				return FALSE
 
 		bipod_deployed = !bipod_deployed
 		if(user)
 			if(bipod_deployed)
-				ADD_TRAIT(G, TRAIT_GUN_BIPODDED, "attached_bipod")
+				ADD_TRAIT(gun, TRAIT_GUN_BIPODDED, "attached_bipod")
 				to_chat(user, SPAN_NOTICE("You deploy [src] [support ? "on [support]" : "on the ground"]."))
 				SEND_SIGNAL(user, COMSIG_MOB_DEPLOYED_BIPOD)
 				playsound(user,'sound/items/m56dauto_rotate.ogg', 55, 1)
@@ -3384,25 +3664,29 @@ Defined in conflicts.dm of the #defines folder.
 				scatter_mod = -SCATTER_AMOUNT_TIER_10
 				recoil_mod = -RECOIL_AMOUNT_TIER_4
 				burst_scatter_mod = -SCATTER_AMOUNT_TIER_8
-				if(istype(G,/obj/item/weapon/gun/rifle/sniper/M42A))
+				if(istype(gun, /obj/item/weapon/gun/rifle/sniper/M42A))
 					delay_mod = -FIRE_DELAY_TIER_7
 				else
 					delay_mod = -FIRE_DELAY_TIER_12
-				G.recalculate_attachment_bonuses()
-				G.stop_fire()
+				gun.recalculate_attachment_bonuses()
+				gun.stop_fire()
 
 				initial_mob_dir = user.dir
 				RegisterSignal(user, COMSIG_MOB_MOVE_OR_LOOK, PROC_REF(handle_mob_move_or_look))
 
-				if(G.flags_gun_features & GUN_SUPPORT_PLATFORM)
-					G.add_firemode(GUN_FIREMODE_AUTOMATIC)
+				if(gun.flags_gun_features & GUN_SUPPORT_PLATFORM)
+					gun.add_firemode(GUN_FIREMODE_AUTOMATIC)
 
 				if(heavy_bipod)
 					user.anchored = TRUE
 
+				old_firemode = gun.gun_firemode
+				if(full_auto_switch && gun.gun_firemode != GUN_FIREMODE_AUTOMATIC)
+					gun.do_toggle_firemode(user, null, GUN_FIREMODE_AUTOMATIC)
+
 			else
 				to_chat(user, SPAN_NOTICE("You retract [src]."))
-				undeploy_bipod(G)
+				undeploy_bipod(gun, user)
 
 	update_icon()
 
@@ -3419,10 +3703,10 @@ Defined in conflicts.dm of the #defines folder.
 
 
 //when user fires the gun, we check if they have something to support the gun's bipod.
-/obj/item/attachable/proc/check_bipod_support(obj/item/weapon/gun/G, mob/living/user)
+/obj/item/attachable/proc/check_bipod_support(obj/item/weapon/gun/gun, mob/living/user)
 	return 0
 
-/obj/item/attachable/bipod/check_bipod_support(obj/item/weapon/gun/G, mob/living/user)
+/obj/item/attachable/bipod/check_bipod_support(obj/item/weapon/gun/gun, mob/living/user)
 	var/turf/T = get_turf(user)
 	for(var/obj/O in T)
 		if(O.throwpass && O.density && O.dir == user.dir && O.flags_atom & ON_BORDER)
@@ -3433,6 +3717,32 @@ Defined in conflicts.dm of the #defines folder.
 		if(O2.throwpass && O2.density)
 			return O2
 	return 0
+
+//item actions for handling deployment to full auto.
+/datum/action/item_action/bipod/toggle_full_auto_switch/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Full Auto Switch"
+	action_icon_state = "full_auto_switch"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/bipod/toggle_full_auto_switch/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/holder_gun = holder_item
+	var/obj/item/attachable/bipod/attached_bipod = holder_gun.attachments["under"]
+
+	attached_bipod.full_auto_switch = !attached_bipod.full_auto_switch
+	to_chat(owner, SPAN_NOTICE("[icon2html(holder_gun, owner)] You will [attached_bipod.full_auto_switch? "<B>start</b>" : "<B>stop</b>"] switching to full auto when deploying the bipod."))
+	playsound(owner, 'sound/weapons/handling/gun_burst_toggle.ogg', 15, 1)
+
+	if(attached_bipod.full_auto_switch)
+		button.icon_state = "template_on"
+	else
+		button.icon_state = "template"
+
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 
 /obj/item/attachable/bipod/m60
@@ -3449,6 +3759,23 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "bipod_m60"
 	attach_icon = "vulture_bipod"
 	heavy_bipod = TRUE
+
+/obj/item/attachable/bipod/vulture/Initialize(mapload, ...)
+	. = ..()
+	select_gamemode_skin(type)
+
+/obj/item/attachable/bipod/vulture/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	var/new_attach_icon
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
+		if("desert")
+			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
+		if("classic")
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+		if("urban")
+			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
 
 /obj/item/attachable/burstfire_assembly
 	name = "burst fire assembly"
@@ -3478,4 +3805,3 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_5
 	damage_mod -= BULLET_DAMAGE_MULT_TIER_4
-

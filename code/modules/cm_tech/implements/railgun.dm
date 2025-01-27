@@ -255,7 +255,7 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 	SIGNAL_HANDLER
 
 	H.see_in_dark = 50
-	H.sight = (SEE_TURFS|BLIND)
+	H.sight = (SEE_TURFS|SEE_OBJS|BLIND)
 	H.see_invisible = SEE_INVISIBLE_MINIMUM
 	return COMPONENT_OVERRIDE_UPDATE_SIGHT
 

@@ -46,6 +46,15 @@
 
 	syllables = list("al", "an", "bi", "vye", "vo", "go", "dye", "yel", "en", "yer", "yet", "ka", "ko", "la", "ly", "lo", "l", "na", "nye", "ny", "no", "ov", "ol", "on", "or", "slog", "ot", "po", "pr", "ra", "rye", "ro", "st", "ta", "tye", "to", "t", "at", "bil", "vyer", "yego", "yeny", "yenn", "yest", "kak", "ln", "ova", "ogo", "oro", "ost", "oto", "pry", "pro", "sta", "stv", "tor", "chto", "eto", "rus", "nar", "arya", "mol")
 
+/datum/language/patois
+	name = LANGUAGE_RUSPATOIS
+	desc = "Russian patois spoken by Eastern Europeans residing for decades within the UA and TWE. Largely incompatible with contemporary Russian."
+	speech_verb = "says"
+	color = "ruspatois"
+	key = "9"
+
+	syllables = list("che", "de", "da", "du", "yo", "yu", "ty", "yon", "ka", "ke", "don", "yed", "mas", "kyen", "no", "ua", "khe", "kha", "o", "na", "has", "ya", "yen", "tra", "blo", "kho", "est", "soi", "dos", "par", "dya", "tan", "ey", "sa", "kom", "nyo", "min", "svi", "yan", "suy", "des", "ven", "vo", "ro", "ku", "tak", "u", "ov", "so", "ri", "kab", "ten", "nos", "mi", "an", "su", "men", "ma", "dro", "li", "ak", "om", "er", "ir", "ar", "ote", "op", "ki", "to")
+
 /datum/language/german
 	name = LANGUAGE_GERMAN
 	desc = "Standard High-German, a language spoken mostly in Central Europe, and by German immigrants elsewhere."
@@ -113,7 +122,7 @@
 	ask_verb = "chimpers"
 	exclaim_verb = "screeches"
 	color = "monkey"
-	key = "9"
+	key = null
 
 /datum/language/xenomorph
 	name = LANGUAGE_XENOMORPH
@@ -174,7 +183,7 @@
 
 	GLOB.STUI.game.Add("\[[time_stamp()]]<font color='#FFFF00'>APOLLO: [key_name(speaker)] : [message]</font><br>")
 	GLOB.STUI.processing |= STUI_LOG_GAME_CHAT
-	log_say("[speaker.name != "Unknown" ? speaker.name : "([speaker.real_name])"] \[APOLLO\]: [message] (CKEY: [speaker.key]) (JOB: [speaker.job])")
+	log_say("[speaker.name != "Unknown" ? speaker.name : "([speaker.real_name])"] \[APOLLO\]: [message] (CKEY: [speaker.key]) (JOB: [speaker.job]) (AREA: [get_area_name(speaker)])")
 	log_ares_apollo(speaker.real_name, message)
 	for (var/mob/dead in GLOB.dead_mob_list)
 		if(!istype(dead,/mob/new_player) && !istype(dead,/mob/living/brain)) //No meta-evesdropping
@@ -196,12 +205,6 @@
 			continue
 		M.show_message("<i><span class='game say'><span class='name'>synthesised voice</span> <span class='message'>beeps, \"beep beep beep\"</span></span></i>",2)
 
-	//robot binary xmitter component power usage
-	if (isrobot(speaker))
-		var/mob/living/silicon/robot/R = speaker
-		var/datum/robot_component/C = R.components["comms"]
-		R.cell_use_power(C.active_usage)
-
 /datum/language/event_hivemind
 	name = LANGUAGE_TELEPATH
 	desc = "An event only language that provides a hivemind for its users."
@@ -209,5 +212,5 @@
 	ask_verb = "resonates"
 	exclaim_verb = "resonates"
 	color = "tajaran"
-	key = "7"
+	key = "8"
 	flags = RESTRICTED|HIVEMIND

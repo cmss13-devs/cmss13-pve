@@ -4,8 +4,8 @@
 	TODO: Proper documentation
 	icon_key is [species.race_key][g][husk][fat][hulk][skeleton][ethnicity]
 */
-var/global/list/human_icon_cache = list()
-var/global/list/tail_icon_cache = list()
+GLOBAL_LIST_EMPTY(human_icon_cache)
+GLOBAL_LIST_EMPTY(tail_icon_cache)
 
 /proc/overlay_image(icon, icon_state, color, flags)
 	var/image/ret = image(icon,icon_state)
@@ -19,7 +19,7 @@ var/global/list/tail_icon_cache = list()
 	Global associative list for caching uniform masks.
 	Each index is just 0 or 1 for not removed and removed (as in previously delimbed).
 */
-var/global/list/uniform_mask_cache = list()
+GLOBAL_LIST_EMPTY(uniform_mask_cache)
 
 	///////////////////////
 	//UPDATE_ICONS SYSTEM//
@@ -196,7 +196,7 @@ There are several things that need to be remembered:
 		if(facial_hair_style && facial_hair_style.species_allowed && (species.name in facial_hair_style.species_allowed))
 			var/image/facial_s = new/image("icon" = facial_hair_style.icon, "icon_state" = "[facial_hair_style.icon_state]_s")
 			facial_s.layer = -FACIAL_LAYER
-			if(facial_hair_style.do_colouration)
+			if(facial_hair_style.do_coloration)
 				facial_s.color = list(null, null, null, null, rgb(r_facial, g_facial, b_facial))
 			overlays_standing[FACIAL_LAYER] = facial_s
 			apply_overlay(FACIAL_LAYER)
@@ -206,7 +206,7 @@ There are several things that need to be remembered:
 		if(hair_style && (species.name in hair_style.species_allowed))
 			var/image/hair_s = new/image("icon" = hair_style.icon, "icon_state" = "[hair_style.icon_state]_s")
 			hair_s.layer = -HAIR_LAYER
-			if(hair_style.do_colouration)
+			if(hair_style.do_coloration)
 				hair_s.color = list(null, null, null, null, rgb(r_hair, g_hair, b_hair))
 
 			if(grad_style)
@@ -345,8 +345,11 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 		client.add_to_screen(wear_id)
 		wear_id.screen_loc = hud_used.ui_datum.hud_slot_offset(wear_id, hud_used.ui_datum.ui_id)
 
-	if(!wear_id.pinned_on_uniform || (w_uniform && w_uniform.displays_id && !(w_uniform.flags_jumpsuit & UNIFORM_JACKET_REMOVED)))
-		var/image/id_overlay = wear_id.get_mob_overlay(src, WEAR_ID)
+	var/obj/item/card/id/card = get_idcard()
+	if(!card)
+		return
+	if(!card.pinned_on_uniform || (w_uniform && w_uniform.displays_id && !(w_uniform.flags_jumpsuit & UNIFORM_JACKET_REMOVED)))
+		var/image/id_overlay = card.get_mob_overlay(src, WEAR_ID)
 		id_overlay.layer = -ID_LAYER
 		overlays_standing[ID_LAYER] = id_overlay
 		apply_overlay(ID_LAYER)
@@ -473,10 +476,27 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 					apply_overlay(HEAD_SQUAD_LAYER)
 
 			var/num_helmet_overlays = 0
-			for(var/i in 1 to marine_helmet.helmet_overlays.len)
+			for(var/i in 1 to length(marine_helmet.helmet_overlays))
 				// Add small numbers to the head garb layer so we don't have a layer conflict
 				// the i-1 bit is to make it 0-based, not 1-based like BYOND wants
 				overlays_standing[HEAD_GARB_LAYER + (i-1)] = image('icons/mob/humans/onmob/helmet_garb.dmi', src, marine_helmet.helmet_overlays[i])
+				num_helmet_overlays++
+
+			// null out the rest of the space allocated for helmet overlays
+			// God I hate 1-based indexing
+			for(var/i in num_helmet_overlays+1 to MAX_HEAD_GARB_ITEMS)
+				overlays_standing[HEAD_GARB_LAYER + (i-1)] = null
+
+			for(var/i in HEAD_GARB_LAYER to (HEAD_GARB_LAYER + MAX_HEAD_GARB_ITEMS - 1))
+				apply_overlay(i)
+
+		else if(istype(head, /obj/item/clothing/head/helmet/upp))
+			var/obj/item/clothing/head/helmet/upp/upp_helmet = head
+			var/num_helmet_overlays = 0
+			for(var/i in 1 to length(upp_helmet.helmet_overlays))
+				// Add small numbers to the head garb layer so we don't have a layer conflict
+				// the i-1 bit is to make it 0-based, not 1-based like BYOND wants
+				overlays_standing[HEAD_GARB_LAYER + (i-1)] = image('icons/mob/humans/onmob/helmet_garb.dmi', src, upp_helmet.helmet_overlays[i])
 				num_helmet_overlays++
 
 			// null out the rest of the space allocated for helmet overlays
@@ -534,7 +554,35 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 					overlays_standing[SUIT_SQUAD_LAYER] = squad_overlay
 					apply_overlay(SUIT_SQUAD_LAYER)
 
-			if(marine_armor.armor_overlays.len)
+			if(length(marine_armor.armor_overlays))
+				var/image/K
+				var/image/IMG
+				for(var/i in marine_armor.armor_overlays)
+					K = marine_armor.armor_overlays[i]
+					if(K)
+						if(!IMG)
+							IMG = image(K.icon,src,K.icon_state, "layer"= -SUIT_GARB_LAYER)
+						else
+							IMG.overlays += image(K.icon,src,K.icon_state, "layer"= -SUIT_GARB_LAYER)
+				if(IMG)
+					overlays_standing[SUIT_GARB_LAYER] = IMG
+					apply_overlay(SUIT_GARB_LAYER)
+
+		if(istype(wear_suit, /obj/item/clothing/suit/marine))
+			var/obj/item/clothing/suit/marine/marine_armor = wear_suit
+			if(marine_armor.flags_marine_armor & ARMOR_SQUAD_OVERLAY)
+				if(assigned_squad && assigned_squad.equipment_color && assigned_squad.use_stripe_overlay)
+					var/leader = assigned_squad.squad_leader
+					var/image/squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = "std-armor")
+					if(leader == src)
+						squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = "sql-armor")
+					squad_overlay.layer = -SUIT_SQUAD_LAYER
+					squad_overlay.alpha = assigned_squad.armor_alpha
+					squad_overlay.color = assigned_squad.equipment_color
+					overlays_standing[SUIT_SQUAD_LAYER] = squad_overlay
+					apply_overlay(SUIT_SQUAD_LAYER)
+
+			if(length(marine_armor.armor_overlays))
 				var/image/K
 				var/image/IMG
 				for(var/i in marine_armor.armor_overlays)
@@ -666,11 +714,11 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 
 /mob/living/carbon/human/proc/get_tail_icon()
 	var/icon_key = "[species.race_key][r_skin][g_skin][b_skin][r_hair][g_hair][b_hair]"
-	var/icon/tail_icon = tail_icon_cache[icon_key]
+	var/icon/tail_icon = GLOB.tail_icon_cache[icon_key]
 	if(!tail_icon)
 		//generate a new one
 		tail_icon = icon('icons/effects/species.dmi', "[species.get_tail(src)]")
-		tail_icon_cache[icon_key] = tail_icon
+		GLOB.tail_icon_cache[icon_key] = tail_icon
 
 	return tail_icon
 

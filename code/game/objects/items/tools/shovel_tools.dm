@@ -26,7 +26,7 @@
 
 /obj/item/tool/shovel/update_icon()
 	var/image/I = image(icon,src,dirt_overlay)
-	switch(dirt_type) // We can actually shape the color for what enviroment we dig up our dirt in.
+	switch(dirt_type) // We can actually shape the color for what environment we dig up our dirt in.
 		if(DIRT_TYPE_GROUND) I.color = "#512A09"
 		if(DIRT_TYPE_MARS) I.color = "#FF5500"
 		if(DIRT_TYPE_SNOW) I.color = "#EBEBEB"
@@ -151,7 +151,7 @@
 
 /obj/item/tool/shovel/proc/dump_shovel(atom/target, mob/user)
 	var/turf/T = target
-	to_chat(user, SPAN_NOTICE("you dump the [dirt_type_to_name(dirt_type)]!"))
+	to_chat(user, SPAN_NOTICE("You dump the [dirt_type_to_name(dirt_type)]!"))
 	playsound(user.loc, "rustle", 30, 1, 6)
 	if(dirt_type == DIRT_TYPE_SNOW)
 		var/obj/item/stack/snow/S = locate() in T
@@ -202,31 +202,37 @@
 	throwforce = 3
 
 
-
-
 // Entrenching tool.
 /obj/item/tool/shovel/etool
-	name = "entrenching tool"
-	desc = "Used to dig holes and bash heads in. Folds in to fit in small spaces."
+	name = "USCM M61 entrenching tool"
+	desc = "A marine's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "etool"
 	item_state = "etool"
 	force = 30
 	throwforce = 2
 	w_class = SIZE_LARGE
+	hitsound = 'sound/weapons/bladeslice.ogg'
 
 	dirt_overlay = "etool_overlay"
 	dirt_amt_per_dig = 5
 	shovelspeed = 50
 
+/obj/item/tool/shovel/etool/Initialize()
+	. = ..()
+	update_icon()
+	if(folded)
+		w_class = SIZE_SMALL
+		force = 5
+		hitsound = 'sound/weapons/genhit3.ogg'
 
 /obj/item/tool/shovel/etool/update_icon()
 	if(folded)
-		icon_state = "etool_c"
-		item_state = "etool_c"
+		icon_state = "[initial(icon_state)]_c"
+		item_state = "[initial(item_state)]_c"
 	else
-		icon_state = "etool"
-		item_state = "etool"
+		icon_state = initial(icon_state)
+		item_state = initial(item_state)
 	..()
 
 
@@ -234,15 +240,24 @@
 	folded = !folded
 	if(folded)
 		w_class = SIZE_SMALL
-		force = 2
+		force = 5
+		hitsound = 'sound/weapons/genhit3.ogg'
 	else
 		w_class = SIZE_LARGE
 		force = 30
+		hitsound = initial(hitsound)
 	..()
 
 /obj/item/tool/shovel/etool/folded
 	folded = TRUE
-	w_class = SIZE_SMALL
-	force = 2
-	icon_state = "etool_c"
-	item_state = "etool_c"
+
+/obj/item/tool/shovel/etool/upp
+	name = "Type 50 entrenching tool"
+	desc = "A serviceman's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."
+	icon_state = "etoolupp"
+	item_state = "etoolupp"
+	dirt_overlay = "etoolupp_overlay"
+
+/obj/item/tool/shovel/etool/upp/folded
+	folded = TRUE
+

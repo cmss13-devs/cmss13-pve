@@ -2,7 +2,7 @@
 	name = "disk"
 	icon = 'icons/obj/items/disk.dmi'
 	icon_state = "datadisk0"
-	item_state = "card-id"
+	item_state = "red-id"
 
 /obj/item/disk/nuclear
 	name = "nuclear authentication disk"

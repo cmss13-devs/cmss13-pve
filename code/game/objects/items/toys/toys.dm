@@ -12,7 +12,6 @@
  * Other things
  */
 
-
 //recreational items
 
 /obj/item/toy
@@ -22,7 +21,6 @@
 	throw_range = 20
 	force = 0
 	black_market_value = 5
-
 
 /*
  * Balloons
@@ -44,7 +42,7 @@
 	if(!proximity) return
 	if (istype(A, /obj/structure/reagent_dispensers/watertank) && get_dist(src,A) <= 1)
 		A.reagents.trans_to(src, 10)
-		to_chat(user, SPAN_NOTICE(" You fill the balloon with the contents of [A]."))
+		to_chat(user, SPAN_NOTICE("You fill the balloon with the contents of [A]."))
 		src.desc = "A translucent balloon with some form of liquid sloshing around in it."
 		src.update_icon()
 	return
@@ -53,22 +51,22 @@
 	if(istype(O, /obj/item/reagent_container/glass))
 		if(O.reagents)
 			if(O.reagents.total_volume < 1)
-				to_chat(user, "The [O] is empty.")
+				to_chat(user, SPAN_WARNING("[O] is empty."))
 			else if(O.reagents.total_volume >= 1)
 				if(O.reagents.has_reagent("pacid", 1))
-					to_chat(user, "The acid chews through the balloon!")
+					to_chat(user, SPAN_WARNING("The acid chews through the balloon!"))
 					O.reagents.reaction(user)
 					qdel(src)
 				else
 					src.desc = "A translucent balloon with some form of liquid sloshing around in it."
-					to_chat(user, SPAN_NOTICE(" You fill the balloon with the contents of [O]."))
+					to_chat(user, SPAN_NOTICE("You fill the balloon with the contents of [O]."))
 					O.reagents.trans_to(src, 10)
 	src.update_icon()
 	return
 
 /obj/item/toy/balloon/launch_impact(atom/hit_atom)
 	if(src.reagents.total_volume >= 1)
-		src.visible_message(SPAN_DANGER("The [src] bursts!"),"You hear a pop and a splash.")
+		src.visible_message(SPAN_DANGER("[src] bursts!"),"You hear a pop and a splash.")
 		src.reagents.reaction(get_turf(hit_atom))
 		for(var/atom/A in get_turf(hit_atom))
 			src.reagents.reaction(A)
@@ -118,24 +116,24 @@
 	icon_state = "singularity_s1"
 
 
-
 /*
  * Crayons
  */
 
 /obj/item/toy/crayon
 	name = "crayon"
-	desc = "A colourful crayon. Please refrain from eating it or putting it in your nose."
+	desc = "A colorful crayon. Please refrain from eating it or putting it in your nose."
 	icon = 'icons/obj/items/crayons.dmi'
 	icon_state = "crayonred"
 	w_class = SIZE_TINY
-	attack_verb = list("attacked", "coloured")
+	attack_verb = list("attacked", "colored")
 	black_market_value = 5
-	var/crayon_color = "#FF0000" //RGB
-	var/shadeColour = "#220000" //RGB
-	var/uses = 30 //0 for unlimited uses
+	var/crayon_color = COLOR_RED
+	var/shade_color = "#220000"
+	/// 0 for unlimited uses
+	var/uses = 30
 	var/instant = 0
-	var/colourName = "red" //for updateIcon purposes
+	var/colorName = "red" //for updateIcon purposes
 
 /*
  * Snap pops
@@ -237,7 +235,6 @@
 	. += "[reagents.total_volume] units of water left!"
 
 
-
 /*
  * Mech prizes
  */
@@ -317,6 +314,11 @@
 	name = "toy phazon"
 	desc = "Mini-Mecha action figure! Collect them all! 11/11."
 	icon_state = "phazonprize"
+
+/obj/item/toy/prize/apc
+	name = "toy APC"
+	desc = "Limited edition APC action figure."
+	icon_state = "apctoy"
 
 /obj/item/toy/inflatable_duck
 	name = "inflatable duck"
@@ -398,6 +400,14 @@
 		playsound(src.loc, sound_effect, 25, 1)
 		src.add_fingerprint(user)
 		addtimer(VARSET_CALLBACK(src, spam_flag, FALSE), 2 SECONDS)
+
+// rubber duck
+/obj/item/toy/bikehorn/rubberducky
+	name = "rubber ducky"
+	desc = "Rubber ducky you're so fine, you make bathtime lots of fuuun. Rubber ducky I'm awfully fooooond of yooooouuuu~" //thanks doohl
+	icon = 'icons/obj/structures/props/watercloset.dmi'
+	icon_state = "rubberducky"
+	item_state = "rubberducky"
 
 /obj/item/computer3_part
 	name = "computer part"
@@ -520,6 +530,31 @@
 	desc = "It says it is a plush on the tag, at least."
 	icon_state = "rock"
 
+/obj/item/toy/plush/otter
+	name = "otter plush"
+	desc = "A perfectly sized snuggable river weasel plush. Keep away from Clams."
+	icon_state = "otter"
+
+/obj/item/toy/plush/fox
+	name = "fox plush"
+	desc = "What does the fox say? Well, this one says nothing on account of it being a stuffed toy."
+	icon_state = "fox"
+
+/obj/item/toy/plush/kitten
+	name = "kitten plush"
+	desc = "A plushie of a cute kitten. Sadly, this one won't purr like the real thing."
+	icon_state = "kbitty"
+
+/obj/item/toy/plush/box
+	name = "box plush"
+	desc = "A toy box plushie, it holds cotton."
+	icon_state = "box"
+
+/obj/item/toy/plush/carp
+	name = "carp plush"
+	desc = "A stuffed toy that resembles a mythological space carp."
+	icon_state = "carp"
+
 /obj/item/toy/plush/therapy
 	name = "therapy plush"
 	desc = "A therapeutic toy to assist marines in recovering from mental and behavioral disorders after experiencing the trauma of battles."
@@ -570,6 +605,11 @@
 		/obj/item/toy/plush/shark,
 		/obj/item/toy/plush/moth,
 		/obj/item/toy/plush/rock,
+		/obj/item/toy/plush/otter,
+		/obj/item/toy/plush/fox,
+		/obj/item/toy/plush/kitten,
+		/obj/item/toy/plush/box,
+		/obj/item/toy/plush/carp,
 	)
 	///Therapy plushies left separately to not flood the entire list
 	var/list/therapy_plush_list = list(
