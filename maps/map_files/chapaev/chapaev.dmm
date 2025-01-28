@@ -614,6 +614,16 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"et" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/canteen)
 "eu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -2271,6 +2281,20 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
+"pQ" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/canteen)
 "pW" = (
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_x = -32
@@ -2520,6 +2544,20 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
+"rG" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/canteen)
 "rJ" = (
 /obj/structure/machinery/shower{
 	dir = 4
@@ -2860,6 +2898,25 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/golden_arrow/platoon_commander_rooms)
+"th" = (
+/obj/structure/bed/chair/comfy,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/canteen)
+"ti" = (
+/obj/structure/barricade/handrail/strata,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/canteen)
 "tq" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap/upp{
@@ -3423,6 +3480,11 @@
 /obj/structure/bed/chair/comfy{
 	dir = 4
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/canteen)
 "wH" = (
@@ -3550,6 +3612,18 @@
 /area/golden_arrow/platoon_commander_rooms)
 "xy" = (
 /obj/structure/bed/chair/comfy,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 10
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
 "xC" = (
@@ -3635,7 +3709,6 @@
 "xM" = (
 /obj/structure/machinery/door/airlock/upp_grey{
 	dir = 8;
-	color = "#8B9490";
 	name = "\improper Platoon Sergeant's Bunk";
 	req_one_access_txt = "240"
 	},
@@ -4196,6 +4269,14 @@
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
+"Bu" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/canteen)
 "BC" = (
 /obj/structure/prop/almayer/computers/sensor_computer2{
 	light_color = "#218724";
@@ -4521,6 +4602,15 @@
 	},
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_commander_rooms)
+"Ee" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/canteen)
 "Eg" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/upp_wall/grey,
@@ -5281,6 +5371,14 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
+"Iy" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/canteen)
 "IB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -5487,6 +5585,16 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
+"JT" = (
+/obj/structure/bed/chair/comfy,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/canteen)
 "JU" = (
 /obj/structure/curtain/red,
 /turf/open/floor/strata/multi_tiles,
@@ -6643,6 +6751,21 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
+"Sk" = (
+/obj/structure/machinery/light/small{
+	light_power = 0.8;
+	light_range = 2;
+	light_color = "#e7c0a4";
+	invisibility = 100
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/canteen)
 "Sl" = (
 /obj/structure/surface/rack{
 	color = "#8B9490"
@@ -6868,6 +6991,11 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
 	pixel_y = -2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 16;
+	pixel_y = -15
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/canteen)
@@ -20557,7 +20685,7 @@ gL
 ac
 EW
 zy
-xy
+JT
 jj
 Rn
 qY
@@ -20709,7 +20837,7 @@ gL
 wm
 BQ
 Xo
-ba
+et
 gV
 gV
 ba
@@ -20861,7 +20989,7 @@ gL
 mS
 BQ
 gm
-gs
+Sk
 vz
 Le
 gs
@@ -21010,14 +21138,14 @@ oH
 oH
 fP
 gL
-wm
-BQ
-gm
-oP
+pQ
+ti
+Bu
+rG
 wG
 wG
-oP
-tF
+Iy
+Ee
 TG
 wx
 It
@@ -21165,7 +21293,7 @@ gL
 DG
 ec
 oP
-xy
+JT
 Fd
 sL
 qY
@@ -21317,7 +21445,7 @@ gL
 gL
 Ch
 fk
-xy
+th
 Fb
 OY
 qY
