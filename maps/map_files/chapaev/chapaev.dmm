@@ -1356,11 +1356,6 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/obj/item/stool{
-	can_buckle = 1;
-	pixel_x = 9;
-	bound_x = 9
-	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "iN" = (
@@ -5678,11 +5673,6 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/obj/item/stool{
-	can_buckle = 1;
-	pixel_x = -9;
-	bound_x = -9
-	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "JT" = (
@@ -6708,14 +6698,6 @@
 	},
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_commander_rooms)
-"Rm" = (
-/obj/item/stool{
-	can_buckle = 1;
-	pixel_x = -12;
-	bound_x = -12
-	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/cryo_cells)
 "Rn" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/weapon/dart,
@@ -20995,7 +20977,7 @@ se
 eu
 km
 VX
-Rm
+zN
 Bo
 xF
 lm
