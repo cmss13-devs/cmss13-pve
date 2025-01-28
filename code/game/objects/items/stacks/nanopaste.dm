@@ -11,6 +11,7 @@
 	w_class = SIZE_SMALL
 	stack_id = "nanopaste"
 	black_market_value = 25
+	flags_human_ai = HEALING_ITEM
 
 /obj/item/stack/nanopaste/attack(mob/living/M as mob, mob/user as mob)
 	if (!istype(M) || !istype(user))
@@ -18,9 +19,6 @@
 
 	if (istype(M,/mob/living/carbon/human)) //Repairing robolimbs
 		var/mob/living/carbon/human/H = M
-		if(isspeciessynth(H) && M == user && !H.allow_gun_usage)
-			to_chat(H, SPAN_WARNING("Your programming forbids you from self-repairing with \the [src]."))
-			return
 		var/obj/limb/S = H.get_limb(user.zone_selected)
 
 		if (S && (S.status & (LIMB_ROBOT|LIMB_SYNTHSKIN)))
@@ -36,3 +34,31 @@
 			else
 				to_chat(user, SPAN_NOTICE("Nothing to fix here."))
 
+/obj/item/stack/nanopaste/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	if(!issynth(target))
+		return FALSE
+
+	for(var/obj/limb/limb as anything in target.limbs)
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal)
+				continue
+
+			return TRUE
+
+	return FALSE
+
+/obj/item/stack/nanopaste/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	for(var/obj/limb/limb as anything in target.limbs)
+		if(QDELETED(src))
+			return
+
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal)
+				continue
+
+			if(QDELETED(src))
+				return
+
+			user.zone_selected = limb.name
+			attack(target, user)
+			sleep(ai_brain.short_action_delay * ai_brain.action_delay_mult)

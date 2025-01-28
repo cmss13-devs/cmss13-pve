@@ -103,9 +103,6 @@
 
 /obj/item/storage/box/guncase/m79/fill_preset_inventory()
 	new /obj/item/weapon/gun/launcher/grenade/m81/m79(src)
-	new /obj/item/storage/box/packet/flare(src)
-	new /obj/item/storage/box/packet/baton_slug(src)
-	new /obj/item/storage/box/packet/hornet(src)
 
 //------------
 //R4T lever action rifle
@@ -158,6 +155,15 @@
 	new /obj/item/weapon/gun/flamer(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/attachable/attached_gun/extinguisher/pyro(src)
+
+/obj/item/storage/box/guncase/flamer/weak
+	desc = "A gun case containing a M240A1 incinerator unit alongside impure napalm, cheap but should still get the job done."
+	storage_slots = 4
+
+/obj/item/storage/box/guncase/flamer/weak/fill_preset_inventory()
+	new /obj/item/weapon/gun/flamer/weak(src)
+	new /obj/item/ammo_magazine/flamer_tank/weak(src)
+	new /obj/item/ammo_magazine/flamer_tank/weak(src)
 
 //------------ heavy cases
 
