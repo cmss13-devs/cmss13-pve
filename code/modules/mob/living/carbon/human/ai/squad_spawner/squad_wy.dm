@@ -10,7 +10,7 @@
 
 /datum/human_ai_squad_preset/wy/squad
 	name = "W-Y Security Squad"
-	desc = "A squad of corporate security, comprising 4 guards, 1 engineer, and 1 leader."
+	desc = "A squad of corporate security, comprising 2 guards, 1 engineer, and 1 leader."
 	ai_to_spawn = list(
 		/datum/equipment_preset/goon/standard = 2,
 		/datum/equipment_preset/goon/engineer = 1,
