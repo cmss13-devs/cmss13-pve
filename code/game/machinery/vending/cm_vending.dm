@@ -356,13 +356,13 @@ GLOBAL_LIST_EMPTY(vending_products)
 		var/new_type = item_to_stock.type
 		var/atom/temp_container = new new_type(src)
 		var/temp_contents = temp_container.contents
-		if(length(item_to_stock.contents))
-			qdel(temp_container)
-			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
-			return FALSE
-		else if(length(temp_contents))
+		if(length(temp_contents))
 			qdel(temp_container)
 			to_chat(user, SPAN_WARNING("You cannot restock pouches that are prefilled by the vendor!"))
+			return FALSE
+		else if(length(item_to_stock.contents))
+			qdel(temp_container)
+			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
 			return FALSE
 
 	//these checks were moved from /obj/structure/machinery/cm_vending/proc/stock()
