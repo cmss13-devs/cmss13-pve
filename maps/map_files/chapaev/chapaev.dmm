@@ -1317,6 +1317,16 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"iB" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_y = 5;
+	pixel_x = -7
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/dorms)
 "iJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -1405,6 +1415,12 @@
 /area/golden_arrow/canteen)
 "jp" = (
 /obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
 "jq" = (
@@ -1804,15 +1820,6 @@
 "my" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/briefing)
-"mA" = (
-/obj/structure/bookcase{
-	density = 0;
-	icon_state = "book-5";
-	pixel_y = 18;
-	can_block_movement = 0
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/dorms)
 "mD" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -4100,7 +4107,12 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/bookcase{
+	density = 0;
+	icon_state = "book-5";
+	pixel_y = 18;
+	can_block_movement = 0
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
 "Ay" = (
@@ -5532,12 +5544,12 @@
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/prep_hallway)
 "Jw" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
 /obj/item/toy/deck{
 	pixel_x = 9;
 	pixel_y = -6
-	},
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
@@ -7385,6 +7397,22 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
+"WY" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/reagent_container/food/snacks/candy{
+	pixel_x = -6
+	},
+/obj/item/reagent_container/food/snacks/candy{
+	pixel_x = 1
+	},
+/obj/item/reagent_container/food/snacks/candy{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/dorms)
 "WZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -18558,7 +18586,7 @@ gt
 ZK
 Rs
 Ax
-mA
+tv
 tv
 uq
 pj
@@ -18713,7 +18741,7 @@ WH
 tv
 ry
 Jw
-ex
+WY
 Rs
 Yv
 GV
@@ -18864,7 +18892,7 @@ Rs
 OZ
 tv
 Mf
-ex
+iB
 ex
 Rs
 Yv
