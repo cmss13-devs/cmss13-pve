@@ -19,9 +19,7 @@
 	wield_delay = WIELD_DELAY_HORRIBLE
 	delay_style = WEAPON_DELAY_NO_FIRE
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
-	attachable_allowed = list(
-		/obj/item/attachable/magnetic_harness,
-	)
+	starting_attachment_types = list(/obj/item/attachable/scope/mini/army) //4 tile zoom if used
 
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
 	var/datum/effect_system/smoke_spread/smoke
@@ -29,6 +27,14 @@
 	flags_item = TWOHANDED|NO_CRYO_STORE
 	flags_equip_slot = SLOT_BACK //The fact you can't carry the tube across your back is daft? Hello?
 	var/skill_locked = FALSE
+
+/obj/item/weapon/gun/launcher/rocket/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/army/optic = new(src)
+	optic.hidden = TRUE
+	optic.flags_attach_features &= ~ATTACH_REMOVABLE
+	optic.Attach(src)
+	update_attachable(optic.slot)
 
 /obj/item/weapon/gun/launcher/rocket/Initialize(mapload, spawn_empty)
 	. = ..()

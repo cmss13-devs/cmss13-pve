@@ -3076,16 +3076,15 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/upp
 	name = "\improper Type 83 overslung grenade launcher"
-	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures. Can be quickly swapped to using the 'Toggle-Attachment' keybind."
+	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."
 	icon_state = "type83"
 	attach_icon = "type83_a"
 	current_rounds = 0
 	max_rounds = 1
 	max_range = 14
 	attachment_firing_delay = 5
-	slot = "special"
-	pixel_shift_x = 0
-	pixel_shift_y = 0
+	pixel_shift_x = 20
+	pixel_shift_y = 13
 	has_breech = FALSE
 
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
