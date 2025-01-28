@@ -613,7 +613,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	var/gunpath = pick(rebel_gunner_firearms)
 	var/ammopath = rebel_gunner_firearms[gunpath]
 
-	add_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
@@ -647,7 +647,7 @@ GLOBAL_LIST_INIT(rebel_twe_pistols, list(
 	var/gunpath = pick(GLOB.rebel_twe_smgs)
 	var/ammopath = GLOB.rebel_twe_smgs[gunpath]
 
-	add_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, ammo_amount)
 
 	return 1
 
@@ -657,7 +657,7 @@ GLOBAL_LIST_INIT(rebel_twe_pistols, list(
 	var/gunpath = pick(GLOB.rebel_twe_shotguns)
 	var/ammopath = GLOB.rebel_twe_shotguns[gunpath]
 
-	add_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, ammo_amount)
 
 	return 1
 
@@ -667,7 +667,7 @@ GLOBAL_LIST_INIT(rebel_twe_pistols, list(
 	var/gunpath = pick(GLOB.rebel_twe_rifles)
 	var/ammopath = GLOB.rebel_twe_rifles[gunpath]
 
-	add_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, ammo_amount)
 
 	return 1
 
@@ -677,7 +677,7 @@ GLOBAL_LIST_INIT(rebel_twe_pistols, list(
 	var/gunpath = pick(GLOB.rebel_twe_pistols)
 	var/ammopath = GLOB.rebel_twe_pistols[gunpath]
 
-	add_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, ammo_amount)
 
 	return 1
 
@@ -715,7 +715,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/gunpath = pick(GLOB.rebel_ua_shotguns)
 	var/ammopath = GLOB.rebel_ua_shotguns[gunpath]
 
-	add_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
@@ -725,7 +725,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/gunpath = pick(GLOB.rebel_ua_rifles)
 	var/ammopath = GLOB.rebel_ua_rifles[gunpath]
 
-	add_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
@@ -735,7 +735,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/gunpath = pick(GLOB.rebel_ua_pistols)
 	var/ammopath = GLOB.rebel_ua_pistols[gunpath]
 
-	add_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, ammo_amount)
 
 	return 1
 
@@ -787,7 +787,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/gunpath = sidearm? pick(merc_sidearms) : pick(merc_firearms)
 	var/ammopath = sidearm? merc_sidearms[gunpath] : merc_firearms[gunpath]
 
-	add_weapon(gunpath, ammopath, M, sidearm, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, sidearm, ammo_amount)
 
 	return 1
 
@@ -803,7 +803,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/gunpath = pick(merc_shotguns)
 	var/ammopath = merc_shotguns[gunpath]
 
-	add_weapon(gunpath, ammopath, M, 0, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, 0, ammo_amount)
 
 /datum/equipment_preset/proc/add_merc_rifle(atom/M, ammo_amount = 12)
 	if(!M) return
@@ -819,7 +819,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/gunpath = pick(merc_rifles)
 	var/ammopath = merc_rifles[gunpath]
 
-	add_weapon(gunpath, ammopath, M, 0, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, 0, ammo_amount)
 
 /datum/equipment_preset/proc/add_merc_elite_weapon(atom/M, ammo_amount = 12, shotgun_chance = 50, add_belt = 1)
 	if(!M) return
@@ -842,7 +842,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 				var/mob/living/carbon/human/new_human = M
 				new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun, WEAR_WAIST)
 			ammo_amount = 24
-		add_weapon(gunpath, ammopath, M, 0, ammo_amount)
+		spawn_weapon(gunpath, ammopath, M, 0, ammo_amount)
 	else
 		var/gunpath = pick(elite_merc_rifles)
 		var/ammopath = elite_merc_rifles[gunpath]
@@ -850,10 +850,10 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			if(ishuman(M))
 				var/mob/living/carbon/human/new_human = M
 				new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine, WEAR_WAIST)
-		add_weapon(gunpath, ammopath, M, 0, ammo_amount)
+		spawn_weapon(gunpath, ammopath, M, 0, ammo_amount)
 
 
-/datum/equipment_preset/proc/add_weapon(gunpath, ammopath, atom/M, sidearm = 0, ammo_amount = 4)
+/datum/equipment_preset/proc/spawn_weapon(gunpath, ammopath, atom/M, sidearm = 0, ammo_amount = 4)
 
 	var/atom/spawnloc = M
 	var/obj/item/weapon/gun/gun
