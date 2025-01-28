@@ -7100,7 +7100,7 @@
 /obj/structure/machinery/door_control{
 	name = "Briefing Room Shutter Control";
 	id = "briefing";
-	pixel_x = 8
+	pixel_x = 6
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
