@@ -254,6 +254,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	var/platoon_name = "Sun Riders"
 	/// Dropship camo used when spawning as LT
 	var/dropship_camo = DROPSHIP_CAMO_JUNGLE
+	/// Dropship name used when spawning as LT
+	var/dropship_name = "Midway"
 
 /datum/preferences/New(client/C)
 	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
@@ -452,6 +454,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 			dat += "<h2><b><u>Platoon Settings:</u></b></h2>"
 			dat += "<b>Platoon Name:</b> <a href='?_src_=prefs;preference=plat_name;task=input'><b>[platoon_name]</b></a><br>"
 			dat += "<b>Dropship Camo:</b> <a href='?_src_=prefs;preference=dropship_camo;task=input'><b>[dropship_camo]</b></a><br>"
+			dat += "<b>Dropship Name:</b> <a href='?_src_=prefs;preference=dropship_name;task=input'><b>[dropship_name]</b></a><br>"
 			dat += "</div>"
 
 		if(MENU_XENOMORPH)
@@ -1122,15 +1125,15 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					ShowChoices(user)
 					return
 				if("general")
-					var/msg = input(usr,"Give a physical description of your character. This will be shown regardless of clothing.","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
+					var/msg = input(usr,"Give a physical description of your character. This will be shown regardless of clothing. Character limit is [MAX_FLAVOR_MESSAGE_LEN]","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
 					if(msg != null)
-						msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 						msg = html_encode(msg)
 					flavor_texts[href_list["task"]] = msg
 				else
 					var/msg = input(usr,"Set the flavor text for your [href_list["task"]].","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
 					if(msg != null)
-						msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 						msg = html_encode(msg)
 					flavor_texts[href_list["task"]] = msg
 			SetFlavorText(user)
@@ -1145,29 +1148,29 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 			switch(href_list["task"])
 				if("med_record")
-					var/medmsg = input(usr,"Set your medical notes here.","Medical Records",html_decode(med_record)) as message
+					var/medmsg = input(usr,"Set your medical notes here. Character limit is [MAX_RECORDS_MESSAGE_LEN].","Medical Records",html_decode(med_record)) as message
 
 					if(medmsg != null)
-						medmsg = copytext(medmsg, 1, MAX_PAPER_MESSAGE_LEN)
+						medmsg = copytext(medmsg, 1, MAX_RECORDS_MESSAGE_LEN)
 						medmsg = html_encode(medmsg)
 
 						med_record = medmsg
 						SetRecords(user)
 
 				if("sec_record")
-					var/secmsg = input(usr,"Set your security notes here.","Security Records",html_decode(sec_record)) as message
+					var/secmsg = input(usr,"Set your security notes here. Character limit is [MAX_RECORDS_MESSAGE_LEN].","Security Records",html_decode(sec_record)) as message
 
 					if(secmsg != null)
-						secmsg = copytext(secmsg, 1, MAX_PAPER_MESSAGE_LEN)
+						secmsg = copytext(secmsg, 1, MAX_RECORDS_MESSAGE_LEN)
 						secmsg = html_encode(secmsg)
 
 						sec_record = secmsg
 						SetRecords(user)
 				if("gen_record")
-					var/genmsg = input(usr,"Set your employment notes here.","Employment Records",html_decode(gen_record)) as message
+					var/genmsg = input(usr,"Set your employment notes here. Character limit is [MAX_RECORDS_MESSAGE_LEN].","Employment Records",html_decode(gen_record)) as message
 
 					if(genmsg != null)
-						genmsg = copytext(genmsg, 1, MAX_PAPER_MESSAGE_LEN)
+						genmsg = copytext(genmsg, 1, MAX_RECORDS_MESSAGE_LEN)
 						genmsg = html_encode(genmsg)
 
 						gen_record = genmsg
@@ -1322,6 +1325,13 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					if (new_camo)
 						dropship_camo = new_camo
 
+				if("dropship_name")
+					var/raw_name = input(user, "Choose your Platoon's Dropship name:", "Character Preference")  as text|null
+					if(length(raw_name) > 10 || !length(raw_name)) // Check to ensure that the user entered text (rather than cancel.)
+						to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</font>")
+					else
+						dropship_name = raw_name
+
 				if("synth_name")
 					var/raw_name = input(user, "Choose your Synthetic's name:", "Character Preference")  as text|null
 					if(raw_name) // Check to ensure that the user entered text (rather than cancel.)
@@ -1412,11 +1422,11 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 						return
 					predator_skin_color = new_skin_color
 				if("pred_flavor_text")
-					var/pred_flv_raw = input(user, "Choose your Predator's flavor text:", "Flavor Text", predator_flavor_text) as message
+					var/pred_flv_raw = input(user, "Choose your Predator's flavor text. Character limit is [MAX_FLAVOR_MESSAGE_LEN]:", "Flavor Text", predator_flavor_text) as message
 					if(!pred_flv_raw)
 						predator_flavor_text = ""
 						return
-					predator_flavor_text = strip_html(pred_flv_raw, MAX_MESSAGE_LEN)
+					predator_flavor_text = strip_html(pred_flv_raw, MAX_FLAVOR_MESSAGE_LEN)
 
 				if("commander_status")
 					var/list/options = list("Normal" = WHITELIST_NORMAL)

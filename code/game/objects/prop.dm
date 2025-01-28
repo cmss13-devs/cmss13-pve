@@ -303,8 +303,8 @@
 	desc = "A treatise on war written by Sun Tzu a great general, strategist, and philosopher from ancient Earth. This book is on the Commandant of the United States Colonial Marine Corps reading list and most officers can be found in possession of a copy. Most officers who've read it claim to know a little bit more about fighting than most enlisted but results may vary. "
 
 /obj/item/prop/magazine/book/uppbooklet
-	name = "UPP Party Doctrine Booklet"
-	desc = "A booklet provided to every single citizen of the Union of Progressive Peoples. The first page is stamped with the Party's insignia followed by a emphatic dedication to the working class; past, present, and future. Aside from being an easily digestible summary of the collective ideology of the Union, the booklet provides you with an outline of the Union's history and a good chunk is dedicated to listing and summarizing each of the Union's many member states."
+	name = "\improper The People's Handbook"
+	desc = "A booklet provided to the broad citizenry of the Union of Progressive Peoples. The first page is stamped with the Union Roundel and a dedication to the unity of its' member states and the collective working class under the State Councils' guidance. While an easily digestible summary of the collective ideology of the Union, the booklet also provides a succinct description of the UPP's history and summaries of its' member states, alongside various universal laws. Because of this, it is commonly distributed to new citizens upon entry into the UPP."
 	icon_state = "book_upp"
 
 /obj/item/prop/magazine/book/warisaracket
