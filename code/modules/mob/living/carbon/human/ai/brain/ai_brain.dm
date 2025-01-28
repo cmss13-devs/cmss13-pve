@@ -12,7 +12,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	var/action_delay_mult = 1
 
 	/// If TRUE, shoots until the target is dead. Else, stops when downed
-	var/shoot_to_kill = TRUE
+	var/shoot_to_kill = FALSE
 
 	/// Distance for view checks
 	var/view_distance = 7
