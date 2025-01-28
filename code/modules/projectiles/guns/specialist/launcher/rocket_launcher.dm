@@ -19,7 +19,7 @@
 	wield_delay = WIELD_DELAY_HORRIBLE
 	delay_style = WEAPON_DELAY_NO_FIRE
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
-	starting_attachment_types = list(/obj/item/attachable/scope/mini/army) //4 tile zoom if used
+	attachable_allowed = list(/obj/item/attachable/scope/mini/army) //4 tile zoom if used
 
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
 	var/datum/effect_system/smoke_spread/smoke
@@ -32,14 +32,6 @@
 	. = ..()
 	smoke = new()
 	smoke.attach(src)
-
-/obj/item/weapon/gun/launcher/rocket/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/scope/mini/army/optic = new(src)
-	optic.hidden = TRUE
-	optic.flags_attach_features &= ~ATTACH_REMOVABLE
-	optic.Attach(src)
-	update_attachable(optic.slot)
 
 /obj/item/weapon/gun/launcher/rocket/Destroy()
 	QDEL_NULL(smoke)
@@ -148,7 +140,7 @@
 			qdel(current_mag)
 			user.drop_inv_item_on_ground(rocket)
 			current_mag = rocket
-			rocket.forceMove(src)
+			rocket.forceMove(get_turf(src))
 			replace_ammo(,rocket)
 			to_chat(user, SPAN_NOTICE("You load [rocket] into [src]."))
 			if(reload_sound)
@@ -161,7 +153,7 @@
 	else
 		qdel(current_mag)
 		current_mag = rocket
-		rocket.forceMove(src)
+		rocket.forceMove(get_turf(src))
 		replace_ammo(,rocket)
 	return TRUE
 
@@ -208,10 +200,21 @@
 		mob.apply_effect(6, STUTTER)
 		mob.emote("pain")
 
+/obj/item/weapon/gun/launcher/rocket/marine //Done so subtypes don't all inherit the starting scope
+	starting_attachment_types = list(/obj/item/attachable/scope/mini/army)
+
+/obj/item/weapon/gun/launcher/rocket/marine/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/army/scope = new(src)
+	scope.hidden = TRUE
+	scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	scope.Attach(src)
+	update_attachable(scope.slot)
+
 //-------------------------------------------------------
 //Army version, just reflavoured description
 
-/obj/item/weapon/gun/launcher/rocket/army
+/obj/item/weapon/gun/launcher/rocket/marine/army
 	desc = "The M5 RPG is a common squad-level anti-armor weapon used by the US Army. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
 
 //-------------------------------------------------------
@@ -328,7 +331,7 @@
 	user.visible_message(SPAN_NOTICE("[user] begins to unfold \the [src]."), SPAN_NOTICE("You start to unfold and expand \the [src]."))
 	playsound(src, 'sound/items/component_pickup.ogg', 20, TRUE, 5)
 
-	if(!do_after(user, 4 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+	if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 		to_chat(user, SPAN_NOTICE("You stop unfolding \the [src]"))
 		return
 
