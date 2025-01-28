@@ -1702,9 +1702,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
 "mf" = (
-/obj/structure/window/framed/upp/grey{
-	icon_state = "uppwall_window"
-	},
+/obj/structure/window/framed/upp/grey,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
 "mi" = (
@@ -5603,7 +5601,7 @@
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
-	id = "squadarmory";
+	id = "prep";
 	name = "\improper Sanitar Prep Room"
 	},
 /turf/open/floor/strata/multi_tiles,
