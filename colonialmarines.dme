@@ -2024,6 +2024,7 @@
 #include "code\modules\mob\living\carbon\human\ai\squad_spawner\squad_pmc.dm"
 #include "code\modules\mob\living\carbon\human\ai\squad_spawner\squad_spawner.dm"
 #include "code\modules\mob\living\carbon\human\ai\squad_spawner\squad_upp.dm"
+#include "code\modules\mob\living\carbon\human\ai\squad_spawner\squad_uscm.dm"
 #include "code\modules\mob\living\carbon\human\ai\squad_spawner\squad_wy.dm"
 #include "code\modules\mob\living\carbon\human\life\handle_breath.dm"
 #include "code\modules\mob\living\carbon\human\life\handle_chemicals_in_body.dm"
