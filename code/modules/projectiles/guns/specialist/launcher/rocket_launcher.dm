@@ -201,7 +201,7 @@
 		mob.emote("pain")
 
 /obj/item/weapon/gun/launcher/rocket/marine //Done so subtypes don't all inherit the starting scope
-	starting_attachment_types = list(/obj/item/attachable/scope/mini/army)
+
 
 /obj/item/weapon/gun/launcher/rocket/marine/handle_starting_attachment()
 	..()
