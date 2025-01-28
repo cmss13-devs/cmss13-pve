@@ -1756,7 +1756,7 @@
 
 /obj/item/weapon/gun/rifle/l42a
 	name = "\improper L42A pulse rifle"
-	desc = "The L42A pulse rifle, despite its age- having been the predecessor to the infamous M20 Harrington rifle- remains a common 'sporting' rifle among UA citizens and a reliable alternative to more contemporary rifles for many mercenaries."
+	desc = "The L42A pulse rifle, despite its age, remains a common 'sporting' rifle among UA citizens and a reliable alternative to more contemporary rifles for many mercenaries."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "l42mk1"
 	item_state = "l42mk1"
