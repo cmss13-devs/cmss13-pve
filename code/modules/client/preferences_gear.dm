@@ -42,6 +42,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Eyepatch"
 	path = /obj/item/clothing/glasses/eyepatch
 
+/datum/gear/eyewear/eyepatch/green
+	display_name = "Green Eyepatch"
+	path = /obj/item/clothing/glasses/eyepatch/green
+
 /datum/gear/eyewear/rpg_glasses
 	display_name = "Marine RPG Glasses"
 	path = /obj/item/clothing/glasses/regular
@@ -68,11 +72,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/glasses/mgoggles/green/prescription
 
 /datum/gear/eyewear/bimex_shades
-	display_name = "BiMex personal shades"
+	display_name = "BiMex Polarized Shades"
 	path = /obj/item/clothing/glasses/sunglasses/big
 
 /datum/gear/eyewear/bimex_shades_orange
-	display_name = "BiMex shooting shades"
+	display_name = "BiMex Tactical Shades"
 	path = /obj/item/clothing/glasses/sunglasses/big/orange
 
 /datum/gear/eyewear/sunglasses
@@ -771,79 +775,101 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon
 	category = "Weapons"
-	cost = 4
 
 /datum/gear/weapon/bayonet
 	display_name = "M5 bayonet"
 	path = 	/obj/item/attachable/bayonet
+	cost = 2
 
 /datum/gear/weapon/kabar
 	display_name = "KA-BAR utility knife"
 	path = 	/obj/item/weapon/knife/marine/kabar
+	cost = 2
 
 /datum/gear/weapon/bowie
 	display_name = "Bowie fighting knife"
 	path = 	/obj/item/weapon/knife/marine/bowie
+	cost = 3
+
+/datum/gear/weapon/baker
+	display_name = "Baker-pattern fighting knife"
+	path = 	/obj/item/weapon/knife/marine/baker
+	cost = 2
 
 /datum/gear/weapon/type_80_Bayonet
 	display_name = "Type 80 Bayonet"
-	path = /obj/item/attachable/bayonet/upp_replica
+	path = /obj/item/attachable/bayonet/upp/surplus
+	cost = 3
 
 /datum/gear/weapon/m8_cartridge_bayonet
 	display_name = "M8 Cartridge Bayonet"
 	path = /obj/item/storage/box/loadout/co2_knife
+	cost = 2
 
 /datum/gear/weapon/clfpistol
 	display_name = "Hummingbird Pistol"
 	path = /obj/item/storage/box/loadout/CLF_loadout
+	cost = 4
 
 /datum/gear/weapon/t73
 	display_name = "Type 73 Pistol"
 	path = /obj/item/storage/box/loadout/T73_loadout
+	cost = 4
 
 /datum/gear/weapon/zhnk72
 	display_name = "ZHNK-72 Revolver"
 	path = /obj/item/storage/box/loadout/ZHNK72_loadout
+	cost = 4
 
 /datum/gear/weapon/m4a3_custom
 	display_name = "Custom M4A3 Pistol"
 	path = /obj/item/storage/box/loadout/M4A3_custom_loadout
+	cost = 4
 
 /datum/gear/weapon/m1911
 	display_name = "M1911 Pistol"
 	path = /obj/item/storage/box/loadout/M1911_loadout
+	cost = 4
 
 /datum/gear/weapon/m44
 	display_name = "M44 Revolver"
 	path = /obj/item/storage/box/loadout/M44_loadout
+	cost = 4
 
 /datum/gear/weapon/m44_custom_revolver
 	display_name = "Custom M44 Revolver"
 	path = /obj/item/storage/box/loadout/M44_custom_loadout
+	cost = 4
 
 /datum/gear/weapon/hg45_civilian
 	display_name = "HG 45 'Aguila' Pistol"
 	path = /obj/item/storage/box/loadout/HG45_civilian_loadout
+	cost = 4
 
 /datum/gear/weapon/hg45_marine
 	display_name = "HG 45 'Marina' Pistol"
 	path = /obj/item/storage/box/loadout/HG45_marine_loadout
+	cost = 4
 
 /datum/gear/weapon/hg44
 	display_name = "HG 44 'Automag' Pistol"
 	path = /obj/item/storage/box/loadout/HG44_loadout
+	cost = 4
 
 /datum/gear/weapon/spearhead
 	display_name = "Spearhead Armoury Revolver"
 	path = /obj/item/storage/box/loadout/Spearhead_loadout
+	cost = 4
 
 /datum/gear/weapon/spearhead_custom
 	display_name = "Custom Spearhead Armoury Revolver"
 	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
+	cost = 4
 
 /datum/gear/weapon/m2100_machete
 	display_name = "M2100 Machete"
 	path = /obj/item/storage/large_holster/machete/arnold/weak
+	cost = 4
 
 /datum/gear/drink
 	category = "Canned drinks"
