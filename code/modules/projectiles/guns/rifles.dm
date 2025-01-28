@@ -137,16 +137,10 @@
 		/obj/item/attachable/scope/mini/nsg23,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/extended_barrel,
-	)
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini/nsg23,
-		/obj/item/attachable/attached_gun/flamer/advanced,
 	)
 	start_semiauto = FALSE
 	start_automatic = TRUE
