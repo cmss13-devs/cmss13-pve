@@ -365,7 +365,7 @@
 		if(H && istype(H) && istype(H.head, /obj/item/clothing/head/helmet/marine))
 			var/obj/item/clothing/head/helmet/marine/helm = H.head
 			return helm.camera
-	if(H && istype(H) && istype(H.head, /obj/item/clothing/head/helmet/upp))
+		if(H && istype(H) && istype(H.head, /obj/item/clothing/head/helmet/upp))
 			var/obj/item/clothing/head/helmet/upp/helm = H.head
 			return helm.camera
 
