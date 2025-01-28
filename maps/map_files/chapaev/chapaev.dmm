@@ -293,11 +293,6 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "bR" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "prep";
-	name = "\improper Prep Room"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1
@@ -305,6 +300,11 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 2
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "prep";
+	name = "\improper Equipment Room Shutter"
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
@@ -483,7 +483,7 @@
 	name = "ship-grade camera";
 	network = list("Chapaev")
 	},
-/turf/open/floor/strata/multi_tiles,
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
 "dv" = (
 /obj/structure/machinery/light/small{
@@ -512,9 +512,6 @@
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
-/obj/item/stool{
-	can_buckle = 1
-	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "dH" = (
@@ -527,22 +524,12 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
-"dO" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/reagent_container/glass/rag{
-	pixel_x = 3
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
-/area/golden_arrow/cryo_cells)
 "dP" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
 	name = "\improper Maintenance Tunnels"
 	},
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
 	dir = 8;
 	req_one_access_txt = "230"
@@ -795,12 +782,12 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "fj" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
 	name = "\improper Locker Room";
 	req_one_access_txt = "230"
 	},
-/obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/cryo_cells)
 "fk" = (
@@ -935,9 +922,9 @@
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_y = 32
 	},
-/obj/structure/machinery/computer/cryopod{
-	pixel_x = 6;
-	pixel_y = -2
+/obj/structure/machinery/computer/area_atmos{
+	dir = 8;
+	pixel_x = 14
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
@@ -1078,6 +1065,13 @@
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_commander_rooms)
+"gI" = (
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = 5;
+	pixel_y = -2
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/cryo_cells)
 "gK" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -1167,11 +1161,6 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/large_shrapnel/at_rocket_dud{
-	drop_sensitivity = 0;
-	impact_sensitivity = 1;
-	pixel_y = -5
-	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ho" = (
@@ -1181,7 +1170,7 @@
 	layer = 5
 	},
 /obj/item/clothing/under/marine/veteran/UPP/naval{
-	pixel_y = -4;
+	pixel_y = -1;
 	pixel_x = -7
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -1201,7 +1190,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_commander_rooms)
 "hC" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Canteen";
 	req_one_access_txt = "230"
 	},
@@ -1282,6 +1271,17 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
+"il" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/reagent_container/food/drinks/dry_ramen,
+/obj/item/reagent_container/food/drinks/dry_ramen{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/dorms)
 "in" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -1317,16 +1317,6 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
-"iB" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_y = 5;
-	pixel_x = -7
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/dorms)
 "iJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -1366,14 +1356,14 @@
 	light_power = 0.8;
 	light_range = 4
 	},
+/obj/item/stool{
+	can_buckle = 1;
+	pixel_x = 9;
+	bound_x = 9
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "iN" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "prep";
-	name = "\improper Prep Room"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 2
@@ -1381,6 +1371,11 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "prep";
+	name = "\improper Equipment Room Shutter"
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
@@ -1456,6 +1451,9 @@
 /obj/item/weapon/gun/pkp/iff,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "jt" = (
@@ -1523,7 +1521,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "km" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
 	name = "\improper Canteen";
 	req_one_access_txt = "230"
@@ -1663,9 +1661,6 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "lm" = (
-/obj/item/stool{
-	can_buckle = 1
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
@@ -1875,7 +1870,7 @@
 /turf/open/space/basic,
 /area/space)
 "mY" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
 	name = "\improper Canteen";
 	req_one_access_txt = "230"
@@ -1885,7 +1880,7 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/cryo_cells)
 "mZ" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Latrine";
 	dir = 8
 	},
@@ -2178,12 +2173,6 @@
 	pixel_x = 1;
 	pixel_y = 3
 	},
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 4
-	},
 /obj/structure/bed/chair{
 	dir = 4;
 	pixel_y = 6;
@@ -2194,6 +2183,12 @@
 	dir = 4;
 	pixel_x = 4;
 	pixel_y = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
@@ -2360,7 +2355,6 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
 "qi" = (
-/obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "qo" = (
@@ -2660,7 +2654,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "sh" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
 	name = "\improper Port Hallway";
 	req_one_access_txt = "230"
@@ -2797,7 +2791,12 @@
 	dir = 8;
 	icon_state = "lattice8";
 	pixel_x = 13;
-	pixel_y = 10
+	pixel_y = 10;
+	layer = 5.2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
@@ -2847,6 +2846,10 @@
 	pixel_y = -6;
 	pixel_x = -19
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "sV" = (
@@ -2881,14 +2884,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
-"tb" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/prop/invuln/overhead_pipe{
-	dir = 4;
-	pixel_y = 10
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/briefing)
 "tc" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -3135,6 +3130,10 @@
 	pixel_x = -7
 	},
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "uK" = (
@@ -3405,11 +3404,11 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/platoon_commander_rooms)
 "wl" = (
+/obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Latrine";
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/dorms)
 "wm" = (
@@ -3453,7 +3452,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "wx" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
 	name = "\improper Canteen";
 	req_one_access_txt = "230"
@@ -3577,6 +3576,10 @@
 	dir = 1;
 	pixel_y = 2
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 5
+	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
 "xn" = (
@@ -3650,8 +3653,9 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
 "xF" = (
-/obj/item/stool{
-	can_buckle = 1
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
@@ -3699,6 +3703,10 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "xL" = (
@@ -3715,14 +3723,13 @@
 /area/golden_arrow/platoon_commander_rooms)
 "xM" = (
 /obj/structure/machinery/door/airlock/upp_grey{
-	dir = 8;
 	name = "\improper Platoon Sergeant's Bunk";
 	req_one_access_txt = "240"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
 "xX" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Platoon Medic Office";
 	dir = 1;
 	req_one_access_txt = "231;242"
@@ -3893,7 +3900,7 @@
 	dir = 4;
 	name = "\improper Maintenance Tunnels"
 	},
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
 	dir = 8;
 	req_one_access_txt = "230"
@@ -3916,6 +3923,14 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
+"zc" = (
+/obj/structure/machinery/door/airlock/multi_tile/upp_utility{
+	dir = 1;
+	name = "\improper Starboard Hallway";
+	req_one_access_txt = "230"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
 "zd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -3993,7 +4008,7 @@
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/platoon_commander_rooms)
 "zC" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Bunk Room";
 	req_one_access_txt = "230"
 	},
@@ -4006,6 +4021,15 @@
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/platoon_commander_rooms)
+"zE" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/machinery/door/airlock/upp_utility{
+	dir = 1;
+	name = "\improper Starboard Hallway";
+	req_one_access_txt = "230"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/briefing)
 "zN" = (
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
@@ -4091,14 +4115,9 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "At" = (
-/obj/structure/surface/table/reinforced/prison,
 /obj/structure/disposalpipe/segment,
-/obj/item/reagent_container/glass/rag{
-	pixel_y = 10;
-	pixel_x = -2
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/strata/floor3/east,
+/turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/cryo_cells)
 "Ax" = (
 /obj/structure/machinery/light/small{
@@ -4143,7 +4162,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "AA" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Port Hallway";
 	req_one_access_txt = "230"
 	},
@@ -4238,11 +4257,17 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
+"AT" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Platoon Commander's Office";
+	req_one_access_txt = "241"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/platoon_commander_rooms)
 "AW" = (
 /obj/structure/machinery/door/airlock/upp_grey{
-	name = "\improper Latrine";
-	dir = 1;
-	req_one_access_txt = "241"
+	name = "\improper Bathroom";
+	dir = 1
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4321,7 +4346,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
 "Ce" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	dir = 8;
 	name = "\improper Sergeants Room";
 	req_one_access_txt = "240;244"
@@ -4423,6 +4448,9 @@
 	dir = 8
 	},
 /obj/item/weapon/gun/pkp/iff,
+/obj/item/ammo_magazine/pkp,
+/obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
 /turf/open/floor/strata/multi_tiles,
@@ -4530,6 +4558,10 @@
 	pixel_x = 45;
 	pixel_y = 2
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
 "Dm" = (
@@ -4540,6 +4572,14 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
+"Dr" = (
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = -5;
+	pixel_y = -2;
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/cryo_cells)
 "Du" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
@@ -4550,13 +4590,13 @@
 	light_range = 1
 	},
 /obj/structure/machinery/door_control{
-	name = "weapon storage shutter control";
+	name = "Weapon Storage Shutter Control";
 	id = "armory";
 	pixel_x = 8;
 	pixel_y = 8
 	},
 /obj/structure/machinery/door_control{
-	name = "prep room shutter control";
+	name = "Equipment Room Shutter Control";
 	id = "prep";
 	pixel_x = 8
 	},
@@ -4824,7 +4864,7 @@
 /area/golden_arrow/briefing)
 "FT" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
 	dir = 1;
 	req_one_access_txt = "230"
@@ -4881,6 +4921,11 @@
 	icon_state = "E";
 	pixel_x = 2
 	},
+/obj/structure/machinery/door/airlock/multi_tile/upp_utility{
+	dir = 1;
+	name = "\improper Starboard Hallway";
+	req_one_access_txt = "230"
+	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "Gd" = (
@@ -4914,10 +4959,18 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
-"Gt" = (
-/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp{
-	pixel_x = -4
+"Gq" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	dir = 1;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
 	},
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
+"Gt" = (
+/obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
 "Gv" = (
@@ -5064,6 +5117,10 @@
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "Hc" = (
@@ -5138,13 +5195,13 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "Hw" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
 	name = "\improper Locker Room";
 	req_one_access_txt = "230"
 	},
-/obj/structure/disposalpipe/segment,
-/obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/cryo_cells)
 "Hy" = (
@@ -5320,7 +5377,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "Ik" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
 	name = "\improper Canteen";
 	req_one_access_txt = "230"
@@ -5328,6 +5385,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/canteen)
+"Im" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/cryo_cells)
 "Io" = (
 /obj/vehicle/powerloader/jd{
 	name = "\improper CosmosStal 12 Bogatyr Power Loader";
@@ -5439,6 +5506,22 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
+"Ja" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/obj/item/tool/soap/syndie{
+	name = "LIFEBUOY soap";
+	desc = "A LIFEBUOY brand soap bar. Tastes like guilt.";
+	pixel_y = 8;
+	pixel_x = 12
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/dorms)
 "Je" = (
 /obj/structure/sign/nosmoking_1{
 	pixel_y = 31;
@@ -5525,11 +5608,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "prep";
-	name = "\improper Prep Room"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1
@@ -5537,6 +5615,11 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 2
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "prep";
+	name = "\improper Equipment Room Shutter"
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
@@ -5594,6 +5677,11 @@
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/item/stool{
+	can_buckle = 1;
+	pixel_x = -9;
+	bound_x = -9
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -5752,7 +5840,7 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
 	id = "prep";
-	name = "\improper Sanitar Prep Room"
+	name = "\improper Sanitar Equipment Shutter"
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
@@ -5960,7 +6048,7 @@
 /area/golden_arrow/canteen)
 "MG" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
 	dir = 1;
 	req_one_access_txt = "230"
@@ -6034,13 +6122,19 @@
 	dir = 8;
 	icon_state = "lattice12";
 	pixel_x = 13;
-	pixel_y = 10
+	pixel_y = 10;
+	layer = 5.2
 	},
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
 	icon_state = "lattice4";
 	pixel_x = -19;
-	pixel_y = 10
+	pixel_y = 10;
+	layer = 5.2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 4
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
@@ -6206,6 +6300,10 @@
 	icon_state = "cargo";
 	pixel_x = 1
 	},
+/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya{
+	pixel_y = 9;
+	pixel_x = 2
+	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "On" = (
@@ -6327,7 +6425,7 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
 "Pl" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Platoon Medic Office";
 	req_one_access_txt = "231;242"
 	},
@@ -6570,6 +6668,14 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
+"QH" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "briefing";
+	name = "\improper Briefing Room Shutter"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/briefing)
 "QM" = (
 /obj/structure/machinery/light/double{
 	dir = 8;
@@ -6584,7 +6690,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "QO" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
 	name = "\improper Platoon Commander's Office";
 	req_one_access_txt = "240;241"
@@ -6602,6 +6708,14 @@
 	},
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_commander_rooms)
+"Rm" = (
+/obj/item/stool{
+	can_buckle = 1;
+	pixel_x = -12;
+	bound_x = -12
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/cryo_cells)
 "Rn" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/weapon/dart,
@@ -6749,7 +6863,7 @@
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Maintenance Tunnels"
 	},
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
 	dir = 1;
 	req_one_access_txt = "230"
@@ -6872,7 +6986,7 @@
 /obj/structure/machinery/power/apc/almayer/south{
 	layer = 5
 	},
-/turf/open/floor/strata/multi_tiles,
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
 "SE" = (
 /obj/effect/decal/warning_stripes{
@@ -6983,6 +7097,11 @@
 /area/golden_arrow/briefing)
 "Tl" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/door_control{
+	name = "Briefing Room Shutter Control";
+	id = "briefing";
+	pixel_x = 8
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "Tt" = (
@@ -7098,10 +7217,14 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "Uv" = (
-/obj/structure/surface/table/reinforced/prison,
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/computer/crew{
+	faction = "UPP";
+	pixel_y = 16;
+	can_block_movement = 0
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
 "UF" = (
@@ -7259,8 +7382,7 @@
 /area/golden_arrow/engineering)
 "VC" = (
 /obj/structure/sink{
-	pixel_y = 26;
-	can_block_movement = 0
+	pixel_y = 35
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
@@ -7283,7 +7405,7 @@
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
 "VI" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
 	name = "\improper Port Hallway";
 	req_one_access_txt = "230"
@@ -7388,6 +7510,11 @@
 	pixel_y = 7;
 	pixel_x = 3
 	},
+/obj/item/large_shrapnel/at_rocket_dud{
+	drop_sensitivity = 0;
+	impact_sensitivity = 1;
+	pixel_y = -5
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
 "WR" = (
@@ -7397,22 +7524,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
-"WY" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/item/reagent_container/food/snacks/candy{
-	pixel_x = -6
-	},
-/obj/item/reagent_container/food/snacks/candy{
-	pixel_x = 1
-	},
-/obj/item/reagent_container/food/snacks/candy{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/dorms)
 "WZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -7600,6 +7711,10 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "Yo" = (
+/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp{
+	pixel_x = -32;
+	pixel_y = 1
+	},
 /obj/structure/machinery/cm_vending/sorted/medical/blood/vehicle{
 	name = "\improper MinZdrav Blood Dispenser";
 	desc = "The MinZdrav Blood Pack Dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!";
@@ -7609,7 +7724,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
 "Yp" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
 	name = "\improper Starboard Hallway";
 	req_one_access_txt = "230"
@@ -7618,7 +7733,7 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "Yt" = (
-/obj/structure/machinery/door/airlock/upp_grey{
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper CIC";
 	req_one_access_txt = "240;241"
 	},
@@ -7765,6 +7880,10 @@
 	pixel_y = 16
 	},
 /obj/structure/disposalpipe/trunk,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 5
+	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
 "Zg" = (
@@ -18741,7 +18860,7 @@ WH
 tv
 ry
 Jw
-WY
+ex
 Rs
 Yv
 GV
@@ -18892,8 +19011,8 @@ Rs
 OZ
 tv
 Mf
-iB
 ex
+il
 Rs
 Yv
 GV
@@ -19808,7 +19927,7 @@ JF
 vK
 Rs
 da
-zs
+Ja
 zs
 Rs
 jp
@@ -20549,7 +20668,7 @@ Jv
 Jv
 Jv
 xp
-CX
+AT
 xp
 xp
 xp
@@ -20860,7 +20979,7 @@ oH
 oH
 oH
 oH
-fP
+jL
 gL
 wm
 BQ
@@ -20876,7 +20995,7 @@ se
 eu
 km
 VX
-xF
+Rm
 Bo
 xF
 lm
@@ -20890,7 +21009,7 @@ SK
 zN
 zN
 Ml
-Ml
+gI
 Ml
 Ml
 zN
@@ -21004,7 +21123,7 @@ Zw
 uF
 aV
 Jv
-Hf
+Gq
 Hf
 Tl
 uM
@@ -21030,7 +21149,7 @@ bV
 Dg
 zj
 SF
-zj
+Im
 wX
 bV
 lD
@@ -21044,7 +21163,7 @@ zj
 Kv
 At
 Uv
-dO
+zj
 zj
 HJ
 MG
@@ -21164,7 +21283,7 @@ oH
 oH
 oH
 oH
-fP
+jL
 gL
 pQ
 ti
@@ -21194,7 +21313,7 @@ ZT
 zN
 zN
 Ml
-Ml
+Dr
 Ml
 Ml
 zN
@@ -21316,7 +21435,7 @@ oH
 oH
 aL
 oH
-fP
+jL
 gL
 DG
 ec
@@ -21463,12 +21582,12 @@ ru
 ru
 ru
 ru
-Th
-Th
-Th
+QH
+QH
+QH
 ru
-ru
-ru
+Th
+zc
 gL
 gL
 Ch
@@ -21610,7 +21729,7 @@ Gt
 wH
 VH
 JI
-tb
+do
 do
 Nk
 JI
@@ -21618,7 +21737,7 @@ JI
 do
 do
 JI
-do
+zE
 bv
 rt
 Rv
@@ -21762,7 +21881,7 @@ bT
 wH
 pP
 ZS
-Wg
+ZS
 ZS
 sM
 ZS
@@ -21770,7 +21889,7 @@ ZS
 ZS
 Hf
 AG
-rt
+ru
 VH
 JI
 De

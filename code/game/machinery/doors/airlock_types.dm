@@ -963,3 +963,9 @@
 	opacity = FALSE
 	glass = TRUE
 
+/obj/structure/machinery/door/airlock/upp_utility
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/uppdoor_utility.dmi'
+	openspeed = 6
+	req_access = null
+	req_one_access = null

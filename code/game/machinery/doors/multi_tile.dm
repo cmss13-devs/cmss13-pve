@@ -675,3 +675,8 @@
 	name = "Glass Airlock"
 	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_grey.dmi'
 	glass = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_utility
+	name = "Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_utility.dmi'
+	openspeed = 6
