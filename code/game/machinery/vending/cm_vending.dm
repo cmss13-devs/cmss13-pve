@@ -334,8 +334,19 @@ GLOBAL_LIST_EMPTY(vending_products)
 		if(mre_to_stock.isopened)
 			to_chat(user, SPAN_WARNING("[item_to_stock] was already opened and isn't suitable for restocking."))
 			return
+	//Pill Bottles
+	else if(istype(item_to_stock, /obj/item/storage/pill_bottle))
+		var/obj/item/storage/pill_bottle/pill_bottle  = item_to_stock
+		var/obj/item/reagent_container/pill/type_of_pill = pill_bottle.pill_type_to_fill
+		for(var/obj/item/reagent_container/pill in pill_bottle.contents)
+			if(pill.type != type_of_pill)
+				to_chat(user, SPAN_WARNING("[item_to_stock] has non-original pills inside and can't be restocked."))
+				return
+		if(pill_bottle.contents.len < pill_bottle.max_storage_space)
+			to_chat(user, SPAN_WARNING("[item_to_stock] is not full and can't be restocked."))
+			return
+	//Telephone backpacks with the telephone not attached
 	else if(istype(item_to_stock, /obj/item/storage/backpack/marine/satchel/rto))
-		var/obj/item/storage/backpack/marine/satchel/rto/backpack = item_to_stock
 		var/datum/component/phone/tele = LAZYACCESS(item_to_stock.datum_components, /datum/component/phone)
 		if(tele.phone_handset.loc != null) //it is not stowed. Prevent telephone dupe.
 			to_chat(user, SPAN_WARNING("You must put the [tele.phone_handset] back into [item_to_stock] before restocking."))
