@@ -922,10 +922,6 @@
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_y = 32
 	},
-/obj/structure/machinery/computer/area_atmos{
-	dir = 8;
-	pixel_x = 14
-	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "fM" = (
@@ -1065,13 +1061,6 @@
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_commander_rooms)
-"gI" = (
-/obj/structure/machinery/computer/cryopod{
-	pixel_x = 5;
-	pixel_y = -2
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/cryo_cells)
 "gK" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -4567,14 +4556,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
-"Dr" = (
-/obj/structure/machinery/computer/cryopod{
-	pixel_x = -5;
-	pixel_y = -2;
-	dir = 8
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/cryo_cells)
 "Du" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
@@ -7198,17 +7179,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
-"Uv" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/computer/crew{
-	faction = "UPP";
-	pixel_y = 16;
-	can_block_movement = 0
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/cryo_cells)
 "UF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -20991,7 +20961,7 @@ SK
 zN
 zN
 Ml
-gI
+Ml
 Ml
 Ml
 zN
@@ -21144,7 +21114,7 @@ zj
 zj
 Kv
 At
-Uv
+zj
 zj
 zj
 HJ
@@ -21295,7 +21265,7 @@ ZT
 zN
 zN
 Ml
-Dr
+Ml
 Ml
 Ml
 zN
