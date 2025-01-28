@@ -1344,7 +1344,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Platoon Sergeant";
+	job = "Section Sergeant";
 	pixel_x = -7
 	},
 /obj/item/clothing/shoes/marine/upp,
