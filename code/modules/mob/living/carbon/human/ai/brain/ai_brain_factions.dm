@@ -534,3 +534,62 @@
 
 /datum/human_ai_faction/xeno_cultist/corrupted
 	faction = FACTION_XENOMORPH_CORRPUTED
+
+/datum/human_ai_faction/working_joes
+	faction = FACTION_WJ
+	enter_combat_lines = list(
+		"*alwaysknow",
+		"*dontrun",
+		"*someonehurt",
+		"*safety",
+		"*hysterical",
+		"*patience",
+		"*holdstill",
+		"*haveaproblem",
+		"*dangerousitems",
+		"*hurtyourself",
+		"*runningaccidents",
+		"*noneed",
+		"*letmehelp",
+		"*thisisfutile",
+		"*misbehaving",
+		"*firearmconcerning",
+		"*firearm",
+		"*trespassing",
+		"*interloper",
+		"*areacompromised",
+		"*shouldntbehere",
+		"*reallyshouldntbehere"
+	)
+	exit_combat_lines = list(
+		"*awful",
+		"*ticketremoved",
+		"*dayneverdone",
+		"*alwaysknow",
+		"*report",
+	)
+	squad_member_death_lines = list(
+		"*expensivemistake",
+		"*damage",
+		"*really",
+		"*alwaysknow",
+	)
+	reload_lines = list(
+		"*alwaysknow",
+		"*morepressing",
+		"*otherconcerns",
+		"*firearmconcerning",
+		"*firearm",
+	)
+	reload_internal_mag_lines = list(
+		"*alwaysknow",
+		"*morepressing",
+		"*otherconcerns",
+		"*firearmconcerning",
+		"*firearm",
+	)
+	grenade_thrown_lines = list(
+		"*careful",
+		"*healthrisks",
+		"*littledetails",
+	)
