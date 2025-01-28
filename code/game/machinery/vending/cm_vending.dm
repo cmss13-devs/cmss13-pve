@@ -351,10 +351,26 @@ GLOBAL_LIST_EMPTY(vending_products)
 		if(tele.phone_handset.loc != null) //it is not stowed. Prevent telephone dupe.
 			to_chat(user, SPAN_WARNING("You must put the [tele.phone_handset] back into [item_to_stock] before restocking."))
 			return
+
+	//Storage Accessories with their contents not directly in the atoms vars
+	else if(istype(item_to_stock, /obj/item/clothing/accessory/storage))
+		var/obj/item/clothing/accessory/storage/webbing_to_stock = item_to_stock
+		var/new_type = item_to_stock.type
+		var/obj/item/clothing/accessory/storage/temp_container = new new_type(src) //create an indentical item to see if it is filled with things on New()
+		var/temp_contents = temp_container.hold.contents
+		if(length(temp_contents))
+			qdel(temp_container)
+			to_chat(user, SPAN_WARNING("You cannot restock webbing that are prefilled by the vendor!"))
+			return FALSE
+		if(length(webbing_to_stock.hold.contents))
+			qdel(temp_container)
+			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
+			return FALSE
+
 	//catch all storage handling, from now on it only works on items that start empty!
 	else if(istype(item_to_stock, /obj/item/storage))
 		var/new_type = item_to_stock.type
-		var/atom/temp_container = new new_type(src)
+		var/atom/temp_container = new new_type(src) //create an indentical item to see if it is filled with things on New()
 		var/temp_contents = temp_container.contents
 		if(length(temp_contents))
 			qdel(temp_container)
