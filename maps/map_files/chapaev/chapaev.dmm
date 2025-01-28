@@ -27,6 +27,9 @@
 /area/golden_arrow/platoon_commander_rooms)
 "ah" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/weapon/gun/launcher/rocket/upp{
+	current_mag = null
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "aq" = (
@@ -662,6 +665,28 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
+"eA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/prep_hallway)
 "eC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -1131,6 +1156,11 @@
 	},
 /obj/structure/surface/rack{
 	color = "#8B9490"
+	},
+/obj/item/large_shrapnel/at_rocket_dud{
+	drop_sensitivity = 0;
+	impact_sensitivity = 1;
+	pixel_y = -5
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5785,10 +5815,6 @@
 /area/golden_arrow/engineering)
 "Mr" = (
 /obj/structure/machinery/cm_vending/clothing/medic/upp,
-/obj/item/clothing/head/uppcap{
-	pixel_x = 8;
-	pixel_y = 11
-	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "Mt" = (
@@ -20060,7 +20086,7 @@ Yi
 Yi
 if
 EL
-hi
+eA
 Jv
 aq
 nI
