@@ -1,3 +1,7 @@
+#define AMERICAN_ETHNICITY "American"
+#define LATIN_AMERICAN_ETHNICITY "Latin-American"
+#define JAPANESE_ETHNICITY "Japanese"
+
 
 /datum/equipment_preset/colonist
 	name = "American Colonist"
@@ -6,30 +10,40 @@
 	skills = /datum/skills/civilian
 	idtype = /obj/item/card/id/lanyard
 	origin_override = ORIGIN_CIVILIAN
+	var/ethnicity = AMERICAN_ETHNICITY
 
 /datum/equipment_preset/colonist/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(50;MALE,50;FEMALE)
-	var/datum/preferences/A = new
-	A.randomize_appearance(new_human)
-	var/random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
-	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
-	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
-	var/hair_color = pick(hair_colors)
-	new_human.r_hair = hair_colors[hair_color][1]
-	new_human.g_hair = hair_colors[hair_color][2]
-	new_human.b_hair = hair_colors[hair_color][3]
-	new_human.r_facial = hair_colors[hair_color][1]
-	new_human.g_facial = hair_colors[hair_color][2]
-	new_human.b_facial = hair_colors[hair_color][3]
-	var/eye_color = pick(colors)
-	new_human.r_eyes = colors[eye_color][1]
-	new_human.g_eyes = colors[eye_color][2]
-	new_human.b_eyes = colors[eye_color][3]
-	if(new_human.gender == MALE)
-		new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
-		new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
-	else
-		new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
+	var/random_name
+	new_human.gender = pick(MALE, FEMALE)
+	switch(ethnicity)
+		if(LATIN_AMERICAN_ETHNICITY)
+			new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")
+			random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male_spanish : GLOB.first_names_female_spanish)) + " " + capitalize(pick(GLOB.last_names_spanish))
+		if(JAPANESE_ETHNICITY)
+			new_human.skin_color = pick("Pale 1", "Tan 1")
+			random_name = "[capitalize(randomly_generate_japanese_word(rand(1, 4)))] [pick(GLOB.last_names_clf)]"
+		if(AMERICAN_ETHNICITY)
+			random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+			var/datum/preferences/A = new
+			A.randomize_appearance(new_human)
+			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+			var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
+			var/hair_color = pick(hair_colors)
+			new_human.r_hair = hair_colors[hair_color][1]
+			new_human.g_hair = hair_colors[hair_color][2]
+			new_human.b_hair = hair_colors[hair_color][3]
+			new_human.r_facial = hair_colors[hair_color][1]
+			new_human.g_facial = hair_colors[hair_color][2]
+			var/eye_color = pick(colors)
+			new_human.r_eyes = colors[eye_color][1]
+			new_human.g_eyes = colors[eye_color][2]
+			new_human.b_eyes = colors[eye_color][3]
+			if(new_human.gender == MALE)
+				new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
+				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+			else
+				new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
+
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,40)
 
@@ -87,6 +101,16 @@
 	add_worker_jacket(new_human)
 	//limbs
 	add_worker_shoe(new_human)
+
+/datum/equipment_preset/colonist/miner/spanish
+	name = "LatAm Civilian Colonist, Blue-Collar (Miner)"
+	languages = list(LANGUAGE_SPANISH)
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+
+/datum/equipment_preset/colonist/miner/japanese
+	name = "TWE Civilian Colonist, Blue-Collar (Miner)"
+	languages = list(LANGUAGE_JAPANESE)
+	ethnicity = JAPANESE_ETHNICITY
 
 /datum/equipment_preset/colonist/construction
 	name = "Civilian Colonist, Blue-Collar (Construction)"
@@ -2039,3 +2063,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 
+#undef AMERICAN_ETHNICITY
+#undef LATIN_AMERICAN_ETHNICITY
+#undef JAPANESE_ETHNICITY
