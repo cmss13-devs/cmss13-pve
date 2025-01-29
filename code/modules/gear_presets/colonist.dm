@@ -19,7 +19,6 @@
 	new_human.gender = pick(MALE, FEMALE)
 	switch(ethnicity)
 		if(LATIN_AMERICAN_ETHNICITY)
-			new_human.gender = pick(50;MALE,50;FEMALE)
 			new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")
 			random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male_spanish : GLOB.first_names_female_spanish)) + " " + capitalize(pick(GLOB.last_names_spanish))
 			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
