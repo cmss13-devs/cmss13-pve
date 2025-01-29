@@ -891,12 +891,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 
 /datum/equipment_preset/colonist/security/trijent/japanese
-	name = "TWE Civilian Security Guard, Wey-Yu"
+	name = "TWE Civilian Security Guard, Trijent Corp"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/security/prison
-	name = "UA, Prison Guard"
+	name = "UA, Federal Prison Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	faction_group = FACTION_LIST_UA_COLONY
@@ -931,7 +931,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/colonist/security/prison/spanish
-	name = "LatAm, Prison Guard"
+	name = "LatAm, Federal Prison Guard"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
