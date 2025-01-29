@@ -371,7 +371,7 @@
 	desc = "An autochef prepared meal of stir fried imitation shrimp and overcooked brown rice. Some mixed nuts trail mix and an unidentified sauce are on the side."
 	icon_state = "MREe"
 
-/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2/Initialize()
+/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving3/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 10)
 	bitesize = 3
