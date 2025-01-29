@@ -131,7 +131,7 @@ FORENSIC SCANNER
 	if(!ui)
 		ui = new(user, src, "HealthScan", "Stored Health Scan")
 		last_health_display.scanner_device = src
-		ui.status = UI_INTERACTIVE
+		//ui.status = UI_INTERACTIVE
 		ui.open()
 		ui.set_autoupdate(TRUE)
 
@@ -214,6 +214,13 @@ FORENSIC SCANNER
 	if(usr.is_mob_incapacitated())
 		return
 	print_report(usr)
+
+/obj/item/device/healthanalyzer/soul/ui_state(mob/user)
+	return GLOB.always_state
+	/*if(isobserver(user))
+		return GLOB.always_state
+	else
+		return GLOB.not_incapacitated_state*/
 
 /obj/item/device/healthanalyzer/soul/proc/print_report(mob/living/user)
 	if(!last_scan)
