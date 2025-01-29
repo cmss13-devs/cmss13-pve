@@ -784,12 +784,40 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/nailgun(new_human.back), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/nailgun(new_human.back), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/nailgun(new_human.back), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/nailgun(new_human.back), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/nailgun(new_human), WEAR_WAIST)
+
+
+/datum/equipment_preset/synth/working_joe/evil/flamer
+	name = "Synthetic - Evil Joe (Flamer)"
+	joe_type = SYNTH_HAZARD_JOE
+
+/datum/equipment_preset/synth/working_joe/evil/gun/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = null
+	new_human.underwear = null
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flamertank/weak(new_human.back), WEAR_IN_BACK)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/flamer/weak(new_human))
+
+/datum/equipment_preset/synth/working_joe/evil/security
+	name = "Synthetic - Evil Joe (Baton)"
+	joe_type = SYNTH_HAZARD_JOE
+
+/datum/equipment_preset/synth/working_joe/evil/security/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = null
+	new_human.underwear = null
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	var/baton = pick(/obj/item/weapon/baton/cattleprod/on, /obj/item/weapon/baton/on)
+	new_human.put_in_active_hand(new baton(new_human))
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/riot(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/riot(new_human), WEAR_JACKET)
 
 //*****************************************************************************************************/
 
