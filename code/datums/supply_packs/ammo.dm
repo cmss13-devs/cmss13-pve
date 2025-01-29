@@ -481,7 +481,7 @@
 		/obj/item/ammo_magazine/rifle/m49a/incendiary,
 		/obj/item/ammo_magazine/rifle/m41aMK1,
 		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
-		/obj/item/ammo_magazine/rifle/m4ra,
+		/obj/item/ammo_magazine/rifle/m49a,
 		/obj/item/ammo_magazine/hpr_box,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/pistol,
