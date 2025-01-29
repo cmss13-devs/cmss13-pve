@@ -12,3 +12,18 @@
 	health = 250
 
 	move_delay = VEHICLE_SPEED_VERYFAST
+
+/obj/item/hardpoint/locomotion/van_treads
+	name = "Truck treads"
+	desc = "Integral to the movement of the truck."
+	icon = 'icons/obj/vehicles/hardpoints/van.dmi'
+
+	icon_state = "treads"
+	disp_icon = "miltruck"
+	disp_icon_state = "treads"
+
+	slot = HDPT_WHEELS
+
+	health = 750
+
+	move_delay = VEHICLE_SPEED_FAST

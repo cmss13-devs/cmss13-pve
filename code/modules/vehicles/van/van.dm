@@ -73,6 +73,8 @@
 	var/next_push = 0
 	var/push_delay = 0.5 SECONDS
 
+	var/can_overdrive = TRUE
+
 /obj/vehicle/multitile/van/Initialize()
 	. = ..()
 	under_image = image(icon, src, icon_state, layer = BELOW_MOB_LAYER)
@@ -201,6 +203,8 @@
 
 
 /obj/vehicle/multitile/van/handle_click(mob/living/user, atom/A, list/mods)
+	if(!can_overdrive)
+		return ..()
 	if(mods["shift"] && !mods["alt"])
 		if(overdrive_next > world.time)
 			to_chat(user, SPAN_WARNING("You can't activate overdrive yet! Wait [round((overdrive_next - world.time) / 10, 0.1)] seconds."))
@@ -291,3 +295,54 @@
 
 /obj/effect/vehicle_spawner/van/fixed/load_hardpoints(obj/vehicle/multitile/van/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+
+/obj/vehicle/multitile/van/military_truck
+	name = "Military Truck"
+	desc = "A rather old hunk of metal on threads, you know what to do. Entrance on the back and sides."
+	layer = ABOVE_XENO_LAYER
+
+	icon = 'icons/obj/vehicles/miltruck.dmi'
+
+	interior_map = /datum/map_template/interior/truck
+
+	hardpoints_allowed = list(
+		/obj/item/hardpoint/locomotion/van_wheels,
+		/obj/item/hardpoint/locomotion/van_treads,
+	)
+
+	can_overdrive = FALSE
+
+/obj/effect/vehicle_spawner/military_truck
+	name = "Military Truck Spawner"
+	icon = 'icons/obj/vehicles/miltruck.dmi'
+	icon_state = "van_base"
+	pixel_x = -16
+	pixel_y = -16
+
+/obj/effect/vehicle_spawner/military_truck/Initialize()
+	. = ..()
+	spawn_vehicle()
+	qdel(src)
+
+//PRESET: no hardpoints
+/obj/effect/vehicle_spawner/military_truck/spawn_vehicle()
+	var/obj/vehicle/multitile/van/military_truck/VAN = new (loc)
+
+	load_misc(VAN)
+	handle_direction(VAN)
+	VAN.update_icon()
+
+//PRESET: wheels installed
+/obj/effect/vehicle_spawner/military_truck/fixed/spawn_vehicle()
+	var/obj/vehicle/multitile/van/military_truck/VAN = new (loc)
+
+	load_misc(VAN)
+	load_hardpoints(VAN)
+	handle_direction(VAN)
+	VAN.update_icon()
+
+/obj/effect/vehicle_spawner/military_truck/fixed/load_hardpoints(obj/vehicle/multitile/van/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+
+/obj/effect/vehicle_spawner/military_truck/fixed/treads/load_hardpoints(obj/vehicle/multitile/van/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_treads)
