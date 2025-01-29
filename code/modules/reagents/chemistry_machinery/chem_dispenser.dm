@@ -21,6 +21,8 @@
 	var/amount = 30
 	var/accept_beaker_only = TRUE
 	var/obj/item/reagent_container/beaker = null
+	var/obj/item/reagent_container/food/drinks/plasticcup/plasticcup = null
+	var/obj/item/reagent_container/food/drinks/coffeecup/coffeecup = null
 	var/ui_check = 0
 	var/static/list/possible_transfer_amounts = list(5,10,20,30,40)
 	var/list/dispensable_reagents = list(
@@ -362,13 +364,31 @@
 	overlays.Cut()
 	if(!beaker)
 		return
-	
+
 	overlays += "+beaker"
 	if(inoperable())
 		return
-	
+
 	overlays += "+onlight"
 
 #undef DISPENSER_UNHACKABLE
 #undef DISPENSER_NOT_HACKED
 #undef DISPENSER_HACKED
+
+/obj/structure/machinery/chem_dispenser/canteen/upp
+	name = "liquid dispenser"
+	desc = "A liquid dispenser, capable of making a variety of drinks to consume from a mixture of water and instant flavoring juice and caffeine additives."
+	icon_state = "uppdrink"
+	ui_title = "AutoDrink Dispenser"
+
+/obj/structure/machinery/chem_dispenser/canteen/upp/update_icon()
+	. = ..()
+	overlays.Cut()
+	if(!beaker)
+		return
+
+	overlays += "+beaker"
+	if(inoperable())
+		return
+
+	overlays += "+onlightupp"
