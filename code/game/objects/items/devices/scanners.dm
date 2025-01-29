@@ -85,6 +85,7 @@ FORENSIC SCANNER
 	var/last_scan
 	var/list/buffer_for_report = list()
 	var/datum/health_scan/last_health_display
+	var/currently_selected_last_scan = 0
 	var/alien = FALSE
 
 /obj/item/device/healthanalyzer/Destroy()
@@ -124,7 +125,7 @@ FORENSIC SCANNER
 /obj/item/device/healthanalyzer/tgui_interact(mob/user, datum/tgui/ui)
 	if(!last_scan)
 		return
-
+	last_scan = buffer_for_report[currently_selected_last_scan]
 	SStgui.close_user_uis(user, last_health_display)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -193,7 +194,7 @@ FORENSIC SCANNER
 	var/mode = 1
 	var/report_delay_counter = 0
 	var/report_delay_threshold = 3 //every three processes, record to report buffer
-	var/currently_selected_last_scan = 0
+
 	var/mob/living/carbon/human/connected_to
 	var/mob/living/carbon/human/connected_from
 	var/blood_type = null
