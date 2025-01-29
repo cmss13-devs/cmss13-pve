@@ -231,6 +231,13 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
+"bz" = (
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = 6;
+	pixel_y = -2
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/cryo_cells)
 "bB" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -548,6 +555,12 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
+"dL" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/platoon_commander_rooms)
 "dP" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -1663,12 +1676,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
-"ln" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 1
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_commander_rooms)
 "lp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3076,7 +3083,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "ux" = (
-/obj/structure/bed/chair/office/dark{
+/obj/structure/bed/chair/comfy/black{
 	dir = 8
 	},
 /turf/open/floor/corsat/squares,
@@ -3608,17 +3615,15 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/platoon_sergeant)
 "xx" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 1;
-	pixel_y = 5;
-	pixel_x = 16
-	},
 /obj/structure/prop/almayer/computers/sensor_computer3{
 	density = 0;
 	pixel_y = 36;
 	pixel_x = 16;
 	light_color = "#218724";
 	light_range = 1
+	},
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4333,19 +4338,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
-"BO" = (
-/obj/structure/machinery/prop/almayer/computer{
-	dir = 8;
-	pixel_x = 17;
-	light_color = "#c49f51";
-	light_range = 1;
-	light_power = 0.7
-	},
-/obj/structure/bed/chair/office/dark{
-	dir = 4
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms)
 "BQ" = (
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -4766,7 +4758,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "Fa" = (
-/obj/structure/bed/chair/office/dark{
+/obj/structure/bed/chair/comfy/black{
 	dir = 4
 	},
 /turf/open/floor/corsat/squares,
@@ -5153,13 +5145,6 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/platoon_commander_rooms)
-"Hj" = (
-/obj/structure/bed/chair/ob_chair{
-	dir = 1;
-	pixel_x = 6
-	},
-/turf/open/floor/corsat/squares,
-/area/golden_arrow/platoon_commander_rooms)
 "Hk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -5462,15 +5447,15 @@
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
 "IH" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 4
-	},
 /obj/structure/machinery/prop/almayer/computer{
 	dir = 8;
 	pixel_x = 17;
 	light_color = "#c49f51";
 	light_range = 1;
 	light_power = 0.7
+	},
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
@@ -6753,13 +6738,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
-"RF" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 8;
-	layer = 3.25
-	},
-/turf/open/floor/corsat/squares,
-/area/golden_arrow/platoon_commander_rooms)
 "RJ" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -7694,6 +7672,14 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
+"Yu" = (
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = -6;
+	pixel_y = -2;
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/cryo_cells)
 "Yv" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
@@ -20964,7 +20950,7 @@ SK
 zN
 zN
 Ml
-Ml
+bz
 Ml
 Ml
 zN
@@ -21268,7 +21254,7 @@ ZT
 zN
 zN
 Ml
-Ml
+Yu
 Ml
 Ml
 zN
@@ -28176,7 +28162,7 @@ rg
 rg
 Wx
 zd
-RF
+ux
 Lp
 Hi
 rg
@@ -29539,7 +29525,7 @@ mV
 mV
 xp
 kA
-YU
+dL
 Qa
 Qa
 ub
@@ -29692,10 +29678,10 @@ mV
 xp
 xp
 kw
-ln
+Qa
 Qa
 KL
-BO
+IH
 zn
 IH
 mr
@@ -30149,13 +30135,13 @@ mV
 mV
 xp
 fG
-Hj
+Fa
 rg
-Hj
+Fa
 ck
-Hj
+Fa
 rg
-Hj
+Fa
 fG
 xp
 mV
