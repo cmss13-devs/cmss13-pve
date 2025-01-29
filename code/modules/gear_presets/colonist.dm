@@ -136,9 +136,15 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+
+/datum/equipment_preset/colonist/bluecollar/japanese
+	name = "TWE Civilian Colonist, Blue-Collar"
+	ethnicity = JAPANESE_ETHNICITY
+	languages = list(LANGUAGE_JAPANESE)
+
 /datum/equipment_preset/colonist/miner
 
-	name = "Civilian Colonist, Blue-Collar (Miner)"
+	name = "UA Civilian Colonist, Blue-Collar (Miner)"
 	assignment = "Miner"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -197,25 +203,25 @@
 	//limbs
 	add_worker_shoe(new_human)
 
-/datum/equipment_preset/colonist/bluecollar/construction/spanish
+/datum/equipment_preset/colonist/construction/spanish
 	name = "LatAm Colonist, Blue-Collar (Construction)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-/datum/equipment_preset/colonist/bluecollar/construction/japanese
+/datum/equipment_preset/colonist/construction/japanese
 	name = "TWE Colonist, Blue-Collar (Construction)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
-/datum/equipment_preset/colonist/bluecollar/roughneck
-	name = "Civilian Colonist, Blue-Collar (Roughneck)"
+/datum/equipment_preset/colonist/roughneck
+	name = "UA Civilian Colonist, Blue-Collar (Roughneck)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 
-/datum/equipment_preset/colonist/bluecollar/roughneck/get_assignment(mob/living/carbon/human/new_human)
+/datum/equipment_preset/colonist/roughneck/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(50))
 		return "Driller"
 	if(prob(50))
@@ -224,7 +230,7 @@
 		return "Chainhand"
 	return "Floorhand"
 
-/datum/equipment_preset/colonist/bluecollar/roughneck/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/colonist/roughneck/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
 	//back
@@ -247,18 +253,18 @@
 	add_worker_gloves(new_human)
 	add_worker_shoe(new_human)
 
-/datum/equipment_preset/colonist/bluecollar/roughneck/spanish
+/datum/equipment_preset/colonist/roughneck/spanish
 	name = "LatAm Colonist, Blue-Collar (Roughneck)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-/datum/equipment_preset/colonist/bluecollar/roughneck/japanese
+/datum/equipment_preset/colonist/roughneck/japanese
 	name = "TWE Colonist, Blue-Collar (Roughneck)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/cook
-	name = "Civilian Colonist, Blue-Collar (Cook)"
+	name = "UA Civilian Colonist, Blue-Collar (Cook)"
 	assignment = "Cook"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -293,7 +299,7 @@
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/chef
-	name = "Civilian Colonist, Blue-Collar (Chef)"
+	name = "UA Civilian Colonist, Blue-Collar (Chef)"
 	assignment = "Chef"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -326,7 +332,7 @@
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/priest
-	name = "Civilian Colonist, Priest"
+	name = "UA Civilian Colonist, Priest"
 	assignment = "Spiritual Guidance Counselor"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -359,7 +365,7 @@
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/whitecollar
-	name = "Civilian Colonist, White-Collar"
+	name = "UA Civilian Colonist, White-Collar"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -396,7 +402,7 @@
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/whitecollar/exec
-	name = "Civilian Colonist, White-Collar (Corporate Exec)"
+	name = "UA Civilian Colonist, White-Collar (Corporate Exec)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -434,7 +440,7 @@
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/researcher
-	name = "Civilian Researcher"
+	name = "UA Civilian Researcher"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	assignment = "Research Associate"
@@ -489,7 +495,7 @@
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/doctor
-	name = "Civilian Doctor"
+	name = "UA Civilian Doctor"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	assignment = "Medical Doctor"
@@ -524,7 +530,7 @@
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/doctor/scrubs
-	name = "Civilian Doctor, Scrubs"
+	name = "UA Civilian Doctor, Scrubs"
 
 /datum/equipment_preset/colonist/doctor/scrubs/load_gear(mob/living/carbon/human/new_human)
 
@@ -559,7 +565,7 @@
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/admin
-	name = "Civilian Administrator"
+	name = "UA Civilian Administrator"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	assignment = "Administrator"
@@ -592,7 +598,7 @@
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/cargo
-	name = "Civilian Logistics Worker"
+	name = "UA Civilian Logistics Worker"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	assignment = "Logistical Technician"
@@ -633,7 +639,7 @@
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/technician
-	name = "Civilian Maintenance Technician"
+	name = "UA Civilian Maintenance Technician"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	assignment = "Maintenance Technician"
@@ -672,7 +678,7 @@
 
 
 /datum/equipment_preset/colonist/engineer
-	name = "Civilian Engineer"
+	name = "UA Civilian Engineer"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -712,17 +718,17 @@
 	add_worker_gloves(new_human)
 
 /datum/equipment_preset/colonist/engineer/spanish
-	name = "LatAm Engineer"
+	name = "LatAm Civilian Engineer"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/engineer/japanese
-	name = "TWE Engineer"
+	name = "TWE Civilian Engineer"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/operations
-	name = "Civilian Operations Technician"
+	name = "UA Civilian Operations Technician"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	assignment = "Operations Technician"
@@ -743,12 +749,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
 /datum/equipment_preset/colonist/operations/spanish
-	name = "LatAm Operations Technician"
+	name = "LatAm Civilian Operations Technician"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/operations/japanese
-	name = "TWE Operations Technician"
+	name = "TWE Civilian Operations Technician"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
@@ -770,8 +776,18 @@
 	//limb
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 
+/datum/equipment_preset/colonist/prisoner/spanish
+	name = "LatAm Prisoner"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/prisoner/japanese
+	name = "TWE Prisoner"
+	ethnicity = JAPANESE_ETHNICITY
+	languages = list(LANGUAGE_JAPANESE)
+
 /datum/equipment_preset/colonist/security
-	name = "Civilian Security Guard, Generic"
+	name = "UA Civilian Security Guard, Generic"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	assignment = "Security Officer"
@@ -808,7 +824,7 @@
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/security/weyland
-	name = "Civilian Security Guard, Wey-Yu"
+	name = "UA Civilian Security Guard, Wey-Yu"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	faction_group = FACTION_LIST_WY_COLONY
@@ -846,7 +862,7 @@
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/security/trijent
-	name = "Civilian Security Guard, Trijent Corp"
+	name = "UA Civilian Security Guard, Trijent Corp"
 	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -881,7 +897,7 @@
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/security/prison
-	name = "Civilian Security Guard, Prison"
+	name = "UA, Prison Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	faction_group = FACTION_LIST_UA_COLONY
@@ -916,12 +932,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/colonist/security/prison/spanish
-	name = "LatAm Civilian Security Guard, Prison"
+	name = "LatAm, Prison Guard"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/security/guard
-	name = "Civilian Security Guard, UA Colonial Guard"
+	name = "UA, Colonial Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction_group = FACTION_LIST_UA_COLONY
 	assignment = "Colonial Militiaman"
@@ -972,10 +988,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/colonist/security/guard/spanish
-	name = "LatAm Security Guard, UA Colonial Guard"
+	name = "LatAm, Colonial Guard"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
-
 
 #undef AMERICAN_ETHNICITY
 #undef LATIN_AMERICAN_ETHNICITY
