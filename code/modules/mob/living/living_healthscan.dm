@@ -11,6 +11,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 /datum/health_scan
 	var/mob/living/target_mob
 	var/detail_level = DETAIL_LEVEL_FULL
+	var/atom/scanner_device = FALSE
 
 /datum/health_scan/New(mob/target)
 	. = ..()
@@ -22,7 +23,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	return ..()
 
 /// This is the proc for interacting with, or looking at, a mob's health display. Also contains skillchecks and the like. You may NOT call tgui interact directly, and you MUST set the detail level.
-/datum/health_scan/proc/look_at(mob/user, detail = DETAIL_LEVEL_FULL, bypass_checks = FALSE, ignore_delay = TRUE, alien = FALSE, datum/tgui/ui = null)
+/datum/health_scan/proc/look_at(mob/user, detail = DETAIL_LEVEL_FULL, bypass_checks = FALSE, ignore_delay = TRUE, alien = FALSE, datum/tgui/ui = null, associated_equipment = FALSE, associated_user = FALSE)
 	if(!bypass_checks)
 		if(HAS_TRAIT(target_mob, TRAIT_FOREIGN_BIO) && !alien)
 			to_chat(user, SPAN_WARNING("ERROR: Unknown biology detected."))
@@ -483,6 +484,24 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 			if(ishuman(target_mob))
 				var/mob/living/carbon/human/target_human = target_mob
 				target_human.change_holo_card(ui.user)
+				return TRUE
+		if("previous_scan")
+			if(ishuman(target_mob))
+				//var/mob/living/carbon/human/target_human = target_mob
+				if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
+					var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+					analyzer.currently_selected_last_scan = analyzer.currently_selected_last_scan - 1
+					analyzer.tgui_interact(ui.user)
+				return TRUE
+		if("next_scan")
+			if(ishuman(target_mob))
+				var/mob/living/carbon/human/target_human = target_mob
+
+				return TRUE
+		if("print_scan")
+			if(ishuman(target_mob))
+				var/mob/living/carbon/human/target_human = target_mob
+
 				return TRUE
 
 /// legacy proc for to_chat messages on health analysers

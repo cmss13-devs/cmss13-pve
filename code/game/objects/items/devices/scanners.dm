@@ -101,7 +101,7 @@ FORENSIC SCANNER
 			last_health_display.target_mob = M
 		SStgui.close_user_uis(user, src)
 		last_scan = last_health_display.ui_data(user, DETAIL_LEVEL_HEALTHANALYSER)
-		last_health_display.look_at(user, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien)
+		last_health_display.look_at(user, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien, associated_equipment = src)
 	to_chat(user, SPAN_NOTICE("[user] has analyzed [M]'s vitals."))
 	playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
 	src.add_fingerprint(user)
@@ -129,8 +129,10 @@ FORENSIC SCANNER
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "HealthScan", "Stored Health Scan")
+		last_health_display.scanner_device = src
+		ui.status = UI_INTERACTIVE
 		ui.open()
-		ui.set_autoupdate(FALSE)
+		ui.set_autoupdate(TRUE)
 
 /obj/item/device/healthanalyzer/ui_data(mob/user)
 	return last_scan
@@ -191,6 +193,7 @@ FORENSIC SCANNER
 	var/mode = 1
 	var/report_delay_counter = 0
 	var/report_delay_threshold = 3 //every three processes, record to report buffer
+	var/currently_selected_last_scan = 0
 	var/mob/living/carbon/human/connected_to
 	var/mob/living/carbon/human/connected_from
 	var/blood_type = null
@@ -216,12 +219,14 @@ FORENSIC SCANNER
 		to_chat(user, "There is no scan data to print.")
 		return
 	var/obj/item/paper/print_report = new /obj/item/paper
-	print_report.info += "Device ID:" + serial_number + "\n" + jointext(buffer_for_report,"<br>")
+	//print_report.info += "Device ID:" + serial_number + "\n" + jointext(pick(buffer_for_report),"<br>")
+	last_scan = pick(buffer_for_report)
+	tgui_interact(user)
 	//print_report.info_links += jointext(buffer_for_report,"<br>")
 	//print_report.updateinfolinks()
 	print_report.update_icon()
-	user.put_in_hands(print_report)
-	user.visible_message("\The [src] spits out a piece of paper.")
+	//user.put_in_hands(print_report)
+	visible_message("\The [src] spits out a piece of paper.")
 
 /obj/item/device/healthanalyzer/soul/proc/perform_scan_and_report()
 	if(ishuman(connected_from))
@@ -235,14 +240,17 @@ FORENSIC SCANNER
 				last_health_display.target_mob = connected_to
 				SStgui.close_user_uis(connected_from, src)
 				last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
-				last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = FALSE, ignore_delay = FALSE, alien = alien)
+				last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = TRUE, ignore_delay = FALSE, alien = alien, associated_equipment = src, associated_user = FALSE)
 		src.add_fingerprint()
 	if(report_delay_counter >= report_delay_threshold)
 		to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals.")) //lol
 		if(findtext(last_scan,"<table")) //don't run health_scan_table a second time if the data was already gathered this tick
 			buffer_for_report.Add(last_scan)
 		else
-			buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)) //Using TGUI mode, gather data again...
+			//buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)) //Using TGUI mode, gather data again...
+			if(last_scan)
+				buffer_for_report += list(last_scan)
+				currently_selected_last_scan = buffer_for_report.len
 		report_delay_counter = -1 //reset counter
 		if(buffer_for_report.len > 40)
 			buffer_for_report.Cut(1,3) //stop memory leak, maybe
@@ -275,7 +283,7 @@ FORENSIC SCANNER
 	var/health_percentage = connected_to.health - connected_to.halloss
 	// if oxyloss is more than half of the remaining damage to instant death, make a different beep
 	var/midpoint = abs(((connected_to.getBruteLoss() + connected_to.getFireLoss() + connected_to.getToxLoss()) + (HEALTH_THRESHOLD_DEAD-100)) / 2)
-	if (connected_to.oxyloss >= midpoint)
+	if (connected_to.oxyloss >= midpoint && connected_to.stat != 1)
 		oxygen_alarm_loop.start()
 	else
 		oxygen_alarm_loop.stop()
