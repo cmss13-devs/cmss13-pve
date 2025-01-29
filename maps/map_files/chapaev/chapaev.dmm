@@ -32,6 +32,17 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
+"aj" = (
+/obj/structure/bookcase{
+	density = 0;
+	icon_state = "book-5";
+	pixel_y = 18;
+	can_block_movement = 0;
+	opacity = 0
+	},
+/obj/item/book/manual/engineering_hacking,
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/platoon_sergeant)
 "aq" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/phone_base/upp_net{
@@ -309,9 +320,6 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
 "bT" = (
-/obj/structure/machinery/computer/crew/alt{
-	dir = 1
-	},
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
@@ -319,6 +327,16 @@
 	light_power = 0.8;
 	light_range = 4;
 	light_color = "#e7c0a4"
+	},
+/obj/structure/machinery/computer/med_data/laptop{
+	pixel_x = -5;
+	dir = 1;
+	pixel_y = -3
+	},
+/obj/structure/machinery/computer/crew/alt{
+	dir = 1;
+	pixel_x = 13;
+	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
@@ -386,11 +404,13 @@
 /area/golden_arrow/cryo_cells)
 "cH" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/computer/emails{
-	dir = 4
-	},
 /obj/structure/machinery/light/small{
 	dir = 8
+	},
+/obj/structure/machinery/computer/secure_data/noaccess{
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 2
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
@@ -477,12 +497,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
-"dm" = (
-/obj/structure/sign/safety/maint{
-	pixel_y = -32
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_commander_rooms)
 "do" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/floor3/east,
@@ -1055,15 +1069,9 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "gD" = (
-/obj/structure/machinery/door/airlock/prison_hatch{
-	dir = 8;
-	color = "#8B9490";
+/obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Astronavigational Deck";
 	req_one_access_txt = "240;241"
-	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "\improper Other Sections";
-	dir = 4
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
@@ -2339,6 +2347,10 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
 "qi" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/roller,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "qo" = (
@@ -2487,7 +2499,9 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/clothing/accessory/stethoscope,
+/obj/item/clothing/accessory/stethoscope{
+	pixel_x = 2
+	},
 /obj/item/clothing/accessory/armband/med,
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
@@ -3634,7 +3648,7 @@
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Other Sections"
 	},
-/turf/open/floor/strata/floor3,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
 "xF" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -4116,6 +4130,9 @@
 	pixel_y = 18;
 	can_block_movement = 0
 	},
+/obj/item/book/manual/chef_recipes,
+/obj/item/book/manual/barman_recipes,
+/obj/item/book/manual/engineering_hacking,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
 "Ay" = (
@@ -4449,7 +4466,7 @@
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Maintenance Tunnels"
 	},
-/turf/open/floor/strata/floor3,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
 "CT" = (
 /obj/structure/machinery/light/small{
@@ -5410,6 +5427,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "Iw" = (
+/obj/structure/machinery/door/poddoor/almayer/open,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
 "Ix" = (
@@ -5529,27 +5547,13 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "Jk" = (
-/obj/structure/noticeboard{
-	pixel_y = 4;
-	pixel_x = -32;
-	can_block_movement = 0
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
 	},
-/obj/structure/surface/table{
-	color = "#8B7B5B"
-	},
-/obj/item/prop/magazine/book/uppbooklet{
-	pixel_y = 4;
-	pixel_x = -1;
-	layer = 2.9
-	},
-/obj/item/clothing/head/helmet/marine/veteran/bear{
-	anchored = 1;
-	pixel_x = -32
-	},
-/obj/item/book/codebook/upp{
-	icon_state = "book_green";
-	pixel_y = 4;
-	pixel_x = 4
+/obj/structure/machinery/computer/secure_data/noaccess{
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 2
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
@@ -6501,14 +6505,24 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "PT" = (
-/obj/structure/surface/table{
-	color = "#8B7B5B"
-	},
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/book/codebook/upp{
+	icon_state = "book_green";
+	pixel_y = 4;
+	pixel_x = 4
+	},
+/obj/item/prop/magazine/book/uppbooklet{
+	pixel_y = 4;
+	pixel_x = -1;
+	layer = 2.9
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
@@ -7294,6 +7308,10 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"Vw" = (
+/obj/structure/machinery/door/poddoor/almayer/open,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
 "Vz" = (
 /obj/item/device/lightreplacer{
 	pixel_x = -5
@@ -7667,10 +7685,10 @@
 /area/golden_arrow/briefing)
 "Yt" = (
 /obj/structure/machinery/door/airlock/upp_utility{
-	name = "\improper CIC";
+	name = "\improper Combat Information Center";
 	req_one_access_txt = "240;241"
 	},
-/turf/open/floor/strata/floor3,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
 "Yv" = (
 /obj/structure/foamed_metal,
@@ -18784,7 +18802,7 @@ FH
 ts
 ts
 XL
-gt
+aj
 Ix
 sJ
 Nv
@@ -20883,7 +20901,7 @@ DL
 uU
 yw
 UF
-Ay
+Vw
 ya
 yw
 Ky
@@ -21035,7 +21053,7 @@ DL
 uU
 yw
 UF
-Ay
+Vw
 ya
 yw
 Ky
@@ -21187,7 +21205,7 @@ DL
 uU
 yw
 UF
-Ay
+Vw
 ya
 yw
 Ky
@@ -27091,7 +27109,7 @@ xp
 xp
 xp
 Yt
-Yt
+xp
 xp
 xp
 xp
@@ -27402,7 +27420,7 @@ yo
 yo
 yo
 Qa
-CS
+LB
 mV
 mV
 mV
@@ -27553,8 +27571,8 @@ WG
 WG
 WG
 Qa
-dm
-xp
+Qa
+LB
 mV
 mV
 mV
