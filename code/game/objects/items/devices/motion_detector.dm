@@ -303,6 +303,15 @@
 	if(user.client)
 		user.client.remove_from_screen(DB)
 
+
+/obj/item/device/motiondetector/upp
+	name = "motion detector"
+	desc = "A device that detects movement, but ignores marines. Can also be used to scan a vehicle interior from outside, but accuracy of such scanning is low and there is no way to differentiate friends from foes."
+	icon = 'icons/obj/items/upp-items.dmi'
+	icon_state = "detector"
+	item_state = "upp_motion_detector"
+	iff_signal = FACTION_UPP
+
 /obj/item/device/motiondetector/m717
 	name = "M717 pocket motion detector"
 	desc = "This prototype motion detector sacrifices versatility, having only the long-range mode, for size, being so small it can even fit in pockets."
