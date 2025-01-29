@@ -337,6 +337,16 @@
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"cd" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_power = 0.8;
+	light_range = 2;
+	light_color = "#e7c0a4";
+	invisibility = 100
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
 "ce" = (
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/floor3/east,
@@ -1373,16 +1383,6 @@
 "jd" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/upp_wall/grey,
-/area/golden_arrow/briefing)
-"jg" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 4;
-	name = "\improper Other Sections"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "jj" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -5263,12 +5263,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/engineering)
-"HM" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/briefing)
 "HS" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
@@ -6880,12 +6874,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
-"Sn" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/turf/open/space/basic,
-/area/space)
 "So" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -7266,13 +7254,6 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
-"Vj" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/briefing)
 "Vn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -20010,7 +19991,7 @@ Xt
 aI
 Yi
 hi
-Jv
+mf
 ay
 YU
 xp
@@ -21080,7 +21061,7 @@ Hf
 Tl
 uM
 Hf
-Hf
+cd
 Hf
 oH
 SB
@@ -22318,7 +22299,7 @@ Wk
 Wk
 ru
 wW
-jg
+nO
 ru
 ru
 cG
@@ -22469,8 +22450,8 @@ my
 my
 Wk
 ru
-jL
-CB
+nR
+ni
 ru
 cG
 cG
@@ -22622,7 +22603,7 @@ my
 Wk
 ru
 jL
-CB
+Hc
 ru
 cG
 IL
@@ -22774,7 +22755,7 @@ my
 Wk
 ru
 jL
-CB
+Hc
 ru
 cG
 IL
@@ -22926,7 +22907,7 @@ my
 Wk
 ru
 jL
-HM
+Hc
 ru
 cG
 IL
@@ -23077,8 +23058,8 @@ mV
 my
 Wk
 ru
-Vj
-Rz
+jL
+wP
 ru
 cG
 IL
@@ -23229,8 +23210,8 @@ mV
 my
 Wk
 ru
-wW
-jg
+jL
+wP
 ru
 cG
 IL
@@ -23380,10 +23361,10 @@ mV
 mV
 my
 my
-my
-mV
-Sn
-IL
+ru
+jL
+Hc
+bV
 IL
 IL
 mV
@@ -23532,10 +23513,10 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
+ru
+jL
+Hc
+ru
 mV
 mV
 mV
@@ -23684,10 +23665,10 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
+ru
+jL
+Hc
+ru
 mV
 mV
 mV
@@ -23836,10 +23817,10 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
+ru
+tc
+So
+ru
 mV
 mV
 mV
