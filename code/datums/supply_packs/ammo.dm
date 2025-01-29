@@ -286,24 +286,28 @@
 
 /datum/supply_packs/ammo_hpr
 	contains = list(
-		/obj/item/ammo_magazine/rifle/lmg,
-		/obj/item/ammo_magazine/rifle/lmg,
+		/obj/item/ammo_magazine/hpr_box,
+		/obj/item/ammo_magazine/hpr_box,
+		/obj/item/ammo_magazine/hpr_box,
+		/obj/item/ammo_magazine/hpr_box,
 	)
-	name = "M41AE2 HPR Magazines crate (HPR ammo box x2)"
+	name = "M41AE2 magazine crate"
 	cost = 20
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "\improper M41AE2 HPR magazines crate"
+	containername = "\improper M41AE2 magazine crate"
 	group = "Ammo"
 
 /datum/supply_packs/ammo_hpr_holo
 	contains = list(
-		/obj/item/ammo_magazine/rifle/lmg/holo_target,
-		/obj/item/ammo_magazine/rifle/lmg/holo_target,
+		/obj/item/ammo_magazine/hpr_box/holo_target,
+		/obj/item/ammo_magazine/hpr_box/holo_target,
+		/obj/item/ammo_magazine/hpr_box/holo_target,
+		/obj/item/ammo_magazine/hpr_box/holo_target,
 	)
-	name = "M41AE2 HPR Holo-Target Magazines crate (HPR HT ammo box x2)"
+	name = "M41AE2 magazine crate"
 	cost = 20
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "\improper M41AE2 HPR holo-target magazines crate"
+	containername = "\improper M41AE2 holo-target magazine crate"
 	group = "Ammo"
 
 /datum/supply_packs/ammo_xm51
@@ -477,8 +481,8 @@
 		/obj/item/ammo_magazine/rifle/m49a/incendiary,
 		/obj/item/ammo_magazine/rifle/m41aMK1,
 		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
-		/obj/item/ammo_magazine/rifle/m49a,
-		/obj/item/ammo_magazine/rifle/lmg,
+		/obj/item/ammo_magazine/rifle/m4ra,
+		/obj/item/ammo_magazine/hpr_box,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/pistol,

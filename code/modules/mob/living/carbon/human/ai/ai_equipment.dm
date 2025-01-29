@@ -305,9 +305,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
 	spawn_merc_weapon(new_human,1,6)
-	spawn_weapon(/obj/item/weapon/gun/rifle/lmg, /obj/item/ammo_magazine/rifle/lmg, new_human, 0, 5) //HPR mini-spec
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/lmg/holo_target, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/lmg/holo_target, WEAR_IN_BACK)
+	spawn_weapon(/obj/item/weapon/gun/rifle/lmg, /obj/item/ammo_magazine/hpr_box, new_human, 0, 5) //HPR mini-spec
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/hpr_box/holo_target, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/hpr_box/holo_target, WEAR_IN_BACK)
 
 /datum/equipment_preset/other/freelancer/medic/ai
 	name = "Freelancer (Medic) (AI)"

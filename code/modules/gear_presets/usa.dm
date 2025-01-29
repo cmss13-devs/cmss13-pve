@@ -177,7 +177,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lmg/army, WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41e2ap, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/army, WEAR_WAIST)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
