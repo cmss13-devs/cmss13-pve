@@ -606,7 +606,12 @@
 	if(prob(85))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black(new_human), WEAR_BODY)
+	var/obj/item/clothing/under/liaison_suit/black/uniform = new()
+	var/random_uniform = rand(1,2)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/blue(new_human), WEAR_ACCESSORY)
 	//jacket
 	if(prob(75))
@@ -623,10 +628,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/colonist/security/weyland/tactical
-	name = "Civilian Security Guard, Wey-Yu (Tactical)"
+	name = "Civilian Security Guard, Wey-Yu (Tactical SMG)"
 	assignment = "Weyland-Yutani Corporate Tactical Response Officer"
-	paygrades = list(PAY_SHORT_CPO = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/wy_goon
 
 /datum/equipment_preset/colonist/security/weyland/tactical/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -663,7 +666,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/colonist/security/weyland/tactical/lead
-	name = "Civilian Security Guard, Wey-Yu (Tactical Lead)"
+	name = "Civilian Security Guard, Wey-Yu (Tactical Shotgun)"
 
 /datum/equipment_preset/colonist/security/weyland/tactical/lead/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -686,7 +689,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/slug, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ballistic, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/slug, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/vp70, WEAR_IN_BELT)
