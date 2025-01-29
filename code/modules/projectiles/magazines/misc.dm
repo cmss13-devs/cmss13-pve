@@ -44,13 +44,13 @@
 /obj/item/ammo_magazine/hpr_box/ap
 	name = "\improper M41AE2 AP ammo box (10x24mm)"
 	desc = "A magazine of steelcore armor piercing rounds for the M41AE2 Heavy Pulse Rifle."
-	default_ammo = /datum/ammo/bullet/rifle/heap
+	default_ammo = /datum/ammo/bullet/rifle/ap
 	max_rounds = 300
 	gun_type = /obj/item/weapon/gun/rifle/lmg
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 /obj/item/ammo_magazine/hpr_box/heap
-	name = "\improper M41AE2 APHE ammo box (10x24mm)"
+	name = "\improper M41AE2 HEAP ammo box (10x24mm)"
 	desc = "A magazine of M903 armor piercing high explosive rounds for the M41AE2 Heavy Pulse Rifle."
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	max_rounds = 300

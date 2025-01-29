@@ -1265,7 +1265,6 @@
 	fire_sound = "gun_pulse"
 	aim_slowdown = SLOWDOWN_ADS_LMG
 	current_mag = /obj/item/ammo_magazine/hpr_box
-	starting_attachment_types = list(/obj/item/attachable/bipod/integral)
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
@@ -1291,7 +1290,6 @@
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
-
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_config_values()
 	..()
@@ -1321,7 +1319,7 @@
 
 /obj/item/weapon/gun/rifle/lmg/army
 	current_mag = /obj/item/ammo_magazine/hpr_box/ap
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel)
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel, /obj/item/attachable/bipod/integral)
 /obj/item/weapon/gun/rifle/lmg/army/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
