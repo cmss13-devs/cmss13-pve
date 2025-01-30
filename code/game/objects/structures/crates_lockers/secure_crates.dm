@@ -122,19 +122,19 @@
 	icon_unlocked = "secure_unlocked_ammo"
 
 /obj/structure/closet/crate/secure/upp
-	name = "secure military crate"
-	desc = "A secure military crate"
-	icon_state = "secure_locked_uppammo"
-	icon_opened = "secure_open_uppammo"
-	icon_locked = "secure_locked_uppammo"
-	icon_unlocked = "secure_unlocked_uppammo"
-
-/obj/structure/closet/crate/secure/upp/black
-
+	name = "secure crate"
+	desc = "An electronically locked crate owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on its front."
 	icon_state = "secure_locked_uppcrate"
 	icon_opened = "secure_open_uppcrate"
 	icon_locked = "secure_locked_uppcrate"
 	icon_unlocked = "secure_unlocked_uppcrate"
+
+/obj/structure/closet/crate/secure/upp/alt
+
+	icon_state = "secure_locked_uppcratealt"
+	icon_opened = "secure_open_uppcratealt"
+	icon_locked = "secure_locked_uppcratealt"
+	icon_unlocked = "secure_unlocked_uppcratealt"
 
 /obj/structure/closet/crate/secure/explosives
 	name = "explosives crate"

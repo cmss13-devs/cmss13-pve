@@ -213,6 +213,33 @@
 	if(locate(/obj/item/device/sentry_computer) in contents)
 		overlays += image(icon, "+sentrycomp")
 
+/obj/item/storage/box/guncase/heavy/sentryupp
+	name = "\improper UPPAC 32-H sentry gun case"
+	desc = "A gun case containing the UPPAC 32-H sentry unit, a spare drum, and a sentry laptop."
+	icon_state = "uppsentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry/upp, /obj/item/ammo_magazine/sentry/upp, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentryupp/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/upp(src)
+	new /obj/item/ammo_magazine/sentry/upp(src)
+	new /obj/item/device/sentry_computer(src)
+
+/obj/item/storage/box/guncase/heavy/sentryupp/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppbigcasealt_lid_open")
+	else
+		overlays += image(icon, "uppsentrycase_lid")
+		return
+	if(locate(/obj/item/defenses/handheld/sentry) in contents)
+		overlays += image(icon, "+uppsentry")
+	if(locate(/obj/item/ammo_magazine/sentry) in contents)
+		overlays += image(icon, "+uppsentrymag")
+	if(locate(/obj/item/device/sentry_computer) in contents)
+		overlays += image(icon, "+sentrycomp")
+
+
 /obj/item/storage/box/guncase/heavy/shotgun
 	name = "\improper Ithaca 37 shotgun case"
 	desc = "A heavy case for storing an Ithaca 37 pump-action shotgun, an antique from a bygone era of human history."
@@ -260,7 +287,7 @@
 /obj/item/storage/box/guncase/heavy/shotgun/type23/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcase_lid_open")
+		overlays += image(icon, "uppbigcasealt_lid_open")
 	else
 		overlays += image(icon, "ks29case_lid")
 		return
