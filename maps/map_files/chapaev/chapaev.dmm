@@ -445,7 +445,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "cG" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
 "cH" = (
@@ -1471,6 +1471,9 @@
 	pixel_x = 8;
 	pixel_y = 10
 	},
+/obj/item/prop/magazine/book/inframaterialism{
+	icon_state = "book_sop"
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/canteen)
 "jp" = (
@@ -1820,7 +1823,8 @@
 	},
 /obj/item/storage/box/guncase/heavy/shotgun/type23{
 	pixel_y = 13;
-	pixel_x = 1
+	pixel_x = 1;
+	layer = 3.03
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/multi_tiles,
@@ -2197,7 +2201,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
 "oI" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -2230,9 +2234,6 @@
 	pixel_x = -17;
 	pixel_y = 3
 	},
-/obj/structure/surface/table{
-	color = "#8B7B5B"
-	},
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_color = "#e7c0a4";
@@ -2254,6 +2255,9 @@
 	name = "teacup";
 	desc = "A small chipped teacup.";
 	pixel_x = 6
+	},
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
@@ -3062,7 +3066,7 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "te" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
 "tf" = (
@@ -3112,7 +3116,7 @@
 /turf/open/floor/corsat/squares,
 /area/golden_arrow/platoon_commander_rooms)
 "ts" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/golden_arrow/platoon_sergeant)
 "tu" = (
@@ -3235,7 +3239,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "un" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
 "up" = (
@@ -3338,6 +3342,24 @@
 	color = "#8B795C"
 	},
 /obj/structure/closet/crate/secure/upp,
+/obj/item/storage/box/packet/high_explosive/upp{
+	color = "#8B795C"
+	},
+/obj/item/storage/box/packet/high_explosive/upp{
+	color = "#8B795C"
+	},
+/obj/item/storage/box/packet/high_explosive/upp{
+	color = "#8B795C"
+	},
+/obj/item/storage/box/packet/high_explosive/upp{
+	color = "#8B795C"
+	},
+/obj/item/storage/box/packet/high_explosive/upp{
+	color = "#8B795C"
+	},
+/obj/item/storage/box/packet/high_explosive/upp{
+	color = "#8B795C"
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "uM" = (
@@ -4028,7 +4050,7 @@
 /turf/open/floor/strata/grey_multi_tiles,
 /area/golden_arrow/hangar)
 "yy" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/golden_arrow/medical)
 "yA" = (
@@ -4049,9 +4071,6 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
-/obj/structure/surface/table{
-	color = "#8B7B5B"
-	},
 /obj/item/book/codebook/upp{
 	icon_state = "book_green";
 	pixel_y = 4;
@@ -4060,6 +4079,9 @@
 /obj/item/prop/magazine/book/uppbooklet{
 	pixel_x = 4;
 	pixel_y = 3
+	},
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4891,7 +4913,8 @@
 "Ei" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/emails{
-	dir = 8
+	dir = 8;
+	pixel_y = 4
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
@@ -4998,7 +5021,8 @@
 	},
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp,
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp{
-	pixel_y = 8
+	pixel_y = 8;
+	layer = 3.2
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5528,7 +5552,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/engineering)
 "HS" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/golden_arrow/platoon_commander_rooms)
 "HT" = (
@@ -6483,9 +6507,8 @@
 	light_color = "#e7c0a4";
 	light_range = 4;
 	anchored = 1;
-	pixel_y = -8;
+	pixel_y = -7;
 	pixel_x = 8;
-	on = 1;
 	layer = 5
 	},
 /obj/effect/decal/warning_stripes{
@@ -6572,8 +6595,8 @@
 	pixel_x = 1
 	},
 /obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya{
-	pixel_y = 9;
-	pixel_x = 2
+	pixel_y = 6;
+	pixel_x = 6
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -7166,8 +7189,8 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "Sd" = (
-/obj/structure/foamed_metal,
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
+/obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
 "Sh" = (
@@ -7249,7 +7272,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Su" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
@@ -7758,7 +7781,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "Wk" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
 "Wm" = (
@@ -8031,7 +8054,7 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
 "Yn" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "Yo" = (
@@ -8072,7 +8095,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "Yv" = (
-/obj/structure/foamed_metal,
+/obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
 /area/golden_arrow/dorms)
 "Yw" = (
@@ -19753,7 +19776,7 @@ Sq
 vp
 Jf
 Jf
-Jf
+xf
 Mj
 Al
 by
