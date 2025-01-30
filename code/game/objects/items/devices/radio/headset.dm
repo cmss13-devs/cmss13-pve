@@ -649,6 +649,9 @@
 		)
 	frequency = ALPHA_FREQ
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/support
+	frequency = BRAVO_FREQ
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"
 	desc = "Issued exclusively to Marine Raiders and members of the USCM's Force Reconnaissance."

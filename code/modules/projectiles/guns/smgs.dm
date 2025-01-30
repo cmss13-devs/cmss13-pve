@@ -667,6 +667,7 @@
 	gun_category = GUN_CATEGORY_SMG
 	civilian_usable_override = TRUE
 	start_automatic = FALSE
+	flags_equip_slot = SLOT_WAIST
 	var/nailing_speed = 2 SECONDS //Time to apply a sheet for patching. Also haha name. Try to keep sync with soundbyte duration
 	var/repair_sound = 'sound/weapons/nailgun_repair_long.ogg'
 	var/material_per_repair = 1

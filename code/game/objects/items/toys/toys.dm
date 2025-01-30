@@ -695,3 +695,99 @@
 
 /obj/item/toy/plush/shark/alt
 	icon_state = "shark_alt"
+
+/obj/item/toy/minesweeper
+	name = "minesweeper"
+	desc = "Pre-programmed microcomputer device with minesweeper game installed. You can set up custom rules or play random."
+	icon = 'icons/obj/items/devices.dmi'
+	icon_state = "minesweeper"
+	item_state = "signaller"
+	var/datum/minigame/minesweeper/minesweeper
+	var/grid_x = 9
+	var/grid_y = 9
+	var/mine_num = 10
+	var/randomized = TRUE
+
+	var/winstreak = 0
+
+/obj/item/toy/minesweeper/get_examine_text(mob/user)
+	. = ..()
+	if(randomized)
+		. += SPAN_NOTICE("Random Minefield: <b>YES!</b>")
+	else
+		. += SPAN_NOTICE("Minefield Size: [grid_x]x[grid_y]")
+		. += SPAN_NOTICE("Mines Amount: [mine_num]")
+	. += SPAN_NOTICE("Winstreak: [winstreak]. Your winstreak will be reset if you reconfigure the game.")
+
+/obj/item/toy/minesweeper/Initialize()
+	. = ..()
+	minesweeper = new()
+	minesweeper.setup_game(randomized, grid_x, grid_y, mine_num)
+
+/obj/item/toy/minesweeper/attack_self(mob/user)
+	tgui_interact(user)
+
+/obj/item/toy/minesweeper/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "Minesweeper")
+		ui.open()
+
+/obj/item/toy/minesweeper/ui_data(mob/user)
+	var/list/data = list()
+
+	data["grid"] = minesweeper.grid
+	data["width"] = minesweeper.grid_x*30
+	data["height"] = minesweeper.grid_y*30
+	data["mines"] = "Mines amount: [num2text(minesweeper.grid_mines)]."
+
+	return data
+
+/obj/item/toy/minesweeper/ui_act(action, params)
+	. = ..()
+	if(.)
+		return
+	if(action == "button_press")
+		if(minesweeper.button_press(text2num(params["choice_y"]), text2num(params["choice_x"])))
+			playsound(src, 'sound/machines/terminal_button01.ogg', 50, 1)
+		else
+			to_chat(usr, SPAN_WARNING("You exploded!"))
+			playsound(src, 'sound/effects/Explosion2OLD.ogg', 10, 1)
+			winstreak = 0
+			minesweeper.setup_game(randomized, grid_x, grid_y, mine_num)
+			return TRUE
+
+	if(action == "button_flag")
+		if(minesweeper.button_flag(text2num(params["choice_y"]), text2num(params["choice_x"])))
+			playsound(src, 'sound/machines/terminal_button02.ogg', 50, 1)
+
+	if(minesweeper.check_complete())
+		won(usr)
+
+	return TRUE
+
+/obj/item/toy/minesweeper/proc/won(mob/user)
+	winstreak++
+	playsound(src, 'sound/machines/pda_ping.ogg', 50, 1)
+	to_chat(user, SPAN_NOTICE("<b>You won! Winstreak: [winstreak].</b>"))
+	minesweeper.setup_game(randomized, grid_x, grid_y, mine_num)
+
+/obj/item/toy/minesweeper/verb/configure()
+	set name = "Configure Minesweeper"
+	set category = "Object"
+	set src in usr
+
+	if(tgui_alert(usr, "Randomize minefield?", "Configure", list("Yes", "No")) == "Yes")
+		randomized = TRUE
+		return
+	else
+		randomized = FALSE
+
+	var/new_grid_x = tgui_input_number(usr, "Minefield Width", "Configure", 9)
+	grid_x = clamp(new_grid_x, 9, 30)
+	var/new_grid_y = tgui_input_number(usr, "Minefield Height", "Configure", 9)
+	grid_y = clamp(new_grid_y, 9, 30)
+	var/new_mines = tgui_input_number(usr, "Mines Amount", "Configure", 10)
+	mine_num = clamp(new_mines, 10, 99)
+	minesweeper.setup_game(randomized, grid_x, grid_y, mine_num)
+	winstreak = 0
