@@ -14382,7 +14382,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_street)
 "efy" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/strata_outpost/reinforced/hull,
 /area/lv522/atmos/filt)
 "efA" = (
 /obj/effect/decal/cleanable/dirt,
@@ -39505,9 +39505,6 @@
 "lpR" = (
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
-"lqb" = (
-/turf/closed/wall/strata_outpost/reinforced,
-/area/lv522/atmos/west_reactor)
 "lqe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/filingcabinet{
@@ -44228,6 +44225,9 @@
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/engineering)
+"mKg" = (
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/lv522/atmos/west_reactor)
 "mKj" = (
 /obj/effect/step_trigger/teleporter_vector/damage{
 	vector_x = 192
@@ -52441,7 +52441,7 @@
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/fitness)
 "oUq" = (
-/turf/closed/wall/strata_outpost/reinforced,
+/turf/closed/wall/strata_outpost/reinforced/hull,
 /area/lv522/atmos/east_reactor)
 "oUC" = (
 /obj/effect/decal/cleanable/dirt,
@@ -52851,6 +52851,9 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/basement/colony)
+"paR" = (
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/lv522/atmos/reactor_garage)
 "paW" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -101493,15 +101496,15 @@ wPA
 qYy
 qYy
 qYy
-lqb
-lqb
-lqb
+mKg
+mKg
+mKg
 qUW
 igp
 cDi
-lqb
-lqb
-lqb
+mKg
+mKg
+mKg
 lJl
 lUK
 hFX
@@ -102311,15 +102314,15 @@ wPA
 wPA
 wPA
 wPA
-lqb
-lqb
-lqb
-lqb
-lqb
-lqb
-lqb
-lqb
-lqb
+mKg
+mKg
+mKg
+mKg
+mKg
+mKg
+mKg
+mKg
+mKg
 uMb
 hFX
 ylm
@@ -103134,9 +103137,9 @@ wPA
 wPA
 wPA
 wPA
-lqb
-lqb
-lqb
+mKg
+mKg
+mKg
 uMb
 aFA
 ylm
@@ -103952,8 +103955,8 @@ mbg
 oPI
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 uMb
 aFA
 ylm
@@ -104769,7 +104772,7 @@ ojI
 kkz
 wPA
 wPA
-lqb
+mKg
 lxW
 mOK
 aFA
@@ -105586,7 +105589,7 @@ kCM
 gjJ
 wPA
 wPA
-lqb
+mKg
 pRh
 kBq
 aFA
@@ -106403,7 +106406,7 @@ iHJ
 xMI
 wPA
 wPA
-lqb
+mKg
 qUW
 lUK
 aFA
@@ -107220,8 +107223,8 @@ kiy
 ftJ
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 uMb
 aFA
 ylm
@@ -108038,7 +108041,7 @@ jDj
 wPA
 wPA
 wPA
-lqb
+mKg
 uMb
 aFA
 ylm
@@ -108854,8 +108857,8 @@ wPA
 wPA
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 uMb
 aFA
 ylm
@@ -109671,7 +109674,7 @@ cKP
 mcZ
 wPA
 wPA
-lqb
+mKg
 aUg
 myr
 aFA
@@ -110488,8 +110491,8 @@ fOy
 pmn
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 uMb
 aFA
 ylm
@@ -111306,7 +111309,7 @@ rqk
 wPA
 wPA
 wPA
-lqb
+mKg
 uMb
 aFA
 ylm
@@ -112122,8 +112125,8 @@ kCM
 bro
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 uMb
 aFA
 ylm
@@ -112939,7 +112942,7 @@ gov
 uAq
 wPA
 wPA
-lqb
+mKg
 aUg
 myr
 eZv
@@ -113756,8 +113759,8 @@ fsy
 grE
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 uMb
 eZv
 ylm
@@ -114574,7 +114577,7 @@ wPA
 wPA
 wPA
 wPA
-lqb
+mKg
 uMb
 mMX
 ylm
@@ -115390,8 +115393,8 @@ wPA
 wPA
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 mnB
 mMX
 wEz
@@ -116208,7 +116211,7 @@ wPA
 wPA
 wPA
 wPA
-lqb
+mKg
 uMb
 mMX
 ylm
@@ -117024,8 +117027,8 @@ wPA
 wPA
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 uMb
 eZv
 ylm
@@ -117841,7 +117844,7 @@ wPA
 wPA
 wPA
 wPA
-lqb
+mKg
 aUg
 myr
 eZv
@@ -118658,8 +118661,8 @@ fGJ
 kJx
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 uMb
 aFA
 ylm
@@ -119476,7 +119479,7 @@ bnS
 wPA
 wPA
 wPA
-lqb
+mKg
 uMb
 aFA
 ylm
@@ -120292,8 +120295,8 @@ kCM
 dup
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 uMb
 aFA
 ylm
@@ -121109,7 +121112,7 @@ dRM
 bnz
 wPA
 wPA
-lqb
+mKg
 aUg
 myr
 aFA
@@ -121926,8 +121929,8 @@ bnz
 bnz
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 uMb
 aFA
 ylm
@@ -122744,7 +122747,7 @@ wPA
 wPA
 wPA
 wPA
-lqb
+mKg
 uMb
 aFA
 ylm
@@ -123557,11 +123560,11 @@ dcy
 ghp
 xjS
 kWa
-lqb
-lqb
-lqb
-lqb
-lqb
+mKg
+mKg
+mKg
+mKg
+mKg
 uMb
 aFA
 ylm
@@ -124375,9 +124378,9 @@ fOy
 fOy
 fOy
 fOy
-lqb
-lqb
-lqb
+mKg
+mKg
+mKg
 cdS
 mOK
 aFA
@@ -128460,9 +128463,9 @@ fOy
 fOy
 fOy
 fOy
-lqb
-lqb
-lqb
+mKg
+mKg
+mKg
 lJl
 lUK
 eZv
@@ -129276,11 +129279,11 @@ kCM
 fOy
 fOy
 fGJ
-lqb
-lqb
-lqb
-lqb
-lqb
+mKg
+mKg
+mKg
+mKg
+mKg
 jUq
 sbm
 xBL
@@ -130097,7 +130100,7 @@ wPA
 wPA
 wPA
 wPA
-lqb
+mKg
 alx
 sQu
 ycV
@@ -130913,8 +130916,8 @@ fGJ
 kWa
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 klW
 eSO
 sXB
@@ -131730,7 +131733,7 @@ fOy
 rgH
 wPA
 wPA
-lqb
+mKg
 aUg
 jcl
 eSO
@@ -132547,8 +132550,8 @@ kWa
 kWa
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 klW
 eSO
 kNE
@@ -133365,7 +133368,7 @@ wPA
 wPA
 wPA
 wPA
-lqb
+mKg
 klW
 noT
 kNE
@@ -134181,8 +134184,8 @@ rCE
 vvs
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 klW
 noT
 hJE
@@ -134998,7 +135001,7 @@ llQ
 dyU
 wPA
 wPA
-lqb
+mKg
 aUg
 jcl
 noT
@@ -135815,8 +135818,8 @@ fGJ
 dyU
 wPA
 wPA
-lqb
-lqb
+mKg
+mKg
 alx
 qkw
 msQ
@@ -136633,7 +136636,7 @@ wPA
 wPA
 wPA
 wPA
-lqb
+mKg
 alx
 gWI
 bSU
@@ -137449,8 +137452,8 @@ kWa
 rCE
 wPA
 wPA
-iAv
-iAv
+paR
+paR
 uMJ
 ibr
 bIR
@@ -138266,8 +138269,8 @@ kCM
 eKK
 wPA
 wPA
-iAv
-iAv
+paR
+paR
 fBg
 fBg
 jjW
@@ -139083,8 +139086,8 @@ fGJ
 eKK
 wPA
 wPA
-iAv
-iAv
+paR
+paR
 jag
 nmd
 lav
@@ -139900,7 +139903,7 @@ rAL
 wPA
 wPA
 wPA
-iAv
+paR
 lew
 yex
 smr
@@ -140717,7 +140720,7 @@ fGJ
 tMk
 wPA
 wPA
-iAv
+paR
 wTV
 rAu
 smr
@@ -141534,7 +141537,7 @@ fOy
 vgd
 wPA
 wPA
-iAv
+paR
 yex
 rAu
 smr
@@ -142351,7 +142354,7 @@ tMk
 vgd
 wPA
 wPA
-iAv
+paR
 yex
 rAu
 smr
@@ -143168,7 +143171,7 @@ xHZ
 wPA
 wPA
 wPA
-iAv
+paR
 gem
 sjx
 smr
@@ -143985,7 +143988,7 @@ fGH
 hNJ
 wPA
 wPA
-iAv
+paR
 eym
 smr
 smr
@@ -144802,7 +144805,7 @@ fOy
 fGJ
 wPA
 wPA
-iAv
+paR
 geP
 smr
 smr
@@ -145619,7 +145622,7 @@ fGJ
 fGJ
 wPA
 wPA
-iAv
+paR
 lwc
 smr
 smr
@@ -146436,7 +146439,7 @@ rAL
 wPA
 wPA
 nDY
-iAv
+paR
 ham
 vTK
 smr
@@ -147253,7 +147256,7 @@ fGJ
 oJF
 wPA
 wPA
-iAv
+paR
 gmb
 smr
 fQi
@@ -148070,7 +148073,7 @@ fOy
 eQf
 wPA
 wPA
-iAv
+paR
 ham
 smr
 smr
@@ -148887,7 +148890,7 @@ kWa
 cWL
 wPA
 wPA
-iAv
+paR
 vsj
 smr
 smr
@@ -149704,7 +149707,7 @@ qBO
 wPA
 wPA
 wPA
-iAv
+paR
 cYB
 smr
 smr
@@ -150521,7 +150524,7 @@ fGJ
 fGJ
 wPA
 wPA
-iAv
+paR
 ham
 ham
 smr
@@ -151338,8 +151341,8 @@ gIZ
 tCC
 wPA
 wPA
-iAv
-iAv
+paR
+paR
 ham
 mvI
 pZy
@@ -152156,7 +152159,7 @@ fGJ
 wPA
 wPA
 nWh
-iAv
+paR
 ham
 jwx
 qce
@@ -152973,12 +152976,12 @@ wPA
 wPA
 wPA
 wPA
-iAv
-iAv
-iAv
-iAv
-iAv
-iAv
+paR
+paR
+paR
+paR
+paR
+paR
 fBg
 unU
 ham
@@ -153795,7 +153798,7 @@ wPA
 wPA
 wPA
 wPA
-iAv
+paR
 fBg
 fBg
 iAv
@@ -154612,11 +154615,11 @@ wPA
 wPA
 wPA
 wPA
-wPA
-iAv
-iAv
-iAv
-iAv
+mKg
+paR
+paR
+paR
+paR
 rEM
 smr
 smr
@@ -155432,22 +155435,22 @@ wPA
 wPA
 nWh
 nWh
-iAv
-iAv
-iAv
+paR
+paR
+paR
 nWh
 uMj
 uMj
 nWh
-iAv
-iAv
-iAv
-iAv
-iAv
-iAv
-iAv
-iAv
-iAv
+paR
+paR
+paR
+paR
+paR
+paR
+paR
+paR
+paR
 gMe
 jMl
 eSO
