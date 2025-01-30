@@ -312,7 +312,7 @@
 /obj/effect/particle_effect/smoke/phosphorus
 	time_to_live = 25
 	smokeranking = SMOKE_RANK_MED
-	color = ""#dddddd"
+	color = "#dddddd"
 	var/next_cough = 2 SECONDS
 	var/burn_damage = 40
 	var/applied_fire_stacks = 3
