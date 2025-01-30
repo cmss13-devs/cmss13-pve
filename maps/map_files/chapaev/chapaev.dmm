@@ -25,10 +25,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/platoon_commander_rooms)
-"ah" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/prep_hallway)
 "aj" = (
 /obj/structure/bookcase{
 	density = 0;
@@ -1504,7 +1500,9 @@
 "jr" = (
 /obj/structure/closet/secure_closet{
 	name = "machinegunner locker";
-	req_access_txt = "243;237"
+	req_access_txt = "243;237";
+	pixel_x = -8;
+	can_block_movement = 0
 	},
 /obj/item/weapon/gun/pkp/iff{
 	current_mag = null
@@ -1835,6 +1833,10 @@
 /area/golden_arrow/dorms)
 "mf" = (
 /obj/structure/window/framed/upp/grey,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "pltco";
+	name = "\improper Equipment Room Shutter"
+	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
 "mi" = (
@@ -2958,6 +2960,13 @@
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 4
+	},
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4;
+	pixel_y = -16
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
@@ -4579,6 +4588,15 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
+"Cw" = (
+/obj/structure/machinery/door_control{
+	name = "Equipment Room Observation Control";
+	id = "pltco";
+	pixel_x = -22;
+	pixel_y = 8
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/platoon_commander_rooms)
 "Cx" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/overwatch/upp{
@@ -4624,7 +4642,9 @@
 "CR" = (
 /obj/structure/closet/secure_closet{
 	name = "machinegunner locker";
-	req_access_txt = "243;238"
+	req_access_txt = "243;238";
+	pixel_x = -8;
+	can_block_movement = 0
 	},
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
@@ -4845,6 +4865,9 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"DZ" = (
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/prep_hallway)
 "Ea" = (
 /obj/structure/sign/safety/maint{
 	pixel_x = 15;
@@ -4972,6 +4995,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp,
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp{
+	pixel_y = 8
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -19902,10 +19929,10 @@ uK
 Jv
 jr
 CR
-ah
+gM
 Jv
 GT
-gM
+DZ
 Jv
 Jv
 Dx
@@ -20365,7 +20392,7 @@ Yi
 hi
 mf
 ay
-YU
+Cw
 xp
 CX
 xp
