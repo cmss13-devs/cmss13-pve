@@ -12,6 +12,18 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/basement/colony)
+"aaN" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "aaX" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
@@ -26,13 +38,8 @@
 	layer = 6.1
 	},
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly,
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/sewer)
@@ -263,7 +270,11 @@
 	pixel_y = 26;
 	layer = 6.2
 	},
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "aeD" = (
 /obj/structure/machinery/light/small/blue{
@@ -597,6 +608,12 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/mining)
+"ajF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/east_reactor)
 "ajQ" = (
 /obj/structure/prop/server_equipment/yutani_server{
 	density = 0;
@@ -1284,6 +1301,12 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/garrison)
+"auj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/sewer)
 "aut" = (
 /obj/structure/machinery/power/apc/power/north,
 /obj/effect/decal/cleanable/dirt,
@@ -1800,6 +1823,15 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
+"aBI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/east_reactor)
 "aBK" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -2291,6 +2323,12 @@
 	dir = 8
 	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "aIK" = (
@@ -3051,6 +3089,12 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/arrow_south,
 /area/lv522/atmos/east_reactor)
 "aUE" = (
@@ -3204,7 +3248,9 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/filt)
 "aVD" = (
@@ -3327,7 +3373,10 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 9
 	},
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "aYs" = (
 /obj/effect/decal/cleanable/generic,
@@ -3398,6 +3447,10 @@
 	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
@@ -3589,7 +3642,10 @@
 	icon_state = "flammable_pipe_2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "baN" = (
 /obj/structure/surface/table/almayer,
@@ -4268,6 +4324,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/tdome,
 /area/lv522/indoors/a_block/dorms)
+"bld" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "blf" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -5448,6 +5514,24 @@
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/corpo)
+"bFP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_north,
+/area/lv522/atmos/sewer)
 "bFT" = (
 /obj/structure/platform/mineral{
 	color = "#464D4B";
@@ -5771,6 +5855,24 @@
 	},
 /turf/open/floor/whitebluefull,
 /area/lv522/indoors/a_block/dorms)
+"bKq" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_north,
+/area/lv522/atmos/east_reactor)
 "bKO" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -5780,6 +5882,28 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
+"bLb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/sewer)
 "bLe" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
 	dir = 1;
@@ -5787,11 +5911,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/corporate)
-"bLn" = (
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly,
-/obj/structure/prop/invuln/prop_fog/mist,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor)
 "bLy" = (
 /turf/open/asphalt/cement/cement12,
 /area/lv522_l_l/outdoors/mining)
@@ -6047,6 +6166,9 @@
 	icon_state = "lattice12";
 	pixel_x = 4;
 	pixel_y = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
@@ -6571,11 +6693,8 @@
 	pixel_y = 14;
 	dir = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -6825,6 +6944,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked,
 /area/lv522/indoors/a_block/dorm_north)
+"cde" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/atmos/east_reactor)
 "cdA" = (
 /obj/structure/platform/mineral{
 	color = "#464D4B";
@@ -7020,8 +7153,8 @@
 	light_power = 0.6;
 	layer = 6.1
 	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -7323,6 +7456,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
+/obj/structure/barricade/handrail,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/filt)
 "ckv" = (
@@ -7468,6 +7602,12 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "cmS" = (
@@ -7570,6 +7710,14 @@
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
+"coM" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/colony,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
+	},
+/turf/open/floor/corsat/marked,
+/area/lv522/atmos/sewer)
 "coP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -7920,6 +8068,9 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/east_reactor)
 "cte" = (
@@ -8090,6 +8241,23 @@
 /obj/structure/machinery/portable_atmospherics/canister/empty/oxygen,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
+"cwh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "cwi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -8501,6 +8669,14 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/basement/mine)
+"cCz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/arrow_west,
+/area/lv522/atmos/east_reactor)
 "cCB" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -8529,6 +8705,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/mining)
+"cCM" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "cDh" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
@@ -8581,6 +8770,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/mining)
+"cDF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "cDQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -8744,7 +8944,10 @@
 	layer = 6.1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "cFD" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9215,22 +9418,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/corpo)
-"cKM" = (
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
-	pixel_y = 14
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_range = 4;
-	light_power = 0.6;
-	layer = 6.1
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
-	},
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor)
 "cKP" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /obj/structure/machinery/light/double/blue{
@@ -9442,6 +9629,18 @@
 	},
 /turf/open/void,
 /area/lv522/atmos/filt)
+"cOa" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "cOe" = (
 /obj/structure/stairs/perspective{
 	dir = 6;
@@ -9495,6 +9694,9 @@
 	icon_state = "N";
 	pixel_x = -1;
 	pixel_y = 2
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/filt)
@@ -9846,6 +10048,17 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
+"cUb" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8;
+	pixel_y = 14
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "cUd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -10029,6 +10242,13 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony_outskirts)
+"cXd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/lv522/atmos/sewer)
 "cXf" = (
 /turf/open/floor/almayer_hull/outerhull_dir/southeast,
 /area/lv522/outdoors/colony_streets/south_street)
@@ -10321,6 +10541,22 @@
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/b_block/hydro)
+"dbh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "dbq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
@@ -10850,13 +11086,8 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/sewer)
@@ -11041,11 +11272,8 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	pixel_y = 14
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -11193,11 +11421,6 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
 	light_power = 0.6;
@@ -11206,6 +11429,9 @@
 	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
@@ -11729,6 +11955,9 @@
 	pixel_y = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "dvm" = (
@@ -11810,7 +12039,13 @@
 	dir = 1;
 	icon_state = "flammable_pipe_2"
 	},
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "dwI" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -12383,7 +12618,13 @@
 	icon_state = "flammable_pipe_2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "dEP" = (
 /obj/structure/closet/crate/trashcart,
@@ -12509,6 +12750,14 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/fitness)
+"dGB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "dGD" = (
 /obj/structure/machinery/colony_floodlight{
 	layer = 4.3
@@ -12883,6 +13132,14 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
+"dKH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/sewer)
 "dKJ" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -12898,6 +13155,7 @@
 	pixel_y = -6;
 	layer = 6.2
 	},
+/obj/structure/barricade/handrail,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "dLb" = (
@@ -13267,6 +13525,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	pixel_y = 14
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -13871,7 +14132,28 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/arrow_north,
+/area/lv522/atmos/sewer)
+"dXo" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/sewer)
 "dXE" = (
 /turf/open/floor/prison/cell_stripe/west,
@@ -14229,6 +14511,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_street)
+"ecs" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "ecQ" = (
 /obj/structure/prop/turbine_extras,
 /obj/effect/decal/warning_stripes{
@@ -14391,6 +14680,22 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/engineering)
+"efB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/sewer)
 "efQ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -14572,20 +14877,6 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/prison/cell_stripe,
 /area/lv522/outdoors/colony_streets/south_street)
-"eiL" = (
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
-	dir = 1
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_range = 4;
-	light_power = 0.6;
-	layer = 6.1
-	},
-/obj/structure/prop/invuln/prop_fog/mist,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor)
 "eiP" = (
 /obj/structure/coatrack{
 	pixel_x = -6;
@@ -15347,6 +15638,9 @@
 	pixel_y = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "ewe" = (
@@ -15380,7 +15674,9 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 1
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "ewr" = (
@@ -15434,8 +15730,8 @@
 	light_power = 0.6;
 	layer = 6.1
 	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -15724,6 +16020,24 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/basement/colony)
+"eBk" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_south,
+/area/lv522/atmos/east_reactor)
 "eBq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -16038,6 +16352,9 @@
 	light_power = 0.6;
 	layer = 6.1
 	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "eHl" = (
@@ -16247,7 +16564,11 @@
 	pixel_y = 14
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "eJI" = (
 /turf/open/floor/prison/cell_stripe,
@@ -16658,6 +16979,17 @@
 /obj/structure/platform/kutjevo,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony_outskirts)
+"eQn" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/atmos/east_reactor)
 "eQu" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -17095,6 +17427,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cryofeed,
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "eWl" = (
@@ -17246,6 +17581,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/fitness)
+"eZu" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 1;
+	icon_state = "flammable_pipe_2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "eZv" = (
 /obj/structure/fence,
 /obj/effect/decal/warning_stripes{
@@ -17448,6 +17797,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
@@ -17686,6 +18038,18 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/west_reactor)
+"fgx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/lv522/atmos/east_reactor)
 "fgB" = (
 /obj/structure/machinery/light/double{
 	dir = 1;
@@ -17888,6 +18252,14 @@
 "fju" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/basement/colony)
+"fjC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "fjF" = (
 /obj/structure/stairs/perspective{
 	dir = 5;
@@ -18316,6 +18688,9 @@
 "frR" = (
 /obj/structure/cryofeed,
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "frT" = (
@@ -18451,7 +18826,9 @@
 /area/lv522/indoors/garrison)
 "ftJ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/invuln/lifeboat_hatch_placeholder,
+/obj/structure/prop/invuln/lifeboat_hatch_placeholder{
+	layer = 3
+	},
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
 	pixel_y = 14;
@@ -19144,6 +19521,14 @@
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/mining)
+"fFv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "fFW" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	name = "\improper A-Block Corporate Wing Airlock";
@@ -20200,6 +20585,17 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
+"fWg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/filt)
 "fWn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -20785,6 +21181,20 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/dorms)
+"gdu" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8;
+	pixel_y = 14
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/filt)
 "gdK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -21300,6 +21710,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked,
 /area/lv522/indoors/a_block/fitness)
+"gkh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "gkk" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -21330,6 +21754,28 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/bar)
+"gkN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "gkW" = (
 /obj/structure/prop/almayer/computers/sensor_computer1,
 /turf/open/floor/corsat/plate,
@@ -21469,6 +21915,9 @@
 	dir = 8
 	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "gnn" = (
@@ -21535,6 +21984,13 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/dorms)
+"goh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform_decoration/kutjevo{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "goi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -21593,6 +22049,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/basement/colony)
+"goX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/east_reactor)
 "gpf" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/auto_turf/sand_white/layer0,
@@ -22296,8 +22760,30 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/arrow_north,
 /area/lv522/atmos/east_reactor)
+"gAd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/sewer)
 "gAj" = (
 /obj/effect/step_trigger/teleporter_vector/damage{
 	vector_x = 192
@@ -22426,6 +22912,19 @@
 	},
 /turf/open/floor/whitebluefull,
 /area/lv522/indoors/a_block/dorms)
+"gBT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/sewer)
 "gBU" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -23194,6 +23693,9 @@
 "gNz" = (
 /obj/structure/cryofeed,
 /obj/structure/prop/invuln/prop_fog,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "gNL" = (
@@ -23543,6 +24045,15 @@
 "gSH" = (
 /turf/open/floor/prison/floor_marked,
 /area/lv522/basement/colony)
+"gSM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/lv522/atmos/sewer)
 "gTq" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -23595,9 +24106,12 @@
 	layer = 6.1
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "S"
+	icon_state = "W";
+	pixel_x = -1
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "gUi" = (
@@ -23904,6 +24418,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
+/obj/structure/barricade/handrail,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/filt)
 "gYY" = (
@@ -24014,6 +24529,24 @@
 	},
 /turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/dorms)
+"haA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "haF" = (
 /obj/structure/machinery/colony_floodlight{
 	layer = 4.3;
@@ -24041,6 +24574,9 @@
 "haN" = (
 /obj/structure/cryofeed/right,
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "haX" = (
@@ -24392,11 +24928,8 @@
 	dir = 8;
 	layer = 6.1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -24453,6 +24986,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/admin)
+"hha" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/lv522/atmos/east_reactor)
 "hhb" = (
 /obj/structure/platform/mineral{
 	dir = 4;
@@ -24942,6 +25482,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/lone_buildings/engineering)
+"hok" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 1;
+	icon_state = "flammable_pipe_2"
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "hoq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -25086,6 +25639,12 @@
 	},
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/south_street)
+"hpG" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "hpO" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/glass{
 	dir = 1;
@@ -25452,6 +26011,16 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522/indoors/a_block/security)
+"hxk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "hxn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -26483,6 +27052,9 @@
 	pixel_x = 4;
 	pixel_y = 8
 	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "hMd" = (
@@ -26730,6 +27302,9 @@
 	light_range = 4
 	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "hPz" = (
@@ -27000,6 +27575,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/cargo)
+"hTN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "hTX" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -27720,6 +28303,9 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 1
 	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "icu" = (
@@ -27740,6 +28326,10 @@
 	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
@@ -28387,6 +28977,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522/indoors/c_block/mining)
+"ijZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "ikf" = (
 /obj/structure/ladder{
 	height = 1;
@@ -28636,6 +29237,13 @@
 /obj/item/storage/toolbox/emergency,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/sewer)
+"ioQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor)
 "ipn" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -28904,6 +29512,19 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
+"isY" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "itc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
@@ -29903,6 +30524,33 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
+"iFe" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
+"iFf" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/filt)
 "iFk" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -29951,10 +30599,8 @@
 	dir = 8;
 	pixel_y = 14
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "iFQ" = (
@@ -30412,6 +31058,12 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/sewer)
 "iND" = (
@@ -31025,6 +31677,19 @@
 /obj/structure/machinery/computer/crew/colony,
 /turf/open/floor/whitebluefull/northeast,
 /area/lv522/indoors/a_block/admin)
+"iWX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "iWZ" = (
 /obj/structure/platform/mineral{
 	color = "#464D4B"
@@ -31481,6 +32146,10 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/lv522/outdoors/colony_streets/south_street)
+"jdN" = (
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "jdS" = (
 /obj/structure/bed/chair,
 /turf/open/floor/prison/floor_plate,
@@ -31617,6 +32286,10 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "jfM" = (
@@ -31665,16 +32338,50 @@
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/basement/colony)
+"jgL" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/colony{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
+	},
+/turf/open/floor/corsat/marked,
+/area/lv522/atmos/east_reactor)
 "jgV" = (
 /obj/structure/curtain/medical,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/silverfull,
 /area/lv522/indoors/a_block/medical)
+"jgY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/sewer)
 "jhb" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/security)
+"jhc" = (
+/obj/structure/sign/safety/bridge,
+/turf/closed/wall/strata_outpost,
+/area/lv522/indoors/a_block/admin)
 "jhe" = (
 /obj/structure/ore_box,
 /turf/open/auto_turf/shale/layer2,
@@ -31813,6 +32520,18 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/reactor_garage)
+"jjZ" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8;
+	pixel_y = 14
+	},
+/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/sewer)
 "jkk" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/asphalt/cement/cement12,
@@ -32100,6 +32819,21 @@
 /obj/structure/bed/chair,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/fitness)
+"jol" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "jom" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 1
@@ -32310,6 +33044,20 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/basement/colony)
+"jqA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/colony{
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/lv522/atmos/east_reactor)
 "jqE" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -32321,15 +33069,16 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
 	},
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "jqO" = (
 /obj/structure/filingcabinet{
@@ -32411,9 +33160,6 @@
 /obj/structure/bed/chair/comfy{
 	dir = 1;
 	layer = 2.9
-	},
-/obj/structure/barricade/handrail{
-	layer = 3.1
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/west_reactor)
@@ -33404,7 +34150,9 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/dorms)
 "jDj" = (
-/obj/structure/prop/invuln/lifeboat_hatch_placeholder/terminal,
+/obj/structure/prop/invuln/lifeboat_hatch_placeholder/terminal{
+	layer = 3
+	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
 	pixel_x = 27;
@@ -33542,6 +34290,9 @@
 	icon_state = "lattice12";
 	pixel_x = 4;
 	pixel_y = 8
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
@@ -33756,6 +34507,9 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "jHb" = (
@@ -33765,6 +34519,9 @@
 /obj/structure/cryofeed/right,
 /obj/structure/prop/invuln/prop_fog/mist,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "jHh" = (
@@ -34427,6 +35184,12 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/arrow_north,
 /area/lv522/atmos/east_reactor)
 "jRO" = (
@@ -34882,6 +35645,9 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/east_reactor)
 "jXG" = (
@@ -35103,6 +35869,9 @@
 "kaP" = (
 /obj/structure/cryofeed,
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "kaV" = (
@@ -35596,6 +36365,9 @@
 	layer = 6.1
 	},
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "kip" = (
@@ -36412,7 +37184,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "kua" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -36562,6 +37340,15 @@
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/whitebluefull,
 /area/lv522/indoors/a_block/dorms)
+"kwR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/lv522/atmos/east_reactor)
 "kxd" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/donut_box{
@@ -37033,6 +37820,12 @@
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
+"kCU" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "kDa" = (
 /obj/structure/prop/vehicles/crawler{
 	icon_state = "crawler_covered_bed"
@@ -37149,12 +37942,13 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/sewer)
 "kFg" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "kFx" = (
@@ -37266,6 +38060,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cryofeed/right,
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "kGZ" = (
@@ -38286,6 +39083,16 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/indoors/a_block/fitness)
+"kWD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "kWN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -38615,7 +39422,13 @@
 	icon_state = "flammable_pipe_2";
 	pixel_y = 11
 	},
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "lbt" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -38961,6 +39774,18 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/outdoors/comms_relay)
+"lhf" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "lho" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	density = 0;
@@ -39040,6 +39865,14 @@
 	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522/outdoors/n_rockies)
+"liE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/filt)
 "liJ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -39108,10 +39941,8 @@
 	dir = 8;
 	pixel_y = 14
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "lka" = (
@@ -39350,6 +40181,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
+/obj/structure/barricade/handrail,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/east_reactor)
 "lns" = (
@@ -39767,6 +40599,14 @@
 /obj/structure/cargo_container/horizontal/blue/middle,
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony)
+"lvK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "lvN" = (
 /obj/structure/fence,
 /obj/effect/decal/warning_stripes{
@@ -40065,10 +40905,6 @@
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/indoors/mining)
 "lzW" = (
-/obj/structure/bed/chair/comfy{
-	dir = 1;
-	layer = 2.9
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/handrail{
 	layer = 3.1
@@ -40116,6 +40952,9 @@
 /obj/structure/cryofeed/right,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/prop_fog,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "lBd" = (
@@ -40356,10 +41195,8 @@
 	pixel_y = 14;
 	pixel_x = 23
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "lEo" = (
@@ -40453,13 +41290,8 @@
 	layer = 6.1
 	},
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly,
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -40753,6 +41585,12 @@
 	icon_state = "lattice12";
 	pixel_x = 4;
 	pixel_y = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/sewer)
@@ -41385,6 +42223,16 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/lv522/outdoors/colony_streets/south_street)
+"lTO" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/atmos/east_reactor)
 "lTQ" = (
 /obj/structure/cargo_container/trijent/right,
 /obj/effect/decal/warning_stripes{
@@ -41562,6 +42410,21 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_street)
+"lWZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/sewer)
 "lXi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/port_gen/pacman/super,
@@ -41756,6 +42619,17 @@
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/basement/colony)
+"mau" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor)
 "max" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/snow/layer0,
@@ -41858,10 +42732,11 @@
 	dir = 8;
 	pixel_y = 14
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "mbU" = (
@@ -41880,6 +42755,9 @@
 	light_color = "#BB3F3F"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "mbZ" = (
@@ -42004,13 +42882,14 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
@@ -42102,7 +42981,13 @@
 	icon_state = "flammable_pipe_2"
 	},
 /obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "meB" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -42335,6 +43220,14 @@
 	},
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522/basement/colony)
+"mhi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/east_reactor)
 "mhm" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -42974,13 +43867,8 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -43166,6 +44054,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/n_rockies)
+"mud" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/west_reactor)
 "mue" = (
 /obj/structure/prop/invuln/darkness,
 /obj/effect/step_trigger/clone_cleaner,
@@ -44110,10 +45005,8 @@
 	dir = 8;
 	pixel_y = 14
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "mJa" = (
@@ -44270,6 +45163,7 @@
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
 	},
+/obj/structure/platform/kutjevo/smooth,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/filt)
 "mKJ" = (
@@ -44450,6 +45344,9 @@
 /obj/structure/cryofeed/right,
 /obj/structure/prop/invuln/prop_fog/mist,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "mOf" = (
@@ -44910,20 +45807,13 @@
 "mTP" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	pixel_y = 14;
-	dir = 1
+	dir = 1;
+	pixel_x = -14
 	},
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
 	pixel_y = 14;
 	pixel_x = -31
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	layer = 3.33;
-	pixel_x = 2
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -45672,8 +46562,8 @@
 	light_power = 0.6;
 	layer = 6.1
 	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -45688,6 +46578,17 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522/indoors/a_block/security)
+"ndm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/atmos/sewer)
 "ndp" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/window{
@@ -45708,6 +46609,12 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/sewer)
@@ -46242,16 +47149,16 @@
 /turf/open/auto_turf/shale/layer2,
 /area/lv522_l_l/outdoors/colony)
 "njS" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "njW" = (
@@ -46496,10 +47403,11 @@
 	dir = 8;
 	pixel_y = 14
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "nmG" = (
@@ -47050,6 +47958,9 @@
 	pixel_y = -6;
 	layer = 6.2
 	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "nte" = (
@@ -47093,13 +48004,11 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
@@ -47885,6 +48794,26 @@
 /obj/structure/largecrate/random,
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/mining)
+"nHa" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 9
+	},
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 1;
+	pixel_y = -23;
+	icon_state = "flammable_pipe_2"
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "nHf" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
@@ -48627,6 +49556,13 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/lv522/atmos/sewer)
+"nRz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor)
 "nRH" = (
 /obj/structure/cargo_container/horizontal/blue/bottom,
 /turf/open/auto_turf/shale/layer1,
@@ -49534,6 +50470,18 @@
 	},
 /turf/open/floor/whitebluefull/northeast,
 /area/lv522/indoors/a_block/admin)
+"oeE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/lv522/atmos/east_reactor)
 "oeI" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/generic,
@@ -49840,12 +50788,11 @@
 	layer = 6.1
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
+	icon_state = "W";
+	pixel_x = -1
 	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -50807,6 +51754,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/filt)
 "oxA" = (
@@ -51059,13 +52009,11 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
@@ -51427,6 +52375,9 @@
 	light_color = "#BB3F3F"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "oGD" = (
@@ -51510,6 +52461,9 @@
 "oHy" = (
 /obj/structure/cryofeed/right,
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "oHA" = (
@@ -51780,6 +52734,29 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/kitchen)
+"oLh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/sewer)
+"oLq" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8;
+	pixel_y = 14
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "oLu" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/sterile_white,
@@ -51900,6 +52877,24 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/b_block/hydro)
+"oNB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_south,
+/area/lv522/atmos/sewer)
 "oNN" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "SouthDorm"
@@ -52385,6 +53380,12 @@
 	pixel_x = 4;
 	pixel_y = 8
 	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "oTD" = (
@@ -52606,6 +53607,11 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/arrow_west,
 /area/lv522/atmos/reactor_garage)
+"oXl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform_decoration/kutjevo,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "oXp" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -52943,6 +53949,13 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony_outskirts)
+"pcK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "pcV" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/closed/wall/strata_ice/dirty,
@@ -53671,6 +54684,9 @@
 	},
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "pkV" = (
@@ -54006,9 +55022,6 @@
 	layer = 2.9
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/barricade/handrail{
-	layer = 3.1
-	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/west_reactor)
 "ppf" = (
@@ -55007,14 +56020,6 @@
 	dir = 8;
 	layer = 6.1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/prop/invuln/prop_fog/mist,
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/sewer)
 "pFp" = (
@@ -55260,6 +56265,22 @@
 /obj/structure/largecrate/random/case/small,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/basement/colony)
+"pIC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/arrow_west,
+/area/lv522/atmos/sewer)
 "pIG" = (
 /obj/structure/prop/structure_lattice,
 /obj/structure/prop/structure_lattice{
@@ -55369,6 +56390,21 @@
 	},
 /turf/open/floor/whitebluefull/northeast,
 /area/lv522/indoors/a_block/admin)
+"pKu" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "pKv" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -55477,6 +56513,9 @@
 	icon_state = "lattice3";
 	pixel_y = -6;
 	layer = 6.2
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/east_reactor)
@@ -56110,6 +57149,9 @@
 	light_range = 4
 	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "pTj" = (
@@ -56176,6 +57218,9 @@
 	pixel_x = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "pUs" = (
@@ -56360,7 +57405,11 @@
 	dir = 8;
 	pixel_y = 14
 	},
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "pWB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -56518,6 +57567,9 @@
 	light_power = 0.6;
 	layer = 6.1
 	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "pYu" = (
@@ -56606,6 +57658,14 @@
 	},
 /turf/open/floor/tdome,
 /area/lv522/basement/colony)
+"pZt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/sewer)
 "pZy" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -57135,6 +58195,14 @@
 	},
 /turf/open/floor/yellowfull,
 /area/lv522/indoors/lone_buildings/chunk)
+"qhv" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/colony,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/lv522/atmos/sewer)
 "qhy" = (
 /obj/structure/ladder{
 	id = "Ladder-Kitchen"
@@ -57878,7 +58946,9 @@
 	light_power = 0.6;
 	layer = 6.1
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "qrU" = (
@@ -58086,6 +59156,18 @@
 	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522/basement/colony)
+"qtQ" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8;
+	pixel_y = 14
+	},
+/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "qtV" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
@@ -58503,6 +59585,24 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/mine)
+"qzE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/sewer)
 "qzF" = (
 /obj/structure/platform/mineral{
 	color = "#464D4B"
@@ -58577,7 +59677,11 @@
 	pixel_x = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "qAQ" = (
 /obj/structure/cable/heavyduty{
@@ -58828,9 +59932,12 @@
 	layer = 6.1
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "S"
+	icon_state = "E";
+	pixel_x = 1
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "qDO" = (
@@ -58843,6 +59950,12 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/arrow_south,
 /area/lv522/atmos/sewer)
 "qDR" = (
@@ -58860,6 +59973,13 @@
 /obj/structure/bed/chair,
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/hydro)
+"qEg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/sewer)
 "qEu" = (
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522/indoors/a_block/kitchen)
@@ -58921,6 +60041,7 @@
 	icon_state = "S"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail,
 /turf/open/floor/corsat/arrow_east,
 /area/lv522/atmos/east_reactor)
 "qFq" = (
@@ -59249,6 +60370,21 @@
 /obj/item/ore/silver,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
+"qKa" = (
+/obj/structure/prop/server_equipment/yutani_server{
+	density = 0;
+	pixel_y = 16
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/east_reactor)
 "qKp" = (
 /obj/structure/platform/strata/metal,
 /turf/open/asphalt/cement/cement4,
@@ -59502,6 +60638,21 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/outdoors/colony_outskirts)
+"qOw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/lv522/atmos/sewer)
 "qOx" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	id = "Storage-Shutter-Secure"
@@ -59810,7 +60961,14 @@
 	dir = 5;
 	pixel_y = 14
 	},
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "qTs" = (
 /turf/open/floor/prison/cell_stripe/east,
@@ -60433,6 +61591,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/whitebluefull,
 /area/lv522/indoors/a_block/dorms)
+"rbx" = (
+/obj/structure/platform/kutjevo/smooth,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/sewer)
 "rbz" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
@@ -61132,6 +62298,9 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "rkr" = (
@@ -61385,6 +62554,9 @@
 /obj/structure/cryofeed,
 /obj/structure/prop/invuln/prop_fog/mist,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "rob" = (
@@ -61522,6 +62694,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
+"rpZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 2;
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/lv522/atmos/east_reactor)
 "rqd" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/closet/firecloset/full,
@@ -61603,6 +62788,15 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/fitness)
+"rrV" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8;
+	pixel_y = 14
+	},
+/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "rrY" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -61684,8 +62878,8 @@
 	pixel_y = 14
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -61730,6 +62924,16 @@
 	icon_state = "N";
 	pixel_x = -1;
 	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
@@ -61856,10 +63060,9 @@
 	pixel_y = 14;
 	dir = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/sewer)
 "rvq" = (
@@ -61908,7 +63111,13 @@
 	pixel_y = 11
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "rvQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -62161,6 +63370,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
+"rzE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "rzG" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/cameras/wooden_tv/broadcast{
@@ -62184,6 +63404,10 @@
 	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
@@ -62306,6 +63530,9 @@
 	pixel_x = 4;
 	pixel_y = 8
 	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "rCa" = (
@@ -62352,6 +63579,11 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/south_street)
+"rCN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "rCT" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
@@ -62465,6 +63697,15 @@
 	},
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/indoors/slaughterhouse)
+"rEg" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/sewer)
 "rEh" = (
 /obj/structure/machinery/vending/ingredients{
 	pixel_y = 16;
@@ -62836,6 +64077,9 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "rKf" = (
@@ -63108,6 +64352,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/lv522/indoors/garrison/gas)
+"rOr" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/atmos/east_reactor)
 "rOx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -63216,7 +64474,18 @@
 	light_color = "#BB3F3F"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/sewer)
+"rPN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/arrow_east,
 /area/lv522/atmos/sewer)
 "rPR" = (
 /obj/structure/machinery/light/double,
@@ -63431,6 +64700,13 @@
 /obj/item/trash/ceramic_plate,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/t_comm)
+"rRL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "rRP" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -63811,6 +65087,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/kitchen)
+"rYh" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "rYi" = (
 /obj/structure/platform/mineral{
 	dir = 4;
@@ -63967,11 +65256,8 @@
 	pixel_y = 14;
 	dir = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -64323,6 +65609,18 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_street)
+"sgK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8;
+	pixel_y = 14
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "sgN" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/prison/cell_stripe/east,
@@ -64560,11 +65858,6 @@
 /area/lv522/indoors/a_block/security)
 "sjN" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly,
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
 	light_power = 0.6;
@@ -64572,8 +65865,12 @@
 	dir = 8;
 	layer = 6.1
 	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -64744,6 +66041,18 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
+"smD" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "smR" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	id = "CargoWarehouse";
@@ -65122,6 +66431,9 @@
 /area/lv522/indoors/c_block/cargo)
 "srB" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "srI" = (
@@ -65552,6 +66864,18 @@
 /obj/structure/prop/static_tank/fuel,
 /turf/open/floor/prison,
 /area/lv522/basement/colony)
+"sxx" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_range = 4;
+	light_power = 0.6;
+	layer = 6.1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "sxA" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -66647,30 +67971,6 @@
 "sMA" = (
 /turf/closed/wall/hangar,
 /area/lv522/indoors/lone_buildings/storage_blocks)
-"sMH" = (
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
-	dir = 8;
-	pixel_x = 20
-	},
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
-	dir = 8
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.6;
-	light_range = 4;
-	layer = 6.1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
-	},
-/turf/open/floor/shiva/radiator_tile2,
-/area/lv522/atmos/east_reactor)
 "sMI" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -66840,15 +68140,6 @@
 	light_power = 0.6;
 	light_range = 4;
 	layer = 6.1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -67234,19 +68525,13 @@
 /area/lv522/indoors/a_block/corpo)
 "sTy" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
-	pixel_y = 14
+	pixel_y = 14;
+	pixel_x = 14
 	},
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
 	pixel_y = 14;
 	pixel_x = 23
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -67515,6 +68800,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/step_trigger/clone_cleaner,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/arrow_south,
 /area/lv522/atmos/east_reactor)
 "sXZ" = (
@@ -67618,10 +68906,8 @@
 	dir = 8;
 	pixel_y = 14
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "sZv" = (
@@ -67993,6 +69279,9 @@
 	light_range = 4
 	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "teY" = (
@@ -68171,6 +69460,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/filt)
 "tit" = (
@@ -68246,11 +69538,12 @@
 /turf/open/floor/yellowfull,
 /area/lv522/indoors/c_block/garage)
 "tjk" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "tjN" = (
@@ -68907,6 +70200,15 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/cell_stripe,
 /area/lv522_l_l/indoors/storage)
+"tqO" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/colony,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/lv522/atmos/sewer)
 "tqU" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
@@ -68924,16 +70226,6 @@
 	light_power = 0.6;
 	light_range = 4;
 	layer = 6.1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	layer = 3.33;
-	pixel_x = 2
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -69167,13 +70459,14 @@
 	dir = 8;
 	pixel_y = 14
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
 	},
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "tuB" = (
 /obj/structure/stairs/perspective{
@@ -69564,10 +70857,10 @@
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/admin)
 "tBi" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "tBw" = (
@@ -69588,6 +70881,12 @@
 	icon_state = "N";
 	pixel_x = -1;
 	pixel_y = 2
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
@@ -69679,6 +70978,13 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/airtraffic)
+"tDE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/sewer)
 "tDK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/purple{
@@ -69819,10 +71125,9 @@
 	dir = 8;
 	layer = 6.1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/sewer)
 "tFx" = (
@@ -69870,8 +71175,8 @@
 	pixel_y = 14;
 	dir = 1
 	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -70484,18 +71789,6 @@
 "tOo" = (
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_street)
-"tOq" = (
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly,
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_range = 4;
-	light_power = 0.6;
-	layer = 6.1
-	},
-/obj/structure/prop/invuln/prop_fog/mist,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor)
 "tOr" = (
 /obj/structure/ladder{
 	height = 1;
@@ -70808,13 +72101,11 @@
 	light_range = 4;
 	layer = 6.1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
@@ -70968,6 +72259,9 @@
 /obj/structure/machinery/light/double{
 	light_color = "#BB3F3F";
 	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
@@ -71175,6 +72469,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/hydro)
+"tYi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/east_reactor)
 "tYp" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -71733,13 +73034,14 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 1
-	},
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
@@ -72122,6 +73424,20 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/garrison)
+"ukt" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8;
+	pixel_y = 14
+	},
+/obj/structure/prop/invuln/prop_fog/mist{
+	layer = 5.9
+	},
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "ukL" = (
 /obj/structure/fence,
 /obj/effect/decal/warning_stripes{
@@ -72780,6 +74096,9 @@
 	light_range = 4
 	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "utq" = (
@@ -72938,6 +74257,9 @@
 /obj/structure/machinery/light/double{
 	light_color = "#BB3F3F"
 	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "uuW" = (
@@ -72999,6 +74321,7 @@
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
 	},
+/obj/structure/platform/kutjevo/smooth,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "uwi" = (
@@ -73088,14 +74411,10 @@
 	dir = 8;
 	pixel_y = 14
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
 /obj/structure/prop/invuln/prop_fog/mist,
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 3.3;
-	pixel_x = -1
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
@@ -73447,6 +74766,20 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
+"uBz" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/atmos/sewer)
 "uBA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -73933,6 +75266,9 @@
 	light_power = 0.6;
 	layer = 6.1
 	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "uIk" = (
@@ -74340,6 +75676,13 @@
 /obj/structure/platform/stair_cut/alt,
 /turf/open/floor/corsat/arrow_east,
 /area/lv522/atmos/reactor_garage)
+"uMT" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "uMV" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
@@ -74427,6 +75770,12 @@
 	layer = 6.2
 	},
 /obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "uOd" = (
@@ -74671,6 +76020,7 @@
 	pixel_y = -6;
 	layer = 6.2
 	},
+/obj/structure/barricade/handrail,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/east_reactor)
 "uQW" = (
@@ -74710,6 +76060,12 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
@@ -74940,7 +76296,17 @@
 	dir = 8;
 	pixel_y = 14
 	},
-/obj/structure/prop/invuln/prop_fog/mist,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/arrow_north,
 /area/lv522/atmos/sewer)
 "uUX" = (
@@ -75341,6 +76707,9 @@
 	icon_state = "S"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "uZJ" = (
@@ -76070,6 +77439,9 @@
 	layer = 6.1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "vld" = (
@@ -76328,6 +77700,10 @@
 /obj/structure/prop/invuln/prop_fog/mist{
 	layer = 5.9
 	},
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "vpB" = (
@@ -76379,6 +77755,31 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/cargo)
+"vqZ" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/colony{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 2;
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/corsat/marked,
+/area/lv522/atmos/sewer)
 "vra" = (
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/a_block/medical)
@@ -76399,6 +77800,18 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
+"vrs" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8;
+	pixel_y = 14
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "vrC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/firecloset/full,
@@ -76494,6 +77907,19 @@
 	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/basement/colony)
+"vsx" = (
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "vsy" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -76656,6 +78082,9 @@
 	light_color = "#BB3F3F"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "vuk" = (
@@ -76694,6 +78123,16 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly,
 /turf/open/floor/bluegrid,
 /area/lv522/atmos/sewer)
+"vuM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "vuW" = (
 /turf/open/floor/carpet11_12/west,
 /area/lv522/indoors/a_block/corpo)
@@ -76860,6 +78299,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe,
 /area/lv522/indoors/a_block/dorm_north)
+"vyI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/east_reactor)
 "vyM" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
@@ -77408,6 +78858,18 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/lv522_l_l/outdoors/colony)
+"vGu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "vGz" = (
 /obj/structure/prop/dam/drill,
 /turf/open/auto_turf/sand_white/layer0,
@@ -77432,18 +78894,6 @@
 	},
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522/indoors/a_block/corpo)
-"vHi" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_x = -1;
-	pixel_y = 2
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	pixel_x = -1
-	},
-/turf/open/floor/corsat/squares,
-/area/lv522/atmos/east_reactor)
 "vHn" = (
 /turf/open/floor/plating/icefloor/warnplate/northwest,
 /area/shuttle/elevator1/underground)
@@ -77789,6 +79239,9 @@
 	pixel_x = -1;
 	pixel_y = 2
 	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "vMg" = (
@@ -77873,6 +79326,9 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "vMX" = (
@@ -78093,6 +79549,10 @@
 "vPM" = (
 /turf/open/floor/prison/sterile_white,
 /area/lv522/indoors/b_block/hydro)
+"vQe" = (
+/obj/structure/platform_decoration/kutjevo,
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "vQg" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	dir = 6
@@ -78243,6 +79703,9 @@
 	layer = 6.1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "vRX" = (
@@ -79283,6 +80746,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/yellowfull,
 /area/lv522/indoors/c_block/garage)
+"whX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/east_reactor)
 "whZ" = (
 /obj/structure/machinery/conveyor{
 	dir = 8;
@@ -79542,6 +81012,24 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
+"wlN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/east_reactor)
 "wlV" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -79554,8 +81042,8 @@
 	pixel_y = 14;
 	dir = 1
 	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/filt)
@@ -79895,6 +81383,13 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/basement/mine)
+"wrx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "wrC" = (
 /turf/closed/wall/strata_outpost,
 /area/lv522/indoors/a_block/corpo)
@@ -80128,6 +81623,9 @@
 	pixel_x = -1
 	},
 /obj/effect/step_trigger/clone_cleaner,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/arrow_south,
 /area/lv522/atmos/east_reactor)
 "wuz" = (
@@ -80294,6 +81792,9 @@
 /obj/structure/cryofeed,
 /obj/structure/prop/invuln/prop_fog/mist,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/sewer)
 "wwE" = (
@@ -80892,6 +82393,16 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/whitebluefull/northeast,
 /area/lv522/indoors/a_block/admin)
+"wGN" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/atmos/sewer)
 "wGZ" = (
 /obj/structure/filingcabinet/filingcabinet{
 	density = 0;
@@ -81401,6 +82912,9 @@
 	pixel_x = 1
 	},
 /obj/structure/pipes/vents/pump,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "wPy" = (
@@ -81771,6 +83285,9 @@
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	pixel_y = 14;
 	dir = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
@@ -82688,7 +84205,13 @@
 	pixel_y = -6;
 	layer = 6.2
 	},
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "xeD" = (
 /obj/effect/step_trigger/clone_cleaner,
@@ -82962,6 +84485,17 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/dorms)
+"xjq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
+	dir = 8
+	},
+/obj/structure/prop/invuln/prop_fog/mist,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/lv522/atmos/east_reactor)
 "xju" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -83543,19 +85077,6 @@
 	},
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522/outdoors/colony_streets/south_street)
-"xsz" = (
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
-	dir = 8;
-	pixel_y = 14
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/prop/invuln/prop_fog/mist{
-	layer = 5.9
-	},
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor)
 "xsA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -84214,7 +85735,8 @@
 	pixel_y = 14
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "xBA" = (
 /obj/effect/decal/cleanable/dirt,
@@ -84553,6 +86075,9 @@
 	pixel_y = 14
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "xHi" = (
@@ -85112,6 +86637,17 @@
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/indoors/c_block/cargo)
+"xOP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/lv522/atmos/east_reactor)
 "xOQ" = (
 /obj/structure/window/framed/strata/reinforced,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -85488,6 +87024,9 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "xUe" = (
@@ -85877,6 +87416,9 @@
 	light_color = "#BB3F3F";
 	dir = 1
 	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "xYY" = (
@@ -85972,7 +87514,11 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/corsat/plate,
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
 /area/lv522/atmos/east_reactor)
 "yak" = (
 /obj/structure/machinery/portable_atmospherics/canister/empty/oxygen,
@@ -86580,6 +88126,15 @@
 "yjy" = (
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522/indoors/b_block/hydro)
+"yjC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/squares,
+/area/lv522/atmos/sewer)
 "yjK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -110485,7 +112040,7 @@ uPc
 lqt
 afb
 tAe
-fOy
+mud
 fOy
 fOy
 pmn
@@ -137413,8 +138968,8 @@ nTl
 nTl
 nTl
 qDz
-ryT
-ryT
+dGB
+mmh
 sjN
 nTl
 nTl
@@ -138230,8 +139785,8 @@ nTl
 nTl
 nTl
 mbR
-qxu
-qxu
+cde
+lTO
 mcY
 nTl
 nTl
@@ -139046,10 +140601,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-qxu
-qxu
-mcY
+rrV
+cde
+lTO
+aaN
 nTl
 nTl
 nTl
@@ -139863,10 +141418,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-qxu
-qxu
-mcY
+rrV
+cde
+lTO
+aaN
 nTl
 nTl
 nTl
@@ -140680,10 +142235,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-qxu
-qxu
-mcY
+rrV
+cde
+lTO
+aaN
 nTl
 nTl
 nTl
@@ -141497,10 +143052,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-qxu
-qxu
-mcY
+rrV
+cde
+lTO
+aaN
 nTl
 nTl
 nTl
@@ -142314,10 +143869,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-ryT
-ryT
-mcY
+rrV
+rzE
+rRL
+aaN
 nTl
 nTl
 nTl
@@ -143132,8 +144687,8 @@ nTl
 nTl
 nTl
 mIT
-kvl
-kvl
+xOP
+whX
 dmY
 nTl
 nTl
@@ -143949,8 +145504,8 @@ nTl
 nTl
 nTl
 nTl
-xsA
-qBM
+rpZ
+jgL
 nTl
 nTl
 nTl
@@ -144766,8 +146321,8 @@ nTl
 nTl
 nTl
 iFP
-mPz
-mPz
+fgx
+cCz
 tSF
 nTl
 nTl
@@ -145583,8 +147138,8 @@ nTl
 nTl
 nTl
 lEl
-kvl
-kvl
+xOP
+whX
 oAP
 nTl
 nTl
@@ -146400,8 +147955,8 @@ nTl
 nTl
 nTl
 nTl
-xsA
-qBM
+rpZ
+jgL
 nTl
 nTl
 nTl
@@ -147217,8 +148772,8 @@ nTl
 nTl
 nTl
 mTP
-mPz
-mPz
+kwR
+ugU
 tqW
 nTl
 rKc
@@ -148033,14 +149588,14 @@ nTl
 nTl
 nTl
 nTl
-iBI
-ryT
-ryT
-kHX
+qKa
+iFe
+cDF
+mau
 sta
 gAc
 uRv
-oTw
+gkN
 cmQ
 aUA
 uiO
@@ -148851,8 +150406,8 @@ nTl
 nTl
 nTl
 sTy
-kvl
-kvl
+goX
+ajF
 sOq
 nTl
 xYV
@@ -149668,8 +151223,8 @@ nTl
 nTl
 nTl
 nTl
-xsA
-qBM
+rpZ
+jqA
 nTl
 nTl
 nTl
@@ -150485,8 +152040,8 @@ nTl
 nTl
 nTl
 ljJ
-mPz
-mPz
+fgx
+cCz
 ntv
 nTl
 nTl
@@ -151302,9 +152857,9 @@ nTl
 nTl
 nTl
 mIT
-kvl
-kvl
-sMH
+xOP
+whX
+dmY
 nTl
 nTl
 nTl
@@ -152119,8 +153674,8 @@ nTl
 nTl
 nTl
 nTl
-xsA
-qBM
+rpZ
+jgL
 nTl
 nTl
 nTl
@@ -152936,8 +154491,8 @@ nTl
 nTl
 nTl
 iFP
-mPz
-mPz
+fgx
+cCz
 tSF
 nTl
 nTl
@@ -153752,10 +155307,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-ryT
-ryT
-mcY
+rrV
+rzE
+rRL
+aaN
 nTl
 nTl
 nTl
@@ -154569,10 +156124,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-qxu
-qxu
-mcY
+rrV
+cde
+lTO
+aaN
 nTl
 nTl
 nTl
@@ -155386,10 +156941,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-qxu
-qxu
-mcY
+rrV
+cde
+lTO
+aaN
 nTl
 nTl
 nTl
@@ -155398,8 +156953,8 @@ nTl
 nTl
 nTl
 nTl
-iNl
-mPz
+hha
+ofq
 nTl
 nTl
 nTl
@@ -156203,10 +157758,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-qxu
-qxu
-mcY
+rrV
+cde
+lTO
+aaN
 nTl
 nTl
 nTl
@@ -156215,8 +157770,8 @@ nTl
 nTl
 nTl
 hfL
-ryT
-jdD
+hTN
+pcK
 lGa
 nTl
 nTl
@@ -157020,10 +158575,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-qxu
-qxu
-mcY
+rrV
+cde
+lTO
+aaN
 nTl
 nTl
 nTl
@@ -157032,8 +158587,8 @@ nTl
 nTl
 nTl
 tut
-qxu
-vcm
+cde
+lng
 jqH
 nTl
 nTl
@@ -157070,16 +158625,16 @@ wPA
 nTl
 nTl
 nTl
-mDE
-mDE
+oXl
+lvK
 nTl
 wdd
 bYZ
 nTl
 nTl
 rvE
-dEO
-dEO
+eZu
+eZu
 dwz
 men
 gYo
@@ -157837,10 +159392,10 @@ nTl
 nTl
 nTl
 nTl
-mbR
-qxu
-qxu
-mcY
+qtQ
+cde
+lTO
+pKu
 nTl
 nTl
 nTl
@@ -157848,10 +159403,10 @@ nTl
 nTl
 nTl
 nTl
-xsz
-qxu
-qxu
-jqH
+cUb
+cde
+lTO
+iWX
 nTl
 nTl
 nTl
@@ -157886,7 +159441,7 @@ wPA
 wPA
 nTl
 nTl
-mDE
+oXl
 qAJ
 tBQ
 ihU
@@ -157896,8 +159451,8 @@ ihU
 say
 pkR
 xTT
-ihU
-ihU
+bld
+bld
 wus
 nja
 xED
@@ -158655,8 +160210,8 @@ nTl
 nTl
 nTl
 gUc
-ryT
-ryT
+ppf
+njn
 oii
 nTl
 nTl
@@ -158665,10 +160220,10 @@ nTl
 nTl
 nTl
 nTl
-xsz
-qxu
-qxu
-jqH
+ukt
+cde
+lTO
+dbh
 nTl
 nTl
 nTl
@@ -158702,10 +160257,10 @@ wPA
 wPA
 wPA
 nTl
-kHX
+vQe
 yaj
 ruc
-lrr
+eQn
 ouN
 ouN
 ouN
@@ -159483,8 +161038,8 @@ nTl
 nTl
 nTl
 sar
-ryT
-ryT
+hTN
+mIq
 mqM
 nTl
 nTl
@@ -159519,9 +161074,9 @@ wPA
 wPA
 wPA
 nTl
-kHX
-sse
-lrr
+jdN
+wlN
+eQn
 mOI
 fQC
 tso
@@ -160300,8 +161855,8 @@ nTl
 nTl
 nTl
 nTl
-kvl
-kvl
+mhi
+tYi
 nTl
 nTl
 nTl
@@ -160336,18 +161891,18 @@ wPA
 wPA
 wPA
 nTl
-kHX
-sse
+jdN
+ijZ
 qxu
 jkJ
 hOg
 mmh
-rPf
+vuM
 rPf
 cim
 wPw
-rPf
-rPf
+vuM
+vuM
 pUo
 sXY
 iTX
@@ -161153,17 +162708,17 @@ nTl
 nTl
 nTl
 nTl
-mDE
-sse
+rCN
+ijZ
 qxu
 oBw
 mmh
 jfH
-mDE
+kWD
 nTl
 nTl
 lbn
-dwz
+hok
 dEO
 dEO
 ktJ
@@ -161970,13 +163525,13 @@ nTl
 nTl
 nTl
 nTl
-mDE
-ueQ
+rCN
+vGu
 qxu
 oBw
-mIq
-mDE
-mDE
+rRL
+kWD
+goh
 nTl
 nTl
 nTl
@@ -162745,21 +164300,21 @@ qxu
 rjQ
 uiO
 jRJ
-uRv
-uRv
-cmQ
-aUA
+cwh
+cwh
+haA
+eBk
 uiO
 xVA
 aMY
 ouN
 kUa
 sta
-gAc
-uRv
+bKq
+cwh
 oTw
-cmQ
-aUA
+haA
+eBk
 uiO
 lrK
 hyJ
@@ -162787,11 +164342,11 @@ nTl
 nTl
 nTl
 nTl
-cFw
-ueQ
+sxx
+vGu
 jdD
 pAN
-mIq
+rRL
 cFw
 nTl
 nTl
@@ -165202,8 +166757,8 @@ nTl
 nTl
 nTl
 nTl
-iNl
-iNl
+hha
+bYZ
 nTl
 nTl
 nTl
@@ -165239,11 +166794,11 @@ nTl
 nTl
 nTl
 eJF
-sse
+ijZ
 qxu
 oBw
-mIq
-kbh
+rRL
+lhf
 nTl
 nTl
 nTl
@@ -166019,8 +167574,8 @@ nTl
 nTl
 nTl
 dkW
-ryT
-ryT
+hTN
+mIq
 lGa
 nTl
 nTl
@@ -166056,10 +167611,10 @@ nTl
 nTl
 nTl
 xBp
-ueQ
+vGu
 qxu
 oBw
-mIq
+rRL
 aYh
 nTl
 nTl
@@ -166836,8 +168391,8 @@ nTl
 nTl
 nTl
 tut
-qxu
-vcm
+cde
+lng
 jqH
 nTl
 nTl
@@ -166864,7 +168419,7 @@ nTl
 nTl
 nTl
 nTl
-cKM
+pYr
 jJk
 cIG
 qrK
@@ -166872,12 +168427,12 @@ nTl
 nTl
 nTl
 nTl
-eJF
-ueQ
+vrs
+vGu
 sqI
 oBw
-mIq
-kbh
+rRL
+smD
 nTl
 nTl
 nTl
@@ -167652,10 +169207,10 @@ nTl
 nTl
 nTl
 nTl
-tut
-qxu
-vcm
-jqH
+sgK
+cde
+lng
+iWX
 nTl
 nTl
 nTl
@@ -167682,7 +169237,7 @@ nTl
 nTl
 nTl
 rzM
-uxJ
+rOr
 lng
 aIJ
 nTl
@@ -168469,10 +170024,10 @@ nTl
 nTl
 nTl
 nTl
-tut
-qxu
-vcm
-jqH
+aYM
+cde
+lng
+dbh
 nTl
 nTl
 nTl
@@ -168498,10 +170053,10 @@ nTl
 nTl
 nTl
 nTl
-rzM
-uxJ
+cUb
+rOr
 lng
-aIJ
+xjq
 nTl
 nTl
 nTl
@@ -169287,8 +170842,8 @@ nTl
 nTl
 nTl
 bZu
-ryT
-ryT
+hTN
+mIq
 mqM
 nTl
 nTl
@@ -169315,10 +170870,10 @@ nTl
 nTl
 nTl
 nTl
-rzM
-uxJ
-ibg
-aIJ
+cUb
+rOr
+lTO
+xjq
 nTl
 nTl
 nTl
@@ -170104,8 +171659,8 @@ nTl
 nTl
 nTl
 nTl
-pwu
-kvl
+aBI
+tYi
 nTl
 nTl
 nTl
@@ -170133,9 +171688,9 @@ nTl
 nTl
 nTl
 aYM
-uxJ
-ibg
-aIJ
+rOr
+lTO
+gkh
 nTl
 nTl
 nTl
@@ -170952,7 +172507,7 @@ nTl
 cge
 voJ
 ibg
-eiL
+eHd
 nTl
 nTl
 nTl
@@ -171775,11 +173330,11 @@ nTl
 nTl
 nTl
 pWy
-sse
+ijZ
 qxu
 qxu
-mIq
-kbh
+rRL
+lhf
 nTl
 nTl
 nTl
@@ -172592,10 +174147,10 @@ nTl
 nTl
 nTl
 xBp
-sse
+ijZ
 qxu
 qxu
-mIq
+rRL
 baM
 nTl
 nTl
@@ -173403,17 +174958,17 @@ nTl
 ewW
 voJ
 ibg
-tOq
+uIi
 nTl
 nTl
 nTl
 nTl
-eJF
-sse
+vrs
+ijZ
 qxu
 qxu
-egC
-coV
+fjC
+vsx
 nTl
 nTl
 nTl
@@ -175034,9 +176589,9 @@ nTl
 nTl
 nTl
 nTl
-rzM
-uxJ
-ibg
+cUb
+rOr
+lTO
 gnj
 nTl
 nTl
@@ -175851,10 +177406,10 @@ nTl
 nTl
 nTl
 nTl
-rzM
-uxJ
-ibg
-gnj
+ukt
+rOr
+lTO
+cCM
 nTl
 nTl
 nTl
@@ -176671,17 +178226,17 @@ nTl
 ncW
 uxJ
 ibg
-eiL
+eHd
 nTl
 nTl
 nTl
 nTl
 eJF
-sse
+ijZ
 qxu
 qxu
-egC
-coV
+fjC
+rYh
 nTl
 nTl
 nTl
@@ -177494,10 +179049,10 @@ nTl
 nTl
 nTl
 xBp
-ueQ
+vGu
 qxu
 qxu
-egC
+fjC
 baM
 nTl
 nTl
@@ -179119,7 +180674,7 @@ nTl
 nTl
 nTl
 nTl
-cKM
+pYr
 uxJ
 ibg
 qrK
@@ -179937,8 +181492,8 @@ nTl
 nTl
 nTl
 rzM
-uxJ
-ibg
+rOr
+lTO
 aIJ
 nTl
 nTl
@@ -180753,10 +182308,10 @@ nTl
 nTl
 nTl
 nTl
-rzM
-uxJ
-ibg
-aIJ
+cUb
+rOr
+lTO
+xjq
 nTl
 nTl
 nTl
@@ -181570,20 +183125,20 @@ nTl
 nTl
 nTl
 nTl
-rzM
-uxJ
-ibg
-aIJ
+cUb
+rOr
+lTO
+xjq
 nTl
 nTl
 nTl
 nTl
 qTh
-ueQ
+vGu
 qxu
 qxu
-mIq
-jyr
+rRL
+nHa
 nTl
 nTl
 nTl
@@ -182387,10 +183942,10 @@ nTl
 nTl
 nTl
 nTl
-rzM
-uxJ
+ukt
+rOr
 lng
-aIJ
+gkh
 nTl
 nTl
 nTl
@@ -184028,13 +185583,13 @@ nTl
 nTl
 nTl
 nTl
-mDE
-kHX
-ueQ
+oXl
+uMT
+vGu
 ryT
 ryT
-mIq
-kHX
+rRL
+kCU
 nTl
 nTl
 nTl
@@ -184844,14 +186399,14 @@ qBM
 nTl
 nTl
 nTl
-mDE
-mDE
-vHi
+oXl
+fFv
+wlN
 voX
 ryT
 ryT
-mIq
-kHX
+rRL
+kCU
 nTl
 nTl
 nTl
@@ -185655,20 +187210,20 @@ eVU
 eVU
 frR
 nTl
-mDE
-sJY
-ugU
-mDE
-kHX
+fFv
+oeE
+cCz
+hxk
+hpG
 nTl
-mDE
-vHi
+fFv
+wlN
 voX
 lrr
 kMY
 ryT
-mIq
-kHX
+rRL
+kCU
 nTl
 nTl
 nTl
@@ -186466,19 +188021,19 @@ ryT
 kHX
 nTl
 mDE
-mDE
+ioQ
 jHa
-ihU
-ihU
-ihU
+bld
+bld
+bld
 wHq
 xTT
 sKp
 cnU
-ihU
-ihU
+bld
+bld
 wHq
-ihU
+bld
 voX
 lrr
 kMY
@@ -187300,9 +188855,9 @@ ouN
 kMY
 qxu
 tyW
-uZD
-mDE
-mDE
+jol
+kWD
+goh
 nTl
 nTl
 nTl
@@ -188116,9 +189671,9 @@ ryT
 ouN
 kMY
 tyW
-uZD
-mDE
-mDE
+jol
+kWD
+goh
 nTl
 nTl
 nTl
@@ -188917,24 +190472,24 @@ ryT
 mDE
 nTl
 mDE
-mDE
+nRz
 vMf
-rPf
+vuM
 pUo
 pUo
 qZS
-rPf
+vuM
 gnI
 mmh
 pUo
 pUo
 qZS
-rPf
+vuM
 pUo
 pUo
-uZD
-mDE
-mDE
+cOa
+kWD
+goh
 nTl
 nTl
 nTl
@@ -189740,17 +191295,17 @@ kGG
 kGG
 kGG
 nTl
-kHX
-jJk
+ecs
+vyI
 qFl
-mDE
-mDE
+kWD
+wrx
 nTl
-mDE
-mDE
-mDE
+wrx
+wrx
+wrx
 nTl
-mDE
+goh
 nTl
 nTl
 nTl
@@ -193009,12 +194564,12 @@ nTl
 nTl
 nTl
 vpz
-ueQ
+vGu
 njn
 pGe
 mBf
 wBL
-ihU
+bld
 csX
 hMb
 gIi
@@ -193825,8 +195380,8 @@ nTl
 nTl
 nTl
 nTl
-vpz
-sse
+oLq
+ijZ
 mmh
 fWD
 xsA
@@ -194642,10 +196197,10 @@ nTl
 nTl
 nTl
 nTl
-vpz
-uxJ
+oLq
+rOr
 ibg
-bLn
+srB
 nTl
 nTl
 hPr
@@ -195460,9 +197015,9 @@ nTl
 nTl
 nTl
 uwg
-uxJ
-ibg
-gnj
+rOr
+lTO
+isY
 nTl
 nTl
 nTl
@@ -196277,8 +197832,8 @@ nTl
 nTl
 nTl
 uwg
-uxJ
-ibg
+rOr
+lTO
 gnj
 nTl
 nTl
@@ -197911,7 +199466,7 @@ jHb
 jHb
 jHb
 mKE
-ckF
+fWg
 gYX
 oxw
 jHb
@@ -198727,10 +200282,10 @@ mmH
 jHb
 jHb
 jHb
-mKE
-ckF
-nYL
-oxw
+gdu
+fWg
+liE
+iFf
 jHb
 jHb
 jHb
@@ -201355,7 +202910,7 @@ ews
 feu
 dRL
 jln
-tDS
+jhc
 nbr
 qpA
 ivj
@@ -273072,8 +274627,8 @@ wpF
 wpF
 wpF
 wpF
-ryw
-slG
+cXd
+gSM
 wpF
 wpF
 uAa
@@ -273889,8 +275444,8 @@ wpF
 wpF
 wpF
 tFp
-hil
-jgm
+dKH
+tDE
 aaY
 wpF
 uAa
@@ -274706,8 +276261,8 @@ wpF
 wpF
 wpF
 nmE
-nyc
-bAj
+uBz
+ndm
 ufs
 wpF
 uAa
@@ -275523,9 +277078,9 @@ wpF
 wpF
 wpF
 sZj
-nyc
-nyc
-ufs
+uBz
+wGN
+gBT
 wpF
 uAa
 uAa
@@ -276339,10 +277894,10 @@ wpF
 wpF
 wpF
 wpF
-sZj
-nyc
-nyc
-ufs
+jjZ
+uBz
+wGN
+jgY
 wpF
 uAa
 uAa
@@ -277157,8 +278712,8 @@ wpF
 wpF
 wpF
 rvn
-hil
-hil
+dKH
+auj
 diZ
 wpF
 uAa
@@ -277974,8 +279529,8 @@ wpF
 wpF
 wpF
 wpF
-waA
-waA
+rPN
+qEg
 wpF
 wpF
 uAa
@@ -279608,8 +281163,8 @@ wpF
 wpF
 wpF
 wpF
-ryw
-slG
+cXd
+gSM
 wpF
 wpF
 uAa
@@ -280425,8 +281980,8 @@ wpF
 wpF
 wpF
 tFp
-hil
-jgm
+dKH
+tDE
 aaY
 wpF
 uAa
@@ -281242,8 +282797,8 @@ wpF
 wpF
 wpF
 nmE
-nyc
-bAj
+uBz
+ndm
 ufs
 wpF
 uAa
@@ -282059,9 +283614,9 @@ wpF
 wpF
 wpF
 sZj
-nyc
-nyc
-ufs
+uBz
+wGN
+gBT
 wpF
 uAa
 uAa
@@ -282875,10 +284430,10 @@ wpF
 wpF
 wpF
 wpF
-sZj
-nyc
-nyc
-ufs
+jjZ
+uBz
+wGN
+jgY
 wpF
 uAa
 uAa
@@ -283693,8 +285248,8 @@ wpF
 wpF
 wpF
 rvn
-hil
-hil
+dKH
+auj
 diZ
 wpF
 uAa
@@ -284510,8 +286065,8 @@ wpF
 wpF
 wpF
 wpF
-waA
-waA
+rPN
+qEg
 wpF
 wpF
 uAa
@@ -286144,8 +287699,8 @@ wpF
 wpF
 wpF
 wpF
-ryw
-slG
+cXd
+gSM
 wpF
 wpF
 uAa
@@ -286952,8 +288507,8 @@ nyc
 kGZ
 wpF
 vMS
-vMS
-vMS
+kaP
+kaP
 jEC
 kaP
 oGC
@@ -286961,8 +288516,8 @@ oGC
 oGC
 wpF
 pFm
-hil
-jgm
+dKH
+tDE
 aaY
 wpF
 uAa
@@ -287776,10 +289331,10 @@ iNC
 iNC
 iNC
 qDO
-iBD
+vqZ
 uUL
-nyc
-bAj
+dXo
+ndm
 ufs
 wpF
 uAa
@@ -288586,8 +290141,8 @@ nyc
 jJg
 wpF
 tUP
-tUP
-tUP
+mOe
+mOe
 ewd
 mOe
 rPK
@@ -288595,9 +290150,9 @@ rPK
 rPK
 wpF
 uwP
-nyc
-nyc
-ufs
+uBz
+wGN
+gBT
 wpF
 uAa
 uAa
@@ -289411,10 +290966,10 @@ wpF
 wpF
 wpF
 wpF
-sZj
-nyc
-nyc
-ufs
+jjZ
+uBz
+wGN
+jgY
 wpF
 uAa
 uAa
@@ -290229,8 +291784,8 @@ wpF
 wpF
 wpF
 rvn
-hil
-hil
+dKH
+auj
 diZ
 wpF
 uAa
@@ -291046,8 +292601,8 @@ wpF
 wpF
 wpF
 wpF
-waA
-waA
+rPN
+qEg
 wpF
 wpF
 uAa
@@ -292667,7 +294222,7 @@ wpF
 wpF
 wpF
 wpF
-oQo
+qhv
 wpF
 wpF
 wpF
@@ -292680,8 +294235,8 @@ wpF
 wpF
 wpF
 wpF
-ryw
-slG
+cXd
+gSM
 wpF
 wpF
 uAa
@@ -293484,7 +295039,7 @@ wpF
 wpF
 wpF
 tBi
-ryw
+pIC
 kFg
 wpF
 wpF
@@ -293497,8 +295052,8 @@ wpF
 wpF
 wpF
 tFp
-hil
-jgm
+dKH
+tDE
 aaY
 wpF
 uAa
@@ -294301,7 +295856,7 @@ wpF
 wpF
 wpF
 tBi
-hil
+gAd
 kFg
 wpF
 wpF
@@ -294314,8 +295869,8 @@ wpF
 wpF
 wpF
 nmE
-nyc
-bAj
+uBz
+ndm
 ufs
 wpF
 uAa
@@ -295117,8 +296672,8 @@ mHI
 mHI
 wpF
 wpF
-tBi
-hil
+rbx
+lWZ
 kFg
 wpF
 wpF
@@ -295131,9 +296686,9 @@ wpF
 wpF
 wpF
 sZj
-nyc
-nyc
-ufs
+uBz
+wGN
+gBT
 wpF
 wpF
 wpF
@@ -295934,9 +297489,9 @@ meF
 mHI
 wpF
 wpF
-tBi
-hil
-kFg
+rbx
+gAd
+rEg
 wpF
 wpF
 wpF
@@ -295947,10 +297502,10 @@ wpF
 wpF
 wpF
 wpF
-sZj
-nyc
-nyc
-ufs
+jjZ
+uBz
+wGN
+jgY
 wpF
 wpF
 wpF
@@ -296751,9 +298306,9 @@ meF
 mHI
 wpF
 wpF
-tBi
-waA
-kFg
+rbx
+efB
+rEg
 wpF
 wpF
 wpF
@@ -296765,8 +298320,8 @@ wpF
 wpF
 wpF
 rvn
-hil
-hil
+dKH
+auj
 diZ
 wpF
 wpF
@@ -297569,7 +299124,7 @@ mHI
 wpF
 wpF
 wpF
-oQo
+tqO
 wpF
 wpF
 wpF
@@ -297582,8 +299137,8 @@ wpF
 wpF
 wpF
 wpF
-waA
-waA
+rPN
+qEg
 wpF
 wpF
 wpF
@@ -298384,10 +299939,10 @@ hil
 meF
 mHI
 wpF
-hil
-hil
-ryw
-kFg
+yjC
+oLh
+qOw
+rEg
 wpF
 wpF
 wpF
@@ -299201,7 +300756,7 @@ meF
 meF
 mHI
 wpF
-waA
+pZt
 njS
 tjk
 wpF
@@ -300018,7 +301573,7 @@ mHI
 mHI
 mHI
 wpF
-oQo
+coM
 wpF
 wpF
 wpF
@@ -326958,13 +328513,13 @@ kIv
 jgm
 iJZ
 lHH
-dXh
+bFP
 ndq
-lJa
-iNC
-iNC
-iNC
-qDO
+bLb
+qzE
+qzE
+qzE
+oNB
 iBD
 kIv
 pIk
@@ -326973,26 +328528,26 @@ nyc
 pIk
 kIv
 lHH
-dXh
+bFP
 ndq
-lJa
-iNC
-iNC
-iNC
-qDO
+bLb
+qzE
+qzE
+qzE
+oNB
 lHH
-dXh
+bFP
 ndq
-lJa
-iNC
-qDO
+bLb
+qzE
+oNB
 lHH
-dXh
-lJa
-iNC
-iNC
-iNC
-qDO
+bFP
+bLb
+qzE
+qzE
+qzE
+oNB
 iBD
 kIv
 jgm
@@ -343348,7 +344903,7 @@ lJa
 iNC
 iNC
 qDO
-uBA
+dFz
 uBA
 dXh
 iNC
