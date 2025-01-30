@@ -263,7 +263,7 @@ FORENSIC SCANNER
 		dat += "\nHealth Analyzer for [src]:\n\tOverall Status: <b>DEAD</b>"
 	else
 		var/mob/living/carbon/human/snowflake_variable_for_name = src
-		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[snowflake_variable_for_name.get_id_name("Unknown")] [src.stat > 1 ? "<b>DEAD</b>" : "<b>[src.health - src.halloss]% "] at " + worldtime2text("hh:mm:ss") + "\n
+		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[snowflake_variable_for_name.get_id_name("Unknown")] [src.stat > 1 ? "<b>DEAD</b>" : "<b>[src.health - src.halloss]% "] at " + worldtime2text("hh:mm:ss") + "\n"
 	//dat += "[SET_CLASS("Oxygen", INTERFACE_BLUE)]-[SET_CLASS("Toxin", INTERFACE_GREEN)]-[SET_CLASS("Burns", INTERFACE_ORANGE)]-[SET_CLASS("Brute", INTERFACE_RED)]<td>"
 	dat += "[SET_CLASS(OX, INTERFACE_BLUE)] - [SET_CLASS(TX, INTERFACE_GREEN)] - [SET_CLASS(BU, INTERFACE_ORANGE)] - [SET_CLASS(BR, INTERFACE_RED)]\n"
 	//dat += "\tUntreated: {B}=Burns,{T}=Trauma,{F}=Fracture\n"
