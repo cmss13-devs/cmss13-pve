@@ -84,6 +84,7 @@ FORENSIC SCANNER
 	var/popup_window = TRUE
 	var/last_scan
 	var/list/buffer_for_report = list()
+	var/list/buffer_for_report_but_html = list() //no ^sublist today, I want to go to bed on time
 	var/datum/health_scan/last_health_display
 	var/currently_selected_last_scan = 0
 	var/alien = FALSE
@@ -127,13 +128,8 @@ FORENSIC SCANNER
 		return
 	last_scan = buffer_for_report[currently_selected_last_scan]
 	SStgui.close_user_uis(user, last_health_display)
-	ui = SStgui.try_update_ui(user, src, ui)
-	if(!ui)
-		ui = new(user, src, "HealthScan", "Stored Health Scan")
-		last_health_display.scanner_device = src
-		//ui.status = UI_INTERACTIVE
-		ui.open()
-		ui.set_autoupdate(TRUE)
+	last_health_display.scanner_device = src
+	last_health_display.tgui_interact(user)
 
 /obj/item/device/healthanalyzer/ui_data(mob/user)
 	return last_scan
@@ -186,18 +182,15 @@ FORENSIC SCANNER
 */
 
 /obj/item/device/healthanalyzer/soul
+	name = "/improper Health Diagnostic Equipment"
 	icon = 'icons/obj/items/Medical Scanner.dmi'
 	icon_state = "Medical_scanner"
 	item_state = "analyzer"
 	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
 	w_class = SIZE_MEDIUM
-	var/mode = 1
-	var/report_delay_counter = 0
-	var/report_delay_threshold = 3 //every three processes, record to report buffer
-
+	var/record_scan_on_connect = FALSE
 	var/mob/living/carbon/human/connected_to
 	var/mob/living/carbon/human/connected_from
-	var/blood_type = null
 	var/datum/beam/current_beam
 	var/datum/looping_sound/healthanalyzer_oxygen_beeping/oxygen_alarm_loop
 	var/datum/looping_sound/healthanalyzer_heart_beeping/heart_rate_loop
@@ -206,116 +199,15 @@ FORENSIC SCANNER
 	heart_rate_loop = new(src)
 	oxygen_alarm_loop = new(src)
 
-/obj/item/device/healthanalyzer/soul/verb/print_report_verb()
-	set name = "Print Report"
-	set category = "Object"
-	set src in usr
-
-	if(usr.is_mob_incapacitated())
-		return
-	print_report(usr)
-
-/obj/item/device/healthanalyzer/soul/ui_state(mob/user)
-	return GLOB.always_state
-	/*if(isobserver(user))
-		return GLOB.always_state
-	else
-		return GLOB.not_incapacitated_state*/
-
 /obj/item/device/healthanalyzer/soul/proc/print_report(mob/living/user)
 	if(!last_scan)
 		to_chat(user, "There is no scan data to print.")
 		return
 	var/obj/item/paper/print_report = new /obj/item/paper
-	//print_report.info += "Device ID:" + serial_number + "\n" + jointext(pick(buffer_for_report),"<br>")
-	last_scan = pick(buffer_for_report)
-	tgui_interact(user)
-	//print_report.info_links += jointext(buffer_for_report,"<br>")
-	//print_report.updateinfolinks()
+	print_report.info += ("Device ID:" + serial_number + "\n" + jointext(buffer_for_report_but_html[currently_selected_last_scan],"<br>"))
 	print_report.update_icon()
-	//user.put_in_hands(print_report)
+	user.put_in_hands(print_report)
 	visible_message("\The [src] spits out a piece of paper.")
-
-/obj/item/device/healthanalyzer/soul/proc/perform_scan_and_report()
-	if(ishuman(connected_from))
-		if(!popup_window)
-			last_scan = connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)
-			to_chat(connected_from, SPAN_NOTICE(last_scan))
-		else
-			if (!last_health_display)
-				last_health_display = new(connected_to)
-			else
-				last_health_display.target_mob = connected_to
-				SStgui.close_user_uis(connected_from, src)
-				last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
-				last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = TRUE, ignore_delay = FALSE, alien = alien, associated_equipment = src, associated_user = FALSE)
-		src.add_fingerprint()
-	if(report_delay_counter >= report_delay_threshold)
-		to_chat(connected_from, SPAN_NOTICE("[connected_from] has analyzed [connected_to]'s vitals.")) //lol
-		if(findtext(last_scan,"<table")) //don't run health_scan_table a second time if the data was already gathered this tick
-			buffer_for_report.Add(last_scan)
-		else
-			//buffer_for_report.Add(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)) //Using TGUI mode, gather data again...
-			if(last_scan)
-				buffer_for_report += list(last_scan)
-				currently_selected_last_scan = buffer_for_report.len
-		report_delay_counter = -1 //reset counter
-		if(buffer_for_report.len > 40)
-			buffer_for_report.Cut(1,3) //stop memory leak, maybe
-	report_delay_counter++
-
-/obj/item/device/healthanalyzer/soul/process()
-	//if we're not connected to anything stop doing stuff
-	if(!connected_to)
-		return PROCESS_KILL
-
-	/*if we're not on a human stop doing stuff
-	if(!ishuman(loc))
-		bad_disconnect()
-		return PROCESS_KILL
-
-	//if we're not being held in a hand stop doing stuff
-	var/mob/living/carbon/human/current_human = loc
-	if(!(current_human.l_hand == src || current_human.r_hand == src))
-		bad_disconnect()
-		return PROCESS_KILL
-	*/
-	//if we're further than 3 tile away to stop doing stuff
-	if(!(get_dist(src, connected_to) <= 3))
-		disconnect(TRUE)
-		return PROCESS_KILL
-	update_beam(TRUE)
-	perform_scan_and_report()
-	//playsound(src.loc, 'sound/items/healthanalyzer.ogg', 50)
-	//Modify the health analyzers own beeping sounds depending on what is happening
-	var/health_percentage = connected_to.health - connected_to.halloss
-	// if oxyloss is more than half of the remaining damage to instant death, make a different beep
-	var/midpoint = abs(((connected_to.getBruteLoss() + connected_to.getFireLoss() + connected_to.getToxLoss()) + (HEALTH_THRESHOLD_DEAD-100)) / 2)
-	if (connected_to.oxyloss >= midpoint && connected_to.stat != 1)
-		oxygen_alarm_loop.start()
-	else
-		oxygen_alarm_loop.stop()
-	if(health_percentage >= 40)
-		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
-		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
-		heart_rate_loop.mid_length = 0.703 SECONDS
-	if(health_percentage < 40)
-		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
-		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
-		heart_rate_loop.mid_length = 0.499 SECONDS
-	if(health_percentage < -20)
-		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
-		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
-		heart_rate_loop.mid_length = 0.550 SECONDS
-	if(health_percentage < -120)
-		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
-		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
-		heart_rate_loop.mid_length = 0.374 SECONDS
-	if(connected_to.stat > 1)
-		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
-		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
-		heart_rate_loop.mid_length = 3.110 SECONDS
-	return
 
 /// proc health_scan was a legacy proc for to_chat messages on health analysers. health_scan_table is retrofitted to have parity with the TGUI scan so it can record info for reports
 /mob/living/proc/health_scan_table(mob/living/carbon/human/user, ignore_delay = FALSE, show_limb_damage = TRUE, show_browser = TRUE, alien = FALSE, do_checks = TRUE) // ahem. FUCK WHOEVER CODED THIS SHIT AS NUMBERS AND NOT DEFINES.
@@ -371,7 +263,7 @@ FORENSIC SCANNER
 		dat += "\nHealth Analyzer for [src]:\n\tOverall Status: <b>DEAD</b>"
 	else
 		var/mob/living/carbon/human/snowflake_variable_for_name = src
-		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[snowflake_variable_for_name.get_id_name("Unknown")] [src.stat > 1 ? "<b>DEAD</b>" : "<b>[src.health - src.halloss]% "] at " + worldtime2text("hh:mm:ss") + "/n"
+		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[snowflake_variable_for_name.get_id_name("Unknown")] [src.stat > 1 ? "<b>DEAD</b>" : "<b>[src.health - src.halloss]% "] at " + worldtime2text("hh:mm:ss") + "\n
 	//dat += "[SET_CLASS("Oxygen", INTERFACE_BLUE)]-[SET_CLASS("Toxin", INTERFACE_GREEN)]-[SET_CLASS("Burns", INTERFACE_ORANGE)]-[SET_CLASS("Brute", INTERFACE_RED)]<td>"
 	dat += "[SET_CLASS(OX, INTERFACE_BLUE)] - [SET_CLASS(TX, INTERFACE_GREEN)] - [SET_CLASS(BU, INTERFACE_ORANGE)] - [SET_CLASS(BR, INTERFACE_RED)]\n"
 	//dat += "\tUntreated: {B}=Burns,{T}=Trauma,{F}=Fracture\n"
@@ -506,6 +398,68 @@ FORENSIC SCANNER
 	dat = replacetext(dat, "class='scannerburnb'", "style='font-weight: bold;' class='[INTERFACE_ORANGE]'")
 	return dat
 
+/obj/item/device/healthanalyzer/soul/proc/perform_scan_and_report()
+	if(ishuman(connected_from))
+		if(!popup_window)
+			//last_scan = connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)
+			to_chat(connected_from, SPAN_NOTICE(last_scan))
+		else
+			if (!last_health_display)
+				last_health_display = new(connected_to)
+			else
+				last_health_display.target_mob = connected_to
+				SStgui.close_user_uis(connected_from, src)
+				last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
+				last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = TRUE, ignore_delay = FALSE, alien = alien, associated_equipment = src, associated_user = FALSE)
+		src.add_fingerprint()
+		if(last_scan && record_scan_on_connect)
+			record_scan_on_connect = FALSE
+			buffer_for_report += list(last_scan)
+			buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+			currently_selected_last_scan = buffer_for_report.len
+		if(buffer_for_report.len > 40)
+			buffer_for_report.Cut(1,3) //stop memory leak, maybe
+
+/obj/item/device/healthanalyzer/soul/process()
+	//if we're not connected to anything stop doing stuff
+	if(!connected_to)
+		return PROCESS_KILL
+	//if we're further than 3 tile away to stop doing stuff
+	if(!(get_dist(src, connected_to) <= 3))
+		disconnect(TRUE)
+		return PROCESS_KILL
+	update_beam(TRUE)
+	perform_scan_and_report()
+	//Modify the health analyzers own beeping sounds depending on what is happening
+	var/health_percentage = connected_to.health - connected_to.halloss
+	// if oxyloss is more than half of the remaining damage to instant death, make a different beep
+	var/midpoint = abs(((connected_to.getBruteLoss() + connected_to.getFireLoss() + connected_to.getToxLoss()) + (HEALTH_THRESHOLD_DEAD-100)) / 2)
+	if (connected_to.oxyloss >= midpoint && connected_to.stat != 1)
+		oxygen_alarm_loop.start()
+	else
+		oxygen_alarm_loop.stop()
+	if(health_percentage >= 40)
+		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
+		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_okay.ogg' = 1)
+		heart_rate_loop.mid_length = 0.703 SECONDS
+	if(health_percentage < 40)
+		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
+		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
+		heart_rate_loop.mid_length = 0.499 SECONDS
+	if(health_percentage < -20)
+		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
+		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
+		heart_rate_loop.mid_length = 0.550 SECONDS
+	if(health_percentage < -120)
+		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
+		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
+		heart_rate_loop.mid_length = 0.374 SECONDS
+	if(connected_to.stat > 1)
+		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
+		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
+		heart_rate_loop.mid_length = 3.110 SECONDS
+	return
+
 /obj/item/device/healthanalyzer/soul/proc/update_beam(new_beam = TRUE)
 	connected_from = get_atom_on_turf(src)
 	if(current_beam)
@@ -535,7 +489,7 @@ FORENSIC SCANNER
 		connected_to.base_pixel_x = 5
 		START_PROCESSING(SSobj, src)
 		heart_rate_loop.start()
-		report_delay_counter = report_delay_threshold
+		record_scan_on_connect = TRUE
 		user.visible_message("[user] attaches \the [src] to [connected_to].", \
 			"You attach \the [src] to [connected_to].")
 		icon_state = "Medical_scanner_open"
@@ -561,6 +515,10 @@ FORENSIC SCANNER
 	connected_to.base_pixel_x = 0
 	connected_to = null
 	connected_from = null
+	if(last_scan)
+		buffer_for_report += list(last_scan)
+		buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+		currently_selected_last_scan = buffer_for_report.len
 	icon_state = "Medical_scanner"
 	overlays -= image(icon, src, "+running")
 	update_beam(FALSE)

@@ -43,6 +43,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 			return
 
 	detail_level = detail
+	scanner_device = associated_equipment
 	tgui_interact(user, ui)
 
 /datum/health_scan/ui_state(mob/user)
@@ -93,6 +94,13 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	return min(-100, target_mob.health)
 
 /datum/health_scan/ui_data(mob/user, data_detail_level = null)
+
+	//This health scan is tied to a device that can buffer multiple scans, like the HD-E or Body Scanner.
+	if(scanner_device)
+		if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
+			var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+			if(analyzer.last_scan && !analyzer.connected_to) //least one scan in the past and the analyzer isn't supposed to fetch new info
+				return analyzer.buffer_for_report[analyzer.currently_selected_last_scan]
 	var/list/data = list(
 		"patient" = target_mob.name,
 		"dead" = get_death_value(target_mob),
@@ -490,18 +498,19 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 				//var/mob/living/carbon/human/target_human = target_mob
 				if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
 					var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
-					analyzer.currently_selected_last_scan = analyzer.currently_selected_last_scan - 1
+					analyzer.currently_selected_last_scan = clamp(analyzer.currently_selected_last_scan - 1, 1,analyzer.buffer_for_report.len)
 					analyzer.tgui_interact(ui.user)
-				return TRUE
+					return TRUE
 		if("next_scan")
-			if(ishuman(target_mob))
-				var/mob/living/carbon/human/target_human = target_mob
-
+			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
+				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+				analyzer.currently_selected_last_scan = clamp(analyzer.currently_selected_last_scan + 1, 1,analyzer.buffer_for_report.len)
+				analyzer.tgui_interact(ui.user)
 				return TRUE
 		if("print_scan")
-			if(ishuman(target_mob))
-				var/mob/living/carbon/human/target_human = target_mob
-
+			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
+				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+				analyzer.print_report(ui.user)
 				return TRUE
 
 /// legacy proc for to_chat messages on health analysers
