@@ -210,7 +210,7 @@ FORENSIC SCANNER
 	var/obj/item/paper/print_report = new /obj/item/paper
 	print_report.info += ("Device ID:" + serial_number + "\n" + jointext(buffer_for_report_but_html[currently_selected_last_scan],"<br>"))
 	print_report.update_icon()
-	print.report.name = "\improper scan print-out of" + buffer_for_report[currently_selected_last_scan]["patient"]
+	print_report.name = "\improper scan print-out of" + buffer_for_report[currently_selected_last_scan]["patient"]
 	user.put_in_hands(print_report)
 	paper_left--
 	visible_message("\The [src] spits out a piece of paper.")
