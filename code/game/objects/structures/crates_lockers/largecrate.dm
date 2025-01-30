@@ -74,6 +74,10 @@
 	if(power >= EXPLOSION_THRESHOLD_VLOW)
 		unpack()
 
+/obj/structure/largecrate/pull_response(atom/movable/AM)
+	animate(src, pixel_x = 0, pixel_y = 0, time = 1 SECONDS)
+	return TRUE
+
 /obj/structure/largecrate/proc/take_damage(damage)
 	health -= damage
 	if(health <= 0)
