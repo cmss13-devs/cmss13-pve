@@ -189,6 +189,7 @@ FORENSIC SCANNER
 	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
 	w_class = SIZE_MEDIUM
 	var/record_scan_on_connect = FALSE
+	var/paper_left = 10
 	var/mob/living/carbon/human/connected_to
 	var/mob/living/carbon/human/connected_from
 	var/datum/beam/current_beam
@@ -203,11 +204,31 @@ FORENSIC SCANNER
 	if(!last_scan)
 		to_chat(user, "There is no scan data to print.")
 		return
+	if(paper_left <= 0)
+		to_chat(user, "[src] ran out of paper, and cannot print a report")
+		return
 	var/obj/item/paper/print_report = new /obj/item/paper
 	print_report.info += ("Device ID:" + serial_number + "\n" + jointext(buffer_for_report_but_html[currently_selected_last_scan],"<br>"))
 	print_report.update_icon()
+	print.report.name = "\improper scan print-out of" + buffer_for_report[currently_selected_last_scan]["patient"]
 	user.put_in_hands(print_report)
+	paper_left--
 	visible_message("\The [src] spits out a piece of paper.")
+
+/obj/item/device/healthanalyzer/soul/attackby(obj/item/I, mob/user)
+	. = ..()
+	if(istype(I, /obj/item/paper))
+		if(paper_left != initial(paper_left))
+			to_chat(user, SPAN_NOTICE("You insert [I] into [src]."))
+			qdel(I) //delete the paper item
+			paper_left = initial(paper_left)
+		else
+			to_chat(user, SPAN_NOTICE("[src] is already full."))
+
+/obj/item/device/healthanalyzer/soul/get_examine_text(mob/user)
+	. = ..()
+	. += SPAN_NOTICE("It has [paper_left] out of [initial(paper_left)] report print-outs left.")
+	. += SPAN_HELPFUL("Use paper to refill it.")
 
 /// proc health_scan was a legacy proc for to_chat messages on health analysers. health_scan_table is retrofitted to have parity with the TGUI scan so it can record info for reports
 /mob/living/proc/health_scan_table(mob/living/carbon/human/user, ignore_delay = FALSE, show_limb_damage = TRUE, show_browser = TRUE, alien = FALSE, do_checks = TRUE) // ahem. FUCK WHOEVER CODED THIS SHIT AS NUMBERS AND NOT DEFINES.
