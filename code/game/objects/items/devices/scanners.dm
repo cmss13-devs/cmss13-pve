@@ -502,6 +502,7 @@ FORENSIC SCANNER
 	if(last_scan)
 		buffer_for_report += list(last_scan)
 		buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+		currently_selected_last_scan = buffer_for_report.len
 	STOP_PROCESSING(SSobj, src)
 	heart_rate_loop.stop()
 	oxygen_alarm_loop.stop()
@@ -518,7 +519,7 @@ FORENSIC SCANNER
 	connected_to.base_pixel_x = 0
 	connected_to = null
 	connected_from = null
-		currently_selected_last_scan = buffer_for_report.len
+
 	icon_state = "Medical_scanner"
 	overlays -= image(icon, src, "+running")
 	update_beam(FALSE)
