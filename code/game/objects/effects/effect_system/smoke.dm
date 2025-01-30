@@ -135,6 +135,7 @@
 	time_to_live = 25
 	spread_speed = 2
 	smokeranking = SMOKE_RANK_LOW
+	color = "#adadad"
 
 /obj/effect/particle_effect/smoke/bad/Move()
 	. = ..()
@@ -311,6 +312,7 @@
 /obj/effect/particle_effect/smoke/phosphorus
 	time_to_live = 25
 	smokeranking = SMOKE_RANK_MED
+	color = ""#dddddd"
 	var/next_cough = 2 SECONDS
 	var/burn_damage = 40
 	var/applied_fire_stacks = 3
