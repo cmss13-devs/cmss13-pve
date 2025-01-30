@@ -182,7 +182,7 @@ FORENSIC SCANNER
 */
 
 /obj/item/device/healthanalyzer/soul
-	name = "/improper Health Diagnostic Equipment"
+	name = "\improper Health Diagnostic Equipment"
 	icon = 'icons/obj/items/Medical Scanner.dmi'
 	icon_state = "Medical_scanner"
 	item_state = "analyzer"
