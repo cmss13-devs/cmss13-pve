@@ -2583,16 +2583,6 @@
 	},
 /turf/open/floor/warning/east,
 /area/calliope/bunker/cargo_area)
-"cxa" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/sentry_holder{
-	pixel_y = 25
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/calliope/bunker/pillbox)
 "cxb" = (
 /obj/structure/platform{
 	dir = 1;
@@ -3004,6 +2994,10 @@
 "cSY" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
+	},
+/obj/structure/machinery/sentry_holder{
+	dir = 1;
+	pixel_y = -10
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope/bunker/pillbox)
@@ -4087,6 +4081,9 @@
 /area/calliope/bunker/abandoned_section)
 "dSl" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
 /turf/open/gm/dirt2,
 /area/calliope/highway/southbound)
 "dSv" = (
@@ -5387,7 +5384,6 @@
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/closet)
 "fdy" = (
-/obj/structure/surface/table/almayer,
 /obj/item/paper_bin/uscm{
 	pixel_x = 8;
 	pixel_y = 9
@@ -5405,6 +5401,9 @@
 	pixel_y = 0
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/west_checkpoint)
 "fdL" = (
@@ -6926,10 +6925,12 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/southbound)
 "gDb" = (
-/obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine,
 /obj/structure/noticeboard{
 	pixel_y = 28
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
 	},
 /turf/open/floor/prison,
 /area/calliope/bunker_exterior_buildings/west_checkpoint)
@@ -9116,9 +9117,11 @@
 /turf/open/floor/strata/purp2,
 /area/calliope/highway/southbound)
 "izH" = (
-/obj/structure/surface/table/almayer,
 /obj/item/clipboard,
 /obj/item/tool/hand_labeler,
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/west_checkpoint)
 "iAS" = (
@@ -11216,7 +11219,6 @@
 /turf/closed/wall/r_wall/bunker,
 /area/calliope/highway/northbound)
 "kqx" = (
-/obj/structure/surface/table/almayer,
 /obj/item/device/flashlight/lamp{
 	pixel_x = -8;
 	pixel_y = 12
@@ -11228,6 +11230,9 @@
 /obj/item/tool/stamp/denied{
 	pixel_x = 7;
 	pixel_y = 4
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/west_checkpoint)
@@ -15685,7 +15690,6 @@
 /turf/open/floor/interior/plastic,
 /area/calliope/exterior_buildings/ghost_town)
 "oSr" = (
-/obj/structure/surface/table/almayer,
 /obj/item/folder/red{
 	pixel_x = -5;
 	pixel_y = 4
@@ -15693,6 +15697,9 @@
 /obj/item/folder{
 	pixel_x = 2;
 	pixel_y = 0
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/east_checkpoint)
@@ -16584,6 +16591,11 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/engineering)
+"pHS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/holder/mouse/brown,
+/turf/open/floor/plating,
+/area/calliope/bunker/north_section)
 "pIR" = (
 /turf/open/auto_turf/strata_grass,
 /area/calliope/exterior_buildings/ghost_town)
@@ -17657,7 +17669,6 @@
 /turf/closed/wall,
 /area/calliope/highway/checkpoint)
 "qMv" = (
-/obj/structure/surface/table/almayer,
 /obj/item/paper_bin/uscm{
 	pixel_x = -8;
 	pixel_y = 4
@@ -17667,6 +17678,9 @@
 	pixel_y = 3
 	},
 /obj/item/tool/hand_labeler,
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/east_checkpoint)
 "qMI" = (
@@ -17968,6 +17982,9 @@
 "qYt" = (
 /obj/structure/flora/bush/desert/cactus{
 	icon_state = "cactus_7"
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
 	},
 /turf/open/gm/dirt2,
 /area/calliope/highway/southbound)
@@ -18626,13 +18643,13 @@
 	pixel_x = -16;
 	pixel_y = -1
 	},
-/obj/item/ammo_magazine/shotgun/buckshot/special{
-	pixel_x = -2;
-	pixel_y = 5
-	},
 /obj/item/device/flashlight/lamp/on{
 	pixel_y = 11;
 	pixel_x = -17
+	},
+/obj/item/ammo_magazine/handful/shotgun/buckshot/special{
+	pixel_x = -1;
+	pixel_y = 3
 	},
 /turf/open/floor/prison/floor_marked,
 /area/calliope/bunker/cargo_under)
@@ -19297,7 +19314,6 @@
 /turf/open/floor/prison/floor_plate,
 /area/calliope/highway/northbound)
 "sto" = (
-/obj/structure/surface/table/almayer,
 /obj/item/clipboard,
 /obj/item/tool/stamp/denied{
 	pixel_x = -7;
@@ -19306,6 +19322,9 @@
 /obj/item/tool/stamp/approved{
 	pixel_x = 7;
 	pixel_y = 0
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
 	},
 /turf/open/floor/prison,
 /area/calliope/bunker_exterior_buildings/east_checkpoint)
@@ -20065,17 +20084,6 @@
 "tij" = (
 /turf/open/floor/loadingarea/east,
 /area/calliope/bunker/sterlingtransfer)
-"tja" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/sentry_holder{
-	dir = 1;
-	pixel_y = -10
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/calliope/bunker/pillbox)
 "tjg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -21570,7 +21578,8 @@
 	pixel_x = 0;
 	pixel_y = -27;
 	name = "Sterling Outpost Plaque of Memories";
-	desc = "A collage of pictures, signatures, and quotes from the men and women of Sterling."
+	desc = "A collage of pictures, signatures, and quotes from the men and women of Sterling.";
+	desc_lore = null
 	},
 /obj/item/tool/candle{
 	pixel_x = -17;
@@ -21759,7 +21768,6 @@
 /turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
 "uUo" = (
-/obj/structure/surface/table/almayer,
 /obj/structure/machinery/door_control/brbutton/alt{
 	pixel_y = 12;
 	id = "pass_r2";
@@ -21773,6 +21781,9 @@
 /obj/item/device/flashlight/lamp{
 	pixel_x = -8;
 	pixel_y = 12
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/east_checkpoint)
@@ -22437,7 +22448,6 @@
 /turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
 "vJz" = (
-/obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine,
 /obj/item/device/flashlight/lamp{
 	pixel_x = 7;
@@ -22446,6 +22456,9 @@
 /obj/structure/noticeboard{
 	pixel_y = 2;
 	pixel_x = 27
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/east_checkpoint)
@@ -24326,6 +24339,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
+/obj/structure/machinery/sentry_holder{
+	pixel_y = 25
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope/bunker/pillbox)
 "xpC" = (
@@ -25017,7 +25033,6 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/calliope/bunker/south_section)
 "ydu" = (
-/obj/structure/surface/table/almayer,
 /obj/structure/machinery/door_control/brbutton/alt{
 	pixel_y = 12;
 	id = "pass_l";
@@ -25033,6 +25048,9 @@
 	pixel_y = 6
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/west_checkpoint)
 "yeK" = (
@@ -37676,7 +37694,7 @@ jFK
 jFK
 ajh
 vaS
-cxa
+vaS
 xpe
 qHn
 jJn
@@ -37689,7 +37707,7 @@ eef
 rWn
 eIa
 cSY
-tja
+vaS
 vaS
 ajh
 jFK
@@ -47045,7 +47063,7 @@ nfc
 xDv
 nfc
 kdu
-pkN
+iAS
 poh
 poh
 poh
@@ -47302,7 +47320,7 @@ gQZ
 gQZ
 gQZ
 kmC
-pkN
+nVu
 kdu
 nfc
 hyL
@@ -47549,7 +47567,7 @@ nfc
 nfc
 nfc
 kdu
-dSl
+bkM
 fzp
 gQZ
 gQZ
@@ -48054,7 +48072,7 @@ spv
 tfm
 nfc
 kdu
-pkN
+wln
 fzp
 gQZ
 gQZ
@@ -48814,7 +48832,7 @@ kdu
 qYt
 dub
 dub
-dSl
+qwp
 kdu
 nfc
 nfc
@@ -63118,7 +63136,7 @@ ppp
 mJx
 lsi
 rZA
-hmO
+pHS
 mPP
 fmX
 fmX

@@ -27,3 +27,19 @@
 /area/calliope/oob/mountain{base_lighting_alpha=175;} : /area/calliope/oob/mountain
 /area/calliope/oob/gate{base_lighting_alpha=175;} : /area/calliope/oob/gate
 /area/calliope/oob_o/playground{base_lighting_alpha=175;} : /area/calliope/oob_o/playground
+
+/area/calliope_route/shuttles/drop1{base_lighting_alpha=175;} : /area/calliope_route/shuttles/drop1
+/area/calliope_route/shuttles/drop2{base_lighting_alpha=175;} : /area/calliope_route/shuttles/drop2
+/area/calliope_route/shuttles/drop3{base_lighting_alpha=175;} : /area/calliope_route/shuttles/drop3
+/area/calliope_route/shuttles/drop4{base_lighting_alpha=175;} : /area/calliope_route/shuttles/drop4
+/area/calliope_route/highway/far_south{base_lighting_alpha=175;} : /area/calliope_route/highway/far_south
+/area/calliope_route/highway/exchange{base_lighting_alpha=175;} : /area/calliope_route/highway/exchange
+/area/calliope_route/highway/close_south{base_lighting_alpha=175;} : /area/calliope_route/highway/close_south
+/area/calliope_route/tunnel/tunnel_s{base_lighting_alpha=150;} : /area/calliope_route/tunnel/tunnel_s
+/area/calliope_route/tunnel/maintenance_hall{base_lighting_alpha=150;} : /area/calliope_route/tunnel/maintenance_hall
+/area/calliope_route/tunnel/generator_maints{base_lighting_alpha=150;} : /area/calliope_route/tunnel/generator_maints
+/area/calliope_route/tunnel/tunnel_n{base_lighting_alpha=150;} : /area/calliope_route/tunnel/tunnel_n
+/area/calliope_route/highway/north{base_lighting_alpha=175;} : /area/calliope_route/highway/north
+/area/calliope_route/tunnel/caves{base_lighting_alpha=150;} : /area/calliope_route/tunnel/caves
+/area/calliope_route/exterior_buildings/buildings{base_lighting_alpha=175;} : /area/calliope_route/exterior_buildings/buildings
+/area/calliope_route/exterior_buildings/gateways{base_lighting_alpha=175;} : /area/calliope_route/exterior_buildings/gateways
