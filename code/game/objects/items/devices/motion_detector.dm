@@ -18,8 +18,8 @@
 	icon_state = "tracker_blip"
 
 /obj/item/device/motiondetector
-	name = "motion detector"
-	desc = "A device that detects movement, but ignores marines. Can also be used to scan a vehicle interior from outside, but accuracy of such scanning is low and there is no way to differentiate friends from foes."
+	name = "M314 motion detector"
+	desc = "A military grade, hand-held motion detection device that can penetrate most anything and has an approximate range of 28 meters. Can also be utilized to scan vehicle interiors. This one is programmed to operate with USCM IFF."
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "detector"
 	item_state = "motion_detector"
@@ -305,8 +305,8 @@
 
 
 /obj/item/device/motiondetector/upp
-	name = "motion detector"
-	desc = "A device that detects movement, but ignores marines. Can also be used to scan a vehicle interior from outside, but accuracy of such scanning is low and there is no way to differentiate friends from foes."
+	name = "UDO-58 motion detector"
+	desc = "Ustroystvo Dalnego Obnaruzhenia/Long Range Detection Device. A military grade, hand-held motion detection device designed not long after its analogue in the USCM was developed. The device can penetrate most anything and has an approximate range of 28 meters. Can also be utilized to scan vehicle interiors. This one is programmed to operate with UPPAC Naval Infantry IFF."
 	icon = 'icons/obj/items/upp-items.dmi'
 	icon_state = "detector"
 	item_state = "upp_motion_detector"
