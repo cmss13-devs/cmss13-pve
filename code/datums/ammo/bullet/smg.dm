@@ -64,7 +64,7 @@
 	icon_state = "nail-projectile"
 
 	damage = 25
-	penetration = 0
+	penetration = ARMOR_PENETRATION_TIER_1
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	accurate_range = 5
 	shell_speed = AMMO_SPEED_TIER_4

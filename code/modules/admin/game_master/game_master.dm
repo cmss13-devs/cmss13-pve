@@ -481,6 +481,14 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	GLOB.blackshift = !GLOB.blackshift
 	message_admins(SPAN_NOTICE("Blackshift: [GLOB.blackshift ? "<b>ON</b>" : "OFF"]."))
 
+/client/proc/xenos_target_synths()
+	set name = "Toggle Synth Targetting"
+	set category = "Game Master.Extras"
+	if(!check_rights(R_ADMIN))
+		return
+	GLOB.xenos_target_synths = !GLOB.xenos_target_synths
+	message_admins(SPAN_NOTICE("Xenos <b>WILL[GLOB.xenos_target_synths ? "" : " NOT"]</b> target Synthetics."))
+
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AI_XENOS
 #undef GAME_MASTER_AI_STRAINS

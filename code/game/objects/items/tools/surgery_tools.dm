@@ -74,7 +74,7 @@
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	matter = list("metal" = 15000, "glass" = 10000)
 	flags_atom = FPRINT|CONDUCT
-	force = 0
+	force = 15
 	w_class = SIZE_SMALL
 
 	attack_verb = list("drilled")
@@ -172,7 +172,7 @@
 	icon_state = "saw"
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	flags_atom = FPRINT|CONDUCT
-	force = 0
+	force = 20
 	w_class = SIZE_SMALL
 	throwforce = 9
 	throw_speed = SPEED_VERY_FAST

@@ -65,6 +65,9 @@
 	name = "desert helmet cover"
 	icon_state = "d_camocover"
 
+/obj/item/prop/helmetgarb/camocover/desert/nohole
+	desc = "A cover that goes over the top of an M10 pattern helmet to camoflauge it without needing the use of paints. This one has no hole to fit a helmet camera through."
+
 /obj/item/prop/helmetgarb/rabbitsfoot
 	name = "Rabbit's Foot"
 	desc = "Lucky for you, but not the rabbit, didn't really do it much good."
