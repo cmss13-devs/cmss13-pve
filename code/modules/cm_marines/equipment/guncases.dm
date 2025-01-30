@@ -311,6 +311,45 @@
 		source_image.pixel_x = 18
 		overlays += source_image
 
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp
+	name = "\improper motion detectors case"
+	desc = "A case containing four individual handheld motion detectors."
+	icon_state = "uppmdcase"
+	storage_slots = 4
+	can_hold = list(/obj/item/device/motiondetector/upp)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp/fill_preset_inventory()
+	new /obj/item/device/motiondetector/upp(src)
+	new /obj/item/device/motiondetector/upp(src)
+	new /obj/item/device/motiondetector/upp(src)
+	new /obj/item/device/motiondetector/upp(src)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppbigcase_lid_open")
+	else
+		overlays += image(icon, "uppmdcase_lid")
+		return
+
+	if(length(contents) >= storage_slots)
+		var/image/source_image = image(icon, "+uppmd")
+		source_image.pixel_x = 0
+		overlays += source_image
+	if(length(contents) >= storage_slots * 0.75)
+		var/image/source_image = image(icon, "+uppmd")
+		source_image.pixel_x = 6
+		overlays += source_image
+	if(length(contents) >= storage_slots * 0.5)
+		var/image/source_image = image(icon, "+uppmd")
+		source_image.pixel_x = 12
+		overlays += source_image
+	if(length(contents) >= storage_slots * 0.25)
+		var/image/source_image = image(src.icon, "+uppmd")
+		source_image.pixel_x = 18
+		overlays += source_image
+
+
 /obj/item/storage/box/guncase/heavy/fuel
 	name = "\improper M240A1 fuel canister case"
 	desc = "A heavy case containing six fuel canisters for the M240A1 incinerator unit."
