@@ -84,7 +84,7 @@
 
 	accuracy = HIT_ACCURACY_TIER_MAX
 	accurate_range = 14
-	max_range = 20
+	max_range = 18
 	damage = 40
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_5
