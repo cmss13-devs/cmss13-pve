@@ -2943,9 +2943,6 @@
 "lg" = (
 /turf/open/gm/dirt/desert3,
 /area/calliope_route/shuttles/drop2)
-"li" = (
-/turf/open/floor/plating,
-/area/space)
 "lj" = (
 /obj/structure/machinery/computer/station_alert{
 	dir = 8;
@@ -3268,9 +3265,6 @@
 "mb" = (
 /turf/open/gm/coast/beachcorner/south_west,
 /area/calliope_route/highway/far_south)
-"md" = (
-/turf/open/floor/plating,
-/area/calliope_route/tunnel/generator_maints)
 "me" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/machinery/light/small/blue{
@@ -3981,7 +3975,7 @@
 	name = "Cell Divider"
 	},
 /turf/open/floor/plating,
-/area/calliope_route/tunnel/generator_maints)
+/area/calliope_route/exterior_buildings/gateways)
 "oR" = (
 /turf/open/gm/coast/north,
 /area/calliope_route/highway/north)
@@ -6829,7 +6823,7 @@
 	name = "Cell Divider"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/calliope_route/exterior_buildings/gateways)
 "yY" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "Heavy Blast Door";
@@ -9377,7 +9371,7 @@
 	name = "Cell Divider"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/calliope_route/exterior_buildings/gateways)
 "Hk" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -13288,7 +13282,7 @@
 	name = "Cell Divider"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/calliope_route/exterior_buildings/gateways)
 "UX" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
@@ -69842,9 +69836,9 @@ TL
 TL
 TL
 su
-li
+Gr
 UV
-li
+Gr
 su
 su
 su
@@ -69906,9 +69900,9 @@ su
 su
 su
 su
-li
+Gr
 Hj
-li
+Gr
 su
 du
 du
@@ -70819,9 +70813,9 @@ TL
 TL
 TL
 su
-li
-li
-li
+Gr
+Gr
+Gr
 su
 su
 su
@@ -70883,9 +70877,9 @@ su
 su
 su
 su
-li
-li
-li
+Gr
+Gr
+Gr
 su
 du
 du
@@ -71914,9 +71908,9 @@ du
 du
 du
 su
-li
+Gr
 yW
-li
+Gr
 su
 nR
 tN
@@ -71980,9 +71974,9 @@ RS
 tN
 nR
 nR
-md
+Gr
 oQ
-md
+Gr
 Lm
 Lm
 Lm
@@ -72891,9 +72885,9 @@ du
 du
 du
 su
-li
-li
-li
+Gr
+Gr
+Gr
 su
 nR
 tN
@@ -72957,9 +72951,9 @@ tN
 tN
 wu
 nR
-md
-md
-md
+Gr
+Gr
+Gr
 Lm
 Lm
 Lm
