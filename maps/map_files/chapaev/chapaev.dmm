@@ -1293,7 +1293,7 @@
 	layer = 3.5
 	},
 /obj/structure/prop/rock{
-	icon_state = "uppcrate_stacked";
+	icon_state = "uppcrate_stackedalt";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
 	name = "secured military crates"
@@ -3772,10 +3772,11 @@
 /turf/open/floor/strata/grey_multi_tiles,
 /area/golden_arrow/hangar)
 "xf" = (
-/obj/structure/prop{
-	icon = 'icons/obj/structures/crates.dmi';
+/obj/structure/prop/rock{
 	icon_state = "uppcrate_stackedalt";
-	name = "secured crates"
+	icon = 'icons/obj/structures/crates.dmi';
+	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
+	name = "secured military crates"
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -4257,14 +4258,6 @@
 /area/golden_arrow/prep_hallway)
 "Ab" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_x = 5;
-	pixel_y = 6
-	},
 /obj/item/ammo_magazine/shotgun/buckshot/heavy{
 	pixel_x = -4;
 	pixel_y = -1
@@ -4579,6 +4572,15 @@
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_y = 32
 	},
+/obj/item/trash/UPPtray,
+/obj/item/trash/UPPtray{
+	pixel_y = 4;
+	pixel_x = 3
+	},
+/obj/item/trash/UPPtray{
+	pixel_y = -2;
+	pixel_x = -4
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
 "Cn" = (
@@ -4888,6 +4890,12 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "DZ" = (
+/obj/structure/prop/rock{
+	icon_state = "uppcrate_stacked";
+	icon = 'icons/obj/structures/crates.dmi';
+	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
+	name = "secured military crates"
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "Ea" = (
