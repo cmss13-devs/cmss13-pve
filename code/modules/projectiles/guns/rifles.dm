@@ -1325,7 +1325,7 @@
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/pve,
-		/obj/item/attachable/sling
+		/obj/item/attachable/sling,
 	)
 	starting_attachment_types = list(
 		/obj/item/attachable/magnetic_harness,
@@ -1339,7 +1339,7 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
 
 /obj/item/weapon/gun/rifle/lmg/army
-	desc = "The US Army's adoption of the M41AE2 replaced some parts"
+	desc = "The US Army's adoption of the M41AE2 adds a longer barrel and improved retention system, operating in a more traditional machine gun role."
 	current_mag = /obj/item/ammo_magazine/hpr_box/ap
 	starting_attachment_types = list(
 		/obj/item/attachable/magnetic_harness,
