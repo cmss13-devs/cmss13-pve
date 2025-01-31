@@ -565,11 +565,11 @@
 		list("Fire Extinguisher (Portable)", round(scale * 1), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", round(scale * 2), /obj/item/roller, VENDOR_ITEM_REGULAR),
 		list("Machete Scabbard (Full)", round(scale * 5), /obj/item/storage/large_holster/machete/arnold/weak, VENDOR_ITEM_REGULAR),
-		list("Binoculars", round(scale * 1), /obj/item/device/binoculars/designator, VENDOR_ITEM_REGULAR),
+		list("Binoculars", round(scale * 2), /obj/item/device/binoculars/range/designator/upp, VENDOR_ITEM_REGULAR),
 		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Type 80 Bayonet", round(scale * 5), /obj/item/attachable/bayonet/upp, null, VENDOR_ITEM_REGULAR),
-		list("Type 83 Grenade Launcher", 1, /obj/item/attachable/attached_gun/grenade/upp, null, VENDOR_ITEM_REGULAR),
+		list("Type 83 Grenade Launcher", 3, /obj/item/attachable/attached_gun/grenade/upp, null, VENDOR_ITEM_REGULAR),
 
 		list("CLOTHING", -1, null, null),
 		list("Balaclava", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tan, VENDOR_ITEM_REGULAR),
