@@ -2285,10 +2285,8 @@
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/close_south)
 "iS" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock3";
-	unacidable = 1
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "new_ark_lock2"
 	},
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope_route/highway/north)
@@ -3332,10 +3330,8 @@
 	pixel_x = -19;
 	pixel_y = -23
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock3";
-	unacidable = 1
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "new_ark_lock2"
 	},
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope_route/highway/north)
@@ -3459,10 +3455,8 @@
 	pixel_x = -19;
 	pixel_y = -23
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock2";
-	unacidable = 1
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "new_ark_lock"
 	},
 /turf/open/floor/asteroidwarning/west,
 /area/calliope_route/highway/north)
@@ -5208,6 +5202,11 @@
 /area/calliope_route/tunnel/generator_maints)
 "sO" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/almayer/maint{
+	req_one_access = null;
+	req_access = null;
+	dir = 2
+	},
 /turf/open/floor/corsat/marked,
 /area/calliope_route/tunnel/generator_maints)
 "sP" = (
@@ -6158,10 +6157,8 @@
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/north)
 "wk" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock2";
-	unacidable = 1
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "new_ark_lock"
 	},
 /turf/open/asphalt,
 /area/calliope_route/highway/north)
@@ -7070,6 +7067,11 @@
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
 "zD" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	req_one_access = null;
+	req_access = null;
+	dir = 2
+	},
 /turf/open/floor/corsat/marked,
 /area/calliope_route/tunnel/generator_maints)
 "zE" = (
@@ -7763,14 +7765,12 @@
 /turf/closed/wall/r_wall/bunker,
 /area/calliope_route/tunnel/tunnel_s)
 "BO" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock2";
-	unacidable = 1
-	},
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
 	pixel_y = -13
+	},
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "new_ark_lock"
 	},
 /turf/open/floor/asteroidwarning/east,
 /area/calliope_route/highway/north)
@@ -8883,6 +8883,11 @@
 /area/calliope_route/tunnel/maintenance_hall)
 "FM" = (
 /obj/effect/decal/cleanable/blood/oil,
+/obj/structure/machinery/door/airlock/almayer/maint{
+	req_one_access = null;
+	req_access = null;
+	dir = 2
+	},
 /turf/open/floor/corsat/marked,
 /area/calliope_route/tunnel/generator_maints)
 "FO" = (
@@ -9783,14 +9788,12 @@
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/close_south)
 "IU" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock3";
-	unacidable = 1
-	},
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
 	pixel_y = -13
+	},
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "new_ark_lock2"
 	},
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope_route/highway/north)
@@ -11932,12 +11935,10 @@
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/north)
 "PX" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock";
-	unacidable = 1
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "new_ark_lock2"
 	},
-/turf/open/asphalt,
+/turf/open/floor/plating,
 /area/calliope_route/highway/north)
 "PY" = (
 /obj/structure/closet/crate/supply,
@@ -12534,16 +12535,10 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/shuttles/drop3)
 "Sr" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock";
-	unacidable = 1
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "new_ark_lock"
 	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/turf/open/floor/asteroidwarning/west,
+/turf/open/floor/plating,
 /area/calliope_route/highway/north)
 "Ss" = (
 /obj/structure/barricade/handrail/sandstone/b{
@@ -14801,14 +14796,12 @@
 /turf/open/asphalt/cement/cement14,
 /area/calliope_route/highway/north)
 "ZV" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock";
-	unacidable = 1
-	},
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
 	pixel_y = -13
+	},
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "new_ark_lock2"
 	},
 /turf/open/floor/asteroidwarning/east,
 /area/calliope_route/highway/north)
@@ -54891,7 +54884,7 @@ wk
 CY
 CY
 CY
-PX
+wk
 CX
 CY
 CY
@@ -55868,7 +55861,7 @@ wk
 CY
 CY
 CY
-PX
+wk
 tF
 CY
 CY
@@ -56845,7 +56838,7 @@ wk
 CY
 CY
 CY
-PX
+wk
 zy
 CY
 CY
@@ -58799,7 +58792,7 @@ wk
 CY
 CY
 CY
-PX
+wk
 CX
 CY
 CY
@@ -59776,7 +59769,7 @@ wk
 CY
 CY
 CY
-PX
+wk
 tF
 CY
 CY
@@ -60753,7 +60746,7 @@ wk
 CY
 CY
 CY
-PX
+wk
 zy
 CY
 CY
@@ -61730,7 +61723,7 @@ mT
 lx
 lx
 lx
-Sr
+mT
 Xt
 fJ
 zH
@@ -64654,8 +64647,8 @@ uz
 "}
 (52,1,1) = {"
 Uj
-Uj
-Uj
+Sr
+PX
 EF
 EF
 Nk
@@ -74878,7 +74871,7 @@ tN
 nR
 nR
 tN
-zD
+lP
 tN
 tN
 nR
@@ -86603,7 +86596,7 @@ nR
 nR
 tN
 tN
-zD
+lP
 tN
 nR
 nR

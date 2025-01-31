@@ -649,9 +649,9 @@
 	update_overlays()
 
 /turf/open/gm/river/proc/update_overlays()
-	overlays.Cut()
 	if(no_overlay)
 		return
+	overlays.Cut()
 	if(covered)
 		name = covered_name
 		overlays += image("icon"=src.cover_icon,"icon_state"=cover_icon_state,"layer"=CATWALK_LAYER,"dir" = dir)
@@ -777,7 +777,6 @@
 
 /turf/open/gm/river/ocean/no_overlay
 	no_overlay = TRUE
-	light_range = 0.3
 
 /turf/open/gm/river/ocean/deep_ocean
 	name = "deep ocean"
@@ -785,8 +784,6 @@
 
 /turf/open/gm/river/ocean/deep_ocean/no_overlay
 	no_overlay = TRUE
-	light_range = 1.5
-	light_power = 0.4
 
 /turf/open/gm/river/ocean/Entered(atom/movable/AM)
 	. = ..()
@@ -880,8 +877,6 @@
 /turf/open/gm/river/no_overlay_lighted
 	no_overlay = TRUE
 	supports_surgery = FALSE
-	light_range = 1.5
-	light_power = 0.4
 
 
 
