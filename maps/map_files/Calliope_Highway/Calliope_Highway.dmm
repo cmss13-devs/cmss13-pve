@@ -14948,16 +14948,14 @@
 	req_one_access = list(12)
 	},
 /obj/item/weapon/gun/rifle/lmg,
-/obj/item/ammo_magazine/rifle/lmg/ap,
-/obj/item/ammo_magazine/rifle/lmg,
-/obj/item/ammo_magazine/rifle/lmg/holo_target,
-/obj/item/ammo_magazine/rifle/lmg,
 /obj/item/ammo_box/rounds,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 1
 	},
+/obj/item/ammo_magazine/hpr_box,
+/obj/item/ammo_magazine/hpr_box/ap,
 /turf/open/floor/prison/floor_marked,
 /area/calliope/bunker/cargo_under)
 "odI" = (
