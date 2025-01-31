@@ -1,0 +1,5 @@
+author: "KoishiVibe"
+delete-after: True
+changes:
+  - rscadd: "clf and colonists now have several different language possibilities, but are very likely to have English or Spanish."
+  - rscadd: "marshals know english and are likely to know spanish, alongside a couple others."
