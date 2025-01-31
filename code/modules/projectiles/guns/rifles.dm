@@ -1338,6 +1338,9 @@
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
 
+/obj/item/weapon/gun/rifle/lmg/tactical/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 13, "stock_x" = 24, "stock_y" = 13)
+
 /obj/item/weapon/gun/rifle/lmg/army
 	desc = "The US Army's adoption of the M41AE2 adds a longer barrel and improved retention system, operating in a more traditional machine gun role."
 	current_mag = /obj/item/ammo_magazine/hpr_box/ap
