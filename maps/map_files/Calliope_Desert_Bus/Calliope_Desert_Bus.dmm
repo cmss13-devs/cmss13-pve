@@ -226,14 +226,11 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
 "aK" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_x = 0;
-	pixel_y = -4;
-	id = "interstate_nw";
-	name = "Cell Divider"
+/obj/structure/machinery/light/double/blue{
+	dir = 4
 	},
-/turf/open/floor/plating,
-/area/calliope_route/highway/exchange)
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_n)
 "aL" = (
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/far_south)
@@ -243,6 +240,16 @@
 	pixel_x = 3
 	},
 /turf/open/floor/prison/floor_marked,
+/area/calliope_route/exterior_buildings/buildings)
+"aO" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/device/flashlight/lamp{
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/turf/open/floor/prison/floor_plate,
 /area/calliope_route/exterior_buildings/buildings)
 "aP" = (
 /obj/structure/platform{
@@ -261,12 +268,6 @@
 "aU" = (
 /turf/open/auto_turf/strata_grass,
 /area/calliope_route/highway/exchange)
-"aV" = (
-/obj/item/holder/mouse/brown{
-	name = "Interstate APC rat"
-	},
-/turf/open/floor/plating,
-/area/calliope_route/highway/exchange)
 "aW" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -278,29 +279,14 @@
 	},
 /turf/open/floor/plating,
 /area/calliope_route/tunnel/generator_maints)
-"aZ" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
+"ba" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
 	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal11";
-	pixel_x = 19;
-	pixel_y = -19
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
-"bc" = (
+/turf/open/floor/asteroidwarning/west,
+/area/calliope_route/tunnel/tunnel_s)
+"bb" = (
 /obj/structure/tent/big{
 	color = "#ff3333"
 	},
@@ -309,6 +295,10 @@
 	},
 /turf/open/floor/floor4,
 /area/calliope_route/highway/close_south)
+"bc" = (
+/obj/structure/prop/rock/brown,
+/turf/open/auto_turf/strata_grass,
+/area/calliope_route/tunnel/caves)
 "bf" = (
 /obj/item/stool{
 	pixel_x = 0;
@@ -379,6 +369,21 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/shuttles/drop2)
+"bp" = (
+/obj/structure/barricade/handrail/sandstone/b{
+	color = "#c2d6d6";
+	dir = 4
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 2;
+	layer = 5.2
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/asteroidwarning/west,
+/area/calliope_route/tunnel/tunnel_n)
 "br" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal9";
@@ -395,9 +400,19 @@
 /obj/structure/platform_decoration/kutjevo/rock,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/far_south)
+"bv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/tunnel/maintenance_hall)
 "bw" = (
 /turf/open/floor/asteroidwarning,
 /area/calliope_route/highway/close_south)
+"by" = (
+/turf/open/gm/dirt/desert1,
+/area/calliope_route/highway/north)
 "bz" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -409,42 +424,7 @@
 /turf/open/gm/dirt/desert1,
 /area/calliope_route/highway/close_south)
 "bE" = (
-/obj/structure/prop/invuln/overhead{
-	icon_state = "flammable_pipe_2";
-	pixel_y = -7;
-	name = "dense fuel line";
-	desc = "Likely to be incredibly flammable.";
-	density = 0;
-	pixel_x = -9
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	pixel_x = 10;
-	pixel_y = 0
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	pixel_x = -19
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 11;
-	pixel_x = -2
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 4;
-	layer = 5.0
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal9";
-	pixel_x = -19;
-	pixel_y = 19
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = 23;
-	pixel_x = 12
-	},
+/obj/structure/prop/dam/gravestone,
 /turf/open/gm/dirt,
 /area/calliope_route/highway/far_south)
 "bF" = (
@@ -459,21 +439,14 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"bG" = (
-/obj/structure/tunnel/maint_tunnel/no_xeno_desc{
-	pixel_x = 0;
-	pixel_y = 8
+"bI" = (
+/obj/structure/machinery/vending/snack/packaged{
+	pixel_x = 4;
+	pixel_y = 16;
+	density = 0
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/calliope_route/tunnel/maintenance_hall)
-"bJ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "door_warning"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/tunnel/maintenance_hall)
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/generator_maints)
 "bK" = (
 /turf/open/gm/dirt2,
 /area/calliope_route/shuttles/drop2)
@@ -489,15 +462,10 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
-"bO" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_x = 0;
-	pixel_y = -4;
-	id = "interstate_north_lock2";
-	name = "Cell Divider"
-	},
-/turf/open/floor/plating,
-/area/space)
+"bM" = (
+/obj/item/trash/semki,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "bS" = (
 /obj/docking_port/stationary/marine_dropship/lz2{
 	name = "LZ3 - Calliope Primary Far South Approach";
@@ -534,13 +502,6 @@
 	},
 /turf/open/floor/prison,
 /area/calliope_route/tunnel/generator_maints)
-"bZ" = (
-/obj/item/trash/hotdog{
-	pixel_x = 0;
-	pixel_y = -9
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/north)
 "cb" = (
 /obj/effect/decal/siding{
 	icon_state = "siding4"
@@ -587,14 +548,45 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/calliope_route/tunnel/tunnel_n)
-"ce" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 4
+"cd" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
 	},
-/turf/open/floor/plating/plating_catwalk/prison,
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/sign/safety/south{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/shuttles/drop2)
+"ce" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/obj/structure/largecrate/random/case/double{
+	pixel_x = -3;
+	pixel_y = -1;
+	layer = 4.02
+	},
+/obj/structure/largecrate/random{
+	pixel_x = -3;
+	pixel_y = 16
+	},
+/turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
 "cf" = (
 /obj/structure/machinery/landinglight/ds1/spoke,
@@ -670,13 +662,6 @@
 	},
 /turf/closed/wall/r_wall/bunker,
 /area/calliope_route/highway/north)
-"cm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue{
-	dir = 4
-	},
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_n)
 "cs" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirt,
@@ -742,6 +727,10 @@
 "cG" = (
 /turf/open/auto_turf/strata_grass,
 /area/calliope_route/highway/north)
+"cI" = (
+/obj/item/trash/hotdog,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "cK" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "Heavy Blast Door";
@@ -781,10 +770,6 @@
 "cS" = (
 /turf/open/floor/asteroidwarning/southeast,
 /area/calliope_route/shuttles/drop2)
-"cT" = (
-/obj/item/trash/hotdog,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/close_south)
 "cV" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
@@ -828,6 +813,14 @@
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirt/desert0,
 /area/calliope_route/highway/close_south)
+"dd" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19;
+	pixel_x = -10
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "df" = (
 /obj/structure/machinery/deployable/barrier,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -887,10 +880,6 @@
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
 /area/calliope_route/exterior_buildings/buildings)
-"dq" = (
-/obj/item/trash/chunk,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/north)
 "dr" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -915,12 +904,13 @@
 /obj/structure/fence,
 /turf/closed/wall/r_wall/bunker,
 /area/calliope_route/highway/close_south)
-"dA" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 1
+"dC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
 	},
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/north)
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_n)
 "dD" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 1;
@@ -929,22 +919,21 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/far_south)
+"dE" = (
+/obj/structure/prop/almayer/computers/sensor_computer3,
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_s)
 "dF" = (
 /turf/open/floor/plating,
 /area/calliope_route/highway/exchange)
-"dH" = (
-/obj/item/trash/semki,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/north)
 "dJ" = (
 /obj/structure/platform{
 	layer = 3.1
 	},
 /turf/open/gm/coast/east,
 /area/calliope_route/highway/exchange)
-"dK" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 8;
+"dQ" = (
+/obj/structure/flora/grass/tallgrass/ice{
 	color = "#bdce86";
 	desc = "A large swathe of drygrass"
 	},
@@ -962,13 +951,12 @@
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/close_south)
-"dV" = (
-/obj/structure/prop/dam/van/damaged,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "dX" = (
-/turf/open/asphalt/cement/cement14,
-/area/calliope_route/exterior_buildings/gateways)
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/calliope_route/highway/north)
 "dY" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -985,14 +973,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
-"eb" = (
-/obj/item/trash/candy,
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
 "ee" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/gm/dirt,
 /area/calliope_route/shuttles/drop2)
+"eg" = (
+/turf/open/gm/dirt/desert3,
+/area/calliope_route/highway/north)
 "ei" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "flagpole";
@@ -1044,10 +1031,8 @@
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/calliope_route/highway/close_south)
 "ev" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/calliope_route/tunnel/generator_maints)
+/turf/open/asphalt/cement/cement14,
+/area/calliope_route/exterior_buildings/gateways)
 "ex" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -1096,18 +1081,6 @@
 	},
 /turf/open/floor/asteroidwarning/north,
 /area/calliope_route/highway/exchange)
-"eN" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal11";
-	pixel_x = 19;
-	pixel_y = -19
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = 9
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "eO" = (
 /obj/structure/platform{
 	dir = 4;
@@ -1194,15 +1167,14 @@
 /obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
-"ff" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_x = 0;
-	pixel_y = -4;
-	id = "interstate_ne";
-	name = "Cell Divider"
+"fg" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 9;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
 	},
-/turf/open/floor/plating,
-/area/calliope_route/highway/exchange)
+/turf/open/gm/dirt,
+/area/calliope_route/shuttles/drop2)
 "fh" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal10";
@@ -1285,6 +1257,19 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/close_south)
+"fB" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 19;
+	pixel_y = -19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19;
+	pixel_x = -3
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "fD" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "flagpole";
@@ -1355,6 +1340,12 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/close_south)
+"fL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/hardpoint/locomotion/apc_wheels,
+/obj/structure/closet/crate/supply,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/tunnel/maintenance_hall)
 "fM" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -1383,6 +1374,16 @@
 "fR" = (
 /turf/open/gm/dirt/desert2,
 /area/calliope_route/highway/far_south)
+"fS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/generator_maints)
 "fW" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6";
@@ -1459,6 +1460,19 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"gb" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal9";
+	pixel_x = -19;
+	pixel_y = 19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 23;
+	pixel_x = 10
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "gc" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -1483,23 +1497,6 @@
 	},
 /turf/open/asphalt,
 /area/calliope_route/highway/north)
-"gh" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_x = 0;
-	pixel_y = -4;
-	id = "interstate_se";
-	name = "Cell Divider"
-	},
-/turf/open/floor/plating,
-/area/calliope_route/highway/exchange)
-"gi" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/maintenance_hall)
 "gj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/prop/almayer/computer{
@@ -1547,17 +1544,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/generator_maints)
-"gx" = (
-/obj/item/trash/kepler{
-	pixel_x = -9;
-	pixel_y = 16
-	},
-/obj/item/trash/hotdog{
-	pixel_x = -16;
-	pixel_y = 2
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/close_south)
 "gy" = (
 /turf/open/asphalt/cement/cement12,
 /area/calliope_route/highway/close_south)
@@ -1579,26 +1565,40 @@
 	},
 /turf/open/asphalt,
 /area/calliope_route/tunnel/tunnel_n)
+"gB" = (
+/obj/item/trash/hotdog,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
 "gD" = (
 /obj/structure/flora/bush/desert{
 	icon_state = "tree_3"
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"gF" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/gm/dirt2,
+/area/calliope_route/highway/north)
+"gG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/generator_maints)
+"gH" = (
+/obj/structure/bed/chair,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "gI" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/north)
-"gJ" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 10;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/shuttles/drop2)
 "gK" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -1646,16 +1646,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"gT" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/item/device/flashlight/lamp{
-	pixel_x = 5;
-	pixel_y = 0
-	},
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "gX" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -1663,6 +1653,9 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"hd" = (
+/turf/open/asphalt,
+/area/calliope_route/exterior_buildings/gateways)
 "he" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal12";
@@ -1807,6 +1800,18 @@
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/exchange)
+"hK" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Heavy Blast Door";
+	id = "interstate_north_lock2";
+	unacidable = 1
+	},
+/turf/open/asphalt/cement/cement1,
+/area/calliope_route/tunnel/tunnel_n)
 "hL" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 8;
@@ -1842,10 +1847,6 @@
 /obj/structure/flora/tree/joshua,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"hP" = (
-/obj/structure/prop/almayer/computers/sensor_computer3,
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_n)
 "hQ" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/prop/almayer/flight_recorder/colony{
@@ -1885,6 +1886,40 @@
 	},
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope_route/highway/north)
+"hV" = (
+/obj/item/hardpoint/locomotion/treads,
+/obj/structure/closet/crate/supply,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/tunnel/maintenance_hall)
+"hW" = (
+/obj/item/trash/candy,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
+"hZ" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/sign/safety/south{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/exchange)
 "ia" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -1911,15 +1946,6 @@
 	},
 /turf/open/gm/coast/north,
 /area/calliope_route/highway/north)
-"ic" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 10;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/obj/item/trash/chunk,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/north)
 "id" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal10";
@@ -1932,6 +1958,21 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/close_south)
+"ie" = (
+/turf/open/gm/dirt/desert_dug,
+/area/calliope_route/shuttles/drop2)
+"if" = (
+/obj/structure/window_frame/bunker/reinforced,
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/turf/open/floor/asteroidfloor,
+/area/calliope_route/tunnel/tunnel_n)
 "ih" = (
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/floor_marked,
@@ -2025,31 +2066,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/calliope_route/tunnel/tunnel_n)
-"ix" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/sign/safety/north{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/close_south)
 "iy" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -2217,44 +2233,29 @@
 	},
 /turf/open/floor/plating/warnplate/north,
 /area/calliope_route/tunnel/generator_maints)
-"iZ" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 10;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/obj/item/trash/kepler{
-	pixel_x = 7;
-	pixel_y = 12
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
-"ja" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/item/trash/kepler{
-	pixel_x = -11;
-	pixel_y = -1
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/close_south)
-"jc" = (
-/obj/structure/bed/chair,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "jd" = (
 /turf/open/gm/coast/beachcorner2/north_west,
 /area/calliope_route/highway/exchange)
 "je" = (
-/obj/structure/machinery/colony_floodlight,
-/turf/open/gm/dirt/desert0,
-/area/calliope_route/highway/north)
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19;
+	pixel_x = 11
+	},
+/obj/structure/prop/dam/truck/damaged,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/exchange)
 "ji" = (
 /turf/open/floor/asteroidwarning/east,
 /area/calliope_route/highway/close_south)
+"jj" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 1;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/shuttles/drop2)
 "jk" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -2271,16 +2272,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/shuttles/drop3)
-"jm" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -13
-	},
-/obj/structure/prop/dam/truck/damaged{
-	dir = 4
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "jn" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -2346,14 +2337,6 @@
 	},
 /turf/open/floor/plating,
 /area/calliope_route/shuttles/drop1)
-"jt" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 9;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/shuttles/drop2)
 "jv" = (
 /obj/structure/platform{
 	dir = 8
@@ -2371,6 +2354,12 @@
 	},
 /turf/open/floor/prison,
 /area/calliope_route/tunnel/tunnel_s)
+"jw" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/gm/dirt2,
+/area/calliope_route/highway/north)
 "jx" = (
 /turf/open/gm/coast/beachcorner/south_east,
 /area/calliope_route/highway/close_south)
@@ -2408,9 +2397,6 @@
 /obj/item/stack/rods,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/generator_maints)
-"jE" = (
-/turf/open/gm/river/ocean/deep_ocean/no_overlay,
-/area/calliope_route/highway/close_south)
 "jF" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -2421,31 +2407,6 @@
 "jH" = (
 /turf/open/asphalt/cement/cement4,
 /area/calliope_route/exterior_buildings/gateways)
-"jJ" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/sign/safety/south{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
 "jK" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -2501,20 +2462,16 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/far_south)
-"jX" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = 23;
-	pixel_x = 10
-	},
-/turf/closed/wall/r_wall/unmeltable,
-/area/calliope_route/exterior_buildings/gateways)
 "jY" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
 	pixel_y = -13
 	},
 /turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/close_south)
+"kb" = (
+/obj/structure/prop/dam/gravestone,
+/turf/open/gm/dirt,
 /area/calliope_route/highway/close_south)
 "kd" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -2590,6 +2547,13 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
+"kh" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/turf/open/gm/dirt/desert0,
+/area/calliope_route/shuttles/drop2)
 "kk" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -2608,14 +2572,6 @@
 "km" = (
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/shuttles/drop4)
-"kp" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/north)
 "kr" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -2652,6 +2608,31 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
+"kx" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/sign/safety/south{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/close_south)
 "kz" = (
 /obj/structure/girder/reinforced,
 /obj/structure/desertdam/decals/road_edge{
@@ -2693,18 +2674,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
-"kD" = (
-/obj/structure/flora/bush/ausbushes/var3/fernybush,
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/far_south)
-"kH" = (
-/obj/item/hardpoint/locomotion/treads,
-/obj/structure/closet/crate/supply,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/tunnel/maintenance_hall)
 "kI" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -2734,7 +2703,7 @@
 	},
 /turf/open/asphalt,
 /area/calliope_route/highway/far_south)
-"kK" = (
+"kJ" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 8;
 	name = "Post";
@@ -2749,27 +2718,17 @@
 	pixel_y = 16;
 	density = 0
 	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/sign/safety/south{
+/obj/structure/sign/safety/west{
 	pixel_x = 7;
 	pixel_y = 22
 	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
-"kL" = (
 /obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
+	icon_state = "road_edge_decal12";
+	pixel_x = -19;
+	pixel_y = -19
 	},
-/obj/item/trash/eat{
-	pixel_x = -7;
-	pixel_y = 14
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/close_south)
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/exchange)
 "kM" = (
 /turf/open/gm/coast/north,
 /area/calliope_route/highway/far_south)
@@ -2786,12 +2745,14 @@
 /turf/open/floor/asteroidwarning/northwest,
 /area/calliope_route/shuttles/drop1)
 "kO" = (
-/obj/item/trash/hotdog{
-	pixel_x = -15;
-	pixel_y = 9
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1
 	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/close_south)
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/generator_maints)
 "kQ" = (
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope_route/tunnel/tunnel_n)
@@ -2803,8 +2764,8 @@
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/far_south)
 "kS" = (
-/turf/open/gm/river/ocean/deep_ocean/no_overlay,
-/area/calliope_route/highway/far_south)
+/turf/open/gm/dirt/desert2,
+/area/calliope_route/highway/north)
 "kT" = (
 /obj/docking_port/stationary/marine_dropship/lz2{
 	name = "LZ4 - Calliope Secondary Far South Approach";
@@ -2812,15 +2773,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/shuttles/drop4)
-"kV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/maintenance_hall)
 "kW" = (
 /turf/open/floor/asteroidwarning/east,
 /area/calliope_route/tunnel/tunnel_n)
@@ -2834,36 +2786,10 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/north)
-"kZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/generator_maints)
 "la" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/north,
 /area/calliope_route/tunnel/generator_maints)
-"lb" = (
-/obj/item/storage/bag/trash{
-	pixel_x = 5;
-	pixel_y = -6
-	},
-/obj/item/storage/bag/trash{
-	pixel_x = 10;
-	pixel_y = 8
-	},
-/obj/item/storage/bag/trash{
-	pixel_x = 1;
-	pixel_y = 3
-	},
-/obj/structure/surface/rack,
-/obj/item/storage/pouch/general/large,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "lc" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirt,
@@ -2890,12 +2816,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
 "lg" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 4;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/turf/open/gm/dirt,
+/turf/open/gm/dirt/desert3,
 /area/calliope_route/shuttles/drop2)
 "li" = (
 /turf/open/floor/plating,
@@ -2931,19 +2852,33 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/north)
-"lp" = (
-/obj/structure/flora/grass/tallgrass/ice{
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
+"lm" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19;
+	pixel_x = 12
 	},
 /turf/open/gm/dirt,
-/area/calliope_route/shuttles/drop2)
+/area/calliope_route/highway/far_south)
 "lr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/generator_maints)
+"ls" = (
+/obj/structure/largecrate/random/case/double{
+	pixel_x = 2;
+	pixel_y = 15;
+	layer = 3.1
+	},
+/obj/structure/largecrate/random/case/double{
+	pixel_x = -3;
+	pixel_y = -2;
+	layer = 4.02
+	},
+/turf/open/floor/plating/warnplate/north,
+/area/calliope_route/tunnel/maintenance_hall)
 "lt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/buritto{
@@ -2955,16 +2890,29 @@
 "lu" = (
 /turf/open/gm/coast/south,
 /area/calliope_route/highway/far_south)
-"lw" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal9";
-	pixel_x = -19;
-	pixel_y = 19
+"lv" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
 	},
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
-	pixel_y = 23;
-	pixel_x = 10
+	pixel_y = -19;
+	pixel_x = -3
+	},
+/obj/structure/sign/safety/west{
+	pixel_x = 7;
+	pixel_y = 22
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/far_south)
@@ -2978,6 +2926,13 @@
 "ly" = (
 /obj/structure/flora/bush/desert,
 /turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
+"lA" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/gm/dirt2,
 /area/calliope_route/highway/far_south)
 "lC" = (
 /obj/structure/largecrate/random/barrel/yellow{
@@ -3160,32 +3115,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"lX" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = -3
-	},
-/obj/structure/sign/safety/west{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
 "lZ" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal10";
@@ -3210,14 +3139,6 @@
 "mb" = (
 /turf/open/gm/coast/beachcorner/south_west,
 /area/calliope_route/highway/far_south)
-"mc" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = 19
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "md" = (
 /turf/open/floor/plating,
 /area/calliope_route/tunnel/generator_maints)
@@ -3232,11 +3153,13 @@
 /turf/open/floor/prison/floor_marked,
 /area/calliope_route/exterior_buildings/buildings)
 "mi" = (
-/obj/effect/decal/siding{
-	icon_state = "siding2"
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 19;
+	pixel_y = -19
 	},
-/turf/open/floor/floor4,
-/area/calliope_route/highway/close_south)
+/turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
 "mj" = (
 /obj/structure/platform{
 	dir = 8
@@ -3315,6 +3238,14 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/asphalt,
 /area/calliope_route/tunnel/tunnel_n)
+"mE" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 9;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/shuttles/drop2)
 "mG" = (
 /obj/structure/platform{
 	dir = 8;
@@ -3383,6 +3314,28 @@
 "mQ" = (
 /turf/open/floor/asteroidwarning/west,
 /area/calliope_route/shuttles/drop1)
+"mS" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/structure/machinery/prop/almayer/computer{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
+"mT" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Heavy Blast Door";
+	id = "new_ark_lock2";
+	unacidable = 1
+	},
+/turf/open/floor/asteroidwarning/west,
+/area/calliope_route/highway/north)
 "mV" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -3428,29 +3381,12 @@
 	},
 /turf/open/asphalt,
 /area/calliope_route/exterior_buildings/gateways)
-"na" = (
-/obj/structure/barricade/handrail/sandstone/b{
-	color = "#c2d6d6";
-	dir = 8
+"nc" = (
+/obj/item/holder/mouse/brown{
+	name = "Interstate APC rat"
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 2;
-	layer = 5.2
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue{
-	dir = 4
-	},
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_n)
-"nb" = (
-/obj/item/trash/chunk{
-	pixel_x = -3;
-	pixel_y = -7
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/close_south)
+/turf/open/floor/plating,
+/area/calliope_route/highway/exchange)
 "nd" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -3459,14 +3395,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/exterior_buildings/buildings)
-"ng" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = 12
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "nj" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -3563,20 +3491,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"nz" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = -10
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
-"nA" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/north)
 "nC" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6";
@@ -3594,6 +3508,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"nE" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/gm/dirt2,
+/area/calliope_route/highway/far_south)
 "nF" = (
 /turf/open/gm/dirt/desert1,
 /area/calliope_route/highway/far_south)
@@ -3633,6 +3554,11 @@
 	},
 /turf/open/gm/river/ocean/deep_ocean/no_overlay,
 /area/calliope_route/highway/north)
+"nK" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/obj/item/trash/hotdog,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
 "nN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/airlock/almayer/maint{
@@ -3641,6 +3567,19 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/calliope_route/tunnel/generator_maints)
+"nP" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 19;
+	pixel_y = -19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19;
+	pixel_x = -10
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
 "nQ" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -3655,6 +3594,9 @@
 "nR" = (
 /turf/closed/wall/rock,
 /area/calliope_route/tunnel/generator_maints)
+"nS" = (
+/turf/open/gm/river/ocean/deep_ocean/no_overlay,
+/area/calliope_route/highway/close_south)
 "nV" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal9";
@@ -3678,9 +3620,32 @@
 "nW" = (
 /turf/open/gm/coast/beachcorner/north_east,
 /area/calliope_route/highway/close_south)
+"nX" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/obj/structure/prop/dam/van/damaged{
+	dir = 4
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/north)
 "nY" = (
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/calliope_route/highway/close_south)
+"nZ" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal9";
+	pixel_x = -19;
+	pixel_y = 19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 23;
+	pixel_x = 12
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "od" = (
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope_route/tunnel/maintenance_hall)
@@ -3708,6 +3673,19 @@
 	},
 /turf/closed/wall/r_wall/bunker,
 /area/calliope_route/highway/far_south)
+"og" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal9";
+	pixel_x = -19;
+	pixel_y = 19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 23;
+	pixel_x = 12
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
 "oh" = (
 /obj/structure/tunnel/maint_tunnel/no_xeno_desc{
 	pixel_x = 0;
@@ -3719,10 +3697,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/generator_maints)
-"ok" = (
-/obj/structure/prop/dam/truck/damaged,
+"oj" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 19;
+	pixel_y = -19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = 9
+	},
 /turf/open/gm/dirt,
-/area/calliope_route/highway/close_south)
+/area/calliope_route/highway/far_south)
 "oo" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/auto_turf/sand_white/layer1,
@@ -3735,20 +3721,22 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
+"oq" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/asteroidwarning/west,
+/area/calliope_route/tunnel/tunnel_s)
+"or" = (
+/obj/item/trash/chunk,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "ot" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/motiondetector/m717/hacked,
 /turf/open/floor/plating/warnplate/east,
 /area/calliope_route/tunnel/maintenance_hall)
-"ou" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/item/trash/chunk/hunk,
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
 "ow" = (
 /turf/closed/wall/r_wall/bunker,
 /area/calliope_route/highway/exchange)
@@ -3759,6 +3747,10 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
+"oz" = (
+/obj/structure/flora/bush/desert/cactus,
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/north)
 "oC" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -3812,6 +3804,12 @@
 	},
 /turf/closed/wall/r_wall,
 /area/calliope_route/tunnel/tunnel_s)
+"oN" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/gm/dirt2,
+/area/calliope_route/highway/north)
 "oO" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -3819,9 +3817,24 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"oQ" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 0;
+	pixel_y = -4;
+	id = "interstate_south_lock";
+	name = "Cell Divider"
+	},
+/turf/open/floor/plating,
+/area/calliope_route/tunnel/generator_maints)
 "oR" = (
 /turf/open/gm/coast/north,
 /area/calliope_route/highway/north)
+"oS" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/asteroidwarning/west,
+/area/calliope_route/tunnel/tunnel_n)
 "oT" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 10;
@@ -3867,6 +3880,12 @@
 "pb" = (
 /turf/open/gm/coast/east,
 /area/calliope_route/highway/close_south)
+"pc" = (
+/obj/structure/flora/bush/desert{
+	icon_state = "tree_3"
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/shuttles/drop2)
 "ph" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -3874,6 +3893,19 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
+"pj" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 19;
+	pixel_y = -19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19;
+	pixel_x = -10
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "pk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -3894,6 +3926,9 @@
 	},
 /turf/open/asphalt/cement/cement13,
 /area/calliope_route/tunnel/tunnel_s)
+"pq" = (
+/turf/open/gm/dirt/desert0,
+/area/calliope_route/shuttles/drop2)
 "ps" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal12";
@@ -3906,6 +3941,10 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"pt" = (
+/obj/structure/prop/dam/van/damaged,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
 "pv" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -3942,6 +3981,37 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/north)
+"px" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/safety/west{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 19;
+	pixel_y = -19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19;
+	pixel_x = -10
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "py" = (
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope_route/highway/far_south)
@@ -3954,10 +4024,12 @@
 	},
 /turf/open/gm/river/ocean/deep_ocean/no_overlay,
 /area/calliope_route/highway/exchange)
-"pD" = (
-/obj/structure/bed/chair,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
+"pC" = (
+/obj/effect/decal/siding{
+	icon_state = "siding2"
+	},
+/turf/open/floor/floor4,
+/area/calliope_route/highway/close_south)
 "pE" = (
 /turf/closed/wall/rock,
 /area/calliope_route/tunnel/maintenance_hall)
@@ -4029,9 +4101,50 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/north)
+"pS" = (
+/obj/item/trash/cigbutt{
+	pixel_x = -16;
+	pixel_y = 16
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
 "pU" = (
 /obj/structure/flora/bush/desert/cactus/multiple{
 	icon_state = "cacti_10"
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
+"pW" = (
+/obj/structure/prop/invuln/overhead{
+	icon_state = "flammable_pipe_2";
+	pixel_y = -7;
+	name = "dense fuel line";
+	desc = "Likely to be incredibly flammable.";
+	density = 0;
+	pixel_x = -9
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 10;
+	pixel_y = 0
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -19
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 11;
+	pixel_x = -2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 4;
+	layer = 5.0
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19;
+	pixel_x = -3
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/far_south)
@@ -4275,15 +4388,14 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/close_south)
-"qM" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = 11
+"qN" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8
 	},
-/obj/structure/prop/dam/truck/damaged,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/exchange)
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/generator_maints)
 "qO" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -4311,10 +4423,6 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/far_south)
-"qV" = (
-/obj/item/trash/crushed_cup,
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
 "qX" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -4330,11 +4438,6 @@
 "ra" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/generator_maints)
-"rb" = (
-/obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/obj/item/trash/candy,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/close_south)
 "rc" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "Heavy Blast Door";
@@ -4347,6 +4450,16 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/calliope_route/tunnel/tunnel_s)
+"re" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -13
+	},
+/obj/structure/prop/dam/truck/damaged{
+	dir = 4
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
 "ri" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "interstate_se"
@@ -4411,29 +4524,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/far_south)
-"rq" = (
-/obj/structure/barricade/handrail/sandstone/b{
-	color = "#c2d6d6";
-	dir = 8;
-	pixel_x = 12;
-	pixel_y = 0
-	},
-/obj/structure/barricade/handrail/sandstone/b{
-	color = "#c2d6d6";
-	dir = 4;
-	pixel_x = -12;
-	pixel_y = 0
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/turf/open/asphalt/cement/cement13,
-/area/calliope_route/tunnel/tunnel_n)
 "rs" = (
 /obj/structure/cargo_container/horizontal/blue/bottom{
 	pixel_x = 14;
@@ -4444,6 +4534,11 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/north)
+"ru" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/obj/item/trash/candy,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
 "rx" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -4484,12 +4579,6 @@
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/close_south)
-"rA" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4
-	},
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_n)
 "rC" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -4688,6 +4777,21 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/north)
+"sn" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 2;
+	layer = 5.2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_s)
 "so" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -4697,50 +4801,28 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/north)
+"sp" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 6;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/shuttles/drop2)
 "sq" = (
 /turf/open/gm/coast/west,
 /area/calliope_route/highway/far_south)
-"sr" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_x = 0;
-	pixel_y = -4;
-	id = "interstate_south_lock";
-	name = "Cell Divider"
-	},
-/turf/open/floor/plating,
-/area/calliope_route/tunnel/generator_maints)
-"ss" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/sign/safety/south{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/close_south)
 "st" = (
-/obj/structure/flora/bush/desert/cactus,
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
+/obj/structure/prop/dam/truck/damaged,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
 "su" = (
 /turf/closed/wall/rock,
 /area/space)
+"sv" = (
+/obj/structure/flora/bush/desert/cactus,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "sw" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -4780,13 +4862,10 @@
 	},
 /turf/open/floor/asteroidfloor/north,
 /area/calliope_route/shuttles/drop1)
-"sA" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue{
-	dir = 8
-	},
-/turf/open/floor/asteroidwarning/west,
-/area/calliope_route/tunnel/tunnel_s)
+"sz" = (
+/obj/item/trash/kepler,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "sB" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6";
@@ -4831,16 +4910,21 @@
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/north)
 "sH" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
+/obj/structure/barricade/handrail/sandstone/b{
+	color = "#c2d6d6";
+	dir = 8
 	},
-/obj/item/trash/eat{
-	pixel_x = 5;
-	pixel_y = -1
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 2;
+	layer = 5.2
 	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/close_south)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_s)
 "sI" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -4951,18 +5035,6 @@
 "ta" = (
 /turf/open/floor/asteroidwarning/northwest,
 /area/calliope_route/highway/north)
-"tb" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "interstate_north_lock2";
-	unacidable = 1
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/turf/open/asphalt/cement/cement1,
-/area/calliope_route/tunnel/tunnel_n)
 "td" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -4975,21 +5047,6 @@
 	},
 /turf/open/asphalt/cement/cement13,
 /area/calliope_route/tunnel/tunnel_s)
-"tg" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 8
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/generator_maints)
-"ti" = (
-/obj/structure/flora/bush/ausbushes/var3/fernybush,
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 1
-	},
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/far_south)
 "tk" = (
 /turf/open/floor/asteroidwarning/west,
 /area/calliope_route/tunnel/tunnel_s)
@@ -5017,40 +5074,6 @@
 /area/calliope_route/highway/north)
 "tq" = (
 /turf/open/gm/dirt,
-/area/calliope_route/shuttles/drop2)
-"tr" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/sign/safety/west{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal12";
-	pixel_x = -19;
-	pixel_y = -19
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/close_south)
-"ts" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 9;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/shuttles/drop2)
 "tt" = (
 /turf/open/auto_turf/strata_grass,
@@ -5086,20 +5109,23 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/close_south)
+"tz" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/item/trash/eat{
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
 "tA" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"tB" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock2";
-	unacidable = 1
-	},
-/turf/open/asphalt,
-/area/calliope_route/highway/north)
 "tC" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -5107,6 +5133,10 @@
 	},
 /turf/open/asphalt/cement/cement1,
 /area/calliope_route/exterior_buildings/gateways)
+"tE" = (
+/obj/structure/prop/rock/brown,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/calliope_route/tunnel/caves)
 "tF" = (
 /obj/structure/desertdam/decals/road_stop{
 	icon_state = "stop_decal5";
@@ -5174,6 +5204,10 @@
 /obj/structure/platform/kutjevo/rock,
 /turf/open/gm/dirt2,
 /area/calliope_route/shuttles/drop2)
+"tU" = (
+/obj/item/trash/crushed_cup,
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/north)
 "tV" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -5207,16 +5241,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/far_south)
-"tY" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/structure/machinery/prop/almayer/computer{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "ua" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal12";
@@ -5225,10 +5249,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
-"ub" = (
-/obj/structure/prop/rock/brown,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/calliope_route/tunnel/caves)
 "uc" = (
 /obj/structure/machinery/landinglight/ds1/spoke{
 	pixel_x = -14;
@@ -5261,9 +5281,65 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/north)
+"uj" = (
+/obj/structure/prop/invuln/overhead{
+	icon_state = "flammable_pipe_2";
+	pixel_y = -7;
+	name = "dense fuel line";
+	desc = "Likely to be incredibly flammable.";
+	density = 0;
+	pixel_x = -9
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 10;
+	pixel_y = 0
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -19
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 11;
+	pixel_x = -2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 4;
+	layer = 5.0
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal9";
+	pixel_x = -19;
+	pixel_y = 19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 23;
+	pixel_x = 12
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
 "uk" = (
 /turf/open/gm/coast/beachcorner2/south_west,
 /area/calliope_route/highway/close_south)
+"um" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/maintenance_hall)
+"un" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 6;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/shuttles/drop2)
 "uo" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -5350,26 +5426,8 @@
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/shuttles/drop2)
 "uz" = (
-/obj/structure/barricade/handrail/sandstone/b{
-	color = "#c2d6d6";
-	dir = 4
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 2;
-	layer = 5.2
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8
-	},
-/turf/open/floor/asteroidwarning/west,
-/area/calliope_route/tunnel/tunnel_s)
-"uA" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
+/turf/closed/wall/r_wall/unmeltable,
+/area/calliope_route/exterior_buildings/gateways)
 "uB" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6";
@@ -5385,10 +5443,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/far_south)
-"uD" = (
-/obj/effect/vehicle_spawner/van/decrepit,
-/turf/open/asphalt/cement/cement3,
-/area/calliope_route/highway/north)
 "uE" = (
 /obj/structure/machinery/power/port_gen/pacman/mrs,
 /turf/open/floor/prison/floor_plate,
@@ -5433,6 +5487,31 @@
 	color = "#c2d6d6"
 	},
 /turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
+"uN" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/safety/north{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -13
+	},
+/turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/far_south)
 "uO" = (
 /obj/structure/flora/grass/tallgrass/ice{
@@ -5515,14 +5594,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/close_south)
-"uW" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 1;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/shuttles/drop2)
 "uZ" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -5581,10 +5652,6 @@
 "vm" = (
 /turf/open/asphalt/cement/cement2,
 /area/calliope_route/exterior_buildings/gateways)
-"vn" = (
-/obj/structure/platform_decoration/kutjevo/rock,
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/north)
 "vt" = (
 /obj/structure/platform{
 	dir = 8
@@ -5599,11 +5666,11 @@
 /turf/open/gm/dirt,
 /area/calliope_route/highway/north)
 "vv" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4
+/obj/structure/flora/bush/desert{
+	icon_state = "tree_3"
 	},
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_s)
+/turf/open/gm/dirt,
+/area/calliope_route/shuttles/drop2)
 "vw" = (
 /turf/open/auto_turf/strata_grass/layer1,
 /area/calliope_route/highway/north)
@@ -5656,6 +5723,28 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/far_south)
+"vE" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 19;
+	pixel_y = -19
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "vF" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -5666,16 +5755,6 @@
 "vG" = (
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/calliope_route/highway/far_south)
-"vH" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/obj/structure/prop/dam/van/damaged{
-	dir = 4
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
 "vI" = (
 /obj/structure/machinery/door/airlock/almayer/generic/autoname{
 	dir = 1
@@ -5696,6 +5775,31 @@
 /obj/structure/closet/crate/supply,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
+"vN" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/sign/safety/south{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "vP" = (
 /obj/structure/flora/bush/desert,
 /turf/open/auto_turf/sand_white/layer1,
@@ -5753,18 +5857,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
-"vY" = (
-/obj/structure/machinery/power/terminal{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 1
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/generator_maints)
 "vZ" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "highway_north"
@@ -5778,6 +5870,12 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/shuttles/drop2)
+"wb" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/north)
 "wc" = (
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
@@ -5823,37 +5921,11 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/far_south)
-"we" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/sign/safety/west{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal9";
-	pixel_x = -19;
-	pixel_y = 19
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = 23;
-	pixel_x = 12
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
+"wf" = (
+/obj/item/hardpoint/locomotion/van_wheels,
+/obj/structure/surface/rack,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "wg" = (
 /turf/open/gm/coast/beachcorner/south_west,
 /area/calliope_route/highway/close_south)
@@ -5865,6 +5937,14 @@
 	climb_delay = 0
 	},
 /turf/open/gm/dirt2,
+/area/calliope_route/highway/north)
+"wk" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Heavy Blast Door";
+	id = "new_ark_lock2";
+	unacidable = 1
+	},
+/turf/open/asphalt,
 /area/calliope_route/highway/north)
 "wn" = (
 /obj/structure/platform_decoration{
@@ -5956,6 +6036,30 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/north)
+"wF" = (
+/obj/structure/barricade/handrail/sandstone/b{
+	color = "#c2d6d6";
+	dir = 8;
+	pixel_x = 12;
+	pixel_y = 0
+	},
+/obj/structure/barricade/handrail/sandstone/b{
+	color = "#c2d6d6";
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 0
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/turf/open/asphalt/cement/cement13,
+/area/calliope_route/tunnel/tunnel_n)
 "wI" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -5963,11 +6067,6 @@
 	},
 /turf/open/asphalt/cement/cement13,
 /area/calliope_route/tunnel/tunnel_s)
-"wJ" = (
-/obj/structure/flora/bush/ausbushes/var3/fernybush,
-/obj/structure/platform_decoration/kutjevo/rock,
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/north)
 "wK" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/auto_turf/sand_white/layer1,
@@ -5994,15 +6093,6 @@
 "wN" = (
 /turf/open/gm/dirt/desert2,
 /area/calliope_route/highway/close_south)
-"wO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 1
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/generator_maints)
 "wP" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -6027,13 +6117,9 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
 "wS" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/generator_maints)
+/obj/structure/machinery/colony_floodlight,
+/turf/open/gm/dirt/desert0,
+/area/calliope_route/highway/north)
 "wV" = (
 /turf/open/asphalt/cement/cement1,
 /area/calliope_route/highway/close_south)
@@ -6106,11 +6192,30 @@
 /turf/open/gm/dirt2,
 /area/calliope_route/shuttles/drop2)
 "xl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/hardpoint/locomotion/apc_wheels,
-/obj/structure/closet/crate/supply,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/tunnel/maintenance_hall)
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/safety/north{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/close_south)
 "xn" = (
 /obj/structure/largecrate/random/case/double{
 	pixel_x = -13;
@@ -6127,25 +6232,17 @@
 	},
 /turf/open/floor/asteroidfloor/north,
 /area/calliope_route/shuttles/drop1)
-"xp" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_x = 0;
-	pixel_y = -4;
-	id = "interstate_north_lock";
-	name = "Cell Divider"
+"xq" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8
 	},
-/turf/open/floor/plating,
-/area/space)
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/maintenance_hall)
 "xr" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/close_south)
-"xs" = (
-/obj/item/trash/cigbutt{
-	pixel_x = -16;
-	pixel_y = 16
-	},
-/turf/open/gm/dirt,
 /area/calliope_route/highway/close_south)
 "xv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6300,10 +6397,6 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/far_south)
-"xY" = (
-/obj/structure/prop/dam/gravestone,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/north)
 "ya" = (
 /obj/structure/machinery/computer/station_alert{
 	dir = 8;
@@ -6388,6 +6481,29 @@
 /obj/item/hardpoint/locomotion/van_wheels,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
+"yq" = (
+/obj/structure/barricade/handrail/sandstone/b{
+	color = "#c2d6d6";
+	dir = 8;
+	pixel_x = 12;
+	pixel_y = 0
+	},
+/obj/structure/barricade/handrail/sandstone/b{
+	color = "#c2d6d6";
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 0
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/turf/open/asphalt/cement/cement13,
+/area/calliope_route/tunnel/tunnel_n)
 "yt" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/east,
@@ -6396,6 +6512,10 @@
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/far_south)
+"yx" = (
+/obj/item/trash/hotdog,
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/close_south)
 "yA" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6";
@@ -6434,6 +6554,18 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/exchange)
+"yI" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal9";
+	pixel_x = -19;
+	pixel_y = 19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -13
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
 "yJ" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal11";
@@ -6442,18 +6574,6 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
-"yL" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock2";
-	unacidable = 1
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/highway/north)
 "yN" = (
 /obj/structure/platform{
 	dir = 8
@@ -6476,18 +6596,15 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
-"yU" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal11";
-	pixel_x = 19;
-	pixel_y = -19
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "yW" = (
-/obj/structure/prop/almayer/computers/sensor_computer3,
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_s)
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 0;
+	pixel_y = -4;
+	id = "interstate_north_lock";
+	name = "Cell Divider"
+	},
+/turf/open/floor/plating,
+/area/space)
 "yY" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "Heavy Blast Door";
@@ -6496,10 +6613,25 @@
 	},
 /turf/open/asphalt,
 /area/calliope_route/tunnel/tunnel_s)
+"yZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/asteroidwarning/west,
+/area/calliope_route/tunnel/tunnel_n)
 "za" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
+"zb" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 5;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/shuttles/drop2)
 "zc" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "interstate_sw"
@@ -6629,6 +6761,14 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
+"zp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/generator_maints)
 "zq" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal9";
@@ -6701,31 +6841,53 @@
 	},
 /turf/open/asphalt,
 /area/calliope_route/highway/north)
-"zz" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 5;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/shuttles/drop2)
 "zA" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
-"zB" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue{
-	dir = 4
-	},
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_s)
 "zD" = (
 /turf/open/floor/corsat/marked,
 /area/calliope_route/tunnel/generator_maints)
 "zE" = (
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/close_south)
+"zG" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 10;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
+	},
+/obj/item/trash/kepler{
+	pixel_x = 7;
+	pixel_y = 12
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/north)
+"zH" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/safety/north{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/north)
 "zJ" = (
 /turf/open/gm/coast/east,
 /area/calliope_route/highway/north)
@@ -6756,39 +6918,10 @@
 /turf/open/floor/asteroidwarning/northeast,
 /area/calliope_route/shuttles/drop1)
 "zM" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/item/weapon/twohanded/spear{
-	name = "trash picker";
-	desc = "a pointy stick meant to pick up loose trash";
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/weapon/twohanded/spear{
-	name = "trash picker";
-	desc = "a pointy stick meant to pick up loose trash";
-	pixel_x = -4;
-	pixel_y = 3
-	},
-/obj/item/weapon/twohanded/spear{
-	name = "trash picker";
-	desc = "a pointy stick meant to pick up loose trash";
-	pixel_x = 4;
-	pixel_y = -2
-	},
-/obj/item/clothing/gloves/light_brown,
-/obj/item/clothing/gloves/light_brown{
-	pixel_x = -4;
-	pixel_y = 9
-	},
-/obj/item/clothing/gloves/light_brown{
-	pixel_x = 5;
-	pixel_y = -4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
+/obj/structure/flora/bush/desert,
+/obj/item/trash/candy,
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/north)
 "zN" = (
 /turf/closed/wall/rock,
 /area/calliope_route/tunnel/tunnel_n)
@@ -6829,6 +6962,13 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
+"zX" = (
+/obj/item/trash/hotdog{
+	pixel_x = -15;
+	pixel_y = 9
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
 "Aa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/airlock/almayer/maint{
@@ -6838,8 +6978,27 @@
 /turf/open/floor/corsat/marked,
 /area/calliope_route/tunnel/maintenance_hall)
 "Ab" = (
-/turf/open/gm/dirt/desert3,
-/area/calliope_route/shuttles/drop2)
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/paper_bin{
+	pixel_x = -7;
+	pixel_y = 7
+	},
+/obj/item/facepaint/sunscreen_stick{
+	pixel_x = 10;
+	pixel_y = 16
+	},
+/obj/item/facepaint/sunscreen_stick{
+	pixel_x = 6;
+	pixel_y = 11
+	},
+/obj/item/facepaint/sunscreen_stick{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "Ac" = (
 /turf/closed/wall/r_wall/bunker,
 /area/calliope_route/highway/north)
@@ -6915,6 +7074,32 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
+"Am" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/safety/west{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal12";
+	pixel_x = -19;
+	pixel_y = -19
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/close_south)
 "Aq" = (
 /turf/open/floor/asteroidwarning/north,
 /area/calliope_route/shuttles/drop2)
@@ -6922,6 +7107,10 @@
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/close_south)
+"At" = (
+/obj/item/trash/candy,
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/north)
 "Au" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 6;
@@ -6930,9 +7119,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/far_south)
-"Av" = (
-/turf/open/floor/plating,
-/area/calliope_route/highway/north)
 "Aw" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 9;
@@ -7039,23 +7225,6 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/close_south)
-"AS" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal11";
-	pixel_x = 19;
-	pixel_y = -19
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = -10
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
-"AT" = (
-/obj/item/trash/hotdog,
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/close_south)
 "AU" = (
 /obj/structure/largecrate/random/barrel/yellow{
 	pixel_x = 16;
@@ -7074,28 +7243,6 @@
 	},
 /turf/open/floor/asteroidwarning/southeast,
 /area/calliope_route/highway/north)
-"AX" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/item/paper_bin{
-	pixel_x = -7;
-	pixel_y = 7
-	},
-/obj/item/facepaint/sunscreen_stick{
-	pixel_x = 10;
-	pixel_y = 16
-	},
-/obj/item/facepaint/sunscreen_stick{
-	pixel_x = 6;
-	pixel_y = 11
-	},
-/obj/item/facepaint/sunscreen_stick{
-	pixel_x = 4;
-	pixel_y = 0
-	},
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "AY" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -7219,10 +7366,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"Bi" = (
-/obj/structure/prop/dam/gravestone,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/close_south)
 "Bk" = (
 /obj/structure/largecrate/random/case/small,
 /obj/item/tool/weldpack{
@@ -7304,43 +7447,6 @@
 	},
 /turf/closed/wall/r_wall/bunker,
 /area/calliope_route/highway/far_south)
-"Bq" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/sign/safety/west{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal11";
-	pixel_x = 19;
-	pixel_y = -19
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = -10
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
-"Bs" = (
-/obj/structure/flora/bush/desert{
-	icon_state = "tree_3"
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/shuttles/drop2)
 "Bt" = (
 /turf/open/gm/coast/beachcorner/south_west,
 /area/calliope_route/highway/north)
@@ -7404,34 +7510,9 @@
 	},
 /turf/open/asphalt,
 /area/calliope_route/highway/north)
-"BE" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/sign/safety/north{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/exchange)
 "BG" = (
-/turf/open/asphalt/cement/cement1,
-/area/calliope_route/exterior_buildings/gateways)
+/turf/open/gm/river/ocean/deep_ocean/no_overlay,
+/area/calliope_route/highway/far_south)
 "BH" = (
 /obj/structure/grille{
 	density = 0;
@@ -7450,22 +7531,36 @@
 	},
 /turf/open/floor/plating/warnplate/east,
 /area/calliope_route/tunnel/maintenance_hall)
-"BK" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/generator_maints)
 "BM" = (
 /turf/closed/wall/r_wall/bunker,
 /area/calliope_route/tunnel/tunnel_s)
 "BO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/miningcar,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Heavy Blast Door";
+	id = "new_ark_lock2";
+	unacidable = 1
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/highway/north)
+"BP" = (
+/obj/structure/barricade/handrail/sandstone/b{
+	color = "#c2d6d6";
+	dir = 8
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 2;
+	layer = 5.2
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_s)
 "BR" = (
 /obj/structure/largecrate/random/barrel/yellow{
 	pixel_x = -6;
@@ -7501,6 +7596,14 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/far_south)
+"BZ" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 8;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/shuttles/drop2)
 "Cb" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -7540,31 +7643,14 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
-"Cf" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
+"Cg" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
 	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/sign/safety/north{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -22
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/exchange)
+/obj/effect/spawner/random/tool,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "Cj" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 4;
@@ -7586,15 +7672,19 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"Cm" = (
+/obj/item/trash/cheesie,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "Cn" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "Heavy Blast Door";
 	id = "interstate_north_lock2";
 	unacidable = 1
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
 	},
 /turf/open/asphalt/cement/cement1,
 /area/calliope_route/tunnel/tunnel_n)
@@ -7696,6 +7786,40 @@
 	},
 /turf/open/floor/prison,
 /area/calliope_route/tunnel/tunnel_s)
+"CK" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/weapon/twohanded/spear{
+	name = "trash picker";
+	desc = "a pointy stick meant to pick up loose trash";
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/twohanded/spear{
+	name = "trash picker";
+	desc = "a pointy stick meant to pick up loose trash";
+	pixel_x = -4;
+	pixel_y = 3
+	},
+/obj/item/weapon/twohanded/spear{
+	name = "trash picker";
+	desc = "a pointy stick meant to pick up loose trash";
+	pixel_x = 4;
+	pixel_y = -2
+	},
+/obj/item/clothing/gloves/light_brown,
+/obj/item/clothing/gloves/light_brown{
+	pixel_x = -4;
+	pixel_y = 9
+	},
+/obj/item/clothing/gloves/light_brown{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "CL" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/gm/dirt,
@@ -7712,19 +7836,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
-"CQ" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal11";
-	pixel_x = 19;
-	pixel_y = -19
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = -3
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
 "CS" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 4;
@@ -7762,17 +7873,6 @@
 	},
 /turf/open/gm/river/no_overlay_lighted,
 /area/calliope_route/highway/north)
-"CV" = (
-/obj/structure/janitorialcart/brown{
-	pixel_x = 0;
-	pixel_y = 4
-	},
-/obj/item/tool/mop{
-	pixel_x = 11;
-	pixel_y = -2
-	},
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "CW" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -7804,12 +7904,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"Db" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8
-	},
-/turf/open/floor/asteroidwarning/west,
-/area/calliope_route/tunnel/tunnel_n)
 "Dc" = (
 /obj/structure/flora/tree/joshua{
 	pixel_x = -22;
@@ -7861,29 +7955,14 @@
 /turf/open/floor/asteroidfloor/north,
 /area/calliope_route/shuttles/drop1)
 "Dm" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 1
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/generator_maints)
+/obj/item/trash/crushed_cup,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "Dn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/tunnel_n)
-"Dp" = (
-/obj/structure/barricade/handrail/sandstone/b{
-	color = "#c2d6d6"
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = 23;
-	pixel_x = 10
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
 "Dr" = (
 /obj/structure/largecrate/random/barrel/yellow{
 	pixel_x = 17;
@@ -7911,6 +7990,9 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"Dt" = (
+/turf/open/floor/floor4,
+/area/calliope_route/highway/close_south)
 "Du" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "flagpole";
@@ -7943,31 +8025,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/north)
-"Dy" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/sign/safety/north{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -13
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/exchange)
 "DB" = (
 /turf/open/gm/coast/west,
 /area/calliope_route/highway/north)
@@ -8007,11 +8064,6 @@
 	},
 /turf/closed/wall/r_wall/bunker,
 /area/calliope_route/highway/north)
-"DG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/almayer/computers/sensor_computer3,
-/turf/open/floor/asteroidwarning/west,
-/area/calliope_route/tunnel/tunnel_s)
 "DH" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -8019,23 +8071,11 @@
 	},
 /turf/open/asphalt/cement/cement9,
 /area/calliope_route/highway/north)
-"DI" = (
-/obj/structure/prop/dam/gravestone,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "DJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/supply/medicine/medkits,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
-"DK" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/effect/spawner/random/tool,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "DL" = (
 /obj/structure/window_frame/bunker/reinforced,
 /obj/structure/desertdam/decals/road_edge{
@@ -8113,9 +8153,12 @@
 /turf/open/floor/plating/warnplate/north,
 /area/calliope_route/tunnel/maintenance_hall)
 "DZ" = (
-/obj/item/trash/kepler,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/north)
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/calliope_route/highway/far_south)
 "Ec" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -8136,6 +8179,25 @@
 /obj/structure/surface/rack,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
+"Eg" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/storage/pouch/cassette{
+	pixel_x = 6;
+	pixel_y = 13
+	},
+/obj/item/device/cassette_tape/heavymetal{
+	pixel_x = -5;
+	pixel_y = 1
+	},
+/obj/item/device/cassette_tape/heavymetal{
+	pixel_x = 4;
+	pixel_y = -8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "Ei" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal12";
@@ -8149,6 +8211,14 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/close_south)
+"Ej" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 4;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/shuttles/drop2)
 "Ek" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal10";
@@ -8165,9 +8235,6 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/shuttles/drop2)
-"El" = (
-/turf/open/gm/dirt/desert_dug,
-/area/calliope_route/highway/north)
 "Em" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal12";
@@ -8279,21 +8346,9 @@
 /turf/open/gm/dirt/desert_dug,
 /area/calliope_route/highway/exchange)
 "ED" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 9;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/obj/item/trash/candy,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/north)
-"EE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue{
-	dir = 8
-	},
-/turf/open/floor/asteroidwarning/west,
-/area/calliope_route/tunnel/tunnel_n)
+/obj/structure/closet/crate/miningcar,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "EF" = (
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope_route/highway/north)
@@ -8310,6 +8365,17 @@
 "EL" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/tunnel_s)
+"EN" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/item/trash/eat{
+	pixel_x = 5;
+	pixel_y = -1
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
 "EO" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -8375,6 +8441,11 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"ES" = (
+/obj/structure/bed/chair,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "ET" = (
 /obj/structure/window/framed/colony/reinforced/hull,
 /turf/open/floor/plating,
@@ -8395,10 +8466,28 @@
 	},
 /turf/open/asphalt/cement/cement13,
 /area/calliope_route/tunnel/tunnel_n)
-"EZ" = (
-/obj/structure/flora/grass/tallgrass/ice{
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
+"EY" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/safety/north{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/shuttles/drop2)
@@ -8465,6 +8554,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"Fq" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/generator_maints)
 "Fw" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal12";
@@ -8579,9 +8675,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/calliope_route/exterior_buildings/buildings)
-"FV" = (
-/turf/open/gm/dirt/desert2,
-/area/calliope_route/highway/north)
 "FW" = (
 /obj/structure/machinery/prop/almayer/computer{
 	dir = 1;
@@ -8727,6 +8820,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"Go" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "Gp" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -8782,14 +8882,6 @@
 /obj/item/trash/burger,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/generator_maints)
-"GA" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
 "GB" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -8845,6 +8937,20 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/exchange)
+"GI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/almayer/computers/sensor_computer3,
+/turf/open/floor/asteroidwarning/west,
+/area/calliope_route/tunnel/tunnel_s)
+"GK" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 0;
+	pixel_y = -4;
+	id = "interstate_ne";
+	name = "Cell Divider"
+	},
+/turf/open/floor/plating,
+/area/calliope_route/highway/exchange)
 "GL" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/auto_turf/sand_white/layer1,
@@ -8873,6 +8979,11 @@
 "GP" = (
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/north)
+"GR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/asteroidwarning/west,
+/area/calliope_route/tunnel/tunnel_n)
 "GS" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal10";
@@ -8902,9 +9013,6 @@
 	},
 /turf/open/floor/prison,
 /area/calliope_route/tunnel/generator_maints)
-"GV" = (
-/turf/open/gm/dirt/desert_dug,
-/area/calliope_route/shuttles/drop2)
 "GW" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -8961,14 +9069,23 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/tunnel_s)
-"Hl" = (
-/obj/structure/bed/chair{
-	dir = 8;
-	pixel_x = -5;
-	pixel_y = 4
+"Hj" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 0;
+	pixel_y = -4;
+	id = "interstate_south_lock2";
+	name = "Cell Divider"
 	},
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
+/turf/open/floor/plating,
+/area/space)
+"Hk" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/generator_maints)
 "Hn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/port_gen/pacman,
@@ -8993,6 +9110,13 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/prison/floor_marked,
 /area/calliope_route/tunnel/generator_maints)
+"Hx" = (
+/obj/item/trash/hotdog{
+	pixel_x = 0;
+	pixel_y = -9
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "HA" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6";
@@ -9050,6 +9174,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
+"HF" = (
+/obj/structure/machinery/power/terminal{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/generator_maints)
 "HG" = (
 /turf/open/auto_turf/strata_grass/layer1,
 /area/calliope_route/highway/close_south)
@@ -9060,10 +9196,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"HI" = (
-/obj/item/trash/hotdog,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/north)
 "HJ" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -9105,39 +9237,18 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/maintenance_hall)
 "HZ" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 0;
+	pixel_y = -4;
+	id = "interstate_se";
+	name = "Cell Divider"
 	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/sign/safety/north{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/shuttles/drop2)
+/turf/open/floor/plating,
+/area/calliope_route/highway/exchange)
 "Ia" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/tunnel_n)
-"Ib" = (
-/obj/structure/flora/bush/desert,
-/obj/item/trash/candy,
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
 "Ic" = (
 /obj/structure/platform{
 	dir = 4;
@@ -9248,6 +9359,17 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
+"It" = (
+/obj/structure/barricade/handrail/sandstone/b{
+	color = "#c2d6d6"
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 23;
+	pixel_x = 10
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "Iu" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -9268,6 +9390,10 @@
 "Iw" = (
 /turf/open/gm/river/ocean/deep_ocean/no_overlay,
 /area/calliope_route/highway/exchange)
+"Ix" = (
+/obj/structure/prop/dam/gravestone,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "IB" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6";
@@ -9321,10 +9447,6 @@
 	light_power = 0.5;
 	pixel_y = 10
 	},
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
-"IL" = (
-/obj/structure/closet/crate/miningcar,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/exterior_buildings/buildings)
 "IM" = (
@@ -9406,18 +9528,6 @@
 	},
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope_route/highway/far_south)
-"IW" = (
-/obj/structure/window_frame/bunker/reinforced,
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/turf/open/floor/asteroidfloor,
-/area/calliope_route/tunnel/tunnel_n)
 "IX" = (
 /obj/structure/girder/reinforced,
 /obj/structure/desertdam/decals/road_edge{
@@ -9451,6 +9561,14 @@
 "Jd" = (
 /turf/open/gm/dirt2,
 /area/calliope_route/shuttles/drop3)
+"Je" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/generator_maints)
 "Jf" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "flagpole";
@@ -9475,18 +9593,13 @@
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/north)
 "Jg" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/generic,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 4
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_x = -5;
+	pixel_y = 4
 	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/generator_maints)
-"Jh" = (
-/turf/closed/wall/r_wall/unmeltable,
-/area/calliope_route/exterior_buildings/gateways)
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "Ji" = (
 /turf/open/gm/coast/beachcorner2/south_west,
 /area/calliope_route/highway/far_south)
@@ -9519,6 +9632,18 @@
 	},
 /turf/closed/wall/r_wall/bunker,
 /area/calliope_route/highway/far_south)
+"Jm" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Heavy Blast Door";
+	id = "interstate_south_lock2";
+	unacidable = 1
+	},
+/turf/open/asphalt/cement/cement1,
+/area/calliope_route/tunnel/tunnel_n)
 "Jo" = (
 /obj/structure/surface/rack,
 /turf/open/floor/prison/floor_marked,
@@ -9632,20 +9757,8 @@
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/close_south)
 "JB" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 2;
-	layer = 5.2
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue{
-	dir = 4
-	},
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_n)
+/turf/open/asphalt/cement/cement1,
+/area/calliope_route/exterior_buildings/gateways)
 "JC" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
@@ -9685,25 +9798,21 @@
 	},
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope_route/exterior_buildings/gateways)
-"JH" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal11";
-	pixel_x = 19;
-	pixel_y = -19
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = -10
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
 "JJ" = (
 /obj/structure/flora/bush/desert/cactus{
 	icon_state = "cactus_7"
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/far_south)
+"JK" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 0;
+	pixel_y = -4;
+	id = "interstate_sw";
+	name = "Cell Divider"
+	},
+/turf/open/floor/plating,
+/area/calliope_route/highway/exchange)
 "JL" = (
 /obj/item/stack/rods,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -9748,14 +9857,17 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"JQ" = (
-/obj/item/hardpoint/locomotion/van_wheels,
-/obj/structure/surface/rack,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "JR" = (
 /turf/closed/wall/r_wall,
 /area/calliope_route/tunnel/tunnel_s)
+"JS" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/maintenance_hall)
 "JZ" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "side3";
@@ -9771,13 +9883,6 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/close_south)
-"Kb" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "Kd" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 8;
@@ -9786,6 +9891,21 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/north)
+"Ke" = (
+/obj/structure/barricade/handrail/sandstone/b{
+	color = "#c2d6d6";
+	dir = 4
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 2;
+	layer = 5.2
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/asteroidwarning/west,
+/area/calliope_route/tunnel/tunnel_s)
 "Kf" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "flagpole";
@@ -9859,6 +9979,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/generator_maints)
+"Kn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/almayer/computers/sensor_computer3,
+/turf/open/floor/asteroidwarning/west,
+/area/calliope_route/tunnel/tunnel_n)
 "Ko" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6"
@@ -9910,25 +10035,50 @@
 /turf/open/asphalt/cement,
 /area/calliope_route/exterior_buildings/gateways)
 "Ku" = (
-/obj/structure/largecrate/random/case/double{
-	pixel_x = 2;
-	pixel_y = 15;
-	layer = 3.1
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
 	},
-/obj/structure/largecrate/random/case/double{
-	pixel_x = -3;
-	pixel_y = -2;
-	layer = 4.02
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
 	},
-/turf/open/floor/plating/warnplate/north,
-/area/calliope_route/tunnel/maintenance_hall)
+/obj/structure/sign/safety/west{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal9";
+	pixel_x = -19;
+	pixel_y = 19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 23;
+	pixel_x = 12
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "Kv" = (
 /turf/open/gm/coast/beachcorner/north_east,
 /area/calliope_route/highway/exchange)
 "Kw" = (
-/obj/item/trash/cheesie,
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -33
+	},
 /turf/open/gm/dirt,
-/area/calliope_route/highway/north)
+/area/calliope_route/highway/far_south)
 "Kx" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal10";
@@ -9945,6 +10095,15 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
+"Ky" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 9;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
+	},
+/obj/item/trash/candy,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "Kz" = (
 /obj/structure/flora/tree/joshua{
 	pixel_x = -4;
@@ -9952,6 +10111,25 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/north)
+"KA" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/north)
+"KB" = (
+/obj/structure/janitorialcart/brown{
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/obj/item/tool/mop{
+	pixel_x = 11;
+	pixel_y = -2
+	},
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "KD" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/auto_turf/sand_white/layer1,
@@ -10014,6 +10192,14 @@
 	},
 /turf/open/floor/prison,
 /area/calliope_route/tunnel/tunnel_n)
+"KR" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "KS" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "flagpole";
@@ -10073,12 +10259,6 @@
 "KW" = (
 /turf/open/gm/coast/beachcorner2/north_west,
 /area/calliope_route/highway/far_south)
-"KX" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 1
-	},
-/turf/open/gm/dirt2,
-/area/calliope_route/shuttles/drop2)
 "KY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/backpack/marine/satchel{
@@ -10107,10 +10287,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"Ld" = (
-/obj/structure/prop/rock/brown,
-/turf/open/auto_turf/strata_grass,
-/area/calliope_route/tunnel/caves)
 "Le" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 5;
@@ -10159,17 +10335,6 @@
 "Lf" = (
 /turf/open/floor/asteroidwarning/northeast,
 /area/calliope_route/highway/north)
-"Lh" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/largecrate/random/barrel/yellow{
-	pixel_x = -7;
-	pixel_y = -13
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
 "Li" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random,
@@ -10278,14 +10443,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
-"Lu" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 8
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/maintenance_hall)
 "Lx" = (
 /obj/structure/machinery/landinglight/ds1/spoke,
 /obj/item/lightstick/red/spoke/planted{
@@ -10342,6 +10499,12 @@
 /obj/item/tool/portadialysis,
 /turf/open/floor/plating/warnplate/north,
 /area/calliope_route/tunnel/generator_maints)
+"LG" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/gm/dirt2,
+/area/calliope_route/shuttles/drop2)
 "LH" = (
 /obj/structure/largecrate/random/barrel/yellow{
 	pixel_x = -9;
@@ -10488,7 +10651,12 @@
 /area/calliope_route/highway/close_south)
 "Mf" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/warnplate/north,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/maintenance_hall)
 "Mh" = (
 /turf/open/auto_turf/sand_white/layer1,
@@ -10508,12 +10676,6 @@
 "Mk" = (
 /turf/open/gm/river/ocean/deep_ocean/no_overlay,
 /area/calliope_route/highway/north)
-"Mm" = (
-/obj/structure/flora/bush/desert{
-	icon_state = "tree_3"
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/shuttles/drop2)
 "Mn" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6";
@@ -10527,9 +10689,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/west,
 /area/calliope_route/tunnel/tunnel_s)
-"Mr" = (
-/turf/open/gm/dirt/desert1,
-/area/calliope_route/highway/north)
 "Ms" = (
 /obj/structure/platform{
 	layer = 3.1
@@ -10543,17 +10702,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/far_south)
-"Mu" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "door_warning"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random{
-	pixel_x = 0;
-	pixel_y = 2
-	},
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/tunnel/maintenance_hall)
 "Mv" = (
 /turf/open/auto_turf/strata_grass,
 /area/calliope_route/tunnel/caves)
@@ -10624,19 +10772,21 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/calliope_route/tunnel/generator_maints)
-"ML" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal9";
-	pixel_x = -19;
-	pixel_y = 19
+"MM" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 2;
+	layer = 5.2
 	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = 23;
-	pixel_x = 12
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_n)
 "MO" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -10752,31 +10902,6 @@
 "Nb" = (
 /turf/open/gm/coast/beachcorner/south_west,
 /area/calliope_route/highway/exchange)
-"Ne" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/sign/safety/north{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
 "Ni" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -10916,6 +11041,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/generator_maints)
+"NH" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_s)
 "NI" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/gm/dirt2,
@@ -10928,13 +11059,10 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/north)
-"NL" = (
-/obj/structure/flora/bush/ausbushes/var3/fernybush,
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 1
-	},
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/north)
+"NN" = (
+/obj/structure/prop/almayer/computers/sensor_computer3,
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_n)
 "NO" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal12";
@@ -10950,9 +11078,6 @@
 	},
 /turf/open/floor/asteroidwarning/west,
 /area/calliope_route/tunnel/tunnel_n)
-"NQ" = (
-/turf/open/gm/dirt/desert3,
-/area/calliope_route/highway/north)
 "NR" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -11168,26 +11293,22 @@
 	},
 /turf/open/asphalt,
 /area/calliope_route/tunnel/tunnel_n)
-"Os" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/west,
-/turf/open/floor/asteroidwarning/west,
-/area/calliope_route/tunnel/tunnel_n)
 "Ow" = (
-/obj/structure/barricade/handrail/sandstone/b{
-	color = "#c2d6d6";
-	dir = 8
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 2;
-	layer = 5.2
+/obj/item/trash/cheesie,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
+"OA" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 23;
+	pixel_x = 12
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 4
-	},
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_s)
+/turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
 "OB" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	color = "#bdce86";
@@ -11226,47 +11347,19 @@
 "OJ" = (
 /turf/open/floor/asteroidwarning/east,
 /area/calliope_route/shuttles/drop1)
-"OK" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal9";
-	pixel_x = -19;
-	pixel_y = 19
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -13
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "OM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/tunnel_n)
-"OP" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 6;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/shuttles/drop2)
-"OR" = (
-/obj/structure/barricade/handrail/sandstone/b{
-	color = "#c2d6d6";
-	dir = 8
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 2;
-	layer = 5.2
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue{
-	dir = 4
-	},
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_s)
+"OU" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/gm/dirt2,
+/area/calliope_route/highway/far_south)
+"OV" = (
+/turf/open/gm/dirt/desert_dug,
+/area/calliope_route/highway/north)
 "OW" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 4;
@@ -11275,14 +11368,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"OY" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = 23;
-	pixel_x = 12
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "Pa" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/gm/dirt,
@@ -11351,14 +11436,11 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"Ps" = (
-/obj/structure/machinery/vending/snack/packaged{
-	pixel_x = 4;
-	pixel_y = 16;
-	density = 0
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/generator_maints)
+"Pl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/miningcar,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "Pt" = (
 /obj/structure/platform,
 /obj/structure/platform{
@@ -11426,9 +11508,33 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
+"PC" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/item/trash/chunk/hunk,
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/north)
 "PD" = (
 /turf/open/asphalt/cement/cement2,
 /area/calliope_route/highway/north)
+"PE" = (
+/obj/structure/barricade/handrail/sandstone/b{
+	color = "#c2d6d6";
+	dir = 8
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 2;
+	layer = 5.2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_n)
 "PG" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -11449,11 +11555,6 @@
 	},
 /turf/open/floor/asteroidfloor/north,
 /area/calliope_route/highway/north)
-"PN" = (
-/obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/obj/item/trash/hotdog,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/close_south)
 "PQ" = (
 /turf/open/floor/asteroidwarning/southeast,
 /area/calliope_route/highway/close_south)
@@ -11498,7 +11599,8 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/shuttles/drop2)
-"PV" = (
+"PW" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
@@ -11559,7 +11661,38 @@
 /turf/open/asphalt,
 /area/calliope_route/shuttles/drop2)
 "Qg" = (
-/turf/open/gm/dirt/desert0,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8
+	},
+/obj/structure/machinery/deployable/barrier,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope_route/tunnel/maintenance_hall)
+"Qo" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/structure/sign/safety/south{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
 "Qp" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
@@ -11625,6 +11758,12 @@
 	pixel_y = 6
 	},
 /turf/open/floor/asteroidfloor,
+/area/calliope_route/highway/north)
+"QA" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
 "QB" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
@@ -11716,31 +11855,6 @@
 /obj/structure/machinery/power/reactor/colony,
 /turf/open/floor/podhatchfloor,
 /area/calliope_route/tunnel/generator_maints)
-"QT" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/sign/safety/south{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/shuttles/drop2)
 "QV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -11765,6 +11879,10 @@
 	desc = "A large swathe of drygrass"
 	},
 /turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
+"QX" = (
+/obj/item/trash/candy,
+/turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/close_south)
 "Rb" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -11811,22 +11929,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/maintenance_hall)
-"Re" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/almayer/computers/sensor_computer3,
-/turf/open/floor/asteroidwarning/west,
-/area/calliope_route/tunnel/tunnel_n)
 "Rg" = (
 /obj/structure/computerframe,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/maintenance_hall)
 "Rh" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/generator_maints)
+/turf/open/gm/dirt/desert0,
+/area/calliope_route/highway/north)
 "Ri" = (
 /obj/structure/flora/bush/desert{
 	icon_state = "tree_3"
@@ -11844,6 +11953,17 @@
 "Rl" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
+"Rm" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
+	},
+/obj/item/trash/kepler{
+	pixel_x = -11;
+	pixel_y = -1
+	},
+/turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/close_south)
 "Rn" = (
 /turf/open/floor/plating/warnplate/east,
@@ -11921,6 +12041,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/exterior_buildings/buildings)
+"Rz" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/warnplate/north,
+/area/calliope_route/tunnel/maintenance_hall)
 "RB" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -11931,12 +12055,6 @@
 "RC" = (
 /turf/open/floor/asteroidwarning/west,
 /area/calliope_route/shuttles/drop2)
-"RD" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 8
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/north)
 "RG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -11950,6 +12068,30 @@
 /obj/structure/machinery/power/monitor,
 /turf/open/floor/plating/warnplate/west,
 /area/calliope_route/tunnel/generator_maints)
+"RR" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19;
+	pixel_x = -3
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/far_south)
+"RS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/calliope_route/tunnel/generator_maints)
+"RU" = (
+/obj/item/trash/kepler{
+	pixel_x = -9;
+	pixel_y = 16
+	},
+/obj/item/trash/hotdog{
+	pixel_x = -16;
+	pixel_y = 2
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/close_south)
 "RV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -12022,20 +12164,6 @@
 	},
 /turf/open/asphalt,
 /area/calliope_route/highway/exchange)
-"Sk" = (
-/turf/open/gm/dirt/desert0,
-/area/calliope_route/shuttles/drop2)
-"Sm" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -33
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "Sn" = (
 /obj/structure/platform{
 	dir = 1;
@@ -12088,9 +12216,9 @@
 /turf/open/gm/dirt,
 /area/calliope_route/highway/close_south)
 "Sv" = (
-/obj/item/trash/candy,
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/close_south)
+/obj/effect/vehicle_spawner/van/decrepit,
+/turf/open/asphalt/cement/cement3,
+/area/calliope_route/highway/north)
 "Sy" = (
 /obj/item/trash/barcardine,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -12115,6 +12243,31 @@
 	},
 /turf/open/asphalt/cement/cement13,
 /area/calliope_route/tunnel/tunnel_s)
+"SF" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/safety/north{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -23
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/exchange)
 "SG" = (
 /turf/closed/wall/rock,
 /area/calliope_route/tunnel/tunnel_s)
@@ -12130,19 +12283,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/west,
 /area/calliope_route/tunnel/tunnel_s)
-"SL" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal9";
-	pixel_x = -19;
-	pixel_y = 19
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = 23;
-	pixel_x = 12
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "SP" = (
 /obj/structure/machinery/constructable_frame,
 /turf/open/floor/prison/floor_plate,
@@ -12150,40 +12290,6 @@
 "SQ" = (
 /turf/open/gm/dirt/desert0,
 /area/calliope_route/highway/close_south)
-"SR" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/sign/safety/west{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal12";
-	pixel_x = -19;
-	pixel_y = -19
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/exchange)
-"SS" = (
-/obj/structure/flora/grass/tallgrass/ice/corner{
-	dir = 6;
-	color = "#bdce86";
-	desc = "A large swathe of drygrass"
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/shuttles/drop2)
 "SU" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -12194,6 +12300,13 @@
 /area/calliope_route/highway/far_south)
 "SZ" = (
 /turf/open/gm/coast/beachcorner2/south_east,
+/area/calliope_route/highway/north)
+"Ta" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
 /area/calliope_route/highway/north)
 "Tb" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -12237,6 +12350,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
+"Tg" = (
+/obj/item/trash/chunk{
+	pixel_x = -3;
+	pixel_y = -7
+	},
+/turf/open/gm/dirt,
+/area/calliope_route/highway/close_south)
 "Th" = (
 /turf/open/gm/coast/beachcorner/north_west,
 /area/calliope_route/highway/close_south)
@@ -12254,13 +12374,6 @@
 /obj/structure/grille,
 /turf/open/floor/plating,
 /area/calliope_route/tunnel/generator_maints)
-"Tq" = (
-/obj/structure/flora/bush/ausbushes/var3/fernybush,
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 8
-	},
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/north)
 "Tr" = (
 /obj/structure/machinery/landinglight/ds1/spoke,
 /obj/item/lightstick/red/spoke/planted{
@@ -12370,18 +12483,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
-"TC" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "interstate_south_lock2";
-	unacidable = 1
-	},
-/turf/open/asphalt/cement/cement1,
-/area/calliope_route/tunnel/tunnel_n)
 "TG" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/prison/floor_plate,
@@ -12403,14 +12504,13 @@
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/highway/close_south)
 "TJ" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_x = 0;
-	pixel_y = -4;
-	id = "interstate_sw";
-	name = "Cell Divider"
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 10;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
 	},
-/turf/open/floor/plating,
-/area/calliope_route/highway/exchange)
+/turf/open/gm/dirt,
+/area/calliope_route/shuttles/drop2)
 "TK" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/prison/floor_plate,
@@ -12458,13 +12558,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/far_south)
-"TR" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "TS" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -12542,6 +12635,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/asteroidwarning/east,
 /area/calliope_route/tunnel/tunnel_s)
+"Uf" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 0;
+	pixel_y = -4;
+	id = "interstate_nw";
+	name = "Cell Divider"
+	},
+/turf/open/floor/plating,
+/area/calliope_route/highway/exchange)
 "Ug" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -12553,9 +12655,8 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"Uh" = (
-/obj/structure/flora/bush/desert/cactus,
-/turf/open/gm/dirt,
+"Uj" = (
+/turf/open/floor/plating,
 /area/calliope_route/highway/north)
 "Ul" = (
 /turf/closed/wall/r_wall,
@@ -12598,6 +12699,10 @@
 /obj/structure/grille,
 /turf/open/floor/plating/warnplate/northeast,
 /area/calliope_route/tunnel/generator_maints)
+"Ut" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/gm/dirt2,
+/area/calliope_route/highway/north)
 "Uw" = (
 /turf/open/gm/dirt/desert_dug,
 /area/calliope_route/highway/close_south)
@@ -12638,6 +12743,31 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/calliope_route/tunnel/tunnel_s)
+"UC" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/safety/north{
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -19;
+	pixel_y = -22
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/exchange)
 "UD" = (
 /obj/structure/platform{
 	layer = 3.1
@@ -12701,9 +12831,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/generator_maints)
-"UP" = (
-/turf/open/floor/floor4,
-/area/calliope_route/highway/close_south)
 "UQ" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/stack/cable_coil{
@@ -12729,7 +12856,18 @@
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
 "US" = (
-/turf/open/gm/dirt/desert2,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/asteroidwarning/east,
+/area/calliope_route/tunnel/tunnel_s)
+"UT" = (
+/obj/structure/flora/grass/tallgrass/ice{
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
+	},
+/turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/shuttles/drop2)
 "UU" = (
 /obj/structure/surface/rack,
@@ -12738,12 +12876,29 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/exterior_buildings/buildings)
+"UV" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 0;
+	pixel_y = -4;
+	id = "interstate_north_lock2";
+	name = "Cell Divider"
+	},
+/turf/open/floor/plating,
+/area/space)
 "UX" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/far_south)
+"UY" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 23;
+	pixel_x = 10
+	},
+/turf/closed/wall/r_wall/unmeltable,
+/area/calliope_route/exterior_buildings/gateways)
 "UZ" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -12812,40 +12967,6 @@
 	},
 /turf/open/floor/plating,
 /area/calliope_route/exterior_buildings/gateways)
-"Vl" = (
-/obj/structure/prop/invuln/overhead{
-	icon_state = "flammable_pipe_2";
-	pixel_y = -7;
-	name = "dense fuel line";
-	desc = "Likely to be incredibly flammable.";
-	density = 0;
-	pixel_x = -9
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	pixel_x = 10;
-	pixel_y = 0
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	pixel_x = -19
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 11;
-	pixel_x = -2
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 4;
-	layer = 5.0
-	},
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = -3
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "Vn" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal10";
@@ -12890,10 +13011,6 @@
 /obj/structure/flora/tree/joshua,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/close_south)
-"Vx" = (
-/obj/item/trash/candy,
-/turf/open/gm/dirt,
-/area/calliope_route/highway/north)
 "Vz" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/asphalt,
@@ -12934,33 +13051,27 @@
 "VD" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/calliope_route/exterior_buildings/buildings)
-"VF" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "door_warning"
+"VI" = (
+/obj/item/storage/bag/trash{
+	pixel_x = 5;
+	pixel_y = -6
 	},
-/obj/structure/largecrate/random/case/double{
-	pixel_x = -3;
-	pixel_y = -1;
-	layer = 4.02
+/obj/item/storage/bag/trash{
+	pixel_x = 10;
+	pixel_y = 8
 	},
-/obj/structure/largecrate/random{
-	pixel_x = -3;
-	pixel_y = 16
+/obj/item/storage/bag/trash{
+	pixel_x = 1;
+	pixel_y = 3
 	},
+/obj/structure/surface/rack,
+/obj/item/storage/pouch/general/large,
 /turf/open/floor/prison/floor_plate,
-/area/calliope_route/tunnel/maintenance_hall)
+/area/calliope_route/exterior_buildings/buildings)
 "VK" = (
 /obj/structure/grille,
 /turf/open/floor/plating/warnplate/west,
 /area/calliope_route/tunnel/generator_maints)
-"VL" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal3";
-	pixel_y = -19;
-	pixel_x = -3
-	},
-/turf/open/gm/dirt,
-/area/calliope_route/highway/far_south)
 "VM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -12977,14 +13088,7 @@
 /obj/structure/grille,
 /turf/open/floor/plating/warnplate/east,
 /area/calliope_route/tunnel/maintenance_hall)
-"VP" = (
-/obj/structure/platform/kutjevo/rock,
-/obj/structure/platform/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/exchange)
-"VQ" = (
+"VO" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 8;
 	name = "Post";
@@ -13008,7 +13112,32 @@
 	pixel_y = -13
 	},
 /turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/far_south)
+/area/calliope_route/highway/exchange)
+"VP" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/calliope_route/highway/exchange)
+"VQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/tunnel/maintenance_hall)
+"VR" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/calliope_route/exterior_buildings/buildings)
 "VS" = (
 /turf/open/floor/asteroidwarning,
 /area/calliope_route/shuttles/drop2)
@@ -13079,6 +13208,14 @@
 	},
 /turf/open/floor/prison/floor_marked,
 /area/calliope_route/exterior_buildings/buildings)
+"Wc" = (
+/obj/structure/tunnel/maint_tunnel/no_xeno_desc{
+	pixel_x = 0;
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/calliope_route/tunnel/maintenance_hall)
 "We" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -13087,13 +13224,6 @@
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirt,
 /area/calliope_route/highway/exchange)
-"Wg" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/turf/open/gm/dirt/desert0,
-/area/calliope_route/shuttles/drop2)
 "Wh" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6";
@@ -13231,30 +13361,6 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/far_south)
-"Wy" = (
-/obj/structure/barricade/handrail/sandstone/b{
-	color = "#c2d6d6";
-	dir = 8;
-	pixel_x = 12;
-	pixel_y = 0
-	},
-/obj/structure/barricade/handrail/sandstone/b{
-	color = "#c2d6d6";
-	dir = 4;
-	pixel_x = -12;
-	pixel_y = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/turf/open/asphalt/cement/cement13,
-/area/calliope_route/tunnel/tunnel_n)
 "WB" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -13326,27 +13432,17 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/north)
-"WL" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -19;
-	pixel_y = -23
-	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "Heavy Blast Door";
-	id = "new_ark_lock2";
-	unacidable = 1
-	},
-/turf/open/floor/asteroidwarning/west,
-/area/calliope_route/highway/north)
 "WM" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_x = 0;
-	pixel_y = -4;
-	id = "interstate_south_lock2";
-	name = "Cell Divider"
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = -13
 	},
-/turf/open/floor/plating,
-/area/space)
+/obj/structure/largecrate/random/barrel/yellow{
+	pixel_x = -7;
+	pixel_y = -13
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope_route/highway/far_south)
 "WO" = (
 /obj/item/prop/colony/canister{
 	pixel_x = 9;
@@ -13354,10 +13450,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/generator_maints)
-"WP" = (
-/obj/item/trash/crushed_cup,
+"WQ" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19;
+	pixel_x = 19
+	},
 /turf/open/gm/dirt,
-/area/calliope_route/highway/north)
+/area/calliope_route/highway/far_south)
 "WR" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "flagpole";
@@ -13427,6 +13527,9 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/close_south)
+"Xa" = (
+/turf/open/gm/dirt/desert2,
+/area/calliope_route/shuttles/drop2)
 "Xc" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/sand_white/layer1,
@@ -13555,11 +13658,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope_route/tunnel/maintenance_hall)
-"XA" = (
-/obj/structure/flora/bush/ausbushes/var3/fernybush,
-/obj/structure/platform_decoration/kutjevo/rock,
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/far_south)
 "XB" = (
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/shuttles/drop2)
@@ -13579,30 +13677,12 @@
 /turf/open/floor/asteroidfloor,
 /area/calliope_route/tunnel/tunnel_n)
 "XG" = (
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 8;
-	name = "Post";
-	pixel_x = 16;
-	pixel_y = 16;
-	density = 0
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
 	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4;
-	name = "Post";
-	pixel_x = -16;
-	pixel_y = 16;
-	density = 0
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/structure/sign/safety/south{
-	pixel_x = 7;
-	pixel_y = 22
-	},
-/turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/exchange)
+/turf/open/gm/dirt2,
+/area/calliope_route/highway/north)
 "XH" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 10;
@@ -13611,12 +13691,6 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope_route/highway/north)
-"XI" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8
-	},
-/turf/open/floor/asteroidwarning/west,
-/area/calliope_route/tunnel/tunnel_s)
 "XJ" = (
 /obj/effect/spawner/random/toolbox,
 /obj/structure/surface/table/reinforced/prison,
@@ -13640,40 +13714,6 @@
 /obj/structure/machinery/colony_floodlight,
 /turf/open/gm/dirt,
 /area/calliope_route/highway/close_south)
-"XP" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/item/storage/pouch/cassette{
-	pixel_x = 6;
-	pixel_y = 13
-	},
-/obj/item/device/cassette_tape/heavymetal{
-	pixel_x = -5;
-	pixel_y = 1
-	},
-/obj/item/device/cassette_tape/heavymetal{
-	pixel_x = 4;
-	pixel_y = -8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
-"XR" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 2;
-	layer = 5.2
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue{
-	dir = 4
-	},
-/turf/open/floor/asteroidwarning/east,
-/area/calliope_route/tunnel/tunnel_s)
 "XS" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#c2d6d6";
@@ -13693,7 +13733,12 @@
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/podhatchfloor,
 /area/calliope_route/tunnel/generator_maints)
-"XU" = (
+"XV" = (
+/obj/structure/surface/rack,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_marked,
+/area/calliope_route/exterior_buildings/buildings)
+"XW" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
 	},
@@ -13707,17 +13752,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/exterior_buildings/buildings)
-"XV" = (
-/obj/structure/surface/rack,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_marked,
-/area/calliope_route/exterior_buildings/buildings)
-"XW" = (
-/turf/open/asphalt{
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/area/calliope_route/highway/exchange)
 "XY" = (
 /obj/structure/platform{
 	dir = 8
@@ -13731,13 +13765,6 @@
 	},
 /turf/open/floor/prison/cell_stripe/east,
 /area/calliope_route/tunnel/tunnel_s)
-"Ya" = (
-/obj/structure/flora/bush/ausbushes/var3/fernybush,
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 8
-	},
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/far_south)
 "Yd" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -19;
@@ -13836,15 +13863,15 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope_route/highway/exchange)
-"Yx" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 8
+"Yy" = (
+/obj/structure/flora/grass/tallgrass/ice/corner{
+	dir = 10;
+	color = "#bdce86";
+	desc = "A large swathe of drygrass"
 	},
-/obj/structure/machinery/deployable/barrier,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/calliope_route/tunnel/maintenance_hall)
+/obj/item/trash/chunk,
+/turf/open/gm/dirt,
+/area/calliope_route/highway/north)
 "Yz" = (
 /obj/structure/surface/rack,
 /obj/item/fuel_cell/used{
@@ -13894,13 +13921,6 @@
 "YC" = (
 /turf/open/gm/coast/beachcorner/north_west,
 /area/calliope_route/highway/exchange)
-"YE" = (
-/obj/structure/flora/bush/ausbushes/var3/fernybush,
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/gm/dirt2,
-/area/calliope_route/highway/north)
 "YF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -13924,21 +13944,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/tunnel/maintenance_hall)
-"YL" = (
-/obj/structure/barricade/handrail/sandstone/b{
-	color = "#c2d6d6";
-	dir = 4
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 2;
-	layer = 5.2
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8
-	},
-/turf/open/floor/asteroidwarning/west,
-/area/calliope_route/tunnel/tunnel_n)
 "YM" = (
 /obj/structure/machinery/landinglight/ds1/spoke,
 /obj/item/lightstick/red/spoke/planted{
@@ -13960,9 +13965,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope_route/highway/close_south)
-"YQ" = (
-/turf/open/asphalt,
-/area/calliope_route/exterior_buildings/gateways)
 "YR" = (
 /obj/structure/platform{
 	dir = 4;
@@ -13992,14 +13994,6 @@
 	pixel_y = 6
 	},
 /turf/open/auto_turf/sand_white/layer1,
-/area/calliope_route/highway/close_south)
-"YV" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 23;
-	pixel_y = -13
-	},
-/obj/item/trash/cheesie,
-/turf/open/gm/dirt,
 /area/calliope_route/highway/close_south)
 "YW" = (
 /obj/structure/toilet{
@@ -14921,13 +14915,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 Ij
 Ij
 Ij
@@ -15005,13 +14999,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 Ij
 Ij
 Ij
@@ -15209,13 +15203,13 @@ zg
 zg
 zg
 zg
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 zg
 zg
 zg
@@ -15898,13 +15892,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-BG
-YQ
-YQ
-YQ
-BG
-Jh
+uz
+JB
+hd
+hd
+hd
+JB
+uz
 Ij
 Ij
 Ij
@@ -15982,13 +15976,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-BG
-YQ
-YQ
-YQ
-BG
-Jh
+uz
+JB
+hd
+hd
+hd
+JB
+uz
 Ij
 Ij
 Ij
@@ -16072,8 +16066,8 @@ zg
 zg
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 zg
 zg
@@ -16186,13 +16180,13 @@ zg
 zg
 zg
 zg
-Jh
-BG
-YQ
-YQ
-YQ
-BG
-Jh
+uz
+JB
+hd
+hd
+hd
+JB
+uz
 zg
 zg
 zg
@@ -16875,13 +16869,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 Ij
 Ij
 Ij
@@ -16959,13 +16953,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 Ij
 Ij
 Ij
@@ -17049,7 +17043,7 @@ zg
 fy
 fy
 fy
-kS
+BG
 fy
 fy
 zg
@@ -17163,13 +17157,13 @@ zg
 zg
 zg
 zg
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 zg
 zg
 zg
@@ -17852,13 +17846,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 Ij
 Ij
 Ij
@@ -17936,13 +17930,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 Ij
 Ij
 Ij
@@ -18025,8 +18019,8 @@ zg
 zg
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 zg
@@ -18140,13 +18134,13 @@ zg
 zg
 zg
 Mh
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 zg
 zg
 zg
@@ -18829,13 +18823,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 Ij
 Ij
 Ij
@@ -18913,13 +18907,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 Ij
 Ij
 Ij
@@ -19002,8 +18996,8 @@ zg
 zg
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 zg
@@ -19117,13 +19111,13 @@ zg
 zg
 Mh
 Mh
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 zg
 zg
 zg
@@ -19806,13 +19800,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-dX
-YQ
-YQ
-YQ
+uz
+ev
+hd
+hd
+hd
 vm
-Jh
+uz
 Ij
 Ij
 Ij
@@ -19890,13 +19884,13 @@ xB
 gQ
 Ij
 Ij
-Jh
-dX
-YQ
-YQ
-YQ
+uz
+ev
+hd
+hd
+hd
 vm
-Jh
+uz
 Ij
 Ij
 Ij
@@ -19978,8 +19972,8 @@ zg
 zg
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 zg
@@ -20094,13 +20088,13 @@ zg
 Mh
 Mh
 hl
-Jh
-dX
-YQ
-YQ
-YQ
+uz
+ev
+hd
+hd
+hd
 vm
-Jh
+uz
 Mh
 Mh
 Mh
@@ -20783,13 +20777,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
+uz
 vS
 Ay
 Ay
 Ay
 AF
-Jh
+uz
 Ij
 Ij
 Ij
@@ -20867,13 +20861,13 @@ gQ
 gQ
 gQ
 Ij
-Jh
+uz
 vz
 IG
 IG
 IG
 AF
-Jh
+uz
 Ij
 Ij
 Ij
@@ -20955,8 +20949,8 @@ zg
 zg
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 zg
@@ -21071,13 +21065,13 @@ zg
 Mh
 hl
 hl
-Jh
-Jh
+uz
+uz
 JZ
 JZ
 JZ
-jX
-Jh
+UY
+uz
 Mh
 hl
 hl
@@ -21931,8 +21925,8 @@ zg
 zg
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 fy
@@ -22049,11 +22043,11 @@ Mh
 hl
 cs
 hl
-nz
+dd
 qq
 qq
 qq
-Dp
+It
 zS
 Xc
 hl
@@ -22908,8 +22902,8 @@ zg
 zg
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 fy
@@ -23026,11 +23020,11 @@ hl
 hl
 hl
 hl
-JH
+pj
 qq
 qq
 qq
-Dp
+It
 zS
 hl
 hl
@@ -23885,8 +23879,8 @@ zg
 zg
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 zg
@@ -24007,7 +24001,7 @@ Rb
 qq
 qq
 qq
-Dp
+It
 zS
 hl
 hl
@@ -24862,8 +24856,8 @@ zg
 fy
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 zg
@@ -24979,12 +24973,12 @@ Mh
 hl
 vf
 hl
-JH
+pj
 qq
 qq
 qq
 qq
-Dp
+It
 Ip
 hl
 hl
@@ -25838,8 +25832,8 @@ zg
 zg
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 zg
@@ -25961,7 +25955,7 @@ qq
 qq
 qq
 qq
-Dp
+It
 Ip
 hl
 hl
@@ -26815,8 +26809,8 @@ zg
 fy
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 zg
@@ -26932,7 +26926,7 @@ Mh
 Mh
 hl
 hl
-JH
+pj
 qq
 qq
 qq
@@ -27792,7 +27786,7 @@ zg
 fy
 fy
 fy
-kS
+BG
 fy
 fy
 fy
@@ -28769,7 +28763,7 @@ fy
 fy
 fy
 fy
-kS
+BG
 fy
 fy
 zg
@@ -28885,7 +28879,7 @@ zg
 zg
 hl
 cs
-AS
+nP
 qq
 qq
 qq
@@ -29744,9 +29738,9 @@ zg
 fy
 fy
 fy
-kS
+BG
 ar
-kS
+BG
 fy
 zg
 zg
@@ -29867,7 +29861,7 @@ qq
 qq
 qq
 qq
-lw
+gb
 sh
 uM
 Ip
@@ -30720,9 +30714,9 @@ zg
 fy
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 zg
@@ -30838,7 +30832,7 @@ zg
 zg
 zg
 hl
-AS
+nP
 qq
 qq
 qq
@@ -31696,10 +31690,10 @@ zg
 zg
 fy
 fy
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 fy
 fy
 zg
@@ -31814,13 +31808,13 @@ zg
 zg
 hl
 hl
-yU
+mi
 Rb
 qq
 qq
 qq
 qq
-ML
+nZ
 Mh
 hl
 hl
@@ -32672,10 +32666,10 @@ zg
 zg
 fy
 fy
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 fy
 fy
 zg
@@ -32789,8 +32783,8 @@ zg
 zg
 Mh
 ii
-Sm
-yU
+Kw
+mi
 Rb
 qq
 qq
@@ -33648,10 +33642,10 @@ zg
 zg
 zg
 fy
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -33773,7 +33767,7 @@ qq
 qq
 qq
 qq
-SL
+og
 hl
 hl
 Mh
@@ -34625,9 +34619,9 @@ zg
 zg
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 fy
@@ -35601,9 +35595,9 @@ zg
 zg
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 fy
@@ -36578,9 +36572,9 @@ zg
 zg
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 fy
@@ -36692,7 +36686,7 @@ zg
 Mh
 hl
 hl
-yU
+mi
 Rb
 qq
 qq
@@ -36700,7 +36694,7 @@ qq
 qq
 qq
 EA
-OK
+yI
 wM
 hl
 hl
@@ -37265,9 +37259,9 @@ Lm
 Lm
 Lm
 Lm
-UP
-UP
-bc
+Dt
+Dt
+bb
 ut
 ut
 ut
@@ -37554,10 +37548,10 @@ zg
 zg
 fy
 fy
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -37668,7 +37662,7 @@ hl
 Mh
 hl
 hl
-yU
+mi
 Rb
 qq
 qq
@@ -38242,9 +38236,9 @@ Lm
 Lm
 Lm
 Lm
-UP
-UP
-mi
+Dt
+Dt
+pC
 ut
 Rl
 ut
@@ -38495,9 +38489,9 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 fy
@@ -38531,9 +38525,9 @@ zg
 fy
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 fy
@@ -38644,7 +38638,7 @@ hl
 hl
 Mh
 hl
-yU
+mi
 Rb
 qq
 qq
@@ -39219,9 +39213,9 @@ Lm
 Lm
 Lm
 Lm
-UP
-UP
-mi
+Dt
+Dt
+pC
 ut
 ut
 zE
@@ -39231,8 +39225,8 @@ Lm
 Lm
 VD
 cQ
-BO
-IL
+Pl
+ED
 VD
 zE
 zE
@@ -39466,19 +39460,19 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -39507,10 +39501,10 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -39841,7 +39835,7 @@ TL
 TL
 TL
 TL
-Tq
+PW
 ay
 Nk
 Nk
@@ -39919,7 +39913,7 @@ TL
 TL
 TL
 TL
-RD
+wb
 ay
 ay
 Nk
@@ -40438,27 +40432,27 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -40483,10 +40477,10 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -40597,7 +40591,7 @@ hl
 hl
 nF
 hl
-Bq
+px
 qq
 qq
 qq
@@ -40897,7 +40891,7 @@ TL
 TL
 cG
 fb
-PV
+jw
 ay
 ay
 Nk
@@ -41385,7 +41379,7 @@ gQ
 xB
 gQ
 gQ
-qM
+je
 aF
 aF
 aF
@@ -41408,20 +41402,20 @@ Iw
 Iw
 Iw
 Iw
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -41431,12 +41425,12 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -41458,11 +41452,11 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -41677,7 +41671,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -41875,7 +41869,7 @@ cG
 cG
 cG
 fb
-PV
+jw
 ay
 ay
 Nk
@@ -42384,15 +42378,15 @@ Iw
 Iw
 Iw
 Iw
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -42409,14 +42403,14 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -42433,12 +42427,12 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -42550,7 +42544,7 @@ hl
 hl
 hl
 hl
-AS
+nP
 qq
 qq
 qq
@@ -42568,7 +42562,7 @@ zg
 hl
 hl
 Mh
-ti
+lA
 BX
 zg
 zg
@@ -42693,7 +42687,7 @@ lR
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -42772,7 +42766,7 @@ cG
 cG
 cG
 so
-nA
+dX
 ay
 Nk
 tH
@@ -42853,7 +42847,7 @@ cG
 cG
 cG
 fb
-PV
+jw
 ay
 ay
 Nk
@@ -42906,7 +42900,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -43361,11 +43355,11 @@ Ts
 Iw
 Iw
 Iw
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -43390,12 +43384,12 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -43409,11 +43403,11 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -43532,7 +43526,7 @@ qq
 qq
 qq
 qq
-ML
+nZ
 hl
 hl
 Pc
@@ -43621,10 +43615,10 @@ Nk
 Nk
 ay
 ay
-vn
+Ut
 Dv
 Dv
-PV
+jw
 ay
 Nk
 Nk
@@ -43635,7 +43629,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -43648,7 +43642,7 @@ Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -43748,7 +43742,7 @@ cG
 cG
 cG
 so
-nA
+dX
 ay
 ay
 Nk
@@ -43785,7 +43779,7 @@ Nk
 Nk
 Nk
 Nk
-Uh
+sv
 Nk
 TL
 TL
@@ -43831,7 +43825,7 @@ cG
 cG
 cG
 fb
-Tq
+PW
 ay
 Nk
 Nk
@@ -43880,7 +43874,7 @@ Nk
 Nk
 Nk
 Nk
-Uh
+sv
 Nk
 Nk
 Nk
@@ -44370,12 +44364,12 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -44383,14 +44377,14 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -44503,7 +44497,7 @@ Mh
 vT
 hl
 hl
-JH
+pj
 qq
 qq
 qq
@@ -44597,7 +44591,7 @@ Nk
 yg
 ay
 ay
-vn
+Ut
 to
 cG
 cG
@@ -44623,7 +44617,7 @@ ay
 ay
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -44673,7 +44667,7 @@ TL
 TL
 Nk
 Nk
-Qg
+Rh
 Nk
 IF
 Nk
@@ -44718,17 +44712,17 @@ TL
 TL
 TL
 ay
-dA
+oN
 pw
 cG
 cG
 cG
 so
-nA
+dX
 ay
 vP
 Nk
-FV
+kS
 Nk
 lc
 Nk
@@ -44812,7 +44806,7 @@ gI
 ay
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -45349,24 +45343,24 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -45485,7 +45479,7 @@ qq
 qq
 qq
 qq
-SL
+og
 hl
 hl
 hl
@@ -45569,11 +45563,11 @@ Nk
 ay
 Nk
 Nk
-Qg
+Rh
 Nk
 ay
 ay
-vn
+Ut
 to
 cG
 cG
@@ -45696,11 +45690,11 @@ TL
 YB
 ay
 ay
-NL
+XG
 TL
 TL
 TL
-nA
+dX
 ay
 Nk
 Nk
@@ -45776,7 +45770,7 @@ TL
 Nk
 Nk
 ay
-dA
+oN
 pw
 cG
 cG
@@ -46329,20 +46323,20 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -46456,7 +46450,7 @@ CL
 hl
 hl
 hl
-nz
+dd
 qq
 qq
 qq
@@ -46549,7 +46543,7 @@ Nk
 Nk
 Nk
 ay
-vn
+Ut
 to
 cG
 cG
@@ -46613,13 +46607,13 @@ Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -46653,10 +46647,10 @@ cG
 cG
 so
 qX
-nA
+dX
 ay
 ay
-dA
+oN
 qX
 pw
 cG
@@ -46681,7 +46675,7 @@ TL
 ay
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 IF
@@ -46707,7 +46701,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 ay
 Mb
@@ -47307,16 +47301,16 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -47433,12 +47427,12 @@ hl
 hl
 hl
 hl
-AS
+nP
 qq
 qq
 qq
 qq
-SL
+og
 hl
 hl
 vT
@@ -47532,7 +47526,7 @@ cG
 cG
 so
 qX
-nA
+dX
 ay
 Nk
 Nk
@@ -47587,7 +47581,7 @@ ay
 Nk
 Nk
 ay
-Mr
+by
 Nk
 Nk
 Nk
@@ -47628,16 +47622,16 @@ TL
 TL
 qX
 qX
-nA
+dX
 ay
 ay
 Nk
 Nk
 ay
 ay
-dA
+oN
 qX
-nA
+dX
 TL
 TL
 TL
@@ -47678,7 +47672,7 @@ TL
 TL
 TL
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -47731,7 +47725,7 @@ Nk
 Nk
 Nk
 ay
-dA
+oN
 pw
 cG
 cG
@@ -47793,7 +47787,7 @@ TL
 TL
 tP
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -47902,13 +47896,13 @@ du
 du
 du
 du
-lp
-lp
-lp
-jt
+dQ
+dQ
+dQ
+fg
 tq
 tq
-Bs
+pc
 Yg
 du
 du
@@ -48288,12 +48282,12 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -48409,7 +48403,7 @@ hl
 hl
 hl
 hl
-ng
+lm
 Rb
 qq
 qq
@@ -48499,7 +48493,7 @@ Nk
 wK
 ay
 Nk
-Mr
+by
 Nk
 Nk
 ay
@@ -48507,7 +48501,7 @@ tw
 cG
 cG
 so
-nA
+dX
 ay
 ay
 ay
@@ -48534,7 +48528,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 oR
@@ -48585,7 +48579,7 @@ Nk
 ay
 tP
 Nk
-Mr
+by
 Nk
 Nk
 ay
@@ -48609,7 +48603,7 @@ ay
 Nk
 tH
 Nk
-Qg
+Rh
 Nk
 vP
 ay
@@ -48634,7 +48628,7 @@ TL
 BT
 YB
 Nk
-El
+OV
 Nk
 tP
 ay
@@ -48664,10 +48658,10 @@ Nk
 ay
 ay
 ay
-wJ
+gF
 TL
 TL
-PV
+jw
 ay
 ay
 Nk
@@ -48709,7 +48703,7 @@ Nk
 Nk
 ay
 ay
-dA
+oN
 qX
 qX
 TL
@@ -48776,7 +48770,7 @@ Nk
 TL
 TL
 TL
-Uh
+sv
 Nk
 Nk
 Nk
@@ -48858,7 +48852,7 @@ du
 du
 du
 du
-Bs
+pc
 tq
 tq
 tq
@@ -48877,14 +48871,14 @@ Yg
 Yg
 tq
 tq
-gJ
-lp
-lp
-lp
-jt
+TJ
+dQ
+dQ
+dQ
+fg
 tq
 tq
-Sk
+pq
 tq
 Yg
 Yg
@@ -48894,7 +48888,7 @@ tq
 tq
 Yg
 Yg
-KX
+LG
 QI
 tt
 tt
@@ -49265,11 +49259,11 @@ fy
 fy
 fy
 fy
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -49386,12 +49380,12 @@ lG
 Jl
 Bo
 Bo
-Vl
+pW
 kI
 HB
 PS
 PS
-bE
+uj
 lG
 Jl
 Bo
@@ -49480,10 +49474,10 @@ Nk
 Nk
 Nk
 ay
-dA
+oN
 qX
 qX
-nA
+dX
 ay
 wK
 Nk
@@ -49576,7 +49570,7 @@ EF
 EF
 EF
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -49639,13 +49633,13 @@ Nk
 Nk
 Nk
 ay
-vn
+Ut
 Dv
 to
 cG
 cG
 fb
-Tq
+PW
 ay
 Nk
 Nk
@@ -49729,14 +49723,14 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -49755,7 +49749,7 @@ TL
 Nk
 ay
 Nk
-Qg
+Rh
 Nk
 Nk
 ct
@@ -49846,7 +49840,7 @@ tq
 tq
 tq
 tq
-Mm
+vv
 tq
 Yg
 Yg
@@ -49855,9 +49849,9 @@ tq
 tq
 tq
 tq
-gJ
-dK
-ts
+TJ
+BZ
+mE
 tq
 tq
 tq
@@ -49872,7 +49866,7 @@ tq
 Yg
 Yg
 Yg
-KX
+LG
 xN
 xN
 xN
@@ -50363,12 +50357,12 @@ Mh
 Mh
 Mh
 hl
-lX
+lv
 qq
 qq
 qq
 qq
-OY
+OA
 hl
 hl
 hl
@@ -50512,7 +50506,7 @@ ay
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 ay
 ay
@@ -50541,7 +50535,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -50633,7 +50627,7 @@ Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -50660,7 +50654,7 @@ ay
 Nk
 Nk
 Nk
-Uh
+sv
 Nk
 tP
 Nk
@@ -50813,13 +50807,13 @@ Lo
 tq
 tq
 tq
-US
+Xa
 tq
 tq
-Sk
+pq
 tq
-SS
-zz
+un
+zb
 tq
 tq
 Yg
@@ -50829,7 +50823,7 @@ tq
 tq
 tq
 tq
-US
+Xa
 tq
 tq
 tq
@@ -51340,12 +51334,12 @@ Mh
 Mh
 hl
 hl
-VL
+RR
 qq
 qq
 qq
 qq
-OY
+OA
 hl
 hl
 hl
@@ -51442,7 +51436,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Ac
@@ -51457,7 +51451,7 @@ Nk
 Nk
 ay
 Nk
-Qg
+Rh
 Nk
 ay
 ay
@@ -51500,7 +51494,7 @@ dn
 af
 Nk
 Nk
-Mr
+by
 Xu
 Xu
 ZY
@@ -51512,7 +51506,7 @@ Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -51525,7 +51519,7 @@ Nk
 Nk
 Nk
 Nk
-Ib
+zM
 EF
 EF
 EF
@@ -51544,14 +51538,14 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 EF
 EF
 EF
 Nk
-Qg
+Rh
 Nk
 Nk
 lc
@@ -51578,7 +51572,7 @@ Ac
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -51606,7 +51600,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -51639,7 +51633,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -51709,7 +51703,7 @@ Nk
 Nk
 lc
 Nk
-NQ
+eg
 Mz
 GP
 ct
@@ -51787,16 +51781,16 @@ gn
 CE
 XB
 VS
-Ab
+lg
 tq
 tq
 tq
 Yg
 tq
 tq
-SS
-lp
-uW
+un
+dQ
+jj
 tq
 tq
 tq
@@ -51816,10 +51810,10 @@ tq
 tq
 tq
 tq
-Ab
+lg
 tq
 tq
-GV
+ie
 tq
 tq
 tq
@@ -52317,12 +52311,12 @@ iv
 hl
 fR
 hl
-CQ
+fB
 qq
 qq
 qq
 qq
-OY
+OA
 hl
 Bw
 Mh
@@ -52509,7 +52503,7 @@ ay
 ay
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -52548,7 +52542,7 @@ XH
 Kd
 Kd
 Kd
-ED
+Ky
 Nk
 DE
 DE
@@ -52570,13 +52564,13 @@ Nk
 Nk
 tH
 ay
-NL
+XG
 qX
 qX
 qX
 qX
 qX
-uA
+QA
 ay
 Nk
 Nk
@@ -52656,7 +52650,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -52684,7 +52678,7 @@ XH
 Qp
 Nk
 Nk
-NQ
+eg
 Nk
 Nk
 Lf
@@ -52765,26 +52759,24 @@ ct
 FX
 cS
 tq
-GV
+ie
 tq
-Ab
-tq
-tq
-tq
-gJ
-dK
-jt
-tq
-Ab
+lg
 tq
 tq
+tq
+TJ
+BZ
+fg
+tq
+lg
 tq
 tq
 tq
 tq
-Ab
 tq
 tq
+lg
 tq
 tq
 tq
@@ -52801,7 +52793,9 @@ tq
 tq
 tq
 tq
-Ab
+tq
+tq
+lg
 tq
 tq
 tq
@@ -53292,14 +53286,14 @@ hl
 Bw
 hl
 hl
-dV
-mc
+pt
+WQ
 Rb
 qq
 qq
 qq
 qq
-OY
+OA
 hl
 Mh
 Au
@@ -53376,14 +53370,14 @@ IU
 cY
 cY
 cY
-yL
+BO
 cY
 cY
 cY
 ZV
 AW
 vu
-jJ
+Qo
 vu
 vu
 vu
@@ -53414,7 +53408,7 @@ vu
 vu
 vu
 mN
-jJ
+Qo
 mN
 mN
 mN
@@ -53460,7 +53454,7 @@ vu
 vu
 mN
 mN
-jJ
+Qo
 mN
 mN
 mN
@@ -53477,7 +53471,7 @@ vu
 vu
 vu
 vu
-jJ
+Qo
 vu
 vu
 vu
@@ -53495,7 +53489,7 @@ mN
 mN
 mN
 mN
-jJ
+Qo
 vu
 vu
 vu
@@ -53529,7 +53523,7 @@ vu
 vu
 Tb
 Tb
-jJ
+Qo
 mN
 mN
 mN
@@ -53571,7 +53565,7 @@ Nk
 Nk
 Nk
 Nk
-ic
+Yy
 af
 tP
 Nk
@@ -53594,7 +53588,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -53612,7 +53606,7 @@ Ac
 Xu
 Xu
 Xu
-qV
+tU
 ay
 Nk
 XH
@@ -53674,7 +53668,7 @@ FZ
 FZ
 kW
 ct
-hP
+NN
 kW
 ct
 kW
@@ -53734,7 +53728,7 @@ kW
 ct
 kW
 kW
-rA
+aK
 kW
 kW
 HS
@@ -53783,7 +53777,7 @@ tq
 tq
 vA
 tq
-Ab
+lg
 Aq
 XB
 JR
@@ -54028,13 +54022,13 @@ aF
 hC
 qG
 xB
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 xV
 gQ
 gQ
@@ -54072,13 +54066,13 @@ gQ
 xB
 xB
 Ij
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 xB
 gQ
 yJ
@@ -54270,7 +54264,7 @@ hl
 hl
 hl
 hl
-yU
+mi
 qq
 qq
 qq
@@ -54353,7 +54347,7 @@ iS
 CY
 CY
 CY
-tB
+wk
 CY
 CY
 CY
@@ -54541,7 +54535,7 @@ Df
 Df
 Df
 ay
-xY
+Ix
 Nk
 ay
 ay
@@ -54554,12 +54548,12 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
-DZ
-je
+sz
+wS
 Nk
 Nk
 Nk
@@ -54621,7 +54615,7 @@ Nk
 Nk
 Nk
 Nk
-iZ
+zG
 Qp
 Nk
 Nk
@@ -54636,7 +54630,7 @@ DE
 ay
 Nk
 Nk
-NQ
+eg
 Nk
 Nk
 Nk
@@ -54680,12 +54674,12 @@ Aj
 FA
 FA
 FA
-Os
+GR
 FA
 FA
 Tt
 Aj
-Db
+oS
 FA
 FA
 FA
@@ -54699,13 +54693,13 @@ FA
 FA
 FA
 Aj
-Db
+oS
 Aj
 Aj
 FA
 NP
 NP
-YL
+bp
 NP
 yB
 IB
@@ -55246,13 +55240,13 @@ hl
 hl
 hl
 Mh
-yU
+mi
 Rb
 qq
 qq
 qq
 qq
-ML
+nZ
 Mh
 hl
 hl
@@ -55330,7 +55324,7 @@ iS
 CY
 CY
 CY
-tB
+wk
 CY
 CY
 CY
@@ -55513,7 +55507,7 @@ Vo
 lk
 IQ
 mN
-jJ
+Qo
 mN
 mN
 mN
@@ -55529,7 +55523,7 @@ vu
 vu
 vu
 vu
-jJ
+Qo
 vu
 vu
 vu
@@ -55541,7 +55535,7 @@ vu
 vu
 mN
 mN
-jJ
+Qo
 mN
 mN
 vu
@@ -55556,26 +55550,9 @@ vu
 vu
 vu
 mN
-jJ
+Qo
 mN
-ou
-mN
-mN
-mN
-mN
-vu
-vu
-vu
-vu
-vu
-vu
-vu
-vu
-vu
-jJ
-vu
-vu
-mN
+PC
 mN
 mN
 mN
@@ -55587,7 +55564,24 @@ vu
 vu
 vu
 vu
-jJ
+vu
+vu
+Qo
+vu
+vu
+mN
+mN
+mN
+mN
+mN
+vu
+vu
+vu
+vu
+vu
+vu
+vu
+Qo
 vu
 vu
 mN
@@ -55610,21 +55604,21 @@ mN
 mN
 Tb
 Tb
-jJ
+Qo
 mN
 vu
 vu
 vu
 vu
 vu
-jJ
+Qo
 vu
 vu
 DH
-tb
-RB
-RB
 Cn
+RB
+RB
+hK
 em
 em
 EX
@@ -55688,13 +55682,13 @@ em
 EX
 RB
 RB
-TC
+Jm
 RB
 RB
 aH
 Td
 ZI
-QT
+cd
 ZI
 ZI
 ZI
@@ -55744,11 +55738,11 @@ BM
 BM
 IY
 Uc
-zB
+US
 Uc
 IY
 JR
-yW
+dE
 IY
 JR
 IY
@@ -55808,7 +55802,7 @@ IY
 JR
 IY
 IY
-vv
+NH
 IY
 IY
 BM
@@ -55983,11 +55977,11 @@ aF
 aF
 aF
 QB
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 QB
 aF
 aF
@@ -56027,11 +56021,11 @@ aF
 aF
 aF
 zc
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 zc
 aF
 aF
@@ -56294,20 +56288,20 @@ hl
 hl
 hl
 hl
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 "}
 (44,1,1) = {"
 iS
 CY
 CY
 CY
-tB
+wk
 CY
 CY
 CY
@@ -56727,13 +56721,13 @@ hM
 Wh
 hM
 hM
-uz
+Ke
 SK
 SK
 tk
 tk
 tk
-XI
+oq
 no
 no
 tk
@@ -56759,7 +56753,7 @@ tk
 tk
 Wa
 no
-XI
+oq
 tk
 tk
 tk
@@ -56773,13 +56767,13 @@ tk
 tk
 tk
 no
-XI
+oq
 no
 no
 tk
 hM
 hM
-uz
+Ke
 hM
 SK
 Mn
@@ -56809,7 +56803,7 @@ ut
 ut
 ut
 ut
-rb
+ru
 ut
 XO
 ut
@@ -56817,7 +56811,7 @@ ut
 ut
 ut
 ut
-nb
+Tg
 nr
 nr
 zE
@@ -56960,11 +56954,11 @@ aF
 aF
 aF
 QB
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 QB
 aF
 aF
@@ -57004,11 +56998,11 @@ aF
 aF
 aF
 zc
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 zc
 aF
 aF
@@ -57198,14 +57192,14 @@ zw
 hl
 hl
 hl
-aZ
+vE
 Rb
 qq
 qq
 qq
 qq
 qq
-we
+Ku
 Mh
 Mh
 hl
@@ -57271,13 +57265,13 @@ hl
 hl
 hl
 ap
-Jh
+uz
 Vk
 Gr
 Gr
 Gr
 pM
-Jh
+uz
 "}
 (45,1,1) = {"
 hU
@@ -57690,7 +57684,7 @@ PT
 DM
 ZI
 ZI
-QT
+cd
 ZI
 ZI
 ZI
@@ -57768,7 +57762,7 @@ po
 cK
 Zl
 vF
-ss
+kx
 vF
 vF
 vF
@@ -57778,7 +57772,7 @@ vF
 vF
 vF
 vF
-ss
+kx
 vF
 vF
 vF
@@ -57787,18 +57781,18 @@ vF
 vF
 vF
 vF
-ss
+kx
 vF
 vF
 vF
 vF
 vF
 vF
-ja
+Rm
 dj
 dj
 jY
-ss
+kx
 jY
 jY
 vF
@@ -57811,9 +57805,9 @@ vF
 vF
 vF
 vF
-YV
+Ow
 vF
-ss
+kx
 vF
 vF
 vF
@@ -57870,8 +57864,8 @@ kt
 Me
 Nu
 Nu
-jE
-jE
+nS
+nS
 Nu
 Nu
 Hb
@@ -57937,11 +57931,11 @@ aF
 aF
 aF
 QB
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 QB
 aF
 aF
@@ -57981,11 +57975,11 @@ aF
 aF
 aF
 zc
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 zc
 aF
 aF
@@ -58174,7 +58168,7 @@ hl
 hl
 hl
 hl
-aZ
+vE
 Rb
 qq
 qq
@@ -58248,20 +58242,20 @@ cs
 hl
 hl
 hl
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 "}
 (46,1,1) = {"
 iS
 CY
 CY
 CY
-tB
+wk
 CY
 CY
 CY
@@ -58845,11 +58839,11 @@ AP
 Nu
 Nu
 Nu
-jE
-jE
-jE
-jE
-jE
+nS
+nS
+nS
+nS
+nS
 Nu
 uk
 kt
@@ -59150,7 +59144,7 @@ hl
 hl
 ap
 hl
-aZ
+vE
 Rb
 qq
 qq
@@ -59225,20 +59219,20 @@ ii
 ii
 ii
 ii
-Jh
-BG
-BG
-BG
-BG
-BG
-Jh
+uz
+JB
+JB
+JB
+JB
+JB
+uz
 "}
 (47,1,1) = {"
 iS
 CY
 CY
 CY
-tB
+wk
 CY
 CY
 CY
@@ -59550,15 +59544,15 @@ nQ
 nQ
 nQ
 nQ
-IW
-rq
+if
+yq
 hA
-rq
-rq
-rq
-rq
-Wy
-Wy
+yq
+yq
+yq
+yq
+wF
+wF
 WH
 Uq
 VB
@@ -59570,15 +59564,15 @@ VB
 VB
 Uq
 VB
-Wy
-Wy
-rq
-rq
-rq
-Wy
+wF
+wF
+yq
+yq
+yq
+wF
 TX
-Wy
-IW
+wF
+if
 nQ
 nQ
 nQ
@@ -59786,15 +59780,15 @@ vF
 vF
 vF
 vF
-sH
-kL
+EN
+tz
 vF
 vF
 vF
 jY
 jY
 jY
-ss
+kx
 jY
 jY
 vF
@@ -59803,13 +59797,13 @@ vF
 vF
 vF
 vF
-ss
+kx
 jY
 jY
 zE
 ut
 XO
-cT
+gB
 ut
 ut
 ut
@@ -59823,9 +59817,9 @@ Nu
 Nu
 Nu
 Nu
-jE
-jE
-jE
+nS
+nS
+nS
 Nu
 Nu
 Nu
@@ -59890,13 +59884,13 @@ xB
 xB
 Ij
 Ij
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 xB
 xB
 xB
@@ -59934,13 +59928,13 @@ aF
 eG
 xB
 jS
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 gQ
 gQ
 xB
@@ -60126,7 +60120,7 @@ hl
 hl
 hl
 hl
-yU
+mi
 Rb
 qq
 qq
@@ -60203,11 +60197,11 @@ qq
 qq
 qq
 Kt
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 vZ
 "}
 (48,1,1) = {"
@@ -60215,7 +60209,7 @@ iS
 CY
 CY
 CY
-tB
+wk
 CY
 CY
 CY
@@ -60785,8 +60779,8 @@ Um
 Um
 Fw
 Bb
-kO
-xs
+zX
+pS
 ut
 ut
 ut
@@ -61096,13 +61090,13 @@ Mh
 ii
 ii
 ii
-kK
+vN
 Ju
 Ju
 Ju
 ii
 ii
-eN
+oj
 Rb
 qq
 qq
@@ -61180,11 +61174,11 @@ qq
 qq
 qq
 Kt
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 vZ
 "}
 (49,1,1) = {"
@@ -61192,14 +61186,14 @@ mo
 lx
 lx
 lx
-WL
+mT
 lx
 lx
 lx
 Sr
 Xt
 fJ
-Ne
+zH
 fJ
 fJ
 WK
@@ -61217,7 +61211,7 @@ fJ
 fJ
 CP
 CP
-Ne
+zH
 fJ
 WK
 WK
@@ -61230,7 +61224,7 @@ WK
 WK
 WK
 WK
-Ne
+zH
 WK
 fJ
 fJ
@@ -61257,7 +61251,7 @@ lx
 lx
 fJ
 fJ
-Ne
+zH
 fJ
 WK
 WK
@@ -61276,7 +61270,7 @@ WK
 WK
 WK
 WK
-Ne
+zH
 fJ
 fJ
 fJ
@@ -61293,7 +61287,7 @@ fJ
 fJ
 fJ
 WK
-Ne
+zH
 WK
 WK
 WK
@@ -61311,15 +61305,15 @@ fJ
 fJ
 fJ
 fJ
-Ne
+zH
 fJ
 fJ
 fJ
 WK
-vH
+nX
 WK
 WK
-GA
+KA
 WK
 WK
 WK
@@ -61327,7 +61321,7 @@ fJ
 fJ
 fJ
 fJ
-Ne
+zH
 fJ
 fJ
 fJ
@@ -61345,7 +61339,7 @@ fJ
 fJ
 CP
 CP
-Ne
+zH
 fJ
 fJ
 fJ
@@ -61767,7 +61761,7 @@ jY
 jY
 jY
 vF
-ss
+kx
 vF
 zE
 zE
@@ -62157,11 +62151,11 @@ qq
 qq
 qq
 Kt
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 vZ
 "}
 (50,1,1) = {"
@@ -62272,13 +62266,13 @@ Nk
 Wj
 ay
 ay
-eb
+At
 Nk
 Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -62302,7 +62296,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -62322,7 +62316,7 @@ yg
 ay
 DE
 DE
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -62339,7 +62333,7 @@ Df
 Df
 Df
 Ha
-eb
+At
 WK
 ua
 cj
@@ -62751,7 +62745,7 @@ Ks
 zE
 zE
 zE
-AT
+yx
 ut
 ut
 ut
@@ -63028,7 +63022,7 @@ ii
 ii
 ii
 Ju
-kK
+vN
 Ju
 ii
 ii
@@ -63063,7 +63057,7 @@ qq
 EA
 ei
 vU
-Lh
+WM
 ii
 ii
 ii
@@ -63090,7 +63084,7 @@ qq
 qq
 EA
 Yd
-VQ
+uN
 wM
 tn
 tn
@@ -63114,7 +63108,7 @@ wM
 wM
 tn
 tn
-VQ
+uN
 tn
 tn
 tn
@@ -63123,7 +63117,7 @@ tn
 tn
 tn
 tn
-VQ
+uN
 tn
 tn
 tn
@@ -63133,13 +63127,13 @@ tn
 tn
 tn
 tn
-Jh
-dX
-YQ
-YQ
-YQ
+uz
+ev
+hd
+hd
+hd
 vm
-Jh
+uz
 "}
 (51,1,1) = {"
 EF
@@ -63222,7 +63216,7 @@ ay
 ay
 Nk
 lc
-Vx
+hW
 ay
 ay
 ay
@@ -63319,45 +63313,18 @@ ay
 Nk
 Wj
 ay
-Ne
+zH
 fJ
 fJ
 fJ
-kp
-fJ
-fJ
-fJ
-fJ
-WK
-Ne
-WK
-WK
-WK
-WK
-WK
-WK
-WK
-fJ
+KR
 fJ
 fJ
 fJ
 fJ
 WK
+zH
 WK
-WK
-Ne
-fJ
-fJ
-fJ
-fJ
-fJ
-fJ
-fJ
-fJ
-fJ
-fJ
-WK
-Ne
 WK
 WK
 WK
@@ -63369,26 +63336,24 @@ fJ
 fJ
 fJ
 fJ
-fJ
-fJ
-WK
-Ne
-fJ
-fJ
-fJ
-fJ
-fJ
-fJ
 WK
 WK
 WK
+zH
+fJ
+fJ
+fJ
+fJ
+fJ
+fJ
+fJ
+fJ
+fJ
+fJ
 WK
-fJ
-fJ
-fJ
-fJ
-fJ
-Ne
+zH
+WK
+WK
 WK
 WK
 WK
@@ -63400,10 +63365,39 @@ fJ
 fJ
 fJ
 fJ
+WK
+zH
 fJ
 fJ
 fJ
-Ne
+fJ
+fJ
+fJ
+WK
+WK
+WK
+WK
+fJ
+fJ
+fJ
+fJ
+fJ
+zH
+WK
+WK
+WK
+WK
+fJ
+fJ
+fJ
+fJ
+fJ
+fJ
+fJ
+fJ
+fJ
+fJ
+zH
 WK
 WK
 WK
@@ -63426,14 +63420,14 @@ fJ
 fJ
 CP
 CP
-Ne
+zH
 fJ
 fJ
 WK
 WK
 WK
 fJ
-Ne
+zH
 fJ
 fJ
 NR
@@ -63510,7 +63504,7 @@ Ev
 ck
 qg
 ze
-HZ
+EY
 ze
 tV
 tV
@@ -63730,7 +63724,7 @@ jY
 jY
 jY
 jY
-ss
+kx
 vF
 ut
 ut
@@ -64110,24 +64104,24 @@ hl
 hl
 hl
 hl
-Jh
+uz
 LM
-YQ
-YQ
-YQ
+hd
+hd
+hd
 jH
-Jh
+uz
 "}
 (52,1,1) = {"
-Av
-Av
-Av
+Uj
+Uj
+Uj
 EF
 EF
 Nk
 Kz
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -64207,10 +64201,10 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
-Mr
+by
 Nk
 ay
 Nk
@@ -64328,7 +64322,7 @@ Nk
 Nk
 Nk
 Nk
-HI
+cI
 Wj
 Nk
 Nk
@@ -64370,7 +64364,7 @@ ay
 ay
 ay
 Nk
-WP
+Dm
 Nk
 Nk
 Nk
@@ -64386,7 +64380,7 @@ Nk
 Nk
 Nk
 Nk
-dH
+bM
 Nk
 Nk
 Nk
@@ -64400,7 +64394,7 @@ Wj
 Nk
 Nk
 Nk
-bZ
+Hx
 DE
 DE
 Nk
@@ -64410,7 +64404,7 @@ Nk
 Nk
 Nk
 Nk
-Kw
+Cm
 Ac
 Ac
 HS
@@ -64437,7 +64431,7 @@ kW
 kW
 FZ
 FZ
-JB
+MM
 kW
 kW
 kW
@@ -64455,13 +64449,13 @@ FZ
 kW
 Hu
 FZ
-rA
+aK
 kW
 kW
 kW
 kW
 FZ
-JB
+MM
 ur
 sD
 sD
@@ -64469,13 +64463,13 @@ sD
 mj
 FZ
 FZ
-cm
+dC
 kW
 kW
 kW
 zx
 zx
-na
+PE
 lM
 lM
 Qr
@@ -64964,7 +64958,7 @@ ii
 ii
 Ju
 Ju
-kK
+vN
 ii
 ii
 Ju
@@ -65087,18 +65081,18 @@ hl
 hl
 hl
 hl
-Jh
+uz
 LM
-YQ
-YQ
-YQ
+hd
+hd
+hd
 jH
-Jh
+uz
 "}
 (53,1,1) = {"
-Av
-Av
-Av
+Uj
+Uj
+Uj
 EF
 EF
 Nk
@@ -65109,7 +65103,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -65138,7 +65132,7 @@ cB
 cB
 ay
 Nk
-FV
+kS
 Nk
 ay
 tP
@@ -65314,7 +65308,7 @@ Nk
 Nk
 Nk
 Nk
-HI
+cI
 Nk
 Nk
 Nk
@@ -65344,7 +65338,7 @@ Nk
 NJ
 YB
 Nk
-dq
+or
 tP
 NJ
 YB
@@ -65453,12 +65447,12 @@ ct
 Aj
 Aj
 ct
-Re
+Kn
 Aj
 ct
 FA
 FA
-EE
+yZ
 Aj
 Aj
 HS
@@ -65499,14 +65493,14 @@ tV
 tV
 tV
 ze
-Wg
+kh
 ze
 Rv
 Rv
 tV
 tV
 tV
-HZ
+EY
 ze
 ze
 ze
@@ -65584,7 +65578,7 @@ oY
 rc
 eU
 pK
-ix
+xl
 pK
 Yo
 Yo
@@ -65594,7 +65588,7 @@ Yo
 Yo
 Yo
 pK
-ix
+xl
 pK
 pK
 Yo
@@ -65603,7 +65597,7 @@ Yo
 Yo
 Yo
 Yo
-ix
+xl
 pK
 pK
 Yo
@@ -65614,7 +65608,7 @@ Yo
 Yn
 Yn
 Yo
-ix
+xl
 Yo
 Yo
 Yo
@@ -65695,7 +65689,7 @@ vF
 vF
 vF
 Xh
-gx
+RU
 zE
 XO
 ut
@@ -65900,7 +65894,7 @@ Mh
 Mh
 hl
 hl
-DI
+bE
 hl
 hl
 hl
@@ -66064,13 +66058,13 @@ Mh
 hl
 hl
 hl
-Jh
+uz
 LM
-YQ
-YQ
-YQ
+hd
+hd
+hd
 jH
-Jh
+uz
 "}
 (54,1,1) = {"
 EF
@@ -66087,7 +66081,7 @@ Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 NJ
 YB
@@ -66146,7 +66140,7 @@ Nk
 ay
 lc
 Nk
-Mr
+by
 Nk
 ay
 ay
@@ -66198,7 +66192,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Py
 BT
@@ -66243,7 +66237,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -66302,19 +66296,19 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 lc
 Nk
 Nk
 ay
 ay
-vn
+Ut
 Dv
 Dv
 Dv
 Dv
-PV
+jw
 ay
 ay
 Nk
@@ -66362,7 +66356,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 ay
@@ -66497,13 +66491,13 @@ AM
 qu
 RW
 RW
-Ow
+BP
 AM
 AM
 IY
 Uc
 Uc
-vv
+NH
 IY
 Uc
 IY
@@ -66511,7 +66505,7 @@ IY
 IY
 Uc
 Uc
-XR
+sn
 IY
 IY
 IY
@@ -66529,13 +66523,13 @@ Uc
 IY
 Be
 Uc
-vv
+NH
 IY
 IY
 IY
 IY
 Uc
-XR
+sn
 XY
 vt
 vt
@@ -66543,13 +66537,13 @@ vt
 CJ
 Uc
 Uc
-zB
+US
 IY
 IY
 IY
 AM
 AM
-OR
+sH
 RW
 RW
 qt
@@ -66564,7 +66558,7 @@ Xp
 Xp
 ut
 ut
-PN
+nK
 ut
 ut
 ut
@@ -66593,7 +66587,7 @@ nr
 zE
 ut
 ut
-Bi
+kb
 SQ
 ut
 ut
@@ -66868,7 +66862,7 @@ Ju
 Ju
 Ju
 Ju
-kK
+vN
 Ju
 Ju
 Ju
@@ -66889,7 +66883,7 @@ ii
 ii
 ii
 Ju
-kK
+vN
 Ju
 Ju
 Ju
@@ -66905,7 +66899,7 @@ Ju
 Ju
 ii
 ii
-kK
+vN
 jK
 GZ
 Rb
@@ -66978,7 +66972,7 @@ tn
 tn
 tn
 tn
-VQ
+uN
 tn
 wM
 wM
@@ -67041,13 +67035,13 @@ hl
 Mh
 JJ
 hl
-Jh
+uz
 LM
-YQ
-YQ
-YQ
+hd
+hd
+hd
 jH
-Jh
+uz
 "}
 (55,1,1) = {"
 EF
@@ -67172,7 +67166,7 @@ Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -67264,10 +67258,10 @@ Nk
 Nk
 Nk
 ay
-vn
+Ut
 Dv
 Dv
-PV
+jw
 ay
 ay
 Nk
@@ -67285,7 +67279,7 @@ Nk
 Nk
 ay
 ay
-vn
+Ut
 to
 cG
 cG
@@ -67318,7 +67312,7 @@ TL
 TL
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -67425,7 +67419,7 @@ tq
 tq
 tq
 tq
-Mm
+vv
 tq
 Yg
 tq
@@ -67468,7 +67462,7 @@ iI
 BM
 tk
 no
-XI
+oq
 no
 no
 JR
@@ -67527,12 +67521,12 @@ JR
 no
 no
 JR
-DG
+GI
 no
 JR
 tk
 tk
-sA
+ba
 no
 no
 BM
@@ -67583,7 +67577,7 @@ ut
 ut
 zE
 pK
-ix
+xl
 pK
 pK
 pK
@@ -67595,7 +67589,7 @@ Yo
 Yo
 Yo
 Yo
-ix
+xl
 Yo
 Yo
 Yo
@@ -67610,12 +67604,12 @@ Yo
 Yo
 pK
 pK
-ix
+xl
 Yo
 Yo
 Yo
 Yo
-tr
+Am
 fh
 Um
 Um
@@ -67656,7 +67650,7 @@ ut
 ut
 ut
 ut
-ok
+st
 ut
 ut
 ut
@@ -68018,13 +68012,13 @@ qT
 Mh
 hl
 hl
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 "}
 (56,1,1) = {"
 EF
@@ -68071,7 +68065,7 @@ cB
 ay
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -68097,12 +68091,12 @@ lR
 Nk
 Nk
 ay
-Qg
+Rh
 Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 TL
@@ -68175,8 +68169,8 @@ af
 Nk
 Nk
 Nk
-Qg
-FV
+Rh
+kS
 Nk
 Nk
 Nk
@@ -68191,7 +68185,7 @@ YB
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -68220,12 +68214,12 @@ YB
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
 Nk
-El
+OV
 Nk
 Nk
 Nk
@@ -68245,7 +68239,7 @@ tw
 cG
 cG
 fb
-PV
+jw
 ay
 ay
 Nk
@@ -68261,7 +68255,7 @@ Nk
 Nk
 ay
 ay
-vn
+Ut
 to
 cG
 cG
@@ -68308,7 +68302,7 @@ ay
 ay
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -68401,7 +68395,7 @@ Yg
 Yg
 tq
 tq
-GV
+ie
 tq
 tq
 tq
@@ -68410,17 +68404,7 @@ tq
 Yg
 tq
 tq
-Sk
-tq
-tq
-tq
-tq
-tq
-tq
-tq
-tq
-tq
-Yg
+pq
 tq
 tq
 tq
@@ -68435,12 +68419,22 @@ tq
 tq
 tq
 tq
-GV
 tq
 tq
-SS
-lp
-lp
+tq
+tq
+tq
+Yg
+tq
+tq
+tq
+tq
+ie
+tq
+tq
+un
+dQ
+dQ
 du
 JR
 JR
@@ -68593,7 +68587,7 @@ ut
 ut
 ut
 ut
-tr
+Am
 fh
 Um
 Um
@@ -68630,7 +68624,7 @@ Um
 Um
 Iu
 vF
-ss
+kx
 vF
 jY
 jY
@@ -68645,7 +68639,7 @@ rx
 rx
 fM
 rx
-XG
+hZ
 rx
 gQ
 gQ
@@ -68797,7 +68791,7 @@ Ju
 Ju
 Ju
 Ju
-kK
+vN
 Ju
 Ju
 Ju
@@ -68805,7 +68799,7 @@ Ju
 Ju
 Ju
 Ju
-kK
+vN
 Ju
 Ju
 ii
@@ -69098,11 +69092,11 @@ Nk
 Nk
 ay
 ay
-vn
+Ut
 Dv
 Dv
 Dv
-PV
+jw
 ay
 ay
 Nk
@@ -69199,7 +69193,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -69207,7 +69201,7 @@ Nk
 Nk
 Nk
 ay
-Uh
+sv
 Nk
 Nk
 TL
@@ -69223,7 +69217,7 @@ cG
 cG
 cG
 fb
-PV
+jw
 ay
 ay
 Nk
@@ -69237,7 +69231,7 @@ Nk
 Nk
 Nk
 ay
-vn
+Ut
 to
 cG
 cG
@@ -69245,7 +69239,7 @@ cG
 cG
 cG
 so
-nA
+dX
 ay
 Nk
 Nk
@@ -69255,7 +69249,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -69283,11 +69277,11 @@ TL
 ay
 ay
 Nk
-El
+OV
 Nk
 Nk
 Nk
-FV
+kS
 NJ
 PB
 Nk
@@ -69303,7 +69297,7 @@ TL
 TL
 su
 li
-bO
+UV
 li
 su
 su
@@ -69367,7 +69361,7 @@ su
 su
 su
 li
-WM
+Hj
 li
 su
 du
@@ -69406,7 +69400,7 @@ tq
 tq
 tq
 tq
-US
+Xa
 tq
 tq
 vA
@@ -69414,8 +69408,8 @@ tq
 tq
 tq
 tq
-SS
-lp
+un
+dQ
 du
 du
 du
@@ -69426,20 +69420,20 @@ SG
 SG
 nR
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
 wu
 nR
@@ -69452,7 +69446,7 @@ Xn
 ra
 sO
 GT
-BK
+zp
 tN
 wu
 wu
@@ -69469,20 +69463,20 @@ wu
 EU
 wu
 tN
-wO
+kO
 ra
 tN
 wu
 wu
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
 nR
 nR
@@ -69573,7 +69567,7 @@ XO
 ut
 pK
 pK
-ix
+xl
 pK
 pK
 pK
@@ -70008,7 +70002,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -70074,17 +70068,17 @@ Nk
 Nk
 Nk
 ay
-wJ
+gF
 to
 cG
 cG
 cG
 fb
-Tq
+PW
 ay
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -70172,7 +70166,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -70191,7 +70185,7 @@ Nk
 tP
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 ay
@@ -70201,7 +70195,7 @@ cG
 cG
 cG
 fb
-PV
+jw
 ay
 Nk
 Nk
@@ -70221,7 +70215,7 @@ cG
 cG
 cG
 so
-nA
+dX
 ay
 ay
 Nk
@@ -70363,15 +70357,15 @@ tq
 tq
 tq
 tq
-US
+Xa
 tq
 vA
-SS
-lg
-lg
-lg
-lg
-zz
+un
+Ej
+Ej
+Ej
+Ej
+zb
 tq
 tq
 tq
@@ -70381,7 +70375,7 @@ tq
 tq
 tq
 tq
-Mm
+vv
 tq
 tq
 tq
@@ -70390,8 +70384,8 @@ tq
 tq
 tq
 Yg
-OP
-lp
+sp
+dQ
 du
 du
 du
@@ -70403,20 +70397,20 @@ su
 su
 nR
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
 wu
 nR
@@ -70452,14 +70446,14 @@ tN
 tN
 wu
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
 nR
 nR
@@ -70548,7 +70542,7 @@ Lm
 Lm
 zE
 zE
-Sv
+QX
 zE
 zE
 ut
@@ -70606,7 +70600,7 @@ hC
 aA
 rx
 rx
-XG
+hZ
 fM
 fM
 fM
@@ -70737,7 +70731,7 @@ Ju
 Ju
 Ju
 Ju
-kK
+vN
 Ww
 GZ
 Rb
@@ -70844,7 +70838,7 @@ qq
 EA
 Mj
 tn
-VQ
+uN
 wM
 wM
 wM
@@ -70866,7 +70860,7 @@ tn
 nk
 nk
 tn
-VQ
+uN
 wM
 hl
 hl
@@ -70970,7 +70964,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 XH
 af
@@ -71197,7 +71191,7 @@ cG
 cG
 so
 qX
-nA
+dX
 ay
 ay
 Nk
@@ -71345,10 +71339,10 @@ tq
 tq
 du
 du
-lp
-EZ
-EZ
-uW
+dQ
+UT
+UT
+jj
 tq
 tq
 tq
@@ -71362,7 +71356,7 @@ du
 du
 du
 tq
-Sk
+pq
 Yg
 Yg
 Yg
@@ -71375,25 +71369,25 @@ du
 du
 su
 li
-xp
+yW
 li
 su
 nR
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
 wu
 wu
@@ -71429,19 +71423,19 @@ fq
 tN
 wu
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
-ev
-ev
+RS
+RS
 tN
 nR
 nR
 md
-sr
+oQ
 md
 Lm
 Lm
@@ -71537,11 +71531,11 @@ ut
 Yo
 Yo
 Yo
-ix
+xl
 Yo
 pK
 pK
-tr
+Am
 fh
 Um
 Um
@@ -72027,7 +72021,7 @@ Nk
 Nk
 Nk
 ay
-vn
+Ut
 to
 cG
 TL
@@ -72149,14 +72143,14 @@ Nk
 Nk
 Nk
 ay
-dA
+oN
 pw
 cG
 cG
 cG
 cG
 fb
-PV
+jw
 ay
 Nk
 Nk
@@ -72172,7 +72166,7 @@ tw
 cG
 cG
 so
-nA
+dX
 ay
 ay
 ay
@@ -72324,8 +72318,8 @@ du
 du
 du
 du
-lp
-uW
+dQ
+jj
 tq
 tq
 tq
@@ -72377,7 +72371,7 @@ tN
 Iq
 tN
 wu
-vY
+HF
 Px
 Px
 ET
@@ -72387,7 +72381,7 @@ ra
 ra
 oi
 oi
-kZ
+gG
 WU
 Eo
 Eo
@@ -72399,7 +72393,7 @@ ra
 ra
 oi
 ra
-wS
+Je
 ra
 GT
 fq
@@ -72519,7 +72513,7 @@ ut
 ut
 ut
 zE
-tr
+Am
 fh
 Um
 Um
@@ -72780,7 +72774,7 @@ EA
 Mj
 wM
 wM
-VQ
+uN
 tn
 tn
 wM
@@ -72944,7 +72938,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -72998,10 +72992,10 @@ Fi
 pa
 Dv
 Dv
-PV
+jw
 ay
 Nk
-Qg
+Rh
 Nk
 ay
 tw
@@ -73011,10 +73005,10 @@ cG
 cG
 cG
 so
-nA
+dX
 ay
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -73066,7 +73060,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -73112,7 +73106,7 @@ Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -73127,7 +73121,7 @@ Nk
 Nk
 ay
 ay
-dA
+oN
 pw
 cG
 cG
@@ -73148,7 +73142,7 @@ ay
 dg
 qX
 qX
-nA
+dX
 ay
 ay
 Nk
@@ -73198,7 +73192,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 UA
@@ -73258,8 +73252,8 @@ pE
 pE
 Ul
 AH
-bJ
-Mf
+bv
+Rz
 Ul
 pE
 su
@@ -73359,7 +73353,7 @@ mr
 mr
 tN
 tN
-Ps
+bI
 oi
 tN
 tN
@@ -73500,7 +73494,7 @@ ut
 Yo
 Yo
 Yo
-ix
+xl
 Yo
 Yo
 Yo
@@ -73981,13 +73975,13 @@ Nk
 Nk
 Nk
 ay
-dA
+oN
 qX
 pw
 cG
 cG
 so
-nA
+dX
 ay
 ay
 Nk
@@ -74105,7 +74099,7 @@ Nk
 Nk
 ay
 ay
-dA
+oN
 pw
 cG
 cG
@@ -74162,7 +74156,7 @@ Nk
 tH
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 ay
@@ -74236,7 +74230,7 @@ pE
 Ul
 AH
 AC
-Mf
+Rz
 Ul
 pE
 su
@@ -74312,7 +74306,7 @@ su
 nR
 tN
 oi
-kZ
+gG
 To
 oi
 oi
@@ -74320,14 +74314,14 @@ To
 oi
 oi
 To
-Jg
+fS
 oi
 aY
 ra
 oi
 aY
 jA
-kZ
+gG
 ra
 ra
 wu
@@ -74360,14 +74354,14 @@ ra
 jA
 oi
 To
-kZ
+gG
 oi
 To
 oi
 Il
 To
 oi
-kZ
+gG
 MJ
 wu
 nR
@@ -74684,7 +74678,7 @@ EA
 Mj
 tn
 tn
-VQ
+uN
 wM
 wM
 wM
@@ -74701,11 +74695,11 @@ tn
 tn
 tn
 tn
-jm
+re
 wM
 wM
 wM
-VQ
+uN
 wM
 wM
 wM
@@ -74721,7 +74715,7 @@ tn
 tn
 wM
 wM
-VQ
+uN
 tn
 tn
 tn
@@ -74773,7 +74767,7 @@ hl
 hl
 Mh
 Mh
-XA
+OU
 Xk
 jU
 MA
@@ -74785,7 +74779,7 @@ Mh
 hl
 hl
 Mh
-XA
+OU
 Xk
 jU
 MA
@@ -74948,7 +74942,7 @@ af
 Nk
 ay
 ay
-vn
+Ut
 to
 cG
 cG
@@ -74960,10 +74954,10 @@ ay
 ay
 ay
 ay
-NL
+XG
 qX
 qX
-nA
+dX
 ay
 ay
 Nk
@@ -75062,7 +75056,7 @@ ay
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -75083,11 +75077,11 @@ Nk
 Nk
 ay
 ay
-dA
+oN
 qX
 qX
 qX
-YE
+Ta
 ay
 Nk
 Nk
@@ -75131,9 +75125,9 @@ Kd
 af
 ay
 ay
-vn
+Ut
 Dv
-PV
+jw
 ay
 Nk
 Nk
@@ -75314,7 +75308,7 @@ ra
 ra
 ra
 oi
-Rh
+Fq
 tN
 nR
 nR
@@ -75664,7 +75658,7 @@ Mh
 hl
 hl
 vT
-DI
+bE
 hl
 hl
 hl
@@ -75784,7 +75778,7 @@ hl
 kM
 fy
 fy
-kS
+BG
 fy
 fy
 lu
@@ -75896,7 +75890,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 oR
 QG
@@ -75906,7 +75900,7 @@ QG
 lR
 TL
 TL
-Mr
+by
 Nk
 Nk
 oR
@@ -75924,7 +75918,7 @@ ay
 Nk
 Nk
 ay
-vn
+Ut
 to
 cG
 cG
@@ -75944,7 +75938,7 @@ ay
 ay
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 iE
@@ -76107,7 +76101,7 @@ xb
 ay
 ay
 ay
-vn
+Ut
 to
 cG
 gI
@@ -76189,7 +76183,7 @@ pE
 pE
 Ul
 AH
-VF
+ce
 DU
 Ul
 pE
@@ -76286,7 +76280,7 @@ oi
 Xr
 Ln
 ra
-kZ
+gG
 oi
 oi
 ra
@@ -76304,7 +76298,7 @@ tN
 tN
 nR
 tN
-Dm
+Hk
 ra
 QQ
 wu
@@ -76446,7 +76440,7 @@ pK
 pK
 Yo
 Yo
-ix
+xl
 Yo
 Yo
 Yo
@@ -76456,7 +76450,7 @@ Yo
 Yi
 Yi
 Da
-SR
+kJ
 hr
 aF
 aF
@@ -76613,7 +76607,7 @@ EA
 Yd
 wM
 wM
-VQ
+uN
 wM
 wM
 wM
@@ -76621,7 +76615,7 @@ wM
 tn
 tn
 tn
-VQ
+uN
 tn
 tn
 wM
@@ -76760,9 +76754,9 @@ cs
 hl
 kM
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 lu
 hl
@@ -76899,7 +76893,7 @@ Nk
 wK
 ay
 Nk
-Qg
+Rh
 ay
 tw
 cG
@@ -77082,7 +77076,7 @@ TL
 dn
 xb
 ay
-vn
+Ut
 Dv
 to
 cG
@@ -77434,7 +77428,7 @@ hS
 hS
 gQ
 gQ
-SR
+kJ
 hr
 aF
 aF
@@ -77737,9 +77731,9 @@ hl
 Wi
 KW
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 Ji
 mb
@@ -77990,7 +77984,7 @@ TL
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -78064,7 +78058,7 @@ cG
 cG
 cG
 so
-YE
+Ta
 ay
 ay
 Nk
@@ -78143,7 +78137,7 @@ pE
 pE
 Ul
 HY
-bJ
+bv
 DU
 Ul
 pE
@@ -78415,7 +78409,7 @@ gQ
 Da
 Da
 Da
-BE
+SF
 LI
 LI
 LI
@@ -78553,7 +78547,7 @@ wM
 wM
 wM
 wM
-VQ
+uN
 wM
 wM
 wM
@@ -78577,7 +78571,7 @@ BI
 MA
 MA
 qz
-Ya
+nE
 Mh
 hl
 hl
@@ -78688,7 +78682,7 @@ MA
 MA
 zg
 BX
-kD
+DZ
 Mh
 hl
 hl
@@ -78714,9 +78708,9 @@ hl
 kM
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 Ji
@@ -78852,7 +78846,7 @@ Bt
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 ay
 TL
@@ -79040,7 +79034,7 @@ tw
 cG
 cG
 so
-nA
+dX
 ay
 ay
 NJ
@@ -79120,8 +79114,8 @@ pE
 pE
 Ul
 HY
-Mu
-Ku
+VQ
+ls
 Ul
 pE
 su
@@ -79690,11 +79684,11 @@ hl
 hl
 kM
 fy
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -79910,7 +79904,7 @@ TL
 TL
 dn
 xb
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -79918,7 +79912,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -79979,7 +79973,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -80016,7 +80010,7 @@ ay
 tw
 cG
 so
-nA
+dX
 ay
 Py
 Cj
@@ -80198,7 +80192,7 @@ nR
 wu
 tN
 tN
-wO
+kO
 ra
 ra
 ra
@@ -80376,7 +80370,7 @@ gQ
 gQ
 gQ
 Da
-BE
+SF
 Da
 Da
 Da
@@ -80463,7 +80457,7 @@ nv
 nv
 nv
 nv
-Cf
+UC
 nv
 nv
 Zv
@@ -80491,7 +80485,7 @@ eG
 wR
 ad
 kg
-VQ
+uN
 wM
 wM
 wM
@@ -80574,7 +80568,7 @@ Xk
 Xk
 Xk
 Xk
-Ya
+nE
 Mh
 oI
 Ad
@@ -80668,10 +80662,10 @@ hl
 kM
 fy
 fy
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -80960,7 +80954,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -80990,9 +80984,9 @@ Nk
 Nk
 Nk
 ay
-dA
+oN
 qX
-nA
+dX
 ay
 Py
 dn
@@ -81646,10 +81640,10 @@ ku
 vG
 fy
 fy
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 fy
 fy
 fy
@@ -81758,7 +81752,7 @@ ay
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -81824,7 +81818,7 @@ Mv
 da
 da
 da
-ub
+tE
 da
 da
 Mv
@@ -81874,7 +81868,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -81890,7 +81884,7 @@ Nk
 ay
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -81963,7 +81957,7 @@ Nk
 ay
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 ay
@@ -82624,9 +82618,9 @@ ku
 vG
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 fy
@@ -82761,7 +82755,7 @@ lR
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -82934,7 +82928,7 @@ TL
 af
 Nk
 Nk
-Mr
+by
 tP
 Nk
 ay
@@ -83601,10 +83595,10 @@ hl
 kM
 fy
 fy
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 fy
 fy
 lu
@@ -83755,7 +83749,7 @@ Nk
 Nk
 Nk
 ay
-vn
+Ut
 Dv
 TL
 TL
@@ -83918,7 +83912,7 @@ Nk
 Nk
 Nk
 Nk
-st
+oz
 Nk
 Nk
 Nk
@@ -84120,7 +84114,7 @@ tN
 tN
 nR
 tN
-Dm
+Hk
 oi
 Zp
 wu
@@ -84414,7 +84408,7 @@ zg
 Mh
 Mh
 Mh
-XA
+OU
 jU
 MA
 MA
@@ -84579,10 +84573,10 @@ kM
 fy
 fy
 fy
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 fy
 Ji
 mb
@@ -84679,8 +84673,8 @@ CY
 QC
 do
 nd
-Kb
-Hl
+VR
+Jg
 ZQ
 ZQ
 hh
@@ -84688,7 +84682,7 @@ hh
 ZQ
 hh
 hh
-DK
+Cg
 VD
 ay
 Nk
@@ -84810,7 +84804,7 @@ Nk
 Nk
 TL
 Nk
-Uh
+sv
 Nk
 Nk
 Nk
@@ -85084,7 +85078,7 @@ wu
 tN
 Bk
 oi
-Rh
+Fq
 tN
 nR
 nR
@@ -85558,8 +85552,8 @@ fy
 fy
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 lu
@@ -85660,12 +85654,12 @@ ZQ
 ZQ
 ZQ
 ZQ
-TR
+Go
 hh
 ZQ
 ZQ
-jc
-tY
+ES
+mS
 VD
 ay
 ay
@@ -85676,7 +85670,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -85708,7 +85702,7 @@ ay
 ay
 ay
 ay
-vn
+Ut
 to
 cG
 cG
@@ -85728,7 +85722,7 @@ Mv
 Mv
 Mv
 Mv
-Ld
+bc
 Mv
 Mv
 Mv
@@ -86535,9 +86529,9 @@ zg
 fy
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 Ji
 mb
@@ -86625,7 +86619,7 @@ GM
 qS
 aP
 FT
-uD
+Sv
 ZS
 CY
 CY
@@ -86636,9 +86630,9 @@ ZQ
 ZQ
 hh
 VD
-gT
+aO
 dr
-AX
+Ab
 VD
 ZQ
 ZQ
@@ -86677,7 +86671,7 @@ Xe
 Bt
 Nk
 Nk
-Mr
+by
 Nk
 ay
 ay
@@ -86735,7 +86729,7 @@ Mv
 Mv
 da
 da
-ub
+tE
 da
 da
 Mv
@@ -86766,7 +86760,7 @@ Nk
 ay
 Nk
 Nk
-Qg
+Rh
 Nk
 ay
 ay
@@ -86936,8 +86930,8 @@ pE
 pE
 Ul
 HY
-bJ
-Mf
+bv
+Rz
 Ul
 pE
 pE
@@ -87303,7 +87297,7 @@ mn
 NW
 NW
 NW
-Dy
+VO
 mn
 xB
 gQ
@@ -87513,8 +87507,8 @@ zg
 fy
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 lu
@@ -87573,7 +87567,7 @@ EF
 EF
 EF
 Nk
-Qg
+Rh
 ay
 hq
 vK
@@ -87618,7 +87612,7 @@ hh
 hh
 ZQ
 ZQ
-pD
+gH
 vQ
 VD
 ay
@@ -87656,7 +87650,7 @@ Bt
 Nk
 Nk
 Nk
-FV
+kS
 vP
 ay
 ay
@@ -87669,7 +87663,7 @@ cG
 da
 da
 da
-ub
+tE
 da
 da
 da
@@ -87746,7 +87740,7 @@ Nk
 Nk
 Nk
 ay
-wJ
+gF
 Dv
 Dv
 Dv
@@ -87810,12 +87804,12 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -87826,7 +87820,7 @@ BT
 BT
 af
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -87913,8 +87907,8 @@ pE
 pE
 Ul
 AH
-bJ
-Mf
+bv
+Rz
 Ul
 pE
 pE
@@ -88019,7 +88013,7 @@ ra
 ra
 ra
 ra
-tg
+qN
 pk
 VZ
 NG
@@ -88247,10 +88241,10 @@ aF
 aF
 aF
 aF
-XW
 aF
 aF
-XW
+aF
+aF
 aF
 aF
 aF
@@ -88490,8 +88484,8 @@ zg
 zg
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 Ji
@@ -88589,14 +88583,14 @@ mu
 hh
 ZQ
 ZQ
-lb
+VI
 ZQ
-CV
-zM
+KB
+CK
 hh
 ZQ
 ZQ
-gT
+aO
 VD
 ay
 Nk
@@ -88804,7 +88798,7 @@ af
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 TL
@@ -89468,7 +89462,7 @@ zg
 zg
 vG
 fy
-kS
+BG
 wz
 BU
 vG
@@ -89564,9 +89558,9 @@ CY
 QC
 VD
 hh
-XP
-XU
-JQ
+Eg
+XW
+wf
 VD
 VD
 VD
@@ -89745,7 +89739,7 @@ Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 ay
@@ -89755,7 +89749,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 TL
@@ -89968,7 +89962,7 @@ nR
 wu
 nR
 tN
-wO
+kO
 oi
 tN
 tN
@@ -90559,7 +90553,7 @@ ay
 Nk
 IF
 Nk
-Mr
+by
 ay
 ay
 TL
@@ -90677,7 +90671,7 @@ Nk
 Nk
 Nk
 ay
-dA
+oN
 pw
 cG
 cG
@@ -90741,13 +90735,13 @@ Nk
 Nk
 ay
 ay
-vn
+Ut
 Dv
 Dv
 Dv
 Dv
 Dv
-PV
+jw
 ay
 ay
 Nk
@@ -91480,7 +91474,7 @@ EF
 EF
 EF
 EF
-Mr
+by
 Nk
 Nk
 Nk
@@ -91574,7 +91568,7 @@ cG
 cG
 vw
 da
-ub
+tE
 da
 da
 Mv
@@ -91655,14 +91649,14 @@ Nk
 Nk
 ay
 ay
-dA
+oN
 pw
 cG
 cG
 cG
 gI
 ay
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -91717,7 +91711,7 @@ Nk
 Nk
 ay
 ay
-vn
+Ut
 to
 cG
 cG
@@ -91725,7 +91719,7 @@ cG
 cG
 cG
 fb
-PV
+jw
 ay
 tH
 Nk
@@ -92510,7 +92504,7 @@ Nk
 Nk
 ay
 Nk
-FV
+kS
 Nk
 NJ
 Cj
@@ -92545,7 +92539,7 @@ lR
 Nk
 Nk
 ay
-dA
+oN
 pw
 cG
 cG
@@ -92633,11 +92627,11 @@ Nk
 Nk
 ay
 ay
-dA
+oN
 qX
 qX
 qX
-nA
+dX
 ay
 Nk
 Nk
@@ -92693,7 +92687,7 @@ Nk
 Nk
 Nk
 ay
-vn
+Ut
 to
 cG
 cG
@@ -92812,37 +92806,37 @@ Ul
 AH
 AH
 HY
-gi
+JS
 HY
 cu
 AH
 AH
 AH
-gi
+JS
 AH
 AH
 AH
 AH
 AH
-gi
+JS
 AH
 AH
 AH
 AH
 AH
-gi
+JS
 AH
 AH
 HY
 HY
 HY
-gi
+JS
 AH
 Rd
 AH
 AH
 AH
-gi
+JS
 HY
 AH
 AH
@@ -92853,7 +92847,7 @@ AH
 AH
 AH
 AH
-gi
+JS
 AH
 AH
 Rd
@@ -92865,13 +92859,13 @@ AH
 AH
 AH
 HY
-gi
+JS
 HY
 HY
 AH
 Rd
 HY
-gi
+JS
 AH
 AH
 AH
@@ -92883,7 +92877,7 @@ AH
 AH
 AH
 AH
-gi
+JS
 lJ
 Rd
 AH
@@ -93379,7 +93373,7 @@ kM
 Ji
 KW
 fy
-kS
+BG
 fy
 fy
 Ji
@@ -93523,7 +93517,7 @@ DB
 Bt
 ay
 ay
-dA
+oN
 pw
 cG
 cG
@@ -93601,7 +93595,7 @@ TL
 TL
 TL
 Dv
-PV
+jw
 ay
 Nk
 lc
@@ -93680,7 +93674,7 @@ cG
 cG
 cG
 fb
-PV
+jw
 ay
 Nk
 Nk
@@ -94085,13 +94079,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 xV
 Vv
 zq
@@ -94130,13 +94124,13 @@ aF
 hC
 Eu
 xV
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 Ij
 Ij
 Ij
@@ -94355,8 +94349,8 @@ hl
 kM
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 fy
@@ -94414,7 +94408,7 @@ EF
 TL
 TL
 tP
-FV
+kS
 Nk
 Nk
 lc
@@ -94454,7 +94448,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 tP
 Nk
@@ -94501,7 +94495,7 @@ lR
 Nk
 ay
 ay
-dA
+oN
 pw
 cG
 Mv
@@ -94610,7 +94604,7 @@ YB
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -94627,7 +94621,7 @@ ay
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 ay
@@ -94843,13 +94837,13 @@ Rd
 AH
 AH
 AH
-kV
+Mf
 HY
 HY
 AH
 AH
 AH
-ce
+um
 AH
 AH
 AH
@@ -95062,12 +95056,12 @@ Ij
 Ij
 Ij
 Ij
-Jh
-BG
-BG
-BG
-BG
-BG
+uz
+JB
+JB
+JB
+JB
+JB
 JF
 kd
 QD
@@ -95107,13 +95101,13 @@ aF
 aF
 Kx
 fM
-Jh
-BG
-BG
-BG
-BG
-BG
-Jh
+uz
+JB
+JB
+JB
+JB
+JB
+uz
 Ij
 Ij
 Ij
@@ -95332,9 +95326,9 @@ hl
 ku
 vG
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 Ji
@@ -95413,7 +95407,7 @@ Nk
 Nk
 Nk
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -95430,7 +95424,7 @@ VD
 Nk
 Nk
 Nk
-El
+OV
 Nk
 Nk
 Nk
@@ -95551,7 +95545,7 @@ xW
 xW
 xW
 xW
-Ld
+bc
 cG
 cG
 cG
@@ -95574,7 +95568,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -95602,7 +95596,7 @@ Nk
 Nk
 Nk
 Nk
-Uh
+sv
 Nk
 Nk
 Nk
@@ -95743,37 +95737,37 @@ Ul
 HY
 HY
 AH
-Lu
+xq
 AH
 Rd
 AH
 AH
 HY
-Lu
+xq
 AH
 AH
 AH
 AH
 AH
-Lu
+xq
 AH
 AH
 AH
 AH
 HY
-Lu
+xq
 AH
 AH
 AH
 AH
 Cy
-Yx
+Qg
 AH
 Rd
 AH
 AH
 AH
-Lu
+xq
 AH
 AH
 AH
@@ -95784,7 +95778,7 @@ AH
 AH
 AH
 AH
-Lu
+xq
 AH
 AH
 Rd
@@ -95796,13 +95790,13 @@ HY
 HY
 AH
 AH
-Lu
+xq
 HY
 AH
 AH
 Rd
 AH
-Lu
+xq
 AH
 AH
 AH
@@ -95814,7 +95808,7 @@ AH
 AH
 AH
 AH
-Lu
+xq
 AH
 Rd
 AH
@@ -95831,7 +95825,7 @@ Ul
 Ul
 Ul
 AH
-kV
+Mf
 Ul
 Ul
 pE
@@ -96040,11 +96034,11 @@ Ij
 Ij
 Ij
 Zc
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 Zc
 aF
 aF
@@ -96085,11 +96079,11 @@ aF
 aF
 aF
 mY
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 ri
 Ij
 Ij
@@ -96309,9 +96303,9 @@ hl
 hl
 kM
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 fy
@@ -96373,7 +96367,7 @@ Cj
 YB
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 ay
@@ -96387,13 +96381,13 @@ Py
 CS
 PB
 Nk
-Mr
+by
 Nk
 Nk
 Nk
 Nk
 ay
-Qg
+Rh
 Nk
 ay
 mI
@@ -96408,7 +96402,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -96488,7 +96482,7 @@ xW
 Mv
 Mv
 da
-ub
+tE
 da
 Mv
 Mv
@@ -96577,7 +96571,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -96586,7 +96580,7 @@ Nk
 Nk
 Nk
 Nk
-Qg
+Rh
 Nk
 TL
 TL
@@ -97017,11 +97011,11 @@ Ij
 Ij
 Ij
 Zc
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 Zc
 aF
 aF
@@ -97062,11 +97056,11 @@ aF
 aF
 aF
 mY
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 ri
 Ij
 Ij
@@ -97287,9 +97281,9 @@ hl
 kM
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 lu
@@ -97510,7 +97504,7 @@ vw
 cG
 cG
 fb
-PV
+jw
 ay
 ay
 ay
@@ -97519,7 +97513,7 @@ Nk
 ay
 ay
 Nk
-FV
+kS
 Nk
 Nk
 Nk
@@ -97532,7 +97526,7 @@ TL
 ay
 ay
 Nk
-Qg
+Rh
 Nk
 Nk
 XH
@@ -97715,7 +97709,7 @@ Ul
 Ul
 Ul
 Ul
-bG
+Wc
 Ul
 Ul
 Ul
@@ -97994,11 +97988,11 @@ Ij
 Ij
 Ij
 Zc
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 Zc
 aF
 aF
@@ -98039,11 +98033,11 @@ aF
 aF
 aF
 mY
-YQ
-YQ
-YQ
-YQ
-YQ
+hd
+hd
+hd
+hd
+hd
 ri
 Ij
 Ij
@@ -98265,8 +98259,8 @@ kM
 fy
 fy
 fy
-kS
-kS
+BG
+BG
 fy
 fy
 Ji
@@ -98488,7 +98482,7 @@ cG
 cG
 cG
 fb
-PV
+jw
 ay
 ay
 ay
@@ -98519,7 +98513,7 @@ Nk
 Nk
 yg
 Nk
-Qg
+Rh
 Nk
 ay
 TL
@@ -98745,7 +98739,7 @@ Ul
 pE
 pE
 Ul
-kH
+hV
 TO
 Ul
 pE
@@ -98970,11 +98964,11 @@ Ij
 Ij
 Ij
 Ij
-Jh
-dX
-YQ
-YQ
-YQ
+uz
+ev
+hd
+hd
+hd
 vm
 io
 NW
@@ -99015,13 +99009,13 @@ NW
 NW
 NW
 NW
-Jh
-dX
-YQ
-YQ
-YQ
+uz
+ev
+hd
+hd
+hd
 vm
-Jh
+uz
 Ij
 Ij
 Ij
@@ -99242,9 +99236,9 @@ ku
 vG
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 fy
 zg
@@ -99723,7 +99717,7 @@ pE
 pE
 Ul
 yo
-xl
+fL
 Ul
 pE
 pE
@@ -99947,13 +99941,13 @@ Ij
 Ij
 Ij
 Ij
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 Ij
 Ij
 Ij
@@ -99992,13 +99986,13 @@ Ij
 xB
 gQ
 gQ
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 Ij
 Ij
 Ij
@@ -100220,9 +100214,9 @@ zg
 zg
 fy
 fy
-kS
-kS
-kS
+BG
+BG
+BG
 fy
 zg
 zg
@@ -100410,7 +100404,7 @@ Mv
 da
 da
 da
-ub
+tE
 da
 da
 Mv
@@ -101197,11 +101191,11 @@ zg
 zg
 zg
 fy
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 zg
 zg
 zg
@@ -101275,7 +101269,7 @@ TL
 TL
 TL
 xb
-Qg
+Rh
 Nk
 Nk
 Nk
@@ -101372,7 +101366,7 @@ xW
 Mv
 Mv
 Mv
-Ld
+bc
 da
 da
 da
@@ -101385,7 +101379,7 @@ Mv
 Mv
 da
 da
-ub
+tE
 da
 da
 da
@@ -101455,7 +101449,7 @@ Nk
 Nk
 Nk
 Nk
-Mr
+by
 Nk
 Nk
 Nk
@@ -101925,9 +101919,9 @@ Ij
 Ij
 Ij
 Ij
-aK
+Uf
 dF
-TJ
+JK
 Ij
 Ij
 Ij
@@ -102174,11 +102168,11 @@ zg
 zg
 zg
 fy
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 zg
 zg
 zg
@@ -102363,7 +102357,7 @@ da
 da
 da
 da
-ub
+tE
 da
 da
 da
@@ -102903,7 +102897,7 @@ Ij
 Ij
 Ij
 dF
-aV
+nc
 dF
 Ij
 Ij
@@ -103151,11 +103145,11 @@ zg
 zg
 zg
 zg
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 zg
 zg
 zg
@@ -103234,13 +103228,13 @@ Nk
 ay
 ay
 TL
-Jh
-Jh
+uz
+uz
 ye
 ye
 ye
-Jh
-Jh
+uz
+uz
 TL
 TL
 TL
@@ -103356,7 +103350,7 @@ Mv
 Mv
 Mv
 Mv
-Ld
+bc
 Mv
 Mv
 Mv
@@ -103879,9 +103873,9 @@ Ij
 Ij
 Ij
 Ij
-ff
+GK
 dF
-gh
+HZ
 Ij
 Ij
 Ij
@@ -104128,11 +104122,11 @@ zg
 zg
 zg
 zg
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 zg
 zg
 zg
@@ -104211,13 +104205,13 @@ TL
 TL
 TL
 TL
-Jh
-BG
-YQ
-YQ
-YQ
-BG
-Jh
+uz
+JB
+hd
+hd
+hd
+JB
+uz
 TL
 TL
 TL
@@ -105105,12 +105099,12 @@ zg
 zg
 zg
 zg
-kS
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
+BG
 zg
 zg
 zg
@@ -105188,13 +105182,13 @@ TL
 TL
 TL
 TL
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 TL
 TL
 TL
@@ -106083,11 +106077,11 @@ zg
 zg
 zg
 zg
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 zg
 zg
 zg
@@ -106165,13 +106159,13 @@ TL
 TL
 TL
 TL
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 TL
 TL
 TL
@@ -107060,11 +107054,11 @@ zg
 zg
 zg
 zg
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 zg
 zg
 zg
@@ -107142,13 +107136,13 @@ TL
 TL
 TL
 TL
-Jh
-YQ
-YQ
-YQ
-YQ
-YQ
-Jh
+uz
+hd
+hd
+hd
+hd
+hd
+uz
 TL
 TL
 TL
@@ -108037,11 +108031,11 @@ zg
 zg
 zg
 zg
-kS
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
+BG
 zg
 zg
 zg
@@ -108119,13 +108113,13 @@ TL
 TL
 TL
 TL
-Jh
-dX
-YQ
-YQ
-YQ
+uz
+ev
+hd
+hd
+hd
 vm
-Jh
+uz
 TL
 TL
 TL
@@ -109015,10 +109009,10 @@ zg
 zg
 zg
 zg
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 zg
 zg
 zg
@@ -109096,13 +109090,13 @@ TL
 TL
 TL
 TL
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
-Jh
+uz
+uz
+uz
+uz
+uz
+uz
+uz
 TL
 TL
 TL
@@ -109992,10 +109986,10 @@ zg
 zg
 zg
 zg
-kS
-kS
-kS
-kS
+BG
+BG
+BG
+BG
 zg
 zg
 zg
@@ -110971,8 +110965,8 @@ zg
 zg
 zg
 zg
-kS
-kS
+BG
+BG
 zg
 zg
 zg
