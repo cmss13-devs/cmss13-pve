@@ -1279,7 +1279,10 @@
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/sling,
 	)
-	starting_attachment_types = list(/obj/item/attachable/bipod/integral, /obj/item/attachable/stock/rifle/collapsible)
+	starting_attachment_types = list(
+		/obj/item/attachable/bipod/integral,
+		/obj/item/attachable/stock/rifle/collapsible
+	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	gun_category = GUN_CATEGORY_HEAVY
@@ -1331,7 +1334,7 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/stock/rifle/collapsible,
-		/obj/item/attachable/angledgrip
+		/obj/item/attachable/angledgrip,
 	)
 
 /obj/item/weapon/gun/rifle/lmg/tactical/set_gun_config_values()
@@ -1348,7 +1351,7 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/stock/rifle/collapsible,
-		/obj/item/attachable/bipod/integral
+		/obj/item/attachable/bipod/integral,
 	)
 
 /obj/item/weapon/gun/rifle/lmg/army/set_gun_config_values()
