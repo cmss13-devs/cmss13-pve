@@ -632,7 +632,7 @@
 	desc = "A screen on the TOC computer for controlling the dropship linked to it. Has an abbreviated version of the flight controls and data."
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "toc_shuttle"
-	shuttleId = DROPSHIP_MIDWAY
+	shuttleId = DROPSHIP_UPP
 	is_remote = TRUE
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/small
