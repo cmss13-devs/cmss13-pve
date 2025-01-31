@@ -3557,7 +3557,6 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/bipod/New()
 	..()
 
-	delay_mod = FIRE_DELAY_TIER_11
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
