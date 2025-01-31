@@ -861,4 +861,6 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	// T.update_atom_colour()
 	if(T.dir != dir)
 		T.setDir(dir)
+	if(T.name != name)
+		T.name = name
 	return T
