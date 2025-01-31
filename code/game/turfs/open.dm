@@ -649,9 +649,9 @@
 	update_overlays()
 
 /turf/open/gm/river/proc/update_overlays()
-	overlays.Cut()
 	if(no_overlay)
 		return
+	overlays.Cut()
 	if(covered)
 		name = covered_name
 		overlays += image("icon"=src.cover_icon,"icon_state"=cover_icon_state,"layer"=CATWALK_LAYER,"dir" = dir)
