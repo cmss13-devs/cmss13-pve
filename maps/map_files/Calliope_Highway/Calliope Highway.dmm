@@ -7833,7 +7833,6 @@
 	fill_from_loc = 1;
 	name = "M20A magazine case"
 	},
-/obj/item/ammo_box/magazine/m20a/empty,
 /obj/item/ammo_box/rounds,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/armory)
@@ -14952,16 +14951,13 @@
 	req_access = null;
 	req_one_access = list(12)
 	},
-/obj/item/weapon/gun/rifle/lmg,
 /obj/item/ammo_box/rounds,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 1
 	},
-/obj/item/ammo_magazine/rifle/lmg,
-/obj/item/ammo_magazine/rifle/lmg,
-/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/storage/box/guncase/lmg,
 /turf/open/floor/prison/floor_marked,
 /area/calliope/bunker/cargo_under)
 "odI" = (
@@ -16839,7 +16835,6 @@
 	fill_from_loc = 1;
 	name = "M20A magazine case"
 	},
-/obj/item/ammo_box/magazine/m20a/empty,
 /obj/item/ammo_box/rounds,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked,
@@ -21193,6 +21188,15 @@
 	pixel_x = 6;
 	pixel_y = 7
 	},
+/obj/item/ammo_box/magazine/m20a/empty,
+/obj/item/ammo_box/magazine/m20a/empty{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/ammo_box/magazine/m20a/empty{
+	pixel_x = -6;
+	pixel_y = 9
+	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/armory)
 "uoP" = (
@@ -23043,7 +23047,6 @@
 	fill_from_loc = 1;
 	name = "M20A magazine case"
 	},
-/obj/item/ammo_box/magazine/m20a/empty,
 /obj/item/ammo_box/rounds,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
