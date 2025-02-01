@@ -3618,6 +3618,10 @@
 /turf/open/floor/asteroid
 	icon_state = "asteroid"
 
+/turf/open/floor/asteroid_dark
+	icon_state = "asteroid"
+	color = "#55552b"
+
 /turf/open/floor/asteroidfloor/north
 	dir = NORTH
 
@@ -3665,6 +3669,10 @@
 
 /turf/open/floor/cult
 	icon_state = "cult"
+
+/turf/open/floor/cult_engineer
+	icon_state = "cult"
+	color = "#ccfff5"
 
 /turf/open/floor/dark
 	icon_state = "dark"

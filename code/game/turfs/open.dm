@@ -763,10 +763,20 @@
 /turf/open/gm/river/shallow_ocean_shallow_ocean
 	name = "shallow ocean"
 	default_name = "shallow ocean"
+/turf/open/gm/river/beach_water
+	name = "shallow water"
+	supports_fishing = TRUE
+	light_range = 0.9
+	no_overlay = TRUE
 
 /turf/open/gm/river/ocean
 	color = "#dae3e2"
 	base_river_slowdown = 4 // VERY. SLOW.
+
+/turf/open/gm/river/ocean/deep_water
+	name = "deep water"
+	light_range = 0.9
+	no_overlay = TRUE
 
 /turf/open/gm/river/ocean/deep_ocean
 	name = "deep ocean"
@@ -957,6 +967,11 @@
 /turf/open/asphalt/cement_sunbleached
 	name = "concrete"
 	icon_state = "cement_sunbleached5"
+
+/turf/open/asphalt/cement_sunbleached_darkened
+	name = "floor"
+	icon_state = "cement_sunbleached5"
+	color = "#a39e99"
 
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached1
 	icon_state = "cement_sunbleached1"
