@@ -139,6 +139,11 @@
 	else
 		. += SPAN_NOTICE("Nothing.")
 
+/obj/item/ammo_magazine/flamer_tank/upp
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "LPO80"
+	item_state = "LPO80"
+
 // This is gellie fuel. Green Flames.
 /obj/item/ammo_magazine/flamer_tank/gellied
 	name = "incinerator tank (B-Gel)"
