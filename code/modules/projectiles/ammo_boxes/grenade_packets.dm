@@ -149,7 +149,7 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	name = "\improper M51A BFAB grenade packet"
 	desc = "It contains five M51A BFAB airburst-fragmentation grenades. Exercise extreme caution when using in confined spaces."
 	packet_icon = "bfab-p"
-	content_type = /obj/item/explosive/grenade/high_explosive/tmfrag
+	content_type = /obj/item/explosive/grenade/high_explosive/impact/tmfrag
 
 /obj/item/storage/box/packet/heap
 	name = "\improper M38 HEAP blast grenade packet"
