@@ -100,6 +100,8 @@
 /obj/item/weapon/gun/smg/m39/solidstock
 	starting_attachment_types = list(/obj/item/attachable/stock/smg)
 
+/obj/item/weapon/gun/smg/m39/tactical
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip,/obj/item/attachable/suppressor)
 
 //-------------------------------------------------------
 
