@@ -382,7 +382,8 @@
 /obj/structure/machinery/computer/crew/alt{
 	dir = 1;
 	pixel_x = 13;
-	pixel_y = -3
+	pixel_y = -3;
+	faction = "UPP"
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
@@ -1360,18 +1361,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
-"il" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/item/prop/magazine/book{
-	desc = "A science fiction novel of Russian origin. You should probably actually read it instead of passing off your knowledge of the movie as knowlege of the book.";
-	name = "Roadside Picnic";
-	pixel_y = 3;
-	pixel_x = -3
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/dorms)
 "in" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -7819,6 +7808,13 @@
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_y = 30
 	},
+/obj/item/prop/magazine/book{
+	desc = "A science fiction novel of Russian origin. You should probably actually read it instead of passing off your knowledge of the movie as knowlege of the book.";
+	name = "Roadside Picnic";
+	pixel_y = 3;
+	pixel_x = -3
+	},
+/obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "Wr" = (
@@ -19429,7 +19425,7 @@ OZ
 tv
 Mf
 ex
-il
+ex
 Rs
 Yv
 GV
