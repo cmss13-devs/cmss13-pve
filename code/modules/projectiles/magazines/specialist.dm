@@ -4,27 +4,33 @@
 
 /obj/item/ammo_magazine/sniper
 	name = "\improper M42A marksman magazine (10x28mm Caseless)"
-	desc = "A magazine of sniper rifle ammo. An aimed shot with it will deal significant damage."
+	desc = "A magazine of M252 HEAP match-grade 10x28mm ammo. An aimed shot with it will deal significant damage."
 	caliber = "10x28mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "m42c" //PLACEHOLDER
 	w_class = SIZE_MEDIUM
 	max_rounds = 15
-	default_ammo = /datum/ammo/bullet/sniper
+	default_ammo = /datum/ammo/bullet/rifle/heavy/heap/sniper
 	gun_type = /obj/item/weapon/gun/rifle/sniper/M42A
 	ammo_band_icon = "+m42c_band"
 	ammo_band_icon_empty = "+m42c_band_e"
 
+/obj/item/ammo_magazine/sniper/basic
+	name = "\improper M42A magazine (10x28mm)"
+	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will temporarily blind the targe and kindle the blaze further."
+	default_ammo = /datum/ammo/bullet/rifle/heavy
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
 /obj/item/ammo_magazine/sniper/incendiary
 	name = "\improper M42A incendiary magazine (10x28mm)"
-	desc = "A magazine of sniper rifle ammo. An aimed shot with it will temporarily blind the targe and kindle the blaze further."
-	default_ammo = /datum/ammo/bullet/sniper/incendiary
+	desc = "A magazine of M254 incendiary match-grade 10x28mm ammo. An aimed shot with it will temporarily blind the targe and kindle the blaze further."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 /obj/item/ammo_magazine/sniper/flak
 	name = "\improper M42A flak magazine (10x28mm)"
-	desc = "A magazine of sniper rifle ammo. An aimed shot with it will temporarily slow the target and minimize the backlash."
-	default_ammo = /datum/ammo/bullet/sniper/flak
+	desc = "A magazine of M257 HEFA match-grade 10x28mm ammo. An aimed shot with it will temporarily slow the target and minimize the backlash."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/flak
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 
 //XM43E1 Magazine
@@ -64,32 +70,32 @@
 	name = "\improper Type-88 HP Magazine (7.62x54mmR)"
 	default_ammo = /datum/ammo/bullet/sniper/upp_pve
 
-//M4RA magazines
+//M49A magazines
 
-/obj/item/ammo_magazine/rifle/m4ra/custom
+/obj/item/ammo_magazine/rifle/m49a/custom
 	name = "\improper A19 HV magazine (10x28mm)"
-	desc = "A magazine of A19 high velocity rounds for use in the M4RA custom battle rifle. The M4RA custom battle rifle is the only gun that can chamber these rounds."
+	desc = "A magazine of A19 high velocity rounds for use in the M49A custom battle rifle. The M49A custom battle rifle is the only gun that can chamber these rounds."
 	icon_state = "a19"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/spec
 	max_rounds = 30
-	gun_type = /obj/item/weapon/gun/rifle/m4ra_custom
+	gun_type = /obj/item/weapon/gun/rifle/m49a_custom
 	ammo_band_icon = "+a19_band"
 	ammo_band_icon_empty = "+a19_band_e"
 
-/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary
+/obj/item/ammo_magazine/rifle/m49a/custom/incendiary
 	name = "\improper A19 HV incendiary magazine (10x28mm)"
-	desc = "A magazine of A19 HV incendiary rounds for use in the M4RA battle rifle. The M4RA battle rifle is the only gun that can chamber these rounds."
+	desc = "A magazine of A19 HV incendiary rounds for use in the M49A battle rifle. The M49A battle rifle is the only gun that can chamber these rounds."
 	default_ammo = /datum/ammo/bullet/rifle/heavy/spec/incendiary
 	max_rounds = 30
-	gun_type = /obj/item/weapon/gun/rifle/m4ra_custom
+	gun_type = /obj/item/weapon/gun/rifle/m49a_custom
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
-/obj/item/ammo_magazine/rifle/m4ra/custom/impact
+/obj/item/ammo_magazine/rifle/m49a/custom/impact
 	name = "\improper A19 HV high impact magazine (10x28mm)"
-	desc = "A magazine of A19 HV high impact rounds for use in the M4RA battle rifle. The M4RA battle rifle is the only gun that can chamber these rounds."
+	desc = "A magazine of A19 HV high impact rounds for use in the M49A battle rifle. The M49A battle rifle is the only gun that can chamber these rounds."
 	default_ammo = /datum/ammo/bullet/rifle/heavy/spec/impact
 	max_rounds = 30
-	gun_type = /obj/item/weapon/gun/rifle/m4ra_custom
+	gun_type = /obj/item/weapon/gun/rifle/m49a_custom
 	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
 
 //-------------------------------------------------------
