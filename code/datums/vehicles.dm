@@ -53,3 +53,7 @@
 /datum/map_template/interior/arc
 	name = "ARC"
 	interior_id = "arc"
+
+/datum/map_template/interior/uppapc
+	name = "ZSL-68"
+	interior_id = "uppapc"
