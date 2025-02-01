@@ -4,6 +4,9 @@
 #define LIGHT_FLOOR_COLOR_YELLOW 3
 #define LIGHT_FLOOR_COLOR_PURPLE 4
 #define LIGHT_FLOOR_COLOR_WHITE 5
+#define LIGHT_FLOOR_COLOR_CYCLE_ALL 6
+#define LIGHT_FLOOR_COLOR_DANCEFLOOR_A 7
+#define LIGHT_FLOOR_COLOR_DANCEFLOOR_B 8
 
 /turf/open/floor/light
 	name = "light floor"
@@ -43,6 +46,15 @@
 				icon_state = "light_on-w"
 				set_light(5)
 				state = -1
+			if(LIGHT_FLOOR_COLOR_CYCLE_ALL)
+				icon_state = "light_on-cycle_all"
+				set_light(5)
+			if(LIGHT_FLOOR_COLOR_DANCEFLOOR_A)
+				icon_state = "light_on-dancefloor_A"
+				set_light(5)
+			if(LIGHT_FLOOR_COLOR_DANCEFLOOR_B)
+				icon_state = "light_on-dancefloor_B"
+				set_light(5)
 			else
 				return //Should never happen ever but what if... returns into the other else which close the light
 
@@ -117,6 +129,18 @@
 	icon_state = "light_on-w"
 	state = LIGHT_FLOOR_COLOR_WHITE
 
+/turf/open/floor/light/cycle_all
+	icon_state = "light_on-cycle_all"
+	state = LIGHT_FLOOR_COLOR_CYCLE_ALL
+
+/turf/open/floor/light/dancefloor_A
+	icon_state="light_on-dancefloor_A"
+	state= LIGHT_FLOOR_COLOR_DANCEFLOOR_A
+
+/turf/open/floor/light/dancefloor_B
+	icon_state="light_on-dancefloor_B"
+	state= LIGHT_FLOOR_COLOR_DANCEFLOOR_B
+
 /turf/open/floor/light/off
 	icon_state = "light_off"
 	on = FALSE
@@ -161,3 +185,6 @@
 #undef LIGHT_FLOOR_COLOR_YELLOW
 #undef LIGHT_FLOOR_COLOR_PURPLE
 #undef LIGHT_FLOOR_COLOR_WHITE
+#undef LIGHT_FLOOR_COLOR_CYCLE_ALL
+#undef LIGHT_FLOOR_COLOR_DANCEFLOOR_A
+#undef LIGHT_FLOOR_COLOR_DANCEFLOOR_B
