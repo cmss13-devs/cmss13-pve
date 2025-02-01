@@ -96,7 +96,6 @@
 		SEND_SIGNAL(src, COMSIG_GUN_AUTOFIREDELAY_MODIFIED, fire_delay * stage_delay_mult)
 
 /obj/item/hardpoint/primary/minigun/update_smoke_dir(datum/source, dir, newdir)
-	SIGNAL_HANDLER
 	switch(newdir)
 		if(SOUTH)
 			smoke_holder.particles.position = list(55, 70, 0)

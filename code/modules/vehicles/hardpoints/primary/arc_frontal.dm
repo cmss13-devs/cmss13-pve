@@ -44,7 +44,6 @@
 	fire_delay = 0.05 SECONDS
 
 /obj/item/hardpoint/primary/arc_frontalcannon/update_smoke_dir(datum/source, dir, newdir)
-	SIGNAL_HANDLER
 	switch(newdir)
 		if(SOUTH)
 			smoke_holder.particles.position = list(44, 58, 0)

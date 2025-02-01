@@ -202,7 +202,6 @@
 	return ..()
 
 /obj/item/hardpoint/primary/arc_sentry/update_smoke_dir(datum/source, dir, newdir)
-	SIGNAL_HANDLER
 	switch(newdir)
 		if(SOUTH)
 			smoke_holder.particles.position = list(44, 58, 0)

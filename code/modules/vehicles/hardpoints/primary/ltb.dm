@@ -44,7 +44,6 @@
 	))
 
 /obj/item/hardpoint/primary/cannon/update_smoke_dir(datum/source, dir, newdir)
-	SIGNAL_HANDLER
 	switch(newdir)
 		if(SOUTH)
 			smoke_holder.particles.position = list(55, 70, 0)

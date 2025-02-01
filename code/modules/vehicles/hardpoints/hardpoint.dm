@@ -238,9 +238,9 @@
 /obj/item/hardpoint/proc/on_destroy()
 	if(destroyed_smoke)
 		smoke_holder = new(owner, /particles/tank_wreck_smoke)
-		update_smoke_dir(newdir = dir)
 		smoke_del_timer = addtimer(CALLBACK(src, PROC_REF(del_smoke)), 10 MINUTES, TIMER_STOPPABLE)
 		RegisterSignal(src, COMSIG_ATOM_DIR_CHANGE, PROC_REF(update_smoke_dir))
+		update_smoke_dir(newdir = dir)
 	return
 
 ///Updates the wreck smoke position
