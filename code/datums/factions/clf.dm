@@ -53,7 +53,7 @@
 		list("MAC-15 Magazine (9mm)", 5, /obj/item/ammo_magazine/smg/mac15, null, VENDOR_ITEM_REGULAR),
 		list("MAR Magazine (7.62x39mm)", 5, /obj/item/ammo_magazine/rifle/mar40, null, VENDOR_ITEM_REGULAR),
 		list("MAR Extended Magazine (7.62x39mm)", 15, /obj/item/ammo_magazine/rifle/mar40/extended, null, VENDOR_ITEM_REGULAR),
-		list("Type-64 Helical Magazine (.7.62x19mm)", 5, /obj/item/ammo_magazine/smg/bizon, null, VENDOR_ITEM_REGULAR),
+		list("Type-64 Helical Magazine (.7.62x25mm)", 5, /obj/item/ammo_magazine/smg/bizon, null, VENDOR_ITEM_REGULAR),
 		list("MP27 Magazine (4.6x30mm)", 5, /obj/item/ammo_magazine/smg/mp27, null, VENDOR_ITEM_REGULAR),
 		list("MP5 Magazine (9mm)", 5, /obj/item/ammo_magazine/smg/mp5, null, VENDOR_ITEM_REGULAR),
 
@@ -121,7 +121,7 @@
 		list("MAC-15 Magazine (9mm)", 60, /obj/item/ammo_magazine/smg/mac15, VENDOR_ITEM_REGULAR),
 		list("MAR Magazine (7.62x39mm)", 60, /obj/item/ammo_magazine/rifle/mar40, VENDOR_ITEM_REGULAR),
 		list("MAR Extended Magazine (7.62x39mm)", 10, /obj/item/ammo_magazine/rifle/mar40/extended, VENDOR_ITEM_REGULAR),
-		list("Type 64 Helical Magazine (7.62x19mm)", 60, /obj/item/ammo_magazine/smg/bizon, VENDOR_ITEM_REGULAR),
+		list("Type 64 Helical Magazine (7.62x25mm)", 60, /obj/item/ammo_magazine/smg/bizon, VENDOR_ITEM_REGULAR),
 		list("MP27 Magazine (4.6x30mm)", 60, /obj/item/ammo_magazine/smg/mp27, VENDOR_ITEM_REGULAR),
 		list("MP5 Magazine (9mm)", 60, /obj/item/ammo_magazine/smg/mp5, VENDOR_ITEM_REGULAR),
 
