@@ -8,6 +8,9 @@
 	opacity = TRUE
 	unslashable = TRUE
 
+/obj/structure/bookcase/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_PAPER, -40, 5)
+
 /obj/structure/bookcase/deconstruct(disassembled)
 	new /obj/item/stack/sheet/metal(loc)
 	return ..()

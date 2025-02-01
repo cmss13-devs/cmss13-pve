@@ -123,6 +123,7 @@
 	var/icon_path
 	var/gib_state = "gibbed-a-corpse"
 	remains.pixel_x = pixel_x //For 2x2.
+	new /obj/effect/temp_visual/gib_particles(get_turf(src), get_blood_color())
 
 	if(!caste)
 		CRASH("CASTE ERROR: gib() was called without a caste. (name: [name], disposed: [QDELETED(src)], health: [health])")

@@ -15,6 +15,9 @@
 	if(fill_from_loc)
 		store_items()
 
+/obj/structure/largecrate/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -40, 5)
+
 /obj/structure/largecrate/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
 	if (PF)
@@ -85,6 +88,7 @@
 
 /obj/structure/largecrate/bullet_act(obj/projectile/P)
 	take_damage(P.calculate_damage(P.damage))
+	bullet_ping(P)
 	return TRUE
 
 /obj/structure/largecrate/mule
@@ -269,6 +273,9 @@
 	parts_type = /obj/item/stack/sheet/metal
 	unpacking_sound = 'sound/effects/metalhit.ogg'
 	var/straps = FALSE
+
+/obj/structure/largecrate/random/barrel/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -40, 8, 1)
 
 /obj/structure/largecrate/random/barrel/true_random
 	name = "barrel"

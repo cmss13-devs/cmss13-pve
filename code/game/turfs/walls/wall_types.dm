@@ -522,6 +522,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	walltype = WALL_WOOD
 	baseturfs = /turf/open/floor/wood
 
+/turf/closed/wall/wood/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -40, 5)
+
 /turf/closed/wall/wood/update_icon()
 	..()
 	if(special_icon)
@@ -541,6 +544,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	walltype = WALL_CAVE
 	hull = 1
 	color = "#535963"
+
+/turf/closed/wall/rock/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -40, 5, 1)
 
 /turf/closed/wall/rock/brown
 	color = "#826161"
@@ -638,7 +644,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	walltype = WALL_SOLARIS_ROCK
 	hull = 1
 
-
+/turf/closed/wall/solaris/rock/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -40, 5, 1)
 
 //GREYBOX DEVELOPMENT WALLS
 
@@ -670,6 +677,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "rock"
 	walltype = WALL_KUTJEVO_ROCK
 	hull = 1
+
+/turf/closed/wall/kutjevo/rock/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -40, 5, 1)
 
 /turf/closed/wall/kutjevo/rock/border
 	icon_state = "rock_border"//no sandy edges
@@ -765,6 +775,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	var/should_track_build = FALSE
 	var/datum/cause_data/construction_data
 	turf_flags = TURF_ORGANIC
+
+/turf/closed/wall/resin/add_debris_element()
+	AddElement(/datum/element/debris, null, -40, 8, 0.7)
 
 /turf/closed/wall/resin/Initialize(mapload)
 	. = ..()

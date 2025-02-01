@@ -40,8 +40,7 @@
 		return
 	if(shrapnel_count)
 		create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
-	apply_explosion_overlay()
-	cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
+	cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data, TRUE)
 	qdel(src)
 
 /obj/item/explosive/grenade/high_explosive/launch_impact(atom/hit_atom)
@@ -56,16 +55,8 @@
 		if(shrapnel_count)
 			create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
 			sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
-		apply_explosion_overlay()
-		cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
+		cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data, TRUE)
 		qdel(src)
-
-/obj/item/explosive/grenade/high_explosive/proc/apply_explosion_overlay()
-	var/obj/effect/overlay/O = new /obj/effect/overlay(loc)
-	O.name = "grenade"
-	O.icon = 'icons/effects/explosion.dmi'
-	flick("grenade", O)
-	QDEL_IN(O, 7)
 
 /obj/item/explosive/grenade/high_explosive/flamer_fire_act(damage, flame_cause_data)
 	fire_resistance--
@@ -249,9 +240,8 @@
 		if(shrapnel_count)
 			create_shrapnel(loc, shrapnel_count, last_move_dir , dispersion_angle ,shrapnel_type, cause_data, FALSE, 0)
 			sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
-		apply_explosion_overlay()
 		if(explosion_power)
-			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
+			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data, TRUE)
 		qdel(src)
 
 /obj/item/explosive/grenade/high_explosive/airburst/hornet_shell
@@ -346,7 +336,7 @@
 		detonate = FALSE
 	if(active && detonate) // Active, and we reached our destination.
 		if(explosion_power)
-			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
+			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data, TRUE)
 		qdel(src)
 
 /obj/item/explosive/grenade/high_explosive/impact/upp

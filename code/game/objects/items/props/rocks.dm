@@ -16,6 +16,9 @@
 	var/dir_list_full = list(1,2,4,8,5,6,9,10)
 	var/dir_list_limited = list(1,2,4,8)
 
+/obj/structure/rock/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -40, 5, 1)
+
 /obj/structure/prop/rock/brown//these are sprited with the same colors as the recolorable moonsand walls used on LV, Whiskey Outpost, & New Varadero (Aka Water_world.dmm)
 	icon_state = "brown"
 

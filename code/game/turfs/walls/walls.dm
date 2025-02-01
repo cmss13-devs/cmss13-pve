@@ -49,6 +49,9 @@
 
 	var/list/hiding_humans = list()
 
+/turf/closed/wall/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -40, 8, 1)
+
 /turf/closed/wall/Initialize(mapload, ...)
 	. = ..()
 	// Defer updating based on neighbors while we're still loading map
