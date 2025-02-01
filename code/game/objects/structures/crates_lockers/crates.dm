@@ -378,11 +378,11 @@
 	weapon_type = /obj/item/weapon/gun/rifle/m41a/training
 	ammo_type = /obj/item/ammo_magazine/rifle/rubber
 
-/obj/structure/closet/crate/weapon/training/m4ra
-	name = "training M4RA crate"
-	desc = "A crate with an M4RA battle rifle and nonlethal ammunition for it. Intended for use in combat exercises."
-	weapon_type = /obj/item/weapon/gun/rifle/m4ra/training
-	ammo_type = /obj/item/ammo_magazine/rifle/m4ra/rubber
+/obj/structure/closet/crate/weapon/training/m49a
+	name = "training M49A crate"
+	desc = "A crate with an M49A battle rifle and nonlethal ammunition for it. Intended for use in combat exercises."
+	weapon_type = /obj/item/weapon/gun/rifle/m49a/training
+	ammo_type = /obj/item/ammo_magazine/rifle/m49a/rubber
 
 /obj/structure/closet/crate/weapon/training/l42a
 	name = "training L42A crate"
