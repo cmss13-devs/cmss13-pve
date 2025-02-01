@@ -2,43 +2,49 @@
 	faction = FACTION_UPP
 
 /datum/human_ai_squad_preset/upp/militia
-	name = "Militia Group"
-	desc = "A small group of 5 lightly-armed UPP militiamen."
+	name = "Territorial Guard, Patrol"
+	desc = "Small Territorial Guard recon patrol armed with Type 71 rifles or KS29 pump-shotguns and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
-		/datum/equipment_preset/upp/militia = 5,
+		/datum/equipment_preset/upp/militia = 3,
 	)
 
-/datum/human_ai_squad_preset/upp/patrol
-	name = "Patrol Group"
-	desc = "A small group of 3 UPP riflemen and a machinegunner for patrolling."
+/datum/human_ai_squad_preset/upp/rifleteam
+	name = "Naval Infantry, Rifle Team"
+	desc = "Naval Infantry patrol armed with AG80 rifles and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
-		/datum/equipment_preset/upp/rifleman = 3,
+		/datum/equipment_preset/upp/rifleman = 2,
+	)
+
+/datum/human_ai_squad_preset/upp/gunteam
+	name = "Naval Infantry, Gun Team"
+	desc = "Naval Infantry patrol armed with a AG80 rifle and an QYJ-72 GPMG, and carrying IFAKs containing gauze, ointment, splints and an injector."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/rifleman = 1,
 		/datum/equipment_preset/upp/machinegunner = 1,
 	)
 
-/datum/human_ai_squad_preset/upp/medical
-	name = "Medical Response Unit"
-	desc = "Three UPP medics for medical emergency response."
-	ai_to_spawn = list(
-		/datum/equipment_preset/upp/sanitar = 3,
-	)
-
 /datum/human_ai_squad_preset/upp/squad
-	name = "Standard Squad"
-	desc = "A standard squad of 10 UPP soldiers."
+	name = "Naval Infantry, Squad"
+	desc = "Naval Infantry patrol armed with 3 AG80 rifles and an QYJ-72 GPMG, and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
-		/datum/equipment_preset/upp/rifleman = 6,
-		/datum/equipment_preset/upp/machinegunner = 2,
-		/datum/equipment_preset/upp/sanitar = 1,
+		/datum/equipment_preset/upp/rifleman = 2,
+		/datum/equipment_preset/upp/machinegunner = 1,
 		/datum/equipment_preset/upp/squadlead = 1,
 	)
 
+/datum/human_ai_squad_preset/upp/medical
+	name = "Naval Infantry, Sanitar Element"
+	desc = "Naval Infantry team armed with AG80 rifles and carrying ample medical supplies."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/sanitar = 2,
+	)
+
 /datum/human_ai_squad_preset/upp/command
-	name = "Command Element"
-	desc = "A UPP officer, platoon sergeant, and their guard team."
+	name = "Naval Infantry, Command Element"
+	desc = "Naval Infantry team armed with AG80 rifles. Best utilized as defended objective, PltCo is not armed effectively."
 	ai_to_spawn = list(
 		/datum/equipment_preset/upp/rifleman = 2,
 		/datum/equipment_preset/upp/navallead = 1,
-		/datum/equipment_preset/upp/officer = 1,
+		/datum/equipment_preset/upp/officer/naval = 1,
 	)
 
