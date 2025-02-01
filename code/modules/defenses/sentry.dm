@@ -724,10 +724,10 @@
 
 /obj/structure/machinery/defenses/sentry/launchable
 	name = "\improper UA 571-O sentry post"
-	desc = "A deployable, automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a 100-round drum magazine with 500 rounds stored internally.  Due to the deployment method it is incapable of being moved."
+	desc = "A deployable, automated turret with omni-directional coverage. Armed with an M30 Autocannon and a 100-round drum magazine with 500 rounds stored internally.  Due to the deployment method it is incapable of being moved."
 	ammo = new /obj/item/ammo_magazine/sentry/dropped
 	faction_group = FACTION_LIST_MARINE
-	omni_directional = FALSE
+	omni_directional = TRUE
 	additional_rounds_stored = TRUE
 	immobile = TRUE
 	static = TRUE
