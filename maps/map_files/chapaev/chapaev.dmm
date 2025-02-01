@@ -1942,9 +1942,12 @@
 	light_power = 0.8;
 	light_range = 5
 	},
-/obj/item/storage/box/guncase/heavy/uppfuel,
 /obj/item/storage/box/guncase/heavy/uppfuel{
-	pixel_y = 8
+	pixel_y = 3
+	},
+/obj/item/storage/box/guncase/heavy/uppfuel{
+	pixel_y = 11;
+	layer = 3.03
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5342,7 +5345,8 @@
 	},
 /obj/item/storage/box/guncase/heavy/sentryupp,
 /obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 8
+	pixel_y = 8;
+	layer = 3.03
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
