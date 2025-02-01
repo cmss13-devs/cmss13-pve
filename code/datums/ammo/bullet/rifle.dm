@@ -306,6 +306,10 @@
 	penetration = ARMOR_PENETRATION_TIER_8
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
+//10X31 AK500
+/datum/ammo/bullet/rifle/heavy/upp
+	name = "10x31 bullet"
+
 // Misc
 
 /datum/ammo/bullet/rifle/mar40
@@ -324,3 +328,4 @@
 /datum/ammo/bullet/rifle/ar10
 	name = "7.62x51 rifle bullet"
 	damage = 55
+
