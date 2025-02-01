@@ -667,22 +667,12 @@
 
 /obj/item/clothing/head/CMB
 	name = "\improper Colonial Marshal Bureau cap"
-	desc = "A black cap boldly presenting the acronym 'CMB'. Made using durable fabric, it might stop a very low caliber round from penetrating it, or a stab from piercing it. That isn't to say you won't have a dent in your head."
+	desc = "A black cap boldly presenting the acronym 'CMB'."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 	icon_state = "cmbcap"
-	flags_armor_protection = BODY_FLAG_HEAD
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	flags_cold_protection = BODY_FLAG_HEAD
-	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = NO_FLAGS
 
 /obj/item/clothing/head/freelancer
