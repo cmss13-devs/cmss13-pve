@@ -233,8 +233,7 @@
 	name = "\improper generic MRE pack"
 	trash = /obj/item/trash/USCMtray
 	w_class = SIZE_SMALL
-// HOLY SHIT THIS CRAP HASN'T BEEN TOUCHED SINCE THE FUCKING ALPHA?
-//TODO: Better meal sprites. These work even if they don't line up properly.
+
 /obj/item/reagent_container/food/snacks/mre_pack/meal1
 	name = "\improper mechanically prepared meal (chili and cornbread)"
 	desc = "An autochef prepared meal meant to imitate 'Southern' cuisine, whatever that means. Contains aggressively overseasoned chili with reconstituted beans, dry crumbly cornbread, and something that might've been gazpacho once."
