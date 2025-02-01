@@ -231,13 +231,15 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack
 	name = "\improper generic MRE pack"
+	icon = 'icons/obj/items/food_canteen.dmi'
+	icon_state = "mar_tray_empty"
 	trash = /obj/item/trash/USCMtray
 	w_class = SIZE_SMALL
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1
 	name = "\improper mechanically prepared meal (chili and cornbread)"
 	desc = "An autochef prepared meal meant to imitate 'Southern' cuisine, whatever that means. Contains aggressively overseasoned chili with reconstituted beans, dry crumbly cornbread, and something that might've been gazpacho once."
-	icon_state = "MREa"
+	icon_state = "mar_tray_menu1"
 	filling_color = "#ED1169"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1/Initialize()
@@ -248,7 +250,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/meal2
 	name = "\improper mechanically prepared meal (ham and potatoes)"
 	desc = "An autochef prepared meal of slightly undercooked ham, surprisingly good reconstituted potato wedges made with real potato powder, artificial fruit puree, and stale crackers."
-	icon_state = "MREb"
+	icon_state = "mar_tray_menu2"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2/Initialize()
 	. = ..()
@@ -258,7 +260,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/meal3
 	name = "\improper mechanically prepared meal (spaghetti)"
 	desc = "An autochef prepared meal of oversalted spaghetti in sauce and square 'beef meatballs'. On the side are perfectly baked breadsticks, an unevenly warmed hotdog, and some bland applesauce."
-	icon_state = "MREc"
+	icon_state = "mar_tray_menu3"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal3/Initialize()
 	. = ..()
@@ -268,7 +270,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/meal4
 	name = "\improper mechanically prepared meal (pizza)"
 	desc = "An autochef prepared meal of underseasoned cheese pizza dotted with little bits of sausage. On the side are some concerningly wet scrambled reconstituted eggs and sautee'd broccoli with a little freezer burn."
-	icon_state = "MREd"
+	icon_state = "mar_tray_menu4"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal4/Initialize()
 	. = ..()
@@ -278,7 +280,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/meal5
 	name = "\improper mechanically prepared meal (chicken)"
 	desc = "An autochef prepared meal of some potentially undercooked apparently halal roast chicken slices, an unidentified sauce, mixed nuts trail mix, overcooked brown rice, and a tube of cherry-flavored halal jelly that tastes pretty heavily of vitamins."
-	icon_state = "MREe"
+	icon_state = "mar_tray_menu5"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5/Initialize()
 	. = ..()
@@ -288,9 +290,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/meal6
 	name = "\improper mechanically prepared meal (vegetarian tofu)"
 	desc = "An autochef prepared meal of some surprisingly well fried tofu, stale crackers, and underseasoned breadsticks. On the side is a protein bar in mediocre strawberry."
-	//placeholder until tofu sprite.
-	//TODO: Kick that fucking 'CM Dev 7 Years Ago' asshole's fucking ass. Also get an actual sprite.
-	icon_state = "MREe"
+	icon_state = "mar_tray_menu6"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6/Initialize()
 	. = ..()
@@ -301,7 +301,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/meal7
 	name = "\improper mechanically prepared meal (macaroni and cheese)"
 	desc = "An autochef prepared meal of concerningly viscous macaroni and cheese. On the side is sautee'd broccoli with some freezer burn, a tube of cherry-and-vitamin flavor jelly, and a packet of mixed nuts trail mix."
-	icon_state = "MREmc"
+	icon_state = "mar_tray_menu7"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal7/Initialize()
 	. = ..()
@@ -312,7 +312,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1
 	name = "\improper mechanically prepared meal (sugar cookies)"
 	desc = "An autochef prepared meal of overbaked sugar cookies, a packet of what claims to be cherry cobbler, and a spiced dipping sauce that's divisive as to whether or not it goes with the cookies. On the side is a moist fruit-swirl bread roll."
-	icon_state = "mreCookies"
+	icon_state = "mar_tray_menuSC"
 	black_market_value = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1/Initialize()
@@ -324,7 +324,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/xmas2
 	name = "\improper mechanically prepared meal (gingerbread and vanilla cake)"
 	desc = "An autochef prepared meal of some oddly soft gingerbread cookies and a fairly undersweetened vanilla cake. There's a protein bar on the side and a tube of cherry flavored vitamin filled jelly."
-	icon_state = "mreGingerbread"
+	icon_state = "mar_tray_menuGV"
 	black_market_value = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas2/Initialize()
@@ -336,7 +336,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/xmas3
 	name = "\improper mechanically prepared meal (fruitcake)"
 	desc = "An autochef prepared meal of a fruitcake and applesauce. The fruitcake tastes of vitamins but is shockingly palatable even still, while the applesauce is... there?"
-	icon_state = "mreFruitcake"
+	icon_state = "mar_tray_menuFC"
 	black_market_value = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas3/Initialize()
@@ -348,7 +348,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving
 	name = "\improper mechanically prepared meal (turkey and potato)"
 	desc = "An autochef prepared meal of roast turkey slices and reconstituted potato wedges made from real potato powder. Cherry cobbler in a tube on the side and some bland applesauce in a sealed cup."
-	icon_state = "MREe"
+	icon_state = "mar_tray_menuTP"
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving/Initialize()
 	. = ..()
@@ -358,7 +358,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2
 	name = "\improper mechanically prepared meal (steak and potato)"
 	desc = "An autochef prepared meal of rare steak slices and reconstituted potato wedges made from real potato powder. Cherry cobbler in a tube on the side and some bland applesauce in a sealed cup."
-	icon_state = "MREe"
+	icon_state = "mar_tray_menuSP"
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2/Initialize()
 	. = ..()
@@ -368,7 +368,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving3
 	name = "\improper mechanically prepared meal (shrimp and rice)"
 	desc = "An autochef prepared meal of stir fried imitation shrimp and overcooked brown rice. Some mixed nuts trail mix and an unidentified sauce are on the side."
-	icon_state = "MREe"
+	icon_state = "mar_tray_menuSR"
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving3/Initialize()
 	. = ..()
