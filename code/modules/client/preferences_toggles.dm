@@ -683,6 +683,10 @@
 			H = GLOB.huds[MOB_HUD_FACTION_OBSERVER]
 		if("Xeno Status HUD")
 			H = GLOB.huds[MOB_HUD_XENO_STATUS]
+		if("Faction US Army HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_ARMY]
+		if("Faction USASF HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_NAVY]
 		if("Faction UPP HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_UPP]
 		if("Faction Wey-Yu HUD")

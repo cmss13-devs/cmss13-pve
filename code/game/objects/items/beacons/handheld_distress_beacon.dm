@@ -70,16 +70,6 @@
 	ert_paths = list(/datum/emergency_call/cmb/alt, /datum/emergency_call/cmb/anchorpoint)
 	ert_short_names = list("SEND CMB", "SEND QRF")
 
-// Corporate Lawyer beacon available for 50 points at the CLs briefcase
-/obj/item/handheld_distress_beacon/lawyer
-	name = "\improper Corporate Affairs Division handheld beacon"
-	desc = "An encoded beacon. This one is branded with the Weyland-Yutani slogan, 'Building Better Worlds since 2099'. Etched in stencil on the side is 'FOR CONTRACT BREAKERS ONLY'. This one is branded with the Corporate Affairs Division symbol and provided to most Executives situated in UA or TWE space."
-
-	beacon_type = "Lawyer beacon"
-	recipient = "the Corporate Affairs Division"
-	ert_paths = list(/datum/emergency_call/inspection_wy/lawyer) // "Lawyers - Corporate"
-	ert_short_names = list("SEND LAWYERS")
-
 // Corporate Security Bodyguard beacon available for 50 points at the CLs briefcase
 /obj/item/handheld_distress_beacon/bodyguard
 	name = "\improper Corporate Security Division handheld beacon"
@@ -89,13 +79,3 @@
 	recipient = "the Corporate Security Division"
 	ert_paths = list(/datum/emergency_call/goon/bodyguard) // "Weyland-Yutani Goon (Executive Bodyguard Detail)"
 	ert_short_names = list("SEND BODYGUARD")
-
-// Provost office distress beacon held by Inspectors+
-/obj/item/handheld_distress_beacon/provost
-	name = "\improper Provost Office handheld beacon"
-	desc = "A standard Provost Office beacon branded with the Provost Office symbol, provided to personnel for emergencies. It features an extended relay antenna and calls a squadron of Provost enforcers."
-
-	beacon_type = "Provost Enforcers beacon"
-	recipient = "the USS Superintendent"
-	ert_paths = list(/datum/emergency_call/provost_enforcer) // "USCM Provost Enforcers"
-	ert_short_names = list("SEND ENFORCERS")
