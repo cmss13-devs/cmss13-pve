@@ -662,7 +662,7 @@
 /obj/structure/machinery/defenses/sentry/premade/dropship
 	density = TRUE
 	faction_group = FACTION_LIST_MARINE
-	omni_directional = FALSE
+	omni_directional = TRUE
 	choice_categories = list()
 	selected_categories = list()
 	var/obj/structure/dropship_equipment/sentry_holder/deployment_system
