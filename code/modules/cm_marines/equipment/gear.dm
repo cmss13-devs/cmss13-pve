@@ -387,7 +387,7 @@
 	desc = "A prepackaged meal for UPP troops that sports a greasy rice patty with bits of fake imitation shrimp and egg flavoring. Smells quite off. On the side there's a slightly soggy spring roll."
 	icon_state = "upp_shrimp"
 
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal8/Initialize()
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal7/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 15)
 	bitesize = 5

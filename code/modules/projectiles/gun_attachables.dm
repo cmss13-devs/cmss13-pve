@@ -314,7 +314,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/bayonet/upp_replica
 	name = "\improper Type 80 bayonet"
 	icon_state = "upp_bayonet"
-	item_state = "combat_knife"
+	item_state = "knife"
 	attach_icon = "upp_bayonet_a"
 	desc = "The standard-issue bayonet of the UPP, it's dulled from heavy use."
 
@@ -322,7 +322,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "\improper Type 80 bayonet"
 	desc = "The standard-issue bayonet of the UPP, the Type 80 is balanced to also function as an effective throwing knife."
 	icon_state = "upp_bayonet"
-	item_state = "combat_knife"
+	item_state = "knife"
 	attach_icon = "upp_bayonet_a"
 	throwforce = MELEE_FORCE_TIER_10 //doubled by throwspeed to 100
 	throw_speed = SPEED_REALLY_FAST
