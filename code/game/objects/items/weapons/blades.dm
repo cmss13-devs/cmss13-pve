@@ -426,6 +426,12 @@
 	item_state = "knife_kabar"
 	desc = "An old school Marine Corps combat knife. The iconic look of the knife and its association with the Corps' cultural history has seen it remain popular among marines well after its replacement as standard-issue. Fits neatly into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel."
 
+/obj/item/weapon/knife/marine/baker
+	name = "\improper M1 Baker-pattern fighting knife"
+	icon_state = "knife_baker"
+	item_state = "knife_baker"
+	desc = "A modern take on an older design, issued primarily to US army members & some elements of the USASF. Fits neatly into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel."
+
 /obj/item/weapon/knife/marine/bowie
 	name = "\improper Bowie fighting knife"
 	icon_state = "knife_bowie"

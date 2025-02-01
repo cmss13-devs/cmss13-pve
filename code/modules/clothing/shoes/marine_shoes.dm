@@ -30,6 +30,7 @@
 		/obj/item/weapon/knife/marine,
 		/obj/item/weapon/knife/marine/sas,
 		/obj/item/weapon/knife/marine/kabar,
+		/obj/item/weapon/knife/marine/baker,
 	)
 	drop_sound = "armorequip"
 
@@ -68,7 +69,7 @@
 	desc = "A pair of standard issue black United States Army combat boots."
 
 /obj/item/clothing/shoes/marine/army/knife
-	spawn_item_type = /obj/item/weapon/knife/marine
+	spawn_item_type = /obj/item/weapon/knife/marine/baker
 
 /obj/item/clothing/shoes/marine/upp
 	name = "\improper UPP combat boots"
