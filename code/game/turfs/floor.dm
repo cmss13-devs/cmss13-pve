@@ -15,6 +15,7 @@
 	var/tile_type = /obj/item/stack/tile/plasteel
 	var/plating_type = /turf/open/floor/plating
 	var/tool_flags = REMOVE_CROWBAR
+	footstep_sound = "metal_footstep"
 
 /turf/open/floor/get_examine_text(mob/user)
 	. = ..()
