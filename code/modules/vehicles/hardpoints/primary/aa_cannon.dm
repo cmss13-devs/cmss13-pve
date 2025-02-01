@@ -29,6 +29,13 @@
 		"8" = list(-17, 3)
 	)
 
+	firing_smoke_offset = list(
+		"1" = list(-8, -32),
+		"2" = list(8, 32),
+		"4" = list(-32, 20),
+		"8" = list(32, 6)
+	)
+
 	scatter = 2
 	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(
@@ -41,3 +48,15 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
+
+/obj/item/hardpoint/primary/autocannon/update_smoke_dir(datum/source, dir, newdir)
+	SIGNAL_HANDLER
+	switch(newdir)
+		if(SOUTH)
+			smoke_holder.particles.position = list(55, 70, 0)
+		if(NORTH)
+			smoke_holder.particles.position = list(50, 55, 0)
+		if(EAST)
+			smoke_holder.particles.position = list(45, 80, 0)
+		if(WEST)
+			smoke_holder.particles.position = list(50, 72, 0)

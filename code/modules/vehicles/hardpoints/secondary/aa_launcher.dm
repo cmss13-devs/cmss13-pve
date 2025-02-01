@@ -30,6 +30,7 @@
 
 	scatter = 1
 	fire_delay = 7.0 SECONDS
+	firing_smoke = FALSE
 
 /obj/item/hardpoint/secondary/towlauncher/aa/set_bullet_traits()
 	..()

@@ -1,3 +1,24 @@
+/particles/tank_wreck_smoke
+	icon = 'icons/effects/96x96.dmi'
+	icon_state = "smoke3"
+	width = 1000
+	height = 1000
+	count = 120
+	spawning = 8
+	gradient = list("#333333", "#808080", "#FFFFFF")
+	lifespan = 20
+	fade = 45
+	fadein = 3
+	color = generator(GEN_NUM, 0, 0.025, NORMAL_RAND)
+	color_change = generator(GEN_NUM, 0.04, 0.05)
+	velocity = generator(GEN_CIRCLE, 5, 5, SQUARE_RAND)
+	drift = generator(GEN_CIRCLE, 0, 1, NORMAL_RAND)
+	spin = generator(GEN_NUM, -20, 20)
+	friction = generator(GEN_NUM, 0.1, 0.5)
+	gravity = list(1, 2)
+	scale = 0.075
+	grow = 0.04
+
 /**
  * Hardpoints are any items that attach to a base vehicle, such as wheels/treads, support systems and guns
  */
@@ -77,6 +98,23 @@
 	var/underlayer_north_muzzleflash = FALSE
 	var/angle_muzzleflash = TRUE
 
+	//Particles
+	///Does it use firing smoke particles when firing
+	var/firing_smoke = TRUE
+	///Does hardpoint emit smoke when destroyed
+	var/destroyed_smoke = FALSE
+	///particle holder for smoke effects
+	var/obj/effect/abstract/particle_holder/smoke_holder
+	///Holder for smoke del timer
+	var/smoke_del_timer
+	///Offset for smoke firing particles
+	var/list/firing_smoke_offset = list(
+		"1" = list(0, 0),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
+	)
+
 	//------AMMUNITION VARS----------
 
 	/// Currently loaded ammo that we shoot from.
@@ -152,6 +190,7 @@
 		owner = null
 	QDEL_NULL_LIST(backup_clips)
 	QDEL_NULL(ammo)
+	QDEL_NULL(smoke_holder)
 	set_target(null)
 	return ..()
 
@@ -197,7 +236,30 @@
 		on_destroy()
 
 /obj/item/hardpoint/proc/on_destroy()
+	if(destroyed_smoke)
+		smoke_holder = new(owner, /particles/tank_wreck_smoke)
+		update_smoke_dir(newdir = dir)
+		smoke_del_timer = addtimer(CALLBACK(src, PROC_REF(del_smoke)), 10 MINUTES, TIMER_STOPPABLE)
+		RegisterSignal(src, COMSIG_ATOM_DIR_CHANGE, PROC_REF(update_smoke_dir))
 	return
+
+///Updates the wreck smoke position
+/obj/item/hardpoint/proc/update_smoke_dir(datum/source, dir, newdir)
+	SIGNAL_HANDLER
+	switch(newdir)
+		if(SOUTH)
+			smoke_holder.particles.position = list(54, 88, 0)
+		if(NORTH)
+			smoke_holder.particles.position = list(54, 80, 0)
+		if(EAST)
+			smoke_holder.particles.position = list(54, 85, 0)
+		if(WEST)
+			smoke_holder.particles.position = list(60, 85, 0)
+
+///Deletes the wreck smoke particle holder
+/obj/item/hardpoint/proc/del_smoke()
+	QDEL_NULL(smoke_holder)
+	UnregisterSignal(owner, COMSIG_ATOM_DIR_CHANGE)
 
 /obj/item/hardpoint/proc/is_activatable()
 	if(health <= 0)
@@ -607,9 +669,17 @@
 
 	shots_fired++
 	play_firing_sounds()
+	var/firing_angle = Get_Angle(origin_turf, target)
+	if(firing_smoke)
+		var/x_component = sin(firing_angle) * 40
+		var/y_component = cos(firing_angle) * 40
+		var/obj/effect/abstract/particle_holder/gun_smoke = new(get_turf(src), /particles/firing_smoke)
+		gun_smoke.particles.velocity = list(x_component, y_component)
+		gun_smoke.particles.position = list(firing_smoke_offset["[dir]"][1], firing_smoke_offset["[dir]"][2] + 6)
+		addtimer(VARSET_CALLBACK(gun_smoke.particles, count, 0), 5)
+		QDEL_IN(gun_smoke, 0.6 SECONDS)
 	if(use_muzzle_flash)
-		muzzle_flash(Get_Angle(origin_turf, target))
-
+		muzzle_flash(firing_angle)
 	set_fire_cooldown(gun_firemode)
 
 	return AUTOFIRE_CONTINUE

@@ -26,6 +26,13 @@
 		"8" = list(-77, 0)
 	)
 
+	firing_smoke_offset = list(
+		"1" = list(0, 78),
+		"2" = list(0, -50),
+		"4" = list(78, 20),
+		"8" = list(-78, 20)
+	)
+
 	scatter = 3
 	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(
@@ -87,3 +94,15 @@
 	if(old_stage_rate != new_stage_rate)
 		stage_delay_mult = 1 / new_stage_rate
 		SEND_SIGNAL(src, COMSIG_GUN_AUTOFIREDELAY_MODIFIED, fire_delay * stage_delay_mult)
+
+/obj/item/hardpoint/primary/minigun/update_smoke_dir(datum/source, dir, newdir)
+	SIGNAL_HANDLER
+	switch(newdir)
+		if(SOUTH)
+			smoke_holder.particles.position = list(55, 70, 0)
+		if(NORTH)
+			smoke_holder.particles.position = list(50, 55, 0)
+		if(EAST)
+			smoke_holder.particles.position = list(45, 70, 0)
+		if(WEST)
+			smoke_holder.particles.position = list(50, 72, 0)

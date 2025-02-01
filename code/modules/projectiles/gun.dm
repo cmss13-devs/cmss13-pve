@@ -12,7 +12,7 @@
 	fade = 2.2 SECONDS
 	grow = 0.12
 	drift = generator(GEN_CIRCLE, 8, 8)
-	scale = 0.1
+	scale = 0.15
 	spin = generator(GEN_NUM, -20, 20)
 	velocity = list(50, 0)
 	friction = generator(GEN_NUM, 0.3, 0.6)

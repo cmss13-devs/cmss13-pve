@@ -27,6 +27,14 @@
 		"4" = list(16, 3),
 		"8" = list(-16, 3)
 	)
+
+	firing_smoke_offset = list(
+		"1" = list(0, 17),
+		"2" = list(0, -17),
+		"4" = list(16, 13),
+		"8" = list(-16, 13)
+	)
+
 	gun_firemode = GUN_FIREMODE_BURSTFIRE
 	gun_firemode_list = list(
 		GUN_FIREMODE_BURSTFIRE,
@@ -192,3 +200,15 @@
 		return FALSE
 
 	return ..()
+
+/obj/item/hardpoint/primary/arc_sentry/update_smoke_dir(datum/source, dir, newdir)
+	SIGNAL_HANDLER
+	switch(newdir)
+		if(SOUTH)
+			smoke_holder.particles.position = list(44, 58, 0)
+		if(NORTH)
+			smoke_holder.particles.position = list(44, 54, 0)
+		if(EAST)
+			smoke_holder.particles.position = list(50, 62, 0)
+		if(WEST)
+			smoke_holder.particles.position = list(50, 62, 0)

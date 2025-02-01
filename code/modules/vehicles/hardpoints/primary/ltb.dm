@@ -27,6 +27,13 @@
 		"8" = list(-89, -4)
 	)
 
+	firing_smoke_offset = list(
+		"1" = list(0, 78),
+		"2" = list(0, -50),
+		"4" = list(78, 20),
+		"8" = list(-78, 20)
+	)
+
 	scatter = 0
 	fire_delay = 10.0 SECONDS
 
@@ -35,3 +42,15 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
+
+/obj/item/hardpoint/primary/cannon/update_smoke_dir(datum/source, dir, newdir)
+	SIGNAL_HANDLER
+	switch(newdir)
+		if(SOUTH)
+			smoke_holder.particles.position = list(55, 70, 0)
+		if(NORTH)
+			smoke_holder.particles.position = list(50, 55, 0)
+		if(EAST)
+			smoke_holder.particles.position = list(45, 70, 0)
+		if(WEST)
+			smoke_holder.particles.position = list(50, 72, 0)

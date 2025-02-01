@@ -588,6 +588,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	walltype = WALL_JUNGLE_UPDATED //Not a metal wall
 	hull = 1
 
+/turf/closed/wall/strata_ice/jungle/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_LEAF, -40, 5)
+
 /turf/closed/wall/strata_outpost_ribbed //this guy is our reinforced replacement
 	name = "ribbed outpost walls"
 	icon = 'icons/turf/walls/strata_outpost.dmi'

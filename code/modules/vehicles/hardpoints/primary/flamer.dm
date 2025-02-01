@@ -21,6 +21,7 @@
 	)
 
 	use_muzzle_flash = FALSE
+	firing_smoke = FALSE
 
 	scatter = 5
 	fire_delay = 2.0 SECONDS
@@ -37,3 +38,15 @@
 		return NONE
 
 	return ..()
+
+/obj/item/hardpoint/primary/flamer/update_smoke_dir(datum/source, dir, newdir)
+	SIGNAL_HANDLER
+	switch(newdir)
+		if(SOUTH)
+			smoke_holder.particles.position = list(55, 70, 0)
+		if(NORTH)
+			smoke_holder.particles.position = list(50, 55, 0)
+		if(EAST)
+			smoke_holder.particles.position = list(45, 70, 0)
+		if(WEST)
+			smoke_holder.particles.position = list(50, 72, 0)

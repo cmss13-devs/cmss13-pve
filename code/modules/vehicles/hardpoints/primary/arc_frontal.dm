@@ -29,9 +29,28 @@
 		"8" = list(-17, 3)
 	)
 
+	firing_smoke_offset = list(
+		"1" = list(0, 17),
+		"2" = list(0, -17),
+		"4" = list(16, 13),
+		"8" = list(-16, 13)
+	)
+
 	scatter = 1
 	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
 	)
 	fire_delay = 0.05 SECONDS
+
+/obj/item/hardpoint/primary/arc_frontalcannon/update_smoke_dir(datum/source, dir, newdir)
+	SIGNAL_HANDLER
+	switch(newdir)
+		if(SOUTH)
+			smoke_holder.particles.position = list(44, 58, 0)
+		if(NORTH)
+			smoke_holder.particles.position = list(44, 54, 0)
+		if(EAST)
+			smoke_holder.particles.position = list(50, 62, 0)
+		if(WEST)
+			smoke_holder.particles.position = list(50, 62, 0)
