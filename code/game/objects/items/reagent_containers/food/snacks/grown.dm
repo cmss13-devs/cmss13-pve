@@ -544,6 +544,33 @@
 	plantname = "glowshroom"
 	black_market_value = 20
 
+/obj/item/reagent_container/food/snacks/grown/mushroom/doorknob
+	name = "doorknob mushroom"
+	desc = "<I>Doorus Knobbicus</I>: A probably tasty looking mushroom."
+	icon_state = "doorknob_big"
+	filling_color = "#4d4d4d"
+	plantname = "doorknob"
+
+/obj/item/reagent_container/food/snacks/grown/mushroom/steelhelmet
+	name = "steel-helmet mushroom"
+	desc = "<I>Ferrum Hellmus</I>: A close relative of the plump-helmet mushroom, the steel-helmet is remarkably similar in all aspects. One may notice the gray coloration and the flattened head, reminiscent of a steel helmet."
+	icon_state = "steelhelmet"
+	filling_color = "#4d4d4d"
+	plantname = "steelhelmet"
+
+/obj/item/reagent_container/food/snacks/grown/mushroom/bluewhale
+	name = "blue-whale mushroom"
+	desc = "<I>Blueicus Whallus</I>: A big chunky mushroom that just loooves to soak up all the water around it."
+	icon_state = "bluewhale"
+	filling_color = "#4a4d50"
+	plantname = "bluewhale"
+
+/obj/item/reagent_container/food/snacks/grown/mushroom/bluewhale/small
+	desc = "<I>Blueicus Whallus</I>: A big chunky mushroom that just loooves to soak up all the water around it. This one is...particularly small."
+	icon_state = "bluewhale_small"
+
+/obj/item/reagent_container/food/snacks/grown/mushroom/bluewhale
+
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom/attack_self(mob/user)
 	..()
 
