@@ -416,8 +416,8 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
 "ck" = (
-/obj/structure/window/framed/strata/reinforced,
-/turf/open/floor/plating,
+/obj/structure/window/framed/upp/grey,
+/turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
 "cq" = (
 /obj/structure/machinery/disposal{
@@ -450,13 +450,16 @@
 /area/golden_arrow/cryo_cells)
 "cH" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
 /obj/structure/machinery/computer/secure_data/noaccess{
 	dir = 4;
 	pixel_x = 2;
 	pixel_y = 2
+	},
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
@@ -519,7 +522,8 @@
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
 	job = "Squad Sergeant";
-	pixel_x = -7
+	pixel_x = -7;
+	can_block_movement = 0
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -583,12 +587,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
-"dL" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 1
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms)
 "dP" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -931,7 +929,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/obj/structure/curtain/red{
+/obj/structure/curtain/blue{
 	pixel_y = 4
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -1366,10 +1364,11 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/reagent_container/food/drinks/dry_ramen,
-/obj/item/reagent_container/food/drinks/dry_ramen{
-	pixel_x = 7;
-	pixel_y = -2
+/obj/item/prop/magazine/book{
+	desc = "A science fiction novel of Russian origin. You should probably actually read it instead of passing off your knowledge of the movie as knowlege of the book.";
+	name = "Roadside Picnic";
+	pixel_y = 3;
+	pixel_x = -3
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
@@ -1425,7 +1424,8 @@
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
 	job = "Section Sergeant";
-	pixel_x = -7
+	pixel_x = -7;
+	can_block_movement = 0
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -1493,7 +1493,8 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	pixel_x = 8
+	pixel_x = 8;
+	can_block_movement = 0
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -1792,6 +1793,9 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "lB" = (
@@ -1890,7 +1894,7 @@
 /obj/item/paper_bin{
 	pixel_y = 6
 	},
-/obj/item/tool/pen,
+/obj/item/tool/pen/clicky,
 /obj/item/book/codebook/upp{
 	icon_state = "book_green";
 	pixel_y = 4;
@@ -2707,7 +2711,7 @@
 	color = "#8B9490";
 	anchored = 1
 	},
-/obj/structure/curtain/red{
+/obj/structure/curtain/blue{
 	pixel_y = 4
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -3313,7 +3317,8 @@
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
 	job = "Corpsman";
-	pixel_x = -7
+	pixel_x = -7;
+	can_block_movement = 0
 	},
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -3503,12 +3508,6 @@
 	},
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
-	},
-/obj/item/prop/magazine/book{
-	desc = "A science fiction novel of Russian origin. You should probably actually read it instead of passing off your knowledge of the movie as knowlege of the book.";
-	name = "Roadside Picnic";
-	pixel_y = 3;
-	pixel_x = -3
 	},
 /obj/structure/sign/safety/bathunisex{
 	pixel_y = -26;
@@ -3832,7 +3831,9 @@
 	light_range = 1
 	},
 /obj/structure/bed/chair/comfy/black{
-	dir = 1
+	dir = 1;
+	pixel_x = 16;
+	buckling_x = 16
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4619,6 +4620,11 @@
 	pixel_x = -22;
 	pixel_y = 8
 	},
+/obj/structure/machinery/light/small{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "Cx" = (
@@ -5398,7 +5404,8 @@
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
 	job = "Squad Sergeant";
-	pixel_x = 8
+	pixel_x = 8;
+	can_block_movement = 0
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -5449,7 +5456,8 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	pixel_x = -7
+	pixel_x = -7;
+	can_block_movement = 0
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -5638,6 +5646,9 @@
 	icon_state = "E"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "Ii" = (
@@ -5755,10 +5766,6 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
-"IC" = (
-/obj/structure/disposalpipe/segment,
-/turf/open/space/basic,
-/area/space)
 "IH" = (
 /obj/structure/machinery/prop/almayer/computer{
 	dir = 8;
@@ -5946,7 +5953,8 @@
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
 	job = "Smartgunner";
-	pixel_x = 8
+	pixel_x = 8;
+	can_block_movement = 0
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -5971,7 +5979,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
 "JU" = (
-/obj/structure/curtain/red,
+/obj/structure/curtain/blue,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
 "JZ" = (
@@ -5989,7 +5997,8 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	pixel_x = 8
+	pixel_x = 8;
+	can_block_movement = 0
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -6106,7 +6115,17 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/structure/machinery/computer3/laptop/secure_data,
+/obj/item/paper_bin{
+	pixel_y = 6;
+	pixel_x = 7
+	},
+/obj/item/folder/black,
+/obj/item/tool/pen/clicky,
+/obj/item/book/codebook/upp{
+	icon_state = "book_green";
+	pixel_y = 4;
+	pixel_x = -1
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "KO" = (
@@ -6369,7 +6388,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/obj/structure/curtain/red{
+/obj/structure/curtain/blue{
 	pixel_y = 4
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -6440,9 +6459,7 @@
 /obj/item/paper_bin{
 	pixel_y = 5
 	},
-/obj/item/tool/pen{
-	pixel_x = 6
-	},
+/obj/item/tool/pen/clicky,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/platoon_commander_rooms)
 "Nv" = (
@@ -6895,7 +6912,7 @@
 /obj/item/paper{
 	pixel_x = 5
 	},
-/obj/item/tool/pen,
+/obj/item/tool/pen/clicky,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
@@ -7132,6 +7149,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/structure/curtain/open/medical,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/medical)
 "RP" = (
@@ -7346,7 +7364,8 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	pixel_x = -7
+	pixel_x = -7;
+	can_block_movement = 0
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -7877,7 +7896,8 @@
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
 	job = "Smartgunner";
-	pixel_x = 8
+	pixel_x = 8;
+	can_block_movement = 0
 	},
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
@@ -7902,6 +7922,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "Xk" = (
@@ -8158,6 +8181,9 @@
 	light_color = "#67bb94";
 	light_range = 1
 	},
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/platoon_commander_rooms)
 "YH" = (
@@ -8207,6 +8233,29 @@
 	dir = 4;
 	pixel_y = 10
 	},
+/obj/structure/closet/crate/secure/upp/alt,
+/obj/item/reagent_container/food/drinks/dry_ramen{
+	randpixel = 12
+	},
+/obj/item/reagent_container/food/drinks/dry_ramen{
+	randpixel = 12
+	},
+/obj/item/reagent_container/food/drinks/dry_ramen{
+	randpixel = 12
+	},
+/obj/item/reagent_container/food/drinks/dry_ramen{
+	randpixel = 12
+	},
+/obj/item/reagent_container/food/drinks/dry_ramen{
+	randpixel = 12
+	},
+/obj/item/reagent_container/food/drinks/dry_ramen{
+	randpixel = 12
+	},
+/obj/item/reagent_container/food/snacks/upp,
+/obj/item/reagent_container/food/snacks/upp,
+/obj/item/reagent_container/food/snacks/upp,
+/obj/item/reagent_container/food/snacks/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "YP" = (
@@ -8221,6 +8270,7 @@
 	icon_state = "W";
 	layer = 2.5
 	},
+/obj/structure/curtain/open/medical,
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/medical)
 "YU" = (
@@ -21536,8 +21586,8 @@ Pu
 FT
 Su
 fY
-IC
-IC
+mV
+mV
 mV
 mV
 mV
@@ -29947,7 +29997,7 @@ mV
 mV
 xp
 kA
-dL
+YU
 Qa
 Qa
 ub
