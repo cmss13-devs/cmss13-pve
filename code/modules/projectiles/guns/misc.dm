@@ -7,6 +7,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/event.dmi'
 	icon_state = "painless"
 	item_state = "painless"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 	fire_sound = 'sound/weapons/gun_minigun.ogg'
 	cocked_sound = 'sound/weapons/gun_minigun_cocked.ogg'
@@ -21,9 +22,6 @@
 /obj/item/weapon/gun/minigun/Initialize(mapload, spawn_empty)
 	. = ..()
 	if(current_mag && current_mag.current_rounds > 0) load_into_chamber()
-
-/obj/item/weapon/gun/minigun/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 /obj/item/weapon/gun/minigun/set_gun_config_values()
 	..()
@@ -71,6 +69,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "m60"
 	item_state = "m60"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 	fire_sound = 'sound/weapons/gun_m60.ogg'
 	cocked_sound = 'sound/weapons/gun_m60_cocked.ogg'
@@ -90,6 +89,7 @@
 	)
 	start_semiauto = FALSE
 	start_automatic = TRUE
+
 	var/cover_open = FALSE //if the gun's feed-cover is open or not.
 
 
@@ -98,12 +98,8 @@
 	if(current_mag && current_mag.current_rounds > 0)
 		load_into_chamber()
 
-/obj/item/weapon/gun/m60/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
-
 /obj/item/weapon/gun/m60/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 37, "muzzle_y" = 16, "rail_x" = 0, "rail_y" = 0, "under_x" = 27, "under_y" = 12, "stock_x" = 10, "stock_y" = 14)
-
 
 /obj/item/weapon/gun/m60/set_gun_config_values()
 	..()
