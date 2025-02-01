@@ -446,6 +446,54 @@
 		source_image.pixel_x = 16
 		overlays += source_image
 
+/obj/item/storage/box/guncase/heavy/uppfuel
+	name = "\improper LPO80 fuel canister case"
+	desc = "A heavy case containing six fuel canisters for the LPO80 incinerator unit."
+	icon_state = "uppfuelcase"
+	storage_slots = 6
+	can_hold = list(/obj/item/ammo_magazine/flamer_tank)
+
+/obj/item/storage/box/guncase/heavy/uppfuel/fill_preset_inventory()
+	new /obj/item/ammo_magazine/flamer_tank/upp(src)
+	new /obj/item/ammo_magazine/flamer_tank/upp(src)
+	new /obj/item/ammo_magazine/flamer_tank/upp(src)
+	new /obj/item/ammo_magazine/flamer_tank/upp(src)
+	new /obj/item/ammo_magazine/flamer_tank/upp(src)
+	new /obj/item/ammo_magazine/flamer_tank/upp(src)
+
+/obj/item/storage/box/guncase/heavy/uppfuel/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppbigcasealt_lid_open")
+	else
+		overlays += image(icon, "uppfuelcase_lid")
+		return
+
+	if(length(contents) >= 1)
+		var/image/source_image = image(icon, "+uppfuel_bottom")
+		source_image.pixel_x = 0
+		overlays += source_image
+	if(length(contents) >= 2)
+		var/image/source_image = image(icon, "+uppfuel_bottom")
+		source_image.pixel_x = 8
+		overlays += source_image
+	if(length(contents) >= 3)
+		var/image/source_image = image(icon, "+uppfuel_bottom")
+		source_image.pixel_x = 16
+		overlays += source_image
+	if(length(contents) >= 4)
+		var/image/source_image = image(icon, "+uppfuel")
+		source_image.pixel_x = 0
+		overlays += source_image
+	if(length(contents) >= 5)
+		var/image/source_image = image(icon, "+uppfuel")
+		source_image.pixel_x = 8
+		overlays += source_image
+	if(length(contents) >= 6)
+		var/image/source_image = image(icon, "+uppfuel")
+		source_image.pixel_x = 16
+		overlays += source_image
+
 //------------
 /obj/item/storage/box/guncase/m56d
 	name = "\improper M56D heavy machine gun case"

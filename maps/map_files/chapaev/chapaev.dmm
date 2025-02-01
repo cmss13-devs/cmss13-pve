@@ -1953,8 +1953,9 @@
 	light_power = 0.8;
 	light_range = 5
 	},
-/obj/structure/surface/rack{
-	color = "#8B9490"
+/obj/item/storage/box/guncase/heavy/uppfuel,
+/obj/item/storage/box/guncase/heavy/uppfuel{
+	pixel_y = 8
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -4896,11 +4897,14 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "DZ" = (
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stacked";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+/obj/item/weapon/gun/flamer/upp{
+	current_mag = null
+	},
+/obj/item/weapon/gun/flamer/upp{
+	current_mag = null
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
