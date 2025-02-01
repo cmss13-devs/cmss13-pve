@@ -5328,8 +5328,8 @@
 /area/whiskey_outpost/outside/lane/four_north)
 "xB" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_box/magazine/m4ra,
-/obj/item/ammo_box/magazine/m4ra,
+/obj/item/ammo_box/magazine/m49a,
+/obj/item/ammo_box/magazine/m49a,
 /obj/structure/machinery/light/small,
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/inside/bunker)
