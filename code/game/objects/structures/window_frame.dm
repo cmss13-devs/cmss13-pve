@@ -99,15 +99,15 @@
 			SEND_SIGNAL(user, COMSIG_MOB_CONSTRUCT_WINDOW, window_type)
 			qdel(src)
 
-/* 	else if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+	else if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 		if(buildstacktype)
 			to_chat(user, SPAN_NOTICE(" You start to deconstruct [src]."))
 			playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
-			if(do_after(user, 30 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD)) // takes 3 seconds to deconstruct
+			if(do_after(user, 240 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD)) // takes 3 seconds to deconstruct
 				playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 				to_chat(user, SPAN_NOTICE("You deconstruct [src]."))
 				SEND_SIGNAL(user, COMSIG_MOB_DISASSEMBLE_W_FRAME, src)
-				deconstruct() */
+				deconstruct()
 
 	else if(istype(W, /obj/item/grab))
 		var/obj/item/grab/G = W
