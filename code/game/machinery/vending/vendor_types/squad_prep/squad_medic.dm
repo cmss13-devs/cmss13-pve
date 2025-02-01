@@ -54,7 +54,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 		list("G2 Electroshock Grenade Packet (x3 grenades)",  16, /obj/item/storage/box/packet/sebb, null, VENDOR_ITEM_REGULAR),
 
 		list("PRIMARY AMMUNITION", 0, null, null, null),
-		list("M4RA AP Magazine (10x24mm)", 6, /obj/item/ammo_magazine/rifle/m4ra/ap, null, VENDOR_ITEM_REGULAR),
+		list("M49A AP Magazine (10x24mm)", 6, /obj/item/ammo_magazine/rifle/m49a/ap, null, VENDOR_ITEM_REGULAR),
 		list("M39 AP Magazine (10x20mm)", 6, /obj/item/ammo_magazine/smg/m39/ap , null, VENDOR_ITEM_REGULAR),
 		list("M39 Extended Magazine (10x20mm)", 6, /obj/item/ammo_magazine/smg/m39/extended , null, VENDOR_ITEM_REGULAR),
 		list("M41A AP Magazine (10x24mm)", 6, /obj/item/ammo_magazine/rifle/ap , null, VENDOR_ITEM_REGULAR),
@@ -344,6 +344,12 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 		list("Pill Bottle (Nitrogen-Water)", 40, /obj/item/storage/pill_bottle/nitrogenwater, null, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Dexalin+)", 40, /obj/item/storage/pill_bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Iron)", 40, /obj/item/storage/pill_bottle/iron, null, VENDOR_ITEM_REGULAR),
+
+		list("LIQUID BOTTLES", 0, null, null, null),
+		list("Liquid Bottle (Imidazoline-Alkysine)", 40, /obj/item/reagent_container/glass/bottle/imialk, null, VENDOR_ITEM_REGULAR),
+		list("Liquid Bottle (Meralyne-Bicardine)", 40, /obj/item/reagent_container/glass/bottle/merabica, null, VENDOR_ITEM_REGULAR),
+		list("Liquid Bottle (Kelotane-Dermaline)", 40, /obj/item/reagent_container/glass/bottle/keloderm, null, VENDOR_ITEM_REGULAR),
+		list("Liquid Bottle (Dexalin+)", 40, /obj/item/reagent_container/glass/bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/gear/medic_chemical
