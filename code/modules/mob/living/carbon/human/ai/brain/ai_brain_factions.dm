@@ -2,7 +2,7 @@
 	/// What actual faction is this faction tied to
 	var/faction = FACTION_NEUTRAL
 	/// If FALSE, the AI will not intentionally kill enemies. The enemies may still be killed by crossfire, explosives, etc.
-	VAR_PROTECTED/shoot_to_kill = TRUE
+	VAR_PROTECTED/shoot_to_kill = FALSE
 
 	VAR_PROTECTED/list/enter_combat_lines = list()
 	VAR_PROTECTED/list/exit_combat_lines = list()
