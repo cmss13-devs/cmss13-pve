@@ -183,9 +183,9 @@
 
 /obj/item/trash/USCMtray
 	name = "\improper empty meal tray"
-	desc = "An empty meal tray made of a space age alloy. Commonly seen on the frontier and in military service."
-	icon = 'icons/obj/items/food_canteen.dmi'
-	icon_state = "tray"
+	desc = "An empty meal tray made of a space age plastoid. Commonly seen on the frontier and in military service."
+	icon = 'icons/obj/items/food.dmi'
+	icon_state = "MREempty"
 
 /obj/item/trash/UPPtray
 	name = "\improper UPP Tray"
