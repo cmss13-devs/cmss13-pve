@@ -25,8 +25,8 @@
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE //Let's make these keep their name and icon.
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc
-	name = "\improper M4 pattern PMC armor"
-	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind."
+	name = "\improper WY tactical armor"
+	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries."
 	icon_state = "pmc_armor"
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
@@ -58,8 +58,7 @@
 	item_state_slots = list(WEAR_JACKET = "pmc_armor")
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light
-	name = "\improper M4 pattern light PMC armor"
-	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. Has some armor plating removed for extra mobility."
+	name = "\improper WY light tactical armor"
 	icon_state = "pmc_sniper"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUM
