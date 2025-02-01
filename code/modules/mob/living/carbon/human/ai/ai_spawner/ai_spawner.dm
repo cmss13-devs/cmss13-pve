@@ -13,7 +13,7 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 				lazy_ui_data[preset_type::faction] = list()
 
 			var/datum/human_ai_equipment_preset/preset_obj = new preset_type()
-			GLOB.human_ai_squad_presets["[preset_type]"] = preset_obj
+			GLOB.human_ai_equipment_presets["[preset_type]"] = preset_obj
 
 			lazy_ui_data[preset_type::faction] += list(list(
 				"name" = preset_obj.name,

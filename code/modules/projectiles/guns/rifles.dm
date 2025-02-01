@@ -461,7 +461,7 @@
 	item_state = "m20a"
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	fire_sound = "gun_pulse"
+	fire_sound = "gun_oldpulse"
 	current_mag = /obj/item/ammo_magazine/rifle/m20a
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -915,7 +915,7 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 
 /obj/item/weapon/gun/rifle/mar40/lmg/tactical
-	desc = "A cheap, reliable LMG chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals. This one has been equipped with an after-market ammo-counter."
+	desc = "A cheap, reliable  chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals. This one has been equipped with an after-market ammo-counter."
 	starting_attachment_types = list(/obj/item/attachable/mar50barrel, /obj/item/attachable/bipod, /obj/item/attachable/magnetic_harness)
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
 //-------------------------------------------------------
@@ -1261,26 +1261,23 @@
 
 /obj/item/weapon/gun/rifle/lmg
 	name = "\improper M41AE2 heavy pulse rifle"
-	desc = "A large squad support weapon capable of laying down sustained suppressing fire from a mounted position. While unstable and less accurate, it can be lugged and shot with two hands. Like it's smaller brothers, the M41A MK2 and M4RA, the M41AE2 is chambered in 10mm."
+	desc = "Heavy barreled higher capacity variant of the M41A. Greater sustained firepower and total ammunition carried, offset by removal of the grenade launcher and worsened handling."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m41ae2"
 	item_state = "m41ae2"
 
 	reload_sound = 'sound/weapons/handling/hpr_reload.ogg'
 	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
-	fire_sound = 'sound/weapons/gun_hpr.ogg'
+	fire_sound = "gun_pulse"
 	aim_slowdown = SLOWDOWN_ADS_LMG
-	current_mag = /obj/item/ammo_magazine/rifle/lmg
-	starting_attachment_types = list(/obj/item/attachable/bipod)
+	current_mag = /obj/item/ammo_magazine/hpr_box
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/flashlight,
-		/obj/item/attachable/bipod,
+		/obj/item/attachable/bipod/integral,
+		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/burstfire_assembly,
@@ -1288,43 +1285,47 @@
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/sling,
 	)
+	starting_attachment_types = list(/obj/item/attachable/bipod/integral, /obj/item/attachable/stock/rifle/collapsible)
 
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WIELDED_FIRING_ONLY|GUN_SUPPORT_PLATFORM
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	gun_category = GUN_CATEGORY_HEAVY
+	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/lmg/get_mouse_pointer()
 	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 23, "under_y" = 12, "stock_x" = 24, "stock_y" = 12)
-
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_LMG)
-	set_burst_amount(BURST_AMOUNT_TIER_5)
-	set_burst_delay(FIRE_DELAY_TIER_LMG)
-	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_3
-	fa_max_scatter = SCATTER_AMOUNT_TIER_4
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_4)
+	set_burst_delay(FIRE_DELAY_TIER_11)
+	//hopefully, this will give it some reason to not just hold down trigger? Long lethal bursts.
+	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_2
+	fa_max_scatter = SCATTER_AMOUNT_NEURO
 	accuracy_mult = BASE_ACCURACY_MULT
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
-	scatter = SCATTER_AMOUNT_TIER_6
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_5
-	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT
-	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_4
+	burst_scatter_mult = -SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_1
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+	aim_slowdown = SLOWDOWN_ADS_LMG
+	wield_delay = WIELD_DELAY_SLOW
 
 
 /obj/item/weapon/gun/rifle/lmg/tactical
-	current_mag = /obj/item/ammo_magazine/rifle/lmg/ap
+	current_mag = /obj/item/ammo_magazine/hpr_box/ap
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip)
 /obj/item/weapon/gun/rifle/lmg/tactical/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
 
 /obj/item/weapon/gun/rifle/lmg/army
-	current_mag = /obj/item/ammo_magazine/rifle/lmg/ap
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel, /obj/item/attachable/bipod)
+	current_mag = /obj/item/ammo_magazine/hpr_box/ap
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel, /obj/item/attachable/bipod/integral)
 /obj/item/weapon/gun/rifle/lmg/army/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
@@ -1612,17 +1613,17 @@
 
 	//-------------------------------------------------------
 
-//M4RA Battle Rifle, standard USCM DMR
+//M49A Battle Rifle, standard USCM DMR
 
-/obj/item/weapon/gun/rifle/m4ra
-	name = "\improper M4RA battle rifle"
-	desc = "The M4RA battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams.\nTakes *only* non-high-velocity M4RA magazines."
-	icon_state = "m4ra"
-	item_state = "m4ra"
-	fire_sound = 'sound/weapons/gun_m4ra.ogg'
+/obj/item/weapon/gun/rifle/m49a
+	name = "\improper M49A battle rifle"
+	desc = "The M49A battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M49A battle rifle is perfect for reconnaissance and fire support teams.\nTakes *only* non-high-velocity M49A magazines."
+	icon_state = "m49a"
+	item_state = "m49a"
+	fire_sound = 'sound/weapons/gun_m49a.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/rifle/m4ra
+	current_mag = /obj/item/ammo_magazine/rifle/m49a
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/bayonet,
@@ -1651,13 +1652,13 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	//map_specific_decoration = TRUE
 
-/obj/item/weapon/gun/rifle/m4ra/get_mouse_pointer()
+/obj/item/weapon/gun/rifle/m49a/get_mouse_pointer()
 	return 'icons/effects/mouse_pointer/sniper_mouse.dmi'
 
-/obj/item/weapon/gun/rifle/m4ra/set_gun_attachment_offsets()
+/obj/item/weapon/gun/rifle/m49a/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 21, "under_x" = 30, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "special_x" = 37, "special_y" = 16)
 
-/obj/item/weapon/gun/rifle/m4ra/set_gun_config_values()
+/obj/item/weapon/gun/rifle/m49a/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4)
 	set_burst_amount(0)
@@ -1669,41 +1670,41 @@
 	damage_falloff_mult = 0
 	scatter = SCATTER_AMOUNT_TIER_8
 
-/obj/item/weapon/gun/rifle/m4ra/handle_starting_attachment()
+/obj/item/weapon/gun/rifle/m49a/handle_starting_attachment()
 	..()
-	var/obj/item/attachable/m4ra_barrel/integrated = new(src)
+	var/obj/item/attachable/m49a_barrel/integrated = new(src)
 	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
 
-/obj/item/weapon/gun/rifle/m4ra/training
-	current_mag = /obj/item/ammo_magazine/rifle/m4ra/rubber
+/obj/item/weapon/gun/rifle/m49a/training
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/rubber
 
-/obj/item/weapon/gun/rifle/m4ra/tactical
-	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ext
+/obj/item/weapon/gun/rifle/m49a/tactical
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/ext
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip)
 
-/obj/item/weapon/gun/rifle/m4ra/marksman
+/obj/item/weapon/gun/rifle/m49a/marksman
 	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom, /obj/item/attachable/extended_barrel)
 
-/obj/item/weapon/gun/rifle/m4ra/army
+/obj/item/weapon/gun/rifle/m49a/army
 	desc = "The M4RA battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams."
-	current_mag = /obj/item/ammo_magazine/rifle/m4ra/ap
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/ap
 	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
 
-// pve - kinda weird icon usage, uses urban M4RA sprite w/ custom attachie sprite
-/obj/item/weapon/gun/rifle/m4ra/pve
-	name = "\improper M4RA-R2 battle rifle"
-	desc = "The M4RA-R2 is a souped-up M4RA, the result of an ARMAT upgrade program that didn't pan out in huge numbers. Its main attraction is the ability to chamber and fire devastating <b>A19 depleted uranium rounds,</b> infamous for their overpenetration abilities and toxic effects on anyone unfortunate enough to survive a hit. The thicker barrel, of course, also has no issue with non-HV ammo."
-	desc_lore = "The USCMC was not terribly enthusiastic about unproven hand-held plasma weaponry. Before the XM99A was eventually adopted into use, the USCMC instead sought out a traditional squad-portable, precision, armor-piercing weapon, and contracted ARMAT to upgrade their M4RA platform to be capable of firing advanced AP rounds. They succeeded- sort of. <BR> <BR>  The R2 was rejected for several reasons. It's a killer, but also a piece of junk. It kicks hard enough that precision sights simply don't stay zeroed, and its oversized muzzle-device extends an already long barrel-length. Additionally, A19 ammo, already expensive, was driven to absurd highs by the ammunition's specs. Depleted uranium is expensive...and cutting the service life of the M4RA's barrel in half is even more expensive. <BR> <BR> Those that were made, however, are still service-ready and were issued where the XM99A was unavailable due to its production only just starting."
+// pve - kinda weird icon usage, uses urban M49A sprite w/ custom attachie sprite
+/obj/item/weapon/gun/rifle/m49a/pve
+	name = "\improper M49A6 battle rifle"
+	desc = "The M49A6 is a souped-up M49A, the result of an ARMAT upgrade program that didn't pan out in huge numbers. Its main attraction is the ability to chamber and fire devastating <b>A19 depleted uranium rounds,</b> infamous for their overpenetration abilities and toxic effects on anyone unfortunate enough to survive a hit. The thicker barrel, of course, also has no issue with non-HV ammo."
+	desc_lore = "The USCMC was not terribly enthusiastic about unproven hand-held plasma weaponry. Before the XM99A was eventually adopted into use, the USCMC instead sought out a traditional squad-portable, precision, armor-piercing weapon, and contracted ARMAT to upgrade their M49A platform to be capable of firing advanced AP rounds. They succeeded- sort of. <BR> <BR>  The R2 was rejected for several reasons. It's a killer, but also a piece of junk. It kicks hard enough that precision sights simply don't stay zeroed, and its oversized muzzle-device extends an already long barrel-length. Additionally, A19 ammo, already expensive, was driven to absurd highs by the ammunition's specs. Depleted uranium is expensive...and cutting the service life of the M49A's barrel in half is even more expensive. <BR> <BR> Those that were made, however, are still service-ready and were issued where the XM99A was unavailable due to its production only just starting."
 	icon = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_obj.dmi'
-	icon_state = "m4ra"
-	item_state = "m4ra"
-	fire_sound = 'sound/weapons/gun_m4ra.ogg'
+	icon_state = "m49a"
+	item_state = "m49a"
+	fire_sound = 'sound/weapons/gun_m49a.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 
-	current_mag = /obj/item/ammo_magazine/rifle/m4ra/pve
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/pve
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
@@ -1727,7 +1728,7 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	map_specific_decoration = FALSE
 
-/obj/item/weapon/gun/rifle/m4ra/pve/set_gun_config_values()
+/obj/item/weapon/gun/rifle/m49a/pve/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4)
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
@@ -1741,9 +1742,9 @@
 		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/urban/back.dmi'
 	)
 
-/obj/item/weapon/gun/rifle/m4ra/pve/handle_starting_attachment()
+/obj/item/weapon/gun/rifle/m49a/pve/handle_starting_attachment()
 	..()
-	var/obj/item/attachable/m4ra_barrel/pve/integrated = new(src)
+	var/obj/item/attachable/m49a_barrel/pve/integrated = new(src)
 	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
 	var/obj/item/attachable/old_barrel = attachments[integrated.slot]
 	if(old_barrel)
@@ -1752,7 +1753,7 @@
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
 
-/obj/item/weapon/gun/rifle/m4ra/pve/unloaded
+/obj/item/weapon/gun/rifle/m49a/pve/unloaded
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
@@ -1762,13 +1763,13 @@
 
 /obj/item/weapon/gun/rifle/l42a
 	name = "\improper L42A battle rifle"
-	desc = "The L42A Battle Rifle, found commonly around the frontiers of the Galaxy. It's commonly used by colonists for self defense, as well as many colonial militias, whomever they serve due to it's rugged reliability and ease of use without much training. This rifle was put up for adoption by the USCM and tested for a time, but ultimately lost to the M4RA already in service."
+	desc = "The L42A Battle Rifle, found commonly around the frontiers of the Galaxy. It's commonly used by colonists for self defense, as well as many colonial militias, whomever they serve due to it's rugged reliability and ease of use without much training. This rifle was put up for adoption by the USCM and tested for a time, but ultimately lost to the M49A already in service."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "l42mk1"
 	item_state = "l42mk1"
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	fire_sound = 'sound/weapons/gun_m4ra.ogg'
+	fire_sound = 'sound/weapons/gun_m49a.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/l42a
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
