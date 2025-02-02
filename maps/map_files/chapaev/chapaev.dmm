@@ -1619,7 +1619,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/canteen)
 "oa" = (
-/obj/item/clothing/suit/storage/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/faction/UPP/jacket,
 /obj/item/clothing/suit/storage/marine/veteran/lamp,
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{

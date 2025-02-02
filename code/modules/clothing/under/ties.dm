@@ -886,23 +886,15 @@
 	icon_state = "pouch"
 	hold = /obj/item/storage/internal/accessory/smallpouch
 
+/obj/item/clothing/accessory/storage/smallpouch/upp
+	icon_state = "upp_pouch"
+
 /obj/item/storage/internal/accessory/smallpouch
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_SMALL
 	storage_flags = NONE
 	storage_slots = 4
-	can_hold = list(
-		/obj/item/stack/medical/ointment,
-		/obj/item/reagent_container/hypospray/autoinjector,
-		/obj/item/storage/pill_bottle/packet,
-		/obj/item/stack/medical/bruise_pack,
-		/obj/item/stack/medical/splint,
-		/obj/item/storage/box/MRE,
-		/obj/item/tool/pen,
-		/obj/item/folder,
-		/obj/item/ammo_magazine/pistol,
-		/obj/item/tool/lighter,
-	)
+
 /obj/item/clothing/accessory/storage/holster
 	name = "shoulder holster"
 	desc = "A handgun holster with an attached pouch, allowing two magazines or speedloaders to be stored along with it."
@@ -1152,6 +1144,22 @@
 	slot = ACCESSORY_SLOT_DECORGROIN
 	flags_atom = NO_SNOW_TYPE
 
+//===========================//UPP CUSTOM ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/upppads
+	name = "\improper 6B90 Arm Plates"
+	desc = "A set of arm plates designed for the 8B90 armor system."
+	icon_state = "upp_arms"
+	item_state = "upp_arms"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/upppads/legs
+	name = "\improper 6B90 Leg Guards"
+	desc = "A set of leg greaves designed for the 8B90 armor system."
+	icon_state = "upp_greaves"
+	item_state = "upp_greaves"
+	slot = ACCESSORY_SLOT_DECORSHIN
+
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
 /obj/item/clothing/accessory/paint
@@ -1282,6 +1290,42 @@
 
 /obj/item/storage/internal/accessory/webbing/m3mag/recon
 	storage_slots = 4
+
+
+//UPP Armor Webbing
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags
+	name = "\improper Type 90 Pattern Magazine Webbing"
+	desc = "A set of UPP magazine webbing that can carry four magazines."
+	icon_state = "upp_webbing_magazine"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/webbing/m3mag/upp
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/pistol/t73,
+		/obj/item/ammo_magazine/pistol/np92,
+		/obj/item/ammo_magazine/handful/shotgun/heavy,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
+	name = "\improper Type 78 Pattern Small Pouch Webbing"
+	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	icon_state = "upp_webbing_small"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
+	name = "\improper Type 78 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
+	icon_state = "upp_webbing_large"
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Partial Pre-load For Props
 //===
