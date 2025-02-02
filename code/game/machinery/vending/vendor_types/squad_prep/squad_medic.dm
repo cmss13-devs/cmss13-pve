@@ -226,10 +226,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
 		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
-		list("ARMOR (CHOOSE 1)", 0, null, null, null),
-		list("6B72-03 Combat Vest", 0, /obj/item/clothing/suit/marine/faction/UPP/light, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
-		list("6B90 Carapace Armor", 0, /obj/item/clothing/suit/marine/faction/UPP, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
-
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 		list("Medical Satchel", 0, /obj/item/storage/backpack/lightpack/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
