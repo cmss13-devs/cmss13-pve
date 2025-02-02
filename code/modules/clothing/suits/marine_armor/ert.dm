@@ -280,6 +280,55 @@
 	var/obj/item/clothing/accessory/upppads/crotch/crotch = new()
 	src.attach_accessory(null, crotch, TRUE)
 
+/obj/item/clothing/suit/marine/smartgunner/upp
+	name = "\improper 6B91-2 UPP armor"
+	desc = "Deep modification of the standard body armor, intended for Union machinegunners. Contains compact fire control computers and an encrypted data processing unit in the lower back, as well as an armored cable to connect to the machine gun. Covers all requirements to operate the weapon, but a common complaint is the bulkiness."
+	icon_state = "upp_armor_support"
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	specialty = "\improper 6B91-2 pattern"
+	allowed = list(
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/ammo_magazine,
+		/obj/item/explosive/mine,
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/gun/pkp,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/belt/gun/type47,
+	)
+
+	smartgun_back = list(
+		/obj/item/storage/large_holster/machete,
+		/obj/item/ammo_box,
+	)
+
+/obj/item/clothing/suit/storage/marine/smartgunner/upp/Initialize()
+	. = ..()
+	pockets.bypass_w_limit = list(
+		/obj/item/ammo_magazine/minigun,
+		/obj/item/ammo_magazine/pkp,
+		)
+
+/obj/item/clothing/suit/marine/smartgunner/upp/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
+
 /obj/item/clothing/suit/marine/faction/UPP/light
 	name = "\improper 6B72-03 pattern UPP armor"
 	desc = "Vintage UPP armor system Vadasz. Provides basic ballistic/shrapnel protection for armor crew or rear echelon forces with wraparound soft armor and ceramic composite chestplate. Lightweight, but lacking protection class and coverage. Still issued to the Territorial Guard and People's Armed Police tactical teams, and utilized by some spetznaz."
