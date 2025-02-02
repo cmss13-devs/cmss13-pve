@@ -1299,7 +1299,7 @@
 	storage_slots = 4
 
 
-//UPP Armor Webbing
+//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppmags
 	name = "\improper Type 90 Pattern Magazine Webbing"
