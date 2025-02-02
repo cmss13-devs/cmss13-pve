@@ -323,10 +323,6 @@ Defined in conflicts.dm of the #defines folder.
 	pry_delay = 1 SECONDS
 
 /obj/item/attachable/bayonet/upp/surplus
-	name = "\improper Type 80 bayonet"
-	icon_state = "upp_bayonet"
-	item_state = "combat_knife"
-	attach_icon = "upp_bayonet_a"
 	desc = "The standard-issue bayonet of the UPP, this one is somewhat dulled."
 	throwforce = MELEE_FORCE_STRONG
 

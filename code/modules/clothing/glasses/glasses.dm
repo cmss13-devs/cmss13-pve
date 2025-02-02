@@ -41,6 +41,7 @@
 	if(ismob(src.loc))
 		var/mob/M = src.loc
 		M.update_inv_glasses()
+		M.update_inv_wear_mask() //For when you have eyewear in the mask slot
 
 /obj/item/clothing/glasses/update_icon()
 	if(!deactive_state || active)
@@ -219,25 +220,13 @@
 		item_state = original_state
 		to_chat(usr, SPAN_NOTICE("You flip the eyepatch to the right side."))
 
-	update_clothing_icon(src) // Updates the on-mob appearance
-
-/obj/item/clothing/glasses/eyepatch/left
-	parent_type = /obj/item/clothing/glasses/eyepatch
-	icon_state = "eyepatch_left"
-	item_state = "eyepatch_left"
-	original_state = "eyepatch"
-	toggled_state = "eyepatch_left"
+	update_clothing_icon() // Updates the on-mob appearance
 
 /obj/item/clothing/glasses/eyepatch/green
 	icon_state = "eyepatch_green"
 	item_state = "eyepatch_green"
 	original_state = "eyepatch_green"
 	toggled_state = "eyepatch_green_left"
-
-/obj/item/clothing/glasses/eyepatch/green/left
-	parent_type = /obj/item/clothing/glasses/eyepatch/green
-	icon_state = "eyepatch_green_left"
-	item_state = "eyepatch_green_left"
 
 /obj/item/clothing/glasses/monocle
 	name = "monocle"
@@ -694,7 +683,7 @@
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
 /obj/item/clothing/glasses/sunglasses/big
-	name = "\improper BiMex Polarized Shades"
+	name = "\improper BiMex polarized shades"
 	desc = "Sleek, angular shades designed for the modern operator. BiMex's latest 'TactOptix' line comes with advanced polarization and lightweight ballistic lenses capable of shrugging off small shrapnel impacts. A favorite among frontline operators and deep-space scouts, these shades are marketed as 'combat-tested and action-approved.' Rumors abound of lucky users surviving close-range laser shots thanks to the multi-reflective lens coating, though BiMex's official stance is to 'Stop standing in front of lasers.'"
 	icon_state = "bimex_black"
 	item_state = "bimex_black"
@@ -703,7 +692,7 @@
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
 /obj/item/clothing/glasses/sunglasses/big/orange
-	name = "\improper BiMex Tactical Shades"
+	name = "\improper BiMex tactical shades"
 	desc = "An expensive pair of BiMex branded, orange-tinted sunglasses. Largely produced for members of the US Army to protect their eyes from dust during range-time, but some pairs find their way onto the private market."
 	icon_state = "bimex_orange"
 	item_state = "bimex_orange"
