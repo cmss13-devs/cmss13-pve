@@ -132,7 +132,7 @@
 /obj/structure/gun_rack/uppflamer
 	name = "LPO80 incinerator rack"
 	icon_state = "lpo80"
-	desc = null
+	desc = "A rack designed to hold two LPO80 incinerator units."
 	max_stored = 2
 	initial_stored = 2
 	allowed_type = /obj/item/weapon/gun/flamer/upp
