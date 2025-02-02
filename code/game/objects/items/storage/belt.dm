@@ -458,7 +458,7 @@
 	max_storage_space = 21
 	can_hold = list(
 		/obj/item/explosive/grenade/flashbang,
-		/obj/item/explosive/grenade/custom/teargas,
+		/obj/item/explosive/grenade/tear,
 		/obj/item/reagent_container/spray/pepper,
 		/obj/item/restraint/handcuffs,
 		/obj/item/device/flash,
@@ -614,7 +614,7 @@
 
 /obj/item/storage/belt/marine/m41e2ap/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/lmg/ap (src)
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
 
 /obj/item/storage/belt/marine/m39/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -689,6 +689,10 @@
 /obj/item/storage/belt/marine/shotgun_ammo/fill_preset_inventory() // shotgun ammo for survs, cursed but we want non-optimal storage on purpose
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+
+/obj/item/storage/belt/marine/svd/fill_preset_inventory() // SVD
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/sniper/svd(src)
 
 /obj/item/storage/belt/marine/smartgunner
 	name = "\improper M280 pattern smartgunner drum belt"
@@ -841,6 +845,11 @@
 /obj/item/storage/belt/shotgun/full/random/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		var/random_shell_type = pick(GLOB.shotgun_handfuls_12g)
+		new random_shell_type(src)
+
+/obj/item/storage/belt/shotgun/full/random/reasonable/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		var/random_shell_type = pick(GLOB.shotgun_handfuls_12g_reasonable)
 		new random_shell_type(src)
 
 /obj/item/storage/belt/shotgun/attackby(obj/item/W, mob/user)
@@ -1789,7 +1798,7 @@
 	var/list/internal_mags = (typesof(/obj/item/ammo_magazine/internal) + /obj/item/ammo_magazine/handful)
 	var/list/training_mags = list(
 		/obj/item/ammo_magazine/rifle/rubber,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber,
+		/obj/item/ammo_magazine/rifle/m49a/rubber,
 		/obj/item/ammo_magazine/smg/m39/rubber,
 		/obj/item/ammo_magazine/pistol/rubber,
 		/obj/item/ammo_magazine/pistol/vp70/rubber) //Ivan doesn't bring children's ammo.

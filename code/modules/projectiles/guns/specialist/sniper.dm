@@ -24,6 +24,8 @@
 	var/sniper_lockon_icon_max = "sniper_lockon_intense"
 	var/sniper_beam_icon_max = "laser_beam_intense"
 
+/obj/item/weapon/gun/rifle/sniper/get_mouse_pointer()
+	return 'icons/effects/mouse_pointer/sniper_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/sniper/get_examine_text(mob/user)
 	. = ..()
@@ -359,6 +361,11 @@
 	scatter = SCATTER_AMOUNT_TIER_8
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/rifle/sniper/M42A/silenced
+	name = "\improper M42A2 SSR"
+	desc = "The M42A2 Suppressed Scoped Rifle (SSR for short), is a heavy sniper rifle manufactured by Armat Systems. Modified with an integral suppressor, it has a scope system and fires armor penetrating rounds out of a 15-round magazine.\n'Peace Through Superior Firepower'"
+	starting_attachment_types = list(/obj/item/attachable/supsniperbarrel)
 
 /obj/item/weapon/gun/rifle/sniper/XM43E1
 	name = "\improper XM43E1 experimental anti-materiel rifle"

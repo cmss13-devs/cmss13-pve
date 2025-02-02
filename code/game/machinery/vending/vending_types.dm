@@ -233,6 +233,23 @@
 
 	)
 
+/obj/structure/machinery/vending/cigarette/upp
+	desc = "A state-owned cigarette vendor. Its drab colour was chosen to discourage purchases, but its existence is an admittance to the necessity for such machines to exist in the first place."
+	product_slogans = ""
+	product_ads = ""
+	icon_state = "china_cig_vending"
+	products = list(
+		/obj/item/storage/fancy/cigarettes/laika = 10,
+		/obj/item/storage/box/matches = 15,
+		/obj/item/tool/lighter/zippo = 10,
+	)
+	prices = list(
+		/obj/item/storage/fancy/cigarettes/laika = 45,
+		/obj/item/storage/box/matches = 1,
+		/obj/item/tool/lighter/zippo = 25,
+	)
+	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
+
 /obj/structure/machinery/vending/security
 	name = "\improper ColMarTech Military Police Vendor"
 	desc = "A USCM Military Police vendor."
@@ -265,12 +282,12 @@
 	products = list(
 		/obj/item/restraint/handcuffs/zip = 40,
 		/obj/item/explosive/grenade/flashbang = 20,
-		/obj/item/explosive/grenade/custom/teargas = 40,
+		/obj/item/explosive/grenade/tear/marine = 40,
 		/obj/item/ammo_magazine/smg/m39/rubber = 40,
 		/obj/item/ammo_magazine/pistol/rubber = 40,
 		/obj/item/ammo_magazine/pistol/vp70/rubber = 40,
 		/obj/item/ammo_magazine/rifle/rubber = 40,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber = 40,
+		/obj/item/ammo_magazine/rifle/m49a/rubber = 40,
 		/obj/item/clothing/head/helmet/marine/MP = 8,
 		/obj/item/explosive/plastic/breaching_charge/rubber = 6,
 	)
@@ -317,7 +334,7 @@
 		/obj/item/ammo_magazine/pistol/rubber = 20,
 		/obj/item/ammo_magazine/pistol/vp70/rubber = 20,
 		/obj/item/ammo_magazine/rifle/rubber = 20,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber = 20,
+		/obj/item/ammo_magazine/rifle/m49a/rubber = 20,
 		/obj/item/ammo_magazine/shotgun/beanbag = 20,
 		/obj/item/storage/firstaid/regular = 2,
 		/obj/item/storage/firstaid/fire = 2,
