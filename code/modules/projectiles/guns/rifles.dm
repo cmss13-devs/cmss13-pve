@@ -1645,9 +1645,6 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	//map_specific_decoration = TRUE
 
-/obj/item/weapon/gun/rifle/m49a/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/sniper_mouse.dmi'
-
 /obj/item/weapon/gun/rifle/m49a/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 21, "under_x" = 30, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "special_x" = 37, "special_y" = 16)
 
