@@ -4904,14 +4904,17 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "DZ" = (
-/obj/item/weapon/gun/flamer/upp{
-	current_mag = null
+/obj/item/storage/box/guncase/heavy/sentryupp{
+	pixel_y = 2
 	},
-/obj/item/weapon/gun/flamer/upp{
-	current_mag = null
+/obj/item/storage/box/guncase/heavy/sentryupp{
+	pixel_y = 10;
+	layer = 3.03
 	},
-/obj/structure/surface/rack{
-	color = "#8B9490"
+/obj/structure/machinery/light/small{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5352,16 +5355,10 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "GT" = (
-/obj/structure/machinery/light/small{
-	dir = 1;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 4
-	},
-/obj/item/storage/box/guncase/heavy/sentryupp,
-/obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 8;
-	layer = 3.03
+/obj/structure/gun_rack/uppflamer/unloaded{
+	pixel_x = -8;
+	pixel_y = 16;
+	can_block_movement = 0
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)

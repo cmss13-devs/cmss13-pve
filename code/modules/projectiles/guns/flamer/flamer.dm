@@ -526,6 +526,9 @@
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	current_mag = /obj/item/ammo_magazine/flamer_tank/upp
 
+/obj/item/weapon/gun/flamer/upp
+	current_mag = null
+
 /obj/flamer_fire
 	name = "fire"
 	desc = "Ouch!"

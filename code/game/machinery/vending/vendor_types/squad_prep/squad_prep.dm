@@ -513,6 +513,7 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp
 	name = "\improper UnTech Automated Utilities Squad Vendor"
 	desc = "An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any UPP Rifleman."
+	icon_state = "upp_armory"
 	req_access = list()
 	req_one_access = list(ACCESS_UPP_GENERAL)
 	hackable = TRUE
