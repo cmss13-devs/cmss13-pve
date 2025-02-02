@@ -1172,6 +1172,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	flags_marine_helmet = HELMET_SQUAD_OVERLAY|HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
+	specialty = "6B75 helmet"
 
 /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy
 	name = "\improper 6B79 helmet"
@@ -1182,7 +1183,21 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_HIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	specialty = "6B79 helmet"
+
+/obj/item/clothing/head/helmet/marine/veteran/UPP/old
+	name = "\improper 6B68 helmet"
+	desc = "An older variant of UPPAC helmet still utilized by Territorial Guard units and Interior Troops. Tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "upp_helmet_68"
+	item_state = "helmet"
+	flags_inventory = BLOCKSHARPOBJ
+	flags_inv_hide = NONE
+	clothing_traits = null
+	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
+	specialty = "6B68 helmet"
 
 //==========================//UPP\\=================================\\
 //=======================================================================\\
@@ -1539,18 +1554,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/upp/alt
 	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates held together with a complex liner system. Capable of being worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is identical to the one used for UPP uniforms."
 	icon_state = "upp_helmet_naval_alt"
-
-/obj/item/clothing/head/helmet/upp/army
-	name = "\improper 6B79 helmet"
-	desc = "An older variant of UPPAC helmet still utilized by Territorial Guard units and Interior Troops. Tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex."
-	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_state = "upp_helmet_68"
-	item_state = "helmet"
-	flags_inventory = BLOCKSHARPOBJ
-	flags_inv_hide = NONE
-	clothing_traits = null
-	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
-	specialty = "6B79 helmet"
 
 /obj/item/clothing/head/uppcap
 	name = "\improper UL2 cap"
