@@ -46,18 +46,18 @@
 	networks_receive = list("USCM","UPP");
 	networks_transmit = list("USCM","UPP")
 	},
-/obj/structure/machinery/prop/almayer/CICmap{
-	density = 0;
-	faction = "UPP";
-	icon_state = "shuttle";
-	layer = 2.97;
-	minimap_type = 8;
-	name = "Tactical Map Display";
-	pixel_x = 7
-	},
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	network = list("Chapaev","Vehicle");
 	pixel_x = -10
+	},
+/obj/structure/machinery/prop/almayer/CICmap/upp{
+	name = "Tactical Map Display";
+	layer = 2.97;
+	icon_state = "shuttle";
+	pixel_x = 7;
+	light_color = "#cf91a2";
+	light_range = 1;
+	light_power = 0.7
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
@@ -545,7 +545,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Briefing Room, Floor"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
@@ -638,7 +639,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Hypersleep Hallway"
 	},
 /obj/structure/sign/safety/cryo{
 	pixel_y = -26;
@@ -1357,7 +1359,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Canteen"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
@@ -1548,7 +1551,8 @@
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Hypersleep Room"
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
@@ -2188,7 +2192,8 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Port Hallway, Barracks"
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
@@ -2670,7 +2675,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Sanitar Office"
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
@@ -3094,6 +3100,12 @@
 	id = "hangerairlock-exterior";
 	pixel_y = 31;
 	pixel_x = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	c_tag = "Hanger Airlock"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -3529,7 +3541,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Briefing Room, Stage"
 	},
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -3645,7 +3658,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
 	network = list("Chapaev");
-	dir = 4
+	dir = 4;
+	c_tag = "Port Hallway, Laundry Room"
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
@@ -4310,7 +4324,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Sergeants Room"
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
@@ -4410,7 +4425,9 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	colony_camera_mapload = 0;
+	c_tag = "Starboard Hallway, Briefing"
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
@@ -6662,7 +6679,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Prep Room #1"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
@@ -6706,7 +6724,8 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Starboard Hallway, Canteen"
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
@@ -6982,7 +7001,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Triage Room"
 	},
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -7301,7 +7321,8 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera";
-	network = list("Chapaev")
+	network = list("Chapaev");
+	c_tag = "Prep Room #2"
 	},
 /obj/structure/surface/rack{
 	color = "#8B9490"
