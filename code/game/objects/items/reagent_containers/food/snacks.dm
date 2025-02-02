@@ -151,8 +151,7 @@
 
 /obj/item/reagent_container/food/snacks/get_examine_text(mob/user)
 	. = ..()
-	if (!(user in range(0)) && user != loc)
-		return
+	. += SPAN_NOTICE("\The [src] has [ceil(reagents.total_volume / bitesize)] mouthfuls left.")
 	if (!bitecount)
 		return
 	else if (bitecount==1)

@@ -180,14 +180,69 @@
 /obj/item/trash/tray
 	name = "Tray"
 	icon_state = "tray"
+	var/stacked_size = 0
 
-/obj/item/trash/USCMtray
+/obj/item/trash/tray/attackby(obj/item/I, mob/user)
+	if(stacked_size > 8)
+		to_chat(user, SPAN_WARNING("You cannot stack the trays any higher!"))
+		return FALSE
+	if(istype(I, src.type))
+		user.drop_inv_item_to_loc(I, src)
+		stacked_size++
+		update_overlays()
+
+		if(stacked_size > 1)
+			w_class = SIZE_MEDIUM
+		else
+			w_class = SIZE_SMALL
+			//return FALSE
+	return ..()
+
+/obj/item/trash/tray/MouseDrop(atom/over)
+	. = ..()
+	if(stacked_size)
+		var/mob/living/carbon/human/H = over
+		if(usr != H)
+			return
+		if(!CAN_PICKUP(H, src))
+			return
+		var/obj/item/trash/tray/F = locate() in contents
+		H.put_in_active_hand(F)
+		stacked_size--
+		update_overlays()
+		if(stacked_size > 1)
+			w_class = SIZE_MEDIUM
+		else
+			w_class = SIZE_SMALL
+
+/obj/item/trash/tray/proc/update_overlays(dir)
+	overlays.Cut()
+	if(!stacked_size)
+		name = initial(name)
+		desc = initial(desc)
+		return
+	name = "stack of food trays"
+	desc = "There seems to be [stacked_size + 1] in the stack, wow!"
+	for(var/i in 1 to stacked_size)
+		var/image/I = new(src.icon)
+		I.dir = src.dir
+		var/image/previous_tray_overlay
+		if(i == 1)
+			I.pixel_y = pixel_y + 2
+		else
+			previous_tray_overlay = overlays[i-1]
+			I.pixel_y = previous_tray_overlay.pixel_y + 2
+		if(stacked_size > 4)
+			I.pixel_x = I.pixel_x + pick(list(-1, 1))
+		overlays += I
+
+/obj/item/trash/tray/USCMtray
 	name = "\improper USCM Tray"
 	desc = "Finished with its tour of duty."
 	icon = 'icons/obj/items/food_canteen.dmi'
 	icon_state = "tray"
 
-/obj/item/trash/UPPtray
+/obj/item/trash/tray/UPPtray
 	name = "\improper UPP Tray"
 	desc = "Finished with its tour of duty."
 	icon = 'icons/obj/items/food.dmi'
