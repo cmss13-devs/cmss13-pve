@@ -182,13 +182,15 @@
 	icon_state = "tray"
 	var/stacked_size = 0
 
-/obj/item/trash/tray/attackby(obj/item/I, mob/user)
-	if(stacked_size > 8)
-		to_chat(user, SPAN_WARNING("You cannot stack the trays any higher!"))
-		return FALSE
+/obj/item/trash/tray/attackby(obj/item/trash/tray/I, mob/user)
+
 	if(istype(I, src.type))
+		if(stacked_size + (I.stacked_size + 1) > 8)
+			to_chat(user, SPAN_WARNING("You cannot stack the trays any higher!"))
+			return FALSE
 		user.drop_inv_item_to_loc(I, src)
-		stacked_size++
+		stacked_size = stacked_size + (I.stacked_size + 1)
+		I.stacked_size = 0
 		update_overlays()
 
 		if(stacked_size > 1)
@@ -225,13 +227,7 @@
 	desc = "There seems to be [stacked_size + 1] in the stack, wow!"
 	for(var/i in 1 to stacked_size)
 		var/image/I = new(src.icon)
-		I.dir = src.dir
-		var/image/previous_tray_overlay
-		if(i == 1)
-			I.pixel_y = pixel_y + 2
-		else
-			previous_tray_overlay = overlays[i-1]
-			I.pixel_y = previous_tray_overlay.pixel_y + 2
+		I.pixel_y = 2*i
 		if(stacked_size > 4)
 			I.pixel_x = I.pixel_x + pick(list(-1, 1))
 		overlays += I
