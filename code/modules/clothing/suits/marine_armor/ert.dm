@@ -94,17 +94,6 @@
 	icon_state = "officer_armor"
 	item_state_slots = list(WEAR_JACKET = "officer_armor")
 
-/obj/item/clothing/suit/storage/marine/veteran/pmc/sniper
-	name = "\improper M4 pattern PMC sniper armor"
-	icon_state = "pmc_sniper"
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	flags_inv_hide = HIDELOWHAIR
-	item_state_slots = list(WEAR_JACKET = "pmc_sniper")
-
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth
 	name = "\improper M4 Synthetic PMC armor"
 	desc = "A serious modification of the standard Armat Systems M3 armor. This variant was designed for PMC Support Units in the field, with every armor insert removed. It's designed with the idea of a high speed lifesaver in mind."
