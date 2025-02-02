@@ -1160,6 +1160,13 @@
 	item_state = "upp_greaves"
 	slot = ACCESSORY_SLOT_DECORSHIN
 
+/obj/item/clothing/accessory/upppads/crotch
+	name = "\improper 6B90 Crotch Guard"
+	desc = "A crotch plate designed for the 8B90 armor system."
+	icon_state = "upp_crotch"
+	item_state = "upp_crotch"
+	slot = ACCESSORY_SLOT_DECORGROIN
+
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
 /obj/item/clothing/accessory/paint
