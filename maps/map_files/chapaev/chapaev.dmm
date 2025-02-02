@@ -1639,10 +1639,8 @@
 /area/golden_arrow/platoon_commander_rooms)
 "kC" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/prop/almayer/CICmap{
-	faction = "UPP";
-	pixel_y = 5;
-	layer = 3.1
+/obj/structure/machinery/prop/almayer/CICmap/upp{
+	pixel_y = 6
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
