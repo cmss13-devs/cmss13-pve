@@ -86,7 +86,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/obj/item/clothing/head/helmet/marine/veteran/pmc,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
 "bb" = (
