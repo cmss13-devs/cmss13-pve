@@ -273,10 +273,12 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper 6B90 pattern"
 
-/obj/item/clothing/suit/marine/faction/UPP/legs/Initialize(mapload)
+/obj/item/clothing/suit/marine/faction/UPP/standard/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
+	var/obj/item/clothing/accessory/upppads/crotch/crotch = new()
+	src.attach_accessory(null, crotch, TRUE)
 
 /obj/item/clothing/suit/marine/faction/UPP/light
 	name = "\improper 6B72-03 pattern UPP armor"
@@ -297,7 +299,7 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper 6B72-03 pattern"
 
-/obj/item/clothing/suit/marine/faction/UPP/light/legs/Initialize(mapload)
+/obj/item/clothing/suit/marine/faction/UPP/light/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
