@@ -40,3 +40,26 @@
 /area/bosenmori/mountain/temple_ruins{base_lighting_alpha=20;} : /area/bosenmori/mountain/temple_ruins
 /area/bosenmori/mountain/clearing{base_lighting_alpha=35;} : /area/bosenmori/mountain/clearing
 /turf/open/floor/almayer{icon_state="tcomms";} : /turf/open/floor/almayer/tcomms
+
+/area/bosenmori/interior_heavy/Mai_hall{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_hall
+/area/bosenmori/interior_heavy/Mai_tree{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_tree
+/area/bosenmori/interior_heavy/Mai_sewer{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_sewer
+/area/bosenmori/interior_heavy/Mai_research{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_research
+/area/bosenmori/interior_heavy/Mai_food{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_food
+/area/bosenmori/interior_heavy/Mai_engineering{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_engineering
+/area/bosenmori/interior_heavy/Mai_armory{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_armory
+/area/bosenmori/interior_heavy/Mai_secure_arm{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_secure_arm
+/area/bosenmori/interior_heavy/Mai_cargo{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_cargo
+/area/bosenmori/interior_heavy/Mai_corpo{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_corpo
+/area/bosenmori/interior_heavy/Mai_caves{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_caves
+/area/bosenmori/interior_heavy/Mai_shipment{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_shipment
+/area/bosenmori/interior_heavy/Mai_ops{base_lighting_alpha=35;} : /area/bosenmori/interior_heavy/Mai_ops
+/area/bosenmori/interior_glass/Mai_tree_under{base_lighting_alpha=40;} : /area/bosenmori/interior_glass/Mai_tree_under
+/area/bosenmori/outside/Mai_cargo_under{base_lighting_alpha=40;} : /area/bosenmori/outside/Mai_cargo_under
+/area/bosenmori/mountain/temple_under{base_lighting_alpha=10;} : /area/bosenmori/mountain/temple_under
+/area/bosenmori/mountain/first_level_caves{base_lighting_alpha=10;} : /area/bosenmori/mountain/first_level_caves
+/area/bosenmori/mountain/unknown_level_caves{base_lighting_alpha=1;} : /area/bosenmori/mountain/unknown_level_caves
+/area/bosenmori/mountain/unknown_level_temple{base_lighting_alpha=1;} : /area/bosenmori/mountain/unknown_level_temple
+/area/bosenmori/mountain/abandoned_dome_under{base_lighting_alpha=10;} : /area/bosenmori/mountain/abandoned_dome_under
+
+

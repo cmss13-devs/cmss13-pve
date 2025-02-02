@@ -201,3 +201,89 @@
 	name = "Mountain Clearing"
 	icon_state = "away1"
 	base_lighting_alpha = 35
+//============================================================UNDERGROUND COLONY
+/area/bosenmori/interior_heavy/Mai_hall
+	name = "Maintenance Segment"
+	icon_state = "away1"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_tree
+	name = "Terranium Lower-Level"
+	icon_state = "away2"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_sewer
+	name = "Bosenmori Sewage System"
+	icon_state = "yellow"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_research
+	name = "Research Lower-Level"
+	icon_state = "research"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_food
+	name = "Food Processing Lower-Level"
+	icon_state = "away3"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_engineering
+	name = "Engineering Lower-Level"
+	icon_state = "smes_engine"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_armory
+	name = "Armory Lower-Level"
+	icon_state = "security"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_secure_arm
+	name = "Secure Armory Lower-Level"
+	icon_state = "secure"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_cargo
+	name = "Cargo Lower-Level"
+	icon_state = "storage"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_corpo
+	name = "Corporate Lower-Level"
+	icon_state = "wy"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_caves
+	name = "Underground Local Cave Network"
+	icon_state = "cave"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_nexus
+	name = "Nexus Lower-Level"
+	icon_state = "nexus"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_shipment
+	name = "Shipment Lower-Level"
+	icon_state = "cargo"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_heavy/Mai_ops
+	name = "Emergency Operations Lower-Level"
+	icon_state = "command"
+	base_lighting_alpha = 35
+/area/bosenmori/interior_glass/Mai_tree_under
+	name = "Terrarium"
+	icon_state = "green"
+	base_lighting_alpha = 40
+/area/bosenmori/outside/Mai_cargo_under
+	name = "Construction Site"
+	icon_state = "cargo"
+	base_lighting_alpha = 40
+//============================================================UNDERGROUND CAVERNS
+/area/bosenmori/mountain/temple_under
+	name = "Ruins Internal"
+	icon_state = "away"
+	base_lighting_alpha = 10
+/area/bosenmori/mountain/first_level_caves
+	name = "Underground Cave Network"
+	icon_state = "away2"
+	base_lighting_alpha = 10
+/area/bosenmori/mountain/unknown_level_caves
+	name = "Unknown"
+	icon_state = "cave"
+	base_lighting_alpha = 1
+/area/bosenmori/mountain/unknown_level_temple
+	name = "Unknown"
+	icon_state = "away3"
+	base_lighting_alpha = 1
+/area/bosenmori/mountain/abandoned_dome_under
+	name = "Abandoned Dome"
+	icon_state = "hallc1"
+	base_lighting_alpha = 10
