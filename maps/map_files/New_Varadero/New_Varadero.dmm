@@ -1850,37 +1850,6 @@
 	},
 /turf/open/floor/shiva/multi_tiles/north,
 /area/varadero/interior/hall_SE)
-"bAE" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/structure/prop/structure_lattice{
-	density = 0;
-	desc = "Made in Little Japan.";
-	health = 300;
-	icon = 'icons/obj/items/items.dmi';
-	icon_state = "sheet-lizard";
-	name = "exotic bedsheet";
-	pixel_x = -1
-	},
-/obj/item/ammo_magazine/rifle/m4ra,
-/turf/open/floor/wood,
-/area/varadero/interior/bunks)
 "bBt" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -8522,6 +8491,37 @@
 /obj/structure/largecrate/random,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior_protected/maintenance/south)
+"gKg" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/structure/prop/structure_lattice{
+	density = 0;
+	desc = "Made in Little Japan.";
+	health = 300;
+	icon = 'icons/obj/items/items.dmi';
+	icon_state = "sheet-lizard";
+	name = "exotic bedsheet";
+	pixel_x = -1
+	},
+/obj/item/ammo_magazine/rifle/m49a,
+/turf/open/floor/wood,
+/area/varadero/interior/bunks)
 "gKp" = (
 /obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/plating/icefloor/asteroidplating,
@@ -8591,15 +8591,6 @@
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/security)
-"gNs" = (
-/obj/structure/bedsheetbin,
-/obj/item/storage/box/attachments{
-	pixel_x = -2;
-	pixel_y = 8
-	},
-/obj/item/ammo_magazine/rifle/m4ra,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "gNA" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -9516,6 +9507,25 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/central)
+"hBC" = (
+/obj/structure/closet/crate/ammo/alt,
+/obj/item/ammo_magazine/rifle/m49a{
+	pixel_x = 5
+	},
+/obj/item/ammo_magazine/rifle/m49a{
+	pixel_y = -5;
+	pixel_x = -8
+	},
+/obj/item/ammo_magazine/rifle/m49a,
+/obj/item/ammo_magazine/rifle{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/item/ammo_magazine/rifle{
+	pixel_x = -7
+	},
+/turf/open/shuttle/elevator/grating,
+/area/varadero/interior/hall_N)
 "hCw" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -13583,6 +13593,13 @@
 	},
 /turf/open/floor/plating,
 /area/varadero/interior/toilets)
+"kOe" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/item/clothing/under/cmb,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/security)
 "kOl" = (
 /obj/structure/machinery/firealarm{
 	dir = 8;
@@ -14123,13 +14140,6 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/shiva/redfull/west,
 /area/varadero/interior/hall_SE)
-"lne" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/item/clothing/under/cmb,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/security)
 "lnm" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -15602,13 +15612,6 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance)
-"myA" = (
-/obj/structure/bedsheetbin{
-	icon_state = "linenbin-empty"
-	},
-/obj/item/clothing/under/cmb,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "mzd" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -19962,6 +19965,15 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/shiva/redcorners,
 /area/varadero/interior/security)
+"pPy" = (
+/obj/structure/bedsheetbin,
+/obj/item/ammo_magazine/rifle/m49a,
+/obj/structure/machinery/storm_siren{
+	dir = 4;
+	pixel_x = -3
+	},
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "pPH" = (
 /obj/structure/surface/table,
 /obj/item/trash/chips{
@@ -21836,6 +21848,15 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/electrical)
+"rjD" = (
+/obj/structure/bedsheetbin,
+/obj/item/storage/box/attachments{
+	pixel_x = -2;
+	pixel_y = 8
+	},
+/obj/item/ammo_magazine/rifle/m49a,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "rjL" = (
 /obj/structure/machinery/optable,
 /obj/effect/decal/cleanable/blood,
@@ -21958,10 +21979,6 @@
 /obj/effect/spawner/random/powercell,
 /turf/open/floor/wood,
 /area/varadero/interior/maintenance/north)
-"rmW" = (
-/obj/item/ammo_magazine/rifle/m4ra,
-/turf/open/floor/shiva/multi_tiles,
-/area/varadero/interior/bunks)
 "rnb" = (
 /obj/effect/landmark/yautja_teleport,
 /turf/open/floor/white,
@@ -27059,11 +27076,6 @@
 	},
 /turf/open/shuttle/red,
 /area/varadero/interior_protected/vessel)
-"vvz" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/item/weapon/gun/rifle/m4ra,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "vvA" = (
 /obj/structure/closet/secure_closet/security_empty,
 /turf/open/floor/shiva/blue/east,
@@ -27229,15 +27241,6 @@
 "vCn" = (
 /turf/open/floor/shiva/yellow/north,
 /area/varadero/interior/hall_SE)
-"vCZ" = (
-/obj/structure/bedsheetbin,
-/obj/item/ammo_magazine/rifle/m4ra,
-/obj/structure/machinery/storm_siren{
-	dir = 4;
-	pixel_x = -3
-	},
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "vDe" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8
@@ -27954,6 +27957,13 @@
 /obj/item/device/motiondetector/hacked,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/hall_NW)
+"wda" = (
+/obj/structure/bedsheetbin{
+	icon_state = "linenbin-empty"
+	},
+/obj/item/clothing/under/cmb,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "wdb" = (
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	dir = 4;
@@ -29916,6 +29926,11 @@
 	},
 /turf/open/floor/wood,
 /area/varadero/interior/court)
+"xKH" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/item/weapon/gun/rifle/m49a,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "xKR" = (
 /turf/open/floor/shiva/red/southwest,
 /area/varadero/interior/hall_N)
@@ -30150,25 +30165,6 @@
 /obj/item/trash/candle,
 /turf/open/floor/wood,
 /area/varadero/interior/chapel)
-"xXp" = (
-/obj/structure/closet/crate/ammo/alt,
-/obj/item/ammo_magazine/rifle/m4ra{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/rifle/m4ra{
-	pixel_y = -5;
-	pixel_x = -8
-	},
-/obj/item/ammo_magazine/rifle/m4ra,
-/obj/item/ammo_magazine/rifle{
-	pixel_x = 5;
-	pixel_y = 4
-	},
-/obj/item/ammo_magazine/rifle{
-	pixel_x = -7
-	},
-/turf/open/shuttle/elevator/grating,
-/area/varadero/interior/hall_N)
 "xXw" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -30226,6 +30222,10 @@
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
+"yaE" = (
+/obj/item/ammo_magazine/rifle/m49a,
+/turf/open/floor/shiva/multi_tiles,
+/area/varadero/interior/bunks)
 "ybl" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/floor/plating/icefloor/asteroidplating,
@@ -44846,7 +44846,7 @@ rRg
 pGJ
 nio
 lkH
-xXp
+hBC
 lYF
 srW
 pGJ
@@ -46888,8 +46888,8 @@ iTP
 jZG
 wmX
 vYQ
-vCZ
-myA
+pPy
+wda
 vgF
 xNR
 gFx
@@ -47072,7 +47072,7 @@ jNT
 qeu
 sEk
 nTi
-vvz
+xKH
 oBV
 qhF
 ffx
@@ -47253,7 +47253,7 @@ vNu
 oWs
 qFZ
 fgk
-rmW
+yaE
 gzl
 ydx
 qVH
@@ -47793,12 +47793,12 @@ veU
 lma
 iGY
 ydx
-bAE
+gKg
 kIg
 nmC
 cio
 agi
-gNs
+rjD
 iBZ
 nIn
 xNR
@@ -53270,7 +53270,7 @@ jZg
 seJ
 gwn
 seJ
-lne
+kOe
 gtj
 hWZ
 rtE
