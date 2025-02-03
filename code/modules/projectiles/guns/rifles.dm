@@ -1281,7 +1281,7 @@
 	)
 	starting_attachment_types = list(
 		/obj/item/attachable/bipod/integral,
-		/obj/item/attachable/stock/rifle/collapsible
+		/obj/item/attachable/stock/rifle/collapsible,
 	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
