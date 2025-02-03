@@ -94,15 +94,11 @@
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_food)
 "adK" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "lz1_ladd";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
-/turf/open/floor,
+/turf/open/floor/almayer/test_floor4,
 /area/bosenmori/shuttles/drop1)
 "aeb" = (
 /obj/effect/decal/cleanable/dirt,
@@ -139,6 +135,10 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_glass/cargo)
+"aeD" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_food)
 "aeF" = (
 /obj/effect/decal/siding{
 	icon_state = "siding2"
@@ -260,6 +260,13 @@
 "ahH" = (
 /turf/open/floor/kutjevo/tan/grey_inner_edge/west,
 /area/bosenmori/mountain/pilgrim)
+"ahT" = (
+/obj/structure/surface/rack{
+	color = "#8B7B5B"
+	},
+/obj/item/fishing_pole,
+/turf/open/floor/wood,
+/area/bosenmori/outside/west_barrens)
 "ahW" = (
 /turf/closed/wall/almayer/research/containment/wall/corner,
 /area/bosenmori/interior_heavy/Mai_research)
@@ -334,8 +341,6 @@
 /obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/suit/storage/hazardvest,
-/obj/effect/spawner/random/tool,
-/obj/effect/spawner/random/tool,
 /obj/item/clothing/head/welding,
 /obj/item/clothing/head/welding,
 /turf/open/floor/plating/plating_catwalk/shiva,
@@ -395,6 +400,14 @@
 	pixel_x = 3;
 	pixel_y = -11
 	},
+/obj/item/reagent_container/food/drinks/cans/beer{
+	pixel_x = 10;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/cans/aspen{
+	pixel_x = 0;
+	pixel_y = 15
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "alN" = (
@@ -406,6 +419,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrown2/west,
 /area/bosenmori/interior_glass/shipment)
+"ame" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/prop/rock/black_ground,
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "amt" = (
 /obj/structure/cargo_container/seegson/right,
 /turf/open/floor/plating,
@@ -448,6 +468,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/food_processing)
+"anH" = (
+/turf/closed/wall/mineral/bone_resin,
+/area/bosenmori/mountain/unknown_level_caves)
 "anM" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor,
@@ -471,7 +494,7 @@
 	dir = 1
 	},
 /obj/structure/machinery/camera{
-	c_tag = "Nexus - Tree";
+	c_tag = "Nexus - Terranium";
 	colony_camera_mapload = 0;
 	dir = 8;
 	network = list("Corporate")
@@ -558,7 +581,7 @@
 "aqd" = (
 /obj/structure/largecrate/random,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "aqe" = (
 /obj/structure/machinery/colony_floodlight,
@@ -778,6 +801,10 @@
 "aww" = (
 /turf/closed/wall/solaris/reinforced/hull,
 /area/bosenmori/interior_heavy/Mai_engineering)
+"axb" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_nexus)
 "axc" = (
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/plating,
@@ -825,6 +852,12 @@
 "ays" = (
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
+	},
+/obj/item/storage/backpack/rmc/light{
+	pixel_x = 2;
+	pixel_y = 8;
+	name = "camping backpack";
+	desc = "Developed by D-TECH. A lightframe backpack for camping expeditions in the harsh colony lifestyle."
 	},
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
@@ -916,11 +949,11 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/mountain/abandoned)
 "aAu" = (
-/obj/structure/cargo_container/wy/mid,
 /obj/effect/projector{
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/elevatorshaft,
 /area/bosenmori/outside/Mai_cargo_under)
 "aBf" = (
@@ -980,7 +1013,7 @@
 /obj/structure/sign/poster/ad{
 	pixel_x = 30
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "aCD" = (
 /obj/structure/bed/chair/comfy/beige{
@@ -1103,13 +1136,9 @@
 /turf/open/gm/dirt2,
 /area/bosenmori/mountain/unknown_level_temple)
 "aFL" = (
-/obj/structure/cargo_container/wy/right,
-/obj/effect/projector{
-	name = "bosenmori_constructiondown";
-	vector_x = -291
-	},
-/turf/open/floor/elevatorshaft,
-/area/bosenmori/outside/Mai_cargo_under)
+/obj/structure/fence,
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_engineering)
 "aGB" = (
 /obj/structure/bed/chair/comfy/lime,
 /obj/effect/decal/cleanable/dirt,
@@ -1245,6 +1274,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating/platebotc,
 /area/bosenmori/outside/Mai_cargo_under)
 "aNb" = (
@@ -1272,6 +1302,7 @@
 	pixel_x = 0;
 	pixel_y = 29
 	},
+/obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/corporate)
 "aNA" = (
@@ -1380,6 +1411,11 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/outside/south_area)
+"aPN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/grime/grime2,
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_regular/research)
 "aQp" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -1866,6 +1902,13 @@
 /obj/structure/fence,
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/outside/north_area)
+"beW" = (
+/obj/structure/sign/poster/safety{
+	pixel_x = -11;
+	pixel_y = 36
+	},
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_hall)
 "bfb" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/prison/bright_clean2,
@@ -2119,6 +2162,10 @@
 	},
 /turf/open/gm/dirt2,
 /area/bosenmori/mountain/unknown_level_temple)
+"ble" = (
+/obj/structure/largecrate/random,
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_hall)
 "blo" = (
 /obj/structure/prop/almayer/computers/sensor_computer1{
 	name = "colonial operations terminal"
@@ -2135,8 +2182,13 @@
 	layer = 3;
 	density = 0
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/interior_glass/Mai_tree_under)
+"blI" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/floor_marked,
+/area/bosenmori/interior_heavy/Mai_shipment)
 "blO" = (
 /obj/structure/flora/bush/desert{
 	icon_state = "tree_3"
@@ -2234,6 +2286,11 @@
 "bni" = (
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_glass/fitness)
+"bnm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/fence,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_nexus)
 "bnW" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00";
@@ -2362,7 +2419,7 @@
 	pixel_x = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "bqJ" = (
 /obj/structure/cryofeed/right,
@@ -2480,6 +2537,14 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/suit/armor/vest/ballistic{
+	pixel_x = 3;
+	pixel_y = 10
+	},
+/obj/item/clothing/suit/armor/vest/ballistic{
+	pixel_x = 10;
+	pixel_y = 0
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_heavy/Mai_research)
 "bub" = (
@@ -2498,7 +2563,7 @@
 	light_power = 0.25;
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "buz" = (
 /obj/effect/decal/cleanable/blood,
@@ -2563,6 +2628,15 @@
 /obj/structure/surface/table,
 /turf/open/floor/warning/west,
 /area/bosenmori/outside/filtration)
+"bwo" = (
+/obj/structure/fence,
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	dir = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "bwt" = (
 /turf/open/gm/river/desert/deep/no_overlay,
 /area/bosenmori/interior_glass/filtration)
@@ -2584,7 +2658,7 @@
 /area/bosenmori/mountain/pilgrim)
 "bwP" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "bxb" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom{
@@ -2653,6 +2727,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan2/west,
 /area/bosenmori/interior_glass/food_processing)
+"bAe" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_regular/research)
 "bAg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
@@ -2692,6 +2770,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrown2/east,
 /area/bosenmori/interior_glass/cargo)
+"bBn" = (
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 8
+	},
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_regular/store)
 "bBv" = (
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 1
@@ -2733,13 +2817,9 @@
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_glass/offices)
 "bCI" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "shipping_ladd";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_glass/shipment)
@@ -2747,6 +2827,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/darkred2/west,
 /area/bosenmori/interior_regular/security)
+"bCU" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "bCV" = (
 /obj/effect/decal/siding{
 	icon_state = "siding6"
@@ -2933,7 +3017,7 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/storage/box/masks,
+/obj/item/device/camera/broadcasting,
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
 "bJE" = (
@@ -3042,7 +3126,7 @@
 /area/bosenmori/interior_heavy/Mai_sewer)
 "bLK" = (
 /obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "bMj" = (
 /obj/structure/machinery/vending/coffee,
@@ -3130,7 +3214,7 @@
 /area/bosenmori/interior_heavy/Mai_engineering)
 "bOw" = (
 /obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/cell_stripe/west,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "bPh" = (
 /turf/open/floor/plating/plating_catwalk/shiva,
@@ -3252,7 +3336,7 @@
 "bUQ" = (
 /obj/structure/closet/crate/trashcart,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "bUX" = (
 /obj/structure/window/reinforced{
@@ -3317,6 +3401,13 @@
 "bWP" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bosenmori/interior_heavy/Mai_tree)
+"bXd" = (
+/obj/structure/sign/poster/safety{
+	pixel_x = 6;
+	pixel_y = 36
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_tree)
 "bXq" = (
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/prison/floor_marked,
@@ -3329,7 +3420,7 @@
 /area/bosenmori/interior_glass/tree)
 "bXB" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/cell_stripe/east,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "bYg" = (
 /obj/structure/disposalpipe/segment,
@@ -3401,7 +3492,7 @@
 /area/bosenmori/mountain/first_level_caves)
 "cay" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "caz" = (
 /obj/structure/flora/grass/tallgrass/desert{
@@ -3455,7 +3546,7 @@
 "cca" = (
 /obj/effect/decal/cleanable/ash,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "ccf" = (
 /obj/effect/step_trigger/clone_cleaner,
@@ -3494,6 +3585,10 @@
 /area/bosenmori/outside/west_area)
 "ceE" = (
 /obj/structure/machinery/photocopier/wyphotocopier,
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.25
+	},
 /turf/open/floor/wood/ship,
 /area/bosenmori/interior_heavy/Mai_corpo)
 "ceN" = (
@@ -3521,6 +3616,7 @@
 "cfo" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/platform,
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass,
 /area/bosenmori/interior_heavy/Mai_tree)
 "cfs" = (
@@ -3547,6 +3643,9 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_regular/telecommunication)
+"cfM" = (
+/turf/closed/wall/shiva/prefabricated/reinforced/hull,
+/area/bosenmori/mountain/unknown_level_caves)
 "cfP" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -3594,6 +3693,10 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/outside/north_area)
+"cgy" = (
+/obj/effect/alien/weeds/node,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/unknown_level_temple)
 "cgY" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -3645,7 +3748,7 @@
 	light_power = 0.25;
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "ciT" = (
 /obj/structure/machinery/power/apc/power/west,
@@ -3882,6 +3985,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass,
 /area/bosenmori/interior_heavy/Mai_tree)
 "cpq" = (
@@ -4100,6 +4204,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/elevatorshaft,
 /area/bosenmori/outside/Mai_cargo_under)
 "cxz" = (
@@ -4162,7 +4267,7 @@
 	light_power = 0.25;
 	dir = 8
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "czP" = (
 /turf/open/auto_turf/sand/layer1,
@@ -4232,10 +4337,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_regular/telecommunication)
+"cCB" = (
+/obj/structure/cargo_container/wy/right,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/interior_heavy/Mai_cargo)
 "cCL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
+	dir = 8
+	},
+/obj/effect/decal/strata_decals/grime/grime4{
 	dir = 8
 	},
 /turf/open/floor/kutjevo/multi_tiles/east,
@@ -4256,6 +4368,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating,
 /area/bosenmori/outside/Mai_cargo_under)
 "cDx" = (
@@ -4508,7 +4621,7 @@
 /obj/structure/tunnel/maint_tunnel/no_xeno_desc{
 	pixel_y = 6
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_food)
 "cJv" = (
 /obj/structure/showcase{
@@ -4745,6 +4858,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/dark,
 /area/bosenmori/outside/Mai_cargo_under)
 "cSO" = (
@@ -4812,7 +4926,7 @@
 /area/bosenmori/interior_regular/security)
 "cVn" = (
 /obj/structure/reagent_dispensers/fueltank/gas/methane,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "cVt" = (
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -5023,6 +5137,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/outside/Mai_cargo_under)
 "dbT" = (
@@ -5165,6 +5280,10 @@
 /obj/item/storage/box/sprays,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/research)
+"dfY" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "dgi" = (
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_heavy/secured_armory)
@@ -5240,12 +5359,15 @@
 /turf/open/floor/shiva/multi_tiles/east,
 /area/bosenmori/interior_glass/corporate)
 "diZ" = (
-/obj/effect/projector{
-	name = "bosenmori_constructiondown";
-	vector_x = -291
+/obj/structure/machinery/colony_floodlight_switch{
+	pixel_y = 30
 	},
-/turf/open/floor/plating,
-/area/bosenmori/outside/Mai_cargo_under)
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/prison/bright_clean2,
+/area/bosenmori/interior_regular/engineering)
 "djc" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -5392,7 +5514,7 @@
 	pixel_y = 36
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "dnU" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -5465,7 +5587,7 @@
 "doH" = (
 /obj/structure/reagent_dispensers/fueltank/gas/methane,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_food)
 "doO" = (
 /obj/structure/platform/strata/metal,
@@ -5644,6 +5766,10 @@
 	},
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
+"drO" = (
+/obj/structure/cargo_container/wy/mid,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/interior_heavy/Mai_cargo)
 "drP" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/interior/tatami,
@@ -5706,7 +5832,7 @@
 /area/bosenmori/mountain/unknown_level_temple)
 "dup" = (
 /obj/structure/reagent_dispensers/watertank,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "duG" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -5732,6 +5858,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/elevatorshaft,
 /area/bosenmori/outside/Mai_cargo_under)
 "dvO" = (
@@ -5751,7 +5878,7 @@
 /area/bosenmori/interior_regular/engineering)
 "dwF" = (
 /obj/structure/prop/static_tank,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "dwH" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -6212,7 +6339,7 @@
 /area/bosenmori/interior_regular/operations)
 "dJk" = (
 /obj/structure/largecrate/random/case,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_food)
 "dJI" = (
 /obj/structure/fence,
@@ -6302,6 +6429,7 @@
 	dir = 1;
 	color = "#8B7B5B"
 	},
+/obj/item/tool/portadialysis,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/mountain/abandoned_dome_under)
 "dNK" = (
@@ -6493,9 +6621,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
+"dQI" = (
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	dir = 4
+	},
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_cargo)
 "dQO" = (
 /turf/open/floor/asteroidfloor,
 /area/bosenmori/interior_heavy/Mai_sewer)
+"dQT" = (
+/turf/open/floor/prison/floor_marked,
+/area/bosenmori/interior_heavy/Mai_secure_arm)
 "dRv" = (
 /obj/structure/closet/crate/trashcart,
 /obj/item/stack/sheet/wood/small_stack,
@@ -6523,6 +6662,7 @@
 	height = 1;
 	name = "cable rope"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/mountain/temple_under)
 "dSa" = (
@@ -6543,7 +6683,7 @@
 	light_power = 0.25;
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "dTU" = (
 /obj/structure/machinery/colony_floodlight{
@@ -6566,6 +6706,7 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "dVA" = (
@@ -6591,8 +6732,12 @@
 "dWd" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/box/trackimp{
-	pixel_x = -6;
-	pixel_y = 10
+	pixel_x = -16;
+	pixel_y = 14
+	},
+/obj/structure/machinery/prop/almayer/computer{
+	pixel_y = 1;
+	pixel_x = -1
 	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_heavy/Mai_research)
@@ -6886,6 +7031,11 @@
 	},
 /turf/open/gm/dirt2,
 /area/bosenmori/mountain/pilgrim)
+"ecH" = (
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_hall)
 "ecI" = (
 /obj/structure/machinery/door/airlock/almayer/maint/autoname{
 	req_one_access = list(106,110);
@@ -7008,11 +7158,11 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/bosenmori/mountain/temple_ruins)
 "eeO" = (
-/obj/structure/cargo_container/wy/left,
 /obj/effect/projector{
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating,
 /area/bosenmori/outside/Mai_cargo_under)
 "eeU" = (
@@ -7082,7 +7232,7 @@
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "ehy" = (
 /obj/effect/step_trigger/clone_cleaner,
@@ -7116,6 +7266,12 @@
 	},
 /turf/open/gm/dirt2,
 /area/bosenmori/mountain/mining)
+"ehP" = (
+/obj/effect/alien/weeds/weedwall,
+/turf/closed/wall/rock{
+	color = "#967e73"
+	},
+/area/bosenmori/mountain/unknown_level_temple)
 "ehZ" = (
 /turf/open/desert/desert_shore/desert_shore1/east,
 /area/bosenmori/outside/east_barrens)
@@ -7128,6 +7284,7 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/river/no_overlay,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "ein" = (
@@ -7162,7 +7319,7 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "ejk" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7189,6 +7346,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/outside/north_area)
+"ekC" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "temple_actual2";
+	name = "armory lock"
+	},
+/turf/open/floor/plating,
+/area/bosenmori/mountain/unknown_level_caves)
 "ekU" = (
 /obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/hypospray/autoinjector/empty/medic/large,
@@ -7205,7 +7369,7 @@
 	light_power = 0.25;
 	dir = 4
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "elz" = (
 /obj/structure/platform{
@@ -7237,6 +7401,10 @@
 "emW" = (
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_heavy/Mai_armory)
+"enl" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_glass/nexus)
 "enn" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -7395,7 +7563,7 @@
 /area/bosenmori/interior_glass/cargo)
 "eum" = (
 /obj/effect/decal/cleanable/ash,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "euw" = (
 /turf/open/floor/prison/darkbrown2,
@@ -7636,7 +7804,7 @@
 "eBk" = (
 /obj/structure/largecrate/random,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "eBu" = (
 /obj/structure/flora/bush/desert/cactus/multiple{
@@ -7674,6 +7842,13 @@
 /obj/effect/decal/remains/human,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/mountain/abandoned)
+"eCL" = (
+/obj/item/toy/beach_ball/holoball{
+	pixel_x = -10;
+	pixel_y = -10
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/interior_heavy/Mai_hall)
 "eDh" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -8032,6 +8207,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/elevatorshaft,
 /area/bosenmori/outside/Mai_cargo_under)
 "eNj" = (
@@ -8094,7 +8270,7 @@
 "eOR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "ePo" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
@@ -8125,7 +8301,7 @@
 	light_power = 0.25;
 	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "ePR" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -8138,6 +8314,10 @@
 	pixel_y = 3
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/banners/twe_flag{
+	pixel_x = -9;
+	pixel_y = 33
+	},
 /turf/open/floor/almayer/plating,
 /area/bosenmori/interior_heavy/Mai_armory)
 "ePS" = (
@@ -8323,7 +8503,7 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "eTw" = (
 /turf/open/floor/prison/greenblue/east,
@@ -8477,7 +8657,7 @@
 /area/bosenmori/interior_heavy/Mai_tree)
 "eXf" = (
 /obj/structure/prop/invuln/overhead_pipe,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "eXp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8497,7 +8677,6 @@
 /obj/item/weapon/gun/smg/nailgun,
 /obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/suit/storage/hazardvest,
-/obj/effect/spawner/random/tool,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_regular/engineering)
 "eYa" = (
@@ -8522,7 +8701,7 @@
 	icon_state = "S";
 	pixel_y = -1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "eYm" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -8615,7 +8794,7 @@
 	pixel_x = 5;
 	pixel_y = 2
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "fbl" = (
 /turf/open/floor/plating,
@@ -8776,7 +8955,7 @@
 "fgz" = (
 /obj/structure/largecrate/random/case/double,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "fgB" = (
 /obj/structure/closet/secure_closet/engineering_materials,
@@ -8956,13 +9135,9 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_regular/operations)
 "fma" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "tree_ladd";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_glass/tree)
@@ -9049,6 +9224,16 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/north_area)
+"fnL" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/obj/item/storage/fancy/trading_card{
+	pixel_x = -2;
+	pixel_y = 8
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/unknown_level_temple)
 "fnN" = (
 /obj/structure/platform_decoration/strata/metal,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -9086,8 +9271,19 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/coast/beachcorner/north_east,
 /area/bosenmori/interior_glass/Mai_tree_under)
+"foQ" = (
+/obj/item/ammo_magazine/rifle/boltaction/vulture,
+/obj/item/device/vulture_spotter_scope/skillless,
+/obj/item/weapon/gun/boltaction/vulture/skillless,
+/obj/item/device/vulture_spotter_tripod,
+/obj/structure/closet/crate/secure/weyland{
+	id = list(213)
+	},
+/turf/open/floor/corsat,
+/area/bosenmori/interior_heavy/Mai_secure_arm)
 "fpg" = (
 /turf/open/gm/river/desert/shallow_corner/east/no_overlay,
 /area/bosenmori/outside/river)
@@ -9122,6 +9318,10 @@
 /obj/structure/curtain/red,
 /turf/open/floor/plating,
 /area/bosenmori/interior_glass/corporate)
+"frr" = (
+/obj/effect/alien/weeds/node,
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/unknown_level_caves)
 "fru" = (
 /obj/structure/cargo_container/horizontal/blue/top{
 	pixel_x = 3;
@@ -9200,7 +9400,7 @@
 "ftn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door_control/brbutton{
-	pixel_x = 0;
+	pixel_x = -8;
 	pixel_y = -23;
 	id = "mai_shutter"
 	},
@@ -9277,7 +9477,7 @@
 	light_color = "#dae2ff";
 	light_power = 0.25
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "fvf" = (
 /turf/open/floor/shiva/floor3,
@@ -9302,7 +9502,7 @@
 /area/bosenmori/mountain/temple_proper)
 "fvO" = (
 /obj/structure/surface/rack,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "fvV" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -9346,13 +9546,9 @@
 /turf/open/floor/kutjevo/multi_tiles/north,
 /area/bosenmori/interior_regular/engineering)
 "fyo" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "security_ladd";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/floor/almayer/plating,
 /area/bosenmori/interior_regular/security_armory)
@@ -9418,6 +9614,7 @@
 	vector_x = -20;
 	vector_y = 13
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/mountain/unknown_level_caves)
 "fzY" = (
@@ -9452,7 +9649,7 @@
 /obj/structure/sign/poster/ad{
 	pixel_x = 30
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "fBD" = (
 /turf/open/floor/asteroidwarning/west,
@@ -9541,6 +9738,7 @@
 	vector_x = -166;
 	name = "temple_firstfloordown"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/bosenmori/mountain/temple_under)
 "fEI" = (
@@ -9623,6 +9821,7 @@
 	vector_x = -166;
 	name = "temple_firstfloordown"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/mountain/temple_under)
 "fGi" = (
@@ -9733,6 +9932,11 @@
 	pixel_y = 3;
 	layer = 3.02
 	},
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	dir = 1
+	},
 /turf/open/floor/podhatchfloor,
 /area/bosenmori/interior_heavy/Mai_corpo)
 "fJq" = (
@@ -9796,6 +10000,10 @@
 	color = "#424a50"
 	},
 /obj/item/weapon/gun/pistol/m1911/socom,
+/obj/item/device/flashlight/lamp{
+	pixel_x = -3;
+	pixel_y = 11
+	},
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
 "fKW" = (
@@ -9980,6 +10188,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_glass/filtration)
+"fTM" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/surgery/healing_gun,
+/turf/open/floor/kutjevo/multi_tiles,
+/area/bosenmori/mountain/unknown_level_temple)
 "fTU" = (
 /turf/open/gm/dirt/desert_dug,
 /area/bosenmori/mountain/temple_ruins)
@@ -10034,7 +10250,7 @@
 /obj/structure/sign/poster/ad{
 	pixel_x = 30
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "fVA" = (
 /obj/structure/platform/strata/metal,
@@ -10109,7 +10325,7 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_food)
 "fXM" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe{
@@ -10179,6 +10395,10 @@
 /obj/item/prop/helmetgarb/flair_initech{
 	pixel_x = 7;
 	pixel_y = 17
+	},
+/obj/item/prop/flower_vase/redwhiteflowers{
+	pixel_x = 16;
+	pixel_y = 19
 	},
 /turf/open/gm/dirt2,
 /area/bosenmori/mountain/pilgrim)
@@ -10250,6 +10470,28 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/faux_wood,
 /area/bosenmori/interior_glass/living)
+"gcx" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/obj/item/reagent_container/food/snacks/grown/cherries{
+	icon_state = "mreFruitcake";
+	icon = 'icons/obj/items/food.dmi';
+	pixel_x = -5;
+	pixel_y = 4;
+	desc = "Whoever decided to make this fruit cake only used macciato cherries.";
+	name = "Red Fruitcake"
+	},
+/obj/item/device/flashlight/tnr{
+	pixel_x = -16;
+	pixel_y = 4
+	},
+/obj/item/device/flashlight/tnr{
+	pixel_x = -9;
+	pixel_y = -6
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/unknown_level_temple)
 "gcE" = (
 /obj/item/prop/rock,
 /turf/open/auto_turf/sand_white/layer0,
@@ -10264,6 +10506,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/dark,
 /area/bosenmori/interior_glass/corporate)
+"gcS" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8
+	},
+/obj/item/device/flashlight/lamp/tripod/grey{
+	light_power = 0.3;
+	light_range = 4
+	},
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/unknown_level_temple)
 "gcY" = (
 /obj/effect/acid_hole{
 	dir = 4
@@ -10604,6 +10856,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
+"gmB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera{
+	c_tag = "Sewer - Segment B";
+	colony_camera_mapload = 0;
+	dir = 1;
+	network = list("Corporate")
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "gmD" = (
 /turf/open/floor/strata/fake_wood,
 /area/bosenmori/interior_heavy/Mai_cargo)
@@ -10650,6 +10912,8 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
+/obj/item/fishing_pole,
+/obj/item/fishing_pole,
 /turf/open/floor/wood,
 /area/bosenmori/outside/west_barrens)
 "gnR" = (
@@ -10809,6 +11073,7 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "gsD" = (
@@ -10857,6 +11122,10 @@
 /obj/structure/prop/dam/boulder/boulder1,
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/shuttles/drop1)
+"gup" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_cargo)
 "guH" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
 /obj/effect/decal/cleanable/dirt,
@@ -10883,7 +11152,7 @@
 /area/bosenmori/mountain/clearing)
 "gvK" = (
 /obj/structure/largecrate/random,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "gvX" = (
 /obj/structure/platform,
@@ -11134,6 +11403,7 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "gBP" = (
@@ -11411,6 +11681,15 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_food)
+"gIf" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/floor/prison/bright_clean2,
+/area/bosenmori/interior_glass/nexus)
+"gIk" = (
+/obj/structure/closet/crate/freezer/cooler,
+/obj/item/storage/beer_pack,
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/unknown_level_temple)
 "gIy" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/shiva,
@@ -11574,6 +11853,10 @@
 	light_color = "#dae2ff";
 	dir = 8
 	},
+/obj/item/book/codebook/twe{
+	pixel_x = 19;
+	pixel_y = 1
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/offices)
 "gOa" = (
@@ -11586,7 +11869,7 @@
 /area/bosenmori/interior_glass/hospital)
 "gOn" = (
 /obj/structure/largecrate/random,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "gOt" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -11669,10 +11952,16 @@
 /turf/open/floor/carpet,
 /area/bosenmori/interior_glass/fitness)
 "gQc" = (
-/obj/structure/largecrate/random/case/double,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/bosenmori/interior_heavy/Mai_hall)
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/tool/surgery/stabilizer_gel,
+/obj/item/tool/surgery/stabilizer_gel{
+	pixel_x = 6;
+	pixel_y = -11
+	},
+/turf/open/floor/kutjevo/multi_tiles,
+/area/bosenmori/mountain/unknown_level_temple)
 "gRo" = (
 /obj/structure/machinery/light/small/blue{
 	dir = 4;
@@ -11878,9 +12167,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/multi_tiles/north,
 /area/bosenmori/interior_glass/food_processing)
+"gZI" = (
+/obj/effect/decal/strata_decals/grime/grime2,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "gZK" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/platform_decoration,
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass,
 /area/bosenmori/interior_heavy/Mai_tree)
 "gZS" = (
@@ -11951,6 +12245,10 @@
 /obj/structure/machinery/fuelcell_recycler,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_glass/filtration)
+"hcf" = (
+/obj/effect/decal/strata_decals/grime/grime2,
+/turf/open/floor/almayer/dark_sterile,
+/area/bosenmori/interior_heavy/Mai_research)
 "hcK" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -12103,6 +12401,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_heavy/Mai_hall)
+"hgQ" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_food)
 "hhm" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/river/desert/shallow_edge/no_overlay,
@@ -12129,7 +12431,7 @@
 	pixel_x = -11;
 	pixel_y = 36
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "hiu" = (
 /obj/structure/noticeboard{
@@ -12154,13 +12456,9 @@
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_glass/cargo)
 "hjL" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "nexus_ladd1";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/desert,
 /area/bosenmori/interior_glass/nexus)
@@ -12191,13 +12489,9 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/bosenmori/mountain/temple_ruins)
 "hkK" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "lz2_ladd";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/shuttles/drop2)
@@ -12265,7 +12559,7 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "hmv" = (
 /obj/structure/surface/table/reinforced{
@@ -12386,6 +12680,7 @@
 /obj/structure/platform_decoration{
 	dir = 6
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass,
 /area/bosenmori/interior_heavy/Mai_tree)
 "hqR" = (
@@ -12597,6 +12892,10 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_heavy/Mai_engineering)
+"hyi" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/bright_clean2,
+/area/bosenmori/interior_heavy/Mai_secure_arm)
 "hyr" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1
@@ -12678,6 +12977,10 @@
 	},
 /turf/open/floor/carpet,
 /area/bosenmori/interior_glass/fitness)
+"hzR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_marked,
+/area/bosenmori/interior_heavy/Mai_secure_arm)
 "hzS" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -12792,6 +13095,14 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bosenmori/mountain/pilgrim)
+"hBT" = (
+/obj/structure/surface/table/reinforced/toc/east,
+/obj/structure/machinery/computer/emails{
+	pixel_x = -2;
+	pixel_y = 11
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_ops)
 "hBU" = (
 /obj/structure/platform,
 /turf/open/floor/prison/floor_plate,
@@ -12932,7 +13243,7 @@
 /area/bosenmori/outside/east_area)
 "hFn" = (
 /obj/structure/largecrate/random/barrel/true_random,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "hFu" = (
 /obj/structure/flora/bush/ausbushes/ausbush,
@@ -12989,7 +13300,7 @@
 	light_power = 0.25;
 	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "hGE" = (
 /obj/structure/surface/table/almayer,
@@ -13365,6 +13676,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_glass/corporate)
+"hRn" = (
+/obj/structure/closet/l3closet/general{
+	can_be_stacked = 1;
+	pixel_x = 8
+	},
+/obj/structure/closet/l3closet/general{
+	can_be_stacked = 1;
+	pixel_x = -8
+	},
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/mountain/unknown_level_temple)
 "hRo" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squareswood,
@@ -13459,6 +13781,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/dark,
 /area/bosenmori/outside/Mai_cargo_under)
 "hVx" = (
@@ -13503,6 +13826,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating/platebotc,
 /area/bosenmori/outside/Mai_cargo_under)
 "hWY" = (
@@ -13597,6 +13921,7 @@
 	color = "#C02526";
 	dir = 1
 	},
+/obj/structure/fence,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_heavy/Mai_nexus)
 "hZQ" = (
@@ -13608,12 +13933,8 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/outside/north_area)
 "hZX" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/bosenmori/interior_heavy/Mai_shipment)
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/mountain/unknown_level_temple)
 "hZZ" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1;
@@ -13705,6 +14026,7 @@
 	name = "bosenmori_constructionsite";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "ibW" = (
@@ -13723,6 +14045,10 @@
 /obj/item/storage/photo_album,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_tree)
+"icW" = (
+/obj/item/stack/yautja_rope,
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "idj" = (
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
@@ -13907,6 +14233,11 @@
 "iiv" = (
 /turf/closed/wall/solaris,
 /area/bosenmori/interior_regular/engineering)
+"iiI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "iiJ" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -14011,6 +14342,7 @@
 /area/bosenmori/mountain/temple_proper)
 "ilt" = (
 /obj/structure/closet/cabinet,
+/obj/item/storage/backpack/satchel,
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
 "imc" = (
@@ -14203,6 +14535,10 @@
 "irC" = (
 /turf/open/gm/river/desert/shallow_edge/no_overlay,
 /area/bosenmori/outside/river)
+"irH" = (
+/obj/effect/alien/weeds/node,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/unknown_level_caves)
 "irK" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -14581,6 +14917,12 @@
 	},
 /turf/open/floor/sandstone/runed,
 /area/bosenmori/mountain/unknown_level_temple)
+"iCN" = (
+/obj/item/broken_device{
+	desc = "A timeless piece of technology from another era, of spacemen who once plunged into the 12th Bay and beyond."
+	},
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "iDc" = (
 /turf/open/gm/dirt2,
 /area/bosenmori/outside/south_area)
@@ -14656,6 +14998,15 @@
 /obj/structure/platform/kutjevo,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/mountain/field_post)
+"iEs" = (
+/obj/structure/machinery/camera{
+	c_tag = "Secure Armory - Exterior Maintenance";
+	colony_camera_mapload = 0;
+	dir = 8;
+	network = list("Corporate")
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_secure_arm)
 "iEB" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/auto_turf/sand_white/layer0,
@@ -14864,6 +15215,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt,
 /area/bosenmori/interior_glass/corporate)
+"iKK" = (
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_corpo)
 "iLM" = (
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_glass/hospital)
@@ -14930,7 +15289,7 @@
 	pixel_x = -1;
 	pixel_y = -2
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "iOt" = (
 /obj/structure/surface/table{
@@ -15040,6 +15399,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass,
 /area/bosenmori/interior_heavy/Mai_tree)
 "iRA" = (
@@ -15171,6 +15531,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_glass/shipment)
+"iUZ" = (
+/obj/structure/machinery/camera{
+	c_tag = "Hospital - Storage";
+	colony_camera_mapload = 0;
+	network = list("Corporate")
+	},
+/turf/open/floor/prison/greenblue/north,
+/area/bosenmori/interior_heavy/Mai_food)
 "iVf" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
@@ -15267,7 +15635,7 @@
 	pixel_x = 19;
 	pixel_y = 0
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "iZu" = (
 /obj/item/stool{
@@ -15370,6 +15738,8 @@
 /obj/structure/closet/cabinet,
 /obj/item/ammo_magazine/pistol/m1911,
 /obj/item/ammo_magazine/pistol/m1911,
+/obj/item/weapon/gun/shotgun/pump,
+/obj/item/ammo_magazine/handful/shotgun/buckshot,
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
 "jdd" = (
@@ -15555,6 +15925,10 @@
 "jjQ" = (
 /turf/open/desert/desert_shore/shore_corner2/west,
 /area/bosenmori/outside/river)
+"jko" = (
+/obj/item/prop/rock,
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/unknown_level_temple)
 "jkD" = (
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_glass/nexus)
@@ -15713,6 +16087,12 @@
 	pixel_x = 16;
 	pixel_y = 0
 	},
+/obj/structure/surface/rack{
+	color = "#8B7B5B"
+	},
+/obj/item/ammo_box/magazine/m39/heap{
+	name = "magazine box (HEAP v9 x 12)"
+	},
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/secured_armory)
 "jov" = (
@@ -15859,6 +16239,7 @@
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/cargo)
 "jtI" = (
+/obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/fitness)
 "jtZ" = (
@@ -15950,8 +16331,17 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
+"jvS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	dir = 1
+	},
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_shipment)
 "jwd" = (
 /obj/item/clothing/mask/yautja_flavor{
 	anchored = 1;
@@ -16040,6 +16430,15 @@
 "jxI" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bosenmori/outside/west_barrens)
+"jxL" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = -1;
+	pixel_y = 0
+	},
+/turf/open/floor/interior/wood,
+/area/bosenmori/mountain/unknown_level_temple)
 "jyp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/plate,
@@ -16105,7 +16504,7 @@
 	pixel_x = -4;
 	pixel_y = 32
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "jAH" = (
 /obj/structure/flora/jungle/treeblocker,
@@ -16335,6 +16734,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_glass/offices)
+"jFk" = (
+/obj/structure/sign/poster/pinup,
+/turf/closed/wall/solaris/reinforced,
+/area/bosenmori/interior_heavy/Mai_armory)
 "jFz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small/blue{
@@ -16346,7 +16749,7 @@
 "jFQ" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "jFV" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -16661,7 +17064,8 @@
 	color = "#ffe6e6"
 	},
 /obj/structure/machinery/prop/almayer/computer/PC/large{
-	pixel_y = 3
+	pixel_y = 5;
+	pixel_x = -16
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
@@ -16685,7 +17089,7 @@
 	light_power = 0.25;
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_food)
 "jOC" = (
 /obj/structure/surface/table/almayer,
@@ -16780,6 +17184,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/warning/west,
 /area/bosenmori/shuttles/drop1)
+"jRN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/broken_device{
+	desc = "A timeless piece of technology from another era, of spacemen who once plunged into the 12th Bay and beyond."
+	},
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "jRS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -16973,7 +17384,7 @@
 	light_power = 0.25;
 	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "jWJ" = (
 /turf/open/floor/prison/darkbrown2/north,
@@ -17328,8 +17739,28 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/bosenmori/mountain/field_post)
 "kld" = (
-/obj/structure/closet/crate/trashcart,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sandbags_empty/full{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/obj/structure/bed/bedroll{
+	pixel_x = 0;
+	pixel_y = -4
+	},
+/obj/structure/bed/bedroll{
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/obj/structure/bed/bedroll{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/obj/item/stack/yautja_rope{
+	pixel_x = -7;
+	pixel_y = 1
+	},
+/obj/item/weapon/baseballbat/metal,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_hall)
 "klm" = (
@@ -17403,6 +17834,13 @@
 "knJ" = (
 /turf/open/floor/prison/cell_stripe,
 /area/bosenmori/interior_heavy/Mai_cargo)
+"knS" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "temple_actual1";
+	name = "armory lock"
+	},
+/turf/open/floor/plating,
+/area/bosenmori/mountain/unknown_level_caves)
 "kob" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	dir = 10
@@ -17430,7 +17868,7 @@
 	pixel_x = -8;
 	pixel_y = 21
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "kpc" = (
 /obj/structure/barricade/handrail/wire{
@@ -17542,6 +17980,10 @@
 /area/bosenmori/outside/east_area)
 "ksi" = (
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/clothing/suit/armor/vest/ballistic{
+	pixel_x = -5;
+	pixel_y = -11
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
 "ksy" = (
@@ -17603,6 +18045,7 @@
 	vector_x = -166;
 	name = "temple_firstfloordown"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/kutjevo/multi_tiles,
 /area/bosenmori/mountain/temple_under)
 "kuW" = (
@@ -17616,6 +18059,10 @@
 	pixel_y = 11
 	},
 /obj/item/device/binoculars/civ,
+/obj/item/book/codebook/twe{
+	pixel_x = 8;
+	pixel_y = 7
+	},
 /turf/open/floor/greengrid,
 /area/bosenmori/interior_glass/corporate)
 "kvt" = (
@@ -17626,6 +18073,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/mountain/abandoned)
+"kvT" = (
+/obj/structure/cargo_container/wy/left,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/interior_heavy/Mai_cargo)
 "kwo" = (
 /obj/structure/xenoautopsy/jar_shelf{
 	pixel_y = 28
@@ -17688,7 +18139,7 @@
 	light_power = 0.25;
 	dir = 8
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "kyf" = (
 /obj/structure/surface/rack{
@@ -17804,6 +18255,10 @@
 /obj/item/ammo_magazine/shotgun/slug,
 /obj/item/ammo_magazine/shotgun/slug,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_magazine/smg/m39/ap,
+/obj/item/ammo_magazine/smg/m39/ap,
+/obj/item/ammo_magazine/smg/m39/ap,
+/obj/item/ammo_magazine/smg/m39/le,
 /turf/open/floor/almayer/plating,
 /area/bosenmori/interior_heavy/Mai_armory)
 "kBj" = (
@@ -17954,10 +18409,14 @@
 /obj/structure/prop/dam/boulder,
 /turf/open/auto_turf/sand/layer1,
 /area/bosenmori/outside/east_area)
-"kFB" = (
+"kFx" = (
+/obj/structure/largecrate/random,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/cell_stripe/west,
-/area/bosenmori/interior_heavy/Mai_engineering)
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_hall)
+"kFB" = (
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_cargo)
 "kFF" = (
 /obj/structure/tunnel,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -18121,6 +18580,10 @@
 	dir = 1
 	},
 /obj/item/pizzabox/vegetable,
+/obj/item/reagent_container/food/drinks/cans/aspen{
+	pixel_x = -5;
+	pixel_y = 13
+	},
 /turf/open/floor/redyellowfull,
 /area/bosenmori/interior_regular/kitchen)
 "kKU" = (
@@ -18308,15 +18771,11 @@
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/secured_armory)
 "kRF" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "science_ladd";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_regular/research)
 "kRR" = (
 /obj/structure/machinery/bioprinter{
@@ -18413,7 +18872,7 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "kUc" = (
 /obj/effect/step_trigger/clone_cleaner,
@@ -18731,6 +19190,11 @@
 /area/bosenmori/interior_heavy/Mai_ops)
 "ldT" = (
 /obj/structure/safe/cl_office,
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	dir = 1
+	},
 /turf/open/floor/wood/ship,
 /area/bosenmori/interior_heavy/Mai_corpo)
 "ldZ" = (
@@ -18777,6 +19241,16 @@
 "lfN" = (
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bosenmori/mountain/pilgrim)
+"lgl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera{
+	c_tag = "Sewer - Segment D";
+	colony_camera_mapload = 0;
+	network = list("Corporate");
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "lgT" = (
 /obj/item/lightstick/red/spoke/planted,
 /turf/open/auto_turf/sand_white/layer0,
@@ -18937,6 +19411,7 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "lle" = (
@@ -19220,6 +19695,21 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_heavy/Mai_corpo)
+"ltQ" = (
+/obj/structure/sink{
+	pixel_y = 24;
+	layer = 3.1
+	},
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_x = 0;
+	pixel_y = 19
+	},
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/mountain/unknown_level_temple)
 "lum" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -19271,11 +19761,8 @@
 /turf/open/floor/plating/platebot,
 /area/bosenmori/interior_glass/cargo)
 "lvr" = (
-/obj/structure/ore_box{
-	name = "wooden cargo crate"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/bosenmori/interior_heavy/Mai_hall)
+/turf/closed/wall/mineral/bone_resin,
+/area/bosenmori/mountain/unknown_level_temple)
 "lvG" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -19365,6 +19852,9 @@
 	},
 /turf/open/floor/dark,
 /area/bosenmori/mountain/mining)
+"lxR" = (
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_food)
 "lyb" = (
 /obj/structure/tunnel,
 /turf/open/auto_turf/sand_white/layer0,
@@ -19630,13 +20120,9 @@
 /turf/open/gm/dirt2,
 /area/bosenmori/outside/north_barrens)
 "lGd" = (
-/obj/structure/machinery/light/small/blue{
-	light_color = "#dae2ff";
-	light_power = 0.25;
-	dir = 8
-	},
-/turf/open/floor/prison/floor_plate,
-/area/bosenmori/interior_heavy/Mai_hall)
+/obj/structure/tunnel,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/unknown_level_temple)
 "lGw" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -19935,7 +20421,7 @@
 	pixel_x = 13;
 	pixel_y = 33
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "lPr" = (
 /turf/open/auto_turf/sand/layer0,
@@ -20242,6 +20728,7 @@
 	vector_x = -288
 	},
 /obj/item/holder/mouse/brown,
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "lYL" = (
@@ -20271,6 +20758,7 @@
 	light_color = "#dae2ff"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_heavy/Mai_research)
 "lZn" = (
@@ -20339,14 +20827,9 @@
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/cargo)
 "mbq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/small/blue{
-	light_color = "#dae2ff";
-	light_power = 0.25;
-	dir = 4
-	},
-/turf/open/floor/prison/floor_plate,
-/area/bosenmori/interior_heavy/Mai_cargo)
+/obj/item/prop/rock,
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "mbE" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -20898,7 +21381,7 @@
 	pixel_y = 36
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "mqD" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -21121,7 +21604,7 @@
 	light_power = 0.25;
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "mvU" = (
 /obj/structure/lattice{
@@ -21268,6 +21751,16 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_heavy/Mai_engineering)
+"mAy" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/obj/item/storage/fancy/trading_card/green{
+	pixel_x = 4;
+	pixel_y = -1
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/unknown_level_temple)
 "mAC" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/greenblue/north,
@@ -21425,12 +21918,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/mountain/mining)
 "mIk" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 2
-	},
-/turf/open/floor/prison/floor_plate,
-/area/bosenmori/interior_heavy/Mai_cargo)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_hall)
 "mIv" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -21470,6 +21960,12 @@
 "mJO" = (
 /turf/closed/wall/solaris,
 /area/bosenmori/outside/west_barrens)
+"mJU" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/unknown_level_temple)
 "mKc" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -21772,6 +22268,22 @@
 /obj/structure/surface/table/woodentable{
 	color = "#8B7B5B"
 	},
+/obj/item/reagent_container/food/drinks/cans/beer{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/reagent_container/food/drinks/cans/beer{
+	pixel_x = 10;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/cans/souto/classic{
+	pixel_x = -9;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/bottle/whiskey{
+	pixel_x = -3;
+	pixel_y = 2
+	},
 /turf/open/floor/wood,
 /area/bosenmori/outside/west_barrens)
 "mVX" = (
@@ -21950,7 +22462,7 @@
 "naV" = (
 /obj/vehicle/train/cargo/trolley,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "nbc" = (
 /obj/structure/grille{
@@ -22111,7 +22623,7 @@
 /obj/structure/prop/almayer/whiteboard{
 	pixel_y = 22;
 	density = 0;
-	pixel_x = 5;
+	pixel_x = 21;
 	layer = 3.02
 	},
 /turf/open/floor/prison/floor_plate,
@@ -22326,6 +22838,15 @@
 	},
 /turf/open/floor/plating,
 /area/bosenmori/shuttles/drop2)
+"nqc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_engineering)
 "nqr" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/floor_plate,
@@ -22337,6 +22858,22 @@
 /obj/structure/platform/kutjevo/smooth,
 /turf/open/gm/coast/west,
 /area/bosenmori/mountain/river)
+"nqL" = (
+/obj/structure/surface/table/reinforced{
+	dir = 1;
+	color = "#8B7B5B";
+	flipped = 1
+	},
+/obj/item/clothing/suit/armor/vest/ballistic{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/abandoned_dome_under)
+"nrh" = (
+/obj/structure/prop/invuln/darkness,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_tree)
 "nri" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
@@ -22406,6 +22943,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
+/obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_regular/engineering)
 "ntu" = (
@@ -22753,6 +23291,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/bosenmori/interior_glass/living)
+"nCZ" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "gate shutter";
+	id = "temple_actual3"
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/unknown_level_caves)
 "nDd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -22827,6 +23372,12 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_glass/offices)
+"nEo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/obj/structure/prop/invuln/darkness,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_tree)
 "nEt" = (
 /obj/structure/cargo_container/horizontal/blue/bottom{
 	pixel_x = 3
@@ -22848,6 +23399,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/mountain/abandoned_dome_under)
+"nEL" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/effect/decal/remains/xeno,
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "nET" = (
 /obj/structure/prop/ice_colony/surveying_device{
 	pixel_x = -2;
@@ -22863,6 +23421,15 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/tree)
+"nFt" = (
+/obj/structure/machinery/camera{
+	c_tag = "Sewer - Segment C";
+	colony_camera_mapload = 0;
+	dir = 4;
+	network = list("Corporate")
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "nGl" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -23120,6 +23687,7 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/coast/east,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "nPv" = (
@@ -23211,7 +23779,7 @@
 "nRy" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "nRL" = (
 /obj/structure/barricade/handrail/kutjevo{
@@ -23338,7 +23906,7 @@
 "nVl" = (
 /obj/vehicle/train/cargo/engine,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "nVp" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed,
@@ -23383,7 +23951,7 @@
 /area/bosenmori/interior_glass/cargo)
 "nWx" = (
 /obj/structure/machinery/power/apc/upgraded/power/north,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "nWU" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed{
@@ -23838,6 +24406,13 @@
 	},
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/shipment)
+"oln" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "temple_actual3";
+	name = "armory lock"
+	},
+/turf/open/floor/plating,
+/area/bosenmori/mountain/unknown_level_caves)
 "olt" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -23938,6 +24513,21 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_glass/tree)
+"onj" = (
+/obj/structure/sink{
+	layer = 3.1;
+	dir = 8;
+	pixel_x = -16
+	},
+/obj/structure/mirror{
+	pixel_x = -31;
+	pixel_y = -3
+	},
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 4
+	},
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_glass/living)
 "onQ" = (
 /turf/closed/wall/solaris/reinforced/hull,
 /area/bosenmori/interior_heavy/Mai_tree)
@@ -23964,7 +24554,7 @@
 /obj/structure/reagent_dispensers/fueltank{
 	anchored = 1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "opU" = (
 /obj/effect/decal/warning_stripes{
@@ -24018,7 +24608,7 @@
 	light_power = 0.25;
 	dir = 8
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "orx" = (
 /obj/structure/prop/dam/wide_boulder/boulder1,
@@ -24027,6 +24617,7 @@
 "orX" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/platform,
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/bosenmori/interior_heavy/Mai_tree)
 "ose" = (
@@ -24114,14 +24705,6 @@
 /turf/open/floor/shiva/floor3,
 /area/bosenmori/interior_regular/telecommunication)
 "ovI" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
-	id = "cargo_ladd1";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
-	},
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5;
 	dir = 1;
@@ -24133,6 +24716,10 @@
 	dir = 4
 	},
 /obj/effect/step_trigger/clone_cleaner,
+/obj/structure/ladder/maintenance{
+	id = "cargo_ladd1";
+	height = 2
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/outside/cargo)
 "ovU" = (
@@ -24143,7 +24730,7 @@
 /obj/structure/ore_box{
 	name = "wooden cargo crate"
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "ovX" = (
 /obj/structure/machinery/light/small/blue{
@@ -24305,7 +24892,7 @@
 	light_color = "#dae2ff";
 	light_power = 0.25
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "oCX" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -24338,6 +24925,7 @@
 	vector_y = 13
 	},
 /obj/structure/prop/rock/black_ground,
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/dirt2,
 /area/bosenmori/mountain/unknown_level_caves)
 "oDR" = (
@@ -24354,8 +24942,6 @@
 /obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/suit/storage/hazardvest,
-/obj/effect/spawner/random/tool,
-/obj/effect/spawner/random/tool,
 /obj/item/clothing/head/welding,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_regular/engineering)
@@ -24520,7 +25106,7 @@
 /area/bosenmori/outside/south_area)
 "oIn" = (
 /obj/structure/machinery/power/apc/upgraded/power/east,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "oIu" = (
 /obj/structure/surface/table/holotable{
@@ -24680,13 +25266,9 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "armory_ladd";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/secured_armory)
@@ -24729,6 +25311,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_glass/living)
+"oMT" = (
+/obj/effect/step_trigger/clone_cleaner,
+/obj/structure/platform,
+/obj/structure/prop/invuln/darkness,
+/turf/open/gm/river/no_overlay,
+/area/bosenmori/interior_heavy/Mai_tree)
 "oNt" = (
 /obj/structure/surface/table{
 	color = "#8B7B5B"
@@ -24872,7 +25460,14 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/tool/pickaxe/hammer,
+/obj/item/ammo_box/magazine/misc/flashlight{
+	pixel_x = 2;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/misc/flashlight{
+	pixel_x = -2;
+	pixel_y = 6
+	},
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
 "oQN" = (
@@ -24945,6 +25540,14 @@
 	},
 /turf/open/desert/desert_shore/shore_edge1/west,
 /area/bosenmori/outside/north_barrens)
+"oSV" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/rock,
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "oSX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small/blue{
@@ -24978,6 +25581,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_heavy/Mai_research)
+"oTv" = (
+/obj/structure/machinery/camera{
+	c_tag = "Nexus - Tree";
+	colony_camera_mapload = 0;
+	dir = 8;
+	network = list("Corporate")
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_tree)
 "oTC" = (
 /obj/structure/ore_box{
 	name = "wooden cargo crate"
@@ -24985,6 +25597,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_hall)
+"oTZ" = (
+/obj/effect/decal/strata_decals/grime/grime2{
+	dir = 8
+	},
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_glass/living)
 "oUe" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00"
@@ -25022,6 +25640,7 @@
 "oWq" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/platform,
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/coast/north,
 /area/bosenmori/interior_heavy/Mai_tree)
 "oWQ" = (
@@ -25130,6 +25749,10 @@
 "oZj" = (
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_glass/tree)
+"oZu" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_shipment)
 "oZA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/spiderling/nogrow,
@@ -25335,6 +25958,15 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_nexus)
+"pfx" = (
+/obj/structure/machinery/camera{
+	c_tag = "Engineering - Reactors";
+	colony_camera_mapload = 0;
+	dir = 4;
+	network = list("Corporate")
+	},
+/turf/open/floor/prison/bright_clean2,
+/area/bosenmori/interior_heavy/Mai_engineering)
 "pfP" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -25358,7 +25990,7 @@
 	pixel_x = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "pgd" = (
 /obj/effect/decal/siding{
@@ -25441,12 +26073,12 @@
 	pixel_y = 9
 	},
 /obj/item/device/reagent_scanner{
-	pixel_x = -7;
-	pixel_y = 4
+	pixel_x = -4;
+	pixel_y = 6
 	},
 /obj/item/device/reagent_scanner{
-	pixel_x = -18;
-	pixel_y = 1
+	pixel_x = -12;
+	pixel_y = 2
 	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_heavy/Mai_research)
@@ -25489,7 +26121,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "pjY" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -25555,15 +26187,28 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/shuttles/drop1)
+"plc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/abandoned_dome_under)
+"plf" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_hall)
 "plr" = (
 /obj/structure/largecrate/random,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
 "plS" = (
-/obj/structure/pipes/vents/pump/no_boom{
-	name = "Secure Reinforced Air Vent";
-	welded = 1
+/obj/structure/machinery/optable,
+/obj/structure/sink{
+	layer = 3.1;
+	dir = 8;
+	pixel_x = 22;
+	pixel_y = -2
 	},
+/obj/item/tool/surgery/scalpel/manager,
 /turf/open/floor/almayer/research/containment/floor2/north,
 /area/bosenmori/interior_heavy/Mai_research)
 "plU" = (
@@ -25841,6 +26486,10 @@
 /obj/structure/machinery/blackbox_recorder,
 /turf/open/floor/podhatchfloor,
 /area/bosenmori/interior_regular/telecommunication)
+"psE" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_glass/living)
 "psH" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/decal/cleanable/dirt,
@@ -25959,6 +26608,7 @@
 	color = "#8B7B5B"
 	},
 /obj/item/tool/pickaxe,
+/obj/item/tool/pickaxe/hammer,
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
 "pxr" = (
@@ -26010,6 +26660,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_cargo)
+"pyY" = (
+/obj/structure/fence,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_nexus)
 "pzt" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -26141,6 +26795,10 @@
 	color = "#8B7B5B"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/pamphlet/trait/vulture{
+	pixel_x = -5;
+	pixel_y = 6
+	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "pCE" = (
@@ -26509,7 +27167,7 @@
 	light_power = 0.25;
 	dir = 8
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "pNG" = (
 /turf/open/auto_turf/sand/layer0,
@@ -26643,7 +27301,7 @@
 	pixel_x = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "pQB" = (
 /obj/structure/machinery/camera{
@@ -26669,6 +27327,7 @@
 	light_color = "#dae2ff";
 	light_power = 0.5
 	},
+/obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_heavy/Mai_research)
 "pRR" = (
@@ -26796,8 +27455,12 @@
 /obj/structure/sign/poster/ad{
 	pixel_x = 30
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
+"pTZ" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_engineering)
 "pUf" = (
 /obj/item/stack/sheet/wood/medium_stack{
 	pixel_x = 4;
@@ -26807,6 +27470,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_heavy/Mai_hall)
+"pUL" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_cargo)
 "pUS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/fully_broken/no_cell,
@@ -26821,6 +27488,19 @@
 /obj/item/tool/shovel,
 /turf/open/auto_turf/sand/layer1,
 /area/bosenmori/outside/east_area)
+"pVR" = (
+/obj/effect/step_trigger/clone_cleaner,
+/obj/structure/platform,
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/structure/platform_decoration{
+	dir = 10;
+	layer = 3.51
+	},
+/obj/structure/prop/invuln/darkness,
+/turf/open/gm/river/no_overlay,
+/area/bosenmori/interior_heavy/Mai_tree)
 "pWb" = (
 /obj/structure/cryofeed/right,
 /obj/structure/platform_decoration{
@@ -26833,6 +27513,7 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "pWt" = (
@@ -26969,6 +27650,7 @@
 	pixel_x = -4;
 	pixel_y = 7
 	},
+/obj/item/device/binoculars/civ,
 /turf/open/floor/almayer/plating,
 /area/bosenmori/interior_heavy/Mai_armory)
 "pZQ" = (
@@ -27012,6 +27694,16 @@
 	},
 /turf/open/gm/coast/west,
 /area/bosenmori/mountain/river)
+"qaB" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/tool/surgery/FixOVein/predatorFixOVein{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/turf/open/floor/kutjevo/multi_tiles,
+/area/bosenmori/mountain/unknown_level_temple)
 "qaF" = (
 /obj/structure/window/framed/solaris/reinforced,
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -27034,16 +27726,15 @@
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "qbn" = (
-/obj/item/storage/belt/shotgun/full/quackers,
-/turf/open/floor/almayer/research/containment/floor2/west,
-/area/bosenmori/interior_heavy/Mai_research)
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_shipment)
 "qbu" = (
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
 	light_power = 0.25;
 	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "qcE" = (
 /obj/structure/prop/dam/boulder/boulder3,
@@ -27068,7 +27759,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/camera{
-	c_tag = "Engineering - Reactors";
+	c_tag = "Engineering - Station";
 	colony_camera_mapload = 0;
 	dir = 4;
 	network = list("Corporate")
@@ -27245,6 +27936,10 @@
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/west_barrens)
 "qkJ" = (
+/obj/structure/pipes/vents/pump/no_boom{
+	name = "Secure Reinforced Air Vent";
+	welded = 1
+	},
 /turf/open/floor/almayer/research/containment/corner/north,
 /area/bosenmori/interior_heavy/Mai_research)
 "qkW" = (
@@ -27261,9 +27956,27 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_hall)
+"qln" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "gate shutter";
+	id = "temple_actual1";
+	unacidable = 1
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/unknown_level_caves)
 "qlp" = (
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
+"qlA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera{
+	c_tag = "Sewer - Segment E";
+	colony_camera_mapload = 0;
+	network = list("Corporate");
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "qlZ" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -27313,6 +28026,10 @@
 	color = "#424a50"
 	},
 /obj/item/device/working_joe_pda,
+/obj/item/device/flashlight/tnr{
+	pixel_x = -11;
+	pixel_y = 4
+	},
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
 "qol" = (
@@ -27582,7 +28299,7 @@
 	pixel_y = -1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "qvg" = (
 /obj/structure/disposalpipe/segment{
@@ -27781,6 +28498,7 @@
 	dir = 9;
 	layer = 3.2
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass,
 /area/bosenmori/interior_heavy/Mai_tree)
 "qyj" = (
@@ -27932,6 +28650,10 @@
 /obj/structure/prop/dam/boulder/boulder1,
 /turf/open/auto_turf/sand/layer1,
 /area/bosenmori/outside/west_barrens)
+"qCT" = (
+/obj/structure/closet/crate/freezer/cooler,
+/turf/open/floor/wood,
+/area/bosenmori/outside/west_barrens)
 "qCV" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -28008,6 +28730,12 @@
 /obj/item/trash/semki,
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/north_area)
+"qEt" = (
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 1
+	},
+/turf/open/floor,
+/area/bosenmori/interior_glass/living)
 "qEE" = (
 /obj/structure/surface/rack,
 /turf/open/auto_turf/sand/layer0,
@@ -28019,8 +28747,20 @@
 	pixel_y = 17;
 	layer = 3
 	},
+/obj/item/clothing/suit/storage/marine/veteran/lamp{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/item/clothing/suit/storage/marine/veteran/lamp{
+	pixel_x = -2;
+	pixel_y = -5
+	},
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_heavy/Mai_shipment)
+"qFb" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/bright_clean2,
+/area/bosenmori/interior_heavy/Mai_engineering)
 "qFx" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 1;
@@ -28156,7 +28896,7 @@
 /turf/open/floor,
 /area/bosenmori/outside/south_area)
 "qHu" = (
-/turf/open/floor/prison/cell_stripe/east,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "qHv" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -28199,6 +28939,7 @@
 	height = 1;
 	name = "cable rope"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/mountain/unknown_level_caves)
 "qHS" = (
@@ -28547,9 +29288,30 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/bosenmori/interior_glass/corporate)
+"qOX" = (
+/obj/effect/decal/strata_decals/grime/grime1,
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_heavy/Mai_research)
 "qPg" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bosenmori/interior_glass/corporate)
+"qPm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	dir = 4
+	},
+/obj/item/reagent_container/food/drinks/cans/aspen{
+	pixel_x = 1;
+	pixel_y = 20
+	},
+/obj/item/reagent_container/food/drinks/cans/aspen{
+	pixel_x = 10;
+	pixel_y = 16
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_hall)
 "qPA" = (
 /turf/open/desert/desert_shore/shore_edge1/north,
 /area/bosenmori/outside/river)
@@ -28610,6 +29372,7 @@
 /obj/item/ammo_magazine/pistol/heavy,
 /obj/item/ammo_magazine/pistol/heavy/super,
 /obj/item/storage/pouch/magazine/pistol,
+/obj/item/clothing/suit/armor/vest/ballistic,
 /turf/open/floor/greengrid,
 /area/bosenmori/interior_glass/corporate)
 "qQO" = (
@@ -28767,7 +29530,7 @@
 	light_power = 0.25;
 	dir = 1
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "qUX" = (
 /turf/open/floor/plating/plating_catwalk/aicore,
@@ -28777,6 +29540,10 @@
 /obj/structure/bookcase,
 /turf/open/floor/kutjevo/multi_tiles/east,
 /area/bosenmori/interior_glass/fitness)
+"qVn" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_regular/store)
 "qVu" = (
 /obj/structure/platform{
 	dir = 8
@@ -28883,6 +29650,13 @@
 	},
 /turf/open/floor/greengrid,
 /area/bosenmori/interior_regular/telecommunication)
+"qXJ" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/obj/item/device/flashlight/lamp,
+/turf/open/floor/interior/wood,
+/area/bosenmori/mountain/unknown_level_temple)
 "qYo" = (
 /obj/structure/machinery/botany/extractor{
 	density = 0;
@@ -29023,6 +29797,10 @@
 	},
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/shipment)
+"rdp" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_cargo)
 "rdq" = (
 /obj/structure/tent/med{
 	color = "#476b6b"
@@ -29136,6 +29914,10 @@
 	},
 /turf/open/gm/dirt,
 /area/bosenmori/mountain/temple_ruins)
+"rif" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/floor/prison/greenblue/north,
+/area/bosenmori/interior_glass/food_processing)
 "rii" = (
 /turf/open/asphalt/cement_sunbleached,
 /area/bosenmori/shuttles/drop3)
@@ -29172,6 +29954,12 @@
 	},
 /turf/open/floor/plating,
 /area/bosenmori/interior_regular/kitchen)
+"riQ" = (
+/obj/effect/decal/strata_decals/grime/grime2{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_nexus)
 "riX" = (
 /obj/structure/cargo_container/seegson/mid,
 /turf/open/floor/plating,
@@ -29399,6 +30187,10 @@
 	color = "#424a50"
 	},
 /obj/item/clothing/gloves/latex,
+/obj/item/device/flashlight/lamp/on{
+	pixel_x = 1;
+	pixel_y = -8
+	},
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
 "rrF" = (
@@ -29471,6 +30263,17 @@
 	},
 /turf/open/gm/dirt,
 /area/bosenmori/mountain/temple_ruins)
+"rtG" = (
+/obj/structure/machinery/optable,
+/obj/structure/sink{
+	layer = 3.1;
+	dir = 8;
+	pixel_x = 22;
+	pixel_y = -2
+	},
+/obj/item/tool/surgery/scalpel/pict_system,
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/bosenmori/interior_heavy/Mai_research)
 "rtJ" = (
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
@@ -29488,6 +30291,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_glass/cargo)
+"ruP" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/almayer/research/containment/entrance,
+/area/bosenmori/interior_heavy/Mai_research)
 "ruZ" = (
 /obj/structure/reagent_dispensers/fueltank/custom,
 /obj/effect/decal/cleanable/dirt,
@@ -29566,10 +30375,6 @@
 /obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/suit/storage/hazardvest,
-/obj/effect/spawner/random/tool,
-/obj/effect/spawner/random/tool,
-/obj/effect/spawner/random/tool,
-/obj/effect/spawner/random/toolbox,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_regular/engineering)
 "rxv" = (
@@ -29687,6 +30492,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
+/obj/effect/decal/strata_decals/grime/grime3{
+	dir = 8
+	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_regular/engineering)
 "rBI" = (
@@ -29743,7 +30551,7 @@
 	light_power = 0.25;
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_food)
 "rDz" = (
 /obj/structure/cargo_container/kelland/left{
@@ -29900,6 +30708,7 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "rGS" = (
@@ -30037,6 +30846,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating,
 /area/bosenmori/outside/Mai_cargo_under)
 "rKf" = (
@@ -30134,6 +30944,22 @@
 	},
 /turf/open/floor/corsat/cargo,
 /area/bosenmori/interior_heavy/Mai_hall)
+"rLQ" = (
+/obj/structure/surface/table/reinforced/toc/west,
+/obj/item/clothing/suit/armor/vest/ballistic{
+	pixel_x = -10;
+	pixel_y = 11
+	},
+/obj/item/clothing/suit/armor/vest/ballistic{
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/obj/item/book/codebook/twe{
+	pixel_x = 10;
+	pixel_y = 11
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_ops)
 "rMi" = (
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_regular/research)
@@ -30260,6 +31086,10 @@
 	},
 /turf/open/floor/greengrid,
 /area/bosenmori/interior_heavy/secured_armory)
+"rSx" = (
+/obj/effect/decal/strata_decals/grime/grime2,
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_heavy/Mai_research)
 "rTw" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -30454,13 +31284,9 @@
 /turf/closed/wall/solaris/reinforced,
 /area/bosenmori/interior_regular/store)
 "rWt" = (
-/obj/structure/machinery/light/small/blue{
-	light_color = "#dae2ff";
-	light_power = 0.25;
-	dir = 4
-	},
-/turf/open/floor/prison/floor_plate,
-/area/bosenmori/interior_heavy/Mai_hall)
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_glass/nexus)
 "rWA" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/asphalt,
@@ -30629,7 +31455,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "saZ" = (
 /obj/structure/flora/bush/desert/cactus/multiple{
@@ -30698,6 +31524,10 @@
 	},
 /turf/open/gm/river/desert/deep/no_overlay,
 /area/bosenmori/outside/river)
+"sdF" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_heavy/Mai_research)
 "sdI" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/prop/invuln/lattice_prop{
@@ -30719,6 +31549,7 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "sem" = (
@@ -30947,6 +31778,7 @@
 	color = "#C02526";
 	dir = 1
 	},
+/obj/structure/fence,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_heavy/Mai_nexus)
 "sma" = (
@@ -30982,7 +31814,7 @@
 	light_power = 0.25;
 	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_food)
 "smD" = (
 /obj/structure/closet/crate/hydroponics,
@@ -31070,7 +31902,7 @@
 	light_color = "#dae2ff";
 	light_power = 0.25
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "spk" = (
 /obj/effect/glowshroom{
@@ -31088,6 +31920,16 @@
 	},
 /turf/open/gm/river/desert/shallow_edge/east/no_overlay,
 /area/bosenmori/outside/river)
+"spv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera{
+	c_tag = "Nexus - Maintenance";
+	colony_camera_mapload = 0;
+	network = list("Corporate");
+	dir = 1
+	},
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_nexus)
 "spz" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
@@ -31171,7 +32013,7 @@
 /area/bosenmori/interior_heavy/Mai_food)
 "ssd" = (
 /obj/structure/largecrate/random,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "sss" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -31217,13 +32059,13 @@
 	pixel_x = -4;
 	pixel_y = 8
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "stX" = (
 /obj/structure/sign/poster/ad{
 	pixel_x = 30
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "suo" = (
 /obj/structure/window/framed/solaris/reinforced,
@@ -31236,13 +32078,9 @@
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/north_area)
 "suS" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "cargo_ladd";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_glass/cargo)
@@ -31378,9 +32216,6 @@
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "szt" = (
-/obj/structure/machinery/colony_floodlight_switch{
-	pixel_y = 30
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -31445,6 +32280,28 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/dark,
 /area/bosenmori/mountain/mining)
+"sAY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera{
+	c_tag = "Sewer - Segment A";
+	colony_camera_mapload = 0;
+	network = list("Corporate")
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
+"sBk" = (
+/obj/effect/projector{
+	name = "temple_secondfloordown";
+	vector_x = -20;
+	vector_y = 13
+	},
+/obj/structure/prop/invuln/darkness,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	light_power = 0.3;
+	light_range = 4
+	},
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/unknown_level_caves)
 "sBR" = (
 /obj/structure/machinery/camera{
 	c_tag = "Corporate - Entry";
@@ -31513,6 +32370,7 @@
 	vector_x = -166;
 	name = "temple_firstfloordown"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/mountain/temple_under)
 "sCP" = (
@@ -31593,6 +32451,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_glass/cargo)
+"sET" = (
+/obj/item/device/flashlight/lamp/tripod/grey{
+	light_power = 0.3;
+	light_range = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "sFc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -31904,6 +32769,7 @@
 	vector_x = -166;
 	name = "temple_firstfloordown"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/kutjevo/tiles,
 /area/bosenmori/mountain/temple_under)
 "sPy" = (
@@ -32153,7 +33019,9 @@
 /turf/closed/wall/solaris/reinforced,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "tat" = (
-/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
 /turf/open/floor/almayer/research/containment/entrance,
 /area/bosenmori/interior_heavy/Mai_research)
 "taA" = (
@@ -32283,13 +33151,9 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_glass/food_processing)
 "tfc" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "eng_ladd1";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_regular/engineering)
@@ -32710,6 +33574,10 @@
 	},
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/cargo)
+"tpW" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_hall)
 "tqq" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -32783,6 +33651,7 @@
 	vector_x = -20;
 	vector_y = 13
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/dirt2,
 /area/bosenmori/mountain/unknown_level_caves)
 "tsf" = (
@@ -32804,7 +33673,7 @@
 /area/bosenmori/mountain/unknown_level_temple)
 "tsP" = (
 /obj/structure/largecrate/random/case/small,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "ttj" = (
 /obj/effect/alien/weeds/node,
@@ -32900,6 +33769,11 @@
 "tvt" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	dir = 4
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_corpo)
 "tvx" = (
@@ -32919,7 +33793,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "twF" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -33018,12 +33892,12 @@
 	pixel_y = 19;
 	color = "#424a50"
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small/blue{
 	dir = 1;
 	light_color = "#dae2ff";
 	light_power = 0.9
 	},
+/obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/living)
 "tAB" = (
@@ -33044,13 +33918,8 @@
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "tAQ" = (
-/obj/effect/step_trigger/clone_cleaner,
-/obj/item/device/flashlight/lamp/tripod/grey{
-	light_power = 0.3;
-	light_range = 4
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/bosenmori/mountain/unknown_level_caves)
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_hall)
 "tAY" = (
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_heavy/Mai_cargo)
@@ -33186,6 +34055,10 @@
 	},
 /turf/open/floor/kutjevo/plate,
 /area/bosenmori/mountain/temple_proper)
+"tEU" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_nexus)
 "tEV" = (
 /obj/structure/machinery/recharger{
 	pixel_x = 0;
@@ -33278,6 +34151,7 @@
 	pixel_x = 11;
 	pixel_y = 7
 	},
+/obj/item/tool/hand_labeler,
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
 "tHk" = (
@@ -33308,6 +34182,23 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/yellow/southeast,
 /area/bosenmori/interior_glass/living)
+"tIp" = (
+/obj/structure/bed/chair{
+	buckling_y = 18;
+	dir = 8;
+	pixel_x = -2;
+	pixel_y = 7
+	},
+/obj/item/device/flashlight/lantern{
+	pixel_x = 10;
+	pixel_y = -8
+	},
+/obj/item/reagent_container/food/drinks/cans/beer{
+	pixel_x = -15;
+	pixel_y = 15
+	},
+/turf/open/floor/wood,
+/area/bosenmori/outside/river)
 "tIu" = (
 /obj/item/stool{
 	pixel_x = 1;
@@ -33470,6 +34361,7 @@
 	vector_y = 13
 	},
 /obj/structure/prop/rock/brown,
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/dirt2,
 /area/bosenmori/mountain/unknown_level_caves)
 "tOm" = (
@@ -33520,6 +34412,10 @@
 /turf/open/floor/kutjevo/tiles,
 /area/bosenmori/mountain/temple_proper)
 "tPg" = (
+/obj/structure/pipes/vents/pump/no_boom{
+	name = "Secure Reinforced Air Vent";
+	welded = 1
+	},
 /turf/open/floor/almayer/research/containment/corner/east,
 /area/bosenmori/interior_heavy/Mai_research)
 "tPh" = (
@@ -33946,6 +34842,10 @@
 	},
 /turf/open/floor/prison/whitepurplecorner/east,
 /area/bosenmori/interior_regular/research)
+"tXq" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/floor,
+/area/bosenmori/interior_glass/living)
 "tXv" = (
 /obj/structure/xenoautopsy/jar_shelf{
 	pixel_y = 28
@@ -34012,14 +34912,35 @@
 "uaf" = (
 /turf/closed/wall/wood,
 /area/bosenmori/mountain/field_post)
+"uar" = (
+/obj/structure/tunnel,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/unknown_level_caves)
 "uat" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#ffe6e6"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/computer/cameras{
+	colony_camera_mapload = 0;
+	network = list("Corporate");
+	pixel_x = -2;
+	pixel_y = -1
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_regular/operations)
+"uaN" = (
+/obj/effect/step_trigger/clone_cleaner,
+/obj/structure/platform{
+	dir = 1;
+	layer = 2.25;
+	density = 0;
+	climb_delay = 0
+	},
+/obj/structure/prop/invuln/darkness,
+/turf/open/auto_turf/strata_grass,
+/area/bosenmori/interior_heavy/Mai_tree)
 "ubv" = (
 /obj/structure/machinery/iv_drip,
 /obj/effect/decal/medical_decals{
@@ -34228,6 +35149,11 @@
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
 	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_regular/engineering)
@@ -34574,6 +35500,10 @@
 	name = "turban";
 	desc = "An authentic turban that carries its cultural origins."
 	},
+/obj/item/clothing/head/helmet/upp/marinepilot/tex{
+	name = "Pilot Extraordinare Suzume Rouge Helmet Replica";
+	desc = "A pilot helmet designed after one of the villains of the story in the hit animated series: Until Stars are Red!"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/store)
 "unE" = (
@@ -34781,7 +35711,7 @@
 /area/bosenmori/mountain/first_level_caves)
 "uvh" = (
 /obj/structure/curtain/shower,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/prison/sterile_white,
 /area/bosenmori/mountain/unknown_level_temple)
 "uvj" = (
 /turf/closed/wall/almayer/research/containment/wall/south,
@@ -34803,6 +35733,17 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/warning/west,
 /area/bosenmori/outside/east_area)
+"uwi" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/obj/item/ammo_box/magazine/misc/mre{
+	pixel_x = 11;
+	pixel_y = 17
+	},
+/obj/item/tool/kitchen/utensil/knife,
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/unknown_level_temple)
 "uwm" = (
 /turf/open/floor/plating/platebot,
 /area/bosenmori/mountain/abandoned)
@@ -35370,6 +36311,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_glass/offices)
+"uPC" = (
+/obj/structure/closet/crate/secure/weyland{
+	id = list(213)
+	},
+/turf/open/floor/corsat,
+/area/bosenmori/interior_heavy/Mai_secure_arm)
 "uQd" = (
 /obj/structure/tent_curtain,
 /obj/effect/decal/siding{
@@ -35494,6 +36441,11 @@
 	},
 /turf/open/floor/interior/tatami,
 /area/bosenmori/interior_glass/nexus)
+"uVt" = (
+/obj/structure/platform_decoration/strata/metal,
+/obj/item/storage/belt/shotgun/full/quackers,
+/turf/open/gm/river/no_overlay,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "uVB" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 1
@@ -35647,7 +36599,7 @@
 /area/bosenmori/mountain/temple_ruins)
 "vbm" = (
 /obj/structure/largecrate/random/case,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "vbn" = (
 /obj/structure/prop/dam/crane,
@@ -35661,6 +36613,13 @@
 /obj/structure/reagent_dispensers/fueltank/gas,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/mountain/field_post)
+"vbM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_hall)
 "vcr" = (
 /turf/open/desert/desert_shore/shore_edge1/west,
 /area/bosenmori/outside/river)
@@ -35695,7 +36654,7 @@
 	pixel_y = 1
 	},
 /obj/structure/prop/invuln/overhead_pipe,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "veg" = (
 /obj/structure/bed/chair/wheelchair{
@@ -35839,6 +36798,7 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_tree)
 "vjc" = (
@@ -35992,7 +36952,7 @@
 	light_power = 0.25;
 	dir = 8
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "vop" = (
 /obj/structure/closet{
@@ -36009,7 +36969,6 @@
 /obj/item/photo,
 /obj/item/photo,
 /obj/item/clothing/suit/storage/hazardvest,
-/obj/effect/spawner/random/toolbox,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_regular/engineering)
 "vov" = (
@@ -36111,7 +37070,7 @@
 /area/bosenmori/mountain/temple_ruins)
 "vrn" = (
 /obj/structure/largecrate/random/barrel/true_random,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "vrt" = (
 /obj/effect/decal/cleanable/dirt,
@@ -36160,6 +37119,10 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/south_area)
+"vti" = (
+/obj/effect/alien/weeds/weedwall,
+/turf/closed/wall/mineral/bone_resin,
+/area/bosenmori/mountain/unknown_level_caves)
 "vtz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced,
@@ -36245,6 +37208,11 @@
 "vwc" = (
 /turf/open/auto_turf/sand/layer2,
 /area/bosenmori/outside/west_barrens)
+"vwK" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/prison/bright_clean2,
+/area/bosenmori/interior_glass/food_processing)
 "vxn" = (
 /obj/structure/machinery/computer/working_joe{
 	pixel_y = 16;
@@ -36403,6 +37371,15 @@
 "vAI" = (
 /turf/open/floor/kutjevo/tan/plate,
 /area/bosenmori/interior_glass/fitness)
+"vBz" = (
+/obj/structure/machinery/camera{
+	c_tag = "Cargo - Lower Section A";
+	colony_camera_mapload = 0;
+	dir = 1;
+	network = list("Corporate")
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_cargo)
 "vBC" = (
 /turf/open/floor/warning/west,
 /area/bosenmori/shuttles/drop1)
@@ -36498,10 +37475,12 @@
 	},
 /turf/open/floor/shiva/multi_tiles/east,
 /area/bosenmori/interior_regular/telecommunication)
+"vDP" = (
+/obj/item/prop/rock,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/unknown_level_caves)
 "vEa" = (
-/obj/structure/machinery/power/apc/no_power/north{
-	pixel_y = 25
-	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_regular/engineering)
 "vEc" = (
@@ -36723,6 +37702,7 @@
 	height = 1;
 	name = "cable rope"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/mountain/temple_under)
 "vMl" = (
@@ -36774,6 +37754,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
+"vNO" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "gate shutter";
+	id = "temple_actual2"
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/unknown_level_caves)
 "vNX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/computer/crew,
@@ -36793,6 +37780,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/elevatorshaft,
 /area/bosenmori/outside/Mai_cargo_under)
 "vOr" = (
@@ -36867,13 +37855,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/security)
 "vPG" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "eng_ladd2";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_regular/engineering)
@@ -37045,6 +38029,14 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/south_area)
+"vUp" = (
+/obj/item/prop/rock,
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/unknown_level_caves)
+"vUu" = (
+/obj/structure/tunnel,
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/unknown_level_caves)
 "vUW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/portable_atmospherics/hydroponics,
@@ -37116,7 +38108,7 @@
 	icon_state = "S";
 	pixel_y = -1
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "vXB" = (
 /obj/structure/platform{
@@ -37235,7 +38227,7 @@
 	name = "wooden cargo crate"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "vZN" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -37271,7 +38263,7 @@
 	icon_state = "E";
 	pixel_x = 2
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "wcw" = (
 /turf/open/desert/desert_shore/shore_corner2/east,
@@ -37463,7 +38455,7 @@
 "wji" = (
 /obj/structure/largecrate/random/case/double,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_food)
 "wjk" = (
 /obj/item/device/radio/intercom{
@@ -37471,6 +38463,11 @@
 	frequency = 1469;
 	name = "General Listening Channel";
 	pixel_y = 30
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_regular/engineering)
@@ -37610,6 +38607,11 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/bosenmori/mountain/temple_proper)
+"wpP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/mountain/abandoned_dome_under)
 "wqb" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/gm/dirt2,
@@ -37827,6 +38829,11 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
+"wyd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/grime/grime1,
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_shipment)
 "wyl" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/solid/colony{
 	dir = 1;
@@ -37930,6 +38937,11 @@
 "wAJ" = (
 /turf/open/auto_turf/sand/layer1,
 /area/bosenmori/outside/cargo)
+"wAL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/remains/xeno,
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "wAR" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 1
@@ -37940,6 +38952,10 @@
 "wAS" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_regular/kitchen)
+"wBj" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/floor/redyellowfull,
 /area/bosenmori/interior_regular/kitchen)
 "wBs" = (
 /obj/item/stool,
@@ -38083,13 +39099,9 @@
 /turf/open/floor/warning/west,
 /area/bosenmori/outside/south_area)
 "wHa" = (
-/obj/structure/machinery/light/small/blue{
-	light_color = "#dae2ff";
-	light_power = 0.25;
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/bosenmori/interior_heavy/Mai_sewer)
+/obj/item/stool,
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/unknown_level_temple)
 "wHd" = (
 /obj/structure/bed/chair,
 /turf/open/floor/interior/tatami,
@@ -38279,13 +39291,20 @@
 	light_color = "#dae2ff";
 	light_power = 0.25
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_hall)
 "wML" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/storage/box/gloves,
+/obj/item/storage/box/gloves{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/obj/item/storage/box/masks{
+	pixel_x = -5;
+	pixel_y = -3
+	},
 /turf/open/floor/interior/wood,
 /area/bosenmori/mountain/unknown_level_temple)
 "wNe" = (
@@ -38336,6 +39355,11 @@
 /obj/structure/closet/secure_closet/freezer/fridge/full,
 /turf/open/floor/prison/blue/west,
 /area/bosenmori/interior_regular/kitchen)
+"wPt" = (
+/obj/structure/platform/mineral/sandstone/runed,
+/obj/item/prop/rock,
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "wPB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -38356,6 +39380,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_glass/tree)
+"wQf" = (
+/obj/effect/alien/weeds/weedwall,
+/turf/closed/wall/mineral/bone_resin,
+/area/bosenmori/mountain/unknown_level_temple)
 "wQo" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/whitepurplecorner/east,
@@ -38367,7 +39395,7 @@
 	light_power = 0.25;
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "wQG" = (
 /obj/structure/machinery/light/small/blue{
@@ -38375,13 +39403,9 @@
 	light_color = "#dae2ff";
 	light_power = 0.9
 	},
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "corpo_ladd";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_glass/corporate)
@@ -38487,7 +39511,7 @@
 /area/bosenmori/mountain/clearing)
 "wSQ" = (
 /obj/effect/decal/cleanable/generic,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "wTc" = (
 /obj/structure/largecrate/random{
@@ -38683,6 +39707,11 @@
 /obj/item/attachable/stock/smg,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
+"xam" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/rock,
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/mountain/unknown_level_temple)
 "xau" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -38894,7 +39923,7 @@
 /area/bosenmori/outside/west_barrens)
 "xfM" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/prison/cell_stripe/east,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_engineering)
 "xfT" = (
 /obj/structure/surface/rack,
@@ -38979,6 +40008,22 @@
 /obj/item/clothing/accessory/stethoscope,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/hospital)
+"xiQ" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 8;
+	dir = 8;
+	pixel_x = -10
+	},
+/obj/structure/fence,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice8";
+	pixel_x = 16;
+	pixel_y = 24
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_sewer)
 "xjh" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/faux_wood,
@@ -38998,12 +40043,9 @@
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/secured_armory)
 "xkz" = (
-/obj/effect/projector{
-	name = "bosenmori_constructiondown";
-	vector_x = -291
-	},
-/turf/open/floor/elevatorshaft,
-/area/bosenmori/outside/Mai_cargo_under)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_shipment)
 "xkJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -39153,11 +40195,6 @@
 /turf/open/asphalt,
 /area/bosenmori/interior_glass/corporate)
 "xpK" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice8";
-	pixel_x = 16;
-	pixel_y = 24
-	},
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
@@ -39166,6 +40203,11 @@
 	pixel_x = -10
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 24;
+	pixel_x = 16
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
 "xqd" = (
@@ -39175,6 +40217,12 @@
 	pixel_y = 16
 	},
 /turf/open/floor/dark,
+/area/bosenmori/mountain/mining)
+"xqe" = (
+/obj/structure/prop/dam/crane{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/mountain/mining)
 "xqp" = (
 /obj/structure/platform/kutjevo/rock{
@@ -39380,7 +40428,7 @@
 	light_power = 0.25;
 	dir = 8
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_food)
 "xzt" = (
 /obj/structure/cable/heavyduty{
@@ -39467,6 +40515,7 @@
 	name = "bosenmori_treedown";
 	vector_x = -288
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/coast/beachcorner/south_east,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "xBj" = (
@@ -39500,6 +40549,10 @@
 	color = "#ffe6e6"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/book/codebook/twe{
+	pixel_x = 2;
+	pixel_y = 6
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_regular/operations)
 "xCe" = (
@@ -39559,7 +40612,7 @@
 "xDC" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_shipment)
 "xDD" = (
 /obj/structure/closet/crate/hydroponics,
@@ -39901,13 +40954,9 @@
 /turf/open/floor/prison/cell_stripe,
 /area/bosenmori/interior_regular/research)
 "xNe" = (
-/obj/structure/ladder{
-	icon_state = "hatchclosed";
-	pixel_y = 7;
+/obj/structure/ladder/maintenance{
 	id = "food_ladd";
-	height = 2;
-	name = "maintenance ladder";
-	desc = "A hatch connecting to the underground maintenance halls."
+	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_glass/food_processing)
@@ -40041,7 +41090,7 @@
 	dir = 1
 	},
 /obj/structure/machinery/door_control/brbutton{
-	pixel_x = 0;
+	pixel_x = -8;
 	pixel_y = 24;
 	id = "mai_shutter"
 	},
@@ -40297,6 +41346,16 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_regular/store)
+"yah" = (
+/obj/structure/machinery/optable,
+/obj/structure/sink{
+	layer = 3.1;
+	dir = 8;
+	pixel_x = 22;
+	pixel_y = -2
+	},
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/bosenmori/interior_heavy/Mai_research)
 "yan" = (
 /obj/effect/projector{
 	vector_x = -166;
@@ -40306,6 +41365,7 @@
 	light_power = 0.3;
 	light_range = 4
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/kutjevo/tiles,
 /area/bosenmori/mountain/temple_under)
 "yaQ" = (
@@ -40433,7 +41493,7 @@
 	pixel_x = -11;
 	pixel_y = 36
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "ycN" = (
 /obj/structure/bed/chair/office/light{
@@ -40528,6 +41588,21 @@
 	},
 /turf/open/floor/dark,
 /area/bosenmori/outside/cargo)
+"yeW" = (
+/obj/structure/surface/rack{
+	color = "#8B7B5B"
+	},
+/obj/item/ammo_magazine/smg/m39/extended{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/smg/m39/extended{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/ammo_box/rounds/smg,
+/turf/open/floor/corsat,
+/area/bosenmori/interior_heavy/secured_armory)
 "yeY" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/prison/floor_marked,
@@ -40589,6 +41664,12 @@
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/east_barrens)
+"ygM" = (
+/obj/effect/decal/strata_decals/grime/grime2{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_heavy/Mai_nexus)
 "yhu" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -40656,6 +41737,7 @@
 	name = "bosenmori_constructiondown";
 	vector_x = -291
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/outside/Mai_cargo_under)
 "yks" = (
@@ -44397,7 +45479,7 @@ prH
 prH
 jzE
 ewF
-ewF
+tIp
 ewF
 aHW
 prH
@@ -45762,7 +46844,7 @@ sUH
 sUH
 sUH
 sUH
-gnM
+ahT
 gnM
 pvx
 oDg
@@ -45908,7 +46990,7 @@ nLU
 ftt
 ftt
 gKB
-gKB
+xqe
 rNd
 ftt
 ftt
@@ -46219,7 +47301,7 @@ hJw
 oIH
 sUH
 mVR
-oDg
+qCT
 kan
 oDg
 oDg
@@ -48786,7 +49868,7 @@ ujh
 gwM
 gwM
 gwM
-gwM
+yeW
 czZ
 sUH
 sUH
@@ -52607,7 +53689,7 @@ dez
 lsA
 ljE
 ljE
-wAv
+onj
 lsA
 lsA
 tGp
@@ -52834,7 +53916,7 @@ dez
 dez
 lsA
 tAx
-vXr
+oTZ
 vXr
 xFL
 pPd
@@ -53531,7 +54613,7 @@ jxH
 hJu
 tfW
 xaS
-iRd
+tXq
 ibg
 ctX
 lsA
@@ -55128,7 +56210,7 @@ hPI
 lsA
 jCU
 iVE
-iRd
+qEt
 lsA
 lsA
 hIR
@@ -55571,7 +56653,7 @@ cTl
 lsA
 rWj
 oJw
-oJw
+psE
 xFL
 kZS
 vXr
@@ -59903,7 +60985,7 @@ eca
 hAd
 kLD
 fGN
-bnh
+aPN
 qZN
 dlv
 kLD
@@ -60132,7 +61214,7 @@ jaV
 aNb
 hYL
 wtF
-qZN
+bAe
 atJ
 kLD
 mmI
@@ -61252,7 +62334,7 @@ bix
 cKy
 hPx
 iDt
-ocl
+rif
 swm
 nUx
 rLt
@@ -61319,7 +62401,7 @@ nCF
 nCF
 nCF
 fgx
-cle
+diZ
 cle
 dSU
 wEu
@@ -62846,7 +63928,7 @@ bix
 tVV
 vqu
 uGa
-dNW
+vwK
 izI
 vKz
 heX
@@ -64487,7 +65569,7 @@ sDw
 sCm
 oRg
 sEs
-noI
+qVn
 rWs
 sXo
 qQi
@@ -64943,7 +66025,7 @@ aOF
 eRi
 oRg
 egT
-noI
+bBn
 iIM
 jkD
 lrc
@@ -65635,7 +66717,7 @@ tij
 qpy
 vqY
 mnS
-jkD
+gIf
 qHU
 nNu
 vvk
@@ -67236,10 +68318,10 @@ jkD
 sJU
 jkD
 eHc
-eHc
+enl
 eHc
 wrM
-wrM
+eHc
 wrM
 wrM
 eHc
@@ -67467,8 +68549,8 @@ eHc
 wrM
 wrM
 wrM
-wrM
 eHc
+rWt
 eHc
 tqr
 dyG
@@ -69063,7 +70145,7 @@ xCe
 adk
 rZY
 rZY
-adk
+wBj
 adk
 cCp
 adk
@@ -69516,7 +70598,7 @@ flV
 rZY
 adk
 adk
-adk
+wBj
 rZY
 rZY
 adk
@@ -105159,187 +106241,187 @@ aif
 aif
 aif
 aif
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
-kTh
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
+aif
 "}
 (284,1,1) = {"
 aif
@@ -105567,7 +106649,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (285,1,1) = {"
 aif
@@ -105795,7 +106877,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (286,1,1) = {"
 aif
@@ -106023,7 +107105,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (287,1,1) = {"
 aif
@@ -106251,7 +107333,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (288,1,1) = {"
 aif
@@ -106479,7 +107561,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (289,1,1) = {"
 aif
@@ -106506,7 +107588,7 @@ xXW
 dKJ
 dKJ
 xXW
-dKJ
+mbq
 biv
 dOC
 dOC
@@ -106707,7 +107789,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (290,1,1) = {"
 aif
@@ -106935,7 +108017,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (291,1,1) = {"
 aif
@@ -106958,7 +108040,7 @@ dOC
 dOC
 biv
 xXW
-xXW
+bYX
 dKJ
 xXW
 dKJ
@@ -107163,7 +108245,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (292,1,1) = {"
 aif
@@ -107391,7 +108473,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (293,1,1) = {"
 aif
@@ -107619,7 +108701,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (294,1,1) = {"
 aif
@@ -107847,7 +108929,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (295,1,1) = {"
 aif
@@ -108075,7 +109157,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (296,1,1) = {"
 aif
@@ -108100,7 +109182,7 @@ dKJ
 xXW
 xXW
 dKJ
-xXW
+xam
 xXW
 dKJ
 dKJ
@@ -108303,7 +109385,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (297,1,1) = {"
 aif
@@ -108334,7 +109416,7 @@ dKJ
 dKJ
 fnn
 irp
-kjZ
+ame
 dKJ
 dKJ
 dKJ
@@ -108531,7 +109613,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (298,1,1) = {"
 aif
@@ -108759,7 +109841,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (299,1,1) = {"
 aif
@@ -108987,7 +110069,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (300,1,1) = {"
 aif
@@ -109215,7 +110297,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (301,1,1) = {"
 aif
@@ -109232,7 +110314,7 @@ dKJ
 dKJ
 xXW
 xXW
-xXW
+bYX
 xXW
 xXW
 dKJ
@@ -109443,7 +110525,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (302,1,1) = {"
 aif
@@ -109671,7 +110753,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (303,1,1) = {"
 aif
@@ -109899,7 +110981,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (304,1,1) = {"
 aif
@@ -110127,7 +111209,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (305,1,1) = {"
 aif
@@ -110355,7 +111437,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (306,1,1) = {"
 aif
@@ -110583,7 +111665,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (307,1,1) = {"
 aif
@@ -110597,7 +111679,7 @@ biv
 tGH
 dKJ
 xXW
-xXW
+xam
 xXW
 dKJ
 wfW
@@ -110619,7 +111701,7 @@ ecZ
 xXW
 dKJ
 xXW
-xXW
+bYX
 xXW
 tGH
 biv
@@ -110811,7 +111893,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (308,1,1) = {"
 aif
@@ -110845,7 +111927,7 @@ cqY
 cqY
 fnm
 xXW
-dKJ
+mbq
 xXW
 xXW
 xXW
@@ -111039,7 +112121,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (309,1,1) = {"
 aif
@@ -111267,7 +112349,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (310,1,1) = {"
 aif
@@ -111495,7 +112577,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (311,1,1) = {"
 aif
@@ -111723,7 +112805,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (312,1,1) = {"
 aif
@@ -111951,7 +113033,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (313,1,1) = {"
 aif
@@ -112179,7 +113261,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (314,1,1) = {"
 aif
@@ -112190,7 +113272,7 @@ dOC
 dOC
 jKf
 jKf
-dKJ
+dJV
 wAR
 tRU
 sgs
@@ -112303,7 +113385,7 @@ tLl
 tLl
 xng
 kwo
-fYd
+plc
 nMr
 bLe
 gXG
@@ -112407,7 +113489,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (315,1,1) = {"
 aif
@@ -112635,7 +113717,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (316,1,1) = {"
 aif
@@ -112651,7 +113733,7 @@ xXW
 dKJ
 dKJ
 xXW
-xXW
+xam
 xXW
 dKJ
 dKJ
@@ -112863,7 +113945,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (317,1,1) = {"
 aif
@@ -113091,7 +114173,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (318,1,1) = {"
 aif
@@ -113118,13 +114200,13 @@ xXW
 xXW
 xXW
 xXW
-xXW
+xam
 dKJ
 fMb
 irp
 wtQ
 xXW
-dKJ
+dJV
 tGH
 biv
 biv
@@ -113214,7 +114296,7 @@ aif
 tLl
 tLl
 xng
-nKQ
+nqL
 fYd
 nMr
 iWe
@@ -113319,7 +114401,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (319,1,1) = {"
 aif
@@ -113492,8 +114574,8 @@ jly
 jly
 jly
 qJb
-iFk
-qeR
+tAQ
+eTs
 qJb
 jly
 jly
@@ -113547,7 +114629,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (320,1,1) = {"
 aif
@@ -113721,7 +114803,7 @@ jly
 jly
 qJb
 ePC
-iFk
+tAQ
 qJb
 jly
 jly
@@ -113775,7 +114857,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (321,1,1) = {"
 aif
@@ -113948,8 +115030,8 @@ jly
 jly
 jly
 qJb
-cuR
-iFk
+mIk
+tAQ
 qJb
 jly
 jly
@@ -114003,7 +115085,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (322,1,1) = {"
 aif
@@ -114176,8 +115258,8 @@ jly
 jly
 jly
 qJb
-cuR
-cuR
+mIk
+mIk
 qJb
 jly
 jly
@@ -114231,7 +115313,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (323,1,1) = {"
 aif
@@ -114362,7 +115444,7 @@ cBN
 jeQ
 fGT
 iWe
-uPa
+wpP
 uPa
 iWe
 iWe
@@ -114404,8 +115486,8 @@ jly
 jly
 jly
 qJb
-cuR
-cow
+mIk
+mIk
 qJb
 jly
 jly
@@ -114459,7 +115541,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+aif
 "}
 (324,1,1) = {"
 aif
@@ -114632,8 +115714,8 @@ jly
 jly
 jly
 qJb
-cuR
-roY
+mIk
+tAQ
 qJb
 jly
 jly
@@ -114860,8 +115942,8 @@ jly
 jly
 jly
 qJb
-iFk
-roY
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -115088,8 +116170,8 @@ jly
 jly
 jly
 qJb
-iFk
-cow
+tAQ
+mIk
 qJb
 jly
 jly
@@ -115316,8 +116398,8 @@ jly
 jly
 jly
 qJb
-iFk
-roY
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -115544,8 +116626,8 @@ jly
 jly
 jly
 qJb
-iFk
-roY
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -115587,9 +116669,9 @@ dAV
 ist
 dAK
 gPp
-uhN
-uhN
-uhN
+uPC
+uPC
+foQ
 gPp
 gPp
 pHD
@@ -116001,7 +117083,7 @@ jly
 jly
 qJb
 vbm
-cow
+mIk
 qJb
 jly
 jly
@@ -116229,7 +117311,7 @@ jly
 jly
 qJb
 hFn
-iFk
+tAQ
 qJb
 jly
 jly
@@ -116456,8 +117538,8 @@ jly
 jly
 jly
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -116685,7 +117767,7 @@ jly
 jly
 qJb
 jAb
-iFk
+tAQ
 qJb
 qJb
 qJb
@@ -116912,21 +117994,21 @@ jly
 jly
 jly
 qJb
-cuR
-iFk
-iFk
-iFk
-cuR
-cuR
-iFk
-iFk
-iFk
-iFk
-cuR
-cuR
+mIk
+tAQ
+tAQ
+tAQ
+mIk
+mIk
+tAQ
+tAQ
+tAQ
+tAQ
+mIk
+mIk
 jvz
-iFk
-cuR
+tAQ
+mIk
 qJb
 jly
 jly
@@ -117140,21 +118222,21 @@ jly
 jly
 jly
 qJb
-cuR
-iFk
-cuR
+mIk
+tAQ
+mIk
 mvF
-iFk
-iFk
+tAQ
+tAQ
 pgc
-cuR
-iFk
-cuR
+mIk
+tAQ
+mIk
 aCB
-iFk
+tAQ
 mvF
-iFk
-cuR
+tAQ
+mIk
 qJb
 jly
 jly
@@ -117216,7 +118298,7 @@ biv
 biv
 kUM
 xXW
-dKJ
+mbq
 jmY
 biv
 hsC
@@ -117368,8 +118450,8 @@ jly
 jly
 jly
 qJb
-cuR
-cuR
+mIk
+mIk
 qJb
 qJb
 qJb
@@ -117381,8 +118463,8 @@ qJb
 qJb
 qJb
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 qJb
 qJb
@@ -117596,8 +118678,8 @@ jly
 jly
 jly
 qJb
-iFk
-cuR
+tAQ
+mIk
 qJb
 jly
 jly
@@ -117636,7 +118718,7 @@ dAK
 dAK
 dAV
 dAV
-dAV
+hyi
 dAV
 dAK
 dAK
@@ -117679,7 +118761,7 @@ dKJ
 dKJ
 xXW
 dKJ
-dKJ
+mbq
 dKJ
 iHy
 hsC
@@ -117825,7 +118907,7 @@ xHW
 xHW
 qJb
 qbu
-iFk
+tAQ
 qJb
 jly
 jly
@@ -117837,11 +118919,11 @@ jly
 jly
 jly
 qJb
-iFk
-iFk
-cow
-roY
-iFk
+tAQ
+tAQ
+mIk
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -118053,7 +119135,7 @@ xHW
 xHW
 qJb
 pgc
-iFk
+tAQ
 qJb
 jly
 jly
@@ -118068,8 +119150,8 @@ qJb
 qJb
 qJb
 qJb
-roY
-iFk
+tAQ
+tAQ
 qJb
 qJb
 qJb
@@ -118296,32 +119378,32 @@ aWX
 aWX
 aWX
 qJb
-roY
-roY
-roY
-lGd
-cow
-vqv
-roY
-iFk
-iFk
-iFk
-cuR
-qeR
-cuR
-iFk
-iFk
-iFk
-cuR
-cuR
+tAQ
+tAQ
+tAQ
+kxQ
+mIk
+ecH
+tAQ
+tAQ
+tAQ
+tAQ
+mIk
+eTs
+mIk
+tAQ
+tAQ
+tAQ
+mIk
+mIk
 aQF
 qlp
-eXp
-eXp
-qlp
-eXp
-eXp
-qlp
+hzR
+hzR
+dQT
+hzR
+hzR
+dQT
 gvX
 vvm
 dAV
@@ -118524,32 +119606,32 @@ aWX
 aWX
 aWX
 qJb
-gwk
-cow
-lvr
-aOM
-mgi
+tpW
+mIk
+ovV
+hFn
+plf
 fgz
-cuR
-iFk
-iFk
-roY
-roY
-cow
-roY
+mIk
+tAQ
+tAQ
+tAQ
+tAQ
+mIk
+tAQ
 elb
-iFk
+tAQ
 aCB
-cuR
-cuR
+mIk
+mIk
 mnX
 qlp
-qlp
-qlp
-eXp
-eXp
-eXp
-eXp
+dQT
+dQT
+hzR
+hzR
+hzR
+hzR
 gvX
 qIz
 dAK
@@ -118752,14 +119834,14 @@ nkA
 nkA
 nkA
 qJb
-cow
-cuR
+mIk
+mIk
 qJb
 qJb
 qJb
 qJb
-cuR
-iFk
+mIk
+tAQ
 qJb
 qJb
 qJb
@@ -118774,7 +119856,7 @@ mnX
 qlp
 eXp
 mwe
-qlp
+iEs
 qlp
 eXp
 qlp
@@ -118980,14 +120062,14 @@ rIg
 vRt
 nkA
 qJb
-iFk
-cuR
+tAQ
+mIk
 qJb
 jly
 jly
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -119208,14 +120290,14 @@ bYM
 rxZ
 nkA
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 jly
 jly
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -119231,8 +120313,8 @@ jly
 jly
 jly
 qJb
-iFk
-roY
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -119436,14 +120518,14 @@ bYM
 bYM
 nkA
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 jly
 jly
 qJb
 lPe
-iFk
+tAQ
 qJb
 jly
 jly
@@ -119459,8 +120541,8 @@ jly
 jly
 jly
 qJb
-iFk
-cow
+tAQ
+mIk
 qJb
 jly
 jly
@@ -119665,13 +120747,13 @@ ceE
 nkA
 qJb
 qbu
-iFk
+tAQ
 qJb
 jly
 jly
 qJb
 qbu
-iFk
+tAQ
 qJb
 jly
 jly
@@ -119687,8 +120769,8 @@ jly
 jly
 jly
 qJb
-iFk
-cow
+tAQ
+mIk
 qJb
 jly
 jly
@@ -119867,7 +120949,7 @@ hCV
 rtJ
 azF
 vFh
-azF
+lgl
 rtJ
 plr
 ylL
@@ -119892,31 +120974,31 @@ bYM
 tOv
 nkA
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 jly
 jly
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 jly
 jly
-jly
-qJb
-qJb
-qJb
-qJb
 jly
 qJb
 qJb
 qJb
 qJb
+jly
 qJb
 qJb
-iFk
-jFz
+qJb
+qJb
+qJb
+qJb
+tAQ
+wMu
 qJb
 qJb
 qJb
@@ -120120,14 +121202,14 @@ bYM
 bYM
 nkA
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 jly
 jly
 qJb
 cay
-iFk
+tAQ
 qJb
 jly
 jly
@@ -120138,16 +121220,16 @@ kXD
 qJb
 jly
 qJb
-iFk
+tAQ
 dup
-iFk
-cow
-gwk
-roY
-roY
-roY
-cow
-iFk
+tAQ
+mIk
+tpW
+tAQ
+tAQ
+tAQ
+mIk
+tAQ
 ovV
 qJb
 jly
@@ -120348,14 +121430,14 @@ bYM
 bYM
 nkA
 qJb
-cuR
-iFk
+mIk
+tAQ
 qJb
 jly
 jly
 qJb
 hFn
-iFk
+tAQ
 qJb
 jly
 jly
@@ -120366,17 +121448,17 @@ cow
 qJb
 jly
 qJb
-iFk
-cuR
+tAQ
+mIk
 mvF
-iFk
-iFk
-iFk
-iFk
-iFk
-iFk
-iFk
-iFk
+tAQ
+tAQ
+tAQ
+tAQ
+tAQ
+tAQ
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -120417,7 +121499,7 @@ biv
 uEW
 dKJ
 xXW
-jmY
+wPt
 hsC
 tGH
 biv
@@ -120576,14 +121658,14 @@ nkA
 ooW
 nkA
 qJb
-cuR
-lhm
+mIk
+vbM
 qJb
 jly
 jly
 qJb
-iFk
-roY
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -120594,8 +121676,8 @@ cow
 qJb
 jly
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 qJb
 xBw
@@ -120603,8 +121685,8 @@ xBw
 xBw
 qJb
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -120810,8 +121892,8 @@ hQe
 hQe
 qJb
 qJb
-iFk
-roY
+tAQ
+tAQ
 qJb
 qJb
 qJb
@@ -120822,8 +121904,8 @@ dHs
 qJb
 qJb
 qJb
-cow
-iFk
+mIk
+tAQ
 qJb
 qJb
 qxm
@@ -120831,8 +121913,8 @@ qxm
 qxm
 qJb
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 jly
 jly
@@ -121036,22 +122118,22 @@ reu
 nPv
 reu
 hQe
-iFk
-iFk
-iFk
-roY
-iFk
-iFk
-iFk
-iFk
-cuR
-cuR
+tAQ
+tAQ
+tAQ
+tAQ
+tAQ
+tAQ
+tAQ
+tAQ
+mIk
+mIk
 eTs
 kxQ
-iFk
-iFk
-cow
-cuR
+tAQ
+tAQ
+mIk
+mIk
 xBw
 qxm
 gEc
@@ -121059,8 +122141,8 @@ gEc
 gEc
 qxm
 xBw
-iFk
-cuR
+tAQ
+mIk
 qJb
 jly
 jly
@@ -121265,21 +122347,21 @@ mAF
 nPv
 xdL
 saW
-iFk
-iFk
-roY
+tAQ
+tAQ
+tAQ
 mvF
-iFk
-iFk
-cuR
-cuR
-cuR
-gwk
-roY
-cow
-cow
+tAQ
+tAQ
+mIk
+mIk
+mIk
+tpW
+tAQ
+mIk
+mIk
 eOR
-cuR
+mIk
 xBw
 qxm
 gEc
@@ -121287,7 +122369,7 @@ gEc
 gEc
 qxm
 xBw
-iFk
+tAQ
 wMu
 qJb
 jly
@@ -121478,14 +122560,14 @@ kCt
 sdI
 qta
 rtJ
-rtJ
+nFt
 xRI
 azF
 ouu
 aWX
 hQe
 ltF
-nPv
+iKK
 fWx
 hQe
 nPv
@@ -121494,8 +122576,8 @@ reu
 hQe
 qJb
 qJb
-iFk
-cow
+tAQ
+mIk
 qJb
 qJb
 qJb
@@ -121506,8 +122588,8 @@ qJb
 qJb
 qJb
 qJb
-cow
-iFk
+mIk
+tAQ
 xBw
 qxm
 gEc
@@ -121515,8 +122597,8 @@ gEc
 gEc
 qxm
 xBw
-iFk
-cuR
+tAQ
+mIk
 qJb
 qJb
 qJb
@@ -121722,8 +122804,8 @@ hQe
 hQe
 jly
 qJb
-cuR
-cow
+mIk
+mIk
 qJb
 jly
 jly
@@ -121735,7 +122817,7 @@ jly
 jly
 qJb
 qbu
-iFk
+tAQ
 qJb
 qJb
 qxm
@@ -121743,7 +122825,7 @@ qxm
 qxm
 qJb
 qJb
-iFk
+tAQ
 eYl
 nnB
 cow
@@ -121950,8 +123032,8 @@ azF
 ouu
 xHW
 ouu
-cuR
-cow
+mIk
+mIk
 qJb
 jly
 jly
@@ -121962,8 +123044,8 @@ jly
 jly
 jly
 qJb
-tns
-iFk
+beW
+tAQ
 qJb
 qJb
 xBw
@@ -121971,8 +123053,8 @@ xBw
 xBw
 qJb
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 hPs
 hPs
@@ -122190,17 +123272,17 @@ wfU
 wfU
 toP
 gEc
-iFk
-iFk
-iFk
+tAQ
+tAQ
+tAQ
 kxQ
-iFk
-cuR
-cuR
-cuR
+tAQ
+mIk
+mIk
+mIk
 kxQ
-iFk
-iFk
+tAQ
+tAQ
 qJb
 qJb
 qJb
@@ -122418,17 +123500,17 @@ wfU
 bKf
 bKf
 gEc
-iFk
-cuR
-cuR
-iFk
-iFk
+tAQ
+mIk
+mIk
+tAQ
+tAQ
 opP
 cVn
-cuR
+mIk
 eum
-roY
-cow
+tAQ
+mIk
 qJb
 jly
 jly
@@ -122655,8 +123737,8 @@ dGT
 dGT
 dGT
 dGT
-kFB
-kFB
+bXB
+bXB
 dGT
 cPR
 cPR
@@ -122859,9 +123941,9 @@ azF
 azF
 rtJ
 vNJ
-rtJ
-rtJ
-azF
+xVx
+bCU
+iiI
 azF
 inF
 ouu
@@ -122884,7 +123966,7 @@ cPR
 cPR
 dGT
 jWE
-kpi
+bXB
 dGT
 cPR
 cPR
@@ -123111,8 +124193,8 @@ cPR
 cPR
 cPR
 dGT
-fda
-fda
+qHu
+qHu
 dGT
 cPR
 cPR
@@ -123275,7 +124357,7 @@ pId
 pId
 lcV
 sRc
-plS
+yah
 tat
 txi
 oRI
@@ -123339,8 +124421,8 @@ cPR
 cPR
 cPR
 dGT
-fda
-fda
+qHu
+qHu
 dGT
 cPR
 cPR
@@ -123567,7 +124649,7 @@ cPR
 cPR
 cPR
 dGT
-fda
+qHu
 fbc
 dGT
 dGT
@@ -123600,7 +124682,7 @@ xXW
 xXW
 xXW
 xXW
-dKJ
+iCN
 dKJ
 dKJ
 dKJ
@@ -123614,7 +124696,7 @@ dKJ
 dKJ
 xXW
 dKJ
-dKJ
+mbq
 xXW
 dKJ
 dKJ
@@ -123819,7 +124901,7 @@ dOC
 dOC
 dKJ
 dKJ
-rvQ
+jko
 dKJ
 klm
 klm
@@ -123968,7 +125050,7 @@ ahm
 ahm
 ahm
 ahm
-vzl
+qOX
 vzl
 vzl
 nnP
@@ -124023,8 +125105,8 @@ cPR
 cPR
 cPR
 dGT
-fda
-kpi
+qHu
+bXB
 dGT
 kpi
 fda
@@ -124251,8 +125333,8 @@ cPR
 cPR
 cPR
 dGT
-fda
-fda
+qHu
+qHu
 dGT
 dGT
 dGT
@@ -124311,7 +125393,7 @@ dKJ
 dKJ
 dKJ
 dKJ
-xXW
+xam
 xXW
 dKJ
 rvQ
@@ -124415,8 +125497,8 @@ pId
 pId
 lcV
 sRc
-plS
-tat
+rtG
+ruP
 pBE
 oRI
 rxv
@@ -124479,8 +125561,8 @@ dGT
 dGT
 dGT
 dGT
-fda
-fda
+qHu
+qHu
 dGT
 cPR
 cPR
@@ -124654,7 +125736,7 @@ vzl
 vzl
 vzl
 kJH
-vzl
+sdF
 dUg
 hPM
 tPB
@@ -124707,8 +125789,8 @@ cQy
 kpi
 uFc
 dGT
-fda
-fda
+qHu
+qHu
 dGT
 cPR
 cPR
@@ -124936,7 +126018,7 @@ utB
 utB
 fYe
 twl
-fda
+qHu
 dGT
 cPR
 cPR
@@ -124957,13 +126039,13 @@ dOC
 dOC
 dOC
 dOC
+lGd
 vXP
 vXP
 vXP
 vXP
-vXP
-vXP
-vXP
+lGd
+cgy
 dOC
 dOC
 dOC
@@ -125164,7 +126246,7 @@ dGT
 dGT
 dGT
 jWE
-fda
+qHu
 dGT
 cPR
 cPR
@@ -125327,10 +126409,10 @@ pId
 pId
 lcV
 klV
-qbn
+piV
 kzU
 uvj
-cOM
+hcf
 cOM
 ahm
 vzl
@@ -125523,7 +126605,7 @@ iEB
 qHQ
 trV
 trV
-trV
+sBk
 trV
 iEB
 iEB
@@ -125556,7 +126638,7 @@ pId
 lcV
 sRc
 plS
-tat
+ruP
 mgG
 oRI
 rxv
@@ -125591,7 +126673,7 @@ axi
 axi
 sbn
 nvu
-qSP
+bXd
 lOo
 qKC
 gGi
@@ -125599,7 +126681,7 @@ eim
 eim
 eim
 vGs
-abh
+pVR
 qSP
 qSP
 rsb
@@ -125789,7 +126871,7 @@ uvj
 tPq
 tCZ
 ahm
-vzl
+rSx
 kJH
 gRo
 ohL
@@ -125827,7 +126909,7 @@ nPc
 nPc
 nPc
 ibs
-cdq
+oMT
 lOo
 qSP
 jGc
@@ -125900,7 +126982,7 @@ dKJ
 dKJ
 jQh
 ocM
-sgs
+oSV
 biv
 dKJ
 dKJ
@@ -125976,7 +127058,7 @@ sYg
 sYg
 sYg
 iEB
-tAQ
+iEB
 guL
 trV
 trV
@@ -126078,7 +127160,7 @@ pdw
 fda
 hEP
 tAN
-rsu
+qFb
 iDj
 dGT
 cPR
@@ -126104,7 +127186,7 @@ dKJ
 dKJ
 dKJ
 xXW
-xXW
+xam
 xXW
 dKJ
 dKJ
@@ -126342,6 +127424,7 @@ dKJ
 dKJ
 rvQ
 dKJ
+mbq
 dKJ
 dKJ
 dKJ
@@ -126349,8 +127432,7 @@ dKJ
 dKJ
 dKJ
 dKJ
-dKJ
-xXW
+jRN
 xXW
 xXW
 dKJ
@@ -126474,7 +127556,7 @@ pId
 ahm
 fje
 qGj
-vzl
+sdF
 ahm
 hIz
 hIz
@@ -126721,7 +127803,7 @@ eFL
 kCt
 sdI
 qta
-azF
+gmB
 ouu
 ouu
 xHW
@@ -126740,7 +127822,7 @@ rGJ
 dVl
 dVl
 cfo
-qSP
+nrh
 lOo
 bqJ
 vqh
@@ -126761,7 +127843,7 @@ ieL
 ijb
 pou
 iAI
-rsu
+pfx
 rsu
 qWQ
 dOb
@@ -126887,7 +127969,7 @@ sYg
 sYg
 sYg
 sYg
-tLR
+dWz
 wvr
 tLR
 wvr
@@ -127033,7 +128115,7 @@ dOC
 dOC
 dOC
 dOC
-dOC
+vXP
 dOC
 dOC
 dOC
@@ -127190,7 +128272,7 @@ bWP
 jAT
 qSP
 lOo
-mYv
+uaN
 dVl
 dVl
 pWn
@@ -127222,7 +128304,7 @@ rsu
 hye
 oXZ
 fzY
-fzY
+nqc
 pjy
 ows
 aww
@@ -127259,12 +128341,12 @@ hsC
 biv
 dOC
 dOC
+lvr
 dOC
-dOC
-dOC
-dOC
-dOC
-dOC
+vXP
+ehP
+vXP
+ehP
 dOC
 dOC
 dOC
@@ -127418,12 +128500,12 @@ bWP
 qSP
 qSP
 tVH
-mYv
+uaN
 pWn
 dVl
 pWn
 cfo
-vUW
+nEo
 qSP
 qSP
 bWP
@@ -127487,12 +128569,12 @@ hsC
 biv
 dOC
 dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
+wQf
+ehP
+vXP
+vXP
+vXP
+ehP
 dOC
 dOC
 dOC
@@ -127553,7 +128635,7 @@ sYg
 sYg
 sYg
 sYg
-tLR
+vDP
 wvr
 wvr
 nQJ
@@ -127627,7 +128709,7 @@ rVO
 rVO
 jCp
 kCt
-qGX
+uVt
 rVO
 rVO
 rVO
@@ -127651,8 +128733,8 @@ cph
 cph
 cph
 hqJ
-qSP
-qSP
+nrh
+oTv
 bWP
 bWP
 axi
@@ -127715,12 +128797,12 @@ hsC
 biv
 dOC
 dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
+wQf
+vXP
+vXP
+vXP
+vXP
+ehP
 dOC
 dOC
 dOC
@@ -127799,7 +128881,7 @@ sYg
 haY
 tLR
 wvr
-wvr
+vUp
 wvr
 wvr
 wvr
@@ -127876,9 +128958,9 @@ mJb
 qSP
 qSP
 qSP
-qSP
-qSP
-qSP
+nrh
+nrh
+nrh
 qSP
 qSP
 bWP
@@ -127942,13 +129024,13 @@ biv
 biv
 biv
 dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
+lvr
+wQf
+vXP
+vXP
+wQf
+vXP
+wQf
 dOC
 dOC
 dOC
@@ -128169,14 +129251,14 @@ xXW
 biv
 biv
 dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
+wQf
+wQf
+vXP
+lGd
+vXP
+lGd
+ehP
+lvr
 dOC
 dOC
 dOC
@@ -128283,7 +129365,7 @@ nQn
 nQn
 nQn
 nQn
-wCg
+iUZ
 uth
 hJt
 qDB
@@ -128306,7 +129388,7 @@ azF
 csN
 fXM
 mQF
-wHa
+qsF
 qsF
 rtJ
 gIy
@@ -128397,13 +129479,13 @@ dKJ
 xXW
 biv
 dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
+vXP
+vXP
+vXP
+cgy
+vXP
+cgy
+wQf
 dOC
 dOC
 dOC
@@ -128534,7 +129616,7 @@ ouu
 jHq
 jHq
 ouu
-ouu
+bwo
 qsF
 rtJ
 dQO
@@ -128583,7 +129665,7 @@ cPR
 cPR
 cPR
 dGT
-kFB
+bXB
 bOw
 dGT
 cPR
@@ -128614,7 +129696,7 @@ peM
 dKJ
 dKJ
 dKJ
-dKJ
+mbq
 dKJ
 dKJ
 dKJ
@@ -128624,14 +129706,14 @@ dKJ
 xXW
 dKJ
 biv
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-dOC
+vXP
+vXP
+vXP
+vXP
+wQf
+lGd
+wQf
+lvr
 dOC
 dOC
 dOC
@@ -128770,8 +129852,8 @@ pjf
 nPN
 qta
 rtJ
-hHP
-hav
+xVx
+xiQ
 azF
 rtJ
 olt
@@ -128811,8 +129893,8 @@ cPR
 cPR
 cPR
 dGT
-fda
-fda
+qHu
+qHu
 dGT
 dGT
 dGT
@@ -128852,6 +129934,13 @@ dKJ
 dKJ
 dKJ
 biv
+vXP
+vXP
+vXP
+vXP
+vXP
+wQf
+lvr
 dOC
 dOC
 dOC
@@ -128867,13 +129956,6 @@ dOC
 dOC
 dOC
 dOC
-dOC
-dOC
-dOC
-dOC
-dOC
-nAf
-nAf
 nAf
 nAf
 dOC
@@ -128999,7 +130081,7 @@ qmq
 qta
 azF
 hHP
-hHP
+hav
 hHP
 rtJ
 vNJ
@@ -129021,14 +130103,14 @@ vkL
 gdQ
 roQ
 eiX
-utB
-rke
-rke
-rke
-fda
-fda
-fda
-fda
+bXB
+qHu
+qHu
+qHu
+qHu
+qHu
+qHu
+qHu
 dGT
 cPR
 cPR
@@ -129039,7 +130121,7 @@ cPR
 cPR
 cPR
 dGT
-fda
+qHu
 fuU
 dGT
 dOi
@@ -129081,6 +130163,11 @@ dKJ
 xXW
 biv
 dOC
+ehP
+ehP
+ehP
+wQf
+lvr
 dOC
 dOC
 dOC
@@ -129096,11 +130183,6 @@ dOC
 dOC
 dOC
 dOC
-nAf
-nAf
-nAf
-nAf
-nAf
 dOC
 dOC
 dOC
@@ -129160,7 +130242,7 @@ tLR
 wvr
 wvr
 wvr
-wvr
+vUp
 jFZ
 tLR
 eHV
@@ -129170,7 +130252,7 @@ wvr
 wvr
 wvr
 wvr
-tLR
+dWz
 sYg
 sYg
 sYg
@@ -129248,15 +130330,15 @@ fmY
 vkL
 gdQ
 dGT
-fda
-utB
-rke
+qHu
+bXB
+qHu
 bup
-fda
-fda
-kpi
-kpi
-fda
+qHu
+qHu
+bXB
+bXB
+qHu
 dGT
 cPR
 cPR
@@ -129267,8 +130349,8 @@ cPR
 cPR
 cPR
 dGT
-fda
-fda
+qHu
+qHu
 dGT
 hxR
 utB
@@ -129319,12 +130401,12 @@ dOC
 dOC
 dOC
 dOC
-nAf
-nAf
-nAf
-nAf
-nAf
-nAf
+dOC
+dOC
+dOC
+dOC
+dOC
+dOC
 dOC
 dOC
 dOC
@@ -129380,7 +130462,7 @@ sYg
 sYg
 tLR
 wvr
-wvr
+vUp
 tLR
 sYg
 sYg
@@ -129446,7 +130528,7 @@ xHW
 xHW
 xHW
 ouu
-ouu
+xVx
 rtJ
 gjP
 eFL
@@ -129483,7 +130565,7 @@ dGT
 dGT
 dGT
 dGT
-kpi
+bXB
 oCU
 dGT
 cPR
@@ -129495,8 +130577,8 @@ cPR
 cPR
 cPR
 dGT
-fda
-utB
+qHu
+bXB
 dGT
 ozK
 rke
@@ -129544,9 +130626,9 @@ dOC
 dOC
 dOC
 dOC
-nAf
-nAf
-nAf
+dOC
+dOC
+dOC
 dOC
 dOC
 dOC
@@ -129711,8 +130793,8 @@ frv
 frv
 frv
 frv
-utB
-kpi
+bXB
+bXB
 uGH
 dGT
 dGT
@@ -129723,7 +130805,7 @@ dGT
 cPR
 cPR
 dGT
-fda
+qHu
 qvf
 fYe
 mJq
@@ -129746,7 +130828,7 @@ dOC
 klm
 qDZ
 rvQ
-dKJ
+iCN
 dKJ
 dKJ
 dKJ
@@ -129767,12 +130849,12 @@ dOC
 dOC
 dOC
 dOC
-nAf
-nAf
-nAf
-nAf
-nAf
-nAf
+dOC
+dOC
+dOC
+dOC
+dOC
+dOC
 dOC
 dOC
 dOC
@@ -129939,19 +131021,19 @@ pmG
 pmG
 ezr
 frv
-hxR
-fda
-fda
-kpi
-kpi
-kpi
+bOw
+qHu
+qHu
+bXB
+bXB
+bXB
 czb
 gvK
 dGT
 cPR
 cPR
 dGT
-fda
+qHu
 naV
 dGT
 uMH
@@ -130160,30 +131242,30 @@ fmY
 fmY
 meQ
 gVJ
-frv
+jFk
 mzM
 pmG
 iyd
 pmG
 pRR
 frv
-fda
-fda
+qHu
+qHu
 dwF
-utB
-utB
-fda
-fda
+bXB
+bXB
+aFL
+qHu
 gvK
 dGT
 cPR
 cPR
 dGT
-fda
+qHu
 nVl
 dGT
 yib
-rke
+pTZ
 oWj
 dGT
 cPR
@@ -130282,7 +131364,7 @@ sYg
 sYg
 sYg
 sYg
-sYg
+vti
 sYg
 sYg
 tLR
@@ -130395,8 +131477,8 @@ hMV
 pmG
 kBi
 frv
-fda
-fda
+qHu
+qHu
 uGH
 dGT
 dGT
@@ -130407,7 +131489,7 @@ dGT
 cPR
 cPR
 dGT
-fda
+qHu
 gvK
 dGT
 vVb
@@ -130509,9 +131591,9 @@ sYg
 sYg
 sYg
 sYg
-sYg
-sYg
-sYg
+vti
+tLR
+tLR
 sYg
 nQJ
 wvr
@@ -130623,8 +131705,8 @@ pmG
 pmG
 dJX
 frv
-fda
-fda
+qHu
+qHu
 dGT
 cPR
 cPR
@@ -130635,8 +131717,8 @@ cPR
 cPR
 cPR
 dGT
-fda
-fda
+qHu
+qHu
 dGT
 alL
 mcr
@@ -130736,10 +131818,10 @@ sYg
 sYg
 sYg
 sYg
-sYg
-sYg
-sYg
-sYg
+vti
+irH
+tLR
+tLR
 sYg
 tLR
 wvr
@@ -130831,7 +131913,7 @@ xHW
 xHW
 xHW
 ouu
-azF
+sAY
 gjP
 eFL
 kCt
@@ -130851,8 +131933,8 @@ amz
 amz
 nap
 nap
-fda
-rke
+qHu
+qHu
 dGT
 cPR
 cPR
@@ -130863,8 +131945,8 @@ cPR
 cPR
 cPR
 dGT
-fda
-fda
+qHu
+qHu
 dGT
 dGT
 dGT
@@ -130963,11 +132045,11 @@ sYg
 sYg
 sYg
 sYg
-sYg
-sYg
-sYg
-sYg
-sYg
+vti
+tLR
+uar
+tLR
+tLR
 sYg
 tLR
 wvr
@@ -131023,9 +132105,9 @@ rVK
 fYU
 xHt
 xzo
-sYV
-fYU
-fYU
+aeD
+lxR
+lxR
 nQn
 fvg
 fvg
@@ -131079,7 +132161,7 @@ xdj
 afW
 wCU
 nap
-fda
+qHu
 vZK
 dGT
 cPR
@@ -131091,7 +132173,7 @@ cPR
 cPR
 cPR
 uGH
-kpi
+bXB
 oCU
 dGT
 cPR
@@ -131191,11 +132273,11 @@ sYg
 sYg
 sYg
 sYg
-sYg
-sYg
-sYg
-sYg
-sYg
+vti
+tLR
+tLR
+tLR
+tLR
 sYg
 sYg
 tLR
@@ -131250,10 +132332,10 @@ nQn
 syz
 ssc
 nQn
-fYU
-sYV
-sYV
-fYU
+lxR
+aeD
+aeD
+lxR
 nQn
 fvg
 fvg
@@ -131261,7 +132343,7 @@ hIz
 qwf
 vNJ
 azF
-azF
+qlA
 azF
 rtJ
 vyA
@@ -131307,8 +132389,8 @@ emW
 afW
 fQI
 nap
-fda
-utB
+qHu
+bXB
 uGH
 dGT
 dGT
@@ -131343,7 +132425,7 @@ klm
 fPx
 rvQ
 olY
-dKJ
+mbq
 rvQ
 rvQ
 biv
@@ -131391,7 +132473,7 @@ rvQ
 rvQ
 rvQ
 rvQ
-rvQ
+jko
 rvQ
 vXP
 dOC
@@ -131420,6 +132502,26 @@ sYg
 sYg
 sYg
 sYg
+vti
+tLR
+tLR
+vti
+sYg
+sYg
+sYg
+tLR
+wvr
+vUp
+tLR
+tLR
+sYg
+sYg
+sYg
+sYg
+sYg
+sYg
+sYg
+sYg
 sYg
 sYg
 sYg
@@ -131430,28 +132532,8 @@ sYg
 tLR
 wvr
 wvr
-tLR
-tLR
-sYg
-sYg
-sYg
-sYg
-sYg
-sYg
-sYg
-sYg
-sYg
-sYg
-sYg
-sYg
-sYg
-sYg
-sYg
-tLR
-wvr
-wvr
-wvr
-tLR
+vUp
+vDP
 sYg
 sYg
 sYg
@@ -131480,8 +132562,8 @@ nQn
 nQn
 nQn
 nQn
-fYU
-fYU
+lxR
+lxR
 nQn
 fvg
 fvg
@@ -131535,20 +132617,20 @@ emW
 afW
 glZ
 nap
-fda
-kpi
-kpi
+qHu
+bXB
+bXB
 czb
-fda
-fda
-kpi
-fda
-fda
+qHu
+qHu
+bXB
+qHu
+qHu
 czb
-kpi
-kpi
-fda
-fda
+bXB
+bXB
+qHu
+qHu
 dGT
 cPR
 cPR
@@ -131597,11 +132679,11 @@ dOC
 biv
 biv
 biv
-biv
-biv
-biv
-biv
-biv
+dOC
+vXP
+cgy
+wQf
+lvr
 biv
 dOC
 dOC
@@ -131708,8 +132790,8 @@ fvg
 fvg
 fvg
 nQn
-fYU
-wCi
+lxR
+aeD
 nQn
 nQn
 nQn
@@ -131744,7 +132826,7 @@ xHW
 xHW
 ouu
 azF
-rtJ
+dfY
 rtJ
 azF
 rtJ
@@ -131764,19 +132846,19 @@ jOZ
 nTH
 nap
 fVr
-fda
-fda
-fda
-fda
-fda
-fda
-fda
-fda
-fda
-fda
-fda
-fda
-fda
+qHu
+qHu
+qHu
+qHu
+qHu
+qHu
+qHu
+qHu
+qHu
+qHu
+qHu
+qHu
+qHu
 dGT
 cPR
 cPR
@@ -131825,11 +132907,11 @@ dOC
 biv
 biv
 biv
-biv
-biv
-biv
-biv
-biv
+lvr
+wQf
+vXP
+vXP
+qDZ
 biv
 biv
 biv
@@ -131876,7 +132958,7 @@ sYg
 sYg
 sYg
 tLR
-tLR
+vDP
 sYg
 tLR
 sYg
@@ -131937,9 +133019,9 @@ fvg
 fvg
 nQn
 smA
-wCi
-ssc
-fyE
+aeD
+hgQ
+lxR
 nQn
 fvg
 fvg
@@ -131955,8 +133037,8 @@ fvg
 fvg
 fvg
 nQn
-fYU
-sYV
+lxR
+aeD
 tan
 fvO
 fvO
@@ -131998,8 +133080,8 @@ dGT
 uGH
 uGH
 lQZ
-hxR
-fda
+bOw
+qHu
 jha
 uGH
 uGH
@@ -132037,13 +133119,13 @@ dKJ
 xXW
 fMb
 bqM
-kjZ
-dKJ
+tdi
+rvQ
 iCo
 dKJ
-dKJ
 xXW
-dKJ
+fMb
+bqM
 biv
 dOC
 dOC
@@ -132053,10 +133135,10 @@ dOC
 biv
 biv
 biv
-biv
-biv
-biv
-biv
+qDZ
+vXP
+lGd
+vXP
 biv
 biv
 biv
@@ -132164,10 +133246,10 @@ aif
 fvg
 fvg
 nQn
-fYU
-fYU
-fYU
-fYU
+lxR
+lxR
+lxR
+lxR
 nQn
 fvg
 fvg
@@ -132183,12 +133265,12 @@ nQn
 nQn
 nQn
 nQn
-sYV
-fYU
+aeD
+lxR
 tan
 stK
-gUK
-liO
+rdp
+kFB
 tan
 xHW
 xHW
@@ -132227,7 +133309,7 @@ fMJ
 mZq
 mZq
 nRy
-bPh
+qbn
 mZq
 mZq
 fMJ
@@ -132266,12 +133348,12 @@ vFT
 biv
 mVJ
 biv
-kjZ
+tdi
+rvQ
 dKJ
-dKJ
-dKJ
+fMb
 biv
-biv
+mVJ
 biv
 biv
 biv
@@ -132282,9 +133364,9 @@ biv
 biv
 biv
 biv
-biv
-biv
-biv
+vXP
+vXP
+vXP
 biv
 biv
 biv
@@ -132366,7 +133448,7 @@ wvr
 wvr
 gCt
 cyL
-tLR
+uar
 tLR
 sYg
 sYg
@@ -132394,8 +133476,8 @@ fvg
 nQn
 nQn
 nQn
-fYU
-fYU
+lxR
+lxR
 nQn
 nQn
 nQn
@@ -132405,18 +133487,18 @@ nQn
 nQn
 wji
 dJk
-ssc
-fYU
-fYU
-fYU
-fYU
-fYU
-sYV
-fYU
-tYl
-liO
-gUK
-jIw
+hgQ
+lxR
+lxR
+lxR
+lxR
+lxR
+aeD
+lxR
+kFB
+kFB
+rdp
+rdp
 tan
 xHW
 xHW
@@ -132429,7 +133511,7 @@ xHW
 xHW
 xHW
 ouu
-rtJ
+gZI
 azF
 tVL
 ahp
@@ -132437,7 +133519,7 @@ fhs
 gdQ
 gdQ
 gdQ
-gdQ
+axb
 fhs
 fhs
 frv
@@ -132455,7 +133537,7 @@ fMJ
 fMJ
 mZq
 eBk
-bPh
+qbn
 mZq
 fMJ
 fMJ
@@ -132493,12 +133575,12 @@ xXW
 jmY
 mVJ
 biv
-mVJ
-uEW
+rli
+blc
 dKJ
 xXW
-jhl
-biv
+jmY
+rli
 biv
 biv
 biv
@@ -132622,28 +133704,28 @@ fvg
 fvg
 fvg
 nQn
-fYU
-fYU
-sYV
-sYV
-fYU
-fYU
-fYU
-fYU
-sYV
-wCi
-wCi
-sYV
+lxR
+lxR
+aeD
+aeD
+lxR
+lxR
+lxR
+lxR
+aeD
+aeD
+aeD
+aeD
 jNY
-fYU
-fYU
-fYU
-fYU
-fYU
-fYU
-gUK
-bsv
-mIk
+lxR
+lxR
+lxR
+lxR
+lxR
+lxR
+rdp
+dQI
+wcc
 jFQ
 tan
 tan
@@ -132683,7 +133765,7 @@ fMJ
 fMJ
 uJJ
 qUW
-bPh
+qbn
 uJJ
 fMJ
 fMJ
@@ -132716,8 +133798,8 @@ xXW
 dKJ
 dJV
 peM
-dKJ
-xXW
+rvQ
+rvQ
 eWz
 biv
 mVJ
@@ -132725,9 +133807,9 @@ biv
 kUM
 dKJ
 xXW
-dKJ
+eWz
 biv
-biv
+mVJ
 biv
 biv
 biv
@@ -132736,7 +133818,7 @@ dOC
 dOC
 dOC
 dOC
-vXP
+lly
 ykD
 ykD
 ykD
@@ -132750,7 +133832,7 @@ rvQ
 rvQ
 rvQ
 rvQ
-rvQ
+jko
 rvQ
 etT
 rvQ
@@ -132776,14 +133858,14 @@ sYg
 sYg
 tLR
 tLR
+vUp
 wvr
 wvr
 wvr
 wvr
 wvr
 wvr
-wvr
-wvr
+vUp
 wvr
 wvr
 wvr
@@ -132850,17 +133932,17 @@ fvg
 fvg
 fvg
 nQn
-fYU
-fYU
-sYV
+lxR
+lxR
+aeD
 rCV
-sYV
-fYU
-fYU
-fYU
-fyE
-wCi
-wCi
+aeD
+lxR
+lxR
+lxR
+lxR
+aeD
+aeD
 tan
 tan
 tan
@@ -132910,8 +133992,8 @@ tLc
 fMJ
 fMJ
 uJJ
-bPh
-bPh
+qbn
+qbn
 uJJ
 fMJ
 fMJ
@@ -132945,17 +134027,17 @@ biv
 biv
 biv
 biv
-dKJ
-dKJ
+rvQ
+rvQ
 jQh
 ocM
 kUM
 dKJ
 dKJ
 dKJ
-xXW
-xXW
 dKJ
+jQh
+ocM
 biv
 dOC
 dOC
@@ -132965,8 +134047,8 @@ dOC
 dOC
 dOC
 bYH
-rvQ
-rvQ
+tdi
+jko
 rvQ
 lVf
 tpC
@@ -133044,7 +134126,7 @@ haY
 haY
 wvr
 jDq
-wvr
+vUp
 wvr
 wvr
 jFZ
@@ -133079,7 +134161,7 @@ fvg
 fvg
 nQn
 cJl
-fYU
+lxR
 tan
 tan
 tan
@@ -133138,8 +134220,8 @@ fMJ
 fMJ
 fMJ
 uJJ
-bPh
-bPh
+qbn
+qbn
 uJJ
 fMJ
 fMJ
@@ -133179,8 +134261,8 @@ xXW
 gpP
 dKJ
 dKJ
-xXW
-xXW
+xam
+jRN
 dKJ
 xXW
 dKJ
@@ -133211,7 +134293,7 @@ rvQ
 mqd
 rvQ
 rvQ
-rvQ
+jko
 rvQ
 pOT
 nHz
@@ -133326,7 +134408,7 @@ tan
 gGj
 liO
 liO
-liO
+pUL
 jIw
 quD
 tan
@@ -133366,8 +134448,8 @@ fMJ
 fMJ
 fMJ
 uJJ
-bPh
-bPh
+qbn
+qbn
 uJJ
 uJJ
 uJJ
@@ -133411,7 +134493,7 @@ dKJ
 xXW
 dKJ
 xXW
-dKJ
+rvQ
 biv
 dOC
 dOC
@@ -133421,7 +134503,7 @@ dOC
 biv
 biv
 biv
-blc
+sWJ
 ldi
 ldi
 ldi
@@ -133445,7 +134527,7 @@ pOT
 nHz
 rvQ
 rvQ
-rvQ
+jko
 vXP
 dOC
 dOC
@@ -133639,7 +134721,7 @@ erY
 xXW
 dKJ
 bUq
-dKJ
+rvQ
 biv
 dOC
 dOC
@@ -133706,7 +134788,7 @@ sYg
 sYg
 sYg
 sYg
-tLR
+vDP
 wvr
 wvr
 wvr
@@ -133714,7 +134796,7 @@ tLR
 nQJ
 wvr
 wvr
-wvr
+vUp
 tLR
 sYg
 sYg
@@ -133793,7 +134875,7 @@ knJ
 tlk
 sZC
 fmY
-gdQ
+riQ
 vkL
 gdQ
 qQu
@@ -133823,7 +134905,7 @@ fMJ
 fMJ
 uJJ
 bwP
-plU
+qbn
 uJJ
 vgG
 aQH
@@ -134050,8 +135132,8 @@ fMJ
 fMJ
 fMJ
 uJJ
-bPh
-plU
+qbn
+qbn
 uJJ
 uJJ
 uJJ
@@ -134093,7 +135175,7 @@ biv
 dKJ
 dKJ
 dKJ
-dKJ
+rvQ
 biv
 biv
 hsC
@@ -134278,8 +135360,8 @@ fMJ
 fMJ
 fMJ
 uJJ
-plU
-uIL
+qbn
+xkz
 uJJ
 fMJ
 fMJ
@@ -134480,7 +135562,7 @@ sZC
 sZC
 hZH
 gdQ
-gdQ
+axb
 gdQ
 gdQ
 gdQ
@@ -134493,7 +135575,7 @@ gdQ
 gdQ
 qAp
 fhs
-gdQ
+tEU
 vkL
 mFN
 fhs
@@ -134507,7 +135589,7 @@ fMJ
 fMJ
 uJJ
 nWx
-uIL
+xkz
 uJJ
 fMJ
 fMJ
@@ -134579,7 +135661,7 @@ dKJ
 dKJ
 dKJ
 dKJ
-dKJ
+sET
 biv
 biv
 biv
@@ -134596,7 +135678,7 @@ sYg
 sYg
 tLR
 sYg
-wvr
+vUp
 wvr
 tLR
 sYg
@@ -134679,9 +135761,9 @@ wsa
 wsa
 wsa
 jPt
-jPt
+kvT
 mNZ
-diZ
+eeO
 eeO
 hWS
 aMO
@@ -134701,7 +135783,7 @@ tan
 xRD
 liO
 liO
-liO
+gup
 jIw
 jmI
 fhs
@@ -134715,7 +135797,7 @@ vkL
 fmY
 ePS
 fhs
-xjp
+spv
 gVJ
 tDE
 gdQ
@@ -134734,8 +135816,8 @@ fMJ
 fMJ
 fMJ
 uJJ
-goI
-plU
+jvS
+qbn
 uJJ
 fMJ
 fMJ
@@ -134797,7 +135879,7 @@ fMb
 irp
 kjZ
 dKJ
-dKJ
+mbq
 fMb
 irp
 wtQ
@@ -134817,10 +135899,10 @@ biv
 ykD
 jdt
 rvQ
-tLR
-tLR
-tLR
-sYg
+vDP
+haY
+haY
+cfM
 tLR
 tLR
 wvr
@@ -134907,12 +135989,12 @@ wsa
 wsa
 wsa
 jPt
-jPt
+drO
 mtY
-diZ
+eeO
 aAu
 vOp
-xkz
+aAu
 eMF
 hVs
 mtY
@@ -134924,7 +136006,7 @@ tAY
 tAY
 tAY
 tAY
-liO
+vBz
 tan
 rGV
 liO
@@ -134935,7 +136017,7 @@ sZC
 gdQ
 gdQ
 gdQ
-gdQ
+ygM
 fhs
 fhs
 fhs
@@ -134962,8 +136044,8 @@ fMJ
 fMJ
 fMJ
 mZq
-uIL
-bPh
+xkz
+qbn
 mZq
 fMJ
 fMJ
@@ -135001,7 +136083,7 @@ gkI
 tMy
 biv
 gpP
-dKJ
+icW
 dKJ
 xXW
 dKJ
@@ -135046,9 +136128,9 @@ rvQ
 rvQ
 rvQ
 wvr
-lvn
-lvn
-lvn
+nCZ
+vNO
+qln
 wvr
 wvr
 wvr
@@ -135135,13 +136217,13 @@ wsa
 wsa
 wsa
 jPt
-jPt
+cCB
 mtY
-diZ
-aFL
+eeO
+aAu
 cwS
-xkz
-xkz
+aAu
+aAu
 yjI
 rLc
 tYl
@@ -135181,7 +136263,7 @@ fMJ
 fMJ
 uJJ
 pjQ
-eHp
+xkz
 uJJ
 fMJ
 fMJ
@@ -135190,8 +136272,8 @@ fMJ
 fMJ
 mZq
 mZq
-plU
-bPh
+qbn
+qbn
 mZq
 mZq
 fMJ
@@ -135220,10 +136302,10 @@ wOL
 uTJ
 rzu
 jiY
+fTM
 rzu
 rzu
-rzu
-rCD
+qaB
 uTJ
 hsC
 xXW
@@ -135274,9 +136356,9 @@ rvQ
 rvQ
 rvQ
 wvr
-lvn
-lvn
-lvn
+nCZ
+vNO
+qln
 wvr
 wvr
 wvr
@@ -135365,11 +136447,11 @@ jPt
 jPt
 jPt
 eCf
-diZ
-xkz
-xkz
-xkz
-xkz
+eeO
+aAu
+aAu
+aAu
+aAu
 dbK
 dBe
 gUK
@@ -135409,7 +136491,7 @@ fMJ
 fMJ
 uJJ
 hhF
-bPh
+qbn
 uJJ
 uJJ
 uJJ
@@ -135418,8 +136500,8 @@ uJJ
 mZq
 mZq
 qTF
-plU
-bPh
+qbn
+qbn
 qTF
 mZq
 mZq
@@ -135467,7 +136549,7 @@ dKJ
 peM
 dKJ
 dKJ
-dKJ
+mbq
 xXW
 dKJ
 dKJ
@@ -135482,7 +136564,7 @@ biv
 rvQ
 rvQ
 rvQ
-rvQ
+qSc
 biv
 rvQ
 rvQ
@@ -135502,10 +136584,10 @@ rvQ
 rvQ
 rvQ
 wvr
+nCZ
+vNO
+qln
 wvr
-wvr
-sYg
-sYg
 wvr
 wvr
 wvr
@@ -135636,23 +136718,23 @@ gVJ
 fMJ
 fMJ
 uJJ
-bPh
-bPh
-plU
-uIL
+qbn
+qbn
+qbn
+xkz
 xDC
 gOn
-plU
-bPh
-bPh
-bPh
-bPh
-bPh
-bPh
-bPh
-bPh
-eHp
-bPh
+qbn
+qbn
+qbn
+qbn
+qbn
+qbn
+qbn
+qbn
+qbn
+xkz
+qbn
 uJJ
 uJJ
 mRF
@@ -135674,7 +136756,7 @@ hRo
 gsf
 wOL
 xLw
-rCD
+gQc
 rCD
 dBI
 rCD
@@ -135688,7 +136770,7 @@ dKJ
 dKJ
 dKJ
 dKJ
-dKJ
+mbq
 dKJ
 dKJ
 dKJ
@@ -135730,9 +136812,9 @@ rvQ
 dOC
 rvQ
 wvr
-tLR
-tLR
-sYg
+nCZ
+vNO
+qln
 wvr
 wvr
 wvr
@@ -135760,7 +136842,7 @@ wvr
 wvr
 wvr
 wvr
-wvr
+vUp
 wvr
 wvr
 wvr
@@ -135775,7 +136857,7 @@ tLR
 tLR
 wvr
 wvr
-wvr
+vUp
 wvr
 sYg
 tLR
@@ -135833,7 +136915,7 @@ jPt
 wsa
 wsa
 tan
-tYl
+kFB
 kTW
 tan
 wsa
@@ -135846,7 +136928,7 @@ tan
 jly
 jly
 lVk
-fwD
+rLQ
 qvu
 qOt
 rYT
@@ -135864,23 +136946,23 @@ gVJ
 fMJ
 fMJ
 uJJ
-bPh
+qbn
 dTd
-eHp
-eHp
-bPh
-bPh
-bPh
-eHp
+xkz
+xkz
+qbn
+qbn
+qbn
+xkz
 bqz
 wQE
 vrn
 tsP
 fAK
-bPh
-plU
-uIL
-eHp
+qbn
+qbn
+xkz
+xkz
 uJJ
 goI
 mRF
@@ -135917,7 +136999,7 @@ dKJ
 iCo
 dKJ
 xXW
-dKJ
+iCN
 dJV
 bUq
 peM
@@ -135960,8 +137042,8 @@ rvQ
 dWz
 haY
 haY
-sYg
-tLR
+cfM
+dWz
 wvr
 wvr
 wvr
@@ -136062,7 +137144,7 @@ wsa
 wsa
 tan
 hGp
-gUK
+rdp
 tan
 wsa
 wsa
@@ -136074,7 +137156,7 @@ tan
 jly
 jly
 lVk
-dWP
+hBT
 ngH
 ldM
 vLo
@@ -136082,11 +137164,11 @@ qvu
 jWs
 lVk
 gVJ
-fhs
+bnm
+pyY
 gdQ
-gdQ
-gdQ
-gdQ
+pyY
+pyY
 gVJ
 gVJ
 fMJ
@@ -136107,12 +137189,12 @@ uJJ
 uJJ
 uJJ
 uJJ
-uIL
-plU
+xkz
+qbn
 uJJ
 ctA
 plU
-plU
+oZu
 uIL
 uIL
 uJJ
@@ -136289,8 +137371,8 @@ wsa
 wsa
 wsa
 tan
-tYl
-tYl
+kFB
+kFB
 tan
 wsa
 wsa
@@ -136335,8 +137417,8 @@ fMJ
 fMJ
 fMJ
 uJJ
-bPh
-plU
+qbn
+qbn
 uJJ
 plU
 bPh
@@ -136414,9 +137496,9 @@ mVJ
 dPF
 vXP
 sYg
-sYg
-sYg
-sYg
+oln
+ekC
+knS
 sYg
 tLR
 wvr
@@ -136467,7 +137549,7 @@ sYg
 tLR
 wvr
 wvr
-wvr
+vUp
 tLR
 tLR
 sYg
@@ -136517,8 +137599,8 @@ wsa
 wsa
 wsa
 tan
-jIw
-liO
+rdp
+kFB
 tan
 wsa
 wsa
@@ -136563,8 +137645,8 @@ fMJ
 fMJ
 fMJ
 uJJ
-bPh
-hZX
+qbn
+vXx
 lDh
 plU
 plU
@@ -136616,7 +137698,7 @@ biv
 hsC
 mVJ
 uEW
-dKJ
+sET
 bYX
 xXW
 dKJ
@@ -136647,7 +137729,7 @@ sYg
 sYg
 sYg
 sYg
-wvr
+vUp
 wvr
 jFZ
 wvr
@@ -136745,8 +137827,8 @@ wsa
 wsa
 wsa
 tan
-liO
-jIw
+kFB
+rdp
 tan
 wsa
 wsa
@@ -136792,9 +137874,9 @@ fMJ
 fMJ
 uJJ
 dTd
-bPh
+qbn
 uJJ
-uIL
+wyd
 bPh
 bPh
 bPh
@@ -136881,7 +137963,7 @@ wvr
 eHV
 eHV
 eHV
-wvr
+vUp
 tLR
 sYg
 sYg
@@ -136973,8 +138055,8 @@ wsa
 wsa
 wsa
 tan
-liO
-liO
+kFB
+kFB
 tan
 wsa
 wsa
@@ -136987,14 +138069,14 @@ jly
 jly
 tDR
 lVk
-lDY
+fwD
 naP
 qvu
 naP
 lDY
 lVk
 qJb
-iFk
+tAQ
 roY
 qJb
 wfU
@@ -137087,7 +138169,7 @@ rvQ
 qSc
 nHz
 rvQ
-rvQ
+jko
 rvQ
 rvQ
 rvQ
@@ -137201,8 +138283,8 @@ wsa
 wsa
 wsa
 tan
-tYl
-jIw
+kFB
+rdp
 tan
 wsa
 wsa
@@ -137215,15 +138297,15 @@ jly
 jly
 tDR
 lVk
-lDY
+dWP
 xbT
 qvu
 qvu
 pYc
 lVk
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 wfU
 wfU
@@ -137429,7 +138511,7 @@ wsa
 wsa
 wsa
 tan
-tYl
+kFB
 soS
 tan
 tan
@@ -137450,8 +138532,8 @@ lVk
 lVk
 lVk
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 wfU
 wfU
@@ -137481,7 +138563,7 @@ uJJ
 uJJ
 mRF
 bjM
-mRF
+blI
 qEL
 uJJ
 fMJ
@@ -137514,7 +138596,7 @@ xXW
 xXW
 dKJ
 dKJ
-dKJ
+mbq
 xXW
 biv
 dOC
@@ -137657,10 +138739,10 @@ wsa
 wsa
 wsa
 tan
-gUK
-tYl
-tYl
-tYl
+rdp
+kFB
+kFB
+kFB
 tan
 jly
 jly
@@ -137678,8 +138760,8 @@ wFn
 lsB
 lVk
 qJb
-iFk
-iFk
+tAQ
+tAQ
 qJb
 wfU
 wfU
@@ -137885,10 +138967,10 @@ wsa
 wsa
 wsa
 tan
-gUK
-gUK
-tYl
-tYl
+rdp
+rdp
+kFB
+kFB
 tan
 jly
 jly
@@ -137906,8 +138988,8 @@ fji
 kcN
 lVk
 qJb
-gQc
-iFk
+fgz
+tAQ
 qJb
 wfU
 wfU
@@ -137964,14 +139046,14 @@ dOC
 dOC
 dOC
 biv
-dKJ
-dKJ
+bqM
+kjZ
 dJV
 dKJ
 dKJ
 xXW
-xXW
-dKJ
+fMb
+irp
 biv
 dOC
 dOC
@@ -137985,7 +139067,7 @@ jdt
 rvQ
 rvQ
 rvQ
-rvQ
+jko
 rvQ
 rvQ
 pOT
@@ -138008,7 +139090,7 @@ vXP
 dOC
 dOC
 vXP
-rvQ
+jko
 sYg
 sYg
 sYg
@@ -138041,7 +139123,7 @@ sYg
 cyL
 cyL
 tLR
-sYg
+vti
 sYg
 sYg
 sYg
@@ -138049,7 +139131,7 @@ sYg
 tLR
 tLR
 wvr
-wvr
+vUp
 wvr
 tLR
 sYg
@@ -138115,8 +139197,8 @@ wsa
 tan
 tan
 tan
-gUK
-tYl
+rdp
+kFB
 xcO
 jly
 jly
@@ -138134,8 +139216,8 @@ lVk
 lVk
 lVk
 gEc
-hCb
-cuR
+kFx
+mIk
 qJb
 wfU
 wfU
@@ -138192,14 +139274,14 @@ dOC
 biv
 biv
 biv
+mVJ
 biv
-biv
-bUq
+nEL
 dKJ
 dKJ
-dKJ
+vFT
 biv
-biv
+mVJ
 biv
 biv
 biv
@@ -138253,7 +139335,7 @@ sYg
 sYg
 sYg
 tLR
-wvr
+vUp
 wvr
 tLR
 sYg
@@ -138269,9 +139351,9 @@ cyL
 cyL
 tLR
 tLR
-tLR
-tLR
-tLR
+vti
+vti
+anH
 sYg
 sYg
 sYg
@@ -138325,16 +139407,16 @@ wsa
 wsa
 wsa
 tan
-gUK
-gUK
-gUK
-gUK
-liO
-liO
+rdp
+rdp
+rdp
+rdp
+kFB
+kFB
 wSQ
-jIw
-jIw
-tYl
+rdp
+rdp
+kFB
 tan
 wsa
 wsa
@@ -138344,7 +139426,7 @@ wsa
 wsa
 tan
 dnT
-liO
+kFB
 xcO
 gEc
 jly
@@ -138363,7 +139445,7 @@ tDR
 aVz
 gEc
 bUQ
-cuR
+mIk
 qJb
 wfU
 wfU
@@ -138421,12 +139503,12 @@ biv
 biv
 biv
 biv
-biv
-xXW
+rli
+uEW
 dKJ
 dKJ
-dKJ
-biv
+jmY
+rli
 biv
 biv
 biv
@@ -138495,11 +139577,11 @@ sYg
 cyL
 cyL
 tLR
-wvr
+frr
 tLR
 wvr
-tLR
-tLR
+vti
+vti
 sYg
 sYg
 sYg
@@ -138553,16 +139635,16 @@ wsa
 wsa
 wsa
 tan
-tYl
-tYl
-gUK
-gUK
-tYl
+kFB
+kFB
+rdp
+rdp
+kFB
 oIn
-jIw
-liO
-tYl
-tYl
+rdp
+kFB
+kFB
+kFB
 tan
 wsa
 wsa
@@ -138571,8 +139653,8 @@ wsa
 wsa
 wsa
 tan
-liO
-liO
+kFB
+kFB
 xcO
 gEc
 gEc
@@ -138590,8 +139672,8 @@ tDR
 aVz
 aVz
 gEc
-roY
-iFk
+tAQ
+tAQ
 gEc
 cpx
 wfU
@@ -138648,14 +139730,14 @@ dOC
 biv
 biv
 biv
+mVJ
 biv
-biv
-xXW
+kUM
 xXW
 dKJ
-dKJ
+eWz
 biv
-biv
+mVJ
 biv
 biv
 biv
@@ -138724,7 +139806,7 @@ sYg
 tLR
 wvr
 wvr
-wvr
+vUu
 wvr
 wvr
 tLR
@@ -138781,8 +139863,8 @@ wsa
 wsa
 wsa
 tan
-tYl
-gUK
+kFB
+rdp
 tan
 tan
 tan
@@ -138790,7 +139872,7 @@ tan
 tan
 tan
 hGp
-tYl
+kFB
 tan
 wsa
 wsa
@@ -138799,7 +139881,7 @@ wsa
 wsa
 wsa
 tan
-gGj
+hGp
 jFQ
 xcO
 gEc
@@ -138876,14 +139958,14 @@ dOC
 dOC
 dOC
 biv
+ocM
+kUM
 dKJ
 xXW
-xXW
-xXW
 dKJ
-xXW
-xXW
 dKJ
+wAR
+tRU
 biv
 dOC
 dOC
@@ -138949,8 +140031,8 @@ sYg
 sYg
 sYg
 sYg
-tLR
-wvr
+vti
+vti
 wvr
 wvr
 wvr
@@ -139009,8 +140091,8 @@ wsa
 wsa
 wsa
 tan
-tYl
-jIw
+kFB
+rdp
 tan
 wsa
 wsa
@@ -139018,7 +140100,7 @@ wsa
 wsa
 tan
 ycH
-jIw
+rdp
 tan
 wsa
 wsa
@@ -139028,25 +140110,25 @@ wsa
 wsa
 tan
 ssd
-liO
-gUK
-iFk
-cuR
-iFk
-iFk
-iFk
-iFk
-cuR
+kFB
+rdp
+tAQ
+mIk
+tAQ
+tAQ
+tAQ
+tAQ
+mIk
 jvz
-iFk
-iFk
-iFk
-iFk
-iFk
-iFk
-cow
+tAQ
+tAQ
+tAQ
+tAQ
+tAQ
+tAQ
+mIk
 vok
-gwk
+tpW
 hms
 wWO
 bKf
@@ -139178,8 +140260,8 @@ sYg
 sYg
 sYg
 sYg
-tLR
-wvr
+vti
+vti
 wvr
 tLR
 cyL
@@ -139237,16 +140319,16 @@ wsa
 wsa
 wsa
 tan
-tYl
-jIw
+kFB
+rdp
 tan
 wsa
 wsa
 wsa
 wsa
 xcO
-tYl
-liO
+kFB
+kFB
 tan
 tan
 tan
@@ -139255,27 +140337,27 @@ tan
 tan
 tan
 tan
-liO
-tYl
-tYl
-hPs
+kFB
+kFB
+kFB
+ble
 hFn
-iFk
+tAQ
 pgc
 cca
-roY
+tAQ
 stX
-rWt
-iFk
-iFk
-iFk
+mvF
+tAQ
+tAQ
+tAQ
 pgc
-iFk
-iFk
-iFk
-iFk
+tAQ
+tAQ
+tAQ
+tAQ
 ehl
-cuR
+mIk
 vQs
 nLB
 aqi
@@ -139333,7 +140415,7 @@ dOC
 dOC
 biv
 dKJ
-dKJ
+mbq
 dKJ
 dKJ
 dKJ
@@ -139407,7 +140489,7 @@ sYg
 sYg
 sYg
 sYg
-tLR
+vti
 tLR
 cyL
 cyL
@@ -139465,26 +140547,26 @@ wsa
 wsa
 wsa
 tan
-tYl
-liO
+kFB
+kFB
 tan
 wsa
 wsa
 wsa
 jPt
 xcO
-gUK
-tYl
-tYl
-tYl
-gUK
-gUK
-jIw
+rdp
+kFB
+kFB
+kFB
+rdp
+rdp
+rdp
 wSQ
-liO
-tYl
-tYl
-gUK
+kFB
+kFB
+kFB
+rdp
 tan
 qJb
 qJb
@@ -139694,31 +140776,31 @@ wsa
 wsa
 tan
 dnT
-liO
+kFB
 tan
 wsa
 wsa
 jPt
 jPt
 xcO
-tYl
-tYl
-tYl
+kFB
+kFB
+kFB
 pQn
-liO
-mbq
-jIw
+kFB
+ciO
+rdp
 pTR
-tYl
-tYl
-gUK
-gUK
+kFB
+kFB
+rdp
+rdp
 tan
 jly
 jly
 qJb
 roY
-iFk
+eCL
 qJb
 jly
 qJb
@@ -139808,7 +140890,7 @@ dOC
 dOC
 dOC
 rvQ
-rvQ
+qSc
 nDx
 lum
 bTl
@@ -139921,8 +141003,8 @@ wsa
 wsa
 wsa
 tan
-tYl
-tYl
+kFB
+kFB
 tan
 wsa
 gFY
@@ -140037,11 +141119,11 @@ dOC
 dOC
 rvQ
 rvQ
-nDx
+jxL
 nDx
 nDx
 rvQ
-rvQ
+jko
 rvQ
 rvQ
 rvQ
@@ -140050,9 +141132,9 @@ eFQ
 rvQ
 nHz
 njR
-eFQ
-eFQ
-eFQ
+hRn
+hRn
+hRn
 njR
 njR
 njR
@@ -140173,7 +141255,7 @@ wsa
 jly
 jly
 qJb
-dcE
+qPm
 kld
 qJb
 jly
@@ -140262,7 +141344,7 @@ dOC
 dOC
 dOC
 dOC
-rvQ
+jko
 rvQ
 rvQ
 ays
@@ -140270,19 +141352,19 @@ ljl
 lum
 rvQ
 rvQ
-rvQ
-rvQ
-rvQ
-rvQ
-eFQ
+wHa
+wHa
 rvQ
 rvQ
 eFQ
+rvQ
+rvQ
 eFQ
 eFQ
 eFQ
+hZX
 uvh
-eFQ
+mJU
 njR
 dOC
 dOC
@@ -140324,7 +141406,7 @@ sYg
 sYg
 nQJ
 wvr
-wvr
+vUp
 wvr
 wvr
 wvr
@@ -140497,18 +141579,18 @@ nDx
 lum
 bTl
 rvQ
-rvQ
 eFQ
-eFQ
+mAy
+uwi
 eFQ
 rvQ
 rvQ
 rvQ
 nHz
 njR
-eFQ
-eFQ
-eFQ
+ltQ
+hZX
+hZX
 njR
 njR
 njR
@@ -140551,7 +141633,7 @@ sYg
 tLR
 tLR
 tLR
-wvr
+vUp
 wvr
 wvr
 wvr
@@ -140566,7 +141648,7 @@ sYg
 sYg
 tLR
 wvr
-wvr
+vUp
 wvr
 wvr
 tLR
@@ -140721,17 +141803,17 @@ dOC
 buL
 rvQ
 rvQ
+jxL
 nDx
 nDx
-nDx
-rvQ
 rvQ
 eFQ
+gcx
+fnL
 eFQ
-eFQ
 rvQ
 rvQ
-rvQ
+jko
 nHz
 njR
 njR
@@ -140949,13 +142031,13 @@ dOC
 rvQ
 rvQ
 rvQ
-ays
+qXJ
 ogX
 lum
 rvQ
 rvQ
-rvQ
-rvQ
+wHa
+wHa
 rvQ
 rvQ
 rvQ
@@ -140963,9 +142045,9 @@ rvQ
 rvQ
 rvQ
 qSc
-rvQ
-rvQ
-rvQ
+vfQ
+wEE
+qzo
 dOC
 dOC
 dOC
@@ -141192,8 +142274,8 @@ rvQ
 rvQ
 rvQ
 rvQ
-wEE
-dOC
+rvQ
+klm
 dOC
 dOC
 dOC
@@ -141226,7 +142308,7 @@ sYg
 tLR
 tLR
 wvr
-wvr
+vUp
 wvr
 tLR
 sYg
@@ -141388,7 +142470,7 @@ dOC
 biv
 dOC
 xXW
-dKJ
+mbq
 dKJ
 biv
 dOC
@@ -141420,8 +142502,8 @@ rvQ
 rvQ
 buL
 rvQ
-vfQ
-dOC
+rvQ
+klm
 dOC
 dOC
 dOC
@@ -141647,10 +142729,10 @@ nDx
 rvQ
 rvQ
 rvQ
-qzo
-dOC
-dOC
-dOC
+rvQ
+klm
+klm
+wQf
 dOC
 dOC
 dOC
@@ -141845,7 +142927,7 @@ biv
 xXW
 dOC
 klm
-xXW
+wAL
 dOC
 dOC
 dOC
@@ -141862,7 +142944,7 @@ dOC
 rvQ
 rvQ
 rvQ
-rvQ
+gIk
 drB
 nDx
 nDx
@@ -141875,11 +142957,11 @@ qKf
 rvQ
 rvQ
 rvQ
-dOC
-dOC
-dOC
-dOC
-dOC
+klm
+klm
+vXP
+vXP
+wQf
 dOC
 dOC
 dOC
@@ -142104,11 +143186,11 @@ tGa
 ykF
 dOC
 dOC
-dOC
-dOC
-dOC
-dOC
-dOC
+vXP
+vXP
+lGd
+vXP
+ehP
 dOC
 dOC
 dOC
@@ -142323,20 +143405,20 @@ lqD
 jcE
 aFq
 rvQ
-rvQ
+jko
 rvQ
 eaZ
-eaZ
+gcS
 dOC
 dOC
 dOC
 dOC
 dOC
-dOC
-dOC
-dOC
-dOC
-dOC
+wQf
+vXP
+vXP
+vXP
+ehP
 dOC
 dOC
 dOC
@@ -142561,9 +143643,9 @@ dOC
 dOC
 dOC
 dOC
-dOC
-dOC
-dOC
+wQf
+cgy
+ehP
 dOC
 dOC
 dOC
@@ -142790,7 +143872,7 @@ dOC
 dOC
 dOC
 dOC
-dOC
+ehP
 dOC
 dOC
 dOC
