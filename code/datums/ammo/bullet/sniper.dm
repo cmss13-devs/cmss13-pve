@@ -41,8 +41,8 @@
 	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
 
 /datum/ammo/bullet/sniper/upp_pve
-	name = "high-power sniper bullet"
-	damage = 180
+	name = "high-power sniper bullet" //Rebalancing for hAI usage so their snipers don't instantly fucking kill
+	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/sniper/anti_materiel
