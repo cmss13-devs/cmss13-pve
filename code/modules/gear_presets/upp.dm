@@ -118,7 +118,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/lamp, WEAR_JACKET)
 		if(5)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/light, WEAR_JACKET)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71, WEAR_J_STORE)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard, WEAR_FEET)
 	//waist
