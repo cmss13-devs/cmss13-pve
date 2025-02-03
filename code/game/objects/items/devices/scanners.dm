@@ -199,6 +199,7 @@ FORENSIC SCANNER
 	. = ..()
 	heart_rate_loop = new(src)
 	oxygen_alarm_loop = new(src)
+	overlays += image(icon, src, "+unhooked")
 
 /obj/item/device/healthanalyzer/soul/proc/print_report(mob/living/user)
 	if(!last_scan)
@@ -515,6 +516,8 @@ FORENSIC SCANNER
 			"You attach \the [src] to [connected_to].")
 		icon_state = "Medical_scanner_open"
 		overlays += image(icon, src, "+running")
+		overlays += image(icon, src, "+hooked")
+		overlays -= image(icon, src, "+unhooked")
 		update_beam()
 		perform_scan_and_report()
 
@@ -543,6 +546,8 @@ FORENSIC SCANNER
 
 	icon_state = "Medical_scanner"
 	overlays -= image(icon, src, "+running")
+	overlays -= image(icon, src, "+hooked")
+	overlays += image(icon, src, "+unhooked")
 	update_beam(FALSE)
 
 /obj/item/device/healthanalyzer/soul/dropped(mob/user)
