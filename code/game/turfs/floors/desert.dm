@@ -493,6 +493,7 @@
 	icon_state = "deep"
 	icon_overlay = "_deep"
 	no_overlay = TRUE
+	supports_fishing = TRUE
 
 /turf/open/gm/river/desert/deep/no_slowdown
 	base_river_slowdown = 0
