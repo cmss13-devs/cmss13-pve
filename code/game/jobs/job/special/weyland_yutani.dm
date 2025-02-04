@@ -79,15 +79,15 @@
 
 /datum/job/special/wey_yu/pmc/investigator
 	title = JOB_PMC_INVESTIGATOR
-	gear_preset = /datum/equipment_preset/pmc/pmc_med_investigator
+	gear_preset = /datum/equipment_preset/pmc/pmc_leader
 
 /datum/job/special/wey_yu/pmc/lead_invest
 	title = JOB_PMC_LEAD_INVEST
-	gear_preset = /datum/equipment_preset/pmc/pmc_lead_investigator
+	gear_preset = /datum/equipment_preset/pmc/pmc_leader
 
 /datum/job/special/wey_yu/pmc/detainer
 	title = JOB_PMC_DETAINER
-	gear_preset = /datum/equipment_preset/pmc/pmc_detainer
+	gear_preset = /datum/equipment_preset/pmc/pmc_standard
 
 /datum/job/special/wey_yu/pmc/crewman
 	title = JOB_PMC_CREWMAN
