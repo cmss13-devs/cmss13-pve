@@ -203,8 +203,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack
 	name = "\improper generic MRE pack"
-	//trash = /obj/item/trash/USCMtray
-	trash = null
+	trash = /obj/item/trash/USCMtray
 	w_class = SIZE_SMALL
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1
@@ -313,6 +312,105 @@
 	. = ..()
 	reagents.add_reagent("nutriment", 10)
 	bitesize = 3
+
+//UPP Tray Food
+
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp
+	name = "\improper generic MRE pack"
+	icon = 'icons/obj/items/food.dmi'
+	trash = /obj/item/trash/UPPtray
+	w_class = SIZE_SMALL
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal1
+	name = "\improper UPP Prepared Meal (Chow mein)"
+	desc = "Chow mein with imitation shrimp, two slightly overcooked spring rolls, some type of porridge and a small tofu cube."
+	icon_state = "upp_chowmein"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal1/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal2
+	name = "\improper UPP Prepared Meal (Banush)"
+	desc = "Ukrainian style Banush cornmeal stew, dried apricots, and a couple vienna sausages."
+	icon_state = "upp_banush"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal1/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal3
+	name = "\improper UPP Prepared Meal (Frankfurter)"
+	desc = "A large, juicy frankfurter with mashed potato, crispy potato pancakes and saurkraut."
+	icon_state = "upp_frankfurter"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal3/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal4
+	name = "\improper UPP Prepared Meal (Jiaozi)"
+	desc = "Four boiled dumplings, soy-vinegar dipping sauce, pickled red cucumbers and two rye biscuits."
+	icon_state = "upp_jiaozi"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal4/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal5
+	name = "\improper UPP Prepared Meal (Wursts)"
+	desc = "Two scoops of rice, two Weiner wursts, a tortilla with tomato sauce and a small bowl of Mungbean soup fill this tray."
+	icon_state = "upp_wursts"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal5/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal6
+	name = "\improper UPP Prepared Meal (Luncheon)"
+	desc = "A prepackaged meal for UPP troops with two scoops of slightly dried out rice, a square of some kind of luncheon meat, two carrot sticks, and a 'fruit' bar."
+	icon_state = "upp_luncheon"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal6/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal7
+	name = "\improper UPP Prepared Meal (Shrimp)"
+	desc = "A prepackaged meal for UPP troops that sports a greasy rice patty with bits of fake imitation shrimp and egg flavoring. Smells quite off. On the side there's a slightly soggy spring roll."
+	icon_state = "upp_shrimp"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal8/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal8
+	name = "\improper UPP Prepared Meal (Cuban)"
+	desc = "A prepackaged meal for UPP troops containing Cuban rice with bland-ish eggs pieces, tomato sauce, potato salad, and a dry biscuit."
+	icon_state = "upp_cuban"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal8/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal9
+	name = "\improper UPP Prepared Meal (Meatballs)"
+	desc = "A prepackaged meal for UPP troops containing marinated Königsberger Klopse meatballs, a creamy sauce, some spinach, and a scoop of rice. One of the better options out of the pre-packaged meals and is rarely ever in stock."
+	icon_state = "upp_meatballs"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal9/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 5
 
 /obj/item/storage/box/pizza
 	name = "food delivery box"
