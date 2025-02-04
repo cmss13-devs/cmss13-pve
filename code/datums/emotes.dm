@@ -20,7 +20,7 @@
 	///ie. if someone says *medic and someone's deaf, they'd receive [X] calls for a medic! silently.,  which is not ideal.
 
 	/// Message after any alterations, like pronoun replacement for predefined emotes
-	var/msg =""
+	var/msg = ""
 
 	var/alt_message
 	/// Message with %t at the end to allow adding params to the message, like for mobs doing an emote relatively to something else.
