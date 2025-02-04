@@ -2,7 +2,7 @@
 	name = "\improper default SMG magazine"
 	desc = "A submachinegun magazine."
 	item_state = "generic_mag"
-	default_ammo = /datum/ammo/bullet/smg
+	default_ammo = /datum/ammo/bullet/pistol
 	max_rounds = 30
 
 //-------------------------------------------------------
@@ -180,13 +180,14 @@
 //Type 64 SMG, based on the PP Bizon.
 
 /obj/item/ammo_magazine/smg/bizon
-	name = "\improper Type 64 Helical Magazine (7.62x19mm)"
-	desc = "A 64 round magazine for the Type 64 submachinegun, the standard SMG of the UPP armed forces."
-	caliber = "7.62x19mm"
+	name = "\improper Type 64 Helical Magazine (7.62x25mm)"
+	desc = "A 64 round magazine for the Type 64 submachinegun, an SMG utilized by various paramilitary organizations in the UPP."
+	caliber = "7.62x25mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "type64mag"
 	max_rounds = 64
 	gun_type = /obj/item/weapon/gun/smg/bizon
+	default_ammo = /datum/ammo/bullet/pistol/heavy/upp
 
 //-------------------------------------------------------
 //GENERIC UZI //Based on the uzi submachinegun, of course.

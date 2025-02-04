@@ -51,9 +51,9 @@
 //M4A3 45 //Inspired by the 1911
 
 /obj/item/ammo_magazine/pistol/m1911
-	name = "\improper M1911 magazine (.45)"
+	name = "\improper M1911 magazine (.45 ACP)"
 	default_ammo = /datum/ammo/bullet/pistol/heavy
-	caliber = ".45"
+	caliber = ".45 ACP"
 	icon_state = "m4a345"//rename later
 	max_rounds = 7
 	gun_type = /obj/item/weapon/gun/pistol/m1911
@@ -167,7 +167,7 @@
 
 /obj/item/ammo_magazine/pistol/heavy
 	name = "\improper Desert Eagle magazine (.50)"
-	default_ammo = /datum/ammo/bullet/pistol/deagle
+	default_ammo = /datum/ammo/bullet/pistol/heavy/super
 	caliber = ".50"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "deagle"
@@ -200,7 +200,7 @@
 
 /obj/item/ammo_magazine/pistol/np92
 	name = "\improper NP92 magazine (9x18mm Makarov)"
-	default_ammo = /datum/ammo/bullet/pistol
+	default_ammo = /datum/ammo/bullet/pistol/upp
 	caliber = "9x18mm Makarov"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "np92mag"
@@ -208,27 +208,20 @@
 	gun_type = /obj/item/weapon/gun/pistol/np92
 
 /obj/item/ammo_magazine/pistol/np92/suppressed
-	name = "\improper NPZ92 magazine (9x18mm Makarov)"
-	default_ammo = /datum/ammo/bullet/pistol
-	caliber = "9x18mm Makarov"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	name = "\improper NP92 magazine (9x18mm Makarov)"
 	icon_state = "npz92mag"
-	max_rounds = 12
 
 /obj/item/ammo_magazine/pistol/np92/tranq
 	name = "\improper NPZ92 tranq magazine (9x18mm Makarov)"
 	default_ammo = /datum/ammo/bullet/pistol/tranq
-	caliber = "9x18mm Makarov"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "npz92tranqmag"
-	max_rounds = 12
 
 //-------------------------------------------------------
 //Type 73 pistol. //A TT
 
 /obj/item/ammo_magazine/pistol/t73
 	name = "\improper Type 73 magazine (7.62x25mm Tokarev)"
-	default_ammo = /datum/ammo/bullet/pistol/heavy
+	default_ammo = /datum/ammo/bullet/pistol/heavy/upp
 	caliber = "7.62x25mm Tokarev"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "ttmag"
