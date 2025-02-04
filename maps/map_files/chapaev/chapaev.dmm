@@ -1297,7 +1297,8 @@
 	icon_state = "uppcrate_stackedalt";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
@@ -2132,7 +2133,8 @@
 	icon_state = "uppcrate_stackedalt";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
@@ -2901,7 +2903,8 @@
 	icon_state = "uppcrate_stacked";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
@@ -3495,7 +3498,8 @@
 	icon_state = "uppcrate_stacked";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
@@ -3780,7 +3784,8 @@
 	icon_state = "uppcrate_stackedalt";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -5282,7 +5287,8 @@
 	icon_state = "uppcrate_stackedalt";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -6249,7 +6255,8 @@
 	icon_state = "uppcrate_stacked";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
@@ -6268,7 +6275,8 @@
 	icon_state = "uppcrate_stacked";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
@@ -6359,7 +6367,8 @@
 	icon_state = "uppcrate_stacked";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -6952,7 +6961,8 @@
 	icon_state = "uppcrate_stacked";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
@@ -7499,7 +7509,8 @@
 	icon_state = "uppcrate_stacked";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -8083,7 +8094,8 @@
 	icon_state = "uppcrate_stacked";
 	icon = 'icons/obj/structures/crates.dmi';
 	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates"
+	name = "secured military crates";
+	anchored = 0
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
