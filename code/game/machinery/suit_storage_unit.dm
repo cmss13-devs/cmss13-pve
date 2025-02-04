@@ -21,8 +21,6 @@
 	var/isopen = FALSE
 	var/isUV = FALSE
 
-
-
 /obj/structure/machinery/suit_storage_unit/Initialize()
 	. = ..()
 	if(starting_suit_type)
@@ -322,4 +320,4 @@
 	starting_suit_type = /obj/item/clothing/suit/space/compression/uscm
 	starting_helmet_type = /obj/item/clothing/head/helmet/space/compression/uscm
 	starting_mask_type = /obj/item/clothing/mask/breath
-	starting_tank_type = /obj/item/tank/oxygen
+	starting_tank_type = /obj/item/tank/oxygen/yellow
