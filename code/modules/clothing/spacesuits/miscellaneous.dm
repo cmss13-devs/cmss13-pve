@@ -193,6 +193,10 @@
 	item_state = "compression_red"
 	icon_state = "compression_red"
 
+/obj/item/clothing/suit/space/compression/dark
+	item_state = "compression_dark"
+	icon_state = "compression_dark"
+
 /obj/item/clothing/head/helmet/space/compression/uscm
 	name = "\improper USCM MK.35 compression helmet"
 	desc = "A heavy space helmet, designed to be coupled with the MK.35 compression suit utilized by the United States Colonial Marines and a few other American or UA organizations. Feels like you could hotbox in here."
