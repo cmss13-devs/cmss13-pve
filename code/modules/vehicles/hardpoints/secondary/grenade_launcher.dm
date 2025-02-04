@@ -22,6 +22,13 @@
 		"8" = list(-6, 17)
 	)
 
+	firing_smoke_offset = list(
+		"1" = list(8, 8),
+		"2" = list(-8, 0),
+		"4" = list(12, 12),
+		"8" = list(-12, 25)
+	)
+
 	scatter = 10
 	fire_delay = 3.0 SECONDS
 

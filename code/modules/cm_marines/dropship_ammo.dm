@@ -179,7 +179,7 @@
 				bullet_effect.apply_armoured_damage(directhit_damage,ARMOR_BULLET,BRUTE,null,penetration)
 			else
 				explosion_effect.ex_act(EXPLOSION_THRESHOLD_VLOW)
-		new /obj/effect/particle_effect/expl_particles(impact_tile)
+		new /obj/effect/temp_visual/explosion(impact_tile, 1, LIGHT_COLOR_LAVA, 1, TRUE)
 		if(!soundplaycooldown) //so we don't play the same sound 20 times very fast.
 			playsound(impact_tile, 'sound/effects/gauimpact.ogg',40,1,20)
 			soundplaycooldown = 3
@@ -401,13 +401,6 @@
 	impact.ceiling_debris_check(2)
 	spawn(5)
 		cell_explosion(impact, 200, 44, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), source_mob))
-		var/datum/effect_system/expl_particles/P = new/datum/effect_system/expl_particles()
-		P.set_up(4, 0, impact)
-		P.start()
-		spawn(5)
-			var/datum/effect_system/smoke_spread/S = new/datum/effect_system/smoke_spread()
-			S.set_up(1,0,impact,null)
-			S.start()
 		if(!ammo_count && loc)
 			qdel(src) //deleted after last minirocket is fired and impact the ground.
 
