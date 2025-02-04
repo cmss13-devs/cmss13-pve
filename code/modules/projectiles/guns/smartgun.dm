@@ -11,7 +11,6 @@
 	mouse_pointer = 'icons/effects/mouse_pointer/smartgun_mouse.dmi'
 
 	fire_sound = "gun_smartgun"
-	fire_rattle = "gun_smartgun_rattle"
 	reload_sound = 'sound/weapons/handling/gun_sg_reload.ogg'
 	unload_sound = 'sound/weapons/handling/gun_sg_unload.ogg'
 
