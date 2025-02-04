@@ -630,6 +630,7 @@ W is always an item. stop_warning prevents messaging. user may be null.**/
 	empty(H, get_turf(H))
 
 /obj/item/storage/proc/empty(mob/user, turf/T)
+	var/sucessfully_emptied = FALSE
 	if (!(storage_flags & STORAGE_ALLOW_EMPTY) || !ishuman(user) || !(user.l_hand == src || user.r_hand == src) || user.is_mob_incapacitated())
 		return
 
@@ -651,12 +652,15 @@ W is always an item. stop_warning prevents messaging. user may be null.**/
 			return
 
 	storage_close(user)
-	for (var/obj/item/I in contents)
-		remove_from_storage(I, T)
 	user.visible_message(SPAN_NOTICE("[user] empties \the [src]."),
-		SPAN_NOTICE("You empty \the [src]."))
+	SPAN_NOTICE("You empty \the [src]."))
 	if (use_sound)
 		playsound(loc, use_sound, 25, TRUE, 3)
+	for (var/obj/item/I in contents)
+		remove_from_storage(I, T)
+		sucessfully_emptied = TRUE
+	return sucessfully_emptied
+
 
 /obj/item/storage/verb/shake_verb()
 	set name = "Shake"
