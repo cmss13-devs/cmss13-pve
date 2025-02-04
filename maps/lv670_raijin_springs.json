@@ -1,0 +1,18 @@
+{
+    "map_name": "LV-670 Raijin Springs",
+    "short_name": "Raijin Springs",
+    "map_path": "map_files/LV670_Raijin_Springs",
+    "map_file": "LV670_Raijin_Springs.dmm",
+    "map_item_type": "/obj/item/map/lv670_map",
+    "traits": [{ "Ground": true }],
+    "camouflage": "desert",
+    "environment_traits": { "Fog": true },
+    "announce_text": "A distress signal has been recieved from a Weyland-Yutani facility located on LV-670",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}
