@@ -207,35 +207,24 @@
 	icon_state = "compression_uscm"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bio = CLOTHING_ARMOR_ULTRAHIGH
-	armor_rad = CLOTHING_ARMOR_HARDCORE
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	allowed = list(/obj/item/weapon/gun,/obj/item/weapon/baton,/obj/item/restraint/handcuffs,/obj/item/tank)
 
-
 /obj/item/clothing/head/helmet/space/compression/upp
-	name = "\improper UPPAC CCC5 compression helmet"
-	desc = "A heavy space helmet, designed to be coupled with the CCC5 compression suit utilized by the Union of Progressive Peoples Armed Collective and a few other UPP organizations."
+	name = "\improper UPPAC Sokol-KV2 compression helmet"
+	desc = "A heavy space helmet, designed to be coupled with the Sokol-KV2 compression suit utilized by the Union of Progressive Peoples Armed Collective and a few other UPP organizations."
 	item_state = "compression_upp"
 	icon_state = "compression_upp"
 	helmet_color = "upp"
 
 /obj/item/clothing/suit/space/compression/upp
-	name = "\improper UPPAC CCC5 compression suit"
+	name = "\improper UPPAC Sokol-KV2 compression suit"
 	desc = "A heavy, bulky military-grade space suit utilized by the Union of Progressive Peoples Armed Collective and a few other UPP organizations."
 	item_state = "compression_upp"
 	icon_state = "compression_upp"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bio = CLOTHING_ARMOR_ULTRAHIGH
-	armor_rad = CLOTHING_ARMOR_HARDCORE
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	allowed = list(/obj/item/weapon/gun,/obj/item/weapon/baton,/obj/item/restraint/handcuffs,/obj/item/tank)
 
 // Souto man
