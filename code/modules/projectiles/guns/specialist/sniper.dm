@@ -5,6 +5,8 @@
 //Because this parent type did not exist
 //Note that this means that snipers will have a slowdown of 3, due to the scope
 /obj/item/weapon/gun/rifle/sniper
+	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
+
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
 	wield_delay = WIELD_DELAY_SLOW
 
@@ -28,9 +30,6 @@
 	var/enable_aimed_shot_icon_alt = FALSE
 	var/sniper_lockon_icon_max = "sniper_lockon_intense"
 	var/sniper_beam_icon_max = "laser_beam_intense"
-
-/obj/item/weapon/gun/rifle/sniper/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/sniper_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/sniper/get_examine_text(mob/user)
 	. = ..()
