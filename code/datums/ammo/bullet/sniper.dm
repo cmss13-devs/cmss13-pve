@@ -41,7 +41,7 @@
 	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
 
 /datum/ammo/bullet/sniper/upp_pve
-	name = "high-power sniper bullet" //Rebalancing for hAI usage so their snipers don't instantly fucking kill
+	name = "high-power sniper bullet" //Now used by hAI CLF type 88 users
 	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_4
 

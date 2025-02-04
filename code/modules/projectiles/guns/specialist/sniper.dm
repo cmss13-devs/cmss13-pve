@@ -18,9 +18,11 @@
 	var/obj/effect/ebeam/sniper_beam_type = /obj/effect/ebeam/laser
 	var/sniper_beam_icon = "laser_beam"
 	var/skill_locked = FALSE
-	/// How far out people can tell the direction of the shot
-	var/fire_message_range = 30 //hAI sniper range, approx
-	var/loud = TRUE //If the sniper will generate a message when shot
+
+	/// How far out people can tell the direction of the shot, baseline of the hAI marksman firing range
+	var/fire_message_range = 30
+	///If the sniper will generate a message when shot
+	var/loud = TRUE
 
 	/// Variables for Focus Fire and alternate icons for lockon and laser.
 	var/enable_aimed_shot_icon_alt = FALSE
