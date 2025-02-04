@@ -649,9 +649,9 @@
 	update_overlays()
 
 /turf/open/gm/river/proc/update_overlays()
-	overlays.Cut()
 	if(no_overlay)
 		return
+	overlays.Cut()
 	if(covered)
 		name = covered_name
 		overlays += image("icon"=src.cover_icon,"icon_state"=cover_icon_state,"layer"=CATWALK_LAYER,"dir" = dir)
@@ -766,7 +766,6 @@
 /turf/open/gm/river/beach_water
 	name = "shallow water"
 	supports_fishing = TRUE
-	light_range = 0.9
 	no_overlay = TRUE
 
 /turf/open/gm/river/ocean
@@ -775,7 +774,6 @@
 
 /turf/open/gm/river/ocean/deep_water
 	name = "deep water"
-	light_range = 0.9
 	no_overlay = TRUE
 
 /turf/open/gm/river/ocean/deep_ocean
