@@ -16496,7 +16496,7 @@
 /area/lv624/lazarus/research)
 "vqh" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/red,
 /area/lv624/lazarus/security)
