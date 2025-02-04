@@ -13,7 +13,7 @@
 /area/bmg290/wilderness/beach)
 "aaM" = (
 /obj/structure/largecrate/random/barrel/true_random,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "aaY" = (
 /obj/structure/cargo_container/horizontal/blue/top,
@@ -63,7 +63,7 @@
 /area/bmg290/colony/diner)
 "abU" = (
 /obj/structure/cargo_container/horizontal/blue/top,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "acq" = (
 /obj/structure/barricade/handrail,
@@ -143,7 +143,7 @@
 /obj/structure/cargo_container/wy/mid{
 	layer = 3.1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "aet" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
@@ -396,13 +396,13 @@
 /area/bmg290/keppitz/interlude)
 "akk" = (
 /obj/vehicle/powerloader/ft,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "akl" = (
 /obj/structure/barricade/handrail/sandstone/b{
 	color = "#424a50"
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "akt" = (
 /obj/structure/machinery/door_control/brbutton{
@@ -502,7 +502,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 16
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "amK" = (
 /obj/item/stool{
@@ -594,7 +594,7 @@
 /area/bmg290/keppitz/test)
 "aoG" = (
 /obj/structure/largecrate/random/barrel/red,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "aoY" = (
 /obj/structure/prop/turbine,
@@ -966,8 +966,8 @@
 /turf/open/gm/dirtgrassborder/north,
 /area/bmg290/wilderness/colony_exterior)
 "ayL" = (
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/bmg290/wilderness/relay_exterior)
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bmg290/wilderness/archaeology)
 "ayU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
@@ -1411,7 +1411,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "aKq" = (
 /obj/structure/stairs/perspective{
@@ -2061,7 +2061,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding9"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/keppitz/entry_pub)
 "baE" = (
 /obj/structure/machinery/iv_drip,
@@ -2127,7 +2127,7 @@
 /area/bmg290/colony/complex)
 "bbo" = (
 /obj/structure/cargo_container/seegson/right,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "bbq" = (
 /obj/structure/prop/structure_lattice{
@@ -2268,7 +2268,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "beJ" = (
 /obj/effect/decal/warning_stripes{
@@ -2287,7 +2287,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "beR" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -2587,7 +2587,7 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/smooth,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "bkB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2679,7 +2679,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 9
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "blY" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -3106,7 +3106,7 @@
 	pixel_x = 2;
 	pixel_y = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "byD" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -3252,7 +3252,7 @@
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "bBN" = (
 /turf/closed/wall/rock{
@@ -3301,7 +3301,7 @@
 /area/bmg290/relay/synthetic)
 "bDY" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "bEy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3920,7 +3920,7 @@
 	dir = 4;
 	id = "West Side Blockers"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "bSH" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3953,7 +3953,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "bTS" = (
 /obj/structure/disposalpipe/junction{
@@ -4291,7 +4291,7 @@
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "cbK" = (
 /obj/vehicle/train/cargo/trolley,
@@ -4459,7 +4459,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding8"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "cfq" = (
 /turf/closed/wall/strata_outpost,
@@ -4506,7 +4506,7 @@
 /obj/item/broken_device{
 	desc = "A timeless piece of technology from another era, of spacemen who once plunged into the 12th Bay and beyond."
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/undiscovered)
 "cfV" = (
 /turf/closed/wall/strata_outpost,
@@ -4516,7 +4516,7 @@
 	color = "#5f5b54";
 	icon_state = "p_stair_full"
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "cgm" = (
 /obj/structure/machinery/light,
@@ -4528,7 +4528,7 @@
 /area/bmg290/caverns/filtration)
 "cgy" = (
 /obj/structure/surface/rack,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "cgF" = (
 /obj/structure/platform/mineral/sandstone/runed{
@@ -4691,7 +4691,7 @@
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "ckM" = (
 /obj/effect/decal/warning_stripes{
@@ -4784,7 +4784,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/acquisitions)
 "clS" = (
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "cmr" = (
 /turf/open/floor/prison/blue/east,
@@ -4901,7 +4901,7 @@
 	icon_state = "SE-out";
 	pixel_x = 2
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "coY" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4919,7 +4919,7 @@
 /area/bmg290/wilderness/archaeology)
 "cpn" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "cpx" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
@@ -5067,7 +5067,7 @@
 	dir = 1;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "ctg" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -5099,7 +5099,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "ctH" = (
 /turf/open/auto_turf/strata_grass/layer1,
@@ -5319,7 +5319,7 @@
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "cAv" = (
 /obj/structure/machinery/computer/telecomms/monitor,
@@ -5423,7 +5423,7 @@
 /area/bmg290/relay/cargo)
 "cCt" = (
 /obj/structure/cargo_container/horizontal/blue/bottom,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "cCy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5595,7 +5595,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "cFF" = (
 /obj/structure/machinery/fuelcell_recycler,
@@ -6067,7 +6067,7 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "cRO" = (
 /obj/structure/blocker/invisible_wall,
@@ -6304,7 +6304,7 @@
 /area/bmg290/relay/underground_shelter)
 "cXY" = (
 /obj/structure/prop/dam/crane/cargo,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "cYK" = (
 /obj/structure/largecrate{
@@ -6576,7 +6576,7 @@
 	icon_state = "road_edge_decal3";
 	pixel_y = 16
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "dfO" = (
 /obj/structure/sink{
@@ -6758,6 +6758,14 @@
 	},
 /turf/open/auto_turf/shale/layer0_plate,
 /area/bmg290/caverns/site_caves)
+"dkr" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 6
+	},
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/wilderness/farmland)
 "dkv" = (
 /turf/open/floor/plating,
 /area/bmg290/caverns/terranium)
@@ -6979,7 +6987,7 @@
 	pixel_y = 19;
 	pixel_x = -9
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "dpy" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -7016,7 +7024,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 2
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "dqi" = (
 /turf/open/floor/almayer/plating,
@@ -7873,7 +7881,7 @@
 	name = "Heavy Shutter";
 	id = "otogi_lockdown"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "dJZ" = (
 /obj/structure/flora/pottedplant{
@@ -8087,7 +8095,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding4"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "dOO" = (
 /obj/structure/ladder{
@@ -8113,7 +8121,7 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "colonyboundaries"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "dPD" = (
 /obj/structure/platform/kutjevo,
@@ -8215,7 +8223,7 @@
 	pixel_y = 24
 	},
 /obj/structure/platform/kutjevo,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "dRk" = (
 /obj/structure/surface/rack,
@@ -8334,7 +8342,7 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "dUA" = (
 /obj/structure/platform/kutjevo/rock{
@@ -8874,7 +8882,7 @@
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "egU" = (
 /obj/structure/platform/kutjevo/rock{
@@ -9600,7 +9608,7 @@
 	color = "#424a50";
 	dir = 1
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "eyP" = (
 /obj/structure/fence,
@@ -9942,7 +9950,7 @@
 /area/bmg290/wilderness/farmland)
 "eDx" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "eDy" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics,
@@ -10166,7 +10174,7 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/wilderness/colony_exterior)
 "eJA" = (
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/undiscovered)
 "eJD" = (
 /obj/structure/machinery/door_control/brbutton/alt{
@@ -10228,7 +10236,7 @@
 	pixel_x = 1
 	},
 /obj/item/tool/warning_cone,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "eMg" = (
 /obj/structure/girder/displaced,
@@ -10306,7 +10314,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "eNF" = (
 /obj/structure/machinery/floodlight{
@@ -10534,7 +10542,7 @@
 	layer = 3.12
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "eTQ" = (
 /obj/structure/blocker/fog,
@@ -10572,7 +10580,7 @@
 	dir = 4;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "eVv" = (
 /obj/structure/machinery/colony_floodlight,
@@ -10610,7 +10618,7 @@
 /area/bmg290/site/discovered)
 "eWx" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "eXa" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -10662,7 +10670,7 @@
 /area/bmg290/colony/complex)
 "eYc" = (
 /obj/structure/largecrate/random/secure,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "eYj" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
@@ -10742,7 +10750,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "eZP" = (
 /obj/structure/largecrate/random/secure,
@@ -11003,7 +11011,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "fga" = (
 /obj/structure/machinery/landinglight/ds1{
@@ -11093,7 +11101,7 @@
 /obj/structure/showcase{
 	icon_state = "broadcaster_send"
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/telecommunication)
 "fic" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11125,7 +11133,7 @@
 	pixel_y = -8
 	},
 /obj/structure/largecrate,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "fiK" = (
 /obj/structure/window/framed/strata/hull,
@@ -11147,7 +11155,7 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "fjd" = (
 /turf/open/asphalt/cement/cement14,
@@ -11272,7 +11280,7 @@
 /area/bmg290/relay/engineering)
 "flS" = (
 /obj/item/device/flashlight/lamp/tripod,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/site/discovered)
 "flT" = (
 /obj/structure/bed/chair/office/light,
@@ -11382,7 +11390,7 @@
 "fpE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/horizontal/blue/middle,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "fpK" = (
 /obj/structure/platform/kutjevo/rock{
@@ -11438,7 +11446,7 @@
 /area/bmg290/wilderness_roof/checkpoint)
 "frH" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "frJ" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -12112,7 +12120,7 @@
 /turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "fFO" = (
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/wilderness/site)
 "fGv" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony/autoname{
@@ -12342,7 +12350,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding4"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "fMy" = (
 /obj/structure/machinery/light{
@@ -12384,7 +12392,7 @@
 /area/bmg290/relay/engineering)
 "fNm" = (
 /obj/structure/machinery/light/double,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/wilderness/site)
 "fNq" = (
 /obj/effect/decal/cleanable/dirt,
@@ -12767,7 +12775,7 @@
 	pixel_x = 16;
 	pixel_y = -8
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "fVx" = (
 /obj/structure/surface/table/almayer,
@@ -12978,7 +12986,7 @@
 /area/bmg290/colony/complex)
 "fZs" = (
 /obj/structure/cargo_container/horizontal/blue/middle,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "fZx" = (
 /obj/structure/bed/chair{
@@ -13003,6 +13011,14 @@
 "gab" = (
 /turf/open/asphalt/cement/cement9,
 /area/bmg290/wilderness/colony_exterior)
+"gan" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 10
+	},
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/wilderness/farmland)
 "gar" = (
 /obj/structure/largecrate,
 /obj/structure/machinery/light,
@@ -13721,7 +13737,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "gtp" = (
 /obj/structure/flora/grass/tallgrass/desert{
@@ -14451,7 +14467,7 @@
 	dir = 1;
 	pixel_y = 9
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "gMC" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -14550,7 +14566,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding8"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "gPJ" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -14621,7 +14637,7 @@
 /turf/open/floor/asteroidplating,
 /area/bmg290/colony/motorpool)
 "gRX" = (
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "gSh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14679,7 +14695,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "gUp" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -14698,7 +14714,7 @@
 	id = "SigmaBioAtmos";
 	name = "Access Shutter"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "gUA" = (
 /obj/structure/flora/jungle/vines/light_1,
@@ -14806,7 +14822,7 @@
 	icon_state = "p_stair_full";
 	dir = 6
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "gYa" = (
 /obj/structure/surface/table/almayer,
@@ -14864,7 +14880,7 @@
 	pixel_x = 6;
 	pixel_y = -1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "gZL" = (
 /obj/structure/largecrate/random/case/small{
@@ -15063,7 +15079,7 @@
 	pixel_x = 2;
 	pixel_y = 9
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "hfw" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -15107,7 +15123,7 @@
 	icon_state = "p_stair_full";
 	dir = 10
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "hgY" = (
 /obj/structure/platform/kutjevo{
@@ -15931,7 +15947,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/underground_shelter)
 "hyz" = (
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "hyA" = (
 /obj/effect/decal/warning_stripes{
@@ -16001,7 +16017,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "hAR" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -16256,7 +16272,7 @@
 /area/bmg290/relay/hallway)
 "hGe" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "hGg" = (
 /obj/effect/decal/warning_stripes{
@@ -16386,7 +16402,7 @@
 	dir = 1;
 	layer = 2.9
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "hJD" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -17074,7 +17090,7 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "hXp" = (
 /obj/structure/window/framed/chigusa,
@@ -17201,7 +17217,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "iaQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -17241,7 +17257,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "icd" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -17331,6 +17347,10 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bmg290/keppitz/interlude)
+"idy" = (
+/obj/structure/machinery/colony_floodlight,
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/wilderness/outskirts)
 "idI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/spray/cleaner/alt{
@@ -17415,7 +17435,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "ieX" = (
 /obj/structure/cargo_container/uscm/right,
@@ -17546,6 +17566,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/bmg290/wilderness/colony_exterior)
+"iit" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 5
+	},
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/wilderness/farmland)
 "iiz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -17612,7 +17640,7 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "ijT" = (
 /obj/structure/prop/dam/truck/cargo,
@@ -17705,7 +17733,7 @@
 	icon_state = "p_stair_full";
 	dir = 8
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "imR" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -17902,7 +17930,7 @@
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "isS" = (
 /obj/effect/decal/cleanable/dirt,
@@ -17944,7 +17972,7 @@
 /turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "iuo" = (
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "iuu" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -18595,7 +18623,7 @@
 /area/bmg290/relay/synthetic)
 "iJn" = (
 /obj/structure/cargo_container/seegson/mid,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "iJo" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -18835,7 +18863,7 @@
 	layer = 3.3;
 	pixel_x = -1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "iOE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19230,7 +19258,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "iXT" = (
 /obj/structure/fence,
@@ -19359,7 +19387,7 @@
 	pixel_y = -12
 	},
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "jcs" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -19576,7 +19604,7 @@
 	dir = 8;
 	id = "East Side Blockers"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "jgO" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -19641,7 +19669,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "jid" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19884,7 +19912,7 @@
 /turf/open/floor/bcircuit,
 /area/bmg290/keppitz/command)
 "joc" = (
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/wilderness/site)
 "jof" = (
 /obj/effect/decal/siding{
@@ -19930,7 +19958,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding4"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "jpD" = (
 /turf/closed/wall/r_wall/elevator{
@@ -19941,7 +19969,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "jqe" = (
 /turf/open/asphalt/cement_sunbleached_darkened,
@@ -20152,13 +20180,13 @@
 	pixel_x = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "juZ" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 10
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "jvd" = (
 /obj/effect/decal/cleanable/dirt,
@@ -20285,7 +20313,7 @@
 	icon_state = "p_stair_full";
 	dir = 1
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "jyU" = (
 /obj/effect/decal/siding{
@@ -20403,7 +20431,7 @@
 	icon_state = "stop_decal5";
 	pixel_x = -2
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "jAM" = (
 /turf/closed/wall/rock{
@@ -20510,7 +20538,7 @@
 /area/bmg290/colony/diner)
 "jDb" = (
 /obj/effect/vehicle_spawner/van/decrepit,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/keppitz/entry_pub)
 "jDq" = (
 /obj/structure/stairs/perspective{
@@ -20664,7 +20692,7 @@
 "jGr" = (
 /obj/structure/bed/chair/office/light,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "jGv" = (
 /obj/structure/phone_base/colony_net{
@@ -20888,7 +20916,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "jMb" = (
 /obj/structure/plasticflaps/mining,
@@ -21052,7 +21080,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding4"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/keppitz/entry_pub)
 "jQa" = (
 /obj/structure/prop/almayer/whiteboard{
@@ -21149,7 +21177,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "jTw" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
@@ -21181,7 +21209,7 @@
 	icon_state = "N"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "jUf" = (
 /obj/structure/machinery/door_control/brbutton{
@@ -21231,7 +21259,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding4"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "jVv" = (
 /obj/structure/window/framed/strata/reinforced,
@@ -21974,11 +22002,11 @@
 	pixel_x = 0;
 	pixel_y = -10
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "kph" = (
 /obj/structure/largecrate/random,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "kpp" = (
 /turf/open/floor/prison/blue/west,
@@ -22090,7 +22118,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding8"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "krX" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -22384,11 +22412,11 @@
 "kwr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/cyan,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "kwB" = (
 /obj/structure/largecrate,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "kwH" = (
 /obj/structure/prop/dam/truck/mining{
@@ -22422,11 +22450,11 @@
 /area/bmg290/wilderness/farmland)
 "kyp" = (
 /obj/item/storage/fancy/blackgoo,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/undiscovered)
 "kys" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/cyan,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "kyz" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -22676,6 +22704,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/checkpoint)
+"kHX" = (
+/obj/item/lightstick/red/variant/planted,
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/caverns/cave_east)
 "kIn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/photocopier,
@@ -22802,7 +22834,7 @@
 /area/bmg290/wilderness_roof/farm_house)
 "kLk" = (
 /obj/structure/machinery/light/double/blue,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "kLw" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -23133,7 +23165,7 @@
 "kUM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "kUP" = (
 /obj/structure/sign/safety/security,
@@ -23249,7 +23281,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/bmg290/wilderness/colony_exterior)
 "kXP" = (
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "kXQ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -23298,7 +23330,7 @@
 	pixel_x = -2;
 	pixel_y = -4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "kZc" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
@@ -23416,10 +23448,10 @@
 	icon_state = "road_edge_decal3";
 	pixel_y = 16
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "lbr" = (
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/site/discovered)
 "lbs" = (
 /obj/structure/bed/sofa/south{
@@ -23492,7 +23524,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "ldv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -23794,7 +23826,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "llc" = (
 /obj/structure/desertdam/decals/road_stop,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "llr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -24076,7 +24108,7 @@
 	pixel_x = 2;
 	pixel_y = -4
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "lqH" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -24110,7 +24142,7 @@
 /area/bmg290/wilderness_roof/farm_house)
 "lrk" = (
 /obj/structure/prop/rock/black_ground,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/wilderness/site)
 "lrs" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -24122,7 +24154,7 @@
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "lrD" = (
 /obj/structure/machinery/door_control/brbutton/alt{
@@ -24427,7 +24459,7 @@
 	icon_state = "door_warning";
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "lyG" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -24579,7 +24611,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "lDt" = (
 /obj/structure/platform{
@@ -24598,7 +24630,7 @@
 "lDL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/case/double,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "lDY" = (
 /obj/structure/roof/cargocrane_tracks/cross{
@@ -24853,7 +24885,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "lJU" = (
 /turf/closed/wall/strata_ice/jungle,
@@ -25245,7 +25277,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/pipes/standard/manifold/hidden/green,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "lRU" = (
 /obj/structure/machinery/gibber,
@@ -25699,7 +25731,7 @@
 	dir = 4;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "mft" = (
 /obj/vehicle/train/cargo/trolley,
@@ -25823,7 +25855,7 @@
 	name = "tractor"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "mhQ" = (
 /obj/structure/bed/chair/comfy/beige{
@@ -26373,7 +26405,7 @@
 "mtb" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/prop/server_equipment/laptop,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "mtg" = (
 /obj/effect/decal/warning_stripes{
@@ -26669,7 +26701,7 @@
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "mDb" = (
 /obj/structure/barricade/handrail/kutjevo{
@@ -26836,7 +26868,7 @@
 /area/bmg290/caverns/cave_west)
 "mHN" = (
 /obj/structure/ore_box,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "mHT" = (
 /turf/open/floor/prison/darkyellow2/southwest,
@@ -27031,7 +27063,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "mPX" = (
 /obj/structure/largecrate/random/case,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "mQv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -27269,7 +27301,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 10
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "mUZ" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -27448,7 +27480,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "naG" = (
 /obj/structure/surface/table/almayer,
@@ -27699,7 +27731,7 @@
 	pixel_y = 16
 	},
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "ngf" = (
 /obj/structure/platform_decoration{
@@ -28048,7 +28080,6 @@
 	name = "Access Shutter"
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/floor/asteroid_dark,
 /area/bmg290/wilderness/road)
 "nmw" = (
 /obj/structure/machinery/power/apc/power/south,
@@ -28185,7 +28216,7 @@
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/site/discovered)
 "nqT" = (
 /obj/structure/reagent_dispensers/fueltank/gas/methane,
@@ -28244,7 +28275,7 @@
 	dir = 4;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "nrR" = (
 /obj/effect/decal/cleanable/dirt{
@@ -28433,7 +28464,7 @@
 "nwz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "nwB" = (
 /obj/effect/decal/siding/wood_siding,
@@ -28514,7 +28545,7 @@
 	dir = 1
 	},
 /obj/item/device/flashlight/lamp/tripod,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "nzF" = (
 /obj/effect/decal/cleanable/dirt{
@@ -28961,7 +28992,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding4"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "nLx" = (
 /obj/item/device/flashlight/lamp/tripod,
@@ -29151,7 +29182,7 @@
 /obj/structure/desertdam/decals/road_stop{
 	icon_state = "stop_decal4"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "nPy" = (
 /obj/effect/decal/siding{
@@ -29171,7 +29202,7 @@
 	icon_state = "p_stair_full";
 	dir = 9
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "nQb" = (
 /obj/structure/machinery/door_control/brbutton{
@@ -29192,7 +29223,7 @@
 /area/bmg290/colony/shed)
 "nQf" = (
 /obj/item/device/flashlight/lamp/tripod,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "nQB" = (
 /turf/open/floor/prison/cell_stripe/north,
@@ -29275,7 +29306,7 @@
 	pixel_x = -1;
 	pixel_y = 2
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "nSz" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -29378,6 +29409,14 @@
 /obj/structure/largecrate,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/hangar)
+"nVt" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 8
+	},
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/wilderness/farmland)
 "nVA" = (
 /obj/structure/filtration/machine_64x96{
 	icon_state = "filtration_machine_B_1"
@@ -29477,7 +29516,7 @@
 	color = "#424a50";
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/site/discovered)
 "nXy" = (
 /turf/open/gm/coast/beachcorner/south_east,
@@ -29505,7 +29544,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "nXN" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -29871,7 +29910,7 @@
 	icon_state = "NE-out";
 	pixel_y = 1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "ofx" = (
 /obj/structure/machinery/light,
@@ -29941,7 +29980,7 @@
 	pixel_x = 16;
 	pixel_y = -16
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "ogP" = (
 /obj/structure/showcase{
@@ -30078,7 +30117,7 @@
 /area/bmg290/colony/logistics)
 "okE" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "okT" = (
 /obj/effect/decal/strata_decals/grime/grime3{
@@ -30158,7 +30197,7 @@
 	pixel_y = 6;
 	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/site/discovered)
 "oob" = (
 /turf/closed/wall/r_wall/chigusa,
@@ -30211,7 +30250,7 @@
 	icon_state = "p_stair_full";
 	dir = 1
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/wilderness/site)
 "opZ" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -30423,14 +30462,14 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/interlude)
 "otM" = (
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "otQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "oub" = (
 /obj/effect/decal/cleanable/dirt,
@@ -30475,14 +30514,14 @@
 	pixel_x = 2;
 	pixel_y = -4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "ouy" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	layer = 3.3
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "ove" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -30512,7 +30551,7 @@
 /area/bmg290/colony/bar)
 "ovF" = (
 /obj/item/stack/sheet/metal/small_stack,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/relay_exterior)
 "ovP" = (
 /obj/structure/flora/jungle/vines,
@@ -30559,7 +30598,7 @@
 /area/bmg290/wilderness/road)
 "owR" = (
 /obj/structure/cargo_container/horizontal/blue/bottom,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "oxn" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -31074,7 +31113,7 @@
 	pixel_x = 0;
 	pixel_y = -10
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "oIe" = (
 /obj/effect/decal/warning_stripes{
@@ -31082,7 +31121,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "oIh" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
@@ -31309,7 +31348,7 @@
 /obj/item/tool/warning_cone{
 	pixel_x = -12
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "oNW" = (
 /obj/structure/prop/rock/brown,
@@ -31358,7 +31397,7 @@
 	pixel_y = -8
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "oOP" = (
 /obj/structure/machinery/door_control/brbutton{
@@ -31413,7 +31452,7 @@
 	icon_state = "S";
 	layer = 3.3
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "oQh" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_east,
@@ -31560,7 +31599,7 @@
 /turf/open/floor/plating,
 /area/bmg290/wilderness_roof/storage_house)
 "oUR" = (
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/keppitz/entry_pub)
 "oVj" = (
 /turf/open/floor/asteroidplating,
@@ -31880,7 +31919,7 @@
 "paV" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "pbx" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -32160,7 +32199,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "pij" = (
 /obj/effect/decal/siding/wood_siding,
@@ -32185,7 +32224,7 @@
 /area/bmg290/wilderness/beach)
 "piB" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "piJ" = (
 /obj/structure/surface/table/almayer,
@@ -32194,7 +32233,7 @@
 /area/bmg290/wilderness_roof/checkpoint)
 "piU" = (
 /obj/structure/inflatable,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "pjg" = (
 /obj/structure/platform/kutjevo/rock{
@@ -32445,11 +32484,9 @@
 /turf/open/gm/grass,
 /area/bmg290/wilderness/colony_exterior)
 "ppD" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/bmg290/relay/telecommunication)
+/obj/item/lightstick/red/variant/planted,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/outskirts)
 "ppK" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/bmg290/colony/security)
@@ -32595,7 +32632,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "puH" = (
 /obj/structure/reagent_dispensers/watertank,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/site/discovered)
 "pvn" = (
 /obj/structure/largecrate/random/case/double,
@@ -32611,7 +32648,7 @@
 	name = "Emergency Lockdown";
 	unacidable = 1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "pvF" = (
 /obj/structure/surface/table/reinforced/black,
@@ -32720,7 +32757,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "pyg" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -32842,7 +32879,7 @@
 	name = "Emergency Lockdown";
 	unacidable = 1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "pAh" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -32954,7 +32991,7 @@
 	dir = 4
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "pBK" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -33120,7 +33157,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding8"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "pDQ" = (
 /obj/structure/machinery/landinglight/ds1/spoke,
@@ -33159,7 +33196,7 @@
 	dir = 8
 	},
 /obj/structure/largecrate/random/secure,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "pFH" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
@@ -33192,7 +33229,7 @@
 	color = "#424a50";
 	dir = 4
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "pGM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -33290,7 +33327,6 @@
 	dir = 1;
 	color = "#5f5b54"
 	},
-/turf/open/floor/cult_engineer,
 /area/bmg290/site/discovered)
 "pJV" = (
 /obj/structure/machinery/computer/cameras/wooden_tv{
@@ -33496,11 +33532,11 @@
 	layer = 3.5;
 	pixel_y = -23
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "pMP" = (
 /obj/structure/inflatable/door,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/space/basic,
 /area/bmg290/site/discovered)
 "pMX" = (
 /obj/effect/decal/siding{
@@ -33575,7 +33611,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "pPb" = (
 /turf/closed/wall/rock{
@@ -33606,7 +33642,7 @@
 /area/bmg290/colony/bar)
 "pPP" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "pPS" = (
 /obj/structure/platform/mineral/sandstone/runed{
@@ -33665,7 +33701,7 @@
 	pixel_y = -5;
 	layer = 3.1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "pRC" = (
 /obj/structure/platform/kutjevo{
@@ -33713,7 +33749,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "pSA" = (
 /obj/structure/stairs/perspective{
@@ -33981,7 +34017,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "pYS" = (
 /obj/structure/stairs/perspective{
@@ -34096,7 +34132,7 @@
 /obj/structure/machinery/sentry_holder/wy{
 	pixel_y = 24
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "qbG" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -34128,7 +34164,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "qcp" = (
 /obj/structure/cable/heavyduty{
@@ -34590,7 +34626,7 @@
 	icon_state = "stop_decal5";
 	pixel_x = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "qol" = (
 /obj/structure/bookcase/manuals/medical{
@@ -34936,7 +34972,7 @@
 	color = "#424a50";
 	dir = 8
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "quu" = (
 /obj/structure/platform_decoration{
@@ -35507,7 +35543,7 @@
 /area/bmg290/wilderness/beach)
 "qIW" = (
 /obj/structure/platform/kutjevo,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "qJc" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2,
@@ -35517,7 +35553,7 @@
 	icon_state = "N"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "qJq" = (
 /obj/item/stool{
@@ -35672,7 +35708,7 @@
 	icon_state = "S";
 	layer = 3.3
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "qPh" = (
 /obj/structure/surface/table/almayer,
@@ -35827,7 +35863,7 @@
 /obj/structure/cargo_container/wy/right{
 	layer = 3.1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "qUI" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -35909,7 +35945,7 @@
 	icon_state = "p_stair_full";
 	dir = 5
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "qWo" = (
 /obj/structure/machinery/computer/med_data,
@@ -36048,7 +36084,7 @@
 /area/bmg290/caverns/site_caves)
 "rbu" = (
 /obj/structure/surface/table/almayer,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "rbw" = (
 /obj/structure/prop/rock,
@@ -36142,7 +36178,7 @@
 /area/bmg290/wilderness/farmland)
 "rdO" = (
 /obj/structure/cargo_container/horizontal/blue/top,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "rew" = (
 /obj/structure/platform/kutjevo{
@@ -36494,7 +36530,7 @@
 	pixel_x = -9;
 	pixel_y = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "rmN" = (
 /obj/structure/flora/jungle/vines/light_1,
@@ -36595,7 +36631,7 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "roe" = (
 /turf/open/gm/coast/beachcorner/south_east,
@@ -36725,7 +36761,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/horizontal/blue/top,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "rrj" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -36805,7 +36841,7 @@
 	icon_state = "road_edge_decal3";
 	pixel_y = -12
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "rud" = (
 /obj/structure/machinery/light/small{
@@ -36889,7 +36925,7 @@
 /area/bmg290/wilderness/road)
 "rvl" = (
 /obj/item/device/flashlight/lamp/tripod,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "rvz" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_east,
@@ -37099,7 +37135,7 @@
 "ryK" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "ryQ" = (
 /obj/effect/decal/warning_stripes{
@@ -37268,7 +37304,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "rDn" = (
 /obj/effect/decal/warning_stripes{
@@ -37501,6 +37537,10 @@
 	},
 /turf/open/floor/interior/wood/alt,
 /area/bmg290/wilderness/beach)
+"rLi" = (
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/wilderness/farmland)
 "rLA" = (
 /obj/structure/platform/kutjevo/smooth{
 	climb_delay = 1;
@@ -37569,7 +37609,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "rOE" = (
 /obj/structure/barricade/handrail{
@@ -37932,7 +37972,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "rYc" = (
 /obj/structure/urinal{
@@ -37948,7 +37988,7 @@
 /area/bmg290/wilderness_roof/storage_house)
 "rYe" = (
 /obj/structure/cargo_container/wy/left,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "rYi" = (
 /obj/structure/barricade/handrail/kutjevo{
@@ -38408,7 +38448,7 @@
 /area/bmg290/colony/logistics_hub)
 "sgx" = (
 /obj/structure/inflatable/door,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "shr" = (
 /turf/open/floor/prison,
@@ -38494,7 +38534,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "sjO" = (
 /turf/open/floor/prison/cell_stripe/west,
@@ -38604,7 +38644,7 @@
 /area/bmg290/colony/complex)
 "slV" = (
 /obj/structure/machinery/power/apc/power/east,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "slZ" = (
 /obj/structure/platform{
@@ -38629,7 +38669,7 @@
 	color = "#424a50"
 	},
 /obj/item/device/flashlight/lamp/tripod,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "smM" = (
 /turf/closed/wall/rock{
@@ -38676,7 +38716,7 @@
 /area/bmg290/site/discovered)
 "snB" = (
 /obj/structure/prop/rock/black_ground,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/undiscovered)
 "snE" = (
 /obj/item/stool{
@@ -38715,7 +38755,7 @@
 	pixel_x = -1;
 	pixel_y = -9
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "spb" = (
 /obj/structure/disposalpipe/segment{
@@ -38876,7 +38916,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "ssa" = (
 /obj/structure/fence,
@@ -38891,6 +38931,9 @@
 /obj/structure/largecrate,
 /turf/open/asphalt,
 /area/bmg290/wilderness/road)
+"sss" = (
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bmg290/wilderness/outskirts)
 "ssw" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -38964,7 +39007,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 2
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "svs" = (
 /obj/effect/decal/siding{
@@ -39037,7 +39080,7 @@
 	pixel_x = -4;
 	pixel_y = 11
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "sws" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -39127,7 +39170,7 @@
 	pixel_y = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "sxU" = (
 /obj/item/device/flashlight/lamp/tripod,
@@ -39203,7 +39246,7 @@
 	pixel_y = -12
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "szH" = (
 /obj/effect/decal/warning_stripes{
@@ -39282,7 +39325,6 @@
 /area/bmg290/wilderness/colony_exterior)
 "sBg" = (
 /obj/structure/inflatable,
-/turf/open/floor/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "sBj" = (
 /obj/structure/largecrate/random/barrel/true_random{
@@ -39333,7 +39375,7 @@
 	icon_state = "p_stair_full";
 	dir = 4
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "sDh" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -39433,7 +39475,6 @@
 	dir = 1;
 	color = "#5f5b54"
 	},
-/turf/open/floor/cult_engineer,
 /area/bmg290/site/discovered)
 "sGh" = (
 /turf/open/auto_turf/shale/layer0_plate,
@@ -39631,7 +39672,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "sJJ" = (
 /turf/open/floor/kutjevo/tan/grey_edge/north,
@@ -39699,6 +39740,9 @@
 /obj/structure/machinery/light,
 /turf/open/floor/prison,
 /area/bmg290/wilderness_roof/beach_house)
+"sKC" = (
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bmg290/wilderness/farmland)
 "sKD" = (
 /obj/item/paper_bin,
 /obj/item/tool/pen,
@@ -40098,7 +40142,7 @@
 	icon_state = "stop_decal2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "sVQ" = (
 /obj/item/toy/beach_ball/holoball,
@@ -40225,7 +40269,7 @@
 	dir = 8;
 	id = "East Side Blockers"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "sYS" = (
 /obj/effect/decal/warning_stripes{
@@ -40371,7 +40415,7 @@
 	pixel_x = 7;
 	pixel_y = 20
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "tbz" = (
 /turf/closed/wall/strata_ice/jungle,
@@ -40410,7 +40454,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "tcV" = (
 /obj/structure/cable/heavyduty{
@@ -40641,7 +40685,7 @@
 /area/bmg290/wilderness_roof/storage_house)
 "tlQ" = (
 /obj/structure/inflatable/door,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "tlV" = (
 /obj/structure/sign/poster/music,
@@ -40800,7 +40844,7 @@
 	icon_state = "road_edge_decal3";
 	pixel_y = -12
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "trV" = (
 /obj/structure/machinery/door_control/brbutton/alt{
@@ -41151,7 +41195,7 @@
 /area/bmg290/colony/complex)
 "tBe" = (
 /obj/effect/decal/siding,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/keppitz/entry_pub)
 "tBf" = (
 /obj/structure/extinguisher_cabinet{
@@ -41551,7 +41595,7 @@
 /area/bmg290/wilderness/beach)
 "tMN" = (
 /obj/structure/prop/rock/black_ground,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "tMT" = (
 /turf/open/floor/prison/floor_plate,
@@ -41612,7 +41656,7 @@
 	dir = 8;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "tPo" = (
 /obj/effect/decal/cleanable/dirt,
@@ -41841,7 +41885,7 @@
 "tVn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/case,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "tVv" = (
 /obj/structure/largecrate,
@@ -41940,7 +41984,7 @@
 /area/bmg290/wilderness/farmland)
 "tYm" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "tYo" = (
 /obj/structure/prop/almayer/computers/sensor_computer1{
@@ -42284,7 +42328,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding5"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/keppitz/entry_pub)
 "ugd" = (
 /obj/structure/platform/kutjevo/rock{
@@ -42629,7 +42673,7 @@
 /area/bmg290/colony/engineering)
 "upL" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "upQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -42845,7 +42889,7 @@
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "uxL" = (
 /obj/structure/flora/bush/desert,
@@ -42871,7 +42915,7 @@
 	pixel_x = 9;
 	pixel_y = -6
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "uyD" = (
 /turf/closed/wall/strata_outpost/reinforced,
@@ -42986,7 +43030,7 @@
 	pixel_y = 24
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/relay_exterior)
 "uCI" = (
 /obj/structure/platform/kutjevo/rock{
@@ -43281,7 +43325,7 @@
 	pixel_y = 20;
 	pixel_x = 1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "uKd" = (
 /obj/item/lightstick/red/spoke/planted{
@@ -43475,7 +43519,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "uQo" = (
 /obj/structure/prop/structure_lattice{
@@ -43505,7 +43549,7 @@
 	dir = 4
 	},
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "uRg" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
@@ -43728,7 +43772,7 @@
 /area/bmg290/wilderness/beach)
 "uWO" = (
 /obj/structure/cargo_container/horizontal/blue/middle,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "uXd" = (
 /turf/open/floor/prison/floor_plate,
@@ -44538,7 +44582,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "vqr" = (
 /obj/structure/machinery/light/double{
@@ -44775,7 +44819,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "vwo" = (
 /obj/structure/barricade/handrail{
@@ -44993,7 +45037,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics_hub)
 "vCB" = (
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "vCO" = (
 /obj/structure/surface/table/almayer,
@@ -45194,7 +45238,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding8"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/keppitz/entry_pub)
 "vHC" = (
 /obj/structure/kitchenspike,
@@ -45248,7 +45292,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "vJs" = (
 /obj/structure/cargo_container/grant/rightmid,
@@ -45395,7 +45439,7 @@
 	name = "Heavy Shutter";
 	id = "otogi_lockdown"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "vME" = (
 /obj/structure/prop/almayer/computers/sensor_computer3,
@@ -45661,7 +45705,7 @@
 /area/bmg290/colony/logistics_hub)
 "vTa" = (
 /obj/structure/largecrate/supply,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "vTi" = (
 /obj/structure/largecrate/random/case/small{
@@ -45722,7 +45766,7 @@
 	pixel_x = -9
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "vUq" = (
 /turf/open/floor/prison/floor_plate,
@@ -46057,7 +46101,7 @@
 "waA" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "waG" = (
 /obj/structure/machinery/door/poddoor/almayer/blended/white_aicore{
@@ -46214,7 +46258,7 @@
 /area/bmg290/relay/cargo)
 "wea" = (
 /obj/structure/largecrate/supply/generator,
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "wes" = (
 /obj/structure/machinery/colony_floodlight,
@@ -46299,6 +46343,13 @@
 	color = "#999999";
 	layer = 3.02
 	},
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/wilderness/farmland)
+"wgn" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00"
+	},
+/obj/item/device/flashlight/lamp/tripod,
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/farmland)
 "wgs" = (
@@ -46554,7 +46605,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "wlF" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -46587,7 +46638,7 @@
 	pixel_x = 4;
 	pixel_y = -8
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "wmd" = (
 /obj/structure/bed/chair/office/light{
@@ -46600,7 +46651,7 @@
 	color = "#424a50";
 	dir = 8
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "wmr" = (
 /turf/closed/wall/rock{
@@ -46640,7 +46691,7 @@
 	color = "#424a50";
 	dir = 8
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/site/discovered)
 "wnx" = (
 /obj/structure/window/framed/strata/reinforced,
@@ -46756,7 +46807,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/road)
 "wpz" = (
 /obj/structure/platform/kutjevo/rock{
@@ -47269,21 +47320,21 @@
 /obj/effect/decal/siding{
 	icon_state = "siding8"
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "wDg" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
 	pixel_y = -12
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "wDo" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "wDE" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -48076,7 +48127,7 @@
 	pixel_x = 9;
 	pixel_y = -9
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "wVh" = (
 /turf/open/floor/strata/fake_wood,
@@ -48160,7 +48211,7 @@
 	desc = "Where the cargo department's Working Joe used to charge before it tragically fell into the ASRS elevator three years ago. The replacement still hasn't arrived.";
 	name = "Working Joe charging station"
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/site/discovered)
 "wXM" = (
 /obj/structure/surface/table/almayer,
@@ -48267,7 +48318,7 @@
 	pixel_x = -16;
 	pixel_y = 16
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "wZV" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -48450,7 +48501,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "xfs" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -48495,7 +48546,7 @@
 	color = "#424a50";
 	dir = 4
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/caverns/site_caves)
 "xgg" = (
 /obj/item/prop/magazine/dirty{
@@ -48593,7 +48644,7 @@
 /obj/structure/pipes/standard/manifold/hidden/cyan{
 	dir = 8
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "xjb" = (
 /turf/open/floor/prison/bluecorner/east,
@@ -49053,7 +49104,7 @@
 	pixel_y = -16
 	},
 /obj/item/toy/beach_ball/holoball,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "xui" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -49128,7 +49179,7 @@
 	pixel_x = 9;
 	pixel_y = -9
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "xwp" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -49415,7 +49466,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/relay_exterior)
 "xES" = (
 /obj/effect/decal/siding{
@@ -49424,7 +49475,7 @@
 /turf/open/floor/plating/wood,
 /area/bmg290/wilderness_roof/beach_house)
 "xFj" = (
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "xFn" = (
 /obj/structure/platform/strata/metal{
@@ -49498,7 +49549,7 @@
 	pixel_x = 8;
 	pixel_y = 4
 	},
-/turf/open/floor/cult_engineer,
+/turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "xGu" = (
 /obj/structure/machinery/squeezer,
@@ -49617,7 +49668,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "xJn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -49632,7 +49683,7 @@
 	pixel_x = 9;
 	pixel_y = -9
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/colony/motorpool)
 "xJE" = (
 /obj/structure/disposalpipe/segment,
@@ -49869,7 +49920,7 @@
 /area/bmg290/relay/telecommunication)
 "xPo" = (
 /obj/structure/ore_box,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "xPp" = (
 /obj/structure/inflatable,
@@ -49900,7 +49951,7 @@
 	dir = 8;
 	light_color = "#dae2ff"
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "xQv" = (
 /obj/structure/inflatable/door,
@@ -50487,12 +50538,12 @@
 	icon_state = "road_edge_decal3";
 	pixel_x = 9
 	},
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/wilderness/colony_exterior)
 "ydU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/seegson/left,
-/turf/open/floor/asteroid_dark,
+/turf/open/floor/asteroid/asteroid_dark,
 /area/bmg290/relay/cargo)
 "yea" = (
 /obj/structure/machinery/light/double,
@@ -50503,7 +50554,7 @@
 	id = "entry_site2";
 	name = "Entry Access"
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/wilderness/site)
 "yen" = (
 /obj/structure/cargo_container/horizontal/blue/top,
@@ -54505,9 +54556,9 @@ swU
 sQh
 sQh
 sQh
-sQh
-sQh
-sQh
+ayL
+ayL
+ayL
 sQh
 sQh
 swU
@@ -55094,7 +55145,7 @@ swU
 swU
 eyL
 sQh
-sQh
+ayL
 eyL
 xQV
 eyL
@@ -55104,8 +55155,8 @@ swU
 swU
 eNF
 sQh
-sQh
-sQh
+ayL
+ayL
 sQh
 swU
 swU
@@ -55116,8 +55167,8 @@ swU
 sQh
 sQh
 sQh
-sQh
-sQh
+ayL
+ayL
 sQh
 sQh
 eyL
@@ -55396,8 +55447,8 @@ swU
 swU
 eyL
 sQh
-sQh
-sQh
+ayL
+ayL
 sQh
 sQh
 sQh
@@ -55704,8 +55755,8 @@ sQh
 sQh
 sQh
 sQh
-sQh
-sQh
+ayL
+ayL
 sQh
 sQh
 swU
@@ -56632,7 +56683,7 @@ kBo
 eyL
 sQh
 sQh
-sQh
+ayL
 swU
 swU
 swU
@@ -56934,7 +56985,7 @@ kBo
 eyL
 eyL
 sQh
-sQh
+ayL
 sQh
 sQh
 swU
@@ -57237,8 +57288,8 @@ swU
 swU
 swU
 sQh
-sQh
-sQh
+ayL
+ayL
 sQh
 sQh
 sQh
@@ -58452,7 +58503,7 @@ eyL
 gtA
 ssa
 ssa
-sQh
+ayL
 sQh
 ssa
 ssa
@@ -58754,7 +58805,7 @@ swU
 ssa
 swU
 swU
-sQh
+ayL
 sQh
 swU
 sQh
@@ -59057,8 +59108,8 @@ ssa
 kpT
 swU
 sQh
-sQh
-sQh
+ayL
+ayL
 sQh
 iSt
 dbz
@@ -60401,7 +60452,7 @@ gSM
 gSM
 jdm
 hlT
-ayL
+dQI
 dQI
 rbk
 esR
@@ -62756,7 +62807,7 @@ fYC
 fYC
 fYC
 nHL
-ejR
+rLi
 mph
 rMC
 ejR
@@ -64875,7 +64926,7 @@ fYC
 fYC
 fYC
 qkm
-wRG
+iit
 qdr
 fYC
 fYC
@@ -67590,7 +67641,7 @@ ejR
 ejR
 ejR
 ejR
-ejR
+rLi
 hIO
 qkm
 fYC
@@ -67885,7 +67936,7 @@ fYC
 fYC
 fYC
 nbf
-ejR
+rLi
 vZu
 xGK
 xGK
@@ -68799,7 +68850,7 @@ fTw
 ayD
 ayD
 ekp
-ejR
+sKC
 qdr
 fYC
 tLl
@@ -69086,7 +69137,7 @@ cJv
 mph
 mph
 ejR
-ejR
+rLi
 hIO
 kXv
 tLl
@@ -69101,7 +69152,7 @@ ayD
 ayD
 ayD
 uVk
-ejR
+sKC
 qdr
 nbf
 qas
@@ -70006,7 +70057,7 @@ ejR
 lOw
 ejR
 ejR
-ejR
+rLi
 hRB
 gmI
 fYC
@@ -71208,7 +71259,7 @@ fYC
 fYC
 fYC
 nHL
-ejR
+rLi
 qdr
 fYC
 fYC
@@ -72128,7 +72179,7 @@ fYC
 nHL
 ejR
 ejR
-ejR
+rLi
 mph
 mph
 mph
@@ -72490,7 +72541,7 @@ tMT
 tMT
 tMT
 xQU
-ppD
+tDG
 fhX
 aAt
 myH
@@ -73319,7 +73370,7 @@ fYC
 fYC
 fYC
 nHL
-qdr
+wgn
 gmI
 gmI
 gmI
@@ -75110,7 +75161,7 @@ hRB
 jTG
 jTG
 wRG
-hIO
+gan
 kXv
 gmI
 gmI
@@ -75127,7 +75178,7 @@ gmI
 nHL
 bRn
 rvQ
-hRB
+dkr
 jTG
 qkm
 fYC
@@ -76042,7 +76093,7 @@ jTG
 wRG
 hIO
 kXv
-kXv
+nVt
 kXv
 gmI
 fYC
@@ -76623,7 +76674,7 @@ qkm
 hex
 ejR
 ejR
-ejR
+sKC
 ejR
 qdr
 gmI
@@ -76956,7 +77007,7 @@ qkm
 jTG
 jTG
 wRG
-ejR
+rLi
 ejR
 ejR
 aBO
@@ -77259,7 +77310,7 @@ fYC
 fYC
 nHL
 ejR
-ejR
+sKC
 ejR
 aBO
 cJv
@@ -77530,7 +77581,7 @@ ejR
 ejR
 oKL
 kGc
-ejR
+sKC
 ejR
 qdr
 gmI
@@ -77561,7 +77612,7 @@ fYC
 fYC
 nHL
 ejR
-ejR
+sKC
 ejR
 ejR
 ejR
@@ -77832,7 +77883,7 @@ wRG
 ejR
 ejR
 kGc
-ejR
+sKC
 ejR
 hIO
 gmI
@@ -80256,12 +80307,12 @@ ejR
 ejR
 tUv
 ejR
+sKC
+sKC
 ejR
 ejR
 ejR
-ejR
-ejR
-ejR
+rLi
 hRB
 jTG
 qkm
@@ -80557,9 +80608,9 @@ mph
 mph
 boX
 tUv
-ejR
-ejR
-ejR
+sKC
+sKC
+sKC
 ejR
 ejR
 ejR
@@ -82052,7 +82103,7 @@ mph
 wqe
 ejR
 ejR
-ejR
+rLi
 qdr
 fYC
 fYC
@@ -82464,7 +82515,7 @@ qLU
 qLU
 fWM
 fWM
-fWM
+ppD
 ctS
 ctS
 jPM
@@ -82994,7 +83045,7 @@ fYC
 fYC
 qkm
 wRG
-ejR
+rLi
 ejR
 hIO
 gmI
@@ -83572,7 +83623,7 @@ fYC
 fYC
 kdC
 mph
-ejR
+rLi
 ejR
 ejR
 ejR
@@ -83658,7 +83709,7 @@ qLU
 qLU
 fWM
 fWM
-fWM
+ppD
 fWM
 qLU
 qLU
@@ -83967,7 +84018,7 @@ qLU
 qLU
 qLU
 qLU
-fWM
+ppD
 fWM
 fWM
 fWM
@@ -86306,7 +86357,7 @@ aBO
 aBO
 ejR
 vsz
-vsz
+sKC
 ejR
 mph
 gZQ
@@ -86372,7 +86423,7 @@ qLU
 qLU
 qLU
 qLU
-fWM
+ppD
 fWM
 bYK
 bYK
@@ -86608,7 +86659,7 @@ fyP
 npZ
 ejR
 vsz
-vsz
+sKC
 ejR
 ejR
 gZQ
@@ -86990,7 +87041,7 @@ fWM
 fWM
 qLU
 qLU
-fWM
+ppD
 fWM
 pPb
 pPb
@@ -87519,8 +87570,8 @@ vsz
 vsz
 vsz
 vsz
-vsz
-vsz
+sKC
+sKC
 vsz
 vsz
 vsz
@@ -88733,7 +88784,7 @@ npZ
 npZ
 ejR
 vsz
-vsz
+sKC
 ejR
 ejR
 qLU
@@ -89035,7 +89086,7 @@ npZ
 npZ
 ejR
 ejR
-vsz
+sKC
 ejR
 ejR
 qLU
@@ -90013,7 +90064,7 @@ ctS
 ctS
 qLU
 qLU
-fWM
+ppD
 fWM
 pPb
 pPb
@@ -91152,7 +91203,7 @@ mph
 mph
 ejR
 ejR
-ctS
+sss
 ctS
 qLU
 qLU
@@ -91454,7 +91505,7 @@ mph
 mph
 mph
 ejR
-ctS
+sss
 ctS
 ctS
 qLU
@@ -91920,7 +91971,7 @@ qZg
 xFj
 xFj
 lbr
-lbr
+xFj
 lbr
 xFj
 xFj
@@ -92126,7 +92177,7 @@ bYK
 fWM
 fWM
 fWM
-fWM
+ppD
 qLU
 qLU
 qLU
@@ -92664,7 +92715,7 @@ kXP
 kXP
 kXP
 bdY
-qLU
+idy
 qLU
 fWM
 fWM
@@ -92677,7 +92728,7 @@ qLU
 qLU
 qLU
 qLU
-qLU
+idy
 qLU
 qLU
 qLU
@@ -94778,7 +94829,7 @@ kXP
 kXP
 kXP
 bfV
-lJV
+mTg
 lJV
 lJV
 lJV
@@ -94791,7 +94842,7 @@ txR
 txR
 txR
 txR
-txR
+sep
 jPM
 jPM
 jPM
@@ -118883,21 +118934,21 @@ dGD
 dGD
 rbN
 rbN
+kHX
 rbN
 rbN
 rbN
 rbN
-rbN
-rbN
+kHX
 dGD
 dGD
 dGD
+kHX
 rbN
 rbN
 rbN
 rbN
-rbN
-rbN
+kHX
 rbN
 dGD
 dGD

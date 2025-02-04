@@ -3618,7 +3618,7 @@
 /turf/open/floor/asteroid
 	icon_state = "asteroid"
 
-/turf/open/floor/asteroid_dark
+/turf/open/floor/asteroid/asteroid_dark
 	icon_state = "asteroid"
 	color = "#888844"
 
@@ -3670,7 +3670,7 @@
 /turf/open/floor/cult
 	icon_state = "cult"
 
-/turf/open/floor/cult_engineer
+/turf/open/floor/cult/cult_engineer
 	icon_state = "cult"
 	color = "#ccfff5"
 
