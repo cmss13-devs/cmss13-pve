@@ -28,9 +28,6 @@
 		/obj/item/tool/surgery/scalpel,
 		/obj/item/weapon/straight_razor,
 		/obj/item/weapon/knife/marine,
-		/obj/item/weapon/knife/marine/sas,
-		/obj/item/weapon/knife/marine/kabar,
-		/obj/item/weapon/knife/marine/baker,
 	)
 	drop_sound = "armorequip"
 

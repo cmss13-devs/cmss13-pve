@@ -245,6 +245,7 @@
 	throwforce = MELEE_FORCE_TIER_1
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 6
+	w_class = SIZE_SMALL
 	///Icon state for opened razor
 	var/enabled_icon = "razor"
 	///Icon state for closed razor
