@@ -139,6 +139,7 @@
 #define SS_INIT_INTERIOR 2.7
 #define SS_INIT_TECHTREE    2.5
 #define SS_INIT_RADIO 2
+#define SS_INIT_ASSETS 1
 #define SS_INIT_TIMER   100
 #define SS_INIT_UNSPECIFIED 0
 #define SS_INIT_ASSETS -20
