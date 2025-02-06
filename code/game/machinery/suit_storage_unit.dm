@@ -21,8 +21,6 @@
 	var/isopen = FALSE
 	var/isUV = FALSE
 
-
-
 /obj/structure/machinery/suit_storage_unit/Initialize()
 	. = ..()
 	if(starting_suit_type)
@@ -301,8 +299,8 @@
 	return attack_hand(user)
 
 /obj/structure/machinery/suit_storage_unit/carbon_unit
-	starting_suit_type = /obj/item/clothing/suit/space/uscm
-	starting_helmet_type = /obj/item/clothing/head/helmet/space/uscm
+	starting_suit_type = /obj/item/clothing/suit/space/odyssey
+	starting_helmet_type = /obj/item/clothing/head/helmet/space/odyssey
 	starting_mask_type = /obj/item/clothing/mask/breath
 	starting_tank_type = /obj/item/tank/oxygen
 
@@ -312,14 +310,20 @@
 	starting_mask_type = /obj/item/clothing/mask/breath
 	starting_tank_type = /obj/item/tank/oxygen
 
-/obj/structure/machinery/suit_storage_unit/compression_suit
-	starting_suit_type = /obj/item/clothing/suit/space/compression
-	starting_helmet_type = /obj/item/clothing/head/helmet/space/compression
+/obj/structure/machinery/suit_storage_unit/pressure_suit
+	starting_suit_type = /obj/item/clothing/suit/space/pressure
+	starting_helmet_type = /obj/item/clothing/head/helmet/space/pressure
 	starting_mask_type = /obj/item/clothing/mask/breath
 	starting_tank_type = /obj/item/tank/oxygen
 
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm
-	starting_suit_type = /obj/item/clothing/suit/space/compression/uscm
-	starting_helmet_type = /obj/item/clothing/head/helmet/space/compression/uscm
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm
+	starting_suit_type = /obj/item/clothing/suit/space/pressure/uscm
+	starting_helmet_type = /obj/item/clothing/head/helmet/space/pressure/uscm
 	starting_mask_type = /obj/item/clothing/mask/breath
-	starting_tank_type = /obj/item/tank/oxygen
+	starting_tank_type = /obj/item/tank/oxygen/yellow
+
+/obj/structure/machinery/suit_storage_unit/pressure_suit/upp
+	starting_suit_type = /obj/item/clothing/suit/space/pressure/upp
+	starting_helmet_type = /obj/item/clothing/head/helmet/space/pressure/upp
+	starting_mask_type = /obj/item/clothing/mask/breath
+	starting_tank_type = /obj/item/tank/oxygen/yellow
