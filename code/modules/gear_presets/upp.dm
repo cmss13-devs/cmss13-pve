@@ -206,11 +206,11 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/compression/upp, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure/upp, WEAR_HEAD)
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/compression/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/upp, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/upp, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71, WEAR_J_STORE)

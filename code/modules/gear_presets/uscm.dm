@@ -435,11 +435,11 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/compression/uscm(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure/uscm(new_human), WEAR_HEAD)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/compression/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1(new_human), WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
