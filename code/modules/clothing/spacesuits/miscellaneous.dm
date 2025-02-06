@@ -29,6 +29,7 @@
 	light_power = 0.8
 	item_state = "pressure_white"
 	icon_state = "pressure_white"
+	blood_overlay_type = "helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
@@ -87,6 +88,12 @@
 	for(var/datum/action/current_action as anything in actions)
 		current_action.update_button_icon()
 
+	if(!toggle_on)
+		playsound(src, 'sound/handling/click_2.ogg', 50, 1)
+
+	playsound(src, 'sound/handling/suitlight_on.ogg', 50, 1)
+	update_icon(user)
+
 /obj/item/clothing/head/helmet/space/pressure/attack_alien(mob/living/carbon/xenomorph/attacking_xeno)
 
 	if(!can_be_broken)
@@ -109,6 +116,7 @@
 	)
 	item_state = "pressure_white"
 	icon_state = "pressure_white"
+	blood_overlay_type = "suit"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
