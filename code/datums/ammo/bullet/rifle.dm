@@ -371,33 +371,16 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
-//====== 10x27 Type 71
+//====== 10x31 Type 71
 
-/datum/ammo/bullet/rifle/upp
-	name = "10x27 bullet"
-	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_2
-	accuracy = HIT_ACCURACY_TIER_3
-	shell_speed = AMMO_SPEED_TIER_6
-	effective_range_max = 10
-	damage_falloff = DAMAGE_FALLOFF_TIER_7
-
-/datum/ammo/bullet/rifle/upp/ap
-	name = "armor-piercing 10x27 bullet"
-	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_8
-
-/datum/ammo/bullet/rifle/upp/heap
-	name = "high-explosive armor-piercing 10x27 bullet"
-	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 55
-	penetration = ARMOR_PENETRATION_TIER_8
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
-
-//10X31 AK500
 /datum/ammo/bullet/rifle/heavy/upp
 	name = "10x31 bullet"
+
+/datum/ammo/bullet/rifle/heavy/ap/upp
+	name = "armor-piercing 10x31 bullet"
+
+/datum/ammo/bullet/rifle/heavy/heap/upp
+	name = "high-explosive armor-piercing 10x31 bullet"
 
 // Misc
 
@@ -418,3 +401,16 @@
 	name = "7.62x51 rifle bullet"
 	damage = 55
 
+
+/datum/ammo/bullet/rifle/upp
+	name = "10x23 bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_1
+	accurate_range = 16
+	accuracy = HIT_ACCURACY_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_10
+	shell_speed = AMMO_SPEED_TIER_6
+	effective_range_max = 7
+	damage_falloff = DAMAGE_FALLOFF_TIER_7
+	max_range = 24
