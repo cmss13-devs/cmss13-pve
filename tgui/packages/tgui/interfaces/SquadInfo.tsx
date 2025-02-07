@@ -54,7 +54,7 @@ const FireTeamLeadLabel = (props: { readonly ftl: SquadMarineEntry }) => {
   return (
     <>
       <Stack.Item>
-        <span>Squad Sergeant:</span>
+        <span>Squad Leader:</span>
       </Stack.Item>
       <Stack.Item>
         <span
@@ -93,7 +93,7 @@ const FireTeamLead = (props: {
         <Stack>
           {isNotAssigned && (
             <Stack.Item>
-              <span>Squad Sergeant: Unassigned</span>
+              <span>Squad Leader: Unassigned</span>
             </Stack.Item>
           )}
           {!isNotAssigned && <FireTeamLeadLabel ftl={assignedFireteamLead} />}

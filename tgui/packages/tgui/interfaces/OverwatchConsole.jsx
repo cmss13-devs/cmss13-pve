@@ -247,7 +247,7 @@ const RoleTable = (props) => {
           Section Sergeant
         </Table.Cell>
         <Table.Cell collapsing p="4px">
-          Squad Sergeants
+          Squad Leads
         </Table.Cell>
         <Table.Cell collapsing p="4px">
           Specialist
@@ -323,7 +323,7 @@ const SquadMonitor = (props) => {
     b = b.role;
     const roleValues = {
       'Section Sergeant': 10,
-      'Squad Sergeant': 9,
+      'Squad Leader': 9,
       'Weapons Specialist': 8,
       Smartgunner: 7,
       'Platoon Corpsman': 6,
