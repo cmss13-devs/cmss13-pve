@@ -503,7 +503,7 @@
 
 /obj/item/weapon/gun/rifle/m46c
 	name = "\improper XM46A pulse rifle"
-	desc = "An experimental 'sidegrade' project from ARMAT, the XM46A was designed to incorporate several cutting edge features; notably integrating an IFF recognition system similar to the M56 weapon series. Produced in limited numbers, the project was eventually scrapped after the per-unit cost of each rifle was deemed 'too high'. Sometimes still seen used by MARSOC operators, but rarely by anyone not in special forces."
+	desc = "An experimental improvement of the M41A from ARMAT, the XM46 incorporated a hexagonally rifled barrel, improved compensation, refined ergonomics, and the flagship offering, an intelligent fire control system. In trials it was judged to offer too little over the existing weapon at grossly higher cost, and suspiciously low parts interchange. Rarely seen outside of special mission unit service, and even then uncommon."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m46c"
 	item_state = "m46c"
