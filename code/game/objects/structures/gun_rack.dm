@@ -129,6 +129,21 @@
 /obj/structure/gun_rack/flamer/empty
 	initial_stored = 0
 
+/obj/structure/gun_rack/uppflamer
+	name = "LPO80 incinerator rack"
+	icon_state = "lpo80"
+	desc = "A rack designed to hold two LPO80 incinerator units."
+	max_stored = 2
+	initial_stored = 2
+	allowed_type = /obj/item/weapon/gun/flamer/upp
+	populate_type = /obj/item/weapon/gun/flamer/upp
+
+/obj/structure/gun_rack/uppflamer/unloaded
+	populate_type = /obj/item/weapon/gun/flamer/upp/unloaded
+
+/obj/structure/gun_rack/flamer/empty
+	initial_stored = 0
+
 /obj/structure/gun_rack/mk221
 	name = "M120 shotgun rack"
 	icon_state = "mk221"

@@ -430,6 +430,35 @@
 /obj/item/ammo_box/magazine/type71/heap/empty
 	empty = TRUE
 
+//-----------------------LARGE Type 71 Rifle Mag Boxes-----------------------
+/obj/item/ammo_box/magazine/type71/large
+	name = "magazine box (Type 71 x 32)"
+	icon_state = "base_upplarge"
+	overlay_ammo_type = null
+	overlay_gun_type = "_blank"
+	overlay_content = "_reglarge"
+	limit_per_tile = 1
+	flags_equip_slot = null
+	magazine_type = /obj/item/ammo_magazine/rifle/type71
+	num_of_magazines = 32
+	var/move_delay_mult = 2
+
+/obj/item/ammo_box/magazine/type71/large/pickup(mob/user, silent)
+	. = ..()
+	RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
+
+/obj/item/ammo_box/magazine/type71/large/proc/handle_movedelay(mob/user, list/movedata)
+	SIGNAL_HANDLER
+	if(locate(/obj/item/ammo_box/magazine/type71/large) in user.contents)
+		movedata["move_delay"] += move_delay_mult
+
+/obj/item/ammo_box/magazine/type71/large/dropped(mob/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
+
+/obj/item/ammo_box/magazine/type71/large/empty
+	empty = TRUE
+
 //-----------------------Nailgun Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/nailgun
