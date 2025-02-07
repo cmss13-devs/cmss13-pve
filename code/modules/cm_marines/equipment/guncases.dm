@@ -280,7 +280,7 @@
 	storage_slots = 2
 	can_hold = list(/obj/item/weapon/gun/shotgun/type23)
 	max_w_class = SIZE_HUGE
-/obj/item/storage/box/guncase/heavy/shotgun/fill_preset_inventory()
+/obj/item/storage/box/guncase/heavy/shotgun/type23/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/type23/unloaded/stored(src)
 	new /obj/item/attachable/stock/type23(src)
 
