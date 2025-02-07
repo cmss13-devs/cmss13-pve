@@ -262,16 +262,20 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
-	name = "USCM Squad Sergeant"
+	name = "USCM Squad Leader"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SqSgt"
+	role_comm_title = "SqLdr"
 	skills = /datum/skills/tl
 	minimap_icon = "tl"
+
+/datum/equipment_preset/uscm/tl/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/tl/upp
 	name = "UPP Squad Sergeant"
@@ -285,12 +289,24 @@
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
+/datum/equipment_preset/uscm/tl/upp/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/tl/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+
 /datum/equipment_preset/uscm/tl/forecon
 	name = "FORECON Assistant Squad Leader"
 	assignment = "Assistant Squad Leader"
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "ASL"
 	skills = /datum/skills/tl/recon
+
+/datum/equipment_preset/uscm/tl/forecon/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 
 /*****************************************************************************************************/
 
@@ -479,14 +495,14 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl_equipped
-	name = "USCM Squad Sergeant (Equipped)"
+	name = "USCM Squad Leader (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
 	assignment = JOB_SQUAD_TEAM_LEADER
 	rank = JOB_SQUAD_TEAM_LEADER
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SqSgt"
+	role_comm_title = "SqLdr"
 	skills = /datum/skills/tl
 
 	minimap_icon = "tl"
