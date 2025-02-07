@@ -6344,6 +6344,10 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -1
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (
@@ -9520,7 +9524,7 @@
 /area/golden_arrow/cryo_cells)
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/m4ra_pve{
+/obj/item/storage/box/guncase/heavy/m49a_pve{
 	pixel_y = 18
 	},
 /obj/item/storage/box/guncase/heavy/shotgun{

@@ -19,6 +19,8 @@
 	black_market_value = 50
 	dead_black_market_value = 0
 	squeeze_under = TRUE
+	status_flags = parent_type::status_flags & ~CANPUSH
+	layer = 3.5
 
 /mob/living/simple_animal/lizard/lexi
 	name = "Lexi"
