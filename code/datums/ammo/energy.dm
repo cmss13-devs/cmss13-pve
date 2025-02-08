@@ -71,6 +71,28 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_8
 
+/datum/ammo/energy/plasma
+	name = "plasma bolt"
+	icon_state = "arcane_barrage"
+	flags_ammo_behavior = AMMO_ENERGY
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 150
+	damage_type = BURN
+	penetration = ARMOR_PENETRATION_TIER_6 //It's a freaking plasma beam
+	accurate_range = 20
+	effective_range_max = 18
+	max_range = 50
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
+	scatter = SCATTER_AMOUNT_NONE
+	accuracy = HIT_ACCURACY_MULT_TIER_10
+	damage_falloff = DAMAGE_FALLOFF_TIER_1
+
+/datum/ammo/energy/plasma/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/deathsquad)
+	))
+
 /datum/ammo/energy/yautja
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	accurate_range = 12

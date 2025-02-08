@@ -351,3 +351,49 @@
 /obj/effect/syringe_gun_dummy/Initialize()
 	create_reagents(15)
 	. = ..()
+
+
+// XM99A, The quintesential phased plasma rifle in the 40 watt range
+
+/obj/item/weapon/gun/XM99
+	name = "\improper XM99A1 phased plasma pulse rifle"
+	desc = "An experimental directed energy weapon system designed by Armat, the XM99A1 improves upon the initial models flaws with energy capacity, allowing it to fire even without a full charge in its battery cells."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "xm99a"
+	item_state = "xm99a"
+	muzzle_flash = "muzzle_flash_blue"
+	muzzle_flash_color = COLOR_PURPLE
+	w_class = SIZE_LARGE
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
+	unacidable = TRUE
+	map_specific_decoration = TRUE
+	indestructible = 1
+	fire_sound = 'sound/weapons/gun_xm99.ogg'
+	reload_sound = 'sound/weapons/handling/gun_xm99_reload.ogg'
+	unload_sound = 'sound/weapons/handling/gun_xm99_unload.ogg'
+	current_mag = /obj/item/ammo_magazine/plasma
+	force = 12
+	wield_delay = WIELD_DELAY_SLOW
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/pve,
+	)
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
+	flags_item = TWOHANDED|NO_CRYO_STORE
+
+/obj/item/weapon/gun/XM99/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 17,"rail_x" = 11, "rail_y" = 22, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
+
+/obj/item/weapon/gun/XM99/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_VULTURE)
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	accuracy_mult = BASE_ACCURACY_MULT * 3 //you HAVE to be able to hit
+	scatter = SCATTER_AMOUNT_TIER_8
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5

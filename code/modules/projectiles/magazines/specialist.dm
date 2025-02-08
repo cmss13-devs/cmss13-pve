@@ -395,3 +395,15 @@
 	default_ammo = /datum/ammo/rocket/wp/upp
 	gun_type = /obj/item/weapon/gun/launcher/rocket/upp
 	reload_delay = 85
+
+// XM99A power/fuel cell
+/obj/item/ammo_magazine/plasma
+	name = "\improper XM99A battery drum"
+	desc = "A battery cell designed to fit the XM99A series of phased plasma pulse rifles. Do not puncture or put in a microwave."
+	caliber = "40W"
+	icon_state = "xm99a_cell"
+	w_class = SIZE_MEDIUM
+	flags_magazine = NO_FLAGS //It's a battery, can't yank bullets or shells outa this
+	max_rounds = 8
+	default_ammo = /datum/ammo/energy/plasma
+	gun_type = /obj/item/weapon/gun/XM99
