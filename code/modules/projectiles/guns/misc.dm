@@ -383,8 +383,90 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/pve,
 	)
-	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
-	flags_item = TWOHANDED|NO_CRYO_STORE
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_INTERNAL_MAG
+	flags_item = TWOHANDED
+
+// Stolen from the rocket-launcher code to prevent the +1 shot in the plasma rifle
+/obj/item/weapon/gun/XM99/load_into_chamber(mob/user)
+	return ready_in_chamber()
+
+/obj/item/weapon/gun/XM99/reload_into_chamber(mob/user)
+	return TRUE
+
+/obj/item/weapon/gun/XM99/delete_bullet(obj/projectile/projectile_to_fire, refund = 0)
+	if(!current_mag)
+		return
+	qdel(projectile_to_fire)
+	if(refund)
+		current_mag.current_rounds++
+	return TRUE
+
+/obj/item/weapon/gun/XM99/proc/make_battery_drum(mob/user, drop_override = 0, remaining_rounds = 0)
+	if(!current_mag)
+		return
+
+	var/obj/item/ammo_magazine/plasma/cell = new current_mag.type()
+	if(remaining_rounds <= 0)
+		cell.current_rounds = 0
+	if(drop_override || !user) //If we want to drop it on the ground or there's no user.
+		cell.forceMove(get_turf(src)) //Drop it on the ground.
+	else
+		cell.current_rounds = remaining_rounds
+		user.put_in_hands(cell)
+		cell.update_icon()
+
+/obj/item/weapon/gun/XM99/reload(mob/user, obj/item/ammo_magazine/plasma)
+	if(!current_mag)
+		return
+	if(flags_gun_features & GUN_BURST_FIRING)
+		return
+
+	if(!plasma || !istype(plasma) || !istype(src, plasma.gun_type))
+		to_chat(user, SPAN_WARNING("That's not going to fit!"))
+		return
+
+	if(current_mag.current_rounds > 0)
+		to_chat(user, SPAN_WARNING("[src] is already loaded!"))
+		return
+
+	if(plasma.current_rounds <= 0)
+		to_chat(user, SPAN_WARNING("That battery drum is empty!"))
+		return
+
+	if(user)
+		to_chat(user, SPAN_NOTICE("You begin reloading [src]. Hold still..."))
+		if(do_after(user,current_mag.reload_delay, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+			qdel(current_mag)
+			user.drop_inv_item_on_ground(plasma)
+			current_mag = plasma
+			plasma.forceMove(src)
+			replace_ammo(,plasma)
+			to_chat(user, SPAN_NOTICE("You load the new battery drum into [src]."))
+			playsound(user, reload_sound, 25, 1)
+		else
+			to_chat(user, SPAN_WARNING("Your reload was interrupted!"))
+			return
+	else
+		qdel(current_mag)
+		current_mag = plasma
+		plasma.forceMove(src)
+		replace_ammo(,plasma)
+	update_icon()
+	return TRUE
+
+/obj/item/weapon/gun/XM99/unload(mob/user,  reload_override = 0, drop_override = 0)
+	if(user && current_mag)
+		to_chat(user, SPAN_NOTICE("You begin unloading [src]. Hold still..."))
+		if(do_after(user,current_mag.reload_delay, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+			playsound(user, unload_sound, 25, 1)
+			user.visible_message(SPAN_NOTICE("[user] unloads [ammo] from [src]."),
+			SPAN_NOTICE("You unload [ammo] from [src]."))
+			if(current_mag.current_rounds > 0)
+				make_battery_drum(user, drop_override, current_mag.current_rounds)
+			else
+				make_battery_drum(user, drop_override, 0)
+			current_mag.current_rounds = 0
+		update_icon()
 
 /obj/item/weapon/gun/XM99/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 17,"rail_x" = 11, "rail_y" = 22, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)

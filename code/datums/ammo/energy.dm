@@ -82,6 +82,7 @@
 	accurate_range = 20
 	effective_range_max = 18
 	max_range = 50
+	var/vehicle_slowdown_time = 2 SECONDS
 	shell_speed = AMMO_SPEED_TIER_HITSCAN
 	scatter = SCATTER_AMOUNT_NONE
 	accuracy = HIT_ACCURACY_MULT_TIER_10
@@ -90,8 +91,31 @@
 /datum/ammo/energy/plasma/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/deathsquad)
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/deathsquad),
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak),
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 20, GLOB.damage_boost_vehicles),
 	))
+
+/datum/ammo/energy/plasma/on_hit_mob(mob/M,obj/projectile/P)
+	burst(get_turf(M),P,damage_type, 1 , 5)
+
+/datum/ammo/energy/plasma/on_near_target(turf/T, obj/projectile/P)
+	burst(get_turf(T),P,damage_type, 2 , 5)
+	return 1
+
+/datum/ammo/energy/plasma/on_hit_obj(obj/O,obj/projectile/P)
+	if(istype(O, /obj/vehicle/multitile))
+		var/obj/vehicle/multitile/mob = O
+		mob.next_move = world.time + vehicle_slowdown_time
+		playsound(mob, 'sound/effects/meteorimpact.ogg', 35)
+		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("Plasma Blast"))
+		mob.interior_crash_effect()
+		mob.ex_act(150, P.dir, P.weapon_cause_data, 100)
+		return
+	burst(get_turf(P),P,damage_type, 2 , 5)
+
+/datum/ammo/energy/plasma/on_hit_turf(turf/T,obj/projectile/P)
+	burst(get_turf(T),P,damage_type, 2 , 5)
 
 /datum/ammo/energy/yautja
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
