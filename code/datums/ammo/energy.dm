@@ -93,7 +93,6 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/deathsquad),
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak),
-		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 20, GLOB.damage_boost_vehicles),
 	))
 
 /datum/ammo/energy/plasma/on_hit_mob(mob/M,obj/projectile/P)
