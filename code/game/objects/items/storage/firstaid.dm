@@ -87,9 +87,11 @@
 /obj/item/storage/firstaid/regular
 	icon_state = "firstaid"
 	desc = "It's an emergency medical kit containing basic medication and equipment. No training required to use. With medical training you can fit this in a backpack."
+	storage_slots = 8
 
 /obj/item/storage/firstaid/regular/fill_preset_inventory()
 	new /obj/item/reagent_container/glass/bottle/water(src)
+	new /obj/item/reagent_container/syringe(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
@@ -129,12 +131,13 @@
 	item_state = "firstaid-toxin"
 	possible_icons_full = list("antitoxin","antitoxfirstaid","antitoxfirstaid2","antitoxfirstaid3")
 
+
 /obj/item/storage/firstaid/toxin/fill_preset_inventory()
 	new /obj/item/reagent_container/pill/nitrogenwater(src)
 	new /obj/item/reagent_container/pill/carbon(src)
 	new /obj/item/reagent_container/pill/antitox(src)
 	new /obj/item/reagent_container/pill/antitox(src)
-	new /obj/item/reagent_container/pill/antitox(src)
+	new /obj/item/reagent_container/syringe(src)
 	new /obj/item/reagent_container/glass/bottle/water(src)
 	new /obj/item/reagent_container/pill/ethylredoxrazine(src)
 
@@ -152,8 +155,8 @@
 	new /obj/item/reagent_container/pill/dexalin(src)
 	new /obj/item/reagent_container/pill/dexalin(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/glass/bottle/water(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
 
 /obj/item/storage/firstaid/o2/empty/fill_preset_inventory()
@@ -169,7 +172,7 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/reagent_container/pill/iron(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/splint(src)

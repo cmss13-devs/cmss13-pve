@@ -186,7 +186,7 @@ FORENSIC SCANNER
 	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
 	w_class = SIZE_MEDIUM
 	var/record_scan_on_connect = FALSE
-	var/paper_left = 10
+	var/paper_left = 5
 	var/mob/living/carbon/human/connected_to
 	var/mob/living/carbon/human/connected_from
 	var/datum/beam/current_beam
@@ -290,7 +290,7 @@ FORENSIC SCANNER
 		var/mob/living/carbon/human/snowflake_variable_for_name = src
 		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[snowflake_variable_for_name.get_id_name("Unknown")] [src.stat > 1 ? "<b>DEAD</b>" : "<b>[src.health - src.halloss]% "] at " + worldtime2text("hh:mm:ss") + "\n"
 	//dat += "[SET_CLASS("Oxygen", INTERFACE_BLUE)]-[SET_CLASS("Toxin", INTERFACE_GREEN)]-[SET_CLASS("Burns", INTERFACE_ORANGE)]-[SET_CLASS("Brute", INTERFACE_RED)]<td>"
-	dat += "[SET_CLASS(OX, INTERFACE_BLUE)] - [SET_CLASS(TX, INTERFACE_GREEN)] - [SET_CLASS(BU, INTERFACE_ORANGE)] - [SET_CLASS(BR, INTERFACE_RED)]\n"
+	dat += "[SET_CLASS(BR, INTERFACE_RED)] - [SET_CLASS(BU, INTERFACE_ORANGE)] - [SET_CLASS(TX, INTERFACE_GREEN)] - [SET_CLASS(OX, INTERFACE_BLUE)]\n"
 	//dat += "\tUntreated: {B}=Burns,{T}=Trauma,{F}=Fracture\n"
 
 	// Show specific limb damage
