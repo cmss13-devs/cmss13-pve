@@ -74,6 +74,11 @@
 	default_ammo = /datum/ammo/bullet/rifle/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
+/obj/item/ammo_magazine/rifle/tracer
+	name = "\improper M41A tracer magazine (10x24mm)"
+	desc = "A 10mm assault rifle magazine filled with tracer bullets."
+	default_ammo = /datum/ammo/bullet/rifle/tracer
+
 //-------------------------------------------------------
 //M41A (MK1) TRUE AND ORIGINAL
 
@@ -128,6 +133,12 @@
 	icon_state = "m41a_mk1_recon"
 	current_rounds = 95
 	bonus_overlay = "m41a_mk1_recon_overlay"
+
+/obj/item/ammo_magazine/rifle/m41aMK1/tracer
+	name = "\improper M41A MK1 tracer magazine (10x24mm)"
+	desc = "A 10mm assault rifle magazine filled with tracer bullets."
+	default_ammo = /datum/ammo/bullet/rifle/tracer
+
 //-------------------------------------------------------
 //M49A, l42 reskin, same stats as before but different, lore friendly, shell.
 
