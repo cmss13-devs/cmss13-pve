@@ -495,6 +495,11 @@
 
 /obj/item/weapon/gun/XM99/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
 	. = ..()
+
 	var/datum/beam/plasma_beam
+	if(!current_mag)
+		return
+	if(current_mag.current_rounds <= 0)
+		return
 	plasma_beam = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
 	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, easing = SINE_EASING|EASE_OUT)
