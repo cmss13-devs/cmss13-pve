@@ -43,6 +43,7 @@ const AIContext = (props, context) => {
   const { data, act } = useBackend<BackendContext>();
   const [squadAssignmentMode, setSquadAssignmentMode] = useState(false);
   const [orderAssignmentMode, setOrderAssignmentMode] = useState(false);
+  const [selectedSquad, setSelectedSquad] = useState(-1);
   return (
     <Stack fill vertical>
       <div>
@@ -91,19 +92,38 @@ const AIContext = (props, context) => {
       <Divider />
       <div>
         {data.orders.map((order) => (
-          <CreatedOrder order={order} key={order.ref} />
+          <CreatedOrder
+            order={order}
+            key={order.ref}
+            selectedSquad={selectedSquad}
+            orderAssignmentMode={orderAssignmentMode}
+            squadAssignmentMode={squadAssignmentMode}
+          />
         ))}
       </div>
       <Divider />
       <div>
         {data.ai_humans.map((human) => (
-          <HumanAIReadout human={human} key={human.ref} />
+          <HumanAIReadout
+            human={human}
+            key={human.ref}
+            selectedSquad={selectedSquad}
+            orderAssignmentMode={orderAssignmentMode}
+            squadAssignmentMode={squadAssignmentMode}
+          />
         ))}
       </div>
       <Divider />
       <div>
         {data.squads.map((squad) => (
-          <SquadReadout squad={squad} key={squad.ref} />
+          <SquadReadout
+            squad={squad}
+            key={squad.ref}
+            selectedSquad={selectedSquad}
+            orderAssignmentMode={orderAssignmentMode}
+            squadAssignmentMode={squadAssignmentMode}
+            setSelectedSquad={setSelectedSquad}
+          />
         ))}
       </div>
     </Stack>
@@ -112,10 +132,9 @@ const AIContext = (props, context) => {
 
 const CreatedOrder = (props) => {
   const order: Order = props.order;
-  const context: BackendContext = props.context;
   const { data, act } = useBackend<BackendContext>();
-  const [orderAssignmentMode, setOrderAssignmentMode] = useState(false);
-  const [selectedSquad, setSelectedSquad] = useState(-1);
+  const orderAssignmentMode: boolean = props.orderAssignmentMode;
+  const selectedSquad = props.selectedSquad;
   return (
     <div
       style={{
@@ -193,8 +212,8 @@ const CreatedOrder = (props) => {
 const HumanAIReadout = (props) => {
   const human: AIHuman = props.human;
   const context: BackendContext = props.context;
-  const [squadAssignmentMode, setSquadAssignmentMode] = useState(false);
-  const [selectedSquad, setSelectedSquad] = useState(-1);
+  const squadAssignmentMode = props.squadAssignmentMode;
+  const selectedSquad = props.selectedSquad;
   const { data, act } = useBackend<BackendContext>();
   const gottenSquad: Squad = data.squads[selectedSquad];
   return (
@@ -317,9 +336,10 @@ const SquadReadout = (props) => {
   const squad: Squad = props.squad;
   const context: BackendContext = props.context;
   const { data, act } = useBackend<BackendContext>();
-  const [squadAssignmentMode, setSquadAssignmentMode] = useState(false);
-  const [selectedSquad, setSelectedSquad] = useState(-1);
-  const [orderAssignmentMode, setOrderAssignmentMode] = useState(false);
+  const squadAssignmentMode = props.squadAssignmentMode;
+  const selectedSquad = props.selectedSquad;
+  const setSelectedSquad = props.setSelectedSquad;
+  const orderAssignmentMode: boolean = props.orderAssignmentMode;
   return (
     <div
       style={{
