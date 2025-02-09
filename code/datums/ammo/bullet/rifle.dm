@@ -428,15 +428,14 @@
 	penetration = ARMOR_PENETRATION_TIER_8
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
-//10X31 AK500
-/datum/ammo/bullet/rifle/heavy/upp
-	name = "10x31 bullet"
-
-/datum/ammo/bullet/rifle/heavy/heap/upp/mg
-	name = "high-explosive armor-piercing 10x31 bullet"
+/datum/ammo/bullet/rifle/upp/heap/mg
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
+
+//10X31 AK500
+/datum/ammo/bullet/rifle/heavy/upp
+	name = "10x31 bullet"
 
 // Misc
 
