@@ -95,24 +95,24 @@
 	switch(HP.slot)
 		if(HDPT_PRIMARY) //dualcannon
 			HP.muzzle_flash_pos = list(
-				"1" = list(8, -20),
-				"2" = list(25, 31),
-				"4" = list(-7, 27),
-				"8" = list(37, 9)
+				"1" = list(8, -12),
+				"2" = list(25, 24),
+				"4" = list(0, 27),
+				"8" = list(30, 9)
 			)
 		if(HDPT_SECONDARY) //frontalcannon
 			HP.muzzle_flash_pos = list(
-				"1" = list(34, 70),
-				"2" = list(-1, -70),
-				"4" = list(88, -7),
-				"8" = list(-56, 12)
+				"1" = list(34, 76),
+				"2" = list(-1, -76),
+				"4" = list(94, -7),
+				"8" = list(-62, 12)
 			)
 		if(HDPT_SUPPORT) //flare
 			HP.muzzle_flash_pos = list(
-				"1" = list(22, -20),
-				"2" = list(11, 32),
-				"4" = list(-5, 10),
-				"8" = list(37, 24)
+				"1" = list(22, -13),
+				"2" = list(11, 22),
+				"4" = list(2, 10),
+				"8" = list(30, 24)
 			)
 	return ..()
 

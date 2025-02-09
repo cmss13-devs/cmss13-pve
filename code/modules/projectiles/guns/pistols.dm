@@ -525,7 +525,7 @@
 	unload_sound = 'sound/weapons/gun_vp70_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/es4
 	force = 8
-	muzzle_flash = "muzzle_flash_blue"
+	muzzleflash_iconstate = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MUZZLE_BLUE
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
 	attachable_allowed = list(

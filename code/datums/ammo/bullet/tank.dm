@@ -81,7 +81,7 @@
 /datum/ammo/bullet/tank/minigun
 	name = "minigun bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	icon_state = "bullet_large"
+	icon_state = "bullet_large_red"
 
 	accuracy = -HIT_ACCURACY_TIER_1
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_8
@@ -90,6 +90,8 @@
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_6
 	damage_armor_punch = 1
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
 
 /datum/ammo/bullet/tank/minigun/New()
 	..()
