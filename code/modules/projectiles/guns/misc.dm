@@ -386,6 +386,13 @@
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_INTERNAL_MAG
 	flags_item = TWOHANDED
 
+	var/obj/effect/ebeam/plasma_beam_type = /obj/effect/ebeam/plasma
+	///world.time value, to prevent a lightshow without actually firing
+	var/beam_cooldown = 0
+	///Delay before another beam can start again, in tenths of seconds
+	var/beam_delay = 20
+
+
 // Stolen from the rocket-launcher code to prevent the +1 shot in the plasma rifle
 /obj/item/weapon/gun/XM99/load_into_chamber(mob/user)
 	return ready_in_chamber()
@@ -485,3 +492,9 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 75, GLOB.damage_boost_vehicles),
 	))
+
+/obj/item/weapon/gun/XM99/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
+	. = ..()
+	var/datum/beam/plasma_beam
+	plasma_beam = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
+	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, easing = SINE_EASING|EASE_OUT)
