@@ -16388,27 +16388,27 @@
 	pixel_x = 7;
 	pixel_y = 27
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = -7;
 	pixel_y = 8
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 12;
 	pixel_y = 8
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = -7;
 	pixel_y = 11
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 12;
 	pixel_y = 11
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = -7;
 	pixel_y = 14
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 12;
 	pixel_y = 14
 	},

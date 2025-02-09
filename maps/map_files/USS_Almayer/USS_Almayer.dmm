@@ -4855,7 +4855,7 @@
 	dir = 4
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -5141,7 +5141,7 @@
 /area/almayer/living/basketball)
 "bUN" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 7
 	},
@@ -5632,7 +5632,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/squads/charlie)
 "cfu" = (
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = -4;
 	pixel_y = 10
 	},
@@ -14213,7 +14213,7 @@
 /area/almayer/squads/alpha)
 "fkl" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /turf/open/floor/almayer/red/northeast,
@@ -14534,7 +14534,7 @@
 /area/almayer/squads/bravo)
 "fpb" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 5
 	},
 /turf/open/floor/almayer/redfull,
@@ -18547,7 +18547,7 @@
 /area/almayer/medical/medical_science)
 "gKX" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	layer = 3.2;
 	pixel_x = 4;
 	pixel_y = 17
@@ -19528,7 +19528,7 @@
 /area/almayer/maint/upper/u_a_p)
 "heD" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -23515,7 +23515,7 @@
 /area/almayer/living/briefing)
 "iwx" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -24075,7 +24075,7 @@
 /area/almayer/living/port_emb)
 "iIR" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /obj/item/reagent_container/food/condiment/hotsauce/cholula{
@@ -32849,7 +32849,7 @@
 /area/almayer/hallways/upper/midship_hallway)
 "lLa" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -36087,7 +36087,7 @@
 	dir = 4
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -41251,7 +41251,7 @@
 /area/almayer/shipboard/brig/processing)
 "oGV" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 5
 	},
 /turf/open/floor/almayer/bluefull,
@@ -43184,7 +43184,7 @@
 /area/almayer/living/commandbunks)
 "prY" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray,
+/obj/item/trash/tray/USCMtray,
 /obj/item/tool/kitchen/utensil/pknife,
 /obj/item/tool/kitchen/utensil/pfork,
 /turf/open/floor/wood/ship,
@@ -48267,7 +48267,7 @@
 	dir = 4
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /turf/open/floor/almayer/red/east,
@@ -51882,7 +51882,7 @@
 /area/almayer/maint/hull/lower/p_bow)
 "spY" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 5
 	},
 /turf/open/floor/almayer/emeraldfull,
@@ -57423,7 +57423,7 @@
 /area/almayer/medical/containment/cell)
 "uuj" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 5
 	},
 /obj/item/reagent_container/food/condiment/hotsauce/cholula{
@@ -58120,7 +58120,7 @@
 /area/almayer/hallways/hangar)
 "uEy" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -58889,7 +58889,7 @@
 /area/almayer/maint/hull/upper/u_m_p)
 "uRo" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /turf/open/floor/almayer,
@@ -59074,7 +59074,7 @@
 /area/almayer/shipboard/brig/lobby)
 "uTv" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -63664,7 +63664,7 @@
 	pixel_x = 10;
 	pixel_y = 14
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = -4;
 	pixel_y = 4
 	},
@@ -63701,7 +63701,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/trash/USCMtray,
+/obj/item/trash/tray/USCMtray,
 /turf/open/floor/almayer/blue/north,
 /area/almayer/squads/delta)
 "wAP" = (
@@ -64760,16 +64760,16 @@
 /area/almayer/command/corporateliaison)
 "wTn" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 4
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 6
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 8
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 10
 	},
 /obj/item/device/flashlight/lamp{

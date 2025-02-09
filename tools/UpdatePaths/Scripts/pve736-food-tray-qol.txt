@@ -1,0 +1,2 @@
+/obj/item/trash/USCMtray : /obj/item/trash/tray/USCMtray{@OLD}
+/obj/item/trash/tray/UPPtray : /obj/item/trash/tray/UPPtray{@OLD}
