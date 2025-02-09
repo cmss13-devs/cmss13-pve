@@ -186,6 +186,10 @@
 		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_1.dmi'
 	)
 
+/obj/item/trash/tray/Initialize()
+	. = ..()
+	update_overlays()
+
 /obj/item/trash/tray/attackby(obj/item/trash/tray/I, mob/user)
 
 	//stacked_size = stacked_size + (I.stacked_size + 1)
@@ -222,7 +226,7 @@
 		else
 			w_class = SIZE_SMALL
 
-/obj/item/trash/tray/proc/update_overlays(dir)
+/obj/item/trash/tray/proc/update_overlays()
 	overlays.Cut()
 	if(!contents.len)
 		name = initial(name)
