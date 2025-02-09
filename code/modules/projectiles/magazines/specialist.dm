@@ -396,10 +396,10 @@
 	gun_type = /obj/item/weapon/gun/launcher/rocket/upp
 	reload_delay = 85
 
-// XM99A power/fuel cell
+// XM99 power/fuel cell
 /obj/item/ammo_magazine/plasma
-	name = "\improper XM99A battery drum"
-	desc = "A battery cell designed to fit the XM99A series of phased plasma pulse rifles. Do not puncture or put in a microwave."
+	name = "\improper XM99A1 battery drum"
+	desc = "A hybrid battery cell and CdTe-pellet magazine designed to fit the XM99A series of phased plasma pulse rifles. Do not puncture or put in a microwave."
 	caliber = "40W"
 	icon_state = "xm99a_cell"
 	w_class = SIZE_MEDIUM
@@ -407,3 +407,11 @@
 	max_rounds = 8
 	default_ammo = /datum/ammo/energy/plasma
 	gun_type = /obj/item/weapon/gun/XM99
+
+// The "round-remover" power/fuel cell for the XM99
+/obj/item/ammo_magazine/plasma/gibber
+	name = "\improper XM99A1 lithium battery drum"
+	desc = "A hybrid battery cell and LiTe-pellet magazine designed to fit the XM99A series of phased plasma pulse rifles. Do not puncture, put in a microwave, submerge in water or look at funny. Highly volatile."
+	icon_state = "xm99a_lcell"
+	max_rounds = 4
+	default_ammo = /datum/ammo/energy/plasma/heavy

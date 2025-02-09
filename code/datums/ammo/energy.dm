@@ -78,7 +78,7 @@
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	damage = 150
 	damage_type = BURN
-	penetration = ARMOR_PENETRATION_TIER_6 //It's a freaking plasma beam
+	penetration = ARMOR_PENETRATION_TIER_8 //It's a freaking plasma beam
 	accurate_range = 20
 	effective_range_max = 18
 	max_range = 50
@@ -99,7 +99,7 @@
 	burst(get_turf(M),P,damage_type, 1 , 5)
 
 /datum/ammo/energy/plasma/on_near_target(turf/T, obj/projectile/P)
-	burst(get_turf(T),P,damage_type, 2 , 5)
+	burst(get_turf(T),P,damage_type, 1 , 5)
 	return 1
 
 /datum/ammo/energy/plasma/on_hit_obj(obj/O,obj/projectile/P)
@@ -111,10 +111,36 @@
 		mob.interior_crash_effect()
 		mob.ex_act(150, P.dir, P.weapon_cause_data, 100)
 		return
-	burst(get_turf(P),P,damage_type, 2 , 5)
+	burst(get_turf(P),P,damage_type, 1 , 5)
 
 /datum/ammo/energy/plasma/on_hit_turf(turf/T,obj/projectile/P)
-	burst(get_turf(T),P,damage_type, 2 , 5)
+	burst(get_turf(T),P,damage_type, 1 , 5)
+
+/datum/ammo/energy/plasma/heavy
+	name = "heavy plasma bolt"
+	damage = 300
+	penetration = ARMOR_PENETRATION_TIER_10
+	accurate_range = 30
+	effective_range_max = 25
+	vehicle_slowdown_time = 5 SECONDS
+
+/datum/ammo/energy/plasma/heavy/on_hit_mob(mob/M,obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(M), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+	if(iscarbon(M))
+		M.ex_act(280, null, P.weapon_cause_data, 350)
+
+/datum/ammo/energy/plasma/heavy/on_near_target(turf/T, obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(T), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+
+/datum/ammo/energy/plasma/heavy/on_hit_obj(obj/O,obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(O), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+
+/datum/ammo/energy/plasma/heavy/on_hit_turf(turf/T,obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(T), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
 
 /datum/ammo/energy/yautja
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
