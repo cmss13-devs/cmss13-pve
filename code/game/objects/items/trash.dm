@@ -180,7 +180,7 @@
 /obj/item/trash/tray
 	name = "Tray"
 	icon_state = "tray"
-	var/stacked_size = 0
+	item_state = "tray"
 
 /obj/item/trash/tray/attackby(obj/item/trash/tray/I, mob/user)
 
@@ -191,20 +191,20 @@
 	I.contents = null
 	I.update_overlays()
 	update_overlays()
-	if(stacked_size > 1)
+	if(contents.len > 1)
 		w_class = SIZE_MEDIUM
 	else
 		w_class = SIZE_SMALL
 	if(contents.len > 7)
 		to_chat(user, SPAN_WARNING("The stack of trays begins to sway!"))
-		if(prob(30))
+		if(prob(30) || contents.len == 10)
 			stack_collapse()
 		//return FALSE
 	return ..()
 
 /obj/item/trash/tray/MouseDrop(atom/over)
 	. = ..()
-	if(stacked_size)
+	if(contents.len)
 		var/mob/living/carbon/human/H = over
 		if(usr != H)
 			return
@@ -212,9 +212,8 @@
 			return
 		var/obj/item/trash/tray/F = locate() in contents
 		H.put_in_active_hand(F)
-		stacked_size--
 		update_overlays()
-		if(stacked_size > 1)
+		if(contents.len > 1)
 			w_class = SIZE_MEDIUM
 		else
 			w_class = SIZE_SMALL
@@ -226,7 +225,7 @@
 		desc = initial(desc)
 		return
 	name = "stack of food trays"
-	desc = "There seems to be [contents.len] in the stack, wow!"
+	desc = "There seems to be [contents.len + 1] in the stack, wow!"
 	for(var/i in 1 to contents.len)
 		var/image/I = new()
 		I.icon = contents[i].icon
@@ -235,13 +234,14 @@
 		if(contents.len > 4)
 			I.pixel_x = I.pixel_x + pick(list(-1, 1))
 		overlays += I
+	//if(type == /obj/item/trash/tray/UPPtray )
+	//	mob_icon = GLOB.default_onmob_icons[WEAR_L_HAND]
 
 /obj/item/trash/tray/proc/stack_collapse()
 	visible_message(SPAN_HIGHDANGER("The stack of trays collapses!!!"))
 	var/turf/starting_turf = get_turf(src)
 	playsound(starting_turf, 'sound/weapons/metal_chair_crash.ogg', 30, 1, 30)
 	for(var/obj/item/trash/tray/falling_tray in contents)
-		stacked_size--
 		update_overlays()
 
 		var/list/candidate_target_turfs = list()
