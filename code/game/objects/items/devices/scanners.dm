@@ -116,10 +116,7 @@ FORENSIC SCANNER
 		user.show_message("No previous scan found.")
 		return
 
-	if(popup_window)
-		tgui_interact(user)
-	else
-		user.show_message(last_scan)
+	tgui_interact(user)
 
 	return
 
@@ -209,7 +206,12 @@ FORENSIC SCANNER
 		to_chat(user, "[src] ran out of paper, and cannot print a report")
 		return
 	var/obj/item/paper/print_report = new /obj/item/paper
-	print_report.info += ("Device ID:" + serial_number + "\n" + jointext(buffer_for_report_but_html[currently_selected_last_scan],"<br>"))
+	if(connected_to)
+		buffer_for_report += list(last_scan)
+		buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+		currently_selected_last_scan = buffer_for_report.len
+	print_report.info += ("Device ID:" + serial_number + "\n" + jointext(buffer_for_report_but_html[currently_selected_last_scan] + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
+	print_report.info_links += ("Device ID:" + serial_number + "\n" + jointext(buffer_for_report_but_html[currently_selected_last_scan] + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
 	print_report.update_icon()
 	print_report.name = "\improper scan print-out of " + buffer_for_report[currently_selected_last_scan]["patient"]
 	user.put_in_hands(print_report)
@@ -228,6 +230,7 @@ FORENSIC SCANNER
 
 /obj/item/device/healthanalyzer/soul/get_examine_text(mob/user)
 	. = ..()
+	. += SPAN_NOTICE("A body scanner will provide more comprehensive information than this device.")
 	. += SPAN_NOTICE("It has [paper_left] out of [initial(paper_left)] report print-outs left.")
 	. += SPAN_HELPFUL("Use paper to refill it.")
 
@@ -423,8 +426,8 @@ FORENSIC SCANNER
 /obj/item/device/healthanalyzer/soul/proc/perform_scan_and_report()
 	if(ishuman(connected_from))
 		if(!popup_window)
-			//last_scan = connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien)
-			to_chat(connected_from, SPAN_NOTICE(last_scan))
+			last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
+			to_chat(connected_from, connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
 		else
 			if (!last_health_display)
 				last_health_display = new(connected_to)
@@ -476,7 +479,7 @@ FORENSIC SCANNER
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
 		heart_rate_loop.mid_length = 0.374 SECONDS
-	if(connected_to.stat > 1)
+	if(connected_to.stat > 1) //they're dead
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 		heart_rate_loop.mid_length = 3.110 SECONDS
@@ -487,7 +490,7 @@ FORENSIC SCANNER
 	if(current_beam)
 		QDEL_NULL(current_beam)
 	if(connected_from && connected_to && new_beam)
-		current_beam = connected_from.beam(connected_to, "iv_tube")
+		current_beam = connected_from.beam(get_atom_on_turf(connected_to), "iv_tube")
 
 /obj/item/device/healthanalyzer/soul/attack(mob/living/M, mob/living/user)
 	if(M == user)
@@ -521,7 +524,6 @@ FORENSIC SCANNER
 		update_beam()
 		perform_scan_and_report()
 
-///Used to standardize effects of a blood bag disconnecting improperly
 /obj/item/device/healthanalyzer/soul/proc/disconnect(bad_disconnect = FALSE)
 	if(last_scan)
 		buffer_for_report += list(last_scan)
