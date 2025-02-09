@@ -181,6 +181,10 @@
 	name = "Tray"
 	icon_state = "tray"
 	item_state = "tray"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_1.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_1.dmi'
+	)
 
 /obj/item/trash/tray/attackby(obj/item/trash/tray/I, mob/user)
 
@@ -197,7 +201,7 @@
 		w_class = SIZE_SMALL
 	if(contents.len > 7)
 		to_chat(user, SPAN_WARNING("The stack of trays begins to sway!"))
-		if(prob(30) || contents.len == 10)
+		if(prob(30))
 			stack_collapse()
 		//return FALSE
 	return ..()
@@ -234,8 +238,11 @@
 		if(contents.len > 4)
 			I.pixel_x = I.pixel_x + pick(list(-1, 1))
 		overlays += I
-	//if(type == /obj/item/trash/tray/UPPtray )
-	//	mob_icon = GLOB.default_onmob_icons[WEAR_L_HAND]
+		item_state = initial(item_state) + ((contents.len >= 1) ? "_" + num2text(clamp(contents.len + 1, 0, 10)) : "")
+	if(ishuman(loc))
+		var/mob/living/carbon/human/holder = loc
+		holder.update_inv_r_hand()
+		holder.update_inv_l_hand()
 
 /obj/item/trash/tray/proc/stack_collapse()
 	visible_message(SPAN_HIGHDANGER("The stack of trays collapses!!!"))
@@ -268,11 +275,14 @@
 	icon = 'icons/obj/items/food_canteen.dmi'
 	icon_state = "tray"
 
+
 /obj/item/trash/tray/UPPtray
 	name = "\improper UPP Tray"
 	desc = "Finished with its tour of duty."
 	icon = 'icons/obj/items/food.dmi'
 	icon_state = "upp_tray"
+	item_state = "upp_tray"
+
 
 
 //////////
