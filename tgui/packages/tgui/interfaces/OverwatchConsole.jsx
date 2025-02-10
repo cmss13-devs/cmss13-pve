@@ -247,7 +247,7 @@ const RoleTable = (props) => {
           Section Sergeant
         </Table.Cell>
         <Table.Cell collapsing p="4px">
-          Squad Leads
+          Squad Leaders
         </Table.Cell>
         <Table.Cell collapsing p="4px">
           Specialist
@@ -559,7 +559,7 @@ const SquadMonitor = (props) => {
                     <Button
                       icon="arrow-up"
                       color="green"
-                      tooltip="Promote marine to Squad Leader"
+                      tooltip="Promote marine to Unit Leader"
                       onClick={() => act('replace_lead', { ref: marine.ref })}
                     />
                   </Table.Cell>
