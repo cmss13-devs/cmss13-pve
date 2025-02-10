@@ -5709,7 +5709,11 @@
 /turf/open/floor/kutjevo/tan/grey_inner_edge/west,
 /area/taipei/atrium)
 "eKV" = (
-/obj/effect/vehicle_spawner/van/decrepit,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/secure{
+	pixel_x = -16;
+	pixel_y = 27
+	},
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
 "eLj" = (
@@ -22976,7 +22980,8 @@
 /turf/open/floor/asteroid,
 /area/taipei/atrium/laundry)
 "tYy" = (
-/obj/effect/vehicle_spawner/van/fixed,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/dam/truck/damaged,
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
 "tYB" = (
@@ -61649,7 +61654,7 @@ qRu
 rqJ
 rqJ
 aof
-rqJ
+tYy
 qgc
 jZh
 btG
@@ -61851,7 +61856,7 @@ oOu
 aof
 rqJ
 aof
-rqJ
+eKV
 qgc
 afN
 btG
@@ -62052,7 +62057,7 @@ fLE
 xKG
 rqJ
 aof
-tYy
+aof
 rqJ
 qgc
 afN
@@ -62658,7 +62663,7 @@ pew
 xKG
 rqJ
 aof
-eKV
+aof
 rqJ
 chQ
 djS
