@@ -388,7 +388,7 @@
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/m41aMK1/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "special_x" = 23, "special_y" = 16)
 
 
 /obj/item/weapon/gun/rifle/m41aMK1/set_gun_config_values()
@@ -478,7 +478,7 @@
 	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "special_x" = 23, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_config_values()
 	..()
@@ -1698,7 +1698,6 @@
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/bipod,
@@ -1711,7 +1710,7 @@
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/sling,
-	)
+	) // Can't take a rail light else it messes with the custom barrel
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	wield_delay = WIELD_DELAY_VERY_FAST
