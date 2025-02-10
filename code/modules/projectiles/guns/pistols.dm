@@ -4,6 +4,8 @@
 /obj/item/weapon/gun/pistol
 	icon_state = "" //should return the honk-error sprite if there's no assigned icon.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	mouse_pointer = 'icons/effects/mouse_pointer/pistol_mouse.dmi'
+
 	reload_sound = 'sound/weapons/flipblade.ogg'
 	cocked_sound = 'sound/weapons/gun_pistol_cocked.ogg'
 	empty_sound = 'sound/weapons/gun_empty.ogg'
@@ -37,9 +39,6 @@
 
 /obj/item/weapon/gun/pistol/unique_action(mob/user)
 		cock(user)
-
-/obj/item/weapon/gun/pistol/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/pistol_mouse.dmi'
 
 /obj/item/weapon/gun/pistol/set_gun_config_values()
 	..()
