@@ -36,6 +36,7 @@
 	storage_flags = STORAGE_FLAGS_BOX
 	required_skill_for_nest_opening = SKILL_MEDICAL
 	required_skill_level_for_nest_opening = SKILL_MEDICAL_MEDIC
+	max_w_class = SIZE_MEDIUM
 
 	var/icon_full //icon state to use when kit is full
 	var/possible_icons_full
@@ -76,7 +77,7 @@
 	new /obj/item/reagent_container/syringe/leporazine(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/stack/medical/ointment(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
+	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
@@ -87,11 +88,9 @@
 /obj/item/storage/firstaid/regular
 	icon_state = "firstaid"
 	desc = "It's an emergency medical kit containing basic medication and equipment. No training required to use. With medical training you can fit this in a backpack."
-	storage_slots = 8
 
 /obj/item/storage/firstaid/regular/fill_preset_inventory()
-	new /obj/item/reagent_container/glass/bottle/water(src)
-	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/blood/saline(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
@@ -111,9 +110,11 @@
 /obj/item/storage/firstaid/robust
 	icon_state = "firstaid"
 	max_w_class = SIZE_MEDIUM
+	storage_slots = 8
 
 /obj/item/storage/firstaid/robust/fill_preset_inventory()
 	new /obj/item/device/healthanalyzer/soul(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
@@ -137,8 +138,8 @@
 	new /obj/item/reagent_container/pill/carbon(src)
 	new /obj/item/reagent_container/pill/antitox(src)
 	new /obj/item/reagent_container/pill/antitox(src)
-	new /obj/item/reagent_container/syringe(src)
-	new /obj/item/reagent_container/glass/bottle/water(src)
+	new /obj/item/reagent_container/pill/antitox(src)
+	new /obj/item/reagent_container/blood/saline(src)
 	new /obj/item/reagent_container/pill/ethylredoxrazine(src)
 
 /obj/item/storage/firstaid/toxin/empty/fill_preset_inventory()
@@ -155,8 +156,8 @@
 	new /obj/item/reagent_container/pill/dexalin(src)
 	new /obj/item/reagent_container/pill/dexalin(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
-	new /obj/item/reagent_container/syringe(src)
-	new /obj/item/reagent_container/glass/bottle/water(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/pill/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
 
 /obj/item/storage/firstaid/o2/empty/fill_preset_inventory()
@@ -223,8 +224,8 @@
 	new /obj/item/reagent_container/pill/russianRed(src)
 	new /obj/item/reagent_container/pill/russianRed(src)
 	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+	new /obj/item/reagent_container/pill/imidazoline(src)
+	new /obj/item/reagent_container/pill/antitox(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
 
 /obj/item/storage/firstaid/rad/empty/fill_preset_inventory()
@@ -232,8 +233,10 @@
 
 /obj/item/storage/firstaid/surgical
 	name = "basic field surgery kit"
-	desc = "Contains a surgical line, cautery, scalpel, hemostat, retractor, drapes and an oxycodone injector for tending wounds surgically. With medical training you can fit this in a backpack."
+	desc = "Contains a health analyzer, surgical line, Synth-Graft cautery, scalpel, hemostat, retractor, drapes and an oxycodone injector for tending wounds surgically. With medical training you can fit this in a backpack."
 	icon_state = "bezerk"
+	max_w_class = SIZE_MEDIUM
+	storage_slots = 8
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/reagent_container/dropper,
@@ -248,12 +251,13 @@
 	)
 
 /obj/item/storage/firstaid/surgical/fill_preset_inventory()
+	new /obj/item/device/healthanalyzer/soul(src)
 	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/tool/surgery/cautery(src)
 	new /obj/item/tool/surgery/scalpel(src)
 	new /obj/item/tool/surgery/hemostat(src)
 	new /obj/item/tool/surgery/retractor(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 
 /obj/item/storage/firstaid/surgical/empty/fill_preset_inventory()
@@ -295,7 +299,7 @@
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/syringe/leporazine(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
@@ -304,12 +308,13 @@
 	icon_state = "softpack_green"
 
 /obj/item/storage/firstaid/softpack/toxin/fill_preset_inventory()
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+	new /obj/item/storage/syringe_case/tox(src)
+	new /obj/item/storage/pill_bottle/nitrogenwater(src)
+	new /obj/item/storage/pill_bottle/russianRed/skillless(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/storage/pill_bottle/alkysine(src)
+	new /obj/item/storage/pill_bottle/imidazoline(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
 
 
 //---------SYRINGE CASE---------
