@@ -7,7 +7,7 @@
 	desc = "A box of 700, 10x28mm caseless tungsten rounds for the M56D heavy machine gun system. Just click the M56D with this to reload it."
 	w_class = SIZE_MEDIUM
 	icon_state = "m56d_drum"
-	flags_magazine = NO_FLAGS //can't be refilled or emptied by hand
+	flags_magazine = AMMUNITION_REFILLABLE|AMMUNITION_SLAP_TRANSFER
 	caliber = "10x28mm"
 	max_rounds = 700
 	default_ammo = /datum/ammo/bullet/rifle/heavy
