@@ -80,8 +80,8 @@
 	damage_type = BURN
 	penetration = ARMOR_PENETRATION_TIER_8 //It's a freaking plasma beam
 	accurate_range = 20
-	effective_range_max = 18
-	max_range = 50
+	effective_range_max = 11
+	max_range = 20
 	var/vehicle_slowdown_time = 2 SECONDS
 	shell_speed = AMMO_SPEED_TIER_HITSCAN
 	scatter = SCATTER_AMOUNT_NONE
@@ -96,6 +96,9 @@
 	))
 
 /datum/ammo/energy/plasma/on_hit_mob(mob/M,obj/projectile/P)
+	if(M.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = M
+		L.apply_armoured_damage(damage*1.6, ARMOR_ENERGY, BURN, null, penetration)
 	burst(get_turf(M),P,damage_type, 1 , 5)
 
 /datum/ammo/energy/plasma/on_near_target(turf/T, obj/projectile/P)
@@ -120,8 +123,9 @@
 	name = "heavy plasma bolt"
 	damage = 300
 	penetration = ARMOR_PENETRATION_TIER_10
-	accurate_range = 30
-	effective_range_max = 25
+	accurate_range = 13
+	effective_range_max = 8
+	max_range = 13 // As far as a mini-scope will let them see
 	vehicle_slowdown_time = 5 SECONDS
 
 /datum/ammo/energy/plasma/heavy/on_hit_mob(mob/M,obj/projectile/P)

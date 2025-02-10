@@ -396,7 +396,9 @@
 	gun_type = /obj/item/weapon/gun/launcher/rocket/upp
 	reload_delay = 85
 
-// XM99 power/fuel cell
+//-------------------------------------------------------
+// XM99 power/fuel cells
+
 /obj/item/ammo_magazine/plasma
 	name = "\improper XM99A1 battery drum"
 	desc = "A hybrid battery cell and CdTe-pellet magazine designed to fit the XM99A series of phased plasma pulse rifles. Do not puncture or put in a microwave."
