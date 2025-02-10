@@ -12,6 +12,7 @@ They're all essentially identical when it comes to getting the job done.
 	var/bonus_overlay = null //Sprite pointer in ammo.dmi to an overlay to add to the gun, for extended mags, box mags, and so on
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_WAIST
+	flags_human_ai = AMMUNITION_ITEM
 	matter = list("metal" = 1000)
 	//Low.
 	throwforce = 2
@@ -191,6 +192,12 @@ They're all essentially identical when it comes to getting the job done.
 	default_ammo = source.default_ammo
 	gun_type = source.gun_type
 
+/obj/item/ammo_magazine/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	if(current_rounds <= 0)
+		return FALSE
+
+	return TRUE
+
 //~Art interjecting here for explosion when using flamer procs.
 /obj/item/ammo_magazine/flamer_fire_act(damage, datum/cause_data/flame_cause_data)
 	if(current_rounds < 1)
@@ -246,6 +253,7 @@ bullets/shells. ~N
 	max_rounds = 5 // For shotguns, though this will be determined by the handful type when generated.
 	flags_atom = FPRINT|CONDUCT
 	flags_magazine = AMMUNITION_HANDFUL
+	flags_human_ai = NONE
 	attack_speed = 3 // should make reloading less painful
 
 /obj/item/ammo_magazine/handful/Initialize(mapload, spawn_empty)
