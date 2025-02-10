@@ -938,13 +938,19 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
-/obj/item/attachable/sling //Purely cosmetic
+/obj/item/attachable/sling //Mostly cosmetic, some one-handed fire adjustments
 	name = "two-point sling"
 	desc = "A traditional strip of toughened nylon fabric with clips on either end for attaching to suitable mounting points on most longarms in the UA armed forces arsenals."
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "pve-sling"
 	attach_icon = "pve-sling_a"
 	slot = "rail"
+
+/obj/item/attachable/sling/New()
+	..()
+	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
+	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_2
+	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_2
 
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
@@ -2102,7 +2108,7 @@ Defined in conflicts.dm of the #defines folder.
 	stock_activated = FALSE
 	wield_delay_mod = WIELD_DELAY_NONE //starts collapsed so no delay mod
 	collapse_delay = 0.5 SECONDS
-	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION
+	flags_attach_features = ATTACH_ACTIVATION
 	attachment_action_type = /datum/action/item_action/toggle
 
 /obj/item/attachable/stock/rifle/collapsible/New()
@@ -2124,16 +2130,16 @@ Defined in conflicts.dm of the #defines folder.
 		accuracy_mod = HIT_ACCURACY_MULT_TIER_2
 		recoil_mod = -RECOIL_AMOUNT_TIER_5
 		scatter_mod = -SCATTER_AMOUNT_TIER_9
-		//it makes stuff worse when one handed
+		//it makes stuff slightly worse when one handed
 		movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
-		accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
+		accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
 		recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
-		scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
+		scatter_unwielded_mod = SCATTER_AMOUNT_TIER_7
 		aim_speed_mod = CONFIG_GET(number/slowdown_med)
 		hud_offset_mod = 5
 		icon_state = "m41_folding_on"
 		attach_icon = "m41_folding_a_on"
-		wield_delay_mod = WIELD_DELAY_VERY_FAST //added 0.2 seconds for wield, basic solid stock adds 0.4
+		wield_delay_mod = WIELD_DELAY_MIN //added 0.2 seconds for wield, basic solid stock adds 0.4
 
 	else
 		accuracy_mod = 0
