@@ -2838,11 +2838,21 @@
 /obj/structure/surface/table/almayer,
 /obj/item/prop/magazine/boots/n117{
 	pixel_x = -5;
-	pixel_y = 3
+	pixel_y = -5
 	},
 /obj/item/reagent_container/food/drinks/cans/souto/lime{
 	pixel_x = 9;
 	pixel_y = 3
+	},
+/obj/structure/machinery/computer/secure_data{
+	dir = 4;
+	pixel_y = 8;
+	req_access = null
+	},
+/obj/structure/machinery/computer/skills{
+	req_one_access = null;
+	dir = 4;
+	pixel_y = -7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
