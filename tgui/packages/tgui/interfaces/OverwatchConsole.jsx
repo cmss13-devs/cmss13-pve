@@ -48,7 +48,7 @@ const HomePanel = (props) => {
     <Section
       fontSize="20px"
       textAlign="center"
-      title="OVERWATCH DISABLED - SELECT SQUAD"
+      title="OVERWATCH DISABLED - SELECT UNIT"
     >
       <Stack justify="center" align="end" fontSize="20px">
         {data.squad_list.map((squad, index) => {
@@ -83,7 +83,7 @@ const SquadPanel = (props) => {
         <MainDashboard />
       </Collapsible>
 
-      <Collapsible title="Squad Roles" fontSize="16px">
+      <Collapsible title="Unit Roles" fontSize="16px">
         <RoleTable />
       </Collapsible>
 
@@ -93,7 +93,7 @@ const SquadPanel = (props) => {
           icon="heartbeat"
           onClick={() => setCategory('monitor')}
         >
-          Squad Monitor
+          Unit Monitor
         </Tabs.Tab>
         {!!data.can_launch_crates && (
           <Tabs.Tab
