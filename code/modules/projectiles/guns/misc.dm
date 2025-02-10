@@ -351,3 +351,154 @@
 /obj/effect/syringe_gun_dummy/Initialize()
 	create_reagents(15)
 	. = ..()
+
+
+// XM99A, The quintesential phased plasma rifle in the 40 watt range
+
+/obj/item/weapon/gun/XM99
+	name = "\improper XM99A1 phased plasma pulse rifle"
+	desc = "An experimental directed energy weapon system designed by Armat, the XM99A1 improves upon the initial models flaws with energy capacity, allowing it to fire even without a full charge in its battery cells."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "xm99a"
+	item_state = "xm99a"
+	muzzle_flash = "muzzle_flash_blue"
+	muzzle_flash_color = COLOR_PURPLE
+	w_class = SIZE_LARGE
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
+	unacidable = TRUE
+	map_specific_decoration = TRUE
+	indestructible = 1
+	fire_sound = 'sound/weapons/gun_xm99.ogg'
+	reload_sound = 'sound/weapons/handling/gun_xm99_reload.ogg'
+	unload_sound = 'sound/weapons/handling/gun_xm99_unload.ogg'
+	current_mag = /obj/item/ammo_magazine/plasma
+	force = 12
+	wield_delay = WIELD_DELAY_SLOW
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/pve,
+	)
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_INTERNAL_MAG
+	flags_item = TWOHANDED
+
+	var/obj/effect/ebeam/plasma_beam_type = /obj/effect/ebeam/plasma
+	///world.time value, to prevent a lightshow without actually firing
+	var/beam_cooldown = 0
+	///Delay before another beam can start again, in tenths of seconds
+	var/beam_delay = 20
+
+
+// Stolen from the rocket-launcher code to prevent the +1 shot in the plasma rifle
+/obj/item/weapon/gun/XM99/load_into_chamber(mob/user)
+	return ready_in_chamber()
+
+/obj/item/weapon/gun/XM99/reload_into_chamber(mob/user)
+	return TRUE
+
+/obj/item/weapon/gun/XM99/delete_bullet(obj/projectile/projectile_to_fire, refund = 0)
+	if(!current_mag)
+		return
+	qdel(projectile_to_fire)
+	if(refund)
+		current_mag.current_rounds++
+	return TRUE
+
+/obj/item/weapon/gun/XM99/proc/make_battery_drum(mob/user, drop_override = 0, remaining_rounds = 0)
+	if(!current_mag)
+		return
+
+	var/obj/item/ammo_magazine/plasma/cell = new current_mag.type()
+	if(remaining_rounds <= 0)
+		cell.current_rounds = 0
+	if(drop_override || !user) //If we want to drop it on the ground or there's no user.
+		cell.forceMove(get_turf(src)) //Drop it on the ground.
+	else
+		cell.current_rounds = remaining_rounds
+		user.put_in_hands(cell)
+		cell.update_icon()
+
+/obj/item/weapon/gun/XM99/reload(mob/user, obj/item/ammo_magazine/plasma)
+	if(!current_mag)
+		return
+	if(flags_gun_features & GUN_BURST_FIRING)
+		return
+
+	if(!plasma || !istype(plasma) || !istype(src, plasma.gun_type))
+		to_chat(user, SPAN_WARNING("That's not going to fit!"))
+		return
+
+	if(current_mag.current_rounds > 0)
+		to_chat(user, SPAN_WARNING("[src] is already loaded!"))
+		return
+
+	if(plasma.current_rounds <= 0)
+		to_chat(user, SPAN_WARNING("That battery drum is empty!"))
+		return
+
+	if(user)
+		to_chat(user, SPAN_NOTICE("You begin reloading [src]. Hold still..."))
+		if(do_after(user,current_mag.reload_delay, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+			qdel(current_mag)
+			user.drop_inv_item_on_ground(plasma)
+			current_mag = plasma
+			plasma.forceMove(src)
+			replace_ammo(,plasma)
+			to_chat(user, SPAN_NOTICE("You load the new battery drum into [src]."))
+			playsound(user, reload_sound, 25, 1)
+		else
+			to_chat(user, SPAN_WARNING("Your reload was interrupted!"))
+			return
+	else
+		qdel(current_mag)
+		current_mag = plasma
+		plasma.forceMove(src)
+		replace_ammo(,plasma)
+	update_icon()
+	return TRUE
+
+/obj/item/weapon/gun/XM99/unload(mob/user,  reload_override = 0, drop_override = 0)
+	if(user && current_mag)
+		to_chat(user, SPAN_NOTICE("You begin unloading [src]. Hold still..."))
+		if(do_after(user,current_mag.reload_delay, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+			playsound(user, unload_sound, 25, 1)
+			user.visible_message(SPAN_NOTICE("[user] unloads [ammo] from [src]."),
+			SPAN_NOTICE("You unload [ammo] from [src]."))
+			if(current_mag.current_rounds > 0)
+				make_battery_drum(user, drop_override, current_mag.current_rounds)
+			else
+				make_battery_drum(user, drop_override, 0)
+			current_mag.current_rounds = 0
+		update_icon()
+
+/obj/item/weapon/gun/XM99/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 17,"rail_x" = 11, "rail_y" = 22, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
+
+/obj/item/weapon/gun/XM99/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_VULTURE)
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	accuracy_mult = BASE_ACCURACY_MULT * 3 //you HAVE to be able to hit
+	scatter = SCATTER_AMOUNT_TIER_8
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/XM99/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 75, GLOB.damage_boost_vehicles),
+	))
+
+/obj/item/weapon/gun/XM99/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
+	. = ..()
+
+	var/datum/beam/plasma_beam
+	if(!current_mag)
+		return
+	if(current_mag.current_rounds <= 0)
+		return
+	plasma_beam = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
+	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, easing = SINE_EASING|EASE_OUT)
