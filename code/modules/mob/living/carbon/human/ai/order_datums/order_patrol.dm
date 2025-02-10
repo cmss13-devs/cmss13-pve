@@ -32,7 +32,9 @@
 
 /datum/ai_order/patrol/proc/set_next_waypoint()
 	var/patrol_length = length(waypoints)
-	if(current_waypoint_index <= 1)
+	if(patrol_length == 1)
+		increment = 0
+	else if(current_waypoint_index <= 1)
 		increment = 1
 	else if(current_waypoint_index >= patrol_length)
 		increment = -1
