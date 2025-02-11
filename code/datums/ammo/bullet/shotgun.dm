@@ -253,7 +253,7 @@
 	pen_armor_punch = 0
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M,P,4)
+	knockback(M, P, 4)
 /datum/ammo/bullet/shotgun/heavy/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
