@@ -108,7 +108,7 @@
 	color = "filipino"
 	key = "f"
 
-	syllables = list("pu", "ta", "ka", "ma", "y", "th", "ay", "nang", "ng", "la", "ra", "wan", "ts", "ko", "sh", "dy", "ryo", "gu", "gha", "itì", "aso", "ge", "i", "bon", "uta", "oya", "yi", "kas", "yug", "to", "to", "pi", "ba", "ran", "mpi", "sal", "ku", "no", "kan", "yan", "mai", "sa", "ging", "kung", "lang", "ito", "sa", "kar", "oon", "sang", "ari", "gus")
+	syllables = list("ako", "ito", "dito", "an", "paa", "lam", "kai", "tay", "saan", "taba", "hok", "kama", "ta", "opi", "oo", "dya", "ryo", "kas", "ngi", "nga", "asu", "kal", "lupa", "damo", "baho", "yon", "mari", "pak", "gan", "king", "atin", "ang", "ng", "sa", "nag", "kita", "han", "kan", "araw", "mala", "laba", "baka", "kay", "kina", "ni", "nina", "para", "tung", "kol", "hing", "gil", "ayon", "tungo", "bag", "ba", "bay")
 
 
 /datum/language/commando
