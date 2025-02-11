@@ -282,7 +282,7 @@ const SquadObjectives = (props) => {
 
 export const SquadInfo = () => {
   const { config, data } = useBackend<SquadProps>();
-  const fireteams = ['SQ1', 'SQ2', 'SQ3', 'Unassigned'];
+  const fireteams = ['SQ1', 'SQ2', 'Unassigned'];
 
   return (
     <Window theme="usmc" width={680} height={675}>
