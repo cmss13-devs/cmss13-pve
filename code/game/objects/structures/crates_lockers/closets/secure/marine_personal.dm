@@ -5,7 +5,7 @@
 	icon_state = "secure1"
 	can_be_stacked = TRUE
 	var/owner
-	var/job_access
+	var/job
 	var/has_cryo_gear = TRUE
 
 /obj/structure/closet/secure_closet/spawn_personal/get_examine_text(mob/user)
@@ -25,9 +25,11 @@
 		return TRUE
 	return FALSE
 
+//USCMC LOCKERS
 /obj/structure/closet/secure_closet/spawn_personal/marine
 	name = "USCMC shipboard personal locker"
 	desc = "It's an immobile secure storage unit. Contains a member of the USCMC's personal effects."
+	job = JOB_SQUAD_MARINE
 
 /obj/structure/closet/secure_closet/spawn_personal/marine/Initialize()
 	. = ..()
@@ -36,6 +38,9 @@
 		new /obj/item/clothing/shoes/marine/jungle/knife(src)
 		new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
 
+/obj/structure/closet/secure_closet/spawn_personal/marine/smartgunner
+
+//NAVINF LOCKERS
 /obj/structure/closet/secure_closet/spawn_personal/upp
 	name = "Naval Infantry shipboard personal locker"
 	desc = "It's an immobile secure storage unit. Contains a member of the UPPAC's personal effects."
@@ -47,3 +52,15 @@
 		new /obj/item/clothing/shoes/marine/upp(src)
 		new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
 
+//FORECON lockers
+/obj/structure/closet/secure_closet/spawn_personal/marine/forecon
+	name = "FORECON shipboard personal locker"
+	desc = "It's an immobile secure storage unit. Contains a member of FORECON's personal effects."
+	job = JOB_SQUAD_MARINE_FORECON
+
+/obj/structure/closet/secure_closet/spawn_personal/upp/Initialize()
+	. = ..()
+	if(has_cryo_gear)
+		new /obj/item/clothing/under/marine/standard(src)
+		new /obj/item/clothing/shoes/marine/jungle/knife(src)
+		new /obj/item/device/radio/headset/almayer/marine/solardevils/forecon(src)
