@@ -477,6 +477,7 @@
 		list("Ointment", floor(scale * 10), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
 		list("Roll of Gauze", floor(scale * 10), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
 		list("Splints", floor(scale * 10), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+		list("Saline IV bag", floor(scale * 5), /obj/item/reagent_container/blood/saline, VENDOR_ITEM_REGULAR),
 
 		list("AUTOINJECTORS", -1, null, null),
 		list("Autoinjector (Bicaridine)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/bicaridine, VENDOR_ITEM_REGULAR),
@@ -817,6 +818,7 @@
 		list("Roll Of Gauze", 4, /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
 		list("Ointment", 4, /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
 		list("Medical Splints", 4, /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+		list("Saline IV bag", 2, /obj/item/reagent_container/blood/saline, VENDOR_ITEM_REGULAR),
 
 		list("UTILITY", -1, null, null),
 		list("Rebreather", 2, /obj/item/clothing/mask/rebreather, VENDOR_ITEM_REGULAR)
