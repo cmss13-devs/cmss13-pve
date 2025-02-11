@@ -1027,7 +1027,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper tactical helmet"
 	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries. This configuration lacks the iconic ballistic mask popularized by Soldier of Fortune magazine."
 	icon_state = "pmc_sniper_hat"
-	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_EYES
+	flags_armor_protection = BODY_FLAG_HEAD
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
@@ -1035,7 +1035,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = COVEREYES|BLOCKSHARPOBJ
-	flags_inv_hide = NO_FLAGS
+	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner
