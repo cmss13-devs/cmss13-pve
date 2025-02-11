@@ -71,6 +71,17 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
+"az" = (
+/obj/structure/ladder{
+	height = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/dorms)
 "aD" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -301,7 +312,7 @@
 	pixel_y = 2
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/strata/multi_tiles,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "bM" = (
 /obj/structure/sign/safety/galley{
@@ -1144,6 +1155,13 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
+"gy" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/dorms)
 "gD" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Astronavigational Deck";
@@ -1407,7 +1425,7 @@
 	pixel_y = 2
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/strata/multi_tiles,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "iK" = (
 /obj/effect/decal/warning_stripes{
@@ -1460,12 +1478,12 @@
 /area/golden_arrow/briefing)
 "jj" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/drinks/coffeecup{
-	pixel_x = 8;
-	pixel_y = 10
-	},
 /obj/item/prop/magazine/book/inframaterialism{
 	icon_state = "book_sop"
+	},
+/obj/item/reagent_container/food/drinks/tea/upp{
+	pixel_x = 8;
+	pixel_y = 8
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/canteen)
@@ -1811,7 +1829,7 @@
 	light_range = 4;
 	light_color = "#e7c0a4"
 	},
-/turf/open/floor/strata/multi_tiles,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "lJ" = (
 /obj/item/storage/box/guncase/heavy/shotgun/type23{
@@ -2231,6 +2249,13 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
+"oV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/dorms)
 "oW" = (
 /obj/item/clipboard{
 	pixel_x = -17;
@@ -2382,6 +2407,18 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"pE" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Maintenance Access";
+	dir = 1;
+	req_one_access_txt = "230"
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Maintenance Tunnels"
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/dorms)
 "pK" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -2892,6 +2929,19 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"sw" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/dorms)
 "sz" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4
@@ -3478,7 +3528,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/turf/open/floor/strata/multi_tiles,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "vz" = (
 /obj/structure/pipes/vents/pump,
@@ -3719,7 +3769,7 @@
 	pixel_x = 13;
 	pixel_y = 10
 	},
-/turf/open/floor/strata/multi_tiles,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "wM" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -4523,6 +4573,9 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
+"Bl" = (
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/golden_arrow/cryo_cells)
 "Bn" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -5029,6 +5082,18 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
+"ET" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4;
+	icon_state = "exposed01-supply"
+	},
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Maintenance Access";
+	dir = 8;
+	req_one_access_txt = "230"
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/dorms)
 "EV" = (
 /obj/structure/curtain/red,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -5983,6 +6048,15 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
+"JP" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4;
+	icon_state = "exposed01-supply"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/golden_arrow/dorms)
 "JT" = (
 /obj/structure/bed/chair/comfy,
 /obj/structure/prop/invuln/lattice_prop{
@@ -6085,6 +6159,19 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
+"KB" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Maintenance Access";
+	dir = 1;
+	req_one_access_txt = "230"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Maintenance Tunnels"
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/dorms)
 "KD" = (
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/hangar)
@@ -6681,6 +6768,13 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
+"Ou" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/dorms)
 "Oy" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -7443,6 +7537,18 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"SU" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Maintenance Tunnels"
+	},
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Maintenance Access";
+	dir = 8;
+	req_one_access_txt = "230"
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/dorms)
 "SV" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -7477,6 +7583,24 @@
 "Th" = (
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
+"Tj" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/dorms)
 "Tl" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/door_control{
@@ -7514,6 +7638,21 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"TD" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#832121"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/sign/safety/cryo{
+	pixel_y = 31;
+	pixel_x = 13
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/dorms)
 "TG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -7541,7 +7680,7 @@
 /area/golden_arrow/briefing)
 "TN" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/strata/multi_tiles,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
 "TP" = (
 /obj/structure/disposalpipe/junction{
@@ -18082,15 +18221,15 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+GV
+GV
+GV
+GV
+GV
+GV
+GV
+GV
+GV
 mV
 mV
 mV
@@ -18234,15 +18373,15 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+GV
+Yv
+Yv
+Yv
+Yv
+Yv
+Yv
+Yv
+GV
 mV
 mV
 mV
@@ -18386,15 +18525,15 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+GV
+Yv
+Rs
+Rs
+SU
+Rs
+Rs
+Yv
+GV
 mV
 mV
 mV
@@ -18539,14 +18678,14 @@ FH
 FH
 FH
 FH
-FH
+ts
+Rs
+TD
+JP
+oV
+Rs
+Yv
 GV
-GV
-mV
-mV
-mV
-mV
-mV
 mV
 mV
 mV
@@ -18692,12 +18831,12 @@ ts
 ts
 ts
 ts
+pE
+Tj
+az
+sw
+KB
 Yv
-GV
-GV
-GV
-GV
-GV
 GV
 GV
 GV
@@ -18844,11 +18983,11 @@ XL
 XL
 XL
 XL
-Yv
-Yv
-Yv
-Yv
-Yv
+Rs
+Ou
+JP
+gy
+Rs
 Yv
 Yv
 Yv
@@ -18998,7 +19137,7 @@ PO
 XL
 Rs
 Rs
-Rs
+ET
 Rs
 Rs
 Rs
@@ -21293,11 +21432,11 @@ dh
 uG
 iK
 bV
-Ml
-Ml
+Bl
+Bl
 wJ
-Ml
-Ml
+Bl
+Bl
 bV
 jQ
 Zg
@@ -21753,7 +21892,7 @@ iJ
 RR
 RR
 RR
-Ml
+Bl
 ZT
 zN
 zN
@@ -21901,11 +22040,11 @@ JN
 GY
 WZ
 bV
-Ml
-Ml
-Ml
-Ml
-Ml
+Bl
+Bl
+Bl
+Bl
+Bl
 bV
 fH
 qu
