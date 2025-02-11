@@ -1791,11 +1791,11 @@
 	dir = 1
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/m4ra/heap{
+/obj/item/ammo_box/magazine/m49a/heap{
 	pixel_y = 9;
 	pixel_x = 4
 	},
-/obj/item/ammo_box/magazine/m4ra/heap{
+/obj/item/ammo_box/magazine/m49a/heap{
 	pixel_y = -5;
 	pixel_x = 4
 	},
@@ -9558,7 +9558,7 @@
 /area/golden_arrow/cryo_cells)
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/m4ra_pve{
+/obj/item/storage/box/guncase/heavy/m49a_pve{
 	pixel_y = 18
 	},
 /obj/item/storage/box/guncase/heavy/shotgun{
@@ -19643,7 +19643,7 @@
 	icon = 'icons/obj/structures/props/misc.dmi';
 	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. There's a sizeable case with 'R-2' painted across it sitting inside."
 	},
-/obj/item/storage/box/guncase/heavy/m4ra_pve,
+/obj/item/storage/box/guncase/heavy/m49a_pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
 "pPT" = (
