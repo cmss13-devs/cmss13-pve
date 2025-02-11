@@ -863,6 +863,8 @@
 	desc = "A cheap, reliable LMG chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals."
 	icon_state = "mar50"
 	item_state = "mar50"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
+
 	fire_sound = 'sound/weapons/gun_mar40.ogg'
 	reload_sound = 'sound/weapons/handling/gun_mar40_reload.ogg'
 	unload_sound = 'sound/weapons/handling/gun_mar40_unload.ogg'
@@ -887,9 +889,6 @@
 	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
-
-/obj/item/weapon/gun/rifle/mar40/lmg/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/mar40/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 16, "rail_y" = 20, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
@@ -1259,6 +1258,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m41ae2"
 	item_state = "m41ae2"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 	reload_sound = 'sound/weapons/handling/hpr_reload.ogg'
 	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
@@ -1285,9 +1285,6 @@
 	gun_category = GUN_CATEGORY_HEAVY
 	start_automatic = TRUE
 
-/obj/item/weapon/gun/rifle/lmg/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
-
 /obj/item/weapon/gun/rifle/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
 
@@ -1308,7 +1305,6 @@
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 	aim_slowdown = SLOWDOWN_ADS_LMG
 	wield_delay = WIELD_DELAY_SLOW
-
 
 /obj/item/weapon/gun/rifle/lmg/tactical
 	current_mag = /obj/item/ammo_magazine/hpr_box/ap
@@ -1331,7 +1327,7 @@
 
 /obj/item/weapon/gun/rifle/type71
 	name = "\improper Type 71 pulse rifle"
-	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x31mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
+	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x27mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type71"
 	item_state = "type71"
@@ -1456,7 +1452,7 @@
 
 /obj/item/weapon/gun/rifle/type71/flamer
 	name = "\improper Type 71-F pulse rifle"
-	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x31mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This variant features an integrated incinerator unit."
+	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x27mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This variant features an integrated incinerator unit."
 	attachable_allowed = list(
 		/obj/item/attachable/flashlight, // Rail
 		/obj/item/attachable/magnetic_harness,
@@ -1497,7 +1493,7 @@
 
 /obj/item/weapon/gun/rifle/type71/carbine
 	name = "\improper Type 71 pulse carbine"
-	desc = "A carbine variant of the UPP's service rifle. Ergonomic, lightweight and chambered in 10x31mm, this variant has been designed to fire at a rate on-par with the M41A, leaving it less accurate but incredibly valuable in close quarters fighting."
+	desc = "A carbine variant of the UPP's service rifle. Ergonomic, lightweight and chambered in 10x27mm, this variant has been designed to fire at a rate on-par with the M41A, leaving it less accurate but incredibly valuable in close quarters fighting."
 	icon_state = "type71c"
 	item_state = "type71c"
 	aim_slowdown = SLOWDOWN_ADS_QUICK //Carbine is more lightweight
@@ -1614,9 +1610,12 @@
 	desc = "The M49A battle rifle is a designated marksman rifle in service with the USCM. Sporting a bullpup configuration, the M49A battle rifle is perfect for reconnaissance and fire support teams.\nTakes *only* non-high-velocity M49A magazines."
 	icon_state = "m49a"
 	item_state = "m49a"
+	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
+
 	fire_sound = 'sound/weapons/gun_m49a.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+
 	current_mag = /obj/item/ammo_magazine/rifle/m49a
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -1645,9 +1644,6 @@
 	wield_delay = WIELD_DELAY_VERY_FAST
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	//map_specific_decoration = TRUE
-
-/obj/item/weapon/gun/rifle/m49a/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/sniper_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/m49a/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 21, "under_x" = 30, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "special_x" = 37, "special_y" = 16)
@@ -2040,9 +2036,12 @@
 	desc = "An experimental shotgun model going through testing trials in the USCM. Based on the original civilian and CMB version, the XM51 is a mag-fed, pump-action shotgun. It utilizes special 16-gauge breaching rounds which are effective at breaching walls and doors. Users are advised not to employ the weapon against soft or armored targets due to low performance of the shells."
 	icon_state = "xm51"
 	item_state = "xm51"
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+
 	fire_sound = 'sound/weapons/gun_shotgun_xm51.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+
 	current_mag = /obj/item/ammo_magazine/rifle/xm51
 	attachable_allowed = list(
 		/obj/item/attachable/bayonet,
@@ -2070,9 +2069,6 @@
 	var/burst_count = 0 //To detect when the burst fire is near its end.
 	COOLDOWN_DECLARE(allow_message)
 	COOLDOWN_DECLARE(allow_pump)
-
-/obj/item/weapon/gun/rifle/xm51/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
 
 /obj/item/weapon/gun/rifle/xm51/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 18, "rail_x" = 12, "rail_y" = 20, "under_x" = 24, "under_y" = 13, "stock_x" = 15, "stock_y" = 16)
