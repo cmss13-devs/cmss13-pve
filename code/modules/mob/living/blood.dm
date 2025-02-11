@@ -310,8 +310,8 @@
 	if(!O)
 		O = new(T)
 
-/mob/living/carbon/human/proc/spray_blood(turf/T, spray_dir, limb)
-	var/angle = rand(0,360)
+/mob/living/carbon/human/proc/spray_blood(turf/T, spray_angle_offset, limb)
+	var/angle = 0
 	var/obj/limb/O = limb
 	var/newdir = src.dir
 	/*
@@ -336,9 +336,6 @@
 		newdir = turn(dir, 90) // Turn left
 	else if(O.body_part == BODY_FLAG_ARM_RIGHT || O.body_part == BODY_FLAG_LEG_RIGHT || O.body_part == BODY_FLAG_HAND_RIGHT || O.body_part == BODY_FLAG_FOOT_RIGHT)
 		newdir = turn(dir, -90) // Turn right
-	else
-    // Handle other body parts if necessary, or leave as is
-		newdir = dir
 
 	if(newdir == 8) // WEST
 		angle = rand(337.5, 382.5) % 360 // Wrap around for circular angles
@@ -354,6 +351,7 @@
 		angle = rand(247.5, 292.5)
 	else if(newdir == 10) // SOUTHWEST
 		angle = rand(292.5, 337.5)
+	angle = (spray_angle_offset + angle) % 360
 	//angle = angle % 360
 
 	if(angle > 337.5 || angle <= 22.5)
@@ -377,7 +375,7 @@
 			SPAN_WARNING("You see a gush of blood spray from [src]'s [O.display_name]!"),
 			SPAN_HIGHDANGER("Blood sprays from your [O.display_name]!"),
 			SPAN_HIGHDANGER("You hear something spray violently!"))
-	for(var/i = 1 to (src.blood_volume/180))
+	for(var/i = 1 to (src.blood_volume / 170))
 		T = get_step(T, newdir)
 		if(T.density)
 			break
@@ -389,34 +387,45 @@
 					to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!"))
 					sprayed_with_blood.apply_effect(9, EYE_BLUR)
 					break
+
 		var/reverse_odd_numbered_decals
 		if(i % 2 != 0)
 			reverse_odd_numbered_decals = 1
 		else
 			reverse_odd_numbered_decals = -1
-		var/offset_to_avoid_loc_overlap = 0
-		/*if(reverse_odd_numbered_decals == 1)
-			theloc = get_step(src, 1)
-			offset_to_avoid_loc_overlap = -32
-		else
-			theloc = src.loc
-			offset_to_avoid_loc_overlap = 0*/
-		var/obj/effect/decal/cleanable/blood/squirt/blood_spraying = new /obj/effect/decal/cleanable/blood/squirt(src.loc)
-		blood_spraying.pixel_y = (((((32*sin(angle)))*i)+offset_to_avoid_loc_overlap))
-		blood_spraying.pixel_x = (((((32*cos(angle)))*reverse_odd_numbered_decals)*i)*reverse_odd_numbered_decals)*-1
 
-		//var/new_T = locate(T.x + ((((((32*sin(angle)))*i)+offset_to_avoid_loc_overlap))/32), T.y + (((((((32*cos(angle)))*reverse_odd_numbered_decals)*i)*reverse_odd_numbered_decals)*-1)/32), T.z)
-		//new /obj/item/device/aicard(new_T)
-		blood_spraying.apply_transform(turn(transform,angle))
-		if(!src.body_position == LYING_DOWN) //I don't know why it turns 90 degress when the human is down. Don't ask.
+
+		// total pixel shift
+		var/decal_pixel_y = 32 * sin(angle) * i
+		var/decal_pixel_x = (((32 * cos(angle)) * reverse_odd_numbered_decals * i) * reverse_odd_numbered_decals) * -1
+
+		// it gets weird if it is at 31.1 or so pixels, goes a tile more than needed // fix later
+		var/tile_offset_x = 0
+		if( abs(decal_pixel_x) > 31 )
+			tile_offset_x = (decal_pixel_x >= 0 ? floor(decal_pixel_x / world.icon_size) : ceil(decal_pixel_x / world.icon_size))
+
+		var/tile_offset_y = 0
+		if( abs(decal_pixel_y) > 31 )
+			tile_offset_y = (decal_pixel_y >= 0 ? floor(decal_pixel_y / world.icon_size) : ceil(decal_pixel_y / world.icon_size))
+
+		var/turf/new_turf = get_turf(locate(src.x + tile_offset_x, src.y + tile_offset_y, src.z))
+
+		// remainder within the tile.
+		var/obj/effect/decal/cleanable/blood/squirt/blood_spraying = new /obj/effect/decal/cleanable/blood/squirt(new_turf)
+		blood_spraying.pixel_x = decal_pixel_x % world.icon_size
+		blood_spraying.pixel_y = decal_pixel_y % world.icon_size
+
+		blood_spraying.apply_transform(turn(transform, angle))
+
+		if(!src.body_position == LYING_DOWN) // I don't know why it turns 90° when the human is down. Don't ask.
 			blood_spraying.icon_state = "squirt4"
 		else
 			blood_spraying.icon_state = "squirt1"
 		blood_spraying.color = get_blood_color()
-		//to_world(angle)
-		//blood_spraying.pixel_x = rand(-2,2)
-		//blood_spraying.pixel_y = rand(-2,2)
+		blood_spraying.pixel_x = blood_spraying.pixel_x + rand(-1, 1)
+		blood_spraying.pixel_y = blood_spraying.pixel_y + rand(-1, 1)
 		playsound(src, 'sound/effects/blood_squirt.ogg', 50, TRUE)
+
 
 /obj/effect/decal/cleanable/blood/squirt
 	allow_this_to_overlap = TRUE

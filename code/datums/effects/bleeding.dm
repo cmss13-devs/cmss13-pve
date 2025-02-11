@@ -2,8 +2,8 @@
 #define CRYO_BLOOD_REDUCTION 0.67
 #define THWEI_BLOOD_REDUCTION 0.75
 #define BLOOD_ADD_PENALTY 1.5
-#define BLOOD_SPRAY_LOSS_MULTIPLIER 30
-
+#define BLOOD_SPRAY_LOSS_MULTIPLIER 65
+#define BLOOD_SPRAY_LOSS_FALLOFF 1.5
 /datum/effects/bleeding
 	effect_name = "bleeding"
 	duration = null
@@ -93,6 +93,12 @@
 	flags = INF_DURATION | NO_PROCESS_ON_DEATH | DEL_ON_UNDEFIBBABLE
 	var/has_been_bandaged = FALSE
 	var/show_spray_immediately = TRUE
+	var/spray_angle_offset = 0
+
+/datum/effects/bleeding/internal/New(atom/A, obj/limb/L = null, damage = 0)
+	..()
+	spray_angle_offset = rand(-45,45)
+
 
 /datum/effects/bleeding/internal/process_mob()
 	. = ..()
@@ -117,13 +123,13 @@
 
 	blood_loss = max(blood_loss, 0) // Bleeding shouldn't give extra blood even if its only 1 tick
 	affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*0.5, 0) //
-	if(prob(10) || show_spray_immediately)
+	if(prob(5) || show_spray_immediately)
 		if(!has_been_bandaged) //If Arterial has been packed, only remove blood passively every tick
 			show_spray_immediately = FALSE
-			affected_mob.spray_blood(get_turf(affected_mob), pick(GLOB.alldirs), limb)
-			affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*BLOOD_SPRAY_LOSS_MULTIPLIER*(affected_mob.blood_volume/BLOOD_VOLUME_NORMAL), 0)
+			affected_mob.spray_blood(get_turf(affected_mob), spray_angle_offset, limb)
+			affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss * BLOOD_SPRAY_LOSS_MULTIPLIER * ((affected_mob.blood_volume / BLOOD_VOLUME_NORMAL) ** BLOOD_SPRAY_LOSS_FALLOFF), 0) //less punishing at lower volume
 		else
-			if(prob(15))
+			if(prob(10))
 				has_been_bandaged = FALSE
 				affected_mob.visible_message(\
 			SPAN_WARNING("The gauze on [affected_mob]'s [limb.display_name] is soaked through!"),

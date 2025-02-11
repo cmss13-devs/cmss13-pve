@@ -86,7 +86,7 @@
 			if(!I.has_been_bandaged)
 				if(M == user)
 					user.visible_message(SPAN_WARNING("[user] fumbles with [src]"), SPAN_WARNING("You fumble with [src]..."))
-					time_to_take = 15 SECONDS
+					time_to_take = 5 SECONDS
 				if(do_after(user, time_to_take * user.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
 					possessive = "[user == M ? "your" : "\the [M]'s"]"
 					possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
@@ -210,7 +210,7 @@
 			if(!I.has_been_bandaged)
 				if(M == user)
 					user.visible_message(SPAN_WARNING("[user] fumbles with [src]"), SPAN_WARNING("You fumble with [src]..."))
-					time_to_take = 10 SECONDS
+					time_to_take = 2.5 SECONDS
 				if(do_after(user, time_to_take * user.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
 					possessive = "[user == M ? "your" : "\the [M]'s"]"
 					possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
