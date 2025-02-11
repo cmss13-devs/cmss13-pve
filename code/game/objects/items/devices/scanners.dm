@@ -501,6 +501,9 @@ FORENSIC SCANNER
 		disconnect()
 		return
 
+	if(connected_to)
+		disconnect(TRUE)
+
 	if(user.action_busy)
 		return
 
