@@ -871,6 +871,9 @@
 	icon_state = "drop_pouch"
 	hold = /obj/item/storage/internal/accessory/drop_pouch
 
+/obj/item/clothing/accessory/storage/droppouch/upp
+	icon_state = "upp_drop_pouch_alt"
+
 /obj/item/storage/internal/accessory/drop_pouch
 	w_class = SIZE_LARGE //Allow storage containers that's medium or below
 	storage_slots = null
@@ -890,7 +893,7 @@
 	hold = /obj/item/storage/internal/accessory/smallpouch
 
 /obj/item/clothing/accessory/storage/smallpouch/upp
-	icon_state = "upp_pouch"
+	icon_state = "upp_pouch_alt"
 
 /obj/item/storage/internal/accessory/smallpouch
 	w_class = SIZE_LARGE

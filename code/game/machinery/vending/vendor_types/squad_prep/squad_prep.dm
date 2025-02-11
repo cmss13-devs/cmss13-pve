@@ -231,7 +231,7 @@
 		list("Type 90 Pattern Magazine Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppmags, VENDOR_ITEM_REGULAR),
 		list("Type 78 Pattern Small Pouch Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppsmall, VENDOR_ITEM_REGULAR),
 		list("Type 77 Pattern Pouch Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral, VENDOR_ITEM_REGULAR),
-		list("Drop Pouch", round(max(1,(scale * 2))), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", round(max(1,(scale * 2))), /obj/item/clothing/accessory/storage/droppouch/upp, VENDOR_ITEM_REGULAR),
 		list("Leg Pouch", 4, /obj/item/clothing/accessory/storage/smallpouch/upp, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
