@@ -199,12 +199,12 @@
 
 /obj/item/reagent_container/blood/saline
 	name = "saline solution pack"
-	volume = 50
-	bag_initial_reagents = 	list("saline" = 50)
+	volume = 100
+	bag_initial_reagents = 	list("saline" = 100)
 
 /obj/item/reagent_container/blood/saline/Initialize()
 	. = ..()
-	desc = "A mixture of water, sodium chloride and glucose made to treat " + SPAN_HELPFUL("blood loss, the symptoms of minor poisoning and hyperthermia. ") + "It is not a proper substitute for blood, and " + SPAN_DANGER("administering more than half the bag within a short timeframe will cause dizziness and eventually muscle seizures.")
+	desc = "A mixture of water, sodium chloride and glucose made to treat " + SPAN_HELPFUL("blood loss, the symptoms of minor poisoning and hyperthermia. ") + "It is not a proper substitute for blood, and " + SPAN_DANGER("administering more than half the bag within a short timeframe will cause dizziness, swelling of the eyes and eventually muscle seizures.")
 
 #undef BLOOD_BAG_INJECTING
 #undef BLOOD_BAG_TAKING
