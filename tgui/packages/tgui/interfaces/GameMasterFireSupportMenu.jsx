@@ -91,6 +91,21 @@ export const GameMasterFireSupportMenu = (props, context) => {
               </Button>
             ))}
           </Collapsible>
+
+          <Collapsible content="Chemical Weapons">
+            {data.chemical_ordnance_options.map((ordnance, i) => (
+              <Button
+                selected={data.selected_ordnance === ordnance}
+                key={i}
+                width={'140px'}
+                onClick={() => {
+                  act('set_selected_ordnance', { ordnance });
+                }}
+              >
+                {ordnance}
+              </Button>
+            ))}
+          </Collapsible>
         </Section>
       </Window.Content>
     </Window>

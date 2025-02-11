@@ -7,11 +7,8 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun
 	w_class = SIZE_LARGE
-	fire_sound = 'sound/weapons/gun_shotgun.ogg'
-	reload_sound = "shell_load"
-	cocked_sound = 'sound/weapons/gun_shotgun_reload.ogg'
-	var/break_sound = 'sound/weapons/handling/gun_mou_open.ogg'
-	var/seal_sound = 'sound/weapons/handling/gun_mou_close.ogg'
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+
 	accuracy_mult = 1.15
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
 	gun_category = GUN_CATEGORY_SHOTGUN
@@ -20,6 +17,13 @@ can cause issues with ammo types getting mixed up during the burst.
 	has_empty_icon = FALSE
 	has_open_icon = FALSE
 	fire_delay_group = list(FIRE_DELAY_GROUP_SHOTGUN)
+
+	fire_sound = 'sound/weapons/gun_shotgun.ogg'
+	reload_sound = "shell_load"
+	cocked_sound = 'sound/weapons/gun_shotgun_reload.ogg'
+	var/break_sound = 'sound/weapons/handling/gun_mou_open.ogg'
+	var/seal_sound = 'sound/weapons/handling/gun_mou_close.ogg'
+
 	map_specific_decoration = FALSE
 	var/gauge = "12g"
 
@@ -244,7 +248,6 @@ can cause issues with ammo types getting mixed up during the burst.
 	item_state = "mk221"
 
 	fire_sound = "gun_shotgun_tactical"
-	firesound_volume = 20
 
 	flags_equip_slot = SLOT_BACK
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat
@@ -259,6 +262,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/stock/tactical,
+		/obj/item/attachable/sling,
 	)
 
 /obj/item/weapon/gun/shotgun/combat/Initialize(mapload, spawn_empty)
@@ -286,24 +290,14 @@ can cause issues with ammo types getting mixed up during the burst.
 	. = ..()
 	if(in_chamber) . += "It has a chambered round."
 
+/obj/item/weapon/gun/shotgun/combat/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/unloaded
+
+/obj/item/weapon/gun/shotgun/combat/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/slug
 
 /obj/item/weapon/gun/shotgun/combat/riot
-	name = "\improper M120/R tactical shotgun"
-	icon_state = "mp220"
-	item_state = "mp220"
-	desc = "A successor to the Benelli M4 Super 90, the M120 tactical shotgun is in service with the USCM due its easy maneuverability in close quarters, 12 gauge chambering, high firerate and integrated U1 underslung grenade launcher. While not part of the standard doctrine, they are common none the less. This one comes with a blue steel finish to denote its function as a riot shotgun. The internal tube magazine stores 6 shells and the U1 grenade launcher stores three grenades."
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/riot
-
-/obj/item/weapon/gun/shotgun/combat/guard
-	desc = "The Weyland-Yutani M120 Shotgun, a semi-automatic shotgun with a quick fire rate. Equipped with a red handle to signify its use with Military Police Honor Guards."
-	icon_state = "mp221"
-	item_state = "mp221"
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/bayonet)
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat
-
-/obj/item/weapon/gun/shotgun/combat/covert
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel)
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat
 
 //SOF MK210, an earlier developmental variant of the MK211 tactical used by USCM SOF.
 /obj/item/weapon/gun/shotgun/combat/marsoc
@@ -399,17 +393,51 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil = RECOIL_AMOUNT_TIER_1
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
+/obj/item/weapon/gun/shotgun/type23/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+
+/obj/item/weapon/gun/shotgun/type23/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
 
 /obj/item/weapon/gun/shotgun/type23/riot
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/riot
+
+/obj/item/weapon/gun/shotgun/pump/type23
 	name = "\improper KS-29 riot shotgun"
-	desc = "A contemporary semi-automatic design based off of the KS-23, a Soviet-era riot shotgun chambered in 6 gauge shells. Like its Naval Infantry sibling, it is downgraded to 8 gauge chambering in order to make it more controllable without much loss to overall firepower and allow for easier storage of large quantities of shells on the individual user. Its internal tube magazine can store 4 shells."
+	desc = "A contemporary pump-action design based off of the KS-23, a Soviet-era riot shotgun chambered in 6 gauge shells. Like its Naval Infantry sibling, it is downgraded to 8 gauge chambering in order to make it more controllable without much loss to overall firepower and allow for easier storage of large quantities of shells on the individual user. Its internal tube magazine can store 4 shells."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type23_wood"
 	item_state = "type23_wood"
+	fire_sound = 'sound/weapons/gun_type23.ogg'
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
+	attachable_allowed = list(/obj/item/attachable/stock/type23/wood)
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	flags_equip_slot = SLOT_BACK
+	gauge = "8g"
 	starting_attachment_types = list(/obj/item/attachable/stock/type23/wood)
 
-/obj/item/weapon/gun/shotgun/type23/riot/set_gun_attachment_offsets()
+/obj/item/weapon/gun/shotgun/pump/type23/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = 16, "stock_y" = 15)
+
+/obj/item/weapon/gun/shotgun/pump/type23/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_4
+	scatter_unwielded = SCATTER_AMOUNT_TIER_1
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_1
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+
+/obj/item/weapon/gun/shotgun/pump/type23/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+
+/obj/item/weapon/gun/shotgun/pump/type23/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
+
+/obj/item/weapon/gun/shotgun/pump/type23/riot
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/riot
 
 //-------------------------------------------------------
 //DOUBLE SHOTTY
@@ -996,7 +1024,6 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun
 	flags_equip_slot = SLOT_BACK
 	fire_sound = 'sound/weapons/gun_shotgun.ogg'
-	firesound_volume = 60
 	var/pump_sound = "shotgunpump"
 	var/pump_delay //Higher means longer delay.
 	var/recent_pump //world.time to see when they last pumped it.
@@ -1022,6 +1049,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/stock/shotgun,
+		/obj/item/attachable/sling,
 	)
 
 /obj/item/weapon/gun/shotgun/pump/Initialize(mapload, spawn_empty)
@@ -1107,6 +1135,9 @@ can cause issues with ammo types getting mixed up during the burst.
 		to_chat(user, SPAN_WARNING("You release the locking mechanism on [src]."))
 		pumped = FALSE
 	return ..()
+
+/obj/item/weapon/gun/shotgun/pump
+	current_mag = /obj/item/ammo_magazine/internal/shotgun
 
 //-------------------------------------------------------
 

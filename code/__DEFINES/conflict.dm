@@ -3,6 +3,8 @@
 #define GRAB_AGGRESSIVE 1
 #define GRAB_CARRY   2
 #define GRAB_CHOKE   3
+/// Alien-specific grab, somewhat between an aggressive and choke. Limited to AI only for the moment.
+#define GRAB_XENO	 4
 
 //Ammo defines for gun/projectile related things.
 
@@ -249,7 +251,8 @@
 #define HEALTH_WALL_XENO_REFLECTIVE 300
 #define HEALTH_WALL_XENO_MEMBRANE_THICK 600
 
-#define HEALTH_DOOR 1200
+#define HEALTH_DOOR 2400
+#define HEALTH_ASSEMBLY 400
 #define HEALTH_DOOR_XENO 600
 #define HEALTH_DOOR_XENO_THICK 900
 

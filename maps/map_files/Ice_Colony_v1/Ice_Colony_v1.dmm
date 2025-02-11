@@ -1428,7 +1428,6 @@
 "cui" = (
 /obj/structure/machinery/optable,
 /obj/effect/landmark/xeno_spawn,
-/obj/effect/landmark/corpsespawner/colonist/random/burst,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
 "cux" = (

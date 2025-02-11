@@ -65,3 +65,23 @@
   Max-023:
   - rscadd: Scabbard and pouch added to the M37 kitbox
   - rscadd: Kitbox now in the armory like it was intended
+2024-09-30:
+  AndroBetel:
+  - balance: Sadar buff
+  BonniePandora:
+  - rscadd: Adds paygrades of the US Army, along with their rank-pins
+  - code_imp: Changed paygrades of the USASF to actually have paygrade values
+  - rscadd: added the M579 ADS-C vehicle
+  - rscadd: added the new weapons, ammo, ammo-storage and viewport console for the
+      above
+  - bugfix: fixed a typo in the vehicles.dm file whilst I was at it
+  - imageadd: new turf icon added for ADS-C interior
+  - mapadd: added new interior for the M579
+  - qol: USCM Synth headsets no longer cluttered up with all the PVP tracking options,
+      now they can track PVE relevant options only, with the Platoon sergeant being
+      the default option.
+  Doubleumc:
+  - ui: tacmap can be accessed by main platoon
+  Max-023:
+  - rscdel: Random M40 HEFA removed from Big Red
+  - rscdel: Random meme bible removed from Big Red

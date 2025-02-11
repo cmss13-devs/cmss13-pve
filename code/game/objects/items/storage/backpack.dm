@@ -418,10 +418,10 @@
 
 /obj/item/storage/backpack/marine
 	name = "\improper lightweight IMP backpack"
-	desc = "The standard-issue pack of the USCM forces. Designed to lug gear into the battlefield."
+	desc = "The standard-issue pack of the USCM and US Army forces. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 armor."
 	icon_state = "marinepack"
 	item_state = "marinepack"
-	has_gamemode_skin = TRUE //replace this with the atom_flag NO_SNOW_TYPE at some point, just rename it to like, NO_MAP_VARIANT_SKIN
+	has_gamemode_skin = FALSE //replace this with the atom_flag NO_SNOW_TYPE at some point, just rename it to like, NO_MAP_VARIANT_SKIN
 	xeno_icon_state = "marinepack"
 	xeno_types = list(/mob/living/carbon/xenomorph/runner, /mob/living/carbon/xenomorph/praetorian, /mob/living/carbon/xenomorph/drone, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/defender, /mob/living/carbon/xenomorph/sentinel, /mob/living/carbon/xenomorph/spitter)
 
@@ -586,7 +586,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	phone_category = PHONE_UPP_SOLDIER
 
 /obj/item/storage/backpack/marine/satchel/rto/io
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/intel)
 	phone_category = PHONE_IO
 
 /obj/item/storage/backpack/marine/smock
@@ -651,7 +650,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon = 'icons/obj/items/clothing/belts.dmi'
 	icon_state = "g8pouch"
 	item_state = "g8pouch"
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 	can_hold_skill = list()
 
 /obj/item/storage/backpack/general_belt/equipped(mob/user, slot)
@@ -674,6 +673,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "upp_g8pouch"
 	has_gamemode_skin = FALSE
 
+//this preset is for the US Army machinegunner.
+/obj/item/storage/backpack/general_belt/army
+	desc = "A small light pouch that can be fitted around the waist or back. Used as a mass pouch for bulkier magazines."
+//this fills the preset's ammo belt
+/obj/item/storage/backpack/general_belt/army/fill_preset_inventory()
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
+
 // Scout Cloak
 /obj/item/storage/backpack/marine/satchel/scout_cloak
 	name = "\improper M68 Thermal Cloak"
@@ -681,7 +688,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "scout_cloak"
 	unacidable = TRUE
 	indestructible = TRUE
-	uniform_restricted = list(/obj/item/clothing/suit/storage/marine/M3S) //Need to wear Scout armor and helmet to equip this.
 	has_gamemode_skin = FALSE //same sprite for all gamemode.
 	var/camo_active = FALSE
 	var/camo_alpha = 10
@@ -835,7 +841,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/fuel_type = "fuel"
 	max_storage_space = 18
 	storage_slots = null
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 	xeno_types = null
 
 /obj/item/storage/backpack/marine/engineerpack/Initialize()
@@ -933,7 +939,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "flamethrower_tank"
 	max_fuel = 500
 	fuel_type = "utnapthal"
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/backpack/marine/engineerpack/flamethrower/verb/remove_reagents()
 	set name = "Empty canister"
@@ -1052,7 +1058,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/list/smartguns = typesof(/obj/item/weapon/gun/smartgun)
 	var/list/training_guns = list(
 		/obj/item/weapon/gun/rifle/m41a/training,
-		/obj/item/weapon/gun/rifle/m4ra/training,
+		/obj/item/weapon/gun/rifle/m49a/training,
 		/obj/item/weapon/gun/smg/m39/training,
 		/obj/item/weapon/gun/pistol/m4a3/training,
 		/obj/item/weapon/gun/pistol/vp70/training) //Ivan doesn't carry toys.
@@ -1097,7 +1103,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."
-	uniform_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP/commando) //Need to wear UPP commando armor to equip this.
 
 	max_storage_space = 21
 	camo_alpha = 10
@@ -1159,3 +1164,30 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "rmc_general"
 	has_gamemode_skin = FALSE
 	max_storage_space = 15
+
+//----------USASF & ARMY SECTION----------
+
+/obj/item/storage/backpack/marine/satchel/rto/navy
+	name = "\improper USASF Radio Telephone Pack"
+	desc = "A heavy-duty pack, used for telecommunications between orbiting warships and their forward observers."
+	networks_receive = list(FACTION_MARINE, FACTION_NAVY)
+	networks_transmit = list(FACTION_MARINE, FACTION_NAVY)
+
+/obj/item/storage/backpack/marine/satchel/rto/army
+	name = "\improper US Army Radio Telephone Pack"
+	desc = "A heavy-duty pack, used for telecommunications between army elements in the field and higher command elements."
+	networks_receive = list(FACTION_MARINE, FACTION_ARMY)
+	networks_transmit = list(FACTION_MARINE, FACTION_ARMY)
+
+/obj/item/storage/backpack/marine/medic/army
+	name = "\improper Army combat medic backpack"
+	desc = "A standard-issue backpack worn by US Army medics."
+	has_gamemode_skin = FALSE
+
+/obj/item/storage/backpack/marine/rocketpack/army
+	name = "\improper IMP M22 rocketeer bag"
+	desc = "A specially-designed backpack that fits to the IMP mounting frame on standard M3 & M4 pattern armors. It's made of two waterproofed reinforced tubes and one smaller satchel slung at the bottom. The two silos are for rockets, but no one is stopping you from cramming other things in there."
+
+/obj/item/storage/backpack/marine/satchel/intel/chestrig/army
+	name = "\improper Army expedition chestrig"
+	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to intelligence officers."

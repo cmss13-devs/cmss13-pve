@@ -339,3 +339,25 @@
 	V.icon = icon
 
 	qdel(src)
+
+//AA APC fancy viewport spawner
+/obj/effect/landmark/interior/spawn/interior_viewport/terminal
+	name = "ADS-C viewport console spawner"
+	icon = 'icons/obj/vehicles/interiors/general.dmi'
+	icon_state = "viewport_terminal"
+	layer = INTERIOR_DOOR_LAYER
+	color = "#009cb8"
+
+/obj/effect/landmark/interior/spawn/interior_viewport/terminal/on_load(datum/interior/I)
+	var/obj/structure/interior_viewport/terminal/V = new(loc)
+
+	V.dir = dir
+	V.vehicle = I.exterior
+	V.pixel_x = pixel_x
+	V.pixel_y = pixel_y
+	V.layer = layer
+	V.alpha = alpha
+	V.layer = layer
+	V.update_icon()
+
+	qdel(src)

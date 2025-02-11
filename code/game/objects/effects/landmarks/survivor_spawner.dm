@@ -87,7 +87,7 @@
 //Weyland-Yutani Survivors//
 
 /obj/effect/landmark/survivor_spawner/lv624_corporate_dome_cl
-	equipment = /datum/equipment_preset/survivor/wy/executive
+	equipment = /datum/equipment_preset/colonist/whitecollar
 	synth_equipment = /datum/equipment_preset/synth/survivor/wy/security_synth
 	intro_text = list("<h2>You are the last alive Executive of Lazarus Landing!</h2>",\
 	"<span class='notice'>You are aware of the xenomorph threat.</span>",\
@@ -97,7 +97,7 @@
 	spawn_priority = SPAWN_PRIORITY_VERY_HIGH
 
 /obj/effect/landmark/survivor_spawner/lv624_corporate_dome_goon
-	equipment = /datum/equipment_preset/survivor/goon
+	equipment = /datum/equipment_preset/colonist/security/weyland
 	synth_equipment = /datum/equipment_preset/synth/survivor/wy/security_synth
 	intro_text = list("<h2>You are a Corporate Security Officer!</h2>",\
 	"<span class='notice'>You are aware of the xenomorph threat.</span>",\
@@ -120,7 +120,7 @@
 	spawn_priority = SPAWN_PRIORITY_HIGH
 
 /obj/effect/landmark/survivor_spawner/bigred_crashed_pmc_medic
-	equipment = /datum/equipment_preset/survivor/pmc/medic
+	equipment = /datum/equipment_preset/pmc/pmc_medic
 	synth_equipment = /datum/equipment_preset/synth/survivor/pmc
 	intro_text = list("<h2>You are a survivor of a crash landing!</h2>",\
 	"You are NOT aware of the xenomorph threat.",\
@@ -133,7 +133,7 @@
 	spawn_priority = SPAWN_PRIORITY_VERY_HIGH
 
 /obj/effect/landmark/survivor_spawner/bigred_crashed_pmc_engineer
-	equipment = /datum/equipment_preset/survivor/pmc/engineer
+	equipment = /datum/equipment_preset/pmc/pmc_standard
 	synth_equipment = /datum/equipment_preset/synth/survivor/pmc
 	intro_text = list("<h2>You are a survivor of a crash landing!</h2>",\
 	"You are NOT aware of the xenomorph threat.",\
@@ -146,7 +146,7 @@
 	spawn_priority = SPAWN_PRIORITY_VERY_HIGH
 
 /obj/effect/landmark/survivor_spawner/bigred_crashed_cl
-	equipment = /datum/equipment_preset/survivor/wy/manager
+	equipment = /datum/equipment_preset/colonist/whitecollar
 	synth_equipment = /datum/equipment_preset/synth/survivor/pmc
 	intro_text = list("<h2>You are a survivor of a crash landing!</h2>",\
 	"<span class='notice'>You are NOT aware of the xenomorph threat.</span>",\
@@ -159,7 +159,7 @@
 	spawn_priority = SPAWN_PRIORITY_VERY_HIGH
 
 /obj/effect/landmark/survivor_spawner/shivas_panic_room_cl
-	equipment = /datum/equipment_preset/survivor/wy/asstmanager
+	equipment = /datum/equipment_preset/colonist/whitecollar
 	synth_equipment = /datum/equipment_preset/synth/survivor/wy/corporate_synth
 	intro_text = list("<h2>You are the last alive Senior Administrator on the Colony!</h2>",\
 	"<span class='notice'>You are aware of the xenomorph threat.</span>",\
@@ -169,7 +169,7 @@
 	spawn_priority = SPAWN_PRIORITY_VERY_HIGH
 
 /obj/effect/landmark/survivor_spawner/shivas_panic_room_doc
-	equipment = /datum/equipment_preset/survivor/doctor
+	equipment = /datum/equipment_preset/colonist/doctor
 	synth_equipment = /datum/equipment_preset/synth/survivor/emt_synth
 	intro_text = list("<h2>You are a Medical Doctor on the Colony!</h2>",\
 	"<span class='notice'>You are aware of the xenomorph threat.</span>",\
@@ -179,7 +179,7 @@
 	spawn_priority = SPAWN_PRIORITY_HIGH
 
 /obj/effect/landmark/survivor_spawner/shivas_panic_room_sci
-	equipment = /datum/equipment_preset/survivor/scientist
+	equipment = /datum/equipment_preset/colonist/researcher
 	synth_equipment = /datum/equipment_preset/synth/survivor/scientist_synth
 	intro_text = list("<h2>You are a Weyland-Yutani Scientist on the Colony!</h2>",\
 	"<span class='notice'>You are aware of the xenomorph threat.</span>",\
@@ -189,7 +189,7 @@
 	spawn_priority = SPAWN_PRIORITY_HIGH
 
 /obj/effect/landmark/survivor_spawner/shivas_panic_room_civ
-	equipment = /datum/equipment_preset/survivor/civilian
+	equipment = /datum/equipment_preset/colonist
 	synth_equipment = /datum/equipment_preset/synth/survivor/chef_synth
 	intro_text = list("<h2>You are a worker on the Colony!</h2>",\
 	"<span class='notice'>You are aware of the xenomorph threat.</span>",\
@@ -201,8 +201,8 @@
 //CMB Survivors//
 
 /obj/effect/landmark/survivor_spawner/fiorina_armory_cmb
-	equipment = /datum/equipment_preset/survivor/cmb/standard
-	synth_equipment = /datum/equipment_preset/synth/survivor/cmb/synth
+	equipment = /datum/equipment_preset/cmb/standard
+	synth_equipment = /datum/equipment_preset/cmb/synth
 	intro_text = list("<h2>You are a CMB Deputy!</h2>",\
 	"<span class='notice'>You are aware of the 'alien' threat.</span>",\
 	"<span class='danger'>Your primary objective is to survive the infestation.</span>")
@@ -211,8 +211,8 @@
 	spawn_priority = SPAWN_PRIORITY_VERY_HIGH
 
 /obj/effect/landmark/survivor_spawner/fiorina_armory_riot_control
-	equipment = /datum/equipment_preset/survivor/cmb/ua
-	synth_equipment = /datum/equipment_preset/synth/survivor/cmb/ua_synth
+	equipment = /datum/equipment_preset/colonist/security/prison
+	synth_equipment = /datum/equipment_preset/cmb/synth
 	intro_text = list("<h2>You are a United Americas Riot Control Officer!</h2>",\
 	"<span class='notice'>You are aware of the 'alien' threat.</span>",\
 	"<span class='danger'>Your primary objective is to survive the infestation.</span>")
@@ -241,48 +241,3 @@
 /obj/effect/landmark/survivor_spawner/lv522_forecon_squad_leader
 	equipment = /datum/equipment_preset/survivor/forecon/squad_leader
 	spawn_priority = SPAWN_PRIORITY_HIGH
-
-/obj/effect/landmark/survivor_spawner/upp/soldier
-	equipment = /datum/equipment_preset/survivor/upp/soldier
-	synth_equipment = /datum/equipment_preset/synth/survivor/upp
-	intro_text = list("<h2>You are a member of a UPP recon force!</h2>",\
-	"<span class='notice'>You ARE aware of the xenomorph threat.</span>",\
-	"<span class='danger'>Your primary objective is to survive. You believe a second dropship crashed somewhere to the south east, which was carrying additional weapons</span>")
-	story_text = "Your orders were simple, Recon the site, ascertain if there is a biological weapons program in the area, and if so to secure the colony and retrieve a sample. However your team failed to account for an active anti-air battery near the area. Both your craft and your sister ship crashed. Barely having a chance to catch your breath, you found yourself being assailed by vile xenomorphs! You and your team have barely held your ground, at the cost of four of your own, but more are coming and ammo is low. You believe an American rescue force is en route."
-	spawn_priority = SPAWN_PRIORITY_LOW
-
-/obj/effect/landmark/survivor_spawner/upp_sapper
-	equipment = /datum/equipment_preset/survivor/upp/sapper
-	synth_equipment = /datum/equipment_preset/synth/survivor/upp
-	intro_text = list("<h2>You are a member of a UPP recon force!</h2>",\
-	"<span class='notice'>You ARE aware of the xenomorph threat.</span>",\
-	"<span class='danger'>Your primary objective is to survive. You believe a second dropship crashed somewhere to the south east, which was carrying additional weapons</span>")
-	story_text = "Your orders were simple, Recon the site, ascertain if there is a biological weapons program in the area, and if so to secure the colony and retrieve a sample. However your team failed to account for an active anti-air battery near the area. Both your craft and your sister ship crashed. Barely having a chance to catch your breath, you found yourself being assailed by vile xenomorphs! You and your team have barely held your ground, at the cost of four of your own, but more are coming and ammo is low. You believe an American rescue force is en route."
-	spawn_priority = SPAWN_PRIORITY_MEDIUM
-
-/obj/effect/landmark/survivor_spawner/upp_medic
-	equipment = /datum/equipment_preset/survivor/upp/medic
-	synth_equipment = /datum/equipment_preset/synth/survivor/upp
-	intro_text = list("<h2>You are a member of a UPP recon force!</h2>",\
-	"<span class='notice'>You ARE aware of the xenomorph threat.</span>",\
-	"<span class='danger'>Your primary objective is to survive. You believe a second dropship crashed somewhere to the south east, which was carrying additional weapons</span>")
-	story_text = "Your orders were simple, Recon the site, ascertain if there is a biological weapons program in the area, and if so to secure the colony and retrieve a sample. However your team failed to account for an active anti-air battery near the area. Both your craft and your sister ship crashed. Barely having a chance to catch your breath, you found yourself being assailed by vile xenomorphs! You and your team have barely held your ground, at the cost of four of your own, but more are coming and ammo is low. You believe an American rescue force is en route."
-	spawn_priority = SPAWN_PRIORITY_MEDIUM
-
-/obj/effect/landmark/survivor_spawner/upp_specialist
-	equipment = /datum/equipment_preset/survivor/upp/specialist
-	synth_equipment = /datum/equipment_preset/synth/survivor/upp
-	intro_text = list("<h2>You are a member of a UPP recon force!</h2>",\
-	"<span class='notice'>You ARE aware of the xenomorph threat.</span>",\
-	"<span class='danger'>Your primary objective is to survive. You believe a second dropship crashed somewhere to the south east, which was carrying additional weapons</span>")
-	story_text = "Your orders were simple, Recon the site, ascertain if there is a biological weapons program in the area, and if so to secure the colony and retrieve a sample. However your team failed to account for an active anti-air battery near the area. Both your craft and your sister ship crashed. Barely having a chance to catch your breath, you found yourself being assailed by vile xenomorphs! You and your team have barely held your ground, at the cost of four of your own, but more are coming and ammo is low. You believe an American rescue force is en route."
-	spawn_priority = SPAWN_PRIORITY_HIGH
-
-/obj/effect/landmark/survivor_spawner/squad_leader
-	equipment = /datum/equipment_preset/survivor/upp/squad_leader
-	synth_equipment = /datum/equipment_preset/synth/survivor/upp
-	intro_text = list("<h2>You are a member of a UPP recon force!</h2>",\
-	"<span class='notice'>You ARE aware of the xenomorph threat.</span>",\
-	"<span class='danger'>Your primary objective is to survive. You believe a second dropship crashed somewhere to the south east, which was carrying additional weapons</span>")
-	story_text = "Your orders were simple, Recon the site, ascertain if there is a biological weapons program in the area, and if so to secure the colony and retrieve a sample. However your team failed to account for an active anti-air battery near the area. Both your craft and your sister ship crashed. Barely having a chance to catch your breath, you found yourself being assailed by vile xenomorphs! You and your team have barely held your ground, at the cost of four of your own, but more are coming and ammo is low. You believe an American rescue force is en route."
-	spawn_priority = SPAWN_PRIORITY_VERY_HIGH

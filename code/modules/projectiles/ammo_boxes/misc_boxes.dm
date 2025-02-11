@@ -97,7 +97,7 @@
 	var/flare_amount = 0
 	for(var/obj/item/storage/box/m94/flare_box in contents)
 		flare_amount += length(flare_box.contents)
-	flare_amount = floor(flare_amount / 20) //10 packs, 20 flares each, maximum total of 10 flares we can throw out
+	flare_amount = floor(flare_amount / 14) //10 packs, 14 flares each, maximum total of 10 flares we can throw out
 	return flare_amount
 
 /obj/item/ammo_box/magazine/misc/flares/process_burning(datum/cause_data/flame_cause_data)

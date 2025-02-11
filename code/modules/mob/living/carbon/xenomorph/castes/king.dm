@@ -84,17 +84,12 @@
 
 /mob/living/carbon/xenomorph/king/proc/check_block(mob/king, turf/new_loc)
 	SIGNAL_HANDLER
-	for(var/mob/living/carbon/carbon in new_loc.contents)
-		if(isxeno(carbon))
-			var/mob/living/carbon/xenomorph/xeno = carbon
-			if(xeno.hivenumber == src.hivenumber)
-				xeno.KnockDown((5 DECISECONDS) / GLOBAL_STATUS_MULTIPLIER)
-			else
-				xeno.KnockDown((1 SECONDS) / GLOBAL_STATUS_MULTIPLIER)
+	for(var/mob/living/carbon/xenomorph/xeno in new_loc.contents)
+		if(xeno.hivenumber == src.hivenumber)
+			xeno.KnockDown((5 DECISECONDS) / GLOBAL_STATUS_MULTIPLIER)
 		else
-			if(carbon.stat != DEAD)
-				carbon.apply_armoured_damage(20)
-				carbon.KnockDown((1 SECONDS) / GLOBAL_STATUS_MULTIPLIER)
+			xeno.KnockDown((1 SECONDS) / GLOBAL_STATUS_MULTIPLIER)
+
 
 		playsound(src, 'sound/weapons/alien_knockdown.ogg', 25, 1)
 

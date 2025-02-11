@@ -6,7 +6,7 @@
 #define GLOBAL_PROC "magic BS"
 
 //Game defining directives.
-#define MAIN_AI_SYSTEM "ARES v3.2"
+#define MAIN_AI_SYSTEM "TITAN 1200" //Previously ARES v3.2
 
 // Maploader bounds indices
 #define MAP_MINX 1
@@ -35,6 +35,7 @@
 #define MAP_ICE_COLONY_V3 "Shivas Snowball" //Ice Rework, low pop enabled.
 #define MAP_RUNTIME "USS Runtime"
 #define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim" // Highpop Only
+#define MAP_LV522_CHANCES_CLAIM_FORECON "LV-522 Chance's Claim Forecon"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level

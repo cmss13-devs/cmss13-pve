@@ -72,7 +72,6 @@
 	name = "Observation Shutters";
 	pixel_y = 28
 	},
-/obj/effect/landmark/corpsespawner/pmc,
 /obj/effect/decal/cleanable/vomit,
 /turf/open/floor/darkpurplecorners2,
 /area/bigredv2/caves/lambda/breakroom)

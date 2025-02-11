@@ -157,29 +157,28 @@ DEFINES in setup.dm, referenced here.
 	if(CONFIG_GET(flag/remove_gun_restrictions))
 		return TRUE //Not if the config removed it.
 
-	if(user.mind)
-		switch(user.job)
-			if(
-				"PMC",
-				"WY Agent",
-				"Corporate Liaison",
-				"Event",
-				"UPP Armsmaster", //this rank is for the Fun - Ivan preset, it allows him to use the PMC guns randomly generated from his backpack
-			) return TRUE
-		switch(user.faction)
-			if(
-				FACTION_WY_DEATHSQUAD,
-				FACTION_PMC,
-				FACTION_MERCENARY,
-				FACTION_FREELANCER,
-			) return TRUE
+	switch(user.job)
+		if(
+			"PMC",
+			"WY Agent",
+			"Corporate Liaison",
+			"Event",
+			"UPP Armsmaster", //this rank is for the Fun - Ivan preset, it allows him to use the PMC guns randomly generated from his backpack
+		) return TRUE
+	switch(user.faction)
+		if(
+			FACTION_WY_DEATHSQUAD,
+			FACTION_PMC,
+			FACTION_MERCENARY,
+			FACTION_FREELANCER,
+		) return TRUE
 
-		for(var/faction in user.faction_group)
-			if(faction in FACTION_LIST_WY)
-				return TRUE
-
-		if(user.faction in FACTION_LIST_WY)
+	for(var/faction in user.faction_group)
+		if(faction in FACTION_LIST_WY)
 			return TRUE
+
+	if(user.faction in FACTION_LIST_WY)
+		return TRUE
 
 	to_chat(user, SPAN_WARNING("[src] flashes a warning sign indicating unauthorized use!"))
 
@@ -187,7 +186,7 @@ DEFINES in setup.dm, referenced here.
 /obj/item/weapon/gun/proc/retrieval_check(mob/living/carbon/human/user, retrieval_slot)
 	if(retrieval_slot == WEAR_J_STORE)
 		var/obj/item/suit = user.wear_suit
-		if(!istype(suit, /obj/item/clothing/suit/storage/marine))
+		if(!(istype(suit, /obj/item/clothing/suit/marine) || istype(suit, /obj/item/clothing/suit/storage/marine)))
 			return FALSE
 	return TRUE
 

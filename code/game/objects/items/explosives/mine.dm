@@ -126,7 +126,7 @@
 					SPAN_WARNING("You stop disarming [src]."))
 				return
 			if(user.faction != iff_signal) //ow!
-				if(prob(75))
+				if(prob(5))
 					triggered = TRUE
 					if(tripwire)
 						var/direction = GLOB.reverse_dir[src.dir]
@@ -339,3 +339,8 @@
 /obj/item/explosive/mine/sebb/prime()
 	new /obj/item/explosive/grenade/sebb/primed(get_turf(src))
 	qdel(src)
+
+/obj/item/explosive/mine/sebb/active
+	icon_state = "grenade_sebb_planted_active"
+	base_icon_state = "grenade_sebb"
+	map_deployed = TRUE

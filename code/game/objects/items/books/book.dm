@@ -4,7 +4,7 @@
 /obj/item/book
 	name = "book"
 	icon = 'icons/obj/items/books.dmi'
-	icon_state ="book"
+	icon_state ="book_blue"
 	throw_speed = SPEED_FAST
 	throw_range = 5
 	/// upped to three because books are, y'know, pretty big. (and you could hide them inside eachother recursively forever)

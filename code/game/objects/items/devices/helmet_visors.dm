@@ -73,6 +73,11 @@
 /obj/item/device/helmet_visor/proc/get_helmet_examine_text()
 	return SPAN_NOTICE("\A [name] is flipped down.")
 
+/obj/item/device/helmet_visor/upp
+	name = "squad optic"
+	desc = "An insertable visor HUD into a standard UPP helmet."
+	hud_type = MOB_HUD_FACTION_UPP
+
 /obj/item/device/helmet_visor/medical
 	name = "basic medical optic"
 	icon_state = "med_sight"
@@ -262,7 +267,7 @@
 	if(!.)
 		return
 
-	if(user.client.view > 7)
+	if(user.client?.view > 7)
 		to_chat(user, SPAN_WARNING("You cannot use [src] while using optics."))
 		return FALSE
 

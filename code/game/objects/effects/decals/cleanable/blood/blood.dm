@@ -48,7 +48,8 @@
 	// can make footprints
 	if(!amount || !ishuman(AM))
 		return
-
+	if(basecolor == BLOOD_COLOR_XENO || basecolor == BLOOD_COLOR_XENO_ROYAL)
+		return FALSE
 	if(SSticker.mode && MODE_HAS_TOGGLEABLE_FLAG(MODE_BLOOD_OPTIMIZATION))
 		return
 

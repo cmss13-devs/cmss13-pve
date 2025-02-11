@@ -1,7 +1,7 @@
 //Terribly sorry for the code doubling, but things go derpy otherwise.
 /obj/structure/machinery/door/airlock/multi_tile
 	width = 2
-	damage_cap = 650 // Bigger = more endurable
+	damage_cap = 2600 // Bigger = more endurable
 	assembly_type = /obj/structure/airlock_assembly/multi_tile
 
 /obj/structure/machinery/door/airlock/multi_tile/close() //Nasty as hell O(n^2) code but unfortunately necessary
@@ -645,3 +645,10 @@
 	icon = 'icons/obj/structures/doors/2x1almayerdoor_glass.dmi'
 	opacity = FALSE
 	glass = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/strata
+	name = "Secure Airlock"
+	icon = 'icons/obj/structures/doors/strata/strata_2x1.dmi'
+	opacity = TRUE
+	glass = FALSE
+	openspeed = 4

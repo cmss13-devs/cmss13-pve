@@ -279,7 +279,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/santahat(new_human), WEAR_HEAD)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/black(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/general/santa(new_human), WEAR_WAIST)
 
@@ -316,7 +316,7 @@
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	UPP.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(UPP, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/ivan, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/jacket, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/m60, WEAR_J_STORE)
 	//webbing
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/m60, WEAR_IN_ACCESSORY)
@@ -328,7 +328,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/ivanberet, WEAR_HEAD)
 	//limb
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc, WEAR_HANDS)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/ivan, WEAR_WAIST)
@@ -395,7 +395,7 @@
 
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/insulated/van_bandolier(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/van_bandolier(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
 
 	//hands
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/twobore(new_human), WEAR_L_HAND)
@@ -447,7 +447,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/monkey(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human), WEAR_IN_JACKET)
@@ -467,7 +466,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/monkey(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/rifleman(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71(new_human), WEAR_IN_JACKET)

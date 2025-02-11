@@ -6,12 +6,12 @@
 /datum/ammo/bullet/shrapnel
 	name = "shrapnel"
 	icon_state = "buckshot"
-	accurate_range_min = 5
+	accurate_range_min = 4
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
-	max_range = 8
+	max_range = 4
 	damage = 25
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
@@ -34,6 +34,45 @@
 	stamina_damage = 25
 	shrapnel_chance = 0
 
+/datum/ammo/bullet/shrapnel/canister
+	name = "low velocity canister shot"
+	icon_state = "buckshot"
+
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
+	damage = 65
+	penetration = 0
+	penetration = ARMOR_PENETRATION_TIER_2
+	shell_speed = AMMO_SPEED_TIER_1
+	damage_armor_punch = 1
+	pen_armor_punch = 0
+	accurate_range = 3
+	effective_range_max = 3
+	damage_falloff = DAMAGE_FALLOFF_TIER_1
+	max_range = 5
+
+/datum/ammo/bullet/shrapnel/canister/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 2)
+	slowdown(M, P)
+
+/datum/ammo/bullet/shrapnel/canister/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 6, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 6, GLOB.damage_boost_breaching),
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_pylons)
+	))
+
+/datum/ammo/bullet/shrapnel/heavy
+	name = "shrapnel cloud"
+	icon_state = "shrapnel_light"
+	max_range = 6
+	damage = 35
+	damage_var_low = -PROJECTILE_VARIANCE_TIER_4
+	damage_var_high = PROJECTILE_VARIANCE_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_3
+	shell_speed = AMMO_SPEED_TIER_3
+	shrapnel_chance = 10
 
 /datum/ammo/bullet/shrapnel/hornet_rounds
 	name = ".22 hornet round"
@@ -68,6 +107,23 @@
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
+	))
+
+/datum/ammo/bullet/shrapnel/incendiary/light
+	damage = 10
+	penetration = ARMOR_PENETRATION_TIER_2
+
+/datum/ammo/bullet/shrapnel/incendiary/heavy	//Maximum warcrimes edition
+	accurate_range = 32
+	max_range = 8
+	shell_speed = AMMO_SPEED_TIER_2
+	damage = 20
+	penetration = ARMOR_PENETRATION_TIER_5
+
+/datum/ammo/bullet/shrapnel/incendiary/heavy/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, reagent = /datum/reagent/napalm/blue)
 	))
 
 /datum/ammo/bullet/shrapnel/metal

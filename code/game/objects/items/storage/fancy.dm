@@ -211,6 +211,25 @@
 	item_state = "lfpacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
 
+/obj/item/storage/fancy/cigarettes/spirit
+	name = "\improper American Spirit Turquoise Packet"
+	desc = "A pack of turquoise American Spirit cigarettes, for that strong full-bodied flavour you know and love."
+	icon_state = "naspacket"
+	item_state = "naspacket"
+	default_cig_type = /obj/item/clothing/mask/cigarette
+
+/obj/item/storage/fancy/cigarettes/spirit/yellow
+	name = "\improper American Spirit Yellow Packet"
+	desc = "A pack of yellow American Spirit cigarettes, for that mellow flavour you know and love."
+	icon_state = "y_naspacket"
+	item_state = "y_naspacket"
+
+/obj/item/storage/fancy/cigarettes/laika
+	name = "\improper Laika packet"
+	desc = "A Russian brand of cigarettes maintaining and honoring the legacy of the dog Laika, a space pioneer."
+	icon_state = "laikapacket"
+	item_state = "laikapacket"
+
 /obj/item/storage/fancy/cigarettes/lucky_strikes_4
 	name = "\improper Lucky Strikes Mini Packet"
 	desc = "These four-packs of Luckies come in every MRE. They're not as good as the Habana Reals that come in the LACN MREs, but at least they're free."

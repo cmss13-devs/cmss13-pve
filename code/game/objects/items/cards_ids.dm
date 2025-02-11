@@ -27,7 +27,7 @@
 	var/function = "storage"
 	var/data = "null"
 	var/special = null
-	item_state = "card-id"
+	item_state = "red-id"
 
 /obj/item/card/data/verb/label(t as text)
 	set name = "Label Disk"
@@ -44,7 +44,7 @@
 /obj/item/card/data/clown
 	name = "\proper the coordinates to clown planet"
 	icon_state = "data"
-	item_state = "card-id"
+	item_state = "red-id"
 	layer = OBJ_LAYER
 	level = 2
 	desc = "This card contains coordinates to the fabled Clown Planet. Handle with care."
@@ -60,7 +60,7 @@
 	name = "identification holo-badge"
 	desc = "A slice of encoded compressed fiber glass. Used for identification and access control."
 	icon_state = "id"
-	item_state = "card-id"
+	item_state = "red-id"
 	var/list/access
 	var/faction = FACTION_NEUTRAL
 	var/list/faction_group
@@ -166,6 +166,7 @@
 	name = "identification holo-lanyard"
 	desc = "A crude holo-lanyard. As cheap as they come."
 	icon_state = "lanyard"
+	item_state = "blue-id"
 
 /obj/item/card/id/silver
 	name = "identification holo-badge"
@@ -361,26 +362,23 @@
 	..()
 
 
-
 /obj/item/card/id/dogtag
 	name = "dog tag"
-	desc = "A marine dog tag."
+	desc = "A dog tag."
 	icon_state = "dogtag"
 	item_state = "dogtag"
 	pinned_on_uniform = FALSE
 	var/dogtag_taken = FALSE
 	card_name = "dog tags"
 
-
 /obj/item/card/id/dogtag/get_examine_text(mob/user)
 	. = ..()
 	if(ishuman(user))
 		. += SPAN_NOTICE("It reads \"[registered_name] - [assignment] - [blood_type]\"")
 
-
 /obj/item/dogtag
 	name = "information dog tag"
-	desc = "A fallen marine's information dog tag."
+	desc = "A fallen servicemember's information dog tag."
 	icon_state = "dogtag_taken"
 	icon = 'icons/obj/items/card.dmi'
 	w_class = SIZE_TINY
@@ -424,12 +422,12 @@
 	name = "CORSAT administration code"
 	desc = "A disk of data containing one of the CORSAT administration authentication codes necessary to lift the biohazard lockdown."
 	icon_state = "data"
-	item_state = "card-id"
+	item_state = "red-id"
 	unacidable = 1
 
 /obj/item/card/data/prison
 	name = "prison lockdown administration code"
 	desc = "A disk of data containing one of the prison station administration authentication codes necessary to lift the security lockdown."
 	icon_state = "data"
-	item_state = "card-id"
+	item_state = "red-id"
 	unacidable = 1

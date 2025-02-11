@@ -53,13 +53,17 @@
 	icon_state = "raincover"
 
 /obj/item/prop/helmetgarb/camocover
-	name = "camocover"
+	name = "jungle helmet cover"
 	desc = "A cover that goes over the top of an M10 pattern helmet to camoflauge it without needing the use of paints."
 	icon_state = "camocover"
 
-/obj/item/prop/helmetgarb/camocover/Initialize(mapload, ...)
-	. = ..()
-	select_gamemode_skin(/obj/item/prop/helmetgarb/camocover)
+/obj/item/prop/helmetgarb/camocover/snow
+	name = "snow helmet cover"
+	icon_state = "s_camocover"
+
+/obj/item/prop/helmetgarb/camocover/desert
+	name = "desert helmet cover"
+	icon_state = "d_camocover"
 
 /obj/item/prop/helmetgarb/rabbitsfoot
 	name = "Rabbit's Foot"
@@ -104,6 +108,7 @@
 	gender = PLURAL
 	garbage = FALSE
 	w_class = SIZE_MEDIUM
+	flags_obj = OBJ_NO_HELMET_BAND
 
 	var/nvg_maxhealth = 125
 	var/nvg_health = 125
@@ -501,41 +506,7 @@
 	name = "\improper RC6 riot shield"
 	desc = "The complimentary, but sold separate face shield associated with the RC6 riot helmet."
 	icon_state = "helmet_riot_shield"
-
-
-/obj/item/prop/helmetgarb/helmet_gasmask
-	name = "\improper M5 integrated gasmask"
-	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear. While the program failed, these rarely do."
-	icon_state = "helmet_gasmask"
-
-/obj/item/prop/helmetgarb/helmet_gasmask/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
-	..()
-	if(!istype(helmet_internal_inventory))
-		return
-	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
-
-	if(!istype(helmet_item))
-		return
-
-	helmet_item.flags_inventory |= BLOCKGASEFFECT
-	helmet_item.flags_inv_hide |= HIDEFACE
-
-/obj/item/prop/helmetgarb/helmet_gasmask/on_exit_storage(obj/item/storage/internal/helmet_internal_inventory)
-	..()
-	if(!istype(helmet_internal_inventory))
-		return
-	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
-
-	if(!istype(helmet_item))
-		return
-
-	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
-	helmet_item.flags_inv_hide &= ~(HIDEFACE)
-
-/obj/item/prop/helmetgarb/helmet_gasmask/upp
-	name = "\improper PMK-63N integrated gasmask"
-	desc = "The frontline variant of the PMK-63 produced to be compatible with in service helmets."
-	icon_state = "helmet_uppgasmask"
+	flags_obj = OBJ_NO_HELMET_BAND
 
 /obj/item/prop/helmetgarb/trimmed_wire
 	name = "trimmed barbed wire"
