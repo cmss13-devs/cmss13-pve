@@ -129,7 +129,7 @@
 			affected_mob.spray_blood(get_turf(affected_mob), spray_angle_offset, limb)
 			affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss * BLOOD_SPRAY_LOSS_MULTIPLIER * ((affected_mob.blood_volume / BLOOD_VOLUME_NORMAL) ** BLOOD_SPRAY_LOSS_FALLOFF), 0) //less punishing at lower volume
 		else
-			if(prob(10))
+			if(prob(5))
 				has_been_bandaged = FALSE
 				affected_mob.visible_message(\
 			SPAN_WARNING("The gauze on [affected_mob]'s [limb.display_name] is soaked through!"),
