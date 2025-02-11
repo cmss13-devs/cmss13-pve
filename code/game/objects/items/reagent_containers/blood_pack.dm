@@ -15,10 +15,16 @@
 	var/mob/living/carbon/human/connected_to
 	var/mob/living/carbon/human/connected_from
 	var/blood_type = null
+	var/bag_initial_reagents = null
 	var/datum/beam/current_beam
 
 /obj/item/reagent_container/blood/Initialize()
 	. = ..()
+	if(bag_initial_reagents)
+		for(var/reagent in bag_initial_reagents)
+			reagents.add_reagent(reagent, bag_initial_reagents[reagent])
+		update_icon()
+		return
 	if(blood_type != null)
 		name = "[blood_type] blood pack"
 		reagents.add_reagent("blood", initial(volume), list("viruses" = null, "blood_type" = blood_type, "resistances" = null))
@@ -115,8 +121,11 @@
 	//give blood
 	if(mode == BLOOD_BAG_INJECTING)
 		if(volume > 0)
-			var/transfer_amount = (REAGENTS_METABOLISM * 30)
+			var/transfer_amount = (REAGENTS_METABOLISM * 30)/max(reagents.reagent_list.len, 1)
 			connected_to.inject_blood(src, transfer_amount)
+			for(var/datum/reagent/other_reagent in reagents.reagent_list)
+				if(other_reagent.id != "blood")
+					reagents.trans_id_to(connected_to, other_reagent.id, transfer_amount)
 			return
 
 	// Take blood
@@ -187,5 +196,15 @@
 /obj/item/reagent_container/blood/empty
 	name = "empty blood pack"
 	desc = "An empty blood pack. Sorry, vampires, no luck here."
+
+/obj/item/reagent_container/blood/saline
+	name = "saline solution pack"
+	volume = 50
+	bag_initial_reagents = 	list("saline" = 50)
+
+/obj/item/reagent_container/blood/saline/Initialize()
+	. = ..()
+	desc = "A mixture of water, sodium chloride and glucose made to treat " + SPAN_HELPFUL("blood loss, the symptoms of minor poisoning and hyperthermia. ") + "It is not a proper substitute for blood, and " + SPAN_DANGER("administering more than half the bag within a short timeframe will cause dizziness and eventually muscle seizures.")
+
 #undef BLOOD_BAG_INJECTING
 #undef BLOOD_BAG_TAKING
