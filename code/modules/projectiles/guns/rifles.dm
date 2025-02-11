@@ -425,15 +425,14 @@
 
 /obj/item/weapon/gun/rifle/m41aMK1/elite
 	name = "\improper M41A2 pulse rifle"
-	desc = "A modified version M41A Pulse Rifle, re-engineered for better weight, handling and accuracy. Fires precise two-round bursts."
+	desc = "A modified version M41A Pulse Rifle, re-engineered for better weight, handling, and accuracy brought about by a precise two-round burst system."
 	icon_state = "m41a2"
 	item_state = "m41a2"
-
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	wield_delay = WIELD_DELAY_FAST
 	map_specific_decoration = FALSE
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible,/obj/item/attachable/attached_gun/grenade/mk1)
 	random_spawn_chance = 100
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,

@@ -103,6 +103,10 @@
 /obj/item/weapon/gun/smg/m39/tactical
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip,/obj/item/attachable/suppressor)
 
+/obj/item/weapon/gun/smg/m39/ap
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip)
+	current_mag = /obj/item/ammo_magazine/smg/m39/ap
+
 //-------------------------------------------------------
 
 /obj/item/weapon/gun/smg/m39/elite
