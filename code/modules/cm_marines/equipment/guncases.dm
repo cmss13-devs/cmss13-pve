@@ -273,6 +273,28 @@
 	if(locate(/obj/item/weapon/gun/rifle/m49a/pve/unloaded) in src.contents)
 		overlays += image(src.icon, "+r2")
 
+/obj/item/storage/box/guncase/heavy/hpr
+	name = "\improper M41AE2 heavy pulse rifle case"
+	desc = "A case storing an M41AE2 heavy pulse rifle, a heavier variant of the M41A designed for sustained automatic fire."
+	icon_state = "hprcase"
+	storage_slots = 3
+	can_hold = list(/obj/item/weapon/gun/rifle/lmg, /obj/item/ammo_magazine/hpr_box)
+
+/obj/item/storage/box/guncase/heavy/hpr/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/lmg(src)
+	new /obj/item/ammo_magazine/hpr_box(src)
+	new /obj/item/ammo_magazine/hpr_box(src)
+
+/obj/item/storage/box/guncase/heavy/hpr/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(src.icon, "bigcase_lid_open")
+	else
+		overlays += image(src.icon, "hprcase_lid")
+		return
+	if(locate(/obj/item/weapon/gun/rifle/lmg) in src.contents)
+		overlays += image(src.icon, "+hpr")
+
 /obj/item/storage/box/guncase/heavy/motiondetectors
 	name = "\improper motion detectors case"
 	desc = "A case containing four individual handheld motion detectors."
