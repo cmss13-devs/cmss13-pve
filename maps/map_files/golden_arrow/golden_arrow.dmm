@@ -15521,6 +15521,14 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
+"cMX" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "cQH" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Five Blast Door";
@@ -15996,6 +16004,9 @@
 /area/golden_arrow/engineering)
 "exo" = (
 /obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = -7
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "eyg" = (
@@ -33070,7 +33081,7 @@ aLe
 ati
 roZ
 odS
-exo
+cMX
 rdX
 btA
 rTJ
