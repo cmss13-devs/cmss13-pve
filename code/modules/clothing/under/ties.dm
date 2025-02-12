@@ -435,6 +435,21 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
 	icon_state = "navalpatch"
 
+//ribbons
+/obj/item/clothing/acessory/patch/ribbon
+	slot = ACCESSORY_SLOT_MEDAL
+
+/obj/item/clothing/accessory/patch/ribbon/topography
+	name = "USCM Topography Ribbon"
+	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the USCMC Topographic Navigation Course."
+	icon_state = "topography"
+
+/obj/item/clothing/accessory/patch/ribbon/topography/honor
+	name = "USCM Honor Topography Ribbon"
+	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the top of their class at the USCMC Topographic Navigation Course."
+	icon_state = "topography_honor"
+
+
 //misc
 
 /obj/item/clothing/accessory/dogtags
