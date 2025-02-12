@@ -151,15 +151,15 @@
 
 /obj/item/reagent_container/food/snacks/get_examine_text(mob/user)
 	. = ..()
-	. += SPAN_NOTICE("\The [src] has [ceil(reagents.total_volume / bitesize)] mouthfuls left.")
 	if (!bitecount)
+		. += SPAN_NOTICE("It would take about [ceil(reagents.total_volume / bitesize)] bites to eat this.")
 		return
 	else if (bitecount==1)
-		. += SPAN_NOTICE("\The [src] was bitten by someone!")
+		. += SPAN_NOTICE("This was bitten by someone, and has [ceil(reagents.total_volume / bitesize)] mouthfuls left.")
 	else if (bitecount<=3)
-		. += SPAN_NOTICE("\The [src] was bitten [bitecount] times!")
+		. += SPAN_NOTICE("This was bitten [bitecount] times, and has [ceil(reagents.total_volume / bitesize)] mouthfuls left.")
 	else
-		. += SPAN_NOTICE("\The [src] was bitten multiple times!")
+		. += SPAN_NOTICE("This was bitten multiple times, and has [ceil(reagents.total_volume / bitesize)] mouthfuls left.")
 
 /obj/item/reagent_container/food/snacks/set_origin_name_prefix(name_prefix)
 	made_from_player = name_prefix
