@@ -339,17 +339,6 @@
 	desc = "The highest service medal that can be awarded to a marine; such medals are hand-given by USCM Generals to a marine. It signifies the sheer amount of time a marine has spent in the line of duty."
 	icon_state = "platinum"
 
-//Ribbons
-/obj/item/clothing/accessory/medal/ribbon/topography
-	name = "USCM Topography Ribbon"
-	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the USCMC Topographic Navigation Course."
-	icon_state = "topography"
-
-/obj/item/clothing/accessory/medal/ribbon/topography/honor
-	name = "USCM Honor Topography Ribbon"
-	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the top of their class at the USCMC Topographic Navigation Course."
-	icon_state = "topography_honor"
-
 //Armbands
 /obj/item/clothing/accessory/armband
 	name = "red armband"
@@ -466,6 +455,17 @@
 	name = "Army Intelligence patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 525th Army Intelligence Brigade."
 	icon_state = "spookpatch"
+
+//Ribbons
+/obj/item/clothing/accessory/patch/ribbon/topography
+	name = "USCM Topography Ribbon"
+	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the USCMC Topographic Navigation Course."
+	icon_state = "topography"
+
+/obj/item/clothing/accessory/patch/ribbon/topography/honor
+	name = "USCM Honor Topography Ribbon"
+	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the top of their class at the USCMC Topographic Navigation Course."
+	icon_state = "topography_honor"
 
 //misc
 
