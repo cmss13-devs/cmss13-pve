@@ -341,15 +341,14 @@
 
 //Ribbons
 /obj/item/clothing/accessory/medal/ribbon/topography
-    name = "USCM Topography Ribbon"
-    desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the USCMC Topographic Navigation Course."
-    icon_state = "topography"
+	name = "USCM Topography Ribbon"
+	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the USCMC Topographic Navigation Course."
+	icon_state = "topography"
 
 /obj/item/clothing/accessory/medal/ribbon/topography/honor
-    name = "USCM Honor Topography Ribbon"
-    desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the top of their class at the USCMC Topographic Navigation Course."
-    icon_state = "topography_honor"
-
+	name = "USCM Honor Topography Ribbon"
+	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the top of their class at the USCMC Topographic Navigation Course."
+	icon_state = "topography_honor"
 
 //Armbands
 /obj/item/clothing/accessory/armband
