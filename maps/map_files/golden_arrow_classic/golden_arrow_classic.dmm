@@ -1723,11 +1723,11 @@
 /area/golden_arrow/medical)
 "lU" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_sergeant)
@@ -4008,7 +4008,7 @@
 /area/golden_arrow/platoon_commander_rooms)
 "Ca" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m4ra/pve{
+/obj/item/weapon/gun/rifle/m49a/pve{
 	pixel_y = 8
 	},
 /obj/effect/decal/cleanable/dirt,
