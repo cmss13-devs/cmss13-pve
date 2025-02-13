@@ -402,14 +402,6 @@
 	if(!attached_item)
 		return
 
-	if(!attached_item.has_garb_overlay())
-		to_chat(user, SPAN_WARNING("You cannot use \the [src] when they are hidden."))
-		return
-
-	if(user.client.view > 7 && shape != NVG_SHAPE_COSMETIC)
-		to_chat(user, SPAN_WARNING("You cannot use \the [src] while using optics."))
-		return
-
 	activated = !activated
 
 	if(activated)
@@ -421,9 +413,6 @@
 			icon_state = active_icon_state
 			attached_item.update_icon()
 			activation.update_button_icon()
-
-		if(shape != NVG_SHAPE_COSMETIC)
-			RegisterSignal(user, COMSIG_MOB_CHANGE_VIEW, PROC_REF(change_view)) // will flip non-cosmetic nvgs back up when zoomed
 
 	else
 		to_chat(user, SPAN_NOTICE("You push \the [src] back up onto your helmet."))
@@ -438,9 +427,6 @@
 /obj/item/prop/helmetgarb/helmet_nvg/proc/change_view(mob/M, new_size)
 	SIGNAL_HANDLER
 
-	if(new_size > 7) // cannot use binos with NVG
-		toggle_nods(M)
-
 /obj/item/prop/helmetgarb/helmet_nvg/proc/break_nvg(mob/living/carbon/human/user, list/slashdata, mob/living/carbon/xenomorph/Xeno) //xenos can break NVG if aim head
 	SIGNAL_HANDLER
 
@@ -448,9 +434,9 @@
 		nvg_health -= slashdata["n_damage"] // damage can be adjusted here
 	if(nvg_health <= 0)
 		nvg_health = 0
-		user.visible_message(SPAN_WARNING("\The [src] on [user]'s head break with a crinkling noise."),
-			SPAN_WARNING("Your [src.name] break with a crinkling noise."),
-			SPAN_WARNING("You hear a crinkling noise, as if something was broken in your helmet."))
+		user.visible_message(SPAN_WARNING("\The [src] on [user]'s head hums and makes a guttering electronic noise."),
+			SPAN_WARNING("Your [src.name] shuts off."),
+			SPAN_WARNING("It sounds like your [src.name] broke."))
 		playsound(user, "bone_break", 30, TRUE)
 		src.color = "#4e4e4e"
 		if(shape != NVG_SHAPE_COSMETIC)
