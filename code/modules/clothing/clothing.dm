@@ -356,6 +356,10 @@
 	// If the shoes can't actually hold an item.
 	if(allowed_items_typecache == null)
 		return FALSE
+	// If the item's too big to fit in the shoes
+	if(item_to_insert.w_class >= SIZE_MEDIUM)
+		to_chat(usr, SPAN_DANGER("That won't fit in the footwear!"))
+		return FALSE
 	// If there's already an item inside.
 	if(stored_item)
 		return FALSE

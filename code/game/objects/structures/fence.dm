@@ -173,7 +173,7 @@
 			cut_grille()
 		return
 
-	if(istype(W, /obj/item/attachable/bayonet) && get_dist(src, user) < 2)
+	if(istype(W, /obj/item/attachable/bayonet) || istype(W, /obj/item/weapon/knife) && get_dist(src, user) < 2)
 		user.visible_message(SPAN_NOTICE("[user] starts cutting through [src] with [W]."),
 		SPAN_NOTICE("You start cutting through [src] with [W]."))
 		playsound(src.loc, 'sound/items/Wirecutter.ogg', 25, 1)
