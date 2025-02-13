@@ -154,8 +154,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/svd(new_human), WEAR_WAIST)
-	new_human.put_in_active_hand(new /obj/item/weapon/gun/rifle/sniper/svd(new_human))
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/svd/pve(new_human), WEAR_WAIST)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/rifle/sniper/svd/pve(new_human))
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 
