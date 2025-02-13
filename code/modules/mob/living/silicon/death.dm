@@ -1,6 +1,7 @@
 
 /mob/living/silicon/spawn_gibs()
 	robogibs(loc, viruses)
+	new /obj/effect/temp_visual/gib_particles(get_turf(src), get_blood_color())
 
 /mob/living/silicon/gib_animation()
 	new /obj/effect/overlay/temp/gib_animation(loc, src, "gibbed-r")

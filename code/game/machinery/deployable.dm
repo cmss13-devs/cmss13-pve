@@ -23,6 +23,9 @@
 	. = ..()
 	src.icon_state = "barrier[src.locked]"
 
+/obj/structure/machinery/deployable/barrier/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -40, 8, 1)
+
 /obj/structure/machinery/deployable/barrier/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
 	if (PF)

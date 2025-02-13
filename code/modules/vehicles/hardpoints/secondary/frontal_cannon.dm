@@ -31,6 +31,13 @@
 		"8" = list(-62, -26)
 	)
 
+	firing_smoke_offset = list(
+		"1" = list(16, 74),
+		"2" = list(-16, -74),
+		"4" = list(74, -14),
+		"8" = list(-74, 8)
+	)
+
 	scatter = 1
 	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(

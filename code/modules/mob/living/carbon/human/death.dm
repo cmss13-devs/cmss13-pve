@@ -1,4 +1,5 @@
 /mob/living/carbon/human/gib(datum/cause_data/cause = create_cause_data("gibbing", src))
+	new /obj/effect/temp_visual/gib_particles(get_turf(src), species.blood_color)
 	var/is_a_synth = issynth(src)
 	for(var/obj/limb/E in limbs)
 		if(istype(E, /obj/limb/chest))

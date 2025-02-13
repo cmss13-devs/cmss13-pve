@@ -30,6 +30,9 @@
 	if (PF)
 		PF.flags_can_pass_all = PASS_THROUGH|PASS_HIGH_OVER_ONLY
 
+/obj/structure/girder/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -40, 8, 1)
+
 /obj/structure/girder/get_examine_text(mob/user)
 	. = ..()
 	if (health <= 0)
