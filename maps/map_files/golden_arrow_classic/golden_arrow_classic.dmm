@@ -214,10 +214,10 @@
 	pixel_x = 16;
 	pixel_y = 16
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -8;
 	job = "Smartgunner"
 	},
@@ -519,7 +519,7 @@
 "dz" = (
 /obj/item/clothing/suit/storage/jacket/marine/service,
 /obj/item/clothing/suit/storage/jacket/marine/service/tanker,
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	job = "Platoon Commander";
 	icon_broken = "cabinetdetective_broken";
 	icon_closed = "cabinetdetective";
@@ -1261,7 +1261,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "jv" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	job = "Platoon Corpsman";
 	has_cryo_gear = 0
 	},
@@ -1445,11 +1445,11 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -8;
 	job = "Smartgunner"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8;
 	job = "Smartgunner"
 	},
@@ -2081,10 +2081,10 @@
 /obj/structure/sign/banners/united_americas_flag{
 	pixel_y = 30
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8;
 	job = "Platoon Sergeant"
 	},
@@ -3616,10 +3616,10 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
 "zi" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -3756,10 +3756,10 @@
 	pixel_y = 29;
 	serial_number = 16
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -8
 	},
 /turf/open/floor/almayer/plate,
@@ -4959,11 +4959,11 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_two)
 "Hs" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -8;
 	job = "Squad Sergeant"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8;
 	job = "Squad Sergeant"
 	},
@@ -7135,10 +7135,10 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "WL" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -8
 	},
 /turf/open/floor/almayer/plate,

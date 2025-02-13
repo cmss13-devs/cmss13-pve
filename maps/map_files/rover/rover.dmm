@@ -1196,7 +1196,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/canteen)
 "mX" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Section Sergeant"
 	},
@@ -1532,7 +1532,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "qI" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Corpsman"
 	},
@@ -1649,7 +1649,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "rJ" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Squad Sergeant"
 	},
@@ -2221,7 +2221,7 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
@@ -3179,7 +3179,7 @@
 	pixel_x = -30
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Smartgunner"
 	},
@@ -3189,7 +3189,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Mw" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Radio Telephone Operator"
 	},
@@ -4219,7 +4219,7 @@
 	pixel_x = -27
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/shoes/marine/jungle/knife,
