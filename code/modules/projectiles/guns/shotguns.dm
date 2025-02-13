@@ -271,7 +271,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		load_into_chamber()
 
 /obj/item/weapon/gun/shotgun/combat/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 22, "under_y" = 14, "stock_x" = 11, "stock_y" = 13.)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 22, "under_y" = 14, "stock_x" = 11, "stock_y" = 13, "special_x" = 23, "special_y" = 17)
 
 /obj/item/weapon/gun/shotgun/combat/set_gun_config_values()
 	..()
