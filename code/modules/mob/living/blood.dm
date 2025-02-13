@@ -261,7 +261,6 @@
 
 	if(!T.can_bloody)
 		return
-
 	if(small_drip)
 		// Only a certain number of drips (or one large splatter) can be on a given turf.
 		var/obj/effect/decal/cleanable/blood/drip/drop = locate() in T
@@ -310,3 +309,124 @@
 	var/obj/effect/decal/cleanable/blood/oil/O = locate() in T.contents
 	if(!O)
 		O = new(T)
+
+/mob/living/carbon/human/proc/spray_blood(turf/T, spray_angle_offset, limb)
+	var/angle = 0
+	var/obj/limb/O = limb
+	var/newdir = src.dir
+	/*
+	if(angle > 337.5 || angle <= 22.5)
+		newdir = 8  // WEST
+	if(angle > 22.5 && angle <= 67.5)
+		newdir = 9  // NORTHWEST
+	if(angle > 67.5 && angle <= 112.5)
+		newdir = 1  // NORTH
+	if(angle > 112.5 && angle <= 157.5)
+		newdir = 9  // NORTHWEST
+	if(angle > 157.5 && angle <= 202.5)
+		newdir = 4  // EAST
+	if(angle > 202.5 && angle <= 247.5)
+		newdir = 6  // SOUTHEAST
+	if(angle > 247.5 && angle <= 292.5)
+		newdir = 2  // SOUTH
+	if(angle > 292.5 && angle <= 337.5)
+		newdir = 10  // SOUTHWEST
+	*/
+	if(O.body_part == BODY_FLAG_ARM_LEFT || O.body_part == BODY_FLAG_LEG_LEFT || O.body_part == BODY_FLAG_HAND_LEFT || O.body_part == BODY_FLAG_FOOT_LEFT)
+		newdir = turn(dir, 90) // Turn left
+	else if(O.body_part == BODY_FLAG_ARM_RIGHT || O.body_part == BODY_FLAG_LEG_RIGHT || O.body_part == BODY_FLAG_HAND_RIGHT || O.body_part == BODY_FLAG_FOOT_RIGHT)
+		newdir = turn(dir, -90) // Turn right
+
+	if(newdir == 8) // WEST
+		angle = rand(337.5, 382.5) % 360 // Wrap around for circular angles
+	else if(newdir == 9) // NORTHWEST
+		angle = rand(22.5, 67.5)
+	else if(newdir == 1) // NORTH
+		angle = rand(67.5, 112.5)
+	else if(newdir == 4) // EAST
+		angle = rand(157.5, 202.5)
+	else if(newdir == 6) // SOUTHEAST
+		angle = rand(202.5, 247.5)
+	else if(newdir == 2) // SOUTH
+		angle = rand(247.5, 292.5)
+	else if(newdir == 10) // SOUTHWEST
+		angle = rand(292.5, 337.5)
+	angle = (spray_angle_offset + angle) % 360
+	//angle = angle % 360
+
+	if(angle > 337.5 || angle <= 22.5)
+		newdir = 8  // WEST
+	if(angle > 22.5 && angle <= 67.5)
+		newdir = 9  // NORTHWEST
+	if(angle > 67.5 && angle <= 112.5)
+		newdir = 1  // NORTH
+	if(angle > 112.5 && angle <= 157.5)
+		newdir = 9  // NORTHWEST
+	if(angle > 157.5 && angle <= 202.5)
+		newdir = 4  // EAST
+	if(angle > 202.5 && angle <= 247.5)
+		newdir = 6  // SOUTHEAST
+	if(angle > 247.5 && angle <= 292.5)
+		newdir = 2  // SOUTH
+	if(angle > 292.5 && angle <= 337.5)
+		newdir = 10  // SOUTHWEST
+
+	visible_message(\
+			SPAN_WARNING("You see a gush of blood spray from [src]'s [O.display_name]!"),
+			SPAN_HIGHDANGER("Blood sprays from your [O.display_name]!"),
+			SPAN_HIGHDANGER("You hear something spray violently!"))
+	for(var/i = 1 to (src.blood_volume / 170))
+		T = get_step(T, newdir)
+		if(T.density)
+			break
+		for(var/A in T)
+			var/mob/living/carbon/human/sprayed_with_blood = A
+			if(ishuman(sprayed_with_blood))
+				if(!sprayed_with_blood.body_position == LYING_DOWN)
+					sprayed_with_blood.add_mob_blood(src)
+					to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!"))
+					sprayed_with_blood.apply_effect(9, EYE_BLUR)
+					break
+
+		var/reverse_odd_numbered_decals
+		if(i % 2 != 0)
+			reverse_odd_numbered_decals = 1
+		else
+			reverse_odd_numbered_decals = -1
+
+
+		// total pixel shift
+		var/decal_pixel_y = 32 * sin(angle) * i
+		var/decal_pixel_x = (((32 * cos(angle)) * reverse_odd_numbered_decals * i) * reverse_odd_numbered_decals) * -1
+
+		// it gets weird if it is at 31.1 or so pixels, goes a tile more than needed // fix later
+		var/tile_offset_x = 0
+		if( abs(decal_pixel_x) > 31 )
+			tile_offset_x = (decal_pixel_x >= 0 ? floor(decal_pixel_x / world.icon_size) : ceil(decal_pixel_x / world.icon_size))
+
+		var/tile_offset_y = 0
+		if( abs(decal_pixel_y) > 31 )
+			tile_offset_y = (decal_pixel_y >= 0 ? floor(decal_pixel_y / world.icon_size) : ceil(decal_pixel_y / world.icon_size))
+
+		var/turf/new_turf = get_turf(locate(src.x + tile_offset_x, src.y + tile_offset_y, src.z))
+
+		// remainder within the tile.
+		var/obj/effect/decal/cleanable/blood/squirt/blood_spraying = new /obj/effect/decal/cleanable/blood/squirt(new_turf)
+		blood_spraying.pixel_x = decal_pixel_x % world.icon_size
+		blood_spraying.pixel_y = decal_pixel_y % world.icon_size
+
+		blood_spraying.apply_transform(turn(transform, angle))
+
+		if(!src.body_position == LYING_DOWN) // I don't know why it turns 90° when the human is down. Don't ask.
+			blood_spraying.icon_state = "squirt4"
+		else
+			blood_spraying.icon_state = "squirt1"
+		blood_spraying.color = get_blood_color()
+		blood_spraying.pixel_x = blood_spraying.pixel_x + rand(-1, 1)
+		blood_spraying.pixel_y = blood_spraying.pixel_y + rand(-1, 1)
+		playsound(src, 'sound/effects/blood_squirt.ogg', 50, TRUE)
+
+
+/obj/effect/decal/cleanable/blood/squirt
+	allow_this_to_overlap = TRUE
+
