@@ -74,7 +74,7 @@
 
 
 /obj/item/storage/firstaid/fire/fill_preset_inventory()
-	new /obj/item/reagent_container/syringe/leporazine(src)
+	new /obj/item/reagent_container/syringe/leporazine_dermaline(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/stack/medical/ointment(src)
@@ -299,7 +299,7 @@
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/reagent_container/syringe/leporazine(src)
+	new /obj/item/reagent_container/syringe/leporazine_dermaline(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
