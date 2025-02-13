@@ -345,11 +345,16 @@
 
 ///Used to display the xeno wounds/backpacks without rapidly switching overlays
 /atom/movable/vis_obj
-	vis_flags = VIS_INHERIT_ID|VIS_INHERIT_DIR|VIS_INHERIT_LAYER|VIS_INHERIT_PLANE
-	appearance_flags = RESET_COLOR
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /atom/movable/vis_obj/xeno_wounds
 	icon = 'icons/mob/xenos/wounds.dmi'
+	vis_flags = VIS_INHERIT_ID|VIS_INHERIT_DIR|VIS_INHERIT_LAYER|VIS_INHERIT_PLANE
+	appearance_flags = RESET_COLOR
+
+/atom/movable/vis_obj/xeno_pack
+	vis_flags = VIS_INHERIT_ID|VIS_INHERIT_DIR|VIS_INHERIT_LAYER|VIS_INHERIT_PLANE
+	appearance_flags = RESET_COLOR
 
 /atom/movable/vis_obj/xeno_pack/Initialize(mapload, mob/living/carbon/source)
 	. = ..()

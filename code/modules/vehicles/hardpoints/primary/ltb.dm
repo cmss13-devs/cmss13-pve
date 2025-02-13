@@ -21,10 +21,10 @@
 	)
 
 	muzzle_flash_pos = list(
-		"1" = list(0, 59),
-		"2" = list(0, -74),
-		"4" = list(89, -4),
-		"8" = list(-89, -4)
+		"1" = list(0, 65),
+		"2" = list(0, -80),
+		"4" = list(95, -4),
+		"8" = list(-95, -4)
 	)
 
 	scatter = 0

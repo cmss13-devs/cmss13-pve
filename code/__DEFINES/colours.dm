@@ -64,6 +64,7 @@
 ///light green rgb( 0, 128, 0)
 #define COLOR_LIGHT_GREEN "#008000"
 #define COLOR_DARK_MODERATE_LIME_GREEN "#44964A"
+#define COLOR_SOFT_GREEN "#B6F19A"
 
 #define COLOR_TEAL "#008080"
 
