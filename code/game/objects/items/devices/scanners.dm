@@ -150,7 +150,7 @@ FORENSIC SCANNER
 	start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 	mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 	mid_length = 0.9 SECONDS
-	volume = 4
+	volume = 5
 	extra_range = 14
 /*
 /datum/looping_sound/healthanalyzer_heart_beeping_bad
@@ -180,13 +180,13 @@ FORENSIC SCANNER
 
 /obj/item/device/healthanalyzer/soul
 	name = "\improper Health Diagnostic Equipment"
-	icon = 'icons/obj/items/Medical Scanner.dmi'
+	icon = 'icons/obj/items/Medical Scanner new.dmi'
 	icon_state = "Medical_scanner"
 	item_state = "analyzer"
 	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
 	w_class = SIZE_MEDIUM
 	var/record_scan_on_connect = FALSE
-	var/paper_left = 5
+	var/paper_left = 10
 	var/mob/living/carbon/human/connected_to
 	var/mob/living/carbon/human/connected_from
 	var/datum/beam/current_beam
@@ -459,7 +459,7 @@ FORENSIC SCANNER
 	var/health_percentage = connected_to.health - connected_to.halloss
 	// if oxyloss is more than half of the remaining damage to instant death, make a different beep
 	var/midpoint = abs(((connected_to.getBruteLoss() + connected_to.getFireLoss() + connected_to.getToxLoss()) + (HEALTH_THRESHOLD_DEAD-100)) / 2)
-	if (connected_to.oxyloss >= midpoint && connected_to.stat != 1)
+	if (connected_to.oxyloss >= midpoint || connected_to.health < -150)
 		oxygen_alarm_loop.start()
 	else
 		oxygen_alarm_loop.stop()
@@ -475,7 +475,7 @@ FORENSIC SCANNER
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
 		heart_rate_loop.mid_length = 0.550 SECONDS
-	if(health_percentage < -120)
+	if(health_percentage < -100)
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
 		heart_rate_loop.mid_length = 0.374 SECONDS
@@ -483,6 +483,7 @@ FORENSIC SCANNER
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 		heart_rate_loop.mid_length = 3.110 SECONDS
+
 	return
 
 /obj/item/device/healthanalyzer/soul/proc/update_beam(new_beam = TRUE)
