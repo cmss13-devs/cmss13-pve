@@ -84,7 +84,6 @@
 		/datum/equipment_preset/synth/survivor/trucker_synth,
 		/datum/equipment_preset/synth/survivor/bartender_synth,
 		/datum/equipment_preset/synth/survivor/atc_synth,
-		/datum/equipment_preset/synth/survivor/cmb_synth,
 		/datum/equipment_preset/synth/survivor/wy/security_synth,
 		/datum/equipment_preset/synth/survivor/wy/protection_synth,
 		/datum/equipment_preset/synth/survivor/wy/corporate_synth,

@@ -6849,7 +6849,7 @@
 /area/lv624/ground/river/east_river)
 "eiX" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/red,
 /area/lv624/lazarus/security)

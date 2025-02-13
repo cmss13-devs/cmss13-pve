@@ -1224,12 +1224,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
-"jZ" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
-	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/canteen)
 "kh" = (
 /turf/closed/shuttle/elevator{
 	dir = 9
@@ -1409,6 +1403,15 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
+"lT" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
+	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
+	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/canteen)
 "lU" = (
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
@@ -1618,25 +1621,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/canteen)
-"oa" = (
-/obj/item/clothing/suit/storage/marine/faction/UPP/jacket,
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
-/obj/item/storage/belt/gun/type47/np92,
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access_txt = "240";
-	req_access = null;
-	can_block_movement = 0;
-	pixel_y = 14;
-	pixel_x = -5;
-	name = "equipment locker"
-	},
-/obj/item/storage/backpack/lightpack/upp,
-/obj/item/storage/box/zipcuffs/small{
-	pixel_x = 5;
-	pixel_y = -1
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms)
 "oc" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -2094,15 +2078,6 @@
 "rS" = (
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/canteen)
-"rT" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
-	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
 "rW" = (
 /obj/structure/cargo_container/horizontal/blue/bottom{
@@ -5295,6 +5270,12 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
+"WX" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
+	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/canteen)
 "Xd" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -5308,6 +5289,25 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
+"Xi" = (
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/lamp,
+/obj/item/storage/belt/gun/type47/np92,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access_txt = "240";
+	req_access = null;
+	can_block_movement = 0;
+	pixel_y = 14;
+	pixel_x = -5;
+	name = "equipment locker"
+	},
+/obj/item/storage/backpack/lightpack/upp,
+/obj/item/storage/box/zipcuffs/small{
+	pixel_x = 5;
+	pixel_y = -1
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/platoon_commander_rooms)
 "Xj" = (
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -13080,7 +13080,7 @@ os
 rw
 qv
 os
-oa
+Xi
 Go
 YU
 ww
@@ -14301,7 +14301,7 @@ GZ
 QI
 Yj
 cT
-rT
+lT
 ck
 vG
 Hv
@@ -14453,7 +14453,7 @@ Qv
 Qv
 Qv
 cT
-jZ
+WX
 rS
 vG
 iU
@@ -14605,7 +14605,7 @@ bN
 Hr
 YI
 cT
-jZ
+WX
 rS
 vG
 QR
@@ -14757,7 +14757,7 @@ Qv
 Qv
 yM
 cT
-jZ
+WX
 rS
 vG
 iU
@@ -14909,7 +14909,7 @@ HZ
 rt
 HM
 cT
-rT
+lT
 Df
 vG
 Hv
