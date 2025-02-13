@@ -1,7 +1,8 @@
 /datum/equipment_preset/colonist/bluecollar/rebel
 	name = "UA Rebel, Guerilla"
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction_group = FACTION_LIST_CLF
+	faction = FACTION_INSURRECTIONUA
+	faction_group = FACTION_LIST_INSURRECTIONUA
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc
 	access = list(ACCESS_LIST_CLF_BASE)
@@ -130,7 +131,7 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/weak(new_human), WEAR_R_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/weak(new_human), WEAR_J_STORE)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -170,7 +171,7 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1(new_human), WEAR_R_HAND)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/rifle/m41aMK1(new_human))
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -261,7 +262,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
 	//limbs
 	add_rebel_ua_shoes(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable(new_human), WEAR_R_HAND)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable(new_human))
 
 
 /datum/equipment_preset/colonist/bluecollar/rebel/commander
@@ -301,7 +302,7 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/clf(new_human), WEAR_R_HAND)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/smartgun/clf(new_human))
 
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
@@ -310,12 +311,13 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
 
-/* /datum/equipment_preset/colonist/bluecollar/rebel/sniper
+/datum/equipment_preset/colonist/bluecollar/rebel/sniper
 	name = "UA Rebel, Sniper (M42A)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
+	skills = /datum/skills/specialist
 
 /datum/equipment_preset/colonist/bluecollar/rebel/sniper/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(85))
@@ -348,9 +350,8 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/M42A(new_human), WEAR_R_HAND)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/rifle/sniper/M42A(new_human))
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_R_STORE)
- */

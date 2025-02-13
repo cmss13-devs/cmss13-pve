@@ -1,8 +1,8 @@
 /datum/equipment_preset/clf
-	name = FACTION_CLF
 	languages = list(LANGUAGE_JAPANESE)
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction_group = FACTION_LIST_CLF
+	faction = FACTION_INSURRECTIONTWE
+	faction_group = FACTION_LIST_INSURRECTIONTWE
 	skills = /datum/skills/pfc
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	origin_override = ORIGIN_CIVILIAN
@@ -142,7 +142,7 @@
 
 	//limbs
 	add_rebel_twe_shoes(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/upp(new_human), WEAR_R_HAND)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/launcher/rocket/upp(new_human), WEAR_J_STORE)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
@@ -311,7 +311,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/weak, WEAR_IN_BELT)
 	//limbs
 	add_rebel_twe_shoes(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/weak(new_human), WEAR_R_HAND)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/flamer/weak(new_human))
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -584,7 +584,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
 	//limbs
 	add_rebel_twe_shoes(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/clf(new_human), WEAR_R_HAND)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/smartgun/clf(new_human))
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)

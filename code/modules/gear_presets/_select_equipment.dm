@@ -629,6 +629,8 @@ GLOBAL_LIST_INIT(rebel_twe_shotguns, list(
 GLOBAL_LIST_INIT(rebel_twe_smgs, list(
 	/obj/item/weapon/gun/smg/bizon/upp = /obj/item/ammo_magazine/smg/bizon,
 	/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
+	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
+	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
 	))
 
 GLOBAL_LIST_INIT(rebel_twe_rifles, list(
@@ -649,7 +651,7 @@ GLOBAL_LIST_INIT(rebel_twe_pistols, list(
 	var/gunpath = pick(GLOB.rebel_twe_smgs)
 	var/ammopath = GLOB.rebel_twe_smgs[gunpath]
 
-	spawn_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
@@ -659,7 +661,7 @@ GLOBAL_LIST_INIT(rebel_twe_pistols, list(
 	var/gunpath = pick(GLOB.rebel_twe_shotguns)
 	var/ammopath = GLOB.rebel_twe_shotguns[gunpath]
 
-	spawn_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
@@ -669,7 +671,7 @@ GLOBAL_LIST_INIT(rebel_twe_pistols, list(
 	var/gunpath = pick(GLOB.rebel_twe_rifles)
 	var/ammopath = GLOB.rebel_twe_rifles[gunpath]
 
-	spawn_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
@@ -679,7 +681,7 @@ GLOBAL_LIST_INIT(rebel_twe_pistols, list(
 	var/gunpath = pick(GLOB.rebel_twe_pistols)
 	var/ammopath = GLOB.rebel_twe_pistols[gunpath]
 
-	spawn_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
@@ -696,9 +698,9 @@ GLOBAL_LIST_INIT(rebel_ua_shotguns, list(
 GLOBAL_LIST_INIT(rebel_ua_rifles, list(
 	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
 	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
-	/obj/item/weapon/gun/rifle/l42a = /obj/item/ammo_magazine/rifle/l42a,
-	/obj/item/weapon/gun/rifle/l42a = /obj/item/ammo_magazine/rifle/l42a,
-	/obj/item/weapon/gun/rifle/l42a = /obj/item/ammo_magazine/rifle/l42a,
+	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
+	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
+	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
 	/obj/item/weapon/gun/rifle/m41aMK1 = /obj/item/ammo_magazine/rifle/m41aMK1
 	))
 
@@ -737,7 +739,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/gunpath = pick(GLOB.rebel_ua_pistols)
 	var/ammopath = GLOB.rebel_ua_pistols[gunpath]
 
-	spawn_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
