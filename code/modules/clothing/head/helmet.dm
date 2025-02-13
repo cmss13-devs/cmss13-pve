@@ -1578,6 +1578,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_beret_naval"
 
+/obj/item/clothing/head/uppcap/beret/guerilla
+	name = "\improper red beret beret"
+	desc = "A red beret popular with communist revolutionaries."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "upp_beret_revolution"
+
 /obj/item/clothing/head/uppcap/beret
 	name = "\improper UL3 beret"
 	desc = "Standard issue beret of the UPP's military."
@@ -1911,3 +1917,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_inventory = BLOCKSHARPOBJ
 	clothing_traits = list(TRAIT_EAR_PROTECTION) //So I don't have to make another subtype for the rocketeers
+
+
+/obj/item/clothing/head/helmet/construction
+	name = "utility helmet"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "rmc_helm2"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+	item_state = "rmc_helm2"
+	desc = "A common helmet used by various blue-collar professions in the TWE."
