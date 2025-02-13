@@ -135,6 +135,12 @@
 	required_reagents = list("silicon" = 1, "potassium" = 1, "nitrogen" = 1)
 	result_amount = 3
 
+/datum/chemical_reaction/saline
+	name = "Saline Solution"
+	id = "saline"
+	result = "saline"
+	required_reagents = list("sodiumchloride" = 1, "sugar" = 1, "water" = 1)
+	result_amount = 6
 
 /datum/chemical_reaction/tramadol
 	name = "Tramadol"

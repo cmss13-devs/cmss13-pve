@@ -11,6 +11,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 /datum/health_scan
 	var/mob/living/target_mob
 	var/detail_level = DETAIL_LEVEL_FULL
+	var/atom/scanner_device = FALSE
 
 /datum/health_scan/New(mob/target)
 	. = ..()
@@ -22,7 +23,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	return ..()
 
 /// This is the proc for interacting with, or looking at, a mob's health display. Also contains skillchecks and the like. You may NOT call tgui interact directly, and you MUST set the detail level.
-/datum/health_scan/proc/look_at(mob/user, detail = DETAIL_LEVEL_FULL, bypass_checks = FALSE, ignore_delay = TRUE, alien = FALSE, datum/tgui/ui = null)
+/datum/health_scan/proc/look_at(mob/user, detail = DETAIL_LEVEL_FULL, bypass_checks = FALSE, ignore_delay = TRUE, alien = FALSE, datum/tgui/ui = null, associated_equipment = FALSE, associated_user = FALSE)
 	if(!bypass_checks)
 		if(HAS_TRAIT(target_mob, TRAIT_FOREIGN_BIO) && !alien)
 			to_chat(user, SPAN_WARNING("ERROR: Unknown biology detected."))
@@ -42,6 +43,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 			return
 
 	detail_level = detail
+	scanner_device = associated_equipment
 	tgui_interact(user, ui)
 
 /datum/health_scan/ui_state(mob/user)
@@ -92,6 +94,13 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	return min(-100, target_mob.health)
 
 /datum/health_scan/ui_data(mob/user, data_detail_level = null)
+
+	//This health scan is tied to a device that can buffer multiple scans, like the HD-E or Body Scanner.
+	if(scanner_device)
+		if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
+			var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+			if(analyzer.last_scan && !analyzer.connected_to) //least one scan in the past and the analyzer isn't supposed to fetch new info
+				return analyzer.buffer_for_report[analyzer.currently_selected_last_scan]
 	var/list/data = list(
 		"patient" = target_mob.name,
 		"dead" = get_death_value(target_mob),
@@ -485,6 +494,25 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 			if(ishuman(target_mob))
 				var/mob/living/carbon/human/target_human = target_mob
 				target_human.change_holo_card(ui.user)
+				return TRUE
+		if("previous_scan")
+			if(ishuman(target_mob))
+				//var/mob/living/carbon/human/target_human = target_mob
+				if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
+					var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+					analyzer.currently_selected_last_scan = clamp(analyzer.currently_selected_last_scan - 1, 1,analyzer.buffer_for_report.len)
+					analyzer.tgui_interact(ui.user)
+					return TRUE
+		if("next_scan")
+			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
+				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+				analyzer.currently_selected_last_scan = clamp(analyzer.currently_selected_last_scan + 1, 1,analyzer.buffer_for_report.len)
+				analyzer.tgui_interact(ui.user)
+				return TRUE
+		if("print_scan")
+			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
+				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+				analyzer.print_report(ui.user)
 				return TRUE
 
 /// legacy proc for to_chat messages on health analysers

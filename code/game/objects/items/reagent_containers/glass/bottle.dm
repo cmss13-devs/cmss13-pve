@@ -260,6 +260,18 @@
 	reagents.add_reagent("kelotane", 67.5)
 	reagents.add_reagent("dermaline", 67.5)
 
+/obj/item/reagent_container/glass/bottle/water
+	name = "\improper distilled water bottle"
+	desc = "A small glossy bottle of saline solution, not all that different from regular water."
+	icon = 'icons/obj/items/chemistry.dmi'
+	icon_state = "bottle2"
+	amount_per_transfer_from_this = 130
+	volume = 130
+
+/obj/item/reagent_container/glass/bottle/water/Initialize()
+	. = ..()
+	reagents.add_reagent("water", 130)
+
 /obj/item/reagent_container/glass/bottle/mutagen
 	name = "unstable mutagen bottle"
 	desc = "A small bottle of unstable mutagen. Randomly changes the DNA structure of whoever comes in contact."
