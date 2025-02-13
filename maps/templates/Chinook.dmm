@@ -2350,7 +2350,7 @@
 /turf/open/floor/kutjevo,
 /area/adminlevel/chinook/event)
 "iO" = (
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -3004,7 +3004,7 @@
 	pixel_x = 6;
 	pixel_y = 3
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = -4;
 	pixel_y = 10
 	},
@@ -9286,7 +9286,7 @@
 /obj/item/folder/yellow{
 	pixel_y = 7
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -11334,7 +11334,7 @@
 "Uk" = (
 /obj/structure/machinery/light,
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = -4;
 	pixel_y = 10
 	},
@@ -12777,7 +12777,7 @@
 /obj/effect/spawner/random/tool{
 	pixel_x = 6
 	},
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},

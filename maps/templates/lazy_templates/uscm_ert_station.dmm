@@ -157,7 +157,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "cf" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /obj/item/reagent_container/food/condiment/hotsauce/cholula{

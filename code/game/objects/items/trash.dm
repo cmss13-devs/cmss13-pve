@@ -180,18 +180,113 @@
 /obj/item/trash/tray
 	name = "Tray"
 	icon_state = "tray"
+	item_state = "tray"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_1.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_1.dmi'
+	)
 
-/obj/item/trash/USCMtray
+/obj/item/trash/tray/Initialize()
+	. = ..()
+	update_overlays()
+
+/obj/item/trash/tray/attackby(obj/item/trash/tray/I, mob/user)
+
+	//stacked_size = stacked_size + (I.stacked_size + 1)
+	//I.stacked_size = 0
+	user.drop_inv_item_to_loc(I, src)
+	contents += I.GetAllContents(0)
+	I.contents = null
+	I.update_overlays()
+	update_overlays()
+	if(contents.len > 1)
+		w_class = SIZE_MEDIUM
+	else
+		w_class = SIZE_SMALL
+	if(contents.len > 7)
+		to_chat(user, SPAN_WARNING("The stack of trays begins to sway!"))
+		if(prob(30))
+			stack_collapse()
+		//return FALSE
+	return ..()
+
+/obj/item/trash/tray/MouseDrop(atom/over)
+	. = ..()
+	if(contents.len)
+		var/mob/living/carbon/human/H = over
+		if(usr != H)
+			return
+		if(!CAN_PICKUP(H, src))
+			return
+		var/obj/item/trash/tray/F = locate() in contents
+		H.put_in_active_hand(F)
+		update_overlays()
+		if(contents.len > 1)
+			w_class = SIZE_MEDIUM
+		else
+			w_class = SIZE_SMALL
+
+/obj/item/trash/tray/proc/update_overlays()
+	overlays.Cut()
+	if(!contents.len)
+		name = initial(name)
+		desc = initial(desc)
+		return
+	name = "stack of food trays"
+	desc = "There seems to be [contents.len + 1] in the stack, wow!"
+	for(var/i in 1 to contents.len)
+		var/image/I = new()
+		I.icon = contents[i].icon
+		I.icon_state = contents[i].icon_state
+		I.pixel_y = 2*i
+		if(contents.len > 4)
+			I.pixel_x = I.pixel_x + pick(list(-1, 1))
+		overlays += I
+		item_state = initial(item_state) + ((contents.len >= 1) ? "_" + num2text(clamp(contents.len + 1, 0, 10)) : "")
+	if(ishuman(loc))
+		var/mob/living/carbon/human/holder = loc
+		holder.update_inv_r_hand()
+		holder.update_inv_l_hand()
+
+/obj/item/trash/tray/proc/stack_collapse()
+	visible_message(SPAN_HIGHDANGER("The stack of trays collapses!!!"))
+	var/turf/starting_turf = get_turf(src)
+	playsound(starting_turf, 'sound/weapons/metal_chair_crash.ogg', 30, 1, 30)
+	for(var/obj/item/trash/tray/falling_tray in contents)
+		update_overlays()
+
+		var/list/candidate_target_turfs = list()
+		for (var/turf/T in range((ceil(contents.len / 2)), starting_turf))
+			candidate_target_turfs += T
+		var/turf/target_turf = candidate_target_turfs[rand(1, length(candidate_target_turfs))]
+		for(var/mob/living/carbon/mob in target_turf.contents)
+			if(target_turf.Adjacent(get_turf(loc),target_turf))
+				mob.Daze(2)
+				to_chat(mob, SPAN_DANGER("The collapsing food trays put you off balance!"))
+		falling_tray.forceMove(starting_turf)
+		falling_tray.pixel_x = rand(-8, 8)
+		falling_tray.pixel_y = rand(-8, 8)
+		falling_tray.throw_atom(target_turf, rand(2, 5), SPEED_FAST, null, TRUE)
+	update_overlays()
+/obj/item/trash/tray/launch_impact(atom/hit_atom)
+	. = ..()
+	if(contents.len > 1)
+		stack_collapse()
+
+/obj/item/trash/tray/USCMtray
 	name = "\improper USCM Tray"
 	desc = "Finished with its tour of duty."
 	icon = 'icons/obj/items/food_canteen.dmi'
 	icon_state = "tray"
 
-/obj/item/trash/UPPtray
+
+/obj/item/trash/tray/UPPtray
 	name = "\improper UPP Tray"
 	desc = "Finished with its tour of duty."
 	icon = 'icons/obj/items/food.dmi'
 	icon_state = "upp_tray"
+	item_state = "upp_tray"
+
 
 
 //////////
