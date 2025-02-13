@@ -119,3 +119,9 @@
 	id = "ice_classic_shuttle"
 	width = 8
 	height = 5
+
+/obj/docking_port/mobile/trijent_elevator/osiriscaverns
+	name = "Caverns Elevator"
+	id = "osiris_elevator"
+	width = 8
+	height = 6
