@@ -917,6 +917,7 @@
 		/obj/item/folder,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/tool/lighter,
+		/obj/item/ammo_magazine/handful/shotgun,
 	)
 /obj/item/clothing/accessory/storage/holster
 	name = "shoulder holster"
