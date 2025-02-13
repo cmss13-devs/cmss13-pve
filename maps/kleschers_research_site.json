@@ -1,0 +1,16 @@
+{
+    "map_name": "Kleschers Research Site",
+    "short_name": "Kleschers",
+    "map_path": "map_files/kleschers_research_site",
+    "map_file": "BigBlue.dmm",
+    "webmap_url": "Solaris",
+
+    "weather_holder": "/datum/weather_ss_map_holder/kleschers_research_site",
+
+    "map_item_type": "/obj/item/map/big_red_map",
+
+    "camouflage": "snow",
+    "environment_traits": {
+        "COLD": true
+    }
+}
