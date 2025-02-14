@@ -175,11 +175,8 @@
 		/obj/item/reagent_container/food/snacks/wy_chips/pepper = 10,
 		/obj/item/reagent_container/food/drinks/cans/classcola = 10,
 		/obj/item/reagent_container/food/drinks/cans/dr_gibb = 10,
-		/obj/item/reagent_container/food/drinks/cans/starkist = 10,
 		/obj/item/reagent_container/food/drinks/cans/space_mountain_wind = 10,
 		/obj/item/reagent_container/food/drinks/cans/iced_tea = 10,
-		/obj/item/reagent_container/food/drinks/cans/grape_juice = 10,
-		/obj/item/reagent_container/food/drinks/cans/space_up = 10,
 	)
 
 	prices = list(
@@ -193,11 +190,8 @@
 		/obj/item/reagent_container/food/snacks/wy_chips/pepper = 5,
 		/obj/item/reagent_container/food/drinks/cans/classcola = 2,
 		/obj/item/reagent_container/food/drinks/cans/dr_gibb = 2,
-		/obj/item/reagent_container/food/drinks/cans/starkist = 2,
 		/obj/item/reagent_container/food/drinks/cans/space_mountain_wind = 2,
 		/obj/item/reagent_container/food/drinks/cans/iced_tea = 2,
-		/obj/item/reagent_container/food/drinks/cans/grape_juice = 2,
-		/obj/item/reagent_container/food/drinks/cans/space_up = 2,
 	)
 	idle_power_usage = 211 //refrigerator - believe it or not, this is actually the average power consumption of a refrigerated vending machine according to NRCan.
 	product_type = VENDOR_PRODUCT_TYPE_FOOD
