@@ -326,27 +326,27 @@
 
 /obj/item/prop/magazine/sof
 	name = "Soldier Of Fortune: Issue..."
-	icon = "poster8"
+	icon_state = "poster8"
 	desc = "A copy of Soldier of Fortune magazine. It's been damaged with water. Damn."
 
 /obj/item/prop/magazine/sof/n2182
 	name = "Soldier Of Fortune: Issue March 2182"
-	icon = "poster8"
+	icon_state = "poster8"
 	desc = "A copy of Soldier of Fortune magazine. On the cover is a stylized imagine of a motion tracker in use, with the headline 'Combat Awareness in the 22nd Century'. The article covers the advancement in sensor technology that has made combat between peer nations like the UA and UPP increasingly lethal to those on the ground. Flipping through the magazine you see article titles such as 'Arsenal: The M2C Heavy Machinegun', and 'The Future War: advancements in Cyberdyne Systems combat AI'. At the back of the magazine is an extensive list of advertisements for private contractors and wares."
 
 /obj/item/prop/magazine/sof/n2181
 	name = "Soldier Of Fortune: Issue December 2181"
-	icon = "poster21"
+	icon_state = "poster21"
 	desc = "A copy of Soldier of Fortune magazine. On the cover is photo of a USCM CBRN specialist in full MOPP gear, with the headline 'The Fog of War: Combat under the threat of Nuclear, Biological and Chemical hazards'. The article goes indepth on the subject of warfare in specialized environments with particular focus on the USCM's CBRN units. Flipping through the magazine you see article titles such as 'Arsenal: The M707 Sniper Rifle', and 'American Warfare in the late 21st Century: From the Eastern States' Police Action to the Battle of Tannhauser Gate'. At the back of the magazine is an extensive list of advertisements for private contractors and wares."
 
 /obj/item/prop/magazine/playboy
 	name = "Playboy: Issue..."
-	icon = "poster3"
+	icon_state = "poster3"
 	desc = "A copy of Playboy magazine. It's been damaged with water. Damn."
 
 /obj/item/prop/magazine/playboy/n2182
 	name = "Playboy Magazine: Issue March 2182"
-	icon = "poster3"
+	icon_state = "poster3"
 	desc = "A copy of Playboy magazine. On the cover is photo of guitarist Sadie Summers, with the headline 'Sadie Summers tells ALL'. The article itself focuses on Sadie's many carnal exploits while on tour as well as her very public brawl at an LA nightclub that occured two years prior to the date of this issue. Flipping through the magazine you see article titles such as 'Jungle Mercenary: Life as an Ex-UPP commando' and 'The whys and hows of choosing synthetic girls'."
 
 //boots magazine
