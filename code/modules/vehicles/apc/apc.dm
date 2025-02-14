@@ -32,8 +32,6 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 
 	required_skill = SKILL_VEHICLE_LARGE
 
-	movement_sound = 'sound/vehicles/tank_driving.ogg'
-
 	light_range = 4
 
 	var/gunner_view_buff = 10

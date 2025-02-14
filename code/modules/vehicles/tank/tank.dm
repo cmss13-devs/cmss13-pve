@@ -24,7 +24,6 @@
 		"back" = list(0, 2)
 	)
 
-	movement_sound = 'sound/vehicles/tank_driving.ogg'
 	honk_sound = 'sound/vehicles/honk_3_ambulence.ogg'
 
 	required_skill = SKILL_VEHICLE_LARGE

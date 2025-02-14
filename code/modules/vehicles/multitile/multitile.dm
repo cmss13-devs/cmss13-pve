@@ -57,10 +57,18 @@
 	// The movement delay gradually reduces up to move_delay when momentum increases
 	var/move_momentum_build_factor = 1.3
 
-	//Sound to play when moving
-	var/movement_sound
-	//Cooldown for next sound to play
-	var/move_next_sound_play = 0
+	///Sound file(s) to play when we drive around
+	var/list/engine_sound = list('sound/vehicles/engine_rev_1.ogg', 'sound/vehicles/engine_rev_2.ogg')
+	///Sound file(s) to play inside the vehicle when we drive around
+	var/list/interior_engine_sound = list('sound/vehicles/engine_rev_interior_1.ogg', 'sound/vehicles/engine_rev_interior_2.ogg')
+	///Sound file(s) to play outside the vehicle when we've been idle for a while
+	var/list/idle_engine_sound = list('sound/vehicles/engine_idle_1.ogg', 'sound/vehicles/engine_idle_2.ogg', 'sound/vehicles/engine_idle_3.ogg')
+	///Sound file(s) to play inside the vehicle when we've been idle for a while
+	var/list/idle_interior_engine_sound = list('sound/vehicles/engine_idle_interior_1.ogg', 'sound/vehicles/engine_idle_interior_2.ogg')
+	///frequency to play the move sound with
+	var/engine_sound_length = 2 SECONDS
+	/// How long it takes to rev
+	COOLDOWN_DECLARE(enginesound_cooldown)
 
 	//whether MP vehicle clamps are applied
 	var/clamped = FALSE
@@ -200,6 +208,15 @@
 		interior = new(src)
 		INVOKE_ASYNC(src, PROC_REF(do_create_interior))
 
+/obj/vehicle/multitile/process()
+	if(!(seats[VEHICLE_DRIVER]))
+		return PROCESS_KILL
+	if(move_delay + 1 > world.time)
+		return // driver present but they look to be moving so dont play idle
+	playsound(src, islist(idle_engine_sound) ? pick(idle_engine_sound) : idle_engine_sound, 30, FALSE, 10, falloff = 3)
+	if(idle_interior_engine_sound && interior)
+		play_interior_sound(idle_interior_engine_sound, src, 25)
+
 /obj/vehicle/multitile/proc/do_create_interior()
 	interior.create_interior(interior_map)
 
@@ -322,6 +339,8 @@
 	return
 
 /obj/vehicle/multitile/proc/remove_seated_verbs(mob/living/M, seat)
+	if(seat == VEHICLE_DRIVER)
+		STOP_PROCESSING(SSobj, src)
 	return
 
 /obj/vehicle/multitile/set_seated_mob(seat, mob/living/M)
@@ -331,6 +350,8 @@
 		remove_seated_verbs(L, seat)
 	else
 		add_seated_verbs(M, seat)
+	if(seat == VEHICLE_DRIVER && !(datum_flags & DF_ISPROCESSING))
+		START_PROCESSING(SSobj, src)
 
 	seats[seat] = M
 
@@ -368,6 +389,27 @@
 
 /obj/vehicle/multitile/proc/load_role_reserved_slots()
 	return
+
+///Plays the engine sound for this vehicle if its not on cooldown
+/obj/vehicle/multitile/proc/play_engine_sound()
+	if(!COOLDOWN_FINISHED(src, enginesound_cooldown))
+		return
+	COOLDOWN_START(src, enginesound_cooldown, engine_sound_length)
+	///whether we play the outside sound for the interior or no
+	var/play_loc = interior_engine_sound ? src : get_turf(src)
+	playsound(play_loc, islist(engine_sound) ? pick(engine_sound) : engine_sound, 60, FALSE, 20, falloff = 3)
+	if(interior_engine_sound)
+		play_interior_sound(islist(interior_engine_sound) ? pick(interior_engine_sound) : interior_engine_sound, src, 60, 1)
+
+///playsound_local identical args, use this when a sound should be played for the occupants.
+/obj/vehicle/multitile/proc/play_interior_sound(soundin, atom/origin, vol, random_freq, vol_cat = VOLUME_SFX, channel)
+	if(!interior)
+		return
+	var/list/mob/occupants = get_passengers()
+	for(var/mob/crew as anything in occupants)
+		if(!crew.client)
+			continue
+		playsound_client(crew.client, soundin, origin, vol, random_freq, vol_cat, channel)
 
 //Special armored vic healthcheck that mainly updates the hardpoint states
 /obj/vehicle/multitile/healthcheck()

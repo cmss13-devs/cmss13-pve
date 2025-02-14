@@ -157,6 +157,8 @@
 
 	rotating = TRUE
 	to_chat(user, SPAN_NOTICE("You begin rotating the turret towards the [dir2text(turn(dir,deg))]."))
+	playsound(src, 'sound/vehicles/tankswivel.ogg', 80, TRUE)
+	owner.play_interior_sound('sound/vehicles/turret_swivel_interior.ogg', null, 80, TRUE)
 
 	if(!do_after(user, rotation_windup, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 		rotating = FALSE

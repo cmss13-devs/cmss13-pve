@@ -38,7 +38,6 @@
 		"cooldown" = 1
 	)
 
-	movement_sound = 'sound/vehicles/tank_driving.ogg'
 	honk_sound = 'sound/vehicles/honk_2_truck.ogg'
 
 	light_range = 3
