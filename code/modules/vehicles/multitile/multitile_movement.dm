@@ -70,13 +70,10 @@
 
 	var/turf/old_turf = get_turf(src)
 	forceMove(get_step(src, direction))
+	play_engine_sound()
 
 	for(var/obj/item/hardpoint/H in hardpoints)
 		H.on_move(old_turf, get_turf(src), direction)
-
-	if(movement_sound && world.time > move_next_sound_play)
-		playsound(src, movement_sound, vol = 20, sound_range = 30)
-		move_next_sound_play = world.time + 10
 
 	last_move_dir = direction
 
@@ -102,9 +99,7 @@
 
 	last_move_dir = dir
 
-	if(movement_sound && world.time > move_next_sound_play)
-		playsound(src, movement_sound, vol = 20, sound_range = 30)
-		move_next_sound_play = world.time + 10
+	play_engine_sound()
 
 	update_icon()
 
