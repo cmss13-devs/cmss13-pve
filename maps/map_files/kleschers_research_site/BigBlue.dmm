@@ -168,6 +168,9 @@
 	dir = 8;
 	layer = 3.01
 	},
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
 /turf/open/asphalt/cement/cement12,
 /area/kleschers/outside/central_road)
 "adr" = (
@@ -429,7 +432,7 @@
 /area/kleschers/int_reg/virology)
 "ajg" = (
 /obj/structure/girder{
-	health = 0
+	health = 10
 	},
 /turf/open/floor/plating,
 /area/kleschers/int_glass/bar)
@@ -603,6 +606,15 @@
 	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_reg/cargo)
+"anl" = (
+/obj/structure/prop/server_equipment/yutani_server/off,
+/obj/structure/machinery/door_control{
+	pixel_x = 3;
+	pixel_y = -3;
+	id = "transit"
+	},
+/turf/open/floor/shiva/multi_tiles/east,
+/area/kleschers/shuttles/drop2)
 "anE" = (
 /obj/structure/machinery/camera/autoname/lz_camera,
 /turf/open/floor/corsat,
@@ -807,11 +819,12 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/eta)
 "atz" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
-	req_one_access = list(106,102,101);
-	name = "Cargo Distribution Center"
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
 "atA" = (
 /turf/open/floor/plating/platebot,
@@ -1369,6 +1382,15 @@
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/east,
 /area/kleschers/int_reg/clinic)
+"aES" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal5";
+	pixel_x = -16;
+	pixel_y = 16
+	},
+/obj/structure/largecrate/random/secure,
+/turf/open/asphalt,
+/area/kleschers/int_reg/cargo)
 "aFj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -1580,10 +1602,11 @@
 /turf/open/floor/corsat/officesquares,
 /area/kleschers/int_reg/admin)
 "aNx" = (
-/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	unacidable = 1
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "transit";
+	name = "Transit Tunnel Lock"
+	},
 /turf/open/asphalt,
 /area/kleschers/outside/northwest)
 "aOd" = (
@@ -1831,15 +1854,9 @@
 /turf/open/floor/strata/white_cyan2,
 /area/kleschers/int_reg/offices)
 "aSN" = (
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/obj/structure/platform/strata/metal{
-	dir = 8;
-	layer = 3.01
-	},
-/turf/open/asphalt,
-/area/kleschers/int_reg/cargo)
+/obj/structure/platform/strata/metal,
+/turf/open/auto_turf/snow/brown_base/layer0,
+/area/kleschers/outside/central_road)
 "aSO" = (
 /obj/structure/bookcase,
 /obj/structure/bookcase{
@@ -3401,12 +3418,19 @@
 "bIn" = (
 /turf/open/floor/almayer_hull,
 /area/space)
+"bIs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/tunnel/maint_tunnel{
+	pixel_y = 6
+	},
+/turf/open/floor/shiva/floor3,
+/area/kleschers/int_heavy/eta)
 "bIX" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "hospital_comp"
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/clinic)
 "bIZ" = (
@@ -3856,11 +3880,11 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/garage)
 "bVK" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "marshal_comp"
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/marshals)
 "bVQ" = (
@@ -4702,7 +4726,9 @@
 "cut" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 8;
-	icon_state = "stop_decal5"
+	icon_state = "stop_decal5";
+	pixel_x = 0;
+	pixel_y = 2
 	},
 /obj/structure/platform/strata/metal,
 /turf/open/asphalt,
@@ -5550,7 +5576,7 @@
 /area/kleschers/int_heavy/filtration_locks)
 "cTT" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/shiva/yellow/west,
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "cUb" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -6053,6 +6079,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/offices)
+"dpi" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
+/turf/open/floor/shiva/multi_tiles/southeast,
+/area/kleschers/int_reg/admin)
 "dpr" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -6152,7 +6184,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/shiva/yellow/north,
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal6";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "drZ" = (
 /obj/structure/platform{
@@ -6453,8 +6490,8 @@
 /turf/open/floor/asteroidwarning/west,
 /area/kleschers/outside/central_road)
 "dAc" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/curtain/red,
+/obj/structure/window/framed/strata,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/clinic)
 "dAE" = (
@@ -7497,12 +7534,12 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_glass/fitness)
 "egA" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/curtain/red,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "dorm_comp"
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/dorms)
 "egD" = (
@@ -7839,13 +7876,12 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_heavy/eta)
 "erj" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
+/obj/structure/platform/strata/metal{
+	dir = 1
 	},
-/obj/structure/phone_base/colony_net/rotary{
-	phone_category = "Klescher Research Facility";
-	phone_color = "blue";
-	phone_id = "Cargo Distribution Center"
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
 	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
@@ -7947,15 +7983,13 @@
 /turf/closed/wall/strata_outpost/reinforced,
 /area/kleschers/int_reg/engineering)
 "evk" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal6";
+	pixel_x = 16;
+	pixel_y = 16
 	},
-/obj/structure/cargo_container/horizontal/blue/bottom{
-	pixel_x = 15;
-	pixel_y = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/shiva,
+/obj/structure/closet/crate,
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "evl" = (
 /obj/structure/platform/strata{
@@ -8108,8 +8142,9 @@
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_reg/hydroponics)
 "eyh" = (
-/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	unacidable = 1
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "transit";
+	name = "Transit Tunnel Lock"
 	},
 /turf/open/asphalt/cement/cement3,
 /area/kleschers/outside/northwest)
@@ -8302,7 +8337,7 @@
 /obj/structure/platform/strata/metal,
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	id = "cargo_baydoor";
+	id = "cargo_baydoor2";
 	name = "Cargo Bay"
 	},
 /turf/open/asphalt,
@@ -8586,6 +8621,12 @@
 /obj/item/clothing/head/soft/trucker/red,
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/diner)
+"eNq" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement3,
+/area/kleschers/outside/northwest)
 "eNv" = (
 /obj/structure/window/framed/strata/reinforced,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -9149,11 +9190,11 @@
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_heavy/lambda_north_wing)
 "fcY" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "ops_comp"
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "fdi" = (
@@ -9204,11 +9245,16 @@
 /area/kleschers/int_reg/shuttle)
 "feB" = (
 /obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
+	icon_state = "W";
+	layer = 2.5
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/supply/supplies/flares,
-/turf/open/floor/shiva,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_reg/cargo)
 "feE" = (
 /obj/structure/platform/strata{
@@ -9297,7 +9343,7 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_reg/marshals)
 "fgl" = (
-/obj/structure/window/framed/strata/hull,
+/obj/structure/window/framed/strata,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/clinic)
 "fgT" = (
@@ -9354,28 +9400,14 @@
 /turf/open/asphalt/cement/cement1,
 /area/kleschers/outside/central_road)
 "fig" = (
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 4;
-	layer = 3.01
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 2;
+	pixel_y = 1
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = -15;
-	dir = 8;
-	pixel_x = -16
-	},
-/obj/structure/pipes/standard/simple/visible/supply{
-	dir = 8;
-	layer = 6.1
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/outside/central_road)
+/turf/open/floor/shiva/floor3,
+/area/kleschers/int_reg/cargo)
 "fil" = (
 /obj/structure/platform/strata{
 	color = "#df9f9f"
@@ -9893,7 +9925,7 @@
 	color = "#967e73"
 	},
 /obj/item/weapon/gun/shotgun/type23/unloaded{
-	pixel_x = -16;
+	pixel_x = -26;
 	pixel_y = 27
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -12618,6 +12650,18 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/shiva/purple/northeast,
 /area/kleschers/int_heavy/lambda_virology)
+"gUo" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 1;
+	pixel_y = 2;
+	id = "cargo_baydoor";
+	name = "Cargo Bay Access"
+	},
+/turf/open/floor/shiva/multi_tiles/southeast,
+/area/kleschers/int_reg/cargo)
 "gUW" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
@@ -13079,12 +13123,12 @@
 /turf/open/floor/corsat,
 /area/kleschers/int_reg/hydroponics)
 "heU" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Operations";
 	name = "\improper Operations Shutters";
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "hfj" = (
@@ -13601,6 +13645,9 @@
 	icon_state = "W";
 	layer = 2.5
 	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_reg/cargo)
 "htF" = (
@@ -13796,9 +13843,9 @@
 /turf/open/floor/shiva/yellow/north,
 /area/kleschers/int_reg/engineering)
 "hyS" = (
-/obj/structure/window/framed/strata/hull,
-/turf/open/floor/plating,
-/area/kleschers/int_reg/marshals)
+/obj/structure/platform/strata/metal,
+/turf/open/auto_turf/sand_white/layer0,
+/area/kleschers/outside/central_road)
 "hzf" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -14255,16 +14302,9 @@
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/marshals)
 "hKT" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/cargo_container/horizontal/blue/middle{
-	pixel_x = 15;
-	pixel_y = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/shiva,
-/area/kleschers/int_reg/cargo)
+/obj/structure/window/framed/strata/reinforced,
+/turf/open/floor/plating,
+/area/kleschers/int_reg/clinic)
 "hLj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -14842,7 +14882,6 @@
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
 	unacidable = 1
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_reg/garage)
 "iax" = (
@@ -15779,13 +15818,11 @@
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_reg/engineering)
 "iyl" = (
-/obj/structure/pipes/vents/pump,
-/obj/structure/machinery/light{
-	light_power = 0.7;
+/obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
-/turf/open/floor/shiva/floor3,
-/area/kleschers/int_reg/cargo)
+/turf/open/asphalt/cement/cement1,
+/area/kleschers/shuttles/drop2)
 "iyu" = (
 /obj/structure/pipes/standard/simple/visible/supply{
 	dir = 1;
@@ -17104,7 +17141,7 @@
 	},
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	id = "cargo_baydoor";
+	id = "cargo_baydoor2";
 	name = "Cargo Bay"
 	},
 /turf/open/asphalt,
@@ -17206,8 +17243,8 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/roofed_spaceport)
 "jhS" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/curtain/red,
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "jhT" = (
@@ -17625,12 +17662,12 @@
 /turf/open/floor/asteroidwarning/southeast,
 /area/kleschers/outside/rebel_landing)
 "jtk" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "hospital_comp";
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/clinic)
 "jtz" = (
@@ -17882,7 +17919,11 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_reg/filtration)
 "jyv" = (
-/turf/open/floor/shiva/yellow/northeast,
+/obj/structure/desertdam/decals/road_stop{
+	icon_state = "stop_decal5";
+	pixel_x = -2
+	},
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "jyC" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -17972,7 +18013,6 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/eta)
 "jAg" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "dorm_comp";
@@ -17981,6 +18021,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/dorms)
 "jAi" = (
@@ -18376,6 +18417,14 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/eta)
+"jLb" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	dir = 8;
+	layer = 3.01
+	},
+/turf/open/asphalt,
+/area/kleschers/int_reg/cargo)
 "jLl" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	name = "Bathroom"
@@ -18435,7 +18484,9 @@
 "jNc" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 4;
-	icon_state = "stop_decal5"
+	icon_state = "stop_decal5";
+	pixel_x = 0;
+	pixel_y = 2
 	},
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -18446,6 +18497,14 @@
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8;
 	layer = 2.84
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
 	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
@@ -18489,7 +18548,7 @@
 /area/kleschers/outside/central_road)
 "jNp" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/plating_catwalk/shiva,
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "jNw" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
@@ -18592,7 +18651,8 @@
 "jPr" = (
 /obj/structure/machinery/door_control{
 	pixel_x = 23;
-	id = "room1"
+	id = "room1";
+	pixel_y = -1
 	},
 /obj/structure/bed{
 	pixel_y = 13;
@@ -18642,12 +18702,12 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/marshals)
 "jPI" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8;
+	layer = 2.84
 	},
-/obj/structure/cargo_container/grant/right,
-/turf/open/floor/shiva,
-/area/kleschers/int_reg/cargo)
+/turf/open/floor/shiva/multi_tiles/southeast,
+/area/kleschers/int_reg/admin)
 "jPO" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.4;
@@ -19012,7 +19072,6 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_south_wing)
 "kdv" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Operations";
 	name = "\improper Operations Shutters"
@@ -19021,6 +19080,7 @@
 	name = "Storm Shutters";
 	id = "ops_comp"
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "kdx" = (
@@ -19445,7 +19505,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/shiva/yellowcorners/east,
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal5";
+	pixel_x = -16;
+	pixel_y = 16
+	},
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "knN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19500,6 +19565,17 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_virology)
+"kpA" = (
+/obj/structure/machinery/light{
+	light_power = 0.7;
+	dir = 1
+	},
+/obj/structure/machinery/door_control{
+	pixel_x = 23;
+	id = "workshop_br_g"
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/kleschers/int_reg/garage)
 "kpI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -19615,6 +19691,17 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/kleschers/int_reg/roofed_spaceport)
+"ktm" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/clipboard{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/turf/open/floor/shiva/floor3,
+/area/kleschers/int_reg/cargo)
 "ktw" = (
 /obj/structure/machinery/light{
 	light_power = 0.7;
@@ -19711,7 +19798,11 @@
 /area/kleschers/int_reg/offices)
 "kwv" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
-/turf/open/floor/shiva/floor3,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/cargo)
 "kwy" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -19722,6 +19813,12 @@
 "kwJ" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/shiva,
+/area/kleschers/int_reg/cargo)
+"kwP" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
 "kwV" = (
 /obj/structure/curtain/red,
@@ -19943,6 +20040,10 @@
 	dir = 8;
 	layer = 3.01
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/cargo)
 "kBJ" = (
@@ -20055,6 +20156,10 @@
 "kEh" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
 	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
@@ -20179,6 +20284,9 @@
 	pixel_y = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
 /turf/open/floor/corsat/bluegreycorner,
 /area/kleschers/int_reg/admin)
 "kIS" = (
@@ -20362,6 +20470,12 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_heavy/lambda_center)
+"kOD" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/shuttles/drop2)
 "kOJ" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/shiva/multi_tiles,
@@ -20736,7 +20850,17 @@
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/engineering)
 "kYy" = (
-/turf/open/floor/shiva/multi_tiles/east,
+/obj/structure/desertdam/decals/road_stop{
+	icon_state = "stop_decal5";
+	pixel_x = 20
+	},
+/obj/structure/desertdam/decals/road_stop{
+	dir = 8;
+	icon_state = "stop_decal5";
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "kYD" = (
 /obj/structure/platform_decoration/strata{
@@ -20772,11 +20896,11 @@
 /turf/open/auto_turf/strata_grass,
 /area/kleschers/outside/rebel_landing)
 "kZa" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Operations";
 	name = "\improper Operations Shutters"
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "kZc" = (
@@ -21009,17 +21133,11 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_virology)
 "lfP" = (
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 1
+/obj/structure/prop/almayer/computers/sensor_computer2{
+	name = "colonial operations terminal"
 	},
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 4;
-	layer = 3.01
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/outside/central_road)
+/turf/open/floor/shiva/radiator_tile2,
+/area/kleschers/int_reg/cargo)
 "lfX" = (
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
@@ -21970,8 +22088,8 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_virology)
 "lAf" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "lAj" = (
@@ -22918,8 +23036,8 @@
 	icon_state = "W";
 	layer = 2.5
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
 	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_reg/cargo)
@@ -23260,12 +23378,12 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/eta)
 "mfz" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "cargo_comp";
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/cargo)
 "mfQ" = (
@@ -23317,6 +23435,9 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_heavy/lambda_north_wing)
+"mgX" = (
+/turf/open/floor/shiva/multi_tiles/east,
+/area/kleschers/shuttles/drop2)
 "mgY" = (
 /turf/open/asphalt/cement/cement2,
 /area/kleschers/outside/construction)
@@ -23400,16 +23521,11 @@
 /turf/open/floor/shiva/yellow/east,
 /area/kleschers/int_reg/engineering)
 "mjy" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5
-	},
-/obj/structure/platform/strata/metal,
-/turf/open/floor/shiva/multi_tiles/southeast,
+/obj/structure/closet/crate,
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "mjX" = (
 /obj/structure/machinery/light{
@@ -23458,6 +23574,17 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_north_wing)
+"mlI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/platform/strata/metal{
+	dir = 8;
+	layer = 3.01
+	},
+/turf/open/floor/shiva/multi_tiles/north,
+/area/kleschers/int_reg/cargo)
 "mlV" = (
 /obj/structure/barricade/handrail/strata,
 /turf/open/asphalt/cement/cement4,
@@ -23824,8 +23951,9 @@
 /turf/closed/wall/strata_outpost/reinforced,
 /area/kleschers/int_reg/admin)
 "mvK" = (
-/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	unacidable = 1
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "transit";
+	name = "Transit Tunnel Lock"
 	},
 /turf/open/asphalt/cement/cement1,
 /area/kleschers/outside/northwest)
@@ -24573,8 +24701,8 @@
 /turf/open/floor/shiva/multi_tiles/east,
 /area/kleschers/int_heavy/eta)
 "mPG" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/curtain/medical,
+/obj/structure/window/framed/strata,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/clinic)
 "mPH" = (
@@ -24638,6 +24766,10 @@
 /obj/structure/machinery/space_heater,
 /turf/open/auto_turf/strata_grass,
 /area/kleschers/outside/northwest)
+"mSd" = (
+/obj/structure/largecrate/random,
+/turf/open/asphalt,
+/area/kleschers/int_reg/cargo)
 "mSp" = (
 /obj/structure/surface/table/woodentable{
 	color = "#8B7B5B"
@@ -25109,8 +25241,9 @@
 /turf/open/floor/corsat/marked,
 /area/kleschers/int_reg/hydroponics)
 "nfX" = (
-/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	unacidable = 1
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "transit";
+	name = "Transit Tunnel Lock"
 	},
 /turf/open/asphalt,
 /area/kleschers/outside/northwest)
@@ -25118,7 +25251,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
-/turf/open/floor/shiva/yellow,
+/obj/structure/largecrate/random,
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "ngf" = (
 /obj/structure/machinery/chem_master,
@@ -25328,6 +25462,17 @@
 	},
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_glass/fitness)
+"nla" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/platform/strata/metal{
+	dir = 4;
+	layer = 3.01
+	},
+/turf/open/floor/shiva/multi_tiles/north,
+/area/kleschers/int_reg/cargo)
 "nll" = (
 /obj/structure/platform/strata{
 	color = "#df9f9f";
@@ -25763,7 +25908,6 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/engineering)
 "nAd" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 8;
 	id = "bar_comp";
@@ -26889,6 +27033,16 @@
 "ofV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/filingcabinet{
+	pixel_y = 2;
+	pixel_x = -8;
+	can_block_movement = 0
+	},
+/obj/structure/filingcabinet{
+	pixel_y = 2;
+	pixel_x = 7;
+	can_block_movement = 0
+	},
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/cargo)
 "ogt" = (
@@ -27034,7 +27188,9 @@
 "olx" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 4;
-	icon_state = "stop_decal5"
+	icon_state = "stop_decal5";
+	pixel_x = 0;
+	pixel_y = -2
 	},
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -27523,19 +27679,20 @@
 /turf/open/floor/shiva/yellow/north,
 /area/kleschers/int_reg/engineering)
 "ozW" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "dorm_comp";
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/dorms)
 "oAi" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
 	},
-/turf/open/floor/shiva/floor3,
+/turf/open/floor/shiva,
 /area/kleschers/int_reg/cargo)
 "oAn" = (
 /obj/effect/decal/warning_stripes{
@@ -27592,6 +27749,15 @@
 	light_power = 0.7;
 	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/fence,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
 "oAD" = (
@@ -27633,12 +27799,12 @@
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
 "oBH" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "ops_comp";
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "oBK" = (
@@ -27854,9 +28020,11 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/control_tower)
 "oGW" = (
-/obj/structure/platform/strata/metal,
-/obj/structure/roof/cargocrane_tracks/vertical,
-/turf/open/asphalt,
+/obj/structure/barricade/handrail/strata,
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/cargo)
 "oHK" = (
 /obj/structure/closet/secure_closet/guncabinet{
@@ -28245,10 +28413,6 @@
 	},
 /obj/structure/toilet{
 	pixel_y = 8
-	},
-/obj/structure/curtain/red{
-	pixel_x = 0;
-	pixel_y = -3
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
@@ -28656,6 +28820,11 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/caves/southern_caves)
+"oZc" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/platform/strata/metal,
+/turf/open/asphalt,
+/area/kleschers/int_reg/cargo)
 "oZd" = (
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/kleschers/outside/rebel_landing)
@@ -28742,7 +28911,7 @@
 "paC" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	id = "cargo_baydoor";
+	id = "cargo_baydoor2";
 	name = "Cargo Bay"
 	},
 /turf/open/asphalt,
@@ -28871,10 +29040,17 @@
 /turf/open/floor/almayer/research/containment/floor2/west,
 /area/kleschers/int_heavy/eta)
 "pft" = (
-/obj/structure/prop/almayer/computers/sensor_computer2{
-	name = "colonial operations terminal"
+/obj/structure/barricade/handrail/strata,
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
 	},
-/turf/open/floor/shiva/floor3,
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 16;
+	pixel_y = 7;
+	id = "cargo_baydoor";
+	name = "Cargo Bay Access"
+	},
+/turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/cargo)
 "pfx" = (
 /obj/effect/decal/cleanable/dirt,
@@ -29691,10 +29867,11 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/library)
 "pFv" = (
-/obj/structure/machinery/light{
-	light_power = 0.7
+/obj/structure/platform/strata/metal{
+	dir = 4;
+	layer = 3.01
 	},
-/turf/open/floor/shiva/floor3,
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "pFA" = (
 /obj/structure/largecrate/random/barrel/true_random,
@@ -29891,7 +30068,11 @@
 	pixel_x = -4;
 	pixel_y = 8
 	},
-/turf/open/floor/shiva,
+/obj/item/key/cargo_train{
+	pixel_x = 23;
+	pixel_y = 0
+	},
+/turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
 "pLp" = (
 /obj/structure/platform/strata/metal{
@@ -30221,12 +30402,11 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_heavy/reactor_excess)
 "pVb" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
+/obj/structure/barricade/handrail/strata{
+	dir = 1
 	},
-/obj/structure/cargo_container/grant/left,
-/turf/open/floor/shiva,
-/area/kleschers/int_reg/cargo)
+/turf/open/floor/shiva/multi_tiles/east,
+/area/kleschers/outside/northwest)
 "pVA" = (
 /turf/open/floor/asteroidfloor,
 /area/kleschers/int_reg/checkpoint)
@@ -30250,7 +30430,6 @@
 /turf/open/auto_turf/snow/brown_base/layer0,
 /area/kleschers/outside/northeast)
 "pWE" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Operations";
 	name = "\improper Operations Shutters";
@@ -30261,6 +30440,7 @@
 	id = "conference";
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "pXf" = (
@@ -30648,16 +30828,12 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/buildings)
 "qhB" = (
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 4;
-	layer = 3.01
+/obj/structure/machinery/door_control{
+	pixel_x = -23;
+	id = "workshop_br_g"
 	},
-/obj/structure/platform/strata/metal{
-	layer = 3.03
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/outside/central_road)
+/turf/open/asphalt,
+/area/kleschers/outside/northwest)
 "qhE" = (
 /obj/structure/machinery/sensortower,
 /turf/open/auto_turf/strata_grass,
@@ -30717,12 +30893,12 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_heavy/reactor_excess)
 "qjG" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Spaceport";
 	name = "\improper Spaceport Shutters";
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/roofed_spaceport)
 "qjR" = (
@@ -30854,11 +31030,6 @@
 /area/kleschers/outside/northwest)
 "qng" = (
 /obj/structure/blocker/invisible_wall,
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 8;
-	layer = 3.01
-	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/outside/central_road)
 "qnW" = (
@@ -31779,16 +31950,6 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/diner)
 "qIE" = (
-/obj/structure/filingcabinet{
-	pixel_y = 2;
-	pixel_x = -8;
-	can_block_movement = 0
-	},
-/obj/structure/filingcabinet{
-	pixel_y = 2;
-	pixel_x = 7;
-	can_block_movement = 0
-	},
 /obj/structure/machinery/light/small{
 	light_power = 0.4;
 	dir = 8
@@ -32273,16 +32434,8 @@
 /turf/open/floor/kutjevo/tan/multi_tiles/east,
 /area/kleschers/int_reg/clinic)
 "qTI" = (
-/obj/structure/platform/strata{
-	color = "#df9f9f"
-	},
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 4;
-	layer = 3.01
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/outside/central_road)
+/turf/open/floor/plating,
+/area/kleschers/int_reg/clinic)
 "qTL" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -32709,12 +32862,12 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/offices)
 "rcG" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "marshal_comp";
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/marshals)
 "rcM" = (
@@ -33431,12 +33584,14 @@
 /turf/open/floor/shiva/multi_tiles/east,
 /area/kleschers/int_reg/engineering)
 "rzT" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
+/obj/structure/prop/server_equipment/yutani_server/off,
+/obj/structure/machinery/door_control{
+	pixel_x = 3;
+	pixel_y = -3;
+	id = "transit"
 	},
-/obj/item/key/cargo_train,
-/turf/open/floor/shiva,
-/area/kleschers/int_reg/cargo)
+/turf/open/floor/shiva/multi_tiles/east,
+/area/kleschers/outside/northwest)
 "rAc" = (
 /obj/structure/closet/crate/trashcart,
 /obj/item/stack/rods{
@@ -33568,6 +33723,10 @@
 	pixel_y = 21;
 	pixel_x = 13
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/cargo)
 "rCQ" = (
@@ -33592,12 +33751,12 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/marshals)
 "rCS" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8;
+	layer = 2.84
 	},
-/obj/item/clipboard,
-/turf/open/floor/shiva,
-/area/kleschers/int_reg/cargo)
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/shuttles/drop2)
 "rCY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -34160,6 +34319,14 @@
 	light_power = 0.7;
 	dir = 4
 	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/structure/phone_base/colony_net/rotary{
+	phone_category = "Klescher Research Facility";
+	phone_color = "blue";
+	phone_id = "Cargo Distribution Center"
+	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
 "rRo" = (
@@ -34580,6 +34747,10 @@
 	pixel_y = -11;
 	pixel_x = -10;
 	layer = 5
+	},
+/obj/structure/platform_decoration/strata{
+	color = "#df9f9f";
+	dir = 8
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/outside/central_road)
@@ -35085,7 +35256,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/shiva/multi_tiles/east,
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "smL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -35114,7 +35285,6 @@
 /turf/open/floor/shiva,
 /area/kleschers/int_heavy/lambda_virology)
 "snG" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
 	id = "hydro_comp";
@@ -35363,7 +35533,6 @@
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
 	unacidable = 1
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_reg/garage)
 "svg" = (
@@ -35612,7 +35781,7 @@
 	dir = 8;
 	layer = 6.1
 	},
-/turf/open/auto_turf/ice/layer0,
+/turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/outside/central_road)
 "sBE" = (
 /turf/open/floor/shiva/multi_tiles/west,
@@ -35622,7 +35791,10 @@
 /turf/open/floor/carpet,
 /area/kleschers/int_heavy/lambda_center)
 "sCk" = (
-/turf/open/floor/shiva/yellow/southwest,
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1
+	},
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "sCv" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -36329,11 +36501,11 @@
 /turf/open/floor/plating,
 /area/kleschers/int_reg/filtration)
 "sVO" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "dorm_comp"
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/dorms)
 "sWy" = (
@@ -36884,6 +37056,10 @@
 	dir = 4;
 	layer = 3.01
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5
+	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
 "tpj" = (
@@ -36937,14 +37113,9 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5
-	},
-/turf/open/floor/shiva/multi_tiles/southeast,
+/turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
 "trX" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Privacy Shutters";
 	id = "conference";
@@ -36955,6 +37126,7 @@
 	id = "ops_comp";
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "trY" = (
@@ -37289,7 +37461,6 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/buildings)
 "tzm" = (
-/obj/structure/window/framed/strata/hull,
 /turf/open/floor/plating,
 /area/space)
 "tzA" = (
@@ -37596,7 +37767,6 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/buildings)
 "tHU" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Privacy Shutters";
 	id = "conference"
@@ -37605,6 +37775,7 @@
 	name = "Storm Shutters";
 	id = "ops_comp"
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "tHW" = (
@@ -37678,12 +37849,13 @@
 /turf/open/floor/corsat/officesquares,
 /area/kleschers/int_heavy/lambda_center)
 "tLa" = (
-/obj/structure/platform/strata/metal{
-	dir = 8;
-	layer = 3.01
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
 	},
-/obj/structure/platform/strata/metal,
-/turf/open/asphalt,
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
 "tLk" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -39007,7 +39179,20 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/outside/telecomms_yard)
 "usO" = (
-/turf/open/floor/shiva/yellow/northwest,
+/obj/structure/desertdam/decals/road_stop{
+	icon_state = "stop_decal5"
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_x = 24;
+	pixel_y = 4
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "usW" = (
 /obj/structure/platform/strata{
@@ -40297,8 +40482,8 @@
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/buildings)
 "vgc" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/blocker/invisible_wall,
+/obj/structure/window/framed/strata/hull,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/buildings)
 "vhg" = (
@@ -40644,6 +40829,9 @@
 	dir = 8;
 	layer = 3.01
 	},
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
 /turf/open/asphalt/cement/cement4,
 /area/kleschers/outside/central_road)
 "vtO" = (
@@ -40688,6 +40876,9 @@
 /area/kleschers/int_reg/engineering)
 "vvn" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	light_power = 0.7
+	},
 /turf/open/floor/shiva/purple/north,
 /area/kleschers/int_heavy/lambda_virology)
 "vvT" = (
@@ -40813,6 +41004,13 @@
 	},
 /turf/open/void,
 /area/space)
+"vzq" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/platform_decoration/strata/metal,
+/turf/open/asphalt,
+/area/kleschers/int_reg/cargo)
 "vzx" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/light/double{
@@ -41738,8 +41936,9 @@
 /turf/open/floor/corsat/officesquares,
 /area/space)
 "wcM" = (
-/turf/open/auto_turf/snow/brown_base/layer2,
-/area/space)
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/asphalt,
+/area/kleschers/int_reg/cargo)
 "wcZ" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/cm_vending/sorted/walkman{
@@ -41801,9 +42000,14 @@
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_reg/engineering)
 "wdE" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/shiva/floor3,
-/area/space)
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal5";
+	pixel_x = -16;
+	pixel_y = 16
+	},
+/turf/open/asphalt,
+/area/kleschers/int_reg/cargo)
 "wdF" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -41955,7 +42159,11 @@
 /obj/structure/platform/strata/metal{
 	dir = 1
 	},
-/turf/open/floor/shiva/floor3,
+/obj/structure/desertdam/decals/road_stop{
+	dir = 8;
+	icon_state = "stop_decal5"
+	},
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "wit" = (
 /obj/effect/decal/warning_stripes{
@@ -42073,9 +42281,14 @@
 /turf/open/floor/podhatchfloor,
 /area/kleschers/int_reg/admin)
 "wlM" = (
-/obj/structure/window/framed/strata/hull,
-/turf/open/floor/plating,
-/area/kleschers/int_reg/virology)
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal7";
+	pixel_x = 16;
+	pixel_y = -16
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/asphalt,
+/area/kleschers/int_reg/cargo)
 "wmr" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -42092,7 +42305,6 @@
 /turf/open/floor/shiva/red,
 /area/kleschers/int_reg/marshals)
 "wmy" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	name = "Storm Shutters";
 	id = "hospital_comp";
@@ -42101,6 +42313,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/clinic)
 "wmF" = (
@@ -42284,6 +42497,10 @@
 /obj/structure/platform/strata/metal{
 	dir = 4;
 	layer = 3.01
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
 	},
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/cargo)
@@ -42882,11 +43099,11 @@
 /turf/open/floor/asteroidwarning/southwest,
 /area/kleschers/outside/eta_courtyard)
 "wEk" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Spaceport";
 	name = "\improper Spaceport Shutters"
 	},
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/roofed_spaceport)
 "wEG" = (
@@ -42965,7 +43182,12 @@
 /area/kleschers/outside/northwest)
 "wGP" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/shiva/floor3,
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal8";
+	pixel_x = -16;
+	pixel_y = -16
+	},
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "wGQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -43889,16 +44111,13 @@
 /turf/open/auto_turf/ice/layer1,
 /area/kleschers/int_heavy/reactor_excess)
 "xga" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal7";
+	pixel_x = 16;
+	pixel_y = -16
 	},
-/obj/structure/cargo_container/horizontal/blue/top{
-	pixel_x = 15;
-	pixel_y = 1;
-	layer = 3.02
-	},
-/obj/structure/cargo_container/grant/rightmid,
-/turf/open/floor/shiva,
+/obj/structure/largecrate/random,
+/turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "xgb" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -44825,7 +45044,6 @@
 /turf/open/asphalt/cement/cement12,
 /area/kleschers/outside/east)
 "xLb" = (
-/obj/structure/window/framed/strata/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
 	id = "bar_comp";
@@ -45439,13 +45657,15 @@
 /turf/open/auto_turf/ice/layer1,
 /area/kleschers/outside/central_road)
 "yfl" = (
-/obj/structure/window/framed/strata/hull,
+/obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "yfE" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 8;
-	icon_state = "stop_decal5"
+	icon_state = "stop_decal5";
+	pixel_x = 0;
+	pixel_y = -2
 	},
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -45624,6 +45844,10 @@
 	pixel_y = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8;
+	layer = 2.84
+	},
 /turf/open/floor/corsat/bluegreycorner/west,
 /area/kleschers/int_reg/admin)
 "ykG" = (
@@ -46806,8 +47030,8 @@ xYN
 qWF
 hWu
 hWu
-wdE
-wdE
+llR
+llR
 vuo
 vuo
 vuo
@@ -51837,7 +52061,7 @@ kBd
 kBd
 kBd
 kBd
-oju
+kpA
 kTJ
 ewl
 kTJ
@@ -52096,16 +52320,16 @@ noV
 noV
 sHP
 sHP
-wlM
+llj
 iKE
 nbl
-wlM
+llj
 iKE
 nbl
-wlM
+llj
 iKE
 nbl
-wlM
+llj
 iKE
 nbl
 pAJ
@@ -52273,7 +52497,7 @@ lGs
 lGs
 lGs
 rrv
-kzS
+qhB
 kzS
 czB
 kzS
@@ -52707,7 +52931,7 @@ kBd
 kBd
 kBd
 uHs
-wcM
+vNv
 pBy
 kzS
 kzS
@@ -53627,8 +53851,8 @@ bKi
 bKi
 bKi
 bKi
-jrn
-jrn
+anl
+mgX
 jrn
 jrn
 jrn
@@ -53643,7 +53867,7 @@ tyi
 tyi
 tyi
 dZr
-tIc
+iNs
 iNs
 iNs
 iNs
@@ -53845,8 +54069,8 @@ oZu
 oZu
 ikm
 mvK
-nZe
-nZe
+iyl
+iyl
 nZe
 nZe
 nZe
@@ -53861,7 +54085,7 @@ nZe
 nZe
 nZe
 iKs
-tIc
+rCS
 iNs
 iNs
 iNs
@@ -54709,8 +54933,8 @@ hRR
 rqA
 rqA
 rqA
-rqA
-rqA
+eNq
+eNq
 eyh
 jPO
 rqA
@@ -54927,8 +55151,8 @@ agj
 fwb
 txd
 txd
-diN
-xqM
+pVb
+rzT
 bKi
 bKi
 bKi
@@ -55387,7 +55611,7 @@ eXY
 fGP
 fGP
 mlV
-tIc
+kOD
 iNs
 iNs
 iNs
@@ -55605,7 +55829,7 @@ eXY
 fGP
 fGP
 mlV
-tIc
+iNs
 iNs
 iNs
 iNs
@@ -56477,7 +56701,7 @@ rjy
 avv
 xff
 dYx
-ubE
+lfP
 ubE
 gwo
 dYx
@@ -56486,7 +56710,7 @@ ubE
 moL
 moL
 qIE
-pft
+eSw
 dYx
 wzZ
 eSw
@@ -56692,20 +56916,20 @@ aww
 wil
 kYy
 smA
-kYy
-eSw
+sbR
+sbR
 oAB
+trP
+atz
+fig
+eSw
 eSw
 moL
-moL
-qyI
-eSw
-moL
 eSw
 eSw
 eSw
-oAi
-erj
+eSw
+eSw
 eSw
 eSw
 mAA
@@ -56906,24 +57130,24 @@ nfq
 gXC
 pGh
 dbv
-uNF
-wil
+pft
+bSU
 usO
-pZP
-cjI
-vwe
-cjI
+smA
+sbR
+sbR
+sbR
 cTT
 sCk
-moL
-atz
-lhG
-lhG
-jUK
-jUK
+ijs
+ijs
+ijs
+ijs
+ijs
+jLb
 pKz
-rzT
-rCS
+jUK
+jUK
 jUK
 jUK
 lhG
@@ -57124,23 +57348,23 @@ gyF
 gXC
 rsn
 dbv
-uNF
-wil
+oGW
+bSU
 jyv
 knJ
-fjA
-pVb
-feB
-iJe
+wcM
+oMb
+sbR
+aES
 ngb
 wGP
 jNp
-wZQ
-hVE
-hVE
-hVE
-hVE
-hVE
+wdE
+jNp
+wGP
+oZc
+ktm
+oAi
 ofV
 hVE
 wZQ
@@ -57346,18 +57570,18 @@ uNF
 tpg
 jNe
 drX
-fjA
+mSd
 xga
-hKT
+sbR
 evk
-sel
-eSw
-kAQ
-iyl
-eSw
-moL
-moL
-eSw
+mjy
+wlM
+sbR
+vBC
+sbR
+iBW
+nVM
+kwP
 eSw
 rRh
 eSw
@@ -57562,19 +57786,19 @@ pzx
 nEH
 fFT
 bdr
-wil
-drX
-fjA
-jPI
-fjA
-fjA
-sel
+erj
+smA
+sbR
+sbR
+sbR
+sbR
+vzq
 pFv
-kAQ
-kAQ
-qyI
-kAQ
-qyI
+smn
+sbR
+sbR
+sbR
+nVM
 kAQ
 qyI
 dYx
@@ -57781,18 +58005,18 @@ izU
 fFT
 pfY
 kEh
-lXa
+feB
 htB
 htB
 htB
 htB
 lXa
-moL
-dgT
-eSw
-eSw
-eSw
-moL
+tLa
+bSU
+sbR
+sbR
+sbR
+nVM
 dgT
 moL
 dYx
@@ -57963,7 +58187,7 @@ qvG
 mFi
 mFi
 upC
-fgl
+qTI
 mFi
 mFi
 mFi
@@ -58005,12 +58229,12 @@ iMk
 iMk
 iMk
 kxO
-moL
-aSN
-ijs
-ijs
-ijs
-tLa
+fig
+bSU
+sbR
+sbR
+sbR
+nVM
 moL
 eSw
 eSw
@@ -58664,8 +58888,8 @@ lni
 vBC
 fuL
 cfq
-nVM
-eSw
+sCk
+mlI
 eQI
 bbo
 abd
@@ -58882,7 +59106,7 @@ eRu
 lpV
 qGN
 lpV
-oGW
+lpV
 kwv
 uZy
 eKT
@@ -59100,13 +59324,13 @@ smn
 weX
 cxF
 oMb
-nVM
-eSw
-trP
+ref
+nla
+eQI
 mwi
 hdp
 hOQ
-mjy
+epI
 ubE
 kMv
 mQI
@@ -60326,7 +60550,7 @@ aft
 aft
 aft
 ixP
-hyS
+aFC
 scC
 cZk
 wnp
@@ -60544,7 +60768,7 @@ aft
 aft
 aft
 pzG
-hyS
+aFC
 spa
 eVE
 pJa
@@ -60620,7 +60844,7 @@ eSw
 fFy
 vMX
 jns
-fjV
+gUo
 hRL
 adp
 olx
@@ -61223,7 +61447,7 @@ req
 bXH
 bXH
 wvz
-fgl
+hKT
 uPD
 uPD
 uPD
@@ -61659,7 +61883,7 @@ hhF
 ukA
 lJu
 qdl
-fgl
+hKT
 uPD
 dVi
 mFi
@@ -62325,9 +62549,9 @@ idz
 qdl
 muV
 mFi
-fgl
-fgl
-fgl
+hKT
+hKT
+hKT
 mFi
 uCA
 iaF
@@ -65398,7 +65622,7 @@ pgA
 vHK
 gXN
 itk
-rnT
+jPI
 iEa
 fpI
 fXm
@@ -65834,7 +66058,7 @@ hIp
 sSi
 gXN
 fTU
-rnT
+dpi
 iEa
 cVA
 fXm
@@ -69545,7 +69769,7 @@ yfh
 vLN
 vLN
 yfh
-yfh
+rXg
 uPF
 vUH
 vUH
@@ -69761,23 +69985,23 @@ bEA
 gSz
 vLN
 vLN
-vLN
-vLN
-vLN
-vLN
-vLN
-vLN
-vLN
+rXg
+rXg
+rXg
+rXg
+rXg
+rXg
+rXg
 sBu
-vLN
-vLN
-vLN
-vLN
-vLN
-vLN
-vLN
-vLN
-pCE
+rXg
+rXg
+rXg
+rXg
+rXg
+rXg
+rXg
+rXg
+hyS
 itg
 bpi
 bpi
@@ -69977,25 +70201,25 @@ rzd
 sAR
 sAR
 hDi
-vLN
-vLN
-yfh
-yhY
-bEA
-bEA
-bEA
-bEA
-bEA
-fig
-bEA
-bEA
-bEA
-gSz
-yfh
-yfh
-yfh
-yfh
-pCE
+rXg
+rXg
+rXg
+rXg
+sAR
+sAR
+sAR
+sAR
+sAR
+xmQ
+sAR
+sAR
+sAR
+sAR
+sAR
+sAR
+sAR
+sAR
+aSN
 itg
 bpi
 bpi
@@ -70195,26 +70419,26 @@ jLD
 qhT
 sAR
 hDi
-yfh
-yhY
-bEA
-qTI
+rXg
+rXg
+rXg
+rXg
+sAR
+sAR
+gwP
+gwP
+gwP
+lkk
+gwP
+gwP
+gwP
+gwP
+gwP
+gwP
 sAR
 sAR
 sAR
-sAR
-sAR
-xmQ
-sAR
-sAR
-sAR
-rNk
-bEA
-bEA
-gSz
-yfh
-oEl
-itg
+fNg
 bpi
 bpi
 bpi
@@ -70413,8 +70637,8 @@ kgk
 fGs
 sAR
 hDi
-yhY
-qTI
+rXg
+sAR
 sAR
 sAR
 sAR
@@ -70425,14 +70649,14 @@ gwP
 lkk
 gwP
 gwP
+gwP
+gwP
+gwP
+gwP
+gwP
 sAR
-sAR
-sAR
-sAR
-rNk
-bEA
-qhB
-itg
+gwP
+fNg
 bpi
 bpi
 bpi
@@ -70629,11 +70853,11 @@ sgz
 tRe
 kgk
 fGs
+vUH
+rEh
 sAR
-lfP
-qTI
 sAR
-sAR
+gwP
 bcd
 jum
 gQG
@@ -70646,10 +70870,10 @@ gQG
 gQG
 gQG
 nwr
-sAR
-sAR
-sAR
-sAR
+gwP
+gwP
+gwP
+gwP
 fNg
 bpi
 bpi
@@ -70850,8 +71074,8 @@ fGs
 sAR
 sAR
 sAR
-sAR
-reo
+gwP
+gwP
 tzg
 tBv
 tBv
@@ -71066,10 +71290,10 @@ lzm
 kgk
 fGs
 reo
-rXg
-rXg
-gwP
 reo
+gwP
+gwP
+gwP
 tzg
 tBv
 uQf
@@ -71155,7 +71379,7 @@ vBp
 wKu
 oaj
 vBp
-tbG
+bIs
 vXt
 ePq
 wxY
@@ -71284,7 +71508,7 @@ kQu
 pxb
 fGs
 reo
-reo
+gwP
 qOg
 gwP
 gwP
