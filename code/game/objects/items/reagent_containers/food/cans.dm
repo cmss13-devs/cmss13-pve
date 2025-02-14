@@ -299,7 +299,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/waterbottle
 	name = "\improper Mountain Spring"
-	desc = "The most popular brand of bottled water in UA and TWE space. This feat was achieved via Weyland-Yutani's exlusively patent ownership of a salt-water conversion system."
+	desc = "One of the most popular brands of bottled water in UA and TWE space, thanks to aggressive marketing abroad and in-house contracting with company colonies."
 	icon_state = "wy_water"
 	center_of_mass = "x=15;y=8"
 

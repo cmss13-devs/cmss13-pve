@@ -332,12 +332,12 @@
 /obj/item/prop/magazine/sof/n2182
 	name = "Soldier Of Fortune: Issue March 2182"
 	icon_state = "poster8"
-	desc = "A copy of Soldier of Fortune magazine. On the cover is a stylized imagine of a motion tracker in use, with the headline 'Combat Awareness in the 22nd Century'. The article covers the advancement in sensor technology that has made combat between peer nations like the UA and UPP increasingly lethal to those on the ground. Flipping through the magazine you see article titles such as 'Arsenal: The M2C Heavy Machinegun', and 'The Future War: advancements in Cyberdyne Systems combat AI'. At the back of the magazine is an extensive list of advertisements for private contractors and wares."
+	desc = "A copy of Soldier of Fortune magazine. On the cover is a stylized image of the M314 Motion Tracker in use, with the headline '22nd Century Battlespace Awareness'. The article covers advancements in ground sensor and countermeasure technologies for the modern army. Also on the cover, 'Exclusive: SOF Looks At The M41AE2' and 'The Future War: Advancements In Cyberdyne Systems Combat AI'. At the back of the magazine is an extensive pamphlet of advertisements for contractors and combat equipment."
 
 /obj/item/prop/magazine/sof/n2181
 	name = "Soldier Of Fortune: Issue December 2181"
 	icon_state = "poster21"
-	desc = "A copy of Soldier of Fortune magazine. On the cover is photo of a USCM CBRN specialist in full MOPP gear, with the headline 'The Fog of War: Combat under the threat of Nuclear, Biological and Chemical hazards'. The article goes indepth on the subject of warfare in specialized environments with particular focus on the USCM's CBRN units. Flipping through the magazine you see article titles such as 'Arsenal: The M707 Sniper Rifle', and 'American Warfare in the late 21st Century: From the Eastern States' Police Action to the Battle of Tannhauser Gate'. At the back of the magazine is an extensive list of advertisements for private contractors and wares."
+	desc = "A copy of Soldier of Fortune magazine. On the cover is photo of a Marine in full MOPP gear, with the headline 'War At The Limits: Contaminated Combat Operations'. The main article discusses fighting in contaminated environments, spotlighting the changes made by the Marine 70 program. Secondary on the cover is 'Exclusive: SOF Fires XM99 Phased Plasma Rifle', and 'Remembering Tannhauser'. At the back of the magazine is an extensive pamphlet of advertisements for contractors and combat equipment."
 
 /obj/item/prop/magazine/playboy
 	name = "Playboy: Issue..."
