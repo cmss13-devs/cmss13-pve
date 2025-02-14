@@ -68,9 +68,6 @@
 	/// Are we currently treating someone?
 	var/healing_someone = FALSE
 
-	/// Should we try and treat injured friends
-	var/treat_allies = TRUE
-
 	/// Reference for found injured ally
 	var/mob/living/carbon/human/found_injured_ally
 
