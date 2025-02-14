@@ -193,7 +193,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/starkist
 	name = "\improper Sunkist"
-	desc = "Despite tasting ostensibly like carbonated orange juice, it holds no vitamin C."
+	desc = "Despite tasting ostensibly like carbonated orange juice, it holds no vitamin C content."
 	icon_state = "starkist"
 	center_of_mass = "x=16;y=10"
 
@@ -203,8 +203,8 @@
 	reagents.add_reagent("orangejuice", 15)
 
 /obj/item/reagent_container/food/drinks/cans/space_up
-	name = "\improper Space-Up"
-	desc = "Tastes like a hull breach in your mouth."
+	name = "\improper 7-UP"
+	desc = "Friend to many a cocktail."
 	icon_state = "space-up"
 	center_of_mass = "x=16;y=10"
 
@@ -223,8 +223,8 @@
 	reagents.add_reagent("lemon_lime", 30)
 
 /obj/item/reagent_container/food/drinks/cans/iced_tea
-	name = "iced tea can"
-	desc = "Just like the squad redneck's grandmother used to buy."
+	name = "Lipton iced tea"
+	desc = "It doesn't hold a candle to meemaw's sweet tea, but it does the trick in a pinch."
 	icon_state = "ice_tea_can"
 	center_of_mass = "x=16;y=10"
 

@@ -339,14 +339,14 @@
 	name = "Dr Pepper"
 	id = "dr_gibb"
 	description = "A delicious blend of 23 different flavours"
-	color = "#102000" // rgb: 16, 32, 0
+	color = "#110b03" // rgb: 16, 32, 0
 	adj_drowsy = -6
 
 /datum/reagent/drink/cold/space_up
 	name = "7-UP"
 	id = "space_up"
-	description = "Tastes like a hull breach in your mouth."
-	color = "#202800" // rgb: 32, 40, 0
+	description = "Friend to many a cocktail."
+	color = "#677c12" // rgb: 32, 40, 0
 	adj_temp = 0
 
 
