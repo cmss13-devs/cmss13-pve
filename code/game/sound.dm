@@ -132,7 +132,7 @@
 			else sound_range = 0
 	// Range for 'nearby interiors' aswell
 	for(var/datum/interior/vehicle_interior in SSinterior.interiors)
-		if(vehicle_interior.exterior == source) // sounds vehicles with interiors make must be played inside the tank, see /obj/vehicle/sealed/armored/proc/play_interior_sound(...)
+		if(vehicle_interior.exterior == source) // sounds vehicles with interiors make must be played inside the tank, see /obj/vehicle/multitile/proc/play_interior_sound(...)
 			continue
 		if(vehicle_interior?.ready && vehicle_interior.exterior?.z == turf_source.z && get_dist(vehicle_interior.exterior, turf_source) <= sound_range)
 			extra_interiors |= vehicle_interior
