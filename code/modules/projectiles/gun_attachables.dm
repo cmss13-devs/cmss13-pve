@@ -3533,7 +3533,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "lasersight"
 	attach_icon = "lasersight_a"
-	slot = "under"
+	slot = "special"
 	pixel_shift_x = 17
 	pixel_shift_y = 17
 

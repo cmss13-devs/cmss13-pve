@@ -77,7 +77,7 @@
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/m41a/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 24, "under_y" = 13, "stock_x" = 24, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 24, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "special_x" = 26, "special_y" = 17)
 
 
 /obj/item/weapon/gun/rifle/m41a/set_gun_config_values()
@@ -156,7 +156,7 @@
 	update_icon()
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 10, "stock_x" = 5, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 10, "stock_x" = 5, "stock_y" = 17, "special_x" = 24, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_config_values()
 	..()
@@ -343,7 +343,7 @@
 	update_attachable(H.slot)
 
 /obj/item/weapon/gun/rifle/m41a/elite/xm40/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 23, "under_x" = 24, "under_y" = 13, "stock_x" = 24, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 23, "under_x" = 24, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "special_x" = 25, "special_y" = 17)
 
 /obj/item/weapon/gun/rifle/m41a/elite/xm40/set_gun_config_values()
 	..()
@@ -534,7 +534,6 @@
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/verticalgrip,
@@ -789,7 +788,7 @@
 
 
 /obj/item/weapon/gun/rifle/mar40/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 17,"rail_x" = 16, "rail_y" = 20, "under_x" = 24, "under_y" = 15, "stock_x" = 24, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 17,"rail_x" = 16, "rail_y" = 20, "under_x" = 24, "under_y" = 15, "stock_x" = 24, "stock_y" = 13, "special_x" = 25, "special_y" = 17)
 
 
 /obj/item/weapon/gun/rifle/mar40/set_gun_config_values()
@@ -891,7 +890,7 @@
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
 
 /obj/item/weapon/gun/rifle/mar40/lmg/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 16, "rail_y" = 20, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 16, "rail_y" = 20, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13, "special_x" = 25, "special_y" = 17)
 
 /obj/item/weapon/gun/rifle/mar40/lmg/set_gun_config_values()
 	..()
@@ -984,7 +983,7 @@
 	update_attachable(S.slot)
 
 /obj/item/weapon/gun/rifle/m16/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 9, "rail_y" = 20, "under_x" = 22, "under_y" = 14, "stock_x" = 15, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 9, "rail_y" = 20, "under_x" = 22, "under_y" = 14, "stock_x" = 15, "stock_y" = 14, "special_x" = 25, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/m16/set_gun_config_values()
 	..()
@@ -1086,7 +1085,7 @@
 	)
 
 /obj/item/weapon/gun/rifle/xm177/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 18,"rail_x" = 9, "rail_y" = 20, "under_x" = 19, "under_y" = 13, "stock_x" = 15, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 18,"rail_x" = 9, "rail_y" = 20, "under_x" = 19, "under_y" = 13, "stock_x" = 15, "stock_y" = 14, "special_x" = 21, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/xm177/handle_starting_attachment()
 	..()
@@ -1171,7 +1170,7 @@
 	update_attachable(S.slot)
 
 /obj/item/weapon/gun/rifle/ar10/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 8, "rail_y" = 20, "under_x" = 22, "under_y" = 14, "stock_x" = 15, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 8, "rail_y" = 20, "under_x" = 22, "under_y" = 14, "stock_x" = 15, "stock_y" = 14, "special_x" = 27, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/ar10/set_gun_config_values()
 	..()
@@ -1286,7 +1285,7 @@
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13, "special_x" = 27, "special_y" = 18)
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_config_values()
 	..()
@@ -1338,8 +1337,7 @@
 	current_mag = /obj/item/ammo_magazine/rifle/type71
 	wield_delay = WIELD_DELAY_FAST
 	attachable_allowed = list(
-		/obj/item/attachable/flashlight, // Rail
-		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/magnetic_harness, // Rail
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
@@ -1357,13 +1355,14 @@
 		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/flashlight/grip/upp,
-		/obj/item/attachable/lasersight,
-		/obj/item/attachable/lasersight/upp,
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/attached_gun/grenade/upp,
+		/obj/item/attachable/lasersight, // Special
+		/obj/item/attachable/lasersight/upp,
+		/obj/item/attachable/flashlight,
 		)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -1371,7 +1370,7 @@
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/type71/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 13, "stock_x" = 11, "stock_y" = 13, "special_x" = 0, "special_y" = 0)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 13, "stock_x" = 11, "stock_y" = 13, "special_x" = 23, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/type71/set_gun_config_values()
 	..()
@@ -1398,12 +1397,10 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
 /obj/item/weapon/gun/rifle/type71/rifleman
-	//add GL
 	random_spawn_chance = 100
 	random_rail_chance = 70
 	random_spawn_rail = list(
 		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
 	)
 	random_muzzle_chance = 100
 	random_spawn_muzzle = list(
@@ -1412,6 +1409,11 @@
 	random_under_chance = 40
 	random_spawn_under = list(
 		/obj/item/attachable/verticalgrip/upp,
+		/obj/item/attachable/attached_gun/grenade/upp,
+	)
+	random_special_chance = 70
+	random_spawn_special = list(
+		/obj/item/attachable/flashlight,
 	)
 
 /obj/item/weapon/gun/rifle/type71/dual
@@ -1419,7 +1421,6 @@
 	random_rail_chance = 70
 	random_spawn_rail = list(
 		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
 	)
 	random_muzzle_chance = 100
 	random_spawn_muzzle = list(
@@ -1427,8 +1428,12 @@
 	)
 	random_under_chance = 40
 	random_spawn_under = list(
-		/obj/item/attachable/lasersight/upp,
 		/obj/item/attachable/verticalgrip/upp,
+	)
+	random_special_chance = 55
+	random_spawn_special = list(
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight/upp,
 	)
 
 /obj/item/weapon/gun/rifle/type71/sapper
@@ -1437,7 +1442,6 @@
 	random_rail_chance = 80
 	random_spawn_rail = list(
 		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 	)
 	random_muzzle_chance = 80
@@ -1449,13 +1453,16 @@
 	random_spawn_under = list(
 		/obj/item/attachable/attached_gun/extinguisher,
 	)
+	random_special_chance = 70
+	random_spawn_special = list(
+		/obj/item/attachable/flashlight,
+	)
 
 /obj/item/weapon/gun/rifle/type71/flamer
 	name = "\improper Type 71-F pulse rifle"
 	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x27mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This variant features an integrated incinerator unit."
 	attachable_allowed = list(
-		/obj/item/attachable/flashlight, // Rail
-		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/magnetic_harness, // Rail
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
@@ -1468,6 +1475,9 @@
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/lasersight, // Special
+		/obj/item/attachable/lasersight/upp,
+		/obj/item/attachable/flashlight,
 	)
 
 /obj/item/weapon/gun/rifle/type71/flamer/handle_starting_attachment()
@@ -1482,13 +1492,16 @@
 	random_rail_chance = 100
 	random_spawn_rail = list(
 		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/mini/upp,
 	)
 	random_muzzle_chance = 100
 	random_spawn_muzzle = list(
 		/obj/item/attachable/bayonet/upp,
+	)
+	random_special_chance = 100
+	random_spawn_special = list(
+		/obj/item/attachable/flashlight,
 	)
 
 /obj/item/weapon/gun/rifle/type71/carbine
@@ -1501,8 +1514,7 @@
 	bonus_overlay_x = 2
 	force = 20 //integrated melee mod from stock, which doesn't fit on the gun but is still clearly there on the sprite
 	attachable_allowed = list(
-		/obj/item/attachable/flashlight, // Rail
-		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/magnetic_harness, // Rail
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
@@ -1519,12 +1531,15 @@
 		/obj/item/attachable/verticalgrip, // Underbarrel
 		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/lasersight, // Special
+		/obj/item/attachable/lasersight/upp,
+		/obj/item/attachable/flashlight,
 		)
 
 	random_spawn_muzzle = list() //no default bayonet
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 14, "rail_y" = 23, "under_x" = 25, "under_y" = 14, "stock_x" = 24, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 14, "rail_y" = 23, "under_x" = 25, "under_y" = 14, "stock_x" = 24, "stock_y" = 13, "special_x" = 25, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/type71/carbine/handle_starting_attachment()
 	return //integrated attachment code makes me want to blow my brains out
@@ -1543,7 +1558,6 @@
 	random_rail_chance = 70
 	random_spawn_rail = list(
 		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
 	)
 	random_muzzle_chance = 100
 	random_spawn_muzzle = list(
@@ -1552,6 +1566,10 @@
 	random_under_chance = 40
 	random_spawn_under = list(
 		/obj/item/attachable/verticalgrip/upp,
+	)
+	random_special_chance = 70
+	random_spawn_special = list(
+		/obj/item/attachable/flashlight,
 	)
 
 /obj/item/weapon/gun/rifle/type71/carbine/commando
@@ -1590,7 +1608,7 @@
 
 
 /obj/item/weapon/gun/rifle/type71/carbine/commando/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 22, "under_x" = 23, "under_y" = 14, "stock_x" = 21, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 22, "under_x" = 23, "under_y" = 14, "stock_x" = 21, "stock_y" = 18, "special_x" = 24, "special_y" = 17)
 
 
 /obj/item/weapon/gun/rifle/type71/carbine/commando/set_gun_config_values()
@@ -1618,27 +1636,27 @@
 
 	current_mag = /obj/item/ammo_magazine/rifle/m49a
 	attachable_allowed = list(
-		/obj/item/attachable/suppressor,
+		/obj/item/attachable/suppressor, // Barrel
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/bayonet/co2,
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/reddot, // Rail
+		/obj/item/attachable/reflex,
 		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/mini/army,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/mini_iff,
-		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/sling,
-	)
+		/obj/item/attachable/bipod, // Under
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/attached_gun/grenade/mk1,
+	) // Can't take 'special' attachies else it messes with the custom barrel
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	wield_delay = WIELD_DELAY_VERY_FAST
@@ -1656,7 +1674,7 @@
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
-	recoil = RECOIL_AMOUNT_TIER_3
+	recoil = RECOIL_AMOUNT_TIER_4
 	damage_falloff_mult = 0
 	scatter = SCATTER_AMOUNT_TIER_8
 
@@ -1686,7 +1704,7 @@
 /obj/item/weapon/gun/rifle/m49a/pve
 	name = "\improper M49A6 battle rifle"
 	desc = "The M49A6 is a souped-up M49A, the result of an ARMAT upgrade program that didn't pan out in huge numbers. Its main attraction is the ability to chamber and fire devastating <b>A19 depleted uranium rounds,</b> infamous for their overpenetration abilities and toxic effects on anyone unfortunate enough to survive a hit. The thicker barrel, of course, also has no issue with non-HV ammo."
-	desc_lore = "The USCMC was not terribly enthusiastic about unproven hand-held plasma weaponry. Before the XM99A was eventually adopted into use, the USCMC instead sought out a traditional squad-portable, precision, armor-piercing weapon, and contracted ARMAT to upgrade their M49A platform to be capable of firing advanced AP rounds. They succeeded- sort of. <BR> <BR>  The R2 was rejected for several reasons. It's a killer, but also a piece of junk. It kicks hard enough that precision sights simply don't stay zeroed, and its oversized muzzle-device extends an already long barrel-length. Additionally, A19 ammo, already expensive, was driven to absurd highs by the ammunition's specs. Depleted uranium is expensive...and cutting the service life of the M49A's barrel in half is even more expensive. <BR> <BR> Those that were made, however, are still service-ready and were issued where the XM99A was unavailable due to its production only just starting."
+	desc_lore = "The USCMC was not terribly enthusiastic about unproven hand-held plasma weaponry. Before the XM99A was eventually adopted into use, the USCMC instead sought out a traditional squad-portable, precision, armor-piercing weapon, and contracted ARMAT to upgrade their M49A platform to be capable of firing advanced AP rounds. They succeeded- sort of. <BR> <BR>  The A6 was rejected for several reasons. It's a killer, but also a piece of junk. It kicks hard enough that precision sights simply don't stay zeroed, and its oversized muzzle-device extends an already long barrel-length. Additionally, A19 ammo, already expensive, was driven to absurd highs by the ammunition's specs. Depleted uranium is expensive...and cutting the service life of the M49A's barrel in half is even more expensive. <BR> <BR> Those that were made, however, are still service-ready and were issued where the XM99A was unavailable due to its production only just starting."
 	icon = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_obj.dmi'
 	icon_state = "m49a"
 	item_state = "m49a"
@@ -1695,22 +1713,6 @@
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 
 	current_mag = /obj/item/ammo_magazine/rifle/m49a/pve
-	attachable_allowed = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/lasersight,
-		/obj/item/attachable/scope,
-		/obj/item/attachable/scope/pve,
-		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/mini_iff,
-		/obj/item/attachable/flashlight/grip,
-		/obj/item/attachable/sling,
-	) // Can't take a rail light else it messes with the custom barrel
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	wield_delay = WIELD_DELAY_VERY_FAST
@@ -1722,7 +1724,6 @@
 	set_fire_delay(FIRE_DELAY_TIER_4)
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 	recoil = RECOIL_AMOUNT_TIER_3
-
 
 // obnoxiously enough, need to do this manually...
 	item_icons = list(
@@ -1787,7 +1788,7 @@
 	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/rifle/l42a/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 10)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 10, "special_x" = 22, "special_y" = 17)
 
 /obj/item/weapon/gun/rifle/l42a/set_gun_config_values()
 	..()
@@ -1825,7 +1826,6 @@
 		//Rail,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
@@ -1864,7 +1864,6 @@
 		//Rail,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
@@ -1917,7 +1916,7 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 
 /obj/item/weapon/gun/rifle/rmc_f90/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 15, "rail_y" = 21, "under_x" = 24, "under_y" = 13, "stock_x" = 24, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 15, "rail_y" = 21, "under_x" = 24, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "special_x" = 25, "special_y" = 16)
 
 
 /obj/item/weapon/gun/rifle/rmc_f90/set_gun_config_values()
@@ -2052,7 +2051,6 @@
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/flashlight/grip,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/stock/xm51,
 	)

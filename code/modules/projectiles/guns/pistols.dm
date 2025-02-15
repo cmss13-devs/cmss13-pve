@@ -69,7 +69,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/m4a3/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "special_x" = 21, "special_y" = 17)
 
 
 /obj/item/weapon/gun/pistol/m4a3/set_gun_config_values()
@@ -136,7 +136,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/vp70/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21,"rail_x" = 8, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 18, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21,"rail_x" = 8, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 18, "stock_y" = 15, "special_x" = 21, "special_y" = 18)
 
 
 /obj/item/weapon/gun/pistol/vp70/set_gun_config_values()
@@ -175,7 +175,7 @@
 	current_mag = /obj/item/ammo_magazine/pistol/m1911
 
 /obj/item/weapon/gun/pistol/m1911/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "special_x" = 21, "special_y" = 17)
 
 /obj/item/weapon/gun/pistol/m1911/set_gun_config_values()
 	..()
@@ -240,7 +240,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/highpower/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 20,"rail_x" = 6, "rail_y" = 22, "under_x" = 20, "under_y" = 15, "stock_x" = 0, "stock_y" = 0)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 20,"rail_x" = 6, "rail_y" = 22, "under_x" = 20, "under_y" = 15, "stock_x" = 0, "stock_y" = 0, "special_x" = 20, "special_y" = 15)
 
 /obj/item/weapon/gun/pistol/highpower/set_gun_config_values()
 	..()
@@ -301,7 +301,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/np92/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 21, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 21, "stock_y" = 18, "special_x" = 21, "special_y" = 18)
 
 /obj/item/weapon/gun/pistol/np92/set_gun_config_values()
 	..()
@@ -358,7 +358,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/t73/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 22, "under_y" = 15, "stock_x" = 21, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 22, "under_y" = 15, "stock_x" = 21, "stock_y" = 18, "special_x" = 22, "special_y" = 15)
 
 /obj/item/weapon/gun/pistol/t73/set_gun_config_values()
 	..()
@@ -426,7 +426,7 @@
 	current_mag = /obj/item/ammo_magazine/pistol/kt42
 
 /obj/item/weapon/gun/pistol/kt42/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 20,"rail_x" = 8, "rail_y" = 22, "under_x" = 22, "under_y" = 17, "stock_x" = 22, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 20,"rail_x" = 8, "rail_y" = 22, "under_x" = 22, "under_y" = 17, "stock_x" = 22, "stock_y" = 17, "special_x" = 22, "special_y" = 17)
 
 /obj/item/weapon/gun/pistol/kt42/set_gun_config_values()
 	..()
@@ -461,7 +461,7 @@
 
 
 /obj/item/weapon/gun/pistol/holdout/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 25, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 17, "under_y" = 15, "stock_x" = 22, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 25, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 17, "under_y" = 15, "stock_x" = 22, "stock_y" = 17, "special_x" = 17, "special_y" = 15)
 
 /obj/item/weapon/gun/pistol/holdout/set_gun_config_values()
 	..()
@@ -495,7 +495,7 @@
 	attachable_allowed = null
 
 /obj/item/weapon/gun/pistol/clfpistol/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "special_x" = 21, "special_y" = 17)
 
 /obj/item/weapon/gun/pistol/clfpistol/set_gun_config_values()
 	..()
@@ -536,7 +536,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/es4/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21, "rail_x" = 10, "rail_y" = 22, "under_x" = 25, "under_y" = 18, "stock_x" = 18, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21, "rail_x" = 10, "rail_y" = 22, "under_x" = 25, "under_y" = 18, "stock_x" = 18, "stock_y" = 15, "special_x" = 25, "special_y" = 18)
 
 
 /obj/item/weapon/gun/pistol/es4/set_gun_config_values()
@@ -567,7 +567,6 @@
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/flashlight/laser_light_combo,
 		/obj/item/attachable/extended_barrel,
@@ -583,7 +582,7 @@
 	update_attachable(VP.slot)
 
 /obj/item/weapon/gun/pistol/vp78/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 17, "stock_x" = 18, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 17, "stock_x" = 18, "stock_y" = 14, "special_x" = 20, "special_y" = 17)
 
 
 /obj/item/weapon/gun/pistol/vp78/set_gun_config_values()
@@ -656,7 +655,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 		add_firemode(GUN_FIREMODE_BURSTFIRE)
 
 /obj/item/weapon/gun/pistol/b92fs/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "special_x" = 21, "special_y" = 17)
 
 /obj/item/weapon/gun/pistol/b92fs/set_gun_config_values()
 	..()
@@ -694,7 +693,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 
 
 /obj/item/weapon/gun/pistol/heavy/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 17, "rail_y" = 21, "under_x" = 20, "under_y" = 17, "stock_x" = 20, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 17, "rail_y" = 21, "under_x" = 20, "under_y" = 17, "stock_x" = 20, "stock_y" = 17, "special_x" = 20, "special_y" = 17)
 
 
 /obj/item/weapon/gun/pistol/heavy/set_gun_config_values()
@@ -786,7 +785,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
 
 /obj/item/weapon/gun/pistol/smart/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 24, "under_y" = 17, "stock_x" = 24, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 24, "under_y" = 17, "stock_x" = 24, "stock_y" = 17, "special_x" = 24, "special_y" = 17)
 
 /obj/item/weapon/gun/pistol/smart/set_gun_config_values()
 	..()
@@ -835,7 +834,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/pistol/skorpion/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 18,"rail_x" = 16, "rail_y" = 21, "under_x" = 23, "under_y" = 15, "stock_x" = 23, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 18,"rail_x" = 16, "rail_y" = 21, "under_x" = 23, "under_y" = 15, "stock_x" = 23, "stock_y" = 15, "special_x" = 23, "special_y" = 15)
 
 /obj/item/weapon/gun/pistol/skorpion/set_gun_config_values()
 	..()
