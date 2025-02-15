@@ -356,8 +356,8 @@
 // XM99A, The quintesential phased plasma rifle in the 40 watt range
 
 /obj/item/weapon/gun/XM99
-	name = "\improper XM99A1 phased plasma pulse rifle"
-	desc = "An experimental directed energy weapon system designed by Armat, the XM99A1 improves upon the initial models flaws with energy capacity, allowing it to fire even without a full charge in its battery cells."
+	name = "\improper XM99A phased plasma pulse rifle"
+	desc = "An experimental directed energy weapon system designed by Armat, the XM99A is a long-range prototype rifle that fires super-heated blasts of plasma."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "xm99a"
 	item_state = "xm99a"
