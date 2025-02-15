@@ -34,6 +34,9 @@
 /obj/structure/shuttle/part/midway/transparent{
 	icon_state = "7"
 	},
+/obj/structure/machinery/light/dropship/blue{
+	dir = 4
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "dD" = (
@@ -124,6 +127,9 @@
 "mh" = (
 /obj/structure/shuttle/part/midway/transparent{
 	icon_state = "8"
+	},
+/obj/structure/machinery/light/dropship/blue{
+	dir = 8
 	},
 /turf/template_noop,
 /area/shuttle/midway)
@@ -380,6 +386,9 @@
 /obj/structure/shuttle/part/midway/transparent{
 	icon_state = "70"
 	},
+/obj/structure/machinery/light/dropship/green{
+	dir = 4
+	},
 /turf/template_noop,
 /area/shuttle/midway)
 "DO" = (
@@ -608,6 +617,9 @@
 "Zr" = (
 /obj/structure/shuttle/part/midway/transparent{
 	icon_state = "66"
+	},
+/obj/structure/machinery/light/dropship/red{
+	dir = 8
 	},
 /turf/template_noop,
 /area/shuttle/midway)

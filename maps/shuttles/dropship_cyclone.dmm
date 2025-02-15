@@ -145,6 +145,9 @@
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "8"
 	},
+/obj/structure/machinery/light/dropship/blue{
+	dir = 8
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "lm" = (
@@ -234,6 +237,9 @@
 "pz" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "66"
+	},
+/obj/structure/machinery/light/dropship/red{
+	dir = 8
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)
@@ -420,6 +426,9 @@
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "7"
 	},
+/obj/structure/machinery/light/dropship/blue{
+	dir = 4
+	},
 /turf/template_noop,
 /area/shuttle/cyclone)
 "Da" = (
@@ -481,6 +490,9 @@
 "IZ" = (
 /obj/structure/shuttle/part/cyclone/transparent{
 	icon_state = "70"
+	},
+/obj/structure/machinery/light/dropship/green{
+	dir = 4
 	},
 /turf/template_noop,
 /area/shuttle/cyclone)

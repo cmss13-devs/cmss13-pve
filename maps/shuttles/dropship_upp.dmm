@@ -123,6 +123,7 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ds_upp)
 "lm" = (
+/obj/structure/machinery/light/dropship/blue,
 /turf/closed/shuttle/ert{
 	icon_state = "upp1"
 	},
@@ -348,6 +349,7 @@
 	},
 /area/shuttle/ds_upp)
 "HD" = (
+/obj/structure/machinery/light/dropship/blue,
 /turf/closed/shuttle/ert{
 	icon_state = "upp3"
 	},
@@ -464,6 +466,13 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
+"RT" = (
+/obj/structure/machinery/light/dropship/red{
+	dir = 8;
+	pixel_y = 6
+	},
+/turf/template_noop,
+/area/template_noop)
 "RX" = (
 /obj/structure/machinery/light{
 	dir = 4;
@@ -497,6 +506,15 @@
 "Sx" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp5"
+	},
+/area/shuttle/ds_upp)
+"Te" = (
+/obj/structure/machinery/light/dropship/green{
+	dir = 4;
+	pixel_y = 6
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "upp_rightengine"
 	},
 /area/shuttle/ds_upp)
 "Th" = (
@@ -574,6 +592,15 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
+"Yl" = (
+/obj/structure/machinery/light/dropship/red{
+	dir = 8;
+	pixel_y = 6
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "upp_leftengine"
+	},
+/area/shuttle/ds_upp)
 "Yn" = (
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/ds_upp)
@@ -625,7 +652,7 @@ Jy
 ld
 cO
 cO
-MF
+Yl
 pv
 Zn
 Jy
@@ -778,14 +805,14 @@ BT
 di
 "}
 (9,1,1) = {"
-Jy
+RT
 Jy
 Jy
 Jy
 PQ
 cO
 cO
-xc
+Te
 Fz
 di
 Jy

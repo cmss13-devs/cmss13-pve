@@ -100,6 +100,9 @@
 /area/shuttle/drop1/sulaco)
 "jz" = (
 /obj/structure/shuttle/part/dropship1/transparent/middle_right_wing,
+/obj/structure/machinery/light/dropship/green{
+	dir = 4
+	},
 /turf/template_noop,
 /area/shuttle/drop1/sulaco)
 "ll" = (
@@ -160,6 +163,9 @@
 /area/shuttle/drop1/sulaco)
 "oW" = (
 /obj/structure/shuttle/part/dropship1/transparent/middle_left_wing,
+/obj/structure/machinery/light/dropship/red{
+	dir = 8
+	},
 /turf/template_noop,
 /area/shuttle/drop1/sulaco)
 "po" = (
@@ -216,6 +222,9 @@
 /area/shuttle/drop1/sulaco)
 "uu" = (
 /obj/structure/shuttle/part/dropship1/left_inner_wing_connector,
+/obj/structure/machinery/light/dropship/blue{
+	dir = 4
+	},
 /turf/template_noop,
 /area/shuttle/drop1/sulaco)
 "vi" = (
@@ -385,6 +394,9 @@
 /area/shuttle/drop1/sulaco)
 "Gg" = (
 /obj/structure/shuttle/part/dropship1/right_inner_wing_connector,
+/obj/structure/machinery/light/dropship/blue{
+	dir = 8
+	},
 /turf/template_noop,
 /area/shuttle/drop1/sulaco)
 "Gw" = (
