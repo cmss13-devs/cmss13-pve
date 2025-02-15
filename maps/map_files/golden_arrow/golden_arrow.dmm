@@ -1262,7 +1262,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	dir = 8;
-	light_power = 0,5;
+	light_power = 0.5;
 	pixel_y = 10
 	},
 /turf/open/floor/almayer/edge/smooth/southwest,
@@ -16075,7 +16075,7 @@
 "eZR" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	dir = 8;
-	light_power = 0,5;
+	light_power = 0.5;
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -18362,7 +18362,7 @@
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	dir = 8;
-	light_power = 0,5;
+	light_power = 0.5;
 	pixel_y = 10
 	},
 /turf/open/floor/almayer/dark_sterile,
