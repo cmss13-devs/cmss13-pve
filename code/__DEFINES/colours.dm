@@ -132,8 +132,10 @@
 #define LIGHT_COLOR_HALOGEN "#F0FAFA"
 /// Bluish cyan color for blue lights. rgb(210, 227, 236)
 #define LIGHT_COLOR_XENON "#D2E3EC"
-/// Red found on submarines for perserving nightvision.
-#define LIGHT_COLOR_RED_BULB "#C02526"
+/// Red found on submarines for perserving nightvision. rgb(210 227 236)
+#define LIGHT_COLOR_RED_BULB "#c02526"
+/// A shade of xenon that is found only on the USS Golden Arrow.
+#define LIGHT_COLOR_XENON_UA
 
 /// The default color for admin say, used as a fallback when the preference is not enabled
 
