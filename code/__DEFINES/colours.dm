@@ -132,6 +132,8 @@
 #define LIGHT_COLOR_HALOGEN "#F0FAFA"
 /// Bluish cyan color for blue lights. rgb(210, 227, 236)
 #define LIGHT_COLOR_XENON "#D2E3EC"
+/// Red found on submarines for perserving nightvision.
+#define LIGHT_COLOR_RED_BULB "#C02526"
 
 /// The default color for admin say, used as a fallback when the preference is not enabled
 

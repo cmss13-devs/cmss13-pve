@@ -657,10 +657,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
+/obj/structure/machinery/light/small/red,
 /obj/structure/prop{
 	icon = 'icons/obj/structures/props/platforms.dmi';
 	icon_state = "platform";
@@ -1050,9 +1047,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "adQ" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 8
 	},
 /turf/open/floor/almayer/mono,
@@ -2262,10 +2257,7 @@
 	pixel_y = 2;
 	pixel_x = 2
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
+/obj/structure/machinery/light/small/red,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
@@ -3050,10 +3042,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "akN" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
+/obj/structure/machinery/light/small/red,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -8066,10 +8055,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
+/obj/structure/machinery/light/small/red,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "aBK" = (
@@ -9704,10 +9690,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
+/obj/structure/machinery/light/small/red,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "aHa" = (
@@ -9846,9 +9829,7 @@
 /obj/structure/platform_decoration{
 	dir = 1
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /turf/open/floor/almayer/edge/smooth,
@@ -10596,9 +10577,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /turf/open/floor/almayer,
@@ -15357,9 +15336,7 @@
 /obj/structure/surface/rack,
 /obj/item/tool/weldingtool/hugetank,
 /obj/item/tool/wirecutters,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 4
 	},
 /turf/open/floor/almayer,
@@ -16480,9 +16457,7 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/supply)
 "gwS" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /obj/effect/decal/warning_stripes{
@@ -16514,9 +16489,7 @@
 	dir = 4
 	},
 /obj/vehicle/powerloader,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /obj/structure/prop{
@@ -17386,9 +17359,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
 "kjn" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -17470,9 +17441,7 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
 "kKs" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/west,
@@ -18316,9 +18285,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "nnZ" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -18569,9 +18536,7 @@
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/lower_cargo)
 "odf" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -18849,9 +18814,7 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
 "pcD" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -20032,9 +19995,7 @@
 	dir = 8;
 	pixel_x = -1
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /obj/structure/prop{
@@ -20308,9 +20269,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /turf/open/floor/almayer,
@@ -20898,9 +20857,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
 "xJl" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt{

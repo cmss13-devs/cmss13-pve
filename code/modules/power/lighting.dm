@@ -193,6 +193,16 @@
 	light_type = /obj/item/light_bulb/bulb
 	light_color = LIGHT_COLOR_XENON
 
+/obj/structure/machinery/light/small/red
+	icon_state = "bulb1"
+	base_state = "bulb"
+	fitting = "bulb"
+	color = "#C02526"
+	brightness = 4
+	desc = "A small red lighting fixture that is dark shade of red. Looking at it for too long makes your eyes go watery."
+	light_type = /obj/item/light_bulb/bulb
+	light_color = LIGHT_COLOR_RED_BULB
+
 /obj/structure/machinery/light/double
 	icon_state = "ptube1"
 	base_state = "ptube"
