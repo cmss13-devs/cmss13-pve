@@ -521,19 +521,21 @@
 		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
 	)
 	attachable_allowed = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/reddot,
+		/obj/item/attachable/suppressor, // Muzzle
+		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/scope/pve,
-		/obj/item/attachable/attached_gun/grenade/mk1,
-		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/sling,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/verticalgrip, // Under
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/attached_gun/grenade/mk1/recon,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/stock/rifle/collapsible, // Stock
 	)
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/recon, /obj/item/attachable/stock/rifle/collapsible)
@@ -554,7 +556,7 @@
 	AddComponent(/datum/component/iff_fire_prevention)
 
 /obj/item/weapon/gun/rifle/m46c/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17, "rail_x" = 11, "rail_y" = 19, "under_x" = 24, "under_y" = 12, "stock_x" = 24, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17, "rail_x" = 11, "rail_y" = 19, "under_x" = 24, "under_y" = 12, "stock_x" = 24, "stock_y" = 13, "special_x" = 26, "special_y" = 17)
 
 /obj/item/weapon/gun/rifle/m46c/set_gun_config_values()
 	..()
