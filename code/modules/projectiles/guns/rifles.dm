@@ -963,13 +963,16 @@
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/attached_gun/shotgun,
-		/obj/item/attachable/lasersight,
 	)
 	random_spawn_muzzle = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/extended_barrel,
+	)
+	random_spawn_special = list(
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight,
 	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
@@ -1079,7 +1082,7 @@
 		/obj/item/attachable/reflex/,
 		/obj/item/attachable/flashlight,
 	)
-	random_spawn_under = list(
+	random_spawn_special = list(
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/lasersight,
 	)
