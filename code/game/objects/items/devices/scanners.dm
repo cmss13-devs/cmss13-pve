@@ -181,8 +181,17 @@ FORENSIC SCANNER
 /obj/item/device/healthanalyzer/soul
 	name = "\improper Health Diagnostic Equipment"
 	icon = 'icons/obj/items/Medical Scanner new.dmi'
-	icon_state = "Medical_scanner"
-	item_state = "analyzer"
+	icon_state = "medical_scanner"
+	item_state = "medical_scanner"
+	item_icons = list(
+		WEAR_WAIST = 'icons/mob/humans/onmob/belt.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/belt.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/belt.dmi',
+		)
+	item_state_slots = list(
+		WEAR_WAIST = "medical_scanner",
+		WEAR_BACK = "medical_scanner",
+		WEAR_IN_J_STORE = "medical_scanner",)
 	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
 	w_class = SIZE_MEDIUM
 	var/record_scan_on_connect = FALSE
@@ -521,7 +530,7 @@ FORENSIC SCANNER
 		record_scan_on_connect = TRUE
 		user.visible_message("[user] attaches \the [src] to [connected_to].", \
 			"You attach \the [src] to [connected_to].")
-		icon_state = "Medical_scanner_open"
+		icon_state = "medical_scanner_open"
 		overlays += image(icon, src, "+running")
 		overlays += image(icon, src, "+hooked")
 		overlays -= image(icon, src, "+unhooked")
@@ -550,7 +559,7 @@ FORENSIC SCANNER
 	connected_to = null
 	connected_from = null
 
-	icon_state = "Medical_scanner"
+	icon_state = "medical_scanner"
 	overlays -= image(icon, src, "+running")
 	overlays -= image(icon, src, "+hooked")
 	overlays += image(icon, src, "+unhooked")
