@@ -151,6 +151,5 @@
 	holding_movable.overlays += mugshot_name
 
 	vis_contents += holding_movable
-	QDEL_NULL(holding_movable)
 
 #undef MAX_NON_COMMTITLE_LEN
