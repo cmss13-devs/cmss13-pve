@@ -400,6 +400,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/whitecollar/japanese
+	name = "TWE Civilian Colonist, White-Collar"
+	ethnicity = JAPANESE_ETHNICITY
+	languages = list(LANGUAGE_JAPANESE)
+
 /datum/equipment_preset/colonist/whitecollar/exec
 	name = "US Civilian Colonist, White-Collar (Corporate Exec)"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -437,6 +442,11 @@
 	name = "LatAm Civilian Colonist, White-Collar (Corporate Exec)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/whitecollar/exec/japanese
+	name = "TWE Civilian Colonist, White-Collar (Corporate Exec)"
+	ethnicity = JAPANESE_ETHNICITY
+	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/researcher
 	name = "US Civilian Researcher"
