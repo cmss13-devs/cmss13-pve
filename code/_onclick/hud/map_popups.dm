@@ -41,11 +41,6 @@
 	/// If FALSE, this will not be cleared when calling /client/clear_screen()
 	var/clear_with_screen = TRUE
 
-/atom/movable/screen/Initialize(mapload, datum/hud/hud_owner)
-	. = ..()
-	if(hud_owner && istype(hud_owner))
-		hud = hud_owner
-
 /atom/movable/screen/Destroy()
 	master = null
 	hud = null // Not currently ever used
