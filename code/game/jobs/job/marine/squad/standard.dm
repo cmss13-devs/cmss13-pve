@@ -25,11 +25,6 @@
 	else
 		gear_preset = initial(gear_preset)
 
-/datum/job/marine/standard/whiskey
-	title = JOB_WO_SQUAD_MARINE
-	flags_startup_parameters = ROLE_ADD_TO_SQUAD
-	gear_preset = /datum/equipment_preset/wo/marine/pfc
-
 /obj/effect/landmark/start/marine
 	name = JOB_SQUAD_MARINE
 	icon_state = "marine_spawn"
