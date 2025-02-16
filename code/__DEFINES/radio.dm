@@ -41,11 +41,11 @@
 #define RADIO_CHANNEL_US_ARMY "US Army"
 #define RADIO_CHANNEL_UA_GUARD "UA Colonial Guard"
 //CLF Comms
-#define RADIO_CHANNEL_CLF_GEN "CLF"
-#define RADIO_CHANNEL_CLF_CMD "CLF Command"
-#define RADIO_CHANNEL_CLF_CCT "CLF CCT"
-#define RADIO_CHANNEL_CLF_MED "CLF Med"
-#define RADIO_CHANNEL_CLF_ENGI "CLF Engi"
+#define RADIO_CHANNEL_CLF_GEN "Insurgent"
+#define RADIO_CHANNEL_CLF_CMD "Insurgent Command"
+#define RADIO_CHANNEL_CLF_CCT "Insurgent Combat Controller"
+#define RADIO_CHANNEL_CLF_MED "Insurgent Medical"
+#define RADIO_CHANNEL_CLF_ENGI "Insurgent Technical"
 
 //UPP Comms
 #define RADIO_CHANNEL_UPP_GEN "UPP"
