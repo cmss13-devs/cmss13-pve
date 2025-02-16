@@ -6,6 +6,11 @@
 	breakable = FALSE
 	indestructible = TRUE
 
+/obj/structure/shuttle/part/ert
+	name = "wall"
+	icon = 'icons/turf/ert_shuttle.dmi'
+	icon_state = "leftengine_1"
+
 /obj/structure/shuttle/part/dropship1
 	name = "\improper Alamo"
 	icon = 'icons/turf/dropship.dmi'
