@@ -1058,7 +1058,7 @@ This is where the RO can reclaim their lost honor and purchase the M44 custom, t
 
 /datum/supply_packs/contraband/deep_storage/type_replica
 	name = "Type 80 Bayonet Replica"
-	contains = list(/obj/item/attachable/bayonet/upp_replica)
+	contains = list(/obj/item/attachable/bayonet/upp/surplus)
 	dollar_cost = 10
 	containertype = /obj/structure/largecrate/black_market
 

@@ -20,11 +20,27 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 
+/obj/item/clothing/gloves/marine/fingerless
+	name = "fingerless combat gloves"
+	desc = "A pair of black combat gloves with the finger coverings cut off. No longer insulated from electrical shocks, nor wholly capable of protecting from shrapnel, at least your hands won't be quiet as sweaty all the time now though."
+	icon_state = "black_fingerless"
+	item_state = "black_fingerless"
+	siemens_coefficient = 1
+	permeability_coefficient = 1
+
 /obj/item/clothing/gloves/marine/brown
 	name = "combat gloves"
 	desc = "A pair of brown combat gloves. Both insulated from electrical currents and capable of shrugging off shrapnel, the only downside is how sweaty your hands'll be from wearing them all the time."
 	icon_state = "brown"
 	item_state = "brown"
+
+/obj/item/clothing/gloves/marine/brown/fingerless
+	name = "fingerless combat gloves"
+	desc = "A pair of brown combat gloves with the finger coverings cut off. No longer insulated from electrical shocks, nor wholly capable of protecting from shrapnel, at least your hands won't be quiet as sweaty all the time now though."
+	icon_state = "brown_fingerless"
+	item_state = "brown_fingerless"
+	siemens_coefficient = 1
+	permeability_coefficient = 1
 
 /obj/item/clothing/gloves/marine/specialist
 	name = "\improper B18 defensive gauntlets"
