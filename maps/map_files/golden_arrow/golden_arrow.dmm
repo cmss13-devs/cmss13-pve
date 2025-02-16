@@ -2547,7 +2547,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
 	},
-/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_one,
+/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_one{
+	id = "east_airlock_one"
+	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/motor_pool)
 "aiT" = (
@@ -14045,6 +14047,12 @@
 "aXt" = (
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/platoonprep)
+"aXz" = (
+/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_one{
+	id = "west_airlock_one"
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/motor_pool)
 "aXA" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16701,7 +16709,8 @@
 	name = "Hangar_One"
 	},
 /obj/structure/machinery/door/poddoor/almayer/airlock/golden_arrow_one{
-	dir = 8
+	dir = 8;
+	id = "west_airlock_one"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
@@ -17219,6 +17228,12 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
+"jBy" = (
+/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_two{
+	id = "east_airlock_two"
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/motor_pool)
 "jHP" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17233,7 +17248,9 @@
 /obj/effect/step_trigger/clone_cleaner{
 	name = "Hangar_One"
 	},
-/obj/structure/machinery/door/poddoor/almayer/airlock/golden_arrow_one,
+/obj/structure/machinery/door/poddoor/almayer/airlock/golden_arrow_one{
+	id = "south_airlock_one"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
 "jHV" = (
@@ -17318,7 +17335,8 @@
 	name = "Hangar_Two"
 	},
 /obj/structure/machinery/door/poddoor/almayer/airlock/golden_arrow_two{
-	dir = 8
+	dir = 8;
+	id = "west_airlock_two"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
@@ -17431,6 +17449,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
+"kxr" = (
+/obj/effect/step_trigger/clone_cleaner{
+	name = "Hangar_Two"
+	},
+/obj/structure/machinery/door/poddoor/almayer/airlock/golden_arrow_two{
+	dir = 8;
+	id = "east_airlock_two"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/motor_pool)
 "kzV" = (
 /obj/structure/machinery/ares/processor/interface,
 /turf/open/floor/almayer/aicore/glowing,
@@ -18136,6 +18164,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
+"mHu" = (
+/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_two{
+	id = "north_airlock_two"
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/motor_pool)
 "mHX" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -18330,7 +18364,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "nik" = (
-/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_one,
+/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_one{
+	id = "south_airlock_one"
+	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/motor_pool)
 "nja" = (
@@ -20801,7 +20837,9 @@
 /obj/effect/step_trigger/clone_cleaner{
 	name = "Hangar_Two"
 	},
-/obj/structure/machinery/door/poddoor/almayer/airlock/golden_arrow_two,
+/obj/structure/machinery/door/poddoor/almayer/airlock/golden_arrow_two{
+	id = "north_airlock_two"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
 "vXI" = (
@@ -21095,6 +21133,16 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/motor_pool)
+"xml" = (
+/obj/effect/step_trigger/clone_cleaner{
+	name = "Hangar_One"
+	},
+/obj/structure/machinery/door/poddoor/almayer/airlock/golden_arrow_one{
+	dir = 8;
+	id = "east_airlock_one"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/motor_pool)
 "xpl" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
@@ -21138,7 +21186,9 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
 "xFR" = (
-/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_two,
+/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_two{
+	id = "west_airlock_two"
+	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/motor_pool)
 "xHO" = (
@@ -28411,7 +28461,7 @@ axS
 axS
 axS
 hxE
-nik
+aXz
 axS
 hAn
 aew
@@ -29497,7 +29547,7 @@ abD
 ahA
 adk
 aiT
-xFR
+mHu
 lJp
 lJp
 lJp
@@ -30888,7 +30938,7 @@ axS
 axS
 axS
 pvb
-hxE
+xml
 aiR
 axS
 whl
@@ -30925,8 +30975,8 @@ axS
 axS
 axS
 axS
-kaj
-xFR
+kxr
+jBy
 axS
 axS
 axS
