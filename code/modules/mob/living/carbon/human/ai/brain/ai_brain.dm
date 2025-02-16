@@ -126,9 +126,6 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(tied_human.buckled)
 		tied_human.set_buckled(FALSE) // AI never buckle themselves into chairs at the moment, change if this becomes the case
 
-	if(treat_allies && !found_injured_ally && SShuman_ai.combat_ever_started)
-		set_injured_ally(get_injured_ally())
-
 	if(!current_target)
 		set_target(get_target())
 
