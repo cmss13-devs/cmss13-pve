@@ -66,6 +66,8 @@ Defined in conflicts.dm of the #defines folder.
 	var/movement_onehanded_acc_penalty_mod = 0 //Modifies accuracy/scatter penalty when firing onehanded while moving.
 	var/velocity_mod = 0 // Added velocity to bullets
 	var/hud_offset_mod  = 0 //How many pixels to adjust the gun's sprite coords by. Ideally, this should keep the gun approximately centered.
+	var/fa_scatter_peak_mod = 0 //modifies how many bullets it takes to reach max scatter in FA firing.
+	var/fa_max_scatter_mod = 0 //modifies maximum scatter in sustained FA
 
 	var/activation_sound = 'sound/weapons/handling/gun_underbarrel_activate.ogg'
 	var/deactivation_sound = 'sound/weapons/handling/gun_underbarrel_deactivate.ogg'
@@ -312,7 +314,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/bayonet/upp_replica
 	name = "\improper Type 80 bayonet"
 	icon_state = "upp_bayonet"
-	item_state = "combat_knife"
+	item_state = "knife"
 	attach_icon = "upp_bayonet_a"
 	desc = "The standard-issue bayonet of the UPP, it's dulled from heavy use."
 
@@ -320,7 +322,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "\improper Type 80 bayonet"
 	desc = "The standard-issue bayonet of the UPP, the Type 80 is balanced to also function as an effective throwing knife."
 	icon_state = "upp_bayonet"
-	item_state = "combat_knife"
+	item_state = "knife"
 	attach_icon = "upp_bayonet_a"
 	throwforce = MELEE_FORCE_TIER_10 //doubled by throwspeed to 100
 	throw_speed = SPEED_REALLY_FAST
@@ -498,6 +500,20 @@ Defined in conflicts.dm of the #defines folder.
 	hud_offset_mod = -3
 
 /obj/item/attachable/sniperbarrel/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
+	scatter_mod = -SCATTER_AMOUNT_TIER_8
+
+/obj/item/attachable/supsniperbarrel
+	name = "suppressed sniper barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "supsniperbarrel"
+	desc = "A heavy barrel. CANNOT BE REMOVED."
+	slot = "muzzle"
+	gun_traits = list(TRAIT_GUN_SILENCED)
+	hud_offset_mod = -3
+
+/obj/item/attachable/supsniperbarrel/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
 	scatter_mod = -SCATTER_AMOUNT_TIER_8
@@ -1220,7 +1236,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "B8 Smart-Scope"
 	icon_state = "iffbarrel"
 	attach_icon = "iffbarrel_a"
-	desc = "An experimental B8 Smart-Scope, type designation XAN/PVG-110. Limited automated IFF trigger interlock system allows for use with the M44 Combat Revolver and M4RA Battle Rifle. Reduces damage due to the momentary trigger delay."
+	desc = "An experimental B8 Smart-Scope, type designation XAN/PVG-110. Limited automated IFF trigger interlock system allows for use with the M44 Combat Revolver and M49A Battle Rifle. Reduces damage due to the momentary trigger delay."
 	slot = "rail"
 	zoom_offset = 6
 	zoom_viewsize = 7
@@ -2365,22 +2381,22 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_y = 16
 	hud_offset_mod = 10 //A sprite long enough to touch the Moon.
 
-/obj/item/attachable/m4ra_barrel
-	name = "M4RA barrel"
+/obj/item/attachable/m49a_barrel
+	name = "M49A barrel"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
-	icon_state = "m4ra_barrel"
-	attach_icon = "m4ra_barrel"
+	icon_state = "m49a_barrel"
+	attach_icon = "m49a_barrel"
 	slot = "special"
 	wield_delay_mod = WIELD_DELAY_NONE
 	flags_attach_features = NO_FLAGS
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
-/* /obj/item/attachable/m4ra_barrel/New()
+/* /obj/item/attachable/m49a_barrel/New()
 	..()
 	select_gamemode_skin(type)
 
-/obj/item/attachable/m4ra_barrel/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+/obj/item/attachable/m49a_barrel/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
 	. = ..()
 	var/new_attach_icon
 	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
@@ -2391,22 +2407,22 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon */
 
-/obj/item/attachable/m4ra_barrel_custom
-	name = "custom M4RA barrel"
+/obj/item/attachable/m49a_barrel_custom
+	name = "custom M49A barrel"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
-	icon_state = "m4ra_custom_barrel"
-	attach_icon = "m4ra_custom_barrel"
+	icon_state = "m49a_custom_barrel"
+	attach_icon = "m49a_custom_barrel"
 	slot = "special"
 	wield_delay_mod = WIELD_DELAY_NONE
 	flags_attach_features = NO_FLAGS
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
-/obj/item/attachable/m4ra_barrel_custom/New()
+/obj/item/attachable/m49a_barrel_custom/New()
 	..()
 	select_gamemode_skin(type)
 
-/obj/item/attachable/m4ra_barrel_custom/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+/obj/item/attachable/m49a_barrel_custom/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
 	. = ..()
 	var/new_attach_icon
 	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
@@ -2417,10 +2433,10 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
-/obj/item/attachable/m4ra_barrel/pve
-	name = "M4RA-R2 muzzle break"
-	icon_state = "pve_m4ra_barrel"
-	attach_icon = "pve_m4ra_barrel"
+/obj/item/attachable/m49a_barrel/pve
+	name = "M49A6 muzzle break"
+	icon_state = "pve_m49a_barrel"
+	attach_icon = "pve_m49a_barrel"
 
 /obj/item/attachable/upp_rpg_breech
 	name = "HJRA-12 Breech"
@@ -3686,6 +3702,9 @@ Defined in conflicts.dm of the #defines folder.
 				burst_scatter_mod = -SCATTER_AMOUNT_TIER_8
 				if(istype(gun, /obj/item/weapon/gun/rifle/sniper/M42A))
 					delay_mod = -FIRE_DELAY_TIER_7
+				else if(istype(gun,/obj/item/weapon/gun/rifle/lmg))
+					delay_mod = 0
+					fa_scatter_peak_mod = FULL_AUTO_SCATTER_PEAK_TIER_3
 				else
 					delay_mod = -FIRE_DELAY_TIER_12
 				gun.recalculate_attachment_bonuses()
@@ -3738,6 +3757,25 @@ Defined in conflicts.dm of the #defines folder.
 			return O2
 	return 0
 
+/obj/item/attachable/bipod/integral
+	name = "integral bipod"
+	desc = "An integral bipod for the M41AE2 Heavy Pulse Rifle."
+	icon_state = "bipod"
+	attach_icon = "integ_bipod_a"
+	slot = "under"
+	size_mod = 0
+	melee_mod = 0
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+
+/obj/item/attachable/bipod/integral/New()
+	..()
+
+	delay_mod = 0
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_9
+	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 //item actions for handling deployment to full auto.
 /datum/action/item_action/bipod/toggle_full_auto_switch/New(Target, obj/item/holder)
 	. = ..()

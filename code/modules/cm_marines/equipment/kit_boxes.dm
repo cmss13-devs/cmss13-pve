@@ -92,25 +92,25 @@
 
 /obj/item/storage/box/spec/scout
 	name = "\improper Scout equipment case"
-	desc = "A large case containing an M4RA battle rifle, M3-S light armor and helmet, M4RA battle sight, M68 thermal cloak, V3 reactive thermal tarp, improved scout laser designator, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing an M49A battle rifle, M3-S light armor and helmet, M49A battle sight, M68 thermal cloak, V3 reactive thermal tarp, improved scout laser designator, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "scout"
 
 /obj/item/storage/box/spec/scout/fill_preset_inventory()
 	new /obj/item/clothing/suit/storage/marine/M3S(src)
 	new /obj/item/clothing/head/helmet/marine/scout(src)
-	new /obj/item/clothing/glasses/night/M4RA(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom/incendiary(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom/incendiary(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom/impact(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom/impact(src)
+	new /obj/item/clothing/glasses/night/M49A(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/impact(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/impact(src)
 	new /obj/item/weapon/gun/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/weapon/gun/rifle/m4ra_custom(src)
+	new /obj/item/weapon/gun/rifle/m49a_custom(src)
 	new /obj/item/storage/backpack/marine/satchel/scout_cloak(src)
 	new /obj/item/bodybag/tarp/reactive/scout(src)
 	new /obj/item/explosive/plastic(src)
@@ -362,16 +362,16 @@
 
 
 /obj/item/storage/box/kit/mini_sniper
-	name = "\improper M4RA Marksman Kit"
+	name = "\improper M49A Marksman Kit"
 	pro_case_overlay = "sniper"
 
 /obj/item/storage/box/kit/mini_sniper/fill_preset_inventory()
-	new /obj/item/weapon/gun/rifle/m4ra(src)
+	new /obj/item/weapon/gun/rifle/m49a(src)
 	new /obj/item/attachable/scope(src)
 	new /obj/item/attachable/suppressor(src)
 	new /obj/item/attachable/extended_barrel(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/ap(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/ap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/ap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/ap(src)
 
 /obj/item/storage/box/kit/m41a_kit
 	name = "\improper M41A Rifle Kit"
@@ -391,8 +391,9 @@
 
 /obj/item/storage/box/kit/heavy_support/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/lmg(src)
-	new /obj/item/ammo_magazine/rifle/lmg(src)
-	new /obj/item/ammo_magazine/rifle/lmg/holo_target(src)
+	new /obj/item/ammo_magazine/hpr_box(src)
+	new /obj/item/ammo_magazine/hpr_box/holo_target(src)
+	new /obj/item/attachable/bipod(src)
 	new /obj/item/stack/folding_barricade/three(src)
 	new /obj/item/clothing/glasses/welding(src)
 	new /obj/item/tool/weldingtool(src)
