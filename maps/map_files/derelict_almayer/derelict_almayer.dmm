@@ -2928,7 +2928,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/trash/USCMtray,
+/obj/item/trash/tray/USCMtray,
 /turf/open/floor/almayer/blue/north,
 /area/almayer/squads/delta)
 "bhQ" = (
@@ -9039,7 +9039,7 @@
 /area/almayer/living/cryo_cells)
 "duK" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /obj/item/reagent_container/food/condiment/hotsauce/cholula{
@@ -9644,7 +9644,7 @@
 /area/almayer/squads/req)
 "dGC" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /turf/open/floor/almayer,
@@ -16399,7 +16399,7 @@
 /area/almayer/engineering/lower/engine_core)
 "fUM" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -18967,7 +18967,7 @@
 /area/almayer/squads/req)
 "gVc" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	layer = 3.2;
 	pixel_x = 4;
 	pixel_y = 17
@@ -21018,7 +21018,7 @@
 /area/almayer/maint/hull/lower/l_m_s)
 "hLd" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 5
 	},
 /turf/open/floor/almayer/bluefull,
@@ -23317,7 +23317,7 @@
 /area/almayer/maint/hull/upper/u_f_p)
 "iDY" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -26359,7 +26359,7 @@
 /area/almayer/medical/containment)
 "jPn" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 7
 	},
@@ -29691,7 +29691,7 @@
 /area/almayer/shipboard/navigation)
 "lco" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -35281,7 +35281,7 @@
 /area/almayer/living/grunt_rnr)
 "njW" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 5
 	},
 /turf/open/floor/almayer/redfull,
@@ -36030,7 +36030,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/req)
 "nzq" = (
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = -4;
 	pixel_y = 10
 	},
@@ -37477,7 +37477,7 @@
 	dir = 4
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -40069,7 +40069,7 @@
 /area/almayer/engineering/upper_engineering/starboard)
 "oUG" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -46411,7 +46411,7 @@
 /area/almayer/living/gym)
 "rvu" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /turf/open/floor/almayer/red/northeast,
@@ -47733,7 +47733,7 @@
 	dir = 4
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -47897,7 +47897,7 @@
 	dir = 4
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_y = 7
 	},
 /turf/open/floor/almayer/red/east,
@@ -52798,7 +52798,7 @@
 /area/almayer/hallways/hangar)
 "tZq" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 5
 	},
 /obj/item/reagent_container/food/condiment/hotsauce/cholula{
@@ -53570,7 +53570,7 @@
 /area/almayer/command/cic)
 "ume" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 5
 	},
 /turf/open/floor/almayer/emeraldfull,
@@ -55986,7 +55986,7 @@
 /area/almayer/living/grunt_rnr)
 "vdc" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray,
+/obj/item/trash/tray/USCMtray,
 /obj/item/tool/kitchen/utensil/pknife,
 /obj/item/tool/kitchen/utensil/pfork,
 /turf/open/floor/wood/ship,
@@ -62326,7 +62326,7 @@
 /area/almayer/hallways/hangar)
 "xGO" = (
 /obj/structure/surface/table/almayer,
-/obj/item/trash/USCMtray{
+/obj/item/trash/tray/USCMtray{
 	pixel_x = 6;
 	pixel_y = 4
 	},
