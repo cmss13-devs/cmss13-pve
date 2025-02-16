@@ -140,7 +140,7 @@
 			qdel(current_mag)
 			user.drop_inv_item_on_ground(rocket)
 			current_mag = rocket
-			rocket.forceMove(get_turf(src))
+			rocket.forceMove((src))
 			replace_ammo(,rocket)
 			to_chat(user, SPAN_NOTICE("You load [rocket] into [src]."))
 			if(reload_sound)
@@ -153,7 +153,7 @@
 	else
 		qdel(current_mag)
 		current_mag = rocket
-		rocket.forceMove(get_turf(src))
+		rocket.forceMove((src))
 		replace_ammo(,rocket)
 	return TRUE
 

@@ -8,7 +8,7 @@
 	name = "high explosive rocket"
 	icon_state = "missile"
 	ping = null //no bounce off.
-	sound_bounce = "rocket_bounce"
+	sound_bounce = "rocket_ricochet"
 	damage_falloff = 0
 	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET|AMMO_STRIKES_SURFACE
 	var/datum/effect_system/smoke_spread/smoke
@@ -29,10 +29,10 @@
 	. = ..()
 
 /datum/ammo/rocket/on_hit_mob(mob/mob, obj/projectile/projectile)
+	if(iscarbon(mob)) // Doesn't matter how build-different you are, it's an explosive rocket-propelled projectile hitting you.
+		mob.ex_act(650, null, projectile.weapon_cause_data, 100)
 	cell_explosion(get_turf(mob), 250, 40, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
 	smoke.set_up(1, get_turf(mob))
-	if(ishuman_strict(mob)) // No yautya or synths. Makes humans gib on direct hit.
-		mob.ex_act(650, null, projectile.weapon_cause_data, 100)
 	smoke.start()
 
 /datum/ammo/rocket/on_hit_obj(obj/object, obj/projectile/projectile)
@@ -57,9 +57,11 @@
 
 	accuracy = HIT_ACCURACY_TIER_8
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_9
-	accurate_range = 8
+	accurate_range = 9
 	max_range = 11
 	damage = 250
+	shrapnel_chance = 5
+	shrapnel_type = /obj/item/large_shrapnel/at_rocket_dud
 	penetration= ARMOR_PENETRATION_TIER_10
 	var/vehicle_slowdown_time = 2 SECONDS
 
@@ -68,7 +70,7 @@
 	mob.ex_act(400, projectile.dir, projectile.weapon_cause_data, 100)
 	mob.apply_effect(3, WEAKEN)
 	mob.apply_effect(3, PARALYZE)
-	if(ishuman_strict(mob)) // No yautya or synths. Makes humans gib on direct hit.
+	if(iscarbon(mob)) // Doesn't matter how build-different you are, it's an explosive rocket-propelled projectile hitting you.
 		mob.ex_act(650, null, projectile.weapon_cause_data, 100)
 	cell_explosion(turf, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 	smoke.set_up(1, turf)
@@ -135,9 +137,6 @@
 	name = "anti-tank rocket"
 	damage = 1000
 	damage_var_high = 100
-	shrapnel_chance = 5
-	shrapnel_type = /obj/item/large_shrapnel/at_rocket_dud
-	max_range = 22
 	vehicle_slowdown_time = 5 SECONDS
 
 /datum/ammo/rocket/ap/anti_tank/on_hit_obj(obj/object, obj/projectile/projectile)
