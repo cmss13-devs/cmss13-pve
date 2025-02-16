@@ -748,16 +748,16 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/reactor_garage)
 "apJ" = (
-/obj/item/ammo_magazine/rifle/m4ra/ext{
+/obj/item/ammo_magazine/rifle/m49a/ext{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/m4ra/ext{
+/obj/item/ammo_magazine/rifle/m49a/ext{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/m4ra/ext{
+/obj/item/ammo_magazine/rifle/m49a/ext{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/m4ra/ext{
+/obj/item/ammo_magazine/rifle/m49a/ext{
 	current_rounds = 0
 	},
 /obj/structure/closet/crate/ammo,
@@ -13953,7 +13953,7 @@
 /area/lv522/indoors/c_block/cargo)
 "gPk" = (
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/rifle/m4ra{
+/obj/item/weapon/gun/rifle/m49a{
 	current_mag = null
 	},
 /turf/open/floor/prison/blue_plate/north,
@@ -18040,7 +18040,7 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/oob)
 "iTF" = (
-/obj/item/ammo_box/magazine/m4ra/ap/empty,
+/obj/item/ammo_box/magazine/m49a/ap/empty,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -22874,7 +22874,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
 "kZj" = (
-/obj/item/ammo_magazine/rifle/m4ra/ap{
+/obj/item/ammo_magazine/rifle/m49a/ap{
 	current_rounds = 0
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -23857,7 +23857,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "lwZ" = (
-/obj/item/ammo_box/magazine/m4ra/ap/empty,
+/obj/item/ammo_box/magazine/m49a/ap/empty,
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
 	},
@@ -42083,7 +42083,8 @@
 	dir = 4
 	},
 /obj/structure/closet/crate/ammo,
-/obj/item/ammo_magazine/rifle/lmg/holo_target,
+/obj/item/ammo_magazine/hpr_box,
+/obj/item/ammo_magazine/hpr_box,
 /obj/item/weapon/gun/rifle/lmg{
 	current_mag = null
 	},
@@ -44946,7 +44947,7 @@
 	dir = 8;
 	pixel_y = -5
 	},
-/obj/item/ammo_magazine/rifle/m4ra{
+/obj/item/ammo_magazine/rifle/m49a{
 	pixel_x = 5;
 	pixel_y = 6
 	},
@@ -45610,7 +45611,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/north_command_centre)
 "vux" = (
-/obj/item/ammo_magazine/rifle/m4ra/ap{
+/obj/item/ammo_magazine/rifle/m49a/ap{
 	current_rounds = 0
 	},
 /turf/open/floor/prison/blue/southwest,
