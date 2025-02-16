@@ -11862,6 +11862,10 @@
 	},
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/comms2)
+"jDQ" = (
+/obj/item/fishing_pole,
+/turf/open/gm/coast/west,
+/area/varadero/exterior/pontoon_beach)
 "jEd" = (
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/chips,
@@ -12470,6 +12474,10 @@
 	},
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/interior/comms1)
+"jZO" = (
+/obj/item/fishing_pole,
+/turf/open/gm/dirt,
+/area/varadero/exterior/monsoon)
 "jZW" = (
 /obj/structure/machinery/light,
 /obj/structure/bed/chair{
@@ -17332,6 +17340,11 @@
 	},
 /turf/closed/wall/r_wall/unmeltable,
 /area/varadero/interior/dock_control)
+"nQG" = (
+/obj/structure/surface/rack,
+/obj/item/fishing_pole,
+/turf/open/floor/plating/icefloor/asteroidplating,
+/area/varadero/interior/maintenance/north)
 "nQP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -45758,7 +45771,7 @@ mMJ
 krO
 doL
 mWE
-cDG
+nQG
 wHk
 qyw
 aVQ
@@ -46080,7 +46093,7 @@ vjs
 uod
 uod
 eGX
-hKK
+jDQ
 fLY
 cOZ
 uod
@@ -61465,7 +61478,7 @@ bEF
 fnU
 ghN
 bGU
-bGU
+jZO
 bGU
 bGU
 rvD

@@ -1780,7 +1780,8 @@
 /area/lv624/lazarus/quartstorage)
 "cqs" = (
 /obj/structure/surface/table/woodentable/poor,
-/obj/item/tool/kitchen/knife/butcher,
+/obj/item/fishing_pole,
+/obj/item/fish_bait,
 /turf/open/floor/wood/wood_broken6,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "cqG" = (
@@ -3051,10 +3052,16 @@
 /area/lv624/lazarus/comms)
 "dNd" = (
 /obj/structure/surface/table/woodentable/poor,
-/obj/item/tool/candle,
+/obj/item/tool/candle{
+	pixel_x = 4;
+	pixel_y = 8
+	},
 /obj/item/tool/match{
 	pixel_x = 6;
 	pixel_y = 3
+	},
+/obj/item/clothing/mask/cigarette/cigar{
+	pixel_x = -7
 	},
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
@@ -5573,11 +5580,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/east_barrens)
 "gKU" = (
-/obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
-	name = "\improper River Snack Bar";
-	req_access_txt = "100";
-	req_one_access = null
-	},
+/obj/structure/curtain/red,
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "gKW" = (
@@ -8200,7 +8203,9 @@
 /area/lv624/ground/jungle/south_west_jungle/ceiling)
 "jXS" = (
 /obj/item/toy/inflatable_duck,
-/turf/open/gm/river,
+/turf/open/gm/river{
+	fishing_allowed = 0
+	},
 /area/lv624/lazarus/fitness)
 "jXZ" = (
 /obj/effect/landmark/crap_item,
@@ -10984,7 +10989,9 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/east_caves)
 "nCP" = (
-/turf/open/gm/river,
+/turf/open/gm/river{
+	fishing_allowed = 0
+	},
 /area/lv624/lazarus/fitness)
 "nCX" = (
 /obj/structure/flora/jungle/planttop1,
@@ -14277,6 +14284,11 @@
 /obj/structure/surface/table/holotable,
 /turf/open/floor/whitepurple/northeast,
 /area/lv624/lazarus/research)
+"ske" = (
+/obj/structure/surface/rack,
+/obj/item/fishing_pole,
+/turf/open/floor/vault,
+/area/lv624/lazarus/quartstorage)
 "sks" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
@@ -15154,7 +15166,7 @@
 /area/lv624/lazarus/engineering)
 "tEl" = (
 /obj/structure/surface/table/woodentable/poor,
-/obj/item/clothing/mask/cigarette/cigar,
+/obj/item/tool/kitchen/knife/butcher,
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "tEA" = (
@@ -17047,6 +17059,10 @@
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/coast/south,
 /area/lv624/ground/river/east_river)
+"whl" = (
+/obj/item/fishing_pole,
+/turf/open/gm/coast/west,
+/area/lv624/ground/caves/north_central_caves)
 "who" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/colony{
 	dir = 1;
@@ -33513,7 +33529,7 @@ jlL
 kYS
 kYS
 kYS
-kYS
+whl
 kYS
 wJt
 qem
@@ -50465,7 +50481,7 @@ ioa
 xYV
 xYV
 xYV
-bMd
+ske
 xYV
 bMd
 xYV
