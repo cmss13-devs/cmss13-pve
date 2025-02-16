@@ -262,7 +262,7 @@
 /area/lv624/lazarus/crashed_ship_containers)
 "Yf" = (
 /obj/structure/bed/chair/dropship/pilot,
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/obj/item/clothing/head/helmet/marine/veteran/pmc,
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 
