@@ -201,6 +201,9 @@
 	mineralType = "wood"
 	hardness = 1
 
+/obj/structure/mineral_door/wood/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -40, 5)
+
 /obj/structure/mineral_door/wood/Open()
 	isSwitchingStates = 1
 	playsound(loc, 'sound/effects/doorcreaky.ogg', 25, 1)
