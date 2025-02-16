@@ -643,7 +643,7 @@
 //############################## VISIBLE HEADSETS ###############################
 /obj/item/device/radio/headset/almayer/marine/solardevils
 	name = "marine radio headset"
-	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	desc = "Standard infantryman's combination ear defenders and radio headset. Gives access to the common Solar Devils tactical frequency."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_override = 'icons/mob/humans/onmob/head_1.dmi'
 	icon_state = "uscm_headset"
@@ -652,7 +652,8 @@
 		WEAR_L_EAR = 'icons/mob/humans/onmob/head_1.dmi',
 		WEAR_R_EAR = 'icons/mob/humans/onmob/head_1.dmi',
 		)
-	frequency = ALPHA_FREQ
+	frequency = SOLDEV_FREQ
+	maximum_keys = 5
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"
