@@ -464,11 +464,8 @@ FORENSIC SCANNER
 		return PROCESS_KILL
 	update_beam(TRUE)
 	perform_scan_and_report()
-	//Modify the health analyzers own beeping sounds depending on what is happening
 	var/health_percentage = connected_to.health - connected_to.halloss
-	// if oxyloss is more than half of the remaining damage to instant death, make a different beep
-	var/midpoint = abs(((connected_to.getBruteLoss() + connected_to.getFireLoss() + connected_to.getToxLoss()) + (HEALTH_THRESHOLD_DEAD-100)) / 2)
-	if (connected_to.oxyloss >= midpoint || connected_to.health < -150)
+	if ((connected_to.oxyloss >= 40 || connected_to.health < -150) && connected_to.stat < 2)
 		oxygen_alarm_loop.start()
 	else
 		oxygen_alarm_loop.stop()
