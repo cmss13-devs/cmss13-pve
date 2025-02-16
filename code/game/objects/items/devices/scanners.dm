@@ -492,7 +492,7 @@ FORENSIC SCANNER
 		heart_rate_loop.start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 		heart_rate_loop.mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 		heart_rate_loop.mid_length = 3.110 SECONDS
-
+	heart_rate_loop.start()
 	return
 
 /obj/item/device/healthanalyzer/soul/proc/update_beam(new_beam = TRUE)
@@ -526,7 +526,6 @@ FORENSIC SCANNER
 		connected_from = user
 		connected_to.base_pixel_x = 5
 		START_PROCESSING(SSobj, src)
-		heart_rate_loop.start()
 		record_scan_on_connect = TRUE
 		user.visible_message("[user] attaches \the [src] to [connected_to].", \
 			"You attach \the [src] to [connected_to].")
