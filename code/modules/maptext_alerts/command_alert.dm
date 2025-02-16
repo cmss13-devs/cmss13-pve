@@ -30,6 +30,7 @@
 		return FALSE
 
 /datum/action/innate/message_squad/action_activate()
+	. = ..()
 	if(!can_use_action())
 		return
 	var/mob/living/carbon/human/human_owner = owner
