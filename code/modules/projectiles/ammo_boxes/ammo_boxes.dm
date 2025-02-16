@@ -284,6 +284,7 @@
 	if(overlays)
 		overlays.Cut()
 	overlays += image(text_markings_icon, icon_state = "text[overlay_gun_type]") //adding base color stripes
+	overlays += image(text_markings_icon, icon_state = "base_type[overlay_content]") //adding base color stripes
 
 	if(bullet_amount == max_bullet_amount)
 		overlays += image(handfuls_icon, icon_state = "rounds[overlay_content]")
