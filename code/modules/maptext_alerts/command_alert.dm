@@ -80,6 +80,8 @@
 		sound_alert = 'sound/effects/sos-morse-code.ogg'
 		announcement_title = "[human_owner.job]'s Announcement"
 	alert_receivers += GLOB.observer_list
+	if(GLOB.radio_communication_clarity < 100)
+		text = stars(text, GLOB.radio_communication_clarity)
 	for(var/mob/mob_receiver in alert_receivers)
 		playsound_client(mob_receiver.client, sound_alert, 35, channel = CHANNEL_ANNOUNCEMENTS)
 		mob_receiver.play_screen_text("<span class='langchat' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(announcement_title)]:</u></span><br>" + text, new /atom/movable/screen/text/screen_text/picture/potrait_custom_mugshot(null, null, owner), override_color)
