@@ -641,6 +641,9 @@
 	supports_surgery = FALSE
 	minimap_color = MINIMAP_WATER
 
+/turf/open/gm/river/pool
+	fishing_allowed = 0
+
 /turf/open/gm/river/Initialize(mapload, ...)
 	. = ..()
 	update_icon()

@@ -1954,9 +1954,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
 /area/lv624/ground/jungle/south_west_jungle)
 "auE" = (
-/turf/open/gm/river{
-	fishing_allowed = 0
-	},
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "auM" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
@@ -1972,9 +1970,7 @@
 /area/lv624/ground/river/west_river)
 "auZ" = (
 /obj/item/toy/inflatable_duck,
-/turf/open/gm/river{
-	fishing_allowed = 0
-	},
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "ave" = (
 /obj/structure/surface/rack,
@@ -2013,9 +2009,7 @@
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "avw" = (
 /obj/effect/landmark/good_item,
-/turf/open/gm/river{
-	fishing_allowed = 0
-	},
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "avy" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,

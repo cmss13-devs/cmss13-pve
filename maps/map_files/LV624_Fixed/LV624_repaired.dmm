@@ -8203,9 +8203,7 @@
 /area/lv624/ground/jungle/south_west_jungle/ceiling)
 "jXS" = (
 /obj/item/toy/inflatable_duck,
-/turf/open/gm/river{
-	fishing_allowed = 0
-	},
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "jXZ" = (
 /obj/effect/landmark/crap_item,
@@ -10989,9 +10987,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/east_caves)
 "nCP" = (
-/turf/open/gm/river{
-	fishing_allowed = 0
-	},
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "nCX" = (
 /obj/structure/flora/jungle/planttop1,
