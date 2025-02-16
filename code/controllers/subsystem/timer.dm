@@ -426,6 +426,10 @@ SUBSYSTEM_DEF(timer)
 
 /datum/timedevent/Destroy()
 	..()
+
+	if (flags & TIMER_COMPLETE_ON_DELETE)
+		call(callBack.object, callBack.delegate)(arglist(callBack.arguments))
+
 	if (flags & TIMER_UNIQUE && hash)
 		timer_subsystem.hashes -= hash
 
