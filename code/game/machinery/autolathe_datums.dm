@@ -72,16 +72,6 @@
 	path = /obj/item/tool/mop
 	category = AUTOLATHE_CATEGORY_TOOLS
 
-/datum/autolathe/recipe/radio_headset
-	name = "radio headset"
-	path = /obj/item/device/radio/headset
-	category = AUTOLATHE_CATEGORY_GENERAL
-
-/datum/autolathe/recipe/radio_bounced
-	name = "shortwave radio"
-	path = /obj/item/device/radio/off
-	category = AUTOLATHE_CATEGORY_GENERAL
-
 /datum/autolathe/recipe/weldermask
 	name = "welding mask"
 	path = /obj/item/clothing/head/welding
