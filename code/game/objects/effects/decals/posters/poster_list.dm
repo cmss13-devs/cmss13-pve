@@ -66,7 +66,7 @@ Template
 /datum/poster/poster_12
 	icon_state="poster12"
 	name = "'Miss January' pinup"
-	desc = "This poster features Roxanne Straski. She was the January 2180 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that."
+	desc = "This poster features Roxanne Straski. She was the January 2180 centerfold in Playboy Magazine. Don't ask how you know that."
 
 /datum/poster/poster_13
 	icon_state="poster13"
@@ -86,12 +86,12 @@ Template
 /datum/poster/poster_16
 	icon_state="poster16"
 	name = "'Miss July' pinup"
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2180 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that."
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2180 centerfold in Playboy Magazine. Don't ask how you know that."
 
 /datum/poster/poster_17
 	icon_state="poster17"
 	name = "'Miss April' pinup"
-	desc = "This poster features Juliette Simmons. She was the April 2179 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that."
+	desc = "This poster features Juliette Simmons. She was the April 2179 centerfold in Playboy Magazine. Don't ask how you know that."
 
 /datum/poster/poster_18
 	icon_state="poster18"
@@ -151,7 +151,7 @@ Template
 /datum/poster/poster_29
 	icon_state="poster29"
 	name = "'Miss February' pinup"
-	desc = "This poster features Miranda Noel. She was the February 2180 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that."
+	desc = "This poster features Miranda Noel. She was the February 2180 centerfold in Playboy Magazine. Don't ask how you know that."
 
 /datum/poster/poster_30
 	icon_state="poster30"
@@ -191,7 +191,7 @@ Template
 /datum/poster/poster_37
 	icon_state="poster37"
 	name = "Pepsi Cola"
-	desc = "This poster depicts the logo for Pepsi Cola. Pepsi is a soft drink that never really made it off of Earth. It's odd to see a poster advertising it way out here. Maybe someone just likes the logo. They've claimed to be the taste of a new generation for about 200 years."
+	desc = "This poster depicts the logo for Pepsi Cola."
 
 /datum/poster/poster_38
 	icon_state="poster38"

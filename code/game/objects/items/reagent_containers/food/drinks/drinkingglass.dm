@@ -58,8 +58,13 @@
 				center_of_mass = "x=16;y=10"
 			if("cola")
 				icon_state  = "glass_brown"
-				name = "Glass of Space Cola"
-				desc = "A glass of refreshing Space Cola"
+				name = "Glass of Coca-Cola"
+				desc = "A glass of refreshing Coca-Cola"
+				center_of_mass = "x=16;y=10"
+			if("pepsi")
+				icon_state  = "glass_brown"
+				name = "Glass of Pepsi"
+				desc = "A glass of refreshing Pepsi"
 				center_of_mass = "x=16;y=10"
 			if("nuka_cola")
 				icon_state = "nuka_colaglass"

@@ -324,6 +324,31 @@
 	name = "A Brief Look at Infra-Materialism"
 	desc = "A concise introduction to the esoteric communist theory of infra-materialism by Ignus Nilsen."
 
+/obj/item/prop/magazine/sof
+	name = "Soldier Of Fortune: Issue..."
+	icon_state = "poster8"
+	desc = "A copy of Soldier of Fortune magazine. It's been damaged with water. Damn."
+
+/obj/item/prop/magazine/sof/n2182
+	name = "Soldier Of Fortune: Issue March 2182"
+	icon_state = "poster8"
+	desc = "A copy of Soldier of Fortune magazine. On the cover is a stylized image of the M314 Motion Tracker in use, with the headline '22nd Century Battlespace Awareness'. The article covers advancements in ground sensor and countermeasure technologies for the modern army. Also on the cover, 'Exclusive: SOF Looks At The M41AE2' and 'The Future War: Advancements In Cyberdyne Systems Combat AI'. At the back of the magazine is an extensive pamphlet of advertisements for contractors and combat equipment."
+
+/obj/item/prop/magazine/sof/n2181
+	name = "Soldier Of Fortune: Issue December 2181"
+	icon_state = "poster21"
+	desc = "A copy of Soldier of Fortune magazine. On the cover is photo of a Marine in full MOPP gear, with the headline 'War At The Limits: Contaminated Combat Operations'. The main article discusses fighting in contaminated environments, spotlighting the changes made by the Marine 70 program. Secondary on the cover is 'Exclusive: SOF Fires XM99 Phased Plasma Rifle', and 'Remembering Tannhauser'. At the back of the magazine is an extensive pamphlet of advertisements for contractors and combat equipment."
+
+/obj/item/prop/magazine/playboy
+	name = "Playboy: Issue..."
+	icon_state = "poster3"
+	desc = "A copy of Playboy magazine. It's been damaged with water. Damn."
+
+/obj/item/prop/magazine/playboy/n2182
+	name = "Playboy Magazine: Issue March 2182"
+	icon_state = "poster3"
+	desc = "A copy of Playboy magazine. On the cover is photo of guitarist Sadie Summers, with the headline 'Sadie Summers tells ALL'. The article itself focuses on Sadie's many carnal exploits while on tour as well as her very public brawl at an LA nightclub that occured two years prior to the date of this issue. Flipping through the magazine you see article titles such as 'Jungle Mercenary: Life as an Ex-UPP commando' and 'The whys and hows of choosing synthetic girls'."
+
 //boots magazine
 /obj/item/prop/magazine/boots
 	name = "generic Boots! magazine"
