@@ -1289,6 +1289,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/weapon/straight_razor
 	cost = 3
 
+/datum/gear/misc/survival_tool
+	display_name = "Colonial Companion multi-tool"
+	path = /obj/item/weapon/swiss_army_knife
+	cost = 4 // Two tools & a knife in one package
+
 /datum/gear/misc/flak
 	display_name = "M67 flak jacket (Blue)"
 	path = /obj/item/clothing/accessory/flak
@@ -1313,6 +1318,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Windbreaker, Blue"
 	path = /obj/item/clothing/suit/storage/windbreaker/windbreaker_blue
 	cost = 3
+
+/datum/gear/misc/service_jacket
+	display_name = "USCM service jacket"
+	path = /obj/item/clothing/suit/storage/jacket/marine/service
+	cost = 3
+	allowed_origins = USCM_ORIGINS
 
 /datum/gear/misc/shorts
 	display_name = "USCM PT Shorts"
