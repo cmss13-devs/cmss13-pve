@@ -357,6 +357,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
 		add_verb(src, /client/proc/admin_marine_announcement)
+		add_verb(src, /client/proc/screen_alert_menu)
+		add_verb(src, /client/proc/toggle_intro)
 		add_verb(src, /client/proc/game_master_rename_platoon)
 		add_verb(src, /client/proc/toggle_vehicle_blockers)
 		add_verb(src, /client/proc/toggle_ai_xeno_weeding)
@@ -397,6 +399,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/toggle_rappel_menu,
 		/client/proc/toggle_fire_support_menu,
 		/client/proc/admin_marine_announcement,
+		/client/proc/screen_alert_menu,
+		/client/proc/toggle_intro,
 		GLOB.admin_verbs_admin,
 		GLOB.admin_verbs_ban,
 		GLOB.admin_verbs_minor_event,
