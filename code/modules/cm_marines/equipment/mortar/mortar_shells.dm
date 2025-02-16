@@ -92,6 +92,19 @@
 	sleep(1)
 	create_shrapnel(T, 40, , ,/datum/ammo/bullet/shrapnel/incendiary/heavy, null)
 
+/obj/item/mortar_shell/smoke
+	name = "\improper 80mm smoke mortar shell"
+	desc = "An 80mm mortar shell, loaded with smoke-producing substance. Used for wide-area concealment"
+	icon_state = "mortar_ammo_smk"
+
+/obj/item/mortar_shell/smoke/detonate(turf/T)
+	cell_explosion(T, 30, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, explosion_cause_data = cause_data)
+	spawn(5)
+		var/datum/effect_system/smoke_spread/bad/smk = new()
+		smk.set_up(7, 0, T, cause_data, 90)
+		smk.start()
+	playsound(T, 'sound/effects/smoke.ogg', 25, 1, 9)
+
 /obj/item/mortar_shell/flare
 	name = "\improper 80mm flare/camera mortar shell"
 	desc = "An 80mm mortar shell, loaded with an illumination flare / camera combo, attached to a parachute."
