@@ -2149,9 +2149,9 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 		character.flavor_texts["feet"] = flavor_texts["feet"]
 
 	if(!be_random_name)
-		character.med_record = strip_html(med_record)
-		character.sec_record = strip_html(sec_record)
-		character.gen_record = strip_html(gen_record)
+		character.med_record = strip_html(med_record, MAX_RECORDS_MESSAGE_LEN)
+		character.sec_record = strip_html(sec_record, MAX_RECORDS_MESSAGE_LEN)
+		character.gen_record = strip_html(gen_record, MAX_RECORDS_MESSAGE_LEN)
 		character.exploit_record = strip_html(exploit_record)
 
 	character.age = age
