@@ -526,6 +526,7 @@
 		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
 		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
 		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
+		/obj/item/ammo_magazine/rifle/m41aMK1/tracer,
 	)
 	//somewhere in between the mk1 and mk2
 	attachable_allowed = list(

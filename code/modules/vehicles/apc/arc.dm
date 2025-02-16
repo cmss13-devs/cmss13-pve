@@ -100,10 +100,10 @@
 	switch(HP.slot)
 		if(HDPT_SUPPORT) //flare
 			HP.muzzle_flash_pos = list(
-				"1" = list(-4, -40),
-				"2" = list(5, 5),
-				"4" = list(-25, 6),
-				"8" = list(25, -4)
+				"1" = list(-4, -33),
+				"2" = list(5, -2),
+				"4" = list(-18, 6),
+				"8" = list(18, -4)
 			)
 	return ..()
 

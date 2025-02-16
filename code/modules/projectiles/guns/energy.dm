@@ -10,7 +10,7 @@
 
 	icon_state = "stunrevolver"
 	item_state = "stunrevolver"
-	muzzle_flash = null//replace at some point
+	muzzleflash_iconstate = null//replace at some point
 	fire_sound = 'sound/weapons/emitter2.ogg'
 
 	ammo = /datum/ammo/energy
@@ -116,7 +116,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "rxfm5_eva"
 	item_state = "eva"
-	muzzle_flash = "muzzle_laser"
+	muzzleflash_iconstate = "muzzle_laser"
 	muzzle_flash_color = COLOR_LASER_RED
 	fire_sound = 'sound/weapons/Laser4.ogg'
 	w_class = SIZE_MEDIUM
@@ -174,7 +174,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "laz_uzi"
 	item_state = "laz_uzi"
-	muzzle_flash = "muzzle_laser"
+	muzzleflash_iconstate = "muzzle_laser"
 	muzzle_flash_color = COLOR_LASER_RED
 	gun_category = GUN_CATEGORY_SMG
 	flags_equip_slot = SLOT_WAIST
@@ -207,7 +207,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "taser"
 	item_state = "taser"
-	muzzle_flash = null //TO DO.
+	muzzleflash_iconstate = null //TO DO.
 	fire_sound = 'sound/weapons/Taser.ogg'
 	w_class = SIZE_MEDIUM
 	ammo = /datum/ammo/energy/taser/precise
