@@ -1198,9 +1198,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/facepaint/sniper
 	cost = 4 //To match with the skull paint amount of point, gave this amount of point for the same reason of the skull facepaint (too cool for everyone to be able to constantly use)
 
-/datum/gear/misc/jungle_boots
-	display_name = "Jungle pattern combat boots"
-	path = /obj/item/clothing/shoes/marine/jungle
+/datum/gear/misc/black_boots
+	display_name = "black combat boots"
+	path = /obj/item/clothing/shoes/marine
 	cost = 2
 
 /datum/gear/misc/brown_boots
@@ -1211,6 +1211,16 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/brown_gloves
 	display_name = "brown combat gloves"
 	path = /obj/item/clothing/gloves/marine/brown
+	cost = 2
+
+/datum/gear/misc/black_fingerless_gloves
+	display_name = "brown combat gloves"
+	path = /obj/item/clothing/gloves/marine/fingerless
+	cost = 2
+
+/datum/gear/misc/brown_fingerless_gloves
+	display_name = "brown combat gloves"
+	path = /obj/item/clothing/gloves/marine/brown/fingerless
 	cost = 2
 
 /datum/gear/misc/pdt_kit
