@@ -149,6 +149,13 @@
 	effective_range_max = 10
 	damage_falloff = DAMAGE_FALLOFF_TIER_9
 
+//Only applicable for the M42A 'basic' magazines
+/datum/ammo/bullet/rifle/heavy/on_hit_mob(mob/M,obj/projectile/P)
+	if((P.projectile_flags & PROJECTILE_BULLSEYE) && M == P.original)
+		var/mob/living/L = M
+		L.apply_armoured_damage(damage*2, ARMOR_BULLET, BRUTE, null, penetration)
+		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
 /datum/ammo/bullet/rifle/heavy/ap
 	name = "armor-piercing 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
@@ -233,7 +240,7 @@
 	scatter = 0
 	shell_speed = AMMO_SPEED_TIER_8
 
-/datum/ammo/bullet/sniper/on_hit_mob(mob/M,obj/projectile/P)
+/datum/ammo/bullet/rifle/heavy/heap/sniper/on_hit_mob(mob/M,obj/projectile/P)
 	if((P.projectile_flags & PROJECTILE_BULLSEYE) && M == P.original)
 		var/mob/living/L = M
 		L.apply_armoured_damage(damage*2, ARMOR_BULLET, BRUTE, null, penetration)
