@@ -328,6 +328,76 @@ GLOBAL_LIST_EMPTY(vending_products)
 			if(user)
 				to_chat(user, SPAN_WARNING("\The [H] has something inside it. Empty it before restocking."))
 			return FALSE
+	//MREs
+	else if(istype(item_to_stock, /obj/item/storage/box/MRE))
+		var/obj/item/storage/box/MRE/mre_to_stock = item_to_stock
+		if(mre_to_stock.isopened)
+			to_chat(user, SPAN_WARNING("[item_to_stock] was already opened and isn't suitable for restocking."))
+			return
+	//Pill Bottles
+	else if(istype(item_to_stock, /obj/item/storage/pill_bottle))
+		var/obj/item/storage/pill_bottle/pill_bottle  = item_to_stock
+		var/obj/item/reagent_container/pill/type_of_pill = pill_bottle.pill_type_to_fill
+		for(var/obj/item/reagent_container/pill in pill_bottle.contents)
+			if(pill.type != type_of_pill)
+				to_chat(user, SPAN_WARNING("[item_to_stock] has non-original pills inside and can't be restocked."))
+				return
+		if(pill_bottle.contents.len < pill_bottle.max_storage_space)
+			to_chat(user, SPAN_WARNING("[item_to_stock] is not full and can't be restocked."))
+			return
+	//Telephone backpacks with the telephone not attached
+	else if(istype(item_to_stock, /obj/item/storage/backpack/marine/satchel/rto))
+		var/datum/component/phone/tele = LAZYACCESS(item_to_stock.datum_components, /datum/component/phone)
+		if(tele.phone_handset.loc != null) //it is not stowed. Prevent telephone dupe.
+			to_chat(user, SPAN_WARNING("You must put the [tele.phone_handset] back into [item_to_stock] before restocking."))
+			return
+
+	//Storage Accessories with their contents not directly in the atoms vars
+	else if(istype(item_to_stock, /obj/item/clothing/accessory/storage))
+		var/obj/item/clothing/accessory/storage/webbing_to_stock = item_to_stock
+		var/new_type = item_to_stock.type
+		var/obj/item/clothing/accessory/storage/temp_container = new new_type(src) //create an indentical item to see if it is filled with things on New()
+		var/temp_contents = temp_container.hold.contents
+		if(length(temp_contents))
+			qdel(temp_container)
+			to_chat(user, SPAN_WARNING("You cannot restock webbing that are prefilled by the vendor!"))
+			return FALSE
+		if(length(webbing_to_stock.hold.contents))
+			qdel(temp_container)
+			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
+			return FALSE
+
+	//catch all storage handling, from now on it only works on items that start empty!
+	else if(istype(item_to_stock, /obj/item/storage))
+		var/new_type = item_to_stock.type
+		var/atom/temp_container = new new_type(src) //create an indentical item to see if it is filled with things on New()
+		var/temp_contents = temp_container.contents
+		if(length(temp_contents))
+			qdel(temp_container)
+			to_chat(user, SPAN_WARNING("You cannot restock pouches that are prefilled by the vendor!"))
+			return FALSE
+		else if(length(item_to_stock.contents))
+			qdel(temp_container)
+			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
+			return FALSE
+
+	//these checks were moved from /obj/structure/machinery/cm_vending/proc/stock()
+	else if(istype(item_to_stock, /obj/item/device/defibrillator))
+		var/obj/item/device/defibrillator/defib = item_to_stock
+		if(!defib.dcell)
+			to_chat(user, SPAN_WARNING("[item_to_stock] needs a cell in it to be restocked!"))
+			return FALSE
+		if(defib.dcell.charge < defib.dcell.maxcharge)
+			to_chat(user, SPAN_WARNING("[item_to_stock] needs to be fully charged to restock it!"))
+			return FALSE
+
+	else if(istype(item_to_stock, /obj/item/cell))
+		var/obj/item/cell/cell = item_to_stock
+		if(cell.charge < cell.maxcharge)
+			to_chat(user, SPAN_WARNING("[item_to_stock] needs to be fully charged to restock it!"))
+			return FALSE
+
+
 	return TRUE //Item IS good to restock!
 
 //------------MAINTENANCE PROCS---------------
@@ -1018,64 +1088,52 @@ GLOBAL_LIST_EMPTY(vending_products)
 	// Try to bulk restock using a container
 	if(istype(A, /obj/item/storage))
 		var/obj/item/storage/container = A
-		if(!length(container.contents))
-			return
-		if(being_restocked)
-			to_chat(user, SPAN_WARNING("[src] is already being restocked, you will get in the way!"))
-			return
+		if (length(container.contents)) //check if the bag is supposed to be empty coming out of the vendor
 
-		user.visible_message(SPAN_NOTICE("[user] starts stocking a bunch of supplies into [src]."), \
-		SPAN_NOTICE("You start stocking a bunch of supplies into [src]."))
-		being_restocked = TRUE
-
-		for(var/obj/item/item in container.contents)
-			if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC, src))
-				being_restocked = FALSE
-				user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with supplies."), \
-				SPAN_NOTICE("You stop stocking [src] with supplies."))
+			if(being_restocked)
+				to_chat(user, SPAN_WARNING("[src] is already being restocked, you will get in the way!"))
 				return
-			if(QDELETED(item) || item.loc != container)
-				being_restocked = FALSE
-				user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with supplies."), \
-				SPAN_NOTICE("You stop stocking [src] with supplies."))
-				return
-			stock(item, user)
 
-		being_restocked = FALSE
-		user.visible_message(SPAN_NOTICE("[user] finishes stocking [src] with supplies."), \
-		SPAN_NOTICE("You finish stocking [src] with supplies."))
-		return
+			user.visible_message(SPAN_NOTICE("[user] starts stocking a bunch of supplies into [src]."), \
+			SPAN_NOTICE("You start stocking a bunch of supplies into [src], because [A] isn't empty."))
+			being_restocked = TRUE
+
+			for(var/obj/item/item in container.contents)
+				if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC, src))
+					being_restocked = FALSE
+					user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with supplies."), \
+					SPAN_NOTICE("You stop stocking [src] with supplies."))
+					return
+				if(QDELETED(item) || item.loc != container)
+					being_restocked = FALSE
+					user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with supplies."), \
+					SPAN_NOTICE("You stop stocking [src] with supplies."))
+					return
+				stock(item, user)
+
+			being_restocked = FALSE
+			user.visible_message(SPAN_NOTICE("[user] finishes stocking [src] with supplies."), \
+			SPAN_NOTICE("You finish stocking [src] with supplies."))
+			//return
 
 	if(istype(A, /obj/item))
 		stock(A, user)
 
 /obj/structure/machinery/cm_vending/sorted/proc/stock(obj/item/item_to_stock, mob/user)
-	if(istype(item_to_stock, /obj/item/storage))
-		return FALSE
-
 	var/list/stock_listed_products = get_listed_products(user)
 	for(var/list/vendspec as anything in stock_listed_products)
 		if(item_to_stock.type == vendspec[3])
 
 			var/partial_stacks = 0
-			if(istype(item_to_stock, /obj/item/device/defibrillator))
-				var/obj/item/device/defibrillator/defib = item_to_stock
-				if(!defib.dcell)
-					to_chat(user, SPAN_WARNING("[item_to_stock] needs a cell in it to be restocked!"))
-					return FALSE
-				if(defib.dcell.charge < defib.dcell.maxcharge)
-					to_chat(user, SPAN_WARNING("[item_to_stock] needs to be fully charged to restock it!"))
-					return FALSE
-
-			else if(istype(item_to_stock, /obj/item/cell))
-				var/obj/item/cell/cell = item_to_stock
-				if(cell.charge < cell.maxcharge)
-					to_chat(user, SPAN_WARNING("[item_to_stock] needs to be fully charged to restock it!"))
-					return FALSE
+			if (!check_if_item_is_good_to_restock(item_to_stock, user))
+				return
 
 			else if(istype(item_to_stock, /obj/item/stack))
 				var/obj/item/stack/item_stack = item_to_stock
 				partial_stacks = item_stack.amount % item_stack.max_amount
+
+			if(!check_if_item_is_good_to_restock(item_to_stock, user))
+				return FALSE
 
 			if(!additional_restock_checks(item_to_stock, user, vendspec))
 				// the error message needs to go in the proc
@@ -1102,7 +1160,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 				partial_product_stacks[item_to_stock.type] = combined_stacks % item_stack.max_amount
 			else
 				vendspec[2]++
-			update_derived_ammo_and_boxes_on_add(vendspec)
+			if(vend_flags & VEND_LOAD_AMMO_BOXES)
+				update_derived_ammo_and_boxes_on_add(vendspec)
 			updateUsrDialog()
 			return TRUE //We found our item, no reason to go on.
 
