@@ -496,12 +496,12 @@ FORENSIC SCANNER
 	connected_from = get_atom_on_turf(src)
 	if(current_beam)
 		QDEL_NULL(current_beam)
-	if(connected_from && connected_to && new_beam)
+	if(connected_from && connected_to && new_beam && (connected_to != connected_from))
 		current_beam = connected_from.beam(get_atom_on_turf(connected_to), "iv_tube")
 
 /obj/item/device/healthanalyzer/soul/attack(mob/living/M, mob/living/user)
 	if(M == user)
-		to_chat(user, SPAN_WARNING("You cannot connect this to yourself!"))
+		to_chat(user, SPAN_WARNING("You cannot connect this to yourself! You need someone else to do it for you!"))
 		return
 
 	if(connected_to == M)
@@ -524,8 +524,8 @@ FORENSIC SCANNER
 		connected_to.base_pixel_x = 5
 		START_PROCESSING(SSobj, src)
 		record_scan_on_connect = TRUE
-		user.visible_message("[user] attaches \the [src] to [connected_to].", \
-			"You attach \the [src] to [connected_to].")
+		user.visible_message(SPAN_HELPFUL("[user] attaches \the [src] to [connected_to]."), \
+			SPAN_HELPFUL("You attach \the [src] to [connected_to]."))
 		icon_state = "medical_scanner_open"
 		overlays += image(icon, src, "+running")
 		overlays += image(icon, src, "+hooked")
@@ -544,13 +544,13 @@ FORENSIC SCANNER
 	if(!connected_to)
 		return
 	if(bad_disconnect)
-		connected_to.visible_message("[src] breaks free of [connected_to]!", "[src] is pulled out of you!")
+		connected_to.visible_message(SPAN_DANGER("[src] breaks free of [connected_to]!"), SPAN_DANGER("[src] is pulled out of you!"))
 		connected_to.apply_damage(3, BRUTE, pick("r_arm", "l_arm"))
 		if(connected_to.pain.feels_pain)
 			connected_to.emote("pain")
 	else
-		connected_from.visible_message("[connected_from] detaches [src] from [connected_to].", \
-			"You detach [src] from [connected_to].")
+		connected_from.visible_message(SPAN_HELPFUL("[connected_from] detaches [src] from [connected_to]."), \
+			SPAN_HELPFUL("You detach [src] from [connected_to]."))
 	connected_to.base_pixel_x = 0
 	connected_to = null
 	connected_from = null
