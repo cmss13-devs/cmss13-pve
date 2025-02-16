@@ -135,12 +135,12 @@
 
 	var/list/target_list = list()
 	for(var/mob/living/carbon/possible_target in view(7, human_owner))
-		if(possible_target == human_owner || !possible_target.client) 
+		if(possible_target == human_owner || !possible_target.client)
 			continue
 		target_list += possible_target
 
 	var/mob/living/carbon/target_mob = tgui_input_list(human_owner, "Target", "Send a Psychic Whisper to whom?", target_list, theme = "hive_status")
-	if(!target_mob) 
+	if(!target_mob)
 		return
 
 	human_owner.psychic_whisper(target_mob)
@@ -528,10 +528,6 @@ CULT
 	if(!istype(chosen))
 		return
 
-	if(skillcheck(chosen, SKILL_POLICE, SKILL_POLICE_MAX) || (chosen in converted))
-		to_chat(H, SPAN_WARNING("You can't convert [chosen]!"))
-		return
-
 	to_chat(H, SPAN_NOTICE("Mutiny join request sent to [chosen]!"))
 
 	if(tgui_alert(chosen, "Do you want to be a mutineer?", "Become Mutineer", list("Yes", "No")) != "Yes")
@@ -541,33 +537,6 @@ CULT
 	to_chat(chosen, SPAN_WARNING("You'll become a mutineer when the mutiny begins. Prepare yourself and do not cause any harm until you've been made into a mutineer."))
 
 	message_admins("[key_name_admin(chosen)] has been converted into a mutineer by [key_name_admin(H)].")
-
-/datum/action/human_action/activable/mutineer/mutineer_begin
-	name = "Begin Mutiny"
-	action_icon_state = "mutineer_begin"
-
-/datum/action/human_action/activable/mutineer/mutineer_begin/action_activate()
-	. = ..()
-	if(!can_use_action())
-		return
-
-	var/mob/living/carbon/human/H = owner
-
-	if(tgui_alert(H, "Are you sure you want to begin the mutiny?", "Begin Mutiny?", list("Yes", "No")) != "Yes")
-		return
-
-	shipwide_ai_announcement("DANGER: Communications received; a mutiny is in progress. Code: Detain, Arrest, Defend.")
-	var/datum/equipment_preset/other/mutineer/XC = new()
-
-	XC.load_status(H)
-	for(var/datum/action/human_action/activable/mutineer/mutineer_convert/converted in H.actions)
-		for(var/mob/living/carbon/human/chosen in converted.converted)
-			XC.load_status(chosen)
-		converted.remove_from(H)
-
-	message_admins("[key_name_admin(H)] has begun the mutiny.")
-	remove_from(H)
-
 
 /datum/action/human_action/cancel_view // cancel-camera-view, but a button
 	name = "Cancel View"
