@@ -1,34 +1,5 @@
-/obj/structure/closet/secure_closet/warden
-	name = "Warden's Locker"
-	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
-	icon_state = "secure_locked_warden"
-	icon_closed = "secure_unlocked_warden"
-	icon_locked = "secure_locked_warden"
-	icon_opened = "secure_open_warden"
-	icon_broken = "secure_broken_warden"
-	icon_off = "secure_closed_warden"
-/obj/structure/closet/secure_closet/warden/Initialize()
-	. = ..()
-	if(prob(50))
-		new /obj/item/storage/backpack/security(src)
-	else
-		new /obj/item/storage/backpack/satchel/sec(src)
-	new /obj/item/clothing/suit/armor/vest/security(src)
-	new /obj/item/clothing/under/rank/warden(src)
-	new /obj/item/clothing/under/rank/warden/corp(src)
-	new /obj/item/clothing/suit/armor/vest/warden(src)
-	new /obj/item/clothing/head/helmet/warden(src)
-	new /obj/item/clothing/glasses/sunglasses/sechud(src)
-	new /obj/item/storage/box/flashbangs(src)
-	new /obj/item/storage/belt/security(src)
-	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/weapon/baton/loaded(src)
-	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/storage/box/holobadge(src)
-	new /obj/item/clothing/head/beret/sec/warden(src)
-
 /obj/structure/closet/secure_closet/marshal
-	name = "Marshal's Locker"
+	name = "Colonial Marshal's Bureau Locker"
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
 	icon_state = "secure_locked_warrant"
 	icon_closed = "secure_unlocked_warrant"
@@ -42,13 +13,12 @@
 	. = ..()
 	new /obj/item/clothing/suit/storage/CMB(src)
 	new /obj/item/clothing/under/CM_uniform(src)
-	new /obj/item/storage/backpack/security(src)
-	new /obj/item/storage/belt/security(src)
-	new /obj/item/clothing/shoes/jackboots(src)
+	new /obj/item/storage/belt/security/MP/CMB(src)
+	new /obj/item/clothing/shoes/marine/civilian(src)
 
 /obj/structure/closet/secure_closet/security/standard
 	name = "Security Officer's Locker"
-	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_BRIG)
+	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_WY_SECURITY)
 	icon_state = "secure_locked_police"
 	icon_closed = "secure_closed_police"
 	icon_locked = "secure_locked_police"
@@ -58,23 +28,8 @@
 
 /obj/structure/closet/secure_closet/security/standard/Initialize()
 	. = ..()
-	if(prob(50))
-		new /obj/item/storage/backpack/security(src)
-	else
-		new /obj/item/storage/backpack/satchel/sec(src)
-	new /obj/item/clothing/suit/armor/vest/security(src)
-	new /obj/item/clothing/head/helmet(src)
-	new /obj/item/storage/belt/security(src)
-	new /obj/item/device/flash(src)
-	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/explosive/grenade/flashbang(src)
-	new /obj/item/weapon/baton/loaded(src)
-	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/clothing/glasses/sunglasses/sechud(src)
-	new /obj/item/device/hailer(src)
-	new /obj/item/clothing/accessory/storage/black_vest(src)
-	new /obj/item/clothing/head/soft/sec/corp(src)
-	new /obj/item/clothing/under/rank/security/corp(src)
+	new /obj/item/storage/belt/security/MP/colonist(src)
+	new /obj/item/weapon/classic_baton(src)
 
 /obj/structure/closet/secure_closet/security/soro
 	name = "Security Officer's Locker"
@@ -88,24 +43,14 @@
 
 /obj/structure/closet/secure_closet/security/soro/Initialize()
 	. = ..()
-	if(prob(50))
-		new /obj/item/storage/backpack/security(src)
-	else
-		new /obj/item/storage/backpack/satchel/sec(src)
-	new /obj/item/storage/belt/security(src)
-	new /obj/item/device/flash(src)
+	new /obj/item/storage/belt/security/MP/colonist(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/explosive/grenade/flashbang(src)
 	new /obj/item/weapon/baton/loaded(src)
 	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/clothing/glasses/sunglasses/sechud(src)
-	new /obj/item/device/hailer(src)
 	new /obj/item/clothing/accessory/storage/black_vest(src)
 	new /obj/item/clothing/suit/storage/snow_suit/soviet(src)
 	new /obj/item/clothing/head/ushanka(src)
 	new /obj/item/clothing/mask/rebreather/scarf(src)
-	new /obj/item/clothing/under/rank/veteran/soviet_uniform_01(src)
-	new /obj/item/storage/belt/gun/type47/t73(src)
 
 
 
@@ -153,19 +98,7 @@
 
 /obj/structure/closet/secure_closet/detective/Initialize()
 	. = ..()
-	new /obj/item/clothing/under/det(src)
-	new /obj/item/clothing/under/det/black(src)
-	new /obj/item/clothing/under/det/slob(src)
-	new /obj/item/clothing/suit/storage/det_suit(src)
-	new /obj/item/clothing/suit/storage/det_suit/black(src)
-	new /obj/item/clothing/suit/storage/forensics/blue(src)
-	new /obj/item/clothing/suit/storage/forensics/red(src)
-	new /obj/item/clothing/gloves/black(src)
-	new /obj/item/clothing/head/det_hat(src)
-	new /obj/item/clothing/head/det_hat/black(src)
-	new /obj/item/clothing/shoes/brown(src)
 	new /obj/item/storage/box/evidence(src)
-	new /obj/item/clothing/suit/armor/det_suit(src)
 	new /obj/item/clothing/accessory/storage/holster/armpit(src)
 
 /obj/structure/closet/secure_closet/detective/update_icon()
@@ -260,20 +193,6 @@
 /obj/structure/closet/secure_closet/brig/Destroy()
 	GLOB.brig_locker_list -= src
 	return ..()
-/obj/structure/closet/secure_closet/courtroom
-	name = "Courtroom Locker"
-	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
-
-/obj/structure/closet/secure_closet/courtroom/Initialize()
-	. = ..()
-	new /obj/item/clothing/shoes/brown(src)
-	new /obj/item/paper/Court (src)
-	new /obj/item/paper/Court (src)
-	new /obj/item/paper/Court (src)
-	new /obj/item/tool/pen (src)
-	new /obj/item/clothing/suit/judgerobe (src)
-	new /obj/item/clothing/head/powdered_wig (src)
-	new /obj/item/storage/briefcase(src)
 
 /obj/structure/closet/secure_closet/wall
 	name = "security wall locker"

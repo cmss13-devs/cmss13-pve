@@ -12484,7 +12484,7 @@
 /turf/open/floor/darkgreen2/west,
 /area/ice_colony/underground/crew/bball)
 "fZM" = (
-/obj/structure/closet/wardrobe/green,
+,
 /turf/open/floor/darkgreen2/east,
 /area/ice_colony/surface/hydroponics/north)
 "fZW" = (
@@ -16144,7 +16144,7 @@
 /turf/open/floor/darkpurple2,
 /area/ice_colony/underground/research)
 "kyP" = (
-/obj/structure/closet/wardrobe/green,
+,
 /obj/structure/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -26203,7 +26203,6 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/engineering)
 "wXV" = (
-/obj/structure/closet/wardrobe/green,
 /obj/structure/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -26589,10 +26588,6 @@
 	},
 /turf/open/floor/darkgreen2,
 /area/ice_colony/surface/hydroponics/lobby)
-"xwc" = (
-/obj/structure/closet/wardrobe/green,
-/turf/open/floor/darkgreen2/east,
-/area/ice_colony/surface/hydroponics/south)
 "xwP" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -47858,7 +47853,7 @@ hrN
 alL
 ayp
 wvW
-xwc
+fcM
 kUE
 wXV
 gTY
