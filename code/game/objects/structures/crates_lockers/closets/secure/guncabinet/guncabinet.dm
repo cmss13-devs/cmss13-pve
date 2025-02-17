@@ -67,25 +67,14 @@
 
 //this is used on corsat.(leaving it as a prop i guess)
 /obj/structure/closet/secure_closet/guncabinet/riot_control
-	name = "riot control equipment closet"
-// req_access = list(ACCESS_MARINE_BRIG)
+	name = "riot control armor locker"
 	storage_capacity = 55 //lots of stuff to fit in
-	req_level = SEC_LEVEL_BLUE
 
 /obj/structure/closet/secure_closet/guncabinet/riot_control/Initialize()
 	. = ..()
-	new /obj/item/weapon/gun/shotgun/combat/riot(src, TRUE)
-	new /obj/item/weapon/gun/shotgun/combat/riot(src, TRUE)
-	new /obj/item/weapon/gun/shotgun/combat/riot(src, TRUE)
 	new /obj/item/weapon/shield/riot(src)
 	new /obj/item/weapon/shield/riot(src)
 	new /obj/item/weapon/shield/riot(src)
-	new /obj/item/ammo_magazine/shotgun/beanbag(src)
-	new /obj/item/ammo_magazine/shotgun/beanbag(src)
-	new /obj/item/ammo_magazine/shotgun/beanbag(src)
-	new /obj/item/ammo_magazine/shotgun/beanbag(src)
-	new /obj/item/weapon/gun/launcher/grenade/m81/riot(src, TRUE)
-	new /obj/item/storage/box/nade_box/tear_gas(src)
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/clothing/mask/gas(src)
