@@ -21317,10 +21317,6 @@
 "rdh" = (
 /turf/open/floor/darkgreen2,
 /area/ice_colony/underground/hallway/south_east)
-"rdZ" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/darkyellow2/southeast,
-/area/ice_colony/underground/engineering)
 "reA" = (
 /obj/structure/surface/table,
 /obj/item/inflatable,
@@ -23279,10 +23275,6 @@
 /obj/effect/landmark/hunter_primary,
 /obj/effect/landmark/queen_spawn,
 /turf/open/floor/dark2,
-/area/ice_colony/underground/engineering)
-"txy" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/darkyellow2,
 /area/ice_colony/underground/engineering)
 "txV" = (
 /obj/structure/machinery/firealarm{
@@ -63184,7 +63176,7 @@ nWK
 fxF
 iBd
 evs
-txy
+cHL
 btz
 bum
 buj
@@ -63466,7 +63458,7 @@ evs
 pse
 toW
 evs
-txy
+cHL
 btz
 bun
 buj
@@ -63748,7 +63740,7 @@ sHJ
 sUC
 toW
 nua
-rdZ
+xaZ
 btz
 buo
 buj

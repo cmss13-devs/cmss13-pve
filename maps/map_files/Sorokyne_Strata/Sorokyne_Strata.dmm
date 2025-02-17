@@ -24741,7 +24741,6 @@
 /turf/open/floor/strata/cyan1/east,
 /area/strata/ag/interior/dorms)
 "puO" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/ag/interior/outpost/canteen/personal_storage)
 "pvr" = (

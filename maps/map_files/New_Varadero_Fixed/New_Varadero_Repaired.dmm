@@ -7485,10 +7485,6 @@
 	},
 /turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
-"gdN" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/shiva/yellowfull/west,
-/area/varadero/interior/electrical)
 "ged" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -8835,10 +8831,6 @@
 	},
 /turf/open/floor/shiva/yellow,
 /area/varadero/interior/cargo)
-"hkE" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/plating/icefloor/asteroidplating,
-/area/varadero/interior/comms2)
 "hkQ" = (
 /obj/structure/platform_decoration/kutjevo,
 /turf/open/auto_turf/sand_white/layer1,
@@ -27081,10 +27073,6 @@
 /obj/item/tool/pen/blue,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/hall_NW)
-"wOg" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/shiva/yellow,
-/area/varadero/interior/electrical)
 "wOB" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/item/stool,
@@ -51916,7 +51904,7 @@ njm
 pEA
 xqO
 vWw
-wOg
+xow
 oSX
 lux
 qXQ
@@ -52098,7 +52086,7 @@ vWw
 oiL
 gai
 vWw
-wOg
+xow
 oSX
 qnk
 lux
@@ -52280,7 +52268,7 @@ sQZ
 fDb
 pdh
 tNb
-gdN
+ijT
 wOO
 npg
 lyw
@@ -53733,7 +53721,7 @@ cFw
 cFw
 kuO
 vVH
-hkE
+xqQ
 fDn
 xqQ
 rCY

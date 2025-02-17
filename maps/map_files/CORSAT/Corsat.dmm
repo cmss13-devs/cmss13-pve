@@ -10160,7 +10160,7 @@
 /turf/open/floor/corsat/red/north,
 /area/corsat/theta/airlock/control)
 "eNy" = (
-/obj/structure/closet/wardrobe/white,
+/obj/structure/closet,
 /obj/item/clothing/head/ushanka,
 /obj/item/clothing/head/ushanka,
 /obj/item/clothing/mask/rebreather,
@@ -11321,10 +11321,6 @@
 	},
 /turf/open/floor/corsat/sterileplate,
 /area/corsat/gamma/kitchen)
-"fsc" = (
-/obj/structure/closet/wardrobe/toxins_white,
-/turf/open/floor/corsat/purplewhite/west,
-/area/corsat/gamma/biodome/toxins)
 "fsh" = (
 /obj/structure/platform{
 	dir = 1
@@ -11446,13 +11442,6 @@
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/omega/complex)
-"fvi" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/structure/closet/wardrobe/toxins_white,
-/turf/open/floor/corsat/purplewhite/west,
-/area/corsat/gamma/biodome/toxins)
 "fvx" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -11552,7 +11541,6 @@
 /turf/open/floor/corsat/red/east,
 /area/corsat/gamma/hangar/cargo)
 "fyr" = (
-/obj/structure/closet/wardrobe/chemistry_white,
 /turf/open/floor/corsat/greenwhite/north,
 /area/corsat/gamma/medbay/chemistry)
 "fys" = (
@@ -12409,10 +12397,6 @@
 	},
 /turf/open/floor/wood,
 /area/corsat/sigma/dorms)
-"fWL" = (
-/obj/structure/closet/wardrobe/genetics_white,
-/turf/open/floor/corsat/purplewhite/northeast,
-/area/corsat/theta/biodome/complex)
 "fWM" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
@@ -13284,10 +13268,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/cargo)
-"gva" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/corsat/yellow/east,
-/area/corsat/gamma/engineering)
 "gvd" = (
 /obj/structure/surface/table/gamblingtable,
 /obj/item/toy/dice/d20,
@@ -13632,7 +13612,6 @@
 /turf/open/floor/corsat/red,
 /area/corsat/sigma/airlock/control)
 "gDw" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/omega/maint)
 "gDR" = (
@@ -22940,13 +22919,6 @@
 "lCb" = (
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/foyer)
-"lCg" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/structure/closet/wardrobe/science_white,
-/turf/open/floor/corsat/purplewhite/north,
-/area/corsat/gamma/sigmaremote)
 "lCs" = (
 /obj/effect/landmark/teleporter_loc/corsat_sigma_local{
 	index = "2"
@@ -23204,7 +23176,6 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/closet/wardrobe/engineering_yellow,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/engineering)
 "lJM" = (
@@ -24250,10 +24221,6 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay/lobby)
-"mnr" = (
-/obj/structure/closet/wardrobe/science_white,
-/turf/open/floor/corsat/purplewhite/east,
-/area/corsat/gamma/biodome/complex)
 "mnz" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
@@ -25915,7 +25882,6 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/closet/wardrobe/science_white,
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/omega/complex)
 "nju" = (
@@ -34769,10 +34735,6 @@
 	},
 /turf/open/floor/corsat/officesquares,
 /area/corsat/sigma/southeast/dataoffice)
-"rPQ" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/corsat/yellowcorner/east,
-/area/corsat/gamma/engineering)
 "rPR" = (
 /obj/structure/surface/table/reinforced,
 /obj/item/storage/box/gloves,
@@ -35364,7 +35326,7 @@
 /turf/open/floor/corsat/red/north,
 /area/corsat/sigma/airlock/south/id)
 "sgG" = (
-/obj/structure/closet/wardrobe/white,
+/obj/structure/closet,
 /obj/item/clothing/head/ushanka,
 /obj/item/clothing/mask/rebreather,
 /obj/item/clothing/mask/rebreather,
@@ -35717,10 +35679,6 @@
 /obj/item/robot_parts/robot_suit,
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/south/robotics)
-"spd" = (
-/obj/structure/closet/wardrobe/science_white,
-/turf/open/floor/corsat/purplewhite/southeast,
-/area/corsat/theta/biodome/complex)
 "sph" = (
 /obj/structure/machinery/camera/autoname{
 	dir = 8;
@@ -40795,10 +40753,6 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/corsat/red,
 /area/corsat/gamma/security)
-"vbK" = (
-/obj/structure/closet/wardrobe/science_white,
-/turf/open/floor/corsat/purplewhite/west,
-/area/corsat/omega/complex)
 "vbR" = (
 /turf/open/mars_cave/mars_cave_4,
 /area/corsat/sigma/biodome/scrapyard)
@@ -43932,7 +43886,7 @@
 /turf/open/floor/corsat/purplewhitecorner/north,
 /area/corsat/omega/complex)
 "wJl" = (
-/obj/structure/closet/wardrobe/white,
+/obj/structure/closet,
 /obj/item/clothing/head/ushanka,
 /obj/item/clothing/head/ushanka,
 /obj/item/clothing/shoes/snow,
@@ -44831,7 +44785,6 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/south/engineering)
 "xhV" = (
-/obj/structure/closet/wardrobe/science_white,
 /obj/structure/machinery/camera/autoname{
 	dir = 8;
 	network = list("gamma")
@@ -46197,10 +46150,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/hangar/security)
-"xUc" = (
-/obj/structure/closet/wardrobe/science_white,
-/turf/open/floor/corsat/purplewhite/north,
-/area/corsat/gamma/sigmaremote)
 "xUu" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/window/reinforced{
@@ -46462,10 +46411,6 @@
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/hangar/office)
-"yaH" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/corsat/plate,
-/area/corsat/sigma/south/engineering)
 "yaI" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -46878,7 +46823,6 @@
 /area/corsat/gamma/residential/researcher)
 "ykl" = (
 /obj/structure/machinery/power/apc/upgraded/no_power/west,
-/obj/structure/closet/wardrobe/toxins_white,
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/gamma/biodome/toxins)
 "ykH" = (
@@ -49750,7 +49694,7 @@ xpn
 gyN
 fQF
 xhV
-mnr
+wDo
 enF
 man
 ngR
@@ -51378,7 +51322,7 @@ abf
 abf
 abf
 abf
-xUc
+toO
 vEa
 nmL
 mts
@@ -51623,7 +51567,7 @@ auW
 asf
 ntt
 abf
-lCg
+kMG
 jFA
 eTc
 ell
@@ -52444,8 +52388,8 @@ bIm
 xpn
 eUh
 bbM
-fsc
-fvi
+ksy
+oZk
 ykl
 ksy
 lsx
@@ -58885,8 +58829,8 @@ vtM
 aoN
 mhO
 njt
-vbK
-vbK
+mhO
+mhO
 njt
 xaT
 pyg
@@ -75196,9 +75140,9 @@ aqi
 pzU
 kkS
 cyO
-gva
-gva
-rPQ
+sgp
+sgp
+ohu
 feE
 xRK
 uds
@@ -76528,10 +76472,10 @@ bdQ
 rTj
 bdP
 aKt
-fWL
+djg
 jYT
 dfI
-spd
+pdT
 aKu
 gUZ
 ekv
@@ -87329,7 +87273,7 @@ wzJ
 rBt
 vXZ
 auH
-yaH
+cAO
 gJN
 rWj
 auH
@@ -87574,7 +87518,7 @@ dvy
 dvy
 wZT
 auH
-yaH
+cAO
 gJN
 fEX
 auH

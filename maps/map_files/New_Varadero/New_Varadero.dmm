@@ -4020,10 +4020,6 @@
 /obj/structure/largecrate/random/barrel/green,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior_protected/caves)
-"dlC" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/shiva/yellowfull/west,
-/area/varadero/interior/electrical)
 "dlD" = (
 /obj/structure/prop/rock/brown_degree,
 /turf/open/gm/dirt,
@@ -15209,10 +15205,6 @@
 /obj/structure/bed/chair,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/research)
-"mgN" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/shiva/yellow,
-/area/varadero/interior/electrical)
 "mgT" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/gm/dirt,
@@ -26965,10 +26957,6 @@
 	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/varadero/interior/administration)
-"vrN" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/plating/icefloor/asteroidplating,
-/area/varadero/interior/comms2)
 "vsz" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -53776,7 +53764,7 @@ jCS
 nlw
 obq
 iqS
-mgN
+hse
 oSX
 exl
 qPe
@@ -53958,7 +53946,7 @@ iqS
 seT
 agc
 iqS
-mgN
+hse
 oSX
 kol
 exl
@@ -54140,7 +54128,7 @@ jGg
 jVF
 xGs
 vUl
-dlC
+dIm
 wOO
 thw
 aSn
@@ -55593,7 +55581,7 @@ cFw
 cFw
 kuO
 vVH
-vrN
+hyX
 aDS
 hyX
 oyw
