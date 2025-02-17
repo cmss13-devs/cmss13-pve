@@ -5655,7 +5655,7 @@
 /turf/open/ice,
 /area/ice_colony/exterior/surface/valley/south/excavation)
 "bdV" = (
-/obj/structure/closet/mixed,
+/obj/structure/closet,
 /turf/open/floor/darkbrown2,
 /area/ice_colony/surface/dorms/lavatory)
 "beB" = (
@@ -7576,7 +7576,7 @@
 /turf/open/floor/wood,
 /area/ice_colony/underground/security/marshal)
 "bCe" = (
-/obj/structure/closet/secure_closet/warden,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/wood,
 /area/ice_colony/underground/security/marshal)
 "bCf" = (
@@ -26787,7 +26787,7 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/tcomms)
 "xKt" = (
-/obj/structure/closet/mixed,
+/obj/structure/closet,
 /turf/open/floor/darkbrown2/southeast,
 /area/ice_colony/surface/dorms/lavatory)
 "xKA" = (
