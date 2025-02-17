@@ -7050,10 +7050,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/bigredv2/outside/engineering)
-"ebb" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/almayer/test_floor4,
-/area/bigredv2/outside/filtration_plant)
 "ebq" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/asteroidwarning/east,
@@ -54309,7 +54305,7 @@ hag
 vwt
 hFu
 xxS
-ebb
+rQd
 azG
 dht
 bjA
@@ -54526,7 +54522,7 @@ end
 aLj
 end
 saJ
-ebb
+rQd
 azG
 dBc
 bjA
@@ -54743,7 +54739,7 @@ drQ
 hIn
 hIn
 jTq
-ebb
+rQd
 awp
 dBc
 bjA

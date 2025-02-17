@@ -29726,10 +29726,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/bridges/dorms_fitness)
-"pdq" = (
-/obj/structure/closet/wardrobe/medic_white,
-/turf/open/floor/strata/white_cyan1/east,
-/area/lv522/indoors/a_block/medical)
 "pdx" = (
 /obj/structure/machinery/floodlight/landing,
 /turf/open/floor/prison/greenfull/east,
@@ -78684,7 +78680,7 @@ tTK
 yel
 hZV
 eOX
-pdq
+eOX
 tTK
 aoZ
 kxv
