@@ -13968,12 +13968,12 @@
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/ag/interior/outpost/engi)
 "fpF" = (
-/obj/structure/closet/wardrobe/red,
+/obj/structure/closet/red,
 /obj/item/clothing/suit/imperium_monk,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/outpost/canteen/personal_storage)
 "fpG" = (
-/obj/structure/closet/wardrobe/grey,
+/obj/structure/closet/grey,
 /obj/effect/landmark/wo_supplies/storage/mines,
 /obj/effect/landmark/wo_supplies/storage/mines,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -28363,7 +28363,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/strata/ag/exterior/research_decks)
 "sHf" = (
-/obj/structure/closet/wardrobe/pjs,
+/obj/structure/closet/pjs,
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/strata,
 /area/strata/ug/interior/outpost/jung/dorms/admin4)
@@ -28574,7 +28574,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/ug/interior/jungle/deep/minehead)
 "sSn" = (
-/obj/structure/closet/wardrobe/pjs,
+/obj/structure/closet/pjs,
 /turf/open/floor/strata/white_cyan1/east,
 /area/strata/ag/interior/outpost/maint/canteen_e_1)
 "sTu" = (
@@ -30059,7 +30059,7 @@
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/ag/interior/outpost/engi)
 "uob" = (
-/obj/structure/closet/wardrobe/suit,
+/obj/structure/closet/suit,
 /obj/structure/machinery/light/small{
 	dir = 1
 	},

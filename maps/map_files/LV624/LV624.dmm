@@ -8950,7 +8950,7 @@
 /turf/open/floor/bot/north,
 /area/lv624/ground/barrens/containers)
 "hCd" = (
-/obj/structure/closet/wardrobe,
+/obj/structure/closet,
 /obj/structure/machinery/light{
 	dir = 8
 	},

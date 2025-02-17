@@ -10071,7 +10071,7 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/corporate_dome)
 "mwS" = (
-/obj/structure/closet/wardrobe,
+/obj/structure/closet,
 /obj/structure/machinery/light{
 	dir = 8
 	},

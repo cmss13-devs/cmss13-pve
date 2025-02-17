@@ -5845,7 +5845,7 @@
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/shiva/interior/colony/botany)
 "dyY" = (
-/obj/structure/closet/wardrobe/green,
+/obj/structure/closet/green,
 /turf/open/floor/shiva/greenfull,
 /area/shiva/interior/colony/n_admin)
 "dze" = (

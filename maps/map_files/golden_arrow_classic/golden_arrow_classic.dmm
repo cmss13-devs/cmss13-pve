@@ -1353,7 +1353,7 @@
 /turf/open/floor/almayer/uscm/directional/southwest,
 /area/golden_arrow/briefing)
 "ke" = (
-/obj/structure/closet/wardrobe{
+/obj/structure/closet{
 	name = "PT uniform"
 	},
 /obj/item/clothing/under/shorts/blue,

@@ -896,7 +896,7 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "adt" = (
-/obj/structure/closet/wardrobe{
+/obj/structure/closet{
 	name = "PT uniform"
 	},
 /obj/item/clothing/under/shorts/blue,

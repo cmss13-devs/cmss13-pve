@@ -37544,10 +37544,6 @@
 /obj/item/clothing/mask/cigarette/cigar/cohiba,
 /turf/open/floor/corsat/red/north,
 /area/corsat/theta/airlock/east/id)
-"tqy" = (
-/obj/structure/closet/wardrobe/robotics_black,
-/turf/open/floor/corsat/yellow/north,
-/area/corsat/sigma/south/robotics)
 "tqA" = (
 /obj/structure/filingcabinet/filingcabinet,
 /turf/open/floor/corsat/purplewhite/northeast,
@@ -39599,7 +39595,7 @@
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/airlock/south)
 "uvC" = (
-/obj/structure/closet/wardrobe,
+/obj/structure/closet,
 /obj/structure/machinery/camera/autoname{
 	dir = 4;
 	network = list("gamma")
@@ -40956,7 +40952,7 @@
 /turf/open/floor/corsat/red/east,
 /area/corsat/theta/airlock/west)
 "vgM" = (
-/obj/structure/closet/wardrobe,
+/obj/structure/closet,
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/showers)
 "vgN" = (
@@ -90214,7 +90210,7 @@ auJ
 auJ
 auJ
 auJ
-tqy
+sRV
 tZb
 xbK
 mvs
@@ -90459,7 +90455,7 @@ jrU
 rLc
 dRU
 auK
-tqy
+sRV
 ktB
 xbK
 mvs

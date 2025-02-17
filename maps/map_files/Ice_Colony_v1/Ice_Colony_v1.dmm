@@ -3274,7 +3274,7 @@
 /turf/open/floor/darkgreen2/north,
 /area/ice_colony/surface/clinic/lobby)
 "fUj" = (
-/obj/structure/closet/wardrobe,
+/obj/structure/closet,
 /turf/open/floor/wood,
 /area/ice_colony/surface/bar/bar)
 "fUk" = (
