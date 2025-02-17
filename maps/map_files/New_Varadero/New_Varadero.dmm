@@ -8581,7 +8581,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/cargo)
 "gNb" = (
-/obj/structure/closet/wardrobe/chaplain_black,
+/obj/structure/closet,
 /turf/open/floor/wood,
 /area/varadero/interior/chapel)
 "gNg" = (
@@ -21237,7 +21237,7 @@
 /turf/open/floor/shiva/yellowfull/west,
 /area/varadero/interior/cargo)
 "qKq" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/personal/RD,
 /turf/open/floor/wood,
 /area/varadero/interior/research)
 "qKv" = (

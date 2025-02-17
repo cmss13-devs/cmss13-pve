@@ -5904,7 +5904,6 @@
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome)
 "cww" = (
-/obj/structure/closet/wardrobe/virology_white,
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/corsat/gamma/biodome/virology)
 "cwF" = (
@@ -14509,13 +14508,6 @@
 	},
 /turf/open/floor/corsat/lightplate,
 /area/corsat/theta/biodome/hydroeast)
-"hab" = (
-/obj/structure/closet/wardrobe/virology_white,
-/obj/structure/machinery/camera/autoname{
-	network = list("gamma")
-	},
-/turf/open/floor/corsat/purplewhite/north,
-/area/corsat/gamma/biodome/virology)
 "hac" = (
 /obj/structure/prop/almayer/computers/sensor_computer1{
 	name = "computer"
@@ -21071,13 +21063,6 @@
 /obj/structure/machinery/light,
 /turf/open/floor/corsat/purple,
 /area/corsat/omega/hallways)
-"kBT" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/structure/closet/wardrobe/virology_white,
-/turf/open/floor/corsat/purplewhite/north,
-/area/corsat/gamma/biodome/virology)
 "kCh" = (
 /obj/structure/surface/table/almayer,
 /obj/item/paper_bin,
@@ -24786,7 +24771,6 @@
 /area/corsat/gamma/medbay/surgery)
 "mzO" = (
 /obj/structure/machinery/power/apc/upgraded/no_power/north,
-/obj/structure/closet/wardrobe/medic_white,
 /turf/open/floor/corsat/greenwhite/north,
 /area/corsat/gamma/medbay)
 "mzW" = (
@@ -25298,7 +25282,7 @@
 /area/corsat/gamma/engineering)
 "mRo" = (
 /obj/structure/machinery/power/apc/upgraded/no_power/west,
-/obj/structure/closet/wardrobe/atmospherics_yellow,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/airlock/control)
 "mRC" = (
@@ -26295,7 +26279,7 @@
 /area/corsat/sigma/southeast/dataoffice)
 "nsb" = (
 /obj/structure/machinery/power/apc/no_power/north,
-/obj/structure/closet/wardrobe/atmospherics_yellow,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/theta/airlock/control)
 "nss" = (
@@ -26712,7 +26696,6 @@
 /area/corsat/gamma/airlock/control)
 "nEJ" = (
 /obj/structure/machinery/power/apc/no_power/north,
-/obj/structure/closet/wardrobe/virology_white,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/gamma/biodome/virology)
 "nEX" = (
@@ -27131,7 +27114,7 @@
 /turf/open/floor/corsat/red,
 /area/corsat/sigma/airlock/east/id)
 "nPC" = (
-/obj/structure/closet/wardrobe/atmospherics_yellow,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/corsat/yellow/southeast,
 /area/corsat/gamma/airlock/control)
 "nPF" = (
@@ -33518,7 +33501,7 @@
 /turf/open/floor/corsat/cargo,
 /area/corsat/omega/cargo)
 "rgb" = (
-/obj/structure/closet/wardrobe/atmospherics_yellow,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/corsat/yellow/northwest,
 /area/corsat/sigma/airlock/control)
 "rgd" = (
@@ -34639,7 +34622,7 @@
 /turf/open/floor/corsat/red,
 /area/corsat/theta/airlock/west/id)
 "rLB" = (
-/obj/structure/closet/wardrobe/atmospherics_yellow,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/engineering)
 "rLG" = (
@@ -36884,7 +36867,7 @@
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/omega/offices)
 "sXX" = (
-/obj/structure/closet/secure_closet/engineering_chief{
+/obj/structure/closet/secure_closet/engineering_personal{
 	req_access_txt = "101"
 	},
 /obj/effect/landmark/item_pool_spawner/corsat_bio_lock,
@@ -40278,7 +40261,7 @@
 /area/corsat/gamma/airlock/control)
 "uNc" = (
 /obj/structure/machinery/power/apc/upgraded/no_power/east,
-/obj/structure/closet/wardrobe/atmospherics_yellow,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/gamma/airlock/control)
 "uNd" = (
@@ -41257,7 +41240,7 @@
 /turf/open/floor/corsat/red/north,
 /area/corsat/omega/hangar)
 "vnS" = (
-/obj/structure/closet/wardrobe/atmospherics_yellow,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/corsat/yellow/northeast,
 /area/corsat/theta/airlock/control)
 "vod" = (
@@ -50726,7 +50709,7 @@ bfc
 bfc
 bfe
 aIm
-kBT
+qJE
 tio
 tio
 rWX
@@ -50971,7 +50954,7 @@ bfc
 bfc
 bfd
 aIm
-hab
+sCP
 fGw
 gNC
 tNH

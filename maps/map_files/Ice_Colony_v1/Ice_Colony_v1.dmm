@@ -572,7 +572,7 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/garage/one)
 "aRV" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /turf/open/floor/darkred2/east,
 /area/ice_colony/underground/security)
 "aSo" = (
@@ -3613,7 +3613,7 @@
 /turf/open/floor/darkyellow2/east,
 /area/ice_colony/surface/dorms/canteen)
 "gzI" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /obj/structure/holowindow{
 	dir = 8
 	},
@@ -3647,7 +3647,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/underground/reception)
 "gDo" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /turf/open/floor/darkred2/northeast,
 /area/ice_colony/underground/security)
 "gDX" = (
@@ -4147,7 +4147,7 @@
 /turf/closed/wall/r_wall,
 /area/ice_colony/surface/requesitions)
 "hEX" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /obj/structure/holowindow{
 	dir = 8
 	},
@@ -8342,7 +8342,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/underground/engineering/substation)
 "pYa" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /turf/open/floor/darkred2/southeast,
 /area/ice_colony/underground/security)
 "pYt" = (

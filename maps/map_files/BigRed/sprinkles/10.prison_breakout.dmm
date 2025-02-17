@@ -692,7 +692,7 @@
 /turf/open/floor/redfull/northwest,
 /area/bigredv2/outside/marshal_office)
 "OS" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /turf/open/floor/dark,
 /area/bigredv2/outside/marshal_office)
 "Qd" = (

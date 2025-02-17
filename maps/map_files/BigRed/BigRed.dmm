@@ -4766,7 +4766,7 @@
 /turf/open/floor/whitegreencorner,
 /area/bigredv2/outside/medical)
 "cbr" = (
-/obj/structure/closet/wardrobe/atmospherics_yellow,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/darkyellow2/north,
 /area/bigredv2/outside/filtration_plant)
 "cbB" = (
@@ -7076,7 +7076,7 @@
 /turf/open/floor/red/southeast,
 /area/bigredv2/outside/lambda_cave_cas)
 "ecF" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /obj/item/clothing/suit/storage/CMB,
 /turf/open/floor/floor4,
 /area/bigredv2/outside/marshal_office)
@@ -12994,7 +12994,7 @@
 /turf/open/floor/dark,
 /area/bigredv2/caves/eta/research)
 "jaJ" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -17089,7 +17089,7 @@
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
 "mvE" = (
-/obj/structure/closet/wardrobe/chaplain_black,
+/obj/structure/closet,
 /turf/open/floor/cult,
 /area/bigredv2/outside/chapel)
 "mwy" = (
@@ -19144,10 +19144,6 @@
 /obj/effect/landmark/crap_item,
 /turf/open/mars_cave/mars_cave_2,
 /area/bigredv2/outside/lz2_west_cas)
-"ohF" = (
-/obj/structure/closet/wardrobe/virology_white,
-/turf/open/floor/white,
-/area/bigredv2/outside/virology)
 "ohR" = (
 /obj/structure/pipes/vents/pump{
 	dir = 1
@@ -20336,10 +20332,6 @@
 	},
 /turf/open/mars_cave/mars_cave_3,
 /area/bigredv2/caves/mining)
-"piq" = (
-/obj/structure/closet/secure_closet/security/science,
-/turf/open/floor/dark,
-/area/bigredv2/caves/eta/storage)
 "piv" = (
 /obj/effect/landmark/crap_item,
 /turf/open/mars_cave/mars_cave_2,
@@ -20369,7 +20361,7 @@
 /turf/open/floor/redfull/northwest,
 /area/bigredv2/outside/lambda_cave_cas)
 "pjQ" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /turf/open/floor/dark,
 /area/bigredv2/outside/marshal_office)
 "pjX" = (
@@ -23026,7 +23018,7 @@
 /turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "rGi" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/personal/RD,
 /turf/open/floor/elevatorshaft/north,
 /area/bigredv2/caves/lambda/breakroom)
 "rGv" = (
@@ -24155,10 +24147,6 @@
 	},
 /turf/open/mars_cave/mars_dirt_4,
 /area/space)
-"sHA" = (
-/obj/structure/closet/wardrobe/medic_white,
-/turf/open/floor/whitegreencorner,
-/area/bigredv2/outside/medical)
 "sHY" = (
 /obj/structure/surface/rack,
 /turf/open/floor/plating/platingdmg3/west,
@@ -25314,7 +25302,7 @@
 /turf/open/floor/asteroidwarning/north,
 /area/bigredv2/outside/filtration_plant)
 "tzi" = (
-/obj/structure/closet/secure_closet/engineering_chief,
+/obj/structure/closet/secure_closet/engineering_personal,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -25441,7 +25429,7 @@
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
 "tFf" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/personal/RD,
 /turf/open/floor/darkblue2/north,
 /area/bigredv2/caves/eta/research)
 "tFq" = (
@@ -34969,7 +34957,7 @@ pxs
 osf
 oAj
 aoD
-ohF
+uoU
 aRE
 aoD
 aao
@@ -45576,7 +45564,7 @@ nTe
 hqV
 alu
 alu
-sHA
+xTJ
 sFD
 vyt
 iGW
@@ -52625,7 +52613,7 @@ jNL
 aBE
 rnI
 nkK
-piq
+rUk
 aCe
 uDa
 qEB

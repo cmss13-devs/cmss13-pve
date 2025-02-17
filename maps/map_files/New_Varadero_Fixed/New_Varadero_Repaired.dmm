@@ -8325,7 +8325,7 @@
 /turf/open/floor/interior/plastic,
 /area/varadero/interior_protected/caves/digsite)
 "gNb" = (
-/obj/structure/closet/wardrobe/chaplain_black,
+/obj/structure/closet,
 /turf/open/floor/wood,
 /area/varadero/interior/chapel)
 "gNy" = (
@@ -19777,7 +19777,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/administration)
 "qKq" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/personal/RD,
 /obj/item/ammo_magazine/handful/lever_action,
 /obj/item/weapon/gun/lever_action/r4t,
 /obj/item/ammo_magazine/handful/lever_action,

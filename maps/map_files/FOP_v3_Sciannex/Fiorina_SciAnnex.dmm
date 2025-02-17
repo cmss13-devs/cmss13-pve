@@ -10000,7 +10000,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /area/fiorina/maintenance)
 "htb" = (
-/obj/structure/closet/wardrobe/chaplain_black,
+/obj/structure/closet,
 /obj/effect/spawner/random/goggles,
 /turf/open/floor/prison/chapel_carpet,
 /area/fiorina/station/chapel)

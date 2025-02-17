@@ -184,10 +184,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"bk" = (
-/obj/structure/closet/secure_closet/engineering_chief,
-/turf/open/floor/almayer/test_floor5,
-/area/golden_arrow/engineering)
 "bl" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/firingrange)
@@ -22315,7 +22311,7 @@ Fx
 Uc
 Do
 tk
-bk
+IJ
 YB
 ws
 id

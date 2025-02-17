@@ -3977,7 +3977,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
 "bUy" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
@@ -9420,7 +9420,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/hydro)
 "eBd" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
 "eBi" = (

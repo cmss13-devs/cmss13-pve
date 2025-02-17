@@ -18296,7 +18296,7 @@
 /turf/open/floor/dark2,
 /area/ice_colony/underground/hallway/south_east)
 "nlS" = (
-/obj/structure/closet/wardrobe/chaplain_black,
+/obj/structure/closet,
 /turf/open/floor/wood,
 /area/ice_colony/underground/crew/chapel)
 "nmO" = (

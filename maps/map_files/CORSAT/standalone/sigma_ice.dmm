@@ -1278,7 +1278,7 @@
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "Dp" = (
-/obj/structure/closet/wardrobe/atmospherics_yellow,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/corsat/yellow/northwest,
 /area/corsat/sigma/airlock/control)
 "Ds" = (
@@ -1425,7 +1425,7 @@
 /area/corsat/sigma/biodome/gunrange)
 "GJ" = (
 /obj/structure/machinery/power/apc/upgraded/no_power/west,
-/obj/structure/closet/wardrobe/atmospherics_yellow,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/airlock/control)
 "GK" = (

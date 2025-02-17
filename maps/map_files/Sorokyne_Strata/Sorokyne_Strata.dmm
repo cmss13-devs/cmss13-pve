@@ -12098,7 +12098,6 @@
 /turf/open/floor/strata/orange_edge/east,
 /area/strata/ag/interior/dorms)
 "dxu" = (
-/obj/structure/closet/wardrobe/medic_white,
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
@@ -20176,7 +20175,7 @@
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/gen/bball)
 "lgu" = (
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/research_decks/security)
 "lgv" = (
@@ -20769,7 +20768,7 @@
 /area/strata/ag/interior/dorms)
 "lHI" = (
 /obj/item/storage/box/nade_box/tear_gas,
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/outpost/security)
 "lHO" = (
@@ -23059,7 +23058,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/ug/interior/jungle/deep/hotsprings)
 "nPq" = (
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /obj/item/reagent_container/food/snacks/carpmeat,
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -23390,7 +23389,7 @@
 /area/strata/ag/interior/landingzone_checkpoint)
 "ofx" = (
 /obj/item/poster,
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/outpost/security)
 "ofU" = (
@@ -27138,7 +27137,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/ag/interior/outpost/canteen/personal_storage)
 "rBZ" = (
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/landingzone_checkpoint)
 "rDG" = (
@@ -27476,7 +27475,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/strata/ag/exterior/tcomms/tcomms_deck)
 "rUM" = (
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /obj/item/reagent_container/food/snacks/carpmeat,
 /turf/open/floor/strata/red1,
 /area/strata/ug/interior/jungle/deep/structures/res)
@@ -28798,7 +28797,7 @@
 /area/strata/ag/interior/outpost/canteen)
 "tdP" = (
 /obj/item/reagent_container/food/snacks/carpmeat,
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/research_decks/security)
 "teq" = (

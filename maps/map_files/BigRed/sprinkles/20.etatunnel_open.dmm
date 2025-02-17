@@ -180,7 +180,7 @@
 /area/bigredv2/outside/lz2_south_cas)
 "yj" = (
 /obj/item/clothing/suit/storage/CMB,
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /obj/structure/machinery/light/double,
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
@@ -239,7 +239,7 @@
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
 "Fm" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /obj/item/clothing/suit/storage/CMB,
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)

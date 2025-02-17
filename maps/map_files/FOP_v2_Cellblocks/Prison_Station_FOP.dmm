@@ -2798,10 +2798,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/wood,
 /area/prison/chapel)
-"aFq" = (
-/obj/structure/closet/wardrobe/chaplain_black,
-/turf/open/floor/wood,
-/area/prison/chapel)
 "aFu" = (
 /obj/structure/machinery/door/morgue{
 	dir = 2;
@@ -28369,7 +28365,7 @@
 /turf/open/floor/plating,
 /area/prison/maintenance/residential/ne)
 "qqF" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/personal/RD,
 /turf/open/floor/prison/sterile_white/southwest,
 /area/prison/research/RD)
 "qqM" = (
@@ -61004,7 +61000,7 @@ aAc
 aBF
 aCJ
 awV
-aFq
+avJ
 aGJ
 aJR
 jfp
