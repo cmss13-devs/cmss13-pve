@@ -204,8 +204,8 @@ GLOBAL_DATUM_INIT(flare_particles, /particles/flare_smoke, new)
 	drift = generator(GEN_CIRCLE, 0, 1, NORMAL_RAND)
 	spin = generator(GEN_NUM, -20, 20)
 	scale = 0.3
-	friction = 0.2
-	gravity = list(0, 0.95)
+	friction = 0.15
+	gravity = list(0, 0.5)
 	grow = 0.05
 
 /obj/effect/temp_visual/above_flare
@@ -219,6 +219,7 @@ GLOBAL_DATUM_INIT(flare_particles, /particles/flare_smoke, new)
 	pixel_x = -18
 	pixel_y = 150
 	duration = 5.0 MINUTES
+	alpha = 225
 
 /obj/effect/temp_visual/above_flare/Initialize(mapload)
 	. = ..()
