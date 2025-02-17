@@ -840,7 +840,7 @@
 	assignment = "Weyland-Yutani Corporate Security Officer"
 	paygrades = list(PAY_SHORT_CPO = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
-	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_SECURITY)
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_GENERAL, ACCESS_WY_COLONIAL, ACCESS_WY_SECURITY)
 
 /datum/equipment_preset/colonist/security/weyland/load_gear(mob/living/carbon/human/new_human)
 
@@ -878,7 +878,6 @@
 	name = "TWE Civilian Security Guard, Wey-Yu"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
-
 
 /datum/equipment_preset/colonist/security/weyland/tactical
 	name = "US Civilian Security Guard, Wey-Yu (Tactical SMG)"
