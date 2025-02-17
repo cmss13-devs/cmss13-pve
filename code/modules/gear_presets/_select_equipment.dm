@@ -213,6 +213,8 @@
 	else
 		load_vanity(new_human, mob_client)
 
+	EquipCustomItems(new_human)
+
 /datum/equipment_preset/proc/load_vanity(mob/living/carbon/human/new_human, client/mob_client)
 	if(!new_human.client || !new_human.client.prefs || !new_human.client.prefs.gear)
 		return//We want to equip them with custom stuff second, after they are equipped with everything else.
@@ -224,6 +226,9 @@
 				return
 			if(current_gear.allowed_origins && !(new_human.origin in current_gear.allowed_origins))
 				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Invalid Origin"))
+				return
+			if(!current_gear.special_conditions())
+				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Special conditions not met."))
 				return
 			if(!(current_gear.slot && new_human.equip_to_slot_or_del(new current_gear.path, current_gear.slot)))
 				var/obj/equipping_gear = new current_gear.path
@@ -318,6 +323,9 @@ GLOBAL_LIST_EMPTY(personal_closets)
 				return
 			if(current_gear.allowed_origins && !(new_human.origin in current_gear.allowed_origins))
 				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Invalid Origin"))
+				return
+			if(!current_gear.special_conditions())
+				to_chat(new_human, SPAN_WARNING("Custom gear [current_gear.display_name] cannot be equipped: Special conditions not met."))
 				return
 			new current_gear.path(closet_to_spawn_in)
 
@@ -627,7 +635,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	var/gunpath = pick(GLOB.rebel_smgs)
 	var/ammopath = GLOB.rebel_smgs[gunpath]
 
-	spawn_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
@@ -637,7 +645,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	var/gunpath = pick(GLOB.rebel_shotguns)
 	var/ammopath = GLOB.rebel_shotguns[gunpath]
 
-	spawn_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 
@@ -647,7 +655,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	var/gunpath = pick(GLOB.rebel_rifles)
 	var/ammopath = GLOB.rebel_rifles[gunpath]
 
-	spawn_weapon(gunpath, ammopath, M, ammo_amount)
+	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
 	return 1
 

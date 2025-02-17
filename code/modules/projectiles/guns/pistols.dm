@@ -4,6 +4,8 @@
 /obj/item/weapon/gun/pistol
 	icon_state = "" //should return the honk-error sprite if there's no assigned icon.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	mouse_pointer = 'icons/effects/mouse_pointer/pistol_mouse.dmi'
+
 	reload_sound = 'sound/weapons/flipblade.ogg'
 	cocked_sound = 'sound/weapons/gun_pistol_cocked.ogg'
 	empty_sound = 'sound/weapons/gun_empty.ogg'
@@ -15,7 +17,6 @@
 	movement_onehanded_acc_penalty_mult = 3
 	wield_delay = WIELD_DELAY_VERY_FAST //If you modify your pistol to be two-handed, it will still be fast to aim
 	fire_sound = "m4a3"
-	firesound_volume = 25
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
@@ -38,7 +39,6 @@
 
 /obj/item/weapon/gun/pistol/unique_action(mob/user)
 		cock(user)
-
 
 /obj/item/weapon/gun/pistol/set_gun_config_values()
 	..()
@@ -115,7 +115,6 @@
 	icon_state = "vp70"
 	item_state = "vp70"
 	fire_sound = "vp70"
-	firesound_volume = 20
 	reload_sound = 'sound/weapons/gun_vp70_reload.ogg'
 	unload_sound = 'sound/weapons/gun_vp70_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/vp70
@@ -522,7 +521,6 @@
 	icon_state = "es4"
 	item_state = "es4"
 	fire_sound = 'sound/weapons/gun_es4.ogg'
-	firesound_volume = 20
 	reload_sound = 'sound/weapons/gun_vp70_reload.ogg'
 	unload_sound = 'sound/weapons/gun_vp70_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/es4
@@ -681,7 +679,6 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	icon_state = "deagle"
 	item_state = "deagle"
 	fire_sound = 'sound/weapons/gun_DE50.ogg'
-	firesound_volume = 40
 	current_mag = /obj/item/ammo_magazine/pistol/heavy
 	force = 13
 

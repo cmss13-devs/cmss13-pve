@@ -730,16 +730,16 @@
 /area/golden_arrow/hangar)
 "hM" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/gun/rifle/m4ra/pve,
+/obj/item/weapon/gun/rifle/m49a/pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "hR" = (
@@ -1409,12 +1409,16 @@
 "pe" = (
 /obj/structure/surface/table/almayer,
 /obj/item/folder/black_random{
-	pixel_x = -6;
+	pixel_x = -9;
 	pixel_y = 8
 	},
 /obj/item/attachable/attached_gun/grenade/mk1{
 	pixel_y = -1;
 	pixel_x = 6
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 8;
+	pixel_y = 7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
