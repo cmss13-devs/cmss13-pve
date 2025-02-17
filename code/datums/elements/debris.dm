@@ -23,7 +23,7 @@
 	count = 5
 	spawning = 15
 	lifespan = 0.7 SECONDS
-	fade = 1.5 SECONDS
+	fade = 2.25 SECONDS
 	grow = 0.065
 	drift = generator(GEN_CIRCLE, 8, 8)
 	scale = 0.1
@@ -65,8 +65,8 @@
 	var/angle = !isnull(P.angle) ? P.angle : round(Get_Angle(P.starting, source), 1)
 	var/x_component = sin(angle) * debris_velocity
 	var/y_component = cos(angle) * debris_velocity
-	var/x_component_smoke = sin(angle) * -37
-	var/y_component_smoke = cos(angle) * -37
+	var/x_component_smoke = sin(angle) * -25
+	var/y_component_smoke = cos(angle) * -25
 	var/obj/effect/abstract/particle_holder/debris_visuals
 	var/obj/effect/abstract/particle_holder/smoke_visuals
 	var/position_offset = rand(-6,6)

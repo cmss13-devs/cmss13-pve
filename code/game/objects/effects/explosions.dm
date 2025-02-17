@@ -74,14 +74,15 @@
 	count = 75
 	spawning = 75
 	lifespan = 15
-	fade = 40
+	fade = 45
 	gradient = list("#BA9F6D", "#808080", "#FFFFFF")
 	color_change = generator(GEN_NUM, 0.04, 0.05)
 	velocity = generator(GEN_CIRCLE, 40, 40)
 	rotation = generator(GEN_NUM, -45, 45)
 	scale = generator(GEN_NUM, 0.2, 0.35)
 	grow = 0.03
-	friction = 0.3
+	drift = generator(GEN_CIRCLE, 0, 1, NORMAL_RAND)
+	friction = 0.25
 
 /particles/smoke_wave/small
 	count = 45
@@ -96,12 +97,13 @@
 	count = 75
 	spawning = 75
 	lifespan = 15
-	fade = 25
+	fade = 45
 	velocity = generator(GEN_CIRCLE, 25, 25)
 	rotation = generator(GEN_NUM, -45, 45)
-	scale = 0.45
-	grow = 0.05
-	friction = 0.05
+	scale = generator(GEN_NUM, 0.2, 0.35)
+	grow = 0.03
+	drift = generator(GEN_CIRCLE, 0, 1, NORMAL_RAND)
+	friction = 0.25
 
 /particles/dirt_kickup
 	icon = 'icons/effects/96x157.dmi'
@@ -111,7 +113,7 @@
 	count = 80
 	spawning = 10
 	lifespan = 15
-	fade = 10
+	fade = 8
 	fadein = 3
 	scale = generator(GEN_NUM, 0.18, 0.15)
 	position = generator(GEN_SPHERE, 150, 150)

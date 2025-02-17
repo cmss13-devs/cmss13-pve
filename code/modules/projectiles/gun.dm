@@ -9,7 +9,7 @@
 	count = 5
 	spawning = 15
 	lifespan = 0.5 SECONDS
-	fade = 2.2 SECONDS
+	fade = 4 SECONDS
 	grow = 0.12
 	drift = generator(GEN_CIRCLE, 8, 8)
 	scale = 0.15
@@ -1289,12 +1289,6 @@ and you're good to go.
 	//>>POST PROCESSING AND CLEANUP BEGIN HERE.<<
 	var/angle = floor(Get_Angle(user,target)) //Let's do a muzzle flash.
 	muzzle_flash(angle,user)
-	var/x_component = sin(angle) * 40
-	var/y_component = cos(angle) * 40
-	var/obj/effect/abstract/particle_holder/gun_smoke = new(get_turf(src), /particles/firing_smoke)
-	gun_smoke.particles.velocity = list(x_component, y_component)
-	addtimer(VARSET_CALLBACK(gun_smoke.particles, count, 0), 5)
-	QDEL_IN(gun_smoke, 0.6 SECONDS)
 
 	//This is where we load the next bullet in the chamber. We check for attachments too, since we don't want to load anything if an attachment is active.
 	if(!check_for_attachment_fire && !reload_into_chamber(user)) // It has to return a bullet, otherwise it's empty. Unless it's an undershotgun.
