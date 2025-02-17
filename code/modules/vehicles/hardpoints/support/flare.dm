@@ -33,6 +33,7 @@
 
 	scatter = 6
 	fire_delay = 3.0 SECONDS
+	firing_smoke = FALSE
 
 /obj/item/hardpoint/support/flare_launcher/set_bullet_traits()
 	..()

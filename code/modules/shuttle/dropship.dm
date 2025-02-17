@@ -6,6 +6,9 @@
 	breakable = FALSE
 	indestructible = TRUE
 
+/obj/structure/shuttle/part/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -40, 8, 1)
+
 /obj/structure/shuttle/part/dropship1
 	name = "\improper Alamo"
 	icon = 'icons/turf/dropship.dmi'
