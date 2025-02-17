@@ -7,11 +7,11 @@
 	new /obj/item/clothing/suit/storage/CMB(src)
 	new /obj/item/storage/belt/security/MP/CMB(src)
 
-/obj/structure/closet/secure_closet/security/standard
+/obj/structure/closet/secure_closet/security
 	name = "Security Officer's locker"
 	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_WY_SECURITY)
 
-/obj/structure/closet/secure_closet/security/standard/Initialize()
+/obj/structure/closet/secure_closet/security/Initialize()
 	. = ..()
 	new /obj/item/storage/belt/security/MP/colonist(src)
 	new /obj/item/weapon/classic_baton(src)
