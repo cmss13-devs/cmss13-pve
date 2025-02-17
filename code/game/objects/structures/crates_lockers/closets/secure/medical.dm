@@ -36,10 +36,6 @@
 /obj/structure/closet/secure_closet/medical2/Initialize()
 	. = ..()
 	new /obj/item/tank/anesthetic(src)
-	new /obj/item/tank/anesthetic(src)
-	new /obj/item/tank/anesthetic(src)
-	new /obj/item/clothing/mask/breath/medical(src)
-	new /obj/item/clothing/mask/breath/medical(src)
 	new /obj/item/clothing/mask/breath/medical(src)
 	return
 
@@ -55,24 +51,7 @@
 
 /obj/structure/closet/secure_closet/medical3/Initialize()
 	. = ..()
-	new /obj/item/storage/belt/medical/full(src)
-	new /obj/item/storage/belt/medical/full(src)
-	new /obj/item/storage/backpack/marine/satchel(src)
 	new /obj/item/clothing/under/rank/medical/green(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/storage/pouch/medical(src)
-	new /obj/item/storage/pouch/medical(src)
-	new /obj/item/storage/pouch/syringe(src)
-	new /obj/item/storage/pouch/medkit(src)
-	new /obj/item/storage/pouch/medkit(src)
-	new /obj/item/storage/pouch/chem(src)
-	new /obj/item/storage/pouch/chem(src)
-	new /obj/item/storage/pouch/vials/full(src)
-	new /obj/item/storage/pouch/vials/full(src)
-	new /obj/item/storage/pouch/pressurized_reagent_canister(src)
-	new /obj/item/storage/pouch/pressurized_reagent_canister(src)
-	if(is_mainship_level(z))
-		new /obj/item/device/radio/headset/almayer/doc(src)
 	return
 
 /obj/structure/closet/secure_closet/CMO
@@ -87,26 +66,7 @@
 
 /obj/structure/closet/secure_closet/CMO/Initialize()
 	. = ..()
-	new /obj/item/clothing/suit/radiation(src)
-	new /obj/item/clothing/head/radiation(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/clothing/gloves/latex(src)
-	new /obj/item/clothing/under/rank/medical/green(src)
-	new /obj/item/clothing/under/rank/medical/blue(src)
-	new /obj/item/clothing/under/rank/medical/lightblue(src)
-	new /obj/item/clothing/under/rank/medical/purple(src)
-	new /obj/item/clothing/head/surgery/green(src)
-	new /obj/item/clothing/head/surgery/blue(src)
-	new /obj/item/clothing/head/surgery/purple(src)
 	new /obj/item/clothing/suit/storage/labcoat(src)
-	new /obj/item/clothing/mask/surgical(src)
-	new /obj/item/clothing/mask/breath(src)
-	new /obj/item/clothing/head/cmo(src)
-	new /obj/item/reagent_container/hypospray/tricordrazine(src)
-	new /obj/item/device/flash(src)
-	new /obj/item/storage/pouch/medical(src)
-	new /obj/item/storage/pouch/syringe(src)
-	new /obj/item/storage/pouch/medkit(src)
 	return
 /obj/structure/closet/secure_closet/chemical
 	name = "chemical closet"

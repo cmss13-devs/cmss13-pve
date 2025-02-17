@@ -609,7 +609,7 @@
 	dir = 4
 	},
 /obj/structure/machinery/door/airlock/almayer/security/colony{
-	name = "Research Containment Locker"
+	name = "Research Containment locker"
 	},
 /turf/open/floor/prison,
 /area/prison/research/secret)
@@ -1950,7 +1950,7 @@
 /area/prison/medbay/morgue)
 "atK" = (
 /obj/structure/machinery/door/airlock/almayer/security/colony{
-	name = "Research Containment Locker"
+	name = "Research Containment locker"
 	},
 /turf/open/floor/prison,
 /area/prison/research/secret)

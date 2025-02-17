@@ -1,5 +1,5 @@
 /obj/structure/closet/secure_closet/marshal
-	name = "Colonial Marshal's Bureau Locker"
+	name = "Colonial Marshal's Bureau locker"
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
 	icon_state = "secure_locked_warrant"
 	icon_closed = "secure_unlocked_warrant"
@@ -7,7 +7,6 @@
 	icon_opened = "secure_open_warrant"
 	icon_broken = "secure_locked_warrant"
 	icon_off = "secure_closed_warrant"
-
 
 /obj/structure/closet/secure_closet/marshal/Initialize()
 	. = ..()
@@ -17,7 +16,7 @@
 	new /obj/item/clothing/shoes/marine/civilian(src)
 
 /obj/structure/closet/secure_closet/security/standard
-	name = "Security Officer's Locker"
+	name = "Security Officer's locker"
 	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_WY_SECURITY)
 	icon_state = "secure_locked_police"
 	icon_closed = "secure_closed_police"
@@ -31,49 +30,8 @@
 	new /obj/item/storage/belt/security/MP/colonist(src)
 	new /obj/item/weapon/classic_baton(src)
 
-/obj/structure/closet/secure_closet/security/soro
-	name = "Security Officer's Locker"
-	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_BRIG)
-	icon_state = "secure_locked_police"
-	icon_closed = "secure_closed_police"
-	icon_locked = "secure_locked_police"
-	icon_opened = "secure_open_police"
-	icon_broken = "secure_broken_police"
-	icon_off = "secure_closed_police"
-
-/obj/structure/closet/secure_closet/security/soro/Initialize()
-	. = ..()
-	new /obj/item/storage/belt/security/MP/colonist(src)
-	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/weapon/baton/loaded(src)
-	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/clothing/accessory/storage/black_vest(src)
-	new /obj/item/clothing/suit/storage/snow_suit/soviet(src)
-	new /obj/item/clothing/head/ushanka(src)
-	new /obj/item/clothing/mask/rebreather/scarf(src)
-
-
-
-/obj/structure/closet/secure_closet/security/cargo/Initialize()
-	. = ..()
-	new /obj/item/clothing/accessory/armband/cargo(src)
-
-/obj/structure/closet/secure_closet/security/engine/Initialize()
-	. = ..()
-	new /obj/item/clothing/accessory/armband/engine(src)
-	new /obj/item/device/encryptionkey/engi(src)
-
-/obj/structure/closet/secure_closet/security/science/Initialize()
-	. = ..()
-	new /obj/item/clothing/accessory/armband/science(src)
-
-/obj/structure/closet/secure_closet/security/med/Initialize()
-	. = ..()
-	new /obj/item/clothing/accessory/armband/medgreen(src)
-	new /obj/item/device/encryptionkey/med(src)
-
 /obj/structure/closet/secure_closet/security_empty
-	name = "Security Officer's Locker"
+	name = "Security Officer's locker"
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
 	icon_state = "secure_open_police"
 	icon_closed = "secure_closed_police"
@@ -81,13 +39,12 @@
 	icon_opened = "secure_open_police"
 	icon_broken = "secure_broken_police"
 	icon_off = "secoff"
-
 	opened = 1
 	locked = 0
 	density = FALSE
 
 /obj/structure/closet/secure_closet/detective
-	name = "Detective's Cabinet"
+	name = "Detective's cabinet"
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
 	icon_state = "cabinetdetective_locked"
 	icon_closed = "cabinetdetective"
@@ -114,7 +71,7 @@
 			icon_state = icon_opened
 
 /obj/structure/closet/secure_closet/injection
-	name = "Lethal Injections"
+	name = "lethal injection locker"
 	req_access = list(ACCESS_MARINE_SENIOR)
 
 /obj/structure/closet/secure_closet/injection/Initialize()
@@ -123,7 +80,7 @@
 	new /obj/item/reagent_container/ld50_syringe/choral(src)
 
 /obj/structure/closet/secure_closet/brig
-	name = "Brig Locker"
+	name = "Brig locker"
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
 	anchored = TRUE
 	locked = TRUE
@@ -134,11 +91,10 @@
 /obj/structure/closet/secure_closet/brig/prisoner/Initialize()
 	. = ..()
 	new /obj/item/clothing/under/color/orange(src)
-	new /obj/item/clothing/shoes/orange(src)
-	new /obj/item/device/radio/headset(src)
+	new /obj/item/clothing/shoes/white(src)
 
 /obj/structure/closet/secure_closet/brig/prison_uni
-	name = "Spare Prison Uniforms"
+	name = "prison uniform locker"
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
 	anchored = TRUE
 	locked = TRUE
@@ -146,24 +102,19 @@
 
 /obj/structure/closet/secure_closet/brig/prison_uni/Initialize()
 	. = ..()
-	new /obj/item/clothing/shoes/orange(src)
-	new /obj/item/clothing/shoes/orange(src)
-	new /obj/item/clothing/shoes/orange(src)
-	new /obj/item/clothing/shoes/orange(src)
-	new /obj/item/clothing/shoes/orange(src)
+	new /obj/item/clothing/shoes/white(src)
+	new /obj/item/clothing/shoes/white(src)
+	new /obj/item/clothing/shoes/white(src)
+	new /obj/item/clothing/shoes/white(src)
+	new /obj/item/clothing/shoes/white(src)
 	new /obj/item/clothing/under/color/orange(src)
 	new /obj/item/clothing/under/color/orange(src)
 	new /obj/item/clothing/under/color/orange(src)
 	new /obj/item/clothing/under/color/orange(src)
 	new /obj/item/clothing/under/color/orange(src)
-	new /obj/item/device/radio/headset(src)
-	new /obj/item/device/radio/headset(src)
-	new /obj/item/device/radio/headset(src)
-	new /obj/item/device/radio/headset(src)
-	new /obj/item/device/radio/headset(src)
 
 /obj/structure/closet/secure_closet/brig/restraints
-	name = "Spare Restraints"
+	name = "restraints locker"
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
 	anchored = TRUE
 	locked = TRUE

@@ -1,5 +1,5 @@
 /obj/structure/closet/secure_closet/scientist
-	name = "Scientist's Locker"
+	name = "Scientist's locker"
 	req_access = list(ACCESS_MARINE_RESEARCH)
 	icon_state = "secureres1"
 	icon_closed = "secureres"
@@ -10,17 +10,10 @@
 
 /obj/structure/closet/secure_closet/scientist/Initialize()
 	. = ..()
-	new /obj/item/clothing/under/marine/officer/researcher(src)
-	new /obj/item/clothing/under/marine/officer/researcher(src)
 	new /obj/item/clothing/suit/storage/labcoat(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/tank/air(src)
-	new /obj/item/clothing/mask/gas(src)
-
-
 
 /obj/structure/closet/secure_closet/RD
-	name = "Research Director's Locker"
+	name = "Research Director's locker"
 	req_access = list(ACCESS_CIVILIAN_LOGISTICS)
 	icon_state = "rdsecure1"
 	icon_closed = "rdsecure"
@@ -31,13 +24,4 @@
 
 /obj/structure/closet/secure_closet/RD/Initialize()
 	. = ..()
-	new /obj/item/clothing/suit/bio_suit/scientist(src)
-	new /obj/item/clothing/head/bio_hood/scientist(src)
-	new /obj/item/clothing/under/rank/rdalt(src)
 	new /obj/item/clothing/suit/storage/labcoat(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/clothing/shoes/leather(src)
-	new /obj/item/clothing/gloves/latex(src)
-	new /obj/item/tank/air(src)
-	new /obj/item/clothing/mask/gas(src)
-	new /obj/item/device/flash(src)

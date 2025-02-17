@@ -1,5 +1,5 @@
 /obj/structure/closet/secure_closet/quartermaster
-	name = "Logistics Chief Locker"
+	name = "Logistics Chief locker"
 	req_access = list(ACCESS_CIVILIAN_LOGISTICS)
 	icon_state = "secureqm1"
 	icon_closed = "secureqm"
@@ -16,7 +16,7 @@
 	return
 
 /obj/structure/closet/secure_closet/quartermaster_uscm
-	name = "Quartermaster's Locker"
+	name = "Quartermaster's locker"
 	req_access = list(ACCESS_MARINE_RO)
 	icon_state = "secureqm1"
 	icon_closed = "secureqm"
@@ -49,17 +49,9 @@
 
 /obj/structure/closet/secure_closet/miner/Initialize()
 	. = ..()
-	if(prob(50))
-		new /obj/item/storage/backpack/industrial(src)
-	else
-		new /obj/item/storage/backpack/satchel/eng(src)
-// new /obj/item/device/radio/headset/almayer/ct(src)
-	new /obj/item/clothing/under/rank/miner(src)
-	new /obj/item/clothing/gloves/black(src)
-	new /obj/item/clothing/shoes/black(src)
+	new /obj/item/clothing/under/colonist/boilersuit/cyan(src)
+	new /obj/item/clothing/shoes/marine/civilian/brown(src)
+	new /obj/item/clothing/suit/storage/apron/overalls(src)
 	new /obj/item/device/analyzer(src)
-	new /obj/item/storage/bag/ore(src)
-	new /obj/item/device/flashlight/lantern(src)
-	new /obj/item/tool/shovel(src)
-	new /obj/item/tool/pickaxe(src)
+	new /obj/item/device/flashlight/tnr(src)
 	new /obj/item/clothing/glasses/meson(src)

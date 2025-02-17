@@ -15835,7 +15835,7 @@
 	name = "M276 pattern VP78 holster rig"
 	},
 /obj/structure/closet/secure_closet/detective{
-	name = "Head of Security's Cabinet"
+	name = "Head of Security's cabinet"
 	},
 /obj/item/device/flash,
 /obj/item/device/hailer,
@@ -18101,7 +18101,7 @@
 	icon_off = "hossecureoff";
 	icon_opened = "hossecureopen";
 	icon_state = "hossecure1";
-	name = "Head of Security's Locker"
+	name = "Head of Security's locker"
 	},
 /obj/item/storage/belt/security/MP/full,
 /obj/item/clothing/accessory/storage/holster/armpit,
@@ -18858,7 +18858,7 @@
 /area/corsat/omega/complex)
 "jnS" = (
 /obj/structure/closet/secure_closet/security_empty{
-	name = "Warden's Locker"
+	name = "Warden's locker"
 	},
 /obj/item/clothing/head/beret/sec/warden,
 /obj/effect/landmark/item_pool_spawner/corsat_bio_lock,
@@ -23357,7 +23357,7 @@
 /area/corsat/sigma/airlock/control)
 "lNe" = (
 /obj/structure/closet/secure_closet/security_empty{
-	name = "Warden's Locker"
+	name = "Warden's locker"
 	},
 /obj/item/clothing/head/beret/sec/warden,
 /turf/open/floor/corsat/red/west,
@@ -28366,7 +28366,7 @@
 	dir = 8
 	},
 /obj/structure/closet/secure_closet/security_empty{
-	name = "Warden's Locker"
+	name = "Warden's locker"
 	},
 /obj/item/clothing/head/beret/sec/warden,
 /obj/item/clothing/mask/fakemoustache,

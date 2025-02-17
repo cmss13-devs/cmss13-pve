@@ -7321,7 +7321,7 @@
 /area/adminlevel/chinook/medical)
 "Dr" = (
 /obj/structure/closet/secure_closet{
-	name = "\improper Lethal Injection Locker"
+	name = "\improper Lethal Injection locker"
 	},
 /obj/item/reagent_container/ld50_syringe,
 /obj/item/reagent_container/ld50_syringe,

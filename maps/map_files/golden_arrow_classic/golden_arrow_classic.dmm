@@ -6852,7 +6852,7 @@
 /area/golden_arrow/dorms)
 "UP" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor{
-	name = "Damage Control Locker";
+	name = "Damage Control locker";
 	req_one_access = list()
 	},
 /turf/open/floor/almayer/test_floor4,

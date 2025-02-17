@@ -1,33 +1,3 @@
-/obj/structure/closet/secure_closet/engineering_chief
-	name = "\improper Chief Engineer's locker"
-	req_access = list(ACCESS_MARINE_CE)
-	icon_state = "securece1"
-	icon_closed = "securece"
-	icon_locked = "securece1"
-	icon_opened = "secureceopen"
-	icon_broken = "securecebroken"
-	icon_off = "secureceoff"
-
-/obj/structure/closet/secure_closet/engineering_chief/Initialize()
-	. = ..()
-	new /obj/item/clothing/accessory/storage/webbing(src)
-	new /obj/item/clothing/accessory/storage/black_vest/brown_vest(src)
-	new /obj/item/clothing/head/hardhat/white(src)
-	new /obj/item/clothing/head/welding(src)
-	new /obj/item/clothing/gloves/yellow(src)
-	if(is_mainship_level(z) || is_reserved_level(z))
-		new /obj/item/device/radio/headset/almayer/ce(src)
-	new /obj/item/storage/toolbox/mechanical(src)
-	new /obj/item/clothing/suit/storage/hazardvest(src)
-	new /obj/item/clothing/mask/gas(src)
-	new /obj/item/device/multitool(src)
-	new /obj/item/device/flash(src)
-	new /obj/item/device/flashlight(src)
-	new /obj/item/storage/pouch/electronics(src)
-	new /obj/item/storage/pouch/general/medium(src)
-	new /obj/item/storage/pouch/construction(src)
-	new /obj/item/storage/pouch/tools(src)
-
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies"
 	req_one_access = list(ACCESS_MARINE_ENGINEERING, ACCESS_CIVILIAN_ENGINEERING)
@@ -113,26 +83,11 @@
 
 /obj/structure/closet/secure_closet/engineering_personal/Initialize()
 	. = ..()
-	if(!is_mainship_level(z) && prob(70)) new /obj/item/clothing/accessory/storage/black_vest/brown_vest(src)
-	else new /obj/item/clothing/accessory/storage/webbing(src)
 	new /obj/item/storage/toolbox/mechanical(src)
-	if(!is_ground_level(z))
-		new /obj/item/device/radio/headset/almayer/mt(src)
-		new /obj/item/clothing/accessory/storage/black_vest/brown_vest(src)
 	new /obj/item/clothing/suit/storage/hazardvest(src)
 	new /obj/item/storage/pouch/general(src)
 	new /obj/item/storage/pouch/electronics(src)
-	new /obj/item/storage/pouch/construction(src)
-	new /obj/item/storage/pouch/medkit(src)
-	new /obj/item/storage/pouch/tools(src)
-	new /obj/item/clothing/mask/gas(src)
-	new /obj/item/device/flashlight(src)
-	new /obj/item/storage/backpack/industrial(src)
-
-/obj/structure/closet/secure_closet/engineering_personal/select_gamemode_equipment(gamemode)
-	if (SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new /obj/item/clothing/suit/storage/snow_suit(src)
-		new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/device/flashlight/tnr(src)
 
 /obj/structure/closet/secure_closet/atmos_personal
 	name = "technician's locker"
@@ -146,14 +101,6 @@
 
 /obj/structure/closet/secure_closet/atmos_personal/Initialize()
 	. = ..()
-	if (!is_mainship_level(z) && prob(70)) new /obj/item/clothing/accessory/storage/black_vest/brown_vest(src)
-	else new /obj/item/clothing/accessory/storage/webbing(src)
-	new /obj/item/clothing/suit/fire/firefighter(src)
-	new /obj/item/storage/backpack/industrial(src)
-	new /obj/item/device/flashlight(src)
-	new /obj/item/tool/extinguisher(src)
-	if(!is_ground_level(z))
-		new /obj/item/device/radio/headset/almayer/mt(src)
-		new /obj/item/clothing/accessory/storage/black_vest/brown_vest(src)
+	new /obj/item/storage/toolbox/mechanical(src)
+	new /obj/item/device/flashlight/tnr(src)
 	new /obj/item/clothing/suit/storage/hazardvest(src)
-	new /obj/item/clothing/mask/gas(src)

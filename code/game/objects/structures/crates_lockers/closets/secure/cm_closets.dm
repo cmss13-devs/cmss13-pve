@@ -15,10 +15,6 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/commander/Initialize()
 	. = ..()
-	new /obj/item/storage/backpack/mcommander(src)
-	new /obj/item/clothing/glasses/sunglasses(src)
-	new /obj/item/clothing/suit/storage/jacket/marine/dress/officer(src)
-	new /obj/item/clothing/head/marine/peaked/captain(src)
 
 /obj/structure/closet/secure_closet/securecom
 	name = "commanding officer's secure box"
@@ -32,8 +28,6 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/securecom/Initialize()
 	. = ..()
-	new /obj/item/storage/box/kit/honorguard(src)
-	new /obj/item/storage/box/kit/honorguard(src)
 	GLOB.co_secure_boxes += src
 
 /obj/structure/closet/secure_closet/securecom/Destroy()
@@ -52,31 +46,20 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/staff_officer/gear/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/beret/cm(src)
-	new /obj/item/clothing/head/beret/cm(src)
-	new /obj/item/clothing/head/cmcap/bridge(src)
+
 	new /obj/item/clothing/head/cmcap/bridge(src)
 	new /obj/item/clothing/under/marine/officer/bridge(src)
-	new /obj/item/clothing/under/marine/officer/bridge(src)
-	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/storage/belt/marine(src)
-	new /obj/item/storage/belt/marine(src)
-	new /obj/item/clothing/under/marine/officer/boiler(src)
-	new /obj/item/clothing/under/marine/officer/boiler(src)
-	new /obj/item/clothing/gloves/combat(src)
-	new /obj/item/clothing/gloves/combat(src)
+	new /obj/item/clothing/shoes/laceup(src)
 
 /obj/structure/closet/secure_closet/staff_officer/armory
 	name = "staff officer's armory locker"
 
 /obj/structure/closet/secure_closet/staff_officer/armory/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/helmet/marine/MP/SO(src)
-	new /obj/item/clothing/head/helmet/marine/MP/SO(src)
-	new /obj/item/clothing/suit/storage/marine/MP/SO(src)
-	new /obj/item/clothing/suit/storage/marine/MP/SO(src)
-	new /obj/item/device/radio/headset/almayer/mcom(src)
+	new /obj/item/clothing/head/helmet/marine(src)
+	new /obj/item/clothing/head/helmet/marine(src)
+	new /obj/item/clothing/suit/storage/marine(src)
+	new /obj/item/clothing/suit/storage/marine(src)
 	new /obj/item/clothing/gloves/marine(src)
 	new /obj/item/clothing/gloves/marine(src)
 	new /obj/item/clothing/shoes/marine/knife(src)
@@ -98,18 +81,15 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/staff_officer/intel/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/beret/cm(src)
-	new /obj/item/clothing/head/beret/cm/tan(src)
 	new /obj/item/clothing/head/cmcap/bridge(src)
-	new /obj/item/clothing/head/helmet/marine/rto/intel(src)
-	new /obj/item/clothing/under/marine/officer/intel(src)
-	new /obj/item/clothing/shoes/marine(src)
+	new /obj/item/clothing/head/helmet/marine(src)
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/storage/belt/gun/m4a3(src)
 	new /obj/item/storage/backpack/marine/satchel/intel(src)
-	new /obj/item/clothing/suit/storage/marine/medium/rto/intel(src)
+	new /obj/item/clothing/suit/storage/marine(src)
 	new /obj/item/device/motiondetector/intel(src)
-	new /obj/item/tool/crowbar(src)
-	new /obj/item/clothing/accessory/storage/webbing(src)
+	new /obj/item/clothing/accessory/storage/black_vest/brown_vest(src)
 	new /obj/item/stack/fulton(src)
 
 /obj/structure/closet/secure_closet/staff_officer/intel/select_gamemode_equipment(gamemode)
@@ -129,17 +109,13 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 /obj/structure/closet/secure_closet/pilot_officer/Initialize()
 	. = ..()
 	new /obj/item/clothing/head/helmet/upp/marinepilot(src)
-	new /obj/item/clothing/under/marine/officer/pilot(src)
-	new /obj/item/clothing/shoes/marine(src)
+	new /obj/item/clothing/under/marine/officer/boiler(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/clothing/suit/armor/vest/pilot(src)
-	new /obj/item/storage/belt/gun/m39(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
-	new /obj/item/clothing/gloves/yellow(src)
-	new /obj/item/clothing/glasses/sunglasses(src)
 
 /obj/structure/closet/secure_closet/pilot_officer/select_gamemode_equipment(gamemode)
 	if (SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new /obj/item/clothing/mask/rebreather/scarf(src)
 		new /obj/item/clothing/mask/rebreather/scarf(src)
 
 //**********************Military Police Gear**************************/
@@ -155,26 +131,9 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/military_police/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/beret/marine/mp(src)
-	new /obj/item/clothing/gloves/black(src)
-	new /obj/item/clothing/accessory/storage/holster/armpit(src)
-	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/clothing/under/marine/mp(src)
-	new /obj/item/clothing/suit/storage/marine/MP(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/storage/belt/security/MP(src)
-	new /obj/item/device/flashlight(src)
-	new /obj/item/clothing/glasses/sunglasses/sechud(src)
-	new /obj/item/device/radio/headset/almayer/mmpo(src)
-	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/weapon/baton(src)
-	new /obj/item/device/flash(src)
-	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/storage/pouch/general/medium(src)
-	if(prob(50))
-		new /obj/item/storage/backpack/security(src)
-	else
-		new /obj/item/storage/backpack/satchel/sec(src)
 
 /obj/structure/closet/secure_closet/warrant_officer
 	name = "chief MP's locker"
@@ -188,48 +147,6 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/warrant_officer/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/beret/marine/mp/cmp(src)
-	new /obj/item/clothing/accessory/storage/holster/armpit(src)
-	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/clothing/under/marine/officer/warrant(src)
-	new /obj/item/clothing/suit/storage/marine/MP/WO(src)
-	new /obj/item/storage/belt/security/MP(src)
-	new /obj/item/device/flashlight(src)
-	new /obj/item/clothing/glasses/sunglasses/sechud(src)
-	new /obj/item/device/radio/headset/almayer/cmpcom(src)
-	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/weapon/baton(src)
-	new /obj/item/storage/backpack/security (src)
-	new /obj/item/storage/backpack/satchel/sec(src)
-	new /obj/item/device/flash(src)
-	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/storage/pouch/general/large(src)
-
-/obj/structure/closet/secure_closet/military_officer_spare
-	name = "extra equipment locker"
-	req_access = list(ACCESS_MARINE_BRIG)
-	icon_state = "secure_locked_warrant"
-	icon_closed = "secure_unlocked_warrant"
-	icon_locked = "secure_locked_warrant"
-	icon_opened = "secure_open_warrant"
-	icon_broken = "secure_locked_warrant"
-	icon_off = "secure_closed_warrant"
-
-/obj/structure/closet/secure_closet/military_officer_spare/Initialize()
-	. = ..()
-	new /obj/item/clothing/accessory/storage/holster/armpit(src)
-	new /obj/item/storage/backpack/security(src)
-	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/clothing/under/marine/mp(src)
-	new /obj/item/clothing/suit/storage/marine/MP(src)
-	new /obj/item/clothing/head/helmet/riot(src)
-	new /obj/item/device/flashlight(src)
-	new /obj/item/clothing/glasses/sunglasses(src)
-	new /obj/item/device/radio/headset/almayer/mmpo(src)
-	new /obj/item/clothing/gloves/black(src)
-	new /obj/item/device/radio/headset/almayer/mmpo(src)
-	new /obj/item/clothing/accessory/storage/holster/waist(src)
 
 //ALMAYER MEDICAL CLOSET
 /obj/structure/closet/secure_closet/medical_doctor
@@ -244,20 +161,6 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/medical_doctor/Initialize()
 	. = ..()
-	new /obj/item/storage/backpack/marine/satchel(src)
-	if(!is_ground_level(z))
-		new /obj/item/device/radio/headset/almayer/doc(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/storage/belt/medical/full(src)
-	new /obj/item/clothing/under/rank/medical/green(src)
-	new /obj/item/clothing/under/rank/medical/blue(src)
-	new /obj/item/clothing/under/rank/medical/lightblue(src)
-	new /obj/item/clothing/under/rank/medical/purple(src)
-	new /obj/item/clothing/mask/surgical(src)
-	new /obj/item/clothing/head/surgery/green(src)
-	new /obj/item/clothing/head/surgery/blue(src)
-	new /obj/item/clothing/head/surgery/purple(src)
 	new /obj/item/clothing/glasses/hud/health(src)
 
 /obj/structure/closet/secure_closet/medical_doctor/select_gamemode_equipment(gamemode)
@@ -266,7 +169,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 		new /obj/item/clothing/mask/rebreather/scarf(src)
 
 /obj/structure/closet/secure_closet/hydroresearch
-	name = "Hydroponics Research Locker"
+	name = "Hydroponics Research locker"
 	req_access = list(ACCESS_MARINE_RESEARCH)
 	icon_state = "secure_locked_medical_white"
 	icon_closed = "secure_unlocked_medical_white"
@@ -294,7 +197,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 //ALAMAYER CARGO CLOSET
 /obj/structure/closet/secure_closet/req_officer
-	name = "\improper RO's Locker"
+	name = "\improper RO's locker"
 	req_access = list(ACCESS_MARINE_RO)
 	icon_state = "secure_locked_cargo"
 	icon_closed = "secure_unlocked_cargo"
@@ -305,16 +208,12 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/req_officer/Initialize()
 	. = ..()
-	new /obj/item/device/radio/headset/almayer/qm(src)
-	new /obj/item/clothing/under/rank/qm_suit(src)
-	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/storage/belt/marine(src)
 	new /obj/item/clothing/head/cmcap/khaki(src)
-	new /obj/item/device/flashlight(src)
+	new /obj/item/device/flashlight/tnr(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
 
 /obj/structure/closet/secure_closet/cargotech
-	name = "Cargo Technician's Locker"
+	name = "Cargo Technician's locker"
 	req_access = list(ACCESS_MARINE_CARGO)
 	icon_state = "secure_locked_cargo"
 	icon_closed = "secure_unlocked_cargo"
@@ -325,17 +224,13 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/cargotech/Initialize()
 	. = ..()
-	new /obj/item/clothing/under/rank/cargotech(src)
-	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/device/encryptionkey/req(src)
-	new /obj/item/clothing/gloves/yellow(src)
-	new /obj/item/clothing/head/beanie(src)
-	new /obj/item/device/flashlight(src)
+	new /obj/item/clothing/head/cmcap/khaki(src)
+	new /obj/item/device/flashlight/tnr(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
 	return
 
 /obj/structure/closet/secure_closet/sea
-	name = "\improper SEA's Locker"
+	name = "\improper SEA's locker"
 	req_access = list(ACCESS_MARINE_SEA)
 	icon_state = "secure_locked_commander"
 	icon_closed = "secure_unlocked_commander"
@@ -347,11 +242,6 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 /obj/structure/closet/secure_closet/sea/Initialize()
 	. = ..()
 	new /obj/item/device/whistle(src)
-	new /obj/item/device/binoculars/range(src)
-	new /obj/item/clothing/suit/armor/bulletproof/badge(src)
-	new /obj/item/clothing/under/marine/officer/bridge(src)
-	new /obj/item/clothing/shoes/laceup(src)
-	new /obj/item/storage/backpack/marine/satchel(src)
 
 /obj/structure/closet/secure_closet/cmdcabinet
 	name = "command tablet cabinet"

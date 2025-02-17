@@ -1,5 +1,5 @@
 /obj/structure/machinery/cm_vending/sorted/supplies
-	name = "Supply Cabinet"
+	name = "Supply cabinet"
 	desc = "A cabinet containing various supplies."
 	icon = 'icons/obj/structures/machinery/lifeboat.dmi'
 	icon_state = "supplycab"
@@ -10,7 +10,7 @@
 	wrenchable = TRUE
 
 /obj/structure/machinery/cm_vending/sorted/supplies/lifeboat
-	name = "Lifeboat Wall Cabinet"
+	name = "Lifeboat Wall cabinet"
 	desc = "A wall-mounted emergency cabinet containing survival supplies."
 	hackable = FALSE
 	unacidable = TRUE
