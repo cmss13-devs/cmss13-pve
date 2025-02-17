@@ -93,6 +93,12 @@
 		/obj/item/tool/extinguisher,
 	)
 
+/obj/item/storage/pouch/flamertank/weak
+
+/obj/item/storage/pouch/flamertank/weak/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/flamer_tank/weak(src)
+
 /obj/item/storage/pouch/general/large/m39ap
 	storage_slots = 1
 
@@ -500,7 +506,7 @@
 
 /obj/item/storage/pouch/magazine/large/pmc_lmg/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/lmg(src)
+		new /obj/item/ammo_magazine/hpr_box(src)
 
 /obj/item/storage/pouch/magazine/large/pmc_sniper/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)

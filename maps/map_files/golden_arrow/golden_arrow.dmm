@@ -6344,6 +6344,10 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -1
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (
@@ -9520,7 +9524,7 @@
 /area/golden_arrow/cryo_cells)
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/m4ra_pve{
+/obj/item/storage/box/guncase/heavy/m49a_pve{
 	pixel_y = 18
 	},
 /obj/item/storage/box/guncase/heavy/shotgun{
@@ -15517,6 +15521,14 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
+"cMX" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "cQH" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Five Blast Door";
@@ -15992,6 +16004,9 @@
 /area/golden_arrow/engineering)
 "exo" = (
 /obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = -7
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "eyg" = (
@@ -33066,7 +33081,7 @@ aLe
 ati
 roZ
 odS
-exo
+cMX
 rdX
 btA
 rTJ
