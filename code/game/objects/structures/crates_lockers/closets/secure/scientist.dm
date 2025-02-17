@@ -12,16 +12,16 @@
 	. = ..()
 	new /obj/item/clothing/suit/storage/labcoat(src)
 
-/obj/structure/closet/secure_closet/RD
+/obj/structure/closet/secure_closet/personal/RD
 	name = "Research Director's locker"
 	req_access = list(ACCESS_MARINE_RESEARCH)
-	icon_state = "rdsecure1"
-	icon_closed = "rdsecure"
-	icon_locked = "rdsecure1"
-	icon_opened = "rdsecureopen"
-	icon_broken = "rdsecurebroken"
-	icon_off = "rdsecureoff"
+	icon_state = "secureres1"
+	icon_closed = "secureres"
+	icon_locked = "secureres1"
+	icon_opened = "secureresopen"
+	icon_broken = "secureresbroken"
+	icon_off = "secureresoff"
 
-/obj/structure/closet/secure_closet/RD/Initialize()
+/obj/structure/closet/secure_closet/personal/RD/Initialize()
 	. = ..()
 	new /obj/item/clothing/suit/storage/labcoat(src)

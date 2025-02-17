@@ -1,29 +1,15 @@
-/obj/structure/closet/secure_closet/marshal
+/obj/structure/closet/secure_closet/personal/marshal
 	name = "Colonial Marshal's Bureau locker"
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
-	icon_state = "secure_locked_warrant"
-	icon_closed = "secure_unlocked_warrant"
-	icon_locked = "secure_locked_warrant"
-	icon_opened = "secure_open_warrant"
-	icon_broken = "secure_locked_warrant"
-	icon_off = "secure_closed_warrant"
 
-/obj/structure/closet/secure_closet/marshal/Initialize()
+/obj/structure/closet/secure_closet/personal/marshal/Initialize()
 	. = ..()
 	new /obj/item/clothing/suit/storage/CMB(src)
-	new /obj/item/clothing/under/CM_uniform(src)
 	new /obj/item/storage/belt/security/MP/CMB(src)
-	new /obj/item/clothing/shoes/marine/civilian(src)
 
 /obj/structure/closet/secure_closet/security/standard
 	name = "Security Officer's locker"
 	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_WY_SECURITY)
-	icon_state = "secure_locked_police"
-	icon_closed = "secure_closed_police"
-	icon_locked = "secure_locked_police"
-	icon_opened = "secure_open_police"
-	icon_broken = "secure_broken_police"
-	icon_off = "secure_closed_police"
 
 /obj/structure/closet/secure_closet/security/standard/Initialize()
 	. = ..()
@@ -33,12 +19,6 @@
 /obj/structure/closet/secure_closet/security_empty
 	name = "Security Officer's locker"
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
-	icon_state = "secure_open_police"
-	icon_closed = "secure_closed_police"
-	icon_locked = "secure_locked_police"
-	icon_opened = "secure_open_police"
-	icon_broken = "secure_broken_police"
-	icon_off = "secoff"
 	opened = 1
 	locked = 0
 	density = FALSE
@@ -118,7 +98,6 @@
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
 	anchored = TRUE
 	locked = TRUE
-
 
 /obj/structure/closet/secure_closet/brig/restraints/Initialize()
 	. = ..()
