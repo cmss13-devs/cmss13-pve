@@ -97,7 +97,7 @@
 	count = 75
 	spawning = 75
 	lifespan = 15
-	fade = 45
+	fade = 30
 	velocity = generator(GEN_CIRCLE, 25, 25)
 	rotation = generator(GEN_NUM, -45, 45)
 	scale = generator(GEN_NUM, 0.2, 0.35)

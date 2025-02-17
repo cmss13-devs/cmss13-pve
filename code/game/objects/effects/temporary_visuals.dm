@@ -194,19 +194,21 @@ GLOBAL_DATUM_INIT(flare_particles, /particles/flare_smoke, new)
 /particles/flare_smoke
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "smoke"
-	width = 100
-	height = 200
+	width = 400
+	height = 400
 	count = 1000
 	spawning = 3
 	lifespan = 2 SECONDS
 	fade = 7 SECONDS
-	velocity = list(0, 5, 0)
-	drift = generator(GEN_CIRCLE, 0, 1, NORMAL_RAND)
+	velocity = list(0, 2.5, 0)
+	drift = generator(GEN_CIRCLE, 0, 0.25, NORMAL_RAND)
 	spin = generator(GEN_NUM, -20, 20)
+	rotation = generator(GEN_NUM, -20, 20)
+	fadein = 5
 	scale = 0.3
-	friction = 0.15
-	gravity = list(0, 0.5)
 	grow = 0.05
+	friction = 0.01
+	gravity = list(0, 0.15)
 
 /obj/effect/temp_visual/above_flare
 	icon = 'icons/effects/64x64.dmi'
