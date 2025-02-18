@@ -476,6 +476,30 @@
 		message_all_yautja("[usr.real_name] has created a new teleport location, [name], at [usr.loc] in [get_area(usr)]")
 		return TRUE
 
+
+///HUNTING GROUNDS STUFF!!!!///
+/obj/structure/machinery/hunting_ground_selection
+	name = "hunter flight console"
+	desc = "A console designed by the Hunters to assist in flight pathing and navigation."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon_state = "overwatch"
+	density = TRUE
+	breakable = FALSE
+	explo_proof = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+
+/obj/structure/machinery/hunt_ground_spawner
+	name = "huntsmasters console"
+	desc = "A console for creating hunts."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon_state = "overwatch"
+	density = TRUE
+	breakable = FALSE
+	explo_proof = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+
 //=================//\\=================\\
 //======================================\\
 
