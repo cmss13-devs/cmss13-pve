@@ -14,6 +14,11 @@
 	to_chat(world, SPAN_NOTICE("<font_size=6>As you get out of your ol' freezerinos, you feel your ship come alive around you. The floor is cold, and the lights make your eyes watery. Ah..."))
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), world, SPAN_BOLD("<b>[GLOB.blackshift ? "Suddenly, you feel terrible. Bad omen." : "Another day in the Corps."]</b>")), 3 SECONDS)
 
+/datum/game_mode/proc/titan_online()
+	var/name = "TITAN 1200 Report"
+	var/input = "TITAN unit online. Good morning, marines."
+	shipwide_ai_announcement(input, name)
+
 /datum/game_mode/proc/request_ert(user, ares = FALSE)
 	if(!user)
 		return FALSE
