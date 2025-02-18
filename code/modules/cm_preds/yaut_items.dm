@@ -478,6 +478,7 @@
 
 
 ///HUNTING GROUNDS STUFF!!!!///
+//HG objects are not functional because HG is not ported in PVE yet
 /obj/structure/machinery/hunting_ground_selection
 	name = "hunter flight console"
 	desc = "A console designed by the Hunters to assist in flight pathing and navigation."
@@ -499,6 +500,19 @@
 	explo_proof = TRUE
 	unslashable = TRUE
 	unacidable = TRUE
+
+/obj/structure/machinery/blooding_spawner // for spawning an ert containing non-whitelisted youngbloods.
+	name = "blooding console"
+	desc = "A console used by Yautja to awaken Youngbloods awaiting their Blooding Ritual."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon_state = "cameras"
+	density = TRUE
+	breakable = FALSE
+	explo_proof = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	var/static/list/un_blooded = list()
+	var/blooding_activated = FALSE
 
 //=================//\\=================\\
 //======================================\\

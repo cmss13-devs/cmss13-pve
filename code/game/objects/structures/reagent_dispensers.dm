@@ -170,6 +170,9 @@
 	icon_state = "ammoniatank"
 	chemical = "ammonia"
 
+/obj/structure/reagent_dispensers/watertank/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+
 /obj/structure/reagent_dispensers/acidtank
 	name = "sulfuric acid tank"
 	desc = "A sulfuric acid tank"
@@ -386,9 +389,17 @@
 		reagents.source_mob = flame_cause_data?.weak_mob
 		explode()
 
+/obj/structure/reagent_dispensers/fueltank/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+
 /obj/structure/reagent_dispensers/fueltank/gas
 	name = "gastank"
 	desc = "A gas tank"
+
+/obj/structure/reagent_dispensers/fueltank/spacecraft
+	name = "spacecraft fuel-mix tank"
+	desc = "A fuel tank mix with fuel designed for various spacecraft, very combustible."
+	icon_state = "weldtank_alt"
 
 /obj/structure/reagent_dispensers/fueltank/gas/leak_fuel(amount)
 	if(reagents.total_volume == 0)

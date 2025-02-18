@@ -61,6 +61,15 @@
 		if(EXPLOSION_THRESHOLD_MEDIUM to INFINITY)
 			deconstruct(FALSE)
 
+/obj/structure/showcase/yautja
+	name = "alien warrior statue"
+	desc = "A statue of some armored alien humanoid."
+	icon = 	'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon_state = "statue_sandstone"
+
+/obj/structure/showcase/yautja/alt
+	icon_state = "statue_grey"
+
 /obj/structure/target
 	name = "shooting target"
 	anchored = FALSE
@@ -110,45 +119,169 @@
 
 /obj/structure/xenoautopsy/tank
 	name = "cryo tank"
-	icon_state = "tank_empty"
 	desc = "It is empty."
+	icon_state = "tank_empty"
+	density = TRUE
+	unacidable = TRUE
+	///Whatever is contained in the tank
+	var/obj/occupant
+	///What this tank is replaced by when broken
+	var/obj/structure/broken_state = /obj/structure/xenoautopsy/tank/broken
+
+/obj/structure/xenoautopsy/tank/deconstruct(disassembled = TRUE)
+	if(!broken_state)
+		return ..()
+
+	new broken_state(loc)
+	new /obj/item/shard(loc)
+	playsound(src, "shatter", 25, 1)
+
+	if(occupant)
+		occupant = new occupant(loc) //needed for the hugger variant
+
+	return ..()
+
+/obj/structure/xenoautopsy/tank/attackby(obj/item/attacking_item, mob/user)
+	. = ..()
+	playsound(user.loc, 'sound/effects/Glasshit.ogg', 25, 1)
+	take_damage(attacking_item.demolition_mod*attacking_item.force)
+
+/obj/structure/xenoautopsy/tank/proc/take_damage(damage)
+	if(!damage)
+		return FALSE
+	health = max(0, health - damage)
+
+	if(health == 0)
+		visible_message(loc, SPAN_DANGER("[src] shatters!"))
+		deconstruct(FALSE)
+		return TRUE
+
+	return FALSE
+
+/obj/structure/xenoautopsy/tank/bullet_act(obj/projectile/Proj)
+	bullet_ping(Proj)
+	if(Proj.ammo.damage)
+		take_damage(floor(Proj.ammo.damage / 2))
+		if(Proj.ammo.damage_type == BRUTE)
+			playsound(loc, 'sound/effects/Glasshit.ogg', 25, 1)
+	return TRUE
+
+/obj/structure/xenoautopsy/tank/attack_alien(mob/living/carbon/xenomorph/user)
+	. = ..()
+	user.animation_attack_on(src)
+	playsound(src, 'sound/effects/Glasshit.ogg', 25, 1)
+	take_damage(25)
+	return XENO_ATTACK_ACTION
+
+
+/obj/structure/xenoautopsy/tank/ex_act(severity)
+	switch(severity)
+		if(0 to EXPLOSION_THRESHOLD_LOW)
+			if (prob(25))
+				deconstruct(FALSE)
+				return
+		if(EXPLOSION_THRESHOLD_LOW to EXPLOSION_THRESHOLD_MEDIUM)
+			if (prob(50))
+				deconstruct(FALSE)
+				return
+		if(EXPLOSION_THRESHOLD_MEDIUM to INFINITY)
+			deconstruct(FALSE)
+
+/obj/structure/xenoautopsy/tank/Destroy()
+	occupant = null
+	return ..()
 
 /obj/structure/xenoautopsy/tank/broken
 	name = "cryo tank"
-	icon_state = "tank_broken"
 	desc = "Something broke it..."
+	icon_state = "tank_broken"
+	broken_state = null
 
 /obj/structure/xenoautopsy/tank/alien
 	name = "cryo tank"
 	icon_state = "tank_alien"
 	desc = "There is something big inside..."
+	occupant = /obj/item/alien_embryo
 
 /obj/structure/xenoautopsy/tank/hugger
 	name = "cryo tank"
 	icon_state = "tank_hugger"
 	desc = "There is something spider-like inside..."
+	occupant = /obj/item/alien_embryo
+
+/obj/structure/xenoautopsy/tank/hugger/yautja
+	desc = "Someone keeps those for a mere amusement..."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	broken_state = /obj/structure/xenoautopsy/tank/broken/yautja
+
+/obj/structure/xenoautopsy/tank/broken/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
 
 /obj/structure/xenoautopsy/tank/larva
 	name = "cryo tank"
-	icon_state = "tank_larva"
 	desc = "There is something worm-like inside..."
+	icon_state = "tank_larva"
+	broken_state = /obj/structure/xenoautopsy/tank/broken
 
 /obj/item/alienjar
 	name = "sample jar"
+	desc = "Used to store organic samples inside for preservation."
 	icon = 'icons/obj/structures/props/alien_autopsy.dmi'
 	icon_state = "jar_sample"
-	desc = "Used to store organic samples inside for preservation."
+	desc = "Used to store organic samples inside for preservation. You aren't sure what's inside."
+	var/list/overlay_options = list(
+		"sample_egg",
+		"sample_larva",
+		"sample_hugger",
+		"sample_runner_tail",
+		"sample_runner",
+		"sample_runner_head",
+		"sample_drone_tail",
+		"sample_drone",
+		"sample_drone_head",
+		"sample_sentinel_tail",
+		"sample_sentinel",
+		"sample_sentinel_head",
+	)
+
+/obj/item/alienjar/ovi
+	desc = "Used to store organic samples inside for preservation. Looks like maybe an egg?"
+	overlay_options = list(
+		"sample_egg",
+		"sample_larva",
+		"sample_hugger",
+	)
+
+/obj/item/alienjar/runner
+	desc = "Used to store organic samples inside for preservation. Looks like its part of a red one."
+	overlay_options = list(
+		"sample_runner_tail",
+		"sample_runner",
+		"sample_runner_head",
+	)
+
+/obj/item/alienjar/drone
+	desc = "Used to store organic samples inside for preservation. Looks like a common part."
+	overlay_options = list(
+		"sample_drone_tail",
+		"sample_drone",
+		"sample_drone_head",
+	)
+
+/obj/item/alienjar/sentinel
+	desc = "Used to store organic samples inside for preservation. Looks like its part of a red one."
+	overlay_options = list(
+		"sample_sentinel_tail",
+		"sample_sentinel",
+		"sample_sentinel_head",
+	)
 
 /obj/item/alienjar/Initialize(mapload, ...)
 	. = ..()
 
-	var/image/I
-	I = image('icons/obj/structures/props/alien_autopsy.dmi', "sample_[rand(0,11)]")
-	I.layer = src.layer - 0.1
-	overlays += I
+	underlays += image('icons/obj/structures/props/alien_autopsy.dmi', pick(overlay_options))
 	pixel_x += rand(-3,3)
 	pixel_y += rand(-3,3)
-
 
 //stairs
 

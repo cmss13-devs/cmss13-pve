@@ -343,6 +343,10 @@
 		"absinthe",
 	)
 
+/obj/structure/machinery/chem_dispenser/soda/beer/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	breakable = FALSE
+
 /obj/structure/machinery/chem_dispenser/canteen
 	name = "NestleCo AutoDrink"
 	desc = "A NestleCo AutoDrink dispenser, capable of making a variety of drinks to consume from a mixture of water and instant flavoring juice and caffeine additives."
