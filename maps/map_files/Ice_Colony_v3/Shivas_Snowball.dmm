@@ -5844,10 +5844,6 @@
 /obj/structure/machinery/landinglight/ds1/spoke,
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/shiva/interior/colony/botany)
-"dyY" = (
-/obj/structure/closet/green,
-/turf/open/floor/shiva/greenfull,
-/area/shiva/interior/colony/n_admin)
 "dze" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W-corner"
@@ -40180,9 +40176,9 @@ hLf
 hLf
 hLf
 pES
-dyY
+qoj
 rxM
-dyY
+qoj
 bJl
 hLf
 vHS

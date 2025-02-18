@@ -115,7 +115,7 @@
 /turf/open/floor/almayer/blue/west,
 /area/adminlevel/chinook)
 "aC" = (
-/obj/structure/closet/secure_closet/military_officer_spare{
+/obj/structure/closet{
 	name = "provost uniform locker"
 	},
 /obj/item/clothing/under/marine/mp/provost,
