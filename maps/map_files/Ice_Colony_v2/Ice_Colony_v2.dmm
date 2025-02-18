@@ -12483,10 +12483,6 @@
 	},
 /turf/open/floor/darkgreen2/west,
 /area/ice_colony/underground/crew/bball)
-"fZM" = (
-,
-/turf/open/floor/darkgreen2/east,
-/area/ice_colony/surface/hydroponics/north)
 "fZW" = (
 /turf/open/floor/darkyellow2/north,
 /area/ice_colony/surface/research/tech_storage)
@@ -47806,7 +47802,7 @@ aif
 oDo
 kyP
 hly
-fZM
+nHt
 tmY
 aif
 alj
