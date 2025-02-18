@@ -155,12 +155,12 @@
 	. = ..()
 	reagents.add_reagent("cola", 30)
 
-/obj/item/reagent_container/food/drinks/cans/classcola/pepsi
+/obj/item/reagent_container/food/drinks/cans/pepsi
 	name = "\improper Pepsi"
 	desc = "The Cola Wars left it defeated, but this beverage retains its place as second-most popular soft drink in the UA."
 	icon_state = "pepsi"
 
-/obj/item/reagent_container/food/drinks/cans/classcola/pepsi/Initialize()
+/obj/item/reagent_container/food/drinks/cans/pepsi/Initialize()
 	. = ..()
 	reagents.add_reagent("pepsi", 30)
 
@@ -304,16 +304,12 @@
 /obj/item/reagent_container/food/drinks/cans/waterbottle
 	name = "\improper Mountain Spring"
 	desc = "One of the most popular brands of bottled water in UA and TWE space, thanks to aggressive marketing abroad and in-house contracting with company colonies."
-	icon_state = "wy_water"
+	icon_state = "water"
 	center_of_mass = "x=15;y=8"
 
 /obj/item/reagent_container/food/drinks/cans/waterbottle/Initialize()
 	. = ..()
 	reagents.add_reagent("water", 30)
-
-/obj/item/reagent_container/food/drinks/cans/waterbottle/blue
-	icon_state = "wy_water_blue"
-	center_of_mass = "x=15;y=8"
 
 /obj/item/reagent_container/food/drinks/cans/beer
 	name = "\improper Weyland-Yutani Lite"

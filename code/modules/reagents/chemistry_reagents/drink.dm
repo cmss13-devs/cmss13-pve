@@ -302,9 +302,13 @@
 	color = "#100800" // rgb: 16, 8, 0
 	adj_drowsy = -3
 
-/datum/reagent/drink/cold/space_cola/pepsi
+/datum/reagent/drink/cold/pepsi
 	name = "Pepsi"
 	id = "pepsi"
+	description = "A refreshing beverage."
+	reagent_state = LIQUID
+	color = "#100800" // rgb: 16, 8, 0
+	adj_drowsy = -3
 
 /datum/reagent/drink/cold/wy_cola
 	name = "Fruit Beer"
@@ -349,8 +353,6 @@
 	description = "Friend to many a cocktail."
 	color = "#677c12" // rgb: 32, 40, 0
 	adj_temp = 0
-
-
 
 //BEER//
 
