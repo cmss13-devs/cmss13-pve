@@ -160,6 +160,10 @@
 	desc = "The Cola Wars left it defeated, but this beverage retains its place as second-most popular soft drink in the UA."
 	icon_state = "pepsi"
 
+/obj/item/reagent_container/food/drinks/cans/classcola/pepsi/Initialize()
+	. = ..()
+	reagents.add_reagent("pepsi", 30)
+
 /obj/item/reagent_container/food/drinks/cans/space_mountain_wind
 	name = "\improper Mountain Dew"
 	desc = "For the discerning gamer."

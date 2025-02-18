@@ -304,6 +304,7 @@
 
 /datum/reagent/drink/cold/space_cola/pepsi
 	name = "Pepsi"
+	id = "pepsi"
 
 /datum/reagent/drink/cold/wy_cola
 	name = "Fruit Beer"
