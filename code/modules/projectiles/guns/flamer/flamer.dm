@@ -9,12 +9,14 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m240"
 	item_state = "m240"
+	mouse_pointer = 'icons/effects/mouse_pointer/flamer_mouse.dmi'
+
+	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
+	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
+	fire_sound = ""
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_LARGE
 	force = 15
-	fire_sound = ""
-	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
-	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	aim_slowdown = SLOWDOWN_ADS_INCINERATOR
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 	start_automatic = TRUE
@@ -40,9 +42,6 @@
 /obj/item/weapon/gun/flamer/Initialize(mapload, spawn_empty)
 	. = ..()
 	update_icon()
-
-/obj/item/weapon/gun/flamer/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/flamer_mouse.dmi'
 
 /obj/item/weapon/gun/flamer/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 11, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0)
