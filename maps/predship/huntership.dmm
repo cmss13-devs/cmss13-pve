@@ -301,7 +301,6 @@
 /obj/structure/showcase{
 	desc = "An ancient, dusty tomb with strange alien writing. It's best not to touch it.";
 	icon_state = "yaut";
-	icon = 'icons/obj/structures/morgue.dmi';
 	name = "alien sarcophagus";
 	pixel_x = -3;
 	dir = 1;
@@ -376,10 +375,6 @@
 	dir = 4
 	},
 /turf/open/shuttle/dropship/predship/hunter_catwalk_alt,
-/area/yautja)
-"ba" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/elder,
-/turf/open/floor/corsat,
 /area/yautja)
 "bb" = (
 /obj/structure/kitchenspike,
@@ -930,10 +925,6 @@
 /obj/effect/hunter/bridge_border/brown,
 /turf/open/shuttle/dropship/predship/tile/hunter_tile_6/north,
 /area/yautja)
-"cR" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/young_blood/centre,
-/turf/open/shuttle/dropship/predship/tile/red,
-/area/yautja/lower_deck)
 "cS" = (
 /obj/structure/prop/brazier/frame/full/torch{
 	pixel_x = 8;
@@ -969,13 +960,18 @@
 /turf/open/shuttle/dropship/predship/hunter_catwalk_alt,
 /area/yautja)
 "db" = (
-/obj/effect/decal/hybrisa/dirt_2,
-/obj/structure/bed/bedroll{
-	color = "#6b675e"
+/obj/structure/blocker/invisible_wall,
+/obj/structure/showcase{
+	desc = "An ancient, dusty tomb with strange alien writing. It's best not to touch it.";
+	icon_state = "yaut";
+	icon = 'icons/obj/structures/morgue.dmi';
+	name = "alien sarcophagus";
+	pixel_x = -3;
+	dir = 1;
+	pixel_y = 1
 	},
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
-/turf/open/shuttle/dropship/predship/hunter_catwalk_new,
-/area/yautja/lower_deck)
+/turf/open/floor/predship/hull/non_weedable_hull,
+/area/yautja)
 "dd" = (
 /obj/structure/prop/hunter/fake_platform/hunter,
 /obj/structure/prop/hunter/fake_platform/hunter/east,
@@ -2027,10 +2023,6 @@
 	},
 /turf/open/floor/corsat,
 /area/yautja/lower_deck)
-"gA" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/young_blood/right,
-/turf/open/shuttle/dropship/predship/tile/red,
-/area/yautja/lower_deck)
 "gC" = (
 /obj/structure/machinery/optable/yautja,
 /turf/open/floor/corsat/box,
@@ -2238,7 +2230,6 @@
 /obj/structure/showcase{
 	desc = "An ancient, dusty tomb with strange alien writing. It's best not to touch it.";
 	icon_state = "yaut";
-	icon = 'icons/obj/structures/morgue.dmi';
 	name = "alien sarcophagus";
 	pixel_x = 3
 	},
@@ -2773,7 +2764,6 @@
 	dir = 4
 	},
 /obj/effect/hunter/bridge_border/corner,
-/obj/effect/step_trigger/teleporter/yautja_young,
 /obj/structure/showcase{
 	desc = "A console used for Yautja teleportation.";
 	icon = 'icons/obj/structures/machinery/yautja_machines.dmi';
@@ -2882,10 +2872,6 @@
 /obj/structure/platform_decoration/metal/hunter/west,
 /turf/open/shuttle/bright_red/glow,
 /area/yautja/lower_deck)
-"jI" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/left_centre,
-/turf/open/floor/corsat,
-/area/yautja)
 "jK" = (
 /obj/effect/hunter/bridge_border/brown/large_stair{
 	dir = 4
@@ -3043,7 +3029,9 @@
 /turf/open/shuttle/dropship/predship/tile/hunter_tile_6/east,
 /area/yautja/lower_deck)
 "kl" = (
-/obj/structure/machinery/cryopod/no_store/yautja,
+/obj/structure/machinery/cryopod/no_store/right/yautja{
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
+	},
 /turf/open/shuttle/dropship/predship/hunter_catwalk_new,
 /area/yautja/lower_deck)
 "kr" = (
@@ -5243,7 +5231,6 @@
 	color = "#6b675e"
 	},
 /obj/effect/decal/hybrisa/dirt_2,
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
 /turf/open/floor/corsat,
 /area/yautja/lower_deck)
 "sr" = (
@@ -5404,20 +5391,6 @@
 /obj/item/tool/soap/syndie,
 /turf/open/shuttle/dropship/predship/hunter_catwalk_new,
 /area/yautja/lower_deck)
-"sR" = (
-/obj/structure/bed/bedroll{
-	color = "#6b675e";
-	dir = 8
-	},
-/obj/effect/decal/hybrisa/dirt_2,
-/obj/effect/decal/hybrisa/dirt_2,
-/obj/effect/decal/cleanable/dirt{
-	layer = 3.2;
-	color = "#bccab4"
-	},
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
-/turf/open/floor/corsat,
-/area/yautja/lower_deck)
 "sS" = (
 /obj/structure/prop/hunter/fake_platform/hunter/west,
 /obj/structure/prop/hunter/fake_platform/hunter,
@@ -5468,7 +5441,6 @@
 	pixel_y = 10;
 	name = "Bowl"
 	},
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
 /turf/open/shuttle/dropship/predship/hunter_catwalk_new,
 /area/yautja/lower_deck)
 "tc" = (
@@ -5599,19 +5571,6 @@
 	layer = 2.79
 	},
 /obj/item/weapon/yautja/scythe/alt,
-/obj/item/weapon/yautja/sword/alt_1,
-/obj/item/weapon/yautja/sword/alt_2,
-/obj/item/weapon/yautja/sword/alt_3{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/weapon/yautja/sword/staff{
-	pixel_x = 3
-	},
-/obj/item/weapon/yautja/chained/war_axe{
-	pixel_x = -7;
-	pixel_y = 5
-	},
 /obj/structure/showcase{
 	desc = null;
 	icon = 'icons/obj/structures/machinery/yautja_machines.dmi';
@@ -5723,7 +5682,9 @@
 /turf/open/floor/corsat/box,
 /area/yautja)
 "tC" = (
-/obj/structure/machinery/cryopod/no_store/right/yautja,
+/obj/structure/machinery/cryopod/no_store/yautja{
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
+	},
 /turf/open/shuttle/dropship/predship/tile/hunter_tile_5,
 /area/yautja/hangar)
 "tD" = (
@@ -5850,7 +5811,9 @@
 /turf/open/shuttle/dropship/predship/mainfloor/direction_3/north,
 /area/yautja)
 "tV" = (
-/obj/structure/machinery/cryopod/no_store/yautja,
+/obj/structure/machinery/cryopod/no_store/right/yautja{
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
+	},
 /turf/open/shuttle/dropship/predship/tile/hunter_tile_5,
 /area/yautja/hangar)
 "ub" = (
@@ -5878,7 +5841,9 @@
 	layer = 3.2;
 	color = "#bccab4"
 	},
-/obj/structure/machinery/cryopod/no_store/yautja,
+/obj/structure/machinery/cryopod/no_store/right/yautja{
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
+	},
 /turf/open/shuttle/dropship/predship/hunter_catwalk_new,
 /area/yautja/lower_deck)
 "uj" = (
@@ -6141,7 +6106,6 @@
 	dir = 1
 	},
 /obj/effect/hunter/catwalk/new_alpha,
-/obj/effect/step_trigger/teleporter/yautja_young,
 /obj/structure/showcase{
 	desc = "A console used for Yautja teleportation.";
 	icon = 'icons/obj/structures/machinery/yautja_machines.dmi';
@@ -6257,7 +6221,6 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
 	},
-/obj/item/weapon/yautja/sword/staff,
 /turf/open/shuttle/dropship/predship/tile/red2,
 /area/yautja)
 "vn" = (
@@ -6445,16 +6408,6 @@
 /obj/structure/platform_decoration/metal/hunter/east,
 /turf/open/shuttle/dropship/predship/tile/hunter_tile_5/east,
 /area/yautja)
-"wc" = (
-/obj/structure/bed/bedroll{
-	color = "#6b675e";
-	dir = 8
-	},
-/obj/effect/decal/hybrisa/dirt_2,
-/obj/effect/decal/hybrisa/dirt_2,
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
-/turf/open/floor/corsat,
-/area/yautja/lower_deck)
 "wf" = (
 /obj/structure/platform_decoration/metal/hunter/west{
 	layer = 3.2;
@@ -6481,7 +6434,6 @@
 	color = "#212121";
 	name = "dried blood"
 	},
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
 /turf/open/floor/corsat,
 /area/yautja/lower_deck)
 "wk" = (
@@ -6508,10 +6460,6 @@
 	},
 /turf/open/shuttle/dropship/predship/tile/red,
 /area/yautja)
-"wv" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/young_blood,
-/turf/open/shuttle/dropship/predship/tile/red,
-/area/yautja/lower_deck)
 "ww" = (
 /obj/structure/machinery/door/airlock/yautja{
 	name = "\improper Hound Cells"
@@ -6708,7 +6656,6 @@
 /turf/open/shuttle/dropship/predship/red_glow/on,
 /area/yautja)
 "xp" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/centre,
 /turf/open/floor/corsat,
 /area/yautja)
 "xq" = (
@@ -7266,7 +7213,6 @@
 /obj/structure/showcase{
 	desc = "An ancient, dusty tomb with strange alien writing. It's best not to touch it.";
 	icon_state = "yaut";
-	icon = 'icons/obj/structures/morgue.dmi';
 	name = "alien sarcophagus";
 	pixel_x = 3
 	},
@@ -7464,7 +7410,6 @@
 /obj/structure/showcase{
 	desc = "An ancient, dusty tomb with strange alien writing. It's best not to touch it.";
 	icon_state = "yaut";
-	icon = 'icons/obj/structures/morgue.dmi';
 	name = "alien sarcophagus";
 	pixel_x = 3
 	},
@@ -7566,7 +7511,6 @@
 /obj/structure/showcase{
 	desc = "An ancient, dusty tomb with strange alien writing. It's best not to touch it.";
 	icon_state = "yaut";
-	icon = 'icons/obj/structures/morgue.dmi';
 	name = "alien sarcophagus";
 	pixel_x = -3;
 	dir = 1;
@@ -7613,7 +7557,6 @@
 /obj/effect/hunter/bridge_border/corner{
 	dir = 4
 	},
-/obj/effect/step_trigger/teleporter/yautja_young,
 /turf/open/floor/light/red/darker,
 /area/yautja/lower_deck)
 "Aj" = (
@@ -8195,7 +8138,9 @@
 /turf/closed/wall/huntership,
 /area/yautja)
 "BS" = (
-/obj/structure/machinery/cryopod/no_store/yautja,
+/obj/structure/machinery/cryopod/no_store/yautja{
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
+	},
 /turf/open/shuttle/dropship/predship/tile/red3,
 /area/yautja)
 "BT" = (
@@ -8208,15 +8153,6 @@
 	},
 /turf/open/shuttle/dropship/predship/hunter_grille,
 /area/yautja)
-"BV" = (
-/obj/effect/decal/hybrisa/dirt_2,
-/obj/effect/decal/cleanable/dirt{
-	layer = 3.2;
-	color = "#bccab4"
-	},
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
-/turf/open/floor/corsat,
-/area/yautja/lower_deck)
 "BW" = (
 /obj/structure/prop/hunter/fake_platform/hunter/west,
 /obj/structure/bed/chair/comfy/yautja{
@@ -8504,7 +8440,6 @@
 /obj/item/weapon/yautja/chain,
 /obj/item/weapon/yautja/sword,
 /obj/item/weapon/yautja/scythe,
-/obj/item/weapon/yautja/chained/combistick,
 /turf/open/shuttle/dropship/predship/tile/red4/glow,
 /area/yautja)
 "CR" = (
@@ -8590,7 +8525,6 @@
 	color = "#6b675e";
 	dir = 8
 	},
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
 /turf/open/floor/corsat,
 /area/yautja/lower_deck)
 "Dj" = (
@@ -10069,10 +10003,6 @@
 /obj/effect/decal/strata_decals/grime/grime4,
 /turf/open/floor/corsat/squares,
 /area/yautja/lower_deck)
-"Ig" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/young_blood/right_centre,
-/turf/open/shuttle/dropship/predship/tile/red,
-/area/yautja/lower_deck)
 "Ih" = (
 /obj/structure/prop/hunter/fake_platform/hunter/west,
 /obj/structure/platform_decoration/metal/hunter/north,
@@ -10315,7 +10245,9 @@
 	layer = 3.2;
 	color = "#bccab4"
 	},
-/obj/structure/machinery/cryopod/no_store/right/yautja,
+/obj/structure/machinery/cryopod/no_store/yautja{
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
+	},
 /turf/open/shuttle/dropship/predship/hunter_catwalk_new,
 /area/yautja/lower_deck)
 "Jl" = (
@@ -10360,24 +10292,8 @@
 	color = "#5d524b";
 	alpha = 155
 	},
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
 /turf/open/floor/corsat,
 /area/yautja/lower_deck)
-"Jw" = (
-/obj/item/bracer_attachments/scimitars,
-/obj/item/bracer_attachments/scimitars,
-/obj/item/bracer_attachments/scimitars_alt,
-/obj/item/bracer_attachments/scimitars_alt,
-/obj/item/bracer_attachments/scimitars,
-/obj/item/bracer_attachments/scimitars,
-/obj/item/bracer_attachments/scimitars,
-/obj/item/bracer_attachments/scimitars,
-/obj/structure/surface/rack{
-	color = "#6b675e";
-	layer = 2.79
-	},
-/turf/open/shuttle/dropship/predship/tile/red4/glow,
-/area/yautja)
 "Jx" = (
 /obj/structure/machinery/door/airlock/yautja{
 	name = "\improper Hound Cells"
@@ -10630,11 +10546,6 @@
 	},
 /turf/open/floor/corsat,
 /area/yautja)
-"Kq" = (
-/obj/effect/decal/hybrisa/dirt_2,
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
-/turf/open/shuttle/dropship/predship/hunter_catwalk_new,
-/area/yautja/lower_deck)
 "Kt" = (
 /obj/effect/alien/weeds/node/forsaken,
 /turf/open/floor/almayer/research/containment/yautja,
@@ -11173,7 +11084,9 @@
 	layer = 3.2;
 	color = "#bccab4"
 	},
-/obj/structure/machinery/cryopod/no_store/yautja,
+/obj/structure/machinery/cryopod/no_store/right/yautja{
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
+	},
 /turf/open/shuttle/dropship/predship/hunter_catwalk_new,
 /area/yautja/lower_deck)
 "Mh" = (
@@ -11933,19 +11846,6 @@
 /obj/structure/surface/rack{
 	color = "#6b675e";
 	layer = 2.79
-	},
-/obj/item/weapon/yautja/chained/combistick,
-/obj/item/weapon/yautja/chained/combistick{
-	pixel_x = 4;
-	pixel_y = -3
-	},
-/obj/item/weapon/yautja/chained/combistick{
-	pixel_x = -3;
-	pixel_y = 4
-	},
-/obj/item/weapon/yautja/chained/combistick{
-	pixel_x = -6;
-	pixel_y = 7
 	},
 /turf/open/shuttle/dropship/predship/tile/red4/glow,
 /area/yautja)
@@ -12842,10 +12742,6 @@
 /obj/structure/platform_decoration/metal/hunter,
 /turf/open/shuttle/bright_red/glow,
 /area/yautja/lower_deck)
-"RY" = (
-/obj/structure/machinery/cm_vending/clothing/yautja,
-/turf/open/floor/corsat,
-/area/yautja)
 "RZ" = (
 /obj/item/reagent_container/glass/rag/polishing_rag,
 /obj/item/reagent_container/glass/rag/polishing_rag{
@@ -12888,7 +12784,9 @@
 /turf/open/floor/corsat/squares,
 /area/yautja)
 "Sg" = (
-/obj/structure/machinery/cryopod/no_store/right/yautja,
+/obj/structure/machinery/cryopod/no_store/right/yautja{
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
+	},
 /turf/open/shuttle/dropship/predship/tile/red2,
 /area/yautja)
 "Sh" = (
@@ -13397,7 +13295,6 @@
 	color = "#6b675e";
 	dir = 8
 	},
-/obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred,
 /turf/open/shuttle/dropship/predship/hunter_catwalk_new,
 /area/yautja/lower_deck)
 "TZ" = (
@@ -13680,10 +13577,6 @@
 	},
 /turf/open/floor/corsat/box,
 /area/yautja)
-"UJ" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/right,
-/turf/open/floor/corsat,
-/area/yautja)
 "UK" = (
 /obj/effect/hunter/bridge_border/brown/large_stair{
 	dir = 1
@@ -13730,10 +13623,6 @@
 /obj/effect/hunter/catwalk/new_alpha,
 /obj/structure/platform_decoration/metal/hunter/west,
 /turf/open/shuttle/bright_red/glow,
-/area/yautja/lower_deck)
-"UR" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/young_blood/left_centre,
-/turf/open/shuttle/dropship/predship/tile/red,
 /area/yautja/lower_deck)
 "US" = (
 /obj/structure/prop/hunter/fake_platform/hunter/west{
@@ -14059,10 +13948,6 @@
 	},
 /turf/open/shuttle/dropship/predship/tile/hunter_tile_5/north,
 /area/yautja)
-"VC" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/right_centre,
-/turf/open/floor/corsat,
-/area/yautja)
 "VD" = (
 /turf/open/shuttle/dropship/predship/tile/red4/glow,
 /area/yautja)
@@ -14175,7 +14060,9 @@
 	layer = 3.2;
 	color = "#bccab4"
 	},
-/obj/structure/machinery/cryopod/no_store/right/yautja,
+/obj/structure/machinery/cryopod/no_store/yautja{
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
+	},
 /turf/open/shuttle/dropship/predship/hunter_catwalk_new,
 /area/yautja/lower_deck)
 "Wa" = (
@@ -14905,7 +14792,6 @@
 /obj/structure/showcase{
 	desc = "An ancient, dusty tomb with strange alien writing. It's best not to touch it.";
 	icon_state = "yaut";
-	icon = 'icons/obj/structures/morgue.dmi';
 	name = "alien sarcophagus";
 	pixel_x = -3;
 	dir = 1;
@@ -15129,11 +15015,6 @@
 /obj/structure/prop/hunter/fake_platform/hunter,
 /turf/open/floor/corsat,
 /area/yautja/hangar)
-"ZI" = (
-/obj/structure/machinery/cm_vending/clothing/yautja/elder,
-/obj/structure/machinery/cm_vending/clothing/yautja/elder/right,
-/turf/open/floor/corsat,
-/area/yautja)
 "ZK" = (
 /obj/structure/prop/hunter/fake_platform/hunter/east,
 /obj/effect/hunter/catwalk/new_alpha,
@@ -17894,7 +17775,7 @@ Hg
 UH
 Hg
 Wt
-Jw
+Pb
 aV
 aV
 HE
@@ -18196,7 +18077,7 @@ Yc
 IN
 aV
 aV
-RY
+xp
 WS
 iT
 cl
@@ -18298,7 +18179,7 @@ dI
 Nu
 aV
 aV
-jI
+xp
 sW
 ty
 rE
@@ -18502,7 +18383,7 @@ dI
 Nu
 aV
 aV
-VC
+xp
 sW
 ty
 lL
@@ -18604,7 +18485,7 @@ hH
 aV
 aV
 aV
-UJ
+xp
 hC
 Mu
 Ji
@@ -20134,7 +20015,7 @@ IN
 aV
 aV
 aV
-ba
+xp
 WS
 iT
 DU
@@ -20236,7 +20117,7 @@ aa
 Nu
 aV
 aV
-ZI
+xp
 in
 wf
 lX
@@ -20440,7 +20321,7 @@ aa
 Nu
 aV
 aV
-ba
+xp
 gq
 hD
 rE
@@ -20542,7 +20423,7 @@ lv
 hH
 aV
 aV
-ZI
+xp
 hC
 Mu
 rm
@@ -22206,7 +22087,7 @@ aV
 aV
 Ia
 Ia
-Tk
+db
 Tk
 Tk
 vG
@@ -27249,7 +27130,7 @@ rP
 rP
 pl
 fD
-wc
+Nf
 rP
 uP
 uP
@@ -27453,7 +27334,7 @@ sG
 rP
 JX
 zc
-BV
+BX
 rP
 uP
 uP
@@ -28041,7 +27922,7 @@ dI
 zL
 rP
 rP
-wv
+pt
 SZ
 DQ
 Nj
@@ -28143,7 +28024,7 @@ dI
 zL
 rP
 rP
-UR
+pt
 Qz
 GE
 sm
@@ -28245,7 +28126,7 @@ dI
 zL
 rP
 rP
-cR
+pt
 Bj
 DQ
 uP
@@ -28347,7 +28228,7 @@ dI
 zL
 rP
 rP
-Ig
+pt
 Bj
 GE
 pN
@@ -28449,7 +28330,7 @@ dI
 zL
 rP
 rP
-gA
+pt
 iC
 DQ
 rI
@@ -28575,7 +28456,7 @@ sr
 rP
 IT
 Sk
-db
+iz
 rP
 sr
 sr
@@ -28779,7 +28660,7 @@ sr
 rP
 Sk
 Bt
-Kq
+Sk
 rP
 sr
 IM
@@ -29085,7 +28966,7 @@ mf
 rP
 ic
 BX
-sR
+hV
 rP
 uP
 uP
@@ -29185,7 +29066,7 @@ Sk
 ra
 JW
 rP
-Kq
+Sk
 Sk
 Sk
 rP

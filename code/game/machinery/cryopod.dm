@@ -638,8 +638,8 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	SEND_SIGNAL(occupant, COMSIG_MOB_END_TUTORIAL)
 
 /obj/structure/machinery/cryopod/no_store/yautja
-	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
 
 /obj/structure/machinery/cryopod/no_store/right/yautja
-	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
 	dir = WEST
