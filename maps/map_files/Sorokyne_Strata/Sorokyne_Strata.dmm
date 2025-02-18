@@ -30053,7 +30053,6 @@
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/ag/interior/outpost/engi)
 "uob" = (
-/obj/structure/closet/suit,
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
