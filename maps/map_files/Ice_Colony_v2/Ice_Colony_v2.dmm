@@ -16140,7 +16140,6 @@
 /turf/open/floor/darkpurple2,
 /area/ice_colony/underground/research)
 "kyP" = (
-,
 /obj/structure/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
