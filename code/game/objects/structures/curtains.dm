@@ -68,3 +68,63 @@
 /obj/structure/curtain/red
 	name = "red curtain"
 	icon_state = "red"
+
+/obj/structure/curtain/leather
+	name = "leather curtain"
+	icon_state = "leather_curtain"
+	alpha = 200
+
+/obj/structure/curtain/leather/alt
+	name = "leather curtain"
+	icon_state = "leather_curtain_2"
+
+/obj/structure/curtain/leather/alt_1
+	name = "leather curtain"
+	icon_state = "leather_curtain_3"
+
+/obj/structure/curtain/leather/alt_2
+	name = "leather curtain"
+	icon_state = "leather_curtain_4"
+
+// Colorable
+
+/obj/structure/curtain/colorable
+	name = "curtain"
+	icon_state = "colorable"
+/obj/structure/curtain/colorable_transparent
+	name = "blinds"
+	icon_state = "colorable_transparent"
+	alpha = 200
+// Open
+/obj/structure/curtain/open/colorable
+	name = "curtain"
+	icon_state = "colorable"
+/obj/structure/curtain/open/colorable_transparent
+	name = "blinds"
+	icon_state = "colorable_transparent"
+	alpha = 200
+/obj/structure/curtain/open/red
+	name = "red curtain"
+	icon_state = "red"
+
+/obj/structure/curtain/open/leather
+	name = "leather curtain"
+	icon_state = "leather_curtain"
+	alpha = 200
+
+/obj/structure/curtain/open/leather/alt
+	name = "leather curtain"
+	icon_state = "leather_curtain_2"
+
+/obj/structure/curtain/open/leather/alt_1
+	name = "leather curtain"
+	icon_state = "leather_curtain_3"
+
+/obj/structure/curtain/open/leather/alt_2
+	name = "leather curtain"
+	icon_state = "leather_curtain_4"
+
+/obj/structure/curtain/Initialize()
+	. = ..()
+	if(alpha)
+		set_opacity(0)

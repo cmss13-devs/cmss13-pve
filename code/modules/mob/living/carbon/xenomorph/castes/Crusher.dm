@@ -76,6 +76,9 @@
 	weed_food_states = list("Crusher_1","Crusher_2","Crusher_3")
 	weed_food_states_flipped = list("Crusher_1","Crusher_2","Crusher_3")
 
+	skull = /obj/item/skull/crusher
+	pelt = /obj/item/pelt/crusher
+
 	ai_range = 24
 	forced_retarget_time = (3 SECONDS)
 
