@@ -305,7 +305,7 @@ GLOBAL_LIST_INIT_TYPED(cardboard_recipes, /datum/stack_recipe, list ( \
 		null, \
 		new/datum/stack_recipe("empty smartgun ammo box (10x28mm)", /obj/item/ammo_box/rounds/smartgun/empty), \
 		null, \
-		new/datum/stack_recipe("empty rifle ammo box (9mm)", /obj/item/ammo_box/rounds/pistol/empty), \
+		new/datum/stack_recipe("empty rifle ammo box (9x19mm)", /obj/item/ammo_box/rounds/pistol/empty), \
 		new/datum/stack_recipe("empty rifle ammo box (9mm AP)", /obj/item/ammo_box/rounds/pistol/ap/empty), \
 		new/datum/stack_recipe("empty rifle ammo box (9mm HP)", /obj/item/ammo_box/rounds/pistol/hp/empty), \
 		new/datum/stack_recipe("empty rifle ammo box (9mm Incen)", /obj/item/ammo_box/rounds/pistol/incen/empty), \

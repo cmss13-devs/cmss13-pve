@@ -46,8 +46,8 @@
 		list("VP70 Combat Pistol", 15, /obj/item/weapon/gun/pistol/vp70, null, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", 0, null, null, null),
-		list("VP78 magazine (9mm)", 5, /obj/item/ammo_magazine/pistol/vp78, null, VENDOR_ITEM_REGULAR),
-		list("VP70 Magazine (9mm)", 5, /obj/item/ammo_magazine/pistol/vp70, null, VENDOR_ITEM_REGULAR),
+		list("VP78 magazine (9x19mm)", 5, /obj/item/ammo_magazine/pistol/vp78, null, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9x19mm)", 5, /obj/item/ammo_magazine/pistol/vp70, null, VENDOR_ITEM_REGULAR),
 
 		list("ATTACHMENTS", 0, null, null, null),
 		list("Angled Grip", 15, /obj/item/attachable/angledgrip, null, VENDOR_ITEM_REGULAR),
@@ -86,8 +86,8 @@
 		list("VP70 Combat Pistol", 30, /obj/item/weapon/gun/pistol/vp70, null, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", 0, null, null, null),
-		list("VP78 magazine (9mm)", 50, /obj/item/ammo_magazine/pistol/vp78, null, VENDOR_ITEM_REGULAR),
-		list("VP70 Magazine (9mm)", 50, /obj/item/ammo_magazine/pistol/vp70, null, VENDOR_ITEM_REGULAR),
+		list("VP78 magazine (9x19mm)", 50, /obj/item/ammo_magazine/pistol/vp78, null, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9x19mm)", 50, /obj/item/ammo_magazine/pistol/vp70, null, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", 0, null, null, null),
 		list("M94 Marking Flare Pack", 30, /obj/item/storage/box/m94, null, VENDOR_ITEM_RECOMMENDED),

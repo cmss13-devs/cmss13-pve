@@ -30,12 +30,12 @@
 		list("M82F Flare Gun", 4, /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", -1, null, null),
-		list("VP70 Magazine (9mm)", 20, /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9x19mm)", 20, /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
 		list("M44 Speedloader (.44)", 20, /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
-		list("M4A3 Magazine (9mm)", 20, /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
-		list("M4A3 AP Magazine (9mm)", 12, /obj/item/ammo_magazine/pistol/ap, VENDOR_ITEM_REGULAR),
-		list("M4A3 HP Magazine (9mm)", 12, /obj/item/ammo_magazine/pistol/hp, VENDOR_ITEM_REGULAR),
-		list("VP78 Magazine (9mm)", 16, /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("M4A3 Magazine (9x19mm)", 20, /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
+		list("M4A3 AP Magazine (9x19mm)", 12, /obj/item/ammo_magazine/pistol/ap, VENDOR_ITEM_REGULAR),
+		list("M4A3 HP Magazine (9x19mm)", 12, /obj/item/ammo_magazine/pistol/hp, VENDOR_ITEM_REGULAR),
+		list("VP78 Magazine (9x19mm)", 16, /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
 
 		list("ATTACHMENTS", -1, null, null),
 		list("Rail Flashlight", 8, /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),

@@ -230,12 +230,12 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_arc, list(
 		list("M82F Flare Gun", 2, /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", -1, null, null),
-		list("VP70 Magazine (9mm)", 10, /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9x19mm)", 10, /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
 		list("M44 Speedloader (.44)", 10, /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
-		list("M4A3 Magazine (9mm)", 10, /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
-		list("M4A3 AP Magazine (9mm)", 6, /obj/item/ammo_magazine/pistol/ap, VENDOR_ITEM_REGULAR),
-		list("M4A3 HP Magazine (9mm)", 6, /obj/item/ammo_magazine/pistol/hp, VENDOR_ITEM_REGULAR),
-		list("VP78 Magazine (9mm)", 8, /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("M4A3 Magazine (9x19mm)", 10, /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
+		list("M4A3 AP Magazine (9x19mm)", 6, /obj/item/ammo_magazine/pistol/ap, VENDOR_ITEM_REGULAR),
+		list("M4A3 HP Magazine (9x19mm)", 6, /obj/item/ammo_magazine/pistol/hp, VENDOR_ITEM_REGULAR),
+		list("VP78 Magazine (9x19mm)", 8, /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
 
 		list("ATTACHMENTS", -1, null, null),
 		list("Magnetic Harness", 2, /obj/item/attachable/magnetic_harness, VENDOR_ITEM_REGULAR),

@@ -154,7 +154,7 @@
 	},
 /obj/item/ammo_magazine/pistol/vp78{
 	current_rounds = 4;
-	name = "scratched VP78 magazine (9mm)";
+	name = "scratched VP78 magazine (9x19mm)";
 	pixel_x = 6
 	},
 /turf/open/floor/plating/platingdmg3,

@@ -57,7 +57,7 @@
 //----------------9mm Ammunition Boxes (for Viper 9 SMG)------------------
 
 /obj/item/ammo_box/rounds/smg
-	name = "\improper SMG ammunition box (9mm)"
+	name = "\improper SMG ammunition box (9x19mm)"
 	desc = "A 9mm ammunition box. It comes with a leather strap allowing to wear it on the back."
 	caliber = "9mm"
 	icon_state = "base_m39"
@@ -159,7 +159,7 @@
 //----------------9mm Pistol Ammunition Boxes (for mod88, M4A3 pistols)------------------
 
 /obj/item/ammo_box/rounds/pistol
-	name = "\improper pistol ammunition box (9mm)"
+	name = "\improper pistol ammunition box (9x19mm)"
 	desc = "A 9mm ammunition box. Used to refill M4A3 magazines. It comes with a leather strap allowing to wear it on the back."
 	caliber = "9mm"
 	icon_state = "base_m4a3"

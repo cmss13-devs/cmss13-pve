@@ -58,7 +58,6 @@
 	max_rounds = 7
 	gun_type = /obj/item/weapon/gun/pistol/m1911
 
-
 //-------------------------------------------------------
 //vp70 based off VP70
 

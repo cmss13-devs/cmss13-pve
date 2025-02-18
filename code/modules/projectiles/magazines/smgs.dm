@@ -9,7 +9,7 @@
 //M39 SMG ammo
 
 /obj/item/ammo_magazine/smg/m39
-	name = "\improper Viper 9 magazine (9mm)"
+	name = "\improper Viper 9 magazine (9x19mm)"
 	desc = "A 9mm submachinegun magazine."
 	caliber = "9mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
@@ -22,49 +22,49 @@
 	ammo_band_icon_empty = "+m39_band_e"
 
 /obj/item/ammo_magazine/smg/m39/ap
-	name = "\improper Viper 9 AP magazine (9mm)"
+	name = "\improper Viper 9 AP magazine (9x19mm)"
 	desc = "A 9mm armor-piercing submachinegun magazine."
 	default_ammo = /datum/ammo/bullet/pistol/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/smg/m39/le
-	name = "\improper Viper 9 LE magazine (9mm)"
+	name = "\improper Viper 9 LE magazine (9x19mm)"
 	desc = "A 9mm light-explosive submachinegun magazine."
 	default_ammo = /datum/ammo/bullet/pistol/le
 	ammo_band_color = AMMO_BAND_COLOR_LIGHT_EXPLOSIVE
 
 /obj/item/ammo_magazine/smg/m39/rubber
-	name = "\improper Viper 9 rubber magazine (9mm)"
+	name = "\improper Viper 9 rubber magazine (9x19mm)"
 	desc = "A 9mm rubber bullet submachinegun magazine/"
 	default_ammo = /datum/ammo/bullet/pistol/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 /obj/item/ammo_magazine/smg/m39/heap
-	name = "\improper Viper 9 HEAP magazine (9mm)"
+	name = "\improper Viper 9 HEAP magazine (9x19mm)"
 	desc = "A 9mm armor-piercing high-explosive submachinegun magazine."
 	default_ammo = /datum/ammo/bullet/smg/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 /obj/item/ammo_magazine/smg/m39/penetrating
-	name = "\improper Viper 9 wall-penetrating magazine (9mm)"
+	name = "\improper Viper 9 wall-penetrating magazine (9x19mm)"
 	desc = "A 9mm wall-penetrating bullet submachinegun magazine."
 	default_ammo = /datum/ammo/bullet/pistol/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
 /obj/item/ammo_magazine/smg/m39/toxin
-	name = "\improper Viper 9 toxin magazine (9mm)"
+	name = "\improper Viper 9 toxin magazine (9x19mm)"
 	desc = "A 9mm toxin bullet submachinegun magazine."
 	default_ammo = /datum/ammo/bullet/pistol/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
 /obj/item/ammo_magazine/smg/m39/incendiary
-	name = "\improper Viper 9 incendiary magazine (9mm)"
+	name = "\improper Viper 9 incendiary magazine (9x19mm)"
 	desc = "A 9mm incendiary submachinegun magazine."
 	default_ammo = /datum/ammo/bullet/pistol/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 /obj/item/ammo_magazine/smg/m39/extended
-	name = "\improper Viper 9 extended magazine (9mm)"
+	name = "\improper Viper 9 extended magazine (9x19mm)"
 	desc = "A 9mm extended submachinegun magazine."
 	max_rounds = 72
 	icon_state = "m39_HV_extended"
@@ -74,7 +74,7 @@
 //M5, a classic SMG used in a lot of action movies.
 
 /obj/item/ammo_magazine/smg/mp5
-	name = "\improper MP5 magazine (9mm)"
+	name = "\improper MP5 magazine (9x19mm)"
 	desc = "A 9mm magazine for the MP5."
 	default_ammo = /datum/ammo/bullet/smg
 	caliber = "9mm"
@@ -193,7 +193,7 @@
 //GENERIC UZI //Based on the uzi submachinegun, of course.
 
 /obj/item/ammo_magazine/smg/mac15 //Based on the Uzi.
-	name = "\improper MAC-15 magazine (9mm)"
+	name = "\improper MAC-15 magazine (9x19mm)"
 	desc = "A magazine for the MAC-15."
 	caliber = "9mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
@@ -202,7 +202,7 @@
 	gun_type = /obj/item/weapon/gun/smg/mac15
 
 /obj/item/ammo_magazine/smg/mac15/extended
-	name = "\improper MAC-15 extended magazine (9mm)"
+	name = "\improper MAC-15 extended magazine (9x19mm)"
 	icon_state = "mac15_extended"
 	bonus_overlay = "mac15_ext"
 	max_rounds = 50
