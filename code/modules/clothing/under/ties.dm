@@ -69,7 +69,7 @@
 
 ///Extra text to append when attached to another clothing item and the host clothing is examined.
 /obj/item/clothing/accessory/proc/additional_examine_text()
-	return "."
+	return "attached to it."
 
 /obj/item/clothing/accessory/blue
 	name = "blue tie"
@@ -1102,6 +1102,114 @@
 /obj/item/clothing/accessory/flak/od
 	icon_state = "flakod"
 	item_state = "flakod"
+
+//===========================//Wrist-worn accessories, just watches currently\\================================\\
+
+/obj/item/clothing/accessory/wrist
+	name = "bracelet"
+	desc = "A simple bracelet made from a strip of fabric."
+	icon_state = "bracelet"
+	item_state = null
+	slot = ACCESSORY_SLOT_WRIST_L
+	var/which_wrist = "left wrist"
+
+/obj/item/clothing/accessory/wrist/get_examine_text(mob/user)
+	. = ..()
+
+	switch(slot)
+		if(ACCESSORY_SLOT_WRIST_L)
+			which_wrist = "left wrist"
+		if(ACCESSORY_SLOT_WRIST_R)
+			which_wrist = "right wrist"
+	. += "It will be worn on the [which_wrist]."
+
+/obj/item/clothing/accessory/wrist/additional_examine_text()
+	return "on the [which_wrist]."
+
+/obj/item/clothing/accessory/wrist/attack_self(mob/user)
+	..()
+
+	switch(slot)
+		if(ACCESSORY_SLOT_WRIST_L)
+			slot = ACCESSORY_SLOT_WRIST_R
+			to_chat(user, SPAN_NOTICE("[src] will be worn on the right wrist."))
+		if(ACCESSORY_SLOT_WRIST_R)
+			slot = ACCESSORY_SLOT_WRIST_L
+			to_chat(user, SPAN_NOTICE("[src] will be worn on the left wrist."))
+
+/obj/item/clothing/accessory/wrist/watch
+	name = "Seiko Pulsemeter wristwatch"
+	desc = "Model S234-501A, a durable quartz-based wristwatch issued to most Colonial Marines who pass through basic training."
+	icon_state = "wristwatch_basic"
+	item_state = "wristwatch_black"
+	w_class = SIZE_SMALL
+	flags_equip_slot = SLOT_HANDS
+
+/obj/item/clothing/accessory/wrist/watch/get_examine_text(mob/user)
+	. = ..()
+
+	. += "It reads: [SPAN_NOTICE("[worldtime2text()]")]"
+
+/obj/item/clothing/accessory/wrist/watch/additional_examine_text()
+	. = ..()
+
+	. += " It reads: [SPAN_NOTICE("[worldtime2text()]")]"
+
+/obj/item/storage/box/watch_box
+	name = "\improper Seiko Pulsemeter wristwatch storage case"
+	desc = "A tough-wearing case to keep an expensive wristwatch safe when not being worn."
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "pdt_box"
+	can_hold = list(/obj/item/clothing/accessory/wrist/watch)
+	foldable = /obj/item/stack/sheet/cardboard
+	storage_slots = 1
+	w_class = SIZE_SMALL
+	max_w_class = SIZE_SMALL
+
+/obj/item/storage/box/watch_box/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch(src)
+
+/obj/item/clothing/accessory/wrist/watch/bishop
+	name = "Seiko 7A28-6000 wristwatch"
+	desc = "A fancy black-bodied wristwatch. Once set correctly, it always holds the right time. For the connoisseurs of precision."
+	icon_state = "wristwatch_bishop"
+	item_state = "wristwatch_black"
+
+/obj/item/storage/box/watch_box/bishop
+	name = "\improper Seiko 7A28-6000 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/bishop/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/bishop(src)
+
+/obj/item/clothing/accessory/wrist/watch/ripley
+	name = "Seiko 7A28-7000 wristwatch"
+	desc = "With the pioneering design of analog quartz chronographs beating inside it, this asymetric wristwatch is perfect for anyone who can remain standing where others have all fallen."
+	icon_state = "wristwatch_ripley"
+	item_state = "wristwatch_silver"
+
+/obj/item/storage/box/watch_box/ripley
+	name = "\improper Seiko 7A28-7000 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/ripley/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/ripley(src)
+
+/obj/item/clothing/accessory/wrist/watch/burke
+	name = "Seiko H556-5050 wristwatch"
+	desc = "A more upmarket wristwatch tailored towards junior executives & 'company guys' all across the galaxy. Flashy, but not horribly ostentatious."
+	icon_state = "wristwatch_burke"
+	item_state = "wristwatch_silver"
+
+/obj/item/storage/box/watch_box/burke
+	name = "\improper Seiko H556-5050 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/burke/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/burke(src)
+
+/obj/item/clothing/accessory/wrist/watch/dallas
+	name = "Samani E-125 wristwatch"
+	desc = "Advertised as being 'A new dawn of precision digital watches', the E-125 became a popular hit with members of the civil aerospace industry."
+	icon_state = "wristwatch_dallas"
+	item_state = "wristwatch_fancy"
 
 //===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
 

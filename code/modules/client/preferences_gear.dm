@@ -1247,6 +1247,25 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/storage/box/pdt_kit
 	cost = 3
 
+/datum/gear/misc/watch
+	display_name = "Seiko Pulsemeter wristwatch"
+	path = /obj/item/storage/box/watch_box
+
+/datum/gear/misc/watch/bishop
+	display_name = "Seiko 7A28-6000 wristwatch"
+	path = /obj/item/storage/box/watch_box/bishop
+	cost = 3
+
+/datum/gear/misc/watch/ripley
+	display_name = "Seiko 7A28-7000 wristwatch"
+	path = /obj/item/storage/box/watch_box/ripley
+	cost = 3
+
+/datum/gear/misc/watch/burke
+	display_name = "Seiko H556-5050 wristwatch"
+	path = /obj/item/storage/box/watch_box/burke
+	cost = 3
+
 /datum/gear/misc/sunscreen_stick
 	display_name = "USCM issue sunscreen"
 	path = /obj/item/facepaint/sunscreen_stick
