@@ -959,19 +959,6 @@
 	},
 /turf/open/shuttle/dropship/predship/hunter_catwalk_alt,
 /area/yautja)
-"db" = (
-/obj/structure/blocker/invisible_wall,
-/obj/structure/showcase{
-	desc = "An ancient, dusty tomb with strange alien writing. It's best not to touch it.";
-	icon_state = "yaut";
-	icon = 'icons/obj/structures/props/stationobjs.dmi';
-	name = "alien sarcophagus";
-	pixel_x = -3;
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/predship/hull/non_weedable_hull,
-/area/yautja)
 "dd" = (
 /obj/structure/prop/hunter/fake_platform/hunter,
 /obj/structure/prop/hunter/fake_platform/hunter/east,
@@ -22080,7 +22067,7 @@ aV
 aV
 Ia
 Ia
-db
+Tk
 Tk
 Tk
 vG
