@@ -57,7 +57,7 @@
 	. = ..()
 	.[/obj/item/ammo_magazine/smg/m39] = /obj/item/ammo_magazine/smg/m39/incendiary
 	.[/obj/item/ammo_magazine/rifle] = /obj/item/ammo_magazine/rifle/incendiary
-	.[/obj/item/ammo_magazine/rifle/m4ra] = /obj/item/ammo_magazine/rifle/m4ra/incendiary
+	.[/obj/item/ammo_magazine/rifle/m49a] = /obj/item/ammo_magazine/rifle/m49a/incendiary
 	.[/obj/item/ammo_magazine/rifle/l42a] = /obj/item/ammo_magazine/rifle/l42a/incendiary
 	.[/obj/item/ammo_magazine/rifle/m41aMK1] = /obj/item/ammo_magazine/rifle/m41aMK1/incendiary
 	.[/obj/item/ammo_magazine/pistol] =  /obj/item/ammo_magazine/pistol/incendiary
@@ -68,6 +68,7 @@
 /obj/item/storage/box/shotgun
 	name = "incendiary shotgun kit"
 	desc = "A kit containing incendiary shotgun shells."
+	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "incenbuck"
 	storage_slots = 5
 	var/amount = 5
@@ -105,7 +106,7 @@
 	. = ..()
 	.[/obj/item/ammo_magazine/smg/m39] = /obj/item/ammo_magazine/smg/m39/penetrating
 	.[/obj/item/ammo_magazine/rifle] = /obj/item/ammo_magazine/rifle/penetrating
-	.[/obj/item/ammo_magazine/rifle/m4ra] = /obj/item/ammo_magazine/rifle/m4ra/penetrating
+	.[/obj/item/ammo_magazine/rifle/m49a] = /obj/item/ammo_magazine/rifle/m49a/penetrating
 	.[/obj/item/ammo_magazine/rifle/l42a] = /obj/item/ammo_magazine/rifle/l42a/penetrating
 	.[/obj/item/ammo_magazine/rifle/m41aMK1] = /obj/item/ammo_magazine/rifle/m41aMK1/penetrating
 	.[/obj/item/ammo_magazine/pistol] =  /obj/item/ammo_magazine/pistol/penetrating

@@ -1,3 +1,7 @@
+// -------------------------------------------------------------------- //
+// Please ensure when updating this menu, changes are reflected in AresAdmin.js
+// -------------------------------------------------------------------- //
+
 import { useBackend } from '../backend';
 import { Box, Button, Flex, Section, Stack } from '../components';
 import { Window } from '../layouts';
@@ -32,10 +36,12 @@ export const AresInterface = (props) => {
     themecolor = 'crtred';
   } else if (current_menu === 'emergency') {
     themecolor = 'crtred';
+  } else if (current_menu === 'core_security') {
+    themecolor = 'crtred';
   }
 
   return (
-    <Window theme={themecolor} width={780} height={725}>
+    <Window theme={themecolor} width={800} height={725}>
       <Window.Content scrollable>
         <PageComponent />
       </Window.Content>
@@ -61,7 +67,7 @@ const Login = (props) => {
       <Box mb="2rem" fontFamily="monospace">
         WY-DOS Executive
       </Box>
-      <Box fontFamily="monospace">Version 8.2.3</Box>
+      <Box fontFamily="monospace">Version 8.3.4</Box>
       <Box fontFamily="monospace">Copyright © 2182, Weyland Yutani Corp.</Box>
 
       <Button
@@ -134,7 +140,7 @@ const MainMenu = (props) => {
 
         <Stack>
           <Stack.Item grow>
-            <h3>Access Level 0</h3>
+            <h3>Access Level 1</h3>
           </Stack.Item>
           <Stack.Item>
             <Button
@@ -163,10 +169,10 @@ const MainMenu = (props) => {
             </Button>
           </Stack.Item>
         </Stack>
-        {access_level >= 1 && (
+        {access_level >= 2 && (
           <Stack>
             <Stack.Item grow>
-              <h3>Access Level 1</h3>
+              <h3>Access Level 2</h3>
             </Stack.Item>
             <Stack.Item>
               <Button
@@ -209,10 +215,10 @@ const MainMenu = (props) => {
             </Stack.Item>
           </Stack>
         )}
-        {access_level >= 2 && (
+        {access_level >= 3 && (
           <Stack>
             <Stack.Item grow>
-              <h3>Access Level 2</h3>
+              <h3>Access Level 3</h3>
             </Stack.Item>
             <Stack.Item>
               <Button
@@ -242,10 +248,10 @@ const MainMenu = (props) => {
             </Stack.Item>
           </Stack>
         )}
-        {access_level >= 4 && (
+        {access_level >= 5 && (
           <Stack>
             <Stack.Item grow>
-              <h3>Access Level 4</h3>
+              <h3>Access Level 5</h3>
             </Stack.Item>
             <Stack.Item>
               <Button.Confirm
@@ -264,7 +270,7 @@ const MainMenu = (props) => {
             <Stack.Item>
               <Button
                 tooltip="Review the ASRS Audit Log."
-                icon="cart-shopping"
+                icon="magnifying-glass-dollar"
                 ml="auto"
                 px="2rem"
                 width="25vw"
@@ -289,10 +295,10 @@ const MainMenu = (props) => {
             </Stack.Item>
           </Stack>
         )}
-        {access_level >= 5 && (
+        {access_level >= 6 && (
           <Stack>
             <Stack.Item grow>
-              <h3>Access Level 5</h3>
+              <h3>Access Level 6</h3>
             </Stack.Item>
             <Stack.Item>
               <Button
@@ -309,10 +315,10 @@ const MainMenu = (props) => {
             </Stack.Item>
           </Stack>
         )}
-        {access_level >= 8 && (
+        {access_level >= 9 && (
           <Stack>
             <Stack.Item grow>
-              <h3>Access Level 8</h3>
+              <h3>Access Level 9</h3>
             </Stack.Item>
             <Stack.Item>
               <Button
@@ -342,10 +348,10 @@ const MainMenu = (props) => {
             </Stack.Item>
           </Stack>
         )}
-        {access_level >= 10 && (
+        {access_level >= 11 && (
           <Stack>
             <Stack.Item grow>
-              <h3>Access Level 10</h3>
+              <h3>Maintenance Access</h3>
             </Stack.Item>
             {sudo === 0 && (
               <Stack.Item>
@@ -507,7 +513,7 @@ const AnnouncementLogs = (props) => {
                 <Button.Confirm
                   icon="trash"
                   tooltip="Delete Record"
-                  disabled={access_level < 3}
+                  disabled={access_level < 4}
                   onClick={() => act('delete_record', { record: record.ref })}
                 />
               </Flex.Item>
@@ -605,7 +611,7 @@ const BioscanLogs = (props) => {
                 <Button.Confirm
                   icon="trash"
                   tooltip="Delete Record"
-                  disabled={access_level < 4}
+                  disabled={access_level < 5}
                   onClick={() => act('delete_record', { record: record.ref })}
                 />
               </Flex.Item>
@@ -686,7 +692,7 @@ const BombardmentLogs = (props) => {
               User
             </Flex.Item>
             <Flex.Item width="30rem" textAlign="center">
-              Coordinates
+              Details
             </Flex.Item>
           </Flex>
         )}
@@ -707,7 +713,7 @@ const BombardmentLogs = (props) => {
                 <Button.Confirm
                   icon="trash"
                   tooltip="Delete Record"
-                  disabled={access_level < 4}
+                  disabled={access_level < 5}
                   onClick={() => act('delete_record', { record: record.ref })}
                 />
               </Flex.Item>
@@ -1187,6 +1193,7 @@ const Requisitions = (props) => {
     last_page,
     current_menu,
     records_requisition,
+    printer_cooldown,
   } = data;
 
   return (
@@ -1229,6 +1236,19 @@ const Requisitions = (props) => {
 
       <Section>
         <h1 align="center">ASRS Audit Log</h1>
+        <h4 align="center">
+          <Button
+            icon="print"
+            px="2rem"
+            textAlign="center"
+            tooltip="Print Audit Log"
+            onClick={() => act('print_req')}
+            disabled={printer_cooldown}
+          >
+            Print Audit Log
+          </Button>
+        </h4>
+
         {!!records_requisition.length && (
           <Flex
             className="candystripe"
@@ -1455,7 +1475,7 @@ const Security = (props) => {
                 <Button.Confirm
                   icon="trash"
                   tooltip="Delete Record"
-                  disabled={access_level < 7}
+                  disabled={access_level < 8}
                   onClick={() => act('delete_record', { record: record.ref })}
                 />
               </Flex.Item>

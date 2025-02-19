@@ -76,7 +76,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 
 /obj/structure/machinery/door/airlock/Destroy()
 	QDEL_NULL_LIST(attached_signallers)
-	QDEL_NULL(closeOther)
+	closeOther = null
 	QDEL_NULL(electronics)
 	return ..()
 
@@ -133,12 +133,14 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 /obj/structure/machinery/door/airlock/deconstruct(disassembled = TRUE)
 	if(!disassembled)
 		if(width == 1)
+			new /obj/structure/airlock_assembly(loc)
 			new /obj/item/stack/rods(loc)
 			new /obj/item/stack/cable_coil/cut(loc)
 			new /obj/effect/spawner/gibspawner/robot(loc)
 			new /obj/effect/decal/cleanable/blood/oil(loc)
 		else // big airlock, big debris
 			for(var/turf/DT in locs) // locs = covered by airlock bounding box
+				new /obj/structure/airlock_assembly(DT)
 				new /obj/item/stack/rods(DT)
 				new /obj/item/stack/cable_coil/cut(DT)
 				new /obj/effect/spawner/gibspawner/robot(DT)
@@ -439,7 +441,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 				return
 
 	if(panel_open)
-		if(ishuman(usr) && !skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+		if(ishuman(usr) && !skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 			to_chat(usr, SPAN_WARNING("You look into \the [src]'s access panel and can only see a jumbled mess of colored wires..."))
 			return FALSE
 
@@ -483,7 +485,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 	add_fingerprint(usr)
 
 	if((in_range(src, usr) && istype(loc, /turf)) && panel_open)
-		if(ishuman(usr) && !skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+		if(ishuman(usr) && !skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 			to_chat(usr, SPAN_WARNING("You don't understand anything about [src]'s wiring!"))
 			return FALSE
 
@@ -557,7 +559,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 	if(istype(attacking_item, /obj/item/clothing/mask/cigarette))
 		if(isElectrified())
 			var/obj/item/clothing/mask/cigarette/L = attacking_item
-			L.light(SPAN_NOTICE("[user] lights their [L] on an electrical arc from the [src]"))
+			L.light(SPAN_NOTICE("[user] lights their [L] on an electrical arc from [src]"))
 			return
 
 	if(!isRemoteControlling(user))
@@ -568,7 +570,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 	add_fingerprint(user)
 
 	if(istype(attacking_item, /obj/item/weapon/zombie_claws) && (welded || locked))
-		user.visible_message(SPAN_NOTICE("[user] starts tearing into the door on the [src]!"), \
+		user.visible_message(SPAN_NOTICE("[user] starts tearing into the door on [src]!"), \
 			SPAN_NOTICE("You start prying your hand into the gaps of the door with your fingers... This will take about 30 seconds."), \
 			SPAN_NOTICE("You hear tearing noises!"))
 
@@ -649,7 +651,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 
 	else if(attacking_item.pry_capable)
 		if(attacking_item.pry_capable == IS_PRY_CAPABLE_CROWBAR && panel_open && welded)
-			if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+			if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 				to_chat(user, SPAN_WARNING("You don't seem to know how to deconstruct machines."))
 				return
 			playsound(loc, 'sound/items/Crowbar.ogg', 25, 1)
@@ -677,9 +679,9 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 					airlock_electronics = new/obj/item/circuitboard/airlock(loc)
 					if(!req_access || !req_one_access)
 						check_access()
-					if(req_access.len)
+					if(length(req_access))
 						airlock_electronics.conf_access = req_access
-					else if(req_one_access.len)
+					else if(length(req_one_access))
 						airlock_electronics.conf_access = req_one_access
 						airlock_electronics.one_access = TRUE
 				else
@@ -754,9 +756,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 
 	for(var/turf/turf in locs)
 		for(var/mob/living/M in turf)
-			if(isborg(M))
-				M.apply_damage(DOOR_CRUSH_DAMAGE, BRUTE)
-			else if(HAS_TRAIT(M, TRAIT_SUPER_STRONG))
+			if(HAS_TRAIT(M, TRAIT_SUPER_STRONG))
 				M.apply_damage(DOOR_CRUSH_DAMAGE, BRUTE)
 			else
 				M.apply_damage(DOOR_CRUSH_DAMAGE, BRUTE)
@@ -817,7 +817,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 /obj/structure/machinery/door/airlock/LateInitialize()
 	. = ..()
 	if(closeOtherId != null)
-		for(var/obj/structure/machinery/door/airlock/A in machines)
+		for(var/obj/structure/machinery/door/airlock/A in GLOB.machines)
 			if(A.closeOtherId == closeOtherId && A != src)
 				closeOther = A
 				break
@@ -833,7 +833,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 	return
 
 /obj/structure/machinery/door/airlock/allowed(mob/M)
-	if(isWireCut(AIRLOCK_WIRE_IDSCAN) || (maint_all_access && check_access_list(list(ACCESS_MARINE_MAINT))))
+	if(isWireCut(AIRLOCK_WIRE_IDSCAN) || (GLOB.maint_all_access && check_access_list(list(ACCESS_MARINE_MAINT))))
 		return TRUE
 	return ..(M)
 
@@ -845,7 +845,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 		for(var/i in resin_door_shmushereds)
 			if(istype(x,i)) //I would like to just use a if(locate() in ) here but Im not gonna add every child to GLOB.resin_door_shmushereds so it works
 				playsound(loc, "alien_resin_break", 25)
-				visible_message(SPAN_WARNING("The [src.name] closes on the [x], shmushing it!"))
+				visible_message(SPAN_WARNING("The [src.name] closes on [x], shmushing it!"))
 				if(isturf(x))
 					var/turf/closed/wall/resin_wall_to_destroy = x
 					resin_wall_to_destroy.dismantle_wall()

@@ -6,7 +6,7 @@
 	icon_state = "cupola_1"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/bullet/rifle/heavy
-	max_rounds = 1000
+	max_rounds = 500
 	gun_type = /obj/item/hardpoint/secondary/m56cupola
 
 /obj/item/ammo_magazine/hardpoint/m56_cupola/update_icon()
@@ -20,3 +20,14 @@
 
 /obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon/update_icon()
 	icon_state = "frontal_[current_rounds <= 0 ? "0" : "1"]"
+
+/obj/item/ammo_magazine/hardpoint/m56_cupola/quad_cannon
+	name = "RE-RE965 Aerial-Defence System ammunition box"
+	desc = "A crate of belted caseless munitions for the ever-hungry RE-RE965 Aerial-Defence System. Comes loaded with a mix of HEI-T and AP rounds for combating aerial threats of all shapes and sizes. Lacks propellants, as it's to be used with the binary hypergolic principle."
+	default_ammo = /datum/ammo/bullet/smartgun/aa
+	gun_type = /obj/item/hardpoint/primary/aa_quadcannon
+	max_rounds = 2000
+	icon_state = "quad_1"
+
+/obj/item/ammo_magazine/hardpoint/m56_cupola/quad_cannon/update_icon()
+	icon_state = "quad_[current_rounds <= 0 ? "0" : "1"]"

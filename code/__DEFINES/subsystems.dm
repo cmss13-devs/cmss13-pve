@@ -89,13 +89,13 @@
 //! ### SS initialization hints
 /**
  * Negative values incidate a failure or warning of some kind, positive are good.
- * 0 and 1 are unused so that TRUE and FALSE are guarenteed to be invalid values.
+ * 0 and 1 are unused so that TRUE and FALSE are guaranteed to be invalid values.
  */
 
 /// Subsystem failed to initialize entirely. Print a warning, log, and disable firing.
 #define SS_INIT_FAILURE -2
 
-/// The default return value which must be overriden. Will succeed with a warning.
+/// The default return value which must be overridden. Will succeed with a warning.
 #define SS_INIT_NONE -1
 
 /// Subsystem initialized sucessfully.
@@ -123,6 +123,7 @@
 #define SS_INIT_NIGHTMARE   21.5
 #define SS_INIT_TIMETRACK 21.1
 #define SS_INIT_HUMANS  21
+#define SS_INIT_WHO 20
 #define SS_INIT_POWER   19
 #define SS_INIT_INFLUXMCSTATS 12
 #define SS_INIT_INFLUXSTATS 11
@@ -162,6 +163,7 @@
 #define SS_PRIORITY_SOUND   250
 #define SS_PRIORITY_TICKER  200
 #define SS_PRIORITY_XENO_AI 185
+#define SS_PRIORITY_HUMAN_AI 182
 #define SS_PRIORITY_NIGHTMARE   180
 #define SS_PRIORITY_QUADTREE    160
 #define SS_PRIORITY_CHAT    155
@@ -171,7 +173,7 @@
 #define SS_PRIORITY_MOB 150
 #define SS_PRIORITY_XENO    149
 #define SS_PRIORITY_HUMAN   148
-#define SS_PRIORITY_XENO_PATHFINDING 130
+#define SS_PRIORITY_PATHFINDING 130
 #define SS_PRIORITY_STAMINA 126
 #define SS_PRIORITY_COMPONENT   125
 #define SS_PRIORITY_NANOUI  120

@@ -130,8 +130,6 @@
 #define ABOVE_XENO_LAYER 4.12
 /// For facehuggers
 #define FACEHUGGER_LAYER 4.13
-/// For Signs above everything but below weather
-#define BILLBOARD_LAYER 4.13
 /// For WEATHER
 #define WEATHER_LAYER 4.14
 
@@ -224,6 +222,8 @@
 #define FLOOR_PLANE -7
 /// Game Plane, where most of the game objects reside
 #define GAME_PLANE -6
+/// Above Game Plane. For things which are above game objects, but below screen effects.
+#define ABOVE_GAME_PLANE -5
 /// Roof plane, disappearing when entering buildings
 #define ROOF_PLANE -4
 

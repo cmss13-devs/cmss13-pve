@@ -43,7 +43,7 @@
 		M.unset_interaction()
 		vehicle.set_seated_mob(seat, null)
 		if(M.client)
-			M.client.change_view(world_view_size, vehicle)
+			M.client.change_view(GLOB.world_view_size, vehicle)
 			M.client.pixel_x = 0
 			M.client.pixel_y = 0
 			M.reset_view()
@@ -108,7 +108,7 @@
 				to_chat(user, SPAN_WARNING("You are unable to use heavy weaponry."))
 			return
 
-	for(var/obj/item/I in user.contents) //prevents shooting while zoomed in, but zoom can still be activated and used without shooting
+	for(var/obj/item/I in user.contents)		//prevents shooting while zoomed in, but zoom can still be activated and used without shooting
 		if(I.zoom)
 			I.zoom(user)
 
@@ -177,7 +177,7 @@
 		M.unset_interaction()
 		vehicle.set_seated_mob(seat, null)
 		if(M.client)
-			M.client.change_view(world_view_size, vehicle)
+			M.client.change_view(GLOB.world_view_size, vehicle)
 			M.client.pixel_x = 0
 			M.client.pixel_y = 0
 	else
@@ -255,7 +255,7 @@
 		M.unset_interaction()
 		vehicle.set_seated_mob(seat, null)
 		if(M.client)
-			M.client.change_view(world_view_size, vehicle)
+			M.client.change_view(GLOB.world_view_size, vehicle)
 			M.client.pixel_x = 0
 			M.client.pixel_y = 0
 			M.reset_view()
@@ -310,12 +310,10 @@
 	unslashable = FALSE
 	unacidable = TRUE
 
-//RU-PVE ADDITION STARTS
-/*	var/buckle_offset_x = 0
+	var/buckle_offset_x = 0
 	var/mob_old_x = 0
 	var/buckle_offset_y = 0
-	var/mob_old_y = 0*/
-//RU-PVE ADDITION ENDS
+	var/mob_old_y = 0
 
 /obj/structure/bed/chair/vehicle/Initialize()
 	. = ..()
@@ -326,8 +324,7 @@
 
 	handle_rotation()
 
-// /obj/structure/bed/chair/vehicle/proc/setup_buckle_offsets()
-/obj/structure/bed/chair/vehicle/setup_buckle_offsets() //RU-PVE
+/obj/structure/bed/chair/vehicle/proc/setup_buckle_offsets()
 	if(pixel_x != 0)
 		buckle_offset_x = pixel_x
 	if(pixel_y != 0)
@@ -483,11 +480,6 @@
 
 	handle_rotation()
 
-/obj/structure/bed/chair/vehicle/white
-	name = "passenger seat"
-	desc = "A sturdy chair with a brace that lowers over your body. Prevents being flung around in vehicle during crash being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
-	icon = 'icons/obj/vehicles/interiors/whitechair.dmi'
-
 /obj/structure/bed/chair/vehicle/dropship_cockpit
 	name = "cockpit seat"
 	desc = "A sturdy metal chair with a brace that lowers over your body. Holds you in place during high altitude drops."
@@ -537,4 +529,3 @@
 
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot
 	name = "co-pilot seat"
-

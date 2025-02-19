@@ -27,13 +27,18 @@
 //Removes a few problematic characters
 /proc/sanitize_simple(text, list/repl_chars = list("\n"=" ","\t"=" ","�"=" "))
 	for(var/char in repl_chars)
-		text = replacetext_char(text, char, repl_chars[char])
+		text = replacetext(text, char, repl_chars[char])
 	return text
+
+///Helper for only alphanumeric characters plus common punctuation, spaces, underscore and hyphen _ -.
+/proc/replace_non_alphanumeric_plus(text)
+	var/regex/alphanumeric = regex(@{"[^a-z0-9 ,.?!\-_&]"}, "gi")
+	return alphanumeric.Replace(text, "")
 
 /proc/readd_quotes(text)
 	var/list/repl_chars = list("&#34;" = "\"", "&#39;" = "'")
 	for(var/char in repl_chars)
-		text = replacetext_char(text, char, repl_chars[char])
+		text = replacetext(text, char, repl_chars[char])
 	return text
 
 //Runs byond's sanitization proc along-side sanitize_simple
@@ -54,12 +59,12 @@
 //Runs sanitize and strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' after sanitize() calls byond's html_encode()
 /proc/strip_html(text, limit=MAX_MESSAGE_LEN)
-	return copytext_char((sanitize(strip_html_simple(text))), 1, limit)
+	return copytext((sanitize(strip_html_simple(text))), 1, limit)
 
 //Runs byond's sanitization proc along-side strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' that html_encode() would cause
 /proc/adminscrub(text, limit=MAX_MESSAGE_LEN)
-	return copytext_char((html_encode(strip_html_simple(text))), 1, limit)
+	return copytext((html_encode(strip_html_simple(text))), 1, limit)
 
 //Returns null if there is any bad text in the string
 /proc/reject_bad_text(text, max_length=512)
@@ -220,7 +225,7 @@
 
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(t as text)
-	return uppertext(copytext_char(t, 1, 2)) + copytext_char(t, 2)
+	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
 
 /proc/stringpercent(text,character = "*")
 //This proc returns the number of chars of the string that is the character
@@ -252,7 +257,7 @@
 		return "[copytext(string, 1, len - 3)]..."
 
 /proc/strip_improper(input_text)
-	return replacetext_char(replacetext_char(input_text, "\proper", ""), "\improper", "")
+	return replacetext(replacetext(input_text, "\proper", ""), "\improper", "")
 
 // Used to remove the string shortcuts for a clean transfer
 /proc/sanitize_filename(t)
@@ -359,8 +364,8 @@
 	// ---Begin URL caching.
 	var/list/urls = list()
 	var/i = 1
-	while (url_find_lazy.Find_char(message))
-		urls["\ref[urls]-[i]"] = url_find_lazy.match
+	while (GLOB.url_find_lazy.Find_char(message))
+		urls["\ref[urls]-[i]"] = GLOB.url_find_lazy.match
 		i++
 
 	for (var/ref in urls)
@@ -368,9 +373,9 @@
 	// ---End URL caching
 
 	var/regex/tag_markup
-	for (var/tag in (markup_tags - ignore_tags))
-		tag_markup = markup_regex[tag]
-		message = tag_markup.Replace_char(message, "$2[markup_tags[tag][1]]$3[markup_tags[tag][2]]$5")
+	for (var/tag in (GLOB.markup_tags - ignore_tags))
+		tag_markup = GLOB.markup_regex[tag]
+		message = tag_markup.Replace_char(message, "$2[GLOB.markup_tags[tag][1]]$3[GLOB.markup_tags[tag][2]]$5")
 
 	// ---Unload URL cache
 	for (var/ref in urls)
@@ -394,3 +399,7 @@
 		if(.)
 			return
 	return 0
+
+/// Check if the string `haystack` begins with the string `needle`.
+/proc/string_starts_with(haystack, needle)
+	return (copytext(haystack, 1, length(needle) + 1) == needle)

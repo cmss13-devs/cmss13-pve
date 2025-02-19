@@ -1,5 +1,5 @@
 /obj/item/hardpoint/holder/tank_turret
-	name = "M34A2-A Multipurpose Turret"
+	name = "\improper M34A2-A Multipurpose Turret"
 	desc = "The centerpiece of the tank. Designed to support quick installation and deinstallation of various tank weapon modules. Has inbuilt flare deployment system."
 
 	icon = 'icons/obj/vehicles/tank.dmi'
@@ -125,7 +125,7 @@
 
 	data += list(list( // turret smokescreen data
 		"name" = "M34A2-A Turret Smoke Screen",
-		"health" = health <= 0 ? null : round(get_integrity_percent()),
+		"health" = health <= 0 ? null : floor(get_integrity_percent()),
 		"uses_ammo" = TRUE,
 		"current_rounds" = ammo.current_rounds / 2,
 		"max_rounds"= ammo.max_rounds / 2,

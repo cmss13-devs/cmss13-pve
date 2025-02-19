@@ -7,6 +7,8 @@
 	desc = "A rectangular metallic frame sitting on four legs with a back panel. Designed to fit the sitting position, more or less comfortably."
 	icon_state = "chair"
 	buckle_lying = 0
+	var/north_layer = FLY_LAYER
+	var/non_north_layer = OBJ_LAYER
 	var/propelled = FALSE //Check for fire-extinguisher-driven chairs
 	var/can_rotate = TRUE
 	var/picked_up_item = /obj/item/weapon/twohanded/folded_metal_chair
@@ -25,10 +27,10 @@
 	flags_can_pass_all_temp = PASS_OVER
 
 /obj/structure/bed/chair/handle_rotation() //Making this into a separate proc so office chairs can call it on Move()
-	if(src.dir == NORTH)
-		src.layer = FLY_LAYER
+	if(dir == NORTH)
+		layer = north_layer
 	else
-		src.layer = OBJ_LAYER
+		layer = non_north_layer
 	if(buckled_mob)
 		buckled_mob.setDir(dir)
 
@@ -150,7 +152,7 @@
 		stacked_size--
 		update_overlays()
 
-		var/list/candidate_target_turfs = range(round(stacked_size/2), starting_turf)
+		var/list/candidate_target_turfs = range(floor(stacked_size/2), starting_turf)
 		candidate_target_turfs -= starting_turf
 		var/turf/target_turf = candidate_target_turfs[rand(1, length(candidate_target_turfs))]
 
@@ -257,6 +259,10 @@
 	debris = list()
 	picked_up_item = null
 
+/obj/structure/bed/chair/comfy/arc
+	non_north_layer = BELOW_OBJ_LAYER
+	layer = BELOW_OBJ_LAYER
+
 /obj/structure/bed/chair/comfy/orange
 	icon_state = "comfychair_orange"
 
@@ -299,6 +305,48 @@
 	icon_state = "comfychair_ares"
 	name = "AI core chair"
 	desc = "A functional chair designed for comfortably sitting a single person with intent to facilitate interactions with the ship AI."
+
+/obj/structure/bed/chair/comfy/bench
+	icon_state = null
+	can_rotate = FALSE
+	name = "metal bench"
+	desc = "A metal bench to rest upon."
+
+/obj/structure/bed/chair/comfy/bench/north
+	icon_state = "bench_1"
+
+/obj/structure/bed/chair/comfy/bench/north/west
+	dir = WEST
+
+/obj/structure/bed/chair/comfy/bench/north/east
+	dir = EAST
+
+/obj/structure/bed/chair/comfy/bench/mid
+	icon_state = "bench_2"
+
+/obj/structure/bed/chair/comfy/bench/mid/west
+	dir = WEST
+
+/obj/structure/bed/chair/comfy/bench/mid/east
+	dir = EAST
+
+/obj/structure/bed/chair/comfy/bench/south
+	icon_state = "bench_3"
+
+/obj/structure/bed/chair/comfy/bench/south/west
+	dir = WEST
+
+/obj/structure/bed/chair/comfy/bench/south/east
+	dir = EAST
+
+
+/obj/structure/bed/chair/comfy/ai_interface
+	icon_state = "ai_interface_chair"
+	name = "AI interface chair"
+	desc = "A functional chair designed for comfortably sitting a single person with intent to facilitate interactions with the ship AI."
+	can_rotate = FALSE
+	dir = NORTH
+	pixel_y = -5
 
 /obj/structure/bed/chair/office
 	anchored = FALSE

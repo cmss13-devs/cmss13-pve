@@ -30,8 +30,17 @@
 		total_positions_so_far = positions
 	return positions
 
-/datum/job/command/bridge/generate_entry_message(mob/living/carbon/human/H)
-	return ..()
+
+/datum/job/command/bridge/generate_entry_conditions(mob/living/M, whitelist_status)
+	. = ..()
+	if(!islist(GLOB.marine_leaders[JOB_SO]))
+		GLOB.marine_leaders[JOB_SO] = list()
+	GLOB.marine_leaders[JOB_SO] += M
+	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(cleanup_leader_candidate))
+
+/datum/job/command/bridge/proc/cleanup_leader_candidate(mob/M)
+	SIGNAL_HANDLER
+	GLOB.marine_leaders[JOB_SO] -= M
 
 /datum/job/command/bridge/handle_job_options(option)
 	if(option != FIRST_LT_VARIANT)
@@ -62,10 +71,8 @@ OverrideTimelock(/datum/job/command/bridge, list(
 /datum/job/command/bridge/ai/generate_entry_conditions(mob/living/M, whitelist_status)
 	. = ..()
 	GLOB.marine_leaders[JOB_SO] = M
-	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(cleanup_leader_candidate))
 
-/datum/job/command/bridge/ai/proc/cleanup_leader_candidate(mob/M)
-	SIGNAL_HANDLER
+/datum/job/command/bridge/ai/cleanup_leader_candidate(mob/M)
 	GLOB.marine_leaders -= JOB_SO
 
 /datum/job/command/bridge/ai/upp
@@ -77,18 +84,6 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	name = JOB_SO_UPP
 	icon_state = "so_spawn"
 	job = /datum/job/command/bridge/ai/upp
-
-/datum/job/command/bridge/ai/pmc
-	title = JOB_PMCPLAT_OW
-// todo: funny AR goggles perma cyan 	gear_preset =
-// todo: above	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
-
-	gear_preset = /datum/equipment_preset/uscm_ship/so/pmc
-	job_options = list(FIRST_LT_VARIANT = "OVERWATCH", SECOND_LT_VARIANT = "OVERLORD")
-
-/obj/effect/landmark/start/bridge/pmc
-	name = JOB_PMCPLAT_OW
-	job = /datum/job/command/bridge/ai/pmc
 
 #undef SECOND_LT_VARIANT
 #undef FIRST_LT_VARIANT

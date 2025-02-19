@@ -30,13 +30,13 @@
 	name = "Movie APC"
 	interior_id = "apc_movie"
 
+/datum/map_template/interior/apc_aa
+	name = "Anti-Air APC"
+	interior_id = "apc_aa"
+
 /datum/map_template/interior/arc
 	name = "ARC"
 	interior_id = "arc"
-
-/datum/map_template/interior/fancy_locker
-	name = "Fancy Locker"
-	interior_id = "fancylocker"
 
 /datum/map_template/interior/tank
 	name = "Tank"
@@ -50,10 +50,6 @@
 	name = "Van"
 	interior_id = "van"
 
-/datum/map_template/interior/box_van
-	name = "Box Van"
-	interior_id = "box_van"
-
-/datum/map_template/interior/pizza_van
-	name = "Pizza-Galaxy Van"
-	interior_id = "pizza_van"
+/datum/map_template/interior/arc
+	name = "ARC"
+	interior_id = "arc"

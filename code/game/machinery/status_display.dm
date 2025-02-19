@@ -146,7 +146,7 @@
 		maptext = new_text
 
 /obj/structure/machinery/status_display/proc/get_supply_shuttle_timer()
-	var/datum/shuttle/ferry/supply/shuttle = supply_controller.shuttle
+	var/datum/shuttle/ferry/supply/shuttle = GLOB.supply_controller.shuttle
 	if (!shuttle)
 		return "Error"
 
@@ -158,13 +158,12 @@
 	return ""
 
 /obj/structure/machinery/status_display/proc/remove_display()
-	if(overlays.len)
-		overlays.Cut()
+	LAZYCLEARLIST(overlays)
 	if(maptext)
 		maptext = ""
 
 /obj/structure/machinery/status_display/proc/set_sec_level_picture()
-	switch(security_level)
+	switch(GLOB.security_level)
 		if(SEC_LEVEL_GREEN)
 			set_picture("default")
 		if(SEC_LEVEL_BLUE)
@@ -241,8 +240,7 @@
 
 /obj/structure/machinery/ai_status_display/proc/set_picture(state)
 	picture_state = state
-	if(overlays.len)
-		overlays.Cut()
+	LAZYCLEARLIST(overlays)
 	overlays += image('icons/obj/structures/machinery/status_display.dmi', icon_state=picture_state)
 
 #undef DEFAULT_FONT_COLOR

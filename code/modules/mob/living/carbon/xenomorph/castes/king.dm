@@ -75,6 +75,8 @@
 
 	playsound(src, 'sound/voice/alien_death_unused.ogg', 100, TRUE, 30, falloff = 5)
 	playsound(src, 'sound/voice/king_background.ogg', 100, TRUE, 30, falloff = 5)
+	if(!get_turf(src)) //autowiki compat, spawns in nullspace
+		return
 	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
 		var/relative_dir = get_dir(current_mob, src)
 		var/final_dir = dir2text(relative_dir)
@@ -82,17 +84,12 @@
 
 /mob/living/carbon/xenomorph/king/proc/check_block(mob/king, turf/new_loc)
 	SIGNAL_HANDLER
-	for(var/mob/living/carbon/carbon in new_loc.contents)
-		if(isxeno(carbon))
-			var/mob/living/carbon/xenomorph/xeno = carbon
-			if(xeno.hivenumber == src.hivenumber)
-				xeno.KnockDown((5 DECISECONDS) / GLOBAL_STATUS_MULTIPLIER)
-			else
-				xeno.KnockDown((1 SECONDS) / GLOBAL_STATUS_MULTIPLIER)
+	for(var/mob/living/carbon/xenomorph/xeno in new_loc.contents)
+		if(xeno.hivenumber == src.hivenumber)
+			xeno.KnockDown((5 DECISECONDS) / GLOBAL_STATUS_MULTIPLIER)
 		else
-			if(carbon.stat != DEAD)
-				carbon.apply_armoured_damage(20)
-				carbon.KnockDown((1 SECONDS) / GLOBAL_STATUS_MULTIPLIER)
+			xeno.KnockDown((1 SECONDS) / GLOBAL_STATUS_MULTIPLIER)
+
 
 		playsound(src, 'sound/weapons/alien_knockdown.ogg', 25, 1)
 

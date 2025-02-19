@@ -84,7 +84,7 @@
 
 	return {"<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<head>
 		[head_content]
 	</head>
@@ -117,9 +117,9 @@
 		window_size = "size=[width]x[height];"
 	common_asset.send(user)
 	other_asset.send(user)
-	if (stylesheets.len)
+	if (length(stylesheets))
 		SSassets.transport.send_assets(user, stylesheets)
-	if (scripts.len)
+	if (length(scripts))
 		SSassets.transport.send_assets(user, scripts)
 
 	user << browse(get_content(), "window=[window_id];[window_size][window_options]")

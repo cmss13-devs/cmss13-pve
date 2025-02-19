@@ -50,79 +50,6 @@
 
 	return O
 
-/mob/new_player/AIize()
-	spawning = TRUE
-	return ..()
-
-/mob/living/carbon/human/AIize()
-	if (monkeyizing)
-		return
-	for(var/t in limbs)
-		qdel(t)
-
-	return ..()
-
-/mob/living/carbon/AIize()
-	if (monkeyizing)
-		return
-	for(var/obj/item/W in src)
-		drop_inv_item_on_ground(W)
-	monkeyizing = 1
-	ADD_TRAIT(src, TRAIT_INCAPACITATED, "Terminal Monkeyziation")
-	icon = null
-	invisibility = 101
-	return ..()
-
-/mob/proc/AIize()
-	return // this was unmaintained
-
-
-//human -> robot
-/mob/living/carbon/human/proc/Robotize()
-	if (monkeyizing)
-		return
-	for(var/obj/item/W in src)
-		drop_inv_item_on_ground(W)
-	regenerate_icons()
-	monkeyizing = 1
-	ADD_TRAIT(src, TRAIT_INCAPACITATED, "Terminal Monkeyziation")
-	icon = null
-	invisibility = 101
-	for(var/t in limbs)
-		qdel(t)
-
-	var/mob/living/silicon/robot/O = new /mob/living/silicon/robot( loc )
-
-	// cyborgs produced by Robotize get an automatic power cell
-	O.cell = new(O)
-	O.cell.maxcharge = 7500
-	O.cell.charge = 7500
-
-
-	O.gender = gender
-	O.invisibility = 0
-
-	if(mind) //TODO
-		mind.transfer_to(O)
-		if(O.job == "Cyborg")
-			O.mind.original = O
-	else
-		O.key = key
-		if(O.client) O.client.change_view(world_view_size)
-
-	O.forceMove(loc)
-	O.job = "Cyborg"
-	if(O.job == "Cyborg")
-		O.mmi = new /obj/item/device/mmi(O)
-
-		if(O.mmi)
-			O.mmi.transfer_identity(src)
-
-	O.Namepick()
-
-	qdel(src)
-	return O
-
 //human -> alien
 /mob/living/carbon/human/proc/Alienize(list/types)
 	if (monkeyizing)
@@ -180,7 +107,7 @@
 
 	new_xeno.a_intent = INTENT_HARM
 	new_xeno.key = key
-	if(new_xeno.client) new_xeno.client.change_view(world_view_size)
+	if(new_xeno.client) new_xeno.client.change_view(GLOB.world_view_size)
 
 	to_chat(new_xeno, "<B>You are now an alien.</B>")
 	qdel(src)
@@ -212,7 +139,7 @@
 	var/mob/new_mob = new mobpath(src.loc)
 
 	new_mob.key = key
-	if(new_mob.client) new_mob.client.change_view(world_view_size)
+	if(new_mob.client) new_mob.client.change_view(GLOB.world_view_size)
 	new_mob.a_intent = INTENT_HARM
 
 
@@ -232,7 +159,7 @@
 	var/mob/new_mob = new mobpath(src.loc)
 
 	new_mob.key = key
-	if(new_mob.client) new_mob.client.change_view(world_view_size)
+	if(new_mob.client) new_mob.client.change_view(GLOB.world_view_size)
 	new_mob.a_intent = INTENT_HARM
 	to_chat(new_mob, "You feel more... animalistic")
 

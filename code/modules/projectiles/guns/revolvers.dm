@@ -4,20 +4,9 @@
 /obj/item/weapon/gun/revolver
 	flags_equip_slot = SLOT_WAIST
 	w_class = SIZE_MEDIUM
-
+	mouse_pointer = 'icons/effects/mouse_pointer/pistol_mouse.dmi'
 	matter = list("metal" = 2000)
-	fire_sound = 'sound/weapons/gun_44mag_v3.ogg'
-	reload_sound = 'sound/weapons/gun_44mag_speed_loader.wav'
-	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
-	unload_sound = 'sound/weapons/gun_44mag_open_chamber.wav'
-	var/chamber_close_sound = 'sound/weapons/gun_44mag_close_chamber.wav'
-	var/hand_reload_sound = 'sound/weapons/gun_revolver_load3.ogg'
-	var/spin_sound = 'sound/effects/spin.ogg'
-	var/thud_sound = 'sound/effects/thud.ogg'
-	var/trick_delay = 4 SECONDS
-	var/list/cylinder_click = list('sound/weapons/gun_empty.ogg')
-	var/recent_trick //So they're not spamming tricks.
-	var/russian_roulette = 0 //God help you if you do this.
+
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_ONE_HAND_WIELDED
 	gun_category = GUN_CATEGORY_HANDGUN
 	wield_delay = WIELD_DELAY_VERY_FAST //If you modify your revolver to be two-handed, it will still be fast to aim
@@ -25,6 +14,20 @@
 	has_empty_icon = FALSE
 	has_open_icon = TRUE
 	current_mag = /obj/item/ammo_magazine/internal/revolver
+
+	fire_sound = 'sound/weapons/gun_44mag_v4.ogg'
+	reload_sound = 'sound/weapons/gun_44mag_speed_loader.wav'
+	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
+	unload_sound = 'sound/weapons/gun_44mag_open_chamber.wav'
+	var/chamber_close_sound = 'sound/weapons/gun_44mag_close_chamber.wav'
+	var/hand_reload_sound = 'sound/weapons/gun_revolver_load3.ogg'
+	var/spin_sound = 'sound/effects/spin.ogg'
+	var/thud_sound = 'sound/effects/thud.ogg'
+	var/list/cylinder_click = list('sound/weapons/gun_empty.ogg')
+
+	var/trick_delay = 4 SECONDS
+	var/recent_trick //So they're not spamming tricks.
+	var/russian_roulette = 0 //God help you if you do this.
 
 /obj/item/weapon/gun/revolver/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -319,7 +322,7 @@
 	var/folded = FALSE // Used for the stock attachment, to check if we can shoot or not
 
 /obj/item/weapon/gun/revolver/m44/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 12, "rail_y" = 23, "under_x" = 21, "under_y" = 18, "stock_x" = 16, "stock_y" = 20)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 12, "rail_y" = 23, "under_x" = 21, "under_y" = 16, "stock_x" = 16, "stock_y" = 20)
 
 /obj/item/weapon/gun/revolver/m44/set_gun_config_values()
 	..()
@@ -452,8 +455,7 @@
 	icon_state = "zhnk72"
 	item_state = "zhnk72"
 
-	fire_sound = "gun_pkd" //sounds stolen from bladerunner revolvers bc they arent used and sound awesome
-	fire_rattle = 'sound/weapons/gun_pkd_fire01_rattle.ogg'
+	fire_sound = 'sound/weapons/gun_kt42.ogg'
 	reload_sound = 'sound/weapons/handling/pkd_speed_load.ogg'
 	cocked_sound = 'sound/weapons/handling/pkd_cock.wav'
 	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
@@ -503,7 +505,7 @@
 	desc = "A Frontier Special. Out here, you get a lot of smalltime companies that try to push themselves as better by upping the pressure of their ammo and fiddling with the designs to make it work. It usually means that their accuracy is awful, but the impact is impressive... if you've got the knowhow to shoot them straight."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "sw357"
-	item_state = "ny762" //PLACEHOLDER
+	item_state = "sw357"
 	fire_sound = 'sound/weapons/gun_44mag2.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/revolver/small
 	force = 6
@@ -539,7 +541,7 @@
 	desc = "Used to swap the barrels of a mateba revolver."
 	icon = 'icons/obj/items/items.dmi'
 	icon_state = "matebakey"
-	flags_atom = FPRINT|CONDUCT
+	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
 	force = 5
 	w_class = SIZE_TINY
 	throwforce = 5

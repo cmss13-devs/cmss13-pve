@@ -135,7 +135,7 @@
 	active = 1
 	icon_state = "launcheract"
 
-	for(var/obj/structure/machinery/flasher/M in machines)
+	for(var/obj/structure/machinery/flasher/M in GLOB.machines)
 		if(M.id == src.id)
 			INVOKE_ASYNC(M, TYPE_PROC_REF(/obj/structure/machinery/flasher, flash))
 

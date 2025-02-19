@@ -9,7 +9,7 @@ SUBSYSTEM_DEF(atoms)
 	flags = SS_NO_FIRE
 
 	var/old_initialized
-	/// A count of how many initalize changes we've made. We want to prevent old_initialize being overriden by some other value, breaking init code
+	/// A count of how many initalize changes we've made. We want to prevent old_initialize being overridden by some other value, breaking init code
 	var/initialized_changed = 0
 	var/init_start_time
 	var/processing_late_loaders = FALSE
@@ -62,7 +62,7 @@ SUBSYSTEM_DEF(atoms)
 
 	processing_late_loaders = TRUE
 
-	for(var/I = 1; I <= late_loaders.len; I++)
+	for(var/I = 1; I <= length(late_loaders); I++)
 		var/atom/A = late_loaders[I]
 		//I hate that we need this
 		if(QDELETED(A))
@@ -70,7 +70,7 @@ SUBSYSTEM_DEF(atoms)
 		A.LateInitialize()
 
 	#ifdef TESTING
-	testing("Late initialized [late_loaders.len] atoms")
+	testing("Late initialized [length(late_loaders)] atoms")
 	#endif
 	late_loaders.Cut()
 	processing_late_loaders = FALSE
@@ -87,10 +87,10 @@ SUBSYSTEM_DEF(atoms)
 	var/list/mapload_arg = list(TRUE)
 	if(atoms)
 		#ifdef TESTING
-		count = atoms.len
+		count = length(atoms)
 		#endif
 
-		for(var/I in 1 to atoms.len)
+		for(var/I in 1 to length(atoms))
 			var/atom/A = atoms[I]
 			if(!(A.flags_atom & INITIALIZED))
 				CHECK_TICK
@@ -187,7 +187,7 @@ SUBSYSTEM_DEF(atoms)
 /datum/controller/subsystem/atoms/proc/map_loader_stop()
 	clear_tracked_initalize()
 
-/// Use this to set initialized to prevent error states where old_initialized is overriden. It keeps happening and it's cheesing me off
+/// Use this to set initialized to prevent error states where old_initialized is overridden. It keeps happening and it's cheesing me off
 /datum/controller/subsystem/atoms/proc/set_tracked_initalized(value)
 	if(!initialized_changed)
 		old_initialized = initialized

@@ -1,7 +1,7 @@
 /* HUD DATUMS */
 
 //GLOBAL HUD LIST
-var/list/datum/mob_hud/huds = list(
+GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	MOB_HUD_SECURITY_BASIC = new /datum/mob_hud/security/basic(),
 	MOB_HUD_SECURITY_ADVANCED = new /datum/mob_hud/security/advanced(),
 	MOB_HUD_MEDICAL_BASIC = new /datum/mob_hud/medical/basic(),
@@ -10,7 +10,7 @@ var/list/datum/mob_hud/huds = list(
 	MOB_HUD_XENO_INFECTION = new /datum/mob_hud/xeno_infection(),
 	MOB_HUD_XENO_STATUS = new /datum/mob_hud/xeno(),
 	MOB_HUD_XENO_HOSTILE = new /datum/mob_hud/xeno_hostile(),
-	MOB_HUD_FACTION_USCM = new /datum/mob_hud/faction(),
+	MOB_HUD_FACTION_MARINE = new /datum/mob_hud/faction(),
 	MOB_HUD_FACTION_OBSERVER = new /datum/mob_hud/faction/observer(),
 	MOB_HUD_FACTION_UPP = new /datum/mob_hud/faction/upp(),
 	MOB_HUD_FACTION_WY = new /datum/mob_hud/faction/wy(),
@@ -18,8 +18,9 @@ var/list/datum/mob_hud/huds = list(
 	MOB_HUD_FACTION_CLF = new /datum/mob_hud/faction/clf(),
 	MOB_HUD_FACTION_PMC = new /datum/mob_hud/faction/pmc(),
 	MOB_HUD_HUNTER = new /datum/mob_hud/hunter_hud(),
-	MOB_HUD_HUNTER_CLAN = new /datum/mob_hud/hunter_clan()
-	)
+	MOB_HUD_HUNTER_CLAN = new /datum/mob_hud/hunter_clan(),
+	MOB_HUD_EXECUTE = new /datum/mob_hud/execute_hud(),
+	))
 
 /datum/mob_hud
 	var/list/mob/hudmobs = list() //list of all mobs which display this hud
@@ -33,10 +34,8 @@ var/list/datum/mob_hud/huds = list(
 /datum/mob_hud/proc/remove_hud_from(mob/user, source)
 	if(length(hudusers[user]) && (source in hudusers[user]))
 		hudusers[user] -= source
-
 	if(length(hudusers[user]))
 		return FALSE
-
 	for(var/mob/target in hudmobs)
 		remove_from_single_hud(user, target)
 
@@ -169,6 +168,9 @@ var/list/datum/mob_hud/huds = list(
 /datum/mob_hud/xeno_hostile
 	hud_icons = list(XENO_HOSTILE_ACID, XENO_HOSTILE_SLOW, XENO_HOSTILE_TAG, XENO_HOSTILE_FREEZE)
 
+/datum/mob_hud/execute_hud
+	hud_icons = list(XENO_EXECUTE)
+
 /datum/mob_hud/hunter_clan
 	hud_icons = list(HUNTER_CLAN)
 
@@ -220,17 +222,17 @@ var/list/datum/mob_hud/huds = list(
 	return
 
 /mob/hologram/queen/add_to_all_mob_huds()
-	var/datum/mob_hud/hud = huds[MOB_HUD_XENO_STATUS]
+	var/datum/mob_hud/hud = GLOB.huds[MOB_HUD_XENO_STATUS]
 	hud.add_to_hud(src)
 
 /mob/living/carbon/human/add_to_all_mob_huds()
-	for(var/datum/mob_hud/hud in huds)
+	for(var/datum/mob_hud/hud in GLOB.huds)
 		if(istype(hud, /datum/mob_hud/xeno)) //this one is xeno only
 			continue
 		hud.add_to_hud(src)
 
 /mob/living/carbon/xenomorph/add_to_all_mob_huds()
-	for(var/datum/mob_hud/hud in huds)
+	for(var/datum/mob_hud/hud in GLOB.huds)
 		if(!istype(hud, /datum/mob_hud/xeno))
 			continue
 		hud.add_to_hud(src)
@@ -240,17 +242,17 @@ var/list/datum/mob_hud/huds = list(
 	return
 
 /mob/hologram/queen/remove_from_all_mob_huds()
-	var/datum/mob_hud/hud = huds[MOB_HUD_XENO_STATUS]
+	var/datum/mob_hud/hud = GLOB.huds[MOB_HUD_XENO_STATUS]
 	hud.remove_from_hud(src)
 
 /mob/living/carbon/human/remove_from_all_mob_huds()
-	for(var/datum/mob_hud/hud in huds)
+	for(var/datum/mob_hud/hud in GLOB.huds)
 		if(istype(hud, /datum/mob_hud/xeno))
 			continue
 		hud.remove_from_hud(src)
 
 /mob/living/carbon/xenomorph/remove_from_all_mob_huds()
-	for(var/datum/mob_hud/hud in huds)
+	for(var/datum/mob_hud/hud in GLOB.huds)
 		if(istype(hud, /datum/mob_hud/xeno))
 			hud.remove_from_hud(src)
 			hud.remove_hud_from(src, src)
@@ -258,14 +260,19 @@ var/list/datum/mob_hud/huds = list(
 			hud.remove_hud_from(src, src)
 	if (xeno_hostile_hud)
 		xeno_hostile_hud = FALSE
-		var/datum/mob_hud/hostile_hud = huds[MOB_HUD_XENO_HOSTILE]
+		var/datum/mob_hud/hostile_hud = GLOB.huds[MOB_HUD_XENO_HOSTILE]
 		hostile_hud.remove_hud_from(src, src)
+
+	if (execute_hud)
+		execute_hud = FALSE
+		var/datum/mob_hud/execute = GLOB.huds[MOB_HUD_EXECUTE]
+		execute.remove_hud_from(src, src)
 
 
 
 /mob/proc/refresh_huds(mob/source_mob)
 	var/mob/M = source_mob ? source_mob : src
-	for(var/datum/mob_hud/hud in huds)
+	for(var/datum/mob_hud/hud in GLOB.huds)
 		if(M in hud.hudusers)
 			hud.refresh_hud(src, hud.hudusers[M])
 
@@ -273,7 +280,7 @@ var/list/datum/mob_hud/huds = list(
 
 //called when a human changes suit sensors
 /mob/living/carbon/human/proc/update_suit_sensors()
-	var/datum/mob_hud/medical/basic/B = huds[MOB_HUD_MEDICAL_BASIC]
+	var/datum/mob_hud/medical/basic/B = GLOB.huds[MOB_HUD_MEDICAL_BASIC]
 	B.update_suit_sensors(src)
 
 //called when a human changes health
@@ -372,6 +379,9 @@ var/list/datum/mob_hud/huds = list(
 	holder3.color = null
 	holder4.color = null
 
+	holder2.alpha = alpha
+	holder3.alpha = alpha
+
 	holder4.icon_state = "hudblank"
 
 	if(species && species.flags & IS_SYNTHETIC)
@@ -398,7 +408,6 @@ var/list/datum/mob_hud/huds = list(
 		var/revive_enabled = stat == DEAD && check_tod() && is_revivable()
 		if(stat == DEAD)
 			revive_enabled = check_tod() && is_revivable()
-		var/datum/internal_organ/heart/heart = islist(internal_organs_by_name) ? internal_organs_by_name["heart"] : null
 
 		var/holder2_set = 0
 		if(hivenumber)
@@ -423,6 +432,14 @@ var/list/datum/mob_hud/huds = list(
 
 				if(hive && hive.color)
 					holder3.color = hive.color
+
+				if(stat == DEAD || status_flags & FAKEDEATH)
+					holder2.alpha = 100
+					holder3.alpha = 100
+
+		if(status_flags & CORRUPTED_ALLY)
+			holder4.color = "#80ff80"
+			holder4.icon_state = "hudalien_ally"
 
 		if(stat == DEAD || status_flags & FAKEDEATH)
 			if(revive_enabled)
@@ -457,7 +474,7 @@ var/list/datum/mob_hud/huds = list(
 						holder3.icon_state = "huddead"
 						holder2_set = 1
 			else
-				if(heart && (heart.organ_status >= ORGAN_BROKEN && check_tod())) // broken heart icon
+				if(is_heart_broken()) // broken heart icon
 					holder.icon_state = "huddeadheart"
 					if(!holder2_set)
 						holder2.icon_state = "huddeadheart"
@@ -672,11 +689,11 @@ var/list/datum/mob_hud/huds = list(
 /mob/proc/hud_set_hunter()
 	return
 
-var/global/image/hud_icon_hunter_gear
-var/global/image/hud_icon_hunter_hunted
-var/global/image/hud_icon_hunter_dishonored
-var/global/image/hud_icon_hunter_honored
-var/global/image/hud_icon_hunter_thralled
+GLOBAL_DATUM(hud_icon_hunter_gear, /image)
+GLOBAL_DATUM(hud_icon_hunter_hunted, /image)
+GLOBAL_DATUM(hud_icon_hunter_dishonored, /image)
+GLOBAL_DATUM(hud_icon_hunter_honored, /image)
+GLOBAL_DATUM(hud_icon_hunter_thralled, /image)
 
 
 /mob/living/carbon/hud_set_hunter()
@@ -684,27 +701,27 @@ var/global/image/hud_icon_hunter_thralled
 	holder.icon_state = "hudblank"
 	holder.overlays.Cut()
 	if(hunter_data.hunted)
-		if(!hud_icon_hunter_hunted)
-			hud_icon_hunter_hunted = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_hunted")
-		holder.overlays += hud_icon_hunter_hunted
+		if(!GLOB.hud_icon_hunter_hunted)
+			GLOB.hud_icon_hunter_hunted = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_hunted")
+		holder.overlays += GLOB.hud_icon_hunter_hunted
 
 	if(hunter_data.dishonored)
-		if(!hud_icon_hunter_dishonored)
-			hud_icon_hunter_dishonored = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_dishonored")
-		holder.overlays += hud_icon_hunter_dishonored
+		if(!GLOB.hud_icon_hunter_dishonored)
+			GLOB.hud_icon_hunter_dishonored = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_dishonored")
+		holder.overlays += GLOB.hud_icon_hunter_dishonored
 	else if(hunter_data.honored)
-		if(!hud_icon_hunter_honored)
-			hud_icon_hunter_honored = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_honored")
-		holder.overlays += hud_icon_hunter_honored
+		if(!GLOB.hud_icon_hunter_honored)
+			GLOB.hud_icon_hunter_honored = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_honored")
+		holder.overlays += GLOB.hud_icon_hunter_honored
 
 	if(hunter_data.thralled)
-		if(!hud_icon_hunter_thralled)
-			hud_icon_hunter_thralled = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_thralled")
-		holder.overlays += hud_icon_hunter_thralled
+		if(!GLOB.hud_icon_hunter_thralled)
+			GLOB.hud_icon_hunter_thralled = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_thralled")
+		holder.overlays += GLOB.hud_icon_hunter_thralled
 	else if(hunter_data.gear)
-		if(!hud_icon_hunter_gear)
-			hud_icon_hunter_gear = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_gear")
-		holder.overlays += hud_icon_hunter_gear
+		if(!GLOB.hud_icon_hunter_gear)
+			GLOB.hud_icon_hunter_gear = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_gear")
+		holder.overlays += GLOB.hud_icon_hunter_gear
 
 	hud_list[HUNTER_HUD] = holder
 
@@ -714,18 +731,18 @@ var/global/image/hud_icon_hunter_thralled
 	holder.overlays.Cut()
 	holder.pixel_x = -18
 	if(hunter_data.hunted)
-		if(!hud_icon_hunter_hunted)
-			hud_icon_hunter_hunted = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_hunted")
-		holder.overlays += hud_icon_hunter_hunted
+		if(!GLOB.hud_icon_hunter_hunted)
+			GLOB.hud_icon_hunter_hunted = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_hunted")
+		holder.overlays += GLOB.hud_icon_hunter_hunted
 
 	if(hunter_data.dishonored)
-		if(!hud_icon_hunter_dishonored)
-			hud_icon_hunter_dishonored = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_dishonored")
-		holder.overlays += hud_icon_hunter_dishonored
+		if(!GLOB.hud_icon_hunter_dishonored)
+			GLOB.hud_icon_hunter_dishonored = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_dishonored")
+		holder.overlays += GLOB.hud_icon_hunter_dishonored
 	else if(hunter_data.honored)
-		if(!hud_icon_hunter_honored)
-			hud_icon_hunter_honored = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_honored")
-		holder.overlays += hud_icon_hunter_honored
+		if(!GLOB.hud_icon_hunter_honored)
+			GLOB.hud_icon_hunter_honored = image('icons/mob/hud/hud_yautja.dmi', src, "hunter_honored")
+		holder.overlays += GLOB.hud_icon_hunter_honored
 
 	hud_list[HUNTER_HUD] = holder
 
@@ -733,26 +750,26 @@ var/global/image/hud_icon_hunter_thralled
 /mob/proc/hud_set_order()
 	return
 
-var/global/image/hud_icon_hudmove
-var/global/image/hud_icon_hudhold
-var/global/image/hud_icon_hudfocus
+GLOBAL_DATUM(hud_icon_hudmove, /image)
+GLOBAL_DATUM(hud_icon_hudhold, /image)
+GLOBAL_DATUM(hud_icon_hudfocus, /image)
 // ORDER HUD
 /mob/living/carbon/human/hud_set_order()
 	var/image/holder = hud_list[ORDER_HUD]
 	holder.icon_state = "hudblank"
 	holder.overlays.Cut()
 	if(mobility_aura)
-		if(!hud_icon_hudmove)
-			hud_icon_hudmove = image('icons/mob/hud/marine_hud.dmi', src, "hudmove")
-		holder.overlays += hud_icon_hudmove
+		if(!GLOB.hud_icon_hudmove)
+			GLOB.hud_icon_hudmove = image('icons/mob/hud/marine_hud.dmi', src, "hudmove")
+		holder.overlays += GLOB.hud_icon_hudmove
 	if(protection_aura)
-		if(!hud_icon_hudhold)
-			hud_icon_hudhold = image('icons/mob/hud/marine_hud.dmi', src, "hudhold")
-		holder.overlays += hud_icon_hudhold
+		if(!GLOB.hud_icon_hudhold)
+			GLOB.hud_icon_hudhold = image('icons/mob/hud/marine_hud.dmi', src, "hudhold")
+		holder.overlays += GLOB.hud_icon_hudhold
 	if(marksman_aura)
-		if(!hud_icon_hudfocus)
-			hud_icon_hudfocus = image('icons/mob/hud/marine_hud.dmi', src, "hudfocus")
-		holder.overlays += hud_icon_hudfocus
+		if(!GLOB.hud_icon_hudfocus)
+			GLOB.hud_icon_hudfocus = image('icons/mob/hud/marine_hud.dmi', src, "hudfocus")
+		holder.overlays += GLOB.hud_icon_hudfocus
 	hud_list[ORDER_HUD] = holder
 
 /mob/proc/hud_set_holocard()
@@ -762,6 +779,16 @@ var/global/image/hud_icon_hudfocus
 /mob/living/carbon/human/hud_set_holocard()
 	var/image/holder = hud_list[HOLOCARD_HUD]
 	holder.icon_state = holo_card_color ? "holo_card_[holo_card_color]" : "hudblank"
+
+// Vampire Execute HUD
+/mob/living/carbon/human/proc/update_execute_hud()
+	var/image/execute_holder = hud_list[XENO_EXECUTE]
+
+	execute_holder.icon_state = "hudblank"
+	execute_holder.overlays.Cut()
+
+	if(stat == UNCONSCIOUS || (stat != DEAD && HAS_TRAIT(src, TRAIT_KNOCKEDOUT)))
+		execute_holder.overlays += image('icons/mob/hud/hud.dmi', src, "prae_tag")
 
 // Xeno "hostile" HUD
 /mob/living/carbon/human/proc/update_xeno_hostile_hud()

@@ -119,6 +119,14 @@
 	user.admin_holder.player_notes_show(target.ckey)
 	return TRUE
 
+/datum/player_action/check_ckey
+	action_tag = "check_ckey"
+	name = "Check Ckey"
+
+
+/datum/player_action/check_ckey/act(client/user, mob/target, list/params)
+	user.admin_holder.check_ckey(target.ckey)
+	return TRUE
 
 /datum/player_action/reset_xeno_name
 	action_tag = "reset_xeno_name"
@@ -259,11 +267,12 @@
 	GLOB.data_core.manifest_modify(new_name, WEAKREF(target_mob))
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/target_human = target_mob
-		if(target_human.wear_id && target_human.wear_id.registered_ref == WEAKREF(target_human))
-			target_human.wear_id.name = "[target_human.real_name]'s ID Card"
-			target_human.wear_id.registered_name = "[target_human.real_name]"
-			if(target_human.wear_id.assignment)
-				target_human.wear_id.name += " ([target_human.wear_id.assignment])"
+		var/obj/item/card/id/card = target_human.get_idcard()
+		if(card?.registered_ref == WEAKREF(target_human))
+			card.name = "[target_human.real_name]'s ID Card"
+			card.registered_name = "[target_human.real_name]"
+			if(card.assignment)
+				card.name += " ([card.assignment])"
 
 	target_mob.client.prefs.real_name = new_name
 	target_mob.client.prefs.save_character()

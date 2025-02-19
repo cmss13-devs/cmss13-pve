@@ -1,12 +1,13 @@
-/mob/living/carbon/human/var/cpr_cooldown
 /mob/living/carbon/human/var/cpr_attempt_timer
 /mob/living/carbon/human/attack_hand(mob/living/carbon/human/attacking_mob)
 	if(..())
 		return TRUE
 
+	SEND_SIGNAL(attacking_mob, COMSIG_LIVING_ATTACKHAND_HUMAN, src)
+
 	if((attacking_mob != src) && check_shields(0, attacking_mob.name))
 		visible_message(SPAN_DANGER("<B>[attacking_mob] attempted to touch [src]!</B>"), null, null, 5)
-		return 0
+		return FALSE
 
 	switch(attacking_mob.a_intent)
 		if(INTENT_HELP)
@@ -21,7 +22,7 @@
 						SPAN_NOTICE("You extinguished the fire on [src]."), null, 5)
 				return 1
 
-			// If unconcious with oxygen damage, do CPR. If dead, we do CPR
+			// If unconscious with oxygen damage, do CPR. If dead, we do CPR
 			if(!((stat == UNCONSCIOUS || (locate(/datum/effects/crit) in effects_list)) && getOxyLoss() > 0) && !(stat == DEAD))
 				help_shake_act(attacking_mob)
 				return 1
@@ -45,23 +46,14 @@
 
 			cpr_attempt_timer = world.time + HUMAN_STRIP_DELAY * attacking_mob.get_skill_duration_multiplier(SKILL_MEDICAL)
 			if(do_after(attacking_mob, HUMAN_STRIP_DELAY * attacking_mob.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_ALL, BUSY_ICON_GENERIC, src, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
+				affected_message(attacking_mob,
+					SPAN_HELPFUL("You feel a <b>breath of fresh air</b> enter your lungs. It feels good."),
+					SPAN_HELPFUL("You <b>perform CPR</b> on <b>[src]</b>."),
+					SPAN_NOTICE("<b>[attacking_mob]</b> performs <b>CPR</b> on <b>[src]</b>."))
 				if(stat != DEAD)
 					var/suff = min(getOxyLoss(), 10) //Pre-merge level, less healing, more prevention of dieing.
 					apply_damage(-suff, OXY)
 					updatehealth()
-					src.affected_message(attacking_mob,
-						SPAN_HELPFUL("You feel a <b>breath of fresh air</b> enter your lungs. It feels good."),
-						SPAN_HELPFUL("You <b>perform CPR</b> on <b>[src]</b>. Repeat at least every <b>7 seconds</b>."),
-						SPAN_NOTICE("<b>[attacking_mob]</b> performs <b>CPR</b> on <b>[src]</b>."))
-				if(is_revivable() && stat == DEAD)
-					if(cpr_cooldown < world.time)
-						revive_grace_period += 7 SECONDS
-						attacking_mob.visible_message(SPAN_NOTICE("<b>[attacking_mob]</b> performs <b>CPR</b> on <b>[src]</b>."),
-							SPAN_HELPFUL("You perform <b>CPR</b> on <b>[src]</b>."))
-					else
-						attacking_mob.visible_message(SPAN_NOTICE("<b>[attacking_mob]</b> fails to perform CPR on <b>[src]</b>."),
-							SPAN_HELPFUL("You <b>fail</b> to perform <b>CPR</b> on <b>[src]</b>. Incorrect rhythm. Do it <b>slower</b>."))
-					cpr_cooldown = world.time + 7 SECONDS
 			cpr_attempt_timer = 0
 			return 1
 
@@ -86,7 +78,7 @@
 				attack = attacking_mob.species.secondary_unarmed
 				return
 
-			last_damage_data = create_cause_data("fisticuffs", src)
+			last_damage_data = create_cause_data("fisticuffs", attacking_mob)
 			attacking_mob.attack_log += text("\[[time_stamp()]\] <font color='red'>[pick(attack.attack_verb)]ed [key_name(src)]</font>")
 			attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been [pick(attack.attack_verb)]ed by [key_name(attacking_mob)]</font>")
 			msg_admin_attack("[key_name(attacking_mob)] [pick(attack.attack_verb)]ed [key_name(src)] in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
@@ -155,7 +147,7 @@
 						return held_weapon.afterattack(target,src)
 
 			var/disarm_chance = rand(1, 100)
-			var/attacker_skill_level = skills && attacking_mob.skills ? skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
+			var/attacker_skill_level = attacking_mob.skills ? attacking_mob.skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
 			var/defender_skill_level = skills ? skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
 			disarm_chance -= 5 * attacker_skill_level
 			disarm_chance += 5 * defender_skill_level
@@ -177,7 +169,7 @@
 				else
 					drop_held_item()
 					visible_message(SPAN_DANGER("<B>[attacking_mob] has disarmed [src]!</B>"), null, null, 5)
-				playsound(loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
+				playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, 7)
 				return
 
 			playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, 7)
@@ -205,7 +197,10 @@
 		if(client)
 			sleeping = max(0,src.sleeping-5)
 		if(!sleeping)
-			set_resting(FALSE)
+			if(is_dizzy)
+				to_chat(M, SPAN_WARNING("[src] looks dizzy. Maybe you should let [t_him] rest a bit longer."))
+			else
+				set_resting(FALSE)
 		M.visible_message(SPAN_NOTICE("[M] shakes [src] trying to wake [t_him] up!"), \
 			SPAN_NOTICE("You shake [src] trying to wake [t_him] up!"), null, 4)
 	else if(HAS_TRAIT(src, TRAIT_INCAPACITATED))

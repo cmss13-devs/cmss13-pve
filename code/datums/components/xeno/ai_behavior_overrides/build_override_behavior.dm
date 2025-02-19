@@ -99,7 +99,7 @@
 	var/build_door = FALSE
 	for(var/turf/blocked_turf in RANGE_TURFS(1, parent_turf) - parent_turf)
 		var/direction = get_dir(parent_turf, blocked_turf)
-		if(direction in diagonals)
+		if(direction in GLOB.diagonals)
 			continue
 
 		if(!blocked_turf.density)

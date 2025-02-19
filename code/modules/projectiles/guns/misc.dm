@@ -7,6 +7,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/event.dmi'
 	icon_state = "painless"
 	item_state = "painless"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 	fire_sound = 'sound/weapons/gun_minigun.ogg'
 	cocked_sound = 'sound/weapons/gun_minigun_cocked.ogg'
@@ -68,6 +69,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "m60"
 	item_state = "m60"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 	fire_sound = 'sound/weapons/gun_m60.ogg'
 	cocked_sound = 'sound/weapons/gun_m60_cocked.ogg'
@@ -83,9 +85,11 @@
 	starting_attachment_types = list(
 		/obj/item/attachable/m60barrel,
 		/obj/item/attachable/bipod/m60,
+		/obj/item/attachable/stock/m60,
 	)
 	start_semiauto = FALSE
 	start_automatic = TRUE
+
 	var/cover_open = FALSE //if the gun's feed-cover is open or not.
 
 
@@ -95,8 +99,7 @@
 		load_into_chamber()
 
 /obj/item/weapon/gun/m60/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 16,"rail_x" = 0, "rail_y" = 0, "under_x" = 39, "under_y" = 7, "stock_x" = 0, "stock_y" = 0)
-
+	attachable_offset = list("muzzle_x" = 37, "muzzle_y" = 16, "rail_x" = 0, "rail_y" = 0, "under_x" = 27, "under_y" = 12, "stock_x" = 10, "stock_y" = 14)
 
 /obj/item/weapon/gun/m60/set_gun_config_values()
 	..()
@@ -147,9 +150,9 @@
 /obj/item/weapon/gun/m60/update_icon()
 	. = ..()
 	if(cover_open)
-		overlays += "+[base_gun_icon]_cover_open"
+		overlays += image("+[base_gun_icon]_cover_open", pixel_x = -2, pixel_y = 8)
 	else
-		overlays += "+[base_gun_icon]_cover_closed"
+		overlays += image("+[base_gun_icon]_cover_closed", pixel_x = -10, pixel_y = 0)
 
 /obj/item/weapon/gun/m60/able_to_fire(mob/living/user)
 	. = ..()
@@ -161,7 +164,7 @@
 
 /obj/item/weapon/gun/pkp
 	name = "\improper QYJ-72 General Purpose Machine Gun"
-	desc = "The QYJ-72 is the standard GPMG of the Union of Progressive Peoples, chambered in 10x31mm, it fires a hard-hitting round with a high rate of fire. With an extremely large box at 250 rounds, the QJY-72 is designed with suppressing fire and accuracy by volume of fire at its forefront. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
+	desc = "The QYJ-72 is the standard GPMG of the Union of Progressive Peoples, chambered in 10x27mm, it fires a hard-hitting round with a high rate of fire. With an extremely large box at 250 rounds, the QJY-72 is designed with suppressing fire and accuracy by volume of fire at its forefront. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "qjy72"
 	item_state = "qjy72"
@@ -308,6 +311,7 @@
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 /datum/action/item_action/toggle_iff_pkp/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/pkp/iff/G = holder_item
 	if(!ishuman(owner))
 		return

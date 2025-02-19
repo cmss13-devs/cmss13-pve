@@ -10,7 +10,7 @@
 
 /obj/item/poster/New(turf/loc, given_serial = 0)
 	if(given_serial == 0)
-		serial_number = rand(1, GLOB.poster_designs.len)
+		serial_number = rand(1, length(GLOB.poster_designs))
 	else
 		serial_number = given_serial
 	name += " - No. [serial_number]"
@@ -33,7 +33,7 @@
 		serial_number = serial
 
 	if(!isnum(serial_number))
-		serial_number = rand(1, GLOB.poster_designs.len)
+		serial_number = rand(1, length(GLOB.poster_designs))
 
 	var/designtype = GLOB.poster_designs[serial_number]
 	var/datum/poster/design=new designtype
@@ -125,14 +125,14 @@
 	icon_state = "poster7"
 
 /obj/structure/sign/poster/ad/Initialize()
-	serial_number = pick(7,8,9,10,11,13,18,22,35,36,37,43,45,47,48,56,59,70,72)
+	serial_number = pick(7,8,9,10,11,13,18,22,35,36,37)
 	.=..()
 
 /obj/structure/sign/poster/art
 	icon_state = "poster6"
 
 /obj/structure/sign/poster/art/Initialize()
-	serial_number = pick(6,23,24,57,58)
+	serial_number = pick(6,23,24)
 	.=..()
 
 /obj/structure/sign/poster/blacklight
@@ -160,28 +160,28 @@
 	icon_state = "poster3"
 
 /obj/structure/sign/poster/music/Initialize()
-	serial_number = pick(3,5,25,26,29,38,39)
+	serial_number = pick(3,5,25,26,38,39)
 	.=..()
 
 /obj/structure/sign/poster/pinup
 	icon_state = "poster12"
 
 /obj/structure/sign/poster/pinup/Initialize()
-	serial_number = pick(12,16,17)
+	serial_number = pick(12,16,17,29)
 	.=..()
 
 /obj/structure/sign/poster/propaganda
 	icon_state = "poster4"
 
 /obj/structure/sign/poster/propaganda/Initialize()
-	serial_number = pick(4,14,15,20,21,40,41,42,49,64,65,73,74,77,79)
+	serial_number = pick(4,14,15,20,21,40,41)
 	.=..()
 
 /obj/structure/sign/poster/safety
 	icon_state = "poster27"
 
 /obj/structure/sign/poster/safety/Initialize()
-	serial_number = pick(27,28,30,31,44,66,68,69,71,75,78,80,81,84)
+	serial_number = pick(27,28,30,31)
 	.=..()
 
 /obj/structure/sign/poster/io
@@ -199,39 +199,4 @@
 
 /obj/structure/sign/poster/hero/voteno/Initialize()
 	serial_number = 40
-	.=..()
-
-////////////////
-//Hybrisa Posters//
-////////////////
-
-/obj/structure/sign/poster/corporate
-	icon_state = "poster50"
-
-/obj/structure/sign/poster/corporate/Initialize()
-	serial_number = pick(50,51,60,61,62,63,67,76,82,83)
-	.=..()
-/obj/structure/sign/poster/kellandmining
-	icon_state = "poster46"
-
-/obj/structure/sign/poster/kellandmining/Initialize()
-	serial_number = 46
-	.=..()
-/obj/structure/sign/poster/marshalls
-	icon_state = "poster52"
-
-/obj/structure/sign/poster/marshalls/Initialize()
-	serial_number = pick(52,53)
-	.=..()
-/obj/structure/sign/poster/wylogo
-	icon_state = "poster55"
-
-/obj/structure/sign/poster/wylogo/Initialize()
-	serial_number = pick(18,55)
-	.=..()
-/obj/structure/sign/poster/pimp
-	icon_state = "poster54"
-
-/obj/structure/sign/poster/pimp/Initialize()
-	serial_number = 54
 	.=..()

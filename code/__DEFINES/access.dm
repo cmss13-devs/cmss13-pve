@@ -91,7 +91,7 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_WY_ARMORY 212
 ///Secret research or other projects with highly restricted access
 #define ACCESS_WY_SECRETS 213
-
+#define ACCESS_WY_DATABASE 214
 #define ACCESS_WY_LEADERSHIP 215
 ///Senior leadership, the highest ranks
 #define ACCESS_WY_SENIOR_LEAD 216
@@ -161,6 +161,8 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 /// Ancients only
 #define ACCESS_YAUTJA_ANCIENT 392
 
+/// Anything in a tutorial sequence that shouldn't be accessed
+#define ACCESS_TUTORIAL_LOCKED 998
 ///Temporary, just so I can flag places I need to change
 #define ACCESS_COME_BACK_TO_ME 999
 
@@ -208,19 +210,3 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_LIST_CLF_BASE "CLF (Basic)"
 ///All access levels associated with CLF
 #define ACCESS_LIST_CLF_ALL "CLF (ALL)"
-
-//RU-PVE ADDITION STARTS
-#define ACCESS_ILLEGAL_PIRATE_PREP 121
-#define ACCESS_ILLEGAL_PIRATE_SMARTGUNNER 122
-#define ACCESS_ILLEGAL_PIRATE_TEAMLEAD 123
-#define ACCESS_ILLEGAL_PIRATE_SENIOR_LEAD 124
-#define ACCESS_ILLEGAL_PIRATE_MEDICAL 125
-#define ACCESS_ILLEGAL_PIRATE_CO 126
-
-#define ACCESS_PMC_SQUAD_ONE 208
-#define ACCESS_PMC_SQUAD_TWO 209
-
-#define ACCESS_PMC_GUNNER 217
-
-#define ACCESS_LIST_FL_PLATOON "FL (platoon)"
-//RU-PVE ADDITION STOPS

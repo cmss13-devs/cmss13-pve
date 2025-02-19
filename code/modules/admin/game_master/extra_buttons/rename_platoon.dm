@@ -37,23 +37,23 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 /proc/do_rename_platoon(name, mob/renamer)
 	var/old_name = GLOB.main_platoon_name
 
-	var/channel = radiochannels[old_name]
-	radiochannels -= old_name
+	var/channel = GLOB.radiochannels[old_name]
+	GLOB.radiochannels -= old_name
 
-	radiochannels[name] = channel
+	GLOB.radiochannels[name] = channel
 
 	var/list/keys_to_readd = list()
 
-	for(var/key in department_radio_keys)
-		if(department_radio_keys[key] == old_name)
+	for(var/key in GLOB.department_radio_keys)
+		if(GLOB.department_radio_keys[key] == old_name)
 			keys_to_readd += key
-			department_radio_keys -= key
+			GLOB.department_radio_keys -= key
 
 	for(var/key in keys_to_readd)
-		department_radio_keys[key] = name
+		GLOB.department_radio_keys[key] = name
 
-	ROLES_SQUAD_ALL -= old_name
-	ROLES_SQUAD_ALL += name
+	GLOB.ROLES_SQUAD_ALL -= old_name
+	GLOB.ROLES_SQUAD_ALL += name
 
 	var/list/copy_frozen_platoon_items = GLOB.frozen_items[old_name]
 	GLOB.frozen_items -= old_name
@@ -67,6 +67,9 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 
 
 /proc/change_dropship_camo(camo, mob/renamer)
+	var/obj/docking_port/mobile/marine_dropship/midway/port = locate(/obj/docking_port/mobile/marine_dropship/midway)
+	var/area/area_to_change = get_area(port)
+
 	var/turf_icon
 	var/cargo_icon
 	var/cockpit_icon
@@ -82,25 +85,35 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 			cockpit_icon = 'icons/obj/structures/doors/dropship2_pilot.dmi'
 		if(DROPSHIP_CAMO_URBAN)
 			turf_icon = 'icons/turf/dropship3.dmi'
-			cargo_icon = 'icons/obj/structures/doors/dropship2_cargo.dmi'
-			cockpit_icon = 'icons/obj/structures/doors/dropship2_pilot.dmi'
+			cargo_icon = 'icons/obj/structures/doors/dropship3_cargo.dmi'
+			cockpit_icon = 'icons/obj/structures/doors/dropship3_pilot.dmi'
 		if(DROPSHIP_CAMO_JUNGLE)
 			turf_icon = 'icons/turf/dropship4.dmi'
 			cargo_icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
 			cockpit_icon = 'icons/obj/structures/doors/dropship4_pilot.dmi'
 
-	for(var/turf/closed/shuttle/midway/midway_turfs in world)
-		if(istype(midway_turfs.loc, /area/shuttle/midway))
-			midway_turfs.icon = turf_icon
-	for(var/obj/structure/shuttle/part/midway/midway_parts in world)
-		var/turf/turf_to_check = get_turf(midway_parts)
-		if(istype(turf_to_check.loc, /area/shuttle/midway))
-			midway_parts.icon = turf_icon
-	for(var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/cargo in world)
-		var/turf/turf_to_check = get_turf(cargo)
-		if(istype(turf_to_check.loc, /area/shuttle/midway))
-			cargo.icon = cargo_icon
-	for(var/obj/structure/machinery/door/airlock/hatch/cockpit/cockpit in world)
-		var/turf/turf_to_check = get_turf(cockpit)
-		if(istype(turf_to_check.loc, /area/shuttle/midway))
-			cockpit.icon = cockpit_icon
+	for(var/turf/closed/shuttle/midway/midway_turfs in area_to_change)
+		midway_turfs.icon = turf_icon
+	for(var/obj/structure/shuttle/part/midway/midway_parts in area_to_change)
+		midway_parts.icon = turf_icon
+	for(var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/cargo in area_to_change)
+		cargo.icon = cargo_icon
+	for(var/obj/structure/machinery/door/airlock/hatch/cockpit/cockpit in area_to_change)
+		cockpit.icon = cockpit_icon
+
+/proc/change_dropship_name(name, mob/renamer)
+	var/obj/docking_port/mobile/marine_dropship/midway/port = locate(/obj/docking_port/mobile/marine_dropship/midway)
+	port.name = name
+	var/area/area_to_change = get_area(port)
+	area_to_change.name = "Dropship [name]"
+	for(var/turf/closed/shuttle/midway/midway_turfs in area_to_change)
+		midway_turfs.name = name
+	for(var/obj/structure/shuttle/part/midway/midway_parts in area_to_change)
+		midway_parts.name = name
+	for(var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/cargo in area_to_change)
+		cargo.name = "[name] cargo door"
+	for(var/obj/structure/machinery/computer/dropship_weapons/midway/console in area_to_change)
+		console.name = "'[name]' weapons controls"
+
+	for(var/obj/structure/machinery/camera/autoname/golden_arrow/midway/camera in area_to_change)
+		camera.c_tag = "Dropship [name] #[camera.autonumber]"

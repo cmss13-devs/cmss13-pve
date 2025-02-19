@@ -102,6 +102,12 @@
 	. = ..()
 
 /mob/living/carbon/human/u_equip(obj/item/I, atom/newloc, nomoveupdate, force)
+	var/slot
+	if(I)
+		if(I == back)
+			slot = SLOT_BACK
+		else if(I == wear_mask)
+			slot = SLOT_FACE
 	. = ..()
 	if(!. || !I)
 		return FALSE
@@ -109,6 +115,8 @@
 	if(I == wear_suit)
 		if(s_store && !(s_store.flags_equip_slot & SLOT_SUIT_STORE))
 			drop_inv_item_on_ground(s_store)
+		if(back && (back.flags_item & SMARTGUNNER_BACKPACK_OVERRIDE)) // Technically some items don't need to be unequipped though
+			drop_inv_item_on_ground(back)
 		wear_suit = null
 		if(I.flags_inv_hide & HIDESHOES)
 			update_inv_shoes()
@@ -117,6 +125,7 @@
 		if(I.flags_inv_hide & HIDEJUMPSUIT)
 			update_inv_w_uniform()
 		update_inv_wear_suit()
+		slot = SLOT_OCLOTHING
 	else if(I == w_uniform)
 		if(r_store)
 			drop_inv_item_on_ground(r_store)
@@ -127,6 +136,7 @@
 		w_uniform = null
 		update_suit_sensors()
 		update_inv_w_uniform()
+		slot = SLOT_ICLOTHING
 	else if(I == head)
 		var/updatename = 0
 		if(head.flags_inv_hide & HIDEFACE)
@@ -144,43 +154,54 @@
 			update_inv_glasses()
 		update_tint()
 		update_inv_head()
+		slot = SLOT_HEAD
 	else if (I == gloves)
 		gloves = null
 		update_inv_gloves()
+		slot = SLOT_HANDS
 	else if (I == glasses)
 		glasses = null
 		update_tint()
 		update_glass_vision(I)
 		update_inv_glasses()
+		slot = SLOT_EYES
 	else if (I == wear_l_ear)
 		wear_l_ear = null
 		update_inv_ears()
+		slot = SLOT_EAR
 	else if (I == wear_r_ear)
 		wear_r_ear = null
 		update_inv_ears()
+		slot = SLOT_EAR
 	else if (I == shoes)
 		shoes = null
 		update_inv_shoes()
+		slot = SLOT_FEET
 	else if (I == belt)
 		belt = null
 		update_inv_belt()
+		slot = SLOT_WAIST
 	else if (I == wear_id)
 		wear_id = null
 		sec_hud_set_ID()
 		hud_set_squad()
 		update_inv_wear_id()
 		name = get_visible_name()
+		slot = SLOT_ID
 	else if (I == r_store)
 		r_store = null
 		update_inv_pockets()
+		slot = SLOT_STORE
 	else if (I == l_store)
 		l_store = null
 		update_inv_pockets()
+		slot = SLOT_STORE
 	else if (I == s_store)
 		s_store = null
 		update_inv_s_store()
+		slot = SLOT_SUIT_STORE
 
-
+	SEND_SIGNAL(src, COMSIG_HUMAN_UNEQUIPPED_ITEM, I, slot)
 
 
 /mob/living/carbon/human/wear_mask_update(obj/item/I, equipping)
@@ -354,8 +375,7 @@
 			current_storage.attempt_item_insertion(equipping_item, disable_warning, src)
 			back.update_icon()
 		if(WEAR_IN_SHOES)
-			shoes.attempt_insert_item(src, equipping_item, TRUE)
-			shoes.update_icon()
+			shoes.attempt_insert_item(src, equipping_item)
 		if(WEAR_IN_SCABBARD)
 			var/obj/item/storage/current_storage = back
 			current_storage.attempt_item_insertion(equipping_item, disable_warning, src)
@@ -413,6 +433,8 @@
 
 /mob/living/carbon/human/get_item_by_slot(slot_id)
 	switch(slot_id)
+		if(WEAR_ACCESSORY)
+			return w_uniform.accessories
 		if(WEAR_BACK)
 			return back
 		if(WEAR_FACE)
@@ -495,7 +517,8 @@
 	/// Multiplier for how quickly the user can strip things.
 	var/user_speed = user.get_skill_duration_multiplier(SKILL_CQC)
 	/// The total skill level of CQC & Police
-	var/target_skills = (target.skills.get_skill_level(SKILL_CQC) + target.skills.get_skill_level(SKILL_POLICE))
+	var/target_skills = 0
+	target_skills += (target.skills?.get_skill_level(SKILL_CQC) + target.skills?.get_skill_level(SKILL_POLICE))
 
 	/// Delay then gets + 0.5s per skill level, so long as not dead or cuffed.
 	if(!(target.stat || target.handcuffed))
@@ -507,5 +530,3 @@
 /mob/living/carbon/human/drop_inv_item_on_ground(obj/item/I, nomoveupdate, force)
 	remember_dropped_object(I)
 	return ..()
-
-

@@ -54,8 +54,8 @@
 	if(!faction_group)
 		faction_group = list(faction)
 
-	last_mob_gid++
-	gid = last_mob_gid
+	GLOB.last_mob_gid++
+	gid = GLOB.last_mob_gid
 
 	GLOB.mob_list += src
 	if(stat == DEAD)
@@ -348,24 +348,25 @@
 
 	return 0
 
-/mob/proc/reset_view(atom/A)
-	if(SEND_SIGNAL(src, COMSIG_MOB_RESET_VIEW, A) & COMPONENT_OVERRIDE_VIEW) return TRUE
+/mob/proc/reset_view(atom/focus)
+	if(SEND_SIGNAL(src, COMSIG_MOB_RESET_VIEW, focus) & COMPONENT_OVERRIDE_VIEW)
+		return TRUE
 
-	if (client)
-		if (istype(A, /atom/movable))
+	if(client)
+		if(istype(focus, /atom/movable))
 			client.perspective = EYE_PERSPECTIVE
-			client.eye = A
+			client.eye = focus
 		else
-			if (isturf(loc))
+			if(isturf(loc))
 				client.eye = client.mob
 				client.perspective = MOB_PERSPECTIVE
 			else
 				client.perspective = EYE_PERSPECTIVE
 				client.eye = loc
 
-		client.mouse_pointer_icon = mouse_icon
+		client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
 
-		SEND_SIGNAL(client, COMSIG_CLIENT_RESET_VIEW, A)
+		SEND_SIGNAL(client, COMSIG_CLIENT_RESET_VIEW, focus)
 	return
 
 /mob/proc/reset_observer_view_on_deletion(atom/deleted, force)
@@ -395,7 +396,7 @@
 	var/msg = input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",html_decode(flavor_text)) as message|null
 
 	if(msg != null)
-		msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+		msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 		msg = html_encode(msg)
 
 		flavor_text = msg
@@ -431,6 +432,7 @@
 
 /mob/proc/swap_hand()
 	hand = !hand
+	SEND_SIGNAL(src, COMSIG_MOB_SWAPPED_HAND)
 
 //attempt to pull/grab something. Returns true upon success.
 /mob/proc/start_pulling(atom/movable/AM, lunge, no_msg)
@@ -473,9 +475,6 @@
 			return FALSE
 		recently_grabbed = world.time + 6
 		AM.add_fingerprint(src)
-		animation_attack_on(AM)
-		playsound(loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
-		flick_attack_overlay(AM, "grab")
 
 	if(!QDELETED(AM.pulledby) && !QDELETED(M))
 		visible_message(SPAN_WARNING("[src] has broken [AM.pulledby]'s grip on [M]!"), null, null, 5)
@@ -487,7 +486,7 @@
 
 	return do_pull(AM, lunge, no_msg)
 
-/mob/proc/stop_pulling()
+/mob/proc/stop_pulling(bumped_movement = FALSE)
 	if(!pulling)
 		return
 
@@ -567,7 +566,6 @@
 		msg_admin_attack("[key_name(src)] grabbed [key_name(M)] in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
 
 		if(!no_msg)
-			animation_attack_on(M)
 			visible_message(SPAN_WARNING("[src] has grabbed [M] passively!"), null, null, 5)
 
 		if(M.mob_size > MOB_SIZE_HUMAN || !(M.status_flags & CANPUSH))
@@ -696,7 +694,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 
 // facing verbs
 /mob/proc/canface()
-	if(client && client.moving) return 0
+	if(client?.moving) return 0
 	if(stat==2) return 0
 	if(anchored) return 0
 	if(monkeyizing) return 0
@@ -763,7 +761,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	recalculate_move_delay = TRUE
 
 	if(usr.stat)
-		to_chat(usr, "You are unconcious and cannot do that!")
+		to_chat(usr, "You are unconscious and cannot do that!")
 		return
 
 	if(usr.is_mob_restrained())
@@ -805,7 +803,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	else
 		visible_message(SPAN_WARNING("<b>[usr] rips [selection] out of [src]'s body.</b>"),SPAN_WARNING("<b>[usr] rips [selection] out of your body.</b>"), null, 5)
 
-	if(valid_objects.len == 1) //Yanking out last object - removing verb.
+	if(length(valid_objects) == 1) //Yanking out last object - removing verb.
 		remove_verb(src, /mob/proc/yank_out_object)
 
 	if(ishuman(src))
@@ -986,6 +984,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 /// Adds this list to the output to the stat browser
 /mob/proc/get_status_tab_items()
 	. = list()
+	SEND_SIGNAL(src, COMSIG_MOB_GET_STATUS_TAB_ITEMS, .)
 
 /mob/proc/get_role_name()
 	return
@@ -1053,3 +1052,14 @@ note dizziness decrements automatically in the mob's Life() proc.
 
 /mob/proc/update_stat()
 	return
+
+/// Send src back to the lobby as a `/mob/new_player()`
+/mob/proc/send_to_lobby()
+	var/mob/new_player/new_player = new
+
+	if(!mind)
+		mind_initialize()
+
+	mind.transfer_to(new_player)
+
+	qdel(src)

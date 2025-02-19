@@ -1,10 +1,11 @@
 
 /obj/item/weapon/gun/smg
+	mouse_pointer = 'icons/effects/mouse_pointer/pistol_mouse.dmi'
 	reload_sound = 'sound/weapons/handling/smg_reload.ogg'
 	unload_sound = 'sound/weapons/handling/smg_unload.ogg'
 	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
-
 	fire_sound = 'sound/weapons/gun_m39.ogg'
+
 	force = 5
 	w_class = SIZE_LARGE
 	movement_onehanded_acc_penalty_mult = 4
@@ -39,11 +40,12 @@
 //M39 SMG
 
 /obj/item/weapon/gun/smg/m39
-	name = "\improper M39 submachinegun"
-	desc = "The Armat Battlefield Systems M-39 submachinegun. Occasionally carried by light-infantry, scouts, engineers and medics. A lightweight, lower caliber alternative to the various Pulse weapons used the USCM. Fires 10x20mm rounds out of 48 round magazines."
+	name = "\improper Viper 9 submachinegun"
+	desc = "Made popular through their use by the United States Secret Service, the Armat Battlefield Systems Model-77 submachinegun, marketed as the 'Viper 9', is a common firearm utilized by private security firms. Chambered in 9x19mm."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m39"
 	item_state = "m39"
+	fire_sound = "m4a3"
 	flags_equip_slot = SLOT_BACK
 	current_mag = /obj/item/ammo_magazine/smg/m39
 	attachable_allowed = list(
@@ -71,7 +73,7 @@
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible)
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/smg/m39/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 14, "rail_y" = 22, "under_x" = 21, "under_y" = 16, "stock_x" = 24, "stock_y" = 15)
@@ -81,18 +83,23 @@
 	set_fire_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
 	scatter = SCATTER_AMOUNT_TIER_4
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_4
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
 
-
 /obj/item/weapon/gun/smg/m39/training
 	current_mag = /obj/item/ammo_magazine/smg/m39/rubber
+
+/obj/item/weapon/gun/smg/m39/solidstock
+	starting_attachment_types = list(/obj/item/attachable/stock/smg)
+
+/obj/item/weapon/gun/smg/m39/tactical
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip,/obj/item/attachable/suppressor)
 
 //-------------------------------------------------------
 
@@ -168,7 +175,8 @@
 		/obj/item/attachable/lasersight, // Under
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/bipod,
-		/obj/item/attachable/burstfire_assembly
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/attached_gun/grenade/m203,
 		)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
@@ -191,6 +199,13 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_5
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/smg/mp5/Initialize(mapload, spawn_empty)
+	. = ..()
+	if(prob(10))
+		var/obj/item/attachable/attached_gun/grenade/m203/UGL = new(src)
+		UGL.Attach(src)
+		update_attachable(UGL.slot)
 
 //-------------------------------------------------------
 //MP27, based on the MP27, based on the M7.
@@ -257,10 +272,11 @@
 	fire_sound = 'sound/weapons/smg_heavy.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/ppsh
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
+	starting_attachment_types = list(/obj/item/attachable/stock/ppsh)
 	var/jammed = FALSE
 
 /obj/item/weapon/gun/smg/ppsh/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 19, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 19, "under_x" = 26, "under_y" = 15, "stock_x" = 18, "stock_y" = 15)
 
 /obj/item/weapon/gun/smg/ppsh/set_gun_config_values()
 	..()
@@ -302,7 +318,7 @@
 /obj/item/weapon/gun/smg/ppsh/unique_action(mob/user)
 	if(jammed)
 		if(prob(PPSH_UNJAM_CHANCE))
-			to_chat(user, SPAN_GREEN("You succesfully unjam \the [src]!"))
+			to_chat(user, SPAN_GREEN("You successfully unjam \the [src]!"))
 			playsound(src, 'sound/weapons/handling/gun_jam_rack_success.ogg', 50, FALSE)
 			jammed = FALSE
 			cock_cooldown += 1 SECONDS //so they dont accidentally cock a bullet away
@@ -452,7 +468,7 @@
 	aim_slowdown = SLOWDOWN_ADS_NONE
 
 /obj/item/weapon/gun/smg/mac15/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 20,"rail_x" = 16, "rail_y" = 22, "under_x" = 22, "under_y" = 16, "stock_x" = 22, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 13, "rail_y" = 24, "under_x" = 19, "under_y" = 18, "stock_x" = 22, "stock_y" = 16)
 
 /obj/item/weapon/gun/smg/mac15/set_gun_config_values()
 	..()
@@ -538,7 +554,7 @@
 /obj/item/weapon/gun/smg/uzi/unique_action(mob/user)
 	if(jammed)
 		if(prob(UZI_UNJAM_CHANCE))
-			to_chat(user, SPAN_GREEN("You succesfully unjam \the [src]!"))
+			to_chat(user, SPAN_GREEN("You successfully unjam \the [src]!"))
 			playsound(src, 'sound/weapons/handling/gun_jam_rack_success.ogg', 35, TRUE)
 			jammed = FALSE
 			cock_cooldown += 1 SECONDS //so they dont accidentally cock a bullet away
@@ -609,7 +625,7 @@
 
 /obj/item/weapon/gun/smg/fp9000/pmc
 	name = "\improper FN FP9000/2 Submachinegun"
-	desc = "Despite the rather ancient design, the FN FP9K sees frequent use in PMC teams due to its extreme reliability and versatility, allowing it to excel in any situation, especially due to the fact that they use the patented, official version of the gun, which has recieved several upgrades and tuning to its design over time."
+	desc = "Despite the rather ancient design, the FN FP9K sees frequent use in PMC teams due to its extreme reliability and versatility, allowing it to excel in any situation, especially due to the fact that they use the patented, official version of the gun, which has received several upgrades and tuning to its design over time."
 	icon_state = "fp9000_pmc"
 	item_state = "fp9000_pmc"
 	random_spawn_chance = 100
@@ -657,6 +673,7 @@
 	start_automatic = FALSE
 	var/nailing_speed = 2 SECONDS //Time to apply a sheet for patching. Also haha name. Try to keep sync with soundbyte duration
 	var/repair_sound = 'sound/weapons/nailgun_repair_long.ogg'
+	var/material_per_repair = 1
 
 /obj/item/weapon/gun/smg/nailgun/set_gun_config_values()
 	..()
@@ -681,101 +698,16 @@
 	icon_state = "cnailgun"
 	item_state = "nailgun"
 	w_class = SIZE_SMALL
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_NO_DESCRIPTION
 
 /obj/item/weapon/gun/smg/nailgun/compact/able_to_fire(mob/living/user)
 	. = ..()
-	if(.)
-		click_empty(user)
 	return FALSE
 
-
-//-------------------------------------------------------
-
-//P90, a classic SMG.
-
-/obj/item/weapon/gun/smg/p90
-	name = "\improper FN P90 submachinegun"
-	desc = "The FN P90 submachine gun. An archaic design, but still widely used by corporate and mercenary groups, sometimes seen in the hands of civilian populations. This weapon only accepts 5.7×28mm rounds."
-	icon = 'void-marines/merge-resolve/guns.dmi'
-	icon_state = "p90"
-	item_state = "p90"
-	item_icons = list(
-		WEAR_L_HAND = 'void-marines/merge-resolve/guns_l.dmi',
-		WEAR_R_HAND = 'void-marines/merge-resolve/guns_r.dmi'
-		)
-	fire_sound = 'sound/weapons/p90.ogg'
-	current_mag = /obj/item/ammo_magazine/smg/p90
-	attachable_allowed = list(
-		/obj/item/attachable/suppressor, // Barrel
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/heavy_barrel,
-		/obj/item/attachable/compensator,
-		/obj/item/attachable/reddot, // Rail
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/scope/mini,
-		)
-
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
-
-
-
-/obj/item/weapon/gun/smg/p90/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 19, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17)
-
-/obj/item/weapon/gun/smg/p90/set_gun_config_values()
-	..()
-	fire_delay = FIRE_DELAY_TIER_12
-	burst_delay = FIRE_DELAY_TIER_12
-	burst_amount = BURST_AMOUNT_TIER_3
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
-	scatter = SCATTER_AMOUNT_TIER_6
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_4
-	scatter_unwielded = SCATTER_AMOUNT_TIER_4
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
-	recoil_unwielded = RECOIL_AMOUNT_TIER_5
-
-//-------------------------------------------------------
-
-//P90, a classic SMG (TWE version).
-
-/obj/item/weapon/gun/smg/p90/p90_twe
-	name = "\improper FN-TWE P90 submachinegun"
-	desc = "A variation of the FN P90 submachine gun. Used by mercenaries and royal marines commandos. This weapon only accepts the AP variation of the 5.7×28mm rounds."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
-	icon_state = "p90_twe"
-	item_state = "p90_twe"
-
-	fire_sound = 'sound/weapons/p90.ogg'
-	current_mag = /obj/item/ammo_magazine/smg/p90/p90_twe
-	attachable_allowed = list(
-		/obj/item/attachable/suppressor, // Barrel
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/heavy_barrel,
-		/obj/item/attachable/compensator,
-		/obj/item/attachable/reddot, // Rail
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/scope/mini,
-		)
-
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
-
-
-
-/obj/item/weapon/gun/smg/p90_twe/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 19, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17)
-
-/obj/item/weapon/gun/smg/p90_twe/set_gun_config_values()
-	..()
-	fire_delay = FIRE_DELAY_TIER_12
-	burst_delay = FIRE_DELAY_TIER_12
-	burst_amount = BURST_AMOUNT_TIER_3
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
-	scatter = SCATTER_AMOUNT_TIER_6
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_4
-	scatter_unwielded = SCATTER_AMOUNT_TIER_4
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
-	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+/obj/item/weapon/gun/smg/nailgun/compact/tactical
+	name = "tactical compact nailgun"
+	desc = "A carpentry tool, used to drive nails into tough surfaces. This one is military grade, it's olive drab and tacticool. Cannot fire nails as a projectile."
+	icon_state = "tnailgun"
+	item_state = "tnailgun"
+	w_class = SIZE_SMALL
+	material_per_repair = 2

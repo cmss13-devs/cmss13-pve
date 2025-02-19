@@ -23,10 +23,10 @@
 
 /obj/docking_port/mobile/trijent_elevator/shipmap_elevator/register()
 	. = ..()
-	for(var/obj/structure/machinery/gear/G in machines)
+	for(var/obj/structure/machinery/gear/G in GLOB.machines)
 		if(G.id == id)
 			gears += G
-	for(var/obj/structure/machinery/door/poddoor/railing/R in machines)
+	for(var/obj/structure/machinery/door/poddoor/railing/R in GLOB.machines)
 		if(R.id == id)
 			railings += R
 

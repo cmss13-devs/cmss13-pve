@@ -6,7 +6,7 @@
 #define GLOBAL_PROC "magic BS"
 
 //Game defining directives.
-#define MAIN_AI_SYSTEM "ARES v3.2"
+#define MAIN_AI_SYSTEM "TITAN 1200" //Previously ARES v3.2
 
 // Maploader bounds indices
 #define MAP_MINX 1
@@ -35,18 +35,11 @@
 #define MAP_ICE_COLONY_V3 "Shivas Snowball" //Ice Rework, low pop enabled.
 #define MAP_RUNTIME "USS Runtime"
 #define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim" // Highpop Only
+#define MAP_LV522_CHANCES_CLAIM_FORECON "LV-522 Chance's Claim Forecon"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
-#define MAP_LV759_HYBRISA_PROSPERA "LV-759 Hybrisa Prospera" // Highpop Only
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
-
-#define MAP_LV671_ARK "LV-671 Ark Borealis"
-#define MAP_DESERT_DAM_RU "Trijent Dam RU"
-#define MAP_WHISKEY_OUTPOST_RU "Outpost Tango"
-#define MAP_DERELICT_ALMAYER_RU "Derelict Almayer RU"
-#define MAP_KUTJEVO_RU "Kutjevo Refinery RU"
-#define MAP_OIL_DEPOT "Oil Depot 276"
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
@@ -91,6 +84,8 @@
 #define SEE_INVISIBLE_LEVEL_TWO 45 //Used by some other stuff in code. It's really poorly organized.
 #define INVISIBILITY_LEVEL_TWO 45 //Used by some other stuff in code. It's really poorly organized.
 
+#define HIDE_INVISIBLE_OBSERVER 59 // define for when we want to hide all observer mobs.
+
 #define INVISIBILITY_OBSERVER 60
 #define SEE_INVISIBLE_OBSERVER 60
 
@@ -115,6 +110,8 @@
 #define SOUND_ADMIN_MEME (1<<6)
 #define SOUND_ADMIN_ATMOSPHERIC (1<<7)
 #define SOUND_ARES_MESSAGE (1<<8)
+#define SOUND_OBSERVER_ANNOUNCEMENTS (1<<9)
+#define SOUND_FAX_MACHINE (1<<10)
 
 //toggles_chat
 #define CHAT_OOC (1<<0)
@@ -131,6 +128,7 @@
 #define CHAT_FFATTACKLOGS (1<<11)
 #define CHAT_GHOSTHIVEMIND (1<<12)
 #define CHAT_NICHELOGS (1<<13)
+#define CHAT_LISTENINGBUG (1<<14)
 
 //toggles_ghost
 #define GHOST_HEALTH_SCAN  (1<<0)
@@ -158,6 +156,7 @@
 //toggles_admin
 /// Splits admin tabs in Statpanel
 #define SPLIT_ADMIN_TABS (1<<0)
+#define ADMIN_STEALTHMODE (1<<1)
 
 //=================================================
 
@@ -167,7 +166,7 @@
 
 #define TOGGLES_LANGCHAT_DEFAULT (LANGCHAT_SEE_EMOTES)
 
-#define TOGGLES_SOUND_DEFAULT (SOUND_ADMINHELP|SOUND_MIDI|SOUND_AMBIENCE|SOUND_LOBBY|SOUND_INTERNET|SOUND_ADMIN_MEME|SOUND_ADMIN_ATMOSPHERIC)
+#define TOGGLES_SOUND_DEFAULT (SOUND_ADMINHELP|SOUND_MIDI|SOUND_AMBIENCE|SOUND_LOBBY|SOUND_INTERNET|SOUND_ADMIN_MEME|SOUND_ADMIN_ATMOSPHERIC|SOUND_OBSERVER_ANNOUNCEMENTS|SOUND_FAX_MACHINE)
 
 #define TOGGLES_FLASHING_DEFAULT (FLASH_ROUNDSTART|FLASH_ROUNDEND|FLASH_CORPSEREVIVE|FLASH_ADMINPM|FLASH_UNNEST)
 
@@ -288,7 +287,7 @@
 
 // Helpers
 /// Only use the CEILING_PROTECTION_TIER_X defines for `protection_level`
-#define CEILING_IS_PROTECTED(ceiling, protection_level) (ceiling >= protection_level)
+#define CEILING_IS_PROTECTED(ceiling, protection_level) ((ceiling) >= (protection_level))
 
 // Default font settings
 #define FONT_SIZE "5pt"
@@ -542,7 +541,7 @@
 /// `amount` - The number to get per time
 /// `time` - The time period in which to gain this amount
 /// To be used with delta_time. Multiplied by 10 to convert from deciseconds to seconds
-#define AMOUNT_PER_TIME(amount, time) ((amount / (time))*10)
+#define AMOUNT_PER_TIME(amount, time) (((amount) / (time))*10)
 
 // Local message mode. Used to decide wheter message should be dispatched on the radio.
 #define MESSAGE_MODE_LOCAL 1

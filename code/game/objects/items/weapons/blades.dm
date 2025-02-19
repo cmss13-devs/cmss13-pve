@@ -3,11 +3,12 @@
 	desc = "A dusty sword commonly seen in historical museums. Where you got this is a mystery, for sure. Only a mercenary would be nuts enough to carry one of these. Sharpened to deal massive damage."
 	icon_state = "mercsword"
 	item_state = "machete"
-	flags_atom = FPRINT|CONDUCT
+	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
 	flags_equip_slot = SLOT_WAIST
 	force = MELEE_FORCE_STRONG
 	throwforce = MELEE_FORCE_WEAK
 	sharp = IS_SHARP_ITEM_BIG
+	flags_human_ai = MELEE_WEAPON_ITEM
 	edge = 1
 	w_class = SIZE_LARGE
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -120,7 +121,7 @@
 	icon_state = "throwing_knife"
 	item_state = "combat_knife"
 	desc = "A military knife designed to be thrown at the enemy. Much quieter than a firearm, but requires a steady hand to be used optimally, although you should probably just use a gun instead."
-	flags_atom = FPRINT|CONDUCT
+	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
 	sharp = IS_SHARP_ITEM_ACCURATE
 	force = MELEE_FORCE_TIER_1
 	w_class = SIZE_SMALL
@@ -131,6 +132,7 @@
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	flags_equip_slot = SLOT_STORE|SLOT_FACE
 	flags_armor_protection = SLOT_FACE
+	flags_item = CAN_DIG_SHRAPNEL
 
 /obj/item/weapon/unathiknife
 	name = "duelling knife"
@@ -141,17 +143,6 @@
 	attack_verb = list("ripped", "torn", "cut")
 	force = MELEE_FORCE_STRONG
 	throwforce = MELEE_FORCE_STRONG
-	edge = 1
-
-
-/obj/item/weapon/pizza_cutter
-	name = "\improper PIZZA TIME"
-	icon = 'icons/obj/items/weapons/weapons.dmi'
-	icon_state = "pizza_cutter"
-	item_state = "pizza_cutter"
-	desc = "Before you is a holy relic of a bygone era when the great Pizza Lords reigned supreme. You know either that or it's just a big damn pizza cutter."
-	sharp = IS_SHARP_ITEM_ACCURATE
-	force = MELEE_FORCE_VERY_STRONG
 	edge = 1
 
 ///For digging shrapnel out of OTHER people, not yourself. Triggered by human/attackby() so target is definitely human. User might not be.
@@ -218,6 +209,8 @@
 				INVOKE_ASYNC(embedded_human, TYPE_PROC_REF(/mob, emote), "pain")
 			else
 				INVOKE_ASYNC(embedded_human, TYPE_PROC_REF(/mob, emote), "me", 1, pick("winces.", "grimaces.", "flinches."))
+
+		SEND_SIGNAL(embedded_human, COMSIG_HUMAN_SHRAPNEL_REMOVED)
 
 	else
 		to_chat(user, SPAN_NOTICE("You couldn't find any shrapnel."))
@@ -405,3 +398,47 @@
 	poor_bastard.apply_damage(rand(1,5), BRUTE, "head", src)
 	poor_bastard.update_hair()
 	return TRUE
+
+/obj/item/weapon/knife/marine
+	name = "\improper M13 fighting knife"
+	icon = 'icons/obj/items/weapons/weapons.dmi'
+	icon_state = "knife_gerber"
+	item_state = "knife_gerber"
+	desc = "A standard issue USCMC fighting knife developed by the Kershaw-Gerber company, a subsidiary of Armat Battlefield Systems. Neatly fits into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel."
+	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
+	flags_equip_slot = SLOT_WAIST|SLOT_FACE
+	flags_armor_protection = SLOT_FACE
+	flags_item = CAN_DIG_SHRAPNEL
+	w_class = SIZE_SMALL
+	edge = 1
+	sharp = IS_SHARP_ITEM_ACCURATE
+	force = MELEE_FORCE_NORMAL
+	throwforce = MELEE_FORCE_NORMAL
+	throw_speed = SPEED_VERY_FAST
+	throw_range = 6
+	hitsound = 'sound/weapons/slash.ogg'
+	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_speed = 9
+
+/obj/item/weapon/knife/marine/kabar
+	name = "\improper KA-BAR utility knife"
+	icon_state = "knife_kabar"
+	item_state = "knife_kabar"
+	desc = "An old school Marine Corps combat knife. The iconic look of the knife and its association with the Corps' cultural history has seen it remain popular among marines well after its replacement as standard-issue. Fits neatly into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel."
+
+/obj/item/weapon/knife/marine/bowie
+	name = "\improper Bowie fighting knife"
+	icon_state = "knife_bowie"
+	item_state = "knife_bowie"
+	desc = "A large, devastating fighting knife of the old American west. Not an antique in of itself, but a high quality piece of equipment for the discerning outdoorsman. Now THIS is a knife."
+	w_class = SIZE_MEDIUM
+	force = MELEE_FORCE_TIER_6
+	throwforce = MELEE_FORCE_WEAK
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+
+/obj/item/weapon/knife/marine/sas
+	name = "\improper Fairbairn-Sykes fighting knife"
+	icon_state = "knife_fairbairn"
+	item_state = "knife_gerber"
+	desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."

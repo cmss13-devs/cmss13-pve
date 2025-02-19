@@ -200,29 +200,55 @@
 	product_ads = "For the taste that cools your mood, look for the big blue K!;Refined smokers go for Gold!;Lady Fingers are preferred by women who appreciate a cool smoke.;Lady Fingers are the number one cigarette this side of Gateway!;The tobacco connoisseur prefers Koorlander Gold.;For the cool, filtered feel, Lady Finger Cigarettes provide the smoothest draw of any cigarette on the market.;For the man who knows his place is at the top, Koorlander Gold shows the world that you're the best and no-one can say otherwise.;The Colonial Administration Bureau would like to remind you that smoking kills."
 	products = list(
 		/obj/item/storage/fancy/cigarettes/kpack = 20,
+		/obj/item/storage/fancy/cigarettes/spirit = 20,
+		/obj/item/storage/fancy/cigarettes/spirit/yellow = 20,
 		/obj/item/storage/fancy/cigarettes/arcturian_ace = 15,
 		/obj/item/storage/fancy/cigarettes/emeraldgreen = 15,
 		/obj/item/storage/fancy/cigarettes/wypacket = 15,
+		/obj/item/storage/fancy/cigarettes/trading_card = 15,
 		/obj/item/storage/fancy/cigarettes/lady_finger = 15,
 		/obj/item/storage/fancy/cigarettes/blackpack = 10,
 		/obj/item/storage/fancy/cigar/tarbacks = 5,
+
 		/obj/item/storage/box/matches = 10,
 		/obj/item/tool/lighter/random = 20,
 		/obj/item/tool/lighter/zippo = 5,
+
 	)
 
 	prices = list(
 		/obj/item/storage/fancy/cigarettes/kpack = 40,
+		/obj/item/storage/fancy/cigarettes/spirit = 40,
+		/obj/item/storage/fancy/cigarettes/spirit/yellow = 40,
 		/obj/item/storage/fancy/cigarettes/arcturian_ace = 25,
 		/obj/item/storage/fancy/cigarettes/emeraldgreen = 35,
-		/obj/item/storage/fancy/cigarettes/wypacket = 35,
+		/obj/item/storage/fancy/cigarettes/wypacket = 30,
+		/obj/item/storage/fancy/cigarettes/trading_card = 35,
 		/obj/item/storage/fancy/cigarettes/lady_finger = 30,
 		/obj/item/storage/fancy/cigarettes/blackpack = 75,
 		/obj/item/storage/fancy/cigar/tarbacks = 35,
 		/obj/item/storage/box/matches = 1,
 		/obj/item/tool/lighter/random = 10,
 		/obj/item/tool/lighter/zippo = 25,
+
 	)
+
+/obj/structure/machinery/vending/cigarette/upp
+	desc = "A state-owned cigarette vendor. Its drab colour was chosen to discourage purchases, but its existence is an admittance to the necessity for such machines to exist in the first place."
+	product_slogans = ""
+	product_ads = ""
+	icon_state = "china_cig_vending"
+	products = list(
+		/obj/item/storage/fancy/cigarettes/laika = 10,
+		/obj/item/storage/box/matches = 15,
+		/obj/item/tool/lighter/zippo = 10,
+	)
+	prices = list(
+		/obj/item/storage/fancy/cigarettes/laika = 45,
+		/obj/item/storage/box/matches = 1,
+		/obj/item/tool/lighter/zippo = 25,
+	)
+	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
 
 /obj/structure/machinery/vending/security
 	name = "\improper ColMarTech Military Police Vendor"
@@ -232,8 +258,9 @@
 	icon_deny = "sec-deny"
 	req_access = list(ACCESS_MARINE_BRIG)
 	products = list(
-		/obj/item/handcuffs = 8,
-		/obj/item/handcuffs/zip = 10,
+		/obj/item/restraint/handcuffs = 8,
+		/obj/item/restraint/handcuffs/zip = 10,
+		/obj/item/restraint/legcuffs = 3,
 		/obj/item/weapon/gun/energy/taser = 4,
 		/obj/item/reagent_container/spray/pepper = 4,
 		/obj/item/weapon/baton = 4,
@@ -247,12 +274,30 @@
 	)
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,/obj/item/storage/donut_box = 2)
 
+/obj/structure/machinery/vending/security/riot
+	name = "\improper RiotTech"
+	desc = "A security riot equipment vendor."
+	hacking_safety = TRUE
+	wrenchable = FALSE
+	products = list(
+		/obj/item/restraint/handcuffs/zip = 40,
+		/obj/item/explosive/grenade/flashbang = 20,
+		/obj/item/explosive/grenade/tear/marine = 40,
+		/obj/item/ammo_magazine/smg/m39/rubber = 40,
+		/obj/item/ammo_magazine/pistol/rubber = 40,
+		/obj/item/ammo_magazine/pistol/vp70/rubber = 40,
+		/obj/item/ammo_magazine/rifle/rubber = 40,
+		/obj/item/ammo_magazine/rifle/m49a/rubber = 40,
+		/obj/item/clothing/head/helmet/marine/MP = 8,
+		/obj/item/explosive/plastic/breaching_charge/rubber = 6,
+	)
+
 /obj/structure/machinery/vending/security/colony
 	name = "\improper SecTech Police Vendor"
 	desc = "A generic police vendor."
 	req_access = list(ACCESS_CIVILIAN_BRIG)
 	products = list(
-		/obj/item/handcuffs = 8,
+		/obj/item/restraint/handcuffs = 8,
 		/obj/item/reagent_container/spray/pepper = 4,
 		/obj/item/device/flashlight = 4,
 		/obj/item/storage/belt/security/MP/CMB = 4,
@@ -266,7 +311,7 @@
 	desc = "A standard security vendor used by security forces of the UPP."
 	req_access = list(ACCESS_CIVILIAN_BRIG)
 	products = list(
-		/obj/item/handcuffs = 8,
+		/obj/item/restraint/handcuffs = 8,
 		/obj/item/reagent_container/spray/pepper = 4,
 		/obj/item/device/flashlight = 4,
 		/obj/item/storage/belt/security/MP/UPP = 4,
@@ -289,12 +334,13 @@
 		/obj/item/ammo_magazine/pistol/rubber = 20,
 		/obj/item/ammo_magazine/pistol/vp70/rubber = 20,
 		/obj/item/ammo_magazine/rifle/rubber = 20,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber = 20,
+		/obj/item/ammo_magazine/rifle/m49a/rubber = 20,
 		/obj/item/ammo_magazine/shotgun/beanbag = 20,
 		/obj/item/storage/firstaid/regular = 2,
 		/obj/item/storage/firstaid/fire = 2,
 		/obj/item/storage/firstaid/rad = 1,
 		/obj/item/device/radio/headset = 6,
+		/obj/item/tool/crew_monitor = 1,
 	)
 	contraband = list(/obj/item/storage/fancy/cigar = 2,/obj/item/tool/lighter/zippo = 2)
 
@@ -412,7 +458,7 @@
 	name = "\improper Rec-Vend"
 	desc = "Contains Weyland-Yutani approved recreational items, like Walkmans and Cards."
 	icon_state = "walkman"
-	product_ads = "The only place to have fun in the entire Marine Corps!;You'll find no better music from here to Arcturus!;Instructions not included with decks of cards!;No volume controls - you don't need them!;All products responsibly made by people having just as much fun as you will be!"
+	product_ads = "The only place to have fun in the entire Marine Corps!;You'll find no better music from here to Arcturus!;Instructions not included with decks of cards!;No volume controls - you don't need them!;All products responsibly made by people having just as much fun as you will be!;Say goodbye to the lucky strike military tobacco monopoly, with the new Weyland Yutani Military Trading Card Gold cigarette pack!"
 	vend_delay = 0.5 SECONDS
 	idle_power_usage = 200
 
@@ -441,6 +487,10 @@
 		/obj/item/tool/pen/blue = 10,
 		/obj/item/tool/pen/red = 10,
 		/obj/item/tool/pen/fountain = 3,
+		/obj/item/storage/fancy/cigarettes/trading_card = 20,
+		/obj/item/storage/fancy/trading_card = 20,
+		/obj/item/toy/trading_card = 50,
+
 	)
 
 	contraband = list(/obj/item/toy/sword = 2)
@@ -468,5 +518,75 @@
 		/obj/item/tool/pen/blue = 2,
 		/obj/item/tool/pen/red = 2,
 		/obj/item/tool/pen/fountain = 30,
+		/obj/item/storage/fancy/cigarettes/trading_card = 30,
+		/obj/item/storage/fancy/trading_card = 20,
+		/obj/item/toy/trading_card = 5,
+
 	)
 	product_type = VENDOR_PRODUCT_TYPE_RECREATIONAL
+
+//vendor of ingredients for kitchen
+/obj/structure/machinery/vending/ingredients
+	name = "\improper Galley Auxiliary Storage Requisition System"
+	desc = "A vending machine meant to be use for cooks."
+	product_ads = "If your out of ingredients i am here for you;all my organic produce are fresh;don't let my potatoes go stale time for you to cook some fries"
+	icon_state = "snack"
+	hacking_safety = TRUE
+	products = list(
+		/obj/item/storage/fancy/egg_box = 12,
+		/obj/item/storage/box/fish = 12,
+		/obj/item/storage/box/meat = 12,
+		/obj/item/storage/box/milk = 12,
+		/obj/item/storage/box/soymilk = 12,
+		/obj/item/storage/box/enzyme = 12,
+		/obj/item/storage/box/flour = 12,
+		/obj/item/storage/box/sugar = 12,
+		/obj/item/storage/box/saltshaker = 12,
+		/obj/item/storage/box/peppermill = 12,
+		/obj/item/storage/box/mint = 12,
+		/obj/item/storage/box/apple = 12,
+		/obj/item/storage/box/banana = 12,
+		/obj/item/storage/box/chanterelle = 12,
+		/obj/item/storage/box/cherries = 12,
+		/obj/item/storage/box/chili = 12,
+		/obj/item/storage/box/cabbage = 12,
+		/obj/item/storage/box/carrot = 12,
+		/obj/item/storage/box/corn = 12,
+		/obj/item/storage/box/eggplant = 12,
+		/obj/item/storage/box/lemon = 12,
+		/obj/item/storage/box/lime = 12,
+		/obj/item/storage/box/orange = 12,
+		/obj/item/storage/box/potato = 12,
+		/obj/item/storage/box/tomato = 12,
+		/obj/item/storage/box/whitebeet = 12,
+	)
+
+	prices = list(
+		/obj/item/storage/fancy/egg_box = 1,
+		/obj/item/storage/box/fish = 1,
+		/obj/item/storage/box/meat = 1,
+		/obj/item/storage/box/milk =1,
+		/obj/item/storage/box/soymilk = 1,
+		/obj/item/storage/box/enzyme = 1,
+		/obj/item/storage/box/flour = 1,
+		/obj/item/storage/box/sugar = 1,
+		/obj/item/storage/box/saltshaker = 1,
+		/obj/item/storage/box/peppermill = 1,
+		/obj/item/storage/box/mint = 1,
+		/obj/item/storage/box/apple = 1,
+		/obj/item/storage/box/banana = 2,
+		/obj/item/storage/box/chanterelle = 2,
+		/obj/item/storage/box/cherries = 2,
+		/obj/item/storage/box/chili = 2,
+		/obj/item/storage/box/cabbage = 2,
+		/obj/item/storage/box/carrot = 2,
+		/obj/item/storage/box/corn = 2,
+		/obj/item/storage/box/eggplant = 2,
+		/obj/item/storage/box/lemon = 2,
+		/obj/item/storage/box/lime = 2,
+		/obj/item/storage/box/orange = 2,
+		/obj/item/storage/box/potato = 2,
+		/obj/item/storage/box/tomato = 2,
+		/obj/item/storage/box/whitebeet = 2,
+	)
+	product_type = VENDOR_PRODUCT_TYPE_FOOD

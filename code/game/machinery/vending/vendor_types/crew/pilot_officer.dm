@@ -5,12 +5,12 @@
 	desc = "An automated weapon rack hooked up to a small storage of standard-issue weapons. Can be accessed only by the dropship crew."
 	icon_state = "guns"
 	req_access = list(ACCESS_MARINE_PILOT)
-	vendor_role = list(JOB_PILOT, JOB_DROPSHIP_CREW_CHIEF)
+	vendor_role = list(JOB_CAS_PILOT, JOB_DROPSHIP_PILOT, JOB_DROPSHIP_CREW_CHIEF)
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND
 
 	listed_products = list(
 		list("PRIMARY FIREARMS", -1, null, null),
-		list("M4RA Battle Rifle", 4, /obj/item/weapon/gun/rifle/m4ra, VENDOR_ITEM_REGULAR),
+		list("M49A Battle Rifle", 4, /obj/item/weapon/gun/rifle/m49a, VENDOR_ITEM_REGULAR),
 		list("M39 Submachine Gun", 4, /obj/item/weapon/gun/smg/m39, VENDOR_ITEM_REGULAR),
 		list("M37A2 Pump Shotgun", 4, /obj/item/weapon/gun/shotgun/pump, VENDOR_ITEM_REGULAR),
 		list("M41A Pulse Rifle MK2", 4, /obj/item/weapon/gun/rifle/m41a, VENDOR_ITEM_REGULAR),
@@ -19,7 +19,7 @@
 		list("Box Of Buckshot Shells (12g)", 12, /obj/item/ammo_magazine/shotgun/buckshot, VENDOR_ITEM_REGULAR),
 		list("Box Of Flechette Shells (12g)", 12, /obj/item/ammo_magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
 		list("Box Of Shotgun Slugs (12g)", 12, /obj/item/ammo_magazine/shotgun/slugs, VENDOR_ITEM_REGULAR),
-		list("M4RA Magazine (10x24mm)", 24, /obj/item/ammo_magazine/rifle/m4ra, VENDOR_ITEM_REGULAR),
+		list("M49A Magazine (10x24mm)", 24, /obj/item/ammo_magazine/rifle/m49a, VENDOR_ITEM_REGULAR),
 		list("M39 HV Magazine (10x20mm)", 24, /obj/item/ammo_magazine/smg/m39, VENDOR_ITEM_REGULAR),
 		list("M41A Magazine (10x24mm)", 24, /obj/item/ammo_magazine/rifle, VENDOR_ITEM_REGULAR),
 
@@ -62,7 +62,7 @@
 GLOBAL_LIST_INIT(cm_vending_clothing_pilot_officer, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Gloves", 0, /obj/item/clothing/gloves/yellow, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
-		list("M30 Tactical Helmet", 0, /obj/item/clothing/head/helmet/marine/pilot, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
+		list("M30 Tactical Helmet", 0, /obj/item/clothing/head/helmet/upp/marinepilot, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
 		list("Leather Satchel", 0, /obj/item/storage/backpack/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
 		list("MRE", 0, /obj/item/storage/box/MRE, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 
@@ -80,7 +80,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pilot_officer, list(
 		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("M276 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("M276 M39 Holster Rig", 0, /obj/item/storage/belt/gun/m39, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 M44 Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 General Revolver Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Shotgun Shell Loading Rig", 0, /obj/item/storage/belt/shotgun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
@@ -131,7 +131,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pilot_officer, list(
 		list("Vertical Grip", 10, /obj/item/attachable/verticalgrip, null, VENDOR_ITEM_REGULAR),
 
 		list("AMMUNITION", 0, null, null, null),
-		list("M4RA AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/m4ra/ap, null, VENDOR_ITEM_REGULAR),
+		list("M49A AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/m49a/ap, null, VENDOR_ITEM_REGULAR),
 		list("M39 AP Magazine (10x20mm)", 10, /obj/item/ammo_magazine/smg/m39/ap, null, VENDOR_ITEM_REGULAR),
 		list("M39 Extended Magazine (10x20mm)", 10, /obj/item/ammo_magazine/smg/m39/extended, null, VENDOR_ITEM_REGULAR),
 		list("M41A AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/ap, null, VENDOR_ITEM_REGULAR),
@@ -169,7 +169,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_dropship_crew_chief, list(
 		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("M276 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("M276 M39 Holster Rig", 0, /obj/item/storage/belt/gun/m39, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 M44 Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 General Revolver Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Shotgun Shell Loading Rig", 0, /obj/item/storage/belt/shotgun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
@@ -221,7 +221,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_dropship_crew_chief, list(
 		list("Vertical Grip", 10, /obj/item/attachable/verticalgrip, null, VENDOR_ITEM_REGULAR),
 
 		list("AMMUNITION", 0, null, null, null),
-		list("M4RA AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/m4ra/ap, null, VENDOR_ITEM_REGULAR),
+		list("M49A AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/m49a/ap, null, VENDOR_ITEM_REGULAR),
 		list("M39 AP Magazine (10x20mm)", 10, /obj/item/ammo_magazine/smg/m39/ap, null, VENDOR_ITEM_REGULAR),
 		list("M39 Extended Magazine (10x20mm)", 10, /obj/item/ammo_magazine/smg/m39/extended, null, VENDOR_ITEM_REGULAR),
 		list("M41A AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/ap, null, VENDOR_ITEM_REGULAR),
@@ -242,7 +242,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_dropship_crew_chief, list(
 	name = "\improper ColMarTech Dropship Crew Equipment Rack"
 	desc = "An automated rack hooked up to a colossal storage of Dropship Crew standard-issue equipment."
 	req_access = list(ACCESS_MARINE_PILOT)
-	vendor_role = list(JOB_PILOT, JOB_DROPSHIP_CREW_CHIEF)
+	vendor_role = list(JOB_CAS_PILOT, JOB_DROPSHIP_PILOT, JOB_DROPSHIP_CREW_CHIEF)
 
 /obj/structure/machinery/cm_vending/clothing/pilot_officer/get_listed_products(mob/user)
 	if(!user)
@@ -252,6 +252,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_dropship_crew_chief, list(
 		return combined
 	if(user.job == JOB_DROPSHIP_CREW_CHIEF)
 		return GLOB.cm_vending_clothing_dropship_crew_chief
-	if(user.job == JOB_PILOT)
+	if(user.job == JOB_CAS_PILOT)
+		return GLOB.cm_vending_clothing_pilot_officer
+	if(user.job == JOB_DROPSHIP_PILOT)
 		return GLOB.cm_vending_clothing_pilot_officer
 	return ..()

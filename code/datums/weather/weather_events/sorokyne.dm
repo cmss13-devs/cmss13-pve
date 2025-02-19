@@ -3,7 +3,6 @@
 	name = "Snow"
 	display_name = "Snow"
 	length = 10 MINUTES
-	fullscreen_type = /atom/movable/screen/fullscreen/weather/low
 	turf_overlay_icon_state = "strata_snowing"
 
 	effect_message = "You feel the icy winds chill you!"
@@ -17,7 +16,6 @@
 	name = "Snowstorm"
 	display_name = "Snowstorm"
 	length = 6 MINUTES
-	fullscreen_type = /atom/movable/screen/fullscreen/weather/medium
 	turf_overlay_icon_state = "strata_storm"
 
 	effect_message = "You feel the icy winds of the snowstorm chill you to the bone!"
@@ -31,7 +29,6 @@
 	name = "Blizzard"
 	display_name = "Blizzard"
 	length = 4 MINUTES
-	fullscreen_type = /atom/movable/screen/fullscreen/weather/high
 	turf_overlay_icon_state = "strata_blizzard"
 
 	effect_message = "You feel the winds of the blizzard sap all the warmth from your body!"
