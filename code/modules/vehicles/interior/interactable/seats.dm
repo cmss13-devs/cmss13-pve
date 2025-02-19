@@ -310,10 +310,10 @@
 	unslashable = FALSE
 	unacidable = TRUE
 
-	var/buckle_offset_x = 0
-	var/mob_old_x = 0
-	var/buckle_offset_y = 0
-	var/mob_old_y = 0
+	buckle_offset_x = 0
+	mob_old_x = 0
+	buckle_offset_y = 0
+	mob_old_y = 0
 
 /obj/structure/bed/chair/vehicle/Initialize()
 	. = ..()
@@ -324,7 +324,7 @@
 
 	handle_rotation()
 
-/obj/structure/bed/chair/vehicle/proc/setup_buckle_offsets()
+/obj/structure/bed/chair/vehicle/setup_buckle_offsets()
 	if(pixel_x != 0)
 		buckle_offset_x = pixel_x
 	if(pixel_y != 0)
