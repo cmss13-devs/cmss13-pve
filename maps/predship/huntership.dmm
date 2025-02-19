@@ -7246,7 +7246,6 @@
 /area/yautja)
 "zt" = (
 /obj/docking_port/stationary/marine_dropship/lz1{
-	faction = "YAUTJA";
 	name = "Yautja Hangar"
 	},
 /turf/open/floor/corsat,
