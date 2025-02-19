@@ -372,6 +372,12 @@
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/kleschers/int_heavy/lambda_center)
+"ahV" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/turf/open/floor/carpet,
+/area/kleschers/int_reg/dorms)
 "ain" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 1
@@ -464,11 +470,10 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/kleschers/outside/lambda_entry)
 "ajJ" = (
-/obj/structure/platform/strata/metal{
-	dir = 8;
-	layer = 3.01
-	},
 /obj/structure/blocker/invisible_wall,
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
 /turf/open/gm/river/no_overlay,
 /area/kleschers/int_reg/filtration)
 "akt" = (
@@ -1550,6 +1555,21 @@
 "aKA" = (
 /turf/closed/wall/strata_outpost,
 /area/kleschers/int_heavy/filtration_locks)
+"aKF" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/door_control{
+	name = "Door Bolt Control";
+	normaldoorcontrol = 1;
+	req_access_txt = "106";
+	specialfunctions = 4;
+	pixel_x = 0;
+	pixel_y = -21;
+	id = "hydro_storage"
+	},
+/turf/open/floor/shiva/multi_tiles/southeast,
+/area/kleschers/int_reg/hydroponics)
 "aLd" = (
 /obj/structure/machinery/door/airlock/almayer/research{
 	req_one_access = list(105,103,106,100);
@@ -2198,6 +2218,13 @@
 	},
 /turf/open/auto_turf/strata_grass,
 /area/kleschers/outside/rebel_landing)
+"aZr" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/cargo_container/uscm/chinook/left,
+/turf/open/floor/asteroidfloor,
+/area/kleschers/shuttles/drop2)
 "aZO" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -2915,6 +2942,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/roofed_spaceport)
+"bwh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/cargo_container/ferret/right,
+/turf/open/floor/asteroidfloor,
+/area/kleschers/shuttles/drop2)
 "bwJ" = (
 /obj/structure/machinery/door_control{
 	dir = 1;
@@ -3550,6 +3584,13 @@
 	},
 /turf/open/floor/shiva/redfull,
 /area/kleschers/int_reg/marshals)
+"bLq" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/cargo_container/ferret/mid,
+/turf/open/floor/asteroidfloor,
+/area/kleschers/shuttles/drop2)
 "bLK" = (
 /obj/structure/sign/poster/hero/voteno{
 	pixel_x = 3;
@@ -3726,6 +3767,7 @@
 	},
 /obj/item/storage/belt/medical/lifesaver,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/backpack/satchel/med,
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_reg/clinic)
 "bRq" = (
@@ -4822,6 +4864,9 @@
 	light_power = 0.7;
 	dir = 1
 	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/engineering)
 "cxF" = (
@@ -4923,6 +4968,13 @@
 /obj/structure/fence,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_reg/roofed_spaceport)
+"cAs" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/largecrate/random/secure,
+/turf/open/floor/asteroidfloor,
+/area/kleschers/shuttles/drop2)
 "cAz" = (
 /obj/structure/reagent_dispensers/peppertank{
 	pixel_x = -32
@@ -5079,6 +5131,18 @@
 "cDB" = (
 /turf/open/auto_turf/ice/layer1,
 /area/space)
+"cDH" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_magazine/smg/nailgun,
+/obj/item/ammo_magazine/smg/nailgun{
+	pixel_x = -5;
+	pixel_y = -12
+	},
+/turf/open/floor/shiva/floor3,
+/area/kleschers/int_reg/garage)
 "cDS" = (
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
@@ -5843,6 +5907,17 @@
 	},
 /turf/open/auto_turf/strata_grass,
 /area/kleschers/int_heavy/lambda_center)
+"dfr" = (
+/obj/structure/machinery/door_control{
+	normaldoorcontrol = 1;
+	req_access_txt = "106";
+	specialfunctions = 4;
+	pixel_x = 0;
+	pixel_y = 28;
+	id = "lamb_armory"
+	},
+/turf/open/floor/shiva/multi_tiles,
+/area/kleschers/int_heavy/lambda_north_wing)
 "dfx" = (
 /obj/structure/prop/almayer/whiteboard{
 	pixel_y = 24;
@@ -6383,6 +6458,13 @@
 	},
 /turf/open/void,
 /area/space)
+"dwb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/cargo_container/ferret/left,
+/turf/open/floor/asteroidfloor,
+/area/kleschers/shuttles/drop2)
 "dwE" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -6489,6 +6571,12 @@
 "dzo" = (
 /turf/open/floor/asteroidwarning/west,
 /area/kleschers/outside/central_road)
+"dzM" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement3,
+/area/kleschers/shuttles/drop2)
 "dAc" = (
 /obj/structure/curtain/red,
 /obj/structure/window/framed/strata,
@@ -7442,14 +7530,9 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_heavy/eta)
 "edi" = (
-/obj/structure/platform/strata/metal{
-	dir = 8;
-	layer = 3.01
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
-	layer = 2.5;
-	pixel_x = 6
+	layer = 2.5
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/kleschers/outside/central_road)
@@ -7807,6 +7890,11 @@
 	light_power = 0.7;
 	dir = 4
 	},
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_21";
+	pixel_x = -1;
+	pixel_y = 6
+	},
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_south_wing)
 "epm" = (
@@ -7963,11 +8051,21 @@
 	},
 /turf/open/gm/river,
 /area/kleschers/int_reg/engineering)
+"euo" = (
+/obj/structure/machinery/door_control{
+	normaldoorcontrol = 1;
+	req_access_txt = "106";
+	specialfunctions = 4;
+	pixel_x = 0;
+	pixel_y = 28;
+	id = "lamb_storage"
+	},
+/turf/open/floor/shiva/multi_tiles,
+/area/kleschers/int_heavy/lambda_north_wing)
 "euw" = (
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
 	},
-/obj/effect/spawner/random/toy,
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = 16;
 	pixel_y = -22
@@ -7976,6 +8074,7 @@
 	pixel_x = 13;
 	pixel_y = 11
 	},
+/obj/item/storage/backpack,
 /turf/open/floor/carpet,
 /area/kleschers/int_reg/dorms)
 "euP" = (
@@ -8013,6 +8112,7 @@
 /area/kleschers/int_reg/admin)
 "evx" = (
 /obj/structure/bed/chair/comfy/black,
+/obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/engineering)
 "evD" = (
@@ -8337,7 +8437,7 @@
 /obj/structure/platform/strata/metal,
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	id = "cargo_baydoor2";
+	id = "cargo_baydoor";
 	name = "Cargo Bay"
 	},
 /turf/open/asphalt,
@@ -9747,6 +9847,12 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/library)
 "foU" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
 /turf/open/asphalt/cement/cement2,
 /area/kleschers/shuttles/drop2)
 "fpI" = (
@@ -11246,6 +11352,7 @@
 	pixel_y = 14;
 	pixel_x = -9
 	},
+/obj/structure/showcase,
 /turf/open/floor/carpet,
 /area/kleschers/int_heavy/lambda_center)
 "gdI" = (
@@ -11960,14 +12067,13 @@
 /turf/open/floor/shiva/yellowfull,
 /area/kleschers/int_reg/engineering)
 "gzO" = (
-/obj/structure/platform_decoration/strata/metal,
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = -4;
-	pixel_y = 0
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control{
+	id = "armory_mars";
+	pixel_y = 24
 	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/kleschers/outside/northwest)
+/turf/open/floor/shiva,
+/area/kleschers/int_heavy/marshals_armory)
 "gAp" = (
 /obj/structure/prop/rock/black_ground/dense{
 	dir = 1
@@ -12315,6 +12421,18 @@
 /obj/structure/pipes/standard/cap,
 /turf/open/floor/corsat/marked,
 /area/kleschers/int_reg/virology)
+"gLS" = (
+/obj/structure/machinery/light{
+	light_power = 0.7;
+	dir = 8
+	},
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_21";
+	pixel_x = -1;
+	pixel_y = 6
+	},
+/turf/open/floor/shiva/multi_tiles,
+/area/kleschers/int_heavy/lambda_north_wing)
 "gMm" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 1
@@ -14665,6 +14783,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/item/storage/backpack,
 /turf/open/floor/shiva/north,
 /area/kleschers/int_reg/dorms)
 "hUN" = (
@@ -14802,6 +14921,13 @@
 	},
 /turf/open/asphalt,
 /area/kleschers/outside/spaceport)
+"hXV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/largecrate/random/case,
+/turf/open/floor/asteroidfloor,
+/area/kleschers/shuttles/drop2)
 "hXZ" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -15706,13 +15832,9 @@
 /turf/open/floor/asteroidwarning/west,
 /area/kleschers/outside/northwest)
 "iwE" = (
-/obj/structure/platform/strata/metal{
-	dir = 4;
-	layer = 3.01
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
-	pixel_x = -4
+	pixel_x = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/kleschers/outside/northwest)
@@ -16042,6 +16164,14 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/kleschers/int_reg/shuttle)
+"iDx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/shiva,
+/area/kleschers/int_reg/engineering)
 "iDA" = (
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
@@ -16229,6 +16359,20 @@
 	icon_state = "cargo"
 	},
 /obj/structure/closet/crate,
+/obj/item/storage/backpack/marine/satchel/rto{
+	phone_category = "Klescher Research Facility";
+	networks_receive = list("Colonist");
+	networks_transmit = list("Colonist");
+	name = "Radio Telephone Pack";
+	desc = "Military Surplus bag of the USCM radio technician pack complete with a working radio network. This seems to have a completely redone network."
+	},
+/obj/item/storage/backpack/marine/satchel/rto{
+	phone_category = "Klescher Research Facility";
+	networks_receive = list("Colonist");
+	networks_transmit = list("Colonist");
+	name = "Radio Telephone Pack";
+	desc = "Military Surplus bag of the USCM radio technician pack complete with a working radio network. This seems to have a completely redone network."
+	},
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/cargo)
 "iJr" = (
@@ -17141,7 +17285,7 @@
 	},
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	id = "cargo_baydoor2";
+	id = "cargo_baydoor";
 	name = "Cargo Bay"
 	},
 /turf/open/asphalt,
@@ -17343,6 +17487,11 @@
 /obj/item/storage/box/disks,
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_heavy/eta)
+"jjZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/shiva/yellow,
+/area/kleschers/int_reg/engineering)
 "jkd" = (
 /obj/structure/filtration/collector_pipes{
 	icon_state = "upper_2";
@@ -18816,6 +18965,25 @@
 	},
 /turf/open/floor/shiva/multi_tiles/east,
 /area/kleschers/int_heavy/eta)
+"jTW" = (
+/obj/structure/closet{
+	pixel_x = -8;
+	pixel_y = -2;
+	can_be_stacked = 1
+	},
+/obj/structure/closet{
+	pixel_x = 8;
+	pixel_y = -2;
+	can_be_stacked = 1
+	},
+/obj/structure/machinery/light/small{
+	light_power = 0.4;
+	dir = 4;
+	pixel_y = 10
+	},
+/obj/item/storage/backpack,
+/turf/open/floor/shiva/radiator_tile2,
+/area/kleschers/int_reg/dorms)
 "jTX" = (
 /obj/structure/platform/strata{
 	color = "#df9f9f";
@@ -19565,6 +19733,11 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_virology)
+"kpx" = (
+/obj/structure/fence,
+/obj/structure/machinery/light/double,
+/turf/open/floor/shiva/floor3,
+/area/kleschers/outside/central_road)
 "kpA" = (
 /obj/structure/machinery/light{
 	light_power = 0.7;
@@ -20220,6 +20393,11 @@
 	},
 /obj/effect/spawner/random/powercell,
 /obj/item/weapon/gun/smg/nailgun,
+/obj/item/ammo_magazine/smg/nailgun,
+/obj/item/ammo_magazine/smg/nailgun{
+	pixel_x = 9;
+	pixel_y = 6
+	},
 /turf/open/floor/plating,
 /area/kleschers/outside/construction)
 "kHw" = (
@@ -20594,14 +20772,9 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/admin)
 "kRs" = (
-/obj/structure/platform/strata/metal{
-	dir = 8;
-	layer = 3.01
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
-	layer = 2.5;
-	pixel_x = 6
+	layer = 2.5
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/kleschers/outside/central_road)
@@ -20677,6 +20850,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/buildings)
+"kTC" = (
+/obj/structure/machinery/light/double,
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/outside/central_road)
 "kTF" = (
 /obj/item/device/flashlight/lamp/tripod/grey{
 	light_power = 0.4;
@@ -23272,6 +23449,10 @@
 "mbH" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/kleschers/int_glass/bar)
+"mbW" = (
+/obj/structure/machinery/colony_floodlight,
+/turf/open/floor/asteroidwarning,
+/area/kleschers/shuttles/drop2)
 "mcf" = (
 /obj/structure/reagent_dispensers/beerkeg/alt{
 	pixel_x = 13;
@@ -23386,6 +23567,12 @@
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
 /area/kleschers/int_reg/cargo)
+"mfP" = (
+/obj/structure/prop/dam/truck/cargo{
+	dir = 4
+	},
+/turf/open/asphalt/cement/cement4,
+/area/kleschers/outside/central_road)
 "mfQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/shiva/yellowcorners/north,
@@ -23450,6 +23637,13 @@
 /area/kleschers/int_heavy/eta)
 "mhU" = (
 /obj/structure/safe,
+/obj/item/storage/backpack/marine/satchel/rto{
+	phone_category = "Klescher Research Facility";
+	networks_receive = list("Colonist");
+	networks_transmit = list("Colonist");
+	name = "Radio Telephone Pack";
+	desc = "Military Surplus bag of the USCM radio technician pack complete with a working radio network. This seems to have a completely redone network."
+	},
 /turf/open/floor/corsat/officesquares,
 /area/kleschers/int_reg/admin)
 "mhY" = (
@@ -23499,6 +23693,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/kleschers/int_reg/dorms)
+"mir" = (
+/obj/structure/machinery/light/double,
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/outside/northwest)
 "miH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -24090,11 +24288,6 @@
 	pixel_x = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/flora/pottedplant{
-	icon_state = "pottedplant_21";
-	pixel_x = -1;
-	pixel_y = 6
-	},
 /turf/open/floor/corsat/bluegrey/east,
 /area/kleschers/int_heavy/lambda_center)
 "myR" = (
@@ -25698,6 +25891,18 @@
 /obj/effect/spawner/random/powercell,
 /turf/open/floor/plating,
 /area/kleschers/int_heavy/filtration_locks)
+"nsy" = (
+/obj/structure/machinery/door_control{
+	name = "Door Bolt Control";
+	normaldoorcontrol = 1;
+	req_access_txt = "106";
+	specialfunctions = 4;
+	pixel_x = 0;
+	pixel_y = 28;
+	id = "hydro_storage"
+	},
+/turf/open/floor/shiva/multi_tiles,
+/area/kleschers/int_reg/hydroponics)
 "nsA" = (
 /turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/outside/southern_path)
@@ -25836,6 +26041,14 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/roofed_spaceport)
+"nyG" = (
+/obj/structure/prop/dam/crane{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = 5
+	},
+/turf/open/asphalt,
+/area/kleschers/outside/central_road)
 "nyH" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
 	dir = 2;
@@ -28911,7 +29124,7 @@
 "paC" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	id = "cargo_baydoor2";
+	id = "cargo_baydoor";
 	name = "Cargo Bay"
 	},
 /turf/open/asphalt,
@@ -29225,6 +29438,7 @@
 	color = "#6b675e"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/gun/smg/nailgun,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/garage)
 "pkX" = (
@@ -29551,6 +29765,17 @@
 "pwb" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/corsat,
+/area/kleschers/int_heavy/lambda_north_wing)
+"pwf" = (
+/obj/structure/machinery/door_control{
+	normaldoorcontrol = 1;
+	req_access_txt = "106";
+	specialfunctions = 4;
+	pixel_x = 0;
+	pixel_y = 28;
+	id = "lamb_storage"
+	},
+/turf/open/floor/shiva/purplefull/east,
 /area/kleschers/int_heavy/lambda_north_wing)
 "pwj" = (
 /obj/structure/roof/cargocrane_tracks/vertical/endcap1{
@@ -29880,6 +30105,12 @@
 "pFL" = (
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/kleschers/outside/rebel_landing)
+"pFT" = (
+/obj/structure/showcase{
+	icon_state = "broadcaster_send"
+	},
+/turf/open/floor/almayer/plating,
+/area/kleschers/int_heavy/lambda_center)
 "pGf" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	req_one_access = list(201,203,206,207);
@@ -30143,6 +30374,15 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/roofed_spaceport)
+"pMP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control{
+	pixel_x = 24;
+	pixel_y = 1;
+	id = "eta_transferstorage"
+	},
+/turf/open/floor/shiva/multi_tiles/east,
+/area/kleschers/int_heavy/eta)
 "pMR" = (
 /obj/structure/platform/strata/metal{
 	dir = 4;
@@ -30548,11 +30788,6 @@
 	icon_state = "W";
 	layer = 2.5
 	},
-/obj/structure/flora/pottedplant{
-	icon_state = "pottedplant_21";
-	pixel_x = -1;
-	pixel_y = 6
-	},
 /turf/open/floor/corsat/bluegrey/west,
 /area/kleschers/int_heavy/lambda_center)
 "pZC" = (
@@ -30733,13 +30968,9 @@
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/kleschers/int_reg/shuttle)
 "qfC" = (
-/obj/structure/platform/strata/metal{
-	dir = 4;
-	layer = 3.01
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
-	pixel_x = -4
+	pixel_x = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/kleschers/outside/northwest)
@@ -31032,6 +31263,15 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/outside/central_road)
+"qnT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_21";
+	pixel_x = -1;
+	pixel_y = 6
+	},
+/turf/open/floor/shiva/purplefull/east,
+/area/kleschers/int_heavy/lambda_center)
 "qnW" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -32543,6 +32783,13 @@
 	},
 /turf/open/auto_turf/strata_grass,
 /area/kleschers/shuttles/drop2)
+"qWt" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1
+	},
+/turf/open/gm/river/no_overlay,
+/area/kleschers/int_reg/filtration)
 "qWy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair{
@@ -33004,6 +33251,7 @@
 	},
 /obj/item/clothing/suit/storage/jacket/marine/vest,
 /obj/item/clothing/suit/storage/marine/veteran/lamp,
+/obj/item/storage/backpack,
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/dorms)
 "rgt" = (
@@ -33386,6 +33634,10 @@
 /obj/item/device/whistle{
 	pixel_x = 5;
 	pixel_y = 0
+	},
+/obj/item/storage/backpack{
+	pixel_x = -16;
+	pixel_y = 8
 	},
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_glass/fitness)
@@ -35945,6 +36197,7 @@
 	},
 /obj/item/tool/shovel/etool/folded,
 /obj/item/storage/pouch/radio,
+/obj/item/storage/backpack/lightpack,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/engineering)
 "sIy" = (
@@ -36329,6 +36582,13 @@
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/garage)
+"sQO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/cargo_container/uscm/right,
+/turf/open/floor/asteroidfloor,
+/area/kleschers/shuttles/drop2)
 "sQZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -36418,6 +36678,13 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/kleschers/outside/construction)
+"sTu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/asteroidfloor,
+/area/kleschers/shuttles/drop2)
 "sTx" = (
 /obj/structure/machinery/seed_extractor,
 /turf/open/floor/corsat/green,
@@ -37085,6 +37352,12 @@
 "tpy" = (
 /turf/open/auto_turf/strata_grass,
 /area/kleschers/int_reg/connector)
+"tpD" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/turf/open/asphalt/cement/cement4,
+/area/kleschers/shuttles/drop2)
 "tpV" = (
 /obj/structure/machinery/vending/walkman,
 /obj/effect/decal/cleanable/dirt,
@@ -37098,6 +37371,13 @@
 /obj/structure/machinery/vending/cola,
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/admin)
+"trh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/cargo_container/uscm/chinook/mid,
+/turf/open/floor/asteroidfloor,
+/area/kleschers/shuttles/drop2)
 "trq" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -40576,11 +40856,11 @@
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/kleschers/outside/southern_path)
 "vli" = (
-/obj/structure/prop/dam/truck/cargo{
-	dir = 4
+/obj/structure/showcase{
+	icon_state = "bus"
 	},
-/turf/open/asphalt,
-/area/kleschers/outside/central_road)
+/turf/open/floor/almayer/plating,
+/area/kleschers/int_heavy/lambda_center)
 "vlz" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -41918,13 +42198,12 @@
 /turf/open/floor/shiva/yellow/west,
 /area/kleschers/int_reg/engineering)
 "wcB" = (
-/obj/structure/prop/dam/crane{
-	dir = 4;
-	pixel_x = 4;
-	pixel_y = 5
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
 	},
-/turf/open/asphalt,
-/area/kleschers/outside/central_road)
+/obj/structure/largecrate/random,
+/turf/open/floor/asteroidfloor,
+/area/kleschers/shuttles/drop2)
 "wcE" = (
 /obj/structure/machinery/vending/cigarette/upp{
 	desc = "an aesthetically pleasing vendor with the history of the tears made within the UPP space! Now re-imagined by some bartender in some backwater colony."
@@ -43930,7 +44209,9 @@
 "xcg" = (
 /obj/structure/filtration/collector_pipes{
 	icon_state = "lower_2";
-	layer = 3.05
+	layer = 3.05;
+	pixel_x = 0;
+	pixel_y = -10
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/shiva,
@@ -49879,7 +50160,7 @@ qCQ
 qCQ
 kBd
 goy
-pkS
+cDH
 pkS
 mwm
 bZc
@@ -50379,19 +50660,19 @@ nbl
 rWj
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
 qDb
 odk
 odk
@@ -50597,19 +50878,19 @@ nbl
 rWj
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
+kcq
+cAs
+cAs
+bdl
+kcq
+xTR
+dwb
+bdl
+kcq
+xTR
+xTR
+bdl
+iwF
 qDb
 odk
 odk
@@ -50815,19 +51096,19 @@ nbl
 rWj
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
+kcq
+cAs
+cAs
+bdl
+kcq
+xTR
+bLq
+bdl
+kcq
+cAs
+wcB
+bdl
+iwF
 qDb
 qDb
 jrn
@@ -51033,20 +51314,20 @@ nbl
 rWj
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
+kcq
+hXV
+sTu
+bdl
+kcq
+xTR
+bwh
+bdl
+kcq
+sTu
+xTR
+bdl
+iwF
+iwF
 qDb
 qDb
 qDb
@@ -51251,20 +51532,20 @@ nbl
 rWj
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
-iNs
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
+iwF
 qDb
 qDb
 wcv
@@ -51469,18 +51750,18 @@ nbl
 rWj
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
+kcq
+xTR
+aZr
+bdl
 foU
+dzM
+dzM
 tyi
 tyi
-tyi
-tyi
-tyi
-tyi
-tyi
+dzM
+dzM
+dzM
 tyi
 tyi
 tyi
@@ -51687,11 +51968,11 @@ nbl
 rWj
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
-qlu
+kcq
+xTR
+trh
+bdl
+tpD
 fOX
 fOX
 fOX
@@ -51905,11 +52186,11 @@ nbl
 rWj
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
-qlu
+kcq
+xTR
+sQO
+bdl
+tpD
 hkx
 ejQ
 dof
@@ -52123,10 +52404,10 @@ nbl
 rWj
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
+iwF
+iwF
+iwF
+iwF
 qlu
 bMD
 vri
@@ -52341,10 +52622,10 @@ nbl
 rWj
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
+kcq
+wcB
+xTR
+bdl
 qlu
 ksy
 vri
@@ -52559,10 +52840,10 @@ nbl
 qQB
 rWj
 qDb
-iNs
-iNs
-iNs
-iNs
+kcq
+cAs
+wcB
+bdl
 qlu
 ecx
 vri
@@ -52777,10 +53058,10 @@ jgJ
 dgG
 rWj
 qDb
-gFX
-iNs
-iNs
-iNs
+mbW
+xTR
+cAs
+bdl
 qlu
 bkK
 vri
@@ -52996,9 +53277,9 @@ iNs
 qDb
 qDb
 qDb
-iNs
-iNs
-iNs
+iwF
+iwF
+iwF
 qlu
 bMD
 vri
@@ -53214,9 +53495,9 @@ iNs
 qDb
 qDb
 qDb
-iNs
-iNs
-iNs
+iwF
+iwF
+iwF
 qlu
 oML
 vri
@@ -55400,11 +55681,11 @@ iNs
 qlu
 kcq
 xTR
-xTR
+cAs
 bdl
 iwF
 kcq
-xTR
+wcB
 xTR
 bdl
 qDb
@@ -55617,13 +55898,13 @@ iNs
 iNs
 qlu
 kcq
-xTR
+wcB
 xTR
 bdl
 iwF
 kcq
-xTR
-xTR
+wcB
+hXV
 bdl
 qDb
 wVr
@@ -55836,11 +56117,11 @@ iNs
 qlu
 kcq
 xTR
-xTR
+wcB
 bdl
 iwF
 kcq
-xTR
+cAs
 xTR
 bdl
 fPK
@@ -56019,7 +56300,7 @@ txd
 txd
 iYY
 txd
-txd
+mir
 rDT
 rDT
 bOA
@@ -57327,7 +57608,7 @@ uHs
 kJk
 uHs
 txd
-txd
+mir
 rDT
 qXF
 qme
@@ -58413,7 +58694,7 @@ cee
 mFi
 mFi
 mFi
-gzO
+uvC
 qfC
 qfC
 iwE
@@ -58635,7 +58916,7 @@ mFi
 rOP
 rOP
 rOP
-rOP
+kpx
 rDT
 nfM
 nfM
@@ -59342,8 +59623,8 @@ ozK
 ipU
 qul
 pHZ
-ipU
-jYY
+iDx
+jjZ
 uEh
 nhR
 fVn
@@ -59943,7 +60224,7 @@ mFi
 gwP
 gwP
 gwP
-sxR
+kTC
 rDT
 tzE
 sjO
@@ -61251,7 +61532,7 @@ mFi
 gwP
 gwP
 gwP
-gwP
+kTC
 rDT
 rDT
 rDT
@@ -64906,7 +65187,7 @@ epz
 chM
 chM
 wkZ
-sQF
+gzO
 nDt
 cAz
 cwu
@@ -65443,7 +65724,7 @@ bpi
 bpi
 bpi
 bpi
-vli
+bpi
 tzg
 lgJ
 lgJ
@@ -66535,7 +66816,7 @@ fGs
 bpi
 bpi
 bpi
-tzg
+mfP
 lgJ
 wsM
 ulO
@@ -68330,7 +68611,7 @@ oiN
 tbG
 fFR
 fFR
-aju
+pMP
 tbG
 oiN
 jje
@@ -68422,16 +68703,16 @@ egA
 uSr
 aGr
 aGr
-xaJ
+jTW
 ium
 vBh
 uPr
 ium
 oRq
 bJL
-bJL
+ahV
 xGz
-bJL
+ahV
 jnP
 ium
 uPr
@@ -71965,7 +72246,7 @@ bpi
 bpi
 bpi
 bpi
-wcB
+bpi
 bpi
 bpi
 gJZ
@@ -72183,7 +72464,7 @@ bpi
 bpi
 bpi
 bpi
-bpi
+nyG
 bpi
 bpi
 gJZ
@@ -72203,7 +72484,7 @@ pSJ
 htb
 cIO
 ajJ
-ajJ
+qWt
 jkO
 qVg
 qVg
@@ -72782,7 +73063,7 @@ sSz
 sSz
 sSz
 nmj
-bQz
+mDk
 bIZ
 fxb
 izC
@@ -73000,7 +73281,7 @@ jsE
 jsE
 jsE
 toB
-mDk
+bQz
 bIZ
 wbb
 iNN
@@ -73436,9 +73717,9 @@ jzp
 jJr
 hkh
 aZa
-whh
+aKF
 bIZ
-cFP
+nsy
 sQC
 nlo
 fft
@@ -87590,7 +87871,7 @@ sdB
 xfg
 vqT
 fwf
-nIe
+dfr
 nIe
 jHo
 nIe
@@ -88461,7 +88742,7 @@ xKR
 xKR
 xKR
 fwf
-lZd
+gLS
 qOS
 nIe
 jWZ
@@ -88907,8 +89188,8 @@ fwf
 iRd
 sgk
 nzC
-cDb
-cDb
+pFT
+vli
 eXg
 sgk
 xpv
@@ -89333,7 +89614,7 @@ xKR
 xKR
 xKR
 fwf
-tfk
+mlx
 nIe
 nIe
 qOS
@@ -89552,7 +89833,7 @@ jzt
 gfe
 fwf
 fwf
-bJg
+pwf
 bJg
 rFP
 gVd
@@ -89988,7 +90269,7 @@ rFV
 aMk
 oPi
 fwf
-nIe
+euo
 jWZ
 qOS
 nIe
@@ -91086,7 +91367,7 @@ mlx
 jWZ
 wMr
 fwf
-kfh
+qnT
 pCG
 pCG
 hin
