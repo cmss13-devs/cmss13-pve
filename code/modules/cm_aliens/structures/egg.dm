@@ -17,6 +17,7 @@
 	var/hivenumber = XENO_HIVE_NORMAL
 	var/flags_embryo = NO_FLAGS
 	var/trigger_radius = 2
+	var/huggers_can_spawn = TRUE
 
 /obj/effect/alien/egg/Initialize(mapload, hive)
 	. = ..()
@@ -249,6 +250,9 @@
 	if(status != EGG_GROWN)
 		to_chat(user, SPAN_WARNING("\The [src] doesn't have any facehuggers to inhabit."))
 		return
+	if(!huggers_can_spawn)
+		to_chat(user, SPAN_WARNING("This egg cannot support active facehuggers!"))
+		return
 
 	if(!GLOB.hive_datum[hivenumber].can_spawn_as_hugger(user))
 		return
@@ -305,6 +309,7 @@ SPECIAL EGG USED BY EGG CARRIER
 	var/last_refreshed = null
 	/// Timer holder for the maximum lifetime of the egg as defined CARRIER_EGG_MAXIMUM_LIFE
 	var/life_timer = null
+	huggers_can_spawn = FALSE
 
 /obj/effect/alien/egg/carrier_egg/Initialize(mapload, hivenumber, planter = null)
 	. = ..()
