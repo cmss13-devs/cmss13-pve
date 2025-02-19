@@ -7,7 +7,7 @@ if len(sys.argv) <= 1:
 status = 0
 
 for file in sys.argv[1:]:
-    with open(file, encoding="ISO-8859-1") as f:
+    with open(file, encoding="UTF-8") as f:
         try:
             json.load(f)
         except ValueError as exception:

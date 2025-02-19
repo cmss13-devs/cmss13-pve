@@ -236,63 +236,63 @@
 							msg_admin_niche("[key_name_admin(usr)] set the medical record age for [active1.fields["name"]] ([active1.fields["id"]]) to [new_value].")
 					if("mi_dis")
 						if (istype(active2, /datum/data/record))
-							var/new_value = copytext(trim(strip_html(input("Please input minor disabilities list:", "Med. records", active2.fields["mi_dis"], null)  as text)),1,MAX_RECORDS_MESSAGE_LEN)
+							var/new_value = copytext_char(trim(strip_html(input("Please input minor disabilities list:", "Med. records", active2.fields["mi_dis"], null)  as text)),1,MAX_RECORDS_MESSAGE_LEN)
 							if ((!( new_value ) || !( authenticated ) || usr.stat || usr.is_mob_restrained() || (!in_range(src, usr) && (!isRemoteControlling(usr))) || active2 != a2))
 								return
 							active2.fields["mi_dis"] = new_value
 							msg_admin_niche("[key_name_admin(usr)] set the medical record minor disabilities list for [active1.fields["name"]] ([active1.fields["id"]]) to [new_value].")
 					if("mi_dis_d")
 						if (istype(active2, /datum/data/record))
-							var/new_value = copytext(trim(strip_html(input("Please summarize minor dis.:", "Med. records", active2.fields["mi_dis_d"], null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
+							var/new_value = copytext_char(trim(strip_html(input("Please summarize minor dis.:", "Med. records", active2.fields["mi_dis_d"], null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
 							if ((!( new_value ) || !( authenticated ) || usr.stat || usr.is_mob_restrained() || (!in_range(src, usr) && (!isRemoteControlling(usr))) || active2 != a2))
 								return
 							active2.fields["mi_dis_d"] = new_value
 							msg_admin_niche("[key_name_admin(usr)] set the medical record minor disabilities desc for [active1.fields["name"]] ([active1.fields["id"]]) to [new_value].")
 					if("ma_dis")
 						if (istype(active2, /datum/data/record))
-							var/new_value = copytext(trim(strip_html(input("Please input major diabilities list:", "Med. records", active2.fields["ma_dis"], null)  as text)),1,MAX_RECORDS_MESSAGE_LEN)
+							var/new_value = copytext_char(trim(strip_html(input("Please input major diabilities list:", "Med. records", active2.fields["ma_dis"], null)  as text)),1,MAX_RECORDS_MESSAGE_LEN)
 							if ((!( new_value ) || !( authenticated ) || usr.stat || usr.is_mob_restrained() || (!in_range(src, usr) && (!isRemoteControlling(usr))) || active2 != a2))
 								return
 							active2.fields["ma_dis"] = new_value
 							msg_admin_niche("[key_name_admin(usr)] set the medical record major disabilities list for [active1.fields["name"]] ([active1.fields["id"]]) to [new_value].")
 					if("ma_dis_d")
 						if (istype(active2, /datum/data/record))
-							var/new_value = copytext(trim(strip_html(input("Please summarize major dis.:", "Med. records", active2.fields["ma_dis_d"], null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
+							var/new_value = copytext_char(trim(strip_html(input("Please summarize major dis.:", "Med. records", active2.fields["ma_dis_d"], null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
 							if ((!( new_value ) || !( authenticated ) || usr.stat || usr.is_mob_restrained() || (!in_range(src, usr) && (!isRemoteControlling(usr))) || active2 != a2))
 								return
 							active2.fields["ma_dis_d"] = new_value
 							msg_admin_niche("[key_name_admin(usr)] set the medical record major disabilities desc for [active1.fields["name"]] ([active1.fields["id"]]) to [new_value].")
 					if("alg")
 						if (istype(active2, /datum/data/record))
-							var/new_value = copytext(trim(strip_html(input("Please state allergies:", "Med. records", active2.fields["alg"], null)  as text)),1,MAX_RECORDS_MESSAGE_LEN)
+							var/new_value = copytext_char(trim(strip_html(input("Please state allergies:", "Med. records", active2.fields["alg"], null)  as text)),1,MAX_RECORDS_MESSAGE_LEN)
 							if ((!( new_value ) || !( authenticated ) || usr.stat || usr.is_mob_restrained() || (!in_range(src, usr) && (!isRemoteControlling(usr))) || active2 != a2))
 								return
 							active2.fields["alg"] = new_value
 							msg_admin_niche("[key_name_admin(usr)] set the medical record allergies list for [active1.fields["name"]] ([active1.fields["id"]]) to [new_value].")
 					if("alg_d")
 						if (istype(active2, /datum/data/record))
-							var/new_value = copytext(trim(strip_html(input("Please summarize allergies:", "Med. records", active2.fields["alg_d"], null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
+							var/new_value = copytext_char(trim(strip_html(input("Please summarize allergies:", "Med. records", active2.fields["alg_d"], null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
 							if ((!( new_value ) || !( authenticated ) || usr.stat || usr.is_mob_restrained() || (!in_range(src, usr) && (!isRemoteControlling(usr))) || active2 != a2))
 								return
 							active2.fields["alg_d"] = new_value
 							msg_admin_niche("[key_name_admin(usr)] set the medical record allergies desc for [active1.fields["name"]] ([active1.fields["id"]]) to [new_value].")
 					if("cdi")
 						if (istype(active2, /datum/data/record))
-							var/new_value = copytext(trim(strip_html(input("Please state diseases:", "Med. records", active2.fields["cdi"], null)  as text)),1,MAX_RECORDS_MESSAGE_LEN)
+							var/new_value = copytext_char(trim(strip_html(input("Please state diseases:", "Med. records", active2.fields["cdi"], null)  as text)),1,MAX_RECORDS_MESSAGE_LEN)
 							if ((!( new_value ) || !( authenticated ) || usr.stat || usr.is_mob_restrained() || (!in_range(src, usr) && (!isRemoteControlling(usr))) || active2 != a2))
 								return
 							active2.fields["cdi"] = new_value
 							msg_admin_niche("[key_name_admin(usr)] set the medical record disabilities list for [active1.fields["name"]] ([active1.fields["id"]]) to [new_value].")
 					if("cdi_d")
 						if (istype(active2, /datum/data/record))
-							var/new_value = copytext(trim(strip_html(input("Please summarize diseases:", "Med. records", active2.fields["cdi_d"], null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
+							var/new_value = copytext_char(trim(strip_html(input("Please summarize diseases:", "Med. records", active2.fields["cdi_d"], null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
 							if ((!( new_value ) || !( authenticated ) || usr.stat || usr.is_mob_restrained() || (!in_range(src, usr) && (!isRemoteControlling(usr))) || active2 != a2))
 								return
 							active2.fields["cdi_d"] = new_value
 							msg_admin_niche("[key_name_admin(usr)] set the medical record disabilities desc for [active1.fields["name"]] ([active1.fields["id"]]) to [new_value].")
 					if("notes")
 						if (istype(active2, /datum/data/record))
-							var/new_value = copytext(html_encode(trim(input("Please summarize notes:", "Med. records", html_decode(active2.fields["notes"]), null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
+							var/new_value = copytext_char(html_encode(trim(input("Please summarize notes:", "Med. records", html_decode(active2.fields["notes"]), null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
 							if ((!( new_value ) || !( authenticated ) || usr.stat || usr.is_mob_restrained() || (!in_range(src, usr) && (!isRemoteControlling(usr))) || active2 != a2))
 								return
 							active2.fields["notes"] = new_value
@@ -402,7 +402,7 @@
 				if (!( istype(active2, /datum/data/record) ))
 					return
 				var/a2 = active2
-				var/new_value = copytext(trim(strip_html(input("Add Comment:", "Med. records", null, null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
+				var/new_value = copytext_char(trim(strip_html(input("Add Comment:", "Med. records", null, null)  as message)),1,MAX_RECORDS_MESSAGE_LEN)
 				if ((!( new_value ) || !( authenticated ) || usr.stat || usr.is_mob_restrained() || (!in_range(src, usr) && (!isRemoteControlling(usr))) || active2 != a2))
 					return
 				var/counter = 1
