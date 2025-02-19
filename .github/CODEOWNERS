@@ -29,3 +29,5 @@
 /code/modules/admin/verbs/SDQL2/ @Zonespace27
 
 # MULTIPLE OWNERS
+
+/code/modules/mob/living/carbon/human/ai/ @Danilcus-W @Zonespace27
