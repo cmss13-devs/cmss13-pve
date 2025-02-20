@@ -7803,7 +7803,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = -7;
-	job = "Squad Sergeant"
+	job = "Squad Leader"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -8860,7 +8860,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = 8;
-	job = "Squad Sergeant"
+	job = "Squad Leader"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
