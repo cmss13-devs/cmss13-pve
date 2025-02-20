@@ -348,24 +348,25 @@
 
 	return 0
 
-/mob/proc/reset_view(atom/A)
-	if(SEND_SIGNAL(src, COMSIG_MOB_RESET_VIEW, A) & COMPONENT_OVERRIDE_VIEW) return TRUE
+/mob/proc/reset_view(atom/focus)
+	if(SEND_SIGNAL(src, COMSIG_MOB_RESET_VIEW, focus) & COMPONENT_OVERRIDE_VIEW)
+		return TRUE
 
-	if (client)
-		if (istype(A, /atom/movable))
+	if(client)
+		if(istype(focus, /atom/movable))
 			client.perspective = EYE_PERSPECTIVE
-			client.eye = A
+			client.eye = focus
 		else
-			if (isturf(loc))
+			if(isturf(loc))
 				client.eye = client.mob
 				client.perspective = MOB_PERSPECTIVE
 			else
 				client.perspective = EYE_PERSPECTIVE
 				client.eye = loc
 
-		client.mouse_pointer_icon = mouse_icon
+		client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
 
-		SEND_SIGNAL(client, COMSIG_CLIENT_RESET_VIEW, A)
+		SEND_SIGNAL(client, COMSIG_CLIENT_RESET_VIEW, focus)
 	return
 
 /mob/proc/reset_observer_view_on_deletion(atom/deleted, force)
@@ -395,7 +396,7 @@
 	var/msg = input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",html_decode(flavor_text)) as message|null
 
 	if(msg != null)
-		msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+		msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 		msg = html_encode(msg)
 
 		flavor_text = msg
@@ -485,7 +486,7 @@
 
 	return do_pull(AM, lunge, no_msg)
 
-/mob/proc/stop_pulling()
+/mob/proc/stop_pulling(bumped_movement = FALSE)
 	if(!pulling)
 		return
 

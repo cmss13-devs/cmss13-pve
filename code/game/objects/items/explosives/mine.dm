@@ -339,3 +339,8 @@
 /obj/item/explosive/mine/sebb/prime()
 	new /obj/item/explosive/grenade/sebb/primed(get_turf(src))
 	qdel(src)
+
+/obj/item/explosive/mine/sebb/active
+	icon_state = "grenade_sebb_planted_active"
+	base_icon_state = "grenade_sebb"
+	map_deployed = TRUE

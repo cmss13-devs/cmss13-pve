@@ -260,9 +260,9 @@
 		return
 
 	if(organ_status >= ORGAN_BRUISED && prob(5 * delta_time))
-		var/dir_choice = pick(list(NORTH, SOUTH, EAST, WEST))
 		owner.drop_held_items()
-		if(!owner.buckled && owner.stat == CONSCIOUS)
+		if(!(owner.buckled || owner.pulledby) && owner.stat == CONSCIOUS && !(locate(/datum/effects/crit) in owner.effects_list))
+			var/dir_choice = pick(list(NORTH, SOUTH, EAST, WEST))
 			owner.Move(get_step(get_turf(owner), dir_choice))
 		to_chat(owner, SPAN_DANGER("Your mind wanders and goes blank for a moment..."))
 

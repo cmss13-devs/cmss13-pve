@@ -23,7 +23,7 @@
 #define JOB_SQUAD_ENGI "Combat Technician"
 #define JOB_SQUAD_MEDIC "Corpsman"
 #define JOB_SQUAD_SPECIALIST "Weapons Specialist"
-#define JOB_SQUAD_TEAM_LEADER "Squad Sergeant"
+#define JOB_SQUAD_TEAM_LEADER "Squad Leader"
 #define JOB_SQUAD_SMARTGUN "Smartgunner"
 #define JOB_SQUAD_ROLES /datum/timelock/squad
 #define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_MARINE, JOB_SQUAD_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_TEAM_LEADER)
@@ -310,6 +310,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UPP_ENGI "Sapper"
 #define JOB_UPP_MEDIC "Sanitar"
 #define JOB_UPP_SPECIALIST "Serzhant"
+#define JOB_UPP_SNIPER "Marksman"
 #define JOB_UPP_LEADER "Master Serzhant"
 #define JOB_UPP_POLICE "Politsiya"
 #define JOB_UPP_SUPPLY "Logistics Technician"
