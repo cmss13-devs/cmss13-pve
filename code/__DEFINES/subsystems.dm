@@ -40,6 +40,9 @@
 ///Delete the timer on parent datum Destroy() and when deltimer'd
 #define TIMER_DELETE_ME (1<<6)
 
+//Makes the timer perform its callback as it is being destroyed.
+#define TIMER_COMPLETE_ON_DELETE (1<<7)
+
 ///Empty ID define
 #define TIMER_ID_NULL -1
 
@@ -163,6 +166,7 @@
 #define SS_PRIORITY_SOUND   250
 #define SS_PRIORITY_TICKER  200
 #define SS_PRIORITY_XENO_AI 185
+#define SS_PRIORITY_HUMAN_AI 182
 #define SS_PRIORITY_NIGHTMARE   180
 #define SS_PRIORITY_QUADTREE    160
 #define SS_PRIORITY_CHAT    155
@@ -172,7 +176,7 @@
 #define SS_PRIORITY_MOB 150
 #define SS_PRIORITY_XENO    149
 #define SS_PRIORITY_HUMAN   148
-#define SS_PRIORITY_XENO_PATHFINDING 130
+#define SS_PRIORITY_PATHFINDING 130
 #define SS_PRIORITY_STAMINA 126
 #define SS_PRIORITY_COMPONENT   125
 #define SS_PRIORITY_NANOUI  120
