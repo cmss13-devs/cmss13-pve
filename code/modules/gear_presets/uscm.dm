@@ -87,12 +87,10 @@
 			equipped_headset.add_hud_tracker(new_human)
 
 /datum/equipment_preset/uscm/proc/add_marsoc_weapon(mob/living/carbon/human/new_human)
-	var/random_gun = rand(1,3)
-	switch(random_gun)
-		if(1 , 2)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/forecon(new_human), WEAR_J_STORE)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m46c(new_human), WEAR_J_STORE)
+	if(prob(66))
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/forecon(new_human), WEAR_J_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m46c(new_human), WEAR_J_STORE)
 
 
 //*****************************************************************************************************/
