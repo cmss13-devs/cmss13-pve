@@ -56,7 +56,7 @@
 	serial_number = 11
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	serial_number = 16
@@ -3575,7 +3575,7 @@
 	layer = 2.52
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	layer = 3.3;
 	name = "'Miss July' Pinup";
@@ -7803,7 +7803,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = -7;
-	job = "Squad Sergeant"
+	job = "Squad Leader"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -8860,7 +8860,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = 8;
-	job = "Squad Sergeant"
+	job = "Squad Leader"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -15521,6 +15521,14 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
+"cMX" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "cQH" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Five Blast Door";
@@ -15996,6 +16004,9 @@
 /area/golden_arrow/engineering)
 "exo" = (
 /obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = -7
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "eyg" = (
@@ -33070,7 +33081,7 @@ aLe
 ati
 roZ
 odS
-exo
+cMX
 rdX
 btA
 rTJ
