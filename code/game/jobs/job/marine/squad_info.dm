@@ -133,7 +133,7 @@
 /datum/squad/proc/update_fireteam(team)
 	squad_info_data["fireteams"][team]["total"] = length(fireteams[team])
 	if(squad_info_data["fireteams"][team]["total"] < 1)
-		squad_info_data["fireteams"][team]["sqsgt"] = list()
+		squad_info_data["fireteams"][team]["sqldr"] = list()
 		squad_info_data["fireteams"][team]["mar"] = list()
 		return
 
@@ -150,14 +150,14 @@
 				if(skillcheck(H, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
 					Eng = TRUE
 		ID = H.get_idcard()
-		squad_info_data["fireteams"][team]["sqsgt"] = list(
+		squad_info_data["fireteams"][team]["sqldr"] = list(
 							"name" = H.real_name,
 							"med" = Med,
 							"eng" = Eng,
 							"status" = H.squad_status,
 							"refer" = "\ref[H]")
 		if(ID)
-			squad_info_data["fireteams"][team]["sqsgt"] += list("paygrade" = get_paygrades(ID.paygrade, 1))
+			squad_info_data["fireteams"][team]["sqldr"] += list("paygrade" = get_paygrades(ID.paygrade, 1))
 			var/rank = ID.rank
 			switch(rank)
 				if(JOB_SQUAD_MARINE)
@@ -171,19 +171,19 @@
 				if(JOB_SQUAD_SPECIALIST)
 					rank = "Spc"
 				if(JOB_SQUAD_TEAM_LEADER)
-					rank = "SqSgt"
+					rank = "SqLdr"
 				if(JOB_SQUAD_LEADER)
 					rank = "SctSgt"
 				if(JOB_SQUAD_RTO)
 					rank = "RTO"
 				else
 					rank = ""
-			squad_info_data["fireteams"][team]["sqsgt"] += list("rank" = rank)
+			squad_info_data["fireteams"][team]["sqldr"] += list("rank" = rank)
 		else
-			squad_info_data["fireteams"][team]["sqsgt"] += list("paygrade" = "N/A")
-			squad_info_data["fireteams"][team]["sqsgt"] += list("rank" = "")
+			squad_info_data["fireteams"][team]["sqldr"] += list("paygrade" = "N/A")
+			squad_info_data["fireteams"][team]["sqldr"] += list("rank" = "")
 	else
-		squad_info_data["fireteams"][team]["sqsgt"] = list(
+		squad_info_data["fireteams"][team]["sqldr"] = list(
 							"name" = "Not assigned",
 							"paygrade" = "",
 							"rank" = "",
@@ -250,7 +250,7 @@
 					if(JOB_SQUAD_SPECIALIST)
 						rank = "Spc"
 					if(JOB_SQUAD_TEAM_LEADER)
-						rank = "SqSgt"
+						rank = "SqLdr"
 					if(JOB_SQUAD_LEADER)
 						rank = "SctSgt"
 					if(JOB_SQUAD_RTO)
@@ -299,7 +299,7 @@
 					if(JOB_SQUAD_SPECIALIST)
 						rank = "Spc"
 					if(JOB_SQUAD_TEAM_LEADER)
-						rank = "SqSgt"
+						rank = "SqLdr"
 					if(JOB_SQUAD_LEADER)
 						rank = "SctSgt"
 					if(JOB_SQUAD_RTO)
