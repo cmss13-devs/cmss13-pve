@@ -259,7 +259,7 @@
 		list("HM", "hudsquad_med"),
 		list("SG", "hudsquad_gun"),
 		list("Spc", "hudsquad_spec"),
-		list("SqSgt", "hudsquad_tl"),
+		list("SqLdr", "hudsquad_tl"),
 		list("SctSgt", "hudsquad_leader"),
 		list("RTO", "hudsquad_rto"),
 	)
