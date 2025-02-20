@@ -248,38 +248,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
-"cb" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = -6;
-	pixel_y = 11
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = 2;
-	pixel_y = 11
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = -3;
-	pixel_y = 24
-	},
-/obj/item/ammo_magazine/minigun{
-	desc = "A huge ammo drum for a huge gun. Your platoon got issued with magazines first which happened several months ago. When will the miniguns come, you wonder?";
-	name = "GSh-7.62 rotating ammo drum (7.62x51mm)";
-	pixel_x = 4;
-	pixel_y = 5
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice2";
-	pixel_x = 16;
-	pixel_y = 16
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/squad_two)
 "cc" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
@@ -527,6 +495,19 @@
 	pixel_y = -15
 	},
 /turf/open/floor/corsat,
+/area/golden_arrow/squad_one)
+"dO" = (
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/closet/secure_closet{
+	name = "squad sergeant locker";
+	req_access_txt = "244;237"
+	},
+/turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/squad_one)
 "eb" = (
 /obj/structure/extinguisher_cabinet/alt{
@@ -799,14 +780,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/supply)
-"gc" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/np92{
-	pixel_y = 10
-	},
-/obj/item/ammo_box/magazine/type73,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/squad_one)
 "gd" = (
 /obj/structure/cargo_container/hd/mid{
 	opacity = 0
@@ -1023,20 +996,6 @@
 "is" = (
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
-"iy" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/large_shrapnel/at_rocket_dud{
-	drop_sensitivity = 0;
-	impact_sensitivity = 1;
-	pixel_x = -6;
-	pixel_y = 13
-	},
-/obj/item/attachable/bayonet/upp{
-	pixel_x = -9;
-	pixel_y = 2
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/dorms)
 "iA" = (
 /obj/structure/machinery/disposal{
 	pixel_y = 14
@@ -1111,6 +1070,10 @@
 "je" = (
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/synthcloset)
+"jf" = (
+/obj/structure/gun_rack/ag80/unloaded,
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/squad_one)
 "jh" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -1224,12 +1187,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
-"jZ" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
-	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/canteen)
 "kh" = (
 /turf/closed/shuttle/elevator{
 	dir = 9
@@ -1427,34 +1384,6 @@
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
-"mg" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/closet/crate/freezer/cooler{
-	pixel_y = 9;
-	pixel_x = 7;
-	can_block_movement = 0;
-	anchored = 1
-	},
-/obj/item/snowball{
-	pixel_y = 9;
-	pixel_x = 5
-	},
-/obj/item/reagent_container/food/snacks/bearmeat{
-	pixel_y = 8;
-	pixel_x = 6;
-	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the NODs you traded?"
-	},
-/obj/item/reagent_container/food/snacks/bearmeat{
-	pixel_y = 14;
-	pixel_x = 6;
-	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the incinerators you traded?"
-	},
-/obj/structure/prop/ice_colony/hula_girl{
-	pixel_x = -7;
-	pixel_y = 12
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/squad_one)
 "mk" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -1788,8 +1717,7 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
-"py" = (
-/obj/item/clothing/accessory/armband,
+"pr" = (
 /obj/item/device/whistle,
 /obj/item/device/binoculars/range/designator,
 /obj/item/weapon/gun/rifle/type71/carbine{
@@ -1799,12 +1727,34 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 16;
+	pixel_y = -15
+	},
 /obj/structure/closet/secure_closet{
 	name = "squad sergeant locker";
-	req_access_txt = "244;237"
+	req_access_txt = "244;238"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/squad_one)
+/area/golden_arrow/squad_two)
+"px" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/large_shrapnel/at_rocket_dud{
+	drop_sensitivity = 0;
+	impact_sensitivity = 1;
+	pixel_x = -6;
+	pixel_y = 13
+	},
+/obj/item/attachable/bayonet/upp{
+	pixel_x = -9;
+	pixel_y = 2
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = 8
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/dorms)
 "pz" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -2095,15 +2045,6 @@
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
-"rT" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
-	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/canteen)
 "rW" = (
 /obj/structure/cargo_container/horizontal/blue/bottom{
 	opacity = 0;
@@ -2330,6 +2271,21 @@
 "tG" = (
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_sergeant)
+"tL" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 10;
+	pixel_x = 4
+	},
+/obj/item/ammo_box/magazine/type73{
+	pixel_x = 3
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = -7;
+	pixel_y = 12
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/squad_one)
 "tM" = (
 /obj/structure/machinery/light/double{
 	dir = 4
@@ -2756,6 +2712,15 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"wU" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
+	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
+	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/canteen)
 "wV" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/golden_arrow/synthcloset)
@@ -3245,6 +3210,33 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/engineering)
+"Be" = (
+/obj/structure/closet/crate/secure/ammo{
+	name = "secure Type 6 grenade crate";
+	color = "#979b6d"
+	},
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/squad_one)
 "Bf" = (
 /obj/structure/machinery/medical_pod/autodoc{
 	dir = 1;
@@ -3510,15 +3502,6 @@
 /obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/prep_hallway)
-"DD" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/np92{
-	pixel_y = 11;
-	pixel_x = -3
-	},
-/obj/item/ammo_box/magazine/type73,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/squad_two)
 "DH" = (
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
@@ -3704,6 +3687,12 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
+/area/golden_arrow/canteen)
+"Gm" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp{
+	desc = "USCM Food Vendor, containing standard military Prepared Meals. It was gifted to Chapaev by Marines of 1st Platoon, Sun Riders as a sign of good will. They did not complain receiving a crate of vodka in return."
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
 "Go" = (
 /obj/structure/bed/chair/comfy/beige{
@@ -4064,20 +4053,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
-"Jl" = (
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/closet/crate/secure/ammo{
-	name = "secure Type 6 grenade crate";
-	color = "#979b6d"
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/squad_two)
 "Js" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
@@ -4339,6 +4314,23 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
+"MG" = (
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/crate/secure/ammo{
+	name = "secure Type 6 grenade crate";
+	color = "#979b6d"
+	},
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/squad_two)
 "ML" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
@@ -4554,6 +4546,10 @@
 /obj/item/prop/magazine/book/uppbooklet,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/dorms)
+"PT" = (
+/obj/structure/gun_rack/ag80/unloaded,
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/squad_two)
 "PV" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/briefing)
@@ -4820,6 +4816,25 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"SE" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/type73,
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 11;
+	pixel_x = -3
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/squad_two)
 "SJ" = (
 /obj/structure/machinery/iv_drip,
 /turf/open/floor/strata/floor2,
@@ -4894,30 +4909,6 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
-"TD" = (
-/obj/structure/closet/crate/secure/ammo{
-	name = "secure Type 6 grenade crate";
-	color = "#979b6d"
-	},
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice2";
-	pixel_x = 16;
-	pixel_y = 16
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/squad_one)
 "TF" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata/multi_tiles/west,
@@ -4992,28 +4983,6 @@
 /obj/item/trash/cigbutt/bcigbutt,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
-"Ur" = (
-/obj/item/clothing/accessory/armband,
-/obj/item/device/whistle,
-/obj/item/device/binoculars/range/designator,
-/obj/item/weapon/gun/rifle/type71/carbine{
-	current_mag = null
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice1";
-	pixel_x = 16;
-	pixel_y = -15
-	},
-/obj/structure/closet/secure_closet{
-	name = "squad sergeant locker";
-	req_access_txt = "244;238"
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/squad_two)
 "Us" = (
 /obj/structure/cargo_container/upp/mk6/right{
 	opacity = 0
@@ -12780,11 +12749,11 @@ tZ
 tZ
 tZ
 ei
-gc
+tL
 Fc
 Fc
 Fc
-py
+dO
 ww
 uB
 wj
@@ -12792,11 +12761,11 @@ og
 Ut
 fB
 NU
-cb
+SE
 Oq
 Oq
 Oq
-Ur
+pr
 IS
 IS
 IS
@@ -12932,7 +12901,7 @@ tZ
 cH
 xL
 ww
-mg
+jf
 Fc
 xZ
 Fc
@@ -12944,7 +12913,7 @@ og
 aZ
 Gz
 NU
-DD
+PT
 ID
 ML
 QB
@@ -13102,7 +13071,7 @@ qq
 rB
 wp
 CM
-iy
+px
 cI
 gF
 is
@@ -13236,7 +13205,7 @@ jF
 lA
 YU
 ww
-TD
+Be
 Ze
 dK
 Ze
@@ -13248,7 +13217,7 @@ Wi
 Ut
 hv
 NU
-Jl
+MG
 QB
 Jt
 QB
@@ -14301,7 +14270,7 @@ GZ
 QI
 Yj
 cT
-rT
+wU
 ck
 vG
 Hv
@@ -14453,7 +14422,7 @@ Qv
 Qv
 Qv
 cT
-jZ
+Gm
 rS
 vG
 iU
@@ -14605,7 +14574,7 @@ bN
 Hr
 YI
 cT
-jZ
+Gm
 rS
 vG
 QR
@@ -14757,7 +14726,7 @@ Qv
 Qv
 yM
 cT
-jZ
+Gm
 rS
 vG
 iU
@@ -14909,7 +14878,7 @@ HZ
 rt
 HM
 cT
-rT
+wU
 Df
 vG
 Hv
