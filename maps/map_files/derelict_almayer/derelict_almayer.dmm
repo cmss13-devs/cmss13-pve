@@ -2753,7 +2753,7 @@
 /area/almayer/medical/operating_room_four)
 "bfk" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/clothing/suit/space/compression/uscm,
+/obj/item/clothing/suit/space/pressure/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering/port)
 "bfs" = (
@@ -7190,7 +7190,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/lower/port_midship_hallway)
 "cLB" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	isopen = 1;
 	starting_helmet_type = null;
 	starting_mask_type = null;
@@ -15539,7 +15539,7 @@
 /turf/open/floor/almayer,
 /area/almayer/lifeboat_pumps/south1)
 "fFv" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_x = 15;
 	pixel_y = -32
@@ -17988,7 +17988,7 @@
 /turf/open/floor/almayer/orangecorner,
 /area/almayer/engineering/upper_engineering)
 "gAX" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -20996,7 +20996,7 @@
 /turf/open/floor/almayer/cargo,
 /area/almayer/living/offices)
 "hKV" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/starboard_umbilical)
 "hKZ" = (
@@ -21918,7 +21918,7 @@
 /turf/open/floor/almayer/red/west,
 /area/almayer/shipboard/brig/perma)
 "idr" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
@@ -21989,7 +21989,7 @@
 	pixel_y = 13
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	layer = 3.3;
 	name = "'Miss July' Pinup";
@@ -23986,7 +23986,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_y = 32
 	},
@@ -31164,7 +31164,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/port_umbilical)
 "lFK" = (
@@ -32407,7 +32407,7 @@
 /turf/open/floor/almayer/tcomms,
 /area/almayer/command/telecomms)
 "meY" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/airlock{
 	pixel_y = -32
 	},
@@ -32968,7 +32968,7 @@
 	pixel_x = -3;
 	pixel_y = -5
 	},
-/obj/item/clothing/head/helmet/space/compression/uscm,
+/obj/item/clothing/head/helmet/space/pressure/uscm,
 /obj/item/cell/crap{
 	pixel_x = 7
 	},
@@ -48120,7 +48120,7 @@
 /area/almayer/command/securestorage)
 "sda" = (
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	layer = 3.3;
 	name = "'Miss July' Pinup";
@@ -49922,7 +49922,7 @@
 /turf/open/floor/almayer,
 /area/almayer/lifeboat_pumps/south2)
 "sQO" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering/port)
 "sRg" = (
@@ -50769,7 +50769,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/hull/upper/u_f_s)
 "tiY" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering/starboard)
 "tjg" = (
@@ -51229,7 +51229,7 @@
 /turf/open/floor/plating/almayer/no_build,
 /area/almayer/hallways/upper/aft_hallway)
 "tsp" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/port_umbilical)
 "ttd" = (
@@ -55520,7 +55520,7 @@
 	serial_number = 12
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	serial_number = 16
@@ -55587,7 +55587,7 @@
 /turf/open/floor/almayer/orange/northwest,
 /area/almayer/engineering/upper_engineering/port)
 "uWP" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_y = 32
 	},
@@ -59073,7 +59073,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/hull/upper/u_a_p)
 "woi" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_y = 32
 	},
@@ -62273,7 +62273,7 @@
 /turf/open/floor/almayer/red/north,
 /area/almayer/shipboard/port_missiles)
 "xGc" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_x = 15;
 	pixel_y = -32

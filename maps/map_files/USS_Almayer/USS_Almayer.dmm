@@ -10651,7 +10651,7 @@
 	},
 /area/almayer/medical/containment/cell)
 "eap" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering/port)
 "eaz" = (
@@ -12337,7 +12337,7 @@
 	serial_number = 12
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	serial_number = 16
@@ -14327,7 +14327,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/lower/port_midship_hallway)
 "fmt" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_y = 32
 	},
@@ -18964,7 +18964,7 @@
 	pixel_y = 13
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	layer = 3.3;
 	name = "'Miss July' Pinup";
@@ -24126,7 +24126,7 @@
 /turf/open/floor/almayer/cargo,
 /area/almayer/living/offices)
 "iJF" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering/starboard)
 "iJN" = (
@@ -29259,7 +29259,7 @@
 /turf/open/floor/almayer_hull/outerhull_dir/east,
 /area/almayer/engineering/upper_engineering/starboard)
 "kzw" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -29271,7 +29271,7 @@
 /turf/open/floor/almayer/cargo,
 /area/almayer/squads/bravo)
 "kzC" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_x = 15;
 	pixel_y = -32
@@ -32057,7 +32057,7 @@
 /turf/open/floor/almayer/green/west,
 /area/almayer/hallways/lower/port_midship_hallway)
 "lxU" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/starboard_umbilical)
 "lxX" = (
@@ -33404,7 +33404,7 @@
 /area/almayer/living/briefing)
 "lUD" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/clothing/suit/space/compression/uscm,
+/obj/item/clothing/suit/space/pressure/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering/port)
 "lUP" = (
@@ -36928,7 +36928,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/upper/u_a_s)
 "ncc" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_x = 15;
 	pixel_y = -32
@@ -38305,7 +38305,7 @@
 	pixel_x = -3;
 	pixel_y = -5
 	},
-/obj/item/clothing/head/helmet/space/compression/uscm,
+/obj/item/clothing/head/helmet/space/pressure/uscm,
 /obj/item/cell/crap{
 	pixel_x = 7
 	},
@@ -39979,7 +39979,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/port_umbilical)
 "oju" = (
@@ -42790,7 +42790,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/shipboard/brig/general_equipment)
 "pjT" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/port_umbilical)
 "pkY" = (
@@ -43658,7 +43658,7 @@
 /turf/open/floor/carpet,
 /area/almayer/living/commandbunks)
 "pxK" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
@@ -55169,7 +55169,7 @@
 /turf/open/floor/almayer/orange,
 /area/almayer/engineering/lower)
 "tAl" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_y = 32
 	},
@@ -55275,7 +55275,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/upper/u_m_s)
 "tDc" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	isopen = 1;
 	starting_helmet_type = null;
 	starting_mask_type = null;
@@ -56718,7 +56718,7 @@
 /area/almayer/living/commandbunks)
 "uis" = (
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	layer = 3.3;
 	name = "'Miss July' Pinup";
@@ -57748,7 +57748,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/command/cic)
 "uyd" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
@@ -58266,7 +58266,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/squads/bravo)
 "uHS" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/airlock{
 	pixel_y = -32
 	},
@@ -58656,7 +58656,7 @@
 /obj/structure/machinery/camera/autoname/almayer{
 	name = "ship-grade camera"
 	},
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_y = 32
 	},
