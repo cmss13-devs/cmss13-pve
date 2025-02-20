@@ -161,6 +161,12 @@
 			affected_mob.emote("cough")
 	return TRUE
 
+/obj/effect/particle_effect/smoke/bad/green
+	color = "#288e76ea"
+
+/obj/effect/particle_effect/smoke/bad/red
+	color = "#ca3d33e8"
+
 /////////////////////////////////////////////
 // Miasma smoke (for LZs)
 /////////////////////////////////////////////
@@ -840,6 +846,12 @@
 
 /datum/effect_system/smoke_spread/bad
 	smoke_type = /obj/effect/particle_effect/smoke/bad
+
+/datum/effect_system/smoke_spread/bad/green
+	smoke_type = /obj/effect/particle_effect/smoke/bad/green
+
+/datum/effect_system/smoke_spread/bad/red
+	smoke_type = /obj/effect/particle_effect/smoke/bad/red
 
 /datum/effect_system/smoke_spread/sleepy
 	smoke_type = /obj/effect/particle_effect/smoke/sleepy

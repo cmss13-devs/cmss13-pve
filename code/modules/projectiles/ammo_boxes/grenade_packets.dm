@@ -104,6 +104,16 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	packet_icon = "hsdp-p"
 	content_type = /obj/item/explosive/grenade/smokebomb
 
+/obj/item/storage/box/packet/smoke/green
+	name = "\improper M47-G HSDP grenade packet"
+	desc = "It contains five M47-G HSDP smoke grenades."
+	content_type = /obj/item/explosive/grenade/smokebomb/green
+
+/obj/item/storage/box/packet/smoke/red
+	name = "\improper M47-R HSDP grenade packet"
+	desc = "It contains five M47-R HSDP smoke grenades."
+	content_type = /obj/item/explosive/grenade/smokebomb/red
+
 /obj/item/storage/box/packet/phosphorus
 	name = "\improper M60 WPSI grenade packet"
 	desc = "It contains five M60 WPSI chemical compound grenades."
