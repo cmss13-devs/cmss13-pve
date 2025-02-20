@@ -48,7 +48,7 @@
 #define SKILL_SPEC_KITTED 2
 /// Can use RPG
 #define SKILL_SPEC_ROCKET 2
-/// Can use thermal cloaks and custom M4RA rifle
+/// Can use thermal cloaks and custom M49A rifle
 #define SKILL_SPEC_SCOUT 3
 /// Can use sniper rifles and camo suits
 #define SKILL_SPEC_SNIPER 4
