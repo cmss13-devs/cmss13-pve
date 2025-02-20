@@ -50128,7 +50128,7 @@
 /turf/open/desert/excavation/component9/southeast,
 /area/desert_dam/exterior/valley/valley_crashsite)
 "ycU" = (
-/obj/item/trash/USCMtray,
+/obj/item/trash/tray/USCMtray,
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/desert_dam/exterior/valley/valley_labs)
 "ycX" = (
