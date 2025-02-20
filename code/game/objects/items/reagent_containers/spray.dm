@@ -124,6 +124,16 @@
 	. = ..()
 	reagents.add_reagent("cleaner", src.volume)
 
+/obj/item/reagent_container/spray/bacteria
+	name = "cleaning bottle"
+	desc = "A brownish-tan spray bottle containing a foamless cleaning agent."
+	icon_state = "cleaner_alt"
+	item_state = "cleaner_alt"
+
+/obj/item/reagent_container/spray/bacteria/Initialize()
+	. = ..()
+	reagents.add_reagent("fbacteria", src.volume)
+
 //pepperspray
 /obj/item/reagent_container/spray/pepper
 	name = "pepperspray"

@@ -1,22 +1,20 @@
 #define FIRE_SHIELD_CD 150
 
 /obj/item/clothing/suit/storage/marine/M35
-	name = "\improper M35 pyrotechnician armor"
-	desc = "A custom set of M35 armor designed for use by USCM Pyrotechnicians."
+	name = "\improper XM5 environmental armor"
+	desc = "An experimental set of environmental protection armor. Deep modification on M3 armor, created using advanced materials in order to protect from any and all environmental hazards, ranging from fire to molecular acid."
 	icon_state = "pyro_armor"
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	light_range = 5
-	fire_intensity_resistance = BURN_LEVEL_TIER_1
+	fire_intensity_resistance = BURN_LEVEL_TIER_6
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
-	specialty = "M35 pyrotechnician"
-	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/specialist/fire_shield)
+	specialty = "XM5 environmental"
 	unacidable = TRUE
+/*
 	var/fire_shield_on = FALSE
 	var/can_activate = TRUE
 
@@ -151,3 +149,4 @@
 		return
 
 	armor.fire_shield()
+*/
