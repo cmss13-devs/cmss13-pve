@@ -295,8 +295,16 @@
 	adj_drowsy = -3
 
 /datum/reagent/drink/cold/space_cola
-	name = "Space Cola"
+	name = "Coca-Cola"
 	id = "cola"
+	description = "A refreshing beverage."
+	reagent_state = LIQUID
+	color = "#100800" // rgb: 16, 8, 0
+	adj_drowsy = -3
+
+/datum/reagent/drink/cold/pepsi
+	name = "Pepsi"
+	id = "pepsi"
 	description = "A refreshing beverage."
 	reagent_state = LIQUID
 	color = "#100800" // rgb: 16, 8, 0
@@ -325,28 +333,26 @@
 	M.drowsyness = 0
 
 /datum/reagent/drink/cold/spacemountainwind
-	name = "Mountain Wind"
+	name = "Mountain Dew"
 	id = "spacemountainwind"
-	description = "Blows right through you like a space wind."
+	description = "The favoured drink of all true keyboard warriors."
 	color = "#102000" // rgb: 16, 32, 0
 	adj_drowsy = -7
 	adj_sleepy = -1
 
 /datum/reagent/drink/cold/dr_gibb
-	name = "Dr. Gibb"
+	name = "Dr Pepper"
 	id = "dr_gibb"
-	description = "A delicious blend of 42 different flavours"
-	color = "#102000" // rgb: 16, 32, 0
+	description = "A delicious blend of 23 different flavours"
+	color = "#110b03" // rgb: 16, 32, 0
 	adj_drowsy = -6
 
 /datum/reagent/drink/cold/space_up
-	name = "Space-Up"
+	name = "7-UP"
 	id = "space_up"
-	description = "Tastes like a hull breach in your mouth."
-	color = "#202800" // rgb: 32, 40, 0
+	description = "Friend to many a cocktail."
+	color = "#677c12" // rgb: 32, 40, 0
 	adj_temp = 0
-
-
 
 //BEER//
 
