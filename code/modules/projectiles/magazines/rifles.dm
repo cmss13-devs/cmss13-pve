@@ -137,7 +137,7 @@
 	max_rounds = 95
 	caliber = "10x23mm"
 	gun_type = /obj/item/weapon/gun/rifle/ag80
-	default_ammo = /datum/ammo/bullet/rifle
+	default_ammo = /datum/ammo/bullet/rifle/upp
 	ammo_band_icon = "+ag80_band"
 	ammo_band_icon_empty = "+ag80_band_e"
 //-------------------------------------------------------
