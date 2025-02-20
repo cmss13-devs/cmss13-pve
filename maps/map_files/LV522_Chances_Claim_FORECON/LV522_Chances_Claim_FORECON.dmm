@@ -21181,7 +21181,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -21394,7 +21394,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "kso" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -23296,7 +23296,7 @@
 	pixel_y = 20
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jaccuzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jaccuzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	pixel_x = -5;
@@ -30057,7 +30057,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -44710,7 +44710,7 @@
 /turf/open/floor/almayer/w_y0/north,
 /area/lv522/atmos/way_in_command_centre)
 "vaB" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
