@@ -1211,6 +1211,12 @@
 	icon_state = "wristwatch_dallas"
 	item_state = "wristwatch_fancy"
 
+/obj/item/storage/box/watch_box/dallas
+	name = "\improper Samani E-125 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/dallas/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/dallas(src)
+
 //===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
 
 /obj/item/clothing/accessory/pads

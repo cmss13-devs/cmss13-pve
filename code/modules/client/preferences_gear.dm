@@ -1266,6 +1266,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/storage/box/watch_box/burke
 	cost = 3
 
+/datum/gear/misc/watch/dallas
+	display_name = "Samani E-125 wristwatch"
+	path = /obj/item/storage/box/watch_box/dallas
+	cost = 3
+
 /datum/gear/misc/sunscreen_stick
 	display_name = "USCM issue sunscreen"
 	path = /obj/item/facepaint/sunscreen_stick
