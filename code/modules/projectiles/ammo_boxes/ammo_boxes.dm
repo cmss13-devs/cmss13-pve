@@ -257,7 +257,7 @@
 
 /obj/item/ammo_box/rounds
 	name = "\improper rifle ammunition box (10x24mm)"
-	desc = "A 10x24mm ammunition box. Used to refill M41A MK1, MK2, M4RA and M41AE2 HPR magazines. It comes with a leather strap allowing to wear it on the back."
+	desc = "A 10x24mm ammunition box. Used to refill M41A and M41AE2 HPR magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_m41"
 	item_state = "base_m41"
 	flags_equip_slot = SLOT_BACK
@@ -284,6 +284,7 @@
 	if(overlays)
 		overlays.Cut()
 	overlays += image(text_markings_icon, icon_state = "text[overlay_gun_type]") //adding base color stripes
+	overlays += image(text_markings_icon, icon_state = "base_type[overlay_content]") //adding base color stripes
 
 	if(bullet_amount == max_bullet_amount)
 		overlays += image(handfuls_icon, icon_state = "rounds[overlay_content]")

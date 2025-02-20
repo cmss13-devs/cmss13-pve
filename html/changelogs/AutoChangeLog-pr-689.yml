@@ -1,0 +1,6 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - rscadd: "M39 rebranded as M77 'Viper 9'"
+  - balance: "M39 given pistol ammo"
+  - bugfix: "Increases volume of all weapons to 60, a few guns were apparently incredibly quiet for some reason."
