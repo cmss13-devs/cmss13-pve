@@ -9,7 +9,7 @@
 /// Similar to the BODYTEMP_AUTORECOVERY_DIVISOR, but this is the divisor which is applied at the stage that follows autorecovery. This is the divisor which comes into play when the human's loc temperature is higher than their body temperature. Make it lower to gain bodytemp faster.
 #define BODYTEMP_HEAT_DIVISOR 6
 /// The maximum number of degrees that your body can cool in 1 tick, when in a cold area.
-#define BODYTEMP_COOLING_MAX -30
+#define BODYTEMP_COOLING_MAX -999 //death to space
 /// The maximum number of degrees that your body can heat up in 1 tick, when in a hot area.
 #define BODYTEMP_HEATING_MAX 30
 /// The limit the human body can take before it starts taking damage from heat.
