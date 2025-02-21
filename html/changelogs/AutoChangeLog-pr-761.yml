@@ -1,0 +1,4 @@
+author: "Zonespace27"
+delete-after: True
+changes:
+  - rscdel: "Human AI no longer try to heal each other."
