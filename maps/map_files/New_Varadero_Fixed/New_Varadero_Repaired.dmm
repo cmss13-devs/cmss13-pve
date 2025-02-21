@@ -15298,6 +15298,10 @@
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
+"mNU" = (
+/obj/item/fishing_pole,
+/turf/open/gm/coast/west,
+/area/varadero/exterior/pontoon_beach)
 "mOg" = (
 /obj/structure/prop/ice_colony/dense/planter_box/plated{
 	dir = 9;
@@ -18269,7 +18273,7 @@
 /area/varadero/interior/cargo)
 "pth" = (
 /obj/structure/surface/rack,
-/obj/item/tool/pickaxe/plasmacutter,
+/obj/item/fishing_pole,
 /turf/open/gm/dirt,
 /area/varadero/interior/maintenance/north)
 "ptm" = (
@@ -21370,6 +21374,10 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/medical)
+"rXF" = (
+/obj/item/fishing_pole,
+/turf/open/gm/dirt,
+/area/varadero/exterior/monsoon)
 "rXL" = (
 /obj/item/tool/shovel,
 /turf/open/gm/dirt/desert_dug,
@@ -44220,7 +44228,7 @@ wax
 eLH
 eLH
 eGX
-hKK
+mNU
 fLY
 dgH
 eLH
@@ -59423,7 +59431,7 @@ xPY
 xPY
 ghN
 bGU
-bGU
+rXF
 bGU
 rvD
 bGU
