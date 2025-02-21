@@ -255,7 +255,7 @@
 	name = SQUAD_SOLAR
 	equipment_color = "#5a2c2c"
 	chat_color = "#5a2c2c"
-	radio_freq = SOF_FREQ
+	radio_freq = SOLDEV_FREQ
 	minimap_color = "#5a2c2c"
 
 	active = FALSE
