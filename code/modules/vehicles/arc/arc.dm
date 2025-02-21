@@ -28,8 +28,6 @@
 
 	required_skill = SKILL_VEHICLE_LARGE
 
-	movement_sound = 'sound/vehicles/tank_driving.ogg'
-
 	luminosity = 7
 
 	hardpoints_allowed = list(
