@@ -730,7 +730,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	pixel_x = -7
 	},
@@ -1144,7 +1144,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	pixel_x = 8
 	},
@@ -2504,7 +2504,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Squad Sergeant";
 	pixel_x = -7
@@ -3055,7 +3055,7 @@
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/weapon/butterfly,
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Platoon Corpsman";
 	pixel_x = -7
@@ -3226,7 +3226,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	pixel_x = 8
 	},
@@ -3373,7 +3373,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Smartgunner";
 	pixel_x = 8
@@ -3466,7 +3466,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	pixel_x = -7
 	},
@@ -3673,7 +3673,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Platoon Sergeant";
 	pixel_x = -7
@@ -3802,7 +3802,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Squad Sergeant";
 	pixel_x = 8
@@ -3987,7 +3987,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_y = 14;
 	job = "Platoon Commander";
 	can_block_movement = 0;
@@ -4744,7 +4744,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	has_cryo_gear = 0;
 	job = "Smartgunner";
 	pixel_x = 8

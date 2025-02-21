@@ -3147,11 +3147,11 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "alc" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -7;
 	job = "Section Sergeant"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8;
 	job = "Corpsman"
 	},
@@ -4280,10 +4280,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "aoU" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -7800,11 +7800,11 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "aAI" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8;
 	job = "Smartgunner"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -7;
 	job = "Squad Leader"
 	},
@@ -8857,11 +8857,11 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/prep_hallway)
 "aEe" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = -7;
 	job = "Smartgunner"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	pixel_x = 8;
 	job = "Squad Leader"
 	},
@@ -9228,7 +9228,7 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoonprep)
 "aFo" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/spawn_personal{
 	job = "Platoon Commander"
 	},
 /obj/item/clothing/under/marine/officer/boiler,
