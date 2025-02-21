@@ -465,8 +465,8 @@
 		to_chat(user, SPAN_NOTICE("You begin unloading [src]. Hold still..."))
 		if(do_after(user,current_mag.reload_delay, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 			playsound(user, unload_sound, 25, 1)
-			user.visible_message(SPAN_NOTICE("[user] unloads [ammo] from [src]."),
-			SPAN_NOTICE("You unload [ammo] from [src]."))
+			user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src]."),
+			SPAN_NOTICE("You unload [current_mag] from [src]."))
 			if(current_mag.current_rounds > 0)
 				make_battery_drum(user, drop_override, current_mag.current_rounds)
 			else

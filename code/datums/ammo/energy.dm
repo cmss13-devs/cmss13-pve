@@ -92,7 +92,6 @@
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/deathsquad),
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak),
 	))
 
 /datum/ammo/energy/plasma/on_hit_mob(mob/M,obj/projectile/P)
