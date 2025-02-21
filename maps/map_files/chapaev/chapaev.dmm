@@ -342,18 +342,11 @@
 /area/golden_arrow/synthcloset)
 "cK" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/prop/almayer/CICmap{
-	density = 0;
-	faction = "UPP";
-	icon_state = "shuttle";
-	layer = 2.97;
-	minimap_type = 8;
-	name = "Tactical Map Display";
-	pixel_x = 7
-	},
+/obj/structure/machinery/prop/almayer/CICmap/upp,
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	network = list("Chapaev","Vehicle");
-	pixel_x = -10
+	pixel_x = -22;
+	pixel_y = 0
 	},
 /obj/structure/phone_base/upp_net{
 	name = "Overwatch Telephone";
@@ -1593,10 +1586,9 @@
 /area/golden_arrow/engineering)
 "nG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/prop/almayer/CICmap{
-	faction = "UPP";
-	pixel_y = 5;
-	layer = 3.1
+/obj/structure/machinery/prop/almayer/CICmap/upp{
+	pixel_x = 0;
+	pixel_y = 6
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5505,13 +5497,12 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
 "Zs" = (
-/obj/structure/machinery/computer/overwatch/almayer{
-	density = 1;
-	faction = "UPP"
-	},
 /obj/item/clothing/glasses/hud/health{
 	pixel_x = 7;
 	pixel_y = 17
+	},
+/obj/structure/machinery/computer/overwatch/almayer/upp{
+	density = 1
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)

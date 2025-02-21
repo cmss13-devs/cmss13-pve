@@ -10,6 +10,11 @@
 	else
 		to_chat(src, SPAN_NOTICE(" You will no longer examine things you click on."))
 
+/mob/dead/observer/do_click(atom/A, location, params)
+	. = ..()
+	if(SEND_SIGNAL(src, COMSIG_OBSERVER_CLICKON, A, params) & COMSIG_MOB_CLICK_CANCELED)
+		return
+
 /mob/dead/observer/click(atom/target, list/mods)
 	if(..())
 		return TRUE

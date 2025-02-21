@@ -71,7 +71,6 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/cmd_admin_open_ares,
 	/client/proc/cmd_admin_say, /*staff-only ooc chat*/
 	/client/proc/cmd_mod_say, /* alternate way of typing asay, no different than cmd_admin_say  */
-	/client/proc/cmd_admin_tacmaps_panel,
 	/client/proc/other_records,
 	/datum/admins/proc/toggle_ai,
 	/datum/admins/proc/toggle_human_ai,

@@ -41,7 +41,6 @@
 	skills = /datum/skills/CMO
 
 	minimap_icon = list("medic" = MINIMAP_ICON_COLOR_HEAD)
-	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 
 	utility_under = list(/obj/item/clothing/under/rank/chief_medical_officer)
 	utility_hat = list()

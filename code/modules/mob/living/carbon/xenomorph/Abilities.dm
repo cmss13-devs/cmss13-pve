@@ -369,16 +369,6 @@
 	xeno.hive_message()
 	return ..()
 
-/datum/action/xeno_action/onclick/queen_tacmap
-	name = "View Xeno Tacmap"
-	action_icon_state = "toggle_queen_zoom"
-	plasma_cost = 0
-
-/datum/action/xeno_action/onclick/queen_tacmap/use_ability(atom/target)
-	var/mob/living/carbon/xenomorph/queen/xeno = owner
-	xeno.xeno_tacmap()
-	return ..()
-
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 /mob/living/carbon/xenomorph/proc/add_abilities()

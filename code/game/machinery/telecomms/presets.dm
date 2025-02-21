@@ -47,7 +47,7 @@
 	. = ..()
 
 	if(z)
-		SSminimaps.add_marker(src, z, MINIMAP_FLAG_ALL, "supply")
+		SSminimaps.add_marker(src, MINIMAP_FLAG_ALL, image('icons/UI_icons/map_blips_large.dmi', null, "supply"))
 
 // doesn't need power, instead uses health
 /obj/structure/machinery/telecomms/relay/preset/tower/inoperable(additional_flags)

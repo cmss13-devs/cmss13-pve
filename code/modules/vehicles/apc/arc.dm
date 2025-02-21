@@ -35,6 +35,7 @@
 		/obj/item/hardpoint/support/flare_launcher,
 		/obj/item/hardpoint/locomotion/apc_wheels/arc,
 	)
+	minimap_icon_state = "arc"
 
 /obj/vehicle/multitile/apc/arc/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
