@@ -435,7 +435,7 @@
 /obj/item/book/manual/nuclear
 	name = "Fission Mailed: Nuclear Sabotage 101"
 	icon_state ="book_sop"
-	author = "The Colonial Liberation Front"
+	author = "unknown. It's unsigned."
 	title = "Fission Mailed: Nuclear Sabotage 101"
 
 	dat = {"<html>
@@ -451,7 +451,7 @@
 				</head>
 				<body>
 				<h1>Nuclear Explosives 101</h1>
-				Hello and thank you for choosing the CLF for your nuclear information needs. Today's crash course will deal with the operation of a Fusion Class Weyland-Yutani made Nuclear Device.<br><br>
+				Hello and thank you for choosing us for your nuclear information needs. Today's crash course will deal with the operation of a Fusion Class Weyland-Yutani made Nuclear Device.<br><br>
 
 				First and foremost, DO NOT TOUCH ANYTHING UNTIL THE BOMB IS IN PLACE. Pressing any button on the compacted bomb will cause it to extend and bolt itself into place. If this is done, to unbolt it, one must completely log in, which at this time may not be possible.<br>
 
