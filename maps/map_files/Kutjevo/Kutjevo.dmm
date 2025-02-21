@@ -13999,7 +13999,6 @@
 /turf/closed/wall/kutjevo/rock,
 /area/kutjevo/interior/colony_S_East)
 "vdG" = (
-/obj/structure/closet/wardrobe/medic_white,
 /obj/structure/machinery/light{
 	dir = 4
 	},

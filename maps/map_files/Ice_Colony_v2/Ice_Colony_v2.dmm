@@ -5655,7 +5655,7 @@
 /turf/open/ice,
 /area/ice_colony/exterior/surface/valley/south/excavation)
 "bdV" = (
-/obj/structure/closet/wardrobe/mixed,
+/obj/structure/closet,
 /turf/open/floor/darkbrown2,
 /area/ice_colony/surface/dorms/lavatory)
 "beB" = (
@@ -7576,7 +7576,7 @@
 /turf/open/floor/wood,
 /area/ice_colony/underground/security/marshal)
 "bCe" = (
-/obj/structure/closet/secure_closet/warden,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/wood,
 /area/ice_colony/underground/security/marshal)
 "bCf" = (
@@ -12483,10 +12483,6 @@
 	},
 /turf/open/floor/darkgreen2/west,
 /area/ice_colony/underground/crew/bball)
-"fZM" = (
-/obj/structure/closet/wardrobe/green,
-/turf/open/floor/darkgreen2/east,
-/area/ice_colony/surface/hydroponics/north)
 "fZW" = (
 /turf/open/floor/darkyellow2/north,
 /area/ice_colony/surface/research/tech_storage)
@@ -16144,7 +16140,6 @@
 /turf/open/floor/darkpurple2,
 /area/ice_colony/underground/research)
 "kyP" = (
-/obj/structure/closet/wardrobe/green,
 /obj/structure/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -18296,7 +18291,7 @@
 /turf/open/floor/dark2,
 /area/ice_colony/underground/hallway/south_east)
 "nlS" = (
-/obj/structure/closet/wardrobe/chaplain_black,
+/obj/structure/closet,
 /turf/open/floor/wood,
 /area/ice_colony/underground/crew/chapel)
 "nmO" = (
@@ -21317,10 +21312,6 @@
 "rdh" = (
 /turf/open/floor/darkgreen2,
 /area/ice_colony/underground/hallway/south_east)
-"rdZ" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/darkyellow2/southeast,
-/area/ice_colony/underground/engineering)
 "reA" = (
 /obj/structure/surface/table,
 /obj/item/inflatable,
@@ -23279,10 +23270,6 @@
 /obj/effect/landmark/hunter_primary,
 /obj/effect/landmark/queen_spawn,
 /turf/open/floor/dark2,
-/area/ice_colony/underground/engineering)
-"txy" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/darkyellow2,
 /area/ice_colony/underground/engineering)
 "txV" = (
 /obj/structure/machinery/firealarm{
@@ -26203,7 +26190,6 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/engineering)
 "wXV" = (
-/obj/structure/closet/wardrobe/green,
 /obj/structure/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -26589,10 +26575,6 @@
 	},
 /turf/open/floor/darkgreen2,
 /area/ice_colony/surface/hydroponics/lobby)
-"xwc" = (
-/obj/structure/closet/wardrobe/green,
-/turf/open/floor/darkgreen2/east,
-/area/ice_colony/surface/hydroponics/south)
 "xwP" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -26800,7 +26782,7 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/tcomms)
 "xKt" = (
-/obj/structure/closet/wardrobe/mixed,
+/obj/structure/closet,
 /turf/open/floor/darkbrown2/southeast,
 /area/ice_colony/surface/dorms/lavatory)
 "xKA" = (
@@ -47819,7 +47801,7 @@ aif
 oDo
 kyP
 hly
-fZM
+nHt
 tmY
 aif
 alj
@@ -47858,7 +47840,7 @@ hrN
 alL
 ayp
 wvW
-xwc
+fcM
 kUE
 wXV
 gTY
@@ -63189,7 +63171,7 @@ nWK
 fxF
 iBd
 evs
-txy
+cHL
 btz
 bum
 buj
@@ -63471,7 +63453,7 @@ evs
 pse
 toW
 evs
-txy
+cHL
 btz
 bun
 buj
@@ -63753,7 +63735,7 @@ sHJ
 sUC
 toW
 nua
-rdZ
+xaZ
 btz
 buo
 buj

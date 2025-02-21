@@ -22629,7 +22629,7 @@
 /area/almayer/maint/hull/upper/u_f_p)
 "irv" = (
 /obj/structure/closet/secure_closet{
-	name = "\improper Lethal Injection Locker"
+	name = "\improper Lethal Injection locker"
 	},
 /obj/item/reagent_container/ld50_syringe/choral,
 /obj/item/reagent_container/ld50_syringe/choral,
@@ -63462,7 +63462,7 @@
 	pixel_y = 28
 	},
 /obj/structure/closet/secure_closet/bar{
-	name = "Success Cabinet";
+	name = "Success cabinet";
 	req_access_txt = "1"
 	},
 /turf/open/floor/wood/ship,

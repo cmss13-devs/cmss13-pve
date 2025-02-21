@@ -34464,7 +34464,7 @@
 /turf/open/floor/prison/darkpurple2/east,
 /area/desert_dam/interior/lab_northeast/east_lab_biology)
 "oKR" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /obj/item/clothing/suit/storage/CMB,
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/prison/darkredfull2,
@@ -46931,7 +46931,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
 /area/desert_dam/exterior/valley/valley_medical)
 "wgT" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/personal/RD,
 /turf/open/floor/prison/blue/north,
 /area/desert_dam/interior/lab_northeast/east_lab_RND)
 "wgX" = (
