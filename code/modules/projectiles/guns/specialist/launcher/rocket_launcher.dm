@@ -3,8 +3,8 @@
 //M5 RPG
 
 /obj/item/weapon/gun/launcher/rocket
-	name = "\improper M5 RPG"
-	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
+	name = "\improper rocket launcher"
+	desc = "Modelled after the iconic Carl Gustaf recoilless rifle, this heavy piece of kit can still kill things just as well as its forefather could hundreds of years ago."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m5"
 	item_state = "m5"
@@ -140,7 +140,7 @@
 			qdel(current_mag)
 			user.drop_inv_item_on_ground(rocket)
 			current_mag = rocket
-			rocket.forceMove((src))
+			rocket.forceMove(src)
 			replace_ammo(,rocket)
 			to_chat(user, SPAN_NOTICE("You load [rocket] into [src]."))
 			if(reload_sound)
@@ -153,7 +153,7 @@
 	else
 		qdel(current_mag)
 		current_mag = rocket
-		rocket.forceMove((src))
+		rocket.forceMove(src)
 		replace_ammo(,rocket)
 	return TRUE
 
@@ -200,8 +200,11 @@
 		mob.apply_effect(6, STUTTER)
 		mob.emote("pain")
 
-/obj/item/weapon/gun/launcher/rocket/marine //Done so subtypes don't all inherit the starting scope
-
+//-------------------------------------------------------
+//Marine M5 RPG, comes with baked in scope unlike the colony-made launcher
+/obj/item/weapon/gun/launcher/rocket/marine
+	name = "\improper M5 RPG"
+	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
 
 /obj/item/weapon/gun/launcher/rocket/marine/handle_starting_attachment()
 	..()
@@ -213,7 +216,6 @@
 
 //-------------------------------------------------------
 //Army version, just reflavoured description
-
 /obj/item/weapon/gun/launcher/rocket/marine/army
 	desc = "The M5 RPG is a common squad-level anti-armor weapon used by the US Army. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
 

@@ -579,12 +579,13 @@
 	antigrief_protection = FALSE
 	arm_sound = 'sound/weapons/grenade.ogg'
 	var/datum/effect_system/smoke_spread/bad/smoke
+	var/smoke_type = /datum/effect_system/smoke_spread/bad
 	var/smoke_radius = 3
 	dual_purpose = TRUE
 
 /obj/item/explosive/grenade/smokebomb/New()
 	..()
-	smoke = new /datum/effect_system/smoke_spread/bad
+	smoke = new smoke_type(src)
 	smoke.attach(src)
 
 /obj/item/explosive/grenade/smokebomb/Destroy()
@@ -621,85 +622,15 @@
 	name = "\improper M47-G HSDP smoke grenade"
 	desc = "The M47 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. Can be fired from a PN 30mm UGL for impact detonation, or primed in-hand and thrown to detonate after 2 seconds. The G subtype erupts into a cloud of green smoke upon detonation."
 	icon_state = "grenade_smoke_green"
-	var/datum/effect_system/smoke_spread/bad/green/gsmoke
+	smoke_type = /datum/effect_system/smoke_spread/bad/green
 	smoke_radius = 2
-
-/obj/item/explosive/grenade/smokebomb/green/New()
-	..()
-	gsmoke = new /datum/effect_system/smoke_spread/bad/green
-	gsmoke.attach(src)
-
-/obj/item/explosive/grenade/smokebomb/green/Destroy()
-	QDEL_NULL(gsmoke)
-	return ..()
-
-/obj/item/explosive/grenade/smokebomb/green/prime(mob/living/user)
-	set waitfor = 0
-	if(fuse_type == IMPACT_FUSE)
-		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
-		return
-	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	gsmoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
-	gsmoke.start()
-	new /obj/item/trash/grenade(get_turf(src))
-	qdel(src)
-
-/obj/item/explosive/grenade/smokebomb/green/launch_impact(atom/hit_atom)
-	if(fuse_type != IMPACT_FUSE)
-		return
-	var/detonate = TRUE
-	if(isobj(hit_atom) && !rebounding)
-		detonate = FALSE
-	if(isturf(hit_atom) && hit_atom.density && !rebounding)
-		detonate = FALSE
-	if(active && detonate) // Active, and we reached our destination.
-		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-		gsmoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
-		gsmoke.start()
-		new /obj/item/trash/grenade(get_turf(src))
-		qdel(src)
 
 /obj/item/explosive/grenade/smokebomb/red
 	name = "\improper M47-R HSDP smoke grenade"
 	desc = "The M47 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. Can be fired from a PN 30mm UGL for impact detonation, or primed in-hand and thrown to detonate after 2 seconds. The R subtype erupts into a cloud of red smoke upon detonation."
 	icon_state = "grenade_smoke_red"
-	var/datum/effect_system/smoke_spread/bad/red/rsmoke
+	smoke_type = /datum/effect_system/smoke_spread/bad/red
 	smoke_radius = 2
-
-/obj/item/explosive/grenade/smokebomb/red/New()
-	..()
-	rsmoke = new /datum/effect_system/smoke_spread/bad/red
-	rsmoke.attach(src)
-
-/obj/item/explosive/grenade/smokebomb/red/Destroy()
-	QDEL_NULL(rsmoke)
-	return ..()
-
-/obj/item/explosive/grenade/smokebomb/red/prime(mob/living/user)
-	set waitfor = 0
-	if(fuse_type == IMPACT_FUSE)
-		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
-		return
-	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	rsmoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
-	rsmoke.start()
-	new /obj/item/trash/grenade(get_turf(src))
-	qdel(src)
-
-/obj/item/explosive/grenade/smokebomb/red/launch_impact(atom/hit_atom)
-	if(fuse_type != IMPACT_FUSE)
-		return
-	var/detonate = TRUE
-	if(isobj(hit_atom) && !rebounding)
-		detonate = FALSE
-	if(isturf(hit_atom) && hit_atom.density && !rebounding)
-		detonate = FALSE
-	if(active && detonate) // Active, and we reached our destination.
-		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-		rsmoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
-		rsmoke.start()
-		new /obj/item/trash/grenade(get_turf(src))
-		qdel(src)
 
 /obj/item/explosive/grenade/smokebomb/upp
 	name = "RDG-17 smoke grenade"
