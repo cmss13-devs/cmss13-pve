@@ -1268,59 +1268,6 @@
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
-/obj/item/weapon/gun/rifle/type71/rifleman
-	//add GL
-	random_spawn_chance = 100
-	random_rail_chance = 70
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
-	)
-	random_muzzle_chance = 100
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-	)
-	random_under_chance = 40
-	random_spawn_under = list(
-		/obj/item/attachable/verticalgrip/upp,
-	)
-
-/obj/item/weapon/gun/rifle/type71/dual
-	random_spawn_chance = 100
-	random_rail_chance = 70
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
-	)
-	random_muzzle_chance = 100
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-	)
-	random_under_chance = 40
-	random_spawn_under = list(
-		/obj/item/attachable/lasersight/upp,
-		/obj/item/attachable/verticalgrip/upp,
-	)
-
-/obj/item/weapon/gun/rifle/type71/sapper
-	current_mag = /obj/item/ammo_magazine/rifle/type71/ap
-	random_spawn_chance = 100
-	random_rail_chance = 80
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_muzzle_chance = 80
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet/upp,
-	)
-	random_under_chance = 90
-	random_spawn_under = list(
-		/obj/item/attachable/attached_gun/extinguisher,
-	)
-
 /obj/item/weapon/gun/rifle/type71/flamer
 	name = "\improper Type 71-F pulse rifle"
 	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x27mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This variant features an integrated incinerator unit."
@@ -1347,20 +1294,6 @@
 	S.flags_attach_features &= ~ATTACH_REMOVABLE
 	S.Attach(src)
 	update_attachable(S.slot)
-
-/obj/item/weapon/gun/rifle/type71/flamer/leader
-	random_spawn_chance = 100
-	random_rail_chance = 100
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/scope/mini/upp,
-	)
-	random_muzzle_chance = 100
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-	)
 
 /obj/item/weapon/gun/rifle/type71/carbine
 	name = "\improper Type 71 pulse carbine"
@@ -1408,22 +1341,6 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	scatter_unwielded = SCATTER_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
-
-/obj/item/weapon/gun/rifle/type71/carbine/dual
-	random_spawn_chance = 100
-	random_rail_chance = 70
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
-	)
-	random_muzzle_chance = 100
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-	)
-	random_under_chance = 40
-	random_spawn_under = list(
-		/obj/item/attachable/verticalgrip/upp,
-	)
 
 /obj/item/weapon/gun/rifle/type71/carbine/commando
 	name = "\improper Type 71 'Commando' pulse carbine"
