@@ -2514,27 +2514,6 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
-"pt" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/machinery/computer/crew/alt{
-	dir = 1;
-	pixel_x = -8
-	},
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/structure/machinery/light/double,
-/obj/structure/machinery/computer/med_data/laptop{
-	dir = 1;
-	pixel_x = 10;
-	req_one_access = list(240, 241, 242)
-	},
-/turf/open/space/basic,
-/area/space)
 "px" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -2748,30 +2727,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
-"qM" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/tool/hand_labeler{
-	pixel_x = -6;
-	pixel_y = 12
-	},
-/obj/item/prop/tableflag/upp{
-	pixel_x = 7;
-	pixel_y = 12
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/machinery/computer/secure_data{
-	dir = 8;
-	req_access = null
-	},
-/turf/open/space/basic,
-/area/space)
 "qO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo";
@@ -5528,6 +5483,12 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/platoon_commander_rooms)
+"GR" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
 "GS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -6127,6 +6088,9 @@
 "KF" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/hangar)
@@ -8103,24 +8067,6 @@
 /obj/item/reagent_container/food/snacks/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
-"XD" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/device/flashlight/lamp/on{
-	pixel_y = 21;
-	pixel_x = 2;
-	anchored = 1
-	},
-/obj/structure/machinery/computer/skills{
-	dir = 8;
-	req_one_access = null
-	},
-/turf/open/space/basic,
-/area/space)
 "XF" = (
 /obj/structure/surface/table/gamblingtable{
 	color = "#aeaeae"
@@ -16023,7 +15969,7 @@ mV
 mV
 mV
 mV
-XD
+mV
 mV
 mV
 mV
@@ -16323,7 +16269,7 @@ mV
 mV
 mV
 mV
-qM
+mV
 mV
 mV
 mV
@@ -19067,7 +19013,7 @@ yd
 pB
 mV
 mV
-pt
+mV
 mV
 mV
 mV
@@ -20215,9 +20161,9 @@ bF
 bF
 bF
 bF
-Sa
+GR
 KF
-Sa
+GR
 bF
 bF
 bF
@@ -23255,17 +23201,17 @@ bF
 bF
 bF
 bF
-Sa
+GR
 KF
-Sa
+GR
 bF
 bF
 bF
 bF
 bF
-DL
-DL
-DL
+GR
+GR
+GR
 bF
 bF
 bF
