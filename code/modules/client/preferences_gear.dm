@@ -491,11 +491,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/gloves/marine/brown
 
 /datum/gear/clothing/black_fingerless_gloves
-	display_name = "brown combat gloves"
+	display_name = "black fingerless combat gloves"
 	path = /obj/item/clothing/gloves/marine/fingerless
 
 /datum/gear/clothing/brown_fingerless_gloves
-	display_name = "brown combat gloves"
+	display_name = "brown fingerless combat gloves"
 	path = /obj/item/clothing/gloves/marine/brown/fingerless
 
 /datum/gear/clothing/flak
@@ -557,31 +557,31 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "M3 Pattern Heart Paint"
 	path = /obj/item/clothing/accessory/paint/heart
 
-/datum/gear/armor/uaflag
+/datum/gear/paint/uaflag
 	display_name = "M3 Pattern Flag Paint"
 	path = /obj/item/clothing/accessory/paint/uaflag
 
-/datum/gear/misc/facepaint_green
+/datum/gear/paint/facepaint_green
 	display_name = "Facepaint, green"
 	path = /obj/item/facepaint/green
 	cost = 2
 
-/datum/gear/misc/facepaint_brown
+/datum/gear/paint/facepaint_brown
 	display_name = "Facepaint, brown"
 	path = /obj/item/facepaint/brown
 	cost = 2
 
-/datum/gear/misc/facepaint_black
+/datum/gear/paint/facepaint_black
 	display_name = "Facepaint, black"
 	path = /obj/item/facepaint/black
 	cost = 2
 
-/datum/gear/misc/facepaint_skull
+/datum/gear/paint/facepaint_skull
 	display_name = "Facepaint, skull"
 	path = /obj/item/facepaint/skull
 	cost = 3
 
-/datum/gear/misc/facepaint_body
+/datum/gear/paint/facepaint_body
 	display_name = "Fullbody paint"
 	path = /obj/item/facepaint/sniper
 	cost = 4 //To match with the skull paint amount of point, gave this amount of point for the same reason of the skull facepaint (too cool for everyone to be able to constantly use)
@@ -1372,8 +1372,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc
 	category = "Miscellaneous"
 
-
-
 /datum/gear/misc/pdt_kit
 	display_name = "PDT/L kit"
 	path = /obj/item/storage/box/pdt_kit
@@ -1449,3 +1447,4 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Colonial Companion multi-tool"
 	path = /obj/item/weapon/swiss_army_knife
 	cost = 4 // Two tools & a knife in one package
+
