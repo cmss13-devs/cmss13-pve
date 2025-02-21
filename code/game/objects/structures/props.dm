@@ -571,9 +571,9 @@
 	switch(remaining_fuel)
 		if(7 to INFINITY)
 			. += "The fire is roaring."
-		if(2 to 6)
+		if(4 to 6)
 			. += "The fire is burning warm."
-		if(-INFINITY to 1)
+		if(-INFINITY to 3)
 			. += "The embers of the fire barely burns."
 
 /obj/structure/prop/brazier/campfire/process(delta_time)
