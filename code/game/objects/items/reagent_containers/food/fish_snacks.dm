@@ -60,8 +60,8 @@
 		if(gut_loot <= 0)
 			gut_loot = 1
 
-		gibs(user.loc)
-		new base_gut_meat(get_turf(user)) //always spawn at least one meat per gut
+		new /obj/effect/decal/cleanable/blood/drip(get_turf(user))
+		new base_gut_meat(get_turf(user)) //always spawnw at least one meat per gut
 		playsound(loc, 'sound/effects/splat.ogg', 25, 1)//replace
 		gutted = TRUE
 		update_desc()
