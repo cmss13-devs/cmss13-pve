@@ -1847,7 +1847,6 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 
 	var/prev_light = light_range
 	if(!light_on && (light_range <= muzzle_flash_lum))
-		set_light_color(muzzle_flash_color)
 		set_light_range(muzzle_flash_lum)
 		set_light_on(TRUE)
 		set_light_color(muzzle_flash_color)
