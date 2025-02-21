@@ -167,6 +167,10 @@
 	///Chance for random spawn to give this gun a underbarrel attachment.
 	var/random_under_chance = 100
 	///Used when a gun will have a chance to spawn with attachments.
+	var/list/random_spawn_special = list()
+	///Chance for random spawn to give this gun a special (side rail) attachment.
+	var/random_special_chance = 100
+	///Used when a gun will have a chance to spawn with attachments.
 	var/list/random_spawn_under = list()
 	///Chance for random spawn to give this gun a stock attachment.
 	var/random_stock_chance = 100
@@ -479,6 +483,14 @@
 			update_attachable(S.slot)
 			attachmentchoice = FALSE
 
+	var/specialchance = random_special_chance
+	if(prob(specialchance) && !attachments["special"]) // Special
+		attachmentchoice = SAFEPICK(random_spawn_special)
+		if(attachmentchoice)
+			var/obj/item/attachable/X = new attachmentchoice(src)
+			X.Attach(src)
+			update_attachable(X.slot)
+			attachmentchoice = FALSE
 
 /obj/item/weapon/gun/proc/handle_starting_attachment()
 	if(LAZYLEN(starting_attachment_types))
