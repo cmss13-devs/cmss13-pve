@@ -41,7 +41,7 @@
 /obj/structure/closet/secure_closet/marshal/Initialize()
 	. = ..()
 	new /obj/item/clothing/suit/storage/CMB(src)
-	new /obj/item/clothing/under/CM_uniform(src)
+	new /obj/item/clothing/under/cmb(src)
 	new /obj/item/storage/backpack/security(src)
 	new /obj/item/storage/belt/security(src)
 	new /obj/item/clothing/shoes/jackboots(src)

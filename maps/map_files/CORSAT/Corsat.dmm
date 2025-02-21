@@ -40099,7 +40099,7 @@
 /area/corsat/sigma/south/engineering)
 "uHG" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /obj/item/clothing/suit/storage/CMB,
 /turf/open/floor/corsat/red,
 /area/corsat/omega/hangar/security)

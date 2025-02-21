@@ -609,28 +609,6 @@
 	icon_state = "cc_armor"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
-//==================PLU Lamp Rig==================\\
-
-/obj/item/clothing/suit/storage/marine/veteran/lamp
-	name = "\improper PLU lamp rig"
-	icon_state = "lamp_rig"
-	desc = "A lightweight rig designed to support a shoulder lamp."
-	blood_overlay_type = "coat"
-	flags_armor_protection = BODY_FLAG_CHEST
-	flags_cold_protection = BODY_FLAG_CHEST
-	min_cold_protection_temperature = null
-	armor_melee = CLOTHING_ARMOR_NONE
-	armor_bullet = CLOTHING_ARMOR_NONE
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_LOW //marginally better against shrapnel.
-	armor_bio = CLOTHING_ARMOR_NONE
-	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_NONE
-	storage_slots = 1
-	time_to_unequip = 10
-	time_to_equip = 10
-
 //==================USASF & ARMY==================\\
 /obj/item/clothing/suit/storage/marine/medium/rto/navy
 	name = "\improper M4 pattern naval-deployment armor"
@@ -953,3 +931,25 @@
 	. = ..()
 	var/obj/item/clothing/accessory/pads/groin/uacg/crotchplate = new()
 	src.attach_accessory(null, crotchplate, TRUE)
+
+//==================PLU Lamp Rig==================\\
+
+/obj/item/clothing/suit/marine/lamp
+	name = "\improper PLU lamp rig"
+	icon_state = "lamp_rig"
+	desc = "A lightweight rig designed to support a shoulder lamp."
+	flags_atom = NO_SNOW_TYPE
+	blood_overlay_type = "coat"
+	flags_armor_protection = BODY_FLAG_CHEST
+	flags_cold_protection = BODY_FLAG_CHEST
+	min_cold_protection_temperature = null
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	time_to_unequip = 10
+	time_to_equip = 10
