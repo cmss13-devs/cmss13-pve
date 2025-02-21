@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - bugfix: "Animals no longer can be targeted by sentry guns while inside a container."
