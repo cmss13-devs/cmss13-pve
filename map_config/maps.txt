@@ -73,3 +73,9 @@ endmap
 
 map whiskey_outpost_v2
 endmap
+
+map calliope_highway
+endmap
+
+map calliope_desert_bus
+endmap
