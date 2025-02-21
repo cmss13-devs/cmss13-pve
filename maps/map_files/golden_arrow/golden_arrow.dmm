@@ -2048,9 +2048,6 @@
 	pixel_y = 5;
 	pixel_x = -4
 	},
-/obj/structure/machinery/computer/skills{
-	req_one_access = null
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "ahk" = (

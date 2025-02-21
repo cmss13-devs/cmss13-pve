@@ -59,7 +59,7 @@
 //Runs sanitize and strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' after sanitize() calls byond's html_encode()
 /proc/strip_html(text, limit=MAX_MESSAGE_LEN)
-	return copytext((sanitize(strip_html_simple(text, limit))), 1, limit)
+	return copytext((sanitize(strip_html_simple(text))), 1, limit)
 
 //Runs byond's sanitization proc along-side strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' that html_encode() would cause
