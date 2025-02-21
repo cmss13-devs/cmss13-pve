@@ -291,7 +291,6 @@
 	scatter = SCATTER_AMOUNT_TIER_8
 	shell_speed = AMMO_SPEED_TIER_7
 
-
 /datum/ammo/bullet/rifle/heavy/flak/on_hit_mob(mob/M,obj/projectile/P)
 	if((P.projectile_flags & PROJECTILE_BULLSEYE) && M == P.original)
 		var/slow_duration = 7
