@@ -218,7 +218,100 @@
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_8
 
-// Custom Specialist M4RA rounds
+// Specialist M42A rounds
+
+/datum/ammo/bullet/rifle/heavy/heap/sniper
+	name = "high explosive armor-piercing sniper bullet"
+	damage = 90 //match-grade munitions developing better velocity from the rifle
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SNIPER|AMMO_IGNORE_COVER
+
+	accurate_range_min = 4
+	accurate_range = 32
+	effective_range_max = 0
+	max_range = 32
+	accuracy = HIT_ACCURACY_TIER_8
+	scatter = 0
+	shell_speed = AMMO_SPEED_TIER_8
+
+/datum/ammo/bullet/sniper/on_hit_mob(mob/M,obj/projectile/P)
+	if((P.projectile_flags & PROJECTILE_BULLSEYE) && M == P.original)
+		var/mob/living/L = M
+		L.apply_armoured_damage(damage*2, ARMOR_BULLET, BRUTE, null, penetration)
+		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
+/datum/ammo/bullet/rifle/heavy/incendiary
+	name = "incendiary sniper bullet"
+	damage_type = BRUTE
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_4
+	shrapnel_chance = 0
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SNIPER|AMMO_IGNORE_COVER
+
+	accurate_range_min = 4
+	accurate_range = 32
+	effective_range_max = 0
+	max_range = 32
+	accuracy = HIT_ACCURACY_TIER_6
+	shell_speed = AMMO_SPEED_TIER_7
+
+/datum/ammo/bullet/rifle/heavy/incendiary/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
+	))
+
+/datum/ammo/bullet/rifle/heavy/incendiary/on_hit_mob(mob/M,obj/projectile/P)
+	if((P.projectile_flags & PROJECTILE_BULLSEYE) && M == P.original)
+		var/mob/living/L = M
+		var/blind_duration = 5
+		if(isxeno(M))
+			var/mob/living/carbon/xenomorph/target = M
+			if(target.mob_size >= MOB_SIZE_BIG)
+				blind_duration = 2
+		L.AdjustEyeBlur(blind_duration)
+		L.adjust_fire_stacks(10)
+		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
+/datum/ammo/bullet/rifle/heavy/flak
+	name = "flak sniper bullet"
+	damage_type = BRUTE
+	damage = 55
+	damage_var_high = PROJECTILE_VARIANCE_TIER_8 //Documenting old code: This converts to a variance of 96-109% damage. -Kaga
+	penetration = 0
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SNIPER|AMMO_IGNORE_COVER
+
+	accurate_range_min = 4
+	accurate_range = 32
+	effective_range_max = 0
+	max_range = 32
+	accuracy = HIT_ACCURACY_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_8
+	shell_speed = AMMO_SPEED_TIER_7
+
+
+/datum/ammo/bullet/rifle/heavy/flak/on_hit_mob(mob/M,obj/projectile/P)
+	if((P.projectile_flags & PROJECTILE_BULLSEYE) && M == P.original)
+		var/slow_duration = 7
+		var/mob/living/L = M
+		if(isxeno(M))
+			var/mob/living/carbon/xenomorph/target = M
+			if(target.mob_size >= MOB_SIZE_BIG)
+				slow_duration = 4
+		M.adjust_effect(slow_duration, SUPERSLOW)
+		L.apply_armoured_damage(damage, ARMOR_BULLET, BRUTE, null, penetration)
+		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+	else
+		burst(get_turf(M),P,damage_type, 2 , 2)
+		burst(get_turf(M),P,damage_type, 1 , 2 , 0)
+
+/datum/ammo/bullet/rifle/heavy/flak/on_near_target(turf/T, obj/projectile/P)
+	burst(T,P,damage_type, 2 , 2)
+	burst(T,P,damage_type, 1 , 2, 0)
+	return 1
+
+// Custom Specialist M49A rounds
 
 /datum/ammo/bullet/rifle/heavy/spec
 	name = "high velocity 10x28 bullet"
@@ -230,7 +323,7 @@
 	damage = 55
 	scatter = -SCATTER_AMOUNT_TIER_8
 	penetration= ARMOR_PENETRATION_TIER_7
-	shell_speed = AMMO_SPEED_TIER_6
+	shell_speed = AMMO_SPEED_TIER_7
 
 /datum/ammo/bullet/rifle/heavy/spec/incendiary
 	name = "high velocity incendiary 10x28 bullet"
@@ -238,9 +331,7 @@
 
 	damage = 40
 	accuracy = HIT_ACCURACY_TIER_4
-	scatter = -SCATTER_AMOUNT_TIER_8
 	penetration= ARMOR_PENETRATION_TIER_5
-	shell_speed = AMMO_SPEED_TIER_6
 
 /datum/ammo/bullet/rifle/heavy/spec/incendiary/set_bullet_traits()
 	. = ..()
@@ -254,9 +345,7 @@
 
 	damage = 40
 	accuracy = -HIT_ACCURACY_TIER_2
-	scatter = -SCATTER_AMOUNT_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_10
-	shell_speed = AMMO_SPEED_TIER_6
 
 /datum/ammo/bullet/rifle/heavy/spec/impact/on_hit_mob(mob/M, obj/projectile/P)
 	knockback(M, P, 32) // Can knockback basically at max range max range is 24 tiles...
@@ -282,16 +371,33 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
-//====== 10x31 Type 71
+//====== 10x27 Type 71
 
+/datum/ammo/bullet/rifle/upp
+	name = "10x27 bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_2
+	accuracy = HIT_ACCURACY_TIER_3
+	shell_speed = AMMO_SPEED_TIER_6
+	effective_range_max = 10
+	damage_falloff = DAMAGE_FALLOFF_TIER_7
+
+/datum/ammo/bullet/rifle/upp/ap
+	name = "armor-piercing 10x27 bullet"
+	damage = 45
+	penetration = ARMOR_PENETRATION_TIER_8
+
+/datum/ammo/bullet/rifle/upp/heap
+	name = "high-explosive armor-piercing 10x27 bullet"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 55
+	penetration = ARMOR_PENETRATION_TIER_8
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
+
+//10X31 AK500
 /datum/ammo/bullet/rifle/heavy/upp
 	name = "10x31 bullet"
-
-/datum/ammo/bullet/rifle/heavy/ap/upp
-	name = "armor-piercing 10x31 bullet"
-
-/datum/ammo/bullet/rifle/heavy/heap/upp
-	name = "high-explosive armor-piercing 10x31 bullet"
 
 // Misc
 
@@ -311,3 +417,4 @@
 /datum/ammo/bullet/rifle/ar10
 	name = "7.62x51 rifle bullet"
 	damage = 55
+

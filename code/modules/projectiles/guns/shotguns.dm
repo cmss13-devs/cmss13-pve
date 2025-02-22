@@ -7,11 +7,8 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun
 	w_class = SIZE_LARGE
-	fire_sound = 'sound/weapons/gun_shotgun.ogg'
-	reload_sound = "shell_load"
-	cocked_sound = 'sound/weapons/gun_shotgun_reload.ogg'
-	var/break_sound = 'sound/weapons/handling/gun_mou_open.ogg'
-	var/seal_sound = 'sound/weapons/handling/gun_mou_close.ogg'
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+
 	accuracy_mult = 1.15
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
 	gun_category = GUN_CATEGORY_SHOTGUN
@@ -20,6 +17,13 @@ can cause issues with ammo types getting mixed up during the burst.
 	has_empty_icon = FALSE
 	has_open_icon = FALSE
 	fire_delay_group = list(FIRE_DELAY_GROUP_SHOTGUN)
+
+	fire_sound = 'sound/weapons/gun_shotgun.ogg'
+	reload_sound = "shell_load"
+	cocked_sound = 'sound/weapons/gun_shotgun_reload.ogg'
+	var/break_sound = 'sound/weapons/handling/gun_mou_open.ogg'
+	var/seal_sound = 'sound/weapons/handling/gun_mou_close.ogg'
+
 	map_specific_decoration = FALSE
 	var/gauge = "12g"
 
@@ -244,7 +248,6 @@ can cause issues with ammo types getting mixed up during the burst.
 	item_state = "mk221"
 
 	fire_sound = "gun_shotgun_tactical"
-	firesound_volume = 20
 
 	flags_equip_slot = SLOT_BACK
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat
@@ -259,6 +262,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/stock/tactical,
+		/obj/item/attachable/sling,
 	)
 
 /obj/item/weapon/gun/shotgun/combat/Initialize(mapload, spawn_empty)
@@ -1020,7 +1024,6 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun
 	flags_equip_slot = SLOT_BACK
 	fire_sound = 'sound/weapons/gun_shotgun.ogg'
-	firesound_volume = 60
 	var/pump_sound = "shotgunpump"
 	var/pump_delay //Higher means longer delay.
 	var/recent_pump //world.time to see when they last pumped it.
@@ -1046,6 +1049,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/stock/shotgun,
+		/obj/item/attachable/sling,
 	)
 
 /obj/item/weapon/gun/shotgun/pump/Initialize(mapload, spawn_empty)

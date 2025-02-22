@@ -27,6 +27,9 @@
 	flags_item = TWOHANDED
 	light_system = DIRECTIONAL_LIGHT
 
+	///A custom mouse pointer icon to use when wielded
+	var/mouse_pointer = 'icons/effects/mouse_pointer/rifle_mouse.dmi'
+
 	var/accepted_ammo = list()
 	///Determines what kind of bullet is created when the gun is unloaded - used to match rounds to magazines. Set automatically when reloading.
 	var/caliber
@@ -393,6 +396,8 @@
 		accuracy_mult_unwielded += R.accuracy_unwielded_mod
 		scatter += R.scatter_mod
 		scatter_unwielded += R.scatter_unwielded_mod
+		fa_scatter_peak += R.fa_scatter_peak_mod
+		fa_max_scatter += R.fa_max_scatter_mod
 		damage_mult += R.damage_mod
 		velocity_add += R.velocity_mod
 		damage_falloff_mult += R.damage_falloff_mod
@@ -765,12 +770,31 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 		else
 			wield_time -= 2*user.skills.get_skill_level(SKILL_FIREARMS)
 
+	update_mouse_pointer(user, TRUE)
+	if(user.client)
+		RegisterSignal(user.client, COMSIG_CLIENT_RESET_VIEW, PROC_REF(handle_view))
+
 	return 1
 
 /obj/item/weapon/gun/unwield(mob/user)
 	. = ..()
 	if(.)
+		update_mouse_pointer(user, FALSE)
+		if(user.client)
+			UnregisterSignal(user.client, COMSIG_CLIENT_RESET_VIEW)
 		slowdown = initial(slowdown)
+
+/// SIGNAL_HANDLER for COMSIG_CLIENT_RESET_VIEW to ensure the mouse_pointer is set correctly
+/obj/item/weapon/gun/proc/handle_view(client/user, atom/target)
+	SIGNAL_HANDLER
+	update_mouse_pointer(user.mob, flags_item & WIELDED)
+
+///Turns the mouse cursor into a crosshair if new_cursor is set to TRUE. If set to FALSE, returns the cursor to its initial icon.
+/obj/item/weapon/gun/proc/update_mouse_pointer(mob/user, new_cursor)
+	if(!user.client?.prefs.custom_cursors)
+		return
+
+	user.client.mouse_pointer_icon = new_cursor ? mouse_pointer : initial(user.client.mouse_pointer_icon)
 
 //----------------------------------------------------------
 			// \\
@@ -1651,7 +1675,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 
 	if(flags_gun_features & GUN_AMMO_COUNTER && current_mag)
 		// toggleable spam control.
-		if(user.client.prefs.toggle_prefs & TOGGLE_AMMO_DISPLAY_TYPE && gun_firemode == GUN_FIREMODE_SEMIAUTO && current_mag.current_rounds % 5 != 0 && current_mag.current_rounds > 15)
+		if(user.client?.prefs.toggle_prefs & TOGGLE_AMMO_DISPLAY_TYPE && gun_firemode == GUN_FIREMODE_SEMIAUTO && current_mag.current_rounds % 5 != 0 && current_mag.current_rounds > 15)
 			return
 		var/chambered = in_chamber ? TRUE : FALSE
 		to_chat(user, SPAN_DANGER("[current_mag.current_rounds][chambered ? "+1" : ""] / [current_mag.max_rounds] ROUNDS REMAINING"))
@@ -1964,27 +1988,27 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 
 	var/list/modifiers = params2list(params)
 	if(modifiers["shift"] || modifiers["middle"] || modifiers["right"])
-		return
+		return FALSE
 
 	// Don't allow doing anything else if inside a container of some sort, like a locker.
-	if(!isturf(gun_user.loc))
-		return
+	if(!gun_user || !isturf(gun_user.loc))
+		return FALSE
 
 	if(istype(object, /atom/movable/screen))
-		return
+		return FALSE
 
 	if(!bypass_checks)
 		if(gun_user.hand && !isgun(gun_user.l_hand) || !gun_user.hand && !isgun(gun_user.r_hand)) // If the object in our active hand is not a gun, abort
-			return
+			return FALSE
 
 		if(gun_user.throw_mode)
-			return
+			return FALSE
 
 		if(gun_user.Adjacent(object)) //Dealt with by attack code
-			return
+			return FALSE
 
 	if(QDELETED(object))
-		return
+		return FALSE
 
 	if(gun_user.client?.prefs?.toggle_prefs & TOGGLE_HELP_INTENT_SAFETY && (gun_user.a_intent == INTENT_HELP))
 		if(world.time % 3) // Limits how often this message pops up, saw this somewhere else and thought it was clever
@@ -1998,8 +2022,9 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		Fire(object, gun_user, modifiers)
 		reset_fire()
 		display_ammo()
-		return
+		return TRUE
 	SEND_SIGNAL(src, COMSIG_GUN_FIRE)
+	return TRUE
 
 /// Wrapper proc for the autofire subsystem to ensure the important args aren't null
 /obj/item/weapon/gun/proc/fire_wrapper(atom/target, mob/living/user, params, reflex = FALSE, dual_wield)
@@ -2020,3 +2045,19 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 /// Getter for gun_user
 /obj/item/weapon/gun/proc/get_gun_user()
 	return gun_user
+
+/// Getter for target
+/obj/item/weapon/gun/proc/get_target()
+	RETURN_TYPE(/atom)
+	return target
+
+/obj/item/weapon/gun/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	if(istype(current_mag, /obj/item/ammo_magazine/internal) && (current_mag.current_rounds <= 0) && !ai_brain.weapon_ammo_search(ai_brain.primary_weapon))
+		return FALSE
+	else if((!current_mag || (current_mag.current_rounds <= 0)) && !ai_brain.weapon_ammo_search(ai_brain.primary_weapon))
+		return FALSE
+
+	if((flags_gun_features & GUN_WY_RESTRICTED) && !wy_allowed_check(user))
+		return FALSE
+
+	return TRUE

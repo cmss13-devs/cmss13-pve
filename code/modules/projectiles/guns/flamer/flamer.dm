@@ -9,12 +9,14 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m240"
 	item_state = "m240"
+	mouse_pointer = 'icons/effects/mouse_pointer/flamer_mouse.dmi'
+
+	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
+	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
+	fire_sound = ""
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_LARGE
 	force = 15
-	fire_sound = ""
-	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
-	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	aim_slowdown = SLOWDOWN_ADS_INCINERATOR
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 	start_automatic = TRUE
@@ -22,6 +24,7 @@
 	attachable_allowed = list( //give it some flexibility.
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/sling,
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/attached_gun/extinguisher/pyro,
 		/obj/item/attachable/attached_gun/flamer_nozzle,
@@ -149,6 +152,8 @@
 				unleash_foam(target, user)
 			else
 				unleash_flame(target, user)
+		current_mag.current_rounds = current_mag.get_ammo_percent()
+		SEND_SIGNAL(user, COMSIG_MOB_FIRED_GUN, src)
 		return AUTOFIRE_CONTINUE
 	return NONE
 
@@ -381,6 +386,13 @@
 /obj/item/weapon/gun/flamer/deathsquad/standard
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 
+/obj/item/weapon/gun/flamer/weak
+	current_mag = /obj/item/ammo_magazine/flamer_tank/weak
+
+/obj/item/weapon/gun/flamer/weak/set_gun_config_values()
+	. = ..()
+	set_fire_delay(FIRE_DELAY_TIER_5) // less full auto
+
 /obj/item/weapon/gun/flamer/M240T
 	name = "\improper M240-T incinerator unit"
 	desc = "An improved version of the M240A1 incinerator unit, the M240-T model is capable of dispersing a larger variety of fuel types."
@@ -502,6 +514,16 @@
 /obj/item/weapon/gun/flamer/M240T/auto/set_gun_config_values()
 	. = ..()
 	set_fire_delay(FIRE_DELAY_TIER_7)
+
+/obj/item/weapon/gun/flamer/upp
+	name = "\improper LPO80 incinerator unit"
+	desc = "An aged but effective lightweight combat incinerator officially in service as a anti-fortification tool but, in practice, utilized in close quarters combat for flushing out enemy combatants."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "LPO80"
+	item_state = "LPO80"
+	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
+	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
+	current_mag = /obj/item/ammo_magazine/flamer_tank/upp
 
 /obj/flamer_fire
 	name = "fire"
