@@ -1445,3 +1445,4 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Colonial Companion multi-tool"
 	path = /obj/item/weapon/swiss_army_knife
 	cost = 4 // Two tools & a knife in one package
+
