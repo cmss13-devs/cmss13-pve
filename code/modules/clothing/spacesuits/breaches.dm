@@ -1,9 +1,11 @@
 //A 'wound' system for space suits.
-//Breaches greatly increase the amount of lost gas and decrease the armor rating of the suit.
-//They can be healed with plastic or metal sheeting.
+//Breaches make a process() in spacesuits.dm lower the temperature of the human wearing them
+//A workaround for the bitflag, binary based temperature clothing system in handle_enviroment.dm
 #define SPACESUIT_BREACH_CIVILIAN 2.5
 #define SPACESUIT_BREACH_STANDARD 1.5
-#define SPACESUIT_BREACH_THRESHOLD_CONSTANT 10
+#define SPACESUIT_BREACH_COMBAT 1
+#define SPACESUIT_BREACH_THRESHOLD_CONSTANT 10 // to be made smaller by breach_vulnerability, inversely
+#define SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER 2.5
 
 /datum/breach
 	var/class = 0    // Size. Lower is smaller.
@@ -16,8 +18,7 @@
 
 	var/can_breach = 1   // Set to 0 to disregard all breaching.
 	var/list/breaches = list()   // Breach datum container.
-	var/breach_vulnerability = SPACESUIT_BREACH_CIVILIAN // Multiplier that turns damage into breach class. 1 is 100% of damage to breach, 0.1 is 10%.
-	var/breach_threshold = SPACESUIT_BREACH_THRESHOLD_CONSTANT / SPACESUIT_BREACH_CIVILIAN // Min damage before a breach is possible.
+	var/breach_vulnerability = SPACESUIT_BREACH_CIVILIAN // Multiplier that turns damage into breach class. 1 is 100% of damage to breach, 0.1 is 10%. Influences breach-causing damage threshold
 	var/damage = 0   // Current total damage, does not count patched breaches
 	var/brute_damage = 0 // Specifically brute damage.
 	var/burn_damage = 0  // Specifically burn damage.
@@ -65,13 +66,13 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 /obj/item/clothing/suit/space/proc/create_breaches(damtype, amount)
 
-	if(!can_breach || !amount || amount < breach_threshold)
+	if(!can_breach || !amount || (damtype != BURN && amount < SPACESUIT_BREACH_THRESHOLD_CONSTANT/breach_vulnerability)) //fire is soul, and napalm is below threshold of combat suits
 		return
 
 	if(!breaches)
 		breaches = list()
 
-	if(damage > 25) return //We don't need to keep tracking it when it's at 250% pressure loss, really.
+	if(damage > 35) return //We don't need to keep tracking it when it's so high.
 
 	if(!loc) return
 	var/turf/T = get_turf(src)
@@ -81,7 +82,8 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 	//Increase existing breaches.
 	for(var/datum/breach/existing in breaches)
-		if(prob(50)) break //Don't want to super widen breaches all the time note- fix later
+		if(prob(60))
+			break //Want mix of new and widening old breaches
 		if(existing.damtype != damtype)
 			continue
 
@@ -89,11 +91,13 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 			if(existing.patched)
 				if (existing.damtype == BRUTE)
 					var/message = "\The [existing.descriptor] on \the [src] gapes wider[existing.patched ? ", tearing the patch" : ""]!"
-					visible_message(SPAN_WARNING(message))
+					T.visible_message(SPAN_WARNING(message))
 				else if (existing.damtype == BURN)
 					var/message = "\The [existing.descriptor] on \the [src] widens[existing.patched ? ", ruining the patch" : ""]!"
-					visible_message(SPAN_WARNING(message))
+					T.visible_message(SPAN_WARNING(message))
 				existing.patched = FALSE
+				existing.update_descriptor()
+				amount -= existing.class/2
 				break
 			var/needs = 5 - existing.class
 			if(amount < needs)
@@ -109,16 +113,6 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 				T.visible_message(SPAN_WARNING("\The [old_descriptor] on [src] gapes wider, turning to a [existing.descriptor][existing.patched ? ", tearing the patch" : ""]"))
 			else if(existing.damtype == BURN)
 				T.visible_message(SPAN_WARNING("\The [old_descriptor] on [src] widens, turning to a [existing.descriptor][existing.patched ? ", tearing the patch" : ""]"))
-
-
-			if (existing.damtype == BRUTE)
-				var/message = "\The [existing.descriptor] on \the [src] gapes wider[existing.patched ? ", tearing the patch" : ""]!"
-				visible_message(SPAN_WARNING(message))
-			else if (existing.damtype == BURN)
-				var/message = "\The [existing.descriptor] on \the [src] widens[existing.patched ? ", ruining the patch" : ""]!"
-				visible_message(SPAN_WARNING(message))
-
-			existing.patched = FALSE
 
 	if (amount)
 		//Spawn a new breach.
@@ -162,11 +156,12 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 			else if(B.damtype == BURN)
 				burn_damage += B.class
 
-	if(damage >= 3)
-		if(brute_damage >= 3 && brute_damage > burn_damage)
-			name = "punctured [base_name]"
-		else if(burn_damage >= 3 && burn_damage > brute_damage)
-			name = "scorched [base_name]"
+	if(damage >= 5)
+		if(brute_damage >= 5 && brute_damage > burn_damage)
+			name = "[(damage > 10) ? "heavily " : ""]punctured [base_name]"
+
+		else if(burn_damage >= 5 && burn_damage > brute_damage)
+			name = "[(damage > 10) ? "heavily " : ""]scorched [base_name]"
 		else
 			var/patched_breach_tally = 0
 			for(var/datum/breach/B in breaches)
@@ -176,10 +171,9 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 				name = "patched [base_name]"
 	else
 		name = "[base_name]"
-	//min_cold_protection_temperature = min_cold_protection_temperature*(damage*2)
 	return damage
 
-//Handles repairs (and also upgrades).
+//Handles repairs.
 
 /obj/item/clothing/suit/space/attackby(obj/item/W as obj, mob/user as mob)
 
@@ -187,22 +181,23 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 		to_chat(user, "There are no breaches to repair on \the [src].")
 		return
 
-	if(!iswelder(W) || !iswire(W) || istype(W,/obj/item/stack/sheet/mineral/plastic))
+	if(!(iswelder(W) || iswire(W) || istype(W,/obj/item/stack/sheet/mineral/plastic)))
 		return
 	if(iswelder(W))
 		var/obj/item/tool/weldingtool/WT = W
-		if(!WT.remove_fuel(5))
+		if(!WT.remove_fuel(3))
 			to_chat(user, SPAN_DANGER("You need more welding fuel to repair this suit."))
 			return
 	if(iswire(W) || istype(W,/obj/item/stack/sheet/mineral/plastic))
-		if(!use(5))
+		var/obj/item/stack/repair_material = W
+		if(!repair_material.use(5))
 			to_chat(user, SPAN_DANGER("You need more material to repair this suit."))
 
 	for(var/datum/breach/B in breaches)
 		if(!B.patched)
 			B.patched = TRUE
-			B.update_descriptor()
 			user.visible_message(SPAN_HELPFUL("<b>[user]</b> patches the [B.descriptor] using [W]."))
+			B.update_descriptor()
 			break
 
 
@@ -212,8 +207,14 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 /obj/item/clothing/suit/space/get_examine_text(mob/user)
 	. = ..()
+	if(ishuman(loc))
+		var/mob/living/carbon/human/wearer = loc
+		if(wearer.bodytemperature > wearer.species.cold_level_1)
+			. += SPAN_NOTICE("The skin temperature sensor reads [round(wearer.bodytemperature-T0C, 0.1)]℃")
+		else
+			. += SPAN_HIGHDANGER("The skin temperature sensor reads [round(wearer.bodytemperature-T0C, 0.1)]℃ ([round(wearer.bodytemperature*1.8-459.67, 0.1)]℉")
 	if(flags_inventory & BYPASSFORINJECTOR)
-		. += SPAN_HELPFUL("This has an [SPAN_BOLD("injection port")] on it's left thigh. This allows the use of [SPAN_BOLD("injectors, syringes, hyposprays and bioglue")] while it is being worn.")
+		. += SPAN_HELPFUL("This has an [SPAN_BOLD("injection port")]. This allows the use of [SPAN_BOLD("injectors, syringes, hyposprays and bioglue")] while it is being worn.")
 	else
 		. += SPAN_DANGER("This does [SPAN_BOLD("not have an injection port")]. It is [SPAN_BOLD("impossible to give any medicine while it is being worn")]. This has to be breaking some regulations!")
 	if(can_breach && LAZYLEN(breaches))

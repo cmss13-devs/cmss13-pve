@@ -18,6 +18,9 @@
 	slowdown = 0
 	allowed = list(/obj/item) //for stuffing extra special presents
 
+
+/obj/item/clothing/suit/space/emergency
+
 /obj/item/clothing/head/helmet/space/pressure
 	name = "\improper pressure helmet"
 	desc = "A heavy space helmet."
@@ -125,8 +128,10 @@
 	armor_bio = CLOTHING_ARMOR_ULTRAHIGH
 	armor_rad = CLOTHING_ARMOR_HARDCORE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	time_to_unequip = 25
-	time_to_equip = 25
+	time_to_unequip = 50
+	time_to_equip = 50
+	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR
+	breach_vulnerability = SPACESUIT_BREACH_STANDARD
 
 /obj/item/clothing/head/helmet/space/pressure/orange
 	item_state = "pressure_orange"
@@ -183,7 +188,8 @@
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	allowed = list(/obj/item/weapon/gun,/obj/item/weapon/baton,/obj/item/restraint/handcuffs,/obj/item/tank)
-	flags_inventory = SMARTGUN_HARNESS
+	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS
+	breach_vulnerability = SPACESUIT_BREACH_COMBAT
 
 /obj/item/clothing/head/helmet/space/pressure/upp
 	name = "\improper UPPAC Sokol-KV2 pressure helmet"
@@ -201,7 +207,7 @@
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	allowed = list(/obj/item/weapon/gun,/obj/item/weapon/baton,/obj/item/restraint/handcuffs,/obj/item/tank)
-	flags_inventory = SMARTGUN_HARNESS
+	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS
 
 // Souto man
 
