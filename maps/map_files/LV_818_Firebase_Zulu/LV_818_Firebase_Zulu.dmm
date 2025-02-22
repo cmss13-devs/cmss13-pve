@@ -5048,6 +5048,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"Th" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/machinery/disposal,
+/turf/open/auto_turf/sand/layer1,
+/area/golden_arrow/prep_hallway)
 "Tj" = (
 /obj/structure/platform,
 /obj/structure/flora/grass/desert/lightgrass_1{
@@ -15463,7 +15470,7 @@ qT
 qT
 eA
 on
-XE
+Th
 lS
 Xm
 Xm
