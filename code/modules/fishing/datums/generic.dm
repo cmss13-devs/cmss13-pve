@@ -3,11 +3,10 @@ GLOBAL_LIST_EMPTY(fishing_loot_tables)
 /datum/fish_loot_table
 	var/list/common_fishable_atoms = list(
 		/obj/item/prop/scrap,
-		/obj/item/ore/coal,
+		/obj/item/prop/rock,
 		/obj/item/trash/crushed_cup,
-		/obj/item/trash/c_tube,
-		/obj/item/trash/cigbutt/bcigbutt,
-		/obj/item/trash/cigbutt/cigarbutt,
+		/obj/item/trash/cigbutt,
+		/obj/item/trash/cigbutt/ucigbutt,
 		/obj/item/reagent_container/food/snacks/fishable/worm,
 		/obj/item/reagent_container/food/snacks/fishable/shell/clam,
 		/obj/item/reagent_container/food/snacks/fishable/squid/sock,
