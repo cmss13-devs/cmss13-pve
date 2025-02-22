@@ -2586,6 +2586,7 @@
 #include "maps\_basemap.dm"
 #include "void-marines\code\admin_tools.dm"
 #include "void-marines\code\chair_shifting.dm"
+#include "void-marines\code\jetpack.dm"
 #include "void-marines\code\layer_shifting.dm"
 #include "void-marines\code\human_hair.dm"
 #include "void-marines\code\light_change.dm"
