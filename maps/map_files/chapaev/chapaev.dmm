@@ -1170,6 +1170,7 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/machinery/vending/cigarette/upp,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
 "jE" = (
@@ -3475,6 +3476,10 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
+"CR" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/golden_arrow/engineering)
 "CV" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -5189,9 +5194,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
-/obj/structure/machinery/vending/cigarette/free{
-	pixel_x = 3
-	},
+/obj/structure/machinery/vending/cigarette/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "VZ" = (
@@ -15432,7 +15435,7 @@ mV
 mV
 mV
 jG
-jG
+CR
 jG
 jG
 jG

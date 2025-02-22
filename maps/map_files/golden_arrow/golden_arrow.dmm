@@ -1435,13 +1435,23 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "afl" = (
-/obj/structure/machinery/vending/coffee{
-	pixel_x = 14;
-	pixel_y = 13
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/machinery/vending/snack/packaged{
-	pixel_x = -7;
-	pixel_y = 14
+/obj/structure/closet/crate/trashcart{
+	pixel_y = 8
+	},
+/obj/item/trash/candy,
+/obj/item/trash/burger,
+/obj/item/trash/cigbutt,
+/obj/item/trash/burger{
+	pixel_y = 6;
+	pixel_x = 3
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	pixel_y = 20
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
@@ -7422,9 +7432,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "azG" = (
-/obj/structure/machinery/vending/cigarette{
-	pixel_x = 4;
-	pixel_y = 14
+/obj/structure/machinery/vending/dinnerware,
+/obj/structure/sign/banners/usa_flag{
+	pixel_x = -15;
+	pixel_y = 32
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
@@ -8896,15 +8907,11 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "aEi" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.5
 	},
-/obj/structure/machinery/vending/dinnerware,
-/obj/item/ashtray/glass{
-	pixel_x = -3;
-	pixel_y = 13
-	},
-/turf/open/floor/almayer/edge/northeast,
+/turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aEl" = (
 /obj/structure/cable/heavyduty{
@@ -9960,24 +9967,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aHQ" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/item/ashtray/bronze{
+	pixel_x = 29;
+	pixel_y = 37
 	},
-/obj/structure/sign/banners/united_americas_flag{
-	pixel_x = -30;
-	pixel_y = 31
-	},
-/obj/structure/closet/crate/trashcart{
-	pixel_y = 8
-	},
-/obj/item/trash/candy,
-/obj/item/trash/burger,
-/obj/item/trash/cigbutt,
-/obj/item/trash/burger{
-	pixel_y = 6;
-	pixel_x = 3
-	},
-/turf/open/floor/almayer/edge/smooth/endcap_left/north,
+/turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aHR" = (
 /obj/effect/decal/warning_stripes{
@@ -13999,6 +13993,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
 	pixel_x = -1
+	},
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 30
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -18109,6 +18106,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"mCf" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "mCZ" = (
 /obj/structure/platform,
 /obj/structure/cargo_container/uscm/chinook/mid{
@@ -18345,6 +18350,14 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/lower_cargo)
+"nbJ" = (
+/obj/structure/machinery/vending/snack/packaged{
+	pixel_y = -6;
+	wrenchable = 0;
+	pixel_x = 5
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
 "nex" = (
 /obj/structure/blocker/invisible_wall/directional{
 	layer = 2
@@ -18895,6 +18908,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"oPo" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
 "oRK" = (
 /obj/structure/roof/cargocrane_tracks/cross{
 	pixel_y = 14
@@ -19375,6 +19396,14 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"qIw" = (
+/obj/structure/machinery/vending/cigarette/koorlander{
+	pixel_x = -7;
+	pixel_y = -7;
+	wrenchable = 0
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
 "qJe" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -20901,6 +20930,14 @@
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/synthcloset)
+"wRE" = (
+/obj/structure/machinery/vending/coffee{
+	pixel_y = -7;
+	pixel_x = -1;
+	wrenchable = 0
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
 "wSf" = (
 /obj/effect/landmark/start/bridge,
 /obj/effect/landmark/late_join/alpha,
@@ -27966,7 +28003,7 @@ aWh
 arr
 alD
 aBk
-ahK
+mCf
 aZr
 arj
 aBk
@@ -28140,7 +28177,7 @@ aEG
 aEG
 aEG
 aWh
-aog
+nbJ
 alD
 ave
 anG
@@ -28317,7 +28354,7 @@ aEG
 aEG
 aEG
 aWh
-aog
+wRE
 aHQ
 aBk
 aBk
@@ -28494,8 +28531,8 @@ aEG
 aEG
 aEG
 aWh
-aog
-aEi
+qIw
+aBk
 azd
 aQd
 aZl
@@ -29032,7 +29069,7 @@ aHF
 arQ
 aHF
 aHF
-aHF
+aEi
 aog
 aVa
 apO
@@ -35020,7 +35057,7 @@ aEG
 aEG
 aEG
 atb
-axa
+oPo
 aBg
 alK
 aUD
