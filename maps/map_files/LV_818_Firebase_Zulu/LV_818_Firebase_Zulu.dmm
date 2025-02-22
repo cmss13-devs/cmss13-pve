@@ -39,6 +39,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer2,
 /area/golden_arrow/prep_hallway)
+"aG" = (
+/obj/structure/platform,
+/obj/structure/prop/static_tank/water{
+	layer = 2.9
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/golden_arrow/prep_hallway)
 "aM" = (
 /obj/structure/platform/stair_cut,
 /obj/structure/stairs/perspective{
@@ -223,6 +230,12 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/holohoop{
+	dir = 8;
+	id = "basketball";
+	side = "right";
+	pixel_x = -16
+	},
 /turf/open/auto_turf/sand/layer2,
 /area/golden_arrow/prep_hallway)
 "bY" = (
@@ -839,6 +852,15 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/auto_turf/sand/layer1,
 /area/golden_arrow/prep_hallway)
+"fP" = (
+/obj/structure/platform,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cargo_container/uscm/chinook/left{
+	color = "#898988";
+	layer = 2.9
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/golden_arrow/prep_hallway)
 "fQ" = (
 /obj/structure/tent/big,
 /obj/structure/surface/table/almayer,
@@ -1243,6 +1265,14 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plating,
+/area/golden_arrow/prep_hallway)
+"im" = (
+/obj/structure/platform,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/barrel/true_random{
+	layer = 2.9
+	},
+/turf/open/auto_turf/sand/layer1,
 /area/golden_arrow/prep_hallway)
 "iu" = (
 /obj/item/prop/colony/canister{
@@ -1962,6 +1992,24 @@
 	},
 /turf/open/auto_turf/sand/layer1,
 /area/golden_arrow/prep_hallway)
+"na" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/largecrate/random/case{
+	pixel_y = 11
+	},
+/obj/item/reagent_container/food/drinks/coffee/marine{
+	pixel_x = 4;
+	pixel_y = 15;
+	layer = 3.11
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/golden_arrow/prep_hallway)
 "nc" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -2260,14 +2308,6 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/golden_arrow/prep_hallway)
-"pf" = (
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
-/obj/structure/largecrate/random/barrel/true_random,
-/turf/open/auto_turf/sand/layer0,
-/area/golden_arrow/prep_hallway)
 "pi" = (
 /obj/structure/flora/grass/desert/lightgrass_1,
 /obj/structure/platform/kutjevo/rock,
@@ -2298,15 +2338,6 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/golden_arrow/platoon_commander_rooms)
-"pp" = (
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
-/obj/structure/largecrate/random/barrel/true_random,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand/layer0,
-/area/golden_arrow/prep_hallway)
 "ps" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -2368,16 +2399,6 @@
 	layer = 2
 	},
 /turf/open/floor/plating,
-/area/golden_arrow/prep_hallway)
-"pK" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand/layer2,
 /area/golden_arrow/prep_hallway)
 "pN" = (
 /obj/structure/platform_decoration{
@@ -3065,6 +3086,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer0,
 /area/golden_arrow/prep_hallway)
+"uK" = (
+/obj/structure/platform,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cargo_container/uscm/chinook/mid{
+	color = "#898988";
+	layer = 2.9
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/golden_arrow/prep_hallway)
 "uL" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
@@ -3517,13 +3547,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer0,
 /area/golden_arrow/prep_hallway)
-"xh" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/obj/structure/machinery/floodlight/landing,
-/turf/open/auto_turf/sand/layer0,
-/area/golden_arrow/prep_hallway)
 "xj" = (
 /obj/structure/stairs/perspective{
 	dir = 6;
@@ -3555,10 +3578,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand/layer1,
-/area/golden_arrow/prep_hallway)
-"xB" = (
-/obj/structure/prop/static_tank/water,
 /turf/open/auto_turf/sand/layer1,
 /area/golden_arrow/prep_hallway)
 "xC" = (
@@ -4399,17 +4418,6 @@
 	},
 /turf/open/floor/strata/white_cyan2/west,
 /area/golden_arrow/dorms)
-"Cu" = (
-/obj/structure/largecrate/random/case{
-	pixel_y = 11
-	},
-/obj/item/reagent_container/food/drinks/coffee/marine{
-	pixel_x = 4;
-	pixel_y = 15;
-	layer = 3.11
-	},
-/turf/open/auto_turf/sand/layer1,
-/area/golden_arrow/prep_hallway)
 "Cw" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -4627,6 +4635,13 @@
 /obj/structure/tent_curtain,
 /turf/open/floor/interior/plastic,
 /area/golden_arrow/medical)
+"DL" = (
+/obj/structure/platform,
+/obj/structure/machinery/floodlight/landing{
+	layer = 2.9
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/golden_arrow/prep_hallway)
 "DM" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -4725,14 +4740,6 @@
 "Ey" = (
 /obj/structure/prop/dam/crane,
 /turf/open/auto_turf/sand/layer2,
-/area/golden_arrow/prep_hallway)
-"EB" = (
-/obj/structure/holohoop{
-	dir = 8;
-	id = "basketball";
-	side = "right"
-	},
-/turf/open/auto_turf/sand/layer0,
 /area/golden_arrow/prep_hallway)
 "EC" = (
 /obj/structure/platform_decoration/kutjevo/rock,
@@ -6447,12 +6454,6 @@
 	},
 /turf/open/auto_turf/sand/layer1,
 /area/golden_arrow/prep_hallway)
-"Pa" = (
-/obj/structure/largecrate/random,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand/layer1,
-/area/golden_arrow/prep_hallway)
 "Pb" = (
 /obj/structure/machinery/light/double/blue,
 /obj/structure/flora/grass/desert/lightgrass_1,
@@ -6465,6 +6466,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"Pd" = (
+/obj/structure/cargo_container/uscm/chinook/left{
+	color = "#898988";
+	layer = 2.9
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/golden_arrow/prep_hallway)
 "Pe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -6582,6 +6590,15 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/golden_arrow/platoon_commander_rooms)
+"PM" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/golden_arrow/prep_hallway)
 "PO" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -7957,6 +7974,18 @@
 	},
 /turf/open/floor/interior/plastic,
 /area/golden_arrow/medical)
+"Zr" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/structure/prop/static_tank/water{
+	pixel_x = -6
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/golden_arrow/prep_hallway)
 "Zs" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -11442,8 +11471,8 @@ iC
 yu
 Qu
 Rb
-yu
-Cu
+na
+lS
 Xm
 Xm
 fK
@@ -11995,7 +12024,7 @@ Xm
 Xm
 Xm
 Xm
-kz
+aG
 aM
 sc
 am
@@ -12168,9 +12197,9 @@ ho
 xj
 Qn
 Xm
+Pd
 MK
 Ye
-Df
 ey
 RS
 Pr
@@ -12345,7 +12374,7 @@ ho
 sn
 ZQ
 Qn
-TA
+co
 JP
 sl
 TX
@@ -12522,7 +12551,7 @@ CU
 NR
 lS
 lS
-co
+Dc
 mg
 ON
 dW
@@ -12699,7 +12728,7 @@ Pr
 dh
 lS
 lS
-Dc
+lS
 JP
 ON
 dW
@@ -15706,8 +15735,8 @@ OE
 OE
 OE
 OE
-tp
-oL
+UO
+Fo
 Xm
 Xm
 Qn
@@ -15883,9 +15912,9 @@ on
 on
 on
 on
-on
-pK
-tn
+PM
+oL
+Rb
 Xm
 Xm
 zT
@@ -16059,10 +16088,10 @@ Oq
 on
 on
 QB
-Ug
 on
 on
-uV
+XE
+Rb
 Xm
 Xm
 lS
@@ -16236,10 +16265,10 @@ qC
 qf
 qf
 qC
-qC
-Rr
+Ug
 on
-uV
+yY
+Rb
 Xm
 Xm
 Ba
@@ -16405,7 +16434,7 @@ XE
 lt
 ZQ
 zT
-zC
+im
 on
 nr
 Rr
@@ -16413,10 +16442,10 @@ qC
 qC
 qC
 qC
-Rr
-Rr
+rw
 on
-uV
+yY
+Rb
 Xm
 Rb
 wU
@@ -16582,7 +16611,7 @@ UK
 lS
 lS
 Ba
-zC
+fP
 on
 tN
 Rr
@@ -16591,9 +16620,9 @@ qC
 qC
 id
 BH
-rw
 on
-PC
+yY
+Xm
 Xm
 Rb
 Ba
@@ -16758,8 +16787,8 @@ Ie
 Tr
 Xm
 Ba
-MQ
-zC
+Ba
+uK
 on
 on
 on
@@ -16769,8 +16798,8 @@ oc
 on
 on
 on
-on
-XE
+Zr
+UO
 Xm
 Xm
 Ba
@@ -16936,7 +16965,7 @@ Tr
 Xm
 Ba
 lS
-DQ
+mV
 on
 vt
 HG
@@ -17113,7 +17142,7 @@ Tr
 Xm
 dh
 lS
-ST
+DL
 on
 EY
 eA
@@ -17290,7 +17319,7 @@ Tr
 Xm
 Xm
 lS
-mV
+bQ
 on
 tc
 eA
@@ -17301,7 +17330,7 @@ qT
 Ls
 es
 on
-yY
+XE
 Xm
 Xm
 Fo
@@ -17466,7 +17495,7 @@ uL
 Tr
 Xm
 Xm
-zT
+lS
 zC
 on
 FU
@@ -17478,8 +17507,8 @@ qT
 Ls
 yf
 on
-yY
-xB
+XE
+lS
 Xm
 Xm
 kO
@@ -17656,7 +17685,7 @@ AV
 VU
 on
 QU
-xB
+lS
 Xm
 Xm
 Xm
@@ -17842,9 +17871,9 @@ Rb
 Rb
 Xm
 Xm
-EB
-Lg
+Xm
 Qn
+Lg
 me
 Ba
 iC
@@ -19065,13 +19094,13 @@ Xm
 RS
 LN
 LN
-pf
-pp
-pp
-pp
+LN
+QJ
+QJ
+QJ
 QJ
 LN
-xh
+Pr
 Xm
 Xm
 yo
@@ -19236,7 +19265,7 @@ dI
 wg
 If
 fr
-Um
+lS
 Ba
 Qn
 Xm
@@ -19413,10 +19442,10 @@ If
 If
 If
 fr
-lt
+Um
 Ba
 iC
-RW
+lS
 lS
 Xm
 Xm
@@ -19592,9 +19621,9 @@ UE
 Mj
 YY
 lC
-Pa
-RW
-RW
+sF
+lt
+lt
 ZQ
 lS
 lS
