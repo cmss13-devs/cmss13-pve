@@ -10656,7 +10656,6 @@
 	dir = 4
 	},
 /obj/item/clothing/suit/armor/vest,
-/obj/structure/machinery/vending/cigarette/upp,
 /turf/open/floor/carpet,
 /area/varadero/interior/bunks)
 "iAE" = (
