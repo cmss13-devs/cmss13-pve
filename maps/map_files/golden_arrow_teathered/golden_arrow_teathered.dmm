@@ -7558,7 +7558,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = -7;
-	job = "Squad Sergeant"
+	job = "Squad Leader"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -8582,7 +8582,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = 8;
-	job = "Squad Sergeant"
+	job = "Squad Leader"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -9215,12 +9215,13 @@
 /area/golden_arrow/cryo_cells)
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/m4ra_pve{
-	pixel_y = 18
-	},
 /obj/item/storage/box/guncase/heavy/shotgun{
 	pixel_y = 6;
 	pixel_x = 9
+	},
+/obj/item/storage/box/guncase/heavy/m49a_pve{
+	pixel_y = 13;
+	pixel_x = 5
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -19774,8 +19775,8 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
 "hLG" = (
-/obj/structure/machinery/suit_storage_unit/standard_unit{
-	pixel_x = 6
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+	pixel_x = 5
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/motor_pool)
@@ -20207,8 +20208,8 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/command/cic)
 "isj" = (
-/obj/structure/machinery/suit_storage_unit/standard_unit{
-	pixel_x = 6
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+	pixel_x = 5
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -23952,15 +23953,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"nin" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
-	pixel_x = 6
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer/plate,
-/area/almayer/hallways/upper/aft_hallway)
 "nja" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -25367,9 +25359,7 @@
 /turf/open/floor/engine,
 /area/almayer/hallways/upper/aft_hallway)
 "pfn" = (
-/obj/structure/machinery/suit_storage_unit/standard_unit{
-	pixel_x = -1
-	},
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/silverfull,
 /area/golden_arrow/motor_pool)
 "pfS" = (
@@ -26047,12 +26037,6 @@
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/lower_cargo)
-"qcc" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
-	pixel_x = -2
-	},
-/turf/open/floor/almayer,
-/area/almayer/hallways/upper/aft_hallway)
 "qcl" = (
 /obj/structure/machinery/medical_pod/autodoc{
 	dir = 1;
@@ -27167,12 +27151,6 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/upper/aft_hallway)
-"rJe" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
-	pixel_x = 6
-	},
-/turf/open/floor/almayer/plate,
-/area/almayer/hallways/upper/aft_hallway)
 "rLa" = (
 /turf/open/floor/almayer/aicore/glowing,
 /area/almayer/hallways/upper/aft_hallway)
@@ -27402,9 +27380,7 @@
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/lower_cargo)
 "rZh" = (
-/obj/structure/machinery/suit_storage_unit/standard_unit{
-	pixel_x = -1
-	},
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -27465,8 +27441,8 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/hallways/upper/aft_hallway)
 "sfG" = (
-/obj/structure/machinery/suit_storage_unit/standard_unit{
-	pixel_x = 6
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
+	pixel_x = 5
 	},
 /turf/open/floor/almayer/silverfull,
 /area/golden_arrow/motor_pool)
@@ -29443,15 +29419,6 @@
 /obj/item/clothing/mask/breath/medical,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
-"vcw" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
-	pixel_x = -2
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer/plate,
-/area/almayer/hallways/upper/aft_hallway)
 "vcx" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/decal/cleanable/dirt,
@@ -29554,12 +29521,6 @@
 	pixel_x = 1
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/almayer/hallways/upper/aft_hallway)
-"vkD" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
-	pixel_x = -2
-	},
-/turf/open/floor/almayer/plate,
 /area/almayer/hallways/upper/aft_hallway)
 "vld" = (
 /obj/structure/surface/table/reinforced/black,
@@ -50396,12 +50357,12 @@ lLv
 lLv
 lLv
 lLv
-qcc
-qcc
-qcc
+hNk
+hNk
+hNk
 lLv
-qcc
-qcc
+hNk
+hNk
 iAe
 iAe
 lkT
@@ -54657,16 +54618,16 @@ pkM
 gJE
 iTz
 iTz
-vcw
-vkD
+gJE
+dVz
 lLv
-vkD
-vcw
-vcw
-vcw
+dVz
+gJE
+gJE
+gJE
 lLv
-vcw
-vcw
+gJE
+gJE
 lLv
 bnj
 bnj
@@ -55865,16 +55826,16 @@ hNk
 dVz
 dVz
 iTz
-nin
-nin
+gJE
+gJE
 lLv
-rJe
-rJe
-rJe
-rJe
+dVz
+dVz
+dVz
+dVz
 lLv
-rJe
-nin
+dVz
+gJE
 lLv
 bnj
 bnj
