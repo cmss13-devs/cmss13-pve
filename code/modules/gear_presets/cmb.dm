@@ -45,8 +45,8 @@
 	return ..()
 
 //*****************************************************************************************************/
-/datum/equipment_preset/cmb/standard
-	name = "CMB - Colonial Marshals Deputy"
+/datum/equipment_preset/cmb/deputy
+	name = "US Colonial Marshals Deputy"
 	paygrades = list(PAY_SHORT_CMBD = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CMB Dep"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -54,7 +54,7 @@
 	rank = JOB_CMB
 	skills = /datum/skills/cmb
 
-/datum/equipment_preset/cmb/standard/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/cmb/deputy/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
@@ -84,11 +84,15 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
 
+/datum/equipment_preset/cmb/deputy/spanish
+	name = "LatAm Colonial Marshals Deputy"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
 
-/datum/equipment_preset/cmb/standard/emergency
-	name = "CMB - Colonial Marshals Deputy (Emergency, SMG)"
+/datum/equipment_preset/cmb/deputy/emergency
+	name = "US Colonial Marshals Deputy (Emergency, SMG)"
 
-/datum/equipment_preset/cmb/standard/emergency/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/cmb/deputy/emergency/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
@@ -137,11 +141,15 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 
+/datum/equipment_preset/cmb/deputy/emergency/spanish
+	name = "LatAm Colonial Marshals Deputy (Emergency, SMG)"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
 
-/datum/equipment_preset/cmb/standard/emergency/shotgunner
+/datum/equipment_preset/cmb/deputy/emergency/shotgunner
 	name = "CMB - Colonial Marshals Deputy (Emergency, Shotgun)"
 
-/datum/equipment_preset/cmb/standard/emergency/shotgunner/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/cmb/deputy/emergency/shotgunner/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
@@ -187,11 +195,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 
-
+/datum/equipment_preset/cmb/deputy/emergency/shotgunner/spanish
+	name = "LatAm Colonial Marshals Deputy (Emergency, Shotgun)"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
 //*****************************************************************************************************/
 
-/datum/equipment_preset/cmb/leader
-	name = "CMB - Colonial Marshal"
+/datum/equipment_preset/cmb/marshal
+	name = "US Colonial Marshal"
 	paygrades = list(PAY_SHORT_CMBM = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/marshal
 	role_comm_title = "CMB Mar"
@@ -202,7 +213,7 @@
 	minimum_age = 30
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE)
 
-/datum/equipment_preset/cmb/leader/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/cmb/marshal/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
@@ -232,6 +243,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/cmb/marshal/spanish
+	name = "LatAm Colonial Marshal"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 
 //*****************************************************************************************************/
 /datum/equipment_preset/cmb/synth
