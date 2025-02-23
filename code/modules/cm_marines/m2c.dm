@@ -22,7 +22,7 @@
 //STORAGE BOX FOR THE MACHINEGUN
 /obj/item/storage/box/m56d/m2c
 	name = "\improper M2C Assembly-Supply Crate"
-	desc = "A large case labelled 'M2C, .50 BMG caliber heavy machinegun', seems to be fairly heavy to hold. ontains a deadly M2C Heavy Machinegun System and its ammunition."
+	desc = "A large case labelled 'M2C, .50 BMG caliber heavy machinegun', seems to be fairly heavy to hold. Contains a deadly M2C Heavy Machinegun System and its ammunition."
 	icon = 'icons/turf/whiskeyoutpost.dmi'
 	icon_state = "M56D_case"
 	w_class = SIZE_HUGE
