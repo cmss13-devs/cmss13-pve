@@ -517,30 +517,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
-"cX" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
-/obj/item/storage/belt/gun/type47/np92,
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access_txt = "240";
-	req_access = null;
-	can_block_movement = 0;
-	pixel_y = 14;
-	pixel_x = -5;
-	name = "equipment locker"
-	},
-/obj/item/storage/backpack/lightpack/upp,
-/obj/item/storage/box/zipcuffs/small{
-	pixel_x = 5;
-	pixel_y = -1
-	},
-/turf/open/space/basic,
-/area/space)
 "da" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -8002,7 +7978,6 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "WZ" = (
-/obj/item/clothing/suit/storage/marine/faction/UPP/jacket,
 /obj/item/clothing/suit/storage/marine/veteran/lamp,
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{
@@ -8017,6 +7992,7 @@
 /obj/item/tool/crew_monitor{
 	faction = "UPP"
 	},
+/obj/item/clothing/suit/marine/faction/UPP/jacket,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
 "Xa" = (
@@ -16131,7 +16107,7 @@ mV
 mV
 mV
 mV
-cX
+mV
 mV
 mV
 mV
