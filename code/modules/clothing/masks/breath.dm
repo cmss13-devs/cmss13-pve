@@ -224,9 +224,9 @@
 	desc = "A simple cloth worn around the neck, adjustable between a loose fit or a more tightly secured style."
 	icon_state = "neckerchief"
 	item_state = "neckerchief"
-	icon = 'icons/obj/items/clothing/masks/scarves.dmi'
+	icon = 'icons/obj/items/clothing/masks.dmi'
 	item_icons = list(
-		WEAR_FACE = 'icons/mob/humans/onmob/clothing/masks/scarves.dmi'
+		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi'
 	)
 	flags_inventory = ALLOWREBREATH|ALLOWCPR
 	var/adjust = FALSE
@@ -309,6 +309,16 @@
 	icon_state = "neckerchief_black"
 	item_state = "neckerchief_black"
 	original_state = "neckerchief_black"
+
+/obj/item/clothing/mask/neckerchief/red
+	icon_state = "neckerchief_alpha"
+	item_state = "neckerchief_alpha"
+	original_state = "neckerchief_alpha"
+
+/obj/item/clothing/mask/neckerchief/desert
+	icon_state = "neckerchief_foxtrot"
+	item_state = "neckerchief_foxtrot"
+	original_state = "neckerchief_foxtrot"
 
 /obj/item/clothing/mask/owlf_mask
 	name = "\improper OWLF gas mask"
