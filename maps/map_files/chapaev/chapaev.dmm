@@ -235,35 +235,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
-"bB" = (
-/obj/structure/machinery/computer/crew/alt{
-	dir = 1;
-	pixel_x = -8
-	},
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/structure/machinery/light/double,
-/obj/structure/machinery/computer/med_data/laptop{
-	dir = 1;
-	pixel_x = 10;
-	req_one_access = list(240, 241, 242)
-	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/medical)
-"bJ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/device/flashlight/lamp/on{
-	pixel_y = 21;
-	pixel_x = 2;
-	anchored = 1
-	},
-/obj/structure/machinery/computer/skills{
-	dir = 8;
-	req_one_access = null
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_sergeant)
 "bN" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -634,6 +605,25 @@
 /obj/item/dartboard,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
+"eR" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/hand_labeler{
+	pixel_x = -6;
+	pixel_y = 12
+	},
+/obj/item/prop/tableflag/upp{
+	pixel_x = 7;
+	pixel_y = 12
+	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/machinery/computer/secure_data{
+	dir = 8;
+	req_access = null
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/platoon_sergeant)
 "eY" = (
 /obj/structure/closet,
 /obj/item/coin/silver/falcon{
@@ -1423,6 +1413,46 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
+"lS" = (
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/lamp,
+/obj/item/storage/belt/gun/type47/np92,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access_txt = "240";
+	req_access = null;
+	can_block_movement = 0;
+	pixel_y = 14;
+	pixel_x = -5;
+	name = "equipment locker"
+	},
+/obj/item/storage/backpack/lightpack/upp,
+/obj/item/storage/box/zipcuffs/small{
+	pixel_x = 5;
+	pixel_y = -1
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/storage/marine/veteran/lamp,
+/obj/item/storage/belt/gun/type47/np92,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access_txt = "240";
+	req_access = null;
+	can_block_movement = 0;
+	pixel_y = 14;
+	pixel_x = -5;
+	name = "equipment locker"
+	},
+/obj/item/storage/backpack/lightpack/upp,
+/obj/item/storage/box/zipcuffs/small{
+	pixel_x = 5;
+	pixel_y = -1
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/platoon_commander_rooms)
 "lU" = (
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
@@ -2976,25 +3006,6 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/briefing)
-"yO" = (
-/obj/item/clothing/suit/storage/marine/faction/UPP/jacket,
-/obj/item/clothing/suit/marine/lamp,
-/obj/item/storage/belt/gun/type47/np92,
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access_txt = "240";
-	req_access = null;
-	can_block_movement = 0;
-	pixel_y = 14;
-	pixel_x = -5;
-	name = "equipment locker"
-	},
-/obj/item/storage/backpack/lightpack/upp,
-/obj/item/storage/box/zipcuffs/small{
-	pixel_x = 5;
-	pixel_y = -1
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms)
 "yR" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -3732,6 +3743,19 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
+"Gz" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/device/flashlight/lamp/on{
+	pixel_y = 21;
+	pixel_x = 2;
+	anchored = 1
+	},
+/obj/structure/machinery/computer/skills{
+	dir = 8;
+	req_one_access = null
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/platoon_sergeant)
 "GC" = (
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -4109,25 +4133,6 @@
 	},
 /turf/open/space/basic,
 /area/space)
-"JZ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/tool/hand_labeler{
-	pixel_x = -6;
-	pixel_y = 12
-	},
-/obj/item/prop/tableflag/upp{
-	pixel_x = 7;
-	pixel_y = 12
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/machinery/computer/secure_data{
-	dir = 8;
-	req_access = null
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant)
 "Kb" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -5120,6 +5125,22 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
+"Vd" = (
+/obj/structure/machinery/computer/crew/alt{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/structure/machinery/light/double,
+/obj/structure/machinery/computer/med_data/laptop{
+	dir = 1;
+	pixel_x = 10;
+	req_one_access = list(240, 241, 242)
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/medical)
 "Vp" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -12953,7 +12974,7 @@ IT
 Kw
 og
 aZ
-bJ
+Gz
 NU
 DD
 ID
@@ -13091,7 +13112,7 @@ os
 rw
 qv
 os
-yO
+lS
 Go
 YU
 ww
@@ -13253,7 +13274,7 @@ dK
 Ze
 zJ
 ww
-JZ
+eR
 nG
 Wi
 Ut
@@ -15997,7 +16018,7 @@ qR
 zO
 rN
 lX
-bB
+Vd
 CK
 la
 OJ
