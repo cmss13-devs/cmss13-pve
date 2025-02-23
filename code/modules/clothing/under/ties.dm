@@ -1166,21 +1166,21 @@
 
 /obj/item/clothing/accessory/upppads
 	name = "\improper 6B90 Arm Plates"
-	desc = "A set of arm plates designed for the 8B90 armor system."
+	desc = "A set of arm plates designed for the 6B90 armor system."
 	icon_state = "upp_arms"
 	item_state = "upp_arms"
 	slot = ACCESSORY_SLOT_DECORARMOR
 
 /obj/item/clothing/accessory/upppads/legs
 	name = "\improper 6B90 Leg Guards"
-	desc = "A set of leg greaves designed for the 8B90 armor system."
+	desc = "A set of leg greaves designed for the 6B90 armor system."
 	icon_state = "upp_greaves"
 	item_state = "upp_greaves"
 	slot = ACCESSORY_SLOT_DECORSHIN
 
 /obj/item/clothing/accessory/upppads/crotch
 	name = "\improper 6B90 Crotch Guard"
-	desc = "A crotch plate designed for the 8B90 armor system."
+	desc = "A crotch plate designed for the 6B90 armor system."
 	icon_state = "upp_crotch"
 	item_state = "upp_crotch"
 	slot = ACCESSORY_SLOT_DECORGROIN
