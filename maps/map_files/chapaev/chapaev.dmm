@@ -1414,8 +1414,6 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
 "lS" = (
-/obj/item/clothing/suit/marine/lamp,
-/obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access_txt = "240";
 	req_access = null;
@@ -1424,25 +1422,7 @@
 	pixel_x = -5;
 	name = "equipment locker"
 	},
-/obj/item/storage/backpack/lightpack/upp,
-/obj/item/storage/box/zipcuffs/small{
-	pixel_x = 5;
-	pixel_y = -1
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
 /obj/item/storage/belt/gun/type47/np92,
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access_txt = "240";
-	req_access = null;
-	can_block_movement = 0;
-	pixel_y = 14;
-	pixel_x = -5;
-	name = "equipment locker"
-	},
 /obj/item/storage/backpack/lightpack/upp,
 /obj/item/storage/box/zipcuffs/small{
 	pixel_x = 5;
