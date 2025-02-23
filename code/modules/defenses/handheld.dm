@@ -161,8 +161,8 @@
 	deployment_time = 10 SECONDS
 
 /obj/item/defenses/handheld/sentry/upp
-	name = "handheld UPPA 32-H sentry gun"
-	desc = "A compact version of the UPPA defenses. Designed for quick deployment of the associated type in the field."
+	name = "handheld UPPAC 32-H sentry gun"
+	desc = "A compact version of the UPPAC defenses. Designed for quick deployment of the associated type in the field."
 	icon_state = "UPP uac_sentry_handheld"
 	defense_type = /obj/structure/machinery/defenses/sentry/upp
 
