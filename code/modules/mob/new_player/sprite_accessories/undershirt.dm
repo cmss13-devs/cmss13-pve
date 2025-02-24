@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 			name += " (Snow)"
 
 // Plural
-/datum/sprite_accessory/undershirt/undershirt
+/* /datum/sprite_accessory/undershirt/undershirt
 	name = "Undershirt (Tan)"
 	icon_state = "t_undershirt"
 	gender = NEUTER
@@ -95,7 +95,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 
 /datum/sprite_accessory/undershirt/undershirt/long/black
 	name = "Undershirt (Black, Long Sleeved)"
-	icon_state = "b_long_undershirt"
+	icon_state = "b_long_undershirt" */
 
 // Male
 /datum/sprite_accessory/undershirt/none
@@ -124,11 +124,21 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 
 // Restricted
 
-/datum/sprite_accessory/undershirt/civilian
-	name = "undershirt"
+/datum/sprite_accessory/undershirt/undershirt/civilian
+	name = "Civilian Undershirt"
+	icon_state = "undershirt_short"
+
+/datum/sprite_accessory/undershirt/undershirt/civilian/sleeveless
+	name = "Civilian Undershirt (Sleeveless)"
 	icon_state = "undershirt"
-	gender = NEUTER
-	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/undershirt/marine
+	name = "Marine Undershirt"
+	icon_state = "undershirt_uscm_short"
+
+/datum/sprite_accessory/undershirt/undershirt/marine/sleeveless
+	name = "Marine Undershirt (Sleeveless)"
+	icon_state = "undershirt_uscm"
 
 /datum/sprite_accessory/undershirt/telnyashka
 	name = "Naval Infantry Telnyashka"
@@ -148,22 +158,14 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	gender = NEUTER
 	restricted = TRUE
 
-/datum/sprite_accessory/undershirt/marine
-	name = "Marine Undershirt"
-	icon_state = "undershirt_uscm"
-	gender = NEUTER
-	restricted = TRUE
-
-/datum/sprite_accessory/undershirt/black
+/datum/sprite_accessory/undershirt/undershirt/black
 	name = "Black Undershirt"
-	icon_state = "undershirt_black"
-	gender = NEUTER
-	restricted = TRUE
-
-/datum/sprite_accessory/undershirt/black/short
-	name = "Black Undershirt, Short"
 	icon_state = "undershirt_black_short"
 
-/datum/sprite_accessory/undershirt/black/long
-	name = "Black Undershirt, Long"
+/datum/sprite_accessory/undershirt/undershirt/black/sleeveless
+	name = "Black Undershirt (Sleeveless)"
+	icon_state = "undershirt_black"
+
+/datum/sprite_accessory/undershirt/undershirt/black/long
+	name = "Black Undershirt (Long Sleeve)"
 	icon_state = "undershirt_black_long"
