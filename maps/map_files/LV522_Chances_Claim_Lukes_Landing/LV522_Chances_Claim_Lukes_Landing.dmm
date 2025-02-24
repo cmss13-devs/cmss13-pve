@@ -7811,9 +7811,7 @@
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv522_l_l/indoors/dorms)
 "col" = (
-/obj/structure/machinery/suit_storage_unit{
-	pixel_x = -2
-	},
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
 "cos" = (
@@ -30298,7 +30296,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/cargo)
 "ixA" = (
-/obj/structure/machinery/suit_storage_unit{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	pixel_x = 6
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -59881,7 +59879,7 @@
 /turf/open/floor/tdome,
 /area/lv522/indoors/a_block/corpo)
 "qrX" = (
-/obj/structure/machinery/suit_storage_unit,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
@@ -60807,13 +60805,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/outdoors/colony_outskirts)
-"qDd" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
-	name = "Suit Storage Unit";
-	pixel_x = 3
-	},
-/turf/open/floor/prison/floor_plate,
-/area/lv522/indoors/a_block/admin)
 "qDl" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-8"
@@ -62687,7 +62678,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
 "rcV" = (
-/obj/structure/machinery/suit_storage_unit,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
 "rdc" = (
@@ -74831,15 +74822,6 @@
 	},
 /turf/open/asphalt/cement/cement12,
 /area/lv522_l_l/outdoors/colony)
-"upc" = (
-/obj/structure/machinery/suit_storage_unit{
-	pixel_x = -9
-	},
-/obj/structure/machinery/suit_storage_unit{
-	pixel_x = 16
-	},
-/turf/open/floor/prison,
-/area/lv522/indoors/c_block/mining)
 "upl" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/microwave{
@@ -160971,7 +160953,7 @@ fts
 jdq
 ewf
 jRY
-upc
+col
 abS
 vDV
 spE
@@ -222163,7 +222145,7 @@ jvo
 jdq
 ewf
 pFc
-qDd
+ene
 vhq
 yjf
 dHm
