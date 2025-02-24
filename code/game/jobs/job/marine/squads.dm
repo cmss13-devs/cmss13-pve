@@ -15,7 +15,7 @@
 	lead_name = "Section Sergeant"
 	lead_icon = "leader"
 	sub_squad = "Squad"
-	sub_leader = "Squad Sergeant"
+	sub_leader = "Squad NCO"
 
 /datum/squad_type/marsoc_team
 	name = "Team"
@@ -693,7 +693,7 @@
 		if(JOB_SQUAD_MEDIC)
 			old_lead.comm_title = "HM"
 		if(JOB_SQUAD_TEAM_LEADER)
-			old_lead.comm_title = "SqSgt"
+			old_lead.comm_title = "SqLdr"
 		if(JOB_SQUAD_SMARTGUN)
 			old_lead.comm_title = "SG"
 		if(JOB_SQUAD_LEADER)
@@ -799,10 +799,10 @@
 			id.access += squad_two_access
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
-		if(!("Squad Sergeant" in cycled_headset.tracking_options))
+		if(!("Squad Leader" in cycled_headset.tracking_options))
 			continue
 
-		cycled_headset.locate_setting = cycled_headset.tracking_options["Squad Sergeant"]
+		cycled_headset.locate_setting = cycled_headset.tracking_options["Squad Leader"]
 
 /datum/squad/proc/unassign_fireteam(mob/living/carbon/human/H, upd_ui = TRUE)
 	fireteams[H.assigned_fireteam].Remove(H)
