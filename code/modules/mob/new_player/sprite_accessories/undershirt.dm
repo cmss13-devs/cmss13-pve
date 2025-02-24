@@ -124,21 +124,37 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 
 // Restricted
 
-/datum/sprite_accessory/undershirt/undershirt/civilian
-	name = "Civilian Undershirt"
-	icon_state = "undershirt_short"
-
-/datum/sprite_accessory/undershirt/undershirt/civilian/sleeveless
-	name = "Civilian Undershirt (Sleeveless)"
-	icon_state = "undershirt"
-
-/datum/sprite_accessory/undershirt/undershirt/marine
-	name = "Marine Undershirt"
+/datum/sprite_accessory/undershirt/marine
+	name = "USCM Undershirt"
 	icon_state = "undershirt_uscm_short"
 
-/datum/sprite_accessory/undershirt/undershirt/marine/sleeveless
-	name = "Marine Undershirt (Sleeveless)"
+/datum/sprite_accessory/undershirt/marine/sleeveless
+	name = "USCM Undershirt (Sleeveless)"
 	icon_state = "undershirt_uscm"
+
+/datum/sprite_accessory/undershirt/black
+	name = "Black Undershirt"
+	icon_state = "undershirt_black_short"
+
+/datum/sprite_accessory/undershirt/black/sleeveless
+	name = "Black Undershirt (Sleeveless)"
+	icon_state = "undershirt_black"
+
+/datum/sprite_accessory/undershirt/black/long
+	name = "Black Undershirt (Long Sleeve)"
+	icon_state = "undershirt_black_long"
+
+/datum/sprite_accessory/undershirt/white
+	name = "White Undershirt"
+	icon_state = "undershirt_short"
+
+/datum/sprite_accessory/undershirt/white/sleeveless
+	name = "White Undershirt (Sleeveless)"
+	icon_state = "undershirt"
+
+/datum/sprite_accessory/undershirt/grey
+	name = "Grey Undershirt"
+	icon_state = "undershirt_grey__short"
 
 /datum/sprite_accessory/undershirt/telnyashka
 	name = "Naval Infantry Telnyashka"
@@ -158,14 +174,4 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	gender = NEUTER
 	restricted = TRUE
 
-/datum/sprite_accessory/undershirt/undershirt/black
-	name = "Black Undershirt"
-	icon_state = "undershirt_black_short"
 
-/datum/sprite_accessory/undershirt/undershirt/black/sleeveless
-	name = "Black Undershirt (Sleeveless)"
-	icon_state = "undershirt_black"
-
-/datum/sprite_accessory/undershirt/undershirt/black/long
-	name = "Black Undershirt (Long Sleeve)"
-	icon_state = "undershirt_black_long"

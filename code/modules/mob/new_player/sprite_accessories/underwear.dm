@@ -63,7 +63,7 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 			name += " (Snow)"
 
 // Both
-/datum/sprite_accessory/underwear/boxers
+/* /datum/sprite_accessory/underwear/boxers
 	name = "Boxers"
 	icon_state = "boxers"
 	gender = NEUTER
@@ -91,18 +91,31 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	name = "Tanga"
 	icon_state = "tanga"
 	gender = NEUTER
-	camo_conforming = TRUE
+	camo_conforming = TRUE */
 
-/datum/sprite_accessory/underwear/boxers/white
+/datum/sprite_accessory/underwear/boxers
 	name = "White Boxers"
 	icon_state = "white_boxers"
 	gender = NEUTER
 	camo_conforming = FALSE
-	restricted = TRUE
 
 /datum/sprite_accessory/underwear/boxers/marine
 	name = "Marine Boxers"
 	icon_state = "marine_boxers"
+
+/datum/sprite_accessory/underwear/boxers/upp
+	name = "UPP Boxers"
+	icon_state = "upp_boxers"
+	restricted = TRUE
+
+/datum/sprite_accessory/underwear/panties
+	name = "White Panties"
+	icon_state = "white_satin"
+	gender = FEMALE
+	camo_conforming = FALSE
+
+/datum/sprite_accessory/underwear/briefs
+	name = "White Underwear"
+	icon_state = "white_briefs"
 	gender = NEUTER
 	camo_conforming = FALSE
-	restricted = TRUE
