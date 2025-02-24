@@ -186,7 +186,7 @@
 
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.underwear = "UPP Boxers"
-	new_human.underwear = "UPP Boxers"	//back
+	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
