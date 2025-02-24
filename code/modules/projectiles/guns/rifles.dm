@@ -448,7 +448,7 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/grenade/mk1)
 
 /obj/item/weapon/gun/rifle/m41aMK1/forecon
-	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and is used by Force Reconnaissance units."
+	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and is used by Force Reconnaissance & MARSOC units."
 	icon_state = "reconm41amk1"
 	item_state = "reconm41amk1"
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/recon
@@ -522,27 +522,20 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
 //----------------------------------------------
-//Special gun for the CO to replace the smartgun
+//Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
 
 /obj/item/weapon/gun/rifle/m46c
-	name = "\improper M46C pulse rifle"
-	desc = "A prototype M46C, an experimental rifle platform built to outperform the standard M41A. Back issue only. Uses standard MK1 & MK2 rifle magazines."
+	name = "\improper XM46A pulse rifle"
+	desc = "An experimental improvement of the M41A from ARMAT, the XM46 incorporated a hexagonally rifled barrel, improved compensation, refined ergonomics, and the flagship offering, an intelligent fire control system. In trials it was judged to offer too little over the existing weapon at grossly higher cost, and suspiciously low parts interchange. Rarely seen outside of special mission unit service, and even then uncommon."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m46c"
 	item_state = "m46c"
 	fire_sound = "gun_pulse"
 	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/rifle/incendiary
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 
 	accepted_ammo = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/rifle/rubber,
-		/obj/item/ammo_magazine/rifle/extended,
-		/obj/item/ammo_magazine/rifle/ap,
-		/obj/item/ammo_magazine/rifle/incendiary,
-		/obj/item/ammo_magazine/rifle/toxin,
-		/obj/item/ammo_magazine/rifle/penetrating,
 		/obj/item/ammo_magazine/rifle/m41aMK1,
 		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
 		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
@@ -550,82 +543,48 @@
 		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
 		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
 	)
-	//somewhere in between the mk1 and mk2
 	attachable_allowed = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/reddot,
+		/obj/item/attachable/suppressor, // Muzzle
+		/obj/item/attachable/reddot, // Rail
+		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/sling,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/verticalgrip, // Under
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/flashlight/grip,
-		/obj/item/attachable/stock/rifle/collapsible,
-		/obj/item/attachable/attached_gun/grenade,
-		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/flamer/advanced,
-		/obj/item/attachable/attached_gun/extinguisher,
+		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/attached_gun/grenade/mk1/recon,
 		/obj/item/attachable/attached_gun/shotgun,
-	)
-	// CO rifle is guaranteed kitted out
-	random_spawn_chance = 100
-	random_spawn_rail = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex/,
-		/obj/item/attachable/scope/mini,
-	)
-	random_spawn_under = list(
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/attached_gun/shotgun,
-	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/stock/rifle/collapsible, // Stock
 	)
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	indestructible = TRUE
-	auto_retrieval_slot = WEAR_J_STORE
-	map_specific_decoration = TRUE
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/recon, /obj/item/attachable/stock/rifle/collapsible)
+	start_automatic = TRUE
+	map_specific_decoration = FALSE
 
-	var/mob/living/carbon/human/linked_human
-	var/is_locked = TRUE
 	var/iff_enabled = TRUE
 
 /obj/item/weapon/gun/rifle/m46c/Initialize(mapload, ...)
 	LAZYADD(actions_types, /datum/action/item_action/m46c/toggle_lethal_mode)
-	LAZYADD(actions_types, /datum/action/item_action/m46c/toggle_id_lock)
 	. = ..()
-	if(iff_enabled)
-		LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff)
-		))
 	recalculate_attachment_bonuses()
 
-/obj/item/weapon/gun/rifle/m46c/Destroy()
-	linked_human = null
-	. = ..()
-
-/obj/item/weapon/gun/rifle/m46c/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/stock/rifle/collapsible/S = new(src)
-	S.flags_attach_features &= ~ATTACH_REMOVABLE
-	S.Attach(src)
-	update_attachable(S.slot)
-
+/obj/item/weapon/gun/rifle/m46c/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff)
+	))
+	AddComponent(/datum/component/iff_fire_prevention)
 
 /obj/item/weapon/gun/rifle/m46c/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17, "rail_x" = 11, "rail_y" = 19, "under_x" = 24, "under_y" = 12, "stock_x" = 24, "stock_y" = 13)
-
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17, "rail_x" = 11, "rail_y" = 19, "under_x" = 24, "under_y" = 12, "stock_x" = 24, "stock_y" = 13, "special_x" = 26, "special_y" = 17)
 
 /obj/item/weapon/gun/rifle/m46c/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_9)
-	set_burst_amount(BURST_AMOUNT_TIER_4)
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
 	set_burst_delay(FIRE_DELAY_TIER_12)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
@@ -634,35 +593,18 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-	fa_max_scatter = SCATTER_AMOUNT_TIER_7
+	fa_max_scatter = SCATTER_AMOUNT_TIER_8
 
-/obj/item/weapon/gun/rifle/m46c/able_to_fire(mob/user)
-	. = ..()
-	if(is_locked && linked_human && linked_human != user)
-		if(linked_human.is_revivable() || linked_human.stat != DEAD)
-			to_chat(user, SPAN_WARNING("[icon2html(src, usr)] Trigger locked by [src]. Unauthorized user."))
-			playsound(loc,'sound/weapons/gun_empty.ogg', 25, 1)
-			return FALSE
-
-		linked_human = null
-		is_locked = FALSE
-		UnregisterSignal(linked_human, COMSIG_PARENT_QDELETING)
-
-/obj/item/weapon/gun/rifle/m46c/pickup(user)
-	if(!linked_human)
-		name_after_co(user)
-		to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] You pick up \the [src], registering yourself as its owner."))
-	..()
 
 //---ability actions--\\
 
 /datum/action/item_action/m46c/action_activate()
 	. = ..()
-	var/obj/item/weapon/gun/rifle/m46c/protag_gun = holder_item
+	var/obj/item/weapon/gun/rifle/m46c/smartrifle = holder_item
 	if(!ishuman(owner))
 		return
-	var/mob/living/carbon/human/protagonist = owner
-	if(protagonist.is_mob_incapacitated() || protag_gun.get_active_firearm(protagonist, FALSE) != holder_item)
+	var/mob/living/carbon/human/user = owner
+	if(user.is_mob_incapacitated() || smartrifle.get_active_firearm(user, FALSE) != holder_item)
 		return
 
 /datum/action/item_action/m46c/update_button_icon()
@@ -678,98 +620,27 @@
 
 /datum/action/item_action/m46c/toggle_lethal_mode/action_activate()
 	. = ..()
-	var/obj/item/weapon/gun/rifle/m46c/protag_gun = holder_item
-	protag_gun.toggle_iff(usr)
-	if(protag_gun.iff_enabled)
+	var/obj/item/weapon/gun/rifle/m46c/smartrifle = holder_item
+	smartrifle.toggle_iff(usr)
+	if(smartrifle.iff_enabled)
 		action_icon_state = "iff_toggle_on"
 	else
 		action_icon_state = "iff_toggle_off"
 	button.overlays.Cut()
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
-/datum/action/item_action/m46c/toggle_id_lock/New(Target, obj/item/holder)
-	. = ..()
-	name = "Toggle ID lock"
-	action_icon_state = "id_lock_locked"
-	button.name = name
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
-
-/datum/action/item_action/m46c/toggle_id_lock/action_activate()
-	. = ..()
-	var/obj/item/weapon/gun/rifle/m46c/protag_gun = holder_item
-	protag_gun.toggle_lock()
-	if(protag_gun.is_locked)
-		action_icon_state = "id_lock_locked"
-	else
-		action_icon_state = "id_lock_unlocked"
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
-
-
 // -- ability actions procs -- \\
 
-/obj/item/weapon/gun/rifle/m46c/proc/toggle_lock(mob/user)
-	if(linked_human && usr != linked_human)
-		to_chat(usr, SPAN_WARNING("[icon2html(src, usr)] Action denied by [src]. Unauthorized user."))
-		return
-	else if(!linked_human)
-		name_after_co(usr)
-
-	is_locked = !is_locked
-	to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] You [is_locked? "lock": "unlock"] [src]."))
-	playsound(loc,'sound/machines/click.ogg', 25, 1)
-
 /obj/item/weapon/gun/rifle/m46c/proc/toggle_iff(mob/user)
-	if(is_locked && linked_human && usr != linked_human)
-		to_chat(usr, SPAN_WARNING("[icon2html(src, usr)] Action denied by [src]. Unauthorized user."))
-		return
-
-	gun_firemode = GUN_FIREMODE_SEMIAUTO
 	iff_enabled = !iff_enabled
 	to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] You [iff_enabled? "enable": "disable"] the IFF on [src]."))
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 
-	recalculate_attachment_bonuses()
 	if(iff_enabled)
 		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
 	else
 		remove_bullet_trait("iff")
-
-/obj/item/weapon/gun/rifle/m46c/recalculate_attachment_bonuses()
-	. = ..()
-	if(iff_enabled)
-		modify_fire_delay(FIRE_DELAY_TIER_12)
-		remove_firemode(GUN_FIREMODE_BURSTFIRE)
-		remove_firemode(GUN_FIREMODE_AUTOMATIC)
-
-	else
-		add_firemode(GUN_FIREMODE_BURSTFIRE)
-		add_firemode(GUN_FIREMODE_AUTOMATIC)
-
-
-/obj/item/weapon/gun/rifle/m46c/proc/name_after_co(mob/living/carbon/human/H)
-	linked_human = H
-	RegisterSignal(linked_human, COMSIG_PARENT_QDELETING, PROC_REF(remove_idlock))
-
-/obj/item/weapon/gun/rifle/m46c/get_examine_text(mob/user)
-	. = ..()
-	if(linked_human)
-		if(is_locked)
-			. += SPAN_NOTICE("It is registered to [linked_human].")
-		else
-			. += SPAN_NOTICE("It is registered to [linked_human] but has its fire restrictions unlocked.")
-	else
-		. += SPAN_NOTICE("It's unregistered. Pick it up to register yourself as its owner.")
-	if(!iff_enabled)
-		. += SPAN_WARNING("Its IFF restrictions are disabled.")
-
-/obj/item/weapon/gun/rifle/m46c/proc/remove_idlock()
-	SIGNAL_HANDLER
-	linked_human = null
-
-/obj/item/weapon/gun/rifle/m46c/stripped
-	random_spawn_chance = 0//no extra attachies on spawn, still gets its stock though.
+	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
 //-------------------------------------------------------
 //MAR-40 AK CLONE //AK47 and FN FAL together as one.
