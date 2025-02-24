@@ -207,7 +207,7 @@
 
 /datum/human_ai_defense/defense/sentry/wy/static_gun
 	name = "W-Y Sentry - Static"
-	desc = /obj/structure/machinery/defenses/sentry/premade/deployable/wy::desc
+	desc = /obj/structure/machinery/defenses/sentry/premade/deployable/wy
 	icon_state = "wy_sentry_static"
 	path_to_spawn = /obj/structure/machinery/defenses/sentry/premade/deployable/wy
 

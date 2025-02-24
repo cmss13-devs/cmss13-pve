@@ -158,9 +158,8 @@
 	item_state = "WO_jumpsuit"
 	worn_state = "WO_jumpsuit"
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine, /obj/item/clothing/suit/armor/riot/marine, /obj/item/clothing/suit/storage/jacket/marine/service/cmp)
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	flags_jumpsuit = FALSE
 	specialty = "chief MP"
-	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/officer/technical
 	name = "technical officer uniform"
@@ -1327,3 +1326,25 @@
 	desc = "Standard-issue Army uniform, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+/obj/item/clothing/under/colonist/steward
+	name = "steward utilities"
+	desc = "A stylish brown vest and shorts - uniforms like this are often worn by clerks and shop stewards."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/UA.dmi',
+	)
+	icon_state = "steward"
+	worn_state = "steward"
+	has_sensor = UNIFORM_HAS_SENSORS
+
+/obj/item/clothing/under/rank/utility/gray
+	name = "\improper Gray utility uniform"
+	desc = "A stylish gray jumpsuit, popularly issued to UA contract workers on the frontier."
+	icon_state = "grey_utility"
+	worn_state = "grey_utility"
+
+/obj/item/clothing/under/rank/utility/yellow
+	name = "\improper Yellow utility uniform"
+	desc = "A grey utility uniform with yellow suspenders, made for shipside crew."
+	icon_state = "yellow_utility"
+	worn_state = "yellow_utility"

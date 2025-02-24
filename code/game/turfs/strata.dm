@@ -115,6 +115,12 @@
 /turf/open/floor/strata/cyan4
 	icon_state = "cyan4"
 
+/turf/open/floor/strata/cyan4/north
+	dir = NORTH
+
+/turf/open/floor/strata/cyan4/west
+	dir = WEST
+
 /turf/open/floor/strata/cyan4/east
 	dir = EAST
 
@@ -126,6 +132,9 @@
 
 /turf/open/floor/strata/orange_edge
 	icon_state = "orange_edge"
+
+/turf/open/floor/strata/orange_edge/north
+	dir = NORTH
 
 /turf/open/floor/strata/orange_edge/east
 	dir = EAST
@@ -160,8 +169,32 @@
 /turf/open/floor/strata/cyan3/west
 	dir = WEST
 
+/turf/open/floor/strata/cyan3/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/strata/cyan3/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/strata/cyan3/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/strata/blue3/west
+	dir = WEST
+
+/turf/open/floor/strata/cyan3/west
+	dir = WEST
+
 /turf/open/floor/strata/multi_tiles/west
 	dir = WEST
+
+/turf/open/floor/strata/orange_edge/west
+	dir = WEST
+
+/turf/open/floor/strata/orange_edge/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/strata/orange_edge/southeast
+	dir = SOUTHEAST
 
 /turf/open/floor/strata/orange_edge/west
 	dir = WEST
@@ -238,6 +271,9 @@
 /turf/open/floor/strata/green4/west
 	dir = WEST
 
+/turf/open/floor/strata/orange_tile
+	icon_state = "orange_tile"
+
 /turf/open/floor/strata/orange_cover
 	icon_state = "orange_cover"
 
@@ -249,9 +285,6 @@
 
 /turf/open/floor/strata/orange_icorner/west
 	dir = WEST
-
-/turf/open/floor/strata/orange_tile
-	icon_state = "orange_tile"
 
 /turf/open/floor/strata/purp1
 	icon_state = "purp1"
@@ -282,3 +315,27 @@
 
 /turf/open/floor/strata/red4/west
 	dir = WEST
+
+/turf/open/floor/strata/yellow3
+	icon_state = "yellow3"
+
+/turf/open/floor/strata/yellow3/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/strata/yellow3/north
+	dir = NORTH
+
+/turf/open/floor/strata/yellow3/east
+	dir = EAST
+
+/turf/open/floor/strata/yellow3/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/strata/yellow3/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/strata/yellow3/west
+	dir = WEST
+
+/turf/open/floor/strata/yellow3/northwest
+	dir = NORTHWEST

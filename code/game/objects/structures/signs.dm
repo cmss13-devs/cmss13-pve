@@ -160,6 +160,16 @@
 	name = "\improper Worn United States of America flag"
 	desc = "A very worn flag of the United States of America. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "usaflag_worn"
+
+/obj/structure/sign/banners/clf_flag
+	name = "\improper Colonial Liberation Front flag"
+	desc = "A flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "clfflag"
+/obj/structure/sign/banners/clf_worn
+	name = "\improper Worn Colonial Liberation Front flag"
+	desc = "A very worn flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "clfflag_worn"
+
 //=====================//
 // SEMIOTIC STANDARD  //
 //===================//
@@ -697,5 +707,5 @@
 /obj/structure/sign/catclock
 	name = "cat clock"
 	desc = "An unbelievably creepy cat clock that surveys the room with every tick and every tock."
-	icon = 'icons/obj/structures/props/catclock.dmi'
+	icon = 'icons/obj/structures/props/clock.dmi'
 	icon_state = "cat_clock_motion"

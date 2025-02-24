@@ -128,6 +128,8 @@
 #define LIGHT_COLOR_TUNGSTEN   "#FAE1AF"
 /// Barely visible cyan-ish hue, as the doctor prescribed. rgb(240, 250, 250)
 #define LIGHT_COLOR_HALOGEN "#F0FAFA"
+/// Bluish cyan color for blue lights. rgb(210, 227, 236)
+#define LIGHT_COLOR_XENON "#D2E3EC"
 
 /// The default color for admin say, used as a fallback when the preference is not enabled
 
