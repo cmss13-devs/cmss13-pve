@@ -54,3 +54,14 @@
 /obj/effect/landmark/start/marine/spec/delta
 	icon_state = "spec_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/datum/job/marine/specialist/ai/marsoc
+	title = JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/spec/marsoc
+
+/obj/effect/landmark/start/marine/spec/marsoc
+	name = JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/equipment_preset/uscm/spec/marsoc

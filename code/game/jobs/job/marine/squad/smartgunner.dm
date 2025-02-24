@@ -84,6 +84,12 @@
 	gear_preset = /datum/equipment_preset/uscm/sg/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/sg/forecon/lesser_rank
 
+/datum/job/marine/smartgunner/ai/marsoc
+	title = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/sg/marsoc
+
 /obj/effect/landmark/start/marine/smartgunner/upp
 	name = JOB_SQUAD_SMARTGUN_UPP
 	job = JOB_SQUAD_SMARTGUN_UPP
@@ -93,6 +99,11 @@
 	name = JOB_SQUAD_SMARTGUN_FORECON
 	job = JOB_SQUAD_SMARTGUN_FORECON
 	squad = SQUAD_LRRP
+
+/obj/effect/landmark/start/marine/smartgunner/marsoc
+	name = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/equipment_preset/uscm/sg/marsoc
 
 #undef LCPL_VARIANT
 #undef CPL_VARIANT

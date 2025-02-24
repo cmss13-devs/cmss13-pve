@@ -32,6 +32,12 @@
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/wo/marine/engineer
 
+/datum/job/marine/engineer/ai/marsoc
+	title = JOB_SQUAD_SAPPER_MARSOC
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/engineer/marsoc
+
 /obj/effect/landmark/start/marine/engineer
 	name = JOB_SQUAD_ENGI
 	icon_state = "engi_spawn"
@@ -52,3 +58,8 @@
 /obj/effect/landmark/start/marine/engineer/delta
 	icon_state = "engi_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/obj/effect/landmark/start/marine/engineer/marsoc
+	name = JOB_SQUAD_SAPPER_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/equipment_preset/uscm/engineer/marsoc

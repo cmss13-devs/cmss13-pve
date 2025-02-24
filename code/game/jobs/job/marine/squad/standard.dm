@@ -70,6 +70,12 @@
 	gear_preset = /datum/equipment_preset/uscm/pfc/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
 
+/datum/job/marine/standard/ai/marsoc
+	title = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/pfc/marsoc
+
 /datum/job/marine/standard/ai/rto
 	total_positions = 1
 	spawn_positions = 1
@@ -91,6 +97,11 @@
 	name = JOB_SQUAD_RTO
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/standard/ai/rto
+
+/obj/effect/landmark/start/marine/marsoc
+	name = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/equipment_preset/uscm/pfc/marsoc
 
 #undef PVT_VARIANT
 #undef PFC_VARIANT
