@@ -109,7 +109,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 /datum/sprite_accessory/undershirt/none
 	name = "None"
 	icon_state = "none"
-	gender = MALE
+	gender = NEUTER
 
 // Female
 /datum/sprite_accessory/undershirt/bra
