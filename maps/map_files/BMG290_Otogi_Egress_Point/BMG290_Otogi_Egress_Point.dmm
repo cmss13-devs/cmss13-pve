@@ -13,7 +13,7 @@
 /area/bmg290/wilderness/beach)
 "aaM" = (
 /obj/structure/largecrate/random/barrel/true_random,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "aaY" = (
 /obj/structure/cargo_container/horizontal/blue/top,
@@ -63,7 +63,7 @@
 /area/bmg290/colony/diner)
 "abU" = (
 /obj/structure/cargo_container/horizontal/blue/top,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "acq" = (
 /obj/structure/barricade/handrail,
@@ -143,7 +143,7 @@
 /obj/structure/cargo_container/wy/mid{
 	layer = 3.1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "aet" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
@@ -423,6 +423,11 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
+/obj/structure/prop/invuln/catwalk_support{
+	dir = 1;
+	layer = 2;
+	color = "#6b675e"
+	},
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
 "akS" = (
@@ -502,7 +507,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 16
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "amK" = (
 /obj/item/stool{
@@ -594,7 +599,7 @@
 /area/bmg290/keppitz/test)
 "aoG" = (
 /obj/structure/largecrate/random/barrel/red,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "aoY" = (
 /obj/structure/prop/turbine,
@@ -1401,7 +1406,7 @@
 /obj/docking_port/stationary/marine_dropship/lz1{
 	name = "LZ1 Otogi Logistics Hangar"
 	},
-/turf/open/floor/strata/cyan1,
+/turf/open/floor/plating,
 /area/bmg290/shuttles/drop1)
 "aJZ" = (
 /obj/structure/disposalpipe/segment{
@@ -1411,7 +1416,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "aKq" = (
 /obj/structure/stairs/perspective{
@@ -2061,7 +2066,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding9"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/keppitz/entry_pub)
 "baE" = (
 /obj/structure/machinery/iv_drip,
@@ -2127,7 +2132,7 @@
 /area/bmg290/colony/complex)
 "bbo" = (
 /obj/structure/cargo_container/seegson/right,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "bbq" = (
 /obj/structure/prop/structure_lattice{
@@ -2268,7 +2273,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "beJ" = (
 /obj/effect/decal/warning_stripes{
@@ -2287,7 +2292,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "beR" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -2587,7 +2592,7 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/smooth,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "bkB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2679,7 +2684,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 9
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "blY" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -3252,7 +3257,7 @@
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "bBN" = (
 /turf/closed/wall/rock{
@@ -3301,7 +3306,7 @@
 /area/bmg290/relay/synthetic)
 "bDY" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "bEy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3920,7 +3925,7 @@
 	dir = 4;
 	id = "West Side Blockers"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "bSH" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3953,8 +3958,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
+"bTJ" = (
+/obj/structure/machinery/colony_floodlight,
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/caverns/terranium)
 "bTS" = (
 /obj/structure/disposalpipe/junction{
 	dir = 1;
@@ -3973,6 +3982,13 @@
 /obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/acquisitions)
+"bUB" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1;
+	color = "#999999"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bmg290/caverns/terranium)
 "bUI" = (
 /obj/structure/machinery/computer/telecomms/server,
 /turf/open/floor/prison/floor_plate,
@@ -4901,7 +4917,7 @@
 	icon_state = "SE-out";
 	pixel_x = 2
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "coY" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4919,7 +4935,7 @@
 /area/bmg290/wilderness/archaeology)
 "cpn" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "cpx" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
@@ -5099,7 +5115,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "ctH" = (
 /turf/open/auto_turf/strata_grass/layer1,
@@ -5423,7 +5439,7 @@
 /area/bmg290/relay/cargo)
 "cCt" = (
 /obj/structure/cargo_container/horizontal/blue/bottom,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "cCy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5595,7 +5611,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "cFF" = (
 /obj/structure/machinery/fuelcell_recycler,
@@ -6067,7 +6083,7 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "cRO" = (
 /obj/structure/blocker/invisible_wall,
@@ -6304,7 +6320,7 @@
 /area/bmg290/relay/underground_shelter)
 "cXY" = (
 /obj/structure/prop/dam/crane/cargo,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "cYK" = (
 /obj/structure/largecrate{
@@ -6987,7 +7003,7 @@
 	pixel_y = 19;
 	pixel_x = -9
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "dpy" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -7881,7 +7897,7 @@
 	name = "Heavy Shutter";
 	id = "otogi_lockdown"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "dJZ" = (
 /obj/structure/flora/pottedplant{
@@ -8121,7 +8137,7 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "colonyboundaries"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "dPD" = (
 /obj/structure/platform/kutjevo,
@@ -8223,7 +8239,7 @@
 	pixel_y = 24
 	},
 /obj/structure/platform/kutjevo,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "dRk" = (
 /obj/structure/surface/rack,
@@ -8342,7 +8358,7 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "dUA" = (
 /obj/structure/platform/kutjevo/rock{
@@ -8642,8 +8658,9 @@
 /turf/open/floor/grass,
 /area/bmg290/colony/complex)
 "eae" = (
-/turf/closed/wall/rock/brown,
-/area/bmg290/wilderness/beach)
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/caverns/cave_west)
 "eaI" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement4,
@@ -8882,7 +8899,7 @@
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "egU" = (
 /obj/structure/platform/kutjevo/rock{
@@ -9228,6 +9245,11 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
+	},
+/obj/structure/prop/invuln/catwalk_support{
+	dir = 1;
+	layer = 2;
+	color = "#6b675e"
 	},
 /turf/open/floor/kutjevo/tan/alt_edge/north,
 /area/bmg290/wilderness/colony_exterior)
@@ -9950,7 +9972,7 @@
 /area/bmg290/wilderness/farmland)
 "eDx" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "eDy" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics,
@@ -10236,7 +10258,7 @@
 	pixel_x = 1
 	},
 /obj/item/tool/warning_cone,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "eMg" = (
 /obj/structure/girder/displaced,
@@ -10314,7 +10336,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "eNF" = (
 /obj/structure/machinery/floodlight{
@@ -10542,7 +10564,7 @@
 	layer = 3.12
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "eTQ" = (
 /obj/structure/blocker/fog,
@@ -10618,7 +10640,7 @@
 /area/bmg290/site/discovered)
 "eWx" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "eXa" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -10750,7 +10772,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "eZP" = (
 /obj/structure/largecrate/random/secure,
@@ -11011,7 +11033,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "fga" = (
 /obj/structure/machinery/landinglight/ds1{
@@ -11133,7 +11155,7 @@
 	pixel_y = -8
 	},
 /obj/structure/largecrate,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "fiK" = (
 /obj/structure/window/framed/strata/hull,
@@ -11155,11 +11177,18 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "fjd" = (
 /turf/open/asphalt/cement/cement14,
 /area/bmg290/wilderness/colony_exterior)
+"fjh" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 11;
+	pixel_y = -2
+	},
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/wilderness/outskirts)
 "fjk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N"
@@ -11388,10 +11417,9 @@
 /turf/open/floor/prison,
 /area/bmg290/colony/diner)
 "fpE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cargo_container/horizontal/blue/middle,
-/turf/open/floor/asteroid/asteroid_dark,
-/area/bmg290/wilderness/colony_exterior)
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/wilderness/outskirts)
 "fpK" = (
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
@@ -11446,7 +11474,7 @@
 /area/bmg290/wilderness_roof/checkpoint)
 "frH" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "frJ" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -11779,6 +11807,10 @@
 	},
 /turf/open/floor/prison,
 /area/bmg290/keppitz/command)
+"fyC" = (
+/obj/structure/fence,
+/turf/open/auto_turf/sand_white/layer1,
+/area/bmg290/wilderness/road)
 "fyL" = (
 /obj/structure/surface/rack,
 /obj/item/tool/hand_labeler,
@@ -12142,6 +12174,11 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/catwalk_support{
+	dir = 1;
+	layer = 2;
+	color = "#6b675e"
+	},
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
 "fGQ" = (
@@ -12775,7 +12812,7 @@
 	pixel_x = 16;
 	pixel_y = -8
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "fVx" = (
 /obj/structure/surface/table/almayer,
@@ -12986,7 +13023,7 @@
 /area/bmg290/colony/complex)
 "fZs" = (
 /obj/structure/cargo_container/horizontal/blue/middle,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "fZx" = (
 /obj/structure/bed/chair{
@@ -13737,7 +13774,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "gtp" = (
 /obj/structure/flora/grass/tallgrass/desert{
@@ -14217,6 +14254,13 @@
 	},
 /turf/open/floor/corsat/whitebluefull,
 /area/bmg290/relay/dataserver)
+"gHx" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	color = "#999999";
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bmg290/caverns/cave_west)
 "gIm" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "entry_site2";
@@ -14467,7 +14511,7 @@
 	dir = 1;
 	pixel_y = 9
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "gMC" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -14637,7 +14681,7 @@
 /turf/open/floor/asteroidplating,
 /area/bmg290/colony/motorpool)
 "gRX" = (
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "gSh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14666,6 +14710,16 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics)
+"gTf" = (
+/obj/structure/bed/sofa/south/grey/left,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/asphalt/cement,
+/area/bmg290/wilderness/road)
 "gTv" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
@@ -14695,7 +14749,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "gUp" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -14703,6 +14757,12 @@
 	},
 /turf/open/gm/grass,
 /area/bmg290/wilderness/colony_exterior)
+"gUt" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/relay/cargo)
 "gUw" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -14714,7 +14774,7 @@
 	id = "SigmaBioAtmos";
 	name = "Access Shutter"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "gUA" = (
 /obj/structure/flora/jungle/vines/light_1,
@@ -14880,7 +14940,7 @@
 	pixel_x = 6;
 	pixel_y = -1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "gZL" = (
 /obj/structure/largecrate/random/case/small{
@@ -15079,7 +15139,7 @@
 	pixel_x = 2;
 	pixel_y = 9
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "hfw" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -15809,6 +15869,11 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/catwalk_support{
+	dir = 1;
+	layer = 2;
+	color = "#6b675e"
+	},
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
 "hvo" = (
@@ -15940,6 +16005,11 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
+/obj/structure/prop/invuln/catwalk_support{
+	dir = 1;
+	layer = 2;
+	color = "#6b675e"
+	},
 /turf/open/floor/plating,
 /area/bmg290/wilderness/colony_exterior)
 "hyy" = (
@@ -16017,7 +16087,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "hAR" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -16170,7 +16240,7 @@
 	layer = 4.99;
 	pixel_y = 7
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bmg290/wilderness/farmland)
 "hDE" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -16272,7 +16342,7 @@
 /area/bmg290/relay/hallway)
 "hGe" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "hGg" = (
 /obj/effect/decal/warning_stripes{
@@ -16450,6 +16520,13 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/wilderness_roof/storage_house)
+"hKC" = (
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 9
+	},
+/turf/open/asphalt/cement,
+/area/bmg290/wilderness/road)
 "hKK" = (
 /obj/effect/decal/siding{
 	icon_state = "siding2"
@@ -17090,7 +17167,7 @@
 	pixel_x = -1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "hXp" = (
 /obj/structure/window/framed/chigusa,
@@ -17217,7 +17294,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "iaQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -17257,7 +17334,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "icd" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -17435,7 +17512,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "ieX" = (
 /obj/structure/cargo_container/uscm/right,
@@ -17640,7 +17717,7 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "ijT" = (
 /obj/structure/prop/dam/truck/cargo,
@@ -17707,6 +17784,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/storage_house)
+"ilU" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8;
+	color = "#999999";
+	layer = 3.02
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bmg290/caverns/terranium)
 "ilW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/cyan{
@@ -17930,7 +18015,7 @@
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "isS" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18098,6 +18183,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/complex)
+"iyA" = (
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/auto_turf/sand_white/layer1,
+/area/bmg290/wilderness/archaeology)
 "iyB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -18623,7 +18712,7 @@
 /area/bmg290/relay/synthetic)
 "iJn" = (
 /obj/structure/cargo_container/seegson/mid,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "iJo" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -18681,6 +18770,19 @@
 /obj/effect/spawner/random/toy,
 /turf/open/floor/prison/blue,
 /area/bmg290/colony/complex)
+"iJF" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1;
+	climb_delay = 1;
+	layer = 2.99
+	},
+/obj/structure/prop/invuln/catwalk_support{
+	dir = 1;
+	layer = 2;
+	color = "#6b675e"
+	},
+/turf/open/asphalt/cement,
+/area/bmg290/wilderness/colony_exterior)
 "iJV" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 5
@@ -18863,7 +18965,7 @@
 	layer = 3.3;
 	pixel_x = -1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "iOE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19258,7 +19360,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "iXT" = (
 /obj/structure/fence,
@@ -19387,7 +19489,7 @@
 	pixel_y = -12
 	},
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "jcs" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -19604,7 +19706,7 @@
 	dir = 8;
 	id = "East Side Blockers"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "jgO" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -19669,7 +19771,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "jid" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19969,7 +20071,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "jqe" = (
 /turf/open/asphalt/cement_sunbleached_darkened,
@@ -20180,13 +20282,13 @@
 	pixel_x = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "juZ" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 10
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "jvd" = (
 /obj/effect/decal/cleanable/dirt,
@@ -20431,7 +20533,7 @@
 	icon_state = "stop_decal5";
 	pixel_x = -2
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "jAM" = (
 /turf/closed/wall/rock{
@@ -20538,7 +20640,7 @@
 /area/bmg290/colony/diner)
 "jDb" = (
 /obj/effect/vehicle_spawner/van/decrepit,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/keppitz/entry_pub)
 "jDq" = (
 /obj/structure/stairs/perspective{
@@ -20614,6 +20716,12 @@
 	},
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/archaeology)
+"jEg" = (
+/obj/structure/machinery/door/window/eastright{
+	req_one_access = list(203)
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/keppitz/interlude)
 "jEC" = (
 /obj/structure/barricade/handrail/strata,
 /obj/effect/decal/cleanable/dirt{
@@ -20692,7 +20800,7 @@
 "jGr" = (
 /obj/structure/bed/chair/office/light,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "jGv" = (
 /obj/structure/phone_base/colony_net{
@@ -20781,7 +20889,7 @@
 /obj/docking_port/stationary/marine_dropship/lz2{
 	name = "LZ2 Otogi Outskirts"
 	},
-/turf/open/floor/asteroid,
+/turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/shuttles/drop2)
 "jJk" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -20916,7 +21024,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "jMb" = (
 /obj/structure/plasticflaps/mining,
@@ -21080,7 +21188,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding4"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/keppitz/entry_pub)
 "jQa" = (
 /obj/structure/prop/almayer/whiteboard{
@@ -21177,7 +21285,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "jTw" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
@@ -21209,7 +21317,7 @@
 	icon_state = "N"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "jUf" = (
 /obj/structure/machinery/door_control/brbutton{
@@ -21794,7 +21902,8 @@
 /area/bmg290/wilderness/colony_exterior)
 "kkc" = (
 /obj/structure/platform_decoration/kutjevo/rock{
-	dir = 4
+	dir = 4;
+	color = "#999999"
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/wilderness/colony_exterior)
@@ -22006,7 +22115,7 @@
 /area/bmg290/site/discovered)
 "kph" = (
 /obj/structure/largecrate/random,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "kpp" = (
 /turf/open/floor/prison/blue/west,
@@ -22412,11 +22521,11 @@
 "kwr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/cyan,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "kwB" = (
 /obj/structure/largecrate,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "kwH" = (
 /obj/structure/prop/dam/truck/mining{
@@ -22454,7 +22563,7 @@
 /area/bmg290/site/undiscovered)
 "kys" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/cyan,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "kyz" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -23069,6 +23178,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/bmg290/relay/underground_shelter)
+"kSs" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#5f5b54";
+	dir = 8
+	},
+/turf/open/void,
+/area/bmg290/site/discovered)
 "kSx" = (
 /obj/vehicle/powerloader/ft,
 /turf/open/floor/mech_bay_recharge_floor,
@@ -23165,7 +23281,7 @@
 "kUM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "kUP" = (
 /obj/structure/sign/safety/security,
@@ -23281,7 +23397,15 @@
 /turf/open/asphalt/cement/cement12,
 /area/bmg290/wilderness/colony_exterior)
 "kXP" = (
-/turf/open/floor/asteroid/asteroid_dark,
+/obj/structure/bed/sofa/south/grey/right,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 80
+	},
+/turf/open/asphalt/cement,
 /area/bmg290/wilderness/road)
 "kXQ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -23448,7 +23572,7 @@
 	icon_state = "road_edge_decal3";
 	pixel_y = 16
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "lbr" = (
 /turf/open/floor/plating/plating_catwalk/shiva,
@@ -23524,7 +23648,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "ldv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -23826,7 +23950,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "llc" = (
 /obj/structure/desertdam/decals/road_stop,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "llr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -24459,7 +24583,7 @@
 	icon_state = "door_warning";
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "lyG" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -24611,7 +24735,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "lDt" = (
 /obj/structure/platform{
@@ -24630,7 +24754,7 @@
 "lDL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/case/double,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "lDY" = (
 /obj/structure/roof/cargocrane_tracks/cross{
@@ -24885,7 +25009,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "lJU" = (
 /turf/closed/wall/strata_ice/jungle,
@@ -25277,7 +25401,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/pipes/standard/manifold/hidden/green,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "lRU" = (
 /obj/structure/machinery/gibber,
@@ -25855,7 +25979,7 @@
 	name = "tractor"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "mhQ" = (
 /obj/structure/bed/chair/comfy/beige{
@@ -25971,6 +26095,10 @@
 "mjV" = (
 /turf/open/floor/grey_dark2,
 /area/bmg290/site/undiscovered)
+"mjY" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/caverns/cave_east)
 "mkc" = (
 /obj/structure/largecrate/supply/supplies/mre,
 /turf/open/floor/prison/floor_plate,
@@ -26701,7 +26829,7 @@
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "mDb" = (
 /obj/structure/barricade/handrail/kutjevo{
@@ -26962,10 +27090,11 @@
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_segment_A_0"
 	},
-/obj/structure/platform/kutjevo/rock{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1;
+	color = "#999999"
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/wilderness/colony_exterior)
 "mLc" = (
@@ -27063,7 +27192,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "mPX" = (
 /obj/structure/largecrate/random/case,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "mQv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -27188,6 +27317,10 @@
 /obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/sand_white/layer1,
 /area/bmg290/wilderness/road)
+"mTh" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/wilderness/colony_exterior)
 "mTi" = (
 /obj/structure/foamed_metal,
 /obj/effect/decal/cleanable/dirt,
@@ -27301,7 +27434,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 10
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "mUZ" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -27480,7 +27613,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "naG" = (
 /obj/structure/surface/table/almayer,
@@ -27610,6 +27743,29 @@
 	},
 /turf/open/asphalt/cement/cement1,
 /area/bmg290/wilderness/colony_exterior)
+"nds" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1;
+	climb_delay = 1;
+	layer = 2.99
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
+/obj/structure/platform/kutjevo/smooth,
+/turf/open/floor/plating,
+/area/bmg290/relay/telecommunication)
 "ndu" = (
 /obj/structure/prop/server_equipment/yutani_server/off,
 /turf/open/floor/prison/floor_plate,
@@ -27731,7 +27887,7 @@
 	pixel_y = 16
 	},
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "ngf" = (
 /obj/structure/platform_decoration{
@@ -27830,9 +27986,6 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
@@ -27844,6 +27997,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
+/obj/structure/platform_decoration/kutjevo,
 /turf/open/floor/plating,
 /area/bmg290/relay/telecommunication)
 "niE" = (
@@ -28080,6 +28234,7 @@
 	name = "Access Shutter"
 	},
 /obj/structure/blocker/invisible_wall,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "nmw" = (
 /obj/structure/machinery/power/apc/power/south,
@@ -28464,7 +28619,7 @@
 "nwz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "nwB" = (
 /obj/effect/decal/siding/wood_siding,
@@ -29182,7 +29337,7 @@
 /obj/structure/desertdam/decals/road_stop{
 	icon_state = "stop_decal4"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "nPy" = (
 /obj/effect/decal/siding{
@@ -29306,7 +29461,7 @@
 	pixel_x = -1;
 	pixel_y = 2
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "nSz" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -29544,7 +29699,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "nXN" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -29910,7 +30065,7 @@
 	icon_state = "NE-out";
 	pixel_y = 1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "ofx" = (
 /obj/structure/machinery/light,
@@ -30086,6 +30241,20 @@
 "ojK" = (
 /turf/closed/wall/r_wall/elevator,
 /area/bmg290/keppitz/interlude)
+"ojL" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1;
+	climb_delay = 1;
+	layer = 2.99
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/catwalk_support{
+	dir = 1;
+	layer = 2;
+	color = "#6b675e"
+	},
+/turf/open/asphalt/cement,
+/area/bmg290/wilderness/colony_exterior)
 "ojO" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/bmg290/keppitz/hangar)
@@ -30117,7 +30286,7 @@
 /area/bmg290/colony/logistics)
 "okE" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "okT" = (
 /obj/effect/decal/strata_decals/grime/grime3{
@@ -30151,6 +30320,11 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/catwalk_support{
+	dir = 1;
+	layer = 2;
+	color = "#6b675e"
+	},
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
 "olV" = (
@@ -30462,14 +30636,14 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/interlude)
 "otM" = (
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "otQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "oub" = (
 /obj/effect/decal/cleanable/dirt,
@@ -30521,7 +30695,7 @@
 	icon_state = "S";
 	layer = 3.3
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "ove" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -30598,7 +30772,7 @@
 /area/bmg290/wilderness/road)
 "owR" = (
 /obj/structure/cargo_container/horizontal/blue/bottom,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "oxn" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -30807,6 +30981,24 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz/command)
+"ozT" = (
+/obj/structure/flora/grass/tallgrass/desert{
+	color = "#bfff00"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 8;
+	layer = 5.2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 9;
+	dir = 8;
+	pixel_x = 0
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bmg290/wilderness/farmland)
 "oAe" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/keppitz/archives)
@@ -31121,7 +31313,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "oIh" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
@@ -31348,7 +31540,7 @@
 /obj/item/tool/warning_cone{
 	pixel_x = -12
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "oNW" = (
 /obj/structure/prop/rock/brown,
@@ -31397,7 +31589,7 @@
 	pixel_y = -8
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "oOP" = (
 /obj/structure/machinery/door_control/brbutton{
@@ -31452,7 +31644,7 @@
 	icon_state = "S";
 	layer = 3.3
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "oQh" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_east,
@@ -31599,7 +31791,7 @@
 /turf/open/floor/plating,
 /area/bmg290/wilderness_roof/storage_house)
 "oUR" = (
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/keppitz/entry_pub)
 "oVj" = (
 /turf/open/floor/asteroidplating,
@@ -31919,7 +32111,7 @@
 "paV" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "pbx" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -32199,7 +32391,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "pij" = (
 /obj/effect/decal/siding/wood_siding,
@@ -32223,9 +32415,17 @@
 /turf/open/gm/river/beach_water,
 /area/bmg290/wilderness/beach)
 "piB" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
-/area/bmg290/wilderness/relay_exterior)
+/obj/structure/platform/kutjevo/rock{
+	dir = 1;
+	color = "#999999"
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8;
+	color = "#999999";
+	layer = 3.02
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bmg290/caverns/terranium)
 "piJ" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/spawner/random/toolbox,
@@ -32648,7 +32848,7 @@
 	name = "Emergency Lockdown";
 	unacidable = 1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "pvF" = (
 /obj/structure/surface/table/reinforced/black,
@@ -32757,7 +32957,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "pyg" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -32879,7 +33079,7 @@
 	name = "Emergency Lockdown";
 	unacidable = 1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "pAh" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -32991,7 +33191,7 @@
 	dir = 4
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "pBK" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -33512,8 +33712,12 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/wilderness/outskirts)
 "pMB" = (
-/turf/closed/wall/rock/brown,
-/area/bmg290/wilderness/outskirts)
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4;
+	color = "#999999"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bmg290/caverns/terranium)
 "pME" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -33532,7 +33736,7 @@
 	layer = 3.5;
 	pixel_y = -23
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "pMP" = (
 /obj/structure/inflatable/door,
@@ -33611,7 +33815,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "pPb" = (
 /turf/closed/wall/rock{
@@ -33641,9 +33845,11 @@
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/colony/bar)
 "pPP" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
-/area/bmg290/wilderness/colony_exterior)
+/obj/structure/prop/rock/brown{
+	dir = 1
+	},
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/wilderness/outskirts)
 "pPS" = (
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 1;
@@ -33665,6 +33871,10 @@
 	},
 /turf/open/asphalt,
 /area/bmg290/colony/hangar)
+"pQt" = (
+/obj/structure/fence,
+/turf/open/auto_turf/sand_white/layer1,
+/area/bmg290/wilderness/outskirts)
 "pQu" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -33701,7 +33911,7 @@
 	pixel_y = -5;
 	layer = 3.1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "pRC" = (
 /obj/structure/platform/kutjevo{
@@ -33749,7 +33959,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "pSA" = (
 /obj/structure/stairs/perspective{
@@ -34017,7 +34227,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "pYS" = (
 /obj/structure/stairs/perspective{
@@ -34110,6 +34320,7 @@
 /area/bmg290/caverns/terranium)
 "qbi" = (
 /obj/structure/platform_decoration/kutjevo/rock{
+	color = "#999999";
 	dir = 8
 	},
 /turf/open/floor/almayer_hull/blackfull,
@@ -34164,7 +34375,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "qcp" = (
 /obj/structure/cable/heavyduty{
@@ -34323,6 +34534,12 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics)
+"qfu" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/prison/darkred2/north,
+/area/bmg290/keppitz/interlude)
 "qfw" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/window/reinforced{
@@ -34335,7 +34552,8 @@
 	},
 /obj/item/desk_bell{
 	pixel_x = 6;
-	pixel_y = 4
+	pixel_y = 4;
+	anchored = 1
 	},
 /turf/open/floor/prison,
 /area/bmg290/keppitz/entry_pub)
@@ -34626,7 +34844,7 @@
 	icon_state = "stop_decal5";
 	pixel_x = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "qol" = (
 /obj/structure/bookcase/manuals/medical{
@@ -35085,7 +35303,8 @@
 /obj/structure/machinery/door_control/brbutton{
 	pixel_x = 1;
 	pixel_y = 24;
-	name = "lockdown access"
+	name = "lockdown access";
+	id = "checkpoint_lock"
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz/security)
@@ -35543,7 +35762,7 @@
 /area/bmg290/wilderness/beach)
 "qIW" = (
 /obj/structure/platform/kutjevo,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "qJc" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2,
@@ -35553,7 +35772,7 @@
 	icon_state = "N"
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "qJq" = (
 /obj/item/stool{
@@ -35708,7 +35927,7 @@
 	icon_state = "S";
 	layer = 3.3
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "qPh" = (
 /obj/structure/surface/table/almayer,
@@ -35863,7 +36082,7 @@
 /obj/structure/cargo_container/wy/right{
 	layer = 3.1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "qUI" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -36178,7 +36397,7 @@
 /area/bmg290/wilderness/farmland)
 "rdO" = (
 /obj/structure/cargo_container/horizontal/blue/top,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "rew" = (
 /obj/structure/platform/kutjevo{
@@ -36631,7 +36850,7 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "roe" = (
 /turf/open/gm/coast/beachcorner/south_east,
@@ -36761,7 +36980,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/horizontal/blue/top,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "rrj" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -36841,7 +37060,7 @@
 	icon_state = "road_edge_decal3";
 	pixel_y = -12
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "rud" = (
 /obj/structure/machinery/light/small{
@@ -37135,7 +37354,7 @@
 "ryK" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "ryQ" = (
 /obj/effect/decal/warning_stripes{
@@ -37304,7 +37523,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "rDn" = (
 /obj/effect/decal/warning_stripes{
@@ -37392,6 +37611,13 @@
 	},
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/wilderness/road)
+"rFM" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	color = "#999999";
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/caverns/cave_west)
 "rGy" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/bmg290/relay/dataserver)
@@ -37499,7 +37725,9 @@
 /area/bmg290/colony/bar)
 "rJJ" = (
 /obj/structure/flora/jungle/vines/heavy,
-/turf/closed/wall/rock/brown,
+/turf/closed/wall/rock{
+	color = "#a39e99"
+	},
 /area/bmg290/wilderness/outskirts)
 "rJU" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
@@ -37609,7 +37837,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "rOE" = (
 /obj/structure/barricade/handrail{
@@ -37972,7 +38200,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "rYc" = (
 /obj/structure/urinal{
@@ -37988,7 +38216,7 @@
 /area/bmg290/wilderness_roof/storage_house)
 "rYe" = (
 /obj/structure/cargo_container/wy/left,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "rYi" = (
 /obj/structure/barricade/handrail/kutjevo{
@@ -38534,7 +38762,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "sjO" = (
 /turf/open/floor/prison/cell_stripe/west,
@@ -38599,7 +38827,7 @@
 	pixel_y = 7
 	},
 /obj/item/reagent_container/food/snacks/grown/wheat,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bmg290/wilderness/farmland)
 "slP" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -38916,7 +39144,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "ssa" = (
 /obj/structure/fence,
@@ -39170,7 +39398,7 @@
 	pixel_y = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "sxU" = (
 /obj/item/device/flashlight/lamp/tripod,
@@ -39246,7 +39474,7 @@
 	pixel_y = -12
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "szH" = (
 /obj/effect/decal/warning_stripes{
@@ -39427,7 +39655,8 @@
 /area/bmg290/relay/dataserver)
 "sFj" = (
 /obj/structure/platform/kutjevo/rock{
-	dir = 1
+	dir = 1;
+	color = "#999999"
 	},
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/wilderness/colony_exterior)
@@ -39672,7 +39901,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "sJJ" = (
 /turf/open/floor/kutjevo/tan/grey_edge/north,
@@ -40142,7 +40371,7 @@
 	icon_state = "stop_decal2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "sVQ" = (
 /obj/item/toy/beach_ball/holoball,
@@ -40269,7 +40498,7 @@
 	dir = 8;
 	id = "East Side Blockers"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "sYS" = (
 /obj/effect/decal/warning_stripes{
@@ -40415,7 +40644,7 @@
 	pixel_x = 7;
 	pixel_y = 20
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "tbz" = (
 /turf/closed/wall/strata_ice/jungle,
@@ -40454,7 +40683,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "tcV" = (
 /obj/structure/cable/heavyduty{
@@ -41195,7 +41424,7 @@
 /area/bmg290/colony/complex)
 "tBe" = (
 /obj/effect/decal/siding,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/keppitz/entry_pub)
 "tBf" = (
 /obj/structure/extinguisher_cabinet{
@@ -41255,6 +41484,12 @@
 /obj/structure/curtain/black,
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/bmg290/colony/hospital)
+"tCw" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 10
+	},
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/wilderness/outskirts)
 "tCE" = (
 /obj/item/stool{
 	pixel_x = 15;
@@ -41370,6 +41605,13 @@
 	dir = 8
 	},
 /turf/open/auto_turf/sand_white/layer0,
+/area/bmg290/site/discovered)
+"tGb" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#5f5b54";
+	dir = 4
+	},
+/turf/open/void,
 /area/bmg290/site/discovered)
 "tGi" = (
 /obj/structure/machinery/power/port_gen/pacman,
@@ -41885,7 +42127,7 @@
 "tVn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/case,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "tVv" = (
 /obj/structure/largecrate,
@@ -41984,7 +42226,7 @@
 /area/bmg290/wilderness/farmland)
 "tYm" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "tYo" = (
 /obj/structure/prop/almayer/computers/sensor_computer1{
@@ -42328,7 +42570,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding5"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/keppitz/entry_pub)
 "ugd" = (
 /obj/structure/platform/kutjevo/rock{
@@ -42673,7 +42915,7 @@
 /area/bmg290/colony/engineering)
 "upL" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "upQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -42915,7 +43157,7 @@
 	pixel_x = 9;
 	pixel_y = -6
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "uyD" = (
 /turf/closed/wall/strata_outpost/reinforced,
@@ -43325,7 +43567,7 @@
 	pixel_y = 20;
 	pixel_x = 1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "uKd" = (
 /obj/item/lightstick/red/spoke/planted{
@@ -43519,7 +43761,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "uQo" = (
 /obj/structure/prop/structure_lattice{
@@ -43549,7 +43791,7 @@
 	dir = 4
 	},
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "uRg" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
@@ -43568,6 +43810,13 @@
 	},
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
+"uRz" = (
+/obj/structure/machinery/door/window/eastleft{
+	dir = 8;
+	req_one_access = list(203)
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bmg290/keppitz/interlude)
 "uRF" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/asphalt,
@@ -43772,7 +44021,7 @@
 /area/bmg290/wilderness/beach)
 "uWO" = (
 /obj/structure/cargo_container/horizontal/blue/middle,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "uXd" = (
 /turf/open/floor/prison/floor_plate,
@@ -44582,7 +44831,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "vqr" = (
 /obj/structure/machinery/light/double{
@@ -44819,7 +45068,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "vwo" = (
 /obj/structure/barricade/handrail{
@@ -45238,7 +45487,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding8"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/keppitz/entry_pub)
 "vHC" = (
 /obj/structure/kitchenspike,
@@ -45292,7 +45541,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "vJs" = (
 /obj/structure/cargo_container/grant/rightmid,
@@ -45439,7 +45688,7 @@
 	name = "Heavy Shutter";
 	id = "otogi_lockdown"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "vME" = (
 /obj/structure/prop/almayer/computers/sensor_computer3,
@@ -45766,7 +46015,7 @@
 	pixel_x = -9
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "vUq" = (
 /turf/open/floor/prison/floor_plate,
@@ -46101,7 +46350,7 @@
 "waA" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "waG" = (
 /obj/structure/machinery/door/poddoor/almayer/blended/white_aicore{
@@ -46426,6 +46675,13 @@
 	},
 /turf/open/gm/dirt,
 /area/bmg290/wilderness/beach)
+"whB" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -13;
+	pixel_y = -2
+	},
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/wilderness/outskirts)
 "wib" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/siding{
@@ -46605,7 +46861,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "wlF" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -46638,7 +46894,7 @@
 	pixel_x = 4;
 	pixel_y = -8
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "wmd" = (
 /obj/structure/bed/chair/office/light{
@@ -46807,7 +47063,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/road)
 "wpz" = (
 /obj/structure/platform/kutjevo/rock{
@@ -48127,7 +48383,7 @@
 	pixel_x = 9;
 	pixel_y = -9
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "wVh" = (
 /turf/open/floor/strata/fake_wood,
@@ -48140,6 +48396,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/shed)
+"wVo" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -11;
+	pixel_y = 0
+	},
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/wilderness/outskirts)
 "wVB" = (
 /obj/structure/machinery/light/double,
 /turf/open/asphalt/cement,
@@ -48501,7 +48764,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "xfs" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -48644,7 +48907,7 @@
 /obj/structure/pipes/standard/manifold/hidden/cyan{
 	dir = 8
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "xjb" = (
 /turf/open/floor/prison/bluecorner/east,
@@ -49179,7 +49442,7 @@
 	pixel_x = 9;
 	pixel_y = -9
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "xwp" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -49466,7 +49729,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "xES" = (
 /obj/effect/decal/siding{
@@ -49668,7 +49931,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "xJn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -49683,7 +49946,7 @@
 	pixel_x = 9;
 	pixel_y = -9
 	},
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "xJE" = (
 /obj/structure/disposalpipe/segment,
@@ -49758,6 +50021,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/telecommunication)
+"xLs" = (
+/obj/structure/machinery/colony_floodlight,
+/turf/open/asphalt/cement_sunbleached_darkened,
+/area/bmg290/caverns/cave_west)
 "xLD" = (
 /obj/structure/largecrate/supply/supplies{
 	pixel_x = -8;
@@ -49974,16 +50241,9 @@
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/wilderness/colony_exterior)
 "xQU" = (
-/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
-	access_modified = 1;
-	dir = 1;
-	name = "\improper Security Vault";
-	req_access = null;
-	req_one_access_txt = "91;92"
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/prison/floor_plate,
-/area/bmg290/relay/telecommunication)
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bmg290/wilderness/archaeology)
 "xQV" = (
 /obj/item/xenos_claw,
 /turf/open/auto_turf/sand_white/layer1,
@@ -50171,6 +50431,13 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/cargo)
+"xWZ" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	color = "#999999";
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bmg290/caverns/terranium)
 "xXh" = (
 /obj/structure/platform/stair_cut/alt,
 /obj/structure/stairs/perspective{
@@ -50512,6 +50779,10 @@
 	},
 /turf/open/floor/almayer/tcomms,
 /area/bmg290/relay/telecommunication)
+"ydg" = (
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/auto_turf/strata_grass,
+/area/bmg290/wilderness/archaeology)
 "ydv" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -50543,7 +50814,7 @@
 "ydU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cargo_container/seegson/left,
-/turf/open/floor/asteroid/asteroid_dark,
+/turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "yea" = (
 /obj/structure/machinery/light/double,
@@ -51726,9 +51997,9 @@ smM
 smM
 smM
 gbn
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 gbn
 qDB
 qDB
@@ -52028,9 +52299,9 @@ smM
 smM
 smM
 gbn
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 gbn
 qDB
 qDB
@@ -52161,7 +52432,7 @@ swU
 swU
 swU
 swU
-swU
+ydg
 eyL
 eyL
 kBo
@@ -52330,9 +52601,9 @@ smM
 smM
 smM
 gbn
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 gbn
 qDB
 qDB
@@ -52632,9 +52903,9 @@ smM
 smM
 smM
 gbn
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 gbn
 qDB
 qDB
@@ -52740,7 +53011,7 @@ eiC
 eiC
 eiC
 eiC
-eyL
+iyA
 nOi
 kBo
 kBo
@@ -52935,8 +53206,8 @@ smM
 smM
 gbn
 gLO
-kXP
-kXP
+wEr
+wEr
 gbn
 qDB
 qDB
@@ -53053,7 +53324,7 @@ swU
 swU
 swU
 swU
-swU
+ydg
 swU
 gXg
 gXg
@@ -53236,9 +53507,9 @@ smM
 smM
 smM
 gbn
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 gbn
 qDB
 mjB
@@ -53371,7 +53642,7 @@ ugG
 swU
 swU
 swU
-swU
+ydg
 eyL
 eiC
 eiC
@@ -53538,9 +53809,9 @@ smM
 smM
 smM
 gbn
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 gbn
 qDB
 qDB
@@ -53641,7 +53912,7 @@ ugG
 swU
 swU
 swU
-swU
+ydg
 eyL
 ncx
 xwV
@@ -53840,9 +54111,9 @@ smM
 smM
 smM
 gbn
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 gbn
 qDB
 qDB
@@ -53965,7 +54236,7 @@ eyL
 kBo
 swU
 swU
-swU
+ydg
 swU
 swU
 swU
@@ -54241,7 +54512,7 @@ sQh
 swU
 swU
 swU
-swU
+ydg
 swU
 swU
 swU
@@ -54255,7 +54526,7 @@ swU
 czT
 swU
 swU
-eyL
+iyA
 eyL
 eyL
 swU
@@ -54747,8 +55018,8 @@ fzy
 fzy
 gbn
 gLO
-kXP
-kXP
+wEr
+wEr
 gbn
 nhn
 nhn
@@ -55048,9 +55319,9 @@ fzy
 fzy
 fzy
 qmz
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 nhn
 nhn
 nhn
@@ -55351,8 +55622,8 @@ lNl
 fzy
 qmz
 tcP
-kXP
-kXP
+wEr
+wEr
 nhn
 nhn
 nhn
@@ -55470,7 +55741,7 @@ swU
 swU
 swU
 swU
-swU
+ydg
 sQh
 sQh
 eyL
@@ -55653,8 +55924,8 @@ pPf
 dKu
 qmz
 sjL
-kXP
-kXP
+wEr
+wEr
 hvo
 nhw
 txR
@@ -55765,7 +56036,7 @@ swU
 swU
 eyL
 eyL
-eyL
+iyA
 eiC
 eiC
 eiC
@@ -55955,8 +56226,8 @@ pPf
 eEm
 qmz
 sjL
-kXP
-kXP
+wEr
+wEr
 ncB
 jbk
 txR
@@ -56051,7 +56322,7 @@ swU
 swU
 swU
 eyL
-eyL
+iyA
 eyL
 swU
 swU
@@ -56257,8 +56528,8 @@ fOc
 fzy
 qmz
 pOV
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -56553,14 +56824,14 @@ pPf
 pPf
 cpV
 nSp
-hyz
-piB
+nde
+pPf
 oNq
 fzy
 qmz
 pOV
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -56685,7 +56956,7 @@ sQh
 sQh
 ayL
 swU
-swU
+ydg
 swU
 swU
 kBo
@@ -56855,14 +57126,14 @@ nde
 nde
 cpV
 nSp
-hyz
-hyz
+nde
+nde
 eaI
 xsG
 nzj
 sjL
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -56967,7 +57238,7 @@ ugG
 swU
 swU
 eyL
-eyL
+iyA
 tTx
 xRb
 kBo
@@ -57157,14 +57428,14 @@ nde
 nde
 cpV
 nSp
-hyz
-hyz
+nde
+nde
 evu
 kPp
 jEN
 sjL
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 bBh
@@ -57435,18 +57706,18 @@ ejD
 abJ
 eYA
 wIl
-hyz
-hyz
-hyz
-hyz
-piB
+nde
+nde
+nde
+nde
+pPf
 fUm
 jZq
 tJl
-hyz
-piB
-piB
-piB
+nde
+pPf
+pPf
+pPf
 asK
 xBH
 ulU
@@ -57459,14 +57730,14 @@ gKw
 roV
 cpV
 nSp
-hyz
-hyz
+nde
+nde
 lfZ
 fzy
 qmz
 pOV
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -57737,18 +58008,18 @@ nXZ
 wBl
 oDj
 kYL
-hyz
-hyz
-hyz
-hyz
+nde
+nde
+nde
+nde
 oPX
 jAO
 eee
 uSN
 nSp
-hyz
-piB
-piB
+nde
+pPf
+pPf
 asK
 xBH
 ulU
@@ -57761,14 +58032,14 @@ pPf
 pPf
 uSN
 nSp
-hyz
-hyz
+nde
+nde
 kwB
 fzy
 jxu
 pOV
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -57842,7 +58113,7 @@ lDE
 lDE
 lDE
 lDE
-lDE
+xQU
 lDE
 swU
 ugG
@@ -57851,7 +58122,7 @@ ugG
 ugG
 swU
 lDE
-lDE
+xQU
 lDE
 lDE
 lDE
@@ -58039,18 +58310,18 @@ peZ
 wBl
 oDj
 kYL
-piB
-hyz
-hyz
-hyz
+pPf
+nde
+nde
+nde
 oPX
 pZM
 upr
 uSN
 nSp
-hyz
-hyz
-piB
+nde
+nde
+pPf
 cHD
 cQY
 lpr
@@ -58063,14 +58334,14 @@ nde
 nde
 cpV
 nSp
-piB
-hyz
-hyz
+pPf
+nde
+nde
 wDE
 rDg
 jqc
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -58342,17 +58613,17 @@ wBl
 oDj
 bAF
 gTQ
-piB
-hyz
-hyz
+pPf
+nde
+nde
 oPX
 mTY
 nde
 uSN
 nSp
-hyz
-hyz
-hyz
+nde
+nde
+nde
 anQ
 fxY
 fxY
@@ -58365,14 +58636,14 @@ lrs
 lrs
 ciY
 sxP
-piB
-piB
-piB
+pPf
+pPf
+pPf
 ils
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 txR
 txR
 txR
@@ -58651,15 +58922,15 @@ beB
 dET
 nde
 uSN
-piB
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
+pPf
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
 iOn
 iOn
 iOn
@@ -58667,14 +58938,14 @@ iOn
 hXk
 hXk
 cRG
-piB
-piB
-hyz
+pPf
+pPf
+nde
 ohB
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 txR
 txR
 txR
@@ -58953,30 +59224,30 @@ dcm
 rBW
 nde
 cpV
-piB
-piB
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
-hyz
+pPf
+pPf
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
+nde
 ohB
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 txR
 txR
 txR
@@ -59120,7 +59391,7 @@ tpc
 qJZ
 qJZ
 qJZ
-qJZ
+xLs
 qJZ
 qJZ
 qJZ
@@ -59255,30 +59526,30 @@ oDj
 vXq
 nde
 cpV
-piB
-piB
-piB
-piB
-piB
-hyz
+pPf
+pPf
+pPf
+pPf
+pPf
+nde
 cXY
-hyz
-piB
-piB
+nde
+pPf
+pPf
 juU
 xEJ
 xEJ
 xEJ
 xEJ
 ofw
-hyz
-hyz
-hyz
+nde
+nde
+nde
 ryf
 jTo
 tcP
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -59573,14 +59844,14 @@ jZq
 pLv
 ryU
 sxP
-hyz
-hyz
-hyz
+nde
+nde
+nde
 fzy
 jxu
 pOV
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -59875,14 +60146,14 @@ nde
 nde
 jzh
 sxP
-piB
-piB
+pPf
+pPf
 uGc
 fzy
 qmz
 pOV
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -60178,13 +60449,13 @@ nde
 qrI
 sxP
 mhK
-piB
+pPf
 evu
 dTQ
 nzj
 sjL
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -60479,14 +60750,14 @@ sWD
 sWD
 ciY
 nSp
-hyz
-piB
+nde
+pPf
 evu
 kPp
 nzj
 sjL
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -60781,14 +61052,14 @@ owm
 wJS
 wJS
 vUa
-piB
-piB
+pPf
+pPf
 evu
 fzy
 qmz
 pOV
-kXP
-kXP
+wEr
+wEr
 txR
 bBh
 txR
@@ -61083,14 +61354,14 @@ ulU
 xBH
 hUs
 mIw
-piB
-hyz
+pPf
+nde
 evu
 fzy
 qmz
 pOV
-kXP
-kXP
+wEr
+wEr
 txR
 txR
 txR
@@ -61385,15 +61656,15 @@ lpr
 ulU
 ulU
 dRS
-piB
-hyz
+pPf
+nde
 evu
 dTQ
 nzj
 sjL
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 txR
 txR
 txR
@@ -61687,15 +61958,15 @@ ulU
 lpr
 ulU
 tkC
-hyz
-hyz
+nde
+nde
 evu
 kPp
 nzj
 sjL
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 txR
 txR
 txR
@@ -61995,9 +62266,9 @@ wBl
 fzy
 qmz
 pOV
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 txR
 txR
 txR
@@ -62297,9 +62568,9 @@ fzy
 fzy
 qmz
 pOV
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 txR
 txR
 txR
@@ -62599,9 +62870,9 @@ fzy
 fzy
 hLr
 oDf
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 txR
 txR
 nhn
@@ -62901,9 +63172,9 @@ ncB
 ncB
 jbk
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 txR
 txR
 nhn
@@ -63203,9 +63474,9 @@ txR
 txR
 txR
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 txR
 txR
 wKv
@@ -63505,9 +63776,9 @@ txR
 txR
 txR
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 txR
 wKv
 wKv
@@ -65921,9 +66192,9 @@ mrL
 mrL
 mrL
 agL
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 txR
 txR
 wKv
@@ -66218,15 +66489,15 @@ upL
 pzW
 mzH
 pvz
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 txR
 txR
 wKv
@@ -66520,15 +66791,15 @@ gRX
 pzW
 mzH
 pvz
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 txR
 txR
 klT
@@ -66822,16 +67093,16 @@ gRX
 pzW
 mzH
 pvz
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 txR
 txR
 wKv
@@ -67129,11 +67400,11 @@ kxt
 kxt
 kxt
 gcI
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 txR
 txR
 wKv
@@ -67432,11 +67703,11 @@ hsM
 hsM
 iCk
 gcI
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 txR
 txR
 wKv
@@ -67734,11 +68005,11 @@ nhn
 hsM
 hsM
 tJW
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 txR
 txR
 wKv
@@ -68037,11 +68308,11 @@ vGi
 hrS
 txR
 txR
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 txR
 wKv
 eHl
@@ -68340,10 +68611,10 @@ czr
 wIL
 txR
 txR
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 txR
 wKv
 eHl
@@ -68615,7 +68886,7 @@ eRi
 nJh
 gkk
 hTM
-mBS
+gUt
 nHl
 lLj
 oRN
@@ -68625,7 +68896,7 @@ mBS
 mBS
 cGu
 wdU
-oRN
+cfN
 hTM
 dFh
 qDB
@@ -68642,10 +68913,10 @@ luX
 wIL
 wIL
 txR
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 txR
 wKv
 eHl
@@ -69247,9 +69518,9 @@ jPM
 txR
 wIL
 wRX
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 tWW
 wKv
 eHl
@@ -69822,8 +70093,8 @@ dac
 tMT
 lkm
 lkm
-xQU
-tDG
+dVl
+bbk
 tMT
 aAt
 myH
@@ -70016,13 +70287,13 @@ hRu
 hRu
 hRu
 hRu
+eae
 qJZ
 qJZ
 qJZ
 qJZ
 qJZ
-qJZ
-qJZ
+eae
 hRu
 hRu
 hRu
@@ -70125,7 +70396,7 @@ mna
 lPr
 wNU
 dVl
-bbk
+njS
 tMT
 hzs
 myH
@@ -71224,13 +71495,13 @@ hRu
 hRu
 hRu
 hRu
+eae
 qJZ
 qJZ
 qJZ
 qJZ
 qJZ
-qJZ
-qJZ
+eae
 hRu
 npZ
 npZ
@@ -72540,8 +72811,8 @@ oAr
 tMT
 tMT
 tMT
-xQU
-tDG
+dVl
+nds
 fhX
 aAt
 myH
@@ -73051,8 +73322,8 @@ aBJ
 uok
 uok
 gmI
-gmI
-gmI
+fYC
+fYC
 fYC
 fYC
 jTG
@@ -73069,9 +73340,9 @@ fYC
 fYC
 nHL
 hRB
-qkm
-gmI
-gmI
+fYC
+fYC
+fYC
 fYC
 fYC
 fYC
@@ -73350,12 +73621,12 @@ ejR
 ejR
 aBJ
 gmI
-gmI
-gmI
-gmI
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
+fYC
+fYC
 gmI
 gmI
 nHL
@@ -73371,9 +73642,9 @@ fYC
 fYC
 nHL
 wgn
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
 fYC
 fYC
 fYC
@@ -73650,14 +73921,14 @@ wkZ
 ejR
 ejR
 aBJ
-gmI
-gmI
-gmI
-gmI
-gmI
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
+fYC
+fYC
+fYC
+fYC
 gmI
 gmI
 qkm
@@ -73673,9 +73944,9 @@ fYC
 fYC
 nHL
 qdr
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
 fYC
 fYC
 fYC
@@ -73952,11 +74223,11 @@ ejR
 ejR
 ejR
 gZQ
-gmI
-gmI
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
+fYC
 gmI
 gmI
 gmI
@@ -73975,9 +74246,9 @@ fYC
 fYC
 nHL
 qdr
-qkm
-gmI
-gmI
+fYC
+fYC
+fYC
 fYC
 fYC
 fYC
@@ -74254,11 +74525,11 @@ ejR
 ejR
 hRB
 gmI
-gmI
-gmI
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
+fYC
 gmI
 gmI
 mws
@@ -74277,9 +74548,9 @@ gmI
 kXv
 hex
 qdr
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
 fYC
 fYC
 fYC
@@ -74556,20 +74827,20 @@ ejR
 ejR
 qdr
 gmI
+fYC
+fYC
 gmI
 gmI
 gmI
 gmI
 gmI
-gmI
-gmI
-gmI
-gmI
-gmI
-gmI
-oth
-gmI
-qkm
+fYC
+fYC
+fYC
+fYC
+hDp
+fYC
+fYC
 jTG
 wRG
 hIO
@@ -74579,9 +74850,9 @@ nHL
 hRB
 jTG
 gmI
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
 fYC
 fYC
 fYC
@@ -74860,19 +75131,19 @@ hIO
 kXv
 kXv
 gmI
+fYC
+fYC
 gmI
 gmI
 gmI
-gmI
-gmI
-gmI
-gmI
-gmI
-gmI
-tWI
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
+ozT
+fYC
+fYC
+fYC
 nHL
 bRn
 iel
@@ -74883,7 +75154,7 @@ fYC
 fYC
 fYC
 fVz
-gmI
+fYC
 fYC
 fYC
 fYC
@@ -75163,18 +75434,18 @@ jTG
 wRG
 gan
 kXv
+fYC
+fYC
 gmI
 gmI
-gmI
-gmI
-gmI
-gmI
-gmI
-gmI
-oth
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
+hDp
+fYC
+fYC
+fYC
 nHL
 bRn
 rvQ
@@ -75185,7 +75456,7 @@ fYC
 fYC
 fYC
 fYC
-gmI
+fYC
 fYC
 fYC
 fYC
@@ -75287,8 +75558,8 @@ bXV
 fvJ
 fvJ
 kUw
-kXP
-kXP
+wEr
+wEr
 bDY
 wav
 caf
@@ -75466,17 +75737,17 @@ gmI
 jTG
 wRG
 hIO
+fYC
 gmI
 gmI
-gmI
-gmI
-gmI
-gmI
-gmI
-tWI
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
+ozT
+fYC
+fYC
+fYC
 nHL
 bRn
 rvQ
@@ -75484,10 +75755,10 @@ hIO
 kXv
 kXv
 kXv
-gmI
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
 fYC
 fYC
 fYC
@@ -75771,14 +76042,14 @@ wRG
 hIO
 gmI
 gmI
-gmI
-gmI
-gmI
-gmI
-oth
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
+hDp
+fYC
+fYC
+fYC
 nHL
 hRB
 jTG
@@ -75891,9 +76162,9 @@ dXg
 wEr
 cys
 qdG
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 iTr
 jwi
 wEr
@@ -76073,14 +76344,14 @@ nHL
 ejR
 hIO
 gmI
-gmI
-gmI
-gmI
-gmI
-tWI
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
+ozT
+fYC
+fYC
+fYC
 nHL
 qdr
 fYC
@@ -76193,9 +76464,9 @@ jwi
 wEr
 cys
 qdG
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 iTr
 jwi
 wEr
@@ -76375,14 +76646,14 @@ hex
 ejR
 ejR
 qdr
-gmI
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
 slz
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
 hex
 qdr
 fYC
@@ -76495,9 +76766,9 @@ jwi
 wEr
 cys
 qdG
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 gsK
 jwi
 wEr
@@ -76677,13 +76948,13 @@ ejR
 sKC
 ejR
 qdr
-gmI
-gmI
-gmI
-gmI
-tWI
-gmI
-gmI
+fYC
+fYC
+fYC
+fYC
+ozT
+fYC
+fYC
 nHL
 hRB
 gmI
@@ -76797,9 +77068,9 @@ clE
 bIQ
 jiL
 qdG
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 gsK
 jwi
 wEr
@@ -76979,13 +77250,13 @@ xoi
 kGc
 ejR
 cJL
-gmI
-gmI
-gmI
-gmI
-oth
-gmI
-qkm
+fYC
+fYC
+fYC
+fYC
+hDp
+fYC
+fYC
 hex
 qdr
 fYC
@@ -77099,9 +77370,9 @@ clE
 bIQ
 bdk
 qdG
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 gsK
 wSy
 ssj
@@ -77282,11 +77553,11 @@ kGc
 rfh
 ejR
 qdr
+fYC
+fYC
 gmI
-gmI
-gmI
-tWI
-gmI
+ozT
+fYC
 hex
 hRB
 gmI
@@ -77401,9 +77672,9 @@ dvX
 gAs
 xpN
 gcI
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 tRW
 owP
@@ -77584,9 +77855,9 @@ kGc
 sKC
 ejR
 qdr
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
 hDp
 hex
 hRB
@@ -77703,9 +77974,9 @@ omV
 omV
 omV
 hvo
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 blP
 mrL
 mrL
@@ -77886,9 +78157,9 @@ kGc
 sKC
 ejR
 hIO
-gmI
-gmI
-gmI
+fYC
+fYC
+fYC
 wPO
 hRB
 gmI
@@ -78000,14 +78271,14 @@ bth
 lzb
 jPM
 jPM
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 vcf
 txR
 txR
@@ -78190,7 +78461,7 @@ jTG
 wRG
 hIO
 gmI
-gmI
+fYC
 cFs
 hIO
 qkm
@@ -78301,15 +78572,15 @@ bth
 lzb
 jPM
 jPM
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 vcf
 txR
 nhn
@@ -78602,16 +78873,16 @@ bth
 lzb
 jPM
 jPM
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 vcf
 txR
 txR
@@ -78903,12 +79174,12 @@ wKv
 lVQ
 txR
 jPM
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 vcf
 vcf
 vcf
@@ -79205,11 +79476,11 @@ rpR
 lVQ
 jPM
 jPM
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 jPM
 txR
 txR
@@ -79507,8 +79778,8 @@ lpR
 oOC
 jPM
 baU
-kXP
-kXP
+wEr
+wEr
 hGe
 vJm
 pYz
@@ -80111,8 +80382,8 @@ pwm
 pwm
 txc
 gbn
-kXP
-kXP
+wEr
+wEr
 qIW
 gbn
 gbn
@@ -80413,8 +80684,8 @@ txR
 pPI
 hdS
 dmw
-kXP
-kXP
+wEr
+wEr
 eZO
 rxZ
 hwO
@@ -80715,9 +80986,9 @@ txR
 vcf
 eIm
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 ycM
 cRz
 cRz
@@ -81017,9 +81288,9 @@ jPM
 vcf
 eIm
 kUw
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 dQa
 jPM
 txR
@@ -81319,9 +81590,9 @@ jPM
 jPM
 eIm
 kUw
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 dQa
 jPM
 wIL
@@ -81621,9 +81892,9 @@ jPM
 jPM
 eIm
 kUw
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 txR
 wIL
@@ -81923,9 +82194,9 @@ txR
 vcf
 eIm
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 sep
 wIL
@@ -81993,7 +82264,7 @@ xsM
 xsM
 xsM
 xsM
-xsM
+dTs
 asA
 xFj
 xFj
@@ -82225,9 +82496,9 @@ txR
 vcf
 eIm
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 txR
 wIL
@@ -82286,7 +82557,7 @@ xFj
 xFj
 rvl
 ohR
-xsM
+tGb
 xsM
 xsM
 xsM
@@ -82460,12 +82731,12 @@ fWM
 fWM
 qLU
 ajQ
+whB
 jqe
 jqe
 jqe
 jqe
-jqe
-jqe
+pPP
 pPb
 pPb
 sUY
@@ -82500,7 +82771,7 @@ pPb
 pPb
 pPb
 pPb
-fWM
+lJU
 fWM
 fWM
 qLU
@@ -82527,9 +82798,9 @@ txR
 pPI
 lVh
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 dQa
 jPM
 txR
@@ -82768,7 +83039,7 @@ jqe
 jqe
 jqe
 jqe
-jqe
+wVo
 vcx
 fWM
 fWM
@@ -82800,10 +83071,10 @@ fWM
 fWM
 fWM
 fWM
-fWM
-fWM
-fWM
-fWM
+lJU
+lJU
+lJU
+lJU
 fWM
 qLU
 bQQ
@@ -82829,9 +83100,9 @@ dQv
 uhc
 gbn
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jBm
 jBm
 vcf
@@ -83066,7 +83337,7 @@ qLU
 ajQ
 jqe
 jqe
-jqe
+pPb
 jqe
 jqe
 jqe
@@ -83102,10 +83373,10 @@ fWM
 fWM
 fWM
 fWM
-fWM
-fWM
-fWM
-fWM
+lJU
+lJU
+lJU
+lJU
 fWM
 fWM
 qLU
@@ -83131,9 +83402,9 @@ pwm
 hBb
 gbn
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 hdS
 kxt
 caf
@@ -83368,8 +83639,8 @@ gzf
 pes
 jqe
 jqe
-jqe
-jqe
+pPb
+pPb
 jqe
 jqe
 jqe
@@ -83405,8 +83676,8 @@ fWM
 fWM
 fWM
 fWM
-fWM
-fWM
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -83433,9 +83704,9 @@ dQa
 dQa
 umj
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 hsM
 hsM
@@ -83585,7 +83856,7 @@ hRu
 hRu
 hRu
 hRu
-moj
+rFM
 moj
 moj
 moj
@@ -83593,7 +83864,7 @@ moj
 moj
 vuV
 vuV
-moj
+rFM
 moj
 ctH
 ctH
@@ -83735,9 +84006,9 @@ dQa
 dQa
 bdY
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 jPM
 jPM
@@ -83887,8 +84158,8 @@ hRu
 hRu
 qJZ
 qJZ
-bQY
-moj
+tGZ
+rFM
 moj
 cbW
 dtM
@@ -83896,7 +84167,7 @@ egU
 qJZ
 qJZ
 tGZ
-moj
+rFM
 moj
 ctH
 ctH
@@ -84037,9 +84308,9 @@ nhn
 dQa
 bdY
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 jPM
 jPM
@@ -84339,9 +84610,9 @@ nhn
 nhn
 fvJ
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 jPM
 jPM
@@ -84641,9 +84912,9 @@ hsM
 fvJ
 fvJ
 agL
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 jPM
 jPM
@@ -84877,7 +85148,7 @@ ajQ
 jqe
 jqe
 jqe
-jqe
+pPP
 jqe
 jqe
 jqe
@@ -84942,10 +85213,10 @@ ivU
 hsM
 fvJ
 tJW
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 bdY
 jPM
 jPM
@@ -85004,7 +85275,7 @@ xFj
 tMN
 xFj
 cyT
-xsM
+kSs
 xsM
 xsM
 xsM
@@ -85182,7 +85453,7 @@ pPb
 pPb
 pPb
 pPb
-jqe
+tCw
 vcx
 bYK
 fWM
@@ -85244,10 +85515,10 @@ ivU
 fvJ
 fvJ
 agL
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 bdY
 jPM
 jPM
@@ -85315,7 +85586,7 @@ xsM
 xsM
 xsM
 xsM
-xsM
+kVM
 vIQ
 xFj
 xFj
@@ -85400,14 +85671,14 @@ qJZ
 qJZ
 qJZ
 qJZ
-qJZ
+hRu
 hRu
 hRu
 hRu
 qJZ
 qJZ
 qfa
-cbW
+gHx
 moj
 moj
 ctH
@@ -85545,11 +85816,11 @@ oHi
 ivU
 fvJ
 agL
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 bdY
 jPM
 jPM
@@ -85702,7 +85973,7 @@ qJZ
 qJZ
 qJZ
 qJZ
-hRu
+qJZ
 hRu
 hRu
 hRu
@@ -85780,7 +86051,7 @@ fWM
 fWM
 qLU
 ajQ
-jqe
+fjh
 jqe
 pPb
 pPb
@@ -85823,8 +86094,8 @@ qLU
 fWM
 fWM
 fWM
-fWM
-fWM
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -85846,11 +86117,11 @@ txR
 oHi
 vSi
 tJW
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 heV
 bdY
 jPM
@@ -86004,8 +86275,8 @@ qJZ
 qJZ
 qJZ
 qJZ
-hRu
-hRu
+qJZ
+qJZ
 hRu
 qJZ
 qJZ
@@ -86125,8 +86396,8 @@ qLU
 fWM
 fWM
 bYK
-fWM
-fWM
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -86148,12 +86419,12 @@ txR
 gbn
 auP
 tJW
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 oNV
-kXP
+wEr
 bdY
 jPM
 jPM
@@ -86303,8 +86574,8 @@ qJZ
 qJZ
 qJZ
 qJZ
-qJZ
-qJZ
+hRu
+hRu
 qJZ
 qJZ
 qJZ
@@ -86450,8 +86721,8 @@ txR
 rJv
 gbn
 eLx
-kXP
-kXP
+wEr
+wEr
 coN
 eMc
 wps
@@ -86604,9 +86875,9 @@ qJZ
 qJZ
 qJZ
 qJZ
-qJZ
-qJZ
-qJZ
+hRu
+hRu
+hRu
 qJZ
 qJZ
 qJZ
@@ -86752,8 +87023,8 @@ uau
 dxO
 nFW
 agL
-kXP
-kXP
+wEr
+wEr
 ouy
 qvm
 spp
@@ -86906,8 +87177,8 @@ qJZ
 qJZ
 qJZ
 qJZ
-qJZ
-qJZ
+hRu
+hRu
 qJZ
 qJZ
 qJZ
@@ -87053,9 +87324,9 @@ lVQ
 txR
 ime
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 ouy
 yhK
 wEr
@@ -87355,9 +87626,9 @@ lVQ
 txR
 ime
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 ouy
 yhK
 wEr
@@ -87657,9 +87928,9 @@ uau
 jPM
 ime
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 ouy
 hoM
 wEr
@@ -87925,8 +88196,8 @@ qLU
 qLU
 qLU
 fWM
-fWM
-fWM
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -87959,9 +88230,9 @@ lVQ
 jPM
 ime
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 ouy
 jwi
 wEr
@@ -88226,9 +88497,9 @@ qLU
 qLU
 fWM
 fWM
-fWM
-fWM
-fWM
+lJU
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -88261,9 +88532,9 @@ lVQ
 jPM
 ime
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 ouy
 mjK
 wEr
@@ -88528,8 +88799,8 @@ qLU
 fWM
 fWM
 fWM
-qLU
-qLU
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -88563,9 +88834,9 @@ uau
 jPM
 ime
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 ouy
 kBC
 flc
@@ -88822,8 +89093,8 @@ pPb
 pPb
 pPb
 pPb
-fWM
-fWM
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -88865,9 +89136,9 @@ lVQ
 txR
 ime
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 hdS
 caf
 caf
@@ -89124,9 +89395,9 @@ pPb
 pPb
 pPb
 pPb
-fWM
-fWM
-fWM
+lJU
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -89167,9 +89438,9 @@ nhn
 txR
 ime
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 eIm
 fvJ
 hsM
@@ -89425,17 +89696,17 @@ pPb
 pPb
 pPb
 pPb
-pPb
-pPb
-fWM
-fWM
+lJU
+lJU
+lJU
+lJU
 fWM
 fWM
 fWM
 qLU
 qLU
-ctS
-ctS
+qLU
+qLU
 qLU
 fWM
 fWM
@@ -89469,9 +89740,9 @@ nhn
 nhn
 dxO
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 bFG
 tZe
@@ -89728,8 +89999,8 @@ pPb
 pPb
 pPb
 pPb
-pPb
-fWM
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -89771,9 +90042,9 @@ uau
 uau
 dxO
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 qPT
 vUF
@@ -90030,8 +90301,8 @@ pPb
 pPb
 pPb
 pPb
-pPb
-fWM
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -90040,8 +90311,8 @@ qLU
 ctS
 ctS
 ctS
-ctS
-qLU
+pPb
+pPb
 fWM
 fWM
 lJU
@@ -90073,9 +90344,9 @@ uau
 uau
 mel
 tJW
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 jcs
 oVm
@@ -90332,8 +90603,8 @@ pPb
 pPb
 pPb
 pPb
-pPb
-pPb
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -90342,8 +90613,8 @@ pPb
 pPb
 ctS
 ctS
-ctS
-qLU
+pPb
+pPb
 fWM
 fWM
 pPb
@@ -90634,8 +90905,8 @@ pPb
 pPb
 pPb
 pPb
-pPb
-pPb
+lJU
+lJU
 pPb
 fWM
 lJU
@@ -90677,9 +90948,9 @@ uau
 uau
 gbn
 gbn
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 rli
 nkC
 loW
@@ -90979,9 +91250,9 @@ uau
 uau
 uau
 hvo
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 eIm
 dQV
 bXz
@@ -91281,9 +91552,9 @@ jPM
 jPM
 jPM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 dyM
 uic
@@ -91551,7 +91822,7 @@ qLU
 ctS
 ctS
 qLU
-fWM
+lJU
 fWM
 fWM
 fWM
@@ -91583,9 +91854,9 @@ bIE
 bIE
 jPM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 qPT
 vUF
@@ -91852,9 +92123,9 @@ fWM
 qLU
 qLU
 qLU
-qLU
-fWM
-fWM
+lJU
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -91885,9 +92156,9 @@ bIE
 bIE
 jPM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 qPT
 vUF
@@ -92153,11 +92424,11 @@ fWM
 fWM
 qLU
 qLU
-qLU
-fWM
-fWM
-fWM
-fWM
+lJU
+lJU
+lJU
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -92187,9 +92458,9 @@ jPM
 jPM
 jPM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 dyM
 uic
@@ -92407,11 +92678,11 @@ jsg
 gfC
 fIX
 aRk
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 bdY
 ctS
 qLU
@@ -92455,11 +92726,11 @@ fWM
 fWM
 fWM
 fWM
-fWM
-fWM
-fWM
-fWM
-fWM
+lJU
+lJU
+lJU
+lJU
+lJU
 fWM
 fWM
 fWM
@@ -92489,9 +92760,9 @@ txR
 txR
 jPM
 lJV
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 eIm
 qPT
 vUF
@@ -92709,11 +92980,11 @@ pJV
 oyv
 jCD
 aRk
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 bdY
 idy
 qLU
@@ -92723,27 +92994,27 @@ fWM
 fWM
 qLU
 qLU
-qLU
-qLU
-qLU
-qLU
+wvX
+wvX
+wvX
+wvX
 qLU
 idy
 qLU
-qLU
-qLU
-qLU
-qLU
+wvX
+wvX
+wvX
+wvX
 qLU
 aaY
 kQY
 qEA
 uLR
 qLU
-qLU
-qLU
-qLU
-ctS
+wvX
+wvX
+wvX
+pQt
 ctS
 hDV
 gbn
@@ -92758,10 +93029,10 @@ fWM
 fWM
 fWM
 fWM
-fWM
-fWM
-fWM
-fWM
+lJU
+lJU
+lJU
+lJU
 lJU
 fWM
 fWM
@@ -92791,9 +93062,9 @@ txR
 txR
 lJV
 lJV
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 eIm
 qPT
 vUF
@@ -93011,11 +93282,11 @@ bmm
 aRk
 aRk
 bmm
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 blP
 mrL
 mrL
@@ -93060,9 +93331,9 @@ txR
 jPM
 fWM
 fWM
-fWM
-fWM
-fWM
+lJU
+lJU
+lJU
 lJU
 lJU
 lJU
@@ -93093,9 +93364,9 @@ txR
 txR
 lJV
 lJV
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 eIm
 tYs
 fSO
@@ -93314,47 +93585,47 @@ ket
 oyv
 bmm
 gLO
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 izy
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 jPM
 jPM
@@ -93395,9 +93666,9 @@ lJV
 txR
 lJV
 lJV
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 blP
 mrL
 mrL
@@ -93615,52 +93886,52 @@ jsg
 jsg
 oyv
 bmm
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 izy
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 jPM
 fWM
 fWM
@@ -93697,9 +93968,9 @@ lJV
 lJV
 lJV
 lJV
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 mTg
 vcf
 vcf
@@ -93917,53 +94188,53 @@ mqJ
 mqJ
 qGM
 oGm
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 izy
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 jPM
 jPM
 jPM
@@ -93999,9 +94270,9 @@ lJV
 lJV
 lJV
 lJV
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 lJV
 jPM
 jPM
@@ -94219,54 +94490,54 @@ vHu
 vHu
 vHu
 wCy
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 izy
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 jPM
 jPM
 jPM
@@ -94300,10 +94571,10 @@ lJV
 lJV
 lJV
 lJV
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 lJV
 jPM
 jPM
@@ -94521,11 +94792,11 @@ oUR
 jDb
 oUR
 wCy
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 hdS
 iTm
 iTm
@@ -94562,50 +94833,50 @@ gcI
 izy
 hdS
 gcI
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 jPM
 jPM
 jPM
 jPM
 jPM
 jPM
+twE
 jPM
 jPM
 jPM
 jPM
+twE
 jPM
 jPM
 jPM
 jPM
+twE
+twE
+jPM
+jPM
+jPM
+twE
 jPM
 jPM
 jPM
 jPM
-jPM
-jPM
-jPM
-jPM
-jPM
-jPM
-jPM
-jPM
+mTg
 lJV
 lJV
 lJV
 lJV
 lJV
-lJV
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 lJV
 jPM
 jPM
@@ -94823,11 +95094,11 @@ oUR
 oUR
 oUR
 wCy
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 bfV
 mTg
 lJV
@@ -94837,27 +95108,27 @@ lJV
 txR
 jPM
 jPM
-txR
-txR
-txR
-txR
+pPI
+pPI
+pPI
+pPI
 txR
 sep
 jPM
+vcf
+vcf
+vcf
+vcf
 jPM
 jPM
 jPM
 jPM
 jPM
 jPM
-jPM
-jPM
-jPM
-jPM
-txR
-txR
-lJV
-lJV
+pPI
+pPI
+fyC
+fyC
 lJV
 mTg
 gbn
@@ -94866,48 +95137,48 @@ gbn
 jLr
 jPM
 jPM
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 lJV
 jPM
 jPM
@@ -95072,8 +95343,8 @@ lGl
 lGl
 lGl
 xcO
-gqS
-gvu
+qfu
+uRz
 lZx
 xeR
 cXM
@@ -95125,11 +95396,11 @@ jPR
 jPR
 jPR
 wCy
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
 bfV
 lJV
 lJV
@@ -95169,46 +95440,46 @@ tJW
 txR
 jPM
 jPM
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 lJV
 lJV
 jPM
@@ -95429,9 +95700,9 @@ jsg
 oGm
 kxt
 gcI
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bfV
 lJV
 lJV
@@ -95465,51 +95736,51 @@ txR
 txR
 lJV
 lJV
-gbn
-gbn
+qmz
+qmz
 tJW
 qLU
 qLU
 jPM
 jPM
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 juZ
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 lJV
 eSg
 uau
@@ -95731,14 +96002,14 @@ ket
 bmm
 hsM
 agL
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bfV
 lJV
 txR
-txR
-txR
+nhn
+nhn
 jPM
 jPM
 jPM
@@ -95767,8 +96038,8 @@ txR
 txR
 txR
 txR
-gbn
-gbn
+qmz
+qmz
 tJW
 qLU
 qLU
@@ -95802,9 +96073,9 @@ lJV
 jPM
 jPM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 izy
 jPM
 jPM
@@ -96032,15 +96303,15 @@ jsg
 lSo
 bmm
 cfl
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 bdY
 lJV
-txR
-txR
-jPM
+nhn
+nhn
+nhn
 jPM
 jPM
 oNW
@@ -96069,8 +96340,8 @@ jPM
 jPM
 jPM
 jPM
-gbn
-gbn
+qmz
+qmz
 tJW
 qLU
 qLU
@@ -96102,13 +96373,13 @@ lJV
 qUZ
 cfH
 txR
-sep
+txR
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
-twE
+jPM
 jPM
 jPM
 jPM
@@ -96334,15 +96605,15 @@ qGM
 bmm
 bmm
 tJW
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 bdY
 lJV
-txR
-txR
-jPM
+nhn
+nhn
+nhn
 jPM
 jPM
 jPM
@@ -96371,8 +96642,8 @@ bIE
 bIE
 bIE
 bIE
-gbn
-gbn
+qmz
+qmz
 tJW
 qLU
 fWM
@@ -96406,9 +96677,9 @@ lJV
 lJV
 txR
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 fWM
 fWM
@@ -96636,14 +96907,14 @@ aRk
 bmm
 hsM
 tJW
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 bdY
 lJV
-txR
-jPM
+nhn
+nhn
 jPM
 jPM
 jPM
@@ -96673,8 +96944,8 @@ fwL
 fwL
 fwL
 nhn
-gbn
-gbn
+qmz
+qmz
 tJW
 fWM
 fWM
@@ -96708,9 +96979,9 @@ pUV
 ybi
 txR
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 fWM
 fWM
@@ -96726,8 +96997,8 @@ aib
 aib
 lJU
 lJU
-pMB
-pMB
+pPb
+pPb
 lJU
 xpI
 xBs
@@ -96885,8 +97156,8 @@ qqb
 qqb
 qqb
 qqb
+jEg
 wHr
-oQy
 gvu
 srz
 lZx
@@ -96938,18 +97209,18 @@ hsM
 hsM
 mrL
 agL
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
 bdY
 lJV
+nhn
+nhn
+jPM
+jPM
+jPM
 txR
-jPM
-jPM
-jPM
-jPM
-txR
 txR
 nhn
 nhn
@@ -96975,8 +97246,8 @@ wKv
 wKv
 wKv
 nhn
-gbn
-gbn
+qmz
+qmz
 tJW
 fWM
 fWM
@@ -97010,9 +97281,9 @@ lJV
 wEp
 gZL
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 fWM
 fWM
@@ -97029,8 +97300,8 @@ lJU
 lJU
 lJU
 lJU
-pMB
-pMB
+pPb
+pPb
 gma
 gma
 hQg
@@ -97238,15 +97509,15 @@ hsM
 hsM
 hsM
 tJW
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 bdY
 txR
-txR
+nhn
 jPM
 jPM
 jPM
@@ -97277,8 +97548,8 @@ wKv
 wKv
 nhn
 nhn
-gbn
-gbn
+qmz
+qmz
 tJW
 fWM
 fWM
@@ -97312,9 +97583,9 @@ txR
 oxz
 chI
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 tIp
 fWM
@@ -97328,10 +97599,10 @@ fWM
 qLU
 aib
 lJU
-pMB
+pPb
 lJU
 lJU
-pMB
+pPb
 xXE
 gma
 gma
@@ -97538,14 +97809,14 @@ qmz
 hsM
 hsM
 hsM
-hsM
+gTf
 tJW
 aaM
 pQP
 kph
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 bdY
 txR
 jPM
@@ -97579,8 +97850,8 @@ nhn
 nhn
 nhn
 nhn
-gbn
-gbn
+qmz
+qmz
 tJW
 fWM
 fWM
@@ -97614,9 +97885,9 @@ txR
 txR
 txR
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 tIp
 fWM
@@ -97630,10 +97901,10 @@ fWM
 qLU
 qLU
 lJU
-pMB
-pMB
-pMB
-pMB
+pPb
+pPb
+pPb
+pPb
 bOg
 dbh
 gma
@@ -97837,17 +98108,17 @@ cJq
 cJq
 nhn
 qmz
+hKC
 hsM
 hsM
-hsM
-hsM
+kXP
 tJW
 aaM
-kXP
-kXP
+wEr
+wEr
 rYe
-kXP
-kXP
+wEr
+wEr
 bdY
 txR
 jPM
@@ -97916,9 +98187,9 @@ qLU
 qLU
 fWM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 tIp
 fWM
@@ -97931,12 +98202,12 @@ fWM
 fWM
 fWM
 fWM
-pMB
-pMB
-pMB
-pMB
-pMB
-pMB
+pPb
+pPb
+pPb
+pPb
+pPb
+pPb
 dbh
 efW
 hbE
@@ -98138,7 +98409,7 @@ jOZ
 jOZ
 jOZ
 nhn
-nhn
+qmz
 hsM
 hsM
 hsM
@@ -98148,14 +98419,14 @@ rdO
 fZs
 cCt
 aeq
-kXP
-kXP
+wEr
+wEr
 bdY
 jPM
 jPM
 jPM
-txR
-txR
+nhn
+nhn
 txR
 txR
 lJV
@@ -98218,9 +98489,9 @@ qLU
 fWM
 fWM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 tIp
 fWM
@@ -98232,14 +98503,14 @@ qLU
 fWM
 fWM
 bOg
-pMB
-pMB
-pMB
-pMB
+pPb
+pPb
+pPb
+pPb
 bOg
 bOg
-pMB
-eae
+pPb
+qDB
 oBx
 pHh
 xGu
@@ -98446,22 +98717,22 @@ hsM
 hsM
 hsM
 tJW
-kXP
-kXP
+wEr
+wEr
 eTP
 qUE
-kXP
-kXP
+wEr
+wEr
 bdY
 jPM
 jPM
-jPM
-txR
-txR
-txR
-lJV
-lJV
 nhn
+nhn
+nhn
+nhn
+lJV
+lJV
+lJV
 nhn
 nhn
 nhn
@@ -98520,9 +98791,9 @@ qLU
 fWM
 fWM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 tIp
 fWM
@@ -98535,14 +98806,14 @@ fWM
 bOg
 bOg
 bOg
-pMB
-pMB
+pPb
+pPb
 bOg
 bOg
 bOg
 bOg
-pMB
-pMB
+pPb
+pPb
 lJU
 lJU
 ozq
@@ -98746,24 +99017,24 @@ qmz
 hsM
 hsM
 hsM
-hsM
+gTf
 tJW
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 bdY
 jPM
 jPM
-txR
-txR
-txR
-lJV
-lJV
-lJV
 nhn
+nhn
+nhn
+lJV
+lJV
+lJV
+lJV
 nhn
 nhn
 nhn
@@ -98822,9 +99093,9 @@ lJU
 fWM
 fWM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 fWM
 fWM
@@ -98837,13 +99108,13 @@ bOg
 bOg
 bOg
 bOg
-pMB
-pMB
-pMB
-pMB
-pMB
-pMB
-pMB
+pPb
+pPb
+pPb
+pPb
+pPb
+pPb
+pPb
 lJU
 lJU
 lJU
@@ -99045,17 +99316,17 @@ ojO
 jOZ
 nhn
 qmz
+hKC
 hsM
 hsM
-hsM
-hsM
+kXP
 tJW
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 bdY
 jPM
 jPM
@@ -99124,9 +99395,9 @@ lJU
 lJU
 fWM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 fWM
 lJU
@@ -99138,12 +99409,12 @@ lJU
 lJU
 bOg
 bOg
-pMB
-pMB
-pMB
-pMB
-pMB
-pMB
+pPb
+pPb
+pPb
+pPb
+pPb
+pPb
 miE
 miE
 miE
@@ -99346,18 +99617,18 @@ aeC
 ojO
 jOZ
 nhn
-nhn
+qmz
 hsM
 hsM
 hsM
 hsM
 tJW
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 bdY
 jPM
 txR
@@ -99426,9 +99697,9 @@ lJU
 fWM
 fWM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 fWM
 bOg
@@ -99441,12 +99712,12 @@ bOg
 bOg
 bOg
 bOg
-pMB
+pPb
 lJU
 lJU
-pMB
-pMB
-pMB
+pPb
+pPb
+pPb
 lJU
 lJU
 lJU
@@ -99654,12 +99925,12 @@ hsM
 hsM
 hsM
 tJW
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 bdY
 jPM
 txR
@@ -99728,9 +99999,9 @@ lJU
 fWM
 fWM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 fWM
 bOg
@@ -99747,7 +100018,7 @@ lVk
 yfF
 lJU
 lJU
-pMB
+pPb
 lJU
 lJU
 bOg
@@ -99955,17 +100226,17 @@ nhn
 qmz
 qmz
 qmz
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
+hsM
+kxt
+kxt
+kxt
+kxt
+kxt
+kxt
+hsM
+jPM
+jPM
+txR
 nhn
 nhn
 nhn
@@ -100030,9 +100301,9 @@ wvX
 fWM
 fWM
 cxc
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 fWM
 bOg
@@ -100048,8 +100319,8 @@ jjP
 jjP
 jjP
 lVk
-pMB
-pMB
+pPb
+pPb
 lJU
 lVk
 lVk
@@ -100257,17 +100528,17 @@ nhn
 nhn
 nhn
 nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
+txR
+txR
+txR
+txR
+sep
+jPM
+jPM
+jPM
+jPM
+jPM
+txR
 nhn
 nhn
 nhn
@@ -100332,9 +100603,9 @@ wvX
 fWM
 fWM
 jPM
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 jPM
 sUY
 bOg
@@ -100560,15 +100831,15 @@ nhn
 nhn
 nhn
 nhn
+lJV
+txR
+txR
+txR
+txR
+txR
+jPM
+jPM
 nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-nhn
-dGD
-dGD
 dGD
 dGD
 dGD
@@ -100634,9 +100905,9 @@ wvX
 nPk
 qGp
 qGp
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
 qGp
 saa
 bOg
@@ -100860,17 +101131,17 @@ dGD
 dGD
 dGD
 dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
+nhn
+nhn
+lJV
+lJV
+lJV
+txR
+txR
+txR
+nhn
+nhn
+nhn
 dGD
 dGD
 dGD
@@ -100934,13 +101205,13 @@ xCu
 elw
 xUV
 reD
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
-kXP
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
+wEr
 elw
 xUV
 reD
@@ -101162,15 +101433,15 @@ dGD
 dGD
 dGD
 dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
+nhn
+nhn
+nhn
+lJV
+lJV
+lJV
+txR
+nhn
+nhn
 dGD
 dGD
 dGD
@@ -101465,14 +101736,14 @@ dGD
 dGD
 dGD
 dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
-dGD
+nhn
+nhn
+nhn
+nhn
+nhn
+nhn
+nhn
+nhn
 dGD
 dGD
 dGD
@@ -102143,11 +102414,11 @@ xVa
 mPQ
 kEi
 woZ
-iuo
-iuo
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
+jbL
+jbL
 aYm
 yhA
 mPQ
@@ -102445,11 +102716,11 @@ oWp
 jSH
 wbI
 hkE
-iuo
-iuo
+jbL
+jbL
 llc
-iuo
-pPP
+jbL
+pGM
 uiw
 rkf
 oIw
@@ -102747,11 +103018,11 @@ kUF
 obc
 obc
 hkE
-iuo
-iuo
-iuo
-iuo
-pPP
+jbL
+jbL
+jbL
+jbL
+pGM
 uiw
 vfO
 obc
@@ -103049,11 +103320,11 @@ pCj
 dWB
 khh
 fvT
-iuo
-iuo
-iuo
-iuo
-pPP
+jbL
+jbL
+jbL
+jbL
+pGM
 rVf
 khh
 dWB
@@ -103352,9 +103623,9 @@ rHj
 qDW
 bJG
 fjd
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 kOG
 dDJ
 dDJ
@@ -103654,9 +103925,9 @@ yhA
 kEi
 khh
 kQQ
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 faK
 eCo
 fFN
@@ -103956,9 +104227,9 @@ bfn
 eIF
 khh
 kQQ
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 hyi
 sxd
 jbL
@@ -104258,9 +104529,9 @@ pCj
 pCj
 pCj
 kQQ
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 nTv
 vTi
 jbL
@@ -104442,8 +104713,8 @@ pfy
 pfy
 pfy
 pfy
-qxF
-qxF
+tbz
+tbz
 qxF
 qxF
 qxF
@@ -104560,9 +104831,9 @@ khh
 khh
 pCj
 kQQ
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 jUF
 jbL
 pGM
@@ -104744,9 +105015,9 @@ pNw
 mqZ
 wRV
 pfy
-qxF
-qxF
-qxF
+tbz
+tbz
+tbz
 qxF
 qxF
 qxF
@@ -104862,9 +105133,9 @@ cCN
 iFy
 khh
 kQQ
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 sap
 jbL
 lOi
@@ -105047,8 +105318,8 @@ wmY
 wmY
 pfy
 qxF
-qxF
-qxF
+tbz
+tbz
 qxF
 qxF
 qxF
@@ -105124,11 +105395,11 @@ rbN
 rbN
 rbN
 rbN
-rbN
+mjY
 tSM
 tSM
 tSM
-qLU
+fpE
 fWM
 fWM
 fWM
@@ -105164,9 +105435,9 @@ cCN
 cCN
 eQL
 mTv
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 kOG
 ida
 ida
@@ -105466,9 +105737,9 @@ dgK
 cCN
 gJV
 kQQ
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 uXu
 gMI
 lqH
@@ -106372,9 +106643,9 @@ bhg
 cCN
 uIk
 lWz
-pPP
+pGM
 srE
-iuo
+jbL
 hMp
 khh
 pCj
@@ -106674,9 +106945,9 @@ pxp
 cCN
 cCN
 lWz
-pPP
+pGM
 srE
-iuo
+jbL
 hMp
 khh
 pCj
@@ -106936,11 +107207,11 @@ dGD
 rbN
 rbN
 rbN
-rbN
+mjY
 tSM
 tSM
 tSM
-qLU
+fpE
 fWM
 fWM
 fWM
@@ -106976,9 +107247,9 @@ cCN
 cCN
 cCN
 wrg
-pPP
+pGM
 srE
-iuo
+jbL
 hMp
 sBd
 pCj
@@ -107278,9 +107549,9 @@ cCN
 cCN
 khh
 yhb
-pPP
+pGM
 srE
-iuo
+jbL
 eCI
 aIf
 khh
@@ -107580,9 +107851,9 @@ cCN
 cCO
 cCO
 yhb
-iuo
+jbL
 srE
-iuo
+jbL
 eCI
 mPw
 khh
@@ -107882,9 +108153,9 @@ cCN
 cCN
 pCj
 lWz
-iuo
+jbL
 srE
-iuo
+jbL
 hMp
 hly
 khh
@@ -108184,9 +108455,9 @@ cCN
 cCN
 cCN
 iHF
-iuo
+jbL
 srE
-iuo
+jbL
 eCI
 ihT
 pCj
@@ -108645,7 +108916,7 @@ rLW
 rLW
 rLW
 rLW
-vhm
+gre
 qxF
 qxF
 qxF
@@ -108788,9 +109059,9 @@ suS
 aNs
 iAY
 yhb
-iuo
+jbL
 srE
-iuo
+jbL
 hMp
 khh
 vcW
@@ -108956,9 +109227,9 @@ qxF
 vhm
 vhm
 qxF
-qxF
-qxF
-qxF
+tbz
+tbz
+tbz
 qxF
 qxF
 qxF
@@ -109090,9 +109361,9 @@ sJJ
 cMq
 iAY
 yhb
-iuo
+jbL
 srE
-iuo
+jbL
 hMp
 khh
 cCO
@@ -109258,14 +109529,14 @@ qxF
 qxF
 qxF
 qxF
-qxF
 tbz
 tbz
 qxF
 qxF
 qxF
+qxF
 vhm
-vhm
+gre
 rLW
 dGD
 dGD
@@ -109394,7 +109665,7 @@ iAY
 wUu
 lDq
 srE
-iuo
+jbL
 eCI
 khh
 khh
@@ -109560,8 +109831,8 @@ vhm
 vhm
 qxF
 qxF
-qxF
 tbz
+qxF
 tbz
 qxF
 qxF
@@ -109696,7 +109967,7 @@ cCN
 kQQ
 rNM
 srE
-iuo
+jbL
 hnQ
 pCj
 wVB
@@ -109998,7 +110269,7 @@ cCN
 ycw
 rnX
 nXL
-iuo
+jbL
 hnQ
 pCj
 pCj
@@ -110298,7 +110569,7 @@ cCN
 cCN
 khh
 kQQ
-iuo
+jbL
 iXy
 ieT
 hnQ
@@ -110600,7 +110871,7 @@ cCN
 cCO
 cCO
 kQQ
-iuo
+jbL
 srE
 rXQ
 pyB
@@ -110758,7 +111029,7 @@ rLW
 rLW
 rLW
 rLW
-vhm
+gre
 qxF
 qxF
 qxF
@@ -110902,7 +111173,7 @@ cCN
 cCN
 khh
 mTv
-iuo
+jbL
 uQa
 eDx
 jox
@@ -111043,7 +111314,7 @@ caV
 eTo
 rLW
 rLW
-kQF
+mXG
 kQF
 ddB
 blJ
@@ -111204,9 +111475,9 @@ cCN
 cCN
 cCN
 mXs
-iuo
+jbL
 beQ
-iuo
+jbL
 hMp
 pCj
 khh
@@ -111506,9 +111777,9 @@ pvq
 cCN
 cCN
 mTv
-iuo
+jbL
 srE
-iuo
+jbL
 hMp
 pCj
 wVB
@@ -111808,9 +112079,9 @@ xwX
 hWv
 cCN
 kQQ
-iuo
+jbL
 srE
-iuo
+jbL
 eCI
 pCj
 pCj
@@ -112110,9 +112381,9 @@ xwX
 azh
 cCN
 kQQ
-iuo
+jbL
 srE
-iuo
+jbL
 eCI
 pCj
 cCO
@@ -112714,9 +112985,9 @@ aYO
 cCN
 cCN
 mTv
-iuo
+jbL
 srE
-iuo
+jbL
 eCI
 jxa
 vcW
@@ -113016,9 +113287,9 @@ bRv
 cCN
 upy
 mTv
-iuo
+jbL
 srE
-iuo
+jbL
 eCI
 ihT
 pCj
@@ -113318,9 +113589,9 @@ abL
 iFy
 khh
 mTv
-iuo
+jbL
 srE
-iuo
+jbL
 hJR
 ihT
 pCj
@@ -113475,7 +113746,7 @@ rLW
 rLW
 rLW
 rLW
-pVK
+xWZ
 qxF
 qxF
 lYQ
@@ -113620,9 +113891,9 @@ lwD
 hvj
 khh
 kQQ
-iuo
+jbL
 srE
-iuo
+jbL
 ydv
 jOd
 pCj
@@ -113777,7 +114048,7 @@ rLW
 rLW
 jSN
 jSN
-pVK
+bUB
 qxF
 qxF
 qxF
@@ -113919,12 +114190,12 @@ wAd
 wAd
 wjN
 gFp
-rSb
+ojL
 rxB
 pZN
 eDx
 sJc
-pPP
+pGM
 mkT
 hiw
 pCj
@@ -114079,13 +114350,13 @@ rLW
 jSN
 jSN
 jSN
-pVK
+bUB
 qxF
 qxF
 qxF
 qxF
 qxF
-qxF
+bTJ
 tbz
 qxF
 qxF
@@ -114221,12 +114492,12 @@ wAd
 eSv
 cfC
 gFp
-gbe
+iJF
 bFo
 bPK
-pPP
-iuo
-pPP
+pGM
+jbL
+pGM
 mVa
 hiw
 pCj
@@ -114381,7 +114652,7 @@ jSN
 jSN
 jSN
 jSN
-pVK
+bUB
 qxF
 qxF
 vhm
@@ -114682,8 +114953,8 @@ pTq
 jSN
 jSN
 jSN
-pVK
-pVK
+piB
+pMB
 qxF
 qxF
 vhm
@@ -114984,7 +115255,7 @@ pTq
 jSN
 jSN
 jSN
-pVK
+bUB
 qxF
 qxF
 qxF
@@ -115088,11 +115359,11 @@ rbN
 oVB
 rbN
 rbN
-rbN
+mjY
 tSM
 tSM
 tSM
-grv
+mTh
 grv
 grv
 grv
@@ -115130,9 +115401,9 @@ jVT
 akv
 pCj
 nZP
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 xnx
 pCj
 cCO
@@ -115285,8 +115556,8 @@ jSN
 pTq
 jSN
 jSN
-pVK
-pVK
+piB
+pMB
 qxF
 qxF
 vhm
@@ -115587,7 +115858,7 @@ ucF
 axA
 ucF
 jSN
-pVK
+bUB
 qxF
 qxF
 qxF
@@ -115889,7 +116160,7 @@ jSN
 pTq
 jSN
 jSN
-pVK
+bUB
 qxF
 qxF
 qxF
@@ -116036,12 +116307,12 @@ bpi
 fGG
 khh
 kQQ
-iuo
+jbL
 jia
 otQ
 wlD
-pPP
-pPP
+pGM
+pGM
 vUD
 uNB
 uNB
@@ -116191,7 +116462,7 @@ jSN
 pTq
 jSN
 jSN
-pVK
+bUB
 qxF
 qxF
 vhm
@@ -116338,65 +116609,65 @@ kOG
 xrG
 khh
 kQQ
-pPP
+pGM
 jia
-iuo
+jbL
 otQ
 wlD
-iuo
+jbL
 srE
-iuo
-iuo
+jbL
+jbL
 fVw
 dpk
 srE
-iuo
+jbL
 puE
 xog
 jia
-iuo
-iuo
-iuo
-iuo
-pPP
-iuo
+jbL
+jbL
+jbL
+jbL
+pGM
+jbL
 jLR
 eDx
 eDx
 eDx
 xfq
-pPP
-pPP
-pPP
-iuo
-iuo
-iuo
-pPP
-pPP
-pPP
+pGM
+pGM
+pGM
+jbL
+jbL
+jbL
+pGM
+pGM
+pGM
 eNu
-iuo
-iuo
-iuo
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
+jbL
+jbL
+jbL
 kCi
 mlF
-iuo
-iuo
-iuo
-iuo
-iuo
-pPP
-pPP
-pPP
-pPP
-iuo
-iuo
+jbL
+jbL
+jbL
+jbL
+jbL
+pGM
+pGM
+pGM
+pGM
+jbL
+jbL
 vMD
 dPe
-iuo
+jbL
 xuL
 "}
 (218,1,1) = {"
@@ -116493,7 +116764,7 @@ jSN
 pTq
 jSN
 jSN
-pVK
+bUB
 qxF
 qxF
 vhm
@@ -116642,8 +116913,8 @@ khh
 khh
 sLh
 rNM
-iuo
-iuo
+jbL
+jbL
 otQ
 eDx
 egq
@@ -116677,28 +116948,28 @@ ryK
 ryK
 ryK
 lRQ
-iuo
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
+jbL
 nPp
-iuo
+jbL
 kCi
 xog
-iuo
+jbL
 sVO
-pPP
-iuo
-iuo
-iuo
-iuo
-pPP
-pPP
-pPP
-pPP
+pGM
+jbL
+jbL
+jbL
+jbL
+pGM
+pGM
+pGM
+pGM
 dJL
 dPe
-iuo
+jbL
 xuL
 "}
 (219,1,1) = {"
@@ -116795,7 +117066,7 @@ rLW
 axA
 jSN
 jSN
-pVK
+bUB
 qxF
 qxF
 vhm
@@ -116803,7 +117074,7 @@ vhm
 qxF
 qxF
 tbz
-qxF
+bTJ
 qxF
 qxF
 qxF
@@ -116900,11 +117171,11 @@ rbN
 rbN
 rbN
 rbN
-rbN
+mjY
 tSM
 tSM
 tSM
-grv
+mTh
 grv
 grv
 grv
@@ -116944,63 +117215,63 @@ fvp
 khh
 khh
 uYC
-iuo
-iuo
-iuo
-iuo
-pPP
-pPP
-iuo
+jbL
+jbL
+jbL
+jbL
+pGM
+pGM
+jbL
 fiJ
 rri
-fpE
+kjh
 bTw
 kCi
 xog
 srE
-iuo
-iuo
-pPP
-pPP
-pPP
+jbL
+jbL
+pGM
+pGM
+pGM
 jia
-iuo
+jbL
 srE
-iuo
-pPP
+jbL
+pGM
 beQ
-iuo
+jbL
 eNu
-iuo
-iuo
-iuo
-iuo
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
+jbL
+jbL
+jbL
+jbL
 jia
-iuo
-iuo
-iuo
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
+jbL
+jbL
+jbL
 puE
 xog
-iuo
-pPP
-pPP
-pPP
-iuo
-iuo
-pPP
-pPP
-pPP
-pPP
-iuo
+jbL
+pGM
+pGM
+pGM
+jbL
+jbL
+pGM
+pGM
+pGM
+pGM
+jbL
 vMD
 dPe
-iuo
+jbL
 xuL
 "}
 (220,1,1) = {"
@@ -117096,8 +117367,8 @@ rLW
 rLW
 rLW
 rLW
-pVK
-pVK
+ilU
+pMB
 qxF
 qxF
 qxF
@@ -117247,10 +117518,10 @@ khh
 khh
 kfv
 fjd
-iuo
-iuo
-pPP
-pPP
+jbL
+jbL
+pGM
+pGM
 cZb
 obc
 mrN
@@ -117885,9 +118156,9 @@ qTk
 qTk
 qTk
 vrt
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 vMc
 iFy
 kOG
@@ -117895,9 +118166,9 @@ toJ
 kOG
 iFy
 dai
-iuo
-pPP
-iuo
+jbL
+pGM
+jbL
 tgT
 pCj
 pCj
@@ -118187,9 +118458,9 @@ hav
 hav
 hav
 lWz
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 hVZ
 kOG
 cfq
@@ -118197,9 +118468,9 @@ cfq
 cfq
 kOG
 bBp
-iuo
-pPP
-iuo
+jbL
+pGM
+jbL
 tgT
 pCj
 khh
@@ -118489,9 +118760,9 @@ fjd
 hav
 hav
 lWz
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 xZQ
 kOG
 cfq
@@ -118499,9 +118770,9 @@ cfq
 cfq
 kOG
 ecl
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 tgT
 khh
 khh
@@ -118791,9 +119062,9 @@ kQQ
 hav
 hav
 lWz
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 xQK
 kOG
 cfq
@@ -118801,9 +119072,9 @@ cfq
 cfq
 kOG
 bBp
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 tgT
 khh
 kOG
@@ -119093,9 +119364,9 @@ pCj
 fjd
 hav
 lWz
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 wrF
 iFy
 rSP
@@ -119103,9 +119374,9 @@ iWa
 irc
 iFy
 dai
-pPP
-iuo
-pPP
+pGM
+jbL
+pGM
 tgT
 kOG
 kOG
@@ -119395,9 +119666,9 @@ uyD
 mTv
 hav
 lWz
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 wZV
 hNb
 uRs
@@ -119405,9 +119676,9 @@ tFz
 byD
 uax
 gMC
-pPP
-iuo
-pPP
+pGM
+jbL
+pGM
 kOG
 kOG
 mgL
@@ -119697,9 +119968,9 @@ uyD
 khh
 obc
 lWz
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 tLn
 lpL
 tgT
@@ -119708,8 +119979,8 @@ mTv
 mxh
 lJl
 kUM
-iuo
-pPP
+jbL
+pGM
 kOG
 srt
 tbf
@@ -119816,7 +120087,7 @@ rKO
 rKO
 rLW
 tbz
-vhm
+gre
 vhm
 vhm
 pVK
@@ -119826,7 +120097,7 @@ qxF
 qxF
 qxF
 qxF
-qxF
+bTJ
 tbz
 tbz
 rLW
@@ -119999,9 +120270,9 @@ ujG
 ujG
 pCj
 lWz
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 jTI
 hbX
 rVf
@@ -120010,8 +120281,8 @@ kQQ
 bkV
 uuF
 kUM
-iuo
-pPP
+jbL
+pGM
 poq
 pcQ
 bIx
@@ -120301,9 +120572,9 @@ ujG
 ujG
 khh
 lWz
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 jTI
 vJs
 sHW
@@ -120311,9 +120582,9 @@ pCj
 kQQ
 veo
 xuQ
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 poq
 pcQ
 wBD
@@ -120603,9 +120874,9 @@ ujG
 ujG
 eeT
 sPY
-iuo
-iuo
-pPP
+jbL
+jbL
+pGM
 jTI
 dqq
 hRC
@@ -120613,9 +120884,9 @@ bSZ
 fSl
 lpL
 wBg
-iuo
-pPP
-iuo
+jbL
+pGM
+jbL
 poq
 gcE
 vvl
@@ -120905,9 +121176,9 @@ uyD
 uyD
 toJ
 kNq
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 jTI
 jbL
 fae
@@ -120915,9 +121186,9 @@ pGM
 pGM
 pGM
 hOh
-iuo
-pPP
-iuo
+jbL
+pGM
+jbL
 ktO
 pcQ
 jbL
@@ -121208,8 +121479,8 @@ uyD
 kjG
 kNq
 cFB
-iuo
-iuo
+jbL
+jbL
 bvX
 fEV
 doj
@@ -121217,9 +121488,9 @@ nLa
 nLa
 fEV
 syk
-iuo
-iuo
-iuo
+jbL
+jbL
+jbL
 ktO
 pcQ
 jbL
