@@ -19,7 +19,7 @@
 	if(!hull && !(V.vehicle_flags & VEHICLE_CLASS_WEAK))
 		take_damage(V.wall_ram_damage)
 		V.take_damage_type(10, "blunt", src)
-		playsound(V, 'sound/effects/metal_crash.ogg', 35)
+		V.play_interior_sound('sound/effects/metal_crash.ogg',V, 35)
 		visible_message(SPAN_DANGER("\The [V] rams \the [src]!"))
 	return FALSE
 
@@ -31,7 +31,7 @@
 	if(!unacidable)
 		V.take_damage_type(5, "blunt", src)
 		visible_message(SPAN_DANGER("\The [V] crushes [src]!"))
-		playsound(V, 'sound/effects/metal_crash.ogg', 20)
+		V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 		qdel(src)
 	return FALSE
 
@@ -40,7 +40,7 @@
 /obj/structure/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(!indestructible && !unacidable && !(V.vehicle_flags & VEHICLE_CLASS_WEAK))
 		visible_message(SPAN_DANGER("\The [V] crushes [src]!"))
-		playsound(V, 'sound/effects/metal_crash.ogg', 20)
+		V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 		qdel(src)
 	if(V.vehicle_flags & VEHICLE_CLASS_MEDIUM || V.vehicle_flags & VEHICLE_CLASS_HEAVY)
 		return TRUE
@@ -50,7 +50,7 @@
 	if(!(V.vehicle_flags & VEHICLE_CLASS_WEAK))
 		take_damage(maxhealth)
 		visible_message(SPAN_DANGER("\The [V] crushes [src]!"))
-		playsound(V, 'sound/effects/metal_crash.ogg', 20)
+		V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	if(V.vehicle_flags & VEHICLE_CLASS_MEDIUM || V.vehicle_flags & VEHICLE_CLASS_HEAVY)
 		return TRUE
 	return FALSE
@@ -65,13 +65,13 @@
 
 /obj/structure/barricade/deployable/handle_vehicle_bump(obj/vehicle/multitile/V)
 	visible_message(SPAN_DANGER("\The [V] crushes [src]!"))
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	collapse()
 	return TRUE
 
 /obj/structure/barricade/handrail/handle_vehicle_bump(obj/vehicle/multitile/V)
 	visible_message(SPAN_DANGER("\The [V] crushes [src]!"))
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	take_damage(maxhealth)
 	return TRUE
 
@@ -98,7 +98,7 @@
 		if(V.seats[VEHICLE_DRIVER])
 			to_chat(V.seats[VEHICLE_DRIVER], SPAN_WARNING("[src]'s barrel is still steaming hot. Wait a few seconds and try again!"))
 		return FALSE
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	var/obj/item/mortar_kit/M = new /obj/item/mortar_kit(loc)
 	M.name = name
 	visible_message(SPAN_DANGER("\The [V] drives over \the [src]!"))
@@ -106,13 +106,13 @@
 	return TRUE
 
 /obj/structure/surface/handle_vehicle_bump(obj/vehicle/multitile/V)
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
 	qdel(src)
 	return TRUE
 
 /obj/structure/surface/table/handle_vehicle_bump(obj/vehicle/multitile/V)
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
 	if(prob(50))
 		new sheet_type(loc)
@@ -120,7 +120,7 @@
 	return TRUE
 
 /obj/structure/surface/rack/handle_vehicle_bump(obj/vehicle/multitile/V)
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
 	deconstruct()
 	return TRUE
@@ -128,7 +128,7 @@
 /obj/structure/reagent_dispensers/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(prob(50))
 		new /obj/effect/particle_effect/water(src.loc)
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
 	qdel(src)
 	return TRUE
@@ -141,7 +141,7 @@
 		visible_message(SPAN_DANGER("\The [V] crushes \the [src], causing explosion!"))
 	else
 		visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	qdel(src)
 	return FALSE
 
@@ -151,7 +151,7 @@
 		if(alert(V.seats[VEHICLE_DRIVER], "Are you sure you want to crush \the [name]?", "Ramming confirmation","Yes","No") == "Yes")
 			if(last_moved == V.l_move_time)
 				visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
-				playsound(V, 'sound/effects/metal_crash.ogg', 20)
+				V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 				log_attack("[src] was crushed by [key_name(V.seats[VEHICLE_DRIVER])] with [V].")
 				message_admins("[src] was crushed by [key_name(V.seats[VEHICLE_DRIVER])] with [V].")
 				qdel(src)
@@ -160,7 +160,7 @@
 
 /obj/structure/powerloader_wreckage/handle_vehicle_bump(obj/vehicle/multitile/V)
 	visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	qdel(src)
 	return FALSE
 
@@ -180,7 +180,7 @@
 /obj/structure/closet/crate/handle_vehicle_bump(obj/vehicle/multitile/V)
 	open()
 	visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	qdel(src)
 	return FALSE
 
@@ -303,7 +303,7 @@
 			return FALSE
 	if(!unacidable)
 		visible_message(SPAN_DANGER("\The [V] pushes [src] over!"))
-		playsound(V, 'sound/effects/metal_crash.ogg', 20)
+		V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 		qdel(src)
 	return FALSE
 
@@ -336,12 +336,12 @@
 
 /obj/structure/machinery/cm_vending/handle_vehicle_bump(obj/vehicle/multitile/V)
 	visible_message(SPAN_DANGER("\The [V] pushes [src] over!"))
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	tip_over()
 	return TRUE
 
 /obj/structure/machinery/m56d_post/handle_vehicle_bump(obj/vehicle/multitile/V)
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V] drives over \the [src]!"))
 
 	if(gun_mounted)
@@ -369,13 +369,13 @@
 	HMG.health = health
 	HMG.update_icon()
 	transfer_label_component(HMG)
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V] drives over \the [src]!"))
 	qdel(src)
 	return TRUE
 
 /obj/structure/machinery/m56d_hmg/mg_turret/handle_vehicle_bump(obj/vehicle/multitile/V)
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V] drives over \the [src]!"))
 	update_health(health + 1)
 	return TRUE
@@ -389,14 +389,14 @@
 		HMG.overheat_value = 0
 	HMG.update_icon()
 	HMG.health = health
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V] drives over \the [src]!"))
 	qdel(src)
 	return TRUE
 
 /obj/structure/machinery/defenses/sentry/handle_vehicle_bump(obj/vehicle/multitile/V)
 	visible_message(SPAN_DANGER("\The [V] drives over \the [src]!"))
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	if(static)
 		update_health(health + 1)
 	else if(health < health_max * 0.15)
@@ -426,7 +426,7 @@
 		if(alert(V.seats[VEHICLE_DRIVER], "Are you sure you want to crush \the [name]?", "Ramming confirmation","Yes","No") == "Yes")
 			if(last_moved == V.l_move_time)
 				visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
-				playsound(V, 'sound/effects/metal_crash.ogg', 20)
+				V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 				log_attack("[src] was crushed by [key_name(V.seats[VEHICLE_DRIVER])] with [V].")
 				message_admins("[src] was crushed by [key_name(V.seats[VEHICLE_DRIVER])] with [V].")
 				qdel(src)
@@ -440,7 +440,7 @@
 /obj/structure/machinery/floodlight/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(V.vehicle_flags & VEHICLE_CLASS_WEAK)
 		return FALSE
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V]crushes \the [src]!"))
 	qdel(src)
 	return TRUE
@@ -450,14 +450,14 @@
 		return FALSE
 	if(!(V.vehicle_flags & VEHICLE_CLASS_HEAVY))
 		V.move_momentum -= V.move_momentum * 0.5
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V]crushes \the [src]!"))
 	qdel(src)
 	return TRUE
 
 /obj/structure/machinery/floodlight/landing/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(V.vehicle_flags & VEHICLE_CLASS_HEAVY)
-		playsound(V, 'sound/effects/metal_crash.ogg', 20)
+		V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 		visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
 		qdel(src)
 		return TRUE
@@ -469,14 +469,14 @@
 			I.crit_fail = 1
 		I.forceMove(loc)
 
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
+	V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 	visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
 	qdel(src)
 	return TRUE
 
 /obj/structure/machinery/portable_atmospherics/hydroponics/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(!(V.vehicle_flags & VEHICLE_CLASS_WEAK))
-		playsound(V, 'sound/effects/metal_crash.ogg', 20)
+		V.play_interior_sound('sound/effects/metal_crash.ogg',V, 20)
 		visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
 		qdel(src)
 		return TRUE

@@ -65,6 +65,14 @@
 	var/list/idle_engine_sound = list('sound/vehicles/engine_idle_1.ogg', 'sound/vehicles/engine_idle_2.ogg', 'sound/vehicles/engine_idle_3.ogg')
 	///Sound file(s) to play inside the vehicle when we've been idle for a while
 	var/list/idle_interior_engine_sound = list('sound/vehicles/engine_idle_interior_1.ogg', 'sound/vehicles/engine_idle_interior_2.ogg')
+	/// sound to play outside the tank after the driver enters
+	var/engine_on_sound = 'sound/vehicles/eng_start.ogg'
+	/// sound to play inside the tank after the driver enters
+	var/engine_on_interior_sound = 'sound/vehicles/eng_interior_start.ogg'
+	/// sound to play outside the tank after the driver leaves
+	var/engine_off_sound = 'sound/vehicles/eng_stop.ogg'
+	/// sound to play inside the tank after the driver leaves
+	var/engine_off_interior_sound = 'sound/vehicles/eng_interior_stop.ogg'
 	///frequency to play the move sound with
 	var/engine_sound_length = 2 SECONDS
 	/// How long it takes to rev
@@ -341,6 +349,8 @@
 /obj/vehicle/multitile/proc/remove_seated_verbs(mob/living/M, seat)
 	if(seat == VEHICLE_DRIVER)
 		STOP_PROCESSING(SSobj, src)
+		play_interior_sound(engine_off_interior_sound, src, 25)
+		playsound(get_turf(src), engine_off_sound, 60, FALSE, 20, falloff = 3)
 	return
 
 /obj/vehicle/multitile/set_seated_mob(seat, mob/living/M)
@@ -352,6 +362,8 @@
 		add_seated_verbs(M, seat)
 	if(seat == VEHICLE_DRIVER && !(datum_flags & DF_ISPROCESSING))
 		START_PROCESSING(SSobj, src)
+		play_interior_sound(engine_on_interior_sound, src, 25)
+		playsound(get_turf(src), engine_on_sound, 60, FALSE, 20, falloff = 2)
 
 	seats[seat] = M
 
@@ -397,7 +409,7 @@
 	COOLDOWN_START(src, enginesound_cooldown, engine_sound_length)
 	///whether we play the outside sound for the interior or no
 	var/play_loc = interior_engine_sound ? src : get_turf(src)
-	playsound(play_loc, islist(engine_sound) ? pick(engine_sound) : engine_sound, 60, FALSE, 20, falloff = 3)
+	playsound(play_loc, islist(engine_sound) ? pick(engine_sound) : engine_sound, 60, FALSE, 20, falloff = 2)
 	if(interior_engine_sound)
 		play_interior_sound(islist(interior_engine_sound) ? pick(interior_engine_sound) : interior_engine_sound, src, 60, 1)
 
