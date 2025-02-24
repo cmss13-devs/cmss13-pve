@@ -40,9 +40,6 @@
 ///Delete the timer on parent datum Destroy() and when deltimer'd
 #define TIMER_DELETE_ME (1<<6)
 
-//Makes the timer perform its callback as it is being destroyed.
-#define TIMER_COMPLETE_ON_DELETE (1<<7)
-
 ///Empty ID define
 #define TIMER_ID_NULL -1
 
