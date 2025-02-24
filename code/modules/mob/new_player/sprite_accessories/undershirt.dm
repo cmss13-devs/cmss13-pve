@@ -117,6 +117,10 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	icon_state = "bra_white"
 	gender = FEMALE
 
+/datum/sprite_accessory/undershirt/bra/white
+	name = "Black Bra"
+	icon_state = "bra_black"
+
 /datum/sprite_accessory/undershirt/sports_bra
 	name = "USCM Sports Bra"
 	icon_state = "sports_uscm"
