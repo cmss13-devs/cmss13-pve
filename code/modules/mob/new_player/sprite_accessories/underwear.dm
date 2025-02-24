@@ -115,7 +115,7 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	camo_conforming = FALSE
 
 /datum/sprite_accessory/underwear/briefs
-	name = "White Underwear"
+	name = "White Briefs"
 	icon_state = "white_briefs"
 	gender = NEUTER
 	camo_conforming = FALSE
