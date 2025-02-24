@@ -6,7 +6,7 @@
 	disp_icon = "tank"
 	disp_icon_state = "ltb_cannon"
 	activation_sounds = list('sound/weapons/vehicles/cannon_fire1.ogg', 'sound/weapons/vehicles/cannon_fire2.ogg')
-	interior_activation_sounds = 'sound/vehicles/ltb_fire_interior.ogg'
+	interior_activation_sounds = 'sound/weapons/vehicles/ltb_fire_interior.ogg'
 
 	health = 2000
 	firing_arc = 60
