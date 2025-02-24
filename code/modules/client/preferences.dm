@@ -130,7 +130,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	var/age = 19 //age of character
 	var/spawnpoint = "Arrivals Shuttle" //where this character will spawn (0-2).
 	var/underwear = "Boxers (Camo Conforming)" //underwear type
-	var/undershirt = "Marine Undershirt" //undershirt type
+	var/undershirt = "none" //undershirt type
 	var/backbag = 2 //backpack type
 	var/preferred_armor = "Random" //preferred armor type (from their primary prep vendor)
 
