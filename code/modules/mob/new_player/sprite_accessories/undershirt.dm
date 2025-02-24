@@ -154,7 +154,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 
 /datum/sprite_accessory/undershirt/grey
 	name = "Grey Undershirt"
-	icon_state = "undershirt_grey__short"
+	icon_state = "undershirt_grey_short"
 
 /datum/sprite_accessory/undershirt/telnyashka
 	name = "Naval Infantry Telnyashka"
