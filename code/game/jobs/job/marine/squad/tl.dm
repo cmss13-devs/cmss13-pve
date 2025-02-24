@@ -59,7 +59,6 @@
 	spawn_positions = 1
 	title = JOB_SQUAD_TEAM_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/tl/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/tl/forecon/lesser_rank
 
 /datum/job/marine/tl/ai/marsoc
 	title = JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC

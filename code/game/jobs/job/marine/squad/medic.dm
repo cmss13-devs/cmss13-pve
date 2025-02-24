@@ -100,14 +100,10 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/medic/ai/forecon
 
-<<<<<<< HEAD
 /obj/effect/landmark/start/marine/medic/marsoc
 	name = JOB_SQUAD_SARC_MARSOC
 	squad = SQUAD_MRR
 	job = /datum/equipment_preset/uscm/medic/marsoc
 
-#undef LCPL_VARIANT
-=======
->>>>>>> upstream/master
 #undef CPL_VARIANT
 #undef LCPL_VARIANT

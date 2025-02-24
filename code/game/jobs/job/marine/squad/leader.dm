@@ -83,4 +83,3 @@ OverrideTimelock(/datum/job/marine/leader, list(
 
 #undef SSGT_VARIANT
 #undef GYSGT_VARIANT
-#undef SSGT_VARIANT

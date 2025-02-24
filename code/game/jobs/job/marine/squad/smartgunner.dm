@@ -100,14 +100,10 @@
 	job = JOB_SQUAD_SMARTGUN_FORECON
 	squad = SQUAD_LRRP
 
-<<<<<<< HEAD
 /obj/effect/landmark/start/marine/smartgunner/marsoc
 	name = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC
 	squad = SQUAD_MRR
 	job = /datum/equipment_preset/uscm/sg/marsoc
 
-#undef LCPL_VARIANT
-=======
->>>>>>> upstream/master
 #undef CPL_VARIANT
 #undef LCPL_VARIANT

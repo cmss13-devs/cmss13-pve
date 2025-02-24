@@ -98,14 +98,10 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/standard/ai/rto
 
-<<<<<<< HEAD
 /obj/effect/landmark/start/marine/marsoc
 	name = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
 	squad = SQUAD_MRR
 	job = /datum/equipment_preset/uscm/pfc/marsoc
 
-#undef PVT_VARIANT
-=======
->>>>>>> upstream/master
 #undef PFC_VARIANT
 #undef PVT_VARIANT
