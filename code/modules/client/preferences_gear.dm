@@ -136,6 +136,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Face wrap, cyan green"
 	path = /obj/item/clothing/mask/rebreather/scarf/tacticalmask/echo
 
+/datum/gear/mask/gas
+	display_name = "Gas mask"
+	path = /obj/item/clothing/mask/gas
+	cost = 1
+
 /datum/gear/mask/scarf_black
 	display_name = "Scarf, black"
 	path = /obj/item/clothing/mask/tornscarf/black
