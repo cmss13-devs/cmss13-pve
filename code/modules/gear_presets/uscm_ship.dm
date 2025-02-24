@@ -283,7 +283,7 @@
 	minimum_age = 27
 	skills = /datum/skills/CE
 
-	minimap_icon = list("engi" = MINIMAP_ICON_COLOR_HEAD)
+	minimap_icon = list("engi")
 
 
 	utility_under = list(/obj/item/clothing/under/marine/officer/ce)
@@ -428,7 +428,7 @@
 	skills = /datum/skills/RO
 
 
-	minimap_icon = list("ct" = MINIMAP_ICON_COLOR_HEAD)
+	minimap_icon = list("ct")
 
 	utility_under = list(/obj/item/clothing/under/rank/qm_suit)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)

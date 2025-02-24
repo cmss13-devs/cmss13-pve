@@ -55,8 +55,8 @@
 
 /obj/structure/machinery/computer/overwatch/Destroy()
 	map = null
+	scroll_toggle = null
 	QDEL_LIST(drawing_tools)
-	QDEL_NULL(scroll_toggle)
 	return ..()
 
 /obj/structure/machinery/computer/overwatch/attackby(obj/I as obj, mob/user as mob)  //Can't break or disassemble.

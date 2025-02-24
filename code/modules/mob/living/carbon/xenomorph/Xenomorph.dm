@@ -525,7 +525,7 @@
 /mob/living/carbon/xenomorph/proc/add_minimap_marker(flags)
 	if(!flags)
 		flags = get_minimap_flag_for_faction(hivenumber)
-	var/image/xeno = image('icons/ui_icons/map_blips.dmi', null, caste.get_minimap_icon())
+	var/image/xeno = image('icons/ui_icons/map_blips.dmi', null, caste.minimap_icon)
 	if(IS_XENO_LEADER(src))
 		var/image/overlay = image('icons/ui_icons/map_blips.dmi', null, "xenoleader")
 		xeno.overlays += overlay

@@ -209,11 +209,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 				reset_click_overrides()
 				return
 
-		if("toggle_minimap_spawn")
-			if(spawn_click_intercept)
-				reset_click_overrides()
-				return
-
 			reset_click_overrides()
 			spawn_click_intercept = TRUE
 			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION

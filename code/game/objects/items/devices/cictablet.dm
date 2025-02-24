@@ -50,8 +50,8 @@
 
 /obj/item/device/cotablet/Destroy()
 	map = null
+	scroll_toggle = null
 	QDEL_LIST(drawing_tools)
-	QDEL_NULL(scroll_toggle)
 	return ..()
 
 /obj/item/device/cotablet/proc/disable_pmc()

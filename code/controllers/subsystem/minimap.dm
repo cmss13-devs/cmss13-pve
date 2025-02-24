@@ -403,7 +403,9 @@ SUBSYSTEM_DEF(minimaps)
 	var/image/blip = new // could use MA but yolo
 	blip.icon = icon('icons/ui_icons/minimap.dmi')
 	minimaps_by_z["[zlevel]"].images_raw["[minimap_flag]"] += blip
-	message_admins("getdrawingiamge[zlevel]-[minimap_flag]")
+	for(var/datum/minimap_updator/updator as anything in update_targets["[minimap_flag]"])
+		if(zlevel == updator.ztarget)
+			updator.raw_blips += blip
 	drawn_images[hash] = blip
 	return blip
 
@@ -585,7 +587,7 @@ SUBSYSTEM_DEF(minimaps)
 	///Whether this minimap should shift or not
 	var/shifting = TRUE
 	///Toggle for scrolling map
-	var/scroll_toggle
+	var/atom/movable/screen/stop_scroll/scroll_toggle = /atom/movable/screen/stop_scroll
 
 /datum/action/minimap/New(Target, new_minimap_flags, new_marker_flags)
 	. = ..()
@@ -624,7 +626,6 @@ SUBSYSTEM_DEF(minimaps)
 			return FALSE
 		owner.client.screen += map
 		owner.client.screen += locator
-		scroll_toggle = new /atom/movable/screen/stop_scroll(null, map)
 		owner.client.screen += scroll_toggle
 		locator.link_locator(map, owner)
 		locator.update(tracking, null, null)
@@ -715,6 +716,8 @@ SUBSYSTEM_DEF(minimaps)
 	if(!SSminimaps.minimaps_by_z["[tracking.z]"] || !SSminimaps.minimaps_by_z["[tracking.z]"].hud_image)
 		return
 	map = SSminimaps.fetch_minimap_object(tracking.z, minimap_flags, shifting)
+	if(scroll_toggle)
+		scroll_toggle = new type(null, map)
 
 /datum/action/minimap/remove_from(mob/M)
 	toggle_minimap(FALSE)
@@ -753,6 +756,8 @@ SUBSYSTEM_DEF(minimaps)
 			minimap_displayed = FALSE
 		return
 	map = SSminimaps.fetch_minimap_object(newz, minimap_flags, shifting)
+	if(scroll_toggle)
+		scroll_toggle.linked_map = map
 	if(minimap_displayed)
 		if(owner.client)
 			owner.client.screen += map
@@ -786,6 +791,7 @@ SUBSYSTEM_DEF(minimaps)
 /datum/action/minimap/observer
 	minimap_flags = MINIMAP_FLAG_XENO|MINIMAP_FLAG_USCM|MINIMAP_FLAG_UPP|MINIMAP_FLAG_PMC
 	marker_flags = NONE
+	scroll_toggle = null
 
 /datum/action/minimap/observer/action_activate()
 	. = ..()
@@ -809,7 +815,7 @@ SUBSYSTEM_DEF(minimaps)
 
 /atom/movable/screen/stop_scroll
 	name = "Stop Scrolling"
-	desc = "Stop the scrolling of the minimap"
+	desc = "Stop the scrolling of the minimap(shared)"
 	icon = 'icons/ui_icons/minimap_buttons.dmi'
 	icon_state = "scroll"
 	screen_loc = "CENTER,TOP"
@@ -873,9 +879,6 @@ SUBSYSTEM_DEF(minimaps)
     x_offset = SSminimaps.minimaps_by_z["[zlevel]"].x_offset
     y_offset = SSminimaps.minimaps_by_z["[zlevel]"].y_offset
     drawn_image = SSminimaps.get_drawing_image(zlevel, minimap_flag)
-
-    // Debugging: Log the minimap flag being set
-    message_admins("Setting zlevel with minimap_flag: [minimap_flag]")
 
 /atom/movable/screen/minimap_tool/MouseEntered(location, control, params)
 	. = ..()
@@ -961,9 +964,6 @@ SUBSYSTEM_DEF(minimaps)
     var/end_x = FLOOR(end_coords[1]/2, 1)
     var/end_y = FLOOR(end_coords[2]/2, 1)
     var/icon/mona_lisa = icon(drawn_image.icon)
-
-    // Debugging: Log the minimap flag being used
-    message_admins("Drawing line with minimap_flag: [minimap_flag]")
 
     //special case 1, straight line
     if(start_x == end_x)
