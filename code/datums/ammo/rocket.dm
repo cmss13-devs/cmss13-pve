@@ -29,7 +29,7 @@
 	. = ..()
 
 /datum/ammo/rocket/on_hit_mob(mob/mob, obj/projectile/projectile)
-	if(iscarbon(mob)) // Doesn't matter how build-different you are, it's an explosive rocket-propelled projectile hitting you.
+	if(iscarbon(mob)) // Doesn't matter how built-different you are, it's an explosive rocket-propelled projectile hitting you.
 		mob.ex_act(650, null, projectile.weapon_cause_data, 100)
 	cell_explosion(get_turf(mob), 250, 40, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
 	smoke.set_up(1, get_turf(mob))
@@ -70,7 +70,7 @@
 	mob.ex_act(400, projectile.dir, projectile.weapon_cause_data, 100)
 	mob.apply_effect(3, WEAKEN)
 	mob.apply_effect(3, PARALYZE)
-	if(iscarbon(mob)) // Doesn't matter how build-different you are, it's an explosive rocket-propelled projectile hitting you.
+	if(iscarbon(mob)) // Doesn't matter how built-different you are, it's an explosive rocket-propelled projectile hitting you.
 		mob.ex_act(650, null, projectile.weapon_cause_data, 100)
 	cell_explosion(turf, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 	smoke.set_up(1, turf)
@@ -157,10 +157,10 @@
 	max_range = 8
 
 /datum/ammo/rocket/ap/tank_towlauncher/aa
-	name = "anti-air missile"
+	name = "hypervelocity missile"
 	damage = 200
 	max_range = 16
-	shell_speed = AMMO_SPEED_TIER_5
+	shell_speed = AMMO_SPEED_TIER_8
 
 /datum/ammo/rocket/ltb
 	name = "cannon round"
