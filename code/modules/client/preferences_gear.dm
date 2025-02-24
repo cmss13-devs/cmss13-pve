@@ -172,6 +172,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Neckerchief, green"
 	path = /obj/item/clothing/mask/neckerchief/green
 
+/datum/gear/mask/neckerchief_gray
+	display_name = "Neckerchief, gray"
+	path = /obj/item/clothing/mask/neckerchief/gray
+
 /datum/gear/mask/neckerchief_red
 	display_name = "Neckerchief, red"
 	path = /obj/item/clothing/mask/neckerchief/red

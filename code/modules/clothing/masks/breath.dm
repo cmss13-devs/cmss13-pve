@@ -315,10 +315,6 @@
 	item_state = "neckerchief_alpha"
 	original_state = "neckerchief_alpha"
 
-/obj/item/clothing/mask/neckerchief/desert
-	icon_state = "neckerchief_foxtrot"
-	item_state = "neckerchief_foxtrot"
-	original_state = "neckerchief_foxtrot"
 
 /obj/item/clothing/mask/owlf_mask
 	name = "\improper OWLF gas mask"
