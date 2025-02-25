@@ -1,4 +1,1 @@
 chinook
-corsat
-ice_colony_v2
-prison_station_fop
