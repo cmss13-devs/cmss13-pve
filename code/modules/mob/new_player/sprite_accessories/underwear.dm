@@ -93,3 +93,8 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	icon_state = "white_satin"
 	gender = FEMALE
 	camo_conforming = FALSE
+
+/datum/sprite_accessory/underwear/panties/black
+	name = "Black Panties"
+	icon_state = "black_satin"
+
