@@ -81,10 +81,6 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	name = "Black Undershirt (Sleeveless)"
 	icon_state = "undershirt_black"
 
-/datum/sprite_accessory/undershirt/black/long
-	name = "Black Undershirt (Long Sleeve)"
-	icon_state = "undershirt_black_long"
-
 /datum/sprite_accessory/undershirt/white
 	name = "White Undershirt"
 	icon_state = "undershirt_short"
@@ -143,18 +139,29 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 /datum/sprite_accessory/undershirt/telnyashka
 	name = "Naval Infantry Telnyashka"
 	icon_state = "telnyashka_blue"
-	gender = NEUTER
 	restricted = TRUE
 
 /datum/sprite_accessory/undershirt/telnyashka/territorial
 	name = "Territorial Guard Telnyashka"
 	icon_state = "telnyashka_green"
-	gender = NEUTER
 	restricted = TRUE
 
 /datum/sprite_accessory/undershirt/telnyashka/interior
 	name = "Interior Forces Telnyashka"
 	icon_state = "telnyashka_red"
-	gender = NEUTER
 	restricted = TRUE
 
+/datum/sprite_accessory/undershirt/army
+	name = "US Army Undershirt"
+	icon_state = "undershirt_army_short"
+	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/army/sleeveless
+	name = "US Army Undershirt (Sleeveless)"
+	icon_state = "undershirt_army"
+	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/black/long
+	name = "Black Undershirt (Long Sleeve)"
+	icon_state = "undershirt_black_long"
+	restricted = TRUE
