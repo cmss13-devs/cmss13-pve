@@ -31,7 +31,7 @@
 	icon = null
 	duration = 1 SECONDS
 
-/obj/effect/temp_visual/minimap_blip/Initialize(mapload, minimap_flags)
+/obj/effect/temp_visual/minimap_blip/Initialize(mapload, minimap_flags = MINIMAP_FLAG_ALL)
 	. = ..()
 	SSminimaps.add_marker(src, minimap_flags, image('icons/ui_icons/map_blips.dmi', null, "motion", HIGH_FLOAT_LAYER))
 
