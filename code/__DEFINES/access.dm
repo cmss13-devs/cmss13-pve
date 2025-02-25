@@ -3,10 +3,11 @@
 It's best not to mess with the numbers of the regular access levels because
 most of them are tied into map-placed objects. This should be reworked in the future.*/
 //WE NEED TO REWORK THIS ONE DAY.  Access levels make me cry - Apophis
-#define ACCESS_MARINE_SENIOR 1
-#define ACCESS_MARINE_DATABASE 2
+//Forest didn't put his documentation inline. Don't be like Forest.
+#define ACCESS_MARINE_SENIOR 1 //Not SEA. Actually dept head clearance.
+#define ACCESS_MARINE_DATABASE 2 //Forest says "it's primary function is to update other IDs/Squad stuff"
 #define ACCESS_MARINE_BRIG 3
-#define ACCESS_MARINE_ARMORY 4
+#define ACCESS_MARINE_ARMORY 4 //This is actually for Red Alert armories.
 #define ACCESS_MARINE_CMO 5
 #define ACCESS_MARINE_CE 6
 #define ACCESS_MARINE_ENGINEERING 7
