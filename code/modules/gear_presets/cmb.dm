@@ -60,7 +60,12 @@
 
 	var/choice = rand(1,10)
 	var/rig_or_jacket = rand(1,4)
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/CM_uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
@@ -126,7 +131,12 @@
 
 /datum/equipment_preset/cmb/leader/load_gear(mob/living/carbon/human/new_human)
 	//clothes
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/CM_uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)

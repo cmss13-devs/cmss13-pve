@@ -71,7 +71,7 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	camo_conforming = FALSE
 
 /datum/sprite_accessory/underwear/boxers/marine
-	name = "Marine Boxers"
+	name = "USCM Boxers"
 	icon_state = "marine_boxers"
 
 /datum/sprite_accessory/underwear/boxers/upp

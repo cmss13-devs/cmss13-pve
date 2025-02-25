@@ -444,7 +444,12 @@
 
 /datum/equipment_preset/upp/officer/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel, WEAR_BACK)
 	//face
@@ -830,7 +835,12 @@
 
 /datum/equipment_preset/upp/colonist/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -865,7 +875,12 @@
 
 /datum/equipment_preset/upp/researcher/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -900,7 +915,12 @@
 
 /datum/equipment_preset/upp/doctor/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	var/random_civilian_satchel= rand(1,3)
 	switch(random_civilian_satchel)
@@ -956,7 +976,12 @@
 
 /datum/equipment_preset/upp/admin/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	//face
@@ -979,7 +1004,12 @@
 
 /datum/equipment_preset/upp/cargo/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	//face
@@ -1017,7 +1047,12 @@
 
 /datum/equipment_preset/upp/engineer/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	//face
@@ -1055,7 +1090,12 @@
 
 /datum/equipment_preset/upp/operations/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	//face
@@ -1079,7 +1119,12 @@
 
 /datum/equipment_preset/upp/police/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked/police, WEAR_HEAD)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
@@ -1104,7 +1149,12 @@
 
 /datum/equipment_preset/upp/police/riot/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
@@ -1148,7 +1198,12 @@
 
 /datum/equipment_preset/upp/prisoner/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/prison_boiler(new_human), WEAR_BODY)
 	//limb
@@ -1165,7 +1220,12 @@
 
 /datum/equipment_preset/upp/police/mss/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
