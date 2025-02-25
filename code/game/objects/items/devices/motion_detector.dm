@@ -18,7 +18,7 @@
 	icon = null
 	duration = 0.75 SECONDS
 
-/obj/effect/temp_visual/minimap_pulse/Initialize(mapload, minimap_flag, type)
+/obj/effect/temp_visual/minimap_pulse/Initialize(mapload, minimap_flag = MINIMAP_FLAG_ALL, type)
 	. = ..()
 	var/pulse_icon
 	if(type == MOTION_DETECTOR_LONG)
