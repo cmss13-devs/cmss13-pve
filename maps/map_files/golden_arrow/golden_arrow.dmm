@@ -43,38 +43,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
-"aan" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/sign/poster{
-	desc = "YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE.";
-	icon_state = "poster11";
-	name = "YOU ALWAYS KNOW A WORKING JOE.";
-	pixel_x = -22;
-	pixel_y = 3;
-	serial_number = 11
-	},
-/obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
-	icon_state = "poster16";
-	name = "'Miss July' Pinup";
-	serial_number = 16
-	},
-/obj/structure/sign/poster{
-	desc = "One of those hot, tanned babes back the beaches of good ol' Earth.";
-	icon_state = "poster12";
-	name = "Beach Babe Pinup";
-	pixel_x = 6;
-	pixel_y = 8;
-	serial_number = 12
-	},
-/obj/structure/cargo_container/uscm/chinook/mid{
-	color = "#898988";
-	opacity = 0
-	},
-/turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/hangar)
 "aao" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -2039,17 +2007,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
-"ahj" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/paper{
-	pixel_y = 5;
-	pixel_x = -4
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/shared_office)
 "ahk" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -3570,20 +3527,6 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
-"amC" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
-	icon_state = "poster16";
-	layer = 3.3;
-	name = "'Miss July' Pinup";
-	pixel_y = 29;
-	serial_number = 16
-	},
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/cryo_cells)
 "amF" = (
 /obj/item/tool/mop{
 	pixel_x = -1;
@@ -6339,29 +6282,6 @@
 "awL" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/briefing)
-"awM" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/attachable/scope/pve{
-	pixel_x = 7;
-	pixel_y = 2
-	},
-/obj/item/device/helmet_visor/leader{
-	pixel_x = -8;
-	pixel_y = 9
-	},
-/obj/item/device/helmet_visor/leader{
-	pixel_x = -9;
-	pixel_y = 4
-	},
-/obj/item/device/helmet_visor/leader{
-	pixel_x = -8;
-	pixel_y = -1
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/platoonprep)
 "awN" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
@@ -7808,17 +7728,6 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
-"aAI" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Smartgunner"
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Squad Sergeant"
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
 "aAJ" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 8
@@ -8865,17 +8774,6 @@
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/prep_hallway)
-"aEe" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Smartgunner"
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Squad Sergeant"
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
 "aEf" = (
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/hangar)
@@ -9305,18 +9203,6 @@
 "aFz" = (
 /turf/open/floor/almayer/uscm/directional/up_down/west,
 /area/golden_arrow/hangar)
-"aFA" = (
-/obj/item/reagent_container/food/drinks/plasticcup{
-	pixel_y = 9
-	},
-/obj/effect/decal/strata_decals/grime/grime4{
-	layer = 2.9;
-	plane = -6;
-	pixel_y = 2
-	},
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/briefing)
 "aFF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -15587,6 +15473,20 @@
 /obj/structure/barricade/handrail,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"cXs" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/paper{
+	pixel_y = 5;
+	pixel_x = -4
+	},
+/obj/structure/machinery/computer/skills{
+	req_one_access = null
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/shared_office)
 "cZM" = (
 /obj/structure/cargo_container/uscm/chinook/left{
 	color = "#898988";
@@ -16989,6 +16889,38 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"hZK" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/sign/poster{
+	desc = "YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE.";
+	icon_state = "poster11";
+	name = "YOU ALWAYS KNOW A WORKING JOE.";
+	pixel_x = -22;
+	pixel_y = 3;
+	serial_number = 11
+	},
+/obj/structure/sign/poster{
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
+	icon_state = "poster16";
+	name = "'Miss July' Pinup";
+	serial_number = 16
+	},
+/obj/structure/sign/poster{
+	desc = "One of those hot, tanned babes back the beaches of good ol' Earth.";
+	icon_state = "poster12";
+	name = "Beach Babe Pinup";
+	pixel_x = 6;
+	pixel_y = 8;
+	serial_number = 12
+	},
+/obj/structure/cargo_container/uscm/chinook/mid{
+	color = "#898988";
+	opacity = 0
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
 "icW" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17328,6 +17260,29 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"jyN" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/attachable/scope/pve{
+	pixel_x = 7;
+	pixel_y = 2
+	},
+/obj/item/device/helmet_visor/leader{
+	pixel_x = -8;
+	pixel_y = 9
+	},
+/obj/item/device/helmet_visor/leader{
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/obj/item/device/helmet_visor/leader{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoonprep)
 "jzw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -18288,6 +18243,20 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
+"mNl" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/sign/poster{
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
+	icon_state = "poster16";
+	layer = 3.3;
+	name = "'Miss July' Pinup";
+	pixel_y = 29;
+	serial_number = 16
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
 "mQb" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -19431,6 +19400,17 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"qRD" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Smartgunner"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7;
+	job = "Squad Leader"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "qRO" = (
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/lower_cargo)
@@ -20268,6 +20248,17 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/hangar)
+"tTS" = (
+/obj/item/reagent_container/food/drinks/plasticcup{
+	pixel_y = 9
+	},
+/obj/effect/decal/strata_decals/grime/grime4/game_plane{
+	layer = 2.9;
+	pixel_y = 2
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
 "uel" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
@@ -20408,6 +20399,17 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"uQc" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7;
+	job = "Smartgunner"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Squad Leader"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "uUf" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -25323,7 +25325,7 @@ aQr
 aog
 aog
 aog
-amC
+mNl
 ayv
 aDi
 aog
@@ -25493,7 +25495,7 @@ aEG
 aEG
 aEG
 aWh
-aEe
+uQc
 apA
 aKo
 aRE
@@ -25503,7 +25505,7 @@ aoU
 apA
 aax
 aBq
-aEe
+uQc
 abx
 aDs
 aFt
@@ -26201,7 +26203,7 @@ aWh
 aWh
 aWh
 aWh
-aAI
+qRD
 aZw
 amS
 azT
@@ -26211,7 +26213,7 @@ aoU
 aZw
 aRP
 aWb
-aAI
+qRD
 abx
 alX
 aGx
@@ -29566,7 +29568,7 @@ adC
 ayi
 aIr
 aVO
-awM
+jyN
 aIr
 aIr
 aIr
@@ -29940,7 +29942,7 @@ aWc
 aAy
 pjK
 ptZ
-aFA
+tTS
 kNp
 alp
 hrh
@@ -31515,7 +31517,7 @@ aBa
 aHZ
 aHZ
 arP
-ahj
+cXs
 alG
 aAQ
 apM
@@ -33979,7 +33981,7 @@ aCw
 aMI
 aPk
 aBY
-aan
+hZK
 aVD
 axu
 aWl
