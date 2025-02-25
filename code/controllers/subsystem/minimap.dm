@@ -587,7 +587,9 @@ SUBSYSTEM_DEF(minimaps)
 	///Whether this minimap should shift or not
 	var/shifting = TRUE
 	///Toggle for scrolling map
-	var/atom/movable/screen/stop_scroll/scroll_toggle = /atom/movable/screen/stop_scroll
+	var/atom/movable/screen/stop_scroll/scroll_toggle
+	///Does this minimap action get scroll toggle
+	var/has_scroll = TRUE
 
 /datum/action/minimap/New(Target, new_minimap_flags, new_marker_flags)
 	. = ..()
@@ -626,7 +628,8 @@ SUBSYSTEM_DEF(minimaps)
 			return FALSE
 		owner.client.screen += map
 		owner.client.screen += locator
-		owner.client.screen += scroll_toggle
+		if(scroll_toggle)
+			owner.client.screen += scroll_toggle
 		locator.link_locator(map, owner)
 		locator.update(tracking, null, null)
 		locator.RegisterSignal(SSdcs, COMSIG_GLOB_MINIMAP_SHIFTED, TYPE_PROC_REF(/atom/movable/screen/minimap_locator, update))
@@ -634,7 +637,8 @@ SUBSYSTEM_DEF(minimaps)
 	else
 		owner.client.screen -= map
 		owner.client.screen -= locator
-		owner.client.screen -= scroll_toggle
+		if(scroll_toggle)
+			owner.client.screen -= scroll_toggle
 		map.stop_polling -= owner
 		locator.UnregisterSignal(SSdcs, COMSIG_GLOB_MINIMAP_SHIFTED)
 		locator.UnregisterSignal(tracking, COMSIG_MOVABLE_MOVED)
@@ -716,8 +720,8 @@ SUBSYSTEM_DEF(minimaps)
 	if(!SSminimaps.minimaps_by_z["[tracking.z]"] || !SSminimaps.minimaps_by_z["[tracking.z]"].hud_image)
 		return
 	map = SSminimaps.fetch_minimap_object(tracking.z, minimap_flags, shifting)
-	if(scroll_toggle)
-		scroll_toggle = new type(null, map)
+	if(has_scroll || scroll_toggle)
+		scroll_toggle = new /atom/movable/screen/stop_scroll(null, map)
 
 /datum/action/minimap/remove_from(mob/M)
 	toggle_minimap(FALSE)
@@ -791,7 +795,7 @@ SUBSYSTEM_DEF(minimaps)
 /datum/action/minimap/observer
 	minimap_flags = MINIMAP_FLAG_XENO|MINIMAP_FLAG_USCM|MINIMAP_FLAG_UPP|MINIMAP_FLAG_PMC
 	marker_flags = NONE
-	scroll_toggle = null
+	has_scroll = FALSE
 
 /datum/action/minimap/observer/action_activate()
 	. = ..()

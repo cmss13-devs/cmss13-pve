@@ -278,6 +278,10 @@
 	pixel_x = 16;
 	pixel_y = 16
 	},
+/obj/item/device/helmet_visor/leader/upp{
+	pixel_x = -7;
+	pixel_y = -6
+	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_two)
 "cc" = (
@@ -1446,6 +1450,7 @@
 	pixel_x = -7;
 	pixel_y = 12
 	},
+/obj/item/device/helmet_visor/leader/upp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
 "mk" = (
@@ -4797,6 +4802,7 @@
 	pixel_y = 8;
 	pixel_x = -8
 	},
+/obj/item/device/helmet_visor/leader/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "Sy" = (
