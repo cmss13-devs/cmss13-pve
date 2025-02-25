@@ -1207,10 +1207,16 @@
 	item_state = "medic"
 
 /obj/item/clothing/accessory/paint/uaflag
-	name = "cross armor paint"
+	name = "UA flag armor paint"
 	desc = "A set of paint tones to etch the red, white, and black into a Marine's armor."
 	icon_state = "uaflag"
 	item_state = "uaflag"
+
+/obj/item/clothing/accessory/paint/usflag
+	name = "US flag armor paint"
+	desc = "A set of paint tones to etch the red, white, and blue into a Marine's armor."
+	icon_state = "usflag"
+	item_state = "usflag"
 
 /obj/item/clothing/accessory/paint/sg
 	name = "camouflage paint"
