@@ -54,8 +54,8 @@
 	var/ui_theme = "crtblue"
 
 /obj/structure/machinery/computer/overwatch/Destroy()
-	map = null
-	scroll_toggle = null
+	QDEL_NULL(map)
+	QDEL_NULL(scroll_toggle)
 	QDEL_LIST(drawing_tools)
 	return ..()
 
