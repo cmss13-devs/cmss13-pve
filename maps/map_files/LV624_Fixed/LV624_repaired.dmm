@@ -10071,7 +10071,7 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/corporate_dome)
 "mwS" = (
-/obj/structure/closet/wardrobe,
+/obj/structure/closet,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -12252,7 +12252,7 @@
 /turf/open/floor/brown/northwest,
 /area/lv624/lazarus/comms)
 "puX" = (
-/obj/structure/closet/lawcloset,
+/obj/structure/closet,
 /turf/open/floor/red/north,
 /area/lv624/lazarus/security)
 "pvG" = (

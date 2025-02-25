@@ -279,7 +279,7 @@
 /turf/open/floor/darkish,
 /area/bigredv2/outside/chapel)
 "OR" = (
-/obj/structure/closet/wardrobe/chaplain_black,
+/obj/structure/closet,
 /turf/open/floor/cult,
 /area/bigredv2/outside/chapel)
 "SS" = (

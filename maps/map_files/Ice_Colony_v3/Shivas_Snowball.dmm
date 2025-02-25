@@ -5844,10 +5844,6 @@
 /obj/structure/machinery/landinglight/ds1/spoke,
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/shiva/interior/colony/botany)
-"dyY" = (
-/obj/structure/closet/wardrobe/green,
-/turf/open/floor/shiva/greenfull,
-/area/shiva/interior/colony/n_admin)
 "dze" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W-corner"
@@ -8854,7 +8850,7 @@
 /turf/open/floor/shiva/wred/west,
 /area/shiva/interior/colony/medseceng)
 "hbU" = (
-/obj/structure/closet/wardrobe/chaplain_black,
+/obj/structure/closet,
 /turf/open/floor/wood,
 /area/shiva/interior/colony/central)
 "hcH" = (
@@ -40180,9 +40176,9 @@ hLf
 hLf
 hLf
 pES
-dyY
+qoj
 rxM
-dyY
+qoj
 bJl
 hLf
 vHS

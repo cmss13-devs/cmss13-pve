@@ -609,7 +609,7 @@
 	dir = 4
 	},
 /obj/structure/machinery/door/airlock/almayer/security/colony{
-	name = "Research Containment Locker"
+	name = "Research Containment locker"
 	},
 /turf/open/floor/prison,
 /area/prison/research/secret)
@@ -1950,7 +1950,7 @@
 /area/prison/medbay/morgue)
 "atK" = (
 /obj/structure/machinery/door/airlock/almayer/security/colony{
-	name = "Research Containment Locker"
+	name = "Research Containment locker"
 	},
 /turf/open/floor/prison,
 /area/prison/research/secret)
@@ -2796,10 +2796,6 @@
 	dir = 8
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/wood,
-/area/prison/chapel)
-"aFq" = (
-/obj/structure/closet/wardrobe/chaplain_black,
 /turf/open/floor/wood,
 /area/prison/chapel)
 "aFu" = (
@@ -9718,13 +9714,7 @@
 /turf/closed/wall/r_wall/prison,
 /area/prison/security/armory/lethal)
 "cgZ" = (
-/obj/structure/closet/gimmick{
-	anchored = 1;
-	name = "Riot gear"
-	},
-/obj/item/weapon/shield/riot,
-/obj/item/clothing/head/helmet/riot,
-/obj/item/clothing/suit/armor/riot,
+/obj/structure/closet/secure_closet/guncabinet/riot_control,
 /turf/open/floor/prison,
 /area/prison/security/armory/riot)
 "cha" = (
@@ -23509,10 +23499,6 @@
 "moJ" = (
 /turf/open/floor/prison/bright_clean_marked/southwest,
 /area/prison/canteen)
-"mpg" = (
-/obj/structure/closet/gmcloset,
-/turf/open/floor/plating,
-/area/prison/maintenance/residential/nw)
 "mpi" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
@@ -24193,7 +24179,14 @@
 /turf/open/floor/prison/bright_clean2/southwest,
 /area/prison/toilet/security)
 "mRQ" = (
-/obj/structure/closet/wardrobe/orange,
+/obj/structure/closet/secure_closet/brig/prison_uni{
+	pixel_x = -8;
+	can_be_stacked = 1
+	},
+/obj/structure/closet/secure_closet/brig/prison_uni{
+	pixel_x = 8;
+	can_be_stacked = 1
+	},
 /turf/open/floor/prison/bright_clean/southwest,
 /area/prison/laundry)
 "mSe" = (
@@ -28369,7 +28362,7 @@
 /turf/open/floor/plating,
 /area/prison/maintenance/residential/ne)
 "qqF" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/personal/RD,
 /turf/open/floor/prison/sterile_white/southwest,
 /area/prison/research/RD)
 "qqM" = (
@@ -28568,13 +28561,7 @@
 /turf/open/floor/prison/yellow/east,
 /area/prison/cellblock/mediumsec/south)
 "qyk" = (
-/obj/structure/closet/gimmick{
-	anchored = 1;
-	name = "Riot gear"
-	},
-/obj/item/weapon/shield/riot,
-/obj/item/clothing/head/helmet/riot,
-/obj/item/clothing/suit/armor/riot,
+/obj/structure/closet/secure_closet/guncabinet/riot_control,
 /turf/open/floor/prison/darkred2/north,
 /area/prison/security/armory/riot)
 "qyr" = (
@@ -41934,7 +41921,7 @@ avN
 aQS
 aSb
 aQS
-mpg
+aQS
 aRS
 aAO
 aAO
@@ -61004,7 +60991,7 @@ aAc
 aBF
 aCJ
 awV
-aFq
+avJ
 aGJ
 aJR
 jfp
@@ -61488,7 +61475,7 @@ lYB
 vOb
 hCj
 bOq
-mRQ
+qvt
 xCp
 oFd
 jTH
@@ -61700,7 +61687,7 @@ eLi
 nhD
 vnf
 bOq
-mRQ
+qvt
 qvt
 xil
 egU
@@ -61912,7 +61899,7 @@ qqr
 jHj
 pAu
 bOq
-mRQ
+qvt
 qvt
 qvt
 dXD
@@ -62124,7 +62111,7 @@ pbl
 sey
 wDJ
 bOq
-mRQ
+qvt
 qvt
 xil
 lKj
@@ -62336,7 +62323,7 @@ pru
 rFE
 pRt
 bOq
-mRQ
+qvt
 qvt
 qvt
 rBi

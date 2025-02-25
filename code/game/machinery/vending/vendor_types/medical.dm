@@ -845,7 +845,7 @@
 	)
 
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/lifeboat
-	name = "Lifeboat Medical Cabinet"
+	name = "Lifeboat Medical cabinet"
 	icon = 'icons/obj/structures/machinery/lifeboat.dmi'
 	icon_state = "medcab"
 	desc = "A wall-mounted cabinet containing medical supplies vital to survival. While better equipped, it can only refill basic supplies."
