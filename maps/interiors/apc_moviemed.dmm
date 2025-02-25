@@ -20,18 +20,15 @@
 /turf/open/void/vehicle,
 /area/space)
 "c" = (
-/obj/structure/surface/table/almayer{
-	pixel_y = -5
-	},
-/obj/structure/vehicle_locker/med{
-	pixel_y = 18;
-	pixel_x = 9
-	},
 /obj/structure/machinery/iv_drip{
 	anchored = 1;
-	pixel_y = 13;
-	pixel_x = -8;
+	pixel_y = 11;
+	pixel_x = 15;
 	layer = 2.7
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/vehicle{
+	pixel_x = -5;
+	pixel_y = 7
 	},
 /turf/open/shuttle/vehicle/dark_sterile_green_6,
 /area/interior/vehicle/apc/movie/med)
@@ -88,6 +85,14 @@
 /obj/effect/decal/medical_decals/permanent{
 	icon_state = "triagedecalbottom"
 	},
+/obj/structure/bed/chair/vehicle/toc{
+	dir = 1;
+	pixel_y = 11;
+	pixel_x = -1;
+	name = "surgical chair";
+	buckle_offset_x = -1;
+	buckle_offset_y = 11
+	},
 /turf/open/shuttle/vehicle/dark_sterile_green_5,
 /area/interior/vehicle/apc/movie/med)
 "j" = (
@@ -96,21 +101,23 @@
 	pixel_x = -7;
 	pixel_y = -11
 	},
-/obj/structure/bed{
-	pixel_y = -5;
-	pixel_x = -2;
-	layer = 2.01
-	},
-/obj/item/bedsheet/medical{
+/obj/structure/bed/roller/hospital_empty/bigrollerempty3{
 	pixel_x = -2;
 	pixel_y = -5;
+	buckling_x = -2;
+	buckling_y = -3;
 	anchored = 1
 	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie/med)
 "l" = (
 /obj/structure/bed/portable_surgery{
-	name = "vehicle surgical bed"
+	name = "vehicle surgical bed";
+	foldabletype = null
+	},
+/obj/structure/vehicle_locker/med{
+	pixel_y = 16;
+	pixel_x = 3
 	},
 /turf/open/shuttle/vehicle/dark_sterile,
 /area/interior/vehicle/apc/movie/med)
@@ -172,22 +179,14 @@
 /turf/open/space/basic,
 /area/space)
 "t" = (
-/obj/structure/bed/chair/vehicle/toc{
-	dir = 1;
-	pixel_y = 8;
-	pixel_x = 8;
-	name = "surgical chair"
-	},
 /turf/open/shuttle/vehicle/dark_sterile_green_11,
 /area/interior/vehicle/apc/movie/med)
 "v" = (
-/obj/structure/bed{
-	pixel_y = 15;
-	pixel_x = -2
-	},
-/obj/item/bedsheet/medical{
+/obj/structure/bed/roller/hospital_empty/bigrollerempty3{
+	pixel_y = 12;
 	pixel_x = -2;
-	pixel_y = 15;
+	buckling_y = 14;
+	buckling_x = -2;
 	anchored = 1
 	},
 /turf/open/shuttle/vehicle/floor_2,
@@ -249,14 +248,11 @@
 /turf/open/shuttle/vehicle/floor_1_7,
 /area/interior/vehicle/apc/movie/med)
 "A" = (
-/obj/structure/bed{
-	pixel_y = -5;
-	pixel_x = -2;
-	layer = 2.01
-	},
-/obj/item/bedsheet/medical{
+/obj/structure/bed/roller/hospital_empty/bigrollerempty3{
 	pixel_x = -2;
 	pixel_y = -5;
+	buckling_x = -2;
+	buckling_y = -3;
 	anchored = 1
 	},
 /turf/open/shuttle/vehicle/floor_2,
@@ -307,26 +303,24 @@
 	pixel_y = 9;
 	pixel_x = 19
 	},
-/obj/structure/bed{
-	pixel_y = 15;
-	pixel_x = -2
-	},
-/obj/item/bedsheet/medical{
+/obj/structure/bed/roller/hospital_empty/bigrollerempty3{
+	pixel_y = 12;
 	pixel_x = -2;
-	pixel_y = 15;
+	buckling_y = 14;
+	buckling_x = -2;
 	anchored = 1
 	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie/med)
 "G" = (
-/obj/structure/machinery/cm_vending/sorted/medical/vehicle{
-	pixel_x = -5;
-	pixel_y = 18
-	},
 /obj/structure/extinguisher_cabinet/lifeboat{
 	icon = 'icons/obj/vehicles/interiors/general.dmi';
-	pixel_x = 12;
-	pixel_y = 26
+	pixel_x = -11;
+	pixel_y = 28
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/blood/vehicle{
+	pixel_y = 22;
+	pixel_x = 4
 	},
 /turf/open/shuttle/vehicle/dark_sterile_green_14,
 /area/interior/vehicle/apc/movie/med)
