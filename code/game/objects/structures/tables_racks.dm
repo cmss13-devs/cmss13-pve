@@ -34,6 +34,10 @@
 	var/upright_projectile_coverage = PROJECTILE_COVERAGE_LOW
 	surgery_duration_multiplier = SURGERY_SURFACE_MULT_UNSUITED
 
+/obj/structure/surface/table/brown
+	parts = /obj/item/frame/table/brown
+	debris = list(/obj/item/frame/table/brown)
+
 /obj/structure/surface/table/Initialize()
 	. = ..()
 
@@ -531,6 +535,7 @@
 	parts = /obj/item/frame/table/gambling
 	table_prefix = "gamble"
 	health = 50
+	color = "#aeaeae"
 /*
  * Reinforced tables
  */
@@ -584,6 +589,15 @@
 	desc = "A square metal surface resting on four legs. This one has side panels, making it useful as a desk, but impossible to flip."
 	icon_state = "prisontable"
 	table_prefix = "prison"
+	parts = /obj/item/frame/table/reinforced
+
+/obj/structure/surface/table/reinforced/prison/tan
+	color = "#ffe6e6"
+	parts = /obj/item/frame/table/reinforced
+
+/obj/structure/surface/table/reinforced/prison/dark
+	color = "#6b675e"
+	parts = /obj/item/frame/table/reinforced
 
 /obj/structure/surface/table/reinforced/almayer_blend
 	desc = "A square metal surface resting on its fat metal bottom. You can't flip something that doesn't have legs."
@@ -623,6 +637,10 @@
 	icon_state = "almtable"
 	table_prefix = "alm"
 	parts = /obj/item/frame/table/almayer
+
+/obj/structure/surface/table/almayer/dark
+	parts = /obj/item/frame/table/almayer/dark
+	color = "#8B9490"
 
 /obj/structure/surface/table/reinforced/cloth
 	name = "cloth table"
@@ -667,6 +685,11 @@
 	health = 100
 	var/parts = /obj/item/frame/rack
 	debris = list(/obj/item/frame/rack)
+
+/obj/structure/surface/rack/dark
+	color = "#8B9490"
+	parts = /obj/item/frame/rack/dark
+	debris = list(/obj/item/frame/rack/dark)
 
 /obj/structure/surface/rack/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
