@@ -52,7 +52,7 @@
 /area/golden_arrow/hangar)
 "aC" = (
 /obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "aD" = (
 /obj/structure/ladder{
@@ -74,8 +74,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "aQ" = (
 /obj/structure/machinery/recharge_station{
@@ -234,15 +233,12 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
 "bE" = (
-/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp{
-	pixel_x = -32;
-	pixel_y = 1
-	},
 /obj/structure/machinery/cm_vending/sorted/medical/blood/vehicle{
 	name = "\improper MinZdrav Blood Dispenser";
 	desc = "The MinZdrav Blood Pack Dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!";
-	pixel_y = 29;
-	can_block_movement = 0
+	pixel_y = 11;
+	can_block_movement = 0;
+	pixel_x = -5
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
@@ -272,9 +268,8 @@
 	light_power = 0.8;
 	light_range = 5
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "bJ" = (
 /obj/structure/machinery/light/small{
@@ -308,12 +303,11 @@
 /area/golden_arrow/dorms)
 "bM" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "bP" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -330,8 +324,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "bT" = (
 /obj/structure/surface/table/almayer{
@@ -418,11 +411,10 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
 "cA" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/roof/cargocrane_tracks/tjoint3{
 	pixel_y = 14
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
 "cB" = (
 /obj/structure/pipes/vents/pump{
@@ -520,12 +512,11 @@
 "da" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "db" = (
 /obj/effect/landmark/late_join/upp,
@@ -637,13 +628,11 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "dI" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "dN" = (
 /turf/closed/wall/upp_wall/hull,
@@ -672,8 +661,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "dU" = (
 /obj/structure/disposalpipe/segment,
@@ -768,11 +756,10 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
 "ew" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sign/safety/ammunition{
 	pixel_x = -21
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "ex" = (
 /obj/structure/machinery/door/airlock/prison_hatch{
@@ -867,13 +854,12 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
 "eX" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/canteen)
 "fb" = (
 /obj/structure/disposalpipe/segment{
@@ -951,17 +937,17 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/rappel_harness/extract,
-/obj/item/rappel_harness/extract,
-/obj/item/rappel_harness/extract,
-/obj/item/rappel_harness/extract,
-/obj/item/rappel_harness/extract,
-/obj/item/rappel_harness/extract,
-/obj/item/rappel_harness/extract,
-/obj/item/rappel_harness/extract,
-/obj/item/rappel_harness/extract,
-/obj/item/rappel_harness/extract,
-/obj/item/rappel_harness/extract,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "fD" = (
@@ -1044,8 +1030,7 @@
 	dir = 4;
 	icon_state = "exposed01-supply"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "gg" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -1107,13 +1092,12 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/dorms)
 "gE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -1171,8 +1155,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_sergeant)
 "gN" = (
 /obj/structure/barricade/handrail/strata{
@@ -1201,20 +1184,6 @@
 "gQ" = (
 /obj/structure/surface/rack{
 	color = "#8B9490"
-	},
-/obj/item/roller/bedroll{
-	desc = "A mechanic's mat.";
-	color = "#3F575B";
-	name = "gym mat";
-	pixel_y = -2;
-	pixel_x = 3
-	},
-/obj/item/roller/bedroll{
-	desc = "A mechanic's mat.";
-	color = "#3F575B";
-	name = "gym mat";
-	pixel_y = 7;
-	pixel_x = -6
 	},
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
@@ -1273,8 +1242,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "he" = (
 /obj/structure/surface/table/almayer{
@@ -1336,7 +1304,7 @@
 /area/golden_arrow/platoon_commander_rooms)
 "hA" = (
 /obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "hB" = (
 /turf/closed/wall/upp_wall/grey,
@@ -1351,7 +1319,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/turf/closed/wall/upp_wall/grey,
+/turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/hangar)
 "hO" = (
 /obj/structure/stairs{
@@ -1410,13 +1378,12 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
 	network = list("Chapaev");
 	c_tag = "Starboard Hallway, Canteen"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "ic" = (
 /obj/effect/decal/warning_stripes{
@@ -1475,8 +1442,7 @@
 	light_range = 4
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "iv" = (
 /obj/effect/decal/warning_stripes{
@@ -1680,8 +1646,7 @@
 /obj/structure/machinery/power/terminal{
 	dir = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "jL" = (
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -1787,8 +1752,7 @@
 	dir = 8
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "kF" = (
 /obj/structure/surface/table/almayer{
@@ -1946,13 +1910,6 @@
 /obj/structure/barricade/handrail/strata{
 	layer = 3.5
 	},
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stacked";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
-	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "lM" = (
@@ -1978,7 +1935,7 @@
 "ma" = (
 /obj/structure/foamed_metal/iron,
 /obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "mc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -2026,8 +1983,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "mx" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -2109,8 +2065,7 @@
 /turf/open/space/basic,
 /area/space)
 "nb" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "nf" = (
 /obj/structure/machinery/door/airlock/upp_utility{
@@ -2129,8 +2084,7 @@
 	icon_state = "E"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "nj" = (
 /obj/structure/disposalpipe/segment{
@@ -2176,7 +2130,6 @@
 	dir = 8;
 	pixel_x = 8
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
@@ -2184,7 +2137,7 @@
 	dir = 4;
 	light_color = "#832121"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "ns" = (
 /obj/structure/machinery/shower{
@@ -2192,14 +2145,13 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
 	icon_state = "lattice8";
 	pixel_x = 13;
 	pixel_y = 10
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "ny" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_utility{
@@ -2217,8 +2169,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "nB" = (
 /obj/structure/prop{
@@ -2260,12 +2211,11 @@
 /area/golden_arrow/platoon_commander_rooms)
 "nP" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sign/safety/galley{
 	pixel_x = 36;
 	pixel_y = 6
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "nU" = (
 /obj/structure/prop/almayer/computers/sensor_computer2{
@@ -2319,8 +2269,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/pipes/standard/manifold/visible/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "of" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -2379,13 +2328,12 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
 	dir = 1;
 	pixel_y = 3
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "oO" = (
 /obj/structure/barricade/handrail/strata{
@@ -2495,7 +2443,7 @@
 /area/golden_arrow/canteen)
 "pw" = (
 /obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
 "pA" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -2516,8 +2464,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "pG" = (
 /obj/structure/machinery/door/airlock/upp_utility{
@@ -2550,8 +2497,7 @@
 	icon_state = "exposed01-supply"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "pR" = (
 /obj/effect/decal/warning_stripes{
@@ -2610,14 +2556,16 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "pW" = (
-/obj/structure/extinguisher_cabinet/alt{
-	pixel_x = -32
+/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp{
+	pixel_y = 17;
+	can_block_movement = 0
 	},
 /obj/structure/phone_base/upp_net{
 	name = "Sanitar Telephone";
 	phone_category = "Chapaev";
 	phone_id = "Sanitar's Office";
-	pixel_y = 35
+	dir = 4;
+	pixel_x = -16
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
@@ -2708,8 +2656,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "qm" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "qn" = (
 /obj/structure/barricade/handrail/strata{
@@ -2724,11 +2671,10 @@
 	light_power = 0.8;
 	light_range = 5
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/largecrate/random/barrel/red{
 	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "qo" = (
 /obj/structure/disposalpipe/segment,
@@ -2763,8 +2709,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "qB" = (
 /obj/structure/machinery/door/airlock/upp_utility{
@@ -2806,8 +2751,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "qT" = (
 /obj/effect/decal/warning_stripes{
@@ -2902,7 +2846,6 @@
 	dir = 4;
 	pixel_x = -7
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_color = "#832121"
@@ -2911,7 +2854,7 @@
 	dir = 4;
 	icon_state = "exposed01-supply"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "rD" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -2937,16 +2880,14 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "rR" = (
 /obj/structure/machinery/shower{
 	dir = 4
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "sb" = (
 /obj/structure/platform/strata/metal{
@@ -3074,7 +3015,6 @@
 /area/golden_arrow/dorms)
 "sI" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
 	icon_state = "lattice12";
@@ -3091,14 +3031,13 @@
 	dir = 4;
 	pixel_y = 10
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "sM" = (
 /obj/structure/largecrate/random/barrel/red{
 	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "sN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -3128,8 +3067,7 @@
 /area/golden_arrow/briefing)
 "sT" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/dorms)
 "sV" = (
 /obj/structure/machinery/power/reactor{
@@ -3163,7 +3101,6 @@
 	dir = 4
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
 	icon_state = "lattice12";
@@ -3176,7 +3113,7 @@
 	pixel_x = -19;
 	pixel_y = 10
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "tg" = (
 /obj/effect/decal/warning_stripes{
@@ -3405,8 +3342,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_sergeant)
 "uC" = (
 /obj/effect/decal/warning_stripes{
@@ -3421,8 +3357,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "uF" = (
 /turf/open/floor/strata/floor3/east,
@@ -3488,7 +3423,7 @@
 	icon_state = "p_stair_sn_full_cap";
 	layer = 2.5
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "uW" = (
 /obj/structure/bed/chair{
@@ -3511,12 +3446,11 @@
 /area/golden_arrow/briefing)
 "uX" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_sergeant)
 "vi" = (
 /obj/structure/sink{
-	pixel_y = 35
+	pixel_y = 21
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
@@ -3549,8 +3483,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "vm" = (
 /turf/closed/wall/upp_wall/grey/hull,
@@ -3558,13 +3491,6 @@
 "vn" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4
-	},
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stackedalt";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
@@ -3606,8 +3532,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "vF" = (
 /obj/effect/decal/warning_stripes{
@@ -3636,7 +3561,6 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
 	name = "ship-grade camera";
@@ -3644,7 +3568,7 @@
 	colony_camera_mapload = 0;
 	c_tag = "Starboard Hallway, Briefing"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "vM" = (
 /obj/effect/decal/warning_stripes{
@@ -3669,8 +3593,7 @@
 /area/golden_arrow/cryo_cells)
 "vP" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "vR" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -3700,8 +3623,7 @@
 /area/golden_arrow/canteen)
 "wc" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "wd" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -3804,14 +3726,7 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/hangar)
 "wA" = (
-/obj/item/storage/backpack/marine/ammo_rack{
-	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
-	name = "\improper makeshift ammo rack";
-	pixel_y = 23
-	},
-/obj/item/ammo_box/magazine/type71/large{
-	pixel_y = 8
-	},
+/obj/item/ammo_box/magazine/type71/large,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "wH" = (
@@ -3830,8 +3745,7 @@
 /obj/item/clothing/mask/gas/military/upp{
 	pixel_y = 2
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "wJ" = (
 /obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
@@ -3989,8 +3903,7 @@
 /area/golden_arrow/prep_hallway)
 "xA" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "xE" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
@@ -4050,14 +3963,12 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "xU" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
 "xX" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4;
 	icon_state = "exposed01-supply"
@@ -4066,7 +3977,7 @@
 	dir = 4;
 	light_color = "#832121"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "ya" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -4263,20 +4174,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/platoon_commander_rooms)
-"zb" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo";
-	pixel_x = 1
-	},
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stackedalt";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
-	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/hangar)
 "ze" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/tool/pen/clicky{
@@ -4297,8 +4194,7 @@
 /area/golden_arrow/cryo_cells)
 "zj" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "zk" = (
 /obj/structure/disposalpipe/segment{
@@ -4349,7 +4245,7 @@
 /area/golden_arrow/dorms)
 "zu" = (
 /obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "zz" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -4364,8 +4260,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "zC" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -4378,7 +4273,7 @@
 /area/golden_arrow/engineering)
 "zG" = (
 /obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "zN" = (
 /turf/open/floor/strata/multi_tiles/west,
@@ -4401,6 +4296,10 @@
 	},
 /obj/structure/surface/rack{
 	color = "#8B9490"
+	},
+/obj/item/storage/backpack/marine/ammo_rack{
+	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
+	name = "\improper makeshift ammo rack"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
@@ -4541,6 +4440,12 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
+"AO" = (
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = -32
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/prep_hallway)
 "AR" = (
 /obj/structure/machinery/computer/crew/upp{
 	light_power = 0.5;
@@ -4554,20 +4459,18 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
 	network = list("Chapaev");
 	c_tag = "Port Hallway, Barracks"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "AX" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/roof/cargocrane_tracks/tjoint2{
 	pixel_y = 14
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
 "AY" = (
 /obj/structure/gun_rack/type71/unloaded,
@@ -4665,7 +4568,6 @@
 /area/golden_arrow/briefing)
 "BG" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
 	icon_state = "lattice12";
@@ -4684,7 +4586,7 @@
 	dir = 4;
 	pixel_y = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "BH" = (
 /obj/effect/decal/warning_stripes{
@@ -4717,8 +4619,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "BW" = (
 /obj/structure/stairs/perspective{
@@ -4727,7 +4628,7 @@
 	icon_state = "p_stair_sn_full_cap";
 	layer = 2.5
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "Ce" = (
 /obj/structure/stairs/perspective{
@@ -4795,8 +4696,7 @@
 "Cr" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "Cw" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -4909,7 +4809,6 @@
 /obj/structure/machinery/power/monitor{
 	name = "Core Power Monitoring"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
 	icon_state = "lattice4";
@@ -4922,14 +4821,14 @@
 	pixel_x = 13;
 	pixel_y = 10
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "CW" = (
 /obj/structure/foamed_metal/iron,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/medical)
 "De" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
@@ -5116,26 +5015,6 @@
 /obj/item/storage/firstaid/o2,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/hangar)
-"Eg" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo";
-	pixel_x = 1
-	},
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stacked";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
-	},
-/obj/structure/machinery/light/double{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5;
-	dir = 1
-	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/hangar)
 "Eh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -5178,6 +5057,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_y = 32
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "Ev" = (
@@ -5217,8 +5099,7 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
 "EH" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/canteen)
 "EN" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -5263,8 +5144,7 @@
 /obj/structure/pipes/standard/manifold/visible/supply{
 	dir = 1
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "Fg" = (
 /obj/structure/machinery/power/reactor{
@@ -5302,6 +5182,9 @@
 "Fo" = (
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/briefing)
+"Fq" = (
+/turf/closed/wall/upp_wall/grey/hull,
+/area/space)
 "Fr" = (
 /obj/structure/machinery/disposal{
 	density = 0;
@@ -5369,14 +5252,13 @@
 "FF" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
 	icon_state = "lattice12";
 	pixel_x = 13;
 	pixel_y = 10
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "FO" = (
 /obj/structure/barricade/handrail/strata{
@@ -5393,15 +5275,7 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stacked";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
-	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "FR" = (
 /obj/structure/disposalpipe/segment{
@@ -5455,13 +5329,6 @@
 "Gf" = (
 /obj/structure/roof/cargocrane_tracks/vertical/endcap2{
 	pixel_y = 14
-	},
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stacked";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -5528,14 +5395,13 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
 	icon_state = "lattice12";
 	pixel_x = 13;
 	pixel_y = 2
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "GG" = (
 /obj/effect/decal/warning_stripes{
@@ -5590,8 +5456,7 @@
 /area/golden_arrow/platoon_sergeant)
 "He" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/canteen)
 "Hg" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -5621,8 +5486,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "Hx" = (
 /obj/effect/decal/warning_stripes{
@@ -5731,8 +5595,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "Ih" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
 "Ij" = (
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -5751,8 +5614,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "Io" = (
 /obj/vehicle/powerloader/jd{
@@ -5779,15 +5641,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "IA" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/roof/cargocrane_tracks/vertical/endcap2{
 	pixel_y = 14
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
 "IC" = (
 /obj/item/storage/box/guncase/heavy/shotgun/type23{
@@ -5812,12 +5672,11 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "IM" = (
 /obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/medical)
 "IN" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -5845,8 +5704,7 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "IT" = (
 /obj/effect/decal/warning_stripes{
@@ -5922,8 +5780,7 @@
 	dir = 2;
 	icon_state = "pipe-j2"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/dorms)
 "JQ" = (
 /obj/structure/machinery/prop/almayer/CICmap/upp{
@@ -6004,9 +5861,8 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "Ky" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "KA" = (
 /obj/structure/cargo_container/upp/mk6/mid{
@@ -6170,11 +6026,10 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "Lx" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/roof/cargocrane_tracks/vertical/endcap1{
 	pixel_y = 14
 	},
-/turf/open/floor/strata/grey_multi_tiles,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
 "Lz" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -6261,13 +6116,6 @@
 	dir = 8;
 	layer = 3
 	},
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stacked";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
-	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "LP" = (
@@ -6281,8 +6129,7 @@
 	light_power = 0.8;
 	light_range = 5
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "LV" = (
 /obj/structure/bed/chair/comfy,
@@ -6305,8 +6152,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "Mi" = (
 /obj/structure/surface/table/almayer{
@@ -6332,12 +6178,10 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "Mo" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/medical)
 "Mp" = (
 /obj/structure/platform/strata/metal,
@@ -6347,8 +6191,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "Ms" = (
 /turf/open/floor/strata/floor3/east,
@@ -6446,8 +6289,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "MR" = (
 /obj/structure/disposalpipe/segment,
@@ -6490,16 +6332,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
-"Nl" = (
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stackedalt";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
-	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/hangar)
 "Nn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -6606,7 +6438,6 @@
 /area/golden_arrow/hangar)
 "NL" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
@@ -6629,7 +6460,7 @@
 	pixel_x = 45;
 	pixel_y = 2
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "NN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -6701,8 +6532,7 @@
 	icon_state = "exposed01-supply"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "Of" = (
 /obj/structure/bookcase{
@@ -6856,8 +6686,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "PK" = (
 /obj/structure/ladder{
@@ -6874,7 +6703,6 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "PR" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
@@ -6882,31 +6710,28 @@
 	dir = 8;
 	light_color = "#832121"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "PS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "Qa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "Qd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "Qe" = (
 /turf/closed/wall/upp_wall/grey,
@@ -6957,7 +6782,7 @@
 /area/golden_arrow/canteen)
 "QP" = (
 /obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "QT" = (
 /obj/structure/platform/strata/metal{
@@ -6973,19 +6798,8 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
-"QX" = (
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stacked";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
-	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/hangar)
 "QY" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -6998,7 +6812,6 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
@@ -7009,7 +6822,7 @@
 	pixel_x = 16;
 	pixel_y = 16
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/dorms)
 "Rs" = (
 /turf/open/floor/strata/multi_tiles,
@@ -7057,14 +6870,13 @@
 	light_power = 0.8;
 	light_range = 5
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/door_control{
 	name = "Airlock Hanger Access";
 	id = "hangerairlock-interior";
 	pixel_y = 31;
 	pixel_x = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "RO" = (
 /obj/structure/surface/rack{
@@ -7254,8 +7066,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "SP" = (
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
@@ -7304,8 +7115,7 @@
 /turf/open/floor/corsat/squares,
 /area/golden_arrow/platoon_commander_rooms)
 "Te" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "Th" = (
 /obj/effect/decal/warning_stripes{
@@ -7335,8 +7145,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "Tp" = (
 /obj/structure/surface/table/almayer{
@@ -7406,7 +7215,7 @@
 	dir = 1;
 	req_one_access_txt = "230"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "TO" = (
 /obj/structure/disposalpipe/segment{
@@ -7445,20 +7254,6 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
-"Uc" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo";
-	pixel_x = 1
-	},
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stacked";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
-	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/hangar)
 "Uf" = (
 /obj/structure/machinery/power/apc/almayer/east,
 /obj/effect/decal/warning_stripes{
@@ -7508,8 +7303,7 @@
 	pixel_x = 11;
 	pixel_y = -7
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "Uu" = (
 /obj/structure/machinery/vending/cigarette/upp{
@@ -7543,8 +7337,7 @@
 	dir = 2;
 	icon_state = "pipe-j2"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "UG" = (
 /obj/structure/stairs/perspective{
@@ -7592,8 +7385,7 @@
 	icon_state = "exposed01-supply"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/dorms)
 "UZ" = (
 /obj/structure/platform/strata/metal,
@@ -7603,8 +7395,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "Va" = (
 /obj/structure/machinery/light/small{
@@ -7640,8 +7431,7 @@
 /obj/structure/machinery/power/terminal{
 	dir = 8
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "Vn" = (
 /obj/structure/surface/rack{
@@ -7723,7 +7513,7 @@
 /area/golden_arrow/prep_hallway)
 "VD" = (
 /obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/dorms)
 "VF" = (
 /obj/structure/machinery/computer/crew/upp{
@@ -7746,7 +7536,7 @@
 /area/golden_arrow/platoon_commander_rooms)
 "VH" = (
 /obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_sergeant)
 "VN" = (
 /obj/structure/bed/chair/comfy{
@@ -7763,12 +7553,11 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sign/safety/galley{
 	pixel_x = -19;
 	pixel_y = 6
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "VS" = (
 /obj/structure/machinery/light/double{
@@ -7777,8 +7566,7 @@
 	light_power = 0.8;
 	light_range = 5
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "Wa" = (
 /obj/effect/decal/warning_stripes{
@@ -7855,13 +7643,12 @@
 	dir = 2;
 	icon_state = "pipe-j2"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
 	dir = 1;
 	pixel_y = 3
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "Wo" = (
 /obj/structure/machinery/cm_vending/clothing/medic/upp,
@@ -7892,8 +7679,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "Ww" = (
 /turf/closed/wall/upp_wall/grey/hull,
@@ -7964,8 +7750,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "WY" = (
 /obj/structure/cargo_container/canc/mid{
@@ -8033,8 +7818,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "Xn" = (
 /obj/structure/closet{
@@ -8084,13 +7868,6 @@
 	light_power = 0.8;
 	light_range = 5;
 	dir = 1
-	},
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stacked";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
@@ -8183,13 +7960,12 @@
 	light_range = 4
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
 "Ya" = (
 /obj/structure/foamed_metal/iron,
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "Yh" = (
 /obj/structure/sign/safety/terminal{
@@ -8214,14 +7990,13 @@
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_sergeant)
 "Yo" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light/small{
 	dir = 1;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "Yp" = (
 /obj/effect/decal/warning_stripes{
@@ -8304,14 +8079,13 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "YC" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
 	light_range = 2;
 	light_color = "#e7c0a4";
 	invisibility = 100
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "YD" = (
 /obj/effect/decal/warning_stripes{
@@ -8425,13 +8199,6 @@
 /obj/structure/barricade/handrail/strata{
 	layer = 3.5
 	},
-/obj/structure/prop/rock{
-	icon_state = "uppcrate_stackedalt";
-	icon = 'icons/obj/structures/crates.dmi';
-	desc = "Two crates owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on their fronts. They've been double-stacked and secured for longterm transportation.";
-	name = "secured military crates";
-	anchored = 0
-	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "Zf" = (
@@ -8525,8 +8292,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "ZO" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "ZS" = (
 /turf/open/floor/strata/multi_tiles/west,
@@ -8575,8 +8341,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "ZZ" = (
 /obj/effect/decal/warning_stripes{
@@ -18958,7 +18723,7 @@ dN
 dN
 dN
 dN
-dN
+SK
 mV
 mV
 mV
@@ -19005,10 +18770,10 @@ mV
 mV
 rE
 VD
-Fo
+KC
 wW
 vS
-Fo
+KC
 hA
 GW
 mV
@@ -19110,7 +18875,7 @@ pw
 pw
 pw
 pw
-dN
+SK
 mV
 mV
 mV
@@ -19267,7 +19032,7 @@ NK
 NK
 NK
 NK
-hB
+SK
 zu
 un
 mV
@@ -19552,7 +19317,7 @@ dN
 pw
 hB
 hB
-QX
+Jf
 dg
 WP
 CF
@@ -19703,12 +19468,12 @@ mV
 dN
 pw
 hB
-zb
+WP
 ej
 Jf
 WP
 KA
-Nl
+Jf
 WP
 WY
 hB
@@ -19855,7 +19620,7 @@ dN
 dN
 pw
 hB
-Eg
+tg
 FX
 Vj
 NC
@@ -20008,13 +19773,13 @@ pw
 pw
 hB
 ej
-Uc
+WP
 vp
 IV
 vp
 Jf
 Jf
-Nl
+Jf
 hB
 Al
 by
@@ -20495,7 +20260,7 @@ Ws
 uF
 uF
 uF
-uF
+AO
 uF
 uF
 SQ
@@ -23364,7 +23129,7 @@ PG
 xa
 xa
 xa
-QX
+Jf
 hB
 GG
 DL
@@ -23808,7 +23573,7 @@ dN
 pw
 hB
 hB
-QX
+Jf
 Jf
 WP
 DS
@@ -24020,12 +23785,12 @@ mV
 mV
 mV
 KC
-KC
+zG
 Fo
 jL
 zA
-Qe
-GW
+Fo
+hA
 GW
 mV
 mV
@@ -24131,7 +23896,7 @@ QY
 QY
 QY
 QY
-hB
+SK
 IM
 kk
 mV
@@ -24171,14 +23936,14 @@ mV
 mV
 mV
 mV
-mV
-mV
+KC
+zG
 Fo
 jL
 zA
 Fo
-mV
-mV
+hA
+GW
 mV
 mV
 mV
@@ -24278,7 +24043,7 @@ pw
 pw
 pw
 pw
-dN
+SK
 mV
 mV
 mV
@@ -24323,14 +24088,14 @@ mV
 mV
 mV
 mV
-mV
-mV
+KC
+zG
 Fo
 jL
 zA
 Fo
-mV
-mV
+hA
+GW
 mV
 mV
 mV
@@ -24430,7 +24195,7 @@ dN
 dN
 dN
 dN
-dN
+SK
 mV
 mV
 mV
@@ -24475,14 +24240,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-Fo
+KC
+zG
+KC
 De
 pl
-Fo
-mV
-mV
+KC
+hA
+GW
 mV
 mV
 mV
@@ -24627,14 +24392,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
+KC
+KC
+Fq
 mV
 Zk
-mV
-mV
-mV
+Fq
+GW
+GW
 mV
 mV
 mV
