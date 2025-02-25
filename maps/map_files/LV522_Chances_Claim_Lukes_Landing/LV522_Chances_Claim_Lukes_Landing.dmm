@@ -72269,6 +72269,7 @@
 "tGk" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/hypospray/autoinjector/tricord/skillless,
 /turf/open/floor/tdome,
 /area/lv522/indoors/a_block/dorms)
 "tGl" = (
