@@ -249,7 +249,8 @@ can cause issues with ammo types getting mixed up during the burst.
 
 	fire_sound = "gun_shotgun_tactical"
 
-	flags_equip_slot = SLOT_BACK
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
+
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat
 	attachable_allowed = list(
 		/obj/item/attachable/bayonet,
@@ -308,7 +309,8 @@ can cause issues with ammo types getting mixed up during the burst.
 
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/marsoc
 
-	flags_equip_slot = SLOT_WAIST|SLOT_BACK
+	flags_equip_slot = SLOT_WAIST|SLOT_BACK|SLOT_SUIT_STORE
+
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
 	auto_retrieval_slot = WEAR_J_STORE
 	start_automatic = TRUE
@@ -353,6 +355,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	item_state = "type23_tactical"
 	fire_sound = 'sound/weapons/gun_type23.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
 	attachable_allowed = list(
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reddot/upp,
@@ -375,7 +378,6 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/stock/type23, // Stock
 		)
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
-	flags_equip_slot = SLOT_BACK
 	gauge = "8g"
 	starting_attachment_types = list(/obj/item/attachable/stock/type23)
 
@@ -410,9 +412,9 @@ can cause issues with ammo types getting mixed up during the burst.
 	item_state = "type23_wood"
 	fire_sound = 'sound/weapons/gun_type23.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
 	attachable_allowed = list(/obj/item/attachable/stock/type23/wood)
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
-	flags_equip_slot = SLOT_BACK
 	gauge = "8g"
 	starting_attachment_types = list(/obj/item/attachable/stock/type23/wood)
 
@@ -602,7 +604,8 @@ can cause issues with ammo types getting mixed up during the burst.
 	desc = "A double barrel shotgun produced by Spearhead. Archaic, sturdy, affordable. It has been artificially shortened to reduce range but increase damage and spread."
 	icon_state = "sshotgun"
 	item_state = "sshotgun"
-	flags_equip_slot = SLOT_WAIST
+	flags_equip_slot = SLOT_WAIST|SLOT_SUIT_STORE
+
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
 
 /obj/item/weapon/gun/shotgun/double/sawn/set_gun_attachment_offsets()
@@ -1022,7 +1025,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	icon_state = "m37"
 	item_state = "m37"
 	current_mag = /obj/item/ammo_magazine/internal/shotgun
-	flags_equip_slot = SLOT_BACK
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
 	fire_sound = 'sound/weapons/gun_shotgun.ogg'
 	var/pump_sound = "shotgunpump"
 	var/pump_delay //Higher means longer delay.
@@ -1197,6 +1200,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	item_state = "hg3712"
 	fire_sound = 'sound/weapons/gun_shotgun_small.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/cmb
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
