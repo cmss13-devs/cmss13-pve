@@ -284,28 +284,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
-"ca" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access_txt = "240";
-	req_access = null;
-	can_block_movement = 0;
-	pixel_y = 14;
-	pixel_x = -5;
-	name = "equipment locker"
-	},
-/obj/item/storage/belt/gun/type47/np92,
-/obj/item/storage/backpack/lightpack/upp,
-/obj/item/storage/box/zipcuffs/small{
-	pixel_x = 5;
-	pixel_y = -1
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/turf/open/space/basic,
-/area/space)
 "cc" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
@@ -6624,7 +6602,6 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/canteen)
 "OG" = (
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access_txt = "240";
@@ -6639,6 +6616,7 @@
 	faction = "UPP"
 	},
 /obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/lamp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
 "OM" = (
@@ -15985,7 +15963,7 @@ mV
 mV
 mV
 mV
-ca
+mV
 mV
 mV
 mV
