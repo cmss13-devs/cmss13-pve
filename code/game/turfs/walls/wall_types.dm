@@ -701,6 +701,14 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "rock"
 	walltype = WALL_KUTJEVO_ROCK
 	hull = 1
+	minimap_color = MINIMAP_BLACK
+
+/turf/closed/wall/kutjevo/rock/Initialize(mapload)
+	. = ..()
+	for(var/direction in GLOB.cardinals)
+		var/turf/turf_to_check = get_step(src, direction)
+		if(!isnull(turf_to_check) && !turf_to_check.density && !(istype(turf_to_check, /turf/open/space)))
+			minimap_color = MINIMAP_SOLID
 
 /turf/closed/wall/kutjevo/rock/border
 	icon_state = "rock_border"//no sandy edges
