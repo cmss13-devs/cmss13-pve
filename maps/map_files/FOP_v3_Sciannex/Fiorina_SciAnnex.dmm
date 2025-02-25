@@ -8807,16 +8807,6 @@
 	},
 /turf/open/floor/prison/yellow/northeast,
 /area/fiorina/station/disco)
-"gAk" = (
-/obj/structure/platform/kutjevo/smooth,
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
-/turf/open/space/basic,
-/area/fiorina/oob)
 "gAy" = (
 /obj/structure/closet{
 	density = 0;
@@ -12367,10 +12357,6 @@
 	},
 /turf/open/floor/wood,
 /area/fiorina/station/chapel)
-"jpl" = (
-/obj/item/clothing/under/cmb,
-/turf/open/floor/prison,
-/area/fiorina/station/security)
 "jpm" = (
 /obj/item/explosive/grenade/high_explosive/m15,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -14449,6 +14435,10 @@
 	},
 /turf/open/floor/prison/greenfull/east,
 /area/fiorina/station/chapel)
+"lbi" = (
+/obj/item/clothing/under/cmb,
+/turf/open/floor/prison,
+/area/fiorina/station/security)
 "lbk" = (
 /obj/effect/spawner/random/tech_supply,
 /obj/structure/machinery/light/double/blue{
@@ -58591,7 +58581,7 @@ mEO
 gbS
 aFZ
 brI
-gAk
+olQ
 qOk
 cZc
 lml
@@ -62252,7 +62242,7 @@ kWq
 tcP
 uGY
 cYe
-jpl
+lbi
 gRE
 gRE
 fnB
