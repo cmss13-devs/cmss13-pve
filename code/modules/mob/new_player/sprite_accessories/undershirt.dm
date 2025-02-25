@@ -93,6 +93,10 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	name = "Grey Undershirt"
 	icon_state = "undershirt_grey_short"
 
+/datum/sprite_accessory/undershirt/grey/sleeveless
+	name = "Grey Undershirt (Sleeveless)"
+	icon_state = "undershirt_grey"
+
 /datum/sprite_accessory/undershirt/red
 	name = "Red Undershirt"
 	icon_state = "undershirt_uscm_red"

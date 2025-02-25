@@ -70,6 +70,18 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	gender = NEUTER
 	camo_conforming = FALSE
 
+/datum/sprite_accessory/underwear/boxers/black
+	name = "Black Boxers"
+	icon_state = "black_boxers"
+
+/datum/sprite_accessory/underwear/boxers/blue
+	name = "Blue Boxers"
+	icon_state = "blue_boxers"
+
+/datum/sprite_accessory/underwear/boxers/pink
+	name = "Pink Boxers"
+	icon_state = "pink_boxers"
+
 /datum/sprite_accessory/underwear/boxers/marine
 	name = "USCM Boxers"
 	icon_state = "marine_boxers"
@@ -79,12 +91,15 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	icon_state = "upp_boxers"
 	restricted = TRUE
 
-
 /datum/sprite_accessory/underwear/briefs
 	name = "White Briefs"
 	icon_state = "white_briefs"
 	gender = NEUTER
 	camo_conforming = FALSE
+
+/datum/sprite_accessory/underwear/briefs/black
+	name = "Black Briefs"
+	icon_state = "black_briefs"
 
 // Female
 
