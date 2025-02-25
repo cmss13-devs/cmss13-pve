@@ -762,7 +762,7 @@
 				if(isnull(surgeryqueue["brute"]))
 					dat += "<a href='byond://?src=\ref[src];brute=1'>Brute Damage Treatment</a><br>"
 				if(isnull(surgeryqueue["burn"]))
-					dat += "<a href='?src=\ref[src];burn=1'>Burn Damage Treatment</a><br>"
+					dat += "<a href='byond://?src=\ref[src];burn=1'>Burn Damage Treatment</a><br>"
 				dat += "<b>Orthopedic Surgeries</b>"
 				dat += "<br>"
 				if(isnull(surgeryqueue["broken"]))
@@ -770,7 +770,7 @@
 				if(isnull(surgeryqueue["internal"]))
 					dat += "<a href='byond://?src=\ref[src];internal=1'>Internal Bleeding Surgery</a><br>"
 				if(isnull(surgeryqueue["open"]))
-					dat += "<a href='?src=\ref[src];open=1'>Close Open Incisions</a><br>"
+					dat += "<a href='byond://?src=\ref[src];open=1'>Close Open Incisions</a><br>"
 				if(isnull(surgeryqueue["object"]))
 					dat += "<a href='byond://?src=\ref[src];object=1'>Foreign Object Removal Surgery</a><br>"
 				dat += "<b>Organ Surgeries</b>"

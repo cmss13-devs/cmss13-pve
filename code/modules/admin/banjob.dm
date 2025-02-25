@@ -146,9 +146,9 @@ WARNING!*/
 
 	//Freed Mobs
 	if(jobban_isbanned(M, "Freed Mob", P) || isbanned_dept)
-		jobs += "<td width='20%'><a href='?src=\ref[src];[HrefToken(forceGlobal = TRUE)];jobban3=Freed Mob;jobban4=\ref[M]'><font color=red>Freed Mob</font></a></td>"
+		jobs += "<td width='20%'><a href='byond://?src=\ref[src];[HrefToken(forceGlobal = TRUE)];jobban3=Freed Mob;jobban4=\ref[M]'><font color=red>Freed Mob</font></a></td>"
 	else
-		jobs += "<td width='20%'><a href='?src=\ref[src];[HrefToken(forceGlobal = TRUE)];jobban3=Freed Mob;jobban4=\ref[M]'>Freed Mob</a></td>"
+		jobs += "<td width='20%'><a href='byond://?src=\ref[src];[HrefToken(forceGlobal = TRUE)];jobban3=Freed Mob;jobban4=\ref[M]'>Freed Mob</a></td>"
 
 	//Survivor
 	if(jobban_isbanned(M, "Survivor", P) || isbanned_dept)

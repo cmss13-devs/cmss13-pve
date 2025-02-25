@@ -452,9 +452,9 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 		if(MENU_PLTCO)
 			dat += "<div id='column1'>"
 			dat += "<h2><b><u>Platoon Settings:</u></b></h2>"
-			dat += "<b>Platoon Name:</b> <a href='?_src_=prefs;preference=plat_name;task=input'><b>[platoon_name]</b></a><br>"
-			dat += "<b>Dropship Camo:</b> <a href='?_src_=prefs;preference=dropship_camo;task=input'><b>[dropship_camo]</b></a><br>"
-			dat += "<b>Dropship Name:</b> <a href='?_src_=prefs;preference=dropship_name;task=input'><b>[dropship_name]</b></a><br>"
+			dat += "<b>Platoon Name:</b> <a href='byond://?_src_=prefs;preference=plat_name;task=input'><b>[platoon_name]</b></a><br>"
+			dat += "<b>Dropship Camo:</b> <a href='byond://?_src_=prefs;preference=dropship_camo;task=input'><b>[dropship_camo]</b></a><br>"
+			dat += "<b>Dropship Name:</b> <a href='byond://?_src_=prefs;preference=dropship_name;task=input'><b>[dropship_name]</b></a><br>"
 			dat += "</div>"
 
 		if(MENU_XENOMORPH)
@@ -630,7 +630,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 			dat += "<b>Toggle Being Able to Hurt Yourself: \
 					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_IGNORE_SELF]'><b>[toggle_prefs & TOGGLE_IGNORE_SELF ? "Off" : "On"]</b></a><br>"
 			dat += "<b>Toggle Help Intent Safety: \
-					</b> <a href='?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_HELP_INTENT_SAFETY]'><b>[toggle_prefs & TOGGLE_HELP_INTENT_SAFETY ? "On" : "Off"]</b></a><br>"
+					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_HELP_INTENT_SAFETY]'><b>[toggle_prefs & TOGGLE_HELP_INTENT_SAFETY ? "On" : "Off"]</b></a><br>"
 			dat += "<b>Toggle Middle Mouse Ability Activation: \
 					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_MIDDLE_MOUSE_CLICK]'><b>[toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK ? "On" : "Off"]</b></a><br>"
 			dat += "<b>Toggle Ability Deactivation: \
