@@ -233,7 +233,6 @@
 /datum/equipment_preset/uscm_ship/reporter_uscm/load_gear(mob/living/carbon/human/new_human)
 
 	if(new_human.gender == MALE)
-		if(new_human.gender == MALE)
 		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
 	else
 		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
