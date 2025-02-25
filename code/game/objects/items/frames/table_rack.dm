@@ -6,7 +6,7 @@
  */
 
 /obj/item/frame/table
-	name = "tan table parts"
+	name = "table parts"
 	desc = "A kit for a table, including a large, flat metal surface and four legs. Some assembly required."
 	gender = PLURAL
 	icon = 'icons/obj/items/items.dmi'
@@ -16,6 +16,11 @@
 	flags_atom = FPRINT|CONDUCT
 	attack_verb = list("slammed", "bashed", "battered", "bludgeoned", "thrashed", "whacked")
 	var/table_type = /obj/structure/surface/table //what type of table it creates when assembled
+
+
+/obj/item/frame/table/brown
+	color ="#8B7B5B"
+	table_type = /obj/structure/surface/table
 
 /obj/item/frame/table/attackby(obj/item/W, mob/user)
 
@@ -84,6 +89,15 @@
 	matter = list("metal" = 15000) //A reinforced table. Two sheets of metal and four rods
 	table_type = /obj/structure/surface/table/reinforced
 
+/obj/item/frame/table/reinforced/prison
+	table_type = /obj/structure/surface/table/reinforced/prison
+
+/obj/item/frame/table/reinforced/prison/tan
+	table_type = /obj/structure/surface/table/reinforced/prison/tan
+
+/obj/item/frame/table/reinforced/prison/dark
+	table_type = /obj/structure/surface/table/reinforced/prison/dark
+
 /obj/item/frame/table/reinforced/attackby(obj/item/W, mob/user)
 	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 		deconstruct()
@@ -146,6 +160,7 @@
 	flags_atom = null
 	matter = null
 	table_type = /obj/structure/surface/table/gamblingtable
+	color = "#aeaeae"
 
 /obj/item/frame/table/gambling/attackby(obj/item/W as obj, mob/user as mob)
 
@@ -171,7 +186,9 @@
 	icon_state = "table_parts"
 	table_type = /obj/structure/surface/table/almayer
 
-
+/obj/item/frame/table/almayer/dark
+	table_type = /obj/structure/surface/table/almayer/dark
+	color = "#8B9490"
 
 /*
  * Rack Parts
@@ -185,6 +202,9 @@
 	icon_state = "rack_parts"
 	flags_atom = FPRINT|CONDUCT
 	matter = list("metal" = 3750) //A big storage shelf, takes five sheets to build
+
+/obj/item/frame/rack/dark
+	color = "#8B9490"
 
 /obj/item/frame/rack/attackby(obj/item/W, mob/user)
 	..()
