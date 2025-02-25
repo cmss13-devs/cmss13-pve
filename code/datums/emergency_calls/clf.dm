@@ -61,7 +61,7 @@
 	else if(heavies < max_heavies && HAS_FLAG(H.client.prefs.toggles_ert, PLAY_HEAVY) && check_timelock(H.client, JOB_SQUAD_SPECIALIST, time_required_for_job))
 		heavies++
 		to_chat(H, SPAN_ROLE_HEADER("You are a Specialist of the local resistance group, the Colonial Liberation Front!"))
-		arm_equipment(H, /datum/equipment_preset/clf/specialist, TRUE, TRUE)
+		arm_equipment(H, /datum/equipment_preset/clf/soldier, TRUE, TRUE)
 	else
 		to_chat(H, SPAN_ROLE_HEADER("You are a Fighter of the local resistance group, the Colonial Liberation Front!"))
 		arm_equipment(H, /datum/equipment_preset/clf/soldier, TRUE, TRUE)
