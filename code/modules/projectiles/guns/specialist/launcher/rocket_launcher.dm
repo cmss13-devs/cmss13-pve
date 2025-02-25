@@ -2,6 +2,22 @@
 //-------------------------------------------------------
 //M5 RPG
 
+/particles/backblast
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "smoke"
+	width = 500
+	height = 500
+	count = 100
+	spawning = 100
+	lifespan = 0.7 SECONDS
+	fade = 8 SECONDS
+	grow = 0.1
+	drift = generator(GEN_CIRCLE, 0, 5)
+	scale = 0.3
+	spin = generator(GEN_NUM, -20, 20)
+	velocity = list(50, 0)
+	friction = generator(GEN_NUM, 0.1, 0.5)
+
 /obj/item/weapon/gun/launcher/rocket
 	name = "\improper M5 RPG"
 	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
@@ -24,21 +40,10 @@
 	)
 
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
-	var/datum/effect_system/smoke_spread/smoke
 
 	flags_item = TWOHANDED|NO_CRYO_STORE
 	flags_equip_slot = SLOT_BACK //The fact you can't carry the tube across your back is daft? Hello?
 	var/skill_locked = FALSE
-
-/obj/item/weapon/gun/launcher/rocket/Initialize(mapload, spawn_empty)
-	. = ..()
-	smoke = new()
-	smoke.attach(src)
-
-/obj/item/weapon/gun/launcher/rocket/Destroy()
-	QDEL_NULL(smoke)
-	return ..()
-
 
 /obj/item/weapon/gun/launcher/rocket/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 6, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
@@ -186,9 +191,15 @@
 		huser.emote("pain")
 		huser.SetEarDeafness(max(user.ear_deaf,10))
 
+	var/turf/blast_source = get_turf(src)
 	var/backblast_loc = get_turf(get_step(user.loc, turn(user.dir, 180)))
-	smoke.set_up(1, 0, backblast_loc, turn(user.dir, 180))
-	smoke.start()
+	var/angle = Get_Angle(loc, target)
+	var/x_component = sin(angle) * -30
+	var/y_component = cos(angle) * -30
+	var/obj/effect/abstract/particle_holder/backblast = new(blast_source, /particles/backblast)
+	backblast.particles.velocity = list(x_component, y_component)
+	addtimer(VARSET_CALLBACK(backblast.particles, count, 0), 5)
+	QDEL_IN(backblast, 0.7 SECONDS)
 	playsound(src, 'sound/weapons/gun_rocketlauncher.ogg', 100, TRUE, 10)
 	for(var/mob/living/carbon/mob in backblast_loc)
 		if(mob.body_position != STANDING_UP || HAS_TRAIT(mob, TRAIT_EAR_PROTECTION)) //Have to be standing up to get the fun stuff
@@ -379,8 +390,14 @@
 		return
 
 	var/backblast_loc = get_turf(get_step(user.loc, turn(user.dir, 180)))
-	smoke.set_up(1, 0, backblast_loc, turn(user.dir, 180))
-	smoke.start()
+	var/turf/blast_source = get_turf(src)
+	var/angle = Get_Angle(loc, target)
+	var/x_component = sin(angle) * -30
+	var/y_component = cos(angle) * -30
+	var/obj/effect/abstract/particle_holder/backblast = new(blast_source, /particles/backblast)
+	backblast.particles.velocity = list(x_component, y_component)
+	addtimer(VARSET_CALLBACK(backblast.particles, count, 0), 5)
+	QDEL_IN(backblast, 0.7 SECONDS)
 	playsound(src, 'sound/weapons/gun_rocketlauncher.ogg', 100, TRUE, 10)
 	for(var/mob/living/carbon/C in backblast_loc)
 		if(C.body_position == STANDING_UP && !HAS_TRAIT(C, TRAIT_EAR_PROTECTION)) //Have to be standing up to get the fun stuff

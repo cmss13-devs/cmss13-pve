@@ -338,7 +338,14 @@
 	new_projectile.fire_at(firing_target, src, owner_mob, new_projectile.ammo.max_range, new_projectile.ammo.shell_speed, null, FALSE)
 
 	if(!recursive)
-		muzzle_flash(Get_Angle(get_turf(src), firing_target))
+		var/angle = Get_Angle(get_turf(src), firing_target)
+		muzzle_flash(angle)
+		var/x_component = sin(angle) * 40
+		var/y_component = cos(angle) * 40
+		var/obj/effect/abstract/particle_holder/gun_smoke = new(get_turf(src), /particles/firing_smoke)
+		gun_smoke.particles.velocity = list(x_component, y_component)
+		addtimer(VARSET_CALLBACK(gun_smoke.particles, count, 0), 5)
+		QDEL_IN(gun_smoke, 0.6 SECONDS)
 		if(firing_sound)
 			playsound(loc, firing_sound, 75, 1)
 
