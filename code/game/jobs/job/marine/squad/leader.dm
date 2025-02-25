@@ -81,5 +81,10 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/leader/ai/forecon
 
+/obj/effect/landmark/start/marine/leader/marsoc
+	name = JOB_SQUAD_ELEMENT_LEADER_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/job/marine/leader/ai/marsoc
+
 #undef SSGT_VARIANT
 #undef GYSGT_VARIANT

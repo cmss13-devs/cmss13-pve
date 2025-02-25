@@ -156,3 +156,15 @@
 	initial_stored = 5
 	allowed_type = /obj/item/weapon/gun/rifle/m20a/unloaded
 	populate_type = /obj/item/weapon/gun/rifle/m20a/unloaded
+
+/obj/structure/gun_rack/xm46a
+    name = "XM46A pulse rifle rack"
+    desc = "ARMAT-produced gun rack for storage of long guns. One of the very rare early-model designs, adjusted to hold XM46A pulse rifles for MARSOC teams."
+    icon_state = "xm46a"
+    max_stored = 5
+    initial_stored = 5
+    allowed_type = /obj/item/weapon/gun/rifle/m46c
+    populate_type = /obj/item/weapon/gun/rifle/m46c
+
+/obj/structure/gun_rack/xm46a/empty
+    initial_stored = 0

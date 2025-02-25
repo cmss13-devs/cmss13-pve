@@ -1,0 +1,8 @@
+{
+    "map_name": "USS Styx",
+    "map_path": "map_files/styx",
+    "map_file": "styx.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/marsoc"
+}
