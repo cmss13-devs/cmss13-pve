@@ -4263,11 +4263,8 @@
 	pixel_x = 7;
 	pixel_y = 17
 	},
-/obj/structure/machinery/computer/overwatch/almayer{
-	density = 1;
-	faction = "UPP"
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/overwatch/almayer/upp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
 "jK" = (
@@ -4425,6 +4422,9 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
+/obj/item/device/helmet_visor/leader/upp,
+/obj/item/device/helmet_visor/leader/upp,
+/obj/item/device/helmet_visor/leader/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ka" = (
@@ -8431,6 +8431,8 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
+"Zu" = (
+)
 "ZK" = (
 /obj/structure/phone_base/upp_net{
 	name = "Platoon Leader Telephone";
@@ -8596,6 +8598,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (2,1,1) = {"
 mV
@@ -8748,6 +8751,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (3,1,1) = {"
 mV
@@ -8900,6 +8904,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (4,1,1) = {"
 mV
@@ -9052,6 +9057,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (5,1,1) = {"
 mV
@@ -9204,6 +9210,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (6,1,1) = {"
 mV
@@ -9356,6 +9363,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (7,1,1) = {"
 mV
@@ -9508,6 +9516,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (8,1,1) = {"
 mV
@@ -9660,6 +9669,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (9,1,1) = {"
 mV
@@ -9812,6 +9822,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (10,1,1) = {"
 mV
@@ -9964,6 +9975,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (11,1,1) = {"
 mV
@@ -10116,6 +10128,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (12,1,1) = {"
 mV
@@ -10268,6 +10281,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (13,1,1) = {"
 mV
@@ -10420,6 +10434,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (14,1,1) = {"
 mV
@@ -10572,6 +10587,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (15,1,1) = {"
 mV
@@ -10724,6 +10740,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (16,1,1) = {"
 mV
@@ -10876,6 +10893,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (17,1,1) = {"
 mV
@@ -11028,6 +11046,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (18,1,1) = {"
 mV
@@ -11180,6 +11199,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (19,1,1) = {"
 mV
@@ -11332,6 +11352,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (20,1,1) = {"
 mV
@@ -11484,6 +11505,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (21,1,1) = {"
 mV
@@ -11636,6 +11658,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (22,1,1) = {"
 mV
@@ -11788,6 +11811,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (23,1,1) = {"
 mV
@@ -11940,6 +11964,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (24,1,1) = {"
 mV
@@ -12092,6 +12117,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (25,1,1) = {"
 mV
@@ -12244,6 +12270,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (26,1,1) = {"
 mV
@@ -12396,6 +12423,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (27,1,1) = {"
 mV
@@ -12548,6 +12576,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (28,1,1) = {"
 mV
@@ -12700,6 +12729,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (29,1,1) = {"
 mV
@@ -12852,6 +12882,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (30,1,1) = {"
 mV
@@ -13004,6 +13035,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (31,1,1) = {"
 mV
@@ -13156,6 +13188,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (32,1,1) = {"
 mV
@@ -13308,6 +13341,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (33,1,1) = {"
 mV
@@ -13460,6 +13494,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (34,1,1) = {"
 mV
@@ -13612,6 +13647,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (35,1,1) = {"
 mV
@@ -13764,6 +13800,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (36,1,1) = {"
 mV
@@ -13916,6 +13953,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (37,1,1) = {"
 mV
@@ -14068,6 +14106,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (38,1,1) = {"
 mV
@@ -14220,6 +14259,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (39,1,1) = {"
 mV
@@ -14372,6 +14412,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (40,1,1) = {"
 mV
@@ -14524,6 +14565,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (41,1,1) = {"
 mV
@@ -14676,6 +14718,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (42,1,1) = {"
 mV
@@ -14828,6 +14871,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (43,1,1) = {"
 mV
@@ -14980,6 +15024,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (44,1,1) = {"
 mV
@@ -15132,6 +15177,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (45,1,1) = {"
 mV
@@ -15214,7 +15260,7 @@ mV
 mV
 mV
 mV
-ae
+Zu
 mV
 mV
 mV
@@ -15284,11 +15330,10 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (46,1,1) = {"
 mV
-"}
-(46,1,1) = {"
 mV
 mV
 mV
@@ -15437,10 +15482,8 @@ mV
 mV
 mV
 mV
-mV
-"}
-(47,1,1) = {"
-mV
+Zu
+Zu
 "}
 (47,1,1) = {"
 mV
@@ -15592,11 +15635,11 @@ mV
 mV
 mV
 mV
+Zu
+Zu
 "}
 (48,1,1) = {"
 mV
-"}
-(48,1,1) = {"
 mV
 mV
 mV
@@ -15680,8 +15723,7 @@ mV
 mV
 mV
 mV
-mV
-ad
+Zu
 mV
 mV
 mV
@@ -15823,7 +15865,7 @@ mV
 mV
 mV
 mV
-aj
+Zu
 mV
 mV
 mV
@@ -16053,6 +16095,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (51,1,1) = {"
 mV
@@ -16135,7 +16178,7 @@ mV
 mV
 mV
 mV
-ai
+Zu
 mV
 mV
 mV
@@ -16358,6 +16401,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (53,1,1) = {"
 mV
@@ -16510,6 +16554,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (54,1,1) = {"
 mV
@@ -16662,6 +16707,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (55,1,1) = {"
 mV
@@ -16730,7 +16776,7 @@ mV
 mV
 mV
 mV
-ak
+Zu
 mV
 mV
 mV
@@ -16883,7 +16929,7 @@ mV
 mV
 mV
 mV
-am
+Zu
 mV
 mV
 mV
@@ -17120,6 +17166,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (58,1,1) = {"
 mV
@@ -17272,6 +17319,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (59,1,1) = {"
 mV
@@ -17424,6 +17472,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (60,1,1) = {"
 mV
@@ -17576,6 +17625,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (61,1,1) = {"
 mV
@@ -17728,6 +17778,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (62,1,1) = {"
 mV
@@ -17880,6 +17931,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (63,1,1) = {"
 mV
@@ -18032,6 +18084,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (64,1,1) = {"
 mV
@@ -18184,6 +18237,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (65,1,1) = {"
 mV
@@ -18336,6 +18390,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (66,1,1) = {"
 mV
@@ -18488,6 +18543,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (67,1,1) = {"
 mV
@@ -18640,6 +18696,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (68,1,1) = {"
 mV
@@ -18792,6 +18849,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (69,1,1) = {"
 mV
@@ -18944,6 +19002,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (70,1,1) = {"
 mV
@@ -19096,6 +19155,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (71,1,1) = {"
 mV
@@ -19248,6 +19308,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (72,1,1) = {"
 mV
@@ -19400,6 +19461,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (73,1,1) = {"
 mV
@@ -19552,6 +19614,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (74,1,1) = {"
 mV
@@ -19704,6 +19767,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (75,1,1) = {"
 mV
@@ -19856,6 +19920,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (76,1,1) = {"
 mV
@@ -20008,6 +20073,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (77,1,1) = {"
 mV
@@ -20160,6 +20226,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (78,1,1) = {"
 mV
@@ -20312,6 +20379,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (79,1,1) = {"
 mV
@@ -20464,6 +20532,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (80,1,1) = {"
 mV
@@ -20616,6 +20685,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (81,1,1) = {"
 mV
@@ -20768,6 +20838,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (82,1,1) = {"
 mV
@@ -20920,6 +20991,7 @@ aa
 aa
 aa
 mV
+Zu
 "}
 (83,1,1) = {"
 mV
@@ -21072,6 +21144,7 @@ ac
 ab
 aa
 mV
+Zu
 "}
 (84,1,1) = {"
 mV
@@ -21224,6 +21297,7 @@ af
 ac
 aa
 mV
+Zu
 "}
 (85,1,1) = {"
 mV
@@ -21376,6 +21450,7 @@ af
 ac
 aa
 mV
+Zu
 "}
 (86,1,1) = {"
 mV
@@ -21528,6 +21603,7 @@ af
 ac
 aa
 mV
+Zu
 "}
 (87,1,1) = {"
 mV
@@ -21680,6 +21756,7 @@ af
 ac
 aa
 mV
+Zu
 "}
 (88,1,1) = {"
 mV
@@ -21832,6 +21909,7 @@ af
 ac
 aa
 mV
+Zu
 "}
 (89,1,1) = {"
 mV
@@ -21984,6 +22062,7 @@ af
 ac
 aa
 mV
+Zu
 "}
 (90,1,1) = {"
 mV
@@ -22136,6 +22215,7 @@ af
 ac
 aa
 mV
+Zu
 "}
 (91,1,1) = {"
 mV
@@ -22288,6 +22368,7 @@ ac
 ab
 aa
 mV
+Zu
 "}
 (92,1,1) = {"
 mV
@@ -22440,6 +22521,7 @@ aa
 aa
 aa
 mV
+Zu
 "}
 (93,1,1) = {"
 mV
@@ -22592,6 +22674,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (94,1,1) = {"
 mV
@@ -22744,6 +22827,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (95,1,1) = {"
 mV
@@ -22896,6 +22980,7 @@ Lk
 mV
 mV
 mV
+Zu
 "}
 (96,1,1) = {"
 mV
@@ -23048,6 +23133,7 @@ Lk
 mV
 mV
 mV
+Zu
 "}
 (97,1,1) = {"
 mV
@@ -23200,6 +23286,7 @@ Lk
 mV
 mV
 mV
+Zu
 "}
 (98,1,1) = {"
 mV
@@ -23352,6 +23439,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (99,1,1) = {"
 mV
@@ -23504,6 +23592,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (100,1,1) = {"
 mV
@@ -23656,6 +23745,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (101,1,1) = {"
 mV
@@ -23808,6 +23898,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (102,1,1) = {"
 mV
@@ -23960,6 +24051,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (103,1,1) = {"
 mV
@@ -24112,6 +24204,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (104,1,1) = {"
 mV
@@ -24264,6 +24357,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (105,1,1) = {"
 mV
@@ -24416,6 +24510,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (106,1,1) = {"
 mV
@@ -24568,6 +24663,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (107,1,1) = {"
 mV
@@ -24720,6 +24816,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (108,1,1) = {"
 mV
@@ -24872,6 +24969,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (109,1,1) = {"
 mV
@@ -25024,6 +25122,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (110,1,1) = {"
 mV
@@ -25176,6 +25275,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (111,1,1) = {"
 mV
@@ -25328,6 +25428,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (112,1,1) = {"
 mV
@@ -25480,6 +25581,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (113,1,1) = {"
 mV
@@ -25632,6 +25734,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (114,1,1) = {"
 mV
@@ -25784,6 +25887,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (115,1,1) = {"
 mV
@@ -25936,6 +26040,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (116,1,1) = {"
 mV
@@ -26088,6 +26193,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (117,1,1) = {"
 mV
@@ -26240,6 +26346,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (118,1,1) = {"
 mV
@@ -26392,6 +26499,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (119,1,1) = {"
 mV
@@ -26544,6 +26652,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (120,1,1) = {"
 mV
@@ -26696,6 +26805,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (121,1,1) = {"
 mV
@@ -26848,6 +26958,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (122,1,1) = {"
 mV
@@ -27000,6 +27111,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (123,1,1) = {"
 mV
@@ -27152,6 +27264,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (124,1,1) = {"
 mV
@@ -27304,6 +27417,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (125,1,1) = {"
 mV
@@ -27456,6 +27570,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (126,1,1) = {"
 mV
@@ -27608,6 +27723,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (127,1,1) = {"
 iM
@@ -27760,6 +27876,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (128,1,1) = {"
 su
@@ -27912,6 +28029,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (129,1,1) = {"
 oR
@@ -28064,6 +28182,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (130,1,1) = {"
 oR
@@ -28216,6 +28335,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (131,1,1) = {"
 iM
@@ -28368,6 +28488,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (132,1,1) = {"
 iM
@@ -28520,6 +28641,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (133,1,1) = {"
 iM
@@ -28672,6 +28794,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (134,1,1) = {"
 iM
@@ -28824,6 +28947,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (135,1,1) = {"
 iM
@@ -28976,6 +29100,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (136,1,1) = {"
 iM
@@ -29128,6 +29253,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (137,1,1) = {"
 iM
@@ -29280,6 +29406,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (138,1,1) = {"
 iM
@@ -29432,6 +29559,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (139,1,1) = {"
 iM
@@ -29584,6 +29712,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (140,1,1) = {"
 sv
@@ -29736,6 +29865,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (141,1,1) = {"
 iM
@@ -29888,6 +30018,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (142,1,1) = {"
 mV
@@ -30040,6 +30171,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (143,1,1) = {"
 mV
@@ -30192,6 +30324,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (144,1,1) = {"
 mV
@@ -30344,6 +30477,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (145,1,1) = {"
 mV
@@ -30496,6 +30630,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (146,1,1) = {"
 mV
@@ -30648,6 +30783,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (147,1,1) = {"
 mV
@@ -30800,6 +30936,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (148,1,1) = {"
 mV
@@ -30952,6 +31089,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (149,1,1) = {"
 mV
@@ -31104,6 +31242,7 @@ mV
 mV
 mV
 mV
+Zu
 "}
 (150,1,1) = {"
 mV
@@ -31256,4 +31395,5 @@ mV
 mV
 mV
 mV
+Zu
 "}

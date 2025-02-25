@@ -6356,7 +6356,7 @@
 	pixel_y = 9
 	},
 /obj/item/device/helmet_visor/leader{
-	pixel_x = -9;
+	pixel_x = -8;
 	pixel_y = 4
 	},
 /obj/item/device/helmet_visor/leader{
