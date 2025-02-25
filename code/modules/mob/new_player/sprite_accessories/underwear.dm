@@ -82,6 +82,10 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	name = "Pink Boxers"
 	icon_state = "pink_boxers"
 
+/datum/sprite_accessory/underwear/boxers/grey
+	name = "Grey Boxers"
+	icon_state = "grey_boxers"
+
 /datum/sprite_accessory/underwear/boxers/marine
 	name = "USCM Boxers"
 	icon_state = "marine_boxers"
@@ -113,3 +117,6 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	name = "Black Panties"
 	icon_state = "black_satin"
 
+/datum/sprite_accessory/underwear/panties/grey
+	name = "Grey Panties"
+	icon_state = "grey_satin"
