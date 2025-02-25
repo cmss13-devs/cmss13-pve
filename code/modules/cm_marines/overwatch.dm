@@ -54,9 +54,7 @@
 	var/ui_theme = "crtblue"
 
 /obj/structure/machinery/computer/overwatch/Destroy()
-	QDEL_NULL(map)
-	QDEL_NULL(scroll_toggle)
-	QDEL_LIST(drawing_tools)
+	map = null
 	return ..()
 
 /obj/structure/machinery/computer/overwatch/attackby(obj/I as obj, mob/user as mob)  //Can't break or disassemble.

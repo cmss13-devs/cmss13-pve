@@ -108,9 +108,7 @@
 	var/scroll_toggle
 
 /obj/structure/machinery/prop/almayer/CICmap/Destroy()
-	QDEL_NULL(map)
-	QDEL_NULL(scroll_toggle)
-	QDEL_LIST(drawing_tools)
+	map = null
 	return ..()
 
 /obj/structure/machinery/prop/almayer/CICmap/attack_hand(mob/user)
