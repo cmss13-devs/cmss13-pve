@@ -65,5 +65,5 @@
 	addtimer(VARSET_CALLBACK(src, operating, FALSE), 1.2 SECONDS)
 	return TRUE
 
-/obj/structure/machinery/door/poddoor/railing/open
+/obj/structure/machinery/door/poddoor/railing/preopened
 	density = FALSE

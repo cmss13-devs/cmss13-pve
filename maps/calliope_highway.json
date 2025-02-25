@@ -1,0 +1,14 @@
+{
+    "map_name": "Calliope Highway",
+    "short_name": "Highway",
+    "map_path": "map_files/Calliope_Highway",
+    "map_file": "Calliope_Highway.dmm",
+    "webmap_url": "Solaris",
+
+    "weather_holder": "/datum/weather_ss_map_holder/calliope_highway",
+
+    "map_item_type": "/obj/item/map/big_red_map",
+
+    "camouflage": "desert"
+
+}
