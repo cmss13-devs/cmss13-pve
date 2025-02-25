@@ -646,7 +646,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	max_storage_space = 10
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
-	flags_equip_slot = SLOT_WAIST
+	flags_equip_slot = SLOT_WAIST|SLOT_SUIT_STORE
 	icon = 'icons/obj/items/clothing/belts.dmi'
 	icon_state = "g8pouch"
 	item_state = "g8pouch"

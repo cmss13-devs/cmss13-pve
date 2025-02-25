@@ -3,8 +3,7 @@
 /obj/item/weapon/gun/rifle
 	reload_sound = 'sound/weapons/gun_rifle_reload.ogg'
 	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
-
-	flags_equip_slot = SLOT_BACK
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
 	w_class = SIZE_LARGE
 	force = 5
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
