@@ -382,6 +382,34 @@
 	name = "Boots!: Issue No.160, Corporate Liason, Ten Years On"
 	desc = "Featuring an interview with a Weyland Yutani corporate liason, after ten years with a marine unit. An insert features a redeemable survey card for... a fifty dollar MCX gift card."
 
+//Prop instruments. Non-functional. Pure flavor.
+
+/obj/item/prop/instrument/guitar
+	name = "guitar"
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "guitar"
+	item_state = "guitar"
+	desc = "An antique guitar, comprised of old wood with new bronze strings. "
+	w_class = SIZE_MEDIUM
+	hitsound = 'sound/weapons/stringsmash.ogg'
+
+/obj/item/prop/instrument/banjo
+	name = "banjo"
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "banjo"
+	item_state = "banjo"
+	desc = "An old banjo that's drifted from colony to colony."
+	w_class = SIZE_MEDIUM
+	hitsound = 'sound/weapons/stringsmash.ogg'
+
+/obj/item/prop/instrument/harmonica
+	name = "harmonica"
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "harmonica"
+	item_state = "harmonica"
+	desc = "A dusty old harmonica that can crank the blues."
+	w_class = SIZE_SMALL
+
 /obj/item/prop/scrap
 	name = "scrap metal"
 	icon = 'icons/obj/items/fishing_atoms.dmi'
@@ -410,3 +438,5 @@
 	throwforce = 0.5
 	desc = "An object crafted out of branches, twigs, and twine rope that seem to form a miniature pyramid. It leaves you with an ominous feeling."
 	w_class = SIZE_LARGE
+
+
