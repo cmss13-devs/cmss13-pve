@@ -185,6 +185,18 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/platoon_commander_rooms)
+"bw" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = -13
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "bx" = (
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -306,6 +318,11 @@
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = 11
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
@@ -689,6 +706,11 @@
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = 11
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
@@ -1678,6 +1700,11 @@
 	dir = 4;
 	pixel_y = 10
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = 11
+	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "kk" = (
@@ -2027,6 +2054,9 @@
 	pixel_y = 31;
 	pixel_x = 13
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 8
+	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "mF" = (
@@ -2354,6 +2384,11 @@
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 5
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 5;
+	pixel_x = -13
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
@@ -2963,6 +2998,11 @@
 	dir = 4;
 	pixel_y = 10
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = 11
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "sx" = (
@@ -3318,6 +3358,11 @@
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = 11
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
@@ -4587,6 +4632,11 @@
 	dir = 4;
 	pixel_y = 4
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 4;
+	pixel_x = -13
+	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
 "BH" = (
@@ -4598,6 +4648,11 @@
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 5
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 5;
+	pixel_x = 11
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
@@ -4883,6 +4938,11 @@
 	dir = 4;
 	pixel_y = 10
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = -13
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "Dv" = (
@@ -4977,6 +5037,11 @@
 /obj/item/reagent_container/food/snacks/upp,
 /obj/item/reagent_container/food/snacks/upp,
 /obj/item/reagent_container/food/snacks/upp,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = -13
+	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
 "DV" = (
@@ -6110,6 +6175,11 @@
 	light_range = 4;
 	pixel_y = -16
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 4;
+	pixel_x = 11
+	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "LO" = (
@@ -6266,13 +6336,15 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
 "MM" = (
-/obj/structure/ladder{
-	height = 1
-	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
 	pixel_y = -15
+	},
+/obj/structure/prop{
+	desc = "A sturdy metal ladder that leads to lower deck of Chapaev which houses CIC and Brig. The hatch is closed, for now.";
+	icon_state = "ladder11";
+	name = "ladder"
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/dorms)
@@ -6460,6 +6532,11 @@
 	icon_state = "lattice8";
 	pixel_x = 45;
 	pixel_y = 2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = -13
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
@@ -7608,6 +7685,9 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -8
+	},
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
 	icon_state = "lattice12";
@@ -7636,6 +7716,11 @@
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = -13
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
@@ -8061,6 +8146,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = -13
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
@@ -20583,7 +20673,7 @@ ko
 nf
 Be
 BO
-kg
+bw
 ZS
 tY
 ZS
@@ -22663,7 +22753,7 @@ Ih
 DL
 DL
 Ih
-Ih
+Lx
 cA
 WT
 WT
