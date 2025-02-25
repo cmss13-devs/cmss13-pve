@@ -2429,6 +2429,7 @@
 	density = 1;
 	faction = "UPP"
 	},
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
 "pv" = (
