@@ -18,6 +18,8 @@
 	max_range = 7
 	damage = 15
 	shell_speed = AMMO_SPEED_TIER_2
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_VERY_SOFT_YELLOW
 
 /datum/ammo/rocket/New()
 	..()

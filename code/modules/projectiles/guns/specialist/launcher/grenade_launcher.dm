@@ -182,7 +182,7 @@
 	playsound(user.loc, fire_sound, 50, 1)
 
 	var/angle = floor(Get_Angle(user,target))
-	muzzle_flash(angle,user)
+	muzzle_flash(angle)
 	simulate_recoil(0, user)
 
 	var/obj/item/explosive/grenade/fired = cylinder.contents[1]
