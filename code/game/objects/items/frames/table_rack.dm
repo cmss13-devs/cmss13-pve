@@ -81,16 +81,6 @@
 	matter = list("metal" = 15000) //A reinforced table. Two sheets of metal and four rods
 	table_type = /obj/structure/surface/table/reinforced
 
-/* /obj/item/frame/table/reinforced/attackby(obj/item/W, mob/user)
-	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
-		deconstruct()
-
-/obj/item/frame/table/reinforced/deconstruct(disassembled = TRUE)
-	if(disassembled)
-		new /obj/item/stack/sheet/metal(get_turf(src))
-		new /obj/item/stack/rods(get_turf(src))
-	return ..()
- */
 /*
  * Wooden Table Parts
  */
@@ -115,10 +105,6 @@
 			new /obj/item/frame/table/gambling(get_turf(src))
 			qdel(src)
 
-/* /obj/item/frame/table/wood/deconstruct(disassembled = TRUE)
-	if(disassembled)
-		new /obj/item/stack/sheet/wood(get_turf(src))
-	return ..() */
 
 /obj/item/frame/table/wood/poor
 	name = "poor wooden table parts"
