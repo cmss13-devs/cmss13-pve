@@ -20,7 +20,7 @@
 
 /obj/item/frame/table/brown
 	color ="#8B7B5B"
-	table_type = /obj/structure/surface/table
+	table_type = /obj/structure/surface/table/brown
 
 /obj/item/frame/table/attackby(obj/item/W, mob/user)
 
