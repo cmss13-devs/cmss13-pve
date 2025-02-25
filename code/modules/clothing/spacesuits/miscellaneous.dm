@@ -132,6 +132,69 @@
 	time_to_equip = 50
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR
 	breach_vulnerability = SPACESUIT_BREACH_STANDARD
+	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/spacesuit/toggle_motion_detector)
+	var/obj/item/device/motiondetector/spacesuit/MD
+
+/obj/item/clothing/suit/space/pressure/Initialize()
+	. = ..()
+	MD = new(src)
+//Delay of long mode with range of short mode
+/obj/item/device/motiondetector/spacesuit
+	detector_mode = MOTION_DETECTOR_LONG
+	detector_range = 7
+	blip_type = "tracker"
+
+/obj/item/device/motiondetector/spacesuit/get_user()
+	if(ishuman(loc.loc))
+		return loc.loc
+
+
+/datum/action/item_action/spacesuit/toggle_motion_detector/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Motion Detector"
+	action_icon_state = "motion_detector"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/spacesuit/toggle_motion_detector/action_activate()
+	. = ..()
+	var/obj/item/clothing/suit/space/pressure/space_suit = holder_item
+	space_suit.toggle_motion_detector(usr)
+
+/datum/action/item_action/spacesuit/toggle_motion_detector/proc/update_icon()
+	if(!holder_item)
+		return
+	var/obj/item/clothing/suit/space/pressure/space_suit = holder_item
+	if(space_suit.MD.active)
+		button.icon_state = "template_on"
+	else
+		button.icon_state = "template"
+
+/obj/item/clothing/suit/space/pressure/proc/toggle_motion_detector(mob/user)
+	MD.active = !MD.active
+	if(MD.active)
+		START_PROCESSING(SSfastobj, MD)
+	else
+		STOP_PROCESSING(SSfastobj, MD)
+	to_chat(user, "[icon2html(src, usr)] You [MD.active? "<B>enable</b>" : "<B>disable</b>" ] \the [src]'s motion detector.")
+	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	var/datum/action/item_action/spacesuit/toggle_motion_detector/TMD = locate(/datum/action/item_action/spacesuit/toggle_motion_detector) in actions
+	TMD.update_icon()
+/*
+/obj/item/clothing/suit/space/pressure/process()
+	if(proximity.active)
+		recycletime--
+		if(!recycletime)
+			recycletime = initial(recycletime)
+			MD.refresh_blip_pool()
+
+		long_range_cooldown--
+		if(long_range_cooldown)
+			return
+		long_range_cooldown = initial(long_range_cooldown)
+		MD.scan()
+	..()*/
 
 /obj/item/clothing/head/helmet/space/pressure/orange
 	item_state = "pressure_orange"
@@ -187,7 +250,28 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	allowed = list(/obj/item/weapon/gun,/obj/item/weapon/baton,/obj/item/restraint/handcuffs,/obj/item/tank)
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/prop/prop_gun,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/storage/bible,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/belt/gun/type47,
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+		/obj/item/storage/belt/gun/smartpistol,
+		/obj/item/storage/belt/gun/flaregun,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+		/obj/item/storage/belt/gun/m39,
+	)
+	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS
 	breach_vulnerability = SPACESUIT_BREACH_COMBAT
 
@@ -206,8 +290,30 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	allowed = list(/obj/item/weapon/gun,/obj/item/weapon/baton,/obj/item/restraint/handcuffs,/obj/item/tank)
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/prop/prop_gun,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/storage/bible,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/belt/gun/type47,
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+		/obj/item/storage/belt/gun/smartpistol,
+		/obj/item/storage/belt/gun/flaregun,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+		/obj/item/storage/belt/gun/m39,
+	)
+	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS
+	breach_vulnerability = SPACESUIT_BREACH_COMBAT
 
 // Souto man
 

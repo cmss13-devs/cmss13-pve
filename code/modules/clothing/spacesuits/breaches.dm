@@ -5,7 +5,7 @@
 #define SPACESUIT_BREACH_STANDARD 1.5
 #define SPACESUIT_BREACH_COMBAT 1
 #define SPACESUIT_BREACH_THRESHOLD_CONSTANT 10 // to be made smaller by breach_vulnerability, inversely
-#define SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER 2.5
+#define SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER 2
 
 /datum/breach
 	var/class = 0    // Size. Lower is smaller.
@@ -162,13 +162,12 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 		else if(burn_damage >= 5 && burn_damage > brute_damage)
 			name = "[(damage > 10) ? "heavily " : ""]scorched [base_name]"
-		else
-			var/patched_breach_tally = 0
-			for(var/datum/breach/B in breaches)
-				if(B.patched)
-					patched_breach_tally++
-			if(patched_breach_tally == breaches.len)
-				name = "patched [base_name]"
+	var/patched_breach_tally = 0
+	for(var/datum/breach/B in breaches)
+		if(B.patched)
+			patched_breach_tally++
+	if(patched_breach_tally == breaches.len)
+		name = "patched [base_name]"
 	else
 		name = "[base_name]"
 	return damage
@@ -177,31 +176,38 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 /obj/item/clothing/suit/space/attackby(obj/item/W as obj, mob/user as mob)
 
+	if(!(iswelder(W) || iswire(W) || istype(W,/obj/item/stack/sheet/mineral/plastic)))
+		return ..()
+
+	if(usr == user)
+		if(!do_after(user, 20, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+			return
+
 	if(!can_breach || !LAZYLEN(breaches) || !damage)
 		to_chat(user, "There are no breaches to repair on \the [src].")
-		return
+		return ..()
 
-	if(!(iswelder(W) || iswire(W) || istype(W,/obj/item/stack/sheet/mineral/plastic)))
-		return
 	if(iswelder(W))
 		var/obj/item/tool/weldingtool/WT = W
-		if(!WT.remove_fuel(3))
-			to_chat(user, SPAN_DANGER("You need more welding fuel to repair this suit."))
-			return
+		if(WT.isOn())
+			if(!WT.remove_fuel(1))
+				to_chat(user, SPAN_DANGER("You need more welding fuel to repair this suit."))
+				return ..()
+		else
+			return ..()
 	if(iswire(W) || istype(W,/obj/item/stack/sheet/mineral/plastic))
 		var/obj/item/stack/repair_material = W
-		if(!repair_material.use(5))
+		if(!repair_material.use(3))
 			to_chat(user, SPAN_DANGER("You need more material to repair this suit."))
+			return ..()
 
 	for(var/datum/breach/B in breaches)
 		if(!B.patched)
 			B.patched = TRUE
-			user.visible_message(SPAN_HELPFUL("<b>[user]</b> patches the [B.descriptor] using [W]."))
+			user.visible_message(SPAN_HELPFUL("<b>[usr]</b> patches the [B.descriptor] using [W]."))
 			B.update_descriptor()
-			break
-
-
-	calc_breach_damage()
+			calc_breach_damage()
+			return
 
 	..()
 
@@ -217,6 +223,8 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 		. += SPAN_HELPFUL("This has an [SPAN_BOLD("injection port")]. This allows the use of [SPAN_BOLD("injectors, syringes, hyposprays and bioglue")] while it is being worn.")
 	else
 		. += SPAN_DANGER("This does [SPAN_BOLD("not have an injection port")]. It is [SPAN_BOLD("impossible to give any medicine while it is being worn")]. This has to be breaking some regulations!")
+	if(locate(/datum/action/item_action/spacesuit/toggle_motion_detector) in actions)
+		. += SPAN_NOTICE("This has a built-in motion detector. It has a limited range and update frequency compared to the M314 or UDO-58.")
 	if(can_breach && LAZYLEN(breaches))
 		var/list/breach_counts = list()
 

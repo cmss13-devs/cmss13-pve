@@ -1147,7 +1147,7 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 			if(!owner.wear_suit) return
 			if(!istype(owner.wear_suit,/obj/item/clothing/suit/space)) return
 			var/obj/item/clothing/suit/space/space_suit = owner.wear_suit
-			INVOKE_ASYNC(space_suit, TYPE_PROC_REF(/obj/item/clothing/suit/space, check_limb_support), FALSE, owner)
+			addtimer(CALLBACK(space_suit, TYPE_PROC_REF(/obj/item/clothing/suit/space, check_limb_support), FALSE, owner), 0)
 	else
 		owner.visible_message(\
 			SPAN_WARNING("[owner] seems to withstand the blow!"),

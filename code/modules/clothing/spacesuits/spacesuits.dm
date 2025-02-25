@@ -93,19 +93,21 @@
 		for(var/obj/limb/O in H.limbs)
 			if(!(O.status & LIMB_SPLINTED) && (O.status & LIMB_BROKEN))
 				to_chat(H, SPAN_HELPFUL("You feel the internal cushioning of the [src] begin to inflate against your [O.display_name]."))
-				if(do_after(usr, 5 SECONDS, INTERRUPT_NONE))
-					playsound(loc, 'sound/machines/hiss.ogg', 15, 1)
+				if(do_after(H, 5 SECONDS, INTERRUPT_NONE))
+					if(loc != H)
+						return
+					playsound(loc, 'sound/machines/hiss.ogg', 20, TRUE)
 					to_chat(H, SPAN_HELPFUL("\The [src] constricts around your [O.display_name], supporting the fracture."))
 					supporting_limbs += O.display_name
 					O.status |= LIMB_SPLINTED
 					O.status |= LIMB_SPLINTED_INDESTRUCTIBLE
 	else
 	// Otherwise, remove the splints.
-		playsound(loc, 'sound/machines/hiss.ogg', 15, 1)
+		playsound(loc, 'sound/machines/hiss.ogg', 20, TRUE)
 		for(var/obj/limb/O in H.limbs)
 			if((O.status & LIMB_SPLINTED) && (O.status & LIMB_BROKEN) && supporting_limbs.Find(O.display_name))
-				O.status &= ~ LIMB_SPLINTED
+				O.status &= ~LIMB_SPLINTED
 				O.status &= ~LIMB_SPLINTED_INDESTRUCTIBLE
 		if(supporting_limbs.len)
-			to_chat(H, SPAN_USERDANGER("\The [src] stops supporting your [jointext(supporting_limbs, ", ")]."))
+			to_chat(H, SPAN_DANGER("\The [src] stops supporting your [jointext(supporting_limbs, ", ")]."))
 		supporting_limbs.Cut()
