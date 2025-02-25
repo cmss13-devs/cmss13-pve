@@ -1346,7 +1346,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	hull = 0
 
 /turf/closed/wall/upp_wall
-	name = "ribbed outpost walls"
+	name = "reinforced walls"
 	icon = 'icons/turf/walls/upp_green.dmi'
 	icon_state = "uppwall_interior"
 	desc = "A thick and chunky metal wall covered in jagged ribs."
@@ -1354,14 +1354,14 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	damage_cap = HEALTH_WALL_REINFORCED
 
 /turf/closed/wall/upp_wall/hull
-	name = "ribbed outpost walls"
+	name = "ribbed hull walls"
 	icon = 'icons/turf/walls/upp_green.dmi'
 	icon_state = "uppwall_hull"
 	desc = "A thick and chunky metal wall covered in jagged ribs."
 	hull = 1
 
 /turf/closed/wall/upp_wall/grey
-	name = "bare outpost walls"
+	name = "reinforced walls"
 	icon = 'icons/turf/walls/upp_grey.dmi'
 	icon_state = "uppwall_interior"
 	desc = "A thick and chunky metal wall. The surface is barren and imposing."
@@ -1369,7 +1369,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	damage_cap = HEALTH_WALL_REINFORCED
 
 /turf/closed/wall/upp_wall/grey/hull
-	name = "bare outpost walls"
+	name = "ribbed hull walls"
 	icon = 'icons/turf/walls/upp_grey.dmi'
 	icon_state = "uppwall_hull"
 	desc = "A thick and chunky metal wall. The surface is barren and imposing."
