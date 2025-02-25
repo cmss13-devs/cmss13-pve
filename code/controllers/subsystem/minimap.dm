@@ -880,9 +880,9 @@ SUBSYSTEM_DEF(minimaps)
 
 ///Setter for the offsets of the x and y of drawing based on the input z, and the drawn_image
 /atom/movable/screen/minimap_tool/proc/set_zlevel(zlevel, minimap_flag)
-    x_offset = SSminimaps.minimaps_by_z["[zlevel]"].x_offset
-    y_offset = SSminimaps.minimaps_by_z["[zlevel]"].y_offset
-    drawn_image = SSminimaps.get_drawing_image(zlevel, minimap_flag)
+	x_offset = SSminimaps.minimaps_by_z["[zlevel]"].x_offset
+	y_offset = SSminimaps.minimaps_by_z["[zlevel]"].y_offset
+	drawn_image = SSminimaps.get_drawing_image(zlevel, minimap_flag)
 
 /atom/movable/screen/minimap_tool/MouseEntered(location, control, params)
 	. = ..()
@@ -962,63 +962,63 @@ SUBSYSTEM_DEF(minimaps)
 
 /// proc for drawing a line from list(startx, starty) to list(endx, endy) on the screen. yes this is aa ripoff of [/proc/getline]
 /atom/movable/screen/minimap_tool/draw_tool/proc/draw_line(list/start_coords, list/end_coords, draw_color = color)
-    // converts these into the unscaled minimap version so we have to do less calculating
-    var/start_x = FLOOR(start_coords[1]/2, 1)
-    var/start_y = FLOOR(start_coords[2]/2, 1)
-    var/end_x = FLOOR(end_coords[1]/2, 1)
-    var/end_y = FLOOR(end_coords[2]/2, 1)
-    var/icon/mona_lisa = icon(drawn_image.icon)
+	// converts these into the unscaled minimap version so we have to do less calculating
+	var/start_x = FLOOR(start_coords[1]/2, 1)
+	var/start_y = FLOOR(start_coords[2]/2, 1)
+	var/end_x = FLOOR(end_coords[1]/2, 1)
+	var/end_y = FLOOR(end_coords[2]/2, 1)
+	var/icon/mona_lisa = icon(drawn_image.icon)
 
-    //special case 1, straight line
-    if(start_x == end_x)
-        mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, start_x*2 + 1, end_y*2 + 1)
-        drawn_image.icon = mona_lisa
-        return
-    if(start_y == end_y)
-        drawn_image.icon = mona_lisa
-        mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, end_x*2 + 1, start_y*2 + 1)
-        return
+	//special case 1, straight line
+	if(start_x == end_x)
+		mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, start_x*2 + 1, end_y*2 + 1)
+		drawn_image.icon = mona_lisa
+		return
+	if(start_y == end_y)
+		drawn_image.icon = mona_lisa
+		mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, end_x*2 + 1, start_y*2 + 1)
+		return
 
-    mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, start_x*2 + 1, start_y*2 + 1)
+	mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, start_x*2 + 1, start_y*2 + 1)
 
-    var/abs_dx = abs(end_x - start_x)
-    var/abs_dy = abs(end_y - start_y)
-    var/sign_dx = ( ((end_x - start_x) > 0) - ((end_x - start_x) < 0) )
-    var/sign_dy = ( ((end_y - start_y) > 0) - ((end_y - start_y) < 0) )
+	var/abs_dx = abs(end_x - start_x)
+	var/abs_dy = abs(end_y - start_y)
+	var/sign_dx = ( ((end_x - start_x) > 0) - ((end_x - start_x) < 0) )
+	var/sign_dy = ( ((end_y - start_y) > 0) - ((end_y - start_y) < 0) )
 
-    //special case 2, perfectly diagonal line
-    if(abs_dx == abs_dy)
-        for(var/j = 1 to abs_dx)
-            start_x += sign_dx
-            start_y += sign_dy
-            mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, start_x*2 + 1, start_y*2 + 1)
-        drawn_image.icon = mona_lisa
-        return
+	//special case 2, perfectly diagonal line
+	if(abs_dx == abs_dy)
+		for(var/j = 1 to abs_dx)
+			start_x += sign_dx
+			start_y += sign_dy
+			mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, start_x*2 + 1, start_y*2 + 1)
+		drawn_image.icon = mona_lisa
+		return
 
-    /*x_error and y_error represents how far we are from the ideal line.
-    Initialized so that we will check these errors against 0, instead of 0.5 * abs_(dx/dy)*/
-    //We multiply every check by the line slope denominator so that we only handles integers
-    if(abs_dx > abs_dy)
-        var/y_error = -(abs_dx >> 1)
-        var/steps = abs_dx
-        while(steps--)
-            y_error += abs_dy
-            if(y_error > 0)
-                y_error -= abs_dx
-                start_y += sign_dy
-            start_x += sign_dx
-            mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, start_x*2 + 1, start_y*2 + 1)
-    else
-        var/x_error = -(abs_dy >> 1)
-        var/steps = abs_dy
-        while(steps--)
-            x_error += abs_dx
-            if(x_error > 0)
-                x_error -= abs_dy
-                start_x += sign_dx
-            start_y += sign_dy
-            mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, start_x*2 + 1, start_y*2 + 1)
-    drawn_image.icon = mona_lisa
+	/*x_error and y_error represents how far we are from the ideal line.
+	Initialized so that we will check these errors against 0, instead of 0.5 * abs_(dx/dy)*/
+	//We multiply every check by the line slope denominator so that we only handles integers
+	if(abs_dx > abs_dy)
+		var/y_error = -(abs_dx >> 1)
+		var/steps = abs_dx
+		while(steps--)
+			y_error += abs_dy
+			if(y_error > 0)
+				y_error -= abs_dx
+				start_y += sign_dy
+			start_x += sign_dx
+			mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, start_x*2 + 1, start_y*2 + 1)
+	else
+		var/x_error = -(abs_dy >> 1)
+		var/steps = abs_dy
+		while(steps--)
+			x_error += abs_dx
+			if(x_error > 0)
+				x_error -= abs_dy
+				start_x += sign_dx
+			start_y += sign_dy
+			mona_lisa.DrawBox(draw_color, start_x*2, start_y*2, start_x*2 + 1, start_y*2 + 1)
+	drawn_image.icon = mona_lisa
 
 /atom/movable/screen/minimap_tool/draw_tool/red
 	screen_loc = "16,14"
