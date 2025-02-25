@@ -4999,6 +4999,7 @@
 	pixel_y = 16;
 	density = 0
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked,
 /area/lv295/indoors/sublevel_4)
 "pS" = (
@@ -6650,10 +6651,6 @@
 /turf/open/floor/almayer/research/containment/floor2/north,
 /area/lv295/indoors/sublevel_4)
 "vr" = (
-/obj/item/storage/box/guncase/flamer/fuel{
-	pixel_y = -1;
-	pixel_x = 3
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/prison/floor_marked,
