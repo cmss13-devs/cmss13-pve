@@ -33,7 +33,8 @@
 	)
 	fire_delay = 0.2 SECONDS //base fire rate, modified by stage_delay_mult
 
-	activation_sounds = list('sound/weapons/gun_minigun.ogg')
+	activation_sounds = list('sound/weapons/vehicles/minigun_loop.ogg')
+	activation_sounds_vary = 1
 	/// Active firing time to reach max spin_stage.
 	var/spinup_time = 8 SECONDS
 	/// Grace period before losing spin_stage.
