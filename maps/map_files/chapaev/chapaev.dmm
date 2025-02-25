@@ -235,17 +235,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
-"bM" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/prop/almayer/CICmap/upp{
-	pixel_x = 0;
-	pixel_y = 6
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_sergeant)
 "bN" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -259,28 +248,46 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/prep_hallway)
+"cb" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = -6;
+	pixel_y = 11
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = 2;
+	pixel_y = 11
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = -3;
+	pixel_y = 24
+	},
+/obj/item/ammo_magazine/minigun{
+	desc = "A huge ammo drum for a huge gun. Your platoon got issued with magazines first which happened several months ago. When will the miniguns come, you wonder?";
+	name = "GSh-7.62 rotating ammo drum (7.62x51mm)";
+	pixel_x = 4;
+	pixel_y = 5
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/item/device/helmet_visor/leader/upp{
+	pixel_x = -7;
+	pixel_y = -6
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/squad_two)
 "cc" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"ce" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/prop/almayer/CICmap/upp,
-/obj/structure/machinery/computer/cameras/almayer/vehicle{
-	network = list("Chapaev","Vehicle");
-	pixel_x = -22;
-	pixel_y = 0
-	},
-/obj/structure/phone_base/upp_net{
-	name = "Overwatch Telephone";
-	phone_category = "Chapaev";
-	phone_id = "Overwatch";
-	pixel_y = 28;
-	networks_receive = list("USCM","UPP");
-	networks_transmit = list("USCM","UPP")
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms)
 "ck" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -337,6 +344,24 @@
 "cJ" = (
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/golden_arrow/synthcloset)
+"cK" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/prop/almayer/CICmap/upp,
+/obj/structure/machinery/computer/cameras/almayer/vehicle{
+	network = list("Chapaev","Vehicle");
+	pixel_x = -22;
+	pixel_y = 0
+	},
+/obj/structure/phone_base/upp_net{
+	name = "Overwatch Telephone";
+	phone_category = "Chapaev";
+	phone_id = "Overwatch";
+	pixel_y = 28;
+	networks_receive = list("USCM","UPP");
+	networks_transmit = list("USCM","UPP")
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/platoon_commander_rooms)
 "cL" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -357,35 +382,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
-"cQ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/closet/crate/freezer/cooler{
-	pixel_y = 9;
-	pixel_x = 7;
-	can_block_movement = 0;
-	anchored = 1
-	},
-/obj/item/snowball{
-	pixel_y = 9;
-	pixel_x = 5
-	},
-/obj/item/reagent_container/food/snacks/bearmeat{
-	pixel_y = 8;
-	pixel_x = 6;
-	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the NODs you traded?"
-	},
-/obj/item/reagent_container/food/snacks/bearmeat{
-	pixel_y = 14;
-	pixel_x = 6;
-	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the incinerators you traded?"
-	},
-/obj/structure/prop/ice_colony/hula_girl{
-	pixel_x = -7;
-	pixel_y = 12
-	},
-/obj/item/device/helmet_visor/leader/upp,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/squad_one)
 "cR" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -890,6 +886,22 @@
 	dir = 8
 	},
 /area/golden_arrow/briefing)
+"hd" = (
+/obj/structure/machinery/computer/crew/alt{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/structure/machinery/light/double,
+/obj/structure/machinery/computer/med_data/laptop{
+	dir = 1;
+	pixel_x = 10;
+	req_one_access = list(240, 241, 242)
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/medical)
 "hk" = (
 /obj/structure/machinery/cryopod/big/flipped{
 	pixel_x = -8;
@@ -1364,6 +1376,25 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
+"lF" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/hand_labeler{
+	pixel_x = -6;
+	pixel_y = 12
+	},
+/obj/item/prop/tableflag/upp{
+	pixel_x = 7;
+	pixel_y = 12
+	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/machinery/computer/secure_data{
+	dir = 8;
+	req_access = null
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/platoon_sergeant)
 "lO" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/flashlight/lamp/on{
@@ -1413,6 +1444,35 @@
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
+"mg" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/closet/crate/freezer/cooler{
+	pixel_y = 9;
+	pixel_x = 7;
+	can_block_movement = 0;
+	anchored = 1
+	},
+/obj/item/snowball{
+	pixel_y = 9;
+	pixel_x = 5
+	},
+/obj/item/reagent_container/food/snacks/bearmeat{
+	pixel_y = 8;
+	pixel_x = 6;
+	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the NODs you traded?"
+	},
+/obj/item/reagent_container/food/snacks/bearmeat{
+	pixel_y = 14;
+	pixel_x = 6;
+	desc = "This slab of bear meat was bartered for from a couple of enterprising Territorial Guardsmen a few missions prior. Was it worth the incinerators you traded?"
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = -7;
+	pixel_y = 12
+	},
+/obj/item/device/helmet_visor/leader/upp,
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/squad_one)
 "mk" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -1549,6 +1609,17 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
+"nG" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/prop/almayer/CICmap/upp{
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/platoon_sergeant)
 "nK" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/strata/floor3/east,
@@ -2469,22 +2540,6 @@
 "vG" = (
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
-"vH" = (
-/obj/structure/machinery/computer/crew/alt{
-	dir = 1;
-	pixel_x = -8
-	},
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/structure/machinery/light/double,
-/obj/structure/machinery/computer/med_data/laptop{
-	dir = 1;
-	pixel_x = 10;
-	req_one_access = list(240, 241, 242)
-	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/medical)
 "vJ" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
@@ -2571,42 +2626,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/supply)
-"wi" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = -6;
-	pixel_y = 11
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = 2;
-	pixel_y = 11
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = -3;
-	pixel_y = 24
-	},
-/obj/item/ammo_magazine/minigun{
-	desc = "A huge ammo drum for a huge gun. Your platoon got issued with magazines first which happened several months ago. When will the miniguns come, you wonder?";
-	name = "GSh-7.62 rotating ammo drum (7.62x51mm)";
-	pixel_x = 4;
-	pixel_y = 5
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -15
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice2";
-	pixel_x = 16;
-	pixel_y = 16
-	},
-/obj/item/device/helmet_visor/leader/upp{
-	pixel_x = -7;
-	pixel_y = -6
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/squad_two)
 "wj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -2759,19 +2778,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
-"xc" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/device/flashlight/lamp/on{
-	pixel_y = 21;
-	pixel_x = 2;
-	anchored = 1
-	},
-/obj/structure/machinery/computer/skills{
-	dir = 8;
-	req_one_access = null
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_sergeant)
 "xe" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/landmark/late_join/alpha,
@@ -3198,6 +3204,19 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"AG" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/device/flashlight/lamp/on{
+	pixel_y = 21;
+	pixel_x = 2;
+	anchored = 1
+	},
+/obj/structure/machinery/computer/skills{
+	dir = 8;
+	req_one_access = null
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/platoon_sergeant)
 "Ba" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3601,6 +3620,25 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
+"Ex" = (
+/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/storage/marine/veteran/lamp,
+/obj/item/storage/belt/gun/type47/np92,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access_txt = "240";
+	req_access = null;
+	can_block_movement = 0;
+	pixel_y = 14;
+	pixel_x = -5;
+	name = "equipment locker"
+	},
+/obj/item/storage/backpack/lightpack/upp,
+/obj/item/storage/box/zipcuffs/small{
+	pixel_x = 5;
+	pixel_y = -1
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/platoon_commander_rooms)
 "Ez" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/landmark/late_join/alpha,
@@ -3808,16 +3846,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
-"He" = (
-/obj/item/clothing/glasses/hud/health{
-	pixel_x = 7;
-	pixel_y = 17
-	},
-/obj/structure/machinery/computer/overwatch/almayer/upp{
-	density = 1
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms)
 "Hh" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -4170,50 +4198,12 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/squad_one)
-"Ku" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/tool/hand_labeler{
-	pixel_x = -6;
-	pixel_y = 12
-	},
-/obj/item/prop/tableflag/upp{
-	pixel_x = 7;
-	pixel_y = 12
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/machinery/computer/secure_data{
-	dir = 8;
-	req_access = null
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant)
 "Kw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_sergeant)
-"Kx" = (
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
-/obj/item/storage/belt/gun/type47/np92,
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access_txt = "240";
-	req_access = null;
-	can_block_movement = 0;
-	pixel_y = 14;
-	pixel_x = -5;
-	name = "equipment locker"
-	},
-/obj/item/storage/backpack/lightpack/upp,
-/obj/item/storage/box/zipcuffs/small{
-	pixel_x = 5;
-	pixel_y = -1
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms)
 "Kz" = (
 /obj/structure/machinery/pipedispenser,
 /obj/structure/machinery/light/small{
@@ -4818,6 +4808,24 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
+"Su" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/tool/crowbar/tactical,
+/obj/item/storage/box/zipcuffs/small{
+	pixel_x = 5;
+	pixel_y = -1
+	},
+/obj/item/device/binoculars/range/designator,
+/obj/item/deployable_beacon/red,
+/obj/item/device/whistle{
+	pixel_y = 8;
+	pixel_x = -8
+	},
+/obj/item/device/helmet_visor/leader/upp,
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/platoon_sergeant)
 "Sy" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -5386,24 +5394,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
-"XZ" = (
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/tool/crowbar/tactical,
-/obj/item/storage/box/zipcuffs/small{
-	pixel_x = 5;
-	pixel_y = -1
-	},
-/obj/item/device/binoculars/range/designator,
-/obj/item/deployable_beacon/red,
-/obj/item/device/whistle{
-	pixel_y = 8;
-	pixel_x = -8
-	},
-/obj/item/device/helmet_visor/leader/upp,
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant)
 "Yc" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/power/apc/almayer/east,
@@ -5523,6 +5513,16 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/briefing)
+"Zs" = (
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = 7;
+	pixel_y = 17
+	},
+/obj/structure/machinery/computer/overwatch/almayer/upp{
+	density = 1
+	},
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/platoon_commander_rooms)
 "Zt" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
@@ -12339,7 +12339,7 @@ mV
 mV
 mV
 hE
-XZ
+Su
 UC
 Wy
 gt
@@ -12800,7 +12800,7 @@ og
 Ut
 fB
 NU
-wi
+cb
 Oq
 Oq
 Oq
@@ -12940,7 +12940,7 @@ tZ
 cH
 xL
 ww
-cQ
+mg
 Fc
 xZ
 Fc
@@ -12950,7 +12950,7 @@ IT
 Kw
 og
 aZ
-xc
+AG
 NU
 DD
 ID
@@ -13088,7 +13088,7 @@ os
 rw
 qv
 os
-Kx
+Ex
 Go
 YU
 ww
@@ -13250,8 +13250,8 @@ dK
 Ze
 zJ
 ww
-Ku
-bM
+lF
+nG
 Wi
 Ut
 hv
@@ -13845,7 +13845,7 @@ PB
 yH
 uR
 os
-ce
+cK
 nh
 Ja
 MD
@@ -13997,7 +13997,7 @@ WG
 yH
 uR
 os
-He
+Zs
 lU
 dm
 lU
@@ -15994,7 +15994,7 @@ qR
 zO
 rN
 lX
-vH
+hd
 CK
 la
 OJ
