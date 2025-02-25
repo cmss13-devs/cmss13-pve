@@ -40,6 +40,8 @@ All ShuttleMove procs go here
 		else //non-living mobs shouldn't be affected by shuttles, which is why this is an else
 			if(thing.anchored)
 				// Ordered by most likely:
+				if(istype(thing, /obj/effect/projector))
+					continue
 				if(istype(thing, /obj/structure/machinery/landinglight))
 					continue
 				if(istype(thing, /obj/docking_port))

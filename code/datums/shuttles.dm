@@ -122,6 +122,11 @@
 /datum/map_template/shuttle/trijent_elevator/ice_elevator/requisitions
 	elevator_network = "Requisitions"
 
+/datum/map_template/shuttle/trijent_elevator/osiris
+	name = "Caverns Elevator"
+	shuttle_id = "osiris_elevator"
+	elevator_network = "OsirisCaverns"
+
 /datum/map_template/shuttle/trijent_elevator/post_load(obj/docking_port/mobile/M)
 	. = ..()
 	var/obj/docking_port/mobile/trijent_elevator/elev = M
