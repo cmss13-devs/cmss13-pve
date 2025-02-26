@@ -58,24 +58,6 @@
 /////// HYBRISA ///////
 ///////////////////////
 
-// Hybrisa - Goons
-
-/obj/effect/landmark/corpsespawner/hybrisa_goon
-	name = "Weyland-Yutani Corporate Security Officer"
-	equip_path = /datum/equipment_preset/corpse/pmc/hybrisa_goon
-
-/obj/effect/landmark/corpsespawner/hybrisa_goon/burst
-	name = "Burst Weyland-Yutani Corporate Security Officer"
-	equip_path = /datum/equipment_preset/corpse/pmc/hybrisa_goon/lead/burst
-
-/obj/effect/landmark/corpsespawner/hybrisa_goon/lead
-	name = "Weyland-Yutani Corporate Security Lead"
-	equip_path = /datum/equipment_preset/corpse/pmc/hybrisa_goon/lead
-
-/obj/effect/landmark/corpsespawner/hybrisa_goon/lead/burst
-	name = "Burst Weyland-Yutani Corporate Security Lead"
-	equip_path = /datum/equipment_preset/corpse/pmc/hybrisa_goon/lead/burst
-
 //*****************************************************************************************************/
 
 // Civilian
