@@ -31,7 +31,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	set name = "Toggle Barricade Creation"
 	set category = "Game Master.Flags"
 
-	if(!admin_holder || !check_rights(R_ADMIN))
+	if(!check_rights(R_ADMIN))
 		return
 
 	if(!SSticker.mode)
