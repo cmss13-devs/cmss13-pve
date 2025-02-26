@@ -809,13 +809,6 @@
 /obj/item/storage/belt/utility,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
-"arZ" = (
-/obj/item/ammo_box/magazine/m49a/ap/empty,
-/obj/structure/pipes/standard/manifold/hidden/green{
-	dir = 1
-	},
-/turf/open/floor/prison,
-/area/lv522/indoors/a_block/admin)
 "ash" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -22437,6 +22430,13 @@
 /obj/structure/largecrate/random,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
+"lwZ" = (
+/obj/item/ammo_box/magazine/m49a/ap/empty,
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/prison,
+/area/lv522/indoors/a_block/admin)
 "lxc" = (
 /obj/structure/surface/table/almayer,
 /obj/item/ammo_box/magazine/shotgun/buckshot/empty,
@@ -32479,19 +32479,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorm_north)
-"qsk" = (
-/obj/structure/showcase{
-	desc = "The display model for a Weyland Yutani generation one synthetic. It almost feels like the eyes on this one follow you.";
-	icon = 'icons/mob/humans/species/r_synthetic.dmi';
-	icon_state = "Synthetic_Template";
-	name = "Display synthetic"
-	},
-/obj/item/clothing/under/cmb{
-	pixel_y = -2
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor/bluegrid,
-/area/lv522/indoors/a_block/corpo/glass)
 "qso" = (
 /obj/structure/machinery/light,
 /turf/open/floor/prison/darkyellowfull2/east,
@@ -37329,6 +37316,19 @@
 "sKJ" = (
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/colony_streets/east_central_street)
+"sLa" = (
+/obj/structure/showcase{
+	desc = "The display model for a Weyland Yutani generation one synthetic. It almost feels like the eyes on this one follow you.";
+	icon = 'icons/mob/humans/species/r_synthetic.dmi';
+	icon_state = "Synthetic_Template";
+	name = "Display synthetic"
+	},
+/obj/item/clothing/under/cmb{
+	pixel_y = -2
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/bluegrid,
+/area/lv522/indoors/a_block/corpo/glass)
 "sLk" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -68425,7 +68425,7 @@ ugV
 ugV
 kJd
 beB
-qsk
+sLa
 kZU
 xiJ
 xiJ
@@ -78889,7 +78889,7 @@ tjk
 qfV
 kYH
 ngY
-arZ
+lwZ
 jUn
 fQh
 xmu

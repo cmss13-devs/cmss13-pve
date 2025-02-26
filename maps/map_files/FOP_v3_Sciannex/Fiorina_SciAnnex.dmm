@@ -12357,6 +12357,10 @@
 	},
 /turf/open/floor/wood,
 /area/fiorina/station/chapel)
+"jpl" = (
+/obj/item/clothing/under/cmb,
+/turf/open/floor/prison,
+/area/fiorina/station/security)
 "jpm" = (
 /obj/item/explosive/grenade/high_explosive/m15,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -14435,10 +14439,6 @@
 	},
 /turf/open/floor/prison/greenfull/east,
 /area/fiorina/station/chapel)
-"lbi" = (
-/obj/item/clothing/under/cmb,
-/turf/open/floor/prison,
-/area/fiorina/station/security)
 "lbk" = (
 /obj/effect/spawner/random/tech_supply,
 /obj/structure/machinery/light/double/blue{
@@ -62242,7 +62242,7 @@ kWq
 tcP
 uGY
 cYe
-lbi
+jpl
 gRE
 gRE
 fnB

@@ -1826,6 +1826,15 @@
 	},
 /turf/open/floor/shiva/red/northeast,
 /area/varadero/interior/security)
+"bzM" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/closet/crate/trashcart,
+/obj/item/stack/sheet/mineral/plastic{
+	amount = 3
+	},
+/obj/item/weapon/gun/rifle/m49a,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "bzQ" = (
 /obj/structure/prop/structure_lattice{
 	dir = 1;
@@ -1856,6 +1865,37 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/morgue)
+"bAE" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/structure/prop/structure_lattice{
+	density = 0;
+	desc = "Made in Little Japan.";
+	health = 300;
+	icon = 'icons/obj/items/items.dmi';
+	icon_state = "sheet-lizard";
+	name = "exotic bedsheet";
+	pixel_x = -1
+	},
+/obj/item/ammo_magazine/rifle/m49a,
+/turf/open/floor/wood,
+/area/varadero/interior/bunks)
 "bAF" = (
 /obj/item/storage/toolbox/mechanical{
 	pixel_x = 1;
@@ -2586,15 +2626,6 @@
 	},
 /turf/open/floor/shiva/snow_mat,
 /area/varadero/interior/maintenance)
-"cbW" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/closet/crate/trashcart,
-/obj/item/stack/sheet/mineral/plastic{
-	amount = 3
-	},
-/obj/item/weapon/gun/rifle/m49a,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "cbY" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -3893,6 +3924,14 @@
 	},
 /turf/open/floor/shiva/purplefull/west,
 /area/varadero/interior/research)
+"djF" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/item/clothing/under/cmb,
+/obj/item/clothing/suit/armor/vest,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/security)
 "djP" = (
 /obj/structure/bed/chair,
 /turf/open/floor/interior/plastic,
@@ -4386,15 +4425,6 @@
 	},
 /turf/open/floor/strata/grey_multi_tiles,
 /area/varadero/interior_protected/vessel)
-"dDa" = (
-/obj/structure/bedsheetbin,
-/obj/item/ammo_magazine/rifle/m49a,
-/obj/structure/machinery/storm_siren{
-	dir = 4;
-	pixel_x = -3
-	},
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "dDf" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -5117,13 +5147,6 @@
 	},
 /turf/open/gm/dirt,
 /area/varadero/exterior/monsoon)
-"elm" = (
-/obj/structure/bedsheetbin{
-	icon_state = "linenbin-empty"
-	},
-/obj/item/clothing/under/cmb,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "elo" = (
 /obj/structure/machinery/storm_siren{
 	dir = 8;
@@ -7393,13 +7416,6 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior_protected/maintenance/south)
-"gcw" = (
-/obj/structure/bedsheetbin{
-	icon_state = "linenbin-empty"
-	},
-/obj/item/ammo_magazine/rifle/m49a,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "gcA" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/disposalpipe/segment,
@@ -11181,6 +11197,15 @@
 	},
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/exterior/lz1_near)
+"jhS" = (
+/obj/structure/bedsheetbin,
+/obj/item/ammo_magazine/rifle/m49a,
+/obj/structure/machinery/storm_siren{
+	dir = 4;
+	pixel_x = -3
+	},
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "jiI" = (
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/eastocean)
@@ -13595,15 +13620,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/exterior/lz1_near)
-"lqL" = (
-/obj/structure/bedsheetbin,
-/obj/item/storage/box/attachments{
-	pixel_x = -2;
-	pixel_y = 8
-	},
-/obj/item/ammo_magazine/rifle/m49a,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "lqM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -18721,14 +18737,6 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/research)
-"pTM" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/item/clothing/under/cmb,
-/obj/item/clothing/suit/armor/vest,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/security)
 "pTO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -21883,6 +21891,15 @@
 	},
 /turf/open/floor/shiva/greenfull/west,
 /area/varadero/interior/hall_SE)
+"src" = (
+/obj/structure/bedsheetbin,
+/obj/item/storage/box/attachments{
+	pixel_x = -2;
+	pixel_y = 8
+	},
+/obj/item/ammo_magazine/rifle/m49a,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "srg" = (
 /turf/open/gm/dirt,
 /area/varadero/interior/caves/north_research)
@@ -22545,25 +22562,6 @@
 /obj/item/clothing/suit/armor/riot,
 /turf/open/floor/strata/grey_multi_tiles,
 /area/varadero/interior_protected/vessel)
-"sWz" = (
-/obj/structure/closet/crate/ammo/alt,
-/obj/item/ammo_magazine/rifle/m49a{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/rifle/m49a{
-	pixel_y = -5;
-	pixel_x = -8
-	},
-/obj/item/ammo_magazine/rifle/m49a,
-/obj/item/ammo_magazine/rifle{
-	pixel_x = 5;
-	pixel_y = 4
-	},
-/obj/item/ammo_magazine/rifle{
-	pixel_x = -7
-	},
-/turf/open/shuttle/elevator/grating,
-/area/varadero/interior/hall_N)
 "sXb" = (
 /turf/closed/wall,
 /area/varadero/interior/library)
@@ -23019,37 +23017,6 @@
 /obj/effect/decal/cleanable/vomit,
 /turf/open/floor/white,
 /area/varadero/interior/toilets)
-"tqI" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/structure/prop/structure_lattice{
-	density = 0;
-	desc = "Made in Little Japan.";
-	health = 300;
-	icon = 'icons/obj/items/items.dmi';
-	icon_state = "sheet-lizard";
-	name = "exotic bedsheet";
-	pixel_x = -1
-	},
-/obj/item/ammo_magazine/rifle/m49a,
-/turf/open/floor/wood,
-/area/varadero/interior/bunks)
 "tqT" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -24412,6 +24379,13 @@
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/shiva/purple/east,
 /area/varadero/interior/research)
+"uHm" = (
+/obj/structure/bedsheetbin{
+	icon_state = "linenbin-empty"
+	},
+/obj/item/clothing/under/cmb,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "uHD" = (
 /obj/structure/machinery/landinglight/ds1/spoke{
 	pixel_y = -5;
@@ -26559,6 +26533,13 @@
 	},
 /turf/open/floor/shiva/snow_mat/east,
 /area/varadero/interior/maintenance)
+"wps" = (
+/obj/structure/bedsheetbin{
+	icon_state = "linenbin-empty"
+	},
+/obj/item/ammo_magazine/rifle/m49a,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "wpG" = (
 /obj/effect/landmark/monkey_spawn,
 /turf/open/auto_turf/sand_white/layer1,
@@ -28433,6 +28414,25 @@
 	dir = 1
 	},
 /turf/open/floor/shiva/green,
+/area/varadero/interior/hall_N)
+"xXp" = (
+/obj/structure/closet/crate/ammo/alt,
+/obj/item/ammo_magazine/rifle/m49a{
+	pixel_x = 5
+	},
+/obj/item/ammo_magazine/rifle/m49a{
+	pixel_y = -5;
+	pixel_x = -8
+	},
+/obj/item/ammo_magazine/rifle/m49a,
+/obj/item/ammo_magazine/rifle{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/item/ammo_magazine/rifle{
+	pixel_x = -7
+	},
+/turf/open/shuttle/elevator/grating,
 /area/varadero/interior/hall_N)
 "xXS" = (
 /obj/structure/surface/rack,
@@ -42986,7 +42986,7 @@ nYI
 pGJ
 nio
 lkH
-sWz
+xXp
 lYF
 srW
 pGJ
@@ -45028,9 +45028,9 @@ iTP
 jZG
 wmX
 vYQ
-dDa
-elm
-gcw
+jhS
+uHm
+wps
 xNR
 gFx
 aFg
@@ -45210,7 +45210,7 @@ wpX
 qQt
 jNT
 qeu
-cbW
+bzM
 esk
 lgM
 dgN
@@ -45933,12 +45933,12 @@ oMB
 rsF
 ilN
 ydx
-tqI
+bAE
 kIg
 nmC
 cio
 agi
-lqL
+src
 eMx
 plu
 xNR
@@ -51410,7 +51410,7 @@ uIw
 kFw
 vzu
 kFw
-pTM
+djF
 ljd
 uvP
 uYm
