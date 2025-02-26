@@ -31,6 +31,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
+"ax" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/five,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
 "aB" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -526,10 +530,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_one)
-"fN" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/segment/three,
-/turf/open/floor/almayer,
-/area/golden_arrow/briefing)
 "fP" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -799,10 +799,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"ic" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/segment/five,
-/turf/open/floor/almayer,
-/area/golden_arrow/briefing)
 "ig" = (
 /turf/open/floor/almayer/uscm/directional/up_down/northeast,
 /area/golden_arrow/hangar)
@@ -1467,6 +1463,9 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
+"ns" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
 "nv" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/clothing/accessory/stethoscope,
@@ -1743,7 +1742,7 @@
 	name = "\improper Briefing"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one)
+/area/golden_arrow/briefing)
 "po" = (
 /turf/open/floor/almayer/uscm/directional/up_down/west,
 /area/golden_arrow/hangar)
@@ -2387,9 +2386,6 @@
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
-"wo" = (
-/turf/closed/wall/almayer,
-/area/golden_arrow/dorms)
 "wq" = (
 /obj/structure/machinery/conveyor{
 	dir = 8
@@ -2662,7 +2658,7 @@
 "yu" = (
 /obj/structure/foamed_metal,
 /turf/open/space/basic,
-/area/golden_arrow/squad_one)
+/area/golden_arrow/briefing)
 "yz" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 8;
@@ -3161,7 +3157,7 @@
 "Cy" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
-/area/golden_arrow/squad_one)
+/area/golden_arrow/briefing)
 "CG" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer/test_floor4,
@@ -5019,6 +5015,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"Uj" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/three,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
 "Uk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -17313,12 +17313,12 @@ MF
 hB
 bx
 wi
-Kg
-Kg
-Kg
-Kg
-Kg
-GQ
+UO
+UO
+UO
+UO
+UO
+xq
 HL
 HL
 HL
@@ -17465,12 +17465,12 @@ rx
 hd
 bf
 Fa
-Kg
+UO
 yu
 yu
 yu
 yu
-GQ
+xq
 xq
 xq
 xq
@@ -17617,12 +17617,12 @@ YK
 MV
 QD
 kH
-Kg
-yu
-Kg
-Kg
-Kg
-Kg
+UO
+UO
+UO
+UO
+UO
+UO
 tE
 Sn
 xq
@@ -17770,7 +17770,7 @@ nd
 Kg
 Kg
 Kg
-Kg
+UO
 jA
 qA
 mv
@@ -17922,7 +17922,7 @@ ZB
 Ml
 tq
 SH
-Kg
+UO
 kJ
 ZC
 Vp
@@ -18074,7 +18074,7 @@ BO
 RL
 fB
 ye
-Kg
+UO
 UO
 HM
 UO
@@ -18226,7 +18226,7 @@ rc
 AX
 eB
 IB
-Kg
+UO
 Op
 iB
 kq
@@ -18378,7 +18378,7 @@ dy
 WR
 eB
 IB
-Kg
+UO
 vi
 tM
 EL
@@ -18533,8 +18533,8 @@ IB
 pm
 tE
 aI
-ic
-fN
+ax
+Uj
 nE
 Ec
 rk
@@ -18834,7 +18834,7 @@ XY
 WR
 eB
 Sg
-Kg
+UO
 vm
 yd
 Ma
@@ -18986,7 +18986,7 @@ cb
 gW
 eB
 IB
-Kg
+UO
 Yl
 Lo
 kx
@@ -19138,7 +19138,7 @@ gm
 aB
 fB
 vD
-Kg
+UO
 UO
 UO
 DZ
@@ -19290,7 +19290,7 @@ ea
 Xw
 FH
 Yp
-Kg
+UO
 UO
 ak
 ZC
@@ -19748,10 +19748,10 @@ tP
 lg
 fX
 fX
-wo
-wo
-wo
-wo
+ns
+ns
+ns
+ns
 la
 la
 la
@@ -19900,12 +19900,12 @@ pe
 XW
 fX
 fX
-wo
-wo
+ns
+ns
 eU
 eU
-wo
-wo
+ns
+ns
 la
 HL
 Nb
