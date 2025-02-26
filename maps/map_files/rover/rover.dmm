@@ -2488,10 +2488,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"rh" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/segment/three,
-/turf/open/floor/almayer,
-/area/golden_arrow/briefing)
 "ri" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -2801,8 +2797,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "te" = (
-/turf/open/floor/almayer_hull/outerhull_dir/north,
-/area/space)
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/five,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
 "th" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -4873,10 +4870,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
-"IG" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/segment/five,
-/turf/open/floor/almayer,
-/area/golden_arrow/briefing)
 "IK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -6409,8 +6402,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "TD" = (
-/turf/closed/wall/almayer/outer,
-/area/space)
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/three,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
 "TF" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -11172,7 +11166,7 @@ Cr
 Cr
 Cr
 Cr
-TD
+Vz
 Vz
 Vz
 jq
@@ -11324,7 +11318,7 @@ Cr
 Cr
 Cr
 Cr
-te
+iy
 Vz
 FG
 jq
@@ -11476,7 +11470,7 @@ Cr
 Cr
 Cr
 Cr
-te
+iy
 Vz
 LB
 jq
@@ -11628,7 +11622,7 @@ Cr
 Cr
 Cr
 Cr
-te
+iy
 Fh
 FG
 jq
@@ -11780,7 +11774,7 @@ Cr
 Cr
 Cr
 Cr
-te
+iy
 Fh
 FG
 jq
@@ -11932,7 +11926,7 @@ Cr
 Cr
 Cr
 Cr
-te
+iy
 Fh
 FG
 nK
@@ -12084,7 +12078,7 @@ Cr
 Cr
 Cr
 Cr
-te
+iy
 Vz
 LB
 jq
@@ -12236,7 +12230,7 @@ Cr
 Cr
 Cr
 Cr
-te
+iy
 Vz
 FG
 jq
@@ -12388,7 +12382,7 @@ Cr
 Cr
 Cr
 Cr
-TD
+Vz
 Vz
 Vz
 jq
@@ -19853,7 +19847,7 @@ aC
 Yc
 cn
 xq
-TD
+xq
 HL
 Nb
 Cr
@@ -20005,7 +19999,7 @@ EL
 FO
 sa
 rk
-TD
+xq
 HL
 Nb
 Cr
@@ -20152,12 +20146,12 @@ IB
 pm
 tE
 aI
-IG
-rh
+te
+TD
 nE
 Ec
 rk
-TD
+xq
 HL
 Nb
 Cr
@@ -20309,7 +20303,7 @@ Kc
 st
 Ec
 rk
-TD
+xq
 HL
 Nb
 Cr
@@ -20461,7 +20455,7 @@ sO
 Yx
 ci
 rk
-TD
+xq
 HL
 Nb
 Cr
@@ -20613,7 +20607,7 @@ Zf
 WC
 Nc
 xq
-TD
+xq
 HL
 Nb
 Cr
