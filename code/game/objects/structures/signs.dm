@@ -161,15 +161,6 @@
 	desc = "A very worn flag of the United States of America. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "usaflag_worn"
 
-/obj/structure/sign/banners/clf_flag
-	name = "\improper Colonial Liberation Front flag"
-	desc = "A flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
-	icon_state = "clfflag"
-/obj/structure/sign/banners/clf_worn
-	name = "\improper Worn Colonial Liberation Front flag"
-	desc = "A very worn flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
-	icon_state = "clfflag_worn"
-
 //=====================//
 // SEMIOTIC STANDARD  //
 //===================//
