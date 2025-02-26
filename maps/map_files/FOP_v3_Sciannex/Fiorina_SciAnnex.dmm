@@ -8807,16 +8807,6 @@
 	},
 /turf/open/floor/prison/yellow/northeast,
 /area/fiorina/station/disco)
-"gAk" = (
-/obj/structure/platform/kutjevo/smooth,
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
-/turf/open/space/basic,
-/area/fiorina/oob)
 "gAy" = (
 /obj/structure/closet{
 	density = 0;
@@ -58591,7 +58581,7 @@ mEO
 gbS
 aFZ
 brI
-gAk
+olQ
 qOk
 cZc
 lml

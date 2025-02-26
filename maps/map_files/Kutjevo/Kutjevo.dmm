@@ -174,9 +174,6 @@
 /turf/closed/wall/kutjevo/colony/reinforced,
 /area/kutjevo/interior/complex/med/operating)
 "amw" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/filtration/machine_32x64/indestructible{
 	bound_height = 32;

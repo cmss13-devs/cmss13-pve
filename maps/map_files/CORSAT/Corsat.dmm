@@ -27561,15 +27561,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/laundry)
-"oaZ" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/floor/corsat/white/north,
-/area/corsat/sigma/south)
 "obg" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{
 	dir = 1;
@@ -92200,7 +92191,7 @@ ylo
 arJ
 arJ
 fhg
-oaZ
+sMa
 pet
 rtG
 nmu
