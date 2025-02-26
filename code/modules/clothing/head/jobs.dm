@@ -129,6 +129,7 @@
 /obj/item/clothing/head/fedora
 	name = "\improper tan fedora"
 	desc = "A classic tan fedora."
+	icon = 'icons/obj/items/clothing/hats.dmi'
 	icon_state = "fedora_tan"
 	item_state = "fedora_tan"
 	flags_armor_protection = BODY_FLAG_HEAD
