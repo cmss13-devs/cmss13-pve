@@ -1104,3 +1104,14 @@ cases. Override_icon_state should be a list.*/
 
 /obj/item/proc/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	return FALSE
+
+///Mult on submerge height for changing the alpha of submerged items
+#define ITEM_LIQUID_TURF_ALPHA_MULT 11
+
+/obj/item/set_submerge_level(turf/new_loc, turf/old_loc, submerge_icon, submerge_icon_state, duration)
+	var/old_alpha_mod = istype(old_loc) ? old_loc.get_submerge_height(TRUE) : 0
+	var/new_alpha_mod = istype(new_loc) ? new_loc.get_submerge_height(TRUE) : 0
+
+	alpha -= (new_alpha_mod - old_alpha_mod) * ITEM_LIQUID_TURF_ALPHA_MULT
+
+#undef ITEM_LIQUID_TURF_ALPHA_MULT

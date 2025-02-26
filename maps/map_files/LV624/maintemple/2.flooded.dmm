@@ -339,7 +339,7 @@
 /area/lv624/ground/barrens/south_eastern_barrens)
 "lS" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "ma" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed{
@@ -527,7 +527,7 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/caves/sand_temple)
 "pP" = (
 /obj/structure/stairs/perspective{
@@ -590,7 +590,7 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "sN" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/caves/sand_temple)
 "tn" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -1032,7 +1032,7 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/caves/sand_temple)
 "FF" = (
 /obj/structure/prop/brazier/torch,
@@ -1255,7 +1255,7 @@
 /turf/open/gm/dirtgrassborder/east,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "Lg" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "Lt" = (
 /obj/item/reagent_container/food/snacks/stew,
@@ -1573,7 +1573,7 @@
 /area/lv624/ground/caves/sand_temple)
 "Tn" = (
 /obj/effect/landmark/hunter_primary,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "Tr" = (
 /obj/structure/stairs/perspective{
