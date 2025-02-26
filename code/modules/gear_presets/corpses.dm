@@ -660,6 +660,50 @@
 
 // Hybrisa Goon
 
+//PMC
+
+/datum/equipment_preset/corpse/pmc
+	name = "Corpse - Weyland-Yutani PMC (Standard)"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND
+	assignment = JOB_PMC_STANDARD
+	faction = FACTION_PMC
+	faction_group = FACTION_LIST_WY
+	rank = JOB_PMC_STANDARD
+	paygrades = list(PAY_SHORT_PMC_OP = JOB_PLAYTIME_TIER_0)
+	idtype = /obj/item/card/id/pmc
+	access = list(
+		ACCESS_CIVILIAN_PUBLIC,
+		ACCESS_CIVILIAN_LOGISTICS,
+		ACCESS_CIVILIAN_ENGINEERING,
+		ACCESS_CIVILIAN_RESEARCH,
+		ACCESS_CIVILIAN_BRIG,
+		ACCESS_CIVILIAN_MEDBAY,
+		ACCESS_CIVILIAN_COMMAND,
+		ACCESS_WY_GENERAL,
+		ACCESS_WY_COLONIAL,
+		ACCESS_WY_SECURITY,
+		ACCESS_WY_PMC,
+	)
+
+/datum/equipment_preset/corpse/pmc/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc/hvh, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_L_STORE)
+	add_random_survivor_equipment(new_human)
+
+/datum/equipment_preset/corpse/pmc/burst
+	name = "Corpse - Burst Weyland-Yutani PMC (Standard)"
+	xenovictim = TRUE
+
 /datum/equipment_preset/corpse/pmc/hybrisa_goon
 	name = "Corpse - Weyland-Yutani - Corporate Security"
 	languages = list(LANGUAGE_ENGLISH)
