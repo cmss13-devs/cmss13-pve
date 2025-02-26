@@ -2432,6 +2432,11 @@
 
 // Sofa Black
 
+/obj/structure/bed/sofa/hybrisa/sofa
+	name = "Couch"
+	desc = "It's a couch."
+	icon = 'icons/obj/structures/props/furniture/chairs.dmi'
+
 /obj/structure/bed/sofa/hybrisa/sofa/black
 	name = "Couch"
 	desc = "Just like Space Ikea would have wanted"
