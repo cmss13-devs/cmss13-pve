@@ -64,14 +64,23 @@
 	pressure = 3*ONE_ATMOSPHERE
 	pressure_full = 3*ONE_ATMOSPHERE
 
-/obj/item/tank/emergency_oxygen/get_examine_text(mob/user)
+/obj/item/tank/get_examine_text(mob/user)
 	. = ..()
-	if(pressure < 50 && loc==user)
+	if(pressure < 100 && loc==user)
 		. += SPAN_DANGER("The meter on \the [src] indicates you are almost out of air!")
+	var/standard_breath_rate = STD_BREATH_VOLUME / 10 // Air taken every cycle
+	var/air_removal_rate = initial(distribute_pressure)*standard_breath_rate/(R_IDEAL_GAS_EQUATION*temperature)/5
+	var/moles_in_tank = (pressure_full * src.volume) / (R_IDEAL_GAS_EQUATION * temperature)
+	var/remaining_cycles = moles_in_tank / air_removal_rate
+	var/remaining_minutes = round(remaining_cycles * 5 / 60, 0.1) //it runs every two deciseconds i think
+	. += SPAN_DANGER("Assuming it is full, this tank has [remaining_minutes] minutes of at 21Kpa.")
+
 
 /obj/item/tank/emergency_oxygen/engi
 	name = "extended-capacity emergency oxygen tank"
+	desc = "Capable of sustaining a moderate length EVA."
 	icon_state = "emergency_engi"
+	w_class = SIZE_SMALL
 	volume = 6
 	pressure = 5*ONE_ATMOSPHERE
 	pressure_full = 5*ONE_ATMOSPHERE
@@ -79,6 +88,7 @@
 /obj/item/tank/emergency_oxygen/double
 	name = "double emergency oxygen tank"
 	icon_state = "emergency_double"
+	w_class = SIZE_MEDIUM
 	volume = 10
 	pressure = 5*ONE_ATMOSPHERE
 	pressure_full = 5*ONE_ATMOSPHERE

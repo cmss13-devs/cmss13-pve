@@ -48,8 +48,6 @@
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
 	siemens_coefficient = 0.9
-	equip_sounds = list('sound/effects/air_open.ogg')
-	unequip_sounds = list('sound/effects/air_open.ogg')
 	drag_unequip = TRUE
 	var/can_support_limbs = TRUE
 	var/list/supporting_limbs = list()//If not-null, automatically splints breaks. Checked when removing the suit.

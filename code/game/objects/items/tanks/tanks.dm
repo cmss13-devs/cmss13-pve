@@ -32,20 +32,22 @@
 		var/celsius_temperature = temperature-T0C
 		var/descriptive
 		switch(celsius_temperature)
-			if(-280 to 20)
+			if(-280 to 0)
+				descriptive = "freezing"
+			if(0 to 17)
 				descriptive = "cold"
-			if(20 to 40)
+			if(17 to 30)
 				descriptive = "room temperature"
-			if(40 to 80)
+			if(30 to 50)
 				descriptive = "lukewarm"
-			if(80 to 100)
+			if(50 to 80)
 				descriptive = "warm"
-			if(100 to 300)
+			if(80 to 150)
 				descriptive = "hot"
 			else
 				descriptive = "furiously hot"
 
-		. += SPAN_NOTICE("\The [icon2html(src, user)][src] feels [descriptive]")
+		. += SPAN_NOTICE("\The [src] feels [descriptive]")
 
 
 /obj/item/tank/attackby(obj/item/W as obj, mob/user as mob)
@@ -135,6 +137,7 @@
 					if(location.wear_mask && (location.wear_mask.flags_inventory & ALLOWINTERNALS))
 						location.internal = src
 						to_chat(usr, SPAN_NOTICE("You open \the [src]'s valve."))
+						playsound(src, 'sound/effects/internals.ogg', 40, TRUE)
 					else
 						to_chat(usr, SPAN_NOTICE("You need something to connect to \the [src]."))
 				. = TRUE

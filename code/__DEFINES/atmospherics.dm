@@ -20,10 +20,10 @@
 #define ONE_ATMOSPHERE 101.325 //kPa
 
 // Pressure limits.
-#define HAZARD_HIGH_PRESSURE 550 // This determines at what pressure the ultra-high pressure red icon is displayed. (This one is set as a constant)
-#define WARNING_HIGH_PRESSURE 325 // This determines when the orange pressure icon is displayed (it is 0.7 * HAZARD_HIGH_PRESSURE)
-#define WARNING_LOW_PRESSURE  70  // This is when the gray low pressure icon is displayed. (it is 2.5 * HAZARD_LOW_PRESSURE)
-#define HAZARD_LOW_PRESSURE  20  // This is when the black ultra-low pressure icon is displayed. (This one is set as a constant)
+#define HAZARD_HIGH_PRESSURE 550 // not used right now
+#define WARNING_HIGH_PRESSURE 325 // not used right now
+#define WARNING_LOW_PRESSURE  70  // This is when the yellow oxygen icon is displayed
+#define HAZARD_LOW_PRESSURE  20  // This is when the red oxygen icon is displayed
 #define ARMSTRONG_LIMIT 6.25 //assume same as space
 #define R_IDEAL_GAS_EQUATION 8.31 // kPa*L/(K*mol).
 #define STD_BREATH_VOLUME 12 //litres if it matters
