@@ -41,7 +41,7 @@
 	var/b_type = "A+" //Player's bloodtype
 
 	var/underwear = "White Boxers" //Which underwear the player wants
-	var/undershirt = "None" //Which undershirt the player wants.
+	var/undershirt = "White Undershirt (Sleeveless)" //Which undershirt the player wants.
 	var/backbag = 2 //Which backpack type the player has chosen. Satchel or Backpack.
 
 	var/datum/species/species //Contains icon generation and language information, set during New().
