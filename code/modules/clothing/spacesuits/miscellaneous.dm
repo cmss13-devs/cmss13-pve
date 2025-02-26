@@ -139,6 +139,10 @@
 	. = ..()
 	MD = new(src)
 
+/obj/item/clothing/suit/space/pressure/Destroy()
+	QDEL_NULL(MD)
+	. = ..()
+
 //Delay of long mode with range of short mode
 /obj/item/device/motiondetector/spacesuit
 	detector_mode = MOTION_DETECTOR_LONG
