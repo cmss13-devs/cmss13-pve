@@ -930,14 +930,14 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "gF" = (
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	name = "General Listening Channel";
-	pixel_x = 29
-	},
 /obj/item/prop/magazine/book/starshiptroopers{
 	layer = 4.1;
 	pixel_y = 47
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
@@ -2378,6 +2378,7 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
+/obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "pS" = (
@@ -2434,29 +2435,6 @@
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
-"qI" = (
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
-	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13
-	},
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.5;
-	pixel_y = 10
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/dorms)
 "qN" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
@@ -4363,12 +4341,6 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.5;
-	pixel_y = 10
-	},
 /obj/item/toy/plush/bee{
 	pixel_x = 5;
 	pixel_y = -5
@@ -5636,7 +5608,11 @@
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/synthcloset)
 "Oe" = (
-/obj/structure/machinery/power/apc/almayer/east,
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "Og" = (
@@ -22425,12 +22401,12 @@ hR
 PH
 PH
 ko
-qI
+lA
 gF
 lA
 Em
 Oe
-qI
+lA
 la
 HL
 Nb
