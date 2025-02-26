@@ -59,16 +59,14 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/item/clothing/suit/space/process()
-    if (!ishuman(loc))
-        return
-    var/mob/living/carbon/human/wearer = loc
-    var/loc_temp = loc.return_temperature()
-    if (loc_temp < wearer.bodytemperature) // Place is colder than we are
-        var/thermal_protection = max(0, 1 - ((min_cold_protection_temperature + damage*SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER) - loc_temp) / 40) // Scales between 1 and 0 over 40K
-        if (thermal_protection < 1)
-            wearer.bodytemperature += (1 - thermal_protection) * ((loc_temp - wearer.bodytemperature) / 30) // Smaller, more linear scaling
-
-
+	if (!ishuman(loc))
+		return
+	var/mob/living/carbon/human/wearer = loc
+	var/loc_temp = loc.return_temperature()
+	if (loc_temp < wearer.bodytemperature) // Place is colder than we are
+		var/thermal_protection = max(0, 1 - ((min_cold_protection_temperature + damage*SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER) - loc_temp) / 40) // Scales between 1 and 0 over 40K
+		if (thermal_protection < 1)
+			wearer.bodytemperature += (1 - thermal_protection) * ((loc_temp - wearer.bodytemperature) / 30) // Smaller, more linear scaling
 
 /obj/item/clothing/suit/space/equipped(mob/M, put_into_slot)
 	if(flags_equip_slot && slotdefine2slotbit(put_into_slot))
