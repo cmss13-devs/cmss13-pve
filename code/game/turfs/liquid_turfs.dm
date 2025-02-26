@@ -120,6 +120,10 @@
 /turf/open/liquid/water/river
 	name = "river"
 
+/turf/open/liquid/water/river/no_overlay
+	mob_liquid_height = 0
+	mob_liquid_depth = 0
+
 /turf/open/liquid/water/river/deep
 	icon_state = "seashallow_deep"
 	mob_liquid_height = 18
