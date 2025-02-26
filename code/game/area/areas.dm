@@ -383,7 +383,12 @@
 //atmos related procs
 
 /area/return_air()
-	return list(gas_type, temperature, pressure)
+	var/proportion_is_oxygen = 0
+	if(gas_type == GAS_TYPE_AIR)
+		proportion_is_oxygen = O2STANDARD
+	else if(gas_type == GAS_TYPE_OXYGEN)
+		proportion_is_oxygen = TRUE
+	return list(gas_type, temperature, pressure, proportion_is_oxygen)
 
 /area/return_pressure()
 	return pressure
