@@ -103,3 +103,7 @@
 /obj/structure/phone_base/toc
 	name = "telephone receiver"
 	icon = 'icons/obj/vehicles/interiors/movie.dmi'
+
+/obj/item/phone
+	name = "telephone"
+	icon_state = "rpb_phone"

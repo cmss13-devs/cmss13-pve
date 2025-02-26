@@ -434,6 +434,155 @@
 /turf/open/floor/almayer/orange/southwest
 	dir = SOUTHWEST
 
+// All ORANGE (its called orange but its infact yellow, deal with it) tiles (normal, smooth edge, smooth borderless, smooth ends, corners, full, full smooth)
+
+/turf/open/floor/almayer/orange
+	icon_state = "orange"
+
+/turf/open/floor/almayer/orange/north
+	dir = NORTH
+
+/turf/open/floor/almayer/orange/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/orange/east
+	dir = EAST
+
+/turf/open/floor/almayer/orange/west
+	dir = WEST
+
+/turf/open/floor/almayer/orange/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/orange/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/orange/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/orange/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/orange2
+	icon_state = "orange2"
+
+/turf/open/floor/almayer/orange2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/orange2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/orange2/east
+	dir = EAST
+
+/turf/open/floor/almayer/orange2/west
+	dir = WEST
+
+/turf/open/floor/almayer/orange2/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/orange2/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/orange2/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/orange2/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/orange2smooth
+	icon_state = "orange2_smooth"
+
+/turf/open/floor/almayer/orange2smooth/north
+	dir = NORTH
+
+/turf/open/floor/almayer/orange2smooth/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/orange2smooth/east
+	dir = EAST
+
+/turf/open/floor/almayer/orange2smooth/west
+	dir = WEST
+
+/turf/open/floor/almayer/orange2smooth/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/orange2smooth/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/orange2smooth/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/orange2smooth/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/orange2smooth2
+	icon_state = "orange2_smooth2"
+
+/turf/open/floor/almayer/orange2smooth2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/orange2smooth2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/orange2smooth2/east
+	dir = EAST
+
+/turf/open/floor/almayer/orange2smooth2/west
+	dir = WEST
+
+/turf/open/floor/almayer/orange2smooth3
+	icon_state = "orange2_smooth3"
+
+/turf/open/floor/almayer/orange2smooth3/north
+	dir = NORTH
+
+/turf/open/floor/almayer/orange2smooth3/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/orange2smooth3/east
+	dir = EAST
+
+/turf/open/floor/almayer/orange2smooth3/west
+	dir = WEST
+
+/turf/open/floor/almayer/orangecorner
+	icon_state = "orangecorner"
+
+/turf/open/floor/almayer/orangecorner/north
+	dir = NORTH
+
+/turf/open/floor/almayer/orangecorner/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/orangecorner/east
+	dir = EAST
+
+/turf/open/floor/almayer/orangecorner/west
+	dir = WEST
+
+/turf/open/floor/almayer/orangecornersmooth
+	icon_state = "orangecorner_smooth"
+
+/turf/open/floor/almayer/orangecornersmooth/north
+	dir = NORTH
+
+/turf/open/floor/almayer/orangecornersmooth/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/orangecornersmooth/east
+	dir = EAST
+
+/turf/open/floor/almayer/orangecornersmooth/west
+	dir = WEST
+
+/turf/open/floor/almayer/orangefull
+	icon_state = "orangefull"
+
+/turf/open/floor/almayer/orangefull2
+	icon_state = "orangefull2"
+
 /turf/open/floor/almayer/red
 	icon_state = "red"
 

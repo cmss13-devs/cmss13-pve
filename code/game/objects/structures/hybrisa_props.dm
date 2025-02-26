@@ -749,6 +749,8 @@
 	name = "expensive chair"
 	desc = "A expensive looking chair"
 
+	icon = 'icons/obj/structures/props/furniture/chairs.dmi'
+
 /obj/structure/bed/chair/comfy/hybrisa/black
 	icon_state = "comfychair_hybrisablack"
 
@@ -762,6 +764,11 @@
 	icon_state = "comfychair_hybrisabrown"
 
 // Beds
+
+/obj/structure/bed/hybrisa
+	name = "bed"
+	desc = "A bed."
+	icon = 'icons/obj/structures/props/furniture/chairs.dmi'
 
 /obj/structure/bed/hybrisa/dingy
 	name = "dingy bed"
@@ -1653,7 +1660,7 @@
 	name = "computer"
 
 /obj/structure/machinery/big_computers/computerbrown
-	icon = 'icons/obj/structures/props/almayer/almayer_props.dmi'
+	icon = 'icons/obj/structures/props/almayer_props.dmi'
 	name = "computer"
 
 /obj/structure/machinery/big_computers/computerbrown/computer1

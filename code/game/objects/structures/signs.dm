@@ -707,5 +707,5 @@
 /obj/structure/sign/catclock
 	name = "cat clock"
 	desc = "An unbelievably creepy cat clock that surveys the room with every tick and every tock."
-	icon = 'icons/obj/structures/props/clock.dmi'
+	icon = 'icons/obj/structures/props/catclock.dmi'
 	icon_state = "cat_clock_motion"

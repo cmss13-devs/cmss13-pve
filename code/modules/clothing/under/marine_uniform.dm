@@ -656,10 +656,11 @@
 	has_sensor = UNIFORM_NO_SENSORS
 
 /obj/item/clothing/under/colonist
-	name = "abstract colonist"
-	desc = "Don't spawn this!"
+	name = "colonist jumpsuit"
+	desc = "A stylish gray-green jumpsuit. Standard issue for unspecialized Wey-Yu colonists."
+	icon_state = "colonist"
+	worn_state = "colonist"
 	has_sensor = UNIFORM_HAS_SENSORS
-	sensor_faction = FACTION_COLONIST
 
 /obj/item/clothing/under/colonist/workwear
 	name = "grey workwear"
@@ -1329,10 +1330,6 @@
 /obj/item/clothing/under/colonist/steward
 	name = "steward utilities"
 	desc = "A stylish brown vest and shorts - uniforms like this are often worn by clerks and shop stewards."
-	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/UA.dmi'
-	item_icons = list(
-		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/UA.dmi',
-	)
 	icon_state = "steward"
 	worn_state = "steward"
 	has_sensor = UNIFORM_HAS_SENSORS

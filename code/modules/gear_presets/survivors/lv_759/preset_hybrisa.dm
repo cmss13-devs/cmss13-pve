@@ -70,7 +70,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/steward(new_human), WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/royal_marine(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack(new_human), WEAR_BACK)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 // Office Workers
@@ -118,7 +117,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/blazer(new_human), WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 // Weymart Employee
@@ -147,7 +145,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/weymart(new_human), WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic(new_human.back), WEAR_IN_BACK)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 // Sanitation
@@ -194,7 +191,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/brown(new_human), WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather(new_human), WEAR_FACE)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer, WEAR_R_HAND)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 // Pizza Galaxy
@@ -245,7 +241,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 // Fire Protection Specialist
@@ -283,7 +278,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/attachable/attached_gun/extinguisher(new_human.back), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini(new_human.back), WEAR_IN_BACK)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 // Cuppa Joe's Employee
@@ -315,7 +309,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/m15(new_human.back), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/regular/hipster, WEAR_EYES)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 //////////////// COLONIAL MARSHALLS /////////////////
@@ -439,7 +432,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer, WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/medical_red, WEAR_JACKET)
 	add_random_survivor_medical_gear(new_human)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 // Nova Medica - Paramedic
@@ -489,7 +481,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/extended, WEAR_IN_R_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/extended, WEAR_IN_R_STORE)
 	add_random_survivor_medical_gear(new_human)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 // Science
@@ -546,7 +537,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/spade, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/lantern, WEAR_IN_BACK)
-	add_survivor_weapon_civilian(new_human)
 	add_random_survivor_research_gear(new_human)
 	..()
 
@@ -586,7 +576,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/science, WEAR_EYES)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/headband/tan, WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer, WEAR_R_HAND)
-	add_survivor_weapon_civilian(new_human)
 	add_random_survivor_research_gear(new_human)
 	..()
 
@@ -646,7 +635,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/headset, WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/insulated, WEAR_HANDS)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/frontier, WEAR_BODY)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/frontier, WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/bomber, WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full, WEAR_R_STORE)
@@ -661,7 +650,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full, WEAR_R_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/corporate, WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest, WEAR_ACCESSORY)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 /datum/equipment_preset/survivor/hybrisa/electrical_engineer
@@ -677,7 +665,7 @@
 	var/choice = rand(1,3)
 	switch(choice)
 		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated, WEAR_HANDS)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/hardhat/dblue, WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/engineering_utility/alt, WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/sanitation, WEAR_JACKET)
@@ -688,7 +676,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/nailgun, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/plasteel/small_stack, WEAR_IN_BACK)
 		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated, WEAR_HANDS)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/hardhat/dblue, WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/engineering_utility/alt, WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/blue, WEAR_JACKET)
@@ -709,7 +697,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/nailgun, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/plasteel/med_small_stack, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding, WEAR_EYES)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 // Construction Worker
@@ -749,7 +736,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/nailgun, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated, WEAR_HANDS)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/engineering_utility, WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/hybrisa/engineering_utility_oversuit, WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/eng, WEAR_BACK)
@@ -759,7 +746,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/nailgun, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding, WEAR_EYES)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 //////////////// WEYLAND YUTANI /////////////////////
@@ -827,9 +813,9 @@
 			new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/WY, WEAR_L_EAR)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/mod88, WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/mod88/penetrating, WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/mod88/penetrating, WEAR_IN_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70, WEAR_IN_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70, WEAR_IN_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70, WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/wy_exec_suit_uniform/jacket_only, WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/CMB/hybrisa/fur_lined_trench_coat, WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/norm, WEAR_BACK)
@@ -838,7 +824,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky(new_human), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clipboard(new_human), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/spacecash/c1000(new_human), WEAR_IN_BACK)
-	add_survivor_weapon_civilian(new_human)
 	add_random_cl_survivor_loot(new_human)
 	..()
 
@@ -950,7 +935,6 @@
 		if(2 to 4)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/aviator/silver, WEAR_EYES)
 	add_random_cl_survivor_loot(new_human)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 //////////////// KELLAND MINING /////////////////////
@@ -1022,7 +1006,6 @@
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/p90/twe, WEAR_IN_R_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/p90/twe, WEAR_IN_R_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/p90/twe, WEAR_IN_R_STORE)
-	add_survivor_weapon_civilian(new_human)
 	..()
 
 //-------------------------------------------------------
@@ -1100,7 +1083,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/bottle/grenadine, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/wcoat, WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/bottle/rum, WEAR_IN_JACKET)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/black, WEAR_HANDS)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/beer_pack, WEAR_R_HAND)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife, WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat, WEAR_L_HAND)
@@ -1249,10 +1232,10 @@
 			new_human.equip_to_slot_or_del(new /obj/item/device/camera, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_BACK)
 		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/fedora/grey, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/fedora, WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/detective/grey, WEAR_BODY)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/CMB/trenchcoat/grey, WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/CMB/trenchcoat, WEAR_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_JACKET)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/black, WEAR_HANDS)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/sec, WEAR_BACK)
@@ -1295,7 +1278,7 @@
 		if(20 to 30)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/hybrisa/wy_exec_suit_uniform/brown, WEAR_BODY)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable, WEAR_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc, WEAR_FEET)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/full, WEAR_L_HAND)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)

@@ -99,10 +99,6 @@
 /obj/item/clothing/under/det
 	name = "hard-worn suit"
 	desc = "A washed out white shirt with a black tie and brown slacks."
-	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_department/security.dmi'
-	item_icons = list(
-		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_department/security.dmi',
-	)
 	icon_state = "detective_brown"
 	worn_state = "detective_brown"
 	armor_melee = CLOTHING_ARMOR_LOW
@@ -120,6 +116,20 @@
 /obj/item/clothing/under/det/slob
 	icon_state = "polsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+
+/obj/item/clothing/under/detective
+	name = "\improper detective suit pants"
+	desc = "A washed out white shirt with a black tie and brown slacks."
+	icon_state = "detective_brown"
+	worn_state = "detective_brown"
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_LOW
 
 /obj/item/clothing/under/detective/neutral
 	name = "brown suit pants"

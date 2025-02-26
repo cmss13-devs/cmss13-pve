@@ -453,13 +453,6 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 	var/mob/living/carbon/human/body
 	var/datum/equipment_preset/body_preset = /datum/equipment_preset/corpse/hybrisa/civilian
 
-/obj/structure/bed/roller/hospital/Initialize(mapload, ...)
-	. = ..()
-	if(SSticker.current_state >= GAME_STATE_PLAYING)
-		create_body()
-	else
-		RegisterSignal(SSdcs, COMSIG_GLOB_MODE_POSTSETUP, PROC_REF(create_body))
-
 /obj/structure/bed/roller/hospital/Destroy()
 	if(body)
 		QDEL_NULL(body)
@@ -497,15 +490,6 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 	if(body)
 		return
 	..()
-
-/obj/structure/bed/roller/hospital/proc/create_body()
-	SIGNAL_HANDLER
-	body = new(loc)
-	body.create_hud()
-	contents += body
-	arm_equipment(body, body_preset, TRUE, FALSE)
-	body.death(create_cause_data("exposure"))
-	update_icon()
 
 /obj/structure/bed/roller/hospital/proc/dump_body()
 	var/turf/dump_turf = get_turf(src)

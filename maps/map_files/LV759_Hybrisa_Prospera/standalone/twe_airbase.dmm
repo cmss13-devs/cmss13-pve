@@ -175,7 +175,7 @@
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "bE" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/reagent_container/food/snacks/packaged_burger{
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger{
 	pixel_y = 11
 	},
 /turf/open/floor/almayer/blackfull/west,
