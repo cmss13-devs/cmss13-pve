@@ -41,8 +41,8 @@
 	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
 
 /datum/ammo/bullet/sniper/upp_pve
-	name = "high-power sniper bullet"
-	damage = 180
+	name = "high-power sniper bullet" //Now used by hAI CLF type 88 users
+	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/sniper/anti_materiel
@@ -51,7 +51,7 @@
 	shrapnel_chance = 0 // This isn't leaving any shrapnel.
 	accuracy = HIT_ACCURACY_TIER_8
 	damage = 125
-	shell_speed = AMMO_SPEED_TIER_6
+	shell_speed = AMMO_SPEED_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_10 + ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/sniper/anti_materiel/proc/stopping_power_knockback(mob/living/living_mob, obj/projectile/fired_projectile)
