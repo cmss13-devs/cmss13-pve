@@ -163,6 +163,7 @@
 			new_human.b_hair = hair_colors[hair_color][3]
 			new_human.r_facial = hair_colors[hair_color][1]
 			new_human.g_facial = hair_colors[hair_color][2]
+			new_human.b_facial = hair_colors[hair_color][3]
 			var/eye_color = pick(colors)
 			new_human.r_eyes = colors[eye_color][1]
 			new_human.g_eyes = colors[eye_color][2]
