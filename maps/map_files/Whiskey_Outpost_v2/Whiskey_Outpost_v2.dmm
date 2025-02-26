@@ -1604,13 +1604,6 @@
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall/r_wall,
 /area/whiskey_outpost/inside/bunker/pillbox/two)
-"hw" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 8;
-	layer = 3.25
-	},
-/turf/open/floor/prison,
-/area/whiskey_outpost/inside/cic)
 "hx" = (
 /obj/structure/machinery/body_scanconsole,
 /obj/effect/decal/medical_decals{
@@ -2101,6 +2094,13 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/landmark/map_item,
 /obj/item/device/whistle,
+/turf/open/floor/prison,
+/area/whiskey_outpost/inside/cic)
+"jq" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8;
+	layer = 3.25
+	},
 /turf/open/floor/prison,
 /area/whiskey_outpost/inside/cic)
 "js" = (
@@ -18463,9 +18463,9 @@ rc
 lm
 gE
 fx
-hw
+jq
 fx
-hw
+jq
 fx
 fx
 mi
