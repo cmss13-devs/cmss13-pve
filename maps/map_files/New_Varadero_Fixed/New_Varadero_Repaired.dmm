@@ -1,4 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/item/fishing_pole,
+/turf/open/gm/dirt,
+/area/varadero/exterior/monsoon)
+"aab" = (
+/obj/item/fishing_pole,
+/turf/open/gm/coast/west,
+/area/varadero/exterior/pontoon_beach)
 "aae" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/shiva,
@@ -15298,10 +15306,6 @@
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
-"mNU" = (
-/obj/item/fishing_pole,
-/turf/open/gm/coast/west,
-/area/varadero/exterior/pontoon_beach)
 "mOg" = (
 /obj/structure/prop/ice_colony/dense/planter_box/plated{
 	dir = 9;
@@ -21374,10 +21378,6 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/medical)
-"rXF" = (
-/obj/item/fishing_pole,
-/turf/open/gm/dirt,
-/area/varadero/exterior/monsoon)
 "rXL" = (
 /obj/item/tool/shovel,
 /turf/open/gm/dirt/desert_dug,
@@ -44228,7 +44228,7 @@ wax
 eLH
 eLH
 eGX
-mNU
+aab
 fLY
 dgH
 eLH
@@ -59431,7 +59431,7 @@ xPY
 xPY
 ghN
 bGU
-rXF
+aaa
 bGU
 rvD
 bGU

@@ -1,4 +1,17 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/item/fishing_pole,
+/turf/open/gm/dirt,
+/area/varadero/exterior/monsoon)
+"aab" = (
+/obj/structure/surface/rack,
+/obj/item/fishing_pole,
+/turf/open/floor/plating/icefloor/asteroidplating,
+/area/varadero/interior/maintenance/north)
+"aac" = (
+/obj/item/fishing_pole,
+/turf/open/gm/coast/west,
+/area/varadero/exterior/pontoon_beach)
 "aae" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/shiva,
@@ -11862,10 +11875,6 @@
 	},
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/comms2)
-"jDQ" = (
-/obj/item/fishing_pole,
-/turf/open/gm/coast/west,
-/area/varadero/exterior/pontoon_beach)
 "jEd" = (
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/chips,
@@ -12474,10 +12483,6 @@
 	},
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/interior/comms1)
-"jZO" = (
-/obj/item/fishing_pole,
-/turf/open/gm/dirt,
-/area/varadero/exterior/monsoon)
 "jZW" = (
 /obj/structure/machinery/light,
 /obj/structure/bed/chair{
@@ -17340,11 +17345,6 @@
 	},
 /turf/closed/wall/r_wall/unmeltable,
 /area/varadero/interior/dock_control)
-"nQG" = (
-/obj/structure/surface/rack,
-/obj/item/fishing_pole,
-/turf/open/floor/plating/icefloor/asteroidplating,
-/area/varadero/interior/maintenance/north)
 "nQP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -45771,7 +45771,7 @@ mMJ
 krO
 doL
 mWE
-nQG
+aab
 wHk
 qyw
 aVQ
@@ -46093,7 +46093,7 @@ vjs
 uod
 uod
 eGX
-jDQ
+aac
 fLY
 cOZ
 uod
@@ -61478,7 +61478,7 @@ bEF
 fnU
 ghN
 bGU
-jZO
+aaa
 bGU
 bGU
 rvD
