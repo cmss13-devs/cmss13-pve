@@ -121,7 +121,7 @@
 			else if(tgui_pressure == "min")
 				src.distribute_pressure = TANK_MIN_RELEASE_PRESSURE
 			else if(text2num(tgui_pressure) != null)
-				pressure = text2num(tgui_pressure)
+				src.distribute_pressure = text2num(tgui_pressure)
 			src.distribute_pressure = min(max(floor(src.distribute_pressure), 0), TANK_MAX_RELEASE_PRESSURE)
 			. = TRUE
 
@@ -140,7 +140,21 @@
 				. = TRUE
 
 /obj/item/tank/return_air()
-	return list(gas_type, temperature, pressure)
+	var/proportion_is_oxygen = 0
+	if(gas_type == GAS_TYPE_AIR)
+		proportion_is_oxygen = 0.21
+	else if(gas_type == GAS_TYPE_OXYGEN)
+		proportion_is_oxygen = 1
+	return list(gas_type, temperature, pressure, proportion_is_oxygen)
+
+/obj/item/tank/proc/take_air()
+	var/returned_pressure = remove_air_volume()
+	var/proportion_is_oxygen = 0
+	if(gas_type == GAS_TYPE_AIR)
+		proportion_is_oxygen = O2STANDARD
+	else if(gas_type == GAS_TYPE_OXYGEN)
+		proportion_is_oxygen = TRUE
+	return list(gas_type, temperature, returned_pressure, proportion_is_oxygen)
 
 /obj/item/tank/return_pressure()
 	return pressure
@@ -150,3 +164,23 @@
 
 /obj/item/tank/return_gas()
 	return gas_type
+
+/obj/item/tank/proc/remove_air_volume(volume_to_return = STD_BREATH_VOLUME/10)
+
+	if(pressure < distribute_pressure)
+		distribute_pressure = pressure
+
+	var/removed = distribute_pressure*volume_to_return/(R_IDEAL_GAS_EQUATION*temperature)/5
+
+	var/volume_litres = src.volume
+
+	// moles in tank
+	var/moles_in_tank = (pressure * volume_litres) / (R_IDEAL_GAS_EQUATION * temperature)
+	moles_in_tank -= removed // Remove the amount taken out
+
+
+	// Recalculate the new pressure
+	pressure = (max(0 , moles_in_tank) * R_IDEAL_GAS_EQUATION * temperature) / volume_litres
+
+
+	return removed*10000

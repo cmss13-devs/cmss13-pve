@@ -13,41 +13,37 @@
 
 	var/list/air_info
 
-	if(losebreath > 0) //Suffocating so do not take a breath
-		losebreath--
-		if(prob(20)) //Gasp per 5 ticks? Sounds about right.
-			spawn emote("gasp")
-		if(istype(loc, /atom/movable))
+		/*if(istype(loc, /atom/movable))
 			var/atom/movable/container = loc
-			container.handle_internal_lifeform(src)
-	else
-		//First, check for air from internal atmosphere (using an air tank and mask generally)
-		air_info = get_breath_from_internal()
+			container.handle_internal_lifeform(src)*/
 
-		//No breath from internal atmosphere so get breath from location
-		if(!air_info)
-			var/turf/T = get_turf(loc)
-			air_info = T.return_air()
+	//First, check for air from internal atmosphere (using an air tank and mask generally)
+	air_info = get_breath_from_internal()
+	//No breath from internal atmosphere so get breath from location
+	if(!air_info)
+		var/turf/T = get_turf(loc)
+		air_info = T.return_air()
 
-			//Handle filtering
-			var/block = 0
-			if(wear_mask)
-				if(wear_mask.flags_inventory & BLOCKGASEFFECT)
-					block = 1
-			if(glasses)
-				if(glasses.flags_inventory & BLOCKGASEFFECT)
-					block = 1
-			if(head)
-				if(head.flags_inventory & BLOCKGASEFFECT)
-					block = 1
+		//Handle filtering
+		var/block = 0
+		if(wear_mask)
+			if(wear_mask.flags_inventory & BLOCKGASEFFECT)
+				block = 1
+		if(glasses)
+			if(glasses.flags_inventory & BLOCKGASEFFECT)
+				block = 1
+		if(head)
+			if(head.flags_inventory & BLOCKGASEFFECT)
+				block = 1
 
-			if(!block)
-				for(var/obj/effect/particle_effect/smoke/chem/smoke in view(1, src))
-					if(smoke.reagents.total_volume)
-						smoke.reagents.reaction(src, INGEST)
-						smoke.reagents.copy_to(src, 10) //I dunno, maybe the reagents enter the blood stream through the lungs?
-						break //If they breathe in the nasty stuff once, no need to continue checking
-
+		if(!block)
+			for(var/obj/effect/particle_effect/smoke/chem/smoke in view(1, src))
+				if(smoke.reagents.total_volume)
+					smoke.reagents.reaction(src, INGEST)
+					smoke.reagents.copy_to(src, 10) //I dunno, maybe the reagents enter the blood stream through the lungs?
+					break //If they breathe in the nasty stuff once, no need to continue checking
+	if(losebreath > 0) //ung damage is a little weird, leaving this here
+		losebreath--
 	handle_breath(air_info)
 
 /mob/living/carbon/human/proc/get_breath_from_internal()
@@ -62,19 +58,34 @@
 		if(!wear_mask || !(wear_mask.flags_inventory & ALLOWINTERNALS))
 			internal = null
 		if(internal)
-			return internal.return_air()
+			return internal.take_air()
 	return null
 
 /mob/living/carbon/human/proc/handle_breath(list/air_info)
 	oxygen_alert = 0 // so unless no air info is returned (which happens only when gasping or lack of atmosphere) it'll always be 0
 	if(status_flags & GODMODE)
 		return
-
-	if(!air_info)
+	var/oxygen_pressure = air_info[3]*air_info[4]
+	if(losebreath)
+		oxygen_pressure = oxygen_pressure*0.2
+	if(!air_info || oxygen_pressure < ARMSTRONG_LIMIT*O2STANDARD)
 		apply_damage(HUMAN_MAX_OXYLOSS, OXY)
-
 		oxygen_alert = max(oxygen_alert, 1)
+		if(prob(20)) //Gasp per 5 ticks? Sounds about right.
+			spawn emote(pick("gasps for air", "gasps"))
+		return 0
 
+	if(air_info[1] == "air" || air_info[1] == "oxygen")
+		if(oxygen_pressure < HAZARD_LOW_PRESSURE*O2STANDARD)
+			apply_damage(2, OXY)
+			oxygen_alert = max(oxygen_alert, 1)
+			if(prob(20)) //Gasp per 5 ticks? Sounds about right.
+				spawn emote(pick("gasps for air", "gasps"))
+			return 0
+		else if(oxygen_pressure < WARNING_LOW_PRESSURE*O2STANDARD)
+			oxygen_alert = max(oxygen_alert, 0.5)
+			return 0
+		apply_damage(-2 * ((oxygen_pressure) / 100) * (100 / 21), OXY) //21 oxygen_pressure keeps it at original value of 2
 		return 0
 
 	switch(air_info[1])
@@ -89,5 +100,4 @@
 				else if(SA_pp > 1) // There is sleeping gas in their lungs, but only a little, so give them a bit of a warning
 					if(prob(20))
 						spawn(0) emote(pick("giggle", "laugh"))
-	apply_damage(-2, OXY)
 	return 1
