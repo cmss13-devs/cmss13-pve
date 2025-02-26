@@ -207,6 +207,10 @@ Also change the icon to reflect the amount of sheets, if possible.*/
 			to_chat(usr, SPAN_WARNING("The [R.title] must be built on snow!"))
 			return
 
+		if((R.flags & CAN_MAKE_BARRICADE) && MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES))
+			to_chat(usr, SPAN_WARNING("You can't construct \the [R.title]!"))
+			return
+
 		if(R.time)
 			if(usr.action_busy)
 				return
