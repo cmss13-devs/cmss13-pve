@@ -186,7 +186,6 @@
 	pixel_x = 8;
 	pixel_y = 2
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/almayer/blackfull/west,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "bN" = (
@@ -592,7 +591,6 @@
 /obj/item/book/manual/detective{
 	pixel_x = -8
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/hybrisa/carpet/carpetdarkerblue,
 /area/lv759/indoors/twe_souter_outpost/dorm)
 "fQ" = (
@@ -601,7 +599,6 @@
 "fT" = (
 /obj/structure/closet/crate,
 /obj/item/roller/bedroll,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/hybrisa/carpet/carpetdarkerblue,
 /area/lv759/indoors/twe_souter_outpost/dorm)
 "fU" = (
@@ -795,7 +792,6 @@
 "hW" = (
 /obj/structure/closet/crate,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/prison/darkpurple2,
 /area/lv759/indoors/twe_souter_outpost/dorm)
 "hY" = (
@@ -911,7 +907,6 @@
 /obj/item/ammo_magazine/smg/p90/twe,
 /obj/item/ammo_magazine/smg/p90/twe,
 /obj/item/ammo_magazine/smg/p90/twe,
-/obj/effect/landmark/objective_landmark/close,
 /obj/structure/machinery/power/apc/no_power/east,
 /turf/open/floor/prison/red/southeast,
 /area/lv759/indoors/twe_souter_outpost/reception)
@@ -1075,7 +1070,6 @@
 	pixel_x = 6;
 	pixel_y = 7
 	},
-/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/prison/blue,
 /area/lv759/indoors/twe_souter_outpost/flight)
 "lE" = (
@@ -1130,7 +1124,7 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
 	},
-/obj/structure/machinery/faxmachine/twe,
+/obj/structure/machinery/faxmachine,
 /obj/item/paper,
 /turf/open/floor/prison/blue,
 /area/lv759/indoors/twe_souter_outpost/flight)
@@ -1191,7 +1185,7 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#98a3ab"
 	},
-/obj/structure/machinery/faxmachine/twe,
+/obj/structure/machinery/faxmachine,
 /obj/item/tool/pen/blue{
 	pixel_x = 6;
 	pixel_y = 7
@@ -1206,7 +1200,6 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/prop/mech/hydralic_clamp,
 /obj/structure/machinery/light/small,
-/obj/effect/landmark/objective_landmark/close,
 /obj/structure/pipes/standard/simple/hidden/dark{
 	dir = 9
 	},
@@ -1383,7 +1376,6 @@
 /obj/structure/bed/chair/office/light{
 	dir = 8
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/prison/blue/northeast,
 /area/lv759/indoors/twe_souter_outpost/flight)
 "nC" = (
@@ -1398,7 +1390,6 @@
 /obj/structure/sign/banners/twe_flag{
 	pixel_y = 28
 	},
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/prison/floor_plate/southwest,
 /area/lv759/indoors/twe_souter_outpost/reception)
 "nG" = (
@@ -1593,7 +1584,6 @@
 	pixel_y = 7
 	},
 /obj/item/explosive/grenade/high_explosive/rmc,
-/obj/effect/landmark/objective_landmark/medium,
 /obj/effect/decal/hybrisa/dirt_2,
 /turf/open/floor/strata/red2,
 /area/lv759/indoors/twe_souter_outpost/armoury)
@@ -2060,7 +2050,6 @@
 	pixel_x = 9;
 	pixel_y = 17
 	},
-/obj/effect/landmark/objective_landmark/close,
 /obj/item/reagent_container/food/drinks/coffeecup/uscm{
 	name = "TWE coffee mug";
 	desc = "A red, white and blue coffee mug depicting the flag of the TWE. Patriotic and bold, and commonly seen among veterans as a novelty.";
@@ -2306,8 +2295,6 @@
 	pixel_x = -8;
 	pixel_y = 4
 	},
-/obj/effect/landmark/objective_landmark/close,
-/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/prison/floor_plate/southwest,
 /area/lv759/indoors/twe_souter_outpost/reception)
 "GE" = (
