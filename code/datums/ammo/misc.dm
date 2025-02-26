@@ -291,6 +291,10 @@
 	nade_type = /obj/item/explosive/grenade/smokebomb
 	icon_state = "smoke_shell"
 
+/datum/ammo/grenade_container/incen
+	name = "incendiary smoke grenade shell"
+	nade_type = /obj/item/explosive/grenade/phosphorus
+
 /datum/ammo/grenade_container/tank_glauncher
 	max_range = 8
 
