@@ -22,6 +22,7 @@
 	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROT
 	siemens_coefficient = 0.9
 	eye_protection = EYE_PROTECTION_WELDING
+	drag_unequip = TRUE
 
 /obj/item/clothing/suit/space
 	name = "Space suit"
@@ -47,6 +48,9 @@
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
 	siemens_coefficient = 0.9
+	equip_sounds = list('sound/effects/air_open.ogg')
+	unequip_sounds = list('sound/effects/air_open.ogg')
+	drag_unequip = TRUE
 	var/can_support_limbs = TRUE
 	var/list/supporting_limbs = list()//If not-null, automatically splints breaks. Checked when removing the suit.
 
@@ -103,7 +107,7 @@
 					O.status |= LIMB_SPLINTED_INDESTRUCTIBLE
 	else
 	// Otherwise, remove the splints.
-		playsound(loc, 'sound/machines/hiss.ogg', 20, TRUE)
+		//playsound(loc, 'sound/machines/hiss.ogg', 20, TRUE)
 		for(var/obj/limb/O in H.limbs)
 			if((O.status & LIMB_SPLINTED) && (O.status & LIMB_BROKEN) && supporting_limbs.Find(O.display_name))
 				O.status &= ~LIMB_SPLINTED

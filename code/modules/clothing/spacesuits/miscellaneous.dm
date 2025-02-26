@@ -138,6 +138,7 @@
 /obj/item/clothing/suit/space/pressure/Initialize()
 	. = ..()
 	MD = new(src)
+
 //Delay of long mode with range of short mode
 /obj/item/device/motiondetector/spacesuit
 	detector_mode = MOTION_DETECTOR_LONG

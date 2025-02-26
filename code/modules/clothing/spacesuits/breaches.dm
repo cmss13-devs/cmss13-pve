@@ -5,7 +5,7 @@
 #define SPACESUIT_BREACH_STANDARD 1.5
 #define SPACESUIT_BREACH_COMBAT 1
 #define SPACESUIT_BREACH_THRESHOLD_CONSTANT 10 // to be made smaller by breach_vulnerability, inversely
-#define SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER 2
+#define SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER 2.1
 
 /datum/breach
 	var/class = 0    // Size. Lower is smaller.
@@ -77,7 +77,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 	if(!loc) return
 	var/turf/T = get_turf(src)
 	if(!T) return
-
+	var/sound_already_played = FALSE
 	amount = (amount*breach_vulnerability)*0.05 //0.05 is to get it within the 1-5 value at min(amount, 5)
 
 	//Increase existing breaches.
@@ -89,6 +89,8 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 		if (existing.class < 5 || existing.patched)
 			if(existing.patched)
+				playsound(loc, 'sound/effects/hull_bang.ogg', 75, TRUE, 7)
+				sound_already_played = TRUE
 				if (existing.damtype == BRUTE)
 					var/message = "\The [existing.descriptor] on \the [src] gapes wider[existing.patched ? ", tearing the patch" : ""]!"
 					T.visible_message(SPAN_WARNING(message))
@@ -113,7 +115,8 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 				T.visible_message(SPAN_WARNING("\The [old_descriptor] on [src] gapes wider, turning to a [existing.descriptor][existing.patched ? ", tearing the patch" : ""]"))
 			else if(existing.damtype == BURN)
 				T.visible_message(SPAN_WARNING("\The [old_descriptor] on [src] widens, turning to a [existing.descriptor][existing.patched ? ", tearing the patch" : ""]"))
-
+	if(!sound_already_played)
+		playsound(loc, pick('sound/effects/hull_hit1.ogg', 'sound/effects/hull_hit2.ogg', 'sound/effects/hull_hit3.ogg'), 75, TRUE, 7)
 	if (amount)
 		//Spawn a new breach.
 		var/datum/breach/B = new()
@@ -162,14 +165,14 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 		else if(burn_damage >= 5 && burn_damage > brute_damage)
 			name = "[(damage > 10) ? "heavily " : ""]scorched [base_name]"
+		else
+			name = "[base_name]"
 	var/patched_breach_tally = 0
 	for(var/datum/breach/B in breaches)
 		if(B.patched)
 			patched_breach_tally++
 	if(patched_breach_tally == breaches.len)
 		name = "patched [base_name]"
-	else
-		name = "[base_name]"
 	return damage
 
 //Handles repairs.
