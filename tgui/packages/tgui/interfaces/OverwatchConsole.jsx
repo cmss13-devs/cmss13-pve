@@ -48,7 +48,7 @@ const HomePanel = (props) => {
     <Section
       fontSize="20px"
       textAlign="center"
-      title="OVERWATCH DISABLED - SELECT SQUAD"
+      title="OVERWATCH DISABLED - SELECT UNIT"
     >
       <Stack justify="center" align="end" fontSize="20px">
         {data.squad_list.map((squad, index) => {
@@ -83,7 +83,7 @@ const SquadPanel = (props) => {
         <MainDashboard />
       </Collapsible>
 
-      <Collapsible title="Squad Roles" fontSize="16px">
+      <Collapsible title="Unit Roles" fontSize="16px">
         <RoleTable />
       </Collapsible>
 
@@ -93,7 +93,7 @@ const SquadPanel = (props) => {
           icon="heartbeat"
           onClick={() => setCategory('monitor')}
         >
-          Squad Monitor
+          Unit Monitor
         </Tabs.Tab>
         {!!data.can_launch_crates && (
           <Tabs.Tab
@@ -247,7 +247,7 @@ const RoleTable = (props) => {
           Section Sergeant
         </Table.Cell>
         <Table.Cell collapsing p="4px">
-          Squad Sergeants
+          Squad Leaders
         </Table.Cell>
         <Table.Cell collapsing p="4px">
           Specialist
@@ -323,7 +323,7 @@ const SquadMonitor = (props) => {
     b = b.role;
     const roleValues = {
       'Section Sergeant': 10,
-      'Squad Sergeant': 9,
+      'Squad Leader': 9,
       'Weapons Specialist': 8,
       Smartgunner: 7,
       'Platoon Corpsman': 6,
@@ -559,7 +559,7 @@ const SquadMonitor = (props) => {
                     <Button
                       icon="arrow-up"
                       color="green"
-                      tooltip="Promote marine to Squad Leader"
+                      tooltip="Promote marine to Unit Leader"
                       onClick={() => act('replace_lead', { ref: marine.ref })}
                     />
                   </Table.Cell>
