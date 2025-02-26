@@ -7,6 +7,10 @@
 	},
 /turf/open/space,
 /area/fiorina/oob)
+"aab" = (
+/obj/structure/machinery/vending/cigarette/koorlander/free,
+/turf/open/floor/plating/prison,
+/area/fiorina/tumor/aux_engi)
 "aak" = (
 /obj/effect/decal/hefa_cult_decals/d32{
 	icon_state = "4"
@@ -19926,10 +19930,6 @@
 /obj/item/reagent_container/syringe,
 /turf/open/floor/wood,
 /area/fiorina/station/civres_blue)
-"pxD" = (
-/obj/structure/machinery/vending/cigarette/koorlander/free,
-/turf/open/floor/plating/prison,
-/area/fiorina/tumor/aux_engi)
 "pyE" = (
 /obj/structure/closet/secure_closet/personal,
 /turf/open/floor/prison/darkpurplefull2,
@@ -39770,7 +39770,7 @@ rGq
 tAJ
 rZP
 rZP
-pxD
+aab
 rGq
 rGq
 tAJ

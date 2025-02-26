@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/machinery/vending/generic,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
 "aad" = (
 /turf/open/floor/plating/warnplate/north,
 /area/lv624/lazarus/engineering)
@@ -4886,10 +4890,6 @@
 	},
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
-"fVf" = (
-/obj/structure/machinery/vending/generic,
-/turf/open/floor/white,
-/area/lv624/lazarus/main_hall)
 "fVB" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -41295,7 +41295,7 @@ jFZ
 lHW
 lHW
 bWC
-fVf
+aaa
 psD
 psD
 psD
