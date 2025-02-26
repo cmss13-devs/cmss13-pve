@@ -931,7 +931,7 @@ Defined in conflicts.dm of the #defines folder.
 	. = ..()
 	var/new_attach_icon
 	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
-		if("snow")
+		if("snow", "urban")
 			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
 		if("desert")
 			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
