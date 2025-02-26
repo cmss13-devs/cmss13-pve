@@ -35,7 +35,7 @@
 		layer = ABOVE_MOB_LAYER
 	else
 		icon_state = "[initial(icon_state)]-o"
-		layer = OBJ_LAYER
+		layer = ABOVE_MOB_LAYER
 
 /obj/structure/curtain/shower
 	name = "shower curtain"
@@ -69,6 +69,14 @@
 	name = "red curtain"
 	icon_state = "red"
 
+/obj/structure/curtain/red/clean
+	icon_state = "red_clean"
+
+
+/obj/structure/curtain/blue
+	name = "blue curtain"
+	icon_state = "blue_clean"
+
 // Colorable
 
 /obj/structure/curtain/colorable
@@ -99,3 +107,4 @@
 	. = ..()
 	if(alpha)
 		set_opacity(0)
+

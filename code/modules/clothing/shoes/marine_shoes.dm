@@ -210,3 +210,12 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	spawn_item_type = /obj/item/attachable/bayonet
+/obj/item/clothing/shoes/cowboy
+	name = "leather boots"
+	desc = "A pair of leather cowboy boots."
+	icon_state = "cowboy"
+
+/obj/item/clothing/shoes/lizardskin
+	name = "lizardskin boots"
+	desc = "A pair of lizardskin cowboy boots. Get your disco on, baby."
+	icon_state = "lizardskin"

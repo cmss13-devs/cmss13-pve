@@ -443,3 +443,11 @@
 	density = TRUE
 	icon_opened = "open_mcart_y"
 	icon_closed = "closed_mcart_y"
+
+/obj/structure/closet/crate/upp
+	name = "secure military crate"
+	desc = "A secure military crate"
+	icon_state = "closed_uppcrate"
+	density = TRUE
+	icon_opened = "open_uppcrate"
+	icon_closed =  "close_uppcrate"
