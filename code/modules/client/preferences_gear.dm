@@ -184,6 +184,26 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Scarf, white"
 	path = /obj/item/clothing/mask/tornscarf/snow
 
+/datum/gear/mask/neckerchief_black
+	display_name = "Neckerchief, black"
+	path = /obj/item/clothing/mask/neckerchief/black
+
+/datum/gear/mask/neckerchief_tan
+	display_name = "Neckerchief, tan"
+	path = /obj/item/clothing/mask/neckerchief
+
+/datum/gear/mask/neckerchief_green
+	display_name = "Neckerchief, green"
+	path = /obj/item/clothing/mask/neckerchief/green
+
+/datum/gear/mask/neckerchief_gray
+	display_name = "Neckerchief, gray"
+	path = /obj/item/clothing/mask/neckerchief/gray
+
+/datum/gear/mask/neckerchief_red
+	display_name = "Neckerchief, red"
+	path = /obj/item/clothing/mask/neckerchief/red
+
 /datum/gear/mask/uscm
 	allowed_origins = USCM_ORIGINS
 
