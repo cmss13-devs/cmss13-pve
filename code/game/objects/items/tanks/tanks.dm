@@ -9,9 +9,9 @@
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_MEDIUM
 
-	var/pressure_full = ONE_ATMOSPHERE*4
+	var/pressure_full = ONE_ATMOSPHERE*5
 
-	var/pressure = ONE_ATMOSPHERE*4
+	var/pressure = ONE_ATMOSPHERE*5
 	var/gas_type = GAS_TYPE_AIR
 	var/temperature = T20C
 
@@ -22,7 +22,7 @@
 
 	var/distribute_pressure = ONE_ATMOSPHERE
 	var/integrity = 3
-	var/volume = 70
+	var/volume = 50
 	var/manipulated_by = null //Used by _onclick/hud/screen_objects.dm internals to determine if someone has messed with our tank or not.
 						//If they have and we haven't scanned it with the PDA or gas analyzer then we might just breath whatever they put in it.
 

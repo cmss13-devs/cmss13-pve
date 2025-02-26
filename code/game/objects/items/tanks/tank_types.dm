@@ -56,12 +56,12 @@
 	icon_state = "emergency"
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_WAIST
-	w_class = SIZE_TINY
+	w_class = SIZE_SMALL
 	force = 4
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
-	volume = 2 //Tiny. Real life equivalents only have 21 breaths of oxygen in them. They're EMERGENCY tanks anyway -errorage (dangercon 2011)
+	volume = 1 //Tiny. Real life equivalents only have 21 breaths of oxygen in them. They're EMERGENCY tanks anyway -errorage (dangercon 2011)
 	gas_type = GAS_TYPE_OXYGEN
-	pressure = 3*ONE_ATMOSPHERE
+	pressure = 3	*ONE_ATMOSPHERE
 	pressure_full = 3*ONE_ATMOSPHERE
 
 /obj/item/tank/get_examine_text(mob/user)
@@ -72,24 +72,25 @@
 	var/air_removal_rate = initial(distribute_pressure)*standard_breath_rate/(R_IDEAL_GAS_EQUATION*temperature)/5
 	var/moles_in_tank = (pressure_full * src.volume) / (R_IDEAL_GAS_EQUATION * temperature)
 	var/remaining_cycles = moles_in_tank / air_removal_rate
-	var/remaining_minutes = round(remaining_cycles * 5 / 60, 0.1) //it runs every two deciseconds i think
-	. += SPAN_DANGER("Assuming it is full, this tank has [remaining_minutes] minutes of at 21Kpa.")
+	var/remaining_minutes = round((remaining_cycles*1.1) * 5 / 60, 0.1) //it runs every two deciseconds i think. Also the 1.1 is to compensate for this always being slightly wrong fnr
+	. += SPAN_DANGER("Assuming it is full, this tank has about [remaining_minutes] minutes of at 21Kpa.")
 
 
 /obj/item/tank/emergency_oxygen/engi
 	name = "extended-capacity emergency oxygen tank"
-	desc = "Capable of sustaining a moderate length EVA."
+	desc = "Capable of sustaining a short EVA."
 	icon_state = "emergency_engi"
 	w_class = SIZE_SMALL
-	volume = 6
+	volume = 3
 	pressure = 5*ONE_ATMOSPHERE
 	pressure_full = 5*ONE_ATMOSPHERE
 
 /obj/item/tank/emergency_oxygen/double
 	name = "double emergency oxygen tank"
+	desc = "Capable of sustaining a long EVA."
 	icon_state = "emergency_double"
 	w_class = SIZE_MEDIUM
-	volume = 10
+	volume = 7
 	pressure = 5*ONE_ATMOSPHERE
 	pressure_full = 5*ONE_ATMOSPHERE
 

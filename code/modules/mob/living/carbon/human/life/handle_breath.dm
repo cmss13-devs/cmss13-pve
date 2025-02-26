@@ -57,7 +57,7 @@
 			if(O.anes_tank)
 				return O.anes_tank.return_air()
 			return null
-		if(!contents.Find(internal))
+		if(!internal.loc == src)
 			internal = null
 		if(!wear_mask || !(wear_mask.flags_inventory & ALLOWINTERNALS))
 			internal = null
