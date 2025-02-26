@@ -15551,20 +15551,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/endcap_left/west,
 /area/golden_arrow/supply)
-"dqo" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	dir = 1
-	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer/edge/north,
-/area/golden_arrow/lower_cargo)
 "duL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -17062,6 +17048,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"iUC" = (
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/lower_cargo)
 "iVi" = (
 /turf/closed/wall/almayer/outer/friegt,
 /area/golden_arrow/cargo_shuttle/lower)
@@ -18201,6 +18197,20 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"naw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/lower_cargo)
 "nex" = (
 /obj/structure/blocker/invisible_wall/directional{
 	layer = 2
@@ -18801,6 +18811,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"pce" = (
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/engineering)
 "pcD" = (
 /obj/structure/machinery/light/small/red{
 	dir = 4
@@ -19396,16 +19412,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
-"rqS" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/lower_cargo)
 "rzk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -20957,12 +20963,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
-"yhS" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25
-	},
-/turf/open/floor/almayer/edge/east,
-/area/golden_arrow/engineering)
 
 (1,1,1) = {"
 aEG
@@ -27006,7 +27006,7 @@ cGQ
 cGQ
 aPy
 aad
-dqo
+naw
 aPG
 wGV
 jSb
@@ -27021,14 +27021,14 @@ jSb
 wGV
 amP
 otJ
-rqS
+iUC
 pRt
 aPG
 wGV
 jSb
 wGV
 amP
-rqS
+iUC
 otJ
 umJ
 aSD
@@ -30030,7 +30030,7 @@ anm
 aIC
 rOB
 dhC
-yhS
+pce
 aIC
 dLD
 anm
