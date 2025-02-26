@@ -19,10 +19,14 @@
 
 	//First, check for air from internal atmosphere (using an air tank and mask generally)
 	air_info = get_breath_from_internal()
+
 	//No breath from internal atmosphere so get breath from location
 	if(!air_info)
 		var/turf/T = get_turf(loc)
-		air_info = T.return_air()
+		if((get_ai_brain() && GLOB.human_ai_breathe_space) || GLOB.all_human_breathe_space)
+			air_info = list("air", T20C, ONE_ATMOSPHERE, O2STANDARD)
+		else
+			air_info = T.return_air()
 
 		//Handle filtering
 		var/block = 0
@@ -60,6 +64,30 @@
 		if(internal)
 			return internal.take_air()
 	return null
+
+/// Easier than programming AI to setup their internals
+GLOBAL_VAR_INIT(human_ai_breathe_space, TRUE)
+/client/proc/toggle_human_ai_breathe_space()
+	set name = "Toggle Human AI Need Air"
+	set category = "Game Master.HumanAI"
+
+	if(!admin_holder || !check_rights(R_MOD, FALSE))
+		return
+
+	GLOB.human_ai_breathe_space = !GLOB.human_ai_breathe_space
+	message_admins("[src] has [GLOB.human_ai_breathe_space ? "enabled" : "disabled"] Human AI being damaged by lacking oxygen internals in space.")
+
+/// Easier than programming AI to setup their internals
+GLOBAL_VAR_INIT(all_human_breathe_space, FALSE)
+/client/proc/toggle_all_human_breathe_space()
+	set name = "Toggle Atmosphere Always Good"
+	set category = "Admin.Flags"
+
+	if(!admin_holder || !check_rights(R_MOD, FALSE))
+		return
+
+	GLOB.all_human_breathe_space = !GLOB.all_human_breathe_space
+	message_admins("[src] has [GLOB.all_human_breathe_space ? "enabled" : "disabled"] ALL Humans will now ignore the cold and lack of air in space.")
 
 /mob/living/carbon/human/proc/handle_breath(list/air_info)
 	oxygen_alert = 0 // so unless no air info is returned (which happens only when gasping or lack of atmosphere) it'll always be 0
