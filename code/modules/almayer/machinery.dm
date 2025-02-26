@@ -180,14 +180,7 @@
 	new_item.pixel_y = (CELLSIZE * (cell_y + 0.5)) - center["y"]
 	new_item.pixel_z = 0
 
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal
-	icon_state = "h_maptable"
-	bound_width = 96
-	bound_height = 64
-	light_pixel_x = 32
-	light_pixel_y = 16
-
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/update_icon()
+/obj/structure/machinery/prop/almayer/CICmap/table/update_icon()
 	..()
 
 	overlays.Cut()
@@ -198,6 +191,39 @@
 		overlays += mutable_appearance(source_image.icon, source_image.icon_state)
 		light_power = 1
 	else return
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment
+	icon = 'icons/obj/structures/props/maptable.dmi'
+	icon_state = "v_maptable1"
+	bound_width = 32
+	bound_height = 32
+	light_pixel_x = 0
+	light_pixel_y = 0
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/one
+	icon_state = "v_maptable1"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/two
+	icon_state = "v_maptable2"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/three
+	icon_state = "v_maptable3"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/four
+	icon_state = "v_maptable4"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/five
+	icon_state = "v_maptable5"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/six
+	icon_state = "v_maptable6"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal
+	icon_state = "h_maptable"
+	bound_width = 96
+	bound_height = 64
+	light_pixel_x = 32
+	light_pixel_y = 16
 
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment
 	icon = 'icons/obj/structures/props/maptable.dmi'
