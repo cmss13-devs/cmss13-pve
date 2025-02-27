@@ -120,6 +120,7 @@ class ChatRenderer {
     this.rootNode = null;
     this.queue = [];
     this.messages = [];
+    this.storeQueue = [];
     this.visibleMessages = [];
     this.page = null;
     this.events = new EventEmitter();
@@ -465,6 +466,7 @@ class ChatRenderer {
       countByType[message.type] += 1;
       // TODO: Detect duplicates
       this.messages.push(message);
+      this.storeQueue.push(message);
       if (canPageAcceptType(this.page, message.type)) {
         fragment.appendChild(node);
         this.visibleMessages.push(message);
