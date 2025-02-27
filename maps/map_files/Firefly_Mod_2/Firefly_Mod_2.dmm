@@ -1,31 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -7
-	},
-/turf/open/floor/corsat/yellow/northwest,
-/area/firefly/engineer)
 "ab" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 9;
 	pixel_y = -10
 	},
 /turf/open/floor/corsat/plate,
-/area/firefly/engineer)
-"ac" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
-/turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "ad" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -87,6 +66,10 @@
 	},
 /turf/open/floor/almayer/aicore/no_build/ai_plates,
 /area/firefly/ares)
+"am" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/corsat/yellow/southwest,
+/area/firefly/engineer)
 "an" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/emails{
@@ -107,12 +90,6 @@
 /area/firefly/briefing)
 "ap" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/engineer)
 "aq" = (
@@ -132,18 +109,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"ar" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/floor/corsat/white/north,
-/area/firefly/briefing)
 "as" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/tdome/northeast,
@@ -160,6 +125,12 @@
 	},
 /turf/open/floor/wood,
 /area/firefly/briefing)
+"au" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/yellow/east,
+/area/firefly/engineer)
 "av" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -184,10 +155,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
 	},
 /turf/open/floor/corsat/arrow_west,
 /area/firefly/hangar)
@@ -409,6 +376,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/yellow/southeast,
 /area/firefly/engineer)
 "aZ" = (
@@ -530,10 +498,6 @@
 /area/firefly/engineer)
 "bo" = (
 /obj/structure/closet/secure_closet/engineering_welding,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "bp" = (
@@ -672,12 +636,6 @@
 	desc = "Likely to be incredibly flammable.";
 	density = 0
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /turf/open/floor/corsat/white/north,
 /area/firefly/engineer)
 "bE" = (
@@ -691,18 +649,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
-"bG" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/turf/open/floor/corsat/white,
-/area/firefly/medical)
 "bH" = (
 /obj/structure/machinery/door/poddoor/almayer/blended{
 	id = "RoomDivider";
@@ -816,16 +762,6 @@
 "bX" = (
 /turf/open/floor/corsat/white/southwest,
 /area/firefly/hangar)
-"bY" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
-/turf/open/floor/corsat/yellow/northwest,
-/area/firefly/engineer)
 "bZ" = (
 /turf/open/floor/corsat/plate,
 /area/firefly/briefing)
@@ -893,9 +829,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
 	pixel_y = 2
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
 	},
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/power/apc/no_power/south,
@@ -974,10 +907,7 @@
 	pixel_y = 4
 	},
 /obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -6
+	dir = 8
 	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/engineer)
@@ -1044,6 +974,10 @@
 /obj/structure/machinery/computer/med_data/laptop,
 /turf/open/floor/corsat/purplewhite/north,
 /area/firefly/medical)
+"cD" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/corsat/squares,
+/area/firefly/engineer)
 "cE" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
 	name = "Weapons Bay Two"
@@ -1111,15 +1045,6 @@
 	},
 /turf/open/floor/corsat/purple,
 /area/firefly/medical)
-"cN" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 9
-	},
-/turf/open/floor/corsat/green/east,
-/area/firefly/cryo_cell)
 "cO" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -1219,10 +1144,6 @@
 /obj/structure/mirror{
 	pixel_y = 32
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 29
-	},
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/dark_sterile,
 /area/firefly/medical)
@@ -1232,11 +1153,6 @@
 	pixel_x = -1
 	},
 /obj/structure/prop/server_equipment/yutani_server,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
-	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
 "db" = (
@@ -1293,12 +1209,6 @@
 	dir = 1
 	},
 /obj/structure/pipes/vents,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_x = -18;
 	pixel_y = 6
@@ -1345,6 +1255,7 @@
 /obj/structure/platform_decoration{
 	dir = 4
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/red,
 /area/firefly/engineer)
 "dm" = (
@@ -1390,6 +1301,18 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"do" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/engineer)
+"dp" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/corsat/cargo,
+/area/firefly/engineer)
 "dq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -1443,6 +1366,13 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"dv" = (
+/obj/structure/roof/cargocrane_tracks/cross,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/engineer)
 "dw" = (
 /obj/structure/machinery/light/spot/blue{
 	dir = 1
@@ -1494,12 +1424,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/co)
 "dC" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
 /obj/structure/sign/safety/airtraffictower{
 	pixel_y = 38
 	},
@@ -1552,15 +1476,6 @@
 "dH" = (
 /turf/open/floor/corsat/arrow_north,
 /area/firefly/hangar)
-"dI" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -10;
-	pixel_y = -1
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/corsat/white/west,
-/area/firefly/medical)
 "dJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -1606,6 +1521,13 @@
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"dP" = (
+/obj/structure/roof/cargocrane_tracks/cross,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/engineer)
 "dQ" = (
 /obj/structure/platform{
 	dir = 8
@@ -1613,6 +1535,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/red,
 /area/firefly/engineer)
 "dR" = (
@@ -1637,12 +1560,6 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera"
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -7
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
@@ -1739,12 +1656,6 @@
 	icon_state = "SW-out";
 	pixel_x = -1
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 4;
-	light_power = 0.3;
-	pixel_x = 7
-	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/briefing)
 "ei" = (
@@ -1807,6 +1718,10 @@
 	},
 /turf/open/floor/corsat/arrow_east,
 /area/firefly/hangar)
+"ep" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/corsat/cargo,
+/area/firefly/engineer)
 "eq" = (
 /obj/item/clothing/suit/storage/marine/fluff/oneonethreeeight{
 	pixel_x = 7;
@@ -1862,6 +1777,15 @@
 	density = 0
 	},
 /turf/open/floor/corsat/cargo,
+/area/firefly/engineer)
+"ew" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 10;
+	pixel_x = -11
+	},
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/corsat/plate,
 /area/firefly/engineer)
 "ex" = (
 /obj/structure/disposalpipe/segment,
@@ -2238,12 +2162,6 @@
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
 "fl" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -7
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -2285,6 +2203,14 @@
 /obj/structure/machinery/telecomms/server/presets,
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
+"fs" = (
+/obj/structure/roof/cargocrane_tracks/vertical,
+/obj/structure/roof/cargocrane_tracks/cross,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/engineer)
 "ft" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/supply_drop_console/limited{
@@ -2294,11 +2220,6 @@
 	dir = 4;
 	pixel_x = 1;
 	pixel_y = 1
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -10;
-	pixel_y = -1
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
@@ -2375,6 +2296,9 @@
 	pixel_y = 30
 	},
 /obj/structure/pipes/vents/scrubber,
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/yellowcorner/north,
 /area/firefly/engineer)
 "fD" = (
@@ -2435,6 +2359,16 @@
 /obj/structure/blocker/invisible_wall/water,
 /turf/open/floor/shiva/radiator_tile2,
 /area/firefly/cryo_cell)
+"fL" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/yellow/west,
+/area/firefly/engineer)
 "fM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2457,14 +2391,11 @@
 /area/firefly/medical)
 "fO" = (
 /obj/structure/closet/firecloset,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
 /obj/structure/platform_decoration{
 	dir = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
 	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
@@ -2623,6 +2554,9 @@
 	pixel_x = -5;
 	pixel_y = -2
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
 /turf/open/floor/corsat/yellow/northwest,
 /area/firefly/engineer)
 "gk" = (
@@ -2671,10 +2605,33 @@
 /obj/structure/machinery/autolathe,
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
+"gr" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/corsat/yellow,
+/area/firefly/engineer)
 "gs" = (
 /obj/structure/sign/safety/elevator,
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/medical)
+"gt" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/yellow/east,
+/area/firefly/engineer)
+"gu" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/yellow/northeast,
+/area/firefly/engineer)
 "gv" = (
 /obj/structure/platform,
 /obj/structure/pipes/standard/tank/nitrous_oxide,
@@ -2920,9 +2877,7 @@
 "hb" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -10;
-	pixel_y = -1
+	dir = 8
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
@@ -2991,12 +2946,6 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 10
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
 	pixel_y = 2;
@@ -3010,15 +2959,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
-"hk" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
-/turf/open/floor/corsat/brown/north,
-/area/firefly/ptsgt)
 "hl" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -3105,22 +3045,11 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
-"ht" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
-/turf/open/floor/corsat/brown/southwest,
-/area/firefly/briefing)
 "hu" = (
 /obj/structure/machinery/suit_storage_unit/carbon_unit{
 	density = 0;
 	pixel_x = 2;
 	pixel_y = 19
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
 	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/engineer)
@@ -3147,6 +3076,14 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/briefing)
+"hA" = (
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/corsat/yellow,
+/area/firefly/engineer)
 "hB" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 8;
@@ -3300,16 +3237,6 @@
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/firefly/engineer)
-"hU" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/engineer)
 "hV" = (
 /obj/structure/largecrate/supply,
 /turf/open/floor/corsat/cargo,
@@ -3356,6 +3283,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/yellow/west,
 /area/firefly/engineer)
 "ib" = (
@@ -3378,14 +3308,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
-"id" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
-/obj/structure/pipes/vents/pump,
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
 "ie" = (
 /obj/structure/sign/safety/autoopenclose{
 	pixel_x = 13;
@@ -3454,11 +3376,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 1
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 19
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -3607,11 +3524,6 @@
 /turf/open/floor/corsat/green/north,
 /area/firefly/cryo_cell)
 "iD" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 10;
-	pixel_y = 2
-	},
 /obj/structure/machinery/photocopier/wyphotocopier{
 	pixel_y = 3
 	},
@@ -3826,10 +3738,7 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "jd" = (
@@ -3867,9 +3776,6 @@
 	desc = "A next generation combat helmet intended to be paired with the M4-X armor. The full faced helmet provides complete light ballistic-resistant protection alongside enchanced acid resistance. This prototype version lacks those features."
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /turf/open/floor/corsat/greenwhite,
 /area/firefly/medical)
 "jh" = (
@@ -3942,12 +3848,6 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
 "jn" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /obj/structure/machinery/telecomms/server/presets/command{
 	pixel_y = 2
 	},
@@ -3987,10 +3887,6 @@
 /area/firefly/hangar)
 "jt" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	pixel_y = -2
-	},
 /obj/item/storage/surgical_case/regular{
 	pixel_y = -3
 	},
@@ -4020,23 +3916,8 @@
 	pixel_x = -1
 	},
 /obj/structure/machinery/computer/rdconsole,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
-	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
-"jy" = (
-/obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
-/turf/open/floor/corsat/yellow/north,
-/area/firefly/engineer)
 "jz" = (
 /obj/structure/machinery/cm_vending/clothing/synth/snowflake{
 	pixel_y = 33;
@@ -4422,35 +4303,9 @@
 	},
 /turf/open/floor/corsat/white/southwest,
 /area/firefly/medical)
-"kx" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/obj/structure/machinery/computer/crew/alt{
-	dir = 4;
-	pixel_x = -10
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -9
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "ky" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
 /obj/structure/machinery/camera/autoname/golden_arrow,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
 "kz" = (
@@ -4746,14 +4601,6 @@
 	},
 /turf/open/floor/corsat/theta,
 /area/firefly/cryo_cell)
-"lo" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 19
-	},
-/turf/open/floor/corsat/yellow/north,
-/area/firefly/hangar)
 "lp" = (
 /obj/structure/cargo_container/ferret/mid,
 /turf/open/floor/corsat/cargo,
@@ -4874,9 +4721,6 @@
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
 "lE" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /obj/structure/pipes/vents/pump,
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -5000,22 +4844,6 @@
 	},
 /turf/open/floor/corsat/brown/west,
 /area/firefly/squad_theta)
-"lT" = (
-/obj/structure/bed/chair/comfy/vehicle{
-	dir = 8;
-	pixel_y = 4
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/briefing)
 "lU" = (
 /obj/effect/decal/medical_decals/permanent{
 	icon_state = "docdecal1";
@@ -5112,11 +4940,6 @@
 	density = 0;
 	pixel_x = 2;
 	pixel_y = 19
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
 	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
@@ -5334,10 +5157,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 18
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "mF" = (
@@ -5359,15 +5178,6 @@
 	icon_state = "pipe-c"
 	},
 /turf/open/floor/corsat/greencorner,
-/area/firefly/cafeteria)
-"mI" = (
-/obj/structure/machinery/chem_dispenser/canteen,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
-	},
-/turf/open/floor/corsat/green/north,
 /area/firefly/cafeteria)
 "mJ" = (
 /obj/effect/decal/warning_stripes{
@@ -5426,14 +5236,6 @@
 /obj/structure/window/framed/corsat/indestructible/research,
 /turf/open/floor/almayer_hull,
 /area/firefly/co)
-"mQ" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 10;
-	pixel_y = -1
-	},
-/turf/open/floor/corsat/brown/southeast,
-/area/firefly/briefing)
 "mR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -5449,12 +5251,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 10
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -5714,12 +5510,6 @@
 	icon_state = "N";
 	pixel_y = 2
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -5
-	},
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
@@ -5734,10 +5524,6 @@
 /area/firefly/medical)
 "nw" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /turf/open/floor/corsat/brown/southwest,
 /area/firefly/squad_omega)
 "nx" = (
@@ -5935,10 +5721,6 @@
 	},
 /obj/item/tool/weldpack,
 /obj/structure/surface/rack,
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 4
-	},
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/engineer)
 "nZ" = (
@@ -5979,18 +5761,6 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
-"od" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E"
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -2;
-	pixel_y = 18
-	},
-/turf/open/floor/corsat/arrow_west,
-/area/firefly/hangar)
 "oe" = (
 /obj/structure/window/reinforced/toughened,
 /turf/open/floor/corsat/plate,
@@ -6262,10 +6032,6 @@
 	icon_state = "SW-out";
 	pixel_x = -1
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -6
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
@@ -6283,10 +6049,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
 "oM" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /turf/open/floor/corsat/brown,
 /area/firefly/squad_theta)
 "oN" = (
@@ -6421,12 +6183,6 @@
 	density = 0;
 	desc = "A wardrobe containing all the clothes an overwatch officer would ever need.";
 	name = "\improper Overwatch's Personal Wardrobe"
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
 	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
@@ -6623,12 +6379,6 @@
 	icon_state = "p_stair_full"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -9
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "pF" = (
@@ -6715,12 +6465,6 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "pQ" = (
@@ -6744,10 +6488,7 @@
 /area/firefly/hangar)
 "pU" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "pW" = (
@@ -6888,11 +6629,6 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
-	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
 "qm" = (
@@ -6932,19 +6668,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/medical)
-"qs" = (
-/obj/structure/platform,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/firefly/briefing)
 "qt" = (
 /turf/open/floor/corsat/whitecorner/east,
 /area/firefly/hangar)
@@ -7109,12 +6832,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.3;
-	pixel_x = -10
-	},
 /turf/open/floor/corsat/yellow/northwest,
 /area/firefly/briefing)
 "qS" = (
@@ -7181,11 +6898,6 @@
 /turf/open/floor/corsat/white,
 /area/firefly/hangar)
 "rc" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -10;
-	pixel_y = -1
-	},
 /turf/open/floor/corsat/brown/southwest,
 /area/firefly/briefing)
 "re" = (
@@ -7427,13 +7139,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"rI" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 3
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
 "rJ" = (
 /obj/structure/platform{
 	dir = 8
@@ -7636,10 +7341,6 @@
 	icon_state = "NW-out";
 	pixel_y = 2
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "sh" = (
@@ -7670,8 +7371,7 @@
 "sk" = (
 /obj/structure/pipes/vents,
 /obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 19
+	dir = 1
 	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
@@ -7769,11 +7469,6 @@
 /area/firefly/briefing)
 "sv" = (
 /obj/structure/flora/pottedplant/random,
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 10;
-	pixel_y = -1
-	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8
 	},
@@ -7878,10 +7573,6 @@
 "sI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 18
 	},
 /turf/open/floor/corsat/arrow_west,
 /area/firefly/hangar)
@@ -8147,6 +7838,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "tq" = (
@@ -8279,6 +7973,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "tF" = (
@@ -8288,9 +7985,6 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
 "tG" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
@@ -8359,18 +8053,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/greenwhite/west,
 /area/firefly/medical)
-"tN" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/turf/open/floor/corsat/white,
-/area/firefly/briefing)
 "tO" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood/ship,
@@ -8411,17 +8093,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/co)
-"tS" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out"
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 4;
-	pixel_y = 1
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
 "tT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/tool/wrench{
@@ -8462,11 +8133,6 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 4;
-	pixel_y = 1
-	},
 /obj/structure/sign/safety/restrictedarea{
 	pixel_x = 34;
 	pixel_y = 7
@@ -8505,9 +8171,6 @@
 /obj/item/storage/firstaid/o2{
 	pixel_x = -6;
 	pixel_y = 6
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
 	},
 /turf/open/floor/corsat/purplewhite,
 /area/firefly/medical)
@@ -8604,13 +8267,6 @@
 /obj/item/tool/screwdriver{
 	pixel_x = 2;
 	pixel_y = 10
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 23;
-	pixel_x = -1
 	},
 /obj/item/prop/helmetgarb/bullet_pipe{
 	pixel_y = -2;
@@ -8775,12 +8431,6 @@
 /area/firefly/medical)
 "uE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /obj/item/weapon/gun/flamer/deathsquad/pve,
 /turf/open/floor/corsat/brown/northwest,
 /area/firefly/squad_theta)
@@ -9372,6 +9022,9 @@
 	pixel_x = 1;
 	pixel_y = 25
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/engineer)
 "vU" = (
@@ -9501,11 +9154,6 @@
 	pixel_x = -12;
 	pixel_y = -2
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
-	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
 "wp" = (
@@ -9617,14 +9265,6 @@
 /area/space)
 "wG" = (
 /turf/open/floor/corsat/white/southeast,
-/area/firefly/medical)
-"wH" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -10
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/corsat/white/west,
 /area/firefly/medical)
 "wJ" = (
 /obj/structure/surface/table/woodentable/fancy,
@@ -10014,7 +9654,7 @@
 "xG" = (
 /obj/structure/window/framed/corsat,
 /obj/structure/machinery/power/apc/almayer/west,
-/turf/closed/wall/r_wall/biodome,
+/turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
 "xH" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -10163,11 +9803,6 @@
 /area/firefly/cafeteria)
 "xZ" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_y = 14
-	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
 "ya" = (
@@ -10332,16 +9967,6 @@
 	},
 /turf/open/floor/corsat/green/northwest,
 /area/firefly/cryo_cell)
-"yv" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 5
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/corsat/squares,
-/area/firefly/briefing)
 "yw" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/czsp/first_aid{
@@ -10351,6 +9976,7 @@
 	pixel_x = -6;
 	pixel_y = 11
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/red/southwest,
 /area/firefly/engineer)
 "yx" = (
@@ -10451,9 +10077,7 @@
 /area/firefly/engineer)
 "yP" = (
 /obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -7;
-	pixel_y = 1
+	dir = 8
 	},
 /turf/open/floor/corsat/yellow/northwest,
 /area/firefly/engineer)
@@ -10491,11 +10115,6 @@
 /area/firefly/briefing)
 "yU" = (
 /obj/structure/prop/almayer/computers/sensor_computer3,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
-	},
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/firefly/medical)
 "yV" = (
@@ -10528,6 +10147,9 @@
 	},
 /obj/structure/machinery/computer/supply_drop_console/limited/alternate{
 	name = "Engineering Console"
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
 	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
@@ -10626,10 +10248,6 @@
 "zn" = (
 /obj/structure/platform,
 /obj/structure/pipes/vents,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_x = 34;
 	pixel_y = 5
@@ -10684,12 +10302,6 @@
 /obj/structure/pipes/vents/pump/no_boom/gas{
 	dir = 8;
 	vent_tag = "Access Hall"
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
 	},
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_x = 34;
@@ -10767,11 +10379,6 @@
 /obj/structure/platform_decoration{
 	dir = 1
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -10;
-	pixel_y = -1
-	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
 	name = "ship-grade camera"
@@ -10802,13 +10409,6 @@
 /obj/structure/machinery/computer/crew/alt{
 	dir = 4;
 	pixel_x = -10
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -9;
-	pixel_y = 2
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
@@ -10873,14 +10473,6 @@
 	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/engineer)
-"zL" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 7;
-	pixel_y = -1
-	},
-/turf/open/floor/corsat/brown/east,
-/area/firefly/briefing)
 "zM" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
 	id = "undergroundhangarwest";
@@ -10897,18 +10489,6 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/space)
-"zO" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/floor/corsat/white/north,
-/area/firefly/medical)
 "zP" = (
 /obj/structure/platform{
 	dir = 8
@@ -10933,10 +10513,6 @@
 /area/firefly/cryo_cell)
 "zS" = (
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /turf/open/floor/corsat/yellowcorner/west,
 /area/firefly/engineer)
 "zT" = (
@@ -11060,9 +10636,7 @@
 	name = "ship-grade camera"
 	},
 /obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -7;
-	pixel_y = 1
+	dir = 8
 	},
 /turf/open/floor/corsat/yellow/west,
 /area/firefly/engineer)
@@ -11113,10 +10687,7 @@
 	pixel_y = -15
 	},
 /obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 8
+	dir = 4
 	},
 /turf/open/floor/corsat/red/east,
 /area/firefly/engineer)
@@ -11303,11 +10874,7 @@
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17;
-	layer = 2
+	dir = 1
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
@@ -11360,11 +10927,6 @@
 /turf/open/floor/corsat/spiralplate,
 /area/firefly/engineer)
 "AS" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /obj/structure/machinery/computer/cryopod{
 	pixel_x = 6;
 	pixel_y = -2;
@@ -11473,9 +11035,6 @@
 	icon_state = "SW-out";
 	pixel_x = -1
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
@@ -11520,8 +11079,7 @@
 "Bk" = (
 /obj/structure/prop/server_equipment/yutani_server,
 /obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 19
+	dir = 1
 	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
@@ -11553,17 +11111,6 @@
 	},
 /turf/open/floor/corsat/brown/east,
 /area/firefly/briefing)
-"Bo" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 9
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/corsat/white/east,
-/area/firefly/medical)
 "Bp" = (
 /obj/structure/cargo_container/hd/left,
 /turf/open/floor/corsat/cargo,
@@ -11687,11 +11234,6 @@
 	icon_state = "p_stair_full"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/engineer)
 "BG" = (
@@ -11949,9 +11491,6 @@
 	dir = 1;
 	name = "ship-grade camera"
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -12049,16 +11588,6 @@
 	},
 /turf/open/floor/almayer/aicore/no_build/ai_plates,
 /area/firefly/ares)
-"CA" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.3;
-	pixel_x = -10;
-	pixel_y = 1
-	},
-/turf/open/floor/corsat/yellow/southwest,
-/area/firefly/briefing)
 "CB" = (
 /obj/structure/prop/structure_lattice{
 	dir = 8;
@@ -12245,10 +11774,6 @@
 /area/firefly/medical)
 "CW" = (
 /obj/structure/machinery/disposal,
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 6
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -12298,12 +11823,6 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/briefing)
 "De" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
@@ -12314,10 +11833,7 @@
 	dir = 6
 	},
 /obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
+	dir = 1
 	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/engineer)
@@ -12423,9 +11939,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_y = 1
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8
 	},
 /turf/open/floor/corsat/white/west,
 /area/firefly/hangar)
@@ -12696,16 +12209,6 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/blue/north,
 /area/firefly/co)
-"Ee" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 5
-	},
-/obj/structure/pipes/vents/pump,
-/turf/open/floor/corsat/squares,
-/area/firefly/briefing)
 "Ef" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/faxmachine/corporate{
@@ -12761,14 +12264,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/briefing)
-"El" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -7;
-	pixel_y = 1
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
 "Em" = (
 /turf/open/floor/corsat/purplecorner/west,
 /area/firefly/medical)
@@ -12780,11 +12275,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
 	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
@@ -12824,12 +12314,6 @@
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /turf/open/floor/corsat/brown/northwest,
 /area/firefly/squad_omega)
 "Et" = (
@@ -13027,12 +12511,6 @@
 	pixel_y = 32;
 	pixel_x = 7
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
 "ES" = (
@@ -13092,11 +12570,6 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "EZ" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -10;
-	pixel_y = -1
-	},
 /turf/open/floor/corsat/brown/west,
 /area/firefly/briefing)
 "Fa" = (
@@ -13159,6 +12632,9 @@
 "Fj" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/structure/roof/cargocrane_tracks/cross,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "Fk" = (
@@ -13182,12 +12658,6 @@
 /obj/structure/platform,
 /turf/open/floor/tdome/tcomms,
 /area/firefly/cryo_cell)
-"Fn" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
-/turf/open/floor/corsat/yellow,
-/area/firefly/hangar)
 "Fo" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
 /turf/open/floor/corsat/yellow/northwest,
@@ -13196,15 +12666,11 @@
 /turf/open/floor/corsat/brown/northwest,
 /area/firefly/briefing)
 "Fq" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 4;
-	pixel_y = 1
-	},
 /obj/structure/sign/safety/restrictedarea{
 	pixel_x = 34;
 	pixel_y = 6
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "Fr" = (
@@ -13559,9 +13025,6 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /turf/open/floor/corsat/greenwhite,
 /area/firefly/medical)
 "Gd" = (
@@ -13649,11 +13112,6 @@
 "Gn" = (
 /obj/structure/prop/vehicle/sensor_equipment{
 	pixel_y = 2
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
 	},
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/firefly/medical)
@@ -13751,10 +13209,6 @@
 /obj/structure/pipes/vents/pump/no_boom/gas{
 	dir = 8;
 	vent_tag = "Access Hall"
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
 	},
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_x = -17;
@@ -14101,18 +13555,6 @@
 	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/engineer)
-"Hn" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 9;
-	pixel_y = -10
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/engineer)
 "Ho" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
@@ -14289,9 +13731,7 @@
 	dir = 4
 	},
 /obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_y = 14
+	dir = 1
 	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
@@ -14354,12 +13794,6 @@
 "HT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 19;
-	pixel_x = -1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -14425,16 +13859,6 @@
 	},
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
-"Ia" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -10;
-	pixel_y = 4
-	},
-/turf/open/floor/corsat/purple/west,
-/area/firefly/medical)
 "Ib" = (
 /obj/structure/machinery/cm_vending/clothing/medic{
 	pixel_y = 22;
@@ -14553,9 +13977,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
 	},
 /turf/open/floor/corsat/greenwhite,
 /area/firefly/medical)
@@ -14792,15 +14213,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
-"IP" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -7;
-	pixel_y = 1
-	},
-/turf/open/floor/corsat/yellowcorner/west,
-/area/firefly/engineer)
 "IQ" = (
 /obj/structure/barricade/handrail/medical{
 	dir = 8
@@ -14952,12 +14364,6 @@
 	name = "spare m41a barrel";
 	pixel_x = -5;
 	pixel_y = -5
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 23
 	},
 /obj/item/attachable/pmc_sniperbarrel{
 	pixel_x = 5;
@@ -15111,10 +14517,6 @@
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 31
-	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/engineer)
 "JA" = (
@@ -15197,25 +14599,6 @@
 /obj/structure/machinery/message_server,
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
-"JJ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -6
-	},
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "JK" = (
 /obj/structure/prop/almayer/particle_cannon/corsat{
 	pixel_x = -7;
@@ -15227,12 +14610,6 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/space)
 "JL" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /turf/open/floor/corsat/brown/north,
 /area/firefly/squad_omega)
 "JM" = (
@@ -15240,10 +14617,6 @@
 	icon_state = "road_edge_decal8";
 	pixel_x = 5;
 	pixel_y = 3
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -6
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -15613,12 +14986,6 @@
 /turf/open/floor/corsat/blue,
 /area/firefly/briefing)
 "KE" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 10
-	},
 /turf/open/floor/corsat/purple/east,
 /area/firefly/medical)
 "KF" = (
@@ -15731,10 +15098,7 @@
 "KR" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 3
+	dir = 4
 	},
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/engineer)
@@ -16162,7 +15526,7 @@
 /area/firefly/engineer)
 "LN" = (
 /obj/structure/window/framed/corsat,
-/turf/closed/wall/r_wall/biodome,
+/turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
 "LO" = (
 /obj/structure/stairs/perspective{
@@ -16550,11 +15914,6 @@
 	layer = 3.3
 	},
 /obj/structure/machinery/mech_bay_recharge_port,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_y = 17
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "MH" = (
@@ -16665,10 +16024,7 @@
 "MS" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -7
+	dir = 8
 	},
 /turf/open/floor/corsat/yellow/southwest,
 /area/firefly/engineer)
@@ -16680,12 +16036,6 @@
 	name = "Core Power Monitoring"
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "MV" = (
@@ -16841,14 +16191,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
-"No" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 10;
-	pixel_y = -1
-	},
-/turf/open/floor/corsat/yellow/east,
-/area/firefly/engineer)
 "Np" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -16898,8 +16240,7 @@
 "Nv" = (
 /obj/structure/pipes/vents/scrubber,
 /obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
+	dir = 8
 	},
 /turf/open/floor/corsat/yellow/southwest,
 /area/firefly/engineer)
@@ -16916,18 +16257,6 @@
 "Nx" = (
 /obj/structure/surface/table/reinforced/almayer_blend,
 /turf/open/floor/corsat/squares,
-/area/firefly/medical)
-"Ny" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 9;
-	pixel_y = 1
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/corsat/white/east,
 /area/firefly/medical)
 "NA" = (
 /obj/effect/decal/warning_stripes{
@@ -17013,9 +16342,6 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/co)
 "NI" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /turf/open/floor/corsat/brown/southwest,
 /area/firefly/hangar)
 "NJ" = (
@@ -17092,16 +16418,6 @@
 	},
 /turf/open/floor/corsat/red/north,
 /area/firefly/medical)
-"NR" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -7
-	},
-/obj/structure/pipes/vents/pump,
-/turf/open/floor/corsat/squares,
-/area/firefly/briefing)
 "NS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -17222,13 +16538,6 @@
 	layer = 3
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17;
-	layer = 2
-	},
 /turf/open/floor/corsat/white/north,
 /area/firefly/engineer)
 "Og" = (
@@ -17239,9 +16548,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_y = 1
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8
 	},
 /turf/open/floor/corsat/white/west,
 /area/firefly/hangar)
@@ -17306,13 +16612,6 @@
 "Or" = (
 /turf/open/floor/almayer_hull/outerhull_dir/north,
 /area/space)
-"Os" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
 "Ot" = (
 /obj/structure/sign/safety/commline_connection{
 	name = "communication line semiotic";
@@ -17386,12 +16685,6 @@
 /obj/structure/surface/rack{
 	color = "#6b675e";
 	layer = 2.79
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
 	},
 /obj/item/weapon/gun/rifle/m41a/elite/platoon{
 	pixel_y = 12
@@ -17527,12 +16820,6 @@
 	pixel_y = 11;
 	density = 0
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "OT" = (
@@ -17548,13 +16835,6 @@
 "OU" = (
 /obj/structure/sign/safety/airtraffictower{
 	pixel_y = 30
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 25;
-	pixel_x = -1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -17613,10 +16893,7 @@
 /area/firefly/briefing)
 "Pc" = (
 /obj/structure/pipes/vents,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "Pd" = (
@@ -17676,18 +16953,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
-"Pj" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -7
-	},
-/turf/open/floor/corsat/green/west,
-/area/firefly/cafeteria)
 "Pk" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 8;
@@ -17724,19 +16989,6 @@
 "Po" = (
 /obj/structure/droppod/container,
 /turf/open/floor/corsat/cargo,
-/area/firefly/engineer)
-"Pp" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/machinery/camera/autoname/golden_arrow,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
-/turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "Pq" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -18181,15 +17433,6 @@
 	icon_state = "wy_rightengine"
 	},
 /area/firefly/engineer)
-"Qx" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
-	},
-/obj/structure/machinery/cm_vending/sorted/marine_food,
-/turf/open/floor/corsat/green/north,
-/area/firefly/cafeteria)
 "Qy" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -18312,12 +17555,6 @@
 	icon_state = "cargo"
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
 "QO" = (
@@ -18462,16 +17699,6 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"Rj" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -7
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/corsat/squares,
-/area/firefly/briefing)
 "Rk" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/hangar)
@@ -18533,10 +17760,6 @@
 /obj/structure/surface/rack{
 	color = "#6b675e";
 	layer = 2.79
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
 	},
 /obj/item/weapon/gun/rifle/m41a/elite/platoon{
 	pixel_y = -7
@@ -18765,18 +17988,6 @@
 	},
 /turf/open/floor/corsat/greenwhite/west,
 /area/firefly/medical)
-"RR" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
-/turf/open/floor/corsat/yellow,
-/area/firefly/engineer)
 "RS" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/platform_decoration{
@@ -18925,9 +18136,7 @@
 /area/firefly/briefing)
 "Sg" = (
 /obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -7;
-	pixel_y = 1
+	dir = 8
 	},
 /turf/open/floor/corsat/yellow/west,
 /area/firefly/engineer)
@@ -19078,10 +18287,6 @@
 /obj/item/tool/screwdriver/tactical,
 /obj/item/tool/wirecutters/tactical,
 /obj/structure/machinery/camera/autoname/golden_arrow,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 19
-	},
 /turf/open/floor/corsat/red/northwest,
 /area/firefly/engineer)
 "Su" = (
@@ -19250,12 +18455,6 @@
 /area/firefly/engineer)
 "SM" = (
 /obj/structure/machinery/disposal,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/dark_sterile,
 /area/firefly/cafeteria)
@@ -19301,6 +18500,7 @@
 	pixel_x = -4;
 	pixel_y = -3
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/red/southeast,
 /area/firefly/engineer)
 "SR" = (
@@ -19347,12 +18547,6 @@
 /obj/structure/sign/safety/bridge{
 	pixel_x = 14;
 	pixel_y = 29
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 23
 	},
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/camera/autoname/golden_arrow,
@@ -19565,18 +18759,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
-"TE" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 3.3
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_y = 18
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
 "TF" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/squares,
@@ -19729,9 +18911,6 @@
 	amount = 25;
 	pixel_x = 14
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /turf/open/floor/corsat/purplewhite,
 /area/firefly/medical)
 "TY" = (
@@ -19799,10 +18978,6 @@
 	layer = 3.3;
 	pixel_y = 1
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 19
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "Uj" = (
@@ -19865,14 +19040,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
-"Ur" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 18
-	},
-/turf/open/floor/corsat/yellow/north,
-/area/firefly/hangar)
 "Us" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -20039,11 +19206,6 @@
 	pixel_x = 1
 	},
 /obj/structure/prop/server_equipment/yutani_server,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
-	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
 "UK" = (
@@ -20101,10 +19263,6 @@
 	pixel_x = 4;
 	pixel_y = 7
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	pixel_y = -4
-	},
 /turf/open/floor/corsat/red,
 /area/firefly/medical)
 "US" = (
@@ -20122,10 +19280,7 @@
 /turf/open/floor/tdome/northeast,
 /area/firefly/ares)
 "UU" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "UV" = (
@@ -20231,12 +19386,6 @@
 /obj/structure/barricade/handrail{
 	dir = 1;
 	pixel_y = 15
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 21
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/engineer)
@@ -20354,15 +19503,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"Vr" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 17
-	},
-/turf/open/floor/corsat/green/north,
-/area/firefly/cryo_cell)
 "Vs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -20691,14 +19831,6 @@
 	},
 /turf/open/floor/corsat/green,
 /area/firefly/cafeteria)
-"Wh" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
-	},
-/turf/open/floor/corsat/red/north,
-/area/firefly/medical)
 "Wi" = (
 /obj/structure/closet/secure_closet{
 	pixel_x = 7
@@ -20783,9 +19915,6 @@
 /obj/item/pamphlet/skill/surgery{
 	pixel_x = 8;
 	pixel_y = -4
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
@@ -20948,16 +20077,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
-"WJ" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = 3
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/corsat/squares,
-/area/firefly/briefing)
 "WK" = (
 /turf/open/floor/corsat/red/north,
 /area/firefly/medical)
@@ -20984,18 +20103,6 @@
 	},
 /turf/open/floor/corsat/green/north,
 /area/firefly/cafeteria)
-"WO" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/turf/open/floor/corsat/blue,
-/area/firefly/briefing)
 "WP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -21006,13 +20113,6 @@
 "WQ" = (
 /obj/structure/cargo_container/ferret/left,
 /turf/open/floor/corsat/cargo,
-/area/firefly/hangar)
-"WR" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 4
-	},
-/turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "WS" = (
 /obj/structure/closet/secure_closet/marine_personal{
@@ -21069,15 +20169,6 @@
 /obj/structure/machinery/chem_dispenser/canteen,
 /turf/open/floor/corsat/green/north,
 /area/firefly/cafeteria)
-"Xa" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 4;
-	light_power = 0.3;
-	pixel_x = 8
-	},
-/turf/open/floor/corsat/yellow/southeast,
-/area/firefly/briefing)
 "Xb" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -21130,9 +20221,7 @@
 /area/firefly/briefing)
 "Xg" = (
 /obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 4;
-	pixel_y = 1
+	dir = 4
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
@@ -21205,10 +20294,6 @@
 "Xs" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 9
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -6
 	},
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_x = -19;
@@ -21328,18 +20413,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/firefly/co)
-"XE" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
-/turf/open/floor/corsat/yellow/north,
-/area/firefly/engineer)
 "XG" = (
 /turf/open/floor/corsat/yellowcorner/west,
 /area/firefly/briefing)
@@ -21393,12 +20466,6 @@
 /obj/structure/barricade/handrail{
 	dir = 1;
 	pixel_y = 16
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_y = 21
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/engineer)
@@ -21483,13 +20550,6 @@
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/almayer/aicore/no_build/ai_plates,
 /area/firefly/ares)
-"XT" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 19
-	},
-/turf/open/floor/corsat/green/north,
-/area/firefly/cryo_cell)
 "XU" = (
 /obj/structure/janitorialcart/brown,
 /obj/item/tool/mop{
@@ -21500,19 +20560,12 @@
 /area/firefly/medical)
 "XV" = (
 /obj/structure/closet/crate,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /turf/open/floor/corsat/yellowcorner,
 /area/firefly/engineer)
 "XW" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7;
-	pixel_x = -7
+	dir = 8
 	},
 /turf/open/floor/corsat/yellow/west,
 /area/firefly/engineer)
@@ -21653,17 +20706,9 @@
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /turf/open/floor/corsat/brown/southwest,
 /area/firefly/squad_theta)
 "Yl" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 18
-	},
 /turf/open/floor/corsat/brown/northwest,
 /area/firefly/hangar)
 "Ym" = (
@@ -21754,13 +20799,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
-"Yx" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
-/turf/open/floor/corsat/green,
-/area/firefly/cryo_cell)
 "Yz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -21771,24 +20809,6 @@
 	},
 /turf/open/floor/corsat/purple/southwest,
 /area/firefly/medical)
-"YA" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -4
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
-"YB" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 3.3
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
 "YC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -21860,10 +20880,6 @@
 /obj/structure/machinery/computer/cameras/engineering{
 	pixel_y = 4
 	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 19
-	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/hangar)
 "YK" = (
@@ -21885,16 +20901,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"YM" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
-/turf/open/floor/corsat/yellow,
-/area/firefly/engineer)
 "YN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -21923,9 +20929,6 @@
 	pixel_y = 8
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /turf/open/floor/corsat/greenwhite,
 /area/firefly/medical)
 "YR" = (
@@ -22173,12 +21176,6 @@
 	},
 /turf/open/floor/corsat/white/east,
 /area/firefly/engineer)
-"Zw" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
-/turf/open/floor/corsat/cargo,
-/area/firefly/hangar)
 "Zx" = (
 /obj/item/device/flashlight/flare/on/starshell_ash{
 	pixel_x = 13;
@@ -22241,9 +21238,6 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
 "ZF" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
-	},
 /turf/open/floor/corsat/white,
 /area/firefly/briefing)
 "ZG" = (
@@ -22359,12 +21353,6 @@
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
 "ZS" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = 18
-	},
 /obj/structure/sign/safety/airtraffictower{
 	pixel_y = 38
 	},
@@ -22418,9 +21406,6 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
@@ -23915,7 +22900,7 @@ aA
 LC
 HL
 Ax
-xU
+gr
 LC
 aA
 LC
@@ -24373,14 +23358,14 @@ PT
 Ax
 xU
 nb
-bY
+FL
 uR
 LS
 LS
 Ax
 rs
 LC
-Pp
+pZ
 BS
 Dv
 Dv
@@ -24523,7 +23508,7 @@ cu
 aX
 hL
 Ax
-YM
+gr
 nb
 Cy
 bV
@@ -24673,7 +23658,7 @@ Ni
 Ni
 Ni
 cu
-XE
+HL
 Ax
 xU
 EY
@@ -25281,7 +24266,7 @@ rJ
 rJ
 rJ
 cu
-XE
+HL
 Ax
 xU
 EY
@@ -25435,7 +24420,7 @@ cu
 Zp
 hL
 Ax
-YM
+gr
 nb
 Ns
 bV
@@ -25596,7 +24581,7 @@ LS
 Ax
 rs
 LC
-ac
+HY
 BS
 Dv
 Dv
@@ -25737,7 +24722,7 @@ cu
 cu
 cu
 LC
-eP
+HL
 Ax
 xU
 nb
@@ -26041,9 +25026,9 @@ aA
 aA
 LC
 LC
-eP
+HL
 Ax
-xU
+gr
 nb
 LC
 LC
@@ -26352,7 +25337,7 @@ nb
 fd
 FJ
 zb
-IP
+la
 KS
 QG
 LC
@@ -26501,7 +25486,7 @@ eP
 Ax
 xU
 nb
-jy
+qX
 Nr
 dR
 eW
@@ -26803,7 +25788,7 @@ LC
 LC
 eP
 Ax
-xU
+gr
 nb
 qX
 Ik
@@ -26948,14 +25933,14 @@ ut
 nb
 ut
 ut
-aa
+yP
 SY
 Cr
 Nv
 nb
-XE
+HL
 Ax
-YM
+xU
 nb
 lt
 ZO
@@ -26975,7 +25960,7 @@ xS
 gi
 PK
 Ua
-hU
+bV
 LC
 LC
 wF
@@ -27409,9 +26394,9 @@ xS
 cr
 UU
 nb
-XE
+HL
 Ax
-YM
+gr
 nb
 dj
 ho
@@ -27583,7 +26568,7 @@ bn
 hX
 gx
 LS
-hU
+bV
 LC
 LC
 wF
@@ -28015,11 +27000,11 @@ mj
 Zk
 ec
 cr
-pg
+UU
 nb
-eP
+HL
 Ax
-xU
+gr
 nb
 If
 Jg
@@ -28332,7 +27317,7 @@ nb
 vQ
 vQ
 nb
-RR
+HY
 GV
 Dv
 Dv
@@ -28775,7 +27760,7 @@ xe
 Wl
 xS
 OX
-HZ
+hA
 LC
 sk
 Ax
@@ -29081,9 +28066,9 @@ VU
 bV
 pU
 LC
-eP
+HL
 Ax
-xU
+gr
 LC
 LC
 LS
@@ -29108,7 +28093,7 @@ LS
 LS
 LC
 SG
-BU
+am
 LC
 LC
 LC
@@ -29261,7 +28246,7 @@ nT
 Sg
 Tb
 px
-BU
+am
 LC
 LC
 aA
@@ -29982,8 +28967,8 @@ LC
 vT
 zU
 Fh
-ms
 KR
+ms
 ms
 ms
 ms
@@ -30145,9 +29130,9 @@ EW
 LC
 LC
 LC
-eP
+HL
 Ax
-xU
+gr
 LC
 fH
 nT
@@ -30305,7 +29290,7 @@ Mz
 bK
 Re
 yj
-TB
+dv
 Tk
 vh
 cA
@@ -30313,7 +29298,7 @@ Fj
 OO
 DE
 DE
-TB
+dv
 LC
 FG
 Ax
@@ -30753,23 +29738,23 @@ aA
 aA
 aA
 LC
-Hm
+gu
 Ep
-Ep
+gt
 BF
 Mz
 bK
 Jg
 yj
-TB
+dP
 BA
 DE
 DE
-Fj
+fs
 GO
 nV
 DE
-TB
+dP
 LC
 UP
 Ax
@@ -31141,7 +30126,7 @@ hE
 nI
 Vh
 Km
-JJ
+nu
 Km
 zE
 Vh
@@ -32201,7 +31186,7 @@ aA
 aA
 aA
 ji
-XT
+Wq
 PZ
 UA
 Fm
@@ -32214,7 +31199,7 @@ xd
 Ix
 Fm
 YC
-Yx
+ob
 ji
 aA
 aA
@@ -32509,7 +31494,7 @@ EO
 BJ
 Vh
 Km
-kx
+zF
 Km
 zE
 Vh
@@ -32970,7 +31955,7 @@ mF
 tB
 cg
 Gt
-cN
+Ti
 mF
 Ti
 Ti
@@ -33419,11 +32404,11 @@ ji
 xd
 Wq
 yD
-Yx
+ob
 xd
 xd
 xd
-Vr
+Wq
 yD
 ob
 xd
@@ -33723,11 +32708,11 @@ ji
 xd
 Wq
 yD
-Yx
+ob
 xd
 xd
 xd
-Vr
+Wq
 yD
 ob
 xd
@@ -34180,9 +33165,9 @@ JW
 lZ
 HA
 kl
-Pj
 Jl
-Pj
+Jl
+Jl
 re
 Pf
 qG
@@ -34270,7 +33255,7 @@ nT
 nT
 nT
 Tb
-Ax
+cD
 LC
 AM
 Dv
@@ -34568,12 +33553,12 @@ Ax
 Ax
 Ax
 LS
+ep
+LC
+dp
 LS
 LC
-LS
-LS
-LC
-Ax
+do
 Ax
 Ax
 ww
@@ -34632,7 +33617,7 @@ Tq
 Tq
 OI
 JW
-Qx
+Yg
 CT
 aB
 Mf
@@ -34721,10 +33706,10 @@ ab
 ab
 ab
 ab
-Hn
 ab
 ab
-Hn
+ab
+ab
 ab
 ab
 ab
@@ -34775,7 +33760,7 @@ Ff
 gy
 TX
 zW
-zO
+aM
 LG
 bQ
 ch
@@ -35088,7 +34073,7 @@ lU
 vi
 Ku
 JW
-mI
+WZ
 CT
 aB
 Mf
@@ -35189,7 +34174,7 @@ Dv
 Dv
 Dv
 DY
-pg
+UU
 LC
 LC
 aA
@@ -35480,17 +34465,17 @@ GP
 Dv
 Dv
 Dv
-TD
+ew
 LC
 Ax
 dG
-No
+au
 Do
 dG
-No
+au
 Do
 dG
-zd
+au
 zd
 zd
 mT
@@ -35839,7 +34824,7 @@ TZ
 cT
 zW
 zW
-zO
+aM
 LG
 bQ
 ch
@@ -36898,7 +35883,7 @@ MM
 zW
 jJ
 QD
-Ia
+sK
 fv
 Tc
 YF
@@ -36908,10 +35893,10 @@ LG
 SO
 pv
 yy
-wH
 yy
 yy
-dI
+yy
+yy
 yy
 yy
 yy
@@ -36993,7 +35978,7 @@ Ss
 Ss
 Ss
 Ss
-Ss
+fL
 pi
 tV
 Cl
@@ -37212,10 +36197,10 @@ LG
 RZ
 uT
 my
-Ny
+bT
 fI
 Xj
-Bo
+bT
 yF
 Uw
 bT
@@ -37681,7 +36666,7 @@ aA
 aA
 aA
 zW
-Wh
+WK
 wq
 oW
 uM
@@ -37817,7 +36802,7 @@ lE
 OV
 SX
 LG
-bG
+bQ
 hi
 AJ
 WK
@@ -37960,7 +36945,7 @@ Tt
 MM
 DL
 yH
-qs
+mg
 SA
 JG
 MO
@@ -38264,7 +37249,7 @@ uO
 SD
 DL
 yH
-qs
+mg
 SA
 CF
 UD
@@ -38421,7 +37406,7 @@ SA
 GM
 HB
 Dk
-WO
+KD
 OV
 aM
 LG
@@ -38568,7 +37553,7 @@ uO
 BE
 DL
 yH
-qs
+mg
 SA
 kb
 gf
@@ -38727,7 +37712,7 @@ aQ
 aQ
 bz
 OV
-ar
+Ra
 hv
 ux
 hi
@@ -39491,7 +38476,7 @@ Ra
 hv
 Ac
 IA
-hk
+yx
 Aq
 QE
 ih
@@ -39784,7 +38769,7 @@ ML
 PG
 Qc
 PN
-lT
+zu
 zu
 hv
 hv
@@ -39820,7 +38805,7 @@ yH
 qR
 Zl
 aH
-CA
+XN
 yH
 yH
 aA
@@ -39945,7 +38930,7 @@ Cp
 ie
 OU
 hv
-tN
+Ac
 Li
 UB
 TP
@@ -39965,7 +38950,7 @@ yH
 Fp
 On
 oj
-ht
+rc
 yH
 yH
 Sk
@@ -40101,15 +39086,15 @@ Vo
 hS
 Ye
 JE
-yv
 aQ
 aQ
 aQ
-Ee
+aQ
+Tf
 aQ
 aQ
 aQ
-WJ
+aQ
 Jf
 oj
 ix
@@ -40713,20 +39698,20 @@ fl
 aQ
 aQ
 aQ
-NR
+Tf
 aQ
 aQ
 aQ
-Rj
+aQ
 PM
 Ih
 nA
-zL
+Qv
 rn
 Tf
 aQ
 YX
-mQ
+DW
 nA
 Ud
 RK
@@ -41036,7 +40021,7 @@ yH
 eh
 eU
 ua
-Xa
+Kt
 yH
 yH
 aA
@@ -42859,7 +41844,7 @@ LA
 kR
 lu
 dH
-rI
+Ml
 bB
 Wa
 Wa
@@ -43467,7 +42452,7 @@ LA
 Ml
 bv
 fB
-YA
+Ml
 jk
 oC
 oC
@@ -44083,7 +43068,7 @@ ro
 nM
 nM
 AB
-Zw
+oC
 bv
 aA
 aA
@@ -44683,7 +43668,7 @@ LA
 Ml
 bv
 fB
-WR
+Ml
 jk
 oC
 oC
@@ -45260,7 +44245,7 @@ Or
 bv
 QW
 Ml
-Os
+Ml
 PD
 PD
 xZ
@@ -45277,7 +44262,7 @@ Zn
 PD
 oC
 lp
-id
+Mm
 PD
 PD
 OS
@@ -45291,7 +44276,7 @@ LA
 kR
 cE
 dH
-El
+Ml
 xx
 MD
 MD
@@ -45747,7 +44732,7 @@ LA
 kR
 cE
 dH
-tS
+iK
 Ma
 Kv
 Kv
@@ -46478,7 +45463,7 @@ yB
 yB
 bv
 bv
-od
+sI
 ks
 QS
 ay
@@ -46800,7 +45785,7 @@ hV
 bv
 bv
 bv
-lo
+Rc
 yb
 fG
 fG
@@ -46808,7 +45793,7 @@ fG
 fG
 vF
 SB
-Fn
+Zi
 bv
 aA
 aA
@@ -47256,7 +46241,7 @@ oC
 bv
 aA
 bv
-Ur
+Rc
 AU
 fG
 fG
@@ -47264,7 +46249,7 @@ fG
 fG
 fG
 AD
-Fn
+Zi
 bv
 aA
 aA
@@ -47694,7 +46679,7 @@ aA
 aA
 bv
 bv
-TE
+Wa
 Zj
 Wa
 Lj
@@ -47707,7 +46692,7 @@ mE
 Wa
 Wa
 dq
-YB
+Wa
 bv
 bv
 aA
@@ -47720,7 +46705,7 @@ fG
 fG
 fG
 SB
-Fn
+Zi
 bv
 aA
 aA
