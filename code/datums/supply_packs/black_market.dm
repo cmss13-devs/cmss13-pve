@@ -1277,7 +1277,6 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 		// CLF corpse!! Why is this here? Don't ask.
 			var/mob/living/carbon/human/corpse = new (loc)
 			corpse.create_hud() //Need to generate hud before we can equip anything apparently...
-
 			var/corpse_type = pick(/datum/equipment_preset/colonist/bluecollar/corpse/beaten, /datum/equipment_preset/colonist/bluecollar/spanish/corpse/beaten, /datum/equipment_preset/colonist/bluecollar/japanese/corpse/beaten)
 			arm_equipment(corpse, corpse_type, TRUE, FALSE) // I didn't choose the shitcode life, the shitcode life chose me
 
