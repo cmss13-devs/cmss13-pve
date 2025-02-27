@@ -76,7 +76,8 @@
 #define MODE_DISABLE_JOE_RESPAWN (1<<12) // Toggles if ghosts can respawn as Working Joes after dying as one when 15 minutes have passed. Off by default
 #define MODE_NO_JOIN_AS_XENO (1<<13) // Toggles if players can join as xeno
 #define MODE_HUMAN_AI_TWEAKS (1<<14) // Modifies some numbers to be more friendly to marines when fighting against human AI
-#define MODE_DISABLE_INTRO_BLURB (1<<15) // Show intro blurb when first launching dropship or not
+#define MODE_NO_MAKE_BARRICADES (1<<15) // Stops players from making barricades
+#define MODE_DISABLE_INTRO_BLURB (1<<16) // Show intro blurb when first launching dropship or not
 
 #define ROUNDSTATUS_FOG_DOWN 1
 #define ROUNDSTATUS_PODDOORS_OPEN 2
