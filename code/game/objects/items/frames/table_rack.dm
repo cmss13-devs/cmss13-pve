@@ -86,15 +86,19 @@
 	matter = list("metal" = 15000) //A reinforced table. Two sheets of metal and four rods
 	table_type = /obj/structure/surface/table/reinforced
 
-/obj/item/frame/table/reinforced/tan
-	name = "tan reinforced table parts"
+/obj/item/frame/table/reinforced/taupe
+	name = "taupe reinforced table parts"
 	color = "#ffe6e6"
-	table_type = /obj/structure/surface/table/reinforced/tan
+	table_type = /obj/structure/surface/table/reinforced/taupe
 
 /obj/item/frame/table/reinforced/dark
 	name = "dark reinforced table parts"
 	color = "#6b675e"
 	table_type = /obj/structure/surface/table/reinforced/dark
+
+/obj/item/frame/table/reinforced/bulky
+	name = "bulky reinforced table parts"
+	table_type = /obj/structure/surface/table/reinforced/bulky
 
 /obj/item/frame/table/reinforced/attackby(obj/item/W, mob/user)
 	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))

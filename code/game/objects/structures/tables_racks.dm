@@ -545,8 +545,8 @@
 	reinforced = TRUE
 	parts = /obj/item/frame/table/reinforced
 
-/obj/structure/surface/table/reinforced/tan
-	name = "tan reinforced table"
+/obj/structure/surface/table/reinforced/taupe
+	name = "taupe reinforced table"
 	color = "#ffe6e6"
 
 /obj/structure/surface/table/reinforced/dark
@@ -559,6 +559,7 @@
 	icon_state = "reinftable"
 	table_prefix = "reinf"
 	color = null
+	parts = /obj/item/frame/table/reinforced/bulky
 
 /obj/structure/surface/table/reinforced/attackby(obj/item/W as obj, mob/user as mob)
 	if (iswelder(W))
