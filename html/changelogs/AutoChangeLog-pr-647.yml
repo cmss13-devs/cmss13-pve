@@ -1,0 +1,6 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - ui: "Raised character limit of flavour texts from 1024 to 3072."
+  - ui: "Raised character limit of character records from 3072 to 10240."
+  - ui: "The input box of the Set Pose IC verb is larger."

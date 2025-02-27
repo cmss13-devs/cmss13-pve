@@ -6,7 +6,7 @@
 #define GLOBAL_PROC "magic BS"
 
 //Game defining directives.
-#define MAIN_AI_SYSTEM "ARES v3.2"
+#define MAIN_AI_SYSTEM "TITAN 1200" //Previously ARES v3.2
 
 // Maploader bounds indices
 #define MAP_MINX 1
@@ -384,6 +384,8 @@
 #define WALL_DEVWALL_R "devwall_r"
 #define WALL_HUNTERSHIP "metal"//DMI specific name
 #define WALL_AICORE "aiwall"
+#define WALL_UPP_GREEN "uppwall_interior"
+#define WALL_UPP_GREY "uppwall_interior"
 
 //Defines for dropship weapon gimbals
 #define GIMBAL_LEFT -1
