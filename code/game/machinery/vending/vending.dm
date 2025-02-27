@@ -28,6 +28,7 @@ GLOBAL_LIST_EMPTY_TYPED(total_vending_machines, /obj/structure/machinery/vending
 	anchored = TRUE
 	density = TRUE
 	layer = BELOW_OBJ_LAYER
+	projectile_coverage = PROJECTILE_COVERAGE_MAX
 
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
