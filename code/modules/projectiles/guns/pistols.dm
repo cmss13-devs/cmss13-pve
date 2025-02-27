@@ -525,7 +525,7 @@
 	unload_sound = 'sound/weapons/gun_vp70_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/es4
 	force = 8
-	muzzle_flash = "muzzle_flash_blue"
+	muzzleflash_iconstate = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MUZZLE_BLUE
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
 	attachable_allowed = list(
@@ -637,11 +637,12 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 //Beretta 92FS, the gun McClane carries around in Die Hard. Very similar to the service pistol, all around.
 
 /obj/item/weapon/gun/pistol/b92fs
-	name = "\improper Beretta 92FS pistol"
-	desc = "A popular police firearm in the 20th century, often employed by hardboiled cops while confronting terrorists. A classic of its time, chambered in 9mm."
+	name = "\improper Beretta 92FS M9 pistol"
+	desc = "Semi-automatic 9mm service pistol of the United States military with the exception of the United States Colonial Marine Corps. Also enjoys popularity in the civilian market among law enforcement and private security."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "b92fs"
 	item_state = "b92fs"
+	fire_sound = "vp70"
 	current_mag = /obj/item/ammo_magazine/pistol/b92fs
 
 /obj/item/weapon/gun/pistol/b92fs/Initialize(mapload, spawn_empty)
@@ -666,7 +667,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	scatter = SCATTER_AMOUNT_TIER_7
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_5
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
-	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 
 
 //-------------------------------------------------------
