@@ -32,7 +32,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "k" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	network = list("Military","Almayer");
 	dir = 4
@@ -132,7 +132,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "E" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/shuttle/ert/small,
 /turf/open/floor/almayer/tcomms,
 /area/shuttle/ert)
@@ -175,7 +175,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "K" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/crew/alt,
 /turf/open/floor/almayer/tcomms,
 /area/shuttle/ert)
@@ -183,7 +183,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "Q" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert{
 	dir = 8
 	},

@@ -12,7 +12,7 @@
 /turf/open/floor/almayer,
 /area/misc/tutorial)
 "l" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/green/west,
 /area/misc/tutorial)
 "m" = (

@@ -25,7 +25,7 @@
 /turf/open/floor/plating,
 /area/shiva/interior/colony/research_hab)
 "gl" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/pill_bottle/bicaridine,
 /turf/open/floor/plating,
 /area/shiva/interior/colony/research_hab)
@@ -256,7 +256,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/shiva/interior/caves/cp_camp)
 "HR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "labs_ice_1"
 	},
@@ -358,7 +358,7 @@
 /turf/open/floor/shiva/purplefull,
 /area/shiva/interior/colony/research_hab)
 "Rd" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/plating,
 /area/shiva/interior/colony/research_hab)
 "Ro" = (

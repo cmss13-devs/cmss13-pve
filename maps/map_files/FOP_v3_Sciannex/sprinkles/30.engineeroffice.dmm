@@ -34,7 +34,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "m" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/microwave{
 	icon_state = "mwo";
 	pixel_y = 6
@@ -92,7 +92,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/template_noop)
 "G" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/head/beret/eng{
 	pixel_x = 5;
 	pixel_y = 3
@@ -103,7 +103,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/template_noop)
 "K" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/toolbox/electrical{
 	pixel_x = -1;
 	pixel_y = 11
@@ -137,7 +137,7 @@
 /turf/open/floor/plating/prison,
 /area/template_noop)
 "R" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/cell/super{
 	pixel_y = 12
 	},

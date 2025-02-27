@@ -4,7 +4,7 @@
 /turf/open/floor/asteroidwarning/southeast,
 /area/bigredv2/outside/filtration_cave_cas)
 "aN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data{
 	dir = 8
 	},
@@ -15,12 +15,12 @@
 /turf/open/floor/asteroidfloor/north,
 /area/bigredv2/outside/filtration_cave_cas)
 "bx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/motiondetector,
 /turf/open/floor,
 /area/bigred/ground/security)
 "cI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Solaris Ridge";
 	phone_color = "red";
@@ -94,13 +94,13 @@
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/outside/filtration_cave_cas)
 "pV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/floor,
 /area/bigred/ground/security)
 "qy" = (
 /obj/item/device/radio,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor,
 /area/bigred/ground/security)
 "qG" = (
@@ -130,7 +130,7 @@
 /turf/open/floor,
 /area/bigred/ground/security)
 "ub" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/restraint/handcuffs,
 /turf/open/floor,
 /area/bigred/ground/security)
@@ -139,7 +139,7 @@
 /turf/open/floor,
 /area/bigred/ground/security)
 "uF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/greengrid,
 /area/bigred/ground/security)
@@ -230,7 +230,7 @@
 /turf/open/floor,
 /area/bigred/ground/security)
 "Mq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/greengrid,
 /area/bigred/ground/security)
 "MC" = (
@@ -285,7 +285,7 @@
 /turf/open/floor/delivery,
 /area/bigred/ground/security)
 "Vn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze,
 /obj/item/trash/cigbutt/cigarbutt,
 /turf/open/floor/greengrid,
@@ -310,7 +310,7 @@
 /turf/open/floor,
 /area/bigred/ground/security)
 "YZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	dir = 8
 	},

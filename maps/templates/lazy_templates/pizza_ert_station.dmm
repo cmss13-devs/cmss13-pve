@@ -46,7 +46,7 @@
 /turf/open/floor/almayer_hull,
 /area/adminlevel/ert_station/pizza_station)
 "am" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	dir = 4;
 	pixel_y = -3
@@ -512,7 +512,7 @@
 /turf/open/floor/blueyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "gu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	pixel_y = -3
 	},
@@ -639,7 +639,7 @@
 /obj/item/trash/plate{
 	pixel_y = 10
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	pixel_y = -3
 	},
@@ -714,7 +714,7 @@
 /turf/open/floor/prison/red/northeast,
 /area/adminlevel/ert_station/pizza_station)
 "jf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
@@ -765,7 +765,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "jy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
@@ -839,7 +839,7 @@
 	},
 /area/adminlevel/ert_station/pizza_station)
 "lv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	pixel_y = -3
 	},
@@ -1025,7 +1025,7 @@
 	},
 /area/adminlevel/ert_station/pizza_station)
 "nl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/yellow/west,
 /area/adminlevel/ert_station/pizza_station)
 "np" = (
@@ -1052,7 +1052,7 @@
 /turf/open/floor/prison/greenblue,
 /area/adminlevel/ert_station/pizza_station)
 "nA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	pixel_y = -3
 	},
@@ -1342,7 +1342,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "rK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison,
 /area/adminlevel/ert_station/pizza_station)
 "rL" = (
@@ -1376,7 +1376,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/pizza_station)
 "sk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/yellow/southwest,
 /area/adminlevel/ert_station/pizza_station)
 "sl" = (
@@ -1621,7 +1621,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "uY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/cups,
 /obj/item/tool/kitchen/utensil/fork{
 	pixel_y = 4;
@@ -1959,7 +1959,7 @@
 /obj/structure/barricade/handrail/pizza{
 	pixel_y = -3
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate{
 	pixel_y = 6
 	},
@@ -2016,7 +2016,7 @@
 /turf/open/floor/prison/red/west,
 /area/adminlevel/ert_station/pizza_station)
 "zj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = -4
 	},
@@ -2048,7 +2048,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "zx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	pixel_y = -3
 	},
@@ -2564,7 +2564,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "FY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	dir = 8;
 	pixel_y = -3
@@ -2696,7 +2696,7 @@
 /turf/open/space,
 /area/space)
 "HL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	pixel_y = -3
 	},
@@ -2812,7 +2812,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "Kb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	dir = 4;
 	pixel_y = -3
@@ -2866,7 +2866,7 @@
 	pixel_x = 15;
 	pixel_y = 32
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/washing_machine{
 	pixel_y = 10
 	},
@@ -2889,7 +2889,7 @@
 /turf/open/floor/prison/blue_plate,
 /area/adminlevel/ert_station/pizza_station)
 "La" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	pixel_y = -3
 	},
@@ -2916,7 +2916,7 @@
 /turf/open/floor/cmo,
 /area/adminlevel/ert_station/pizza_station)
 "Ln" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer{
 	icon_state = "security_det";
 	name = "Shuttle control deck";
@@ -2990,7 +2990,7 @@
 /turf/open/floor/cmo,
 /area/adminlevel/ert_station/pizza_station)
 "MK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	dir = 8;
 	pixel_y = -3
@@ -3054,7 +3054,7 @@
 /obj/item/reagent_container/food/condiment/hotsauce/cholula{
 	pixel_y = 16
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/condiment/coldsauce{
 	pixel_y = 13;
 	pixel_x = 8
@@ -3477,7 +3477,7 @@
 /turf/open/floor/prison/bright_clean2,
 /area/adminlevel/ert_station/pizza_station)
 "SL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_21";
 	pixel_y = 28;
@@ -3556,7 +3556,7 @@
 /turf/open/mars_dirt/mars_cave_3,
 /area/space)
 "TH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail/pizza{
 	pixel_y = -3
 	},
@@ -3732,7 +3732,7 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/pizza_station)
 "VS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box{
 	pixel_y = -8
 	},

@@ -32,7 +32,7 @@
 /turf/open/floor/carpet,
 /area/adminlevel/ert_station)
 "bk" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/recharger,
 /obj/item/device/defibrillator/upgraded,
 /obj/item/clothing/glasses/hud/health,
@@ -100,7 +100,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station)
 "ee" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_y = 6
@@ -163,7 +163,7 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station)
 "ha" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_y = 6
@@ -305,7 +305,7 @@
 /turf/open/floor/almayer/floor,
 /area/adminlevel/ert_station)
 "oc" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/soylentgreen,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = 11;
@@ -407,7 +407,7 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station)
 "um" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/surgical_tray,
 /obj/item/reagent_container/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
@@ -452,7 +452,7 @@
 /turf/open/floor/almayer/floor,
 /area/adminlevel/ert_station)
 "wv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bedsheetbin{
 	pixel_y = 6
 	},
@@ -800,7 +800,7 @@
 /area/adminlevel/ert_station)
 "Os" = (
 /obj/structure/machinery/faxmachine,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/almayer/floor,
 /area/adminlevel/ert_station)
 "OA" = (

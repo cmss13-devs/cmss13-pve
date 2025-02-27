@@ -4,7 +4,7 @@
 /turf/open/floor/dark,
 /area/lv624/ground/barrens/north_east_barrens/ceiling)
 "c" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/weapon/gun/smg/nailgun,
 /obj/item/weapon/gun/smg/nailgun,
 /obj/item/ammo_box/magazine/nailgun,
@@ -180,7 +180,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
 "L" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/explosive/grenade/high_explosive/stick,
 /obj/item/explosive/grenade/high_explosive/stick{
 	pixel_x = 6

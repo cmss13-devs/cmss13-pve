@@ -7,7 +7,7 @@
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "as" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/effect/decal/remains/xeno{
@@ -81,7 +81,7 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/caves/sand_temple)
 "dB" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -150,7 +150,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/lv624/ground/caves/sand_temple)
 "dV" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -261,7 +261,7 @@
 /turf/open/gm/dirtgrassborder/north,
 /area/lv624/ground/caves/sand_temple)
 "hQ" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -397,7 +397,7 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "mE" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -593,14 +593,14 @@
 /turf/open/gm/river,
 /area/lv624/ground/caves/sand_temple)
 "tn" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/stack/yautja_rope,
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "tr" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -705,7 +705,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "wt" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -1094,7 +1094,7 @@
 /turf/open/gm/dirtgrassborder/west,
 /area/lv624/ground/caves/sand_temple)
 "Hl" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -1471,7 +1471,7 @@
 /turf/open/gm/coast/south,
 /area/lv624/ground/caves/sand_temple)
 "Qo" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -1563,7 +1563,7 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "SW" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/stack/sheet/mineral/sandstone{
@@ -1589,7 +1589,7 @@
 /area/lv624/ground/caves/sand_temple)
 "TY" = (
 /obj/structure/flora/jungle/vines/light_3,
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/gm/dirtgrassborder/east,
@@ -1630,7 +1630,7 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "Uo" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
@@ -1643,7 +1643,7 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/caves/sand_temple)
 "UX" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/gm/dirt,
@@ -1686,7 +1686,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "Xm" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/sandstone/runed,

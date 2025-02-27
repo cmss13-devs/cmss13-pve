@@ -63,7 +63,7 @@
 /turf/open/floor/kutjevo/grey/plate,
 /area/template_noop)
 "oB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	layer = 2.8
@@ -131,7 +131,7 @@
 /turf/open/floor/kutjevo/tan/grey_edge/north,
 /area/template_noop)
 "uS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp/on{
 	pixel_x = 9;
 	pixel_y = 15;
@@ -208,7 +208,7 @@
 /turf/open/floor/kutjevo/tan/grey_edge,
 /area/template_noop)
 "zh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/kutjevo/grey/plate,
 /area/template_noop)

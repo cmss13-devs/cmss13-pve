@@ -2953,7 +2953,7 @@
 /turf/open/asphalt,
 /area/desert_dam/interior/dam_interior/south_tunnel)
 "aFJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
@@ -9383,7 +9383,7 @@
 /turf/open/asphalt,
 /area/desert_dam/building/water_treatment_one/garage)
 "chF" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/desert/rock/deep/transition,
@@ -15051,7 +15051,7 @@
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_south)
 "dHC" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/stack/yautja_rope,
@@ -15558,13 +15558,13 @@
 /turf/open/floor/wood,
 /area/desert_dam/building/medical/break_room)
 "dOD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/deck,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/desert_dam/building/medical/break_room)
 "dOE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/medical/ointment,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
@@ -15587,13 +15587,13 @@
 /turf/open/floor/prison,
 /area/desert_dam/building/medical/break_room)
 "dOM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/spacecash/c10,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/desert_dam/building/medical/break_room)
 "dOO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/glass,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
@@ -17125,7 +17125,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "ewz" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/weapon/broken_bottle,
@@ -17349,7 +17349,7 @@
 /turf/open/floor/prison/darkpurple2,
 /area/desert_dam/interior/lab_northeast/east_lab_RND)
 "eBK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -17415,7 +17415,7 @@
 /turf/open/desert/dirt,
 /area/desert_dam/exterior/landing_pad_two)
 "eDF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails,
 /turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/CE_office)
@@ -17716,7 +17716,7 @@
 /turf/open/desert/dirt/desert_transition_edge1/southwest,
 /area/desert_dam/exterior/valley/valley_mining)
 "eNR" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/desert/rock/deep/rock3,
@@ -21050,7 +21050,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/exterior/valley/valley_cargo)
 "gJx" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/hunting_trap{
@@ -24281,7 +24281,7 @@
 /turf/open/floor/dark,
 /area/desert_dam/building/church)
 "iNA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/hangar_storage)
@@ -27824,7 +27824,7 @@
 /turf/open/floor/prison/whitegreen/east,
 /area/desert_dam/building/medical/west_wing_hallway)
 "kOR" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/sandstone/runed,
@@ -31498,7 +31498,7 @@
 /turf/open/floor/prison/bright_clean2,
 /area/desert_dam/interior/lab_northeast/east_lab_central_hallway)
 "nat" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/snacks/stew,
@@ -33261,7 +33261,7 @@
 /turf/open/floor/prison/sterile_white,
 /area/desert_dam/building/cafeteria/cafeteria)
 "obv" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/weapon/harpoon/yautja{
@@ -37637,7 +37637,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached9,
 /area/desert_dam/exterior/valley/valley_medical)
 "qOl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/kpack,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/prison/southwest,
@@ -38425,7 +38425,7 @@
 /turf/open/desert/desert_shore/shore_edge1/east,
 /area/desert_dam/exterior/river/riverside_south)
 "rmj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/spacecash/c10,
 /turf/open/floor/wood,
 /area/desert_dam/building/medical/break_room)
@@ -38759,7 +38759,7 @@
 /turf/open/desert/dirt,
 /area/desert_dam/exterior/telecomm/lz1_valley)
 "rvd" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/desert/rock/deep,
@@ -46179,7 +46179,7 @@
 /turf/open/desert/dirt/desert_transition_edge1/northeast,
 /area/desert_dam/exterior/valley/valley_crashsite)
 "vJO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen,
 /obj/item/folder/black,
@@ -47300,7 +47300,7 @@
 /turf/open/floor/prison/darkyellow2,
 /area/desert_dam/building/mining/workshop)
 "wrw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/beaker/cryoxadone,
 /obj/item/reagent_container/glass/beaker/cryoxadone,
 /obj/structure/machinery/light{

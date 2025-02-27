@@ -31,7 +31,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "ao" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/meat/human{
 	pixel_y = 6
 	},
@@ -48,7 +48,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "ar" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb{
 	pixel_y = 8
@@ -56,7 +56,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "au" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb{
 	pixel_y = 7
@@ -68,7 +68,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "aB" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/device/flashlight/lantern,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
@@ -76,7 +76,7 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/caves/north_central_caves)
 "aE" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/weapon/gun/rifle/mar40,
 /obj/item/weapon/gun/rifle/mar40{
 	pixel_y = 8
@@ -152,7 +152,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "en" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/device/flashlight/lantern{
 	pixel_x = 1;
 	pixel_y = 9
@@ -165,7 +165,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "gp" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/candle,
 /obj/item/stack/sheet/metal{
 	amount = 30;
@@ -180,7 +180,7 @@
 /turf/open/floor/wood/wood_broken6,
 /area/lv624/ground/caves/north_central_caves)
 "ju" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/candle,
 /obj/item/tool/match{
 	pixel_x = 6;
@@ -189,7 +189,7 @@
 /turf/open/floor/carpet/bcarpet08,
 /area/lv624/ground/caves/north_central_caves)
 "kp" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/device/flashlight/lantern,
 /obj/structure/barricade/sandbags/wired,
 /obj/item/weapon/baseballbat/metal,
@@ -203,7 +203,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "mu" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/tomatomeat,
 /obj/item/reagent_container/food/snacks/tomatomeat{
 	pixel_y = 4
@@ -219,7 +219,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "pH" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/stack/sheet/metal{
 	amount = 30;
 	pixel_x = 4;
@@ -272,7 +272,7 @@
 /turf/open/floor/wood/wood_broken,
 /area/lv624/ground/caves/north_central_caves)
 "Bj" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/structure/machinery/microwave{
 	pixel_x = 2;
 	pixel_y = 3
@@ -295,12 +295,12 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "Dk" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/ammo_magazine/shotgun/buckshot,
 /turf/open/floor/carpet/bcarpet07,
 /area/lv624/ground/caves/north_central_caves)
 "Fm" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/ammo_magazine/shotgun/buckshot,
 /turf/open/floor/carpet/bcarpet02,
 /area/lv624/ground/caves/north_central_caves)
@@ -320,7 +320,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "PM" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/candle,
 /turf/open/floor/carpet/bcarpet03,
 /area/lv624/ground/caves/north_central_caves)
@@ -341,7 +341,7 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "XE" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/kitchen/knife/butcher{
 	pixel_x = -7
 	},

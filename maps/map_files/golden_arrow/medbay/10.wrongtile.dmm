@@ -88,7 +88,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "gD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
 	light_color = "#dae2ff"
@@ -131,7 +131,7 @@
 /turf/open/floor/almayer/sterile_green_side/southeast,
 /area/golden_arrow/medical)
 "kz" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/surgical_case/regular{
 	pixel_y = 13
 	},
@@ -141,7 +141,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "lJ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/accessory/stethoscope,
 /obj/item/device/flashlight/pen{
 	pixel_y = 6;
@@ -150,7 +150,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "mn" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/roller{
 	pixel_y = 17
 	},
@@ -283,7 +283,7 @@
 /turf/open/floor/plating,
 /area/golden_arrow/medical)
 "wg" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/softpack{
 	pixel_y = 11;
 	pixel_x = 5
@@ -313,7 +313,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "wx" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
 	pixel_y = 8;
@@ -322,7 +322,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "yh" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -340,7 +340,7 @@
 /turf/open/floor/almayer/sterile_green_side,
 /area/golden_arrow/medical)
 "zs" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/recharger{
 	pixel_y = 3
 	},
@@ -463,7 +463,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "Hi" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin/uscm{
 	pixel_x = -6;
 	pixel_y = 7
@@ -546,7 +546,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "LS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/coffee/marine{
 	pixel_y = 14;
 	pixel_x = -4
@@ -561,7 +561,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "Mt" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/bodybags{
 	pixel_y = 11;
 	pixel_x = -5

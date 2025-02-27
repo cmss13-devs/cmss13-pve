@@ -15,7 +15,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/north)
 "aaT" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 4
@@ -107,7 +107,7 @@
 /turf/open/floor/prison,
 /area/lv522/landing_zone_2/ceiling)
 "act" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkpurplefull2,
@@ -125,7 +125,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/c_block/bridge)
 "acH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/foamed_metal{
 	layer = 3.1
@@ -147,7 +147,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/north_street)
 "adk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /obj/item/trash/plate{
 	pixel_y = 3
@@ -274,7 +274,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/b_block/bridge)
 "afz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/newspaper,
 /obj/structure/machinery/light,
 /turf/open/floor/prison/darkpurplefull2,
@@ -370,7 +370,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/reactor_garage)
 "ahW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine{
 	pixel_y = 5
 	},
@@ -481,7 +481,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/east_reactor)
 "ajR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
 	pixel_x = -1;
@@ -618,12 +618,12 @@
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
 "anc" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/glasses/sunglasses,
 /turf/open/floor/carpet,
 /area/lv522/indoors/c_block/garage)
 "ani" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4;
 	pixel_x = 12;
@@ -654,7 +654,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/east_reactor/south)
 "anv" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cans/souto/cranberry{
 	pixel_x = 10;
 	pixel_y = 14
@@ -693,7 +693,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/executive)
 "aoG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/seeds/potatoseed{
 	pixel_x = -8;
 	pixel_y = 6
@@ -707,7 +707,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/c_block/bridge)
 "aoZ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/soap{
 	pixel_x = 5
 	},
@@ -834,7 +834,7 @@
 /turf/open/floor/prison/darkpurple2,
 /area/lv522/indoors/a_block/dorms)
 "aro" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave{
 	pixel_y = 4
 	},
@@ -850,7 +850,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/landing_zone_1/ceiling)
 "arq" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/trash/burger,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/garage)
@@ -870,7 +870,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/fitness)
 "arM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 4
@@ -878,7 +878,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "arV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/belt/utility,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
@@ -1005,7 +1005,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/reactor_garage)
 "avX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
 "awj" = (
@@ -1048,7 +1048,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/north_street)
 "axr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
 	layer = 3.1;
@@ -1057,7 +1057,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "axy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/alien/hugger,
 /obj/structure/machinery/light,
 /turf/open/floor/prison/darkpurplefull2,
@@ -1132,7 +1132,7 @@
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor)
 "azD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 2;
 	pixel_y = 4
@@ -1148,7 +1148,7 @@
 /turf/open/floor/prison,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "azJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
 "azK" = (
@@ -1227,7 +1227,7 @@
 /turf/open/floor/strata/cyan2/east,
 /area/lv522/indoors/a_block/medical)
 "aDc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/metal/medium_stack,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/cargo)
@@ -1263,7 +1263,7 @@
 /area/lv522/indoors/c_block/cargo)
 "aEz" = (
 /obj/item/prop/alien/hugger,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/b_block/bar)
@@ -1351,7 +1351,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1)
 "aHa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv/broadcast{
 	dir = 1;
 	pixel_x = -10;
@@ -1468,7 +1468,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/north)
 "aJy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
 	icon_state = "pottedplant_21";
@@ -1672,7 +1672,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/central_streets)
 "aOj" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/trash/plate,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = -7;
@@ -1694,7 +1694,7 @@
 	},
 /area/lv522/landing_zone_forecon/UD6_Typhoon)
 "aPc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -1751,7 +1751,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/bridges/op_centre)
 "aPN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -1767,7 +1767,7 @@
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/lv522/oob)
 "aPZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_x = 1;
 	pixel_y = 3
@@ -1862,7 +1862,7 @@
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/east_reactor/south)
 "aSE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorms)
@@ -1914,7 +1914,7 @@
 /area/lv522/atmos/north_command_centre)
 "aTM" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/cassette_tape/nam{
 	pixel_x = -4;
 	pixel_y = 1
@@ -2028,7 +2028,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
 "aWv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/sandwich{
 	pixel_x = -6;
 	pixel_y = 3
@@ -2051,7 +2051,7 @@
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/north_street)
 "aWH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper/janitor,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/mining)
@@ -2082,7 +2082,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/c_block/t_comm)
 "aXX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
 	},
@@ -2209,7 +2209,7 @@
 /turf/open/floor/corsat/browncorner/north,
 /area/lv522/atmos/command_centre)
 "baS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/colony/game,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/camera/autoname{
@@ -2393,7 +2393,7 @@
 /turf/open/floor/plating,
 /area/lv522/atmos/cargo_intake)
 "bgd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/chef/classic,
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/a_block/kitchen)
@@ -2416,7 +2416,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/radio,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -2529,7 +2529,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo/glass)
 "biq" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/pen/blue/clicky,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
@@ -2642,7 +2642,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms/glass)
 "bkt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/headset{
 	armor_bio = 20;
 	armor_bomb = 10;
@@ -2738,7 +2738,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/outdoors/colony_streets/south_west_street)
 "bmJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/condiment/peppermill{
 	pixel_x = 9
 	},
@@ -2960,7 +2960,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/admin)
 "brV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/crowbar/red,
 /obj/item/clipboard{
 	pixel_x = 1;
@@ -2980,7 +2980,7 @@
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/central_streets)
 "bsc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/cpr_dummy,
 /turf/open/floor/plating/platebot,
 /area/lv522/indoors/c_block/cargo)
@@ -3053,7 +3053,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "bub" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/donut{
 	pixel_y = 9
 	},
@@ -3124,11 +3124,11 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
 "bvU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorm_north)
 "bvX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/phone_base/colony_net{
 	dir = 1;
@@ -3164,7 +3164,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_street)
 "bwG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/cargo_intake)
@@ -3203,7 +3203,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/engineering)
 "bxQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -3227,7 +3227,7 @@
 /turf/open/floor/plating,
 /area/lv522/indoors/lone_buildings/engineering)
 "bzZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/on,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -3340,7 +3340,7 @@
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/lv522/indoors/a_block/fitness)
 "bCI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/dropship_equipment/fuel/cooling_system{
 	layer = 3.5
 	},
@@ -3507,7 +3507,7 @@
 /area/lv522/indoors/a_block/bridges)
 "bHc" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "bHA" = (
@@ -3648,7 +3648,7 @@
 /area/lv522/outdoors/w_rockies)
 "bKQ" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/browncorner,
 /area/lv522/atmos/east_reactor/south)
 "bLl" = (
@@ -3801,7 +3801,7 @@
 /turf/open/floor/prison/blue/north,
 /area/lv522/indoors/a_block/admin)
 "bOP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/glasses/meson,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/command_centre)
@@ -3897,7 +3897,7 @@
 /area/lv522/outdoors/colony_streets/north_east_street)
 "bRn" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/beach_ball,
 /obj/item/reagent_container/food/drinks/bottle/sake{
 	pixel_x = 9;
@@ -3982,7 +3982,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
 "bUz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/browncorner/north,
 /area/lv522/atmos/east_reactor/south)
@@ -4105,7 +4105,7 @@
 	name = "Cargo Shutter Control";
 	pixel_y = 10
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop{
 	desc = "The first page reads. 'Classified Weyland Bio-Weapons Division level eight clearance required.' The rest talks about some sort of XX-121 combat stim?";
 	icon = 'icons/obj/items/paper.dmi';
@@ -4260,7 +4260,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel/far)
 "bZn" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/recharger,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/medical)
@@ -4321,7 +4321,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/landing_zone_1/ceiling)
 "bZW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/foamed_metal,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
@@ -4359,7 +4359,7 @@
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/cargo_intake)
 "caU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/coffeecup/wy{
 	pixel_x = -9;
 	pixel_y = 7
@@ -4370,7 +4370,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/cargo)
 "cba" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box/empty{
 	pixel_x = 1;
 	pixel_y = 8
@@ -4541,7 +4541,7 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "ceV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/glasses/meson,
 /obj/item/shard{
 	icon_state = "medium"
@@ -4668,7 +4668,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "chP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/almayer/flight_recorder{
 	pixel_x = 9
 	},
@@ -4692,7 +4692,7 @@
 /turf/open/floor/strata/blue1,
 /area/lv522/indoors/a_block/dorm_north)
 "cid" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/knife,
 /obj/item/tool/kitchen/utensil/fork{
 	pixel_x = 7
@@ -4750,7 +4750,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/landing_zone_2)
 "cjc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
 	},
@@ -4797,7 +4797,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/outdoors/colony_streets/north_street)
 "ckE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
@@ -4868,7 +4868,7 @@
 /turf/open/floor/corsat/squares,
 /area/lv522/indoors/c_block/mining)
 "cnk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
@@ -4953,7 +4953,7 @@
 /turf/closed/wall/strata_ice/dirty,
 /area/lv522/oob)
 "cpG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/phone_base/colony_net/rotary{
 	phone_category = "LV522 Chances Claim";
 	phone_id = "Colony Operations Centre";
@@ -5051,7 +5051,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/security)
 "crw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder{
 	pixel_x = -3;
 	pixel_y = 12
@@ -5067,7 +5067,7 @@
 /turf/open/floor/prison,
 /area/lv522/landing_zone_2)
 "crP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /obj/item/prop/alien/hugger,
 /obj/effect/decal/cleanable/dirt,
@@ -5119,7 +5119,7 @@
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/command_centre)
 "ctk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 3
@@ -5428,7 +5428,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
 "cCa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/gloves/marine,
 /obj/item/tool/weldingtool{
 	pixel_x = -4
@@ -5571,7 +5571,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "cEG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
 	icon_state = "pottedplant_21";
@@ -5646,7 +5646,7 @@
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor)
 "cHX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = -4;
 	pixel_y = 7
@@ -5678,7 +5678,7 @@
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor)
 "cIA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/trash/plate{
 	pixel_y = 10
 	},
@@ -5734,7 +5734,7 @@
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor/west)
 "cKB" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/briefcase{
 	pixel_y = 6
 	},
@@ -5861,7 +5861,7 @@
 /turf/open/floor/corsat/brown/northeast,
 /area/lv522/atmos/east_reactor/east)
 "cNE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/wy{
 	pixel_x = 7;
 	pixel_y = 7
@@ -5924,7 +5924,7 @@
 /area/lv522/indoors/lone_buildings/storage_blocks)
 "cOx" = (
 /obj/structure/pipes/vents/pump,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = 7;
@@ -5997,7 +5997,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/fitness)
 "cQm" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/backpack/marine/satchel{
 	desc = "It's the heavy-duty black polymer kind. Time to take out the trash!";
 	icon = 'icons/obj/janitor.dmi';
@@ -6042,7 +6042,7 @@
 /turf/open/floor/corsat/browncorner/east,
 /area/lv522/atmos/east_reactor)
 "cSC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 5
@@ -6134,7 +6134,7 @@
 /turf/closed/wall/strata_outpost,
 /area/lv522/indoors/c_block/garage)
 "cUL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 3
@@ -6247,14 +6247,14 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "cYu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "cYE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_x = 5;
 	pixel_y = 9
@@ -6270,7 +6270,7 @@
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor/east)
 "cZd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spider/spiderling/nogrow,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/bar)
@@ -6348,7 +6348,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/bridges/garden_bridge)
 "dbG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_x = -5;
 	pixel_y = 9
@@ -6423,7 +6423,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
 "ddz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/newspaper,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -6603,7 +6603,7 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/landing_zone_1)
 "dhq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/analyzer{
 	pixel_x = -9;
 	pixel_y = 3
@@ -6625,7 +6625,7 @@
 /turf/open/floor/plating,
 /area/lv522/atmos/east_reactor)
 "dir" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
 	pixel_y = 3
@@ -6672,7 +6672,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/reactor_garage)
 "djW" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp{
 	pixel_x = -11;
 	pixel_y = 10
@@ -6714,7 +6714,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
 "dku" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/binoculars,
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
@@ -6745,7 +6745,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/food/snacks/mre_pack/meal1{
 	desc = "A tray of standard UA food. Stale cornbread, tomato paste and some green goop fill this tray.";
@@ -6825,7 +6825,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/kitchen)
 "dmz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/mechanical/green{
 	pixel_y = 8
 	},
@@ -7094,7 +7094,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_west_street)
 "dsL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/sentry_computer,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
@@ -7148,7 +7148,7 @@
 /area/lv522/landing_zone_2/ceiling)
 "dug" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/gloves/boxing{
 	pixel_x = -5;
 	pixel_y = 5
@@ -7166,7 +7166,7 @@
 /turf/open/floor/coagulation/icon2_0,
 /area/lv522/oob)
 "duM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp{
 	pixel_x = -7;
 	pixel_y = 15
@@ -7217,7 +7217,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/bridges/op_centre)
 "dvC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/cell/high{
 	pixel_x = 3;
 	pixel_y = -1
@@ -7239,7 +7239,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/filt)
 "dvI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_x = 7;
 	pixel_y = 3
@@ -7287,7 +7287,7 @@
 "dwO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = 15;
 	pixel_y = -8
@@ -7325,7 +7325,7 @@
 /turf/closed/wall/mineral/bone_resin,
 /area/lv522/atmos/east_reactor/south)
 "dxp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/storage/hazardvest{
 	pixel_x = -8;
 	pixel_y = -3
@@ -7361,7 +7361,7 @@
 	},
 /area/lv522/landing_zone_forecon/UD6_Typhoon)
 "dyq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/overwatch/almayer/broken{
 	dir = 8;
 	pixel_x = -12;
@@ -7395,7 +7395,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/filt)
 "dyZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/food/snacks/cheesyfries,
 /turf/open/floor/prison/darkpurplefull2,
@@ -7411,7 +7411,7 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522/atmos/reactor_garage)
 "dzD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/minihoe{
 	pixel_y = -2
 	},
@@ -7456,7 +7456,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/command_centre)
 "dAT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_x = -12;
@@ -7494,7 +7494,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray{
 	layer = 2.9;
 	pixel_y = 3
@@ -7535,7 +7535,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_street)
 "dBT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 2;
 	pixel_y = 4
@@ -7577,7 +7577,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "dCF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray,
 /obj/item/tool/kitchen/tray{
 	pixel_y = 6
@@ -7816,7 +7816,7 @@
 	},
 /area/lv522/landing_zone_forecon/UD6_Tornado)
 "dJn" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/restraint/adjustable/cable/white,
 /obj/item/restraint/adjustable/cable/white{
 	pixel_y = 4
@@ -7842,7 +7842,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/executive)
 "dJz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 5
@@ -8033,7 +8033,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/colony/game,
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/fitness/glass)
@@ -8059,7 +8059,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
 "dQe" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/garage)
 "dQn" = (
@@ -8096,7 +8096,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/filt)
 "dRX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
@@ -8132,7 +8132,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/outdoor)
 "dTg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = 7;
 	pixel_y = 16
@@ -8213,7 +8213,7 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lv522/oob)
 "dUW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
 "dUY" = (
@@ -8266,7 +8266,7 @@
 /obj/item/tool/surgery/circular_saw,
 /obj/item/tool/surgery/cautery,
 /obj/item/tool/surgery/retractor,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/medical)
 "dWD" = (
@@ -8282,7 +8282,7 @@
 /area/lv522/indoors/a_block/hallway)
 "dWU" = (
 /obj/structure/machinery/computer/operating,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/strata/cyan2/east,
 /area/lv522/indoors/a_block/medical)
 "dXa" = (
@@ -8310,7 +8310,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/security)
 "dXA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
 	pixel_y = 2
@@ -8375,14 +8375,14 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/fitness)
 "dYY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/clothing/accessory/poncho,
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "dZc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "dZh" = (
@@ -8401,7 +8401,7 @@
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor/west)
 "dZx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = -4;
 	pixel_y = 11
@@ -8423,7 +8423,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
 "dZH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/east_reactor/north)
 "dZN" = (
@@ -8481,7 +8481,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/garage)
 "eaC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_y = 8
 	},
@@ -8712,7 +8712,7 @@
 /area/lv522/atmos/west_reactor)
 "ekx" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/extinguisher,
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -9027,7 +9027,7 @@
 /turf/open/floor/corsat/brown/west,
 /area/lv522/atmos/cargo_intake)
 "erW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_y = 5
 	},
@@ -9050,7 +9050,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
 "esw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/matches{
 	pixel_y = 8
 	},
@@ -9079,7 +9079,7 @@
 /turf/open/floor/corsat/brown/southeast,
 /area/lv522/atmos/command_centre)
 "etc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv/broadcast{
 	pixel_x = 16;
 	pixel_y = 7
@@ -9335,7 +9335,7 @@
 /turf/open/floor/prison/darkpurple2,
 /area/lv522/indoors/a_block/dorms)
 "ezo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/helmetgarb/spacejam_tickets{
 	desc = "Hubba hubba.";
 	icon = 'icons/obj/structures/props/posters.dmi';
@@ -9363,7 +9363,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/cargo)
 "ezF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "ezR" = (
@@ -9394,7 +9394,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
 "eAC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bed/chair{
 	dir = 1;
 	pixel_y = 11
@@ -9410,12 +9410,12 @@
 /turf/open/floor/plating/platebotc,
 /area/lv522/indoors/b_block/hydro/glass)
 "eAT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
 "eAX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/fertilizer,
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/hydro)
@@ -9463,7 +9463,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel)
 "eBV" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/cigarettes/wypacket{
 	pixel_x = 5;
 	pixel_y = 6
@@ -9487,7 +9487,7 @@
 /turf/open/floor/bcircuit,
 /area/lv522/indoors/c_block/mining)
 "eCI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = 4;
@@ -9687,7 +9687,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel/far)
 "eHl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4;
 	pixel_y = 3
@@ -9715,7 +9715,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/filt)
 "eIp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	pixel_y = 6
 	},
@@ -9723,7 +9723,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/landing_zone_1/ceiling)
 "eIt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine/uscm/brig,
 /obj/structure/machinery/light{
 	dir = 1
@@ -9883,7 +9883,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/central_streets)
 "eLO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 9
 	},
@@ -10007,7 +10007,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo)
 "ePE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /obj/item/reagent_container/food/snacks/mushroompizzaslice,
 /turf/open/floor/prison/greenfull/east,
@@ -10415,7 +10415,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/kitchen/glass)
 "eZI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 5
 	},
@@ -10561,7 +10561,7 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/indoors/b_block/bridge)
 "fdH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
@@ -10636,7 +10636,7 @@
 /turf/open/floor/prison,
 /area/lv522/landing_zone_2)
 "ffR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper,
 /obj/item/tool/pen/blue/clicky,
 /turf/open/floor/prison/darkbrownfull2,
@@ -10827,7 +10827,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
 "fjW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
@@ -10837,7 +10837,7 @@
 /turf/open/floor/grass,
 /area/lv522/indoors/a_block/garden)
 "fko" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
@@ -10852,7 +10852,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/lv522/indoors/c_block/mining)
 "fkw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
 	dir = 4;
@@ -10964,7 +10964,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "fmS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/spacecash/c1000,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
@@ -10983,7 +10983,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_west_street)
 "fnm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = -9;
@@ -11162,7 +11162,7 @@
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
 "fsW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/shotgun,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
@@ -11224,7 +11224,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
 "ftU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/weldpack{
 	layer = 3.1;
 	pixel_x = -4;
@@ -11265,7 +11265,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "fuH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /obj/effect/decal/cleanable/cobweb,
 /obj/structure/machinery/power/apc/power/north{
@@ -11366,7 +11366,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/oob)
 "fwT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/robot_parts/robot_component/radio{
 	pixel_x = 1;
 	pixel_y = 9
@@ -11406,7 +11406,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/north_street)
 "fyC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_x = 5;
 	pixel_y = 3
@@ -11831,7 +11831,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "fMN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/pill_bottle/tramadol/skillless{
 	pixel_x = 4
 	},
@@ -11861,7 +11861,7 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/c_block/casino)
 "fMV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -11919,7 +11919,7 @@
 /turf/open/floor/carpet,
 /area/lv522/atmos/east_reactor/east)
 "fOT" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/prop/colony/canister{
 	pixel_y = 14
 	},
@@ -11999,7 +11999,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "fQP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv/broadcast{
 	dir = 8;
 	layer = 3;
@@ -12052,7 +12052,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/coffeecup{
 	pixel_x = 6;
 	pixel_y = 11
@@ -12089,12 +12089,12 @@
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor/east)
 "fSr" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/hardpoint/locomotion/van_wheels,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/garage)
 "fSv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/beret/eng,
 /obj/item/ammo_box/magazine/nailgun/empty{
 	pixel_x = -6;
@@ -12164,7 +12164,7 @@
 	},
 /area/lv522/landing_zone_forecon/UD6_Tornado)
 "fUp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/adv/empty{
 	pixel_x = -3;
 	pixel_y = 9
@@ -12233,7 +12233,7 @@
 /area/lv522/atmos/east_reactor/south)
 "fVX" = (
 /obj/item/trash/uscm_mre,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/north_street)
 "fVY" = (
@@ -12361,7 +12361,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/hallway)
 "fYM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 2;
 	pixel_y = 4
@@ -12446,7 +12446,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorms/glass)
 "gbk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_magazine/rifle/heap{
 	current_rounds = 0;
 	pixel_x = -3;
@@ -12506,7 +12506,7 @@
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor)
 "gcs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
 	icon_state = "pottedplant_21";
@@ -12541,7 +12541,7 @@
 /turf/open/floor/carpet,
 /area/lv522/indoors/a_block/executive)
 "gcU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 3
@@ -12569,7 +12569,7 @@
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/east_reactor)
 "gdm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "gdo" = (
@@ -12610,7 +12610,7 @@
 /area/lv522/indoors/a_block/hallway)
 "gec" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /obj/item/clothing/glasses/kutjevo,
 /turf/open/floor/prison/darkyellowfull2/east,
@@ -12680,7 +12680,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/hallway)
 "ggC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /mob/living/simple_animal/mouse,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
@@ -12890,7 +12890,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/north_street)
 "glD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/head/welding{
 	pixel_y = 7
 	},
@@ -12941,7 +12941,7 @@
 /turf/open/floor/corsat/brown/northwest,
 /area/lv522/atmos/command_centre)
 "gmA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -13031,7 +13031,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/landing_zone_2)
 "goU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/stamp/denied{
 	pixel_x = -11;
 	pixel_y = 8
@@ -13099,7 +13099,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "gqP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -13133,7 +13133,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
 "grY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_y = 5
 	},
@@ -13188,7 +13188,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/east_central_street)
 "gtZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray{
 	layer = 2.9;
 	pixel_y = 3
@@ -13540,7 +13540,7 @@
 /turf/closed/shuttle/dropship3/tornado/typhoon,
 /area/lv522/landing_zone_forecon/UD6_Typhoon)
 "gDL" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "Marked_3";
 	name = "remote door-control";
@@ -13580,7 +13580,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/nw_rockies)
 "gEM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_x = 3;
 	pixel_y = 7
@@ -13688,7 +13688,7 @@
 /area/lv522/indoors/c_block/cargo)
 "gHk" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
 	layer = 3.1;
@@ -13742,7 +13742,7 @@
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
 "gIz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/power/apc/power/north{
 	start_charge = 20
 	},
@@ -13771,7 +13771,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
 "gKh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv/broadcast{
 	pixel_y = 8
 	},
@@ -13799,7 +13799,7 @@
 /turf/open/floor/strata/white_cyan3/east,
 /area/lv522/indoors/a_block/medical/glass)
 "gKY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -13816,7 +13816,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/security)
 "gLL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/on{
 	pixel_x = 1;
 	pixel_y = 6
@@ -13852,12 +13852,12 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/hallway)
 "gMX" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/garage)
 "gNm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/hardhat,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/cargo_intake)
@@ -13892,7 +13892,7 @@
 /turf/open/floor/plating,
 /area/lv522/indoors/a_block/bridges/op_centre)
 "gNM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/browncorner/west,
 /area/lv522/atmos/east_reactor/south)
@@ -13952,7 +13952,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
 "gPk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/weapon/gun/rifle/m49a{
 	current_mag = null
 	},
@@ -13992,7 +13992,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/cargo)
 "gPN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8
 	},
@@ -14064,7 +14064,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/way_in_command_centre)
 "gRa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toy,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/greenfull/east,
@@ -14195,7 +14195,7 @@
 /turf/open/asphalt/cement/cement15,
 /area/lv522/outdoors/colony_streets/central_streets)
 "gTy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/a_block/kitchen)
@@ -14299,7 +14299,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/way_in_command_centre)
 "gWb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/bottle/sake{
 	pixel_x = 6;
 	pixel_y = 10
@@ -14350,7 +14350,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
 "gXz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bed/chair{
 	pixel_y = 13
 	},
@@ -14434,7 +14434,7 @@
 /obj/item/prop/colony/canister{
 	pixel_y = 7
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/north)
 "gYT" = (
@@ -14597,7 +14597,7 @@
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/n_rockies)
 "hdw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
@@ -14627,7 +14627,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/hallway)
 "hey" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = 7;
 	pixel_y = 4
@@ -14659,7 +14659,7 @@
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv522/outdoors/w_rockies)
 "heR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/brown/west,
 /area/lv522/atmos/filt)
 "hfb" = (
@@ -14685,7 +14685,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
 "hfH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "LZ1_Lockdown_Lo";
 	name = "remote door-control";
@@ -14897,7 +14897,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "hjU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/gloves/botanic_leather,
 /obj/structure/machinery/light{
 	dir = 8
@@ -14906,7 +14906,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/hydro)
 "hjW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_y = 11
 	},
@@ -14991,7 +14991,7 @@
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/east_reactor/west)
 "hls" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced,
 /obj/item/reagent_container/food/drinks/golden_cup{
 	pixel_y = 9
@@ -15132,7 +15132,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/lone_buildings/storage_blocks)
 "hpF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 2;
 	pixel_y = 4
@@ -15234,7 +15234,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
 "hsZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
@@ -15383,7 +15383,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/central_streets)
 "hxt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorms)
 "hxy" = (
@@ -15530,7 +15530,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/north_street)
 "hCH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/way_in_command_centre)
 "hCM" = (
@@ -15575,7 +15575,7 @@
 /turf/open/floor/corsat/brown/east,
 /area/lv522/atmos/filt)
 "hEd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/soap,
 /turf/open/floor/strata/blue1,
 /area/lv522/indoors/a_block/dorm_north)
@@ -15693,7 +15693,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
 "hHc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/beach_ball/holoball,
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/fitness)
@@ -15795,7 +15795,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "hKc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ore/gold,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -15863,7 +15863,7 @@
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/east_reactor/south)
 "hLO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/foamed_metal,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkpurplefull2,
@@ -16024,7 +16024,7 @@
 /turf/open/floor/prison,
 /area/lv522/atmos/cargo_intake)
 "hPU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 7;
 	pixel_y = 7
@@ -16040,7 +16040,7 @@
 	pixel_x = 5;
 	pixel_y = 12
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "Secure_Master_Armoury_2";
@@ -16141,13 +16141,13 @@
 /turf/open/floor/strata/blue1,
 /area/lv522/indoors/a_block/dorm_north)
 "hUv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/clothing/accessory/poncho,
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "hUP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate{
 	pixel_y = 6
 	},
@@ -16216,7 +16216,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/landing_zone_1/tunnel/far)
 "hVz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/phone_base/colony_net{
 	dir = 1;
 	phone_category = "LV522 Chances Claim";
@@ -16308,7 +16308,7 @@
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/reactor_garage)
 "hYn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 3
 	},
@@ -16487,7 +16487,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
 "icX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger{
 	pixel_y = 2
 	},
@@ -16589,7 +16589,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/nw_rockies)
 "ifo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 8;
 	pixel_y = 6
@@ -16663,7 +16663,7 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/fitness/glass)
 "igY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp/green,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -16843,7 +16843,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/landing_zone_1/ceiling)
 "imG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "imT" = (
@@ -16895,7 +16895,7 @@
 /area/lv522/outdoors/colony_streets/north_street)
 "ipn" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -16918,7 +16918,7 @@
 /turf/open/floor/corsat,
 /area/lv522/atmos/cargo_intake)
 "ipG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/seeds/bananaseed{
 	pixel_x = -5;
 	pixel_y = 8
@@ -17514,7 +17514,7 @@
 	},
 /area/lv522/landing_zone_forecon/UD6_Tornado)
 "iFK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/newspaper,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -17530,7 +17530,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/bridges/op_centre)
 "iGp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/gloves/boxing,
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/fitness)
@@ -17895,7 +17895,7 @@
 /turf/open/floor/corsat/brown/northwest,
 /area/lv522/atmos/reactor_garage)
 "iPG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/cheeseburger,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/command_centre)
@@ -18018,7 +18018,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/c_block/cargo)
 "iTy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray{
 	pixel_x = 12;
 	pixel_y = -6
@@ -18109,7 +18109,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/east_central_street)
 "iVA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -18410,7 +18410,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/hydro)
 "jfn" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/radio/off{
 	pixel_x = -5;
 	pixel_y = 7
@@ -18419,7 +18419,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/garage)
 "jfy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/weldpack{
 	pixel_y = 2
 	},
@@ -18525,7 +18525,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/c_block/cargo)
 "jiP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/facepaint/lipstick{
 	icon_state = "lipstick_red";
 	pixel_x = 6;
@@ -18578,7 +18578,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -18631,7 +18631,7 @@
 /area/lv522/outdoors/colony_streets/north_east_street)
 "jkC" = (
 /obj/structure/pipes/vents/pump,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
 "jkJ" = (
@@ -18641,7 +18641,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/way_in_command_centre)
 "jkP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/platform{
 	dir = 8
 	},
@@ -18662,7 +18662,7 @@
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/east_reactor)
 "jmb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door/window/eastleft,
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/fitness/glass)
@@ -18811,7 +18811,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/south_west_street)
 "joH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/camera/autoname{
 	dir = 4
 	},
@@ -19191,14 +19191,14 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/security)
 "jvo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/beer_pack{
 	pixel_y = 8
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "jvq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave{
 	density = 0;
 	pixel_y = 9
@@ -19229,7 +19229,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/central_streets)
 "jvA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 6
 	},
@@ -19259,7 +19259,7 @@
 /turf/open/floor/corsat/browncorner/east,
 /area/lv522/atmos/cargo_intake)
 "jwS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/bikehorn,
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/fitness/glass)
@@ -19547,7 +19547,7 @@
 /turf/open/asphalt/cement/cement14,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "jCF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/juicer{
 	pixel_y = 9
 	},
@@ -19623,7 +19623,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "jDF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/belt/utility/full,
 /obj/structure/machinery/camera/autoname{
 	dir = 8
@@ -19634,7 +19634,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "jDG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced,
 /obj/item/clothing/accessory/medal/bronze{
 	pixel_x = -6;
@@ -19784,7 +19784,7 @@
 /turf/open/floor/corsat/brown/west,
 /area/lv522/oob)
 "jGz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/bar)
 "jGJ" = (
@@ -19826,7 +19826,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "jHP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -19841,7 +19841,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/north_command_centre)
 "jHW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/faxmachine{
 	pixel_y = 2
@@ -19945,7 +19945,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/fitness)
 "jLZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/sliceable/plaincake{
 	pixel_y = 4
 	},
@@ -19983,7 +19983,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "jMZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/pen/blue/clicky{
 	pixel_x = -8
 	},
@@ -20258,7 +20258,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_west_street)
 "jTO" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window{
 	dir = 4
 	},
@@ -20335,7 +20335,7 @@
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
 "jVU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	pixel_y = 6
 	},
@@ -20362,12 +20362,12 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "jWg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/gloves/boxing/yellow,
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/fitness)
 "jWF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = 7;
 	pixel_y = 10
@@ -20382,7 +20382,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/landing_zone_1)
 "jXd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate,
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
@@ -20405,7 +20405,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "jXy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light,
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/east_reactor/north)
@@ -20477,7 +20477,7 @@
 /turf/open/floor/plating,
 /area/lv522/indoors/lone_buildings/engineering)
 "jYG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
 	pixel_y = 5
@@ -20521,7 +20521,7 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/fitness/glass)
 "jZv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/cheeseburger,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
@@ -20627,7 +20627,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
 "kbE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
 "kbH" = (
@@ -20763,7 +20763,7 @@
 /turf/open/floor/plating,
 /area/lv522/oob)
 "kdT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/plaincakeslice{
 	pixel_x = 5;
 	pixel_y = 8
@@ -20895,7 +20895,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/medical/glass)
 "kgM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/radio/off{
 	pixel_x = -5;
 	pixel_y = 4
@@ -20950,7 +20950,7 @@
 /turf/open/floor/plating/platebot,
 /area/lv522/indoors/c_block/cargo)
 "kik" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/gloves/boxing,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -20972,7 +20972,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
 "kiR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/condiment/hotsauce/sriracha{
 	pixel_x = -4;
 	pixel_y = 9
@@ -20993,7 +20993,7 @@
 /area/lv522/oob)
 "kjj" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/green,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_x = -13;
 	pixel_y = 12
@@ -21041,7 +21041,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
 "kko" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp{
 	pixel_x = 6;
 	pixel_y = 3
@@ -21230,7 +21230,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/w_rockies)
 "koC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/co2_cartridge{
 	pixel_x = -8;
 	pixel_y = 14
@@ -21501,7 +21501,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/east_central_street)
 "kuy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/storage/snow_suit/survivor/parka/navy{
 	pixel_x = 4;
 	pixel_y = 9
@@ -21565,7 +21565,7 @@
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/a_block/kitchen)
 "kvH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/flashbangs{
 	pixel_x = 7;
 	pixel_y = 2
@@ -21590,7 +21590,7 @@
 /turf/open/floor/strata/blue1,
 /area/lv522/indoors/a_block/dorm_north)
 "kwe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
 	pixel_y = 3
@@ -21649,7 +21649,7 @@
 /turf/open/floor/plating,
 /area/lv522/oob)
 "kwF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/newspaper,
 /obj/item/tool/pen/blue/clicky,
 /turf/open/floor/prison/darkbrownfull2,
@@ -21687,7 +21687,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/lv522/outdoors/colony_streets/central_streets)
 "kxq" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,
 /obj/item/reagent_container/food/drinks/cans/souto/diet/blue{
 	pixel_y = 15
@@ -22066,7 +22066,7 @@
 	icon_state = "lattice3";
 	pixel_x = -5
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
 	icon_state = "pottedplant_21";
@@ -22501,7 +22501,7 @@
 /area/lv522/indoors/a_block/bridges/corpo)
 "kRH" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/operating,
 /turf/open/floor/strata/cyan2/east,
 /area/lv522/indoors/a_block/medical)
@@ -22573,7 +22573,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/cargo_intake)
 "kSE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 7
 	},
@@ -22940,7 +22940,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/kitchen)
 "laK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/mechanical/green,
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/north_west_street)
@@ -23089,7 +23089,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/admin)
 "leW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/wirecutters{
 	pixel_y = 6
 	},
@@ -23165,7 +23165,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/way_in_command_centre)
 "lid" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/blue1,
@@ -23439,7 +23439,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/fitness)
 "lni" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/power/apc/power/north{
 	start_charge = 20
 	},
@@ -23473,7 +23473,7 @@
 /area/lv522/indoors/a_block/executive)
 "loy" = (
 /obj/item/pamphlet/skill/powerloader,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -23508,7 +23508,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "loR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/landing_zone_1)
 "loY" = (
@@ -23622,7 +23622,7 @@
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/a_block/kitchen)
 "lsl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /obj/structure/machinery/light{
 	dir = 1
@@ -23644,7 +23644,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "lsO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "ltc" = (
@@ -23716,7 +23716,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_east_street)
 "lun" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/handcuffs{
 	pixel_x = 5;
 	pixel_y = 15
@@ -23864,7 +23864,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
 "lxc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/shotgun/buckshot/empty,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
@@ -23949,7 +23949,7 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/indoors/a_block/bridges)
 "lzq" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/autopsy_scanner,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/medical)
@@ -24078,7 +24078,7 @@
 /area/lv522/indoors/a_block/security)
 "lCh" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
@@ -24091,7 +24091,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/n_rockies)
 "lCT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/deck/uno{
 	pixel_x = 8;
 	pixel_y = 12
@@ -24141,7 +24141,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/bridges/dorms_fitness)
 "lEy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = -1
@@ -24164,7 +24164,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "lEK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "lEN" = (
@@ -24177,7 +24177,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/hallway)
 "lEP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze{
 	icon_state = "ashtray_full_bl";
 	pixel_x = -8;
@@ -24209,7 +24209,7 @@
 /turf/open/floor/corsat/brown/northwest,
 /area/lv522/atmos/east_reactor/north)
 "lFi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/plating/platebot,
 /area/lv522/indoors/c_block/cargo)
@@ -24302,7 +24302,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
 "lHY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/flask/marine,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
@@ -24311,7 +24311,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/north_command_centre)
 "lIA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic{
 	icon_state = "ashtray_full_bl";
 	pixel_x = 5;
@@ -24325,7 +24325,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/landing_zone_1/ceiling)
 "lII" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -24348,7 +24348,7 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/indoors/c_block/bridge)
 "lJd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 2;
 	pixel_y = 4
@@ -24361,7 +24361,7 @@
 /turf/open/gm/river,
 /area/lv522/atmos/filt)
 "lJn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/belt/utility,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/sewer)
@@ -24379,7 +24379,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/outdoors/colony_streets/north_street)
 "lJy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/cheesyfries,
 /obj/structure/machinery/light{
 	dir = 4
@@ -24421,7 +24421,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
 "lKe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/book/manual/chef_recipes,
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/a_block/kitchen)
@@ -24458,7 +24458,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/kitchen)
 "lKV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
@@ -24546,7 +24546,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/nw_rockies)
 "lMK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/snappop{
 	pixel_x = -7
 	},
@@ -24557,7 +24557,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/fitness/glass)
 "lMP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "lMR" = (
@@ -24579,7 +24579,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
 "lNs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bed/chair{
 	dir = 1;
 	pixel_y = 11
@@ -24642,7 +24642,7 @@
 /area/lv522/outdoors/colony_streets/north_west_street)
 "lOF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/on,
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
@@ -24776,7 +24776,7 @@
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
 "lSg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/warning_cone{
 	pixel_x = -11;
 	pixel_y = 6
@@ -24895,7 +24895,7 @@
 /area/lv522/indoors/b_block/hydro)
 "lUw" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -24947,7 +24947,7 @@
 /turf/closed/wall/strata_outpost,
 /area/lv522/indoors/a_block/kitchen/glass)
 "lVA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/souto{
 	pixel_x = -7;
 	pixel_y = 10
@@ -25015,7 +25015,7 @@
 /turf/open/shuttle/dropship/can_surgery/light_grey_top_left,
 /area/lv522/landing_zone_forecon/UD6_Typhoon)
 "lXR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
 "lXY" = (
@@ -25152,7 +25152,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_west_street)
 "maz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 8;
 	pixel_y = 6
@@ -25185,7 +25185,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/kitchen/tray{
 	pixel_x = 16;
 	pixel_y = 23
@@ -25238,7 +25238,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
 "mcz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/browncorner/east,
 /area/lv522/atmos/east_reactor/south)
 "mcD" = (
@@ -25362,7 +25362,7 @@
 "mfo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/server_equipment/laptop/closed,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "mfu" = (
@@ -25373,7 +25373,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo/glass)
 "mfy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8
 	},
@@ -25421,7 +25421,7 @@
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522/atmos/east_reactor/south)
 "mgB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/beaker/vial,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
@@ -25533,7 +25533,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/reactor_garage)
 "mjI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/egg_box,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkpurplefull2,
@@ -25829,7 +25829,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/b_block/hydro)
 "msn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/analyzer/plant_analyzer,
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/hydro)
@@ -25883,7 +25883,7 @@
 /turf/open/floor/corsat/brown/northeast,
 /area/lv522/atmos/east_reactor/west)
 "mti" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/hardhat/white{
 	pixel_x = -8;
 	pixel_y = 4
@@ -25959,7 +25959,7 @@
 /turf/open/asphalt/cement/cement15,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "mvl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/closed,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -26143,7 +26143,7 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/b_block/bar)
 "mzM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 3;
 	pixel_y = 6
@@ -26206,7 +26206,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/central_streets)
 "mAK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/taperecorder,
 /obj/structure/machinery/light{
 	dir = 8
@@ -26249,7 +26249,7 @@
 /turf/closed/wall/strata_outpost,
 /area/lv522/indoors/b_block/bar)
 "mBU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
 	icon_state = "pottedplant_21";
@@ -26306,11 +26306,11 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/engineering)
 "mDu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo/glass)
 "mDv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	pixel_y = 6
@@ -26347,7 +26347,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
 "mEL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -26404,7 +26404,7 @@
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/east_reactor)
 "mFY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/command_centre)
 "mFZ" = (
@@ -26628,7 +26628,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel)
 "mKM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp/on{
 	pixel_x = -14;
 	pixel_y = 10
@@ -26946,7 +26946,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "mQy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random{
 	pixel_x = -4;
 	pixel_y = -2
@@ -27032,7 +27032,7 @@
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/south_street)
 "mRU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_y = 5
 	},
@@ -27163,7 +27163,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_east_street)
 "mUM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/pouch/tools/full,
 /turf/open/floor/corsat/brown/west,
 /area/lv522/atmos/filt)
@@ -27171,7 +27171,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/east)
 "mVe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger{
 	pixel_y = 5
 	},
@@ -27277,7 +27277,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/b_block/bar)
 "mWT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/plate,
@@ -27318,7 +27318,7 @@
 /turf/open/floor/prison/darkpurple2/north,
 /area/lv522/indoors/a_block/dorms)
 "mYQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/coffee,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -27539,7 +27539,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/central_streets)
 "nfr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/grown/nettle/death{
 	pixel_x = -3;
 	pixel_y = 7
@@ -27675,7 +27675,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/cargo)
 "nhm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/matches{
 	pixel_y = 8
 	},
@@ -27714,7 +27714,7 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/atmos/cargo_intake)
 "nhY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/accessory/storage/black_vest,
 /obj/item/clothing/head/helmet/riot,
 /turf/open/floor/prison/darkredfull2,
@@ -27839,7 +27839,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/casino)
 "nmh" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
 	},
@@ -27994,7 +27994,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo)
@@ -28006,7 +28006,7 @@
 /turf/open/floor/plating/platebotc,
 /area/lv522/indoors/b_block/hydro/glass)
 "npT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
 "npY" = (
@@ -28159,7 +28159,7 @@
 /turf/open/gm/river,
 /area/lv522/atmos/filt)
 "nuH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate{
 	pixel_y = 6
 	},
@@ -28301,7 +28301,7 @@
 /turf/open/floor/strata/white_cyan4/west,
 /area/lv522/indoors/a_block/medical)
 "nxN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -28370,7 +28370,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/garden)
 "nzb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/disk{
 	desc = "a 2000 Russian crime film. It is a sequel to the 1997 film Brother.";
 	name = "brat 2 disk"
@@ -28450,7 +28450,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "nBb" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
@@ -28572,7 +28572,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel/far)
 "nEE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray{
 	pixel_y = 5
 	},
@@ -28629,7 +28629,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo/glass)
 "nFy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/apc,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkpurplefull2,
@@ -28639,7 +28639,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/hallway)
 "nFK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave{
 	pixel_y = 6
 	},
@@ -28704,7 +28704,7 @@
 /obj/item/cell/hyper{
 	pixel_y = -2
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
 "nGX" = (
@@ -28809,7 +28809,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/south_street)
 "nJs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp{
 	pixel_x = -8;
 	pixel_y = 4
@@ -28940,7 +28940,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/garage)
 "nMH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/storage/hazardvest,
 /turf/open/floor/corsat/brown/west,
 /area/lv522/atmos/filt)
@@ -28949,11 +28949,11 @@
 /turf/open/floor/prison,
 /area/lv522/atmos/way_in_command_centre)
 "nNo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/way_in_command_centre)
 "nNz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/bucket,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/b_block/hydro)
@@ -29096,7 +29096,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
 "nQN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_x = -5;
 	pixel_y = 3
@@ -29200,7 +29200,7 @@
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "nSp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = -6;
@@ -29243,7 +29243,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
 "nSP" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/shovel/etool/folded,
 /obj/item/tool/soap/deluxe{
 	pixel_x = 4;
@@ -29332,7 +29332,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "nUP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/wy{
 	pixel_x = 7;
 	pixel_y = 7
@@ -29632,7 +29632,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/east_central_street)
 "odc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -29833,7 +29833,7 @@
 /turf/open/floor/plating,
 /area/lv522/atmos/filt)
 "oiL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
 	icon_state = "pottedplant_21";
@@ -29999,7 +29999,7 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/landing_zone_1)
 "onJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 7
@@ -30012,7 +30012,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
 "ooa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 8;
 	pixel_y = 6
@@ -30249,7 +30249,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "otK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
 	icon_state = "pottedplant_21";
@@ -30453,7 +30453,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/casino)
 "ozs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert{
 	dir = 4;
 	pixel_x = -3
@@ -30461,7 +30461,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "ozy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/powercell,
 /obj/structure/machinery/cell_charger,
@@ -30525,7 +30525,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
 "oBk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -30704,7 +30704,7 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "oFS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/north)
@@ -30714,7 +30714,7 @@
 /area/lv522/indoors/a_block/dorms)
 "oGd" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 4
@@ -30760,7 +30760,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/casino)
 "oHi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/command_centre)
@@ -31052,7 +31052,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "oOZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -31102,7 +31102,7 @@
 /area/lv522/atmos/east_reactor)
 "oQF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
 	pixel_y = 1
@@ -31184,7 +31184,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/indoors/a_block/bridges/dorms_fitness)
 "oTp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/nailgun/empty{
 	pixel_y = 5
 	},
@@ -31231,7 +31231,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
 "oUm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 5
@@ -31301,7 +31301,7 @@
 	pixel_x = 7;
 	pixel_y = -6
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
 "oWu" = (
@@ -31330,7 +31330,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/kitchen/glass)
 "oXd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/processor{
 	pixel_x = -2;
 	pixel_y = 6
@@ -31350,7 +31350,7 @@
 "oXH" = (
 /obj/item/tool/surgery/hemostat,
 /obj/item/tool/surgery/scalpel,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/medical)
@@ -31475,7 +31475,7 @@
 "pan" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/shotgun/beanbag/empty,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
@@ -31764,7 +31764,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/b_block/hydro)
 "phr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /obj/structure/machinery/light,
 /turf/open/floor/prison/darkpurplefull2,
@@ -31796,13 +31796,13 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/atmos/cargo_intake)
 "phZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
 "pie" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/c_block/t_comm)
 "pit" = (
@@ -31810,7 +31810,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/nw_rockies)
 "piv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/command_centre)
@@ -31868,7 +31868,7 @@
 /turf/open/floor/corsat/browncorner,
 /area/lv522/atmos/east_reactor/south)
 "pjt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/command_centre)
@@ -31887,7 +31887,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "pjT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper{
 	pixel_x = -8;
 	pixel_y = -6
@@ -31932,7 +31932,7 @@
 /area/lv522/indoors/a_block/corpo/glass)
 "pkw" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/seeds/bananaseed{
 	pixel_x = -5;
 	pixel_y = 8
@@ -31951,7 +31951,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/north_street)
 "pkT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/phone_base/colony_net/rotary{
 	phone_category = "LV522 Chances Claim";
 	phone_id = "Reactor Control";
@@ -31995,7 +31995,7 @@
 /area/lv522/atmos/sewer)
 "pnb" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/on,
 /turf/open/floor/prison/greenfull/northwest,
 /area/lv522/indoors/b_block/hydro)
@@ -32048,7 +32048,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/indoors/c_block/mining)
 "pow" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = -5;
 	pixel_y = 6
@@ -32140,7 +32140,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo)
 "ppK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/toy/bikehorn/rubberducky{
 	pixel_x = 10;
@@ -32149,7 +32149,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorm_north)
 "ppR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 7
 	},
@@ -32251,7 +32251,7 @@
 /turf/open/floor/prison,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "prW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/newspaper{
 	pixel_x = -7
 	},
@@ -32301,7 +32301,7 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/b_block/bar)
 "pss" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/reactor_garage)
@@ -32381,12 +32381,12 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/landing_zone_1)
 "puh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/bar)
 "pui" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/fitness/glass)
@@ -32487,7 +32487,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo)
 "pwn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/deck/uno,
 /obj/structure/machinery/light{
 	dir = 1
@@ -32947,7 +32947,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
 "pGb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
@@ -32996,7 +32996,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/lv522/outdoors/colony_streets/north_street)
 "pGF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/camera/autoname{
 	dir = 4
 	},
@@ -33082,7 +33082,7 @@
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor/south)
 "pHW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos.";
@@ -33099,7 +33099,7 @@
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/east_reactor/south)
 "pId" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /obj/structure/machinery/camera/autoname,
 /obj/structure/machinery/light/small{
@@ -33182,7 +33182,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -33216,7 +33216,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/south_east_street)
 "pLL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/prize/deathripley{
 	pixel_x = -7;
 	pixel_y = 17
@@ -33347,7 +33347,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/casino)
 "pOB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp{
 	pixel_x = 6;
 	pixel_y = 14
@@ -33368,7 +33368,7 @@
 /turf/closed/wall/strata_ice/dirty,
 /area/lv522/oob)
 "pOQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/surgical_tray/empty,
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -33493,7 +33493,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "pSO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool{
 	pixel_x = -7;
 	pixel_y = 3
@@ -33642,7 +33642,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "pWL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/radio{
 	pixel_x = -12;
 	pixel_y = 8
@@ -33783,7 +33783,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/c_block/mining)
 "qaf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -33946,7 +33946,7 @@
 /turf/open/floor/strata/fake_wood,
 /area/lv522/atmos/east_reactor/east)
 "qdC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/walkman{
 	pixel_x = 7;
 	pixel_y = 14
@@ -34275,7 +34275,7 @@
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/south_west_street)
 "qly" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper{
 	pixel_x = -6
 	},
@@ -34424,7 +34424,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/hallway)
 "qot" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/cardboard/full_stack,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
@@ -34444,7 +34444,7 @@
 /turf/open/floor/prison/blue/northwest,
 /area/lv522/indoors/a_block/admin)
 "qpq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
 	layer = 3.1;
@@ -34530,7 +34530,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
 "qsr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/beaker/vial,
 /obj/structure/machinery/cell_charger,
 /turf/open/floor/plating,
@@ -34544,7 +34544,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
 "qsC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/beakers,
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
@@ -34688,7 +34688,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/lone_buildings/storage_blocks)
 "qws" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp{
 	pixel_x = -12;
 	pixel_y = 12
@@ -34711,7 +34711,7 @@
 /turf/open/floor/strata/white_cyan1,
 /area/lv522/indoors/lone_buildings/chunk)
 "qxc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
@@ -34725,7 +34725,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/north_street)
 "qxg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/toy/prize/honk{
 	pixel_x = -10;
@@ -34767,7 +34767,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/lv522/landing_zone_1)
 "qyF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/whiteyellowfull/east,
 /area/lv522/indoors/a_block/corpo)
 "qyG" = (
@@ -34851,7 +34851,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/bridge)
 "qzT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/hydro)
 "qzU" = (
@@ -34937,14 +34937,14 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "qBr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/command_centre)
 "qBE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
@@ -35115,7 +35115,7 @@
 "qFz" = (
 /obj/structure/machinery/light,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/machine/ghettosmes,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
@@ -35337,7 +35337,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/central_streets)
 "qKD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/fire{
 	pixel_x = 7;
 	pixel_y = 9
@@ -35417,12 +35417,12 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/nw_rockies)
 "qMo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/wood/large_stack,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
 "qMv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 8;
 	pixel_y = 6
@@ -35487,7 +35487,7 @@
 /turf/open/floor/prison/greenfull/northwest,
 /area/lv522/indoors/b_block/hydro)
 "qNK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/newspaper{
 	layer = 3.1;
 	pixel_x = -7
@@ -35512,7 +35512,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
 "qOj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = -6;
 	pixel_y = 15
@@ -35692,7 +35692,7 @@
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "qSa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/airlock,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
@@ -35829,7 +35829,7 @@
 /area/lv522/landing_zone_1/tunnel)
 "qWr" = (
 /obj/item/storage/surgical_tray,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/soap{
 	pixel_x = 5
 	},
@@ -35880,7 +35880,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1)
 "qXq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "Marked_1";
 	name = "remote door-control";
@@ -35954,7 +35954,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/dorms)
 "qYY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -36133,7 +36133,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/east_central_street)
 "rbI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/beer_pack,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -36172,7 +36172,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/east_central_street)
 "rcd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/accessory/poncho,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
@@ -36220,7 +36220,7 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/fitness/glass)
 "rcZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate{
 	pixel_y = 6
 	},
@@ -36288,7 +36288,7 @@
 /area/lv522/indoors/lone_buildings/engineering)
 "reM" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = 8;
 	pixel_y = -2
@@ -36343,7 +36343,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
 "rfL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/hardhat,
 /obj/item/clothing/head/hardhat{
 	pixel_x = -5;
@@ -36770,7 +36770,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel)
 "rrT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
@@ -36918,7 +36918,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "rwo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/tile/plasteel{
 	pixel_x = 1;
 	pixel_y = 9
@@ -36982,7 +36982,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/central_streets)
 "rwH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop,
 /obj/structure/machinery/light{
 	dir = 8
@@ -37020,7 +37020,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/kitchen)
 "rxp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/radio/off{
 	layer = 3.1;
 	pixel_x = -5;
@@ -37091,7 +37091,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
 "rzC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/east_reactor/south)
 "rzI" = (
@@ -37163,7 +37163,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/north_command_centre)
 "rBN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = -7;
 	pixel_y = 7
@@ -37171,7 +37171,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/way_in_command_centre)
 "rBW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_y = 13
 	},
@@ -37203,7 +37203,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "rCr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = -4;
 	pixel_y = 7
@@ -37416,7 +37416,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/east_central_street)
 "rId" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate{
 	pixel_y = 6
 	},
@@ -37458,7 +37458,7 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/indoors/a_block/bridges/corpo)
 "rJb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
 	},
@@ -37506,7 +37506,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/nw_rockies)
 "rKI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/adv{
 	pixel_y = 9
 	},
@@ -37606,7 +37606,7 @@
 /area/lv522/outdoors/colony_streets/south_west_street)
 "rNj" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ashtray/glass,
 /obj/item/clothing/mask/cigarette{
 	pixel_x = 6;
@@ -37641,7 +37641,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_x = -5
 	},
@@ -37993,7 +37993,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/central_streets)
 "rXf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 2;
 	pixel_y = 4
@@ -38062,7 +38062,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "rYm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate{
 	pixel_y = 6
 	},
@@ -38144,7 +38144,7 @@
 /turf/open/floor/prison/greenfull/northwest,
 /area/lv522/indoors/b_block/hydro)
 "sat" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue_plate/north,
@@ -38318,7 +38318,7 @@
 /turf/open/asphalt/cement/cement14,
 /area/lv522/landing_zone_1)
 "sfs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/gloves/yellow,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
@@ -38384,7 +38384,7 @@
 /turf/closed/wall/strata_outpost/reinforced/hull,
 /area/lv522/indoors/a_block/corpo)
 "shp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
@@ -38508,7 +38508,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/landing_zone_1)
 "skf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cans/beer{
 	pixel_x = 8
 	},
@@ -38578,7 +38578,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "slY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/co2_cartridge{
 	pixel_x = 5;
 	pixel_y = 5
@@ -38676,7 +38676,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/bridge)
 "spQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/book{
 	pixel_x = -5;
 	pixel_y = 14
@@ -38726,7 +38726,7 @@
 /turf/open/floor/prison/blue/southeast,
 /area/lv522/indoors/a_block/admin)
 "srq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/uscm{
 	pixel_x = -7;
 	pixel_y = 7
@@ -38807,7 +38807,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/hydro)
 "svo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/wrench,
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "LV522CIC_1";
@@ -38876,7 +38876,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
 "swc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/wy{
 	pixel_x = 7;
 	pixel_y = 7
@@ -38930,7 +38930,7 @@
 /turf/open/floor/corsat/brown/east,
 /area/lv522/atmos/east_reactor/south)
 "sxa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
 	dir = 4;
@@ -38965,7 +38965,7 @@
 /turf/open/floor/prison/greenfull/northwest,
 /area/lv522/indoors/b_block/bridge)
 "sxp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/donut{
 	pixel_x = 4;
 	pixel_y = 3
@@ -39160,7 +39160,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/casino)
 "sCz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 2;
 	pixel_y = 4
@@ -39202,7 +39202,7 @@
 /area/lv522/outdoors/colony_streets/central_streets)
 "sDt" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/cassette_tape/indie{
 	pixel_x = -10;
 	pixel_y = 8
@@ -39217,7 +39217,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "sDA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic{
 	icon_state = "ashtray_full_bl";
 	pixel_x = 5;
@@ -39361,7 +39361,7 @@
 /turf/open/asphalt/cement/cement9,
 /area/lv522/outdoors/colony_streets/south_street)
 "sGi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/plush/farwa{
 	pixel_x = -3;
 	pixel_y = 5
@@ -39389,7 +39389,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/bridges/corpo)
 "sGQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
 	},
@@ -39409,11 +39409,11 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/atmos/outdoor)
 "sHH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/filt)
 "sHQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/plating/platebot,
 /area/lv522/indoors/c_block/cargo)
 "sHV" = (
@@ -39520,7 +39520,7 @@
 /turf/open/floor/corsat/browncorner/north,
 /area/lv522/atmos/cargo_intake)
 "sJI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/key/cargo_train,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
@@ -39661,7 +39661,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/north_street)
 "sMJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 4
@@ -39780,7 +39780,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/dorms)
 "sPn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_box/magazine/l42a,
 /turf/open/floor/prison/darkredfull2,
@@ -39910,7 +39910,7 @@
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/north_command_centre)
 "sSO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 3
 	},
@@ -40071,7 +40071,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/bar)
 "sWI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/wy{
 	pixel_x = 7;
 	pixel_y = 7
@@ -40167,7 +40167,7 @@
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/cargo_intake)
 "sZE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic{
 	icon_state = "ashtray_full_bl";
 	pixel_x = 5;
@@ -40247,7 +40247,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "tbW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/spacecash/c1000,
 /obj/item/spacecash/c1000,
 /obj/item/spacecash/c1000,
@@ -40280,7 +40280,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
 "tdd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/colony/proptag{
 	desc = "A fallen marine's information dog tag. It reads, Sergeant Robert 'Boab' Macdonald"
 	},
@@ -40458,7 +40458,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/n_rockies)
 "tgj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/CICmap,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
@@ -40502,7 +40502,7 @@
 /turf/closed/wall/strata_outpost,
 /area/lv522/landing_zone_1/tunnel/far)
 "thT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray{
 	pixel_x = 3;
 	pixel_y = 7
@@ -40591,7 +40591,7 @@
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "tjs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/cheesie,
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
@@ -40816,7 +40816,7 @@
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/lv522/oob)
 "toA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
 	icon_state = "pottedplant_21";
@@ -40910,7 +40910,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/central_streets)
 "tpJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/wy{
 	pixel_x = -7;
 	pixel_y = 7
@@ -40930,7 +40930,7 @@
 	},
 /area/lv522/landing_zone_forecon/UD6_Tornado)
 "tpV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/mechanical/green,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/way_in_command_centre)
@@ -41095,12 +41095,12 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/cargo_intake)
 "tsq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/under/redpyjamas,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
 "tst" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 8;
 	pixel_y = 6
@@ -41174,7 +41174,7 @@
 /area/lv522/indoors/c_block/t_comm)
 "tuJ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp{
 	pixel_x = 11
 	},
@@ -41187,7 +41187,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/hydro)
 "tuQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 6
@@ -41336,7 +41336,7 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/fitness/glass)
 "tyL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8
 	},
@@ -41363,7 +41363,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/central_streets)
 "tzJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/storage/CMB,
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
@@ -41376,7 +41376,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel/far)
 "tAk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/tofukabob,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -41537,7 +41537,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "tCH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray{
 	pixel_y = 6
 	},
@@ -41845,7 +41845,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_street)
 "tIW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "Sec-Kitchen-Lockdown";
 	name = "remote door-control";
@@ -41860,7 +41860,7 @@
 /area/lv522/landing_zone_2)
 "tJd" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/radio/off{
 	pixel_x = -5;
 	pixel_y = 14
@@ -41955,7 +41955,7 @@
 /turf/open/floor/corsat/browncorner/north,
 /area/lv522/atmos/east_reactor/north)
 "tLr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/storage/hazardvest{
 	pixel_x = -6;
 	pixel_y = -6
@@ -42045,7 +42045,7 @@
 /turf/open/floor/corsat/brown/southeast,
 /area/lv522/atmos/cargo_intake)
 "tMQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/rollingpin,
 /obj/item/reagent_container/food/condiment/saltshaker{
 	pixel_x = -4
@@ -42100,13 +42100,13 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel/far)
 "tNu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/folder/black_random,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/whiteyellowfull/east,
 /area/lv522/indoors/a_block/corpo)
 "tNy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 4
@@ -42158,7 +42158,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
 "tOC" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = 6
 	},
@@ -42193,7 +42193,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "tPw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/hardhat/orange{
 	pixel_x = 8;
 	pixel_y = 12
@@ -42264,7 +42264,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
 "tRi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_y = 9
 	},
@@ -42338,7 +42338,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
 "tTh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/weapon/gun/lever_action/r4t{
 	pixel_y = 26
 	},
@@ -42453,7 +42453,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
 "tVU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/spawner/random/toolbox,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkbrownfull2,
@@ -42624,7 +42624,7 @@
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/lv522/indoors/a_block/fitness/glass)
 "tZO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/cobweb2/dynamic,
 /obj/item/stack/sheet/metal/medium_stack,
 /turf/open/floor/prison/darkpurplefull2,
@@ -42661,7 +42661,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/garage)
 "uaR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/restraint/handcuffs{
 	pixel_y = 12
 	},
@@ -42711,7 +42711,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/engineering)
 "ucu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkpurplefull2,
@@ -42832,7 +42832,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_2)
 "uge" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
 	},
@@ -42993,7 +42993,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/b_block/hydro)
 "ukp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /obj/effect/spawner/random/powercell,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -43097,7 +43097,7 @@
 /turf/open/floor/strata/white_cyan2/west,
 /area/lv522/indoors/a_block/dorms)
 "une" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/frame/fire_alarm,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/atmos/sewer)
@@ -43268,7 +43268,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo)
 "urv" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door/window{
 	dir = 2
 	},
@@ -43464,7 +43464,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/lv522/outdoors/n_rockies)
 "uvK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/sliceable/bread{
 	pixel_y = 8
 	},
@@ -43482,7 +43482,7 @@
 /turf/open/floor/corsat/brown/northwest,
 /area/lv522/atmos/east_reactor/south)
 "uwq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
@@ -43507,7 +43507,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/nw_rockies)
 "uxl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/strata/blue1,
 /area/lv522/indoors/a_block/dorm_north)
 "uxq" = (
@@ -43517,7 +43517,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/c_block/bridge)
 "uxK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/crossbow,
 /obj/item/toy/crossbow_ammo,
 /obj/item/toy/crossbow_ammo,
@@ -43927,7 +43927,7 @@
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/b_block/bar)
 "uHW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
 	icon_state = "pottedplant_21";
@@ -43938,7 +43938,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
 "uId" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/misc/flares{
 	pixel_x = -7;
 	pixel_y = 16
@@ -44101,7 +44101,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	desc = "A small desktop computer. Someone has switched to personal emails and disabled the inventory sort system.";
 	icon_state = "alert:2";
@@ -44515,7 +44515,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/mineral/uranium/small_stack{
 	pixel_x = -5;
 	pixel_y = -3
@@ -44536,7 +44536,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/north_street)
 "uUP" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/prop/helmetgarb/spacejam_tickets{
 	desc = "Hubba hubba.";
 	icon = 'icons/obj/structures/props/posters.dmi';
@@ -44620,7 +44620,7 @@
 /turf/open/floor/corsat/browncorner/north,
 /area/lv522/atmos/east_reactor/north)
 "uXY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine/corporate,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -44779,7 +44779,7 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/landing_zone_1)
 "vce" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin/wy{
 	pixel_y = 8
 	},
@@ -45058,7 +45058,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security/glass)
 "vgK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/map/lv522_map,
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/colony_streets/north_street)
@@ -45237,7 +45237,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/south_west_street)
 "vkr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/alien/hugger,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = -4;
@@ -45246,7 +45246,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
 "vku" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/hallway)
 "vkD" = (
@@ -45313,7 +45313,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/bridges/corpo_fitness)
 "vmz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_y = 1
@@ -45447,7 +45447,7 @@
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/cargo_intake)
 "vpN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/belt/gun/smartgunner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/blue_plate/north,
@@ -45679,7 +45679,7 @@
 /turf/open/floor/corsat/brown/west,
 /area/lv522/atmos/east_reactor/south)
 "vwG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/radio{
 	pixel_x = 6;
 	pixel_y = 11
@@ -45691,7 +45691,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/landing_zone_1/ceiling)
 "vwH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
@@ -45745,7 +45745,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/kitchen)
 "vxH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tank/emergency_oxygen/engi{
 	pixel_x = 7;
 	pixel_y = 3
@@ -45997,7 +45997,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "vEx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/cargo_intake)
 "vEz" = (
@@ -46179,7 +46179,7 @@
 "vIJ" = (
 /obj/structure/machinery/light,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/admin)
 "vJj" = (
@@ -46198,7 +46198,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_2)
 "vJA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
 	},
@@ -46286,7 +46286,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "vKU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /obj/item/trash/eat,
 /turf/open/floor/prison/blue_plate/north,
@@ -46528,7 +46528,7 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/executive)
 "vSW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/reactor_garage)
 "vSZ" = (
@@ -46614,7 +46614,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/indoors/a_block/bridges/dorms_fitness)
 "vUT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/blink{
 	pixel_x = 3;
 	pixel_y = 10
@@ -46774,7 +46774,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
 "vYT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/phone_base/colony_net{
 	dir = 1;
@@ -46947,7 +46947,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp/on,
 /turf/open/floor/prison/blue_plate/north,
 /area/lv522/indoors/a_block/hallway)
@@ -47032,7 +47032,7 @@
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/landing_zone_2)
 "wff" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
 	layer = 3.2;
@@ -47051,7 +47051,7 @@
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/cargo_intake)
 "wfl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/deck{
 	pixel_x = 2;
 	pixel_y = 4
@@ -47380,7 +47380,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/corpo)
 "wmJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/pen{
 	pixel_x = -7
 	},
@@ -47489,7 +47489,7 @@
 /turf/open/gm/river,
 /area/lv522/atmos/filt)
 "woS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/flashbangs{
 	pixel_x = -5;
 	pixel_y = 5
@@ -47501,7 +47501,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/sewer)
 "woV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8
@@ -47599,7 +47599,7 @@
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/east_reactor/south)
 "wrt" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo)
 "wrC" = (
@@ -47787,7 +47787,7 @@
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/east_reactor/south)
 "wwG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/emergency,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/way_in_command_centre)
@@ -47942,7 +47942,7 @@
 /area/lv522/atmos/west_reactor)
 "wBP" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/radio/off{
 	pixel_x = -5;
 	pixel_y = 4
@@ -47995,7 +47995,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/a_block/medical)
 "wDI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -48006,7 +48006,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "wDZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos.";
 	icon_state = "pottedplant_22";
@@ -48021,7 +48021,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo/glass)
 "wEq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger{
 	pixel_y = 1
 	},
@@ -48068,7 +48068,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/cargo)
 "wFd" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo/glass)
@@ -48162,7 +48162,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/landing_zone_1)
 "wGD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
 	icon_state = "pottedplant_21";
@@ -48510,7 +48510,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/landing_zone_2)
 "wQg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -48531,7 +48531,7 @@
 /turf/open/floor/corsat/browncorner/north,
 /area/lv522/atmos/east_reactor/south)
 "wQE" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/regular{
 	pixel_x = 6;
 	pixel_y = 11
@@ -48607,7 +48607,7 @@
 /turf/open/floor/corsat/brown/north,
 /area/lv522/atmos/east_reactor)
 "wRV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/alien/hugger,
 /turf/open/floor/corsat/squares,
 /area/lv522/atmos/cargo_intake)
@@ -48640,7 +48640,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/bridges)
 "wTp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "Sec-Armoury-Lockdown";
@@ -48665,7 +48665,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/atmos/west_reactor)
 "wTy" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/cigarettes/kpack{
 	pixel_x = 6;
 	pixel_y = 14
@@ -48688,7 +48688,7 @@
 /turf/open/floor/carpet,
 /area/lv522/indoors/c_block/garage)
 "wTG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave{
 	pixel_y = 3
 	},
@@ -48887,7 +48887,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
 "wYE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/security)
@@ -49093,7 +49093,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/kitchen)
 "xcV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/alien/hugger,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
@@ -49252,7 +49252,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_street)
 "xfP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/blue/southwest,
 /area/lv522/indoors/a_block/admin)
 "xfS" = (
@@ -49570,7 +49570,7 @@
 /area/lv522/indoors/a_block/fitness)
 "xoK" = (
 /obj/effect/decal/cleanable/cobweb2,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/hydro)
 "xpg" = (
@@ -49597,7 +49597,7 @@
 /turf/open/floor/corsat/browncorner/west,
 /area/lv522/atmos/command_centre)
 "xqb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/grown/deathberries{
 	pixel_y = 9
 	},
@@ -49617,11 +49617,11 @@
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/landing_zone_1)
 "xrk" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/floor_marked/southwest,
 /area/lv522/atmos/cargo_intake)
 "xry" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/seeds/potatoseed{
 	pixel_x = -8;
 	pixel_y = 6
@@ -49669,14 +49669,14 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_2)
 "xsu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/reactor_garage)
 "xsI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -49714,7 +49714,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/north_street)
 "xsZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/hairlesshide{
 	pixel_y = -1
 	},
@@ -49761,7 +49761,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/a_block/security)
 "xtS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/wy{
 	pixel_x = 7;
 	pixel_y = 7
@@ -49773,7 +49773,7 @@
 /turf/open/floor/corsat/brown/northwest,
 /area/lv522/atmos/command_centre)
 "xuk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 6
 	},
@@ -49811,7 +49811,7 @@
 /turf/open/floor/corsat/brown/east,
 /area/lv522/oob)
 "xvE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv/broadcast{
 	pixel_y = 16
 	},
@@ -49823,7 +49823,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "xvI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/mineral/gold{
 	amount = 60;
 	pixel_y = 6
@@ -49881,7 +49881,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo/glass)
 "xwY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/b_block/bar)
 "xxk" = (
@@ -49986,7 +49986,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/landing_zone_2)
 "xyU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/map/lv522_map,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_street)
@@ -50180,7 +50180,7 @@
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
 "xDI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/hardhat/orange{
 	pixel_x = 8;
 	pixel_y = 12
@@ -50501,7 +50501,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/cargo)
 "xLL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/bottle/davenport{
 	pixel_x = -4;
 	pixel_y = 9
@@ -50509,7 +50509,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "xLP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate,
 /obj/structure/machinery/light{
 	dir = 4
@@ -50517,7 +50517,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/landing_zone_1/ceiling)
 "xLT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_x = 4;
 	pixel_y = 6
@@ -50554,7 +50554,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/casino)
 "xMX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/cardboard/full_stack,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/indoors/c_block/cargo)
@@ -50629,7 +50629,7 @@
 /turf/open/floor/prison,
 /area/lv522/outdoors/colony_streets/north_west_street)
 "xOF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	pixel_y = 6
 	},
@@ -50743,7 +50743,7 @@
 /turf/open/floor/wood/ship,
 /area/lv522/atmos/way_in_command_centre)
 "xQA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_x = 6;
 	pixel_y = 7
@@ -50806,7 +50806,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522/indoors/lone_buildings/engineering)
 "xRU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "LZ1_Lockdown_Lo";
 	name = "remote door-control";
@@ -50821,7 +50821,7 @@
 /obj/structure/machinery/power/apc/power/north{
 	start_charge = 20
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/pen/blue,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv522/indoors/a_block/corpo/glass)
@@ -50842,7 +50842,7 @@
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 6;
 	pixel_y = 7
@@ -50877,7 +50877,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
 "xTT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp{
 	pixel_y = 6
 	},
@@ -50937,7 +50937,7 @@
 /turf/open/floor/strata/cyan2/east,
 /area/lv522/indoors/a_block/medical)
 "xVl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/camera/autoname{
 	dir = 8
 	},
@@ -51006,7 +51006,7 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/colony_streets/east_central_street)
 "xXo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bed/chair{
 	pixel_y = 13
 	},
@@ -51087,7 +51087,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/cargo)
 "xZe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /obj/item/device/flash,
 /obj/structure/extinguisher_cabinet{
@@ -51346,7 +51346,7 @@
 /area/lv522/outdoors/colony_streets/north_street)
 "yeH" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "yeN" = (
@@ -51398,7 +51398,7 @@
 	pixel_x = -4;
 	pixel_y = 13
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic{
 	icon_state = "ashtray_full_bl";
 	pixel_x = 5;
@@ -51482,7 +51482,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/engineering)
 "ygH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger{
 	pixel_y = 2
 	},

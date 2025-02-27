@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_magazine/shotgun/buckshot,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/item/weapon/gun/shotgun/pump{
@@ -44,7 +44,7 @@
 /turf/open/floor/vault,
 /area/lv624/lazarus/quartstorage)
 "U" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_magazine/smg/mp27,
 /obj/item/ammo_magazine/smg/mp27,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb{

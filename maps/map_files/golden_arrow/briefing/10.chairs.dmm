@@ -11,7 +11,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "bp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "bq" = (
@@ -552,7 +552,7 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "IX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/notepad/black{
 	pixel_y = -3;
 	pixel_x = -6
@@ -737,7 +737,7 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "Qd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/CICmap{
 	density = 0;
 	dir = 4;

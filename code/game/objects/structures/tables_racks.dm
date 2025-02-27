@@ -9,11 +9,12 @@
 /*
  * Tables
  */
+
 /obj/structure/surface/table
-	name = "table"
+	name = "grey table"
 	desc = "A square metal surface resting on four legs. Useful to put stuff on. Can be flipped in emergencies to act as cover."
 	icon = 'icons/obj/structures/tables.dmi'
-	icon_state = "table"
+	icon_state = "almtable"
 	density = TRUE
 	anchored = TRUE
 	layer = TABLE_LAYER
@@ -24,7 +25,7 @@
 	debris = list(/obj/item/frame/table)
 
 	var/sheet_type = /obj/item/stack/sheet/metal
-	var/table_prefix = "" //used in update_icon()
+	var/table_prefix = "alm" //used in update_icon()
 	var/reinforced = FALSE
 	var/flipped = 0
 	var/flip_cooldown = 0 //If flip cooldown exists, don't allow flipping or putting back. This carries a WORLD.TIME value
@@ -34,9 +35,10 @@
 	var/upright_projectile_coverage = PROJECTILE_COVERAGE_LOW
 	surgery_duration_multiplier = SURGERY_SURFACE_MULT_UNSUITED
 
-/obj/structure/surface/table/brown
-	parts = /obj/item/frame/table/brown
-	debris = list(/obj/item/frame/table/brown)
+/obj/structure/surface/table/dark
+	name = "dark grey table"
+	parts = /obj/item/frame/table/dark
+	color = "#8B9490"
 
 /obj/structure/surface/table/Initialize()
 	. = ..()
@@ -353,7 +355,7 @@
 
 /obj/structure/surface/table/verb/do_flip()
 	set name = "Flip table"
-	set desc = "Flips a non-reinforced table"
+	set desc = "Flips a table"
 	set category = "Object"
 	set src in oview(1)
 
@@ -502,18 +504,12 @@
 /obj/structure/surface/table/woodentable
 	name = "wooden table"
 	desc = "A square wood surface resting on four legs. Useful to put stuff on. Can be flipped in emergencies to act as cover."
-	icon_state = "woodtable"
+	icon_state = "table"
 	sheet_type = /obj/item/stack/sheet/wood
 	parts = /obj/item/frame/table/wood
-	table_prefix = "wood"
+	table_prefix = ""
 	health = 50
-
-/obj/structure/surface/table/woodentable/poor
-	name = "poor wooden table"
-	desc = "A semi-poorly constructed wood surface resting on four legs. Useful to put stuff on. Can be flipped in emergencies to act as cover."
-	icon_state = "pwoodtable"
-	parts = /obj/item/frame/table/wood/poor
-	table_prefix = "pwood"
+	color = "#8B7B5B"
 
 /obj/structure/surface/table/woodentable/fancy
 	name = "fancy wooden table"
@@ -521,6 +517,7 @@
 	icon_state = "fwoodtable"
 	parts = /obj/item/frame/table/wood/fancy
 	table_prefix = "fwood"
+	color = null
 
 /obj/structure/surface/table/woodentable/fancy/flip(direction)
 	return 0 //That is mahogany!
@@ -540,17 +537,22 @@
  * Reinforced tables
  */
 /obj/structure/surface/table/reinforced
-	name = "reinforced table"
+	name = "grey reinforced table"
 	desc = "A square metal surface resting on four legs. This one has side panels, making it useful as a desk, but impossible to flip."
-	icon_state = "reinftable"
+	icon_state = "prisontable"
+	table_prefix = "prison"
 	health = 140
 	var/status = RTABLE_NORMAL
 	reinforced = TRUE
-	table_prefix = "reinf"
 	parts = /obj/item/frame/table/reinforced
 
-/obj/structure/surface/table/reinforced/flip(direction)
-	return 0 //No, just no. It's a full desk, you can't flip that
+/obj/structure/surface/table/reinforced/tan
+	name = "tan reinforced table"
+	color = "#ffe6e6"
+
+/obj/structure/surface/table/reinforced/dark
+	name = "dark reinforced table"
+	color = "#6b675e"
 
 /obj/structure/surface/table/reinforced/attackby(obj/item/W as obj, mob/user as mob)
 	if (iswelder(W))
@@ -585,20 +587,6 @@
 
 	..()
 
-/obj/structure/surface/table/reinforced/prison
-	desc = "A square metal surface resting on four legs. This one has side panels, making it useful as a desk, but impossible to flip."
-	icon_state = "prisontable"
-	table_prefix = "prison"
-	parts = /obj/item/frame/table/reinforced
-
-/obj/structure/surface/table/reinforced/prison/tan
-	color = "#ffe6e6"
-	parts = /obj/item/frame/table/reinforced
-
-/obj/structure/surface/table/reinforced/prison/dark
-	color = "#6b675e"
-	parts = /obj/item/frame/table/reinforced
-
 /obj/structure/surface/table/reinforced/almayer_blend
 	desc = "A square metal surface resting on its fat metal bottom. You can't flip something that doesn't have legs."
 	icon_state = "reqStable" //instance, this is a static table for req.
@@ -632,15 +620,6 @@
 
 /obj/structure/surface/table/reinforced/black/flip(direction)
 	return FALSE
-
-/obj/structure/surface/table/almayer
-	icon_state = "almtable"
-	table_prefix = "alm"
-	parts = /obj/item/frame/table/almayer
-
-/obj/structure/surface/table/almayer/dark
-	parts = /obj/item/frame/table/almayer/dark
-	color = "#8B9490"
 
 /obj/structure/surface/table/reinforced/cloth
 	name = "cloth table"

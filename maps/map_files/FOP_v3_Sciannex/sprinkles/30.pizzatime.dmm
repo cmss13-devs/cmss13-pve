@@ -8,7 +8,7 @@
 /turf/open/floor/prison/blue/southwest,
 /area/template_noop)
 "c" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/meat{
 	pixel_x = -1;
 	pixel_y = 2
@@ -24,7 +24,7 @@
 /turf/open/floor/prison/kitchen,
 /area/template_noop)
 "d" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/sliceable/pizza/meatpizza,
 /obj/item/reagent_container/food/snacks/sliceable/pizza/meatpizza{
 	pixel_y = 3
@@ -42,12 +42,12 @@
 /turf/open/floor/prison/blue/northwest,
 /area/template_noop)
 "f" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/chem_dispenser/soda,
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "g" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/sliceable/flatdough{
 	pixel_y = 7
 	},
@@ -61,7 +61,7 @@
 /turf/open/space,
 /area/template_noop)
 "j" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/kitchen/utensil/knife{
 	pixel_x = 9
 	},
@@ -79,7 +79,7 @@
 /turf/open/floor/prison/blue/southeast,
 /area/template_noop)
 "k" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/sink{
 	pixel_y = 32
 	},
@@ -101,7 +101,7 @@
 /turf/open/floor/prison/kitchen,
 /area/template_noop)
 "p" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cans/dr_gibb{
 	pixel_x = 8;
 	pixel_y = 7
@@ -155,7 +155,7 @@
 /obj/structure/machinery/reagentgrinder/industrial{
 	pixel_y = 10
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/kitchen,
 /area/template_noop)
 "y" = (
@@ -174,7 +174,7 @@
 /turf/open/floor/prison/blue/north,
 /area/template_noop)
 "B" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/cups{
 	pixel_x = -3;
 	pixel_y = 6
@@ -187,7 +187,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "C" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/sliceable/cheesewheel{
 	pixel_y = -8
 	},
@@ -212,7 +212,7 @@
 /turf/open/floor/prison/kitchen,
 /area/template_noop)
 "G" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/pizzabox/margherita,
 /obj/item/pizzabox/mystery{
 	pixel_y = 3
@@ -266,7 +266,7 @@
 /turf/open/space,
 /area/template_noop)
 "Q" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/trash/plate{
 	pixel_x = 1;
 	pixel_y = 3
@@ -295,7 +295,7 @@
 /turf/closed/wall/r_wall/prison_unmeltable,
 /area/template_noop)
 "U" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/pizzabox/mystery/stack,
 /obj/item/reagent_container/food/snacks/vegetablepizzaslice{
 	pixel_x = -7;

@@ -36,7 +36,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
 "he" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_magazine/shotgun/buckshot,
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
@@ -184,7 +184,7 @@
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "LJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_magazine/rifle/m16/ap,
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)

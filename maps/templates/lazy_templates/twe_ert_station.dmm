@@ -50,7 +50,7 @@
 	},
 /area/adminlevel/ert_station/royal_marines_station)
 "aX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -233,7 +233,7 @@
 /turf/open/floor/almayer/orange/southeast,
 /area/adminlevel/ert_station/royal_marines_station)
 "gl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8
 	},
@@ -275,7 +275,7 @@
 	},
 /area/adminlevel/ert_station/royal_marines_station)
 "hA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/southeast,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -323,7 +323,7 @@
 	},
 /area/adminlevel/ert_station/royal_marines_station)
 "iO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/surgical_tray,
 /turf/open/floor/almayer/sterile_green,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -382,7 +382,7 @@
 	},
 /area/adminlevel/ert_station/royal_marines_station)
 "jD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/redfull,
 /area/adminlevel/ert_station/royal_marines_station)
 "jI" = (
@@ -424,7 +424,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/royal_marines_station)
 "kh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/royal_marines_station)
 "kx" = (
@@ -449,7 +449,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/royal_marines_station)
 "kO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/paper_bin/uscm{
 	pixel_y = 7
@@ -510,7 +510,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/royal_marines_station)
 "lN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -709,12 +709,12 @@
 /area/adminlevel/ert_station/royal_marines_station)
 "qj" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/almayer/sterile_green,
 /area/adminlevel/ert_station/royal_marines_station)
 "qx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/red/east,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -818,7 +818,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/royal_marines_station)
 "sP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/roller,
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -921,7 +921,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/royal_marines_station)
 "vR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/book/manual/marine_law{
 	pixel_x = -3;
 	pixel_y = 1
@@ -934,7 +934,7 @@
 	},
 /area/adminlevel/ert_station/royal_marines_station)
 "wt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/milosoup{
 	pixel_y = 10
 	},
@@ -1010,7 +1010,7 @@
 /area/adminlevel/ert_station/royal_marines_station)
 "yW" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/spray/cleaner,
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -1045,12 +1045,12 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/royal_marines_station)
 "zY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/red/west,
 /area/adminlevel/ert_station/royal_marines_station)
 "Aa" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/defibrillator,
 /turf/open/floor/almayer/sterile_green,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -1149,7 +1149,7 @@
 /obj/item/restraint/handcuffs{
 	pixel_y = 12
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/restraint/handcuffs,
 /obj/item/weapon/baton{
 	pixel_x = -12
@@ -1227,7 +1227,7 @@
 /area/adminlevel/ert_station/royal_marines_station)
 "Ei" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/hand_labeler,
 /turf/open/floor/almayer/sterile_green,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -1256,7 +1256,7 @@
 	},
 /area/adminlevel/ert_station/royal_marines_station)
 "EX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/red/east,
 /area/adminlevel/ert_station/royal_marines_station)
 "Fp" = (
@@ -1344,7 +1344,7 @@
 /area/adminlevel/ert_station/royal_marines_station)
 "Hg" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/power/apc/antag{
 	dir = 1
 	},
@@ -1391,7 +1391,7 @@
 /turf/open/void,
 /area/adminlevel/ert_station/royal_marines_station)
 "Id" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -1408,7 +1408,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/royal_marines_station)
 "Ir" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
@@ -1564,7 +1564,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/royal_marines_station)
 "Mg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/reagent_dispensers/peppertank{
 	pixel_x = 30
 	},
@@ -1717,7 +1717,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/royal_marines_station)
 "OB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/syringe_case{
 	pixel_x = 3;
 	pixel_y = 3
@@ -1770,7 +1770,7 @@
 /area/adminlevel/ert_station/royal_marines_station)
 "Pl" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder{
 	pixel_y = 3
 	},
@@ -1934,7 +1934,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/royal_marines_station)
 "Sv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/royal_marines_station)
 "Sw" = (
@@ -1952,7 +1952,7 @@
 /turf/open/floor/almayer/sterile_green,
 /area/adminlevel/ert_station/royal_marines_station)
 "Tf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/mint,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -2070,7 +2070,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/royal_marines_station)
 "UZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/fishandchips,
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/royal_marines_station)
@@ -2099,7 +2099,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/ert_station/royal_marines_station)
 "VA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/faxmachine/uscm/brig,
 /turf/open/floor/almayer/plate,
@@ -2126,7 +2126,7 @@
 	unacidable = 1;
 	unslashable = 1
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/handcuffs{
 	pixel_x = 5;
 	pixel_y = 5
@@ -2137,7 +2137,7 @@
 /turf/open/floor/almayer/redfull,
 /area/adminlevel/ert_station/royal_marines_station)
 "VL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/restraint/handcuffs{
 	pixel_x = -4;
@@ -2148,7 +2148,7 @@
 /turf/open/floor/almayer/redfull,
 /area/adminlevel/ert_station/royal_marines_station)
 "Wa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = 6
 	},
@@ -2232,7 +2232,7 @@
 /turf/open/floor/almayer/cargo_arrow/east,
 /area/adminlevel/ert_station/royal_marines_station)
 "WD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/recharger,
 /turf/open/floor/almayer/plate,
@@ -2389,7 +2389,7 @@
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/adminlevel/ert_station/royal_marines_station)
 "Zx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/syringes{
 	pixel_x = 4;
 	pixel_y = 6

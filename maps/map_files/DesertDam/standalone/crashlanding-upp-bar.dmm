@@ -300,12 +300,12 @@
 /turf/open/floor/plating,
 /area/desert_dam/building/bar/bar)
 "eU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/semki,
 /turf/open/floor/plating,
 /area/desert_dam/building/bar/bar)
 "eY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop{
 	desc = "A gas-operated rotary machine gun used by UPP heavies. Its enormous volume of fire and ammunition capacity allows the suppression of large concentrations of enemy forces. Heavy weapons training is required control its recoil, is non-functional.";
 	icon_state = "painless";
@@ -827,7 +827,7 @@
 /turf/open/floor/grimy,
 /area/desert_dam/building/bar/bar)
 "qC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/rounds/type71{
 	bullet_amount = 129
 	},
@@ -1595,7 +1595,7 @@
 	},
 /area/desert_dam/building/bar/bar)
 "Fm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/bottle/vodka,
 /obj/item/reagent_container/food/drinks/bottle/vodka{
 	pixel_x = -7;
@@ -1866,7 +1866,7 @@
 /turf/open/floor/plating,
 /area/desert_dam/building/bar/bar)
 "Kg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/accessory/patch/upp{
 	pixel_y = -6;
 	pixel_x = -7

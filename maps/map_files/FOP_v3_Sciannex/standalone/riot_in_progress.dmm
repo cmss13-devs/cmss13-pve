@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "am" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/donut_box{
 	pixel_y = 6
 	},
@@ -16,7 +16,7 @@
 /turf/open/floor/prison,
 /area/fiorina/station/security)
 "aX" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras{
 	dir = 8
 	},
@@ -49,7 +49,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/security)
 "bO" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/shard{
 	icon_state = "medium"
 	},
@@ -66,7 +66,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
 "cn" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -97,7 +97,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "dT" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -129,7 +129,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/secure_data,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
@@ -163,7 +163,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
 "gI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 7
@@ -172,7 +172,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "gT" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_27";
 	layer = 3.1;
@@ -204,7 +204,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "jb" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 7
@@ -322,7 +322,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
 "nf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/nade_box/tear_gas,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
@@ -358,7 +358,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "oE" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/recharger{
 	pixel_y = 4
 	},
@@ -404,7 +404,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
 "pR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_29";
 	pixel_y = 10
@@ -426,7 +426,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "qQ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/folder/black_random,
 /obj/item/folder/red{
 	pixel_x = 3;
@@ -435,7 +435,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "qX" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/recharger{
 	pixel_y = 4
 	},
@@ -446,7 +446,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "qY" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_29";
 	pixel_y = 10
@@ -525,7 +525,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "uh" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flash,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
@@ -554,7 +554,7 @@
 /turf/open/floor/prison,
 /area/fiorina/lz/near_lzII)
 "wF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp{
 	pixel_x = -6;
 	pixel_y = 16
@@ -584,7 +584,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/lz/near_lzII)
 "xv" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/book/manual/security_space_law{
 	pixel_x = 3;
 	pixel_y = 5
@@ -596,7 +596,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "xM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -647,7 +647,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "zA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_29";
 	pixel_y = 10
@@ -656,7 +656,7 @@
 /area/fiorina/station/security)
 "zI" = (
 /obj/structure/machinery/computer/secure_data,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -677,7 +677,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "AM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/book/manual/security_space_law{
 	pixel_x = 8;
 	pixel_y = 1
@@ -693,7 +693,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "AY" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -737,14 +737,14 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/security)
 "De" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/handset{
 	pixel_y = 7
 	},
 /turf/open/floor/prison/darkredfull2,
 /area/fiorina/station/security)
 "DH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -786,7 +786,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
@@ -823,7 +823,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/fiorina/station/security)
 "GH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -847,7 +847,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/security)
 "HF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/spray/pepper,
 /obj/item/clothing/glasses/sunglasses/sechud,
 /turf/open/floor/prison/redfull,
@@ -909,7 +909,7 @@
 /turf/open/floor/prison,
 /area/fiorina/lz/near_lzII)
 "Lj" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras{
 	dir = 8
 	},
@@ -999,14 +999,14 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "Re" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/recharger{
 	pixel_y = 4
 	},
 /turf/open/floor/prison/darkredfull2,
 /area/fiorina/station/security)
 "RR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/cigarettes/emeraldgreen,
 /obj/item/tool/lighter,
 /turf/open/floor/prison/redfull,
@@ -1030,7 +1030,7 @@
 /turf/open/floor/prison/darkredfull2,
 /area/fiorina/station/security)
 "Sp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras{
 	dir = 8
 	},
@@ -1041,7 +1041,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/security)
 "Su" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/stack/rods,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
@@ -1069,14 +1069,14 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/security)
 "UE" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras{
 	dir = 1
 	},
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "UU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_magazine/rifle/m16,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
@@ -1107,7 +1107,7 @@
 /turf/closed/wall/prison,
 /area/fiorina/lz/near_lzII)
 "VG" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/spawner/random/goggles/lowchance,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
@@ -1145,7 +1145,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "WI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -1159,7 +1159,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
 "Xj" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/handcuffs{
 	pixel_x = 6;
 	pixel_y = 1
@@ -1202,7 +1202,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
 "YI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/radio{
 	pixel_x = -6;
 	pixel_y = 16
@@ -1218,7 +1218,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/security)
 "YS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ashtray/plastic,
 /obj/item/clothing/mask/cigarette,
 /obj/item/trash/cigbutt/ucigbutt{
@@ -1237,7 +1237,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "Zg" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/flora/pottedplant{
 	pixel_y = 9
 	},

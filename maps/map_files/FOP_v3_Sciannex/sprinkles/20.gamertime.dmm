@@ -19,7 +19,7 @@
 /turf/closed/wall/r_wall/prison_unmeltable,
 /area/template_noop)
 "dv" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras{
 	dir = 1
 	},
@@ -42,7 +42,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "gB" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 4;
 	icon_state = "commb";
@@ -55,12 +55,12 @@
 /turf/open/floor/prison,
 /area/template_noop)
 "hy" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "hI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 4;
 	icon_state = "commb";
@@ -72,7 +72,7 @@
 /turf/open/floor/prison/darkpurple2/north,
 /area/template_noop)
 "ic" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/newspaper,
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
@@ -86,7 +86,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "jF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 4;
 	icon_state = "commb"
@@ -102,7 +102,7 @@
 /turf/open/floor/plating/prison,
 /area/template_noop)
 "na" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison,
 /area/template_noop)
 "nr" = (
@@ -116,7 +116,7 @@
 /turf/open/floor/prison/darkpurple2/southwest,
 /area/template_noop)
 "oy" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/darkpurple2/northwest,
 /area/template_noop)
 "pf" = (
@@ -131,7 +131,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "pF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 4;
 	icon_state = "commb"
@@ -232,7 +232,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "Kt" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 8;
 	icon_state = "commb"
@@ -250,12 +250,12 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "Lx" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/trash/chips,
 /turf/open/floor/prison/darkpurple2/northeast,
 /area/template_noop)
 "LH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 8;
 	icon_state = "commb";
@@ -268,7 +268,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "LI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 8;
 	icon_state = "commb"
@@ -318,7 +318,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "Qw" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras{
 	dir = 1
 	},
@@ -356,7 +356,7 @@
 /turf/open/floor/prison/darkpurple2/northwest,
 /area/template_noop)
 "Vu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 4;
 	icon_state = "commb"
@@ -364,7 +364,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "VZ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 8;
 	icon_state = "commb"
@@ -376,7 +376,7 @@
 /turf/open/floor/prison,
 /area/template_noop)
 "Wa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 8;
 	icon_state = "commb";
@@ -389,7 +389,7 @@
 /turf/open/floor/prison/darkpurple2,
 /area/template_noop)
 "Za" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/golden_cup{
 	pixel_y = 11
 	},

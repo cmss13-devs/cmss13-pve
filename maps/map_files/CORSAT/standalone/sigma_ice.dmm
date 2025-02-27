@@ -47,7 +47,7 @@
 /area/corsat/sigma/biodome/gunrange)
 "aV" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data{
 	dir = 1
 	},
@@ -378,7 +378,7 @@
 /turf/open/auto_turf/snow/layer1,
 /area/corsat/sigma/biodome/ice)
 "iL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/red/west,
 /area/corsat/sigma/airlock/control)
@@ -691,14 +691,14 @@
 /turf/open/floor/corsat,
 /area/corsat/inaccessible)
 "rH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door/window/northright{
 	name = "Firing Lane"
 	},
 /turf/open/floor/asteroidwarning,
 /area/corsat/sigma/biodome/gunrange)
 "rP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door/window/northright{
 	name = "Firing Lane"
 	},
@@ -711,7 +711,7 @@
 /obj/structure/machinery/door/window/northright{
 	name = "Firing Lane"
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/asteroidwarning,
 /area/corsat/sigma/biodome/gunrange)
 "rW" = (
@@ -770,7 +770,7 @@
 	dir = 4;
 	name = "Waste Tank Control"
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellow/northwest,
 /area/corsat/sigma/airlock/control)
 "tM" = (
@@ -820,7 +820,7 @@
 /turf/open/ice,
 /area/corsat/sigma/biodome/ice)
 "us" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/red/southeast,
 /area/corsat/sigma/airlock/control)
@@ -905,7 +905,7 @@
 /turf/open/ice,
 /area/corsat/sigma/biodome/scrapyard)
 "xp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 4
 	},
@@ -931,7 +931,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/airlock/control)
 "xQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert{
 	dir = 4
 	},
@@ -995,7 +995,7 @@
 /turf/open/ice,
 /area/corsat/sigma/biodome/ice)
 "yy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/yellow/southwest,
 /area/corsat/sigma/airlock/control)
@@ -1057,7 +1057,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome/ice)
 "zh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/yellowcorner/west,
 /area/corsat/sigma/airlock/control)
@@ -1186,7 +1186,7 @@
 	dir = 4;
 	name = "Mixed Air Control"
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/airlock/control)
 "BV" = (
@@ -1205,13 +1205,13 @@
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "Ch" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/incendiary,
 /obj/item/explosive/grenade/incendiary,
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "CA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/smokebomb,
 /obj/item/explosive/grenade/smokebomb,
 /turf/open/floor/asteroidplating,
@@ -1248,7 +1248,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome/gunrange)
 "Dd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/high_explosive,
 /obj/item/explosive/grenade/high_explosive,
 /turf/open/floor/asteroidplating,
@@ -1260,7 +1260,7 @@
 /turf/template_noop,
 /area/template_noop)
 "Dg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/high_explosive/training,
 /obj/item/explosive/grenade/high_explosive/training,
 /turf/open/floor/asteroidplating,
@@ -1354,13 +1354,13 @@
 /turf/open/ice,
 /area/corsat/sigma/biodome/ice)
 "Fe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/flashbang,
 /obj/item/explosive/grenade/flashbang,
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "Fu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/high_explosive/training,
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
@@ -1405,7 +1405,7 @@
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "Gf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/high_explosive/frag,
 /obj/item/explosive/grenade/high_explosive/frag,
 /turf/open/floor/asteroidplating,
@@ -1436,7 +1436,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/airlock/control)
 "GW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
@@ -1481,7 +1481,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/airlock/control)
 "Ib" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -1578,12 +1578,12 @@
 /turf/open/floor/corsat/sigma,
 /area/corsat/sigma/airlock/control)
 "Ku" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
 "Kw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
@@ -1594,7 +1594,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome/ice)
 "KF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
 "KN" = (
@@ -1625,11 +1625,11 @@
 /turf/open/floor/corsat/blue/north,
 /area/corsat/sigma/airlock/control)
 "Lg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/blue/north,
 /area/corsat/sigma/airlock/control)
 "Lr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/blue/northeast,
 /area/corsat/sigma/airlock/control)
@@ -1694,7 +1694,7 @@
 /turf/open/ice,
 /area/corsat/sigma/biodome/ice)
 "Ns" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/corsat_bio_lock,
 /turf/open/floor/corsat/blue/east,
 /area/corsat/sigma/airlock/control)
@@ -1769,7 +1769,7 @@
 /area/corsat/sigma/biodome/ice)
 "OW" = (
 /obj/item/device/binoculars,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "SigmaControl";
 	name = "Observation Shutters";
@@ -1800,7 +1800,7 @@
 /turf/open/floor/corsat/redcorner/west,
 /area/corsat/sigma/airlock/control)
 "PM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "SigmaWestD";
 	name = "Entrance Airlock Control";
@@ -1814,7 +1814,7 @@
 /turf/open/ice,
 /area/corsat/sigma/biodome/scrapyard)
 "PZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
@@ -1823,7 +1823,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
 "Qf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/red,
 /turf/open/floor/corsat/red/southwest,
@@ -1840,7 +1840,7 @@
 /turf/open/floor/corsat/blue,
 /area/corsat/sigma/airlock/control)
 "Qx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/red,
@@ -1856,7 +1856,7 @@
 /turf/open/auto_turf/snow/layer1,
 /area/corsat/sigma/biodome/gunrange)
 "QU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/corsat/blue/southeast,
 /area/corsat/sigma/airlock/control)
@@ -2251,7 +2251,7 @@
 /turf/open/ice,
 /area/corsat/sigma/biodome/ice)
 "YR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 4;
 	network = list("sigma")
@@ -2297,7 +2297,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/red/southwest,

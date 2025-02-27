@@ -90,7 +90,7 @@
 /turf/open/floor/prison/sterile_white/south,
 /area/adminlevel/bunker01/bathroom)
 "at" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bedsheetbin{
 	pixel_y = 6
 	},
@@ -297,7 +297,7 @@
 /turf/open/mars_cave,
 /area/adminlevel/bunker01/caves)
 "aS" = (
-/obj/structure/surface/table/holotable/wood,
+/obj/structure/surface/table,
 /obj/item/clothing/mask/cigarette/cigar/havana,
 /obj/item/ashtray/glass,
 /turf/open/floor/carpet/edge/southwest,
@@ -793,11 +793,11 @@
 /turf/open/floor/wood,
 /area/adminlevel/bunker01/bedroom)
 "cq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/wood,
 /area/adminlevel/bunker01/bedroom)
 "cr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/cigbutt,
 /turf/open/floor/wood,
 /area/adminlevel/bunker01/bedroom)
@@ -854,12 +854,12 @@
 /turf/closed/wall/r_wall,
 /area/adminlevel/bunker01/bedroom)
 "cD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /turf/open/floor/wood,
 /area/adminlevel/bunker01/bedroom)
 "cE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light,
 /turf/open/floor/wood,
 /area/adminlevel/bunker01/bedroom)
