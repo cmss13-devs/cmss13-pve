@@ -33,5 +33,5 @@ endmap
 map golden_arrow_classic
 endmap
 
-map firefly_mod_2
+map uscss_wyvern
 endmap
