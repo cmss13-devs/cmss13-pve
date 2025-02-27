@@ -105,6 +105,7 @@
 /area/firefly/briefing)
 "ap" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/engineer)
 "aq" = (
@@ -813,7 +814,6 @@
 /turf/open/floor/corsat/brown/west,
 /area/firefly/briefing)
 "cc" = (
-/obj/structure/machinery/power/apc/almayer/east,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -1244,7 +1244,6 @@
 /area/firefly/medical)
 "df" = (
 /obj/structure/platform,
-/obj/structure/machinery/power/apc/almayer/north,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -2389,7 +2388,6 @@
 	pixel_x = 9;
 	pixel_y = 7
 	},
-/obj/structure/machinery/power/apc/almayer/west,
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
 "fF" = (
@@ -3094,6 +3092,7 @@
 "hq" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/large_holster/m39,
+/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/corsat/brown/north,
 /area/firefly/squad_theta)
 "hr" = (
@@ -3164,7 +3163,6 @@
 /turf/open/floor/almayer/aicore/no_build/ai_plates,
 /area/firefly/ares)
 "hz" = (
-/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/briefing)
 "hA" = (
@@ -5625,9 +5623,6 @@
 /area/firefly/medical)
 "nf" = (
 /obj/structure/closet/crate/weapon/training/m49a,
-/obj/structure/machinery/light/spot/blue{
-	dir = 8
-	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/medical)
 "ng" = (
@@ -5989,9 +5984,6 @@
 /area/firefly/engineer)
 "nZ" = (
 /obj/structure/surface/table/reinforced/almayer_blend,
-/obj/structure/machinery/light/spot/blue{
-	dir = 3
-	},
 /obj/item/attachable/scope/mini_iff{
 	pixel_x = -2;
 	pixel_y = 10
@@ -6755,10 +6747,10 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "pM" = (
-/obj/structure/machinery/power/apc/almayer/north,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/corsat/brown/north,
 /area/firefly/hangar)
 "pN" = (
@@ -7146,8 +7138,8 @@
 /turf/open/floor/almayer_hull,
 /area/space)
 "qL" = (
-/obj/structure/machinery/power/apc/almayer/west,
 /obj/structure/disposalpipe/segment,
+/obj/structure/machinery/power/apc/almayer/west,
 /turf/open/floor/wood/ship,
 /area/firefly/co)
 "qM" = (
@@ -8369,6 +8361,11 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
+"tE" = (
+/obj/structure/window/reinforced/toughened,
+/obj/structure/machinery/power/apc/almayer/west,
+/turf/open/floor/almayer/aicore/no_build/ai_plates,
+/area/firefly/ares)
 "tF" = (
 /obj/structure/noticeboard{
 	pixel_y = 62
@@ -8445,6 +8442,15 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/greenwhite/west,
 /area/firefly/medical)
+"tN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/machinery/light/double/blue,
+/obj/structure/machinery/power/apc/almayer/east,
+/turf/open/floor/corsat/green/southeast,
+/area/firefly/cafeteria)
 "tO" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood/ship,
@@ -8485,6 +8491,10 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/co)
+"tS" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/corsat/brown/north,
+/area/firefly/ptsgt)
 "tT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/tool/wrench{
@@ -8827,6 +8837,13 @@
 	},
 /turf/open/floor/corsat/brown/northwest,
 /area/firefly/squad_theta)
+"uF" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/corsat/white/north,
+/area/firefly/briefing)
 "uG" = (
 /obj/structure/machinery/iv_drip,
 /obj/structure/bed/roller,
@@ -8914,7 +8931,6 @@
 	icon_state = "SE-out";
 	pixel_y = 1
 	},
-/obj/structure/machinery/power/apc/almayer/west,
 /turf/open/floor/corsat/white/west,
 /area/firefly/hangar)
 "uT" = (
@@ -8984,15 +9000,6 @@
 	},
 /turf/open/floor/corsat/yellowcorner/west,
 /area/firefly/engineer)
-"va" = (
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/turf/open/floor/almayer_hull,
-/area/space)
 "vb" = (
 /obj/structure/sign/safety/ladder,
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
@@ -10048,11 +10055,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"xG" = (
-/obj/structure/window/framed/corsat,
-/obj/structure/machinery/power/apc/almayer/west,
-/turf/open/floor/almayer/test_floor4,
-/area/firefly/medical)
 "xH" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -10328,10 +10330,6 @@
 /obj/structure/closet/crate/critter,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
-"yp" = (
-/obj/structure/machinery/power/apc/almayer/north,
-/turf/open/floor/corsat/red/northeast,
-/area/firefly/medical)
 "yq" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/computer/research,
@@ -10493,12 +10491,6 @@
 	},
 /turf/open/space/basic,
 /area/space)
-"yR" = (
-/obj/structure/machinery/light/spot/blue{
-	dir = 0
-	},
-/turf/open/floor/almayer/redfull,
-/area/firefly/medical)
 "yS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -11018,9 +11010,7 @@
 	buckling_y = 2;
 	pixel_y = -1
 	},
-/turf/open/floor/tdome/northeast{
-	layer = 0.9
-	},
+/turf/open/floor/tdome/northeast,
 /area/firefly/ares)
 "Ag" = (
 /obj/structure/pipes/vents/pump/no_boom/gas{
@@ -13228,11 +13218,6 @@
 	},
 /turf/open/floor/corsat/greenwhite/southwest,
 /area/firefly/medical)
-"FG" = (
-/obj/structure/machinery/power/apc/almayer/north,
-/obj/structure/pipes/vents,
-/turf/open/floor/corsat/squares,
-/area/firefly/engineer)
 "FH" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
@@ -13502,10 +13487,6 @@
 	pixel_y = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/firefly/engineer)
-"Gi" = (
-/obj/structure/machinery/power/apc/almayer/north,
-/turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "Gj" = (
 /obj/structure/machinery/shower{
@@ -15053,6 +15034,7 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/space)
 "JL" = (
+/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/corsat/brown/north,
 /area/firefly/squad_omega)
 "JM" = (
@@ -15326,7 +15308,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
 	},
-/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "Kt" = (
@@ -18665,9 +18646,6 @@
 /area/firefly/co)
 "Sm" = (
 /obj/structure/closet/crate/weapon/training/m39,
-/obj/structure/machinery/light/spot/blue{
-	dir = 8
-	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/medical)
 "Sn" = (
@@ -19541,9 +19519,9 @@
 /turf/open/floor/corsat/purplecorner/west,
 /area/firefly/medical)
 "Uw" = (
-/obj/structure/machinery/power/apc/almayer/east,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/corsat/white/east,
 /area/firefly/medical)
 "Ux" = (
@@ -20816,19 +20794,6 @@
 /obj/structure/prop/static_tank/fuel,
 /turf/open/floor/corsat/yellow/southwest,
 /area/firefly/engineer)
-"XA" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 8
-	},
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/obj/structure/prop/almayer/missile_tube{
-	icon_state = "missiletubesouth";
-	layer = 10
-	},
-/turf/open/floor/almayer_hull,
-/area/space)
 "XB" = (
 /obj/structure/filingcabinet/filingcabinet{
 	pixel_x = -8;
@@ -21022,9 +20987,6 @@
 /area/firefly/engineer)
 "XX" = (
 /obj/structure/surface/table/reinforced/almayer_blend,
-/obj/structure/machinery/light/spot/blue{
-	dir = 3
-	},
 /obj/item/attachable/scope/mini{
 	pixel_x = -3;
 	pixel_y = 8
@@ -21658,14 +21620,6 @@
 "Zz" = (
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/firefly/engineer)
-"ZA" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 9
-	},
-/obj/structure/machinery/power/apc/almayer/west,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/corsat/white/west,
-/area/firefly/hangar)
 "ZB" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/condiment/coldsauce{
@@ -23951,7 +23905,7 @@ NP
 XS
 QZ
 Ze
-Sq
+tE
 Wv
 HF
 NV
@@ -25513,7 +25467,7 @@ ac
 LC
 LC
 LC
-va
+wF
 dA
 aA
 aA
@@ -26881,7 +26835,7 @@ Ax
 bV
 Ax
 Dm
-XA
+jK
 dA
 aA
 aA
@@ -27641,7 +27595,7 @@ Yo
 bV
 Ax
 Dm
-XA
+jK
 dA
 aA
 aA
@@ -28097,7 +28051,7 @@ ar
 LC
 LC
 LC
-va
+wF
 dA
 aA
 aA
@@ -29762,7 +29716,7 @@ DE
 DE
 dv
 LC
-FG
+Jg
 Ax
 YT
 NJ
@@ -30356,7 +30310,7 @@ LC
 LC
 LC
 LC
-Gi
+Ax
 Ax
 bV
 Ax
@@ -31192,7 +31146,7 @@ aA
 aA
 aA
 ji
-JQ
+Wq
 oU
 Pe
 Pe
@@ -31344,7 +31298,7 @@ aA
 aA
 aA
 ji
-Wq
+JQ
 Tr
 Xi
 JR
@@ -35304,7 +35258,7 @@ Eq
 rO
 iv
 VH
-DH
+tN
 Yn
 Yn
 aA
@@ -37905,7 +37859,7 @@ Lp
 Lp
 Lp
 Lp
-yR
+Lp
 zW
 zW
 aA
@@ -38031,7 +37985,7 @@ WK
 LG
 LG
 Oc
-xG
+LN
 kk
 CV
 hi
@@ -38326,7 +38280,7 @@ wa
 wa
 RP
 OV
-Ra
+uF
 hv
 pN
 hi
@@ -38361,7 +38315,7 @@ Lp
 Lp
 Lp
 Lp
-yR
+Lp
 zW
 zW
 aA
@@ -38496,7 +38450,7 @@ OZ
 OZ
 aA
 zW
-yp
+sJ
 xH
 Pv
 YZ
@@ -38938,7 +38892,7 @@ Ra
 hv
 Ac
 IA
-yx
+tS
 Aq
 QE
 ih
@@ -45020,7 +44974,7 @@ iU
 iU
 iU
 iU
-ZA
+iU
 Zy
 vS
 iU
