@@ -474,7 +474,7 @@
 /obj/effect/alien/weeds/node
 	name = "weed node"
 	desc = "A weird, pulsating node."
-	icon_state = "weednode"
+	icon_state = "base"
 	// Weed nodes start out with normal weed health and become stronger once they've stopped spreading
 	health = NODE_HEALTH_GROWING
 	flags_atom = OPENCONTAINER
