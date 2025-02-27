@@ -77,30 +77,6 @@
 	languages = list(LANGUAGE_SPANISH)
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 
-/datum/equipment_preset/colonist/miner/spanish
-	name = "DEAD MEXICAN"
-	languages = list(LANGUAGE_SPANISH)
-	ethnicity = LATIN_AMERICAN_ETHNICITY
-	corpse = TRUE
-
-/datum/equipment_preset/colonist/miner/spanish/bursted
-	name = "DEAD MEXICAN BURSTED"
-	languages = list(LANGUAGE_SPANISH)
-	ethnicity = LATIN_AMERICAN_ETHNICITY
-	xenovictim = TRUE
-
-/datum/equipment_preset/colonist/miner/spanish/beaten
-	name = "DEAD MEXICAN BEATEN"
-	languages = list(LANGUAGE_SPANISH)
-	ethnicity = LATIN_AMERICAN_ETHNICITY
-	brutecorpse = TRUE
-
-/datum/equipment_preset/colonist/miner/spanish/burned
-	name = "DEAD MEXICAN BURNED"
-	languages = list(LANGUAGE_SPANISH)
-	ethnicity = LATIN_AMERICAN_ETHNICITY
-	burncorpse = TRUE
-
 /datum/equipment_preset/colonist/miner/japanese
 	name = "TWE Civilian Colonist, Blue-Collar (Miner)"
 	languages = list(LANGUAGE_JAPANESE)
