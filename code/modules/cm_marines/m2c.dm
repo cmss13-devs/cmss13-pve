@@ -9,7 +9,7 @@
 // AMMO
 /obj/item/ammo_magazine/m2c
 	name = "M2C Ammunition Box (.50 BMG rounds)"
-	desc = "A box of 150, .50 BMG rounds for the M2 Heavy Machinegun System. Click the heavy machinegun while there's no ammo box loaded to reload the M2C."
+	desc = "A box of 150 .50 BMG rounds for the M2 Heavy Machinegun System. Click the heavy machinegun while there's no ammo box loaded to reload the M2C."
 	caliber = ".50"
 	w_class = SIZE_LARGE
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
