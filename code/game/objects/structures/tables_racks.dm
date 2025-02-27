@@ -538,7 +538,7 @@
  */
 /obj/structure/surface/table/reinforced
 	name = "grey reinforced table"
-	desc = "A square metal surface resting on four legs. This one has side panels, making it useful as a desk, but impossible to flip."
+	desc = "A reinforced square metal surface resting on four legs. Useful to put stuff on. Can be flipped in emergencies to act as cover."
 	icon_state = "prisontable"
 	table_prefix = "prison"
 	health = 140
@@ -553,6 +553,13 @@
 /obj/structure/surface/table/reinforced/dark
 	name = "dark reinforced table"
 	color = "#6b675e"
+
+/obj/structure/surface/table/reinforced/bulky
+	name = "bulky reinforced table"
+	desc = "A reinforced square metal surface resting on four legs. This one has side panels, making it less comfortable to sit at."
+	icon_state = "reinftable"
+	table_prefix = "reinf"
+	color = null
 
 /obj/structure/surface/table/reinforced/attackby(obj/item/W as obj, mob/user as mob)
 	if (iswelder(W))
