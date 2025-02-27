@@ -1,0 +1,17 @@
+{
+	"map_name": "Blue Moon Supply Hub",
+    "short_name": "BlueMoon Supply",
+	"map_path": "map_files/BlueMoon_Supply",
+	"map_file": "bluemoon_supply.dmm",
+
+    "announce_text": "DISTRESS CALL TIME: 18:00 28/11/2182. RELAYING... 'This is Second Lieutenant Issac Rupart of Blue-Moon Supply Depot, we are under attack! They got past the main blockade, we've been trying to hold them off but there's too many of them! We need urgen-' RELAY CUT.",
+
+    "camouflage": "jungle",
+	"gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}
