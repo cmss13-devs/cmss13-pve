@@ -158,6 +158,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/squad_theta)
 "aw" = (
@@ -279,7 +284,7 @@
 /area/firefly/hangar)
 "aL" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "To_Research";
 	unacidable = 1;
 	name = "Azure Section Blast Door";
 	openspeed = 17;
@@ -373,17 +378,12 @@
 /turf/open/space/basic,
 /area/space)
 "aW" = (
-/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
-	access_modified = 1;
-	dir = 1;
-	name = "\improper AI Reception";
-	req_access = null;
-	req_one_access_txt = "91;92"
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/white_aicore{
-	name = "AI Core Lockdown"
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
+	dir = 1;
+	req_access = null;
+	req_one_access_txt = "90;91;92"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/ares)
 "aX" = (
@@ -614,11 +614,11 @@
 /turf/open/floor/corsat/blue,
 /area/firefly/briefing)
 "bA" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
 /obj/item/ammo_box/rounds/heap/empty{
 	pixel_x = -4;
 	pixel_y = 4
 	},
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
 "bB" = (
@@ -635,9 +635,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/closed/wall/almayer/outer{
-	layer = 7
-	},
+/turf/closed/wall/almayer/aicore/hull,
 /area/firefly/ares)
 "bD" = (
 /obj/effect/decal/warning_stripes{
@@ -1016,7 +1014,8 @@
 /area/firefly/engineer)
 "cE" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	name = "Weapons Bay Two"
+	name = "Weapons Bay Two";
+	id = "small_hanger_3"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/hangar)
@@ -1046,22 +1045,20 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/firefly/cafeteria)
 "cJ" = (
-/obj/structure/machinery/computer/overwatch/almayer{
-	dir = 4;
-	layer = 3.2;
-	faction = "PMC";
-	pixel_y = 6;
-	pixel_x = 2
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light/double/blue{
 	dir = 4
+	},
+/obj/structure/machinery/prop/almayer/computer{
+	pixel_y = 5;
+	layer = 8;
+	dir = 8
 	},
 /turf/open/floor/corsat/blue/east,
 /area/firefly/co)
 "cK" = (
 /obj/structure/machinery/sentry_holder/almayer/mini/aicore,
-/turf/open/floor/almayer/aicore/no_build/ai_plates,
+/turf/closed/wall/almayer/aicore/hull,
 /area/firefly/ares)
 "cL" = (
 /obj/structure/machinery/disposal,
@@ -1144,6 +1141,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/purplewhite/southeast,
 /area/firefly/medical)
 "cU" = (
@@ -1202,6 +1200,9 @@
 	pixel_x = -1
 	},
 /obj/structure/prop/server_equipment/yutani_server,
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
 "db" = (
@@ -1304,7 +1305,10 @@
 /obj/structure/platform_decoration{
 	dir = 4
 	},
-/obj/structure/machinery/light/double/blue,
+/obj/structure/machinery/door_control/brbutton{
+	id = "synthbay";
+	pixel_y = -29
+	},
 /turf/open/floor/corsat/red,
 /area/firefly/engineer)
 "dm" = (
@@ -1458,11 +1462,6 @@
 /turf/open/floor/almayer_hull/outerhull_dir,
 /area/space)
 "dB" = (
-/obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	name = "\improper Commanding Officer's Quarters";
-	req_access = null;
-	req_access_txt = "31"
-	},
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
 	req_access = list(100);
 	name = "\improper Overwatch"
@@ -1753,6 +1752,9 @@
 /area/firefly/medical)
 "el" = (
 /obj/structure/pipes/vents/pump,
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/white/northeast,
 /area/firefly/medical)
 "em" = (
@@ -1783,15 +1785,6 @@
 /turf/open/floor/corsat/cargo,
 /area/firefly/engineer)
 "eq" = (
-/obj/item/clothing/suit/storage/marine/fluff/oneonethreeeight{
-	pixel_x = 7;
-	pixel_y = 8;
-	desc = "An experimental suit of M3 battle armor originally meant to be used by the company's private military contractors. Over the cuirass features a kevlar-padded vest with slots for ceramic plates and other basic equipment mounts. This particular set of armor has been penetrated by some sort of weapon without any visible cracks or dents from other impacts, speaking volumes of its effectiveness against modern weaponry."
-	},
-/obj/item/clothing/accessory/health/ceramic_plate{
-	pixel_x = -7;
-	pixel_y = -1
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -1917,6 +1910,12 @@
 "eC" = (
 /turf/open/floor/corsat/whitecorner,
 /area/firefly/hangar)
+"eD" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/corsat/yellowcorner/east,
+/area/firefly/engineer)
 "eE" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -2039,7 +2038,7 @@
 /turf/open/floor/corsat/spiralplate,
 /area/firefly/engineer)
 "eS" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/red/west,
 /area/firefly/medical)
 "eT" = (
@@ -2141,16 +2140,6 @@
 	},
 /turf/open/floor/corsat/retrosquareslight,
 /area/firefly/medical)
-"ff" = (
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Squad Sergeant"
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "fg" = (
 /obj/structure/machinery/door/airlock/almayer/research/glass/colony{
 	name = "Decontamination Chamber";
@@ -2158,33 +2147,11 @@
 	},
 /obj/structure/machinery/door/poddoor/almayer/blended/white_aicore{
 	name = "Science Wing Lockdown Blast Door";
-	dir = 4
+	dir = 4;
+	id = "science_wing_lockdown"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
-"fh" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tuxedo{
-	pixel_x = 4;
-	pixel_y = 16
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tuxedo{
-	pixel_x = -6;
-	pixel_y = 14
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tuxedo{
-	pixel_y = 9
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tuxedo{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/tuxedo{
-	pixel_x = 6;
-	pixel_y = 3
-	},
-/turf/open/floor/corsat/lightplate,
-/area/firefly/cafeteria)
 "fi" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 8
@@ -2224,6 +2191,11 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
 "fm" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/corsat/arrow_west,
 /area/firefly/briefing)
 "fn" = (
@@ -2507,7 +2479,8 @@
 	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/almayer/blended/white_aicore{
-	name = "Science Wing Lockdown Blast Door"
+	name = "Science Wing Lockdown Blast Door";
+	id = "science_wing_lockdown"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/test_floor4,
@@ -3218,6 +3191,9 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/firefly/engineer)
 "hH" = (
@@ -3497,7 +3473,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 4
+	dir = 8;
+	icon_state = "pipe-j2"
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
@@ -3777,6 +3754,11 @@
 	name = "\improper Theta Squad Preparation";
 	req_one_access_txt = "202;216;209"
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/squad_theta)
 "iU" = (
@@ -3881,14 +3863,8 @@
 /turf/open/floor/corsat/plate,
 /area/space)
 "jg" = (
-/obj/item/clothing/suit/storage/marine/fluff/steelpoint{
-	pixel_x = -3
-	},
-/obj/item/clothing/head/helmet/marine/fluff/steelpoint{
-	pixel_x = 8;
-	desc = "A next generation combat helmet intended to be paired with the M4-X armor. The full faced helmet provides complete light ballistic-resistant protection alongside enchanced acid resistance. This prototype version lacks those features."
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/greenwhite,
 /area/firefly/medical)
 "jh" = (
@@ -4043,6 +4019,9 @@
 	pixel_x = -1
 	},
 /obj/structure/machinery/computer/rdconsole,
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
 "jy" = (
@@ -4098,20 +4077,17 @@
 /area/firefly/cafeteria)
 "jF" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/structure/machinery/computer/overwatch/almayer{
-	pixel_y = 4;
-	dir = 4;
-	pixel_x = 13;
-	layer = 4
-	},
-/obj/item/clothing/glasses/hud/health{
-	pixel_y = 7;
-	pixel_x = -7
-	},
 /obj/structure/sign/safety/terminal{
 	layer = 2.96;
 	pixel_x = 33;
 	pixel_y = -7
+	},
+/obj/structure/machinery/computer/overwatch/almayer{
+	dir = 4;
+	layer = 3.2;
+	faction = "PMC";
+	pixel_y = 6;
+	pixel_x = 2
 	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
@@ -4195,9 +4171,6 @@
 /turf/open/floor/corsat/white,
 /area/firefly/hangar)
 "jR" = (
-/obj/structure/platform{
-	dir = 4
-	},
 /obj/structure/cryofeed/right{
 	name = "\improper coolant feed";
 	layer = 1;
@@ -4206,6 +4179,9 @@
 /obj/structure/blocker/fog,
 /obj/structure/platform{
 	dir = 1
+	},
+/obj/structure/platform{
+	dir = 4
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/firefly/engineer)
@@ -4218,6 +4194,7 @@
 /area/firefly/engineer)
 "jT" = (
 /obj/structure/pipes/vents/pump,
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/white/southwest,
 /area/firefly/medical)
 "jU" = (
@@ -4381,6 +4358,7 @@
 /area/firefly/cafeteria)
 "km" = (
 /obj/structure/pipes/vents/pump,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/corsat/blue/north,
 /area/firefly/briefing)
 "kn" = (
@@ -4401,7 +4379,7 @@
 /area/firefly/hangar)
 "kp" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "vehicle_up_1";
 	unacidable = 1;
 	name = "Combat Transport Vehicle Bay";
 	openspeed = 17;
@@ -4856,7 +4834,8 @@
 /area/firefly/engineer)
 "lu" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	name = "Weapons Bay One"
+	name = "Weapons Bay One";
+	id = "small_hanger_1"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/hangar)
@@ -4944,12 +4923,7 @@
 /turf/open/floor/corsat/theta,
 /area/firefly/cryo_cell)
 "lG" = (
-/obj/structure/machinery/disposal{
-	pixel_x = -1;
-	pixel_y = -17;
-	layer = 1;
-	density = 0
-	},
+/obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
@@ -5147,7 +5121,7 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "mc" = (
-/obj/structure/window/framed/almayer/aicore/hull/black,
+/obj/structure/window/framed/almayer/aicore/hull,
 /turf/open/floor/tdome/northeast,
 /area/firefly/ares)
 "md" = (
@@ -5445,11 +5419,11 @@
 /turf/open/floor/corsat/lightplate,
 /area/firefly/medical)
 "mN" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
 /obj/structure/prop/server_equipment/laptop/on{
 	pixel_x = -2;
 	pixel_y = 8
 	},
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/red/north,
 /area/firefly/medical)
 "mO" = (
@@ -5504,24 +5478,7 @@
 	icon_state = "triagedecalbottomright";
 	pixel_y = 2
 	},
-/obj/structure/machinery/disposal/delivery{
-	density = 0;
-	desc = "A pneumatic delivery unit. Sends items to the requisitions.";
-	icon_state = "delivery_med";
-	name = "Requisitions Delivery Unit";
-	pixel_y = 30;
-	pixel_x = -9
-	},
 /obj/structure/bed/chair/wheelchair,
-/obj/structure/disposaloutlet{
-	density = 0;
-	desc = "An outlet for the pneumatic delivery system.";
-	icon_state = "delivery_outlet";
-	name = "delivery outlet";
-	pixel_x = 6;
-	pixel_y = 30;
-	range = 0
-	},
 /obj/structure/machinery/autodoc_console,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -5550,16 +5507,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
-"mY" = (
-/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
-	unacidable = 1;
-	name = "Cargo Bay One";
-	openspeed = 17;
-	dir = 4
-	},
-/turf/open/floor/almayer/test_floor4,
-/area/firefly/hangar)
 "mZ" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2
@@ -5893,8 +5840,8 @@
 /area/firefly/medical)
 "nP" = (
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	dir = 8;
+	icon_state = "pipe-y"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/whitecorner,
@@ -5971,7 +5918,6 @@
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/engineer)
 "nZ" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
 /obj/item/attachable/scope/mini_iff{
 	pixel_x = -2;
 	pixel_y = 10
@@ -5979,6 +5925,7 @@
 /obj/item/attachable/scope/mini/nsg23{
 	pixel_x = 7
 	},
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/red,
 /area/firefly/medical)
 "oa" = (
@@ -6029,8 +5976,7 @@
 /area/firefly/hangar)
 "og" = (
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j2"
+	dir = 8
 	},
 /turf/open/floor/corsat/white,
 /area/firefly/briefing)
@@ -6120,7 +6066,8 @@
 /area/firefly/medical)
 "or" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	name = "Weapons Bay One"
+	name = "Weapons Bay One";
+	id = "small_hanger_1"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/test_floor4,
@@ -6178,6 +6125,11 @@
 /area/firefly/engineer)
 "oy" = (
 /obj/structure/window/framed/corsat,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/squad_theta)
 "oz" = (
@@ -6625,7 +6577,7 @@
 /area/firefly/medical)
 "pB" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "To_Research";
 	unacidable = 1;
 	name = "Azure Section Blast Door";
 	openspeed = 17;
@@ -6952,6 +6904,9 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
 "qm" = (
@@ -7152,9 +7107,7 @@
 /turf/open/floor/corsat/browncorner/west,
 /area/firefly/hangar)
 "qQ" = (
-/obj/structure/machinery/disposal{
-	density = 0
-	},
+/obj/structure/machinery/disposal,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -7250,14 +7203,6 @@
 	},
 /turf/open/floor/corsat/greencorner/north,
 /area/firefly/cafeteria)
-"rf" = (
-/obj/structure/machinery/telecomms/relay/preset/tower/all{
-	pixel_x = -25;
-	pixel_y = -73;
-	desc = "A stationary compact TC-4T telecommunications tower. Used for subspace communications lines between planetary and extra-planetary locations."
-	},
-/turf/open/space/basic,
-/area/space)
 "rg" = (
 /obj/structure/coatrack{
 	pixel_x = -8
@@ -7266,12 +7211,7 @@
 	pixel_x = -8;
 	pixel_y = 8
 	},
-/obj/structure/machinery/disposal{
-	pixel_x = 6;
-	pixel_y = -4;
-	density = 0;
-	layer = 2
-	},
+/obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -7352,6 +7292,9 @@
 	pixel_x = -6;
 	pixel_y = -1
 	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
 "rr" = (
@@ -7399,7 +7342,9 @@
 /area/firefly/engineer)
 "ry" = (
 /obj/structure/medical_supply_link/green,
-/obj/structure/machinery/cm_vending/sorted/medical/blood/antag,
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	req_access = list()
+	},
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
 "rz" = (
@@ -7480,6 +7425,9 @@
 	icon_state = "cargo_arrow";
 	color = "#E10600";
 	dir = 8
+	},
+/obj/structure/machinery/door_control/brbutton{
+	id = "small_hanger_1"
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
@@ -7633,7 +7581,8 @@
 /area/firefly/hangar)
 "rZ" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	name = "Epsilon Section Blast Door"
+	name = "Epsilon Section Blast Door";
+	id = "F_Range"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
@@ -7757,7 +7706,8 @@
 /area/firefly/medical)
 "sp" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	name = "Cargo Bay Three"
+	name = "Cargo Bay Three";
+	id = "south_hanger_2"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/hangar)
@@ -8154,9 +8104,9 @@
 /turf/open/floor/almayer_hull/outerhull_dir/north,
 /area/space)
 "tk" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
 	},
 /obj/structure/machinery/light/double/blue{
 	dir = 8
@@ -8467,10 +8417,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/obj/structure/machinery/disposal{
-	density = 0;
-	layer = 5
-	},
+/obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -8492,11 +8439,6 @@
 /obj/item/robot_parts/robot_component{
 	pixel_x = 7;
 	pixel_y = 9
-	},
-/obj/item/clothing/under/marine/fluff/mileswolfe{
-	desc = "Combat Fatigues that appear to have tiger stripes on them.";
-	pixel_x = -6;
-	pixel_y = 2
 	},
 /obj/item/broken_device{
 	desc = "A timeless piece of technology from another era, of spacemen who once plunged into the 12th Bay and beyond.";
@@ -8724,7 +8666,7 @@
 /area/firefly/engineer)
 "uu" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "low_2";
 	unacidable = 1;
 	name = "Auxiliary Storage Blast Door";
 	openspeed = 17;
@@ -8900,8 +8842,19 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/almayer_hull/blackfull,
 /area/space)
+"uP" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/corsat/yellowcorner/north,
+/area/firefly/engineer)
 "uQ" = (
 /obj/structure/window/framed/corsat,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/ptsgt)
 "uR" = (
@@ -8943,6 +8896,16 @@
 	dir = 6
 	},
 /turf/open/floor/corsat/whitecorner,
+/area/firefly/engineer)
+"uW" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -12
+	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
 "uX" = (
 /obj/structure/machinery/disposal/delivery{
@@ -8987,6 +8950,12 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/yellowcorner/west,
+/area/firefly/engineer)
+"va" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "low_1"
+	},
+/turf/open/floor/corsat/cargo,
 /area/firefly/engineer)
 "vb" = (
 /obj/structure/sign/safety/ladder,
@@ -9183,6 +9152,12 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"vx" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "low_2"
+	},
+/turf/open/floor/corsat/cargo,
+/area/firefly/engineer)
 "vy" = (
 /obj/structure/barricade/handrail{
 	dir = 4;
@@ -9432,6 +9407,16 @@
 	},
 /turf/open/floor/almayer_hull/outerhull_dir/west,
 /area/space)
+"vW" = (
+/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
+	id = "OOB";
+	unacidable = 1;
+	name = "Auxiliary Storage Blast Door";
+	openspeed = 17;
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/firefly/engineer)
 "vX" = (
 /turf/closed/shuttle/elevator/gears,
 /area/firefly/medical)
@@ -9529,6 +9514,16 @@
 	},
 /turf/open/floor/carpet7_3/west,
 /area/firefly/briefing)
+"wm" = (
+/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
+	id = "low_1";
+	unacidable = 1;
+	name = "Auxiliary Storage Blast Door";
+	openspeed = 17;
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/firefly/engineer)
 "wn" = (
 /turf/closed/shuttle/ert{
 	icon_state = "wy3"
@@ -9559,6 +9554,16 @@
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
+"wr" = (
+/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
+	id = "low_2";
+	unacidable = 1;
+	name = "Auxiliary Storage Blast Door";
+	openspeed = 17;
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/firefly/engineer)
 "ws" = (
 /turf/open/floor/almayer/w_y0,
 /area/firefly/engineer)
@@ -9604,7 +9609,6 @@
 /turf/open/floor/corsat/green/east,
 /area/firefly/cafeteria)
 "wA" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
 /obj/item/storage/box/nade_box/training{
 	pixel_y = 7
 	},
@@ -9658,6 +9662,24 @@
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/white/southeast,
 /area/firefly/medical)
+"wH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/firefly/engineer)
+"wI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/firefly/engineer)
 "wJ" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/reagent_container/food/drinks/bottle/whiskey{
@@ -9755,14 +9777,6 @@
 	icon_state = "wy18"
 	},
 /area/firefly/engineer)
-"wS" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
-/obj/item/ammo_box/magazine/m49a/incen/empty{
-	pixel_x = -2;
-	pixel_y = 6
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/medical)
 "wT" = (
 /obj/structure/barricade/handrail{
 	dir = 4;
@@ -9821,6 +9835,9 @@
 	color = "#E10600";
 	dir = 4
 	},
+/obj/structure/machinery/door_control/brbutton{
+	id = "small_hanger_3"
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "xa" = (
@@ -9844,6 +9861,15 @@
 	},
 /turf/open/floor/corsat/white/east,
 /area/firefly/medical)
+"xc" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/firefly/engineer)
 "xd" = (
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/cryo_cell)
@@ -9888,7 +9914,19 @@
 	icon_state = "road_edge_decal3";
 	pixel_y = -12
 	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
 /turf/open/floor/corsat/yellow/north,
+/area/firefly/engineer)
+"xj" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/firefly/engineer)
 "xk" = (
 /obj/structure/surface/table/reinforced/black,
@@ -9930,6 +9968,16 @@
 	},
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/medical)
+"xp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/firefly/engineer)
 "xq" = (
 /obj/structure/machinery/r_n_d/server,
 /turf/open/floor/tdome/tcomms,
@@ -9958,9 +10006,9 @@
 /turf/open/floor/almayer/aicore/no_build/ai_plates,
 /area/firefly/ares)
 "xu" = (
-/obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/open/floor/wood,
 /area/firefly/co)
@@ -9985,6 +10033,22 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"xy" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/cryofeed{
+	desc = "A bewildering tangle of machinery and pipes providing steady coolant feed to the hypersleep bay.";
+	name = "coolant feed";
+	layer = 1;
+	pixel_x = 5
+	},
+/obj/structure/blocker/fog,
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/firefly/engineer)
 "xz" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -6;
@@ -10006,11 +10070,25 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/briefing)
+"xB" = (
+/turf/closed/wall/almayer/aicore/hull,
+/area/firefly/ares)
 "xC" = (
 /obj/structure/machinery/sentry_holder/almayer/mini/aicore,
 /obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/almayer/aicore/no_build/ai_plates,
+/turf/closed/wall/almayer/aicore/hull,
 /area/firefly/ares)
+"xD" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/platform_decoration,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/firefly/engineer)
 "xE" = (
 /obj/structure/machinery/door/poddoor/railing,
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -10043,6 +10121,13 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"xG" = (
+/obj/structure/pipes/binary/passive_gate,
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/firefly/engineer)
 "xH" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -10107,7 +10192,7 @@
 	name = "\improper Prep Lockers"
 	},
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "OOB";
 	unacidable = 1;
 	name = "Gamma Section Blast Door";
 	openspeed = 17;
@@ -10125,6 +10210,11 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"xP" = (
+/obj/structure/pipes/binary/passive_gate,
+/obj/structure/platform_decoration,
+/turf/open/floor/shiva/radiator_tile2,
+/area/firefly/engineer)
 "xQ" = (
 /obj/structure/pipes/vents/pump/no_boom/gas{
 	dir = 8;
@@ -10235,6 +10325,9 @@
 	dir = 1;
 	pixel_y = 28
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/purplewhite/north,
 /area/firefly/medical)
 "yf" = (
@@ -10318,6 +10411,18 @@
 /obj/structure/closet/crate/critter,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
+"yp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2;
+	pixel_y = -1
+	},
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/obj/structure/platform_decoration,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/firefly/engineer)
 "yq" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/computer/research,
@@ -10353,6 +10458,17 @@
 	},
 /turf/open/floor/corsat/green/northwest,
 /area/firefly/cryo_cell)
+"yv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/platform_decoration,
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/firefly/engineer)
 "yw" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/czsp/first_aid{
@@ -10448,8 +10564,19 @@
 /turf/open/floor/corsat/red/northeast,
 /area/firefly/medical)
 "yM" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/corsat/arrow_east,
 /area/firefly/briefing)
+"yN" = (
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/firefly/engineer)
 "yO" = (
 /obj/structure/barricade/handrail{
 	dir = 1;
@@ -10479,6 +10606,10 @@
 	},
 /turf/open/space/basic,
 /area/space)
+"yR" = (
+/obj/structure/platform_decoration,
+/turf/open/floor/shiva/radiator_tile2,
+/area/firefly/engineer)
 "yS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -10553,6 +10684,20 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
+"zc" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2;
+	pixel_y = -1
+	},
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/firefly/engineer)
 "zd" = (
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/engineer)
@@ -10601,7 +10746,7 @@
 	dir = 4
 	},
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "OOB";
 	unacidable = 1;
 	name = "Gamma Section Blast Door";
 	openspeed = 17;
@@ -10622,6 +10767,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
+"zl" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/tdome/tcomms,
+/area/firefly/ares)
 "zm" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -10859,9 +11010,15 @@
 	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/engineer)
+"zL" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/tdome/tcomms,
+/area/firefly/ares)
 "zM" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "undergroundhangarwest1";
 	unacidable = 1;
 	name = "Main Hangar Blast Door";
 	openspeed = 17;
@@ -10875,6 +11032,13 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/space)
+"zO" = (
+/obj/structure/pipes/binary/passive_gate,
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/firefly/engineer)
 "zP" = (
 /obj/structure/platform{
 	dir = 8
@@ -10922,7 +11086,6 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/medical)
 "zX" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
 /obj/item/toy/crayon/mime{
 	pixel_x = -9;
 	pixel_y = -1
@@ -10931,6 +11094,7 @@
 	pixel_x = 3;
 	pixel_y = 11
 	},
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/red/north,
 /area/firefly/medical)
 "zY" = (
@@ -11015,6 +11179,13 @@
 "Ai" = (
 /turf/closed/wall/almayer/outer/gear,
 /area/firefly/engineer)
+"Aj" = (
+/obj/structure/pipes/binary/passive_gate,
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/firefly/engineer)
 "Ak" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -11038,6 +11209,20 @@
 	},
 /turf/open/floor/corsat/green/north,
 /area/firefly/cafeteria)
+"Am" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2;
+	pixel_y = -1
+	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/firefly/engineer)
 "An" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8;
@@ -11118,8 +11303,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j2"
+	dir = 1;
+	icon_state = "pipe-y"
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
@@ -11162,6 +11347,19 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"AA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/firefly/engineer)
 "AB" = (
 /obj/structure/machinery/door/poddoor/railing{
 	id = "supply_elevator_railing"
@@ -11393,7 +11591,7 @@
 /area/firefly/hangar)
 "AZ" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "To_Research";
 	unacidable = 1;
 	name = "Azure Section Blast Door";
 	openspeed = 17;
@@ -11462,6 +11660,12 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
+"Bh" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/firefly/engineer)
 "Bi" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -11495,6 +11699,11 @@
 	name = "\improper Operation Leader";
 	req_one_access_txt = "216"
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/ptsgt)
 "Bn" = (
@@ -11508,6 +11717,12 @@
 	},
 /turf/open/floor/corsat/brown/east,
 /area/firefly/briefing)
+"Bo" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/firefly/engineer)
 "Bp" = (
 /obj/structure/cargo_container/hd/left,
 /turf/open/floor/corsat/cargo,
@@ -11715,6 +11930,20 @@
 	},
 /turf/open/floor/wood,
 /area/firefly/briefing)
+"BR" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2;
+	pixel_y = -1
+	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/firefly/engineer)
 "BS" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -11842,6 +12071,10 @@
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
+"Ci" = (
+/obj/structure/platform_decoration,
+/turf/open/floor/tdome/tcomms,
+/area/firefly/ares)
 "Cj" = (
 /obj/structure/platform{
 	dir = 8
@@ -11988,6 +12221,12 @@
 	},
 /turf/open/floor/almayer/aicore/no_build/ai_plates,
 /area/firefly/ares)
+"CA" = (
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/floor/tdome/tcomms,
+/area/firefly/ares)
 "CB" = (
 /obj/structure/prop/structure_lattice{
 	dir = 8;
@@ -11997,6 +12236,11 @@
 	pixel_x = -16;
 	pixel_y = -16;
 	layer = 10
+	},
+/obj/structure/prop/tower{
+	desc = "Military-grade communications tower.";
+	icon_state = "comm_tower";
+	name = "communications tower"
 	},
 /turf/open/floor/almayer_hull/outerhull_dir/northwest,
 /area/space)
@@ -12045,7 +12289,7 @@
 /area/firefly/hangar)
 "CH" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "low_2";
 	unacidable = 1;
 	name = "Auxiliary Storage Blast Door";
 	openspeed = 17;
@@ -12083,7 +12327,7 @@
 /area/firefly/cafeteria)
 "CM" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "To_Research";
 	unacidable = 1;
 	name = "Azure Section Blast Door";
 	openspeed = 17;
@@ -12291,7 +12535,7 @@
 	},
 /obj/structure/machinery/door_control/brbutton{
 	pixel_y = -29;
-	id = "undergroundhangarwest"
+	id = "undergroundhangarwest1"
 	},
 /turf/open/floor/corsat/brown/southwest,
 /area/firefly/hangar)
@@ -12328,6 +12572,15 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"Dr" = (
+/obj/structure/machinery/telecomms/relay/preset/telecomms{
+	name = "Wey-Yu Telecomms Array"
+	},
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/floor/tdome/tcomms,
+/area/firefly/engineer)
 "Ds" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -12389,6 +12642,9 @@
 "DA" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
 	},
 /turf/open/floor/corsat/white/northwest,
 /area/firefly/medical)
@@ -12520,6 +12776,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	name = "\improper A-15 Overwatch Office"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/co)
 "DQ" = (
@@ -12617,6 +12874,13 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/blue/north,
 /area/firefly/co)
+"Ee" = (
+/obj/structure/machinery/telecomms/relay/preset/telecomms{
+	name = "Wey-Yu Telecomms Array"
+	},
+/obj/structure/platform_decoration,
+/turf/open/floor/tdome/tcomms,
+/area/firefly/engineer)
 "Ef" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/faxmachine/corporate{
@@ -12636,6 +12900,9 @@
 /obj/structure/machinery/computer/emails{
 	dir = 4;
 	pixel_y = 7
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
 	},
 /turf/open/floor/corsat/greenwhite/west,
 /area/firefly/medical)
@@ -12672,6 +12939,12 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/briefing)
+"El" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "south_hanger_2"
+	},
+/turf/open/space/basic,
+/area/space)
 "Em" = (
 /turf/open/floor/corsat/purplecorner/west,
 /area/firefly/medical)
@@ -12683,6 +12956,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
 	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
@@ -12749,7 +13025,8 @@
 /area/firefly/engineer)
 "Ew" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	name = "Weapons Bay Two"
+	name = "Weapons Bay Two";
+	id = "small_hanger_3"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/test_floor4,
@@ -12819,6 +13096,13 @@
 	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
+"ED" = (
+/obj/item/ammo_box/magazine/m49a/incen/empty{
+	pixel_x = -2;
+	pixel_y = 6
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/medical)
 "EE" = (
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/corsat/cargo,
@@ -12877,6 +13161,9 @@
 	pixel_x = 5;
 	pixel_y = 2
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/greenwhite/northwest,
 /area/firefly/medical)
 "EN" = (
@@ -12919,6 +13206,10 @@
 	pixel_y = 32;
 	pixel_x = 7
 	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_y = 7;
+	pixel_x = -7
+	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
 "ES" = (
@@ -12950,9 +13241,9 @@
 /area/firefly/engineer)
 "EV" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "east_stowag";
 	unacidable = 1;
-	name = "Cargo Bay One";
+	name = "Cargo Bay Two";
 	openspeed = 17;
 	dir = 4
 	},
@@ -12998,12 +13289,28 @@
 	},
 /turf/open/floor/corsat/white,
 /area/firefly/hangar)
+"Fc" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/corsat/white/west,
+/area/firefly/medical)
 "Fd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
+/obj/structure/platform_decoration{
+	dir = 1
+	},
 /turf/open/floor/corsat/redcorner/west,
 /area/firefly/medical)
+"Fe" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "vehicle_up_1";
+	pixel_y = 26
+	},
+/turf/open/floor/corsat/cargo,
+/area/firefly/hangar)
 "Ff" = (
 /obj/structure/medical_supply_link/green{
 	pixel_x = 1;
@@ -13069,6 +13376,12 @@
 /obj/structure/platform,
 /turf/open/floor/tdome/tcomms,
 /area/firefly/cryo_cell)
+"Fn" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "F_Range"
+	},
+/turf/open/space/basic,
+/area/space)
 "Fo" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
 /turf/open/floor/corsat/yellow/northwest,
@@ -13137,11 +13450,28 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/firefly/engineer)
+"Fx" = (
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Squad Leader"
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/cryo_cell)
 "Fy" = (
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
 	roundstart_template = /datum/map_template/shuttle/pmc
 	},
 /turf/open/floor/plating,
+/area/firefly/hangar)
+"Fz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 4
+	},
+/turf/closed/wall/almayer/outer,
 /area/firefly/hangar)
 "FA" = (
 /obj/effect/decal/warning_stripes{
@@ -13206,6 +13536,12 @@
 	},
 /turf/open/floor/corsat/greenwhite/southwest,
 /area/firefly/medical)
+"FG" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "OOB_Exit"
+	},
+/turf/open/space/basic,
+/area/space)
 "FH" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
@@ -13234,6 +13570,7 @@
 	pixel_x = 6;
 	pixel_y = -4
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
 "FJ" = (
@@ -13412,13 +13749,13 @@
 /area/firefly/medical)
 "Gb" = (
 /obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/platform{
 	dir = 1
 	},
 /obj/structure/machinery/telecomms/bus/preset_three{
 	name = "Data Mainframe"
+	},
+/obj/structure/platform{
+	dir = 4
 	},
 /turf/open/floor/tdome/tcomms,
 /area/firefly/engineer)
@@ -13431,6 +13768,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/greenwhite,
 /area/firefly/medical)
 "Gd" = (
@@ -13476,6 +13814,13 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
+"Gi" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "To_Research";
+	pixel_y = 26
+	},
+/turf/open/floor/almayer_hull,
+/area/firefly/medical)
 "Gj" = (
 /obj/structure/machinery/shower{
 	pixel_y = 16
@@ -13598,7 +13943,7 @@
 "Gw" = (
 /obj/structure/window/framed/corsat/security,
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "OOB";
 	unacidable = 1;
 	name = "Gamma Section Blast Door";
 	openspeed = 17;
@@ -13690,7 +14035,6 @@
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "GH" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
 /obj/item/prop/magazine/book/borntokill{
 	pixel_x = -3;
 	pixel_y = 8
@@ -13699,6 +14043,7 @@
 	pixel_x = 5;
 	pixel_y = -3
 	},
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
 "GI" = (
@@ -13719,6 +14064,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
 	color = "#E10600"
+	},
+/obj/structure/machinery/door_control/brbutton{
+	id = "east_stowag";
+	pixel_y = 16
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
@@ -13845,7 +14194,8 @@
 /area/firefly/medical)
 "Ha" = (
 /obj/structure/disposalpipe/junction{
-	dir = 4
+	dir = 2;
+	icon_state = "pipe-y"
 	},
 /turf/open/floor/corsat/green,
 /area/firefly/cafeteria)
@@ -13957,6 +14307,12 @@
 	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/engineer)
+"Hn" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "science_wing_lockdown"
+	},
+/turf/open/space/basic,
+/area/space)
 "Ho" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
@@ -14262,8 +14618,13 @@
 	},
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
+"Ia" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/corsat/purple/southwest,
+/area/firefly/medical)
 "Ib" = (
-/obj/structure/machinery/cm_vending/clothing/medic{
+/obj/structure/machinery/cm_vending/clothing/medic/pmc{
+	req_access = list(202);
 	pixel_y = 22;
 	density = 0
 	},
@@ -14384,11 +14745,12 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/greenwhite,
 /area/firefly/medical)
 "Ip" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "stair_oob";
 	unacidable = 1;
 	name = "Gamma Section Blast Door";
 	openspeed = 17;
@@ -14423,6 +14785,20 @@
 	icon_state = "pipe-c"
 	},
 /turf/open/floor/corsat/squares,
+/area/firefly/medical)
+"Iu" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/corsat/purple/southeast,
+/area/firefly/medical)
+"Iv" = (
+/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
+	id = "To_Research";
+	unacidable = 1;
+	name = "Azure Section Blast Door";
+	openspeed = 17;
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
 "Iw" = (
 /obj/structure/machinery/disposal,
@@ -14569,6 +14945,11 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/structure/bedsheetbin{
+	pixel_x = -6;
+	pixel_y = 2;
+	layer = 2.9
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/firefly/co)
 "II" = (
@@ -14622,6 +15003,13 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
+"IP" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "stair_oob";
+	pixel_y = 26
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/briefing)
 "IQ" = (
 /obj/structure/barricade/handrail/medical{
 	dir = 8
@@ -14636,6 +15024,7 @@
 	pixel_y = 2;
 	pixel_x = -1
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/purplewhite/southwest,
 /area/firefly/medical)
 "IS" = (
@@ -14673,10 +15062,10 @@
 "IW" = (
 /obj/structure/machinery/telecomms/server/presets/engineering,
 /obj/structure/platform{
-	dir = 4
+	dir = 1
 	},
 /obj/structure/platform{
-	dir = 1
+	dir = 4
 	},
 /turf/open/floor/tdome/tcomms,
 /area/firefly/engineer)
@@ -14715,6 +15104,12 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/engineer)
+"Jd" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/corsat/purple/northwest,
+/area/firefly/medical)
 "Je" = (
 /obj/structure/platform{
 	dir = 8
@@ -14852,12 +15247,6 @@
 	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/engineer)
-"Jr" = (
-/obj/structure/machinery/power/apc/almayer/hardened/north{
-	cell_type = /obj/item/cell/hyper
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/ares)
 "Js" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/prop/server_equipment/laptop/on{
@@ -15011,6 +15400,11 @@
 /obj/structure/machinery/message_server,
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
+"JJ" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/corsat/squares,
+/area/firefly/briefing)
 "JK" = (
 /obj/structure/prop/almayer/particle_cannon/corsat{
 	pixel_x = -7;
@@ -15037,6 +15431,12 @@
 	},
 /turf/open/floor/corsat/white/southwest,
 /area/firefly/hangar)
+"JN" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/corsat/purple/northwest,
+/area/firefly/medical)
 "JO" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -15045,7 +15445,7 @@
 /turf/open/floor/corsat/yellow/northwest,
 /area/firefly/engineer)
 "JP" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/red/east,
 /area/firefly/medical)
 "JQ" = (
@@ -15069,6 +15469,12 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/briefing)
+"JT" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/purple/northeast,
+/area/firefly/medical)
 "JU" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -15083,7 +15489,7 @@
 /area/firefly/cafeteria)
 "JX" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "To_Research";
 	unacidable = 1;
 	name = "Azure Section Blast Door";
 	openspeed = 17;
@@ -15168,9 +15574,9 @@
 /area/firefly/engineer)
 "Kf" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "OOB";
 	unacidable = 1;
-	name = "Azure Section Blast Door";
+	name = "Gamma Section Blast Door";
 	openspeed = 17
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -15201,6 +15607,12 @@
 	},
 /turf/open/floor/corsat/retrosquareslight,
 /area/firefly/medical)
+"Ki" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "Eleva_cargo"
+	},
+/turf/open/floor/almayer_hull/outerhull_dir/west,
+/area/space)
 "Kj" = (
 /obj/structure/reagent_dispensers/acidtank,
 /turf/open/floor/corsat/cargo,
@@ -15327,9 +15739,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/closed/wall/almayer/outer{
-	layer = 4
-	},
+/turf/closed/wall/almayer/aicore/hull,
 /area/firefly/ares)
 "Kx" = (
 /obj/structure/window/framed/corsat,
@@ -15348,6 +15758,12 @@
 /obj/item/clothing/head/hairflower{
 	pixel_x = -5;
 	pixel_y = -3
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = 2;
+	pixel_x = 6;
+	id = "squadarmory";
+	name = "gear lockers door-control"
 	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
@@ -15429,19 +15845,19 @@
 /area/firefly/medical)
 "KH" = (
 /obj/structure/platform{
-	dir = 8
-	},
-/obj/structure/platform{
 	dir = 1
 	},
 /obj/structure/machinery/telecomms/bus/preset_three{
 	name = "Data Mainframe"
 	},
+/obj/structure/platform{
+	dir = 8
+	},
 /turf/open/floor/tdome/tcomms,
 /area/firefly/engineer)
 "KI" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "low_1";
 	unacidable = 1;
 	name = "Auxiliary Storage Blast Door";
 	openspeed = 17;
@@ -15463,6 +15879,7 @@
 /obj/structure/machinery/bioprinter{
 	stored_metal = 125
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/retrosquareslight,
 /area/firefly/medical)
 "KL" = (
@@ -15678,7 +16095,8 @@
 	},
 /obj/structure/machinery/door/poddoor/almayer/blended/white_aicore{
 	name = "Science Wing Lockdown Blast Door";
-	dir = 4
+	dir = 4;
+	id = "science_wing_lockdown"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
@@ -15888,7 +16306,8 @@
 	},
 /obj/structure/pipes/vents,
 /obj/structure/disposalpipe/junction{
-	dir = 4
+	dir = 8;
+	icon_state = "pipe-j2"
 	},
 /turf/open/floor/corsat/red/northwest,
 /area/firefly/engineer)
@@ -16097,7 +16516,7 @@
 /area/firefly/engineer)
 "Me" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "east_stowag";
 	unacidable = 1;
 	name = "Cargo Bay Two";
 	openspeed = 17;
@@ -16171,7 +16590,7 @@
 /area/firefly/hangar)
 "Mo" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "low_2";
 	unacidable = 1;
 	name = "Auxiliary Storage Blast Door";
 	openspeed = 17;
@@ -16260,17 +16679,17 @@
 	pixel_x = 7;
 	pixel_y = 28
 	},
-/obj/structure/machinery/computer/communications{
+/obj/structure/machinery/prop/almayer/computer{
 	pixel_x = -8;
 	pixel_y = 5;
 	layer = 8
 	},
+/obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/computer{
 	pixel_x = 9;
 	pixel_y = 5;
 	layer = 8
 	},
-/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/blue/north,
 /area/firefly/co)
 "Mz" = (
@@ -16453,7 +16872,7 @@
 /area/firefly/engineer)
 "MV" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "undergroundhangarwest1";
 	unacidable = 1;
 	name = "Main Hangar Blast Door";
 	openspeed = 17;
@@ -16660,7 +17079,7 @@
 /area/firefly/engineer)
 "Nw" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "OOB";
 	unacidable = 1;
 	name = "Gamma Section Blast Door";
 	openspeed = 17;
@@ -16669,7 +17088,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
 "Nx" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
 "NA" = (
@@ -16905,6 +17324,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/white/southeast,
 /area/firefly/medical)
 "Oc" = (
@@ -17230,14 +17650,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"OS" = (
-/obj/structure/machinery/disposal{
-	pixel_x = -1;
-	pixel_y = 11;
-	density = 0
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
 "OT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -17458,7 +17870,6 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "Pv" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
 /obj/item/prop/helmetgarb/gunoil{
 	pixel_x = -7;
 	pixel_y = 12
@@ -17471,6 +17882,7 @@
 	pixel_x = -4;
 	pixel_y = 3
 	},
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
 "Pw" = (
@@ -17616,6 +18028,9 @@
 /area/firefly/medical)
 "PS" = (
 /obj/structure/closet/secure_closet/medical2,
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/greenwhite/northeast,
 /area/firefly/medical)
 "PT" = (
@@ -17747,10 +18162,6 @@
 /turf/open/floor/corsat/whitecorner/west,
 /area/firefly/medical)
 "Qi" = (
-/obj/item/defenses/handheld/sentry/wy/heavy{
-	pixel_x = -7;
-	pixel_y = 4
-	},
 /obj/item/stack/cable_coil/random{
 	pixel_x = 6;
 	pixel_y = 9
@@ -17769,10 +18180,6 @@
 /area/firefly/medical)
 "Qj" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/weapon/gun/pill{
-	pixel_x = -3;
-	pixel_y = 10
-	},
 /obj/item/storage/pill_bottle/tricord{
 	pixel_x = 7;
 	pixel_y = 2
@@ -18087,10 +18494,6 @@
 	pixel_y = 28;
 	layer = 4.1
 	},
-/obj/item/weapon/gun/rifle/sniper/elite{
-	pixel_x = 1;
-	pixel_y = 9
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/prop/helmetgarb/bullet_pipe{
 	name = "10x99mm M42C Barrel";
@@ -18109,6 +18512,11 @@
 /area/firefly/ares)
 "Rh" = (
 /obj/structure/window/framed/corsat,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/squad_omega)
 "Ri" = (
@@ -18404,6 +18812,9 @@
 	pixel_y = 10;
 	layer = 4
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
 /turf/open/floor/corsat/greenwhite/west,
 /area/firefly/medical)
 "RS" = (
@@ -18440,10 +18851,6 @@
 	pixel_x = 1;
 	pixel_y = -1
 	},
-/obj/item/weapon/gun/energy/laser_top{
-	pixel_x = -3;
-	pixel_y = 10
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/spawner/random/powercell{
 	pixel_x = -14;
@@ -18472,12 +18879,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/medical)
 "RY" = (
-/obj/structure/machinery/disposal{
-	pixel_x = -1;
-	pixel_y = -17;
-	layer = 1;
-	density = 0
-	},
+/obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -18485,8 +18887,8 @@
 /area/firefly/medical)
 "RZ" = (
 /obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+	dir = 2;
+	icon_state = "pipe-y"
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
@@ -18595,10 +18997,6 @@
 /area/firefly/cafeteria)
 "Sj" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/backpack/marine/smartpack/white{
-	pixel_x = 6;
-	pixel_y = 1
-	},
 /obj/item/device/flight_laptop{
 	pixel_x = -22;
 	pixel_y = 9
@@ -19003,7 +19401,8 @@
 /area/firefly/engineer)
 "Tc" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	name = "Elevator A-4"
+	name = "Elevator A-4";
+	id = "Eleva_cargo"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
@@ -19018,9 +19417,6 @@
 /obj/structure/stairs/perspective{
 	dir = 8;
 	icon_state = "p_stair_ew_full_cap"
-	},
-/obj/structure/platform_decoration{
-	dir = 4
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -19259,7 +19655,7 @@
 "TR" = (
 /obj/structure/platform,
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "stair_oob";
 	unacidable = 1;
 	name = "Gamma Section Blast Door";
 	openspeed = 17;
@@ -19398,8 +19794,8 @@
 /area/firefly/hangar)
 "Uk" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/disposalpipe/junction{
+	dir = 8
 	},
 /turf/open/floor/corsat/bluecorner,
 /area/firefly/briefing)
@@ -19433,6 +19829,11 @@
 	dir = 1;
 	name = "\improper Omega Squad Preparation";
 	req_one_access_txt = "202;216;208"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/squad_omega)
@@ -19611,6 +20012,9 @@
 	pixel_x = 1
 	},
 /obj/structure/prop/server_equipment/yutani_server,
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
 "UK" = (
@@ -20578,9 +20982,6 @@
 	dir = 4;
 	icon_state = "p_stair_full"
 	},
-/obj/structure/platform_decoration{
-	dir = 1
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "Xc" = (
@@ -20652,6 +21053,11 @@
 /turf/open/floor/corsat/white/east,
 /area/firefly/medical)
 "Xk" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/squad_omega)
 "Xl" = (
@@ -20714,6 +21120,9 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/firefly/cafeteria)
 "Xu" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/purple/northeast,
 /area/firefly/medical)
 "Xv" = (
@@ -20785,20 +21194,16 @@
 	icon_state = "SW-out";
 	pixel_x = -1
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/firefly/medical)
 "XC" = (
 /turf/open/floor/corsat/retrosquareslight,
 /area/firefly/medical)
 "XD" = (
-/obj/structure/bedsheetbin{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/structure/machinery/disposal{
-	pixel_x = -8;
-	pixel_y = -3
-	},
+/obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
@@ -20862,7 +21267,7 @@
 /area/firefly/engineer)
 "XK" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "vehicle_up_1";
 	unacidable = 1;
 	name = "Combat Transport Vehicle Bay";
 	openspeed = 17;
@@ -20962,7 +21367,6 @@
 /turf/open/floor/corsat/yellow/west,
 /area/firefly/engineer)
 "XX" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
 /obj/item/attachable/scope/mini{
 	pixel_x = -3;
 	pixel_y = 8
@@ -20971,6 +21375,7 @@
 	pixel_x = 2;
 	pixel_y = -3
 	},
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/red,
 /area/firefly/medical)
 "XY" = (
@@ -21013,7 +21418,8 @@
 /area/firefly/hangar)
 "Yb" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	name = "Epsilon Section Blast Door"
+	name = "Epsilon Section Blast Door";
+	id = "F_Range"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/test_floor4,
@@ -21173,7 +21579,7 @@
 /area/firefly/hangar)
 "Yv" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "east_stowag";
 	unacidable = 1;
 	name = "Cargo Bay Two";
 	openspeed = 17;
@@ -21237,7 +21643,8 @@
 	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	name = "Elevator A-4"
+	name = "Elevator A-4";
+	id = "Eleva_cargo"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
@@ -21319,15 +21726,12 @@
 /turf/open/floor/corsat/brown/southwest,
 /area/firefly/ptsgt)
 "YQ" = (
-/obj/item/clothing/suit/armor/laserproof{
-	pixel_x = 6;
-	pixel_y = 2
-	},
 /obj/effect/spawner/random/tool{
 	pixel_x = -10;
 	pixel_y = 8
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/greenwhite,
 /area/firefly/medical)
 "YR" = (
@@ -21361,7 +21765,7 @@
 /area/firefly/medical)
 "YV" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	id = "undergroundhangarwest";
+	id = "OOB_Exit";
 	unacidable = 1;
 	name = "Azure Section Blast Door";
 	openspeed = 17;
@@ -21391,7 +21795,6 @@
 /turf/open/floor/corsat/white/west,
 /area/firefly/hangar)
 "YZ" = (
-/obj/structure/surface/table/reinforced/almayer_blend,
 /obj/item/prop/magazine/sof{
 	pixel_x = -4;
 	pixel_y = 15
@@ -21400,6 +21803,7 @@
 	pixel_x = -1;
 	pixel_y = -6
 	},
+/obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
 "Za" = (
@@ -21618,7 +22022,8 @@
 	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/almayer/blended/white_aicore{
-	name = "Science Wing Lockdown Blast Door"
+	name = "Science Wing Lockdown Blast Door";
+	id = "science_wing_lockdown"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -21672,6 +22077,9 @@
 	icon_state = "cargo_arrow";
 	color = "#E10600";
 	dir = 4
+	},
+/obj/structure/machinery/door_control/brbutton{
+	id = "synthbay"
 	},
 /turf/open/floor/almayer_hull,
 /area/firefly/engineer)
@@ -22818,17 +23226,17 @@ aA
 aA
 aA
 aA
-NP
-NP
-NP
-NP
-NP
-NP
-NP
-NP
-NP
-NP
-NP
+xB
+xB
+xB
+xB
+xB
+xB
+xB
+xB
+xB
+xB
+xB
 aA
 aA
 aA
@@ -22969,8 +23377,8 @@ aA
 aA
 aA
 aA
-NP
-NP
+xB
+xB
 kK
 qm
 gU
@@ -22980,8 +23388,8 @@ XM
 xJ
 Rg
 VD
-NP
-NP
+xB
+xB
 aA
 aA
 LC
@@ -22998,12 +23406,12 @@ aA
 aA
 LC
 LC
-KW
-KW
-KW
-KW
-KW
-KW
+vW
+vW
+vW
+vW
+vW
+vW
 LC
 LC
 LC
@@ -23121,7 +23529,7 @@ aA
 aA
 aA
 aA
-NP
+xB
 Hq
 HF
 JD
@@ -23133,7 +23541,7 @@ JD
 JD
 HF
 RE
-NP
+xB
 aA
 aA
 LC
@@ -23273,7 +23681,7 @@ aA
 aA
 aA
 aA
-NP
+xB
 Hq
 HF
 JD
@@ -23285,7 +23693,7 @@ JD
 JD
 HF
 BK
-NP
+xB
 aA
 aA
 aA
@@ -23424,20 +23832,20 @@ aA
 aA
 aA
 aA
-NP
-NP
-NP
+xB
+xB
+xB
 Fl
 Zt
 Zt
 qh
-NP
+xB
 iY
 Zt
 Zt
 Fl
-NP
-NP
+xB
+xB
 aA
 aA
 aA
@@ -23576,19 +23984,19 @@ aA
 aA
 aA
 aA
-NP
+xB
 sQ
-NP
-NP
+xB
+xB
 mc
 mc
 mc
-NP
+xB
 mc
 mc
 mc
-NP
-NP
+xB
+xB
 cu
 cu
 cu
@@ -23724,13 +24132,13 @@ aA
 aA
 aA
 aA
-NP
-NP
-NP
-NP
-NP
+xB
+xB
+xB
+xB
+xB
 Kw
-NP
+xB
 iF
 HF
 BK
@@ -23739,8 +24147,8 @@ ik
 HF
 ak
 ak
-NP
-NP
+xB
+xB
 sQ
 sQ
 sQ
@@ -23875,24 +24283,24 @@ aA
 aA
 aA
 aA
-NP
-NP
-NP
+xB
+xB
+xB
 XS
 QZ
 Ze
 tE
 Wv
-HF
+zl
 NV
-HF
+Ci
 fc
 IY
 fc
-HF
+zl
 NV
 hU
-NP
+xB
 cu
 cu
 cu
@@ -24027,8 +24435,8 @@ aA
 aA
 aA
 aA
-NP
-NP
+xB
+xB
 cK
 kh
 ng
@@ -24179,7 +24587,7 @@ aA
 aA
 aA
 aA
-NP
+xB
 Gv
 Eh
 HM
@@ -24331,7 +24739,7 @@ aA
 aA
 aA
 aA
-NP
+xB
 hR
 eN
 KJ
@@ -24483,7 +24891,7 @@ aA
 aA
 aA
 aA
-NP
+xB
 UT
 eN
 Ef
@@ -24635,8 +25043,8 @@ Tz
 Tz
 Tz
 aA
-NP
-NP
+xB
+xB
 xC
 kh
 ng
@@ -24787,24 +25195,24 @@ Qe
 jf
 Tz
 aA
-NP
-NP
-NP
+xB
+xB
+xB
 aE
 Gf
 NG
 Sq
 lq
-HF
+zL
 MY
-HF
+CA
 wK
 Fi
 wK
-HF
+zL
 NV
 id
-NP
+xB
 cu
 cu
 cu
@@ -24940,13 +25348,13 @@ jf
 Tz
 aA
 aA
-NP
-NP
-NP
-NP
-NP
+xB
+xB
+xB
+xB
+xB
 bC
-NP
+xB
 jq
 HF
 BK
@@ -24955,8 +25363,8 @@ As
 HF
 BK
 BO
-NP
-NP
+xB
+xB
 sQ
 sQ
 sQ
@@ -25096,20 +25504,20 @@ aA
 aA
 aA
 aA
-NP
-Jr
-NP
-NP
+xB
+sQ
+xB
+xB
 mc
 mc
 mc
-NP
+xB
 mc
 mc
 mc
-NP
-NP
-NP
+xB
+xB
+xB
 cu
 cu
 cu
@@ -25248,20 +25656,20 @@ aA
 aA
 aA
 aA
-NP
-NP
-NP
+xB
+xB
+xB
 hP
 Cv
 Cv
 UW
-NP
+xB
 JA
 Cv
 Cv
 hP
-NP
-NP
+xB
+xB
 aA
 aA
 aA
@@ -25401,7 +25809,7 @@ Bb
 yY
 aA
 aA
-NP
+xB
 Hq
 HF
 JD
@@ -25413,7 +25821,7 @@ JD
 JD
 HF
 RE
-NP
+xB
 aA
 aA
 LC
@@ -25553,7 +25961,7 @@ aA
 DZ
 aA
 aA
-NP
+xB
 Hq
 HF
 JD
@@ -25565,7 +25973,7 @@ JD
 JD
 HF
 BK
-NP
+xB
 aA
 aA
 LC
@@ -25705,8 +26113,8 @@ Tu
 vV
 Tu
 Tu
-NP
-NP
+xB
+xB
 kT
 JI
 xq
@@ -25716,8 +26124,8 @@ JI
 eL
 bj
 VD
-NP
-NP
+xB
+xB
 aA
 aA
 LC
@@ -25735,14 +26143,14 @@ QG
 LC
 LC
 KI
-KW
-KW
-KW
-KW
-KW
+wm
+wm
+wm
+wm
+wm
 LC
 nb
-nb
+va
 nb
 LC
 qz
@@ -25858,17 +26266,17 @@ GU
 LC
 LC
 LC
-NP
-NP
-NP
-NP
-NP
-NP
-NP
-NP
-NP
-NP
-NP
+xB
+xB
+xB
+xB
+xB
+xB
+xB
+xB
+xB
+xB
+xB
 aA
 aA
 aA
@@ -26780,7 +27188,7 @@ hG
 Fw
 QC
 Fw
-QC
+xD
 Wl
 xS
 cr
@@ -26928,11 +27336,11 @@ ex
 SP
 Xo
 Dh
-mj
+zO
 ju
 Wn
 ju
-mj
+xG
 pu
 ec
 cr
@@ -27384,11 +27792,11 @@ xS
 bV
 Xo
 nW
-mj
+Aj
 ju
 Wn
 ju
-mj
+xP
 Zk
 ec
 cr
@@ -27536,11 +27944,11 @@ RF
 bV
 pg
 oX
-NS
+Am
 Qb
 NS
 Qb
-NS
+yp
 ir
 xS
 ip
@@ -28144,11 +28552,11 @@ fC
 Hy
 pg
 iQ
+AA
 xe
 xe
 xe
-xe
-xe
+yv
 Wl
 xS
 OX
@@ -28287,8 +28695,8 @@ yB
 yB
 LC
 KH
-kG
-KO
+Bh
+Dr
 Ey
 sS
 gD
@@ -28296,11 +28704,11 @@ Ax
 bV
 pa
 cS
-kG
+Bh
 DK
 kG
 po
-kG
+yN
 ZY
 iH
 bV
@@ -28318,15 +28726,15 @@ LC
 LC
 LC
 LC
-KW
-KW
-KW
-KW
-KW
-KW
+wr
+wr
+wr
+wr
+wr
+wr
 LC
 LC
-LC
+vx
 LC
 LC
 LC
@@ -28478,8 +28886,8 @@ FW
 gR
 pg
 LC
-LS
-LS
+LC
+LC
 LC
 LS
 LS
@@ -28752,11 +29160,11 @@ Ax
 bV
 pa
 XH
-kG
+Bo
 LD
 kG
 DK
-kG
+yR
 aI
 pD
 bV
@@ -28904,11 +29312,11 @@ Ax
 bV
 me
 oX
+BR
 dU
 dU
 dU
-dU
-dU
+zc
 ir
 aF
 bV
@@ -29199,8 +29607,8 @@ aA
 aA
 LC
 Gb
-kG
-KO
+Bo
+Ee
 hM
 sS
 Ah
@@ -29590,13 +29998,13 @@ aA
 aA
 aA
 aA
-aA
 zW
-JX
-YV
-aL
 zW
-aA
+Nw
+Nw
+Nw
+zW
+zW
 aA
 aA
 aA
@@ -29743,11 +30151,11 @@ aA
 aA
 aA
 zW
-QD
+Jd
 gl
 LG
 Em
-fv
+Ia
 zW
 aA
 aA
@@ -29999,7 +30407,7 @@ Xg
 bV
 Ax
 Ly
-xi
+uW
 mO
 Hw
 bL
@@ -30355,7 +30763,7 @@ Xu
 yX
 LG
 cU
-Ue
+Iu
 zW
 aA
 aA
@@ -30509,7 +30917,7 @@ YV
 YV
 zW
 zW
-aA
+FG
 aA
 aA
 aA
@@ -30760,7 +31168,7 @@ WD
 Ax
 PH
 Jq
-Do
+eD
 UM
 Dv
 Dv
@@ -31420,7 +31828,7 @@ Cw
 LG
 sw
 zW
-aA
+Hn
 aA
 aA
 aA
@@ -31657,11 +32065,11 @@ DN
 tX
 Lw
 XR
-OW
+wH
 Zz
+xc
 hT
-hT
-hT
+xc
 Zz
 OW
 nF
@@ -31817,7 +32225,7 @@ Ub
 Ub
 iP
 OW
-OW
+wH
 OW
 Qg
 tX
@@ -32121,7 +32529,7 @@ Ub
 Ub
 kM
 OW
-OW
+wI
 ah
 Qg
 tX
@@ -32265,11 +32673,11 @@ DN
 tX
 kZ
 FB
-ah
+xp
 Zz
+xj
 Wc
-Wc
-Wc
+xj
 Zz
 OW
 oK
@@ -32633,7 +33041,7 @@ zW
 zW
 zW
 JX
-YV
+Iv
 aL
 zW
 zW
@@ -32949,9 +33357,9 @@ ej
 Wq
 yD
 ob
-ff
+Fx
 xd
-ya
+Fx
 Wq
 yD
 ob
@@ -33093,7 +33501,7 @@ LG
 SO
 Ms
 zW
-nO
+Gi
 nO
 nO
 ji
@@ -33177,7 +33585,7 @@ zv
 zo
 Ow
 gQ
-nG
+xy
 VI
 VI
 VI
@@ -33192,7 +33600,7 @@ VI
 LC
 hx
 hm
-Tb
+uP
 UM
 Dv
 Dv
@@ -34777,7 +35185,7 @@ DU
 FU
 dX
 Mf
-fh
+zg
 CT
 kr
 Yn
@@ -35841,7 +36249,7 @@ aM
 LG
 TT
 zW
-aA
+Fn
 aA
 aA
 aA
@@ -36119,7 +36527,7 @@ lx
 Tu
 Tu
 Tu
-Tu
+Ki
 zW
 ij
 xv
@@ -36274,7 +36682,7 @@ UQ
 MM
 zW
 jJ
-QD
+JN
 sK
 fv
 Tc
@@ -36298,17 +36706,17 @@ LG
 PV
 Qd
 rZ
+Fc
+tL
+tL
+Fc
+tL
+tL
+Fc
 tL
 tL
 tL
-tL
-tL
-tL
-tL
-tL
-tL
-tL
-tL
+Fc
 Kf
 aA
 aA
@@ -36578,7 +36986,7 @@ uO
 SD
 zW
 vX
-Xu
+JT
 KE
 Ue
 Tc
@@ -36917,7 +37325,7 @@ wA
 Sm
 iW
 nf
-wS
+zW
 zW
 aA
 aA
@@ -37069,7 +37477,7 @@ Us
 TY
 mA
 zT
-zT
+ED
 zW
 aA
 aA
@@ -37480,7 +37888,7 @@ aA
 aA
 aA
 aA
-rf
+aA
 Zx
 KZ
 sF
@@ -40071,13 +40479,13 @@ FT
 tO
 qL
 tk
-Qc
+tO
 DP
 km
-aQ
-aQ
-aQ
-aQ
+JJ
+JJ
+JJ
+JJ
 Uk
 ck
 zs
@@ -40688,7 +41096,7 @@ Vp
 Ad
 LW
 bt
-bZ
+IP
 bZ
 bZ
 yH
@@ -43462,7 +43870,7 @@ nM
 AB
 oC
 bv
-aA
+El
 aA
 aA
 aA
@@ -44657,7 +45065,7 @@ lp
 Mm
 PD
 PD
-OS
+VZ
 Ml
 rT
 Jy
@@ -45703,10 +46111,10 @@ iV
 iV
 bv
 bv
-mY
+Me
 EV
-mY
-mY
+Me
+Me
 bv
 bv
 bv
@@ -45871,11 +46279,11 @@ uk
 ay
 bv
 bv
-wZ
+Fz
 bv
 bv
 bv
-oC
+Fe
 oC
 bf
 oC
@@ -46023,7 +46431,7 @@ du
 oC
 hV
 bv
-Ml
+bv
 bv
 kf
 Bf
