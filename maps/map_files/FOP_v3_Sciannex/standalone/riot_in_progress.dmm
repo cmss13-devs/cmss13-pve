@@ -230,7 +230,7 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/fiorina/lz/near_lzII)
 "jW" = (
-/obj/item/frame/table/almayer,
+/obj/item/frame/table,
 /obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)

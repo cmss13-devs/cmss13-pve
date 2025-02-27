@@ -26163,14 +26163,14 @@
 /area/lv522/atmos/east_reactor)
 "mzV" = (
 /obj/structure/surface/rack,
-/obj/item/frame/table/almayer{
+/obj/item/frame/table{
 	pixel_y = 15
 	},
-/obj/item/frame/table/almayer{
+/obj/item/frame/table{
 	pixel_x = 10;
 	pixel_y = 11
 	},
-/obj/item/frame/table/almayer{
+/obj/item/frame/table{
 	pixel_y = 1
 	},
 /turf/open/floor/prison/darkpurplefull2,
@@ -45385,14 +45385,14 @@
 /area/lv522/outdoors/nw_rockies)
 "voV" = (
 /obj/structure/surface/rack,
-/obj/item/frame/table/almayer{
+/obj/item/frame/table{
 	pixel_y = 16
 	},
-/obj/item/frame/table/almayer{
+/obj/item/frame/table{
 	pixel_x = 10;
 	pixel_y = 12
 	},
-/obj/item/frame/table/almayer{
+/obj/item/frame/table{
 	pixel_y = 4
 	},
 /turf/open/floor/prison/darkpurplefull2,

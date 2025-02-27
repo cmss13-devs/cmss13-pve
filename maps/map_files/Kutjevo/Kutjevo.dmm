@@ -11513,7 +11513,7 @@
 /turf/open/gm/river/desert/shallow_edge/west,
 /area/kutjevo/exterior/runoff_river)
 "rwL" = (
-/obj/item/frame/table/almayer,
+/obj/item/frame/table,
 /turf/open/floor/kutjevo/tan,
 /area/kutjevo/interior/complex/Northwest_Security_Checkpoint)
 "rwX" = (

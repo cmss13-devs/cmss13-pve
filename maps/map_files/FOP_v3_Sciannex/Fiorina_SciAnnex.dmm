@@ -7846,8 +7846,8 @@
 /area/fiorina/station/lowsec)
 "fOL" = (
 /obj/structure/surface/rack,
-/obj/item/frame/table/almayer,
-/obj/item/frame/table/almayer,
+/obj/item/frame/table,
+/obj/item/frame/table,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/tumor/civres)
 "fOM" = (
