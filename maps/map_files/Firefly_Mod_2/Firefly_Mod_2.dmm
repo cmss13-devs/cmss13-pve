@@ -19010,15 +19010,6 @@
 	},
 /turf/open/floor/strata/faux_wood,
 /area/firefly/medical)
-"Ta" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/floor/corsat/brown/east,
-/area/firefly/briefing)
 "Tb" = (
 /turf/open/floor/corsat/yellowcorner/north,
 /area/firefly/engineer)
@@ -19661,13 +19652,10 @@
 /area/firefly/medical)
 "UP" = (
 /obj/structure/phone_base{
-	pixel_y = 30;
+	pixel_y = 29;
 	name = "supply bay receiver";
 	phone_category = "Golden Arrow";
-	phone_id = "Supply Bay";
-	pixel_x = 5;
-	dir = null;
-	layer = 6
+	phone_id = "Supply Bay"
 	},
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/corsat/squares,
@@ -40270,7 +40258,7 @@ pd
 pd
 pd
 pd
-Ta
+pd
 Ju
 Ot
 yH
