@@ -92,7 +92,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/uscm_station)
 "ba" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/gloves/latex,
 /turf/open/floor/almayer/sterile_green_corner/west,
 /area/adminlevel/ert_station/uscm_station)
@@ -156,7 +156,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/ert_station/uscm_station)
 "cf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/USCMtray{
 	pixel_y = 7
 	},
@@ -198,12 +198,12 @@
 /turf/open/floor/dark,
 /area/adminlevel/ert_station/uscm_station)
 "cU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/autopsy_scanner,
 /turf/open/floor/podhatch/southeast,
 /area/adminlevel/ert_station/uscm_station)
 "cW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/pillbottles,
 /obj/item/storage/box/pillbottles,
 /turf/open/floor/almayer/sterile_green_side/east,
@@ -494,7 +494,7 @@
 	req_access = list(200)
 	},
 /obj/item/storage/briefcase,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/uscm_station)
 "fV" = (
@@ -723,7 +723,7 @@
 /turf/open/floor/almayer/cargo_arrow,
 /area/adminlevel/ert_station/uscm_station)
 "iv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/beaker/large,
 /obj/item/reagent_container/glass/beaker/large,
 /obj/item/reagent_container/glass/beaker/large,
@@ -783,7 +783,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "iY" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/roller,
 /obj/item/roller,
 /obj/item/roller,
@@ -819,7 +819,7 @@
 /turf/open/floor/wood/ship,
 /area/adminlevel/ert_station/uscm_station)
 "jA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/candle_box,
 /obj/item/storage/box/gloves{
 	pixel_x = 7;
@@ -925,7 +925,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "li" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/sign/safety/terminal{
 	pixel_x = -17
 	},
@@ -942,7 +942,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/ert_station/uscm_station)
 "lz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/hand_labeler,
 /turf/open/floor/almayer/sterile_green_corner/north,
 /area/adminlevel/ert_station/uscm_station)
@@ -1070,7 +1070,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "mx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder{
 	pixel_y = 3
 	},
@@ -1089,7 +1089,7 @@
 /turf/open/floor/almayer/orange/north,
 /area/adminlevel/ert_station/uscm_station)
 "mM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/adv,
 /obj/item/storage/belt/medical/lifesaver/full,
 /turf/open/floor/almayer/sterile_green_side/east,
@@ -1151,7 +1151,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/ert_station/uscm_station)
 "nv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/cell_charger,
 /obj/item/cell/crap,
 /obj/effect/decal/cleanable/dirt,
@@ -1319,7 +1319,7 @@
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/adminlevel/ert_station/uscm_station)
 "pi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/pen/blue/clicky{
 	pixel_x = 2;
 	pixel_y = 2
@@ -1369,7 +1369,7 @@
 "pM" = (
 /obj/item/paper_bin,
 /obj/item/tool/pen,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/adminlevel/ert_station/uscm_station)
 "pP" = (
@@ -1630,13 +1630,13 @@
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
 "tf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/lighter/random,
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "th" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black,
 /obj/structure/machinery/door_control{
 	id = "tcomms";
@@ -1813,7 +1813,7 @@
 /turf/closed/wall/almayer/outer,
 /area/adminlevel/ert_station/uscm_station)
 "vu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/defibrillator/upgraded,
 /obj/item/device/defibrillator/upgraded,
 /turf/open/floor/almayer/sterile_green_corner,
@@ -1910,7 +1910,7 @@
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/uscm_station)
 "wt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/yellow,
 /obj/item/tool/pen,
 /turf/open/floor/almayer/orange/east,
@@ -1940,7 +1940,7 @@
 /turf/open/floor/almayer/uscm/directional/northeast,
 /area/adminlevel/ert_station/uscm_station)
 "wH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80;
@@ -2008,7 +2008,7 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station/uscm_station)
 "xB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random{
 	pixel_x = 3;
 	pixel_y = 3
@@ -2224,7 +2224,7 @@
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner"
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/almayer/sterile_green_corner/west,
 /area/adminlevel/ert_station/uscm_station)
 "zK" = (
@@ -2264,7 +2264,7 @@
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/adminlevel/ert_station/uscm_station)
 "zZ" = (
@@ -2381,7 +2381,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "BO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/dark,
 /area/adminlevel/ert_station/uscm_station)
@@ -2419,7 +2419,7 @@
 /turf/open/floor/almayer/uscm/directional/north,
 /area/adminlevel/ert_station/uscm_station)
 "Cl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/lightreplacer,
 /turf/open/floor/almayer/orange/north,
 /area/adminlevel/ert_station/uscm_station)
@@ -2490,7 +2490,7 @@
 /turf/open/floor/almayer/orange,
 /area/adminlevel/ert_station/uscm_station)
 "Df" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/radio,
 /turf/open/floor/dark,
 /area/adminlevel/ert_station/uscm_station)
@@ -2564,7 +2564,7 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station/uscm_station)
 "DM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/belt/utility/full,
 /obj/item/clothing/glasses/welding,
 /turf/open/floor/almayer/no_build,
@@ -2682,7 +2682,7 @@
 /turf/open/floor/almayer,
 /area/adminlevel/ert_station/uscm_station)
 "ER" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/extinguisher,
 /turf/open/floor/dark,
 /area/adminlevel/ert_station/uscm_station)
@@ -2768,7 +2768,7 @@
 "FE" = (
 /obj/item/book/manual/security_space_law,
 /obj/item/tool/crowbar,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
@@ -2885,7 +2885,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/ert_station/uscm_station)
 "GJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails,
 /turf/open/floor/wood/ship,
 /area/adminlevel/ert_station/uscm_station)
@@ -2940,7 +2940,7 @@
 	pixel_x = -12;
 	pixel_y = 2
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/spray/cleaner{
 	pixel_x = 3;
 	pixel_y = 3
@@ -3049,7 +3049,7 @@
 	},
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/mask/surgical,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/almayer/sterile_green_corner/north,
 /area/adminlevel/ert_station/uscm_station)
 "IV" = (
@@ -3359,7 +3359,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/ert_station/uscm_station)
 "MZ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/surgery/scalpel,
 /obj/item/tool/surgery/hemostat,
 /obj/item/tool/surgery/circular_saw,
@@ -3695,7 +3695,7 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station/uscm_station)
 "RI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/radio,
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/ert_station/uscm_station)
@@ -3785,13 +3785,13 @@
 /turf/closed/wall/almayer,
 /area/adminlevel/ert_station/uscm_station)
 "Tm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/ert_station/uscm_station)
 "Tr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/mass_spectrometer,
 /obj/item/device/mass_spectrometer,
 /obj/item/reagent_container/dropper,
@@ -3899,7 +3899,7 @@
 /turf/open/floor/dark,
 /area/adminlevel/ert_station/uscm_station)
 "UU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/roller,
 /obj/item/roller,
 /obj/item/roller,
@@ -3918,7 +3918,7 @@
 /area/adminlevel/ert_station/uscm_station)
 "Vm" = (
 /obj/item/storage/box/monkeycubes,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)

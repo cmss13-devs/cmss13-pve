@@ -137,7 +137,7 @@
 /turf/open/floor/darkyellowcorners2/north,
 /area/ice_colony/surface/engineering)
 "ajh" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/paper,
 /turf/open/floor/darkpurplecorners2/north,
 /area/ice_colony/underground/research/work)
@@ -251,7 +251,7 @@
 /turf/open/floor/darkgreencorners2,
 /area/ice_colony/surface/hangar/hallway)
 "aro" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid,
 /obj/item/storage/firstaid,
 /turf/open/floor/darkred2/north,
@@ -473,7 +473,7 @@
 /turf/open/auto_turf/snow/layer2,
 /area/ice_colony/exterior/surface/valley/northeast)
 "aLl" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/darkredcorners2/north,
 /area/ice_colony/underground/security)
@@ -519,7 +519,7 @@
 /turf/open/floor/darkgreen2/north,
 /area/ice_colony/surface/clinic/storage)
 "aNo" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/north)
@@ -669,7 +669,7 @@
 /turf/open/floor/darkpurple2/north,
 /area/ice_colony/underground/research/work)
 "baS" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -705,7 +705,7 @@
 /turf/open/floor/freezerfloor,
 /area/ice_colony/surface/dorms/restroom_w)
 "beD" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/box/beakers,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
@@ -1185,7 +1185,7 @@
 /turf/open/floor/plating,
 /area/ice_colony/surface/engineering/generator)
 "bVE" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/darkgreencorners2/east,
 /area/ice_colony/underground/crew/canteen)
@@ -1281,7 +1281,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/surface/garage/two)
 "cdB" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -1291,7 +1291,7 @@
 /turf/open/floor/darkgreen2/north,
 /area/ice_colony/surface/clinic/treatment)
 "cef" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/syringe,
 /turf/open/floor/darkred2/east,
 /area/ice_colony/underground/medical/lobby)
@@ -1330,7 +1330,7 @@
 /turf/open/floor/icefloor/shuttle_floor7,
 /area/ice_colony/exterior/underground/caves/dig)
 "cjH" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/dark,
 /area/ice_colony/underground/storage)
@@ -1407,11 +1407,11 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/garage/one)
 "crY" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkbrowncorners2/east,
 /area/ice_colony/underground/hallway/north_west)
 "csA" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -1647,7 +1647,7 @@
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
 "cLm" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/device/t_scanner,
 /turf/open/floor/darkyellow2,
 /area/ice_colony/underground/engineering)
@@ -1662,7 +1662,7 @@
 /turf/open/floor/darkpurplecorners2/east,
 /area/ice_colony/underground/research/work)
 "cNv" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/fire,
 /obj/item/storage/firstaid/fire,
 /turf/open/floor/darkred2/northwest,
@@ -1810,7 +1810,7 @@
 /turf/open/floor/darkyellowcorners2/west,
 /area/ice_colony/surface/dorms)
 "dcW" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/wood/large_stack,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/darkyellow2/west,
@@ -1858,7 +1858,7 @@
 /turf/open/floor/darkyellowcorners2/east,
 /area/ice_colony/surface/hangar/alpha)
 "dig" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/darkgreencorners2,
 /area/ice_colony/underground/crew/canteen)
@@ -1948,7 +1948,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/underground/reception)
 "drI" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/hypospray,
 /obj/structure/machinery/light{
 	dir = 4
@@ -1971,7 +1971,7 @@
 /turf/open/floor/darkgreencorners2/west,
 /area/ice_colony/surface/hangar/hallway)
 "dtN" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkyellowcorners2,
 /area/ice_colony/underground/engineering)
 "dtZ" = (
@@ -2207,7 +2207,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/underground/engineering)
 "dPu" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/syringe,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -2220,7 +2220,7 @@
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
 "dRi" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkpurplecorners2/north,
 /area/ice_colony/underground/research/work)
 "dRs" = (
@@ -2386,7 +2386,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/surface/storage_unit/research)
 "eiz" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/trash/syndi_cakes,
 /turf/open/floor/darkpurplecorners2/east,
 /area/ice_colony/underground/research/work)
@@ -2453,7 +2453,7 @@
 /turf/open/floor/darkbrowncorners2/east,
 /area/ice_colony/surface/hangar/alpha)
 "eqd" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/powercell,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/south)
@@ -2521,7 +2521,7 @@
 /turf/closed/wall/r_wall,
 /area/ice_colony/surface/storage_unit/power)
 "evO" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox,
 /obj/item/tool/weldingtool,
 /turf/open/floor/plating/icefloor,
@@ -2544,7 +2544,7 @@
 /turf/open/floor/darkgreen2,
 /area/ice_colony/surface/clinic/storage)
 "eAx" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/powercell,
 /obj/item/tool/weldingtool,
 /turf/open/floor/plating/icefloor,
@@ -2562,12 +2562,12 @@
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
 "eEE" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/flask/vacuumflask,
 /turf/open/floor/darkgreencorners2,
 /area/ice_colony/surface/bar/bar)
 "eFc" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/research)
 "eFf" = (
@@ -2587,7 +2587,7 @@
 /turf/open/floor/darkyellow2,
 /area/ice_colony/surface/hydroponics/north)
 "eGb" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool,
 /turf/open/floor/darkyellow2/north,
 /area/ice_colony/underground/engineering)
@@ -2611,7 +2611,7 @@
 /turf/open/floor/darkbrowncorners2,
 /area/ice_colony/surface/hangar/beta)
 "eHK" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
@@ -2666,7 +2666,7 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/hangar/beta)
 "eOC" = (
-/obj/structure/surface/table/holotable/wood,
+/obj/structure/surface/table,
 /turf/open/floor/wood,
 /area/ice_colony/underground/crew/library)
 "eOL" = (
@@ -2741,7 +2741,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/surface/hangar/alpha)
 "fal" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/metal/large_stack,
 /turf/open/floor/darkyellow2/north,
 /area/ice_colony/underground/storage)
@@ -2986,7 +2986,7 @@
 /turf/open/auto_turf/snow/layer2,
 /area/ice_colony/exterior/surface/valley/southeast)
 "ftA" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/restraint/handcuffs,
 /turf/open/floor/darkred2/west,
 /area/ice_colony/underground/security)
@@ -3047,7 +3047,7 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/engineering/substation)
 "fBh" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/souto,
 /turf/open/floor/darkgreencorners2/west,
 /area/ice_colony/underground/crew/canteen)
@@ -3102,7 +3102,7 @@
 /turf/open/floor/wood,
 /area/ice_colony/underground/crew/dorm_r)
 "fGj" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/darkgreencorners2/west,
 /area/ice_colony/underground/crew/canteen)
@@ -3119,7 +3119,7 @@
 /turf/open/floor/plating/icefloor/warnplate/east,
 /area/lv624/lazarus/landing_zones/lz2)
 "fHN" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/hypospray/autoinjector/bicaridine,
 /turf/open/floor/darkredcorners2,
 /area/ice_colony/underground/medical/lobby)
@@ -3151,7 +3151,7 @@
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/storage)
 "fLA" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool,
 /turf/open/floor/darkyellow2,
 /area/ice_colony/underground/engineering)
@@ -3247,7 +3247,7 @@
 /turf/open/floor/wood,
 /area/ice_colony/surface/bar/bar)
 "fSF" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/bottle/bicaridine,
 /turf/open/floor/darkred2/east,
 /area/ice_colony/underground/medical/lobby)
@@ -3295,7 +3295,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/ice_colony/exterior/surface/clearing/pass)
 "fVv" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool,
 /obj/item/device/t_scanner,
 /turf/open/floor/plating/icefloor,
@@ -3377,7 +3377,7 @@
 /turf/open/floor/darkyellowcorners2/east,
 /area/ice_colony/surface/dorms/canteen)
 "gea" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/darkpurplecorners2/east,
 /area/ice_colony/underground/research/work)
@@ -3590,7 +3590,7 @@
 /turf/open/floor/darkbluecorners2,
 /area/ice_colony/surface/excavation)
 "gyz" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/waterbottle,
 /turf/open/floor/darkgreencorners2/north,
 /area/ice_colony/underground/crew/canteen)
@@ -3602,7 +3602,7 @@
 /turf/open/floor/darkyellow2/west,
 /area/ice_colony/surface/engineering/electric)
 "gyJ" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
 "gzn" = (
@@ -3682,7 +3682,7 @@
 /turf/open/floor/darkyellowcorners2/east,
 /area/ice_colony/surface/dorms/canteen)
 "gFE" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave,
 /turf/open/floor/darkgreencorners2/north,
 /area/ice_colony/underground/crew/canteen)
@@ -3722,7 +3722,7 @@
 /turf/open/floor/darkgreencorners2,
 /area/ice_colony/surface/hydroponics/north)
 "gJP" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/red,
 /turf/open/floor/darkpurplecorners2/north,
@@ -3819,7 +3819,7 @@
 /turf/open/floor/darkbrowncorners2/north,
 /area/ice_colony/underground/security/armory)
 "gXh" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/blood/OMinus,
 /obj/item/reagent_container/blood/OMinus,
 /turf/open/floor/darkred2/northwest,
@@ -3947,7 +3947,7 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/crew/disposals)
 "hoJ" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/rad,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
@@ -3980,7 +3980,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/underground/crew/dorm_r)
 "hrk" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkgreencorners2/north,
 /area/ice_colony/underground/crew/canteen)
 "hsA" = (
@@ -4044,7 +4044,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/ice_colony/exterior/surface/valley/west)
 "hxW" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/structure/holowindow{
 	dir = 4
@@ -4206,7 +4206,7 @@
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
 "hLA" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/paper,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -4275,7 +4275,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/ice_colony/exterior/surface/valley/southeast)
 "hOP" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/waterbottle,
 /turf/open/floor/darkgreencorners2/east,
 /area/ice_colony/underground/crew/canteen)
@@ -4310,7 +4310,7 @@
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
 "hUs" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/shaker,
 /turf/open/floor/darkgreencorners2,
 /area/ice_colony/surface/bar/bar)
@@ -4344,7 +4344,7 @@
 /turf/open/floor/darkbrown2/north,
 /area/ice_colony/surface/garage/one)
 "hWo" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/souto/diet/lime,
 /turf/open/floor/darkgreencorners2/north,
 /area/ice_colony/underground/crew/canteen)
@@ -4395,7 +4395,7 @@
 /turf/open/floor/icefloor/shuttle_floor7,
 /area/ice_colony/exterior/underground/caves/dig)
 "ibr" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/metal,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/darkyellow2/west,
@@ -4477,7 +4477,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/underground/hallway/south_east)
 "ipi" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
@@ -4613,7 +4613,7 @@
 /turf/open/floor/darkgreen2/north,
 /area/ice_colony/underground/crew/canteen)
 "iwX" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -4819,7 +4819,7 @@
 /turf/open/floor/darkbrowncorners2/west,
 /area/ice_colony/surface/substation)
 "iMW" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/device/t_scanner,
 /turf/open/floor/darkyellowcorners2,
 /area/ice_colony/underground/engineering)
@@ -4875,7 +4875,7 @@
 /turf/open/floor/darkbrowncorners2/east,
 /area/ice_colony/underground/research/work)
 "iZo" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stack/cable_coil,
 /obj/item/storage/toolbox/electrical,
 /turf/open/floor/plating/icefloor,
@@ -4957,7 +4957,7 @@
 /turf/open/floor,
 /area/ice_colony/surface/requesitions)
 "jhT" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
@@ -5170,7 +5170,7 @@
 /turf/open/floor/darkbrown2/north,
 /area/ice_colony/surface/garage/one)
 "jDZ" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/south)
@@ -5219,7 +5219,7 @@
 /turf/open/floor/darkblue2/southwest,
 /area/ice_colony/surface/clinic/treatment)
 "jJJ" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
 "jKL" = (
@@ -5348,7 +5348,7 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/hangar/beta)
 "jWY" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkgreencorners2/east,
 /area/ice_colony/underground/crew/canteen)
 "jXi" = (
@@ -5387,7 +5387,7 @@
 /turf/open/floor/vault2/west,
 /area/ice_colony/surface/storage_unit/telecomms)
 "kcD" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkgreencorners2,
 /area/ice_colony/underground/crew/canteen)
 "kcM" = (
@@ -5413,7 +5413,7 @@
 /turf/open/auto_turf/snow/layer2,
 /area/ice_colony/exterior/surface/valley/south)
 "kfB" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/tool/pen/red,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
@@ -5568,7 +5568,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/surface/requesitions)
 "kvY" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool,
 /obj/item/device/reagent_scanner,
 /turf/open/floor/plating/icefloor,
@@ -5701,7 +5701,7 @@
 /turf/open/floor/darkbrowncorners2/east,
 /area/ice_colony/surface/dorms)
 "kJD" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -5901,7 +5901,7 @@
 /turf/closed/wall/r_wall,
 /area/ice_colony/surface/requesitions)
 "lgd" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/waterbottle,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/darkgreencorners2,
@@ -5989,7 +5989,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/ice_colony/exterior/surface/valley/south/excavation)
 "lsQ" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -6149,7 +6149,7 @@
 /turf/open/floor/plating,
 /area/ice_colony/surface/disposals)
 "lJV" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkpurplecorners2/east,
 /area/ice_colony/underground/research/work)
 "lKe" = (
@@ -6346,12 +6346,12 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/surface/mining)
 "mdV" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/tool/pen,
 /turf/open/floor/darkpurplecorners2/east,
 /area/ice_colony/underground/research/work)
 "mev" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/dark,
 /area/ice_colony/underground/storage)
 "meU" = (
@@ -6673,7 +6673,7 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/research)
 "mMu" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/south)
 "mNH" = (
@@ -6771,7 +6771,7 @@
 /turf/open/ice,
 /area/ice_colony/exterior/surface/valley/north)
 "nfK" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/metal/large_stack,
 /turf/open/floor/dark,
 /area/ice_colony/underground/storage)
@@ -6781,7 +6781,7 @@
 /turf/open/floor/darkgreencorners2/west,
 /area/ice_colony/surface/clinic/storage)
 "niZ" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkgreencorners2,
 /area/ice_colony/surface/bar/bar)
 "njn" = (
@@ -6815,7 +6815,7 @@
 /turf/open/floor/darkgreen2/west,
 /area/ice_colony/underground/crew/canteen)
 "nlH" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/red,
 /turf/open/floor/darkpurplecorners2/east,
@@ -6832,7 +6832,7 @@
 /turf/open/floor/wood,
 /area/ice_colony/underground/crew/dorm_r)
 "nnL" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/darkpurplecorners2/east,
 /area/ice_colony/underground/research/work)
@@ -6885,7 +6885,7 @@
 /turf/closed/wall/r_wall,
 /area/ice_colony/surface/garage/one)
 "nvP" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop,
 /turf/open/floor/darkpurplecorners2/north,
 /area/ice_colony/underground/research/work)
@@ -6909,7 +6909,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/underground/storage)
 "nxW" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkred2/west,
 /area/ice_colony/underground/security)
 "nyp" = (
@@ -6969,7 +6969,7 @@
 /turf/open/floor/darkbrown2,
 /area/ice_colony/surface/substation/smes)
 "nCJ" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop,
 /turf/open/floor/darkpurplecorners2/east,
 /area/ice_colony/underground/research/work)
@@ -7001,7 +7001,7 @@
 /turf/open/floor/icefloor/shuttle_vfloor,
 /area/ice_colony/exterior/underground/caves/dig)
 "nEA" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
@@ -7364,7 +7364,7 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/south)
 "okL" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/powercell,
 /turf/open/floor/darkyellow2/north,
 /area/ice_colony/underground/storage)
@@ -7698,7 +7698,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/surface/storage_unit/power)
 "oQM" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/device/t_scanner,
 /obj/item/stack/cable_coil,
 /turf/open/floor/plating/icefloor,
@@ -7922,7 +7922,7 @@
 /turf/open/floor/darkbrowncorners2,
 /area/ice_colony/surface/hangar/alpha)
 "pnQ" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -7934,7 +7934,7 @@
 /turf/open/floor/darkbrown2/west,
 /area/ice_colony/surface/dorms)
 "por" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/device/healthanalyzer,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -7945,7 +7945,7 @@
 /turf/open/floor/darkgreencorners2/west,
 /area/ice_colony/surface/clinic/treatment)
 "poW" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/photo_album,
 /turf/open/floor/darkpurplecorners2/east,
 /area/ice_colony/underground/research/work)
@@ -8156,7 +8156,7 @@
 /turf/open/floor/darkyellow2/west,
 /area/ice_colony/surface/dorms)
 "pEI" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox,
 /turf/open/floor/darkyellowcorners2,
 /area/ice_colony/underground/engineering)
@@ -8734,7 +8734,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/surface/requesitions)
 "qNB" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/powercell,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/crew/disposals)
@@ -8845,7 +8845,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/underground/storage)
 "qXA" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
@@ -8865,7 +8865,7 @@
 /turf/open/floor/darkbrowncorners2/north,
 /area/ice_colony/surface/substation/smes)
 "raJ" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/clothing/mask/gas,
 /obj/item/tank/emergency_oxygen,
 /turf/open/floor/darkyellow2/east,
@@ -8878,7 +8878,7 @@
 /turf/open/floor/darkyellow2,
 /area/ice_colony/surface/engineering)
 "rbs" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stack/medical/advanced/bruise_pack,
 /turf/open/floor/darkredcorners2,
 /area/ice_colony/underground/medical/lobby)
@@ -8959,7 +8959,7 @@
 /turf/open/floor/darkblue2/north,
 /area/ice_colony/surface/excavation)
 "rkh" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
 	},
@@ -9065,7 +9065,7 @@
 /turf/open/floor/darkbrowncorners2/north,
 /area/ice_colony/surface/hangar/beta)
 "rwF" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stack/cable_coil,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/icefloor,
@@ -9096,7 +9096,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/ice_colony/exterior/surface/clearing/pass)
 "rza" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stack/cable_coil,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/south)
@@ -9250,7 +9250,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/surface/requesitions)
 "rKO" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/dry_ramen,
 /turf/open/floor/darkgreencorners2,
 /area/ice_colony/underground/crew/canteen)
@@ -9350,7 +9350,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/underground/security/armory)
 "rRI" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/box/donkpockets,
 /turf/open/floor/darkgreencorners2/north,
 /area/ice_colony/underground/crew/canteen)
@@ -9375,7 +9375,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/underground/storage)
 "rUI" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/beaker,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
@@ -9450,7 +9450,7 @@
 /turf/closed/wall/hangar,
 /area/ice_colony/underground/research/storage)
 "sbM" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/waterbottle,
 /turf/open/floor/darkgreencorners2,
 /area/ice_colony/underground/crew/canteen)
@@ -9565,7 +9565,7 @@
 /turf/open/floor/darkyellow2,
 /area/ice_colony/surface/engineering/electric)
 "slH" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/emergency,
 /obj/item/tool/weldingtool,
 /turf/open/floor/darkyellow2/north,
@@ -9615,7 +9615,7 @@
 /obj/structure/machinery/power/apc/power/west{
 	start_charge = 20
 	},
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/darkred2/west,
 /area/ice_colony/underground/security)
@@ -9782,7 +9782,7 @@
 /turf/open/floor/dark2,
 /area/ice_colony/surface/garage/two)
 "sFh" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen,
 /turf/open/floor/darkredcorners2/north,
@@ -9836,7 +9836,7 @@
 /turf/open/floor/darkgreen2,
 /area/ice_colony/surface/clinic/lobby)
 "sKO" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/clothing/gloves/yellow,
 /turf/open/floor/darkyellowcorners2,
 /area/ice_colony/underground/storage)
@@ -9985,7 +9985,7 @@
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
 "sWM" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/darkpurplecorners2/north,
 /area/ice_colony/underground/research/work)
@@ -10018,7 +10018,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/landing_zones/lz1)
 "taO" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/spray/cleaner,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/south)
@@ -10049,7 +10049,7 @@
 /turf/open/floor/darkyellow2/north,
 /area/ice_colony/surface/engineering)
 "tdX" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/powercell,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/icefloor,
@@ -10200,7 +10200,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/surface/requesitions)
 "tpS" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/box/survival,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -10213,7 +10213,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/ice_colony/exterior/surface/valley/west)
 "tsd" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/darkyellow2/north,
 /area/ice_colony/underground/storage)
@@ -10245,7 +10245,7 @@
 /turf/open/floor/darkblue2/north,
 /area/ice_colony/underground/reception)
 "twN" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/red,
 /turf/open/floor/darkgreencorners2,
@@ -10430,7 +10430,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/underground/research)
 "tNv" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/o2,
 /turf/open/floor/darkred2/northwest,
 /area/ice_colony/underground/medical/lobby)
@@ -10448,7 +10448,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/surface/requesitions)
 "tNH" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/glass/small_stack,
 /turf/open/floor/dark,
 /area/ice_colony/underground/storage)
@@ -10509,7 +10509,7 @@
 /turf/open/floor/wood,
 /area/ice_colony/underground/command/center)
 "tWe" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/spray/cleaner,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -10606,11 +10606,11 @@
 /turf/open/floor/plating/icefloor/warnplate,
 /area/lv624/lazarus/landing_zones/lz2)
 "ufB" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkgreencorners2/west,
 /area/ice_colony/underground/crew/canteen)
 "ufF" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/south)
@@ -10767,7 +10767,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/landing_zones/lz1)
 "uBX" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/device/t_scanner,
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -10788,7 +10788,7 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/surface/dorms)
 "uDh" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/on,
 /turf/open/floor/darkredcorners2/north,
 /area/ice_colony/underground/security)
@@ -10925,7 +10925,7 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/surface/requesitions)
 "uOH" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -11004,7 +11004,7 @@
 /turf/open/ice,
 /area/ice_colony/exterior/surface/valley/northeast)
 "uUN" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/machinery/juicer,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -11258,7 +11258,7 @@
 	},
 /area/ice_colony/surface/hangar/beta)
 "vrq" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool,
 /obj/item/storage/toolbox,
 /turf/open/floor/darkyellowcorners2,
@@ -11439,7 +11439,7 @@
 /turf/open/floor/icefloor/shuttle_floor6,
 /area/ice_colony/exterior/underground/caves/dig)
 "vEM" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stock_parts/matter_bin,
 /turf/open/floor/dark,
 /area/ice_colony/underground/storage)
@@ -11653,7 +11653,7 @@
 /turf/open/floor/darkbrown2/north,
 /area/ice_colony/surface/substation)
 "wcI" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/red,
 /turf/open/floor/engine,
@@ -11669,7 +11669,7 @@
 /turf/closed/wall/hangar,
 /area/ice_colony/underground/crew/disposals)
 "wdx" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/device/t_scanner,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/maintenance/south)
@@ -11770,7 +11770,7 @@
 /turf/open/floor/corsat/marked,
 /area/ice_colony/surface/hydroponics/north)
 "wlD" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/restraint/handcuffs,
 /turf/open/floor/darkredcorners2/north,
 /area/ice_colony/underground/security)
@@ -11803,7 +11803,7 @@
 /turf/open/floor/darkyellowcorners2,
 /area/ice_colony/surface/dorms)
 "wnW" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -12092,7 +12092,7 @@
 /turf/closed/wall/hangar,
 /area/ice_colony/underground/maintenance/east)
 "wKb" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/toxin,
 /turf/open/floor/darkred2/north,
 /area/ice_colony/underground/medical/lobby)
@@ -12121,7 +12121,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/surface/requesitions)
 "wNo" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/alienjar,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
@@ -12305,12 +12305,12 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/surface/hangar/alpha)
 "xfk" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/trash/syndi_cakes,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
 "xfI" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/stack/medical/ointment,
 /turf/open/floor/darkredcorners2,
 /area/ice_colony/underground/medical/lobby)
@@ -12325,7 +12325,7 @@
 /obj/structure/machinery/power/apc/power/south{
 	start_charge = 20
 	},
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/powercell,
 /turf/open/floor/darkyellowcorners2,
 /area/ice_colony/underground/storage)
@@ -12369,7 +12369,7 @@
 /turf/open/floor/dark,
 /area/ice_colony/surface/requesitions)
 "xjp" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool,
 /obj/item/storage/toolbox,
 /obj/structure/machinery/light{
@@ -12378,7 +12378,7 @@
 /turf/open/floor/darkyellowcorners2,
 /area/ice_colony/underground/engineering)
 "xjq" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/structure/machinery/power/apc/power/south{
 	start_charge = 20
 	},
@@ -12438,7 +12438,7 @@
 /turf/open/floor/darkbrowncorners2,
 /area/ice_colony/surface/research)
 "xmt" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/device/multitool,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/crew/disposals)
@@ -12669,7 +12669,7 @@
 /turf/open/floor/darkgreen2,
 /area/ice_colony/surface/clinic/storage)
 "xMp" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /turf/open/floor/darkredcorners2/north,
 /area/ice_colony/underground/security)
 "xNK" = (
@@ -12759,7 +12759,7 @@
 /turf/open/floor/plating/icefloor/warnplate/northeast,
 /area/shuttle/elevator3/underground)
 "xUT" = (
-/obj/structure/surface/table/holotable,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/bottle/antitoxin,
 /turf/open/floor/darkredcorners2,
 /area/ice_colony/underground/medical/lobby)

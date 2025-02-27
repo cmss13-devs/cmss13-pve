@@ -1855,7 +1855,7 @@
 /turf/closed/wall/r_wall/biodome,
 /area/corsat/sigma/hangar/checkpoint)
 "avk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/gloves,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/biodome/toxins)
@@ -4788,7 +4788,7 @@
 /turf/open/floor/corsat/blue/southwest,
 /area/corsat/sigma/south)
 "bMl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "GammaHangarH";
 	name = "Hangar Lockdown";
@@ -4819,7 +4819,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay/morgue)
 "bNf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze,
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/hangar/cargo)
@@ -4909,7 +4909,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/gamma/engineering)
@@ -4998,7 +4998,7 @@
 /turf/open/gm/grass/grass1/weedable,
 /area/corsat/theta/biodome)
 "bXi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/med_data/laptop,
 /turf/open/floor/corsat/greenwhite/north,
 /area/corsat/gamma/medbay/morgue)
@@ -5135,7 +5135,7 @@
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/gamma/biodome/toxins)
 "cbH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -5149,7 +5149,7 @@
 /turf/open/gm/dirtgrassborder/north,
 /area/corsat/theta/biodome)
 "ccd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/toxins)
@@ -5183,7 +5183,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/hallwaysouth)
 "ccK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -5256,7 +5256,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/pen/red,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -5346,7 +5346,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/omega/hallways)
 "cfY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stock_parts/smes_coil,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/engineering)
@@ -5374,7 +5374,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/south/robotics)
 "cgX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/red,
@@ -5401,7 +5401,7 @@
 /turf/open/floor/corsat/greenwhitecorner/west,
 /area/corsat/gamma/medbay/morgue)
 "chH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/red/east,
 /area/corsat/sigma/hangar)
@@ -5410,7 +5410,7 @@
 /turf/open/floor/corsat/brown,
 /area/corsat/sigma/cargo)
 "chQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "GammaA";
 	name = "Airlock Control";
@@ -5457,12 +5457,12 @@
 /turf/open/floor/carpet14_10/west,
 /area/corsat/gamma/administration)
 "ciX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/mmi/radio_enabled,
 /turf/open/floor/corsat/yellow/southeast,
 /area/corsat/sigma/south/robotics)
 "ciY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/spray/cleaner,
 /turf/open/floor/corsat/purplewhite/southeast,
 /area/corsat/omega/complex)
@@ -5484,7 +5484,7 @@
 /turf/open/floor/corsat/bluegreycorner/north,
 /area/corsat/gamma/hangar/flightcontrol)
 "cjx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/yellow,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/plate,
@@ -5525,7 +5525,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/pamphlet/skill/powerloader,
 /turf/open/floor/corsat/brown/southwest,
 /area/corsat/gamma/cargo/lobby)
@@ -5572,7 +5572,7 @@
 /turf/open/floor/corsat/yellowcorner/north,
 /area/corsat/gamma/engineering/lobby)
 "clD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/corsat_bio_lock,
 /turf/open/floor/corsat/bluegrey,
 /area/corsat/sigma/southeast/datalab)
@@ -5598,7 +5598,7 @@
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/omega/complex)
 "cnq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze,
 /turf/open/floor/corsat/red/east,
 /area/corsat/gamma/security)
@@ -5704,7 +5704,7 @@
 /area/corsat/theta/biodome/complex)
 "cql" = (
 /obj/item/device/analyzer/plant_analyzer,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/theta/biodome/complex)
 "cqo" = (
@@ -5719,7 +5719,7 @@
 /turf/open/floor/corsat/yellowcorner/north,
 /area/corsat/sigma/south/engineering)
 "cqz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/restraint/handcuffs,
 /turf/open/floor/corsat/red/east,
 /area/corsat/omega/security)
@@ -6035,7 +6035,7 @@
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/hangar/office)
 "cAp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/vials/random,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/omega/complex)
@@ -6065,7 +6065,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/maint)
 "cCi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 80
@@ -6147,7 +6147,7 @@
 /turf/open/floor/carpet6_2/west,
 /area/corsat/gamma/administration)
 "cEN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -6250,7 +6250,7 @@
 /turf/open/floor/corsat/red/southeast,
 /area/corsat/sigma/airlock/east/id)
 "cHo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/cell,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/omega/maint)
@@ -6471,7 +6471,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/biodome)
 "cME" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/officesquares,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -6511,7 +6511,7 @@
 /turf/open/floor/corsat/yellowcorner/west,
 /area/corsat/sigma/south)
 "cNy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
@@ -6595,7 +6595,7 @@
 /turf/open/space/transit/east/shuttlespace_ew10,
 /area/space)
 "cPu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/corsat_bio_lock,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/engineering)
@@ -6663,7 +6663,7 @@
 /turf/open/floor/corsat,
 /area/corsat/gamma/cargo/disposal)
 "cRA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1
 	},
@@ -6867,7 +6867,7 @@
 /area/corsat/sigma/airlock/control)
 "cXC" = (
 /obj/item/tool/weldingtool/experimental,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/engineering)
 "cXD" = (
@@ -6885,7 +6885,7 @@
 /turf/open/floor/corsat/whitecorner/west,
 /area/corsat/sigma/dorms)
 "cXV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/syringe_case/regular,
 /turf/open/floor/corsat/purplewhite/southwest,
 /area/corsat/omega/complex)
@@ -6895,7 +6895,7 @@
 /area/corsat/gamma/airlock/control)
 "cYh" = (
 /obj/structure/machinery/power/apc/upgraded/no_power/north,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/evidencebag,
 /obj/item/evidencebag,
 /obj/item/evidencebag,
@@ -7129,7 +7129,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/gamma/residential/west)
 "dcM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder,
 /turf/open/floor/corsat/greenwhite,
 /area/corsat/gamma/medbay/chemistry)
@@ -7165,7 +7165,7 @@
 /turf/open/floor/corsat/yellow/northeast,
 /area/corsat/gamma/engineering/atmos)
 "deb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/laundry)
@@ -7221,7 +7221,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/residential)
 "deX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/corsat/greenwhite,
 /area/corsat/gamma/medbay/lobby)
@@ -7247,7 +7247,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/southeast/datamaint)
 "dfs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/machine/circuit_imprinter,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -7313,7 +7313,7 @@
 /turf/open/floor/corsat/red/west,
 /area/corsat/gamma/security/cells)
 "dgX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -7352,7 +7352,7 @@
 /turf/open/floor/corsat/whitetan/northwest,
 /area/corsat/gamma/residential/west)
 "dhx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/vials/random,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/biodome/toxins)
@@ -7481,7 +7481,7 @@
 /turf/open/floor/corsat/red,
 /area/corsat/theta/airlock/control)
 "dka" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/gloves/latex,
 /turf/open/floor/corsat/purplewhitecorner/west,
 /area/corsat/gamma/biodome/complex)
@@ -7491,7 +7491,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/omega/maint)
 "dkG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /turf/open/floor/corsat/redcorner/west,
@@ -7532,7 +7532,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen,
 /turf/open/floor/corsat/greenwhite/east,
@@ -7563,7 +7563,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/cargo)
 "dnu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/med_data/laptop{
 	dir = 4
 	},
@@ -7702,7 +7702,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/complex)
 "dtI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -7761,7 +7761,7 @@
 /turf/open/floor/corsat/cargo,
 /area/corsat/gamma/freezer)
 "dvt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -7865,7 +7865,7 @@
 /turf/open/floor/corsat/darkgreencorner/west,
 /area/corsat/gamma/hangar/monorail)
 "dyc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/plate,
 /area/corsat/theta/airlock/control)
@@ -7988,7 +7988,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/airlock/south/id)
 "dCt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -8024,7 +8024,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/freezer)
 "dDb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/bluegrey/southwest,
 /area/corsat/sigma/south/offices)
@@ -8040,7 +8040,7 @@
 /turf/open/floor/corsat/bluecorner/east,
 /area/corsat/theta/airlock/control)
 "dDV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/corsat/red,
 /area/corsat/sigma/hangar/security)
@@ -8062,7 +8062,7 @@
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/gamma/sigmaremote)
 "dEA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/adv,
 /turf/open/floor/corsat/purplewhite/southwest,
 /area/corsat/omega/complex)
@@ -8182,13 +8182,13 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/hangar/monorail)
 "dID" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/explosive/grenade/custom/antiweed,
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/omega/complex)
 "dIW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 80
@@ -8197,7 +8197,7 @@
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
 "dJa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/robot_module/engineering,
 /turf/open/floor/corsat/yellow/northeast,
 /area/corsat/sigma/south/robotics)
@@ -8315,7 +8315,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/theta/airlock/control)
 "dMk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/assembly/infra,
 /turf/open/floor/corsat/yellow/northeast,
 /area/corsat/gamma/engineering)
@@ -8326,7 +8326,7 @@
 /obj/structure/machinery/door/window/northright{
 	name = "Firing Lane"
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/asteroidwarning,
 /area/corsat/sigma/biodome/gunrange)
 "dMp" = (
@@ -8410,7 +8410,7 @@
 /turf/open/floor/corsat/greenwhitecorner,
 /area/corsat/gamma/medbay)
 "dPn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /obj/item/tool/pen/blue,
@@ -8576,7 +8576,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/south/robotics)
 "dTt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/sigma/south/complex)
 "dTw" = (
@@ -8584,7 +8584,7 @@
 /turf/open/floor/corsat/bluegrey/northwest,
 /area/corsat/omega/offices)
 "dTA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay)
@@ -8627,12 +8627,12 @@
 /turf/open/floor/corsat/browncorner/west,
 /area/corsat/gamma/cargo/lobby)
 "dUo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/gloves,
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/corsat/omega/complex)
 "dUv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /obj/structure/machinery/camera/autoname{
 	dir = 1;
@@ -8690,7 +8690,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/complex)
 "dWF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen,
 /obj/item/tool/stamp,
@@ -8811,7 +8811,7 @@
 /turf/open/floor/corsat/blue/northwest,
 /area/corsat/omega/control)
 "ebc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /turf/open/floor/corsat/bluegrey,
 /area/corsat/sigma/south/offices)
@@ -8929,7 +8929,7 @@
 /turf/open/floor/corsat/yellow,
 /area/corsat/sigma/airlock/control)
 "edq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/communications{
 	dir = 8
 	},
@@ -8955,7 +8955,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/cargo)
 "eez" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/control)
 "eeV" = (
@@ -9134,14 +9134,14 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/airlocknorth)
 "ejV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/sigma/hangar/office)
 "ekh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 8
 	},
@@ -9193,7 +9193,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/beakers,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/gamma/biodome/virology)
@@ -9257,7 +9257,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/corsat/gamma/residential/lounge)
 "emL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/toxins)
 "emM" = (
@@ -9282,7 +9282,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south/engineering)
 "eni" = (
@@ -9297,7 +9297,7 @@
 /turf/open/floor/corsat/red/west,
 /area/corsat/sigma/south/security)
 "enn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/corsat/bluegrey,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -9330,7 +9330,7 @@
 /turf/open/floor/corsat/brown/west,
 /area/corsat/omega/hallways)
 "enF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/beakers,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/gamma/biodome/complex)
@@ -9359,7 +9359,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/lavatory)
 "eog" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/med_data/laptop,
 /turf/open/floor/corsat/greenwhite/east,
 /area/corsat/gamma/medbay)
@@ -9458,7 +9458,7 @@
 /turf/closed/wall/r_wall/biodome,
 /area/corsat/gamma/engineering/atmos)
 "eqC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder,
 /obj/item/stack/sheet/mineral/phoron/small_stack,
 /turf/open/floor/corsat/retrosquareslight,
@@ -9497,7 +9497,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/omega/complex)
 "erK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/surgery/scalpel,
 /obj/item/tool/surgery/circular_saw,
 /turf/open/floor/corsat/lightplate,
@@ -9561,7 +9561,7 @@
 /area/corsat/omega/hallways)
 "etN" = (
 /obj/item/tool/minihoe,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/bucket,
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/hydroponics)
@@ -9758,7 +9758,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/showers)
 "ezl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/corsat/yellow,
 /area/corsat/gamma/engineering)
@@ -9871,7 +9871,7 @@
 /turf/open/floor/corsat/whitetancorner/north,
 /area/corsat/gamma/residential/west)
 "eCD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/o2,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay)
@@ -9914,7 +9914,7 @@
 /turf/open/floor/corsat/purple/southwest,
 /area/corsat/sigma/south)
 "eEw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /turf/open/floor/corsat/purplewhite/southwest,
 /area/corsat/theta/biodome/complex)
@@ -10210,7 +10210,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/hangar/monorail)
 "eOx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/blue,
 /area/corsat/theta/airlock/control)
 "eOJ" = (
@@ -10500,7 +10500,7 @@
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/theta/airlock/east)
 "eUM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 250
@@ -10664,7 +10664,7 @@
 /turf/open/gm/dirtgrassborder/south,
 /area/corsat/theta/biodome)
 "eZR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/airlock/south)
 "eZS" = (
@@ -10686,7 +10686,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/theta/biodome/complex)
 "faS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 4;
 	network = list("omega")
@@ -10781,13 +10781,13 @@
 /turf/open/floor/wood,
 /area/corsat/gamma/biodome/complex)
 "fdo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/cargo)
 "fdr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -10839,7 +10839,7 @@
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/omega/offices)
 "feM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/airlock/control)
 "feU" = (
@@ -10969,7 +10969,7 @@
 /turf/open/floor/corsat/red/east,
 /area/corsat/sigma/hangar/security)
 "fhv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/greenwhite,
 /area/corsat/gamma/medbay)
 "fhP" = (
@@ -11035,7 +11035,7 @@
 /area/corsat/omega/hallways)
 "fjp" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen/red,
 /turf/open/floor/corsat/yellow,
@@ -11115,7 +11115,7 @@
 /turf/open/floor/corsat/darkgreencorner/north,
 /area/corsat/sigma/hangar)
 "flU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/gamma/biodome/toxins)
 "flV" = (
@@ -11296,7 +11296,7 @@
 /turf/open/floor/carpet15_15/west,
 /area/corsat/gamma/administration)
 "fri" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 7
@@ -11413,7 +11413,7 @@
 /turf/closed/gm/dense,
 /area/corsat/theta/biodome)
 "fup" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1
 	},
@@ -11423,7 +11423,7 @@
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/sigma/hangar/monorail/control)
 "fuB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
@@ -11515,7 +11515,7 @@
 /turf/open/floor/plating,
 /area/corsat/gamma/residential/east)
 "fxi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/yellow/southwest,
 /area/corsat/gamma/engineering/lobby)
@@ -11541,14 +11541,14 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/theta/biodome/complex)
 "fxU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/open/floor/corsat/officesquares,
 /area/corsat/gamma/administration)
 "fyl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data,
 /turf/open/floor/corsat/red/east,
 /area/corsat/gamma/hangar/cargo)
@@ -11567,7 +11567,7 @@
 /turf/open/floor/corsat/red/southeast,
 /area/corsat/gamma/security/cells)
 "fyw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/bluegrey/northwest,
 /area/corsat/sigma/southeast/datalab)
 "fyx" = (
@@ -11606,7 +11606,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/corsat/gamma/rnr/arcade)
 "fzt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/squares,
@@ -11713,7 +11713,7 @@
 /turf/open/floor/corsat/greenwhite/west,
 /area/corsat/gamma/medbay/surgery)
 "fCp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door/window/northright{
 	name = "Firing Lane"
 	},
@@ -11809,7 +11809,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/complex)
 "fEQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/red/east,
 /area/corsat/sigma/hangar/security)
@@ -11974,7 +11974,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/theta/biodome/complex)
 "fJg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/spray/cleaner,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/omega/containment)
@@ -12007,7 +12007,7 @@
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/gamma/sigmaremote)
 "fKS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -12139,7 +12139,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/toxins)
 "fOP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/red/west,
 /area/corsat/sigma/airlock/control)
@@ -12332,7 +12332,7 @@
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/sigma/south/complex)
 "fUa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/corsat/gamma/biodome/virology)
 "fUm" = (
@@ -12493,7 +12493,7 @@
 /turf/open/gm/dirt,
 /area/corsat/theta/biodome)
 "fYP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/flashbang,
 /obj/item/explosive/grenade/flashbang,
 /turf/open/floor/asteroidplating,
@@ -12507,7 +12507,7 @@
 /turf/open/floor/corsat/greenwhitecorner/west,
 /area/corsat/gamma/medbay/surgery)
 "fZe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/bodybags,
 /turf/open/floor/corsat/greenwhite,
 /area/corsat/gamma/medbay/morgue)
@@ -12518,7 +12518,7 @@
 /turf/open/floor/carpet13_5/west,
 /area/corsat/omega/offices)
 "fZm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen,
 /obj/structure/pipes/vents/pump{
@@ -12546,7 +12546,7 @@
 /turf/open/floor/corsat/red/east,
 /area/corsat/sigma/south)
 "gac" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -12692,7 +12692,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/hangar/monorail)
 "gfm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/corsat/blue/southwest,
 /area/corsat/theta/airlock/control)
@@ -12763,7 +12763,7 @@
 /turf/open/floor/corsat/greenwhite,
 /area/corsat/gamma/medbay)
 "ggQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -12814,7 +12814,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/hangar/monorail)
 "giG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/airlock/control)
@@ -12981,7 +12981,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/omega/hallways)
 "gni" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -13026,7 +13026,7 @@
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south/engineering)
 "goj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/blue/northeast,
 /area/corsat/sigma/airlock/control)
@@ -13134,7 +13134,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/corsat/gamma/rnr/library)
 "grR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/spiralplate,
@@ -13157,7 +13157,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/sigma/dorms)
 "gsn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/rad,
 /turf/open/floor/corsat/greenwhite,
 /area/corsat/gamma/medbay)
@@ -13226,7 +13226,7 @@
 /turf/open/floor/corsat/purple/north,
 /area/corsat/gamma/biodome/complex)
 "gtS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/airlock/control)
@@ -13255,11 +13255,11 @@
 	dir = 4
 	},
 /obj/structure/machinery/microwave,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/sterileplate,
 /area/corsat/gamma/kitchen)
 "gus" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/omega/complex)
@@ -13368,7 +13368,7 @@
 /turf/open/floor/wood,
 /area/corsat/gamma/rnr/bar)
 "gwZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/fire,
 /turf/open/floor/corsat/greenwhite,
 /area/corsat/gamma/medbay)
@@ -13455,7 +13455,7 @@
 /turf/open/floor/corsat,
 /area/corsat/sigma/cargo)
 "gzo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -13495,7 +13495,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/corsat/sigma/cafe)
 "gAq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
@@ -13551,7 +13551,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/sigma/south/complex)
 "gBU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/airlock/south)
@@ -13563,7 +13563,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/gamma/engineering/atmos)
 "gCh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -13601,7 +13601,7 @@
 /turf/open/floor/corsat/white/east,
 /area/corsat/gamma/residential)
 "gCQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 250
@@ -13673,7 +13673,7 @@
 /turf/open/gm/dirtgrassborder/south,
 /area/corsat/theta/biodome)
 "gEC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -13723,7 +13723,7 @@
 /turf/open/floor/corsat/blue/east,
 /area/corsat/sigma/hangar)
 "gFg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/lightplate,
@@ -13789,7 +13789,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/security/cells)
 "gHz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/southeast/dataoffice)
 "gIb" = (
@@ -13941,7 +13941,7 @@
 /turf/open/floor/corsat/darkgreen/north,
 /area/corsat/sigma/hangar/monorail)
 "gMf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/med_data/laptop{
 	pixel_y = 3
 	},
@@ -13964,7 +13964,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/sigma/north)
 "gNa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/condiment/saltshaker,
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/theta/biodome/complex)
@@ -13989,7 +13989,7 @@
 /turf/open/floor/corsat/whitetan,
 /area/corsat/sigma/dorms)
 "gNC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/masks,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/biodome/virology)
@@ -14127,7 +14127,7 @@
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/theta/biodome/complex)
 "gQR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /obj/effect/landmark/lv624/xeno_tunnel,
 /turf/open/floor/corsat/squares,
@@ -14157,7 +14157,7 @@
 /area/corsat/gamma/security/armory)
 "gRJ" = (
 /obj/item/device/binoculars,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "ThetaControl";
 	name = "Observation Shutters";
@@ -14173,7 +14173,7 @@
 /turf/open/floor/corsat/brown/east,
 /area/corsat/omega/hallways)
 "gRO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/airlock/control)
@@ -14199,7 +14199,7 @@
 /area/corsat/sigma/north)
 "gSl" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/purplewhite,
@@ -14290,7 +14290,7 @@
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/theta/biodome/complex)
 "gVa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen,
@@ -14357,7 +14357,7 @@
 /turf/open/mars_cave/mars_cave_23,
 /area/corsat/sigma/biodome/scrapyard)
 "gVT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8
 	},
@@ -14371,7 +14371,7 @@
 /turf/open/floor/corsat/red/southwest,
 /area/corsat/gamma/hangar/cargo)
 "gWm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/blue/southeast,
 /area/corsat/theta/airlock/control)
@@ -14408,7 +14408,7 @@
 /turf/open/floor/carpet14_10/west,
 /area/corsat/gamma/residential/lounge)
 "gXw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/blue/north,
 /area/corsat/sigma/airlock/control)
 "gXy" = (
@@ -14430,7 +14430,7 @@
 /turf/open/gm/dirt,
 /area/corsat/theta/biodome)
 "gYh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/bluegrey/southwest,
 /area/corsat/sigma/hangar/office)
@@ -14488,7 +14488,7 @@
 /turf/open/floor/wood,
 /area/corsat/sigma/dorms)
 "gZK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -14622,7 +14622,7 @@
 /turf/open/floor/corsat/red/north,
 /area/corsat/omega/hangar/office)
 "hcK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/red,
 /turf/open/floor/corsat/red/northeast,
@@ -14761,7 +14761,7 @@
 /turf/open/floor/corsat/brown,
 /area/corsat/gamma/cargo)
 "hfP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/squares,
@@ -14844,7 +14844,7 @@
 /turf/open/floor/corsat/yellowcorner/east,
 /area/corsat/gamma/engineering/atmos)
 "hjM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/beaker,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/virology)
@@ -14988,7 +14988,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellow/northwest,
 /area/corsat/gamma/engineering/lobby)
 "hnR" = (
@@ -14997,7 +14997,7 @@
 /turf/open/gm/grass/grass1/weedable,
 /area/corsat/theta/biodome)
 "hod" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen,
@@ -15010,7 +15010,7 @@
 /turf/open/floor/corsat/purple/north,
 /area/corsat/omega/hallways)
 "hov" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tech_supply,
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -15047,14 +15047,14 @@
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/control)
 "hpj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/red,
 /turf/open/floor/corsat/blue,
 /area/corsat/theta/airlock/control)
 "hpl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay)
 "hpL" = (
@@ -15187,7 +15187,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/hangar)
 "htV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/blue/west,
 /area/corsat/sigma/southeast/datalab)
 "huu" = (
@@ -15532,7 +15532,7 @@
 /turf/open/floor/corsat/redcorner/west,
 /area/corsat/gamma/security/armory)
 "hDt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/spiralplate,
@@ -15558,7 +15558,7 @@
 /turf/open/floor/wood,
 /area/corsat/gamma/residential/east)
 "hEd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/pamphlet/skill/powerloader,
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/cargo)
@@ -15572,7 +15572,7 @@
 /turf/open/floor/corsat/darkgreen/northwest,
 /area/corsat/gamma/rnr/bar)
 "hEE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/tool/pen,
 /obj/item/tool/stamp{
@@ -15750,7 +15750,7 @@
 /turf/open/mars_cave/mars_cave_2,
 /area/corsat/sigma/biodome)
 "hIt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/assembly/timer,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/gamma/engineering)
@@ -15768,7 +15768,7 @@
 /turf/open/floor/corsat/purplewhitecorner/north,
 /area/corsat/gamma/sigmaremote)
 "hIS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8
 	},
@@ -15804,7 +15804,7 @@
 "hJC" = (
 /obj/item/reagent_container/glass/bucket,
 /obj/item/reagent_container/glass/bucket,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/minihoe,
 /obj/item/tool/hatchet,
 /obj/item/tool/shovel/spade,
@@ -15851,7 +15851,7 @@
 	dir = 1;
 	network = list("sigma")
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 80
@@ -15975,7 +15975,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/theta/biodome/complex)
 "hMZ" = (
@@ -16024,7 +16024,7 @@
 /area/corsat/theta/biodome)
 "hNK" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/pillbottles,
 /obj/item/storage/box/pillbottles,
 /turf/open/floor/corsat/greenwhite,
@@ -16116,7 +16116,7 @@
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/sigma/south/complex)
 "hQU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/complex)
@@ -16227,7 +16227,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/biodome/complex)
 "hUl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -16309,7 +16309,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/spiralplate,
@@ -16398,7 +16398,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/south/engineering)
 "hYw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/south/robotics)
@@ -16416,7 +16416,7 @@
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/gamma/engineering/core)
 "hYL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/power/apc/upgraded/no_power/north,
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/omega/offices)
@@ -16563,7 +16563,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/emergency_access)
 "icB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/bluegrey/northwest,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -16618,7 +16618,7 @@
 /turf/open/floor/corsat/theta,
 /area/corsat/theta/airlock/control)
 "ieC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/sigma/southeast/datalab)
 "ieM" = (
@@ -16715,7 +16715,7 @@
 /turf/open/floor/almayer/plating_striped/north,
 /area/corsat/gamma/sigmaremote)
 "ijh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/pistachios,
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -16748,7 +16748,7 @@
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/biodome/virology)
 "ijR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/evidencebag,
 /turf/open/floor/corsat/red,
 /area/corsat/sigma/hangar/security)
@@ -16757,7 +16757,7 @@
 /turf/open/floor/corsat/bluegreycorner/east,
 /area/corsat/sigma/hangar/office)
 "ikA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/purplewhite,
@@ -16820,7 +16820,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/hangar/office)
 "int" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tech_supply,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/sigma/south/robotics)
@@ -16852,7 +16852,7 @@
 /turf/open/floor/corsat/redcorner/north,
 /area/corsat/theta/airlock/control)
 "ioP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 4;
 	network = list("sigma")
@@ -16883,7 +16883,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/corsat/gamma/rnr/library)
 "ipK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/omega/complex)
@@ -16900,12 +16900,12 @@
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome)
 "iqk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/vials/random,
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/hydroponics)
 "iqo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/spiralplate,
@@ -16930,7 +16930,7 @@
 /area/corsat/sigma/south)
 "iqH" = (
 /obj/structure/window/reinforced,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 8
 	},
@@ -16968,7 +16968,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/gamma/engineering/atmos)
 "iru" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/chips,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/squares,
@@ -17029,7 +17029,7 @@
 /turf/open/floor/corsat/yellowcorner/west,
 /area/corsat/sigma/southeast/generator)
 "itz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /obj/effect/spawner/random/technology_scanner,
 /obj/structure/machinery/light{
@@ -17044,7 +17044,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/hangar/security)
 "itQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/spray/cleaner,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/medbay/morgue)
@@ -17230,7 +17230,7 @@
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/gamma/engineering/core)
 "izI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8
 	},
@@ -17261,7 +17261,7 @@
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/gamma/administration)
 "iAi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black,
 /obj/structure/machinery/light{
 	dir = 1
@@ -17281,7 +17281,7 @@
 /turf/open/floor/corsat/sterileplate,
 /area/corsat/gamma/kitchen)
 "iAJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert{
 	dir = 8
 	},
@@ -17490,7 +17490,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/emergency_access)
 "iFo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -17509,7 +17509,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/sigma/southeast/dataoffice)
@@ -17577,7 +17577,7 @@
 /turf/open/floor/corsat/arrow_east,
 /area/corsat/gamma/cargo)
 "iHa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "OmegaAccessC";
 	name = "Security Shutters";
@@ -17630,7 +17630,7 @@
 /turf/open/floor/corsat/yellowcorner/north,
 /area/corsat/gamma/residential/maint)
 "iIC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/noticeboard{
 	pixel_y = 32
 	},
@@ -17644,7 +17644,7 @@
 /turf/open/floor/corsat/tcomms/southwest,
 /area/corsat/sigma/south/complex)
 "iJc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -17710,7 +17710,7 @@
 /turf/open/floor/corsat/red/north,
 /area/corsat/omega/checkpoint)
 "iKy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -17800,7 +17800,7 @@
 /turf/open/floor/corsat/arrow_south,
 /area/corsat/gamma/hangar)
 "iMP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigar,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/cargo)
@@ -17838,7 +17838,7 @@
 /turf/open/floor/corsat,
 /area/corsat/gamma/cargo/disposal)
 "iNn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /obj/item/trash/cigbutt,
 /obj/structure/machinery/light{
@@ -17850,7 +17850,7 @@
 /turf/open/floor/corsat/browncorner/north,
 /area/corsat/omega/hallways)
 "iNA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/gamma/engineering/atmos)
@@ -17904,7 +17904,7 @@
 /turf/open/floor/corsat/purple/north,
 /area/corsat/gamma/residential)
 "iPa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/restraint/handcuffs,
 /obj/item/restraint/handcuffs,
 /turf/open/floor/corsat/red/west,
@@ -17945,7 +17945,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/south)
 "iPT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/theta/airlock/control)
@@ -18275,7 +18275,7 @@
 /turf/open/floor/corsat/bluecorner/east,
 /area/corsat/omega/control)
 "jav" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -18303,7 +18303,7 @@
 /turf/open/gm/dirt,
 /area/corsat/theta/biodome)
 "jbi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south/engineering)
@@ -18346,7 +18346,7 @@
 /turf/open/floor/plating,
 /area/corsat/gamma/hangar/checkpoint)
 "jbP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8
 	},
@@ -18417,7 +18417,7 @@
 /turf/open/floor/corsat/purple/southwest,
 /area/corsat/omega/hallways)
 "jcX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/medbay/morgue)
 "jcY" = (
@@ -18456,7 +18456,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/sigma/dorms)
 "jdr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen,
 /turf/open/floor/corsat/greenwhite,
@@ -18581,7 +18581,7 @@
 /turf/open/floor/plating/warnplate/east,
 /area/corsat/gamma/hangar)
 "jgi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/pizzabox/meat{
 	pixel_y = 8
 	},
@@ -18663,14 +18663,14 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/cargo)
 "jiB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/checkpoint)
 "jiN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/bluegrey/northeast,
 /area/corsat/gamma/hangar/office)
@@ -18694,7 +18694,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -18802,7 +18802,7 @@
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/gamma/biodome/toxins)
 "jmh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert{
 	dir = 1
 	},
@@ -18965,7 +18965,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tech_supply,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/south/robotics)
@@ -19085,7 +19085,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/hangar/arrivals)
 "jvQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -19098,7 +19098,7 @@
 /turf/open/floor/corsat/corsat_teleporter_static/southwest,
 /area/corsat/sigma/south/complex/teleporter)
 "jwC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/bodybag,
 /obj/item/bodybag,
 /obj/item/bodybag,
@@ -19191,7 +19191,7 @@
 /area/corsat/gamma/biodome/toxins)
 "jyC" = (
 /obj/structure/window/reinforced,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/hangar/office)
 "jyF" = (
@@ -19235,7 +19235,7 @@
 /turf/open/floor/corsat/darkgreen/east,
 /area/corsat/sigma/hangar/arrivals)
 "jAi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 80
@@ -19300,7 +19300,7 @@
 /turf/open/floor/plating/warnplate/west,
 /area/corsat/sigma/hangar)
 "jBZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /turf/open/floor/corsat/bluegrey/northwest,
 /area/corsat/sigma/south/offices)
@@ -19317,7 +19317,7 @@
 /turf/open/floor/corsat/yellow/northwest,
 /area/corsat/sigma/hangar/monorail/control)
 "jCp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/bluegrey/west,
@@ -19419,7 +19419,7 @@
 /area/corsat/omega/cargo)
 "jDW" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/yellow,
 /area/corsat/gamma/engineering)
@@ -19517,7 +19517,7 @@
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/hangar/cargo)
 "jHD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/hangar/cargo)
 "jIf" = (
@@ -19603,7 +19603,7 @@
 /turf/open/floor/corsat/blue/east,
 /area/corsat/theta/airlock/control)
 "jKW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/blue/northwest,
 /area/corsat/gamma/airlock/control)
@@ -19677,7 +19677,7 @@
 /area/corsat/sigma/airlock/south)
 "jMS" = (
 /obj/item/device/binoculars,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "SigmaControl";
 	name = "Observation Shutters";
@@ -19719,7 +19719,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome/testgrounds)
 "jNw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/assembly/infra,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/south/engineering)
@@ -19745,7 +19745,7 @@
 /turf/open/floor/corsat/red/northwest,
 /area/corsat/sigma/airlock/south/id)
 "jOC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/omega/offices)
@@ -19772,7 +19772,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/south)
 "jPw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/omega/complex)
 "jPB" = (
@@ -19808,7 +19808,7 @@
 /turf/open/floor/corsat/cargo,
 /area/corsat/gamma/cargo)
 "jQu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/lighter/zippo,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -19849,7 +19849,7 @@
 /turf/open/floor/wood,
 /area/corsat/theta/biodome/complex)
 "jRx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/gamma/biodome/virology)
@@ -19908,7 +19908,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay/lobby)
 "jTC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/toxin,
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/gamma/biodome/virology)
@@ -19953,7 +19953,7 @@
 /turf/open/floor/corsat/red/north,
 /area/corsat/gamma/foyer)
 "jVL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave,
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/omega/offices)
@@ -19969,7 +19969,7 @@
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/theta/biodome/complex)
 "jWn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/corsat/blue/southeast,
 /area/corsat/sigma/airlock/control)
@@ -19993,7 +19993,7 @@
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/theta/biodome/hydrowest)
 "jXi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/red/southwest,
@@ -20022,7 +20022,7 @@
 /turf/open/floor/corsat/darkgreen/west,
 /area/corsat/gamma/rnr)
 "jYi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/spiralplate,
@@ -20082,7 +20082,7 @@
 /turf/open/auto_turf/snow/layer1,
 /area/corsat/gamma/biodome)
 "jZt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/gamma/biodome/toxins)
 "jZu" = (
@@ -20106,7 +20106,7 @@
 /turf/open/floor/corsat/yellow/southeast,
 /area/corsat/gamma/residential/maint)
 "jZL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/hand_labeler,
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/gamma/biodome/toxins)
@@ -20230,7 +20230,7 @@
 /turf/open/floor/corsat/bluegrey/southeast,
 /area/corsat/sigma/airlock/south)
 "keb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/corsat/theta/airlock/control)
 "key" = (
@@ -20406,7 +20406,7 @@
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/airlock/south)
 "kiW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails,
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/sigma/south/offices)
@@ -20466,7 +20466,7 @@
 /turf/open/floor/corsat/yellow/northeast,
 /area/corsat/sigma/south/robotics)
 "kkO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/extinguisher,
 /turf/open/floor/corsat/yellow/southeast,
 /area/corsat/gamma/engineering)
@@ -20475,7 +20475,7 @@
 /turf/open/floor/corsat/purple,
 /area/corsat/sigma/south)
 "kkQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/bluegrey/east,
 /area/corsat/gamma/hangar/office)
 "kkS" = (
@@ -20526,7 +20526,7 @@
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/gamma/biodome/toxins)
 "kmq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/corsat/blue/southwest,
 /area/corsat/sigma/southeast/datalab)
@@ -20579,7 +20579,7 @@
 /turf/open/floor/corsat/bluegreycorner/east,
 /area/corsat/sigma/airlock/south)
 "kok" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/corsat/yellow/east,
@@ -20607,7 +20607,7 @@
 /turf/open/floor/corsat/brown/east,
 /area/corsat/sigma/north)
 "koz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -20649,7 +20649,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/theta/airlock/control)
 "kpq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/southeast/dataoffice)
@@ -20661,7 +20661,7 @@
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/theta/biodome/hydroeast)
 "kpC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/squares,
@@ -20689,12 +20689,12 @@
 /turf/open/floor/corsat/darkgreen/west,
 /area/corsat/gamma/foyer)
 "kqF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/sigma/south/complex)
 "kqG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/cable_coil,
 /turf/open/floor/corsat/yellow/northeast,
 /area/corsat/sigma/south/engineering)
@@ -20729,7 +20729,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/airlock/south/id)
 "kri" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/bluegrey/east,
@@ -20770,7 +20770,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/airlock/control)
 "ksf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/mech/tesla_energy_relay,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/sigma/south/robotics)
@@ -20881,7 +20881,7 @@
 /turf/open/floor/corsat/gamma,
 /area/corsat/omega/hallways)
 "kuI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/plate,
 /area/corsat/theta/airlock/control)
@@ -21079,7 +21079,7 @@
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/gamma/biodome/virology)
 "kCh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/red/southwest,
@@ -21105,7 +21105,7 @@
 /turf/open/floor/corsat/whitecorner,
 /area/corsat/gamma/hallwaysouth)
 "kCL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/south/robotics)
@@ -21163,7 +21163,7 @@
 /turf/open/floor/corsat/yellow,
 /area/corsat/sigma/airlock/control)
 "kEh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert{
 	dir = 8
 	},
@@ -21246,7 +21246,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/cargo/lobby)
 "kGD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/plate,
 /area/corsat/theta/airlock/control)
@@ -21257,7 +21257,7 @@
 /turf/open/floor/corsat/browncorner/north,
 /area/corsat/omega/hallways)
 "kGR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/lighter/random,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/brown,
@@ -21342,7 +21342,7 @@
 /area/corsat/gamma/residential/west)
 "kIH" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/toxin,
 /turf/open/floor/corsat/greenwhitecorner/west,
 /area/corsat/gamma/medbay)
@@ -21521,7 +21521,7 @@
 /turf/open/floor/corsat/red/north,
 /area/corsat/omega/airlocknorth/id)
 "kNv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/theta/biodome/complex)
 "kNz" = (
@@ -21539,7 +21539,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/theta/airlock/control)
 "kNS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/gamma/biodome/complex)
@@ -21694,7 +21694,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/hangar)
 "kSm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 1
 	},
@@ -21780,7 +21780,7 @@
 /area/corsat/sigma/cargo)
 "kVa" = (
 /obj/item/storage/box/gloves,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/greenwhite/west,
 /area/corsat/gamma/medbay)
@@ -22003,7 +22003,7 @@
 /turf/open/floor/corsat/red/southwest,
 /area/corsat/gamma/hangar/cargo)
 "laP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -22070,7 +22070,7 @@
 /turf/open/floor/corsat/whitetan/southeast,
 /area/corsat/gamma/residential/west)
 "ldO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/stamp/ce,
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/engineering)
@@ -22190,7 +22190,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/airlock/control)
 "lhq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/gamma/biodome/toxins)
@@ -22210,7 +22210,7 @@
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/sigma/south/complex)
 "lhH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
@@ -22233,7 +22233,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/hangar/cargo)
 "lhX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/shuttle/dropship/flight/lz1{
 	dir = 8
 	},
@@ -22276,7 +22276,7 @@
 /turf/open/floor/corsat/bluecorner,
 /area/corsat/sigma/south)
 "ljd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/bluegrey/north,
@@ -22313,7 +22313,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/theta/biodome/complex)
 "ljY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/surgery/scalpel,
 /obj/item/tool/surgery/retractor,
 /obj/item/tool/surgery/circular_saw,
@@ -22350,7 +22350,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/theta/biodome/complex)
 "llc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/book/manual/engineering_construction,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/omega/maint)
@@ -22385,7 +22385,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/hangar/office)
 "llT" = (
@@ -22413,7 +22413,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/gamma/residential/west)
 "lmX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
@@ -22478,7 +22478,7 @@
 /area/corsat/omega/hangar/security)
 "lpa" = (
 /obj/structure/machinery/power/apc/no_power/north,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/omega/containment)
@@ -22601,14 +22601,14 @@
 /turf/open/floor/plating/warnplate/north,
 /area/corsat/sigma/hangar)
 "lsT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 8
 	},
 /turf/open/floor/corsat/lightplate,
 /area/corsat/omega/complex)
 "lta" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer3/laptop/secure_data,
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/engineering)
@@ -22619,7 +22619,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay)
 "lts" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen,
 /obj/item/tool/stamp,
@@ -22716,7 +22716,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/lavatory)
 "lvw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1
 	},
@@ -22839,7 +22839,7 @@
 /turf/open/floor/corsat/redcorner/west,
 /area/corsat/sigma/south/security)
 "lyr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails,
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/gamma/biodome/virology)
@@ -22873,7 +22873,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/southeast/generator)
 "lzq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/southeast,
 /area/corsat/gamma/biodome/toxins)
 "lzr" = (
@@ -22904,7 +22904,7 @@
 /turf/open/floor/corsat/officesquares,
 /area/corsat/gamma/administration)
 "lzV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/assembly/igniter,
 /obj/item/device/assembly/voice,
 /turf/open/floor/corsat/plate,
@@ -23028,7 +23028,7 @@
 /turf/open/floor/corsat/yellow/northeast,
 /area/corsat/sigma/south/engineering)
 "lEe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "SigmaHangarH";
 	name = "Hangar Lockdown";
@@ -23131,7 +23131,7 @@
 /turf/open/floor/corsat/white,
 /area/corsat/sigma/dorms)
 "lHz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -23157,7 +23157,7 @@
 /turf/open/floor/corsat/purplewhitecorner/west,
 /area/corsat/theta/biodome/hydrowest)
 "lIg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -23174,7 +23174,7 @@
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "lIk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/corsat_bio_lock,
 /turf/open/floor/corsat/blue/east,
 /area/corsat/sigma/airlock/control)
@@ -23272,7 +23272,7 @@
 /area/corsat/omega/security)
 "lKV" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -23288,7 +23288,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/hangar/monorail/control)
 "lLd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/red/east,
 /area/corsat/sigma/south/security)
@@ -23326,7 +23326,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/showers)
 "lMd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/gamma/biodome/virology)
 "lMn" = (
@@ -23338,7 +23338,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tech_supply,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south/robotics)
@@ -23386,7 +23386,7 @@
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/gamma/biodome/toxins)
 "lNX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/spray/cleaner,
 /obj/structure/machinery/camera/autoname{
 	network = list("gamma")
@@ -23428,7 +23428,7 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/corsat/omega/control)
 "lPw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/greenwhite/northeast,
 /area/corsat/gamma/medbay/morgue)
 "lPy" = (
@@ -23458,7 +23458,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellow/northeast,
 /area/corsat/gamma/engineering/atmos)
 "lQd" = (
@@ -23474,7 +23474,7 @@
 /turf/open/floor/wood,
 /area/corsat/gamma/residential/researcher)
 "lQv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/form_printer,
 /obj/item/tool/pen,
 /obj/structure/machinery/light{
@@ -23649,7 +23649,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/north)
 "lVO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/greenwhite/north,
 /area/corsat/gamma/medbay/morgue)
@@ -23830,7 +23830,7 @@
 /turf/open/floor/corsat/blue/west,
 /area/corsat/theta/airlock/control)
 "lZZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/retrosquareslight,
@@ -23852,7 +23852,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/corsat/gamma/residential/lounge)
 "man" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/syringes,
 /turf/open/floor/corsat/purplewhite/southeast,
 /area/corsat/gamma/biodome/complex)
@@ -23860,14 +23860,14 @@
 /turf/open/floor/corsat/sigma,
 /area/corsat/sigma/airlock/south)
 "maF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8
 	},
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/gamma/biodome/complex)
 "maG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer3/laptop/secure_data,
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/south/engineering)
@@ -23895,7 +23895,7 @@
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/southeast/datalab)
 "mbe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/communications,
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/gamma/administration)
@@ -23909,7 +23909,7 @@
 /turf/open/floor/corsat/white/west,
 /area/corsat/gamma/residential)
 "mbS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/raisins,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/corsat/squares,
@@ -23969,7 +23969,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/maint)
 "mcR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/form_printer,
 /obj/item/tool/pen,
 /turf/open/floor/corsat/purplewhite,
@@ -24066,7 +24066,7 @@
 /turf/open/floor/wood,
 /area/corsat/gamma/residential/researcher)
 "mge" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/engineering)
@@ -24245,7 +24245,7 @@
 /turf/open/floor/corsat/officesquares,
 /area/corsat/sigma/airlock/east)
 "mmN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/light_bulb/tube/large,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/gamma/engineering)
@@ -24486,7 +24486,7 @@
 /turf/open/floor/corsat,
 /area/corsat/gamma/cargo/disposal)
 "msC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/taperecorder,
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/hangar/security)
@@ -24572,11 +24572,11 @@
 /turf/open/floor/corsat/red/northeast,
 /area/corsat/sigma/hangar/security)
 "muR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/theta,
 /area/corsat/theta/airlock/control)
 "muT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/retrosquareslight,
@@ -24838,7 +24838,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/gamma/residential/west)
 "mAP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 8;
 	network = list("gamma")
@@ -24922,7 +24922,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -25138,7 +25138,7 @@
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/north)
 "mMw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -25247,7 +25247,7 @@
 /area/corsat/sigma/southeast/datalab)
 "mPy" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/blue,
 /area/corsat/sigma/southeast/datalab)
 "mPE" = (
@@ -25291,7 +25291,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/hallwaysouth)
 "mRa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/plate,
@@ -25328,7 +25328,7 @@
 /turf/open/floor/corsat/darkgreen,
 /area/corsat/gamma/foyer)
 "mSJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/vials/random,
 /turf/open/floor/corsat/purplewhite/southeast,
 /area/corsat/theta/biodome/complex)
@@ -25382,7 +25382,7 @@
 /turf/open/floor/corsat/blue/north,
 /area/corsat/sigma/southeast/datalab)
 "mUd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/sterileplate,
 /area/corsat/gamma/kitchen)
 "mUr" = (
@@ -25474,7 +25474,7 @@
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/hangar/cargo)
 "mWS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/squares,
@@ -25658,7 +25658,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/metal{
 	amount = 30
 	},
@@ -25733,7 +25733,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/hallwaysouth)
 "neq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/screwdriver,
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -25824,7 +25824,7 @@
 /turf/open/floor/corsat/white/west,
 /area/corsat/gamma/residential/east)
 "ngR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder,
 /obj/item/stack/sheet/mineral/phoron/small_stack,
 /turf/open/floor/corsat/lightplate,
@@ -25919,7 +25919,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/gamma/residential/west)
 "njo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/bluegrey,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -25940,7 +25940,7 @@
 /turf/open/floor/carpet11_12/west,
 /area/corsat/gamma/biodome/complex)
 "njx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/pen,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/omega/complex)
@@ -26082,7 +26082,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/sigmaremote)
 "nmP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -26118,7 +26118,7 @@
 /turf/open/mars_cave/mars_cave_2,
 /area/corsat/sigma/biodome/scrapyard)
 "nnV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/incendiary,
 /obj/item/explosive/grenade/incendiary,
 /turf/open/floor/asteroidplating,
@@ -26188,12 +26188,12 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/residential/researcher)
 "npi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/airlock/south)
 "npj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "SigmaWestD";
 	name = "Entrance Airlock Control";
@@ -26213,7 +26213,7 @@
 /area/corsat/sigma/hangar/monorail)
 "npJ" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/communications{
 	dir = 1
 	},
@@ -26233,7 +26233,7 @@
 /turf/open/floor/corsat/blue,
 /area/corsat/sigma/airlock/control)
 "npS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/omega/complex)
 "nqg" = (
@@ -26250,7 +26250,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/hangar/arrivals)
 "nqQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -26283,13 +26283,13 @@
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/theta/biodome/complex)
 "nrB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/form_printer,
 /obj/item/tool/pen,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/omega/complex)
 "nrI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /turf/open/floor/corsat/bluegrey/southwest,
 /area/corsat/sigma/southeast/dataoffice)
@@ -26462,7 +26462,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/hangar/checkpoint)
 "nwt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -26739,7 +26739,7 @@
 /area/corsat/gamma/security)
 "nFO" = (
 /obj/structure/machinery/power/apc/no_power/north,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/hangar/office)
@@ -26751,14 +26751,14 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/inaccessible)
 "nGk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/med_data/laptop{
 	dir = 1
 	},
 /turf/open/floor/corsat/greenwhite/east,
 /area/corsat/gamma/medbay)
 "nGR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/red/north,
 /area/corsat/theta/airlock/control)
@@ -26955,7 +26955,7 @@
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/omega/offices)
 "nKM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/spiralplate,
@@ -26988,7 +26988,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/gamma/engineering)
 "nLG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/omega/complex)
 "nLR" = (
@@ -26996,7 +26996,7 @@
 /turf/open/floor/corsat/red,
 /area/corsat/omega/security)
 "nLU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer3/laptop/secure_data,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/omega/maint)
@@ -27035,7 +27035,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/corsat/gamma/rnr/library)
 "nME" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/red,
 /turf/open/floor/corsat/red/southwest,
@@ -27099,13 +27099,13 @@
 /turf/open/floor/corsat/red/southwest,
 /area/corsat/omega/hangar/security)
 "nOw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/gamma/biodome/virology)
 "nOI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/weapon/gun/pistol/vp70,
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/security)
@@ -27121,7 +27121,7 @@
 /area/corsat/gamma/residential/west)
 "nPs" = (
 /obj/item/storage/box/monkeycubes,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -27173,7 +27173,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/toxins)
 "nQv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -27201,7 +27201,7 @@
 /turf/open/floor/corsat/red/west,
 /area/corsat/gamma/airlock/control)
 "nQN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	network = list("gamma")
 	},
@@ -27331,7 +27331,7 @@
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/gamma/sigmaremote)
 "nSW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/omega/offices)
 "nTi" = (
@@ -27495,7 +27495,7 @@
 /turf/open/floor/corsat/darkgreen/north,
 /area/corsat/sigma/hangar/monorail)
 "nYK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/omega/offices)
@@ -27507,7 +27507,7 @@
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/sigma/south/complex)
 "nZb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -27552,7 +27552,7 @@
 /turf/open/floor/corsat/lightplate,
 /area/corsat/sigma/south/complex)
 "oaM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/powercell,
 /obj/effect/landmark/lv624/xeno_tunnel,
 /turf/open/floor/corsat/plate,
@@ -27586,7 +27586,7 @@
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/hangar/cargo)
 "obJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/spiralplate,
@@ -27608,7 +27608,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/lavatory)
 "ocd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 1;
 	network = list("sigma")
@@ -27663,7 +27663,7 @@
 /turf/open/floor/corsat/yellowcorner/west,
 /area/corsat/sigma/southeast/datamaint)
 "odk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
@@ -27671,7 +27671,7 @@
 /turf/open/floor/corsat/lightplate,
 /area/corsat/sigma/south/complex)
 "odp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /obj/item/trash/cigbutt,
 /turf/open/floor/corsat/blue/east,
@@ -27769,7 +27769,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south)
 "ofp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /obj/effect/landmark/lv624/xeno_tunnel,
 /turf/open/floor/corsat/bluegrey/northwest,
@@ -27784,7 +27784,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/virology)
 "ofA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -27836,7 +27836,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/sigma/south/complex)
 "ogW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/donkpockets,
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/security)
@@ -27847,7 +27847,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/hangar/checkpoint)
 "ohb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/beakers,
 /obj/item/storage/box/beakers,
 /obj/item/tool/hand_labeler,
@@ -27861,7 +27861,7 @@
 /area/corsat/gamma/engineering)
 "ohy" = (
 /obj/structure/sign/safety/biohazard,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/gamma/biodome/virology)
 "ohB" = (
@@ -27923,7 +27923,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/glasses/meson,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/gamma/engineering)
@@ -27952,7 +27952,7 @@
 /area/corsat/sigma/south/security)
 "okM" = (
 /obj/structure/machinery/power/apc/no_power/north,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen,
 /turf/open/floor/corsat/bluegrey/north,
@@ -28036,7 +28036,7 @@
 /turf/open/floor/plating/warnplate/east,
 /area/corsat/sigma/hangar)
 "onn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -28065,7 +28065,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/gamma/residential/west)
 "onC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/sigma/south/complex)
 "onT" = (
@@ -28088,7 +28088,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/hangar/security)
 "oot" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave,
 /turf/open/floor/corsat/sterileplate,
 /area/corsat/gamma/kitchen)
@@ -28112,7 +28112,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome/gunrange)
 "opC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced,
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 4
@@ -28140,7 +28140,7 @@
 /turf/open/mars,
 /area/corsat/sigma/biodome)
 "oqb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/restraint/handcuffs,
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/checkpoint)
@@ -28163,7 +28163,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data{
 	req_access_txt = "201"
 	},
@@ -28212,7 +28212,7 @@
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/gamma/hangar/office)
 "orp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/red/west,
 /area/corsat/sigma/hangar/security)
 "orE" = (
@@ -28236,7 +28236,7 @@
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/airlock/south)
 "orV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -28508,7 +28508,7 @@
 /turf/open/space/transit/east/shuttlespace_ew10,
 /area/corsat/sigma/hangar/monorail/railcart_transit)
 "ozW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/extinguisher,
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/theta/biodome/complex)
@@ -28894,7 +28894,7 @@
 /turf/open/gm/dirtgrassborder/west,
 /area/corsat/theta/biodome)
 "oLf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/yellow/southwest,
 /area/corsat/sigma/airlock/control)
@@ -28944,7 +28944,7 @@
 /turf/open/floor/corsat/purplewhite/southeast,
 /area/corsat/sigma/south/complex)
 "oLM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/suit/chef/classic,
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -29079,7 +29079,7 @@
 /turf/open/floor/corsat,
 /area/corsat/sigma/dorms)
 "oPE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellow/southwest,
 /area/corsat/gamma/engineering)
 "oPI" = (
@@ -29095,7 +29095,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/biodome/virology)
 "oQp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/airlock/south)
@@ -29185,12 +29185,12 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/hangar/arrivals)
 "oRT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/yellow,
 /area/corsat/omega/maint)
 "oRZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/sigma/south/robotics)
 "oSa" = (
@@ -29212,7 +29212,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/sigma/hangar/checkpoint)
 "oSA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/bluegrey,
 /area/corsat/sigma/airlock/east)
@@ -29294,7 +29294,7 @@
 /area/corsat/omega/cargo)
 "oUY" = (
 /obj/item/device/binoculars,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "GammaControl";
 	name = "Observation Shutters";
@@ -29490,7 +29490,7 @@
 /turf/open/floor/corsat/brown/east,
 /area/corsat/gamma/foyer)
 "oZg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/syringes,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/biodome/toxins)
@@ -29501,7 +29501,7 @@
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/gamma/biodome/toxins)
 "oZO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/brown/north,
 /area/corsat/sigma/cargo)
 "oZP" = (
@@ -29535,7 +29535,7 @@
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "pav" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/donkpockets,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/omega/complex)
@@ -29697,7 +29697,7 @@
 /turf/open/floor/corsat/darkgreen/east,
 /area/corsat/gamma/rnr)
 "pek" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/yellowcorner/north,
 /area/corsat/theta/airlock/control)
@@ -29745,7 +29745,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/corsat/gamma/rnr/arcade)
 "pfp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/corsat/yellow/northwest,
@@ -29756,7 +29756,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome/scrapyard)
 "pfC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
@@ -29842,7 +29842,7 @@
 /turf/open/floor/corsat/bluegreycorner/east,
 /area/corsat/gamma/airlock/north)
 "pih" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/robot_parts/robot_component/radio,
 /turf/open/floor/corsat/yellow/southwest,
 /area/corsat/sigma/south/robotics)
@@ -29858,7 +29858,7 @@
 /area/corsat/sigma/southeast/dataoffice)
 "pis" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/clipboard,
 /obj/item/clipboard,
@@ -29910,7 +29910,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/omega/complex)
 "pjF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/omega/complex)
 "pjG" = (
@@ -29921,7 +29921,7 @@
 /turf/open/floor/corsat/darkgreen,
 /area/corsat/gamma/foyer)
 "pjY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/corsat/brown/southwest,
 /area/corsat/sigma/cargo)
@@ -29967,7 +29967,7 @@
 /turf/open/floor/corsat/purplewhitecorner/east,
 /area/corsat/gamma/biodome/complex)
 "plm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/hangar)
 "plp" = (
@@ -30008,7 +30008,7 @@
 /turf/open/floor/corsat/purplewhitecorner/east,
 /area/corsat/theta/biodome/complex)
 "png" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/theta/airlock/control)
@@ -30074,7 +30074,7 @@
 	dir = 8;
 	network = list("sigma")
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert{
 	dir = 8
 	},
@@ -30084,7 +30084,7 @@
 /turf/open/floor/asteroidwarning/north,
 /area/corsat/sigma/biodome)
 "poP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/retrosquareslight,
@@ -30160,7 +30160,7 @@
 /turf/open/floor/corsat/red/southeast,
 /area/corsat/omega/security)
 "prp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/corsat/yellow/southeast,
 /area/corsat/gamma/engineering)
@@ -30262,7 +30262,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/southeast/telecomm)
 "pub" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /obj/item/trash/cigbutt,
 /turf/open/floor/corsat/squares,
@@ -30287,7 +30287,7 @@
 /turf/open/floor/corsat/red/west,
 /area/corsat/gamma/security/armory)
 "pvz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/brown/northwest,
 /area/corsat/sigma/cargo)
@@ -30477,7 +30477,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/cargo)
 "pAy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/bluegrey/east,
 /area/corsat/omega/offices)
@@ -30488,7 +30488,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/gamma/canteen)
 "pAZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/red/east,
 /area/corsat/omega/security)
@@ -30551,7 +30551,7 @@
 /turf/open/floor/corsat/white/north,
 /area/corsat/gamma/residential)
 "pCy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/fire,
 /obj/structure/machinery/camera/autoname{
 	dir = 1;
@@ -30568,7 +30568,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/security)
 "pCJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -30583,7 +30583,7 @@
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/sigma/south/complex)
 "pCR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/south/offices)
@@ -30652,7 +30652,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/hallwaysouth)
 "pEu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 8;
 	network = list("omega")
@@ -30782,7 +30782,7 @@
 /turf/open/floor/corsat/purplewhitecorner,
 /area/corsat/gamma/biodome/virology)
 "pJd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/security)
@@ -30791,7 +30791,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/showers)
 "pJi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/theta/biodome/complex)
 "pJp" = (
@@ -30830,7 +30830,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/researcher)
 "pKw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/bluegrey,
 /area/corsat/sigma/southeast/dataoffice)
@@ -30851,7 +30851,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay)
 "pKU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/fire,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay)
@@ -30951,7 +30951,7 @@
 /turf/open/floor/corsat/purplewhitecorner/west,
 /area/corsat/omega/complex)
 "pOc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave,
 /turf/open/floor/corsat/red/northwest,
 /area/corsat/omega/security)
@@ -31283,7 +31283,7 @@
 /turf/open/floor/corsat/darkgreencorner,
 /area/corsat/gamma/rnr)
 "pVI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/screwdriver,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/engineering)
@@ -31454,7 +31454,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/theta/airlock/west/id)
 "pZs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/red/southeast,
 /area/corsat/sigma/airlock/control)
@@ -31469,7 +31469,7 @@
 	dir = 4;
 	pixel_x = 11
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate{
 	pixel_x = 1;
 	pixel_y = 3
@@ -31745,7 +31745,7 @@
 /turf/open/floor/wood,
 /area/corsat/gamma/rnr/library)
 "qiq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/lighter/random,
 /obj/item/clothing/glasses/meson,
 /turf/open/floor/corsat/squares,
@@ -31788,7 +31788,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/omega/maint)
 "qjZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/corsat/omega/complex)
@@ -31905,7 +31905,7 @@
 /turf/open/floor/corsat/red/southeast,
 /area/corsat/gamma/security)
 "qoz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -31964,7 +31964,7 @@
 /turf/open/floor/corsat/greenwhite/north,
 /area/corsat/gamma/medbay/lobby)
 "qqi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellow,
 /area/corsat/sigma/south/robotics)
 "qqj" = (
@@ -31994,7 +31994,7 @@
 /turf/open/floor/corsat/whitetan/east,
 /area/corsat/gamma/canteen)
 "qqJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/airlock/control)
@@ -32283,7 +32283,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/bluegrey/east,
 /area/corsat/sigma/south/offices)
@@ -32304,12 +32304,12 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/gamma/biodome/complex)
 "qyG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/restraint/handcuffs,
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/security)
@@ -32359,7 +32359,7 @@
 /obj/structure/machinery/computer/cameras{
 	network = list("theta")
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/red/north,
 /area/corsat/theta/airlock/control)
 "qzt" = (
@@ -32475,7 +32475,7 @@
 /turf/open/floor/corsat/red/southwest,
 /area/corsat/omega/security)
 "qDW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1
 	},
@@ -32554,7 +32554,7 @@
 /turf/open/mars_cave/mars_dirt_4,
 /area/corsat/sigma/biodome)
 "qFG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/corsat/yellow/southwest,
 /area/corsat/gamma/engineering)
@@ -32622,7 +32622,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/engineering/lobby)
 "qHD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/powercell,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/squares,
@@ -32736,7 +32736,7 @@
 /area/corsat/omega/security)
 "qKG" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -32775,7 +32775,7 @@
 /turf/open/floor/corsat/blue/northeast,
 /area/corsat/sigma/airlock/control)
 "qLv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/corsat/greenwhite,
 /area/corsat/gamma/medbay)
@@ -32982,7 +32982,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay/surgery)
 "qQL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/bluegrey/southwest,
@@ -32994,7 +32994,7 @@
 /turf/open/floor/corsat/yellow,
 /area/corsat/sigma/south/engineering)
 "qRl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/book/manual/chef_recipes,
 /turf/open/floor/corsat/sterileplate,
 /area/corsat/gamma/kitchen)
@@ -33002,7 +33002,7 @@
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/corsat/omega/complex)
 "qRw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/security)
 "qRF" = (
@@ -33054,14 +33054,14 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data{
 	dir = 4
 	},
 /turf/open/floor/corsat/red/west,
 /area/corsat/theta/airlock/control)
 "qSQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1
 	},
@@ -33281,12 +33281,12 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/corsat/gamma/biodome/complex)
 "qZy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/pillbottles,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/gamma/biodome/toxins)
 "qZC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 80
@@ -33367,7 +33367,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/hangar)
 "rbE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /turf/open/floor/corsat/red/west,
 /area/corsat/sigma/hangar/id)
@@ -33395,12 +33395,12 @@
 /turf/open/floor/corsat/corsat_teleporter_static/southwest,
 /area/corsat/sigma/south/complex/teleporter)
 "rdo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/maint)
 "rdB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south/engineering)
 "rdH" = (
@@ -33562,7 +33562,7 @@
 /turf/open/floor/plating/warnplate/southwest,
 /area/corsat/gamma/hangar)
 "rhq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/bluegrey/southeast,
 /area/corsat/sigma/southeast/datalab)
 "rhs" = (
@@ -33570,14 +33570,14 @@
 /turf/open/floor/almayer/plating_striped/north,
 /area/corsat/gamma/sigmaremote)
 "rhw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper/Toxin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/biodome/toxins)
 "rhC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder{
 	pixel_y = 5
 	},
@@ -33622,18 +33622,18 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/theta/airlock/west)
 "riO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/biodome/toxins)
 "rjk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/red,
 /area/corsat/omega/security)
 "rjp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/bodybags,
 /turf/open/floor/corsat/green/northeast,
 /area/corsat/gamma/medbay/morgue)
@@ -33728,7 +33728,7 @@
 /turf/open/floor/corsat/bluegreycorner,
 /area/corsat/gamma/hangar/flightcontrol)
 "rmf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/spiralplate,
@@ -33759,7 +33759,7 @@
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/corsat/theta/biodome/complex)
 "rnG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/glasses/meson,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/corsat/yellow/southeast,
@@ -33865,7 +33865,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/control)
 "rqG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/corsat/greenwhite,
 /area/corsat/gamma/medbay/morgue)
@@ -33942,7 +33942,7 @@
 /turf/open/floor/corsat/bluecorner/west,
 /area/corsat/theta/airlock/control)
 "rtg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/slime,
 /obj/item/device/flashlight/slime{
 	pixel_y = 8
@@ -34027,7 +34027,7 @@
 /turf/open/floor/corsat/white/northwest,
 /area/corsat/sigma/dorms)
 "rvy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/gamma/hangar/flightcontrol)
 "rvP" = (
@@ -34055,7 +34055,7 @@
 /turf/open/floor/corsat/yellow,
 /area/corsat/gamma/engineering/atmos)
 "rwe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails,
 /turf/open/floor/corsat/plate,
 /area/corsat/theta/airlock/control)
@@ -34079,7 +34079,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay/lobby)
 "rwH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /obj/structure/machinery/colony_floodlight_switch{
 	desc = "This switch controls the floodlights around the biodome. It only functions when there is power."
@@ -34093,7 +34093,7 @@
 /turf/open/floor/plating/warnplate/west,
 /area/corsat/sigma/hangar)
 "rwO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/structure/machinery/light{
 	dir = 1
@@ -34104,11 +34104,11 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/red/north,
 /area/corsat/sigma/hangar/security)
 "rwY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stock_parts/matter_bin/super,
 /obj/item/stock_parts/capacitor/super,
 /turf/open/floor/corsat/yellow/west,
@@ -34124,7 +34124,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/southeast/generator)
 "rxl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/spiralplate,
@@ -34151,7 +34151,7 @@
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/gamma/sigmaremote)
 "ryk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/mech/armor_booster,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/south/robotics)
@@ -34246,7 +34246,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
 "rAt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -34256,7 +34256,7 @@
 /turf/open/floor/corsat/officesquares,
 /area/corsat/gamma/hangar/flightcontrol)
 "rAD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/yellowcorner/east,
 /area/corsat/gamma/airlock/control)
@@ -34280,7 +34280,7 @@
 /turf/open/floor/corsat/greenwhite/southwest,
 /area/corsat/gamma/medbay)
 "rBt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/engineering)
@@ -34288,7 +34288,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/bluegrey/east,
 /area/corsat/sigma/south/offices)
@@ -34373,7 +34373,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/corsat_bio_lock,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -34398,7 +34398,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/gamma/airlock/control)
 "rEZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
@@ -34444,7 +34444,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/camera/autoname{
 	dir = 4;
 	network = list("sigma")
@@ -34504,7 +34504,7 @@
 /turf/open/floor/almayer/research/containment/corner_var1/containment_corner_variant_2,
 /area/corsat/inaccessible)
 "rIk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/spiralplate,
@@ -34549,7 +34549,7 @@
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/sigma/airlock/control)
 "rIS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -34562,7 +34562,7 @@
 /turf/open/floor/corsat/white,
 /area/corsat/sigma/dorms)
 "rJj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /obj/item/clothing/glasses/welding,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -34597,7 +34597,7 @@
 /turf/open/floor/corsat/redcorner/west,
 /area/corsat/omega/checkpoint)
 "rKz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/book/manual/ripley_build_and_repair,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south/robotics)
@@ -34640,7 +34640,7 @@
 /turf/open/floor/corsat/darkgreen/east,
 /area/corsat/gamma/rnr)
 "rLH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/syringes,
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/gamma/biodome/virology)
@@ -34692,7 +34692,7 @@
 /turf/open/floor/corsat,
 /area/corsat/sigma/dorms)
 "rMY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/glass,
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/security)
@@ -34876,7 +34876,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/corsat/theta/biodome)
 "rRX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/redcorner/west,
 /area/corsat/sigma/hangar/id)
@@ -34885,7 +34885,7 @@
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/gamma/biodome/toxins)
 "rSl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/omega/offices)
@@ -34903,7 +34903,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/theta/airlock/west/id)
 "rSv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/smokebomb,
 /obj/item/explosive/grenade/smokebomb,
 /turf/open/floor/asteroidplating,
@@ -34952,7 +34952,7 @@
 /turf/open/floor/plating,
 /area/corsat/gamma/residential/showers)
 "rTN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert{
 	dir = 1
 	},
@@ -35008,7 +35008,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/red/southwest,
@@ -35017,7 +35017,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/spiralplate,
@@ -35088,7 +35088,7 @@
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/airlock/south)
 "rXX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -35125,7 +35125,7 @@
 /turf/open/floor/corsat/purplewhitecorner,
 /area/corsat/omega/complex)
 "rYT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/yellow,
@@ -35165,7 +35165,7 @@
 /turf/open/floor/corsat/purplewhite/southeast,
 /area/corsat/gamma/biodome/toxins)
 "rZO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	network = list("sigma")
 	},
@@ -35295,7 +35295,7 @@
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/gamma/hangar/flightcontrol)
 "seO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/t_scanner,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south/engineering)
@@ -35414,7 +35414,7 @@
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/gamma/administration)
 "sic" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/corsat_bio_lock,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/airlock/south)
@@ -35425,7 +35425,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/sigma/south/complex)
 "sil" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/corsat/red,
 /area/corsat/gamma/security)
@@ -35446,7 +35446,7 @@
 /turf/open/floor/corsat/brown/west,
 /area/corsat/omega/cargo)
 "siz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -35553,7 +35553,7 @@
 /turf/open/floor/corsat,
 /area/corsat/inaccessible)
 "skU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/roller,
 /obj/item/roller,
 /obj/item/roller,
@@ -35597,7 +35597,7 @@
 /turf/open/floor/corsat/darkgreen,
 /area/corsat/gamma/foyer)
 "slZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/robot_module/janitor,
 /turf/open/floor/corsat/yellow/northwest,
 /area/corsat/sigma/south/robotics)
@@ -35908,7 +35908,7 @@
 /turf/open/floor/corsat/blue/west,
 /area/corsat/omega/control)
 "suE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/bluegrey/west,
@@ -35980,7 +35980,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -36007,12 +36007,12 @@
 /turf/open/floor/corsat/marked,
 /area/corsat/omega/checkpoint)
 "sxs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tech_supply,
 /turf/open/floor/corsat/yellow/northwest,
 /area/corsat/sigma/south/robotics)
 "sxw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/high_explosive,
 /obj/item/explosive/grenade/high_explosive,
 /turf/open/floor/asteroidplating,
@@ -36107,7 +36107,7 @@
 /turf/open/floor/corsat/purplewhitecorner/west,
 /area/corsat/omega/complex)
 "sBh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -36277,7 +36277,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/hangar)
 "sGd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/omega/maint)
@@ -36307,7 +36307,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/sigma/dorms)
 "sGO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/gamma/engineering)
@@ -36432,7 +36432,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/researcher)
 "sKu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -36527,7 +36527,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/checkpoint)
 "sPD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagent_analyzer,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/toxins)
@@ -36549,7 +36549,7 @@
 /turf/open/floor/corsat/bluegrey/southwest,
 /area/corsat/sigma/airlock/south)
 "sQd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/glasses/meson,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/yellow,
@@ -36587,7 +36587,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/theta/biodome/hydroeast)
 "sQO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/bluegrey/southwest,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -36627,7 +36627,7 @@
 /turf/open/floor/corsat/red/northwest,
 /area/corsat/omega/hangar/security)
 "sSf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/communications,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -36694,7 +36694,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/gamma/residential/maint)
 "sUk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/red/southwest,
 /area/corsat/theta/airlock/control)
@@ -36762,7 +36762,7 @@
 /turf/open/floor/corsat/greenwhite/north,
 /area/corsat/gamma/medbay/lobby)
 "sVv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/handset,
 /turf/open/floor/corsat/bluegreycorner,
 /area/corsat/sigma/southeast/datalab)
@@ -36831,12 +36831,12 @@
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south)
 "sWV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/vials/random,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/theta/biodome/complex)
 "sWW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/airlock/control)
 "sXf" = (
@@ -36870,7 +36870,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/complex)
 "sXT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/donkpockets,
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/omega/offices)
@@ -36892,7 +36892,7 @@
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/sigma/airlock/east)
 "sYi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/gamma/engineering)
@@ -36901,7 +36901,7 @@
 /area/corsat/omega/hangar)
 "sYK" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 1;
 	network = list("gamma")
@@ -36909,7 +36909,7 @@
 /turf/open/floor/corsat/red,
 /area/corsat/gamma/security)
 "sYT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool,
 /obj/item/tool/screwdriver,
 /obj/item/tool/wrench,
@@ -36928,7 +36928,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_east,
 /area/corsat/theta/biodome)
 "sZv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails,
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/control)
@@ -36940,7 +36940,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 8;
 	network = list("gamma")
@@ -36954,7 +36954,7 @@
 /turf/open/floor/corsat/greenwhite/north,
 /area/corsat/gamma/medbay)
 "tah" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/masks,
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/omega/complex)
@@ -36974,7 +36974,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/red/west,
@@ -37036,7 +37036,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/airlocknorth)
 "tcO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box,
 /obj/item/storage/box{
 	pixel_x = 3;
@@ -37060,7 +37060,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/virology)
 "tdX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/airlock/control)
@@ -37173,7 +37173,7 @@
 /area/corsat/sigma/biodome/scrapyard)
 "tgb" = (
 /obj/structure/machinery/computer/secure_data,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/red/northwest,
 /area/corsat/gamma/security)
 "tge" = (
@@ -37201,7 +37201,7 @@
 /area/corsat/omega/maint)
 "tgQ" = (
 /obj/structure/sign/safety/biohazard,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder,
 /obj/item/stack/sheet/mineral/phoron/small_stack,
 /turf/open/floor/corsat/purplewhite,
@@ -37336,7 +37336,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/hangar/monorail/control)
 "tkN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/yellowcorner/west,
 /area/corsat/sigma/airlock/control)
@@ -37368,7 +37368,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/airlocknorth)
 "tlu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/structure/machinery/camera/autoname{
 	network = list("gamma")
@@ -37417,7 +37417,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/theta/airlock/control)
 "tmL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "GammaEastD";
 	name = "Entrance Airlock Control";
@@ -37492,7 +37492,7 @@
 /turf/open/floor/corsat/whitetan/north,
 /area/corsat/gamma/residential/west)
 "toY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -37510,7 +37510,7 @@
 /area/corsat/gamma/engineering)
 "tpe" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/popcorn,
 /turf/open/floor/corsat/brown,
 /area/corsat/omega/cargo)
@@ -37561,7 +37561,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_east,
 /area/corsat/theta/biodome)
 "tpN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/robot_module/medic,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south/robotics)
@@ -37650,7 +37650,7 @@
 /turf/open/floor/corsat/whitetan/north,
 /area/corsat/gamma/residential/west)
 "tsH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -37809,7 +37809,7 @@
 /area/corsat/omega/hallways)
 "twB" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data{
 	dir = 1
 	},
@@ -37867,7 +37867,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome/testgrounds)
 "tyt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/south/offices)
@@ -37917,7 +37917,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/maint)
 "tzl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/restraint/handcuffs/zip,
 /turf/open/floor/corsat/plate,
@@ -37927,7 +37927,7 @@
 	dir = 8;
 	health = 80
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/tcomms,
 /area/corsat/sigma/southeast/datalab)
 "tzD" = (
@@ -38016,7 +38016,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/sigma/laundry)
 "tCg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/medbay)
@@ -38133,7 +38133,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
 /area/corsat/theta/biodome)
 "tFV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -38156,7 +38156,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -38170,7 +38170,7 @@
 /turf/open/floor/corsat/omega,
 /area/corsat/omega/hallways)
 "tHv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/adv,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay)
@@ -38209,7 +38209,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/complex)
 "tIz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /obj/effect/spawner/random/tool,
 /obj/structure/pipes/vents/pump{
@@ -38267,7 +38267,7 @@
 /turf/open/floor/corsat/purple/northwest,
 /area/corsat/gamma/biodome/complex)
 "tKv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 8;
 	network = list("omega")
@@ -38294,7 +38294,7 @@
 /turf/open/floor/corsat/red/west,
 /area/corsat/sigma/hangar/monorail/control)
 "tLK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "ThetaNorthD";
 	name = "Entrance Airlock Control";
@@ -38332,7 +38332,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/hangar/monorail)
 "tMu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -38378,7 +38378,7 @@
 /turf/open/floor/corsat/brown/west,
 /area/corsat/sigma/cargo)
 "tNH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/gloves,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/biodome/virology)
@@ -38433,7 +38433,7 @@
 /turf/open/floor/corsat/whitecorner/east,
 /area/corsat/sigma/south)
 "tOI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/screwdriver,
 /turf/open/floor/corsat/yellow/southwest,
 /area/corsat/sigma/south/robotics)
@@ -38475,7 +38475,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/donkpockets,
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/sigma/south/complex)
@@ -38529,7 +38529,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/sigma/airlock/south)
 "tQB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "OmegaA";
 	name = "Airlock Control";
@@ -38581,7 +38581,7 @@
 /turf/open/floor/corsat/darkgreencorner/east,
 /area/corsat/gamma/hallwaysouth)
 "tRZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/red,
 /turf/open/floor/corsat/red/northwest,
@@ -38834,7 +38834,7 @@
 /turf/open/floor/corsat/purplewhitecorner,
 /area/corsat/theta/biodome/complex)
 "tZa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -38870,7 +38870,7 @@
 /turf/open/floor/corsat/darkgreen/north,
 /area/corsat/sigma/hangar/monorail)
 "uao" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/corsat/greenwhite/southwest,
 /area/corsat/gamma/medbay/lobby)
@@ -38981,7 +38981,7 @@
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/hangar/cargo)
 "uds" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/corsat/yellowcorner,
 /area/corsat/gamma/engineering)
@@ -39055,7 +39055,7 @@
 /turf/open/floor/carpet7_3/west,
 /area/corsat/gamma/residential/lounge)
 "ueR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -39085,7 +39085,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/complex)
 "ugd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/plate,
@@ -39138,12 +39138,12 @@
 /turf/open/floor/corsat/darkgreencorner/north,
 /area/corsat/gamma/rnr)
 "uhA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/vials/random,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/virology)
 "uhC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/gamma/engineering)
 "uhD" = (
@@ -39216,7 +39216,7 @@
 /turf/open/floor/corsat/red/west,
 /area/corsat/gamma/hangar/checkpoint)
 "ukx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 1
 	},
@@ -39229,7 +39229,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced,
 /obj/item/storage/donut_box,
 /turf/open/floor/corsat/bluegrey/west,
@@ -39316,7 +39316,7 @@
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/sigma/south/engineering)
 "umG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -39331,7 +39331,7 @@
 /turf/open/floor/corsat/yellowcorner/east,
 /area/corsat/sigma/south/robotics)
 "unb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/high_explosive/frag,
 /obj/item/explosive/grenade/high_explosive/frag,
 /turf/open/floor/asteroidplating,
@@ -39372,7 +39372,7 @@
 /turf/open/floor/carpet15_15/west,
 /area/corsat/omega/offices)
 "uoz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/south/offices)
@@ -39387,7 +39387,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/hangar/checkpoint)
 "uoW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/wirecutters,
 /obj/item/stack/cable_coil,
 /turf/open/floor/corsat/yellow/north,
@@ -39582,7 +39582,7 @@
 /turf/open/floor/corsat/red/southwest,
 /area/corsat/omega/security)
 "uum" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/robot_module/butler,
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/south/robotics)
@@ -39591,7 +39591,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/residential/east)
 "uuy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/handset,
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/sigma/southeast/datalab)
@@ -39644,7 +39644,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/hangar/security)
 "uvx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/airlock/south)
@@ -39688,7 +39688,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/airlock/south/id)
 "uwG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /obj/structure/machinery/light,
 /turf/open/floor/corsat/spiralplate,
@@ -39721,12 +39721,12 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/checkpoint)
 "uxm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/botanydisk,
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/corsat/theta/biodome/complex)
 "uxp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/showers)
@@ -39735,7 +39735,7 @@
 /turf/open/floor/corsat/blue/southeast,
 /area/corsat/sigma/southeast/datalab)
 "uxX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /turf/open/floor/corsat/spiralplate,
@@ -39769,7 +39769,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/sigmaremote)
 "uyQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /turf/open/floor/corsat/bluegrey/west,
 /area/corsat/sigma/hangar/office)
@@ -39791,7 +39791,7 @@
 /turf/open/floor/carpet15_15/west,
 /area/corsat/gamma/administration)
 "uzD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -39812,7 +39812,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/theta/biodome/complex)
 "uAn" = (
@@ -39858,7 +39858,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/virology)
 "uBv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -39889,7 +39889,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_west,
 /area/corsat/theta/biodome)
 "uBX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 4;
 	network = list("omega")
@@ -39927,7 +39927,7 @@
 /turf/open/floor/corsat/red,
 /area/corsat/theta/airlock/control)
 "uCH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -40046,7 +40046,7 @@
 /turf/open/floor/corsat/red/north,
 /area/corsat/gamma/foyer)
 "uGi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 7
@@ -40080,7 +40080,7 @@
 	},
 /area/prison/hangar_storage/research/shuttle)
 "uHo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen,
 /turf/open/floor/corsat/yellow/west,
@@ -40242,7 +40242,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/gamma/residential/researcher)
 "uMC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/officesquares,
 /area/corsat/omega/offices)
 "uME" = (
@@ -40273,7 +40273,7 @@
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/gamma/airlock/control)
 "uNd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/blue/west,
 /area/corsat/gamma/airlock/control)
 "uNe" = (
@@ -40338,7 +40338,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/residential/east)
 "uPi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/glass,
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/security)
@@ -40588,7 +40588,7 @@
 /turf/open/floor/plating/icefloor/warnplate,
 /area/corsat/sigma/hangar)
 "uVU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/shuttle/dropship/flight/lz2{
 	dir = 4
 	},
@@ -40605,7 +40605,7 @@
 /turf/open/floor/corsat/red/west,
 /area/corsat/sigma/south/security)
 "uWm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	network = list("gamma")
 	},
@@ -40667,7 +40667,7 @@
 /turf/open/floor/corsat/red/southeast,
 /area/corsat/gamma/security)
 "uXK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/corsat/purplewhite/southwest,
 /area/corsat/gamma/biodome/toxins)
@@ -40726,7 +40726,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/analyzer,
 /turf/open/floor/corsat/yellowcorner,
 /area/corsat/sigma/south/engineering)
@@ -40776,7 +40776,7 @@
 /turf/open/floor/almayer/research/containment/entrance/west,
 /area/corsat/inaccessible)
 "vaW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/communications,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -40791,7 +40791,7 @@
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/gamma/biodome/toxins)
 "vbo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/purplewhite/northwest,
@@ -40800,7 +40800,7 @@
 /turf/open/floor/corsat/marked,
 /area/corsat/omega/hangar/security)
 "vbG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/red,
 /area/corsat/gamma/security)
 "vbK" = (
@@ -40832,7 +40832,7 @@
 /turf/open/floor/corsat/purplewhitecorner,
 /area/corsat/sigma/south/complex)
 "vcO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/chips,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/cargo)
@@ -40882,7 +40882,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/sigma/dorms)
 "ven" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/omega/complex)
@@ -40977,7 +40977,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/hangar/office)
 "vgs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/purplewhite/southwest,
 /area/corsat/gamma/biodome/virology)
@@ -41104,7 +41104,7 @@
 /turf/open/floor/corsat/red/west,
 /area/corsat/gamma/hangar/monorail/control)
 "viP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /obj/item/paper,
 /obj/item/paper,
@@ -41257,7 +41257,7 @@
 /area/corsat/gamma/engineering/core)
 "voq" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/bluegrey,
 /area/corsat/sigma/southeast/datalab)
 "voD" = (
@@ -41298,7 +41298,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "SigmaHangarC-E";
 	name = "Security Shutters";
@@ -41338,7 +41338,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/biodome/virology)
 "vqX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -41434,7 +41434,7 @@
 /turf/open/floor/corsat/purplecorner/west,
 /area/corsat/omega/hallways)
 "vtW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/assembly/mousetrap,
 /obj/item/device/assembly/mousetrap,
 /obj/item/clothing/glasses/welding,
@@ -41453,7 +41453,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/residential/east)
 "vuj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/bluegrey/northwest,
@@ -41497,7 +41497,7 @@
 /turf/open/floor/corsat/purplewhitecorner,
 /area/corsat/gamma/biodome/virology)
 "vvH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/robotanalyzer,
 /turf/open/floor/corsat/yellow,
 /area/corsat/sigma/south/robotics)
@@ -41512,7 +41512,7 @@
 /turf/open/floor/corsat/redcorner,
 /area/corsat/sigma/hangar/security)
 "vwf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/book/manual/engineering_guide,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/engineering)
@@ -41630,7 +41630,7 @@
 /turf/open/floor/almayer/tcomms,
 /area/corsat/sigma/southeast/generator)
 "vzz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/omega/complex)
@@ -41749,7 +41749,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/gamma/residential/west)
 "vDk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/syringes,
 /turf/open/floor/corsat/greenwhite/southwest,
 /area/corsat/gamma/medbay/chemistry)
@@ -42005,7 +42005,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/residential/east)
 "vJC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/red/east,
 /area/corsat/gamma/airlock/control)
 "vJH" = (
@@ -42058,7 +42058,7 @@
 /turf/open/floor/corsat/arrow_west,
 /area/corsat/gamma/engineering/core)
 "vLp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -42071,7 +42071,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/control)
 "vMG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8
 	},
@@ -42099,7 +42099,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/sigma/hangar/monorail)
 "vNF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -42113,7 +42113,7 @@
 /turf/open/floor/corsat/greenwhite/east,
 /area/corsat/gamma/medbay/surgery)
 "vNX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/red/northeast,
@@ -42129,7 +42129,7 @@
 /turf/open/floor/corsat/white,
 /area/corsat/gamma/residential/researcher)
 "vOi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen,
 /obj/item/pamphlet/skill/powerloader,
@@ -42142,7 +42142,7 @@
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/corsat/theta/biodome/complex)
 "vOr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/centrifuge,
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/corsat/gamma/biodome/virology)
@@ -42193,12 +42193,12 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/medbay/morgue)
 "vPt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/monkeycubes,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/theta/biodome/complex)
 "vPy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/biodome/complex)
 "vPG" = (
@@ -42317,7 +42317,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/toxins)
 "vTa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -42335,7 +42335,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/cargo)
 "vTt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/high_explosive/training,
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
@@ -42572,7 +42572,7 @@
 /turf/open/floor/corsat/purplewhitecorner,
 /area/corsat/gamma/biodome/virology)
 "vZI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stock_parts/matter_bin/super,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/omega/maint)
@@ -42768,7 +42768,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/hangar/office)
 "wei" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 4;
 	network = list("sigma")
@@ -42780,7 +42780,7 @@
 /turf/open/floor/corsat/tcomms/southwest,
 /area/corsat/gamma/sigmaremote)
 "weJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/southeast/dataoffice)
@@ -42822,7 +42822,7 @@
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/gamma/sigmaremote)
 "wgs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/plate,
@@ -42867,7 +42867,7 @@
 /turf/open/floor/corsat/white/east,
 /area/corsat/gamma/hallwaysouth)
 "whm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert,
 /turf/open/floor/corsat/yellow/northwest,
 /area/corsat/gamma/engineering)
@@ -42882,7 +42882,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/residential)
 "whv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /turf/open/floor/corsat/bluegrey,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -43012,7 +43012,7 @@
 /turf/open/floor/corsat/tcomms/southwest,
 /area/corsat/gamma/sigmaremote)
 "wkC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/south/offices)
 "wkH" = (
@@ -43077,12 +43077,12 @@
 /turf/open/floor/corsat,
 /area/corsat/sigma/hangar)
 "wmB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/greenwhite/west,
 /area/corsat/gamma/medbay)
 "wmF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 250
@@ -43107,7 +43107,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/complex)
 "wmR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/explosive/grenade/high_explosive/training,
 /obj/item/explosive/grenade/high_explosive/training,
 /turf/open/floor/asteroidplating,
@@ -43280,12 +43280,12 @@
 /turf/open/gm/dirt,
 /area/corsat/theta/biodome)
 "wqg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/red/northwest,
 /area/corsat/gamma/airlock/control)
 "wqi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/glasses/science,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/omega/complex)
@@ -43353,7 +43353,7 @@
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/theta/biodome/complex)
 "wsp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/corsat/bluegrey/north,
@@ -43372,7 +43372,7 @@
 /turf/open/floor/corsat,
 /area/corsat/sigma/hangar/checkpoint)
 "wsP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/machine/clonepod,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south/engineering)
@@ -43541,7 +43541,7 @@
 /turf/open/floor/corsat/purplewhitecorner,
 /area/corsat/gamma/biodome/toxins)
 "wxh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/yellow,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/engineering)
@@ -43550,7 +43550,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/corsat/gamma/biodome)
 "wxN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/omega/containment)
@@ -43579,7 +43579,7 @@
 /turf/open/floor/corsat/blue/north,
 /area/corsat/omega/control)
 "wyQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/red/northwest,
 /area/corsat/sigma/hangar/id)
 "wyT" = (
@@ -43649,7 +43649,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/corsat/gamma/biodome/complex)
 "wAw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -43684,7 +43684,7 @@
 /turf/open/floor/corsat/officesquares,
 /area/corsat/gamma/hangar/flightcontrol)
 "wBy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/corsat/blue/southwest,
 /area/corsat/gamma/airlock/control)
@@ -43698,7 +43698,7 @@
 /turf/open/floor/corsat/white/east,
 /area/corsat/gamma/residential/east)
 "wBD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /turf/open/floor/corsat/bluegrey/southeast,
 /area/corsat/sigma/south/offices)
@@ -43775,7 +43775,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/checkpoint)
 "wDZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/monkeycubes/farwacubes,
 /turf/open/floor/corsat/purplewhite,
 /area/corsat/theta/biodome/complex)
@@ -43792,7 +43792,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/southeast/datalab)
 "wEp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/skills{
 	dir = 8
 	},
@@ -43810,12 +43810,12 @@
 /turf/open/floor/corsat/cargo,
 /area/corsat/gamma/freezer)
 "wER" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/checkpoint)
 "wFb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/robot_module/surgeon,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/sigma/south/robotics)
@@ -43841,7 +43841,7 @@
 /turf/open/ice,
 /area/corsat/gamma/biodome)
 "wGt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/weapon/gun/smg/nailgun,
 /obj/item/weapon/gun/smg/nailgun,
 /obj/item/ammo_magazine/smg/nailgun,
@@ -43872,7 +43872,7 @@
 /turf/open/floor/corsat/redcorner/west,
 /area/corsat/omega/security)
 "wHm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/red/northwest,
@@ -43887,7 +43887,7 @@
 /turf/open/floor/corsat/white/east,
 /area/corsat/gamma/residential/east)
 "wHy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/hand_labeler,
 /obj/structure/machinery/camera/autoname{
 	dir = 1;
@@ -43908,7 +43908,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/sigma/laundry)
 "wIf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/assembly/igniter,
 /obj/structure/machinery/light{
 	dir = 1
@@ -43936,7 +43936,7 @@
 /area/corsat/sigma/south/complex)
 "wJh" = (
 /obj/item/storage/box/masks,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhitecorner/north,
 /area/corsat/omega/complex)
 "wJl" = (
@@ -43972,7 +43972,7 @@
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/theta/biodome/complex)
 "wJD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/theta,
 /area/corsat/theta/airlock/control)
@@ -43987,7 +43987,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/gamma/cargo)
 "wKi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert,
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/gamma/engineering/atmos)
@@ -44011,7 +44011,7 @@
 /turf/open/floor/corsat/yellow,
 /area/corsat/sigma/south/robotics)
 "wKS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/yellowcorner/west,
 /area/corsat/sigma/south/engineering)
 "wLo" = (
@@ -44118,7 +44118,7 @@
 /turf/open/floor/corsat/green/north,
 /area/corsat/gamma/medbay/morgue)
 "wNQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/camera,
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/security)
@@ -44193,7 +44193,7 @@
 /turf/open/floor/corsat/lightplate,
 /area/corsat/sigma/south/complex)
 "wPL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -44245,12 +44245,12 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/airlock/control)
 "wQX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/airlock/control)
 "wQY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -44302,7 +44302,7 @@
 /turf/open/floor/corsat/red/northeast,
 /area/corsat/omega/security)
 "wSS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/hand_labeler,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/complex)
@@ -44317,7 +44317,7 @@
 /turf/open/floor/corsat/purple/east,
 /area/corsat/omega/hallways)
 "wTm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/officesquares,
@@ -44352,12 +44352,12 @@
 /area/corsat/sigma/airlock/control)
 "wUO" = (
 /obj/item/storage/box/masks,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/corsat/greenwhite/west,
 /area/corsat/gamma/medbay)
 "wUQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/omega,
 /area/corsat/omega/control)
@@ -44423,7 +44423,7 @@
 /turf/open/floor/corsat/purplewhitecorner/north,
 /area/corsat/theta/biodome/complex)
 "wVY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/red/east,
 /area/corsat/sigma/hangar/security)
 "wWn" = (
@@ -44471,7 +44471,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/hangar/office)
 "wYs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/red,
@@ -44603,7 +44603,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/sigma/south)
 "xbH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/omega/complex)
 "xbK" = (
@@ -44619,7 +44619,7 @@
 /area/corsat/gamma/administration)
 "xcc" = (
 /obj/structure/machinery/power/apc/no_power/north,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/brown/northwest,
 /area/corsat/gamma/cargo/lobby)
@@ -44701,7 +44701,7 @@
 /turf/open/floor/corsat/greenwhite/north,
 /area/corsat/gamma/medbay)
 "xdW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1
 	},
@@ -44789,7 +44789,7 @@
 /turf/open/mars_cave/mars_cave_11,
 /area/corsat/sigma/biodome/gunrange)
 "xgr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/south/engineering)
@@ -45041,7 +45041,7 @@
 /turf/open/gm/dirt,
 /area/corsat/theta/biodome)
 "xoz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -45074,7 +45074,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/security)
 "xpY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/med_data/laptop{
 	dir = 8
 	},
@@ -45130,7 +45130,7 @@
 /turf/open/floor/corsat/white,
 /area/corsat/gamma/residential/east)
 "xqS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
@@ -45198,7 +45198,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/sigma/lavatory)
 "xth" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 8
 	},
@@ -45288,7 +45288,7 @@
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/sigma/airlock/control)
 "xvO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/juicer,
 /turf/open/floor/corsat/sterileplate,
 /area/corsat/gamma/kitchen)
@@ -45343,7 +45343,7 @@
 /turf/open/floor/corsat/bluegreycorner/west,
 /area/corsat/theta/airlock/east)
 "xxk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/pen/blue,
@@ -45369,7 +45369,7 @@
 /turf/open/floor/corsat/darkgreen,
 /area/corsat/gamma/rnr)
 "xxJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/skills,
 /turf/open/floor/corsat/bluegrey/northwest,
 /area/corsat/gamma/administration)
@@ -45381,7 +45381,7 @@
 /turf/open/floor/corsat/green,
 /area/corsat/gamma/medbay/morgue)
 "xyh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -45422,7 +45422,7 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/sigmaremote)
 "xzB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/radio,
 /turf/open/floor/corsat/yellowcorner/west,
 /area/corsat/gamma/engineering)
@@ -45481,7 +45481,7 @@
 /turf/open/floor/corsat/browncorner/north,
 /area/corsat/sigma/cargo)
 "xBu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave,
 /obj/structure/machinery/camera/autoname{
 	dir = 4;
@@ -45519,7 +45519,7 @@
 /turf/open/floor/corsat/white/west,
 /area/corsat/gamma/residential)
 "xDs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/machine/clonescanner,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/engineering)
@@ -45577,7 +45577,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/hangar/security)
 "xDN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /turf/open/floor/corsat/lightplate,
 /area/corsat/gamma/biodome/complex)
@@ -45611,7 +45611,7 @@
 /turf/open/floor/corsat/redcorner/east,
 /area/corsat/gamma/security)
 "xEM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /turf/open/floor/corsat/red/east,
 /area/corsat/omega/security)
@@ -45856,7 +45856,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/gamma/residential/west)
 "xLU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/bodybag,
 /obj/item/bodybag,
 /obj/item/bodybag,
@@ -45942,7 +45942,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome/testgrounds)
 "xNG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/pamphlet/skill/powerloader,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/cargo)
@@ -45981,12 +45981,12 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/lavatory)
 "xOL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/bluegrey/northeast,
 /area/corsat/omega/offices)
 "xPa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /obj/structure/machinery/camera/autoname{
 	network = list("gamma")
@@ -46168,7 +46168,7 @@
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/sigma/airlock/east)
 "xTC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/form_printer,
 /obj/item/tool/pen,
 /obj/structure/machinery/camera/autoname{
@@ -46210,7 +46210,7 @@
 /turf/open/floor/corsat/purplewhite/north,
 /area/corsat/gamma/sigmaremote)
 "xUu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -46248,7 +46248,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/sigma/south)
 "xVf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper,
 /turf/open/floor/corsat/bluegrey,
 /area/corsat/gamma/hangar/flightcontrol)
@@ -46319,12 +46319,12 @@
 /area/corsat/theta/biodome/complex)
 "xXl" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/omega/offices)
 "xXy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1
 	},
@@ -46431,7 +46431,7 @@
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/south/engineering)
 "xZK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/lighter/random,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south/robotics)
@@ -46466,7 +46466,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/corsat/gamma/biodome)
 "yaz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/corsat/spiralplate,
 /area/corsat/sigma/hangar/office)
@@ -46577,7 +46577,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -46618,7 +46618,7 @@
 /turf/open/floor/corsat/greenwhite/southeast,
 /area/corsat/gamma/medbay)
 "yew" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/defibrillator,
 /obj/item/device/defibrillator,
 /turf/open/floor/corsat/greenwhite/east,
@@ -46685,7 +46685,7 @@
 /turf/open/floor/corsat/purplewhite/southwest,
 /area/corsat/sigma/south/complex)
 "ygf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/gamma/biodome/virology)
@@ -46773,7 +46773,7 @@
 /turf/open/floor/plating/icefloor/warnplate,
 /area/corsat/gamma/hangar)
 "yiD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/bluegrey/north,
 /area/corsat/sigma/southeast/dataoffice)
 "yiH" = (
@@ -46789,7 +46789,7 @@
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/airlock/control)
 "yiR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/corsat/plate,
 /area/corsat/theta/airlock/control)
@@ -46804,17 +46804,17 @@
 /turf/open/floor/corsat/red/north,
 /area/corsat/omega/checkpoint)
 "yiT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/technology_scanner,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/gamma/airlock/control)
 "yjc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/radio,
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/cargo)
 "yjr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/greenwhite,
 /area/corsat/gamma/medbay/chemistry)
 "yjs" = (

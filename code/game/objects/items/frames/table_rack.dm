@@ -1,21 +1,23 @@
-
-
-
 /*
  * Table Parts
  */
 
 /obj/item/frame/table
-	name = "tan table parts"
+	name = "gray table parts"
 	desc = "A kit for a table, including a large, flat metal surface and four legs. Some assembly required."
 	gender = PLURAL
 	icon = 'icons/obj/items/items.dmi'
-	icon_state = "tan_table_parts"
-	item_state = "tan_table_parts"
+	icon_state = "table_parts"
+	item_state = "table_parts"
 	matter = list("metal" = 7500) //A table, takes two sheets to build
 	flags_atom = FPRINT|CONDUCT
 	attack_verb = list("slammed", "bashed", "battered", "bludgeoned", "thrashed", "whacked")
 	var/table_type = /obj/structure/surface/table //what type of table it creates when assembled
+
+/obj/item/frame/table/dark
+	name = "dark gray table parts"
+	table_type = /obj/structure/surface/table/dark
+	color = "#8B9490"
 
 /obj/item/frame/table/attackby(obj/item/W, mob/user)
 
@@ -77,12 +79,26 @@
  */
 
 /obj/item/frame/table/reinforced
-	name = "reinforced table parts"
+	name = "grey reinforced table parts"
 	desc = "A kit for a table, including a large, flat metal surface and four legs. This kit has side panels. Some assembly required."
 	icon = 'icons/obj/items/items.dmi'
 	icon_state = "reinf_tableparts"
 	matter = list("metal" = 15000) //A reinforced table. Two sheets of metal and four rods
 	table_type = /obj/structure/surface/table/reinforced
+
+/obj/item/frame/table/reinforced/taupe
+	name = "taupe reinforced table parts"
+	color = "#ffe6e6"
+	table_type = /obj/structure/surface/table/reinforced/taupe
+
+/obj/item/frame/table/reinforced/dark
+	name = "dark reinforced table parts"
+	color = "#6b675e"
+	table_type = /obj/structure/surface/table/reinforced/dark
+
+/obj/item/frame/table/reinforced/bulky
+	name = "bulky reinforced table parts"
+	table_type = /obj/structure/surface/table/reinforced/bulky
 
 /obj/item/frame/table/reinforced/attackby(obj/item/W, mob/user)
 	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
@@ -101,7 +117,9 @@
 /obj/item/frame/table/wood
 	name = "wooden table parts"
 	desc = "A kit for a table, including a large, flat wooden surface and four legs. Some assembly required."
-	icon_state = "wood_tableparts"
+	icon_state = "tan_table_parts"
+	item_state = "tan_table_parts"
+	color = "#8B7B5B"
 	flags_atom = FPRINT
 	matter = null
 	table_type = /obj/structure/surface/table/woodentable
@@ -123,17 +141,12 @@
 		new /obj/item/stack/sheet/wood(get_turf(src))
 	return ..()
 
-/obj/item/frame/table/wood/poor
-	name = "poor wooden table parts"
-	desc = "A kit for a poorly crafted table, including a large, flat wooden surface and four legs. Some assembly required."
-	icon_state = "pwood_tableparts"
-	table_type = /obj/structure/surface/table/woodentable/poor
-
 /obj/item/frame/table/wood/fancy
 	name = "fancy wooden table parts"
 	desc = "A kit for a finely crafted mahogany table, including a large, flat wooden surface and four legs. Some assembly required."
 	icon_state = "fwood_tableparts"
 	table_type = /obj/structure/surface/table/woodentable/fancy
+	color = null
 
 /*
  * Gambling Table Parts
@@ -146,6 +159,7 @@
 	flags_atom = null
 	matter = null
 	table_type = /obj/structure/surface/table/gamblingtable
+	color = "#aeaeae"
 
 /obj/item/frame/table/gambling/attackby(obj/item/W as obj, mob/user as mob)
 
@@ -164,16 +178,6 @@
 	return ..()
 
 /*
- * Almayer Tables
- */
-/obj/item/frame/table/almayer
-	name = "gray table parts"
-	icon_state = "table_parts"
-	table_type = /obj/structure/surface/table/almayer
-
-
-
-/*
  * Rack Parts
  */
 
@@ -185,6 +189,9 @@
 	icon_state = "rack_parts"
 	flags_atom = FPRINT|CONDUCT
 	matter = list("metal" = 3750) //A big storage shelf, takes five sheets to build
+
+/obj/item/frame/rack/dark
+	color = "#8B9490"
 
 /obj/item/frame/rack/attackby(obj/item/W, mob/user)
 	..()

@@ -8,7 +8,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "aC" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_magazine/shotgun/buckshot,
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
@@ -276,7 +276,7 @@
 /turf/open/floor/prison/whitepurple/southwest,
 /area/template_noop)
 "CG" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/implant/loyalty{
 	pixel_x = -8;
 	pixel_y = 8
@@ -479,7 +479,7 @@
 /turf/open/floor/prison/whitepurple/southwest,
 /area/template_noop)
 "RO" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
 	pixel_y = 21

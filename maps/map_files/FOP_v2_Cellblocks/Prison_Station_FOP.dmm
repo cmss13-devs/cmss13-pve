@@ -14690,7 +14690,7 @@
 /area/prison/maintenance/research_medbay)
 "eLV" = (
 /obj/item/device/walkman,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/plating,
 /area/prison/maintenance/residential/access/south)
 "eMk" = (
@@ -16980,7 +16980,7 @@
 /turf/open/floor/prison/red/northwest,
 /area/prison/cellblock/highsec/north/south)
 "gFN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/antag,
 /obj/item/prop/helmetgarb/gunoil{
 	pixel_x = 9;
@@ -30513,7 +30513,7 @@
 /turf/open/floor/prison/yellowfull,
 /area/prison/cellblock/mediumsec/south)
 "scl" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/prison/telecomms)
@@ -34068,7 +34068,7 @@
 /turf/open/floor/prison/green/west,
 /area/prison/cellblock/lowsec/sw)
 "vpA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/metal,
 /turf/open/floor/plating,
 /area/prison/maintenance/residential/access/south)
@@ -35141,7 +35141,7 @@
 /turf/open/floor/prison/yellow/north,
 /area/prison/cellblock/mediumsec/east)
 "wmF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/newspaper,
 /turf/open/floor/prison/bright_clean2/southwest,
 /area/prison/residential/north)
@@ -35804,7 +35804,7 @@
 /turf/open/floor/prison/darkredfull2/southwest,
 /area/prison/intake)
 "wOf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/landmark/good_item,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/prison/telecomms)
@@ -36696,7 +36696,7 @@
 /turf/open/floor/prison/greencorner/north,
 /area/prison/cellblock/lowsec/nw)
 "xAS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /obj/item/grown/sunflower,
 /turf/open/floor/prison/bright_clean2/southwest,
