@@ -87,15 +87,6 @@
 	},
 /turf/open/floor/almayer/aicore/no_build/ai_plates,
 /area/firefly/ares)
-"am" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/floor/corsat/white/north,
-/area/firefly/briefing)
 "an" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/emails{
@@ -158,11 +149,7 @@
 /turf/open/floor/tdome/northeast,
 /area/firefly/ares)
 "at" = (
-/obj/structure/filingcabinet{
-	pixel_x = -5;
-	pixel_y = 15;
-	layer = 12
-	},
+/obj/structure/filingcabinet,
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
@@ -173,15 +160,6 @@
 	},
 /turf/open/floor/wood,
 /area/firefly/briefing)
-"au" = (
-/obj/structure/platform/stair_cut,
-/obj/structure/stairs/perspective{
-	dir = 8;
-	icon_state = "p_stair_ew_full_cap";
-	layer = 6
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/engineer)
 "av" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -468,13 +446,12 @@
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/cafeteria)
 "bd" = (
-/obj/structure/machinery/cryopod/big{
-	layer = 3.1;
-	pixel_x = -3
-	},
 /obj/structure/barricade/handrail{
 	dir = 8;
 	pixel_x = -3
+	},
+/obj/structure/machinery/cryopod/big{
+	pixel_x = -2
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -702,6 +679,13 @@
 	pixel_y = 17
 	},
 /turf/open/floor/corsat/white/north,
+/area/firefly/engineer)
+"bE" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/corsat/yellowcorner/east,
 /area/firefly/engineer)
 "bF" = (
 /obj/structure/pipes/vents/pump,
@@ -1103,9 +1087,6 @@
 /turf/open/floor/corsat/blue/east,
 /area/firefly/co)
 "cK" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
 /obj/structure/machinery/sentry_holder/almayer/mini/aicore,
 /turf/open/floor/almayer/aicore/no_build/ai_plates,
 /area/firefly/ares)
@@ -1361,6 +1342,9 @@
 /obj/structure/platform{
 	dir = 4
 	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
 /turf/open/floor/corsat/red,
 /area/firefly/engineer)
 "dm" = (
@@ -1406,17 +1390,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"dp" = (
-/obj/structure/machinery/cryopod/big{
-	layer = 3.1;
-	pixel_x = -2
-	},
-/obj/structure/barricade/handrail{
-	dir = 8;
-	pixel_x = -2
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cryo_cell)
 "dq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -1429,12 +1402,11 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "dr" = (
-/obj/structure/machinery/cryopod/big{
-	layer = 3.1;
-	pixel_x = -1
-	},
 /obj/structure/barricade/handrail{
 	dir = 8;
+	pixel_x = -2
+	},
+/obj/structure/machinery/cryopod/big{
 	pixel_x = -2
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -1449,7 +1421,6 @@
 /obj/structure/machinery/computer/crew/alt{
 	dir = 8;
 	pixel_y = 14;
-	layer = 2.7;
 	pixel_x = 1
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -1510,10 +1481,9 @@
 	req_access = null;
 	req_access_txt = "31"
 	},
-/obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	name = "\improper Overwatch's Bathroom";
-	req_access = null;
-	req_access_txt = "31"
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	req_access = list(100);
+	name = "\improper Overwatch"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -1524,16 +1494,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/co)
 "dC" = (
-/obj/structure/closet/emcloset{
-	pixel_x = -8;
-	pixel_y = 15;
-	density = 0
-	},
-/obj/structure/closet/firecloset/full{
-	pixel_x = 8;
-	pixel_y = 15;
-	density = 0
-	},
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
 	dir = 1;
@@ -1547,6 +1507,7 @@
 	pixel_x = 14;
 	pixel_y = 38
 	},
+/obj/structure/closet/firecloset/full,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "dD" = (
@@ -1649,6 +1610,9 @@
 /obj/structure/platform{
 	dir = 8
 	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
 /turf/open/floor/corsat/red,
 /area/firefly/engineer)
 "dR" = (
@@ -1733,16 +1697,10 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "ec" = (
-/obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 14;
-	pixel_x = 1
-	},
 /obj/structure/machinery/power/monitor{
-	name = "Core Power Monitoring";
-	pixel_x = 2;
-	pixel_y = 19;
-	layer = 15;
+	name = "Main Power Grid Monitoring";
+	layer = 14;
+	pixel_x = 1;
 	density = 0
 	},
 /turf/open/floor/corsat/yellow/north,
@@ -1905,20 +1863,11 @@
 	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/engineer)
-"ew" = (
-/obj/structure/machinery/cryopod/big{
-	pixel_y = 11;
-	layer = 3.2;
-	pixel_x = -1
-	},
-/obj/structure/barricade/handrail{
-	dir = 8;
-	pixel_x = -2
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cryo_cell)
 "ex" = (
 /obj/structure/disposalpipe/segment,
+/obj/structure/platform_decoration{
+	dir = 4
+	},
 /turf/open/floor/corsat/yellowcorner/north,
 /area/firefly/engineer)
 "ey" = (
@@ -1953,16 +1902,16 @@
 /area/firefly/engineer)
 "eA" = (
 /obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/structure/platform{
 	dir = 1
 	},
 /obj/structure/sign/safety/life_support{
 	pixel_y = 30
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/structure/platform{
+	dir = 8
 	},
 /turf/open/floor/tdome/tcomms,
 /area/firefly/cryo_cell)
@@ -2138,8 +2087,7 @@
 	},
 /obj/structure/stairs/perspective{
 	dir = 4;
-	icon_state = "p_stair_full";
-	color = nullsssssssss
+	icon_state = "p_stair_full"
 	},
 /obj/structure/sign/nosmoking_2{
 	pixel_x = 1;
@@ -2531,6 +2479,9 @@
 	pixel_x = -1;
 	pixel_y = 18
 	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
 "fP" = (
@@ -2891,7 +2842,6 @@
 /obj/structure/stairs/perspective{
 	dir = 4;
 	icon_state = "p_stair_full";
-	color = nullsssssssss;
 	layer = 3
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3733,7 +3683,6 @@
 /obj/structure/stairs/perspective{
 	dir = 4;
 	icon_state = "p_stair_full";
-	color = nullsssssssss;
 	layer = 3
 	},
 /obj/structure/platform/stair_cut/alt,
@@ -4081,13 +4030,6 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
-"jw" = (
-/obj/item/storage/firstaid/toxin{
-	pixel_x = 42;
-	pixel_y = 6
-	},
-/turf/open/floor/corsat/green/east,
-/area/firefly/cryo_cell)
 "jx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -4215,17 +4157,6 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/space)
-"jL" = (
-/obj/structure/barricade/handrail,
-/obj/structure/stairs/perspective{
-	dir = 4;
-	icon_state = "p_stair_full";
-	color = nullsssssssss;
-	layer = 3
-	},
-/obj/structure/platform,
-/turf/open/floor/corsat/yellow,
-/area/firefly/engineer)
 "jM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -4244,9 +4175,6 @@
 "jO" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/tent{
 	pixel_y = 26
-	},
-/obj/structure/machinery/status_display{
-	pixel_y = 30
 	},
 /turf/open/floor/corsat/green/north,
 /area/firefly/cryo_cell)
@@ -4708,19 +4636,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"kX" = (
-/obj/structure/platform,
-/obj/structure/stairs/perspective{
-	dir = 4;
-	icon_state = "p_stair_full";
-	color = nullsssssssss;
-	layer = 3
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/engineer)
 "kZ" = (
 /turf/closed/shuttle/ert{
 	icon_state = "wy25"
@@ -5083,18 +4998,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
-"lP" = (
-/obj/structure/machinery/cryopod/big{
-	pixel_y = 11;
-	layer = 3.2;
-	pixel_x = -3
-	},
-/obj/structure/barricade/handrail{
-	dir = 8;
-	pixel_x = -2
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cryo_cell)
 "lQ" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -5337,13 +5240,6 @@
 	},
 /turf/open/floor/corsat/whitecorner/east,
 /area/firefly/hangar)
-"mo" = (
-/obj/structure/machinery/cryopod/big{
-	layer = 3.1;
-	pixel_x = -5
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cryo_cell)
 "mp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -5671,13 +5567,13 @@
 /area/firefly/engineer)
 "na" = (
 /obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
 	dir = 8
 	},
 /obj/structure/platform{
 	dir = 4
-	},
-/obj/structure/platform{
-	dir = 1
 	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/engineer)
@@ -5830,13 +5726,13 @@
 /area/firefly/engineer)
 "ns" = (
 /obj/structure/surface/rack,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/toxin,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "nt" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/prop/almayer/CICmap/pmc{
-	pixel_y = 3
-	},
+/obj/structure/machinery/prop/almayer/CICmap/pmc,
 /turf/open/floor/wood/ship,
 /area/firefly/co)
 "nu" = (
@@ -6258,8 +6154,7 @@
 "ot" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
-	icon_state = "p_stair_full";
-	color = nullsssssssss
+	icon_state = "p_stair_full"
 	},
 /obj/structure/platform,
 /turf/open/floor/corsat/squares,
@@ -6488,15 +6383,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
-"oV" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/floor/corsat/white/north,
-/area/firefly/medical)
 "oW" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/computer/guestpass{
@@ -6528,19 +6414,6 @@
 	},
 /turf/open/floor/corsat/sterileplate,
 /area/firefly/medical)
-"oZ" = (
-/obj/structure/machinery/cryopod/big{
-	layer = 4.1;
-	pixel_x = -14;
-	dir = 3;
-	pixel_y = 11
-	},
-/obj/structure/barricade/handrail{
-	dir = 4;
-	pixel_x = 2
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cryo_cell)
 "pa" = (
 /obj/structure/barricade/handrail,
 /obj/structure/prop/static_tank/water{
@@ -7225,11 +7098,7 @@
 /turf/open/floor/almayer,
 /area/firefly/engineer)
 "qJ" = (
-/obj/structure/machinery/cryopod/big{
-	pixel_y = 11;
-	layer = 3.2;
-	pixel_x = -5
-	},
+/obj/structure/machinery/cryopod/big,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "qK" = (
@@ -7270,8 +7139,6 @@
 /area/firefly/hangar)
 "qQ" = (
 /obj/structure/machinery/disposal{
-	pixel_x = -10;
-	pixel_y = 8;
 	density = 0
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -7649,8 +7516,7 @@
 "rN" = (
 /obj/structure/machinery/computer/shuttle/elevator_controller/railing{
 	pixel_x = 7;
-	pixel_y = 22;
-	layer = 4
+	pixel_y = 22
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/engineer)
@@ -8962,21 +8828,6 @@
 /obj/item/weapon/gun/flamer/deathsquad/pve,
 /turf/open/floor/corsat/brown/northwest,
 /area/firefly/squad_theta)
-"uF" = (
-/obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 14;
-	pixel_x = 1
-	},
-/obj/structure/machinery/power/monitor{
-	name = "Main Power Grid Monitoring";
-	layer = 14;
-	pixel_x = 1;
-	pixel_y = 18;
-	density = 0
-	},
-/turf/open/floor/corsat/yellow/north,
-/area/firefly/engineer)
 "uG" = (
 /obj/structure/machinery/iv_drip,
 /obj/structure/bed/roller,
@@ -9545,10 +9396,9 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "vR" = (
-/obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	name = "\improper Overwatch's Quarters";
-	req_access = null;
-	req_access_txt = "31"
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	req_access = list(100);
+	name = "\improper Overwatch"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -9589,12 +9439,6 @@
 	},
 /turf/open/floor/almayer_hull/outerhull_dir/west,
 /area/space)
-"vW" = (
-/obj/structure/droppod/container{
-	layer = 7
-	},
-/turf/open/floor/corsat/cargo,
-/area/firefly/engineer)
 "vX" = (
 /turf/closed/shuttle/elevator/gears,
 /area/firefly/medical)
@@ -9646,6 +9490,9 @@
 /area/firefly/engineer)
 "wg" = (
 /obj/structure/disposalpipe/segment,
+/obj/structure/platform_decoration{
+	dir = 4
+	},
 /turf/open/floor/corsat/redcorner/west,
 /area/firefly/engineer)
 "wh" = (
@@ -10041,8 +9888,7 @@
 "xg" = (
 /obj/structure/machinery/computer/shuttle/elevator_controller/railing{
 	pixel_x = 7;
-	pixel_y = 22;
-	layer = 4
+	pixel_y = 22
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/briefing)
@@ -10182,9 +10028,6 @@
 "xC" = (
 /obj/structure/machinery/sentry_holder/almayer/mini/aicore,
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
 /turf/open/floor/almayer/aicore/no_build/ai_plates,
 /area/firefly/ares)
 "xE" = (
@@ -10664,12 +10507,6 @@
 	pixel_y = 14;
 	pixel_x = 1
 	},
-/obj/structure/platform/stair_cut,
-/obj/structure/stairs/perspective{
-	dir = 8;
-	icon_state = "p_stair_ew_full_cap";
-	layer = 6
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -10753,8 +10590,6 @@
 	pixel_y = 28
 	},
 /obj/structure/machinery/computer/supply_drop_console/limited/alternate{
-	layer = 7;
-	pixel_y = 7;
 	name = "Engineering Console"
 	},
 /turf/open/floor/corsat/yellow/north,
@@ -10779,18 +10614,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
-"zc" = (
-/obj/structure/machinery/cryopod/big{
-	pixel_y = 11;
-	layer = 3.2;
-	pixel_x = -2
-	},
-/obj/structure/barricade/handrail{
-	dir = 8;
-	pixel_x = -2
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cryo_cell)
 "zd" = (
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/engineer)
@@ -10857,18 +10680,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
-"zl" = (
-/obj/structure/machinery/cryopod/big{
-	layer = 3.1;
-	pixel_x = -14;
-	dir = 3
-	},
-/obj/structure/barricade/handrail{
-	dir = 4;
-	pixel_x = 2
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cryo_cell)
 "zm" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -12842,15 +12653,12 @@
 /turf/open/floor/corsat/white,
 /area/firefly/engineer)
 "DO" = (
-/obj/structure/machinery/cryopod/big{
-	layer = 4.1;
-	pixel_x = -15;
-	dir = 3;
-	pixel_y = 11
-	},
 /obj/structure/barricade/handrail{
 	dir = 4;
 	pixel_x = 2
+	},
+/obj/structure/machinery/cryopod/big/flipped{
+	pixel_x = -14
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -13186,16 +12994,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
-"ED" = (
-/obj/structure/platform,
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/floor/tdome/tcomms,
-/area/firefly/cryo_cell)
 "EE" = (
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/corsat/cargo,
@@ -13765,9 +13563,6 @@
 /area/firefly/engineer)
 "FX" = (
 /obj/structure/pipes/vents/pump,
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
 /obj/structure/sign/poster/safety{
 	pixel_x = -24;
 	pixel_y = 30
@@ -13881,7 +13676,7 @@
 /area/firefly/engineer)
 "Gi" = (
 /obj/structure/machinery/power/apc/almayer/north,
-/turf/open/floor/corsat/yellowcorner,
+/turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "Gj" = (
 /obj/structure/machinery/shower{
@@ -14959,15 +14754,13 @@
 /turf/open/floor/corsat/greenwhite/north,
 /area/firefly/medical)
 "IE" = (
-/obj/structure/machinery/cryopod/big{
-	pixel_y = 11;
-	layer = 3.2;
-	pixel_x = -1
-	},
 /obj/structure/barricade/handrail{
 	dir = 8;
 	pixel_x = -2;
 	pixel_y = 1
+	},
+/obj/structure/machinery/cryopod/big{
+	pixel_x = -2
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -15104,8 +14897,7 @@
 	desc = "An old W-Y systems control computer that manages the air enviorment for a large area. Commonly used in mining operations in order to control O2 levels, alert of any dangerous gases and make the heat slightly more bearable.";
 	name = "W-Y Environment Control System Control Panel";
 	layer = 7;
-	pixel_x = 1;
-	pixel_y = 17
+	pixel_x = 1
 	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
@@ -15462,7 +15254,6 @@
 	pixel_x = 1;
 	pixel_y = -1
 	},
-/obj/structure/barricade/handrail,
 /obj/structure/sign/safety/landingzone{
 	pixel_y = 27
 	},
@@ -15473,7 +15264,7 @@
 /obj/structure/sign/safety/restrictedarea{
 	pixel_y = 40
 	},
-/turf/open/floor/corsat/yellow/southeast,
+/turf/open/floor/corsat/yellow/east,
 /area/firefly/engineer)
 "JI" = (
 /obj/structure/machinery/message_server,
@@ -17211,12 +17002,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/corsat/white/east,
 /area/firefly/medical)
-"Nz" = (
-/obj/structure/droppod/container{
-	layer = 7
-	},
-/turf/open/floor/corsat/cargo,
-/area/firefly/hangar)
 "NA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -17533,18 +17318,6 @@
 	},
 /turf/open/floor/corsat/white/west,
 /area/firefly/hangar)
-"Oh" = (
-/obj/structure/machinery/cryopod/big{
-	layer = 3.1;
-	pixel_x = -15;
-	dir = 3
-	},
-/obj/structure/barricade/handrail{
-	dir = 4;
-	pixel_x = 2
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cryo_cell)
 "Oi" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -17595,12 +17368,11 @@
 /area/firefly/engineer)
 "Op" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/structure/machinery/prop/almayer/CICmap{
-	density = 0;
-	icon_state = "map";
-	layer = 2.97;
+/obj/structure/machinery/prop/almayer/CICmap/pmc{
+	icon_state = "shuttle";
+	layer = 2.98;
 	name = "Tactical Map Display";
-	pixel_y = 10
+	density = 0
 	},
 /turf/open/floor/corsat/blue/northeast,
 /area/firefly/briefing)
@@ -17636,13 +17408,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/hangar)
-"Ov" = (
-/obj/item/storage/firstaid/o2{
-	pixel_x = 59;
-	pixel_y = 6
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/cryo_cell)
 "Ow" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -18192,8 +17957,6 @@
 /turf/open/floor/wood/ship,
 /area/firefly/co)
 "PH" = (
-/obj/structure/barricade/handrail,
-/obj/structure/platform,
 /turf/open/floor/corsat/white,
 /area/firefly/engineer)
 "PI" = (
@@ -18245,19 +18008,6 @@
 	},
 /turf/open/floor/corsat/white,
 /area/firefly/medical)
-"PP" = (
-/obj/structure/barricade/handrail{
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = -1
-	},
-/obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 14;
-	pixel_x = 1
-	},
-/turf/open/floor/corsat/yellow/northeast,
-/area/firefly/engineer)
 "PQ" = (
 /turf/closed/shuttle/ert{
 	icon_state = "wy_leftengine"
@@ -18540,18 +18290,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
-"QA" = (
-/obj/structure/machinery/cryopod/big{
-	layer = 3.1;
-	pixel_x = -13;
-	dir = 3
-	},
-/obj/structure/barricade/handrail{
-	dir = 4;
-	pixel_x = 2
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cryo_cell)
 "QB" = (
 /obj/structure/barricade/handrail{
 	dir = 4;
@@ -18704,19 +18442,6 @@
 	},
 /turf/open/floor/corsat/arrow_west,
 /area/firefly/hangar)
-"QT" = (
-/obj/structure/machinery/cryopod/big{
-	layer = 4.1;
-	pixel_x = -13;
-	dir = 3;
-	pixel_y = 11
-	},
-/obj/structure/barricade/handrail{
-	dir = 4;
-	pixel_x = 2
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cryo_cell)
 "QU" = (
 /obj/structure/sign/safety/flightcontrol{
 	layer = 2;
@@ -19130,6 +18855,9 @@
 /area/firefly/engineer)
 "RS" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/platform_decoration{
+	dir = 8
+	},
 /turf/open/floor/corsat/redcorner,
 /area/firefly/engineer)
 "RT" = (
@@ -19446,20 +19174,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/engineer)
-"Sv" = (
-/obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 15
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "Sw" = (
 /obj/structure/xenoautopsy{
 	pixel_y = -1;
@@ -20007,12 +19721,6 @@
 /obj/structure/blocker/invisible_wall/water,
 /turf/open/floor/shiva/radiator_tile2,
 /area/firefly/cryo_cell)
-"TN" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
-/turf/open/floor/corsat/green/north,
-/area/firefly/cryo_cell)
 "TO" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
@@ -20145,15 +19853,6 @@
 	},
 /obj/structure/machinery/gear,
 /turf/open/floor/corsat/spiralplate,
-/area/firefly/engineer)
-"Ug" = (
-/obj/structure/stairs/perspective{
-	dir = 4;
-	icon_state = "p_stair_full";
-	color = nullsssssssss;
-	layer = 3
-	},
-/turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "Uh" = (
 /obj/structure/barricade/handrail{
@@ -20786,11 +20485,6 @@
 	},
 /turf/open/floor/strata/faux_wood,
 /area/firefly/medical)
-"Vy" = (
-/obj/structure/barricade/handrail,
-/obj/structure/platform,
-/turf/open/floor/corsat/yellow,
-/area/firefly/engineer)
 "Vz" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/corsat/red/north,
@@ -21302,9 +20996,6 @@
 	dir = 1;
 	pixel_y = 14;
 	pixel_x = 1
-	},
-/obj/structure/platform{
-	dir = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -22760,16 +22451,6 @@
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
 "ZS" = (
-/obj/structure/closet/secure_closet/engineering_electrical{
-	pixel_x = -8;
-	pixel_y = 14;
-	density = 0
-	},
-/obj/structure/closet/secure_closet/engineering_welding{
-	req_one_access = list();
-	pixel_x = 8;
-	pixel_y = 14
-	},
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
 	dir = 1;
@@ -22784,6 +22465,7 @@
 	pixel_y = 38;
 	pixel_x = 15
 	},
+/obj/structure/closet/secure_closet/engineering_electrical,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "ZT" = (
@@ -28109,7 +27791,7 @@ lb
 RS
 yt
 Dn
-wd
+bE
 Hy
 Xo
 HN
@@ -28423,7 +28105,7 @@ Wn
 ju
 mj
 Zk
-uF
+ec
 cr
 pg
 nb
@@ -31320,12 +31002,12 @@ LC
 LC
 LC
 Gi
-zd
-wE
-Do
+Ax
+bV
+Ax
 EW
 Po
-vW
+LS
 pF
 EW
 YK
@@ -31397,15 +31079,15 @@ aA
 ji
 ji
 yu
-mo
+qJ
 qJ
 Kk
-mo
 qJ
-mo
+qJ
+qJ
 qJ
 Kk
-mo
+qJ
 qJ
 Ne
 ji
@@ -31472,9 +31154,9 @@ LC
 LC
 LC
 JH
-au
-kX
-PP
+zd
+wE
+QB
 QB
 QB
 QB
@@ -31487,7 +31169,7 @@ QB
 QB
 OH
 Ax
-Vy
+pg
 ZN
 zD
 KF
@@ -31638,8 +31320,8 @@ VI
 VI
 Je
 yO
-Ug
-jL
+Ax
+pg
 ZN
 Ax
 UM
@@ -31851,7 +31533,7 @@ aA
 aA
 aA
 ji
-TN
+Wq
 uI
 ml
 bw
@@ -32461,15 +32143,15 @@ aA
 ji
 Wq
 BJ
-QA
-QT
-EA
-zl
-oZ
-zl
+DO
 DO
 EA
-Oh
+DO
+DO
+DO
+DO
+EA
+DO
 DO
 op
 ob
@@ -32622,8 +32304,8 @@ ub
 Fm
 xd
 Ix
-ED
-Sv
+Fm
+YC
 Yx
 ji
 aA
@@ -32765,13 +32447,13 @@ aA
 ji
 Wq
 BJ
-dp
-lP
+dr
+dr
 Kk
 bd
-zc
 dr
-ew
+dr
+dr
 Kk
 dr
 IE
@@ -33230,7 +32912,7 @@ yD
 RL
 RL
 RL
-Ov
+RL
 RL
 ob
 ji
@@ -33382,7 +33064,7 @@ cg
 Gt
 cN
 mF
-jw
+Ti
 Ti
 qi
 ji
@@ -33523,7 +33205,7 @@ aA
 aA
 ji
 xd
-TN
+Wq
 gT
 ob
 xd
@@ -35337,7 +35019,7 @@ Kh
 jb
 bk
 zW
-oV
+aM
 LG
 bQ
 ch
@@ -36097,7 +35779,7 @@ XC
 DV
 zr
 zW
-oV
+aM
 LG
 bQ
 ch
@@ -36870,7 +36552,7 @@ Ib
 qO
 jt
 hi
-oV
+aM
 LG
 TT
 zW
@@ -38073,7 +37755,7 @@ fE
 KM
 OV
 OV
-oV
+aM
 LG
 bQ
 hi
@@ -39289,7 +38971,7 @@ wa
 wa
 RP
 OV
-am
+Ra
 hv
 Ac
 hi
@@ -45827,7 +45509,7 @@ PD
 PD
 XL
 bf
-Nz
+qA
 iS
 Ml
 OR
