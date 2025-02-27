@@ -8,7 +8,6 @@
 		return
 	for(var/action_type in subtypesof(/datum/action/human_action/issue_order))
 		give_action(target, action_type)
-	give_action(target, /datum/action/innate/message_squad)
 
 /datum/element/traitbound/leadership/Detach(datum/target)
 	var/mob/living/carbon/human/H = target
