@@ -64,106 +64,108 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 			name += " (Snow)"
 
 // Plural
-/datum/sprite_accessory/undershirt/undershirt
-	name = "Undershirt (Tan)"
-	icon_state = "t_undershirt"
-	gender = NEUTER
 
-/datum/sprite_accessory/undershirt/undershirt/black
-	name = "Undershirt (Black)"
-	icon_state = "b_undershirt"
+/datum/sprite_accessory/undershirt/marine
+	name = "USCM Undershirt"
+	icon_state = "undershirt_uscm_short"
 
-/datum/sprite_accessory/undershirt/undershirt/sleeveless
-	name = "Undershirt (Tan, Sleeveless)"
-	icon_state = "t_undershirt_sleeveless"
+/datum/sprite_accessory/undershirt/marine/sleeveless
+	name = "USCM Undershirt (Sleeveless)"
+	icon_state = "undershirt_uscm"
 
-/datum/sprite_accessory/undershirt/undershirt/sleeveless/black
-	name = "Undershirt (Black, Sleeveless)"
-	icon_state = "b_undershirt_sleeveless"
+/datum/sprite_accessory/undershirt/black
+	name = "Black Undershirt"
+	icon_state = "undershirt_black_short"
 
-/datum/sprite_accessory/undershirt/undershirt/rolled
-	name = "Undershirt (Tan, Rolled)"
-	icon_state = "t_rolled_undershirt"
+/datum/sprite_accessory/undershirt/black/sleeveless
+	name = "Black Undershirt (Sleeveless)"
+	icon_state = "undershirt_black"
 
-/datum/sprite_accessory/undershirt/undershirt/rolled_sleeveless
-	name = "Undershirt (Tan, Rolled Sleeveless)"
-	icon_state = "t_rolled_undershirt_sleeveless"
+/datum/sprite_accessory/undershirt/white
+	name = "White Undershirt"
+	icon_state = "undershirt_short"
 
-/datum/sprite_accessory/undershirt/undershirt/long
-	name = "Undershirt (Tan, Long Sleeved)"
-	icon_state = "t_long_undershirt"
+/datum/sprite_accessory/undershirt/white/sleeveless
+	name = "White Undershirt (Sleeveless)"
+	icon_state = "undershirt"
 
-/datum/sprite_accessory/undershirt/undershirt/long/black
-	name = "Undershirt (Black, Long Sleeved)"
-	icon_state = "b_long_undershirt"
+/datum/sprite_accessory/undershirt/grey
+	name = "Grey Undershirt"
+	icon_state = "undershirt_grey_short"
+
+/datum/sprite_accessory/undershirt/grey/sleeveless
+	name = "Grey Undershirt (Sleeveless)"
+	icon_state = "undershirt_grey"
+
+/datum/sprite_accessory/undershirt/red
+	name = "Red Undershirt"
+	icon_state = "undershirt_uscm_red"
+
+/datum/sprite_accessory/undershirt/yellow
+	name = "Yellow Undershirt"
+	icon_state = "undershirt_uscm_yellow"
+
+/datum/sprite_accessory/undershirt/blue
+	name = "Blue Undershirt"
+	icon_state = "undershirt_uscm_blue"
 
 // Male
 /datum/sprite_accessory/undershirt/none
 	name = "None"
 	icon_state = "none"
-	gender = MALE
+	gender = NEUTER
 
 // Female
 /datum/sprite_accessory/undershirt/bra
-	name = "Bra"
-	icon_state = "classic"
+	name = "White Bra"
+	icon_state = "bra_white"
 	gender = FEMALE
-	camo_conforming = TRUE
+
+/datum/sprite_accessory/undershirt/bra/white
+	name = "Black Bra"
+	icon_state = "bra_black"
 
 /datum/sprite_accessory/undershirt/sports_bra
-	name = "Sports Bra"
-	icon_state = "sports"
+	name = "USCM Sports Bra"
+	icon_state = "sports_uscm"
 	gender = FEMALE
-	camo_conforming = TRUE
 
-/datum/sprite_accessory/undershirt/strapless_bra
-	name = "Strapless Bra"
-	icon_state = "strapless"
-	gender = FEMALE
-	camo_conforming = TRUE
+/datum/sprite_accessory/undershirt/sports_bra/white
+	name = "White Sports Bra"
+	icon_state = "sports_white"
+
+/datum/sprite_accessory/undershirt/sports_bra/black
+	name = "Black Sports Bra"
+	icon_state = "sports_black"
 
 // Restricted
-
-/datum/sprite_accessory/undershirt/civilian
-	name = "undershirt"
-	icon_state = "undershirt"
-	gender = NEUTER
-	restricted = TRUE
 
 /datum/sprite_accessory/undershirt/telnyashka
 	name = "Naval Infantry Telnyashka"
 	icon_state = "telnyashka_blue"
-	gender = NEUTER
 	restricted = TRUE
 
 /datum/sprite_accessory/undershirt/telnyashka/territorial
 	name = "Territorial Guard Telnyashka"
 	icon_state = "telnyashka_green"
-	gender = NEUTER
 	restricted = TRUE
 
 /datum/sprite_accessory/undershirt/telnyashka/interior
 	name = "Interior Forces Telnyashka"
 	icon_state = "telnyashka_red"
-	gender = NEUTER
 	restricted = TRUE
 
-/datum/sprite_accessory/undershirt/marine
-	name = "Marine Undershirt"
-	icon_state = "undershirt_uscm"
-	gender = NEUTER
+/datum/sprite_accessory/undershirt/army
+	name = "US Army Undershirt"
+	icon_state = "undershirt_army_short"
 	restricted = TRUE
 
-/datum/sprite_accessory/undershirt/black
-	name = "Black Undershirt"
-	icon_state = "undershirt_black"
-	gender = NEUTER
+/datum/sprite_accessory/undershirt/army/sleeveless
+	name = "US Army Undershirt (Sleeveless)"
+	icon_state = "undershirt_army"
 	restricted = TRUE
-
-/datum/sprite_accessory/undershirt/black/short
-	name = "Black Undershirt, Short"
-	icon_state = "undershirt_black_short"
 
 /datum/sprite_accessory/undershirt/black/long
-	name = "Black Undershirt, Long"
+	name = "Black Undershirt (Long Sleeve)"
 	icon_state = "undershirt_black_long"
+	restricted = TRUE
