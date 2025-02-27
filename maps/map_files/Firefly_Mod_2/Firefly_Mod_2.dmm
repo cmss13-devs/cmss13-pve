@@ -1917,18 +1917,6 @@
 "eC" = (
 /turf/open/floor/corsat/whitecorner,
 /area/firefly/hangar)
-"eD" = (
-/obj/item/device/flashlight/flare/on/starshell_ash{
-	pixel_x = -12;
-	pixel_y = -47;
-	layer = 10;
-	fuel = 100000;
-	fuel_rate = 0;
-	desc = "Bright burning infra-redlights from the ship's sensor array. Requires more maintenance than anything else.";
-	name = "Aircraft Warning Lights"
-	},
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
-/area/firefly/co)
 "eE" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -38559,7 +38547,7 @@ Hr
 Fk
 Fk
 iM
-eD
+bt
 IH
 GJ
 tr
