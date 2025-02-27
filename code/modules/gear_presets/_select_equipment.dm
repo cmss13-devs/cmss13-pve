@@ -25,7 +25,11 @@
 	var/faction = FACTION_NEUTRAL
 	var/list/faction_group
 	var/origin_override
-
+	var/xenovictim = FALSE //Set to true to make the corpse spawn as a victim of a xeno burst
+	var/corpse = FALSE
+	var/burncorpse = FALSE
+	var/brutecorpse = FALSE
+	var/blood_volume = BLOOD_VOLUME_NORMAL
 	var/minimap_icon = "private"
 	var/minimap_background = MINIMAP_ICON_BACKGROUND_USCM
 	var/always_minimap_visible = TRUE
@@ -252,7 +256,42 @@
 	return
 
 /datum/equipment_preset/proc/load_status(mob/living/carbon/human/new_human, client/mob_client)
-	return
+
+	if(corpse)
+		new_human.undefibbable = TRUE
+		new_human.death(create_cause_data("existing"), TRUE) //Kills the new mob
+		if(xenovictim)
+			new_human.chestburst = 2
+			var/datum/internal_organ/organ
+			var/i
+			for(i in list("heart","lungs"))
+				organ = new_human.internal_organs_by_name[i]
+				new_human.internal_organs_by_name -= i
+				new_human.internal_organs -= organ
+				new_human.update_burst()
+			//buckle to nest
+			var/obj/structure/bed/nest/nest = locate() in get_turf(src)
+			if(nest)
+				new_human.buckled = nest
+				new_human.setDir(nest.dir)
+				nest.buckled_mob = new_human
+				nest.afterbuckle(new_human)
+		if(brutecorpse)
+			new_human.apply_damage(rand(50, 150), BRUTE)
+			new_human.apply_damage(rand(50, 150), BRUTE)
+			new_human.apply_damage(rand(50, 150), BRUTE)
+			new_human.blood_volume = (rand(50, 180))
+		if(burncorpse)
+			new_human.apply_damage(rand(25, 50), BRUTE)
+			new_human.apply_damage(rand(50, 150), BURN)
+			new_human.apply_damage(rand(50, 150), BURN)
+			new_human.apply_damage(rand(50, 150), BURN)
+		new_human.apply_damage(rand(50, 150), OXY)
+		new_human.spawned_corpse = TRUE
+		new_human.updatehealth()
+		new_human.pulse = PULSE_NONE
+	else
+		return
 
 /datum/equipment_preset/proc/load_skills(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.set_skills(skills)
