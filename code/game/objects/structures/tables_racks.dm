@@ -23,7 +23,6 @@
 	breakable = 1
 	var/parts = /obj/item/frame/table
 	debris = list(/obj/item/frame/table)
-
 	var/sheet_type = /obj/item/stack/sheet/metal
 	var/table_prefix = "alm" //used in update_icon()
 	var/reinforced = FALSE
