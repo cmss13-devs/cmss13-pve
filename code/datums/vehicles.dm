@@ -34,6 +34,10 @@
 	name = "Anti-Air APC"
 	interior_id = "apc_aa"
 
+/datum/map_template/interior/apc_moviemed
+	name = "Medical Treatment APC"
+	interior_id = "apc_moviemed"
+
 /datum/map_template/interior/arc
 	name = "ARC"
 	interior_id = "arc"
