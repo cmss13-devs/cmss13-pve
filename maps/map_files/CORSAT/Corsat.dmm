@@ -1212,7 +1212,7 @@
 /area/corsat/sigma/south/security)
 "anL" = (
 /obj/effect/landmark/xeno_spawn,
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/almayer/research/containment/floor2,
 /area/corsat/inaccessible)
 "anP" = (
@@ -2063,7 +2063,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/ice,
 /area/corsat/gamma/biodome)
 "aEX" = (
@@ -2074,12 +2074,12 @@
 /turf/open/ice,
 /area/corsat/gamma/biodome)
 "aEZ" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/ice,
 /area/corsat/gamma/biodome)
 "aFd" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/ice,
 /area/corsat/gamma/biodome)
 "aFg" = (
@@ -5584,7 +5584,7 @@
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
 	},
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/omega/hallways)
 "cmR" = (
@@ -6934,7 +6934,7 @@
 /turf/open/floor/corsat/darkgreen/west,
 /area/corsat/gamma/rnr)
 "cYK" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/control)
 "cYW" = (
@@ -12036,7 +12036,7 @@
 /area/corsat/theta/airlock/west)
 "fLk" = (
 /obj/effect/landmark/xeno_spawn,
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/biodome)
 "fLq" = (
@@ -14962,7 +14962,7 @@
 /turf/open/mars_cave/mars_cave_23,
 /area/corsat/sigma/biodome/gunrange)
 "hmX" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/omega/complex)
 "hnj" = (
@@ -15252,7 +15252,7 @@
 /turf/open/floor/corsat,
 /area/corsat/theta/airlock/west/id)
 "hxg" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/omega/airlocknorth)
 "hxo" = (
@@ -15448,7 +15448,7 @@
 /turf/open/floor/corsat/blue/north,
 /area/corsat/sigma/southeast)
 "hBU" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/red,
 /area/corsat/omega/hallways)
 "hBW" = (
@@ -16960,7 +16960,7 @@
 /area/corsat/gamma/residential/lounge)
 "irc" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/omega/hallways)
 "irh" = (
@@ -18626,7 +18626,7 @@
 /turf/open/floor/corsat/brown/north,
 /area/corsat/gamma/cargo)
 "jhk" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/hangar)
 "jhw" = (
@@ -18749,7 +18749,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/omega/hallways)
 "jkT" = (
@@ -20008,7 +20008,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
 	},
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/omega/hallways)
 "jYd" = (
@@ -21190,7 +21190,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/gamma/residential/researcher)
 "kEX" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/biodome)
 "kEZ" = (
@@ -21297,7 +21297,7 @@
 /turf/open/floor/corsat/bluegrey/east,
 /area/corsat/gamma/airlock/north)
 "kHu" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/purplewhite/west,
 /area/corsat/omega/complex)
 "kHP" = (
@@ -22549,7 +22549,7 @@
 /area/corsat/gamma/biodome/complex)
 "lrl" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/omega/complex)
 "lrt" = (
@@ -22813,7 +22813,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/omega/complex)
 "lxq" = (
@@ -24648,7 +24648,7 @@
 /turf/open/floor/corsat/browncorner,
 /area/corsat/gamma/foyer)
 "mvR" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/biodome)
@@ -24722,7 +24722,7 @@
 /turf/open/floor/corsat/plate,
 /area/corsat/sigma/south)
 "mym" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/omega/hallways)
 "myo" = (
@@ -25302,7 +25302,7 @@
 /turf/open/floor/corsat/yellow/west,
 /area/corsat/sigma/airlock/control)
 "mRC" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_wall,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/floor/corsat,
@@ -26538,7 +26538,7 @@
 /turf/open/floor/corsat/purplewhite/southwest,
 /area/corsat/sigma/south/complex)
 "nyO" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/mars_cave/mars_cave_2,
 /area/corsat/sigma/biodome)
 "nzv" = (
@@ -27313,7 +27313,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/omega/hallways)
 "nSF" = (
@@ -27981,7 +27981,7 @@
 /turf/open/floor/corsat/sigma,
 /area/corsat/sigma/north)
 "olY" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/almayer/research/containment/floor2,
 /area/corsat/inaccessible)
@@ -28578,7 +28578,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/hangar/security)
 "oBv" = (
@@ -28899,7 +28899,7 @@
 /turf/open/floor/corsat/yellow/southwest,
 /area/corsat/sigma/airlock/control)
 "oLg" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/almayer/research/containment/floor2,
 /area/corsat/inaccessible)
 "oLj" = (
@@ -37738,7 +37738,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/hangar/arrivals)
 "tuL" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/plate,
 /area/corsat/omega/biodome)
@@ -38275,7 +38275,7 @@
 /turf/open/floor/corsat/red/east,
 /area/corsat/omega/security)
 "tKM" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/red/east,
 /area/corsat/omega/hallways)
 "tKY" = (
@@ -38937,7 +38937,7 @@
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/gamma/residential/east)
 "ucl" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquareslight,
 /area/corsat/omega/containment)
 "ucy" = (
@@ -39661,7 +39661,7 @@
 /area/corsat/sigma/dorms)
 "uvW" = (
 /obj/structure/machinery/door/window/eastright,
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/purplewhite/east,
 /area/corsat/omega/complex)
 "uwf" = (
@@ -40369,7 +40369,7 @@
 /turf/open/floor/corsat/yellow/north,
 /area/corsat/sigma/south/robotics)
 "uQu" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/omega/hallways)
 "uQx" = (
@@ -41238,7 +41238,7 @@
 /turf/open/floor/corsat/whitebluefull/southwest,
 /area/corsat/gamma/residential/lavatory)
 "vnu" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/mars_cave/mars_cave_18,
 /area/corsat/sigma/biodome)
 "vnx" = (
@@ -41868,7 +41868,7 @@
 /turf/open/floor/almayer/tcomms,
 /area/corsat/sigma/southeast/telecomm)
 "vFG" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/red/west,
 /area/corsat/omega/hangar)
 "vFJ" = (
@@ -42546,7 +42546,7 @@
 /turf/open/floor/corsat/purplewhitecorner/west,
 /area/corsat/omega/complex)
 "vYG" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/purple,
 /area/corsat/omega/hallways)
 "vYO" = (
@@ -42577,7 +42577,7 @@
 /turf/open/floor/corsat/yellow/east,
 /area/corsat/omega/maint)
 "vZJ" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/closed/wall/resin/membrane,
 /area/corsat/omega/biodome)
 "vZK" = (
@@ -44136,7 +44136,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/control)
 "wOB" = (
@@ -45594,7 +45594,7 @@
 /turf/open/floor/corsat/greenwhite/east,
 /area/corsat/gamma/medbay/chemistry)
 "xEf" = (
-/obj/effect/alien/weeds/node,
+/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/corsat/redcorner/east,
 /area/corsat/omega/hallways)
 "xEn" = (
