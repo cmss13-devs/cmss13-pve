@@ -884,7 +884,7 @@
 
 /obj/item/explosive/grenade/nerve_gas/prime()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 6)
+	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null)
 	nerve_gas.start()
 	new /obj/item/trash/grenade/gas(get_turf(src))
 	qdel(src)
@@ -922,7 +922,7 @@
 
 /obj/item/explosive/grenade/LSD/prime()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	LSD_gas.set_up(LSD_gas_radius, 0, get_turf(src), null, 6)
+	LSD_gas.set_up(LSD_gas_radius, 0, get_turf(src), null)
 	LSD_gas.start()
 	new /obj/item/trash/grenade/gas(get_turf(src))
 	qdel(src)
