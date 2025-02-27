@@ -130,7 +130,7 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	time_to_unequip = 50
 	time_to_equip = 50
-	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR
+	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|PROTECTFROMWEATHER
 	breach_vulnerability = SPACESUIT_BREACH_STANDARD
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/spacesuit/toggle_motion_detector)
 	var/obj/item/device/motiondetector/spacesuit/MD
@@ -277,7 +277,7 @@
 	)
 	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
-	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS
+	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS|PROTECTFROMWEATHER
 	breach_vulnerability = SPACESUIT_BREACH_COMBAT
 
 /obj/item/clothing/head/helmet/space/pressure/upp
@@ -317,7 +317,7 @@
 	)
 	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
-	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS
+	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS|PROTECTFROMWEATHER
 	breach_vulnerability = SPACESUIT_BREACH_COMBAT
 
 // Souto man
