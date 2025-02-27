@@ -137,7 +137,6 @@
 /turf/open/floor/tdome/northeast,
 /area/firefly/ares)
 "at" = (
-/obj/structure/filingcabinet,
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
@@ -184,6 +183,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/arrow_west,
 /area/firefly/hangar)
 "az" = (
@@ -706,6 +706,9 @@
 /obj/structure/platform_decoration{
 	dir = 1
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
 /turf/open/floor/corsat/white/northwest,
 /area/firefly/hangar)
 "bN" = (
@@ -865,7 +868,6 @@
 	pixel_y = 2
 	},
 /obj/structure/pipes/vents/pump,
-/obj/structure/machinery/power/apc/no_power/south,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "cj" = (
@@ -1772,6 +1774,9 @@
 	icon_state = "door_warning";
 	dir = 1
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "eo" = (
@@ -2140,6 +2145,12 @@
 	},
 /turf/open/floor/corsat/retrosquareslight,
 /area/firefly/medical)
+"ff" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/hangar)
 "fg" = (
 /obj/structure/machinery/door/airlock/almayer/research/glass/colony{
 	name = "Decontamination Chamber";
@@ -2152,6 +2163,12 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
+"fh" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/hangar)
 "fi" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 8
@@ -2761,6 +2778,9 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "gH" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
 /turf/open/floor/corsat/yellow/southwest,
 /area/firefly/hangar)
 "gI" = (
@@ -2924,10 +2944,6 @@
 /area/firefly/medical)
 "hd" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/reagent_container/food/drinks/cans/waterbottle{
-	pixel_x = 22;
-	pixel_y = -26
-	},
 /obj/structure/machinery/faxmachine/corporate{
 	layer = 10
 	},
@@ -3458,6 +3474,9 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
 	},
 /turf/open/floor/corsat/white/north,
 /area/firefly/hangar)
@@ -4299,6 +4318,9 @@
 /area/firefly/hangar)
 "kf" = (
 /obj/structure/closet/secure_closet/engineering_materials,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
 /turf/open/floor/corsat/yellow/northwest,
 /area/firefly/hangar)
 "kg" = (
@@ -5351,6 +5373,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "mF" = (
@@ -5507,6 +5532,15 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
+"mY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out"
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/hangar)
 "mZ" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2
@@ -6239,6 +6273,9 @@
 	pixel_x = -1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "oK" = (
@@ -7019,6 +7056,9 @@
 /area/firefly/medical)
 "qC" = (
 /obj/structure/machinery/telecomms/server/presets/engineering,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/hangar)
 "qD" = (
@@ -7203,6 +7243,12 @@
 	},
 /turf/open/floor/corsat/greencorner/north,
 /area/firefly/cafeteria)
+"rf" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/yellow/southeast,
+/area/firefly/hangar)
 "rg" = (
 /obj/structure/coatrack{
 	pixel_x = -8
@@ -7640,6 +7686,9 @@
 	icon_state = "NW-out";
 	pixel_y = 2
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "sh" = (
@@ -7879,6 +7928,9 @@
 "sI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
 	},
 /turf/open/floor/corsat/arrow_west,
 /area/firefly/hangar)
@@ -9777,6 +9829,12 @@
 	icon_state = "wy18"
 	},
 /area/firefly/engineer)
+"wS" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/corsat/red/northwest,
+/area/firefly/medical)
 "wT" = (
 /obj/structure/barricade/handrail{
 	dir = 4;
@@ -9930,12 +9988,9 @@
 /area/firefly/engineer)
 "xk" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/ashtray/glass{
-	pixel_y = 4
-	},
-/obj/item/folder/red{
-	pixel_x = 9;
-	pixel_y = -2
+/obj/structure/machinery/computer/emails{
+	dir = 4;
+	pixel_x = 1
 	},
 /turf/open/floor/carpet10_8,
 /area/firefly/briefing)
@@ -12069,6 +12124,9 @@
 /area/firefly/hangar)
 "Ch" = (
 /obj/structure/largecrate/random/case/double,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
 "Ci" = (
@@ -12944,7 +13002,7 @@
 	id = "south_hanger_2"
 	},
 /turf/open/space/basic,
-/area/space)
+/area/firefly/medical)
 "Em" = (
 /turf/open/floor/corsat/purplecorner/west,
 /area/firefly/medical)
@@ -13381,7 +13439,7 @@
 	id = "F_Range"
 	},
 /turf/open/space/basic,
-/area/space)
+/area/firefly/medical)
 "Fo" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
 /turf/open/floor/corsat/yellow/northwest,
@@ -13541,7 +13599,7 @@
 	id = "OOB_Exit"
 	},
 /turf/open/space/basic,
-/area/space)
+/area/firefly/medical)
 "FH" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform{
@@ -14312,7 +14370,7 @@
 	id = "science_wing_lockdown"
 	},
 /turf/open/space/basic,
-/area/space)
+/area/firefly/medical)
 "Ho" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
@@ -14557,6 +14615,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
 /turf/open/floor/corsat/white/north,
 /area/firefly/hangar)
 "HU" = (
@@ -14711,6 +14772,9 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
 	},
 /turf/open/floor/corsat/whitecorner/east,
 /area/firefly/hangar)
@@ -15008,6 +15072,9 @@
 	id = "stair_oob";
 	pixel_y = 26
 	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
 /turf/open/floor/corsat/plate,
 /area/firefly/briefing)
 "IQ" = (
@@ -15247,6 +15314,12 @@
 	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/engineer)
+"Jr" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/cargo,
+/area/firefly/hangar)
 "Js" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/prop/server_equipment/laptop/on{
@@ -15708,6 +15781,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
 	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "Kt" = (
@@ -15922,6 +15998,9 @@
 "KQ" = (
 /obj/structure/platform_decoration{
 	dir = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
 	},
 /turf/open/floor/corsat/white/southwest,
 /area/firefly/hangar)
@@ -16531,6 +16610,16 @@
 /obj/structure/window/framed/corsat/security,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"Mh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/hangar)
 "Mi" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 1;
@@ -16644,6 +16733,12 @@
 	},
 /turf/open/floor/corsat/white,
 /area/firefly/medical)
+"Mt" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/firefly/briefing)
 "Mu" = (
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/corsat/retrosquareslight,
@@ -16656,6 +16751,13 @@
 	},
 /turf/open/floor/corsat/spiralplate,
 /area/firefly/engineer)
+"Mw" = (
+/obj/structure/machinery/disposal,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/hangar)
 "Mx" = (
 /obj/structure/platform/stair_cut,
 /obj/structure/stairs/perspective{
@@ -16700,6 +16802,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
+/obj/structure/platform_decoration,
 /turf/open/floor/wood/ship,
 /area/firefly/co)
 "MB" = (
@@ -16973,6 +17076,16 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/engineer)
+"Ng" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 9;
+	pixel_y = -2
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/corsat/white/west,
+/area/firefly/hangar)
 "Nh" = (
 /turf/open/floor/almayer/w_y2/north,
 /area/firefly/engineer)
@@ -17024,6 +17137,13 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
+"No" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/hangar)
 "Np" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -17070,6 +17190,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/white/east,
 /area/firefly/engineer)
+"Nu" = (
+/obj/structure/machinery/light/double/blue,
+/obj/structure/platform_decoration,
+/turf/open/floor/corsat/plate,
+/area/firefly/briefing)
 "Nv" = (
 /obj/structure/pipes/vents/scrubber,
 /obj/structure/machinery/light/double/blue{
@@ -17091,6 +17216,18 @@
 /obj/structure/surface/table/reinforced/black,
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
+"Ny" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/corsat/white/northwest,
+/area/firefly/hangar)
+"Nz" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1
+	},
+/turf/open/floor/corsat/white/northeast,
+/area/firefly/hangar)
 "NA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -17705,10 +17842,6 @@
 /area/firefly/medical)
 "Pb" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/structure/machinery/computer/emails{
-	dir = 4;
-	pixel_x = 1
-	},
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -17716,6 +17849,16 @@
 	dir = 1;
 	pixel_y = 14;
 	pixel_x = 1
+	},
+/obj/item/ashtray/glass{
+	pixel_y = 4
+	},
+/obj/item/folder/red{
+	pixel_x = 9;
+	pixel_y = -2
+	},
+/obj/item/reagent_container/food/drinks/cans/waterbottle{
+	pixel_x = -7
 	},
 /turf/open/floor/wood,
 /area/firefly/briefing)
@@ -18382,14 +18525,12 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
 "QO" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 8
-	},
 /obj/structure/barricade/handrail{
 	dir = 1;
 	pixel_y = 14;
 	pixel_x = 1
 	},
+/obj/structure/filingcabinet,
 /turf/open/floor/wood,
 /area/firefly/briefing)
 "QP" = (
@@ -20410,6 +20551,7 @@
 	layer = 3.5
 	},
 /obj/structure/platform/stair_cut/alt,
+/obj/structure/platform,
 /turf/open/floor/wood/ship,
 /area/firefly/co)
 "VF" = (
@@ -20780,6 +20922,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
 	pixel_y = 1
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
 	},
 /turf/open/floor/corsat/white/west,
 /area/firefly/hangar)
@@ -37314,7 +37459,7 @@ Nw
 Nw
 zW
 zW
-Hu
+wS
 Gr
 qb
 zW
@@ -41098,7 +41243,7 @@ LW
 bt
 IP
 bZ
-bZ
+Nu
 yH
 Jk
 hv
@@ -41258,7 +41403,7 @@ CW
 Qv
 zx
 QO
-aj
+Mt
 aj
 sv
 BQ
@@ -41700,7 +41845,7 @@ lk
 iV
 bv
 bv
-lK
+Ny
 YY
 YY
 cW
@@ -41710,7 +41855,7 @@ of
 uS
 Du
 eI
-Tm
+Ng
 Tm
 sY
 eb
@@ -42644,7 +42789,7 @@ LA
 kR
 lu
 dH
-Ml
+ff
 bB
 Wa
 Wa
@@ -43252,7 +43397,7 @@ LA
 Ml
 bv
 fB
-Ml
+fh
 jk
 oC
 oC
@@ -44468,7 +44613,7 @@ LA
 Ml
 bv
 fB
-Ml
+ff
 jk
 oC
 oC
@@ -45076,7 +45221,7 @@ LA
 kR
 cE
 dH
-Ml
+fh
 xx
 MD
 MD
@@ -45195,7 +45340,7 @@ aA
 aA
 Or
 bv
-yC
+Nz
 qt
 Ml
 PD
@@ -45532,7 +45677,7 @@ LA
 kR
 cE
 dH
-iK
+mY
 Ma
 Kv
 Kv
@@ -45964,10 +46109,10 @@ Hz
 sG
 sG
 bv
-Cn
+No
 nh
 Wt
-VZ
+Mw
 bv
 eo
 te
@@ -45977,7 +46122,7 @@ bv
 Ch
 rW
 Dt
-oC
+Jr
 bv
 sG
 sG
@@ -46107,8 +46252,8 @@ aA
 aA
 sW
 Fk
-iV
-iV
+bv
+bv
 bv
 bv
 Me
@@ -47479,7 +47624,7 @@ aA
 aA
 bv
 bv
-Wa
+Mh
 Zj
 Wa
 Lj
@@ -47492,7 +47637,7 @@ mE
 Wa
 Wa
 dq
-Wa
+Mh
 bv
 bv
 aA
@@ -47657,7 +47802,7 @@ xO
 qw
 qw
 Ph
-pT
+rf
 bv
 aA
 aA
