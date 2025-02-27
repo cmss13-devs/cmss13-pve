@@ -21,10 +21,10 @@
 	if(!leader && HAS_FLAG(mob.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(mob.client, JOB_SQUAD_LEADER, time_required_for_job))
 		leader = mob
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Weyland-Yutani Corporate Security Lead!"))
-		arm_equipment(mob, /datum/equipment_preset/goon/lead, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/colonist/security/weyland/tactical/lead, TRUE, TRUE)
 	else
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Weyland-Yutani Corporate Security Officer!"))
-		arm_equipment(mob, /datum/equipment_preset/goon/standard, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/colonist/security/weyland/tactical, TRUE, TRUE)
 
 	print_backstory(mob)
 
@@ -68,14 +68,14 @@
 	if(!leader && HAS_FLAG(mob.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(mob.client, JOB_SQUAD_LEADER, time_required_for_job))
 		leader = mob
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Weyland-Yutani Corporate Security Lead!"))
-		arm_equipment(mob, /datum/equipment_preset/goon/lead, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/colonist/security/weyland/tactical/lead, TRUE, TRUE)
 	else if(medics < max_medics && HAS_FLAG(mob.client.prefs.toggles_ert, PLAY_MEDIC) && check_timelock(mob.client, JOB_SQUAD_MEDIC, time_required_for_job))
 		medics++
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Weyland-Yutani Corporate Research Consultant!"))
 		arm_equipment(mob, /datum/equipment_preset/goon/researcher, TRUE, TRUE)
 	else
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Weyland-Yutani Corporate Security Officer!"))
-		arm_equipment(mob, /datum/equipment_preset/goon/standard, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/colonist/security/weyland/tactical, TRUE, TRUE)
 
 	print_backstory(mob)
 
@@ -119,10 +119,10 @@
 	if(!leader && HAS_FLAG(mob.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(mob.client, JOB_SQUAD_LEADER, time_required_for_job))
 		leader = mob
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Weyland-Yutani Corporate Security Lead!"))
-		arm_equipment(mob, /datum/equipment_preset/goon/lead, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/colonist/security/weyland/tactical/lead, TRUE, TRUE)
 	else
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Weyland-Yutani Corporate Security Officer!"))
-		arm_equipment(mob, /datum/equipment_preset/goon/standard, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/colonist/security/weyland/tactical, TRUE, TRUE)
 
 	print_backstory(mob)
 
