@@ -1572,7 +1572,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "aMx" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -3607,7 +3607,7 @@
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/north_command_centre)
 "bIO" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 4;
 	flipped = 1
 	},
@@ -4384,7 +4384,7 @@
 /turf/open/asphalt/cement/cement9,
 /area/lv522/outdoors/colony_streets/central_streets)
 "cbs" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 4;
 	flipped = 1
 	},
@@ -6341,7 +6341,7 @@
 /area/lv522/atmos/cargo_intake)
 "dbF" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -7876,7 +7876,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/garage)
 "dKE" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -8967,7 +8967,7 @@
 	},
 /area/lv522/landing_zone_forecon/UD6_Typhoon)
 "eqC" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -9590,7 +9590,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
 "eDz" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	flipped = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -15617,7 +15617,7 @@
 /area/lv522/indoors/c_block/cargo)
 "hFy" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -15974,7 +15974,7 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/lv522/oob)
 "hOz" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -20565,7 +20565,7 @@
 /turf/open/floor/plating,
 /area/lv522/outdoors/w_rockies)
 "kas" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	flipped = 1
 	},
 /turf/open/floor/prison/darkredfull2,
@@ -21326,7 +21326,7 @@
 /turf/open/floor/corsat/brown/northwest,
 /area/lv522/atmos/cargo_intake)
 "krm" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	flipped = 1
 	},
 /turf/open/floor/prison,
@@ -22348,7 +22348,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/a_block/fitness)
 "kNk" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -23100,7 +23100,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "lfc" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -24391,7 +24391,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/garage)
 "lJM" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	flipped = 1
 	},
 /obj/structure/machinery/light,
@@ -25220,7 +25220,7 @@
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
 "mck" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	flipped = 1
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -31280,7 +31280,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/hallway)
 "oVX" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -34078,7 +34078,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "qfT" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 8;
 	flipped = 1
 	},
@@ -34347,7 +34347,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/reactor_garage)
 "qmW" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 4;
 	flipped = 1
 	},
@@ -36908,7 +36908,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/north_street)
 "rvB" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 8;
 	flipped = 1
 	},
@@ -37620,7 +37620,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "rNn" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -38216,7 +38216,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/mining)
 "scC" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 4;
 	flipped = 1
 	},
@@ -42487,7 +42487,7 @@
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel)
 "tWD" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 8;
 	flipped = 1
 	},
@@ -42641,7 +42641,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/b_block/bar)
 "uan" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 8;
 	flipped = 1
 	},
@@ -44658,7 +44658,7 @@
 /turf/open/floor/carpet,
 /area/lv522/indoors/a_block/executive)
 "uYZ" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 8;
 	flipped = 1
 	},
@@ -46721,7 +46721,7 @@
 /turf/open/floor/plating,
 /area/lv522/indoors/c_block/cargo)
 "vYj" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 1;
 	flipped = 1
 	},
@@ -47835,7 +47835,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/cargo)
 "wyR" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 8;
 	flipped = 1
 	},
@@ -50197,7 +50197,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/kitchen)
 "xDM" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 8;
 	flipped = 1
 	},

@@ -1317,7 +1317,7 @@
 /obj/structure/machinery/computer/general_air_control/large_tank_control{
 	name = "CO2 Control"
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	dir = 4
 	},
 /turf/open/floor/corsat/yellow/southwest,

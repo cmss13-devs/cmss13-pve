@@ -20,7 +20,7 @@
 /turf/open/floor/almayer/green/west,
 /area/misc/tutorial)
 "n" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	breakable = 0;
 	throwpass = 0;
 	climbable = 0;

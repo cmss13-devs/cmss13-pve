@@ -3698,7 +3698,7 @@
 	pixel_y = 15;
 	layer = 4.03
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	layer = 4.02
 	},
 /turf/open/floor/redyellowfull,

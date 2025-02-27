@@ -66577,7 +66577,7 @@
 	dir = 1;
 	pixel_y = 2
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	layer = 3
 	},
 /obj/effect/landmark/map_item,
