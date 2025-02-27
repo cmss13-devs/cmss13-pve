@@ -403,7 +403,7 @@
 
 	if(key)
 		if(include_link && C)
-			. += "<a href='?priv_msg=[C.ckey]'>"
+			. += "<a href='byond://?priv_msg=[C.ckey]'>"
 
 		. += key
 
