@@ -18900,9 +18900,6 @@
 	dir = 4
 	},
 /obj/structure/stairs,
-/obj/structure/platform{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment,
 /turf/open/asphalt/cement/cement1,
 /area/desert_dam/interior/dam_interior/central_tunnel)
@@ -23945,9 +23942,6 @@
 	dir = 4
 	},
 /obj/structure/stairs,
-/obj/structure/platform{
-	dir = 4
-	},
 /turf/open/asphalt/cement/cement1,
 /area/desert_dam/interior/dam_interior/west_tunnel)
 "iCd" = (
