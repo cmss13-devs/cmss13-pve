@@ -924,7 +924,7 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cryo_cells)
 "kp" = (
-/obj/structure/machinery/vending/cigarette,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "kw" = (
