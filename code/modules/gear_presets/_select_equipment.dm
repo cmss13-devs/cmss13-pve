@@ -300,11 +300,17 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	var/obj/structure/closet/secure_closet/marine_personal/closet_to_spawn_in
 	if(!new_human?.client?.prefs?.gear)
 		return//We want to equip them with custom stuff second, after they are equipped with everything else.
+	var/has_found_closet = FALSE
 	for(var/obj/structure/closet/secure_closet/marine_personal/closet in GLOB.personal_closets)
 		if(closet.owner)
 			continue
-		if(new_human.job != closet.job)
+		if(new_human.job == closet.job)
+			has_found_closet = TRUE
+		if(new_human.loc == closet.linked_spawn_turf)
+			has_found_closet = TRUE
+		if(!has_found_closet)
 			continue
+
 		closet.owner = new_human.real_name
 		closet_to_spawn_in = closet
 		closet_to_spawn_in.name = "[closet_to_spawn_in.owner]'s personal locker"
