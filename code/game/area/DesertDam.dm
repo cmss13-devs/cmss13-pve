@@ -816,7 +816,7 @@
 	var/obj/structure/machinery/console/toggle/Floodgate = null //If there's a floodgate at the end of us, this is it's ID
 
 /area/desert_dam/exterior/river/proc/check_filtered()
-	var/turf/open/gm/river/desert/R
+	var/turf/open/liquid/water/river/desert/R
 	if(filtered)
 		for(R in src)
 			R.toxic = 0
