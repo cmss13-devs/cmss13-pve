@@ -1939,3 +1939,75 @@
 
 /obj/item/weapon/gun/rifle/xm51/cock(mob/user) //Stops the "You cock the gun." message where nothing happens.
 	return
+
+
+#define KHYBER_UNJAM_CHANCE 45
+
+/obj/item/weapon/gun/rifle/m41a/khyber
+	name = "\improper M41 MK2 'pulse' rifle"
+	icon_state = "m41amk1"
+	item_state = "m41amk1"
+	desc = "This doesn't feel right. Something is off here."
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/khyber
+	fire_sound = "m4a3"
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/bipod,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/stock/rifle,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/mini,
+	)
+	flags_gun_features = GUN_CAN_POINTBLANK
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
+	map_specific_decoration = FALSE
+	start_automatic = TRUE
+	var/jammed = FALSE
+
+/obj/item/weapon/gun/rifle/m41a/khyber/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+	var/obj/item/ammo_magazine/rifle/m41aMK1/khyber/funny_mag =  current_mag
+	if(jammed)
+		if(world.time % 3)
+			playsound(src, 'sound/weapons/handling/gun_jam_click.ogg', 35, TRUE)
+			to_chat(user, SPAN_WARNING("Your gun is jammed! Mash Unique-Action to unjam it!"))
+			balloon_alert(user, "*jammed*")
+		return NONE
+	else if(prob(funny_mag?.jam_chance))
+		jammed = TRUE
+		playsound(src, 'sound/weapons/handling/gun_jam_initial_click.ogg', 50, FALSE)
+		user.visible_message(SPAN_DANGER("[src] makes a noticeable clicking noise!"), SPAN_HIGHDANGER("\The [src] suddenly jams and refuses to fire! Mash Unique-Action to unjam it."))
+		balloon_alert(user, "*jammed*")
+		return NONE
+	else
+		return ..()
+
+/obj/item/weapon/gun/rifle/m41a/khyber/unique_action(mob/user)
+	if(jammed)
+		if(prob(KHYBER_UNJAM_CHANCE))
+			to_chat(user, SPAN_GREEN("You successfully unjam \the [src]!"))
+			playsound(src, 'sound/weapons/handling/gun_jam_rack_success.ogg', 50, FALSE)
+			jammed = FALSE
+			cock_cooldown += 1 SECONDS //so they dont accidentally cock a bullet away
+			balloon_alert(user, "*unjammed!*")
+		else
+			to_chat(user, SPAN_NOTICE("You start wildly racking the bolt back and forth attempting to unjam \the [src]!"))
+			playsound(src, "gun_jam_rack", 50, FALSE)
+			balloon_alert(user, "*rack*")
+		return
+	. = ..()
+
+#undef KHYBER_UNJAM_CHANCE

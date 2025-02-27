@@ -139,6 +139,12 @@
 	desc = "A 10mm assault rifle magazine filled with tracer bullets."
 	default_ammo = /datum/ammo/bullet/rifle/tracer
 
+/obj/item/ammo_magazine/rifle/m41aMK1/khyber
+	max_rounds = 49
+	gun_type = /obj/item/weapon/gun/rifle/m41a/khyber
+	default_ammo = /datum/ammo/bullet/pistol
+	var/jam_chance = 4
+
 //-------------------------------------------------------
 //M49A, l42 reskin, same stats as before but different, lore friendly, shell.
 
