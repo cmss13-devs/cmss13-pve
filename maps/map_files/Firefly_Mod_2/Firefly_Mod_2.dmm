@@ -2001,7 +2001,6 @@
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
 "eM" = (
-/obj/structure/stairs/perspective,
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
 	},
@@ -2070,21 +2069,6 @@
 /area/firefly/medical)
 "eT" = (
 /obj/structure/platform/stair_cut,
-/obj/structure/stairs/perspective{
-	dir = 8;
-	icon_state = "p_stair_ew_full_cap";
-	layer = 6
-	},
-/obj/structure/stairs/perspective{
-	dir = 8;
-	icon_state = "p_stair_ew_full_cap";
-	layer = 6
-	},
-/obj/structure/stairs/perspective{
-	dir = 8;
-	icon_state = "p_stair_ew_full_cap";
-	layer = 6
-	},
 /obj/structure/stairs/perspective{
 	dir = 4;
 	icon_state = "p_stair_full"
@@ -2910,11 +2894,7 @@
 /turf/open/floor/corsat/white/north,
 /area/firefly/briefing)
 "gZ" = (
-/obj/structure/pipes/unary/freezer{
-	icon_state = "freezer_1";
-	dir = 0;
-	layer = 3
-	},
+/obj/structure/pipes/unary/freezer,
 /obj/structure/pipes/standard/cap/hidden{
 	dir = 4;
 	pixel_x = 5;
@@ -4425,14 +4405,6 @@
 	},
 /turf/open/floor/corsat/arrow_west,
 /area/firefly/hangar)
-"kt" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -7;
-	pixel_y = 1
-	},
-/turf/open/floor/corsat/yellowcorner/west,
-/area/firefly/engineer)
 "ku" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 8;
@@ -4804,7 +4776,6 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/medical)
 "ls" = (
-/obj/structure/stairs/perspective,
 /obj/structure/platform{
 	dir = 4
 	},
@@ -5773,15 +5744,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/briefing)
-"ny" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/floor/corsat/yellow/north,
-/area/firefly/engineer)
 "nz" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -5953,10 +5915,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/obj/structure/pipes/unary/freezer{
-	icon_state = "freezer_1";
-	dir = 0
-	},
+/obj/structure/pipes/unary/freezer,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "nX" = (
@@ -6055,8 +6014,6 @@
 /turf/open/floor/corsat/white,
 /area/firefly/briefing)
 "oh" = (
-/obj/structure/stairs/perspective,
-/obj/structure/stairs/perspective,
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
 	},
@@ -6659,7 +6616,6 @@
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
 "pE" = (
-/obj/structure/stairs/perspective,
 /obj/structure/platform{
 	dir = 8
 	},
@@ -8941,13 +8897,6 @@
 	},
 /turf/open/floor/corsat/whitecorner,
 /area/firefly/engineer)
-"uW" = (
-/obj/structure/stairs/perspective,
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/engineer)
 "uX" = (
 /obj/structure/machinery/disposal/delivery{
 	density = 0;
@@ -9800,9 +9749,6 @@
 /turf/open/floor/corsat/greenwhite/east,
 /area/firefly/medical)
 "wV" = (
-/obj/structure/platform{
-	dir = 4
-	},
 /obj/structure/cryofeed/right{
 	name = "\improper coolant feed";
 	layer = 1;
@@ -9812,6 +9758,9 @@
 	dir = 1
 	},
 /obj/structure/blocker/fog,
+/obj/structure/platform{
+	dir = 4
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/firefly/engineer)
 "wW" = (
@@ -10416,8 +10365,6 @@
 /turf/open/floor/tdome/northeast,
 /area/firefly/ares)
 "yA" = (
-/obj/structure/stairs/perspective,
-/obj/structure/stairs/perspective,
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
 	},
@@ -10491,16 +10438,6 @@
 "yM" = (
 /turf/open/floor/corsat/arrow_east,
 /area/firefly/briefing)
-"yN" = (
-/obj/structure/stairs/perspective,
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/turf/open/floor/corsat/yellow,
-/area/firefly/engineer)
 "yO" = (
 /obj/structure/barricade/handrail{
 	dir = 1;
@@ -11390,7 +11327,6 @@
 /turf/open/floor/corsat/yellow/northwest,
 /area/firefly/engineer)
 "AO" = (
-/obj/structure/stairs/perspective,
 /obj/structure/platform{
 	dir = 8
 	},
@@ -12400,10 +12336,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/obj/structure/pipes/unary/freezer{
-	icon_state = "freezer_1";
-	dir = 0
-	},
+/obj/structure/pipes/unary/freezer,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "Di" = (
@@ -14377,10 +14310,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/obj/structure/pipes/unary/freezer{
-	icon_state = "freezer_1";
-	dir = 0
-	},
+/obj/structure/pipes/unary/freezer,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "HO" = (
@@ -15097,10 +15027,10 @@
 /area/firefly/engineer)
 "Jq" = (
 /obj/structure/platform{
-	dir = 4
+	dir = 1
 	},
 /obj/structure/platform{
-	dir = 1
+	dir = 4
 	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/engineer)
@@ -15148,10 +15078,7 @@
 /turf/open/floor/corsat/white/east,
 /area/firefly/medical)
 "Jw" = (
-/obj/structure/pipes/unary/freezer{
-	icon_state = "freezer_1";
-	dir = 0
-	},
+/obj/structure/pipes/unary/freezer,
 /obj/item/reagent_container/spray/cleaner{
 	pixel_x = 5;
 	pixel_y = 10
@@ -18324,10 +18251,7 @@
 /turf/open/floor/corsat/yellowcorner/west,
 /area/firefly/engineer)
 "QG" = (
-/obj/structure/machinery/disposal{
-	pixel_x = -8;
-	pixel_y = -4
-	},
+/obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
@@ -20743,12 +20667,6 @@
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/firefly/engineer)
-"Wd" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
-/area/firefly/engineer)
 "We" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -20797,16 +20715,6 @@
 "Wj" = (
 /turf/open/floor/corsat/browncorner/north,
 /area/firefly/squad_omega)
-"Wk" = (
-/obj/structure/stairs/perspective,
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/turf/open/floor/corsat/yellow,
-/area/firefly/engineer)
 "Wl" = (
 /obj/structure/platform{
 	dir = 8
@@ -21776,12 +21684,12 @@
 	pixel_x = 5
 	},
 /obj/structure/platform{
-	dir = 8
-	},
-/obj/structure/platform{
 	dir = 1
 	},
 /obj/structure/blocker/fog,
+/obj/structure/platform{
+	dir = 8
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/firefly/engineer)
 "Yq" = (
@@ -27360,7 +27268,7 @@ ox
 VK
 Ax
 AO
-Wk
+Bz
 eO
 tK
 Ux
@@ -27664,7 +27572,7 @@ BD
 Sp
 Ax
 ls
-yN
+MR
 GV
 Dv
 Dv
@@ -29343,7 +29251,7 @@ sa
 sa
 pW
 Iz
-kt
+px
 Ak
 nT
 nT
@@ -30696,7 +30604,7 @@ LC
 eP
 Ax
 Ax
-uW
+oh
 xW
 Ax
 bV
@@ -32083,7 +31991,7 @@ gN
 Ry
 Xc
 sX
-ny
+ZN
 UM
 Dv
 Dv
@@ -33904,7 +33812,7 @@ VI
 VI
 VI
 VI
-Wd
+LC
 hx
 hm
 Tb
