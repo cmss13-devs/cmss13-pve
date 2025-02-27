@@ -40,7 +40,7 @@
 /obj/item/device/m2c_gun
 	name = "\improper M2C heavy machine gun"
 	desc = "The disassembled M2C HMG, with its telescopic tripods folded up and unable to fire."
-	desc_lore = "Initially requested by DOD to substantially reinforce Colonial Guard units with high-caliber weaponry for cheap price, this mean killing machine soon found its way into hands of mercenaries, colonists and rebels by the means of warehouse raiding or plain ol' corruption. If you're a marine and somehow found it and for some reason decided to use it... better reconsider, since this thing has NO place on the modern battlefield, requiring static position, taking up valuable kit space and not really being much better than modern 10x28 caliber machineguns. Seriously, its 2182, just let it go."
+	desc_lore = "Initially requested by the Department of Defense to substantially reinforce Colonial Guard units with high-caliber weaponry for a cheap price, this mean killing machine soon found its way into hands of mercenaries, colonists and rebels by the means of warehouse raiding or plain ole' corruption. If you're a marine and somehow found it and for some reason decided to use it... well, you better reconsider, since this thing has NO place on the modern battlefield. It requires being in a static position, takes up valuable kit space and isn't really much better than modern 10x28 caliber machineguns. Seriously, its 2182, just use a smartgun."
 	w_class = SIZE_HUGE
 	flags_equip_slot = SLOT_BACK
 	icon = 'icons/turf/whiskeyoutpost.dmi'
