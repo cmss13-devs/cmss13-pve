@@ -89,6 +89,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/toggle_human_ai_tweaks,
 	/client/proc/open_human_squad_spawner_panel,
 	/client/proc/open_human_ai_spawner_panel,
+	/client/proc/toggle_barricade_creation, // Stops cades from being built
 	))
 
 
@@ -238,6 +239,7 @@ GLOBAL_LIST_INIT(admin_verbs_debug, list(
 	/datum/admins/proc/view_tgui_log, /*shows the server TGUI log for this round*/
 	/client/proc/admin_blurb,
 	/datum/admins/proc/open_shuttlepanel,
+	/client/proc/allow_browser_inspect,
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_debug_advanced, list(
@@ -574,6 +576,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	else
 		to_chat(usr, SPAN_BOLDNOTICE("You will no longer get attack log messages."))
 
+	prefs.save_preferences()
 
 /client/proc/toggleffattacklogs()
 	set name = "Toggle FF Attack Log Messages"
@@ -585,6 +588,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	else
 		to_chat(usr, SPAN_BOLDNOTICE("You will no longer get friendly fire attack log messages."))
 
+	prefs.save_preferences()
 
 /client/proc/toggledebuglogs()
 	set name = "Toggle Debug Log Messages"
@@ -596,6 +600,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	else
 		to_chat(usr, SPAN_BOLDNOTICE("You will no longer get debug log messages."))
 
+	prefs.save_preferences()
+
 // TODO Port this to Statpanel Options Window probably
 /client/proc/togglestatpanelsplit()
 	set name = "Toggle Split Tabs"
@@ -605,6 +611,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		to_chat(usr, SPAN_BOLDNOTICE("You enabled split admin tabs in Statpanel."))
 	else
 		to_chat(usr, SPAN_BOLDNOTICE("You disabled split admin tabs in Statpanel."))
+
+	prefs.save_preferences()
 
 /client/proc/togglenichelogs()
 	set name = "Toggle Niche Log Messages"
@@ -616,6 +624,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	else
 		to_chat(usr, SPAN_BOLDNOTICE("You will no longer get niche log messages."))
 
+	prefs.save_preferences()
 
 /client/proc/announce_random_fact()
 	set name = "Announce Random Fact"
@@ -639,6 +648,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	else
 		to_chat(usr, SPAN_BOLDNOTICE("You will no longer hear an audio cue for ARES and Prayer messages."))
 
+	prefs.save_preferences()
+
 /client/proc/toggle_admin_stealth()
 	set name = "Toggle Admin Stealth"
 	set category = "Preferences"
@@ -647,6 +658,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		to_chat(usr, SPAN_BOLDNOTICE("You enabled admin stealth mode."))
 	else
 		to_chat(usr, SPAN_BOLDNOTICE("You disabled admin stealth mode."))
+
+	prefs.save_preferences()
 
 #undef MAX_WARNS
 #undef AUTOBANTIME

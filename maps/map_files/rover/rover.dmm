@@ -141,7 +141,7 @@
 	pixel_y = 6
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	pixel_x = 32;
@@ -730,16 +730,16 @@
 /area/golden_arrow/hangar)
 "hM" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/gun/rifle/m4ra/pve,
+/obj/item/weapon/gun/rifle/m49a/pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "hR" = (
@@ -2838,11 +2838,21 @@
 /obj/structure/surface/table/almayer,
 /obj/item/prop/magazine/boots/n117{
 	pixel_x = -5;
-	pixel_y = 3
+	pixel_y = -5
 	},
 /obj/item/reagent_container/food/drinks/cans/souto/lime{
 	pixel_x = 9;
 	pixel_y = 3
+	},
+/obj/structure/machinery/computer/secure_data{
+	dir = 4;
+	pixel_y = 8;
+	req_access = null
+	},
+/obj/structure/machinery/computer/skills{
+	req_one_access = null;
+	dir = 4;
+	pixel_y = -7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
