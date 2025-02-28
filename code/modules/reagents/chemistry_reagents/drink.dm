@@ -193,6 +193,12 @@
 	description = "The fatty, still liquid part of milk. Why don't you mix this with sum scotch, eh?"
 	color = "#DFD7AF" // rgb: 223, 215, 175
 
+/datum/reagent/drink/milk/chocolate
+	name = "Chocolate Milk"
+	id = "chocolatemilk"
+	description = "An opaque brown liquid made with the produce of the mammary glands of mammals mixed with sugar, cocoa."
+	color = "#4b3b2f" // rgb: 223, 215, 175
+
 /datum/reagent/drink/milk/eggnog
 	name = "Eggnog"
 	id = "eggnog"
