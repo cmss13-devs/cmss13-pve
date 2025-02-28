@@ -163,13 +163,10 @@
 	//Inform user if their weapon's IFF will or won't hit src
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_with_gun = user
-		if(istype(user.r_hand, /obj/item/weapon/gun) || istype(user.l_hand, /obj/item/weapon/gun))
+		if(istype(human_with_gun.r_hand, /obj/item/weapon/gun) || istype(human_with_gun.l_hand, /obj/item/weapon/gun))
 			var/obj/item/weapon/gun/gun_with_iff
 			var/found_iff = FALSE
-			if(istype(user.r_hand, /obj/item/weapon/gun))
-				gun_with_iff = user.r_hand
-			else if(istype(user.l_hand, /obj/item/weapon/gun))
-				gun_with_iff = user.l_hand
+			gun_with_iff = human_with_gun.get_active_hand()
 			if(gun_with_iff)
 				for(var/obj/item/attachable/attachment in gun_with_iff.contents)
 					if(locate(/datum/element/bullet_trait_iff) in attachment.traits_to_give)
