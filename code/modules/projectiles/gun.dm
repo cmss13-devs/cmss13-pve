@@ -1854,7 +1854,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		recoil_camera(gun_user, total_recoil + 1, (total_recoil * recoil_backtime_multiplier)+1, total_recoil, actual_angle)
 		return TRUE
 
-/obj/item/weapon/gun/proc/muzzle_flash(firing_angle,mob/user)
+/obj/item/weapon/gun/proc/muzzle_flash(firing_angle)
 	if(!muzzle_flash || flags_gun_features & GUN_SILENCED || isnull(firing_angle))
 		return //We have to check for null angle here, as 0 can also be an angle.
 	if(!istype(gun_user) || !isturf(gun_user.loc))
