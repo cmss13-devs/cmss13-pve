@@ -36,7 +36,7 @@
 		/obj/item/attachable/flashlight,
 	)
 
-	ammo = /datum/ammo/bullet/rifle/heavy
+	ammo = /datum/ammo/bullet/rifle/heavy/tracer
 	actions_types = list(
 		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
 		/datum/action/item_action/smartgun/toggle_ammo_type,
@@ -54,8 +54,8 @@
 	/// Whether the smartgun requires a harness to use
 	var/requires_harness = TRUE
 
-	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy //Toggled ammo type
-	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap //Toggled ammo type
+	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy/tracer //Toggled ammo type
+	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/tracer //Toggled ammo type
 	var/datum/ammo/ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet //Toggled ammo type
 	var/iff_enabled = TRUE //Begin with the safety on.
 	var/recoil_compensation = 0
