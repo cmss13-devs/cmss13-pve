@@ -14,10 +14,10 @@
 	max_clips = 1
 
 	muzzle_flash_pos = list(
-		"1" = list(8, -1),
-		"2" = list(-7, -15),
-		"4" = list(6, -10),
-		"8" = list(-5, 7)
+		"1" = list(8, -7),
+		"2" = list(-7, -21),
+		"4" = list(12, -10),
+		"8" = list(-11, 7)
 	)
 
 	scatter = 1
