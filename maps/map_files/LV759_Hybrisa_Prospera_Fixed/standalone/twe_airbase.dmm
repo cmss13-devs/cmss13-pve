@@ -178,6 +178,10 @@
 /obj/item/reagent_container/food/snacks/microwavable/packaged_burger{
 	pixel_y = 11
 	},
+/obj/item/tool/pen/blue{
+	pixel_x = -5;
+	pixel_y = -4
+	},
 /turf/open/floor/almayer/blackfull/west,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "bG" = (
@@ -430,9 +434,6 @@
 /turf/open/floor/almayer/plating,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "dU" = (
-/obj/effect/decal/cleanable/blood/drip{
-	icon_state = "2"
-	},
 /turf/open/hybrisa/street/sidewalk/northwest,
 /area/lv759/outdoors/colony_streets/north_west_street)
 "dW" = (
@@ -601,16 +602,6 @@
 /obj/item/roller/bedroll,
 /turf/open/floor/hybrisa/carpet/carpetdarkerblue,
 /area/lv759/indoors/twe_souter_outpost/dorm)
-"fU" = (
-/obj/effect/decal/cleanable/blood/drip{
-	pixel_x = 10;
-	pixel_y = 21
-	},
-/obj/effect/decal/cleanable/blood/drip{
-	icon_state = "2"
-	},
-/turf/open/hybrisa/street/sidewalk/north,
-/area/lv759/outdoors/colony_streets/north_west_street)
 "fX" = (
 /obj/structure/bed/hybrisa/bunkbed2,
 /turf/open/floor/hybrisa/carpet/carpetdarkerblue,
@@ -1812,10 +1803,6 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv759/indoors/twe_souter_outpost/hangar)
-"xc" = (
-/obj/item/storage/briefcase,
-/turf/open/hybrisa/street/sidewalk/east,
-/area/lv759/outdoors/colony_streets/north_west_street)
 "xf" = (
 /obj/structure/sign/poster/propaganda{
 	pixel_x = -30
@@ -2208,16 +2195,6 @@
 	},
 /turf/open/floor/plating,
 /area/lv759/indoors/twe_souter_outpost/hangar)
-"EY" = (
-/obj/effect/decal/cleanable/blood/drip{
-	icon_state = "3"
-	},
-/obj/item/tool/pen/blue{
-	pixel_x = -5;
-	pixel_y = -4
-	},
-/turf/open/hybrisa/street/sidewalk/north,
-/area/lv759/outdoors/colony_streets/north_west_street)
 "EZ" = (
 /obj/item/tool/warning_cone{
 	pixel_x = -18;
@@ -2355,7 +2332,6 @@
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/lv759/indoors/twe_souter_outpost/twe_gunship)
 "Hm" = (
-/obj/effect/decal/cleanable/blood,
 /obj/structure/prop/hybrisa/fakeplatforms/platform5/deco{
 	pixel_x = 3
 	},
@@ -2974,10 +2950,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/lv759/indoors/twe_souter_outpost/hallway)
-"Wq" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/hybrisa/street/sidewalk/south,
-/area/lv759/outdoors/colony_streets/north_west_street)
 "Wu" = (
 /obj/structure/bed/hybrisa/bunkbed2{
 	dir = 4
@@ -3019,6 +2991,10 @@
 /obj/structure/surface/table/reinforced/black,
 /obj/item/trash/tray,
 /obj/structure/pipes/vents/pump_hybrisa,
+/obj/item/storage/briefcase{
+	pixel_x = 11;
+	pixel_y = -14
+	},
 /turf/open/floor/almayer/blackfull/west,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "WQ" = (
@@ -3033,12 +3009,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/lv759/indoors/twe_souter_outpost)
-"Xq" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/blood/gibs/core,
-/obj/effect/landmark/corpsespawner/hybrisa/nspa_constable,
-/turf/open/hybrisa/street/sidewalk/north,
-/area/lv759/outdoors/colony_streets/north_west_street)
 "Xy" = (
 /obj/structure/platform/metal/hybrisa/metalplatform6,
 /obj/structure/disposalpipe/segment{
@@ -3194,8 +3164,8 @@ DF
 hE
 gb
 BT
-fU
-Wq
+Tb
+VH
 gb
 BT
 fb
@@ -3249,7 +3219,7 @@ zZ
 md
 FZ
 RM
-Xq
+Tb
 CY
 pI
 VH
@@ -3276,8 +3246,8 @@ zZ
 (4,1,1) = {"
 WQ
 Hs
-xc
-EY
+YV
+Tb
 dB
 lN
 ZZ
