@@ -188,6 +188,21 @@
 		lit = TRUE
 		Update()
 
+/obj/structure/prop/evac
+	name = "EVAC-3R Long-Range Fighter"
+	desc = "The Alphatech Hardware EVAC-3 Series Aerospace Superiority Trans Atmospheric Fighter, also known as the EVAC-3, is a lightly armoured fighter capable of up to Mach 15. This model is configured to a one-seater, cryosleep-enabled variant for long flight-time missions."
+	icon = 'icons/obj/structures/props/aerospace_planes.dmi'
+	icon_state = "evac_uscm"
+	bound_height = 256
+	bound_width = 256
+	density = TRUE
+
+/obj/structure/prop/evac/usasf
+	name = "EVAC-3F Multirole Fighter"
+	desc = "The Alphatech Hardware EVAC-3 Series Aerospace Superiority Trans Atmospheric Fighter, also known as the EVAC-3, is a lightly armoured fighter capable of up to Mach 15. This model is visibly undergoing extensive repairs to the canopy and wings."
+	icon = 'icons/obj/structures/props/aerospace_planes.dmi'
+	icon_state = "evac_usasf"
+
 /obj/structure/prop/dam/gravestone
 	name = "grave marker"
 	desc = "A grave marker, in the traditional Japanese style."
