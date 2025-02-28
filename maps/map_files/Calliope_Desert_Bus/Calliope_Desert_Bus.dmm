@@ -2033,10 +2033,6 @@
 	dir = 8;
 	layer = 2.7
 	},
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
 /turf/open/gm/coast/north,
 /area/calliope_route/highway/north)
 "id" = (

@@ -456,15 +456,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope/highway/northbound)
-"awb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/cobweb{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/calliope/bunker/hallway)
 "awi" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 6;
@@ -4901,7 +4892,6 @@
 /area/calliope/bunker_exterior_buildings/complex)
 "eIY" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/cobweb2,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/calliope/bunker/hallway)
@@ -5905,13 +5895,6 @@
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
-"fJw" = (
-/obj/effect/decal/cleanable/cobweb{
-	dir = 8;
-	plane = -6
-	},
-/turf/open/floor/plating,
-/area/calliope/bunker/north_section)
 "fKd" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -5946,13 +5929,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/west_checkpoint)
-"fLo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/cobweb,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/calliope/bunker/cargo_area)
 "fLN" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -6797,16 +6773,6 @@
 	dir = 4
 	},
 /area/calliope/bunker/cargo_under)
-"gze" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 10
-	},
-/obj/effect/decal/cleanable/cobweb{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/calliope/bunker/north_section)
 "gzh" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -9311,13 +9277,6 @@
 	},
 /turf/open/floor/interior/plastic,
 /area/calliope/exterior_buildings/ghost_town)
-"iMl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/cobweb2,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/calliope/bunker/cargo_area)
 "iMz" = (
 /obj/structure/platform{
 	density = 0;
@@ -19084,10 +19043,6 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/cobweb{
-	dir = 8;
-	plane = -6
-	},
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526"
@@ -24724,10 +24679,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/cobweb{
-	dir = 8;
-	plane = -6
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -29643,7 +29594,7 @@ dUJ
 fcw
 ctl
 fnU
-awb
+dsH
 fnU
 iYa
 vIA
@@ -33658,7 +33609,7 @@ jFK
 jFK
 jFK
 lEF
-fLo
+fuC
 ptM
 lEF
 hug
@@ -34414,7 +34365,7 @@ jFK
 jFK
 jFK
 lEF
-iMl
+fuC
 ptM
 ptM
 xMk
@@ -61602,7 +61553,7 @@ mJx
 lsi
 csX
 hac
-gze
+pBh
 ebD
 mJx
 prT
@@ -62357,7 +62308,7 @@ hac
 hac
 hac
 wkR
-fJw
+qEa
 hac
 hac
 mMb
