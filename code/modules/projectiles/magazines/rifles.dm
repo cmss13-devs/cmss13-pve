@@ -141,6 +141,7 @@
 
 /obj/item/ammo_magazine/rifle/m41aMK1/khyber
 	name = "\improper M41 MK2 magazine ('10x24mm')"
+	desc = "A long, uneven, poorly welded rectangular box magazine for the M41A MK2. Holds 50 9x19mm rounds."
 	caliber = "9x19mm"
 	max_rounds = 49
 	gun_type = /obj/item/weapon/gun/rifle/m41a/khyber

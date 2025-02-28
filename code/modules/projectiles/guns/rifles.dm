@@ -1947,7 +1947,7 @@
 	name = "\improper M41 MK2 'pulse' rifle"
 	icon_state = "m41amk1"
 	item_state = "m41amk1"
-	desc = "This doesn't feel right. Something is off here."
+	desc = "The standard issue rifle of the Colonial Marines. Or is it? It doesn't feel very sturdy, and you can hear a rattle when you shake it. You BELIEVE it uses 10x24mm caseless ammunition."
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/khyber
 	fire_sound = "m4a3"
 	attachable_allowed = list(
