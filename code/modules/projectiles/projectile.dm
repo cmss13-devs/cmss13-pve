@@ -254,6 +254,8 @@
 		return // Hit something already?!
 	time_carry -= delta_time // Substract headstart from next tick
 
+	if(ammo.attached_particle)
+		particles = new ammo.attached_particle
 	// Finally queue it to Subsystem for further processing
 	SSprojectiles.queue_projectile(src)
 
