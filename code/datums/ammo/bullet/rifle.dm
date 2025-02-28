@@ -178,20 +178,23 @@
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_7
 
+/datum/ammo/bullet/rifle/heavy/ap/tracer
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
+
 /datum/ammo/bullet/rifle/heavy/impdet
 	name = "impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
-
-/datum/ammo/bullet/rifle/heavy/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
-	slowdown(entity, bullet)
-
-/datum/ammo/bullet/rifle/heavy/ap/tracer
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
+
+/datum/ammo/bullet/rifle/heavy/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 /datum/ammo/bullet/rifle/heavy/heap
 	name = "high explosive armor-piercing 10x28 bullet"
