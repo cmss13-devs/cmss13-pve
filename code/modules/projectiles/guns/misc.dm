@@ -185,6 +185,10 @@
 	)
 	var/cover_open = FALSE //if the gun's feed-cover is open or not.
 
+/obj/item/weapon/gun/pkp/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY("tracer", /datum/element/bullet_tracer/green)
+	))
 
 /obj/item/weapon/gun/pkp/handle_starting_attachment()
 	..()
@@ -299,7 +303,8 @@
 
 /obj/item/weapon/gun/pkp/iff/set_bullet_traits()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff) //it has no PVE IFF mechanics because its innacurate as hell and is used for suppression and not as assault weapon.
+		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff), //it has no PVE IFF mechanics because its innacurate as hell and is used for suppression and not as assault weapon.
+		BULLET_TRAIT_ENTRY("tracer", /datum/element/bullet_tracer/green)
 	))
 	AddComponent(/datum/component/iff_fire_prevention)
 

@@ -47,7 +47,7 @@
 	icon_state = "base_m56rd"
 	desc = "A 10x28mm ammunition box. Used to refill smartgun drum magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_reg"
-	default_ammo = /datum/ammo/bullet/rifle/heavy/tracer
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 	caliber = "10x28mm"
 	bullet_amount = 1000
 	max_bullet_amount = 1000
@@ -152,7 +152,7 @@
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_pkp"
 	overlay_content = "_type71_reg"
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap/mg
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 	bullet_amount = 1500
 	max_bullet_amount = 1500
 	caliber = "10x27mm"

@@ -107,7 +107,7 @@
 	icon_state = "m56_drum"
 	max_rounds = 500 //Should be 500 in total.
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/rifle/heavy/tracer
+	default_ammo = /datum/ammo/bullet/rifle/heavy
 	gun_type = /obj/item/weapon/gun/smartgun
 
 /obj/item/ammo_magazine/smartgun/dirty
