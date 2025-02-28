@@ -443,6 +443,10 @@
 	layer = 3.2;
 	pixel_y = 16
 	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "cX" = (
@@ -1216,9 +1220,7 @@
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	req_access = list()
 	},
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1
-	},
+/obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/golden_arrow/medical)
 "jD" = (
@@ -1462,7 +1464,9 @@
 	light_color = "#dae2ff";
 	light_power = 0.5
 	},
-/obj/structure/pipes/vents/pump,
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "mb" = (
@@ -2215,9 +2219,6 @@
 /obj/item/ashtray/plastic{
 	pixel_y = -1;
 	pixel_x = 6
-	},
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -3434,11 +3435,11 @@
 /area/golden_arrow/synthcloset)
 "BX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/rounds{
-	pixel_y = 8
+/obj/item/storage/box/guncase/heavy/hpr{
+	pixel_y = 5
 	},
-/obj/item/ammo_box/rounds{
-	pixel_y = -1
+/obj/item/storage/box/guncase/heavy/fuel{
+	pixel_y = 9
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/golden_arrow/platoonarmory)
@@ -4022,7 +4023,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "HD" = (
-/obj/structure/pipes/vents/pump,
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "HE" = (
@@ -5412,7 +5415,8 @@
 	pixel_x = -7
 	},
 /obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8
+	pixel_x = 8;
+	job = "Smartgunner"
 	},
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
