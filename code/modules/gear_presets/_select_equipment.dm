@@ -306,7 +306,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		if(closet.linked_spawn_turf)
 			if(new_human.loc != closet.linked_spawn_turf)
 				continue
-		if(new_human.job != closet.job)
+		else if(new_human.job != closet.job)
 			continue
 
 		closet.owner = new_human.real_name

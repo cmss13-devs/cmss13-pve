@@ -20,7 +20,7 @@
 	GLOB.personal_closets += src
 
 	if(x_to_linked_spawn_turf || y_to_linked_spawn_turf)
-		linked_spawn_turf = locate(x + x_to_linked_spawn_turf, y + y_to_linked_spawn_turf)
+		linked_spawn_turf = locate(x + x_to_linked_spawn_turf, y + y_to_linked_spawn_turf, z)
 
 /obj/structure/closet/secure_closet/marine_personal/Destroy()
 	GLOB.personal_closets -= src
