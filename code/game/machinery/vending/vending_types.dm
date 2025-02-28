@@ -270,7 +270,6 @@
 		/obj/item/tool/lighter/zippo = 25,
 
 	)
-	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
 
 /obj/structure/machinery/vending/cigarette/koorlander //koorlander machine, contains luckies since they either bought Lucky Strikes as a company, or are working together to survive.
 	name = "Koorlander brand cigarette machine"
@@ -457,7 +456,6 @@
 		/obj/item/tool/lighter/zippo/black = 15,
 		/obj/item/tool/lighter/zippo/executive = 50,
 	)
-	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
 
 /obj/structure/machinery/vending/cigarette/wy/Initialize(mapload, ...)
 	var/exec_number = rand(0, 2)
@@ -479,7 +477,6 @@
 		/obj/item/tool/lighter/zippo/black = 0,
 		/obj/item/tool/lighter/zippo/executive = 0,
 	)
-	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
 
 
 /obj/structure/machinery/vending/cigarette/upp
@@ -497,7 +494,6 @@
 		/obj/item/storage/box/matches = 1,
 		/obj/item/tool/lighter/zippo = 25,
 	)
-	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
 
 /obj/structure/machinery/vending/security
 	name = "\improper ColMarTech Military Police Vendor"
