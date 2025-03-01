@@ -12098,7 +12098,6 @@
 /turf/open/floor/strata/orange_edge/east,
 /area/strata/ag/interior/dorms)
 "dxu" = (
-/obj/structure/closet/wardrobe/medic_white,
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
@@ -12829,7 +12828,7 @@
 /turf/open/auto_turf/ice/layer0,
 /area/strata/ag/exterior/nearlz2)
 "eiO" = (
-/obj/structure/closet/lawcloset,
+/obj/structure/closet,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot/upp,
 /turf/open/floor/strata/floor3/east,
 /area/strata/ag/interior/tcomms)
@@ -13969,12 +13968,11 @@
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/ag/interior/outpost/engi)
 "fpF" = (
-/obj/structure/closet/wardrobe/red,
-/obj/item/clothing/suit/imperium_monk,
+/obj/structure/closet,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/outpost/canteen/personal_storage)
 "fpG" = (
-/obj/structure/closet/wardrobe/grey,
+/obj/structure/closet,
 /obj/effect/landmark/wo_supplies/storage/mines,
 /obj/effect/landmark/wo_supplies/storage/mines,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -20176,7 +20174,7 @@
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/gen/bball)
 "lgu" = (
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/research_decks/security)
 "lgv" = (
@@ -20769,7 +20767,7 @@
 /area/strata/ag/interior/dorms)
 "lHI" = (
 /obj/item/storage/box/nade_box/tear_gas,
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/outpost/security)
 "lHO" = (
@@ -23018,7 +23016,7 @@
 /turf/open/floor/strata/floor2,
 /area/strata/ug/interior/jungle/deep/structures/res)
 "nMz" = (
-/obj/structure/closet/lawcloset,
+/obj/structure/closet,
 /obj/structure/machinery/camera/autoname{
 	dir = 8
 	},
@@ -23059,7 +23057,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/ug/interior/jungle/deep/hotsprings)
 "nPq" = (
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /obj/item/reagent_container/food/snacks/carpmeat,
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -23390,7 +23388,7 @@
 /area/strata/ag/interior/landingzone_checkpoint)
 "ofx" = (
 /obj/item/poster,
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/outpost/security)
 "ofU" = (
@@ -24742,7 +24740,6 @@
 /turf/open/floor/strata/cyan1/east,
 /area/strata/ag/interior/dorms)
 "puO" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/ag/interior/outpost/canteen/personal_storage)
 "pvr" = (
@@ -27138,7 +27135,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/ag/interior/outpost/canteen/personal_storage)
 "rBZ" = (
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/landingzone_checkpoint)
 "rDG" = (
@@ -27476,7 +27473,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/strata/ag/exterior/tcomms/tcomms_deck)
 "rUM" = (
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /obj/item/reagent_container/food/snacks/carpmeat,
 /turf/open/floor/strata/red1,
 /area/strata/ug/interior/jungle/deep/structures/res)
@@ -28365,7 +28362,6 @@
 /turf/open/floor/strata/floor3/east,
 /area/strata/ag/exterior/research_decks)
 "sHf" = (
-/obj/structure/closet/wardrobe/pjs,
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/strata,
 /area/strata/ug/interior/outpost/jung/dorms/admin4)
@@ -28575,10 +28571,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/ug/interior/jungle/deep/minehead)
-"sSn" = (
-/obj/structure/closet/wardrobe/pjs,
-/turf/open/floor/strata/white_cyan1/east,
-/area/strata/ag/interior/outpost/maint/canteen_e_1)
 "sTu" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/gun/pistol/t73,
@@ -28798,7 +28790,7 @@
 /area/strata/ag/interior/outpost/canteen)
 "tdP" = (
 /obj/item/reagent_container/food/snacks/carpmeat,
-/obj/structure/closet/secure_closet/security/soro,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/research_decks/security)
 "teq" = (
@@ -30061,7 +30053,6 @@
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/ag/interior/outpost/engi)
 "uob" = (
-/obj/structure/closet/wardrobe/suit,
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
@@ -68234,7 +68225,7 @@ iau
 eaW
 rTH
 gCY
-sSn
+sdN
 cpg
 cpg
 xkj

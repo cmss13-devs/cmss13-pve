@@ -22,8 +22,6 @@
 	new /obj/item/clothing/shoes/swimmingfins(src)
 	new /obj/item/clothing/shoes/swimmingfins(src)
 
-
-
 /obj/structure/closet/boxinggloves
 	name = "boxing gloves"
 	desc = "It's a storage unit for gloves for use in the boxing ring."
@@ -34,18 +32,6 @@
 	new /obj/item/clothing/gloves/boxing/green(src)
 	new /obj/item/clothing/gloves/boxing/yellow(src)
 	new /obj/item/clothing/gloves/boxing(src)
-
-
-/obj/structure/closet/masks
-	name = "mask closet"
-	desc = "IT'S A STORAGE UNIT FOR FIGHTER MASKS OLE!"
-
-/obj/structure/closet/masks/Initialize()
-	. = ..()
-	new /obj/item/clothing/mask/luchador(src)
-	new /obj/item/clothing/mask/luchador/rudos(src)
-	new /obj/item/clothing/mask/luchador/tecnicos(src)
-
 
 /obj/structure/closet/lasertag/red
 	name = "red laser tag equipment"
