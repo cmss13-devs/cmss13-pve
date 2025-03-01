@@ -12738,8 +12738,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb{
-	dir = 8;
-	plane = -6
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay/hallway)
@@ -15862,9 +15861,6 @@
 /turf/open/floor/plating,
 /area/bmg290/wilderness/road)
 "hvj" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1
 	},
@@ -43246,8 +43242,7 @@
 "uBI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb{
-	dir = 8;
-	plane = -6
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/bmg290/oob/button_stuff)
