@@ -497,16 +497,6 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/engineering)
-"dt" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
-	dir = 4
-	},
-/obj/structure/machinery/floodlight/landing/floor{
-	color = "#dae2ff";
-	light_color = "#dae2ff"
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
 "dz" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -1656,12 +1646,6 @@
 	name = "\improper Hangar Lockdown Blast Door"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/hangar)
-"nG" = (
-/obj/structure/machinery/landinglight/ds1{
-	dir = 4
-	},
-/turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "nL" = (
 /turf/open/floor/almayer/uscm/directional/up_down/southeast,
@@ -4805,6 +4789,12 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supply)
+"No" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "Nt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -7973,24 +7963,24 @@ Zd
 xr
 PO
 JI
-nG
 LI
 yy
-nG
+No
 LI
 yy
-nG
-LI
-dt
-nG
+No
 LI
 yy
-nG
+No
 LI
 yy
-nG
+No
 LI
 yy
+No
+LI
+yy
+No
 JI
 ZL
 YB
