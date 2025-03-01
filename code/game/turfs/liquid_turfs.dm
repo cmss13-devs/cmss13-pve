@@ -75,6 +75,7 @@
 	name = "river"
 	icon_state = "seashallow"
 	minimap_color = MINIMAP_WATER
+	supports_fishing = TRUE
 
 /turf/open/liquid/water/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	. = ..()
@@ -152,10 +153,12 @@
 
 /turf/open/liquid/water/shallow_ocean_shallow_ocean
 	name = "shallow ocean"
+	supports_fishing = TRUE
 
 /turf/open/liquid/water/ocean
 	color = "#dae3e2"
 	slowdown_multiplier = 2 // VERY. SLOW.
+	supports_fishing = TRUE
 
 /turf/open/liquid/water/ocean/Entered(atom/movable/AM)
 	. = ..()
