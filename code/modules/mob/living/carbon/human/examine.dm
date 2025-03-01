@@ -182,7 +182,7 @@
 					if(get_target_lock(human_with_gun.get_id_faction_group()) > 0)
 						msg += SPAN_HELPFUL("[capitalize(t_He)] is compatible with your weapons IFF.\n")
 					else
-						msg += SPAN_DANGER("[capitalize(t_He)] is not compatible with your weapons IFF. They will be shot by your weapon!\n")
+						msg += SPAN_DANGER("[capitalize(t_He)] is not compatible with your weapon's IFF. They will be shot by your weapon!\n")
 
 	//Restraints
 	if(handcuffed)
