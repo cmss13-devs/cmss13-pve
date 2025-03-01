@@ -24,6 +24,9 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 			var/datum/sprite_accessory/underwear/snow_datum = new underwear_type
 			snow_datum.generate_non_conforming("s")
 			underwear_list[snow_datum.name] = snow_datum
+			var/datum/sprite_accessory/underwear/urban_datum = new underwear_type
+			urban_datum.generate_non_conforming("u")
+			underwear_list[urban_datum.name] = urban_datum
 		else
 			underwear_list[underwear_datum.name] = underwear_datum
 	return underwear_list
