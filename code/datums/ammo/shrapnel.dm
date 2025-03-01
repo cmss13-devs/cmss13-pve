@@ -66,6 +66,7 @@
 /datum/ammo/bullet/shrapnel/heavy
 	name = "shrapnel cloud"
 	icon_state = "shrapnel_light"
+	flags_ammo_behavior = AMMO_PRONETARGET
 	max_range = 6
 	damage = 35
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_4
@@ -73,6 +74,30 @@
 	penetration = ARMOR_PENETRATION_TIER_3
 	shell_speed = AMMO_SPEED_TIER_3
 	shrapnel_chance = 10
+
+/datum/ammo/bullet/shrapnel/claymore
+	name = "claymore pellet"
+	icon_state = "buckshot"
+	accurate_range_min = 0
+	//targets bomb armor by AMMO_ROCKET. Stupid, but it works.
+	flags_ammo_behavior = AMMO_ROCKET|AMMO_PRONETARGET|AMMO_STOPPED_BY_COVER
+
+	accuracy = HIT_ACCURACY_TIER_MAX
+	accurate_range = 14
+	max_range = 18
+	damage = 40
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_5
+	//justifying the AP as being the sheer density of stuff ig.
+	penetration = ARMOR_PENETRATION_TIER_2
+	shell_speed = AMMO_SPEED_TIER_2
+	shrapnel_chance = 10
+
+/datum/ammo/bullet/shrapnel/claymore/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
 
 /datum/ammo/bullet/shrapnel/hornet_rounds
 	name = ".22 hornet round"
