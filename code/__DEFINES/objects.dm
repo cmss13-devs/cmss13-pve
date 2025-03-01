@@ -154,7 +154,7 @@ GLOBAL_LIST_INIT(RESTRICTED_CAMERA_NETWORKS, list( //Those networks can only be 
 #define ONE_TYPE_PER_BORDER 2
 
 #define RESULT_REQUIRES_SNOW (1<<0)
-
+#define CAN_MAKE_BARRICADE (1<<1)
 
 /// Reaction type from touching it
 #define TOUCH 1

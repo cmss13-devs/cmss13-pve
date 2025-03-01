@@ -768,6 +768,11 @@
 	name = "concrete"
 	icon_state = "cement_sunbleached5"
 
+/turf/open/asphalt/cement_sunbleached_darkened
+	name = "floor"
+	icon_state = "cement_sunbleached5"
+	color = "#a39e99"
+
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached1
 	icon_state = "cement_sunbleached1"
 
