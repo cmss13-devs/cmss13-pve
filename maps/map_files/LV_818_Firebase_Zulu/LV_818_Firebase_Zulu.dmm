@@ -242,6 +242,11 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
+"aH" = (
+/obj/structure/platform,
+/obj/structure/machinery/light/double/blue,
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "aI" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/mars_cave/mars_dirt_4,
@@ -2235,6 +2240,14 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside)
+"fJ" = (
+/obj/structure/cargo_container/kelland/left{
+	layer = 2.9
+	},
+/obj/structure/platform,
+/obj/structure/machinery/light/double/blue,
+/turf/open/auto_turf/sand/layer2,
+/area/firebase_zulu/inside/motor_pool)
 "fK" = (
 /obj/structure/platform_decoration,
 /obj/structure/flora/grass/desert/lightgrass_1,
@@ -2498,10 +2511,6 @@
 /obj/item/storage/box/m94,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
-"go" = (
-/obj/structure/flora/grass/desert/lightgrass_1,
-/turf/open/auto_turf/sand/layer1,
-/area/firebase_zulu/inside/motor_pool)
 "gp" = (
 /obj/structure/barricade/sandbags/full{
 	dir = 1
@@ -3028,6 +3037,12 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
+"hD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/open/auto_turf/sand/layer0,
+/area/firebase_zulu/inside/motor_pool)
 "hE" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/surface/rack,
@@ -3432,6 +3447,17 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/firebase_zulu/inside)
+"iE" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "iF" = (
 /obj/structure/barricade/sandbags/full{
 	dir = 1
@@ -3577,10 +3603,12 @@
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside)
 "iX" = (
-/obj/structure/flora/grass/desert/lightgrass_1,
-/obj/structure/cargo_container/kelland/right,
+/obj/structure/cargo_container/kelland/right{
+	layer = 2.9
+	},
+/obj/structure/platform,
 /turf/open/auto_turf/sand/layer1,
-/area/firebase_zulu/outside/compound)
+/area/firebase_zulu/inside/motor_pool)
 "iY" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -5231,6 +5259,21 @@
 /obj/item/trash/c_tube,
 /turf/open/asphalt/cement/cement12,
 /area/firebase_zulu/outside)
+"mR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/prop{
+	density = 1;
+	icon_state = "pipe_d";
+	name = "refueling pump";
+	desc = "A pump used for refueling the dropship.";
+	pixel_y = -5;
+	layer = 2.7
+	},
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/motor_pool)
 "mS" = (
 /obj/structure/platform,
 /obj/effect/decal/cleanable/dirt,
@@ -5368,6 +5411,10 @@
 	},
 /turf/open/floor/almayer,
 /area/firebase_zulu/inside/platoonarmory)
+"nk" = (
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "nl" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -5461,6 +5508,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/bcircuit,
 /area/firebase_zulu/inside)
+"nv" = (
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/motor_pool)
 "nx" = (
 /obj/structure/curtain/red,
 /turf/open/mars_cave/mars_cave_3,
@@ -5732,6 +5787,14 @@
 	},
 /turf/open/asphalt/cement,
 /area/firebase_zulu/outside)
+"oj" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/motor_pool)
 "ok" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
 	dir = 1
@@ -5911,6 +5974,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/platoon_commander_rooms)
+"oE" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/largecrate/random/case/double,
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/motor_pool)
 "oF" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -6729,6 +6801,27 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
+"qy" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_y = 6
+	},
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/motor_pool)
+"qz" = (
+/obj/structure/platform,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "qA" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -7799,6 +7892,11 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
+"ty" = (
+/obj/structure/platform_decoration,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/auto_turf/sand/layer2,
+/area/firebase_zulu/inside/motor_pool)
 "tz" = (
 /obj/structure/machinery/medical_pod/sleeper{
 	pixel_y = 6
@@ -9056,6 +9154,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
+"wE" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/motor_pool)
 "wF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -9766,6 +9877,14 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/firebase_zulu/outside)
+"yi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/firebase_zulu/inside/motor_pool)
 "yj" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
@@ -9883,6 +10002,15 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/inside/motor_pool)
 "yv" = (
@@ -10151,6 +10279,16 @@
 	},
 /turf/open/floor/strata/white_cyan1,
 /area/firebase_zulu/inside)
+"zg" = (
+/obj/structure/platform/stair_cut{
+	icon_state = "platform_stair_alt"
+	},
+/obj/structure/stairs/perspective{
+	dir = 10;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "zh" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -11133,6 +11271,10 @@
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
 /turf/open/floor/plating,
 /area/firebase_zulu/inside/platoon_commander_rooms)
+"BD" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/auto_turf/sand/layer2,
+/area/firebase_zulu/inside/motor_pool)
 "BE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/extinguisher_cabinet{
@@ -11318,8 +11460,11 @@
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside)
 "BZ" = (
-/obj/structure/largecrate/random/case/double,
-/turf/open/auto_turf/sand/layer1,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/motor_pool)
 "Ca" = (
 /obj/structure/platform/kutjevo/rock,
@@ -11858,6 +12003,12 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside)
+"DA" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "DB" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -12429,6 +12580,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/canteen)
+"EZ" = (
+/obj/structure/platform,
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "Fa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -12441,6 +12596,18 @@
 /obj/structure/platform_decoration/strata/metal,
 /turf/open/asphalt/cement,
 /area/firebase_zulu/outside)
+"Fc" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "Fe" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -13119,6 +13286,18 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
+"GN" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/surface/table/almayer,
+/obj/structure/largecrate/random/secure{
+	pixel_y = 10
+	},
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/motor_pool)
 "GO" = (
 /obj/structure/platform{
 	dir = 4
@@ -13143,7 +13322,7 @@
 	pixel_y = -14;
 	pixel_x = 2
 	},
-/turf/open/auto_turf/sand/layer1,
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/inside/motor_pool)
 "GT" = (
 /obj/structure/cable/heavyduty{
@@ -13204,11 +13383,11 @@
 /turf/open/floor/almayer,
 /area/firebase_zulu/inside/platoonarmory)
 "Hb" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/interior/plastic,
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/plating/plating_catwalk,
 /area/firebase_zulu/inside/motor_pool)
 "Hc" = (
 /obj/structure/machinery/vending/cola,
@@ -13302,6 +13481,11 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/inside/motor_pool)
 "Ho" = (
@@ -13435,9 +13619,10 @@
 /turf/open/asphalt/cement,
 /area/firebase_zulu/outside)
 "HF" = (
-/obj/effect/decal/cleanable/generic,
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/auto_turf/sand/layer1,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/inside/motor_pool)
 "HG" = (
 /obj/effect/decal/cleanable/dirt{
@@ -13600,6 +13785,17 @@
 	},
 /turf/open/floor/plating,
 /area/firebase_zulu/outside/compound)
+"HS" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/firebase_zulu/inside/motor_pool)
 "HT" = (
 /obj/structure/machinery/power/terminal{
 	dir = 8
@@ -13684,6 +13880,13 @@
 "Ib" = (
 /turf/open/floor/almayer/edge/smooth/endcap_left/west,
 /area/firebase_zulu/inside/platoonarmory)
+"Ic" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "Id" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -14289,7 +14492,9 @@
 /area/firebase_zulu/outside/compound)
 "Js" = (
 /obj/effect/decal/cleanable/generic,
-/turf/open/auto_turf/sand/layer1,
+/obj/structure/tent_curtain,
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/corsat/marked,
 /area/firebase_zulu/inside/motor_pool)
 "Jt" = (
 /obj/item/storage/toolbox/mechanical/green{
@@ -14975,10 +15180,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/strata/white_cyan2/west,
 /area/firebase_zulu/inside)
-"Lg" = (
-/obj/structure/machinery/floodlight/landing,
-/turf/open/auto_turf/sand/layer2,
-/area/firebase_zulu/inside/motor_pool)
 "Lh" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/kitchen,
@@ -15103,6 +15304,16 @@
 	layer = 2.52
 	},
 /turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/motor_pool)
+"Lz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/structure/platform/stair_cut,
+/obj/structure/stairs/perspective{
+	dir = 6;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/inside/motor_pool)
 "LA" = (
 /obj/structure/prop/static_tank/water,
@@ -15685,12 +15896,11 @@
 /turf/open/floor/bcircuit,
 /area/firebase_zulu/inside)
 "MT" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/toolbox/mechanical/green{
-	pixel_y = 6
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand/layer1,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/inside/motor_pool)
 "MU" = (
 /obj/structure/platform,
@@ -16651,6 +16861,11 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
 /area/firebase_zulu/inside)
+"Pp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/open/auto_turf/sand/layer0,
+/area/firebase_zulu/inside/motor_pool)
 "Pq" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/auto_turf/sand/layer2,
@@ -16943,6 +17158,11 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/hangar)
+"PY" = (
+/obj/structure/tent_curtain,
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/motor_pool)
 "PZ" = (
 /obj/structure/prop/vehicles/crawler{
 	icon_state = "crawler_covered_bed";
@@ -17384,6 +17604,9 @@
 	},
 /turf/open/floor/plating,
 /area/firebase_zulu/outside/compound)
+"Re" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/firebase_zulu/inside/motor_pool)
 "Rf" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
@@ -17593,6 +17816,17 @@
 /obj/structure/cargo_container/kelland/right,
 /turf/open/auto_turf/sand/layer2,
 /area/firebase_zulu/outside/compound)
+"RB" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "RC" = (
 /obj/structure/bed/chair/comfy,
 /obj/effect/decal/cleanable/generic,
@@ -17737,10 +17971,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
-"RV" = (
-/obj/effect/decal/cleanable/generic,
-/turf/open/auto_turf/sand/layer2,
-/area/firebase_zulu/inside/motor_pool)
 "RW" = (
 /obj/structure/largecrate/random,
 /turf/open/auto_turf/sand/layer1,
@@ -17992,11 +18222,6 @@
 	},
 /turf/open/floor/almayer,
 /area/firebase_zulu/inside/shared_office)
-"SD" = (
-/obj/structure/closet/secure_closet/engineering_welding,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand/layer1,
-/area/firebase_zulu/inside/motor_pool)
 "SE" = (
 /obj/structure/machinery/light/double/blue,
 /obj/structure/largecrate/random/secure,
@@ -18073,6 +18298,14 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
+"SN" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/motor_pool)
 "SO" = (
 /obj/structure/cargo_container/lockmart/left,
 /turf/open/auto_turf/sand/layer0,
@@ -18179,6 +18412,11 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/hangar)
+"Te" = (
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "Tg" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -18271,6 +18509,15 @@
 /obj/structure/platform/strata/metal,
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside)
+"Tu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "Tv" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -18554,6 +18801,14 @@
 /obj/structure/bed,
 /turf/open/floor/prison,
 /area/firebase_zulu/inside)
+"Ul" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/inside/motor_pool)
 "Um" = (
 /obj/structure/prop/dam/boulder/boulder3,
 /turf/open/auto_turf/sand/layer1,
@@ -19014,17 +19269,12 @@
 /turf/open/floor/almayer,
 /area/firebase_zulu/inside/shared_office)
 "Vt" = (
-/obj/structure/machinery/prop{
-	density = 1;
-	icon_state = "pipe_d";
-	name = "refueling pump";
-	desc = "A pump used for refueling the dropship.";
-	pixel_y = -5;
-	layer = 2.7
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/open/auto_turf/sand/layer1,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/inside/motor_pool)
 "Vu" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19473,13 +19723,11 @@
 /turf/open/floor/almayer,
 /area/firebase_zulu/inside/canteen)
 "WH" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/largecrate/random/secure{
-	pixel_y = 10
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand/layer1,
-/area/firebase_zulu/outside/compound)
+/obj/structure/tent_curtain,
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/motor_pool)
 "WI" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
@@ -19530,6 +19778,13 @@
 	},
 /turf/open/floor/prison,
 /area/firebase_zulu/inside)
+"WO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/structure/tent_curtain,
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/motor_pool)
 "WP" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -20608,6 +20863,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/canteen)
+"ZW" = (
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/firebase_zulu/inside/motor_pool)
 "ZX" = (
 /turf/open/floor/strata/multi_tiles,
 /area/firebase_zulu/inside)
@@ -54952,12 +55214,12 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
+BD
+BD
+BD
+QA
+QA
+px
 Qa
 Qa
 Qa
@@ -55552,14 +55814,14 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
+BD
+BD
+lu
+lu
+lu
+lu
+ut
+ut
 hG
 dN
 nf
@@ -56152,15 +56414,15 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
+ty
+RB
+ho
+Zj
+Zj
+Zj
+RB
+DA
+ut
 lu
 AP
 tK
@@ -56753,16 +57015,16 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-SD
+BD
+EZ
+Re
+Re
+Re
+Re
+Re
+Re
+zg
+lu
 lu
 qM
 tK
@@ -57355,18 +57617,18 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
+ut
+aH
+Re
+qy
+mR
+BZ
+SN
 WH
 MT
-mb
+hD
 xv
-px
+nk
 sQ
 uv
 sF
@@ -57957,17 +58219,17 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
+ut
+qz
+Re
+GN
+oj
 BZ
-px
+BZ
+PY
 Vt
 GR
-ut
+VM
 ut
 lu
 lu
@@ -58558,19 +58820,19 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-tK
-tK
-nf
-mC
+QA
 lu
-ut
-ut
+qz
+Re
+oE
+BZ
+BZ
+BZ
+PY
+ZW
+ll
+VM
+VM
 ut
 ut
 ut
@@ -59160,20 +59422,20 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-Qa
-Qa
-Qa
-Lg
+QA
+lu
+qz
+Re
 Hb
 Hb
-dv
-ms
-ms
+Hb
+Hb
+Re
+HS
+JO
 VM
-Bb
-cD
+Qu
+mC
 ut
 ut
 fc
@@ -59762,20 +60024,20 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-Qa
-Qa
-RV
-QA
-Hb
-tK
-dv
+ut
+Am
+qz
+Re
+BZ
+BZ
+nv
+BZ
+PY
 HF
 VM
+lu
 ll
-ll
-cD
+mC
 cD
 ut
 Ev
@@ -60364,17 +60626,17 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-Qa
-QA
-QA
-Hb
-tK
-nf
+lu
+lu
+qz
+Re
+oj
+BZ
+BZ
+BZ
 Js
-VM
-VM
+HF
+ms
 ll
 ll
 VM
@@ -60966,16 +61228,16 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-YY
-go
-px
-Hb
-Hb
-dv
-Qu
-VM
+lu
+lu
+fJ
+Re
+wE
+oj
+BZ
+BZ
+WO
+HF
 VM
 ll
 VM
@@ -61568,16 +61830,16 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
+ut
+ut
 iX
-ut
-ut
-Hb
-Hb
-dv
-Qu
-Qu
+Re
+Re
+Re
+Re
+Re
+Re
+Lz
 VM
 VM
 VM
@@ -62169,18 +62431,18 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-lS
-Ut
+QA
 ut
 ut
+iE
+Fc
+Ul
 Hn
-ut
-yn
+Ic
+Tu
 yu
-Qu
-ll
+yi
+Pp
 na
 ut
 VM
@@ -62771,12 +63033,12 @@ Qa
 Qa
 Qa
 Qa
-Qa
-Qa
-lS
-LC
+QA
 ut
-Js
+ut
+LC
+lu
+Te
 LC
 fG
 dr
