@@ -707,6 +707,12 @@
 	icon_state = "grenade_phos_clf"
 	item_state = "grenade_phos_clf"
 
+/*
+//================================================
+				Sonic Electronic Ball Breakers
+//================================================
+*/
+
 /obj/item/explosive/grenade/sebb
 	name = "\improper G2 Electroshock grenade"
 	desc = "This is a G2 Electroshock Grenade. Produced by Armat Battlefield Systems, it's sometimes referred to as the Sonic Electric Ball Breaker, \
