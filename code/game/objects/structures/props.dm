@@ -553,9 +553,9 @@
 	/// time between sounds
 	var/time_to_sound = 20
 	/// Time for it to burn through fuel
-	var/fuel_stage_time = 1 MINUTES
+	var/fuel_stage_time = 5 MINUTES
 	/// How much fuel it has
-	var/remaining_fuel = 5 //Maxes at 5, but burns one when made
+	var/remaining_fuel = 10 //Maxes at 10, but burns one when made
 	/// If the fire can be manually put out
 	var/extinguishable = TRUE
 	/// Make no noise
@@ -569,11 +569,11 @@
 /obj/structure/prop/brazier/campfire/get_examine_text(mob/user)
 	. = ..()
 	switch(remaining_fuel)
-		if(4 to INFINITY)
+		if(7 to INFINITY)
 			. += "The fire is roaring."
-		if(2 to 3)
+		if(4 to 6)
 			. += "The fire is burning warm."
-		if(-INFINITY to 1)
+		if(-INFINITY to 3)
 			. += "The embers of the fire barely burns."
 
 /obj/structure/prop/brazier/campfire/process(delta_time)
@@ -589,7 +589,7 @@
 		return
 	time_to_sound -= delta_time
 	if(time_to_sound <= 0)
-		playsound(loc, 'sound/machines/firepit_ambience.ogg', 15, FALSE, heating_range)
+		playsound(loc, 'sound/machines/firepit_ambience.ogg', 40, FALSE, heating_range)
 		time_to_sound = initial(time_to_sound)
 
 /obj/structure/prop/brazier/campfire/attack_hand(mob/user)
@@ -1206,3 +1206,13 @@
 	name = "Working Joe"
 	desc = "A Seegson-brand Working Joe, stored in the synthetic maintenance station to be called upon whenever you need. If only you had the keys."
 	icon_state = "joe"
+
+/obj/structure/prop/invuln/darkness //I cant take credit for this, whoever made LV671 this was all you
+	name = "Darkness"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "dark128"
+	alpha = 200
+	opacity = 0
+	mouse_opacity = 0
+	layer = 6
+	density = 0

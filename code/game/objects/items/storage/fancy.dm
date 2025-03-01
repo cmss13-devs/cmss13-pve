@@ -224,6 +224,12 @@
 	icon_state = "y_naspacket"
 	item_state = "y_naspacket"
 
+/obj/item/storage/fancy/cigarettes/laika
+	name = "\improper Laika packet"
+	desc = "A Russian brand of cigarettes maintaining and honoring the legacy of the dog Laika, a space pioneer."
+	icon_state = "laikapacket"
+	item_state = "laikapacket"
+
 /obj/item/storage/fancy/cigarettes/lucky_strikes_4
 	name = "\improper Lucky Strikes Mini Packet"
 	desc = "These four-packs of Luckies come in every MRE. They're not as good as the Habana Reals that come in the LACN MREs, but at least they're free."
