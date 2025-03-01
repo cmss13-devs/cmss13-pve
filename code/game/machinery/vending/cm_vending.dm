@@ -341,16 +341,16 @@ GLOBAL_LIST_EMPTY(vending_products)
 		for(var/obj/item/reagent_container/pill in pill_bottle.contents)
 			if(pill.type != type_of_pill)
 				to_chat(user, SPAN_WARNING("[item_to_stock] has non-original pills inside and can't be restocked."))
-				return
+				return FALSE
 		if(pill_bottle.contents.len < pill_bottle.max_storage_space)
 			to_chat(user, SPAN_WARNING("[item_to_stock] is not full and can't be restocked."))
-			return
+			return FALSE
 	//Telephone backpacks with the telephone not attached
 	else if(istype(item_to_stock, /obj/item/storage/backpack/marine/satchel/rto))
 		var/datum/component/phone/tele = LAZYACCESS(item_to_stock.datum_components, /datum/component/phone)
 		if(tele.phone_handset.loc != null) //it is not stowed. Prevent telephone dupe.
 			to_chat(user, SPAN_WARNING("You must put the [tele.phone_handset] back into [item_to_stock] before restocking."))
-			return
+			return FALSE
 
 	//Storage Accessories with their contents not directly in the atoms vars
 	else if(istype(item_to_stock, /obj/item/clothing/accessory/storage))
@@ -366,6 +366,22 @@ GLOBAL_LIST_EMPTY(vending_products)
 			qdel(temp_container)
 			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
 			return FALSE
+		qdel(temp_container)
+
+		//Storage Accessories with their contents not directly in the atoms vars
+	else if(istype(item_to_stock, /obj/item/clothing/under))
+		var/obj/item/clothing/under/uniform_to_stock = item_to_stock
+		var/new_type = item_to_stock.type
+		var/obj/item/clothing/under/temp_uniform = new new_type(src) //create an indentical item to see if it is filled with things on New()
+		if(length(temp_uniform.contents))
+			qdel(temp_uniform)
+			to_chat(user, SPAN_WARNING("You cannot restock uniforms that are prefitted by the vendor!"))
+			return FALSE
+		if(length(uniform_to_stock.contents))
+			qdel(temp_uniform)
+			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
+			return FALSE
+		qdel(temp_uniform)
 
 	//catch all storage handling, from now on it only works on items that start empty!
 	else if(istype(item_to_stock, /obj/item/storage))
@@ -380,6 +396,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			qdel(temp_container)
 			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
 			return FALSE
+		qdel(temp_container)
 
 	//these checks were moved from /obj/structure/machinery/cm_vending/proc/stock()
 	else if(istype(item_to_stock, /obj/item/device/defibrillator))
@@ -396,7 +413,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 		if(cell.charge < cell.maxcharge)
 			to_chat(user, SPAN_WARNING("[item_to_stock] needs to be fully charged to restock it!"))
 			return FALSE
-
 
 	return TRUE //Item IS good to restock!
 
