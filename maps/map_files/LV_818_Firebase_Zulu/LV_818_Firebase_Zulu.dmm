@@ -8,6 +8,20 @@
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/strata/white_cyan1,
 /area/firebase_zulu/inside)
+"ab" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/fuel{
+	pixel_y = 14
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors{
+	pixel_y = 2;
+	pixel_x = -3
+	},
+/obj/item/storage/box/guncase/heavy/shotgun{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "ac" = (
 /obj/structure/machinery/fuelcell_recycler/full,
 /obj/structure/machinery/light/double{
@@ -84,6 +98,10 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
+"an" = (
+/obj/structure/gun_rack/m41/unloaded,
+/turf/open/floor/almayer,
+/area/firebase_zulu/inside/platoonarmory)
 "ao" = (
 /obj/structure/machinery/light/double{
 	dir = 1;
@@ -126,14 +144,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firebase_zulu/inside/engineering)
-"at" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
-/turf/open/floor/almayer/plate,
-/area/firebase_zulu/inside/platoonarmory)
 "au" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -294,6 +304,13 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
+"aR" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "squadarmory_2";
+	name = "\improper Gear Lockers"
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/platoonarmory)
 "aS" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -638,6 +655,9 @@
 	layer = 2.52
 	},
 /obj/structure/barricade/handrail,
+/obj/structure/mirror{
+	pixel_y = 29
+	},
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/dorms)
 "bN" = (
@@ -885,6 +905,7 @@
 /area/firebase_zulu/outside/compound)
 "ct" = (
 /obj/structure/barricade/metal/plasteel/wired,
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "cu" = (
@@ -1303,6 +1324,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "dB" = (
@@ -1531,10 +1553,19 @@
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/platoonprep)
 "eb" = (
-/obj/structure/machinery/light/double/blue,
-/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 13
+	},
+/obj/item/storage/box/guncase/heavy/sentry,
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 18
+	},
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 5
+	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/almayer/plate,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/almayer,
 /area/firebase_zulu/inside/platoonarmory)
 "ec" = (
 /obj/structure/platform/strata/metal{
@@ -1904,6 +1935,22 @@
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/plating,
 /area/firebase_zulu/inside/motor_pool)
+"eZ" = (
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_y = 6;
+	pixel_x = -7;
+	layer = 2.98
+	},
+/obj/item/ammo_box/magazine/vp70{
+	pixel_y = -2
+	},
+/obj/item/ammo_box/magazine/mk1{
+	pixel_y = 12;
+	pixel_x = -4;
+	layer = 2.98
+	},
+/turf/open/floor/almayer,
+/area/firebase_zulu/inside/platoonarmory)
 "fa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double,
@@ -1996,6 +2043,11 @@
 	},
 /turf/open/floor/plating,
 /area/firebase_zulu/outside/compound)
+"fm" = (
+/obj/structure/machinery/light/double/blue,
+/obj/structure/gun_rack/m41/unloaded,
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "fn" = (
 /obj/structure/fence,
 /obj/structure/machinery/light/double/blue{
@@ -2474,7 +2526,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/auto_turf/sand/layer1,
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
 "gt" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -2721,14 +2773,13 @@
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
 "ha" = (
-/obj/structure/machinery/door_control{
-	pixel_y = 3;
-	pixel_x = 10;
-	id = "squadarmory_secure";
-	name = "gear lockers door-control"
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/shotgun{
+	pixel_y = 9
 	},
-/turf/closed/wall/kutjevo/rock,
-/area/firebase_zulu/outside/compound)
+/obj/item/ammo_box/magazine/shotgun/buckshot,
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "hb" = (
 /obj/structure/barricade/sandbags/full{
 	dir = 1
@@ -4128,14 +4179,6 @@
 	},
 /turf/open/mars_cave/mars_dirt_4,
 /area/firebase_zulu/outside)
-"ks" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/largecrate/supply/supplies/sandbags,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand/layer1,
-/area/firebase_zulu/outside/compound)
 "kt" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -4566,7 +4609,7 @@
 	name = "\improper S-52 fusion reactor 17"
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/engineering)
+/area/firebase_zulu/inside/engineering)
 "lt" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/auto_turf/sand/layer1,
@@ -5313,6 +5356,18 @@
 /obj/structure/platform_decoration/strata/metal,
 /turf/open/asphalt/cement/cement3,
 /area/firebase_zulu/outside)
+"ni" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/fuel{
+	pixel_y = 14
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors{
+	pixel_y = 2;
+	pixel_x = -3
+	},
+/turf/open/floor/almayer,
+/area/firebase_zulu/inside/platoonarmory)
 "nl" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -5489,6 +5544,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "nK" = (
@@ -5715,6 +5771,10 @@
 "on" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/firebase_zulu/inside/canteen)
+"oo" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/almayer,
+/area/firebase_zulu/inside/platoonarmory)
 "op" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/space_heater/radiator/red{
@@ -6257,6 +6317,7 @@
 	pixel_y = 31;
 	id = "door_low_1"
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "pC" = (
@@ -6306,6 +6367,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "pI" = (
@@ -6360,6 +6422,7 @@
 	dir = 4
 	},
 /obj/structure/barricade/metal/plasteel/wired,
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "pM" = (
@@ -7232,6 +7295,9 @@
 "sf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/nade_box{
+	pixel_y = 7
+	},
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/platoonarmory)
 "sg" = (
@@ -7387,6 +7453,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "sE" = (
@@ -7403,6 +7470,22 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/inside/motor_pool)
+"sG" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 13
+	},
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 3
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "sH" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -7781,6 +7864,13 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/firebase_zulu/inside/canteen)
+"tH" = (
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = -7;
+	pixel_x = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "tI" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -7907,6 +7997,7 @@
 /obj/structure/barricade/metal/plasteel/wired{
 	dir = 4
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "tZ" = (
@@ -8361,6 +8452,22 @@
 	},
 /turf/open/floor/prison/cell_stripe/west,
 /area/firebase_zulu/inside)
+"vj" = (
+/obj/structure/machinery/light/double/blue,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large{
+	layer = 2.98;
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_y = 13;
+	pixel_x = -3
+	},
+/obj/item/storage/box/guncase/heavy/m49a_pve{
+	pixel_y = 3
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "vk" = (
 /obj/structure/surface/table/almayer,
 /obj/item/paper_bin/wy{
@@ -8555,7 +8662,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
-/turf/open/auto_turf/sand/layer1,
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
 "vL" = (
 /obj/structure/platform{
@@ -8624,6 +8731,7 @@
 /obj/item/device/binoculars/civ{
 	pixel_y = 7
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "vS" = (
@@ -8779,6 +8887,15 @@
 /obj/structure/cargo_container/horizontal/blue/bottom,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside)
+"wn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control{
+	pixel_y = -29;
+	id = "squadarmory_secure";
+	name = "gear lockers door-control"
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "wo" = (
 /obj/structure/prop/structure_lattice,
 /obj/structure/prop/structure_lattice{
@@ -9236,6 +9353,18 @@
 /obj/structure/platform/stair_cut,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
+"xk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7;
+	job = "Smartgunner"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Squad Leader"
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "xl" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/window/reinforced{
@@ -9460,6 +9589,18 @@
 /obj/item/tool/shovel/spade,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
+"xL" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 13
+	},
+/obj/item/storage/box/guncase/heavy/sentry,
+/obj/item/storage/box/nade_box{
+	pixel_y = 13;
+	layer = 3.2
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "xM" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -9588,6 +9729,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "ye" = (
@@ -10096,6 +10238,7 @@
 /obj/structure/barricade/metal/plasteel/wired{
 	dir = 4
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "zq" = (
@@ -10536,6 +10679,13 @@
 	},
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside)
+"As" = (
+/obj/structure/machinery/door_control{
+	id = "squadarmory_2";
+	name = "gear lockers door-control"
+	},
+/turf/closed/wall/kutjevo/rock,
+/area/firebase_zulu/outside/compound)
 "At" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/warning_stripes{
@@ -10622,6 +10772,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "AF" = (
@@ -10647,6 +10798,13 @@
 "AI" = (
 /turf/open/floor/almayer,
 /area/firebase_zulu/inside/platoonprep)
+"AJ" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "squadarmory_secure";
+	name = "\improper Secure Equipment Lockers"
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/platoonarmory)
 "AK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/space_heater/radiator/red{
@@ -10858,6 +11016,13 @@
 /obj/structure/flora/grass/desert/lightgrass_1,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
+"Bl" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1;
+	name = "\improper Secure Equipment Storage"
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/platoonarmory)
 "Bm" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
@@ -11215,6 +11380,7 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/m56d_hmg,
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "Ci" = (
@@ -11339,7 +11505,7 @@
 	},
 /obj/structure/largecrate/supply/supplies/sandbags,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand/layer2,
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
 "CB" = (
 /obj/structure/surface/table/almayer,
@@ -11650,6 +11816,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "Du" = (
@@ -12472,6 +12639,20 @@
 /obj/structure/cargo_container/grant/left,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
+"FJ" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/shotgun/buckshot,
+/obj/item/ammo_box/magazine/shotgun{
+	pixel_y = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "FK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double,
@@ -12486,6 +12667,7 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "FN" = (
@@ -13895,7 +14077,19 @@
 	dir = 8;
 	layer = 2.7
 	},
-/turf/open/auto_turf/sand/layer1,
+/obj/structure/sign/safety/storage{
+	pixel_x = -29;
+	pixel_y = 7
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_x = -17;
+	pixel_y = 7
+	},
+/obj/structure/sign/safety/security{
+	pixel_y = -5;
+	pixel_x = -24
+	},
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
 "IU" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14572,6 +14766,17 @@
 	pixel_x = 29;
 	pixel_y = 12
 	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/platoonarmory)
 "KD" = (
@@ -15021,6 +15226,24 @@
 	},
 /turf/open/asphalt/cement,
 /area/firebase_zulu/outside)
+"LR" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large{
+	layer = 2.98;
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_y = 13;
+	pixel_x = -3
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "LS" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 8
@@ -15039,7 +15262,7 @@
 	dir = 8;
 	layer = 2.7
 	},
-/turf/open/auto_turf/sand/layer1,
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
 "LU" = (
 /obj/structure/platform/strata/metal{
@@ -15097,6 +15320,15 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
+"LZ" = (
+/obj/structure/gun_rack/mk221{
+	pixel_x = -7
+	},
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = 7
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "Ma" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -15770,6 +16002,20 @@
 /obj/structure/barricade/metal/plasteel/wired{
 	dir = 8
 	},
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"NI" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/vehicle_roof/van,
+/obj/structure/tent_curtain,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "NJ" = (
@@ -15928,6 +16174,14 @@
 	},
 /turf/open/mars_cave/mars_dirt_4,
 /area/firebase_zulu/outside)
+"Of" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/turf/open/auto_turf/sand/layer0,
+/area/firebase_zulu/outside/compound)
 "Og" = (
 /obj/structure/cargo_container/wy/mid,
 /obj/structure/blocker/invisible_wall,
@@ -16277,6 +16531,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/vehicle_roof/van,
+/obj/structure/tent_curtain,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "OZ" = (
@@ -16494,6 +16750,20 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/cell_stripe/east,
 /area/firebase_zulu/inside)
+"PE" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "PF" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -16581,6 +16851,16 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
+"PQ" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/m56_system{
+	pixel_y = 7
+	},
+/obj/item/storage/box/m56_system{
+	pixel_y = 15
+	},
+/turf/open/floor/almayer,
+/area/firebase_zulu/inside/platoonarmory)
 "PR" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17023,6 +17303,8 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
+/obj/effect/vehicle_roof/van,
+/obj/structure/tent_curtain,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "QU" = (
@@ -17215,6 +17497,8 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
+/obj/effect/vehicle_roof/van,
+/obj/structure/tent_curtain,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "Rp" = (
@@ -17240,6 +17524,10 @@
 	icon_state = "NW-out";
 	layer = 2.5;
 	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	pixel_x = -12
 	},
 /turf/open/floor/plating,
 /area/firebase_zulu/outside/compound)
@@ -17602,6 +17890,14 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/strata/white_cyan2,
 /area/firebase_zulu/inside)
+"Sr" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/vehicle_roof/van,
+/obj/structure/tent_curtain,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
 "Ss" = (
 /obj/structure/machinery/computer3/server/rack,
 /obj/structure/window/reinforced{
@@ -18209,13 +18505,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
-"Uc" = (
-/obj/structure/stairs/perspective{
-	dir = 4;
-	icon_state = "p_stair_full"
-	},
-/turf/open/auto_turf/sand/layer1,
-/area/firebase_zulu/outside/compound)
 "Ud" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1
@@ -18370,7 +18659,7 @@
 	dir = 4;
 	icon_state = "p_stair_full"
 	},
-/turf/open/auto_turf/sand/layer1,
+/turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
 "UB" = (
 /obj/structure/cable/heavyduty{
@@ -18405,6 +18694,12 @@
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/gun_rack/mk221{
+	pixel_x = -11
+	},
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = 7
+	},
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/platoonarmory)
 "UE" = (
@@ -19145,6 +19440,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/tent_curtain,
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "WC" = (
@@ -19429,6 +19726,7 @@
 "Xs" = (
 /obj/structure/barricade/metal/plasteel/wired,
 /obj/structure/machinery/m56d_hmg,
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "Xt" = (
@@ -19638,7 +19936,7 @@
 "Yb" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
-/area/golden_arrow/engineering)
+/area/firebase_zulu/inside/engineering)
 "Yc" = (
 /obj/structure/prop/vehicles/crawler{
 	icon_state = "crawler_crate_alt"
@@ -19771,6 +20069,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "Yu" = (
@@ -19855,6 +20154,19 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
+"YF" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/tent_curtain,
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
 "YG" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -19968,6 +20280,7 @@
 	dir = 8
 	},
 /obj/structure/barricade/metal/plasteel/wired,
+/obj/effect/vehicle_roof/van,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/engineering)
 "YX" = (
@@ -20050,6 +20363,10 @@
 	},
 /turf/open/floor/plating,
 /area/firebase_zulu/inside/hangar)
+"Zi" = (
+/obj/effect/vehicle_roof/van,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
 "Zj" = (
 /obj/structure/platform{
 	dir = 4
@@ -44416,7 +44733,7 @@ Iu
 Iu
 Iu
 zq
-Ze
+LR
 Ze
 zq
 zq
@@ -45018,20 +45335,20 @@ Iu
 Iu
 Iu
 zq
-Ha
+an
 XI
 zq
 yr
 eb
 zq
 zq
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
+Qa
+Qa
+Qa
+Qa
+Qa
+Qa
+Qa
 Iu
 Iu
 Iu
@@ -45620,20 +45937,20 @@ Iu
 Iu
 Iu
 zq
-Ha
+an
 CN
 zq
 Ha
 sf
-Ze
+sG
 zq
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
+Qa
+Qa
+Qa
+Qa
+Qa
+Qa
+Qa
 Iu
 Iu
 Iu
@@ -46222,20 +46539,20 @@ Iu
 Iu
 Iu
 zq
-Ha
+PQ
 TS
 zq
 ns
 Ha
 CN
 zq
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
+Qa
+Qa
+Qa
+Qa
+Qa
+Qa
+Qa
 Iu
 Iu
 Iu
@@ -46824,20 +47141,20 @@ Iu
 Iu
 Iu
 zq
+oo
 Ha
-Ha
-TW
+AJ
 Ha
 Ha
 XI
 zq
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
+Qa
+Qa
+Qa
+Qa
+Qa
+Qa
+Qa
 Iu
 Iu
 Iu
@@ -47426,20 +47743,20 @@ Iu
 Iu
 Iu
 zq
+an
 Ha
-Ha
-TW
+AJ
 Ha
 QW
-XI
+wn
 zq
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
+Qa
+Qa
+Qa
+Qa
+Qa
+Qa
+Qa
 Iu
 Iu
 Iu
@@ -48028,20 +48345,20 @@ Iu
 Iu
 Iu
 zq
-Ha
+an
 Kx
 zq
-at
-QW
-XI
 zq
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
+lZ
+lZ
+zq
+zq
+zq
+zq
+zq
+Qa
+Qa
+Qa
 Iu
 Iu
 Iu
@@ -48630,20 +48947,20 @@ Iu
 Iu
 Iu
 zq
-QW
+ni
 XI
 zq
-CN
+PE
 Ha
 XI
 zq
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
+LZ
+Zw
+fm
+zq
+Qa
+Qa
+Qa
 Iu
 Iu
 Iu
@@ -49232,20 +49549,20 @@ Iu
 Iu
 Iu
 zq
-UD
+FJ
 XI
 zq
-XI
+xk
 Ha
-CN
+Ha
+aR
+Ha
+Ha
+tH
 zq
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
+Qa
+Qa
+Qa
 Iu
 Iu
 Iu
@@ -49837,17 +50154,17 @@ zq
 zq
 UD
 zq
-XI
+xk
 QW
-CN
+Ha
+aR
+Ha
+eZ
+ab
 zq
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
-Iu
+As
+Qa
+Qa
 Iu
 Iu
 Iu
@@ -50441,12 +50758,12 @@ zq
 zq
 KC
 QW
-TS
-zq
+CN
+aR
 ha
-Qa
-Qa
-Qa
+xL
+vj
+zq
 Qa
 Qa
 Qa
@@ -51042,13 +51359,13 @@ Qa
 Qa
 zq
 zq
-lZ
-lZ
+TW
+Bl
 zq
-Qa
-Qa
-Qa
-Qa
+zq
+zq
+zq
+zq
 Qa
 Qa
 Qa
@@ -51644,7 +51961,7 @@ Qa
 Qa
 aw
 LT
-Uc
+sc
 UA
 IT
 vK
@@ -52246,11 +52563,11 @@ Fn
 Ob
 RW
 RW
-Ba
-Ba
-Ba
-Ba
-Ba
+Rb
+Rb
+Rb
+Rb
+Rb
 lS
 tO
 Ae
@@ -52849,11 +53166,11 @@ Ba
 dR
 tp
 OE
-OE
-tp
+Fg
+BP
 gs
-tp
-UO
+BP
+Bs
 Ba
 Ae
 Qa
@@ -53455,8 +53772,8 @@ zq
 zq
 zq
 zq
-my
-Ba
+Of
+Rb
 Ba
 dh
 lS
@@ -54057,8 +54374,8 @@ zq
 Di
 Dl
 zq
-zE
-Ba
+uV
+Rb
 lS
 bO
 tp
@@ -54660,7 +54977,7 @@ Pe
 Pe
 zq
 CA
-lS
+Xm
 lS
 mZ
 Zs
@@ -55261,11 +55578,11 @@ zq
 CN
 CN
 zq
-ks
-lS
+CA
+Xm
 rr
 HR
-WB
+NI
 dA
 ct
 vQ
@@ -55864,11 +56181,11 @@ ef
 mI
 zq
 IV
-lS
+Xm
 wB
 fz
 OY
-Tl
+Zi
 Xs
 XE
 lS
@@ -66721,8 +67038,8 @@ LC
 Xk
 lS
 UL
-OY
-Tl
+YF
+Zi
 ct
 XE
 lS
@@ -70936,7 +71253,7 @@ dh
 LB
 ov
 QT
-Tl
+Zi
 nI
 PC
 Lb
@@ -76353,7 +76670,7 @@ LC
 PI
 lS
 GA
-WB
+NI
 dA
 nI
 PC
@@ -76956,7 +77273,7 @@ gn
 Gf
 pJ
 Ro
-Tl
+Zi
 nI
 PC
 Lb
@@ -93774,7 +94091,7 @@ YZ
 Rg
 bQ
 Zs
-dA
+Sr
 Zs
 PC
 Xm
@@ -94395,7 +94712,7 @@ Pw
 LC
 bQ
 Zs
-dA
+Sr
 Zs
 SP
 FP
