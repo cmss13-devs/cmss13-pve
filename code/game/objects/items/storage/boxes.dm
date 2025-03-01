@@ -721,6 +721,30 @@
 	can_hold = list(/obj/item/explosive/grenade/smokebomb)
 	grenade_type = /obj/item/explosive/grenade/smokebomb
 
+/obj/item/storage/box/nade_box/smoke/green
+	name = "\improper M47 HSDP-G grenade box"
+	desc = "A secure box holding 25 M47-G HSDP green smoke grenades. Flammable, don't store near the flamer fuel."
+	model_icon = "model_m47"
+	type_icon = "gsmoke"
+	can_hold = list(/obj/item/explosive/grenade/smokebomb/green)
+	grenade_type = /obj/item/explosive/grenade/smokebomb/green
+
+/obj/item/storage/box/nade_box/smoke/red
+	name = "\improper M47-R HSDP grenade box"
+	desc = "A secure box holding 25 M47-R HSDP red smoke grenades. Flammable, don't store near the flamer fuel."
+	model_icon = "model_m47"
+	type_icon = "rsmoke"
+	can_hold = list(/obj/item/explosive/grenade/smokebomb/red)
+	grenade_type = /obj/item/explosive/grenade/smokebomb/red
+
+/obj/item/storage/box/nade_box/flare
+	name = "\improper M72A2 HIPF starshell grenade box"
+	desc = "A secure box holding 25 M72A2 HIPF starshell grenades. Flammable, don't store near the flamer fuel."
+	model_icon = "model_m72"
+	type_icon = "flare"
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/impact/flare)
+	grenade_type = /obj/item/explosive/grenade/high_explosive/impact/flare
+
 /obj/item/storage/box/nade_box/phophorus
 	name = "\improper M60 WPSI grenade box"
 	desc = "A secure box holding 25 M60 White-Phosphorus, Smoke/Incendiary chemical compound grenades. Highly flammable and explosive, don't store near the flamer fuel."
