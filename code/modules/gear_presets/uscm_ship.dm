@@ -680,6 +680,7 @@
 		return
 
 	add_verb(new_human.client, /client/proc/commander_rename_platoon)
+	give_action(new_human, /datum/action/innate/message_squad)
 
 /datum/equipment_preset/uscm_ship/so/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
