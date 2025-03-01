@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/machinery/vending/generic,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
 "aad" = (
 /turf/open/floor/plating/warnplate/north,
 /area/lv624/lazarus/engineering)
@@ -1373,10 +1377,10 @@
 /turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
 "bKf" = (
-/obj/structure/machinery/vending/cigarette,
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/whiteblue/southeast,
 /area/lv624/lazarus/corporate_dome)
 "bLa" = (
@@ -2033,8 +2037,8 @@
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/lv624/ground/jungle/west_jungle)
 "cEp" = (
-/obj/structure/machinery/vending/cigarette/colony,
 /obj/effect/landmark/crap_item,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "cEI" = (
@@ -4150,7 +4154,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_east_jungle)
 "fhn" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/main_hall)
 "fhu" = (
@@ -4886,10 +4890,6 @@
 	},
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
-"fVf" = (
-/obj/structure/machinery/vending/cigarette,
-/turf/open/floor/white,
-/area/lv624/lazarus/main_hall)
 "fVB" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -12660,7 +12660,7 @@
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "pXU" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "pYI" = (
@@ -41295,13 +41295,13 @@ jFZ
 lHW
 lHW
 bWC
+aaa
+psD
+psD
+psD
+psD
+psD
 iSN
-psD
-psD
-psD
-psD
-psD
-fVf
 dBu
 fCP
 auz
