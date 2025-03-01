@@ -36,7 +36,7 @@
 		/obj/item/attachable/flashlight,
 	)
 
-	ammo = /datum/ammo/bullet/rifle/heavy/tracer
+	ammo = /datum/ammo/bullet/rifle/heavy
 	actions_types = list(
 		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
 		/datum/action/item_action/smartgun/toggle_ammo_type,
@@ -54,8 +54,8 @@
 	/// Whether the smartgun requires a harness to use
 	var/requires_harness = TRUE
 
-	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy/tracer //Toggled ammo type
-	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/tracer //Toggled ammo type
+	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy //Toggled ammo type
+	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap //Toggled ammo type
 	var/iff_enabled = TRUE //Begin with the safety on.
 	var/secondary_toggled = 0 //which ammo we use
 	var/recoil_compensation = 0
@@ -108,7 +108,8 @@
 
 /obj/item/weapon/gun/smartgun/set_bullet_traits()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff)
+		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff),
+		BULLET_TRAIT_ENTRY("tracer", /datum/element/bullet_tracer)
 	))
 	AddComponent(/datum/component/iff_fire_prevention)
 

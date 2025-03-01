@@ -1157,6 +1157,11 @@
 	gun_category = GUN_CATEGORY_HEAVY
 	start_automatic = TRUE
 
+/obj/item/weapon/gun/rifle/lmg/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY("tracer", /datum/element/bullet_tracer)
+	))
+
 /obj/item/weapon/gun/rifle/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13)
 
