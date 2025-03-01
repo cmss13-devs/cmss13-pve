@@ -334,7 +334,9 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	AddElement(/datum/element/connect_loc, connections)
 	AddComponent(/datum/component/submerge_modifier, 10)
 
-/obj/structure/flora/grass/tallgrass/proc/on_cross()
+/obj/structure/flora/grass/tallgrass/proc/on_cross(arrived)
+	if(isobserver(arrived))
+		return
 	Shake(3, 3, 5)
 
 // MAP VARIANTS //
