@@ -188,6 +188,16 @@
 	mob_liquid_height = 18
 	mob_liquid_depth = -8
 
+/turf/open/liquid/water/beach_water
+	name = "shallow water"
+	mob_liquid_height = 5
+	mob_liquid_depth = -2
+
+/turf/open/liquid/water/ocean/deep_water
+	name = "deep water"
+	mob_liquid_height = 18
+	mob_liquid_depth = -8
+
 /turf/open/liquid/water/river/desert
 	name = "water"
 	icon = 'icons/turf/floors/desert_water.dmi'

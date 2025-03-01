@@ -89,7 +89,7 @@
 	pixel_x = 16;
 	pixel_y = -8
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "ads" = (
 /turf/open/floor/plating/plating_catwalk/aicore/white,
@@ -170,7 +170,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "aez" = (
 /obj/structure/bed/chair/comfy{
@@ -751,7 +751,7 @@
 	climb_delay = 1;
 	layer = 3.04
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "asw" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -1146,7 +1146,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "aCj" = (
 /turf/closed/wall/strata_outpost,
@@ -1885,7 +1885,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "aYb" = (
 /obj/structure/bed/chair{
@@ -2669,7 +2669,7 @@
 /area/bmg290/caverns/terranium)
 "blK" = (
 /obj/structure/prop/rock/brown,
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "blP" = (
 /turf/open/asphalt/cement/cement9,
@@ -3139,7 +3139,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/relay/engineering)
 "bzl" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -3220,7 +3220,7 @@
 /area/bmg290/wilderness/beach)
 "bBd" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "bBh" = (
 /obj/structure/prop/rock,
@@ -3672,7 +3672,7 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "bLU" = (
 /obj/structure/pipes/vents/pump,
@@ -3693,7 +3693,7 @@
 /area/bmg290/wilderness_roof/telecomms_station)
 "bLY" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "bMb" = (
 /obj/item/stool{
@@ -4159,7 +4159,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "bZg" = (
 /obj/structure/cargo_container/kelland/right,
@@ -4290,7 +4290,7 @@
 	dir = 8;
 	color = "#999999"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "cbD" = (
 /obj/structure/platform{
@@ -5020,7 +5020,7 @@
 /area/bmg290/colony/bar)
 "crz" = (
 /obj/structure/blocker/fog,
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "crB" = (
 /obj/structure/disposalpipe/segment{
@@ -5159,7 +5159,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "cvx" = (
 /obj/structure/surface/rack,
@@ -5680,7 +5680,7 @@
 /area/bmg290/colony/engineering)
 "cHx" = (
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/colony_exterior)
 "cHz" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6205,7 +6205,7 @@
 /turf/open/gm/coast/beachcorner2/south_west,
 /area/bmg290/wilderness/outskirts)
 "cWv" = (
-/turf/open/gm/river/shallow_ocean_shallow_ocean,
+/turf/open/liquid/water/shallow_ocean_shallow_ocean,
 /area/bmg290/wilderness/beach)
 "cWJ" = (
 /obj/structure/cable/heavyduty{
@@ -6510,7 +6510,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 4
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "ddh" = (
 /obj/structure/prop/almayer/computers/sensor_computer3,
@@ -6558,7 +6558,7 @@
 /area/bmg290/wilderness_roof/beach_house)
 "deD" = (
 /obj/item/lightstick/planted,
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "deE" = (
 /obj/structure/surface/rack,
@@ -6797,7 +6797,7 @@
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "dll" = (
 /turf/open/floor/prison/darkbrown2/north,
@@ -7549,7 +7549,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "dBw" = (
 /obj/structure/platform/strata/metal{
@@ -8088,7 +8088,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "dOz" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
@@ -8641,7 +8641,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "dZo" = (
 /obj/structure/platform/kutjevo{
@@ -9074,7 +9074,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "elw" = (
 /turf/open/asphalt/cement/cement2,
@@ -9133,7 +9133,7 @@
 	climb_delay = 1;
 	layer = 3.03
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "emI" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9471,7 +9471,7 @@
 	dir = 4;
 	color = "#999999"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "euE" = (
 /obj/structure/noticeboard{
@@ -9505,7 +9505,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#9494b8"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "evq" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9566,7 +9566,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "exK" = (
 /obj/structure/blocker/invisible_wall,
@@ -9614,7 +9614,7 @@
 	pixel_x = 0;
 	dir = 4
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/caverns/filtration)
 "eyL" = (
 /turf/open/auto_turf/sand_white/layer1,
@@ -9779,7 +9779,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "eBc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9825,7 +9825,7 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "eCm" = (
 /obj/item/weapon/gun/smg/mp5,
@@ -10569,7 +10569,7 @@
 "eTQ" = (
 /obj/structure/blocker/fog,
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/wilderness/beach)
 "eUx" = (
 /turf/open/floor/prison/sterile_white,
@@ -10993,7 +10993,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/keppitz/test)
 "feP" = (
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/site/undiscovered)
 "feS" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -11349,7 +11349,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "fnz" = (
 /turf/open/auto_turf/strata_grass,
@@ -11841,7 +11841,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "fzm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11977,7 +11977,7 @@
 	dir = 4;
 	layer = 3.04
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "fBw" = (
 /obj/structure/machinery/door/window{
@@ -12010,7 +12010,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "fCG" = (
 /obj/effect/decal/cleanable/dirt,
@@ -12478,7 +12478,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "fOD" = (
 /turf/closed/wall/strata_outpost/reinforced,
@@ -12623,7 +12623,7 @@
 	dir = 9;
 	layer = 3.2
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "fRO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13182,7 +13182,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 8
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "gcz" = (
 /turf/closed/wall/strata_outpost,
@@ -13270,7 +13270,7 @@
 	pixel_x = 0;
 	dir = 4
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "ged" = (
 /obj/structure/sink{
@@ -13661,7 +13661,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "gqK" = (
 /obj/structure/machinery/light/small{
@@ -13958,7 +13958,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "gyx" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -14116,7 +14116,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/wilderness/beach)
 "gDX" = (
 /obj/structure/platform/kutjevo/rock{
@@ -14236,7 +14236,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "gGR" = (
 /obj/structure/surface/table,
@@ -14465,7 +14465,7 @@
 /area/bmg290/colony/hangar)
 "gLe" = (
 /obj/structure/platform_decoration,
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "gLf" = (
 /obj/structure/platform/kutjevo/rock{
@@ -14480,7 +14480,7 @@
 	color = "#999999";
 	dir = 8
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "gLi" = (
 /obj/structure/surface/table/almayer,
@@ -14837,7 +14837,7 @@
 /area/bmg290/colony/security)
 "gWb" = (
 /obj/structure/platform,
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/road)
 "gWo" = (
 /obj/structure/machinery/landinglight/ds1/spoke{
@@ -15041,7 +15041,7 @@
 /turf/open/floor/prison/bluecorner,
 /area/bmg290/colony/complex)
 "hcx" = (
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "hcH" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -15097,7 +15097,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "hdS" = (
 /turf/open/asphalt/cement/cement2,
@@ -15391,7 +15391,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "hjL" = (
 /obj/structure/machinery/deployable/barrier,
@@ -16641,7 +16641,7 @@
 	color = "#999999";
 	dir = 8
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "hNM" = (
 /obj/structure/bed/chair/comfy{
@@ -17404,7 +17404,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "idf" = (
 /obj/structure/largecrate/random,
@@ -17676,7 +17676,7 @@
 /turf/open/floor/prison,
 /area/bmg290/relay/hallway)
 "ijl" = (
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/caverns/filtration)
 "ijq" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -18601,7 +18601,7 @@
 	pixel_x = 0;
 	dir = 4
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "iGT" = (
 /obj/structure/stairs/perspective{
@@ -18953,7 +18953,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "iOn" = (
 /obj/effect/decal/warning_stripes{
@@ -20133,7 +20133,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "jrp" = (
 /obj/structure/machinery/door_control/brbutton{
@@ -20618,7 +20618,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "jCD" = (
 /obj/structure/surface/table/almayer,
@@ -21053,7 +21053,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "jMN" = (
 /obj/effect/decal/cleanable/dirt{
@@ -21161,7 +21161,7 @@
 /area/bmg290/keppitz/interlude)
 "jPn" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/wilderness/beach)
 "jPs" = (
 /obj/effect/decal/cleanable/dirt,
@@ -21198,7 +21198,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "jQi" = (
 /obj/structure/disposalpipe/segment{
@@ -21236,7 +21236,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/wilderness/relay_exterior)
 "jRZ" = (
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "jSq" = (
 /obj/effect/decal/cleanable/dirt,
@@ -21818,7 +21818,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#9494b8"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "khD" = (
 /obj/structure/pipes/vents/pump,
@@ -22035,7 +22035,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "kmA" = (
 /obj/structure/cargo_container/kelland/right,
@@ -22054,7 +22054,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "knt" = (
 /turf/open/floor/prison,
@@ -22431,7 +22431,7 @@
 /area/bmg290/colony/hangar)
 "kuM" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "kuO" = (
 /obj/structure/machinery/door_control/brbutton{
@@ -22636,7 +22636,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "kBC" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -22681,7 +22681,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "kDw" = (
 /obj/structure/prop/rock/brown,
@@ -23554,7 +23554,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "lbb" = (
 /obj/effect/decal/cleanable/dirt,
@@ -23638,7 +23638,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "lcZ" = (
 /obj/structure/disposalpipe/segment,
@@ -23853,7 +23853,7 @@
 "lit" = (
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/floodgate,
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "liN" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -24253,7 +24253,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "lri" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -24558,7 +24558,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/relay/engineering)
 "lxt" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
@@ -24636,7 +24636,7 @@
 /obj/structure/platform/mineral/sandstone/runed{
 	color = "#5f5b54"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/site/undiscovered)
 "lzP" = (
 /obj/structure/machinery/light{
@@ -25098,7 +25098,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "lLz" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -25247,7 +25247,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "lOC" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -25485,7 +25485,7 @@
 /area/bmg290/wilderness/relay_exterior)
 "lUt" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/shallow_ocean_shallow_ocean,
+/turf/open/liquid/water/shallow_ocean_shallow_ocean,
 /area/bmg290/wilderness/beach)
 "lUv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25512,7 +25512,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/wilderness/beach)
 "lVj" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
@@ -25732,7 +25732,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/relay/engineering)
 "mcv" = (
 /obj/structure/flora/jungle/vines,
@@ -25755,7 +25755,7 @@
 	color = "#999999";
 	dir = 8
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "mcR" = (
 /obj/structure/window/framed/strata/reinforced,
@@ -26074,7 +26074,7 @@
 /turf/open/floor/prison,
 /area/bmg290/keppitz/test)
 "mjB" = (
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "mjK" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -26505,7 +26505,7 @@
 	dir = 4;
 	color = "#999999"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "mst" = (
 /obj/structure/prop/vehicles/crawler,
@@ -26585,7 +26585,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "mws" = (
 /obj/structure/flora/grass/tallgrass/desert{
@@ -27281,7 +27281,7 @@
 /turf/open/floor/prison/sterile_white,
 /area/bmg290/keppitz/acquisitions)
 "mSu" = (
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/outskirts)
 "mSR" = (
 /obj/structure/surface/table/almayer,
@@ -27459,7 +27459,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "mVt" = (
 /obj/effect/decal/cleanable/dirt,
@@ -28183,7 +28183,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "nlE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -28348,7 +28348,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 10
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "npz" = (
 /obj/effect/decal/warning_stripes{
@@ -28439,7 +28439,7 @@
 	dir = 4;
 	layer = 2
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "nrV" = (
 /obj/structure/machinery/light/small{
@@ -28477,7 +28477,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "nsV" = (
 /obj/structure/prop/invuln{
@@ -29763,7 +29763,7 @@
 	color = "#999999";
 	dir = 8
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "nZB" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -29972,7 +29972,7 @@
 	pixel_x = -11;
 	pixel_y = 10
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "ocG" = (
 /obj/structure/surface/rack{
@@ -30491,7 +30491,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "orO" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -30903,7 +30903,7 @@
 	pixel_y = 22;
 	pixel_x = 6
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/colony/complex)
 "oyZ" = (
 /obj/structure/closet/secure_closet/engineering_materials,
@@ -31730,7 +31730,7 @@
 	dir = 6;
 	layer = 3.51
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "oSy" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -31934,7 +31934,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#9494b8"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "oWU" = (
 /obj/effect/decal/warning_stripes{
@@ -32195,7 +32195,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/colony_exterior)
 "pdq" = (
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "pdA" = (
 /obj/structure/machinery/door/airlock/almayer/generic/autoname,
@@ -32351,7 +32351,7 @@
 /area/bmg290/relay/telecommunication)
 "pht" = (
 /obj/structure/blocker/invisible_wall/water,
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "phC" = (
 /turf/open/floor/prison/floor_plate,
@@ -32408,7 +32408,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/hangar)
 "piz" = (
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "piB" = (
 /obj/structure/platform/kutjevo/rock{
@@ -32935,7 +32935,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 6
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "pxp" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -33490,7 +33490,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "pJK" = (
 /obj/structure/surface/table/almayer,
@@ -33658,7 +33658,7 @@
 	pixel_x = 16;
 	pixel_y = -8
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "pLv" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -34185,7 +34185,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/caverns/filtration)
 "pYh" = (
 /obj/structure/platform/kutjevo{
@@ -34782,7 +34782,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "qma" = (
 /turf/open/floor/darkbluecorners2,
@@ -35046,7 +35046,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "qrq" = (
 /obj/structure/platform{
@@ -35327,7 +35327,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "qyD" = (
 /obj/structure/flora/pottedplant{
@@ -35591,7 +35591,7 @@
 	dir = 1;
 	color = "#5f5b54"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/site/undiscovered)
 "qFD" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -35605,7 +35605,7 @@
 "qFN" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/wilderness/beach)
 "qFS" = (
 /obj/effect/decal/warning_stripes{
@@ -35642,7 +35642,7 @@
 	color = "#999999";
 	dir = 8
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/caverns/filtration)
 "qHh" = (
 /obj/structure/cargo_container/kelland/left,
@@ -36648,7 +36648,7 @@
 	pixel_x = 16;
 	pixel_y = -8
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "rli" = (
 /obj/structure/sign/poster/ad,
@@ -37228,7 +37228,7 @@
 	pixel_x = 16;
 	pixel_y = 24
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "rxp" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
@@ -37336,7 +37336,7 @@
 	climb_delay = 1;
 	layer = 3.04
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "ryE" = (
 /obj/effect/decal/cleanable/dirt{
@@ -37775,13 +37775,13 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "rLH" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "rLJ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -37891,7 +37891,7 @@
 	dir = 8;
 	color = "#9494b8"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "rQu" = (
 /obj/structure/surface/table/almayer,
@@ -38490,7 +38490,7 @@
 	dir = 1;
 	layer = 3.03
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/caverns/filtration)
 "sdo" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/colony{
@@ -39813,7 +39813,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "sIc" = (
 /obj/structure/platform{
@@ -41059,7 +41059,7 @@
 	climb_delay = 1;
 	layer = 3.03
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/caverns/filtration)
 "trx" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -41451,7 +41451,7 @@
 /area/bmg290/wilderness/outskirts)
 "tCa" = (
 /obj/structure/platform,
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "tCd" = (
 /obj/structure/stairs/perspective{
@@ -41650,7 +41650,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "tHG" = (
 /obj/structure/pipes/standard/manifold/hidden/cyan{
@@ -41944,7 +41944,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/road)
 "tQY" = (
 /turf/closed/wall/strata_outpost/reinforced,
@@ -42332,7 +42332,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "uaq" = (
 /obj/structure/platform/kutjevo/smooth,
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "uau" = (
 /turf/closed/wall/strata_ice/jungle,
@@ -42441,7 +42441,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "udl" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -42466,7 +42466,7 @@
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/road)
 "udL" = (
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/colony_exterior)
 "udP" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
@@ -42519,7 +42519,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/road)
 "ufw" = (
 /obj/structure/largecrate/random/secure{
@@ -42790,7 +42790,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "ulU" = (
 /turf/open/auto_turf/strata_grass,
@@ -42980,7 +42980,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "usB" = (
 /obj/structure/barricade/handrail/strata{
@@ -43907,7 +43907,7 @@
 /area/bmg290/wilderness_roof/storage_house)
 "uUb" = (
 /obj/item/toy/beach_ball,
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "uUk" = (
 /obj/structure/prop/structure_lattice{
@@ -44790,7 +44790,7 @@
 	dir = 4;
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "vps" = (
 /obj/structure/prop/ice_colony/ground_wire,
@@ -45011,7 +45011,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "vuV" = (
 /obj/structure/platform/kutjevo/rock{
@@ -45124,7 +45124,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/relay/engineering)
 "vxx" = (
 /obj/structure/bed/chair/comfy/teal{
@@ -45215,7 +45215,7 @@
 	dir = 4;
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "vAD" = (
 /turf/open/floor/coagulation/icon8_0,
@@ -45435,7 +45435,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "vGY" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner,
@@ -45619,7 +45619,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/caverns/filtration)
 "vLo" = (
 /obj/structure/bed/bedroll,
@@ -45855,7 +45855,7 @@
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/wilderness/outskirts)
 "vQn" = (
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "vQZ" = (
 /obj/structure/machinery/light/double{
@@ -46203,7 +46203,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#9494b8"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "vXX" = (
 /obj/structure/fence,
@@ -47729,7 +47729,7 @@
 	dir = 4;
 	color = "#5f5b54"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/site/undiscovered)
 "wFS" = (
 /obj/structure/machinery/door/airlock/sandstone/runed{
@@ -47949,7 +47949,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "wKo" = (
 /turf/open/floor/strata/faux_wood,
@@ -48306,7 +48306,7 @@
 	pixel_y = -2;
 	layer = 3.01
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "wTH" = (
 /obj/structure/cable/heavyduty{
@@ -48446,7 +48446,7 @@
 	dir = 8;
 	color = "#5f5b54"
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/site/undiscovered)
 "wWL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -49026,7 +49026,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 9
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/wilderness/beach)
 "xnj" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -49059,7 +49059,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/gm/river/ocean/deep_water,
+/turf/open/liquid/water/ocean/deep_water,
 /area/bmg290/wilderness/beach)
 "xnF" = (
 /obj/structure/prop/power_transformer,
@@ -49693,7 +49693,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/relay/engineering)
 "xEk" = (
 /obj/structure/stairs/perspective{
@@ -49756,7 +49756,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/relay/engineering)
 "xFx" = (
 /obj/item/device/walkman{
@@ -50575,7 +50575,7 @@
 	pixel_y = 22;
 	pixel_x = 6
 	},
-/turf/open/gm/river/beach_water,
+/turf/open/liquid/water/beach_water,
 /area/bmg290/colony/complex)
 "xZp" = (
 /obj/structure/platform/kutjevo/rock{
@@ -50751,7 +50751,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#9494b8"
 	},
-/turf/open/gm/river/ocean,
+/turf/open/liquid/water/ocean,
 /area/bmg290/caverns/filtration)
 "ycM" = (
 /turf/open/floor/prison/floor_plate,
