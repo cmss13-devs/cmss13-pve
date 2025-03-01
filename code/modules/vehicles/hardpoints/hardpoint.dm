@@ -54,8 +54,10 @@
 	//------SOUNDS VARS----------
 	/// Sounds to play when the module activated/fired.
 	var/list/activation_sounds
-
-
+	///sound to play when mounted on something with a breech object/interior for the users
+	var/interior_activation_sounds
+	///Whether freq vary is applied to activation_sounds
+	var/activation_sounds_vary = TRUE
 
 	//------INTERACTION VARS----------
 
@@ -651,7 +653,11 @@
 /// Selects and plays a firing sound from the list.
 /obj/item/hardpoint/proc/play_firing_sounds()
 	if(LAZYLEN(activation_sounds))
-		playsound(get_turf(src), pick(activation_sounds), 60, 1)
+		// if we have a interior fire sound and an interior area we use this instead to make the breech play a sound
+		var/atom/sound_play_loc = interior_activation_sounds && owner.interior ? owner : src
+		playsound(sound_play_loc, islist(activation_sounds) ? pick(activation_sounds):activation_sounds, 50, activation_sounds_vary)
+		if(interior_activation_sounds)
+			owner.play_interior_sound(interior_activation_sounds, src, 40, activation_sounds_vary)
 
 /// Determines whether something is in firing arc of a hardpoint.
 /obj/item/hardpoint/proc/in_firing_arc(atom/target)
