@@ -1174,7 +1174,7 @@
 		var/image/gun_underlay = image(icon, current_gun.base_gun_icon)
 		if(gun_has_gamemode_skin)
 			switch(SSmapping.configs[GROUND_MAP].camouflage_type)
-				if("snow")
+				if("snow", "urban")
 					gun_underlay = image(icon, "s_" + current_gun.base_gun_icon)
 				if("desert")
 					gun_underlay = image(icon, "d_" + current_gun.base_gun_icon)
