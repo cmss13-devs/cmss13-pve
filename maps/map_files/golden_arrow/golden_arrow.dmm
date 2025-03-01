@@ -15525,9 +15525,9 @@
 /area/golden_arrow/medical)
 "cMX" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/storage/box/nade_box/smoke{
-	pixel_y = 7;
-	pixel_x = 4
+/obj/item/storage/box/nade_box/smoke/red{
+	pixel_x = 4;
+	pixel_y = 7
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
@@ -15686,6 +15686,9 @@
 	pixel_y = 22;
 	pixel_x = 1;
 	layer = 3.2
+	},
+/obj/item/storage/box/nade_box/flare{
+	pixel_x = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)

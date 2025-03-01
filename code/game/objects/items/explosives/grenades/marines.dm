@@ -25,13 +25,10 @@
 	var/fire_resistance = 15 //to prevent highly controlled massive explosions
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
 
-
 /obj/item/explosive/grenade/high_explosive/New()
 	..()
 
 	fire_resistance = rand(GRENADE_FIRE_RESISTANCE_MIN, GRENADE_FIRE_RESISTANCE_MAX)
-
-
 
 /obj/item/explosive/grenade/high_explosive/prime(mob/living/user)
 	set waitfor = 0
@@ -148,19 +145,6 @@
 	antigrief_protection = FALSE
 	dual_purpose = FALSE
 
-/obj/item/explosive/grenade/high_explosive/tmfrag
-	name = "\improper M51A BFAB grenade"
-	desc = "Bounding Fragmentation, Air-Burst. Rather than traditionally detonating on impact, this round propels itself up into the air prior to exploding into a lethal hail of shrapnel a second later. Effective against troops in the open or in foxholes. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only."
-	icon_state = "grenade_bfab"
-	item_state = "grenade_bfab"
-	hand_throwable = FALSE
-	dual_purpose = FALSE
-	det_time = 10
-	explosion_power = 40
-	shrapnel_count = 48
-	shrapnel_type = /datum/ammo/bullet/shrapnel/heavy
-	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
-
 /obj/item/explosive/grenade/high_explosive/m15
 	name = "\improper M15 fragmentation grenade"
 	desc = "An outdated USCM Fragmentation Grenade. With decades of service in the USCM, the old M15 Fragmentation Grenade is slowly being replaced by the slightly safer M40-series grenades. It is set to detonate in 4 seconds."
@@ -175,10 +159,9 @@
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
-
 /*
 +//================================================
-+				Canister Grenades
++				Canister Grenade
 +//================================================
 +*/
 
@@ -193,9 +176,10 @@
 	explosion_power = 0
 	explosion_falloff = 25
 	det_time = 0 //this should mean that it will explode instantly when fired and thus generate the shotshell effect.
-	shrapnel_count = 10
+	shrapnel_count = 18
 	shrapnel_type = /datum/ammo/bullet/shrapnel/canister
 	dispersion_angle = 15 //hopefully this means the cone spread is pretty small
+
 /obj/item/explosive/grenade/high_explosive/airburst/canister/proc/canister_fire(mob/living/user, target)
 	var/direction = Get_Compass_Dir(user, target)
 	var/position = get_step(user, direction) //otherwise we buckshot ourselves
@@ -206,7 +190,6 @@
 // canister has no impact explosion.
 /obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
 	return
-
 
 /*
 //================================================
@@ -354,9 +337,10 @@
 	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one bears markings of the UPP."
 	icon_state = "grenade_40mm_upp"
 	item_state = "grenade_hedp"
-	explosion_power = 120 //Slightly stronger than HEDP
+	explosion_power = 180 //Stronger than HEDP to make up for one shot in the tube
 	explosion_falloff = 40 //But quicker to lose blast damage
-	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
+	shrapnel_count = 16
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	name = "\improper 40mm Buckshot Shell"
@@ -370,7 +354,7 @@
 
 /*
 //================================================
-				Impact HEAP Grenades
+				Impact HEAP Grenade
 //================================================
 */
 
@@ -385,8 +369,45 @@
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /*
++//================================================
++				Bounding Fragmentation Grenade
++//================================================
++*/
+
+/obj/item/explosive/grenade/high_explosive/impact/tmfrag
+	name = "\improper M51A BFAB grenade"
+	desc = "Bounding Fragmentation, Air-Burst. Rather than traditionally detonating on impact, this round propels itself up into the air prior to exploding into a lethal hail of shrapnel a second later. Effective against troops in the open or in foxholes. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only."
+	icon_state = "grenade_bfab"
+	item_state = "grenade_bfab"
+	explosion_power = 40
+	shrapnel_count = 48
+	shrapnel_type = /datum/ammo/bullet/shrapnel/heavy
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+
+/obj/item/explosive/grenade/high_explosive/impact/tmfrag/launch_impact(atom/hit_atom)
+	if(fuse_type != IMPACT_FUSE)
+		return
+	var/detonate = TRUE
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		sleep(2)
+		qdel(src)
+		for(var/mob/mob in range(5, hit_atom))
+			mob.show_message(SPAN_USERDANGER("The grenade flies up into the air before exploding!"), SHOW_MESSAGE_VISIBLE)
+		sleep(5)	//simulating it bounding up into the air before detonating
+		if(shrapnel_count)
+			create_shrapnel(hit_atom, shrapnel_count, , ,shrapnel_type, cause_data)
+			sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
+		apply_explosion_overlay()
+		if(explosion_power)
+			cell_explosion(hit_atom, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
+
+/*
 //================================================
-				Airborne Starshell Grenades
+				Airborne Starshell Grenade
 //================================================
 */
 
@@ -496,7 +517,6 @@
 	playsound(src.loc, 'sound/effects/hit_on_shattered_glass.ogg', 35, 1, 4)
 	..()
 
-
 /*
 //================================================
 				Airburst Incendiary Grenades
@@ -559,12 +579,13 @@
 	antigrief_protection = FALSE
 	arm_sound = 'sound/weapons/grenade.ogg'
 	var/datum/effect_system/smoke_spread/bad/smoke
+	var/smoke_type = /datum/effect_system/smoke_spread/bad
 	var/smoke_radius = 3
 	dual_purpose = TRUE
 
 /obj/item/explosive/grenade/smokebomb/New()
 	..()
-	smoke = new /datum/effect_system/smoke_spread/bad
+	smoke = new smoke_type(src)
 	smoke.attach(src)
 
 /obj/item/explosive/grenade/smokebomb/Destroy()
@@ -596,6 +617,20 @@
 		smoke.start()
 		new /obj/item/trash/grenade(get_turf(src))
 		qdel(src)
+
+/obj/item/explosive/grenade/smokebomb/green
+	name = "\improper M47-G HSDP smoke grenade"
+	desc = "The M47 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. Can be fired from a PN 30mm UGL for impact detonation, or primed in-hand and thrown to detonate after 2 seconds. The G subtype erupts into a cloud of green smoke upon detonation."
+	icon_state = "grenade_smoke_green"
+	smoke_type = /datum/effect_system/smoke_spread/bad/green
+	smoke_radius = 2
+
+/obj/item/explosive/grenade/smokebomb/red
+	name = "\improper M47-R HSDP smoke grenade"
+	desc = "The M47 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. Can be fired from a PN 30mm UGL for impact detonation, or primed in-hand and thrown to detonate after 2 seconds. The R subtype erupts into a cloud of red smoke upon detonation."
+	icon_state = "grenade_smoke_red"
+	smoke_type = /datum/effect_system/smoke_spread/bad/red
+	smoke_radius = 2
 
 /obj/item/explosive/grenade/smokebomb/upp
 	name = "RDG-17 smoke grenade"
@@ -671,6 +706,12 @@
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	icon_state = "grenade_phos_clf"
 	item_state = "grenade_phos_clf"
+
+/*
+//================================================
+				Sonic Electronic Ball Breakers
+//================================================
+*/
 
 /obj/item/explosive/grenade/sebb
 	name = "\improper G2 Electroshock grenade"
