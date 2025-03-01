@@ -29,11 +29,6 @@
 		return
 	GLOB.specialist_set_datums[specialist_set].refund_set(cryoing)
 
-/datum/job/marine/specialist/whiskey
-	title = JOB_WO_SQUAD_SPECIALIST
-	flags_startup_parameters = ROLE_ADD_TO_SQUAD
-	gear_preset = /datum/equipment_preset/wo/marine/spec
-
 /obj/effect/landmark/start/marine/spec
 	name = JOB_SQUAD_SPECIALIST
 	icon_state = "spec_spawn"
