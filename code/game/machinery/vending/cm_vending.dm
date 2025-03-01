@@ -379,7 +379,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			return FALSE
 		if(length(uniform_to_stock.contents))
 			qdel(temp_uniform)
-			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
+			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something attached to it. Empty it before restocking."))
 			return FALSE
 		qdel(temp_uniform)
 
