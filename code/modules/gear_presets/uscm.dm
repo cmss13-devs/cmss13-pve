@@ -142,6 +142,19 @@
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/pfc/marsoc
+	name = "MARSOC Element Member"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	assignment = "Element Member"
+	rank = JOB_SQUAD_MARINE
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "ELM"
+	skills = /datum/skills/marsoc
+	minimap_icon = "private"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
@@ -194,6 +207,19 @@
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/sg/marsoc
+	name = "MARSOC Heavy Weapons Operator"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	assignment = "Heavy Weapons Operator"
+	rank = JOB_SQUAD_SMARTGUN
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "HWO"
+	skills = /datum/skills/marsoc
+	minimap_icon = "smartgunner"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/rto
@@ -212,6 +238,19 @@
 /datum/equipment_preset/uscm/rto/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/spec/marsoc
+	name = "MARSOC Special Weapons Operator"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	assignment = "Special Weapons Operator"
+	rank = JOB_SQUAD_SPECIALIST
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "SWO"
+	skills = /datum/skills/marsoc
+	minimap_icon = "spec"
 
 //*****************************************************************************************************/
 
@@ -266,6 +305,19 @@
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/medic/marsoc
+	name = "MARSOC Special Amphibious Reconnaissance Corpsman"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	assignment = "Special Amphibious Reconnaissance Corpsman"
+	rank = JOB_SQUAD_MEDIC
+	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "SARC"
+	skills = /datum/skills/marsoc/medic
+	minimap_icon = "medic"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
@@ -311,9 +363,17 @@
 	role_comm_title = "ASL"
 	skills = /datum/skills/tl/recon
 
-/datum/equipment_preset/uscm/tl/forecon/lesser_rank
-	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/tl/marsoc
+	name = "MARSOC Assistant Element Lead"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP, ACCESS_MARINE_DROPSHIP)
+	assignment = "MARSOC Assistant Element Lead"
+	rank = JOB_SQUAD_TEAM_LEADER
+	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "AEL"
+	skills = /datum/skills/marsoc/assist_lead
+	minimap_icon = "tl"
 
 /*****************************************************************************************************/
 
@@ -337,6 +397,19 @@
 /datum/equipment_preset/uscm/engineer/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/tech(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/engineer/marsoc
+	name = "MARSOC Sapper"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
+	assignment = "Sapper"
+	rank = JOB_SQUAD_ENGI
+	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "SPR"
+	skills = /datum/skills/marsoc/engineer
+
+	minimap_icon = "engi"
 
 //*****************************************************************************************************/
 
@@ -386,6 +459,18 @@
 /datum/equipment_preset/uscm/leader/forecon/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/leader/marsoc
+	name = "MARSOC Element Lead"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
+	assignment = "MARSOC Element Lead"
+	rank = JOB_SQUAD_LEADER
+	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "EL"
+	minimum_age = 27
+	skills = /datum/skills/marsoc/leader
+	minimap_icon = "soctl"
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON
