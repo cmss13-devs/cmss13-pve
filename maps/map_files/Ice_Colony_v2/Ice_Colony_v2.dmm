@@ -2288,7 +2288,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/ice_colony/exterior/surface/cliff)
 "arN" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor,
 /area/ice_colony/surface/mining)
@@ -3138,7 +3138,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/ice_colony/exterior/surface/clearing/south)
 "ayK" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/plating,
 /area/ice_colony/surface/mining)

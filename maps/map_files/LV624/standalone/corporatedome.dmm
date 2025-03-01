@@ -95,7 +95,7 @@
 /turf/open/floor/plating/asteroidwarning,
 /area/lv624/lazarus/landing_zones/lz2)
 "ev" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/white,
 /area/lv624/lazarus/corporate_dome)
 "eF" = (
@@ -327,7 +327,7 @@
 /turf/open/floor/dark,
 /area/lv624/lazarus/corporate_dome)
 "qI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin/wy{
 	pixel_y = 8
 	},
@@ -440,7 +440,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/corporate_dome)
 "zw" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/folder/black{
 	name = "Weyland-Yutani Classified folder";
 	desc = "A black folder which has the Weyland-Yutani symbol inside it, along with CLASSIFIED in giant red letters."
@@ -539,7 +539,7 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/corporate_dome)
 "DU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = 6
 	},
@@ -558,7 +558,7 @@
 /turf/closed/wall/r_wall,
 /area/lv624/lazarus/corporate_dome)
 "Fh" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/cigarettes/emeraldgreen,
 /obj/item/storage/fancy/cigarettes/wypacket{
 	pixel_x = 5;
@@ -574,7 +574,7 @@
 /turf/open/floor/whitebluecorner/north,
 /area/lv624/lazarus/corporate_dome)
 "Fu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/adv{
 	pixel_x = 6;
 	pixel_y = 6
@@ -589,7 +589,7 @@
 /area/lv624/lazarus/corporate_dome)
 "FZ" = (
 /obj/structure/machinery/faxmachine/corporate/liaison,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/whiteblue/southwest,
 /area/lv624/lazarus/corporate_dome)
 "Gi" = (
@@ -627,7 +627,7 @@
 /area/lv624/lazarus/corporate_dome)
 "Hv" = (
 /obj/effect/decal/cleanable/blood/drip,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/cigar,
 /turf/open/floor/whiteyellow/northwest,
 /area/lv624/lazarus/corporate_dome)
@@ -777,14 +777,14 @@
 /area/lv624/lazarus/corporate_dome)
 "RF" = (
 /obj/effect/decal/cleanable/blood/drip,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/white,
 /area/lv624/lazarus/corporate_dome)
 "RN" = (
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/prop/server_equipment/laptop/on,
 /turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/corporate_dome)
@@ -828,7 +828,7 @@
 /turf/open/floor/whiteblue/southeast,
 /area/lv624/lazarus/corporate_dome)
 "Vj" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ashtray/glass,
 /obj/item/trash/cigbutt/cigarbutt{
 	pixel_y = 12

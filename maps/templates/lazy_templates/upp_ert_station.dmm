@@ -70,7 +70,7 @@
 /turf/open/asphalt/cement/cement14,
 /area/adminlevel/ert_station/upp_station)
 "bV" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/surgical_tray,
 /turf/open/floor/strata/white_cyan4/south,
 /area/adminlevel/ert_station/upp_station)
@@ -85,7 +85,7 @@
 /turf/open/floor/strata/floorscorched2,
 /area/adminlevel/ert_station/upp_station)
 "cq" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/mask/surgical{
 	desc = "A sterile mask designed to help prevent the spread of diseases. This one has already been used.";
@@ -146,7 +146,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/adminlevel/ert_station/upp_station)
 "cS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clipboard,
 /obj/item/paper,
 /obj/item/tool/lighter{
@@ -292,7 +292,7 @@
 /turf/open/space/basic,
 /area/space)
 "fe" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/mask/rebreather/scarf,
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -336,7 +336,7 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station/upp_station)
 "fF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/bottle/vodka{
 	pixel_y = 4;
 	pixel_x = 5
@@ -398,13 +398,13 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station/upp_station)
 "gN" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/trash/plate,
 /obj/item/reagent_container/food/snacks/upp,
 /turf/open/floor/strata/green3/east,
 /area/adminlevel/ert_station/upp_station)
 "gR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/upp{
 	pixel_y = 1;
 	pixel_x = -3
@@ -984,7 +984,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/adminlevel/ert_station/upp_station)
 "rF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/attachable/bayonet/upp{
 	pixel_y = 9;
 	pixel_x = 4
@@ -1050,7 +1050,7 @@
 /turf/open/floor/strata/green1,
 /area/adminlevel/ert_station/upp_station)
 "sT" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 4
 	},
@@ -1061,7 +1061,7 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station/upp_station)
 "tm" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/drinkingglass{
 	pixel_y = 5;
 	pixel_x = 8
@@ -1137,7 +1137,7 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station/upp_station)
 "vi" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/bodybags,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/adminlevel/ert_station/upp_station)
@@ -1146,7 +1146,7 @@
 /turf/open/floor/strata/green3/east,
 /area/adminlevel/ert_station/upp_station)
 "vy" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/trash/plate,
 /obj/item/reagent_container/food/snacks/upp,
 /turf/open/floor/strata/green3/west,
@@ -1503,7 +1503,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/adminlevel/ert_station/upp_station)
 "BN" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/upp,
 /turf/open/floor/strata/red3/north,
 /area/adminlevel/ert_station/upp_station)
@@ -1752,7 +1752,7 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station/upp_station)
 "GV" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/facepaint/black,
 /turf/open/floor/strata/blue1,
 /area/adminlevel/ert_station/upp_station)
@@ -1805,7 +1805,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/adminlevel/ert_station/upp_station)
 "HE" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/toy/dice{
 	pixel_x = 10;
 	pixel_y = 9
@@ -2045,7 +2045,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/adminlevel/ert_station/upp_station)
 "Mx" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/large_holster/machete/full,
 /turf/open/floor/strata/white_cyan4/north,
 /area/adminlevel/ert_station/upp_station)
@@ -2162,7 +2162,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/adminlevel/ert_station/upp_station)
 "OH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 4
 	},
@@ -2180,7 +2180,7 @@
 /turf/open/asphalt/cement/cement3,
 /area/adminlevel/ert_station/upp_station)
 "Pa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/recharger,
 /obj/item/device/defibrillator,
 /turf/open/floor/strata/white_cyan3/north,
@@ -2291,7 +2291,7 @@
 /turf/open/floor/corsat/plate,
 /area/adminlevel/ert_station/upp_station)
 "Qn" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/crowbar,
 /obj/item/storage/bible,
 /obj/effect/decal/warning_stripes{
@@ -2481,7 +2481,7 @@
 /turf/open/space/basic,
 /area/space)
 "TU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/belt/medical/lifesaver/upp/full,
 /turf/open/floor/strata/white_cyan3/north,
 /area/adminlevel/ert_station/upp_station)
@@ -2622,7 +2622,7 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station/upp_station)
 "Wf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/bedsheetbin{
 	pixel_y = 6
 	},
@@ -2648,7 +2648,7 @@
 /turf/open/floor/strata/cyan1/east,
 /area/adminlevel/ert_station/upp_station)
 "Wy" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight,
 /obj/item/attachable/bayonet/upp,
 /turf/open/asphalt/cement/cement15,
@@ -2724,7 +2724,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/adminlevel/ert_station/upp_station)
 "Ye" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/restraint/handcuffs{
 	pixel_x = -4;

@@ -120,7 +120,7 @@
 /turf/open/floor/prison/sterile_white/southwest,
 /area/template_noop)
 "iD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/book/manual/surgery{
 	pixel_y = 4
 	},
@@ -155,7 +155,7 @@
 /turf/open/floor/prison/whitegreen,
 /area/template_noop)
 "jw" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
 	pixel_x = 10;
@@ -183,7 +183,7 @@
 /turf/open/floor/prison/whitegreencorner,
 /area/template_noop)
 "lA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/vials/random,
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/template_noop)
@@ -224,7 +224,7 @@
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/template_noop)
 "om" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras{
 	dir = 8
 	},
@@ -356,7 +356,7 @@
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/template_noop)
 "zK" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door/window/eastright,
 /obj/item/reagent_container/food/drinks/coffeecup{
 	pixel_x = 7;

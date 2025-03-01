@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "as" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/effect/decal/remains/xeno{
@@ -25,7 +25,7 @@
 /turf/open/shuttle/red,
 /area/lv624/ground/caves/sand_temple)
 "aI" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -67,7 +67,7 @@
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/caves/sand_temple)
 "bZ" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/pickaxe/plasmacutter,
@@ -146,14 +146,14 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "dT" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/weapon/twohanded/yautja/spear,
 /turf/open/floor/corsat/squareswood/north,
 /area/lv624/ground/caves/sand_temple)
 "dV" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -205,7 +205,7 @@
 /turf/open/gm/dirtgrassborder/weedable/grass1,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "ez" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/snacks/orangecakeslice{
@@ -326,7 +326,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "hO" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/snacks/sliceable/orangecake,
@@ -383,7 +383,7 @@
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/caves/sand_temple)
 "lV" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/stack/medical/advanced/bruise_pack/predator{
@@ -449,7 +449,7 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "mI" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -467,7 +467,7 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "mN" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -708,7 +708,7 @@
 /turf/template_noop,
 /area/template_noop)
 "tn" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -978,7 +978,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "zX" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/surgery/FixOVein/predatorFixOVein,
@@ -1124,7 +1124,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "Eq" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -1142,14 +1142,14 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "Eu" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/xeno_restraints,
 /turf/open/floor/strata/grey_multi_tiles,
 /area/lv624/ground/caves/sand_temple)
 "EJ" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/snacks/xemeatpie{
@@ -1210,7 +1210,7 @@
 /turf/closed/wall/rock/brown,
 /area/lv624/ground/caves/sand_temple)
 "Hl" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -1235,7 +1235,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/lv624/ground/caves/sand_temple)
 "Hy" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/stack/yautja_rope,
@@ -1322,7 +1322,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "KB" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -1414,7 +1414,7 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "Nj" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/stack/sheet/glass{
@@ -1439,7 +1439,7 @@
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/caves/sand_temple)
 "Oa" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/stack/sheet/mineral/sandstone{
@@ -1526,7 +1526,7 @@
 /turf/closed/wall/mineral/sandstone/runed/decor,
 /area/lv624/ground/caves/sand_temple)
 "Ru" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/weapon/yautja/knife{
@@ -1552,7 +1552,7 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "RB" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/surgery/cautery/predatorcautery,
@@ -1619,7 +1619,7 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "UX" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/surgery/scalpel/predatorscalpel,
@@ -1636,7 +1636,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/caves/sand_temple)
 "Wv" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/snacks/stew,
@@ -1686,7 +1686,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "XA" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/sandstone/runed,

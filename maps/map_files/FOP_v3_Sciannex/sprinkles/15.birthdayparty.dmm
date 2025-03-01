@@ -17,7 +17,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "h" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/bottle/pwine{
 	pixel_y = 15;
 	pixel_x = 6
@@ -74,7 +74,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "E" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/trash/plate{
 	pixel_y = 14;
 	pixel_x = 1
@@ -82,7 +82,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "G" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/drinkingglass{
 	pixel_x = 4;
 	pixel_y = 11
@@ -106,7 +106,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "L" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/sliceable/birthdaycake{
 	pixel_y = 23;
 	pixel_x = 15
