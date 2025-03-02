@@ -23,10 +23,6 @@
 		SENTRY_CATEGORY_IFF = FACTION_MARINE,
 	)
 
-/obj/structure/machinery/defenses/sentry/flamer/fire(atom/A)
-	. = ..()
-	playsound(get_turf(src), 'sound/weapons/flamethrower_start.ogg', 50)
-
 /obj/structure/machinery/defenses/sentry/flamer/handle_rof(level)
 	switch(level)
 		if(ROF_SINGLE)
