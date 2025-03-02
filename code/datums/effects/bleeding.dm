@@ -123,7 +123,7 @@
 
 	blood_loss = max(blood_loss, 0) // Bleeding shouldn't give extra blood even if its only 1 tick
 	affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss*0.5, 0) //
-	if(prob(5) || show_spray_immediately)
+	if(prob(2) || show_spray_immediately)
 		if(!has_been_bandaged) //If Arterial has been packed, only remove blood passively every tick
 			show_spray_immediately = FALSE
 			affected_mob.spray_blood(get_turf(affected_mob), spray_angle_offset, limb)
