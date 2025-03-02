@@ -227,18 +227,15 @@
 	max_smartgun = 0
 	max_leaders = 0
 
-/datum/squad/marine/sof
-	name = SQUAD_SOF
-	equipment_color = "#400000"
-	chat_color = "#400000"
+/datum/squad/marine/marsoc
+	name = SQUAD_MRR
+	access = list(ACCESS_MARINE_ALPHA)
 	radio_freq = SOF_FREQ
-	squad_type = "Team"
-	lead_icon = "soctl"
-	minimap_color = MINIMAP_SQUAD_SOF
-
-	active = FALSE
-	roundstart = FALSE
-	locked = TRUE
+	use_stripe_overlay = FALSE
+	equipment_color = "#61111b"
+	chat_color = "#660f0f"
+	minimap_color = "#490505"
+	usable = TRUE
 
 /datum/squad/marine/cbrn
 	name = SQUAD_CBRN
