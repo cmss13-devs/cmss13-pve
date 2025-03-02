@@ -783,8 +783,8 @@
 	name = "deep water"
 
 /turf/open/gm/river/ocean/no_overlay
-  no_overlay = TRUE
-  
+	no_overlay = TRUE
+
 /turf/open/gm/river/ocean/deep_ocean
 	name = "deep ocean"
 	default_name = "deep ocean"
