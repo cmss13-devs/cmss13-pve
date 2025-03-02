@@ -4,6 +4,7 @@
 	icon = 'icons/effects/64x64hybrisa_decals.dmi'
 	icon_state = "weylandyutanilogo1"
 	layer = WEED_LAYER
+	anchored = TRUE
 	plane = FLOOR_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
