@@ -75,9 +75,7 @@ map whiskey_outpost_v2
 endmap
 
 map bmg290_otogi_egress_point
-
 endmap
 
 map bosenmori_basho
-
 endmap
