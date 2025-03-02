@@ -3,7 +3,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/effect/decal/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
 /turf/open/floor/almayer/blackfull/west,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "ab" = (
@@ -11,11 +11,11 @@
 	dir = 4;
 	pixel_x = -1
 	},
-/obj/effect/decal/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
 /turf/open/floor/prison/darkred2/east,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "ac" = (
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_3";
 	pixel_x = -8;
 	pixel_y = 11
@@ -26,18 +26,18 @@
 /obj/structure/pipes/standard/simple/hidden/dark{
 	dir = 4
 	},
-/obj/effect/decal/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
 /turf/open/floor/strata/multi_tiles/west,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "ae" = (
-/obj/effect/decal/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
 /turf/open/floor/almayer/plating_striped/east,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "af" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 1
 	},
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_5";
 	layer = 3.1
 	},
@@ -47,7 +47,7 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 1
 	},
-/obj/effect/decal/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
 /turf/open/floor/prison/darkred2,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "ah" = (
@@ -229,7 +229,7 @@
 	pixel_y = 29;
 	needs_power = 0
 	},
-/obj/effect/decal/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
 /turf/open/floor/strata/red3/north,
 /area/lv759/indoors/twe_souter_outpost/armoury)
 "bU" = (
@@ -425,8 +425,8 @@
 	pixel_x = -5;
 	pixel_y = -4
 	},
-/obj/effect/decal/hybrisa/dirt_2,
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_3";
 	pixel_x = -8;
 	pixel_y = 12
@@ -613,7 +613,7 @@
 /obj/item/paper/crumpled{
 	pixel_x = 9
 	},
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_9";
 	pixel_y = 12;
 	pixel_x = 11
@@ -952,7 +952,7 @@
 	pixel_x = -2;
 	pixel_y = -9
 	},
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_9";
 	pixel_y = 3;
 	pixel_x = -5
@@ -1206,7 +1206,7 @@
 /turf/open/floor/prison/darkpurple2,
 /area/lv759/indoors/twe_souter_outpost/dorm)
 "mx" = (
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_2"
 	},
 /turf/open/floor/prison/red/north,
@@ -1232,7 +1232,7 @@
 	pixel_x = 13;
 	pixel_y = 5
 	},
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_8";
 	pixel_y = 12
 	},
@@ -1263,12 +1263,12 @@
 /obj/structure/machinery/disposal{
 	pixel_x = -1
 	},
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_2";
 	pixel_x = -8;
 	pixel_y = 12
 	},
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_8";
 	pixel_y = -20
 	},
@@ -1276,7 +1276,7 @@
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "na" = (
 /obj/structure/pipes/standard/manifold/hidden/dark,
-/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/hybrisa/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "nj" = (
@@ -1434,7 +1434,7 @@
 	dir = 1;
 	pixel_y = 26
 	},
-/obj/effect/decal/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
 /turf/open/floor/prison/darkred2,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "om" = (
@@ -1467,7 +1467,7 @@
 	dir = 1;
 	pixel_y = 12
 	},
-/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/hybrisa/dirt,
 /turf/open/floor/prison/darkred2/north,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "oR" = (
@@ -1575,7 +1575,7 @@
 	pixel_y = 7
 	},
 /obj/item/explosive/grenade/high_explosive/rmc,
-/obj/effect/decal/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
 /turf/open/floor/strata/red2,
 /area/lv759/indoors/twe_souter_outpost/armoury)
 "qW" = (
@@ -1811,7 +1811,7 @@
 	dir = 4;
 	pixel_y = 7
 	},
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_9";
 	pixel_y = -11
 	},
@@ -1886,7 +1886,7 @@
 /turf/open/floor/prison/floor_plate/southwest,
 /area/lv759/indoors/twe_souter_outpost/flight)
 "yR" = (
-/obj/effect/decal/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
 /turf/open/floor/hybrisa/metal/stripe_red/east,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "zo" = (
@@ -2110,7 +2110,7 @@
 /obj/effect/decal/strata_decals/grime/grime4{
 	icon_state = "grime3"
 	},
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_5";
 	pixel_y = 12
 	},
@@ -2156,7 +2156,7 @@
 	pixel_y = 30;
 	layer = 3.2
 	},
-/obj/effect/decal/hybrisa/trash{
+/obj/effect/decal/cleanable/hybrisa/trash{
 	icon_state = "trash_8";
 	pixel_y = -5
 	},
@@ -2178,7 +2178,7 @@
 	pixel_x = 15;
 	pixel_y = -9
 	},
-/obj/effect/decal/hybrisa/dirt_2,
+/obj/effect/decal/cleanable/hybrisa/dirt_2,
 /turf/open/floor/prison/darkred2/southeast,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "EK" = (
@@ -2675,7 +2675,7 @@
 	pixel_y = 21;
 	pixel_x = 4
 	},
-/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/hybrisa/dirt,
 /turf/open/floor/prison/darkred2,
 /area/lv759/indoors/twe_souter_outpost/hallway)
 "RH" = (
