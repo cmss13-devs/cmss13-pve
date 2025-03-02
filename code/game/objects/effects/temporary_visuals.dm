@@ -159,7 +159,7 @@ GLOBAL_DATUM_INIT(flamer_explosion_particles, /particles/flamer_explosion, new)
 	light_range = 5
 	duration = 5
 
-/obj/effect/temp_visual/flamer_explosion/Initialize(mapload, fire_color)
+/obj/effect/temp_visual/flamer_explosion/Initialize(mapload, fire_icon)
 	. = ..()
 	particles = GLOB.flamer_explosion_particles
-	particles.color = fire_color
+	particles.icon_state = fire_icon

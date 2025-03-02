@@ -207,7 +207,7 @@
 
 	update_icon()
 
-/obj/item/weapon/gun/flamer/start_fire()
+/obj/item/weapon/gun/flamer/start_fire(datum/source, atom/object, turf/location, control, params, bypass_checks = FALSE)
 	. = ..()
 	if(able_to_fire(gun_user))
 		playsound(get_turf(src), 'sound/weapons/flamethrower_start.ogg', 50)

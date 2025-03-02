@@ -11,7 +11,7 @@
 	burst = 15
 	sentry_range = 6
 
-	firing_sound = null
+	firing_sound = 'sound/weapons/gun_flamethrower_loop.ogg'
 
 	choice_categories = list(
 		// SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_BURST, ROF_FULL_AUTO),
@@ -22,6 +22,10 @@
 		SENTRY_CATEGORY_ROF = ROF_BURST,
 		SENTRY_CATEGORY_IFF = FACTION_MARINE,
 	)
+
+/obj/structure/machinery/defenses/sentry/flamer/fire(atom/A)
+	. = ..()
+	playsound(get_turf(src), 'sound/weapons/flamethrower_start.ogg', 50)
 
 /obj/structure/machinery/defenses/sentry/flamer/handle_rof(level)
 	switch(level)

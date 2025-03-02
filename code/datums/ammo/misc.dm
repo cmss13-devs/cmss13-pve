@@ -26,8 +26,8 @@
 	icon_state = "flamer"
 	width = 500
 	height = 500
-	count = 8
-	spawning = 8
+	count = 5
+	spawning = 5
 	lifespan = 8
 	fade = generator(GEN_NUM, 5, 6)
 	grow = 0.1
@@ -69,8 +69,10 @@
 	ammo_glowing = TRUE
 
 /datum/ammo/flamethrower/on_bullet_generation(obj/projectile/generated_projectile, mob/bullet_generator)
-	var/datum/reagent/chemical = GLOB.chemical_reagents_list[flamer_reagent_id]
+	var/datum/reagent/napalm/chemical = GLOB.chemical_reagents_list[flamer_reagent_id]
 	bullet_light_color = chemical.burncolor
+	icon_state = chemical.flame_particle_icon
+	particle_icon_state = chemical.flame_particle_icon
 
 /datum/ammo/flamethrower/set_bullet_traits()
 	. = ..()
@@ -89,11 +91,11 @@
 	//napalm sticks to kids or somethin
 	if(flamer_reagent_id != "stickynapalm" || flamer_reagent_id != "napalmex" || !(ricochet_projectiles_type))
 		if(T.density)
-			reflect(T, P, 5, rand(1,4))
+			reflect(T, P, 5, rand(1,3))
 
 /datum/ammo/flamethrower/drop_flame(turf/T, datum/cause_data/cause_data)
 	. = ..()
-	new /obj/effect/temp_visual/flamer_explosion(T, hit_effect_color)
+	new /obj/effect/temp_visual/flamer_explosion(T, icon_state)
 
 /datum/ammo/flamethrower/do_at_max_range(obj/projectile/P)
 	drop_flame(get_turf(P), P.weapon_cause_data)
@@ -108,6 +110,7 @@
 	attached_particle = /particles/flamer_tank
 	max_range = 8
 	damage = 5
+	shell_speed = AMMO_SPEED_TIER_2
 	ricochet_projectiles_type = null
 
 /datum/ammo/flamethrower/tank_flamer/drop_flame(turf/turf, datum/cause_data/cause_data)
@@ -116,11 +119,11 @@
 
 	var/datum/reagent/napalm/high_damage/reagent = new()
 	new /obj/flamer_fire(turf, cause_data, reagent, 1)
-	new /obj/effect/temp_visual/flamer_explosion(turf, hit_effect_color)
+	new /obj/effect/temp_visual/flamer_explosion(turf, icon_state)
 	max_range = 8
 
 /datum/ammo/flamethrower/sentry_flamer
-	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME
+	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME|AMMO_HITS_TARGET_TURF
 	flamer_reagent_id = "napalmx"
 
 	max_range = 7
@@ -156,7 +159,7 @@
 	var/datum/reagent/napalm/ut/R = new()
 	R.durationfire = BURN_TIME_INSTANT
 	new /obj/flamer_fire(T, cause_data, R, 0)
-	new /obj/effect/temp_visual/flamer_explosion(T, hit_effect_color)
+	new /obj/effect/temp_visual/flamer_explosion(T, icon_state)
 
 /datum/ammo/flamethrower/sentry_flamer/wy
 	name = "sticky fire"

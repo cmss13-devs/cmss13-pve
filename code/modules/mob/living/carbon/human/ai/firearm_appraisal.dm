@@ -187,10 +187,10 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	firearm.recent_cycle = world.time - firearm.bolt_delay
 
 /datum/firearm_appraisal/flamer
-	burst_amount_max = 1
+	burst_amount_max = 35
 	minimum_range = 3
-	optimal_range = 4
-	maximum_range = 5
+	optimal_range = 5
+	maximum_range = 6
 	gun_types = list(
 		/obj/item/weapon/gun/flamer,
 	)

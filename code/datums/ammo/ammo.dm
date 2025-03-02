@@ -95,6 +95,8 @@
 	var/firing_freq_offset = FALSE
 	///Particle attached to the projectile
 	var/attached_particle
+	///Changes icon state of particle
+	var/particle_icon_state
 
 	/// If the ammo has light
 	var/ammo_glowing = FALSE
@@ -300,6 +302,7 @@
 	if(istype(proj.ammo, /datum/ammo/flamethrower))
 		new_proj.ammo.flamer_reagent_id = proj.ammo.flamer_reagent_id
 		new_proj.ammo.bullet_light_color = proj.ammo.bullet_light_color
+		new_proj.ammo.particle_icon_state = proj.ammo.particle_icon_state
 	new_proj.accuracy = floor(new_proj.accuracy * proj.accuracy/initial(proj.accuracy)) //if the gun changes the accuracy of the main projectile, it also affects the bonus ones.
 	new_proj.ammo.max_range = range
 	new_proj.fire_at(new_target, proj.firer, proj.shot_from, range, new_proj.ammo.shell_speed, proj.original) //Fire!

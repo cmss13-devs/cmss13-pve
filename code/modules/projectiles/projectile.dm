@@ -256,6 +256,8 @@
 
 	if(ammo.attached_particle)
 		particles = new ammo.attached_particle
+		if(ammo.particle_icon_state)
+			particles.icon_state = ammo.particle_icon_state
 	// Finally queue it to Subsystem for further processing
 	SSprojectiles.queue_projectile(src)
 
