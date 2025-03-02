@@ -3,12 +3,16 @@
 #define EQUIPMENT_PRESET_EXTRA (1<<1)
 #define EQUIPMENT_PRESET_START_OF_ROUND_WO (1<<2)
 #define EQUIPMENT_PRESET_MARINE (1<<3)
+#define AMERICAN_ETHNICITY "American"
+#define LATIN_AMERICAN_ETHNICITY "Latin-American"
+#define JAPANESE_ETHNICITY "Japanese"
+#define UPP_ETHNICITY "Progressive"
 
 /datum/equipment_preset
 	var/name = "Preset"
 	var/flags = EQUIPMENT_PRESET_STUB
 	var/uses_special_name = FALSE //For equipment that loads special name, aka Synths, Yautja, Death Squad, etc.
-
+	var/ethnicity = AMERICAN_ETHNICITY
 	var/list/languages = list(LANGUAGE_ENGLISH)
 	var/skills
 	var/idtype = /obj/item/card/id
@@ -84,12 +88,133 @@
 	return
 
 /datum/equipment_preset/proc/load_name(mob/living/carbon/human/new_human, randomise, client/mob_client)
-	new_human.gender = pick(60;MALE,40;FEMALE)
-	var/datum/preferences/A = new()
-	A.randomize_appearance(new_human)
-	var/random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
-	new_human.change_real_name(new_human, random_name)
-	new_human.age = rand(21,45)
+	var/random_name
+	var/first_name
+	var/last_name
+	new_human.gender = pick(85;MALE,15;FEMALE)
+	switch(ethnicity)
+		if(LATIN_AMERICAN_ETHNICITY)
+			new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")
+			random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male_spanish : GLOB.first_names_female_spanish)) + " " + capitalize(pick(GLOB.last_names_spanish))
+			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+			var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
+			var/hair_color = pick(hair_colors)
+			new_human.r_hair = hair_colors[hair_color][1]
+			new_human.g_hair = hair_colors[hair_color][2]
+			new_human.b_hair = hair_colors[hair_color][3]
+			new_human.r_facial = hair_colors[hair_color][1]
+			new_human.g_facial = hair_colors[hair_color][2]
+			new_human.b_facial = hair_colors[hair_color][3]
+			var/eye_color = pick(colors)
+			new_human.r_eyes = colors[eye_color][1]
+			new_human.g_eyes = colors[eye_color][2]
+			new_human.b_eyes = colors[eye_color][3]
+			if(new_human.gender == MALE)
+				new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
+				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+			else
+				new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
+			new_human.change_real_name(new_human, random_name)
+		if(JAPANESE_ETHNICITY)
+			new_human.skin_color = pick(50;"Pale 1",50;"Tan 1")
+			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10))
+			var/static/list/hair_colors = list("BLACK" = list(15, 15, 10))
+			var/hair_color = pick(hair_colors)
+			new_human.r_hair = hair_colors[hair_color][1]
+			new_human.g_hair = hair_colors[hair_color][2]
+			new_human.b_hair = hair_colors[hair_color][3]
+			new_human.r_facial = hair_colors[hair_color][1]
+			new_human.g_facial = hair_colors[hair_color][2]
+			new_human.b_facial = hair_colors[hair_color][3]
+			var/eye_color = pick(colors)
+			new_human.r_eyes = colors[eye_color][1]
+			new_human.g_eyes = colors[eye_color][2]
+			new_human.b_eyes = colors[eye_color][3]
+			//gender checks
+			if(new_human.gender == MALE)
+				if(prob(90))
+					first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
+				else
+					first_name = "[pick(GLOB.first_names_male_clf)]"
+				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right")
+				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "5 O'clock Shadow", "7 O'clock Shadow",)
+			else
+				if(prob(90))
+					first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
+				else
+					first_name = "[pick(GLOB.first_names_female_clf)]"
+				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right","Bun", "Short Bangs")
+			//surname
+			if(prob(90))
+				last_name = "[capitalize(randomly_generate_japanese_word(rand(1, 4)))]"
+			else
+				last_name = "[pick(GLOB.last_names_clf)]"
+			random_name = "[first_name] [last_name]"
+			new_human.change_real_name(new_human, random_name)
+		if(AMERICAN_ETHNICITY)
+			random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+			var/datum/preferences/A = new
+			A.randomize_appearance(new_human)
+			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+			var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
+			var/hair_color = pick(hair_colors)
+			new_human.r_hair = hair_colors[hair_color][1]
+			new_human.g_hair = hair_colors[hair_color][2]
+			new_human.b_hair = hair_colors[hair_color][3]
+			new_human.r_facial = hair_colors[hair_color][1]
+			new_human.g_facial = hair_colors[hair_color][2]
+			var/eye_color = pick(colors)
+			new_human.r_eyes = colors[eye_color][1]
+			new_human.g_eyes = colors[eye_color][2]
+			new_human.b_eyes = colors[eye_color][3]
+			if(new_human.gender == MALE)
+				new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
+				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+			else
+				new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
+			new_human.change_real_name(new_human, random_name)
+		if(UPP_ETHNICITY)
+			var/datum/preferences/A = new()
+			A.randomize_appearance(new_human)
+			//gender checks
+			if(new_human.gender == MALE)
+				if(prob(40))
+					first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+				else
+					first_name = "[pick(GLOB.first_names_male_upp)]"
+				new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
+			else
+				if(prob(40))
+					first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+				else
+					first_name = "[pick(GLOB.first_names_female_upp)]"
+			//surname
+			if(prob(35))
+				last_name = "[capitalize(randomly_generate_chinese_word(pick(20;1, 80;2)))]"
+			else
+				last_name = "[pick(GLOB.last_names_upp)]"
+			//put them together
+			random_name = "[first_name] [last_name]"
+			new_human.change_real_name(new_human, random_name)
+			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+			var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
+			var/hair_color = pick(hair_colors)
+			new_human.r_hair = hair_colors[hair_color][1]
+			new_human.g_hair = hair_colors[hair_color][2]
+			new_human.b_hair = hair_colors[hair_color][3]
+			new_human.r_facial = hair_colors[hair_color][1]
+			new_human.g_facial = hair_colors[hair_color][2]
+			new_human.b_facial = hair_colors[hair_color][3]
+			var/eye_color = pick(colors)
+			new_human.r_eyes = colors[eye_color][1]
+			new_human.g_eyes = colors[eye_color][2]
+			new_human.b_eyes = colors[eye_color][3]
+			if(new_human.gender == MALE)
+				new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
+				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+			else
+				new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
+	new_human.age = rand(18,55)
 
 /datum/equipment_preset/proc/load_age(mob/living/carbon/human/new_human, client/mob_client)
 	if(minimum_age && new_human.age < minimum_age)
@@ -213,6 +338,8 @@
 	else
 		load_vanity(new_human, mob_client)
 
+	EquipCustomItems(new_human)
+
 /datum/equipment_preset/proc/load_vanity(mob/living/carbon/human/new_human, client/mob_client)
 	if(!new_human.client || !new_human.client.prefs || !new_human.client.prefs.gear)
 		return//We want to equip them with custom stuff second, after they are equipped with everything else.
@@ -303,8 +430,12 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	for(var/obj/structure/closet/secure_closet/marine_personal/closet in GLOB.personal_closets)
 		if(closet.owner)
 			continue
-		if(new_human.job != closet.job)
+		if(closet.linked_spawn_turf)
+			if(new_human.loc != closet.linked_spawn_turf)
+				continue
+		else if(new_human.job != closet.job)
 			continue
+
 		closet.owner = new_human.real_name
 		closet_to_spawn_in = closet
 		closet_to_spawn_in.name = "[closet_to_spawn_in.owner]'s personal locker"
