@@ -827,7 +827,6 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "DUMMY"
 	rank = "DUMMY"
-	idtype = /obj/item/card/id/dogtag
 	uses_special_name = TRUE
 
 /datum/equipment_preset/other/professor_dummy/load_name(mob/living/carbon/human/new_human, randomise)
