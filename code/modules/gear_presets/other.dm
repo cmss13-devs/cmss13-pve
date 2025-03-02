@@ -824,9 +824,11 @@
 
 /datum/equipment_preset/other/professor_dummy
 	name = "DUMMY"
-	flags = EQUIPMENT_PRESET_EXTRA
+	flags = EQUIPMENT_PRESET_EXTRA|ROLE_NO_ACCOUNT
 	assignment = "DUMMY"
 	rank = "DUMMY"
+	paygrades = list(PAY_SHORT_CCMO)
+	idtype = /obj/item/card/id/dogtag
 	uses_special_name = TRUE
 
 /datum/equipment_preset/other/professor_dummy/load_name(mob/living/carbon/human/new_human, randomise)
