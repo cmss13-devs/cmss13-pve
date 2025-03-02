@@ -168,7 +168,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
-		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
+		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
+    MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
 	)
 
