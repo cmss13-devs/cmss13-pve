@@ -252,6 +252,17 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"bw" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -2;
+	pixel_y = 24
+	},
+/obj/structure/sign/safety/opens_up{
+	pixel_x = 10;
+	pixel_y = 24
+	},
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/golden_arrow/prep_hallway)
 "by" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
@@ -511,6 +522,13 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
+"dn" = (
+/obj/structure/platform,
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = -27
+	},
+/turf/open/floor/almayer/plating,
+/area/golden_arrow/squad_one)
 "dp" = (
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_one_access = list()
@@ -834,6 +852,22 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"fO" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/structure/machinery/vending/snack/packaged{
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/obj/structure/machinery/vending/coffee{
+	pixel_x = 14;
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/prep_hallway)
 "fR" = (
 /obj/structure/barricade/handrail{
 	dir = 4;
@@ -1193,6 +1227,9 @@
 /obj/structure/roof/cargocrane_tracks/horizontal/endcap2,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"iE" = (
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/prep_hallway)
 "iF" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/medical)
@@ -1767,9 +1804,6 @@
 	pixel_y = -24;
 	pixel_x = 16
 	},
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "om" = (
@@ -2188,6 +2222,14 @@
 /area/golden_arrow/squad_one)
 "rL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8
+	},
+/obj/structure/machinery/door_control{
+	id = "squadblastdoor";
+	pixel_x = 22;
+	name = "Armory Blast Door Control"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "rM" = (
@@ -3581,6 +3623,13 @@
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/golden_arrow/platoonarmory)
+"Cw" = (
+/obj/structure/machinery/vending/cigarette{
+	pixel_x = 4;
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/edge/west,
+/area/golden_arrow/prep_hallway)
 "CG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -3676,6 +3725,9 @@
 /obj/structure/machinery/light/small/blue,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
+"DD" = (
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/golden_arrow/prep_hallway)
 "DQ" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/spawner/prop_gun/m41aMK1,
@@ -4022,11 +4074,6 @@
 	pixel_x = -8;
 	pixel_y = 6
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.5
-	},
 /obj/item/prop/helmetgarb/rabbitsfoot{
 	pixel_x = 6;
 	pixel_y = 10
@@ -4034,6 +4081,17 @@
 /obj/item/device/camera{
 	pixel_x = 7;
 	pixel_y = -2
+	},
+/obj/structure/sign/poster{
+	desc = "One of those hot, tanned babes back the beaches of good ol' Earth.";
+	icon_state = "poster12";
+	name = "Beach Babe Pinup";
+	pixel_x = -30;
+	pixel_y = 6;
+	serial_number = 12
+	},
+/obj/structure/sign/poster/hunk{
+	pixel_x = -27
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
@@ -4054,6 +4112,14 @@
 /obj/item/storage/pouch/machete/full,
 /obj/structure/machinery/light/small/blue{
 	pixel_y = -1
+	},
+/obj/item/reagent_container/food/drinks/cup{
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/obj/item/reagent_container/food/drinks/cans/classcola{
+	pixel_x = -8;
+	pixel_y = 16
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
@@ -4663,17 +4729,6 @@
 /area/golden_arrow/supply)
 "Lz" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/sign/poster{
-	desc = "One of those hot, tanned babes back the beaches of good ol' Earth.";
-	icon_state = "poster12";
-	name = "Beach Babe Pinup";
-	pixel_x = -30;
-	pixel_y = 6;
-	serial_number = 12
-	},
-/obj/structure/sign/poster/hunk{
-	pixel_x = -27
-	},
 /obj/item/facepaint/sniper{
 	pixel_x = 8;
 	pixel_y = 2
@@ -4691,6 +4746,11 @@
 /obj/item/prop/helmetgarb/prescription_bottle{
 	pixel_x = -8;
 	pixel_y = -3
+	},
+/obj/structure/machinery/light/small/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.5
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
@@ -4784,6 +4844,9 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"Mk" = (
+/turf/open/floor/almayer/edge/west,
+/area/golden_arrow/prep_hallway)
 "Mm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -5006,6 +5069,12 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
+"Ok" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_x = 24
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/hangar)
 "Or" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/edge/smooth/east,
@@ -5016,6 +5085,15 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/space)
+"Ox" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/structure/machinery/disposal,
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/prep_hallway)
 "OD" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -5116,9 +5194,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_one)
-"Pi" = (
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/prep_hallway)
 "Pj" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/microwave{
@@ -5227,6 +5302,9 @@
 /obj/structure/platform{
 	dir = 4;
 	layer = 2.7
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_x = 24
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
@@ -5467,6 +5545,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/cryo_cells)
 "SX" = (
@@ -5565,7 +5646,7 @@
 	light_power = 0.7
 	},
 /obj/structure/machinery/disposal,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/briefing)
 "Tx" = (
 /turf/open/floor/almayer/edge/smooth,
@@ -9441,7 +9522,7 @@ Ho
 ej
 Ho
 gZ
-Ho
+Ok
 sO
 Ho
 Ta
@@ -11974,11 +12055,11 @@ Sn
 Sn
 Sn
 Sn
-Sn
-Sn
-Sn
-Sn
-Sn
+rv
+mg
+mg
+mg
+rv
 Sn
 Sn
 Sn
@@ -12024,210 +12105,6 @@ Sn
 Sn
 "}
 (56,1,1) = {"
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-"}
-(57,1,1) = {"
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-rv
-mg
-mg
-mg
-rv
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-Sn
-"}
-(58,1,1) = {"
 Sn
 Sn
 Sn
@@ -12329,6 +12206,210 @@ Sn
 Sn
 Sn
 "}
+(57,1,1) = {"
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+rv
+tD
+tD
+tD
+rv
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+"}
+(58,1,1) = {"
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+rv
+rv
+bw
+DD
+DD
+rv
+rv
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+"}
 (59,1,1) = {"
 Sn
 Sn
@@ -12381,13 +12462,13 @@ Sn
 Sn
 Sn
 Sn
-Sn
 rv
-tD
-tD
-tD
+fO
+iE
+iE
+iE
+Ox
 rv
-Sn
 iF
 iF
 iF
@@ -12484,11 +12565,11 @@ Sn
 Sn
 rv
 rv
-rv
-Pi
-Pi
-Pi
-rv
+Cw
+Mk
+Mk
+Mk
+Mk
 rv
 iF
 si
@@ -13809,7 +13890,7 @@ Sn
 Sn
 pJ
 yV
-CK
+dn
 fy
 ry
 aQ
