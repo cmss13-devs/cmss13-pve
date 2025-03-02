@@ -864,7 +864,7 @@
 	},
 /obj/structure/machinery/vending/coffee{
 	pixel_x = 14;
-	pixel_y = 14
+	pixel_y = 13
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/prep_hallway)
@@ -968,6 +968,10 @@
 /area/golden_arrow/prep_hallway)
 "gJ" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/platoonarmory)
 "gO" = (
@@ -1368,7 +1372,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "kl" = (
-/obj/structure/pipes/vents/pump,
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "kq" = (
@@ -1537,6 +1543,9 @@
 /area/golden_arrow/briefing)
 "mb" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/platoonarmory)
 "md" = (
@@ -1804,7 +1813,8 @@
 	pixel_y = -24;
 	pixel_x = 16
 	},
-/turf/open/floor/almayer,
+/obj/structure/machinery/disposal,
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/prep_hallway)
 "om" = (
 /turf/open/floor/almayer/sterile_green_side/west,
@@ -2222,9 +2232,6 @@
 /area/golden_arrow/squad_one)
 "rL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8
-	},
 /obj/structure/machinery/door_control{
 	id = "squadblastdoor";
 	pixel_x = 22;
@@ -2619,6 +2626,10 @@
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
+"uv" = (
+/obj/structure/closet/firecloset,
+/turf/open/floor/almayer/edge/west,
+/area/golden_arrow/prep_hallway)
 "uz" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
@@ -2997,6 +3008,10 @@
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_x = -17;
 	pixel_y = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
 	},
 /turf/open/floor/almayer/edge/smooth/northwest,
 /area/golden_arrow/platoonarmory)
@@ -4292,6 +4307,9 @@
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/platoonarmory)
 "ID" = (
@@ -5091,8 +5109,8 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
-/obj/structure/machinery/disposal,
-/turf/open/floor/almayer/cargo,
+/obj/structure/closet/emcloset,
+/turf/open/floor/almayer/edge/east,
 /area/golden_arrow/prep_hallway)
 "OD" = (
 /obj/structure/window/reinforced{
@@ -5570,6 +5588,10 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "Te" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
 /turf/open/floor/almayer/edge/smooth/northeast,
 /area/golden_arrow/platoonarmory)
 "Tf" = (
@@ -5911,6 +5933,10 @@
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
 "VF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/platoonarmory)
 "VI" = (
@@ -6031,6 +6057,9 @@
 	id = "squadblastdoor";
 	pixel_x = -22;
 	name = "Armory Blast Door Control"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
 /turf/open/floor/almayer/edge/smooth/southwest,
 /area/golden_arrow/platoonarmory)
@@ -6303,6 +6332,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"YA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/platoonarmory)
 "YB" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -12569,7 +12604,7 @@ Cw
 Mk
 Mk
 Mk
-Mk
+uv
 rv
 iF
 si
@@ -13181,7 +13216,7 @@ VF
 Ur
 Or
 Ee
-Tx
+YA
 JB
 Tj
 xp
@@ -13283,7 +13318,7 @@ VF
 Tx
 Db
 dE
-Tx
+YA
 zV
 Tj
 jz
@@ -13487,7 +13522,7 @@ gJ
 Tx
 Db
 dE
-Tx
+YA
 BX
 Pw
 Pw
