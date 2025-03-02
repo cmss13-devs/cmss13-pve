@@ -5,7 +5,11 @@
 	icon_state = "drgn_flamer"
 	disp_icon = "tank"
 	disp_icon_state = "drgn_flamer"
-	activation_sounds = list('sound/weapons/gun_flamethrower_loop.ogg')
+	activation_sounds = list(
+		'sound/weapons/gun_flamethrower1.ogg',
+		'sound/weapons/gun_flamethrower2.ogg',
+		'sound/weapons/gun_flamethrower3.ogg',
+	)
 
 	health = 2000
 	firing_arc = 90
@@ -46,7 +50,7 @@
 /obj/item/hardpoint/primary/flamer/play_firing_sounds()
 	if(!COOLDOWN_FINISHED(src, fire_sound_cooldown))
 		return
-	COOLDOWN_START(src, fire_sound_cooldown, 1.045 SECONDS)
+	COOLDOWN_START(src, fire_sound_cooldown, 1 SECONDS)
 	playsound(get_turf(src), activation_sounds, 60, falloff = 6)
 
 /obj/item/hardpoint/primary/flamer/start_fire(datum/source, atom/object, turf/location, control, params)

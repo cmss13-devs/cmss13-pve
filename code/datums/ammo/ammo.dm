@@ -103,6 +103,10 @@
 
 	/// Color of the light of the bullet
 	var/bullet_light_color = COLOR_WHITE
+	/// Light range of the bullet
+	var/bullet_light_range = 1.5
+	/// Light power of the bullet
+	var/bullet_light_power = 3
 
 /datum/ammo/New()
 	set_bullet_traits()

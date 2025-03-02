@@ -67,6 +67,8 @@
 	ricochet_projectiles_type = /datum/ammo/flamethrower/reflect
 	shell_speed = AMMO_SPEED_TIER_1
 	ammo_glowing = TRUE
+	bullet_light_range = 2
+	bullet_light_power = 1
 
 /datum/ammo/flamethrower/on_bullet_generation(obj/projectile/generated_projectile, mob/bullet_generator)
 	var/datum/reagent/napalm/chemical = GLOB.chemical_reagents_list[flamer_reagent_id]

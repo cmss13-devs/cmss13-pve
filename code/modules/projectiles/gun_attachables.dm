@@ -3206,7 +3206,7 @@ Defined in conflicts.dm of the #defines folder.
 	var/distance = 0
 	var/turf/prev_T
 	var/stop_at_turf = FALSE
-	playsound(user, 'sound/weapons/gun_flamethrower2.ogg', 50, 1)
+	playsound(user, 'sound/weapons/flame_explode.ogg', 50, 1)
 	for(var/turf/T in turfs)
 		if(T == user.loc)
 			prev_T = T

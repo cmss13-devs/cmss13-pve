@@ -13,7 +13,7 @@
 
 	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
-	fire_sound = 'sound/weapons/gun_flamethrower_loop.ogg'
+	fire_sound = "gun_flamethrower"
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_LARGE
 	force = 15
@@ -29,7 +29,7 @@
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/attached_gun/extinguisher/pyro,
 	)
-	flags_gun_features = GUN_UNUSUAL_DESIGN|GUN_TRIGGER_SAFETY
+	flags_gun_features = GUN_UNUSUAL_DESIGN|GUN_TRIGGER_SAFETY|GUN_WIELDED_FIRING_ONLY
 	gun_category = GUN_CATEGORY_HEAVY
 	//Pressure setting of the attached fueltank, controls how much fuel is used per tile
 	var/fuel_pressure = 1
@@ -235,8 +235,8 @@
 	P.fire_at(target, user, src, P?.ammo?.max_range, bullet_velocity, null)
 	if(!COOLDOWN_FINISHED(src, fire_sound_cooldown))
 		return
-	COOLDOWN_START(src, fire_sound_cooldown, 1.045 SECONDS)
-	playsound(curloc, fire_sound, 50, falloff = 6)
+	COOLDOWN_START(src, fire_sound_cooldown, 1 SECONDS)
+	playsound(curloc, fire_sound, 45)
 
 
 /obj/item/weapon/gun/flamer/proc/unleash_smoke(atom/target, mob/living/user)
