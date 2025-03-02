@@ -455,17 +455,20 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/dorms)
 "ajj" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 16;
-	pixel_y = 11
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
 	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 16;
-	pixel_y = -12
+/obj/item/prop/almayer/handheld1{
+	pixel_x = 5;
+	pixel_y = 10
 	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/kleschers/outside/spaceport)
+/obj/item/prop/almayer/handheld1{
+	pixel_x = -8;
+	pixel_y = 5
+	},
+/turf/open/floor/shiva/multi_tiles,
+/area/kleschers/int_reg/roofed_spaceport)
 "ajq" = (
 /obj/structure/platform_decoration/strata/metal,
 /turf/open/auto_turf/ice/layer1,
@@ -2162,14 +2165,12 @@
 /turf/open/floor/shiva/multi_tiles/east,
 /area/kleschers/int_heavy/lambda_south_wing)
 "aYk" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal7";
-	pixel_x = 16;
-	pixel_y = -16
+/obj/structure/platform/strata/metal{
+	dir = 8;
+	layer = 3.01
 	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/kleschers/outside/spaceport)
+/turf/open/auto_turf/sand_white/layer0,
+/area/kleschers/caves/southwest_caves)
 "aYC" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.4
@@ -2950,6 +2951,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/roofed_spaceport)
+"bwb" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/effect/spawner/random/tool,
+/turf/open/floor/shiva/floor3,
+/area/kleschers/int_reg/garage)
 "bwh" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -5506,14 +5514,6 @@
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_reg/filtration)
 "cNs" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -12;
-	pixel_y = -12
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -12;
-	pixel_y = 11
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
@@ -6108,9 +6108,11 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/kleschers/outside/construction)
 "dnG" = (
-/obj/structure/fence,
 /obj/structure/machinery/light{
 	light_power = 0.7
+	},
+/obj/structure/fence{
+	color = "#424a50"
 	},
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/filtration)
@@ -6513,6 +6515,11 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/engineering)
 "dxf" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 1;
+	pixel_y = 15;
+	layer = 3.2
+	},
 /turf/open/floor/filtrationside,
 /area/kleschers/outside/east)
 "dxi" = (
@@ -6701,6 +6708,7 @@
 	},
 /obj/effect/spawner/random/technology_scanner,
 /obj/item/stack/sheet/metal/large_stack,
+/obj/item/tool/hand_labeler,
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/cargo)
 "dEE" = (
@@ -7713,7 +7721,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 1
 	},
-/turf/open/auto_turf/ice/layer1,
+/turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/caves/southwest_caves)
 "eiX" = (
 /obj/structure/machinery/light{
@@ -8228,6 +8236,16 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_glass/bar)
+"exd" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/obj/item/prop/almayer/comp_open{
+	pixel_x = -1;
+	pixel_y = 7
+	},
+/turf/open/floor/shiva/multi_tiles,
+/area/kleschers/int_reg/roofed_spaceport)
 "exv" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00";
@@ -8666,16 +8684,9 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/admin)
 "eLy" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 16;
-	pixel_y = 11
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 16;
-	pixel_y = -12
-	},
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/kleschers/outside/spaceport)
+/obj/structure/barricade/handrail/kutjevo,
+/turf/open/floor/filtrationside/north,
+/area/kleschers/outside/east)
 "eLH" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/powercell,
@@ -9776,6 +9787,14 @@
 	color = "#C02526";
 	dir = 4
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
 /turf/open/floor/corsat,
 /area/kleschers/int_heavy/lambda_north_wing)
 "fnR" = (
@@ -10069,17 +10088,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/kleschers/int_reg/control_cover)
 "ftD" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -12;
-	pixel_y = -12
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -12;
-	pixel_y = 11
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/kleschers/outside/spaceport)
+/turf/open/auto_turf/sand_white/layer0,
+/area/kleschers/int_heavy/lambda_north_wing)
 "ful" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8;
@@ -10253,14 +10263,6 @@
 /turf/open/floor/shiva/yellow/east,
 /area/kleschers/int_reg/cargo)
 "fzD" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -12;
-	pixel_y = -12
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -12;
-	pixel_y = 11
-	},
 /obj/structure/cargo_container/lockmart/left{
 	layer = 3.02
 	},
@@ -10323,7 +10325,9 @@
 /turf/open/asphalt,
 /area/kleschers/int_reg/clinic)
 "fBF" = (
-/obj/structure/fence,
+/obj/structure/fence{
+	color = "#424a50"
+	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/caves/southwest_caves)
 "fBG" = (
@@ -10694,7 +10698,7 @@
 /area/kleschers/int_heavy/lambda_north_wing)
 "fLC" = (
 /obj/structure/platform/strata/metal,
-/turf/open/auto_turf/ice/layer1,
+/turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/caves/southwest_caves)
 "fLM" = (
 /obj/structure/machinery/door/airlock/almayer/secure/colony{
@@ -11488,6 +11492,14 @@
 /obj/structure/tunnel{
 	id = "hole4"
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
 /turf/open/floor/corsat,
 /area/kleschers/int_heavy/lambda_north_wing)
 "ghf" = (
@@ -11790,6 +11802,7 @@
 	light_power = 0.7;
 	dir = 1
 	},
+/obj/effect/spawner/random/tool,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/garage)
 "goE" = (
@@ -13615,6 +13628,10 @@
 "hpf" = (
 /turf/open/floor/kutjevo/tan/grey_inner_edge/west,
 /area/kleschers/int_reg/virology)
+"hpw" = (
+/obj/structure/machinery/deployable/barrier,
+/turf/open/floor/vault2/north,
+/area/kleschers/int_reg/admin)
 "hpD" = (
 /obj/structure/prop/rock/black_ground,
 /obj/structure/machinery/light{
@@ -15105,13 +15122,23 @@
 	pixel_x = 6;
 	pixel_y = 9
 	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16;
+	pixel_y = -12
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16;
+	pixel_y = 11
+	},
 /turf/open/asphalt,
 /area/kleschers/outside/spaceport)
 "ibX" = (
-/obj/structure/fence,
 /obj/structure/machinery/light{
 	light_power = 0.7;
 	dir = 1
+	},
+/obj/structure/fence{
+	color = "#424a50"
 	},
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/filtration)
@@ -15348,16 +15375,12 @@
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
 	},
-/obj/item/engi_upgrade_kit{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/engi_upgrade_kit{
-	pixel_x = 14;
-	pixel_y = 8
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/toolbox,
+/obj/item/prop/almayer/box{
+	pixel_x = 16;
+	pixel_y = 7
+	},
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
 "ijd" = (
@@ -15534,13 +15557,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/kleschers/outside/northwest)
 "inO" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal7";
-	pixel_x = 16;
-	pixel_y = -16
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/kleschers/outside/spaceport)
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat,
+/area/kleschers/int_heavy/lambda_north_wing)
 "inQ" = (
 /obj/structure/machinery/telecomms/allinone,
 /turf/open/floor/podhatchfloor,
@@ -16197,6 +16223,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/item/prop/almayer/box,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/offices)
 "iDH" = (
@@ -16454,11 +16481,7 @@
 /turf/open/floor/asteroidwarning/northwest,
 /area/kleschers/outside/rebel_landing)
 "iLu" = (
-/obj/structure/platform/strata/metal{
-	dir = 4;
-	layer = 3.01
-	},
-/turf/open/auto_turf/ice/layer1,
+/turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/caves/southwest_caves)
 "iLN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -17681,6 +17704,13 @@
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/auto_turf/strata_grass,
 /area/kleschers/outside/construction)
+"joN" = (
+/obj/item/prop/almayer/chaff_launcher{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/kleschers/outside/rebel_landing)
 "joO" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -19529,11 +19559,6 @@
 /turf/open/floor/shiva,
 /area/kleschers/int_heavy/eta)
 "kkb" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal8";
-	pixel_x = -16;
-	pixel_y = -16
-	},
 /obj/structure/cargo_container/wy/left,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/outside/spaceport)
@@ -19596,6 +19621,10 @@
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced,
+/obj/item/prop/almayer/box{
+	pixel_x = -2;
+	pixel_y = 10
+	},
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/marshals)
 "kmp" = (
@@ -19747,8 +19776,10 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_virology)
 "kpx" = (
-/obj/structure/fence,
 /obj/structure/machinery/light/double,
+/obj/structure/fence{
+	color = "#424a50"
+	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/outside/central_road)
 "kpA" = (
@@ -19775,11 +19806,6 @@
 /turf/open/floor/corsat/bluegrey,
 /area/kleschers/int_reg/admin)
 "kpP" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal6";
-	pixel_x = 16;
-	pixel_y = 16
-	},
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/shiva,
@@ -20719,6 +20745,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_reg/filtration)
+"kPV" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16;
+	pixel_y = 11
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16;
+	pixel_y = -12
+	},
+/turf/open/asphalt,
+/area/kleschers/outside/spaceport)
 "kQu" = (
 /obj/structure/bed/chair/wood/normal{
 	dir = 8
@@ -20816,6 +20853,10 @@
 /obj/structure/barricade/handrail/strata,
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
+	},
+/obj/item/prop/almayer/box{
+	pixel_x = 10;
+	pixel_y = 10
 	},
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_heavy/eta)
@@ -20999,7 +21040,9 @@
 /turf/open/floor/asteroidwarning/east,
 /area/kleschers/outside/construction)
 "kXB" = (
-/obj/structure/fence,
+/obj/structure/fence{
+	color = "#424a50"
+	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_heavy/reactor_excess)
 "kXR" = (
@@ -21292,6 +21335,9 @@
 	icon_state = "upper_2";
 	layer = 3.1
 	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4
+	},
 /turf/open/floor/filtrationside/west,
 /area/kleschers/outside/east)
 "let" = (
@@ -21396,6 +21442,14 @@
 	pixel_y = 8
 	},
 /obj/item/clothing/head/beret,
+/obj/item/clothing/accessory/storage/smallpouch{
+	pixel_x = 17;
+	pixel_y = 9
+	},
+/obj/item/clothing/accessory/storage/smallpouch{
+	pixel_x = 12;
+	pixel_y = -1
+	},
 /turf/open/floor/shiva/north,
 /area/kleschers/int_reg/dorms)
 "lhx" = (
@@ -21892,6 +21946,7 @@
 	light_power = 0.7;
 	dir = 1
 	},
+/obj/structure/machinery/power/port_gen/pacman/mrs,
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/connector)
 "lrQ" = (
@@ -22470,11 +22525,14 @@
 /area/kleschers/int_heavy/eta)
 "lDH" = (
 /obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal5";
-	pixel_x = -16;
-	pixel_y = 16
+	pixel_x = -12;
+	pixel_y = 11
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -12;
+	pixel_y = -12
+	},
+/turf/open/asphalt,
 /area/kleschers/outside/spaceport)
 "lDK" = (
 /obj/effect/decal/cleanable/dirt,
@@ -23071,15 +23129,11 @@
 /turf/open/floor/kutjevo/tan/multi_tiles/north,
 /area/kleschers/int_reg/virology)
 "lTb" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
+/obj/structure/barricade/handrail/kutjevo{
 	dir = 4
 	},
-/turf/open/floor/vault2/north,
-/area/kleschers/int_reg/admin)
+/turf/open/floor/filtrationside/west,
+/area/kleschers/outside/east)
 "lTe" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Spaceport";
@@ -23667,11 +23721,14 @@
 /area/kleschers/int_reg/admin)
 "mhY" = (
 /obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal8";
-	pixel_x = -16;
-	pixel_y = -16
+	pixel_x = 16;
+	pixel_y = -12
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16;
+	pixel_y = 11
+	},
+/turf/open/asphalt,
 /area/kleschers/outside/spaceport)
 "mie" = (
 /obj/structure/machinery/cm_vending/sorted/medical{
@@ -23846,6 +23903,11 @@
 /obj/structure/machinery/light{
 	light_power = 0.7
 	},
+/obj/item/storage/box/wy_mre{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/obj/item/tool/hand_labeler,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/garage)
 "mnZ" = (
@@ -26455,7 +26517,9 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_north_wing)
 "nIg" = (
-/obj/structure/fence,
+/obj/structure/fence{
+	color = "#424a50"
+	},
 /turf/open/asphalt/cement,
 /area/kleschers/outside/central_road)
 "nIq" = (
@@ -28874,11 +28938,6 @@
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_reg/filtration)
 "oVS" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal8";
-	pixel_x = -16;
-	pixel_y = -16
-	},
 /obj/structure/cargo_container/grant/left{
 	layer = 3.03
 	},
@@ -28975,14 +29034,6 @@
 	pixel_x = -4;
 	pixel_y = -6
 	},
-/obj/item/clothing/accessory/storage/droppouch{
-	pixel_x = 9;
-	pixel_y = -1
-	},
-/obj/item/clothing/accessory/storage/smallpouch{
-	pixel_x = 9;
-	pixel_y = -5
-	},
 /obj/item/clothing/accessory/storage/smallpouch{
 	pixel_x = 5;
 	pixel_y = -8
@@ -28995,10 +29046,6 @@
 /obj/item/clothing/accessory/storage/smallpouch{
 	pixel_x = -4;
 	pixel_y = -2
-	},
-/obj/item/clothing/accessory/storage/smallpouch{
-	pixel_x = 6;
-	pixel_y = -8
 	},
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/cargo)
@@ -29388,6 +29435,7 @@
 	light_power = 0.4;
 	dir = 4
 	},
+/obj/item/clothing/accessory/storage/smallpouch/upp,
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_glass/bar)
 "phI" = (
@@ -29470,6 +29518,17 @@
 /obj/item/tool/crew_monitor,
 /turf/open/floor/elevatorshaft/north,
 /area/kleschers/int_heavy/lambda_saferoom)
+"plA" = (
+/obj/item/prop/almayer/chaff_launcher{
+	pixel_x = -6;
+	pixel_y = 12
+	},
+/obj/item/prop/almayer/handheld1{
+	pixel_x = 10;
+	pixel_y = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/kleschers/outside/rebel_landing)
 "plC" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "Storage Shutter";
@@ -30085,14 +30144,6 @@
 /turf/open/floor/kutjevo/tan,
 /area/kleschers/int_reg/virology)
 "pDX" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 16;
-	pixel_y = 11
-	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = 16;
-	pixel_y = -12
-	},
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
@@ -30549,7 +30600,9 @@
 /turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/kleschers/int_reg/shuttle)
 "pSJ" = (
-/obj/structure/fence,
+/obj/structure/fence{
+	color = "#424a50"
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/kleschers/int_reg/filtration)
 "pSM" = (
@@ -32005,6 +32058,18 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/dorms)
+"qDP" = (
+/obj/effect/decal/cleanable/generic,
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16;
+	pixel_y = 11
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16;
+	pixel_y = -12
+	},
+/turf/open/asphalt,
+/area/kleschers/outside/spaceport)
 "qEf" = (
 /obj/structure/platform/strata/metal{
 	dir = 8;
@@ -32336,7 +32401,7 @@
 	color = "#C02526";
 	dir = 8
 	},
-/turf/open/auto_turf/ice/layer1,
+/turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/caves/southwest_caves)
 "qLn" = (
 /obj/structure/prop/invuln/darkness,
@@ -33733,14 +33798,8 @@
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/engineering)
 "rvY" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal8";
-	pixel_x = -16;
-	pixel_y = -16
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/kleschers/outside/spaceport)
+/turf/open/auto_turf/shale/layer1,
+/area/kleschers/int_heavy/lambda_north_wing)
 "rwd" = (
 /turf/open/floor/asteroidwarning/east,
 /area/kleschers/outside/lambda_entry)
@@ -34508,7 +34567,9 @@
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_reg/filtration)
 "rOP" = (
-/obj/structure/fence,
+/obj/structure/fence{
+	color = "#424a50"
+	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/outside/central_road)
 "rPc" = (
@@ -36095,13 +36156,13 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_reg/marshals)
 "sDJ" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal6";
-	pixel_x = 16;
-	pixel_y = 16
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526"
 	},
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/kleschers/outside/spaceport)
+/obj/structure/machinery/deployable/barrier,
+/turf/open/floor/vault2/north,
+/area/kleschers/int_reg/admin)
 "sDU" = (
 /obj/structure/machinery/deployable/barrier,
 /turf/open/floor/shiva,
@@ -38279,6 +38340,14 @@
 /obj/structure/cargo_container/lockmart/mid{
 	layer = 3.02
 	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -12;
+	pixel_y = 11
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -12;
+	pixel_y = -12
+	},
 /turf/open/asphalt,
 /area/kleschers/outside/spaceport)
 "tPd" = (
@@ -39177,11 +39246,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/eta)
 "ujK" = (
-/obj/structure/platform/strata/metal{
-	dir = 8;
-	layer = 3.01
-	},
-/turf/open/auto_turf/ice/layer1,
+/turf/open/auto_turf/shale/layer1,
 /area/kleschers/caves/southwest_caves)
 "ujV" = (
 /obj/effect/decal/warning_stripes{
@@ -39852,7 +39917,7 @@
 	icon_state = "lattice12";
 	pixel_x = 16
 	},
-/turf/open/auto_turf/ice/layer1,
+/turf/open/auto_turf/shale/layer1,
 /area/kleschers/caves/southwest_caves)
 "uCA" = (
 /obj/structure/bed/chair/comfy/beige,
@@ -40037,6 +40102,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
+"uGX" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -12;
+	pixel_y = -12
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -12;
+	pixel_y = 11
+	},
+/turf/open/asphalt,
+/area/kleschers/outside/spaceport)
 "uHs" = (
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/kleschers/outside/northwest)
@@ -40112,7 +40188,9 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/kleschers/int_heavy/eta)
 "uKf" = (
-/obj/structure/fence,
+/obj/structure/fence{
+	color = "#424a50"
+	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/caves/east)
 "uKh" = (
@@ -40226,6 +40304,10 @@
 /obj/item/clothing/suit/storage/jacket/marine/pilot{
 	pixel_x = -3;
 	pixel_y = 11
+	},
+/obj/item/prop/almayer/comp_open{
+	pixel_x = 0;
+	pixel_y = 19
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_left_to_right,
 /area/kleschers/int_reg/shuttle)
@@ -41656,14 +41738,16 @@
 /turf/closed/wall/strata_outpost/reinforced,
 /area/kleschers/int_reg/admin)
 "vLD" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal5";
-	pixel_x = -16;
-	pixel_y = 16
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
 	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/kleschers/outside/spaceport)
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/almayer/comp_closed{
+	pixel_x = -2;
+	pixel_y = 10
+	},
+/turf/open/floor/shiva/north,
+/area/kleschers/int_reg/telecomms)
 "vLG" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -42392,6 +42476,9 @@
 	layer = 3.1
 	},
 /obj/structure/blocker/invisible_wall,
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4
+	},
 /turf/open/floor/filtrationside/west,
 /area/kleschers/outside/east)
 "whb" = (
@@ -42819,11 +42906,6 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_reg/offices)
 "wqH" = (
-/obj/structure/desertdam/decals/road_edge{
-	icon_state = "road_edge_decal5";
-	pixel_x = -16;
-	pixel_y = 16
-	},
 /obj/structure/cargo_container/grant/left{
 	layer = 3.01
 	},
@@ -42972,6 +43054,7 @@
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
 	},
+/obj/item/stack/sheet/plasteel/small_stack,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/offices)
 "wul" = (
@@ -43222,10 +43305,6 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/outside/northeast)
 "wAe" = (
-/obj/structure/platform/strata/metal{
-	dir = 4;
-	layer = 3.01
-	},
 /obj/structure/platform/strata/metal{
 	dir = 4;
 	layer = 3.01
@@ -44201,6 +44280,8 @@
 	dir = 4;
 	pixel_y = 10
 	},
+/obj/item/cpr_dummy,
+/obj/item/coin/platinum,
 /turf/open/floor/shiva/radiator_tile2,
 /area/kleschers/int_reg/dorms)
 "xbb" = (
@@ -44315,6 +44396,7 @@
 	req_one_access = list(101)
 	},
 /obj/item/clipboard,
+/obj/item/tool/hand_labeler,
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
 "xdA" = (
@@ -44423,16 +44505,11 @@
 /turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
 "xgb" = (
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -12;
-	pixel_y = -12
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8
 	},
-/obj/structure/desertdam/decals/road_edge{
-	pixel_x = -12;
-	pixel_y = 11
-	},
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/kleschers/outside/spaceport)
+/turf/open/floor/filtrationside/east,
+/area/kleschers/outside/east)
 "xgp" = (
 /obj/structure/pipes/standard/manifold/visible,
 /turf/open/floor/kutjevo/tan/grey_edge/east,
@@ -44653,7 +44730,9 @@
 /turf/open/auto_turf/shale/layer2,
 /area/kleschers/caves/east)
 "xow" = (
-/obj/structure/filtration/machine_96x96/filtration,
+/obj/structure/filtration/machine_96x96/filtration{
+	layer = 3.3
+	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/outside/east)
 "xoX" = (
@@ -44674,7 +44753,9 @@
 /turf/open/floor/shiva/purplefull/north,
 /area/kleschers/int_heavy/lambda_center)
 "xpQ" = (
-/obj/structure/fence,
+/obj/structure/fence{
+	color = "#424a50"
+	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/kleschers/outside/east)
 "xpT" = (
@@ -45064,7 +45145,9 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/library)
 "xCW" = (
-/obj/structure/fence,
+/obj/structure/fence{
+	color = "#424a50"
+	},
 /turf/open/asphalt/cement/cement4,
 /area/kleschers/outside/central_road)
 "xDc" = (
@@ -48860,7 +48943,7 @@ qWF
 hWu
 llR
 vuo
-cDS
+vLD
 gqW
 gEu
 pra
@@ -50411,7 +50494,7 @@ kxK
 kBd
 pmM
 wtO
-rdo
+bwb
 mnD
 kBd
 xqM
@@ -52072,8 +52155,8 @@ pFL
 pFL
 pFL
 pFL
-pFL
-pFL
+plA
+joN
 oZd
 oZd
 cCW
@@ -54093,7 +54176,7 @@ dFJ
 mWP
 mWP
 mWP
-mWP
+exd
 mWP
 mWP
 qKf
@@ -54311,7 +54394,7 @@ dFJ
 mWP
 mWP
 mWP
-dFJ
+ajj
 dFJ
 dFJ
 qKf
@@ -54960,15 +55043,15 @@ wWJ
 aZO
 hXr
 sts
-lDH
+tqu
 cNs
-rvY
-vLD
-ftD
-rvY
-vLD
-ftD
-rvY
+ekn
+ekn
+ekn
+ekn
+ekn
+ekn
+ekn
 sCv
 pBJ
 swY
@@ -55179,13 +55262,13 @@ jSo
 hXr
 sts
 tmo
-sts
+lDH
 acc
 tmo
-sts
+lDH
 acc
 tmo
-tqu
+lDH
 ezf
 sts
 kXX
@@ -55403,7 +55486,7 @@ sts
 eeM
 sts
 sts
-tqu
+sts
 vOD
 sts
 jfT
@@ -55615,13 +55698,13 @@ jSo
 hXr
 sts
 tmo
-lxg
+qDP
 acc
 tmo
 ibA
 acc
 tmo
-tqu
+mhY
 qrs
 sts
 lkr
@@ -55832,15 +55915,15 @@ wEk
 jSo
 hMR
 sts
-sDJ
-eLy
-inO
-sDJ
-eLy
-inO
-sDJ
-eLy
-inO
+tqu
+tqu
+tqu
+tqu
+tqu
+tqu
+tqu
+tqu
+tqu
 sts
 lkr
 vij
@@ -56050,15 +56133,15 @@ wEk
 jja
 hMR
 sts
-lDH
-xgb
+tqu
+tqu
 kkb
 wqH
 fzD
 oVS
-lDH
-xgb
-mhY
+tqu
+tqu
+tqu
 sts
 lkr
 vij
@@ -56269,13 +56352,13 @@ jja
 hMR
 sts
 tmo
-sts
+lDH
 qVP
 rVP
 tOF
 hXG
 tmo
-sts
+uGX
 acc
 sts
 lkr
@@ -56705,13 +56788,13 @@ iGR
 qKf
 sts
 tmo
-sts
+mhY
 acc
 tmo
-sts
+mhY
 dJp
 tmo
-sts
+kPV
 acc
 sts
 lkr
@@ -56924,13 +57007,13 @@ lEi
 sCv
 nGq
 pDX
-aYk
-nGq
-ajj
-aYk
+ekn
+ekn
+ekn
+ekn
 kpP
 pDX
-aYk
+ekn
 sCv
 mnq
 vij
@@ -59040,7 +59123,7 @@ aEz
 gml
 gml
 lCA
-xWi
+iLu
 uhm
 uhm
 uhm
@@ -59258,8 +59341,8 @@ gml
 gml
 lxt
 gCv
-xWi
-xWi
+iLu
+ujK
 uhm
 aUH
 aUH
@@ -59475,10 +59558,10 @@ gml
 lxt
 sRd
 gCv
-xWi
-xWi
-xWi
-xWi
+iLu
+ujK
+ujK
+iLu
 lFs
 aUH
 uhm
@@ -59692,10 +59775,10 @@ hqF
 hqF
 hqF
 uhm
-xWi
-xWi
-xWi
-xWi
+iLu
+iLu
+ujK
+iLu
 fLC
 wbE
 fkZ
@@ -59911,9 +59994,9 @@ uhm
 uhm
 uhm
 uhm
-xWi
-xWi
-xWi
+ujK
+ujK
+iLu
 fLC
 jFN
 fkZ
@@ -60129,9 +60212,9 @@ uhm
 uhm
 uhm
 uhm
-xWi
-xWi
-xWi
+ujK
+ujK
+ujK
 fLC
 jFN
 fkZ
@@ -60346,10 +60429,10 @@ uhm
 uhm
 uhm
 uhm
-xWi
-xWi
-xWi
-xWi
+ujK
+ujK
+ujK
+ujK
 fLC
 wnl
 fkZ
@@ -60564,11 +60647,11 @@ uhm
 uhm
 uhm
 uhm
-xWi
-xWi
-xWi
-xWi
-xWi
+ujK
+ujK
+ujK
+iLu
+iLu
 bCq
 uhm
 uhm
@@ -60782,11 +60865,11 @@ uhm
 uhm
 uhm
 uhm
-iLu
-iLu
-iLu
-iLu
-iLu
+wAe
+wAe
+wAe
+wAe
+wAe
 uhm
 uhm
 uhm
@@ -61219,10 +61302,10 @@ uhm
 uhm
 aUH
 aUH
-fBF
-fBF
-fBF
-fBF
+aYk
+aYk
+aYk
+aYk
 rEV
 aUH
 uhm
@@ -61442,7 +61525,7 @@ ujK
 ujK
 ujK
 qLe
-ujK
+aYk
 uhm
 uhm
 uhm
@@ -61656,12 +61739,12 @@ ykI
 aUH
 aUH
 uhm
-xWi
-xWi
-xWi
+ujK
+ujK
+ujK
 uCy
-xWi
-xWi
+iLu
+ujK
 uhm
 uhm
 uhm
@@ -61878,11 +61961,11 @@ yme
 yme
 yme
 hNh
-xWi
-xWi
-xWi
-xWi
-xWi
+ujK
+iLu
+ujK
+iLu
+ujK
 uhm
 uhm
 uhm
@@ -62096,11 +62179,11 @@ tuY
 tuY
 tuY
 sse
-xWi
-xWi
-xWi
-xWi
-xWi
+ujK
+iLu
+iLu
+iLu
+ujK
 uhm
 uhm
 uhm
@@ -62315,9 +62398,9 @@ ykI
 tuY
 ryA
 lCe
-xWi
-xWi
-xWi
+iLu
+ujK
+ujK
 uhm
 uhm
 uhm
@@ -62533,9 +62616,9 @@ ykI
 tuY
 fVB
 lCA
-xWi
-xWi
-xWi
+ujK
+ujK
+iLu
 uhm
 uhm
 uhm
@@ -62751,8 +62834,8 @@ ykI
 ykI
 fVB
 lCA
-xWi
-xWi
+iLu
+iLu
 uhm
 uhm
 uhm
@@ -63318,7 +63401,7 @@ iaz
 mvF
 aUK
 hBI
-mvF
+iaz
 iaz
 iuL
 lKJ
@@ -63535,8 +63618,8 @@ ggK
 iaz
 mvF
 fWM
-lTb
-mvF
+mMO
+sDJ
 iaz
 fGI
 fGI
@@ -63754,7 +63837,7 @@ iaz
 mvF
 hkG
 mMO
-mvF
+hpw
 iaz
 keK
 keK
@@ -74687,9 +74770,9 @@ ggq
 oMs
 suT
 wwq
-wwq
+lTb
 wgL
-wwq
+lTb
 ldw
 vzy
 jRs
@@ -75339,7 +75422,7 @@ wZU
 hMn
 iAK
 jRs
-avb
+eLy
 uDR
 kVQ
 kVQ
@@ -75557,7 +75640,7 @@ ekh
 hMn
 iAK
 jRs
-avb
+eLy
 kVQ
 kVQ
 kVQ
@@ -75775,7 +75858,7 @@ ekh
 hMn
 iAK
 jRs
-avb
+eLy
 kVQ
 kVQ
 kVQ
@@ -75993,7 +76076,7 @@ sMC
 wCU
 ggq
 mmA
-avb
+eLy
 kVQ
 kVQ
 kVQ
@@ -76211,7 +76294,7 @@ bqu
 wda
 lfh
 jRs
-avb
+eLy
 kVQ
 kVQ
 kVQ
@@ -76429,7 +76512,7 @@ bqu
 wda
 hMh
 jRs
-avb
+eLy
 kVQ
 kVQ
 kVQ
@@ -76647,7 +76730,7 @@ ekh
 mvy
 ggq
 jRs
-avb
+eLy
 qxw
 kVQ
 kVQ
@@ -77303,10 +77386,10 @@ iAK
 jRs
 jvs
 rFo
-rFo
-rFo
-rFo
-rFo
+xgb
+xgb
+xgb
+xgb
 qAq
 ljO
 xpQ
@@ -85927,11 +86010,11 @@ sOK
 sOK
 agN
 fwf
-mMb
+ftD
 dIl
 dIl
-dIl
-mMb
+ftD
+ftD
 jBD
 lrI
 hVe
@@ -86145,11 +86228,11 @@ lvD
 nSU
 fwf
 fwf
-mMb
-dIl
-dIl
-dIl
-mMb
+ftD
+ftD
+ftD
+ftD
+rvY
 lrI
 lrI
 gSd
@@ -86362,12 +86445,12 @@ lvD
 oOr
 fwf
 fwf
-ycG
-mMb
-dIl
-dIl
-mMb
-mMb
+rvY
+rvY
+ftD
+ftD
+rvY
+rvY
 lrI
 mah
 ocX
@@ -86579,13 +86662,13 @@ ltG
 vXS
 fwf
 fwf
-ycG
-ycG
-ycG
-ycG
-awF
-ycG
-ycG
+rvY
+rvY
+rvY
+rvY
+ftD
+ftD
+rvY
 lrI
 jiq
 iWs
@@ -91153,14 +91236,14 @@ bid
 bid
 uBd
 fwf
-gaT
-gaT
+eUE
+xSL
 fwf
-gaT
-gaT
+eUE
+xSL
 fwf
-gaT
-gaT
+eUE
+xSL
 fwf
 mLE
 eUT
@@ -91371,14 +91454,14 @@ kfw
 nIe
 jWZ
 fwf
-gaT
-gaT
+eUE
+xSL
 fwf
-gaT
-gaT
+eUE
+xSL
 fwf
-gaT
-gaT
+eUE
+xSL
 fwf
 nIe
 cGh
@@ -91590,10 +91673,10 @@ nIe
 lMb
 fwf
 fnJ
-gaT
+inO
 fwf
 fnJ
-gaT
+inO
 fwf
 fnJ
 gha
