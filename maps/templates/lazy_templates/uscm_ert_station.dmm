@@ -55,7 +55,7 @@
 /turf/open/floor/almayer/cargo,
 /area/adminlevel/ert_station/uscm_station)
 "aF" = (
-/obj/item/ammo_magazine/rifle/lmg,
+/obj/item/ammo_magazine/hpr_box,
 /obj/item/weapon/gun/rifle/lmg,
 /obj/structure/surface/rack,
 /turf/open/floor/red/east,
@@ -1119,11 +1119,6 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/space)
-"na" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/item/hardpoint/locomotion/apc_wheels,
-/turf/open/floor/almayer/plating/northeast,
-/area/adminlevel/ert_station/uscm_station)
 "nc" = (
 /obj/structure/pipes/vents/pump/siphon/on{
 	dir = 1;
@@ -1166,7 +1161,7 @@
 /obj/item/ammo_magazine/revolver/mateba,
 /obj/item/ammo_magazine/rifle/ap,
 /obj/item/ammo_magazine/rifle/incendiary,
-/obj/item/ammo_magazine/rifle/lmg,
+/obj/item/ammo_magazine/hpr_box,
 /obj/item/ammo_magazine/rifle/mar40,
 /obj/item/ammo_magazine/sniper/svd,
 /obj/item/ammo_magazine/rifle/m16,
@@ -8943,7 +8938,7 @@ kZ
 kZ
 zK
 cz
-na
+VI
 sd
 JI
 yf

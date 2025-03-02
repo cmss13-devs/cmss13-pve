@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "Nuclear detonations no longer blow out your eardrums & induce earthquakes for all"
+  - qol: "The roundstart alert of \"ARES ONLINE\" that was insufferably loud is gone in favour of a silent alert from TITAN"
+  - soundadd: "new nuclear klaxon sound effect"

@@ -157,6 +157,43 @@
 
 	prices = list()
 
+
+/obj/structure/machinery/vending/generic
+	name = "\improper vending machine"
+	desc = "A generic snack and soft drink vendor with a small plate on the back reading, 'Veni Vendi Vici'"
+	icon_state = "snackvend"
+	product_slogans = ""
+	product_ads = ""
+	products = list(
+		/obj/item/reagent_container/food/snacks/wrapped/barcardine = 10,
+		/obj/item/reagent_container/food/snacks/wrapped/booniebars = 10,
+		/obj/item/reagent_container/food/snacks/wrapped/chunk = 10,
+		/obj/item/reagent_container/food/snacks/wrapped/chunk/hunk = 10,
+		/obj/item/reagent_container/food/snacks/eat_bar = 10,
+		/obj/item/reagent_container/food/snacks/chips = 10,
+		/obj/item/reagent_container/food/snacks/wy_chips/pepper = 10,
+		/obj/item/reagent_container/food/drinks/cans/classcola = 10,
+		/obj/item/reagent_container/food/drinks/cans/dr_gibb = 10,
+		/obj/item/reagent_container/food/drinks/cans/space_mountain_wind = 10,
+		/obj/item/reagent_container/food/drinks/cans/iced_tea = 10,
+	)
+
+	prices = list(
+		/obj/item/reagent_container/food/snacks/wrapped/barcardine = 4,
+		/obj/item/reagent_container/food/snacks/wrapped/booniebars = 4,
+		/obj/item/reagent_container/food/snacks/wrapped/chunk = 4,
+		/obj/item/reagent_container/food/snacks/wrapped/chunk/hunk = 4,
+		/obj/item/reagent_container/food/snacks/eat_bar = 4,
+		/obj/item/reagent_container/food/snacks/chips = 5,
+		/obj/item/reagent_container/food/snacks/wy_chips/pepper = 5,
+		/obj/item/reagent_container/food/drinks/cans/classcola = 2,
+		/obj/item/reagent_container/food/drinks/cans/dr_gibb = 2,
+		/obj/item/reagent_container/food/drinks/cans/space_mountain_wind = 2,
+		/obj/item/reagent_container/food/drinks/cans/iced_tea = 2,
+	)
+	idle_power_usage = 211 //refrigerator - believe it or not, this is actually the average power consumption of a refrigerated vending machine according to NRCan.
+	product_type = VENDOR_PRODUCT_TYPE_FOOD
+
 /obj/structure/machinery/vending/cigarette
 	name = "cigarette machine" //OCD had to be uppercase to look nice with the new formating
 	desc = "If you want to get cancer, might as well do it in style!"
@@ -233,6 +270,23 @@
 
 	)
 
+/obj/structure/machinery/vending/cigarette/upp
+	desc = "A state-owned cigarette vendor. Its drab colour was chosen to discourage purchases, but its existence is an admittance to the necessity for such machines to exist in the first place."
+	product_slogans = ""
+	product_ads = ""
+	icon_state = "china_cig_vending"
+	products = list(
+		/obj/item/storage/fancy/cigarettes/laika = 10,
+		/obj/item/storage/box/matches = 15,
+		/obj/item/tool/lighter/zippo = 10,
+	)
+	prices = list(
+		/obj/item/storage/fancy/cigarettes/laika = 45,
+		/obj/item/storage/box/matches = 1,
+		/obj/item/tool/lighter/zippo = 25,
+	)
+	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
+
 /obj/structure/machinery/vending/security
 	name = "\improper ColMarTech Military Police Vendor"
 	desc = "A USCM Military Police vendor."
@@ -265,12 +319,12 @@
 	products = list(
 		/obj/item/restraint/handcuffs/zip = 40,
 		/obj/item/explosive/grenade/flashbang = 20,
-		/obj/item/explosive/grenade/custom/teargas = 40,
+		/obj/item/explosive/grenade/tear/marine = 40,
 		/obj/item/ammo_magazine/smg/m39/rubber = 40,
 		/obj/item/ammo_magazine/pistol/rubber = 40,
 		/obj/item/ammo_magazine/pistol/vp70/rubber = 40,
 		/obj/item/ammo_magazine/rifle/rubber = 40,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber = 40,
+		/obj/item/ammo_magazine/rifle/m49a/rubber = 40,
 		/obj/item/clothing/head/helmet/marine/MP = 8,
 		/obj/item/explosive/plastic/breaching_charge/rubber = 6,
 	)
@@ -317,7 +371,7 @@
 		/obj/item/ammo_magazine/pistol/rubber = 20,
 		/obj/item/ammo_magazine/pistol/vp70/rubber = 20,
 		/obj/item/ammo_magazine/rifle/rubber = 20,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber = 20,
+		/obj/item/ammo_magazine/rifle/m49a/rubber = 20,
 		/obj/item/ammo_magazine/shotgun/beanbag = 20,
 		/obj/item/storage/firstaid/regular = 2,
 		/obj/item/storage/firstaid/fire = 2,

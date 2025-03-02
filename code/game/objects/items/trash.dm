@@ -187,6 +187,13 @@
 	icon = 'icons/obj/items/food_canteen.dmi'
 	icon_state = "tray"
 
+/obj/item/trash/UPPtray
+	name = "\improper UPP Tray"
+	desc = "Finished with its tour of duty."
+	icon = 'icons/obj/items/food.dmi'
+	icon_state = "upp_tray"
+
+
 //////////
 ///Misc///
 //////////
@@ -205,3 +212,28 @@
 	w_class = SIZE_SMALL
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 5
+
+/obj/item/trash/grenade
+	name = "spent M47 smoke grenade"
+	desc = "A used-up smoke grenade canister. This is trash."
+	icon = 'icons/obj/items/weapons/grenade.dmi'
+	icon_state = "grenade_spent"
+
+/obj/item/trash/grenade/gas
+	name = "spent gas grenade"
+	desc = "A used gas grenade canister, no way to tell what was once inside it now. This is trash."
+	icon_state = "flashbang2_spent"
+
+/obj/item/trash/grenade/gas/marine
+	name = "spent M66 tear gas grenade"
+	desc = "A used tear gas grenade. This is trash."
+	icon_state = "grenade_spent"
+
+/obj/item/trash/grenade/Initialize()
+	. = ..()
+	animation_spin(5, 1,)
+
+/obj/item/trash/grenade/animation_spin(speed = 5, loop_amount = -1, clockwise = TRUE, sections = 3, angular_offset = 0, pixel_fuzz = 0)
+	clockwise = pick(TRUE, FALSE)
+	angular_offset = rand(360)
+	return ..()

@@ -76,48 +76,6 @@
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	icon_state = "8fancy"
 
-/obj/item/clothing/suit/storage/marine/smartgunner/upp
-	name = "\improper 6B91-2 UPP armor"
-	desc = "Deep modification of the standard body armor, intended for Union machinegunners. Contains compact fire control computers and an encrypted data processing unit in the lower back, as well as an armored cable to connect to the machine gun. Covers all requirements to operate the weapon, but a common complaint is the bulkiness."
-	icon_state = "upp_armor_support"
-	storage_slots = 1
-	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_HIGH
-	allowed = list(
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine,
-		/obj/item/explosive/mine,
-		/obj/item/attachable/bayonet,
-		/obj/item/weapon/gun/pkp,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-		/obj/item/storage/large_holster/machete,
-		/obj/item/storage/belt/gun/type47,
-	)
-
-	smartgun_back = list(
-		/obj/item/storage/large_holster/machete,
-		/obj/item/ammo_box,
-	)
-
-/obj/item/clothing/suit/storage/marine/smartgunner/upp/Initialize()
-	. = ..()
-	pockets.bypass_w_limit = list(
-		/obj/item/ammo_magazine/minigun,
-		/obj/item/ammo_magazine/pkp,
-		)
-
 //Customizable Variant
 /obj/item/clothing/suit/marine/smartgunner
 	name = "\improper M56 combat harness"
