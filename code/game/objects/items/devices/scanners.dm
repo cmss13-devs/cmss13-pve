@@ -384,7 +384,7 @@ FORENSIC SCANNER
 				last_health_display.target_mob = connected_to
 				SStgui.close_user_uis(connected_from, src)
 				last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
-				last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = TRUE, ignore_delay = FALSE, alien = alien, associated_equipment = src, associated_user = FALSE)
+				last_health_display.look_at(connected_from, DETAIL_LEVEL_HEALTHANALYSER, bypass_checks = TRUE, ignore_delay = FALSE, alien = alien, associated_equipment = src)
 		src.add_fingerprint()
 		if(last_scan && record_scan_on_connect)
 			record_scan_on_connect = FALSE
