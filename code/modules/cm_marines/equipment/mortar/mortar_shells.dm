@@ -56,7 +56,7 @@
 /obj/item/mortar_shell/incendiary/detonate(turf/T)
 	explosion(T, 0, 2, 4, 7, explosion_cause_data = cause_data)
 	flame_radius(cause_data, radius, T, flame_level, burn_level, flameshape, null, fire_type)
-	playsound(T, 'sound/weapons/gun_flamethrower2.ogg', 35, 1, 4)
+	playsound(T, 'sound/weapons/flame_explode.ogg', 35, 1, 4)
 
 /obj/item/mortar_shell/nerve
 	name = "\improper 80mm nerve gas mortar shell"

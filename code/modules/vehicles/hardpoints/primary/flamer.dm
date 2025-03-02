@@ -5,7 +5,11 @@
 	icon_state = "drgn_flamer"
 	disp_icon = "tank"
 	disp_icon_state = "drgn_flamer"
-	activation_sounds = list('sound/weapons/vehicles/flamethrower.ogg')
+	activation_sounds = list(
+		'sound/weapons/gun_flamethrower1.ogg',
+		'sound/weapons/gun_flamethrower2.ogg',
+		'sound/weapons/gun_flamethrower3.ogg',
+	)
 
 	health = 2000
 	firing_arc = 90
@@ -23,7 +27,12 @@
 	use_muzzle_flash = FALSE
 
 	scatter = 5
-	fire_delay = 2.0 SECONDS
+	fire_delay = 0.1 SECONDS
+	gun_firemode = GUN_FIREMODE_AUTOMATIC
+	gun_firemode_list = list(
+		GUN_FIREMODE_AUTOMATIC,
+	)
+	COOLDOWN_DECLARE(fire_sound_cooldown)
 
 /obj/item/hardpoint/primary/flamer/set_bullet_traits()
 	..()
@@ -37,3 +46,18 @@
 		return NONE
 
 	return ..()
+
+/obj/item/hardpoint/primary/flamer/play_firing_sounds()
+	if(!COOLDOWN_FINISHED(src, fire_sound_cooldown))
+		return
+	COOLDOWN_START(src, fire_sound_cooldown, 1 SECONDS)
+	playsound(get_turf(src), pick(activation_sounds), 60)
+
+/obj/item/hardpoint/primary/flamer/start_fire(datum/source, atom/object, turf/location, control, params)
+	. = ..()
+	if(try_fire(object, source, params))
+		playsound(get_turf(src), 'sound/weapons/flamethrower_start.ogg', 60)
+
+/obj/item/hardpoint/primary/flamer/stop_fire()
+	. = ..()
+	playsound(get_turf(src), 'sound/weapons/flamethrower_complete.ogg', 60)
