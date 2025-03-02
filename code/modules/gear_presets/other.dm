@@ -827,7 +827,6 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "DUMMY"
 	rank = "DUMMY"
-	paygrades = list(PAY_SHORT_CCMO)
 	idtype = /obj/item/card/id/dogtag
 	uses_special_name = TRUE
 
