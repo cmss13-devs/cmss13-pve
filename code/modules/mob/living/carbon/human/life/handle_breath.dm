@@ -57,7 +57,7 @@
 			if(O.anes_tank)
 				return O.anes_tank.return_air()
 			return null
-		if(!internal.loc == src)
+		if(get_dist(internal.loc, loc) > 1)
 			internal = null
 		if(!wear_mask || !(wear_mask.flags_inventory & ALLOWINTERNALS))
 			internal = null
