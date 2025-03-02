@@ -3,8 +3,13 @@
 /obj/effect/hybrisa
 	icon = 'icons/effects/64x64hybrisa_decals.dmi'
 	icon_state = "weylandyutanilogo1"
-	layer = TURF_LAYER
+	layer = WEED_LAYER
 	plane = FLOOR_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/decal
+	layer = WEED_LAYER
+	anchored = TRUE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 //Roadlines
