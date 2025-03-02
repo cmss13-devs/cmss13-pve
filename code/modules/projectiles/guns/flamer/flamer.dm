@@ -383,6 +383,7 @@
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 
 /obj/item/weapon/gun/flamer/weak
+	projectile_type = /datum/ammo/flamethrower/weak
 	current_mag = /obj/item/ammo_magazine/flamer_tank/weak
 
 /obj/item/weapon/gun/flamer/weak/set_gun_config_values()

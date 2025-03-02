@@ -31,7 +31,7 @@
 	lifespan = 8
 	fade = generator(GEN_NUM, 5, 6)
 	grow = 0.1
-	drift = generator(GEN_CIRCLE, 0, 3.5)
+	drift = generator(GEN_CIRCLE, 0, 2)
 	scale = 0.6
 	spin = generator(GEN_NUM, -20, 20)
 	rotation = generator(GEN_NUM, -20, 20)
@@ -62,7 +62,7 @@
 	damage_type = BURN
 	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_HITS_TARGET_TURF
 	attached_particle = /particles/flamer
-	max_range = 6
+	max_range = 9
 	damage = 2
 	ricochet_projectiles_type = /datum/ammo/flamethrower/reflect
 	shell_speed = AMMO_SPEED_TIER_1
@@ -90,8 +90,13 @@
 
 /datum/ammo/flamethrower/on_hit_turf(turf/T, obj/projectile/P)
 	drop_flame(T, P.weapon_cause_data)
-	//napalm sticks to kids or somethin
-	if(flamer_reagent_id != "stickynapalm" || flamer_reagent_id != "napalmex" || !(ricochet_projectiles_type))
+	if(ricochet_projectiles_type)
+		//napalm sticks to kids or somethin
+		switch(flamer_reagent_id)
+			if("stickynapalm")
+				return
+			if("napalmex")
+				return
 		if(T.density)
 			reflect(T, P, 5, rand(1,3))
 
@@ -108,11 +113,15 @@
 	max_range = 4
 	damage = 2
 
+/datum/ammo/flamethrower/weak
+	max_range = 6
+	//ai cant be trusted
+	ricochet_projectiles_type = null
+
 /datum/ammo/flamethrower/tank_flamer
 	attached_particle = /particles/flamer_tank
-	max_range = 8
+	max_range = 11
 	damage = 5
-	shell_speed = AMMO_SPEED_TIER_2
 	ricochet_projectiles_type = null
 
 /datum/ammo/flamethrower/tank_flamer/drop_flame(turf/turf, datum/cause_data/cause_data)
@@ -122,13 +131,12 @@
 	var/datum/reagent/napalm/high_damage/reagent = new()
 	new /obj/flamer_fire(turf, cause_data, reagent, 1)
 	new /obj/effect/temp_visual/flamer_explosion(turf, icon_state)
-	max_range = 8
 
 /datum/ammo/flamethrower/sentry_flamer
 	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME|AMMO_HITS_TARGET_TURF
 	flamer_reagent_id = "napalmx"
 
-	max_range = 7
+	max_range = 9
 	ricochet_projectiles_type = null
 	hit_effect_color = "#00b8ff"
 

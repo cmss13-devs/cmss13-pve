@@ -8,8 +8,8 @@
 	handheld_type = /obj/item/defenses/handheld/sentry/flamer
 	health = 200
 	health_max = 200
-	burst = 15
-	sentry_range = 6
+	burst = 25
+	sentry_range = 9
 
 	firing_sound = "gun_flamethrower"
 
@@ -82,7 +82,7 @@
 	hack_time = 25 SECONDS
 	ammo = new /obj/item/ammo_magazine/sentry_flamer/wy
 	sentry_type = "wy_flamer"
-	sentry_range = 6
+	sentry_range = 9
 	omni_directional = TRUE
 	handheld_type = /obj/item/defenses/handheld/sentry/flamer/wy
 	selected_categories = list(
