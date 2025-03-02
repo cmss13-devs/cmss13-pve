@@ -23,7 +23,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	return ..()
 
 /// This is the proc for interacting with, or looking at, a mob's health display. Also contains skillchecks and the like. You may NOT call tgui interact directly, and you MUST set the detail level.
-/datum/health_scan/proc/look_at(mob/user, detail = DETAIL_LEVEL_FULL, bypass_checks = FALSE, ignore_delay = TRUE, alien = FALSE, datum/tgui/ui = null, associated_equipment = FALSE, associated_user = FALSE)
+/datum/health_scan/proc/look_at(mob/user, detail = DETAIL_LEVEL_FULL, bypass_checks = FALSE, ignore_delay = TRUE, alien = FALSE, datum/tgui/ui = null, associated_equipment = FALSE)
 	if(!bypass_checks)
 		if(HAS_TRAIT(target_mob, TRAIT_FOREIGN_BIO) && !alien)
 			to_chat(user, SPAN_WARNING("ERROR: Unknown biology detected."))
@@ -512,6 +512,10 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 		if("print_scan")
 			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
 				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+				analyzer.print_report(ui.user)
+				return TRUE
+			else if (istype(scanner_device, /obj/structure/machinery.body_scanconsole))
+				var/obj/structure/machinery/body_scanconsole/analyzer = scanner_device
 				analyzer.print_report(ui.user)
 				return TRUE
 

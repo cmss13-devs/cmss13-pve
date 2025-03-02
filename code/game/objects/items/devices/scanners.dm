@@ -84,7 +84,7 @@ FORENSIC SCANNER
 	var/popup_window = TRUE
 	var/last_scan
 	var/list/buffer_for_report = list()
-	var/list/buffer_for_report_but_html = list() //no ^sublist today, I want to go to bed on time
+	//var/list/buffer_for_report_but_html = list() //no ^sublist today, I want to go to bed on time
 	var/datum/health_scan/last_health_display
 	var/currently_selected_last_scan = 0
 	var/alien = FALSE
@@ -217,10 +217,10 @@ FORENSIC SCANNER
 	var/obj/item/paper/print_report = new /obj/item/paper
 	if(connected_to)
 		buffer_for_report += list(last_scan)
-		buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+		//buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien, FALSE, last_scan))
 		currently_selected_last_scan = buffer_for_report.len
-	print_report.info += ("Device ID:" + serial_number + "\n" + jointext(buffer_for_report_but_html[currently_selected_last_scan] + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
-	print_report.info_links += ("Device ID:" + serial_number + "\n" + jointext(buffer_for_report_but_html[currently_selected_last_scan] + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
+	print_report.info += ("Device ID:" + serial_number + "\n" + jointext(health_scan_table(last_scan) + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
+	print_report.info_links += ("Device ID:" + serial_number + "\n" + jointext(health_scan_table(last_scan) + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
 	print_report.update_icon()
 	print_report.name = "\improper scan print-out of " + buffer_for_report[currently_selected_last_scan]["patient"]
 	user.put_in_hands(print_report)
@@ -244,176 +244,115 @@ FORENSIC SCANNER
 	. += SPAN_HELPFUL("Use paper to refill it.")
 
 /// proc health_scan was a legacy proc for to_chat messages on health analysers. health_scan_table is retrofitted to have parity with the TGUI scan so it can record info for reports
-/mob/living/proc/health_scan_table(mob/living/carbon/human/user, ignore_delay = FALSE, show_limb_damage = TRUE, show_browser = TRUE, alien = FALSE, do_checks = TRUE) // ahem. FUCK WHOEVER CODED THIS SHIT AS NUMBERS AND NOT DEFINES.
-//fix this later or it might crash, idk
-	/*
-	if(do_checks)
-		if((user.getBrainLoss() >= 60) && prob(50))
-			to_chat(user, SPAN_WARNING("You try to analyze the floor's vitals!"))
-			for(var/mob/O in viewers(src, null))
-				O.show_message(SPAN_WARNING("[user] has analyzed the floor's vitals!"), 1)
-			user.show_message(SPAN_NOTICE("Health Analyzer results for The floor:\n\t Overall Status: Healthy"), 1)
-			user.show_message(SPAN_NOTICE("\t Damage Specifics: [0]-[0]-[0]-[0]"), 1)
-			user.show_message(SPAN_NOTICE("Key: Suffocation/Toxin/Burns/Brute"), 1)
-			user.show_message(SPAN_NOTICE("Body Temperature: ???"), 1)
-			return
-		if(HAS_TRAIT(src, TRAIT_FOREIGN_BIO) && !alien)
-			to_chat(user, SPAN_WARNING("ERROR: Unknown biology detected."))
-			return
-		if(!(ishuman(user) || SSticker?.mode.name == "monkey"))
-			to_chat(usr, SPAN_WARNING("You don't have the dexterity to do this!"))
-			return
-		if(!ignore_delay && !skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
-			to_chat(user, SPAN_WARNING("You start fumbling around with [src]..."))
-			var/fduration = 60
-			if(skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_DEFAULT))
-				fduration = 30
-			if(!do_after(user, fduration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY) || !user.Adjacent(src))
-				return
-		if(isxeno(src))
-			to_chat(user, SPAN_WARNING("[src] can't make sense of this creature."))
-			return
-		// Doesn't work on non-humans
-		if(!istype(src, /mob/living/carbon))
-			user.show_message("\nHealth Analyzer results for ERROR:\n\t Overall Status: ERROR")
-			user.show_message("\tType: [SET_CLASS("Oxygen", INTERFACE_BLUE)]-[SET_CLASS("Toxin", INTERFACE_GREEN)]-[SET_CLASS("Burns", INTERFACE_ORANGE)]-[SET_CLASS("Brute", INTERFACE_RED)]", 1)
-			user.show_message("\tDamage: [SET_CLASS("?", INTERFACE_BLUE)] - [SET_CLASS("?", INTERFACE_GREEN)] - [SET_CLASS("?", INTERFACE_ORANGE)] - [SET_CLASS("?", INTERFACE_RED)]")
-			user.show_message(SPAN_NOTICE("Body Temperature: [src.bodytemperature-T0C]&deg;C ([src.bodytemperature*1.8-459.67]&deg;F)"), 1)
-			user.show_message(SPAN_DANGER("<b>Warning: Blood Level ERROR: --% --cl.Type: ERROR"))
-			user.show_message(SPAN_NOTICE("Subject's pulse: [SET_CLASS("-- bpm", INTERFACE_RED)]"))
-			return
-*/
+/proc/health_scan_table(scan_data) // ahem. FUCK WHOEVER CODED THIS SHIT AS NUMBERS AND NOT DEFINES.
 	var/dat = ""
 	// Calculate damage amounts
-	var/fake_oxy = max(rand(1,40), src.getOxyLoss(), (300 - (src.getToxLoss() + src.getFireLoss() + src.getBruteLoss())))
-	var/OX = src.getOxyLoss() > 50 ? "<b>[src.getOxyLoss()]</b>" : src.getOxyLoss()
-	var/TX = src.getToxLoss() > 50 ? "<b>[src.getToxLoss()]</b>" : src.getToxLoss()
-	var/BU = src.getFireLoss() > 50 ? "<b>[src.getFireLoss()]</b>" : src.getFireLoss()
-	var/BR = src.getBruteLoss() > 50 ? "<b>[src.getBruteLoss()]</b>" : src.getBruteLoss()
+	var/oxygen_loss = scan_data["oxy"]
+	var/toxin_loss = scan_data["toxin"]
+	var/brute_loss = scan_data["total_brute"]
+	var/fire_loss = scan_data["total_burn"]
+	var/OX = oxygen_loss > 50 ? "<b>[oxygen_loss]</b>" : oxygen_loss
+	var/TX = toxin_loss > 50 ? "<b>[toxin_loss]</b>" : toxin_loss
+	var/BU = fire_loss > 50 ? "<b>[fire_loss]</b>" : fire_loss
+	var/BR = brute_loss > 50 ? "<b>[brute_loss]</b>" : brute_loss
 
 	// Show overall
-	if(src.status_flags & FAKEDEATH)
-		OX = fake_oxy > 50 ? "<b>[fake_oxy]</b>" : fake_oxy
-		dat += "\nHealth Analyzer for [src]:\n\tOverall Status: <b>DEAD</b>"
+	if(scan_data["dead"])
+		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[scan_data["patient"]] <b>DEAD<b> at " + worldtime2text("hh:mm:ss") + "\n"
 	else
-		var/mob/living/carbon/human/snowflake_variable_for_name = src
-		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[snowflake_variable_for_name.get_id_name("Unknown")] [src.stat > 1 ? "<b>DEAD</b>" : "<b>[src.health - src.halloss]% "] at " + worldtime2text("hh:mm:ss") + "\n"
+		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[scan_data["patient"]] <b>[scan_data["health"]]% at " + worldtime2text("hh:mm:ss") + "\n"
 	//dat += "[SET_CLASS("Oxygen", INTERFACE_BLUE)]-[SET_CLASS("Toxin", INTERFACE_GREEN)]-[SET_CLASS("Burns", INTERFACE_ORANGE)]-[SET_CLASS("Brute", INTERFACE_RED)]<td>"
-	dat += "[SET_CLASS(BR, INTERFACE_RED)] - [SET_CLASS(BU, INTERFACE_ORANGE)] - [SET_CLASS(TX, INTERFACE_GREEN)] - [SET_CLASS(OX, INTERFACE_BLUE)]\n"
+	dat += "\t[SET_CLASS(BR, INTERFACE_RED)] - [SET_CLASS(BU, INTERFACE_ORANGE)] - [SET_CLASS(TX, INTERFACE_GREEN)] - [SET_CLASS(OX, INTERFACE_BLUE)]\n"
 	//dat += "\tUntreated: {B}=Burns,{T}=Trauma,{F}=Fracture\n"
-
+	var/list/synth_types = SYNTH_TYPES
+	var/species_of_patient = scan_data["species"]
 	// Show specific limb damage
-	if(istype(src, /mob/living/carbon/human) && show_limb_damage)
-		var/mob/living/carbon/human/H = src
-		for(var/obj/limb/org in H.limbs)
+	if(species_of_patient == "Human" || synth_types.Find(species_of_patient))
+		for(var/limb in scan_data["limb_data_lists"])
 			var/brute_treated = TRUE
 			var/burn_treated = TRUE
-			var/open_incision = org.get_incision_depth() ? " <span class='scanner'>Open surgical incision</span>" : ""
+			var/limb_brute = scan_data["limb_data_lists"][limb]["brute"]
+			var/limb_burn = scan_data["limb_data_lists"][limb]["burn"]
+			var/open_incision = scan_data["limb_data_lists"][limb] ? " <span class='scanner'>Open surgical incision</span>" : ""
 
-			if((org.brute_dam > 0 && !org.is_bandaged()) || open_incision)
+			if(limb_brute > 0 && !scan_data["limb_data_lists"][limb]["bandaged"] || open_incision)
 				brute_treated = FALSE
-			if(org.burn_dam > 0 && !org.is_salved())
+			if(limb_burn > 0 && !scan_data["limb_data_lists"][limb]["salved"])
 				burn_treated = FALSE
-			if(org.status & LIMB_DESTROYED)
-				dat += "\t\t [capitalize(org.display_name)]: <span class='scannerb'>Missing!</span>\n"
+			if(scan_data["limb_data_lists"][limb]["missing"])
+				dat += "[capitalize(scan_data["limb_data_lists"][limb]["name"])]: <span class='scannerb'>Missing!</span>\n"
 				continue
 
 			var/bleeding_check = FALSE
-			for(var/datum/effects/bleeding/external/E in org.bleeding_effects_list)
+			if(scan_data["limb_data_lists"][limb]["bleeding"])
 				bleeding_check = TRUE
-				break
-			var/show_limb = (org.burn_dam > 0 || org.brute_dam > 0 || (org.status & LIMB_SPLINTED) || open_incision || bleeding_check)
-			//quick fix for IB showing, fix later!!
-			for(var/datum/effects/bleeding/internal/ib in org.bleeding_effects_list)
-				show_limb = TRUE
-				break
+			var/show_limb = (limb_brute > 0 || limb_burn > 0 || scan_data["limb_data_lists"][limb]["limb_splint"] || open_incision || bleeding_check || scan_data["internal_bleeding"])
 
-			var/org_name = "[capitalize(org.display_name)]"
-			if(org.status & LIMB_ROBOT)
-				if(org.status & LIMB_UNCALIBRATED_PROSTHETIC)
+			var/org_name = "[capitalize(scan_data["limb_data_lists"][limb]["name"])]"
+			if(scan_data["limb_data_lists"][limb]["limb_type"] == "Cybernetic")
+				if(scan_data["limb_data_lists"][limb]["limb_type"] == "Nonfunctional Cybernetic")
 					org_name += " (Nonfunctional Cybernetic)]"
 					show_limb = TRUE
 				else
 					org_name += " (Cybernetic)"
-			else if(org.status & LIMB_SYNTHSKIN)
+			else if(scan_data["limb_data_lists"][limb]["limb_type"] == "Synthskin")
 				org_name += " (Synthskin)"
 
-			var/burn_info = org.burn_dam > 0 ? "<span class='scannerburnb'>" + "[burn_treated ? "" : "{"]" + "[floor(org.burn_dam)]"  + "[burn_treated ? "" : "}"]" + "</span>" : "<span class='scannerburn'>0</span>"
+			var/burn_info = limb_burn > 0 ? "<span class='scannerburnb'>" + "[burn_treated ? "" : "{"]" + "[limb_burn]"  + "[burn_treated ? "" : "}"]" + "</span>" : "<span class='scannerburn'>0</span>"
 			//burn_info += "[burn_treated ? "" : "{B}"]"
-			var/brute_info =  org.brute_dam > 0 ? "<span class='scannerb'>" + "[brute_treated ? "" : "{"]" + "[floor(org.brute_dam)]" + "[brute_treated ? "" : "}"]" + "</span>" : "<span class='scanner'>0</span>"
+			var/brute_info =  limb_brute > 0 ? "<span class='scannerb'>" + "[brute_treated ? "" : "{"]" + "[limb_brute]" + "[brute_treated ? "" : "}"]" + "</span>" : "<span class='scanner'>0</span>"
 			//brute_info += "[brute_treated ? "" : "{T}"]"
 			var/fracture_info = ""
-			if(org.status & LIMB_BROKEN)
+			if(scan_data["limb_data_lists"][limb]["limb_statis"] == "Fracture")
 				fracture_info = "{F}"
 				show_limb = 1
 			var/org_bleed = ""
 			if(bleeding_check)
 				org_bleed = SPAN_SCANNERB("(Bleeding)")
 			if(show_limb)
-				dat += "[org_name]: \t [burn_info] - [brute_info] [fracture_info][org_bleed][open_incision]"
-				for(var/datum/effects/bleeding/internal/ib in org.bleeding_effects_list)
+				dat += "[org_name]: \t [burn_info] - [brute_info] [fracture_info][org_bleed][scan_data["open_incision"]]"
+				if(scan_data["limb_data_lists"][limb]["internal_bleeding"])
 					dat += SPAN_SCANNERB("(Internal Bleeding)")
 					break
-				if(org.status & LIMB_SPLINTED_INDESTRUCTIBLE)
-					dat += "(Nanosplinted)"
-				else if(org.status & LIMB_SPLINTED)
+				if(scan_data["limb_data_lists"][limb]["limb_splint"])
 					dat += "(Splinted)"
 				dat += "\n"
 
 	// Show red messages - broken bokes, etc
-	if (src.getCloneLoss())
+	if (scan_data["clone"])
 		dat += "\t<span class='scanner'> *Subject appears to have been imperfectly cloned.</span>\n"
-	for(var/datum/disease/D in src.viruses)
-		if(!D.hidden[SCANNER])
-			dat += "\t<span class='scannerb'> *Warning: [D.form] Detected</span><span class='scanner'>\nName: [D.name].\nType: [D.spread].\nStage: [D.stage]/[D.max_stages].\nPossible Cure: [D.cure]</span>\n"
-	if (src.getBrainLoss() >= 100 || !src.has_brain())
+	for(var/disease in scan_data["diseases"])
+		dat += "\t<span class='scannerb'> *Warning: [scan_data["diseases"][disease]["form"]] Detected</span><span class='scanner'>\nName: [scan_data["diseases"][disease]["name"]].\nType: [scan_data["diseases"][disease]["form"]].\nStage: [scan_data["diseases"][disease]["stages"]]/[scan_data["diseases"][disease]["max_stages"]].\nPossible Cure: [scan_data["diseases"][disease]["cure"]]</span>\n"
+	if(!scan_data["damaged_organs"] && !scan_data["damaged_organs"]["brain"] && scan_data["damaged_organs"]["brain"]["damage"] >= 100)
 		dat += "\t<span class='scanner'> *Subject has taken extreme amounts of <b>brain damage</b></span>.\n"
 
-	if(src.has_brain() && src.stat != DEAD && ishuman(src))
-		if(!src.key)
-			dat += SPAN_WARNING("\tNo soul detected.\n") // they ghosted
-		else if(!src.client)
-			dat += SPAN_WARNING("\tSSD detected.\n") // SSD
+	dat += SPAN_WARNING("\t[scan_data["ssd"]]\n") // SSD
 
-	if(ishuman(src))
-		var/mob/living/carbon/human/H = src
+	if(species_of_patient == "Human" || synth_types.Find(species_of_patient))
 
-		if(length(H.embedded_items) > 0)
+		if(scan_data["implants"])
 			dat += "\t[SPAN_SCANNER("*<b>Embedded object</b> detected. Advanced scanner required for location.")]\n"
 
-
-	var/reagents_in_body[0] // yes i know -spookydonut
-	if(istype(src, /mob/living/carbon))
+	if(species_of_patient == "Human" || synth_types.Find(species_of_patient))
 		// Show helpful reagents
-		if(src.reagents && (src.reagents.total_volume > 0))
-			var/unknown = 0
-			var/reagentdata[0]
-			for(var/A in src.reagents.reagent_list)
-				var/datum/reagent/R = A
-				reagents_in_body["[R.id]"] = R.volume
-				if(R.flags & REAGENT_SCANNABLE)
-					reagentdata["[R.id]"] = "[R.overdose != 0 && R.volume > R.overdose && !(R.flags & REAGENT_CANNOT_OVERDOSE) ? SPAN_WARNING("<b>OD: </b>") : ""] <font color='#9773C4'><b>[round(R.volume, 1)]u [R.name]</b></font>"
-				else
-					unknown++
-			if(length(reagentdata))
-				dat += "\n\tBeneficial reagents:\n"
-				for(var/d in reagentdata)
-					dat += "\t\t [reagentdata[d]]\n"
-			if(unknown)
-				dat += "\t<span class='scanner'> Warning: Unknown substance[(unknown>1)?"s":""] detected in subject's blood.</span>\n"
+		if(scan_data["chemicals_lists"])
+			dat += "\n\tReagents:\n"
+			for(var/A in scan_data["chemicals_lists"])
+				dat += "\t[scan_data["chemicals_lists"][A]["od"] != 0 ? SPAN_WARNING("<b>OD: </b>") : ""] <font color='#9773C4'><b>[scan_data["chemicals_lists"][A]["amount"]]u [scan_data["chemicals_lists"][A]["name"]]\n</b></font>"
+			if(scan_data["has_unknown_chemicals"])
+				dat += "\t<span class='scanner'> Warning: Unknown substances detected in subject's blood.</span>\n"
 
 	// Show body temp
-	dat += "\n\tBody Temperature: [src.bodytemperature-T0C]&deg;C ([src.bodytemperature*1.8-459.67]&deg;F)\n"
+	dat += "\n\tBody Temperature: [text2num(scan_data["body_temperature"])] Celsius\n"
 
-	if (ishuman(src))
-		var/mob/living/carbon/human/H = src
+	if (species_of_patient == "Human")
 		// Show blood level
 		var/blood_volume = BLOOD_VOLUME_NORMAL
-		if(!(H.species && H.species.flags & NO_BLOOD))
-			blood_volume = floor(H.blood_volume)
+		if(scan_data["blood_amount"])
+			blood_volume = scan_data["blood_amount"]
 
 			var/blood_percent =  blood_volume / 560
-			var/blood_type = H.blood_type
+			var/blood_type = scan_data["blood_type"]
 			blood_percent *= 100
 			if(blood_volume <= 500 && blood_volume > 336)
 				dat += "\t<span class='scanner'> <b>Blood Level LOW: [blood_percent]% [blood_volume]cl.</span> [SET_CLASS("Type: [blood_type]", INTERFACE_BLUE)]\n"
@@ -421,8 +360,9 @@ FORENSIC SCANNER
 				dat += "\t<span class='scanner'> <b>Blood Level CRITICAL: [blood_percent]% [blood_volume]cl.</span> [SET_CLASS("Type: [blood_type]", INTERFACE_BLUE)]\n"
 			else
 				dat += "\tBlood Level normal: [blood_percent]% [blood_volume]cl. Type: [blood_type]\n"
+
 		// Show pulse
-		dat += "\tPulse: <span class='[H.pulse == PULSE_THREADY || H.pulse == PULSE_NONE ? INTERFACE_RED : ""]'>[H.get_pulse(GETPULSE_TOOL)] bpm.</span> </td></tr></table>"
+		dat += "\tPulse: <span class='[scan_data["pulse"] || scan_data["pulse"] < 1  ? INTERFACE_RED : ""]'>[scan_data["pulse"]].</span> </td></tr></table>"
 	dat = replacetext(dat, "\n", "<br>")
 	dat = replacetext(dat, "\t", "&emsp;")
 	dat = replacetext(dat, "class='warning'", "class='[INTERFACE_RED]'")
@@ -436,7 +376,7 @@ FORENSIC SCANNER
 	if(ishuman(connected_from))
 		if(!popup_window)
 			last_scan = last_health_display.ui_data(connected_from, DETAIL_LEVEL_HEALTHANALYSER)
-			to_chat(connected_from, connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+			to_chat(connected_from, health_scan_table(last_scan))
 		else
 			if (!last_health_display)
 				last_health_display = new(connected_to)
@@ -449,7 +389,7 @@ FORENSIC SCANNER
 		if(last_scan && record_scan_on_connect)
 			record_scan_on_connect = FALSE
 			buffer_for_report += list(last_scan)
-			buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+			//buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien, FALSE, last_scan))
 			currently_selected_last_scan = buffer_for_report.len
 		if(buffer_for_report.len > 40)
 			buffer_for_report.Cut(1,3) //stop memory leak, maybe
@@ -536,7 +476,7 @@ FORENSIC SCANNER
 /obj/item/device/healthanalyzer/soul/proc/disconnect(bad_disconnect = FALSE)
 	if(last_scan)
 		buffer_for_report += list(last_scan)
-		buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien))
+		//buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien, TRUE, last_scan))
 		currently_selected_last_scan = buffer_for_report.len
 	STOP_PROCESSING(SSobj, src)
 	heart_rate_loop.stop()
