@@ -51,7 +51,7 @@
 	if(!COOLDOWN_FINISHED(src, fire_sound_cooldown))
 		return
 	COOLDOWN_START(src, fire_sound_cooldown, 1 SECONDS)
-	playsound(get_turf(src), activation_sounds, 60, falloff = 6)
+	playsound(get_turf(src), pick(activation_sounds), 60)
 
 /obj/item/hardpoint/primary/flamer/start_fire(datum/source, atom/object, turf/location, control, params)
 	. = ..()
