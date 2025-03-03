@@ -50,9 +50,6 @@
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,35)
 
-/datum/equipment_preset/uscm/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_VERYLOW
-
 /datum/equipment_preset/uscm/load_preset(mob/living/carbon/human/new_human, randomise, count_participant)
 	. = ..()
 	if(!auto_squad_name || (should_block_game_interaction(new_human) && !ert_squad))
@@ -97,15 +94,15 @@
 /datum/equipment_preset/uscm/pfc
 	name = "USCM Squad Rifleman"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-
 	access = list(ACCESS_MARINE_PREP)
 	assignment = JOB_SQUAD_MARINE
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RFN"
 	skills = /datum/skills/pfc
-
 	minimap_icon = "private"
+	empty_stomach = TRUE
+
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 
@@ -147,13 +144,13 @@
 /datum/equipment_preset/uscm/sg
 	name = "USCM Squad Smartgunner"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
 	assignment = JOB_SQUAD_SMARTGUN
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SG"
 	skills = /datum/skills/smartgunner
+	empty_stomach = TRUE
 
 	minimap_icon = "smartgunner"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -199,13 +196,13 @@
 /datum/equipment_preset/uscm/rto
 	name = "USCM Radio Telephone Operator"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	assignment = JOB_SQUAD_RTO
 	rank = JOB_SQUAD_RTO
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RTO"
 	skills = /datum/skills/pfc
+	empty_stomach = TRUE
 
 	minimap_icon = "rto"
 
@@ -224,8 +221,8 @@
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "HM"
 	skills = /datum/skills/combat_medic
-
 	minimap_icon = "medic"
+	empty_stomach = TRUE
 
 	utility_under = list(/obj/item/clothing/under/marine)
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -279,6 +276,7 @@
 	role_comm_title = "SqLdr"
 	skills = /datum/skills/tl
 	minimap_icon = "tl"
+	empty_stomach = TRUE
 
 /datum/equipment_preset/uscm/tl/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
@@ -320,15 +318,14 @@
 /datum/equipment_preset/uscm/engineer
 	name = "USCM Squad Combat Technician"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
 	assignment = JOB_SQUAD_ENGI
 	rank = JOB_SQUAD_ENGI
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "ComTech"
 	skills = /datum/skills/combat_engineer
-
 	minimap_icon = "engi"
+	empty_stomach = TRUE
 
 	utility_under = list(/obj/item/clothing/under/marine)
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -350,8 +347,8 @@
 	role_comm_title = "SctSgt"
 	minimum_age = 27
 	skills = /datum/skills/SL
-
 	minimap_icon = "leader"
+	empty_stomach = TRUE
 
 /datum/equipment_preset/uscm/leader/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
@@ -393,7 +390,6 @@
 /datum/equipment_preset/uscm/private_equipped
 	name = "USCM Squad Rifleman (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
 	access = list(ACCESS_MARINE_PREP)
 	assignment = JOB_SQUAD_MARINE
 	rank = JOB_SQUAD_MARINE
@@ -404,9 +400,6 @@
 	minimap_icon = "private"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
-
-/datum/equipment_preset/uscm/private_equipped/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/private_equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
@@ -492,9 +485,6 @@
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 
-/datum/equipment_preset/uscm/smartgunner_equipped/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_NORMAL
-
 /datum/equipment_preset/uscm/smartgunner_equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
 	new_human.underwear = "Marine Boxers"
@@ -546,9 +536,6 @@
 	skills = /datum/skills/tl
 
 	minimap_icon = "tl"
-
-/datum/equipment_preset/uscm/tl_equipped/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/tl_equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
@@ -605,9 +592,6 @@
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 
-/datum/equipment_preset/uscm/medic_equipped/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_NORMAL
-
 /datum/equipment_preset/uscm/medic_equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
 	new_human.underwear = "Marine Boxers"
@@ -658,9 +642,6 @@
 	skills = /datum/skills/SL
 
 	minimap_icon = "leader"
-
-/datum/equipment_preset/uscm/leader_equipped/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/leader_equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
@@ -720,9 +701,6 @@
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 
-/datum/equipment_preset/uscm/engineer_equipped/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_NORMAL
-
 /datum/equipment_preset/uscm/engineer_equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
 	new_human.underwear = "Marine Boxers"
@@ -769,9 +747,6 @@
 	minimap_icon = "spec"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
-
-/datum/equipment_preset/uscm/specialist_equipped/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/specialist_equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.underwear = "Marine Boxers"
@@ -828,9 +803,6 @@
 	minimap_icon = "spec"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
-
-/datum/equipment_preset/uscm/specialist_equipped/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/specialist_equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.underwear = "Marine Boxers"
@@ -1071,11 +1043,7 @@
 	auto_squad_name = SQUAD_SOF
 	ert_squad = TRUE
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
-
 	minimap_icon = "sof_sg"
-
-/datum/equipment_preset/uscm/marsoc/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/marsoc/New()
 	. = ..()
