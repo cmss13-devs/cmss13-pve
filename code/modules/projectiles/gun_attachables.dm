@@ -3076,11 +3076,11 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/mk1/prime_grenade(atom/target,obj/item/weapon/gun/gun,mob/living/user)
 	set waitfor = 0
+	if(!in_chamber)
+		return
 	var/obj/item/explosive/grenade/G = in_chamber
 	in_chamber = null
 
-	if(!in_chamber)
-		return
 
 	if(G.antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(G, user))
 		to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from firing!"))
@@ -3111,16 +3111,11 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "green_grenade-mk1"
 	attach_icon = "green_grenade-mk1_a"
 
-/obj/item/attachable/attached_gun/grenade/m120
+/obj/item/attachable/attached_gun/grenade/mk1/m120
 	name = "\improper PN/c 30mm underslung grenade launcher"
 	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, two round tube, chambers one."
-	icon_state = "grenade-mk1"
-	attach_icon = "grenade-mk1_a"
 	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
-	current_rounds = 0
 	max_rounds = 3
-	max_range = 10
-	attachment_firing_delay = 15
 
 /obj/item/attachable/attached_gun/grenade/m203 //M16 GL, only DD have it.
 	name = "\improper M203 Grenade Launcher"
