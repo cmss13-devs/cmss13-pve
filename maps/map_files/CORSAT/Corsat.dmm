@@ -1287,14 +1287,6 @@
 "aot" = (
 /turf/open/floor/almayer/research/containment/corner3,
 /area/corsat/inaccessible)
-"aoE" = (
-/obj/effect/alien/egg,
-/turf/open/asphalt{
-	icon = '/icons/mob/xenonids/weeds.dmi';
-	icon_state = "hive_weed1";
-	name = "dense hive weeds"
-	},
-/area/corsat/omega/biodome)
 "aoH" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
 	layer = 3
@@ -10138,15 +10130,6 @@
 	},
 /turf/open/floor/corsat/retrosquares,
 /area/corsat/sigma/hangar/monorail)
-"fjj" = (
-/obj/effect/alien/egg,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/asphalt{
-	icon = '/icons/mob/xenonids/weeds.dmi';
-	icon_state = "hive_weed1";
-	name = "dense hive weeds"
-	},
-/area/corsat/omega/biodome)
 "fjp" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
@@ -16472,15 +16455,6 @@
 /obj/structure/window/framed/corsat,
 /turf/open/floor/plating,
 /area/corsat/gamma/hangar/checkpoint)
-"jbP" = (
-/obj/structure/bed/nest,
-/obj/effect/alien/egg,
-/turf/open/asphalt{
-	icon = '/icons/mob/xenonids/weeds.dmi';
-	icon_state = "hive_weed1";
-	name = "dense hive weeds"
-	},
-/area/corsat/omega/biodome)
 "jbW" = (
 /obj/structure/surface/table/almayer,
 /obj/item/clipboard,
@@ -40303,7 +40277,6 @@
 /area/corsat/gamma/medbay/morgue)
 "ycQ" = (
 /obj/structure/bed/nest,
-/obj/effect/alien/egg,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/asphalt{
 	icon = '/icons/mob/xenonids/weeds.dmi';
@@ -53262,7 +53235,7 @@ wqi
 wqi
 wqi
 wqi
-aoE
+wqi
 tRS
 tRS
 wqi
@@ -53565,7 +53538,7 @@ dkx
 dkx
 wqi
 wqi
-aoE
+wqi
 dkx
 dkx
 wqi
@@ -53868,8 +53841,8 @@ dkx
 dkx
 nNH
 wqi
-aoE
-aoE
+wqi
+wqi
 wqi
 wqi
 dkx
@@ -54471,13 +54444,13 @@ wqi
 wqi
 dkx
 dkx
-aoE
+wqi
 wqi
 wqi
 nNH
 wqi
-aoE
-aoE
+wqi
+wqi
 dkx
 dkx
 dkx
@@ -54773,14 +54746,14 @@ wqi
 wqi
 dkx
 tRS
-jbP
-jbP
+pjF
+pjF
 wqi
 wqi
 pjF
 pjF
-jbP
-aoE
+pjF
+wqi
 dkx
 dkx
 dkx
@@ -55075,18 +55048,18 @@ wqi
 wqi
 dkx
 dkx
-aoE
-aoE
 wqi
 wqi
 wqi
 wqi
 wqi
 wqi
-aoE
-aoE
-aoE
-aoE
+wqi
+wqi
+wqi
+wqi
+wqi
+wqi
 wqi
 wqi
 wqi
@@ -55378,7 +55351,7 @@ dkx
 dkx
 dkx
 ycQ
-aoE
+wqi
 wqi
 wqi
 pNY
@@ -55679,8 +55652,8 @@ dkx
 dkx
 dkx
 dkx
-aoE
-aoE
+wqi
+wqi
 wqi
 wqi
 wqi
@@ -55981,7 +55954,7 @@ dkx
 dkx
 dkx
 dkx
-aoE
+wqi
 wqi
 wqi
 wqi
@@ -56295,10 +56268,10 @@ wqi
 wqi
 wqi
 wqi
-aoE
+wqi
 nNH
 wqi
-aoE
+wqi
 dkx
 dkx
 dkx
@@ -56584,25 +56557,25 @@ dkx
 dkx
 dkx
 nNH
-aoE
-aoE
-aoE
-aoE
-aoE
-aoE
-aoE
 wqi
 wqi
 wqi
 wqi
 wqi
-aoE
+wqi
+wqi
+wqi
+wqi
+wqi
+wqi
+wqi
+wqi
 dkx
 wqi
 wqi
 wqi
-aoE
-aoE
+wqi
+wqi
 dkx
 dkx
 dkx
@@ -56886,18 +56859,18 @@ nNH
 dkx
 dkx
 wqi
-aoE
+wqi
 hBk
 hBk
 hBk
 hBk
 hBk
 hBk
-aoE
 wqi
 wqi
 wqi
-aoE
+wqi
+wqi
 dkx
 dkx
 wqi
@@ -56905,7 +56878,7 @@ wqi
 wqi
 wqi
 nNH
-aoE
+wqi
 dkx
 dkx
 azX
@@ -57188,26 +57161,26 @@ wqi
 wqi
 wqi
 wqi
-aoE
+wqi
 bBa
 gOS
 oav
 nGb
 jnS
 bBa
-aoE
 wqi
 wqi
-aoE
+wqi
+wqi
 dkx
 dkx
-aoE
+wqi
 wqi
 wqi
 xAA
 wqi
 wqi
-aoE
+wqi
 dkx
 dkx
 azX
@@ -57489,27 +57462,27 @@ dkx
 dkx
 wqi
 wqi
-aoE
-aoE
+wqi
+wqi
 bBa
 beI
 uHX
 uHX
 drz
 bBa
-aoE
 wqi
-aoE
-aoE
+wqi
+wqi
+wqi
 dkx
 nNH
-aoE
-aoE
 wqi
 wqi
 wqi
 wqi
-aoE
+wqi
+wqi
+wqi
 dkx
 dkx
 azX
@@ -57787,11 +57760,11 @@ wqi
 wqi
 wqi
 wqi
-aoE
-aoE
+wqi
+wqi
 wqi
 nNH
-aoE
+wqi
 cFM
 cFM
 mte
@@ -57800,18 +57773,18 @@ tWp
 cci
 cFM
 cFM
-aoE
-aoE
+wqi
+wqi
 dkx
 dkx
 dkx
 dkx
-aoE
-aoE
 wqi
 wqi
 wqi
-aoE
+wqi
+wqi
+wqi
 dkx
 azX
 azX
@@ -58090,10 +58063,10 @@ wqi
 dkx
 dkx
 dkx
-aoE
-aoE
-aoE
-aoE
+wqi
+wqi
+wqi
+wqi
 bBa
 eMs
 mym
@@ -58102,17 +58075,17 @@ toA
 asS
 nIc
 bBa
-aoE
-aoE
+wqi
+wqi
 dkx
 dkx
 dkx
 dkx
 dkx
-fjj
-aoE
-aoE
-aoE
+nNH
+wqi
+wqi
+wqi
 dkx
 dkx
 azX
@@ -58394,8 +58367,8 @@ dkx
 dkx
 dkx
 dkx
-aoE
-aoE
+wqi
+wqi
 bBa
 aQG
 tWp
@@ -58404,8 +58377,8 @@ rwm
 tWp
 hgm
 bBa
-aoE
-aoE
+wqi
+wqi
 dkx
 dkx
 dkx
