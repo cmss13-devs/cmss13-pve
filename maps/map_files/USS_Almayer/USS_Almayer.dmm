@@ -14162,7 +14162,7 @@
 "fiN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/weapon/gun/rifle/m41a{
+/obj/item/weapon/gun/rifle/m41aMK1{
 	pixel_y = 6
 	},
 /obj/item/weapon/gun/rifle/m41a,

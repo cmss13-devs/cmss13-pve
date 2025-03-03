@@ -1,5 +1,5 @@
 /datum/equipment_preset/colonist
-	name = "US Colonist"
+	name = "US Civilian"
 	languages = list(LANGUAGE_ENGLISH)
 	faction = FACTION_COLONIST
 	skills = /datum/skills/civilian
@@ -8,7 +8,7 @@
 
 /datum/equipment_preset/colonist/bluecollar
 
-	name = "US Civilian Colonist, Blue-Collar"
+	name = "US Civilian, Blue-Collar"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -36,19 +36,19 @@
 	add_civilian_shoe(new_human)
 
 /datum/equipment_preset/colonist/bluecollar/spanish
-	name = "LatAm Civilian Colonist, Blue-Collar"
+	name = "LatAm Civilian, Blue-Collar"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 
 /datum/equipment_preset/colonist/bluecollar/japanese
-	name = "TWE Civilian Colonist, Blue-Collar"
+	name = "TWE Civilian, Blue-Collar"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/miner
 
-	name = "US Civilian Colonist, Blue-Collar (Miner)"
+	name = "US Civilian, Blue-Collar (Miner)"
 	assignment = "Miner"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -73,17 +73,17 @@
 	add_worker_shoe(new_human)
 
 /datum/equipment_preset/colonist/miner/spanish
-	name = "LatAm Civilian Colonist, Blue-Collar (Miner)"
+	name = "LatAm Civilian, Blue-Collar (Miner)"
 	languages = list(LANGUAGE_SPANISH)
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 
 /datum/equipment_preset/colonist/miner/japanese
-	name = "TWE Civilian Colonist, Blue-Collar (Miner)"
+	name = "TWE Civilian, Blue-Collar (Miner)"
 	languages = list(LANGUAGE_JAPANESE)
 	ethnicity = JAPANESE_ETHNICITY
 
 /datum/equipment_preset/colonist/construction
-	name = "US Civilian Colonist, Blue-Collar (Construction)"
+	name = "US Civilian, Blue-Collar (Construction)"
 	assignment = "Construction Worker"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -108,17 +108,17 @@
 	add_worker_shoe(new_human)
 
 /datum/equipment_preset/colonist/construction/spanish
-	name = "LatAm Colonist, Blue-Collar (Construction)"
+	name = "LatAm Civilian, Blue-Collar (Construction)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/construction/japanese
-	name = "TWE Colonist, Blue-Collar (Construction)"
+	name = "TWE Civilian, Blue-Collar (Construction)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/roughneck
-	name = "US Civilian Colonist, Blue-Collar (Roughneck)"
+	name = "US Civilian, Blue-Collar (Roughneck)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -158,17 +158,17 @@
 	add_worker_shoe(new_human)
 
 /datum/equipment_preset/colonist/roughneck/spanish
-	name = "LatAm Colonist, Blue-Collar (Roughneck)"
+	name = "LatAm Civilian, Blue-Collar (Roughneck)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/roughneck/japanese
-	name = "TWE Colonist, Blue-Collar (Roughneck)"
+	name = "TWE Civilian, Blue-Collar (Roughneck)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/cook
-	name = "US Civilian Colonist, Blue-Collar (Cook)"
+	name = "US Civilian, Blue-Collar (Cook)"
 	assignment = "Cook"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -192,18 +192,18 @@
 	//limbs
 	add_worker_shoe(new_human)
 
-/datum/equipment_preset/colonist/colonist/cook/spanish
-	name = "LatAm Colonist, Blue-Collar (Cook)"
+/datum/equipment_preset/colonist/cook/spanish
+	name = "LatAm Civilian, Blue-Collar (Cook)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-/datum/equipment_preset/colonist/colonist/cook/japanese
-	name = "TWE Colonist, Blue-Collar (Cook)"
+/datum/equipment_preset/colonist/cook/japanese
+	name = "TWE Civilian, Blue-Collar (Cook)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/chef
-	name = "US Civilian Colonist, Blue-Collar (Chef)"
+	name = "US Civilian, Blue-Collar (Chef)"
 	assignment = "Chef"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -225,18 +225,18 @@
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
-/datum/equipment_preset/colonist/colonist/chef/spanish
-	name = "LatAm Colonist, Blue-Collar (Chef)"
+/datum/equipment_preset/colonist/chef/spanish
+	name = "LatAm Civilian, Blue-Collar (Chef)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-/datum/equipment_preset/colonist/colonist/chef/japanese
-	name = "TWE Colonist, Blue-Collar (Chef)"
+/datum/equipment_preset/colonist/chef/japanese
+	name = "TWE Civilian, Blue-Collar (Chef)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/priest
-	name = "US Civilian Colonist, Priest"
+	name = "US Civilian, Priest"
 	assignment = "Spiritual Guidance Counselor"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
@@ -258,18 +258,18 @@
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
-/datum/equipment_preset/colonist/colonist/priest/spanish
-	name = "LatAm Colonist, Priest"
+/datum/equipment_preset/colonist/priest/spanish
+	name = "LatAm Civilian, Priest"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-/datum/equipment_preset/colonist/colonist/priest/japanese
-	name = "TWE Colonist, Priest"
+/datum/equipment_preset/colonist/priest/japanese
+	name = "TWE Civilian, Priest"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/whitecollar
-	name = "US Civilian Colonist, White-Collar"
+	name = "US Civilian, White-Collar"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -301,17 +301,17 @@
 
 
 /datum/equipment_preset/colonist/whitecollar/spanish
-	name = "LatAm Civilian Colonist, White-Collar"
+	name = "LatAm Civilian, White-Collar"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/whitecollar/japanese
-	name = "TWE Civilian Colonist, White-Collar"
+	name = "TWE Civilian, White-Collar"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/whitecollar/exec
-	name = "US Civilian Colonist, White-Collar (Corporate Exec)"
+	name = "US Civilian, White-Collar (Corporate Exec)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -344,12 +344,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/briefcase(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/colonist/whitecollar/exec/spanish
-	name = "LatAm Civilian Colonist, White-Collar (Corporate Exec)"
+	name = "LatAm Civilian, White-Collar (Corporate Exec)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/whitecollar/exec/japanese
-	name = "TWE Civilian Colonist, White-Collar (Corporate Exec)"
+	name = "TWE Civilian, White-Collar (Corporate Exec)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 

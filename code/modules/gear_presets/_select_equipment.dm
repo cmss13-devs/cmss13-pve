@@ -29,6 +29,7 @@
 	var/corpse = FALSE
 	var/burncorpse = FALSE
 	var/brutecorpse = FALSE
+	var/empty_stomach = FALSE
 	var/blood_volume = BLOOD_VOLUME_NORMAL
 	var/minimap_icon = "private"
 	var/minimap_background = MINIMAP_ICON_BACKGROUND_USCM
@@ -291,7 +292,10 @@
 		new_human.spawned_corpse = TRUE
 		new_human.updatehealth()
 		new_human.pulse = PULSE_NONE
+	if(empty_stomach)
+		new_human.nutrition = NUTRITION_VERYLOW
 	else
+		new_human.nutrition = NUTRITION_HIGH
 		return
 
 /datum/equipment_preset/proc/load_skills(mob/living/carbon/human/new_human, client/mob_client)
