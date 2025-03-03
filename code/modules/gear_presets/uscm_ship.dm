@@ -693,6 +693,7 @@
 
 	do_rename_platoon(new_human.client.prefs.platoon_name)
 	change_dropship_camo(new_human.client.prefs.dropship_camo)
+	change_dropship_name(new_human.client.prefs.dropship_name)
 
 /datum/equipment_preset/uscm_ship/so/upp
 	name = "UPP Platoon Commander (PltCo)"
@@ -738,7 +739,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator/upp(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/uscm_ship/so/upp/handle_late_join(mob/living/carbon/human/new_human, late_join)
 	if(!late_join)

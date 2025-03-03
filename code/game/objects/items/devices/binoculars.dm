@@ -352,6 +352,12 @@
 				QDEL_NULL(laser)
 				break
 
+/obj/item/device/binoculars/range/designator/upp
+
+	icon_state = "binoculars_upp"
+	cas_laser_overlay = "binoculars_laser_civ"
+	range_laser_overlay = "binoculars_range_civ"
+
 //pve binocs
 /obj/item/device/binoculars/range/monocular
 	name = "tactical monocular"

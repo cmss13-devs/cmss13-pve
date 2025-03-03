@@ -13,6 +13,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 		if(G.display_name in GLOB.gear_datums_by_name)
 			log_debug("Duplicate gear datum name: [G.display_name].")
 			continue
+		if(!G.special_conditions())
+			continue
 		LAZYSET(GLOB.gear_datums_by_category[G.category], "[G.display_name] [G.cost == 1 ? "(1 point)" : "([G.cost] points)"]", G)
 		GLOB.gear_datums_by_name[G.display_name] = G
 
@@ -24,6 +26,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	var/slot // Slot to equip to, if any.
 	var/list/allowed_roles   // Roles that can spawn with this item.
 	var/list/allowed_origins
+
+/datum/gear/proc/special_conditions()
+	return TRUE
 
 /datum/gear/eyewear
 	category = "Eyewear"
@@ -160,6 +165,26 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Scarf, white"
 	path = /obj/item/clothing/mask/tornscarf/snow
 
+/datum/gear/mask/neckerchief_black
+	display_name = "Neckerchief, black"
+	path = /obj/item/clothing/mask/neckerchief/black
+
+/datum/gear/mask/neckerchief_tan
+	display_name = "Neckerchief, tan"
+	path = /obj/item/clothing/mask/neckerchief
+
+/datum/gear/mask/neckerchief_green
+	display_name = "Neckerchief, green"
+	path = /obj/item/clothing/mask/neckerchief/green
+
+/datum/gear/mask/neckerchief_gray
+	display_name = "Neckerchief, gray"
+	path = /obj/item/clothing/mask/neckerchief/gray
+
+/datum/gear/mask/neckerchief_red
+	display_name = "Neckerchief, red"
+	path = /obj/item/clothing/mask/neckerchief/red
+
 /datum/gear/mask/uscm
 	allowed_origins = USCM_ORIGINS
 
@@ -191,6 +216,22 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	category = "Headwear"
 	cost = 3
 	slot = WEAR_HEAD
+
+/datum/gear/headwear/uscm/santa_hat
+	display_name = "santa hat, red"
+	path = /obj/item/clothing/head/santa
+	cost = 1
+
+/datum/gear/headwear/uscm/santa_hat/special_conditions()
+	return is_month(12) && (is_day(21) || is_day(22) || is_day(23) || is_day(24) || is_day(25) || is_day(26))
+
+/datum/gear/headwear/uscm/santa_hat_green
+	display_name = "santa hat, green"
+	path = /obj/item/clothing/head/santa/green
+	cost = 1
+
+/datum/gear/headwear/uscm/santa_hat_green/special_conditions()
+	return is_month(12) && (is_day(21) || is_day(22) || is_day(23) || is_day(24) || is_day(25) || is_day(26))
 
 /datum/gear/headwear/durag_black
 	display_name = "Durag, black"
@@ -751,6 +792,18 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/weapon
 	category = "Weapons"
 	cost = 4
+
+/datum/gear/weapon/bayonet
+	display_name = "M5 bayonet"
+	path = 	/obj/item/attachable/bayonet
+
+/datum/gear/weapon/kabar
+	display_name = "KA-BAR utility knife"
+	path = 	/obj/item/weapon/knife/marine/kabar
+
+/datum/gear/weapon/bowie
+	display_name = "Bowie fighting knife"
+	path = 	/obj/item/weapon/knife/marine/bowie
 
 /datum/gear/weapon/type_80_Bayonet
 	display_name = "Type 80 Bayonet"

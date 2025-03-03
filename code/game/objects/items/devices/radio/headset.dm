@@ -23,7 +23,7 @@
 	var/list/inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
 		"Section Sergeant" = TRACKER_SL,
-		"Squad Sergeant" = TRACKER_FTL,
+		"Squad Leader" = TRACKER_FTL,
 		"Landing Zone" = TRACKER_LZ
 	)
 	var/list/tracking_options = list()
@@ -134,6 +134,11 @@
 		return ..()
 	user.set_interaction(src)
 	tgui_interact(user)
+
+/obj/item/device/radio/headset/examine(mob/user as mob)
+	if(ishuman(user) && loc == user)
+		tgui_interact(user)
+	return ..()
 
 /obj/item/device/radio/headset/MouseDrop(obj/over_object as obj)
 	if(!CAN_PICKUP(usr, src))
@@ -415,8 +420,8 @@
 		locate_setting = tracking_options["Section Sergeant"]
 		return
 
-	if(((user in user.assigned_squad?.fireteams["SQ1"]) || (user in user.assigned_squad?.fireteams["SQ2"])) && ("Squad Sergeant" in tracking_options))
-		locate_setting = tracking_options["Squad Sergeant"]
+	if(((user in user.assigned_squad?.fireteams["SQ1"]) || (user in user.assigned_squad?.fireteams["SQ2"])) && ("Squad Leader" in tracking_options))
+		locate_setting = tracking_options["Squad Leader"]
 		return
 
 /obj/item/device/radio/headset/almayer/verb/enter_tree()
