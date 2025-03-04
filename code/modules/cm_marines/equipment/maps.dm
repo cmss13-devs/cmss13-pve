@@ -145,12 +145,6 @@
 	html_link = "images/5/54/USS_Almayer.png"
 	color = "cyan"
 
-/obj/item/map/taipei_map
-	name = "\improper Taipei Station Map"
-	desc = "Voted Okay-est Spaceport 2164"
-	html_link = ""
-	color = "red"
-
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -174,7 +168,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
-		MAP_TAIPEI_STATION = new /obj/item/map/taipei_map(),
+		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
 	)
 
 //used by marine equipment machines to spawn the correct map.

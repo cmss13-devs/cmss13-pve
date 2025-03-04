@@ -341,6 +341,7 @@
 	name = "platinum service medal"
 	desc = "The highest service medal that can be awarded to a marine; such medals are hand-given by USCM Generals to a marine. It signifies the sheer amount of time a marine has spent in the line of duty."
 	icon_state = "platinum"
+
 //Armbands
 /obj/item/clothing/accessory/armband
 	name = "red armband"
@@ -457,6 +458,17 @@
 	name = "Army Intelligence patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 525th Army Intelligence Brigade."
 	icon_state = "spookpatch"
+
+//Ribbons
+/obj/item/clothing/accessory/patch/ribbon/topography
+	name = "USCM Topography Ribbon"
+	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the USCMC Topographic Navigation Course."
+	icon_state = "topography"
+
+/obj/item/clothing/accessory/patch/ribbon/topography/honor
+	name = "USCM Honor Topography Ribbon"
+	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the top of their class at the USCMC Topographic Navigation Course."
+	icon_state = "topography_honor"
 
 //misc
 
@@ -871,6 +883,9 @@
 	icon_state = "drop_pouch"
 	hold = /obj/item/storage/internal/accessory/drop_pouch
 
+/obj/item/clothing/accessory/storage/droppouch/upp
+	icon_state = "upp_drop_pouch_alt"
+
 /obj/item/storage/internal/accessory/drop_pouch
 	w_class = SIZE_LARGE //Allow storage containers that's medium or below
 	storage_slots = null
@@ -889,23 +904,15 @@
 	icon_state = "pouch"
 	hold = /obj/item/storage/internal/accessory/smallpouch
 
+/obj/item/clothing/accessory/storage/smallpouch/upp
+	icon_state = "upp_pouch_alt"
+
 /obj/item/storage/internal/accessory/smallpouch
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_SMALL
 	storage_flags = NONE
 	storage_slots = 4
-	can_hold = list(
-		/obj/item/stack/medical/ointment,
-		/obj/item/reagent_container/hypospray/autoinjector,
-		/obj/item/storage/pill_bottle/packet,
-		/obj/item/stack/medical/bruise_pack,
-		/obj/item/stack/medical/splint,
-		/obj/item/storage/box/MRE,
-		/obj/item/tool/pen,
-		/obj/item/folder,
-		/obj/item/ammo_magazine/pistol,
-		/obj/item/tool/lighter,
-	)
+
 /obj/item/clothing/accessory/storage/holster
 	name = "shoulder holster"
 	desc = "A handgun holster with an attached pouch, allowing two magazines or speedloaders to be stored along with it."
@@ -1155,6 +1162,29 @@
 	slot = ACCESSORY_SLOT_DECORGROIN
 	flags_atom = NO_SNOW_TYPE
 
+//===========================//UPP CUSTOM ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/upppads
+	name = "\improper 6B90 Arm Plates"
+	desc = "A set of arm plates designed for the 6B90 armor system."
+	icon_state = "upp_arms"
+	item_state = "upp_arms"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/upppads/legs
+	name = "\improper 6B90 Leg Guards"
+	desc = "A set of leg greaves designed for the 6B90 armor system."
+	icon_state = "upp_greaves"
+	item_state = "upp_greaves"
+	slot = ACCESSORY_SLOT_DECORSHIN
+
+/obj/item/clothing/accessory/upppads/crotch
+	name = "\improper 6B90 Crotch Guard"
+	desc = "A crotch plate designed for the 6B90 armor system."
+	icon_state = "upp_crotch"
+	item_state = "upp_crotch"
+	slot = ACCESSORY_SLOT_DECORGROIN
+
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
 /obj/item/clothing/accessory/paint
@@ -1272,7 +1302,7 @@
 		/obj/item/explosive/grenade/smokebomb,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
-		/obj/item/explosive/grenade/high_explosive/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
 	)
@@ -1285,6 +1315,42 @@
 
 /obj/item/storage/internal/accessory/webbing/m3mag/recon
 	storage_slots = 4
+
+
+//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags
+	name = "\improper Type 90 Pattern Magazine Webbing"
+	desc = "A set of UPP magazine webbing that can carry four magazines."
+	icon_state = "upp_webbing_magazine"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/webbing/m3mag/upp
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/pistol/t73,
+		/obj/item/ammo_magazine/pistol/np92,
+		/obj/item/ammo_magazine/handful/shotgun/heavy,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
+	name = "\improper Type 78 Pattern Small Pouch Webbing"
+	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	icon_state = "upp_webbing_small"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
+	name = "\improper Type 78 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
+	icon_state = "upp_webbing_large"
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Partial Pre-load For Props
 //===
@@ -1373,7 +1439,7 @@
 		/obj/item/explosive/grenade/smokebomb,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
-		/obj/item/explosive/grenade/high_explosive/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
 	)
