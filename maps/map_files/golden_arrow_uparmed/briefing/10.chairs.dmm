@@ -207,9 +207,7 @@
 	layer = 2.9;
 	pixel_y = 2
 	},
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six{
-	plane = -7
-	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "lk" = (
