@@ -45,6 +45,14 @@
 	name = "pizza-van interior"
 	icon_state = "van"
 
+/area/interior/vehicle/ambulance
+	name = "ambulance interior"
+	icon_state = "van"
+
+/area/interior/vehicle/copcar
+	name = "cop-car interior"
+	icon_state = "van"
+
 /area/interior/vehicle/arc
 	name = "\improper M540 ARC interior"
 	icon_state = "arc"
