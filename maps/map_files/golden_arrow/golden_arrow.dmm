@@ -8,6 +8,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"aab" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/nade_box/smoke{
+	pixel_y = 7
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "aac" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16004,13 +16011,6 @@
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"exo" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/item/storage/box/nade_box/smoke{
-	pixel_y = -7
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/supply)
 "eyg" = (
 /obj/structure/machinery/door_control{
 	id = "lowercargolocks";
@@ -16754,13 +16754,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"hhl" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/item/storage/box/nade_box/smoke{
-	pixel_y = 7
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/supply)
 "hhG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -32736,7 +32729,7 @@ aej
 aOp
 aDj
 umc
-hhl
+aab
 fAo
 eGR
 hjV
