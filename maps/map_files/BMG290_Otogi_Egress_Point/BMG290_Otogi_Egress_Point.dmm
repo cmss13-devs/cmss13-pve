@@ -70,7 +70,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/synthetic)
 "acv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/farm_house)
 "acJ" = (
@@ -1260,7 +1260,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics_hub)
 "aFk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/lightreplacer,
 /turf/open/floor/prison/darkyellow2/north,
 /area/bmg290/relay/engineering)
@@ -1454,7 +1454,7 @@
 /area/bmg290/wilderness_roof/storage_house)
 "aLA" = (
 /obj/item/fishing_pole,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -1605,7 +1605,7 @@
 /turf/open/floor/prison/blue/west,
 /area/bmg290/colony/admin)
 "aPY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison,
 /area/bmg290/colony/logistics_hub)
 "aQc" = (
@@ -1645,7 +1645,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/keppitz/entry_pub)
 "aQU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave{
 	desc = "There's two of them.";
 	pixel_x = 1;
@@ -1960,7 +1960,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/diner)
 "aYG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/toy/deck/uno{
 	pixel_x = 9;
@@ -2172,7 +2172,7 @@
 /turf/open/shale,
 /area/bmg290/site/discovered)
 "bca" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/lightreplacer,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/hangar)
@@ -2462,7 +2462,7 @@
 /turf/open/floor/plating,
 /area/bmg290/relay/synthetic)
 "biH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1;
 	pixel_x = 1;
@@ -2532,7 +2532,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/farm_house)
 "bjA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/communications{
 	dir = 4
 	},
@@ -3154,7 +3154,7 @@
 /turf/open/floor/prison/sterile_white,
 /area/bmg290/keppitz/interlude)
 "bzC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -3162,7 +3162,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/complex)
 "bzE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/caverns/cave_west)
 "bAb" = (
@@ -3240,7 +3240,7 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/wilderness/relay_exterior)
 "bBt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/security)
@@ -3519,7 +3519,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/bmg290/wilderness/colony_exterior)
 "bJV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/under/marine/veteran/van_bandolier{
 	pixel_y = 9
 	},
@@ -3554,7 +3554,7 @@
 /turf/open/floor/kutjevo/tan/multi_tiles,
 /area/bmg290/colony/complex)
 "bJW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/working_joe_pda,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison/floor_plate,
@@ -3581,7 +3581,7 @@
 /turf/open/floor/plating,
 /area/bmg290/relay/synthetic)
 "bKC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/pillbottles{
 	pixel_x = 9;
 	pixel_y = 10
@@ -3635,7 +3635,7 @@
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/keppitz/archives)
 "bLx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23/extended{
 	pixel_x = -4;
@@ -3743,7 +3743,7 @@
 /turf/open/floor/almayer_hull,
 /area/bmg290/colony/logistics_hub)
 "bML" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/checkpoint)
 "bNb" = (
@@ -4083,7 +4083,7 @@
 /area/bmg290/wilderness/road)
 "bXV" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/wy_mre,
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/road)
@@ -4331,7 +4331,7 @@
 /turf/open/floor/plating/warnplate/west,
 /area/bmg290/colony/logistics_hub)
 "ccG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/toastedsandwich{
 	pixel_y = 10
 	},
@@ -4717,7 +4717,7 @@
 /turf/open/floor/prison,
 /area/bmg290/keppitz/entry_pub)
 "clh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/spray/cleaner,
 /obj/item/reagent_container/spray/cleaner{
 	pixel_x = 8;
@@ -5168,7 +5168,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/entry_pub)
 "cvJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/whitebluefull,
 /area/bmg290/relay/dataserver)
 "cwE" = (
@@ -5489,7 +5489,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/engineering)
 "cDP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
@@ -5538,7 +5538,7 @@
 /turf/open/floor/prison/cell_stripe/north,
 /area/bmg290/wilderness/archaeology)
 "cFd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/device/flashlight/lamp{
 	pixel_x = -8;
@@ -5819,7 +5819,7 @@
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/keppitz/research)
 "cLh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_magazine/shotgun/slugs{
 	pixel_x = 4;
 	pixel_y = 5
@@ -5975,7 +5975,7 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/caverns/filtration)
 "cPR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/lightreplacer,
 /turf/open/floor/plating,
 /area/bmg290/relay/synthetic)
@@ -6359,11 +6359,11 @@
 /turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "cZo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/synthetic)
 "cZq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/almayer/flight_recorder/colony{
 	pixel_x = -6;
 	pixel_y = 10
@@ -6610,7 +6610,7 @@
 /turf/open/floor/asteroidwarning,
 /area/bmg290/wilderness/colony_exterior)
 "dfT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/working_joe_pda,
 /turf/open/floor/prison/darkyellow2/north,
 /area/bmg290/colony/complex)
@@ -7026,7 +7026,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/flightdeck)
 "dpC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 80
@@ -7494,7 +7494,7 @@
 /turf/open/floor/prison/whitegreen/southeast,
 /area/bmg290/colony/diner)
 "dzm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/pen,
 /obj/item/paper_bin/wy{
 	pixel_x = 8;
@@ -7977,7 +7977,7 @@
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/wilderness/road)
 "dMh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/fp9000{
 	pixel_x = -7;
 	pixel_y = 18
@@ -8021,7 +8021,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/site/discovered)
 "dMI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/synthetic)
@@ -8029,7 +8029,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/almayer/flight_recorder,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/telecommunication)
@@ -8517,7 +8517,7 @@
 	icon_state = "siding4"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -8609,7 +8609,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/site/undiscovered)
 "dYD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	desc = "A small desktop computer. Someone has switched to personal emails and disabled the inventory sort system.";
 	icon_state = "alert:2";
@@ -8681,7 +8681,7 @@
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/almayer/comp_open,
 /turf/open/floor/plating,
 /area/bmg290/colony/hangar)
@@ -8938,7 +8938,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/bmg290/colony/complex)
 "ehV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -9080,7 +9080,7 @@
 /turf/open/asphalt/cement/cement2,
 /area/bmg290/wilderness/outskirts)
 "elJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/tile/plasteel{
 	pixel_x = 8;
 	pixel_y = 9
@@ -9367,7 +9367,7 @@
 /turf/open/floor/prison/green/southeast,
 /area/bmg290/colony/complex)
 "esf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/megaphone,
 /obj/item/weapon/pole,
 /obj/effect/decal/cleanable/dirt,
@@ -9509,7 +9509,7 @@
 /area/bmg290/caverns/filtration)
 "evq" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/corsat/whitebluefull,
 /area/bmg290/relay/dataserver)
 "evu" = (
@@ -9535,7 +9535,7 @@
 /turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "ewR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer,
 /obj/structure/machinery/light{
 	dir = 1
@@ -9993,7 +9993,7 @@
 /area/bmg290/wilderness/road)
 "eEd" = (
 /obj/structure/pipes/vents/pump,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
@@ -10138,7 +10138,7 @@
 /turf/open/floor/prison/floor_marked,
 /area/bmg290/wilderness_roof/storage_house)
 "eIj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic{
 	pixel_x = -8;
 	pixel_y = -5
@@ -10184,7 +10184,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding4"
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/newspaper,
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/colony/complex)
@@ -10220,7 +10220,7 @@
 /turf/open/floor/prison/green/north,
 /area/bmg290/colony/complex)
 "eLk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
 	layer = 3.2;
@@ -10374,7 +10374,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/complex)
 "eOI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/entry_pub)
@@ -10492,7 +10492,7 @@
 /turf/open/shale,
 /area/bmg290/caverns/site_caves)
 "eRy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/vents/pump,
 /obj/item/device/flashlight,
 /turf/open/floor/prison/darkred2/southwest,
@@ -10584,7 +10584,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/wilderness/relay_exterior)
 "eUO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 8
 	},
@@ -11069,7 +11069,7 @@
 /turf/open/floor/prison/floor_plate/southwest,
 /area/bmg290/colony/complex)
 "fgZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/closed,
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/archaeology)
@@ -11133,7 +11133,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/cargo)
 "fir" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = 4;
 	pixel_y = 17
@@ -11436,7 +11436,7 @@
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/road)
 "fqB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/archives)
@@ -11711,7 +11711,7 @@
 /turf/open/auto_turf/shale/layer0_plate,
 /area/bmg290/caverns/site_caves)
 "fwX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 80
@@ -11912,7 +11912,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/keppitz/entry_pub)
 "fzH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
@@ -12148,7 +12148,7 @@
 "fFN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/device/working_joe_pda,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "fFO" = (
@@ -12260,7 +12260,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/colony/motorpool)
 "fIX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard{
 	pixel_x = 9;
 	pixel_y = -4
@@ -12325,7 +12325,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/dataserver)
 "fKW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/computer/cameras/telescreen/entertainment{
 	icon_state = "ai_bsod";
@@ -12488,7 +12488,7 @@
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/masks{
 	pixel_x = 8;
 	pixel_y = 11
@@ -12527,7 +12527,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "fPe" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	desc = "A small desktop computer. Someone has switched to personal emails and disabled the inventory sort system.";
 	icon_state = "alert:2";
@@ -12567,7 +12567,7 @@
 /turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "fPS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/station_alert{
 	dir = 1
 	},
@@ -12608,7 +12608,7 @@
 /area/bmg290/wilderness/site)
 "fQR" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/cargo)
 "fRD" = (
@@ -12660,7 +12660,7 @@
 /turf/open/floor/asteroidplating,
 /area/bmg290/colony/motorpool)
 "fSi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/faux_wood,
@@ -12814,7 +12814,7 @@
 /turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "fVx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/glasses/science,
 /obj/item/storage/box/gloves{
 	pixel_x = -9;
@@ -13016,7 +13016,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/bmg290/keppitz/interlude)
 "fYP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/complex)
@@ -13212,7 +13212,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/synthetic)
 "gde" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/phone_base/colony_net/rotary{
 	phone_category = "BMG290 Otogi";
 	phone_color = "Blue";
@@ -13818,7 +13818,7 @@
 /turf/open/floor/plating,
 /area/bmg290/keppitz/research)
 "guf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
@@ -14097,7 +14097,7 @@
 /turf/open/floor/white,
 /area/bmg290/colony/complex)
 "gDg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
@@ -14224,7 +14224,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/checkpoint)
 "gGG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/cargo)
 "gGH" = (
@@ -14394,7 +14394,7 @@
 /turf/open/asphalt,
 /area/bmg290/colony/hangar)
 "gKg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/accessory/health/ceramic_plate{
 	pixel_x = 9;
 	pixel_y = 6
@@ -14441,7 +14441,7 @@
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/bmg290/keppitz/acquisitions)
 "gKJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/mechanical{
 	pixel_x = -6;
 	pixel_y = 12
@@ -14483,7 +14483,7 @@
 /turf/open/gm/river/beach_water,
 /area/bmg290/wilderness/beach)
 "gLi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/geiger_counter{
 	pixel_x = 7;
 	pixel_y = -6
@@ -14734,7 +14734,7 @@
 /turf/open/floor/asteroidplating,
 /area/bmg290/colony/motorpool)
 "gTA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine/corporate,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
@@ -14884,7 +14884,7 @@
 /turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "gYa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/working_joe_pda,
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz/command)
@@ -14911,7 +14911,7 @@
 /area/bmg290/colony/complex)
 "gYK" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/hardpoint/support/flare_launcher{
 	pixel_x = -1;
 	pixel_y = 5
@@ -15010,7 +15010,7 @@
 /turf/open/floor/prison,
 /area/bmg290/colony/hangar)
 "hbE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/chem_dispenser/soda{
 	pixel_y = 4;
 	density = 0;
@@ -15930,7 +15930,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/road)
 "hwT" = (
@@ -16146,7 +16146,7 @@
 /turf/open/asphalt/cement/cement3,
 /area/bmg290/wilderness/colony_exterior)
 "hBL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	desc = "A small desktop computer. Someone has switched to personal emails and disabled the inventory sort system.";
 	icon_state = "alert:2";
@@ -16302,7 +16302,7 @@
 /turf/open/floor/prison,
 /area/bmg290/wilderness_roof/farm_house)
 "hEP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
 	pixel_x = 16;
@@ -16561,7 +16561,7 @@
 /area/bmg290/relay/underground_shelter)
 "hLp" = (
 /obj/effect/decal/siding,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/interior/wood/alt,
 /area/bmg290/wilderness/beach)
@@ -17444,7 +17444,7 @@
 /turf/open/gm/dirtgrassborder/west,
 /area/bmg290/wilderness/colony_exterior)
 "idL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/briefcase/inflatable{
 	pixel_y = 10
 	},
@@ -17882,7 +17882,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/wilderness/farmland)
 "inX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
 	name = "Midway Remote Control Console";
 	shuttleId = "dropship_midway";
@@ -17934,7 +17934,7 @@
 /turf/open/floor/coagulation/icon0_0,
 /area/bmg290/caverns/filtration)
 "ipE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/defibrillator,
 /obj/item/device/flashlight/lamp/on{
 	pixel_x = 6;
@@ -17994,7 +17994,7 @@
 /turf/open/floor/prison/whitegreen/northeast,
 /area/bmg290/colony/diner)
 "irV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze{
 	pixel_x = 7;
 	pixel_y = 9
@@ -18029,7 +18029,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/bmg290/colony/security)
 "itm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/cargo)
@@ -18498,7 +18498,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/test)
 "iEe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_y = 6
@@ -18624,7 +18624,7 @@
 /turf/open/floor/prison/darkyellow2/east,
 /area/bmg290/wilderness_roof/telecomms_station)
 "iHA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
 	dir = 4;
@@ -18738,7 +18738,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/wilderness/outskirts)
 "iJC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/on,
 /turf/open/floor/prison,
 /area/bmg290/wilderness_roof/checkpoint)
@@ -18901,7 +18901,7 @@
 /turf/open/floor/plating,
 /area/bmg290/relay/synthetic)
 "iNz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/backpack/general_belt{
 	pixel_x = 6;
 	pixel_y = -3
@@ -18994,7 +18994,7 @@
 /turf/open/floor/plating,
 /area/bmg290/wilderness/colony_exterior)
 "iOX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/wy_mre{
 	pixel_x = 5;
 	pixel_y = 6
@@ -19556,7 +19556,7 @@
 	pixel_x = 7;
 	pixel_y = 27
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/food/drinks/coffeecup{
 	pixel_x = -7;
@@ -20073,7 +20073,7 @@
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/wilderness/outskirts)
 "jqk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/command)
 "jql" = (
@@ -20165,7 +20165,7 @@
 /turf/open/asphalt/cement,
 /area/bmg290/relay/exterior_storage)
 "jrK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/backpack/marine{
 	pixel_x = -7;
 	pixel_y = 8
@@ -20621,7 +20621,7 @@
 /turf/open/gm/river/beach_water,
 /area/bmg290/caverns/filtration)
 "jCD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/maintenance_jack,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/box/wy_mre,
@@ -21776,7 +21776,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4;
 	pixel_y = 4
@@ -22137,7 +22137,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/complex)
 "kpT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/archaeology)
@@ -22281,7 +22281,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/bmg290/wilderness/archaeology)
 "ktf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	pixel_x = 2;
 	pixel_y = 5;
@@ -22307,7 +22307,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/storage_house)
 "ktt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/clothing/gloves/black,
 /obj/item/clothing/gloves/black{
@@ -22449,7 +22449,7 @@
 /turf/open/floor/prison,
 /area/bmg290/relay/hallway)
 "kuV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/reagent_scanner/adv,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -22986,7 +22986,7 @@
 /area/bmg290/keppitz/command)
 "kMF" = (
 /obj/structure/window/reinforced/tinted,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics_hub)
 "kMM" = (
@@ -23048,7 +23048,7 @@
 /turf/open/floor/prison/cell_stripe/west,
 /area/bmg290/wilderness/colony_exterior)
 "kOo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/donut_box,
 /obj/structure/machinery/light{
 	dir = 8
@@ -23140,7 +23140,7 @@
 /turf/open/gm/dirtgrassborder/east,
 /area/bmg290/wilderness/colony_exterior)
 "kSd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/white{
 	pixel_x = -6;
 	pixel_y = -2
@@ -23411,7 +23411,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/diner)
 "kYd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp/on{
 	pixel_x = 8;
 	pixel_y = 8
@@ -23680,7 +23680,7 @@
 /turf/open/floor/prison/blue/southwest,
 /area/bmg290/keppitz/command)
 "leY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/general_air_control/fuel_injection,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/engineering)
@@ -24200,7 +24200,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/road)
 "lqd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/aesirsalad,
 /obj/item/trash/USCMtray{
 	pixel_x = 6;
@@ -24834,7 +24834,7 @@
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/keppitz/research)
 "lFP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/pills,
 /obj/effect/spawner/random/pills,
 /obj/item/device/flashlight/lamp/on{
@@ -25375,7 +25375,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/complex)
 "lRs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/powercell,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/dataserver)
@@ -25660,7 +25660,7 @@
 /turf/closed/wall/r_wall/chigusa,
 /area/bmg290/keppitz/interlude)
 "lZL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light,
 /turf/open/floor/prison/floor_plate,
@@ -25782,7 +25782,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/caverns/filtration)
 "mdz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay/synthetic)
@@ -25819,7 +25819,7 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/bmg290/wilderness/road)
 "meG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray{
 	pixel_x = 0;
 	pixel_y = 7
@@ -25842,7 +25842,7 @@
 /turf/open/floor/grey_dark2,
 /area/bmg290/site/undiscovered)
 "meZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = 2;
 	pixel_y = -6
@@ -26054,7 +26054,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/bmg290/wilderness/colony_exterior)
 "mjm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/suit/storage/hazardvest{
 	pixel_x = 8;
@@ -26207,7 +26207,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/archaeology)
 "mmz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/analyzer/plant_analyzer{
 	pixel_x = 1;
 	pixel_y = 13
@@ -26270,7 +26270,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/relay/synthetic)
 "mnC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/analyzer/plant_analyzer{
 	pixel_x = 1;
 	pixel_y = 13
@@ -26527,7 +26527,7 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/relay/synthetic)
 "mtb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
@@ -26776,7 +26776,7 @@
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/colony/bar)
 "mBi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison/floor_plate,
@@ -26911,7 +26911,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/hangar)
 "mGe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/scythe,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/co2_cartridge,
@@ -27284,7 +27284,7 @@
 /turf/open/gm/river/beach_water,
 /area/bmg290/wilderness/outskirts)
 "mSR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/working_joe_pda,
 /turf/open/floor/prison,
 /area/bmg290/colony/logistics_hub)
@@ -27518,7 +27518,7 @@
 /turf/open/floor/prison,
 /area/bmg290/colony/diner)
 "mXi" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/working_joe_pda,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics)
@@ -27612,7 +27612,7 @@
 /turf/open/asphalt,
 /area/bmg290/relay/cargo)
 "naG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = 4;
 	pixel_y = -6
@@ -28071,7 +28071,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/shuttles/drop2)
 "njV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
@@ -28298,7 +28298,7 @@
 /turf/open/floor/kutjevo/tan/grey_edge,
 /area/bmg290/colony/bar)
 "not" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger{
 	pixel_x = 14;
 	pixel_y = 3
@@ -28957,7 +28957,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "nGV" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -28976,7 +28976,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/relay/cargo)
 "nHr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/almayer/comp_closed{
 	pixel_y = 10
 	},
@@ -29015,7 +29015,7 @@
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/shale,
 /area/bmg290/caverns/site_caves)
 "nIw" = (
@@ -29995,7 +29995,7 @@
 /area/bmg290/keppitz/test)
 "odO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/maintenance_jack,
 /obj/structure/machinery/light{
 	dir = 1
@@ -30096,7 +30096,7 @@
 /turf/open/floor/grey_dark2,
 /area/bmg290/site/discovered)
 "ofW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/plating,
 /area/bmg290/relay/synthetic)
 "ogH" = (
@@ -30503,7 +30503,7 @@
 /turf/open/asphalt/cement/cement14,
 /area/bmg290/wilderness/colony_exterior)
 "osr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/rollingpin{
 	pixel_y = 4;
 	pixel_x = -6
@@ -30526,7 +30526,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/bmg290/wilderness/beach)
 "osB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1;
 	pixel_x = 1;
@@ -30611,7 +30611,7 @@
 /turf/open/gm/dirt2,
 /area/bmg290/caverns/terranium)
 "oto" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/colony/game{
 	pixel_y = 10;
 	pixel_x = 15
@@ -31328,7 +31328,7 @@
 /turf/open/gm/dirt,
 /area/bmg290/wilderness/beach)
 "oIG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/almayer/comp_closed,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/hangar)
@@ -31387,7 +31387,7 @@
 /turf/open/floor/prison/green,
 /area/bmg290/colony/complex)
 "oJI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/green/southeast,
 /area/bmg290/colony/complex)
 "oKg" = (
@@ -31405,7 +31405,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/wilderness/farmland)
 "oKS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/lightreplacer,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/complex)
@@ -31652,7 +31652,7 @@
 /turf/open/floor/prison/cell_stripe/north,
 /area/bmg290/wilderness/farmland)
 "oQy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/interlude)
 "oQC" = (
@@ -31742,7 +31742,7 @@
 /turf/open/floor/almayer/w_y2,
 /area/bmg290/shuttles/drop3)
 "oSW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/toy/deck{
 	pixel_x = -10;
@@ -31777,7 +31777,7 @@
 	pixel_x = -3;
 	pixel_y = 6
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics)
 "oUx" = (
@@ -32399,7 +32399,7 @@
 	dir = 4
 	},
 /obj/structure/machinery/power/apc/almayer/west,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/almayer/handheld1,
 /obj/item/prop/almayer/handheld1{
 	pixel_y = -8;
@@ -32423,7 +32423,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/caverns/terranium)
 "piJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/checkpoint)
@@ -33030,7 +33030,7 @@
 	pixel_x = 16;
 	name = "Security Phone"
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = -17;
 	pixel_y = 7
@@ -33102,7 +33102,7 @@
 	pixel_x = 9;
 	pixel_y = -4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/under/colonist/clf{
 	pixel_x = 6;
 	pixel_y = 7
@@ -33130,12 +33130,12 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/complex)
 "pAz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/misc/flares,
 /turf/open/floor/prison,
 /area/bmg290/wilderness_roof/checkpoint)
 "pAF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/hallway)
@@ -33493,7 +33493,7 @@
 /turf/open/gm/river/beach_water,
 /area/bmg290/caverns/filtration)
 "pJK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bedsheetbin{
 	icon_state = "linenbin-empty";
 	pixel_y = 13;
@@ -33532,7 +33532,7 @@
 	network = null;
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/entry_pub)
 "pJZ" = (
@@ -34537,7 +34537,7 @@
 /turf/open/floor/prison/darkred2/north,
 /area/bmg290/keppitz/interlude)
 "qfw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 80
@@ -34629,7 +34629,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/motorpool)
 "qit" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_y = 4
@@ -34827,7 +34827,7 @@
 /turf/open/floor/asteroidplating,
 /area/bmg290/wilderness/colony_exterior)
 "qna" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/sterile_white,
 /area/bmg290/relay/underground_shelter)
 "qno" = (
@@ -34908,7 +34908,7 @@
 /turf/open/floor/prison/bluecorner/north,
 /area/bmg290/colony/admin)
 "qpI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray{
 	pixel_x = 0;
 	pixel_y = 3
@@ -34949,7 +34949,7 @@
 /turf/closed/wall/strata_outpost,
 /area/bmg290/caverns/cave_west)
 "qqC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard{
 	pixel_x = 6;
 	pixel_y = -2
@@ -35097,12 +35097,12 @@
 /turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "qsj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/working_joe_pda,
 /turf/open/floor/prison/darkyellow2/southeast,
 /area/bmg290/relay/synthetic)
 "qsx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = -4;
 	pixel_y = 11
@@ -35342,7 +35342,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/underground_shelter)
 "qze" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -35436,7 +35436,7 @@
 /turf/open/floor/plating/wood,
 /area/bmg290/colony/admin)
 "qAs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/hangar)
 "qAv" = (
@@ -35449,7 +35449,7 @@
 /turf/open/floor/prison/blue/east,
 /area/bmg290/colony/admin)
 "qAx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/synthetic)
@@ -35689,7 +35689,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/relay/underground_shelter)
 "qIb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 4;
 	network = null
@@ -35735,7 +35735,7 @@
 /turf/open/floor/prison/darkyellow2/north,
 /area/bmg290/relay/synthetic)
 "qIC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz/interlude)
 "qIO" = (
@@ -35904,7 +35904,7 @@
 /turf/open/floor/grass,
 /area/bmg290/keppitz/interlude)
 "qOv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 8
 	},
@@ -35926,7 +35926,7 @@
 /turf/open/asphalt,
 /area/bmg290/colony/motorpool)
 "qPh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/recharger{
 	pixel_y = 1
@@ -36191,7 +36191,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/hangar)
 "qXR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/handcuffs{
 	pixel_x = 9;
 	pixel_y = 11
@@ -36298,7 +36298,7 @@
 /turf/open/floor/kutjevo/grey,
 /area/bmg290/caverns/site_caves)
 "rbu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/cult/cult_engineer,
 /area/bmg290/site/discovered)
 "rbw" = (
@@ -36309,14 +36309,14 @@
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/caverns/cave_east)
 "rcy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/strata/fake_wood,
 /area/bmg290/wilderness/road)
 "rcF" = (
 /turf/open/floor/prison/darkpurple2/north,
 /area/bmg290/keppitz/test)
 "rcH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_y = 4
@@ -36482,7 +36482,7 @@
 /turf/open/floor/coagulation/icon8_0,
 /area/bmg290/wilderness/colony_exterior)
 "rgp" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics_hub)
 "rgQ" = (
@@ -36535,7 +36535,7 @@
 /turf/open/asphalt/cement/cement3,
 /area/bmg290/wilderness/colony_exterior)
 "riH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	dir = 1;
 	network = list("theta")
@@ -36563,7 +36563,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/colony/bar)
 "rjl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data{
 	dir = 1
 	},
@@ -36697,7 +36697,7 @@
 /turf/open/floor/kutjevo/multi_tiles,
 /area/bmg290/colony/complex)
 "rlA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison/floor_plate,
@@ -36707,7 +36707,7 @@
 /turf/open/gm/coast/beachcorner/north_east,
 /area/bmg290/wilderness/beach)
 "rlG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/light,
 /obj/item/device/lightreplacer,
@@ -36774,7 +36774,7 @@
 /turf/open/floor/prison,
 /area/bmg290/caverns/filtration)
 "rnr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "Relay Checkpoint";
 	name = "Blocker Button"
@@ -36889,7 +36889,7 @@
 /area/bmg290/colony/complex)
 "rpj" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/almayer/comp_open,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/hangar)
@@ -36942,7 +36942,7 @@
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -36996,7 +36996,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/site/discovered)
 "rsu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz/archives)
@@ -37067,7 +37067,7 @@
 /turf/open/floor/prison/darkyellow2/west,
 /area/bmg290/relay/synthetic)
 "ruF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/hardhat{
 	pixel_x = 10;
 	pixel_y = 5
@@ -37134,7 +37134,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -12
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/asphalt,
 /area/bmg290/wilderness/road)
@@ -37647,7 +37647,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/hangar)
 "rHQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -37894,7 +37894,7 @@
 /turf/open/gm/river/beach_water,
 /area/bmg290/wilderness/beach)
 "rQu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/prison,
 /area/bmg290/colony/complex)
@@ -38324,7 +38324,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/farmland)
 "rZV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/storage/jacket/marine/pilot{
 	pixel_x = -9;
 	pixel_y = 11;
@@ -38619,7 +38619,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -38655,7 +38655,7 @@
 /turf/closed/wall/strata_outpost/reinforced,
 /area/bmg290/relay/synthetic)
 "sgt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/stamp/ro{
 	pixel_x = -8;
 	pixel_y = 6
@@ -38764,7 +38764,7 @@
 /turf/open/floor/prison/cell_stripe/west,
 /area/bmg290/relay/telecommunication)
 "sjY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/fishing_pole,
 /turf/open/floor/strata/fake_wood,
 /area/bmg290/wilderness/road)
@@ -39299,7 +39299,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/telecommunication)
 "swh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = -4;
 	pixel_y = 11
@@ -39329,7 +39329,7 @@
 /turf/open/floor/prison/greenblue/east,
 /area/bmg290/wilderness_roof/farm_house)
 "swT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	colony_camera_mapload = 0;
 	network = list("Corporate")
@@ -39644,7 +39644,7 @@
 /turf/open/floor/asteroidplating,
 /area/bmg290/relay/exterior_storage)
 "sFg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison/floor_plate,
@@ -39713,7 +39713,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/archaeology)
 "sGv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/cargo)
@@ -40036,7 +40036,7 @@
 /turf/open/floor/prison/sterile_white,
 /area/bmg290/keppitz/research)
 "sLq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison/floor_plate,
@@ -40067,7 +40067,7 @@
 /area/bmg290/relay/cargo)
 "sMv" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/prison/darkyellow2/north,
 /area/bmg290/relay/synthetic)
@@ -40119,7 +40119,7 @@
 /turf/open/asphalt/cement/cement15,
 /area/bmg290/wilderness/road)
 "sOd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine,
 /obj/structure/machinery/light{
 	dir = 1;
@@ -40541,14 +40541,14 @@
 /turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/wilderness_roof/farm_house)
 "sZg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/research)
 "sZj" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/phone_base/colony_net/rotary{
 	phone_category = "BMG290 Otogi";
 	phone_id = "Otogi Hangar Deck";
@@ -40757,7 +40757,7 @@
 /turf/open/floor/coagulation/icon8_4,
 /area/bmg290/wilderness/colony_exterior)
 "thQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/lightreplacer,
 /turf/open/floor/plating/wood,
 /area/bmg290/colony/logistics_hub)
@@ -40936,7 +40936,7 @@
 /turf/open/floor/strata/floor3,
 /area/bmg290/colony/hangar)
 "tmG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/uscm{
 	pixel_x = -8;
 	pixel_y = 8
@@ -41017,7 +41017,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/shed)
 "toQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/grey_dark2,
 /area/bmg290/site/discovered)
 "tpc" = (
@@ -41201,7 +41201,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/wilderness/colony_exterior)
 "ttU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_y = 6
@@ -41410,7 +41410,7 @@
 /turf/open/floor/strata/floor3,
 /area/bmg290/colony/hangar)
 "tAX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/bmg290/relay/underground_shelter)
@@ -41663,7 +41663,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bmg290/wilderness/outskirts)
 "tIz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/under/rank/worker_overalls{
 	pixel_x = -10;
 	pixel_y = -5
@@ -41857,7 +41857,7 @@
 /area/bmg290/keppitz/entry)
 "tNy" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/newspaper,
 /turf/open/floor/prison/green,
 /area/bmg290/colony/complex)
@@ -41889,7 +41889,7 @@
 /obj/item/storage/briefcase/inflatable{
 	pixel_y = 10
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
 	light_color = "#dae2ff"
@@ -42110,7 +42110,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/bmg290/keppitz/acquisitions)
 "tUT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/med_data/laptop,
 /turf/open/floor/almayer/dark_sterile,
 /area/bmg290/relay/hallway)
@@ -42992,7 +42992,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/cargo)
 "utv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/faxmachine/uscm,
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -43169,7 +43169,7 @@
 /turf/open/floor/darkblue2/north,
 /area/bmg290/relay/dataserver)
 "uyR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/blood/OMinus,
 /obj/item/reagent_container/blood/OPlus,
 /obj/item/reagent_container/blood/BPlus,
@@ -43473,7 +43473,7 @@
 /turf/open/floor/strata/floor3,
 /area/bmg290/keppitz/hangar)
 "uIv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison,
 /area/bmg290/colony/complex)
 "uIw" = (
@@ -43709,7 +43709,7 @@
 /turf/open/floor/shiva/purple/west,
 /area/bmg290/colony/complex)
 "uOR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/working_joe_pda,
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -43855,7 +43855,7 @@
 /turf/open/asphalt,
 /area/bmg290/wilderness/relay_exterior)
 "uTb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/hatchet{
 	pixel_x = -5;
 	pixel_y = 2
@@ -44129,7 +44129,7 @@
 /turf/open/floor/strata/floor3,
 /area/bmg290/colony/hangar)
 "vaQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/phone_base/colony_net/rotary{
 	name = "Keppitz Archive Phone";
 	phone_category = "BMG290 Otogi";
@@ -44149,7 +44149,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/complex)
 "vbj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp{
 	pixel_x = 6;
 	pixel_y = 16
@@ -44393,7 +44393,7 @@
 /turf/open/floor/plating,
 /area/bmg290/colony/engineering)
 "vfa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/coffeecup/wy{
 	pixel_x = -9;
 	pixel_y = 7
@@ -44756,7 +44756,7 @@
 /turf/open/floor/prison/darkyellow2/north,
 /area/bmg290/keppitz/test)
 "voD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight,
 /turf/open/floor/plating,
 /area/bmg290/relay/synthetic)
@@ -44800,7 +44800,7 @@
 /turf/open/auto_turf/shale/layer0_plate,
 /area/bmg290/caverns/site_caves)
 "vpA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_y = 4
 	},
@@ -44874,7 +44874,7 @@
 /turf/open/floor/strata/faux_wood,
 /area/bmg290/keppitz/archives)
 "vsk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = -4;
 	pixel_y = 11
@@ -44890,7 +44890,7 @@
 /area/bmg290/colony/hangar)
 "vsy" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light/small{
 	dir = 8;
 	pixel_x = -11;
@@ -45244,7 +45244,7 @@
 /turf/open/floor/almayer/tcomms,
 /area/bmg290/relay/telecommunication)
 "vBh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/folder/blue{
 	pixel_x = 3;
@@ -45284,7 +45284,7 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/caverns/site_caves)
 "vCO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/USCMtray,
 /obj/item/storage/box/wy_mre,
 /turf/open/floor/interior/wood/alt,
@@ -45656,7 +45656,7 @@
 /turf/open/floor/darkyellowcorners2/north,
 /area/bmg290/caverns/filtration)
 "vLQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/prison/darkred2,
 /area/bmg290/colony/security)
@@ -45732,7 +45732,7 @@
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/almayer/box,
 /obj/item/hardpoint/support/flare_launcher{
 	pixel_x = -1;
@@ -45939,12 +45939,12 @@
 /area/bmg290/colony/hospital)
 "vSN" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/misc/flashlight,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/cargo)
 "vSS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/plating/wood,
 /area/bmg290/colony/logistics_hub)
 "vTa" = (
@@ -45967,7 +45967,7 @@
 /turf/open/asphalt,
 /area/bmg290/wilderness/colony_exterior)
 "vTm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/red{
 	pixel_x = -8;
 	pixel_y = 16
@@ -46057,7 +46057,7 @@
 /turf/open/floor/prison/floor_marked,
 /area/bmg290/wilderness_roof/storage_house)
 "vUT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/briefcase/stowaway{
 	pixel_y = 14
 	},
@@ -46117,7 +46117,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/engineering)
 "vVd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 4
@@ -46238,7 +46238,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding5"
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
 	dir = 8;
@@ -46462,7 +46462,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/lightreplacer,
 /turf/open/floor/almayer/plating,
 /area/bmg290/relay/exterior_storage)
@@ -46509,7 +46509,7 @@
 /turf/open/floor/light/white,
 /area/bmg290/wilderness/road)
 "weI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/map,
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz/command)
@@ -46536,7 +46536,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/bar)
 "weN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/red{
 	pixel_x = -10;
 	pixel_y = 1
@@ -46682,7 +46682,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding4"
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced/tinted{
 	color = "#666699"
 	},
@@ -46995,7 +46995,7 @@
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
 "woF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_y = 4
@@ -47017,7 +47017,7 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/caverns/filtration)
 "woM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/archives)
 "woR" = (
@@ -47173,7 +47173,7 @@
 /turf/open/floor/plating/prison,
 /area/bmg290/relay/hallway)
 "wsB" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1;
 	pixel_x = 1;
@@ -47204,7 +47204,7 @@
 /turf/open/floor/asteroidwarning/west,
 /area/bmg290/wilderness/colony_exterior)
 "wtQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave{
 	desc = "There's two of them.";
 	pixel_x = 1;
@@ -47293,7 +47293,7 @@
 /turf/open/floor/plating,
 /area/bmg290/relay/telecommunication)
 "wwQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 80
@@ -47341,7 +47341,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness/relay_exterior)
 "wxS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random{
 	pixel_x = 0;
 	pixel_y = 14
@@ -47374,7 +47374,7 @@
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/bmg290/relay/underground_shelter)
 "wyt" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/dataserver)
@@ -47516,7 +47516,7 @@
 /turf/open/floor/asteroidfloor,
 /area/bmg290/relay/exterior_storage)
 "wBM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp{
 	pixel_x = -1;
 	pixel_y = 12
@@ -47794,7 +47794,7 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/caverns/filtration)
 "wHr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/wy{
 	pixel_x = 8;
 	pixel_y = 10
@@ -48144,7 +48144,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/telecommunication)
 "wPO" = (
@@ -48472,7 +48472,7 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bmg290/site/discovered)
 "wXM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -49036,7 +49036,7 @@
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -12
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /turf/open/asphalt,
 /area/bmg290/wilderness/road)
@@ -49506,7 +49506,7 @@
 /turf/open/gm/grass,
 /area/bmg290/wilderness/colony_exterior)
 "xxL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/portadialysis{
 	pixel_x = -6;
 	pixel_y = 8
@@ -49647,7 +49647,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/wilderness/outskirts)
 "xCy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	colony_camera_mapload = 0;
 	network = list("Corporate")
@@ -50590,7 +50590,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/bmg290/wilderness/colony_exterior)
 "xZR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/vials/random{
 	pixel_x = -8;
 	pixel_y = 5
@@ -50629,7 +50629,7 @@
 /turf/open/floor/prison,
 /area/bmg290/colony/logistics)
 "yat" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
@@ -50716,7 +50716,7 @@
 /turf/open/floor/kutjevo/multi_tiles,
 /area/bmg290/colony/complex)
 "ybv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/almayer/flight_recorder,
 /turf/open/floor/prison,
 /area/bmg290/relay/synthetic)
@@ -50949,7 +50949,7 @@
 /area/bmg290/colony/complex)
 "yin" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/command)
 "yiy" = (
