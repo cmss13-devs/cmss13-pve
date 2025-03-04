@@ -263,7 +263,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/army, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/marine/army, WEAR_BACK)
 	spawn_army_fluff_items(new_human)
 
 /datum/equipment_preset/usa/ATgunner/loader
