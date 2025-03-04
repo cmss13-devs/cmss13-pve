@@ -732,7 +732,9 @@
 	pixel_y = 2;
 	plane = -5
 	},
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six{
+	plane = -7
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "YE" = (
