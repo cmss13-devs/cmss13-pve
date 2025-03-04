@@ -6357,6 +6357,7 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
+/obj/item/attachable/scope/pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (
@@ -8890,7 +8891,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	pixel_x = 8;
-	job = "Squad Sergeant"
+	job = "Squad Leader"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -16855,11 +16856,10 @@
 	icon_state = "base";
 	req_one_access = list(290);
 	icon = 'icons/obj/structures/props/misc.dmi';
-	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one holds a pair of M41AE2 heavy pulse rifles inside."
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. This one holds a pair of M41AE2 heavy pulse rifle cases inside."
 	},
-/obj/item/weapon/gun/rifle/lmg,
-/obj/item/weapon/gun/rifle/lmg,
-/obj/item/ammo_box/magazine/m41ae2,
+/obj/item/storage/box/guncase/heavy/hpr,
+/obj/item/storage/box/guncase/heavy/hpr,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
 "gWb" = (
@@ -19641,7 +19641,7 @@
 	icon_state = "base";
 	req_one_access = list(290);
 	icon = 'icons/obj/structures/props/misc.dmi';
-	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. There's a sizeable case with 'R-2' painted across it sitting inside."
+	desc = "It's an immobile storage unit with a lock controlled by the shipboard AI. There's a sizeable case with 'A6' painted across it sitting inside."
 	},
 /obj/item/storage/box/guncase/heavy/m49a_pve,
 /turf/open/floor/almayer/plate,
@@ -20039,6 +20039,11 @@
 	name = "white-phosphorus mortar-shell crate";
 	desc = "An explosives crate. The fact this one is suspiciously empty fills you with a feeling of deep dread."
 	},
+/obj/item/mortar_shell/phosphorus,
+/obj/item/mortar_shell/phosphorus,
+/obj/item/mortar_shell/phosphorus,
+/obj/item/mortar_shell/phosphorus,
+/obj/item/mortar_shell/phosphorus,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
 "qZf" = (
