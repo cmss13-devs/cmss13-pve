@@ -3184,7 +3184,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/wilderness_roof/storage_house)
 "bAE" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/kitchen/knife/butcher,
@@ -7046,7 +7046,7 @@
 /turf/open/floor/almayer/plating,
 /area/bmg290/relay/engineering)
 "dqo" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/machinery/faxmachine,
@@ -10298,7 +10298,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -15535,7 +15535,7 @@
 /obj/structure/machinery/prop/almayer/computer{
 	dir = 1
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -15936,7 +15936,7 @@
 "hwT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_box/magazine/misc/flares,
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /turf/open/floor/plating/wood,
 /area/bmg290/wilderness_roof/beach_house)
 "hxh" = (
@@ -15958,7 +15958,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bmg290/wilderness/beach)
 "hxw" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/machinery/computer/emails{
@@ -16354,7 +16354,7 @@
 	pixel_x = 0;
 	pixel_y = 5
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -19196,7 +19196,7 @@
 /turf/open/floor/asteroidplating,
 /area/bmg290/wilderness/road)
 "iTB" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/kutjevo/multi_tiles,
@@ -22477,7 +22477,7 @@
 /turf/open/floor/plating,
 /area/bmg290/wilderness/colony_exterior)
 "kvR" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/maintenance_jack,
@@ -23607,7 +23607,7 @@
 /obj/structure/machinery/computer/area_atmos/area{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -23655,7 +23655,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/clothing/glasses/disco_fever,
 /obj/item/device/lightreplacer,
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -25369,7 +25369,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/keppitz/research)
 "lRp" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -27072,7 +27072,7 @@
 /turf/open/asphalt,
 /area/bmg290/colony/hangar)
 "mKw" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -27812,7 +27812,7 @@
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
 "neO" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/machinery/door/window{
@@ -28911,7 +28911,7 @@
 /area/bmg290/wilderness/road)
 "nFZ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -31879,7 +31879,7 @@
 /turf/open/floor/prison/darkyellow2/east,
 /area/bmg290/relay/telecommunication)
 "oWe" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/disposalpipe/segment{
@@ -32695,7 +32695,7 @@
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/bmg290/shuttles/drop4)
 "ppR" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/prop/cash_register,
@@ -36490,7 +36490,7 @@
 /turf/open/floor/prison/floor_marked,
 /area/bmg290/wilderness_roof/storage_house)
 "rgY" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/phone_base/colony_net/rotary{
@@ -37796,7 +37796,7 @@
 	},
 /area/bmg290/caverns/terranium)
 "rMl" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/device/working_joe_pda,
@@ -39197,7 +39197,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/entry)
 "sud" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/device/lightreplacer,
@@ -44257,7 +44257,7 @@
 /area/bmg290/relay/cargo)
 "vdN" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/structure/machinery/computer/cameras/wooden_tv/broadcast,
 /turf/open/floor/plating/wood,
 /area/bmg290/wilderness_roof/beach_house)
@@ -48834,7 +48834,7 @@
 	pixel_x = 8;
 	pixel_y = 11
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/kutjevo/multi_tiles,
@@ -49958,7 +49958,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
 /area/bmg290/wilderness/colony_exterior)
 "xJP" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -50065,7 +50065,7 @@
 /turf/closed/wall/shiva/prefabricated/orange,
 /area/bmg290/site/discovered)
 "xMC" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/machinery/computer/atmos_alert,
@@ -50611,7 +50611,7 @@
 /turf/open/gm/dirt,
 /area/bmg290/wilderness/beach)
 "yai" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -51083,7 +51083,7 @@
 	pixel_x = 1;
 	pixel_y = 4
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/prison/floor_plate,
