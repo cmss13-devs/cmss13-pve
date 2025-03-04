@@ -2048,6 +2048,9 @@
 	pixel_y = 5;
 	pixel_x = -4
 	},
+/obj/structure/machinery/computer/skills{
+	req_one_access = null
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "ahk" = (
@@ -9297,9 +9300,8 @@
 /obj/item/reagent_container/food/drinks/plasticcup{
 	pixel_y = 9
 	},
-/obj/effect/decal/strata_decals/grime/grime4{
+/obj/effect/decal/strata_decals/grime/grime4/game_plane{
 	layer = 2.9;
-	plane = -6;
 	pixel_y = 2
 	},
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
