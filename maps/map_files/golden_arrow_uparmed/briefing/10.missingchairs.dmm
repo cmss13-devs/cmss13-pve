@@ -729,8 +729,8 @@
 	},
 /obj/effect/decal/strata_decals/grime/grime4{
 	layer = 2.9;
-	plane = -6;
-	pixel_y = 2
+	pixel_y = 2;
+	plane = -5
 	},
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
 /turf/open/floor/almayer/mono,
