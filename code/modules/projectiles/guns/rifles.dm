@@ -53,7 +53,6 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/flashlight,
@@ -317,7 +316,6 @@
 		/obj/item/attachable/suppressor/xm40_integral,//no rail attachies
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/bipod,
@@ -470,7 +468,6 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/lasersight,
-		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/stock/m20a,
 		/obj/item/attachable/attached_gun/shotgun,
 	)
@@ -535,7 +532,6 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/verticalgrip, // Under
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/attached_gun/grenade/mk1,
 		/obj/item/attachable/attached_gun/grenade/mk1/recon,
 		/obj/item/attachable/attached_gun/shotgun,
@@ -812,7 +808,6 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/bipod,
@@ -1017,7 +1012,6 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/extended_barrel,
@@ -1236,7 +1230,6 @@
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/verticalgrip, // Underbarrel
 		/obj/item/attachable/verticalgrip/upp,
-		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/flashlight/grip/upp,
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/attached_gun/flamer,
@@ -1438,7 +1431,6 @@
 		/obj/item/attachable/bipod, // Under
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/attached_gun/shotgun,
 		/obj/item/attachable/attached_gun/grenade/mk1,
 		/obj/item/attachable/attached_gun/grenade/mk1/recon,

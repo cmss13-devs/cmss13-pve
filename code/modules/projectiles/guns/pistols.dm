@@ -69,7 +69,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/m4a3/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "special_x" = 21, "special_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "special_x" = 19, "special_y" = 15)
 
 
 /obj/item/weapon/gun/pistol/m4a3/set_gun_config_values()
@@ -136,7 +136,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/vp70/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21,"rail_x" = 8, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 18, "stock_y" = 15, "special_x" = 21, "special_y" = 18)
+	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21,"rail_x" = 8, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 18, "stock_y" = 15, "special_x" = 19, "special_y" = 16)
 
 
 /obj/item/weapon/gun/pistol/vp70/set_gun_config_values()
@@ -175,7 +175,7 @@
 	current_mag = /obj/item/ammo_magazine/pistol/m1911
 
 /obj/item/weapon/gun/pistol/m1911/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "special_x" = 21, "special_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "special_x" = 19, "special_y" = 15)
 
 /obj/item/weapon/gun/pistol/m1911/set_gun_config_values()
 	..()
@@ -301,7 +301,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/np92/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 21, "stock_y" = 18, "special_x" = 21, "special_y" = 18)
+	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 21, "stock_y" = 18, "special_x" = 19, "special_y" = 15)
 
 /obj/item/weapon/gun/pistol/np92/set_gun_config_values()
 	..()
@@ -426,7 +426,7 @@
 	current_mag = /obj/item/ammo_magazine/pistol/kt42
 
 /obj/item/weapon/gun/pistol/kt42/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 20,"rail_x" = 8, "rail_y" = 22, "under_x" = 22, "under_y" = 17, "stock_x" = 22, "stock_y" = 17, "special_x" = 22, "special_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 20,"rail_x" = 8, "rail_y" = 22, "under_x" = 22, "under_y" = 17, "stock_x" = 22, "stock_y" = 17, "special_x" = 21, "special_y" = 15)
 
 /obj/item/weapon/gun/pistol/kt42/set_gun_config_values()
 	..()
@@ -495,7 +495,7 @@
 	attachable_allowed = null
 
 /obj/item/weapon/gun/pistol/clfpistol/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "special_x" = 21, "special_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "special_x" = 20, "special_y" = 15)
 
 /obj/item/weapon/gun/pistol/clfpistol/set_gun_config_values()
 	..()
