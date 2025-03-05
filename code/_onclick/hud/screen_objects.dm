@@ -469,10 +469,11 @@
 	var/obj/item/device/helmet_visor/visor = locate() in user.head
 	if(visor?.has_tracker && !tracker_object)
 		tracker_object = visor
-
+/*
 	if(!tracker_object)
 		to_chat(user, SPAN_WARNING("Unauthorized access detected."))
 		return
+*/
 	if(mods["shift"])
 		var/area/current_area = get_area(user)
 		to_chat(user, SPAN_NOTICE("You are currently at: <b>[current_area.name]</b>."))
