@@ -496,7 +496,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 */
 
 /datum/gear/clothing
-	category = "Non-issued clothing"
+	category = "Non-standard clothing"
 
 /datum/gear/clothing/black_boots
 	display_name = "black combat boots"
@@ -1405,14 +1405,17 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/watch/bishop
 	display_name = "Seiko 7A28-6000 wristwatch"
 	path = /obj/item/storage/box/watch_box/bishop
+	cost = 2
 
 /datum/gear/misc/watch/ripley
 	display_name = "Seiko 7A28-7000 wristwatch"
 	path = /obj/item/storage/box/watch_box/ripley
+	cost = 2
 
 /datum/gear/misc/watch/burke
 	display_name = "Seiko H556-5050 wristwatch"
 	path = /obj/item/storage/box/watch_box/burke
+	cost = 2
 
 /datum/gear/misc/watch/dallas
 	display_name = "Samani E-125 wristwatch"
