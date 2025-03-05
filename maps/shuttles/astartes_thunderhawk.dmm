@@ -1,0 +1,47 @@
+"a" = (/obj/structure/shuttle/part/thunderhawk/corner{color = "#262d80"; dir = 1},/turf/template_noop,/area/space)
+"b" = (/turf/template_noop,/area/space)
+"g" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; icon_state = "dwall7"},/area/space)
+"h" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; dir = 4; icon_state = "dwall25"},/area/space)
+"i" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; icon_state = "dwall20"},/area/space)
+"o" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; dir = 1; icon_state = "dwall28"},/area/space)
+"p" = (/turf/open/floor/plating,/area/space)
+"s" = (/obj/structure/shuttle/part/thunderhawk/corner{color = "#262d80"; dir = 8},/turf/template_noop,/area/space)
+"t" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; icon_state = "dwall24"},/area/space)
+"u" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; icon_state = "dwall9"},/area/space)
+"w" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; icon_state = "dwall21"},/area/space)
+"x" = (/obj/structure/shuttle/part/thunderhawk/tail{color = "#262d80"},/turf/template_noop,/area/space)
+"y" = (/obj/structure/shuttle/part/thunderhawk/tail{color = "#262d80"; dir = 8},/turf/template_noop,/area/space)
+"D" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; icon_state = "dwall27"},/area/space)
+"H" = (/obj/structure/shuttle/part/thunderhawk/tail{color = "#262d80"; dir = 10},/turf/template_noop,/area/space)
+"L" = (/obj/structure/shuttle/engine/propulsion,/obj/structure/shuttle/engine/heater{pixel_y = 32},/turf/open/floor/plating,/area/space)
+"M" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; dir = 8; icon_state = "dwall25"},/area/space)
+"O" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; icon_state = "dwall6"},/area/space)
+"S" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; icon_state = "dwall25"},/area/space)
+"T" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; dir = 1; icon_state = "dwall25"},/area/space)
+"U" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; dir = 4; icon_state = "dwall28"},/area/space)
+"V" = (/turf/closed/shuttle/thunderhawk{color = "#262d80"; icon_state = "dwall28"},/area/space)
+"W" = (/obj/structure/shuttle/part/thunderhawk/tail{color = "#262d80"; dir = 4},/turf/template_noop,/area/space)
+"Z" = (/obj/structure/shuttle/part/thunderhawk/transparent/window{color = "#262d80"; dir = 1},/turf/open/floor/plating,/area/space)
+
+(1,1,1) = {"
+bbbbbbaDZZDsbbbbbb
+bbbbbbMhppMhbbbbbb
+bbbHbathppMtsbybbb
+bbbMgStUppVtSghbbb
+bbbiLLippppiLLibbb
+bbbxbbippppibbWbbb
+bbbbbbuppppibbbbbb
+bbbbbbppppohbbbbbb
+bbbbbbogwpVhbbbbbb
+bbbbbahppppMsbbbbb
+bbbbbMhppppMhbbbbb
+bbbbbVhppppMUbbbbb
+bbbbbbMwppOhbbbbbb
+bbbbbbippppibbbbbb
+bbbbbahppppMsbbbbb
+HbbaTthppppMtTsbby
+MTTttthppppMtttTTh
+MttSSthppppMtSStth
+MSULLVhppppMULLVSh
+xbbbbbubbbbubbbbbW
+"}
