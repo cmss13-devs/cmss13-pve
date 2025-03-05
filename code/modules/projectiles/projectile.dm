@@ -73,7 +73,7 @@
 	var/list/bullet_traits
 
 	/// The beam linked to the projectile. Can be utilized for things like grappling hooks, harpoon guns, tripwire guns, etc..
-	var/obj/effect/bound_beam
+	var/datum/beam/bound_beam
 
 	/// The flicker that plays when a bullet hits a target. Usually red. Can be nulled so it doesn't show up at all.
 	var/hit_effect_color = "#FF0000"
