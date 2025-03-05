@@ -413,6 +413,10 @@
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
+/obj/item/weapon/gun/rifle/m41aMK1/preloaded
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/stock/rifle/collapsible)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
+
 /obj/item/weapon/gun/rifle/m41aMK1/tactical
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness, /obj/item/attachable/stock/rifle/collapsible)
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
@@ -433,13 +437,16 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/recon
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/recon, /obj/item/attachable/stock/rifle/collapsible)
 
+/obj/item/weapon/gun/rifle/m41aMK1/forecon/preloaded
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/recon/preloaded, /obj/item/attachable/stock/rifle/collapsible)
+
 /obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded
 	current_mag = null
 
 /obj/item/weapon/gun/rifle/m41aMK1/army
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper."
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/grenade/mk1)
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/grenade/mk1/preloaded/army)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 
 /obj/item/weapon/gun/rifle/m41aMK1/army/masterkey
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper. This one has a U7 underbarrel shotgun strapped to it."
@@ -520,6 +527,7 @@
 		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
 		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
 		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
+		/obj/item/ammo_magazine/rifle/m41aMK1/tracer,
 	)
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Muzzle
