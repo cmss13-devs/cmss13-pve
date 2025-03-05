@@ -41,6 +41,7 @@
 	armor_bio = CLOTHING_ARMOR_ULTRAHIGH
 	armor_rad = CLOTHING_ARMOR_HARDCORE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|BYPASSFORINJECTOR
 	actions_types = list(/datum/action/item_action/toggle)
 	time_to_unequip = 10
 	time_to_equip = 10
