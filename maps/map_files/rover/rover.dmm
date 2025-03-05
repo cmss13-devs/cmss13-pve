@@ -188,6 +188,10 @@
 	icon_state = "S";
 	layer = 3.3
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "bg" = (
@@ -347,13 +351,20 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "cq" = (
-/obj/structure/machinery/camera/autoname/golden_arrow,
 /obj/structure/sign/safety/bathunisex{
 	pixel_y = 29
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_y = 22
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
@@ -728,7 +739,6 @@
 	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
-	pixel_x = 16;
 	pixel_y = -10
 	},
 /turf/open/floor/almayer,
@@ -1089,7 +1099,6 @@
 "ie" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
-	pixel_x = 16;
 	pixel_y = -10
 	},
 /turf/open/floor/almayer,
@@ -1131,6 +1140,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -1302,13 +1315,12 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/hangar)
 "kk" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice3";
-	pixel_x = 16;
-	pixel_y = -10
-	},
 /obj/structure/pipes/vents/scrubber{
 	dir = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -1451,12 +1463,10 @@
 	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
-	pixel_x = 16;
 	pixel_y = -10
 	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
-	pixel_x = 16;
 	pixel_y = 22
 	},
 /turf/open/floor/almayer,
@@ -3645,6 +3655,14 @@
 	pixel_x = 1
 	},
 /obj/structure/pipes/vents/pump,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_y = 22
+	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/cryo_cells)
 "Dp" = (
@@ -4917,6 +4935,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "NB" = (
@@ -5098,6 +5117,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -5417,7 +5440,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
-	pixel_x = 16;
 	pixel_y = -10
 	},
 /turf/open/floor/almayer,
@@ -5883,6 +5905,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/scrubber{
 	dir = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/cryo_cells)
@@ -6419,6 +6445,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
