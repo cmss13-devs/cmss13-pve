@@ -104,6 +104,16 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	packet_icon = "hsdp-p"
 	content_type = /obj/item/explosive/grenade/smokebomb
 
+/obj/item/storage/box/packet/smoke/green
+	name = "\improper M47-G HSDP grenade packet"
+	desc = "It contains five M47-G HSDP smoke grenades."
+	content_type = /obj/item/explosive/grenade/smokebomb/green
+
+/obj/item/storage/box/packet/smoke/red
+	name = "\improper M47-R HSDP grenade packet"
+	desc = "It contains five M47-R HSDP smoke grenades."
+	content_type = /obj/item/explosive/grenade/smokebomb/red
+
 /obj/item/storage/box/packet/phosphorus
 	name = "\improper M60 WPSI grenade packet"
 	desc = "It contains five M60 WPSI chemical compound grenades."
@@ -149,7 +159,7 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	name = "\improper M51A BFAB grenade packet"
 	desc = "It contains five M51A BFAB airburst-fragmentation grenades. Exercise extreme caution when using in confined spaces."
 	packet_icon = "bfab-p"
-	content_type = /obj/item/explosive/grenade/high_explosive/tmfrag
+	content_type = /obj/item/explosive/grenade/high_explosive/impact/tmfrag
 
 /obj/item/storage/box/packet/heap
 	name = "\improper M38 HEAP blast grenade packet"
