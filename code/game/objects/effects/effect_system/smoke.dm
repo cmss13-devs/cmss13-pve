@@ -199,6 +199,7 @@
 	time_to_live = 25
 	spread_speed = 2
 	smokeranking = SMOKE_RANK_LOW
+	color = "#adadad"
 
 /obj/effect/particle_effect/smoke/bad/Move()
 	. = ..()
@@ -217,6 +218,95 @@
 			if(ishuman(creature)) //Humans only to avoid issues
 				creature.emote("cough")
 			addtimer(VARSET_CALLBACK(creature, coughedtime, 0), 2 SECONDS)
+
+/obj/effect/particle_effect/smoke/bad/green
+	color = "#288e76ea"
+
+/obj/effect/particle_effect/smoke/bad/red
+	color = "#ca3d33e8"
+
+/////////////////////////////////////////////
+// Miasma smoke (for LZs)
+/////////////////////////////////////////////
+
+/obj/effect/particle_effect/smoke/miasma
+	name = "CN20-X miasma"
+	amount = 1
+	time_to_live = INFINITY
+	smokeranking = SMOKE_RANK_MAX
+	opacity = FALSE
+	alpha = 75
+	color = "#301934"
+	/// How much damage to deal per affect()
+	var/burn_damage = 4
+	/// Multiplier to burn_damage for xenos and yautja
+	var/xeno_yautja_multiplier = 3
+	/// Time required for damage to actually apply
+	var/active_time
+
+/obj/effect/particle_effect/smoke/miasma/Initialize(mapload, oldamount, datum/cause_data/new_cause_data)
+	. = ..()
+	// Mimic dispersal without actually doing spread logic
+	alpha = 0
+	active_time = world.time + 6 SECONDS
+	addtimer(VARSET_CALLBACK(src, alpha, initial(alpha)), rand(1, 6) SECONDS)
+
+/obj/effect/particle_effect/smoke/miasma/apply_smoke_effect(turf/cur_turf)
+	..()
+	// coffins
+	for(var/obj/structure/closet/container in cur_turf)
+		for(var/mob/living/carbon/mob in container)
+			affect(mob)
+
+	// vehicles
+	var/obj/vehicle/multitile/car = locate() in cur_turf
+	var/datum/interior/car_interior = car?.interior
+	if(car_interior)
+		var/list/bounds = car_interior.get_bound_turfs()
+		for(var/turf/car_turf as anything in block(bounds[1], bounds[2]))
+			var/obj/effect/particle_effect/smoke/miasma/smoke = locate() in car_turf
+			if(!smoke)
+				smoke = new(car_turf)
+			smoke.time_to_live = rand(7, 12)
+
+/obj/effect/particle_effect/smoke/miasma/affect(mob/living/carbon/affected_mob)
+	. = ..()
+	if(!.)
+		return FALSE
+	if(affected_mob.stat == DEAD)
+		return FALSE
+
+	var/active = world.time > active_time
+	var/damage = active ? burn_damage : 0 // A little buffer time to get out of it
+	if(isxeno(affected_mob))
+		damage *= xeno_yautja_multiplier
+	else if(isyautja(affected_mob))
+		if(prob(75))
+			return FALSE
+		damage *= xeno_yautja_multiplier
+
+	affected_mob.apply_damage(damage, BURN)
+	affected_mob.AdjustEyeBlur(0.75)
+	affected_mob.last_damage_data = cause_data
+
+	if(affected_mob.coughedtime < world.time && !affected_mob.stat)
+		affected_mob.coughedtime = world.time + 2 SECONDS
+		if(ishuman(affected_mob)) //Humans only to avoid issues
+			if(issynth(affected_mob))
+				affected_mob.visible_message(SPAN_DANGER("[affected_mob]'s skin is sloughing off!"),\
+				SPAN_DANGER("Your skin is sloughing off!"))
+			else
+				if(prob(50))
+					affected_mob.emote("cough")
+				else
+					affected_mob.emote("gasp")
+			if(prob(20))
+				affected_mob.drop_held_item()
+		to_chat(affected_mob, SPAN_DANGER("Something is not right here..."))
+	return TRUE
+
+/obj/effect/particle_effect/smoke/miasma/ex_act(severity)
+	return
 
 /////////////////////////////////////////////
 // Sleep smoke
@@ -247,6 +337,7 @@
 /obj/effect/particle_effect/smoke/phosphorus
 	time_to_live = 25
 	smokeranking = SMOKE_RANK_MED
+	color = "#dddddd"
 	var/next_cough = 2 SECONDS
 	var/burn_damage = 40
 	var/applied_fire_stacks = 3
@@ -706,6 +797,12 @@
 
 /datum/effect_system/smoke_spread/bad
 	smoke_type = /obj/effect/particle_effect/smoke/bad
+
+/datum/effect_system/smoke_spread/bad/green
+	smoke_type = /obj/effect/particle_effect/smoke/bad/green
+
+/datum/effect_system/smoke_spread/bad/red
+	smoke_type = /obj/effect/particle_effect/smoke/bad/red
 
 /datum/effect_system/smoke_spread/sleepy
 	smoke_type = /obj/effect/particle_effect/smoke/sleepy

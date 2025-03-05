@@ -467,10 +467,12 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	if(target_mob.getBrainLoss() >= 100 || !target_mob.has_brain())
 		data["ssd"] = "Subject has taken extreme amounts of brain damage."
 	else if(target_mob.has_brain() && target_mob.stat != DEAD && ishuman(target_mob))
-		if(!target_mob.key)
-			data["ssd"] = "No soul detected." // they ghosted
-		else if(!target_mob.client)
-			data["ssd"] = "SSD detected." // SSD
+		var/mob/living/carbon/human/target_human = target_mob
+		if(!target_human.get_ai_brain())
+			if(!target_mob.key)
+				data["ssd"] = "No soul detected." // they ghosted
+			else if(!target_mob.client)
+				data["ssd"] = "SSD detected." // SSD
 
 	return data
 

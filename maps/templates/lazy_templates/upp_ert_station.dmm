@@ -2105,9 +2105,6 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1
 	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
 /obj/structure/barricade/handrail{
 	dir = 1;
 	icon_state = "hr_kutjevo";
