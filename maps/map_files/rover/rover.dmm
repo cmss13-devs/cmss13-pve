@@ -1325,7 +1325,6 @@
 /turf/open/floor/almayer/uscm/directional/up_down/northwest,
 /area/golden_arrow/hangar)
 "ku" = (
-/obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "kE" = (
@@ -2576,14 +2575,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
-"uu" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 4;
-	name = "\improper Hangar Lockdown Blast Door"
-	},
-/obj/structure/roof/cargocrane_tracks/horizontal,
-/turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/hangar)
 "uz" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
@@ -2964,10 +2955,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/northwest,
 /area/golden_arrow/platoonarmory)
-"xM" = (
-/obj/structure/roof/cargocrane_tracks/horizontal,
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/hangar)
 "xN" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -3440,14 +3427,6 @@
 	layer = 2.52
 	},
 /turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
-"Bu" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	dir = 4
-	},
-/obj/structure/roof/cargocrane_tracks/horizontal,
-/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "BA" = (
 /obj/item/stool,
@@ -4364,7 +4343,6 @@
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/golden_arrow/medical)
 "Jd" = (
-/obj/structure/roof/cargocrane_tracks/horizontal,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -4661,7 +4639,6 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
-/obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "Ld" = (
@@ -4786,7 +4763,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/roof/cargocrane_tracks/horizontal,
 /obj/structure/window/framed/almayer/hull,
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
@@ -5088,7 +5064,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "OI" = (
@@ -5863,7 +5838,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "Vv" = (
-/obj/structure/roof/cargocrane_tracks/horizontal,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -5922,7 +5896,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "VO" = (
@@ -6477,7 +6450,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "ZT" = (
@@ -9311,7 +9283,7 @@ di
 xY
 xY
 xD
-QA
+xY
 xY
 xD
 xY
@@ -10229,7 +10201,7 @@ xa
 uo
 Vj
 Wv
-xM
+Sw
 Yd
 TX
 gf
@@ -10841,7 +10813,7 @@ Sn
 Sn
 Vj
 WJ
-Bu
+WJ
 WJ
 TX
 Sn
@@ -10943,7 +10915,7 @@ Sn
 Sn
 TX
 YZ
-uu
+YZ
 YZ
 TX
 Sn
@@ -11045,7 +11017,7 @@ Sn
 Sn
 TX
 Nt
-iD
+Nt
 Nt
 TX
 Sn
