@@ -357,15 +357,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
-"cv" = (
-/obj/structure/prop/dam/crane{
-	bound_height = 32;
-	climbable = 1;
-	layer = 3.5;
-	pixel_y = -23
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "cA" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -462,14 +453,6 @@
 /obj/effect/landmark/late_join/forecon,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
-"dd" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
-	dir = 1
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/reagent_container/food/drinks/coffee/marine,
-/turf/open/floor/almayer/plate,
-/area/space)
 "de" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -498,13 +481,6 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/engineering)
-"dr" = (
-/obj/structure/machinery/landinglight/ds1/delaythree{
-	dir = 1
-	},
-/obj/structure/bed/chair,
-/turf/open/floor/almayer/plate,
-/area/space)
 "dz" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -661,16 +637,6 @@
 /obj/item/stack/sandbags_empty/half,
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/engineering)
-"eS" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
-	dir = 1
-	},
-/obj/structure/machinery/floodlight/landing/floor{
-	color = "#dae2ff";
-	light_color = "#dae2ff"
-	},
-/turf/open/floor/almayer/plate,
-/area/space)
 "eT" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -683,6 +649,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
+"eW" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/prop/almayer/comp_open,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "eZ" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
@@ -1254,6 +1228,12 @@
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/golden_arrow/medical)
+"jC" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "jD" = (
 /turf/open/floor/almayer_hull,
 /area/space)
@@ -1536,7 +1516,6 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "mB" = (
-/obj/structure/machinery/power/apc/almayer/south,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	layer = 3.3
@@ -1596,12 +1575,6 @@
 "mN" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
-"mO" = (
-/obj/structure/machinery/landinglight/ds1{
-	dir = 1
-	},
-/turf/open/floor/almayer/plate,
-/area/space)
 "mP" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/east,
@@ -1784,6 +1757,7 @@
 	pixel_x = 16
 	},
 /obj/structure/machinery/disposal,
+/obj/structure/machinery/power/apc/almayer/west,
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/prep_hallway)
 "om" = (
@@ -1906,6 +1880,12 @@
 	},
 /obj/structure/machinery/landinglight/ds1/delaytwo,
 /turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"pi" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "pk" = (
 /turf/open/floor/plating/plating_catwalk,
@@ -2330,6 +2310,14 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/surface/table/almayer,
+/obj/item/prop/almayer/handheld1{
+	pixel_x = -8
+	},
+/obj/item/prop/almayer/handheld1{
+	pixel_x = 9;
+	pixel_y = 12
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "sz" = (
@@ -2346,6 +2334,7 @@
 	dir = 4
 	},
 /obj/structure/roof/cargocrane_tracks/horizontal,
+/obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "sH" = (
@@ -2407,7 +2396,6 @@
 /obj/item/facepaint/green{
 	pixel_x = 9
 	},
-/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer/pod_landing_floor,
 /area/golden_arrow/platoonarmory)
 "ta" = (
@@ -2517,22 +2505,6 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/prep_hallway)
-"tO" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin{
-	pixel_x = -5;
-	pixel_y = 6
-	},
-/obj/item/reagent_container/food/drinks/coffee/marine{
-	pixel_x = 8;
-	pixel_y = 11
-	},
-/obj/item/tool/pen{
-	pixel_x = -7;
-	pixel_y = 2
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "tT" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 1
@@ -2826,6 +2798,9 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "wc" = (
@@ -3086,20 +3061,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/briefing)
-"yK" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
-	dir = 1
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/prop/almayer/handheld1{
-	pixel_x = -8
-	},
-/obj/item/prop/almayer/handheld1{
-	pixel_x = 9;
-	pixel_y = 12
-	},
-/turf/open/floor/almayer/plate,
-/area/space)
 "yM" = (
 /obj/structure/sign/safety/landingzone{
 	pixel_x = -19
@@ -3272,6 +3233,18 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"zO" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/obj/structure/prop/dam/crane{
+	bound_height = 32;
+	climbable = 1;
+	layer = 3.5;
+	pixel_y = -23
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "zQ" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -3658,7 +3631,7 @@
 /area/golden_arrow/hangar)
 "CQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/standard/simple/hidden/supply{
+/obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -4028,14 +4001,6 @@
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/almayer,
-/area/golden_arrow/hangar)
-"Gv" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/bed/chair,
-/turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
 "Gy" = (
 /obj/effect/decal/warning_stripes{
@@ -4614,6 +4579,7 @@
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 1
 	},
+/obj/structure/bed/chair,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "KA" = (
@@ -5011,11 +4977,6 @@
 "NL" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
-"NO" = (
-/obj/structure/surface/table/almayer,
-/obj/item/prop/almayer/comp_open,
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "NX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/power/apc/almayer/north,
@@ -5046,6 +5007,28 @@
 	pixel_x = -16;
 	pixel_y = 6
 	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 3;
+	pixel_y = 9
+	},
 /turf/open/floor/almayer/edge/smooth/southwest,
 /area/golden_arrow/hangar)
 "Od" = (
@@ -5062,12 +5045,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoonarmory)
-"Os" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
-	dir = 1
-	},
-/turf/open/floor/almayer/plate,
-/area/space)
 "OD" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -5254,14 +5231,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/cryo_cells)
-"Qv" = (
-/obj/structure/machinery/landinglight/ds1{
-	dir = 1
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/prop/almayer/comp_open,
-/turf/open/floor/almayer/plate,
-/area/space)
 "Qw" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
@@ -5442,18 +5411,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/golden_arrow/squad_one)
-"Sg" = (
-/obj/structure/pipes/vents/pump,
-/obj/structure/surface/table/almayer,
-/obj/item/prop/almayer/flight_recorder{
-	pixel_x = 8;
-	pixel_y = 4
-	},
-/obj/item/prop/almayer/handheld1{
-	pixel_x = -8
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "Sh" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -5586,6 +5543,25 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/platoon_commander_rooms)
+"Tg" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/reagent_container/food/drinks/coffee/marine{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/obj/item/tool/pen{
+	pixel_x = -7;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "Th" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -6154,6 +6130,12 @@
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/prep_hallway)
+"Xm" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "Xp" = (
 /obj/structure/machinery/medical_pod/autodoc{
 	dir = 1;
@@ -6209,6 +6191,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"Xx" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "Xz" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -6995,7 +6983,7 @@ Sn
 Sn
 Sn
 Sn
-Os
+Sn
 Sn
 Sn
 Sn
@@ -7097,7 +7085,7 @@ Sn
 Sn
 Sn
 Sn
-dr
+Sn
 Sn
 Sn
 Sn
@@ -7199,7 +7187,7 @@ Sn
 Sn
 Sn
 Sn
-mO
+Sn
 Sn
 Sn
 Sn
@@ -7301,7 +7289,7 @@ QG
 QG
 QG
 Sn
-eS
+Sn
 Sn
 Sn
 Sn
@@ -7403,7 +7391,7 @@ lU
 UA
 QG
 Sn
-Os
+Sn
 Sn
 Sn
 Sn
@@ -7505,7 +7493,7 @@ JM
 BV
 QG
 Sn
-Qv
+Sn
 Sn
 Sn
 Sn
@@ -7607,7 +7595,7 @@ BA
 NE
 QG
 Sn
-dd
+Sn
 Sn
 Sn
 Sn
@@ -7709,7 +7697,7 @@ up
 xC
 QG
 Sn
-yK
+Sn
 Sn
 Sn
 Sn
@@ -8020,7 +8008,7 @@ zo
 TX
 YB
 YB
-YB
+TX
 Sn
 Sn
 Sn
@@ -8122,7 +8110,7 @@ nR
 tm
 YB
 YB
-YB
+tm
 Sn
 Sn
 Sn
@@ -8217,14 +8205,14 @@ iT
 LI
 JI
 ZL
-cv
+YB
 aO
 YB
 al
 tm
 YB
 YB
-YB
+tm
 Sn
 Sn
 Sn
@@ -8317,7 +8305,7 @@ Ld
 Ld
 Ld
 Ld
-cK
+zO
 ZL
 lk
 Sj
@@ -8326,7 +8314,7 @@ Yb
 tm
 YB
 YB
-YB
+tm
 Sn
 Sn
 Sn
@@ -8428,7 +8416,7 @@ EH
 TX
 YB
 YB
-YB
+TX
 Sn
 Sn
 Sn
@@ -8522,7 +8510,7 @@ Ld
 Ld
 Ld
 Kx
-Gv
+ZL
 YB
 wa
 YB
@@ -8929,9 +8917,9 @@ Ld
 Ld
 Ld
 Ld
-Kx
+eW
 at
-NO
+YB
 rO
 vQ
 dh
@@ -9031,9 +9019,9 @@ Ld
 Ld
 Ld
 Ld
-dL
+Tg
 at
-tO
+YB
 Za
 YB
 uE
@@ -9135,7 +9123,7 @@ Ld
 Ld
 sv
 nj
-Sg
+lk
 UV
 Rm
 Yd
@@ -9750,7 +9738,7 @@ sL
 TX
 YB
 lM
-qv
+pi
 qh
 hy
 kE
@@ -9852,7 +9840,7 @@ FF
 TX
 YB
 fo
-YB
+oP
 ys
 Wh
 nO
@@ -10060,9 +10048,9 @@ YB
 ys
 nd
 tr
-pk
+jC
 CQ
-pk
+Xm
 YK
 cF
 ys
@@ -10162,9 +10150,9 @@ YB
 ys
 BH
 nO
-TN
 Px
 TN
+Xx
 YK
 yN
 ys
