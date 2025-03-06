@@ -34,7 +34,7 @@ Defined in conflicts.dm of the #defines folder.
 	matter = list("metal" = 100)
 	w_class = SIZE_SMALL
 	force = 1
-	var/slot = null //"muzzle", "rail", "under", "stock", "special"
+	var/slot = null //"muzzle", "rail", "side_rail", "under", "stock", "special"
 
 	/*
 	Anything that isn't used as the gun fires should be a flat number, never a percentange. It screws with the calculations,
@@ -231,6 +231,8 @@ Defined in conflicts.dm of the #defines folder.
 	switch(slot)
 		if("rail")
 			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the top."
+		if("side_rail")
+			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the side."
 		if("muzzle")
 			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the front."
 		if("stock")
@@ -691,7 +693,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "flashlight"
 	attach_icon = "flashlight_a"
 	light_mod = 5
-	slot = "special"
+	slot = "side_rail"
 	matter = list("metal" = 50,"glass" = 20)
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION
 	attachment_action_type = /datum/action/item_action/toggle
@@ -3553,7 +3555,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "lasersight"
 	attach_icon = "lasersight_a"
-	slot = "special"
+	slot = "side_rail"
 	pixel_shift_x = 17
 	pixel_shift_y = 17
 

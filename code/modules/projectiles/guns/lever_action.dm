@@ -339,7 +339,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 	civilian_usable_override = TRUE
 
 /obj/item/weapon/gun/lever_action/r4t/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 21, "under_x" = 24, "under_y" = 16, "stock_x" = 15, "stock_y" = 14, "special_x" = 23, "special_y" = 17)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 21, "under_x" = 24, "under_y" = 16, "stock_x" = 15, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 17)
 
 //===================THE XM88===================\\
 

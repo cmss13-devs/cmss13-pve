@@ -322,7 +322,7 @@
 	var/folded = FALSE // Used for the stock attachment, to check if we can shoot or not
 
 /obj/item/weapon/gun/revolver/m44/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 12, "rail_y" = 23, "under_x" = 21, "under_y" = 16, "stock_x" = 16, "stock_y" = 20, "special_x" = 21, "special_y" = 16)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 12, "rail_y" = 23, "under_x" = 21, "under_y" = 16, "stock_x" = 16, "stock_y" = 20, "side_rail_x" = 21, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/revolver/m44/set_gun_config_values()
 	..()
@@ -377,7 +377,7 @@
 	)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "special_x" = 20, "special_y" = 18)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "side_rail_x" = 20, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/set_gun_config_values()
 	..()
@@ -402,7 +402,7 @@
 	)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/k2049/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "special_x" = 20, "special_y" = 18)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "side_rail_x" = 20, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/set_gun_config_values()
 	..()
@@ -473,7 +473,7 @@
 		)
 
 /obj/item/weapon/gun/revolver/upp/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 21,"rail_x" = 14, "rail_y" = 23, "under_x" = 19, "under_y" = 17, "stock_x" = 24, "stock_y" = 19, "special_x" = 19, "special_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 21,"rail_x" = 14, "rail_y" = 23, "under_x" = 19, "under_y" = 17, "stock_x" = 24, "stock_y" = 19, "side_rail_x" = 19, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/revolver/upp/set_gun_config_values()
 	..()
@@ -487,8 +487,8 @@
 /obj/item/weapon/gun/revolver/upp/shrapnel
 	current_mag = /obj/item/ammo_magazine/internal/revolver/upp/shrapnel
 	random_spawn_chance = 100
-	random_special_chance = 100
-	random_spawn_special = list(
+	random_siderail_chance = 100
+	random_spawn_siderail = list(
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight,
 	)
@@ -509,7 +509,7 @@
 	flags_gun_features = GUN_ANTIQUE|GUN_ONE_HAND_WIELDED|GUN_CAN_POINTBLANK
 
 /obj/item/weapon/gun/revolver/small/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 21, "under_x" = 20, "under_y" = 15, "stock_x" = 20, "stock_y" = 15, "special_x" = 20, "special_y" = 15)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 21, "under_x" = 20, "under_y" = 15, "stock_x" = 20, "stock_y" = 15, "side_rail_x" = 20, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/revolver/small/set_gun_config_values()
 	..()
@@ -736,7 +736,7 @@
 	return ..()
 
 /obj/item/weapon/gun/revolver/spearhead/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "special_x" = 20, "special_y" = 18)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "side_rail_x" = 20, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/revolver/spearhead/set_gun_config_values()
 	..()
