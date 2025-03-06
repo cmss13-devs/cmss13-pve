@@ -242,7 +242,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_PMC_XENO_HANDLER "PMC Xeno Handler"
 #define JOB_PMC_LEADER "PMC Leader"
 #define JOB_PMC_LEAD_INVEST "PMC Lead Investigator"
-#define JOB_PMC_DIRECTOR "PMC Site Director"
+#define JOB_PMC_DIRECTOR "Corporate Operations Director"
 #define JOB_PMC_SYNTH "PMC Support Synthetic"
 
 #define ROLES_WY_PMC list(JOB_PMC_LEADER, JOB_PMC_SNIPER, JOB_PMC_GUNNER, JOB_PMC_ENGINEER, JOB_PMC_MEDIC, JOB_PMC_STANDARD)
