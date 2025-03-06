@@ -582,7 +582,7 @@
 /area/whiskey_outpost/inside/bunker/pillbox/two)
 "cD" = (
 /obj/structure/closet/secure_closet/bar{
-	name = "Success Cabinet";
+	name = "Success cabinet";
 	req_access_txt = "1"
 	},
 /turf/open/floor/prison/floor_plate,

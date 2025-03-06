@@ -10,10 +10,8 @@
 /obj/structure/closet/secure_closet/personal/patient/Initialize()
 	. = ..()
 	contents = list()
-	new /obj/item/clothing/under/color/white( src )
+	new /obj/item/clothing/under/colonist/boilersuit/white( src )
 	new /obj/item/clothing/shoes/white( src )
-
-
 
 /obj/structure/closet/secure_closet/personal/cabinet
 	icon_state = "cabinetdetective_locked"

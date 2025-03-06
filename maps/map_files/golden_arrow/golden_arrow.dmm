@@ -943,7 +943,7 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "adt" = (
-/obj/structure/closet/wardrobe{
+/obj/structure/closet{
 	name = "PT uniform"
 	},
 /obj/item/clothing/under/shorts/blue,
@@ -1986,7 +1986,7 @@
 "agS" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Weapons Locker";
+	name = "\improper Weapons locker";
 	id = "squadarmory";
 	pixel_y = -4
 	},
@@ -8841,7 +8841,7 @@
 /area/golden_arrow/motor_pool)
 "aDW" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Equipment Locker";
+	name = "\improper Equipment locker";
 	id = "squadarmory"
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -9796,7 +9796,7 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Equipment Locker";
+	name = "\improper Equipment locker";
 	id = "squadarmory"
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -10717,7 +10717,7 @@
 /area/golden_arrow/hangar)
 "aKj" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Weapons Locker";
+	name = "\improper Weapons locker";
 	id = "squadarmory";
 	pixel_y = -4
 	},
@@ -12977,7 +12977,7 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Weapons Locker";
+	name = "\improper Weapons locker";
 	id = "squadarmory";
 	pixel_y = -4
 	},
@@ -13280,7 +13280,7 @@
 	pixel_x = -18
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	name = "\improper Weapons Locker";
+	name = "\improper Weapons locker";
 	id = "squadarmory";
 	pixel_y = -4
 	},
