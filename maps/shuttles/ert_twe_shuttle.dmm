@@ -7,10 +7,6 @@
 	icon_state = "twe25"
 	},
 /area/shuttle/ert)
-"e" = (
-/obj/effect/landmark/ert_spawns/distress_twe,
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/ert)
 "f" = (
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/ert)
@@ -124,7 +120,6 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
-/obj/effect/landmark/ert_spawns/distress_twe,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/ert)
 "J" = (
@@ -154,7 +149,6 @@
 /area/template_noop)
 "P" = (
 /obj/structure/bed/chair/dropship/passenger,
-/obj/effect/landmark/ert_spawns/distress_twe,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/ert)
 "T" = (
@@ -178,7 +172,6 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
-/obj/effect/landmark/ert_spawns/distress_twe,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/ert)
 "X" = (
@@ -227,11 +220,11 @@ o
 X
 E
 L
-e
-e
-e
-e
-e
+f
+f
+f
+f
+f
 K
 a
 a
@@ -257,11 +250,11 @@ G
 b
 j
 s
-e
-e
-e
-e
-e
+f
+f
+f
+f
+f
 p
 a
 a
