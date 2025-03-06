@@ -31,6 +31,7 @@
 	)
 	flags_gun_features = GUN_UNUSUAL_DESIGN|GUN_TRIGGER_SAFETY|GUN_WIELDED_FIRING_ONLY
 	gun_category = GUN_CATEGORY_HEAVY
+	initiate_sound = 'sound/weapons/flamethrower_start.ogg'
 	//Pressure setting of the attached fueltank, controls how much fuel is used per tile
 	var/fuel_pressure = 1
 	//max range of flames that can fire, can change depending on fueling
@@ -207,12 +208,7 @@
 
 	update_icon()
 
-/obj/item/weapon/gun/flamer/start_fire(datum/source, atom/object, turf/location, control, params, bypass_checks = FALSE)
-	. = ..()
-	if(able_to_fire(gun_user))
-		playsound(get_turf(src), 'sound/weapons/flamethrower_start.ogg', 50)
-
-/obj/item/weapon/gun/flamer/stop_fire()
+/obj/item/weapon/gun/flamer/reset_fire()
 	. = ..()
 	playsound(get_turf(src), 'sound/weapons/flamethrower_complete.ogg', 50)
 
