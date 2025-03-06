@@ -93,7 +93,7 @@
 	name = "US Colonial Marshals Deputy (Emergency, SMG)"
 
 /datum/equipment_preset/cmb/deputy/emergency/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -150,7 +150,7 @@
 	name = "CMB - Colonial Marshals Deputy (Emergency, Shotgun)"
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -214,7 +214,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/cmb/marshal/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/tnr, WEAR_IN_BACK)
@@ -294,7 +294,7 @@
 	new_human.set_species(SYNTH_COLONY)
 
 /datum/equipment_preset/cmb/synth/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/tnr, WEAR_IN_BACK)
@@ -335,7 +335,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/cmb/liaison/load_gear(mob/living/carbon/human/new_human)
-
+	add_civilian_underwear(new_human)
 	//clothes
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CMB/ICC, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black, WEAR_BODY)
@@ -368,6 +368,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_RUSSIAN)
 
 /datum/equipment_preset/cmb/observer/load_gear(mob/living/carbon/human/new_human)
+	add_civilian_underwear(new_human)
 	//clothes
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CMB/ICC, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black, WEAR_BODY)
