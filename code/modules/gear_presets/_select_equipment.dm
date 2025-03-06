@@ -618,7 +618,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	var/suitpath = pick(
 		/obj/item/clothing/suit/marine,
 		/obj/item/clothing/suit/marine/guard,
-		/obj/item/clothing/suit/storage/marine/veteran/lamp,
+		/obj/item/clothing/suit/marine/lamp,
 		/obj/item/clothing/suit/armor/bulletproof,
 		/obj/item/clothing/suit/armor/vest/pilot,
 		/obj/item/clothing/suit/armor/vest/ballistic,
@@ -629,7 +629,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 /datum/equipment_preset/proc/add_rebel_twe_suit(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
 	var/suitpath = pick(
-		/obj/item/clothing/suit/storage/marine/veteran/lamp,
+		/obj/item/clothing/suit/marine/lamp,
 		/obj/item/clothing/suit/storage/windbreaker/windbreaker_brown,
 		/obj/item/clothing/suit/storage/windbreaker/windbreaker_blue,
 		/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
