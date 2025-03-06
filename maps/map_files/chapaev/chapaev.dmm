@@ -2527,6 +2527,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
+/obj/structure/machinery/vending/cigarette/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
 "fO" = (
