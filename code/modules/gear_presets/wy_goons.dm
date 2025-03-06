@@ -243,7 +243,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/handheld_distress_beacon, WEAR_IN_BACK)
 
 	var/obj/item/spacecash/bundle/money = new /obj/item/spacecash/bundle
 	money.worth = 5000
