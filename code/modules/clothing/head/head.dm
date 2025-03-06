@@ -408,6 +408,7 @@
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "flapcap_jungle"
 	flags_marine_hat = HAT_GARB_OVERLAY
+
 /obj/item/clothing/head/cmcap/flap/desert
 	name = "\improper desert expedition cap"
 	icon_state = "flapcap_desert"
@@ -422,6 +423,12 @@
 	desc = "A faithful cap for any terrain war correspondents may find themselves in."
 	icon_state = "cc_flagcap"
 	item_state = "cc_flagcap"
+
+/obj/item/clothing/head/cmcap/weyyu
+	name = "\improper Weyland-Yutani cap"
+	desc = "An offwhite cap worn by Weyland-Yutani security personnel."
+	icon_state = "pmc_hat"
+	flags_marine_hat = HAT_GARB_OVERLAY
 
 /obj/item/clothing/head/cmo
 	name = "\improper Chief Medical Officer's Peaked Cap"
