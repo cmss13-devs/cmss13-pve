@@ -6841,6 +6841,14 @@
 /obj/structure/surface/table/reinforced,
 /obj/item/clothing/under/CM_uniform,
 /obj/item/clothing/suit/armor/vest/security,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/clothing/under/cmb,
+/obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/red,
 /area/lv624/lazarus/security)
 "eji" = (
@@ -8063,10 +8071,10 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
 "goz" = (
-/obj/structure/machinery/vending/cigarette,
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/whiteblue/southeast,
 /area/lv624/lazarus/corporate_dome)
 "gpf" = (
@@ -10790,7 +10798,7 @@
 /turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "kgB" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "kgS" = (
@@ -11785,7 +11793,7 @@
 /turf/open/floor/redcorner/east,
 /area/lv624/lazarus/security)
 "lAI" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/main_hall)
 "lAN" = (
@@ -18201,8 +18209,8 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/east_jungle)
 "uux" = (
-/obj/structure/machinery/vending/cigarette/colony,
 /obj/effect/landmark/crap_item,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "uuE" = (

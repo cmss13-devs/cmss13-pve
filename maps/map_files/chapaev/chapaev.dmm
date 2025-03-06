@@ -2527,6 +2527,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
+/obj/structure/machinery/vending/cigarette/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
 "fO" = (
@@ -4036,7 +4037,6 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
 "jg" = (
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access_txt = "240";
@@ -4051,6 +4051,7 @@
 	faction = "UPP"
 	},
 /obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/lamp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
 "ji" = (

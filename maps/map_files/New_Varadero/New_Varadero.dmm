@@ -3105,7 +3105,7 @@
 /turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "cBl" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/greenfull/west,
 /area/varadero/interior/hall_SE)
 "cBq" = (
@@ -3328,7 +3328,7 @@
 /turf/open/floor/carpet,
 /area/varadero/interior/maintenance/north)
 "cLd" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/shiva/blue/southeast,
 /area/varadero/interior/administration)
 "cLz" = (
@@ -5558,7 +5558,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/digsite)
 "esZ" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/hall_N)
 "etk" = (
@@ -7332,7 +7332,7 @@
 /turf/open/floor/bcircuit,
 /area/varadero/interior/maintenance/north)
 "fUJ" = (
-/obj/structure/machinery/vending/cigarette,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/wood,
 /area/varadero/interior/hall_SE)
 "fVk" = (
@@ -7669,7 +7669,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/pontoon_beach)
 "gfm" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/red/northeast,
 /area/varadero/interior/security)
 "gfx" = (
@@ -14105,7 +14105,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/security)
 "lnm" = (
@@ -15582,7 +15582,7 @@
 /obj/structure/bedsheetbin{
 	icon_state = "linenbin-empty"
 	},
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "mzd" = (
@@ -29197,7 +29197,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/security)
 "xgj" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/green/east,
 /area/varadero/interior/hall_SE)
 "xgq" = (

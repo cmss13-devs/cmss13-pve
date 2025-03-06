@@ -11371,7 +11371,7 @@
 /turf/open/floor/asteroidwarning/north,
 /area/bigredv2/outside/eta)
 "hDD" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/darkyellow2/north,
 /area/bigredv2/outside/engineering)
 "hEq" = (
@@ -14858,7 +14858,7 @@
 /turf/open/floor/darkpurple2/north,
 /area/bigredv2/caves/lambda/research)
 "kDx" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/carpet,
 /area/bigredv2/caves/lambda/breakroom)
 "kDA" = (
@@ -19465,7 +19465,7 @@
 /area/bigredv2/outside/filtration_plant)
 "oxa" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor,
 /area/bigredv2/outside/general_offices)
 "oxe" = (
@@ -19872,7 +19872,7 @@
 /turf/open/floor/freezerfloor,
 /area/bigredv2/outside/engineering)
 "oPT" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/dark,
 /area/bigredv2/outside/space_port)
 "oQi" = (
@@ -22051,7 +22051,7 @@
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
 "qLP" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/mars_cave/mars_dirt_6,
 /area/bigredv2/caves/mining)
 "qLR" = (
@@ -25441,7 +25441,7 @@
 /turf/open/floor/darkgreencorners2/west,
 /area/bigredv2/caves/lambda/virology)
 "tEZ" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
 "tFf" = (
@@ -29427,7 +29427,7 @@
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/oob)
 "wWs" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/darkish,
 /area/bigredv2/caves/lambda/breakroom)
 "wWE" = (
@@ -29465,7 +29465,7 @@
 /turf/open/floor/darkish,
 /area/bigredv2/outside/medical)
 "wXZ" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/darkyellow2/southwest,
 /area/bigredv2/caves/eta/research)
 "wYt" = (

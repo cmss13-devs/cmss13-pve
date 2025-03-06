@@ -18,7 +18,7 @@
 		/obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol,
 	)
 
-//MED APC version of WY Med, provides resupply for basic stuff. Provides a decent amount of cryobags for evacuating hugged marines.
+//MED APC version of WY Med, provides resupply for basic stuff. Tailored for syringe application of meds, rather than pills or autoinjector
 /obj/structure/machinery/cm_vending/sorted/medical/vehicle
 	name = "\improper Wey-Med Resupply Station"
 	desc = "A more compact vehicle version of the widely known Wey-Med Plus Medical Pharmaceutical dispenser. Designed to be a field resupply station for medical personnel. Provided by Wey-Yu Pharmaceuticals Division(TM)."
@@ -38,12 +38,13 @@
 	chem_refill = list(
 		/obj/item/reagent_container/hypospray/autoinjector/bicaridine,
 		/obj/item/reagent_container/hypospray/autoinjector/dexalinp,
-		/obj/item/reagent_container/hypospray/autoinjector/adrenaline,,
+		/obj/item/reagent_container/hypospray/autoinjector/adrenaline,
 		/obj/item/reagent_container/hypospray/autoinjector/inaprovaline,
 		/obj/item/reagent_container/hypospray/autoinjector/kelotane,
 		/obj/item/reagent_container/hypospray/autoinjector/oxycodone,
 		/obj/item/reagent_container/hypospray/autoinjector/tramadol,
 		/obj/item/reagent_container/hypospray/autoinjector/tricord,
+
 		/obj/item/reagent_container/hypospray/autoinjector/skillless,
 		/obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol,
 
@@ -62,24 +63,26 @@
 		list("Roll of Gauze", floor(scale * 5), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
 		list("Splints", floor(scale * 5), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
 
-		list("AUTOINJECTORS", -1, null, null),
-		list("Autoinjector (Bicaridine)", floor(scale * 3), /obj/item/reagent_container/hypospray/autoinjector/bicaridine, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Dexalin+)", floor(scale * 3), /obj/item/reagent_container/hypospray/autoinjector/dexalinp, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Inaprovaline)", floor(scale * 3), /obj/item/reagent_container/hypospray/autoinjector/inaprovaline, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Kelotane)", floor(scale * 3), /obj/item/reagent_container/hypospray/autoinjector/kelotane, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Oxycodone)", floor(scale * 3), /obj/item/reagent_container/hypospray/autoinjector/oxycodone, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Tramadol)", floor(scale * 3), /obj/item/reagent_container/hypospray/autoinjector/tramadol, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Tricord)", floor(scale * 3), /obj/item/reagent_container/hypospray/autoinjector/tricord, VENDOR_ITEM_REGULAR),
+		list("LIQUID BOTTLES", -1, null, null),
+		list("Bottle (Bicaridine)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/bicaridine, VENDOR_ITEM_REGULAR),
+		list("Bottle (Dexalin)", floor(scale * 2), /obj/item/reagent_container/glass/bottle/dexalin, VENDOR_ITEM_REGULAR),
+		list("Bottle (Dylovene)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/antitoxin, VENDOR_ITEM_REGULAR),
+		list("Bottle (Inaprovaline)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/inaprovaline, VENDOR_ITEM_REGULAR),
+		list("Bottle (Kelotane)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/kelotane, VENDOR_ITEM_REGULAR),
+		list("Bottle (Oxycodone)", floor(scale * 2), /obj/item/reagent_container/glass/bottle/oxycodone, VENDOR_ITEM_REGULAR),
+		list("Bottle (Peridaxon)", floor(scale * 2), /obj/item/reagent_container/glass/bottle/peridaxon, VENDOR_ITEM_REGULAR),
+		list("Bottle (Tramadol)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/tramadol, VENDOR_ITEM_REGULAR),
+		list("Bottle (Tricordrazine)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/tricordrazine, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL UTILITIES", -1, null, null),
 		list("Surgical Line", floor(scale * 2), /obj/item/tool/surgery/surgical_line, VENDOR_ITEM_REGULAR),
 		list("Synth-Graft", floor(scale * 2), /obj/item/tool/surgery/synthgraft, VENDOR_ITEM_REGULAR),
 		list("Health Analyzer", floor(scale * 4), /obj/item/device/healthanalyzer, VENDOR_ITEM_REGULAR),
-		list("Stasis Bag", floor(scale * 6), /obj/item/bodybag/cryobag, VENDOR_ITEM_REGULAR),
-		list("Syringe", floor(scale * 3), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR)
+		list("Hypospray", floor(scale * 3), /obj/item/reagent_container/hypospray, VENDOR_ITEM_REGULAR),
+		list("Syringe", floor(scale * 5), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR)
 	)
 
-//MED APC version of Blood Dispenser
+//MED APC version of Blood Dispenser, much more limited stock than the baseline vendor. Encourages matching blood types rather than using universal all the time
 /obj/structure/machinery/cm_vending/sorted/medical/blood/vehicle
 	name = "\improper MM Blood Dispenser"
 	desc = "A Marine Med brand Blood Pack Dispenser for vehicles."
@@ -93,6 +96,20 @@
 	wrenchable = FALSE
 	hackable = FALSE
 	density = FALSE
+
+/obj/structure/machinery/cm_vending/sorted/medical/blood/vehicle/populate_product_list(scale)
+	listed_products = list(
+		list("BLOOD PACKS", -1, null, null),
+		list("A+ Blood Pack", floor(scale * 2), /obj/item/reagent_container/blood/APlus, VENDOR_ITEM_REGULAR),
+		list("A- Blood Pack", floor(scale * 2), /obj/item/reagent_container/blood/AMinus, VENDOR_ITEM_REGULAR),
+		list("B+ Blood Pack", floor(scale * 2), /obj/item/reagent_container/blood/BPlus, VENDOR_ITEM_REGULAR),
+		list("B- Blood Pack", floor(scale * 2), /obj/item/reagent_container/blood/BMinus, VENDOR_ITEM_REGULAR),
+		list("O+ Blood Pack", floor(scale * 1), /obj/item/reagent_container/blood/OPlus, VENDOR_ITEM_REGULAR),
+		list("O- Blood Pack", floor(scale * 3), /obj/item/reagent_container/blood/OMinus, VENDOR_ITEM_REGULAR),
+
+		list("MISCELLANEOUS", -1, null, null),
+		list("Empty Blood Pack", floor(scale * 2), /obj/item/reagent_container/blood, VENDOR_ITEM_REGULAR)
+	)
 
 //----------------------SUPPLY VENDORS--------------------
 
