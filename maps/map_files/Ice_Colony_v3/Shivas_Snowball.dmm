@@ -188,7 +188,7 @@
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/exterior/cp_lz2)
 "aaN" = (
-/obj/item/weapon/gun/flamer,
+/obj/item/weapon/gun/flamer/weak,
 /obj/structure/surface/rack,
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/exterior/cp_colony_grounds)
@@ -2008,7 +2008,7 @@
 /turf/open/floor/shiva/wred/west,
 /area/shiva/interior/colony/medseceng)
 "ayE" = (
-/obj/item/weapon/gun/flamer,
+/obj/item/weapon/gun/flamer/weak,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/central)
 "ayH" = (

@@ -93,9 +93,11 @@
 	icon_state = new_icon_state
 
 	if(current_mag && current_mag.reagents)
-		var/image/I = image(icon, icon_state="[base_gun_icon]_strip")
-		I.color = mix_color_from_reagents(current_mag.reagents.reagent_list)
-		overlays += I
+		var/obj/item/ammo_magazine/flamer_tank/flamtank = current_mag
+		if(flamtank.stripe_icon)
+			var/image/I = image(icon, icon_state="[base_gun_icon]_strip")
+			I.color = mix_color_from_reagents(current_mag.reagents.reagent_list)
+			overlays += I
 
 	if(!(flags_gun_features & GUN_TRIGGER_SAFETY))
 		var/image/I = image(icon, src, "+lit")
@@ -136,6 +138,7 @@
 		return NONE
 
 	if(!current_mag)
+		click_empty(user)
 		return NONE
 
 	if(current_mag.current_rounds <= 0)
@@ -379,6 +382,11 @@
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 
 /obj/item/weapon/gun/flamer/weak
+	name = "\improper improvised flamethrower"
+	desc = "A custom made incinerator, made from repurposed welding and piping equipment."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "flamer"
+	item_state = "flamer"
 	projectile_type = /datum/ammo/flamethrower/weak
 	current_mag = /obj/item/ammo_magazine/flamer_tank/weak
 

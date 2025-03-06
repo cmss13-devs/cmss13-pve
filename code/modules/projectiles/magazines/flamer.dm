@@ -24,6 +24,8 @@
 
 	var/fuel_pressure = 1 //How much fuel is used per tile fired
 	var/max_pressure = 10
+	///Does the magazine have stripe overlays or not
+	var/stripe_icon = TRUE
 
 /obj/item/ammo_magazine/flamer_tank/empty
 	flamer_chem = null
@@ -164,12 +166,16 @@
 	max_range = 7
 
 /obj/item/ammo_magazine/flamer_tank/weak
-	name = "incinerator tank (Weak)"
+	name = "improvised flamer tank"
+	desc = "A repurposed tank from heavy welding equipment, holds a mix similar to napalm."
 	default_ammo = /datum/ammo/flamethrower/weak
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "flamer_fuel"
 	desc = "A fuel tank full of impure napalm, causing it to burn at a significantly lower temperature."
 	caliber = "Impure Napalm"
 	flamer_chem = "weaknapalm"
 	max_range = 5
+	stripe_icon = FALSE
 
 /obj/item/ammo_magazine/flamer_tank/custom
 	name = "custom incinerator tank"

@@ -372,7 +372,7 @@
 /turf/open/floor/asteroidwarning,
 /area/bigredv2/outside/virology)
 "Kv" = (
-/obj/item/weapon/gun/flamer,
+/obj/item/weapon/gun/flamer/weak,
 /turf/open/mars_cave/mars_dirt_4,
 /area/bigredv2/outside/virology)
 "Po" = (
