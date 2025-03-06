@@ -1,0 +1,4 @@
+author: "Warfan1815"
+delete-after: True
+changes:
+  - rscadd: "Adds functionality to personal vanity closets whereby they can select which spawn tile they can be the closet for.\n\\:cl:"

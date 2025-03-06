@@ -396,6 +396,10 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/type23/unloaded
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
 
+/obj/item/weapon/gun/shotgun/type23/unloaded/stored
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+	starting_attachment_types = null
+
 /obj/item/weapon/gun/shotgun/type23/slug
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
 

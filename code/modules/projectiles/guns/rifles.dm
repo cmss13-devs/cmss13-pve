@@ -137,16 +137,10 @@
 		/obj/item/attachable/scope/mini/nsg23,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/extended_barrel,
-	)
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini/nsg23,
-		/obj/item/attachable/attached_gun/flamer/advanced,
 	)
 	start_semiauto = FALSE
 	start_automatic = TRUE
@@ -194,98 +188,11 @@
 /obj/item/weapon/gun/rifle/nsg23/no_lock/stripped
 	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
 
-//-------------------------------------------------------
-//M41A PMC VARIANT
-
-/obj/item/weapon/gun/rifle/m41a/elite
-	name = "\improper M41A/2 pulse rifle"
-	desc = "A modified version M41A Pulse Rifle MK2, re-engineered for better weight, handling and accuracy. Fires precise two-round bursts. Given only to elite units."
-	icon_state = "m41a2"
-	item_state = "m41a2"
-
-	current_mag = /obj/item/ammo_magazine/rifle/ap
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
-	aim_slowdown = SLOWDOWN_ADS_QUICK
-	wield_delay = WIELD_DELAY_FAST
-	map_specific_decoration = FALSE
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
-
-	random_spawn_chance = 100
-	random_spawn_rail = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_spawn_under = list(
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/attached_gun/shotgun,
-		/obj/item/attachable/lasersight,
-		/obj/item/attachable/attached_gun/flamer/advanced,
-	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/heavy_barrel,
-	)
-
-
-/obj/item/weapon/gun/rifle/m41a/elite/set_gun_config_values()
-	..()
-	set_fire_delay(FIRE_DELAY_TIER_11)
-	set_burst_amount(BURST_AMOUNT_TIER_2)
-	set_burst_delay(FIRE_DELAY_TIER_12)
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
-	scatter = SCATTER_AMOUNT_TIER_10
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
-	scatter_unwielded = SCATTER_AMOUNT_TIER_4
-	damage_mult = BASE_BULLET_DAMAGE_MULT
-
-/obj/item/weapon/gun/rifle/m41a/elite/whiteout //special version for whiteout, has preset attachments and HEAP mag loaded.
-	current_mag = /obj/item/ammo_magazine/rifle/heap
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/angledgrip, /obj/item/attachable/suppressor)
-
-/obj/item/weapon/gun/rifle/m41a/corporate
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition."
-	icon = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_obj.dmi'
-	item_icons = list(
-		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_lefthand.dmi',
-		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_righthand.dmi',
-		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/snow/back.dmi',
-		WEAR_J_STORE = 'icons/obj/items/weapons/guns/guns_by_map/snow/suit_slot.dmi'
-	)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
-	map_specific_decoration = FALSE
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
-
-/obj/item/weapon/gun/rifle/m41a/corporate/no_lock //for PMC nightmares.
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. This one had its IFF electronics removed."
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-
-/obj/item/weapon/gun/rifle/m41a/corporate/detainer //for chem ert
-	current_mag = /obj/item/ammo_magazine/rifle/ap
-	random_spawn_rail = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/extended_barrel,
-	)
-
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/flamer/advanced)
-
-//-------------------------------------------------------
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
-/obj/item/weapon/gun/rifle/m41a/elite/xm40
+/obj/item/weapon/gun/rifle/m41aMK1/xm40
 	name = "\improper XM40 pulse rifle"
-	desc = "One of the experimental predecessors to the M41 line that never saw widespread adoption beyond elite marine units. Of the rifles in the USCM inventory that are still in production, this is the only one to feature an integrated suppressor. It can accept M41A MK2 magazines, but also features its own proprietary magazine system. Extremely lethal in burstfire mode."
+	desc = "One of the experimental predecessors to the M41 line that never saw widespread adoption beyond elite marine units. Of the rifles in the USCM inventory that are still in production, this is the only one to feature an integrated suppressor. Extremely lethal in burstfire mode."
 	icon_state = "m40sd"
 	item_state = "m40sd"
 	reload_sound = 'sound/weapons/handling/m40sd_reload.ogg'
@@ -300,12 +207,6 @@
 	map_specific_decoration = FALSE
 	starting_attachment_types = list()
 	accepted_ammo = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/rifle/extended,
-		/obj/item/ammo_magazine/rifle/incendiary,
-		/obj/item/ammo_magazine/rifle/explosive,
-		/obj/item/ammo_magazine/rifle/le,
-		/obj/item/ammo_magazine/rifle/ap,
 		/obj/item/ammo_magazine/rifle/xm40,
 		/obj/item/ammo_magazine/rifle/xm40/heap,
 	)
@@ -363,7 +264,7 @@
 
 /obj/item/weapon/gun/rifle/m41aMK1
 	name = "\improper M41A pulse rifle"
-	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine."
+	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m41amk1" //Placeholder.
 	item_state = "m41amk1" //Placeholder.
@@ -411,18 +312,13 @@
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
+/obj/item/weapon/gun/rifle/m41aMK1/preloaded
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/stock/rifle/collapsible)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
+
 /obj/item/weapon/gun/rifle/m41aMK1/tactical
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness, /obj/item/attachable/stock/rifle/collapsible)
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
-
-/obj/item/weapon/gun/rifle/m41aMK1/anchorpoint
-	desc = "A classic M41 MK1 Pulse Rifle painted in a fresh coat of the classic Humbrol 170 camoflauge. This one appears to be used by the Colonial Marine contingent aboard Anchorpoint Station, and is equipped with an underbarrel shotgun. Uses 10x24mm caseless ammunition."
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/shotgun)
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
-
-/obj/item/weapon/gun/rifle/m41aMK1/anchorpoint/gl
-	desc = "A classic M41 MK1 Pulse Rifle painted in a fresh coat of the classic Humbrol 170 camoflauge. This one appears to be used by the Colonial Marine contingent aboard Anchorpoint Station, and is equipped with an underbarrel grenade launcher. Uses 10x24mm caseless ammunition."
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/grenade/mk1)
 
 /obj/item/weapon/gun/rifle/m41aMK1/forecon
 	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and is used by Force Reconnaissance & MARSOC units."
@@ -431,17 +327,45 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/recon
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/recon, /obj/item/attachable/stock/rifle/collapsible)
 
+/obj/item/weapon/gun/rifle/m41aMK1/forecon/preloaded
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/recon/preloaded, /obj/item/attachable/stock/rifle/collapsible)
+
 /obj/item/weapon/gun/rifle/m41aMK1/forecon/unloaded
 	current_mag = null
 
 /obj/item/weapon/gun/rifle/m41aMK1/army
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper."
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/grenade/mk1)
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/grenade/mk1/preloaded/army)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 
 /obj/item/weapon/gun/rifle/m41aMK1/army/masterkey
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper. This one has a U7 underbarrel shotgun strapped to it."
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/shotgun)
+
+/obj/item/weapon/gun/rifle/m41aMK1/elite
+	name = "\improper M41A2 pulse rifle"
+	desc = "A modified version M41A pulse rifle re-engineered for better weight and handling, and an high degree of accuracy brought about by a precise two-round burst system."
+	icon_state = "m41a2"
+	item_state = "m41a2"
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
+	aim_slowdown = SLOWDOWN_ADS_QUICK
+	wield_delay = WIELD_DELAY_FAST
+	map_specific_decoration = FALSE
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible,/obj/item/attachable/attached_gun/grenade/mk1)
+	random_spawn_chance = 100
+	random_spawn_rail = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+	)
+/obj/item/weapon/gun/rifle/m41a/elite/set_gun_config_values()
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_delay(FIRE_DELAY_TIER_12)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 
 //M20A Harrington rifle
 //=================================================
@@ -519,6 +443,7 @@
 		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
 		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
 		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
+		/obj/item/ammo_magazine/rifle/m41aMK1/tracer,
 	)
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Muzzle
@@ -1268,59 +1193,6 @@
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
-/obj/item/weapon/gun/rifle/type71/rifleman
-	//add GL
-	random_spawn_chance = 100
-	random_rail_chance = 70
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
-	)
-	random_muzzle_chance = 100
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-	)
-	random_under_chance = 40
-	random_spawn_under = list(
-		/obj/item/attachable/verticalgrip/upp,
-	)
-
-/obj/item/weapon/gun/rifle/type71/dual
-	random_spawn_chance = 100
-	random_rail_chance = 70
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
-	)
-	random_muzzle_chance = 100
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-	)
-	random_under_chance = 40
-	random_spawn_under = list(
-		/obj/item/attachable/lasersight/upp,
-		/obj/item/attachable/verticalgrip/upp,
-	)
-
-/obj/item/weapon/gun/rifle/type71/sapper
-	current_mag = /obj/item/ammo_magazine/rifle/type71/ap
-	random_spawn_chance = 100
-	random_rail_chance = 80
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_muzzle_chance = 80
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet/upp,
-	)
-	random_under_chance = 90
-	random_spawn_under = list(
-		/obj/item/attachable/attached_gun/extinguisher,
-	)
-
 /obj/item/weapon/gun/rifle/type71/flamer
 	name = "\improper Type 71-F pulse rifle"
 	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x27mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This variant features an integrated incinerator unit."
@@ -1347,20 +1219,6 @@
 	S.flags_attach_features &= ~ATTACH_REMOVABLE
 	S.Attach(src)
 	update_attachable(S.slot)
-
-/obj/item/weapon/gun/rifle/type71/flamer/leader
-	random_spawn_chance = 100
-	random_rail_chance = 100
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/scope/mini/upp,
-	)
-	random_muzzle_chance = 100
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-	)
 
 /obj/item/weapon/gun/rifle/type71/carbine
 	name = "\improper Type 71 pulse carbine"
@@ -1408,22 +1266,6 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	scatter_unwielded = SCATTER_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
-
-/obj/item/weapon/gun/rifle/type71/carbine/dual
-	random_spawn_chance = 100
-	random_rail_chance = 70
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/flashlight,
-	)
-	random_muzzle_chance = 100
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-	)
-	random_under_chance = 40
-	random_spawn_under = list(
-		/obj/item/attachable/verticalgrip/upp,
-	)
 
 /obj/item/weapon/gun/rifle/type71/carbine/commando
 	name = "\improper Type 71 'Commando' pulse carbine"

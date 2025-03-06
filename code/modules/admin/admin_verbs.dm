@@ -89,6 +89,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/toggle_human_ai_tweaks,
 	/client/proc/open_human_squad_spawner_panel,
 	/client/proc/open_human_ai_spawner_panel,
+	/client/proc/toggle_barricade_creation, // Stops cades from being built
 	))
 
 
@@ -238,6 +239,7 @@ GLOBAL_LIST_INIT(admin_verbs_debug, list(
 	/datum/admins/proc/view_tgui_log, /*shows the server TGUI log for this round*/
 	/client/proc/admin_blurb,
 	/datum/admins/proc/open_shuttlepanel,
+	/client/proc/allow_browser_inspect,
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_debug_advanced, list(
