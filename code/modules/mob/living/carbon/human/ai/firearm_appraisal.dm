@@ -188,8 +188,8 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 
 /datum/firearm_appraisal/flamer
 	burst_amount_max = 35
-	minimum_range = 3
-	optimal_range = 6
+	minimum_range = 2
+	optimal_range = 5
 	maximum_range = 9
 	gun_types = list(
 		/obj/item/weapon/gun/flamer,
