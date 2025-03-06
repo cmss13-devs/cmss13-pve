@@ -65,6 +65,7 @@
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 1
 	},
+/obj/effect/landmark/ert_spawns/distress_pizza,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	dir = 1
@@ -143,6 +144,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "H" = (
+/obj/effect/landmark/ert_spawns/distress_pizza,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	dir = 1

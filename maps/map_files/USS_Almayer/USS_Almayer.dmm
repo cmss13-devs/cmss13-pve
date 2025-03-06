@@ -391,6 +391,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/late_join,
 /turf/open/floor/almayer/silver/east,
 /area/almayer/living/cryo_cells)
@@ -4917,6 +4918,7 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/late_join,
 /turf/open/floor/almayer,
 /area/almayer/living/cryo_cells)
@@ -5476,6 +5478,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/lifeboat_pumps/north1)
 "ccQ" = (
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/cryo_cells)
@@ -12262,6 +12265,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
 	},
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/late_join,
 /turf/open/floor/almayer/silver/southeast,
 /area/almayer/living/cryo_cells)
@@ -17429,6 +17433,7 @@
 /obj/structure/machinery/status_display{
 	pixel_x = -32
 	},
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/cryo_cells)
@@ -41938,6 +41943,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/hull/lower/s_bow)
 "oTX" = (
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/late_join,
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/plating/plating_catwalk,
@@ -48344,6 +48350,11 @@
 /obj/structure/machinery/light,
 /turf/open/floor/almayer/dark_sterile,
 /area/almayer/medical/lower_medical_lobby)
+"rbF" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/ert_spawns/distress_cryo,
+/turf/open/floor/plating/plating_catwalk,
+/area/almayer/living/cryo_cells)
 "rbG" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
@@ -50318,6 +50329,7 @@
 	icon_state = "W"
 	},
 /obj/effect/landmark/late_join,
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/start/senior,
 /turf/open/floor/almayer/silver/east,
 /area/almayer/living/cryo_cells)
@@ -54011,6 +54023,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/bravo)
 "tez" = (
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/late_join,
 /turf/open/floor/almayer,
 /area/almayer/living/cryo_cells)
@@ -56525,6 +56538,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/almayer/medical/chemistry)
 "ueE" = (
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /turf/open/floor/almayer/cargo,
 /area/almayer/living/cryo_cells)
 "ueG" = (
@@ -64511,6 +64525,7 @@
 /turf/open/floor/almayer/green/north,
 /area/almayer/living/grunt_rnr)
 "wQe" = (
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/late_join,
 /turf/open/floor/almayer/cargo,
 /area/almayer/living/cryo_cells)
@@ -67483,6 +67498,7 @@
 /obj/structure/sign/safety/maint{
 	pixel_x = -17
 	},
+/obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/cryo_cells)
@@ -113719,7 +113735,7 @@ xYP
 bbs
 gsm
 gnW
-ccQ
+rbF
 cJE
 eHG
 jOL
@@ -113922,7 +113938,7 @@ vTS
 bbs
 ccQ
 pUC
-ccQ
+rbF
 qlz
 cMk
 fyW
@@ -114125,7 +114141,7 @@ xYP
 bbs
 ccQ
 wQe
-ccQ
+rbF
 qlz
 ryy
 fyW
@@ -114328,7 +114344,7 @@ xYP
 bbs
 oTX
 gnW
-ccQ
+rbF
 qlz
 sGy
 fyW
@@ -114531,7 +114547,7 @@ rqh
 bbs
 ccQ
 pUC
-ccQ
+rbF
 vub
 odN
 odN

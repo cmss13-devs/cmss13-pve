@@ -25,6 +25,7 @@
 /area/shuttle/ert)
 "f" = (
 /obj/structure/surface/rack,
+/obj/effect/landmark/ert_spawns/distress_pmc/item,
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/belt/medical/lifesaver/full,
 /obj/item/device/healthanalyzer,
@@ -32,6 +33,7 @@
 /area/shuttle/ert)
 "g" = (
 /obj/structure/surface/rack,
+/obj/effect/landmark/ert_spawns/distress_pmc/item,
 /obj/item/storage/firstaid/adv{
 	pixel_x = 2;
 	pixel_y = -5
@@ -99,6 +101,7 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
+/obj/effect/landmark/ert_spawns/distress_pmc,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/ert)
 "v" = (
@@ -152,12 +155,17 @@
 /area/shuttle/ert)
 "H" = (
 /obj/structure/bed/chair/dropship/passenger,
+/obj/effect/landmark/ert_spawns/distress_pmc,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/ert)
 "I" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/machinery/computer/shuttle/ert,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/ert)
+"J" = (
+/obj/effect/landmark/ert_spawns/distress_pmc,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/ert)
 "K" = (
 /turf/closed/shuttle/ert{
@@ -168,6 +176,7 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
+/obj/effect/landmark/ert_spawns/distress_pmc,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/ert)
 "M" = (
@@ -189,6 +198,7 @@
 /area/shuttle/ert)
 "Q" = (
 /obj/structure/surface/rack,
+/obj/effect/landmark/ert_spawns/distress_pmc/item,
 /obj/item/storage/toolbox/syndicate,
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/ert)
@@ -261,11 +271,11 @@ U
 K
 E
 d
-s
-s
-s
-s
-s
+J
+J
+J
+J
+J
 Y
 k
 k
@@ -291,11 +301,11 @@ T
 y
 l
 m
-s
-s
-s
-s
-s
+J
+J
+J
+J
+J
 h
 k
 k
