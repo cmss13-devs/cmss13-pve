@@ -27,7 +27,7 @@
 
 /datum/human_ai_squad_preset/pmc/medical
 	name = "PMC, Medical Element"
-	desc = "A PMC squad, with support elements, a heavy smartgunner, and a leader. Use carefully."
+	desc = "A PMC medical element with 2 medics."
 	ai_to_spawn = list(
 		/datum/equipment_preset/pmc/pmc_medic = 2,
 	)
