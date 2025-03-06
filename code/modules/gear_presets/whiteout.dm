@@ -64,8 +64,8 @@
 	var/obj/item/clothing/suit/storage/marine/veteran/pmc/commando/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/heap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/elite/whiteout, WEAR_J_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/heap, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/elite, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/deathsquad, WEAR_WAIST)
 	//limbs
@@ -203,8 +203,8 @@
 	var/obj/item/clothing/suit/storage/marine/veteran/pmc/commando/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/heap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/elite/whiteout, WEAR_J_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/heap, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/elite, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/full, WEAR_WAIST)
 	//limbs
@@ -254,7 +254,7 @@
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/elite, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/elite, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/deathsquad/standard, WEAR_WAIST)
 	//limbs
@@ -383,7 +383,7 @@
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/elite, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/elite, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/full, WEAR_WAIST)
 	//limbs
