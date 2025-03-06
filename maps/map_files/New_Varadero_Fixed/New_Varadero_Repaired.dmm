@@ -963,7 +963,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastbeach)
 "aLa" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/green/east,
 /area/varadero/interior/hall_SE)
 "aLe" = (
@@ -4771,7 +4771,7 @@
 /turf/open/floor/shiva/snow_mat/east,
 /area/varadero/interior/security)
 "dWn" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/greenfull/west,
 /area/varadero/interior/hall_SE)
 "dWI" = (
@@ -7180,7 +7180,7 @@
 /turf/open/gm/grass/grass1/weedable,
 /area/varadero/interior/caves/north_research)
 "fUJ" = (
-/obj/structure/machinery/vending/cigarette,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/wood,
 /area/varadero/interior/hall_SE)
 "fVd" = (
@@ -18964,7 +18964,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/medical)
 "qcy" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/shiva/blue/southeast,
 /area/varadero/interior/administration)
 "qcN" = (
@@ -26024,7 +26024,7 @@
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "vXi" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/red/northeast,
 /area/varadero/interior/security)
 "vXI" = (
@@ -28582,7 +28582,7 @@
 /turf/open/floor/plating,
 /area/varadero/interior_protected/caves/digsite)
 "yhh" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/hall_N)
 "yhj" = (
