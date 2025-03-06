@@ -55,12 +55,7 @@
 	skills = /datum/skills/cmb
 
 /datum/equipment_preset/cmb/deputy/load_gear(mob/living/carbon/human/new_human)
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
-		new_human.underwear = pick("White Briefs","White Boxers")
-	else
-		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
-		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)

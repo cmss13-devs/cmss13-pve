@@ -409,11 +409,7 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/private_equipped/load_gear(mob/living/carbon/human/new_human)
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -450,11 +446,7 @@
 	name = "USCM Squad Rifleman (Equipped, EVA)"
 
 /datum/equipment_preset/uscm/private_equipped/eva/load_gear(mob/living/carbon/human/new_human)
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -502,11 +494,7 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/smartgunner_equipped/load_gear(mob/living/carbon/human/new_human)
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+	add_uscm_underwear(new_human)
 	//back
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
@@ -560,11 +548,7 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/tl_equipped/load_gear(mob/living/carbon/human/new_human)
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -622,7 +606,7 @@
 
 /datum/equipment_preset/uscm/medic_equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)")
-	new_human.underwear = "USCM Boxers"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/tech(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -675,11 +659,7 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/leader_equipped/load_gear(mob/living/carbon/human/new_human)
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -739,11 +719,7 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/engineer_equipped/load_gear(mob/living/carbon/human/new_human)
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/tech(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -792,12 +768,8 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/specialist_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "USCM Boxers"
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/rocketpack(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket(new_human), WEAR_IN_BACK)
@@ -855,12 +827,8 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/specialist_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "USCM Boxers"
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/rocketpack(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket(new_human), WEAR_IN_BACK)
@@ -911,12 +879,8 @@
 	role_comm_title = "B18"
 	skills = /datum/skills/pfc
 /datum/equipment_preset/uscm/specialist_equipped/b18/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "USCM Boxers"
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/tech(new_human), WEAR_BACK)
 	//face
@@ -952,12 +916,8 @@
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/specialist_equipped/sniper/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "USCM Boxers"
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -1005,12 +965,8 @@
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/specialist_equipped/spotter/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "USCM Boxers"
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -1068,12 +1024,8 @@
 	minimap_icon = "vc"
 
 /datum/equipment_preset/uscm/tank/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "USCM Boxers"
-	if(new_human.gender == MALE)
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
-	else
-		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
-	new_human.underwear = "USCM Boxers"
+
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
