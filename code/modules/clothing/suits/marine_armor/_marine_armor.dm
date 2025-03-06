@@ -768,7 +768,10 @@
 					if("l_hand")
 						if(usr.drop_inv_item_on_ground(src))
 							usr.put_in_l_hand(src)
+					else
+						..()
 				add_fingerprint(usr)
+
 
 /obj/item/clothing/suit/marine/post_vendor_spawn_hook(mob/living/carbon/human/user) //used for randomizing/selecting a variant for armors.
 	var/new_look //used for the icon_state text replacement.

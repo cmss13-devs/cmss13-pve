@@ -244,6 +244,12 @@ GLOBAL_LIST_EMPTY(vending_products)
 		if(B.amount != 3)
 			to_chat(user, SPAN_WARNING("[B]s are being stored in [SPAN_HELPFUL("stacks of 3")] for convenience. Add to \the [B] stack to make it a stack of 3 before restocking."))
 			return
+	else if(istype(item_to_stock, /obj/item/clothing))
+		var/obj/item/clothing/remove_accessories = item_to_stock
+		for(var/obj/item/clothing/accessory/drop_on_ground in remove_accessories)
+			if(drop_on_ground.removable)
+				drop_on_ground.on_removed(user, drop_on_ground)
+				LAZYREMOVE(remove_accessories.accessories, drop_on_ground)
 	//M94 flare packs handling
 	else if(istype(item_to_stock, /obj/item/storage/box/m94))
 		var/obj/item/storage/box/m94/flare_pack = item_to_stock
