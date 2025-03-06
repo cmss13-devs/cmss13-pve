@@ -561,10 +561,10 @@
 /area/adminlevel/ert_station/weyland_station)
 "iX" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m41a/elite{
+/obj/item/weapon/gun/rifle/m41aMK1/elite{
 	pixel_y = 1
 	},
-/obj/item/weapon/gun/rifle/m41a/elite{
+/obj/item/weapon/gun/rifle/m41aMK1/elite{
 	pixel_y = -4
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -2044,10 +2044,10 @@
 /area/adminlevel/ert_station/weyland_station)
 "HU" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m41a/elite{
+/obj/item/weapon/gun/rifle/m41aMK1/elite{
 	pixel_y = 1
 	},
-/obj/item/weapon/gun/rifle/m41a/elite{
+/obj/item/weapon/gun/rifle/m41aMK1/elite{
 	pixel_y = -4
 	},
 /turf/open/floor/corsat/cargo,
