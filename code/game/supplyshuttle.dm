@@ -1076,6 +1076,8 @@ GLOBAL_DATUM_INIT(supply_controller, /datum/controller/supply, new())
 					temp += "<BR><A href='byond://?src=\ref[src];viewrequests=1'>Back</A> <A href='byond://?src=\ref[src];mainmenu=1'>Main Menu</A>"
 					supply_order.approvedby = usr.name
 					msg_admin_niche("[key_name(usr)] confirmed supply order of [supply_pack.name].")
+					if(GLOB.supply_controller.black_market_heat == 100)
+						GLOB.supply_controller.black_market_investigation()
 					var/pack_source = "Cargo Hold"
 					var/pack_name = supply_pack.name
 					if(supply_pack.dollar_cost)
@@ -1285,6 +1287,11 @@ GLOBAL_DATUM_INIT(supply_controller, /datum/controller/supply, new())
 /datum/controller/supply/proc/play_sound_handler(sound_to_play, timer)
 	/// For code readability.
 	addtimer(CALLBACK(GLOBAL_PROC, /proc/playsound, get_rand_sound_tile(), sound_to_play, 25, FALSE), timer)
+
+/datum/controller/supply/proc/black_market_investigation()
+	black_market_heat = -1
+	SSticker.mode.get_specific_call(/datum/emergency_call/inspection_cmb/black_market, TRUE, TRUE) // "Inspection - Colonial Marshals Ledger Investigation Team"
+	log_game("Black Market Inspection auto-triggered.")
 
 /obj/structure/machinery/computer/supplycomp/proc/is_buyable(datum/supply_packs/supply_pack)
 
