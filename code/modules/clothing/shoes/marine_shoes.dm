@@ -90,9 +90,9 @@
 	name = "\improper RMC combat boots"
 	desc = "A pair of standard issue black Royal Marine Commando combat boots."
 	icon_state = "marine"
+
 /obj/item/clothing/shoes/marine/rmc/knife
 	spawn_item_type = /obj/item/weapon/knife/marine/sas
-
 
 /obj/item/clothing/shoes/marine/civilian
 	name = "rugged boots"
