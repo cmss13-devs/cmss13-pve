@@ -8,6 +8,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"aab" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.5
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/cryo_cells)
 "aac" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -29,6 +36,14 @@
 /obj/structure/machinery/landinglight/ds1/delaythree,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"aaf" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "aag" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -43,6 +58,38 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
+"aai" = (
+/obj/structure/machinery/vending/snack/packaged{
+	pixel_y = -6;
+	wrenchable = 0;
+	pixel_x = 5
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"aaj" = (
+/obj/structure/machinery/vending/coffee{
+	pixel_y = -7;
+	pixel_x = -1;
+	wrenchable = 0
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"aak" = (
+/obj/structure/machinery/vending/cigarette/koorlander{
+	pixel_x = -7;
+	pixel_y = -7;
+	wrenchable = 0
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"aal" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
 "aan" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -1435,13 +1482,23 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "afl" = (
-/obj/structure/machinery/vending/coffee{
-	pixel_x = 14;
-	pixel_y = 13
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/machinery/vending/snack/packaged{
-	pixel_x = -7;
-	pixel_y = 14
+/obj/structure/closet/crate/trashcart{
+	pixel_y = 8
+	},
+/obj/item/trash/candy,
+/obj/item/trash/burger,
+/obj/item/trash/cigbutt,
+/obj/item/trash/burger{
+	pixel_y = 6;
+	pixel_x = 3
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	pixel_y = 20
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
@@ -7434,9 +7491,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "azG" = (
-/obj/structure/machinery/vending/cigarette{
-	pixel_x = 4;
-	pixel_y = 14
+/obj/structure/machinery/vending/dinnerware,
+/obj/structure/sign/banners/usa_flag{
+	pixel_x = -15;
+	pixel_y = 32
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
@@ -8907,17 +8965,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
-"aEi" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/vending/dinnerware,
-/obj/item/ashtray/glass{
-	pixel_x = -3;
-	pixel_y = 13
-	},
-/turf/open/floor/almayer/edge/northeast,
-/area/golden_arrow/cryo_cells)
 "aEl" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -9971,24 +10018,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aHQ" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/item/ashtray/bronze{
+	pixel_x = 29;
+	pixel_y = 37
 	},
-/obj/structure/sign/banners/united_americas_flag{
-	pixel_x = -30;
-	pixel_y = 31
-	},
-/obj/structure/closet/crate/trashcart{
-	pixel_y = 8
-	},
-/obj/item/trash/candy,
-/obj/item/trash/burger,
-/obj/item/trash/cigbutt,
-/obj/item/trash/burger{
-	pixel_y = 6;
-	pixel_x = 3
-	},
-/turf/open/floor/almayer/edge/smooth/endcap_left/north,
+/turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aHR" = (
 /obj/effect/decal/warning_stripes{
@@ -14011,6 +14045,9 @@
 	icon_state = "SW-out";
 	pixel_x = -1
 	},
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 30
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aWx" = (
@@ -15537,9 +15574,9 @@
 /area/golden_arrow/medical)
 "cMX" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/storage/box/nade_box/smoke{
-	pixel_y = 7;
-	pixel_x = 4
+/obj/item/storage/box/nade_box/smoke/red{
+	pixel_x = 4;
+	pixel_y = 7
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
@@ -15698,6 +15735,9 @@
 	pixel_y = 22;
 	pixel_x = 1;
 	layer = 3.2
+	},
+/obj/item/storage/box/nade_box/flare{
+	pixel_x = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -27977,7 +28017,7 @@ aWh
 arr
 alD
 aBk
-ahK
+aaf
 aZr
 arj
 aBk
@@ -28151,7 +28191,7 @@ aEG
 aEG
 aEG
 aWh
-aog
+aai
 alD
 ave
 anG
@@ -28328,7 +28368,7 @@ aEG
 aEG
 aEG
 aWh
-aog
+aaj
 aHQ
 aBk
 aBk
@@ -28505,8 +28545,8 @@ aEG
 aEG
 aEG
 aWh
-aog
-aEi
+aak
+aBk
 azd
 aQd
 aZl
@@ -29043,7 +29083,7 @@ aHF
 arQ
 aHF
 aHF
-aHF
+aab
 aog
 aVa
 apO
@@ -35031,7 +35071,7 @@ aEG
 aEG
 aEG
 atb
-axa
+aal
 aBg
 alK
 aUD

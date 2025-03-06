@@ -171,3 +171,20 @@
 	initial_stored = 5
 	allowed_type = /obj/item/weapon/gun/rifle/m20a/unloaded
 	populate_type = /obj/item/weapon/gun/rifle/m20a/unloaded
+
+/obj/structure/gun_rack/m41/elite
+	name = "M41A2 pulse rifle rack"
+	icon_state = "m41a_elite"
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1/elite
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/elite
+
+/obj/structure/gun_rack/m41/elite/empty
+	initial_stored = 0
+
+/obj/structure/gun_rack/m41/elite/unloaded
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded
+
