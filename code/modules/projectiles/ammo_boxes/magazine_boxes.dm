@@ -400,7 +400,7 @@
 //-----------------------Type71 Rifle Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/type71
-	name = "magazine box (Type71 x 10)"
+	name = "magazine box (Type71 x 14)"
 	icon_state = "base_type71"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_type71_reg"
@@ -413,7 +413,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type71/ap
-	name = "magazine box (Type71 AP x 10)"
+	name = "magazine box (Type71 AP x 14)"
 	overlay_ammo_type = "_type71_ap"
 	overlay_content = "_type71_ap"
 	magazine_type = /obj/item/ammo_magazine/rifle/type71/ap
@@ -422,7 +422,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type71/heap
-	name = "magazine box (Type71 HEAP x 10)"
+	name = "magazine box (Type71 HEAP x 14)"
 	overlay_ammo_type = "_type71_heap"
 	overlay_content = "_type71_heap"
 	magazine_type = /obj/item/ammo_magazine/rifle/type71/heap
@@ -430,34 +430,17 @@
 /obj/item/ammo_box/magazine/type71/heap/empty
 	empty = TRUE
 
-//-----------------------LARGE Type 71 Rifle Mag Boxes-----------------------
-/obj/item/ammo_box/magazine/type71/large
-	name = "magazine box (Type 71 x 32)"
-	icon_state = "base_upplarge"
-	overlay_ammo_type = null
-	overlay_gun_type = "_blank"
-	overlay_content = "_reglarge"
-	limit_per_tile = 1
-	flags_equip_slot = null
-	magazine_type = /obj/item/ammo_magazine/rifle/type71
-	num_of_magazines = 32
-	var/move_delay_mult = 2
+//-----------------------AG80 Rifle Mag Box-----------------------
 
-/obj/item/ammo_box/magazine/type71/large/pickup(mob/user, silent)
-	. = ..()
-	RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
-
-/obj/item/ammo_box/magazine/type71/large/proc/handle_movedelay(mob/user, list/movedata)
-	SIGNAL_HANDLER
-	if(locate(/obj/item/ammo_box/magazine/type71/large) in user.contents)
-		movedata["move_delay"] += move_delay_mult
-
-/obj/item/ammo_box/magazine/type71/large/dropped(mob/user, silent)
-	. = ..()
-	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
-
-/obj/item/ammo_box/magazine/type71/large/empty
-	empty = TRUE
+/obj/item/ammo_box/magazine/ag80
+	name = "magazine box (AG80 x 10)"
+	icon_state = "base_type64"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_type71_reg"
+	overlay_gun_type = "_ag80"
+	overlay_content = "_type71_reg"
+	num_of_magazines = 10
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80
 
 //-----------------------Nailgun Mag Box-----------------------
 
