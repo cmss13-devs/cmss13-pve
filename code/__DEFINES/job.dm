@@ -16,6 +16,7 @@
 #define SQUAD_SOLAR "Solar Devils"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_MRR "Void Seekers"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -41,6 +42,14 @@
 #define JOB_SQUAD_RTO "Radio Telephone Operator"
 #define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
+
+#define JOB_SQUAD_ELEMENT_LEADER_MARSOC "MARSOC Element Lead"
+#define JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC "MARSOC Assistant Element Lead"
+#define JOB_SQUAD_SARC_MARSOC "MARSOC Special Amphibious Reconnaissance Corpsman"
+#define JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC "MARSOC Heavy Weapons Operator"
+#define JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC "MARSOC Special Weapons Operator"
+#define JOB_SQUAD_SAPPER_MARSOC "MARSOC Sapper"
+#define JOB_SQUAD_ELEMENT_MEMBER_MARSOC "MARSOC Element Member"
 
 GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 
