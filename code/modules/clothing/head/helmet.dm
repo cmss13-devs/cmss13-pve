@@ -1024,16 +1024,18 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list()
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc
-	name = "\improper PMC tactical cap"
-	desc = "Venlar padded cap with rheological armor reinforcement. A bit finicky to fit right, but lightweight while protecting like a helmet."
-	icon_state = "pmc_hat"
+	name = "\improper tactical helmet"
+	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries. This configuration lacks the iconic ballistic mask popularized by Soldier of Fortune magazine."
+	icon_state = "pmc_helmet"
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = BLOCKSHARPOBJ
-	flags_inv_hide = NO_FLAGS
+	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY|HELMET_GARB_OVERLAY
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/leader
@@ -1042,29 +1044,19 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "officer_hat"
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper
-	name = "\improper PMC sniper helmet"
+	name = "\improper tactical sniper helmet"
 	desc = "A helmet worn by PMC Marksmen."
 	icon_state = "pmc_sniper_hat"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
-	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
-
-/obj/item/clothing/head/helmet/marine/veteran/pmc/pve
-	name = "\improper M11-PMC helmet"
-	icon_state = "pmc_helmet"
-	desc = "An aftermarket helmet worn by PMC groups. A more comfortable M11, covered by a sterilized white antibacterial layer. It's a shockingly useful feature after a firefight."
+	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner
-	name = "\improper PMC gunner helmet"
-	desc = "An M10 combat helmet modified with full face visor and cutting edge materials, used by W-Y's inhouse corporate tactical teams."
+	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries. This version features a high-tech sealed ballistic mask capable of providing tactical data via its eye-lenses."
 	icon_state = "heavy_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 
@@ -1094,6 +1086,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon = 'icons/mob/humans/onmob/contained/wy_goons.dmi'
 	icon_state = "helmet"
 	item_state = "helmet"
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
 	contained_sprite = TRUE
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/lead

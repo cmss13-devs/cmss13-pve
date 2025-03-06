@@ -92,9 +92,9 @@
 	name = "\improper RMC combat boots"
 	desc = "A pair of standard issue black Royal Marine Commando combat boots."
 	icon_state = "marine"
+
 /obj/item/clothing/shoes/marine/rmc/knife
 	spawn_item_type = /obj/item/weapon/knife/marine/sas
-
 
 /obj/item/clothing/shoes/marine/civilian
 	name = "rugged boots"
@@ -133,3 +133,13 @@
 	desc = "A pair of sneakers designed to elicit a morale boosting response within anyone that witnesses them."
 	icon_state = "stompers"
 	flags_inventory = NOSLIPPING
+
+/obj/item/clothing/shoes/cowboy
+	name = "leather boots"
+	desc = "A pair of leather cowboy boots."
+	icon_state = "cowboy"
+
+/obj/item/clothing/shoes/lizardskin
+	name = "lizardskin boots"
+	desc = "A pair of lizardskin cowboy boots. Get your disco on, baby."
+	icon_state = "lizardskin"
