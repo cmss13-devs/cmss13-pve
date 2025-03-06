@@ -16,8 +16,11 @@
 	stack_id = "empty sandbags"
 
 /obj/item/stack/sandbags_empty/attackby(obj/item/W, mob/user)
-	if (istype(W, /obj/item/tool/shovel))
+	if(istype(W, /obj/item/tool/shovel))
 		var/obj/item/tool/shovel/ET = W
+		if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES))
+			to_chat(usr, SPAN_WARNING("The sandbags cannot be filled!"))
+			return
 		if(ET.dirt_amt)
 			ET.dirt_amt--
 			ET.update_icon()
@@ -104,6 +107,10 @@
 		if(AC)
 			to_chat(usr, SPAN_WARNING("The [O.name] cannot be built here!"))
 			return
+
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES))
+		to_chat(usr, SPAN_WARNING("The sandbags cannot be placed."))
+		return
 
 	if(user.action_busy)
 		return
