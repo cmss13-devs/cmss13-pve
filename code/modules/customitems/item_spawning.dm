@@ -11,7 +11,7 @@ GLOBAL_LIST_FILE_LOAD(custom_items, "config/custom_items.txt")
 		// split & clean up
 		var/list/Entry = splittext(line, ":")
 		for(var/i = 1 to length(Entry))
-			Entry[i] = trim(Entry[i])
+			Entry[i] = ckey(Entry[i])
 
 		if(length(Entry) < 2)
 			continue;
