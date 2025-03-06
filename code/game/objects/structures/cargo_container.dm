@@ -92,7 +92,7 @@
 
 /obj/structure/cargo_container/armat
 	name = "ARMAT Cargo Container"
-	desc = "A large industrial container. This one is from ARMAT, the defense contractors behind the M41A and other marine weaponary."
+	desc = "A large industrial container. This one is from ARMAT, the defense contractors behind the M41A and other marine weaponry."
 
 /obj/structure/cargo_container/armat/left
 	icon_state = "armat_l"
