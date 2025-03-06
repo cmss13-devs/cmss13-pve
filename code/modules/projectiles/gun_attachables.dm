@@ -507,6 +507,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "supsniperbarrel"
 	desc = "A heavy barrel. CANNOT BE REMOVED."
 	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
 	gun_traits = list(TRAIT_GUN_SILENCED)
 	hud_offset_mod = -3
 
