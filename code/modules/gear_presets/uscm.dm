@@ -86,6 +86,13 @@
 			var/obj/item/device/radio/headset/almayer/marine/equipped_headset = new_human.wear_r_ear
 			equipped_headset.add_hud_tracker(new_human)
 
+/datum/equipment_preset/uscm/proc/add_marsoc_weapon(mob/living/carbon/human/new_human)
+	if(prob(66))
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/forecon(new_human), WEAR_J_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m46c(new_human), WEAR_J_STORE)
+
+
 //*****************************************************************************************************/
 /datum/equipment_preset/uscm/pfc
 	name = "USCM Squad Rifleman"
@@ -790,7 +797,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/pads/kneepads(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/pads/neckguard(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/marine(new_human), WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool(new_human), WEAR_IN_BELT)
@@ -1092,7 +1099,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/leader, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1(new_human), WEAR_J_STORE)
+	add_marsoc_weapon(new_human)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/combat/marsoc, WEAR_WAIST)
 	//limbs
