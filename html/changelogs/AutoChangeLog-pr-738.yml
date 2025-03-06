@@ -1,0 +1,10 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "Adjusts the type 88 RoF to no longer be three times faster than other sniper weapons"
+  - qol: "The PvE subtype of T88 magazines now deals damage comparable to that of the new M42A 'basic' subtype mags with similar AP. For high-damage high AP shooting the parent type can be used instead"
+  - qol: "Non-suppressed sniper rifles now give a notification of their origin in the form of an echoing gunshot & message, similar to how the Vulture does it. Friendly snipers deliver a normal sized message whilst hostile ones will give you a big, attention-grabbing warning."
+  - bugfix: "The M42A2's barrel can no longer be removed"
+  - balance: "Human AI CLF marksman presets adjusted to use the /pve subtype where applicable. The UPP marksman retains the higher damaging kind"
+  - code_imp: "Code for the firing origin stuff added to (non-bolt action) sniper rifles file"
+  - imageadd: "Adds the missing onmob sprite for the M42A when worn on back"
