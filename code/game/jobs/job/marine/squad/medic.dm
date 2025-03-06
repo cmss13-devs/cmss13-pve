@@ -40,6 +40,11 @@
 	else
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/medic/whiskey
+	title = JOB_WO_SQUAD_MEDIC
+	flags_startup_parameters = ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/wo/marine/medic
+
 /obj/effect/landmark/start/marine/medic
 	name = JOB_SQUAD_MEDIC
 	icon_state = "medic_spawn"

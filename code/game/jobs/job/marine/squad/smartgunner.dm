@@ -36,6 +36,11 @@
 	else
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/smartgunner/whiskey
+	title = JOB_WO_SQUAD_SMARTGUNNER
+	flags_startup_parameters = ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/wo/marine/sg
+
 /obj/effect/landmark/start/marine/smartgunner
 	name = JOB_SQUAD_SMARTGUN
 	icon_state = "smartgunner_spawn"
