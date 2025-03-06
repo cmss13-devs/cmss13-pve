@@ -171,7 +171,6 @@
 	default_ammo = /datum/ammo/flamethrower/weak
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "flamer_fuel"
-	desc = "A fuel tank full of impure napalm, causing it to burn at a significantly lower temperature."
 	caliber = "Impure Napalm"
 	flamer_chem = "weaknapalm"
 	max_range = 5
