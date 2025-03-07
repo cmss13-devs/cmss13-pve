@@ -4440,28 +4440,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
-"kb" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/prep_hallway)
 "kc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -20811,7 +20789,7 @@ kl
 kl
 kx
 kn
-kb
+jY
 jU
 jI
 jw
