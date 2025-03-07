@@ -219,6 +219,103 @@
 	icon_state = "torn_scarf_black"
 	item_state = "torn_scarf_black"
 
+/obj/item/clothing/mask/neckerchief
+	name = "neckerchief"
+	desc = "A simple cloth worn around the neck, adjustable between a loose fit or a more tightly secured style."
+	icon_state = "neckerchief"
+	item_state = "neckerchief"
+	icon = 'icons/obj/items/clothing/masks.dmi'
+	item_icons = list(
+		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi'
+	)
+	flags_inventory = ALLOWREBREATH|ALLOWCPR
+	var/adjust = FALSE
+	var/original_state = "neckerchief"
+	actions_types = list(/datum/action/item_action/toggle)
+
+/obj/item/clothing/mask/neckerchief/ui_action_click()
+	adjust()
+
+/obj/item/clothing/mask/neckerchief/verb/adjust()
+	set name = "Adjust"
+	set category = "Object"
+	set src in usr
+	if(usr.stat == DEAD)
+		return
+
+	adjust = !adjust
+	if(adjust)
+		to_chat(usr, SPAN_NOTICE("You adjust \the [src]"))
+		icon_state += "_alt"
+	else
+		to_chat(usr, SPAN_NOTICE("You adjust \the [src]"))
+		icon_state = original_state
+
+	update_clothing_icon(src)
+
+/obj/item/clothing/mask/neckerchief/squad
+	var/dummy_icon_state = "neckerchief_%SQUAD%"
+	item_state = "neckerchief_%SQUAD%"
+	original_state = "neckerchief_%SQUAD%"
+	icon_state = "neckerchief_squad"
+
+
+	var/static/list/valid_icon_states
+
+/obj/item/clothing/mask/neckerchief/squad/Initialize(mapload, ...)
+	. = ..()
+	if(!valid_icon_states)
+		valid_icon_states = icon_states(icon)
+	adapt_to_squad()
+
+/obj/item/clothing/mask/neckerchief/squad/update_clothing_icon()
+	adapt_to_squad()
+	return ..()
+
+/obj/item/clothing/mask/neckerchief/squad/pickup(mob/user, silent)
+	. = ..()
+	adapt_to_squad()
+
+/obj/item/clothing/mask/neckerchief/squad/equipped(mob/user, slot, silent)
+	RegisterSignal(user, COMSIG_SET_SQUAD, PROC_REF(update_clothing_icon), TRUE)
+	adapt_to_squad()
+	return ..()
+
+/obj/item/clothing/mask/neckerchief/squad/dropped(mob/user)
+	. = ..()
+	UnregisterSignal(user, COMSIG_SET_SQUAD)
+
+/obj/item/clothing/mask/neckerchief/squad/proc/adapt_to_squad()
+	var/squad_color = "gray"
+	var/mob/living/carbon/human/wearer = loc
+	if(istype(wearer) && wearer.assigned_squad)
+		var/squad_name = lowertext(wearer.assigned_squad.name)
+		if("neckerchief_[squad_name]" in valid_icon_states)
+			squad_color = squad_name
+	icon_state = replacetext("[initial(dummy_icon_state)][adjust ? "_alt" : ""]", "%SQUAD%", squad_color)
+	item_state = replacetext("[initial(item_state)][adjust ? "_alt" : ""]", "%SQUAD%", squad_color)
+
+/obj/item/clothing/mask/neckerchief/gray
+	icon_state = "neckerchief_gray"
+	item_state = "neckerchief_gray"
+	original_state = "neckerchief_gray"
+
+/obj/item/clothing/mask/neckerchief/green
+	icon_state = "neckerchief_green"
+	item_state = "neckerchief_green"
+	original_state = "neckerchief_green"
+
+/obj/item/clothing/mask/neckerchief/black
+	icon_state = "neckerchief_black"
+	item_state = "neckerchief_black"
+	original_state = "neckerchief_black"
+
+/obj/item/clothing/mask/neckerchief/red
+	icon_state = "neckerchief_alpha"
+	item_state = "neckerchief_alpha"
+	original_state = "neckerchief_alpha"
+
+
 /obj/item/clothing/mask/owlf_mask
 	name = "\improper OWLF gas mask"
 	desc = "A close-fitting mask that can be connected to an air supply."
