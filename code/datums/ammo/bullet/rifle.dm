@@ -38,6 +38,11 @@
 	damage = 25
 	holo_stacks = 15
 
+/datum/ammo/bullet/rifle/holo_target/tracer
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
+
 /datum/ammo/bullet/rifle/explosive
 	name = "explosive 10x24 bullet"
 	damage = 25
@@ -63,6 +68,15 @@
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_8
 
+/datum/ammo/bullet/rifle/ap/tracer
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
+
+/datum/ammo/bullet/rifle/tracer
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
 
 // Basically AP but better. Focused at taking out armour temporarily
 /datum/ammo/bullet/rifle/ap/toxin
@@ -113,6 +127,10 @@
 	penetration = ARMOR_PENETRATION_TIER_8
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
+/datum/ammo/bullet/rifle/heap/tracer
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
 
 /datum/ammo/bullet/rifle/rubber
 	name = "rubber 10x24 bullet"
@@ -149,11 +167,28 @@
 	effective_range_max = 10
 	damage_falloff = DAMAGE_FALLOFF_TIER_9
 
+//Only applicable for the M42A 'basic' magazines
+/datum/ammo/bullet/rifle/heavy/on_hit_mob(mob/M,obj/projectile/P)
+	if((P.projectile_flags & PROJECTILE_BULLSEYE) && M == P.original)
+		var/mob/living/L = M
+		L.apply_armoured_damage(damage*2, ARMOR_BULLET, BRUTE, null, penetration)
+		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
+/datum/ammo/bullet/rifle/heavy/tracer
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
+
 /datum/ammo/bullet/rifle/heavy/ap
 	name = "armor-piercing 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_8
+
+/datum/ammo/bullet/rifle/heavy/ap/tracer
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
 
 /datum/ammo/bullet/rifle/heavy/heap
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
@@ -162,6 +197,11 @@
 	damage = 70
 	penetration = ARMOR_PENETRATION_TIER_10
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
+
+/datum/ammo/bullet/rifle/heavy/heap/tracer
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
 
 /datum/ammo/bullet/rifle/heavy/du
 	name = "depleted uranium 10x28 bullet"
@@ -233,12 +273,6 @@
 	scatter = 0
 	shell_speed = AMMO_SPEED_TIER_8
 
-/datum/ammo/bullet/sniper/on_hit_mob(mob/M,obj/projectile/P)
-	if((P.projectile_flags & PROJECTILE_BULLSEYE) && M == P.original)
-		var/mob/living/L = M
-		L.apply_armoured_damage(damage*2, ARMOR_BULLET, BRUTE, null, penetration)
-		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
-
 /datum/ammo/bullet/rifle/heavy/incendiary
 	name = "incendiary sniper bullet"
 	damage_type = BRUTE
@@ -289,7 +323,6 @@
 	accuracy = HIT_ACCURACY_TIER_8
 	scatter = SCATTER_AMOUNT_TIER_8
 	shell_speed = AMMO_SPEED_TIER_7
-
 
 /datum/ammo/bullet/rifle/heavy/flak/on_hit_mob(mob/M,obj/projectile/P)
 	if((P.projectile_flags & PROJECTILE_BULLSEYE) && M == P.original)
@@ -394,6 +427,11 @@
 	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_8
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
+
+/datum/ammo/bullet/rifle/upp/heap/mg
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
 
 //10X31 AK500
 /datum/ammo/bullet/rifle/heavy/upp

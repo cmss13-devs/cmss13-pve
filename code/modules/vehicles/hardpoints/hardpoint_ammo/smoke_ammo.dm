@@ -10,3 +10,9 @@
 
 /obj/item/ammo_magazine/hardpoint/turret_smoke/update_icon()
 	icon_state = "slauncher_[current_rounds <= 0 ? "0" : "1"]"
+
+/obj/item/ammo_magazine/hardpoint/turret_smoke/incen
+	name = "Smoke Discharger Magazine"
+	desc = "A magazine of modified M60 incendiary smoke grenades used by the ATVs discharger array."
+	default_ammo = /datum/ammo/grenade_container/incen
+	max_rounds = 8
