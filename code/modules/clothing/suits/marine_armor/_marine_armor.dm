@@ -938,7 +938,7 @@
 	name = "\improper PLU lamp rig"
 	icon_state = "lamp_rig"
 	desc = "A lightweight rig designed to support a shoulder lamp."
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	blood_overlay_type = "coat"
 	flags_armor_protection = BODY_FLAG_CHEST
 	flags_cold_protection = BODY_FLAG_CHEST
