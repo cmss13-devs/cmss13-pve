@@ -18493,9 +18493,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "nsl" = (
-/obj/structure/closet/crate/trashcart{
-	pixel_y = 11
-	},
 /obj/item/prop/colony/usedbandage,
 /obj/item/prop/colony/usedbandage{
 	dir = 4
@@ -18517,6 +18514,9 @@
 	light_color = "#dae2ff";
 	light_power = 0.5;
 	pixel_y = 10
+	},
+/obj/structure/closet/crate/miningcar/yellow{
+	name = "\improper biological hazard container"
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
