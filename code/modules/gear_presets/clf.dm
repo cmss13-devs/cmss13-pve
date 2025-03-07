@@ -192,7 +192,7 @@
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	jumpsuit.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/reds, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/red, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_FACE)
 	spawn_rebel_shoes(new_human)
