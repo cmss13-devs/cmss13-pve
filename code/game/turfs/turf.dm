@@ -279,7 +279,8 @@
 
 	SEND_SIGNAL(src, COMSIG_TURF_ENTERED, A)
 	SEND_SIGNAL(A, COMSIG_MOVABLE_TURF_ENTERED, src)
-	if(!loc.gravity)
+	var/area/check_grav = get_area(src)
+	if(!check_grav.gravity)
 		inertial_drift(A)
 
 	// Let explosions know that the atom entered
