@@ -963,7 +963,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastbeach)
 "aLa" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/green/east,
 /area/varadero/interior/hall_SE)
 "aLe" = (
@@ -1832,7 +1832,7 @@
 /obj/item/stack/sheet/mineral/plastic{
 	amount = 3
 	},
-/obj/item/weapon/gun/rifle/m4ra,
+/obj/item/weapon/gun/rifle/m49a,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "bzQ" = (
@@ -1893,7 +1893,7 @@
 	name = "exotic bedsheet";
 	pixel_x = -1
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "bAF" = (
@@ -3928,7 +3928,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /obj/item/clothing/suit/armor/vest,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/security)
@@ -4771,7 +4771,7 @@
 /turf/open/floor/shiva/snow_mat/east,
 /area/varadero/interior/security)
 "dWn" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/greenfull/west,
 /area/varadero/interior/hall_SE)
 "dWI" = (
@@ -7180,7 +7180,7 @@
 /turf/open/gm/grass/grass1/weedable,
 /area/varadero/interior/caves/north_research)
 "fUJ" = (
-/obj/structure/machinery/vending/cigarette,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/wood,
 /area/varadero/interior/hall_SE)
 "fVd" = (
@@ -11199,7 +11199,7 @@
 /area/varadero/exterior/lz1_near)
 "jhS" = (
 /obj/structure/bedsheetbin,
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /obj/structure/machinery/storm_siren{
 	dir = 4;
 	pixel_x = -3
@@ -18964,7 +18964,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/medical)
 "qcy" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/shiva/blue/southeast,
 /area/varadero/interior/administration)
 "qcN" = (
@@ -21897,7 +21897,7 @@
 	pixel_x = -2;
 	pixel_y = 8
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "srg" = (
@@ -24383,7 +24383,7 @@
 /obj/structure/bedsheetbin{
 	icon_state = "linenbin-empty"
 	},
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "uHD" = (
@@ -26024,7 +26024,7 @@
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "vXi" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/red/northeast,
 /area/varadero/interior/security)
 "vXI" = (
@@ -26537,7 +26537,7 @@
 /obj/structure/bedsheetbin{
 	icon_state = "linenbin-empty"
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "wpG" = (
@@ -28417,14 +28417,14 @@
 /area/varadero/interior/hall_N)
 "xXp" = (
 /obj/structure/closet/crate/ammo/alt,
-/obj/item/ammo_magazine/rifle/m4ra{
+/obj/item/ammo_magazine/rifle/m49a{
 	pixel_x = 5
 	},
-/obj/item/ammo_magazine/rifle/m4ra{
+/obj/item/ammo_magazine/rifle/m49a{
 	pixel_y = -5;
 	pixel_x = -8
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /obj/item/ammo_magazine/rifle{
 	pixel_x = 5;
 	pixel_y = 4
@@ -28582,7 +28582,7 @@
 /turf/open/floor/plating,
 /area/varadero/interior_protected/caves/digsite)
 "yhh" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/hall_N)
 "yhj" = (

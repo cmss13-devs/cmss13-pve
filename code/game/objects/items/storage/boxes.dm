@@ -702,8 +702,8 @@
 	desc = "A secure box holding 25 M51A Bounding Fragmentation, Air-Burst grenades. Highly explosive, don't store near the flamer fuel."
 	model_icon = "model_m51a"
 	type_icon = "bfab"
-	can_hold = list(/obj/item/explosive/grenade/high_explosive/tmfrag)
-	grenade_type = /obj/item/explosive/grenade/high_explosive/tmfrag
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/impact/tmfrag)
+	grenade_type = /obj/item/explosive/grenade/high_explosive/impact/tmfrag
 
 /obj/item/storage/box/nade_box/heap
 	name = "\improper M38 HEAP grenade box"
@@ -720,6 +720,30 @@
 	type_icon = "smoke"
 	can_hold = list(/obj/item/explosive/grenade/smokebomb)
 	grenade_type = /obj/item/explosive/grenade/smokebomb
+
+/obj/item/storage/box/nade_box/smoke/green
+	name = "\improper M47 HSDP-G grenade box"
+	desc = "A secure box holding 25 M47-G HSDP green smoke grenades. Flammable, don't store near the flamer fuel."
+	model_icon = "model_m47"
+	type_icon = "gsmoke"
+	can_hold = list(/obj/item/explosive/grenade/smokebomb/green)
+	grenade_type = /obj/item/explosive/grenade/smokebomb/green
+
+/obj/item/storage/box/nade_box/smoke/red
+	name = "\improper M47-R HSDP grenade box"
+	desc = "A secure box holding 25 M47-R HSDP red smoke grenades. Flammable, don't store near the flamer fuel."
+	model_icon = "model_m47"
+	type_icon = "rsmoke"
+	can_hold = list(/obj/item/explosive/grenade/smokebomb/red)
+	grenade_type = /obj/item/explosive/grenade/smokebomb/red
+
+/obj/item/storage/box/nade_box/flare
+	name = "\improper M72A2 HIPF starshell grenade box"
+	desc = "A secure box holding 25 M72A2 HIPF starshell grenades. Flammable, don't store near the flamer fuel."
+	model_icon = "model_m72"
+	type_icon = "flare"
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/impact/flare)
+	grenade_type = /obj/item/explosive/grenade/high_explosive/impact/flare
 
 /obj/item/storage/box/nade_box/phophorus
 	name = "\improper M60 WPSI grenade box"
@@ -777,8 +801,8 @@
 	icon_state = "teargas_nade_placeholder"
 	model_icon = "model_m66"
 	type_icon = null
-	can_hold = list(/obj/item/explosive/grenade/custom/teargas)
-	grenade_type = /obj/item/explosive/grenade/custom/teargas
+	can_hold = list(/obj/item/explosive/grenade/tear/marine)
+	grenade_type = /obj/item/explosive/grenade/tear/marine
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/box/nade_box/tear_gas/fill_preset_inventory()

@@ -754,6 +754,19 @@
 		PROPERTY_RADIUS = 5,
 	)
 
+// Weak flame for scaring marines without instantkilling them
+/datum/reagent/napalm/weak
+	name = "Impure Napalm"
+	id = "weaknapalm"
+	description = "An impure napalm mix, causing it to burn at lower temperatures, typically used with flamethrowers."
+	burncolor = "#e49320"
+	burn_sprite = "dynamic"
+	properties = list(
+		PROPERTY_INTENSITY = BURN_LEVEL_TIER_2,
+		PROPERTY_DURATION = BURN_TIME_TIER_2,
+		PROPERTY_RADIUS = 5,
+	)
+
 // This is the regular flamer fuel and pyro regular flamer fuel.
 /datum/reagent/napalm/ut
 	name = "UT-Napthal Fuel"

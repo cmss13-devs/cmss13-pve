@@ -6,12 +6,12 @@
 /datum/ammo/bullet/shrapnel
 	name = "shrapnel"
 	icon_state = "buckshot"
-	accurate_range_min = 5
+	accurate_range_min = 4
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
-	max_range = 5
+	max_range = 4
 	damage = 25
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
@@ -38,22 +38,35 @@
 	name = "low velocity canister shot"
 	icon_state = "buckshot"
 
-	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_4
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
 	damage = 65
-	penetration = 0
 	penetration = ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_1
 	damage_armor_punch = 1
 	pen_armor_punch = 0
 	accurate_range = 3
-	effective_range_max = 3
+	effective_range_max = 5
 	damage_falloff = DAMAGE_FALLOFF_TIER_1
-	max_range = 6
+	max_range = 7
 
 /datum/ammo/bullet/shrapnel/canister/on_hit_mob(mob/M, obj/projectile/P)
-	knockback(M, P, 2)
-	slowdown(M, P)
+	knockback(M, P, 4)
+/datum/ammo/bullet/shrapnel/canister/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.KnockDown(2.5)
+		target.Stun(2.5)
+		target.Slow(4)
+	else
+		if(!isyautja(living_mob)) //Not predators.
+			living_mob.KnockDown(3)
+			living_mob.Stun(3)
+			living_mob.Slow(5)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
+
 
 /datum/ammo/bullet/shrapnel/canister/set_bullet_traits()
 	. = ..()
@@ -66,7 +79,7 @@
 /datum/ammo/bullet/shrapnel/heavy
 	name = "shrapnel cloud"
 	icon_state = "shrapnel_light"
-	max_range = 7
+	max_range = 6
 	damage = 35
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_4
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
@@ -107,6 +120,23 @@
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
+	))
+
+/datum/ammo/bullet/shrapnel/incendiary/light
+	damage = 10
+	penetration = ARMOR_PENETRATION_TIER_2
+
+/datum/ammo/bullet/shrapnel/incendiary/heavy	//Maximum warcrimes edition
+	accurate_range = 32
+	max_range = 8
+	shell_speed = AMMO_SPEED_TIER_2
+	damage = 20
+	penetration = ARMOR_PENETRATION_TIER_5
+
+/datum/ammo/bullet/shrapnel/incendiary/heavy/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, reagent = /datum/reagent/napalm/blue)
 	))
 
 /datum/ammo/bullet/shrapnel/metal

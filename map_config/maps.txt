@@ -76,3 +76,5 @@ endmap
 
 map lv295_blacksite
 endmap
+map bmg290_otogi_egress_point
+endmap

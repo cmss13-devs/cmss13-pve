@@ -673,6 +673,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "upp_g8pouch"
 	has_gamemode_skin = FALSE
 
+//this preset is for the US Army machinegunner.
+/obj/item/storage/backpack/general_belt/army
+	desc = "A small light pouch that can be fitted around the waist or back. Used as a mass pouch for bulkier magazines."
+//this fills the preset's ammo belt
+/obj/item/storage/backpack/general_belt/army/fill_preset_inventory()
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
+
 // Scout Cloak
 /obj/item/storage/backpack/marine/satchel/scout_cloak
 	name = "\improper M68 Thermal Cloak"
@@ -1050,7 +1058,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/list/smartguns = typesof(/obj/item/weapon/gun/smartgun)
 	var/list/training_guns = list(
 		/obj/item/weapon/gun/rifle/m41a/training,
-		/obj/item/weapon/gun/rifle/m4ra/training,
+		/obj/item/weapon/gun/rifle/m49a/training,
 		/obj/item/weapon/gun/smg/m39/training,
 		/obj/item/weapon/gun/pistol/m4a3/training,
 		/obj/item/weapon/gun/pistol/vp70/training) //Ivan doesn't carry toys.

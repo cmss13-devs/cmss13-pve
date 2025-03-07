@@ -26,6 +26,24 @@
 		list("W-Y Flask", 5, /obj/item/reagent_container/food/drinks/flask/weylandyutani, VENDOR_ITEM_REGULAR)
 	)
 
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp
+	name = "\improper food dispenser"
+	desc = "An food dispenser, capable of distributing food containing all the essential vitamins and nutrients anyone could ever need."
+	icon_state = "uppfood"
+
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp/populate_product_list(scale)
+	listed_products = list(
+		list("PREPARED MEALS", -1, null, null),
+		list("UPP Prepared Meal (Luncheon)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal6, VENDOR_ITEM_REGULAR),
+		list("UPP Prepared Meal (Shrimp)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal7, VENDOR_ITEM_REGULAR),
+		list("UPP Prepared Meal (Cuban Rice)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal8, VENDOR_ITEM_REGULAR),
+		list("UPP Prepared Meal (Meatballs)", 0, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal9, VENDOR_ITEM_REGULAR),
+		list("UPP Survival Ration", 50, /obj/item/reagent_container/food/snacks/upp, VENDOR_ITEM_REGULAR),
+		list("DRINKS", -1, null, null),
+		list("Water", 10, /obj/item/reagent_container/food/drinks/water, VENDOR_ITEM_REGULAR),
+		list("Tea", 10, /obj/item/reagent_container/food/drinks/tea/upp, VENDOR_ITEM_REGULAR),
+	)
+
 /obj/structure/machinery/cm_vending/sorted/marine_food/tutorial
 	hackable = FALSE
 	wrenchable = FALSE
