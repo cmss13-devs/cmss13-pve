@@ -279,6 +279,8 @@
 
 	SEND_SIGNAL(src, COMSIG_TURF_ENTERED, A)
 	SEND_SIGNAL(A, COMSIG_MOVABLE_TURF_ENTERED, src)
+	if(!loc.gravity)
+		inertial_drift(A)
 
 	// Let explosions know that the atom entered
 	for(var/datum/automata_cell/explosion/E in autocells)
@@ -308,15 +310,16 @@
 	if((istype(A, /mob/) && src.x > 2 && src.x < (world.maxx - 1) && src.y > 2 && src.y < (world.maxy-1)))
 		var/mob/M = A
 		if(M.Process_Spacemove(1))
-			M.inertia_dir  = 0
-			return
+			if(!M.inertia_dir)
+				return
 		spawn(5)
 			if((M && !(M.anchored) && !(M.pulledby) && (M.loc == src)))
-				if(M.inertia_dir)
+				if(!M.Check_Dense_Object())
+					if(M.inertia_dir)
+						step(M, M.inertia_dir)
+						return
+					M.inertia_dir = M.last_move_dir
 					step(M, M.inertia_dir)
-					return
-				M.inertia_dir = M.last_move_dir
-				step(M, M.inertia_dir)
 	return
 
 /turf/proc/levelupdate()

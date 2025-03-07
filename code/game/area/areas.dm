@@ -8,7 +8,7 @@
 /area
 	var/atmosalm = 0
 	var/poweralm = 1
-
+	var/gravity = 1
 	level = null
 	name = "Unknown"
 	icon = 'icons/turf/areas.dmi'

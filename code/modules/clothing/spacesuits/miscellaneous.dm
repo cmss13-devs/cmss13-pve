@@ -133,7 +133,7 @@
 	time_to_equip = 50
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|PROTECTFROMWEATHER
 	breach_vulnerability = SPACESUIT_BREACH_STANDARD
-	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/spacesuit/toggle_motion_detector)
+	actions_types = list(/datum/action/item_action/spacesuit/toggle_motion_detector)
 	var/obj/item/device/motiondetector/spacesuit/MD
 
 /obj/item/clothing/suit/space/pressure/Initialize()
@@ -153,6 +153,9 @@
 /obj/item/device/motiondetector/spacesuit/get_user()
 	if(ishuman(loc.loc))
 		return loc.loc
+
+/obj/item/device/motiondetector/spacesuit
+	iff_signal = FACTION_COLONIST
 
 
 /datum/action/item_action/spacesuit/toggle_motion_detector/New(Target, obj/item/holder)
@@ -281,6 +284,10 @@
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS|PROTECTFROMWEATHER
 	breach_vulnerability = SPACESUIT_BREACH_COMBAT
 
+/obj/item/clothing/suit/space/pressure/uscm/Initialize()
+	. = ..()
+	MD.iff_signal = FACTION_MARINE
+
 /obj/item/clothing/head/helmet/space/pressure/upp
 	name = "\improper UPPAC Sokol-KV2 pressure helmet"
 	desc = "A heavy space helmet, designed to be coupled with the Sokol-KV2 pressure suit utilized by the Union of Progressive Peoples Armed Collective and a few other UPP organizations."
@@ -321,6 +328,9 @@
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS|PROTECTFROMWEATHER
 	breach_vulnerability = SPACESUIT_BREACH_COMBAT
 
+/obj/item/clothing/suit/space/pressure/upp/Initialize()
+	. = ..()
+	MD.iff_signal = FACTION_UPP
 // Souto man
 
 /obj/item/clothing/suit/space/souto

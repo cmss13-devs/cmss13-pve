@@ -101,9 +101,24 @@
 
 	move_delay = .
 
-/mob/living/carbon/human/Process_Spacemove(check_drift = 0)
+/mob/living/carbon/human/Process_Spacemove(check_drift = 0, direct)
 	//Can we act
 	if(is_mob_restrained()) return 0
+
+	//Do we have a working jetpack
+	if(istype(back, /obj/item/tank/jetpack))
+		var/obj/item/tank/jetpack/J = back
+		if(((!check_drift) || (check_drift && J.on && J.stabilization_on)) && (body_position == STANDING_UP) && (J.allow_thrust(STD_BREATH_VOLUME/5, src)))
+			inertia_dir = 0 //this stops us if stablization is turned on while drifting
+		if(J.on && (J.allow_thrust(STD_BREATH_VOLUME/5, src)))
+			if(!J.stabilization_on) //let us move one turf at a time if so
+				if(inertia_dir != direct)
+					if(direct != null)
+						inertia_dir = direct //Can coast on inertia by moving only one turf
+					return 0
+			else
+				return 1 //stop Goku teleporting
+
 
 // if(!check_drift && J.allow_thrust(0.01, src))
 // return 1

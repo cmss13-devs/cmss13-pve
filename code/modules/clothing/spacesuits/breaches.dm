@@ -89,7 +89,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 		if (existing.class < 5 || existing.patched)
 			if(existing.patched)
-				playsound(loc, 'sound/effects/hull_bang.ogg', 75, TRUE, 7)
+				playsound(loc, 'sound/effects/hull_bang.ogg', 50+(amount*5), TRUE, falloff = 5)
 				sound_already_played = TRUE
 				if (existing.damtype == BRUTE)
 					var/message = "\The [existing.descriptor] on \the [src] gapes wider[existing.patched ? ", tearing the patch" : ""]!"
@@ -116,7 +116,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 			else if(existing.damtype == BURN)
 				T.visible_message(SPAN_WARNING("\The [old_descriptor] on [src] widens, turning to a [existing.descriptor][existing.patched ? ", tearing the patch" : ""]"))
 	if(!sound_already_played)
-		playsound(loc, pick('sound/effects/hull_hit1.ogg', 'sound/effects/hull_hit2.ogg', 'sound/effects/hull_hit3.ogg'), 75, TRUE, 7)
+		playsound(loc, pick('sound/effects/hull_hit1.ogg', 'sound/effects/hull_hit2.ogg', 'sound/effects/hull_hit3.ogg'), 50+(amount*5), TRUE, falloff = 5)
 	if (amount)
 		//Spawn a new breach.
 		var/datum/breach/B = new()

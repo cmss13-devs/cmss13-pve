@@ -348,6 +348,13 @@
 	item_state = "emptyskill"
 	skilllock = SKILL_MEDICAL_DEFAULT
 
+/obj/item/reagent_container/hypospray/autoinjector/nutriment
+	name = "nutriment autoinjector"
+	chemname = "nutriment"
+	desc = "An autoinjector loaded with 3 uses of a nutrition replacement mix. Not as efficient as eating real food."
+	amount_per_transfer_from_this = 5
+	volume = 5 * INJECTOR_USES
+
 
 /obj/item/reagent_container/hypospray/autoinjector/empty
 	name = "autoinjector (C-T)"

@@ -645,6 +645,63 @@
 		list("Headband (tan)", round(scale * 5), /obj/item/clothing/head/headband/tan, VENDOR_ITEM_REGULAR),
 		)
 
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/space
+	name = "\improper ColMarTech Automated EVA Equipment"
+	desc = "An automated supply rack hooked up to a small storage of various utilities and tools, specifically for use in space enviroments. Can be accessed by any Marine Rifleman."
+	req_access = list()
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_SPECPREP, ACCESS_MARINE_RO, ACCESS_MARINE_PREP)
+	hackable = TRUE
+	icon_state = "spec_gear"
+	vend_x_offset = 2
+	vend_y_offset = 1
+	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND | VEND_STOCK_DYNAMIC
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/ui_state(mob/user)
+	return GLOB.not_incapacitated_and_adjacent_strict_state
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/populate_product_list(scale)
+	listed_products = list(
+		list("FOOD", -1, null, null),
+		list("Nutrition Autoinjector", floor(scale * 12), /obj/item/reagent_container/hypospray/autoinjector/nutriment, VENDOR_ITEM_RECOMMENDED),
+
+		list("MEDICAL", -1, null, null),
+		list("Gauze", round(scale * 4), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Ointment", round(scale * 4), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
+		list("Emergency Autoinjector", round(scale * 4), /obj/item/reagent_container/hypospray/autoinjector/emergency, VENDOR_ITEM_REGULAR),
+		list("Bicaridine Autoinjector", round(scale * 4), /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless, VENDOR_ITEM_REGULAR),
+		list("Kelotane Autoinjector", round(scale * 4), /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless, VENDOR_ITEM_REGULAR),
+		list("Tricordrazine Autoinjector", round(scale * 4), /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
+		list("Tramadol Injector", round(scale * 4), /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, VENDOR_ITEM_REGULAR),
+
+		list("SUIT REPAIR", -1, null, null),
+		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
+		list("Cable Coil", round(scale * 5), /obj/item/stack/cable_coil, VENDOR_ITEM_RECOMMENDED),
+
+		list("AIR SUPPLY", -1, null, null),
+		list("Breath Mask", round(scale * 10), /obj/item/clothing/mask/breath, VENDOR_ITEM_RECOMMENDED),
+		list("Back Mounted Oxygen Tank", round(scale * 8), /obj/item/tank/oxygen, VENDOR_ITEM_REGULAR),
+		list("Medium Oxygen Tank", round(scale * 8), /obj/item/tank/emergency_oxygen/double, VENDOR_ITEM_RECOMMENDED),
+		list("Emergency Oxygen Tank", round(scale * 8), /obj/item/tank/emergency_oxygen/engi, VENDOR_ITEM_REGULAR),
+
+		list("AIR SUPPLY AND PROPULSION", -1, null, null),
+		list("Jetpack (Air)", round(scale * 5), /obj/item/tank/jetpack/air, VENDOR_ITEM_REGULAR),
+
+		list("FLARE AND LIGHT", -1, null, null),
+		list("Combat Flashlight", round(scale * 5), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
+		list("Box of Flashlight", round(scale * 1), /obj/item/ammo_box/magazine/misc/flashlight, VENDOR_ITEM_REGULAR),
+		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", round(scale * 5), /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
+		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
+		list("M72A2 HIPF Starshell Grenade Packet", round(scale * 2), /obj/item/storage/box/packet/flare, VENDOR_ITEM_REGULAR),
+		list("M82F Flare Gun", round(scale * 1), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
+
+		list("MISCELLANEOUS", -1, null, null),
+		list("Extinguisher", round(scale * 3), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
+		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
+		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
+		list("Gas Analyzer", round(scale * 5), /obj/item/device/analyzer, VENDOR_ITEM_REGULAR),
+		)
+
 //--------------SQUAD ATTACHMENTS VENDOR--------------
 
 /obj/structure/machinery/cm_vending/sorted/attachments/squad
