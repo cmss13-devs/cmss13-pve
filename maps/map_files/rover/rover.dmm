@@ -1,4 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/closet/secure_closet/marine_personal/sof{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/sof{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "af" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -1018,16 +1027,16 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonarmory)
 "hC" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8
-	},
 /obj/structure/machinery/light/small/blue{
 	dir = 1;
 	light_color = "#dae2ff";
 	light_power = 0.5
+	},
+/obj/structure/closet/secure_closet/marine_personal/sof{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/sof{
+	pixel_x = -7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -1177,7 +1186,7 @@
 /area/golden_arrow/medical)
 "iN" = (
 /obj/structure/closet/firecloset,
-/turf/open/floor/almayer/edge/west,
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/prep_hallway)
 "iR" = (
 /turf/open/floor/almayer_hull/outerhull_dir/east,
@@ -1278,11 +1287,6 @@
 /area/golden_arrow/squad_one)
 "jS" = (
 /obj/structure/machinery/medical_pod/bodyscanner,
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /obj/structure/sign/safety/med_life_support{
 	pixel_x = 33
 	},
@@ -1295,6 +1299,11 @@
 	dir = 4;
 	pixel_y = 19;
 	pixel_x = 16
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -1552,11 +1561,13 @@
 	},
 /obj/structure/machinery/vending/snack/packaged{
 	pixel_x = -7;
-	pixel_y = 14
+	pixel_y = 14;
+	density = 0
 	},
 /obj/structure/machinery/vending/coffee{
 	pixel_x = 14;
-	pixel_y = 13
+	pixel_y = 13;
+	density = 0
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/prep_hallway)
@@ -1592,6 +1603,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/cryo_cells)
 "mS" = (
@@ -2379,11 +2391,11 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "sW" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/sof{
 	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/sof{
+	pixel_x = -7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -2508,9 +2520,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "tK" = (
-/obj/structure/machinery/vending/cigarette{
+/obj/structure/machinery/vending/cigarette/koorlander{
 	pixel_x = 4;
-	pixel_y = 14
+	pixel_y = 14;
+	density = 0
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/prep_hallway)
@@ -3088,15 +3101,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
-"yT" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_x = 1;
-	pixel_y = 1
-	},
-/obj/structure/machinery/power/apc/almayer/west,
-/turf/open/floor/almayer/dark_sterile,
-/area/golden_arrow/cryo_cells)
 "yV" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/vehicle_locker/cabinet/cups{
@@ -3709,12 +3713,11 @@
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/platoonarmory)
 "Eg" = (
-/obj/structure/machinery/door/airlock/almayer/secure{
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
-	req_access = null;
 	name = "\improper Quarters"
 	},
-/obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "Ei" = (
@@ -3727,7 +3730,6 @@
 "Ej" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
-	id = "Delta_1";
 	name = "\improper Bathroom"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -4289,13 +4291,13 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "IQ" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/sof{
 	pixel_x = -7;
 	job = "Corpsman"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/sof{
 	pixel_x = 8;
-	job = "Squad Leader"
+	job = "Radio Telephone Operator"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -4396,7 +4398,7 @@
 	light_power = 0.7
 	},
 /obj/structure/closet/emcloset,
-/turf/open/floor/almayer/edge/east,
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/prep_hallway)
 "Jk" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4634,11 +4636,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "KS" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/sof{
 	pixel_x = -7;
-	job = "Radio Telephone Operator"
+	job = "Squad Leader"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/sof{
 	pixel_x = 8;
 	job = "Section Sergeant"
 	},
@@ -5578,17 +5580,17 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/medical)
 "Tl" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Smartgunner"
-	},
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
 	light_power = 0.5;
 	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/sof{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/sof{
+	pixel_x = 8;
+	job = "Smartgunner"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -6171,18 +6173,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
-"Xt" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/safety/bulkhead_door{
-	pixel_x = 32;
-	pixel_y = 8
-	},
-/obj/structure/sign/safety/opens_up{
-	pixel_x = 32;
-	pixel_y = -4
-	},
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/golden_arrow/prep_hallway)
 "Xv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -12874,7 +12864,7 @@ Sn
 Sn
 rv
 Xl
-Xt
+ag
 jv
 gp
 zJ
@@ -15323,7 +15313,7 @@ Da
 rM
 el
 eu
-sW
+aa
 Da
 sW
 zl
@@ -15733,7 +15723,7 @@ QT
 aq
 cg
 oU
-yT
+aq
 cg
 QT
 VC
