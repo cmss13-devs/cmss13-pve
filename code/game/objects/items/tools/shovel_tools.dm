@@ -106,6 +106,9 @@
 						SB = sandbags
 						break
 
+				if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES)) // check if barricades can be made/sandbags can be filled
+					return
+
 				if(!istype(SB, /obj/item/stack/sandbags_empty)) // Checks sandbag a second time to confirm, if none are found, cancels everything
 					to_chat(user, SPAN_NOTICE("There are no sandbags nearby to fill up."))
 					break
