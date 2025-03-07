@@ -236,7 +236,7 @@
 		/obj/item/tool/lighter/zippo/black = 5,
 		/obj/item/tool/lighter/zippo/blue = 5,
 	)
-	premium = list(/obj/item/clothing/mask/cigarette/cigar = 25)
+	premium = list(/obj/item/clothing/mask/cigarette/cigar = 5)
 	prices = list(
 		/obj/item/storage/fancy/cigarettes/lucky_strikes = 35,
 		/obj/item/storage/fancy/cigarettes/kpack = 40,
@@ -292,7 +292,7 @@
 		/obj/item/tool/lighter/zippo/blue = 5,
 	)
 
-	premium = list(/obj/item/clothing/mask/cigarette/cigar = 25)
+	premium = list(/obj/item/clothing/mask/cigarette/cigar = 5)
 	prices = list(
 		/obj/item/storage/fancy/cigarettes/kpack = 40,
 		/obj/item/storage/fancy/cigarettes/kpack = 40,
@@ -305,6 +305,67 @@
 		/obj/item/tool/lighter/zippo = 25,
 		/obj/item/tool/lighter/zippo/black = 27,
 		/obj/item/tool/lighter/zippo/blue = 27,
+	)
+	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
+
+
+/obj/structure/machinery/vending/cigarette/marine
+	name = "cigarette machine"
+	icon_state = "cigs"
+	desc = "A vending machine dealing in all sorts of cigarettes, lighters and cigars."
+	product_slogans = list(
+		"Light up and enjoy the rich, comfortably familiar taste of Koorlander Gold.",
+		"Always by your side, Koorlander Gold!",
+		"For the man who knows his place is at the top, Koorlander Gold shows the world that you're the best and no-one can say otherwise.",
+		"Enjoy the delicate touch of Lady Fingers.",
+		"Lady Fingers, the compliment to any evening.",
+		"For the cool, filtered feel, Lady Finger vigarettes provide the smoothest draw of any cigarette on the market.",
+		"Real. Simple. Different. American Spirit.",
+		"American Spirit, America's best cigarette.",
+		"Lucky Strike, it's toasted!",
+		"L.S./M.F.T.! Lucky Strikes Means Fine Tobacco!",
+		"A taste of the Emerald Isles at the touch of your finger-tips, Emerald Green.",
+		"Forge new frontiers with Arcturian Ace.",
+		"For a classic style that lights up every time, there's always Zippo!",
+		"Zippo, it works or we fix it for free.",
+		"On a budget? Buy a Bic.",
+		"Bic, proudly lighting the way since 1973.",
+		"The Interstellar Commerce Commission would like to remind you that smoking kills.",
+		"The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue.")
+	product_ads = "The Surgeon General would like to remind you that tobacco products cause cancer and increased fatigue."
+	products = list(
+		/obj/item/storage/fancy/cigarettes/lucky_strikes = 5,
+		/obj/item/storage/fancy/cigarettes/kpack = 5,
+		/obj/item/storage/fancy/cigarettes/spirit = 5,
+		/obj/item/storage/fancy/cigarettes/spirit/yellow = 5,
+		/obj/item/storage/fancy/cigarettes/emeraldgreen = 5,
+		/obj/item/storage/fancy/cigarettes/wypacket = 5,
+		/obj/item/storage/fancy/cigarettes/lady_finger = 5,
+		/obj/item/storage/fancy/cigarettes/blackpack = 5,
+		/obj/item/storage/fancy/cigar/tarbacktube = 5,
+		/obj/item/storage/box/matches = 20,
+		/obj/item/tool/lighter/random = 10,
+		/obj/item/tool/lighter/zippo = 5,
+		/obj/item/tool/lighter/zippo/black = 2,
+		/obj/item/tool/lighter/zippo/blue = 2,
+	)
+	premium = list(/obj/item/clothing/mask/cigarette/cigar = 5)
+	prices = list(
+		/obj/item/storage/fancy/cigarettes/lucky_strikes = 70,
+		/obj/item/storage/fancy/cigarettes/kpack = 80,
+		/obj/item/storage/fancy/cigarettes/spirit = 80,
+		/obj/item/storage/fancy/cigarettes/spirit/yellow = 80,
+		/obj/item/storage/fancy/cigarettes/arcturian_ace = 50,
+		/obj/item/storage/fancy/cigarettes/emeraldgreen = 50,
+		/obj/item/storage/fancy/cigarettes/wypacket = 100,
+		/obj/item/storage/fancy/cigarettes/lady_finger = 60,
+		/obj/item/storage/fancy/cigarettes/blackpack = 75,
+		/obj/item/storage/fancy/cigar/tarbacktube = 70,
+		/obj/item/storage/box/matches = 2,
+		/obj/item/tool/lighter/random = 5,
+		/obj/item/tool/lighter/zippo = 50,
+		/obj/item/tool/lighter/zippo/black = 54,
+		/obj/item/tool/lighter/zippo/blue = 54,
 	)
 	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
 
