@@ -1,4 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/gun_rack/m41/elite/unloaded,
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
+"ab" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/ammo_box/magazine/mk1/ap,
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_theta)
 "ai" = (
 /obj/structure/barricade/handrail{
 	dir = 1;
@@ -118,7 +127,12 @@
 	pixel_x = -10;
 	pixel_y = 1
 	},
-/obj/item/ammo_box/magazine/ext,
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/storage/fancy/cigar{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/obj/item/clothing/head/beret/pmc,
 /turf/open/floor/wood/ship,
 /area/firefly/ptsgt)
 "bL" = (
@@ -742,11 +756,11 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "kR" = (
-/obj/structure/largecrate/supply/ammo/m41a/extended,
-/obj/structure/largecrate/supply/ammo/m41a/extended{
-	pixel_x = 3;
-	pixel_y = 8
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_x = -5;
+	pixel_y = -6
 	},
+/obj/item/ammo_box/magazine/mk1/large,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "kW" = (
@@ -1046,11 +1060,10 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "qo" = (
-/obj/item/ammo_box/magazine/ext{
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/ext{
-	pixel_y = 9
+/obj/item/ammo_box/magazine/mk1/large,
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_x = 0;
+	pixel_y = 6
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_theta)
@@ -1329,14 +1342,6 @@
 /obj/structure/cargo_container/wy/left,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"vI" = (
-/obj/structure/largecrate/supply/ammo/m41a/extended,
-/obj/structure/largecrate/supply/ammo/m41a/extended{
-	pixel_x = 3;
-	pixel_y = 8
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/squad_theta)
 "vN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -1493,7 +1498,6 @@
 	},
 /obj/item/device/binoculars/range/designator,
 /obj/item/clothing/under/marine/veteran/pmc/leader,
-/obj/item/weapon/gun/rifle/m41a/elite/platoon,
 /turf/open/floor/wood/ship,
 /area/firefly/ptsgt)
 "xg" = (
@@ -2528,10 +2532,6 @@
 	pixel_x = -7;
 	pixel_y = 9
 	},
-/obj/item/storage/backpack/marine/ammo_rack{
-	pixel_x = 8;
-	pixel_y = 18
-	},
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "Oi" = (
@@ -2718,29 +2718,13 @@
 /obj/structure/window/framed/corsat/research,
 /turf/open/floor/plating,
 /area/firefly/medical)
-"QK" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/backpack/marine/ammo_rack{
-	pixel_x = 9;
-	pixel_y = 7
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/squad_theta)
 "QN" = (
-/obj/structure/surface/rack{
-	color = "#6b675e";
-	layer = 2.79
-	},
-/obj/item/weapon/gun/rifle/m41a/elite/platoon{
-	pixel_y = 12
-	},
-/obj/item/weapon/gun/rifle/m41a/elite/platoon{
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/ammo_box/magazine/mk1/ap{
+	pixel_x = 5;
 	pixel_y = 6
 	},
-/obj/item/weapon/gun/rifle/m41a/elite/platoon,
-/obj/item/weapon/gun/rifle/m41a/elite/platoon{
-	pixel_y = -7
-	},
+/obj/item/ammo_box/magazine/mk1/heap/empty,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "QO" = (
@@ -2775,20 +2759,7 @@
 /turf/open/floor/corsat/red/north,
 /area/firefly/hangar)
 "Ra" = (
-/obj/structure/surface/rack{
-	color = "#6b675e";
-	layer = 2.79
-	},
-/obj/item/weapon/gun/rifle/m41a/elite/platoon{
-	pixel_y = 12
-	},
-/obj/item/weapon/gun/rifle/m41a/elite/platoon{
-	pixel_y = 6
-	},
-/obj/item/weapon/gun/rifle/m41a/elite/platoon,
-/obj/item/weapon/gun/rifle/m41a/elite/platoon{
-	pixel_y = -7
-	},
+/obj/structure/gun_rack/m41/elite/unloaded,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_theta)
 "Rq" = (
@@ -3350,7 +3321,7 @@
 /obj/item/clothing/shoes/marine/civilian/knife,
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Squad Sergeant"
+	job = "Squad Leader"
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
@@ -13947,7 +13918,7 @@ qK
 qK
 dA
 Oi
-Ra
+ab
 UY
 UY
 UY
@@ -14118,7 +14089,7 @@ Mu
 mH
 em
 Qj
-QN
+aa
 It
 It
 It
@@ -14251,8 +14222,8 @@ qK
 qK
 Ok
 Oi
-vI
-QK
+Mi
+UY
 nr
 sM
 xA
