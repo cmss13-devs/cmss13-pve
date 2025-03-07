@@ -15490,18 +15490,6 @@
 	light_range = 4
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = -5;
-	pixel_y = 4
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_y = -5;
-	pixel_x = 7
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = -2;
-	pixel_y = -2
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/tdome,
 /area/lv522/indoors/a_block/security)
@@ -16391,7 +16379,9 @@
 	dir = 1
 	},
 /obj/item/reagent_container/food/snacks/grown/wheat{
-	name = "straw"
+	name = "straw";
+	pixel_x = -2;
+	pixel_y = -4
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony)
@@ -67407,13 +67397,6 @@
 	pixel_y = 9;
 	light_color = "#BB3F3F"
 	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_y = 4
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_y = -8;
-	pixel_x = 8
-	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "srm" = (
@@ -68928,9 +68911,6 @@
 	icon = 'icons/mob/humans/species/r_synthetic.dmi';
 	icon_state = "Synthetic_Template";
 	name = "Display synthetic"
-	},
-/obj/item/clothing/under/CM_uniform{
-	pixel_y = -2
 	},
 /obj/structure/window/reinforced,
 /turf/open/floor/prison/bright_clean,

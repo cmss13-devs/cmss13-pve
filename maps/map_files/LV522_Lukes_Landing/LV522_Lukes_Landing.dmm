@@ -3098,7 +3098,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
 /obj/item/paper/wy{
-	pixel_x = 6;
+	pixel_x = 5;
 	pixel_y = 6
 	},
 /obj/item/newspaper,
@@ -14255,13 +14255,6 @@
 	dir = 1;
 	pixel_y = 9;
 	light_color = "#BB3F3F"
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_y = 4
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_y = -8;
-	pixel_x = 8
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
