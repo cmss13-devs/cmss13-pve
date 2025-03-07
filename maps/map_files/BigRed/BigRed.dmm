@@ -11367,7 +11367,7 @@
 /turf/open/floor/asteroidwarning/north,
 /area/bigredv2/outside/eta)
 "hDD" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkyellow2/north,
 /area/bigredv2/outside/engineering)
 "hEq" = (
@@ -19461,7 +19461,7 @@
 /area/bigredv2/outside/filtration_plant)
 "oxa" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor,
 /area/bigredv2/outside/general_offices)
 "oxe" = (
@@ -19868,7 +19868,7 @@
 /turf/open/floor/freezerfloor,
 /area/bigredv2/outside/engineering)
 "oPT" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/dark,
 /area/bigredv2/outside/space_port)
 "oQi" = (
@@ -22047,7 +22047,7 @@
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
 "qLP" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/mars_cave/mars_dirt_6,
 /area/bigredv2/caves/mining)
 "qLR" = (

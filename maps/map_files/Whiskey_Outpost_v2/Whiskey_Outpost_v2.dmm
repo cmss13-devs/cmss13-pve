@@ -246,7 +246,7 @@
 /turf/open/jungle/impenetrable,
 /area/whiskey_outpost/outside/south)
 "ba" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/prison/floor_plate/southwest,
 /area/whiskey_outpost/inside/bunker/bunker/front)
 "bb" = (
@@ -3155,7 +3155,7 @@
 /turf/open/jungle,
 /area/whiskey_outpost/outside/south/far)
 "nF" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/prison,
 /area/whiskey_outpost/inside/living)
 "nG" = (
