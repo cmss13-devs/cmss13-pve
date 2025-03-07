@@ -143,7 +143,137 @@
 		list("Webbing", 10, /obj/item/clothing/accessory/storage/webbing, null, VENDOR_ITEM_REGULAR)
 	)
 
+//*****************************************************************************************************/
 
+/datum/equipment_preset/clf/soldier/eva
+	name = "CLF Soldier (EVA, Shotgun)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_CLF
+	rank = JOB_CLF
+	role_comm_title = "GRL"
+
+	skills = /datum/skills/clf
+
+/datum/equipment_preset/clf/soldier/eva/load_gear(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
+	var/obj/item/clothing/accessory/storage/webbing/W = new()
+	jumpsuit.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_FACE)
+	spawn_rebel_shoes(new_human)
+	spawn_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/double, WEAR_IN_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/on(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/full/random(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+
+//*****************************************************************************************************/
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/clf/soldier/eva/rifle
+	name = "CLF Soldier (EVA, Rifle)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_CLF
+	rank = JOB_CLF
+	role_comm_title = "GRL"
+
+	skills = /datum/skills/clf
+
+/datum/equipment_preset/clf/soldier/eva/rifle/load_gear(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
+	var/obj/item/clothing/accessory/storage/webbing/W = new()
+	jumpsuit.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/reds, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_FACE)
+	spawn_rebel_shoes(new_human)
+	spawn_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/double, WEAR_IN_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/on(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/ar10(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ar10(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/clf/soldier/eva/sniper
+	name = "CLF Soldier (EVA, Bad Sniper)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_CLF
+	rank = JOB_CLF
+	role_comm_title = "GRL"
+
+	skills = /datum/skills/clf
+
+/datum/equipment_preset/clf/soldier/eva/sniper/load_gear(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
+	var/obj/item/clothing/accessory/storage/webbing/W = new()
+	jumpsuit.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/dark, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_FACE)
+	spawn_rebel_shoes(new_human)
+	spawn_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/double, WEAR_IN_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/on(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/boltaction(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/boltaction(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/clf/engineer/eva
+	name = "CLF Engineer (EVA)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_CLF_ENGI
+	rank = JOB_CLF_ENGI
+	role_comm_title = "TECH"
+
+	skills = /datum/skills/clf/combat_engineer
+
+/datum/equipment_preset/clf/engineer/eva/load_gear(mob/living/carbon/human/new_human)
+
+	var/obj/item/clothing/under/colonist/clf/M = new()
+	var/obj/item/clothing/accessory/storage/webbing/W = new()
+	M.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(M, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/orange(new_human), WEAR_JACKET)
+	spawn_rebel_shoes(new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/meson, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/cct, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/ert, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/on, WEAR_IN_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_R_STORE)
+
+	spawn_rebel_weapon(new_human)
+	spawn_rebel_weapon(new_human,1)
 
 //*****************************************************************************************************/
 

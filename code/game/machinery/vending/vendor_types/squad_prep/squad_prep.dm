@@ -687,6 +687,9 @@
 		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
 		list("Cable Coil", round(scale * 5), /obj/item/stack/cable_coil, VENDOR_ITEM_RECOMMENDED),
 
+		list("WEBBINGS", -1, null, null),
+		list("M3 Pattern Webbing", round(scale * 1), /obj/item/clothing/accessory/storage/webbing/m3, VENDOR_ITEM_RECOMMENDED),
+
 		list("AIR SUPPLY", -1, null, null),
 		list("Breath Mask", round(scale * 10), /obj/item/clothing/mask/breath, VENDOR_ITEM_RECOMMENDED),
 		list("Back Mounted Oxygen Tank", round(scale * 8), /obj/item/tank/oxygen, VENDOR_ITEM_REGULAR),

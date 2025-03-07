@@ -223,7 +223,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 		else
 			. += SPAN_HIGHDANGER("The skin temperature sensor reads [round(wearer.bodytemperature-T0C, 0.1)]℃ ([round(wearer.bodytemperature*1.8-459.67, 0.1)]℉")
 	if(flags_inventory & BYPASSFORINJECTOR)
-		. += SPAN_HELPFUL("This has an [SPAN_BOLD("injection port")]. This allows the use of [SPAN_BOLD("injectors, syringes, hyposprays and bioglue")] while it is being worn.")
+		. += SPAN_HELPFUL("This has an [SPAN_BOLD("injection port")]. This allows the use of [SPAN_BOLD("injectors, syringes, hyposprays and gauze")] while it is being worn.")
 	else
 		. += SPAN_DANGER("This does [SPAN_BOLD("not have an injection port")]. It is [SPAN_BOLD("impossible to give any medicine while it is being worn")]. This has to be breaking some regulations!")
 	if(locate(/datum/action/item_action/spacesuit/toggle_motion_detector) in actions)
