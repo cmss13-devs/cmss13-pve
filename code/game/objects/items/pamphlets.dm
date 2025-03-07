@@ -166,7 +166,20 @@
 	desc = "This pamphlet was designed for Intelligence Officers operating on Earth to interact with the local populaces of the Latin American states, but only for IOs who managed to sleep through Dialects and Mannerisms Class."
 	trait = /datum/character_trait/language/spanish
 
+/obj/item/pamphlet/language/filipino
+	name = "Simples phrases in Filipino"
+	desc = "This pamphlet teaches you Filipino."
+	trait = /datum/character_trait/language/filipino
 
+/obj/item/pamphlet/language/french
+	name = "Simples phrases in French"
+	desc = "This pamphlet teaches you French."
+	trait = /datum/character_trait/language/french
+
+/obj/item/pamphlet/language/portuguese
+	name = "Simples phrases in Portuguese."
+	desc = "This pamphlet teaches you Portuguese."
+	trait = /datum/character_trait/language/portuguese
 
 //Restricted languages, spawnable for events.
 
