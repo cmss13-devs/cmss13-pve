@@ -79,10 +79,14 @@
 	var/list/fireteam_leaders = list(
 									"SQ1" = null,
 									"SQ2" = null,
+									"SQ3" = null,
+									"SQ4" = null,
 									) //FT leaders stored here
 	var/list/list/fireteams = list(
 							"SQ1" = list(),
 							"SQ2" = list(),
+							"SQ3" = list(),
+							"SQ4" = list(),
 							)
 	var/list/squad_info_data = list()
 
@@ -358,6 +362,8 @@
 	tracking_id = SStracking.setup_trackers()
 	SStracking.setup_trackers(null, "SQ1")
 	SStracking.setup_trackers(null, "SQ2")
+	SStracking.setup_trackers(null, "SQ3")
+	SStracking.setup_trackers(null, "SQ4")
 	update_all_squad_info()
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_MODE_POSTSETUP, PROC_REF(setup_supply_drop_list))
