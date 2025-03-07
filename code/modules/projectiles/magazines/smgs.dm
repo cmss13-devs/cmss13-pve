@@ -71,8 +71,8 @@
 	bonus_overlay = "m39_ex"
 
 /obj/item/ammo_magazine/smg/m39/pve
-	name = "\improper M39 duplex magazine (10x20mm)"
-	desc = "A 10x20mm caseless submachinegun magazine containing special light explosive HESH rounds, designed to increase your overall firepower per pull. Reduced bullet velocity due to two slugs per bullet."
+	name = "\improper Viper 9 duplex magazine (9mm)"
+	desc = "A 9mm caseless submachinegun magazine containing special duplex rounds, designed to increase your overall firepower per pull. Reduced bullet velocity due to two slugs per bullet."
 	max_rounds = 54
 	default_ammo = /datum/ammo/bullet/smg/pve
 	ammo_band_color = AMMO_BAND_COLOR_LIGHT_EXPLOSIVE
