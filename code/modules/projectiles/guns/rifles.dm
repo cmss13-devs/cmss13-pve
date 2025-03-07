@@ -394,7 +394,7 @@
 	random_spawn_under = list(
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/lasersight,
-		/obj/item/attachable/angledgrip
+		/obj/item/attachable/angledgrip,
 	)
 	random_muzzle_chance = 50
 	random_spawn_muzzle = list(
