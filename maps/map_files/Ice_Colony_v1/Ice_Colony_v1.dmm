@@ -1253,8 +1253,8 @@
 /area/ice_colony/surface/bar/bar)
 "cam" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/head/helmet/space/compression,
-/obj/item/clothing/suit/space/compression,
+/obj/item/clothing/head/helmet/space/pressure,
+/obj/item/clothing/suit/space/pressure,
 /turf/open/floor/darkred2/west,
 /area/ice_colony/underground/research/work)
 "cas" = (
@@ -1428,7 +1428,6 @@
 "cui" = (
 /obj/structure/machinery/optable,
 /obj/effect/landmark/xeno_spawn,
-/obj/effect/landmark/corpsespawner/colonist/random/burst,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
 "cux" = (
@@ -2726,8 +2725,8 @@
 /area/ice_colony/surface/clinic/storage)
 "eVY" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/head/helmet/space/compression,
-/obj/item/clothing/suit/space/compression,
+/obj/item/clothing/head/helmet/space/pressure,
+/obj/item/clothing/suit/space/pressure,
 /turf/open/floor/darkred2/east,
 /area/ice_colony/underground/research/work)
 "eXe" = (
@@ -3198,8 +3197,8 @@
 /obj/structure/holowindow{
 	dir = 4
 	},
-/obj/item/clothing/suit/space/compression,
-/obj/item/clothing/head/helmet/space/compression,
+/obj/item/clothing/suit/space/pressure,
+/obj/item/clothing/head/helmet/space/pressure,
 /turf/open/floor/darkgreen2,
 /area/ice_colony/underground/research/storage)
 "fOQ" = (
@@ -5380,8 +5379,8 @@
 /area/shuttle/elevator3/underground)
 "kbg" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/suit/space/compression,
-/obj/item/clothing/head/helmet/space/compression,
+/obj/item/clothing/suit/space/pressure,
+/obj/item/clothing/head/helmet/space/pressure,
 /turf/open/floor/darkyellowcorners2/west,
 /area/ice_colony/surface/research/field_gear)
 "kbB" = (
@@ -6928,8 +6927,8 @@
 /area/ice_colony/underground/security)
 "nAo" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/suit/space/compression,
-/obj/item/clothing/head/helmet/space/compression,
+/obj/item/clothing/suit/space/pressure,
+/obj/item/clothing/head/helmet/space/pressure,
 /turf/open/floor/darkgreen2,
 /area/ice_colony/underground/research/storage)
 "nAs" = (
@@ -9278,8 +9277,8 @@
 	dir = 4
 	},
 /obj/structure/surface/rack,
-/obj/item/clothing/suit/space/compression,
-/obj/item/clothing/head/helmet/space/compression,
+/obj/item/clothing/suit/space/pressure,
+/obj/item/clothing/head/helmet/space/pressure,
 /turf/open/floor/darkyellowcorners2/north,
 /area/ice_colony/underground/research/work)
 "rNh" = (

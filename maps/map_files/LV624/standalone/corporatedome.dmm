@@ -218,7 +218,6 @@
 	name = "Garage Shutters";
 	pixel_y = -28
 	},
-/obj/effect/landmark/corpsespawner/colonist,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/asteroidwarning,
 /area/lv624/lazarus/landing_zones/lz2)
@@ -269,7 +268,6 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/colony/west_tcomms_road)
 "ny" = (
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/effect/decal/cleanable/blood,
 /obj/item/clothing/glasses/sunglasses/blindfold,
 /turf/open/floor/dark,
@@ -317,7 +315,6 @@
 	dir = 4
 	},
 /obj/structure/closet/bodybag,
-/obj/effect/landmark/corpsespawner/clf,
 /turf/open/floor/dark,
 /area/lv624/lazarus/corporate_dome)
 "qH" = (
@@ -404,7 +401,6 @@
 /area/lv624/lazarus/corporate_dome)
 "wW" = (
 /obj/structure/closet/bodybag,
-/obj/effect/landmark/corpsespawner/security/marshal,
 /turf/open/floor/dark,
 /area/lv624/lazarus/corporate_dome)
 "xk" = (
@@ -535,7 +531,6 @@
 "Dp" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpsespawner/wysec,
 /obj/item/prop/colony/usedbandage{
 	dir = 9;
 	pixel_x = 5;
@@ -872,7 +867,7 @@
 	icon_state = "Synthetic_Template";
 	name = "Display synthetic"
 	},
-/obj/item/clothing/under/colonist{
+/obj/item/clothing/under/colonist/boilersuit/cyan{
 	pixel_y = -2
 	},
 /turf/open/floor/whiteblue/southwest,
@@ -915,7 +910,6 @@
 /area/lv624/lazarus/landing_zones/lz2)
 "ZG" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/scientist,
 /obj/item/restraint/handcuffs,
 /turf/open/floor/dark,
 /area/lv624/lazarus/corporate_dome)

@@ -143,8 +143,8 @@
 // Formatting is the same as food.
 
 /obj/item/reagent_container/food/drinks/milk
-	name = "Space Milk"
-	desc = "It's milk. White and nutritious goodness!"
+	name = "milk carton"
+	desc = "A carton of 2% cow milk."
 	icon_state = "milk"
 	item_state = "carton"
 	center_of_mass = "x=16;y=9"
@@ -169,8 +169,8 @@
 */
 
 /obj/item/reagent_container/food/drinks/soymilk
-	name = "soy milk"
-	desc = "It's soy milk. White and nutritious goodness!"
+	name = "soy milk carton"
+	desc = "A carton of soy milk."
 	icon_state = "soymilk"
 	item_state = "carton"
 	center_of_mass = "x=16;y=9"
@@ -178,6 +178,17 @@
 /obj/item/reagent_container/food/drinks/soymilk/Initialize()
 	. = ..()
 	reagents.add_reagent("soymilk", 50)
+
+/obj/item/reagent_container/food/drinks/chocolatemilk
+	name = "chocolate milk carton"
+	desc = "A carton of chocolate milk."
+	icon_state = "chocmilk"
+	item_state = "carton"
+	center_of_mass = "x=16;y=9"
+
+/obj/item/reagent_container/food/drinks/chocolatemilk/Initialize()
+	. = ..()
+	reagents.add_reagent("chocolatemilk", 50)
 
 /obj/item/reagent_container/food/drinks/coffee
 	name = "\improper Coffee"
@@ -202,6 +213,28 @@
 /obj/item/reagent_container/food/drinks/tea/Initialize()
 	. = ..()
 	reagents.add_reagent("tea", 30)
+
+/obj/item/reagent_container/food/drinks/tea/upp
+	name = "\improper insulated container"
+	desc = "A small, reusable, insulated container for holding liquids with a sip lid."
+	icon_state = "tea_upp"
+	item_state = "coffee"
+	center_of_mass = "x=16;y=14"
+
+/obj/item/reagent_container/food/drinks/tea/upp/Initialize()
+	. = ..()
+	reagents.add_reagent("tea", 30)
+
+/obj/item/reagent_container/food/drinks/water
+	name = "\improper insulated container"
+	desc = "A small, reusable, insulated container for holding liquids with a sip lid."
+	icon_state = "tea_upp"
+	item_state = "coffee"
+	center_of_mass = "x=16;y=14"
+
+/obj/item/reagent_container/food/drinks/water/Initialize()
+	. = ..()
+	reagents.add_reagent("water", 30)
 
 /obj/item/reagent_container/food/drinks/ice
 	name = "ice cup"
@@ -388,3 +421,7 @@
 	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Either issued as corporate standard, or bought as a souvenir for people who love the Company oh so dearly. Probably the former."
 	icon_state = "wycup"
 
+/obj/item/reagent_container/food/drinks/plasticcup
+	name = "plastic cup"
+	icon_state = "plasticcup"
+	desc = "A decent sized plastic cup, perfect aboard starships for it's capacity to deal with careless handling by roughnecks."

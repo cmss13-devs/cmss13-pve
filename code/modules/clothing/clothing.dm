@@ -29,7 +29,7 @@
 	if(length(ties))
 		.+= " with [english_list(ties)] attached"
 	if(LAZYLEN(accessories) > length(ties))
-		.+= ". <a href='?src=\ref[src];list_acc=1'>\[See accessories\]</a>"
+		.+= ". <a href='byond://?src=\ref[src];list_acc=1'>\[See accessories\]</a>"
 
 /obj/item/clothing/Topic(href, href_list)
 	. = ..()
@@ -394,8 +394,10 @@
 		return
 	to_chat(user, SPAN_NOTICE("You slide [stored_item] out of [src]."))
 	playsound(user, 'sound/weapons/gun_shotgun_shell_insert.ogg', 15, TRUE)
+	. = stored_item
 	stored_item = null
 	update_icon()
+	return .
 
 /obj/item/clothing/shoes/update_clothing_icon()
 	if(ismob(loc))

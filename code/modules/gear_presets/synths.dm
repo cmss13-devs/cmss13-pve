@@ -168,6 +168,7 @@
 
 /datum/equipment_preset/synth/survivor/pmc/New()
 	. = ..()
+	name = "Survivor - Synthetic - PMC JOE ABSTRACT"
 	access = get_access(ACCESS_LIST_WY_PMC)
 
 /datum/equipment_preset/synth/survivor/wy
@@ -452,30 +453,6 @@
 		WEAR_R_HAND = /obj/item/device/camera,
 		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
 		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
-	)
-
-	survivor_variant = SECURITY_SURVIVOR
-
-/datum/equipment_preset/synth/survivor/cmb_synth
-	name = "Survivor - Synthetic - CMB Synth"
-	idtype = /obj/item/card/id/deputy
-	role_comm_title = "CMB Syn"
-	equipment_to_spawn = list(
-		WEAR_HEAD = /obj/item/clothing/head/CMB,
-		WEAR_L_EAR = /obj/item/device/radio/headset/distress/CMB/limited,
-		WEAR_EYES = /obj/item/clothing/glasses/sunglasses/sechud,
-		WEAR_BODY = /obj/item/clothing/under/CM_uniform,
-		WEAR_ACCESSORY = /obj/item/clothing/accessory/holobadge/cord,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/sec,
-		WEAR_IN_BACK = /obj/item/device/camera,
-		WEAR_IN_BACK = /obj/item/device/taperecorder,
-		WEAR_JACKET = /obj/item/clothing/suit/storage/CMB,
-		WEAR_IN_JACKET = /obj/item/weapon/telebaton,
-		WEAR_WAIST = /obj/item/storage/belt/security/MP/CMB/synth,
-		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran,
-		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/storage/large_holster/machete/full
 	)
 
 	survivor_variant = SECURITY_SURVIVOR

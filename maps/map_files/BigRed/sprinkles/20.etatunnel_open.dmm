@@ -206,7 +206,6 @@
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
 "Ch" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
@@ -299,7 +298,6 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/effect/landmark/corpsespawner/security,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
@@ -409,7 +407,7 @@
 /obj/item/explosive/grenade/high_explosive/airburst{
 	pixel_y = 8
 	},
-/obj/item/storage/box/packet/baton_slug{
+/obj/item/storage/box/packet/baton{
 	pixel_x = -7;
 	pixel_y = -3
 	},

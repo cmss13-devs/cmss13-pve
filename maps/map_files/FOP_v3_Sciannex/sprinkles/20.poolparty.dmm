@@ -544,10 +544,6 @@
 "ut" = (
 /turf/open/floor/prison/darkbrown2/east,
 /area/template_noop)
-"uv" = (
-/obj/effect/landmark/corpsespawner/ua_riot/burst,
-/turf/open/floor/prison/darkbrown2/north,
-/area/template_noop)
 "uO" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -1219,10 +1215,6 @@
 	},
 /turf/open/floor/prison/bright_clean2/southwest,
 /area/template_noop)
-"XS" = (
-/obj/effect/landmark/corpsespawner/prisoner,
-/turf/open/floor/wood,
-/area/template_noop)
 "Yd" = (
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/wood,
@@ -1408,7 +1400,7 @@ Wj
 CR
 ni
 ni
-XS
+nf
 nf
 ls
 VE
@@ -1560,7 +1552,7 @@ NT
 yv
 Qt
 sG
-uv
+tX
 Wj
 nf
 tz
@@ -1681,7 +1673,7 @@ EA
 Wj
 nf
 tw
-XS
+nf
 KL
 Jf
 KO

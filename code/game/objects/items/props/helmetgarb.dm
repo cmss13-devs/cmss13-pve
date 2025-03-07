@@ -53,13 +53,17 @@
 	icon_state = "raincover"
 
 /obj/item/prop/helmetgarb/camocover
-	name = "camocover"
+	name = "jungle helmet cover"
 	desc = "A cover that goes over the top of an M10 pattern helmet to camoflauge it without needing the use of paints."
 	icon_state = "camocover"
 
-/obj/item/prop/helmetgarb/camocover/Initialize(mapload, ...)
-	. = ..()
-	select_gamemode_skin(/obj/item/prop/helmetgarb/camocover)
+/obj/item/prop/helmetgarb/camocover/snow
+	name = "snow helmet cover"
+	icon_state = "s_camocover"
+
+/obj/item/prop/helmetgarb/camocover/desert
+	name = "desert helmet cover"
+	icon_state = "d_camocover"
 
 /obj/item/prop/helmetgarb/rabbitsfoot
 	name = "Rabbit's Foot"
@@ -104,6 +108,7 @@
 	gender = PLURAL
 	garbage = FALSE
 	w_class = SIZE_MEDIUM
+	flags_obj = OBJ_NO_HELMET_BAND
 
 	var/nvg_maxhealth = 125
 	var/nvg_health = 125
@@ -501,6 +506,7 @@
 	name = "\improper RC6 riot shield"
 	desc = "The complimentary, but sold separate face shield associated with the RC6 riot helmet."
 	icon_state = "helmet_riot_shield"
+	flags_obj = OBJ_NO_HELMET_BAND
 
 /obj/item/prop/helmetgarb/trimmed_wire
 	name = "trimmed barbed wire"

@@ -122,7 +122,7 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
-	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
+	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB|NO_SNOW_TYPE
 
 /obj/item/clothing/head/headband/Initialize(mapload, ...)
 	. = ..()
@@ -208,9 +208,10 @@
 
 /obj/item/clothing/head/cmcap
 	name = "patrol cap"
-	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
+	desc = "A patrol cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
 	icon_state = "cap"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_atom = FPRINT|NO_SNOW_TYPE
 	var/helmet_overlays[]
 	var/flipped_cap = FALSE
 	var/list/flipping_message = list(
@@ -238,8 +239,8 @@
 						/obj/item/clothing/glasses/mgoggles/black/prescription = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/clothing/glasses/mgoggles/orange = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/clothing/glasses/mgoggles/orange/prescription = HAT_GARB_RELAY_ICON_STATE,
-						/obj/item/clothing/glasses/mgoggles/v2 = HAT_GARB_RELAY_ICON_STATE,
-						/obj/item/clothing/glasses/mgoggles/v2/prescription = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/green = HAT_GARB_RELAY_ICON_STATE,
+						/obj/item/clothing/glasses/mgoggles/green/prescription = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = HAT_GARB_RELAY_ICON_STATE,
 						/obj/item/prop/helmetgarb/helmet_nvg/marsoc = HAT_GARB_RELAY_ICON_STATE,
@@ -352,17 +353,19 @@
 	update_clothing_icon()
 
 /obj/item/clothing/head/cmcap/boonie
-	name = "\improper USCM boonie hat"
+	name = "\improper boonie hat"
 	desc = "A floppy bush hat. Protects only from the sun and rain, but very comfortable."
-	icon_state = "booniehat"
+	icon_state = "booniehat_jungle"
 	flipping_message = list(
 		"flipped" = "You tuck the hat's chinstrap away. Hopefully the wind doesn't nick it...",
 		"unflipped" = "You hook the hat's chinstrap under your chin. Peace of mind is worth a little embarassment."
 		)
 
 /obj/item/clothing/head/cmcap/boonie/tan
-	icon_state = "booniehattan"
-	flags_atom = FPRINT|NO_SNOW_TYPE
+	icon_state = "booniehat_desert"
+
+/obj/item/clothing/head/cmcap/boonie/snow
+	icon_state = "booniehat_snow"
 
 /obj/item/clothing/head/cmcap/co
 	name = "\improper USCM Commanding officer cap"
@@ -374,43 +377,57 @@
 	icon_state = "co_formalhat_white"
 	desc = "A formal cover worn by senior officers of the USCM."
 	flags_marine_hat = HAT_GARB_OVERLAY
-	flags_atom = FPRINT|NO_SNOW_TYPE
 
 /obj/item/clothing/head/cmcap/co/formal/black
 	name = "\improper USCM formal Commanding Officer's black cap"
 	icon_state = "co_formalhat_black"
 
-/obj/item/clothing/head/cmcap/req/ro
-	name = "\improper USCM quartermaster cap"
-	desc = "It's a fancy hat for a not-so-fancy military supply clerk."
-	icon_state = "rocap"
-	flags_atom = NO_SNOW_TYPE
+/obj/item/clothing/head/cmcap/khaki
+	name = "\improper khaki patrol cap"
+	desc = "A khaki patrol cap."
+	icon_state = "cap_khaki"
 
-/obj/item/clothing/head/cmcap/req
-	name = "\improper USCM requisition cap"
-	desc = "It's a not-so-fancy hat for a not-so-fancy military supply clerk."
-	icon_state = "cargocap"
-	flags_atom = FPRINT|NO_SNOW_TYPE
+/obj/item/clothing/head/cmcap/snow
+	name = "\improper coldweather patrol cap"
+	desc = "A patrol cap worn in cold weather environments."
+	icon_state = "cap_snow"
+
+/obj/item/clothing/head/cmcap/desert
+	name = "\improper desert patrol cap"
+	desc = "A desert BDU patrol cap."
+	icon_state = "cap_desert"
 
 /obj/item/clothing/head/cmcap/bridge
 	name = "\improper USCM operations cap"
 	desc = "A hat usually worn by officers in the USCM. While it provides no protection, some officers wear it in the field to make themselves more recognisable."
-	icon_state = "command_cap"
-	flags_atom = FPRINT|NO_SNOW_TYPE
+	icon_state = "cap_operations"
 
 /obj/item/clothing/head/cmcap/flap
-	name = "\improper USCM expedition cap"
+	name = "\improper jungle expedition cap"
 	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet. This one comes with flaps to keep the sun off your neck."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_state = "flapcap"
+	icon_state = "flapcap_jungle"
 	flags_marine_hat = HAT_GARB_OVERLAY
+
+/obj/item/clothing/head/cmcap/flap/desert
+	name = "\improper desert expedition cap"
+	icon_state = "flapcap_desert"
+
+/obj/item/clothing/head/cmcap/flap/snow
+	name = "\improper snow expedition cap"
+	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the wind and snow, it's much more comfortable than a helmet. This one comes with flaps to keep your neck and ears warm."
+	icon_state = "flapcap_snow"
 
 /obj/item/clothing/head/cmcap/reporter
 	name = "combat correspondent cap"
 	desc = "A faithful cap for any terrain war correspondents may find themselves in."
 	icon_state = "cc_flagcap"
 	item_state = "cc_flagcap"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/head/cmcap/weyyu
+	name = "\improper Weyland-Yutani cap"
+	desc = "An offwhite cap worn by Weyland-Yutani security personnel."
+	icon_state = "pmc_hat"
 	flags_marine_hat = HAT_GARB_OVERLAY
 
 /obj/item/clothing/head/cmo
@@ -421,6 +438,12 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
+
+/obj/item/clothing/head/cmcap/corrections
+	name = "dark blue patrol cap"
+	desc = "A dark blue patrol cap."
+	icon_state = "corrections"
+	item_state = "corrections"
 
 //============================//BERETS\\=================================\\
 //=======================================================================\\
@@ -651,22 +674,12 @@
 
 /obj/item/clothing/head/CMB
 	name = "\improper Colonial Marshal Bureau cap"
-	desc = "A black cap boldly presenting the acronym 'CMB'. Made using durable fabric, it might stop a very low caliber round from penetrating it, or a stab from piercing it. That isn't to say you won't have a dent in your head."
+	desc = "A black cap boldly presenting the acronym 'CMB'."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 	icon_state = "cmbcap"
-	flags_armor_protection = BODY_FLAG_HEAD
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	flags_cold_protection = BODY_FLAG_HEAD
-	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = NO_FLAGS
 
 /obj/item/clothing/head/freelancer
@@ -748,6 +761,7 @@
 	desc = "An improvised head wrap made out of a standard issue neckerchief. Great for keeping the sweat out of your eyes and protecting your hair."
 	icon_state = "durag"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_atom = NO_SNOW_TYPE
 	flags_inv_hide = HIDETOPHAIR
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
@@ -757,7 +771,6 @@
 	icon_state = "duragblack"
 	desc = "An improvised head wrap made out of a black neckerchief. Great for keeping the sweat out of your eyes and protecting your hair."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/durag/Initialize(mapload, ...)
 	. = ..()

@@ -8,24 +8,35 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m56"
 	item_state = "m56"
+	mouse_pointer = 'icons/effects/mouse_pointer/smartgun_mouse.dmi'
+
 	fire_sound = "gun_smartgun"
 	fire_rattle = "gun_smartgun_rattle"
 	reload_sound = 'sound/weapons/handling/gun_sg_reload.ogg'
 	unload_sound = 'sound/weapons/handling/gun_sg_unload.ogg'
+
 	current_mag = /obj/item/ammo_magazine/smartgun
 	flags_equip_slot = NO_FLAGS
 	w_class = SIZE_HUGE
 	force = 20
 	wield_delay = WIELD_DELAY_FAST
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
-	var/obj/item/smartgun_battery/battery = null
-	/// Whether the smartgun drains the battery (Ignored if requires_battery is false)
-	var/requires_power = TRUE
-	/// Whether the smartgun requires a battery
-	var/requires_battery = TRUE
-	/// Whether the smartgun requires a harness to use
-	var/requires_harness = TRUE
-	ammo = /datum/ammo/bullet/smartgun
+	unacidable = 1
+	indestructible = 1
+
+	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
+	gun_category = GUN_CATEGORY_HEAVY
+	starting_attachment_types = list(/obj/item/attachable/smartbarrel)
+	auto_retrieval_slot = WEAR_J_STORE
+	start_semiauto = FALSE
+	start_automatic = TRUE
+
+	attachable_allowed = list(
+		/obj/item/attachable/smartbarrel,
+		/obj/item/attachable/flashlight,
+	)
+
+	ammo = /datum/ammo/bullet/rifle/heavy/tracer
 	actions_types = list(
 		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
 		/datum/action/item_action/smartgun/toggle_ammo_type,
@@ -34,8 +45,17 @@
 		///datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
 	)
-	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy //Toggled ammo type
-	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap //Toggled ammo type
+
+	var/obj/item/smartgun_battery/battery = null
+	/// Whether the smartgun drains the battery (Ignored if requires_battery is false)
+	var/requires_power = TRUE
+	/// Whether the smartgun requires a battery
+	var/requires_battery = TRUE
+	/// Whether the smartgun requires a harness to use
+	var/requires_harness = TRUE
+
+	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy/tracer //Toggled ammo type
+	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/tracer //Toggled ammo type
 	var/iff_enabled = TRUE //Begin with the safety on.
 	var/secondary_toggled = 0 //which ammo we use
 	var/recoil_compensation = 0
@@ -50,22 +70,6 @@
 	var/long_range_cooldown = 2
 	var/recycletime = 120
 	var/cover_open = FALSE
-
-	unacidable = 1
-	indestructible = 1
-
-	attachable_allowed = list(
-		/obj/item/attachable/smartbarrel,
-		/obj/item/attachable/flashlight,
-	)
-
-	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
-	gun_category = GUN_CATEGORY_HEAVY
-	starting_attachment_types = list(/obj/item/attachable/smartbarrel)
-	auto_retrieval_slot = WEAR_J_STORE
-	start_semiauto = FALSE
-	start_automatic = TRUE
-
 
 /obj/item/weapon/gun/smartgun/Initialize(mapload, ...)
 	ammo_primary = GLOB.ammo_list[ammo_primary] //Gun initialize calls replace_ammo() so we need to set these first.
@@ -675,10 +679,6 @@
 /obj/item/weapon/gun/smartgun/dirty
 	name = "\improper M56D 'Dirty' smartgun"
 	desc = "The actual firearm in the 4-piece M56D Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
-	current_mag = /obj/item/ammo_magazine/smartgun/dirty
-	ammo = /obj/item/ammo_magazine/smartgun/dirty
-	ammo_primary = /datum/ammo/bullet/smartgun/dirty//Toggled ammo type
-	ammo_secondary = /datum/ammo/bullet/smartgun/dirty/armor_piercing///Toggled ammo type
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 
 /obj/item/weapon/gun/smartgun/dirty/Initialize(mapload, ...)
@@ -689,6 +689,10 @@
 //TERMINATOR SMARTGUN
 /obj/item/weapon/gun/smartgun/dirty/elite
 	name = "\improper M56T 'Terminator' smartgun"
+	current_mag = /obj/item/ammo_magazine/smartgun/dirty
+	ammo = /obj/item/ammo_magazine/smartgun/dirty
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/dirty //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/dirty ///Toggled ammo type
 	desc = "The actual firearm in the 4-piece M56T Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 
 /obj/item/weapon/gun/smartgun/dirty/elite/Initialize(mapload, ...)
@@ -752,8 +756,8 @@
 	desc = "The actual firearm in the 2-piece L56A2 Smartgun System. This Variant is used by the Three World Empires Royal Marines Commando units.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	current_mag = /obj/item/ammo_magazine/smartgun/holo_targetting
 	ammo = /obj/item/ammo_magazine/smartgun/holo_targetting
-	ammo_primary = /datum/ammo/bullet/smartgun/holo_target //Toggled ammo type
-	ammo_secondary = /datum/ammo/bullet/smartgun/holo_target/ap ///Toggled ammo type
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/holo_target //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/holo_target/ap ///Toggled ammo type
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "magsg"

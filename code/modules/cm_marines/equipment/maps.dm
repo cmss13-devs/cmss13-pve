@@ -164,9 +164,11 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CORSAT = new /obj/item/map/corsat(),
 		MAP_KUTJEVO = new /obj/item/map/kutjevo_map(),
 		MAP_LV522_CHANCES_CLAIM = new /obj/item/map/lv522_map(),
+		MAP_LV522_CHANCES_CLAIM_FORECON = new /obj/item/map/lv522_map(),
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
+		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
 	)
 
 //used by marine equipment machines to spawn the correct map.

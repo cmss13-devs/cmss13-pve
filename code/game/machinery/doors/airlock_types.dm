@@ -266,6 +266,10 @@
 /obj/structure/machinery/door/airlock/strata/mining/autoname
 	autoname = TRUE
 
+/obj/structure/machinery/door/airlock/strata/circular
+	name = "\improper Secure Airlock"
+	icon = 'icons/obj/structures/doors/strata/strata_utility.dmi'
+
 //YAUTJA SHIP - CURRENTLY USES STRATA DOORS
 /obj/structure/machinery/door/airlock/yautja
 	name = "\improper Airlock"
@@ -412,6 +416,7 @@
 /obj/structure/machinery/door/airlock/almayer/secure/glass
 	name = "\improper Secure Airlock"
 	icon = 'icons/obj/structures/doors/securedoor_glass.dmi'
+	opacity = FALSE
 
 /obj/structure/machinery/door/airlock/almayer/secure/colony
 	req_access = null
@@ -934,4 +939,33 @@
 /obj/structure/machinery/door/airlock/prison/horizontal
 	dir = SOUTH
 
+/obj/structure/machinery/door/airlock/upp_green
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/uppdoor_green.dmi'
+	openspeed = 5
+	req_access = null
+	req_one_access = null
 
+/obj/structure/machinery/door/airlock/upp_green/window
+	icon = 'icons/obj/structures/doors/upp/uppdoor_glass_green.dmi'
+	opacity = FALSE
+	glass = TRUE
+
+/obj/structure/machinery/door/airlock/upp_grey
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/uppdoor_grey.dmi'
+	openspeed = 5
+	req_access = null
+	req_one_access = null
+
+/obj/structure/machinery/door/airlock/upp_grey/window
+	icon = 'icons/obj/structures/doors/upp/uppdoor_glass_grey.dmi'
+	opacity = FALSE
+	glass = TRUE
+
+/obj/structure/machinery/door/airlock/upp_utility
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/uppdoor_utility.dmi'
+	openspeed = 6
+	req_access = null
+	req_one_access = null

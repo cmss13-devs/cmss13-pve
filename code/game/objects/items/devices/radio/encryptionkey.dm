@@ -35,8 +35,11 @@
 		return
 
 	var/obj/item/device/radio/headset/current_headset = loc
+	var/datum/radio_frequency/old_connections = current_headset.secure_radio_connections[old_name]
+	if(!old_connections)
+		return
 
-	var/passed_freq = current_headset.secure_radio_connections[old_name].frequency
+	var/passed_freq = old_connections.frequency
 	current_headset.secure_radio_connections -= old_name
 
 	SSradio.remove_object(current_headset, passed_freq)
@@ -412,3 +415,8 @@
 	name = "\improper US Army Command Radio Encryption Key"
 	icon_state = "sec_key"
 	channels = list(RADIO_CHANNEL_US_ARMY = TRUE, RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_COLONY = TRUE, RADIO_CHANNEL_JTAC = TRUE, SQUAD_MARINE_1 = TRUE)
+
+/obj/item/device/encryptionkey/guard
+	name = "\improper UA Colonial Guard Radio Encryption Key"
+	icon_state = "stripped_key"
+	channels = list(RADIO_CHANNEL_UA_GUARD = TRUE, RADIO_CHANNEL_COLONY = TRUE)

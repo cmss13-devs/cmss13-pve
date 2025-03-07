@@ -168,26 +168,32 @@
 
 /obj/item/storage/fancy/cigarettes/emeraldgreen
 	name = "\improper Emerald Green Packet"
-	desc = "They remind you of a gross, tar-filled version of Ireland...so regular Ireland."
+	desc = "They remind you of a gross, tar-filled version of Ireland. These cheap cigarettes are Weyland-Yutani's entry into the general market."
 	icon_state = "cigpacket"
 	item_state = "cigpacket"
 
 /obj/item/storage/fancy/cigarettes/wypacket
 	name = "\improper Weyland-Yutani Gold packet"
-	desc = "Building Better Worlds, and rolling better cigarettes. These fancy cigarettes are Weyland-Yutani's entry into the market. Comes backed by a fierce legal team."
+	desc = "Building Better Worlds, and rolling better cigarettes. These fancy cigarettes are Weyland-Yutani's entry into the premium tobacco market. Comes backed by a fierce legal team."
 	icon_state = "wypacket"
 	item_state = "wypacket"
 
+/obj/item/storage/fancy/cigarettes/balaji
+	name = "\improper Balaji Imperial packet"
+	desc = "Smoke 'em if you gottem! Quite popular amongst people living in the Three World Empire."
+	icon_state = "bpacket"
+	item_state = "bpacket"
+
 /obj/item/storage/fancy/cigarettes/lucky_strikes
 	name = "\improper Lucky Strikes Packet"
-	desc = "Lucky Strikes Means Fine Tobacco! 9/10 doctors agree on Lucky Strikes...as the leading cause of marine lung cancer."
+	desc = "Lucky Strikes Means Fine Tobacco! 9/10 doctors agree on Lucky Strikes... as the leading cause of marine lung cancer."
 	icon_state = "lspacket"
 	item_state = "lspacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
 
 /obj/item/storage/fancy/cigarettes/blackpack
 	name = "\improper Executive Select packet"
-	desc = "These cigarettes are the height of luxury. They're smooth, they're cool, and they smell like victory...and cigarette smoke."
+	desc = "These cigarettes are the height of luxury. They're smooth, they're cool, and they smell like victory... and cigarette smoke."
 	icon_state = "blackpacket"
 	item_state = "blackpacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/bcigarette
@@ -223,6 +229,12 @@
 	desc = "A pack of yellow American Spirit cigarettes, for that mellow flavour you know and love."
 	icon_state = "y_naspacket"
 	item_state = "y_naspacket"
+
+/obj/item/storage/fancy/cigarettes/laika
+	name = "\improper Laika packet"
+	desc = "A Russian brand of cigarettes maintaining and honoring the legacy of the dog Laika, a space pioneer."
+	icon_state = "laikapacket"
+	item_state = "laikapacket"
 
 /obj/item/storage/fancy/cigarettes/lucky_strikes_4
 	name = "\improper Lucky Strikes Mini Packet"

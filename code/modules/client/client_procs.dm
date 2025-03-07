@@ -2,7 +2,7 @@
 	//SECURITY//
 	////////////
 #define TOPIC_SPAM_DELAY 2 //2 ticks is about 2/10ths of a second; it was 4 ticks, but that caused too many clicks to be lost due to lag
-#define UPLOAD_LIMIT 10485760 //Restricts client uploads to the server to 10MB //Boosted this thing. What's the worst that can happen?
+#define UPLOAD_LIMIT 20971520 //Restricts client uploads to the server to 20MB //Boosted this thing (again). What's the worst that can happen?
 #define MIN_CLIENT_VERSION 0 //Just an ambiguously low version for now, I don't want to suddenly stop people playing.
 									//I would just like the code ready should it ever need to be used.
 
@@ -285,6 +285,9 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
+	if(byond_version >= 516) // Enable 516 compat browser storage mechanisms
+		winset(src, "", "browser-options=byondstorage")
+
 	// Instantiate stat panel
 	stat_panel = new(src, "statbrowser")
 	stat_panel.subscribe(src, PROC_REF(on_stat_panel_message))
@@ -458,6 +461,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	QDEL_NULL(soundOutput)
 	QDEL_NULL(obj_window)
 	QDEL_NULL(game_master_menu)
+	QDEL_NULL(human_ai_menu)
 	if(prefs)
 		prefs.owner = null
 		QDEL_NULL(prefs.preview_dummy)
@@ -505,10 +509,10 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 					spawn() alert("You have logged in already with another key this round, please log out of this one NOW or risk being banned!")
 				if(matches)
 					if(M.client)
-						message_admins("<font color='red'><B>Notice: </B>[SPAN_BLUE("<A href='?src=\ref[usr];priv_msg=[src.ckey]'>[key_name_admin(src)]</A> has the same [matches] as <A href='?src=\ref[usr];priv_msg=[src.ckey]'>[key_name_admin(M)]</A>.")]", 1)
+						message_admins("<font color='red'><B>Notice: </B>[SPAN_BLUE("<A href='byond://?src=\ref[usr];priv_msg=[src.ckey]'>[key_name_admin(src)]</A> has the same [matches] as <A href='byond://?src=\ref[usr];priv_msg=[src.ckey]'>[key_name_admin(M)]</A>.")]", 1)
 						log_access("Notice: [key_name(src)] has the same [matches] as [key_name(M)].")
 					else
-						message_admins("<font color='red'><B>Notice: </B>[SPAN_BLUE("<A href='?src=\ref[usr];priv_msg=[src.ckey]'>[key_name_admin(src)]</A> has the same [matches] as [key_name_admin(M)] (no longer logged in).")]", 1)
+						message_admins("<font color='red'><B>Notice: </B>[SPAN_BLUE("<A href='byond://?src=\ref[usr];priv_msg=[src.ckey]'>[key_name_admin(src)]</A> has the same [matches] as [key_name_admin(M)] (no longer logged in).")]", 1)
 						log_access("Notice: [key_name(src)] has the same [matches] as [key_name(M)] (no longer logged in).")
 
 
@@ -634,7 +638,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 /client/proc/check_panel_loaded()
 	if(stat_panel.is_ready())
 		return
-	to_chat(src, SPAN_USERDANGER("Statpanel failed to load, click <a href='?src=[REF(src)];reload_statbrowser=1'>here</a> to reload the panel "))
+	to_chat(src, SPAN_USERDANGER("Statpanel failed to load, click <a href='byond://?src=[REF(src)];reload_statbrowser=1'>here</a> to reload the panel "))
 
 /**
  * Handles incoming messages from the stat-panel TGUI.
