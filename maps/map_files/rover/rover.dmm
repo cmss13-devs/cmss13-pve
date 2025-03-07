@@ -8,6 +8,47 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
+"ab" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"ac" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"ad" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.5
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right,
+/area/golden_arrow/hangar)
+"ae" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
 "af" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -315,6 +356,10 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
+/obj/structure/janitorialcart{
+	pixel_y = 8
+	},
+/obj/item/tool/mop,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
 "cg" = (
@@ -427,6 +472,10 @@
 "cK" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
@@ -829,6 +878,11 @@
 	},
 /obj/item/clothing/suit/storage/jacket/marine/service,
 /obj/item/clothing/suit/storage/jacket/marine/service/tanker,
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
 /turf/open/floor/almayer/edge/smooth/northeast,
 /area/golden_arrow/platoon_commander_rooms)
 "gd" = (
@@ -1888,13 +1942,6 @@
 "pe" = (
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/platoonarmory)
-"pg" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.5
-	},
-/turf/open/floor/almayer/edge/smooth/endcap_right,
-/area/golden_arrow/hangar)
 "ph" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -2585,6 +2632,10 @@
 /obj/item/clothing/head/cmcap/bridge{
 	pixel_y = 6;
 	pixel_x = 5
+	},
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.5
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_commander_rooms)
@@ -5104,10 +5155,6 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/clipboard{
 	pixel_x = 4
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.5
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_commander_rooms)
@@ -8185,7 +8232,7 @@ iT
 LI
 yy
 No
-iT
+ab
 LI
 yy
 No
@@ -9205,7 +9252,7 @@ cI
 aw
 Bk
 qz
-cI
+ac
 aw
 Bk
 qz
@@ -9814,7 +9861,7 @@ Tf
 rP
 MC
 VN
-wN
+ad
 TX
 TQ
 Mj
@@ -10018,7 +10065,7 @@ qZ
 Vj
 FF
 Jd
-pg
+Yd
 TX
 cA
 gD
@@ -10118,7 +10165,7 @@ pO
 xj
 pO
 Vj
-Wv
+ae
 ku
 Yd
 TX
@@ -10426,7 +10473,7 @@ UG
 Vj
 FF
 Jd
-wN
+ad
 TX
 TX
 TX
@@ -10526,7 +10573,7 @@ Vj
 gV
 Vj
 Vj
-aF
+FF
 ku
 wN
 TX
@@ -10730,7 +10777,7 @@ Sn
 Sn
 Sn
 Vj
-FF
+aF
 Vv
 Yd
 TX
