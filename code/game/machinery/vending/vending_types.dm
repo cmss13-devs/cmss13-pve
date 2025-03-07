@@ -195,9 +195,11 @@
 	product_type = VENDOR_PRODUCT_TYPE_FOOD
 
 /obj/structure/machinery/vending/cigarette
-	name = "cigarette machine" //Template
+	name = "cigarette machine"
+	icon_state = "cigs"
 	desc = "A vending machine dealing in all sorts of cigarettes, lighters and cigars."
-	product_slogans = list("Light up and enjoy the rich, comfortably familiar taste of Koorlander Gold.",
+	product_slogans = list(
+		"Light up and enjoy the rich, comfortably familiar taste of Koorlander Gold.",
 		"Always by your side, Koorlander Gold!",
 		"For the man who knows his place is at the top, Koorlander Gold shows the world that you're the best and no-one can say otherwise.",
 		"Enjoy the delicate touch of Lady Fingers.",
@@ -217,8 +219,6 @@
 		"The Interstellar Commerce Commission would like to remind you that smoking kills.",
 		"The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue.")
 	product_ads = "The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue."
-	icon_state = "cigs"
-
 	products = list(
 		/obj/item/storage/fancy/cigarettes/lucky_strikes = 10,
 		/obj/item/storage/fancy/cigarettes/kpack = 10,
@@ -236,7 +236,6 @@
 		/obj/item/tool/lighter/zippo/black = 5,
 		/obj/item/tool/lighter/zippo/blue = 5,
 	)
-
 	premium = list(/obj/item/clothing/mask/cigarette/cigar = 25)
 	prices = list(
 		/obj/item/storage/fancy/cigarettes/lucky_strikes = 35,
@@ -258,11 +257,12 @@
 	)
 	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
 
-/obj/structure/machinery/vending/cigarette/koorlander //koorlander machine, contains luckies since they either bought Lucky Strikes as a company, or are working together to survive.
-	name = "Koorlander brand cigarette machine"
-	desc = "A vending machine dealing in Koorlander affiliated cigarette brands, most of whom only exist in the frontier, but is primarily stocked with Koorlander Gold."
+/obj/structure/machinery/vending/cigarette/koorlander
+	name = "Koorlander cigarette machine"
 	icon_state = "koorcigs"
-	product_slogans = list("Light up and enjoy the rich, comfortably familiar taste of Koorlander Gold.",
+	desc = "A vending machine dealing in Koorlander affiliated cigarette brands, most of which are relegated to the colonial frontier, but is primarily stocked with the popular Koorlander Gold brand."
+	product_slogans = list(
+		"Light up and enjoy the rich, comfortably familiar taste of Koorlander Gold.",
 		"Always by your side, Koorlander Gold!",
 		"For the man who knows his place is at the top, Koorlander Gold shows the world that you're the best and no-one can say otherwise.",
 		"Enjoy the delicate touch of Lady Fingers.",
@@ -278,11 +278,10 @@
 		"The Interstellar Commerce Commission would like to remind you that smoking kills.",
 		"The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue.")
 	product_ads = "The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue."
-	icon_state = "cigs"
 	products = list(
 		/obj/item/storage/fancy/cigarettes/kpack = 10,
 		/obj/item/storage/fancy/cigarettes/kpack = 10,
-		/obj/item/storage/fancy/cigarettes/arcturian_ace = 25,
+		/obj/item/storage/fancy/cigarettes/arcturian_ace = 10,
 		/obj/item/storage/fancy/cigarettes/emeraldgreen = 10,
 		/obj/item/storage/fancy/cigarettes/lady_finger = 10,
 		/obj/item/storage/fancy/cigar/tarbacktube = 10,

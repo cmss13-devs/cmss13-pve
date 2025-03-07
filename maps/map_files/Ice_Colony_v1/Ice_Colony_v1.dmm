@@ -274,7 +274,7 @@
 /turf/open/floor/engine,
 /area/ice_colony/underground/research)
 "atr" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkgreen2/east,
 /area/ice_colony/underground/reception)
 "atP" = (
@@ -348,7 +348,7 @@
 /turf/open/floor/darkblue2/east,
 /area/ice_colony/underground/reception)
 "aAk" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkpurplecorners2/north,
 /area/ice_colony/underground/research/work)
 "aAr" = (
@@ -4922,7 +4922,7 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/surface/dorms)
 "jci" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkgreencorners2/north,
 /area/ice_colony/underground/crew/canteen)
 "jeP" = (
@@ -8999,7 +8999,7 @@
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/surface/excavation/storage)
 "rng" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkgreen2/north,
 /area/ice_colony/surface/storage_unit/research)
 "roE" = (

@@ -338,7 +338,7 @@
 /turf/open/floor/prison/whitepurple,
 /area/template_noop)
 "FZ" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/prison/darkpurplefull2,
 /area/template_noop)
 "Gk" = (
