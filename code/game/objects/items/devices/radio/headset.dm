@@ -37,6 +37,8 @@
 	var/headset_hud_on = FALSE
 	var/locate_setting = TRACKER_SL
 	var/misc_tracking = FALSE
+	///Whether or not the headset will show them on the tac-map
+	var/map_tracking = FALSE
 	var/hud_type = MOB_HUD_FACTION_MARINE
 	var/default_freq
 
@@ -350,7 +352,7 @@
 
 /obj/item/device/radio/headset/proc/update_minimap_icon()
 	SIGNAL_HANDLER
-	if(!has_hud)
+	if(!map_tracking)
 		return
 
 	if(!wearer)
@@ -420,6 +422,7 @@
 	item_state = "headset"
 	frequency = PUB_FREQ
 	has_hud = FALSE
+	map_tracking = TRUE
 
 /obj/item/device/radio/headset/almayer/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
@@ -431,15 +434,6 @@
 	if(((user in user.assigned_squad?.fireteams["SQ1"]) || (user in user.assigned_squad?.fireteams["SQ2"])) && ("Squad Leader" in tracking_options))
 		locate_setting = tracking_options["Squad Leader"]
 		return
-
-/obj/item/device/radio/headset/almayer/verb/enter_tree()
-	set name = "Enter Techtree"
-	set desc = "Enter the Marine techtree"
-	set category = "Object.Techtree"
-	set src in usr
-
-	var/datum/techtree/T = GET_TREE(TREE_MARINE)
-	T.enter_mob(usr)
 
 /obj/item/device/radio/headset/almayer/verb/give_medal_recommendation()
 	set name = "Give Medal Recommendation"
