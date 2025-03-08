@@ -266,7 +266,7 @@
 		FACTION_NAVY,
 		FACTION_MARINE,
 		FACTION_COLONIST,
-		FACTION_MARSHAL
+		FACTION_MARSHAL,
 		FACTION_TWE,
 		FACTION_WY,
 	)
@@ -348,11 +348,11 @@
 	)
 	need_healing_lines = list(
 		"Is that all you got?",
-		"You got nothing!"
-		"I'm hit!"
-		"Argh, medic!"
-		"Medic!"
-		"Doc! Get up here!"
+		"You got nothing!",
+		"I'm hit!",
+		"Argh, medic!",
+		"Medic!",
+		"Doc! Get up here!",
 		"*medic",
 	)
 	reload_lines = list(
@@ -384,7 +384,7 @@
 		FACTION_ARMY,
 		FACTION_MARINE,
 		FACTION_COLONIST,
-		FACTION_MARSHAL
+		FACTION_MARSHAL,
 		FACTION_TWE,
 		FACTION_WY,
 	)
@@ -433,10 +433,10 @@
 		"Damn it!",
 	)
 	need_healing_lines = list(
-		"I'm hit!"
-		"Argh, Corpsman!"
-		"Corpsman!"
-		"Doc! Get up here!"
+		"I'm hit!",
+		"Argh, Corpsman!",
+		"Corpsman!",
+		"Doc! Get up here!",
 	)
 	reload_lines = list(
 		"Reloading!",
