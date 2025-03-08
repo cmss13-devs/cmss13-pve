@@ -669,7 +669,7 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/ui_state(mob/user)
 	return GLOB.not_incapacitated_and_adjacent_strict_state
 
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/populate_product_list(scale)
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/space/populate_product_list(scale)
 	listed_products = list(
 		list("FOOD", -1, null, null),
 		list("Nutrition Autoinjector", floor(scale * 12), /obj/item/reagent_container/hypospray/autoinjector/nutriment, VENDOR_ITEM_RECOMMENDED),
