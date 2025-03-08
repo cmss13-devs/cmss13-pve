@@ -510,6 +510,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "supsniperbarrel"
 	desc = "A heavy barrel. CANNOT BE REMOVED."
 	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
 	gun_traits = list(TRAIT_GUN_SILENCED)
 	hud_offset_mod = -3
 
@@ -3061,9 +3062,30 @@ Defined in conflicts.dm of the #defines folder.
 	max_range = 10
 	attachment_firing_delay = 15
 
+/obj/item/attachable/attached_gun/grenade/mk1/preloaded
+
+/obj/item/attachable/attached_gun/grenade/mk1/preloaded/New()
+	. = ..()
+	current_rounds = 2
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
+
+/obj/item/attachable/attached_gun/grenade/mk1/preloaded/army
+
+/obj/item/attachable/attached_gun/grenade/mk1/preloaded/army/New()
+	. = ..()
+	current_rounds = 5
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
+
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
 	attach_icon = "green_grenade-mk1_a"
+
+/obj/item/attachable/attached_gun/grenade/mk1/recon/preloaded
+
+/obj/item/attachable/attached_gun/grenade/mk1/recon/preloaded/New()
+	. = ..()
+	current_rounds = 2
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
 
 /obj/item/attachable/attached_gun/grenade/m120
 	name = "\improper PN/c 30mm underslung grenade launcher"
@@ -3092,16 +3114,15 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/upp
 	name = "\improper Type 83 overslung grenade launcher"
-	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures. Can be quickly swapped to using the 'Toggle-Attachment' keybind."
+	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."
 	icon_state = "type83"
 	attach_icon = "type83_a"
 	current_rounds = 0
 	max_rounds = 1
 	max_range = 14
 	attachment_firing_delay = 5
-	slot = "special"
-	pixel_shift_x = 0
-	pixel_shift_y = 0
+	pixel_shift_x = 20
+	pixel_shift_y = 13
 	has_breech = FALSE
 
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().

@@ -396,6 +396,10 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/type23/unloaded
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
 
+/obj/item/weapon/gun/shotgun/type23/unloaded/stored
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+	starting_attachment_types = null
+
 /obj/item/weapon/gun/shotgun/type23/slug
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
 
@@ -1227,6 +1231,9 @@ can cause issues with ammo types getting mixed up during the burst.
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/cmb/slug
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717
 	name = "\improper M37-17 pump shotgun"
