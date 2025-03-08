@@ -79,6 +79,8 @@
 	var/remaining_minutes = round((remaining_cycles*1.1) * 5 / 60, 0.1) //it runs every two deciseconds i think. Also the 1.1 is to compensate for this always being slightly wrong fnr
 	. += SPAN_NOTICE("Assuming it is full, and either oxygen or air mixture, this tank has about [remaining_minutes] minutes of breathable air supply at [(gas_type == GAS_TYPE_OXYGEN) ? "21" : "104"]Kpa.")
 
+/obj/item/tank/emergency_oxygen/empty
+	pressure = 33
 
 /obj/item/tank/emergency_oxygen/engi
 	name = "extended-capacity emergency oxygen tank"

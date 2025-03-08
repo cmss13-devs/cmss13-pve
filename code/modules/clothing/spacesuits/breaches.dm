@@ -200,7 +200,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 			return ..()
 	if(iswire(W) || istype(W,/obj/item/stack/sheet/mineral/plastic))
 		var/obj/item/stack/repair_material = W
-		if(!repair_material.use(3))
+		if(!repair_material.use(2))
 			to_chat(user, SPAN_DANGER("You need more material to repair this suit."))
 			return ..()
 
