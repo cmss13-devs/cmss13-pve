@@ -1045,6 +1045,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader
+	name = "\improper PMC beret"
+	desc = "The pinnacle of fashion for any aspiring mercenary leader. Designed to protect the head from light impacts."
+	icon_state = "officer_hat"
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner
 	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries. This version features a high-tech sealed ballistic mask capable of providing tactical data via its eye-lenses."
 	icon_state = "heavy_helmet"
