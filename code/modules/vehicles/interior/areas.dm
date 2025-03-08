@@ -33,6 +33,10 @@
 	name = "\improper M579 ADS-C interior"
 	icon_state = "apc_aa"
 
+/area/interior/vehicle/apc/movie/med
+	name = "\improper M577A5 ATV interior"
+	icon_state = "apc_medical"
+
 /area/interior/vehicle/van
 	name = "van interior"
 	icon_state = "van"
