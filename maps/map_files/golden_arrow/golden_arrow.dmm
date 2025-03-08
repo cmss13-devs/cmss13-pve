@@ -968,7 +968,8 @@
 "adx" = (
 /obj/structure/platform{
 	dir = 8;
-	layer = 2.7
+	layer = 2.7;
+	plane = -7
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -5023,7 +5024,8 @@
 /area/golden_arrow/vehicle_shuttle/two/upper)
 "arp" = (
 /obj/structure/platform_decoration{
-	dir = 1
+	dir = 1;
+	plane = -7
 	},
 /obj/structure/closet/medical_wall{
 	pixel_y = 32
@@ -5410,7 +5412,8 @@
 "asC" = (
 /obj/structure/platform{
 	dir = 4;
-	layer = 2.7
+	layer = 2.7;
+	plane = -7
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -7169,7 +7172,8 @@
 "ayM" = (
 /obj/structure/platform{
 	dir = 8;
-	layer = 2.7
+	layer = 2.7;
+	plane = -7
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -7448,7 +7452,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "azA" = (
-/obj/structure/platform_decoration,
+/obj/structure/platform_decoration{
+	plane = -7
+	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -7804,7 +7810,8 @@
 "aAA" = (
 /obj/structure/platform{
 	dir = 8;
-	layer = 2.7
+	layer = 2.7;
+	plane = -7
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
@@ -8982,7 +8989,9 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "aEq" = (
-/obj/structure/platform,
+/obj/structure/platform{
+	plane = -7
+	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
@@ -9493,11 +9502,13 @@
 "aGa" = (
 /obj/structure/platform{
 	dir = 4;
-	layer = 2.7
+	layer = 2.7;
+	plane = -7
 	},
 /obj/structure/platform{
 	dir = 8;
-	layer = 2.7
+	layer = 2.7;
+	plane = -7
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -9943,9 +9954,12 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "aHz" = (
-/obj/structure/platform_decoration,
 /obj/structure/platform_decoration{
-	dir = 1
+	plane = -7
+	},
+/obj/structure/platform_decoration{
+	dir = 1;
+	plane = -7
 	},
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -11919,7 +11933,8 @@
 /area/golden_arrow/hangar)
 "aOH" = (
 /obj/structure/platform_decoration{
-	dir = 1
+	dir = 1;
+	plane = -7
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -13592,7 +13607,9 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/lower_cargo)
 "aUP" = (
-/obj/structure/platform,
+/obj/structure/platform{
+	plane = -7
+	},
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
@@ -13613,7 +13630,8 @@
 "aUT" = (
 /obj/structure/platform{
 	dir = 4;
-	layer = 2.7
+	layer = 2.7;
+	plane = -7
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
