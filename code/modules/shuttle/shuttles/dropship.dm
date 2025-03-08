@@ -166,9 +166,6 @@
 	dwidth = 4
 	dheight = 8
 
-/obj/docking_port/mobile/marine_dropship/pmc
-	name = "Cash Flow"
-	id = DROPSHIP_PMC
 
 /obj/docking_port/mobile/marine_dropship/cyclone/get_transit_path_type()
 	return /turf/open/space/transit/dropship/cyclone
@@ -208,6 +205,19 @@
 
 /obj/docking_port/mobile/marine_dropship/tripoli/get_transit_path_type()
 	return /turf/open/space/transit/dropship/tripoli
+
+/obj/docking_port/mobile/marine_dropship/pmc
+	name = "Cash Flow"
+	id = DROPSHIP_PMC
+
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/pmc/get_transit_path_type()
+	return /turf/open/space/transit/dropship/pmc
 
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
