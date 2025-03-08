@@ -1,10 +1,14 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aaa" = (
+/obj/structure/machinery/vending/generic,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"aab" = (
 /obj/structure/surface/rack,
 /obj/item/fishing_pole,
 /turf/open/floor/vault,
 /area/lv624/lazarus/quartstorage)
-"aab" = (
+"aac" = (
 /obj/item/fishing_pole,
 /turf/open/gm/coast/west,
 /area/lv624/ground/caves/north_central_caves)
@@ -1382,10 +1386,10 @@
 /turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
 "bKf" = (
-/obj/structure/machinery/vending/cigarette,
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/whiteblue/southeast,
 /area/lv624/lazarus/corporate_dome)
 "bLa" = (
@@ -2043,8 +2047,8 @@
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/lv624/ground/jungle/west_jungle)
 "cEp" = (
-/obj/structure/machinery/vending/cigarette/colony,
 /obj/effect/landmark/crap_item,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "cEI" = (
@@ -4166,7 +4170,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_east_jungle)
 "fhn" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/main_hall)
 "fhu" = (
@@ -4902,10 +4906,6 @@
 	},
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
-"fVf" = (
-/obj/structure/machinery/vending/cigarette,
-/turf/open/floor/white,
-/area/lv624/lazarus/main_hall)
 "fVB" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -12672,7 +12672,7 @@
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "pXU" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "pYI" = (
@@ -16508,7 +16508,7 @@
 /area/lv624/lazarus/research)
 "vqh" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/red,
 /area/lv624/lazarus/security)
@@ -33525,7 +33525,7 @@ jlL
 kYS
 kYS
 kYS
-aab
+aac
 kYS
 wJt
 qem
@@ -41307,13 +41307,13 @@ jFZ
 lHW
 lHW
 bWC
+aaa
+psD
+psD
+psD
+psD
+psD
 iSN
-psD
-psD
-psD
-psD
-psD
-fVf
 dBu
 fCP
 auz
@@ -50477,7 +50477,7 @@ ioa
 xYV
 xYV
 xYV
-aaa
+aab
 xYV
 bMd
 xYV
