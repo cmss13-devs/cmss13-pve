@@ -1302,6 +1302,7 @@
 	new /obj/item/storage/box/MRE(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/small/armyalt
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
@@ -1310,6 +1311,7 @@
 	new /obj/item/storage/box/MRE(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/small/armyleader
@@ -1319,6 +1321,7 @@
 	new /obj/item/storage/box/MRE(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
 	new /obj/item/device/binoculars/range/designator(src)
 
 //===
