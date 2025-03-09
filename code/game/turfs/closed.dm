@@ -290,6 +290,14 @@
 /turf/closed/shuttle/cyclone/transparent
 	opacity = FALSE
 
+/turf/closed/shuttle/pmc
+	name = "\improper Cash Flow"
+	icon = 'icons/turf/dropship_pmc.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/pmc/transparent
+	opacity = FALSE
+
 /turf/closed/shuttle/typhoon
 	name = "\improper Typhoon"
 	icon = 'icons/turf/dropship3.dmi'
