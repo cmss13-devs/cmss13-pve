@@ -388,7 +388,7 @@
 	icon_state = "sheet-scrap"
 	item_state = ""
 	desc = "A rusty piece of scrap metal."
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_SMALL
 
 /obj/item/prop/rock
 	name = "rock"
