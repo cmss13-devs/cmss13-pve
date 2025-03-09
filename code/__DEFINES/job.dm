@@ -111,7 +111,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_POLICE_ROLES /datum/timelock/mp
 #define JOB_POLICE_ROLES_LIST    list(JOB_POLICE, JOB_WARDEN, JOB_CHIEF_POLICE)
 
-#define JOB_SEA "Senior Enlisted Advisor"
+#define JOB_DI "Drill Instructor"
 
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
 #define JOB_MAINT_TECH "Maintenance Technician"

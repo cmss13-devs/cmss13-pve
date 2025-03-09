@@ -335,8 +335,8 @@ COMMAND STAFF
 		SKILL_NAVIGATIONS = SKILL_NAVIGATIONS_TRAINED,
 	)
 
-/datum/skills/SEA
-	name = "Senior Enlisted Advisor"
+/datum/skills/DI
+	name = "Drill Instructor"
 	skills = list(
 		SKILL_CQC = SKILL_CQC_SKILLED,
 		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED,
@@ -357,11 +357,11 @@ COMMAND STAFF
 		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
 	)
 
-/datum/skills/SEA/New(mob/skillset_owner)
+/datum/skills/DI/New(mob/skillset_owner)
 	..()
 	give_action(skillset_owner, /datum/action/looc_toggle)
 
-/datum/skills/SEA/Destroy()
+/datum/skills/DI/Destroy()
 	remove_action(owner, /datum/action/looc_toggle)
 	return ..()
 

@@ -863,17 +863,16 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/sea
-	name = "USCM Senior Enlisted Advisor (SEA)"
+/datum/equipment_preset/uscm_ship/di
+	name = "USCM Drill Instructor"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	idtype = /obj/item/card/id/dogtag
-	assignment = JOB_SEA
-	rank = JOB_SEA
+	assignment = JOB_DI
+	rank = JOB_DI
 	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SEA"
-	minimum_age = 40
-	skills = /datum/skills/SEA
+	role_comm_title = "DI"
+	skills = /datum/skills/DI
 
 	minimap_icon = "sea"
 
@@ -881,11 +880,11 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
-/datum/equipment_preset/uscm_ship/sea/New()
+/datum/equipment_preset/uscm_ship/di/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_MAIN)
 
-/datum/equipment_preset/uscm_ship/sea/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm_ship/di/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -907,11 +906,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
 
-/datum/equipment_preset/uscm_ship/sea/load_rank(mob/living/carbon/human/rankee, client/mob_client)
-	if(rankee?.client?.prefs?.pref_special_job_options[rank])
-		var/paygrade_choice = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
-		return paygrade_choice
-	..()
+/datum/equipment_preset/uscm_ship/di/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm_ship/di/upper_rank
+	name = parent_type::name + " (Upper Rank)"
+	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 

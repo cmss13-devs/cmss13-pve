@@ -297,8 +297,8 @@
 			return /datum/equipment_preset/uscm_ship/uscm_police/cmp
 		if(JOB_WARDEN)
 			return /datum/equipment_preset/uscm_ship/uscm_police/warden
-		if(JOB_SEA)
-			return /datum/equipment_preset/uscm_ship/sea
+		if(JOB_DI)
+			return /datum/equipment_preset/uscm_ship/di
 		if(JOB_CHIEF_ENGINEER)
 			return /datum/equipment_preset/uscm_ship/chief_engineer
 		if(JOB_ORDNANCE_TECH)
