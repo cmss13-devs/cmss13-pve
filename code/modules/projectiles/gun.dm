@@ -183,6 +183,10 @@
 	///Chance for random spawn to give this gun a underbarrel attachment.
 	var/random_under_chance = 100
 	///Used when a gun will have a chance to spawn with attachments.
+	var/list/random_spawn_siderail = list()
+	///Chance for random spawn to give this gun a side rail attachment.
+	var/random_siderail_chance = 100
+	///Used when a gun will have a chance to spawn with attachments.
 	var/list/random_spawn_under = list()
 	///Chance for random spawn to give this gun a stock attachment.
 	var/random_stock_chance = 100
@@ -272,7 +276,7 @@
 /obj/item/weapon/gun/Initialize(mapload, spawn_empty) //You can pass on spawn_empty to make the sure the gun has no bullets or mag or anything when created.
 	. = ..() //This only affects guns you can get from vendors for now. Special guns spawn with their own things regardless.
 	base_gun_icon = icon_state
-	attachable_overlays = list("muzzle" = null, "rail" = null, "under" = null, "stock" = null, "mag" = null, "special" = null)
+	attachable_overlays = list("muzzle" = null, "rail" = null, "side_rail" = null, "under" = null, "stock" = null, "mag" = null, "special" = null)
 	muzzle_flash = new(src, muzzleflash_iconstate)
 
 	LAZYSET(item_state_slots, WEAR_BACK, item_state)
@@ -497,6 +501,14 @@
 			update_attachable(S.slot)
 			attachmentchoice = FALSE
 
+	var/siderailchance = random_siderail_chance
+	if(prob(siderailchance) && !attachments["side_rail"]) // Side Rail
+		attachmentchoice = SAFEPICK(random_spawn_siderail)
+		if(attachmentchoice)
+			var/obj/item/attachable/X = new attachmentchoice(src)
+			X.Attach(src)
+			update_attachable(X.slot)
+			attachmentchoice = FALSE
 
 /obj/item/weapon/gun/proc/handle_starting_attachment()
 	if(LAZYLEN(starting_attachment_types))
