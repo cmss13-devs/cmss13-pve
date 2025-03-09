@@ -973,13 +973,6 @@
 	icon_state = "door_warning";
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "door_warning";
-	dir = 4
-	},
 /obj/structure/vehicle_platform{
 	dir = 8
 	},
@@ -5420,9 +5413,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
 /obj/structure/vehicle_platform{
 	dir = 4
 	},
@@ -7181,9 +7171,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
 /obj/structure/vehicle_platform{
 	dir = 8
 	},
@@ -7461,17 +7448,11 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "azA" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
 /obj/structure/closet/hydrant{
 	pixel_y = 32
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
-	},
-/obj/structure/closet/hydrant{
-	pixel_y = 32
 	},
 /obj/structure/vehicle_platform_decoration,
 /turf/open/floor/almayer/edge/smooth/corner/east,
@@ -9512,9 +9493,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonprep)
 "aGa" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -11945,12 +11923,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aOH" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/closet/medical_wall{
-	pixel_y = 32
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
