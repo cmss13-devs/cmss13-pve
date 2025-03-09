@@ -1097,6 +1097,7 @@
 	desc_lore = "The several-paragraph long expository pamphlet that usually comes with these is missing."
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_jumpsuit = NO_FLAGS
+	flags_inventory = PROTECTFROMWEATHER
 	icon_state = "cbrn"
 	worn_state = "cbrn"
 
@@ -1113,6 +1114,7 @@
 	icon_state = "cbrn"
 	worn_state = "cbrn"
 	flags_jumpsuit = NO_FLAGS
+	flags_inventory = PROTECTFROMWEATHER
 	armor_melee = CLOTHING_ARMOR_LOW
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_LOW
