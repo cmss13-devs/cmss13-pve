@@ -248,15 +248,6 @@
 				return
 
 		if(ship_side)
-			var/crash_occurred = (SSticker?.mode?.is_in_endgame)
-			if(crash_occurred)
-				var/turf/our_turf = get_turf(src)
-				target_turf = our_turf
-				travel_time = 0.5 SECONDS
-			else
-				to_chat(user, SPAN_RED("You realize how bad of an idea this is and quickly stop."))
-				return
-		else
 			var/turf/deviation_turf = locate(target_turf.x + pick(-1,0,0,1), target_turf.y + pick(-1,0,0,1), target_turf.z) //Small amount of spread so that consecutive mortar shells don't all land on the same tile
 			if(deviation_turf)
 				target_turf = deviation_turf
@@ -334,11 +325,6 @@
 		firing = FALSE
 		return
 
-	if(ship_side)
-		var/turf/our_turf = get_turf(src)
-		shell.detonate(our_turf)
-		return
-
 	if(istype(shell, /obj/item/mortar_shell/custom)) // big shell warning for ghosts
 		var/obj/effect/effect = new /obj/effect/mortar_effect(target)
 		QDEL_IN(effect, 5 SECONDS)
@@ -374,9 +360,6 @@
 
 /obj/structure/mortar/proc/can_fire_at(mob/user, test_targ_x = targ_x, test_targ_y = targ_y, test_dial_x, test_dial_y)
 	var/dialing = test_dial_x || test_dial_y
-	if(ship_side)
-		to_chat(user, SPAN_WARNING("You cannot aim the mortar while on a ship."))
-		return FALSE
 	if(test_dial_x + test_targ_x > world.maxx || test_dial_x + test_targ_x < 0)
 		to_chat(user, SPAN_WARNING("You cannot [dialing ? "dial to" : "aim at"] this coordinate, it is outside of the area of operations."))
 		return FALSE
@@ -437,13 +420,8 @@
 	playsound(deploy_turf, 'sound/items/Deconstruct.ogg', 25, 1)
 	if(do_after(user, 4 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 		var/obj/structure/mortar/mortar = new /obj/structure/mortar(deploy_turf)
-		if(!is_ground_level(deploy_turf.z))
-			mortar.ship_side = TRUE
-			user.visible_message(SPAN_NOTICE("[user] deploys [src]."), \
-				SPAN_NOTICE("You deploy [src]. This is a bad idea."))
-		else
-			user.visible_message(SPAN_NOTICE("[user] deploys [src]."), \
-				SPAN_NOTICE("You deploy [src]."))
+		user.visible_message(SPAN_NOTICE("[user] deploys [src]."), \
+			SPAN_NOTICE("You deploy [src]."))
 		playsound(deploy_turf, 'sound/weapons/gun_mortar_unpack.ogg', 25, 1)
 		mortar.name = src.name
 		mortar.setDir(user.dir)
