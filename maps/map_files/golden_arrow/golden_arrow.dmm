@@ -9948,11 +9948,6 @@
 	color = "#C02526";
 	dir = 1
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 1
-	},
 /obj/structure/vehicle_platform_decoration,
 /obj/structure/vehicle_platform_decoration{
 	dir = 1
