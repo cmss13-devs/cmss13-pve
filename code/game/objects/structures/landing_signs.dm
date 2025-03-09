@@ -10,9 +10,15 @@
 
 /obj/structure/lz_sign/lazarus_sign
 	name = "Lazarus Landing Sign"
-	desc = "A large sign reading 'lazarus landing por-' the rest of it is smeared in blood."
+	desc = "A large sign reading 'Lazarus Landing - POP. 73'. The Company logo is emblazoned in the corner."
 	icon = 'icons/obj/structures/props/landing_signs.dmi'
 	icon_state = "laz_sign"
+
+/obj/structure/lz_sign/lazarus_sign/damaged
+	name = "Lazarus Landing Sign"
+	desc = "A large sign reading 'Lazarus Landing' the rest of it is smeared in blood."
+	icon = 'icons/obj/structures/props/landing_signs.dmi'
+	icon_state = "laz_sign_d"
 
 /obj/structure/lz_sign/solaris_sign
 	name = "Solaris Ridge Sign"
