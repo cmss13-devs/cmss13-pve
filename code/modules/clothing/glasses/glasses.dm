@@ -41,6 +41,7 @@
 	if(ismob(src.loc))
 		var/mob/M = src.loc
 		M.update_inv_glasses()
+		M.update_inv_wear_mask() //For when you have eyewear in the mask slot
 
 /obj/item/clothing/glasses/update_icon()
 	if(!deactive_state || active)
@@ -194,6 +195,38 @@
 	item_state = "eyepatch"
 	flags_armor_protection = 0
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
+	var/toggled = FALSE
+	var/original_state = "eyepatch"
+	var/toggled_state = "eyepatch_left"
+	actions_types = list(/datum/action/item_action/toggle)
+
+/obj/item/clothing/glasses/eyepatch/ui_action_click()
+	toggle_state()
+
+/obj/item/clothing/glasses/eyepatch/verb/toggle_state()
+	set name = "Toggle Eyepatch State"
+	set category = "Object"
+	set src in usr
+	if(usr.stat == DEAD)
+		return
+
+	toggled = !toggled
+	if(toggled)
+		icon_state = toggled_state
+		item_state = toggled_state
+		to_chat(usr, SPAN_NOTICE("You flip the eyepatch to the left side."))
+	else
+		icon_state = original_state
+		item_state = original_state
+		to_chat(usr, SPAN_NOTICE("You flip the eyepatch to the right side."))
+
+	update_clothing_icon() // Updates the on-mob appearance
+
+/obj/item/clothing/glasses/eyepatch/green
+	icon_state = "eyepatch_green"
+	item_state = "eyepatch_green"
+	original_state = "eyepatch_green"
+	toggled_state = "eyepatch_green_left"
 
 /obj/item/clothing/glasses/monocle
 	name = "monocle"
@@ -650,19 +683,19 @@
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
 /obj/item/clothing/glasses/sunglasses/big
-	name = "\improper BiMex personal shades"
-	desc = "These are an expensive pair of BiMex sunglasses. This brand is popular with USCM foot sloggers because its patented mirror refraction has been said to offer protection from atomic flash, solar radiation, and targeting lasers. To top it all off, everyone seems to know a guy who knows a guy who knows a guy that had a laser pistol reflect off of his shades. BiMex came into popularity with the Marines after its 'Save the Colonies and Look Cool Doing It' ad campaign."
-	icon_state = "bigsunglasses"
-	item_state = "bigsunglasses"
+	name = "\improper BiMex polarized shades"
+	desc = "Sleek, angular shades designed for the modern operator. BiMex's latest 'TactOptix' line comes with advanced polarization and lightweight ballistic lenses capable of shrugging off small shrapnel impacts. A favorite among frontline operators and deep-space scouts, these shades are marketed as 'combat-tested and action-approved.' Rumors abound of lucky users surviving close-range laser shots thanks to the multi-reflective lens coating, though BiMex's official stance is to 'Stop standing in front of lasers.'"
+	icon_state = "bimex_black"
+	item_state = "bimex_black"
 	eye_protection = EYE_PROTECTION_FLASH
 	clothing_traits = list(TRAIT_BIMEX)
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
 /obj/item/clothing/glasses/sunglasses/big/orange
-	name = "\improper BiMex shooting shades"
+	name = "\improper BiMex tactical shades"
 	desc = "An expensive pair of BiMex branded, orange-tinted sunglasses. Largely produced for members of the US Army to protect their eyes from dust during range-time, but some pairs find their way onto the private market."
-	icon_state = "bigorangesunglasses"
-	item_state = "bigorangesunglasses"
+	icon_state = "bimex_orange"
+	item_state = "bimex_orange"
 
 /obj/item/clothing/glasses/sunglasses/aviator
 	name = "aviator shades"
