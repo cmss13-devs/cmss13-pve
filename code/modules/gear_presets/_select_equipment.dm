@@ -163,6 +163,7 @@
 			new_human.b_hair = hair_colors[hair_color][3]
 			new_human.r_facial = hair_colors[hair_color][1]
 			new_human.g_facial = hair_colors[hair_color][2]
+			new_human.b_facial = hair_colors[hair_color][3]
 			var/eye_color = pick(colors)
 			new_human.r_eyes = colors[eye_color][1]
 			new_human.g_eyes = colors[eye_color][2]
@@ -1418,12 +1419,15 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 /datum/equipment_preset/proc/add_upp_uniform(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
 	var/random_uniform = rand(1,2)
-	switch(random_uniform)
-		if(1)
-			uniform.roll_suit_jacket(new_human)
-		if(2)
-			uniform.roll_suit_sleeves(new_human)
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP, WEAR_BODY)
+	else
+		switch(random_uniform)
+			if(1)
+				uniform.roll_suit_jacket(new_human)
+			if(2)
+				uniform.roll_suit_sleeves(new_human)
+		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/naval, WEAR_ACCESSORY)
 
@@ -1436,12 +1440,15 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 /datum/equipment_preset/proc/add_uscm_uniform(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/uniform = new()
 	var/random_uniform = rand(1,3)
-	switch(random_uniform)
-		if(1)
-			uniform.roll_suit_jacket(new_human)
-		if(2)
-			uniform.roll_suit_sleeves(new_human)
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine, WEAR_BODY)
+	else
+		switch(random_uniform)
+			if(1)
+				uniform.roll_suit_jacket(new_human)
+			if(2)
+				uniform.roll_suit_sleeves(new_human)
+		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 
 /datum/equipment_preset/proc/add_uscm_uniform_standard(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/standard/uniform = new()
@@ -1498,3 +1505,19 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/wypacket, WEAR_IN_HELMET)
 		if(6)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/arcturian_ace, WEAR_IN_HELMET)
+
+/datum/equipment_preset/proc/add_civilian_underwear(mob/living/carbon/human/new_human)
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
+
+
+/datum/equipment_preset/proc/add_uscm_underwear(mob/living/carbon/human/new_human)
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
+	else
+		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
+	new_human.underwear = "USCM Boxers"
