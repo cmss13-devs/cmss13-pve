@@ -976,6 +976,23 @@
 /obj/structure/vehicle_platform{
 	dir = 8
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7;
+	plane = -7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
 "ady" = (
@@ -5027,6 +5044,18 @@
 /obj/structure/vehicle_platform_decoration{
 	dir = 1
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform_decoration{
+	dir = 1;
+	plane = -7
+	},
+/obj/structure/closet/medical_wall{
+	pixel_y = 32
+	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/motor_pool)
 "arq" = (
@@ -5412,6 +5441,19 @@
 	},
 /obj/structure/vehicle_platform{
 	dir = 4
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7;
+	plane = -7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
@@ -7171,6 +7213,19 @@
 /obj/structure/vehicle_platform{
 	dir = 8
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7;
+	plane = -7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
 "ayN" = (
@@ -7452,6 +7507,20 @@
 	pixel_y = 32
 	},
 /obj/structure/vehicle_platform_decoration,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform_decoration{
+	plane = -7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/hydrant{
+	pixel_y = 32
+	},
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/motor_pool)
 "azB" = (
@@ -7801,6 +7870,16 @@
 "aAA" = (
 /obj/structure/vehicle_platform{
 	dir = 8
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7;
+	plane = -7
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
@@ -8982,6 +9061,17 @@
 	icon_state = "1-2"
 	},
 /obj/structure/vehicle_platform,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	plane = -7
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/motor_pool)
 "aEr" = (
@@ -9496,6 +9586,24 @@
 /obj/structure/vehicle_platform{
 	dir = 8
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7;
+	plane = -7
+	},
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7;
+	plane = -7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
 "aGb" = (
@@ -9944,6 +10052,23 @@
 	},
 /obj/structure/vehicle_platform_decoration,
 /obj/structure/vehicle_platform_decoration{
+	dir = 1
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform_decoration{
+	plane = -7
+	},
+/obj/structure/platform_decoration{
+	dir = 1;
+	plane = -7
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
 	dir = 1
 	},
 /turf/open/floor/almayer/edge/smooth,
@@ -11921,6 +12046,21 @@
 /obj/structure/vehicle_platform_decoration{
 	dir = 1
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform_decoration{
+	dir = 1;
+	plane = -7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/medical_wall{
+	pixel_y = 32
+	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/motor_pool)
 "aOK" = (
@@ -13593,6 +13733,20 @@
 	icon_state = "1-2"
 	},
 /obj/structure/vehicle_platform,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	plane = -7
+	},
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/motor_pool)
 "aUR" = (
@@ -13607,6 +13761,16 @@
 "aUT" = (
 /obj/structure/vehicle_platform{
 	dir = 4
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7;
+	plane = -7
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
