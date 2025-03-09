@@ -14575,6 +14575,9 @@
 	pixel_y = -8
 	},
 /obj/effect/decal/cleanable/cobweb2,
+/obj/item/storage/bag/trash{
+	pixel_x = -8
+	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "aYs" = (
@@ -17989,6 +17992,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
+/obj/item/storage/bag/trash,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "lZn" = (
