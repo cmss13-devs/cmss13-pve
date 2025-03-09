@@ -1152,6 +1152,18 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Blue lighter, zippo"
 	path = /obj/item/tool/lighter/zippo/blue
 
+/datum/gear/smoking/zippo/bullet
+	display_name = "Bullet lighter, zippo"
+	path = /obj/item/tool/lighter/zippo/bullet
+
+/datum/gear/smoking/zippo/heart
+	display_name = "Heart lighter, zippo"
+	path = /obj/item/tool/lighter/zippo/heart
+
+/datum/gear/smoking/zippo/vintage
+	display_name = "Vintage lighter, zippo"
+	path = /obj/item/tool/lighter/zippo/vintage
+
 /datum/gear/smoking/goldzippo
 	display_name = "Lighter, golden zippo"
 	path = /obj/item/tool/lighter/zippo/gold
