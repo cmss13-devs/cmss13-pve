@@ -171,4 +171,4 @@
 
 
 /datum/tutorial/marine/medical_basic/init_map()
-	new /obj/structure/surface/table/almayer(loc_from_corner(0, 4))
+	new /obj/structure/surface/table(loc_from_corner(0, 4))

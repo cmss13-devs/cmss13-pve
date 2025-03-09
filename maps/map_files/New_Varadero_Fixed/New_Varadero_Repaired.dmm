@@ -157,7 +157,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/monsoon)
 "aeC" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clipboard{
 	pixel_x = -3;
 	pixel_y = 4
@@ -170,7 +170,7 @@
 	},
 /area/varadero/interior/hall_N)
 "afw" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door/window/brigdoor/westleft,
 /obj/item/tool/pen/blue{
 	pixel_x = 4;
@@ -271,11 +271,11 @@
 /obj/structure/machinery/computer/card{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/yellow/southeast,
 /area/varadero/interior/disposals)
 "ajb" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/cdeathalarm_kit{
 	pixel_x = -8;
 	pixel_y = 1
@@ -302,7 +302,7 @@
 /turf/open/floor/carpet,
 /area/varadero/interior/library)
 "aky" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/microwave{
 	desc = "There's two of them.";
 	pixel_x = -3;
@@ -376,7 +376,7 @@
 /turf/open/floor/shiva/snow_mat/east,
 /area/varadero/interior/security)
 "aou" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/attachable/bayonet/co2{
 	pixel_y = 7
 	},
@@ -555,7 +555,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/records)
 "avM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/paper/research_notes,
 /obj/item/storage/belt/shotgun,
@@ -699,7 +699,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/lz2_near)
 "aBn" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/largecrate/random/mini/ammo{
 	pixel_y = 4
 	},
@@ -721,7 +721,7 @@
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "aCx" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/stack/cable_coil/blue,
 /obj/item/stack/rods,
 /obj/item/storage/donut_box,
@@ -758,7 +758,7 @@
 /turf/open/floor/shiva/north,
 /area/varadero/interior/cargo)
 "aDS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/newspaper{
 	layer = 2.99;
 	pixel_x = 4;
@@ -1005,12 +1005,12 @@
 /turf/closed/wall/r_wall/unmeltable,
 /area/varadero/interior/maintenance/north)
 "aNn" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/trash/c_tube,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior_protected/maintenance/south)
 "aNJ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = -6;
 	pixel_y = 13
@@ -1413,7 +1413,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastbeach)
 "bja" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = -11
@@ -1577,7 +1577,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp/green,
 /turf/open/floor/wood,
 /area/varadero/interior/hall_SE)
@@ -1714,7 +1714,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/north)
 "bwr" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/glass/bucket{
 	pixel_x = 6;
 	pixel_y = 14
@@ -1787,7 +1787,7 @@
 /turf/open/floor/plating/bare_catwalk,
 /area/varadero/exterior/farocean)
 "byU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/stock_parts/matter_bin/adv{
 	pixel_x = -5;
 	pixel_y = 11
@@ -1810,7 +1810,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/monsoon)
 "bzF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clipboard,
 /obj/item/folder/red{
 	pixel_x = -3;
@@ -1905,7 +1905,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior_protected/maintenance/south)
 "bAK" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/surgical_tray,
 /obj/item/storage/box/bodybags{
 	pixel_x = -4;
@@ -2016,7 +2016,7 @@
 /turf/open/gm/coast/beachcorner/south_east,
 /area/varadero/exterior/pontoon_beach)
 "bEZ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/regular{
 	pixel_x = 4;
 	pixel_y = -6
@@ -2027,7 +2027,7 @@
 /turf/open/floor/shiva/purplefull/west,
 /area/varadero/interior/research)
 "bFg" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/newspaper{
 	pixel_x = -3;
 	pixel_y = 3
@@ -2112,7 +2112,7 @@
 /obj/item/storage/donut_box{
 	pixel_y = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/redfull,
 /area/varadero/interior/security)
 "bIq" = (
@@ -2263,7 +2263,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/folder/black{
 	pixel_x = -7;
 	pixel_y = 13
@@ -2293,7 +2293,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/exterior/lz1_near)
 "bQY" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/evidence,
 /obj/item/tool/hand_labeler,
 /turf/open/floor/shiva/red/northeast,
@@ -2735,7 +2735,7 @@
 /turf/open/gm/coast/north,
 /area/varadero/interior/caves/north_research)
 "cgJ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/yellow/north,
 /area/varadero/interior/hall_SE)
 "cgY" = (
@@ -2821,7 +2821,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/comms2)
 "cka" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
 	dir = 4;
@@ -2858,7 +2858,7 @@
 /obj/structure/prop/server_equipment/laptop/on{
 	pixel_x = -5
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/shuttle/red,
 /area/varadero/interior_protected/vessel)
 "ckM" = (
@@ -3099,7 +3099,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/hall_SE)
 "cvD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/spray/cleaner{
 	pixel_x = -5;
 	pixel_y = 3
@@ -3110,7 +3110,7 @@
 /turf/open/floor/shiva/redfull,
 /area/varadero/interior/medical)
 "cvJ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/hall_SE)
 "cvU" = (
@@ -3143,7 +3143,7 @@
 /turf/open/floor/carpet,
 /area/varadero/interior/chapel)
 "cwV" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/camera{
 	pixel_x = -3;
 	pixel_y = 9
@@ -3212,7 +3212,7 @@
 /turf/open/floor/shiva/greenfull/west,
 /area/varadero/interior/hall_SE)
 "cBU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/landmark/crap_item,
 /obj/item/storage/fancy/cigar,
 /turf/open/floor/shiva/blue,
@@ -3231,7 +3231,7 @@
 /turf/open/floor/shiva/green/west,
 /area/varadero/interior/court)
 "cCP" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/pen/blue/clicky,
 /obj/item/tool/pen/sleepypen{
 	pixel_x = -4;
@@ -3445,7 +3445,7 @@
 /turf/open/gm/dirt/desert1,
 /area/varadero/exterior/lz1_near)
 "cNA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/pen/blue{
 	pixel_x = -5;
 	pixel_y = 7
@@ -3510,7 +3510,7 @@
 /turf/open/floor/shiva/yellow/west,
 /area/varadero/interior/hall_NW)
 "cQB" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/co2_cartridge{
 	pixel_x = 13;
 	pixel_y = 7
@@ -3585,7 +3585,7 @@
 /turf/open/floor/shiva/green/west,
 /area/varadero/interior/hall_SE)
 "cTC" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 4
 	},
@@ -3778,7 +3778,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/redfull/west,
 /area/varadero/interior/security)
 "dcq" = (
@@ -3913,7 +3913,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/hall_SE)
 "diZ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cans/souto/grape{
 	pixel_x = -7;
 	pixel_y = 8
@@ -4010,7 +4010,7 @@
 /turf/open/floor/interior/plastic/alt,
 /area/varadero/interior/laundry)
 "dnH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/book/manual/surgery{
 	pixel_x = 2;
 	pixel_y = 7
@@ -4121,7 +4121,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/security)
 "dtv" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/pill_bottle/inaprovaline/skillless{
 	pixel_x = 7;
 	pixel_y = 9
@@ -4308,7 +4308,7 @@
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/varadero/exterior/pontoon_beach)
 "dyy" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/taperecorder,
 /turf/open/floor/shiva/red/southeast,
 /area/varadero/interior/security)
@@ -4417,7 +4417,7 @@
 	dir = 8;
 	health = 80
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/largecrate/random/mini/wooden{
@@ -4660,7 +4660,7 @@
 /turf/open/floor/shiva/green/southeast,
 /area/varadero/interior/hall_SE)
 "dQZ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/microwave{
 	pixel_y = 6
 	},
@@ -4893,7 +4893,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/comms3)
 "ebU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/restraint/handcuffs,
 /obj/structure/machinery/flasher_button{
 	id = "sec_checkpoint";
@@ -4912,7 +4912,7 @@
 /turf/open/floor/shiva/red/northwest,
 /area/varadero/interior/security)
 "ecj" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
 	pixel_x = 16;
@@ -5366,7 +5366,7 @@
 /turf/open/floor/white,
 /area/varadero/interior/toilets)
 "esa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/shuttle/dropship/flight/lz1{
 	dir = 1;
 	name = "LZ1 Pontoon Dock computer"
@@ -5622,7 +5622,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/maintenance/north)
 "eBO" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/surgery/scalpel,
 /turf/open/floor/shiva/red/north,
 /area/varadero/interior/morgue)
@@ -5790,7 +5790,7 @@
 /turf/open/floor/strata/grey_multi_tiles,
 /area/varadero/interior_protected/vessel)
 "eIY" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/toolbox/electrical{
 	pixel_y = 9
 	},
@@ -5801,7 +5801,7 @@
 /turf/open/floor/shiva/purplefull/west,
 /area/varadero/interior/research)
 "eJl" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/security)
@@ -5893,7 +5893,7 @@
 /area/varadero/exterior/lz2_near)
 "eNA" = (
 /obj/item/weapon/twohanded/fireaxe,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastbeach)
 "eOa" = (
@@ -6092,7 +6092,7 @@
 /turf/open/floor/carpet,
 /area/varadero/interior/hall_SE)
 "eVp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door/window/brigdoor/westleft,
 /obj/item/tool/stamp{
 	pixel_x = 8;
@@ -6113,7 +6113,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/exterior/eastbeach)
 "eWv" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/lightstick/red{
 	pixel_x = 4;
 	pixel_y = 7
@@ -6406,7 +6406,7 @@
 /area/varadero/interior_protected/vessel)
 "fla" = (
 /obj/structure/machinery/faxmachine,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/skills{
 	dir = 4;
 	layer = 3.1;
@@ -6460,7 +6460,7 @@
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/varadero/exterior/lz2_near)
 "fpQ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/security)
@@ -6594,7 +6594,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/cargo)
 "fub" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/mask/cigarette/cigar/tarbacks{
 	pixel_x = -7;
 	pixel_y = 8
@@ -6784,7 +6784,7 @@
 	pixel_x = 2;
 	pixel_y = 10
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/regular{
 	layer = 3.2;
 	pixel_x = -4;
@@ -6886,7 +6886,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/monsoon)
 "fFy" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_y = 9
 	},
@@ -7132,7 +7132,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/cargo)
 "fRx" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -7144,7 +7144,7 @@
 /turf/open/floor/shiva/redfull,
 /area/varadero/interior/medical)
 "fRV" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/stamp{
 	icon_state = "stamp-ce"
 	},
@@ -7296,7 +7296,7 @@
 /turf/open/floor/shiva/yellow/west,
 /area/varadero/interior/cargo)
 "fYo" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = -6;
 	pixel_y = 13
@@ -7658,7 +7658,7 @@
 /turf/open/floor/plating/icefloor/warnplate,
 /area/varadero/interior/maintenance/north)
 "gnp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ashtray/plastic,
 /obj/item/trash/cigbutt,
 /obj/item/trash/cigbutt{
@@ -7751,7 +7751,7 @@
 /turf/open/gm/coast/west,
 /area/varadero/exterior/farocean)
 "grM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight,
 /turf/open/floor/shiva/redfull,
 /area/varadero/interior/medical)
@@ -7962,7 +7962,7 @@
 	dir = 4;
 	health = 80
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced,
@@ -8104,7 +8104,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/pontoon_beach)
 "gDJ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/microwave{
 	pixel_y = 9
 	},
@@ -8178,7 +8178,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/hall_SE)
 "gHa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/faxmachine,
 /turf/open/floor/shiva/blue/north,
 /area/varadero/interior/administration)
@@ -8213,7 +8213,7 @@
 /area/varadero/exterior/comms4)
 "gHT" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/dry_ramen{
 	pixel_x = 4;
 	pixel_y = 4
@@ -8417,7 +8417,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/security)
 "gQi" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/security)
 "gQr" = (
@@ -8471,7 +8471,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/digsite)
 "gSm" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/frame/camera,
 /turf/open/floor/shiva/multi_tiles/east,
 /area/varadero/interior/hall_SE)
@@ -8781,7 +8781,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior_protected/maintenance/south)
 "hjm" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/gloves/botanic_leather,
 /obj/item/clothing/mask/cigarette/weed{
 	pixel_x = -11;
@@ -9134,7 +9134,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/exterior/lz2_near)
 "hxO" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/vials/random{
 	pixel_y = 5
 	},
@@ -9167,7 +9167,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/exterior/lz1_near)
 "hyL" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/coffeecup/uscm{
 	pixel_x = 7;
 	pixel_y = 5
@@ -9387,7 +9387,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/lz2_near)
 "hHp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/emails{
 	pixel_y = 5
 	},
@@ -9894,7 +9894,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/oob)
 "idb" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/strata/grey_multi_tiles,
@@ -9907,7 +9907,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/administration)
 "iek" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/hypospray/tricordrazine{
 	pixel_x = -14;
 	pixel_y = 2
@@ -9998,7 +9998,7 @@
 /turf/open/floor/shiva/redfull/west,
 /area/varadero/interior/hall_N)
 "igk" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/glass/paint/black{
 	pixel_x = 8;
 	pixel_y = 10
@@ -10198,7 +10198,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/taperecorder,
 /turf/open/floor/shiva/blue/southwest,
 /area/varadero/interior/administration)
@@ -10311,7 +10311,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/electrical)
 "isJ" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/snacks/stew{
@@ -10379,7 +10379,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/hand_labeler,
 /obj/structure/machinery/storm_siren{
 	dir = 8;
@@ -10552,7 +10552,7 @@
 /turf/closed/wall/r_wall,
 /area/varadero/interior_protected/caves/central)
 "iFm" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/guestpass{
 	dir = 1
 	},
@@ -10639,7 +10639,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/medical)
 "iIE" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/encryptionkey/dutch,
 /obj/item/device/encryptionkey/dutch{
 	pixel_x = -6
@@ -10927,7 +10927,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/medical)
 "iUR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_y = 2
@@ -11139,7 +11139,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior/maintenance/security)
 "jff" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/wood,
 /area/varadero/interior/records)
 "jfn" = (
@@ -11227,7 +11227,7 @@
 /turf/open/floor/shiva/yellow,
 /area/varadero/interior/cargo)
 "jjq" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/closet/secure_closet/surgical{
 	pixel_x = -30
 	},
@@ -11341,7 +11341,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior/maintenance/security)
 "joY" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_y = 6
 	},
@@ -11457,7 +11457,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/lz2_near)
 "jsC" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/bible{
 	pixel_x = -2;
 	pixel_y = 3
@@ -11487,7 +11487,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/hall_N)
 "jvk" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/largecrate/random/mini/small_case/b{
 	pixel_x = -6;
 	pixel_y = 4
@@ -11642,7 +11642,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/caves/east)
 "jDq" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/red/southeast,
 /area/varadero/interior/security)
 "jDv" = (
@@ -12459,7 +12459,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/electrical)
 "koI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/camera{
 	pixel_x = 6;
 	pixel_y = 11
@@ -12620,7 +12620,7 @@
 /obj/item/stack/sheet/mineral/phoron,
 /obj/item/stack/sheet/mineral/phoron,
 /obj/item/stack/sheet/mineral/phoron,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/medical)
 "kxe" = (
@@ -12832,7 +12832,7 @@
 /turf/open/floor/shiva/red/southeast,
 /area/varadero/interior/security)
 "kEy" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/beakers,
 /obj/item/reagent_container/glass/beaker/bluespace,
 /turf/open/floor/shiva/multi_tiles/southeast,
@@ -12961,14 +12961,14 @@
 	pixel_x = -3;
 	pixel_y = 11
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior_protected/maintenance/south)
 "kLC" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = -13;
 	pixel_y = 16
@@ -12992,7 +12992,7 @@
 /turf/open/floor/plating,
 /area/varadero/interior/security)
 "kMV" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp/green{
 	pixel_y = 7
 	},
@@ -13334,7 +13334,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_x = -6;
 	pixel_y = 6
@@ -13528,7 +13528,7 @@
 /turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "lnB" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp/green{
 	pixel_y = 7
 	},
@@ -13577,7 +13577,7 @@
 /turf/open/floor/shiva/yellow/north,
 /area/varadero/interior/comms3)
 "lpz" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/largecrate/random/mini/small_case/c{
 	pixel_x = 3;
 	pixel_y = 17
@@ -13854,7 +13854,7 @@
 /turf/closed/wall/rock/brown,
 /area/varadero/exterior/monsoon)
 "lAH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/chem_dispenser/soda{
 	pixel_y = 7
 	},
@@ -13944,7 +13944,7 @@
 /turf/open/floor/shiva/snow_mat/east,
 /area/varadero/interior/medical)
 "lEM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/wood,
 /area/varadero/interior/hall_SE)
@@ -14105,7 +14105,7 @@
 /turf/open/floor/shiva/yellow/west,
 /area/varadero/interior/cargo)
 "lNw" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_y = 3
 	},
@@ -14257,7 +14257,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/digsite)
 "lVz" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/stack/sheet/mineral/phoron/medium_stack,
 /obj/item/stack/sheet/metal/med_small_stack,
 /turf/open/floor/plating/icefloor/asteroidplating,
@@ -14349,7 +14349,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/hall_SE)
 "lXA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/cups{
 	pixel_x = 6;
 	pixel_y = 10
@@ -14467,7 +14467,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/oob)
 "mbf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/bottle/pwine{
 	pixel_x = 6;
 	pixel_y = 13
@@ -14533,7 +14533,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastbeach)
 "mcH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/frame/light_fixture,
 /turf/open/floor/shiva/yellow/north,
 /area/varadero/interior/electrical)
@@ -14601,7 +14601,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/technical_storage)
 "mgG" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/autopsy_scanner{
 	pixel_x = 5;
 	pixel_y = 3
@@ -14655,7 +14655,7 @@
 /turf/open/floor/plating,
 /area/varadero/interior/hall_NW)
 "miR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/recharger{
 	pixel_y = 4
 	},
@@ -14911,7 +14911,7 @@
 /turf/open/floor/shiva/green,
 /area/varadero/interior/hall_SE)
 "mtG" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/trackimp,
 /obj/item/device/binoculars,
 /turf/open/floor/shiva/red/southeast,
@@ -15554,7 +15554,7 @@
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "naR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/prop/server_equipment/laptop/on{
 	pixel_x = -1;
 	pixel_y = 3
@@ -15591,7 +15591,7 @@
 /turf/open/floor/shiva/yellow,
 /area/varadero/interior/disposals)
 "ncm" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/item/ashtray/plastic,
 /obj/item/trash/cigbutt,
@@ -15694,7 +15694,7 @@
 	pixel_x = 5;
 	pixel_y = 6
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastbeach)
 "nhv" = (
@@ -15813,7 +15813,7 @@
 /turf/open/floor/shiva/bluefull/west,
 /area/varadero/interior/maintenance)
 "nlt" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/circuitboard/computer/crew{
 	pixel_x = -5;
 	pixel_y = 8
@@ -15889,7 +15889,7 @@
 /obj/structure/machinery/computer/operating{
 	density = 0
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/snow_mat/east,
 /area/varadero/interior/medical)
 "noj" = (
@@ -16059,7 +16059,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/records)
 "nts" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/chem_dispenser/soda/beer{
 	pixel_y = 8
 	},
@@ -16070,7 +16070,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/morgue)
 "nuZ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -16101,7 +16101,7 @@
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/yellow/northeast,
 /area/varadero/interior/disposals)
 "nvQ" = (
@@ -16115,7 +16115,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/exterior/eastbeach)
 "nwP" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/shaker{
 	pixel_x = -8;
 	pixel_y = 3
@@ -16266,7 +16266,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/digsite)
 "nFu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/varadero/interior/hall_SE)
 "nFX" = (
@@ -16506,7 +16506,7 @@
 /turf/open/floor/carpet,
 /area/varadero/interior/library)
 "nPY" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/surgery/cautery/predatorcautery,
@@ -16568,7 +16568,7 @@
 	dir = 4;
 	health = 80
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/clothing/suit/storage/marine/veteran/dutch{
@@ -16721,7 +16721,7 @@
 	dir = 8;
 	health = 80
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/clothing/head/uppcap/peaked,
@@ -17196,7 +17196,7 @@
 	dir = 4;
 	health = 80
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced,
@@ -17272,7 +17272,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/medical)
 "oyT" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door/window/brigdoor/westleft{
 	dir = 4;
 	icon_state = "leftsecure";
@@ -17483,7 +17483,7 @@
 /turf/open/floor/shiva/snow_mat,
 /area/varadero/interior/maintenance)
 "oIR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light,
 /obj/item/circuitboard/computer/powermonitor,
 /obj/item/stack/cable_coil/cut{
@@ -17527,7 +17527,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_x = -8;
 	pixel_y = 8
@@ -17620,7 +17620,7 @@
 /area/varadero/interior/hall_N)
 "oOB" = (
 /obj/item/device/taperecorder,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/redfull,
 /area/varadero/interior/security)
 "oOG" = (
@@ -17704,7 +17704,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/exterior/lz1_near)
 "oUf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door/window/brigdoor/northright,
 /obj/item/paper_bin{
 	pixel_x = 6;
@@ -17736,7 +17736,7 @@
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "oUK" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/suit/fire/firefighter{
 	pixel_x = 3;
 	pixel_y = 7
@@ -17758,7 +17758,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior/caves/north_research)
 "oVH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/lights,
 /obj/structure/machinery/light,
 /turf/open/floor/shiva/yellow,
@@ -18108,7 +18108,7 @@
 /turf/open/floor/shiva/purple/west,
 /area/varadero/interior/research)
 "pmo" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = 9;
 	pixel_y = 10
@@ -18132,7 +18132,7 @@
 /turf/open/shuttle/red,
 /area/varadero/interior_protected/vessel)
 "pob" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/trash/plate{
@@ -18190,7 +18190,7 @@
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/book/manual/marine_law{
 	pixel_x = -6;
 	pixel_y = 5
@@ -18325,7 +18325,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/exterior/lz1_near)
 "pxa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/largecrate/random/mini/ammo{
 	pixel_y = 4
 	},
@@ -18346,7 +18346,7 @@
 	dir = 8;
 	health = 80
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/storage/large_holster/katana/full,
@@ -18404,7 +18404,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/security)
 "pBD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper,
 /obj/item/tool/pen/blue{
 	pixel_x = 6;
@@ -18878,7 +18878,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/monsoon)
 "pYJ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/implanter{
 	pixel_x = 10
 	},
@@ -18981,7 +18981,7 @@
 /turf/open/floor/shiva/green/north,
 /area/varadero/interior/mess)
 "qdL" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/book/manual/security_space_law{
 	pixel_x = 3;
 	pixel_y = 5
@@ -19060,7 +19060,7 @@
 /turf/open/floor/bcircuit,
 /area/varadero/interior/electrical)
 "qfC" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras{
 	dir = 8;
 	pixel_y = 6
@@ -19267,7 +19267,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/electrical)
 "qnz" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/microwave{
 	desc = "There's two of them.";
 	pixel_y = 5
@@ -19386,7 +19386,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/hall_N)
 "qsm" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ashtray/plastic,
 /obj/item/trash/cigbutt/ucigbutt{
 	pixel_x = 5;
@@ -19438,7 +19438,7 @@
 /turf/closed/wall/rock/brown,
 /area/varadero/interior/caves/north_research)
 "qus" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/wood,
 /area/varadero/interior/hall_SE)
 "qvo" = (
@@ -19455,7 +19455,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/redfull/west,
 /area/varadero/interior/security)
 "qxj" = (
@@ -19514,7 +19514,7 @@
 /turf/open/gm/coast/beachcorner/south_west,
 /area/varadero/exterior/lz1_near)
 "qyO" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
@@ -19674,7 +19674,7 @@
 /turf/open/gm/dirt/desert1,
 /area/varadero/exterior/eastbeach)
 "qCE" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/bottle/gin{
 	pixel_x = 4;
 	pixel_y = 4
@@ -19712,7 +19712,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/suit/storage/jacket/marine/corporate,
 /turf/open/floor/wood,
 /area/varadero/interior/hall_SE)
@@ -19850,7 +19850,7 @@
 /area/varadero/interior/medical)
 "qOF" = (
 /obj/item/tool/pen/blue,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/disposalpipe/segment,
 /obj/structure/window/reinforced/tinted{
 	dir = 4
@@ -19862,7 +19862,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior/maintenance/research)
 "qOU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/weapon/gun/shotgun/pump,
 /obj/item/ammo_magazine/shotgun/buckshot{
 	pixel_x = 6;
@@ -19915,7 +19915,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "qQS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/station_alert{
 	dir = 8
 	},
@@ -19942,7 +19942,7 @@
 /turf/open/floor/shiva/yellowfull/west,
 /area/varadero/interior/laundry)
 "qSb" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/stack/nanopaste,
 /turf/open/floor/shiva/redfull,
 /area/varadero/interior/medical)
@@ -20167,7 +20167,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/monsoon)
 "qZN" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/evidencebag,
 /turf/open/floor/shiva/red/east,
 /area/varadero/interior/security)
@@ -20239,7 +20239,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/administration)
 "rbL" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/condiment/saltshaker,
 /obj/item/reagent_container/food/condiment/peppermill{
 	pixel_x = -9;
@@ -20491,7 +20491,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/exterior/comms4)
 "rmo" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/stack/medical/advanced/bruise_pack/upgraded{
 	amount = 1;
 	pixel_x = -3;
@@ -20518,7 +20518,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/maintenance/north)
 "rnc" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/surgery/FixOVein/predatorFixOVein{
 	pixel_x = 5;
 	pixel_y = 4
@@ -20610,7 +20610,7 @@
 /obj/item/tool/stamp{
 	icon_state = "stamp-ce"
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced/tinted{
 	dir = 8
 	},
@@ -20895,7 +20895,7 @@
 /turf/open/floor/carpet,
 /area/varadero/interior/maintenance/north)
 "rFD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_x = 6;
 	pixel_y = 9
@@ -20932,7 +20932,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/lz1_near)
 "rGK" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/med_data/laptop{
 	pixel_y = 3
 	},
@@ -21173,7 +21173,7 @@
 /area/varadero/exterior/eastbeach)
 "rRc" = (
 /obj/item/tool/surgery/hemostat/predatorhemostat,
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/corsat/squareswood/north,
@@ -21210,7 +21210,7 @@
 /turf/open/floor/shiva/red/north,
 /area/varadero/interior/security)
 "rRS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/cigarettes/arcturian_ace{
 	pixel_x = -5;
 	pixel_y = 5
@@ -21430,7 +21430,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves)
 "rZs" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clipboard{
 	pixel_x = 4;
 	pixel_y = 5
@@ -21455,7 +21455,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/administration)
 "sao" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/microwave{
 	pixel_y = 6
 	},
@@ -21581,7 +21581,7 @@
 /obj/item/tool/pen/blue{
 	pixel_x = 7
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flash,
 /turf/open/floor/shiva/redfull,
 /area/varadero/interior/security)
@@ -21628,7 +21628,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior/caves/east)
 "sgw" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/surgery/retractor/predatorretractor,
@@ -21738,7 +21738,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/exterior/comms4)
 "skV" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/demo_scanner{
 	pixel_x = 5;
 	pixel_y = 8
@@ -22115,7 +22115,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/cargo)
 "sAl" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/inflatable,
 /obj/item/inflatable/door,
 /obj/item/storage/box/engineer,
@@ -22144,7 +22144,7 @@
 /turf/open/floor/plating,
 /area/varadero/interior/laundry)
 "sCI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/drinkingglass{
 	pixel_x = 3
 	},
@@ -22308,7 +22308,7 @@
 /turf/open/floor/shiva/purplefull/west,
 /area/varadero/interior/research)
 "sLP" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/corsat/squareswood/north,
@@ -22556,7 +22556,7 @@
 	dir = 8;
 	health = 80
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/clothing/suit/armor/riot,
@@ -22587,14 +22587,14 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/lz2_near)
 "sZi" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/surgery/bonesetter/predatorbonesetter,
 /turf/open/floor/corsat/squareswood/north,
 /area/varadero/interior_protected/vessel)
 "tak" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/carpet,
 /area/varadero/interior/hall_SE)
 "tbo" = (
@@ -22674,7 +22674,7 @@
 	dir = 4;
 	health = 80
 	},
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/ammo_magazine/sniper/svd,
@@ -22767,7 +22767,7 @@
 /obj/structure/machinery/computer/communications{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/bluefull/west,
 /area/varadero/interior/administration)
 "thn" = (
@@ -22965,7 +22965,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/exterior/lz2_near)
 "tpp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door/window/brigdoor/westleft{
 	name = "Security Desk"
 	},
@@ -23049,7 +23049,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/north)
 "trB" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/bottle/absinthe,
 /turf/open/floor/wood,
 /area/varadero/interior/beach_bar)
@@ -23152,7 +23152,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/exterior/lz1_near)
 "tvI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/condiment/peppermill{
 	pixel_x = -9;
 	pixel_y = 5
@@ -23242,7 +23242,7 @@
 /turf/open/floor/asteroidwarning,
 /area/varadero/exterior/lz1_near)
 "tBQ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/radio,
 /turf/open/floor/shiva/red/southwest,
 /area/varadero/interior/security)
@@ -23583,7 +23583,7 @@
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/varadero/interior/bunks)
 "tRk" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/surgery/FixOVein/predatorFixOVein{
@@ -23720,7 +23720,7 @@
 /area/varadero/exterior/lz1_near)
 "tYn" = (
 /obj/structure/machinery/computer/cameras,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/red/southeast,
 /area/varadero/interior/administration)
 "tZl" = (
@@ -23789,7 +23789,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastbeach)
 "udN" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/bottle/sake{
 	pixel_x = 5;
 	pixel_y = 10
@@ -24209,7 +24209,7 @@
 /turf/open/gm/coast/west,
 /area/varadero/exterior/farocean)
 "uyu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/shiva/purplefull/west,
 /area/varadero/interior/research)
@@ -24296,7 +24296,7 @@
 /turf/open/floor/shiva/redfull/west,
 /area/varadero/interior/hall_SE)
 "uCJ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp/green,
 /turf/open/floor/wood,
 /area/varadero/interior/hall_SE)
@@ -24339,7 +24339,7 @@
 /turf/open/gm/river/desert/deep/covered,
 /area/varadero/interior/maintenance/north)
 "uEH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/lightstick,
 /turf/open/floor/shiva/yellow/north,
 /area/varadero/interior/electrical)
@@ -24639,7 +24639,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/security)
 "uQQ" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/trash/plate,
@@ -24770,7 +24770,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/exterior/lz1_near)
 "uWY" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/evidencebag,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/security)
@@ -24797,7 +24797,7 @@
 /obj/structure/machinery/microwave{
 	pixel_y = 9
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/snow_mat,
 /area/varadero/interior/security)
 "uYH" = (
@@ -25053,12 +25053,12 @@
 /turf/open/floor/shiva/snow_mat/east,
 /area/varadero/interior/medical)
 "vhG" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/toolbox/mechanical/green,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/comms2)
 "vhJ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clipboard{
 	pixel_x = -2;
 	pixel_y = 5
@@ -25180,7 +25180,7 @@
 /turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/monsoon)
 "vnV" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/donut_box{
 	pixel_y = 9
 	},
@@ -25358,7 +25358,7 @@
 /turf/open/floor/shiva/multi_tiles/west,
 /area/varadero/interior/medical)
 "vwG" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper/janitor{
 	pixel_x = -4;
 	pixel_y = 4
@@ -25548,7 +25548,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/mess)
 "vFf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/cigar{
 	pixel_x = -2;
 	pixel_y = 3
@@ -26230,7 +26230,7 @@
 /turf/open/floor/shiva/yellow,
 /area/varadero/interior/cargo)
 "wdH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/glass/beaker/ethanol{
 	desc = "The beaker stares at you lecherously. Its contents... irresistible.";
 	pixel_y = 7
@@ -26311,7 +26311,7 @@
 /turf/open/gm/coast/south,
 /area/varadero/exterior/farocean)
 "wfS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/guestpass{
 	dir = 1
 	},
@@ -26331,7 +26331,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/security)
 "wgR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/landmark/crap_item,
 /obj/effect/spawner/random/supply_kit,
 /turf/open/floor/shiva/blue/northeast,
@@ -26431,7 +26431,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "wlh" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/communications{
 	dir = 4
 	},
@@ -26491,7 +26491,7 @@
 /turf/open/floor/shiva/red/west,
 /area/varadero/interior/administration)
 "wny" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 80
@@ -26583,7 +26583,7 @@
 /area/varadero/interior/maintenance/north)
 "wqP" = (
 /obj/item/storage/box/bodybags,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/red/southwest,
 /area/varadero/interior/security)
 "wrg" = (
@@ -26922,7 +26922,7 @@
 /turf/open/floor/shiva/yellow/north,
 /area/varadero/interior/technical_storage)
 "wGp" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/bedsheet{
@@ -26976,7 +26976,7 @@
 /turf/open/floor/shiva/redfull/west,
 /area/varadero/interior/medical)
 "wJS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/cell_charger,
 /obj/structure/machinery/light{
 	dir = 1
@@ -27244,7 +27244,7 @@
 /area/varadero/exterior/eastbeach)
 "wUK" = (
 /obj/structure/machinery/computer/cameras,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/redfull/west,
 /area/varadero/interior/hall_SE)
 "wUU" = (
@@ -27389,7 +27389,7 @@
 /turf/open/floor/shiva/purple/west,
 /area/varadero/interior/research)
 "wYQ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_x = -6;
 	pixel_y = 6
@@ -27567,7 +27567,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/digsite)
 "xfN" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/eat_bar{
 	pixel_x = 7;
 	pixel_y = 13
@@ -27597,7 +27597,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/hall_SE)
 "xgF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -27674,7 +27674,7 @@
 /turf/open/shuttle/red,
 /area/varadero/interior_protected/vessel)
 "xmd" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/drinks/bottle/orangejuice{
@@ -27819,7 +27819,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/hall_NW)
 "xrR" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/circuitboard/computer/atmos_alert,
 /obj/item/circuitboard/machine/smes{
 	pixel_x = -7;
@@ -27893,7 +27893,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/cargo)
 "xvo" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/shiva/red/east,
 /area/varadero/interior/security)
@@ -27943,7 +27943,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior/maintenance/security)
 "xzg" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/cassette_tape/nam{
 	pixel_x = 3;
 	pixel_y = 9
@@ -28014,7 +28014,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/exterior/eastbeach)
 "xBE" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/screwdriver{
 	pixel_x = -2;
 	pixel_y = 4
@@ -28170,7 +28170,7 @@
 /turf/open/floor/shiva/wred/north,
 /area/varadero/interior/medical)
 "xIO" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/packageWrap,
 /obj/item/tool/hand_labeler,
 /obj/item/tool/stamp,
@@ -28195,7 +28195,7 @@
 /turf/open/gm/coast/beachcorner2/north_west,
 /area/varadero/exterior/lz2_near)
 "xKq" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin{
 	pixel_x = 2;
 	pixel_y = 8
@@ -28284,7 +28284,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/cargo)
 "xQJ" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/clothing/mask/cigarette/cigar,
 /obj/item/reagent_container/food/drinks/bottle/whiskey{
 	pixel_x = -7
@@ -28586,7 +28586,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/hall_N)
 "yhj" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/camera{
 	pixel_y = 5
 	},
@@ -28614,7 +28614,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "yhO" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door/window/eastright{
 	dir = 1;
 	pixel_y = 17

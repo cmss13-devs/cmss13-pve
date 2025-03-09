@@ -470,3 +470,16 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 	icon_state = "bigrollerbloodempty_down"
 	buckling_y = 2
 	base_bed_icon = "bigrollerbloodempty"
+
+/obj/structure/bed/bedroll/gym
+	name = "unfolded gym mat"
+	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise."
+	color = "#333333"
+	foldabletype = /obj/item/roller/bedroll/gym
+
+/obj/item/roller/bedroll/gym
+	name = "folded gym mat"
+	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise."
+	color = "#333333"
+	rollertype = /obj/structure/bed/bedroll/gym
+

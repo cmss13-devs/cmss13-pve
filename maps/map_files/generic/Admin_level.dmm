@@ -248,7 +248,7 @@
 /turf/open/floor/carpet,
 /area/centcom/living)
 "fc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigar,
 /turf/open/floor/tdome/northeast,
 /area/tdome/tdomeobserve)
@@ -405,7 +405,7 @@
 /turf/closed/wall/indestructible/splashscreen,
 /area/start)
 "kL" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/soylentgreen,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = 11;
@@ -458,7 +458,7 @@
 /turf/open/floor/almayer/greencorner/east,
 /area/adminlevel/ert_station)
 "np" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/binoculars{
 	pixel_x = -4
 	},
@@ -577,7 +577,7 @@
 /turf/open/floor/tdome/northeast,
 /area/tdome/tdome1)
 "pV" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/recharger,
 /obj/item/device/defibrillator/upgraded,
 /obj/item/clothing/glasses/hud/health,
@@ -679,7 +679,7 @@
 /turf/open/floor/almayer/floor,
 /area/adminlevel/ert_station/shuttle_dispatch)
 "tu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/surgical_tray,
 /obj/item/reagent_container/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
@@ -759,7 +759,7 @@
 /area/space)
 "uW" = (
 /obj/structure/machinery/faxmachine,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/almayer/floor,
 /area/adminlevel/ert_station)
 "vb" = (
@@ -807,7 +807,7 @@
 /turf/open/floor/plating,
 /area/space)
 "wR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bedsheetbin{
 	pixel_y = 6
 	},
@@ -1022,7 +1022,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station)
 "Cw" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_y = 6
@@ -1675,7 +1675,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/ert_station)
 "Qc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "tdome_t1";
 	name = "Team 1 Shutters (Left)";
@@ -1978,7 +1978,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/ert_station)
 "XZ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_y = 6

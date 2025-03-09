@@ -17,7 +17,7 @@
 /turf/closed/wall/rock/brown,
 /area/adminlevel/ert_station/clf_station)
 "aA" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/roller,
 /obj/item/roller,
 /obj/item/roller,
@@ -257,7 +257,7 @@
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
 "gf" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/bottle/whiskey,
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/clf_station)
@@ -351,7 +351,7 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/clf_station)
 "jp" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/bottle/whiskey,
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
@@ -404,7 +404,7 @@
 /area/adminlevel/ert_station/clf_station)
 "kF" = (
 /obj/effect/decal/cleanable/blood,
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/storage/pill_bottle{
 	pixel_y = 12;
 	pixel_x = 5
@@ -420,7 +420,7 @@
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
 "kS" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/shaker,
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
@@ -451,7 +451,7 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/clf_station)
 "lp" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/explosive/grenade/incendiary/molotov,
 /obj/item/explosive/grenade/incendiary/molotov,
 /obj/item/explosive/grenade/incendiary/molotov,
@@ -476,7 +476,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "lX" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
@@ -486,7 +486,7 @@
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
 "ma" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/storage/fancy/cigarettes/lucky_strikes_4,
 /obj/structure/machinery/light/small/built{
 	dir = 1
@@ -501,7 +501,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "mt" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/clothing/suit/chef/classic,
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/head/chefhat,
@@ -568,7 +568,7 @@
 /turf/open/floor/plating/asteroidwarning/east,
 /area/adminlevel/ert_station/clf_station)
 "oc" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/ammo_magazine/shotgun/slugs,
 /obj/item/ammo_magazine/shotgun/slugs,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
@@ -698,7 +698,7 @@
 /turf/open/floor/wood/wood_broken4,
 /area/adminlevel/ert_station/clf_station)
 "rm" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/device/healthanalyzer{
 	pixel_y = 5
 	},
@@ -763,7 +763,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "sK" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/weapon/gun/smg/uzi,
 /obj/item/ammo_magazine/smg/uzi,
 /obj/item/ammo_magazine/smg/uzi,
@@ -797,7 +797,7 @@
 /turf/open/floor/plating/asteroidfloor/north,
 /area/adminlevel/ert_station/clf_station)
 "tz" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/effect/landmark/wo_supplies/storage/belts/lifesaver,
 /obj/effect/landmark/wo_supplies/storage/belts/lifesaver{
 	pixel_y = 5
@@ -891,7 +891,7 @@
 /turf/open/floor/wood/wood_broken4,
 /area/adminlevel/ert_station/clf_station)
 "vx" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/trash/candle,
 /obj/item/reagent_container/syringe/drugs{
 	pixel_y = 8
@@ -967,7 +967,7 @@
 /turf/open/gm/grass,
 /area/adminlevel/ert_station/clf_station)
 "yi" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/clothing/glasses/sunglasses/blindfold,
 /obj/item/restraint/handcuffs,
 /turf/open/floor/wood,
@@ -1056,7 +1056,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "AO" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/ammo_magazine/shotgun/flechette,
 /obj/item/ammo_magazine/shotgun/flechette,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717,
@@ -1066,7 +1066,7 @@
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
 "AV" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/ammo_magazine/smg/mac15/extended,
 /obj/item/ammo_magazine/smg/mac15/extended,
 /obj/item/ammo_magazine/smg/mac15/extended,
@@ -1086,7 +1086,7 @@
 /turf/open/floor/wood/wood_broken6,
 /area/adminlevel/ert_station/clf_station)
 "Bl" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/ammo_magazine/smg/mp5,
 /obj/item/ammo_magazine/smg/mp5,
 /obj/item/ammo_magazine/smg/mp5,
@@ -1135,7 +1135,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "Ck" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/device/radio/headset/distress/CLF,
 /obj/item/device/radio/headset/distress/CLF/command,
 /obj/structure/machinery/recharger,
@@ -1226,7 +1226,7 @@
 /turf/open/gm/coast/east,
 /area/adminlevel/ert_station/clf_station)
 "Fj" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/bottle/vodka,
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
@@ -1254,12 +1254,12 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "Gl" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/spacecash/c10,
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
 "GB" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/weapon/gun/rifle/mar40,
 /obj/item/ammo_magazine/rifle/mar40,
 /obj/item/ammo_magazine/rifle/mar40,
@@ -1418,7 +1418,7 @@
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/adminlevel/ert_station/clf_station)
 "Lu" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/weapon/gun/rifle/mar40/carbine,
 /obj/item/ammo_magazine/rifle/mar40,
 /obj/item/ammo_magazine/rifle/mar40,
@@ -1458,7 +1458,7 @@
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
 "LR" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/clothing/glasses/sunglasses/blindfold,
 /obj/item/restraint/handcuffs,
 /obj/item/restraint/handcuffs,
@@ -1486,7 +1486,7 @@
 /area/adminlevel/ert_station/clf_station)
 "MT" = (
 /obj/item/tank/anesthetic,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/mask/breath/medical,
 /obj/structure/machinery/light/small/built{
 	dir = 1
@@ -1504,7 +1504,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "Ni" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/condiment/peppermill,
 /obj/item/reagent_container/food/condiment/saltshaker,
 /obj/item/storage/box/drinkingglasses,
@@ -1601,7 +1601,7 @@
 	dir = 8;
 	health = 80
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/surgical_tray{
 	pixel_y = 8
 	},
@@ -1622,7 +1622,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "Qw" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/device/radio/headset/distress/CLF,
 /obj/item/device/radio/headset/distress/CLF/medic,
 /obj/structure/machinery/light/small/built,
@@ -1648,7 +1648,7 @@
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
 "QG" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/ammo_box/magazine/shotgun/buckshot,
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
@@ -1724,7 +1724,7 @@
 /area/adminlevel/ert_station/clf_station)
 "TM" = (
 /obj/structure/machinery/recharger,
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/device/defibrillator,
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
@@ -1775,7 +1775,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "Vk" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/prop/helmetgarb/gunoil,
 /obj/item/weapon/baton/cattleprod,
 /turf/open/floor/wood,
@@ -1852,7 +1852,7 @@
 /turf/open/gm/dirt,
 /area/adminlevel/ert_station/clf_station)
 "WU" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/bottle/sake,
 /turf/open/floor/wood,
 /area/adminlevel/ert_station/clf_station)
@@ -1914,7 +1914,7 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/clf_station)
 "YR" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/bottle/vodka,
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/clf_station)
@@ -1922,7 +1922,7 @@
 /turf/open/floor/plating/asteroidwarning,
 /area/adminlevel/ert_station/clf_station)
 "ZE" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/storage/box/beakers{
 	pixel_y = 12;
 	pixel_x = -4

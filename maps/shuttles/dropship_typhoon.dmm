@@ -177,7 +177,7 @@
 	dir = 4;
 	pixel_y = -5
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/surgical_tray/empty,
 /obj/item/reagent_container/hypospray/autoinjector/oxycodone{
 	pixel_y = 9;
