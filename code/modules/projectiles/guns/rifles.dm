@@ -365,6 +365,10 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 
+
+/obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded
+	current_mag = null
+
 //M20A Harrington rifle
 //=================================================
 //=================================================

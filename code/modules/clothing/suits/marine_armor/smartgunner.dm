@@ -31,8 +31,6 @@
 	. = ..()
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "\improper M56 combat harness" && !(flags_atom & NO_SNOW_TYPE))
 		name = "M56 snow combat harness"
-	else
-		name = "M56 combat harness"
 	//select_gamemode_skin(type)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/mob_can_equip(mob/equipping_mob, slot, disable_warning = FALSE)
@@ -111,8 +109,6 @@
 	. = ..()
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "\improper M56 combat harness" && !(flags_atom & NO_SNOW_TYPE))
 		name = "\improper M56 snow combat harness"
-	else
-		name = "\improper M56 combat harness"
 	//select_gamemode_skin(type)
 
 /obj/item/clothing/suit/marine/smartgunner/mob_can_equip(mob/equipping_mob, slot, disable_warning = FALSE)

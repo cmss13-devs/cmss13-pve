@@ -201,7 +201,7 @@
 //CMB Survivors//
 
 /obj/effect/landmark/survivor_spawner/fiorina_armory_cmb
-	equipment = /datum/equipment_preset/cmb/standard
+	equipment = /datum/equipment_preset/cmb/deputy
 	synth_equipment = /datum/equipment_preset/cmb/synth
 	intro_text = list("<h2>You are a CMB Deputy!</h2>",\
 	"<span class='notice'>You are aware of the 'alien' threat.</span>",\
