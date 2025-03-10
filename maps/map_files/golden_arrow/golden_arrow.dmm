@@ -5024,9 +5024,6 @@
 /obj/structure/closet/medical_wall{
 	pixel_y = 32
 	},
-/obj/structure/closet/medical_wall{
-	pixel_y = 32
-	},
 /obj/structure/vehicle_platform_decoration{
 	dir = 1
 	},
@@ -8981,9 +8978,6 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "aEq" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
@@ -13592,12 +13586,6 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/lower_cargo)
 "aUP" = (
-/obj/structure/machinery/alarm/almayer{
-	dir = 1
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
