@@ -213,7 +213,7 @@ export const dragStartHandler = (event) => {
   logger.log('drag start');
   dragging = true;
   dragPointOffset = vecSubtract(
-    [event.screenX, event.screenY],
+    [event.screenX * pixelRatio, event.screenY * pixelRatio],
     getWindowPosition(),
   ) as [number, number];
   // Focus click target
@@ -240,10 +240,10 @@ const dragMoveHandler = (event: MouseEvent) => {
   }
   event.preventDefault();
   setWindowPosition(
-    vecSubtract([event.screenX, event.screenY], dragPointOffset) as [
-      number,
-      number,
-    ],
+    vecSubtract(
+      [event.screenX * pixelRatio, event.screenY * pixelRatio],
+      dragPointOffset,
+    ) as [number, number],
   );
 };
 
