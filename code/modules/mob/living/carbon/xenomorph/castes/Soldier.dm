@@ -61,14 +61,16 @@
 /// If there is no hive to drag people to, this is the aggression the alien starts with.
 #define AGGRESSION_NO_HIVE AGGRESSION_ENABLE_LETHAL
 /// The cap on aggression increase when something significant happens, like taking damage.
-#define AGGRESSION_INCREMENT_CAP 10
+#define AGGRESSION_INCREMENT_CAP 20
 
 /// Threshold for lunging at a target. Low as the alien wants to do this early.
-#define AGGRESSION_LUNGE 10
+#define AGGRESSION_LUNGE 5
 /// Threshold for throwing humans around.
 #define AGGRESSION_FLING 35
+/// Threshold for Punch.
+#define AGGRESSION_PUNCH 50
 /// Threshold for stabbing them with the tail.
-#define AGGRESSION_TAIL_STAB 70
+#define AGGRESSION_TAIL_STAB 80
 /// Threshold for headbiting/instakilling a downed human.
 #define AGGRESSION_HEADBITE 90
 
@@ -84,6 +86,7 @@
 		/datum/action/xeno_action/activable/tail_stab/soldier,
 		/datum/action/xeno_action/activable/fling/soldier,
 		/datum/action/xeno_action/activable/lunge/soldier,
+		/datum/action/xeno_action/activable/warrior_punch/soldier,
 		/datum/action/xeno_action/activable/headbite/soldier,
 		/datum/action/xeno_action/onclick/tacmap,
 	)
@@ -124,9 +127,9 @@
 		var/mob/living/carbon/xenomorph/other_xenomorph = potential_target.pulledby /// Are they being pulled by an alien?
 		/// Need to make sure the alien dragging is friendly to us. If it is not friendly, or not a xeno, our alien will try to grab back.
 		ai_active_intent = (istype(other_xenomorph) && IS_SAME_HIVENUMBER(src, other_xenomorph)) ? INTENT_DISARM : INTENT_GRAB
-
-	/// I had it set up for slightly faster assignment, but this is easier to read.
-	ai_active_intent = (aggression_cur >= AGGRESSION_ENABLE_LETHAL) ? INTENT_HARM : ai_active_intent /// Override harm or continue with the previous intent.
+	else
+		/// I had it set up for slightly faster assignment, but this is easier to read.
+		ai_active_intent = (aggression_cur >= AGGRESSION_ENABLE_LETHAL) ? INTENT_HARM : ai_active_intent /// Override harm or continue with the previous intent.
 
 	return ..()
 
@@ -189,7 +192,7 @@
 
 /datum/action/xeno_action/activable/tail_stab/soldier /// Specific to soldiers, so that not all xenos get it.
 	default_ai_action = TRUE
-	ai_prob_chance = 65 //So they are not spamming it quite as often.
+	ai_prob_chance = 40 //So they are not spamming it quite as often.
 	charge_time = null /// AI soldiers can just use this whenever instead of having to charge it up.
 	xeno_cooldown = 11 SECONDS
 
@@ -200,7 +203,7 @@
 
 /datum/action/xeno_action/activable/fling/soldier
 	default_ai_action = TRUE
-	ai_prob_chance = 70
+	ai_prob_chance = 50
 	xeno_cooldown = 8 SECONDS
 
 /datum/action/xeno_action/activable/fling/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
@@ -211,14 +214,14 @@
 
 /datum/action/xeno_action/activable/lunge/soldier
 	default_ai_action = TRUE
-	grab_range = 2
+	grab_range = 3
 	ai_prob_chance = 90 // Want to do this often, as it's their way of saying hello.
 	xeno_cooldown = 10 SECONDS
 
 /datum/action/xeno_action/activable/lunge/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	/// Want to make sure no obstacles are in the way so that the alien is not lunging for no reason, or bonking into barricades like an idiot.
 	/// Maybe in the future the actual lunge can be stripped down for the AI only?
-	if( parent.check_additional_ai_activation(AGGRESSION_LUNGE) && DT_PROB(ai_prob_chance, delta_time) && get_dist(parent, parent.current_target) == grab_range )
+	if(parent.check_additional_ai_activation(AGGRESSION_LUNGE) && DT_PROB(ai_prob_chance, delta_time) && get_dist(parent, parent.current_target) <= grab_range )
 		/// get_step_to() should return the turf nearest the target if successful, with no obstacles to block movement there with the lunge.
 		var/turf/T = get_step_to(parent, parent.current_target)
 		return T?.AdjacentQuick(parent.current_target.loc) && use_ability_async(parent.current_target)
@@ -255,8 +258,16 @@
 		pulling.loc = get_step_towards(src, pulling) // GET OVER HERE!
 	else return ..()
 
-/datum/action/xeno_action/activable/headbite/soldier
+/datum/action/xeno_action/activable/warrior_punch/soldier
 	default_ai_action = TRUE
+	ai_prob_chance = 70
+	xeno_cooldown = 5 SECONDS
+
+/datum/action/xeno_action/activable/warrior_punch/soldier/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	return parent.check_additional_ai_activation(AGGRESSION_PUNCH) && DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target)
+
+/datum/action/xeno_action/activable/headbite/soldier
+	default_ai_action = FALSE
 	ai_prob_chance = 95 // Absolutely DEAD if the alien is angry enough.
 	xeno_cooldown = 30 SECONDS // Don't want to chain these, as unlikely as that could be.
 
