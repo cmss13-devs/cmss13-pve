@@ -2153,7 +2153,7 @@
 "GY" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
-	name = "Orphan Stomper Remote Control Console";
+	name = "dropship remote control console";
 	shuttleId = "dropship_pmc"
 	},
 /turf/open/floor/carpet,
