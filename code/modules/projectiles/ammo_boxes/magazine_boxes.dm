@@ -185,6 +185,44 @@
 /obj/item/ammo_box/magazine/m49a/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/m49a/a19
+	name = "magazine box (A19 HV M49A x 16)"
+	overlay_gun_type = "_a19"
+	overlay_ammo_type = "_hv"
+	overlay_content = "_hv"
+	num_of_magazines = 10
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom
+
+/obj/item/ammo_box/magazine/m49a/a19/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/m49a/a19/impact
+	name = "magazine box (A19 Impact M49A x 16)"
+	overlay_ammo_type = "_impact"
+	overlay_content = "_impact"
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/impact
+
+/obj/item/ammo_box/magazine/m49a/a19/impact/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/m49a/a19/incen
+	name = "magazine box (A19 Incen M49A x 16)"
+	overlay_ammo_type = "_incen"
+	overlay_content = "_incen"
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/incendiary
+
+/obj/item/ammo_box/magazine/m49a/a19/incen/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/m49a/a19/pve
+	name = "magazine box (A19 DU M49A x 16)"
+	overlay_ammo_type = "_toxin"
+	overlay_content = "_incen"
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/pve
+
+/obj/item/ammo_box/magazine/m49a/a19/pve/empty
+	empty = TRUE
+
 //-----------------------XM51 Breaching Scattergun Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/xm51
@@ -463,7 +501,7 @@
 //-----------------------M56B Drum Box-----------------------
 
 /obj/item/ammo_box/magazine/m56b
-	name = "drum box (M56B x 8)"
+	name = "drum box (M56A2 x 8)"
 	icon_state = "base_m56b"
 	overlay_ammo_type = "_reg_heavy"
 	overlay_gun_type = "_sg"
