@@ -41,6 +41,8 @@
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
+#define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
+#define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
