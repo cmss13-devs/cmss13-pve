@@ -212,11 +212,11 @@
 
 /obj/item/weapon/gun/smg/mp27
 	name = "\improper MP27 submachinegun"
-	desc = "Once a respectable weapon, now after the design files were leaked in '67 the cheaply made copies are everywhere. Lightweight and fast firing, but the poor construction of almost every copy severely hampers accuracy."
+	desc = "The MachiMaschinenpistole 27 is a cheap, lightweight alternative to more contemporary submachine guns utilized by the UPP. Primarily utilized by the Territorial Guard, People's Armed Police and various People's Defense militia groups in the frontier, the gun is also incredibly common among gangsters, mercenaries and private security in non-UPP space."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "mp7"
 	item_state = "mp7"
-	fire_sound = 'sound/weapons/smg_light.ogg'
+	fire_sound = 'sound/weapons/gun_mac15.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/mp27
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
@@ -249,13 +249,12 @@
 	set_fire_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_amount(BURST_AMOUNT_TIER_2)
-	accuracy_mult = BASE_ACCURACY_MULT
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
-	scatter = SCATTER_AMOUNT_TIER_4 + (SCATTER_AMOUNT_TIER_10 * 0.5)
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_8 + (SCATTER_AMOUNT_TIER_10 * 0.5)
-	scatter_unwielded = SCATTER_AMOUNT_TIER_4 + SCATTER_AMOUNT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_4
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
 
 //-------------------------------------------------------
 //PPSH //Based on the PPSh-41.
