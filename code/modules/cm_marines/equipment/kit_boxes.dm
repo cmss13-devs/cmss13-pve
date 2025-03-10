@@ -38,12 +38,8 @@
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/wp(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
-	new /obj/item/device/binoculars(src)
 
 
 /obj/item/storage/box/spec/sniper
@@ -62,9 +58,6 @@
 	new /obj/item/ammo_magazine/sniper/flak(src)
 	new /obj/item/ammo_magazine/sniper/flak(src)
 	new /obj/item/storage/backpack/marine/smock(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/weapon/gun/rifle/sniper/M42A(src)
 	new /obj/item/facepaint/sniper(src)
 	// spotter
@@ -83,9 +76,6 @@
 	new /obj/item/ammo_magazine/sniper/anti_materiel(src)
 	new /obj/item/ammo_magazine/sniper/anti_materiel(src)
 	new /obj/item/storage/backpack/marine/smock(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/facepaint/sniper(src)
 	// spotter
 	new /obj/item/storage/box/kit/spotter(src)
@@ -107,19 +97,13 @@
 	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
 	new /obj/item/ammo_magazine/rifle/m49a/custom/impact(src)
 	new /obj/item/ammo_magazine/rifle/m49a/custom/impact(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/weapon/gun/rifle/m49a_custom(src)
 	new /obj/item/storage/backpack/marine/satchel/scout_cloak(src)
 	new /obj/item/bodybag/tarp/reactive/scout(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/device/encryptionkey/jtac(src)
-	if(SSmapping.configs[GROUND_MAP].map_name == MAP_WHISKEY_OUTPOST)
-		new /obj/item/device/binoculars/designator(src)
-	else
-		new /obj/item/device/binoculars/range/designator/scout(src)
+	new /obj/item/device/binoculars/range/designator/scout(src)
 
 
 /obj/item/storage/box/spec/pyro
@@ -135,30 +119,23 @@
 	new /obj/item/ammo_magazine/flamer_tank/large(src)
 	new /obj/item/storage/pouch/flamertank(src)
 	new /obj/item/tool/extinguisher(src)
-	new /obj/item/tool/extinguisher/mini(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/device/binoculars(src)
 
 
 /obj/item/storage/box/spec/heavy_grenadier
 	name = "\improper Heavy Grenadier equipment case"
-	desc = "A large case containing a heavy-duty multi-shot Armat Systems M92 grenade launcher, M3-G4 grenadier armor and helmet, significant amount of various M40 grenades and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing a heavy-duty multi-shot Armat Systems M92 grenade launcher, M3-G4 grenadier armor and helmet, significant amount of various grenades and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "grenadier"
 
 /obj/item/storage/box/spec/heavy_grenadier/fill_preset_inventory()
 	new /obj/item/weapon/gun/launcher/grenade/m92(src)
 	new /obj/item/storage/belt/grenade/large/full(src)
 	new /obj/item/storage/backpack/marine/grenadepack(src)
-	new /obj/item/storage/backpack/marine/grenadepack(src)
+	new /obj/item/storage/box/packet/phosphorus(src)
+	new /obj/item/storage/box/packet/heap(src)
+	new /obj/item/storage/box/packet/canister(src)
 	new /obj/item/clothing/gloves/marine/M3G(src)
 	new /obj/item/clothing/suit/storage/marine/M3G(src)
 	new /obj/item/clothing/head/helmet/marine/grenadier(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/device/binoculars(src)
 
 
 //maybe put in req for later use?
