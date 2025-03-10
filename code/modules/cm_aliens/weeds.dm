@@ -472,13 +472,11 @@
 
 
 /obj/effect/alien/weeds/node
-	name = "weed node"
-	desc = "A weird, pulsating node."
-	icon_state = "weednode"
+	name = "weeds"
+	icon_state = "base"
 	// Weed nodes start out with normal weed health and become stronger once they've stopped spreading
 	health = NODE_HEALTH_GROWING
 	flags_atom = OPENCONTAINER
-	layer = ABOVE_BLOOD_LAYER
 	plane = FLOOR_PLANE
 	var/static/staticnode
 	var/overlay_node = TRUE
@@ -560,16 +558,6 @@
 	), PROC_REF(complete_growth))
 
 	update_icon()
-
-/obj/effect/alien/weeds/node/Destroy()
-	// When the node is removed, weeds should start dying out
-	// Make all the children look for a new parent node
-	for(var/X in children)
-		var/obj/effect/alien/weeds/W = X
-		remove_child(W)
-		addtimer(CALLBACK(W, PROC_REF(avoid_orphanage)), WEED_BASE_DECAY_SPEED + rand(0, 1 SECONDS)) // Slight variation whilst decaying
-
-	. = ..()
 
 /obj/effect/alien/weeds/node/proc/complete_growth()
 	SIGNAL_HANDLER
