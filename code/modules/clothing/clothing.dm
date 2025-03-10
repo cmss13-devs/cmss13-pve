@@ -269,49 +269,44 @@
 
 	if(C.internal)
 		C.internal = null
-		to_chat(C, SPAN_NOTICE("No longer running on internals."))
+		to_chat(usr, SPAN_NOTICE("You close \the [src]'s release valve."))
+		return FALSE
 	else
-		var/list/nicename = null
-		var/list/tankcheck = null
-		var/breathes = "oxygen" //default, we'll check later
-		if(ishuman(C))
-			var/mob/living/carbon/human/H = C
-			breathes = H.species.breath_type
-			nicename = list ("suit", "back", "belt", "right hand", "left hand", "left pocket", "right pocket")
-			tankcheck = list (H.s_store, C.back, H.belt, C.r_hand, C.l_hand, H.l_store, H.r_store)
-		else
-			nicename = list("Right Hand", "Left Hand", "Back")
-			tankcheck = list(C.r_hand, C.l_hand, C.back)
-		var/best = 0
-		var/bestpressure = 0
-		for(var/i=1, i<length(tankcheck)+1, ++i)
-			if(istype(tankcheck[i], /obj/item/tank))
-				var/obj/item/tank/t = tankcheck[i]
+		if(!ishuman(C))
+			return
+		var/mob/living/carbon/human/human_with_internals = C
+		var/breathes = human_with_internals.species.breath_type
+		var/list/L = human_with_internals.get_contents()
+		for(var/potential_tank in L)
+			var/best = 0
+			var/bestpressure = 0
+			if(istype(potential_tank, /obj/item/tank))
+				var/obj/item/tank/t = potential_tank
 				var/goodtank
-				if(t.gas_type == GAS_TYPE_N2O) //anesthetic
-					goodtank = TRUE
-				else
-					switch(breathes)
-						if("nitrogen")
-							if(t.gas_type == GAS_TYPE_NITROGEN)
-								goodtank = TRUE
-						if ("oxygen")
-							if(t.gas_type == GAS_TYPE_OXYGEN || t.gas_type == GAS_TYPE_AIR)
-								goodtank = TRUE
-						if ("carbon dioxide")
-							if(t.gas_type == GAS_TYPE_CO2)
-								goodtank = TRUE
+				switch(breathes)
+					if("nitrogen")
+						if(t.gas_type == GAS_TYPE_NITROGEN)
+							goodtank = TRUE
+					if ("oxygen")
+						if(t.gas_type == GAS_TYPE_OXYGEN || t.gas_type == GAS_TYPE_AIR)
+							goodtank = TRUE
+					if ("carbon dioxide")
+						if(t.gas_type == GAS_TYPE_CO2)
+							goodtank = TRUE
 				if(goodtank)
 					if(t.pressure >= 20 && t.pressure > bestpressure)
-						best = i
+						best = potential_tank
 						bestpressure = t.pressure
-		//We've determined the best container now we set it as our internals
-		if(best)
-			to_chat(C, SPAN_NOTICE("You are now running on internals from [tankcheck[best]] on your [nicename[best]]."))
-			C.internal = tankcheck[best]
+				//We've determined the best container now we set it as our internals
+				if(best)
+					to_chat(human_with_internals, SPAN_NOTICE("You choose the fullest [breathes=="oxygen" ? "oxygen" : addtext(" ",breathes)] tank you have, and open \the [best]'s valve."))
+					human_with_internals.internal = best
+					if(t.gas_type == GAS_TYPE_AIR)
+						t.distribute_pressure = ONE_ATMOSPHERE
+					else
+						t.distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 		if(!C.internal)
 			to_chat(C, SPAN_NOTICE("You don't have a[breathes=="oxygen" ? "n oxygen" : addtext(" ",breathes)] tank."))
-	return TRUE
 
 
 //some gas masks modify the air that you breathe in.
