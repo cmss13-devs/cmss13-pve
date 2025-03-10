@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ag" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_magazine/rifle/mar40/lmg{
 	pixel_x = -7;
 	pixel_y = -4
@@ -80,7 +80,7 @@
 	icon_state = "commb";
 	stat = 1
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship)
 "ed" = (
@@ -95,7 +95,7 @@
 /turf/open/floor/plating/warnplate/north,
 /area/lv624/lazarus/crashed_ship)
 "ev" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_magazine/rifle/m16/ap,
 /obj/item/ammo_magazine/rifle/m16/ap{
 	pixel_x = -2
@@ -232,7 +232,7 @@
 /turf/open/floor/almayer/emerald,
 /area/lv624/lazarus/crashed_ship)
 "hV" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/attachable/verticalgrip,
 /obj/item/attachable/verticalgrip,
 /obj/item/attachable/compensator,
@@ -434,7 +434,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/lv624/lazarus/crashed_ship)
 "oc" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/almayer/emerald/north,
 /area/lv624/lazarus/crashed_ship)
@@ -477,7 +477,7 @@
 	},
 /area/lv624/lazarus/crashed_ship)
 "pA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/tool/pen,
 /turf/open/floor/almayer/emerald/southwest,
@@ -487,7 +487,7 @@
 /turf/open/floor/almayer,
 /area/lv624/lazarus/crashed_ship)
 "qj" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/surgical_tray{
 	pixel_x = -4;
 	pixel_y = 4
@@ -522,7 +522,7 @@
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship)
 "ru" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/attachable/heavy_barrel,
 /obj/item/attachable/verticalgrip,
 /obj/item/attachable/verticalgrip,
@@ -646,7 +646,7 @@
 /turf/open/floor/platingdmg1,
 /area/lv624/ground/caves/south_west_caves)
 "uH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/backpack/general_belt{
 	pixel_y = 3
 	},
@@ -657,7 +657,7 @@
 	icon_state = "atmosb";
 	stat = 1
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/platingdmg1,
 /area/lv624/lazarus/crashed_ship)
 "uX" = (
@@ -699,7 +699,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/crashed_ship)
 "wY" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/stack/sheet/metal{
 	amount = 5;
 	pixel_x = 4;
@@ -774,7 +774,7 @@
 /turf/open/floor/almayer/greencorner/west,
 /area/lv624/lazarus/crashed_ship)
 "yX" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/weapon/gun/rifle/mar40/lmg{
 	pixel_x = 1;
 	pixel_y = 2
@@ -823,7 +823,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/crashed_ship)
 "AS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/faxmachine{
 	department = "CLF - Cell 42"
 	},
@@ -1064,7 +1064,7 @@
 /turf/open/floor/damaged3/west,
 /area/lv624/lazarus/crashed_ship)
 "Ju" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/spawner/random/toolbox,
 /obj/structure/phone_base/clf_net/rotary{
 	phone_category = "CR-116";
@@ -1125,7 +1125,7 @@
 	},
 /area/lv624/lazarus/crashed_ship)
 "KE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/wirecutters,
 /obj/item/tool/wrench{
 	pixel_y = 7
@@ -1145,7 +1145,7 @@
 /turf/open/floor/almayer/emerald/north,
 /area/lv624/lazarus/crashed_ship)
 "KI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/belt/medical/full,
 /obj/item/storage/belt/medical/full{
 	pixel_x = 2;
@@ -1193,7 +1193,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/west_caves)
 "Mb" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_magazine/rifle/m16,
 /obj/item/ammo_magazine/rifle/m16{
 	pixel_x = 2
@@ -1534,7 +1534,7 @@
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/crashed_ship)
 "Wg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/electrical{
 	pixel_y = 9
 	},
@@ -1601,7 +1601,7 @@
 	},
 /area/lv624/lazarus/crashed_ship)
 "Xw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tank/oxygen/red,
 /obj/item/storage/bag/trash,
 /obj/item/tool/screwdriver,

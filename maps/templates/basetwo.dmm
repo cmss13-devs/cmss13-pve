@@ -1028,11 +1028,11 @@
 /turf/open/floor/wood,
 /area/adminlevel/bunker01/breakroom)
 "dG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/wood,
 /area/adminlevel/bunker01/breakroom)
 "dH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/cigbutt,
 /turf/open/floor/wood,
 /area/adminlevel/bunker01/breakroom)
@@ -1043,7 +1043,7 @@
 /turf/open/floor/wood,
 /area/adminlevel/bunker01/breakroom)
 "dJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/plastic,
 /turf/open/floor/wood,
 /area/adminlevel/bunker01/breakroom)

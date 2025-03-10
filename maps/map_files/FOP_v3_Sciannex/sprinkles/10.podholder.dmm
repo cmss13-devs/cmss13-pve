@@ -39,7 +39,7 @@
 /turf/open/floor/plating/prison,
 /area/template_noop)
 "n" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer{
 	icon_state = "security_det";
 	name = "Shuttle control deck";

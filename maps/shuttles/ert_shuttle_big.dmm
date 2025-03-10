@@ -11,12 +11,12 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "bM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/card,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "bP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp/green,
 /turf/open/floor/carpet10_8/west,
 /area/shuttle/ert)
@@ -29,13 +29,13 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "dx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/donkpockets,
 /obj/item/storage/box/donkpockets,
 /turf/open/floor/almayer,
 /area/shuttle/ert)
 "dA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras{
 	network = list("Military","Almayer");
 	dir = 4
@@ -47,14 +47,14 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "dK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/communications{
 	dir = 8
 	},
 /turf/open/floor/carpet9_4/west,
 /area/shuttle/ert)
 "dT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/shuttle/ert/big,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
@@ -63,7 +63,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "fh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/folder/red{
 	pixel_x = -2;
@@ -89,7 +89,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "fP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/largecrate/random/case/small{
 	pixel_y = 5
 	},
@@ -140,7 +140,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "iJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clipboard,
 /obj/item/clipboard,
 /obj/item/folder,
@@ -212,7 +212,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "ph" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = -5;
 	pixel_y = 5
@@ -265,7 +265,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "sd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/metal{
 	amount = 50;
 	pixel_x = 3;
@@ -339,7 +339,7 @@
 /turf/open/floor/wood,
 /area/shuttle/ert)
 "tW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
@@ -356,7 +356,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "uQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/pouch/medkit,
 /obj/item/storage/pouch/medkit,
 /obj/item/storage/pouch/medical,
@@ -377,7 +377,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "vj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen,
 /turf/open/floor/wood,
@@ -389,7 +389,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "vN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/armor/bulletproof,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
@@ -426,7 +426,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "yT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black{
 	pixel_x = 3;
 	pixel_y = 5
@@ -437,7 +437,7 @@
 /turf/open/floor/carpet5_1/west,
 /area/shuttle/ert)
 "yU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/weapon/gun/pistol/vp70{
 	pixel_y = 4
 	},
@@ -469,7 +469,7 @@
 /turf/open/floor/plating,
 /area/shuttle/ert)
 "Ad" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave,
 /turf/open/floor/almayer,
 /area/shuttle/ert)
@@ -524,7 +524,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "CQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/surgical_tray,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
@@ -617,7 +617,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "JS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data{
 	dir = 4
 	},
@@ -666,7 +666,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "Ne" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen,
 /obj/item/tool/pen,
@@ -687,7 +687,7 @@
 /turf/open/floor/plating/almayer,
 /area/shuttle/ert)
 "Od" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/communications,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
@@ -762,7 +762,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "SA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "SZ" = (
@@ -809,7 +809,7 @@
 /turf/open/floor/almayer/tcomms,
 /area/shuttle/ert)
 "Uu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/med_data/laptop{
 	dir = 8
 	},
