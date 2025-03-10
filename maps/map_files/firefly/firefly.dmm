@@ -1503,8 +1503,6 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "xf" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
-/obj/item/clothing/mask/gas/pmc/leader,
 /obj/structure/closet{
 	name = "operation leader closet"
 	},
