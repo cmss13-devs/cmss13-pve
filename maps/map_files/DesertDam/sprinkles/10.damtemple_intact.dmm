@@ -280,7 +280,7 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 8
 	},
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/desert_dam/interior/caves/temple)
 "tq" = (
 /obj/structure/closet/coffin/predator,
@@ -327,7 +327,7 @@
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 4
 	},
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/desert_dam/interior/caves/temple)
 "yT" = (
 /obj/structure/stairs/perspective{
@@ -342,7 +342,7 @@
 /area/desert_dam/interior/caves/temple)
 "An" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/desert_dam/interior/caves/temple)
 "Ax" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -513,7 +513,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/desert_dam/interior/caves/temple)
 "Li" = (
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/desert_dam/interior/caves/temple)
 "Ll" = (
 /obj/structure/curtain/red,
