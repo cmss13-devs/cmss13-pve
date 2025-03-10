@@ -161,8 +161,7 @@
 	role_comm_title = "CMP"
 	skills = /datum/skills/CMP
 
-	minimap_icon = list("mp" = MINIMAP_ICON_COLOR_HEAD)
-	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
+	minimap_icon = list("mp")
 
 	utility_under = list(/obj/item/clothing/under/marine/officer/warrant)
 	utility_hat = list(/obj/item/clothing/head/beret/marine/mp/cmp)
