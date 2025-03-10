@@ -18,7 +18,7 @@
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/interior/colony/medseceng)
 "aaf" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/closed/wall/shiva/ice,
 /area/shiva/exterior/cp_s_research)
 "aah" = (
@@ -4714,7 +4714,7 @@
 /turf/open/auto_turf/snow/layer1,
 /area/shiva/exterior/telecomm/lz2_northeast)
 "cnc" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/medseceng)
 "cng" = (
@@ -5011,7 +5011,7 @@
 /turf/open/floor/wood,
 /area/shiva/interior/bar)
 "cBL" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva,
 /area/shiva/interior/bar)
 "cCr" = (
@@ -7788,7 +7788,7 @@
 /turf/closed/wall/shiva/ice,
 /area/shiva/exterior/cp_s_research)
 "fUy" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/lz2_habs)
 "fUG" = (
@@ -8972,7 +8972,7 @@
 /turf/open/floor/wood,
 /area/shiva/interior/colony/central)
 "hiX" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/bar)
 "hjP" = (
@@ -18344,7 +18344,7 @@
 /turf/open/auto_turf/snow/layer2,
 /area/shiva/exterior/cp_colony_grounds)
 "rER" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/multi_tiles,
 /area/shiva/interior/colony/research_hab)
 "rEV" = (
@@ -18611,7 +18611,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/shiva/interior/caves/cp_camp)
 "rUy" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/central)
 "rUD" = (
@@ -19339,7 +19339,7 @@
 /turf/open/floor/shiva/wred,
 /area/shiva/interior/colony/medseceng)
 "sOP" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/aerodrome)
 "sPo" = (

@@ -2038,7 +2038,7 @@
 /area/lv624/ground/jungle/west_jungle)
 "cEp" = (
 /obj/effect/landmark/crap_item,
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "cEI" = (
@@ -4154,7 +4154,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_east_jungle)
 "fhn" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/main_hall)
 "fhu" = (

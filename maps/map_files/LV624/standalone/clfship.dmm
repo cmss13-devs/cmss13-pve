@@ -1268,7 +1268,7 @@
 /turf/open/floor/plating/warnplate/northwest,
 /area/lv624/lazarus/crashed_ship)
 "OL" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/plating/plating_catwalk,
 /area/lv624/lazarus/crashed_ship)
 "OO" = (

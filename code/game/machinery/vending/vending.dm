@@ -71,7 +71,7 @@ GLOBAL_LIST_EMPTY_TYPED(total_vending_machines, /obj/structure/machinery/vending
 	/// when did we last pitch?
 	var/last_slogan = 0
 	/// how long until we can pitch again?
-	var/slogan_delay = 600
+	var/slogan_delay = 120
 	/// icon_state when vending
 	var/icon_vend
 	/// icon_state when failing to vend
