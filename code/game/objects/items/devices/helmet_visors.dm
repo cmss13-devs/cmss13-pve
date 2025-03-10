@@ -5,8 +5,7 @@
 	icon_state = "hud_sight"
 	w_class = SIZE_TINY
 
-	///The type of HUD our visor shows
-	var/hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = MOB_HUD_FACTION_MARINE
 
 	///The sound when toggling on the visor
 	var/toggle_on_sound = 'sound/handling/hud_on.ogg'

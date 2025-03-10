@@ -39,7 +39,7 @@
 	var/misc_tracking = FALSE
 	///Whether or not the headset will show them on the tac-map
 	var/map_tracking = FALSE
-	var/hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = MOB_HUD_FACTION_MARINE
 	var/default_freq
 
 	///The type of minimap this headset is added to
