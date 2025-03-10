@@ -76,7 +76,7 @@
 /obj/item/ammo_magazine/smg/mp5
 	name = "\improper MP5 magazine (9x19mm)"
 	desc = "A 9mm magazine for the MP5."
-	default_ammo = /datum/ammo/bullet/smg
+	default_ammo = /datum/ammo/bullet/pistol
 	caliber = "9mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "mp5"
@@ -128,7 +128,7 @@
 	bonus_overlay = "ppsh17b_stick_overlay"
 	max_rounds = 35
 	gun_type = /obj/item/weapon/gun/smg/ppsh
-	default_ammo = /datum/ammo/bullet/smg/ppsh
+	default_ammo = /datum/ammo/bullet/pistol/heavy/upp
 	var/bonus_mag_aim_slowdown = 0
 	var/bonus_mag_wield_delay = 0
 	var/jam_chance = PPSH_STICK_MAGAZINE_JAM_CHANCE
@@ -162,7 +162,7 @@
 	bonus_overlay = "insasu_stickmag_overlay"
 	max_rounds = 35
 	gun_type = /obj/item/weapon/gun/smg/pps43
-	default_ammo = /datum/ammo/bullet/smg/pps43
+	default_ammo = /datum/ammo/bullet/pistol/heavy/upp
 	var/bonus_mag_aim_slowdown = 0
 	var/bonus_mag_wield_delay = 0
 
@@ -214,9 +214,9 @@
 #define UZI_EXTENDED_MAGAZINE_JAM_CHANCE 1
 
 /obj/item/ammo_magazine/smg/uzi
-	name = "\improper UZI magazine (9x21mm)"
+	name = "\improper UZI magazine (9x19mm)"
 	desc = "A magazine for the UZI. Seems pretty small, huh? Anything larger caused feeding errors."
-	caliber = "9x12mm"
+	caliber = "9x19mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "uzi"
 	max_rounds = 25
@@ -224,7 +224,7 @@
 	var/jam_chance = UZI_NORMAL_MAGAZINE_JAM_CHANCE
 
 /obj/item/ammo_magazine/smg/uzi/extended
-	name = "\improper UZI extended magazine (9x21mm)"
+	name = "\improper UZI extended magazine (9x19mm)"
 	desc = "A slightly extended magazine for the UZI. Due to its size, it may or may not cause feeding errors."
 	icon_state = "uzi_extended"
 	bonus_overlay = "uzi_ext"

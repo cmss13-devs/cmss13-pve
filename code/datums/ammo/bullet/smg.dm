@@ -116,7 +116,7 @@
 	shrapnel_chance = 0
 
 /datum/ammo/bullet/smg/mp27
-	name = "simple submachinegun bullet"
+	name = "4.6x30 bullet"
 	damage = 40
 	accurate_range = 5
 	effective_range_max = 7
