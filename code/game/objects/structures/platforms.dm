@@ -209,3 +209,34 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed
 	name = "sandstone temple platform corner"
 	color = "#b29082"
+
+/obj/structure/vehicle_platform
+	name = "platform"
+	desc = "A square metal surface resting on four legs."
+	icon = 'icons/obj/structures/props/platforms.dmi'
+	icon_state = "platform"
+	climbable = TRUE
+	anchored = TRUE
+	density = TRUE
+	throwpass = TRUE //You can throw objects over this, despite its density.
+	layer = 4.0
+	breakable = FALSE
+	flags_atom = ON_BORDER
+	unacidable = TRUE
+	unslashable = TRUE
+	climb_delay = CLIMB_DELAY_SHORT
+	projectile_coverage = PROJECTILE_COVERAGE_NONE
+
+/obj/structure/vehicle_platform_decoration
+	name = "platform"
+	desc = "A square metal surface resting on four legs."
+	icon = 'icons/obj/structures/props/platforms.dmi'
+	icon_state = "platform_deco"
+	anchored = TRUE
+	density = FALSE
+	throwpass = TRUE
+	layer = 4.0
+	breakable = FALSE
+	flags_atom = ON_BORDER
+	unacidable = TRUE
+	unslashable = TRUE
