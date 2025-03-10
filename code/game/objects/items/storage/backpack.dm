@@ -717,9 +717,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	if(!ishuman(usr))
 		return
 	var/mob/living/carbon/human/H = usr
-	if(!skillcheck(H, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && H.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_SCOUT)
-		to_chat(H, SPAN_WARNING("You don't seem to know how to use [src]..."))
-		return
 
 	if(H.back != src)
 		to_chat(H, SPAN_WARNING("You must be wearing the cloak to activate it!"))
