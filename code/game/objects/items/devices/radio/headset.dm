@@ -37,7 +37,9 @@
 	var/headset_hud_on = FALSE
 	var/locate_setting = TRACKER_SL
 	var/misc_tracking = FALSE
-	var/hud_type = MOB_HUD_FACTION_MARINE
+	///Whether or not the headset will show them on the tac-map
+	var/map_tracking = FALSE
+	hud_type = MOB_HUD_FACTION_MARINE
 	var/default_freq
 
 	///The type of minimap this headset is added to
@@ -58,7 +60,7 @@
 	if(has_hud)
 		headset_hud_on = TRUE
 		verbs += /obj/item/device/radio/headset/proc/toggle_squadhud
-		verbs += /obj/item/device/radio/headset/proc/switch_tracker_target
+		verbs += /obj/item/device/proc/switch_tracker_target
 
 	if(frequency)
 		for(var/cycled_channel in GLOB.radiochannels)
@@ -256,9 +258,13 @@
 		if(headset_hud_on)
 			var/datum/mob_hud/H = GLOB.huds[hud_type]
 			H.add_hud_to(user, src)
-			//squad leader locator is no longer invisible on our player HUD.
-			if(user.mind && (user.assigned_squad || misc_tracking) && user.hud_used && user.hud_used.locate_leader)
-				user.show_hud_tracker()
+		var/obj/item/clothing/head/helmet/marine/worn_helmet = user.head
+		if(!istype(worn_helmet))
+			// If their hat isn't a marine helmet, we won't take it into account for the next check
+			worn_helmet = null
+		//squad leader locator is invisible again unless a visor tracker is active
+		if(!worn_helmet?.active_visor?.has_tracker && user.hud_used && user.hud_used.locate_leader)
+			user.show_hud_tracker()
 			if(misc_tracking)
 				SStracking.start_misc_tracking(user)
 			INVOKE_NEXT_TICK(src, PROC_REF(update_minimap_icon), wearer)
@@ -323,7 +329,7 @@
 	to_chat(usr, SPAN_NOTICE("You toggle [src]'s headset HUD [headset_hud_on ? "on":"off"]."))
 	playsound(src,'sound/machines/click.ogg', 20, 1)
 
-/obj/item/device/radio/headset/proc/switch_tracker_target()
+/obj/item/device/proc/switch_tracker_target()
 	set name = "Switch Tracker Target"
 	set category = "Object"
 	set src in usr
@@ -333,16 +339,20 @@
 
 	handle_switching_tracker_target(usr)
 
-/obj/item/device/radio/headset/proc/handle_switching_tracker_target(mob/living/carbon/human/user)
-	var/new_track = tgui_input_list(user, "Choose a new tracking target.", "Tracking Selection", tracking_options)
+/obj/item/device/proc/handle_switching_tracker_target(mob/living/carbon/human/user)
+	if(!is_type_in_list(src, list(/obj/item/device/radio/headset, /obj/item/device/helmet_visor)))
+		return
+
+	var/obj/item/device/radio/headset/tracker_item = src
+	var/new_track = tgui_input_list(user, "Choose a new tracking target.", "Tracking Selection", tracker_item.tracking_options)
 	if(!new_track)
 		return
-	to_chat(user, SPAN_NOTICE("You set your headset's tracker to point to <b>[new_track]</b>."))
-	locate_setting = tracking_options[new_track]
+	to_chat(user, SPAN_NOTICE("You set your tracker to point to <b>[new_track]</b>."))
+	tracker_item.locate_setting = tracker_item.tracking_options[new_track]
 
 /obj/item/device/radio/headset/proc/update_minimap_icon()
 	SIGNAL_HANDLER
-	if(!has_hud)
+	if(!map_tracking)
 		return
 
 	if(!wearer)
@@ -411,7 +421,8 @@
 	icon_state = "generic_headset"
 	item_state = "headset"
 	frequency = PUB_FREQ
-	has_hud = TRUE
+	has_hud = FALSE
+	map_tracking = TRUE
 
 /obj/item/device/radio/headset/almayer/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
@@ -423,15 +434,6 @@
 	if(((user in user.assigned_squad?.fireteams["SQ1"]) || (user in user.assigned_squad?.fireteams["SQ2"])) && ("Squad Leader" in tracking_options))
 		locate_setting = tracking_options["Squad Leader"]
 		return
-
-/obj/item/device/radio/headset/almayer/verb/enter_tree()
-	set name = "Enter Techtree"
-	set desc = "Enter the Marine techtree"
-	set category = "Object.Techtree"
-	set src in usr
-
-	var/datum/techtree/T = GET_TREE(TREE_MARINE)
-	T.enter_mob(usr)
 
 /obj/item/device/radio/headset/almayer/verb/give_medal_recommendation()
 	set name = "Give Medal Recommendation"
@@ -621,11 +623,13 @@
 	initial_keys = list(/obj/item/device/encryptionkey/cmpcom/synth)
 	volume = RADIO_VOLUME_CRITICAL
 	misc_tracking = TRUE
+	has_hud = TRUE	// Synth retains as they don't often wear helmets
 	locate_setting = TRACKER_ASL
 
 	inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
-		"Section Sergeant" = TRACKER_ASL,
+		"A-Section Sergeant" = TRACKER_ASL,
+		"B-Section Sergeant" = TRACKER_BSL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
@@ -672,7 +676,6 @@
 	icon_state = "upp_headset"
 	item_state = "upp_headset"
 	frequency = UPP_FREQ
-	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_UPP
 	minimap_type = MINIMAP_FLAG_UPP
 

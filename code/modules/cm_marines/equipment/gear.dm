@@ -485,6 +485,7 @@
 	)
 	flags_equip_slot = SLOT_EAR
 	var/obj/structure/machinery/camera/camera
+	hud_type = MOB_HUD_FACTION_MARINE
 
 /obj/item/device/overwatch_camera/Initialize(mapload, ...)
 	. = ..()
@@ -495,11 +496,16 @@
 	return ..()
 
 /obj/item/device/overwatch_camera/equipped(mob/living/carbon/human/mob, slot)
-	if(camera)
+	if (slot == WEAR_L_EAR || slot == WEAR_R_EAR)
 		camera.c_tag = mob.name
+		var/datum/mob_hud/MH = GLOB.huds[hud_type]
+		MH.add_hud_to(mob, src)
 	..()
 
 /obj/item/device/overwatch_camera/dropped(mob/user)
 	if(camera)
 		camera.c_tag = "Unknown"
+	if(hud_type)
+		var/datum/mob_hud/MH = GLOB.huds[hud_type]
+		MH.remove_hud_from(user, src)
 	..()
