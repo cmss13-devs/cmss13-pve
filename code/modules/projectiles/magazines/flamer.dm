@@ -8,7 +8,7 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "flametank_custom"
 	item_state = "flametank"
-	max_rounds = 100
+	max_rounds = 500
 	default_ammo = /datum/ammo/flamethrower //doesn't actually need bullets. But we'll get null ammo error messages if we don't
 	w_class = SIZE_MEDIUM //making sure you can't sneak this onto your belt.
 	gun_type = /obj/item/weapon/gun/flamer
@@ -24,6 +24,8 @@
 
 	var/fuel_pressure = 1 //How much fuel is used per tile fired
 	var/max_pressure = 10
+	///Does the magazine have stripe overlays or not
+	var/stripe_icon = TRUE
 
 /obj/item/ammo_magazine/flamer_tank/empty
 	flamer_chem = null
@@ -150,7 +152,7 @@
 	desc = "A fuel tank full of specialized Ultra Thick Napthal Fuel type B-Gel. Unlike its liquid contemporaries, this gelled variant of napalm is easily extinguished, but shoots far and lingers on the ground in a viscous mess, while reacting with inorganic materials to break them down. Handle with exceptional care."
 	caliber = "Napalm Gel"
 	flamer_chem = "napalmgel"
-	max_rounds = 200
+	max_rounds = 600
 
 	max_range = 7
 	max_duration = 50
@@ -164,18 +166,22 @@
 	max_range = 7
 
 /obj/item/ammo_magazine/flamer_tank/weak
-	name = "incinerator tank (Weak)"
-	desc = "A fuel tank full of impure napalm, causing it to burn at a significantly lower temperature."
+	name = "improvised flamer tank"
+	desc = "A repurposed tank from heavy welding equipment, holds a mix similar to napalm."
+	default_ammo = /datum/ammo/flamethrower/weak
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "flamer_fuel"
 	caliber = "Impure Napalm"
 	flamer_chem = "weaknapalm"
 	max_range = 5
+	stripe_icon = FALSE
 
 /obj/item/ammo_magazine/flamer_tank/custom
 	name = "custom incinerator tank"
 	desc = "A fuel tank used to store fuel for use in the M240 incinerator unit. This one has been modified with a pressure regulator and an internal propellant tank."
 	matter = list("metal" = 3750)
 	flamer_chem = null
-	max_rounds = 100
+	max_rounds = 500
 	max_range = 5
 	fuel_pressure = 1
 	custom = TRUE
@@ -206,7 +212,7 @@
 	desc = "A large fuel tank used to store fuel for use in the M240-T incinerator unit. Handle with care."
 	icon_state = "flametank_large_custom"
 	item_state = "flametank_large"
-	max_rounds = 250
+	max_rounds = 700
 	gun_type = /obj/item/weapon/gun/flamer/M240T
 
 	max_intensity = 80
@@ -249,7 +255,7 @@
 	name = "large custom incinerator tank"
 	desc = "A large fuel tank for use in the M240-T incinerator unit. This one has been modified with a pressure regulator and a large internal propellant tank. Must be manually attached."
 	gun_type = /obj/item/weapon/gun/flamer/M240T
-	max_rounds = 250
+	max_rounds = 700
 
 	max_intensity = 60
 	max_range = 8
@@ -268,7 +274,7 @@
 	desc = "A fuel tank used to store fuel for use in the M240 incinerator unit. This one has been modified with a larger and more sophisticated internal propellant tank, allowing for bigger capacity and stronger fuels."
 	matter = list("metal" = 50) // no free metal
 	flamer_chem = null
-	max_rounds = 200
+	max_rounds = 650
 	max_range = 7
 	fuel_pressure = 1
 	max_duration = 50
