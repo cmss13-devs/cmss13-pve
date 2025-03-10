@@ -17,7 +17,6 @@
 /obj/structure/lz_sign/lazarus_sign/damaged
 	name = "Lazarus Landing Sign"
 	desc = "A large sign reading 'Lazarus Landing' the rest of it is smeared in blood."
-	icon = 'icons/obj/structures/props/landing_signs.dmi'
 	icon_state = "laz_sign_d"
 
 /obj/structure/lz_sign/solaris_sign
