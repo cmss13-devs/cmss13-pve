@@ -8,6 +8,16 @@
 /obj/item/ammo_box/magazine/mk1/ap,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_theta)
+"ac" = (
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Squad Leader";
+	has_cryo_gear = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/cryo_cell)
 "ai" = (
 /obj/structure/barricade/handrail{
 	dir = 1;
@@ -426,16 +436,17 @@
 	name = "heavy weapons specialist locker";
 	req_access_txt = "209;217"
 	},
-/obj/item/weapon/gun/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/smartgun_battery,
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
+/obj/item/weapon/gun/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/storage/belt/marine/smartgunner,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "gR" = (
@@ -1469,16 +1480,17 @@
 	name = "heavy weapons specialist locker";
 	req_access_txt = "208;217"
 	},
-/obj/item/weapon/gun/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun/dirty,
-/obj/item/ammo_magazine/smartgun/dirty,
 /obj/item/smartgun_battery,
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
+/obj/item/weapon/gun/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/storage/belt/marine/smartgunner,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_theta)
 "wW" = (
@@ -13323,7 +13335,7 @@ Yl
 lg
 lg
 jT
-ko
+ac
 lV
 jb
 It
