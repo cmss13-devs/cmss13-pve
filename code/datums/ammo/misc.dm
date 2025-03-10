@@ -110,6 +110,12 @@
 	R.durationfire = BURN_TIME_INSTANT
 	new /obj/flamer_fire(T, cause_data, R, 0)
 
+/datum/ammo/flamethrower/pve/drop_flame(turf/T, datum/cause_data/cause_data)
+	if(!istype(T))
+		return
+	var/datum/reagent/reagent = GLOB.chemical_reagents_list[flamer_reagent_id]
+	new /obj/flamer_fire(T, cause_data, reagent, 1)
+
 /datum/ammo/flamethrower/sentry_flamer/wy
 	name = "sticky fire"
 	flamer_reagent_id = "stickynapalm"
