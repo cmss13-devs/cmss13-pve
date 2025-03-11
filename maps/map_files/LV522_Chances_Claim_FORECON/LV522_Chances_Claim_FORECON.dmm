@@ -3976,11 +3976,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
-"bUy" = (
-/obj/structure/closet/secure_closet/personal/marshal,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/darkredfull2,
-/area/lv522/indoors/a_block/security)
 "bUz" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -6435,10 +6430,6 @@
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/north_east_street)
-"ddH" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/cargo_intake)
 "ddK" = (
 /obj/structure/filingcabinet/chestdrawer{
 	density = 0;
@@ -9419,10 +9410,6 @@
 /obj/item/reagent_container/glass/fertilizer,
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/hydro)
-"eBd" = (
-/obj/structure/closet/secure_closet/personal/marshal,
-/turf/open/floor/prison/darkredfull2,
-/area/lv522/indoors/a_block/security)
 "eBi" = (
 /obj/item/stack/cable_coil/cut,
 /obj/item/stack/cable_coil/cut,
@@ -15799,10 +15786,6 @@
 /obj/item/ore/gold,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
-"hKv" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor/prison/darkpurplefull2,
-/area/lv522/indoors/a_block/dorms/glass)
 "hKE" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
@@ -16726,6 +16709,10 @@
 	},
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/bridge)
+"iiv" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/corsat/plate,
+/area/lv522/atmos/cargo_intake)
 "iiB" = (
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
@@ -19118,11 +19105,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/central_streets)
-"juq" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/blue1,
-/area/lv522/outdoors/colony_streets/windbreaker/observation)
 "jus" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 8
@@ -22493,6 +22475,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/security)
+"kRc" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/prison/darkpurplefull2,
+/area/lv522/indoors/a_block/dorms/glass)
 "kRg" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
@@ -22837,6 +22823,19 @@
 	},
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/c_block/t_comm)
+"kXR" = (
+/obj/structure/showcase{
+	desc = "The display model for a Weyland Yutani generation one synthetic. It almost feels like the eyes on this one follow you.";
+	icon = 'icons/mob/humans/species/r_synthetic.dmi';
+	icon_state = "Synthetic_Template";
+	name = "Display synthetic"
+	},
+/obj/item/clothing/under/cmb{
+	pixel_y = -2
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/bluegrid,
+/area/lv522/indoors/a_block/corpo/glass)
 "kXU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform_decoration{
@@ -34127,6 +34126,11 @@
 	},
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
+"qgU" = (
+/obj/structure/closet/secure_closet/personal/marshal,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkredfull2,
+/area/lv522/indoors/a_block/security)
 "qhi" = (
 /obj/structure/prop/ice_colony/dense/planter_box{
 	dir = 9
@@ -36402,6 +36406,10 @@
 	},
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/colony_streets/north_west_street)
+"rij" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/prison,
+/area/lv522/indoors/c_block/mining)
 "rin" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -39573,19 +39581,6 @@
 "sKJ" = (
 /turf/open/auto_turf/shale/layer2,
 /area/lv522/outdoors/colony_streets/east_central_street)
-"sLa" = (
-/obj/structure/showcase{
-	desc = "The display model for a Weyland Yutani generation one synthetic. It almost feels like the eyes on this one follow you.";
-	icon = 'icons/mob/humans/species/r_synthetic.dmi';
-	icon_state = "Synthetic_Template";
-	name = "Display synthetic"
-	},
-/obj/item/clothing/under/CM_uniform{
-	pixel_y = -2
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor/bluegrid,
-/area/lv522/indoors/a_block/corpo/glass)
 "sLk" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -46125,6 +46120,10 @@
 	},
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/outdoors/colony_streets/north_street)
+"vHo" = (
+/obj/structure/closet/secure_closet/personal/marshal,
+/turf/open/floor/prison/darkredfull2,
+/area/lv522/indoors/a_block/security)
 "vHv" = (
 /obj/structure/machinery/light,
 /turf/open/floor/wood,
@@ -46562,6 +46561,13 @@
 /obj/structure/foamed_metal,
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms/glass)
+"vUj" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/strata/white_cyan1/east,
+/area/lv522/indoors/a_block/corpo/glass)
 "vUr" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -47703,13 +47709,6 @@
 	},
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
-"wuB" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/strata/white_cyan1/east,
-/area/lv522/indoors/a_block/corpo/glass)
 "wuD" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 2;
@@ -49216,6 +49215,11 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/c_block/t_comm)
+"xfc" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/blue1,
+/area/lv522/outdoors/colony_streets/windbreaker/observation)
 "xfl" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/floor/corsat/marked,
@@ -50450,10 +50454,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/hydro)
-"xKH" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor/prison,
-/area/lv522/indoors/c_block/mining)
 "xKO" = (
 /obj/structure/prop/server_equipment/yutani_server{
 	pixel_y = 17
@@ -61161,7 +61161,7 @@ uOs
 uAH
 nLm
 nLm
-hKv
+kRc
 puP
 tsq
 xVl
@@ -69239,7 +69239,7 @@ hmI
 msi
 mqU
 hDy
-ddH
+iiv
 hGV
 lnV
 uOm
@@ -71335,7 +71335,7 @@ ugV
 ugV
 kJd
 beB
-sLa
+kXR
 kZU
 xiJ
 xiJ
@@ -71821,7 +71821,7 @@ kiw
 wAS
 gsT
 xxs
-eBd
+vHo
 sjy
 iYQ
 asF
@@ -72048,7 +72048,7 @@ vbX
 vZy
 uDb
 xxs
-bUy
+qgU
 sjy
 mRG
 fJq
@@ -72269,11 +72269,11 @@ lpY
 qGC
 xCR
 sjy
-bUy
-bUy
+qgU
+qgU
 kvH
-eBd
-eBd
+vHo
+vHo
 woS
 sPn
 sjy
@@ -72699,7 +72699,7 @@ beB
 pSl
 pJp
 pwK
-wuB
+vUj
 yed
 xwR
 vLp
@@ -77579,7 +77579,7 @@ fWG
 dhf
 jas
 feQ
-xKH
+rij
 vpe
 wwc
 vpe
@@ -79734,7 +79734,7 @@ tzJ
 dku
 lid
 nhm
-juq
+xfc
 wDj
 jLz
 vGp

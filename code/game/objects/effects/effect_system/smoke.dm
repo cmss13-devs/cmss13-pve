@@ -135,6 +135,7 @@
 	time_to_live = 25
 	spread_speed = 2
 	smokeranking = SMOKE_RANK_LOW
+	color = "#adadad"
 
 /obj/effect/particle_effect/smoke/bad/Move()
 	. = ..()
@@ -159,6 +160,12 @@
 		if(ishuman(affected_mob)) //Humans only to avoid issues
 			affected_mob.emote("cough")
 	return TRUE
+
+/obj/effect/particle_effect/smoke/bad/green
+	color = "#288e76ea"
+
+/obj/effect/particle_effect/smoke/bad/red
+	color = "#ca3d33e8"
 
 /////////////////////////////////////////////
 // Miasma smoke (for LZs)
@@ -311,6 +318,7 @@
 /obj/effect/particle_effect/smoke/phosphorus
 	time_to_live = 25
 	smokeranking = SMOKE_RANK_MED
+	color = "#dddddd"
 	var/next_cough = 2 SECONDS
 	var/burn_damage = 40
 	var/applied_fire_stacks = 3
@@ -838,6 +846,12 @@
 
 /datum/effect_system/smoke_spread/bad
 	smoke_type = /obj/effect/particle_effect/smoke/bad
+
+/datum/effect_system/smoke_spread/bad/green
+	smoke_type = /obj/effect/particle_effect/smoke/bad/green
+
+/datum/effect_system/smoke_spread/bad/red
+	smoke_type = /obj/effect/particle_effect/smoke/bad/red
 
 /datum/effect_system/smoke_spread/sleepy
 	smoke_type = /obj/effect/particle_effect/smoke/sleepy

@@ -245,10 +245,6 @@
 /obj/structure/cargo_container/watatsumi/rightmid,
 /turf/open/jungle/impenetrable,
 /area/whiskey_outpost/outside/south)
-"ba" = (
-/obj/structure/machinery/vending/cigarette,
-/turf/open/floor/prison/floor_plate/southwest,
-/area/whiskey_outpost/inside/bunker/bunker/front)
 "bb" = (
 /turf/open/floor/whitegreen/northwest,
 /area/whiskey_outpost/inside/hospital)
@@ -580,13 +576,6 @@
 /obj/structure/sign/poster,
 /turf/closed/wall/r_wall,
 /area/whiskey_outpost/inside/bunker/pillbox/two)
-"cD" = (
-/obj/structure/closet/secure_closet/bar{
-	name = "Success cabinet";
-	req_access_txt = "1"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/whiskey_outpost/inside/cic)
 "cE" = (
 /obj/structure/window/reinforced/tinted/frosted,
 /obj/structure/sink{
@@ -3136,10 +3125,6 @@
 	},
 /turf/open/floor/whitegreenfull,
 /area/whiskey_outpost/inside/hospital)
-"nB" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor/prison,
-/area/whiskey_outpost/inside/bunker)
 "nC" = (
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor/prison,
@@ -3154,10 +3139,6 @@
 /obj/effect/decal/cleanable/blood/writing,
 /turf/open/jungle,
 /area/whiskey_outpost/outside/south/far)
-"nF" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor/prison,
-/area/whiskey_outpost/inside/living)
 "nG" = (
 /obj/structure/machinery/vending/snack,
 /turf/open/floor/prison,
@@ -4155,6 +4136,10 @@
 /obj/effect/spawner/gibspawner/human,
 /turf/open/gm/dirt,
 /area/whiskey_outpost/outside/lane/four_south)
+"sj" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/prison/floor_plate/southwest,
+/area/whiskey_outpost/inside/bunker/bunker/front)
 "sk" = (
 /obj/structure/surface/rack,
 /turf/open/floor/prison/floor_plate,
@@ -5131,6 +5116,13 @@
 	},
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/whiskey_outpost/inside/engineering)
+"wB" = (
+/obj/structure/closet/secure_closet/bar{
+	name = "Success cabinet";
+	req_access_txt = "1"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/inside/cic)
 "wC" = (
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/inside/bunker)
@@ -7507,6 +7499,10 @@
 "HB" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
 /area/whiskey_outpost/outside/lane/three_south)
+"HE" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/prison,
+/area/whiskey_outpost/inside/living)
 "HH" = (
 /obj/effect/landmark/start/whiskey/leader,
 /turf/open/floor/prison,
@@ -7736,6 +7732,10 @@
 /obj/item/folder/white,
 /turf/open/floor,
 /area/whiskey_outpost/outside/south/far)
+"II" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/prison,
+/area/whiskey_outpost/inside/bunker)
 "IK" = (
 /obj/item/lightstick/red/planted,
 /turf/open/gm/dirtgrassborder/east,
@@ -19948,7 +19948,7 @@ ak
 sx
 xj
 OS
-cD
+wB
 dO
 ak
 mT
@@ -25617,7 +25617,7 @@ Ys
 lH
 Ys
 Ys
-nF
+HE
 pq
 rB
 fj
@@ -25700,7 +25700,7 @@ Ae
 Pp
 iI
 ks
-ba
+sj
 fV
 Eh
 XG
@@ -26224,7 +26224,7 @@ lu
 mF
 Ys
 pq
-nB
+II
 rB
 fj
 aj
@@ -27435,7 +27435,7 @@ pN
 pN
 pN
 Ys
-nF
+HE
 pq
 pR
 ry

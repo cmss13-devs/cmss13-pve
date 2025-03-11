@@ -173,21 +173,6 @@
 	},
 /turf/closed/wall/kutjevo/colony/reinforced,
 /area/kutjevo/interior/complex/med/operating)
-"amw" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
-/obj/structure/platform/kutjevo/smooth,
-/obj/structure/filtration/machine_32x64/indestructible{
-	bound_height = 32;
-	icon_state = "solo_tank_empty"
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/kutjevo/multi_tiles/southwest,
-/area/kutjevo/interior/colony_South/power2)
 "amL" = (
 /obj/effect/decal/cleanable/blood/xeno{
 	icon_state = "xgibleg"
@@ -2486,6 +2471,18 @@
 	},
 /turf/open/auto_turf/sand/layer2,
 /area/kutjevo/exterior/spring)
+"dHo" = (
+/obj/structure/platform/kutjevo/smooth,
+/obj/structure/filtration/machine_32x64/indestructible{
+	bound_height = 32;
+	icon_state = "solo_tank_empty"
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/kutjevo/multi_tiles/southwest,
+/area/kutjevo/interior/colony_South/power2)
 "dHD" = (
 /obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/kutjevo/colors/cyan/edge/north,
@@ -3108,13 +3105,6 @@
 "eCv" = (
 /turf/open/floor/kutjevo/colors/orange/edge/northwest,
 /area/kutjevo/interior/foremans_office)
-"eCB" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/kutjevo/grey/plate,
-/area/kutjevo/interior/construction)
 "eCY" = (
 /obj/structure/machinery/cryo_cell,
 /turf/open/floor/kutjevo/grey/plate,
@@ -3677,9 +3667,20 @@
 "fuR" = (
 /turf/open/gm/river/desert/deep,
 /area/kutjevo/exterior/spring)
+"fwh" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/kutjevo/grey/plate,
+/area/kutjevo/interior/construction)
 "fwD" = (
 /turf/open/auto_turf/sand/layer2,
 /area/kutjevo/exterior/spring)
+"fwO" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/kutjevo/colors/green,
+/area/kutjevo/interior/complex/botany)
 "fxi" = (
 /obj/structure/sign/safety/medical{
 	pixel_x = -32
@@ -4023,6 +4024,16 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/gm/river/desert/shallow_edge/northeast,
 /area/kutjevo/interior/oob)
+"gaT" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8
+	},
+/turf/open/floor/kutjevo/multi_tiles/southeast,
+/area/kutjevo/interior/colony_South/power2)
 "gbl" = (
 /turf/open/floor/kutjevo/colors/orange/inner_corner/west,
 /area/kutjevo/interior/power_pt2_electric_boogaloo)
@@ -4126,13 +4137,6 @@
 "gld" = (
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/complex_border/med_rec)
-"glU" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/obj/structure/sign/poster{
-	pixel_y = 32
-	},
-/turf/open/floor/kutjevo/colors/purple/inner_corner/north,
-/area/kutjevo/interior/construction)
 "gma" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_wall,
@@ -5591,6 +5595,13 @@
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/kutjevo/colors/orange/inner_corner/west,
 /area/kutjevo/interior/foremans_office)
+"iJW" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/sign/poster{
+	pixel_y = 32
+	},
+/turf/open/floor/kutjevo/colors/purple/inner_corner/north,
+/area/kutjevo/interior/construction)
 "iKl" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
@@ -5684,16 +5695,6 @@
 "iQf" = (
 /turf/open/floor/kutjevo/colors/cyan/edge/west,
 /area/kutjevo/interior/complex/med/triage)
-"iRk" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
-/turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/kutjevo/interior/colony_South/power2)
 "iRq" = (
 /obj/structure/window/framed/kutjevo/reinforced/hull,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
@@ -6702,10 +6703,6 @@
 "kjk" = (
 /turf/open/floor/kutjevo/grey/plate,
 /area/kutjevo/interior/colony_central)
-"kkB" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor/kutjevo/colors/cyan,
-/area/kutjevo/interior/complex/med)
 "kkH" = (
 /turf/closed/wall/kutjevo/colony/reinforced,
 /area/kutjevo/interior/complex/med/operating)
@@ -11307,6 +11304,10 @@
 	},
 /turf/open/floor/kutjevo/multi_tiles/east,
 /area/kutjevo/interior/complex/med)
+"rhI" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/kutjevo/colors/cyan,
+/area/kutjevo/interior/complex/med)
 "rhK" = (
 /turf/open/floor/kutjevo/tan,
 /area/kutjevo/interior/complex/med/operating)
@@ -12484,6 +12485,12 @@
 "sYd" = (
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
+"sYn" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/kutjevo/grey/plate,
+/area/kutjevo/interior/complex/med/cells)
 "sYo" = (
 /obj/structure/platform/kutjevo{
 	dir = 4
@@ -12517,10 +12524,6 @@
 "tdf" = (
 /turf/open/floor/kutjevo/tan/grey_edge/west,
 /area/kutjevo/interior/complex/Northwest_Dorms)
-"tdG" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor/kutjevo/colors/green,
-/area/kutjevo/interior/complex/botany)
 "tdT" = (
 /obj/structure/platform/kutjevo,
 /turf/open/auto_turf/sand/layer0,
@@ -13998,12 +14001,6 @@
 "vdv" = (
 /turf/closed/wall/kutjevo/rock,
 /area/kutjevo/interior/colony_S_East)
-"vdG" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/kutjevo/grey/plate,
-/area/kutjevo/interior/complex/med/cells)
 "vdH" = (
 /obj/structure/machinery/vending/snack,
 /turf/open/floor/kutjevo/colors/red,
@@ -33789,7 +33786,7 @@ cAt
 vDS
 mte
 kGb
-tdG
+fwO
 lHs
 cPt
 rxb
@@ -33928,7 +33925,7 @@ vQJ
 pSU
 jjI
 pSU
-kkB
+rhI
 siR
 nAO
 snr
@@ -34588,7 +34585,7 @@ tDC
 jhb
 ayB
 nDH
-vdG
+sYn
 cWX
 aWk
 sND
@@ -38088,7 +38085,7 @@ wAp
 fyF
 fyF
 qaI
-glU
+iJW
 uMu
 euj
 bKm
@@ -41142,7 +41139,7 @@ beo
 mLw
 lyG
 mvB
-amw
+dHo
 mcv
 ouR
 ouR
@@ -42150,7 +42147,7 @@ ige
 wdt
 oYQ
 mcv
-iRk
+gaT
 tju
 eFZ
 kvY
@@ -43297,7 +43294,7 @@ oUP
 vMk
 vMk
 oUP
-eCB
+fwh
 rDm
 iuL
 oUP

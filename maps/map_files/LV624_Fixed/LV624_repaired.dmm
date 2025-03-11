@@ -86,6 +86,10 @@
 /obj/effect/landmark/monkey_spawn,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/south_west_barrens)
+"aja" = (
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
 "ajs" = (
 /obj/structure/machinery/landinglight/ds2{
 	dir = 8
@@ -1372,13 +1376,6 @@
 	},
 /turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
-"bKf" = (
-/obj/structure/machinery/vending/cigarette,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/whiteblue/southeast,
-/area/lv624/lazarus/corporate_dome)
 "bLa" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/south_west_jungle/ceiling)
@@ -1947,6 +1944,10 @@
 	},
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/east_central_jungle)
+"cyu" = (
+/obj/structure/closet,
+/turf/open/floor/red/north,
+/area/lv624/lazarus/security)
 "cza" = (
 /obj/effect/landmark/hunter_secondary,
 /obj/effect/landmark/lv624/fog_blocker,
@@ -2032,11 +2033,6 @@
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/lv624/ground/jungle/west_jungle)
-"cEp" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/obj/effect/landmark/crap_item,
-/turf/open/floor/white,
-/area/lv624/lazarus/main_hall)
 "cEI" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/chanterelle,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -2496,6 +2492,14 @@
 /obj/effect/landmark/crap_item,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
+"ddC" = (
+/obj/structure/closet,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/item/clothing/under/colonist/boilersuit/cyan,
+/turf/open/floor/whiteblue/west,
+/area/lv624/lazarus/medbay)
 "dee" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -3108,6 +3112,11 @@
 	},
 /turf/open/floor/cult,
 /area/lv624/ground/caves/south_west_caves)
+"dRp" = (
+/obj/effect/landmark/crap_item,
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
 "dRt" = (
 /turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
@@ -4149,10 +4158,6 @@
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_east_jungle)
-"fhn" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor/whiteblue/northwest,
-/area/lv624/lazarus/main_hall)
 "fhu" = (
 /obj/structure/machinery/landinglight/ds2/delayone{
 	dir = 1
@@ -4163,6 +4168,10 @@
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/river,
 /area/lv624/ground/jungle/west_jungle)
+"fhZ" = (
+/obj/structure/machinery/vending/generic,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
 "fiG" = (
 /obj/structure/fence,
 /turf/open/floor/warning/northeast,
@@ -4372,6 +4381,13 @@
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/north_east_caves)
+"fsP" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/whiteblue/southeast,
+/area/lv624/lazarus/corporate_dome)
 "ftG" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 1
@@ -4886,10 +4902,6 @@
 	},
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
-"fVf" = (
-/obj/structure/machinery/vending/cigarette,
-/turf/open/floor/white,
-/area/lv624/lazarus/main_hall)
 "fVB" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -7483,6 +7495,10 @@
 	},
 /turf/open/floor/delivery,
 /area/lv624/lazarus/engineering)
+"jgi" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/whiteblue/northwest,
+/area/lv624/lazarus/main_hall)
 "jgv" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/gm/grass/grass1,
@@ -10070,14 +10086,6 @@
 	},
 /turf/open/floor/white,
 /area/lv624/lazarus/corporate_dome)
-"mwS" = (
-/obj/structure/closet,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/item/clothing/under/colonist/boilersuit/cyan,
-/turf/open/floor/whiteblue/west,
-/area/lv624/lazarus/medbay)
 "mwV" = (
 /obj/structure/fence,
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
@@ -12251,10 +12259,6 @@
 	},
 /turf/open/floor/brown/northwest,
 /area/lv624/lazarus/comms)
-"puX" = (
-/obj/structure/closet,
-/turf/open/floor/red/north,
-/area/lv624/lazarus/security)
 "pvG" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/river/central_river)
@@ -12659,10 +12663,6 @@
 	},
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
-"pXU" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor/white,
-/area/lv624/lazarus/main_hall)
 "pYI" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 9
@@ -16494,12 +16494,6 @@
 /obj/effect/landmark/good_item,
 /turf/open/floor/whitepurple/northeast,
 /area/lv624/lazarus/research)
-"vqh" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/under/CM_uniform,
-/obj/item/clothing/suit/armor/vest/security,
-/turf/open/floor/red,
-/area/lv624/lazarus/security)
 "vqx" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/gm/grass/grass1,
@@ -18253,6 +18247,12 @@
 /obj/item/bananapeel,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/central_jungle)
+"xMo" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/clothing/under/cmb,
+/obj/item/clothing/suit/armor/vest/security,
+/turf/open/floor/red,
+/area/lv624/lazarus/security)
 "xMA" = (
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 8
@@ -31219,7 +31219,7 @@ iAV
 lsM
 sLy
 sLy
-bKf
+fsP
 iAV
 wPw
 oXt
@@ -35659,7 +35659,7 @@ pWR
 fgp
 rMJ
 xJe
-mwS
+ddC
 geN
 oIs
 gfC
@@ -41295,13 +41295,13 @@ jFZ
 lHW
 lHW
 bWC
+fhZ
+psD
+psD
+psD
+psD
+psD
 iSN
-psD
-psD
-psD
-psD
-psD
-fVf
 dBu
 fCP
 auz
@@ -43542,11 +43542,11 @@ tTE
 xoE
 psD
 jZh
-vqh
+xMo
 qxy
 cmM
 cmM
-puX
+cyu
 haW
 jtP
 scQ
@@ -44206,7 +44206,7 @@ wzU
 tUe
 wzU
 sKE
-fhn
+jgi
 thF
 psD
 nwO
@@ -44639,7 +44639,7 @@ upT
 fND
 kyl
 ttG
-cEp
+dRp
 psD
 oQF
 psD
@@ -49358,7 +49358,7 @@ gVK
 gVK
 gVK
 eul
-pXU
+aja
 psD
 psD
 psD
