@@ -15334,7 +15334,7 @@
 "qxu" = (
 /obj/structure/surface/rack,
 /obj/item/ammo_magazine/rifle/nsg23,
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/weapon/gun/rifle/nsg23,
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "qxX" = (

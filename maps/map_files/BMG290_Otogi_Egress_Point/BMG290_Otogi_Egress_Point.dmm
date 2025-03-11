@@ -23035,10 +23035,10 @@
 	req_access = null;
 	req_one_access = list(202)
 	},
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/weapon/gun/rifle/nsg23,
+/obj/item/weapon/gun/rifle/nsg23,
 /obj/item/attachable/stock/nsg23,
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/weapon/gun/rifle/nsg23,
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/keppitz/security)
 "kOd" = (
