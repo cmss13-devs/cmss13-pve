@@ -157,13 +157,6 @@
 	damage_falloff_mult = 0
 	fa_max_scatter = SCATTER_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/rifle/nsg23/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/stock/nsg23/S = new(src)
-	S.flags_attach_features &= ~ATTACH_REMOVABLE
-	S.Attach(src)
-	update_attachable(S.slot)
-
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
 /obj/item/weapon/gun/rifle/m41aMK1/xm40
