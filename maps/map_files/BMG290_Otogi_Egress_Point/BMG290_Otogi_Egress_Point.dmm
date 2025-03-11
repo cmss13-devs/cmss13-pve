@@ -3,7 +3,7 @@
 /obj/structure/lz_sign/otogi,
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
-"aac" = (
+"aab" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/lz_sign/otogi/blacksite{
 	pixel_y = 12;
@@ -97500,7 +97500,7 @@ uwg
 ojO
 lqy
 ojO
-aac
+aab
 akS
 epS
 ojO
