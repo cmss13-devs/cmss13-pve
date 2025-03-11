@@ -27,29 +27,29 @@
 	name = "PMC Rifle Team"
 	desc = "A patrol group of 2 Standard PMCs."
 	ai_to_spawn = list(
-		/datum/equipment_preset/wy/wy_standard = 2,
+		/datum/equipment_preset/pmc/wy_standard = 2,
 	)
 
 /datum/human_ai_squad_preset/wy/gunteam
 	name = "PMC, Gun Team"
 	desc = "A PMC squad, with support elements and a leader."
 	ai_to_spawn = list(
-		/datum/equipment_preset/wy/wy_standard = 1,
-		/datum/equipment_preset/wy/wy_gunner = 1,
+		/datum/equipment_preset/pmc/wy_standard = 1,
+		/datum/equipment_preset/pmc/wy_gunner = 1,
 	)
 
 /datum/human_ai_squad_preset/wy/squad
 	name = "PMC, Squad"
 	desc = "A PMC squad, with support elements, a heavy smartgunner, and a leader. Use carefully."
 	ai_to_spawn = list(
-		/datum/equipment_preset/wy/wy_standard = 2,
-		/datum/equipment_preset/wy/wy_gunner = 1,
-		/datum/equipment_preset/wy/wy_leader = 1,
+		/datum/equipment_preset/pmc/wy_standard = 2,
+		/datum/equipment_preset/pmc/wy_gunner = 1,
+		/datum/equipment_preset/pmc/wy_leader = 1,
 	)
 
 /datum/human_ai_squad_preset/wy/medical
 	name = "PMC, Medical Element"
 	desc = "A PMC medical element with 2 medics."
 	ai_to_spawn = list(
-		/datum/equipment_preset/wy/wy_medic = 2,
+		/datum/equipment_preset/pmc/wy_medic = 2,
 	)
