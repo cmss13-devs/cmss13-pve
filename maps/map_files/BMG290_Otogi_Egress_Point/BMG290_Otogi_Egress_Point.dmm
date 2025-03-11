@@ -3,10 +3,6 @@
 /obj/structure/lz_sign/otogi,
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/colony_exterior)
-"aab" = (
-/obj/structure/lz_sign/otogi/blacksite,
-/turf/open/asphalt/cement/cement12,
-/area/bmg290/wilderness/road)
 "aac" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/lz_sign/otogi/blacksite,
@@ -95746,7 +95742,7 @@ lJV
 lJV
 qmz
 qmz
-aab
+tJW
 qLU
 qLU
 jPM
