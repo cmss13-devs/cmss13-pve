@@ -5,7 +5,10 @@
 /area/bmg290/wilderness/colony_exterior)
 "aac" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/lz_sign/otogi/blacksite,
+/obj/structure/lz_sign/otogi/blacksite{
+	pixel_y = 12;
+	density = 0
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/bmg290/keppitz/hangar)
 "aan" = (
