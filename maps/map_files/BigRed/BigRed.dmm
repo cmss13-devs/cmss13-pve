@@ -30262,7 +30262,7 @@
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23/ap,
 /obj/item/ammo_magazine/rifle/nsg23/ap,
-/obj/item/ammo_magazine/rifle/nsg23/extended,
+/obj/item/ammo_magazine/rifle/nsg23,
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
 "xGm" = (

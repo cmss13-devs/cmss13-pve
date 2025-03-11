@@ -110,8 +110,8 @@
 //NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
 
 /obj/item/weapon/gun/rifle/nsg23
-	name = "\improper NSG 23 assault rifle"
-	desc = "Standard issue service rifle of the TWE's Royal Marine Commandos. Designed to chamber 10x24mm caseless ammunition in order to cut cost on munitions manufacturing."
+	name = "\improper NSG 23 pulse rifle"
+	desc = "Pulse action 10x24mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine. Features a an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
@@ -121,27 +121,26 @@
 	cocked_sound = 'sound/weapons/handling/nsg23_cocked.ogg'
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	wield_delay = WIELD_DELAY_VERY_FAST
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	current_mag = /obj/item/ammo_magazine/rifle/nsg23
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/rmc,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
-		/obj/item/attachable/bipod,
 		/obj/item/attachable/stock/nsg23,
-		/obj/item/attachable/scope/mini/nsg23,
+		/obj/item/attachable/scope/mini,
 	)
-
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_BURST_FIRING
 
 	starting_attachment_types = list(
-		/obj/item/attachable/scope/mini/nsg23,
-		/obj/item/attachable/attached_gun/grenade,
-	)
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/stock/nsg23,
+		)
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 20, "under_x" = 21, "under_y" = 10, "stock_x" = 5, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 20, "under_x" = 19, "under_y" = 11, "stock_x" = 5, "stock_y" = 17)
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_config_values()
 	..()
@@ -164,7 +163,6 @@
 	S.flags_attach_features &= ~ATTACH_REMOVABLE
 	S.Attach(src)
 	update_attachable(S.slot)
-
 
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 

@@ -297,7 +297,7 @@
 /turf/open/floor/plating/panelscorched,
 /area/lv624/lazarus/hydroponics)
 "Aj" = (
-/obj/item/ammo_magazine/rifle/nsg23/extended,
+/obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/stack/sheet/wood,
 /turf/open/floor/plating/panelscorched,
 /area/lv624/lazarus/hydroponics)

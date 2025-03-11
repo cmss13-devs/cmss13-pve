@@ -755,15 +755,6 @@
 /obj/item/ammo_box/magazine/nsg23/ap/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/nsg23/ex
-	name = "magazine box (NSG 23 Extended x 8)"
-	overlay_ammo_type = "_ext"
-	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/extended
-	num_of_magazines = 8
-
-/obj/item/ammo_box/magazine/nsg23/ex/empty
-	empty = TRUE
-
 /obj/item/ammo_box/magazine/nsg23/heap
 	name = "magazine box (NSG 23 HEAP x 16)"
 	overlay_ammo_type = "_heap"

@@ -685,13 +685,22 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/medic
 	name = "UPP-MED headset"
 	desc = "A special headset used by UPP military. Channels are as follows: #m - medical."
-	frequency = UPP_GRD_FREQ
+	frequency = UPP_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/upp/medic)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/command
 	name = "UPP-CMD headset"
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general."
 	initial_keys = list(/obj/item/device/encryptionkey/upp/command)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/rmc
+	name = "TWE Royal Marine Commando headset"
+	desc = "A special headset used by the TWE's elite Royal Marine Commandos."
+	icon_state = "upp_headset"
+	item_state = "upp_headset"
+	frequency = RMC_FREQ
+	initial_keys = null
+	has_hud = FALSE
 
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha

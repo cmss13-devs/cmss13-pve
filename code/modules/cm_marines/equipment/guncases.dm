@@ -629,7 +629,7 @@
 /obj/item/storage/box/guncase/nsg23_marine/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
