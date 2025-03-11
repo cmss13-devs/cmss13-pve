@@ -584,18 +584,19 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "An absolutely massive collection of columns made of ice. The longer you stare, the deeper the ice seems to go."
 	walltype = WALL_STRATA_ICE //Not a metal wall
 	hull = 1 //Can't break this ice.
+	minimap_color = MINIMAP_BLACK
 
-/turf/closed/wall/strata_ice/dirty
-	icon_state = "strata_ice_dirty"
-	desc = "Columns and crags stacked atop one another. They defiantly push towards the heavens, but are stopped short by dripping frigid excess."
-	walltype = WALL_STRATA_ICE_DIRTY
-
-/turf/closed/wall/strata_ice/dirty/Initialize(mapload)
+/turf/closed/wall/strata_ice/Initialize(mapload)
 	. = ..()
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf_to_check = get_step(src, direction)
 		if(!isnull(turf_to_check) && !turf_to_check.density && !(istype(turf_to_check, /turf/open/space)))
 			minimap_color = MINIMAP_SOLID
+
+/turf/closed/wall/strata_ice/dirty
+	icon_state = "strata_ice_dirty"
+	desc = "Columns and crags stacked atop one another. They defiantly push towards the heavens, but are stopped short by dripping frigid excess."
+	walltype = WALL_STRATA_ICE_DIRTY
 
 /turf/closed/wall/strata_ice/jungle
 	name = "jungle vegetation"

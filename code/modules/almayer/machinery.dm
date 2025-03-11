@@ -106,6 +106,8 @@
 	var/list/mob/interactees = list()
 	///Toggle for scrolling map
 	var/scroll_toggle
+	///Button for closing map
+	var/close_button
 
 /obj/structure/machinery/prop/almayer/CICmap/Destroy()
 	map = null
@@ -124,10 +126,12 @@
 			actions += new path(null, targetted_zlevel, minimap_flag, map)
 		drawing_tools = actions
 		scroll_toggle = new /atom/movable/screen/stop_scroll(null, map)
+		close_button = new /atom/movable/screen/exit_map(null, src)
 	user.client.screen += map
 	interactees += user
 	user.client.screen += drawing_tools
 	user.client.screen += scroll_toggle
+	user.client.screen += close_button
 	RegisterSignal(user, COMSIG_MOVABLE_MOVED, PROC_REF(on_move), user)
 
 ///Returns true if something prevents the user from interacting with this. used mainly with the drawtable
@@ -141,7 +145,9 @@
 	user?.client?.screen -= map
 	user?.client?.screen -= drawing_tools
 	user?.client?.screen -= scroll_toggle
+	user?.client?.screen -= close_button
 	user?.client?.mouse_pointer_icon = null
+	UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
 	for(var/atom/movable/screen/minimap_tool/tool as anything in drawing_tools)
 		tool.UnregisterSignal(user, list(COMSIG_MOB_MOUSEDOWN, COMSIG_MOB_MOUSEUP))
 
@@ -162,7 +168,6 @@
 	SIGNAL_HANDLER
 	if(Adjacent(source))
 		return
-	UnregisterSignal(source, COMSIG_MOVABLE_MOVED)
 	on_unset_interaction(source)
 
 /obj/structure/machinery/prop/almayer/CICmap/computer

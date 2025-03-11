@@ -817,6 +817,35 @@ SUBSYSTEM_DEF(minimaps)
 	// Close minimap
 	toggle_minimap(FALSE)
 
+/atom/movable/screen/exit_map
+	name = "Close Minimap"
+	desc = "Close the minimap"
+	icon = 'icons/ui_icons/minimap_buttons.dmi'
+	icon_state = "close"
+	screen_loc = "RIGHT,TOP"
+	/// what minimap table is linked to this button
+	var/obj/structure/machinery/prop/almayer/CICmap/linked_map
+
+/atom/movable/screen/exit_map/Initialize(mapload, linked_map)
+	. = ..()
+	src.linked_map = linked_map
+
+/atom/movable/screen/exit_map/MouseEntered(location, control, params)
+	. = ..()
+	add_filter("mouseover", 1, outline_filter(1, COLOR_LIME))
+	if(desc)
+		openToolTip(usr, src, params, title = name, content = desc)
+
+/atom/movable/screen/exit_map/MouseExited(location, control, params)
+	. = ..()
+	remove_filter("mouseover")
+	if(desc)
+		closeToolTip(usr)
+
+/atom/movable/screen/exit_map/clicked(location, list/modifiers)
+	linked_map.on_unset_interaction(usr)
+	return TRUE
+
 /atom/movable/screen/stop_scroll
 	name = "Stop Scrolling"
 	desc = "Stop the scrolling of the minimap(shared)"
