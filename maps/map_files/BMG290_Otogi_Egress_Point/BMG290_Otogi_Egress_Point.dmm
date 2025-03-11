@@ -1,4 +1,17 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/lz_sign/otogi,
+/turf/open/asphalt/cement,
+/area/bmg290/wilderness/colony_exterior)
+"aab" = (
+/obj/structure/lz_sign/otogi/blacksite,
+/turf/open/asphalt/cement/cement12,
+/area/bmg290/wilderness/road)
+"aac" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/lz_sign/otogi/blacksite,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/bmg290/keppitz/hangar)
 "aan" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/floor_plate,
@@ -95733,7 +95746,7 @@ lJV
 lJV
 qmz
 qmz
-tJW
+aab
 qLU
 qLU
 jPM
@@ -97488,7 +97501,7 @@ uwg
 ojO
 lqy
 ojO
-bqK
+aac
 akS
 epS
 ojO
@@ -120263,7 +120276,7 @@ gSN
 bED
 ujG
 ujG
-pCj
+aaa
 lWz
 jbL
 jbL
