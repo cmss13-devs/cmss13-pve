@@ -962,6 +962,10 @@
 	},
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastbeach)
+"aLa" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/shiva/green/east,
+/area/varadero/interior/hall_SE)
 "aLe" = (
 /obj/structure/machinery/storm_siren{
 	dir = 4;
@@ -1122,10 +1126,6 @@
 /obj/structure/prop/rock/brown,
 /turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/eastocean)
-"aUA" = (
-/obj/structure/machinery/vending/cigarette/wy,
-/turf/open/floor/shiva/blue/southeast,
-/area/varadero/interior/administration)
 "aUD" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
@@ -2125,10 +2125,6 @@
 "bIt" = (
 /turf/closed/wall,
 /area/varadero/interior/technical_storage)
-"bIL" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/shiva/green/east,
-/area/varadero/interior/hall_SE)
 "bJt" = (
 /obj/structure/window/reinforced/tinted,
 /turf/open/floor/white,
@@ -3928,6 +3924,14 @@
 	},
 /turf/open/floor/shiva/purplefull/west,
 /area/varadero/interior/research)
+"djF" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/item/clothing/under/cmb,
+/obj/item/clothing/suit/armor/vest,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/security)
 "djP" = (
 /obj/structure/bed/chair,
 /turf/open/floor/interior/plastic,
@@ -4766,6 +4770,10 @@
 	},
 /turf/open/floor/shiva/snow_mat/east,
 /area/varadero/interior/security)
+"dWn" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/shiva/greenfull/west,
+/area/varadero/interior/hall_SE)
 "dWI" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/icefloor/asteroidplating,
@@ -7171,6 +7179,10 @@
 /obj/structure/machinery/light/small,
 /turf/open/gm/grass/grass1/weedable,
 /area/varadero/interior/caves/north_research)
+"fUJ" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/wood,
+/area/varadero/interior/hall_SE)
 "fVd" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 4
@@ -8308,6 +8320,10 @@
 /obj/item/tool/pen/red/clicky,
 /turf/open/floor/interior/plastic,
 /area/varadero/interior_protected/caves/digsite)
+"gNb" = (
+/obj/structure/closet,
+/turf/open/floor/wood,
+/area/varadero/interior/chapel)
 "gNy" = (
 /turf/open/gm/dirt/desert1,
 /area/varadero/exterior/pontoon_beach)
@@ -8553,14 +8569,6 @@
 "gVO" = (
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/varadero/exterior/pontoon_beach)
-"gVX" = (
-/obj/structure/closet/secure_closet/personal/RD,
-/obj/item/ammo_magazine/handful/lever_action,
-/obj/item/weapon/gun/lever_action/r4t,
-/obj/item/ammo_magazine/handful/lever_action,
-/obj/item/ammo_magazine/handful/lever_action,
-/turf/open/floor/wood,
-/area/varadero/interior/research)
 "gWd" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 16
@@ -11764,10 +11772,6 @@
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /turf/open/gm/coast/south,
 /area/varadero/exterior/lz2_near)
-"jJw" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/wood,
-/area/varadero/interior/hall_SE)
 "jJx" = (
 /obj/structure/morgue,
 /obj/structure/machinery/light/small{
@@ -14552,13 +14556,6 @@
 	},
 /turf/open/floor/shiva/blue/southwest,
 /area/varadero/interior/administration)
-"meD" = (
-/obj/structure/bedsheetbin{
-	icon_state = "linenbin-empty"
-	},
-/obj/item/clothing/under/cmb,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "meS" = (
 /obj/effect/landmark/monkey_spawn,
 /turf/open/auto_turf/sand_white/layer1,
@@ -15024,10 +15021,6 @@
 /obj/item/storage/beer_pack,
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior/caves/east)
-"mxN" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/hall_N)
 "mxO" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/tool,
@@ -18757,10 +18750,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/exterior/lz1_near)
-"pUW" = (
-/obj/structure/closet,
-/turf/open/floor/wood,
-/area/varadero/interior/chapel)
 "pVb" = (
 /obj/structure/platform/kutjevo/smooth{
 	climb_delay = 1;
@@ -18966,6 +18955,10 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/medical)
+"qcy" = (
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/shiva/blue/southeast,
+/area/varadero/interior/administration)
 "qcN" = (
 /turf/closed/wall,
 /area/varadero/interior/medical)
@@ -19330,10 +19323,6 @@
 	},
 /turf/open/floor/shiva/purplefull/west,
 /area/varadero/interior/research)
-"qpJ" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/shiva/greenfull/west,
-/area/varadero/interior/hall_SE)
 "qpK" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	name = "\improper Underground Maintenance";
@@ -19779,6 +19768,14 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/administration)
+"qKq" = (
+/obj/structure/closet/secure_closet/personal/RD,
+/obj/item/ammo_magazine/handful/lever_action,
+/obj/item/weapon/gun/lever_action/r4t,
+/obj/item/ammo_magazine/handful/lever_action,
+/obj/item/ammo_magazine/handful/lever_action,
+/turf/open/floor/wood,
+/area/varadero/interior/research)
 "qKM" = (
 /obj/structure/surface/rack,
 /obj/item/tool/shovel,
@@ -20153,10 +20150,6 @@
 	},
 /turf/open/floor/shiva/yellowcorners/east,
 /area/varadero/interior/cargo)
-"qZp" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/shiva/red/northeast,
-/area/varadero/interior/security)
 "qZw" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /turf/open/floor/shiva/wred/northwest,
@@ -24378,6 +24371,13 @@
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/shiva/purple/east,
 /area/varadero/interior/research)
+"uHm" = (
+/obj/structure/bedsheetbin{
+	icon_state = "linenbin-empty"
+	},
+/obj/item/clothing/under/cmb,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "uHD" = (
 /obj/structure/machinery/landinglight/ds1/spoke{
 	pixel_y = -5;
@@ -26015,6 +26015,10 @@
 	},
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
+"vXi" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/shiva/red/northeast,
+/area/varadero/interior/security)
 "vXI" = (
 /obj/structure/surface/rack,
 /obj/item/storage/pouch/shotgun,
@@ -27265,14 +27269,6 @@
 /obj/structure/largecrate/random,
 /turf/open/shuttle/elevator,
 /area/varadero/interior/records)
-"wWj" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/item/clothing/under/cmb,
-/obj/item/clothing/suit/armor/vest,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/security)
 "wWr" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -28573,6 +28569,10 @@
 	},
 /turf/open/floor/plating,
 /area/varadero/interior_protected/caves/digsite)
+"yhh" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/hall_N)
 "yhj" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/camera{
@@ -32260,7 +32260,7 @@ kcz
 tdA
 bbv
 tqh
-gVX
+qKq
 axY
 lNw
 urE
@@ -38610,7 +38610,7 @@ cwQ
 kzE
 fyP
 izz
-pUW
+gNb
 bLB
 rFa
 pgN
@@ -38792,7 +38792,7 @@ ksf
 wPC
 oXf
 ugR
-pUW
+gNb
 bLB
 rFa
 pgN
@@ -43342,7 +43342,7 @@ pGJ
 bhF
 pGJ
 pGJ
-mxN
+yhh
 alP
 rFa
 pgN
@@ -43926,7 +43926,7 @@ sRM
 xgG
 nBf
 beP
-aUA
+qcy
 xgG
 gDp
 iga
@@ -45017,7 +45017,7 @@ jZG
 wmX
 vYQ
 jhS
-meD
+uHm
 wps
 xNR
 gFx
@@ -47041,7 +47041,7 @@ vtj
 csj
 sTE
 pKs
-qpJ
+dWn
 gGg
 gGg
 gGg
@@ -47754,7 +47754,7 @@ wjV
 cdb
 cdb
 slG
-jJw
+fUJ
 kAm
 cdb
 wjV
@@ -50104,7 +50104,7 @@ idw
 izy
 hJw
 wVf
-qZp
+vXi
 lbu
 mBs
 wVf
@@ -50689,7 +50689,7 @@ rjn
 vHs
 rNA
 hTq
-bIL
+aLa
 pWO
 wem
 hTq
@@ -51398,7 +51398,7 @@ uIw
 kFw
 vzu
 kFw
-wWj
+djF
 ljd
 uvP
 uYm

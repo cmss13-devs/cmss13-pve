@@ -3532,6 +3532,12 @@
 	},
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_east_caves)
+"aPR" = (
+/obj/structure/lz_sign/lazarus_sign/damaged{
+	density = 0
+	},
+/turf/open/gm/grass/grass1,
+/area/lv624/lazarus/landing_zones/lz1)
 "aPS" = (
 /obj/structure/flora/tree/jungle/bigtreeBOT,
 /obj/structure/flora/bush/ausbushes/var3/leafybush,
@@ -5457,12 +5463,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/purple/northwest,
 /area/lv624/lazarus/sleep_female)
-"cvT" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/under/cmb,
-/obj/item/clothing/suit/armor/vest/security,
-/turf/open/floor/red,
-/area/lv624/lazarus/security)
 "cwk" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -6254,6 +6254,11 @@
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_jungle)
+"dvh" = (
+/obj/structure/closet,
+/obj/item/clothing/suit/armor/vest/security,
+/turf/open/floor/red/north,
+/area/lv624/lazarus/security)
 "dvp" = (
 /obj/structure/window/framed/colony,
 /turf/open/floor/bar,
@@ -6842,6 +6847,12 @@
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/gm/dirtgrassborder/east,
 /area/lv624/ground/river/east_river)
+"eiX" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/clothing/under/cmb,
+/obj/item/clothing/suit/armor/vest/security,
+/turf/open/floor/red,
+/area/lv624/lazarus/security)
 "eji" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/gm/grass/grass2,
@@ -8061,6 +8072,13 @@
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
+"goz" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/whiteblue/southeast,
+/area/lv624/lazarus/corporate_dome)
 "gpf" = (
 /obj/structure/surface/rack,
 /obj/item/tool/shovel/spade,
@@ -8603,13 +8621,6 @@
 	},
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/colony/west_nexus_road)
-"hfd" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/structure/machinery/vending/cigarette/wy,
-/turf/open/floor/whiteblue/southeast,
-/area/lv624/lazarus/corporate_dome)
 "hfk" = (
 /turf/open/floor/dark,
 /area/lv624/lazarus/quartstorage)
@@ -8938,6 +8949,13 @@
 /obj/structure/cargo_container/wy/right,
 /turf/open/floor/bot/north,
 /area/lv624/ground/barrens/containers)
+"hCd" = (
+/obj/structure/closet,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/whiteblue/west,
+/area/lv624/lazarus/medbay)
 "hDR" = (
 /obj/structure/machinery/vending/security,
 /turf/open/floor/red/east,
@@ -9659,13 +9677,6 @@
 	},
 /turf/open/floor/delivery,
 /area/lv624/lazarus/engineering)
-"izQ" = (
-/obj/structure/closet,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/whiteblue/west,
-/area/lv624/lazarus/medbay)
 "izX" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -10490,12 +10501,6 @@
 /obj/structure/flora/jungle/vines/light_3,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/central_jungle)
-"jIH" = (
-/obj/structure/lz_sign/lazarus_sign/damaged{
-	density = 0
-	},
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz1)
 "jIP" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -10806,6 +10811,10 @@
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/river,
 /area/lv624/ground/river/central_river)
+"kgB" = (
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
 "kgS" = (
 /turf/open/floor/warning/northwest,
 /area/lv624/lazarus/landing_zones/lz1)
@@ -11799,6 +11808,10 @@
 "lzu" = (
 /turf/open/floor/redcorner/east,
 /area/lv624/lazarus/security)
+"lAI" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/whiteblue/northwest,
+/area/lv624/lazarus/main_hall)
 "lAN" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/colony{
 	dir = 1;
@@ -12686,12 +12699,6 @@
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/plating/warnplate/east,
 /area/lv624/ground/barrens/east_barrens/ceiling)
-"mQp" = (
-/obj/structure/lz_sign/lazarus_sign/damaged{
-	layer = 4
-	},
-/turf/open/gm/dirt,
-/area/lv624/lazarus/landing_zones/lz2)
 "mQq" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/structure/pipes/standard/simple/hidden/cyan{
@@ -13038,6 +13045,12 @@
 "nsk" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/river/west_river)
+"nsA" = (
+/obj/structure/lz_sign/lazarus_sign/damaged{
+	layer = 4
+	},
+/turf/open/gm/dirt,
+/area/lv624/lazarus/landing_zones/lz2)
 "nsO" = (
 /obj/structure/machinery/power/apc/no_power/south,
 /turf/open/floor/asteroidfloor/north,
@@ -14972,10 +14985,6 @@
 /obj/structure/fence,
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
 /area/lv624/ground/colony/west_nexus_road)
-"pTj" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/whiteblue/northwest,
-/area/lv624/lazarus/main_hall)
 "pTD" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 4
@@ -17256,11 +17265,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_central_caves)
-"teC" = (
-/obj/effect/landmark/crap_item,
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/white,
-/area/lv624/lazarus/main_hall)
 "teJ" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/closed/wall/strata_ice/jungle,
@@ -18232,6 +18236,11 @@
 /obj/effect/landmark/hunter_primary,
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/east_jungle)
+"uux" = (
+/obj/effect/landmark/crap_item,
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
 "uuE" = (
 /obj/structure/surface/rack,
 /obj/item/shard{
@@ -18842,10 +18851,6 @@
 /area/lv624/ground/jungle/north_jungle)
 "vrx" = (
 /turf/open/floor/whitegreen,
-/area/lv624/lazarus/main_hall)
-"vse" = (
-/obj/structure/machinery/vending/cigarette/wy,
-/turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "vsN" = (
 /obj/structure/largecrate/random,
@@ -20493,11 +20498,6 @@
 	},
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/barrens/south_eastern_barrens)
-"xAI" = (
-/obj/structure/closet,
-/obj/item/clothing/suit/armor/vest/security,
-/turf/open/floor/red/north,
-/area/lv624/lazarus/security)
 "xBm" = (
 /turf/open/gm/river,
 /area/lv624/ground/barrens/west_barrens)
@@ -31254,7 +31254,7 @@ aXX
 aXX
 aXX
 aZP
-mQp
+nsA
 aDv
 aDv
 aDv
@@ -33772,7 +33772,7 @@ dLn
 lue
 tWN
 tWN
-hfd
+goz
 xgE
 uoK
 uUX
@@ -38292,7 +38292,7 @@ anF
 nBn
 pAf
 lcX
-izQ
+hCd
 wXo
 hmF
 vQD
@@ -46315,11 +46315,11 @@ hkk
 pXt
 umM
 aKQ
-cvT
+eiX
 wQf
 haj
 siu
-xAI
+dvh
 aLl
 kxn
 reR
@@ -46991,7 +46991,7 @@ qic
 oBf
 qic
 aGs
-pTj
+lAI
 xLo
 umM
 emo
@@ -47432,7 +47432,7 @@ oUy
 sgj
 mXR
 ayu
-teC
+uux
 umM
 wEZ
 umM
@@ -52235,7 +52235,7 @@ aFF
 aFF
 aGy
 asN
-vse
+kgB
 umM
 umM
 umM
@@ -53602,7 +53602,7 @@ abY
 aky
 jtg
 aky
-jIH
+aPR
 pGb
 baM
 aGz

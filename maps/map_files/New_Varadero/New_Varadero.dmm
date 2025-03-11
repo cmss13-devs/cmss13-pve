@@ -1881,10 +1881,6 @@
 /obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
-"bBs" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/shiva/green/east,
-/area/varadero/interior/hall_SE)
 "bBt" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -3114,6 +3110,10 @@
 	},
 /turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
+"cBl" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/shiva/greenfull/west,
+/area/varadero/interior/hall_SE)
 "cBq" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_22";
@@ -3333,6 +3333,10 @@
 /obj/item/paper/crumpled/bloody,
 /turf/open/floor/carpet,
 /area/varadero/interior/maintenance/north)
+"cLd" = (
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/shiva/blue/southeast,
+/area/varadero/interior/administration)
 "cLz" = (
 /obj/structure/showcase{
 	color = "#95948B";
@@ -5563,6 +5567,10 @@
 /obj/effect/decal/cleanable/blood/oil/streak,
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/digsite)
+"esZ" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/hall_N)
 "etk" = (
 /obj/structure/morgue,
 /turf/open/floor/shiva/floor3,
@@ -7333,6 +7341,10 @@
 /obj/structure/machinery/light,
 /turf/open/floor/bcircuit,
 /area/varadero/interior/maintenance/north)
+"fUJ" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/wood,
+/area/varadero/interior/hall_SE)
 "fVk" = (
 /turf/open/gm/dirt/desert_dug,
 /area/varadero/exterior/pontoon_beach)
@@ -7668,6 +7680,10 @@
 /obj/structure/girder/displaced,
 /turf/open/gm/dirt,
 /area/varadero/exterior/pontoon_beach)
+"gfm" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/shiva/red/northeast,
+/area/varadero/interior/security)
 "gfx" = (
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -8560,6 +8576,10 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/cargo)
+"gNb" = (
+/obj/structure/closet,
+/turf/open/floor/wood,
+/area/varadero/interior/chapel)
 "gNg" = (
 /turf/open/gm/dirt/desert0,
 /area/varadero/exterior/eastbeach)
@@ -10077,10 +10097,6 @@
 "ibB" = (
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/disposals)
-"ibC" = (
-/obj/structure/machinery/vending/cigarette/wy,
-/turf/open/floor/shiva/blue/southeast,
-/area/varadero/interior/administration)
 "ibR" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/disposalpipe/segment,
@@ -10163,13 +10179,6 @@
 	},
 /turf/open/floor/shiva/red/east,
 /area/varadero/interior/morgue)
-"icZ" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/item/clothing/under/cmb,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/security)
 "idd" = (
 /obj/structure/barricade/wooden{
 	dir = 8
@@ -12072,10 +12081,6 @@
 /obj/structure/flora/bush/ausbushes/var3/ywflowers,
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastbeach)
-"jNt" = (
-/obj/structure/closet/secure_closet/personal/RD,
-/turf/open/floor/wood,
-/area/varadero/interior/research)
 "jNE" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -14114,6 +14119,13 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/shiva/redfull/west,
 /area/varadero/interior/hall_SE)
+"lne" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/item/clothing/under/cmb,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/security)
 "lnm" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -15582,6 +15594,13 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance)
+"myA" = (
+/obj/structure/bedsheetbin{
+	icon_state = "linenbin-empty"
+	},
+/obj/item/clothing/under/cmb,
+/turf/open/floor/shiva/floor3,
+/area/varadero/interior/bunks)
 "mzd" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
@@ -20936,13 +20955,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/security)
-"qBa" = (
-/obj/structure/bedsheetbin{
-	icon_state = "linenbin-empty"
-	},
-/obj/item/clothing/under/cmb,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/bunks)
 "qBx" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -21216,6 +21228,10 @@
 /obj/structure/machinery/autolathe,
 /turf/open/floor/shiva/yellowfull/west,
 /area/varadero/interior/cargo)
+"qKq" = (
+/obj/structure/closet/secure_closet/personal/RD,
+/turf/open/floor/wood,
+/area/varadero/interior/research)
 "qKv" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/shiva/multi_tiles,
@@ -21699,10 +21715,6 @@
 	},
 /turf/open/floor/carpet,
 /area/varadero/interior/library)
-"rdy" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/wood,
-/area/varadero/interior/hall_SE)
 "rdE" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/disposalpipe/segment,
@@ -24640,10 +24652,6 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/plating,
 /area/varadero/interior/disposals)
-"tvn" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/shiva/floor3,
-/area/varadero/interior/hall_N)
 "tvI" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/reagent_container/food/condiment/peppermill{
@@ -25776,10 +25784,6 @@
 /obj/structure/barricade/handrail/wire,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/cargo)
-"uuT" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/shiva/red/northeast,
-/area/varadero/interior/security)
 "uvs" = (
 /obj/structure/machinery/power/apc/no_power/north,
 /turf/open/floor/plating/icefloor/asteroidplating,
@@ -26444,10 +26448,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/electrical)
-"uYC" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
-/turf/open/floor/shiva/greenfull/west,
-/area/varadero/interior/hall_SE)
 "uYL" = (
 /obj/item/stack/tile/plasteel{
 	pixel_x = 8;
@@ -29228,6 +29228,10 @@
 	},
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/security)
+"xgj" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/open/floor/shiva/green/east,
+/area/varadero/interior/hall_SE)
 "xgq" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /turf/open/floor/shiva/yellow/north,
@@ -30178,10 +30182,6 @@
 /obj/item/tool/pickaxe,
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior/caves/north_research)
-"xYM" = (
-/obj/structure/closet,
-/turf/open/floor/wood,
-/area/varadero/interior/chapel)
 "xZa" = (
 /obj/structure/prop/rock/brown,
 /turf/open/gm/dirt,
@@ -34120,7 +34120,7 @@ aKc
 dCN
 wPw
 aoE
-jNt
+qKq
 axY
 lNw
 urE
@@ -40470,7 +40470,7 @@ cwQ
 kzE
 fyP
 opI
-xYM
+gNb
 bLB
 vAB
 pEW
@@ -40652,7 +40652,7 @@ ksf
 dvY
 oXf
 ugR
-xYM
+gNb
 bLB
 vAB
 pEW
@@ -45202,7 +45202,7 @@ pGJ
 bhF
 pGJ
 pGJ
-tvn
+esZ
 aTq
 vAB
 pEW
@@ -45786,7 +45786,7 @@ sRM
 xgG
 cJi
 fvt
-ibC
+cLd
 xgG
 rZS
 gXT
@@ -46877,7 +46877,7 @@ jZG
 wmX
 vYQ
 vCZ
-qBa
+myA
 vgF
 xNR
 gFx
@@ -48901,7 +48901,7 @@ ezy
 pgh
 dCQ
 pKs
-uYC
+cBl
 ezO
 ezO
 ezO
@@ -49614,7 +49614,7 @@ wjV
 cdb
 cdb
 slG
-rdy
+fUJ
 kAm
 cdb
 wjV
@@ -51964,7 +51964,7 @@ idw
 izy
 hJw
 wVf
-uuT
+gfm
 gjm
 geH
 wVf
@@ -52549,7 +52549,7 @@ rjn
 vHs
 eZv
 tIp
-bBs
+xgj
 wBf
 cya
 tIp
@@ -53258,7 +53258,7 @@ jZg
 seJ
 gwn
 seJ
-icZ
+lne
 gtj
 hWZ
 rtE
