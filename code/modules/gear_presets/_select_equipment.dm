@@ -430,8 +430,12 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	for(var/obj/structure/closet/secure_closet/marine_personal/closet in GLOB.personal_closets)
 		if(closet.owner)
 			continue
-		if(new_human.job != closet.job)
+		if(closet.linked_spawn_turf)
+			if(new_human.loc != closet.linked_spawn_turf)
+				continue
+		else if(new_human.job != closet.job)
 			continue
+
 		closet.owner = new_human.real_name
 		closet_to_spawn_in = closet
 		closet_to_spawn_in.name = "[closet_to_spawn_in.owner]'s personal locker"
@@ -869,7 +873,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	var/list/elite_merc_rifles = list(
 	/obj/item/weapon/gun/smg/m39/elite = /obj/item/ammo_magazine/smg/m39/ap,
 	/obj/item/weapon/gun/rifle/m41aMK1 = /obj/item/ammo_magazine/rifle/m41aMK1,
-	/obj/item/weapon/gun/rifle/m41a/elite = /obj/item/ammo_magazine/rifle/ap)
+	/obj/item/weapon/gun/rifle/m41aMK1/elite = /obj/item/ammo_magazine/rifle/ap)
 
 	var/list/elite_merc_shotguns = list(
 	/obj/item/weapon/gun/shotgun/merc = pick(GLOB.shotgun_handfuls_12g),
@@ -1093,7 +1097,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/merc(new_human), WEAR_L_HAND)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/shotgun_ammo, WEAR_WAIST)
 		if(6)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/corporate/no_lock(new_human), WEAR_L_HAND)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1(new_human), WEAR_L_HAND)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41amk1(new_human), WEAR_WAIST)
 
 /**
