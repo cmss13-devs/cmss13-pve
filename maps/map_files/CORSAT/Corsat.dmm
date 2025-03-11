@@ -4369,7 +4369,7 @@
 /area/corsat/sigma/hangar/id)
 "byu" = (
 /obj/structure/surface/table/almayer,
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
+/obj/item/clothing/suit/marine/veteran/lamp,
 /turf/open/floor/corsat/brown/north,
 /area/corsat/sigma/cargo)
 "byM" = (
@@ -9470,7 +9470,7 @@
 	color = "#8B9490"
 	},
 /obj/effect/spawner/random/toolbox,
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
+/obj/item/clothing/suit/marine/veteran/lamp,
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/southeast/datamaint)
 "ePm" = (
@@ -23903,7 +23903,7 @@
 /area/corsat/gamma/hallwaysouth)
 "nHr" = (
 /obj/structure/surface/table/almayer,
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
+/obj/item/clothing/suit/marine/veteran/lamp,
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/south/robotics)
 "nHu" = (
