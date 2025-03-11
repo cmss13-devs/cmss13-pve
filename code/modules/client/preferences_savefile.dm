@@ -307,7 +307,7 @@
 
 	S["tgui_lock"] >> tgui_lock
 	S["tgui_fancy"] >> tgui_fancy
-	S["tgui_scale"] >> tgui_scale
+	S["window_scale"] >> window_scale
 
 	var/list/remembered_key_bindings
 	S["remembered_key_bindings"] >> remembered_key_bindings
@@ -374,7 +374,7 @@
 	yautja_status = sanitize_inlist(yautja_status, GLOB.whitelist_hierarchy + list("Elder"), initial(yautja_status))
 	synth_status = sanitize_inlist(synth_status, GLOB.whitelist_hierarchy, initial(synth_status))
 
-	tgui_scale = sanitize_integer(tgui_scale, FALSE, TRUE, initial(tgui_scale))
+	window_scale = sanitize_integer(window_scale, FALSE, TRUE, initial(window_scale))
 	tgui_lock = sanitize_integer(tgui_lock, FALSE, TRUE, initial(tgui_lock))
 	tgui_fancy = sanitize_integer(tgui_fancy, FALSE, TRUE, initial(tgui_fancy))
 
@@ -517,7 +517,7 @@
 
 	S["tgui_fancy"] << tgui_fancy
 	S["tgui_lock"] << tgui_lock
-	S["tgui_scale"] << tgui_scale
+	S["window_scale"] << window_scale
 
 	S.Unlock()
 
