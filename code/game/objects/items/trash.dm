@@ -191,9 +191,8 @@
 	update_overlays()
 
 /obj/item/trash/tray/attackby(obj/item/trash/tray/I, mob/user)
-
-	//stacked_size = stacked_size + (I.stacked_size + 1)
-	//I.stacked_size = 0
+	if(!istype(I, /obj/item/trash/tray))
+		return
 	user.drop_inv_item_to_loc(I, src)
 	contents += I.GetAllContents(0)
 	I.contents = null
@@ -205,7 +204,7 @@
 		w_class = SIZE_SMALL
 	if(contents.len > 7)
 		to_chat(user, SPAN_WARNING("The stack of trays begins to sway!"))
-		if(prob(30))
+		if(prob(30*max(contents.len-7, 1)))
 			stack_collapse()
 		//return FALSE
 	return ..()
@@ -231,6 +230,11 @@
 	if(!contents.len)
 		name = initial(name)
 		desc = initial(desc)
+		item_state = initial(icon_state)
+		if(ishuman(loc))
+			var/mob/living/carbon/human/holder = loc
+			holder.update_inv_r_hand()
+			holder.update_inv_l_hand()
 		return
 	name = "stack of food trays"
 	desc = "There seems to be [contents.len + 1] in the stack, wow!"
