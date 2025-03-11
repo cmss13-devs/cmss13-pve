@@ -624,10 +624,10 @@
 	name = "\improper NSG-23 assault rifle case"
 	desc = "A gun case containing a NSG 23 assault rifle. While usually seen in the hands of PMCs, this weapon is sometimes issued to USCM personnel."
 	storage_slots = 6
-	can_hold = list(/obj/item/weapon/gun/rifle/nsg23/no_lock, /obj/item/ammo_magazine/rifle/nsg23)
+	can_hold = /obj/item/ammo_magazine/rifle/nsg23
 
 /obj/item/storage/box/guncase/nsg23_marine/fill_preset_inventory()
-	new /obj/item/weapon/gun/rifle/nsg23/no_lock(src)
+	new /obj/item/weapon/gun/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
 	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)

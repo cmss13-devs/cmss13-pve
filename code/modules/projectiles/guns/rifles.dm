@@ -111,7 +111,7 @@
 
 /obj/item/weapon/gun/rifle/nsg23
 	name = "\improper NSG 23 assault rifle"
-	desc = "A rare sight, this rifle is seen most commonly in the hands of Weyland-Yutani PMCs. Compared to the M41A MK2, it has noticeably improved handling and vastly improved performance at long and medium range, but compares similarly up close."
+	desc = "Standard issue service rifle of the TWE's Royal Marine Commandos. Designed to chamber 10x24mm caseless ammunition in order to cut cost on munitions manufacturing."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
@@ -129,34 +129,25 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/bipod,
-		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/stock/nsg23,
-		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/flamer/advanced,
-		/obj/item/attachable/attached_gun/grenade,
 		/obj/item/attachable/scope/mini/nsg23,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_BURST_FIRING
 
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini/nsg23,
+		/obj/item/attachable/attached_gun/grenade,
 	)
-	start_semiauto = FALSE
-	start_automatic = TRUE
-
-/obj/item/weapon/gun/rifle/nsg23/Initialize(mapload, spawn_empty)
-	. = ..()
-	update_icon()
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 10, "stock_x" = 5, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 20, "under_x" = 21, "under_y" = 10, "stock_x" = 5, "stock_y" = 17)
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_9)
+	set_burst_delay(FIRE_DELAY_TIER_11)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_9
@@ -174,19 +165,6 @@
 	S.Attach(src)
 	update_attachable(S.slot)
 
-//has no scope or underbarrel
-/obj/item/weapon/gun/rifle/nsg23/stripped
-	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
-
-/obj/item/weapon/gun/rifle/nsg23/no_lock
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	starting_attachment_types = list(
-		/obj/item/attachable/scope/mini/nsg23,
-		/obj/item/attachable/attached_gun/flamer,//non-op flamer for normal spawns
-	)
-
-/obj/item/weapon/gun/rifle/nsg23/no_lock/stripped
-	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
 
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
@@ -303,6 +281,7 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
 	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_falloff_mult = 0
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
 /obj/item/weapon/gun/rifle/m41aMK1/ap //for making it start with ap loaded
