@@ -4423,9 +4423,6 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/device/helmet_visor/leader/upp,
-/obj/item/device/helmet_visor/leader/upp,
-/obj/item/device/helmet_visor/leader/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ka" = (

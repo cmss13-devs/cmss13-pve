@@ -656,6 +656,7 @@
 		WEAR_R_EAR = 'icons/mob/humans/onmob/head_1.dmi',
 		)
 	frequency = ALPHA_FREQ
+	minimap_type = /datum/action/minimap/marine
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"
@@ -679,6 +680,7 @@
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_UPP
 	minimap_flag = MINIMAP_FLAG_UPP
+	minimap_type = /datum/action/minimap/marine/upp
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/territorial
 	name = "UPP Territorial Guard headset"

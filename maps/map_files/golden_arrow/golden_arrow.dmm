@@ -6404,22 +6404,7 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/attachable/scope/pve{
-	pixel_x = 7;
-	pixel_y = 2
-	},
-/obj/item/device/helmet_visor/leader{
-	pixel_x = -8;
-	pixel_y = 9
-	},
-/obj/item/device/helmet_visor/leader{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/device/helmet_visor/leader{
-	pixel_x = -8;
-	pixel_y = -1
-	},
+/obj/item/attachable/scope/pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (
