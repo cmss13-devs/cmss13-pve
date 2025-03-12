@@ -43,6 +43,7 @@
 #define MAP_LV522_LUKES_LANDING "LV-522 Lukes Landing"
 #define MAP_LV522_CHANCES_CLAIM_LUKES_LANDING "LV-522 Chances Claim & Lukes Landing"
 #define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
+#define MAP_CANYON_32B "Canyon 32B"
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"

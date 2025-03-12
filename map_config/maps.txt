@@ -80,3 +80,6 @@ endmap
 map lv522_lukes_landing
 map bmg290_otogi_egress_point
 endmap
+
+map canyon_32b
+endmap

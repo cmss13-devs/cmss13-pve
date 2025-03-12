@@ -145,6 +145,12 @@
 	html_link = "images/5/54/USS_Almayer.png"
 	color = "cyan"
 
+/obj/item/map/canyon_32b
+	name = "\improper Blank Map"
+	desc = "A blank map, or at least you THINK there should be a map on this piece of laminated paper."
+	html_link = ""
+	color = "white"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -170,7 +176,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
 		MAP_LV522_LUKES_LANDING = new /obj/item/map/lv522_map(),
 		MAP_LV522_CHANCES_CLAIM_LUKES_LANDING = new /obj/item/map/lv522_map(),
-		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero()
+		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
+		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
