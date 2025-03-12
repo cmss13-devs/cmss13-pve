@@ -4,6 +4,7 @@
 	languages = list(LANGUAGE_ENGLISH)
 	idtype = /obj/item/card/id/dogtag
 
+	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/twe/New()
 	. = ..()
@@ -14,7 +15,6 @@
 	name = "TWE Royal Marine Commando, Rifleman"
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RMC"
-	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Rifleman"
 	rank = JOB_TWE_RMC_RIFLEMAN
 	skills = /datum/skills/rmc
@@ -98,7 +98,6 @@
 	name = "TWE Royal Marine Commando, Team Leader"
 	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RMC TL"
-	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Royal Marines Team Leader"
 	rank = JOB_TWE_RMC_TEAMLEADER
 	skills = /datum/skills/rmc/leader
@@ -143,7 +142,6 @@
 	name = "TWE Royal Marine Commando, Officer"
 	paygrades = list(PAY_SHORT_RNO1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RMC LT"
-	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Team Commander"
 	rank = JOB_TWE_RMC_LIEUTENANT
 	skills = /datum/skills/rmc/leader
@@ -187,7 +185,6 @@
 	name = "TWE Royal Marine Commando, Medic"
 	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RMC MED"
-	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Medic"
 	rank = JOB_TWE_RMC_RIFLEMAN
 	skills = /datum/skills/rmc
