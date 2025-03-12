@@ -117,7 +117,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/incendiary, WEAR_IN_BACK)
 	spawn_army_fluff_items(new_human)
-	..()
 
 
 /datum/equipment_preset/usa/marksman
