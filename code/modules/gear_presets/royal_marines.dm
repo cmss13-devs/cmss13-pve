@@ -4,6 +4,10 @@
 	languages = list(LANGUAGE_ENGLISH)
 	idtype = /obj/item/card/id/dogtag
 
+
+/datum/equipment_preset/twe/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_WY_PMC)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/twe/royal_marine/standard
