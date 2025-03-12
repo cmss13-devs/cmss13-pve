@@ -835,7 +835,7 @@
 
 /obj/item/clothing/head/beret/royal_marine
 	name = "royal marine beret"
-	desc = "A green beret belonging to the royal marines commando. This beret symbolizes a royal marines ability to fight in any environment, desert, sea, artic or space a royal marine will always be ready."
+	desc = "A green beret worn by the TWE's Royal Marine Commandos. Wear it with pride."
 	icon_state = "rmc_beret"
 	item_state = "rmc_beret"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
@@ -843,7 +843,3 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
-
-/obj/item/clothing/head/beret/royal_marine/team_leader
-	icon_state = "rmc_beret_tl"
-	item_state = "rmc_beret_tl"
