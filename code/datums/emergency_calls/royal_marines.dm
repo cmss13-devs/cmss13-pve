@@ -37,7 +37,7 @@
 				arm_equipment(mob, /datum/equipment_preset/twe/royal_marine/standard, TRUE, TRUE)
 			if("Smartgun")
 				to_chat(mob, SPAN_ROLE_HEADER("You are a Smartgunner in the Royal Marines Commando. Born in the Three World Empire."))
-				arm_equipment(mob, /datum/equipment_preset/twe/royal_marine/spec/machinegun, TRUE, TRUE)
+				arm_equipment(mob, /datum/equipment_preset/twe/royal_marine/machinegun, TRUE, TRUE)
 			if("Breach")
 				to_chat(mob, SPAN_ROLE_HEADER("You are a CQB Specialist in the Royal Marines Commando. Born in the Three World Empire."))
 				arm_equipment(mob, /datum/equipment_preset/twe/royal_marine/standard, TRUE, TRUE)

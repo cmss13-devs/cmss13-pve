@@ -49,14 +49,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78, WEAR_IN_R_STORE)
 
 //*****************************************************************************************************/
-/datum/equipment_preset/twe/royal_marine/spec/machinegun
+/datum/equipment_preset/twe/royal_marine/machinegun
 	name = "TWE Royal Marine Commando, Smartgunner"
 	role_comm_title = "RMC SG"
 	assignment = "Royal Marines Smartgunner"
 	rank = JOB_TWE_RMC_SMARTGUNNER
 	skills = /datum/skills/rmc/smartgun
 
-/datum/equipment_preset/twe/royal_marine/spec/machinegun/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/twe/royal_marine/machinegun/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
 	new_human.equip_to_slot(new /obj/item/smartgun_battery(new_human), WEAR_IN_BACK)

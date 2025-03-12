@@ -14,7 +14,7 @@
 	desc = "TWE patrol armed with a NSG 23 rifle and an L56A2 smartgun, and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
 		/datum/equipment_preset/twe/royal_marine/standard = 1,
-		/datum/equipment_preset/twe/royal_marine/spec/machinegun = 1,
+		/datum/equipment_preset/twe/royal_marine/machinegun = 1,
 	)
 
 /datum/human_ai_squad_preset/twe/squad
@@ -22,7 +22,7 @@
 	desc = "TWE patrol armed with 3 NSG 23 rifles and an M56A2 smartgun, and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
 		/datum/equipment_preset/twe/royal_marine/standard = 2,
-		/datum/equipment_preset/twe/royal_marine/spec/machinegun = 1,
+		/datum/equipment_preset/twe/royal_marine/machinegun = 1,
 		/datum/equipment_preset/twe/royal_marine/team_leader = 1,
 	)
 
