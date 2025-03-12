@@ -2783,7 +2783,7 @@ Defined in conflicts.dm of the #defines folder.
 		R.flags_equip_slot |= SLOT_WAIST
 
 /obj/item/attachable/stock/nsg23
-	name = "NSG 23 stock"
+	name = "NSG L23A1 stock"
 	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
 	icon_state = "nsg23_stock"
 	slot = "stock"

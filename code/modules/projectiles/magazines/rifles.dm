@@ -429,8 +429,8 @@
 // NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
 
 /obj/item/ammo_magazine/rifle/nsg23
-	name = "\improper NSG 23 magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine."
+	name = "\improper NSG L23A1 magazine (10x24mm)"
+	desc = "An NSG L23A1 assault rifle magazine."
 	caliber = "10x24mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
 	icon_state = "nsg23"
@@ -442,14 +442,14 @@
 	ammo_band_icon_empty = "+nsg23_band_e"
 
 /obj/item/ammo_magazine/rifle/nsg23/ap
-	name = "\improper NSG 23 armor-piercing magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine. This one is armor piercing."
+	name = "\improper NSG L23A1 armor-piercing magazine (10x24mm)"
+	desc = "An NSG L23A1 assault rifle magazine. This one is armor piercing."
 	default_ammo = /datum/ammo/bullet/rifle/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/nsg23/heap
-	name = "\improper NSG 23 HEAP magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine. This one is loaded with armor-piercing explosive tipped rounds."
+	name = "\improper NSG L23A1 HEAP magazine (10x24mm)"
+	desc = "An NSG L23A1 assault rifle magazine. This one is loaded with armor-piercing explosive tipped rounds."
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
