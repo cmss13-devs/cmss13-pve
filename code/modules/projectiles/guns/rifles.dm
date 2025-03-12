@@ -137,7 +137,7 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/attached_gun/grenade/mk1,
 		/obj/item/attachable/stock/nsg23,
-		)
+	)
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 20, "under_x" = 19, "under_y" = 11, "stock_x" = 5, "stock_y" = 17)
