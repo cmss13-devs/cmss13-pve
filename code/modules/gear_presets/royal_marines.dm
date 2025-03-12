@@ -3,12 +3,8 @@
 	faction_group = list(FACTION_TWE)
 	languages = list(LANGUAGE_ENGLISH)
 	idtype = /obj/item/card/id/dogtag
-
 	flags = EQUIPMENT_PRESET_EXTRA
 
-/datum/equipment_preset/twe/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_WY_PMC)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/twe/royal_marine/standard
@@ -18,6 +14,7 @@
 	assignment = "Rifleman"
 	rank = JOB_TWE_RMC_RIFLEMAN
 	skills = /datum/skills/rmc
+	access = ACCESS_LIST_WY_PMC
 
 /datum/equipment_preset/twe/royal_marine/standard/load_gear(mob/living/carbon/human/new_human)
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
@@ -61,6 +58,7 @@
 	assignment = "Royal Marines Smartgunner"
 	rank = JOB_TWE_RMC_SMARTGUNNER
 	skills = /datum/skills/rmc/smartgun
+	access = ACCESS_LIST_WY_PMC
 
 /datum/equipment_preset/twe/royal_marine/machinegun/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -103,6 +101,7 @@
 	assignment = "Royal Marines Team Leader"
 	rank = JOB_TWE_RMC_TEAMLEADER
 	skills = /datum/skills/rmc/leader
+	access = ACCESS_LIST_WY_ALL
 
 /datum/equipment_preset/twe/royal_marine/team_leader/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -147,6 +146,7 @@
 	assignment = "Team Commander"
 	rank = JOB_TWE_RMC_LIEUTENANT
 	skills = /datum/skills/rmc/leader
+	access = ACCESS_LIST_WY_ALL
 
 /datum/equipment_preset/twe/royal_marine/lieuteant/load_gear(mob/living/carbon/human/new_human)
 	//back
