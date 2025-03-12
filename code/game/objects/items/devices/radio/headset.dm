@@ -657,6 +657,7 @@
 		WEAR_R_EAR = 'icons/mob/humans/onmob/head_1.dmi',
 		)
 	frequency = ALPHA_FREQ
+	misc_tracking = TRUE
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"
