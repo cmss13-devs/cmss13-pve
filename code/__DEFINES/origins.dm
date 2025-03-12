@@ -19,5 +19,4 @@
 
 // UPP
 #define ORIGIN_UPP "Union of Progressive Peoples"
-
 #define ORIGIN_TWE "Three World Empire"
