@@ -780,6 +780,7 @@
 	name = "kestrel armoured smartgun harness"
 	icon_state = "rmc_smartgun"
 	item_state = "rmc_smartgun"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
 
 /obj/item/clothing/suit/marine/veteran/royal_marine/pointman //Pointman Spec Armor
