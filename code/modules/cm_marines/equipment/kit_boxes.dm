@@ -209,9 +209,6 @@
 
 	for(var/allowed_role in allowed_roles_list)
 		if(user.job == allowed_role)
-			if(!skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_TRAINED) && !skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL))
-				to_chat(user, SPAN_WARNING("You already have specialization, give this kit to someone else!"))
-				return FALSE
 			return TRUE
 
 /obj/item/spec_kit/rifleman/can_use(mob/living/carbon/human/user)
@@ -220,9 +217,6 @@
 
 	for(var/allowed_role in allowed_roles_list)
 		if(user.job == allowed_role)//Alternate check to normal kit as this is distributed to people without SKILL_SPEC_TRAINED.
-			if(skillcheck(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_KITTED) && !skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL))
-				to_chat(user, SPAN_WARNING("You already have specialization, give this kit to someone else!"))
-				return FALSE
 			return TRUE
 
 /obj/item/spec_kit/proc/select_and_spawn(mob/living/carbon/human/user)
@@ -234,9 +228,6 @@
 
 	var/selection = tgui_input_list(user, "Pick your specialist equipment type.", "Specialist Kit Selection", available_specialist_kits, 10 SECONDS)
 	if(!selection || QDELETED(src))
-		return FALSE
-	if(!skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_TRAINED) && !skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL))
-		to_chat(user, SPAN_WARNING("You already unwrapped your [name], give this one to someone else!"))
 		return FALSE
 	if(!GLOB.specialist_set_name_dict[selection] || (GLOB.specialist_set_name_dict[selection].get_available_kit_num() <= 0))
 		to_chat(user, SPAN_WARNING("No more kits of this type may be chosen!"))
