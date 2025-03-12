@@ -110,7 +110,7 @@
 //NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
 
 /obj/item/weapon/gun/rifle/nsg23
-	name = "\improper NSG 23 pulse rifle"
+	name = "\improper NSG L23A1 pulse rifle"
 	desc = "Pulse action 10x24mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine. Features a an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "nsg23"
