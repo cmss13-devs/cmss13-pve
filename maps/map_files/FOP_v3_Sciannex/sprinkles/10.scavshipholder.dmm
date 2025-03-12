@@ -118,7 +118,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/template_noop)
 "mz" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/accessory/storage/webbing,
 /obj/item/clothing/under/marine/veteran/mercenary/support{
 	layer = 2.9;
@@ -177,7 +177,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/template_noop)
 "pw" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/med_data/laptop{
 	dir = 1
 	},
@@ -291,7 +291,7 @@
 	},
 /area/template_noop)
 "xW" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/toolbox/syndicate{
 	pixel_x = -1;
 	pixel_y = 7
@@ -523,7 +523,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/template_noop)
 "ST" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	icon_state = "prisonflip2";
 	dir = 4
 	},
@@ -553,7 +553,7 @@
 	pixel_x = -11;
 	pixel_y = 10
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/spawner/random/toolbox,
 /obj/item/clothing/head/soft/ferret{
 	pixel_y = 7
@@ -576,7 +576,7 @@
 /turf/open/floor/almayer/plate,
 /area/template_noop)
 "VW" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer{
 	icon_state = "security_det";
 	name = "Shuttle control deck";

@@ -57,7 +57,7 @@
 /turf/open/floor/kutjevo/plate,
 /area/adminlevel/chinook/offices)
 "aq" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = -4;
 	pixel_y = 7
@@ -144,7 +144,7 @@
 /turf/open/floor/almayer/silver/southwest,
 /area/adminlevel/chinook)
 "aG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -154,7 +154,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/cargo)
 "aH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder{
 	pixel_y = 3
 	},
@@ -351,7 +351,7 @@
 /turf/open/floor/almayer/blue/east,
 /area/adminlevel/chinook)
 "bj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/roller,
 /obj/item/roller,
 /obj/item/roller,
@@ -593,7 +593,7 @@
 	pixel_x = 1;
 	pixel_y = 2
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/sec)
 "bR" = (
@@ -734,7 +734,7 @@
 /turf/open/floor/almayer/emerald/northeast,
 /area/adminlevel/chinook/shuttle)
 "cy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool/largetank,
 /turf/open/floor/almayer/orange/north,
 /area/adminlevel/chinook/engineering)
@@ -847,7 +847,7 @@
 /turf/open/floor/almayer/sterile_green_corner/north,
 /area/adminlevel/chinook/medical)
 "cX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -1126,7 +1126,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/chinook/sec)
 "eb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/surgical_tray,
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/adminlevel/chinook/offices)
@@ -1180,14 +1180,14 @@
 /turf/open/floor/almayer/bluecorner,
 /area/adminlevel/chinook)
 "em" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/pizzabox/meat{
 	pixel_y = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/chinook/sec)
 "en" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/roller,
 /turf/open/floor/almayer/sterile_green_corner,
 /area/adminlevel/chinook/offices)
@@ -1391,7 +1391,7 @@
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/cargo)
 "eW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/deck,
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook)
@@ -1572,7 +1572,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/sec)
 "fH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /obj/item/clothing/glasses/hud/health,
 /obj/structure/extinguisher_cabinet{
@@ -2160,7 +2160,7 @@
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/shuttle)
 "hY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/belt/medical/lifesaver/full,
 /obj/item/storage/belt/medical/lifesaver/full,
 /obj/item/storage/belt/medical/lifesaver/full,
@@ -2410,7 +2410,7 @@
 /turf/open/floor/almayer/orangecorner,
 /area/adminlevel/chinook/engineering)
 "ja" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/adv,
 /obj/item/storage/firstaid/adv,
 /obj/item/storage/firstaid/adv,
@@ -2461,7 +2461,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/offices)
 "jj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/welding,
 /turf/open/floor/almayer/orange/north,
 /area/adminlevel/chinook/engineering)
@@ -2485,7 +2485,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/offices)
 "jo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/roller,
 /obj/item/roller,
 /obj/item/roller,
@@ -2507,7 +2507,7 @@
 /turf/open/floor/corsat/squares,
 /area/adminlevel/chinook/cargo)
 "js" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/condiment/enzyme,
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/chinook/event)
@@ -2567,7 +2567,7 @@
 	pixel_x = -1;
 	pixel_y = 9
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/event)
 "jD" = (
@@ -2854,7 +2854,7 @@
 /turf/open/floor/almayer/blue/southwest,
 /area/adminlevel/chinook/offices)
 "kQ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /obj/structure/machinery/light{
 	dir = 1
@@ -2868,7 +2868,7 @@
 /obj/structure/machinery/juicer{
 	pixel_y = 3
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/chinook/event)
 "kS" = (
@@ -2878,7 +2878,7 @@
 "kT" = (
 /obj/item/tool/kitchen/knife,
 /obj/item/tool/kitchen/rollingpin,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/chinook/event)
 "kU" = (
@@ -2958,7 +2958,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/roller{
 	pixel_y = 6
 	},
@@ -2974,7 +2974,7 @@
 /turf/open/floor/almayer/red/north,
 /area/adminlevel/chinook/offices)
 "ln" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/uscm_mre{
 	pixel_x = 3;
 	pixel_y = 3
@@ -2999,7 +2999,7 @@
 /turf/open/floor/almayer/orange,
 /area/adminlevel/chinook/engineering)
 "lw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/wypacket{
 	pixel_x = 6;
 	pixel_y = 3
@@ -3043,7 +3043,7 @@
 /area/adminlevel/chinook/event)
 "lE" = (
 /obj/effect/decal/cleanable/flour,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/chinook/event)
 "lG" = (
@@ -3137,7 +3137,7 @@
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/adminlevel/chinook/medical)
 "mc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/pizzabox/mushroom,
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/cargo)
@@ -3425,7 +3425,7 @@
 /turf/open/floor/wood,
 /area/adminlevel/chinook/offices)
 "nm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data{
 	dir = 4
 	},
@@ -3547,7 +3547,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/offices)
 "nG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/glass,
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/cargo)
@@ -3568,7 +3568,7 @@
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/adminlevel/chinook/medical)
 "nN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/door_control{
 	id = "chinookofficelock";
 	name = "Command Office Lockdown";
@@ -3761,7 +3761,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/cargo)
 "oy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/coffee{
 	pixel_x = 7;
 	pixel_y = 7
@@ -3849,7 +3849,7 @@
 /area/adminlevel/chinook/cargo)
 "oJ" = (
 /obj/item/storage/surgical_tray,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/sterile_green,
 /area/adminlevel/chinook/sec)
 "oM" = (
@@ -3870,7 +3870,7 @@
 /turf/open/floor/kutjevo/plate,
 /area/adminlevel/chinook/event)
 "oO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/red,
 /area/adminlevel/chinook/offices)
 "oQ" = (
@@ -3885,7 +3885,7 @@
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/adminlevel/chinook/offices)
 "oV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/glasses/hud/health{
 	pixel_y = 6
 	},
@@ -4032,7 +4032,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/cargo)
 "px" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/defibrillator,
 /obj/item/device/defibrillator,
 /turf/open/floor/almayer/sterile_green_side,
@@ -4067,7 +4067,7 @@
 /area/adminlevel/chinook/offices)
 "pC" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_29";
 	pixel_x = 1;
@@ -4334,7 +4334,7 @@
 /turf/open/floor/kutjevo,
 /area/adminlevel/chinook/offices)
 "qA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/roller{
 	pixel_y = 6
 	},
@@ -4517,7 +4517,7 @@
 /turf/open/floor/kutjevo/tan,
 /area/adminlevel/chinook/event)
 "rk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/beaker/large,
 /obj/item/device/multitool{
 	pixel_x = 8
@@ -4967,7 +4967,7 @@
 /turf/open/floor/kutjevo/plate,
 /area/adminlevel/chinook/event)
 "tc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/drinkingglasses{
 	pixel_x = -7;
 	pixel_y = 7
@@ -5705,7 +5705,7 @@
 /turf/open/floor/almayer/red,
 /area/adminlevel/chinook/sec)
 "wd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 4
 	},
@@ -5827,7 +5827,7 @@
 /turf/open/floor/carpet,
 /area/adminlevel/chinook)
 "wD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/kitchen/knife/butcher{
 	pixel_x = -3;
 	pixel_y = 9
@@ -5839,7 +5839,7 @@
 /turf/open/floor/almayer/blue/north,
 /area/adminlevel/chinook/offices)
 "wF" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/research,
 /turf/open/floor/almayer/sterile_green,
 /area/adminlevel/chinook/medical)
@@ -5959,7 +5959,7 @@
 "xj" = (
 /obj/item/book/manual/chef_recipes,
 /obj/item/clothing/head/chefhat,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/chinook/event)
 "xk" = (
@@ -6082,7 +6082,7 @@
 /turf/open/floor/almayer/red/northwest,
 /area/adminlevel/chinook/sec)
 "xN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/sec)
 "xO" = (
@@ -6226,7 +6226,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/sec)
 "yz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/stack/sheet/metal/large_stack,
 /turf/open/floor/almayer/orange,
 /area/adminlevel/chinook/engineering)
@@ -6539,13 +6539,13 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/engineering)
 "zY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light,
 /obj/structure/machinery/recharger,
 /turf/open/floor/almayer/red/southwest,
 /area/adminlevel/chinook/offices)
 "Ac" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = 5;
@@ -6668,7 +6668,7 @@
 /turf/open/floor/almayer/sterile_green,
 /area/adminlevel/chinook/medical)
 "AC" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/chinook/event)
 "AD" = (
@@ -6858,7 +6858,7 @@
 /turf/open/floor/carpet,
 /area/adminlevel/chinook/event)
 "Bn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/belt/utility/full,
 /obj/item/device/lightreplacer,
 /turf/open/floor/almayer/orange/northwest,
@@ -6896,7 +6896,7 @@
 /turf/open/floor/almayer/sterile_green_corner/north,
 /area/adminlevel/chinook/medical)
 "Bz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/lights,
 /obj/item/storage/box/lights/mixed{
 	pixel_x = 6;
@@ -7104,7 +7104,7 @@
 /turf/open/floor/kutjevo/plate,
 /area/adminlevel/chinook)
 "Cs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/uscm{
 	pixel_y = 6
 	},
@@ -7429,7 +7429,7 @@
 /turf/closed/shuttle/ert,
 /area/adminlevel/chinook/shuttle/unpowered)
 "DL" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /obj/structure/machinery/light{
 	dir = 8
@@ -7456,7 +7456,7 @@
 /turf/open/floor/almayer_hull,
 /area/space)
 "DR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/almayer/orange/east,
 /area/adminlevel/chinook/engineering)
@@ -7548,7 +7548,7 @@
 /turf/open/floor/kutjevo,
 /area/adminlevel/chinook/offices)
 "En" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /obj/item/roller{
 	pixel_y = 6
@@ -7665,7 +7665,7 @@
 	pixel_x = -1;
 	pixel_y = 6
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/chinook/event)
 "ET" = (
@@ -7789,7 +7789,7 @@
 /turf/closed/shuttle/elevator/gears,
 /area/adminlevel/chinook/offices)
 "Fy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/extinguisher,
 /obj/item/tool/extinguisher,
 /turf/open/floor/almayer/orange/east,
@@ -7820,7 +7820,7 @@
 /turf/open/floor/almayer/red/north,
 /area/adminlevel/chinook/sec)
 "FG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/microwave{
 	pixel_y = 7
 	},
@@ -7865,7 +7865,7 @@
 /turf/open/floor/almayer/tcomms,
 /area/adminlevel/chinook/engineering)
 "FR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/circuitboard/apc,
 /obj/structure/machinery/light{
 	dir = 8
@@ -7880,7 +7880,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/engineering)
 "FU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/sliceable/pumpkinpie{
 	pixel_y = 6
 	},
@@ -8092,7 +8092,7 @@
 /turf/open/floor/almayer/orange/east,
 /area/adminlevel/chinook/engineering)
 "GM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/lightreplacer,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/almayer/plate,
@@ -8121,7 +8121,7 @@
 /turf/open/floor/almayer/orange/west,
 /area/adminlevel/chinook/engineering)
 "GT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/gloves{
 	pixel_x = -5;
 	pixel_y = -5
@@ -8188,13 +8188,13 @@
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/engineering)
 "Hh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/belt/utility/full,
 /obj/item/device/lightreplacer,
 /turf/open/floor/almayer/orange,
 /area/adminlevel/chinook/engineering)
 "Hj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/almayer/orange,
 /area/adminlevel/chinook/engineering)
@@ -8241,7 +8241,7 @@
 /turf/open/floor/kutjevo/tan/alt_edge,
 /area/adminlevel/chinook)
 "Hv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/handcuffs{
 	pixel_x = 4;
 	pixel_y = 4
@@ -8389,7 +8389,7 @@
 	},
 /area/adminlevel/chinook/offices)
 "HU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/roller{
 	pixel_y = 6
 	},
@@ -8462,7 +8462,7 @@
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/sec)
 "Ik" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/chem_dispenser/soda{
 	pixel_y = 5
 	},
@@ -8718,7 +8718,7 @@
 /turf/open/floor/almayer/red/north,
 /area/adminlevel/chinook/sec)
 "Jy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/weldingtool/largetank,
 /obj/item/tool/weldingtool/largetank,
 /obj/item/tool/weldingtool/largetank,
@@ -8911,7 +8911,7 @@
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/sec)
 "Ko" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner"
@@ -8939,7 +8939,7 @@
 /turf/open/floor/almayer/silver/east,
 /area/adminlevel/chinook)
 "Ku" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/uscm{
 	pixel_x = -4;
 	pixel_y = 6
@@ -9122,7 +9122,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/engineering)
 "Ld" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_y = 7
 	},
@@ -9252,7 +9252,7 @@
 /turf/open/floor/kutjevo/plate,
 /area/adminlevel/chinook)
 "LA" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/glass{
 	pixel_y = 4
 	},
@@ -9281,7 +9281,7 @@
 /turf/open/floor/kutjevo/plate,
 /area/adminlevel/chinook)
 "LE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/toolbox,
 /obj/item/folder/yellow{
 	pixel_y = 7
@@ -9302,7 +9302,7 @@
 /turf/open/floor/carpet,
 /area/adminlevel/chinook/sec)
 "LG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/handcuffs{
 	pixel_x = 4;
 	pixel_y = 4
@@ -9559,7 +9559,7 @@
 /turf/open/floor/almayer/emerald/west,
 /area/adminlevel/chinook/shuttle)
 "MK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/sec)
@@ -9701,7 +9701,7 @@
 /turf/open/floor/almayer/cargo,
 /area/adminlevel/chinook/cargo)
 "Nu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook)
 "Nv" = (
@@ -9877,7 +9877,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/cargo)
 "On" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/defibrillator,
 /obj/item/device/defibrillator,
 /turf/open/floor/almayer/sterile_green_side/west,
@@ -9893,7 +9893,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/medical)
 "Os" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/crowbar{
 	pixel_y = 11
 	},
@@ -10068,7 +10068,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/engineering)
 "Pa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/emeraldgreen{
 	pixel_y = 10
 	},
@@ -10180,12 +10180,12 @@
 /turf/open/floor/almayer/red/west,
 /area/adminlevel/chinook/sec)
 "Pu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/orange,
 /area/adminlevel/chinook/engineering)
 "Pv" = (
 /obj/item/storage/donut_box,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/red/east,
 /area/adminlevel/chinook/sec)
 "Pw" = (
@@ -10317,7 +10317,7 @@
 /turf/open/floor/almayer,
 /area/adminlevel/chinook)
 "PY" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bedsheetbin{
 	pixel_x = 8;
 	pixel_y = 13
@@ -10328,7 +10328,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/engineering)
 "PZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/bucket/mopbucket{
 	pixel_y = 10
 	},
@@ -10336,7 +10336,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/engineering)
 "Qa" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/dice{
 	pixel_x = -7;
 	pixel_y = 5
@@ -10358,7 +10358,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/engineering)
 "Qe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/vents/scrubber,
 /obj/item/storage/box/pillbottles,
 /obj/item/storage/box/pillbottles,
@@ -10530,7 +10530,7 @@
 /turf/open/floor/almayer,
 /area/adminlevel/chinook/sec)
 "QI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light,
 /obj/item/paper_bin/uscm{
 	pixel_y = 6
@@ -10769,7 +10769,7 @@
 /turf/open/floor/almayer/red/northeast,
 /area/adminlevel/chinook/sec)
 "RK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/firstaid/regular,
 /obj/structure/machinery/light{
@@ -10934,7 +10934,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook)
 "Sy" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lucky_strikes,
 /obj/item/tool/lighter,
 /obj/item/clothing/glasses/sunglasses/blindfold,
@@ -10976,7 +10976,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook/offices)
 "SI" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder{
 	pixel_y = 3
 	},
@@ -11069,7 +11069,7 @@
 /turf/open/floor/almayer/orange/north,
 /area/adminlevel/chinook/engineering)
 "Ta" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/white,
 /turf/open/floor/almayer/sterile_green,
 /area/adminlevel/chinook/medical)
@@ -11084,7 +11084,7 @@
 /turf/open/floor/plating,
 /area/adminlevel/chinook/shuttle)
 "Tf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger,
 /turf/open/floor/almayer/sterile_green_side,
 /area/adminlevel/chinook/medical)
@@ -11112,7 +11112,7 @@
 /turf/closed/wall/almayer,
 /area/adminlevel/chinook/event)
 "To" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/surgical_tray,
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/adminlevel/chinook/medical)
@@ -11308,7 +11308,7 @@
 /turf/open/floor/almayer/sterile_green_side/southwest,
 /area/adminlevel/chinook/medical)
 "Uf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/surgical_tray,
 /turf/open/floor/almayer/sterile_green_corner/west,
 /area/adminlevel/chinook/medical)
@@ -11333,7 +11333,7 @@
 /area/adminlevel/chinook/cargo)
 "Uk" = (
 /obj/structure/machinery/light,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/USCMtray{
 	pixel_x = -4;
 	pixel_y = 10
@@ -11758,7 +11758,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/chinook/offices)
 "Wb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/wy{
 	pixel_y = 7
 	},
@@ -11930,7 +11930,7 @@
 /turf/open/floor/almayer/cargo,
 /area/adminlevel/chinook/sec)
 "WJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/masks{
 	pixel_x = -5;
 	pixel_y = 5
@@ -11979,7 +11979,7 @@
 /turf/open/floor/almayer/cargo,
 /area/adminlevel/chinook/engineering)
 "WT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/roller,
 /obj/item/roller,
 /obj/item/storage/belt/medical/lifesaver/full,
@@ -11996,7 +11996,7 @@
 /turf/open/floor/almayer/cargo_arrow,
 /area/adminlevel/chinook/cargo)
 "WW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 8;
 	pixel_x = -2
@@ -12337,7 +12337,7 @@
 /turf/closed/shuttle/elevator/gears,
 /area/adminlevel/chinook/cargo)
 "Yo" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/egg_box{
 	pixel_y = 9
 	},
@@ -12569,7 +12569,7 @@
 /turf/open/floor/almayer/silver,
 /area/adminlevel/chinook/cryo)
 "Zg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/glass/beaker/cryoxadone{
 	pixel_x = 7;
 	pixel_y = 10
@@ -12741,7 +12741,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/engineering)
 "ZO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder{
 	pixel_y = 3
 	},
@@ -12773,7 +12773,7 @@
 /turf/open/floor/almayer/uscm/directional/east,
 /area/adminlevel/chinook/shuttle)
 "ZW" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/random/tool{
 	pixel_x = 6
 	},
