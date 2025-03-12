@@ -761,6 +761,7 @@
 /obj/item/clothing/suit/marine/veteran/royal_marine/light //RMC Rifleman Armor
 	icon_state = "rmc_light"
 	item_state = "rmc_light"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
@@ -773,6 +774,7 @@
 	name = "kestrel armoured carry vest"
 	icon_state = "rmc_light_padded"
 	item_state = "rmc_light_padded"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 
 /obj/item/clothing/suit/marine/veteran/royal_marine/smartgun //Smartgun Spec Armor
 	name = "kestrel armoured smartgun harness"

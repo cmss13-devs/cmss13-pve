@@ -1040,7 +1040,3 @@
 	name = "LatAm Colonial Guard"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
-
-#undef AMERICAN_ETHNICITY
-#undef LATIN_AMERICAN_ETHNICITY
-#undef JAPANESE_ETHNICITY

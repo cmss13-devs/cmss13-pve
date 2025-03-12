@@ -3,7 +3,7 @@
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction = FACTION_UPP
 	idtype = /obj/item/card/id/dogtag
-	origin_override = ORIGIN_TWE
+	origin_override = ORIGIN_UPP
 
 /datum/equipment_preset/upp/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE,40;FEMALE)
