@@ -234,14 +234,8 @@
 		return
 	var/mob/user_mob = user.mob
 	var/datum/action/minimap/minimap
-	if(isobserver(user_mob))
-		var/mob/dead/observer/ghost = user_mob
-		if(!ghost.minimap || !(user.screen))
-			return
-		minimap = ghost.minimap
-	else
-		minimap = locate() in user_mob.actions
-		if(!minimap || !(user.screen))
-			return
+	minimap = locate() in user_mob.actions
+	if(!minimap && !(user.screen))
+		return
 	minimap.action_activate()
 	return TRUE
