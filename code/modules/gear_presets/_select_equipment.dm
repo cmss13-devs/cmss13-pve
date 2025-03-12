@@ -1521,3 +1521,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	else
 		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
 	new_human.underwear = "USCM Boxers"
+
+/datum/equipment_preset/proc/add_upp_underwear(mob/living/carbon/human/new_human)
+	new_human.undershirt = pick("Naval Infantry Telnyashka")
+	new_human.underwear = "UPP Boxers"

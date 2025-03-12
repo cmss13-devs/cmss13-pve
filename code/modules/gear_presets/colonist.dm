@@ -6,6 +6,10 @@
 	idtype = /obj/item/card/id/lanyard
 	origin_override = ORIGIN_CIVILIAN
 
+/datum/equipment_preset/colonist/load_gear(mob/living/carbon/human/new_human)
+	add_civilian_underwear(new_human)
+	. = ..()
+
 /datum/equipment_preset/colonist/bluecollar
 
 	name = "US Civilian, Blue-Collar"
@@ -34,6 +38,7 @@
 	add_civilian_jacket(new_human)
 	//limbs
 	add_civilian_shoe(new_human)
+	. = ..()
 
 /datum/equipment_preset/colonist/bluecollar/spanish
 	name = "LatAm Civilian, Blue-Collar"
@@ -71,6 +76,7 @@
 	add_worker_jacket(new_human)
 	//limbs
 	add_worker_shoe(new_human)
+	. = ..()
 
 /datum/equipment_preset/colonist/miner/spanish
 	name = "LatAm Civilian, Blue-Collar (Miner)"
@@ -106,6 +112,7 @@
 	add_worker_jacket(new_human)
 	//limbs
 	add_worker_shoe(new_human)
+	. = ..()
 
 /datum/equipment_preset/colonist/construction/spanish
 	name = "LatAm Civilian, Blue-Collar (Construction)"
@@ -156,6 +163,7 @@
 	//limbs
 	add_worker_gloves(new_human)
 	add_worker_shoe(new_human)
+	. = ..()
 
 /datum/equipment_preset/colonist/roughneck/spanish
 	name = "LatAm Civilian, Blue-Collar (Roughneck)"
@@ -191,6 +199,7 @@
 	new_human.equip_to_slot_or_del(new/obj/item/clothing/suit/chef/classic, WEAR_JACKET)
 	//limbs
 	add_worker_shoe(new_human)
+	. = ..()
 
 /datum/equipment_preset/colonist/cook/spanish
 	name = "LatAm Civilian, Blue-Collar (Cook)"
@@ -224,6 +233,7 @@
 	new_human.equip_to_slot_or_del(new/obj/item/clothing/suit/chef, WEAR_JACKET)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+	. = ..()
 
 /datum/equipment_preset/colonist/chef/spanish
 	name = "LatAm Civilian, Blue-Collar (Chef)"
@@ -257,6 +267,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/corporate/black(new_human), WEAR_JACKET)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+	. = ..()
 
 /datum/equipment_preset/colonist/priest/spanish
 	name = "LatAm Civilian, Priest"
@@ -298,6 +309,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/blue(new_human), WEAR_ACCESSORY)
 	//limb
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+	. = ..()
 
 
 /datum/equipment_preset/colonist/whitecollar/spanish
@@ -342,6 +354,7 @@
 	//limb
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/briefcase(new_human), WEAR_L_HAND)
+	. = ..()
 
 /datum/equipment_preset/colonist/whitecollar/exec/spanish
 	name = "LatAm Civilian, White-Collar (Corporate Exec)"
@@ -397,6 +410,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/vest/grey(new_human), WEAR_JACKET)
 	//limb
 	add_dress_shoes(new_human)
+	. = ..()
 
 /datum/equipment_preset/colonist/researcher/spanish
 	name = "LatAm Civilian, Researcher"
@@ -432,6 +446,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(new_human), WEAR_JACKET)
 	//limb
 	add_dress_shoes(new_human)
+	. = ..()
 
 /datum/equipment_preset/colonist/doctor/spanish
 	name = "LatAm Civilian, Doctor"
@@ -467,6 +482,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/stethoscope(new_human), WEAR_ACCESSORY)
 	//limb
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+	. = ..()
 
 /datum/equipment_preset/colonist/doctor/scrubs/spanish
 	name = "LatAm Civilian, Doctor, Scrubs"
@@ -500,6 +516,7 @@
 	add_business_outfit(new_human)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+	. = ..()
 
 /datum/equipment_preset/colonist/admin/spanish
 	name = "LatAm Civilian, Administrator"
@@ -541,6 +558,7 @@
 		if(5)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 	add_worker_gloves(new_human)
+	. = ..()
 
 /datum/equipment_preset/colonist/cargo/spanish
 	name = "LatAm Logistics Worker"
@@ -579,6 +597,7 @@
 	//limb
 	add_worker_shoe(new_human)
 	add_worker_gloves(new_human)
+	. = ..()
 
 /datum/equipment_preset/colonist/technician/spanish
 	name = "LatAm Maintenance Technician"
@@ -630,6 +649,7 @@
 	//limb
 	add_worker_shoe(new_human)
 	add_worker_gloves(new_human)
+	. = ..()
 
 /datum/equipment_preset/colonist/engineer/spanish
 	name = "LatAm Civilian, Engineer"
@@ -689,6 +709,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/prison_boiler(new_human), WEAR_BODY)
 	//limb
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+	. = ..()
 
 /datum/equipment_preset/colonist/prisoner/spanish
 	name = "LatAm Prisoner"
@@ -776,6 +797,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/colonist/security/weyland/japanese
 	name = "TWE Civilian, Security Guard, Wey-Yu"
@@ -821,6 +843,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/colonist/security/weyland/tactical/japanese
 	name = "TWE Civilian, Security Guard, Wey-Yu (Tactical SMG)"
@@ -865,6 +888,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/colonist/security/weyland/tactical/lead/japanese
 	name = "TWE Civilian, Security Guard, Wey-Yu (Tactical Shotgun)"
@@ -900,6 +924,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/colonist/security/trijent/japanese
 	name = "TWE Civilian, Security Guard, Trijent Corp"
@@ -940,6 +965,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/colonist/security/prison/spanish
 	name = "LatAm Federal Prison Guard"
@@ -989,19 +1015,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
 	add_worker_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
-
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/colonist/security/guard/spanish
 	name = "LatAm Colonial Guard UACG"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-#undef AMERICAN_ETHNICITY
-#undef LATIN_AMERICAN_ETHNICITY
-#undef JAPANESE_ETHNICITY
