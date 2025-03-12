@@ -711,7 +711,6 @@
 	rank = JOB_UPP_COMMANDO_LEADER
 	role_comm_title = "RECON-TL"
 	paygrades = list(PAY_SHORT_UO2 = JOB_PLAYTIME_TIER_0)
-	. = ..()
 
 //*****************************************************************************************************/
 
