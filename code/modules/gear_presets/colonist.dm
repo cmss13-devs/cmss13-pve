@@ -26,8 +26,6 @@
 	return "Class C Inhabitant"
 
 /datum/equipment_preset/colonist/bluecollar/load_gear(mob/living/carbon/human/new_human)
-
-	add_civilian_underwear(new_human)
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -62,7 +60,7 @@
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 
 /datum/equipment_preset/colonist/miner/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 
 	//back
 	add_random_satchel(new_human)
@@ -99,7 +97,7 @@
 
 /datum/equipment_preset/colonist/construction/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -143,7 +141,7 @@
 
 /datum/equipment_preset/colonist/roughneck/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -186,7 +184,7 @@
 
 /datum/equipment_preset/colonist/cook/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -222,7 +220,7 @@
 
 /datum/equipment_preset/colonist/chef/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -256,7 +254,7 @@
 
 /datum/equipment_preset/colonist/priest/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -295,7 +293,7 @@
 
 /datum/equipment_preset/colonist/whitecollar/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//back
 	add_random_satchel(new_human)
@@ -339,7 +337,7 @@
 
 /datum/equipment_preset/colonist/whitecollar/exec/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//back
 	add_random_satchel(new_human)
@@ -378,7 +376,7 @@
 
 /datum/equipment_preset/colonist/researcher/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -434,7 +432,7 @@
 
 /datum/equipment_preset/colonist/doctor/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -463,7 +461,7 @@
 
 /datum/equipment_preset/colonist/doctor/scrubs/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
 	//face
@@ -507,7 +505,7 @@
 
 /datum/equipment_preset/colonist/admin/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	//face
@@ -539,7 +537,7 @@
 
 /datum/equipment_preset/colonist/cargo/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	//face
@@ -581,7 +579,7 @@
 
 /datum/equipment_preset/colonist/technician/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	//face
@@ -624,7 +622,7 @@
 	return "Foreman"
 
 /datum/equipment_preset/colonist/engineer/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	//face
@@ -672,7 +670,7 @@
 
 /datum/equipment_preset/colonist/operations/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	//face
@@ -704,7 +702,7 @@
 
 /datum/equipment_preset/colonist/prisoner/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/prison_boiler(new_human), WEAR_BODY)
 	//limb
@@ -732,7 +730,7 @@
 
 /datum/equipment_preset/colonist/security/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -768,7 +766,7 @@
 
 /datum/equipment_preset/colonist/security/weyland/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -809,7 +807,7 @@
 	assignment = "Weyland-Yutani Corporate Tactical Response Officer"
 
 /datum/equipment_preset/colonist/security/weyland/tactical/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -854,7 +852,7 @@
 	name = "US Civilian, Security Guard, Wey-Yu (Tactical Shotgun)"
 
 /datum/equipment_preset/colonist/security/weyland/tactical/lead/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -907,7 +905,7 @@
 
 /datum/equipment_preset/colonist/security/trijent/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -944,7 +942,7 @@
 
 /datum/equipment_preset/colonist/security/prison/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -984,7 +982,7 @@
 
 /datum/equipment_preset/colonist/security/guard/load_gear(mob/living/carbon/human/new_human)
 
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	//face

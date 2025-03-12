@@ -44,6 +44,10 @@
 			uniform.sensor_faction = FACTION_MARINE
 	return ..()
 
+/datum/equipment_preset/colonist/load_gear(mob/living/carbon/human/new_human)
+	add_civilian_underwear(new_human)
+	. = ..()
+
 //*****************************************************************************************************/
 /datum/equipment_preset/cmb/deputy
 	name = "US CMB Colonial Marshals Deputy"
@@ -55,7 +59,7 @@
 	skills = /datum/skills/cmb
 
 /datum/equipment_preset/cmb/deputy/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -83,6 +87,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/cmb/deputy/spanish
 	name = "LatAm CMB Colonial Marshals Deputy"
@@ -93,7 +98,7 @@
 	name = "US CMB Colonial Marshals Deputy (Emergency, SMG)"
 
 /datum/equipment_preset/cmb/deputy/emergency/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -140,6 +145,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/cmb/deputy/emergency/spanish
 	name = "LatAm CMB Colonial Marshals Deputy (Emergency, SMG)"
@@ -150,7 +156,7 @@
 	name = "US CMB Colonial Marshals Deputy (Emergency, Shotgun)"
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -183,7 +189,6 @@
 		add_combat_gloves(new_human)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large, WEAR_R_STORE)
@@ -194,6 +199,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/spanish
 	name = "LatAm CMB Colonial Marshals Deputy (Emergency, Shotgun)"
@@ -214,7 +220,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/cmb/marshal/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/tnr, WEAR_IN_BACK)
@@ -243,6 +249,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/cmb/marshal/spanish
 	name = "LatAm CMB Colonial Marshal"
@@ -294,7 +301,7 @@
 	new_human.set_species(SYNTH_COLONY)
 
 /datum/equipment_preset/cmb/synth/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/tnr, WEAR_IN_BACK)
@@ -319,6 +326,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
@@ -335,7 +343,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/cmb/liaison/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 	//clothes
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CMB/ICC, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black, WEAR_BODY)
@@ -352,6 +360,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/folder/white, WEAR_IN_R_STORE)
 //backpack and stuff in it
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
+	. = ..()
 
 //*****************************************************************************************************/
 
@@ -368,7 +377,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_RUSSIAN)
 
 /datum/equipment_preset/cmb/observer/load_gear(mob/living/carbon/human/new_human)
-	add_civilian_underwear(new_human)
+
 	//clothes
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CMB/ICC, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black, WEAR_BODY)
@@ -383,3 +392,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/notepad/blue, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/folder/white, WEAR_IN_R_STORE)
+	. = ..()
