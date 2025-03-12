@@ -55,6 +55,26 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
+"ai" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv295/indoors/sublevel_1)
+"aj" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv295/indoors/sublevel_1)
 "ak" = (
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
@@ -6720,6 +6740,10 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv295/indoors/sublevel_1)
 "vF" = (
@@ -10472,6 +10496,10 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv295/indoors/sublevel_1)
 "GK" = (
@@ -13308,6 +13336,10 @@
 "OY" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv295/indoors/maint)
@@ -27686,7 +27718,7 @@ cW
 dw
 ua
 BE
-HR
+aj
 GJ
 Tl
 ua
@@ -28298,7 +28330,7 @@ Vu
 dw
 ua
 BE
-HR
+aj
 vD
 Tl
 ua
@@ -28910,8 +28942,8 @@ lL
 dw
 ua
 BE
-HR
-Yx
+aj
+ai
 Tl
 ua
 BE
@@ -29522,7 +29554,7 @@ cJ
 yz
 ua
 BE
-HR
+aj
 vD
 Tl
 ua
@@ -30134,8 +30166,8 @@ lL
 dw
 ua
 BE
-HR
-Yx
+aj
+ai
 Tl
 ua
 jn
