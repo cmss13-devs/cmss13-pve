@@ -1510,4 +1510,5 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 		if(2 to 3)
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
 

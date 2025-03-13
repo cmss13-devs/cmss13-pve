@@ -416,8 +416,8 @@
 
 /obj/item/clothing/accessory/patch/royal_marines
 	name = "TWE Royal Marines Commando patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the royal marines commando."
-	icon_state = "commandopatch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Royal Marines Commando."
+	icon_state = "rmcpatch"
 
 /obj/item/clothing/accessory/patch/upp
 	name = "UPP patch"
