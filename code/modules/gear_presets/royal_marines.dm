@@ -5,24 +5,29 @@
 	languages = list(LANGUAGE_ENGLISH)
 	flags = EQUIPMENT_PRESET_EXTRA
 	origin_override = ORIGIN_TWE
+	access = list(ACCESS_LIST_WY_PMC)
 	idtype = /obj/item/card/id/dogtag
 
+
 //*****************************************************************************************************/
+/datum/equipment_preset/twe/royal_marine/load_id(mob/living/carbon/human/new_human, client/mob_client)
+	var/obj/item/clothing/under/uniform = new_human.w_uniform
+	if(istype(uniform))
+		uniform.has_sensor = UNIFORM_HAS_SENSORS
+		uniform.sensor_faction = FACTION_TWE
+	return ..()
 
 /datum/equipment_preset/royal_marine/standard
 	name = "TWE Royal Marine Commando, Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
-	access = ACCESS_LIST_WY_PMC
+	access = list(ACCESS_LIST_WY_PMC)
 	role_comm_title = "RMC"
 	assignment = "Rifleman"
 	rank = JOB_TWE_RMC_RIFLEMAN
 	skills = /datum/skills/rmc
 
 /datum/equipment_preset/royal_marine/standard/load_gear(mob/living/carbon/human/new_human)
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-		new_human.equip_to_slot_or_del(/obj/item/clothing/under/marine/veteran/marsoc, WEAR_BODY)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/heavy, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
@@ -42,6 +47,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine/light/team_leader, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23, WEAR_J_STORE)
@@ -55,11 +62,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78, WEAR_IN_R_STORE)
 
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(/obj/item/clothing/under/marine/veteran/marsoc, WEAR_BODY)
+
 /datum/equipment_preset/royal_marine/medic
 	name = "TWE Royal Marine Commando, Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
-	access = ACCESS_LIST_WY_PMC
 	role_comm_title = "RMC MED"
 	assignment = "Medic"
 	rank = JOB_TWE_RMC_RIFLEMAN
@@ -90,7 +100,8 @@
 	add_rmc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine/light/team_leader, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23, WEAR_J_STORE)
@@ -104,6 +115,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78, WEAR_IN_R_STORE)
 
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(/obj/item/clothing/under/marine/veteran/marsoc, WEAR_BODY)
+
 //*****************************************************************************************************/
 /datum/equipment_preset/royal_marine/machinegun
 	name = "TWE Royal Marine Commando, Smartgunner"
@@ -112,7 +127,6 @@
 	assignment = "Royal Marines Smartgunner"
 	rank = JOB_TWE_RMC_SMARTGUNNER
 	skills = /datum/skills/rmc/smartgun
-	access = ACCESS_LIST_WY_PMC
 
 /datum/equipment_preset/royal_marine/machinegun/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -147,6 +161,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78, WEAR_IN_R_STORE)
 
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(/obj/item/clothing/under/marine/veteran/marsoc, WEAR_BODY)
+
 //*****************************************************************************************************/
 /datum/equipment_preset/royal_marine/team_leader
 	name = "TWE Royal Marine Commando, Team Leader"
@@ -156,7 +174,7 @@
 	assignment = "Royal Marines Team Leader"
 	rank = JOB_TWE_RMC_TEAMLEADER
 	skills = /datum/skills/rmc/leader
-	access = ACCESS_LIST_WY_ALL
+	access = list(ACCESS_LIST_WY_ALL)
 
 /datum/equipment_preset/royal_marine/team_leader/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -192,6 +210,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78, WEAR_IN_R_STORE)
 
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(/obj/item/clothing/under/marine/veteran/marsoc, WEAR_BODY)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/lieuteant //they better say it Lef-tenant or they should be banned for LRP. More importantly this guy doesn't spawn in the ERT
@@ -202,7 +223,7 @@
 	assignment = "Team Commander"
 	rank = JOB_TWE_RMC_LIEUTENANT
 	skills = /datum/skills/rmc/leader
-	access = ACCESS_LIST_WY_ALL
+	access = list(ACCESS_LIST_WY_ALL)
 
 /datum/equipment_preset/royal_marine/lieuteant/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -237,3 +258,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78, WEAR_IN_R_STORE)
+
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(/obj/item/clothing/under/marine/veteran/marsoc, WEAR_BODY)
