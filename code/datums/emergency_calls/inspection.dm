@@ -74,7 +74,7 @@
 
 	if(!leader && HAS_FLAG(H.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(H.client, list(JOB_SO), time_required_for_job))
 		leader = H
-		arm_equipment(H, /datum/equipment_preset/uscm_ship/so, TRUE, TRUE)
+		arm_equipment(H, /datum/equipment_preset/uscm/so, TRUE, TRUE)
 		to_chat(H, SPAN_ROLE_HEADER("You are an Inspector sent by the USCM High Command!"))
 		to_chat(H, SPAN_ROLE_BODY("An inspection is scheduled for the [MAIN_SHIP_NAME] during their current assignment. High Command may have other directives for you that they will relay via radio."))
 		to_chat(H, SPAN_ROLE_BODY("Tour the ship, monitor the organization, effectiveness and SOP compliance of its respective departments, interview its crew and find any issues. Relay the results of your inspection to both the Officer in Command of the ship and USCM High Command."))

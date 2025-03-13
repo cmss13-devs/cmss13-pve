@@ -263,60 +263,60 @@
 			var/datum/job/J = GLOB.RoleAuthority.roles_by_name[JOB_CO]
 			return J.gear_preset_whitelist["[JOB_CO][J.get_whitelist_status(owner)]"]
 		if(JOB_SO)
-			return /datum/equipment_preset/uscm_ship/so
+			return /datum/equipment_preset/uscm/so
 		if(JOB_XO)
-			return /datum/equipment_preset/uscm_ship/xo
+			return /datum/equipment_preset/uscm/xo
 		if(JOB_AUXILIARY_OFFICER)
-			return /datum/equipment_preset/uscm_ship/auxiliary_officer
+			return /datum/equipment_preset/uscm/auxiliary_officer
 		/*
 		if(JOB_INTEL)
 			return /datum/equipment_preset/uscm/intel/full
 		*/
 		if(JOB_CAS_PILOT)
-			return /datum/equipment_preset/uscm_ship/gp/full
+			return /datum/equipment_preset/uscm/gp/full
 		if(JOB_TANK_CREW)
 			return /datum/equipment_preset/uscm/tank
 		if(JOB_DROPSHIP_PILOT)
-			return /datum/equipment_preset/uscm_ship/dp/full
+			return /datum/equipment_preset/uscm/dp/full
 		if(JOB_DROPSHIP_CREW_CHIEF)
-			return /datum/equipment_preset/uscm_ship/dcc/full
+			return /datum/equipment_preset/uscm/dcc/full
 		if(JOB_CORPORATE_LIAISON)
-			return /datum/equipment_preset/uscm_ship/liaison
+			return /datum/equipment_preset/uscm/liaison
 		if(JOB_COMBAT_REPORTER)
-			return /datum/equipment_preset/uscm_ship/reporter
+			return /datum/equipment_preset/uscm/reporter
 		if(JOB_SYNTH)
 			var/datum/job/J = GLOB.RoleAuthority.roles_by_name[JOB_SYNTH]
 			return J.gear_preset_whitelist["[JOB_SYNTH][J.get_whitelist_status(owner)]"]
 		if(JOB_WORKING_JOE)
 			return /datum/equipment_preset/synth/working_joe
 		if(JOB_POLICE)
-			return /datum/equipment_preset/uscm_ship/uscm_police/mp
+			return /datum/equipment_preset/uscm/police/mp
 		if(JOB_CHIEF_POLICE)
-			return /datum/equipment_preset/uscm_ship/uscm_police/cmp
+			return /datum/equipment_preset/uscm/police/cmp
 		if(JOB_WARDEN)
-			return /datum/equipment_preset/uscm_ship/uscm_police/warden
+			return /datum/equipment_preset/uscm/police/warden
 		if(JOB_SEA)
-			return /datum/equipment_preset/uscm_ship/sea
+			return /datum/equipment_preset/uscm/sea
 		if(JOB_CHIEF_ENGINEER)
-			return /datum/equipment_preset/uscm_ship/chief_engineer
+			return /datum/equipment_preset/uscm/chief_engineer
 		if(JOB_ORDNANCE_TECH)
-			return /datum/equipment_preset/uscm_ship/ordn
+			return /datum/equipment_preset/uscm/ordn
 		if(JOB_MAINT_TECH)
-			return /datum/equipment_preset/uscm_ship/maint
+			return /datum/equipment_preset/uscm/maint
 		if(JOB_CHIEF_REQUISITION)
-			return /datum/equipment_preset/uscm_ship/qm
+			return /datum/equipment_preset/uscm/qm
 		if(JOB_CARGO_TECH)
-			return /datum/equipment_preset/uscm_ship/cargo
+			return /datum/equipment_preset/uscm/cargo
 		if(JOB_CMO)
-			return /datum/equipment_preset/uscm_ship/uscm_medical/cmo
+			return /datum/equipment_preset/uscm/medical/cmo
 		if(JOB_DOCTOR)
-			return /datum/equipment_preset/uscm_ship/uscm_medical/doctor
+			return /datum/equipment_preset/uscm/medical/doctor
 		if(JOB_RESEARCHER)
-			return /datum/equipment_preset/uscm_ship/uscm_medical/researcher
+			return /datum/equipment_preset/uscm/medical/researcher
 		if(JOB_NURSE)
-			return /datum/equipment_preset/uscm_ship/uscm_medical/nurse
+			return /datum/equipment_preset/uscm/medical/nurse
 		if(JOB_MESS_SERGEANT)
-			return /datum/equipment_preset/uscm_ship/chef
+			return /datum/equipment_preset/uscm/chef
 		if(JOB_SURVIVOR)
 			var/list/survivor_types = pref_special_job_options[JOB_SURVIVOR] != ANY_SURVIVOR && length(SSmapping.configs[GROUND_MAP].survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]]) ? SSmapping.configs[GROUND_MAP].survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]] : SSmapping.configs[GROUND_MAP].survivor_types
 			if(length(survivor_types))
@@ -330,7 +330,7 @@
 		if(JOB_CO_SURVIVOR)
 			if(length(SSmapping.configs[GROUND_MAP].CO_survivor_types))
 				return pick(SSmapping.configs[GROUND_MAP].CO_survivor_types)
-			return /datum/equipment_preset/uscm_ship/commander
+			return /datum/equipment_preset/uscm/commander
 		if(JOB_PREDATOR)
 			var/datum/job/J = GLOB.RoleAuthority.roles_by_name[JOB_PREDATOR]
 			return J.gear_preset_whitelist["[JOB_PREDATOR][J.get_whitelist_status(owner)]"]

@@ -1,4 +1,4 @@
-/datum/equipment_preset/uscm_ship/uscm_medical
+/datum/equipment_preset/uscm/medical
 
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	access = list(ACCESS_MARINE_MEDBAY, ACCESS_MARINE_CHEMISTRY, ACCESS_MARINE_MORGUE)
@@ -20,7 +20,7 @@
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 
-/datum/equipment_preset/uscm_ship/uscm_medical/cmo
+/datum/equipment_preset/uscm/medical/cmo
 	name = "USCM Chief Medical Officer (CMO)"
 
 	idtype = /obj/item/card/id/silver
@@ -49,7 +49,7 @@
 	utility_shoes = list(/obj/item/clothing/shoes/white)
 	utility_extra = list()
 
-/datum/equipment_preset/uscm_ship/uscm_medical/cmo/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/medical/cmo/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
@@ -58,10 +58,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/paper/research_notes/decent(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/uscm_medical/doctor
+/datum/equipment_preset/uscm/medical/doctor
 	name = "USCM Doctor"
 
 	assignment = JOB_DOCTOR
@@ -72,7 +73,7 @@
 
 	minimap_icon = list("medic" = MINIMAP_ICON_COLOR_DOCTOR)
 
-/datum/equipment_preset/uscm_ship/uscm_medical/doctor/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/medical/doctor/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
@@ -83,15 +84,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_BACK)
+	. = ..()
 
 
 //Surgeon this part of the code is to change the name on your ID
 
-/datum/equipment_preset/uscm_ship/uscm_medical/doctor/surgeon
+/datum/equipment_preset/uscm/medical/doctor/surgeon
 	name = "USCM Surgeon"
 	assignment = JOB_SURGEON
 
-/datum/equipment_preset/uscm_ship/uscm_medical/doctor/surgeon/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/medical/doctor/surgeon/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client?.prefs && new_human.client.prefs.backbag == 1)
 		back_item = /obj/item/storage/backpack/marine
@@ -99,10 +101,11 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/green(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/uscm_medical/nurse
+/datum/equipment_preset/uscm/medical/nurse
 	name = "USCM Nurse"
 
 	assignment = JOB_NURSE
@@ -119,7 +122,7 @@
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 
-/datum/equipment_preset/uscm_ship/uscm_medical/nurse/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/medical/nurse/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
@@ -128,9 +131,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/lightblue(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/nurse(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+	. = ..()
 
 //*****************************************************************************************************/
-/datum/equipment_preset/uscm_ship/uscm_medical/researcher
+/datum/equipment_preset/uscm/medical/researcher
 	name = "USCM Researcher"
 
 	access = list(ACCESS_MARINE_MEDBAY, ACCESS_MARINE_RESEARCH, ACCESS_MARINE_CHEMISTRY, ACCESS_MARINE_MORGUE)
@@ -150,7 +154,7 @@
 
 	service_under = list(/obj/item/clothing/under/marine/officer/researcher)
 
-/datum/equipment_preset/uscm_ship/uscm_medical/researcher/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/medical/researcher/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
@@ -161,3 +165,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/paper/research_notes/bad(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/syringe(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	. = ..()

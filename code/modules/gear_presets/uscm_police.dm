@@ -1,11 +1,11 @@
-/datum/equipment_preset/uscm_ship/uscm_police
+/datum/equipment_preset/uscm/police
 	name = "USCM (police roles)"
 	faction = FACTION_MARINE
 	minimum_age = 22
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/uscm_police/mp
+/datum/equipment_preset/uscm/police/mp
 	name = "USCM Military Police (MP)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -39,8 +39,8 @@
 
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service)
 
-/datum/equipment_preset/uscm_ship/uscm_police/mp/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/police/mp/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -65,10 +65,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/uscm_police/warden
+/datum/equipment_preset/uscm/police/warden
 	name = "USCM Military Warden (MW)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -103,8 +104,8 @@
 
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service)
 
-/datum/equipment_preset/uscm_ship/uscm_police/warden/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/police/warden/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -129,10 +130,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/uscm_police/cmp
+/datum/equipment_preset/uscm/police/cmp
 	name = "USCM Chief MP (CMP)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -172,8 +174,8 @@
 
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service/cmp)
 
-/datum/equipment_preset/uscm_ship/uscm_police/cmp/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/police/cmp/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -198,9 +200,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+	. = ..()
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/uscm_police/riot_mp
+/datum/equipment_preset/uscm/police/riot_mp
 	name = "USCM Riot MP (RMP)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
@@ -216,12 +219,12 @@
 	utility_hat = list(/obj/item/clothing/head/beret/marine/mp/cmp)
 	utility_extra = list(/obj/item/clothing/head/cmcap, /obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/cm/tan)
 
-/datum/equipment_preset/uscm_ship/uscm_police/riot_mp/New()
+/datum/equipment_preset/uscm/police/riot_mp/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_MAIN)
 
-/datum/equipment_preset/uscm_ship/uscm_police/riot_mp/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/police/riot_mp/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
@@ -254,10 +257,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/uscm_police/riot_mp/riot_cmp
+/datum/equipment_preset/uscm/police/riot_mp/riot_cmp
 	name = "USCM Riot Chief MP (RCMP)"
 	flags = EQUIPMENT_PRESET_EXTRA
 

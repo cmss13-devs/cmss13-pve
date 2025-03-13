@@ -6,7 +6,7 @@
 	languages = list(LANGUAGE_ENGLISH)
 	idtype = /obj/item/card/id/dogtag
 
-/datum/equipment_preset/uscm_ship/load_name(mob/living/carbon/human/new_human, randomise)
+/datum/equipment_preset/uscm/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(75;MALE,25;FEMALE)
 	var/datum/preferences/A = new
 	A.randomize_appearance(new_human)
@@ -51,7 +51,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/liaison
+/datum/equipment_preset/uscm/liaison
 	name = "USCM Corporate Liaison (CL)"
 	faction_group =	FACTION_LIST_MARINE_WY
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
@@ -148,11 +148,11 @@
 		/obj/item/clothing/head/beret/cm/white/civilian,
 	)
 
-/datum/equipment_preset/uscm_ship/liaison/New()
+/datum/equipment_preset/uscm/liaison/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_LIAISON)
 
-/datum/equipment_preset/uscm_ship/liaison/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/liaison/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/satchel/lockable/liaison
 	//There is no suitable backpack for a CL really...
 	//if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
@@ -165,7 +165,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/reporter
+/datum/equipment_preset/uscm/reporter
 	name = "Combat Correspondent (Press)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 
@@ -196,7 +196,7 @@
 	dress_over = list()
 	dress_hat = list()
 
-/datum/equipment_preset/uscm_ship/reporter/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/reporter/load_gear(mob/living/carbon/human/new_human)
 	add_civilian_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/reporter(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/reporter(new_human), WEAR_BODY)
@@ -205,12 +205,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/camera(new_human), WEAR_WAIST)
 
-/datum/equipment_preset/uscm_ship/reporter/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
+/datum/equipment_preset/uscm/reporter/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
 	. = ..()
 	new_human.marine_buyable_categories[CIVILIAN_CAN_BUY_BACKPACK] = 1
 	new_human.marine_buyable_categories[CIVILIAN_CAN_BUY_UTILITY] = 1
 
-/datum/equipment_preset/uscm_ship/reporter_uscm
+/datum/equipment_preset/uscm/reporter_uscm
 	name = "Combat Correspondent (USCM)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	access = list(
@@ -231,9 +231,9 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
-/datum/equipment_preset/uscm_ship/reporter_uscm/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/reporter_uscm/load_gear(mob/living/carbon/human/new_human)
 
-	add_uscm_underwear(new_human)
+
 
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
@@ -266,7 +266,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/chief_engineer
+/datum/equipment_preset/uscm/chief_engineer
 	name = "USCM Chief Engineer (CE)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
@@ -294,8 +294,8 @@
 
 	utility_under = list(/obj/item/clothing/under/marine/officer/ce)
 
-/datum/equipment_preset/uscm_ship/chief_engineer/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/chief_engineer/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -317,7 +317,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/maint
+/datum/equipment_preset/uscm/maint
 	name = "USCM Maintenance Technician (MT)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -340,8 +340,8 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
-/datum/equipment_preset/uscm_ship/maint/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/maint/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -364,7 +364,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/ordn
+/datum/equipment_preset/uscm/ordn
 	name = "USCM Ordnance Technician (OT)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -389,8 +389,8 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
-/datum/equipment_preset/uscm_ship/ordn/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/ordn/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -414,7 +414,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/qm
+/datum/equipment_preset/uscm/qm
 	name = "USCM Quartermaster (QM)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
@@ -443,8 +443,8 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
-/datum/equipment_preset/uscm_ship/qm/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/qm/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -467,7 +467,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/cargo
+/datum/equipment_preset/uscm/cargo
 	name = "USCM Cargo Technician (CT)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -486,8 +486,8 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
-/datum/equipment_preset/uscm_ship/cargo/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/cargo/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -511,7 +511,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/commander
+/datum/equipment_preset/uscm/commander
 	name = "USCM Commanding Officer (CO)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
@@ -541,16 +541,16 @@
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
-/datum/equipment_preset/uscm_ship/commander/New()
+/datum/equipment_preset/uscm/commander/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
-/datum/equipment_preset/uscm_ship/commander/load_race(mob/living/carbon/human/new_human, client/mob_client)
+/datum/equipment_preset/uscm/commander/load_race(mob/living/carbon/human/new_human, client/mob_client)
 	..()
 	ADD_TRAIT(new_human, TRAIT_EMOTE_CD_EXEMPT, TRAIT_SOURCE_JOB)
 
-/datum/equipment_preset/uscm_ship/commander/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/commander/load_gear(mob/living/carbon/human/new_human)
+
 	var/sidearm = "Mateba"
 	var/kit = null
 	var/sidearmpath = /obj/item/storage/belt/gun/mateba/cmateba/full
@@ -583,10 +583,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/command(new_human), WEAR_L_STORE)
 	if(kit)
 		new_human.equip_to_slot_or_del(new kit(new_human), WEAR_IN_BACK)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/commander/visitor
+/datum/equipment_preset/uscm/commander/visitor
 	name = "USCM Observer (Major) (VO)"
 	flags = EQUIPMENT_PRESET_EXTRA
 
@@ -596,7 +597,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/commander/council
+/datum/equipment_preset/uscm/commander/council
 	name = "USCM Commanding Officer (CO+)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
@@ -610,24 +611,24 @@
 		/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer,
 		/obj/item/clothing/suit/storage/jacket/marine/dress/officer/falcon,
 	)
-/datum/equipment_preset/uscm_ship/commander/council/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/commander/council/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine/commander/council(new_human), WEAR_HEAD)
 	. = ..()
 
-/datum/equipment_preset/uscm_ship/commander/council/plus
+/datum/equipment_preset/uscm/commander/council/plus
 	name = "USCM Commanding Officer (CO++)"
 	idtype = /obj/item/card/id/general
 	paygrades = list(PAY_SHORT_MO6 = JOB_PLAYTIME_TIER_0)
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior, /obj/item/clothing/under/marine/dress/blues/general)
 
-/datum/equipment_preset/uscm_ship/commander/council/plus/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/commander/council/plus/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine/commander/councilchief(new_human), WEAR_HEAD)
 	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/xo
+/datum/equipment_preset/uscm/xo
 	name = "USCM Executive Officer (XO)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
@@ -644,12 +645,12 @@
 
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
-/datum/equipment_preset/uscm_ship/xo/New()
+/datum/equipment_preset/uscm/xo/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_MAIN)
 
-/datum/equipment_preset/uscm_ship/xo/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/xo/load_gear(mob/living/carbon/human/new_human)
+
 	var/back_item = /obj/item/storage/backpack/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
@@ -663,10 +664,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/so
+/datum/equipment_preset/uscm/so
 	name = "USCM Platoon Commander (PltCo)"
 	idtype = /obj/item/card/id/dogtag
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
@@ -680,11 +682,11 @@
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
-/datum/equipment_preset/uscm_ship/so/New()
+/datum/equipment_preset/uscm/so/New()
 	. = ..()
 	access = get_access(access_list)
 
-/datum/equipment_preset/uscm_ship/so/load_status(mob/living/carbon/human/new_human, client/mob_client)
+/datum/equipment_preset/uscm/so/load_status(mob/living/carbon/human/new_human, client/mob_client)
 	. = ..()
 	new_human.nutrition = NUTRITION_VERYLOW
 	if(!new_human.client)
@@ -693,11 +695,11 @@
 	add_verb(new_human.client, /client/proc/commander_rename_platoon)
 	give_action(new_human, /datum/action/innate/message_squad)
 
-/datum/equipment_preset/uscm_ship/so/lesser_rank
+/datum/equipment_preset/uscm/so/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm_ship/so/handle_late_join(mob/living/carbon/human/new_human, late_join)
+/datum/equipment_preset/uscm/so/handle_late_join(mob/living/carbon/human/new_human, late_join)
 	if(late_join)
 		return
 
@@ -707,7 +709,7 @@
 	change_dropship_camo(new_human.client.prefs.dropship_camo)
 	change_dropship_name(new_human.client.prefs.dropship_name)
 
-/datum/equipment_preset/uscm_ship/so/upp
+/datum/equipment_preset/uscm/so/upp
 	name = "UPP Platoon Commander (PltCo)"
 	idtype = /obj/item/card/id/dogtag
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE, LANGUAGE_ENGLISH)
@@ -716,27 +718,27 @@
 	faction = FACTION_UPP
 	access_list = ACCESS_LIST_UPP_PLATOON
 
-/datum/equipment_preset/uscm_ship/so/upp/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/so/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.underwear = "UPP Boxers"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
-/datum/equipment_preset/uscm_ship/so/upp/lesser_rank
+/datum/equipment_preset/uscm/so/upp/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm_ship/so/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/so/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
-/datum/equipment_preset/uscm_ship/so/upp/equipped
+/datum/equipment_preset/uscm/so/upp/equipped
 	name = "UPP Platoon Commander (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
-/datum/equipment_preset/uscm_ship/so/upp/equipped/load_status(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/so/upp/equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
 
-/datum/equipment_preset/uscm_ship/so/upp/equipped/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/so/upp/equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.underwear = "UPP Boxers"
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)
@@ -755,13 +757,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator/upp(new_human), WEAR_L_HAND)
 
-/datum/equipment_preset/uscm_ship/so/upp/handle_late_join(mob/living/carbon/human/new_human, late_join)
+/datum/equipment_preset/uscm/so/upp/handle_late_join(mob/living/carbon/human/new_human, late_join)
 	if(!late_join)
 		add_verb(new_human.client, /client/proc/commander_rename_platoon)
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/so_equipped
+/datum/equipment_preset/uscm/so_equipped
 	name = "USCM Platoon Commander (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -776,12 +778,12 @@
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
-/datum/equipment_preset/uscm_ship/so_equipped/New()
+/datum/equipment_preset/uscm/so_equipped/New()
 	. = ..()
 	access = get_access(access_list)
 
-/datum/equipment_preset/uscm_ship/so_equipped/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/so_equipped/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -805,10 +807,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/sea
+/datum/equipment_preset/uscm/sea
 	name = "USCM Senior Enlisted Advisor (SEA)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
@@ -826,12 +829,12 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
-/datum/equipment_preset/uscm_ship/sea/New()
+/datum/equipment_preset/uscm/sea/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_MAIN)
 
-/datum/equipment_preset/uscm_ship/sea/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/sea/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -852,8 +855,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+	. = ..()
 
-/datum/equipment_preset/uscm_ship/sea/load_rank(mob/living/carbon/human/rankee, client/mob_client)
+/datum/equipment_preset/uscm/sea/load_rank(mob/living/carbon/human/rankee, client/mob_client)
 	if(rankee?.client?.prefs?.pref_special_job_options[rank])
 		var/paygrade_choice = get_paygrade_id_by_name(rankee.client.prefs.pref_special_job_options[rank])
 		return paygrade_choice
@@ -861,7 +865,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/auxiliary_officer
+/datum/equipment_preset/uscm/auxiliary_officer
 	name = "USCM Auxiliary Support Officer (ASO)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
@@ -876,7 +880,7 @@
 	minimap_icon = list("cic" = COLOR_SILVER)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 
-/datum/equipment_preset/uscm_ship/auxiliary_officer/New()
+/datum/equipment_preset/uscm/auxiliary_officer/New()
 	. = ..()
 	access = list(
 		ACCESS_MARINE_SENIOR,
@@ -903,8 +907,8 @@
 		ACCESS_PRESS,
 	)
 
-/datum/equipment_preset/uscm_ship/auxiliary_officer/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/auxiliary_officer/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -924,10 +928,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/gp
+/datum/equipment_preset/uscm/gp
 	name = "USCM Gunship Pilot (GP) (Cryo)"
 	idtype = /obj/item/card/id/dogtag
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
@@ -940,8 +945,8 @@
 
 	minimap_icon = "pilot"
 
-/datum/equipment_preset/uscm_ship/gp/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/gp/load_gear(mob/living/carbon/human/new_human)
+
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
@@ -949,14 +954,14 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/gp/full
+/datum/equipment_preset/uscm/gp/full
 	name = "USCM Gunship Pilot (GP)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	utility_under = list(/obj/item/clothing/under/marine/officer/pilot)
 
-/datum/equipment_preset/uscm_ship/gp/full/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/gp/full/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -978,10 +983,11 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/dp
+/datum/equipment_preset/uscm/dp
 	name = "USCM Dropship Pilot (DP) (Cryo)"
 	idtype = /obj/item/card/id/dogtag
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
@@ -994,8 +1000,8 @@
 
 	minimap_icon = "pilot"
 
-/datum/equipment_preset/uscm_ship/dp/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/dp/load_gear(mob/living/carbon/human/new_human)
+
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
@@ -1003,14 +1009,14 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/dp/full
+/datum/equipment_preset/uscm/dp/full
 	name = "USCM Dropship Pilot (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	utility_under = list(/obj/item/clothing/under/marine/officer/pilot)
 
-/datum/equipment_preset/uscm_ship/dp/full/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/dp/full/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -1032,9 +1038,10 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+	. = ..()
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/dcc
+/datum/equipment_preset/uscm/dcc
 	name = "USCM Dropship Crew Chief (Cryo)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -1050,8 +1057,8 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
-/datum/equipment_preset/uscm_ship/dcc/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/dcc/load_gear(mob/living/carbon/human/new_human)
+
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
@@ -1059,12 +1066,12 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/dcc/full
+/datum/equipment_preset/uscm/dcc/full
 	name = "USCM Dropship Crew Chief (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
-/datum/equipment_preset/uscm_ship/dcc/full/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/dcc/full/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -1086,10 +1093,11 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/officer
+/datum/equipment_preset/uscm/officer
 	name = "USCM Officer (USCM Command)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
@@ -1111,11 +1119,11 @@
 
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
-/datum/equipment_preset/uscm_ship/officer/New()
+/datum/equipment_preset/uscm/officer/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
-/datum/equipment_preset/uscm_ship/officer/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/officer/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
 	new_human.equip_if_possible(new /obj/item/clothing/under/rank/centcom/officer(new_human), WEAR_BODY)
 	new_human.equip_if_possible(new /obj/item/clothing/shoes/centcom(new_human), WEAR_FEET)
@@ -1125,10 +1133,11 @@
 
 	new_human.equip_if_possible(new /obj/item/clothing/glasses/sunglasses(new_human), WEAR_EYES)
 	new_human.equip_if_possible(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/chef
+/datum/equipment_preset/uscm/chef
 	name = "USCM Mess Technician (MST)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
@@ -1146,8 +1155,8 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
-/datum/equipment_preset/uscm_ship/chef/load_gear(mob/living/carbon/human/new_human)
-	add_uscm_underwear(new_human)
+/datum/equipment_preset/uscm/chef/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
@@ -1164,3 +1173,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	. = ..()
