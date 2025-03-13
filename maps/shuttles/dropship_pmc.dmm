@@ -1,0 +1,714 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bw" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = -10
+	},
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"bM" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"bO" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "30"
+	},
+/area/shuttle/pmc)
+"dw" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"dE" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "70"
+	},
+/turf/open/space/basic,
+/area/shuttle/pmc)
+"eX" = (
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "41"
+	},
+/obj/structure/shuttle/part/dropshippmc/transparent{
+	icon_state = "41"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"fQ" = (
+/obj/structure/shuttle/part/dropshippmc/transparent{
+	icon_state = "46"
+	},
+/obj/structure/shuttle/part/dropshippmc/transparent{
+	icon_state = "41"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"gg" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "33"
+	},
+/area/shuttle/pmc)
+"gG" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "65"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"gX" = (
+/obj/structure/shuttle/part/dropshippmc/transparent{
+	icon_state = "40"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"hn" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "86"
+	},
+/area/shuttle/pmc)
+"hT" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/left_inner_bottom_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"jt" = (
+/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/small{
+	pixel_y = 16;
+	pixel_x = 6
+	},
+/obj/structure/phone_base{
+	dir = 4;
+	pixel_x = -19;
+	pixel_y = 12;
+	layer = 3.1;
+	phone_category = "Dropship";
+	name = "Midway telephone receiver";
+	phone_id = "Midway"
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"jA" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "27"
+	},
+/area/shuttle/pmc)
+"kH" = (
+/obj/effect/attach_point/weapon/midway/left_fore,
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "85"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"kN" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "34"
+	},
+/area/shuttle/pmc)
+"la" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"lo" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "67"
+	},
+/area/shuttle/pmc)
+"lJ" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "100"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"lX" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "22"
+	},
+/area/shuttle/pmc)
+"mq" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "24"
+	},
+/area/shuttle/pmc)
+"mK" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "83"
+	},
+/area/shuttle/pmc)
+"po" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "26"
+	},
+/area/shuttle/pmc)
+"pp" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 1
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"qm" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = 10
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_y = 27;
+	pixel_x = -2
+	},
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"rd" = (
+/obj/effect/attach_point/fuel/midway{
+	attach_id = 10;
+	dir = 1;
+	icon_state = "fuel_base_pmc"
+	},
+/turf/closed/shuttle/pmc{
+	icon_state = "32"
+	},
+/area/shuttle/pmc)
+"sh" = (
+/obj/effect/attach_point/weapon/midway/right_fore,
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "90"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"ts" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "47"
+	},
+/area/shuttle/pmc)
+"tv" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_left_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"tC" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/engine_right_exhaust,
+/turf/template_noop,
+/area/shuttle/pmc)
+"tR" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/engine_left_exhaust,
+/turf/template_noop,
+/area/shuttle/pmc)
+"uo" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_left_wing,
+/obj/structure/shuttle/part/dropshippmc/transparent/middle_right_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"uT" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"wh" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/machinery/door/airlock/hatch/cockpit/two,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"wN" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/left_inner_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
+"wR" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "74"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"xz" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full";
+	pixel_y = 22
+	},
+/obj/structure/machinery/computer/dropship_weapons/midway/small{
+	pixel_y = 8;
+	pixel_x = 8;
+	name = "\improper 'Cash Flow' weapons controls"
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
+	dir = 1;
+	pixel_x = 8;
+	layer = 5
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"yv" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "72"
+	},
+/area/shuttle/pmc)
+"zh" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/left_outer_bottom_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"zk" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "51"
+	},
+/area/shuttle/pmc)
+"zu" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "101"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"zF" = (
+/obj/structure/shuttle/part/dropshippmc/transparent{
+	icon_state = "15"
+	},
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "40"
+	},
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "40"
+	},
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "40"
+	},
+/obj/structure/shuttle/part/midway/transparent{
+	icon_state = "40"
+	},
+/obj/structure/shuttle/part/dropshippmc/transparent{
+	icon_state = "40"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"zI" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/middle_right_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"zK" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "89"
+	},
+/area/shuttle/pmc)
+"At" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/area/shuttle/pmc)
+"AC" = (
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"Bl" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"Bq" = (
+/obj/structure/shuttle/part/dropshippmc/transparent{
+	icon_state = "71"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"Bv" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "23"
+	},
+/area/shuttle/pmc)
+"CC" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "29"
+	},
+/area/shuttle/pmc)
+"DU" = (
+/obj/effect/attach_point/electronics/midway,
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "91"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"Ed" = (
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"EB" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "103"
+	},
+/area/shuttle/pmc)
+"GL" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "102"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"HW" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "50"
+	},
+/area/shuttle/pmc)
+"Iv" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "64"
+	},
+/area/shuttle/pmc)
+"IU" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/right_inner_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
+"JF" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/right_outer_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
+"KE" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "39"
+	},
+/area/shuttle/pmc)
+"Lv" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "99"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"Ng" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/right_inner_bottom_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"Nx" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"Op" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "97";
+	layer = 2.9
+	},
+/turf/open/space/basic,
+/area/shuttle/pmc)
+"OO" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "80"
+	},
+/area/shuttle/pmc)
+"OQ" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 7
+	},
+/obj/docking_port/mobile/marine_dropship/pmc,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"Qz" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "95"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"QX" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "48"
+	},
+/area/shuttle/pmc)
+"Rv" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "38"
+	},
+/area/shuttle/pmc)
+"RA" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "69"
+	},
+/area/shuttle/pmc)
+"Sw" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "35"
+	},
+/area/shuttle/pmc)
+"SE" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"SG" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "70"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"SQ" = (
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"TN" = (
+/turf/template_noop,
+/area/space)
+"Ud" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"UJ" = (
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"UT" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"UU" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "62"
+	},
+/area/shuttle/pmc)
+"Vk" = (
+/obj/effect/attach_point/electronics/midway,
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
+	icon_state = "84"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"Vw" = (
+/obj/effect/attach_point/fuel/midway{
+	attach_id = 10;
+	dir = 1;
+	icon_state = "fuel_base_pmc"
+	},
+/turf/closed/shuttle/pmc{
+	icon_state = "28"
+	},
+/area/shuttle/pmc)
+"Wb" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/right_outer_bottom_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"WN" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "18"
+	},
+/area/shuttle/pmc)
+"Yl" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "73"
+	},
+/area/shuttle/pmc)
+"YP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
+	name = "\improper Cash Flow cargo door";
+	id = "aft_door"
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/area/shuttle/pmc)
+"Zl" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 7
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/pmc)
+"ZN" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "75"
+	},
+/area/shuttle/pmc)
+
+(1,1,1) = {"
+TN
+TN
+TN
+TN
+TN
+Bq
+zI
+uo
+tv
+gX
+kN
+Vw
+lX
+tR
+TN
+zh
+"}
+(2,1,1) = {"
+TN
+TN
+TN
+Vk
+ZN
+yv
+lo
+lo
+UU
+fQ
+Sw
+CC
+Bv
+tC
+TN
+hT
+"}
+(3,1,1) = {"
+TN
+TN
+TN
+kH
+OO
+qm
+Ed
+uT
+pp
+ts
+HW
+bO
+mq
+WN
+wN
+IU
+"}
+(4,1,1) = {"
+lJ
+Qz
+HW
+hn
+EB
+AC
+AC
+SQ
+Bl
+la
+SQ
+UT
+SE
+YP
+TN
+TN
+"}
+(5,1,1) = {"
+zu
+Op
+jt
+xz
+wh
+UJ
+UJ
+UJ
+OQ
+bM
+UJ
+Zl
+UJ
+At
+TN
+TN
+"}
+(6,1,1) = {"
+GL
+Lv
+zk
+zK
+EB
+AC
+AC
+SQ
+Nx
+la
+SQ
+SQ
+dw
+At
+TN
+TN
+"}
+(7,1,1) = {"
+TN
+TN
+TN
+sh
+OO
+bw
+Ed
+Ud
+pp
+QX
+zk
+zk
+zk
+zk
+IU
+JF
+"}
+(8,1,1) = {"
+TN
+TN
+TN
+DU
+mK
+Yl
+RA
+RA
+Iv
+zF
+Rv
+rd
+po
+tR
+TN
+Ng
+"}
+(9,1,1) = {"
+TN
+TN
+TN
+TN
+TN
+wR
+dE
+SG
+gG
+eX
+KE
+gg
+jA
+tC
+TN
+Wb
+"}
