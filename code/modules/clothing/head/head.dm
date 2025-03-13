@@ -833,13 +833,19 @@
 	icon_state = "rmc_turban"
 	item_state = "rmc_turban"
 
-/obj/item/clothing/head/beret/royal_marine
+/obj/item/clothing/head/cmcap/royal_marine
 	name = "royal marine beret"
 	desc = "A green beret worn by the TWE's Royal Marine Commandos. Wear it with pride."
 	icon_state = "rmc_beret"
 	item_state = "rmc_beret"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_marine_hat = HAT_GARB_OVERLAY
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+	allowed_hat_items = list(
+		/obj/item/prop/helmetgarb/helmet_nvg = "icon_state",
+		/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = "icon_state",
+		/obj/item/prop/helmetgarb/helmet_nvg/marsoc = "icon_state",
 	)
