@@ -535,6 +535,12 @@
 	set_light(light_range)
 	fuel = amount * 5 SECONDS
 
+/obj/item/device/flashlight/flare/upp
+	name = "RSP 45"
+	desc = "A red UPPAC-issued flare."
+	icon_state = "upp_flare"
+	item_state = "upp_flare"
+
 /obj/item/device/flashlight/slime
 	gender = PLURAL
 	name = "glowing slime"

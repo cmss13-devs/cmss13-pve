@@ -637,6 +637,24 @@
 	else
 		icon_state = "m89"
 
+/obj/item/storage/box/r52
+	name = "\improper R52 marking flare pack"
+	desc = "A packet of fourteen R52 Marking Flares. Carried by UPPAC soldiers to light dark areas that cannot be reached with the usual Shoulder Lamp."
+	icon_state = "m94"
+	icon = 'icons/obj/items/storage/packets.dmi'
+	storage_slots = 14
+	max_storage_space = 14
+	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
+
+/obj/item/storage/box/r52/fill_preset_inventory()
+	for(var/i = 1 to max_storage_space)
+		new /obj/item/device/flashlight/flare(src)
+
+/obj/item/storage/box/r52/update_icon()
+	if(!length(contents))
+		icon_state = "r52_e"
+	else
+		icon_state = "r52"
 
 /obj/item/storage/box/nade_box
 	name = "\improper M40 HEDP grenade box"
