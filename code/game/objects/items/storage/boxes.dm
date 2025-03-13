@@ -640,7 +640,7 @@
 /obj/item/storage/box/r52
 	name = "\improper R52 marking flare pack"
 	desc = "A packet of fourteen R52 Marking Flares. Carried by UPPAC soldiers to light dark areas that cannot be reached with the usual Shoulder Lamp."
-	icon_state = "m94"
+	icon_state = "r52"
 	icon = 'icons/obj/items/storage/packets.dmi'
 	storage_slots = 14
 	max_storage_space = 14
