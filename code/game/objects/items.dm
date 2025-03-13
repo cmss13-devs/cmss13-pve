@@ -1104,3 +1104,7 @@ cases. Override_icon_state should be a list.*/
 
 /obj/item/proc/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	return FALSE
+
+///Anything unique the item can do, like pumping a shotgun, spin or whatever.
+/obj/item/proc/unique_action(mob/user, special_treatment = FALSE)
+	return

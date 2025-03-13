@@ -132,3 +132,31 @@
 	transform = matrix().Scale(32 / 1024, 32 / 1024)
 	animate(src, time = 0.5 * radius * speed, transform=matrix().Scale((32 / 1024) * radius * 1.5, (32 / 1024) * radius * 1.5), easing = easing_type)
 
+/obj/effect/temp_visual/dropship_flyby
+	icon = 'icons/obj/structures/props/flyby_shadows.dmi'
+	icon_state = "ud"
+	layer = FLY_LAYER
+	plane = ABOVE_GAME_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	duration = 3 SECONDS
+	pixel_x = -48
+	pixel_y = -120
+	pixel_z = -480
+
+/obj/effect/temp_visual/dropship_flyby/Initialize()
+	. = ..()
+	animate(src, pixel_z = 960, time = 3 SECONDS)
+
+/obj/effect/temp_visual/dropship_flyby/krokodil
+	icon = 'icons/obj/structures/props/flyby_shadows.dmi'
+	icon_state = "ud"
+
+/obj/effect/temp_visual/heavyimpact
+	name = "heavy impact"
+	icon = 'icons/effects/heavyimpact.dmi'
+	icon_state = ""
+	duration = 13
+
+/obj/effect/temp_visual/heavyimpact/Initialize(mapload)
+	. = ..()
+	flick("heavyimpact", src)
