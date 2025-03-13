@@ -107,7 +107,7 @@
 	current_mag = /obj/item/ammo_magazine/rifle/ap
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/stock/rifle/collapsible)
 //-------------------------------------------------------
-//NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
+//NSG 23 ASSAULT RIFLE - RMC PRIMARY RIFLE
 
 /obj/item/weapon/gun/rifle/nsg23
 	name = "\improper NSG L23A1 pulse rifle"
