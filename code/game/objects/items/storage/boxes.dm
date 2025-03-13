@@ -648,7 +648,7 @@
 
 /obj/item/storage/box/r52/fill_preset_inventory()
 	for(var/i = 1 to max_storage_space)
-		new /obj/item/device/flashlight/flare(src)
+		new /obj/item/device/flashlight/flare/upp(src)
 
 /obj/item/storage/box/r52/update_icon()
 	if(!length(contents))
