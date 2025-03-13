@@ -29,7 +29,7 @@
 /datum/faction/pmc/get_antag_guns_snowflake_equipment()
 	return list(
 		list("PRIMARY FIREARMS", 0, null, null, null),
-		list("M41A/2 Pulse Rifle", 30, /obj/item/weapon/gun/rifle/m41a/elite, null, VENDOR_ITEM_REGULAR),
+		list("M41A/2 Pulse Rifle", 30, /obj/item/weapon/gun/rifle/m41aMK1/elite, null, VENDOR_ITEM_REGULAR),
 		list("M39B/2 submachinegun", 30, /obj/item/weapon/gun/smg/m39/elite, null, VENDOR_ITEM_REGULAR),
 		list("NSG23 assault rifle", 20, /obj/item/weapon/gun/rifle/nsg23, null, VENDOR_ITEM_REGULAR),
 
@@ -69,7 +69,7 @@
 /datum/faction/pmc/get_antag_guns_sorted_equipment()
 	return list(
 		list("PRIMARY FIREARMS", 0, null, null, null),
-		list("M41A/2 Pulse Rifle", 30, /obj/item/weapon/gun/rifle/m41a/elite, null, VENDOR_ITEM_REGULAR),
+		list("M41A/2 Pulse Rifle", 30, /obj/item/weapon/gun/rifle/m41aMK1/elite, null, VENDOR_ITEM_REGULAR),
 		list("M39B/2 submachinegun", 30, /obj/item/weapon/gun/smg/m39/elite, null, VENDOR_ITEM_REGULAR),
 		list("NSG23 assault rifle", 30, /obj/item/weapon/gun/rifle/nsg23, null, VENDOR_ITEM_REGULAR),
 

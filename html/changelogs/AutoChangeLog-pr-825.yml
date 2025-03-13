@@ -1,0 +1,4 @@
+author: "Drathek"
+delete-after: True
+changes:
+  - bugfix: "Custom items config now passes key entries into the ckey proc to be properly stripped"
