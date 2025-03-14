@@ -308,13 +308,13 @@
 		if(JOB_CARGO_TECH)
 			return /datum/equipment_preset/uscm/cargo
 		if(JOB_CMO)
-			return /datum/equipment_preset/uscm/medical/cmo
+			return /datum/equipment_preset/uscm/cmo
 		if(JOB_DOCTOR)
-			return /datum/equipment_preset/uscm/medical/doctor
+			return /datum/equipment_preset/uscm/doctor
 		if(JOB_RESEARCHER)
-			return /datum/equipment_preset/uscm/medical/researcher
+			return /datum/equipment_preset/uscm/researcher
 		if(JOB_NURSE)
-			return /datum/equipment_preset/uscm/medical/nurse
+			return /datum/equipment_preset/uscm/nurse
 		if(JOB_MESS_SERGEANT)
 			return /datum/equipment_preset/uscm/chef
 		if(JOB_SURVIVOR)
