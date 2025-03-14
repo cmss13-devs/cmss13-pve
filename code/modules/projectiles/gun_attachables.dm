@@ -3073,8 +3073,8 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/mk1/preloaded/army/New()
 	. = ..()
-	current_rounds = 5
-	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
+	current_rounds = 4
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
 
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
