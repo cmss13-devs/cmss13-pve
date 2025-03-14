@@ -580,6 +580,21 @@
 	frequency = UPP_FREQ
 	minimap_type = MINIMAP_FLAG_UPP
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/synth
+	name = "UPP synth headset"
+	desc = "A special headset used by various synthetics of the UPP military."
+	volume = RADIO_VOLUME_IMPORTANT
+	has_tracker = TRUE
+	misc_tracking = TRUE
+	has_hud = TRUE	// Synth retains as they don't often wear helmets
+	locate_setting = TRACKER_ASL
+
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Platoon Sergeant" = TRACKER_ASL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/territorial
 	name = "UPP Territorial Guard headset"
 	desc = "A special headset used by the UPP's Territorial Guard. Lacks access to Naval Infantry channels. Also provides local colony comms. To access the colony channel use :o."
