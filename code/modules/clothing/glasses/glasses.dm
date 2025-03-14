@@ -23,7 +23,6 @@
 	var/req_skill
 	var/req_skill_level
 	var/req_skill_explicit = FALSE
-	hud_type //hud type the glasses gives
 
 /obj/item/clothing/glasses/Initialize(mapload, ...)
 	. = ..()
