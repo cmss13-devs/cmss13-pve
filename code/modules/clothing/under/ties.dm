@@ -1185,6 +1185,22 @@
 	item_state = "upp_crotch"
 	slot = ACCESSORY_SLOT_DECORGROIN
 
+//===========================//TWE CUSTOM ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/twepads
+	name = "\improper Kestrel Shoulder Pads"
+	desc = "A set of ashoulder pads designed for the Kestrel armor system."
+	icon_state = "rmc_arms"
+	item_state = "rmc_arms"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/twepads/legs
+	name = "\improper Kestrel Leg Guards"
+	desc = "A set of leg greaves designed for the Kestrel armor system."
+	icon_state = "rmc_greaves"
+	item_state = "rmc_greaves"
+	slot = ACCESSORY_SLOT_DECORSHIN
+
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
 /obj/item/clothing/accessory/paint
