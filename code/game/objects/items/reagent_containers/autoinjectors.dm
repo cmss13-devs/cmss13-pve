@@ -334,7 +334,7 @@
 
 /obj/item/reagent_container/hypospray/autoinjector/dylovene
 	name = "dylovene autoinjector"
-	chemname = "dylovene"
+	chemname = "anti_toxin"
 	desc = "An autoinjector loaded with 3 uses of Dylovene, a general-use anti-toxin."
 	amount_per_transfer_from_this = LOWM_REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD
 	volume = (LOWM_REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD) * INJECTOR_USES
