@@ -48,7 +48,7 @@
 	icon_state = "m4_goggles"
 	deactive_state = "m4_goggles_0"
 	vision_flags = SEE_TURFS
-	hud_type = MOB_HUD_MEDICAL_ADVANCED
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_MEDICAL_ADVANCED)
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)

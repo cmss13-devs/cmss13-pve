@@ -4,8 +4,6 @@
 /obj/item/device
 	icon = 'icons/obj/items/devices.dmi'
 	var/serial_number
-	///The type of HUD visors & cam-gear show
-	var/hud_type
 
 /obj/item/device/Initialize(mapload, ...)
 	. = ..()

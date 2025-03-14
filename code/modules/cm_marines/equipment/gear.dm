@@ -485,11 +485,16 @@
 	)
 	flags_equip_slot = SLOT_EAR
 	var/obj/structure/machinery/camera/camera
+	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_MARINE
 
 /obj/item/device/overwatch_camera/Initialize(mapload, ...)
 	. = ..()
 	camera = new /obj/structure/machinery/camera/overwatch(src)
+
+	if(has_hud)
+		squad_hud_on = TRUE
+		verbs += /obj/item/proc/toggle_squadhud
 
 /obj/item/device/overwatch_camera/Destroy()
 	QDEL_NULL(camera)
@@ -499,7 +504,10 @@
 	if (slot == WEAR_L_EAR || slot == WEAR_R_EAR)
 		camera.c_tag = mob.name
 		var/datum/mob_hud/MH = GLOB.huds[hud_type]
-		MH.add_hud_to(mob, src)
+		if(!squad_hud_on)
+			return
+		else
+			MH.add_hud_to(mob, src)
 	..()
 
 /obj/item/device/overwatch_camera/dropped(mob/user)
@@ -509,3 +517,13 @@
 		var/datum/mob_hud/MH = GLOB.huds[hud_type]
 		MH.remove_hud_from(user, src)
 	..()
+
+/obj/item/device/overwatch_camera/twe
+	name = "OOCUHM Cam-Gear"
+	desc = "Operational Oversight Camera Unit, Head-Mounted. Usually nicknamed \"Ooks\" or \"Big Brother\" by the marine commandos that wear them, the TWE-manufactured camera unit & eyepiece allows both command oversight of operations and display of an augmented reality 'Heads-Up-Display' to the wearer."
+	hud_type = MOB_HUD_FACTION_TWE
+
+/obj/item/device/overwatch_camera/upp
+	name = "1PN77M \"Periskop\" camera unit"
+	desc = "Replacing last generation head-mounted-sights, the \"Periskop\" brings several improvements over its' predecessors in the areas of ergonomics and technology. Thanks to its' superior camera systems and redesigned optical suite, which has improved both officer overwatch and personal combat capabilities, the unit has seen wide adoption among all UPP branches."
+	hud_type = MOB_HUD_FACTION_UPP

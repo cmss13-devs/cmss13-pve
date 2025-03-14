@@ -8,7 +8,7 @@
 	var/translate_apollo = FALSE
 	var/translate_hive = FALSE
 	var/list/channels = list()
-	var/list/tracking_options
+	tracking_options
 	var/abstract = FALSE
 
 /obj/item/device/encryptionkey/Initialize(mapload, ...)

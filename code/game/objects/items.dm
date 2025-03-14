@@ -169,6 +169,33 @@
 	/// Special storages this item prioritizes
 	var/list/preferred_storage
 
+	///HUD related stuff for radios, visors & cam-gear
+	///Whether it has a squad/medical HUD or not
+	var/has_hud = FALSE
+	///If the items squad hud starts on or not
+	var/squad_hud_on = FALSE
+	///Tracker specific vars
+	///If it provides a tracker or not
+	var/has_tracker = FALSE
+	///If the tracker begins on or not
+	var/tracker_hud_on = FALSE
+	///If the tracker target can be changed (Typically between squad leads, section leads, platoon commander & landing zone, though specific headsets offer different options)
+	var/misc_tracking = FALSE
+	///The baked-in tracker targets available
+	var/list/inbuilt_tracking_options = list()
+	///The list of tracker targets that can be picked from
+	var/list/tracking_options = list()
+	///The default tracker target chosen by the item
+	var/locate_setting = TRACKER_SL
+	///Whether or not the HUD-providing item will show them on the tac-map, tied into tracker presence
+	var/map_tracking = FALSE
+	///The type of minimap this item is added to
+	var/minimap_type = MINIMAP_FLAG_USCM
+	///What HUD it will display if present
+	var/hud_type = null
+	///The wearer of the HUD-providing item
+	var/mob/living/carbon/human/wearer
+
 /obj/item/Initialize(mapload, ...)
 	. = ..()
 
@@ -1104,3 +1131,125 @@ cases. Override_icon_state should be a list.*/
 
 /obj/item/proc/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
 	return FALSE
+
+///HUD-related procs
+
+/obj/item/proc/add_hud_tracker(mob/living/carbon/human/user)
+	SIGNAL_HANDLER
+
+	if(squad_hud_on && user.mind && (user.assigned_squad || misc_tracking) && user.hud_used?.locate_leader)
+		user.show_hud_tracker()
+
+/obj/item/proc/turn_on_map_tracking()
+	SIGNAL_HANDLER
+
+/obj/item/proc/toggle_squadhud()
+	set name = "Toggle Squad HUD"
+	set category = "Object"
+	set src in usr
+
+	if(usr.is_mob_incapacitated())
+		return 0
+	squad_hud_on = !squad_hud_on
+	if(ishuman(usr))
+		var/mob/living/carbon/human/user = usr
+		if(user.has_item_in_ears(src)) //worn
+			var/datum/mob_hud/H = GLOB.huds[hud_type]
+			if(squad_hud_on)
+				H.add_hud_to(usr, src)
+			else
+				H.remove_hud_from(usr, src)
+	to_chat(usr, SPAN_NOTICE("You toggle [src]'s HUD [squad_hud_on ? "on":"off"]."))
+	playsound(src,'sound/machines/click.ogg', 20, 1)
+
+/obj/item/proc/toggle_trackerhud()
+	set name = "Toggle Tracker HUD"
+	set category = "Object"
+	set src in usr
+
+	if(usr.is_mob_incapacitated())
+		return 0
+	tracker_hud_on = !tracker_hud_on
+	if(ishuman(usr))
+		var/mob/living/carbon/human/user = usr
+		if(user.has_item_in_ears(src)) //worn
+			if(tracker_hud_on)
+				if(user.mind && (misc_tracking || user.assigned_squad) && user.hud_used?.locate_leader)
+					user.show_hud_tracker()
+				if(misc_tracking)
+					SStracking.start_misc_tracking(user)
+				update_minimap_icon()
+			else
+				if(user.hud_used?.locate_leader)
+					user.hide_hud_tracker()
+				if(misc_tracking)
+					SStracking.stop_misc_tracking(user)
+				SSminimaps.remove_marker(user)
+	to_chat(usr, SPAN_NOTICE("You toggle [src]'s tracker HUD [tracker_hud_on ? "on":"off"]."))
+	playsound(src,'sound/machines/click.ogg', 20, 1)
+
+/obj/item/proc/switch_tracker_target()
+	set name = "Switch Tracker Target"
+	set category = "Object"
+	set src in usr
+
+	if(usr.is_mob_incapacitated())
+		return
+
+	handle_switching_tracker_target(usr)
+
+/obj/item/proc/handle_switching_tracker_target(mob/living/carbon/human/user)
+	if(!is_type_in_list(src, list(/obj/item/device/radio/headset, /obj/item/device/helmet_visor, /obj/item/device/overwatch_camera)))
+		return
+
+	var/obj/item/tracker_item = src
+	var/new_track = tgui_input_list(user, "Choose a new tracking target.", "Tracking Selection", tracker_item.tracking_options)
+	if(!new_track)
+		return
+	to_chat(user, SPAN_NOTICE("You set your tracker to point to <b>[new_track]</b>."))
+	tracker_item.locate_setting = tracker_item.tracking_options[new_track]
+
+/obj/item/proc/update_minimap_icon()
+	SIGNAL_HANDLER
+	if(!map_tracking)
+		return
+
+	if(!wearer)
+		return
+
+	SSminimaps.remove_marker(wearer)
+	if(!wearer.assigned_equipment_preset || !wearer.assigned_equipment_preset.minimap_icon)
+		return
+	var/marker_flags = minimap_type
+	var/turf/turf_gotten = get_turf(wearer)
+	if(!turf_gotten)
+		return
+	var/z_level = turf_gotten.z
+
+	if(wearer.assigned_equipment_preset.always_minimap_visible == TRUE || wearer.stat == DEAD) //We show to all marines if we have this flag, separated by faction
+		if(hud_type == MOB_HUD_FACTION_MARINE)
+			marker_flags = MINIMAP_FLAG_USCM
+		else if(hud_type == MOB_HUD_FACTION_UPP)
+			marker_flags = MINIMAP_FLAG_UPP
+		else if(hud_type == MOB_HUD_FACTION_PMC)
+			marker_flags = MINIMAP_FLAG_PMC
+		else if(hud_type == MOB_HUD_FACTION_CLF)
+			marker_flags = MINIMAP_FLAG_CLF
+
+	if(wearer.undefibbable)
+		set_undefibbable_on_minimap(z_level, marker_flags)
+		return
+
+	if(wearer.stat == DEAD)
+		set_dead_on_minimap(z_level, marker_flags)
+		return
+
+	SSminimaps.add_marker(wearer, z_level, marker_flags, given_image = wearer.assigned_equipment_preset.get_minimap_icon(wearer))
+
+///Change the minimap icon to a dead icon
+/obj/item/proc/set_dead_on_minimap(z_level, marker_flags)
+	SSminimaps.add_marker(wearer, z_level, marker_flags, given_image = wearer.assigned_equipment_preset.get_minimap_icon(wearer), overlay_iconstates = list("defibbable"))
+
+///Change the minimap icon to a undefibbable icon
+/obj/item/proc/set_undefibbable_on_minimap(z_level, marker_flags)
+	SSminimaps.add_marker(wearer, z_level, marker_flags, given_image = wearer.assigned_equipment_preset.get_minimap_icon(wearer), overlay_iconstates = list("undefibbable"))
