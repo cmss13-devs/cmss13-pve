@@ -994,17 +994,4 @@
 		"This is for you...!",
 	)
 
-/datum/human_ai_faction/xeno_cultist/alpha
-	faction = FACTION_XENOMORPH_ALPHA
 
-/datum/human_ai_faction/xeno_cultist/bravo
-	faction = FACTION_XENOMORPH_BRAVO
-
-/datum/human_ai_faction/xeno_cultist/charlie
-	faction = FACTION_XENOMORPH_CHARLIE
-
-/datum/human_ai_faction/xeno_cultist/delta
-	faction = FACTION_XENOMORPH_DELTA
-
-/datum/human_ai_faction/xeno_cultist/corrupted
-	faction = FACTION_XENOMORPH_CORRPUTED
