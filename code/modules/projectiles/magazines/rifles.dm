@@ -74,11 +74,6 @@
 	default_ammo = /datum/ammo/bullet/rifle/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
-/obj/item/ammo_magazine/rifle/tracer
-	name = "\improper M41A tracer magazine (10x24mm)"
-	desc = "A 10mm assault rifle magazine filled with tracer bullets."
-	default_ammo = /datum/ammo/bullet/rifle/tracer
-
 //-------------------------------------------------------
 //M41A (MK1) TRUE AND ORIGINAL
 
@@ -134,11 +129,17 @@
 	current_rounds = 95
 	bonus_overlay = "m41a_mk1_recon_overlay"
 
-/obj/item/ammo_magazine/rifle/m41aMK1/tracer
-	name = "\improper M41A MK1 tracer magazine (10x24mm)"
-	desc = "A 10mm assault rifle magazine filled with tracer bullets."
-	default_ammo = /datum/ammo/bullet/rifle/tracer
-
+/obj/item/ammo_magazine/rifle/ag80
+	name = "\improper AG80 magazine (10x23mm)"
+	desc = "A compact rectangular box magazine for the AG80. Holds 95 caseless 10x23mm rounds."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "ag80"
+	max_rounds = 95
+	caliber = "10x23mm"
+	gun_type = /obj/item/weapon/gun/rifle/ag80
+	default_ammo = /datum/ammo/bullet/rifle/upp
+	ammo_band_icon = "+ag80_band"
+	ammo_band_icon_empty = "+ag80_band_e"
 //-------------------------------------------------------
 //M49A, l42 reskin, same stats as before but different, lore friendly, shell.
 
@@ -206,7 +207,7 @@
 	desc = "A stubby and wide, high-capacity double stack magazine used in the XM40 pulse rifle. Fires 10x24mm Armor Piercing rounds, holding up to 60 + 1 in the chamber."
 	icon_state = "m40_sd"
 	max_rounds = 60
-	gun_type = /obj/item/weapon/gun/rifle/m41aMK1/xm40
+	gun_type = /obj/item/weapon/gun/rifle/m41a/elite/xm40
 	default_ammo = /datum/ammo/bullet/rifle/ap
 
 /obj/item/ammo_magazine/rifle/xm40/heap
@@ -214,6 +215,7 @@
 	desc = "A stubby and wide, high-capacity double stack magazine used in the XM40 pulse rifle. Fires 10x24mm High Explosive Armor Piercing rounds, holding up to 60 + 1 in the chamber."
 	icon_state = "m40_sd_heap"
 	max_rounds = 60
+	gun_type = /obj/item/weapon/gun/rifle/m41a/elite/xm40
 	default_ammo = /datum/ammo/bullet/rifle/heap
 
 //-------------------------------------------------------

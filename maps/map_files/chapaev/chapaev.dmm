@@ -11,6 +11,52 @@
 /obj/structure/foamed_metal/iron,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
+"ad" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/large_shrapnel/at_rocket_dud{
+	drop_sensitivity = 0;
+	impact_sensitivity = 1;
+	pixel_x = -6;
+	pixel_y = 13
+	},
+/obj/item/attachable/bayonet/upp{
+	pixel_x = -9;
+	pixel_y = 2
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = 8
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
+"ae" = (
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator,
+/obj/item/weapon/gun/rifle/type71/carbine{
+	current_mag = null
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/obj/structure/closet/secure_closet{
+	name = "squad sergeant locker";
+	req_access_txt = "244;238"
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "af" = (
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/engineering)
@@ -31,12 +77,81 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
+"ai" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/type73,
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 11;
+	pixel_x = -3
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
+"aj" = (
+/obj/structure/gun_rack/ag80/unloaded,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
+"ak" = (
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/closet/crate/secure/ammo{
+	name = "secure Type 6 grenade crate";
+	color = "#979b6d"
+	},
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "al" = (
 /obj/structure/machinery/power/terminal{
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
+"am" = (
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/closet/secure_closet{
+	name = "squad sergeant locker";
+	req_access_txt = "244;237"
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "an" = (
 /obj/structure/machinery/power/smes/buildable,
 /obj/effect/decal/warning_stripes{
@@ -150,6 +265,25 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
+"ax" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 10;
+	pixel_x = 4
+	},
+/obj/item/ammo_box/magazine/type73{
+	pixel_x = 3
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = -7;
+	pixel_y = 12
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "ay" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -170,6 +304,37 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
+"aA" = (
+/obj/structure/closet/crate/secure/ammo{
+	name = "secure Type 6 grenade crate";
+	color = "#979b6d"
+	},
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -15
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "aC" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -15642,6 +15807,11 @@ mV
 mV
 mV
 mV
+ax
+mV
+mV
+mV
+am
 mV
 mV
 mV
@@ -15649,16 +15819,11 @@ mV
 mV
 mV
 mV
+ai
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
+ae
 mV
 mV
 mV
@@ -15794,6 +15959,7 @@ mV
 mV
 mV
 mV
+aj
 mV
 mV
 mV
@@ -15805,8 +15971,7 @@ mV
 mV
 mV
 mV
-mV
-mV
+aj
 mV
 mV
 mV
@@ -15964,7 +16129,7 @@ mV
 mV
 mV
 mV
-mV
+ad
 mV
 mV
 mV
@@ -16098,6 +16263,7 @@ mV
 mV
 mV
 mV
+aA
 mV
 mV
 mV
@@ -16109,8 +16275,7 @@ mV
 mV
 mV
 mV
-mV
-mV
+ak
 mV
 mV
 mV
