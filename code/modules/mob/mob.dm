@@ -379,7 +379,7 @@
 		recently_pointed_to = world.time + 10
 		new /obj/effect/overlay/temp/point/big(T, src, A)
 	else
-		recently_pointed_to = world.time + 50
+		recently_pointed_to = world.time + 2.5 SECONDS
 		new /obj/effect/overlay/temp/point(T, src, A)
 	visible_message("<b>[src]</b> points to [A]", null, null, 5)
 	return TRUE
