@@ -1045,6 +1045,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc
+	desc = "Soon to be standard-issue combat helmet. It features a high-tech sealed ballistic mask capable of providing tactical data via its eye-lenses."
+	icon_state = "rmc_modern"
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc/commando
 	name = "\improper M5X helmet"
 	desc = "A fully enclosed, armored helmet made to complete the M5X exoskeleton armor."

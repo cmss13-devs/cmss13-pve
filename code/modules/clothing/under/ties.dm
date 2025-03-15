@@ -416,8 +416,8 @@
 
 /obj/item/clothing/accessory/patch/royal_marines
 	name = "TWE Royal Marines Commando patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the royal marines commando."
-	icon_state = "commandopatch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Royal Marines Commando."
+	icon_state = "rmcpatch"
 
 /obj/item/clothing/accessory/patch/upp
 	name = "UPP patch"
@@ -1184,6 +1184,22 @@
 	icon_state = "upp_crotch"
 	item_state = "upp_crotch"
 	slot = ACCESSORY_SLOT_DECORGROIN
+
+//===========================//TWE CUSTOM ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/twepads
+	name = "\improper Kestrel Shoulder Pads"
+	desc = "A set of ashoulder pads designed for the Kestrel armor system."
+	icon_state = "rmc_arms"
+	item_state = "rmc_arms"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/twepads/legs
+	name = "\improper Kestrel Leg Guards"
+	desc = "A set of leg greaves designed for the Kestrel armor system."
+	icon_state = "rmc_greaves"
+	item_state = "rmc_greaves"
+	slot = ACCESSORY_SLOT_DECORSHIN
 
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 

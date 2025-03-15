@@ -1120,7 +1120,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "The heavy-carry pack of the RMC forces. Designed to lug the most amount of gear into the battlefield."
 	icon_state = "backpack_large"
 	item_state = "backpack_large"
-	max_storage_space = 27
+	max_storage_space = 21
 
 /obj/item/storage/backpack/rmc/medium
 	name = "standard RMC backpack"
@@ -1128,7 +1128,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "backpack_medium"
 	item_state = "backpack_medium"
 	worn_accessible = TRUE
-	max_storage_space = 24
+	max_storage_space = 18
 
 /obj/item/storage/backpack/rmc/light
 	name = "lightweight RMC backpack"
@@ -1136,7 +1136,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "backpack_small"
 	item_state = "backpack_small"
 	worn_accessible = TRUE
-	max_storage_space = 21
+	max_storage_space = 15
 
 /obj/item/storage/backpack/rmc/frame //One sorry sod should have to lug this about spawns in their shuttle currently
 	name = "\improper RMC carry-frame"
@@ -1163,7 +1163,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "rmc_general"
 	item_state = "rmc_general"
 	has_gamemode_skin = FALSE
-	max_storage_space = 15
+	max_storage_space = 10
 
 //----------USASF & ARMY SECTION----------
 
