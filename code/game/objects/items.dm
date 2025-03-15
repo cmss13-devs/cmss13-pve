@@ -1137,7 +1137,7 @@ cases. Override_icon_state should be a list.*/
 /obj/item/proc/add_hud_tracker(mob/living/carbon/human/user)
 	SIGNAL_HANDLER
 
-	if(squad_hud_on && user.mind && (user.assigned_squad || misc_tracking) && user.hud_used?.locate_leader)
+	if(tracker_hud_on && user.mind && (user.assigned_squad || misc_tracking) && user.hud_used?.locate_leader)
 		user.show_hud_tracker()
 
 /obj/item/proc/turn_on_map_tracking()

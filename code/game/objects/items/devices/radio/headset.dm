@@ -265,9 +265,9 @@
 		if(squad_hud_on)
 			var/datum/mob_hud/H = GLOB.huds[hud_type]
 			H.add_hud_to(user, src)
-			//squad leader locator is invisible again unless a visor tracker is active
-			if(user.mind && (user.assigned_squad || misc_tracking) && user.hud_used && user.hud_used.locate_leader)
-				user.show_hud_tracker()
+		//squad leader locator is invisible again unless a visor tracker is active
+		if(user.mind && (user.assigned_squad || misc_tracking) && user.hud_used && user.hud_used.locate_leader)
+			user.show_hud_tracker()
 			if(misc_tracking)
 				SStracking.start_misc_tracking(user)
 			INVOKE_NEXT_TICK(src, PROC_REF(update_minimap_icon), wearer)

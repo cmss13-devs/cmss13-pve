@@ -464,11 +464,6 @@
 	var/has_access = earpiece?.misc_tracking || (user.assigned_squad && user.assigned_squad.radio_freq == earpiece?.frequency)
 	if(istype(earpiece) && earpiece.has_hud && has_access)
 		tracker_object = earpiece
-
-	//visor is the 2nd pick
-	var/obj/item/device/helmet_visor/visor = locate() in user.head
-	if(visor?.has_tracker && !tracker_object)
-		tracker_object = visor
 /*
 	if(!tracker_object)
 		to_chat(user, SPAN_WARNING("Unauthorized access detected."))
