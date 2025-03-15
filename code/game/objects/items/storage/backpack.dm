@@ -419,11 +419,9 @@
 /obj/item/storage/backpack/marine
 	name = "\improper lightweight IMP backpack"
 	desc = "The standard-issue pack of the USCM and US Army forces. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 armor."
-	icon_state = "marinepack"
-	item_state = "marinepack"
+	icon_state = "imp"
+	item_state = "imp"
 	has_gamemode_skin = FALSE //replace this with the atom_flag NO_SNOW_TYPE at some point, just rename it to like, NO_MAP_VARIANT_SKIN
-	xeno_icon_state = "marinepack"
-	xeno_types = list(/mob/living/carbon/xenomorph/runner, /mob/living/carbon/xenomorph/praetorian, /mob/living/carbon/xenomorph/drone, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/defender, /mob/living/carbon/xenomorph/sentinel, /mob/living/carbon/xenomorph/spitter)
 
 /obj/item/storage/backpack/marine/standard
 	has_gamemode_skin = FALSE
