@@ -44,9 +44,13 @@
 			uniform.sensor_faction = FACTION_MARINE
 	return ..()
 
+/datum/equipment_preset/colonist/load_gear(mob/living/carbon/human/new_human)
+	add_civilian_underwear(new_human)
+	. = ..()
+
 //*****************************************************************************************************/
 /datum/equipment_preset/cmb/deputy
-	name = "US Colonial Marshals Deputy"
+	name = "US CMB Colonial Marshals Deputy"
 	paygrades = list(PAY_SHORT_CMBD = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CMB Dep"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -55,7 +59,7 @@
 	skills = /datum/skills/cmb
 
 /datum/equipment_preset/cmb/deputy/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -83,17 +87,18 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/cmb/deputy/spanish
-	name = "LatAm Colonial Marshals Deputy"
+	name = "LatAm CMB Colonial Marshals Deputy"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
 
 /datum/equipment_preset/cmb/deputy/emergency
-	name = "US Colonial Marshals Deputy (Emergency, SMG)"
+	name = "US CMB Colonial Marshals Deputy (Emergency, SMG)"
 
 /datum/equipment_preset/cmb/deputy/emergency/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -140,17 +145,18 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/cmb/deputy/emergency/spanish
-	name = "LatAm Colonial Marshals Deputy (Emergency, SMG)"
+	name = "LatAm CMB Colonial Marshals Deputy (Emergency, SMG)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner
-	name = "CMB - Colonial Marshals Deputy (Emergency, Shotgun)"
+	name = "US CMB Colonial Marshals Deputy (Emergency, Shotgun)"
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -183,7 +189,6 @@
 		add_combat_gloves(new_human)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large, WEAR_R_STORE)
@@ -194,15 +199,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/spanish
-	name = "LatAm Colonial Marshals Deputy (Emergency, Shotgun)"
+	name = "LatAm CMB Colonial Marshals Deputy (Emergency, Shotgun)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/marshal
-	name = "US Colonial Marshal"
+	name = "US CMB Colonial Marshal"
 	paygrades = list(PAY_SHORT_CMBM = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/marshal
 	role_comm_title = "CMB Mar"
@@ -214,7 +220,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/cmb/marshal/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/tnr, WEAR_IN_BACK)
@@ -243,9 +249,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
+	. = ..()
 
 /datum/equipment_preset/cmb/marshal/spanish
-	name = "LatAm Colonial Marshal"
+	name = "LatAm CMB Colonial Marshal"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 
@@ -294,7 +301,7 @@
 	new_human.set_species(SYNTH_COLONY)
 
 /datum/equipment_preset/cmb/synth/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/tnr, WEAR_IN_BACK)
@@ -319,11 +326,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
+	. = ..()
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/liaison
-	name = "CMB - Interstellar Commerce Commission Liaison"
+	name = "US Civilian Interstellar Commerce Commission Liaison"
 	paygrades = list(PAY_SHORT_ICCL = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/silver/cl
 	role_comm_title = "ICC Rep"
@@ -352,11 +360,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/folder/white, WEAR_IN_R_STORE)
 //backpack and stuff in it
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
+	. = ..()
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/observer
-	name = "CMB - Interstellar Human Rights Observer"
+	name = "US Civilian Interstellar Human Rights Observer"
 	paygrades = list(PAY_SHORT_IHRO = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/lanyard
 	role_comm_title = "Observer"
@@ -368,6 +377,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_RUSSIAN)
 
 /datum/equipment_preset/cmb/observer/load_gear(mob/living/carbon/human/new_human)
+
 	//clothes
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CMB/ICC, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black, WEAR_BODY)
@@ -382,3 +392,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/notepad/blue, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/folder/white, WEAR_IN_R_STORE)
+	. = ..()

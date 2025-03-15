@@ -47,6 +47,6 @@
 	ai_to_spawn = list(
 		/datum/equipment_preset/uscm/private_equipped = 2,
 		/datum/equipment_preset/uscm/leader_equipped = 1,
-		/datum/equipment_preset/uscm_ship/so_equipped = 1,
+		/datum/equipment_preset/uscm/so_equipped = 1,
 	)
 

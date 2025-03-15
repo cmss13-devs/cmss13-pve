@@ -133,7 +133,7 @@
 
 /datum/tutorial/marine/reqs_line/init_mob()
 	. = ..()
-	arm_equipment(tutorial_mob, /datum/equipment_preset/uscm_ship/cargo)
+	arm_equipment(tutorial_mob, /datum/equipment_preset/uscm/cargo)
 	// Remove their radio from CT preset
 	var/mob/living/carbon/human/user = tutorial_mob
 	var/obj/item/device/radio/headset/headset = user.wear_l_ear

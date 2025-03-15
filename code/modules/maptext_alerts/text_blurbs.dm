@@ -54,7 +54,7 @@ base = the base the marines are staging from. The ship, Whiskey Outpost etc. Non
 				mobarray["mp"] += H
 			if(BLURB_USCM_ENGI)
 				mobarray["eng"] += H
-			if(BLURB_USCM_MEDICAL)
+			if(BLURB_medical)
 				mobarray["med"] += H
 			if(BLURB_USCM_REQ)
 				mobarray["req"] += H
