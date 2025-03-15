@@ -233,9 +233,8 @@
 	if(.)
 		return
 	var/mob/user_mob = user.mob
-	var/datum/action/minimap/minimap
-	minimap = locate() in user_mob.actions
-	if(!minimap && !(user.screen))
+	if(!(user.screen))
 		return
-	minimap.action_activate()
+	for(var/datum/action/minimap/user_map in user_mob.actions)
+		user_map.action_activate()
 	return TRUE
