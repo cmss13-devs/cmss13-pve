@@ -15,12 +15,28 @@
 	worn_state = "hybrisa_uniform"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
+
 /obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa/lead
 	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is commonly worn by the lead of the 'goonsquad', as they are colloquially known."
 	icon_state = "lead_hybrisa_uniform"
 	worn_state = "lead_hybrisa_uniform"
 
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
+
 // CMB Police Officer
+
+/obj/item/clothing/under/hybrisa
+	name = "hybrisa undersuit"
+	desc = "If you're seeing this, open a github issue report!"
+/// This is here because of .dmi file limits being hit and icon reorganization work not being done yet for PVE
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/hybrisa/cmb_officer
 	name = "\improper Colonial Marshal uniform"
@@ -200,6 +216,10 @@
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	flags_jumpsuit = FALSE
+
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 // WY-Exec Expensive Suits
 
