@@ -21,7 +21,7 @@
 
 /obj/item/ammo_magazine/sentry/upp
 	name = "AK-500 ammo drum (10x31mm Caseless)"
-	desc = "An ammo drum of 10x31mm caseless rounds for the UPPA 32-H sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
+	desc = "An ammo drum of 10x31mm caseless rounds for the UPPAC 32-H sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "sentry"
 	caliber = "10x31mm"

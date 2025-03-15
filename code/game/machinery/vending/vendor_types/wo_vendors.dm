@@ -137,9 +137,9 @@
 		list("M82F Flare Gun", floor(scale * 5), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", -1, null, null),
-		list("VP70 Magazine (9mm)", floor(scale * 25), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9x19mm)", floor(scale * 25), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
 		list("M44 Speedloader (.44)", floor(scale * 20), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
-		list("M4A3 Magazine (9mm)", floor(scale * 25), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
+		list("M4A3 Magazine (9x19mm)", floor(scale * 25), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
 
 		list("ATTACHMENTS", -1, null, null),
 		list("M39 Folding Stock", floor(scale * 10), /obj/item/attachable/stock/smg/collapsible, VENDOR_ITEM_REGULAR),
