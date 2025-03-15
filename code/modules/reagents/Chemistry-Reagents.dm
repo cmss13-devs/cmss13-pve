@@ -57,6 +57,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/list/datum/chem_property/properties = list() //Decides properties
 	var/original_id //For tracing back
 	var/flags = 0 // Flags for misc. stuff
+	///Icon state for flamer particles
+	var/flame_particle_icon = "flamer"
 
 	var/deleted = FALSE //If the reagent was deleted
 
