@@ -1,8 +1,8 @@
 /datum/job/command/senior
-	title = JOB_SEA
+	title = JOB_DI
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADMIN_NOTIFY|ROLE_WHITELISTED
 	flags_whitelist = WHITELIST_MENTOR
-	gear_preset = /datum/equipment_preset/uscm_ship/sea
+	gear_preset = /datum/equipment_preset/uscm_ship/di
 
 	job_options = list("Gunnery Sergeant" = "GySGT", "Master Sergeant" = "MSgt", "First Sergeant" = "1Sgt", "Master Gunnery Sergeant" = "MGySgt", "Sergeant Major" = "SgtMaj")
 
@@ -20,14 +20,14 @@
 	var/list/filtered_job_options = list(job_options[1])
 
 	if(job_applicant?.client?.prefs)
-		if(get_job_playtime(job_applicant.client, JOB_SEA) >= JOB_PLAYTIME_TIER_1)
+		if(get_job_playtime(job_applicant.client, JOB_DI) >= JOB_PLAYTIME_TIER_1)
 			filtered_job_options += list(job_options[2]) + list(job_options[3])
-		if(get_job_playtime(job_applicant.client, JOB_SEA) >= JOB_PLAYTIME_TIER_3)
+		if(get_job_playtime(job_applicant.client, JOB_DI) >= JOB_PLAYTIME_TIER_3)
 			filtered_job_options += list(job_options[4]) + list(job_options[5])
 
 	return filtered_job_options
 
 /obj/effect/landmark/start/senior
-	name = JOB_SEA
+	name = JOB_DI
 	icon_state = "sea_spawn"
 	job = /datum/job/command/senior
