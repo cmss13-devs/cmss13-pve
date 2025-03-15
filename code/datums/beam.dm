@@ -181,6 +181,10 @@
 	strength = EYE_PROTECTION_FLAVOR
 	probability = 5
 
+/obj/effect/ebeam/plasma
+	name = "intense plasma beam"
+	alpha = 255
+
 /obj/effect/ebeam/Destroy()
 	owner = null
 	return ..()
