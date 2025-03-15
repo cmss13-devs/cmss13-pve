@@ -58,38 +58,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
-"aai" = (
-/obj/structure/machinery/vending/snack/packaged{
-	pixel_y = -6;
-	wrenchable = 0;
-	pixel_x = 5
-	},
-/turf/closed/wall/almayer,
-/area/golden_arrow/cryo_cells)
-"aaj" = (
-/obj/structure/machinery/vending/coffee{
-	pixel_y = -7;
-	pixel_x = -1;
-	wrenchable = 0
-	},
-/turf/closed/wall/almayer,
-/area/golden_arrow/cryo_cells)
-"aak" = (
-/obj/structure/machinery/vending/cigarette/koorlander{
-	pixel_x = -7;
-	pixel_y = -7;
-	wrenchable = 0
-	},
-/turf/closed/wall/almayer,
-/area/golden_arrow/cryo_cells)
-"aal" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 2;
-	name = "\improper Hangar Lockdown Blast Door"
-	},
-/obj/structure/machinery/vending/cigarette/wy,
-/turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/hangar)
 "aan" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -1472,24 +1440,21 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "afl" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/closet/crate/trashcart{
-	pixel_y = 8
-	},
-/obj/item/trash/candy,
-/obj/item/trash/burger,
-/obj/item/trash/cigbutt,
-/obj/item/trash/burger{
-	pixel_y = 6;
-	pixel_x = 3
-	},
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
 	light_color = "#dae2ff";
 	pixel_y = 20
 	},
+/obj/structure/closet/crate/miningcar{
+	name = "\improper trash cart"
+	},
+/obj/item/trash/burger,
+/obj/item/trash/candy,
+/obj/item/trash/burger{
+	pixel_y = 6;
+	pixel_x = 3
+	},
+/obj/item/trash/cigbutt,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "afm" = (
@@ -7426,10 +7391,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "azG" = (
-/obj/structure/machinery/vending/dinnerware,
-/obj/structure/sign/banners/usa_flag{
-	pixel_x = -15;
-	pixel_y = 32
+/obj/structure/machinery/vending/cigarette/marine{
+	pixel_y = 16;
+	can_block_movement = 0
+	},
+/obj/item/ashtray/bronze{
+	pixel_x = -3;
+	pixel_y = 27
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
@@ -9937,9 +9905,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aHQ" = (
-/obj/item/ashtray/bronze{
-	pixel_x = 29;
-	pixel_y = 37
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 31;
+	pixel_x = -16
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -13937,9 +13905,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
 	pixel_x = -1
-	},
-/obj/structure/sign/banners/united_americas_flag{
-	pixel_y = 30
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -18393,9 +18358,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "nsl" = (
-/obj/structure/closet/crate/trashcart{
-	pixel_y = 11
-	},
 /obj/item/prop/colony/usedbandage,
 /obj/item/prop/colony/usedbandage{
 	dir = 4
@@ -18416,6 +18378,9 @@
 	dir = 8;
 	light_power = 0.5;
 	pixel_y = 10
+	},
+/obj/structure/closet/crate/miningcar/yellow{
+	name = "\improper biological hazard container"
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
@@ -28013,7 +27978,7 @@ aEG
 aEG
 aEG
 aWh
-aai
+aog
 alD
 ave
 anG
@@ -28190,7 +28155,7 @@ aEG
 aEG
 aEG
 aWh
-aaj
+aog
 aHQ
 aBk
 aBk
@@ -28367,7 +28332,7 @@ aEG
 aEG
 aEG
 aWh
-aak
+aog
 aBk
 azd
 aQd
@@ -34893,7 +34858,7 @@ aEG
 aEG
 aEG
 atb
-aal
+axa
 aBg
 alK
 aUD

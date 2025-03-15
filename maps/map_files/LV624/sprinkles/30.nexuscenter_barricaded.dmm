@@ -77,7 +77,7 @@
 /turf/open/floor/floorscorched1,
 /area/lv624/lazarus/main_hall)
 "dQ" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/main_hall)
 "ef" = (

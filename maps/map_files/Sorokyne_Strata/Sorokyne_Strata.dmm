@@ -16898,7 +16898,7 @@
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/engi)
 "ibc" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/canteen/lower_cafeteria)
 "ibh" = (
@@ -17994,7 +17994,7 @@
 /turf/open/floor/strata,
 /area/strata/ag/exterior/research_decks)
 "iZK" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /obj/structure/machinery/light/small{
 	dir = 1;
 	pixel_y = 20
@@ -18506,7 +18506,7 @@
 /turf/open/gm/river,
 /area/strata/ag/exterior/nearlz2)
 "jAD" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /obj/item/clothing/head/soft/ferret{
 	pixel_y = 9
 	},
@@ -19025,7 +19025,7 @@
 /turf/closed/wall/strata_outpost,
 /area/strata/ug/interior/outpost/jung/dorms/med2)
 "kaD" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/landingzone_checkpoint)
 "kaL" = (
@@ -20754,7 +20754,7 @@
 /turf/open/auto_turf/ice/layer1,
 /area/strata/ag/exterior/marsh)
 "lGw" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/ag/interior/dorms)
 "lHs" = (
@@ -20857,7 +20857,7 @@
 /turf/open/auto_turf/ice/layer1,
 /area/strata/ag/interior/mountain)
 "lLB" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/strata/blue1,
 /area/strata/ag/interior/outpost/admin)
 "lLC" = (
@@ -22208,7 +22208,7 @@
 /turf/open/floor/strata/white_cyan1,
 /area/strata/ag/interior/dorms)
 "nes" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/strata/cyan3/east,
 /area/strata/ag/interior/outpost/med)
 "neN" = (
@@ -22335,7 +22335,7 @@
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/canteen/lower_cafeteria)
 "njg" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/strata/white_cyan1/east,
 /area/strata/ag/interior/outpost/canteen/lower_cafeteria)
 "njq" = (
@@ -23281,7 +23281,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/ag/interior/outpost/canteen/personal_storage)
 "nYA" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/strata/floor2,
 /area/strata/ug/interior/jungle/deep/structures/engi)
 "nZR" = (
@@ -27509,7 +27509,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/strata/ag/exterior/research_decks)
 "rVy" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/strata/blue1,
 /area/strata/ug/interior/jungle/deep/structures/res)
 "rVK" = (
@@ -28377,7 +28377,7 @@
 /turf/closed/wall/strata_outpost,
 /area/strata/ug/interior/outpost/jung/dorms/sec1)
 "sIx" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/strata/floor3,
 /area/strata/ug/interior/jungle/deep/structures/res)
 "sIX" = (

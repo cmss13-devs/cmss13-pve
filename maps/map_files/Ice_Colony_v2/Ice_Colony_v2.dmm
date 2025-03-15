@@ -3970,7 +3970,7 @@
 /turf/open/floor/wood,
 /area/ice_colony/surface/command/crisis)
 "aIx" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/wood,
 /area/ice_colony/surface/command/crisis)
 "aIy" = (
@@ -4824,7 +4824,7 @@
 /turf/open/floor/wood,
 /area/ice_colony/surface/bar/bar)
 "aRx" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /obj/structure/machinery/light,
 /turf/open/floor/wood,
 /area/ice_colony/surface/bar/bar)
@@ -10636,7 +10636,7 @@
 /turf/open/floor/darkyellow2/north,
 /area/ice_colony/underground/engineering)
 "dIf" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkblue2/northeast,
 /area/ice_colony/surface/command/checkpoint)
 "dIB" = (
@@ -11343,7 +11343,7 @@
 /turf/open/floor/white,
 /area/ice_colony/underground/reception/toilet_women)
 "ewS" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkgreen2/east,
 /area/ice_colony/underground/hallway/south_east)
 "ewY" = (
@@ -13411,7 +13411,7 @@
 /turf/open/floor/plating/icefloor/warnplate/north,
 /area/shuttle/elevator2/underground)
 "hjy" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkblue2/southeast,
 /area/ice_colony/underground/command/checkpoint)
 "hjM" = (
@@ -14551,7 +14551,7 @@
 /turf/open/floor/darkyellow2/east,
 /area/ice_colony/surface/substation/smes)
 "izK" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkblue2/southeast,
 /area/ice_colony/surface/command/control)
 "iAs" = (
@@ -15513,7 +15513,7 @@
 /turf/open/floor/white,
 /area/ice_colony/underground/reception/toilet_men)
 "jLW" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkred2/northeast,
 /area/ice_colony/underground/security/hallway)
 "jMD" = (
@@ -19453,7 +19453,7 @@
 /turf/open/floor/darkbrown2,
 /area/ice_colony/underground/requesition/sec_storage)
 "oNw" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkgreen2/north,
 /area/ice_colony/underground/hallway/north_west)
 "oOd" = (
@@ -20859,7 +20859,7 @@
 /turf/open/floor/darkbrown2/southeast,
 /area/ice_colony/surface/excavation)
 "qAT" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/dark2,
 /area/ice_colony/surface/hangar/checkpoint)
 "qBa" = (
@@ -22366,7 +22366,7 @@
 /turf/open/floor/darkyellow2/north,
 /area/ice_colony/underground/hallway/south_east)
 "szY" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkgreen2/north,
 /area/ice_colony/underground/hallway/south_east)
 "szZ" = (

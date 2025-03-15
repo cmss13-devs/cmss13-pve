@@ -11809,7 +11809,7 @@
 /turf/open/floor/redcorner/east,
 /area/lv624/lazarus/security)
 "lAI" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/main_hall)
 "lAN" = (
@@ -18238,7 +18238,7 @@
 /area/lv624/ground/jungle/east_jungle)
 "uux" = (
 /obj/effect/landmark/crap_item,
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "uuE" = (
