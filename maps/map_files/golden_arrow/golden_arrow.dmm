@@ -1645,9 +1645,7 @@
 /obj/structure/machinery/shower{
 	pixel_y = 16
 	},
-/obj/structure/curtain{
-	pixel_y = -10
-	},
+/obj/structure/curtain/open/shower,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "afJ" = (
