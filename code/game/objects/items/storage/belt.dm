@@ -464,6 +464,7 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/ammo_magazine/revolver,
 		/obj/item/weapon/baton,
 		/obj/item/weapon/classic_baton,
 		/obj/item/weapon/gun/energy/taser,

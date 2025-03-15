@@ -115,7 +115,7 @@
 /turf/open/floor/almayer/blue/west,
 /area/adminlevel/chinook)
 "aC" = (
-/obj/structure/closet/secure_closet/military_officer_spare{
+/obj/structure/closet{
 	name = "provost uniform locker"
 	},
 /obj/item/clothing/under/marine/mp/provost,
@@ -7321,7 +7321,7 @@
 /area/adminlevel/chinook/medical)
 "Dr" = (
 /obj/structure/closet/secure_closet{
-	name = "\improper Lethal Injection Locker"
+	name = "\improper Lethal Injection locker"
 	},
 /obj/item/reagent_container/ld50_syringe,
 /obj/item/reagent_container/ld50_syringe,

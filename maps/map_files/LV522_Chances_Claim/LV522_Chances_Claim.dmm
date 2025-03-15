@@ -3734,7 +3734,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
 "bUy" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
@@ -8794,7 +8794,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/b_block/hydro)
 "eBd" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /turf/open/floor/prison/darkredfull2,
 /area/lv522/indoors/a_block/security)
 "eBi" = (
@@ -29726,10 +29726,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522/indoors/a_block/bridges/dorms_fitness)
-"pdq" = (
-/obj/structure/closet/wardrobe/medic_white,
-/turf/open/floor/strata/white_cyan1/east,
-/area/lv522/indoors/a_block/medical)
 "pdx" = (
 /obj/structure/machinery/floodlight/landing,
 /turf/open/floor/prison/greenfull/east,
@@ -78684,7 +78680,7 @@ tTK
 yel
 hZV
 eOX
-pdq
+eOX
 tTK
 aoZ
 kxv

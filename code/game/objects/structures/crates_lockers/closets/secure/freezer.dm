@@ -20,7 +20,7 @@
 			icon_state = icon_opened
 
 /obj/structure/closet/secure_closet/freezer/kitchen
-	name = "Kitchen Cabinet"
+	name = "Kitchen cabinet"
 	req_access = list(ACCESS_CIVILIAN_PUBLIC)
 
 /obj/structure/closet/secure_closet/freezer/kitchen/Initialize()

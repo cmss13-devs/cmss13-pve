@@ -3045,7 +3045,6 @@
 /turf/open/floor/corsat/blue,
 /area/adminlevel/ert_station/weyland_station)
 "YA" = (
-/obj/structure/closet/wardrobe/chemistry_white,
 /obj/structure/machinery/light/double,
 /turf/open/floor/corsat/greencorner/west,
 /area/adminlevel/ert_station/weyland_station)

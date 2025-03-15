@@ -9994,7 +9994,7 @@
 /turf/open/floor/prison/chapel_carpet,
 /area/fiorina/maintenance)
 "htb" = (
-/obj/structure/closet/wardrobe/chaplain_black,
+/obj/structure/closet,
 /obj/effect/spawner/random/goggles,
 /turf/open/floor/prison/chapel_carpet,
 /area/fiorina/station/chapel)
@@ -11204,7 +11204,7 @@
 /turf/open/organic/grass/astroturf,
 /area/fiorina/station/park)
 "isd" = (
-/obj/structure/closet/wardrobe/orange,
+/obj/structure/closet,
 /turf/open/floor/prison/yellowfull,
 /area/fiorina/station/lowsec)
 "isl" = (
@@ -22417,7 +22417,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/fiorina/station/research_cells)
 "rtZ" = (
-/obj/structure/closet/wardrobe/orange,
+/obj/structure/closet,
 /obj/item/clothing/gloves/boxing/blue,
 /obj/item/clothing/gloves/boxing/blue,
 /turf/open/floor/prison/yellowfull,
@@ -22963,7 +22963,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/maintenance)
 "rOv" = (
-/obj/structure/closet/wardrobe/orange,
+/obj/structure/closet,
 /obj/item/clothing/under/color/orange,
 /turf/open/floor/prison/yellowfull,
 /area/fiorina/station/lowsec)
@@ -24327,7 +24327,7 @@
 /turf/open/floor/prison/darkyellow2,
 /area/fiorina/station/telecomm/lz1_cargo)
 "sXo" = (
-/obj/structure/closet/wardrobe/orange,
+/obj/structure/closet,
 /obj/item/explosive/mine/pmc,
 /obj/effect/spawner/random/gun/smg,
 /turf/open/floor/prison/yellowfull,
@@ -26755,7 +26755,7 @@
 /turf/open/floor/prison,
 /area/fiorina/lz/near_lzII)
 "uVz" = (
-/obj/structure/closet/wardrobe/orange,
+/obj/structure/closet,
 /obj/item/clothing/gloves/boxing/yellow,
 /turf/open/floor/prison/yellowfull,
 /area/fiorina/station/lowsec)

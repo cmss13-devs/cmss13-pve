@@ -40,7 +40,7 @@
 /turf/open/floor/asteroidwarning/northwest,
 /area/bigredv2/outside/filtration_cave_cas)
 "ge" = (
-/obj/structure/closet/secure_closet/marshal,
+/obj/structure/closet/secure_closet/personal/marshal,
 /turf/open/floor/greengrid,
 /area/bigred/ground/security)
 "gF" = (
