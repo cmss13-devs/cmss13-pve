@@ -3265,7 +3265,7 @@
 /turf/open/gm/coast/beachcorner2/north_west,
 /area/corsat/theta/biodome)
 "bdD" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/corsat/theta/biodome)
 "bdE" = (
 /turf/open/gm/coast/beachcorner2/north_east,
@@ -3416,19 +3416,19 @@
 /area/corsat/theta/biodome)
 "bey" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/corsat/theta/biodome)
 "bez" = (
 /obj/structure/flora/jungle/planttop1,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/corsat/theta/biodome)
 "beA" = (
 /obj/structure/flora/jungle/plantbot1,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/corsat/theta/biodome)
 "beB" = (
 /obj/structure/flora/jungle/alienplant1,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/corsat/theta/biodome)
 "beD" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
@@ -13117,7 +13117,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/corsat/theta/biodome)
 "grB" = (
 /turf/open/floor/corsat/plate,
@@ -24522,7 +24522,7 @@
 /area/corsat/sigma/hangar/arrivals)
 "mtG" = (
 /obj/effect/landmark/monkey_spawn,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/corsat/theta/biodome)
 "mtI" = (
 /obj/structure/closet/emcloset,
@@ -25676,7 +25676,7 @@
 /area/corsat/sigma/biodome)
 "nbT" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/corsat/theta/biodome)
 "nch" = (
 /obj/structure/bed/chair{
@@ -26124,7 +26124,7 @@
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "nob" = (
-/turf/open/gm/river/desert/shallow/pool,
+/turf/open/liquid/water/river/desert/shallow/pool,
 /area/corsat/gamma/residential/showers)
 "noc" = (
 /obj/effect/decal/warning_stripes{
@@ -26418,7 +26418,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/gm/river/desert/shallow/pool,
+/turf/open/liquid/water/river/desert/shallow/pool,
 /area/corsat/gamma/residential/showers)
 "nvr" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -27825,7 +27825,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/gm/river/desert/shallow/pool,
+/turf/open/liquid/water/river/desert/shallow/pool,
 /area/corsat/gamma/residential/showers)
 "ogC" = (
 /obj/structure/window/reinforced,
@@ -32203,7 +32203,7 @@
 /area/corsat/gamma/hydroponics)
 "qvV" = (
 /obj/structure/platform,
-/turf/open/gm/river/desert/shallow/pool,
+/turf/open/liquid/water/river/desert/shallow/pool,
 /area/corsat/gamma/residential/showers)
 "qwb" = (
 /obj/structure/surface/table/reinforced,
@@ -45142,7 +45142,7 @@
 /area/corsat/sigma/hangar/checkpoint)
 "xrD" = (
 /obj/effect/landmark/hunter_secondary,
-/turf/open/gm/river/desert/shallow/pool,
+/turf/open/liquid/water/river/desert/shallow/pool,
 /area/corsat/gamma/residential/showers)
 "xrH" = (
 /obj/structure/pipes/standard/simple/hidden/green{
