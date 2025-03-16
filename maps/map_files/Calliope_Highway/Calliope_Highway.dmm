@@ -302,7 +302,9 @@
 /turf/open/floor/plating,
 /area/calliope/bunker/entry_checkpoint)
 "arg" = (
-/turf/open/floor/almayer/plating,
+/turf/closed/shuttle/elevator{
+	dir = 1
+	},
 /area/calliope/bunker/armory)
 "aro" = (
 /obj/structure/largecrate/random/barrel/true_random{
@@ -456,6 +458,9 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope/highway/northbound)
+"avO" = (
+/turf/open/gm/dirt,
+/area/calliope/bunker/entry_checkpoint)
 "awi" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 6;
@@ -600,12 +605,6 @@
 /turf/open/floor/plating,
 /area/calliope/bunker/south_section)
 "aAW" = (
-/obj/structure/machinery/door_control{
-	pixel_y = -19;
-	id = "synthbay2";
-	name = "synthetic storage door-control";
-	req_access = list(36)
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -1229,6 +1228,9 @@
 /obj/structure/machinery/fuelcell_recycler,
 /turf/open/floor/asteroidfloor/north,
 /area/calliope/bunker/fuel_depot)
+"bgG" = (
+/turf/closed/wall/r_wall,
+/area/calliope/oob/mountain)
 "bgQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -1989,6 +1991,11 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/southbound)
+"bTy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table,
+/turf/open/floor/plating,
+/area/calliope/bunker/south_section)
 "bUk" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5;
@@ -2151,6 +2158,10 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/calliope/bunker/cargo_under)
+"cdR" = (
+/obj/item/ammo_magazine/rifle/sharp/flechette,
+/turf/open/floor/almayer/plating,
+/area/calliope/bunker/cargo_under)
 "ceb" = (
 /obj/item/clothing/accessory/health/scrap,
 /obj/item/clothing/accessory/health/scrap,
@@ -2165,6 +2176,9 @@
 	},
 /turf/open/floor/strata/faux_wood,
 /area/calliope/exterior_buildings/ghost_town)
+"ceK" = (
+/turf/open/gm/dirt,
+/area/calliope/bunker/abandoned_section)
 "cfb" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal9";
@@ -2685,6 +2699,18 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
+"cAq" = (
+/obj/structure/machinery/door_control{
+	pixel_y = -19;
+	id = "synthbay2";
+	name = "synthetic storage door-control";
+	req_access = list(36)
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/prison,
+/area/calliope/bunker/barracks)
 "cAr" = (
 /turf/closed/wall/r_wall/bunker,
 /area/calliope/bunker/entry_checkpoint)
@@ -2980,6 +3006,7 @@
 	req_access = null;
 	req_one_access = list(12,9)
 	},
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/entry_checkpoint)
 "cSY" = (
@@ -3246,6 +3273,8 @@
 	pixel_x = 7;
 	pixel_y = 9
 	},
+/obj/item/weapon/knife/marine,
+/obj/item/clothing/glasses/mgoggles/orange,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/barracks)
 "djk" = (
@@ -3548,6 +3577,10 @@
 /obj/item/prop/colony/proptag{
 	pixel_x = -8;
 	pixel_y = 0
+	},
+/obj/item/clothing/accessory/patch/army/infantry{
+	pixel_x = 4;
+	pixel_y = 2
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cargo_under)
@@ -4138,6 +4171,12 @@
 	},
 /turf/open/floor/strata/faux_wood,
 /area/calliope/exterior_buildings/ghost_town)
+"dSV" = (
+/mob/living/simple_animal/hostile/retaliate/goat{
+	name = "Dairy"
+	},
+/turf/open/gm/dirt,
+/area/calliope/highway/southbound)
 "dTr" = (
 /obj/structure/surface/table,
 /obj/structure/pipes/vents/pump{
@@ -4316,6 +4355,7 @@
 	pixel_x = -15;
 	pixel_y = -12
 	},
+/obj/item/weapon/knife/marine/bowie,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cafeteria)
 "ecR" = (
@@ -5768,7 +5808,7 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/calliope/bunker/abandoned_section)
 "fCt" = (
-/turf/open/floor/almayer/plating_striped,
+/turf/open/floor/corsat/marked,
 /area/calliope/bunker/armory)
 "fCA" = (
 /obj/structure/machinery/disposal,
@@ -5936,6 +5976,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/calliope/bunker/engineering)
+"fNr" = (
+/turf/closed/wall/r_wall,
+/area/calliope/bunker/abandoned_section)
 "fNC" = (
 /obj/item/fuel_cell{
 	pixel_x = 5;
@@ -6195,6 +6238,10 @@
 	pixel_x = -4;
 	pixel_y = 1
 	},
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
+	pixel_x = 8;
+	pixel_y = -3
+	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/entry_checkpoint)
 "gaz" = (
@@ -6294,6 +6341,16 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/northbound)
+"geX" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/power/apc/power/south,
+/turf/open/floor/prison/floor_plate,
+/area/calliope/bunker/entry_checkpoint)
 "gfl" = (
 /obj/structure/window/reinforced/toughened{
 	dir = 4
@@ -7254,6 +7311,10 @@
 	layer = 5.0;
 	pixel_x = 19
 	},
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_x = 0;
+	pixel_y = 7
+	},
 /turf/open/floor/prison,
 /area/calliope/bunker/cargo_under)
 "gPE" = (
@@ -7457,6 +7518,26 @@
 /obj/structure/flora/bush/desert/cactus,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/southbound)
+"gXa" = (
+/obj/item/weapon/gun/rifle/sharp{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/ammo_magazine/rifle/sharp{
+	pixel_x = 12;
+	pixel_y = -12
+	},
+/obj/item/ammo_magazine/rifle/sharp{
+	pixel_x = 0;
+	pixel_y = -19
+	},
+/obj/item/ammo_magazine/rifle/sharp{
+	pixel_x = -6;
+	pixel_y = -5
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/plating,
+/area/calliope/bunker/cargo_under)
 "gXb" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -8138,6 +8219,11 @@
 	},
 /turf/closed/wall/r_wall/unmeltable,
 /area/calliope/highway/southbound)
+"hAe" = (
+/turf/closed/shuttle/elevator{
+	dir = 10
+	},
+/area/calliope/bunker/armory)
 "hAr" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -9950,6 +10036,18 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/plating/catwalk/rusted,
 /area/calliope/highway/southbound)
+"jtC" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope/bunker/engineering_under)
 "jtT" = (
 /turf/open/gm/coast/east,
 /area/calliope/highway/southbound)
@@ -10490,6 +10588,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/closet)
+"jOp" = (
+/obj/structure/machinery/door/airlock/multi_tile/upp_utility,
+/turf/open/floor/corsat/marked,
+/area/calliope/bunker/armory)
 "jOD" = (
 /obj/structure/largecrate/random{
 	pixel_x = -2;
@@ -10929,6 +11031,18 @@
 	pixel_x = 3;
 	pixel_y = -4
 	},
+/obj/structure/machinery/door_control{
+	pixel_x = -9;
+	pixel_y = -2;
+	id = "armory_sterling";
+	name = "Armory"
+	},
+/obj/structure/machinery/door_control{
+	pixel_x = -9;
+	pixel_y = 10;
+	id = "armory_sterling_storage";
+	name = "Weapon Storage"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/armory)
 "kfm" = (
@@ -11294,6 +11408,18 @@
 	pixel_x = 4;
 	pixel_y = -4
 	},
+/obj/item/weapon/knife/marine{
+	pixel_x = 0;
+	pixel_y = -2
+	},
+/obj/item/weapon/knife/marine{
+	pixel_x = 8;
+	pixel_y = 0
+	},
+/obj/item/weapon/knife/marine{
+	pixel_x = -1;
+	pixel_y = 3
+	},
 /turf/open/floor/prison,
 /area/calliope/bunker/cargo_under)
 "kvs" = (
@@ -11329,6 +11455,10 @@
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 1
+	},
+/obj/item/clothing/glasses/mgoggles/orange{
+	pixel_x = -5;
+	pixel_y = 4
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cargo_under)
@@ -12154,6 +12284,11 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/northbound)
+"lut" = (
+/turf/closed/shuttle/elevator{
+	dir = 5
+	},
+/area/calliope/bunker/armory)
 "luB" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -12573,6 +12708,22 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/command)
+"lOp" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown,
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/toy/plush/shark/alt{
+	name = "Gura"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/calliope/bunker/barracks)
 "lOR" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
@@ -12664,7 +12815,9 @@
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/hospital)
 "lUw" = (
-/mob/living/simple_animal/cow,
+/mob/living/simple_animal/hostile/retaliate/goat{
+	name = "Mary"
+	},
 /turf/open/floor/strata/faux_wood,
 /area/calliope/highway/southbound)
 "lVf" = (
@@ -12696,7 +12849,7 @@
 	pixel_y = 15
 	},
 /obj/item/storage/box/guncase/heavy/sentry{
-	pixel_x = -16;
+	pixel_x = -8;
 	pixel_y = 5
 	},
 /obj/item/clipboard{
@@ -12710,7 +12863,9 @@
 /turf/open/floor/prison,
 /area/calliope/bunker/cargo_under)
 "lWZ" = (
-/mob/living/simple_animal/cow,
+/mob/living/simple_animal/hostile/retaliate/goat{
+	name = "Larry"
+	},
 /turf/open/asphalt,
 /area/calliope/highway/southbound)
 "lXG" = (
@@ -12775,6 +12930,11 @@
 	},
 /turf/open/asphalt,
 /area/calliope/highway/northbound)
+"mbg" = (
+/turf/closed/shuttle/elevator{
+	dir = 6
+	},
+/area/calliope/bunker/armory)
 "mbl" = (
 /obj/structure/cargo_container/kelland/right,
 /turf/open/auto_turf/sand_white/layer1,
@@ -12857,6 +13017,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellow2/north,
 /area/calliope/bunker/engineering_under)
+"meT" = (
+/turf/closed/wall/rock,
+/area/calliope/bunker/barracks)
 "mfn" = (
 /obj/structure/platform{
 	dir = 1;
@@ -13169,6 +13332,11 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/checkpoint)
+"mwx" = (
+/turf/closed/shuttle/elevator{
+	dir = 9
+	},
+/area/calliope/bunker/armory)
 "mwD" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/gm/dirt2,
@@ -13758,6 +13926,7 @@
 	pixel_x = -8;
 	pixel_y = 11
 	},
+/obj/item/weapon/yautja/knife/marine,
 /turf/open/floor/prison/floor_marked,
 /area/calliope/bunker/cargo_under)
 "mWZ" = (
@@ -13845,6 +14014,14 @@
 /obj/structure/machinery/vending/snack/packaged,
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/hospital)
+"neb" = (
+/obj/structure/ladder{
+	height = 1;
+	id = "loweraccess";
+	layer = 2.6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/calliope/bunker/south_section)
 "nen" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -13887,6 +14064,13 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/prison,
+/area/calliope/bunker/cargo_under)
+"nhB" = (
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/obj/item/ammo_magazine/rifle/sharp/explosive,
+/turf/open/floor/almayer/plating,
 /area/calliope/bunker/cargo_under)
 "nhP" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13992,6 +14176,13 @@
 	},
 /turf/closed/wall/rock,
 /area/calliope/bunker/south_section)
+"npo" = (
+/obj/structure/ladder{
+	height = 2;
+	id = "loweraccess"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/calliope/bunker/barracks)
 "npu" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -14174,10 +14365,6 @@
 	layer = 3.3
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/box/guncase/heavy/sentry{
-	pixel_x = 28;
-	pixel_y = 8
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/device/working_joe_pda{
 	pixel_x = 5;
@@ -14197,6 +14384,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/abandoned_section)
+"nyx" = (
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/calliope/bunker/armory)
 "nyJ" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -14484,6 +14674,7 @@
 	pixel_x = -7;
 	pixel_y = -2
 	},
+/obj/item/device/defibrillator,
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/hospital)
 "nLx" = (
@@ -14826,24 +15017,25 @@
 	pixel_x = 3;
 	pixel_y = 23
 	},
-/obj/item/stack/sandbags_empty{
-	pixel_x = -4;
-	pixel_y = 14
-	},
 /obj/item/tool/shovel/etool/folded,
 /obj/item/tool/shovel/etool/folded{
 	pixel_x = 7;
 	pixel_y = 9
 	},
-/obj/item/stack/sandbags_empty{
+/obj/item/stack/sandbags_empty/small_stack{
+	pixel_x = -5;
+	pixel_y = 16
+	},
+/obj/item/stack/sandbags_empty/small_stack{
 	pixel_x = -6;
-	pixel_y = 24
+	pixel_y = 26
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/closet)
 "nZB" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/glasses/mgoggles/orange,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cafeteria)
 "nZP" = (
@@ -14915,6 +15107,9 @@
 	},
 /obj/item/ammo_magazine/hpr_box,
 /obj/item/ammo_magazine/hpr_box/ap,
+/obj/item/weapon/gun/shotgun/pump,
+/obj/item/ammo_magazine/shotgun/flechette,
+/obj/item/attachable/scope/pve,
 /turf/open/floor/prison/floor_marked,
 /area/calliope/bunker/cargo_under)
 "odI" = (
@@ -15280,6 +15475,7 @@
 	color = "#C02526";
 	dir = 8
 	},
+/obj/structure/barricade/handrail,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope/bunker/engineering_under)
 "oyl" = (
@@ -16087,6 +16283,12 @@
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/northbound)
+"pnu" = (
+/mob/living/simple_animal/hostile/retaliate/goat{
+	name = "Perry"
+	},
+/turf/open/gm/dirt,
+/area/calliope/highway/southbound)
 "pnx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
@@ -17374,6 +17576,40 @@
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison/floor_marked,
 /area/calliope/bunker/cargo_under)
+"qCL" = (
+/obj/structure/closet/secure_closet/guncabinet{
+	req_access = null;
+	req_one_access = list(12,9);
+	name = "equipment locker"
+	},
+/obj/item/weapon/telebaton,
+/obj/item/weapon/knife/marine,
+/obj/item/weapon/knife/marine,
+/obj/item/clothing/suit/marine/guard,
+/obj/item/clothing/suit/marine/guard,
+/obj/item/clothing/suit/marine/guard,
+/obj/item/clothing/suit/marine/guard,
+/obj/item/clothing/accessory/pads/groin/uacg,
+/obj/item/clothing/accessory/pads/groin/uacg,
+/obj/item/clothing/accessory/pads/neckguard/uacg,
+/obj/item/clothing/accessory/pads/neckguard/uacg,
+/obj/item/clothing/accessory/pads/kneepads{
+	color = "#293d3d"
+	},
+/obj/item/clothing/accessory/pads/kneepads{
+	color = "#293d3d"
+	},
+/obj/item/clothing/accessory/pads/bracers{
+	color = "#293d3d"
+	},
+/obj/item/clothing/accessory/pads/bracers{
+	color = "#293d3d"
+	},
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot,
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot,
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot,
+/turf/open/floor/prison/floor_marked,
+/area/calliope/bunker/cargo_under)
 "qDx" = (
 /obj/structure/machinery/computer/overwatch/almayer{
 	pixel_y = 24;
@@ -17823,6 +18059,11 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/calliope/highway/checkpoint)
+"qSW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating,
+/area/calliope/bunker/south_section)
 "qTU" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 10;
@@ -18106,7 +18347,9 @@
 /turf/open/asphalt/cement/cement12,
 /area/calliope/highway/checkpoint)
 "rdS" = (
-/mob/living/simple_animal/cow,
+/mob/living/simple_animal/hostile/retaliate/goat{
+	name = "Garry"
+	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/southbound)
 "rdT" = (
@@ -18133,6 +18376,11 @@
 "rgF" = (
 /turf/open/asphalt/cement/cement7,
 /area/calliope/highway/checkpoint)
+"rhc" = (
+/turf/closed/shuttle/elevator{
+	dir = 8
+	},
+/area/calliope/bunker/armory)
 "rhG" = (
 /obj/structure/barricade/sandbags/wired{
 	dir = 4;
@@ -18787,6 +19035,7 @@
 /obj/structure/closet/cabinet,
 /obj/item/toy/plush/therapy/random_color,
 /obj/item/tool/lighter/zippo/black,
+/obj/item/weapon/knife/marine,
 /turf/open/floor/strata/fake_wood,
 /area/calliope/bunker/command)
 "rPr" = (
@@ -19119,6 +19368,9 @@
 	icon_state = "0-4"
 	},
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/chick{
+	name = "Kiara"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cafeteria)
 "sjG" = (
@@ -20058,6 +20310,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/calliope/bunker/north_section)
+"tlc" = (
+/mob/living/simple_animal/hostile/retaliate/goat{
+	name = "Cherrie"
+	},
+/turf/open/asphalt,
+/area/calliope/highway/southbound)
 "tmb" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
@@ -20923,6 +21181,12 @@
 "ugc" = (
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/engineering_under)
+"ugz" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/prison,
+/area/calliope/bunker/barracks)
 "ugM" = (
 /turf/open/floor/wood/wood_broken3,
 /area/calliope/highway/southbound)
@@ -21147,6 +21411,7 @@
 	pixel_x = 6;
 	pixel_y = 7
 	},
+/obj/item/weapon/knife/marine,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/armory)
 "uoP" = (
@@ -21567,9 +21832,8 @@
 /turf/open/gm/dirt,
 /area/calliope/highway/southbound)
 "uLX" = (
-/obj/structure/machinery/power/apc/power/south,
-/turf/open/floor/prison/floor_plate,
-/area/calliope/bunker/entry_checkpoint)
+/turf/closed/wall/hangar,
+/area/calliope/bunker/pillbox)
 "uNc" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 8;
@@ -21759,6 +22023,11 @@
 /obj/structure/prop/static_tank/fuel,
 /turf/open/floor/coagulation/icon0_0,
 /area/calliope/bunker/fuel_depot)
+"uWm" = (
+/turf/closed/shuttle/elevator{
+	dir = 4
+	},
+/area/calliope/bunker/armory)
 "uWy" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /obj/structure/prop/invuln/catwalk_support{
@@ -21953,6 +22222,10 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
+"veQ" = (
+/obj/item/ammo_magazine/rifle/sharp/track,
+/turf/open/floor/almayer/plating,
+/area/calliope/bunker/cargo_under)
 "vfl" = (
 /obj/structure/machinery/power/apc/power/west,
 /turf/open/floor/prison,
@@ -23531,12 +23804,18 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope/highway/southbound)
+"wJy" = (
+/turf/closed/shuttle/elevator,
+/area/calliope/bunker/armory)
 "wKU" = (
 /obj/vehicle/souto{
 	color = "#408000"
 	},
 /turf/open/asphalt,
 /area/calliope/oob_o/playground)
+"wLn" = (
+/turf/closed/wall/hangar,
+/area/calliope/highway/checkpoint)
 "wLR" = (
 /obj/structure/surface/table{
 	color = "#8B7B5B"
@@ -26074,11 +26353,11 @@ yaA
 rnZ
 uOq
 dlJ
+meT
 dlJ
 dlJ
 dlJ
-jFK
-jFK
+dlJ
 jFK
 jFK
 jFK
@@ -26318,7 +26597,7 @@ bVE
 pWW
 tfS
 prX
-bVE
+lOp
 wfr
 dbp
 mHE
@@ -26326,11 +26605,11 @@ mIP
 qmc
 wsA
 dlJ
+meT
+dlJ
 dxy
 jCI
 dlJ
-jFK
-jFK
 jFK
 jFK
 jFK
@@ -26578,12 +26857,12 @@ wfr
 wfr
 wfr
 dlJ
+dlJ
+dlJ
 nGl
 xSN
 dlJ
 dlJ
-jFK
-jFK
 jFK
 jFK
 jFK
@@ -26829,13 +27108,13 @@ far
 far
 bMX
 aAW
+ugz
+cAq
 dlJ
 rIZ
 xSN
 bvE
 dlJ
-jFK
-jFK
 jFK
 jFK
 jFK
@@ -27081,13 +27360,13 @@ mHE
 mHE
 pvM
 pvM
+xSN
+xSN
 nqB
 pvM
 jKL
 pxf
 dlJ
-jFK
-jFK
 jFK
 jFK
 jFK
@@ -27332,14 +27611,14 @@ xTR
 rsh
 ycG
 wfr
-wfr
+mHE
+mHE
+npo
 dlJ
 kxQ
 apm
 gne
 dlJ
-jFK
-jFK
 jFK
 jFK
 jFK
@@ -27584,14 +27863,14 @@ kEc
 vIn
 eQF
 kNQ
-jFK
+bgG
+wfr
+wfr
 dlJ
 dlJ
 dlJ
 dlJ
 dlJ
-jFK
-jFK
 jFK
 jFK
 jFK
@@ -27806,10 +28085,10 @@ jFK
 jFK
 jFK
 sHS
-arg
-arg
-arg
-arg
+mwx
+wJy
+wJy
+hAe
 sHS
 xcZ
 eNI
@@ -28058,10 +28337,10 @@ jFK
 jFK
 jFK
 sHS
-arg
-arg
-arg
-fCt
+rhc
+nyx
+nyx
+jOp
 hhc
 dcU
 jSj
@@ -28310,9 +28589,9 @@ jFK
 jFK
 jFK
 sHS
-arg
-arg
-arg
+uWm
+nyx
+nyx
 fCt
 hhc
 dcU
@@ -28562,10 +28841,10 @@ eKB
 eKB
 eKB
 sHS
+lut
 arg
 arg
-arg
-arg
+mbg
 sHS
 qZX
 hkk
@@ -34883,7 +35162,7 @@ sSC
 cAr
 cAr
 eka
-gCt
+geX
 pzc
 pzc
 pzc
@@ -35650,12 +35929,12 @@ tVf
 tVf
 tVf
 tVf
-tVf
-tVf
-tVf
-tVf
-tVf
-tVf
+fNr
+fNr
+fNr
+fNr
+fNr
+fNr
 jFK
 dFf
 dFf
@@ -35903,10 +36182,10 @@ jFK
 jFK
 jFK
 jFK
-jFK
-jFK
-jFK
-jFK
+ceK
+ceK
+ceK
+ceK
 jFK
 jFK
 jFK
@@ -36146,18 +36425,18 @@ ktA
 gCt
 hEp
 pzc
+avO
+avO
 iix
 jFK
 jFK
 jFK
 jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+ceK
+ceK
+ceK
+ceK
+ceK
 jFK
 jFK
 jFK
@@ -36396,20 +36675,20 @@ wwh
 aqT
 hhm
 rFZ
-uLX
+hhm
 pzc
+avO
+avO
+avO
 iix
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+ceK
+ceK
+ceK
+ceK
+ceK
+ceK
+ceK
+ceK
 jFK
 jFK
 jFK
@@ -36445,7 +36724,7 @@ oNZ
 oWe
 wak
 nfc
-nfc
+dSV
 nfc
 nfc
 nfc
@@ -36650,17 +36929,17 @@ rDy
 rFZ
 rAr
 pzc
+avO
+avO
+avO
 iix
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+iix
+ceK
+ceK
+ceK
+ceK
+ceK
+ceK
 jFK
 jFK
 jFK
@@ -36871,19 +37150,19 @@ jFK
 jFK
 jFK
 jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+wLn
+wLn
 ePD
 wwh
 sxh
@@ -36902,16 +37181,16 @@ upd
 dWp
 oHg
 pzc
+avO
+avO
+avO
 iix
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+iix
+ceK
+ceK
+ceK
+ceK
+ceK
 jFK
 jFK
 jFK
@@ -36951,7 +37230,7 @@ nfc
 nfc
 nfc
 nfc
-nfc
+pnu
 nfc
 dub
 dub
@@ -37123,19 +37402,19 @@ jFK
 jFK
 jFK
 jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+ikV
+fjg
+wLn
+wLn
 ePD
 ePD
 ePD
@@ -37155,11 +37434,11 @@ eWI
 pzc
 pzc
 iix
-jFK
-jFK
-jFK
-jFK
-jFK
+avO
+avO
+iix
+ceK
+ceK
 jFK
 jFK
 jFK
@@ -37384,12 +37663,12 @@ ikV
 ikV
 ikV
 ikV
-ikV
-ikV
-jFK
-jFK
-jFK
-ajh
+fjg
+fjg
+wLn
+wLn
+wLn
+uLX
 vaS
 qAm
 lvN
@@ -37406,10 +37685,10 @@ vhr
 ckd
 tNP
 vaS
-ajh
-jFK
-jFK
-jFK
+iix
+avO
+avO
+iix
 jFK
 jFK
 jFK
@@ -37635,12 +37914,12 @@ ikV
 fjg
 fjg
 pFo
-ikV
-ikV
-ikV
-jFK
-jFK
-jFK
+fjg
+fjg
+fjg
+wLn
+wLn
+wLn
 ajh
 vaS
 vaS
@@ -37658,10 +37937,10 @@ eIa
 cSY
 vaS
 vaS
-ajh
-jFK
-jFK
-jFK
+iix
+avO
+avO
+iix
 jFK
 jFK
 jFK
@@ -37889,10 +38168,10 @@ gdh
 hoc
 hoc
 vTl
+fjg
+fjg
 ikV
-jFK
-jFK
-jFK
+ikV
 ajh
 vaS
 baE
@@ -37910,10 +38189,10 @@ oBs
 jFw
 fne
 vaS
-ajh
-jFK
-jFK
-jFK
+iix
+avO
+avO
+iix
 jFK
 jFK
 jFK
@@ -38162,10 +38441,10 @@ nXr
 nXr
 nXr
 ikV
-ikV
-ikV
-ikV
-ikV
+fCI
+fCI
+fCI
+iix
 jFK
 jFK
 jFK
@@ -38414,10 +38693,10 @@ nXr
 nXr
 nXr
 hzx
-ikV
-ikV
-ikV
-ikV
+fCI
+fCI
+fCI
+jFK
 jFK
 jFK
 jFK
@@ -38669,9 +38948,9 @@ dgM
 xXn
 fjg
 fjg
-ikV
-ikV
-ikV
+jFK
+jFK
+jFK
 jFK
 jFK
 jFK
@@ -38923,7 +39202,7 @@ fjg
 tZr
 hzx
 hzx
-ikV
+jFK
 jFK
 jFK
 jFK
@@ -51314,7 +51593,7 @@ nfc
 nfc
 nfc
 wzD
-wzD
+tlc
 wzD
 kdu
 gRH
@@ -57803,10 +58082,10 @@ udI
 tHK
 qmf
 tHK
-luB
+nhB
 tHK
 tHK
-tHK
+veQ
 udI
 jFK
 jFK
@@ -58056,7 +58335,7 @@ tHK
 wUC
 tHK
 luB
-tHK
+gXa
 tHK
 tHK
 udI
@@ -58310,7 +58589,7 @@ tHK
 luB
 tHK
 tHK
-tHK
+cdR
 udI
 lgy
 lMA
@@ -58569,23 +58848,23 @@ lMA
 lMA
 lMA
 lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
 lMA
 lMA
 lMA
@@ -58821,23 +59100,23 @@ lMA
 lMA
 lMA
 lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+wUY
+wUY
+wUY
+wUY
+wUY
+pbc
 lMA
 lMA
 lMA
@@ -59073,23 +59352,23 @@ lMA
 lMA
 lMA
 lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
+pbc
+pbc
+pbc
+wUY
+wUY
+wUY
+wUY
+wUY
+wUY
+wUY
+wUY
+wUY
+cxv
+cxv
+cxv
+wUY
+pbc
 lMA
 lMA
 lMA
@@ -59325,23 +59604,23 @@ lMA
 lMA
 lMA
 lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
+pbc
+pbc
+pbc
+wUY
+dfU
+myM
+atH
+atH
+myM
+fEZ
+myM
+eQC
+cxv
+neb
+cxv
+wUY
+pbc
 lMA
 lMA
 lMA
@@ -59563,7 +59842,7 @@ udI
 udI
 udI
 udI
-pTg
+qCL
 mVw
 azw
 mey
@@ -59577,23 +59856,23 @@ lMA
 lMA
 lMA
 lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
+pbc
+pbc
+pbc
+wUY
+myM
+atH
+atH
+atH
+atH
+atH
+atH
+wUY
+cxv
+cxv
+cxv
+wUY
+pbc
 lMA
 lMA
 lMA
@@ -59816,7 +60095,7 @@ tHK
 tHK
 udI
 wnC
-uZm
+pTg
 phR
 pxZ
 iUJ
@@ -59832,20 +60111,20 @@ pbc
 pbc
 pbc
 pbc
+wUY
+myM
+myM
+wUY
+wUY
+pDq
+bTy
+bTy
+wUY
+wUY
+wUY
+wUY
+wUY
 pbc
-pbc
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
 lMA
 lMA
 lMA
@@ -60085,19 +60364,19 @@ wUY
 wUY
 wUY
 wUY
+dfU
+atH
+wUY
 pbc
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
 lMA
 lMA
 lMA
@@ -60337,19 +60616,19 @@ qqA
 pyb
 wUY
 wUY
+atH
+atH
+wUY
 pbc
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
-lMA
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
+pbc
 lMA
 lMA
 lMA
@@ -60589,10 +60868,10 @@ cxv
 cxv
 mGE
 wUY
+atH
+atH
+pDq
 pbc
-lMA
-lMA
-lMA
 lMA
 lMA
 lMA
@@ -60841,10 +61120,10 @@ sPZ
 sPZ
 sPZ
 wUY
+atH
+atH
+myM
 pbc
-lMA
-lMA
-lMA
 lMA
 lMA
 lMA
@@ -61093,10 +61372,10 @@ eGy
 eGy
 kYr
 wUY
+atH
+atH
+myM
 pbc
-lMA
-lMA
-lMA
 lMA
 lMA
 lMA
@@ -61345,10 +61624,10 @@ rYu
 lNO
 dby
 wUY
+qSW
+atH
+wUY
 pbc
-lMA
-lMA
-lMA
 lMA
 lMA
 lMA
@@ -61569,7 +61848,7 @@ xgi
 oYN
 oYN
 oYN
-lwq
+jtC
 aWF
 wZp
 dYe
@@ -61597,9 +61876,9 @@ rYu
 lNO
 tBM
 btZ
-pbc
-pbc
-pbc
+atH
+atH
+wUY
 pbc
 pbc
 pbc
@@ -61848,10 +62127,10 @@ kUj
 kUj
 iOr
 cxv
-btZ
-pbc
-pbc
-pbc
+eQC
+atH
+myM
+wUY
 pbc
 pbc
 sTp
@@ -62101,9 +62380,9 @@ rYu
 lNO
 ddR
 btZ
-pbc
-pbc
-pbc
+wUY
+wUY
+wUY
 pbc
 pbc
 sTp
