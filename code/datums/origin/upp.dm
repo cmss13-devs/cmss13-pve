@@ -16,3 +16,8 @@
 /datum/origin/upp/volunteer
 	name = ORIGIN_UPP_VOLUNTEER
 	desc = "You escaped capitalist oppression and lies, passed all of the tests and background checks and are earning your citizenship with a member state, welcome aboard Comrade."
+
+
+/datum/origin/upp/excanc
+	name = ORIGIN_UPP_EXCANC
+	desc = "You hail from the now extinct Chinese/Asian-Nation Cooperative, a once powerful colonizing entity, which was absorbed into the UPP after the disastrous Dog War."
