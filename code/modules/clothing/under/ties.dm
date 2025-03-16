@@ -1368,6 +1368,10 @@
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
+/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral/rmc
+	name = "\improper 67 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Royal Marine armor. This one is the slimmed down model designed for general purpose storage."
+
 //Partial Pre-load For Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1

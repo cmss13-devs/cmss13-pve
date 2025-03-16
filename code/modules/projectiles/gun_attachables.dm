@@ -3087,6 +3087,14 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 2
 	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
 
+/obj/item/attachable/attached_gun/grenade/mk1/nsg/preloaded
+
+/obj/item/attachable/attached_gun/grenade/mk1/nsg/preloaded/New()
+	. = ..()
+	current_rounds = 2
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/rmc(src), new/obj/item/explosive/grenade/high_explosive/rmc(src))
+
+
 /obj/item/attachable/attached_gun/grenade/m120
 	name = "\improper PN/c 30mm underslung grenade launcher"
 	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, two round tube, chambers one."

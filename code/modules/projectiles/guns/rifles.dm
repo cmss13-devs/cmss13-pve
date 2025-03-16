@@ -157,6 +157,18 @@
 	damage_falloff_mult = 0
 	fa_max_scatter = SCATTER_AMOUNT_TIER_5
 
+/obj/item/weapon/gun/rifle/nsg23/unloaded
+	current_mag = /obj/item/ammo_magazine/rifle/nsg23
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+
+
+/obj/item/weapon/gun/rifle/nsg23/preloaded
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/attached_gun/grenade/mk1/nsg/preloaded,
+		/obj/item/attachable/stock/nsg23,
+	)
+
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
 /obj/item/weapon/gun/rifle/m41aMK1/xm40
