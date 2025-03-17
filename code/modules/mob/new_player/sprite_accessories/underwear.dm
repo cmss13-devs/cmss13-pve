@@ -90,6 +90,11 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 	name = "USCM Boxers"
 	icon_state = "marine_boxers"
 
+/datum/sprite_accessory/underwear/boxers/army
+	name = "USA Boxers"
+	icon_state = "army_boxers"
+	restricted = TRUE
+
 /datum/sprite_accessory/underwear/boxers/upp
 	name = "UPP Boxers"
 	icon_state = "upp_boxers"

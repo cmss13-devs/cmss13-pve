@@ -873,7 +873,6 @@
 
 /datum/equipment_preset/upp/researcher/load_gear(mob/living/carbon/human/new_human)
 
-
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -961,8 +960,6 @@
 	idtype = /obj/item/card/id
 
 /datum/equipment_preset/upp/admin/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	//face
@@ -984,8 +981,6 @@
 	idtype = /obj/item/card/id
 
 /datum/equipment_preset/upp/cargo/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	//face
@@ -1022,8 +1017,6 @@
 	idtype = /obj/item/card/id
 
 /datum/equipment_preset/upp/engineer/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	//face
