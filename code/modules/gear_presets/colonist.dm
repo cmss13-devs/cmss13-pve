@@ -6,9 +6,8 @@
 	idtype = /obj/item/card/id/lanyard
 	origin_override = ORIGIN_CIVILIAN
 
-/datum/equipment_preset/colonist/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/colonist/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
 	add_civilian_underwear(new_human)
-	. = ..()
 
 /datum/equipment_preset/colonist/bluecollar
 
@@ -60,8 +59,6 @@
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 
 /datum/equipment_preset/colonist/miner/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	add_random_satchel(new_human)
 	//face

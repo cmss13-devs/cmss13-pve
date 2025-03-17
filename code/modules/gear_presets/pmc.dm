@@ -47,9 +47,8 @@
 			uniform.sensor_faction = FACTION_PMC
 	return ..()
 
-/datum/equipment_preset/pmc/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/pmc/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
 	add_civilian_underwear(new_human)
-	. = ..()
 
 //*****************************************************************************************************/
 /datum/equipment_preset/pmc/pmc_standard
@@ -61,7 +60,6 @@
 	skills = /datum/skills/pmc
 
 /datum/equipment_preset/pmc/pmc_standard/load_gear(mob/living/carbon/human/new_human)
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)

@@ -327,6 +327,7 @@
 	load_race(new_human, mob_client)
 	if(randomise || uses_special_name)
 		load_name(new_human, randomise, mob_client)
+		load_underwear(new_human, mob_client)
 	else if(origin_override)
 		var/datum/origin/origin = GLOB.origins[origin_override]
 		new_human.name = origin.correct_name(new_human.name, new_human.gender)
@@ -336,7 +337,6 @@
 	load_languages(new_human, mob_client)
 	load_age(new_human, mob_client)
 	load_id(new_human, mob_client)
-	load_underwear(new_human, mob_client)
 	if(show_job_gear)
 		load_gear(new_human, mob_client)
 	load_status(new_human, mob_client)

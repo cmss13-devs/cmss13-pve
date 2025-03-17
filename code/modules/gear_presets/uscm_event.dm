@@ -2,9 +2,11 @@
 	name = "USCM (Event Roles)"
 	faction = FACTION_MARINE
 	faction_group = FACTION_LIST_MARINE
-	minimum_age = 30
+	minimum_age = 19
 	languages = list(LANGUAGE_ENGLISH)
 
+/datum/equipment_preset/uscm_event/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_civilian_underwear(new_human)
 
 /*****************************************************************************************************/
 

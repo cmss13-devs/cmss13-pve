@@ -92,9 +92,8 @@
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m46c(new_human), WEAR_J_STORE)
 
-/datum/equipment_preset/uscm/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
 	add_uscm_underwear(new_human)
-	. = ..()
 
 //*****************************************************************************************************/
 /datum/equipment_preset/uscm/pfc
