@@ -7,7 +7,7 @@
 	var/human_versus_human = FALSE
 
 /datum/equipment_preset/cmb/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_UA)
 
 /datum/equipment_preset/cmb/load_name(mob/living/carbon/human/new_human, randomise)
@@ -86,7 +86,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
-	. = ..()
+
 
 /datum/equipment_preset/cmb/deputy/spanish
 	name = "LatAm CMB Colonial Marshals Deputy"
@@ -144,7 +144,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
-	. = ..()
+
 
 /datum/equipment_preset/cmb/deputy/emergency/spanish
 	name = "LatAm CMB Colonial Marshals Deputy (Emergency, SMG)"
@@ -198,7 +198,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
-	. = ..()
+
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/spanish
 	name = "LatAm CMB Colonial Marshals Deputy (Emergency, Shotgun)"
@@ -248,7 +248,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
-	. = ..()
+
 
 /datum/equipment_preset/cmb/marshal/spanish
 	name = "LatAm CMB Colonial Marshal"
@@ -325,7 +325,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -359,7 +359,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/folder/white, WEAR_IN_R_STORE)
 //backpack and stuff in it
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -391,4 +391,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/notepad/blue, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/folder/white, WEAR_IN_R_STORE)
-	. = ..()
+
