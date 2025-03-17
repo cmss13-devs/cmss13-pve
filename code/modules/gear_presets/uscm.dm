@@ -54,7 +54,7 @@
 	new_human.nutrition = NUTRITION_VERYLOW
 
 /datum/equipment_preset/uscm/load_preset(mob/living/carbon/human/new_human, randomise, count_participant)
-
+	. = ..()
 	if(!auto_squad_name || (should_block_game_interaction(new_human) && !ert_squad))
 		return
 	if(!GLOB.data_core.manifest_modify(new_human.real_name, WEAKREF(new_human), assignment, rank))
@@ -123,8 +123,10 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
+/datum/equipment_preset/uscm/pfc/upp/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_upp_underwear(new_human)
+
 /datum/equipment_preset/uscm/pfc/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
@@ -175,8 +177,10 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
+/datum/equipment_preset/uscm/sg/upp/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_upp_underwear(new_human)
+
 /datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/sg/upp/lesser_rank
@@ -246,8 +250,10 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
+/datum/equipment_preset/uscm/medic/upp/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_upp_underwear(new_human)
+
 /datum/equipment_preset/uscm/medic/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/medic/upp/lesser_rank
@@ -294,8 +300,10 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
+/datum/equipment_preset/uscm/tl/upp/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_upp_underwear(new_human)
+
 /datum/equipment_preset/uscm/tl/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/tl/upp/lesser_rank
@@ -367,8 +375,10 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
+/datum/equipment_preset/uscm/leader/upp/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_upp_underwear(new_human)
+
 /datum/equipment_preset/uscm/leader/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank

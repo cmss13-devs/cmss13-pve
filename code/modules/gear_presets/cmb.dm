@@ -7,7 +7,7 @@
 	var/human_versus_human = FALSE
 
 /datum/equipment_preset/cmb/New()
-
+	. = ..()
 	access = get_access(ACCESS_LIST_UA)
 
 /datum/equipment_preset/cmb/load_name(mob/living/carbon/human/new_human, randomise)

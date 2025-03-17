@@ -10,7 +10,7 @@
 	var/human_versus_human = FALSE
 
 /datum/equipment_preset/pmc/New()
-
+	. = ..()
 	access = get_access(ACCESS_LIST_WY_PMC)
 
 /datum/equipment_preset/pmc/load_name(mob/living/carbon/human/new_human, randomise)
