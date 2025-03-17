@@ -1613,7 +1613,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Squad Sergeant";
+	job = "Squad Leader";
 	pixel_x = 8;
 	can_block_movement = 0
 	},
@@ -1681,7 +1681,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Squad Sergeant";
+	job = "Squad Leader";
 	pixel_x = -7;
 	can_block_movement = 0
 	},
@@ -4037,7 +4037,6 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
 "jg" = (
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access_txt = "240";
@@ -4052,6 +4051,7 @@
 	faction = "UPP"
 	},
 /obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/lamp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
 "ji" = (
@@ -4438,28 +4438,6 @@
 	pixel_y = 8;
 	layer = 3.2
 	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/prep_hallway)
-"kb" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "kc" = (
@@ -20811,7 +20789,7 @@ kl
 kl
 kx
 kn
-kb
+jY
 jU
 jI
 jw
