@@ -611,7 +611,6 @@
 
 /datum/equipment_preset/upp/synth/commando/load_gear(mob/living/carbon/human/new_human)
 
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/type23, WEAR_BACK)
 	//face

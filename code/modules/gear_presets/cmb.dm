@@ -44,7 +44,7 @@
 			uniform.sensor_faction = FACTION_MARINE
 	return ..()
 
-/datum/equipment_preset/colonist/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/cmb/load_gear(mob/living/carbon/human/new_human)
 	add_civilian_underwear(new_human)
 	. = ..()
 
