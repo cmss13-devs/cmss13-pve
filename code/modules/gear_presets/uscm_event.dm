@@ -40,7 +40,7 @@
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 
 /datum/equipment_preset/uscm_event/colonel/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/uscm_event/colonel/load_gear(mob/living/carbon/human/new_human)
@@ -79,7 +79,7 @@
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 
 /datum/equipment_preset/uscm_event/general/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/uscm_event/general/load_gear(mob/living/carbon/human/new_human)
@@ -194,7 +194,7 @@
 	skills = /datum/skills/provost
 
 /datum/equipment_preset/uscm_event/provost/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
 /datum/equipment_preset/uscm_event/provost/enforcer
@@ -455,7 +455,7 @@
 	skills = /datum/skills/provost
 
 /datum/equipment_preset/uscm_event/uaac/tis/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
 /datum/equipment_preset/uscm_event/uaac/tis/io

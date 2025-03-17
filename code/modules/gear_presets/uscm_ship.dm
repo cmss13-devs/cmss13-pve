@@ -149,7 +149,7 @@
 	)
 
 /datum/equipment_preset/uscm/liaison/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_LIAISON)
 
 /datum/equipment_preset/uscm/liaison/load_gear(mob/living/carbon/human/new_human)
@@ -206,7 +206,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/camera(new_human), WEAR_WAIST)
 
 /datum/equipment_preset/uscm/reporter/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
-	. = ..()
+
 	new_human.marine_buyable_categories[CIVILIAN_CAN_BUY_BACKPACK] = 1
 	new_human.marine_buyable_categories[CIVILIAN_CAN_BUY_UTILITY] = 1
 
@@ -261,7 +261,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -313,7 +313,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -361,7 +361,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -412,7 +412,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -466,7 +466,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -511,7 +511,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -546,7 +546,7 @@
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
 /datum/equipment_preset/uscm/commander/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
 /datum/equipment_preset/uscm/commander/load_race(mob/living/carbon/human/new_human, client/mob_client)
@@ -587,7 +587,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/command(new_human), WEAR_L_STORE)
 	if(kit)
 		new_human.equip_to_slot_or_del(new kit(new_human), WEAR_IN_BACK)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -618,7 +618,7 @@
 /datum/equipment_preset/uscm/commander/council/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/bridge(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine/commander/council(new_human), WEAR_HEAD)
-	. = ..()
+
 
 /datum/equipment_preset/uscm/commander/council/plus
 	name = "USCM Commanding Officer (CO++)"
@@ -628,7 +628,7 @@
 
 /datum/equipment_preset/uscm/commander/council/plus/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine/commander/councilchief(new_human), WEAR_HEAD)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -650,7 +650,7 @@
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
 /datum/equipment_preset/uscm/xo/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_MAIN)
 
 /datum/equipment_preset/uscm/xo/load_gear(mob/living/carbon/human/new_human)
@@ -668,7 +668,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -687,11 +687,11 @@
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
 /datum/equipment_preset/uscm/so/New()
-	. = ..()
+
 	access = get_access(access_list)
 
 /datum/equipment_preset/uscm/so/load_status(mob/living/carbon/human/new_human, client/mob_client)
-	. = ..()
+
 	new_human.nutrition = NUTRITION_VERYLOW
 	if(!new_human.client)
 		return
@@ -783,7 +783,7 @@
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
 /datum/equipment_preset/uscm/so_equipped/New()
-	. = ..()
+
 	access = get_access(access_list)
 
 /datum/equipment_preset/uscm/so_equipped/load_gear(mob/living/carbon/human/new_human)
@@ -811,7 +811,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -834,7 +834,7 @@
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
 /datum/equipment_preset/uscm/sea/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_MAIN)
 
 /datum/equipment_preset/uscm/sea/load_gear(mob/living/carbon/human/new_human)
@@ -859,7 +859,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
-	. = ..()
+
 
 /datum/equipment_preset/uscm/sea/load_rank(mob/living/carbon/human/rankee, client/mob_client)
 	if(rankee?.client?.prefs?.pref_special_job_options[rank])
@@ -885,7 +885,7 @@
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 
 /datum/equipment_preset/uscm/auxiliary_officer/New()
-	. = ..()
+
 	access = list(
 		ACCESS_MARINE_SENIOR,
 		ACCESS_MARINE_DATABASE,
@@ -932,7 +932,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -987,7 +987,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -1042,7 +1042,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
-	. = ..()
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/dcc
@@ -1097,7 +1097,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -1124,7 +1124,7 @@
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
 /datum/equipment_preset/uscm/officer/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
 /datum/equipment_preset/uscm/officer/load_gear(mob/living/carbon/human/new_human)
@@ -1137,7 +1137,7 @@
 
 	new_human.equip_if_possible(new /obj/item/clothing/glasses/sunglasses(new_human), WEAR_EYES)
 	new_human.equip_if_possible(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -1177,4 +1177,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	. = ..()
+

@@ -38,7 +38,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/paper/research_notes/decent(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -64,7 +64,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_BACK)
-	. = ..()
+
 
 
 //Surgeon this part of the code is to change the name on your ID
@@ -81,7 +81,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/green(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -111,7 +111,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/lightblue(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/nurse(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
-	. = ..()
+
 
 //*****************************************************************************************************/
 /datum/equipment_preset/uscm/researcher
@@ -145,4 +145,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/paper/research_notes/bad(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/syringe(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-	. = ..()
+

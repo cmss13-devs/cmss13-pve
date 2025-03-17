@@ -54,7 +54,7 @@
 	new_human.nutrition = NUTRITION_VERYLOW
 
 /datum/equipment_preset/uscm/load_preset(mob/living/carbon/human/new_human, randomise, count_participant)
-	. = ..()
+
 	if(!auto_squad_name || (should_block_game_interaction(new_human) && !ert_squad))
 		return
 	if(!GLOB.data_core.manifest_modify(new_human.real_name, WEAKREF(new_human), assignment, rank))
@@ -443,7 +443,7 @@
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-	. = ..()
+
 
 /datum/equipment_preset/uscm/private_equipped/eva
 	name = "USCM Squad Rifleman (Equipped, EVA)"
@@ -1082,7 +1082,7 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/marsoc/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/uscm/marsoc/load_gear(mob/living/carbon/human/new_human)

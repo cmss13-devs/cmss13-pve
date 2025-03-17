@@ -40,7 +40,7 @@
 /datum/equipment_preset/uscm_event/dress/nco/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/dress/blues/senior(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco(new_human), WEAR_JACKET)
-	. = ..()
+
 
 /datum/equipment_preset/uscm_event/dress/nco/sgt
 	name = "Dress Blues - (E-5) Sergeant"
@@ -54,7 +54,7 @@
 
 /datum/equipment_preset/uscm_event/dress/nco/snco/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom(new_human), WEAR_L_EAR)
-	. = ..()
+
 
 /datum/equipment_preset/uscm_event/dress/nco/snco/gysgt
 	name = "Dress Blues - (E-7) Gunnery Sergeant"
@@ -96,7 +96,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/marine/dress_cover/officer(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/cdrcom(new_human), WEAR_L_EAR)
-	. = ..()
+
 
 /datum/equipment_preset/uscm_event/dress/officer/firstlt
 	name = "Dress Blues - (O-2) 1st Lieutenant"
@@ -110,7 +110,7 @@
 
 
 /datum/equipment_preset/uscm_event/dress/officer/capt/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_MAIN)
 
 /datum/equipment_preset/uscm_event/dress/officer/co
@@ -120,7 +120,7 @@
 	skills = /datum/skills/commander
 
 /datum/equipment_preset/uscm_event/dress/officer/co/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
 /datum/equipment_preset/uscm_event/dress/officer/co/ltcol
@@ -144,13 +144,13 @@
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues/general)
 
 /datum/equipment_preset/uscm_event/dress/officer/general/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
 /datum/equipment_preset/uscm_event/dress/officer/general/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/dress/blues/general(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/highcom(new_human), WEAR_L_EAR)
-	. = ..()
+
 
 
 /datum/equipment_preset/uscm_event/dress/officer/general/ltgen

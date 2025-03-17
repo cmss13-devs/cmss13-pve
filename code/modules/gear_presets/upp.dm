@@ -183,7 +183,7 @@
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-	. = ..()
+
 
 /datum/equipment_preset/upp/rifleman/eva
 	name = "UPP Squad Rifleman (Equipped, EVA)"
@@ -218,7 +218,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -273,7 +273,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/tricordrazine, WEAR_IN_L_STORE)
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -314,7 +314,7 @@
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 /datum/equipment_preset/upp/squadlead
@@ -356,7 +356,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -400,7 +400,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -433,7 +433,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -471,7 +471,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
-	. = ..()
+
 
 /datum/equipment_preset/upp/officer/senior
 	name = "UPP Senior Lieutenant"
@@ -571,7 +571,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/synth, WEAR_R_STORE)
-	. = ..()
+
 
 /datum/equipment_preset/upp/synth/commando
 	name = "UPP Synthetic Commando"
@@ -641,7 +641,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavybuck, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/upp, WEAR_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -700,7 +700,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
-	. = ..()
+
 
 //*****************************************************************************************************/
 
@@ -746,7 +746,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
-	. = ..()
+
 
 /datum/equipment_preset/upp/pilot
 	name = "UPP Pilot"
@@ -777,7 +777,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
-	. = ..()
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/mildoctor
@@ -821,7 +821,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/oxycodone, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/tricordrazine, WEAR_IN_L_STORE)
-	. = ..()
+
 
 //CIVILIANS
 
