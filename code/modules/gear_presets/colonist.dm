@@ -855,12 +855,10 @@
 	name = "US Civilian, Security Guard, Wey-Yu (Tactical Shotgun)"
 
 /datum/equipment_preset/colonist/security/weyland/tactical/lead/load_gear(mob/living/carbon/human/new_human)
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_ACCESSORY)
-
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/WY, WEAR_L_EAR)
 	//head
@@ -942,8 +940,6 @@
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/colonist/security/prison/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -952,6 +948,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/corrections, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/darkblue, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/waist, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ballistic, WEAR_JACKET)
 	//waist
@@ -962,8 +960,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad/blue, WEAR_IN_R_STORE)
 	. = ..()
 
 /datum/equipment_preset/colonist/security/prison/spanish
@@ -982,8 +981,6 @@
 	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/colonist/security/guard/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	//face
@@ -1027,3 +1024,7 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/guard/brazilian
+	name = "BR Colonial Guard UACG"
+	ethnicity = BRAZIL_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
