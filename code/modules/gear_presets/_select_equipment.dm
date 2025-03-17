@@ -281,6 +281,10 @@
 /datum/equipment_preset/proc/load_skills(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.set_skills(skills)
 
+
+/datum/equipment_preset/proc/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	return
+
 /datum/equipment_preset/proc/load_id(mob/living/carbon/human/new_human, client/mob_client)
 	if(!idtype)
 		return
@@ -332,6 +336,7 @@
 	load_languages(new_human, mob_client)
 	load_age(new_human, mob_client)
 	load_id(new_human, mob_client)
+	load_underwear(new_human, mob_client)
 	if(show_job_gear)
 		load_gear(new_human, mob_client)
 	load_status(new_human, mob_client)
@@ -1442,15 +1447,12 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 /datum/equipment_preset/proc/add_upp_uniform(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
 	var/random_uniform = rand(1,2)
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP, WEAR_BODY)
-	else
-		switch(random_uniform)
-			if(1)
-				uniform.roll_suit_jacket(new_human)
-			if(2)
-				uniform.roll_suit_sleeves(new_human)
-		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/naval, WEAR_ACCESSORY)
 
@@ -1463,15 +1465,12 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 /datum/equipment_preset/proc/add_uscm_uniform(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/uniform = new()
 	var/random_uniform = rand(1,3)
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine, WEAR_BODY)
-	else
-		switch(random_uniform)
-			if(1)
-				uniform.roll_suit_jacket(new_human)
-			if(2)
-				uniform.roll_suit_sleeves(new_human)
-		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 
 /datum/equipment_preset/proc/add_uscm_uniform_standard(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/standard/uniform = new()

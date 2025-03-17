@@ -53,9 +53,8 @@
 	else
 		new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
 
-/datum/equipment_preset/upp/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/load_underwear(mob/living/carbon/human/new_human)
 	add_upp_underwear(new_human)
-	. = ..()
 
 //*****************************************************************************************************/
 
@@ -68,13 +67,15 @@
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
 
+/datum/equipment_preset/upp/militia/load_underwear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Territorial Guard Telnyashka"
+	new_human.underwear = "UPP Boxers"
+
 /datum/equipment_preset/upp/militia/load_gear(mob/living/carbon/human/new_human)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/ushanka, WEAR_HEAD)
-	new_human.undershirt = "Territorial Guard Telnyashka"
-	new_human.underwear = "UPP Boxers"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
