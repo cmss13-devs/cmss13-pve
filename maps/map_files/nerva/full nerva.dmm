@@ -629,17 +629,6 @@
 	dir = 1
 	},
 /area/nerva/second/medical)
-"anQ" = (
-/obj/structure/barricade/handrail{
-	dir = 1
-	},
-/obj/structure/sign/deck/third{
-	dir = 4;
-	icon_state = "deck-3";
-	pixel_x = -32
-	},
-/turf/open/floor/almayer,
-/area/nerva/second/hallway)
 "anV" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -1053,6 +1042,10 @@
 	},
 /turf/open/floor/almayer/redfull,
 /area/nerva/second/sec)
+"awn" = (
+/obj/structure/machinery/power/apc/upgraded/power/north,
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/second/bar)
 "awt" = (
 /obj/structure/machinery/portable_atmospherics/canister/air,
 /obj/structure/pipes/portables_connector{
@@ -1146,6 +1139,10 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/nerva/second/hallway)
+"axs" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/almayer/plating,
+/area/nerva/third/chapel)
 "axv" = (
 /obj/structure/machinery/door/airlock/external/colony{
 	frequency = 1331;
@@ -1499,6 +1496,13 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/nerva/second/medical)
+"aFi" = (
+/obj/effect/step_trigger/message{
+	once = o;
+	message = "WATCH YOUR STEP!!"
+	},
+/turf/open/floor/almayer/plating,
+/area/nerva/second/hallway)
 "aFq" = (
 /obj/structure/machinery/light_construct,
 /obj/structure/bed/chair/office/dark{
@@ -2104,6 +2108,17 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/almayer/plating,
 /area/nerva/first/research)
+"aSN" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
+/area/nerva/second/maint)
 "aTf" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -2969,14 +2984,6 @@
 /obj/item/cell/high,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/almayer/squads/req)
-"bff" = (
-/obj/structure/bed/chair/wood/normal,
-/obj/effect/projector{
-	vector_x = -124;
-	vector_y = 91
-	},
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/second/bar)
 "bfh" = (
 /obj/structure/pipes/standard/manifold/hidden/scrubbers{
 	dir = 4;
@@ -4265,9 +4272,6 @@
 /turf/open/floor/plating,
 /area/nerva/second/maint)
 "bEL" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 4
-	},
 /obj/effect/projector{
 	vector_x = -124;
 	vector_y = 91
@@ -4353,29 +4357,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/nerva/second/cic)
-"bIg" = (
-/obj/structure/catwalk,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/sign/deck/third{
-	pixel_x = 6;
-	pixel_y = 21
-	},
-/turf/open/floor/plating,
-/area/nerva/second/hallway)
 "bIi" = (
 /obj/structure/machinery/sensortower,
 /obj/structure/cable/cyan,
@@ -5680,25 +5661,6 @@
 /obj/effect/spawner/random/tech_supply,
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
-"cfB" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 6;
-	icon_state = "intact-scrubbers"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
-/turf/open/floor/plating,
-/area/nerva/second/maint)
 "cfN" = (
 /obj/structure/machinery/power/smes/buildable{
 	RCon_tag = "Substation - First Deck"
@@ -6003,6 +5965,17 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/nerva/second/sec)
+"coJ" = (
+/obj/structure/pipes/vents/pump/on{
+	dir = 8;
+	icon_state = "map_vent_out"
+	},
+/obj/effect/step_trigger/message{
+	once = o;
+	message = "WATCH YOUR STEP!!"
+	},
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "cpi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/emcloset,
@@ -6217,6 +6190,13 @@
 	},
 /turf/open/floor/kutjevo/colors/red/tile,
 /area/nerva/second/hallway)
+"cuu" = (
+/obj/structure/ladder{
+	height = 2;
+	id = "bara"
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/second/bar)
 "cux" = (
 /obj/structure/pipes/standard/simple/visible/scrubbers{
 	dir = 6;
@@ -6647,6 +6627,16 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/nerva/second/medical)
+"cDt" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4;
+	icon_state = "intact-supply"
+	},
+/obj/structure/bed/chair/wood/normal{
+	dir = 8
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/second/bar)
 "cDy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/food/snacks/bun,
@@ -6830,7 +6820,9 @@
 /turf/open/floor/plating,
 /area/nerva/second/maint)
 "cGV" = (
-/obj/structure/machinery/door/airlock/almayer/maint/reinforced,
+/obj/structure/machinery/door/airlock/almayer/maint/reinforced{
+	dir = 1
+	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable{
 	d1 = 1;
@@ -8396,6 +8388,13 @@
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /turf/open/floor/plating,
 /area/nerva/first/research)
+"dln" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/second/bar)
 "dls" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -8801,6 +8800,14 @@
 	icon_state = "bcarpet05"
 	},
 /area/nerva/third/officerbunkmid)
+"duL" = (
+/obj/structure/bed/chair/wood/normal,
+/obj/effect/projector{
+	vector_x = -124;
+	vector_y = 91
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/second/bar)
 "duX" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -8840,6 +8847,13 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/nerva/first/research)
+"dvE" = (
+/obj/structure/barricade/handrail{
+	pixel_y = -2;
+	layer = 2.9
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/nerva/second/bar)
 "dvM" = (
 /obj/item/storage/box/ids,
 /obj/structure/surface/table,
@@ -8981,13 +8995,13 @@
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
 "dxo" = (
-/obj/structure/pipes/standard/manifold/visible{
-	dir = 1;
-	level = 2
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 100;
+	vector_x = -122;
+	vector_y = -95
 	},
-/obj/structure/machinery/power/apc/upgraded/power/north,
-/turf/open/floor/plating,
-/area/nerva/first/research)
+/turf/open/void,
+/area/nerva/second/hallway)
 "dyb" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -10796,11 +10810,6 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/third/engineerrnr)
-"env" = (
-/obj/structure/lattice,
-/obj/structure/foamed_metal/iron,
-/turf/open/floor/plating,
-/area/nerva/first/maint)
 "enK" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/effect/projector{
@@ -11264,13 +11273,6 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/nerva/second/maint)
-"ewl" = (
-/obj/structure/machinery/computer/demo_sim{
-	dir = 8
-	},
-/obj/structure/surface/table,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/almayer/squads/req)
 "ewr" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/poddoor/shutters/almayer,
@@ -11336,6 +11338,18 @@
 /obj/structure/window/framed/almayer/hull,
 /turf/open/floor/plating,
 /area/nerva/first/research)
+"exp" = (
+/obj/structure/machinery/door/firedoor/border_only,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id_tag = "bridgeoutlock";
+	name = "Bridge Outer Lockdown"
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/reinforced/colony{
+	dir = 2
+	},
+/turf/open/floor/almayer/plating,
+/area/nerva/second/hallway)
 "exy" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -12035,13 +12049,6 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/first/maint)
-"eMv" = (
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/open/floor/plating,
-/area/nerva/second/maint)
 "eMx" = (
 /obj/structure/machinery/requests_console{
 	department = "Chaplain's Office";
@@ -12487,16 +12494,9 @@
 /turf/closed/wall/almayer/reinforced,
 /area/nerva/second/maint)
 "eUE" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/plating,
-/area/nerva/second/maint)
+/obj/structure/machinery/power/apc/upgraded/power/east,
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/third/commonbunks)
 "eUF" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4;
@@ -13162,6 +13162,16 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/nerva/second/bar)
+"fhw" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4;
+	icon_state = "intact-supply"
+	},
+/obj/structure/bed/chair/wood/normal{
+	dir = 4
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/second/bar)
 "fhy" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -13601,6 +13611,29 @@
 	},
 /turf/open/floor/bluegrid,
 /area/nerva/fourth/core)
+"fqq" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 9;
+	icon_state = "intact-scrubbers"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9;
+	icon_state = "intact-supply"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/projector{
+	vector_x = 109
+	},
+/turf/open/floor/plating,
+/area/nerva/second/maint)
 "fqs" = (
 /obj/structure/cable/yellow,
 /turf/open/floor/plating,
@@ -13878,6 +13911,13 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/second/engineering/burn)
+"fzy" = (
+/obj/structure/sign/deck/third{
+	pixel_x = 0;
+	pixel_y = 25
+	},
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "fzF" = (
 /obj/item/reagent_container/food/drinks/cans/waterbottle,
 /obj/item/book/manual/security_space_law,
@@ -14105,17 +14145,6 @@
 	},
 /turf/open/floor/grimy,
 /area/nerva/third/officerbunkfore)
-"fEl" = (
-/obj/structure/pipes/vents/pump/on{
-	dir = 8;
-	icon_state = "map_vent_out"
-	},
-/obj/effect/step_trigger/message{
-	once = o;
-	message = "WATCH YOUR STEP!!"
-	},
-/turf/open/floor/almayer,
-/area/nerva/second/hallway)
 "fEo" = (
 /obj/structure/machinery/firealarm{
 	dir = 4;
@@ -15391,12 +15420,6 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/almayer,
 /area/nerva/first/hallway)
-"gdu" = (
-/obj/structure/barricade/handrail{
-	dir = 8
-	},
-/turf/open/floor/almayer,
-/area/nerva/second/hallway)
 "gdv" = (
 /obj/structure/machinery/alarm{
 	pixel_y = 24
@@ -15519,13 +15542,9 @@
 /turf/open/floor/plating/catwalk,
 /area/nerva/fourth/core)
 "ghB" = (
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
 /area/nerva/second/maint)
@@ -15619,9 +15638,24 @@
 /turf/open/floor/almayer,
 /area/nerva/second/hallway)
 "gku" = (
-/obj/structure/foamed_metal/iron,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4;
+	icon_state = "intact-scrubbers"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4;
+	icon_state = "intact-supply"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating,
-/area/nerva/first/maint)
+/area/nerva/second/maint)
 "gkL" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -16869,16 +16903,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/plating,
 /area/almayer/squads/req)
-"gKC" = (
-/obj/structure/pipes/vents/pump/on{
-	dir = 4;
-	icon_state = "map_vent_out"
-	},
-/obj/structure/barricade/handrail{
-	dir = 8
-	},
-/turf/open/floor/almayer,
-/area/nerva/second/hallway)
 "gKD" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/chem_dispenser/soda,
@@ -16945,21 +16969,14 @@
 /turf/closed/wall/almayer/reinforced,
 /area/nerva/second/maint)
 "gLQ" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/catwalk,
-/obj/effect/step_trigger/message{
-	once = o;
-	message = "WATCH YOUR STEP!!"
-	},
-/turf/open/floor/plating,
-/area/nerva/second/hallway)
+/obj/structure/machinery/power/apc/upgraded/power/north,
+/turf/open/floor/bluegrid,
+/area/nerva/fourth/core)
 "gLW" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -18259,6 +18276,29 @@
 /obj/structure/machinery/pipedispenser/orderable,
 /turf/open/floor/plating/catwalk,
 /area/nerva/first/hanger/port)
+"hkS" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4;
+	icon_state = "intact-scrubbers"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/deck/third{
+	pixel_x = 6;
+	pixel_y = 21
+	},
+/turf/open/floor/plating,
+/area/nerva/second/hallway)
 "hlm" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -19029,6 +19069,25 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/space)
+"hAE" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 6;
+	icon_state = "intact-scrubbers"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating,
+/area/nerva/second/maint)
 "hAG" = (
 /obj/item/storage/fancy/cigarettes/lucky_strikes_4,
 /turf/open/floor/plating,
@@ -19680,6 +19739,17 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/second/hallway)
+"hRC" = (
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/sign/deck/third{
+	dir = 4;
+	icon_state = "deck-3";
+	pixel_x = -32
+	},
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "hRH" = (
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/interior/wood,
@@ -19739,13 +19809,10 @@
 /turf/open/floor/asteroidplating,
 /area/nerva/fourth/maint)
 "hTl" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
-	damage = 100;
-	vector_x = -122;
-	vector_y = -95
-	},
-/turf/open/void,
-/area/nerva/second/hallway)
+/obj/structure/lattice,
+/obj/structure/foamed_metal/iron,
+/turf/open/floor/plating,
+/area/nerva/first/maint)
 "hTx" = (
 /obj/structure/pipes/portables_connector{
 	dir = 8
@@ -20073,12 +20140,14 @@
 /turf/open/floor/almayer_hull,
 /area/nerva/third/thruster)
 "iaB" = (
-/obj/effect/projector{
-	vector_x = -124;
-	vector_y = 91
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/second/bar)
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/plating,
+/area/nerva/first/hanger/aft)
 "iaC" = (
 /obj/structure/machinery/light,
 /obj/structure/pipes/vents/scrubber/on,
@@ -20167,6 +20236,10 @@
 	},
 /turf/open/floor/almayer,
 /area/nerva/third/air)
+"icj" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/nerva/first/research)
 "icJ" = (
 /obj/structure/machinery/computer/cryopod{
 	density = 0;
@@ -20537,6 +20610,17 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/nerva/first/research)
+"ijT" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4;
+	icon_state = "intact-supply"
+	},
+/obj/effect/projector{
+	vector_x = -124;
+	vector_y = 91
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/second/bar)
 "ijV" = (
 /obj/structure/pipes/standard/tank/air,
 /turf/open/floor/plating,
@@ -21179,10 +21263,6 @@
 /obj/structure/closet/cabinet,
 /turf/open/floor/carpet,
 /area/nerva/third/officerbunkfore)
-"itG" = (
-/obj/structure/machinery/power/apc/upgraded/power/east,
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/third/commonbunks)
 "itH" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -21804,14 +21884,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/plating,
 /area/nerva/second/engineering)
-"iJj" = (
-/obj/structure/machinery/light,
-/obj/structure/ladder{
-	id = "cap";
-	height = 1
-	},
-/turf/open/floor/almayer/plating,
-/area/nerva/second/hallway)
 "iJv" = (
 /obj/structure/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/plating,
@@ -22410,10 +22482,6 @@
 /obj/structure/machinery/chem_master,
 /turf/open/floor/plating,
 /area/nerva/first/maint)
-"iWw" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/nerva/second/engineering/tcomms)
 "iWA" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -24261,13 +24329,6 @@
 	},
 /turf/open/floor/almayer,
 /area/nerva/second/hallway)
-"jGj" = (
-/obj/structure/barricade/handrail{
-	pixel_y = -2;
-	layer = 2.9
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/nerva/second/bar)
 "jGB" = (
 /obj/item/tool/crowbar,
 /turf/open/floor/plating/airless,
@@ -25334,10 +25395,6 @@
 	},
 /turf/open/floor/almayer,
 /area/nerva/third/air)
-"kdC" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/almayer/plating,
-/area/nerva/third/chapel)
 "kdD" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
@@ -25854,14 +25911,6 @@
 	},
 /turf/open/floor/almayer,
 /area/nerva/third/air)
-"knb" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/step_trigger/message{
-	once = o;
-	message = "WATCH YOUR STEP!!"
-	},
-/turf/open/floor/almayer,
-/area/nerva/second/hallway)
 "knD" = (
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 8
@@ -26372,21 +26421,6 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/third/commonbunks)
-"kwg" = (
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/effect/step_trigger/message{
-	once = o;
-	message = "WATCH YOUR STEP!!"
-	},
-/turf/open/floor/almayer,
-/area/nerva/second/hallway)
 "kwF" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 8;
@@ -26652,13 +26686,6 @@
 	},
 /turf/open/floor/plating/catwalk,
 /area/nerva/first/panic)
-"kCQ" = (
-/obj/effect/step_trigger/message{
-	once = o;
-	message = "WATCH YOUR STEP!!"
-	},
-/turf/open/floor/almayer/plating,
-/area/nerva/second/hallway)
 "kCW" = (
 /obj/structure/pipes/standard/manifold/hidden/scrubbers,
 /obj/structure/pipes/standard/manifold/hidden/supply,
@@ -28579,6 +28606,18 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/second/maint)
+"loZ" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	damage = 100;
+	vector_x = -122;
+	vector_y = -95
+	},
+/obj/effect/step_trigger/message{
+	once = o;
+	message = "WATCH YOUR STEP!!"
+	},
+/turf/open/void,
+/area/nerva/second/hallway)
 "lpb" = (
 /obj/structure/pipes/vents/scrubber/on,
 /obj/structure/disposalpipe/segment,
@@ -28604,6 +28643,12 @@
 	},
 /turf/open/floor/grimy,
 /area/nerva/third/officerbunkfore)
+"lpZ" = (
+/obj/structure/bed/chair/wood/normal{
+	dir = 4
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/second/bar)
 "lqd" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4;
@@ -29539,9 +29584,12 @@
 /turf/open/floor/plating,
 /area/nerva/second/maint)
 "lGr" = (
-/obj/structure/machinery/power/apc/power/east,
-/turf/open/floor/almayer/plating,
-/area/nerva/third/laundry)
+/obj/effect/step_trigger/message{
+	once = o;
+	message = "WATCH YOUR STEP!!"
+	},
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "lGB" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -29652,25 +29700,6 @@
 	},
 /turf/open/floor/plating,
 /area/almayer/living/tankerbunks)
-"lIq" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/nerva/second/maint)
 "lJf" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 4
@@ -30004,13 +30033,6 @@
 /obj/structure/machinery/camera/autoname/almayer,
 /turf/open/floor/almayer,
 /area/nerva/second/hallway)
-"lQW" = (
-/obj/structure/pipes/standard/simple/visible/cyan{
-	dir = 4
-	},
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/almayer_hull,
-/area/nerva/first/thrusters)
 "lQY" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -30411,6 +30433,28 @@
 /obj/structure/pipes/unary/heat_exchanger,
 /turf/open/floor/almayer_hull,
 /area/nerva/second/engineering/burn)
+"mac" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4;
+	icon_state = "intact-scrubbers"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4;
+	icon_state = "intact-supply"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/projector{
+	vector_x = 109
+	},
+/turf/open/floor/plating,
+/area/nerva/second/maint)
 "mai" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -31491,6 +31535,16 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/nerva/second/engineering/burn)
+"mvN" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_sn_solo_cap";
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "mwi" = (
 /obj/item/storage/fancy/cigarettes/lucky_strikes_4,
 /obj/structure/pipes/binary/pump/on{
@@ -32863,10 +32917,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/almayer/living/tankerbunks)
-"mXQ" = (
-/obj/structure/sign/deck/first,
-/turf/closed/wall/hangar,
-/area/nerva/second/bar)
 "mYf" = (
 /obj/item/device/radio/intercom{
 	dir = 8;
@@ -33067,16 +33117,6 @@
 	icon_state = "intact"
 	},
 /turf/open/floor/kutjevo/colors/red/tile,
-/area/nerva/second/hallway)
-"nfN" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_sn_solo_cap";
-	dir = 4
-	},
-/turf/open/floor/almayer,
 /area/nerva/second/hallway)
 "nhm" = (
 /obj/structure/surface/table,
@@ -33280,28 +33320,6 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/first/maint)
-"nlB" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/projector{
-	vector_x = 109
-	},
-/turf/open/floor/plating,
-/area/nerva/second/maint)
 "nlL" = (
 /obj/item/tool/soap/weyland_yutani,
 /obj/item/toy/bikehorn/rubberducky,
@@ -34496,6 +34514,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/plating,
 /area/nerva/third/engineerrnr)
+"nIR" = (
+/obj/structure/pipes/standard/simple/visible/cyan{
+	dir = 4
+	},
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/almayer_hull,
+/area/nerva/first/thrusters)
 "nIT" = (
 /obj/structure/surface/rack,
 /obj/structure/window/reinforced{
@@ -34554,6 +34579,10 @@
 "nKM" = (
 /turf/closed/wall/almayer/reinforced,
 /area/nerva/second/sec/armory)
+"nKU" = (
+/obj/structure/sign/deck/first,
+/turf/closed/wall/hangar,
+/area/nerva/second/bar)
 "nKY" = (
 /turf/closed/wall/almayer/outer,
 /area/space)
@@ -35743,10 +35772,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/nerva/first/research)
-"ont" = (
-/obj/structure/machinery/power/apc/upgraded/power/east,
-/turf/open/floor/almayer,
-/area/nerva/second/hallway)
 "onz" = (
 /obj/structure/flora/jungle/shrub,
 /turf/open/gm/grass,
@@ -35977,6 +36002,13 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
+"orO" = (
+/obj/structure/ladder{
+	height = 1;
+	id = "bara"
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/second/bar)
 "orW" = (
 /obj/structure/cable{
 	d2 = 8;
@@ -36966,13 +36998,9 @@
 /area/nerva/first/escapepods)
 "oKl" = (
 /obj/effect/step_trigger/teleporter_vector/damage{
-	damage = 100;
-	vector_x = -122;
+	damage = 70;
+	vector_x = -10;
 	vector_y = -95
-	},
-/obj/effect/step_trigger/message{
-	once = o;
-	message = "WATCH YOUR STEP!!"
 	},
 /turf/open/void,
 /area/nerva/second/hallway)
@@ -37415,6 +37443,17 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/first/research)
+"oTR" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/nerva/second/maint)
 "oTZ" = (
 /obj/structure/pipes/standard/manifold/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -40656,15 +40695,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/nerva/first/hanger/port)
-"qhx" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/obj/structure/machinery/power/apc/upgraded/power/north,
-/turf/open/floor/almayer/red/north,
-/area/nerva/second/sec)
 "qhM" = (
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -41822,12 +41852,12 @@
 /turf/open/floor/plating,
 /area/nerva/first/maint)
 "qEs" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
-	damage = 70;
-	vector_x = -10;
-	vector_y = -95
+/obj/structure/disposalpipe/segment,
+/obj/effect/step_trigger/message{
+	once = o;
+	message = "WATCH YOUR STEP!!"
 	},
-/turf/open/void,
+/turf/open/floor/almayer,
 /area/nerva/second/hallway)
 "qEu" = (
 /obj/structure/cable{
@@ -42367,12 +42397,9 @@
 /turf/open/floor/plating,
 /area/nerva/first/hallway)
 "qOn" = (
-/obj/effect/step_trigger/message{
-	once = o;
-	message = "WATCH YOUR STEP!!"
-	},
-/turf/open/floor/almayer,
-/area/nerva/second/hallway)
+/obj/structure/foamed_metal/iron,
+/turf/open/floor/plating,
+/area/nerva/first/maint)
 "qOq" = (
 /turf/closed/wall/almayer/outer,
 /area/nerva/first/thrusters)
@@ -42653,15 +42680,6 @@
 	},
 /turf/open/floor/kutjevo/tan,
 /area/nerva/second/medical)
-"qUI" = (
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/machinery/power/apc/upgraded/power/north,
-/turf/open/floor/bluegrid,
-/area/nerva/fourth/core)
 "qVa" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 4
@@ -42805,6 +42823,22 @@
 /obj/effect/spawner/random/bomb_supply,
 /turf/open/floor/plating,
 /area/nerva/second/maint)
+"qWk" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/catwalk,
+/obj/effect/step_trigger/message{
+	once = o;
+	message = "WATCH YOUR STEP!!"
+	},
+/turf/open/floor/plating,
+/area/nerva/second/hallway)
 "qWw" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -43073,17 +43107,6 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
-"rdm" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
-	},
-/obj/effect/projector{
-	vector_x = -124;
-	vector_y = 91
-	},
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/second/bar)
 "rdN" = (
 /obj/effect/decal/warning_stripes/asteroid,
 /obj/structure/cable/orange{
@@ -43894,16 +43917,6 @@
 	icon_state = "bcarpet05"
 	},
 /area/nerva/third/officerbunkmid)
-"rrS" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
-	},
-/obj/structure/bed/chair/wood/normal{
-	dir = 8
-	},
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/second/bar)
 "rsp" = (
 /obj/structure/cable,
 /obj/structure/cable{
@@ -44469,13 +44482,6 @@
 /obj/effect/spawner/random/trash,
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
-"rAX" = (
-/obj/structure/ladder{
-	height = 2;
-	id = "bara"
-	},
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/second/bar)
 "rAZ" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable{
@@ -44665,29 +44671,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/nerva/second/medical)
-"rES" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 9;
-	icon_state = "intact-scrubbers"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 9;
-	icon_state = "intact-supply"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/obj/effect/projector{
-	vector_x = 109
-	},
-/turf/open/floor/plating,
-/area/nerva/second/maint)
 "rEY" = (
 /obj/structure/surface/table,
 /obj/item/paper_bin,
@@ -45551,6 +45534,10 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/first/maint)
+"rRs" = (
+/obj/structure/machinery/power/apc/upgraded/power/east,
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "rRx" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -47127,6 +47114,10 @@
 /obj/structure/bed/chair/wood/normal{
 	dir = 4
 	},
+/obj/effect/projector{
+	vector_x = -124;
+	vector_y = 91
+	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "sxp" = (
@@ -47309,6 +47300,15 @@
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/carpet,
 /area/nerva/third/officerbunkfore)
+"sBp" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/obj/structure/machinery/power/apc/upgraded/power/north,
+/turf/open/floor/almayer/red/north,
+/area/nerva/second/sec)
 "sBy" = (
 /obj/item/storage/box/autoinjectors{
 	pixel_x = -28;
@@ -47710,15 +47710,6 @@
 "sHU" = (
 /turf/open/floor/almayer/plating,
 /area/nerva/first/maint)
-"sIj" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/plating,
-/area/nerva/first/hanger/aft)
 "sIq" = (
 /obj/structure/machinery/door/window/brigdoor/southright{
 	id = "Cell 1"
@@ -48264,10 +48255,6 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/plating/catwalk,
 /area/nerva/first/hanger/port)
-"sRL" = (
-/obj/structure/sign/deck/second,
-/turf/closed/wall/hangar,
-/area/nerva/second/bar)
 "sRM" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4;
@@ -48628,18 +48615,6 @@
 	},
 /turf/open/floor/plating/catwalk,
 /area/almayer/living/pilotbunks)
-"sWW" = (
-/obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	id_tag = "bridgeoutlock";
-	name = "Bridge Outer Lockdown"
-	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/reinforced/colony{
-	dir = 2
-	},
-/turf/open/floor/almayer/plating,
-/area/nerva/second/hallway)
 "sXt" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -50001,16 +49976,6 @@
 /obj/structure/pipes/standard/manifold/hidden/cyan,
 /turf/open/floor/plating,
 /area/nerva/first/maint)
-"txz" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
-	},
-/obj/structure/bed/chair/wood/normal{
-	dir = 4
-	},
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/second/bar)
 "txJ" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable{
@@ -50107,6 +50072,16 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/nerva/second/engineering)
+"tzl" = (
+/obj/structure/pipes/vents/pump/on{
+	dir = 4;
+	icon_state = "map_vent_out"
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "tzp" = (
 /obj/structure/pipes/standard/simple/visible/scrubbers{
 	dir = 5;
@@ -51716,6 +51691,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/nerva/first/maint)
+"ufL" = (
+/obj/structure/machinery/computer/demo_sim{
+	dir = 8
+	},
+/obj/structure/surface/table,
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/almayer/squads/req)
 "ufU" = (
 /obj/structure/reagent_dispensers/fueltank/gas/hydrogen,
 /turf/open/floor/plating,
@@ -52115,13 +52097,6 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/almayer,
 /area/nerva/second/hallway)
-"uqP" = (
-/obj/structure/ladder{
-	height = 1;
-	id = "bara"
-	},
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/second/bar)
 "uqR" = (
 /obj/effect/decal/cleanable/blood,
 /obj/item/weapon/broken_glass,
@@ -52553,6 +52528,21 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/nerva/second/sec)
+"uzG" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/step_trigger/message{
+	once = o;
+	message = "WATCH YOUR STEP!!"
+	},
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "uAa" = (
 /obj/structure/machinery/computer/communications/simple{
 	dir = 8
@@ -52958,16 +52948,6 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/second/maint)
-"uIY" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 8
-	},
-/obj/effect/projector{
-	vector_x = -124;
-	vector_y = 91
-	},
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/second/bar)
 "uJf" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -53410,6 +53390,10 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating,
 /area/nerva/second/maint)
+"uSm" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/nerva/second/engineering/tcomms)
 "uSB" = (
 /obj/structure/machinery/light,
 /obj/item/tool/warning_cone,
@@ -54386,10 +54370,6 @@
 /obj/structure/bed/stool,
 /turf/open/floor/almayer/dark_sterile,
 /area/nerva/second/medical)
-"vlh" = (
-/obj/structure/machinery/power/apc/upgraded/power/north,
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/second/bar)
 "vlk" = (
 /obj/structure/window/framed/bunker{
 	not_damageable = 1;
@@ -54724,13 +54704,6 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
-"vqN" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/barricade/handrail,
-/turf/open/floor/kutjevo/fake_wood,
-/area/nerva/second/bar)
 "vqZ" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -55071,6 +55044,16 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"vyf" = (
+/obj/structure/bed/chair/wood/normal{
+	dir = 8
+	},
+/obj/effect/projector{
+	vector_x = -124;
+	vector_y = 91
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/nerva/second/bar)
 "vym" = (
 /obj/structure/pipes/standard/simple/hidden{
 	dir = 9
@@ -55162,6 +55145,10 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/second/hallway)
+"vAy" = (
+/obj/structure/machinery/power/apc/power/east,
+/turf/open/floor/almayer/plating,
+/area/nerva/third/laundry)
 "vAz" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/item/device/radio/intercom{
@@ -55329,6 +55316,14 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
+"vEp" = (
+/obj/structure/machinery/light,
+/obj/structure/ladder{
+	id = "cap";
+	height = 1
+	},
+/turf/open/floor/almayer/plating,
+/area/nerva/second/hallway)
 "vEz" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -55724,10 +55719,6 @@
 /obj/structure/window/reinforced,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
-"vLr" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/nerva/first/research)
 "vLK" = (
 /obj/structure/ladder{
 	id = "hanger_south";
@@ -56829,6 +56820,12 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/second/maint)
+"wlH" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "wlT" = (
 /obj/structure/bookcase,
 /obj/item/book/manual/evaguide,
@@ -57651,6 +57648,14 @@
 	},
 /turf/open/floor/bluegrid,
 /area/nerva/first/panic)
+"wBc" = (
+/obj/structure/pipes/standard/manifold/visible{
+	dir = 1;
+	level = 2
+	},
+/obj/structure/machinery/power/apc/upgraded/power/north,
+/turf/open/floor/plating,
+/area/nerva/first/research)
 "wBj" = (
 /obj/structure/bed,
 /obj/structure/machinery/light{
@@ -57941,6 +57946,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
+"wFk" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/machinery/power/apc/upgraded/power/east,
+/turf/open/floor/almayer/plating,
+/area/nerva/third/engineerrnr)
 "wFu" = (
 /obj/structure/machinery/power/breakerbox/activated{
 	RCon_tag = "First Deck Bypass"
@@ -59261,6 +59273,10 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/almayer/living/pilotbunks)
+"xfZ" = (
+/obj/structure/sign/deck/second,
+/turf/closed/wall/hangar,
+/area/nerva/second/bar)
 "xgf" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -59710,13 +59726,6 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/second/bar)
-"xnD" = (
-/obj/structure/sign/deck/third{
-	pixel_x = 0;
-	pixel_y = 25
-	},
-/turf/open/floor/almayer,
-/area/nerva/second/hallway)
 "xnH" = (
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/plating,
@@ -61564,13 +61573,6 @@
 	},
 /turf/closed/wall/sulaco,
 /area/nerva/first/hanger/port)
-"xXe" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/structure/machinery/power/apc/upgraded/power/east,
-/turf/open/floor/almayer/plating,
-/area/nerva/third/engineerrnr)
 "xXi" = (
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/cic)
@@ -70573,7 +70575,7 @@ qOq
 qOq
 qOq
 qOq
-lQW
+nIR
 btI
 cQC
 pZU
@@ -74442,7 +74444,7 @@ cSw
 cSw
 cSw
 cSw
-sIj
+iaB
 xVy
 xVy
 xVy
@@ -80333,7 +80335,7 @@ nrX
 apj
 irt
 fEo
-xXe
+wFk
 gOY
 gOY
 gPX
@@ -80694,11 +80696,11 @@ mUY
 wph
 umE
 umE
-ghB
-ghB
-ghB
-ghB
-ghB
+aSN
+aSN
+aSN
+aSN
+aSN
 aUf
 pYO
 ayj
@@ -80788,7 +80790,7 @@ qsD
 wPq
 ifP
 cEm
-ewl
+ufL
 oAW
 seY
 wdi
@@ -81737,7 +81739,7 @@ rCD
 xMQ
 xMQ
 xMQ
-kCQ
+aFi
 jJV
 rhS
 iax
@@ -82107,7 +82109,7 @@ uEw
 edC
 edC
 kkP
-lIq
+gku
 eUB
 kMi
 eSA
@@ -82440,9 +82442,9 @@ fau
 jEM
 iax
 rhS
-qEs
-qEs
-qEs
+oKl
+oKl
+oKl
 rhS
 iax
 rhS
@@ -82792,9 +82794,9 @@ wgF
 rhS
 iax
 rhS
-qEs
-qEs
-qEs
+oKl
+oKl
+oKl
 rhS
 iax
 rhS
@@ -82811,9 +82813,9 @@ rLY
 edC
 edC
 kkP
-nlB
+mac
 eUB
-eMv
+ghB
 mGI
 eUB
 cGD
@@ -83144,9 +83146,9 @@ qfB
 rhS
 iax
 rhS
-qEs
-qEs
-qEs
+oKl
+oKl
+oKl
 rhS
 iax
 rhS
@@ -83162,8 +83164,8 @@ edC
 edC
 edC
 edC
-cfB
-rES
+hAE
+fqq
 eUB
 eUB
 eUB
@@ -83502,7 +83504,7 @@ qHs
 rhS
 fJp
 rhS
-xnD
+fzy
 rbY
 cNj
 jHG
@@ -83514,7 +83516,7 @@ wQy
 bDq
 sLE
 edC
-lIq
+gku
 eUB
 eUB
 pND
@@ -83849,7 +83851,7 @@ urs
 fau
 fau
 fau
-qOn
+lGr
 fau
 uYv
 fau
@@ -83866,7 +83868,7 @@ udH
 dxl
 tXb
 edC
-lIq
+gku
 eUB
 iCG
 pZV
@@ -84197,7 +84199,7 @@ rum
 qNk
 sVz
 fau
-ont
+rRs
 fau
 fau
 fau
@@ -84211,7 +84213,7 @@ dXg
 cNj
 lev
 mnV
-lGr
+vAy
 nAZ
 nAZ
 vrh
@@ -84570,7 +84572,7 @@ edC
 edC
 edC
 edC
-lIq
+gku
 eUB
 eUB
 eUB
@@ -86682,7 +86684,7 @@ wuC
 lgj
 hac
 edC
-nlB
+mac
 byS
 jlv
 oRR
@@ -87034,7 +87036,7 @@ edC
 edC
 edC
 edC
-lIq
+gku
 byS
 ebX
 nHo
@@ -87382,10 +87384,10 @@ mfq
 mfq
 mfq
 mfq
-eUE
-eUE
-eUE
-eUE
+oTR
+oTR
+oTR
+oTR
 vFe
 byS
 xik
@@ -87475,7 +87477,7 @@ dGc
 hRd
 ndS
 ndS
-vLr
+icj
 baV
 rPP
 rxZ
@@ -88788,7 +88790,7 @@ kkP
 rIs
 aru
 byS
-kdC
+axs
 ohO
 vqk
 qne
@@ -89831,7 +89833,7 @@ mrT
 hQc
 eZQ
 myO
-itG
+eUE
 fEY
 kwa
 byC
@@ -90636,7 +90638,7 @@ eCQ
 cSw
 wlW
 ndS
-dxo
+wBc
 xSu
 mGd
 udl
@@ -94411,7 +94413,7 @@ eEk
 eEk
 eEk
 ptm
-rAX
+cuu
 pkN
 hwy
 fau
@@ -95465,8 +95467,8 @@ hwy
 vtL
 pkN
 pkN
-sxm
-txz
+lpZ
+fhw
 ygX
 isO
 xxV
@@ -95910,13 +95912,13 @@ sjk
 jkf
 jZR
 cSw
-gku
-env
-gku
-gku
-gku
-gku
-env
+qOn
+hTl
+qOn
+qOn
+qOn
+qOn
+hTl
 cSw
 wVR
 ndS
@@ -96171,7 +96173,7 @@ pkN
 wXB
 xcO
 gDQ
-vqN
+dln
 aig
 mjT
 mLS
@@ -96262,13 +96264,13 @@ sjk
 hmz
 ekd
 cSw
-gku
-env
-gku
-gku
-gku
-gku
-env
+qOn
+hTl
+qOn
+qOn
+qOn
+qOn
+hTl
 cSw
 wVR
 iLD
@@ -96522,8 +96524,8 @@ iqy
 pkN
 pkN
 kcB
-rrS
-vqN
+cDt
+dln
 iks
 mjT
 gVF
@@ -97223,10 +97225,10 @@ wHS
 iax
 mjT
 kZm
-sxm
-sxm
+lpZ
+lpZ
 eow
-sxm
+lpZ
 kFF
 fFX
 mjT
@@ -99683,13 +99685,13 @@ nKM
 nKM
 qRI
 kkP
-bIg
+hkS
 wXl
 gie
 fau
-nfN
+mvN
 nEI
-anQ
+hRC
 nri
 oqd
 jMe
@@ -100039,8 +100041,8 @@ wHS
 rCW
 dOA
 fau
-gKC
-gdu
+tzl
+wlH
 vnE
 fau
 uUd
@@ -120563,7 +120565,7 @@ bvb
 gac
 ikV
 jjg
-iWw
+uSm
 awY
 fFL
 eUB
@@ -120809,7 +120811,7 @@ dJT
 fUh
 vbh
 fau
-fEl
+coJ
 pce
 rhS
 eHl
@@ -121161,7 +121163,7 @@ rhS
 fJp
 rhS
 qHs
-qOn
+lGr
 qHs
 rhS
 eHl
@@ -121512,9 +121514,9 @@ fau
 uQo
 iax
 rhS
-hTl
-oKl
-hTl
+dxo
+loZ
+dxo
 rhS
 eHl
 iKL
@@ -121864,9 +121866,9 @@ lqS
 rhS
 ane
 rhS
-hTl
-hTl
-hTl
+dxo
+dxo
+dxo
 rhS
 eHl
 iKL
@@ -122216,9 +122218,9 @@ pce
 rhS
 iax
 rhS
-hTl
-hTl
-hTl
+dxo
+dxo
+dxo
 rhS
 eHl
 iKL
@@ -122569,7 +122571,7 @@ rhS
 fJp
 rhS
 qHs
-qOn
+lGr
 qHs
 rhS
 uAR
@@ -122921,7 +122923,7 @@ pzd
 xmj
 vol
 jqh
-gLQ
+qWk
 pmG
 pQx
 xiQ
@@ -125476,7 +125478,7 @@ plH
 tVA
 plH
 bVD
-kwg
+uzG
 cQe
 xdD
 hpr
@@ -125828,7 +125830,7 @@ lqS
 rhS
 rhS
 qHs
-qOn
+lGr
 qHs
 rhS
 rhS
@@ -127236,7 +127238,7 @@ lqS
 rhS
 rhS
 qHs
-qOn
+lGr
 qHs
 rhS
 rhS
@@ -127588,7 +127590,7 @@ oFZ
 cpj
 xTG
 xTG
-knb
+qEs
 xTG
 aHg
 gFo
@@ -128642,10 +128644,10 @@ viA
 mLy
 mjT
 mjT
-mXQ
+nKU
 mjT
 mjT
-sRL
+xfZ
 mjT
 taw
 mjT
@@ -138408,7 +138410,7 @@ egM
 hIZ
 mHR
 egM
-qUI
+gLQ
 egM
 mHR
 nGf
@@ -139202,7 +139204,7 @@ jxX
 iNq
 mjT
 dWa
-jGj
+dvE
 shP
 hDD
 goY
@@ -139911,7 +139913,7 @@ cjs
 fMJ
 pkN
 tXt
-uqP
+orO
 mjT
 ssV
 fau
@@ -140609,7 +140611,7 @@ sjk
 uJr
 fau
 mjT
-vlh
+awn
 hIA
 nex
 nex
@@ -141301,7 +141303,7 @@ eUB
 eUB
 eUB
 sjk
-qhx
+sBp
 gTh
 uAZ
 uAZ
@@ -141666,12 +141668,12 @@ xzR
 bdz
 mjT
 raO
-bEL
+sxm
 azg
-iaB
-rdm
 bEL
-iaB
+ijT
+sxm
+bEL
 oCY
 dOZ
 jOf
@@ -142017,10 +142019,10 @@ sjk
 vYy
 fau
 oCY
-iaB
+bEL
 enK
 vxa
-iaB
+bEL
 tLv
 qMB
 vZi
@@ -142369,11 +142371,11 @@ nAo
 wiS
 fau
 oCY
-iaB
+bEL
 qMB
 enK
-iaB
-bff
+bEL
+duL
 kBF
 vZi
 oCY
@@ -142721,13 +142723,13 @@ sjk
 luC
 qzK
 oCY
-iaB
-iaB
+bEL
+bEL
 lqX
-iaB
+bEL
 bhw
-uIY
-iaB
+vyf
+bEL
 oCY
 qzK
 tqq
@@ -144479,7 +144481,7 @@ hhG
 lcH
 nKM
 fdC
-sWW
+exp
 tLj
 tLj
 adY
@@ -146257,7 +146259,7 @@ tLj
 wGp
 tLj
 jJB
-iJj
+vEp
 qxX
 lCu
 qRI
