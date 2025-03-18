@@ -529,6 +529,7 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp/populate_product_list(scale)
 	listed_products = list(
 		list("FOOD", -1, null, null),
+		list("Box of Survival Rations", round(scale * 1), /obj/item/ammo_box/magazine/misc/mre/upp, VENDOR_ITEM_REGULAR),
 		list("Survival Ration", round(scale * 15), /obj/item/reagent_container/food/snacks/upp, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL", -1, null, null),
@@ -555,7 +556,7 @@
 		list("Breaching Charge", round(scale * 2), /obj/item/explosive/plastic/breaching_charge, VENDOR_ITEM_REGULAR),
 
 		list("FLARE AND LIGHT", -1, null, null),
-		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
+		list("Box of R52 Flare Packs", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares/upp, VENDOR_ITEM_REGULAR),
 		list("R52 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/flare/upp, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null),
