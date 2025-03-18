@@ -127,13 +127,13 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(2.5)
-		target.Stun(2.5)
-		target.Slow(4)
+		target.KnockDown(1.5)
+		target.Stun(1.5)
+		target.Slow(3)
 	else
-		living_mob.KnockDown(3)
-		living_mob.Stun(3)
-		living_mob.Slow(5)
+		living_mob.KnockDown(1.5)
+		living_mob.Stun(1.5)
+		living_mob.Slow(3)
 		to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 
 /datum/ammo/bullet/shrapnel/hornet_rounds
