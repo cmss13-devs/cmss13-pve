@@ -342,7 +342,7 @@
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
 
-/obj/item/clothing/suit/marine/faction/UPP/jacket
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket
 	name = "\improper UH4 camouflaged jacket"
 	icon_state = "upp_coat"
 	desc = "Military jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
@@ -358,17 +358,18 @@
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_NONE
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_M3UTILITY)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_M3UTILITY)
+	storage_slots = 2
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 	time_to_unequip = 5
 	time_to_equip = 5
 
-/obj/item/clothing/suit/marine/faction/UPP/jacket/mp
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/mp
 	name = "\improper UH4-P camouflaged jacket"
 	desc = "A UPP Military Police jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_mp"
 
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket/pap
 	name = "\improper PaP uniform jacket"
 	desc = "A People's Armed Police service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_pap"
