@@ -1102,8 +1102,6 @@
 	name = "UPP People's Armed Police Officer - Riot"
 
 /datum/equipment_preset/upp/police/riot/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
@@ -1146,8 +1144,6 @@
 	idtype = /obj/item/card/id/lanyard
 
 /datum/equipment_preset/upp/prisoner/load_gear(mob/living/carbon/human/new_human)
-
-
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/prison_boiler(new_human), WEAR_BODY)
 	//limb
