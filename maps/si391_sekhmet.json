@@ -3,11 +3,11 @@
     "short_name": "Sekhmet",
     "map_path": "map_files/SI391_Sekhmet",
     "map_file": "Sekhmet_Swamp.dmm",
-    "webmap_url": "Shivas",
+    "webmap_url": "LV624",
 
     "weather_holder": "/datum/weather_ss_map_holder/si391_sekhmet",
 
-    "map_item_type": "/obj/item/map/ice_colony_map",
+    "map_item_type": "/obj/item/map/lazarus_landing_map",
 
     "camouflage": "jungle"
 
