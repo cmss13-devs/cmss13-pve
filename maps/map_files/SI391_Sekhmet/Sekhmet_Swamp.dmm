@@ -28395,17 +28395,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_reg/water_filters)
-"smM" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = s;
-	name = "Security Shutter";
-	color = "#8B9490";
-	dir = 2;
-	pixel_x = 0;
-	pixel_y = -2
-	},
-/turf/open/floor/corsat/marked,
-/area/sekhmet/int_heavy/low_level_rsr)
 "smZ" = (
 /obj/structure/largecrate/random/case/double,
 /obj/structure/machinery/camera{
@@ -118361,7 +118350,7 @@ iiG
 dzy
 fcA
 fcA
-smM
+lAi
 fyZ
 tGc
 fnV
