@@ -28,8 +28,6 @@
 		/obj/item/tool/surgery/scalpel,
 		/obj/item/weapon/straight_razor,
 		/obj/item/weapon/knife/marine,
-		/obj/item/weapon/knife/marine/sas,
-		/obj/item/weapon/knife/marine/kabar,
 	)
 	drop_sound = "armorequip"
 
@@ -68,7 +66,7 @@
 	desc = "A pair of standard issue black United States Army combat boots."
 
 /obj/item/clothing/shoes/marine/army/knife
-	spawn_item_type = /obj/item/weapon/knife/marine
+	spawn_item_type = /obj/item/weapon/knife/marine/baker
 
 /obj/item/clothing/shoes/marine/upp
 	name = "\improper UPP combat boots"
@@ -92,9 +90,9 @@
 	name = "\improper RMC combat boots"
 	desc = "A pair of standard issue black Royal Marine Commando combat boots."
 	icon_state = "marine"
+
 /obj/item/clothing/shoes/marine/rmc/knife
 	spawn_item_type = /obj/item/weapon/knife/marine/sas
-
 
 /obj/item/clothing/shoes/marine/civilian
 	name = "rugged boots"
