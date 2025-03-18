@@ -15645,8 +15645,7 @@
 	},
 /obj/structure/machinery/computer/secure_data{
 	dir = 8;
-	req_access = null;
-	faction = "Colonist"
+	req_access = null
 	},
 /obj/structure/barricade/handrail/wire,
 /turf/open/floor/prison/bright_clean2,
@@ -23034,10 +23033,6 @@
 "oGG" = (
 /turf/open/floor/kutjevo/grey,
 /area/space)
-"oGT" = (
-/turf/open/space/basic,
-/turf/closed/wall/shiva/prefabricated/reinforced,
-/area/sekhmet/int_glass/complex_generic)
 "oHr" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -55237,7 +55232,7 @@ wLU
 sip
 sip
 xsl
-oGT
+xsl
 fiL
 mrO
 ogg
