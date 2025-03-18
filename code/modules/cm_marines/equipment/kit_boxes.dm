@@ -27,7 +27,6 @@
 	kit_overlay = "demo"
 
 /obj/item/storage/box/spec/demolitionist/fill_preset_inventory()
-	new /obj/item/clothing/suit/storage/marine/M3T(src)
 	new /obj/item/clothing/head/helmet/marine/M3T(src)
 	new /obj/item/weapon/gun/launcher/rocket/marine(src)
 	new /obj/item/storage/backpack/marine/rocketpack(src)
@@ -35,12 +34,8 @@
 	new /obj/item/ammo_magazine/rocket(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/wp(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
-	new /obj/item/device/binoculars(src)
 	// loader
 	new /obj/item/storage/box/kit/loader(src)
 
