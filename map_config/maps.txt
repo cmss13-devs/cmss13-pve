@@ -81,3 +81,6 @@ endmap
 
 map canyon_32b
 endmap
+
+map nerva
+endmap
