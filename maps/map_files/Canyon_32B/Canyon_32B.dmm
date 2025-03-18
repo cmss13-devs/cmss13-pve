@@ -128,7 +128,7 @@
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
 "aW" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/food/snacks/wishsoup{
 	pixel_y = 7;
@@ -161,7 +161,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/unloading)
 "bj" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/food/snacks/boiledrice{
 	pixel_x = -3
@@ -219,7 +219,7 @@
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/engineering/power)
 "co" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/med_data/laptop{
 	dir = 8;
 	pixel_x = -3
@@ -309,7 +309,7 @@
 /turf/open/auto_turf/snow/layer2,
 /area/canyon32B/exterior/south/bar)
 "de" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/kitchen/rollingpin{
 	pixel_y = 4;
 	pixel_x = -10
@@ -631,7 +631,7 @@
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/overwatch)
 "gE" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/processor{
 	pixel_y = 3;
 	pixel_x = -2
@@ -763,7 +763,7 @@
 	pixel_y = 3;
 	pixel_x = 16
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/sign/poster{
 	pixel_y = 4;
 	icon_state = "poster15";
@@ -942,7 +942,7 @@
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
 "jG" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/power/apc/almayer/east,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty,
@@ -1730,7 +1730,7 @@
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/storage)
 "se" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/soylentgreen{
 	pixel_y = 4;
 	pixel_x = 3
@@ -2070,7 +2070,7 @@
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/gatehouse/northern)
 "wK" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/mess)
 "xf" = (
@@ -2485,7 +2485,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
 "AQ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/regular{
 	pixel_y = 14;
 	pixel_x = 7
@@ -2651,7 +2651,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
 "CM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/mess)
@@ -2791,7 +2791,7 @@
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/hallway)
 "EG" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/microwave,
 /obj/item/reagent_container/food/condiment/saltshaker{
 	pixel_x = -7;
@@ -2826,7 +2826,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
 "Fa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
 "Ff" = (
@@ -2861,7 +2861,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/bathroom)
 "Fp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = -3;
 	pixel_x = 3
@@ -2899,7 +2899,7 @@
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
 "FQ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/spray/cleaner{
 	pixel_y = 8;
 	pixel_x = -4
@@ -3039,7 +3039,7 @@
 /turf/open/floor/prison/floor_marked,
 /area/canyon32B/interior/bunker/unloading)
 "HP" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/secure_data{
 	dir = 8;
 	pixel_y = 0;
@@ -3443,7 +3443,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
 "LD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/extinguisher{
 	pixel_x = -10;
 	pixel_y = 15
@@ -4020,7 +4020,7 @@
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
 "Rm" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -4808,7 +4808,7 @@
 /turf/open/floor/almayer/edge/southwest,
 /area/canyon32B/interior/bunker/armory)
 "XA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/secure_data{
 	dir = 4;
 	pixel_y = 7;
