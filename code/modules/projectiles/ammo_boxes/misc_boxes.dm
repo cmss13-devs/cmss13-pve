@@ -91,7 +91,7 @@
 /obj/item/ammo_box/magazine/misc/flares/upp
 	name = "\improper box of R52 marking flare packs"
 	desc = "A box of R52 marking flare packs, to brighten up your day."
-	icon_state = "upp_supply_crate"
+	icon_state = "upp_supply_crate_black"
 	magazine_type = /obj/item/storage/box/flare/upp
 	num_of_magazines = 10
 	overlay_gun_type = "_blank"
