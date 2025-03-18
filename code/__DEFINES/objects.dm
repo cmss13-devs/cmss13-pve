@@ -105,6 +105,40 @@ GLOBAL_LIST_INIT(RESTRICTED_CAMERA_NETWORKS, list( //Those networks can only be 
 #define IS_SHARP_ITEM_ACCURATE 2 //knife, scalpel
 #define IS_SHARP_ITEM_BIG 3 //fireaxe, hatchet, energy sword
 
+#define CAN_OPENER_EFFECTIVE list(\
+	/obj/item/tool/kitchen/can_opener,\
+	/obj/item/tool/kitchen/can_opener/compact,\
+	)
+
+///slow can opening with a chance of jamming
+#define CAN_OPENER_CRUDE list(\
+	/obj/item/attachable/bayonet,\
+	/obj/item/attachable/bayonet/upp,\
+	/obj/item/attachable/bayonet/upp_replica,\
+	/obj/item/attachable/bayonet/co2,\
+	/obj/item/weapon/knife/marine,\
+	/obj/item/weapon/knife/marine/kabar,\
+	/obj/item/weapon/knife/marine/bowie,\
+	/obj/item/weapon/knife/marine/sas,\
+	/obj/item/tool/kitchen/knife,\
+	/obj/item/tool/kitchen/knife/butcher,\
+	/obj/item/weapon/sword,\
+	/obj/item/weapon/sword/claymore,\
+	/obj/item/weapon/sword/ceremonial,\
+	/obj/item/weapon/sword/machete,\
+	/obj/item/weapon/sword/machete/arnold,\
+	/obj/item/weapon/sword/machete/arnold/weak\
+	)
+
+/*
+//Coming soon in another PR, put here to save time
+Effective:
+	/obj/item/weapon/swiss_army_knife/can_opener,\
+Crude:
+	/obj/item/attachable/bayonet/upp/surplus,\
+	/obj/item/weapon/knife/marine/baker,\
+	/obj/item/weapon/swiss_army_knife/knife,\
+*/
 
 //pry capable item defines
 #define IS_PRY_CAPABLE_SIMPLE 1

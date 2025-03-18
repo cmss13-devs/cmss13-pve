@@ -1419,7 +1419,7 @@
 	storage_slots = 3
 
 /obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 
