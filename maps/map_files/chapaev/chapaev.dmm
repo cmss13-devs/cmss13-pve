@@ -4050,7 +4050,7 @@
 /obj/item/tool/crew_monitor{
 	faction = "UPP"
 	},
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/storage/marine/faction/UPP/jacket,
 /obj/item/clothing/suit/marine/lamp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
