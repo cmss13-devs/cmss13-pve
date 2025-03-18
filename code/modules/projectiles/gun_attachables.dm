@@ -3699,8 +3699,6 @@ Defined in conflicts.dm of the #defines folder.
 				else if(istype(gun,/obj/item/weapon/gun/rifle/lmg))
 					delay_mod = 0
 					fa_scatter_peak_mod = FULL_AUTO_SCATTER_PEAK_TIER_3
-				else
-					delay_mod = 0
 				gun.recalculate_attachment_bonuses()
 				gun.stop_fire()
 
