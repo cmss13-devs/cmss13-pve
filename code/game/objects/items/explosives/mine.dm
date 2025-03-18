@@ -305,6 +305,27 @@
 /obj/item/explosive/mine/active/no_iff
 	iff_signal = null
 
+//low lethality claymore.
+/obj/item/explosive/mine/confetti
+
+/obj/item/explosive/mine/confetti/prime()
+	set waitfor = 0
+
+	if(!customizable)
+		create_shrapnel(loc, 30, dir, angle, /datum/ammo/bullet/shrapnel/claymore/confetti, cause_data)
+		// low lethality edition
+		cell_explosion(loc, 60, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		qdel(src)
+	else
+		. = ..()
+		if(!QDELETED(src))
+			disarm()
+
+//ditto, but armed.
+/obj/item/explosive/mine/confetti/active
+	icon_state = "m20_active"
+	base_icon_state = "m20"
+	map_deployed = TRUE
 
 /obj/item/explosive/mine/pmc
 	name = "\improper M20P Claymore anti-personnel mine"
@@ -317,6 +338,22 @@
 	icon_state = "m20p_active"
 	base_icon_state = "m20p"
 	map_deployed = TRUE
+
+//low lethality claymore the second, PMC version
+/obj/item/explosive/mine/pmc/confetti
+
+/obj/item/explosive/mine/pmc/confetti/prime()
+	set waitfor = 0
+
+	if(!customizable)
+		create_shrapnel(loc, 30, dir, angle, /datum/ammo/bullet/shrapnel/claymore/confetti, cause_data)
+		// low lethality edition
+		cell_explosion(loc, 60, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		qdel(src)
+	else
+		. = ..()
+		if(!QDELETED(src))
+			disarm()
 
 /obj/item/explosive/mine/custom
 	name = "custom mine"
