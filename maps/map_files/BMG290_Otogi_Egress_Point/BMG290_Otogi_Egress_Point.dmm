@@ -4084,7 +4084,7 @@
 "bXV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/road)
 "bXW" = (
@@ -14446,7 +14446,7 @@
 	pixel_x = -6;
 	pixel_y = 12
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 6;
 	pixel_y = 0
 	},
@@ -15170,7 +15170,7 @@
 	pixel_x = -8;
 	pixel_y = 12
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
 	},
@@ -17294,7 +17294,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "iaQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 6;
 	pixel_y = 0
 	},
@@ -18995,7 +18995,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "iOX" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 5;
 	pixel_y = 6
 	},
@@ -19570,7 +19570,7 @@
 	pixel_x = 9;
 	pixel_y = -1
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = -2;
 	pixel_y = -14
 	},
@@ -20624,7 +20624,7 @@
 /obj/structure/surface/table/almayer,
 /obj/item/maintenance_jack,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/entry_pub)
 "jCX" = (
@@ -27818,7 +27818,7 @@
 /obj/structure/machinery/door/window{
 	dir = 8
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics)
 "neT" = (
@@ -41492,7 +41492,7 @@
 	pixel_y = 6
 	},
 /obj/item/ammo_box/magazine/misc/mre/empty,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/strata/fake_wood,
 /area/bmg290/wilderness/beach)
 "tCN" = (
@@ -45277,7 +45277,7 @@
 	density = 0;
 	pixel_y = 18
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics_hub)
 "vCB" = (
@@ -45286,7 +45286,7 @@
 "vCO" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/USCMtray,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/interior/wood/alt,
 /area/bmg290/wilderness/beach)
 "vCR" = (
