@@ -531,8 +531,8 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 
 /obj/structure/largecrate/hunter_games_supplies/Initialize()
 	. = ..()
-	new /obj/item/storage/box/m94(src)
-	new /obj/item/storage/box/m94(src)
+	new /obj/item/storage/box/flare(src)
+	new /obj/item/storage/box/flare(src)
 	new /obj/item/storage/pouch/general/medium(src)
 	new /obj/item/storage/pouch/survival(src)
 	new /obj/item/device/flashlight (src)

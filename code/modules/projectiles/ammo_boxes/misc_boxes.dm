@@ -70,7 +70,7 @@
 /obj/item/ammo_box/magazine/misc/flares
 	name = "\improper box of M94 marking flare packs"
 	desc = "A box of M94 marking flare packs, to brighten up your day."
-	magazine_type = /obj/item/storage/box/m94
+	magazine_type = /obj/item/storage/box/flare
 	num_of_magazines = 10
 	overlay_gun_type = "_m94"
 	overlay_content = "_flares"
@@ -80,7 +80,7 @@
 /obj/item/ammo_box/magazine/misc/flares/signal
 	name = "\improper box of M89 signal flare packs"
 	desc = "A box of M89 signal flare packs, to mark up the way."
-	magazine_type = /obj/item/storage/box/m94/signal
+	magazine_type = /obj/item/storage/box/flare/signal
 	overlay_gun_type = "_m89"
 	overlay_content = "_flares_signal"
 
@@ -95,7 +95,7 @@
 
 /obj/item/ammo_box/magazine/misc/flares/get_severity()
 	var/flare_amount = 0
-	for(var/obj/item/storage/box/m94/flare_box in contents)
+	for(var/obj/item/storage/box/flare/flare_box in contents)
 		flare_amount += length(flare_box.contents)
 	flare_amount = floor(flare_amount / 14) //10 packs, 14 flares each, maximum total of 10 flares we can throw out
 	return flare_amount
