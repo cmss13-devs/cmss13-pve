@@ -513,7 +513,7 @@
 
 /obj/item/storage/belt/security/MP/CMB
 	name = "police duty belt"
-	desc = "A high quality black duty belt utilized by the Colonial Marshal's Bureau and various other law-enforcement organizations."
+	desc = "A high quality black duty belt utilized by the Colonial Marshal's Bureau, People's Armed Police and various other law-enforcement organizations."
 	storage_slots = 6
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 30
@@ -540,6 +540,14 @@
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/notepad/blue(src)
+
+/obj/item/storage/belt/security/MP/CMB/full/upp/fill_preset_inventory()
+	new /obj/item/weapon/baton(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/device/clue_scanner(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
 
 /obj/item/storage/belt/security/MP/colonist
 	name = "security duty belt"

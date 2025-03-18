@@ -48,6 +48,40 @@
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
+
+/datum/equipment_preset/colonist/bluecollar/upp
+	name = "UPP Civilian, Blue-Collar"
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	idtype = /obj/item/card/id
+	ethnicity = UPP_ETHNICITY
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+
+/datum/equipment_preset/colonist/bluecollar/upp/get_assignment(mob/living/carbon/human/new_human)
+	assignment = "Grazhdanin"
+
+/datum/equipment_preset/colonist/bluecollar/upp/load_gear(mob/living/carbon/human/new_human)
+	//back
+	add_random_satchel(new_human)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	add_civilian_uniform(new_human)
+	//jacket
+	add_civilian_jacket(new_human)
+	//limbs
+	var/random_civilian_shoe = rand(1,7)
+	switch(random_civilian_shoe)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
+		if(3 to 4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
+		if(7)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+
 /datum/equipment_preset/colonist/miner
 
 	name = "US Civilian, Blue-Collar (Miner)"
@@ -417,6 +451,16 @@
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
+/datum/equipment_preset/colonist/researcher/upp
+	name = "UPP Civilian, Researcher"
+	assignment = "Ministry of Education Research Associate"
+	paygrades = list(PAY_SHORT_CCMO = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian/survivor/scientist
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_UPP_RESEARCH)
+	idtype = /obj/item/card/id
+	ethnicity = UPP_ETHNICITY
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+
 /datum/equipment_preset/colonist/doctor
 	name = "US Civilian, Doctor"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -428,8 +472,6 @@
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/colonist/doctor/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -453,12 +495,21 @@
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
+
+/datum/equipment_preset/colonist/doctor/upp
+	name = "UPP Civilian, Doctor"
+	assignment = "Ministry of Health Medical Doctor"
+	paygrades = list(PAY_SHORT_CDOC = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian/survivor/doctor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDBAY, ACCESS_UPP_MEDICAL)
+	idtype = /obj/item/card/id
+	ethnicity = UPP_ETHNICITY
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+
 /datum/equipment_preset/colonist/doctor/scrubs
 	name = "US Civilian, Doctor, Scrubs"
 
 /datum/equipment_preset/colonist/doctor/scrubs/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
 	//face
@@ -489,6 +540,16 @@
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
+/datum/equipment_preset/colonist/doctor/scrubs/upp
+	name = "UPP Civilian, Doctor, Scrubs"
+	assignment = "Ministry of Health Medical Doctor"
+	paygrades = list(PAY_SHORT_CDOC = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/civilian/survivor/doctor
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDBAY, ACCESS_UPP_MEDICAL)
+	idtype = /obj/item/card/id
+	ethnicity = UPP_ETHNICITY
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+
 /datum/equipment_preset/colonist/admin
 	name = "US Civilian, Administrator"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -501,8 +562,6 @@
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/colonist/admin/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	//face
@@ -511,7 +570,6 @@
 	add_business_outfit(new_human)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
-
 
 /datum/equipment_preset/colonist/admin/spanish
 	name = "LatAm Civilian, Administrator"
@@ -523,6 +581,27 @@
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
+
+/datum/equipment_preset/colonist/admin/upp
+	name = "UPP Civilian, Administrator"
+	faction_group = FACTION_LIST_UPP_COLONY
+	skills = /datum/skills/civilian
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND)
+	idtype = /obj/item/card/id
+	ethnicity = UPP_ETHNICITY
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+
+/datum/equipment_preset/colonist/admin/upp/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/brown(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+
 /datum/equipment_preset/colonist/cargo
 	name = "US Civilian, Logistics Worker"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -533,8 +612,6 @@
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS)
 
 /datum/equipment_preset/colonist/cargo/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	//face
@@ -564,6 +641,13 @@
 	name = "TWE Logistics Worker"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
+
+/datum/equipment_preset/colonist/cargo/upp
+	name = "UPP Civilian, Logistics Worker"
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS)
+	idtype = /obj/item/card/id
+	ethnicity = UPP_ETHNICITY
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 
 /datum/equipment_preset/colonist/technician
 	name = "US Civilian, Maintenance Technician"
@@ -595,15 +679,48 @@
 
 
 /datum/equipment_preset/colonist/technician/spanish
-	name = "LatAm Maintenance Technician"
+	name = "LatAm Civilian, Maintenance Technician"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/technician/japanese
-	name = "TWE Maintenance Technician"
+	name = "TWE Civilian, Maintenance Technician"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
+/datum/equipment_preset/colonist/technician/upp
+	name = "UPP Civilian, Maintenance Technician"
+	skills = /datum/skills/MT
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_ENGINEERING)
+	idtype = /obj/item/card/id
+	ethnicity = UPP_ETHNICITY
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+
+/datum/equipment_preset/colonist/technician/upp/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	var/random_boilersuit= rand(1,3)
+	switch(random_boilersuit)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki(new_human), WEAR_BODY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/cyan(new_human), WEAR_BODY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey(new_human), WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/utility_vest(new_human), WEAR_JACKET)
+	//limbs
+	var/random_worker_shoe = rand(1,5)
+	switch(random_worker_shoe)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
+		if(3 to 4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 
 /datum/equipment_preset/colonist/engineer
 	name = "US Civilian, Engineer"
@@ -687,6 +804,13 @@
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
+/datum/equipment_preset/colonist/operations/upp
+	name = "UPP Civilian, Operations Technician"
+	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_COMMAND)
+	idtype = /obj/item/card/id
+	ethnicity = UPP_ETHNICITY
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+
 /datum/equipment_preset/colonist/prisoner
 	name = "Prisoner"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -698,13 +822,10 @@
 	idtype = /obj/item/card/id
 
 /datum/equipment_preset/colonist/prisoner/load_gear(mob/living/carbon/human/new_human)
-
-
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/prison_boiler(new_human), WEAR_BODY)
 	//limb
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
-
 
 /datum/equipment_preset/colonist/prisoner/spanish
 	name = "LatAm Prisoner"
@@ -715,6 +836,12 @@
 	name = "TWE Prisoner"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
+
+/datum/equipment_preset/upp/prisoner
+	name = "UPP Prisoner"
+	idtype = /obj/item/card/id/lanyard
+	ethnicity = UPP_ETHNICITY
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 
 /datum/equipment_preset/colonist/security
 	name = "US Civilian, Security Guard, Generic"

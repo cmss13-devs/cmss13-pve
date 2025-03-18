@@ -575,6 +575,10 @@
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/heavy/flechette(src)
 
+/obj/item/storage/pouch/shotgun/heavybean/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag(src)
+
 /obj/item/storage/pouch/shotgun/large
 	name = "large shotgun shell pouch"
 	desc = "It can contain more handfuls of shells, or bullets if you choose to for some reason."
