@@ -115,7 +115,7 @@
 //low lethality claymore shrapnel
 /datum/ammo/bullet/shrapnel/claymore/confetti
 	damage = 10
-	penetration = -ARMOR_PENETRATION_TIER_2
+	penetration = 0
 	shrapnel_chance = 0
 
 /datum/ammo/bullet/shrapnel/claymore/confetti/on_hit_mob(mob/entity, obj/projectile/bullet)
