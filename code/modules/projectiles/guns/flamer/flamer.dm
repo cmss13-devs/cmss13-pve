@@ -44,7 +44,7 @@
 	update_icon()
 
 /obj/item/weapon/gun/flamer/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 11, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0)
+	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 11, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0, "side_rail_x" = 24, "side_rail_y" = 19)
 
 /obj/item/weapon/gun/flamer/x_offset_by_attachment_type(attachment_type)
 	switch(attachment_type)
@@ -450,7 +450,7 @@
 	return 0
 
 /obj/item/weapon/gun/flamer/M240T/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 13, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0)
+	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 13, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0, "special_x" = 27, "special_y" = 19)
 
 /obj/item/weapon/gun/flamer/M240T/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	if (!link_fuelpack(user) && !current_mag)
@@ -487,10 +487,6 @@
 		if(!current_mag || !current_mag.current_rounds)
 			return FALSE
 
-		if(!skillcheck(user, SKILL_SPEC_WEAPONS,  SKILL_SPEC_ALL) && user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_PYRO)
-			to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
-			return FALSE
-
 /obj/item/weapon/gun/flamer/M240T/proc/link_fuelpack(mob/user)
 	if (fuelpack)
 		fuelpack.linked_flamer = null
@@ -524,6 +520,9 @@
 	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	current_mag = /obj/item/ammo_magazine/flamer_tank/upp
+
+/obj/item/weapon/gun/flamer/upp/unloaded
+	current_mag = null
 
 /obj/flamer_fire
 	name = "fire"
