@@ -1878,10 +1878,10 @@
 /obj/item/reagent_container/food/drinks/dry_ramen{
 	randpixel = 12
 	},
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
+/obj/item/storage/box/mre/upp,
+/obj/item/storage/box/mre/upp,
+/obj/item/storage/box/mre/upp,
+/obj/item/storage/box/mre/upp,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10;
