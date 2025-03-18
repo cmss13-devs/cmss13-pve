@@ -1,0 +1,14 @@
+{
+    "map_name": "SI-391 Sekhmet Swamp",
+    "short_name": "Sekhmet",
+    "map_path": "map_files/SI391_Sekhmet",
+    "map_file": "Sekhmet_Swamp.dmm",
+    "webmap_url": "Shivas",
+
+    "weather_holder": "/datum/weather_ss_map_holder/si391_sekhmet",
+
+    "map_item_type": "/obj/item/map/ice_colony_map",
+
+    "camouflage": "jungle"
+
+}
