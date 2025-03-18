@@ -28283,8 +28283,8 @@
 /area/almayer/shipboard/brig/perma)
 "kzo" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/uscm_mre,
-/obj/item/storage/box/uscm_mre,
+/obj/item/storage/box/mre,
+/obj/item/storage/box/mre,
 /obj/item/book/manual/chef_recipes,
 /obj/structure/sign/safety/coffee{
 	pixel_x = 15;
@@ -36025,8 +36025,8 @@
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/storage/box/uscm_mre,
-/obj/item/storage/box/uscm_mre,
+/obj/item/storage/box/mre,
+/obj/item/storage/box/mre,
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/req)
 "nzq" = (
