@@ -233,9 +233,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDICAL, ACCESS_UPP_MEDPREP)
 
 /datum/equipment_preset/upp/sanitar/load_gear(mob/living/carbon/human/new_human)
-
-
-	new_human.underwear = "UPP Boxers"	//back
+	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
@@ -288,9 +286,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 
 /datum/equipment_preset/upp/machinegunner/load_gear(mob/living/carbon/human/new_human)
-
-
-	new_human.underwear = "UPP Boxers"	//face
+	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	//head
 	add_upp_head(new_human)
@@ -329,8 +325,6 @@
 	role_comm_title = "SQSGT"
 
 /datum/equipment_preset/upp/squadlead/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -373,8 +367,6 @@
 	minimap_icon = "leader"
 
 /datum/equipment_preset/upp/navallead/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -415,8 +407,6 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
 
 /datum/equipment_preset/upp/military_police/load_gear(mob/living/carbon/human/new_human)
-
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
