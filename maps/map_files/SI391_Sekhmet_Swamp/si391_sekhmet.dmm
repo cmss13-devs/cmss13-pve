@@ -23,6 +23,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/red1,
 /area/sekhmet/int_heavy/low_level_gen)
+"abB" = (
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/sekhmet/int_heavy/research)
 "abE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -286,27 +293,12 @@
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/research)
 "ajG" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/obj/item/clothing/gloves/marine/pve_mopp{
-	name = "resistant gloves";
-	desc = "These gloves to protect your insides from nerve gas and deadly chemicals. You'd probably feel safer if there was duct tape wrapped around these.";
-	pixel_x = -9;
-	pixel_y = 5
-	},
-/obj/item/clothing/gloves/marine/pve_mopp{
-	name = "resistant gloves";
-	desc = "These gloves to protect your insides from nerve gas and deadly chemicals. You'd probably feel safer if there was duct tape wrapped around these.";
-	pixel_x = -28;
-	pixel_y = -3
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_reg/air_filters)
+/turf/open/floor/kutjevo/grey,
+/area/sekhmet/int_heavy/low_level_gen)
 "akk" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass{
 	name = "Garage Space";
@@ -438,14 +430,6 @@
 /obj/structure/machinery/disposal,
 /turf/open/floor/prison/bright_clean/southwest,
 /area/sekhmet/int_heavy/low_level_gen)
-"anH" = (
-/obj/vehicle/train/cargo/trolley,
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
-	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_reg/water_filters)
 "anX" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -538,14 +522,12 @@
 /turf/open/floor/corsat/squares,
 /area/sekhmet/int_heavy/low_level_rsr)
 "aqE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/disposal,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 4
+	dir = 8
 	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_heavy/low_level_gen)
+/turf/open/floor/prison/bright_clean,
+/area/sekhmet/int_heavy/entry_zone)
 "aqX" = (
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 8
@@ -722,15 +704,22 @@
 /turf/open/gm/river,
 /area/sekhmet/caves/temple)
 "avA" = (
-/obj/structure/platform/mineral{
-	dir = 1;
-	color = "#464847"
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice4";
+	pixel_x = -16;
+	pixel_y = 3
 	},
-/obj/structure/machinery/light/spot/blue{
-	dir = 1
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice8";
+	pixel_x = 16;
+	pixel_y = 3
+	},
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/sekhmet/int_glass/south_complex)
+/area/sekhmet/int_heavy/entry_zone)
 "avG" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_21";
@@ -806,12 +795,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/sekhmet/outside/southroad)
-"ayT" = (
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/strata/faux_metal,
-/area/sekhmet/int_heavy/low_level_gen)
 "aza" = (
 /obj/structure/vehicle_locker/cabinet/cups{
 	pixel_y = 18;
@@ -1087,6 +1070,15 @@
 /obj/structure/window/framed/upp/grey,
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/low_level_gen)
+"aEe" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_reg/water_filters)
 "aEi" = (
 /obj/item/paper_bin{
 	pixel_y = 5;
@@ -3516,14 +3508,6 @@
 	icon_state = "upp_rightengine"
 	},
 /area/sekhmet/int_reg/ship2)
-"crg" = (
-/obj/structure/prop/invuln/darkness,
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.25
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/int_reg/catwalk)
 "crj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/disposal,
@@ -3720,6 +3704,13 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/sekhmet/int_reg/warehouse)
+"cwr" = (
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 4
+	},
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_heavy/low_level_gen)
 "cwu" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -4733,16 +4724,11 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/sekhmet/caves/south_cave)
 "dgs" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/largecrate/random/secure,
 /obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 4
+	light_power = 0.5
 	},
-/turf/open/floor/kutjevo/grey,
-/area/sekhmet/int_heavy/low_level_rsr)
+/turf/open/floor/strata/floor3,
+/area/sekhmet/int_reg/complex_operation)
 "dgR" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass{
 	name = "Study Space";
@@ -4902,12 +4888,12 @@
 /turf/open/floor/corsat,
 /area/sekhmet/shuttles/drop1)
 "dkq" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.25
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/sekhmet/int_glass/south_complex)
+/turf/open/floor/strata/multi_tiles/west,
+/area/sekhmet/int_glass/complex_generic)
 "dkI" = (
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/military_hangar)
@@ -5328,12 +5314,18 @@
 /turf/open/floor/carpet,
 /area/sekhmet/int_heavy/low_level_gen)
 "dBq" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 24;
+	pixel_x = 16
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
-	light_power = 0.5
+	light_power = 0.5;
+	dir = 1
 	},
-/turf/open/floor/strata/fake_wood,
-/area/sekhmet/int_glass/offices)
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_glass/complex_generic)
 "dBA" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -5464,7 +5456,7 @@
 	light_power = 0.5;
 	dir = 8
 	},
-/turf/open/floor/strata/floor3,
+/turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_glass/complex_generic)
 "dGr" = (
 /obj/structure/sink{
@@ -5485,6 +5477,13 @@
 /obj/structure/machinery/autolathe,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/research)
+"dGR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/prison/bright_clean,
+/area/sekhmet/int_glass/south_complex)
 "dHd" = (
 /obj/structure/filtration/machine_96x96/filtration,
 /obj/structure/barricade/handrail/type_b{
@@ -6039,6 +6038,13 @@
 /obj/structure/machinery/pipedispenser,
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/research)
+"ear" = (
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
+	},
+/turf/open/floor/prison/bright_clean,
+/area/sekhmet/int_heavy/low_level_rsr)
 "eau" = (
 /obj/structure/ladder{
 	height = 2;
@@ -6071,7 +6077,7 @@
 	pixel_x = -14;
 	pixel_y = -1
 	},
-/obj/item/map/current_map,
+/obj/item/map,
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_reg/complex_operation)
 "ebA" = (
@@ -6971,12 +6977,6 @@
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/water_filters)
-"eHR" = (
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/strata/fake_wood,
-/area/sekhmet/int_glass/complex_generic)
 "eHV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -8006,12 +8006,16 @@
 /turf/open/gm/coast/beachcorner2/north_west,
 /area/sekhmet/outside/airfield)
 "fnO" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.25
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
 	},
-/turf/open/floor/corsat,
-/area/sekhmet/int_reg/garage)
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_glass/complex_generic)
 "fnV" = (
 /obj/structure/cargo_container/hd/right,
 /turf/open/floor/plating/kutjevo,
@@ -8047,6 +8051,13 @@
 "foF" = (
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_reg/complex_comms)
+"foI" = (
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/sekhmet/int_heavy/research)
 "foL" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/sekhmet/outside/central_road)
@@ -8127,13 +8138,6 @@
 	},
 /turf/open/floor/sandstone/runed,
 /area/sekhmet/caves/temple)
-"frL" = (
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
-	},
-/turf/open/floor/strata/floor3,
-/area/sekhmet/int_glass/complex_generic)
 "frQ" = (
 /obj/structure/bed/chair{
 	buckling_y = 18;
@@ -8551,6 +8555,26 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/sekhmet/int_reg/complex_comms)
+"fHO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/structure/filingcabinet{
+	pixel_x = -8;
+	pixel_y = 1;
+	color = "#8B7B5B"
+	},
+/obj/structure/filingcabinet{
+	pixel_x = 8;
+	pixel_y = 1;
+	color = "#8B7B5B"
+	},
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_heavy/low_level_gen)
 "fHR" = (
 /obj/structure/window/framed/shiva,
 /obj/structure/curtain/blue,
@@ -8801,6 +8825,13 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_reg/engineering)
+"fPe" = (
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/sekhmet/int_heavy/research)
 "fPi" = (
 /obj/structure/machinery/camera{
 	c_tag = "Sublevel Complex - Fitness";
@@ -9263,20 +9294,23 @@
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/low_level_rsr)
 "gbI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 4
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464847"
 	},
-/turf/open/floor/prison/bright_clean,
-/area/sekhmet/int_heavy/low_level_rsr)
+/obj/structure/machinery/light/spot/blue{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/sekhmet/int_glass/south_complex)
 "gbU" = (
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
+/obj/structure/prop/invuln/darkness,
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.25
 	},
-/turf/open/floor/prison/bright_clean,
-/area/sekhmet/int_heavy/entry_zone)
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/int_reg/catwalk)
 "gbW" = (
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_glass/south_complex)
@@ -11953,14 +11987,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/research)
-"hGS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_reg/southwest_complex)
 "hHI" = (
 /obj/structure/platform/mineral/sandstone/runed,
 /turf/open/floor/plating/plating_catwalk/strata,
@@ -11997,13 +12023,12 @@
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_heavy/low_level_gen)
 "hJb" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 8
+	dir = 4
 	},
-/turf/open/floor/strata/floor3/east,
-/area/sekhmet/int_reg/warehouse)
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/sekhmet/int_glass/complex_generic)
 "hJF" = (
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_reg/southwest_complex)
@@ -13350,13 +13375,12 @@
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_glass/complex_generic)
 "iCs" = (
-/obj/structure/largecrate/random/case,
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.25
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	light_power = 0.5
 	},
-/turf/open/floor/plating/kutjevo,
-/area/sekhmet/int_heavy/low_level_gen)
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_reg/water_filters)
 "iCt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/l3closet/general{
@@ -13593,13 +13617,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/entry_zone)
-"iMe" = (
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
-	},
-/turf/open/floor/corsat/squares,
-/area/sekhmet/int_heavy/research)
 "iMt" = (
 /obj/structure/surface/table{
 	color = "#8B7B5B"
@@ -13624,13 +13641,6 @@
 	},
 /turf/open/gm/riverdeep,
 /area/sekhmet/int_heavy/low_level_gen)
-"iNd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/strata/floor3,
-/area/sekhmet/int_glass/complex_generic)
 "iNs" = (
 /obj/structure/bed/bedroll{
 	name = "yoga mat";
@@ -13735,14 +13745,6 @@
 	dir = 4
 	},
 /area/sekhmet/int_heavy/research)
-"iRu" = (
-/obj/structure/bed/chair/comfy/bench/north,
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
-	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_glass/complex_generic)
 "iRF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -13949,7 +13951,14 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/clothing/mask/gas/military/upp{
+	pixel_x = -3;
+	pixel_y = -6
+	},
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_reg/air_filters)
 "iZm" = (
@@ -14174,12 +14183,13 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_heavy/entry_zone)
 "jeg" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 1
+	dir = 4
 	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_reg/water_filters)
+/turf/open/floor/prison/sterile_white,
+/area/sekhmet/int_heavy/low_level_gen)
 "jeX" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -14548,15 +14558,12 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/military_hangar)
 "jpt" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.25
 	},
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
-	},
-/turf/open/floor/strata/red1,
-/area/sekhmet/int_heavy/low_level_gen)
+/turf/open/floor/corsat,
+/area/sekhmet/int_reg/garage)
 "jpA" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/kutjevo/grey,
@@ -15334,7 +15341,7 @@
 	},
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 8
+	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_heavy/entry_zone)
@@ -15625,6 +15632,23 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_reg/yard)
+"jYe" = (
+/obj/structure/bookcase{
+	icon_state = "book-5";
+	color = "#8B7B5B"
+	},
+/obj/structure/bookcase{
+	icon_state = "book-5";
+	color = "#8B7B5B";
+	pixel_x = 0;
+	pixel_y = 12
+	},
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 4
+	},
+/turf/open/floor/strata/fake_wood,
+/area/sekhmet/int_glass/complex_generic)
 "jYk" = (
 /obj/structure/prop/invuln/darkness,
 /turf/open/gm/coast/beachcorner/north_east,
@@ -15683,6 +15707,12 @@
 "jZi" = (
 /turf/closed/wall/upp_wall,
 /area/sekhmet/int_reg/catwalk)
+"jZK" = (
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_heavy/low_level_gen)
 "kah" = (
 /obj/structure/window/framed/upp/green,
 /turf/open/floor/plating/kutjevo,
@@ -16067,22 +16097,13 @@
 /turf/open/floor/prison/bright_clean/southwest,
 /area/sekhmet/int_heavy/low_level_gen)
 "kou" = (
-/obj/structure/bookcase{
-	icon_state = "book-5";
-	color = "#8B7B5B"
-	},
-/obj/structure/bookcase{
-	icon_state = "book-5";
-	color = "#8B7B5B";
-	pixel_x = 0;
-	pixel_y = 12
-	},
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 4
+/obj/structure/prop/invuln/darkness,
+/obj/structure/machinery/light/small{
+	light_power = 0.25;
+	dir = 1
 	},
 /turf/open/floor/strata/fake_wood,
-/area/sekhmet/int_glass/complex_generic)
+/area/sekhmet/int_reg/catwalk)
 "kpO" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "rsrStairL2";
@@ -16100,13 +16121,6 @@
 /obj/structure/curtain/blue,
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/research)
-"kqd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_reg/water_filters)
 "kqj" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/prison/bright_clean/southwest,
@@ -16326,7 +16340,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 1
+	dir = 8
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
@@ -17632,12 +17646,13 @@
 /turf/closed/wall/shiva/prefabricated,
 /area/sekhmet/caves/south_cave)
 "luA" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 4
+	dir = 1
 	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/sekhmet/int_glass/complex_generic)
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_heavy/low_level_gen)
 "luC" = (
 /obj/structure/machinery/door_control{
 	dir = 1;
@@ -18350,11 +18365,15 @@
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_reg/engineering)
 "lOH" = (
-/obj/structure/machinery/light/small{
-	light_power = 0.25
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
 	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/outside/swamp)
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
+	},
+/turf/open/floor/strata/floor2,
+/area/sekhmet/int_heavy/research)
 "lOP" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 8;
@@ -18427,11 +18446,10 @@
 "lQA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 4
+	light_power = 0.5
 	},
-/turf/open/floor/prison/sterile_white,
-/area/sekhmet/int_heavy/low_level_gen)
+/turf/open/floor/strata/fake_wood,
+/area/sekhmet/int_glass/offices)
 "lQC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow2";
@@ -18598,12 +18616,13 @@
 /turf/open/floor/prison/bright_clean/southwest,
 /area/sekhmet/int_heavy/low_level_gen)
 "lVo" = (
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
+/obj/structure/prop/invuln/darkness,
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.25
 	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_glass/complex_generic)
+/turf/open/gm/dirt2,
+/area/sekhmet/int_reg/catwalk)
 "lVB" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 16;
@@ -18849,6 +18868,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_reg/southwest_complex)
+"mbI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/plating/kutjevo,
+/area/sekhmet/int_heavy/low_level_rsr)
 "mbW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -19437,12 +19463,13 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_heavy/entry_zone)
 "mwV" = (
-/obj/structure/prop/invuln/darkness,
-/obj/structure/machinery/light/small{
-	light_power = 0.25
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 1
 	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/int_reg/catwalk)
+/turf/open/floor/prison/bright_clean,
+/area/sekhmet/int_heavy/low_level_rsr)
 "mxp" = (
 /obj/structure/surface/table/almayer{
 	color = "#aeaeae"
@@ -19466,11 +19493,15 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/southroad)
 "myi" = (
+/obj/structure/platform/shiva/catwalk{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 4
+	dir = 8
 	},
-/turf/open/floor/strata/floor2,
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/research)
 "myr" = (
 /obj/effect/decal/warning_stripes{
@@ -19714,11 +19745,11 @@
 /turf/open/floor/prison/bright_clean/southwest,
 /area/sekhmet/int_heavy/low_level_gen)
 "mJU" = (
-/obj/structure/bed/chair/office/light{
-	dir = 1
+/obj/structure/machinery/light{
+	light_power = 0.5
 	},
 /turf/open/floor/strata/fake_wood,
-/area/sekhmet/int_reg/air_filters)
+/area/sekhmet/int_glass/complex_generic)
 "mJY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor2,
@@ -20644,13 +20675,13 @@
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/low_level_gen)
 "noc" = (
-/obj/structure/machinery/deployable/barrier,
+/obj/vehicle/train/cargo/trolley,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 4
+	dir = 1
 	},
-/turf/open/floor/strata/floor2,
-/area/sekhmet/int_reg/complex_operation)
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_reg/water_filters)
 "nou" = (
 /obj/structure/cargo_container/upp/mk6/left,
 /turf/open/floor/plating/kutjevo,
@@ -21142,13 +21173,12 @@
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_glass/complex_generic)
 "nDy" = (
-/obj/structure/prop/invuln/darkness,
-/obj/structure/machinery/light/small{
-	dir = 4;
-	light_power = 0.25
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
 	},
-/turf/open/floor/strata/fake_wood,
-/area/sekhmet/int_reg/catwalk)
+/turf/open/floor/strata/floor3,
+/area/sekhmet/int_glass/complex_generic)
 "nDV" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -21236,11 +21266,13 @@
 /turf/open/floor/prison/bright_clean/southwest,
 /area/sekhmet/int_reg/water_filters)
 "nHC" = (
-/obj/structure/machinery/light{
-	light_power = 0.5
+/obj/structure/prop/invuln/darkness,
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_power = 0.25
 	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/sekhmet/int_reg/southwest_complex)
+/turf/open/floor/strata/fake_wood,
+/area/sekhmet/int_reg/catwalk)
 "nHT" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey{
 	dir = 8;
@@ -22456,13 +22488,12 @@
 /turf/open/floor/strata/floor3/east,
 /area/sekhmet/int_reg/southwest_complex)
 "opO" = (
-/obj/structure/platform/shiva/catwalk{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	light_power = 0.5;
 	dir = 4
 	},
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/strata/red1,
+/turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
 "oqd" = (
 /obj/structure/cargo_container/hd/mid,
@@ -22697,6 +22728,21 @@
 /obj/structure/stairs,
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_reg/military_hangar)
+"oxr" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 4;
+	pixel_x = 5;
+	layer = 2.98
+	},
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
+	},
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_heavy/low_level_gen)
 "oxw" = (
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/outside/southroad)
@@ -22862,10 +22908,11 @@
 /area/sekhmet/int_reg/southwest_complex)
 "oDl" = (
 /obj/structure/machinery/light{
-	light_power = 0.5
+	light_power = 0.5;
+	dir = 8
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/sekhmet/int_heavy/research)
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_heavy/low_level_rsr)
 "oDs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -23097,11 +23144,13 @@
 /area/sekhmet/int_heavy/low_level_rsr)
 "oNl" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/disposal,
 /obj/structure/machinery/light{
-	light_power = 0.5
+	light_power = 0.5;
+	dir = 1
 	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/sekhmet/int_glass/south_complex)
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_heavy/low_level_gen)
 "oNs" = (
 /obj/structure/reagent_dispensers/beerkeg/alt{
 	pixel_x = 9;
@@ -23347,13 +23396,6 @@
 /obj/structure/tunnel,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/swamp)
-"oXd" = (
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
-	},
-/turf/open/floor/kutjevo/grey,
-/area/sekhmet/int_heavy/low_level_gen)
 "oXP" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -23416,12 +23458,13 @@
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/outside/southroad)
 "oZN" = (
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
 	},
-/turf/open/floor/strata/fake_wood,
-/area/sekhmet/int_heavy/low_level_rsr)
+/obj/item/clothing/mask/gas/military/upp,
+/turf/open/floor/strata/floor3,
+/area/sekhmet/int_reg/air_filters)
 "par" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -23494,13 +23537,13 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/southroad)
 "pew" = (
-/obj/structure/prop/invuln/darkness,
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.25
+/obj/structure/machinery/deployable/barrier,
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 4
 	},
-/turf/open/gm/dirt2,
-/area/sekhmet/int_reg/catwalk)
+/turf/open/floor/strata/floor2,
+/area/sekhmet/int_reg/complex_operation)
 "pfa" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/filtrationside/north,
@@ -24489,6 +24532,12 @@
 	},
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_rsr)
+"pSm" = (
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/sekhmet/int_reg/southwest_complex)
 "pSz" = (
 /turf/open/floor/kutjevo/plate,
 /area/sekhmet/outside/east_jungle)
@@ -25020,16 +25069,11 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_glass/complex_generic)
 "qod" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
 /obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
+	light_power = 0.5
 	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_glass/complex_generic)
+/turf/open/floor/kutjevo/grey,
+/area/sekhmet/int_heavy/low_level_rsr)
 "qoh" = (
 /obj/item/weapon/twohanded/yautja/spear,
 /turf/open/floor/kutjevo/plate,
@@ -25456,11 +25500,15 @@
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/low_level_gen)
 "qAB" = (
-/obj/structure/machinery/light{
-	light_power = 0.5
+/obj/structure/bed/chair/comfy/beige{
+	dir = 4
 	},
-/turf/open/floor/strata/floor3,
-/area/sekhmet/int_reg/complex_operation)
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_heavy/low_level_rsr)
 "qAD" = (
 /obj/structure/platform_decoration/shiva/catwalk{
 	dir = 4
@@ -25863,10 +25911,11 @@
 /area/sekhmet/caves/temple)
 "qQB" = (
 /obj/structure/machinery/light{
-	light_power = 0.5
+	light_power = 0.5;
+	dir = 8
 	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_heavy/low_level_gen)
+/turf/open/floor/strata/floor3/east,
+/area/sekhmet/int_reg/warehouse)
 "qQX" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/tool/kitchen/rollingpin{
@@ -26524,6 +26573,13 @@
 /obj/structure/machinery/power/port_gen/pacman,
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_gen)
+"rnj" = (
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_glass/complex_generic)
 "rnD" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -27610,6 +27666,13 @@
 /obj/structure/machinery/colony_floodlight,
 /turf/open/gm/dirt,
 /area/sekhmet/outside/swamp)
+"rTR" = (
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 4
+	},
+/turf/open/floor/strata/floor2,
+/area/sekhmet/int_heavy/research)
 "rTX" = (
 /obj/structure/machinery/door/window,
 /obj/structure/machinery/vending/sovietsoda,
@@ -28386,12 +28449,27 @@
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_glass/hosptial)
 "srz" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	light_power = 0.5
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
 	},
-/turf/open/floor/prison/bright_clean,
-/area/sekhmet/int_glass/south_complex)
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/item/clothing/gloves/marine/pve_mopp{
+	name = "resistant gloves";
+	desc = "These gloves to protect your insides from nerve gas and deadly chemicals. You'd probably feel safer if there was duct tape wrapped around these.";
+	pixel_x = -9;
+	pixel_y = 5
+	},
+/obj/item/clothing/gloves/marine/pve_mopp{
+	name = "resistant gloves";
+	desc = "These gloves to protect your insides from nerve gas and deadly chemicals. You'd probably feel safer if there was duct tape wrapped around these.";
+	pixel_x = -28;
+	pixel_y = -3
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_reg/air_filters)
 "ssa" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_21";
@@ -28414,16 +28492,6 @@
 	pixel_y = 21
 	},
 /turf/open/floor/strata/fake_wood,
-/area/sekhmet/int_heavy/low_level_rsr)
-"stg" = (
-/obj/structure/bed/chair/comfy/beige{
-	dir = 4
-	},
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/low_level_rsr)
 "stj" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
@@ -28733,18 +28801,13 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/entry_zone)
 "sFL" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_y = 24;
-	pixel_x = 16
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 1
+	dir = 4
 	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_glass/complex_generic)
+/turf/open/floor/prison/bright_clean,
+/area/sekhmet/int_heavy/low_level_rsr)
 "sFQ" = (
 /obj/structure/machinery/cm_vending/sorted/walkman,
 /turf/open/floor/strata/floor3/east,
@@ -28810,16 +28873,12 @@
 /turf/open/floor/prison/bright_clean/southwest,
 /area/sekhmet/int_reg/water_filters)
 "sHm" = (
-/obj/structure/platform/shiva/catwalk{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
+	light_power = 0.5
 	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_heavy/research)
+/turf/open/floor/strata/floor3,
+/area/sekhmet/int_glass/complex_generic)
 "sHo" = (
 /obj/structure/largecrate/random,
 /obj/effect/decal/warning_stripes{
@@ -29106,12 +29165,11 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/research)
 "sQX" = (
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 4
+/obj/structure/machinery/light/small{
+	light_power = 0.25
 	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_heavy/low_level_gen)
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/swamp)
 "sQZ" = (
 /turf/open/gm/dirt2,
 /area/sekhmet/outside/southeast_road)
@@ -29166,12 +29224,13 @@
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_heavy/research)
 "sUB" = (
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
+/obj/structure/prop/invuln/darkness,
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_power = 0.25
 	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/sekhmet/int_glass/complex_generic)
+/turf/open/gm/dirt2,
+/area/sekhmet/int_reg/catwalk)
 "sUE" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "rsrStairL1";
@@ -29283,6 +29342,13 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_heavy/low_level_gen)
+"sWJ" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.25
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/sekhmet/int_glass/south_complex)
 "sWR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -30040,13 +30106,12 @@
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_rsr)
 "tAO" = (
-/obj/structure/prop/invuln/darkness,
-/obj/structure/machinery/light/small{
-	dir = 4;
-	light_power = 0.25
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 1
 	},
-/turf/open/gm/dirt2,
-/area/sekhmet/int_reg/catwalk)
+/turf/open/floor/strata/floor3,
+/area/sekhmet/int_heavy/research)
 "tCd" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -30108,15 +30173,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_reg/engineering)
-"tDA" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_reg/water_filters)
 "tEw" = (
 /obj/structure/platform/strata{
 	layer = 2.99;
@@ -30200,15 +30256,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/sekhmet/int_reg/complex_comms)
-"tHw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/disposal,
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
-	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_heavy/low_level_gen)
 "tIc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -31043,12 +31090,10 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/low_level_rsr)
 "ulF" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
+	light_power = 0.5
 	},
-/turf/open/floor/prison/bright_clean2,
+/turf/open/floor/strata/faux_metal,
 /area/sekhmet/int_heavy/low_level_gen)
 "ulS" = (
 /obj/structure/cargo_container/upp/left,
@@ -31187,20 +31232,13 @@
 	},
 /area/sekhmet/int_reg/comms_lower)
 "uqB" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/structure/machinery/prop/almayer/computer/PC{
-	dir = 4;
-	pixel_x = 5;
-	layer = 2.98
-	},
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 8
+	dir = 1
 	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_heavy/low_level_gen)
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_reg/southwest_complex)
 "uqF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -31498,11 +31536,10 @@
 /area/sekhmet/outside/temple_outer)
 "uzB" = (
 /obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
+	light_power = 0.5
 	},
-/turf/open/floor/prison/bright_clean,
-/area/sekhmet/int_heavy/low_level_rsr)
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/sekhmet/int_heavy/research)
 "uzC" = (
 /obj/structure/bed/stool,
 /obj/effect/decal/cleanable/dirt,
@@ -31519,12 +31556,6 @@
 	pixel_y = 1
 	},
 /turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_heavy/low_level_rsr)
-"uAl" = (
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/low_level_rsr)
 "uAm" = (
 /obj/structure/machinery/disposal,
@@ -31596,12 +31627,12 @@
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_glass/complex_generic)
 "uDo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 4
+/obj/structure/largecrate/random/case,
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.25
 	},
-/turf/open/floor/prison/bright_clean2,
+/turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/low_level_gen)
 "uDq" = (
 /obj/structure/bed/chair/office/light{
@@ -31674,12 +31705,13 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/warehouse)
 "uFw" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 4
+	dir = 8
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/sekhmet/int_heavy/research)
+/turf/open/floor/strata/floor3/east,
+/area/sekhmet/int_reg/warehouse)
 "uFI" = (
 /turf/closed/shuttle/elevator{
 	dir = 9
@@ -32532,12 +32564,12 @@
 /turf/open/floor/plating/kutjevo,
 /area/space)
 "vih" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
+	light_power = 0.5
 	},
-/turf/open/floor/strata/floor3,
-/area/sekhmet/int_heavy/research)
+/turf/open/floor/strata/multi_tiles/west,
+/area/sekhmet/int_glass/south_complex)
 "viW" = (
 /obj/structure/machinery/camera{
 	c_tag = "Sublevel Complex - Commissary";
@@ -33331,19 +33363,17 @@
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/southwest_complex)
 "vKy" = (
-/obj/structure/machinery/light{
-	light_power = 0.5;
+/obj/structure/bed/chair/office/light{
 	dir = 1
 	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/sekhmet/int_heavy/research)
+/turf/open/floor/strata/fake_wood,
+/area/sekhmet/int_reg/air_filters)
 "vKG" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5
 	},
-/turf/open/floor/plating/kutjevo,
-/area/sekhmet/int_heavy/low_level_rsr)
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_glass/complex_generic)
 "vKL" = (
 /obj/structure/closet{
 	can_be_stacked = 1;
@@ -33433,6 +33463,15 @@
 	},
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_rsr)
+"vNx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/disposal,
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 4
+	},
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_heavy/low_level_gen)
 "vNz" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/mech_bay_recharge_floor,
@@ -33475,26 +33514,6 @@
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/almayer/silverfull,
 /area/sekhmet/int_glass/hosptial)
-"vOG" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/obj/structure/filingcabinet{
-	pixel_x = -8;
-	pixel_y = 1;
-	color = "#8B7B5B"
-	},
-/obj/structure/filingcabinet{
-	pixel_x = 8;
-	pixel_y = 1;
-	color = "#8B7B5B"
-	},
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_heavy/low_level_gen)
 "vOQ" = (
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/east_jungle)
@@ -33509,14 +33528,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_heavy/research)
-"vRg" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
-	},
-/turf/open/floor/prison/bright_clean,
-/area/sekhmet/int_heavy/low_level_rsr)
 "vRk" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
@@ -33599,14 +33610,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_heavy/low_level_gen)
-"vWi" = (
-/obj/structure/prop/invuln/darkness,
-/obj/structure/machinery/light/small{
-	light_power = 0.25;
-	dir = 1
-	},
-/turf/open/floor/strata/fake_wood,
-/area/sekhmet/int_reg/catwalk)
 "vWm" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/open/floor/prison/kitchen,
@@ -34201,6 +34204,13 @@
 /obj/effect/spawner/random/bomb_supply,
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/research)
+"wnU" = (
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/sekhmet/int_glass/complex_generic)
 "wnX" = (
 /obj/structure/cargo_container/upp/mk6/left,
 /turf/open/floor/kutjevo/grey,
@@ -34570,10 +34580,10 @@
 "wBi" = (
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 8
+	dir = 1
 	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_glass/complex_generic)
+/turf/open/floor/strata/fake_wood,
+/area/sekhmet/int_heavy/low_level_rsr)
 "wBn" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 8
@@ -35006,10 +35016,10 @@
 "wPT" = (
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 8
+	dir = 1
 	},
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_heavy/low_level_rsr)
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_reg/water_filters)
 "wQb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -35078,20 +35088,13 @@
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/low_level_gen)
 "wSz" = (
-/obj/structure/surface/rack{
-	color = "#6b675e";
-	layer = 2.79
+/obj/structure/bed/chair/comfy/bench/north,
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 1
 	},
-/obj/item/clothing/mask/gas/military/upp{
-	pixel_x = 5;
-	pixel_y = 3
-	},
-/obj/item/clothing/mask/gas/military/upp{
-	pixel_x = -3;
-	pixel_y = -6
-	},
-/turf/open/floor/strata/floor3,
-/area/sekhmet/int_reg/air_filters)
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_glass/complex_generic)
 "wSC" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -36055,8 +36058,8 @@
 	light_power = 0.5;
 	dir = 8
 	},
-/turf/open/floor/strata/floor3/east,
-/area/sekhmet/int_reg/warehouse)
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/sekhmet/int_glass/complex_generic)
 "xwC" = (
 /obj/structure/noticeboard{
 	pixel_x = 16;
@@ -36735,12 +36738,12 @@
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_reg/complex_comms)
 "xXb" = (
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 8
+/obj/structure/prop/invuln/darkness,
+/obj/structure/machinery/light/small{
+	light_power = 0.25
 	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/sekhmet/int_glass/complex_generic)
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/int_reg/catwalk)
 "xXn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -36776,11 +36779,15 @@
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_gen)
 "xYr" = (
-/obj/structure/machinery/light{
-	light_power = 0.5
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
 	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_glass/complex_generic)
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 8
+	},
+/turf/open/floor/strata/red1,
+/area/sekhmet/int_heavy/low_level_gen)
 "xYu" = (
 /turf/closed/wall/rock{
 	color = "#a39e99"
@@ -36859,15 +36866,16 @@
 /turf/open/floor/carpet,
 /area/sekhmet/int_glass/hosptial)
 "yau" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
 	},
+/obj/structure/largecrate/random/secure,
 /obj/structure/machinery/light{
 	light_power = 0.5;
-	dir = 8
+	dir = 4
 	},
-/turf/open/floor/strata/floor2,
-/area/sekhmet/int_heavy/research)
+/turf/open/floor/kutjevo/grey,
+/area/sekhmet/int_heavy/low_level_rsr)
 "yaz" = (
 /obj/structure/surface/table{
 	color = "#8B7B5B"
@@ -37200,22 +37208,14 @@
 /turf/open/floor/kutjevo/multi_tiles/southeast,
 /area/sekhmet/outside/southroad)
 "ykv" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice4";
-	pixel_x = -16;
-	pixel_y = 3
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice8";
-	pixel_x = 16;
-	pixel_y = 3
-	},
-/obj/structure/machinery/light{
-	light_power = 0.5;
+/obj/structure/platform/shiva/catwalk{
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/sekhmet/int_heavy/entry_zone)
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/strata/red1,
+/area/sekhmet/int_heavy/low_level_gen)
 "ykT" = (
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/corsat,
@@ -39874,7 +39874,7 @@ vRr
 pBz
 pBz
 pBz
-crg
+gbU
 yhN
 pBz
 pBz
@@ -42305,7 +42305,7 @@ pBz
 pBz
 kUN
 kUN
-tAO
+sUB
 kUN
 pBz
 pBz
@@ -42790,7 +42790,7 @@ vRr
 vRr
 pBz
 yhN
-crg
+gbU
 kUN
 kUN
 pBz
@@ -42968,7 +42968,7 @@ pBz
 pBz
 exp
 exp
-pew
+lVo
 kUN
 kGi
 kGi
@@ -44946,13 +44946,13 @@ aqx
 aqx
 jNo
 xtA
-hGS
+uqB
 duO
 obX
 xxS
 hkg
 aDG
-nHC
+pSm
 xtA
 uAv
 dhK
@@ -45220,7 +45220,7 @@ sbW
 hfX
 kUP
 kUP
-nDy
+nHC
 kUP
 kUP
 kUP
@@ -45558,7 +45558,7 @@ yhN
 qVB
 yhN
 yhN
-mwV
+xXb
 jZi
 dIS
 dIS
@@ -45709,7 +45709,7 @@ jZi
 dqA
 dqA
 jZi
-vWi
+kou
 kUP
 hRj
 jyi
@@ -46057,7 +46057,7 @@ pBz
 pBz
 kCV
 pBz
-lOH
+sQX
 jZi
 dIS
 dIS
@@ -46761,11 +46761,11 @@ mxU
 sgE
 xjb
 kah
-xvZ
+qQB
 jjR
 jjR
 mXl
-hJb
+uFw
 kah
 anX
 bmp
@@ -51272,7 +51272,7 @@ ssL
 ssL
 nBs
 tve
-anH
+noc
 hXr
 hXr
 wlg
@@ -52017,7 +52017,7 @@ mma
 jXE
 wLU
 wLU
-wBi
+rnj
 jkY
 aHH
 uss
@@ -52036,7 +52036,7 @@ oVW
 gfh
 uss
 uss
-xXb
+xvZ
 oVW
 oVW
 aHH
@@ -52147,7 +52147,7 @@ hCj
 tOG
 hCj
 iVp
-mJU
+vKy
 nlt
 uzD
 rEN
@@ -52186,12 +52186,12 @@ uss
 uss
 oVW
 uss
-luA
+hJb
 oVW
 uss
 uss
 uss
-luA
+hJb
 oVW
 oVW
 oVW
@@ -52364,7 +52364,7 @@ ons
 ons
 xsl
 xsl
-frL
+wnU
 mXK
 xsl
 nCq
@@ -52456,7 +52456,7 @@ oRx
 (95,1,1) = {"
 cUa
 nlt
-iZc
+oZN
 okB
 okB
 nVU
@@ -52521,7 +52521,7 @@ sip
 msQ
 ons
 mSt
-qod
+fnO
 jkY
 qCP
 ons
@@ -52571,7 +52571,7 @@ tve
 wpH
 ykj
 qJv
-kqd
+iCs
 tve
 tAg
 cHW
@@ -52618,10 +52618,10 @@ oRx
 (96,1,1) = {"
 cUa
 nlt
-wSz
+iZc
 tUL
 enu
-ajG
+srz
 kMe
 ybQ
 hsh
@@ -52998,7 +52998,7 @@ uCw
 bJt
 vEF
 lzP
-eHR
+mJU
 xsl
 prW
 btR
@@ -53325,7 +53325,7 @@ uCw
 fnb
 xsl
 xsl
-sFL
+dBq
 sip
 sip
 kcN
@@ -53657,10 +53657,10 @@ xsl
 itN
 uhd
 sip
-xYr
+vKG
 xsl
 xsl
-sUB
+dkq
 sip
 aoO
 cUT
@@ -53792,7 +53792,7 @@ ofY
 bJt
 ofY
 bJt
-kou
+jYe
 iCq
 qyR
 yfu
@@ -53946,7 +53946,7 @@ bsP
 dkY
 bsP
 wLU
-sUB
+dkq
 sip
 xsl
 xsl
@@ -53976,7 +53976,7 @@ oVW
 oVW
 jkY
 jkY
-dGl
+nDy
 qiC
 xsl
 xsl
@@ -54158,7 +54158,7 @@ oSx
 lbA
 swe
 hQV
-qAB
+dgs
 itG
 wyc
 mtk
@@ -54286,9 +54286,9 @@ gRw
 qiC
 ons
 aHH
-iNd
+sHm
 xsl
-iRu
+wSz
 gIq
 rsl
 qsI
@@ -54946,7 +54946,7 @@ ftw
 btV
 vlo
 vlo
-lVo
+dGl
 bUF
 qiC
 qiC
@@ -55080,7 +55080,7 @@ iOH
 dkY
 bsP
 wLU
-sUB
+dkq
 sip
 xsl
 xsl
@@ -55419,7 +55419,7 @@ xsl
 sWV
 pAN
 xsl
-sUB
+dkq
 coD
 xsl
 ftw
@@ -55958,7 +55958,7 @@ bsP
 bsP
 iew
 luF
-srz
+dGR
 hiY
 aza
 waz
@@ -56292,7 +56292,7 @@ uvA
 eAy
 lsy
 xUc
-oNl
+vih
 iew
 sdC
 rqM
@@ -56607,7 +56607,7 @@ bsP
 iew
 vdR
 vXf
-dkq
+sWJ
 keF
 keF
 vXf
@@ -56716,7 +56716,7 @@ bsP
 lLB
 nJh
 aHH
-iNd
+sHm
 xsl
 xsl
 ons
@@ -56753,7 +56753,7 @@ iFI
 itG
 onG
 eDx
-noc
+pew
 eDx
 eDx
 mEt
@@ -56884,24 +56884,24 @@ uss
 oVW
 oVW
 oVW
-xXb
+xvZ
 oVW
 oVW
 oVW
 oVW
 oVW
-xXb
+xvZ
 uss
 uss
 oVW
 oVW
 oVW
-xXb
+xvZ
 oVW
 oVW
 mXK
 jkY
-xYr
+vKG
 aoO
 itG
 itG
@@ -57279,7 +57279,7 @@ fzA
 ipE
 hXr
 hXr
-tDA
+aEe
 tve
 mxU
 mxU
@@ -58085,7 +58085,7 @@ eHe
 eHe
 eHe
 tve
-jeg
+wPT
 dbj
 hXr
 hXr
@@ -58390,7 +58390,7 @@ iew
 jmW
 wvl
 wvl
-avA
+gbI
 xUc
 mSo
 mSo
@@ -59200,7 +59200,7 @@ iew
 wvl
 wvl
 wvl
-avA
+gbI
 xUc
 mSo
 mSo
@@ -59988,7 +59988,7 @@ jym
 jym
 jym
 nAw
-dBq
+lQA
 jym
 cFD
 bCO
@@ -61803,7 +61803,7 @@ kcL
 uGr
 eZo
 fWC
-vih
+tAO
 uGr
 gHe
 gHe
@@ -61994,7 +61994,7 @@ flQ
 gNO
 dVU
 kiw
-iMe
+fPe
 lWm
 eHe
 eHe
@@ -62561,13 +62561,13 @@ iOH
 ran
 ran
 tUv
-jQz
+avA
 prF
 mND
 bVs
 rLM
 tUv
-gbU
+aqE
 vAR
 ran
 ran
@@ -63533,7 +63533,7 @@ iOH
 ran
 ran
 tUv
-ykv
+jQz
 ery
 jTw
 oDs
@@ -65052,7 +65052,7 @@ tVV
 tVV
 xch
 owY
-sHm
+myi
 gHe
 eZo
 jtt
@@ -65556,7 +65556,7 @@ ygP
 eHe
 nVK
 qJQ
-fnO
+jpt
 nVK
 nUk
 vkw
@@ -66025,7 +66025,7 @@ luY
 owY
 lGP
 dVU
-oDl
+uzB
 eZo
 eZo
 cgx
@@ -66192,7 +66192,7 @@ lWm
 eFo
 xeY
 prE
-yau
+lOH
 eZo
 eZo
 pNj
@@ -66833,7 +66833,7 @@ gel
 gHe
 llZ
 xMc
-uFw
+abB
 mJY
 uGr
 dVU
@@ -67631,7 +67631,7 @@ tfG
 gcR
 eZo
 eZo
-vKy
+foI
 gHe
 lWm
 cNW
@@ -71194,7 +71194,7 @@ uHt
 uHt
 sfR
 aqc
-myi
+rTR
 ePb
 ePb
 aqc
@@ -97885,7 +97885,7 @@ wzM
 fYv
 xol
 kcj
-iCs
+uDo
 jyF
 lma
 aQI
@@ -98522,7 +98522,7 @@ vVl
 dSd
 vVl
 lma
-tHw
+oNl
 cmN
 crK
 cmN
@@ -99360,12 +99360,12 @@ nFa
 nFa
 aif
 eMB
-uqB
+oxr
 aif
 eMB
 eMB
 aif
-uqB
+oxr
 eMB
 aif
 nFa
@@ -99809,12 +99809,12 @@ nFa
 lma
 dSd
 vVl
-uDo
+opO
 crK
 crK
 crK
 cmN
-uDo
+opO
 vVl
 dSd
 lma
@@ -100137,7 +100137,7 @@ eMF
 crK
 crK
 cmN
-ulF
+kwV
 oIQ
 pmh
 irp
@@ -100148,7 +100148,7 @@ juN
 juN
 xIy
 crK
-qQB
+jZK
 lma
 tbS
 tbS
@@ -100166,7 +100166,7 @@ rQU
 tbS
 tbS
 lma
-kwV
+luA
 crK
 aDW
 dSd
@@ -100177,7 +100177,7 @@ aod
 aod
 vyV
 vVl
-vOG
+fHO
 aif
 nFa
 nFa
@@ -100476,7 +100476,7 @@ crK
 cmN
 crK
 crK
-sQX
+cwr
 crK
 crK
 cmN
@@ -100485,7 +100485,7 @@ crK
 crK
 crK
 crK
-sQX
+cwr
 cmN
 cmN
 crK
@@ -100627,7 +100627,7 @@ crK
 cmN
 crK
 cmN
-uDo
+opO
 cmN
 kuQ
 juN
@@ -101142,7 +101142,7 @@ cmN
 crK
 aif
 xdt
-uDo
+opO
 cmN
 cmN
 crK
@@ -101452,7 +101452,7 @@ qgh
 dSd
 hhN
 lma
-kwV
+luA
 cmN
 kZr
 bPO
@@ -101631,7 +101631,7 @@ vBx
 cmN
 aif
 jyU
-uDo
+opO
 cmN
 crK
 cmN
@@ -101961,7 +101961,7 @@ crK
 crK
 aif
 phP
-jpt
+xYr
 jgt
 crK
 crK
@@ -102105,7 +102105,7 @@ crK
 crK
 cmN
 cmN
-uDo
+opO
 crK
 crK
 cmN
@@ -102113,7 +102113,7 @@ nuI
 crK
 cmN
 aif
-ulF
+kwV
 cJp
 rnY
 lcP
@@ -102281,7 +102281,7 @@ rxc
 jHy
 crK
 cmN
-uDo
+opO
 cmN
 nuI
 cmN
@@ -102450,7 +102450,7 @@ ucN
 hXC
 ucN
 kWN
-opO
+ykv
 aif
 aif
 aif
@@ -102927,7 +102927,7 @@ pmh
 vcp
 crK
 cmN
-uDo
+opO
 aif
 crK
 crK
@@ -103223,7 +103223,7 @@ tnU
 lma
 orp
 ekA
-ayT
+ulF
 lma
 nuI
 iuC
@@ -103748,7 +103748,7 @@ crK
 crK
 crK
 iOx
-oXd
+ajG
 cgH
 cgH
 dJK
@@ -104055,7 +104055,7 @@ dSd
 oRG
 lma
 cmN
-aqE
+vNx
 tnU
 dQy
 dQy
@@ -104063,7 +104063,7 @@ kZr
 aif
 kZr
 kZr
-lQA
+jeg
 dQy
 aif
 tnU
@@ -106546,7 +106546,7 @@ pvh
 sZN
 pOZ
 oFP
-uAl
+qod
 sCx
 ani
 ani
@@ -107176,7 +107176,7 @@ cir
 vmu
 glo
 sCx
-oZN
+wBi
 wrU
 cXR
 cXR
@@ -107310,13 +107310,13 @@ pLJ
 kuO
 bhx
 rWb
-wPT
+oDl
 kuO
 kuO
 bhx
 kuO
 kuO
-wPT
+oDl
 kuO
 bhx
 bhx
@@ -108652,7 +108652,7 @@ hHW
 bhx
 sCx
 sCx
-vRg
+mwV
 jnJ
 sCx
 vEu
@@ -109082,7 +109082,7 @@ nFa
 nFa
 sCx
 mfZ
-dgs
+yau
 rNi
 uqF
 oFP
@@ -109271,7 +109271,7 @@ qGu
 dwS
 sCx
 brd
-stg
+qAB
 uII
 fVk
 fBb
@@ -109739,7 +109739,7 @@ fcA
 fcA
 fcA
 fcA
-vKG
+mbI
 sCx
 kuO
 ugK
@@ -109782,7 +109782,7 @@ euU
 euU
 nWt
 sCx
-vRg
+mwV
 jnJ
 jnJ
 uvF
@@ -110115,7 +110115,7 @@ rtV
 rtV
 rtV
 rtV
-uzB
+ear
 qRB
 sCx
 ani
@@ -110264,7 +110264,7 @@ tSG
 rtV
 rtV
 snv
-gbI
+sFL
 rtV
 rtV
 rtV
@@ -110873,7 +110873,7 @@ fcA
 fcA
 fcA
 fcA
-vKG
+mbI
 sCx
 sCx
 jHX
