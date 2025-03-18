@@ -38,22 +38,35 @@
 	name = "low velocity canister shot"
 	icon_state = "buckshot"
 
-	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_4
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
 	damage = 65
-	penetration = 0
 	penetration = ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_1
 	damage_armor_punch = 1
 	pen_armor_punch = 0
 	accurate_range = 3
-	effective_range_max = 3
+	effective_range_max = 5
 	damage_falloff = DAMAGE_FALLOFF_TIER_1
-	max_range = 5
+	max_range = 7
 
 /datum/ammo/bullet/shrapnel/canister/on_hit_mob(mob/M, obj/projectile/P)
-	knockback(M, P, 2)
-	slowdown(M, P)
+	knockback(M, P, 4)
+/datum/ammo/bullet/shrapnel/canister/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.KnockDown(2.5)
+		target.Stun(2.5)
+		target.Slow(4)
+	else
+		if(!isyautja(living_mob)) //Not predators.
+			living_mob.KnockDown(3)
+			living_mob.Stun(3)
+			living_mob.Slow(5)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
+
 
 /datum/ammo/bullet/shrapnel/canister/set_bullet_traits()
 	. = ..()
