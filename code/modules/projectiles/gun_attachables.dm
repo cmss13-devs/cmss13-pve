@@ -313,13 +313,6 @@ Defined in conflicts.dm of the #defines folder.
 	..()
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
 
-/obj/item/attachable/bayonet/upp_replica
-	name = "\improper Type 80 bayonet"
-	icon_state = "upp_bayonet"
-	item_state = "knife"
-	attach_icon = "upp_bayonet_a"
-	desc = "The standard-issue bayonet of the UPP, it's dulled from heavy use."
-
 /obj/item/attachable/bayonet/upp
 	name = "\improper Type 80 bayonet"
 	desc = "The standard-issue bayonet of the UPP, the Type 80 is balanced to also function as an effective throwing knife."
@@ -330,6 +323,10 @@ Defined in conflicts.dm of the #defines folder.
 	throw_speed = SPEED_REALLY_FAST
 	throw_range = 7
 	pry_delay = 1 SECONDS
+
+/obj/item/attachable/bayonet/upp/surplus
+	desc = "The standard-issue bayonet of the UPP, this one is somewhat dulled."
+	throwforce = MELEE_FORCE_STRONG
 
 /obj/item/attachable/bayonet/co2
 	name = "\improper M8 cartridge bayonet"
