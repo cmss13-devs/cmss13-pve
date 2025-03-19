@@ -1563,6 +1563,7 @@
 	pixel_x = -9;
 	pixel_y = 9
 	},
+/obj/item/fuel_cell,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_reg/engineering)
 "aWs" = (
@@ -7146,7 +7147,7 @@
 "eNu" = (
 /obj/structure/ladder{
 	height = 2;
-	id = "sekhENG1"
+	id = "sekhRSR"
 	},
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/research)
@@ -9343,7 +9344,7 @@
 /obj/structure/stairs/perspective/kutjevo{
 	dir = 1
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/floor/strata/floor3,
 /area/sekhmet/outside/central_road)
 "gdj" = (
 /obj/structure/surface/table/almayer{
@@ -17377,6 +17378,11 @@
 /area/sekhmet/int_heavy/low_level_rsr)
 "ljn" = (
 /obj/structure/closet/crate/upp,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
 /turf/open/floor/corsat/squares,
 /area/sekhmet/int_reg/engineering)
 "ljy" = (
@@ -28625,6 +28631,7 @@
 	dir = 1;
 	light_power = 0.25
 	},
+/obj/item/fuel_cell,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_rsr)
 "sxX" = (
@@ -29212,6 +29219,13 @@
 "sTE" = (
 /obj/structure/machinery/power/port_gen/pacman,
 /turf/open/floor/plating/kutjevo,
+/area/sekhmet/int_heavy/low_level_gen)
+"sTT" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/fuel_cell,
+/turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
 "sTU" = (
 /obj/item/broken_device{
@@ -31058,7 +31072,7 @@
 	dir = 4;
 	light_power = 0.25
 	},
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/floor/strata/floor3,
 /area/sekhmet/outside/central_road)
 "ukm" = (
 /obj/structure/largecrate/random,
@@ -35871,7 +35885,7 @@
 /area/sekhmet/outside/airfield)
 "xpu" = (
 /obj/structure/stairs/perspective/kutjevo,
-/turf/open/auto_turf/strata_grass/layer1,
+/turf/open/floor/strata/floor3,
 /area/sekhmet/outside/central_road)
 "xpx" = (
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -98867,8 +98881,8 @@ lma
 uej
 crK
 niV
-pmh
-pmh
+sTT
+sTT
 lma
 hCV
 gSR
