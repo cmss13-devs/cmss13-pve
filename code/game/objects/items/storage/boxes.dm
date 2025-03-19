@@ -822,6 +822,60 @@
 			grenade_count++
 	UnregisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP)
 
+//UPP GRENADE BOXES------------------------//
+
+/obj/item/storage/box/nade_box/upp
+	name = "\improper Type 6 grenade box"
+	desc = "A secure box holding 12 type 6 fragmentation grenades. Ensure pins are in place before removing from the box."
+	icon_state = "upp_nade_case"
+	storage_slots = 12
+	max_storage_space = 12
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/upp)
+	model_icon = "model_type6"
+	type_icon = "type6"
+	grenade_type = /obj/item/explosive/grenade/high_explosive/upp
+
+/obj/item/storage/box/nade_box/upp/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays -= image(icon, "upp_nade_lid")
+	else
+		overlays += image(icon, "upp_nade_lid")
+		if(type_icon)
+			overlays += image(icon, type_icon)
+		if(model_icon)
+			overlays += image(icon, model_icon)
+		return
+	if(length(contents) >= 8)
+		overlays += image(icon, "+[type_icon]_full")
+	if(length(contents) <= 7)
+		overlays += image(icon, "+[type_icon]_half")
+
+/obj/item/storage/box/nade_box/upp/smoke
+	name = "\improper RDG-17 smoke grenade box"
+	desc = "A secure box holding 12 RDG-17 smoke grenades. Ensure pins are in place before removing from the box."
+	can_hold = list(/obj/item/explosive/grenade/smokebomb/upp)
+	model_icon = "model_typesmoke"
+	type_icon = "typesmoke"
+	grenade_type = /obj/item/explosive/grenade/smokebomb/upp
+
+/obj/item/storage/box/nade_box/upp/wp
+	name = "\improper Type 8 WP grenade box"
+	desc = "A secure box holding 12 type 8 WP grenades. Ensure pins are in place before removing from the box."
+	can_hold = list(/obj/item/explosive/grenade/phosphorus/upp)
+	model_icon = "model_typewp"
+	type_icon = "typewp"
+	grenade_type = /obj/item/explosive/grenade/phosphorus/upp
+
+/obj/item/storage/box/nade_box/upp/ugl
+	name = "\improper VOG-73 HE grenade box"
+	desc = "A secure box holding 15 VOG-73 HE grenades. Don't store near open flames."
+	storage_slots = 15
+	max_storage_space = 15
+	can_hold = list(/obj/item/explosive/grenade/high_explosive/impact/upp)
+	model_icon = "model_40mm"
+	type_icon = "40mm"
+	grenade_type = /obj/item/explosive/grenade/high_explosive/impact/upp
 
 //ITEMS-----------------------------------//
 /obj/item/storage/box/lightstick
