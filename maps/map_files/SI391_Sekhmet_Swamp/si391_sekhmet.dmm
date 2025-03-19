@@ -558,6 +558,13 @@
 /obj/structure/closet/crate,
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/warehouse)
+"asn" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/fuel_cell,
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_heavy/low_level_gen)
 "aso" = (
 /obj/structure/machinery/computer/arcade,
 /turf/open/floor/prison/bright_clean/southwest,
@@ -7967,7 +7974,8 @@
 /area/sekhmet/int_heavy/research)
 "fmB" = (
 /obj/docking_port/stationary/marine_dropship/lz2{
-	name = "LZ2: Research Landing Zone"
+	name = "LZ1 Military Landing Pad";
+	id = "dropship-lz1"
 	},
 /turf/open/floor/corsat,
 /area/sekhmet/shuttles/drop1)
@@ -14099,6 +14107,12 @@
 	},
 /turf/open/floor/strata/green1,
 /area/sekhmet/int_heavy/low_level_rsr)
+"jcs" = (
+/obj/structure/machinery/light/small{
+	light_power = 0.25
+	},
+/turf/open/floor/strata/floor3,
+/area/sekhmet/int_reg/military_hangar)
 "jcZ" = (
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 1
@@ -21600,7 +21614,8 @@
 /area/sekhmet/int_heavy/low_level_rsr)
 "nSy" = (
 /obj/docking_port/stationary/marine_dropship/lz2{
-	name = "LZ2: Research Landing Zone"
+	name = "LZ3: Research Landing Pad";
+	id = "dropship-lz3"
 	},
 /turf/open/floor/corsat,
 /area/sekhmet/shuttles/drop3)
@@ -26161,16 +26176,15 @@
 /turf/open/floor/plating/warnplate/southeast,
 /area/sekhmet/shuttles/drop3)
 "qXE" = (
-/obj/structure/machinery/conveyor{
-	icon_state = "switch-off";
-	pixel_y = 19;
-	pixel_x = 7;
-	id = "convrsr"
-	},
 /obj/structure/machinery/door_control{
 	pixel_x = -5;
 	pixel_y = 26;
 	id = "artTRA"
+	},
+/obj/structure/machinery/conveyor_switch{
+	id = "convrsr";
+	pixel_x = 11;
+	pixel_y = 21
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_rsr)
@@ -26397,7 +26411,10 @@
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/low_level_rsr)
 "reT" = (
-/obj/docking_port/stationary/marine_dropship/lz1,
+/obj/docking_port/stationary/marine_dropship/lz1{
+	id = "dropship-lz2";
+	name = "LZ2 Swamp Clearing"
+	},
 /turf/open/gm/dirt2,
 /area/sekhmet/shuttles/drop2)
 "rfs" = (
@@ -29220,13 +29237,6 @@
 /obj/structure/machinery/power/port_gen/pacman,
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/low_level_gen)
-"sTT" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/item/fuel_cell,
-/turf/open/floor/prison/bright_clean2,
-/area/sekhmet/int_heavy/low_level_gen)
 "sTU" = (
 /obj/item/broken_device{
 	desc = "A timeless piece of technology from another era, of spacemen who once plunged into the 12th Bay and beyond."
@@ -30209,6 +30219,9 @@
 	},
 /obj/item/device/motiondetector/upp,
 /obj/item/device/motiondetector/upp,
+/obj/structure/machinery/light/small{
+	light_power = 0.25
+	},
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_reg/complex_operation)
 "tES" = (
@@ -32733,6 +32746,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_rsr)
+"vmH" = (
+/obj/structure/machinery/light/small{
+	light_power = 0.25;
+	dir = 1
+	},
+/turf/open/floor/prison/bright_clean2,
+/area/sekhmet/int_reg/military_hangar)
 "vmZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -38225,7 +38245,7 @@ psY
 psY
 psY
 psY
-fBF
+vmH
 ngu
 fBF
 xiT
@@ -38875,7 +38895,7 @@ psY
 psY
 gpu
 ngu
-gpu
+jcs
 trG
 trG
 xiT
@@ -98881,8 +98901,8 @@ lma
 uej
 crK
 niV
-sTT
-sTT
+asn
+asn
 lma
 hCV
 gSR
