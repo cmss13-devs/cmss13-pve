@@ -22,6 +22,8 @@ import {
   MESSAGE_TYPE_INTERNAL,
   MESSAGE_TYPE_UNKNOWN,
   MESSAGE_TYPES,
+  RENDERER_RELOAD_WAIT,
+  RENDERER_RELOAD_WAIT_TRIDENT,
 } from './constants';
 import { canPageAcceptType, createMessage, isSameMessage } from './model';
 import { highlightNode, linkifyNode } from './replaceInTextNode';
