@@ -2975,6 +2975,17 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/military_hangar)
+"bTc" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	color = "#999900";
+	dir = 8
+	},
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/central_road)
 "bTX" = (
 /turf/open/floor/sandstone/runed,
 /area/sekhmet/outside/temple_outer)
@@ -5241,6 +5252,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_reg/warehouse)
+"drs" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/closed/wall/upp_wall/grey,
+/area/sekhmet/int_heavy/entry_zone)
 "drG" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /obj/structure/machinery/light/small{
@@ -7221,6 +7239,13 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_reg/southwest_complex)
+"eGL" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/sekhmet/outside/central_road)
 "eGR" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -7439,6 +7464,10 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/research)
+"eOd" = (
+/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+/turf/open/gm/dirt,
+/area/sekhmet/outside/airfield)
 "eOg" = (
 /obj/structure/surface/table/woodentable{
 	color = "#8B7B5B"
@@ -8025,6 +8054,10 @@
 	dir = 4;
 	climb_delay = 1;
 	layer = 2.99
+	},
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/sekhmet/outside/southroad)
@@ -10849,6 +10882,13 @@
 	},
 /turf/open/floor/prison/bright_clean/southwest,
 /area/sekhmet/int_heavy/low_level_gen)
+"gKc" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/closed/wall/upp_wall/grey,
+/area/sekhmet/outside/temple_outer)
 "gKe" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
@@ -11775,6 +11815,10 @@
 /obj/structure/prop/broken_ladder,
 /turf/open/floor/corsat/marked,
 /area/space)
+"hnk" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/auto_turf/sand_white/layer1,
+/area/sekhmet/outside/swamp)
 "hnq" = (
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 4
@@ -12620,6 +12664,15 @@
 	},
 /turf/open/gm/dirt2,
 /area/sekhmet/outside/southroad)
+"hOt" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/closed/wall/strata_ice/jungle{
+	color = "#ffcc33"
+	},
+/area/sekhmet/int_reg/complex_operation)
 "hOD" = (
 /obj/structure/bed/chair/comfy/beige,
 /turf/open/floor/strata/floor2,
@@ -13244,6 +13297,14 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/temple_outer)
+"ihO" = (
+/obj/structure/fence,
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/central_road)
 "iiA" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
@@ -13536,6 +13597,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
+"iry" = (
+/obj/structure/fence,
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/temple_outer)
 "isf" = (
 /turf/closed/wall/upp_wall/grey,
 /area/sekhmet/outside/central_road)
@@ -13545,6 +13614,13 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_rsr)
+"isC" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/closed/wall/upp_wall,
+/area/sekhmet/int_reg/engineering)
 "isM" = (
 /obj/structure/barricade/handrail/strata,
 /obj/structure/machinery/light/small{
@@ -14822,6 +14898,10 @@
 /obj/structure/platform/shiva/catwalk,
 /turf/open/floor/elevatorshaft,
 /area/sekhmet/int_heavy/low_level_rsr)
+"jhR" = (
+/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/sekhmet/outside/swamp)
 "jiB" = (
 /obj/structure/machinery/washing_machine,
 /obj/structure/machinery/washing_machine{
@@ -17602,6 +17682,14 @@
 /obj/structure/prop/invuln/darkness,
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_reg/catwalk)
+"kUS" = (
+/obj/structure/fence,
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/east_jungle)
 "kUY" = (
 /turf/open/gm/dirt,
 /area/sekhmet/caves/temple)
@@ -19846,6 +19934,14 @@
 	},
 /turf/open/floor/strata,
 /area/sekhmet/int_reg/military_hangar)
+"mmw" = (
+/obj/structure/flora/bush/ausbushes/grassybush,
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/central_road)
 "mmR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/sandstone/runed,
@@ -24062,6 +24158,14 @@
 	},
 /turf/open/floor/strata,
 /area/sekhmet/int_reg/comms_lower)
+"oQN" = (
+/obj/structure/fence,
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/southroad)
 "oRx" = (
 /turf/closed/wall/rock{
 	color = "#a39e99"
@@ -25323,6 +25427,13 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/low_level_rsr)
+"pPn" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/closed/wall/upp_wall/grey,
+/area/sekhmet/int_heavy/research)
 "pPw" = (
 /obj/structure/platform_decoration/shiva/catwalk{
 	dir = 4
@@ -25883,6 +25994,10 @@
 	},
 /turf/open/floor/sandstone/runed,
 /area/sekhmet/outside/east_jungle)
+"qkY" = (
+/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/swamp)
 "qle" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
@@ -26048,6 +26163,10 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_glass/complex_generic)
+"qqg" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/gm/dirt,
+/area/sekhmet/outside/swamp)
 "qqr" = (
 /obj/structure/machinery/door_control{
 	pixel_x = 9;
@@ -31774,6 +31893,11 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_glass/south_complex)
+"tVE" = (
+/obj/structure/prop/invuln/darkness,
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/gm/dirt,
+/area/sekhmet/int_reg/catwalk)
 "tVS" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/corsat,
@@ -32445,6 +32569,10 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_reg/complex_operation)
+"utR" = (
+/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/sekhmet/outside/east_jungle)
 "utY" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -32966,6 +33094,10 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/low_level_rsr)
+"uIO" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/gm/dirt,
+/area/sekhmet/outside/southroad)
 "uIP" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 4;
@@ -35391,6 +35523,10 @@
 "wlK" = (
 /turf/closed/wall/upp_wall,
 /area/sekhmet/int_glass/hosptial)
+"wme" = (
+/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/east_jungle)
 "wmh" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/warning_stripes{
@@ -36287,6 +36423,13 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/water_filters)
+"wPV" = (
+/obj/structure/flora/jungle/vines{
+	icon_state = "light_3";
+	icon_tag = "light_3"
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/southroad)
 "wQb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -38800,7 +38943,7 @@ iXF
 mui
 nPc
 mui
-mui
+eOd
 mui
 nnm
 iXF
@@ -44942,7 +45085,7 @@ pBz
 pBz
 kCV
 cHW
-cHW
+qqg
 cHW
 yhN
 yhN
@@ -46410,7 +46553,7 @@ pBz
 pBz
 cHW
 cHW
-cHW
+qqg
 pZW
 iHY
 ssL
@@ -47041,7 +47184,7 @@ kou
 kUP
 hRj
 jyi
-jyi
+tVE
 jyi
 jyi
 yhN
@@ -47505,7 +47648,7 @@ pBz
 pBz
 pBz
 cHW
-cHW
+qqg
 cHW
 qTH
 yec
@@ -47603,7 +47746,7 @@ xGW
 mxU
 mxU
 mxU
-kCi
+oQN
 mxU
 fxj
 mxU
@@ -47764,7 +47907,7 @@ xGW
 mxU
 mxU
 lQG
-mxU
+wPV
 kCi
 pFr
 fxj
@@ -47857,7 +48000,7 @@ ybn
 pBz
 pBz
 pBz
-pBz
+qkY
 pBz
 pBz
 uhn
@@ -48173,7 +48316,7 @@ cxR
 pdy
 iHY
 dVw
-cHW
+qqg
 cHW
 pBz
 pBz
@@ -48209,7 +48352,7 @@ uhn
 vUN
 kCV
 kCV
-cHW
+qqg
 cHW
 lzJ
 cHW
@@ -49332,7 +49475,7 @@ cyh
 wKY
 wKY
 uhn
-uhn
+jhR
 pBz
 pBz
 pBz
@@ -49779,7 +49922,7 @@ ssL
 ssL
 dVw
 cHW
-cHW
+qqg
 cHW
 pBz
 pBz
@@ -49822,7 +49965,7 @@ pBz
 kCV
 pBz
 cHW
-cHW
+qqg
 pBz
 pBz
 cHW
@@ -50504,7 +50647,7 @@ jGk
 jGk
 wBn
 prf
-fSF
+uIO
 fSF
 htM
 lQG
@@ -50649,7 +50792,7 @@ pBz
 cHW
 cHW
 cHW
-cHW
+qqg
 jpn
 iqB
 oxw
@@ -51281,7 +51424,7 @@ cHW
 lzJ
 cHW
 cHW
-cHW
+qqg
 cHW
 pBz
 ybn
@@ -51962,7 +52105,7 @@ cHW
 lzJ
 cHW
 kRb
-kRb
+hnk
 alT
 kFo
 xGW
@@ -52261,7 +52404,7 @@ mvM
 bsP
 bsP
 cHW
-cHW
+qqg
 cHW
 cHW
 pZW
@@ -52944,7 +53087,7 @@ xGW
 lke
 pdy
 dVw
-cHW
+qqg
 mxU
 mxU
 xGW
@@ -53066,8 +53209,8 @@ kkC
 kkC
 dkY
 dkY
-dkY
-bsP
+qSP
+kLT
 kkC
 kkC
 kkC
@@ -53229,8 +53372,8 @@ jqu
 jqu
 jqu
 kgg
-jqu
-jqu
+ihO
+ihO
 jqu
 jqu
 jqu
@@ -53245,7 +53388,7 @@ bsP
 bsP
 bsP
 bsP
-cHW
+qqg
 thT
 tve
 wCG
@@ -54691,7 +54834,7 @@ bsP
 mma
 mma
 bsP
-bsP
+kLT
 dkY
 dkY
 iew
@@ -54853,7 +54996,7 @@ mma
 bsP
 mma
 bsP
-bsP
+kLT
 dkY
 dkY
 iew
@@ -55015,7 +55158,7 @@ mma
 mma
 mma
 bsP
-dkY
+qSP
 dkY
 dkY
 iew
@@ -55178,7 +55321,7 @@ mma
 bsP
 bsP
 bsP
-dkY
+qSP
 dkY
 iew
 wBR
@@ -55340,7 +55483,7 @@ mma
 mma
 bsP
 kgg
-dkY
+qSP
 dkY
 iew
 oDJ
@@ -55501,7 +55644,7 @@ mma
 mma
 mma
 bsP
-iew
+dlC
 iew
 iew
 iew
@@ -56838,7 +56981,7 @@ ssL
 ssL
 dVw
 cHW
-cHW
+qqg
 agk
 mxU
 mxU
@@ -58555,7 +58698,7 @@ wLU
 vHW
 bKs
 wLU
-bsP
+kLT
 bsP
 bsP
 cOE
@@ -58565,7 +58708,7 @@ bsP
 fvC
 dXC
 cjJ
-nCq
+hOt
 nCq
 nCq
 cjJ
@@ -58727,8 +58870,8 @@ bsP
 bsP
 bsP
 fvC
-nCq
-nCq
+hOt
+hOt
 dXC
 cAp
 bsP
@@ -58885,11 +59028,11 @@ kkC
 hzt
 dkY
 dkY
-dkY
+qSP
 bsP
 bsP
 bsP
-nCq
+hOt
 bsP
 jXE
 bsP
@@ -59047,7 +59190,7 @@ bsP
 bsP
 dkY
 foL
-foL
+eGL
 kgg
 bsP
 cOE
@@ -62636,8 +62779,8 @@ lLB
 djH
 dkY
 gUE
-gUE
-dkY
+bTc
+qSP
 dkY
 dkY
 eZo
@@ -62796,9 +62939,9 @@ kkC
 bsP
 dkY
 dkY
-dkY
-lLB
-lLB
+qSP
+lIG
+lIG
 lLB
 dkY
 dkY
@@ -62957,7 +63100,7 @@ bsP
 bsP
 kkC
 bsP
-dkY
+qSP
 dkY
 lLB
 lLB
@@ -63119,7 +63262,7 @@ bsP
 bsP
 bsP
 hzt
-bsP
+kLT
 lLB
 lLB
 lLB
@@ -63280,8 +63423,8 @@ bsP
 bsP
 bsP
 kkC
-bsP
-lLB
+kLT
+lIG
 lLB
 lLB
 lLB
@@ -63442,7 +63585,7 @@ bsP
 bsP
 bsP
 bsP
-eZo
+pPn
 eZo
 eZo
 eZo
@@ -65031,7 +65174,7 @@ ran
 ran
 ran
 ran
-ran
+drs
 kgg
 bsP
 mma
@@ -65192,8 +65335,8 @@ iOH
 ran
 ama
 iOH
-ran
-kkC
+drs
+mmw
 bsP
 bsP
 mma
@@ -65354,7 +65497,7 @@ nmm
 emO
 iOH
 nmm
-emO
+iry
 bsP
 bsP
 mma
@@ -65510,7 +65653,7 @@ iOH
 iOH
 iOH
 iOH
-emO
+iry
 iOH
 nmm
 emO
@@ -65672,10 +65815,10 @@ iOH
 iOH
 iOH
 ama
-emO
+iry
 iOH
 nmm
-emO
+iry
 nmm
 iOH
 emO
@@ -65832,12 +65975,12 @@ iOH
 iOH
 iOH
 klo
+fzc
 iOH
-iOH
-vjJ
+gKc
 nmm
 iOH
-vjJ
+gKc
 klo
 klo
 vjJ
@@ -65994,12 +66137,12 @@ tTq
 klo
 klo
 klo
+nrc
+nrc
+nrc
 klo
-klo
-klo
-klo
-klo
-klo
+nrc
+nrc
 klo
 klo
 klo
@@ -66184,8 +66327,8 @@ tdi
 gtq
 uAR
 dHu
-dHu
-dHu
+mTp
+mTp
 dHu
 dHu
 dHu
@@ -66668,7 +66811,7 @@ uAR
 iyl
 iyl
 uAR
-uAR
+isC
 grS
 grS
 grS
@@ -66834,7 +66977,7 @@ grS
 grS
 mNo
 gVN
-dDe
+kUS
 grS
 grS
 grS
@@ -66996,7 +67139,7 @@ hNj
 mNo
 tfG
 vuy
-dHu
+mTp
 grS
 grS
 grS
@@ -67130,7 +67273,7 @@ iOH
 jIj
 grS
 grS
-grS
+wme
 grS
 kvB
 kvB
@@ -68610,7 +68753,7 @@ grS
 grS
 kvB
 kvB
-grS
+wme
 grS
 grS
 grS
@@ -69888,7 +70031,7 @@ vOQ
 vOQ
 grS
 grS
-grS
+wme
 grS
 grS
 grS
@@ -70398,7 +70541,7 @@ grS
 vOQ
 kvB
 grS
-vOQ
+utR
 vOQ
 dHu
 dHu
@@ -72320,7 +72463,7 @@ grS
 grS
 kvB
 kvB
-grS
+wme
 grS
 grS
 hNj
@@ -72983,7 +73126,7 @@ aQt
 eQT
 vOQ
 vOQ
-vOQ
+utR
 vOQ
 grS
 grS
@@ -73307,7 +73450,7 @@ aQt
 eOO
 vOQ
 vOQ
-grS
+wme
 grS
 grS
 grS
