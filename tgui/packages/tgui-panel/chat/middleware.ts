@@ -140,6 +140,7 @@ export const chatMiddleware = (store) => {
       if (sequences.includes(sequence)) {
         return;
       }
+
       const sequence_count = sequences.length;
       seq_check: if (sequence_count > 0) {
         if (sequences_requested.includes(sequence)) {
