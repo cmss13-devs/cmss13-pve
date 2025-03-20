@@ -92,22 +92,14 @@
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/deathsquad),
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak)
 	))
-
-/*//Revisiting, this is just so the PR can be used for an Op until I get this fixed proper
-/datum/ammo/energy/plasma/proc/plasmabeam(atom/target, obj/item/weapon/gun/fired_from)
-	var/datum/beam/plasma_beam
-	var/obj/effect/ebeam/plasma_beam_type = /obj/effect/ebeam/plasma
-	plasma_beam = target.beam(fired_from, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
-	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, easing = SINE_EASING|EASE_OUT)
-*/
 
 /datum/ammo/energy/plasma/on_hit_mob(mob/M,obj/projectile/P)
 	if(M.mob_size >= MOB_SIZE_BIG)
 		var/mob/living/L = M
 		L.apply_armoured_damage(damage*1.6, ARMOR_ENERGY, BURN, null, penetration)
 	burst(get_turf(M),P,damage_type, 1 , 5)
-	//plasmabeam(P)
 	new /obj/effect/overlay/temp/plasma_impact(M)
 
 /datum/ammo/energy/plasma/on_near_target(turf/T, obj/projectile/P)
@@ -124,12 +116,10 @@
 		mob.ex_act(150, P.dir, P.weapon_cause_data, 100)
 		return
 	burst(get_turf(P),P,damage_type, 1 , 5)
-	//plasmabeam(P)
 	new /obj/effect/overlay/temp/plasma_impact(O)
 
 /datum/ammo/energy/plasma/on_hit_turf(turf/T,obj/projectile/P)
 	burst(get_turf(T),P,damage_type, 1 , 5)
-	//plasmabeam(P)
 	new /obj/effect/overlay/temp/plasma_impact(T)
 
 /datum/ammo/energy/plasma/heavy

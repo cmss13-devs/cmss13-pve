@@ -476,7 +476,7 @@
 		update_icon()
 
 /obj/item/weapon/gun/XM99/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 17,"rail_x" = 11, "rail_y" = 21, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 17,"rail_x" = 11, "rail_y" = 21, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/XM99/set_gun_config_values()
 	..()
@@ -493,9 +493,8 @@
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 75, GLOB.damage_boost_vehicles),
 	))
 
-/*
+
 /obj/item/weapon/gun/XM99/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
-	. = ..()
 
 	var/datum/beam/plasma_beam
 	if(!current_mag)
@@ -504,7 +503,7 @@
 		return
 	plasma_beam = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
 	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, easing = SINE_EASING|EASE_OUT)
-*/
+	. = ..()
 
 //-------------------------------------------------------
 //P9 Sonic Harpoon Artillery Remote Projectile(SHARP) Rifle
