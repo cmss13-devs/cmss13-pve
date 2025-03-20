@@ -387,7 +387,7 @@
 	dat += "<h4><center>Crew Manifest:</center></h4>"
 	dat += GLOB.data_core.get_manifest(FALSE, TRUE)
 
-	show_browser(src, dat, "Crew Manifest", "manifest", "size=450x750")
+	show_browser(src, dat, "Crew Manifest", "manifest", width = 450, height = 750)
 
 /mob/new_player/proc/ViewHiveLeaders()
 	if(!GLOB.hive_leaders_tgui)

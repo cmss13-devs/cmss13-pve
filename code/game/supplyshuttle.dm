@@ -758,7 +758,7 @@ GLOBAL_DATUM_INIT(supply_controller, /datum/controller/supply, new())
 		<A href='byond://?src=\ref[src];viewrequests=1'>View requests</A><BR><BR>
 		<A href='byond://?src=\ref[user];mach_close=computer'>Close</A>"}
 
-	show_browser(user, dat, "Automated Storage and Retrieval System", "computer", "size=575x450")
+	show_browser(user, dat, "Automated Storage and Retrieval System", "computer", width = 575, height = 450)
 	return
 
 /obj/structure/machinery/computer/ordercomp/Topic(href, href_list)
@@ -922,7 +922,7 @@ GLOBAL_DATUM_INIT(supply_controller, /datum/controller/supply, new())
 		\n<A href='byond://?src=\ref[user];mach_close=computer'>Close</A>"}
 
 
-	show_browser(user, dat, "Automated Storage and Retrieval System", "computer", "size=575x450")
+	show_browser(user, dat, "Automated Storage and Retrieval System", "computer", width = 575, height = 450)
 	return
 
 /obj/structure/machinery/computer/supplycomp/Topic(href, href_list)

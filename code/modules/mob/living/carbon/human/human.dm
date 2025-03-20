@@ -1016,7 +1016,7 @@
 
 	if(job in GLOB.ROLES_USCM)
 		var/dat = GLOB.data_core.get_manifest()
-		show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
+		show_browser(src, dat, "Crew Manifest", "manifest", width = 400, height = 750)
 	else
 		to_chat(usr, SPAN_WARNING("You have no access to [MAIN_SHIP_NAME] crew manifest."))
 
