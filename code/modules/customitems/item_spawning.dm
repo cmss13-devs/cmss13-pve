@@ -11,7 +11,10 @@ GLOBAL_LIST_FILE_LOAD(custom_items, "config/custom_items.txt")
 		// split & clean up
 		var/list/Entry = splittext(line, ":")
 		for(var/i = 1 to length(Entry))
-			Entry[i] = trim(Entry[i])
+			if(i == 1)
+				Entry[i] = ckey(Entry[i])
+			else
+				Entry[i] = trim(Entry[i])
 
 		if(length(Entry) < 2)
 			continue;
@@ -23,12 +26,21 @@ GLOBAL_LIST_FILE_LOAD(custom_items, "config/custom_items.txt")
 				P = trim(P)
 				var/path = text2path(P)
 				if(!path) continue
-
+				var/obj/structure/closet/secure_closet/marine_personal/closet_to_spawn_in
+				var/turf/turf = get_turf(M)
 				var/obj/item/Item = new path()
-				for(var/obj/item/storage/S in M.contents) // Try to place it in any item that can store stuff, on the mob.
+				if(is_mainship_level(turf.z))
+					for(var/obj/structure/closet/secure_closet/marine_personal/closet in GLOB.personal_closets) // now this gets called after we got our awesome pve personal locker hooray
+						if(closet.owner == M.real_name && closet.job == M.job)
+							closet_to_spawn_in = closet
+							Item.forceMove(closet_to_spawn_in)
+							ok = TRUE
+							break
+				else for(var/obj/item/storage/S in M.contents) // Try to place it in any item that can store stuff, on the mob.
 					if (S.handle_item_insertion(Item, TRUE))
 						ok = TRUE
 						break
+
 
 				if (ok == FALSE) // Finally, since everything else failed, place it on the ground
 					Item.forceMove(get_turf(M.loc))

@@ -325,13 +325,13 @@ their unique feature is that a direct hit will buff your damage and firerate
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/gyro, // Under
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/magnetic_harness/lever_sling,
 		/obj/item/attachable/stock/r4t, // Stock
+		/obj/item/attachable/lasersight, // Special
+		/obj/item/attachable/flashlight,
 		)
 	map_specific_decoration = TRUE
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AMMO_COUNTER
@@ -339,7 +339,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 	civilian_usable_override = TRUE
 
 /obj/item/weapon/gun/lever_action/r4t/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 21, "under_x" = 24, "under_y" = 16, "stock_x" = 15, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 21, "under_x" = 24, "under_y" = 16, "stock_x" = 15, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 17)
 
 //===================THE XM88===================\\
 
@@ -416,15 +416,20 @@ their unique feature is that a direct hit will buff your damage and firerate
 /obj/item/weapon/gun/lever_action/xm88/proc/update_fired_mouse_pointer(mob/user)
 	SIGNAL_HANDLER
 
-	if(!user.client?.prefs.custom_cursors)
+	if(!user.client?.prefs?.custom_cursors)
 		return
 
-	user.client?.mouse_pointer_icon = get_fired_mouse_pointer(floating_penetration)
-	addtimer(CALLBACK(src, PROC_REF(update_mouse_pointer), user, TRUE), 0.4 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_CLIENT_TIME)
+	user.client.mouse_pointer_icon = get_fired_mouse_pointer(floating_penetration)
+	addtimer(CALLBACK(src, PROC_REF(finish_update_fired_mouse_pointer), user), 0.4 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_CLIENT_TIME)
+
+/obj/item/weapon/gun/lever_action/xm88/proc/finish_update_fired_mouse_pointer(mob/user)
+	if(flags_item & WIELDED)
+		update_mouse_pointer(user, TRUE)
 
 /obj/item/weapon/gun/lever_action/xm88/update_mouse_pointer(mob/user, new_cursor)
-	if(user.client?.prefs.custom_cursors)
-		user.client?.mouse_pointer_icon = get_mouse_pointer(floating_penetration)
+	if(!user.client?.prefs?.custom_cursors)
+		return
+	user.client.mouse_pointer_icon = new_cursor ? get_scaling_mouse_pointer(floating_penetration) : initial(user.client.mouse_pointer_icon)
 
 /obj/item/weapon/gun/lever_action/xm88/proc/get_scaling_mouse_pointer(level)
 	switch(level)

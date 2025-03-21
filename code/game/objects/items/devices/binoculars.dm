@@ -424,6 +424,11 @@
 	else
 		action_icon_state = "designator_one_weapon"
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+/obj/item/device/binoculars/range/designator/upp
+
+	icon_state = "binoculars_upp"
+	cas_laser_overlay = "binoculars_laser_civ"
+	range_laser_overlay = "binoculars_range_civ"
 
 //pve binocs
 /obj/item/device/binoculars/range/monocular
@@ -525,9 +530,6 @@
 
 /datum/action/item_action/specialist/spotter_target/can_use_action()
 	var/mob/living/carbon/human/human = owner
-	if(!(GLOB.character_traits[/datum/character_trait/skills/spotter] in human.traits))
-		to_chat(human, SPAN_WARNING("You have no idea how to use this!"))
-		return FALSE
 	if(istype(human) && !human.is_mob_incapacitated() && (holder_item == human.r_hand || holder_item || human.l_hand))
 		return TRUE
 

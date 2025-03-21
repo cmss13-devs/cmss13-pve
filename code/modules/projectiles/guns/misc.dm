@@ -7,6 +7,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/event.dmi'
 	icon_state = "painless"
 	item_state = "painless"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 	fire_sound = 'sound/weapons/gun_minigun.ogg'
 	cocked_sound = 'sound/weapons/gun_minigun_cocked.ogg'
@@ -21,9 +22,6 @@
 /obj/item/weapon/gun/minigun/Initialize(mapload, spawn_empty)
 	. = ..()
 	if(current_mag && current_mag.current_rounds > 0) load_into_chamber()
-
-/obj/item/weapon/gun/minigun/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 /obj/item/weapon/gun/minigun/set_gun_config_values()
 	..()
@@ -51,6 +49,7 @@
 	name = "\improper GSh-7.62 rotary machine gun"
 	desc = "A gas-operated rotary machine gun used by UPP heavies. Its enormous volume of fire and ammunition capacity allows the suppression of large concentrations of enemy forces. Heavy weapons training is required control its recoil."
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_RECOIL_BUILDUP|GUN_CAN_POINTBLANK
+	current_mag = /obj/item/ammo_magazine/minigun/upp
 
 /obj/item/weapon/gun/minigun/upp/able_to_fire(mob/living/user)
 	. = ..()
@@ -71,6 +70,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "m60"
 	item_state = "m60"
+	mouse_pointer = 'icons/effects/mouse_pointer/lmg_mouse.dmi'
 
 	fire_sound = 'sound/weapons/gun_m60.ogg'
 	cocked_sound = 'sound/weapons/gun_m60_cocked.ogg'
@@ -90,6 +90,7 @@
 	)
 	start_semiauto = FALSE
 	start_automatic = TRUE
+
 	var/cover_open = FALSE //if the gun's feed-cover is open or not.
 
 
@@ -98,12 +99,8 @@
 	if(current_mag && current_mag.current_rounds > 0)
 		load_into_chamber()
 
-/obj/item/weapon/gun/m60/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/lmg_mouse.dmi'
-
 /obj/item/weapon/gun/m60/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 37, "muzzle_y" = 16, "rail_x" = 0, "rail_y" = 0, "under_x" = 27, "under_y" = 12, "stock_x" = 10, "stock_y" = 14)
-
 
 /obj/item/weapon/gun/m60/set_gun_config_values()
 	..()
@@ -168,7 +165,7 @@
 
 /obj/item/weapon/gun/pkp
 	name = "\improper QYJ-72 General Purpose Machine Gun"
-	desc = "The QYJ-72 is the standard GPMG of the Union of Progressive Peoples, chambered in 10x31mm, it fires a hard-hitting round with a high rate of fire. With an extremely large box at 250 rounds, the QJY-72 is designed with suppressing fire and accuracy by volume of fire at its forefront. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
+	desc = "The QYJ-72 is the standard GPMG of the Union of Progressive Peoples, chambered in 10x27mm, it fires a hard-hitting round with a high rate of fire. With an extremely large box at 250 rounds, the QJY-72 is designed with suppressing fire and accuracy by volume of fire at its forefront. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "qjy72"
 	item_state = "qjy72"
@@ -355,3 +352,85 @@
 /obj/effect/syringe_gun_dummy/Initialize()
 	create_reagents(15)
 	. = ..()
+
+//-------------------------------------------------------
+//P9 Sonic Harpoon Artillery Remote Projectile(SHARP) Rifle
+
+/obj/item/weapon/gun/rifle/sharp
+	name = "\improper P9 SHARP rifle"
+	desc = "An experimental harpoon launcher rifle manufactured by Armat Systems. It's specialized for specific ammo types out of a 10-round magazine, best used for area denial and disruption.\n<b>Change firemode</b> in order to set fuse for delayed explosion darts. <b>Unique action</b> in order to track targets hit by tracker darts."
+	icon_state = "sharprifle"
+	item_state = "sharp"
+	fire_sound = 'sound/weapons/gun_sharp.ogg'
+	reload_sound = 'sound/weapons/handling/gun_vulture_bolt_close.ogg'
+	unload_sound = 'sound/weapons/handling/gun_vulture_bolt_eject.ogg'
+	unacidable = TRUE
+	indestructible = TRUE
+	muzzle_flash = null
+
+	current_mag = /obj/item/ammo_magazine/rifle/sharp/explosive
+	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/bayonet, /obj/item/attachable/flashlight)
+
+	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
+	wield_delay = WIELD_DELAY_NORMAL
+	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+
+	flags_item = TWOHANDED|NO_CRYO_STORE
+	start_semiauto = TRUE
+	start_automatic = FALSE
+
+
+	var/explosion_delay_sharp = FALSE
+	var/list/sharp_tracked_mob_list = list()
+
+/obj/item/weapon/gun/rifle/sharp/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 24, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 13)
+
+/obj/item/weapon/gun/rifle/sharp/set_gun_config_values()
+	..()
+	fire_delay = FIRE_DELAY_TIER_1
+	accuracy_mult = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_NONE
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_OFF
+
+/obj/item/weapon/gun/rifle/sharp/unique_action(mob/user)
+	track(user)
+
+/obj/item/weapon/gun/rifle/sharp/proc/track(mob/user)
+	var/mob/living/carbon/human/M = user
+
+	var/max_count = 5 //max number of tracking
+	var/target
+	var/direction = -1
+	var/atom/areaLoc = null
+	var/output = FALSE
+
+	var/x = sharp_tracked_mob_list.len - max_count
+	for(var/i=0,i<x,++i)
+		popleft(sharp_tracked_mob_list)
+
+	for(var/mob/living/mob_tracked as mob in sharp_tracked_mob_list)
+		if(!QDELETED(mob_tracked))
+			if(M.z == mob_tracked.z)
+				var/dist = get_dist(M,mob_tracked)
+				target = dist
+				direction = get_dir(M,mob_tracked)
+				areaLoc = loc
+
+			if(target < 900)
+				output = TRUE
+				var/areaName = get_area_name(areaLoc)
+				to_chat(M, SPAN_NOTICE("\The [mob_tracked] is [target > 10 ? "approximately <b>[round(target, 10)]</b>" : "<b>[target]</b>"] paces <b>[dir2text(direction)]</b> in <b>[areaName]</b>."))
+	if(!output)
+		to_chat(M, SPAN_NOTICE("There is nothing currently tracked."))
+
+	return
+
+/obj/item/weapon/gun/rifle/sharp/cock()
+	return
+
+/obj/item/weapon/gun/rifle/sharp/do_toggle_firemode(datum/source, datum/keybinding, new_firemode)
+	explosion_delay_sharp = !explosion_delay_sharp
+	playsound(source, 'sound/weapons/handling/gun_burst_toggle.ogg', 15, 1)
+	to_chat(source, SPAN_NOTICE("You [explosion_delay_sharp ? SPAN_BOLD("enable") : SPAN_BOLD("disable")] [src]'s delayed fire mode. Explosive ammo will blow up in [explosion_delay_sharp ? SPAN_BOLD("five seconds") : SPAN_BOLD("one second")]."))

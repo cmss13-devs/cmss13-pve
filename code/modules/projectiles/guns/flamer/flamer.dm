@@ -9,12 +9,14 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m240"
 	item_state = "m240"
+	mouse_pointer = 'icons/effects/mouse_pointer/flamer_mouse.dmi'
+
+	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
+	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
+	fire_sound = ""
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_LARGE
 	force = 15
-	fire_sound = ""
-	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
-	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	aim_slowdown = SLOWDOWN_ADS_INCINERATOR
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 	start_automatic = TRUE
@@ -41,11 +43,8 @@
 	. = ..()
 	update_icon()
 
-/obj/item/weapon/gun/flamer/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/flamer_mouse.dmi'
-
 /obj/item/weapon/gun/flamer/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 11, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0)
+	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 11, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0, "side_rail_x" = 24, "side_rail_y" = 19)
 
 /obj/item/weapon/gun/flamer/x_offset_by_attachment_type(attachment_type)
 	switch(attachment_type)
@@ -451,7 +450,7 @@
 	return 0
 
 /obj/item/weapon/gun/flamer/M240T/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 13, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0)
+	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 13, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0, "special_x" = 27, "special_y" = 19)
 
 /obj/item/weapon/gun/flamer/M240T/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	if (!link_fuelpack(user) && !current_mag)
@@ -488,10 +487,6 @@
 		if(!current_mag || !current_mag.current_rounds)
 			return FALSE
 
-		if(!skillcheck(user, SKILL_SPEC_WEAPONS,  SKILL_SPEC_ALL) && user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_PYRO)
-			to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
-			return FALSE
-
 /obj/item/weapon/gun/flamer/M240T/proc/link_fuelpack(mob/user)
 	if (fuelpack)
 		fuelpack.linked_flamer = null
@@ -515,6 +510,19 @@
 /obj/item/weapon/gun/flamer/M240T/auto/set_gun_config_values()
 	. = ..()
 	set_fire_delay(FIRE_DELAY_TIER_7)
+
+/obj/item/weapon/gun/flamer/upp
+	name = "\improper LPO80 incinerator unit"
+	desc = "An aged but effective lightweight combat incinerator officially in service as a anti-fortification tool but, in practice, utilized in close quarters combat for flushing out enemy combatants."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "LPO80"
+	item_state = "LPO80"
+	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
+	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
+	current_mag = /obj/item/ammo_magazine/flamer_tank/upp
+
+/obj/item/weapon/gun/flamer/upp/unloaded
+	current_mag = null
 
 /obj/flamer_fire
 	name = "fire"

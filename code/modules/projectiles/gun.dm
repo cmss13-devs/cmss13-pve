@@ -1,6 +1,19 @@
 #define CODEX_ARMOR_MAX 50
 #define CODEX_ARMOR_STEP 5
 
+/atom/movable/vis_obj/effect/muzzle_flash
+	icon = 'icons/obj/items/weapons/projectiles.dmi'
+	icon_state = "muzzle_flash"
+	layer = ABOVE_LYING_MOB_LAYER
+	plane = GAME_PLANE
+	appearance_flags = KEEP_APART|TILE_BOUND
+	var/applied = FALSE
+
+/atom/movable/vis_obj/effect/muzzle_flash/Initialize(mapload, new_icon_state)
+	. = ..()
+	if(new_icon_state)
+		icon_state = new_icon_state
+
 /obj/item/weapon/gun
 	name = "gun"
 	desc = "It's a gun. It's pretty terrible, though."
@@ -27,13 +40,19 @@
 	flags_item = TWOHANDED
 	light_system = DIRECTIONAL_LIGHT
 
+	///A custom mouse pointer icon to use when wielded
+	var/mouse_pointer = 'icons/effects/mouse_pointer/rifle_mouse.dmi'
+
 	var/accepted_ammo = list()
 	///Determines what kind of bullet is created when the gun is unloaded - used to match rounds to magazines. Set automatically when reloading.
 	var/caliber
-	var/muzzle_flash = "muzzle_flash"
-	///muzzle flash brightness
+	///Effect for the muzzle flash of the gun.
+	var/atom/movable/vis_obj/effect/muzzle_flash/muzzle_flash
+	///Icon state of the muzzle flash effect.
+	var/muzzleflash_iconstate
+	///Brightness of the muzzle flash effect.
 	var/muzzle_flash_lum = 3
-	///Color of the muzzle flash light effect.
+	///Color of the muzzle flash effect.
 	var/muzzle_flash_color = COLOR_VERY_SOFT_YELLOW
 
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
@@ -164,6 +183,10 @@
 	///Chance for random spawn to give this gun a underbarrel attachment.
 	var/random_under_chance = 100
 	///Used when a gun will have a chance to spawn with attachments.
+	var/list/random_spawn_siderail = list()
+	///Chance for random spawn to give this gun a side rail attachment.
+	var/random_siderail_chance = 100
+	///Used when a gun will have a chance to spawn with attachments.
 	var/list/random_spawn_under = list()
 	///Chance for random spawn to give this gun a stock attachment.
 	var/random_stock_chance = 100
@@ -253,7 +276,8 @@
 /obj/item/weapon/gun/Initialize(mapload, spawn_empty) //You can pass on spawn_empty to make the sure the gun has no bullets or mag or anything when created.
 	. = ..() //This only affects guns you can get from vendors for now. Special guns spawn with their own things regardless.
 	base_gun_icon = icon_state
-	attachable_overlays = list("muzzle" = null, "rail" = null, "under" = null, "stock" = null, "mag" = null, "special" = null)
+	attachable_overlays = list("muzzle" = null, "rail" = null, "side_rail" = null, "under" = null, "stock" = null, "mag" = null, "special" = null)
+	muzzle_flash = new(src, muzzleflash_iconstate)
 
 	LAZYSET(item_state_slots, WEAR_BACK, item_state)
 	LAZYSET(item_state_slots, WEAR_JACKET, item_state)
@@ -296,6 +320,7 @@
 	attachments = null
 	attachable_overlays = null
 	QDEL_NULL(active_attachable)
+	QDEL_NULL(muzzle_flash)
 	GLOB.gun_list -= src
 	set_gun_user(null)
 	. = ..()
@@ -393,6 +418,8 @@
 		accuracy_mult_unwielded += R.accuracy_unwielded_mod
 		scatter += R.scatter_mod
 		scatter_unwielded += R.scatter_unwielded_mod
+		fa_scatter_peak += R.fa_scatter_peak_mod
+		fa_max_scatter += R.fa_max_scatter_mod
 		damage_mult += R.damage_mod
 		velocity_add += R.velocity_mod
 		damage_falloff_mult += R.damage_falloff_mod
@@ -474,6 +501,14 @@
 			update_attachable(S.slot)
 			attachmentchoice = FALSE
 
+	var/siderailchance = random_siderail_chance
+	if(prob(siderailchance) && !attachments["side_rail"]) // Side Rail
+		attachmentchoice = SAFEPICK(random_spawn_siderail)
+		if(attachmentchoice)
+			var/obj/item/attachable/X = new attachmentchoice(src)
+			X.Attach(src)
+			update_attachable(X.slot)
+			attachmentchoice = FALSE
 
 /obj/item/weapon/gun/proc/handle_starting_attachment()
 	if(LAZYLEN(starting_attachment_types))
@@ -576,7 +611,7 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 			else dat += "It's loaded[in_chamber?" and has a round chambered":""].<br>"
 		else dat += "It's unloaded[in_chamber?" but has a round chambered":""].<br>"
 	if(!(flags_gun_features & GUN_UNUSUAL_DESIGN))
-		dat += "<a href='?src=\ref[src];list_stats=1'>\[See combat statistics]</a>"
+		dat += "<a href='byond://?src=\ref[src];list_stats=1'>\[See combat statistics]</a>"
 
 	if(dat)
 		. += dat
@@ -766,6 +801,8 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 			wield_time -= 2*user.skills.get_skill_level(SKILL_FIREARMS)
 
 	update_mouse_pointer(user, TRUE)
+	if(user.client)
+		RegisterSignal(user.client, COMSIG_CLIENT_RESET_VIEW, PROC_REF(handle_view))
 
 	return 1
 
@@ -773,18 +810,21 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 	. = ..()
 	if(.)
 		update_mouse_pointer(user, FALSE)
+		if(user.client)
+			UnregisterSignal(user.client, COMSIG_CLIENT_RESET_VIEW)
 		slowdown = initial(slowdown)
+
+/// SIGNAL_HANDLER for COMSIG_CLIENT_RESET_VIEW to ensure the mouse_pointer is set correctly
+/obj/item/weapon/gun/proc/handle_view(client/user, atom/target)
+	SIGNAL_HANDLER
+	update_mouse_pointer(user.mob, flags_item & WIELDED)
 
 ///Turns the mouse cursor into a crosshair if new_cursor is set to TRUE. If set to FALSE, returns the cursor to its initial icon.
 /obj/item/weapon/gun/proc/update_mouse_pointer(mob/user, new_cursor)
 	if(!user.client?.prefs.custom_cursors)
 		return
 
-	user.client?.mouse_pointer_icon = new_cursor ? get_mouse_pointer() : initial(user.client?.mouse_pointer_icon)
-
-///Getter proc. Returns the weapon's crosshair icon.
-/obj/item/weapon/gun/proc/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/rifle_mouse.dmi'
+	user.client.mouse_pointer_icon = new_cursor ? mouse_pointer : initial(user.client.mouse_pointer_icon)
 
 //----------------------------------------------------------
 			// \\
@@ -1234,7 +1274,7 @@ and you're good to go.
 		//This is where the projectile leaves the barrel and deals with projectile code only.
 		//vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 		in_chamber = null // It's not in the gun anymore
-		INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire?.ammo?.max_range, bullet_velocity, original_target)
+		INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire?.ammo?.max_range, bullet_velocity, original_target, flags_gun_features & GUN_SILENCED)
 		projectile_to_fire = null // Important: firing might have made projectile collide early and ALREADY have deleted it. We clear it too.
 		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1261,9 +1301,8 @@ and you're good to go.
 		return TRUE
 
 	//>>POST PROCESSING AND CLEANUP BEGIN HERE.<<
-	var/angle = floor(Get_Angle(user,target)) //Let's do a muzzle flash.
-	muzzle_flash(angle,user)
-
+	var/firing_angle = floor(Get_Angle(user,target)) //Let's do a muzzle flash.
+	muzzle_flash(firing_angle)
 	//This is where we load the next bullet in the chamber. We check for attachments too, since we don't want to load anything if an attachment is active.
 	if(!check_for_attachment_fire && !reload_into_chamber(user)) // It has to return a bullet, otherwise it's empty. Unless it's an undershotgun.
 		click_empty(user)
@@ -1829,28 +1868,100 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 
 	return FALSE
 
-/obj/item/weapon/gun/proc/muzzle_flash(angle,mob/user)
-	if(!muzzle_flash || flags_gun_features & GUN_SILENCED || isnull(angle))
+///muzzle flash
+/obj/item/weapon/gun/proc/muzzle_flash(firing_angle)
+	if(!muzzle_flash || flags_gun_features & GUN_SILENCED || isnull(firing_angle))
 		return //We have to check for null angle here, as 0 can also be an angle.
-	if(!istype(user) || !isturf(user.loc))
+	if(!istype(gun_user) || !isturf(gun_user.loc))
 		return
+	if(muzzle_flash && !muzzle_flash.applied)
+		var/atom/movable/flash_loc = gun_user.loc
+		var/prev_light = light_range
+		if(!light_on && (light_range <= muzzle_flash_lum))
+			set_light_range(muzzle_flash_lum)
+			set_light_color(muzzle_flash_color)
+			set_light_on(TRUE)
+			addtimer(CALLBACK(src, PROC_REF(reset_light_range), prev_light), 0.1 SECONDS)
+		//Offset the pixels.
+		switch(firing_angle)
+			if(0, 360)
+				muzzle_flash.pixel_x = 0
+				muzzle_flash.pixel_y = 13
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(1 to 44)
+				muzzle_flash.pixel_x = round(6 * ((firing_angle) / 45))
+				muzzle_flash.pixel_y = 13
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(45)
+				muzzle_flash.pixel_x = 13
+				muzzle_flash.pixel_y = 13
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(46 to 89)
+				muzzle_flash.pixel_x = 13
+				muzzle_flash.pixel_y = round(6 * ((90 - firing_angle) / 45))
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(90)
+				muzzle_flash.pixel_x = 13
+				muzzle_flash.pixel_y = 0
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(91 to 134)
+				muzzle_flash.pixel_x = 13
+				muzzle_flash.pixel_y = round(-4 * ((firing_angle - 90) / 45))
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(135)
+				muzzle_flash.pixel_x = 13
+				muzzle_flash.pixel_y = -10
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(136 to 179)
+				muzzle_flash.pixel_x = round(4 * ((180 - firing_angle) / 45))
+				muzzle_flash.pixel_y = -12
+				muzzle_flash.layer = ABOVE_MOB_LAYER
+			if(180)
+				muzzle_flash.pixel_x = 0
+				muzzle_flash.pixel_y = -12
+				muzzle_flash.layer = ABOVE_MOB_LAYER
+			if(181 to 224)
+				muzzle_flash.pixel_x = round(-6 * ((firing_angle - 180) / 45))
+				muzzle_flash.pixel_y = -12
+				muzzle_flash.layer = ABOVE_MOB_LAYER
+			if(225)
+				muzzle_flash.pixel_x = -12
+				muzzle_flash.pixel_y = -12
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(226 to 269)
+				muzzle_flash.pixel_x = -12
+				muzzle_flash.pixel_y = round(-12 * ((270 - firing_angle) / 45))
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(270)
+				muzzle_flash.pixel_x = -12
+				muzzle_flash.pixel_y = 0
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(271 to 313)
+				muzzle_flash.pixel_x = -12
+				muzzle_flash.pixel_y = round(8 * ((firing_angle - 270) / 45))
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(315)
+				muzzle_flash.pixel_x = -12
+				muzzle_flash.pixel_y = 13
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(316 to 359)
+				muzzle_flash.pixel_x = round(-12 * ((360 - firing_angle) / 45))
+				muzzle_flash.pixel_y = 13
+				muzzle_flash.layer = initial(muzzle_flash.layer)
 
-	var/prev_light = light_range
-	if(!light_on && (light_range <= muzzle_flash_lum))
-		set_light_range(muzzle_flash_lum)
-		set_light_on(TRUE)
-		set_light_color(muzzle_flash_color)
-		addtimer(CALLBACK(src, PROC_REF(reset_light_range), prev_light), 0.5 SECONDS)
+		muzzle_flash.transform = null
+		muzzle_flash.transform = turn(muzzle_flash.transform, firing_angle)
+		flash_loc.vis_contents += muzzle_flash
+		muzzle_flash.applied = TRUE
 
-	var/image/I = image('icons/obj/items/weapons/projectiles.dmi', user, muzzle_flash, user.dir == NORTH ? ABOVE_LYING_MOB_LAYER : FLOAT_LAYER)
-	var/matrix/rotate = matrix() //Change the flash angle.
-	if(iscarbonsizexeno(user))
-		var/mob/living/carbon/xenomorph/xeno = user
-		I.pixel_x = xeno.xeno_inhand_item_offset //To center it on the xeno sprite without being thrown off by rotation.
-	rotate.Translate(0, 5) //Y offset to push the flash overlay outwards.
-	rotate.Turn(angle)
-	I.transform = rotate
-	I.flick_overlay(user, 3)
+		addtimer(CALLBACK(src, PROC_REF(remove_muzzle_flash), flash_loc, muzzle_flash), 0.2 SECONDS)
+
+
+///Removes muzzle flash viscontents
+/obj/item/weapon/gun/proc/remove_muzzle_flash(atom/movable/flash_loc, atom/movable/vis_obj/effect/muzzle_flash/muzzle_flash)
+	if(!QDELETED(flash_loc))
+		flash_loc.vis_contents -= muzzle_flash
+	muzzle_flash.applied = FALSE
 
 /// called by a timer to remove the light range from muzzle flash
 /obj/item/weapon/gun/proc/reset_light_range(lightrange)
