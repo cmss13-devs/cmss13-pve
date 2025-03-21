@@ -391,7 +391,6 @@
 		if(shrapnel_count)
 			create_shrapnel(hit_atom, shrapnel_count, , ,shrapnel_type, cause_data)
 			sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
-		apply_explosion_overlay()
 		if(explosion_power)
 			cell_explosion(hit_atom, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
 
