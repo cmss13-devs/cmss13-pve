@@ -625,6 +625,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/cargo)
+"api" = (
+/obj/structure/flora/bush/ausbushes/reedbush,
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/gm/river/desert/shallow/no_overlay,
+/area/bosenmori/mountain/temple_proper)
 "apn" = (
 /obj/item/stool{
 	icon_state = "stool_alt";
@@ -3144,6 +3149,14 @@
 "bHm" = (
 /turf/open/floor/asteroidwarning/southwest,
 /area/bosenmori/outside/filtration)
+"bHy" = (
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "mai_riot_armory_ext";
+	dir = 8;
+	name = "Armory Blastdoor"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/bosenmori/interior_heavy/Mai_armory)
 "bHB" = (
 /turf/open/floor/prison/darkred2/northeast,
 /area/bosenmori/interior_regular/security)
@@ -3836,13 +3849,16 @@
 /area/bosenmori/mountain/temple_proper)
 "ccx" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/weldingtool/largetank,
 /obj/item/tool/weldpack/minitank{
 	pixel_x = -9;
 	pixel_y = 10
 	},
 /obj/item/clothing/glasses/thermal,
 /obj/effect/spawner/random/powercell,
+/obj/item/tool/weldingtool/simple{
+	pixel_x = -7;
+	pixel_y = -2
+	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_regular/engineering)
 "cdq" = (
@@ -5230,6 +5246,7 @@
 	layer = 3.1;
 	dir = 4
 	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/platebot,
 /area/bosenmori/outside/cargo)
 "cRv" = (
@@ -5870,9 +5887,8 @@
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_heavy/secured_armory)
 "dkG" = (
-/obj/structure/prop/dam/truck{
-	pixel_x = 0;
-	pixel_y = 4
+/obj/effect/vehicle_spawner/van/decrepit{
+	dir = 8
 	},
 /turf/open/asphalt,
 /area/bosenmori/interior_glass/corporate)
@@ -7662,6 +7678,10 @@
 /obj/item/tool/pickaxe/hammer,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/mountain/mining)
+"ecY" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/bosenmori/mountain/clearing)
 "ecZ" = (
 /obj/structure/platform/mineral/sandstone/runed,
 /obj/structure/platform/mineral/sandstone/runed{
@@ -8864,6 +8884,7 @@
 "eLE" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/roof/cargocrane_tracks/vertical/endcap2,
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/platebot,
 /area/bosenmori/outside/cargo)
 "eLO" = (
@@ -8989,6 +9010,17 @@
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/river/desert/shallow/no_overlay,
 /area/bosenmori/outside/east_barrens)
+"ePw" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "mai_riot_armory";
+	dir = 8;
+	name = "Armory Blastdoor"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/bosenmori/interior_heavy/Mai_armory)
 "ePx" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -9048,8 +9080,8 @@
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_nexus)
 "ePV" = (
-/obj/structure/largecrate/black_market/confiscated_equipment,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/secure,
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_heavy/secured_armory)
 "eQd" = (
@@ -9554,6 +9586,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_hall)
+"faN" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/gm/river/desert/shallow/no_overlay,
+/area/bosenmori/mountain/temple_proper)
 "faQ" = (
 /obj/structure/closet/crate/supply,
 /turf/open/floor/prison/floor_marked,
@@ -10849,6 +10885,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_heavy/Mai_research)
+"fJr" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/abandoned)
 "fJy" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -11086,15 +11126,19 @@
 /turf/open/auto_turf/sand/layer1,
 /area/bosenmori/outside/north_area)
 "fQI" = (
-/obj/item/clothing/shoes/marine/rmc,
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = list(104);
 	req_access = null;
 	name = "gear cabinet"
 	},
-/obj/item/storage/backpack/rmc/medium,
-/obj/item/storage/backpack/general_belt/rmc,
+/obj/item/ammo_box/magazine/m39/le{
+	pixel_x = 0;
+	pixel_y = 5
+	},
+/obj/item/ammo_box/rounds{
+	pixel_x = 0;
+	pixel_y = -4
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "fQO" = (
@@ -11615,14 +11659,6 @@
 	pixel_x = 0;
 	pixel_y = 3
 	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = -4;
-	pixel_y = -1
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = -6;
-	pixel_y = -5
-	},
 /obj/item/clothing/suit/storage/labcoat/researcher,
 /obj/item/clothing/suit/storage/jacket/marine/bomber/grey{
 	pixel_x = 8;
@@ -11940,17 +11976,24 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/bosenmori/mountain/pilgrim)
 "glZ" = (
-/obj/item/clothing/shoes/marine/rmc,
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(104);
-	req_access = null;
-	name = "gear cabinet"
-	},
-/obj/item/storage/backpack/rmc/medium,
-/obj/item/prop/helmetgarb/rabbitsfoot,
-/obj/item/storage/backpack/general_belt/rmc,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/weapon/gun/rifle/rmc_f90/a_grip{
+	pixel_x = 0;
+	pixel_y = 8
+	},
+/obj/item/ammo_magazine/rifle/rmc_f90{
+	pixel_x = -8;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/rifle/rmc_f90{
+	pixel_x = -2;
+	pixel_y = -4
+	},
+/obj/item/explosive/plastic/breaching_charge/rubber{
+	pixel_x = 13;
+	pixel_y = 0
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "gmD" = (
@@ -12471,6 +12514,7 @@
 	dir = 8;
 	layer = 2.991
 	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/platebot,
 /area/bosenmori/outside/cargo)
 "gAj" = (
@@ -18893,6 +18937,10 @@
 	},
 /turf/open/floor/kutjevo/multi_tiles/north,
 /area/bosenmori/interior_glass/nexus)
+"jQO" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/bosenmori/mountain/abandoned)
 "jRq" = (
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/plating/plating_catwalk/shiva,
@@ -20386,6 +20434,7 @@
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/barricade/handrail/wire,
 /obj/structure/roof/cargocrane_tracks/vertical,
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/bosenmori/outside/cargo)
 "kKf" = (
@@ -20892,20 +20941,12 @@
 	color = "#8B7B5B"
 	},
 /obj/item/ammo_magazine/rifle/l42a/abr40{
-	pixel_x = 5;
-	pixel_y = 9
-	},
-/obj/item/ammo_magazine/rifle/l42a/abr40{
 	pixel_x = -2;
 	pixel_y = 9
 	},
 /obj/item/ammo_magazine/rifle/l42a/abr40{
 	pixel_x = -9;
 	pixel_y = 9
-	},
-/obj/item/ammo_magazine/rifle/ar10{
-	pixel_x = 8;
-	pixel_y = 0
 	},
 /obj/item/ammo_magazine/rifle/ar10{
 	pixel_x = 1;
@@ -20915,16 +20956,12 @@
 	pixel_x = -7;
 	pixel_y = 0
 	},
-/obj/item/ammo_magazine/smg/m39{
-	pixel_x = 6;
+/obj/item/ammo_magazine/smg/fp9000{
+	pixel_x = 5;
 	pixel_y = -7
 	},
-/obj/item/ammo_magazine/smg/m39{
-	pixel_x = -1;
-	pixel_y = -7
-	},
-/obj/item/ammo_magazine/smg/m39{
-	pixel_x = -8;
+/obj/item/ammo_magazine/smg/fp9000{
+	pixel_x = -4;
 	pixel_y = -7
 	},
 /turf/open/floor/plating,
@@ -21209,6 +21246,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/shipment)
+"lfB" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/floor/sandstone/runed,
+/area/bosenmori/outside/east_barrens)
 "lfN" = (
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bosenmori/mountain/pilgrim)
@@ -21250,6 +21291,11 @@
 "lhO" = (
 /obj/structure/surface/rack,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/suit/marine/lamp,
+/obj/item/clothing/suit/marine/lamp{
+	pixel_x = 2;
+	pixel_y = -7
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "lic" = (
@@ -21854,7 +21900,7 @@
 /area/bosenmori/mountain/mining)
 "lxP" = (
 /obj/structure/ladder/maintenance{
-	id = "corpo_ladd";
+	id = "corpolead_ladd";
 	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -23397,16 +23443,13 @@
 	pixel_y = -5
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = -6;
-	pixel_y = -5
+/obj/item/clothing/suit/marine/lamp,
+/obj/item/clothing/suit/marine/lamp{
+	pixel_x = 4;
+	pixel_y = 5
 	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = 6;
+/obj/item/clothing/suit/marine/lamp{
+	pixel_x = 3;
 	pixel_y = -7
 	},
 /turf/open/floor/prison/floor_marked,
@@ -23812,13 +23855,17 @@
 	req_one_access = list(104);
 	req_access = null
 	},
-/obj/item/ammo_box/rounds,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 1
 	},
-/obj/item/ammo_box/magazine/m39/le,
+/obj/item/clothing/shoes/marine/rmc,
+/obj/item/storage/backpack/rmc/light,
+/obj/item/attachable/bayonet/rmc,
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine,
+/obj/item/clothing/gloves/marine/brown,
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "mvf" = (
@@ -23984,13 +24031,13 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/clothing/mask/gas/pmc/royal_marine{
-	pixel_x = -3;
-	pixel_y = -11
-	},
 /obj/item/clothing/head/helmet/marine/veteran/royal_marine/breacher{
 	pixel_x = 7;
 	pixel_y = 0
+	},
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine{
+	pixel_x = -2;
+	pixel_y = 8
 	},
 /turf/open/floor/almayer/plating,
 /area/bosenmori/interior_heavy/Mai_armory)
@@ -24842,7 +24889,7 @@
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_regular/research)
 "nap" = (
-/turf/closed/wall/solaris/reinforced/hull,
+/turf/closed/wall/solaris,
 /area/bosenmori/interior_heavy/Mai_armory)
 "nav" = (
 /obj/item/clothing/mask/yautja_flavor{
@@ -24863,6 +24910,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_armory)
+"naC" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/gm/dirt2,
+/area/bosenmori/outside/east_barrens)
 "naO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced{
@@ -25566,13 +25617,9 @@
 /turf/open/floor/plating/platebotc,
 /area/bosenmori/interior_glass/cargo)
 "nxI" = (
-/obj/structure/prop/dam/truck/damaged{
-	pixel_x = 0;
-	pixel_y = 8
-	},
-/obj/structure/largecrate/random,
-/turf/open/asphalt,
-/area/bosenmori/interior_glass/corporate)
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/mountain/temple_ruins)
 "nyH" = (
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/outside/north_barrens)
@@ -25738,14 +25785,18 @@
 /turf/open/floor/warning,
 /area/bosenmori/shuttles/drop1)
 "nBI" = (
+/obj/item/clothing/shoes/marine/rmc,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = list(104);
-	req_access = null
+	req_access = null;
+	name = "gear cabinet"
 	},
-/obj/item/weapon/gun/rifle/rmc_f90,
+/obj/item/storage/backpack/rmc/frame,
+/obj/item/storage/backpack/general_belt/rmc,
 /obj/item/attachable/bayonet/rmc,
-/obj/item/ammo_magazine/rifle/rmc_f90,
-/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/clothing/gloves/marine/brown/fingerless,
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
+/obj/item/toy/plush/random_plushie,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "nCa" = (
@@ -25881,6 +25932,11 @@
 /obj/item/storage/box/pdt_kit{
 	pixel_x = 6;
 	pixel_y = 18
+	},
+/obj/item/clothing/suit/marine/lamp,
+/obj/item/clothing/suit/marine/lamp{
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/mountain/mining)
@@ -26313,6 +26369,17 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_hall)
+"nRa" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/dam/truck/damaged{
+	pixel_x = 0;
+	pixel_y = 8
+	},
+/obj/structure/largecrate/random{
+	layer = 3.01
+	},
+/turf/open/asphalt,
+/area/bosenmori/interior_glass/corporate)
 "nRr" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -26407,16 +26474,18 @@
 	light_color = "#C02526";
 	color = "#C02526"
 	},
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine,
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine{
-	pixel_x = 7;
-	pixel_y = 7
-	},
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine{
-	pixel_x = -7;
-	pixel_y = 7
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/belt/medical/rmc,
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "mai_riot_armory";
+	name = "Riot Armory Access";
+	pixel_x = 7;
+	pixel_y = 9
+	},
+/obj/item/explosive/plastic/breaching_charge/rubber{
+	pixel_x = -8;
+	pixel_y = 8
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "nTZ" = (
@@ -27453,14 +27522,7 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/weapon/shield/riot/metal{
-	pixel_x = -6;
-	pixel_y = 0
-	},
-/obj/item/weapon/shield/riot/metal{
-	pixel_x = 5;
-	pixel_y = 0
-	},
+/obj/item/weapon/shield/riot/metal,
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/secured_armory)
 "ozK" = (
@@ -28246,6 +28308,10 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/bosenmori/mountain/field_post)
+"oTk" = (
+/obj/item/device/defibrillator/compact,
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/interior_heavy/Mai_hall)
 "oTq" = (
 /obj/item/storage/fancy/vials/empty{
 	pixel_x = 0;
@@ -28512,10 +28578,6 @@
 /area/bosenmori/outside/river)
 "pbe" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/weapon/gun/smg/m39{
-	pixel_x = 0;
-	pixel_y = 9
-	},
 /obj/structure/machinery/door/window/southright{
 	req_one_access = list(101)
 	},
@@ -28526,6 +28588,10 @@
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
 	dir = 1
+	},
+/obj/item/weapon/gun/smg/fp9000{
+	pixel_x = 0;
+	pixel_y = 11
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/store)
@@ -28544,7 +28610,7 @@
 	pixel_x = -6;
 	pixel_y = 16;
 	id = "shipping_theft";
-	name = "Kitchen shutters"
+	name = "Anti-Theft Access"
 	},
 /obj/item/prop/magazine/book{
 	pixel_x = 6;
@@ -29157,6 +29223,7 @@
 "pqf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/step_trigger/clone_cleaner,
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/platebot,
 /area/bosenmori/outside/cargo)
 "pqo" = (
@@ -29462,6 +29529,7 @@
 	pixel_x = 2;
 	pixel_y = -3
 	},
+/obj/item/hardpoint/locomotion/van_wheels,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_cargo)
 "pzt" = (
@@ -29680,11 +29748,6 @@
 /obj/item/clothing/suit/storage/webbing{
 	pixel_x = -7;
 	pixel_y = 2
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = -3;
-	pixel_y = -7
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/mountain/mining)
@@ -30243,8 +30306,8 @@
 	req_access = null
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/smg/m39,
-/obj/item/weapon/gun/smg/m39,
+/obj/item/weapon/gun/smg/m39/solidstock,
+/obj/item/weapon/gun/smg/m39/solidstock,
 /turf/open/floor/almayer/plating,
 /area/bosenmori/interior_heavy/Mai_armory)
 "pSk" = (
@@ -30797,6 +30860,10 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/hospital)
+"qgL" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/mountain/temple_ruins)
 "qho" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00"
@@ -31754,13 +31821,10 @@
 	pixel_y = 17;
 	layer = 3
 	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
+/obj/item/clothing/suit/marine/lamp,
+/obj/item/clothing/suit/marine/lamp{
 	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = -2;
-	pixel_y = -5
+	pixel_y = -8
 	},
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_heavy/Mai_shipment)
@@ -32034,14 +32098,17 @@
 /turf/closed/wall/solaris/reinforced,
 /area/bosenmori/interior_heavy/Mai_hall)
 "qJm" = (
+/obj/item/clothing/shoes/marine/rmc,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = list(104);
-	req_access = null
+	req_access = null;
+	name = "gear cabinet"
 	},
-/obj/item/weapon/gun/rifle/rmc_f90/a_grip,
+/obj/item/storage/backpack/rmc/light,
 /obj/item/attachable/bayonet/rmc,
-/obj/item/ammo_magazine/rifle/rmc_f90,
-/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine,
+/obj/item/clothing/gloves/marine/brown,
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "qJC" = (
@@ -33905,13 +33972,17 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/bosenmori/interior_glass/Mai_tree_under)
 "rGS" = (
-/obj/structure/machinery/deployable/barrier,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "mai_riot_armory_ext";
+	name = "Riot Main Exit Access"
+	},
+/obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_armory)
 "rGV" = (
@@ -34967,6 +35038,7 @@
 /area/bosenmori/interior_heavy/Mai_armory)
 "skG" = (
 /obj/effect/step_trigger/clone_cleaner,
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/platebot,
 /area/bosenmori/outside/cargo)
 "skJ" = (
@@ -35888,6 +35960,7 @@
 	pixel_x = 0;
 	pixel_y = 10
 	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/platebot,
 /area/bosenmori/outside/cargo)
 "sJk" = (
@@ -36716,6 +36789,7 @@
 	pixel_x = 0;
 	pixel_y = 10
 	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/platebot,
 /area/bosenmori/outside/cargo)
 "tjR" = (
@@ -39351,6 +39425,7 @@
 	dir = 4;
 	pixel_x = -15
 	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/platebot,
 /area/bosenmori/outside/cargo)
 "uwm" = (
@@ -40508,13 +40583,13 @@
 /turf/open/gm/dirt2,
 /area/bosenmori/mountain/pilgrim)
 "vhM" = (
-/obj/structure/machinery/door/poddoor/almayer/closed{
-	id = "mai_riot_armory";
-	dir = 8;
-	name = "Armory Blastdoor"
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
+	},
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "mai_riot_armory_ext";
+	dir = 8;
+	name = "Armory Blastdoor"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
@@ -41593,6 +41668,10 @@
 /obj/structure/largecrate/black_market/confiscated_weaponry,
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_heavy/secured_armory)
+"vLn" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/gm/dirt2,
+/area/bosenmori/mountain/clearing)
 "vLo" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
 /turf/open/floor/prison/floor_plate,
@@ -41885,18 +41964,8 @@
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/ammo_magazine/rifle/nsg23{
-	pixel_x = -5;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/rifle/nsg23{
-	pixel_x = -8;
-	pixel_y = -3
-	},
 /obj/item/weapon/gun/pistol/es4,
 /obj/item/weapon/gun/pistol/es4,
-/obj/item/ammo_magazine/pistol/es4,
-/obj/item/ammo_magazine/pistol/es4,
 /obj/item/ammo_magazine/pistol/es4,
 /obj/item/ammo_magazine/pistol/es4,
 /obj/item/weapon/stunprod,
@@ -42583,6 +42652,7 @@
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 4
 	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/mountain/temple_ruins)
 "wpz" = (
@@ -42996,19 +43066,11 @@
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_nexus)
 "wCU" = (
-/obj/item/clothing/shoes/marine/rmc,
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(104);
-	req_access = null;
-	name = "gear cabinet"
-	},
-/obj/item/storage/backpack/rmc/frame,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526"
 	},
-/obj/item/storage/belt/gun/m39,
+/obj/structure/closet/bombclosetsecurity,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "wDh" = (
@@ -43446,7 +43508,7 @@
 	light_power = 0.9
 	},
 /obj/structure/ladder/maintenance{
-	id = "corpolead_ladd";
+	id = "corpo_ladd";
 	height = 2
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -43662,6 +43724,7 @@
 	pixel_x = 10;
 	pixel_y = 8
 	},
+/obj/item/device/defibrillator/compact,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/hospital)
 "wVK" = (
@@ -43768,16 +43831,21 @@
 "wZJ" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = list(104);
-	req_access = null
+	req_access = null;
+	name = "gear cabinet"
 	},
-/obj/item/attachable/bayonet/rmc,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 1
 	},
-/obj/item/attachable/stock/smg,
-/obj/item/weapon/gun/smg/m39,
+/obj/item/clothing/shoes/marine/rmc,
+/obj/item/storage/backpack/rmc/heavy,
+/obj/item/attachable/bayonet/rmc,
+/obj/item/clothing/mask/gas/swat,
+/obj/item/clothing/gloves/marine/brown,
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine/pointman,
+/obj/item/toy/plush/barricade,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "xau" = (
@@ -45150,14 +45218,14 @@
 	dir = 1
 	},
 /obj/item/ammo_magazine/rifle/rmc_f90{
-	pixel_x = -6;
-	pixel_y = 7
-	},
-/obj/item/ammo_magazine/rifle/rmc_f90{
 	pixel_x = -13;
 	pixel_y = 2
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "mai_colo_armory";
+	name = "armory lock"
+	},
 /turf/open/floor/almayer/plating,
 /area/bosenmori/interior_heavy/Mai_armory)
 "xLq" = (
@@ -45968,6 +46036,7 @@
 "yfh" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/barricade/handrail/wire,
+/obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/plating/platebot,
 /area/bosenmori/outside/cargo)
 "yfr" = (
@@ -48526,10 +48595,10 @@ oCg
 oCg
 oCg
 emr
-uWi
-uWi
-uWi
-dqY
+fJr
+fJr
+fJr
+jQO
 dqY
 dqY
 emr
@@ -48757,7 +48826,7 @@ oIH
 uWi
 uWi
 uWi
-uWi
+fJr
 emr
 emr
 emr
@@ -57855,8 +57924,8 @@ nqs
 dkG
 nqs
 nqs
-nxI
-iKA
+nqs
+nRa
 qPg
 qPg
 qPg
@@ -75750,9 +75819,9 @@ wpq
 wpq
 wpq
 wpq
-jLp
-nzx
-jLp
+nxI
+qgL
+nxI
 wpq
 wpq
 wpq
@@ -79661,7 +79730,7 @@ xAv
 oyu
 oyu
 xAv
-bFa
+api
 caV
 ufn
 dqy
@@ -79888,7 +79957,7 @@ twW
 dvO
 kzp
 kzp
-xAv
+faN
 caV
 caV
 caV
@@ -82575,7 +82644,7 @@ rNm
 rNm
 rNm
 rNm
-rNm
+vLn
 rNm
 rNm
 rNm
@@ -82803,7 +82872,7 @@ njV
 rNm
 rNm
 rNm
-rNm
+vLn
 rNm
 rNm
 cjz
@@ -83031,7 +83100,7 @@ cjz
 cjz
 rNm
 rNm
-rNm
+vLn
 cjz
 cjz
 cjz
@@ -83258,7 +83327,7 @@ cjz
 vKI
 cjz
 cjz
-cjz
+ecY
 cjz
 cjz
 hFD
@@ -83537,7 +83606,7 @@ nfE
 lDx
 lDx
 ewT
-pwo
+lfB
 dbu
 dbu
 dbu
@@ -83765,7 +83834,7 @@ nfE
 nfE
 nfE
 kXl
-pwo
+lfB
 dbu
 dbu
 dbu
@@ -83993,7 +84062,7 @@ dvO
 dvO
 lDx
 bAp
-dbu
+naC
 dbu
 dbu
 dbu
@@ -84221,7 +84290,7 @@ dvO
 dvO
 dvO
 uAd
-pwo
+lfB
 kCv
 pwo
 dbu
@@ -135148,11 +135217,11 @@ jbF
 fhs
 gVJ
 frv
-frv
-frv
-frv
-frv
-frv
+nap
+nap
+nap
+nap
+nap
 frv
 bXB
 jIr
@@ -136287,13 +136356,13 @@ jbF
 vkL
 gdQ
 gVJ
-nap
-nap
+frv
+frv
 amz
 xXN
 amz
-nap
-nap
+frv
+frv
 qHu
 vsv
 dGT
@@ -136515,13 +136584,13 @@ jbF
 vkL
 fhs
 gVJ
-nap
+frv
 wZJ
 qOy
 eRU
 afW
 wCU
-nap
+frv
 lpH
 pgl
 dGT
@@ -136743,13 +136812,13 @@ jbF
 fmY
 fhs
 gVJ
-nap
+frv
 nBI
 hAm
 emW
 afW
 fQI
-nap
+frv
 qHu
 jIr
 uGH
@@ -136971,13 +137040,13 @@ jbF
 vkL
 lOk
 gVJ
-nap
+frv
 qJm
 hAm
 emW
 afW
 glZ
-nap
+frv
 qHu
 tfe
 sup
@@ -137199,13 +137268,13 @@ jbF
 vkL
 gdQ
 gVJ
-nap
+frv
 muX
 qOy
 opq
 jOZ
 nTH
-nap
+frv
 fVr
 qHu
 qHu
@@ -137427,13 +137496,13 @@ jbF
 nzP
 sZC
 gVJ
-nap
-nap
-amz
-xXN
-amz
-nap
-nap
+frv
+frv
+vep
+ePw
+vep
+frv
+frv
 dGT
 dGT
 dGT
@@ -137655,7 +137724,7 @@ euU
 fhs
 fhs
 fhs
-frv
+nap
 sLx
 xdj
 nax
@@ -137883,7 +137952,7 @@ hGJ
 bmO
 fhs
 fhs
-frv
+nap
 gcm
 pmG
 emW
@@ -138111,7 +138180,7 @@ gVJ
 qQu
 gdQ
 fmY
-frv
+nap
 gcm
 pmG
 kfk
@@ -138339,7 +138408,7 @@ gVJ
 gVJ
 gdQ
 bIe
-frv
+nap
 rGS
 pmG
 eRU
@@ -138569,9 +138638,9 @@ gdQ
 gdQ
 frv
 frv
-vep
+bHy
 vhM
-vep
+bHy
 frv
 frv
 fMJ
@@ -145389,7 +145458,7 @@ jly
 jly
 qJb
 cow
-iFk
+oTk
 qJb
 jly
 qJb
