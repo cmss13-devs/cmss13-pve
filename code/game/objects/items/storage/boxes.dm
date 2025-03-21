@@ -891,7 +891,7 @@
 	grenade_type = /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	can_hold = list(/obj/item/explosive/grenade/high_explosive/airburst/buckshot)
 
-/obj/item/storage/box/nade_box/m79_40mm/canister
+/obj/item/storage/box/nade_box/m79_40mm/baton
 	name = "\improper 40mm rubber-baton grenade box"
 	desc = "A secure box holding 25 40mm rubber-baton grenades."
 	icon_state = "uscm_ltl_nade_case"
