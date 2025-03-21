@@ -396,10 +396,10 @@
 /area/kleschers/outside/telecomms_yard)
 "aip" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/power/east,
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
+/obj/structure/machinery/power/apc/upgraded/power/east,
 /turf/open/floor/vault2/west,
 /area/kleschers/int_heavy/sec_armory)
 "aiG" = (
@@ -908,7 +908,6 @@
 /obj/item/weapon/gun/pistol/vp70/unloaded,
 /obj/item/weapon/gun/pistol/vp70/unloaded,
 /obj/item/ammo_box/magazine/vp70,
-/obj/item/attachable/stock/vp70,
 /turf/open/floor/vault2/west,
 /area/kleschers/int_heavy/eta)
 "auY" = (
@@ -6101,6 +6100,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/powercell,
+/obj/item/clothing/suit/marine/lamp{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/clothing/suit/marine/lamp{
+	pixel_x = -12;
+	pixel_y = -1
+	},
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/filtration)
 "dnq" = (
@@ -9910,6 +9917,11 @@
 /area/kleschers/int_reg/filtration)
 "fqg" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	name = "Workshop Garage Breakroom";
+	dir = 2;
+	req_one_access = list(100,106)
+	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_reg/garage)
 "fqt" = (
@@ -9945,6 +9957,7 @@
 	pixel_y = 26;
 	pixel_x = 8
 	},
+/obj/item/clothing/suit/marine/lamp,
 /turf/open/shuttle/escapepod,
 /area/kleschers/int_reg/shuttle)
 "fqM" = (
@@ -10310,7 +10323,19 @@
 	},
 /obj/structure/closet/crate/secure/gear,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/boltaction/vulture/holo_target/skillless,
+/obj/item/device/m56d_gun,
+/obj/item/ammo_magazine/m56d{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/obj/item/device/m56d_post{
+	pixel_x = 5;
+	pixel_y = -3
+	},
+/obj/item/ammo_magazine/m56d{
+	pixel_x = -4;
+	pixel_y = -2
+	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_heavy/eta)
 "fBu" = (
@@ -12295,8 +12320,7 @@
 /obj/structure/closet/crate/secure,
 /obj/item/weapon/gun/rifle/ar10,
 /obj/item/ammo_magazine/rifle/ar10,
-/obj/item/ammo_magazine/rifle/ar10,
-/obj/item/ammo_magazine/rifle/ar10,
+/obj/item/clothing/suit/marine/lamp,
 /turf/open/shuttle/escapepod,
 /area/kleschers/int_reg/shuttle)
 "gGk" = (
@@ -15765,21 +15789,16 @@
 /turf/closed/wall/strata_outpost,
 /area/kleschers/int_reg/dorms)
 "ius" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(203);
-	req_access = null
+/obj/structure/machinery/light{
+	light_power = 0.7;
+	dir = 1
 	},
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717,
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717,
-/obj/item/ammo_magazine/shotgun/buckshot{
-	pixel_x = -4;
-	pixel_y = 8
+/obj/structure/prop/almayer/whiteboard/clear{
+	density = 0;
+	pixel_x = 6;
+	pixel_y = 13
 	},
-/obj/item/ammo_magazine/shotgun{
-	pixel_x = 4;
-	pixel_y = -4
-	},
-/turf/open/floor/vault2/west,
+/turf/open/floor/shiva/floor3,
 /area/kleschers/int_heavy/eta)
 "iuu" = (
 /turf/open/floor/shiva/multi_tiles/southeast,
@@ -16883,17 +16902,10 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/device/m56d_post{
+/obj/item/weapon/gun/rifle/sniper/M42A/silenced,
+/obj/item/ammo_magazine/sniper{
 	pixel_x = 5;
-	pixel_y = -3
-	},
-/obj/item/device/m56d_gun{
-	pixel_x = 0;
-	pixel_y = -2
-	},
-/obj/item/ammo_magazine/m56d{
-	pixel_x = -4;
-	pixel_y = -2
+	pixel_y = -6
 	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_heavy/eta)
@@ -19757,6 +19769,10 @@
 	layer = 2.79
 	},
 /obj/item/weapon/gun/rifle/sniper/elite,
+/obj/item/ammo_magazine/sniper/elite{
+	pixel_x = 6;
+	pixel_y = -7
+	},
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
 "koB" = (
@@ -21528,18 +21544,6 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = 6;
-	pixel_y = 3
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = 6;
-	pixel_y = -2
-	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp{
-	pixel_x = 6;
-	pixel_y = -8
-	},
 /obj/item/storage/pouch/sling{
 	pixel_x = -5;
 	pixel_y = 5
@@ -21555,6 +21559,14 @@
 /obj/item/device/flashlight/tnr{
 	pixel_x = -4;
 	pixel_y = -2
+	},
+/obj/item/clothing/suit/marine/lamp{
+	pixel_x = 6;
+	pixel_y = 2
+	},
+/obj/item/clothing/suit/marine/lamp{
+	pixel_x = 3;
+	pixel_y = -7
 	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
@@ -23974,14 +23986,21 @@
 	req_one_access = list(203);
 	req_access = null
 	},
-/obj/item/weapon/gun/rifle/m41a/corporate/no_lock,
-/obj/item/ammo_magazine/rifle/le,
-/obj/item/ammo_magazine/rifle/le,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 8
 	},
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717,
+/obj/item/ammo_magazine/shotgun/buckshot{
+	pixel_x = -4;
+	pixel_y = 8
+	},
+/obj/item/ammo_magazine/shotgun{
+	pixel_x = 4;
+	pixel_y = -4
+	},
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717,
 /turf/open/floor/vault2/west,
 /area/kleschers/int_heavy/eta)
 "mqh" = (
@@ -28335,8 +28354,6 @@
 /obj/item/weapon/gun/rifle/nsg23/stripped,
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23,
-/obj/item/ammo_magazine/rifle/nsg23,
-/obj/item/ammo_magazine/rifle/nsg23,
 /turf/open/floor/vault2/west,
 /area/kleschers/int_heavy/eta)
 "oHL" = (
@@ -28595,6 +28612,11 @@
 /obj/structure/surface/rack,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
+	},
+/obj/item/clothing/suit/marine/lamp,
+/obj/item/clothing/suit/marine/lamp{
+	pixel_x = 4;
+	pixel_y = -9
 	},
 /turf/open/floor/shiva,
 /area/kleschers/int_glass/fitness)
@@ -30792,6 +30814,7 @@
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
 	},
+/obj/item/clothing/suit/marine/lamp,
 /turf/open/floor/corsat,
 /area/kleschers/int_heavy/lambda_north_wing)
 "pYg" = (
@@ -32487,7 +32510,6 @@
 	pixel_y = -2;
 	can_be_stacked = 1
 	},
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/dorms)
 "qMC" = (
@@ -33351,7 +33373,6 @@
 	can_be_stacked = 1
 	},
 /obj/item/clothing/suit/storage/jacket/marine/vest,
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
 /obj/item/storage/backpack,
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_reg/dorms)
@@ -40404,6 +40425,14 @@
 	},
 /turf/open/floor/shiva/yellowcorners,
 /area/kleschers/int_heavy/eta)
+"uSo" = (
+/obj/structure/prop/almayer/whiteboard/clear{
+	density = 0;
+	pixel_x = -4;
+	pixel_y = 23
+	},
+/turf/open/floor/shiva/floor3,
+/area/kleschers/int_heavy/eta)
 "uSr" = (
 /obj/structure/machinery/door_control{
 	pixel_x = 23;
@@ -41821,11 +41850,10 @@
 /obj/structure/closet/crate/secure,
 /obj/item/weapon/gun/rifle/ar10,
 /obj/item/ammo_magazine/rifle/ar10,
-/obj/item/ammo_magazine/rifle/ar10,
-/obj/item/ammo_magazine/rifle/ar10,
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
+/obj/item/clothing/suit/marine/lamp,
 /turf/open/shuttle/escapepod,
 /area/kleschers/int_reg/shuttle)
 "vNu" = (
@@ -44456,13 +44484,10 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/weapon/gun/pistol/vp78{
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/weapon/gun/pistol/vp78{
-	pixel_x = -3;
-	pixel_y = -7
+/obj/item/weapon/gun/boltaction/vulture/holo_target/skillless,
+/obj/item/ammo_magazine/rifle/boltaction/vulture/holo_target{
+	pixel_x = 5;
+	pixel_y = -6
 	},
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
@@ -44890,6 +44915,11 @@
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 4
+	},
+/obj/item/weapon/gun/rifle/sharp,
+/obj/item/ammo_magazine/rifle/sharp/track{
+	pixel_x = 6;
+	pixel_y = -8
 	},
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
@@ -50560,7 +50590,7 @@ qDb
 qDb
 qDb
 qDb
-qDb
+jrn
 odk
 odk
 odk
@@ -50765,19 +50795,19 @@ nbl
 rWj
 rWj
 qDb
+qDb
 iwF
 iwF
 iwF
+qDb
 iwF
 iwF
 iwF
+qDb
 iwF
 iwF
 iwF
-iwF
-iwF
-iwF
-iwF
+qDb
 qDb
 odk
 odk
@@ -51637,7 +51667,7 @@ nbl
 rWj
 rWj
 qDb
-iwF
+qDb
 iwF
 iwF
 iwF
@@ -52509,7 +52539,7 @@ nbl
 rWj
 rWj
 qDb
-iwF
+qDb
 iwF
 iwF
 iwF
@@ -70457,7 +70487,7 @@ vBp
 nTT
 oaj
 vBp
-aBH
+ius
 xqu
 oBz
 lfc
@@ -71547,7 +71577,7 @@ iuu
 oir
 oaj
 vBp
-alP
+uSo
 qoQ
 njh
 noC
@@ -71757,7 +71787,7 @@ mWB
 auM
 mpQ
 oHK
-ius
+mCU
 oiN
 vBp
 vBp
