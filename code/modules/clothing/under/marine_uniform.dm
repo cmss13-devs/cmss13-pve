@@ -237,8 +237,8 @@
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/officer/cargo
-	name = "logistics uniform"
-	desc = "A pair of hard-wearing BDU pants & a short-sleeve breathable shirt. Perfect for those who work to keep frontline troops well supplied."
+	name = "support uniform"
+	desc = "A pair of hard-wearing BDU pants & a short-sleeve breathable shirt. Perfect for those who work to support the frontline troops in various ways."
 	icon_state = "cargotech"
 	worn_state = "cargotech"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
