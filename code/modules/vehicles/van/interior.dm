@@ -41,6 +41,7 @@
 	icon_state = "back_1"
 	dir = WEST
 
+
 // Box-Van interior
 
 /obj/structure/interior_wall/box_van

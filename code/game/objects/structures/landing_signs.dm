@@ -72,6 +72,16 @@
 	icon = 'icons/obj/structures/props/landing_signs.dmi'
 	icon_state = "ravdonika_sign"
 
+/obj/structure/lz_sign/otogi
+	name = "Otogi Egress Point - Landing Zone one sign"
+	desc = "A large sign that reads Otogi Egress Point, the Weyland Yutani symbol placed upon it seems recently stamped on amongst all the colony information that it offers."
+	icon_state = "otogi_sign_1"
+
+/obj/structure/lz_sign/otogi/blacksite
+	name = "Otogi Egress Point - Keppitz Hangar - Landing Zone two sign"
+	desc = "A large sign that reads Keppitz Hangar, it has clear markings of Weyland Yutani along with warnings about trespassing and lethal force."
+	icon_state = "otogi_sign_2"
+
 /obj/structure/lz_sign/hybrisa_sign
 	name = "Hybrisa Prospera welcome sign"
 	desc = "A large sign that reads 'Welcome to Hybrisa Prospera', The Weyland Yutani 'Wings' and logo adorn the sign, as well as some information about the colony."
