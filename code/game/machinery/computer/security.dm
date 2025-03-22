@@ -204,7 +204,7 @@
 			if(5)
 				dat += generate_fingerprint_menu()
 
-	show_browser(user, dat, "Security Records", "secure_rec", "size=600x400")
+	show_browser(user, dat, "Security Records", "secure_rec", width = 600, height = 400)
 	return
 
 /*Revised /N
