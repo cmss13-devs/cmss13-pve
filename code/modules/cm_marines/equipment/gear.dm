@@ -203,7 +203,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack
 	name = "\improper generic MRE pack"
-	trash = /obj/item/trash/USCMtray
+	trash = /obj/item/trash/tray/USCMtray
+	item_state = "tray_food"
 	w_class = SIZE_SMALL
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1
@@ -319,7 +320,8 @@
 /obj/item/reagent_container/food/snacks/mre_pack/upp
 	name = "\improper generic MRE pack"
 	icon = 'icons/obj/items/food.dmi'
-	trash = /obj/item/trash/UPPtray
+	item_state = "upp_tray_food"
+	trash = /obj/item/trash/tray/UPPtray
 	w_class = SIZE_SMALL
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal1
