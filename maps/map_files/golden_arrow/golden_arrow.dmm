@@ -962,16 +962,15 @@
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/motor_pool)
 "adx" = (
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
 	dir = 4
+	},
+/obj/structure/vehicle_platform{
+	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
@@ -4979,11 +4978,11 @@
 /turf/open/floor/almayer/black/east,
 /area/golden_arrow/vehicle_shuttle/two/upper)
 "arp" = (
-/obj/structure/platform_decoration{
-	dir = 1
-	},
 /obj/structure/closet/medical_wall{
 	pixel_y = 32
+	},
+/obj/structure/vehicle_platform_decoration{
+	dir = 1
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/motor_pool)
@@ -5363,12 +5362,11 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
 "asC" = (
-/obj/structure/platform{
-	dir = 4;
-	layer = 2.7
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/vehicle_platform{
+	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
@@ -7113,12 +7111,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "ayM" = (
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/vehicle_platform{
+	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
@@ -7393,13 +7390,13 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "azA" = (
-/obj/structure/platform_decoration,
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
 /obj/structure/closet/hydrant{
 	pixel_y = 32
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/vehicle_platform_decoration,
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/motor_pool)
 "azB" = (
@@ -7746,9 +7743,8 @@
 /turf/open/floor/almayer/black,
 /area/golden_arrow/vehicle_shuttle/upper)
 "aAA" = (
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
+/obj/structure/vehicle_platform{
+	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
@@ -8920,10 +8916,10 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "aEq" = (
-/obj/structure/platform,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
+/obj/structure/vehicle_platform,
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/motor_pool)
 "aEr" = (
@@ -9426,16 +9422,14 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonprep)
 "aGa" = (
-/obj/structure/platform{
-	dir = 4;
-	layer = 2.7
-	},
-/obj/structure/platform{
-	dir = 8;
-	layer = 2.7
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/vehicle_platform{
+	dir = 4
+	},
+/obj/structure/vehicle_platform{
+	dir = 8
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
@@ -9874,6 +9868,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "aHz" = (
+/obj/structure/vehicle_platform_decoration,
+/obj/structure/vehicle_platform_decoration{
+	dir = 1
+	},
 /obj/structure/platform_decoration,
 /obj/structure/platform_decoration{
 	dir = 1
@@ -11836,14 +11834,14 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aOH" = (
-/obj/structure/platform_decoration{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
 /obj/structure/closet/medical_wall{
 	pixel_y = 32
+	},
+/obj/structure/vehicle_platform_decoration{
+	dir = 1
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/motor_pool)
@@ -13500,13 +13498,13 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/lower_cargo)
 "aUP" = (
-/obj/structure/platform,
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
+/obj/structure/vehicle_platform,
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/motor_pool)
 "aUR" = (
@@ -13519,9 +13517,8 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aUT" = (
-/obj/structure/platform{
-	dir = 4;
-	layer = 2.7
+/obj/structure/vehicle_platform{
+	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
