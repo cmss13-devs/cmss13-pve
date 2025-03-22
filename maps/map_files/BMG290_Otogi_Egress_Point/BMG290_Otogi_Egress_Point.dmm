@@ -1015,6 +1015,10 @@
 /obj/structure/machinery/squeezer,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/bar)
+"azq" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/space/basic,
+/area/bmg290/wilderness/colony_exterior)
 "azr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -12139,7 +12143,7 @@
 	},
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/floodgate,
-/turf/open/gm/river/beach_water,
+/turf/open/space/basic,
 /area/bmg290/caverns/filtration)
 "fFN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -12799,7 +12803,7 @@
 	},
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/floodgate,
-/turf/open/gm/river/beach_water,
+/turf/open/space/basic,
 /area/bmg290/caverns/filtration)
 "fVw" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -29524,7 +29528,7 @@
 "nUJ" = (
 /obj/structure/floodgate,
 /obj/structure/blocker/invisible_wall,
-/turf/open/asphalt/cement,
+/turf/open/space/basic,
 /area/bmg290/wilderness/colony_exterior)
 "nUV" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -48881,6 +48885,9 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/bmg290/colony/hangar)
+"xiq" = (
+/turf/open/space/basic,
+/area/bmg290/caverns/filtration)
 "xiZ" = (
 /obj/structure/pipes/standard/manifold/hidden/cyan{
 	dir = 8
@@ -124402,7 +124409,7 @@ lxM
 lxM
 sWI
 sWI
-jRZ
+xiq
 udL
 udL
 udL
@@ -124414,7 +124421,7 @@ cHx
 lOl
 xOL
 nee
-nee
+azq
 nUJ
 cHJ
 kvQ
