@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - bugfix: "UPP machinegunner armor and PMC weapons specialist armor are now named correctly."
