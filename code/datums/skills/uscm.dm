@@ -33,10 +33,9 @@ United States Colonial Marines
 /datum/skills/combat_engineer
 	name = "Combat Engineer"
 	skills = list(
-		SKILL_FIREMAN = SKILL_FIREMAN_TRAINED,
+		SKILL_POWERLOADER = SKILL_POWERLOADER_MASTER,
 		SKILL_ENGINEER = SKILL_ENGINEER_ENGI,
 		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_ENGI,
-		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
 		SKILL_JTAC = SKILL_JTAC_BEGINNER,
 	)
 
@@ -239,11 +238,16 @@ MILITARY NONCOMBATANT
 /datum/skills/CT
 	name = "Cargo Technician"
 	skills = list(
-		SKILL_FIREMAN = SKILL_FIREMAN_TRAINED,
-		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_TRAINED,
 		SKILL_POWERLOADER = SKILL_POWERLOADER_MASTER,
 	)
 
+/datum/skills/armorer
+	name = "Armorer"
+	skills = list(
+		SKILL_FIREARMS = SKILL_FIREARMS_EXPERT,
+		SKILL_ENGINEER = SKILL_ENGINEER_ENGI,
+		SKILL_POWERLOADER = SKILL_POWERLOADER_MASTER,
+	)
 /*
 ---------------------
 COMMAND STAFF
@@ -330,8 +334,8 @@ COMMAND STAFF
 		SKILL_NAVIGATIONS = SKILL_NAVIGATIONS_TRAINED,
 	)
 
-/datum/skills/SEA
-	name = "Senior Enlisted Advisor"
+/datum/skills/DI
+	name = "Drill Instructor"
 	skills = list(
 		SKILL_CQC = SKILL_CQC_SKILLED,
 		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED,
@@ -352,11 +356,11 @@ COMMAND STAFF
 		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
 	)
 
-/datum/skills/SEA/New(mob/skillset_owner)
+/datum/skills/DI/New(mob/skillset_owner)
 	..()
 	give_action(skillset_owner, /datum/action/looc_toggle)
 
-/datum/skills/SEA/Destroy()
+/datum/skills/DI/Destroy()
 	remove_action(owner, /datum/action/looc_toggle)
 	return ..()
 
@@ -434,7 +438,6 @@ COMMAND STAFF
 		SKILL_OVERWATCH = SKILL_OVERWATCH_TRAINED,
 		SKILL_POWERLOADER = SKILL_POWERLOADER_MASTER,
 		SKILL_POLICE = SKILL_POLICE_FLASH,
-		SKILL_FIREMAN = SKILL_FIREMAN_TRAINED,
 		SKILL_JTAC = SKILL_JTAC_EXPERT,
 		SKILL_INTEL = SKILL_INTEL_TRAINED,
 	)

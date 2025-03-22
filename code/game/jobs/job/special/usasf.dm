@@ -10,18 +10,10 @@
 /datum/job/seaman/skittle
 	title = JOB_NAVY_SKITTLE
 	gear_preset = /datum/equipment_preset/usasf/crew/flight
-	gear_preset_secondary = /datum/equipment_preset/usasf/crew/flight/green
 
 /datum/job/seaman/skittle/on_config_load()
 	entry_message_body = "You are a part of the flight-deck operations crew aboard a USASF vessel, working to prepare and keep aerospace craft in fighting condition. Hoo-yah!"
 	return ..()
-
-/datum/job/seaman/skittle/purpwhite
-	gear_preset = /datum/equipment_preset/usasf/crew/flight/purple
-	gear_preset_secondary = /datum/equipment_preset/usasf/crew/flight/white
-
-/datum/job/seaman/skittle/blue
-	gear_preset = /datum/equipment_preset/usasf/crew/flight/blue
 
 /datum/job/seaman/medic
 	title = JOB_NAVY_MEDIC
@@ -46,6 +38,13 @@
 /datum/job/seaman/helljumper/on_config_load()
 	entry_message_body = "You're part of the elite 7th Para-Rescue Battalion, equipped with high-end kit and the skills to drop feet first into hell from the back of dropships and help allied units in great need of assistance. Hoo-yah!"
 	return ..()
+
+//USASF Officers
+
+/datum/job/seaman/pilot
+	title = JOB_NAVY_PILOT
+	gear_preset = /datum/equipment_preset/usasf/pilot
+	gear_preset_secondary = /datum/equipment_preset/usasf/pilot/lesser_rank
 
 /datum/job/seaman/jtac
 	title = JOB_NAVY_JTAC
@@ -72,7 +71,7 @@
 
 /datum/job/seaman/synth
 	title = JOB_NAVY_SYNTH
-	gear_preset = /datum/equipment_preset/synth/uscm/usasf
+	gear_preset = /datum/equipment_preset/synth/usasf
 
 /datum/job/seaman/CO
 	title = JOB_NAVY_CO
