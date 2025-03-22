@@ -218,6 +218,15 @@
 	icon = 'icons/obj/items/weapons/projectiles.dmi'
 	icon_state = "laser_target3"
 
+/obj/effect/overlay/temp/plasma_impact
+	name = "plasma impact"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "impact_laser_purple"
+	light_range = 2
+	effect_duration = 8
+	anchored = TRUE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
 /obj/effect/overlay/temp/emp_sparks
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "empdisable"
