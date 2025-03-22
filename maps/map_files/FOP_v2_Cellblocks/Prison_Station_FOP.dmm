@@ -5255,7 +5255,7 @@
 /turf/open/floor/prison,
 /area/prison/hanger/main)
 "biZ" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/prison/residential/central)
 "bjm" = (
 /obj/structure/window/reinforced{
