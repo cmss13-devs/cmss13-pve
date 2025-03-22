@@ -1206,6 +1206,7 @@
 	name = "floor"
 	icon_state = "floor"
 	icon = 'icons/turf/shuttle.dmi'
+	unacidable = TRUE
 
 /turf/open/shuttle/can_surgery
 	allow_construction = TRUE
