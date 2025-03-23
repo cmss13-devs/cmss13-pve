@@ -70,13 +70,15 @@
 
 /datum/equipment_preset/usasf/crew/armsman
 	name = "USASF Master-At-Arms"
+	role_comm_title = "MAA"
 	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/usasf/crew/armsman/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/engi(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/mpsec(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tank(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
 	..()
 
@@ -158,7 +160,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/usasf/helljumper
-	name = "USASF Para-Rescue Support Technician"
+	name = "USASF Para-Rescue Support Technician (Medical)"
 	assignment = JOB_NAVY_PARA_TECH
 	rank = JOB_NAVY_PARA_TECH
 	paygrades = list(PAY_SHORT_NE8 = JOB_PLAYTIME_TIER_0)
@@ -171,14 +173,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command/attache(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight/para(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/tech/tanker/para(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat/navy(new_human), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf/helljumper(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/medgreen(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/drop_green/equipped(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full/dutch(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/not_op(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full/army(new_human), WEAR_R_STORE)
@@ -190,7 +191,7 @@
 
 
 /datum/equipment_preset/usasf/helljumper/technical
-	name = parent_type::name + " (Engineering)"
+	name = "USASF Para-Rescue Support Technician (Engineering)"
 
 /datum/equipment_preset/usasf/helljumper/technical/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine(new_human), WEAR_ACCESSORY)

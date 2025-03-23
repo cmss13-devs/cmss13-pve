@@ -1896,6 +1896,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/tech/tanker/para
 	name = "\improper MK25 para-rescue helmet"
 	desc = "A heavily modified USCM tanker helmet used by members of the USASF para-rescue units for it's compact design and adequate protection. Camera on the side and biometric transmitter ties into the sensor matrix."
+	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/rto/navy
@@ -1908,8 +1910,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/rto/army
 	name = "\improper M12 pattern helmet"
 	desc = "Despite it failing to be procured by the USCMC, the Army happily introduced the new M12 series of helmets to vast swathes of it's forces in a short span of time. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
-	start_down_visor_type = /obj/item/device/helmet_visor/medical
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/army
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_inventory = BLOCKSHARPOBJ
