@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - balance: "adjusted M2C values to no longer represent PVP balancing."
