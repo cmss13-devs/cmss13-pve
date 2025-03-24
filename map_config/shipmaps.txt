@@ -33,5 +33,5 @@ endmap
 map golden_arrow_classic
 endmap
 
-map uscss_secret_agent
+map uscss_obsidian_falk
 endmap
