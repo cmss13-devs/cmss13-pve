@@ -70,6 +70,13 @@
 	icon_state = "m39_HV_extended"
 	bonus_overlay = "m39_ex"
 
+/obj/item/ammo_magazine/smg/m39/pve
+	name = "\improper Viper 9 duplex magazine (9mm)"
+	desc = "A 9mm caseless submachinegun magazine containing special duplex rounds, designed to increase your overall firepower per pull. Reduced bullet velocity due to two slugs per bullet."
+	max_rounds = 54
+	default_ammo = /datum/ammo/bullet/smg/pve
+	ammo_band_color = AMMO_BAND_COLOR_LIGHT_EXPLOSIVE
+
 //-------------------------------------------------------
 //M5, a classic SMG used in a lot of action movies.
 

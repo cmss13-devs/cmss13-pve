@@ -389,7 +389,7 @@
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 	)
-/obj/item/weapon/gun/rifle/m41a/elite/set_gun_config_values()
+/obj/item/weapon/gun/rifle/m41aMK1/elite/set_gun_config_values()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_2)
 	set_burst_delay(FIRE_DELAY_TIER_12)
@@ -399,9 +399,39 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 
-
 /obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded
 	current_mag = null
+
+/obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded/platoon
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/lasersight,
+	)
+	random_rail_chance = 50
+	random_spawn_rail = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+	)
+	random_under_chance = 100
+	random_spawn_under = list(
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/angledgrip,
+	)
+	random_muzzle_chance = 50
+	random_spawn_muzzle = list(
+		/obj/item/attachable/suppressor,
+	)
 
 //M20A Harrington rifle
 //=================================================
