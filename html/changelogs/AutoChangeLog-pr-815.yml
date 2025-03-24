@@ -1,0 +1,4 @@
+author: "AlanParkerMasters"
+delete-after: True
+changes:
+  - bugfix: "IDs of spawned humans now have functioning account numbers"

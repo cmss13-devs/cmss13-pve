@@ -76,7 +76,7 @@
 	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/smg/m39/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 14, "rail_y" = 22, "under_x" = 21, "under_y" = 16, "stock_x" = 24, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 14, "rail_y" = 22, "under_x" = 21, "under_y" = 16, "stock_x" = 24, "stock_y" = 15, , "side_rail_x" = 25, "side_rail_y" = 19)
 
 /obj/item/weapon/gun/smg/m39/set_gun_config_values()
 	..()
@@ -121,13 +121,15 @@
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 	)
 	random_spawn_under = list(
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight/grip,
+	)
+	random_spawn_siderail = list(
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight,
 	)
 	random_spawn_muzzle = list(
 		/obj/item/attachable/suppressor,
@@ -181,14 +183,14 @@
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/lasersight, // Under
-		/obj/item/attachable/gyro,
+		/obj/item/attachable/gyro, // Under
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/attached_gun/grenade/m203,
+		/obj/item/attachable/lasersight, // Side Rail
+		/obj/item/attachable/flashlight,
 		)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
@@ -196,7 +198,7 @@
 
 
 /obj/item/weapon/gun/smg/mp5/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 19, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 19, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17, "side_rail_x" = 27, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/smg/mp5/set_gun_config_values()
 	..()
@@ -240,13 +242,13 @@
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/lasersight, // Under
-		/obj/item/attachable/gyro,
+		/obj/item/attachable/gyro, // Under
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/lasersight, // Side Rail
+		/obj/item/attachable/flashlight,
 		)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
@@ -254,7 +256,7 @@
 
 
 /obj/item/weapon/gun/smg/mp27/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 23, "under_y" = 16, "stock_x" = 28, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 23, "under_y" = 16, "stock_x" = 28, "stock_y" = 17, "side_rail_x" = 26, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/smg/mp27/set_gun_config_values()
 	..()
@@ -288,7 +290,7 @@
 	var/jammed = FALSE
 
 /obj/item/weapon/gun/smg/ppsh/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 19, "under_x" = 26, "under_y" = 15, "stock_x" = 18, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 19, "under_x" = 26, "under_y" = 15, "stock_x" = 18, "stock_y" = 15, "side_rail_x" = 18, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/smg/ppsh/set_gun_config_values()
 	..()
@@ -393,7 +395,7 @@
 	)
 
 /obj/item/weapon/gun/smg/pps43/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 20, "rail_y" = 24, "under_x" = 25, "under_y" = 17, "stock_x" = 26, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 20, "rail_y" = 24, "under_x" = 25, "under_y" = 17, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 19)
 
 /obj/item/weapon/gun/smg/pps43/set_gun_config_values()
 	..()
@@ -428,7 +430,7 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
 
 /obj/item/weapon/gun/smg/bizon/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 18, "rail_y" = 23, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 18, "rail_y" = 23, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 27, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/smg/bizon/set_gun_config_values()
 	..()
@@ -480,7 +482,7 @@
 	aim_slowdown = SLOWDOWN_ADS_NONE
 
 /obj/item/weapon/gun/smg/mac15/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 13, "rail_y" = 24, "under_x" = 19, "under_y" = 18, "stock_x" = 22, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 13, "rail_y" = 24, "under_x" = 19, "under_y" = 18, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 22, "side_rail_y" = 20)
 
 /obj/item/weapon/gun/smg/mac15/set_gun_config_values()
 	..()
@@ -529,7 +531,7 @@
 	var/jammed = FALSE
 
 /obj/item/weapon/gun/smg/uzi/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 22, "under_y" = 16, "stock_x" = 22, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 22, "under_y" = 16, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 23, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/smg/uzi/set_gun_config_values()
 	..()
@@ -600,7 +602,7 @@
 		/obj/item/attachable/heavy_barrel,
 	)
 	random_spawn_chance = 65
-	random_spawn_under = list(
+	random_spawn_siderail = list(
 		/obj/item/attachable/lasersight,
 	)
 	random_spawn_muzzle = list(
@@ -620,7 +622,7 @@
 	update_attachable(S.slot)
 
 /obj/item/weapon/gun/smg/fp9000/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 20, "rail_y" = 21, "under_x" = 26, "under_y" = 16, "stock_x" = 22, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 20, "rail_y" = 21, "under_x" = 26, "under_y" = 16, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 25, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/smg/fp9000/set_gun_config_values()
 	..()
@@ -644,11 +646,11 @@
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 	)
-	random_spawn_under = list(
+	random_spawn_siderail = list(
 		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight,
 	)
 
 /obj/item/weapon/gun/smg/fp9000/pmc/set_gun_config_values()
