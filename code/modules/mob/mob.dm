@@ -379,7 +379,7 @@
 		recently_pointed_to = world.time + 10
 		new /obj/effect/overlay/temp/point/big(T, src, A)
 	else
-		recently_pointed_to = world.time + 50
+		recently_pointed_to = world.time + 2.5 SECONDS
 		new /obj/effect/overlay/temp/point(T, src, A)
 	visible_message("<b>[src]</b> points to [A]", null, null, 5)
 	return TRUE
@@ -424,7 +424,7 @@
 		close_browser(src, t1)
 
 	if(href_list["flavor_more"])
-		show_browser(usr, "<BODY><TT>[replacetext(flavor_text, "\n", "<BR>")]</TT></BODY>", name, name, "size=500x200")
+		show_browser(usr, "<BODY><TT>[replacetext(flavor_text, "\n", "<BR>")]</TT></BODY>", name, name, width = 500, height = 200)
 		onclose(usr, "[name]")
 	if(href_list["flavor_change"])
 		update_flavor_text()

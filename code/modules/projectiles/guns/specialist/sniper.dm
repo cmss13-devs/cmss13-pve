@@ -529,7 +529,7 @@
 	attachable_allowed = list(
 		//Muzzle,
 		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp_replica,
+		/obj/item/attachable/bayonet/upp/surplus,
 		/obj/item/attachable/bayonet/upp,
 		//Under,
 		/obj/item/attachable/verticalgrip,
