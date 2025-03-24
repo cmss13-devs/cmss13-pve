@@ -730,7 +730,8 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc/populate_product_list(scale)
 	listed_products = list(
 		list("FOOD", -1, null, null),
-		list("MRD", round(scale * 15), /obj/item/reagent_container/food/drinks/cans/soylent, VENDOR_ITEM_REGULAR),
+		list("Premium MRE", round(scale * 5), /obj/item/storage/box/mre/pmc, VENDOR_ITEM_REGULAR),
+		list("MRE Box", round(scale * 1), /obj/item/ammo_box/magazine/misc/mre/pmc, VENDOR_ITEM_REGULAR),
 
 		list("TOOLS", -1, null, null),
 		list("Entrenching Tool (ET)", round(scale * 2), /obj/item/tool/shovel/etool/folded, VENDOR_ITEM_REGULAR),
