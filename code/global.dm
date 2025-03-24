@@ -2,7 +2,6 @@
 #define MAIN_SHIP_NAME SSmapping.get_main_ship_name()
 #define MAIN_SHIP_DEFAULT_NAME "USS Golden Arrow"
 #define SHIP_MAP_NAMES list("USS Almayer", "USS Golden Arrow",  "USS Golden Arrow (Classic)", "SSV Chapaev", "USS Rover", "LV818 Firebase Zulu")
-
 #define MAIN_SHIP_PLATOON text2path(SSmapping.get_main_ship_platoon())
 #define MAIN_SHIP_DEFAULT_PLATOON "/datum/squad/marine/alpha"
 //=================================================
