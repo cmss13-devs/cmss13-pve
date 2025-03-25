@@ -20,11 +20,15 @@
 		"8" = list(0, 0)
 	)
 
+	use_muzzle_flash = TRUE
+	angle_muzzleflash = FALSE
+	muzzleflash_icon_state = "muzzle_flash"
+
 	muzzle_flash_pos = list(
-		"1" = list(0, 37),
-		"2" = list(0, -37),
-		"4" = list(37, 0),
-		"8" = list(-37, 0)
+		"1" = list(16.5, 45),
+		"2" = list(16.3, -43),
+		"4" = list(63, 0.5),
+		"8" = list(-30, 1)
 	)
 
 	scatter = 3

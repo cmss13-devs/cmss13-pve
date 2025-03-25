@@ -13,7 +13,7 @@
 
 	activatable = TRUE
 
-	ammo = new /obj/item/ammo_magazine/hardpoint/flare_launcher
+	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke
 	max_clips = 5
 	use_muzzle_flash = FALSE
 
@@ -35,15 +35,15 @@
 		// primaries
 		/obj/item/hardpoint/primary/gshk_minigun,
 		// secondaries
-
+        /obj/item/hardpoint/secondary/hj35launcher,
 	)
 
 	hdpt_layer = HDPT_LAYER_TURRET
 	px_offsets = list(
 		"1" = list(0, 10),
 		"2" = list(0, 10),
-		"4" = list(-4, 27),
-		"8" = list(4, 27)
+		"4" = list(-0, 27),
+		"8" = list(-0, 27)
 	)
 
 	var/gyro = FALSE
@@ -119,7 +119,7 @@
 	var/list/data = list()
 
 	data += list(list( // turret smokescreen data
-		"name" = "M34A2-A Turret Smoke Screen",
+		"name" = "ZSL Turret Smoke Screen",
 		"health" = health <= 0 ? null : floor(get_integrity_percent()),
 		"uses_ammo" = TRUE,
 		"current_rounds" = ammo.current_rounds / 2,

@@ -16,6 +16,7 @@
 	interior_map = /datum/map_template/interior/uppapc
 
 	passengers_slots = 20
+	revivable_dead_slots = 3
 	xenos_slots = 8
 
 	entrances = list(
@@ -31,13 +32,14 @@
 
 	movement_sound = 'sound/vehicles/tank_driving.ogg'
 
-	light_range = 4
+	light_range = 7
 
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/holder/apc_turret,
-
-		/obj/item/hardpoint/locomotion/apc_wheels,
+		/obj/item/hardpoint/locomotion/apc_wheels/zsl_wheels,
+        /obj/item/hardpoint/support/flare_launcher/upp,
 	)
+
 
 	seats = list(
 		VEHICLE_DRIVER = null,
@@ -61,13 +63,35 @@
 		"abstract" = 1
 	)
 
+	explosive_resistance = 150
+
 	move_max_momentum = 2
 	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.8
 
 	vehicle_ram_multiplier = VEHICLE_TRAMPLE_DAMAGE_APC_REDUCTION
 
-/obj/vehicle/multitile/tank/load_hardpoints()
+/obj/vehicle/multitile/apc/uppapc/initialize_cameras(change_tag = FALSE)
+	if(!camera)
+		camera = new /obj/structure/machinery/camera/vehicle(src)
+	if(change_tag)
+		camera.c_tag = "#[rand(1,100)] M34A2 \"[nickname]\" Tank" //this fluff allows it to be at the start of cams list
+		if(camera_int)
+			camera_int.c_tag = camera.c_tag + " interior" //this fluff allows it to be at the start of cams list
+	else
+		camera.c_tag = "#[rand(1,100)] M34A2 Tank"
+		if(camera_int)
+			camera_int.c_tag = camera.c_tag + " interior" //this fluff allows it to be at the start of cams list
+
+
+/obj/vehicle/multitile/apc/uppapc/load_role_reserved_slots()
+	var/datum/role_reserved_slots/RRS = new
+	RRS.category_name = "Crewmen"
+	RRS.roles = list(JOB_TANK_CREW, JOB_WO_CREWMAN, JOB_UPP_CREWMAN, JOB_PMC_CREWMAN)
+	RRS.total = 2
+	role_reserved_slots += RRS
+
+/obj/vehicle/multitile/apc/uppapc/load_hardpoints()
 	add_hardpoint(new /obj/item/hardpoint/holder/apc_turret)
 
 /obj/vehicle/multitile/apc/uppapc/add_seated_verbs(mob/living/M, seat)
@@ -83,11 +107,11 @@
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/activate_horn,
-			/obj/vehicle/multitile/proc/switch_hardpoint,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
 			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
@@ -109,6 +133,7 @@
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
 			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
@@ -133,17 +158,17 @@
 	if(user != seats[VEHICLE_GUNNER])
 		return FALSE
 
-	var/obj/item/hardpoint/holder/apc_turret/T = null
-	for(var/obj/item/hardpoint/holder/apc_turret/TT in hardpoints)
-		T = TT
+	var/obj/item/hardpoint/holder/apc_turret/A = null
+	for(var/obj/item/hardpoint/holder/apc_turret/AT in hardpoints)
+		A = AT
 		break
-	if(!T)
+	if(!A)
 		return FALSE
 
-	if(direction == GLOB.reverse_dir[T.dir] || direction == T.dir)
+	if(direction == GLOB.reverse_dir[A.dir] || direction == A.dir)
 		return FALSE
 
-	T.user_rotation(user, turning_angle(T.dir, direction))
+	A.user_rotation(user, turning_angle(A.dir, direction))
 	update_icon()
 
 	return TRUE
@@ -207,16 +232,28 @@
 	APC.update_icon()
 
 /obj/effect/vehicle_spawner/apc/uppapc/decrepit/load_hardpoints(obj/vehicle/multitile/apc/uppapc/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels/zsl_wheels)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/apc_turret)
-	for(var/obj/item/hardpoint/holder/apc_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/gshk_minigun)
+	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upp)
+	for(var/obj/item/hardpoint/holder/apc_turret/AT in V.hardpoints)
+		AT.add_hardpoint(new /obj/item/hardpoint/primary/gshk_minigun)
 		break
 
 //PRESET: default hardpoints, installed minigun
 /obj/effect/vehicle_spawner/apc/uppapc/minigun/load_hardpoints(obj/vehicle/multitile/apc/uppapc/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels/zsl_wheels)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/apc_turret)
-	for(var/obj/item/hardpoint/holder/apc_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/gshk_minigun)
+	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upp)
+	for(var/obj/item/hardpoint/holder/apc_turret/AT in V.hardpoints)
+		AT.add_hardpoint(new /obj/item/hardpoint/primary/gshk_minigun)
+		break
+
+//PRESET: default hardpoints, installed minigun, hj-35
+/obj/effect/vehicle_spawner/apc/uppapc/minigunhj35/load_hardpoints(obj/vehicle/multitile/apc/uppapc/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels/zsl_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/apc_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upp)
+	for(var/obj/item/hardpoint/holder/apc_turret/AT in V.hardpoints)
+		AT.add_hardpoint(new /obj/item/hardpoint/primary/gshk_minigun)
+		AT.add_hardpoint(new /obj/item/hardpoint/secondary/hj35launcher)
 		break
