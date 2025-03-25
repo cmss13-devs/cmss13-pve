@@ -311,6 +311,19 @@
 	. = ..()
 	reagents.add_reagent("water", 30)
 
+/obj/item/reagent_container/food/drinks/cans/soylent
+	name = "\improper Weyland-Yutani Meal Ready-to-Drink"
+	desc = "Plastic bottle full of gooey goodness, choco flavor. One bottle has enough calories for a day - don't drink it all in one sitting, better not risk getting diarrhea."
+	desc_lore = "Initially designed in 2173 as meal replacement for high-intensity workers, MRD was recalled from the market multiple times due to reports of gastrointestinal illness, including nausea, vomiting, and diarrhea. Improved formula was created, but the brand name was already stained (quite literally), so now Meal Ready-to-Drink remains as emergency food supply for internal Company use."
+	icon_state = "wy_soylent"
+	center_of_mass = "x=15;y=8"
+	volume = 30
+
+/obj/item/reagent_container/food/drinks/cans/soylent/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 20)
+	reagents.add_reagent("coco", 10)
+
 /obj/item/reagent_container/food/drinks/cans/beer
 	name = "\improper Weyland-Yutani Lite"
 	desc = "Beer. You've dialed in your target. Time to fire for effect."
