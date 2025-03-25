@@ -291,14 +291,6 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4*4)
 
-/obj/item/weapon/gun/launcher/grenade/m92/able_to_fire(mob/living/user)
-	. = ..()
-	if (. && istype(user))
-		if(!skillcheck(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_GRENADIER)
-			to_chat(user, SPAN_WARNING("You don't seem to know how to use \the [src]..."))
-			return FALSE
-
-
 //-------------------------------------------------------
 //M81 GRENADE LAUNCHER
 
@@ -358,7 +350,6 @@
 
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/stock/m79,
