@@ -812,7 +812,7 @@
 /obj/structure/machinery/door_control/brbutton{
 	id = "sci_west_3"
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/corsat/arrow_north,
 /area/firefly/supply)
 "aca" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -3548,6 +3548,10 @@
 "ajS" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clipboard{
+	pixel_x = -2;
+	pixel_y = -4
+	},
 /turf/open/floor/corsat/yellow/west,
 /area/firefly/supply)
 "ajT" = (
@@ -3696,7 +3700,7 @@
 /obj/structure/machinery/door_control/brbutton{
 	id = "sci_west_4"
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/corsat/arrow_north,
 /area/firefly/supply)
 "akm" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -7239,6 +7243,12 @@
 	},
 /turf/open/floor/corsat/arrow_east,
 /area/firefly/cafeteria)
+"ats" = (
+/obj/structure/barricade/handrail,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/corsat/squares,
+/area/firefly/supply)
 "att" = (
 /obj/structure/machinery/door_control/brbutton{
 	id = "Omga_elevator"
@@ -8042,6 +8052,11 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/cafeteria)
+"avl" = (
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/corsat/squares,
+/area/firefly/supply)
 "avm" = (
 /obj/item/clothing/shoes/marine/rmc/knife,
 /turf/open/floor/corsat/squares,
@@ -8102,6 +8117,45 @@
 /obj/item/clothing/mask/gas/pmc/leader,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
+"avB" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/corsat/squares,
+/area/firefly/supply)
+"avC" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/corsat/squares,
+/area/firefly/supply)
+"avD" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "extra_zones"
+	},
+/turf/open/floor/corsat/arrow_east,
+/area/firefly/supply)
+"avE" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/turf/open/floor/corsat/yellow/northwest,
+/area/firefly/supply)
+"avF" = (
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/yellow/northwest,
+/area/firefly/supply)
+"avG" = (
+/obj/structure/window/framed/corsat/research,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "Blast Door";
+	id = "extra_zones"
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/supply)
 "avR" = (
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/supply)
@@ -10875,6 +10929,10 @@
 	req_access = null
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "Blast Door";
+	id = "extra_zones"
+	},
 /turf/open/floor/corsat/marked,
 /area/firefly/supply)
 "dGG" = (
@@ -14893,15 +14951,6 @@
 /area/firefly/cafeteria)
 "hJu" = (
 /turf/open/floor/corsat/red/southwest,
-/area/firefly/cafeteria)
-"hKl" = (
-/obj/structure/machinery/door/airlock/almayer/secure/glass{
-	name = "\improper Mess Hall Wing"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/floor/corsat/marked,
 /area/firefly/cafeteria)
 "hKr" = (
 /obj/structure/surface/table/reinforced/black,
@@ -19703,7 +19752,7 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/space)
 "njd" = (
-/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
 /obj/structure/sign/safety/airlock{
 	pixel_x = 1;
 	pixel_y = 30
@@ -22064,6 +22113,14 @@
 "pDm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/tool/screwdriver/tactical{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/nailgun{
+	pixel_x = 4;
+	pixel_y = 2
+	},
 /turf/open/floor/corsat/yellow/northeast,
 /area/firefly/supply)
 "pDR" = (
@@ -46677,7 +46734,7 @@ sBS
 eLq
 aaa
 akl
-aaa
+avD
 aaa
 aaa
 aaa
@@ -47253,7 +47310,7 @@ jOo
 aaa
 aaa
 aaa
-akb
+avE
 ajS
 abP
 wKz
@@ -47635,7 +47692,7 @@ kmi
 sbL
 akL
 kor
-akb
+avF
 aki
 ajc
 vzL
@@ -48018,7 +48075,7 @@ aaa
 kmi
 sbL
 nHM
-aaC
+avG
 aks
 akm
 wKz
@@ -48786,7 +48843,7 @@ aaa
 alb
 akV
 nHM
-aaC
+avG
 acb
 abR
 wKz
@@ -48893,7 +48950,7 @@ adm
 adm
 adm
 adm
-hKl
+avg
 mid
 avg
 acQ
@@ -48984,7 +49041,7 @@ vKQ
 vzL
 vzL
 wKz
-ajI
+ats
 ajF
 aju
 abh
@@ -49175,8 +49232,8 @@ pDm
 akj
 vzL
 vzL
-wKz
-ahQ
+avB
+avl
 aaa
 ajv
 abh
@@ -49367,7 +49424,7 @@ aaa
 akk
 ajZ
 aap
-abR
+avC
 wKz
 agX
 aby
