@@ -64,6 +64,15 @@
 
 	var/start_up_message = "Default systems initiated."
 
+	///Effect for the muzzle flash of the gun.
+	var/atom/movable/vis_obj/effect/muzzle_flash/muzzle_flash
+	///Icon state of the muzzle flash effect.
+	var/muzzleflash_iconstate
+	///Brightness of the muzzle flash effect.
+	var/muzzle_flash_lum = 3
+	///Color of the muzzle flash effect.
+	var/muzzle_flash_color = COLOR_VERY_SOFT_YELLOW
+
 	/// Delay sending no ammo messages
 	COOLDOWN_DECLARE(no_ammo_message_cooldown)
 
@@ -75,6 +84,7 @@
 	spark_system = new /datum/effect_system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
+	muzzle_flash = new(src, muzzleflash_iconstate)
 
 	if(turned_on)
 		start_processing()
@@ -89,6 +99,7 @@
 	QDEL_NULL(range_bounds)
 	QDEL_NULL(spark_system)
 	QDEL_NULL(ammo)
+	QDEL_NULL(muzzle_flash)
 	stop_processing()
 	. = ..()
 
@@ -359,20 +370,104 @@
 	sent_empty_ammo = TRUE
 	SEND_SIGNAL(src, COMSIG_SENTRY_EMPTY_AMMO_ALERT, src)
 
-//Mostly taken from gun code.
-/obj/structure/machinery/defenses/sentry/proc/muzzle_flash(angle)
-	if(isnull(angle))
+///muzzle flash
+/obj/structure/machinery/defenses/sentry/proc/muzzle_flash(firing_angle)
+	if(isnull(firing_angle))
 		return
+	if(muzzle_flash && !muzzle_flash.applied)
+		var/atom/movable/flash_loc = loc
+		var/prev_light = light_range
+		if(!light_on && (light_range <= muzzle_flash_lum))
+			set_light_range(muzzle_flash_lum)
+			set_light_color(muzzle_flash_color)
+			set_light_on(TRUE)
+			addtimer(CALLBACK(src, PROC_REF(reset_light_range), prev_light), 0.2 SECONDS)
+		//Offset the pixels.
+		switch(firing_angle)
+			if(0, 360)
+				muzzle_flash.pixel_x = 0
+				muzzle_flash.pixel_y = 13
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(1 to 44)
+				muzzle_flash.pixel_x = round(6 * ((firing_angle) / 45))
+				muzzle_flash.pixel_y = 13
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(45)
+				muzzle_flash.pixel_x = 13
+				muzzle_flash.pixel_y = 13
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(46 to 89)
+				muzzle_flash.pixel_x = 13
+				muzzle_flash.pixel_y = round(6 * ((90 - firing_angle) / 45))
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(90)
+				muzzle_flash.pixel_x = 13
+				muzzle_flash.pixel_y = 0
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(91 to 134)
+				muzzle_flash.pixel_x = 13
+				muzzle_flash.pixel_y = round(-4 * ((firing_angle - 90) / 45))
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(135)
+				muzzle_flash.pixel_x = 13
+				muzzle_flash.pixel_y = -10
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(136 to 179)
+				muzzle_flash.pixel_x = round(4 * ((180 - firing_angle) / 45))
+				muzzle_flash.pixel_y = -12
+				muzzle_flash.layer = ABOVE_MOB_LAYER
+			if(180)
+				muzzle_flash.pixel_x = 0
+				muzzle_flash.pixel_y = -12
+				muzzle_flash.layer = ABOVE_MOB_LAYER
+			if(181 to 224)
+				muzzle_flash.pixel_x = round(-6 * ((firing_angle - 180) / 45))
+				muzzle_flash.pixel_y = -12
+				muzzle_flash.layer = ABOVE_MOB_LAYER
+			if(225)
+				muzzle_flash.pixel_x = -12
+				muzzle_flash.pixel_y = -12
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(226 to 269)
+				muzzle_flash.pixel_x = -12
+				muzzle_flash.pixel_y = round(-12 * ((270 - firing_angle) / 45))
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(270)
+				muzzle_flash.pixel_x = -12
+				muzzle_flash.pixel_y = 0
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(271 to 313)
+				muzzle_flash.pixel_x = -12
+				muzzle_flash.pixel_y = round(8 * ((firing_angle - 270) / 45))
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(315)
+				muzzle_flash.pixel_x = -12
+				muzzle_flash.pixel_y = 13
+				muzzle_flash.layer = initial(muzzle_flash.layer)
+			if(316 to 359)
+				muzzle_flash.pixel_x = round(-12 * ((360 - firing_angle) / 45))
+				muzzle_flash.pixel_y = 13
+				muzzle_flash.layer = initial(muzzle_flash.layer)
 
-	var/image_layer = layer + 0.1
-	var/offset = 13
+		muzzle_flash.transform = null
+		muzzle_flash.transform = turn(muzzle_flash.transform, firing_angle)
+		flash_loc.vis_contents += muzzle_flash
+		muzzle_flash.applied = TRUE
 
-	var/image/flash = image('icons/obj/items/weapons/projectiles.dmi',src,"muzzle_flash",image_layer)
-	var/matrix/rotate = matrix() //Change the flash angle.
-	rotate.Translate(0, offset)
-	rotate.Turn(angle)
-	flash.transform = rotate
-	flash.flick_overlay(src, 3)
+		addtimer(CALLBACK(src, PROC_REF(remove_muzzle_flash), flash_loc, muzzle_flash), 0.2 SECONDS)
+
+
+///Removes muzzle flash viscontents
+/obj/structure/machinery/defenses/sentry/proc/remove_muzzle_flash(atom/movable/flash_loc, atom/movable/vis_obj/effect/muzzle_flash/muzzle_flash)
+	if(!QDELETED(flash_loc))
+		flash_loc.vis_contents -= muzzle_flash
+	muzzle_flash.applied = FALSE
+
+/// called by a timer to remove the light range from muzzle flash
+/obj/structure/machinery/defenses/sentry/proc/reset_light_range(lightrange)
+	set_light_range(lightrange)
+	if(lightrange <= 0)
+		set_light_on(FALSE)
 
 /obj/structure/machinery/defenses/sentry/proc/get_target(atom/movable/new_target)
 	if(!islist(targets))

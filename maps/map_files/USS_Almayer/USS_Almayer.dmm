@@ -402,6 +402,20 @@
 "afk" = (
 /turf/open/floor/engine,
 /area/almayer/engineering/airmix)
+"afm" = (
+/obj/effect/step_trigger/clone_cleaner,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ARES StairsUpper";
+	name = "\improper ARES Core Shutters"
+	},
+/obj/structure/disposalpipe/up/almayer{
+	dir = 2;
+	id = "ares_vault_in";
+	name = "aicore"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown,
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "afp" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -1407,6 +1421,17 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/lower/cryo_cells)
+"ayh" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "ARES JoeCryo";
+	name = "\improper ARES Synth Bay Shutters"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom{
+	dir = 4
+	},
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "ayj" = (
 /obj/effect/landmark/start/cargo,
 /turf/open/floor/plating/plating_catwalk,
@@ -3073,6 +3098,15 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/delta)
+"bcM" = (
+/obj/effect/step_trigger/ares_alert/mainframe,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ARES Mainframe Right";
+	name = "\improper ARES Mainframe Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "bdd" = (
 /turf/closed/wall/almayer,
 /area/almayer/living/briefing)
@@ -3723,6 +3757,23 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/squads/req)
+"bqj" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ARES Interior";
+	name = "\improper ARES Inner Chamber Shutters"
+	},
+/obj/effect/step_trigger/ares_alert/core,
+/obj/structure/sign/safety/laser{
+	pixel_x = 32;
+	pixel_y = -8
+	},
+/obj/structure/sign/safety/rewire{
+	pixel_x = 32;
+	pixel_y = 6
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "bqt" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/maint/lower/s_bow)
@@ -4766,6 +4817,23 @@
 	},
 /turf/open/floor/almayer/redcorner/north,
 /area/almayer/squads/alpha)
+"bMu" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ARES Interior";
+	name = "\improper ARES Inner Chamber Shutters"
+	},
+/obj/effect/step_trigger/ares_alert/core,
+/obj/structure/sign/safety/terminal{
+	pixel_x = -18;
+	pixel_y = -8
+	},
+/obj/structure/sign/safety/fibre_optics{
+	pixel_x = -18;
+	pixel_y = 6
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "bMw" = (
 /obj/structure/sign/safety/storage{
 	pixel_x = -17
@@ -6411,6 +6479,19 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/engineering/lower/workshop/hangar)
+"ctU" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ARES StairsLower";
+	name = "\improper ARES Core Shutters"
+	},
+/obj/effect/step_trigger/ares_alert/public{
+	alert_id = "AresStairs";
+	alert_message = "Caution: Movement detected in ARES Core.";
+	cooldown_duration = 1200
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "cun" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/extinguisher,
@@ -12567,6 +12648,14 @@
 "eIz" = (
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/hull/upper/p_stern)
+"eIH" = (
+/obj/effect/step_trigger/clone_cleaner,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ARES ReceptStairs2";
+	name = "\improper ARES Reception Stairway Shutters"
+	},
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "eIO" = (
 /turf/closed/wall/almayer/outer,
 /area/almayer/maint/hull/lower/s_bow)
@@ -14003,50 +14092,6 @@
 /obj/item/clothing/under/shorts/grey,
 /turf/open/floor/almayer/plate,
 /area/almayer/living/gym)
-"fgJ" = (
-/obj/structure/pipes/vents/pump,
-/obj/structure/mirror{
-	desc = "Do you remember who you are?";
-	icon_state = "mirror_broke";
-	name = "broken mirror";
-	pixel_y = 32
-	},
-/obj/structure/sink{
-	pixel_y = 24
-	},
-/obj/item/device/cassette_tape/nam{
-	layer = 2.9;
-	pixel_x = -6;
-	pixel_y = 11
-	},
-/obj/structure/machinery/door_control{
-	id = "Delta_2";
-	name = "Door Lock";
-	normaldoorcontrol = 1;
-	pixel_x = 23;
-	specialfunctions = 4
-	},
-/obj/item/prop{
-	desc = "A handful of rounds to reload on the go.";
-	icon = 'icons/obj/items/weapons/guns/handful.dmi';
-	icon_state = "bullet_2";
-	name = "handful of pistol bullets (9x19mm)";
-	pixel_x = -8;
-	pixel_y = 29
-	},
-/obj/item/prop{
-	desc = "A bunch of tiny bits of shattered metal.";
-	icon = 'icons/obj/items/shards.dmi';
-	icon_state = "shrapnelsmall";
-	name = "piece of shrapnel";
-	pixel_x = -1;
-	pixel_y = 24
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/turf/open/floor/almayer/dark_sterile,
-/area/almayer/living/port_emb)
 "fgK" = (
 /obj/structure/surface/rack,
 /obj/item/tool/wirecutters,
@@ -17242,49 +17287,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/engineering/lower/workshop)
-"gpM" = (
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	name = "General Listening Channel";
-	pixel_y = -28
-	},
-/obj/structure/closet/crate/trashcart,
-/obj/item/reagent_container/food/drinks/cans/souto,
-/obj/item/reagent_container/food/snacks/margheritaslice{
-	desc = "A slice of classic pizza ruined by the corps.";
-	name = "dirty margherita slice";
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/trash/cigbutt/ucigbutt{
-	desc = "A handful of rounds to reload on the go.";
-	icon = 'icons/obj/items/weapons/guns/handful.dmi';
-	icon_state = "bullet_2";
-	name = "handful of pistol bullets (9x19mm)";
-	pixel_x = -8
-	},
-/obj/item/bananapeel{
-	desc = "Ew.";
-	gender = "plural";
-	icon = 'icons/obj/items/shards.dmi';
-	icon_state = "shrapnelsmall";
-	name = "\improper finger nails";
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/stack/medical/ointment{
-	layer = 3.5;
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/item/clothing/gloves/latex,
-/obj/item/reagent_container/food/drinks/cans/waterbottle{
-	pixel_x = 11;
-	pixel_y = 7
-	},
-/obj/item/trash/uscm_mre,
-/turf/open/floor/almayer/green,
-/area/almayer/living/grunt_rnr)
 "gpN" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer/plate,
@@ -19727,6 +19729,14 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/command/lifeboat)
+"hiV" = (
+/obj/effect/step_trigger/clone_cleaner,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ARES ReceptStairs2";
+	name = "\improper ARES Reception Shutters"
+	},
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "hjh" = (
 /obj/structure/machinery/vending/snack,
 /obj/structure/sign/safety/galley{
@@ -23237,6 +23247,13 @@
 	},
 /turf/open/floor/almayer/green/east,
 /area/almayer/hallways/lower/starboard_midship_hallway)
+"irr" = (
+/obj/structure/window/framed/almayer/aicore/hull/black/hijack_bustable,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown{
+	dir = 4
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/almayer/command/airoom)
 "irw" = (
 /obj/structure/window/framed/almayer/aicore/hull,
 /turf/open/floor/plating,
@@ -23786,24 +23803,6 @@
 	},
 /turf/open/floor/almayer/greencorner/west,
 /area/almayer/hallways/lower/port_midship_hallway)
-"iDB" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES Interior";
-	name = "\improper ARES Inner Chamber Shutters";
-	plane = -7
-	},
-/obj/effect/step_trigger/ares_alert/core,
-/obj/structure/sign/safety/laser{
-	pixel_x = 32;
-	pixel_y = -8
-	},
-/obj/structure/sign/safety/rewire{
-	pixel_x = 32;
-	pixel_y = 6
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "iDD" = (
 /obj/structure/largecrate/random/barrel/red,
 /turf/open/floor/almayer/cargo,
@@ -24450,18 +24449,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/lower/port_aft_hallway)
-"iQs" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "ARES JoeCryo";
-	name = "\improper ARES Synth Bay Shutters";
-	plane = -7
-	},
-/obj/structure/pipes/standard/simple/hidden/supply/no_boom{
-	dir = 4
-	},
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "iQD" = (
 /obj/structure/sign/poster/pinup{
 	pixel_x = -30
@@ -25447,21 +25434,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/medical/chemistry)
-"jke" = (
-/obj/effect/step_trigger/clone_cleaner,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES StairsUpper";
-	name = "\improper ARES Core Shutters";
-	plane = -7
-	},
-/obj/structure/disposalpipe/up/almayer{
-	dir = 2;
-	id = "ares_vault_in";
-	name = "aicore"
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown,
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "jkh" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/landmark/map_item,
@@ -26843,6 +26815,15 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/cargo_arrow,
 /area/almayer/living/offices)
+"jJo" = (
+/obj/effect/step_trigger/clone_cleaner,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ARES StairsUpper";
+	name = "\improper ARES Core Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown,
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "jJu" = (
 /turf/open/floor/almayer/red/northeast,
 /area/almayer/hallways/upper/aft_hallway)
@@ -27492,6 +27473,18 @@
 	},
 /turf/open/floor/almayer/red/west,
 /area/almayer/shipboard/brig/cells)
+"jUY" = (
+/obj/structure/machinery/door/window/westright,
+/obj/structure/machinery/shower{
+	dir = 8;
+	layer = 3.10
+	},
+/obj/item/tool/soap{
+	pixel_x = 2;
+	pixel_y = 7
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/almayer/living/commandbunks)
 "jVa" = (
 /turf/open/floor/almayer,
 /area/almayer/shipboard/brig/cells)
@@ -29716,27 +29709,6 @@
 "kJf" = (
 /turf/closed/wall/almayer,
 /area/almayer/shipboard/brig/medical)
-"kJr" = (
-/obj/structure/surface/rack,
-/obj/effect/decal/cleanable/cobweb{
-	dir = 8;
-	plane = -6
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_container/spray/cleaner{
-	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
-	name = "Surgery Cleaner"
-	},
-/obj/item/reagent_container/spray/cleaner{
-	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
-	name = "Surgery Cleaner"
-	},
-/obj/item/reagent_container/spray/cleaner{
-	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
-	name = "Surgery Cleaner"
-	},
-/turf/open/floor/almayer/sterile_green_corner/east,
-/area/almayer/medical/lower_medical_medbay)
 "kJM" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/safety/distribution_pipes{
@@ -33494,15 +33466,6 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/maint/hull/upper/u_f_s)
-"lWZ" = (
-/obj/effect/step_trigger/clone_cleaner,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES ReceptStairs2";
-	name = "\improper ARES Reception Stairway Shutters";
-	plane = -7
-	},
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "lXd" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
@@ -34474,6 +34437,49 @@
 	},
 /turf/open/floor/grass,
 /area/almayer/living/starboard_garden)
+"mow" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = -28
+	},
+/obj/structure/closet/crate/trashcart,
+/obj/item/reagent_container/food/drinks/cans/souto,
+/obj/item/reagent_container/food/snacks/margheritaslice{
+	desc = "A slice of classic pizza ruined by the corps.";
+	name = "dirty margherita slice";
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/trash/cigbutt/ucigbutt{
+	desc = "A handful of rounds to reload on the go.";
+	icon = 'icons/obj/items/weapons/guns/handful.dmi';
+	icon_state = "bullet_2";
+	name = "handful of pistol bullets (9x19mm)";
+	pixel_x = -8
+	},
+/obj/item/bananapeel{
+	desc = "Ew.";
+	gender = "plural";
+	icon = 'icons/obj/items/shards.dmi';
+	icon_state = "shrapnelsmall";
+	name = "\improper finger nails";
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/obj/item/stack/medical/ointment{
+	layer = 3.5;
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/clothing/gloves/latex,
+/obj/item/reagent_container/food/drinks/cans/waterbottle{
+	pixel_x = 11;
+	pixel_y = 7
+	},
+/obj/item/trash/uscm_mre,
+/turf/open/floor/almayer/green,
+/area/almayer/living/grunt_rnr)
 "mox" = (
 /turf/open/floor/almayer/plate,
 /area/almayer/squads/alpha_bravo_shared)
@@ -37226,6 +37232,17 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/squads/charlie_delta_shared)
+"nhI" = (
+/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
+	access_modified = 1;
+	dir = 1;
+	name = "\improper Security Vault";
+	req_access = null;
+	req_one_access_txt = "91;92"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "nhT" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/wirecutters,
@@ -43432,21 +43449,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/lower/starboard_midship_hallway)
-"pvl" = (
-/obj/structure/largecrate/random/case/double,
-/obj/item/tool/wet_sign{
-	pixel_y = 18
-	},
-/obj/item/trash/cigbutt/ucigbutt{
-	desc = "A handful of rounds to reload on the go.";
-	icon = 'icons/obj/items/weapons/guns/handful.dmi';
-	icon_state = "bullet_2";
-	name = "handful of pistol bullets (9x19mm)";
-	pixel_x = -8;
-	pixel_y = 10
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/almayer/maint/hull/lower/l_m_s)
 "pvs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -43932,14 +43934,6 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer,
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/engineering/lower/engine_core)
-"pCT" = (
-/obj/structure/window/framed/almayer/aicore/hull/black/hijack_bustable,
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown{
-	dir = 4;
-	plane = -6
-	},
-/turf/open/floor/almayer/aicore/no_build,
-/area/almayer/command/airoom)
 "pDi" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -44511,6 +44505,21 @@
 	},
 /turf/open/floor/almayer/green/east,
 /area/almayer/hallways/upper/fore_hallway)
+"pOv" = (
+/obj/structure/largecrate/random/case/double,
+/obj/item/tool/wet_sign{
+	pixel_y = 18
+	},
+/obj/item/trash/cigbutt/ucigbutt{
+	desc = "A handful of rounds to reload on the go.";
+	icon = 'icons/obj/items/weapons/guns/handful.dmi';
+	icon_state = "bullet_2";
+	name = "handful of pistol bullets (9x19mm)";
+	pixel_x = -8;
+	pixel_y = 10
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/almayer/maint/hull/lower/l_m_s)
 "pOw" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 5
@@ -47943,19 +47952,6 @@
 /obj/structure/largecrate/random/barrel/red,
 /turf/open/floor/almayer,
 /area/almayer/maint/hull/upper/u_f_s)
-"qSo" = (
-/obj/structure/machinery/door/window/westright,
-/obj/structure/machinery/shower{
-	dir = 8;
-	layer = 3.10;
-	plane = -4
-	},
-/obj/item/tool/soap{
-	pixel_x = 2;
-	pixel_y = 7
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/almayer/living/commandbunks)
 "qSv" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/surface/table/almayer,
@@ -50226,6 +50222,15 @@
 /obj/item/reagent_container/food/snacks/protein_pack,
 /turf/open/floor/almayer/plate,
 /area/almayer/living/gym)
+"rMx" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ARES Interior";
+	name = "\improper ARES Inner Chamber Shutters"
+	},
+/obj/effect/step_trigger/ares_alert/core,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "rME" = (
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer/plate,
@@ -51961,19 +51966,6 @@
 /obj/item/tool/screwdriver,
 /turf/open/floor/almayer/cargo_arrow,
 /area/almayer/hallways/lower/repair_bay)
-"ssb" = (
-/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
-	access_modified = 1;
-	dir = 1;
-	name = "\improper Security Vault";
-	req_access = null;
-	req_one_access_txt = "91;92"
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
-	plane = -6
-	},
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "ssj" = (
 /obj/structure/sign/safety/terminal{
 	pixel_x = -17
@@ -53528,6 +53520,26 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/red,
 /area/almayer/hallways/upper/port)
+"sVy" = (
+/obj/structure/surface/rack,
+/obj/effect/decal/cleanable/cobweb{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner"
+	},
+/obj/item/reagent_container/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner"
+	},
+/obj/item/reagent_container/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner"
+	},
+/turf/open/floor/almayer/sterile_green_corner/east,
+/area/almayer/medical/lower_medical_medbay)
 "sVH" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -53933,6 +53945,15 @@
 	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/almayer/medical/lower_medical_medbay)
+"tcG" = (
+/obj/effect/step_trigger/ares_alert/mainframe,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ARES Mainframe Left";
+	name = "\improper ARES Mainframe Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/turf/open/floor/almayer/no_build/test_floor4,
+/area/almayer/command/airoom)
 "tcL" = (
 /obj/structure/sign/poster/safety,
 /turf/closed/wall/almayer,
@@ -58396,16 +58417,6 @@
 "uKq" = (
 /turf/open/floor/almayer/green/west,
 /area/almayer/living/grunt_rnr)
-"uKw" = (
-/obj/effect/step_trigger/ares_alert/mainframe,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES Mainframe Left";
-	name = "\improper ARES Mainframe Shutters";
-	plane = -7
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "uKC" = (
 /obj/structure/surface/table/almayer,
 /obj/item/device/binoculars,
@@ -61096,20 +61107,6 @@
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/hull/lower/l_a_s)
-"vDP" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES StairsLower";
-	name = "\improper ARES Core Shutters";
-	plane = -7
-	},
-/obj/effect/step_trigger/ares_alert/public{
-	alert_id = "AresStairs";
-	alert_message = "Caution: Movement detected in ARES Core.";
-	cooldown_duration = 1200
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "vDT" = (
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/starboard_aft_hallway)
@@ -64130,16 +64127,6 @@
 	},
 /turf/open/floor/almayer/bluefull,
 /area/almayer/living/briefing)
-"wIv" = (
-/obj/effect/step_trigger/clone_cleaner,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES StairsUpper";
-	name = "\improper ARES Core Shutters";
-	plane = -7
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown,
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "wIC" = (
 /turf/closed/wall/almayer/reinforced,
 /area/almayer/shipboard/brig/chief_mp_office)
@@ -64936,6 +64923,50 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/almayer/orange,
 /area/almayer/squads/bravo)
+"wVF" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/mirror{
+	desc = "Do you remember who you are?";
+	icon_state = "mirror_broke";
+	name = "broken mirror";
+	pixel_y = 32
+	},
+/obj/structure/sink{
+	pixel_y = 24
+	},
+/obj/item/device/cassette_tape/nam{
+	layer = 2.9;
+	pixel_x = -6;
+	pixel_y = 11
+	},
+/obj/structure/machinery/door_control{
+	id = "Delta_2";
+	name = "Door Lock";
+	normaldoorcontrol = 1;
+	pixel_x = 23;
+	specialfunctions = 4
+	},
+/obj/item/prop{
+	desc = "A handful of rounds to reload on the go.";
+	icon = 'icons/obj/items/weapons/guns/handful.dmi';
+	icon_state = "bullet_2";
+	name = "handful of pistol bullets (9x19mm)";
+	pixel_x = -8;
+	pixel_y = 29
+	},
+/obj/item/prop{
+	desc = "A bunch of tiny bits of shattered metal.";
+	icon = 'icons/obj/items/shards.dmi';
+	icon_state = "shrapnelsmall";
+	name = "piece of shrapnel";
+	pixel_x = -1;
+	pixel_y = 24
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/living/port_emb)
 "wVI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -65319,16 +65350,6 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/shipboard/brig/perma)
-"xci" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES Interior";
-	name = "\improper ARES Inner Chamber Shutters";
-	plane = -7
-	},
-/obj/effect/step_trigger/ares_alert/core,
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "xcj" = (
 /turf/open/floor/almayer/dark_sterile,
 /area/almayer/medical/lockerroom)
@@ -66000,15 +66021,6 @@
 "xqN" = (
 /turf/open/floor/almayer/emerald/north,
 /area/almayer/living/briefing)
-"xqX" = (
-/obj/effect/step_trigger/clone_cleaner,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES ReceptStairs2";
-	name = "\improper ARES Reception Shutters";
-	plane = -7
-	},
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "xqY" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/orange,
@@ -66038,24 +66050,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/almayer/shipboard/brig/processing)
-"xse" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES Interior";
-	name = "\improper ARES Inner Chamber Shutters";
-	plane = -7
-	},
-/obj/effect/step_trigger/ares_alert/core,
-/obj/structure/sign/safety/terminal{
-	pixel_x = -18;
-	pixel_y = -8
-	},
-/obj/structure/sign/safety/fibre_optics{
-	pixel_x = -18;
-	pixel_y = 6
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "xsk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -66892,16 +66886,6 @@
 /obj/effect/landmark/yautja_teleport,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/maint/hull/lower/l_f_s)
-"xGr" = (
-/obj/effect/step_trigger/ares_alert/mainframe,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES Mainframe Right";
-	name = "\improper ARES Mainframe Shutters";
-	plane = -7
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
-/turf/open/floor/almayer/no_build/test_floor4,
-/area/almayer/command/airoom)
 "xGv" = (
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/almayer/orange/east,
@@ -88472,7 +88456,7 @@ eFz
 ofF
 mXj
 cJA
-qSo
+jUY
 agj
 gvQ
 nef
@@ -96900,7 +96884,7 @@ kAw
 qhh
 kan
 otq
-kJr
+sVy
 kan
 jUk
 rsU
@@ -102003,7 +101987,7 @@ iMm
 mJi
 iMm
 iMm
-gpM
+mow
 bJt
 bhv
 gGu
@@ -103584,7 +103568,7 @@ nsY
 nxI
 twQ
 jcA
-pvl
+pOv
 bdd
 dXg
 dXg
@@ -103639,7 +103623,7 @@ uks
 iou
 xIr
 nsY
-fgJ
+wVF
 iou
 yeY
 nsY
@@ -106549,7 +106533,7 @@ wgV
 wgV
 aWh
 jMC
-jke
+afm
 one
 avg
 pBS
@@ -106752,7 +106736,7 @@ sXA
 tOT
 kYh
 wHr
-wIv
+jJo
 avg
 wwb
 bZh
@@ -106955,7 +106939,7 @@ tjV
 tjV
 fVh
 dwu
-wIv
+jJo
 xup
 avg
 vNI
@@ -107159,9 +107143,9 @@ mOi
 mOi
 mOi
 mOi
-pCT
-pCT
-pCT
+irr
+irr
+irr
 aqU
 mHu
 nTs
@@ -125283,7 +125267,7 @@ pSP
 pBS
 hYI
 pBS
-uKw
+tcG
 fga
 jwI
 tiq
@@ -125486,7 +125470,7 @@ fTt
 unz
 jdD
 qve
-uKw
+tcG
 dpn
 int
 pAs
@@ -126088,14 +126072,14 @@ bgS
 wWM
 vll
 dSQ
-xse
+bMu
 vGK
 oQb
 yep
 jSb
 mnu
 uQg
-vDP
+ctU
 xYW
 kOd
 idd
@@ -126291,14 +126275,14 @@ kxb
 iWC
 iWC
 iWC
-xci
+rMx
 dDV
 pSP
 ljN
 aYk
 pWm
 vbK
-vDP
+ctU
 eOS
 nUP
 pRR
@@ -126494,14 +126478,14 @@ hae
 dEo
 fZn
 kpg
-iDB
+bqj
 hWZ
 dSe
 uWg
 aiM
 glQ
 ogS
-vDP
+ctU
 yhT
 qyc
 qqJ
@@ -127110,7 +127094,7 @@ nFp
 unz
 rBC
 qnT
-xGr
+bcM
 uVJ
 tiq
 jwI
@@ -127313,7 +127297,7 @@ qBx
 pBS
 yjA
 pBS
-xGr
+bcM
 gSU
 pAs
 int
@@ -127715,7 +127699,7 @@ eHt
 eHt
 kjy
 pgk
-iQs
+ayh
 pgk
 kjy
 kjy
@@ -128123,7 +128107,7 @@ jst
 unz
 rBC
 nUP
-xqX
+hiV
 pcZ
 pcZ
 neG
@@ -128318,7 +128302,7 @@ ptE
 qCm
 eFP
 pBS
-ssb
+nhI
 pBS
 pBS
 ejZ
@@ -128326,7 +128310,7 @@ oXQ
 pBS
 pBS
 gqD
-lWZ
+eIH
 pUV
 lTY
 neG
