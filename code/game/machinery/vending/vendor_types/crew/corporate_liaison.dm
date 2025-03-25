@@ -82,12 +82,3 @@ GLOBAL_LIST_INIT(cm_vending_clothing_dress_corporate_liaison, list(
 
 /obj/structure/machinery/cm_vending/clothing/dress/corporate_liaison/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_dress_corporate_liaison
-
-/obj/structure/machinery/cm_vending/clothing/dress/corporate_liaison/pve
-	name = "\improper Personal Wardrobe"
-	desc = "A wardrobe containing all the clothes an executive would ever need."
-	icon_state = "wardrobe_vendor"
-	vendor_theme = VENDOR_THEME_USCM
-	show_points = FALSE
-	req_access = null
-	vendor_role = list(JOB_PMCPLAT_OW, JOB_PMCPLAT_STANDARD, JOB_PMCPLAT_SG, JOB_PMCPLAT_MEDIC, JOB_PMCPLAT_LEADER, JOB_PMCPLAT_FTL)

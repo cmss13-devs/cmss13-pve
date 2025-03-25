@@ -22498,10 +22498,13 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "pYI" = (
-/obj/structure/machinery/cm_vending/clothing/dress/corporate_liaison/pve,
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
 	light_power = 0.7
+	},
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc/suits{
+	pixel_y = 6;
+	density = 0
 	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
