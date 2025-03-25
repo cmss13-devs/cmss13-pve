@@ -22448,8 +22448,7 @@
 	pixel_y = 15;
 	density = 0;
 	desc = "A wardrobe containing all the clothes an overwatch officer would ever need.";
-	name = "\improper Overwatch's Personal Wardrobe";
-	vendor_role = list("Corporate Liaison","Overwatch Operator","Survivor","Corporate Trainee","Corporate Junior Executive","Corporate Executive","Corporate Senior Executive","Corporate Executive Specialist","Corporate Executive Supervisor","Corporate Assistant Manager","Corporate Division Manager","Corporate Chief Executive","W-Y Director","WY Research Consultant")
+	name = "\improper Overwatch's Personal Wardrobe"
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
