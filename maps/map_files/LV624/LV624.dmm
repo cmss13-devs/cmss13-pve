@@ -3534,7 +3534,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_east_caves)
 "aPR" = (
-/obj/structure/lz_sign/lazarus_sign{
+/obj/structure/lz_sign/lazarus_sign/damaged{
 	density = 0
 	},
 /turf/open/gm/grass/grass1,
@@ -13047,7 +13047,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/river/west_river)
 "nsA" = (
-/obj/structure/lz_sign/lazarus_sign{
+/obj/structure/lz_sign/lazarus_sign/damaged{
 	layer = 4
 	},
 /turf/open/gm/dirt,
