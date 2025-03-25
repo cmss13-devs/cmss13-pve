@@ -260,7 +260,7 @@
 		else
 			dat += "The bot is in maintenance mode and cannot be controlled.<BR>"
 
-	show_browser(user, dat, "Mulebot [suffix ? "([suffix])" : ""]", "mulebot", "size=350x500")
+	show_browser(user, dat, "Mulebot [suffix ? "([suffix])" : ""]", "mulebot", width = 350, height = 500)
 	return
 
 // returns the wire panel text
