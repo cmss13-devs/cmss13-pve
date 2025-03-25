@@ -78,7 +78,16 @@ GLOBAL_LIST_INIT(cm_vending_clothing_dress_corporate_liaison, list(
 	vendor_theme = VENDOR_THEME_USCM
 	show_points = FALSE
 	req_access = list()
-	vendor_role = list(JOB_CORPORATE_LIAISON, JOB_SURVIVOR, JOB_TRAINEE, JOB_JUNIOR_EXECUTIVE, JOB_EXECUTIVE, JOB_SENIOR_EXECUTIVE, JOB_EXECUTIVE_SPECIALIST, JOB_EXECUTIVE_SUPERVISOR, JOB_ASSISTANT_MANAGER, JOB_DIVISION_MANAGER, JOB_CHIEF_EXECUTIVE, JOB_DIRECTOR, JOB_WY_GOON_RESEARCHER, JOB_PMCPLAT_OW)
+	vendor_role = list(JOB_CORPORATE_LIAISON, JOB_SURVIVOR, JOB_TRAINEE, JOB_JUNIOR_EXECUTIVE, JOB_EXECUTIVE, JOB_SENIOR_EXECUTIVE, JOB_EXECUTIVE_SPECIALIST, JOB_EXECUTIVE_SUPERVISOR, JOB_ASSISTANT_MANAGER, JOB_DIVISION_MANAGER, JOB_CHIEF_EXECUTIVE, JOB_DIRECTOR, JOB_WY_GOON_RESEARCHER)
 
 /obj/structure/machinery/cm_vending/clothing/dress/corporate_liaison/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_dress_corporate_liaison
+
+/obj/structure/machinery/cm_vending/clothing/dress/corporate_liaison/pve
+	name = "\improper Personal Wardrobe"
+	desc = "A wardrobe containing all the clothes an executive would ever need."
+	icon_state = "wardrobe_vendor"
+	vendor_theme = VENDOR_THEME_USCM
+	show_points = FALSE
+	req_access = null
+	vendor_role = list(JOB_PMCPLAT_OW, JOB_PMCPLAT_STANDARD, JOB_PMCPLAT_SG, JOB_PMCPLAT_MEDIC, JOB_PMCPLAT_LEADER, JOB_PMCPLAT_FTL)

@@ -22498,12 +22498,7 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "pYI" = (
-/obj/structure/machinery/cm_vending/clothing/dress/corporate_liaison{
-	pixel_y = 15;
-	density = 0;
-	desc = "A wardrobe containing all the clothes an overwatch officer would ever need.";
-	name = "\improper Overwatch's Personal Wardrobe"
-	},
+/obj/structure/machinery/cm_vending/clothing/dress/corporate_liaison/pve,
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
 	light_power = 0.7
