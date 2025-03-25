@@ -660,6 +660,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/squares,
 /area/firefly/supply)
+"abC" = (
+/turf/open/floor/carpet,
+/area/firefly/ptsgt)
 "abE" = (
 /obj/structure/platform{
 	dir = 1
@@ -6974,7 +6977,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 1
 	},
-/turf/open/floor/corsat/arrow_south,
+/turf/open/floor/corsat/squares,
 /area/firefly/ptsgt)
 "atc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7000,7 +7003,7 @@
 	pixel_x = -6;
 	pixel_y = 10
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/carpet,
 /area/firefly/ptsgt)
 "atf" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -7013,7 +7016,7 @@
 	pixel_x = 3
 	},
 /obj/item/folder/white,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/carpet,
 /area/firefly/ptsgt)
 "atg" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -7023,11 +7026,11 @@
 /obj/structure/bed/chair/office/light{
 	dir = 8
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/carpet,
 /area/firefly/ptsgt)
 "ath" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/corsat/squares,
+/turf/open/floor/carpet,
 /area/firefly/ptsgt)
 "ati" = (
 /obj/item/device/radio/intercom{
@@ -7035,7 +7038,7 @@
 	name = "General Listening Channel";
 	pixel_y = 28
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/carpet,
 /area/firefly/ptsgt)
 "atj" = (
 /turf/open/floor/corsat/squares,
@@ -52516,7 +52519,7 @@ aqX
 aqM
 afz
 atm
-atj
+abC
 atg
 afd
 aeG
