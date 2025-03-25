@@ -15,6 +15,7 @@
 #define SQUAD_FORECON "FORECON"
 #define SQUAD_SOLAR "Solar Devils"
 #define SQUAD_UPP "Red Dawn"
+#define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_LRRP "Snake Eaters"
 
 // Job name defines
@@ -235,7 +236,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_PMC_XENO_HANDLER "PMC Xeno Handler"
 #define JOB_PMC_LEADER "PMC Leader"
 #define JOB_PMC_LEAD_INVEST "PMC Lead Investigator"
-#define JOB_PMC_DIRECTOR "PMC Site Director"
+#define JOB_PMC_DIRECTOR "Corporate Operations Director"
 #define JOB_PMC_SYNTH "PMC Support Synthetic"
 
 #define ROLES_WY_PMC list(JOB_PMC_LEADER, JOB_PMC_SNIPER, JOB_PMC_GUNNER, JOB_PMC_ENGINEER, JOB_PMC_MEDIC, JOB_PMC_STANDARD)
@@ -267,6 +268,16 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 #define ROLES_WY_GOONS list(JOB_WY_GOON_LEAD, JOB_WY_GOON_TECH, JOB_WY_GOON)
 
+////-------- PMC PLATOON --------//
+
+#define JOB_PMCPLAT_OW "Overwatch Operator"
+#define JOB_PMCPLAT_LEADER "Operations Leader"
+#define JOB_PMCPLAT_FTL "Team Leader"
+#define JOB_PMCPLAT_SG "Heavy Weapons Specialist"
+#define JOB_PMCPLAT_STANDARD "Tactical Unit"
+#define JOB_PMCPLAT_MEDIC "Medical Specialist"
+
+
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
 #define JOB_CONTRACTOR_ST "VAIPO Mercenary"
@@ -289,7 +300,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_CMB "CMB Deputy"
 #define JOB_CMB_TL "CMB Marshal"
 #define JOB_CMB_SYN "CMB Investigative Synthetic"
-#define JOB_CMB_ICC "Interstellar Commerce Commission Corporate Liaison"
+#define JOB_CMB_ICC "Interstellar Commerce Commission Liaison"
 #define JOB_CMB_OBS "Interstellar Human Rights Observer"
 
 #define CMB_GRUNT_LIST list(JOB_CMB, JOB_CMB_TL)

@@ -17,6 +17,7 @@ type ByondOpen = {
 type ByondProps = {
   maxLength: number;
   lightMode: BooleanLike;
+  scale: BooleanLike;
   extraChannels: Array<Channel>;
 };
 
@@ -33,6 +34,7 @@ export class TguiSay extends Component<{}, State> {
   private currentPrefix: keyof typeof RADIO_PREFIXES | null;
   private innerRef: RefObject<HTMLTextAreaElement>;
   private lightMode: boolean;
+  private scale: boolean;
   private extraChannels: Array<Channel>;
   private maxLength: number;
   private messages: typeof byondMessages;
@@ -69,6 +71,8 @@ export class TguiSay extends Component<{}, State> {
   }
 
   componentDidMount() {
+    windowSet(WINDOW_SIZES.small, this.scale);
+
     Byond.subscribeTo('props', this.handleProps);
     Byond.subscribeTo('force', this.handleForceSay);
     Byond.subscribeTo('open', this.handleOpen);
@@ -137,7 +141,7 @@ export class TguiSay extends Component<{}, State> {
     this.chatHistory.reset();
     this.channelIterator.reset();
     this.currentPrefix = null;
-    windowClose();
+    windowClose(this.scale);
   }
 
   handleEnter() {
@@ -262,14 +266,21 @@ export class TguiSay extends Component<{}, State> {
     }
     this.setState({ buttonContent: this.channelIterator.current() });
 
-    windowOpen(this.channelIterator.current());
+    windowOpen(this.channelIterator.current(), this.scale);
   };
 
   handleProps = (data: ByondProps) => {
-    const { maxLength, lightMode, extraChannels } = data;
+    const { maxLength, lightMode, extraChannels, scale } = data;
     this.maxLength = maxLength;
     this.lightMode = !!lightMode;
+    this.scale = !!scale;
     this.extraChannels = extraChannels;
+
+    if (!this.scale) {
+      window.document.body.style['zoom'] = `${100 / window.devicePixelRatio}%`;
+    } else {
+      window.document.body.style['zoom'] = null;
+    }
   };
 
   reset() {
@@ -293,7 +304,7 @@ export class TguiSay extends Component<{}, State> {
 
     if (this.state.size !== newSize) {
       this.setState({ size: newSize });
-      windowSet(newSize);
+      windowSet(newSize, this.scale);
     }
   }
 
