@@ -66,9 +66,9 @@
 /// Threshold for lunging at a target. Low as the alien wants to do this early.
 #define AGGRESSION_LUNGE 10
 /// Threshold for throwing humans around.
-#define AGGRESSION_FLING 35
+#define AGGRESSION_FLING 70
 /// Threshold for stabbing them with the tail.
-#define AGGRESSION_TAIL_STAB 70
+#define AGGRESSION_TAIL_STAB 50
 /// Threshold for headbiting/instakilling a downed human.
 #define AGGRESSION_HEADBITE 90
 
@@ -189,9 +189,9 @@
 
 /datum/action/xeno_action/activable/tail_stab/soldier /// Specific to soldiers, so that not all xenos get it.
 	default_ai_action = TRUE
-	ai_prob_chance = 65 //So they are not spamming it quite as often.
+	ai_prob_chance = 40 //So they are not spamming it quite as often.
 	charge_time = null /// AI soldiers can just use this whenever instead of having to charge it up.
-	xeno_cooldown = 11 SECONDS
+	xeno_cooldown = 15 SECONDS
 
 /datum/action/xeno_action/activable/tail_stab/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	/// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
@@ -200,8 +200,8 @@
 
 /datum/action/xeno_action/activable/fling/soldier
 	default_ai_action = TRUE
-	ai_prob_chance = 70
-	xeno_cooldown = 8 SECONDS
+	ai_prob_chance = 30
+	xeno_cooldown = 10 SECONDS
 
 /datum/action/xeno_action/activable/fling/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	/// We have a home turf to fling to.
