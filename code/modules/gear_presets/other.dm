@@ -828,7 +828,7 @@
 	assignment = "DUMMY"
 	rank = "DUMMY"
 	paygrades = list(PAY_SHORT_CCMO)
-	idtype = /obj/item/card/id/dogtag
+	idtype = null
 	uses_special_name = TRUE
 
 /datum/equipment_preset/other/professor_dummy/load_name(mob/living/carbon/human/new_human, randomise)

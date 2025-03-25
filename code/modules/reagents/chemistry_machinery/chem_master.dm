@@ -411,7 +411,7 @@
 		else
 			dat += "<A href='byond://?src=\ref[src];createglass=1;user=\ref[user]'>Create bottle (50 units max)</A>"
 	if(!condi)
-		show_browser(user, "[name] menu:<BR><BR>[dat]", name, "chem_master", "size=460x520")
+		show_browser(user, "[name] menu:<BR><BR>[dat]", name, "chem_master", width = 460, height = 520)
 	else
 		show_browser(user, "Condimaster menu:<BR><BR>[dat]", name, "chem_master")
 	return

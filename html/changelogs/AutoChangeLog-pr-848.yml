@@ -1,0 +1,4 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - bugfix: "UPP armor no_snow flag added"
