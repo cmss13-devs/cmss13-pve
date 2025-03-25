@@ -8042,69 +8042,66 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/cafeteria)
-"avl" = (
-/turf/open/floor/corsat/squares,
-/area/space)
 "avm" = (
 /obj/item/clothing/shoes/marine/rmc/knife,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avn" = (
 /obj/item/clothing/under/marine/veteran/pmc/commando,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avo" = (
 /obj/item/storage/backpack/commando,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avp" = (
 /obj/item/clothing/under/marine/veteran/pmc,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avq" = (
 /obj/item/clothing/gloves/marine/veteran/pmc/commando,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avr" = (
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/terminator,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avs" = (
 /obj/item/clothing/suit/storage/marine/veteran/pmc/commando,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avt" = (
 /obj/item/clothing/suit/storage/marine/veteran/pmc,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avu" = (
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avv" = (
 /obj/item/clothing/gloves/marine/veteran/pmc,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avw" = (
 /obj/item/clothing/head/helmet/marine/veteran/pmc/commando,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avx" = (
 /obj/item/device/encryptionkey/commando,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avy" = (
 /obj/item/clothing/head/helmet/marine/veteran/pmc,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avz" = (
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avA" = (
 /obj/item/clothing/mask/gas/pmc/leader,
 /turf/open/floor/corsat/squares,
-/area/space)
+/area/firefly/cafeteria)
 "avR" = (
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/supply)
@@ -47303,15 +47300,15 @@ fDZ
 fDZ
 "}
 (93,1,1) = {"
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
 fDZ
 fDZ
 fDZ
@@ -47495,15 +47492,15 @@ fDZ
 fDZ
 "}
 (94,1,1) = {"
-iQk
-avl
+acQ
+adk
 avq
 avm
-iQk
-avl
-avl
-avl
-iQk
+acQ
+adk
+adk
+adk
+acQ
 fDZ
 fDZ
 fDZ
@@ -47687,15 +47684,15 @@ fDZ
 fDZ
 "}
 (95,1,1) = {"
-iQk
+acQ
 avw
 avr
 avn
-iQk
-avl
-avl
-avl
-iQk
+acQ
+adk
+adk
+adk
+acQ
 fDZ
 fDZ
 fDZ
@@ -47879,15 +47876,15 @@ fDZ
 fDZ
 "}
 (96,1,1) = {"
-iQk
+acQ
 avx
 avs
 avo
-iQk
-avl
-avl
-avl
-iQk
+acQ
+adk
+adk
+adk
+acQ
 fDZ
 fDZ
 fDZ
@@ -48071,15 +48068,15 @@ fDZ
 fDZ
 "}
 (97,1,1) = {"
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
 fDZ
 fDZ
 fDZ
@@ -48263,15 +48260,15 @@ fDZ
 fDZ
 "}
 (98,1,1) = {"
-iQk
+acQ
 avy
 avt
 avm
-iQk
-avl
-avl
-avl
-iQk
+acQ
+adk
+adk
+adk
+acQ
 fDZ
 fDZ
 fDZ
@@ -48455,15 +48452,15 @@ fDZ
 fDZ
 "}
 (99,1,1) = {"
-iQk
+acQ
 avz
 avu
 avp
-iQk
-avl
-avl
-avl
-iQk
+acQ
+adk
+adk
+adk
+acQ
 fDZ
 fDZ
 fDZ
@@ -48647,15 +48644,15 @@ fDZ
 fDZ
 "}
 (100,1,1) = {"
-iQk
+acQ
 avA
 avv
-avl
-iQk
-avl
-avl
-avl
-iQk
+adk
+acQ
+adk
+adk
+adk
+acQ
 fDZ
 fDZ
 fDZ
@@ -48839,15 +48836,15 @@ fDZ
 fDZ
 "}
 (101,1,1) = {"
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
-iQk
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
 fDZ
 fDZ
 fDZ
