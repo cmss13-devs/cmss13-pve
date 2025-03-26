@@ -66,7 +66,7 @@
 /// Threshold for lunging at a target. Low as the alien wants to do this early.
 #define AGGRESSION_LUNGE 10
 /// Threshold for throwing humans around.
-#define AGGRESSION_FLING 70
+#define AGGRESSION_FLING 80
 /// Threshold for stabbing them with the tail.
 #define AGGRESSION_TAIL_STAB 50
 /// Threshold for headbiting/instakilling a downed human.
