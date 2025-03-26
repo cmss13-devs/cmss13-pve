@@ -13,7 +13,7 @@
 
 	activatable = TRUE
 
-	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke
+	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke/uppapc
 	max_clips = 5
 	use_muzzle_flash = FALSE
 
@@ -28,8 +28,6 @@
 	// big beefy chonk of metal
 	health = 1500
 	damage_multiplier = 0.05
-
-
 
 	accepted_hardpoints = list(
 		// primaries
