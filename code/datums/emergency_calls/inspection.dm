@@ -30,13 +30,13 @@
 
 	if(!leader && HAS_FLAG(H.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(H.client, list(JOB_WARDEN, JOB_CHIEF_POLICE), time_required_for_job))
 		leader = H
-		arm_equipment(H, /datum/equipment_preset/uscm_event/provost/inspector, TRUE, TRUE)
+		arm_equipment(H, /datum/equipment_preset/uscm/event/provost/inspector, TRUE, TRUE)
 		to_chat(H, SPAN_ROLE_HEADER("You are an Inspector of the USCM Provost Office!"))
 		to_chat(H, SPAN_ROLE_BODY("You are being dispatched to the [MAIN_SHIP_NAME] to investigate an undisclosed issue with ML enforcement. The Provost Office may provide more details, but you should head for the Brig to assess the situation."))
 		to_chat(H, SPAN_ROLE_BODY("You have the final say on ML enforcement in your AO, but are still obligated to follow it. Use this authority to set things right and make sure that justice is served!"))
 		to_chat(H, SPAN_WARNING("This role requires familiarity with Marine Law and Standard Operating Procedure. Ahelp if you have any questions or wish to surrender the character to someone else."))
 	else
-		arm_equipment(H, /datum/equipment_preset/uscm_event/provost/enforcer, TRUE, TRUE)
+		arm_equipment(H, /datum/equipment_preset/uscm/event/provost/enforcer, TRUE, TRUE)
 		to_chat(H, SPAN_ROLE_HEADER("You are an Enforcer of the USCM Provost Office!"))
 		to_chat(H, SPAN_ROLE_BODY("You are being assigned as part escort, part assistant and part law enforcer to the Inspector that is being dispatched to the [MAIN_SHIP_NAME]"))
 		to_chat(H, SPAN_ROLE_BODY("You are not expected to enforce ML on the ship, however the Inspector may ask you to perform MP duties as part of their investigation in which case you are obligated to act like any other MP."))
@@ -74,7 +74,7 @@
 
 	if(!leader && HAS_FLAG(H.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(H.client, list(JOB_SO), time_required_for_job))
 		leader = H
-		arm_equipment(H, /datum/equipment_preset/uscm/so, TRUE, TRUE)
+		arm_equipment(H, /datum/equipment_preset/uscm/ship/so, TRUE, TRUE)
 		to_chat(H, SPAN_ROLE_HEADER("You are an Inspector sent by the USCM High Command!"))
 		to_chat(H, SPAN_ROLE_BODY("An inspection is scheduled for the [MAIN_SHIP_NAME] during their current assignment. High Command may have other directives for you that they will relay via radio."))
 		to_chat(H, SPAN_ROLE_BODY("Tour the ship, monitor the organization, effectiveness and SOP compliance of its respective departments, interview its crew and find any issues. Relay the results of your inspection to both the Officer in Command of the ship and USCM High Command."))
@@ -109,13 +109,13 @@
 
 	if(!leader && HAS_FLAG(H.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(H.client, list(JOB_INTEL,JOB_WARDEN), time_required_for_job))
 		leader = H
-		arm_equipment(H, /datum/equipment_preset/uscm_event/uaac/tis/io, TRUE, TRUE)
+		arm_equipment(H, /datum/equipment_preset/uscm/event/uaac/tis/io, TRUE, TRUE)
 		to_chat(H, SPAN_ROLE_HEADER("You are an Intelligence Officer working for the UAAC-TIS!"))
 		to_chat(H, SPAN_ROLE_BODY("The UAAC-TIS, also known as the Three Eyes, is responsible for the collection, collation and delivery of Intelligence across UA assets. Your Handler will contact you about the exact nature of your mission on board the [MAIN_SHIP_NAME]."))
 		to_chat(H, SPAN_ROLE_BODY("While you do not have any direct authority over the USCM, the TIS mandate also allows you to investigate any perceived abuse of the Law, be it written or implied. Remember, you have the authority to make calls on ML should the crew of the Almayer request it or your Handler order you to resolve ML issues."))
 		to_chat(H, SPAN_WARNING("Remember that you cannot take antagonistic action unless specifically allowed by your Handler. You are also expected to know ML and SOP. Ahelp if you have any questions or wish to release this mob for other players."))
 	else
-		arm_equipment(H, /datum/equipment_preset/uscm_event/provost/enforcer, TRUE, TRUE)
+		arm_equipment(H, /datum/equipment_preset/uscm/event/provost/enforcer, TRUE, TRUE)
 		to_chat(H, SPAN_ROLE_HEADER("You are an Enforcer of the USCM Provost Office!"))
 		to_chat(H, SPAN_ROLE_BODY("You have been assigned as an escort for an UAAC-TIS Officer being dispatched to the [MAIN_SHIP_NAME]. Technically, the TIS has no direct authority over you, however you have been ordered to follow the instructions of the TIS Officer."))
 		to_chat(H, SPAN_ROLE_BODY("You are not expected to enforce ML on the ship and are generally expected to follow the instruction of the Officer you are protecting. Remember that should they start acting in a way that you believe puts the USCM in danger, you are not obligated to follow their orders and should report this to the Provost at once."))

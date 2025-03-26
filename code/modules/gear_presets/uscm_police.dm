@@ -1,7 +1,5 @@
 /datum/equipment_preset/uscm/police
-	name = "USCM (police roles)"
-	faction = FACTION_MARINE
-	minimum_age = 22
+	name = "USCM (Police Roles)"
 
 //*****************************************************************************************************/
 
@@ -40,7 +38,6 @@
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service)
 
 /datum/equipment_preset/uscm/police/mp/load_gear(mob/living/carbon/human/new_human)
-
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -130,7 +127,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
-
 
 //*****************************************************************************************************/
 

@@ -7,7 +7,7 @@
 	spawn_positions = 1
 	selection_class = "job_cl"
 	supervisors = "the acting commanding officer"
-	gear_preset = /datum/equipment_preset/uscm/reporter
+	gear_preset = /datum/equipment_preset/uscm/ship/reporter
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	selection_class = "job_cl"
 
@@ -17,7 +17,7 @@
 
 /datum/job/civilian/reporter/handle_job_options(option)
 	if(option != CIVILIAN_VARIANT)
-		gear_preset = /datum/equipment_preset/uscm/reporter_uscm
+		gear_preset = /datum/equipment_preset/uscm/ship/reporter_uscm
 		military = TRUE
 	else
 		gear_preset = initial(gear_preset)
