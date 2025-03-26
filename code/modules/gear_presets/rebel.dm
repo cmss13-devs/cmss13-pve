@@ -22,7 +22,12 @@
 	add_civilian_jacket(new_human)
 	//limbs
 	add_civilian_shoe(new_human)
-	add_survivor_weapon_pistol(new_human)
+	if(prob(90))
+		add_survivor_weapon_pistol(new_human)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39(new_human), WEAR_L_HAND)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39(new_human), WEAR_BACK)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39(new_human), WEAR_BACK)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
