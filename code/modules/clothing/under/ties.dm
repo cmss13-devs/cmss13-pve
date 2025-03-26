@@ -1484,6 +1484,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral/rmc
 	name = "\improper 67 Pattern Webbing"
+	icon_state = "rmc_webbing_small"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Royal Marine armor. This one is the slimmed down model designed for general purpose storage."
 
 //Partial Pre-load For Props

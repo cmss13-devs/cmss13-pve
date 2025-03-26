@@ -737,8 +737,8 @@
 //=======================================================================\\
 
 /obj/item/clothing/suit/marine/veteran/royal_marine
-	name = "\improper Kestrel armoured vest"
-	desc = "A customizable personal armor system used by the Three World Empire's Royal Marines Commandos. Designers from a Weyland-Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie, iterated on the USCMC's M3 pattern personal armor in their Tokonigara lab to create an armor systemed to suit the unique needs of the Three World Empire's smaller but better equipped Royal Marines."
+	name = "\improper Kestrel armoured cuirass"
+	desc = "Standard RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie. Advanced composite ballistic armor of the latest generation, integral biomonitoring system, and brackets for a load carrying system as well as the TNR Shoulder Lamp."
 	icon_state = "rmc_standard"
 	item_state = "rmc_standard"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
@@ -776,7 +776,7 @@
 	src.attach_accessory(null, greaves, TRUE)
 
 /obj/item/clothing/suit/marine/veteran/royal_marine/smartgun //Smartgun Spec Armor
-	name = "kestrel armoured smartgun harness"
+	name = "\improper Kestrel smartgun harness"
 	icon_state = "rmc_smartgun"
 	item_state = "rmc_smartgun"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
