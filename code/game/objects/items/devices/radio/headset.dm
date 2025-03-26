@@ -1274,3 +1274,15 @@
 	initial_keys = list(/obj/item/device/encryptionkey/guard)
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_MARINE
+
+/obj/item/device/radio/headset/distress/rebel_ua
+	name = "colony headset"
+	desc = "A standard headset used by colonists, but this one has been tampered with. To access the colony channel use :o."
+	frequency = PFA_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/colony)
+
+/obj/item/device/radio/headset/distress/rebel_twe
+	name = "colony headset"
+	desc = "A standard headset used by colonists, but this one has been tampered with. To access the colony channel use :o."
+	frequency = JSC_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/colony)

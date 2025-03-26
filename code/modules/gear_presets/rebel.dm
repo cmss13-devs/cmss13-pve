@@ -12,7 +12,7 @@
 	//back
 	add_random_satchel(new_human)
 	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
 	if(prob(65))
 		add_facewrap(new_human)
 	//head
@@ -46,7 +46,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
 	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
 	if(prob(45))
 		add_facewrap(new_human)
 	//head
@@ -84,7 +84,7 @@
 	//face
 	if(prob(45))
 		add_facewrap(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
 	//head
 	add_rebel_ua_helmet(new_human)
 	//uniform
@@ -117,7 +117,7 @@
 	//face
 	if(prob(45))
 		add_facewrap(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
 	//head
 	add_rebel_ua_helmet(new_human)
 	//uniform
@@ -155,7 +155,7 @@
 	//face
 	if(prob(45))
 		add_facewrap(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
 	//head
 	add_rebel_ua_helmet(new_human)
 	//uniform
@@ -204,7 +204,7 @@
 	//face
 	if(prob(45))
 		add_facewrap(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
 	//head
 	add_rebel_ua_helmet(new_human)
 	//uniform
@@ -251,7 +251,7 @@
 	//face
 	if(prob(45))
 		add_facewrap(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
 	//head
 	add_rebel_ua_helmet(new_human)
 	//uniform
@@ -279,7 +279,7 @@
 	new_human.undershirt = "undershirt"
 	//back
 	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
 	//head
 	//uniform
 	var/obj/item/clothing/under/marine/officer/boiler/uniform = new()
@@ -337,7 +337,7 @@
 	//face
 	if(prob(45))
 		add_facewrap(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
 	//head
 	add_rebel_ua_helmet(new_human)
 	//uniform
