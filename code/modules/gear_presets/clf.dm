@@ -92,7 +92,6 @@
 	if(prob(65))
 		add_facewrap(new_human)
 	//head
-
 	//uniform
 	add_civilian_uniform(new_human)
 	//jacket
@@ -139,7 +138,6 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/upp/at(new_human), WEAR_IN_BELT)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/upp/at(new_human), WEAR_IN_BELT)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/upp/at(new_human), WEAR_IN_BELT)
-
 	//limbs
 	add_rebel_twe_shoes(new_human)
 	new_human.put_in_active_hand(new /obj/item/weapon/gun/launcher/rocket/upp(new_human), WEAR_J_STORE)
