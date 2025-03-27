@@ -46,7 +46,7 @@
 	desc = "A support module for APCs that shoots flares."
 	icon = 'icons/obj/vehicles/hardpoints/uppapc.dmi'
 
-	icon_state = "flare_launcher"
+	icon_state = "upp_flare_launcher"
 	disp_icon = "uppapc"
 	disp_icon_state = "upp_flare_launcher"
 	activation_sounds = list('sound/weapons/gun_m92_attachable.ogg')
