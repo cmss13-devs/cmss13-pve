@@ -21,14 +21,60 @@
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
 	shrapnel_type = /obj/item/shard/shrapnel
 
+/particles/flamer
+	icon = 'icons/obj/items/weapons/projectiles.dmi'
+	icon_state = "flamer"
+	width = 500
+	height = 500
+	count = 5
+	spawning = 5
+	lifespan = 8
+	fade = generator(GEN_NUM, 5, 6)
+	grow = 0.1
+	drift = generator(GEN_CIRCLE, 0, 2)
+	scale = 0.6
+	spin = generator(GEN_NUM, -20, 20)
+	rotation = generator(GEN_NUM, -20, 20)
+	position = generator(GEN_CIRCLE, 3, 3)
+
+/particles/flamer/ricochet
+	scale = 1
+
+/particles/flamer_tank
+	icon = 'icons/obj/items/weapons/projectiles.dmi'
+	icon_state = "flamer"
+	width = 500
+	height = 500
+	count = 8
+	spawning = 8
+	lifespan = 10
+	fade = generator(GEN_NUM, 7, 8)
+	grow = 0.1
+	drift = generator(GEN_CIRCLE, 0, 0.75)
+	scale = 0.85
+	spin = generator(GEN_NUM, -20, 20)
+	rotation = generator(GEN_NUM, -20, 20)
+	position = generator(GEN_CIRCLE, 3, 3)
+
 /datum/ammo/flamethrower
 	name = "flame"
-	icon_state = "pulse0"
+	icon_state = null
 	damage_type = BURN
 	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_HITS_TARGET_TURF
+	attached_particle = /particles/flamer
+	max_range = 9
+	damage = 2
+	ricochet_projectiles_type = /datum/ammo/flamethrower/reflect
+	shell_speed = AMMO_SPEED_TIER_1
+	ammo_glowing = TRUE
+	bullet_light_range = 2
+	bullet_light_power = 1
 
-	max_range = 6
-	damage = 35
+/datum/ammo/flamethrower/on_bullet_generation(obj/projectile/generated_projectile, mob/bullet_generator)
+	var/datum/reagent/napalm/chemical = GLOB.chemical_reagents_list[flamer_reagent_id]
+	bullet_light_color = chemical.burncolor
+	icon_state = chemical.flame_particle_icon
+	particle_icon_state = chemical.flame_particle_icon
 
 /datum/ammo/flamethrower/set_bullet_traits()
 	. = ..()
@@ -44,13 +90,39 @@
 
 /datum/ammo/flamethrower/on_hit_turf(turf/T, obj/projectile/P)
 	drop_flame(T, P.weapon_cause_data)
+	if(ricochet_projectiles_type)
+		//napalm sticks to kids or somethin
+		switch(flamer_reagent_id)
+			if("stickynapalm")
+				return
+			if("napalmex")
+				return
+		if(T.density)
+			reflect(T, P, 5, rand(1,3))
+
+/datum/ammo/flamethrower/drop_flame(turf/T, datum/cause_data/cause_data)
+	. = ..()
+	new /obj/effect/temp_visual/flamer_explosion(T, icon_state)
 
 /datum/ammo/flamethrower/do_at_max_range(obj/projectile/P)
 	drop_flame(get_turf(P), P.weapon_cause_data)
 
+/datum/ammo/flamethrower/reflect
+	icon_state = null
+	attached_particle = /particles/flamer/ricochet
+	max_range = 4
+	damage = 2
+
+/datum/ammo/flamethrower/weak
+	max_range = 6
+	//ai cant be trusted
+	ricochet_projectiles_type = null
+
 /datum/ammo/flamethrower/tank_flamer
-	flamer_reagent_id = "highdamagenapalm"
-	max_range = 8
+	attached_particle = /particles/flamer_tank
+	max_range = 11
+	damage = 5
+	ricochet_projectiles_type = null
 
 /datum/ammo/flamethrower/tank_flamer/drop_flame(turf/turf, datum/cause_data/cause_data)
 	if(!istype(turf))
@@ -58,28 +130,15 @@
 
 	var/datum/reagent/napalm/high_damage/reagent = new()
 	new /obj/flamer_fire(turf, cause_data, reagent, 1)
-
-	var/datum/effect_system/smoke_spread/landingsmoke = new /datum/effect_system/smoke_spread
-	landingsmoke.set_up(1, 0, turf, null, 4, cause_data)
-	landingsmoke.start()
-	landingsmoke = null
-
-	max_range = 8
+	new /obj/effect/temp_visual/flamer_explosion(turf, icon_state)
 
 /datum/ammo/flamethrower/sentry_flamer
-	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME
+	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME|AMMO_HITS_TARGET_TURF
 	flamer_reagent_id = "napalmx"
 
-	accuracy = HIT_ACCURACY_TIER_8
-	accurate_range = 6
-	max_range = 12
-	shell_speed = AMMO_SPEED_TIER_3
-
-/datum/ammo/flamethrower/sentry_flamer/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
-	))
+	max_range = 9
+	ricochet_projectiles_type = null
+	hit_effect_color = "#00b8ff"
 
 /datum/ammo/flamethrower/sentry_flamer/glob
 	max_range = 14
@@ -102,6 +161,7 @@
 
 /datum/ammo/flamethrower/sentry_flamer/mini
 	name = "normal fire"
+	flamer_reagent_id = "utnapthal"
 
 /datum/ammo/flamethrower/sentry_flamer/mini/drop_flame(turf/T, datum/cause_data/cause_data)
 	if(!istype(T))
@@ -109,6 +169,7 @@
 	var/datum/reagent/napalm/ut/R = new()
 	R.durationfire = BURN_TIME_INSTANT
 	new /obj/flamer_fire(T, cause_data, R, 0)
+	new /obj/effect/temp_visual/flamer_explosion(T, icon_state)
 
 /datum/ammo/flamethrower/pve/drop_flame(turf/T, datum/cause_data/cause_data)
 	if(!istype(T))
@@ -119,7 +180,6 @@
 /datum/ammo/flamethrower/sentry_flamer/wy
 	name = "sticky fire"
 	flamer_reagent_id = "stickynapalm"
-	shell_speed = AMMO_SPEED_TIER_4
 
 /datum/ammo/flamethrower/sentry_flamer/upp
 	name = "gel fire"

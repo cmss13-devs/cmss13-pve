@@ -2196,10 +2196,10 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/civres_blue)
 "bHY" = (
-/obj/item/weapon/gun/flamer,
+/obj/item/weapon/gun/flamer/weak,
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/ammo_magazine/flamer_tank,
-/obj/item/ammo_magazine/flamer_tank,
+/obj/item/ammo_magazine/flamer_tank/weak,
+/obj/item/ammo_magazine/flamer_tank/weak,
 /obj/item/storage/pouch/flamertank,
 /turf/open/floor/prison,
 /area/fiorina/tumor/aux_engi)

@@ -2,22 +2,24 @@
 	name = "\improper UA 42-F Sentry Flamer"
 	icon = 'icons/obj/structures/machinery/defenses/flamer.dmi'
 	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with a special flamer and a 100 liters fuel tank."
-	fire_delay = 30
+	fire_delay = 2 SECONDS
 	ammo = new /obj/item/ammo_magazine/sentry_flamer
 	sentry_type = "uac_flamer"
 	handheld_type = /obj/item/defenses/handheld/sentry/flamer
 	health = 200
 	health_max = 200
+	burst = 25
+	sentry_range = 9
 
-	firing_sound = null
+	firing_sound = "gun_flamethrower"
 
 	choice_categories = list(
-		// SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_FULL_AUTO),
+		// SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_BURST, ROF_FULL_AUTO),
 		SENTRY_CATEGORY_IFF = list(FACTION_MARINE, SENTRY_FACTION_WEYLAND, SENTRY_FACTION_HUMAN),
 	)
 
 	selected_categories = list(
-		SENTRY_CATEGORY_ROF = ROF_SINGLE,
+		SENTRY_CATEGORY_ROF = ROF_BURST,
 		SENTRY_CATEGORY_IFF = FACTION_MARINE,
 	)
 
@@ -26,20 +28,13 @@
 		if(ROF_SINGLE)
 			accuracy_mult = 1
 			fire_delay = 4
+		if(ROF_BURST)
+			burst = 25
+			accuracy_mult = 0.6
+			fire_delay = 5
 		if(ROF_FULL_AUTO)
 			accuracy_mult = 0.1
 			fire_delay = 0.5
-
-/obj/structure/machinery/defenses/sentry/flamer/actual_fire(atom/A)
-	var/obj/projectile/P = new(create_cause_data(initial(name), owner_mob))
-	P.generate_bullet(new ammo.default_ammo)
-	GIVE_BULLET_TRAIT(P, /datum/element/bullet_trait_iff, faction_group)
-	P.fire_at(A, src, owner_mob, P.ammo.max_range, P.ammo.shell_speed, null)
-	ammo.current_rounds--
-	track_shot()
-	if(ammo.current_rounds == 0)
-		visible_message("[icon2html(src, viewers(src))] [SPAN_WARNING("The [name] beeps steadily and its ammo light blinks red.")]")
-		playsound(loc, 'sound/weapons/smg_empty_alarm.ogg', 25, 1)
 
 /obj/structure/machinery/defenses/sentry/flamer/destroyed_action()
 	visible_message("[icon2html(src, viewers(src))] [SPAN_WARNING("The [name] starts spitting out sparks and smoke!")]")
@@ -83,16 +78,15 @@
 	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the PMC."
 	health = 300
 	health_max = 300
-	fire_delay = 2 SECONDS
 	disassemble_time = 5 SECONDS
 	hack_time = 25 SECONDS
 	ammo = new /obj/item/ammo_magazine/sentry_flamer/wy
 	sentry_type = "wy_flamer"
-	sentry_range = 6
+	sentry_range = 9
 	omni_directional = TRUE
 	handheld_type = /obj/item/defenses/handheld/sentry/flamer/wy
 	selected_categories = list(
-		SENTRY_CATEGORY_ROF = ROF_SINGLE,
+		SENTRY_CATEGORY_ROF = ROF_BURST,
 		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
 	)
 
@@ -117,13 +111,12 @@
 	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the UPP."
 	health = 300
 	health_max = 300
-	fire_delay = 1 SECONDS
 	disassemble_time = 5 SECONDS
 	ammo = new /obj/item/ammo_magazine/sentry_flamer/upp
 	sentry_type = "upp_flamer"
 	handheld_type = /obj/item/defenses/handheld/sentry/flamer/upp
 	selected_categories = list(
-		SENTRY_CATEGORY_ROF = ROF_SINGLE,
+		SENTRY_CATEGORY_ROF = ROF_BURST,
 		SENTRY_CATEGORY_IFF = FACTION_UPP,
 	)
 

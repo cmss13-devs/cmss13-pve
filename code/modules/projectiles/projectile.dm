@@ -230,7 +230,7 @@
 		M.track_shot(weapon_cause_data.cause_name)
 	if(!suppress_light)
 		if(ammo.ammo_glowing)
-			set_light(1.5, 3, ammo.bullet_light_color)
+			set_light(ammo.bullet_light_range, ammo.bullet_light_power, ammo.bullet_light_color)
 
 	//If we have the right kind of ammo, we can fire several projectiles at once.
 	if(ammo.bonus_projectiles_amount && ammo.bonus_projectiles_type)
@@ -254,6 +254,10 @@
 		return // Hit something already?!
 	time_carry -= delta_time // Substract headstart from next tick
 
+	if(ammo.attached_particle)
+		particles = new ammo.attached_particle
+		if(ammo.particle_icon_state)
+			particles.icon_state = ammo.particle_icon_state
 	// Finally queue it to Subsystem for further processing
 	SSprojectiles.queue_projectile(src)
 
