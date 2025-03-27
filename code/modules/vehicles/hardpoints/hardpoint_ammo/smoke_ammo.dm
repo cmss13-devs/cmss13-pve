@@ -19,3 +19,8 @@
 	default_ammo = /datum/ammo/grenade_container/smoke/upp
 	gun_type = /obj/item/hardpoint/holder/apc_turret
 
+/obj/item/ammo_magazine/hardpoint/turret_smoke/incen
+	name = "Smoke Discharger Magazine"
+	desc = "A magazine of modified M60 incendiary smoke grenades used by the ATVs discharger array."
+	default_ammo = /datum/ammo/grenade_container/incen
+	max_rounds = 8
