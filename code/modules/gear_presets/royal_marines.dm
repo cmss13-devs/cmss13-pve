@@ -1,13 +1,12 @@
 /datum/equipment_preset/royal_marine
 	name = FACTION_TWE
 	faction = FACTION_TWE
-	faction_group = list(FACTION_LIST_TWE)
-	languages = list(LANGUAGE_ENGLISH)
+	faction_group = list(FACTION_TWE)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 	flags = EQUIPMENT_PRESET_EXTRA
 	origin_override = ORIGIN_TWE
 	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
 	idtype = /obj/item/card/id/dogtag
-
 
 //*****************************************************************************************************/
 /datum/equipment_preset/twe/royal_marine/load_id(mob/living/carbon/human/new_human, client/mob_client)
@@ -25,6 +24,7 @@
 	assignment = "Rifleman"
 	rank = JOB_TWE_RMC_RIFLEMAN
 	skills = /datum/skills/rmc
+	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
 
 /datum/equipment_preset/royal_marine/standard/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -137,6 +137,7 @@
 	assignment = "Smartgunner"
 	rank = JOB_TWE_RMC_SMARTGUNNER
 	skills = /datum/skills/rmc/smartgun
+	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
 
 /datum/equipment_preset/royal_marine/machinegun/load_gear(mob/living/carbon/human/new_human)
 	//back
