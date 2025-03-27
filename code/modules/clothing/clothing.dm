@@ -253,25 +253,22 @@
 		var/mob/M = src.loc
 		M.update_inv_wear_mask()
 
-/obj/item/clothing/mask/verb/toggle_internals()
-	set category = "Object"
-	set name = "Toggle Internals"
-	set src in usr
+/obj/item/clothing/mask/proc/toggle_internals(human, user)
 
 	if(!(flags_inventory & ALLOWINTERNALS))
-		to_chat(usr, SPAN_NOTICE("This mask doesnt support internals."))
+		to_chat(user, SPAN_NOTICE("This mask doesnt support internals."))
 		return
 
-	if(!iscarbon(usr))
+	if(!iscarbon(human))
 		return
 
-	var/mob/living/carbon/C = usr
+	var/mob/living/carbon/C = human
 	if(C.is_mob_incapacitated())
 		return
 
 	if(C.internal)
 		C.internal = null
-		to_chat(usr, SPAN_NOTICE("You close \the [src]'s release valve."))
+		to_chat(user, SPAN_NOTICE("You close \the [src]'s release valve."))
 		return FALSE
 	else
 		if(!ishuman(C))
@@ -301,14 +298,22 @@
 						bestpressure = t.pressure
 				//We've determined the best container now we set it as our internals
 				if(best)
-					to_chat(human_with_internals, SPAN_NOTICE("You choose the fullest [breathes=="oxygen" ? "oxygen" : addtext(" ",breathes)] tank you have, and open \the [best]'s valve."))
+					to_chat(user, SPAN_NOTICE("You choose the fullest [breathes=="oxygen" ? "oxygen" : addtext(" ",breathes)] tank you have, and open \the [best]'s valve."))
 					human_with_internals.internal = best
 					if(t.gas_type == GAS_TYPE_AIR)
 						t.distribute_pressure = ONE_ATMOSPHERE
 					else
 						t.distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 		if(!C.internal)
-			to_chat(C, SPAN_NOTICE("You don't have a[breathes=="oxygen" ? "n oxygen" : addtext(" ",breathes)] tank."))
+			to_chat(user, SPAN_NOTICE("You don't have a[breathes=="oxygen" ? "n oxygen" : addtext(" ",breathes)] tank."))
+
+
+/obj/item/clothing/mask/verb/toggle_internals_action()
+	set category = "Object"
+	set name = "Toggle Internals"
+	set src in usr
+
+	toggle_internals(usr, usr)
 
 
 //some gas masks modify the air that you breathe in.

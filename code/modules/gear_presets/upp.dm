@@ -216,10 +216,10 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/upp/rifleman/shotgun/eva
+/datum/equipment_preset/upp/shotgun/eva
 	name = "UPP Squad Shotgunner (Equipped, EVA)"
 
-/datum/equipment_preset/upp/rifleman/shotgun/eva/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/shotgun/eva/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back
