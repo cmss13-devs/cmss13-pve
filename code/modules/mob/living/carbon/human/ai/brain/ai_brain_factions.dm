@@ -126,7 +126,6 @@
 		"ATTACK!",
 		"Charge!",
 		"CHARGE!",
-		"Die with freedom!",
 		"NO MERCY!",
 		"No mercy!",
 		"NO QUARTER!",
@@ -156,7 +155,7 @@
 		"MOTHERFUCKER!",
 		"DAMN IT!",
 		"WE'RE HURT!",
-		"THEY GOT THEM-- IT GO UNPAID FOR!",
+		"THEY GOT THEM-- IT WON'T GO UNPAID FOR!",
 		"YOU'LL PAY, MOTHERFUCKER!",
 		"YOU'LL PAY, ASSHOLE!",
 		"THEY'RE DOWN!",
@@ -182,7 +181,6 @@
 		"DEFEND THE DREAM!",
 		"DEFEND THE REVOLUTION!",
 	)
-
 
 /datum/human_ai_faction/uarebels
 	faction = FACTION_INSURRECTIONUA
@@ -351,6 +349,7 @@
 		"FREEDOM!",
 		"FREEDOM FOREVER!",
 		"THUS ALWAYS TO TYRANTS!",
+		"THUS ALWAYS, COCKSUCKERS!",
 		"ALL THREATS; FOREIGN *AND* DOMESTIC!",
 	)
 
