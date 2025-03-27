@@ -587,6 +587,7 @@
 	has_tracker = TRUE
 	misc_tracking = TRUE
 	has_hud = TRUE	// Synth retains as they don't often wear helmets
+	hud_type = MOB_HUD_FACTION_UPP
 	locate_setting = TRACKER_ASL
 
 	inbuilt_tracking_options = list(
@@ -897,6 +898,7 @@
 /obj/item/device/radio/headset/distress/pmc/platoon
 	desc = "A special headset used by corporate PMCs.  Channels are as follows: #p - general, #y - WY."
 	initial_keys = list(/obj/item/device/encryptionkey/pmc)
+	has_hud = FALSE
 	locate_setting = TRACKER_SL
 	inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
@@ -905,10 +907,29 @@
 		"Landing Zone" = TRACKER_LZ
 	)
 
+/obj/item/device/radio/headset/distress/pmc/platoon/synth
+	name = "PMC synth headset"
+	desc = "A headset & HUD unit issued to corporate support synthetics. Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
+	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
+	volume = RADIO_VOLUME_IMPORTANT
+	has_tracker = TRUE
+	misc_tracking = TRUE
+	has_hud = TRUE	// Synth retains as they don't often wear helmets
+	hud_type = MOB_HUD_FACTION_PMC
+	locate_setting = TRACKER_ASL
+
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Platoon Sergeant" = TRACKER_ASL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
 /obj/item/device/radio/headset/distress/pmc/platoon/cmd
 	name = "overwatch headset"
-	desc = "A special headset used by PMC Overwatch.  Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
+	desc = "A special headset & HUD unit used to PMC Overwatch.  Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
 	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
+	has_hud = TRUE	// Fancy corporate shit
+	hud_type = MOB_HUD_FACTION_PMC
 
 /obj/item/device/radio/headset/distress/cbrn
 	name = "\improper CBRN headset"
