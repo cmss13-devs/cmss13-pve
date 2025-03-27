@@ -156,11 +156,11 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
 "adl" = (
-/obj/item/storage/box/MRE{
+/obj/item/storage/box/mre{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/storage/box/MRE{
+/obj/item/storage/box/mre{
 	pixel_x = -1;
 	pixel_y = -6
 	},

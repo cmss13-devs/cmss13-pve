@@ -25062,7 +25062,7 @@
 /area/strata/ag/exterior/nearlz2)
 "pKy" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
@@ -25184,7 +25184,7 @@
 /area/strata/ug/interior/jungle/platform/east/scrub)
 "pQO" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/item/tool/crowbar,
 /obj/structure/barricade/handrail/strata{
 	dir = 4

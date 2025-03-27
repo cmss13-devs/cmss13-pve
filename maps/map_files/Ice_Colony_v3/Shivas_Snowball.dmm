@@ -16725,7 +16725,7 @@
 /area/shiva/interior/caves/research_caves)
 "pLX" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/n_admin)
 "pMd" = (
