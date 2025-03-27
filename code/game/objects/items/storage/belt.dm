@@ -2162,7 +2162,7 @@
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	has_gamemode_skin = FALSE
 
-/obj/item/storage/belt/marine/rmc/rmc_nsg_ammo/fill_preset_inventory()
+/obj/item/storage/belt/marine/rmc/nsg/fill_preset_inventory()
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/nsg23(src)
 

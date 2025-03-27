@@ -574,7 +574,7 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/extended_barrel,
 	)
-	starting_attachment_types = list(/obj/item/attachable/lasersight)
+	starting_attachment_types = null
 
 /obj/item/weapon/gun/pistol/vp78/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 10, "rail_y" = 23, "under_x" = 22, "under_y" = 15, "stock_x" = 18, "stock_y" = 14)

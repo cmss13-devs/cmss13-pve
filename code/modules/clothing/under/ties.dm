@@ -907,6 +907,9 @@
 /obj/item/clothing/accessory/storage/smallpouch/upp
 	icon_state = "upp_pouch_alt"
 
+/obj/item/clothing/accessory/storage/smallpouch/rmc
+	icon_state = "rmc_pouch_alt"
+
 /obj/item/storage/internal/accessory/smallpouch
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_SMALL
@@ -1482,13 +1485,23 @@
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
-/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral/rmc
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc
 	name = "\improper 67 Pattern Webbing"
 	icon_state = "rmc_webbing_small"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Royal Marine armor. This one is the slimmed down model designed for general purpose storage."
 
+
 //Partial Pre-load For Props
 //===
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/rmc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/rmc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/clothing/mask/gas/pmc/royal_marine(src)
+
 /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1
 
