@@ -248,7 +248,7 @@
 
 /datum/ammo/bullet/rifle/heavy/impdet/dirty
 	name = "irradiated mpact-detonating 10x28 bullet"
-	damage = 35
+	damage = 45
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
 
 // RMC Smartgun
@@ -278,7 +278,7 @@
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet
 	name = "holo-targetting impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 28
+	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 

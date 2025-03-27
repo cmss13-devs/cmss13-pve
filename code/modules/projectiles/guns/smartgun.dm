@@ -62,7 +62,7 @@
 	var/accuracy_improvement = 0
 	var/auto_fire = 0
 	var/motion_detector = 0
-	var/drain = 50
+	var/drain = 75
 	var/range = 7
 	var/angle = 2
 	var/list/angle_list = list(180,135,90,60,30)
@@ -360,7 +360,7 @@
 		drain += 50
 	else if(ammo == ammo_secondary)
 		ammo = ammo_tertiary
-		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire impact-detonating rounds, which stagger most enemies on hit and slow them down.")
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire impact-detonating rounds, which stagger most human-sized hostiles on hit and slow them down.")
 		balloon_alert(user, "firing impact-detonating")
 		drain += 10
 	else
