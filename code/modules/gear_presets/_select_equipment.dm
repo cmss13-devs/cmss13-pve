@@ -1505,11 +1505,11 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 
 /datum/equipment_preset/proc/add_rmc_uniform(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/veteran/marsoc/uniform = new()
-	var/random_uniform = rand(1,6)
+	var/random_uniform = rand(1,10)
 	switch(random_uniform)
 		if(1)
 			uniform.roll_suit_jacket(new_human)
-		if(2 to 3)
+		if(2)
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
