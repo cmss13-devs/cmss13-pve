@@ -40,3 +40,4 @@
 /obj/item/reagent_container/food/snacks/mre_food
 	icon = 'icons/obj/items/food/mre_food/uscm.dmi'
 	bitesize = 3
+
