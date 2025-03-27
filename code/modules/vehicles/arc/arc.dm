@@ -153,7 +153,7 @@
 /obj/vehicle/multitile/arc/load_role_reserved_slots()
 	var/datum/role_reserved_slots/RRS = new
 	RRS.category_name = "CIC Officer"
-	RRS.roles = list(JOB_SO, JOB_SEA, JOB_XO, JOB_CO, JOB_GENERAL)
+	RRS.roles = list(JOB_SO, JOB_DI, JOB_XO, JOB_CO, JOB_GENERAL)
 	RRS.total = 2
 	role_reserved_slots += RRS
 

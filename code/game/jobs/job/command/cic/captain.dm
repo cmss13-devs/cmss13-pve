@@ -11,8 +11,6 @@
 	. = ..()
 	gear_preset_whitelist = list(
 		"[JOB_CO][WHITELIST_NORMAL]" = /datum/equipment_preset/uscm_ship/commander,
-		"[JOB_CO][WHITELIST_COUNCIL]" = /datum/equipment_preset/uscm_ship/commander/council,
-		"[JOB_CO][WHITELIST_LEADER]" = /datum/equipment_preset/uscm_ship/commander/council/plus
 	)
 
 /datum/job/command/commander/generate_entry_message()
