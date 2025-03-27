@@ -45,6 +45,8 @@
 		var/obj/item/clothing/mask/new_mask = pick(possible_masks)
 		new_human.equip_to_slot_or_del(new new_mask, WEAR_FACE)
 
+/datum/equipment_preset/usa/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_army_underwear(new_human)
 
 //*****************************************************************************************************/
 

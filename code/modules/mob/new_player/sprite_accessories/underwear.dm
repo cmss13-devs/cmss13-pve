@@ -63,46 +63,65 @@ GLOBAL_LIST_INIT_TYPED(underwear_restricted, /datum/sprite_accessory/underwear, 
 			name += " (Snow)"
 
 // Both
+
 /datum/sprite_accessory/underwear/boxers
-	name = "Boxers"
-	icon_state = "boxers"
-	gender = NEUTER
-	camo_conforming = TRUE
-
-/datum/sprite_accessory/underwear/briefs
-	name = "Briefs"
-	icon_state = "briefs"
-	gender = NEUTER
-	camo_conforming = TRUE
-
-/datum/sprite_accessory/underwear/lowriders
-	name = "Lowriders"
-	icon_state = "lowriders"
-	gender = NEUTER
-	camo_conforming = TRUE
-
-/datum/sprite_accessory/underwear/satin
-	name = "Satin"
-	icon_state = "satin"
-	gender = NEUTER
-	camo_conforming = TRUE
-
-/datum/sprite_accessory/underwear/tanga
-	name = "Tanga"
-	icon_state = "tanga"
-	gender = NEUTER
-	camo_conforming = TRUE
-
-/datum/sprite_accessory/underwear/boxers/white
 	name = "White Boxers"
 	icon_state = "white_boxers"
 	gender = NEUTER
 	camo_conforming = FALSE
-	restricted = TRUE
+
+/datum/sprite_accessory/underwear/boxers/black
+	name = "Black Boxers"
+	icon_state = "black_boxers"
+
+/datum/sprite_accessory/underwear/boxers/blue
+	name = "Blue Boxers"
+	icon_state = "blue_boxers"
+
+/datum/sprite_accessory/underwear/boxers/pink
+	name = "Pink Boxers"
+	icon_state = "pink_boxers"
+
+/datum/sprite_accessory/underwear/boxers/grey
+	name = "Grey Boxers"
+	icon_state = "grey_boxers"
 
 /datum/sprite_accessory/underwear/boxers/marine
-	name = "Marine Boxers"
+	name = "USCM Boxers"
 	icon_state = "marine_boxers"
+
+/datum/sprite_accessory/underwear/boxers/army
+	name = "USA Boxers"
+	icon_state = "army_boxers"
+	restricted = TRUE
+
+/datum/sprite_accessory/underwear/boxers/upp
+	name = "UPP Boxers"
+	icon_state = "upp_boxers"
+	restricted = TRUE
+
+/datum/sprite_accessory/underwear/briefs
+	name = "White Briefs"
+	icon_state = "white_briefs"
 	gender = NEUTER
 	camo_conforming = FALSE
-	restricted = TRUE
+
+/datum/sprite_accessory/underwear/briefs/black
+	name = "Black Briefs"
+	icon_state = "black_briefs"
+
+// Female
+
+/datum/sprite_accessory/underwear/panties
+	name = "White Panties"
+	icon_state = "white_satin"
+	gender = FEMALE
+	camo_conforming = FALSE
+
+/datum/sprite_accessory/underwear/panties/black
+	name = "Black Panties"
+	icon_state = "black_satin"
+
+/datum/sprite_accessory/underwear/panties/grey
+	name = "Grey Panties"
+	icon_state = "grey_satin"

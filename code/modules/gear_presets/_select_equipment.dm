@@ -7,6 +7,7 @@
 #define LATIN_AMERICAN_ETHNICITY "Latin-American"
 #define JAPANESE_ETHNICITY "Japanese"
 #define UPP_ETHNICITY "Progressive"
+#define BRAZIL_ETHNICITY "Brazilian"
 
 /datum/equipment_preset
 	var/name = "Preset"
@@ -115,6 +116,28 @@
 			else
 				new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
 			new_human.change_real_name(new_human, random_name)
+		if(BRAZIL_ETHNICITY)
+			new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")
+			random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male_brazilian : GLOB.first_names_female_brazilian)) + " " + capitalize(pick(GLOB.last_names_spanish))
+			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+			var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
+			var/hair_color = pick(hair_colors)
+			new_human.r_hair = hair_colors[hair_color][1]
+			new_human.g_hair = hair_colors[hair_color][2]
+			new_human.b_hair = hair_colors[hair_color][3]
+			new_human.r_facial = hair_colors[hair_color][1]
+			new_human.g_facial = hair_colors[hair_color][2]
+			new_human.b_facial = hair_colors[hair_color][3]
+			var/eye_color = pick(colors)
+			new_human.r_eyes = colors[eye_color][1]
+			new_human.g_eyes = colors[eye_color][2]
+			new_human.b_eyes = colors[eye_color][3]
+			if(new_human.gender == MALE)
+				new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
+				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+			else
+				new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
+			new_human.change_real_name(new_human, random_name)
 		if(JAPANESE_ETHNICITY)
 			new_human.skin_color = pick(50;"Pale 1",50;"Tan 1")
 			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10))
@@ -163,6 +186,7 @@
 			new_human.b_hair = hair_colors[hair_color][3]
 			new_human.r_facial = hair_colors[hair_color][1]
 			new_human.g_facial = hair_colors[hair_color][2]
+			new_human.b_facial = hair_colors[hair_color][3]
 			var/eye_color = pick(colors)
 			new_human.r_eyes = colors[eye_color][1]
 			new_human.g_eyes = colors[eye_color][2]
@@ -257,6 +281,10 @@
 /datum/equipment_preset/proc/load_skills(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.set_skills(skills)
 
+
+/datum/equipment_preset/proc/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	return
+
 /datum/equipment_preset/proc/load_id(mob/living/carbon/human/new_human, client/mob_client)
 	if(!idtype)
 		return
@@ -297,10 +325,10 @@
 /datum/equipment_preset/proc/load_preset(mob/living/carbon/human/new_human, randomise = FALSE, count_participant = FALSE, client/mob_client, show_job_gear = TRUE, late_join)
 	if(!new_human.hud_used)
 		new_human.create_hud()
-
 	load_race(new_human, mob_client)
 	if(randomise || uses_special_name)
 		load_name(new_human, randomise, mob_client)
+		load_underwear(new_human, randomise, mob_client)
 	else if(origin_override)
 		var/datum/origin/origin = GLOB.origins[origin_override]
 		new_human.name = origin.correct_name(new_human.name, new_human.gender)
@@ -1500,3 +1528,30 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/wypacket, WEAR_IN_HELMET)
 		if(6)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/arcturian_ace, WEAR_IN_HELMET)
+
+/datum/equipment_preset/proc/add_civilian_underwear(mob/living/carbon/human/new_human)
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
+
+
+/datum/equipment_preset/proc/add_uscm_underwear(mob/living/carbon/human/new_human)
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
+	else
+		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
+	new_human.underwear = "USCM Boxers"
+
+/datum/equipment_preset/proc/add_upp_underwear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.underwear = "UPP Boxers"
+
+/datum/equipment_preset/proc/add_army_underwear(mob/living/carbon/human/new_human)
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("US Army Undershirt","US Army Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
+	else
+		new_human.undershirt = pick("US Army Undershirt","US Army Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)")
+	new_human.underwear = "USA Boxers"
