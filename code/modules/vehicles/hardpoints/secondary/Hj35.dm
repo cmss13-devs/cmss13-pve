@@ -3,7 +3,7 @@
 	desc = "A secondary weapon for upp apc that shoots rockets"
 	icon = 'icons/obj/vehicles/hardpoints/uppapc.dmi'
 
-	icon_state = "tow_launcher"
+	icon_state = "hj35launcher"
 	disp_icon = "uppapc"
 	disp_icon_state = "apc_hj35"
 
