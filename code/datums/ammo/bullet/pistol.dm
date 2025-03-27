@@ -111,10 +111,13 @@
 /datum/ammo/bullet/pistol/tranq/upp
 	name = "tranquilizing 9x18 bullet"
 
-// Reskinned rubber bullet used for the ES-4 CL pistol.
-/datum/ammo/bullet/pistol/rubber/stun
-	name = "stun pistol bullet"
+/datum/ammo/bullet/pistol/electrostatic
+	name = "electrostatic pistol bullet"
+	damage = 15
 	sound_override = null
+
+/datum/ammo/bullet/pistol/electrostatic/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 // Used by M1911, Deagle and KT-42
 /datum/ammo/bullet/pistol/heavy
