@@ -229,7 +229,7 @@
 		/obj/item/storage/pill_bottle/packet/tramadol,
 		/obj/item/stack/medical/ointment,
 		/obj/item/stack/medical/splint,
-		/obj/item/device/healthanalyzer,
+		/obj/item/device/healthanalyzer/soul,
 		/obj/item/stack/medical/advanced/ointment,
 		/obj/item/stack/medical/advanced/bruise_pack,
 		/obj/item/tool/extinguisher/mini,
@@ -511,8 +511,8 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 	. = ..()
 	new /obj/item/clothing/glasses/hud/health(src)
 	new /obj/item/clothing/glasses/hud/health(src)
-	new /obj/item/device/healthanalyzer(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/device/healthanalyzer/soul(src)
+	new /obj/item/device/healthanalyzer/soul(src)
 	new /obj/item/storage/belt/medical/full(src)
 	new /obj/item/storage/belt/medical/lifesaver/full(src)
 	new /obj/item/storage/firstaid/regular(src)
