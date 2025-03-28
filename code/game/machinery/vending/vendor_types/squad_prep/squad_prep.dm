@@ -814,8 +814,8 @@
 		list("Medium Oxygen Tank", round(scale * 8), /obj/item/tank/emergency_oxygen/double, VENDOR_ITEM_RECOMMENDED),
 		list("Emergency Oxygen Tank", round(scale * 8), /obj/item/tank/emergency_oxygen/engi, VENDOR_ITEM_REGULAR),
 
-		list("AIR SUPPLY AND PROPULSION", -1, null, null),
-		list("Jetpack (Air)", round(scale * 5), /obj/item/tank/jetpack/air, VENDOR_ITEM_REGULAR),
+		//list("AIR SUPPLY AND PROPULSION", -1, null, null),
+		//list("Jetpack (Air)", round(scale * 5), /obj/item/tank/jetpack/air, VENDOR_ITEM_REGULAR),
 
 		list("FLARE AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 5), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
