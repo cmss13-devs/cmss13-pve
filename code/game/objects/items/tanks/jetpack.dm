@@ -15,7 +15,7 @@
 /datum/action/item_action/jetpack/toggle_stablization/New(Target, obj/item/holder)
 	. = ..()
 	name = "Toggle Jetpack Stablization"
-	action_icon_state = "jet_pack_stop"
+	action_icon_state = "smartpack_immobile"
 	button.name = name
 	button.overlays.Cut()
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
