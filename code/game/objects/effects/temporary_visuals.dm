@@ -270,6 +270,7 @@ GLOBAL_DATUM_INIT(flare_particles, /particles/flare_smoke, new)
 	///gib blood splatter particle holder
 	var/obj/effect/abstract/particle_holder/gib_splatter
 	duration = 1 SECONDS
+	alpha = 150
 
 /obj/effect/temp_visual/gib_particles/Initialize(mapload, gib_color)
 	. = ..()
