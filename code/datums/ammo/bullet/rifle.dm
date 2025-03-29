@@ -14,57 +14,17 @@
 	accuracy = HIT_ACCURACY_TIER_4
 	scatter = SCATTER_AMOUNT_TIER_10
 	shell_speed = AMMO_SPEED_TIER_6
-	effective_range_max = 7
+	effective_range_max = 8
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 	max_range = 24
 
-/datum/ammo/bullet/rifle/holo_target
-	name = "holo-targeting 10x24 bullet"
-	damage = 30
-	/// inflicts this many holo stacks per bullet hit
-	var/holo_stacks = 10
-	/// modifies the default cap limit of 100 by this amount
-	var/bonus_damage_cap_increase = 0
-	/// multiplies the default drain of 5 holo stacks per second by this amount
-	var/stack_loss_multiplier = 1
-
-/datum/ammo/bullet/rifle/holo_target/on_hit_mob(mob/hit_mob, obj/projectile/bullet)
-	. = ..()
-	hit_mob.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time, bonus_damage_cap_increase, stack_loss_multiplier)
-
-
-/datum/ammo/bullet/rifle/holo_target/hunting
-	name = "holo-targeting 10x24 bullet"
-	damage = 25
-	holo_stacks = 15
-
-/datum/ammo/bullet/rifle/holo_target/tracer
+/datum/ammo/bullet/rifle/tracer
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
 
-/datum/ammo/bullet/rifle/explosive
-	name = "explosive 10x24 bullet"
-	damage = 25
-	accurate_range = 22
-	accuracy = 0
-	shell_speed = AMMO_SPEED_TIER_4
-	damage_falloff = DAMAGE_FALLOFF_TIER_9
-
-/datum/ammo/bullet/rifle/explosive/on_hit_mob(mob/M, obj/projectile/P)
-	cell_explosion(get_turf(M), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, P.weapon_cause_data)
-
-/datum/ammo/bullet/rifle/explosive/on_hit_obj(obj/O, obj/projectile/P)
-	cell_explosion(get_turf(O), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, P.weapon_cause_data)
-
-/datum/ammo/bullet/rifle/explosive/on_hit_turf(turf/T, obj/projectile/P)
-	if(T.density)
-		cell_explosion(T, 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, P.weapon_cause_data)
-
-
 /datum/ammo/bullet/rifle/ap
 	name = "armor-piercing 10x24 bullet"
-
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_8
 
@@ -73,7 +33,14 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
 
-/datum/ammo/bullet/rifle/tracer
+/datum/ammo/bullet/rifle/heap
+	name = "high-explosive armor-piercing 10x24 bullet"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 50 //big damage, doesn't actually blow up because thats stupid.
+	penetration = ARMOR_PENETRATION_TIER_8
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_9
+
+/datum/ammo/bullet/rifle/heap/tracer
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
@@ -98,11 +65,9 @@
 	if(O.flags_obj & OBJ_ORGANIC)
 		P.damage *= organic_damage_mult
 
-
 /datum/ammo/bullet/rifle/ap/penetrating
 	name = "wall-penetrating 10x24 bullet"
 	shrapnel_chance = 0
-
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_10
 
@@ -112,25 +77,11 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
 	))
 
-
 /datum/ammo/bullet/rifle/le
 	name = "armor-shredding 10x24 bullet"
 	damage = 20
 	penetration = ARMOR_PENETRATION_TIER_4
 	pen_armor_punch = 5
-
-
-/datum/ammo/bullet/rifle/heap
-	name = "high-explosive armor-piercing 10x24 bullet"
-	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 55//big damage, doesn't actually blow up because thats stupid.
-	penetration = ARMOR_PENETRATION_TIER_8
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
-
-/datum/ammo/bullet/rifle/heap/tracer
-	icon_state = "bullet_red"
-	ammo_glowing = TRUE
-	bullet_light_color = COLOR_SOFT_RED
 
 /datum/ammo/bullet/rifle/rubber
 	name = "rubber 10x24 bullet"
@@ -148,24 +99,67 @@
 	accuracy = -HIT_ACCURACY_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_10
 
-
 /datum/ammo/bullet/rifle/incendiary/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
+/datum/ammo/bullet/rifle/holo_target
+	name = "holo-targeting 10x24 bullet"
+	damage = 30
+	/// inflicts this many holo stacks per bullet hit
+	var/holo_stacks = 10
+	/// modifies the default cap limit of 100 by this amount
+	var/bonus_damage_cap_increase = 0
+	/// multiplies the default drain of 5 holo stacks per second by this amount
+	var/stack_loss_multiplier = 1
+
+/datum/ammo/bullet/rifle/holo_target/on_hit_mob(mob/hit_mob, obj/projectile/bullet)
+	. = ..()
+	hit_mob.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time, bonus_damage_cap_increase, stack_loss_multiplier)
+
+/datum/ammo/bullet/rifle/holo_target/hunting
+	name = "holo-targeting 10x24 bullet"
+	damage = 25
+	holo_stacks = 15
+
+/datum/ammo/bullet/rifle/holo_target/tracer
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
+
+/datum/ammo/bullet/rifle/explosive
+	name = "explosive 10x24 bullet"
+	damage = 40
+	accurate_range = 22
+	accuracy = 0
+	shell_speed = AMMO_SPEED_TIER_4
+	damage_falloff = DAMAGE_FALLOFF_TIER_9
+
+/datum/ammo/bullet/rifle/explosive/on_hit_mob(mob/M, obj/projectile/P)
+	cell_explosion(get_turf(M), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, P.weapon_cause_data)
+
+/datum/ammo/bullet/rifle/explosive/on_hit_obj(obj/O, obj/projectile/P)
+	cell_explosion(get_turf(O), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, P.weapon_cause_data)
+
+/datum/ammo/bullet/rifle/explosive/on_hit_turf(turf/T, obj/projectile/P)
+	if(T.density)
+		cell_explosion(T, 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, P.weapon_cause_data)
+
 //====== 10X28 Smartgun
 
 /datum/ammo/bullet/rifle/heavy
 	name = "10x28 bullet"
-	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 55
-	penetration = ARMOR_PENETRATION_TIER_3
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 50
+	accurate_range = 16
+	penetration = ARMOR_PENETRATION_TIER_2
 	accuracy = HIT_ACCURACY_TIER_3
 	shell_speed = AMMO_SPEED_TIER_6
 	effective_range_max = 10
 	damage_falloff = DAMAGE_FALLOFF_TIER_9
+	max_range = 24
 
 //Only applicable for the M42A 'basic' magazines
 /datum/ammo/bullet/rifle/heavy/on_hit_mob(mob/M,obj/projectile/P)
@@ -191,12 +185,10 @@
 	bullet_light_color = COLOR_SOFT_RED
 
 /datum/ammo/bullet/rifle/heavy/heap
-	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	name = "high explosive armor-piercing 10x28 bullet"
-	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 70
+	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_10
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_9
 
 /datum/ammo/bullet/rifle/heavy/heap/tracer
 	icon_state = "bullet_red"
@@ -205,8 +197,8 @@
 
 /datum/ammo/bullet/rifle/heavy/du
 	name = "depleted uranium 10x28 bullet"
-
 	damage = 60
+	debilitate = list(0,0,0,3,0,0,0,1)
 	accurate_range_min = 4
 	penetration = ARMOR_PENETRATION_TIER_5
 	scatter = -SCATTER_AMOUNT_TIER_8
@@ -253,7 +245,6 @@
 /datum/ammo/bullet/rifle/heavy/holo_target/ap
 	name = "holo-targetting armor-piercing 10x28 bullet"
 	icon_state = "bullet"
-
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_8
@@ -264,7 +255,6 @@
 	name = "high explosive armor-piercing sniper bullet"
 	damage = 90 //match-grade munitions developing better velocity from the rifle
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SNIPER|AMMO_IGNORE_COVER
-
 	accurate_range_min = 4
 	accurate_range = 32
 	effective_range_max = 0
@@ -281,7 +271,6 @@
 	shrapnel_chance = 0
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SNIPER|AMMO_IGNORE_COVER
-
 	accurate_range_min = 4
 	accurate_range = 32
 	effective_range_max = 0
@@ -404,38 +393,26 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
-//====== 10x27 Type 71
+//====== 11.7x22 Type 71
 
 /datum/ammo/bullet/rifle/upp
-	name = "10x27 bullet"
-	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_2
-	accuracy = HIT_ACCURACY_TIER_3
-	shell_speed = AMMO_SPEED_TIER_6
-	effective_range_max = 10
-	damage_falloff = DAMAGE_FALLOFF_TIER_7
+	name = "11.7x22 bullet"
+	damage = 45
+	accuracy = HIT_ACCURACY_TIER_2
+	effective_range_max = 7
 
 /datum/ammo/bullet/rifle/upp/ap
-	name = "armor-piercing 10x27 bullet"
-	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_8
+	name = "armor-piercing 11.7x22 bullet"
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_7
 
 /datum/ammo/bullet/rifle/upp/heap
-	name = "high-explosive armor-piercing 10x27 bullet"
-	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 55
-	penetration = ARMOR_PENETRATION_TIER_8
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
+	name = "high-explosive armor-piercing 11.7x22 bullet"
 
 /datum/ammo/bullet/rifle/upp/heap/mg
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
-
-//10X31 AK500
-/datum/ammo/bullet/rifle/heavy/upp
-	name = "10x31 bullet"
 
 // Misc
 

@@ -20,13 +20,13 @@
 	current_rounds = 99999
 
 /obj/item/ammo_magazine/sentry/upp
-	name = "AK-500 ammo drum (10x31mm Caseless)"
-	desc = "An ammo drum of 10x31mm caseless rounds for the UPPAC 32-H sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
+	name = "AK-500 ammo drum (11.7x22mm Caseless)"
+	desc = "An ammo drum of 11.7x22mm caseless rounds for the UPPAC 32-H sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "sentry"
 	caliber = "10x31mm"
 	max_rounds = 350
-	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
+	default_ammo = /datum/ammo/bullet/rifle/upp
 
 /obj/item/ammo_magazine/sentry/shotgun
 	name = "12g buckshot drum"

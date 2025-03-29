@@ -1158,7 +1158,7 @@
 
 /obj/item/weapon/gun/rifle/type71
 	name = "\improper Type 71 pulse rifle"
-	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x27mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
+	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 11.7x22mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type71"
 	item_state = "type71"
@@ -1229,7 +1229,7 @@
 
 /obj/item/weapon/gun/rifle/type71/flamer
 	name = "\improper Type 71-F pulse rifle"
-	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x27mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This variant features an integrated incinerator unit."
+	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 11.7x22mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This variant features an integrated incinerator unit."
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness, // Rail
 		/obj/item/attachable/scope,
@@ -1258,7 +1258,7 @@
 
 /obj/item/weapon/gun/rifle/type71/carbine
 	name = "\improper Type 71 pulse carbine"
-	desc = "A carbine variant of the UPP's service rifle. Ergonomic, lightweight and chambered in 10x27mm, this variant has been designed to fire at a rate on-par with the M41A, leaving it less accurate but incredibly valuable in close quarters fighting."
+	desc = "A carbine variant of the UPP's service rifle. Ergonomic, lightweight and chambered in 11.7x22mm, this variant has been designed to fire at a rate on-par with the M41A, leaving it less accurate but incredibly valuable in close quarters fighting."
 	icon_state = "type71c"
 	item_state = "type71c"
 	aim_slowdown = SLOWDOWN_ADS_QUICK //Carbine is more lightweight
