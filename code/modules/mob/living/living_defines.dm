@@ -64,6 +64,8 @@
 	var/last_played_vent
 	var/is_ventcrawling = 0
 
+	var/can_spacewalk = 1
+
 	var/pull_speed = 0 //How much slower or faster this mob drags as a base
 
 	var/image/attack_icon = null //the image used as overlay on the things we attack.
