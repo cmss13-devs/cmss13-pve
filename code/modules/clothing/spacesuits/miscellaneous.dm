@@ -28,7 +28,7 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
-	light_range = 4
+	light_range = 6
 	light_power = 0.8
 	item_state = "pressure_white"
 	icon_state = "pressure_white"
