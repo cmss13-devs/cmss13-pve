@@ -352,8 +352,8 @@
 	name = "nutriment autoinjector"
 	chemname = "nutriment"
 	desc = "An autoinjector loaded with 3 uses of a nutrition replacement mix. Not as efficient as eating real food."
-	amount_per_transfer_from_this = 5
-	volume = 5 * INJECTOR_USES
+	amount_per_transfer_from_this = 8
+	volume = 8 * INJECTOR_USES
 
 
 /obj/item/reagent_container/hypospray/autoinjector/empty
