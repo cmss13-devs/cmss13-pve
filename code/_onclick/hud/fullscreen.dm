@@ -108,6 +108,12 @@
 	icon_state = "blackimageoverlay"
 	layer = INTRO_LAYER
 
+/atom/movable/screen/fullscreen/crt
+	icon_state = "crt"
+	layer = ABOVE_INTRO_LAYER
+	blend_mode = BLEND_OVERLAY
+	alpha = 150
+
 /atom/movable/screen/fullscreen/brute
 	icon_state = "brutedamageoverlay"
 	layer = FULLSCREEN_DAMAGE_LAYER
