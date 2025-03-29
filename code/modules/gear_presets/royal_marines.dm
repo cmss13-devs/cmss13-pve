@@ -43,8 +43,8 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_HEAD)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_IN_BACK)
 	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc, WEAR_ACCESSORY)
@@ -98,8 +98,8 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_HEAD)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_IN_BACK)
 	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc, WEAR_ACCESSORY)
@@ -158,8 +158,8 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_HEAD)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_IN_BACK)
 	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc, WEAR_ACCESSORY)
@@ -213,8 +213,8 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_HEAD)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_IN_BACK)
 	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine, WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc, WEAR_ACCESSORY)

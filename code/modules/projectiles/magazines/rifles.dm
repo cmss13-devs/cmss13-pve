@@ -431,7 +431,8 @@
 /obj/item/ammo_magazine/rifle/nsg23
 	name = "\improper NSG L23A1 magazine (10x24mm)"
 	desc = "An NSG L23A1 assault rifle magazine."
-	caliber = "10x24mm"
+	caliber = "8.5x33mm"
+	default_ammo = /datum/ammo/bullet/rifle/twe
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
