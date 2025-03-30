@@ -181,7 +181,27 @@
 		"DEFEND THE DREAM!",
 		"DEFEND THE REVOLUTION!",
 	)
-
+	reload_lines = list(
+		"RELOADING!",
+		"Reloading!",
+		"Swapping magazines!",
+		"Swapping mags!",
+		"Changing magazines!",
+		"Changing mags!",
+		"Cover me, reloading!",
+		"NEED COVERING FIRE!",
+		"COVER ME!",
+		"I HAVE TO RELOAD!",
+	)
+	reload_internal_mag_lines = list(
+		"RELOADING!",
+		"Reloading!",
+		"Cover me, reloading!",
+		"NEED COVERING FIRE!",
+		"COVER ME, RELOADING!",
+		"COVER ME!",
+		"I HAVE TO RELOAD!",
+	)
 /datum/human_ai_faction/uarebels
 	faction = FACTION_INSURRECTIONUA
 	friendly_factions = list(
