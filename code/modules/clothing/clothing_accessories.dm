@@ -82,15 +82,6 @@
 			return
 	return ..()
 
-
-/obj/item/clothing/clicked(mob/user, list/mods)
-	if(mods["alt"] && loc == user && !user.get_active_hand()) //To pass quick-draw attempts to storage. See storage.dm for explanation.
-		for(var/V in verbs)
-			if(V == /obj/item/clothing/suit/storage/verb/toggle_draw_mode) //So that alt-clicks are only intercepted for clothing items with internal storage and toggleable draw modes.
-				return
-	. = ..()
-
-
 /obj/item/clothing/get_examine_text(mob/user)
 	. = ..()
 	for(var/obj/item/clothing/accessory/A in accessories)

@@ -8,7 +8,7 @@
 	var/mob/alt
 
 	if(target == src) //Clicking self.
-		target = params2turf(click_parameters["screen-loc"], get_turf(src), client)
+		target = params2turf(click_parameters[SCREEN_LOC], get_turf(src), client)
 		tile_attack = TRUE
 
 	if(isturf(target) && tile_attack) //Attacks on turfs must be done indirectly through directional attacks or clicking own sprite.
@@ -130,7 +130,7 @@ so that it doesn't double up on the delays) so that it applies the delay immedia
 	if(selected_ability && shift_pressed == !middle_pref && middle_pressed == middle_pref)
 		if(istype(target, /atom/movable/screen))
 			// Click through the UI: Currently this won't attempt to sprite click any mob there, just the turf
-			var/turf/turf = params2turf(mods["screen-loc"], get_turf(client.eye), client)
+			var/turf/turf = params2turf(mods[SCREEN_LOC], get_turf(client.eye), client)
 			if(turf)
 				target = turf
 		if(selected_ability.use_ability_wrapper(target, mods))
