@@ -102,6 +102,7 @@
 	amount = 0
 	cleanable_type = CLEANABLE_BLOOD_DRIP
 	var/drips
+	allow_this_to_overlap = TRUE
 
 /obj/effect/decal/cleanable/blood/writing
 	icon_state = "tracks"
