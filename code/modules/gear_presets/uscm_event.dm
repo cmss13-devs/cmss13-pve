@@ -274,7 +274,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large/beanbag(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large/slug(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/shield/riot(new_human), WEAR_L_HAND)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/nade_box/ltl/tear_gas(new_human), WEAR_R_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/nade_box/ltl/tear_gas(new_human), WEAR_R_HAND)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flashbangs(new_human), WEAR_IN_BACK)

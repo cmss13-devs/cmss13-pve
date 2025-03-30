@@ -39089,8 +39089,8 @@
 /turf/open/floor/almayer/sterile_green_side/northeast,
 /area/almayer/medical/medical_science)
 "nVr" = (
-/obj/item/storage/box/nade_box/ltl/tear_gas,
-/obj/item/storage/box/nade_box/ltl/tear_gas{
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas{
 	pixel_x = 3;
 	pixel_y = 5
 	},
