@@ -1050,6 +1050,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Standard issue high molecular density polymer combat helmet and ballistic mask of the RMC. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "heavy_rmc"
 
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc/tactical
+	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider)
+	start_down_visor_type = /obj/item/device/helmet_visor/night_vision/marine_raider
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc/commando
 	name = "\improper M5X helmet"
 	desc = "A fully enclosed, armored helmet made to complete the M5X exoskeleton armor."

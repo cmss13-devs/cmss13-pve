@@ -167,6 +167,15 @@
 		/obj/item/attachable/stock/nsg23,
 	)
 
+/obj/item/weapon/gun/rifle/nsg23/preloaded/tactical
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/attached_gun/grenade/mk1/nsg/preloaded,
+		/obj/item/attachable/stock/nsg23,
+		/obj/item/attachable/suppressor,
+	)
+
+
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
 /obj/item/weapon/gun/rifle/m41aMK1/xm40
