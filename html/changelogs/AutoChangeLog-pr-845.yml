@@ -1,0 +1,4 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - rscadd: "Verb's new backpack sprite for the IMP"

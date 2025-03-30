@@ -13,6 +13,11 @@
 	icon_state = "pwall"
 	},
 /area/space)
+"aad" = (
+/obj/structure/surface/rack,
+/obj/item/fishing_pole,
+/turf/open/floor/vault,
+/area/lv624/lazarus/quartstorage)
 "aag" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_east_caves)
@@ -1954,18 +1959,14 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
 /area/lv624/ground/jungle/south_west_jungle)
 "auE" = (
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "auM" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirtgrassborder/south,
 /area/lv624/ground/jungle/east_jungle)
 "auO" = (
-/obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
-	name = "\improper River Snack Bar";
-	req_access_txt = "100";
-	req_one_access = null
-	},
+/obj/structure/curtain/red,
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "auP" = (
@@ -1974,7 +1975,7 @@
 /area/lv624/ground/river/west_river)
 "auZ" = (
 /obj/item/toy/inflatable_duck,
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "ave" = (
 /obj/structure/surface/rack,
@@ -2013,7 +2014,7 @@
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "avw" = (
 /obj/effect/landmark/good_item,
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "avy" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
@@ -3533,7 +3534,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_east_caves)
 "aPR" = (
-/obj/structure/lz_sign/lazarus_sign{
+/obj/structure/lz_sign/lazarus_sign/damaged{
 	density = 0
 	},
 /turf/open/gm/grass/grass1,
@@ -13046,7 +13047,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/river/west_river)
 "nsA" = (
-/obj/structure/lz_sign/lazarus_sign{
+/obj/structure/lz_sign/lazarus_sign/damaged{
 	layer = 4
 	},
 /turf/open/gm/dirt,
@@ -53362,7 +53363,7 @@ lyS
 ati
 ati
 ati
-wWs
+aad
 ati
 wWs
 ati
