@@ -203,24 +203,6 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
 
-/datum/ammo/bullet/rifle/heavy/du
-	name = "depleted uranium 10x28 bullet"
-
-	damage = 60
-	accurate_range_min = 4
-	penetration = ARMOR_PENETRATION_TIER_5
-	scatter = -SCATTER_AMOUNT_TIER_8
-
-/datum/ammo/bullet/rifle/heavy/du/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
-	))
-
-/datum/ammo/bullet/rifle/heavy/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
-	target.AddComponent(/datum/component/status_effect/toxic_buildup)
-	knockback(target, fired_proj, max_range = 2)
-
 // Terminator Smartgun
 
 /datum/ammo/bullet/rifle/heavy/dirty
@@ -397,6 +379,25 @@
 			living_mob.apply_effect(2, SLOW)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
+
+/datum/ammo/bullet/rifle/heavy/spec/du
+	name = "high velocity depleted uranium 10x28 bullet"
+
+	damage = 60
+	accurate_range_min = 4
+	penetration = ARMOR_PENETRATION_TIER_5
+	scatter = -SCATTER_AMOUNT_TIER_8
+
+/datum/ammo/bullet/rifle/heavy/spec/du/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/rifle/heavy/spec/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	target.AddComponent(/datum/component/status_effect/toxic_buildup)
+	knockback(target, fired_proj, max_range = 2)
+
 
 /datum/ammo/bullet/rifle/heavy/iff/set_bullet_traits()
 	. = ..()

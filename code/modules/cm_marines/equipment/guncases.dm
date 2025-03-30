@@ -296,20 +296,20 @@
 
 /obj/item/storage/box/guncase/heavy/m49a_pve
 	name = "\improper M49A6 battle rifle case"
-	desc = "A large case for storing an M49A6, a modified USCM battle rifle equipped with depleted uranium bullets."
+	desc = "A large case for storing an M49A6, a modified USCM battle rifle capable of firing the brutal A19 depleted uranium bullets."
 	icon_state = "r2case"
-	storage_slots = 7
-	can_hold = list(/obj/item/weapon/gun/rifle/m49a/pve, /obj/item/ammo_magazine/rifle/m49a/pve)
+	storage_slots = 8
+	can_hold = list(/obj/item/weapon/gun/rifle/m49a/pve, /obj/item/ammo_magazine/rifle/m49a/custom, /obj/item/ammo_magazine/rifle/m49a/custom/impact, /obj/item/ammo_magazine/rifle/m49a/custom/incendiary, /obj/item/ammo_magazine/rifle/m49a/custom/pve)
 
 /obj/item/storage/box/guncase/heavy/m49a_pve/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/pve(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/pve(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/impact(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
 
 /obj/item/storage/box/guncase/heavy/m49a_pve/update_icon()
 	overlays.Cut()
@@ -318,7 +318,7 @@
 	else
 		overlays += image(src.icon, "r2case_lid")
 		return
-	if(locate(/obj/item/weapon/gun/rifle/m49a/pve/unloaded) in src.contents)
+	if(locate(/obj/item/weapon/gun/rifle/m49a/pve) in src.contents)
 		overlays += image(src.icon, "+r2")
 
 /obj/item/storage/box/guncase/heavy/hpr

@@ -218,7 +218,7 @@
 	name = "magazine box (A19 DU M49A x 16)"
 	overlay_ammo_type = "_toxin"
 	overlay_content = "_incen"
-	magazine_type = /obj/item/ammo_magazine/rifle/m49a/pve
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/pve
 
 /obj/item/ammo_box/magazine/m49a/a19/pve/empty
 	empty = TRUE
