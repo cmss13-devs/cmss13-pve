@@ -41,6 +41,7 @@
 	desc = "Tanky support unit. The multipurpose synth is a neutered version of the combat synth that can’t use firearms. Combat synth recommended to be used instead."
 	path = /datum/equipment_preset/clf/synth
 
+
 /datum/human_ai_equipment_preset/clf/leader
 	name = "CLF Leader"
 	desc = "A local commander of the CLF’s forces. They may be in charge of handling a squad, or even an entire colony depending on their distance from the cell’s base."
@@ -50,3 +51,24 @@
 	name = "CLF Cell Commander"
 	desc = "The head honcho of the CLF’s operations in a given area. The cell is led by one of these guys. Their smartgun lets them shred anyone in their path. Use sparingly."
 	path = /datum/equipment_preset/clf/commander
+
+/datum/human_ai_equipment_preset/clf/eva_shotgun
+	name = "CLF Shotgunner (Eva)"
+	desc = "Close-quarters specialist. Fairly poorly equipped except for a shotgun, which can shred marines who get too close."
+	path = /datum/equipment_preset/clf/soldier/eva
+
+/datum/human_ai_equipment_preset/clf/eva_rifle
+	name = "CLF Rifleman (Eva)"
+	desc = "Armed with a AR10. Relatively high damage output."
+	path = /datum/equipment_preset/clf/soldier/eva/rifle
+
+/datum/human_ai_equipment_preset/clf/eva_sniper
+	name = "CLF Sniper (Eva)"
+	desc = "Bolt-action. Sniper."
+	path = /datum/equipment_preset/clf/soldier/eva/sniper
+
+/datum/human_ai_equipment_preset/clf/eva_engie
+	name = "CLF Engineer (Eva)"
+	desc = "Engineer. ARMED WITH FLAMER."
+	path = /datum/equipment_preset/clf/engineer/eva
+
