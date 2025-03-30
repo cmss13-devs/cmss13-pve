@@ -81,7 +81,7 @@
 /obj/item/device/helmet_visor/twe
 	name = "squad optic"
 	desc = "An insertable visor HUD into a standard RMC helmet."
-	hud_type = MOB_HUD_FACTION_TWE
+	hud_type = list(MOB_HUD_FACTION_TWE)
 
 /obj/item/device/helmet_visor/medical
 	name = "basic medical optic"
@@ -348,7 +348,7 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider/rmc
 	name = "advanced night vision optic"
 	desc = "An insertable visor HUD into a standard RMC helmet. This type gives a form of night vision and is standard issue in special forces units."
-	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_TWE)
 	helmet_overlay = "nvg_sight_right_raider"
 	power_use = 0
 	visor_glows = FALSE
