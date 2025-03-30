@@ -1723,12 +1723,12 @@
 /area/golden_arrow/medical)
 "lU" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_sergeant)
 "lW" = (
