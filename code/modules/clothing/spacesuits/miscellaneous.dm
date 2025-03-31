@@ -254,9 +254,11 @@
 
 /obj/item/clothing/head/helmet/space/pressure/uscm/Initialize(mapload)
 	camera = new /obj/structure/machinery/camera/overwatch(src)
+	return ..()
 
-/obj/item/clothing/head/helmet/space/pressure/Destroy(force)
+/obj/item/clothing/head/helmet/space/pressure/uscm/Destroy(force)
 	QDEL_NULL(camera)
+	return ..()
 
 /obj/item/clothing/suit/space/pressure/uscm
 	name = "\improper USCM MK.35 pressure suit"
