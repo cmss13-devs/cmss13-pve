@@ -342,7 +342,7 @@
 			SPAN_WARNING("You see a gush of blood spray from [src]'s [O.display_name]!"),
 			SPAN_HIGHDANGER("Blood sprays from your [O.display_name]!"),
 			SPAN_HIGHDANGER("You hear something spray violently!"))
-	for(var/i = 1 to (src.blood_volume / 170))
+	for(var/i = 1 to (floor(src.blood_volume / 160)))
 		var/reverse_odd_numbered_decals
 		if(i % 2 != 0)
 			reverse_odd_numbered_decals = 1
@@ -381,13 +381,17 @@
 		var/obj/effect/decal/cleanable/blood/squirt/blood_spraying = new /obj/effect/decal/cleanable/blood/squirt(new_turf)
 		blood_spraying.pixel_x = decal_pixel_x % world.icon_size
 		blood_spraying.pixel_y = decal_pixel_y % world.icon_size
-
+		if(prob(50))
+			blood_spraying.apply_transform(matrix(1, 0, 0, -1, 0, 0))
 		blood_spraying.apply_transform(turn(transform, angle))
 
-		if(!src.body_position == LYING_DOWN) // I don't know why it turns 90° when the human is down. Don't ask.
-			blood_spraying.icon_state = "squirt4"
+		if(src.body_position == LYING_DOWN) // I don't know why it turns 90° when the human is down. Don't ask
+			blood_spraying.apply_transform(turn(transform, angle+90))
+
+		if(i == floor((src.blood_volume / 170)))
+			blood_spraying.icon_state = "spatter4"
 		else
-			blood_spraying.icon_state = "squirt1"
+			blood_spraying.icon_state = "squirt4"
 		blood_spraying.color = get_blood_color()
 		blood_spraying.pixel_x = blood_spraying.pixel_x + rand(-1, 1)
 		blood_spraying.pixel_y = blood_spraying.pixel_y + rand(-1, 1)
