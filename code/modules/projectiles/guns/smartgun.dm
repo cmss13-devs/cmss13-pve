@@ -36,7 +36,7 @@
 		/obj/item/attachable/flashlight,
 	)
 
-	ammo = /datum/ammo/bullet/rifle/heavy
+	ammo = /datum/ammo/bullet/rifle/heavy/tracer
 	actions_types = list(
 		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
 		/datum/action/item_action/smartgun/toggle_ammo_type,
@@ -54,8 +54,8 @@
 	/// Whether the smartgun requires a harness to use
 	var/requires_harness = TRUE
 
-	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy //Toggled ammo type
-	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap //Toggled ammo type
+	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy/tracer //Toggled ammo type
+	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/tracer //Toggled ammo type
 	var/iff_enabled = TRUE //Begin with the safety on.
 	var/secondary_toggled = 0 //which ammo we use
 	var/recoil_compensation = 0
@@ -87,7 +87,7 @@
 	. = ..()
 
 /obj/item/weapon/gun/smartgun/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 17, "rail_y" = 18, "under_x" = 22, "under_y" = 14, "stock_x" = 22, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 17, "rail_y" = 18, "under_x" = 22, "under_y" = 14, "stock_x" = 22, "stock_y" = 14, , "side_rail_x" = 17, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/smartgun/set_gun_config_values()
 	..()

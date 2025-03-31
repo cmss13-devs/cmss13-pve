@@ -29,7 +29,7 @@
 	if(length(ties))
 		.+= " with [english_list(ties)] attached"
 	if(LAZYLEN(accessories) > length(ties))
-		.+= ". <a href='?src=\ref[src];list_acc=1'>\[See accessories\]</a>"
+		.+= ". <a href='byond://?src=\ref[src];list_acc=1'>\[See accessories\]</a>"
 
 /obj/item/clothing/Topic(href, href_list)
 	. = ..()
@@ -211,6 +211,8 @@
 	flags_armor_protection = BODY_FLAG_HANDS
 	flags_equip_slot = SLOT_HANDS
 	attack_verb = list("challenged")
+	valid_accessory_slots = list(ACCESSORY_SLOT_WRIST_L, ACCESSORY_SLOT_WRIST_R)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_WRIST_L, ACCESSORY_SLOT_WRIST_R) // To prevent infinitely putting watches/wrist accessories on your gloves. That can be reserved for uniforms, where you have the whole ARM to put shit on
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/hands_monkey.dmi')
 	blood_overlay_type = "hands"
 	var/gloves_blood_amt = 0 //taken from blood.dm
@@ -358,6 +360,10 @@
 		return FALSE
 	// If there's already an item inside.
 	if(stored_item)
+		return FALSE
+	// If the item's too big to fit in the shoes
+	if(is_type_in_typecache(item_to_insert, allowed_items_typecache) && item_to_insert.w_class >= SIZE_MEDIUM)
+		to_chat(usr, SPAN_DANGER("That won't fit in the footwear!"))
 		return FALSE
 	// If `item_to_insert` isn't in the whitelist.
 	if(!is_type_in_typecache(item_to_insert, allowed_items_typecache))

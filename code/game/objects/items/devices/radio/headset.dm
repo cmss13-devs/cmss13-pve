@@ -23,7 +23,7 @@
 	var/list/inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
 		"Section Sergeant" = TRACKER_SL,
-		"Squad Sergeant" = TRACKER_FTL,
+		"Squad Leader" = TRACKER_FTL,
 		"Landing Zone" = TRACKER_LZ
 	)
 	var/list/tracking_options = list()
@@ -420,8 +420,8 @@
 		locate_setting = tracking_options["Section Sergeant"]
 		return
 
-	if(((user in user.assigned_squad?.fireteams["SQ1"]) || (user in user.assigned_squad?.fireteams["SQ2"])) && ("Squad Sergeant" in tracking_options))
-		locate_setting = tracking_options["Squad Sergeant"]
+	if(((user in user.assigned_squad?.fireteams["SQ1"]) || (user in user.assigned_squad?.fireteams["SQ2"])) && ("Squad Leader" in tracking_options))
+		locate_setting = tracking_options["Squad Leader"]
 		return
 
 /obj/item/device/radio/headset/almayer/verb/enter_tree()
@@ -975,6 +975,22 @@
 		"Corporate Liaison" = TRACKER_CL
 	)
 
+/obj/item/device/radio/headset/distress/pmc/platoon
+	desc = "A special headset used by corporate PMCs.  Channels are as follows: #p - general, #y - WY."
+	initial_keys = list(/obj/item/device/encryptionkey/pmc)
+	locate_setting = TRACKER_SL
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Platoon Sergeant" = TRACKER_SL,
+		"Squad Sergeant" = TRACKER_FTL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
+/obj/item/device/radio/headset/distress/pmc/platoon/cmd
+	name = "overwatch headset"
+	desc = "A special headset used by PMC Overwatch.  Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
+	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
+
 /obj/item/device/radio/headset/distress/cbrn
 	name = "\improper CBRN headset"
 	desc = "A headset given to CBRN marines. Channels are as follows: :g - public, :v - marine command, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel"
@@ -1107,7 +1123,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom)
 
 /obj/item/device/radio/headset/distress/contractor
-	name = "VAI Headset"
+	name = "VAI headset"
 	desc = "A special headset used by Vanguard's Arrow Incorporated mercenaries, features a non-standard brace. Channels are as follows: :g - public, :v - marine command, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel."
 	frequency = VAI_FREQ
 	icon_state = "vai_headset"
@@ -1115,7 +1131,7 @@
 	has_hud = TRUE
 
 /obj/item/device/radio/headset/distress/royal_marine
-	name = "Royal Marine Headset"
+	name = "Royal Marine headset"
 	desc = "A sleek headset used by the Royal Marines Commando. Low profile enough to fit under their unique helmets."
 	frequency = RMC_FREQ
 	icon_state = "vai_headset"
@@ -1126,8 +1142,8 @@
 
 //CMB Headsets
 /obj/item/device/radio/headset/distress/CMB
-	name = "\improper CMB Earpiece"
-	desc = "A sleek headset used by The Colonial Marshal Bureau, crafted in Sol. Low profile and comfortable. No one is above the law. Featured channels include: ; - CMB, :o - Colony, :g - public, :v - marine command, :m - medbay, :t - intel."
+	name = "\improper CMB earpiece"
+	desc = "A low-profile earpiece used by the Colonial Marshal Bureau. Featured channels include: ; - CMB, :o - Colony, :g - public, :v - marine command, :m - medbay, :t - intel."
 	frequency = CMB_FREQ
 	icon_state = "cmb_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
@@ -1135,12 +1151,12 @@
 	hud_type = MOB_HUD_FACTION_MARINE
 
 /obj/item/device/radio/headset/distress/CMB/limited
-	name = "\improper Damaged CMB Earpiece"
-	desc = "A sleek headset used by The Colonial Marshal Bureau, crafted in Sol. Low profile and comfortable. No one is above the law. This one is damaged, so the channels are: ; - CMB, :o - Colony."
+	name = "\improper CMB earpiece"
+	desc = "A low-profile earpiece used by the Colonial Marshal Bureau. The channels are: ; - CMB, :o - Colony."
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 
 /obj/item/device/radio/headset/distress/CMB/ICC
-	name = "\improper ICC Liaison Headset"
+	name = "\improper ICC Liaison headset"
 	desc = "An expensive headset used by The Interstellar Commerce Commission. This one in particular has a liaison chip with the CMB. Featured channels include: ; - CMB, :o - Colony, :g - public, :v - marine command, :m - medbay, :t - intel, :y - Weyland-Yutani."
 	icon_state = "wy_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/cmb)

@@ -146,8 +146,8 @@
 //SODA
 
 /obj/item/reagent_container/food/drinks/cans/classcola
-	name = "\improper Classic Cola"
-	desc = "A classic cola with a taste that's been around for centuries. Nobody can beat it."
+	name = "\improper Coca-Cola"
+	desc = "Victor of the Cola Wars, this beverage is the most popular soft drink in the UA and much of the TWE."
 	icon_state = "cola"
 	center_of_mass = "x=16;y=10"
 
@@ -155,9 +155,18 @@
 	. = ..()
 	reagents.add_reagent("cola", 30)
 
+/obj/item/reagent_container/food/drinks/cans/pepsi
+	name = "\improper Pepsi"
+	desc = "The Cola Wars left it defeated, but this beverage retains its place as second-most popular soft drink in the UA."
+	icon_state = "pepsi"
+
+/obj/item/reagent_container/food/drinks/cans/pepsi/Initialize()
+	. = ..()
+	reagents.add_reagent("pepsi", 30)
+
 /obj/item/reagent_container/food/drinks/cans/space_mountain_wind
-	name = "\improper Mountain Wind"
-	desc = "Blows right through you like a space wind."
+	name = "\improper Mountain Dew"
+	desc = "For the discerning gamer."
 	icon_state = "space_mountain_wind"
 	center_of_mass = "x=16;y=10"
 
@@ -177,8 +186,8 @@
 	reagents.add_reagent("thirteenloko", 30)
 
 /obj/item/reagent_container/food/drinks/cans/dr_gibb
-	name = "\improper Dr. Gibb"
-	desc = "A delicious mixture of 42 different flavors of chemicals that you can't pronounce."
+	name = "\improper Dr Pepper"
+	desc = "A mixture of 23 different flavors, proving its not about quantity."
 	icon_state = "dr_gibb"
 	center_of_mass = "x=16;y=10"
 
@@ -187,8 +196,8 @@
 	reagents.add_reagent("dr_gibb", 30)
 
 /obj/item/reagent_container/food/drinks/cans/starkist
-	name = "\improper Star-kist"
-	desc = "The taste of a star in liquid form. And, a bit of tuna...?"
+	name = "\improper Sunkist"
+	desc = "Despite tasting ostensibly like carbonated orange juice, it holds no vitamin C content."
 	icon_state = "starkist"
 	center_of_mass = "x=16;y=10"
 
@@ -198,8 +207,8 @@
 	reagents.add_reagent("orangejuice", 15)
 
 /obj/item/reagent_container/food/drinks/cans/space_up
-	name = "\improper Space-Up"
-	desc = "Tastes like a hull breach in your mouth."
+	name = "\improper 7-UP"
+	desc = "Friend to many a cocktail."
 	icon_state = "space-up"
 	center_of_mass = "x=16;y=10"
 
@@ -218,8 +227,8 @@
 	reagents.add_reagent("lemon_lime", 30)
 
 /obj/item/reagent_container/food/drinks/cans/iced_tea
-	name = "iced tea can"
-	desc = "Just like the squad redneck's grandmother used to buy."
+	name = "Lipton iced tea"
+	desc = "It doesn't hold a candle to meemaw's sweet tea, but it does the trick in a pinch."
 	icon_state = "ice_tea_can"
 	center_of_mass = "x=16;y=10"
 
@@ -293,14 +302,27 @@
 	reagents.add_reagent("fruit_beer", 30)
 
 /obj/item/reagent_container/food/drinks/cans/waterbottle
-	name = "\improper Weyland-Yutani Bottled Spring Water"
-	desc = "Overpriced 'Spring' water. Bottled by the Weyland-Yutani Corporation."
-	icon_state = "wy_water"
+	name = "\improper Mountain Spring"
+	desc = "One of the most popular brands of bottled water in UA and TWE space, thanks to aggressive marketing abroad and in-house contracting with company colonies."
+	icon_state = "water"
 	center_of_mass = "x=15;y=8"
 
 /obj/item/reagent_container/food/drinks/cans/waterbottle/Initialize()
 	. = ..()
 	reagents.add_reagent("water", 30)
+
+/obj/item/reagent_container/food/drinks/cans/soylent
+	name = "\improper Weyland-Yutani Meal Ready-to-Drink"
+	desc = "Plastic bottle full of gooey goodness, choco flavor. One bottle has enough calories for a day - don't drink it all in one sitting, better not risk getting diarrhea."
+	desc_lore = "Initially designed in 2173 as meal replacement for high-intensity workers, MRD was recalled from the market multiple times due to reports of gastrointestinal illness, including nausea, vomiting, and diarrhea. Improved formula was created, but the brand name was already stained (quite literally), so now Meal Ready-to-Drink remains as emergency food supply for internal Company use."
+	icon_state = "wy_soylent"
+	center_of_mass = "x=15;y=8"
+	volume = 30
+
+/obj/item/reagent_container/food/drinks/cans/soylent/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 20)
+	reagents.add_reagent("coco", 10)
 
 /obj/item/reagent_container/food/drinks/cans/beer
 	name = "\improper Weyland-Yutani Lite"
