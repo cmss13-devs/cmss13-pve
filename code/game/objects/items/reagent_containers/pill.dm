@@ -66,6 +66,9 @@
 			if(H.species.flags & IS_SYNTHETIC)
 				to_chat(H, SPAN_DANGER("You can't eat pills."))
 				return
+			if(H.helmet_blocking_mouth())
+				to_chat(H, SPAN_DANGER("Your [H.head] stops you from eating the pill!."))
+				return
 
 		M.visible_message(SPAN_NOTICE("[user] swallows [src]."),
 		SPAN_HELPFUL("You swallow [src]."))

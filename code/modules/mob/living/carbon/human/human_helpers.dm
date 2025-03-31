@@ -407,6 +407,12 @@ f
 /mob/living/carbon/human/proc/has_item_in_ears(item)
 	return (item == wear_l_ear) || (item == wear_r_ear)
 
+/mob/living/carbon/human/proc/helmet_blocking_mouth()
+	if((head.flags_inventory & (COVERMOUTH | NOPRESSUREDMAGE)) == (COVERMOUTH | NOPRESSUREDMAGE))
+		return head
+	else
+		return FALSE
+
 /mob/living/carbon/human/can_be_pulled_by(mob/M)
 	var/ignores_stripdrag_flag = FALSE
 	if(ishuman(M))

@@ -88,6 +88,11 @@
 
 			if(user.action_busy)
 				return
+			if(istype(M, /mob/living/carbon/human))
+				var/mob/living/carbon/human/H = M
+				if(H.helmet_blocking_mouth())
+					to_chat(H, SPAN_DANGER("Your [H.head] stops you from eating the food."))
+					return
 
 			if(!do_after(user, eat_time, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 				return
