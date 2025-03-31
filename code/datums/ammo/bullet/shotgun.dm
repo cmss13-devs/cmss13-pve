@@ -21,7 +21,7 @@
 	handful_state = "slug_shell"
 
 /datum/ammo/bullet/shotgun/slug/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 8)
+	knockback(M, P, 4)
 
 /datum/ammo/bullet/shotgun/slug/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
@@ -118,6 +118,9 @@
 	penetration = ARMOR_PENETRATION_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_5
 
+/datum/ammo/bullet/shotgun/flechette_spread/awesome
+	damage = 60
+
 /datum/ammo/bullet/shotgun/buckshot
 	name = "buckshot shell"
 	icon_state = "buckshot"
@@ -141,7 +144,7 @@
 	multiple_handful_name = TRUE
 
 /datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 4)
+	knockback(M, P, 3)
 /datum/ammo/bullet/shotgun/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
@@ -209,7 +212,7 @@
 	damage = 20
 
 /datum/ammo/bullet/shotgun/spread/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 4)
+	knockback(M, P, 3)
 /datum/ammo/bullet/shotgun/spread/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
@@ -253,7 +256,7 @@
 	pen_armor_punch = 0
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M,P,5)
+	knockback(M, P, 4)
 /datum/ammo/bullet/shotgun/heavy/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
@@ -341,7 +344,7 @@
 	damage_armor_punch = 2
 
 /datum/ammo/bullet/shotgun/heavy/slug/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 8)
+	knockback(M, P, 5)
 
 /datum/ammo/bullet/shotgun/heavy/slug/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
