@@ -850,7 +850,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Folding grip with an integrated flashlight. Reduces recoil and scatter marginally, boosts accuracy slightly. \nStatistically udentical to the underbarrel flashlight grip."
 
 /obj/item/attachable/flashlight/laser_light_combo //Unique attachment for the VP78 based on the fact it has a Laser-Light Module in AVP2010
-	name = "VP78 Laser-Light Module"
+	name = "L165A1 Laser-Light Module"
 	desc = "A Laser-Light module for the VP78 Service Pistol which is currently undergoing limited field testing as part of the USCMs next generation pistol program. All VP78 pistols come equipped with the module."
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "vplaserlight"

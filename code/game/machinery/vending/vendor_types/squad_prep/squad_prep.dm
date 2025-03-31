@@ -499,7 +499,7 @@
 		list("M44 Marksman Speed Loader (.44)", floor(scale * 2), /obj/item/ammo_magazine/revolver/marksman, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED FIREARM AMMUNITION", -1, null, null),
-		list("VP78 Magazine", floor(scale * 5), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("L165A1 Magazine", floor(scale * 5), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
 		list("SU-6 Smartpistol Magazine (.45)", floor(scale * 5), /obj/item/ammo_magazine/pistol/smart, VENDOR_ITEM_REGULAR),
 		list("M240 Incinerator Tank", floor(scale * 3), /obj/item/ammo_magazine/flamer_tank, VENDOR_ITEM_REGULAR),
 		list("M56D Drum Magazine", floor(scale * 2), /obj/item/ammo_magazine/m56d, VENDOR_ITEM_REGULAR),
@@ -681,7 +681,7 @@
 		list("VP70 Combat Pistol", round(scale * 5), /obj/item/weapon/gun/pistol/vp70, VENDOR_ITEM_REGULAR),
 		list("M44 Combat Revolver", round(scale * 5), /obj/item/weapon/gun/revolver/m44, VENDOR_ITEM_REGULAR),
 		list("M4A3 Service Pistol", round(scale * 5), /obj/item/weapon/gun/pistol/m4a3, VENDOR_ITEM_REGULAR),
-		list("VP78 pistol", round(scale * 5), /obj/item/weapon/gun/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("L165A1 pistol", round(scale * 5), /obj/item/weapon/gun/pistol/vp78, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 3), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", -1, null, null),
@@ -689,7 +689,7 @@
 		list("VP70 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
 		list("M44 Speedloader (.44)", round(scale * 20), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
 		list("M4A3 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
-		list("VP78 magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("L165A1 magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
 		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
@@ -766,12 +766,12 @@
 
 		list("SIDEARMS", -1, null, null),
 		list("VP70 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp70/unloaded, VENDOR_ITEM_REGULAR),
-		list("VP78 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp78/unloaded, VENDOR_ITEM_REGULAR),
+		list("L165A1 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp78/unloaded, VENDOR_ITEM_REGULAR),
 		list("ES4 Electrostatic Pistol", round(scale * 3), /obj/item/weapon/gun/pistol/es4/unloaded, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", -1, null, null),
 		list("VP70 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
-		list("VP78 magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("L165A1 magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
 		list("ES4 Stun Magazine (9mm)", round(scale * 10), /obj/item/ammo_magazine/pistol/es4, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
