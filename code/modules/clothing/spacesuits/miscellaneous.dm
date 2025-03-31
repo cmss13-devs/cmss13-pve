@@ -250,6 +250,13 @@
 	item_state = "pressure_uscm"
 	icon_state = "pressure_uscm"
 	helmet_color = "uscm"
+	var/obj/structure/machinery/camera/camera
+
+/obj/item/clothing/head/helmet/space/pressure/uscm/Initialize(mapload)
+	camera = new /obj/structure/machinery/camera/overwatch(src)
+
+/obj/item/clothing/head/helmet/space/pressure/Destroy(force)
+	QDEL_NULL(camera)
 
 /obj/item/clothing/suit/space/pressure/uscm
 	name = "\improper USCM MK.35 pressure suit"
