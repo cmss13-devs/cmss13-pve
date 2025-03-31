@@ -367,15 +367,16 @@
 			break
 		for(var/mob/living/carbon/human/sprayed_with_blood in new_turf.contents)
 			if(ishuman(sprayed_with_blood))
-				if(!sprayed_with_blood.body_position == LYING_DOWN)
-					sprayed_with_blood.add_mob_blood(src)
-					if(sprayed_with_blood.glasses && sprayed_with_blood.glasses.flags_armor_protection & BODY_FLAG_EYES || sprayed_with_blood.get_eye_protection())
-						to_chat(sprayed_with_blood, SPAN_HIGHDANGER("Blood sprays against your eyewear!"))
-						sprayed_with_blood.EyeBlur(3)
-					else
-						to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!"))
-						sprayed_with_blood.EyeBlur(14)
-					break
+				if(!sprayed_with_blood == src)
+					if(!sprayed_with_blood.body_position == LYING_DOWN)
+						sprayed_with_blood.add_mob_blood(src)
+						if(sprayed_with_blood.glasses && sprayed_with_blood.glasses.flags_armor_protection & BODY_FLAG_EYES || sprayed_with_blood.get_eye_protection())
+							to_chat(sprayed_with_blood, SPAN_HIGHDANGER("Blood sprays against your eyewear!"))
+							sprayed_with_blood.EyeBlur(3)
+						else
+							to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!"))
+							sprayed_with_blood.EyeBlur(14)
+						break
 
 		// remainder within the tile.
 		var/obj/effect/decal/cleanable/blood/squirt/blood_spraying = new /obj/effect/decal/cleanable/blood/squirt(new_turf)
