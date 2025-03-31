@@ -39,3 +39,15 @@
 	ambience = 'sound/ambience/strata/strata_blizzard.ogg'
 
 	fire_smothering_strength = 3
+
+/datum/weather_event/rock/infinite
+	name = "Heavy Rockstorm"
+	display_name = "Heavy Blizzard"
+	length = 3 HOURS
+	turf_overlay_icon_state = "bigred_rocks"
+
+	effect_message = "You feel multiple small rocks hit all over your body!"
+	damage_per_tick = 3
+	damage_type = BRUTE
+
+	ambience = 'sound/ambience/strata/strata_blizzard.ogg'
