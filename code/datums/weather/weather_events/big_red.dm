@@ -42,7 +42,7 @@
 
 /datum/weather_event/rock/infinite
 	name = "Heavy Rockstorm"
-	display_name = "Heavy Blizzard"
+	display_name = "Heavy Rockstorm"
 	length = 3 HOURS
 	turf_overlay_icon_state = "bigred_rocks"
 

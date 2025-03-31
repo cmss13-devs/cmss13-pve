@@ -29,8 +29,8 @@
 		/datum/weather_event/rock/infinite,
 	)
 
-/datum/weather_ss_map_holder/lv295_blacksite/should_affect_area(area/A)
+/datum/weather_ss_map_holder/big_red/classic/should_affect_area(area/A)
 	return !CEILING_IS_PROTECTED(A.ceiling, CEILING_GLASS)
 
-/datum/weather_ss_map_holder/lv295_blacksite/should_start_event()
+/datum/weather_ss_map_holder/big_red/classic/should_start_event()
 	return TRUE
