@@ -296,6 +296,10 @@
 	shuttle_tag = DROPSHIP_UPP
 	dir = SOUTH
 
+/turf/open/space/transit/dropship/wallce_and_gromit
+	shuttle_tag = DROPSHIP_WALLACE_AND_GROMIT
+	dir = SOUTH
+
 /turf/open/space/transit/south
 	dir = SOUTH
 
