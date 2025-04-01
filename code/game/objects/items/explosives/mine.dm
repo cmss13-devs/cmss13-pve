@@ -324,6 +324,72 @@
 	matter = list("metal" = 3750)
 	has_blast_wave_dampener = TRUE
 
+/obj/item/explosive/mine/m760ap
+	name = "M760 antipersonnel landmine"
+	desc = "A standard issue American antipersonnel landmine. Minimum metal and blast-resistant, with integrated anti-tamper features. Due to counter-demining design, it contains little primary fragmentation liner."
+	icon_state = "m760"
+	angle = 360
+	var/disarmed = FALSE
+	var/explosion_power = 300
+	var/explosion_falloff = 100
+
+/obj/item/explosive/mine/m760ap/check_for_obstacles(mob/living/user)
+	return FALSE
+
+/obj/item/explosive/mine/m760ap/attackby(obj/item/W, mob/user)
+	return
+
+/obj/item/explosive/mine/sharp/set_tripwire()
+	if(!active && !tripwire)
+		for(var/direction in CARDINAL_ALL_DIRS)
+			var/tripwire_loc = get_turf(get_step(loc,direction))
+			tripwire = new(tripwire_loc)
+			tripwire.linked_claymore = src
+			active = TRUE
+
+/obj/item/explosive/mine/m760ap/prime(mob/user)
+	set waitfor = 0
+	if(!cause_data)
+		cause_data = create_cause_data(initial(name), user)
+	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
+	qdel(src)
+
+/obj/item/explosive/mine/m760ap/disarm()
+	anchored = FALSE
+	active = FALSE
+	triggered = FALSE
+	QDEL_NULL(tripwire)
+	disarmed = TRUE
+	add_to_garbage(src)
+
+/obj/item/explosive/mine/m760ap/attack_self(mob/living/user)
+	if(disarmed)
+		return
+	. = ..()
+
+/obj/item/explosive/mine/m760ap/deploy_mine(mob/user)
+	if(disarmed)
+		return
+	if(!hard_iff_lock && user)
+		iff_signal = user.faction
+
+	cause_data = create_cause_data(initial(name), user)
+	if(user)
+		user.drop_inv_item_on_ground(src)
+	setDir(user ? user.dir : dir) //The direction it is planted in is the direction the user faces at that time
+	activate_sensors()
+	update_icon()
+	for(var/mob/living/carbon/mob in range(1, src))
+		src.try_to_prime(mob)
+
+/obj/item/explosive/mine/m760ap/attack_alien()
+	if(disarmed)
+		..()
+	else
+		return
+
+
 /obj/item/explosive/mine/sharp
 	name = "\improper P9 SHARP explosive dart"
 	desc = "An experimental P9 SHARP proximity triggered explosive dart designed by Armat Systems for use by the United States Colonial Marines. This one has full 360 detection range."
