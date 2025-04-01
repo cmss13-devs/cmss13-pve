@@ -181,13 +181,6 @@
 
 /datum/equipment_preset/upp/rifleman/ag80
 	name = "UPP Squad Rifleman (Equipped, AG80)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-	assignment = JOB_SQUAD_MARINE
-	role_comm_title = "RFN"
-	rank = JOB_SQUAD_MARINE
-	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/pfc
-	access = list(ACCESS_UPP_GENERAL)
 
 /datum/equipment_preset/upp/rifleman/ag80/load_gear(mob/living/carbon/human/new_human)
 
@@ -196,7 +189,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive/upp/impact, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	//head
@@ -221,7 +214,6 @@
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-
 
 /datum/equipment_preset/upp/rifleman/eva
 	name = "UPP Squad Rifleman (Equipped, EVA)"
