@@ -4,7 +4,7 @@
 //Read the documentation in multitile.dm before trying to decipher this stuff
 
 /obj/vehicle/multitile/box_van/ambulance
-	name = "\improper box-van"
+	name = "\improper ambulance"
 	desc = "An ambulance. It's used to transport critically injured patients."
 	icon = 'icons/obj/vehicles/ambulance.dmi'
 
