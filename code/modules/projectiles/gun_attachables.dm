@@ -3201,6 +3201,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "grenade-ag80"
 	attach_icon = "grenade-ag80_a"
 	has_breech = TRUE
+
 /obj/item/attachable/attached_gun/grenade/type71/ag80/Initialize()
 	. = ..()
 	grenade_pass_flags = NO_FLAGS
