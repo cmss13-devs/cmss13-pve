@@ -1246,7 +1246,7 @@
 		/obj/item/attachable/lasersight/upp,
 		/obj/item/attachable/flashlight,
 		)
-
+	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/attached_gun/grenade/type71)
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	flags_equip_slot = SLOT_BACK
 	start_automatic = TRUE
@@ -1267,12 +1267,6 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 
-/obj/item/weapon/gun/rifle/type71/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/stock/type71/STOCK = new(src)
-	STOCK.flags_attach_features &= ~ATTACH_REMOVABLE
-	STOCK.Attach(src)
-	update_attachable(STOCK.slot)
 
 /obj/item/weapon/gun/rifle/type71/preloaded
 	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/attached_gun/grenade/type71/preloaded)
