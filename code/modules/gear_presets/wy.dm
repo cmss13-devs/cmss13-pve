@@ -70,7 +70,7 @@
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/shoes/laceup/brown,
 		/obj/item/clothing/shoes/black,
-		/obj/item/clothing/shoes/marine/corporate,
+		/obj/item/clothing/shoes/marine/civilian,
 	)
 	dress_hat = list(
 		/obj/item/clothing/head/fedora,

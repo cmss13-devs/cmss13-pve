@@ -730,8 +730,8 @@
 	SA.detonate_on(impact, src)
 
 /obj/structure/dropship_equipment/weapon/heavygun
-	name = "\improper GAU-21 30mm cannon"
-	desc = "A dismounted GAU-21 'Rattler' 30mm rotary cannon. It seems to be missing its feed links and has exposed connection wires. Capable of firing 5200 rounds a minute, feared by many for its power. Earned the nickname 'Rattler' from the vibrations it would cause on dropships in its initial production run. Accepts PGU-100/PGU-105 ammo crates"
+	name = "\improper GAU-113/B 25mm rotary autocannon"
+	desc = "A dismounted GAU-113/B. Capable of 2-6,000rpm fire rates and firing 25mm ammunition using the binary hypergolic principle. Requires ammunition to actually be anything more than a cool fireworks show. Can be fired without ammunition for airshows or other events."
 	icon_state = "30mm_cannon"
 	firing_sound = 'sound/effects/gau_incockpit.ogg'
 	point_cost = 400
@@ -750,7 +750,7 @@
 /obj/structure/dropship_equipment/weapon/rocket_pod
 	name = "\improper LAU-444 Guided Missile Launcher"
 	icon_state = "rocket_pod" //I want to force whoever used rocket and missile interchangeably to come back and look at this god damn mess.
-	desc = "A missile pod weapon system capable of launching a single laser-guided missile. Moving this will require some sort of lifter. Accepts AGM, AIM, BLU, and GBU missile systems."
+	desc = "Launch rail system that accepts a single missile weapon. Moving this will require heavy machinery."
 	firing_sound = 'sound/effects/rocketpod_fire.ogg'
 	firing_delay = 5
 	point_cost = 600
@@ -769,9 +769,9 @@
 
 
 /obj/structure/dropship_equipment/weapon/minirocket_pod
-	name = "\improper LAU-229 Rocket Pod"
+	name = "\improper Mk.10 Zeus Rocket Pod"
 	icon_state = "minirocket_pod"
-	desc = "A rocket pod capable of launching six laser-guided mini rockets. Moving this will require some sort of lifter. Accepts the AGR-59 series of minirockets."
+	desc = "The Mk.10 Zeus multiple rocket launcher system can fit a variety of 70mm unguided rockets for multiple mission types. Moving this will require heavy machinery."
 	icon = 'icons/obj/structures/props/almayer_props64.dmi'
 	firing_sound = 'sound/effects/rocketpod_fire.ogg'
 	firing_delay = 10 //1 seconds
@@ -791,9 +791,9 @@
 		ammo_equipped = null
 
 /obj/structure/dropship_equipment/weapon/laser_beam_gun
-	name = "\improper LWU-6B Laser Cannon"
+	name = "\improper AN/AEQ-22 free electron laser system"
 	icon_state = "laser_beam"
-	desc = "State of the art technology recently acquired by the USCM, it fires a battery-fed pulsed laser beam at near lightspeed setting on fire everything it touches. Moving this will require some sort of lifter. Accepts the BTU-17/LW Hi-Cap Laser Batteries."
+	desc = "The AN/AEQ-22 is intended to illuminate ground targets for compatible ordinance or outright destroy them. A secondary soft/hardkill self protection mode for the carrying aircraft is included. In directfire mode, it is rated for anti-materiel and anti-personnel operation, with the pulsed laser inflicting 230kJ per shot."
 	icon = 'icons/obj/structures/props/almayer_props64.dmi'
 	firing_sound = 'sound/effects/phasein.ogg'
 	firing_delay = 50 //5 seconds
@@ -812,7 +812,7 @@
 /obj/structure/dropship_equipment/weapon/launch_bay
 	name = "\improper LAG-14 Internal Sentry Launcher"
 	icon_state = "launch_bay"
-	desc = "A launch bay to drop special ordnance. Fits inside the dropship's crew weapon emplacement. Moving this will require some sort of lifter. Accepts the A/C-49-P Air Deployable Sentry as ammunition."
+	desc = "A launch bay to drop special ordnance. Fits inside the dropship's crew weapon emplacement. Moving this will require some sort of lifter. Accepts the UA/571-P paradrop sentry weapons system."
 	icon = 'icons/obj/structures/props/almayer_props.dmi'
 	firing_sound = 'sound/weapons/gun_flare_explode.ogg'
 	firing_delay = 10 //1 seconds

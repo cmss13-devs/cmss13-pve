@@ -300,7 +300,7 @@
 		/obj/item/device/reagent_scanner,
 		/obj/item/device/analyzer/plant_analyzer,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/medical/lifesaver/standard
 	has_gamemode_skin = FALSE
@@ -446,7 +446,7 @@
 	new /obj/item/device/healthanalyzer(src)
 
 /obj/item/storage/belt/security
-	name = "\improper M276 pattern security rig"
+	name = "\improper duty belt"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This configuration is commonly seen among USCM Military Police and peacekeepers, though it can hold some light munitions."
 	icon_state = "securitybelt"
 	item_state = "security"//Could likely use a better one.
@@ -457,41 +457,20 @@
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 21
 	can_hold = list(
-		/obj/item/explosive/grenade/flashbang,
-		/obj/item/explosive/grenade/custom/teargas,
 		/obj/item/reagent_container/spray/pepper,
 		/obj/item/restraint/handcuffs,
 		/obj/item/device/flash,
 		/obj/item/clothing/glasses,
 		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/handful,
-		/obj/item/reagent_container/food/snacks/donut/normal,
-		/obj/item/reagent_container/food/snacks/donut/jelly,
 		/obj/item/weapon/baton,
+		/obj/item/weapon/classic_baton,
 		/obj/item/weapon/gun/energy/taser,
-		/obj/item/tool/lighter/zippo,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/clothing/glasses/hud/security,
 		/obj/item/device/flashlight,
-		/obj/item/device/radio/headset,
-		/obj/item/weapon,
 		/obj/item/device/clue_scanner,
+		/obj/item/notepad/blue,
 	)
-
-
-
-/obj/item/storage/belt/security/tactical
-	name = "combat belt"
-	desc = "Can hold security gear like handcuffs and flashes, with more pouches for more storage."
-	icon_state = "swatbelt"
-	item_state = "swatbelt"
-	item_state_slots = list(
-		WEAR_L_HAND = "upp_belt",
-		WEAR_R_HAND = "upp_belt")
-	storage_slots = 9
-	max_w_class = SIZE_MEDIUM
-	max_storage_space = 21
-
 
 /obj/item/storage/belt/security/MP
 	name = "\improper M276 pattern military police rig"
@@ -499,7 +478,6 @@
 	storage_slots = 8
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 30
-
 
 /obj/item/storage/belt/security/MP/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)
@@ -525,48 +503,54 @@
 
 /obj/item/storage/belt/security/MP/UPP/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/reagent_container/spray/pepper(src)
-	new /obj/item/ammo_magazine/revolver/upp/shrapnel(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
 
 /obj/item/storage/belt/security/MP/CMB
-	name = "\improper CMB duty belt"
-	desc = "The black duty belt used to carry the instruments of a Colonial Marshal. It is a heavy police belt with several pouches to contain various law enforcement items."
-	storage_slots = 8
+	name = "police duty belt"
+	desc = "A high quality black duty belt utilized by the Colonial Marshal's Bureau and various other law-enforcement organizations."
+	storage_slots = 6
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 30
 
-/obj/item/storage/belt/security/MP/CMB/full/revolver/fill_preset_inventory()
-	new /obj/item/weapon/gun/energy/taser(src)
+/obj/item/storage/belt/security/MP/CMB/full/fill_preset_inventory()
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/ammo_magazine/revolver/spearhead(src)
-	new /obj/item/ammo_magazine/revolver/spearhead(src)
+	new /obj/item/notepad/blue(src)
 
-/obj/item/storage/belt/security/MP/CMB/full/highpower/fill_preset_inventory()
-	new /obj/item/weapon/gun/energy/taser(src)
+/obj/item/storage/belt/security/MP/CMB/full/revolver/fill_preset_inventory()
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/ammo_magazine/pistol/highpower(src)
-	new /obj/item/ammo_magazine/pistol/highpower(src)
+	new /obj/item/notepad/blue(src)
+	new /obj/item/ammo_magazine/revolver/spearhead(src)
 
 /obj/item/storage/belt/security/MP/CMB/synth/fill_preset_inventory()
-	new /obj/item/explosive/grenade/flashbang(src)
-	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/device/clue_scanner(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/explosive/grenade/flashbang(src)
+	new /obj/item/notepad/blue(src)
+
+/obj/item/storage/belt/security/MP/colonist
+	name = "security duty belt"
+	desc = "A black duty belt utilized by private security organizations."
+	storage_slots = 5
+	max_storage_space = 30
+
+/obj/item/storage/belt/security/MP/colonist/fill_preset_inventory()
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/notepad/black(src)
 
 /obj/item/storage/belt/marine
 	name = "\improper M276 pattern ammo load rig"
@@ -594,7 +578,7 @@
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/marine/standard
 	has_gamemode_skin = FALSE
@@ -606,6 +590,10 @@
 /obj/item/storage/belt/marine/m41amk1/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/m41aMK1 (src)
+
+/obj/item/storage/belt/marine/m41e2ap/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
 
 /obj/item/storage/belt/marine/m39/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -680,6 +668,14 @@
 /obj/item/storage/belt/marine/shotgun_ammo/fill_preset_inventory() // shotgun ammo for survs, cursed but we want non-optimal storage on purpose
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+
+/obj/item/storage/belt/marine/svd/fill_preset_inventory() // SVD
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/sniper/svd(src)
+
+/obj/item/storage/belt/marine/svd/pve/fill_preset_inventory() // SVD
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/sniper/svd/pve(src)
 
 /obj/item/storage/belt/marine/smartgunner
 	name = "\improper M280 pattern smartgunner drum belt"
@@ -779,12 +775,12 @@
 	new /obj/item/ammo_magazine/rifle/type71(src)
 	new /obj/item/ammo_magazine/rifle/type71(src)
 
-/obj/item/storage/belt/marine/upp/sapper/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/type71(src)
-	new /obj/item/ammo_magazine/rifle/type71(src)
-	new /obj/item/ammo_magazine/rifle/type71/ap(src)
-	new /obj/item/ammo_magazine/rifle/type71/ap(src)
-	new /obj/item/ammo_magazine/rifle/type71/ap(src)
+/obj/item/storage/belt/marine/upp/heap/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	new /obj/item/ammo_magazine/rifle/type71/heap(src)
 
 // M56E HMG gunner belt
 /obj/item/storage/belt/marine/m2c
@@ -823,7 +819,7 @@
 	max_storage_space = 28
 	can_hold = list(/obj/item/ammo_magazine/handful)
 	flap = FALSE
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/shotgun/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -832,6 +828,11 @@
 /obj/item/storage/belt/shotgun/full/random/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		var/random_shell_type = pick(GLOB.shotgun_handfuls_12g)
+		new random_shell_type(src)
+
+/obj/item/storage/belt/shotgun/full/random/reasonable/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		var/random_shell_type = pick(GLOB.shotgun_handfuls_12g_reasonable)
 		new random_shell_type(src)
 
 /obj/item/storage/belt/shotgun/attackby(obj/item/W, mob/user)
@@ -991,7 +992,7 @@
 
 /obj/item/storage/belt/grenade
 	name="\improper M276 pattern M40 Grenade rig"
-	desc="The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is designed to carry bulk quantities of M40 pattern and AGM pattern Grenades."
+	desc="The M276 is the standard load-bearing equipment of the UA armed forces. It consists of a modular belt with various clips. This version is designed to carry bulk quantities of M40 pattern and AGM pattern Grenades."
 	icon_state = "grenadebelt" // temp
 	item_state = "grenadebelt"
 	item_state_slots = list(
@@ -1014,6 +1015,10 @@
 	new /obj/item/explosive/grenade/high_explosive/airburst(src)
 	new /obj/item/explosive/grenade/high_explosive/airburst(src)
 
+/obj/item/storage/belt/grenade/army/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/explosive/grenade/high_explosive(src)
+
 /obj/item/storage/belt/grenade/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))
 		dump_into(W,user)
@@ -1030,21 +1035,21 @@
 	new /obj/item/explosive/grenade/incendiary(src)
 	new /obj/item/explosive/grenade/incendiary(src)
 	new /obj/item/explosive/grenade/incendiary(src)
-	new /obj/item/explosive/grenade/incendiary/airburst(src)
-	new /obj/item/explosive/grenade/incendiary/airburst(src)
-	new /obj/item/explosive/grenade/incendiary/airburst(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
 	new /obj/item/explosive/grenade/high_explosive(src)
 	new /obj/item/explosive/grenade/high_explosive(src)
 	new /obj/item/explosive/grenade/high_explosive(src)
 	new /obj/item/explosive/grenade/high_explosive(src)
 	new /obj/item/explosive/grenade/high_explosive(src)
 	new /obj/item/explosive/grenade/high_explosive(src)
-	new /obj/item/explosive/grenade/high_explosive/airburst(src)
-	new /obj/item/explosive/grenade/high_explosive/airburst(src)
-	new /obj/item/explosive/grenade/high_explosive/airburst(src)
-	new /obj/item/explosive/grenade/high_explosive/airburst(src)
-	new /obj/item/explosive/grenade/high_explosive/airburst(src)
-	new /obj/item/explosive/grenade/high_explosive/airburst(src)
+	new /obj/item/explosive/grenade/high_explosive/impact/tmfrag(src)
+	new /obj/item/explosive/grenade/high_explosive/impact/tmfrag(src)
+	new /obj/item/explosive/grenade/high_explosive/impact/tmfrag(src)
+	new /obj/item/explosive/grenade/high_explosive/impact/tmfrag(src)
+	new /obj/item/explosive/grenade/high_explosive/impact/tmfrag(src)
+	new /obj/item/explosive/grenade/high_explosive/impact/tmfrag(src)
 
 /obj/item/storage/belt/grenade/large/dutch
 	name = "\improper Dutch's Grenadier Rigging"
@@ -1271,7 +1276,7 @@
 		/obj/item/weapon/gun/pistol/smart,
 		/obj/item/ammo_magazine/pistol/smart,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/m4a3/standard
 	has_gamemode_skin = FALSE
@@ -1424,8 +1429,8 @@
 	name = "\improper M276 pattern XM51 holster rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
 	icon_state = "xm51_holster"
-	has_gamemode_skin = TRUE
-	gun_has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
+	gun_has_gamemode_skin = FALSE
 	storage_slots = 8
 	max_w_class = 5
 	can_hold = list(
@@ -1473,7 +1478,7 @@
 #undef MAXIMUM_MAGAZINE_COUNT
 
 /obj/item/storage/belt/gun/m44
-	name = "\improper M276 pattern general revoler holster rig"
+	name = "\improper M276 pattern general revolver holster rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is universal and adjustable for different revolvers, along with six small pouches for speedloaders. It smells faintly of hay."
 	icon_state = "m44r_holster"
 	storage_slots = 7
@@ -1481,7 +1486,7 @@
 		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = -1,
@@ -1618,7 +1623,7 @@
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the powerful Mateba magnum revolver, along with five small pouches for speedloaders. It was included with the mail-order USCM edition of the Mateba autorevolver in the early 2170s."
 	icon_state = "cmateba_holster"
 	item_state = "marinebelt"
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/mateba/cmateba/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/cmateba())
@@ -1776,7 +1781,7 @@
 	var/list/internal_mags = (typesof(/obj/item/ammo_magazine/internal) + /obj/item/ammo_magazine/handful)
 	var/list/training_mags = list(
 		/obj/item/ammo_magazine/rifle/rubber,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber,
+		/obj/item/ammo_magazine/rifle/m49a/rubber,
 		/obj/item/ammo_magazine/smg/m39/rubber,
 		/obj/item/ammo_magazine/pistol/rubber,
 		/obj/item/ammo_magazine/pistol/vp70/rubber) //Ivan doesn't bring children's ammo.
@@ -1802,7 +1807,7 @@
 		/obj/item/weapon/gun/pistol/smart,
 		/obj/item/ammo_magazine/pistol/smart,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartpistol/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/smart())
@@ -1869,6 +1874,7 @@
 	name = "\improper M802 pattern smartgunner sidearm rig"
 	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry smartgun ammunition and a sidearm."
 	icon_state = "sgbelt"
+	flags_equip_slot = SLOT_WAIST
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = 5,
@@ -1882,7 +1888,7 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/standard
 	has_gamemode_skin = FALSE
@@ -1893,11 +1899,24 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 
+/obj/item/storage/belt/gun/smartgunner/army
+	name = "\improper M802 pattern smartgunner sidearm rig"
+	desc = "The M802 is a limited-issue mark of load-bearing equipment only seen worn by operators of the M56A2 weapon system, designed to carry smartgun ammunition and a sidearm."
+	has_gamemode_skin = FALSE
+
+/obj/item/storage/belt/gun/smartgunner/army/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+
 #define MAXIMUM_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/gun/smartgunner/garrow
 	name = "\improper M802 pattern smartgunner sidearm rig"
 	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry a limited quantity of smartgun and pistol ammunition, along with a sidearm."
+	icon_state = "sgbelt"
 
 	//Keep a track of how many magazines are inside the belt.
 	var/magazines = 0
@@ -1939,9 +1958,16 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/pmc/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
+	new /obj/item/ammo_magazine/pistol/vp70(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+
+/obj/item/storage/belt/gun/smartgunner/wo/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
@@ -1961,7 +1987,7 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/whiteout/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/pmc())
@@ -1983,7 +2009,7 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/clf/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba())
@@ -2024,7 +2050,7 @@
 		/obj/item/mortar_shell,
 	)
 	bypass_w_limit = list(/obj/item/mortar_shell)
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/utility
 	name = "\improper M276 pattern combat toolbelt rig"

@@ -74,6 +74,10 @@
 	if(power >= EXPLOSION_THRESHOLD_VLOW)
 		unpack()
 
+/obj/structure/largecrate/pull_response(atom/movable/AM)
+	animate(src, pixel_x = 0, pixel_y = 0, time = 1 SECONDS)
+	return TRUE
+
 /obj/structure/largecrate/proc/take_damage(damage)
 	health -= damage
 	if(health <= 0)
@@ -361,6 +365,26 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 	name = "white barrel"
 	desc = "A white storage barrel."
 	icon_state = "barrel_white"
+
+/obj/structure/largecrate/random/barrel/medical
+	name = "white barrel"
+	desc = "A white storage barrel."
+	icon_state = "barrel_medical"
+
+/obj/structure/largecrate/random/barrel/black
+	name = "black barrel"
+	desc = "A black storage barrel."
+	icon_state = "barrel_wy"
+
+/obj/structure/largecrate/random/barrel/brown
+	name = "brown barrel"
+	desc = "A brown storage barrel."
+	icon_state = "barrel_tan"
+
+/obj/structure/largecrate/random/barrel/purewhite
+	name = "white barrel"
+	desc = "A white storage barrel."
+	icon_state = "barrel_purewhite"
 
 /obj/structure/largecrate/random/secure
 	name = "secure supply crate"

@@ -1,4 +1,17 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/machinery/vending/generic,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"aab" = (
+/obj/structure/surface/rack,
+/obj/item/fishing_pole,
+/turf/open/floor/vault,
+/area/lv624/lazarus/quartstorage)
+"aac" = (
+/obj/item/fishing_pole,
+/turf/open/gm/coast/west,
+/area/lv624/ground/caves/north_central_caves)
 "aad" = (
 /turf/open/floor/plating/warnplate/north,
 /area/lv624/lazarus/engineering)
@@ -104,7 +117,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/bluecorner,
 /area/lv624/lazarus/sleep_male)
 "ajM" = (
@@ -1373,10 +1386,10 @@
 /turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
 "bKf" = (
-/obj/structure/machinery/vending/cigarette,
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/whiteblue/southeast,
 /area/lv624/lazarus/corporate_dome)
 "bLa" = (
@@ -1780,7 +1793,8 @@
 /area/lv624/lazarus/quartstorage)
 "cqs" = (
 /obj/structure/surface/table/woodentable/poor,
-/obj/item/tool/kitchen/knife/butcher,
+/obj/item/fishing_pole,
+/obj/item/fish_bait,
 /turf/open/floor/wood/wood_broken6,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "cqG" = (
@@ -2033,8 +2047,8 @@
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/lv624/ground/jungle/west_jungle)
 "cEp" = (
-/obj/structure/machinery/vending/cigarette/colony,
 /obj/effect/landmark/crap_item,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "cEI" = (
@@ -2404,7 +2418,7 @@
 "cYs" = (
 /obj/structure/closet/cabinet,
 /obj/item/weapon/baseballbat/metal,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/dark,
 /area/lv624/lazarus/engineering)
 "cYB" = (
@@ -3051,10 +3065,16 @@
 /area/lv624/lazarus/comms)
 "dNd" = (
 /obj/structure/surface/table/woodentable/poor,
-/obj/item/tool/candle,
+/obj/item/tool/candle{
+	pixel_x = 4;
+	pixel_y = 8
+	},
 /obj/item/tool/match{
 	pixel_x = 6;
 	pixel_y = 3
+	},
+/obj/item/clothing/mask/cigarette/cigar{
+	pixel_x = -7
 	},
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
@@ -4150,7 +4170,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_east_jungle)
 "fhn" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/main_hall)
 "fhu" = (
@@ -4206,7 +4226,7 @@
 	name = "General Listening Channel";
 	pixel_x = -30
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/purple/northwest,
 /area/lv624/lazarus/sleep_female)
 "flc" = (
@@ -4886,10 +4906,6 @@
 	},
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
-"fVf" = (
-/obj/structure/machinery/vending/cigarette,
-/turf/open/floor/white,
-/area/lv624/lazarus/main_hall)
 "fVB" = (
 /obj/structure/stairs/perspective{
 	color = "#b29082";
@@ -5573,11 +5589,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/east_barrens)
 "gKU" = (
-/obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
-	name = "\improper River Snack Bar";
-	req_access_txt = "100";
-	req_one_access = null
-	},
+/obj/structure/curtain/red,
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "gKW" = (
@@ -8200,7 +8212,7 @@
 /area/lv624/ground/jungle/south_west_jungle/ceiling)
 "jXS" = (
 /obj/item/toy/inflatable_duck,
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "jXZ" = (
 /obj/effect/landmark/crap_item,
@@ -10075,7 +10087,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/whiteblue/west,
 /area/lv624/lazarus/medbay)
 "mwV" = (
@@ -10984,7 +10996,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/east_caves)
 "nCP" = (
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "nCX" = (
 /obj/structure/flora/jungle/planttop1,
@@ -11419,7 +11431,7 @@
 /area/lv624/ground/colony/north_tcomms_road)
 "onT" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/dark,
 /area/lv624/lazarus/quartstorage)
 "onX" = (
@@ -12660,7 +12672,7 @@
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "pXU" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "pYI" = (
@@ -14223,7 +14235,7 @@
 	opened = 1
 	},
 /obj/structure/window/reinforced/tinted,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /obj/item/device/radio/intercom{
 	freerange = 1;
 	frequency = 1469;
@@ -15154,7 +15166,7 @@
 /area/lv624/lazarus/engineering)
 "tEl" = (
 /obj/structure/surface/table/woodentable/poor,
-/obj/item/clothing/mask/cigarette/cigar,
+/obj/item/tool/kitchen/knife/butcher,
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "tEA" = (
@@ -15579,7 +15591,7 @@
 /area/lv624/lazarus/main_hall)
 "ufg" = (
 /obj/structure/surface/rack,
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/vault,
 /area/lv624/lazarus/quartstorage)
 "ufn" = (
@@ -15857,7 +15869,7 @@
 	icon_state = "open";
 	opened = 1
 	},
-/obj/item/clothing/under/colonist,
+/obj/item/clothing/under/colonist/boilersuit/cyan,
 /turf/open/floor/bluecorner,
 /area/lv624/lazarus/sleep_male)
 "uxL" = (
@@ -16496,7 +16508,7 @@
 /area/lv624/lazarus/research)
 "vqh" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/red,
 /area/lv624/lazarus/security)
@@ -17708,7 +17720,7 @@
 /area/lv624/ground/river/east_river)
 "wWs" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/loadout/clf,
+/obj/item/storage/box/loadout/CLF_loadout,
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "wXg" = (
@@ -17880,7 +17892,6 @@
 /area/lv624/lazarus/landing_zones/lz2)
 "xlU" = (
 /obj/structure/closet/bodybag,
-/obj/effect/landmark/corpsespawner/clf,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
 "xnh" = (
@@ -33514,7 +33525,7 @@ jlL
 kYS
 kYS
 kYS
-kYS
+aac
 kYS
 wJt
 qem
@@ -41296,13 +41307,13 @@ jFZ
 lHW
 lHW
 bWC
+aaa
+psD
+psD
+psD
+psD
+psD
 iSN
-psD
-psD
-psD
-psD
-psD
-fVf
 dBu
 fCP
 auz
@@ -50466,7 +50477,7 @@ ioa
 xYV
 xYV
 xYV
-bMd
+aab
 xYV
 bMd
 xYV

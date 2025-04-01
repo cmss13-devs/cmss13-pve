@@ -1,6 +1,5 @@
 /obj/item/clothing/suit/storage/marine/medium/rto/intel
 	name = "\improper XM4 pattern intelligence officer armor"
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer/intel)
 	specialty = "XM4 pattern intel"
 	desc = "Tougher than steel, quieter than whispers, the XM4 Intel Armor provides capable protection combined with an experimental integrated motion tracker. It took an R&D team a weekend to develop and costs more than the Chinook Station... probably. When worn, uniform accessories such as webbing cannot be attached due to the motion sensors occupying the clips."
 	desc_lore = "ARMAT Perfection. The XM4 Soldier Awareness System mixes M4-style hard armor and a distributed series of motion sensors clipped onto the breastplate. When connected to any HUD optic, it replicates the effects of an M314 Motion Detector unit, increasing user situational awareness. It is currently undergoing field trials by intelligence operatives."
@@ -117,3 +116,8 @@
 						uniform.valid_accessory_slots += ACCESSORY_SLOT_UTILITY
 						break
 			qdel(temp_uniform)
+
+/obj/item/clothing/suit/storage/marine/medium/rto/intel/army
+	name = "\improper XM4 pattern 'battlefield-awareness' armor"
+	desc = "The XM4 experimental armor provides capable protection combined with an experimental integrated motion tracker. When worn, uniform accessories such as webbing cannot be attached due to the motion sensors occupying the clips."
+	desc_lore = "ARMAT Perfection. The XM4 Soldier Awareness System mixes M4-style hard armor and a distributed series of motion sensors clipped onto the breastplate. When connected to any HUD optic, it replicates the effects of an M314 Motion Detector unit, increasing user situational awareness. It is currently undergoing field trials by intelligence operatives and those whose duties detract from constant situational awareness."

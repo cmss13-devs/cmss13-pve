@@ -58,7 +58,7 @@
 	icon_state = "balaclava"
 	item_state = "balaclava"
 	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
-	flags_inv_hide = HIDEFACE|HIDEALLHAIR|HIDEEARS
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	w_class = SIZE_SMALL

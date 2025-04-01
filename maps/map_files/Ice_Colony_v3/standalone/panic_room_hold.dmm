@@ -121,7 +121,6 @@
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
-/obj/effect/landmark/corpsespawner/doctor,
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/shiva/interior/bar)
 "fM" = (
@@ -271,13 +270,6 @@
 	},
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
-"lP" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/obj/effect/decal/cleanable/blood{
-	layer = 3
-	},
-/turf/open/floor/shiva/north,
-/area/shiva/interior/colony/s_admin)
 "lQ" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 8
@@ -387,10 +379,6 @@
 	},
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
-"qU" = (
-/obj/effect/landmark/corpsespawner/scientist,
-/turf/open/floor/shiva/bluefull,
-/area/shiva/interior/colony/s_admin)
 "rM" = (
 /obj/structure/barricade/wooden{
 	dir = 1
@@ -456,7 +444,6 @@
 	pixel_x = 9;
 	pixel_y = 17
 	},
-/obj/effect/landmark/corpsespawner/chef,
 /obj/structure/bed/bedroll,
 /obj/item/bedsheet/ce,
 /turf/open/floor/shiva/floor3,
@@ -927,7 +914,6 @@
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
-/obj/effect/landmark/corpsespawner/wysec,
 /turf/open/floor/wood,
 /area/shiva/interior/colony/s_admin)
 "IB" = (
@@ -1551,7 +1537,7 @@ dF
 tk
 Kp
 XP
-qU
+dF
 ce
 ul
 dF
@@ -1620,7 +1606,7 @@ zA
 do
 Hx
 Hx
-lP
+LF
 dF
 Lr
 Hx

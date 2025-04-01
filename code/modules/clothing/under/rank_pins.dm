@@ -64,21 +64,44 @@
 	rank_short = PAY_SHORT_ME9C
 	icon_state = "ranks_snco"
 
+//WARRANT OFFICERS
+/obj/item/clothing/accessory/ranks/marine/w1
+	name = "rank boards"
+	rank_short = PAY_SHORT_MW1
+	icon_state = "ranks_juniorwarrant"
+
+/obj/item/clothing/accessory/ranks/marine/w2
+	name = "rank boards"
+	rank_short = PAY_SHORT_MW2
+	icon_state = "ranks_juniorwarrant"
+
+/obj/item/clothing/accessory/ranks/marine/w3
+	name = "rank boards"
+	rank_short = PAY_SHORT_MW3
+	icon_state = "ranks_warrant"
+
+/obj/item/clothing/accessory/ranks/marine/w4
+	name = "rank boards"
+	rank_short = PAY_SHORT_MW4
+	icon_state = "ranks_warrant"
+
+/obj/item/clothing/accessory/ranks/marine/w5
+	name = "rank boards"
+	rank_short = PAY_SHORT_MW5
+	icon_state = "ranks_seniorwarrant"
+
 //OFFICERS
 /obj/item/clothing/accessory/ranks/marine/o1
-	name = "rank boards"
 	rank_short = PAY_SHORT_MO1
-	icon_state = "ranks_officer"
+	icon_state = "ranks_o1"
 
 /obj/item/clothing/accessory/ranks/marine/o2
-	name = "rank boards"
 	rank_short = PAY_SHORT_MO2
-	icon_state = "ranks_officer"
+	icon_state = "ranks_o2"
 
 /obj/item/clothing/accessory/ranks/marine/o3
-	name = "rank boards"
 	rank_short = PAY_SHORT_MO3
-	icon_state = "ranks_officer"
+	icon_state = "ranks_o3"
 
 /obj/item/clothing/accessory/ranks/marine/o4
 	name = "rank boards"

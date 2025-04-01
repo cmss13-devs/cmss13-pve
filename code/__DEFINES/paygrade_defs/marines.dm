@@ -37,6 +37,21 @@
 /// ME9C, Sergeant Major of the Colonial Marine Corps
 #define PAY_SHORT_ME9C "ME9C"
 
+/// MW1, Warrant Officer 1
+#define PAY_SHORT_MW1 "MW1"
+
+/// MW2, Chief Warrant Officer 2
+#define PAY_SHORT_MW2 "MCW2"
+
+/// MW3, Chief Warrant Officer 3
+#define PAY_SHORT_MW3 "MCW3"
+
+/// MW4, Chief Warrant Officer 4
+#define PAY_SHORT_MW4 "MCW4"
+
+/// MW5, Chief Warrant Officer 5
+#define PAY_SHORT_MW5 "MCW5"
+
 /// MO1, Second Lieutenant
 #define PAY_SHORT_MO1 "MO1"
 

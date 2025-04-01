@@ -63,6 +63,9 @@
 	///Lazylist of movable atoms providing opacity sources.
 	var/list/atom/movable/opacity_sources
 
+	/// Is fishing allowed on this turf
+	var/fishing_allowed = FALSE
+
 /turf/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE) // this doesn't parent call for optimisation reasons
 	if(flags_atom & INITIALIZED)
@@ -861,4 +864,6 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	// T.update_atom_colour()
 	if(T.dir != dir)
 		T.setDir(dir)
+	if(T.name != name)
+		T.name = name
 	return T

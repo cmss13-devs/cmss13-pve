@@ -4,8 +4,17 @@
 /obj/item/weapon/gun/revolver
 	flags_equip_slot = SLOT_WAIST
 	w_class = SIZE_MEDIUM
-
+	mouse_pointer = 'icons/effects/mouse_pointer/pistol_mouse.dmi'
 	matter = list("metal" = 2000)
+
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_ONE_HAND_WIELDED
+	gun_category = GUN_CATEGORY_HANDGUN
+	wield_delay = WIELD_DELAY_VERY_FAST //If you modify your revolver to be two-handed, it will still be fast to aim
+	movement_onehanded_acc_penalty_mult = 3
+	has_empty_icon = FALSE
+	has_open_icon = TRUE
+	current_mag = /obj/item/ammo_magazine/internal/revolver
+
 	fire_sound = 'sound/weapons/gun_44mag_v4.ogg'
 	reload_sound = 'sound/weapons/gun_44mag_speed_loader.wav'
 	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
@@ -14,17 +23,11 @@
 	var/hand_reload_sound = 'sound/weapons/gun_revolver_load3.ogg'
 	var/spin_sound = 'sound/effects/spin.ogg'
 	var/thud_sound = 'sound/effects/thud.ogg'
-	var/trick_delay = 4 SECONDS
 	var/list/cylinder_click = list('sound/weapons/gun_empty.ogg')
+
+	var/trick_delay = 4 SECONDS
 	var/recent_trick //So they're not spamming tricks.
 	var/russian_roulette = 0 //God help you if you do this.
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_ONE_HAND_WIELDED
-	gun_category = GUN_CATEGORY_HANDGUN
-	wield_delay = WIELD_DELAY_VERY_FAST //If you modify your revolver to be two-handed, it will still be fast to aim
-	movement_onehanded_acc_penalty_mult = 3
-	has_empty_icon = FALSE
-	has_open_icon = TRUE
-	current_mag = /obj/item/ammo_magazine/internal/revolver
 
 /obj/item/weapon/gun/revolver/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -319,7 +322,7 @@
 	var/folded = FALSE // Used for the stock attachment, to check if we can shoot or not
 
 /obj/item/weapon/gun/revolver/m44/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 12, "rail_y" = 23, "under_x" = 21, "under_y" = 16, "stock_x" = 16, "stock_y" = 20)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 12, "rail_y" = 23, "under_x" = 21, "under_y" = 16, "stock_x" = 16, "stock_y" = 20, "side_rail_x" = 21, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/revolver/m44/set_gun_config_values()
 	..()
@@ -374,7 +377,7 @@
 	)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "side_rail_x" = 20, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/set_gun_config_values()
 	..()
@@ -399,7 +402,15 @@
 	)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/k2049/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "side_rail_x" = 20, "side_rail_y" = 18)
+
+/obj/item/weapon/gun/revolver/m44/custom/pkd_special/set_gun_config_values()
+	..()
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_delay(FIRE_DELAY_TIER_12)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/l_series
 	name = "\improper PKL 'Double' Blaster"
@@ -411,18 +422,6 @@
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/lasersight,
 	)
-
-/obj/item/weapon/gun/revolver/m44/custom/pkd_special/l_series/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
-
-/obj/item/weapon/gun/revolver/m44/custom/pkd_special/set_gun_config_values()
-	..()
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
-	set_fire_delay(FIRE_DELAY_TIER_11)
-	set_burst_amount(BURST_AMOUNT_TIER_2)
-	set_burst_delay(FIRE_DELAY_TIER_12)
-
 
 /obj/item/weapon/gun/revolver/m44/custom/webley //Van Bandolier's Webley.
 	name = "\improper Webley Mk VI service pistol"
@@ -452,8 +451,7 @@
 	icon_state = "zhnk72"
 	item_state = "zhnk72"
 
-	fire_sound = "gun_pkd" //sounds stolen from bladerunner revolvers bc they arent used and sound awesome
-	fire_rattle = 'sound/weapons/gun_pkd_fire01_rattle.ogg'
+	fire_sound = 'sound/weapons/gun_kt42.ogg'
 	reload_sound = 'sound/weapons/handling/pkd_speed_load.ogg'
 	cocked_sound = 'sound/weapons/handling/pkd_cock.wav'
 	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
@@ -464,18 +462,18 @@
 	attachable_allowed = list(
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/bayonet, // Muzzle
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/lasersight, // Underbarrel
+		/obj/item/attachable/lasersight, // Underbarrel/special
+		/obj/item/attachable/flashlight,
 		)
 
 /obj/item/weapon/gun/revolver/upp/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 21,"rail_x" = 14, "rail_y" = 23, "under_x" = 19, "under_y" = 17, "stock_x" = 24, "stock_y" = 19)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 21,"rail_x" = 14, "rail_y" = 23, "under_x" = 19, "under_y" = 17, "stock_x" = 24, "stock_y" = 19, "side_rail_x" = 19, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/revolver/upp/set_gun_config_values()
 	..()
@@ -489,9 +487,10 @@
 /obj/item/weapon/gun/revolver/upp/shrapnel
 	current_mag = /obj/item/ammo_magazine/internal/revolver/upp/shrapnel
 	random_spawn_chance = 100
-	random_under_chance = 100
-	random_spawn_under = list(
+	random_siderail_chance = 100
+	random_spawn_siderail = list(
 		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight,
 	)
 
 //-------------------------------------------------------
@@ -510,7 +509,7 @@
 	flags_gun_features = GUN_ANTIQUE|GUN_ONE_HAND_WIELDED|GUN_CAN_POINTBLANK
 
 /obj/item/weapon/gun/revolver/small/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 21, "under_x" = 20, "under_y" = 15, "stock_x" = 20, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 21, "under_x" = 20, "under_y" = 15, "stock_x" = 20, "stock_y" = 15, "side_rail_x" = 20, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/revolver/small/set_gun_config_values()
 	..()
@@ -560,7 +559,6 @@
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/mateba,
@@ -720,10 +718,10 @@
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/gyro, // Under
-		/obj/item/attachable/lasersight,
+		/obj/item/attachable/lasersight, // Special
+		/obj/item/attachable/flashlight,
 	)
 
 /obj/item/weapon/gun/revolver/spearhead/click_empty(mob/user)
@@ -738,7 +736,7 @@
 	return ..()
 
 /obj/item/weapon/gun/revolver/spearhead/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "side_rail_x" = 20, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/revolver/spearhead/set_gun_config_values()
 	..()

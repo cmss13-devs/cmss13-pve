@@ -10,32 +10,52 @@
 
 /obj/item/explosive/grenade/high_explosive
 	name = "\improper M40 HEDP grenade"
-	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong blast grenade that has been phasing out the M15 HE grenades alongside the M40 HEFA. Capable of being loaded in the M92 Launcher, or thrown by hand."
+	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong grenade that has been phasing out the M15 HE grenade. Explodes with a powerful blast, releasing shrapnel in a casualty radius of five meters. Can be fired from a PN 30mm UGL for impact detonation, or primed in-hand and thrown to detonate after 4 seconds."
 	icon_state = "grenade"
 	det_time = 40
 	item_state = "grenade_hedp"
 	dangerous = TRUE
 	underslug_launchable = TRUE
+	dual_purpose = TRUE
+	arm_sound = 'sound/weapons/grenade.ogg'
 	var/explosion_power = 100
-	var/explosion_falloff = 25
-	var/shrapnel_count = 0
+	var/explosion_falloff = 30
+	var/shrapnel_count = 32
 	var/shrapnel_type = /datum/ammo/bullet/shrapnel
-	var/fire_resistance = 30 //to prevent highly controlled massive explosions
-	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
+	var/fire_resistance = 15 //to prevent highly controlled massive explosions
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
 
 /obj/item/explosive/grenade/high_explosive/New()
 	..()
 
 	fire_resistance = rand(GRENADE_FIRE_RESISTANCE_MIN, GRENADE_FIRE_RESISTANCE_MAX)
 
-/obj/item/explosive/grenade/high_explosive/prime()
+/obj/item/explosive/grenade/high_explosive/prime(mob/living/user)
 	set waitfor = 0
+	if(fuse_type == IMPACT_FUSE)
+		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
+		return
 	if(shrapnel_count)
 		create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
 	apply_explosion_overlay()
 	cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
 	qdel(src)
 
+/obj/item/explosive/grenade/high_explosive/launch_impact(atom/hit_atom)
+	if(fuse_type != IMPACT_FUSE)
+		return
+	var/detonate = TRUE
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		if(shrapnel_count)
+			create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
+			sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
+		apply_explosion_overlay()
+		cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
+		qdel(src)
 
 /obj/item/explosive/grenade/high_explosive/proc/apply_explosion_overlay()
 	var/obj/effect/overlay/O = new /obj/effect/overlay(loc)
@@ -52,11 +72,11 @@
 
 /obj/item/explosive/grenade/high_explosive/super
 	name = "\improper M40/2 HEDP grenade"
-	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong blast grenade that has been phasing out the M15 HE grenades alongside the M40 HEFA. This version is stronger."
+	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong grenade that has been phasing out the M15 HE grenade. This version is stronger."
 	icon_state = "m40_2"
 	item_state = "grenade_hedp2"
 	explosion_power = 150
-	explosion_falloff = 40
+	explosion_falloff = 50
 
 /obj/item/explosive/grenade/high_explosive/pmc
 	name = "\improper M12 blast grenade"
@@ -64,7 +84,10 @@
 	icon_state = "grenade_pmc"
 	item_state = "grenade_ex"
 	underslug_launchable = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	explosion_power = 200
+	shrapnel_count = 0
+	dual_purpose = FALSE
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
 
 /obj/item/explosive/grenade/high_explosive/stick
@@ -79,8 +102,24 @@
 	throw_range = 7
 	underslug_launchable = FALSE
 	explosion_power = 100
+	shrapnel_count = 0
+	dual_purpose = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
+/obj/item/explosive/grenade/high_explosive/upp
+	name = "\improper Type 6 grenade"
+	desc = "The standard issue fragmentation grenade of the UPP military. It explodes 3 seconds after the pin has been pulled."
+	icon_state = "grenade_upp"
+	item_state = "grenade_upp"
+	throw_speed = SPEED_FAST
+	throw_range = 6
+	underslug_launchable = FALSE
+	explosion_power = 100
+	shrapnel_count = 48
+	dual_purpose = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /*
 //================================================
@@ -104,7 +143,7 @@
 	explosion_power = 0
 	shrapnel_type = /datum/ammo/bullet/shrapnel/rubber
 	antigrief_protection = FALSE
-
+	dual_purpose = FALSE
 
 /obj/item/explosive/grenade/high_explosive/m15
 	name = "\improper M15 fragmentation grenade"
@@ -112,25 +151,45 @@
 	icon_state = "grenade_ex"
 	item_state = "grenade_ex"
 	throw_speed = SPEED_FAST
+	dual_purpose = FALSE
 	throw_range = 6
 	underslug_launchable = FALSE
 	explosion_power = 120
 	shrapnel_count = 48
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
+/*
++//================================================
++				Canister Grenade
++//================================================
++*/
 
+/obj/item/explosive/grenade/high_explosive/airburst/canister
+	name = "\improper M108 canister grenade"
+	desc = "30mm canister grenade, effectively low velocity buckshot. Substantial close combat impact when paired with the 5 round PN pump action grenade launcher. No, you can't set it off with a hammer, moron. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only."
+	icon_state = "grenade_buck"
+	item_state = "grenade_buck"
+	hand_throwable = FALSE
+	underslug_launchable = TRUE
+	dual_purpose = FALSE
+	explosion_power = 0
+	explosion_falloff = 25
+	det_time = 0 //this should mean that it will explode instantly when fired and thus generate the shotshell effect.
+	shrapnel_count = 18
+	shrapnel_type = /datum/ammo/bullet/shrapnel/canister
+	dispersion_angle = 15 //hopefully this means the cone spread is pretty small
 
-/obj/item/explosive/grenade/high_explosive/upp
-	name = "\improper Type 6 shrapnel grenade"
-	desc = "A fragmentation grenade found within the ranks of the UPP. Designed to explode into shrapnel and rupture the bodies of opponents. It explodes 3 seconds after the pin has been pulled."
-	icon_state = "grenade_upp"
-	item_state = "grenade_upp"
-	throw_speed = SPEED_FAST
-	throw_range = 6
-	underslug_launchable = FALSE
-	explosion_power = 60
-	shrapnel_count = 56
-	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+/obj/item/explosive/grenade/high_explosive/airburst/canister/proc/canister_fire(mob/living/user, target)
+	var/direction = Get_Compass_Dir(user, target)
+	var/position = get_step(user, direction) //otherwise we buckshot ourselves
+	create_shrapnel(position, min(direct_hit_shrapnel, shrapnel_count), direction , dispersion_angle, shrapnel_type, cause_data, FALSE, 100)
+	if(shrapnel_count)
+		create_shrapnel(loc, shrapnel_count, direction, dispersion_angle, shrapnel_type, cause_data, FALSE, 0)
+	qdel(src)
+// canister has no impact explosion.
+/obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
+	return
 
 /*
 //================================================
@@ -148,6 +207,7 @@
 	shrapnel_count = 16
 	det_time = 0 // Unused, because we don't use prime.
 	hand_throwable = FALSE
+	dual_purpose = FALSE
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 	shrapnel_type = /datum/ammo/bullet/shrapnel/jagged
 	var/direct_hit_shrapnel = 5
@@ -182,6 +242,7 @@
 	desc = "Functions identically to the standard AGM-F 40mm grenade, except instead of exploding into shrapnel, the hornet shell shoots off holo-targeting .22lr rounds. The equivalent to buckshot at-range."
 	icon_state = "grenade_hornet"
 	item_state = "grenade_hornet_active"
+	dual_purpose = FALSE
 	shrapnel_count = 5
 	shrapnel_type = /datum/ammo/bullet/shrapnel/hornet_rounds
 	direct_hit_shrapnel = 5
@@ -192,6 +253,7 @@
 	desc = "Functions identically to the standard AGM-F 40mm grenade, except instead of exploding into shrapnel, the star shells bursts into burning phosphor that illuminates the area."
 	icon_state = "grenade_starshell"
 	item_state = "grenade_starshell_active"
+	dual_purpose = FALSE
 	shrapnel_count = 8
 	shrapnel_type = /datum/ammo/flare/starshell
 	direct_hit_shrapnel = 5
@@ -252,6 +314,7 @@
 	dangerous = TRUE
 	underslug_launchable = TRUE
 	explosion_power = 100 //hedp
+	shrapnel_count = 0
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/high_explosive/impact/prime()
@@ -269,6 +332,16 @@
 			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
 		qdel(src)
 
+/obj/item/explosive/grenade/high_explosive/impact/upp
+	name = "\improper VOG-73 HE grenade"
+	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one bears markings of the UPP."
+	icon_state = "grenade_40mm_upp"
+	item_state = "grenade_hedp"
+	explosion_power = 180 //Stronger than HEDP to make up for one shot in the tube
+	explosion_falloff = 40 //But quicker to lose blast damage
+	shrapnel_count = 16
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	name = "\improper 40mm Buckshot Shell"
 	desc = "A classic of grenade launchers everywhere, this is a 40mm shell loaded with buckshot; very dangerous, watch your fire."
@@ -281,29 +354,131 @@
 
 /*
 //================================================
+				Impact HEAP Grenade
+//================================================
+*/
+
+/obj/item/explosive/grenade/high_explosive/impact/heap
+	name = "\improper M38 HEAP blast grenade"
+	desc = "High-Explosive, Armour Piercing. A small, but deceptively strong blast grenade that can penetrate appreciable quantities of armor, whilst retaining a similar casualty radius as the standard M40. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only. Due to faulty primers, it is inadvisable to fire them directly at hard surfaces like walls, landing them just in front is recommended."
+	icon_state = "grenade_chem"
+	item_state = "grenade_chem"
+	explosion_power = 250
+	explosion_falloff = 200
+	shrapnel_count = 0
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+
+/*
++//================================================
++				Bounding Fragmentation Grenade
++//================================================
++*/
+
+/obj/item/explosive/grenade/high_explosive/impact/tmfrag
+	name = "\improper M51A BFAB grenade"
+	desc = "Bounding Fragmentation, Air-Burst. Rather than traditionally detonating on impact, this round propels itself up into the air prior to exploding into a lethal hail of shrapnel a second later. Effective against troops in the open or in foxholes. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only."
+	icon_state = "grenade_bfab"
+	item_state = "grenade_bfab"
+	explosion_power = 40
+	shrapnel_count = 48
+	shrapnel_type = /datum/ammo/bullet/shrapnel/heavy
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+
+/obj/item/explosive/grenade/high_explosive/impact/tmfrag/launch_impact(atom/hit_atom)
+	if(fuse_type != IMPACT_FUSE)
+		return
+	var/detonate = TRUE
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		sleep(2)
+		qdel(src)
+		for(var/mob/mob in range(5, hit_atom))
+			mob.show_message(SPAN_USERDANGER("The grenade flies up into the air before exploding!"), SHOW_MESSAGE_VISIBLE)
+		sleep(5)	//simulating it bounding up into the air before detonating
+		if(shrapnel_count)
+			create_shrapnel(hit_atom, shrapnel_count, , ,shrapnel_type, cause_data)
+			sleep(2) //so that mobs are not knocked down before being hit by shrapnel. shrapnel might also be getting deleted by explosions?
+		apply_explosion_overlay()
+		if(explosion_power)
+			cell_explosion(hit_atom, explosion_power, explosion_falloff, falloff_mode, null, cause_data)
+
+/*
+//================================================
+				Airborne Starshell Grenade
+//================================================
+*/
+
+/obj/item/explosive/grenade/high_explosive/impact/flare
+	name = "\improper M72A2 HIPF starshell grenade"
+	desc = "High-Illumination, Parachute-Flare. Fired into the air, the M72A2 releases a parachute and ignites, illuminating the surrounding area for several minutes. Longer lasting than the A1 models, is is unfortunately not as bright. Can also be fired into ceilings where it will partially embed and serve as an overhead light source until it burns out."
+	icon_state = "grenade_hipf"
+	item_state = "grenade_hipf"
+	dangerous = TRUE	//kept so marines don't punt flare grenades up aboard the Garrow
+	explosion_power = 0
+	shrapnel_count = 0
+
+/obj/item/explosive/grenade/high_explosive/impact/flare/launch_impact(atom/hit_atom)
+	if(fuse_type != IMPACT_FUSE)
+		return
+	var/detonate = TRUE
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		qdel(src)
+		sleep(5)	//simulating it arcing up out of view before igniting
+		for(var/mob/mob in range(10, hit_atom))
+			mob.show_message(SPAN_HIGHDANGER("A flare bursts into bright light overhead!"), SHOW_MESSAGE_VISIBLE)
+		new /obj/item/device/flashlight/flare/on/illumination(hit_atom)
+		playsound(hit_atom, 'sound/weapons/gun_flare.ogg', 50, 1, 4)
+
+/*
+//================================================
 				Incendiary Grenades
 //================================================
 */
 
 /obj/item/explosive/grenade/incendiary
-	name = "\improper M40 HIDP incendiary grenade"
-	desc = "The M40 HIDP is a small, but deceptively strong incendiary grenade designed to disrupt enemy mobility with long-lasting Type B napalm. It is set to detonate in 4 seconds."
+	name = "\improper M77 HIAM incendiary grenade"
+	desc = "High-explosive-Incendiary, Anti-Mobility. The M77 is a small, but deceptively strong incendiary grenade designed to disrupt enemy mobility with long-lasting Type B napalm spread by a small explosive charge within the casing. It is set to detonate in 4 seconds."
 	icon_state = "grenade_fire"
 	det_time = 40
 	item_state = "grenade_fire"
-	flags_equip_slot = SLOT_WAIST
+	arm_sound = 'sound/weapons/grenade.ogg'
 	dangerous = TRUE
 	underslug_launchable = TRUE
+	dual_purpose = TRUE
 	var/flame_level = BURN_TIME_TIER_5 + 5 //Type B standard, 50 base + 5 from chemfire code.
 	var/burn_level = BURN_LEVEL_TIER_2
 	var/flameshape = FLAMESHAPE_DEFAULT
 	var/radius = 2
 	var/fire_type = FIRE_VARIANT_TYPE_B //Armor Shredding Greenfire
 
-/obj/item/explosive/grenade/incendiary/prime()
+/obj/item/explosive/grenade/incendiary/prime(mob/living/user)
+	set waitfor = 0
+	if(fuse_type == IMPACT_FUSE)
+		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
+		return
 	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flame_radius), cause_data, radius, get_turf(src), flame_level, burn_level, flameshape, null, fire_type)
 	playsound(src.loc, 'sound/weapons/gun_flamethrower2.ogg', 35, 1, 4)
 	qdel(src)
+
+/obj/item/explosive/grenade/incendiary/launch_impact(atom/hit_atom)
+	if(fuse_type != IMPACT_FUSE)
+		return
+	var/detonate = TRUE
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flame_radius), cause_data, radius, get_turf(src), flame_level, burn_level, flameshape, null, fire_type)
+		playsound(src.loc, 'sound/weapons/gun_flamethrower2.ogg', 35, 1, 4)
+		qdel(src)
 
 /proc/flame_radius(datum/cause_data/cause_data, radius = 1, turf/T, flame_level = 20, burn_level = 30, flameshape = FLAMESHAPE_DEFAULT, target, fire_type = FIRE_VARIANT_DEFAULT)
 	//This proc is used to generate automatically-colored fires from manually adjusted item variables.
@@ -394,39 +569,86 @@
 */
 
 /obj/item/explosive/grenade/smokebomb
-	name = "\improper M40 HSDP smoke grenade"
-	desc = "The M40 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. It is set to detonate in 2 seconds."
+	name = "\improper M47 HSDP smoke grenade"
+	desc = "The M47 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. Can be fired from a PN 30mm UGL for impact detonation, or primed in-hand and thrown to detonate after 2 seconds."
 	icon_state = "grenade_smoke"
 	det_time = 20
 	item_state = "grenade_smoke"
 	underslug_launchable = TRUE
 	harmful = FALSE
 	antigrief_protection = FALSE
+	arm_sound = 'sound/weapons/grenade.ogg'
 	var/datum/effect_system/smoke_spread/bad/smoke
+	var/smoke_type = /datum/effect_system/smoke_spread/bad
 	var/smoke_radius = 3
+	dual_purpose = TRUE
 
 /obj/item/explosive/grenade/smokebomb/New()
 	..()
-	smoke = new /datum/effect_system/smoke_spread/bad
+	smoke = new smoke_type(src)
 	smoke.attach(src)
 
 /obj/item/explosive/grenade/smokebomb/Destroy()
 	QDEL_NULL(smoke)
 	return ..()
 
-/obj/item/explosive/grenade/smokebomb/prime()
+/obj/item/explosive/grenade/smokebomb/prime(mob/living/user)
+	set waitfor = 0
+	if(fuse_type == IMPACT_FUSE)
+		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
+		return
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	smoke.set_up(smoke_radius, 0, get_turf(src), null, 6)
+	smoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
 	smoke.start()
+	new /obj/item/trash/grenade(get_turf(src))
 	qdel(src)
 
+/obj/item/explosive/grenade/smokebomb/launch_impact(atom/hit_atom)
+	if(fuse_type != IMPACT_FUSE)
+		return
+	var/detonate = TRUE
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+		smoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
+		smoke.start()
+		new /obj/item/trash/grenade(get_turf(src))
+		qdel(src)
+
+/obj/item/explosive/grenade/smokebomb/green
+	name = "\improper M47-G HSDP smoke grenade"
+	desc = "The M47 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. Can be fired from a PN 30mm UGL for impact detonation, or primed in-hand and thrown to detonate after 2 seconds. The G subtype erupts into a cloud of green smoke upon detonation."
+	icon_state = "grenade_smoke_green"
+	smoke_type = /datum/effect_system/smoke_spread/bad/green
+	smoke_radius = 2
+
+/obj/item/explosive/grenade/smokebomb/red
+	name = "\improper M47-R HSDP smoke grenade"
+	desc = "The M47 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. Can be fired from a PN 30mm UGL for impact detonation, or primed in-hand and thrown to detonate after 2 seconds. The R subtype erupts into a cloud of red smoke upon detonation."
+	icon_state = "grenade_smoke_red"
+	smoke_type = /datum/effect_system/smoke_spread/bad/red
+	smoke_radius = 2
+
+/obj/item/explosive/grenade/smokebomb/upp
+	name = "RDG-17 smoke grenade"
+	desc = "Handgrenade, smoke, model 17. Simple, old and efficient design, these grenades are produced basically everywhere for use in the UPP Armed Collective."
+	icon_state = "grenade_upp_smoke"
+	arm_sound = 'sound/weapons/pinpull.ogg'
+
 /obj/item/explosive/grenade/phosphorus
-	name = "\improper M40 CCDP grenade"
-	desc = "The M40 CCDP is a small, but powerful chemical compound grenade, similar in effect to WPDP. Word on the block says that the CCDP doesn't actually release White Phosphorus, but some other chemical developed in W-Y labs."
-	icon_state = "grenade_chem"
+	name = "\improper M60 WPSI grenade"
+	desc = "The M60 WPSI is a small, but powerful chemical compound grenade, designated as such with a white cap. Usable for both smoke-screen purposes and as an incendiary device. Two second fuse."
+	icon_state = "training_grenade"
 	det_time = 20
-	item_state = "grenade_phos"
+	item_state = "grenade_training"
 	underslug_launchable = TRUE
+	dual_purpose = TRUE
+	arm_sound = 'sound/weapons/grenade.ogg'
+	var/shrapnel_count = 16
+	var/shrapnel_type = /datum/ammo/bullet/shrapnel/incendiary/light
 	var/datum/effect_system/smoke_spread/phosphorus/smoke
 	dangerous = TRUE
 	harmful = TRUE
@@ -436,38 +658,60 @@
 	QDEL_NULL(smoke)
 	return ..()
 
-/obj/item/explosive/grenade/phosphorus/weak
-	name = "\improper M40 WPDP grenade"
-	icon_state = "grenade_phos"
-	desc = "The M40 WPDP is a small, but powerful phosphorus grenade. It is set to detonate in 2 seconds."
-
 /obj/item/explosive/grenade/phosphorus/Initialize()
 	. = ..()
 	smoke = new /datum/effect_system/smoke_spread/phosphorus
 	smoke.attach(src)
 
-/obj/item/explosive/grenade/phosphorus/weak/Initialize()
-	. = ..()
-	smoke = new /datum/effect_system/smoke_spread/phosphorus/weak
-	smoke.attach(src)
-
-/obj/item/explosive/grenade/phosphorus/prime()
-	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	smoke.set_up(smoke_radius, 0, get_turf(src))
+/obj/item/explosive/grenade/phosphorus/prime(mob/living/user)
+	set waitfor = 0
+	if(fuse_type == IMPACT_FUSE)
+		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
+		return
+	playsound(src.loc, 'sound/effects/wp_smoke.ogg', 25, 1, 5)
+	smoke.set_up(smoke_radius, 0, get_turf(src), null, 25)
 	smoke.start()
+	create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
 	qdel(src)
+
+/obj/item/explosive/grenade/phosphorus/launch_impact(atom/hit_atom)
+	if(fuse_type != IMPACT_FUSE)
+		return
+	var/detonate = TRUE
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+		smoke.set_up(smoke_radius, 0, get_turf(src), null, 25)
+		smoke.start()
+		create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
+		qdel(src)
 
 /obj/item/explosive/grenade/phosphorus/upp
 	name = "\improper Type 8 WP grenade"
 	desc = "A deadly gas grenade found within the ranks of the UPP. Designed to spill white phosphorus on the target. It explodes 2 seconds after the pin has been pulled."
+	underslug_launchable = FALSE
+	dual_purpose = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	icon_state = "grenade_upp_wp"
 	item_state = "grenade_upp_wp"
 
 /obj/item/explosive/grenade/phosphorus/clf
 	name = "\improper improvised phosphorus bomb"
 	desc = "An improvised version of gas grenade designed to spill white phosphorus on the target. It explodes 2 seconds after the pin has been pulled."
+	underslug_launchable = FALSE
+	dual_purpose = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	icon_state = "grenade_phos_clf"
 	item_state = "grenade_phos_clf"
+
+/*
+//================================================
+				Sonic Electronic Ball Breakers
+//================================================
+*/
 
 /obj/item/explosive/grenade/sebb
 	name = "\improper G2 Electroshock grenade"
@@ -554,8 +798,6 @@
 		playsound(loc, 'sound/effects/sebb_explode.ogg', 90, 0, 10)
 	else
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), loc, 'sound/effects/sebb_beep.ogg', 60, 0, 10), soundtime)
-
-
 
 /obj/item/explosive/grenade/sebb/prime()
 	var/datum/effect_system/spark_spread/sparka = new
@@ -664,6 +906,7 @@
 	underslug_launchable = FALSE
 	harmful = TRUE
 	antigrief_protection = TRUE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	/// The nerve gas datum
 	var/datum/effect_system/smoke_spread/cn20/nerve_gas
 	/// The typepath of the nerve gas
@@ -684,6 +927,7 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 6)
 	nerve_gas.start()
+	new /obj/item/trash/grenade/gas(get_turf(src))
 	qdel(src)
 
 /obj/item/explosive/grenade/nerve_gas/xeno
@@ -704,6 +948,7 @@
 	underslug_launchable = FALSE
 	harmful = TRUE
 	antigrief_protection = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
 	var/datum/effect_system/smoke_spread/LSD/LSD_gas
 	var/LSD_gas_radius = 4
 
@@ -720,6 +965,58 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	LSD_gas.set_up(LSD_gas_radius, 0, get_turf(src), null, 6)
 	LSD_gas.start()
+	new /obj/item/trash/grenade/gas(get_turf(src))
+	qdel(src)
+
+/*
+//================================================
+			Tear Gas Grenades
+//================================================
+*/
+/obj/item/explosive/grenade/tear
+	name = "\improper tear gas grenade"
+	desc = "A canister grenade of nonlethal Tear gas. It is set to detonate in 4 seconds."
+	icon_state = "flashbang2"//temp icon
+	det_time = 40
+	item_state = "grenade_phos_clf"//temp icon
+	underslug_launchable = FALSE
+	harmful = TRUE
+	antigrief_protection = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
+	var/datum/effect_system/smoke_spread/tear/tear_gas
+	var/tear_gas_radius = 3
+
+/obj/item/explosive/grenade/tear/Initialize()
+	. = ..() //if it ain't broke don't fix it
+	tear_gas = new /datum/effect_system/smoke_spread/tear
+	tear_gas.attach(src)
+
+/obj/item/explosive/grenade/tear/Destroy()
+	QDEL_NULL(tear_gas)
+	return ..()
+
+/obj/item/explosive/grenade/tear/prime()
+	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+	tear_gas.set_up(tear_gas_radius, 0, get_turf(src), null, 90)
+	tear_gas.start()
+	new /obj/item/trash/grenade/gas(get_turf(src))
+	qdel(src)
+
+/obj/item/explosive/grenade/tear/marine
+	name = "\improper M66 teargas grenade"
+	desc = "Tear gas grenade used for nonlethal riot control. Please wear adequate gas protection."
+	icon_state = "grenade_gas"
+	det_time = 40
+	item_state = "grenade_phos"//temp icon
+	underslug_launchable = TRUE
+	tear_gas_radius = 4
+	arm_sound = 'sound/weapons/grenade.ogg'
+
+/obj/item/explosive/grenade/tear/marine/prime()
+	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+	tear_gas.set_up(tear_gas_radius, 0, get_turf(src), null, 90)
+	tear_gas.start()
+	new /obj/item/trash/grenade/gas/marine(get_turf(src))
 	qdel(src)
 
 /*
@@ -830,15 +1127,19 @@
 	smacked.throw_atom(target_turf, fling, SPEED_AVERAGE, smacked, TRUE)
 	smacked.apply_effect(slowdown_time, SLOW)
 	smacked.apply_effect(dazed_time, DAZE)
-	return
+	smacked.visible_message(SPAN_NOTICE("[smacked] is hit by the [src], which shatters apart after impact."),
+		SPAN_NOTICE("The [src] shatters against you after imparting it's force!"))
+	qdel(src)
 
 /obj/item/explosive/grenade/slug/baton
-	name = "\improper HIRR baton slug"
-	desc = "Cousin to the M15 Rubber pellet, the HIRR baton slug was recalled from military and civilian police forces due to over-packed propellant in the sabot casing. Now it is utilized as a less-than-lethal option in engagements with human, and sometimes non-human, forces. Historically, the HIRR was incredibly popular during the Arcturus conflict, as the impact force was found to reliably incapacitate Arcturian resistance forces by breaking their ribs into their lungs."
-	icon_state = "baton_slug"
+	name = "\improper M230 LLRB grenade"
+	desc = "Rarely issued to the Colonial Marines, the M230 less-than-lethal rounds are primarily used during civil disturbances. Can still be lethal if fired against particularly soft tissue."
+	icon_state = "grenade_ltl"
 	item_state = "baton_slug"
-	inactive_icon = "baton_slug"
+	inactive_icon = "grenade_ltl"
 	antigrief_protection = FALSE
+	underslug_launchable = TRUE
+	hand_throwable = FALSE
 	impact_damage = 15
 	slowdown_time = 2
 	knockout_time = 0.8
@@ -891,7 +1192,7 @@
 /obj/item/explosive/grenade/baton
 	name = "\improper HIRR baton slug"
 	desc = "Cousin to the M15 Rubber pellet, the HIRR baton slug was recalled from military and civilian police forces due to over-packed propellant in the sabot casing. Now it is utilized as a less-than-lethal option in engagements with human, and sometimes non-human, forces. Historically, the HIRR was incredibly popular during the Arcturus conflict, as the impact force was found to reliably incapacitate Arcturian resistance forces by breaking their ribs into their lungs."
-	icon_state = "baton_slug"
+	icon_state = "grenade_ltl"
 	item_state = "rubber_grenade"
 	hand_throwable = FALSE
 	antigrief_protection = FALSE
@@ -899,6 +1200,12 @@
 
 /obj/item/explosive/grenade/baton/flamer_fire_act()
 	return
+
+/obj/item/explosive/grenade/baton/m79
+	name = "\improper LTL 40mm grenade"
+	desc = "It's a Less Than Lethal 40mm rubber projectile."
+	icon_state = "grenade_40mm_ltl"
+	item_state = "rubber_grenade"
 
 /obj/item/explosive/grenade/high_explosive/holy_hand_grenade
 	AUTOWIKI_SKIP(TRUE)
@@ -924,6 +1231,7 @@
 	det_time = 20
 	underslug_launchable = TRUE
 	harmful = FALSE
+	arm_sound = 'sound/weapons/grenade.ogg'
 	var/foam_metal_type = FOAM_METAL_TYPE_IRON
 
 /obj/item/explosive/grenade/metal_foam/prime()
