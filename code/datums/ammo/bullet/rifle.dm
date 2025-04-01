@@ -433,3 +433,17 @@
 	name = "7.62x51 rifle bullet"
 	damage = 55
 
+/datum/ammo/bullet/rifle/twe
+	name = "8.5x33 bullet"
+	accuracy = HIT_ACCURACY_TIER_3
+	effective_range_max = 10
+
+/datum/ammo/bullet/rifle/ap/twe
+	name = "armor-piercing 8.5x33 bullet"
+	accuracy = HIT_ACCURACY_TIER_3
+	effective_range_max = 10
+
+/datum/ammo/bullet/rifle/heap/twe
+	name = "high-explosive armor-piercing 8.5x33 bullet"
+	accuracy = HIT_ACCURACY_TIER_3
+	effective_range_max = 10
