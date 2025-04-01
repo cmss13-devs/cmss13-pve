@@ -823,38 +823,6 @@
 	grenade_type = /obj/item/explosive/grenade/tear/marine
 	has_gamemode_skin = FALSE
 
-/obj/item/storage/box/nade_box/upp
-	name = "\improper Type 6 fragmentation grenade box"
-	desc = "A secure box holding 25 Type 6 fragmentation grenades. High explosive, don't store near the flamer fuel."
-	icon_state = "upp_nade_placeholder"
-	type_icon = "type6"
-	model_icon = "model_Type6"
-	can_hold = list(/obj/item/explosive/grenade/high_explosive/upp)
-	grenade_type = /obj/item/explosive/grenade/high_explosive/upp
-
-/obj/item/storage/box/nade_box/upp/ugl
-	name = "\improper VOG-73 fragmentation grenade box"
-	desc = "A secure box holding 25 VOG-73 fragmentation grenades. High explosive, don't store near the flamer fuel."
-	type_icon = "hefa"
-	can_hold = list(/obj/item/explosive/grenade/high_explosive/impact/upp)
-	grenade_type = /obj/item/explosive/grenade/high_explosive/impact/upp
-
-/obj/item/storage/box/nade_box/upp/smoke
-	name = "\improper RDG-17 smoke grenade box"
-	desc = "A secure box holding 25 RDG-17 smoke grenades. High explosive, don't store near the flamer fuel."
-	type_icon = "typesmoke"
-	model_icon = "model_typesmoke"
-	can_hold = list(/obj/item/explosive/grenade/smokebomb/upp)
-	grenade_type = /obj/item/explosive/grenade/smokebomb/upp
-
-/obj/item/storage/box/nade_box/upp/white_phos
-	name = "\improper Type 8 white phosphorus grenade box"
-	desc = "A secure box holding 25 Type 8 white phosphorus grenades. High explosive, don't store near the flamer fuel."
-	type_icon = "typewp"
-	model_icon = "model_typewp"
-	can_hold = list(/obj/item/explosive/grenade/phosphorus/upp)
-	grenade_type = /obj/item/explosive/grenade/phosphorus/upp
-
 /obj/item/storage/box/nade_box/tear_gas/fill_preset_inventory()
 	..()
 	if(SSticker.mode && MODE_HAS_FLAG(MODE_FACTION_CLASH))
