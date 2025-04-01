@@ -5087,9 +5087,6 @@
 	dir = 8
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/nade_box/upp{
-	pixel_y = 5
-	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lH" = (
@@ -5154,13 +5151,6 @@
 /area/golden_arrow/medical)
 "lN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/nade_box/upp/ugl{
-	pixel_y = 9;
-	pixel_x = -4
-	},
-/obj/item/storage/box/nade_box/upp/ugl{
-	pixel_x = 3
-	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lP" = (
@@ -5179,7 +5169,6 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/storage/box/nade_box/upp/smoke,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lT" = (
