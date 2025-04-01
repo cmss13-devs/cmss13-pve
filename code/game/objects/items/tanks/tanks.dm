@@ -9,9 +9,9 @@
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_MEDIUM
 
-	var/pressure_full = ONE_ATMOSPHERE*4
+	var/pressure_full = ONE_ATMOSPHERE*5
 
-	var/pressure = ONE_ATMOSPHERE*4
+	var/pressure = ONE_ATMOSPHERE*5
 	var/gas_type = GAS_TYPE_AIR
 	var/temperature = T20C
 
@@ -22,9 +22,11 @@
 
 	var/distribute_pressure = ONE_ATMOSPHERE
 	var/integrity = 3
-	var/volume = 70
+	var/volume = 50
 	var/manipulated_by = null //Used by _onclick/hud/screen_objects.dm internals to determine if someone has messed with our tank or not.
 						//If they have and we haven't scanned it with the PDA or gas analyzer then we might just breath whatever they put in it.
+	pickup_sound = 'sound/effects/metal_drum_pickup.ogg'
+	drop_sound = 'sound/effects/metal_drum_drop.ogg'
 
 /obj/item/tank/get_examine_text(mob/user)
 	. = ..()
@@ -32,20 +34,22 @@
 		var/celsius_temperature = temperature-T0C
 		var/descriptive
 		switch(celsius_temperature)
-			if(-280 to 20)
+			if(-280 to 0)
+				descriptive = "freezing"
+			if(0 to 17)
 				descriptive = "cold"
-			if(20 to 40)
+			if(17 to 30)
 				descriptive = "room temperature"
-			if(40 to 80)
+			if(30 to 50)
 				descriptive = "lukewarm"
-			if(80 to 100)
+			if(50 to 80)
 				descriptive = "warm"
-			if(100 to 300)
+			if(80 to 150)
 				descriptive = "hot"
 			else
 				descriptive = "furiously hot"
 
-		. += SPAN_NOTICE("\The [icon2html(src, user)][src] feels [descriptive]")
+		. += SPAN_NOTICE("\The [src] feels [descriptive]")
 
 
 /obj/item/tank/attackby(obj/item/W as obj, mob/user as mob)
@@ -121,7 +125,7 @@
 			else if(tgui_pressure == "min")
 				src.distribute_pressure = TANK_MIN_RELEASE_PRESSURE
 			else if(text2num(tgui_pressure) != null)
-				pressure = text2num(tgui_pressure)
+				src.distribute_pressure = text2num(tgui_pressure)
 			src.distribute_pressure = min(max(floor(src.distribute_pressure), 0), TANK_MAX_RELEASE_PRESSURE)
 			. = TRUE
 
@@ -135,12 +139,27 @@
 					if(location.wear_mask && (location.wear_mask.flags_inventory & ALLOWINTERNALS))
 						location.internal = src
 						to_chat(usr, SPAN_NOTICE("You open \the [src]'s valve."))
+						playsound(src, 'sound/effects/internals.ogg', 40, TRUE)
 					else
 						to_chat(usr, SPAN_NOTICE("You need something to connect to \the [src]."))
 				. = TRUE
 
 /obj/item/tank/return_air()
-	return list(gas_type, temperature, pressure)
+	var/proportion_is_oxygen = 0
+	if(gas_type == GAS_TYPE_AIR)
+		proportion_is_oxygen = 0.21
+	else if(gas_type == GAS_TYPE_OXYGEN)
+		proportion_is_oxygen = 1
+	return list(gas_type, temperature, pressure, proportion_is_oxygen)
+
+/obj/item/tank/proc/take_air()
+	var/returned_pressure = remove_air_volume()
+	var/proportion_is_oxygen = 0
+	if(gas_type == GAS_TYPE_AIR)
+		proportion_is_oxygen = O2STANDARD
+	else if(gas_type == GAS_TYPE_OXYGEN)
+		proportion_is_oxygen = TRUE
+	return list(gas_type, temperature, returned_pressure, proportion_is_oxygen)
 
 /obj/item/tank/return_pressure()
 	return pressure
@@ -150,3 +169,23 @@
 
 /obj/item/tank/return_gas()
 	return gas_type
+
+/obj/item/tank/proc/remove_air_volume(volume_to_return = STD_BREATH_VOLUME/10)
+
+	if(pressure < distribute_pressure)
+		distribute_pressure = pressure
+
+	var/removed = distribute_pressure*volume_to_return/(R_IDEAL_GAS_EQUATION*temperature)/5
+
+	var/volume_litres = src.volume
+
+	// moles in tank
+	var/moles_in_tank = (pressure * volume_litres) / (R_IDEAL_GAS_EQUATION * temperature)
+	moles_in_tank -= removed // Remove the amount taken out
+
+
+	// Recalculate the new pressure
+	pressure = (max(0 , moles_in_tank) * R_IDEAL_GAS_EQUATION * temperature) / volume_litres
+
+
+	return removed*10000

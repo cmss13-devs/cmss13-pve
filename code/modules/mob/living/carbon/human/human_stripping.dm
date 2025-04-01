@@ -44,12 +44,9 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	if (!ishuman(source))
 		return
 	var/mob/living/carbon/human/sourcehuman = source
-	if (istype(sourcehuman.s_store, /obj/item/tank))
-		return "toggle_internals"
-	if (istype(sourcehuman.back, /obj/item/tank))
-		return "toggle_internals"
-	if (istype(sourcehuman.belt, /obj/item/tank))
-		return "toggle_internals"
+	if (istype(sourcehuman.wear_mask, /obj/item/clothing/mask))
+		if (sourcehuman.wear_mask.flags_inventory & ALLOWINTERNALS)
+			return "toggle_internals"
 	return
 
 /datum/strippable_item/mob_item_slot/mask/alternate_action(atom/source, mob/user)
@@ -81,12 +78,8 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	if(!istype(sourcehuman.wear_mask, /obj/item/clothing/mask))
 		return
 
-	if(istype(sourcehuman.back, /obj/item/tank))
-		sourcehuman.internal = sourcehuman.back
-	else if(istype(sourcehuman.s_store, /obj/item/tank))
-		sourcehuman.internal = sourcehuman.s_store
-	else if(istype(sourcehuman.belt, /obj/item/tank))
-		sourcehuman.internal = sourcehuman.belt
+	//Automatically select tank, maybe manually select later
+	sourcehuman.wear_mask.toggle_internals(sourcehuman, user)
 
 	if(!sourcehuman.internal)
 		return
