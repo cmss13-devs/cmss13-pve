@@ -20650,6 +20650,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/bmg290/colony/diner)
+"jDb" = (
+/obj/effect/vehicle_spawner/van/decrepit,
+/turf/open/asphalt,
+/area/bmg290/keppitz/entry_pub)
 "jDq" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -24342,6 +24346,12 @@
 	},
 /turf/open/floor/plating,
 /area/bmg290/relay/synthetic)
+"lsV" = (
+/obj/effect/vehicle_spawner/van/decrepit{
+	dir = 4
+	},
+/turf/open/asphalt,
+/area/bmg290/wilderness/relay_exterior)
 "ltf" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4;
@@ -56799,7 +56809,7 @@ hZs
 dRS
 tsz
 nde
-nde
+lsV
 pPf
 pPf
 cpV
@@ -94769,7 +94779,7 @@ rwA
 rUa
 tBe
 oUR
-oUR
+jDb
 oUR
 wCy
 wEr
