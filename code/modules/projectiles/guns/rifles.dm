@@ -406,7 +406,7 @@
 
 /obj/item/weapon/gun/rifle/ag80
 	name = "\improper AG80 pulse rifle"
-	desc = "Pulse action 10x23mm caseless assault rifle of the UPPAC Naval Infantry."
+	desc = "Pulse action 9.7x16mm caseless assault rifle of the UPPAC Naval Infantry. Only recently entered service and has yet to see full integration."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "ag80"
 	item_state = "ag80"
@@ -1305,64 +1305,16 @@
 	update_attachable(S.slot)
 
 /obj/item/weapon/gun/rifle/type71/carbine
-	name = "\improper Type 71 pulse carbine"
-	desc = "A carbine variant of the UPP's service rifle. Ergonomic, lightweight and chambered in 10x27mm, this variant has been designed to fire at a rate on-par with the M41A, leaving it less accurate but incredibly valuable in close quarters fighting."
-	icon_state = "type71c"
-	item_state = "type71c"
-	aim_slowdown = SLOWDOWN_ADS_QUICK //Carbine is more lightweight
-	wield_delay = WIELD_DELAY_VERY_FAST
-	bonus_overlay_x = 2
-	force = 20 //integrated melee mod from stock, which doesn't fit on the gun but is still clearly there on the sprite
-	attachable_allowed = list(
-		/obj/item/attachable/magnetic_harness, // Rail
-		/obj/item/attachable/scope,
-		/obj/item/attachable/scope/upp,
-		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/mini/upp,
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reddot/upp,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/suppressor, // Muzzle
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/heavy_barrel,
-		/obj/item/attachable/verticalgrip, // Underbarrel
-		/obj/item/attachable/verticalgrip/upp,
-		/obj/item/attachable/burstfire_assembly,
-		/obj/item/attachable/lasersight, // Side Rail
-		/obj/item/attachable/lasersight/upp,
-		/obj/item/attachable/flashlight,
-		)
-
-	random_spawn_muzzle = list() //no default bayonet
-
-/obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 14, "rail_y" = 23, "under_x" = 25, "under_y" = 14, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 25, "side_rail_y" = 16)
-
-/obj/item/weapon/gun/rifle/type71/carbine/handle_starting_attachment()
-	return //integrated attachment code makes me want to blow my brains out
-
-/obj/item/weapon/gun/rifle/type71/carbine/set_gun_config_values()
-	..()
-	set_fire_delay(FIRE_DELAY_TIER_11)
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
-	scatter = SCATTER_AMOUNT_TIER_5
-	damage_mult = BASE_BULLET_DAMAGE_MULT
-	scatter_unwielded = SCATTER_AMOUNT_TIER_5
-	recoil_unwielded = RECOIL_AMOUNT_TIER_4
-
-/obj/item/weapon/gun/rifle/type71/carbine/commando
-	name = "\improper Type 71 'Commando' pulse carbine"
+	name = "\improper Type 71 'Commando' pulse rifle"
 	desc = "A much rarer variant of the Type 71, this version contains an integrated suppressor, integrated scope, and extensive fine-tuning. Many parts have been replaced, filed down, and improved upon. As a result, this variant is rarely seen outside of commando units."
 	icon_state = "type73"
 	item_state = "type73"
-
 	fire_sound = "gun_silenced"
 	wield_delay = 0 //Ends up being .5 seconds due to scope
+	wield_delay = WIELD_DELAY_VERY_FAST
 	inherent_traits = list(TRAIT_GUN_SILENCED)
-	current_mag = /obj/item/ammo_magazine/rifle/type71
+	bonus_overlay_x = 2
+	force = 20 //integrated melee mod from stock, which doesn't fit on the gun but is still clearly there on the sprite
 	attachable_allowed = list(
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/verticalgrip/upp,
@@ -1373,7 +1325,21 @@
 	bonus_overlay_x = 1
 	bonus_overlay_y = 0
 
-/obj/item/weapon/gun/rifle/type71/carbine/commando/handle_starting_attachment()
+/obj/item/weapon/gun/rifle/type71/carbine/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_delay(FIRE_DELAY_TIER_12)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_8
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	scatter_unwielded = SCATTER_AMOUNT_TIER_5
+	reoil_unwielded = RECOIL_AMOUNT_TIER_4
+
+/obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 22, "under_x" = 23, "under_y" = 14, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 24, "side_rail_y" = 17)
+
+/obj/item/weapon/gun/rifle/type71/carbine/handle_starting_attachment()
 	..()
 	//suppressor
 	var/obj/item/attachable/type73suppressor/suppressor = new(src)
@@ -1386,19 +1352,6 @@
 	scope.flags_attach_features &= ~ATTACH_REMOVABLE
 	scope.Attach(src)
 	update_attachable(scope.slot)
-
-
-/obj/item/weapon/gun/rifle/type71/carbine/commando/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 22, "under_x" = 23, "under_y" = 14, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 24, "side_rail_y" = 17)
-
-
-/obj/item/weapon/gun/rifle/type71/carbine/commando/set_gun_config_values()
-	..()
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
-	set_fire_delay(FIRE_DELAY_TIER_11)
-	set_burst_delay(FIRE_DELAY_TIER_12)
-	scatter = SCATTER_AMOUNT_TIER_8
 
 	//-------------------------------------------------------
 

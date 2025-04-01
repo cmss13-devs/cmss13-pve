@@ -329,12 +329,12 @@
 
 /obj/item/ammo_magazine/rifle/ag80
 	name = "\improper AG80 magazine (9.7x16mm)"
-	desc = "A 9.7x16mm high-capacity casket magazine for the AG80 rifle."
+	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle."
 	caliber = "9.7x16mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
-	icon_state = "type71"
-	ammo_band_icon = "+type71_band"
-	ammo_band_icon_empty = "+type71_band_e"
+	icon_state = "ag80"
+	ammo_band_icon = "+ag80_band"
+	ammo_band_icon_empty = "+ag80_band_e"
 	default_ammo = /datum/ammo/bullet/rifle
 	max_rounds = 99
 	gun_type = /obj/item/weapon/gun/rifle/ag80
