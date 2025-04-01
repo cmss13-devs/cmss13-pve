@@ -359,11 +359,11 @@
 	flags_ammo_behavior = AMMO_BALLISTIC
 
 	damage = 40
-	accuracy = -HIT_ACCURACY_TIER_2
+	accuracy = HIT_ACCURACY_TIER_2
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/rifle/heavy/spec/impact/on_hit_mob(mob/M, obj/projectile/P)
-	knockback(M, P, 32) // Can knockback basically at max range max range is 24 tiles...
+	knockback(M, P, 16) // Can knockback out to half-range
 
 /datum/ammo/bullet/rifle/heavy/spec/impact/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
@@ -384,8 +384,8 @@
 	name = "high velocity depleted uranium 10x28 bullet"
 
 	damage = 60
-	accurate_range_min = 4
 	penetration = ARMOR_PENETRATION_TIER_5
+	accuracy = HIT_ACCURACY_TIER_4
 	scatter = -SCATTER_AMOUNT_TIER_8
 
 /datum/ammo/bullet/rifle/heavy/spec/du/set_bullet_traits()
