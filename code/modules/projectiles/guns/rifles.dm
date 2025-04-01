@@ -1274,6 +1274,9 @@
 	STOCK.Attach(src)
 	update_attachable(STOCK.slot)
 
+/obj/item/weapon/gun/rifle/type71/preloaded
+	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/attached_gun/grenade/type71/preloaded)
+
 /obj/item/weapon/gun/rifle/type71/unloaded
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
