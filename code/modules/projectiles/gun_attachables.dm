@@ -3119,6 +3119,20 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_y = 13
 	has_breech = FALSE
 
+/obj/item/attachable/attached_gun/grenade/ag80
+	name = "\improper GP-45 grenade launcher"
+	desc = "Integrated grenade launcher yipee"
+	icon_state = "grenade-ag80"
+	attach_icon = "grenade-ag80_a"
+	current_rounds = 0
+	max_rounds = 1
+	max_range = 14
+	attachment_firing_delay = 5 //one shot, so if you can reload fast you can shoot fast
+
+/obj/item/attachable/attached_gun/grenade/ag80/Initialize()
+	. = ..()
+	grenade_pass_flags = NO_FLAGS
+
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
 /obj/item/attachable/attached_gun/flamer
 	name = "mini flamethrower"
