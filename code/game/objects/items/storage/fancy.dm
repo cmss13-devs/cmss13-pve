@@ -424,7 +424,7 @@
 /obj/item/storage/fancy/cigar/matchbook/balaji_imperial
 	name = "\improper Balaji Imperial matchbook"
 	desc = "A small book of expensive royal paper matches designed for refined smokers. These ones light almost every time!"
-	icon_state = "bpacket"
+	icon_state = "mpacket_bi"
 	light_chance = 80
 	burn_chance = 10
 
