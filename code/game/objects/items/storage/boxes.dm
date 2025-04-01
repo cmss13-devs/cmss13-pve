@@ -621,7 +621,6 @@
 	else
 		icon_state = "m94"
 
-
 /obj/item/storage/box/flare/signal
 	name = "\improper M89-S signal flare pack"
 	desc = "A packet of fourteen M89-S Signal Marking Flares."
