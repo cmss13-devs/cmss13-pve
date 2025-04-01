@@ -473,3 +473,7 @@
 /datum/map_template/shuttle/tripoli
 	name = "Tripoli"
 	shuttle_id = DROPSHIP_TRIPOLI
+
+/datum/map_template/shuttle/wallace_and_gromit
+	name = "Wallace and Gromit"
+	shuttle_id = DROPSHIP_WALLACE_AND_GROMIT
