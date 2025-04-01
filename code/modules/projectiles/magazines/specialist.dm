@@ -81,6 +81,7 @@
 	gun_type = /obj/item/weapon/gun/rifle/m49a_custom
 	ammo_band_icon = "+a19_band"
 	ammo_band_icon_empty = "+a19_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
 
 /obj/item/ammo_magazine/rifle/m49a/custom/incendiary
 	name = "\improper A19 HV incendiary magazine (10x28mm)"
@@ -89,12 +90,12 @@
 	gun_type = /obj/item/weapon/gun/rifle/m49a_custom
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
-/obj/item/ammo_magazine/rifle/m49a/custom/impact
-	name = "\improper A19 HV high impact magazine (10x28mm)"
-	desc = "A magazine of A19 HV high impact rounds for use in the later-model M49A battle rifles. The M49A5 & M49A6 battle rifles are the only guns that can chamber these rounds."
-	default_ammo = /datum/ammo/bullet/rifle/heavy/spec/impact
+/obj/item/ammo_magazine/rifle/m49a/custom/explosive
+	name = "\improper A19 HV explosive magazine (10x28mm)"
+	desc = "A magazine of A19 HV explosive rounds for use in the later-model M49A battle rifles. The M49A5 & M49A6 battle rifles are the only guns that can chamber these rounds."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/spec/explosive
 	gun_type = /obj/item/weapon/gun/rifle/m49a_custom
-	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
+	ammo_band_color = AMMO_BAND_COLOR_EXPLOSIVE
 
 /obj/item/ammo_magazine/rifle/m49a/custom/pve
 	name = "\improper A19 HV depleted uranium magazine (10x28mm)"

@@ -126,14 +126,14 @@
 //M49A
 
 /datum/supply_packs/ammo_scout_mix
-	name = "M49A Scout Mixed Magazine Crate (regular x2, incendiary x2, impact x2)"
+	name = "M49A Scout Mixed Magazine Crate (regular x2, incendiary x2, explosive x2)"
 	contains = list(
 		/obj/item/ammo_magazine/rifle/m49a/custom,
 		/obj/item/ammo_magazine/rifle/m49a/custom,
 		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
 		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
-		/obj/item/ammo_magazine/rifle/m49a/custom/impact,
-		/obj/item/ammo_magazine/rifle/m49a/custom/impact,
+		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
+		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
 	)
 	cost = 40
 	containertype = /obj/structure/closet/crate/ammo
@@ -141,7 +141,7 @@
 	group = "Weapons Specialist Ammo"
 
 /datum/supply_packs/ammo_scout_regular
-	name = "M49A Scout Magazine Crate (x5)"
+	name = "M49A5 Magazine Crate (x5)"
 	contains = list(
 		/obj/item/ammo_magazine/rifle/m49a/custom,
 		/obj/item/ammo_magazine/rifle/m49a/custom,
@@ -151,11 +151,11 @@
 	)
 	cost = 30
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "M49A Scout Magazine Crate"
+	containername = "M49A5 Magazine Crate"
 	group = "Weapons Specialist Ammo"
 
 /datum/supply_packs/ammo_scout_incendiary
-	name = "M49A Scout Incendiary Magazine Crate (x3)"
+	name = "M49A5 Incendiary Magazine Crate (x3)"
 	contains = list(
 		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
 		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
@@ -163,19 +163,19 @@
 	)
 	cost = 30
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "M49A Scout Incendiary Magazine"
+	containername = "M49A5 Incendiary Magazine"
 	group = "Weapons Specialist Ammo"
 
-/datum/supply_packs/ammo_scout_impact
-	name = "M49A Scout Impact Magazine Crate (x3)"
+/datum/supply_packs/ammo_scout_explosive
+	name = "M49A5 Explosive Magazine Crate (x3)"
 	contains = list(
-		/obj/item/ammo_magazine/rifle/m49a/custom/impact,
-		/obj/item/ammo_magazine/rifle/m49a/custom/impact,
-		/obj/item/ammo_magazine/rifle/m49a/custom/impact,
+		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
+		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
+		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
 	)
 	cost = 30
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "M49A Scout Impact Magazine Crate"
+	containername = "M49A5 Explosive Magazine Crate"
 	group = "Weapons Specialist Ammo"
 
 //M240-T

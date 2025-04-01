@@ -1457,7 +1457,7 @@
 		/obj/item/ammo_magazine/rifle/m49a/penetrating,
 		/obj/item/ammo_magazine/rifle/m49a/custom,
 		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
-		/obj/item/ammo_magazine/rifle/m49a/custom/impact,
+		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
 		/obj/item/ammo_magazine/rifle/m49a/custom/pve,
 	)
 

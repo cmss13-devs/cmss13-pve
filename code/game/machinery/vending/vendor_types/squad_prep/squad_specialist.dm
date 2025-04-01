@@ -10,7 +10,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 		list("Anti-Materiel Sniper Set", 0, /obj/item/storage/box/spec/sniper/anti_materiel, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
 
 		list("EXTRA SCOUT AMMUNITION", 0, null, null, null),
-		list("A19 High Velocity Impact Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m49a/custom/impact, null, VENDOR_ITEM_REGULAR),
+		list("A19 High Velocity Impact Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m49a/custom/explosive, null, VENDOR_ITEM_REGULAR),
 		list("A19 High Velocity Incendiary Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m49a/custom/incendiary, null, VENDOR_ITEM_REGULAR),
 		list("A19 High Velocity Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m49a/custom, null, VENDOR_ITEM_REGULAR),
 
