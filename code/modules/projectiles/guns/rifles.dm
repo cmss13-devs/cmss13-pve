@@ -1275,35 +1275,6 @@
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
-/obj/item/weapon/gun/rifle/type71/flamer
-	name = "\improper Type 71-F pulse rifle"
-	desc = "The service rifle of the UPP, the Type 71 is an ergonomic, lightweight pulse rifle chambered in 10x27mm, packing a harder punch than the USCM M41A which balances out a lower firerate. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This variant features an integrated incinerator unit."
-	attachable_allowed = list(
-		/obj/item/attachable/magnetic_harness, // Rail
-		/obj/item/attachable/scope,
-		/obj/item/attachable/scope/upp,
-		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/mini/upp,
-		/obj/item/attachable/reddot/upp,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/suppressor, // Muzzle
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/heavy_barrel,
-		/obj/item/attachable/lasersight, // Side Rail
-		/obj/item/attachable/lasersight/upp,
-		/obj/item/attachable/flashlight,
-	)
-
-/obj/item/weapon/gun/rifle/type71/flamer/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/attached_gun/flamer/advanced/integrated/S = new(src)
-	S.flags_attach_features &= ~ATTACH_REMOVABLE
-	S.Attach(src)
-	update_attachable(S.slot)
-
 /obj/item/weapon/gun/rifle/type71/carbine
 	name = "\improper Type 71 'Commando' pulse rifle"
 	desc = "A much rarer variant of the Type 71, this version contains an integrated suppressor, integrated scope, and extensive fine-tuning. Many parts have been replaced, filed down, and improved upon. As a result, this variant is rarely seen outside of commando units."
@@ -1324,6 +1295,7 @@
 	random_spawn_muzzle = list()
 	bonus_overlay_x = 1
 	bonus_overlay_y = 0
+	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/type73suppressor, /obj/item/attachable/scope/mini/upp)
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_config_values()
 	..()
@@ -1338,20 +1310,6 @@
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 22, "under_x" = 23, "under_y" = 14, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 24, "side_rail_y" = 17)
-
-/obj/item/weapon/gun/rifle/type71/carbine/handle_starting_attachment()
-	..()
-	//suppressor
-	var/obj/item/attachable/type73suppressor/suppressor = new(src)
-	suppressor.flags_attach_features &= ~ATTACH_REMOVABLE
-	suppressor.Attach(src)
-	update_attachable(suppressor.slot)
-	//scope
-	var/obj/item/attachable/scope/mini/scope = new(src)
-	scope.hidden = TRUE
-	scope.flags_attach_features &= ~ATTACH_REMOVABLE
-	scope.Attach(src)
-	update_attachable(scope.slot)
 
 	//-------------------------------------------------------
 
