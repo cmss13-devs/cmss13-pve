@@ -338,6 +338,7 @@
 	default_ammo = /datum/ammo/bullet/rifle
 	max_rounds = 99
 	gun_type = /obj/item/weapon/gun/rifle/ag80
+
 //-------------------------------------------------------
 //L42A Battle Rifle
 

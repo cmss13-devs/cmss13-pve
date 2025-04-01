@@ -510,17 +510,9 @@
 	magazine_type = /obj/item/ammo_magazine/rifle/ag80
 
 //-----------------------LARGE AG80 Rifle Mag Boxes-----------------------
-/obj/item/ammo_box/magazine/type71/large
+/obj/item/ammo_box/magazine/type71/large/ag80
 	name = "magazine box (AG80 x 32)"
-	icon_state = "base_upplarge"
-	overlay_ammo_type = null
-	overlay_gun_type = "_blank"
-	overlay_content = "_reglarge"
-	limit_per_tile = 1
-	flags_equip_slot = null
 	magazine_type = /obj/item/ammo_magazine/rifle/ag80
-	num_of_magazines = 32
-	var/move_delay_mult = 2
 
 //-----------------------Nailgun Mag Box-----------------------
 
