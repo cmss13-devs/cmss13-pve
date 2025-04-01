@@ -20,7 +20,6 @@
 	can_explode = TRUE
 	burning = FALSE
 	limit_per_tile = 1 //how many you can deploy per tile
-	layer = LOWER_ITEM_LAYER //to not hide other items
 
 	var/grenade_text_markings_icon = 'icons/obj/items/weapons/guns/ammo_boxes/grenade_markings.dmi'
 	flames_icon = 'icons/obj/items/weapons/guns/ammo_boxes/misc.dmi'

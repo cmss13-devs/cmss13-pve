@@ -3,7 +3,6 @@
 	desc = "A generic grenade box. If you're seeing this, something went wrong and you should contact a GM about it."
 	icon = 'icons/obj/items/weapons/guns/ammo_boxes/boxes_and_lids.dmi'
 	icon_state = "base_uscm_nade"
-	layer = LOWER_ITEM_LAYER //to not hide other items
 	limit_per_tile = 1
 	holds_grenades = TRUE
 	holds_ammo = FALSE
