@@ -119,7 +119,7 @@
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_reg"
 	caliber = "11.7x22mm"
-	default_ammo = /datum/ammo/bullet/rifle/upp
+	default_ammo = /datum/ammo/bullet/rifle/type71
 
 /obj/item/ammo_box/rounds/type71/empty
 	empty = TRUE
@@ -130,7 +130,7 @@
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_ap"
-	default_ammo = /datum/ammo/bullet/rifle/upp/ap
+	default_ammo = /datum/ammo/bullet/rifle/type71/ap
 
 /obj/item/ammo_box/rounds/type71/ap/empty
 	empty = TRUE
@@ -141,7 +141,7 @@
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_heap"
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap
+	default_ammo = /datum/ammo/bullet/rifle/type71/heap
 
 /obj/item/ammo_box/rounds/type71/heap/empty
 	empty = TRUE
@@ -152,7 +152,7 @@
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_pkp"
 	overlay_content = "_type71_reg"
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap/mg
+	default_ammo = /datum/ammo/bullet/rifle/type71/heap/mg
 	bullet_amount = 1500
 	max_bullet_amount = 1500
 	caliber = "11.7x22mm"

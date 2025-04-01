@@ -308,20 +308,20 @@
 	icon_state = "type71"
 	ammo_band_icon = "+type71_band"
 	ammo_band_icon_empty = "+type71_band_e"
-	default_ammo = /datum/ammo/bullet/rifle/upp
+	default_ammo = /datum/ammo/bullet/rifle/type71
 	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/type71
 
 /obj/item/ammo_magazine/rifle/type71/ap
 	name = "\improper Type 71 AP magazine (11.7x22mm)"
 	desc = "A 11.7x22mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/upp/ap
+	default_ammo = /datum/ammo/bullet/rifle/type71/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/type71/heap
 	name = "\improper Type 71 HEAP magazine (11.7x22mm)"
 	desc = "A 11.7x22mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap
+	default_ammo = /datum/ammo/bullet/rifle/type71/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 //-------------------------------------------------------
