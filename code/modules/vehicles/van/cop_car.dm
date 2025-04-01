@@ -4,7 +4,7 @@
 //Read the documentation in multitile.dm before trying to decipher this stuff
 
 /obj/vehicle/multitile/box_van/cop_car
-	name = "\improper box-van"
+	name = "\improper Mono-Spectra"
 	desc = "A police car. Used to transport law enforcement and criminals alike."
 	icon = 'icons/obj/vehicles/cop_car.dmi'
 
