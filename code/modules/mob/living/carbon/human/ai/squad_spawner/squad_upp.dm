@@ -19,17 +19,17 @@
 	name = "Naval Infantry, Lead Team"
 	desc = "Naval Infantry patrol armed with a AG80 rifle and a Type 71 rifle, and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
+		/datum/equipment_preset/upp/squadlead = 1,
 		/datum/equipment_preset/upp/rifleman/ag80 = 1,
-		/datum/equipment_preset/upp/rifleman = 1,
 	)
 
 /datum/human_ai_squad_preset/upp/squad
 	name = "Naval Infantry, Squad"
 	desc = "Naval Infantry patrol armed with 2 AG80 rifles and 2 Type 71 rifles, and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
+		/datum/equipment_preset/upp/squadlead = 1,
 		/datum/equipment_preset/upp/rifleman/ag80 = 2,
 		/datum/equipment_preset/upp/rifleman = 1,
-		/datum/equipment_preset/upp/squadlead = 1,
 	)
 
 /datum/human_ai_squad_preset/upp/medical
@@ -48,3 +48,9 @@
 		/datum/equipment_preset/upp/officer/naval = 1,
 	)
 
+/datum/human_ai_squad_preset/upp/gunner
+	name = "Naval Infantry, Gunner"
+	desc = "USE WITH CAUTION. Naval Infantry heavy gunner armed with a GPMG loaded with HEAP and carrying IFAKs containing gauze, ointment, splints and an injector."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/machinegunner = 1,
+	)
