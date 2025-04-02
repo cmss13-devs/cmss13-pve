@@ -17,7 +17,7 @@
 	var/last_fired = 0
 	var/fire_delay = 1
 
-	var/burst_fire_delay = 0.1
+	var/burst_fire_delay = 3
 
 	var/immobile = FALSE //Used for prebuilt ones.
 	var/obj/item/ammo_magazine/ammo = new /obj/item/ammo_magazine/sentry
@@ -39,7 +39,7 @@
 
 	var/damage_mult = 1
 	var/accuracy_mult = 0.5
-	var/burst = 2
+	var/burst = 5
 	handheld_type = /obj/item/defenses/handheld/sentry
 
 	/// timer triggered when sentry gun shoots at a target to not spam the laptop
@@ -51,12 +51,12 @@
 
 	/// action list is configurable for all subtypes, this is just an example
 	choice_categories = list(
-		// SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_BURST, ROF_FULL_AUTO),
+		SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_BURST, ROF_FULL_AUTO),
 		SENTRY_CATEGORY_IFF = list(FACTION_MARINE, SENTRY_FACTION_WEYLAND, SENTRY_FACTION_HUMAN, FACTION_UPP),
 	)
 
 	selected_categories = list(
-		// SENTRY_CATEGORY_ROF = ROF_SINGLE,
+		SENTRY_CATEGORY_ROF = ROF_FULL_AUTO,
 		SENTRY_CATEGORY_IFF = FACTION_MARINE,
 	)
 
@@ -183,16 +183,16 @@
 	switch(level)
 		if(ROF_SINGLE)
 			burst = 1
-			accuracy_mult = 1
+			accuracy_mult = 0.9
 			fire_delay = 4
 		if(ROF_BURST)
 			burst = 3
-			accuracy_mult = 0.6
-			fire_delay = 12
+			accuracy_mult = 0.7
+			fire_delay = 2.5
 		if(ROF_FULL_AUTO)
 			burst = 1
 			accuracy_mult = 0.5
-			fire_delay = 0.5
+			fire_delay = 1
 
 /obj/structure/machinery/defenses/sentry/get_examine_text(mob/user)
 	. = ..()
@@ -921,16 +921,23 @@
 	handheld_type = /obj/item/defenses/handheld/sentry/grenade
 	ammo = new /obj/item/ammo_magazine/sentry/grenade
 	firing_sound = 'sound/weapons/gun_ugl_fire.ogg'
+	choice_categories = list(
+		SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_BURST),
+		SENTRY_CATEGORY_IFF = list(FACTION_MARINE, SENTRY_FACTION_WEYLAND, SENTRY_FACTION_HUMAN, FACTION_UPP),
+	)
+
+	selected_categories = list(
+		SENTRY_CATEGORY_ROF = ROF_SINGLE,
+		SENTRY_CATEGORY_IFF = FACTION_MARINE,
+	)
 
 /obj/structure/machinery/defenses/sentry/wy
 	name = "WY 202-GMA1 Smart Sentry"
 	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the PMC."
 	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
 	sentry_type = "wy_sentry"
-	fire_delay = 1.8
 	health = 350
 	health_max = 350
-	damage_mult = 3.5
 	disassemble_time = 5 SECONDS
 	hack_time = 25 SECONDS
 	sentry_range = 6
@@ -938,6 +945,7 @@
 	handheld_type = /obj/item/defenses/handheld/sentry/wy
 	ammo = new /obj/item/ammo_magazine/sentry/wy
 	selected_categories = list(
+		SENTRY_CATEGORY_ROF = list(ROF_FULL_AUTO),
 		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
 	)
 
@@ -946,15 +954,15 @@
 	desc = "A deployable, semi-automated turret with AI targeting capabilities used by the PMC."
 	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
 	sentry_type = "wy_sentry"
-	fire_delay = 0.08 SECONDS
+	fire_delay = 0.5
 	health = 200
 	health_max = 200
-	damage_mult = 0.3
 	disassemble_time = 2 SECONDS
 	hack_time = 25 SECONDS
 	handheld_type = /obj/item/defenses/handheld/sentry/wy/mini
 	ammo = new /obj/item/ammo_magazine/sentry/wy/mini
 	selected_categories = list(
+		SENTRY_CATEGORY_ROF = list(ROF_FULL_AUTO),
 		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
 	)
 
@@ -964,16 +972,17 @@
 	defense_type = "Heavy"
 	icon = 'icons/obj/structures/machinery/defenses/wy_heavy.dmi'
 	sentry_type = "wy_sentry"
-	fire_delay = 15
+	fire_delay = 5
 	health = 600
 	health_max = 600
-	damage_mult = 5
+	damage_mult = 1.2 //Longer barrel, better muzzle velocity, yadda yadda
 	disassemble_time = 10 SECONDS
 	hack_time = 25 SECONDS
-	sentry_range = 8
+	sentry_range = 9
 	handheld_type = /obj/item/defenses/handheld/sentry/wy
 	ammo = new /obj/item/ammo_magazine/sentry/wy
 	selected_categories = list(
+		SENTRY_CATEGORY_ROF = list(ROF_SINGLE),
 		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
 	)
 
@@ -984,10 +993,12 @@
 	icon_on = "upp_defense_base"
 	icon_off = "upp_defense_base_off"
 	choice_categories = list(
+		SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_BURST, ROF_FULL_AUTO),
 		SENTRY_CATEGORY_IFF = list(FACTION_UPP, SENTRY_FACTION_HUMAN),
 	)
 
 	selected_categories = list(
+		SENTRY_CATEGORY_ROF = ROF_BURST,
 		SENTRY_CATEGORY_IFF = FACTION_UPP,
 	)
 	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
@@ -1015,6 +1026,21 @@
 	omni_directional = TRUE
 	handheld_type = /obj/item/defenses/handheld/sentry/upp/light
 	ammo = new /obj/item/ammo_magazine/sentry/upp/mini
+
+/obj/structure/machinery/defenses/sentry/upp/handle_rof(level)
+	switch(level)
+		if(ROF_SINGLE)
+			burst = 1
+			accuracy_mult = 0.95
+			fire_delay = 4.8
+		if(ROF_BURST)
+			burst = 2
+			accuracy_mult = 0.8
+			fire_delay = 3.6
+		if(ROF_FULL_AUTO)
+			burst = 1
+			accuracy_mult = 0.6
+			fire_delay = 1.8
 
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE

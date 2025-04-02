@@ -59,6 +59,7 @@
 	icon_state = "wy22e5"
 	caliber = "10x42mm"
 	max_rounds = 200
+	default_ammo = /datum/ammo/bullet/rifle/heavy/wy
 
 /obj/item/ammo_magazine/sentry/wy/mini
 	name = "H16 ammo drum (10x12mm Caseless)"
@@ -67,6 +68,7 @@
 	icon_state = "wy22e5"
 	caliber = "10x12mm"
 	max_rounds = 1000
+	default_ammo = /datum/ammo/bullet/smg/wy_minisentry
 
 // FLAMER Sentry
 /obj/item/ammo_magazine/sentry_flamer
