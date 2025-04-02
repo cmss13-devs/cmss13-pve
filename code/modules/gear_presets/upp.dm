@@ -53,6 +53,9 @@
 	else
 		new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
 
+/datum/equipment_preset/upp/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_upp_underwear(new_human)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/militia
@@ -64,12 +67,15 @@
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
 
+/datum/equipment_preset/upp/militia/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	new_human.undershirt = "Territorial Guard Telnyashka"
+	new_human.underwear = "UPP Boxers"
+
 /datum/equipment_preset/upp/militia/load_gear(mob/living/carbon/human/new_human)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/ushanka, WEAR_HEAD)
-	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -116,7 +122,7 @@
 	var/random_jacket= rand(1,5)
 	switch(random_jacket)
 		if(1 to 2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/jacket, WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/jacket, WEAR_JACKET)
 		if(3 to 4)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/lamp, WEAR_JACKET)
 		if(5)
@@ -220,7 +226,7 @@
 
 /datum/equipment_preset/upp/rifleman/eva/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "Naval Infantry Telnyashka"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -249,6 +255,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/sanitar
@@ -262,8 +269,6 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDICAL, ACCESS_UPP_MEDPREP)
 
 /datum/equipment_preset/upp/sanitar/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
@@ -300,9 +305,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/tricordrazine, WEAR_IN_L_STORE)
-
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/machinegunner
@@ -316,8 +322,6 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 
 /datum/equipment_preset/upp/machinegunner/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	//head
@@ -342,6 +346,8 @@
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+
+
 //*****************************************************************************************************/
 /datum/equipment_preset/upp/squadlead
 	name = "UPP Squad Sergeant (Equipped)"
@@ -355,8 +361,6 @@
 	role_comm_title = "SQSGT"
 
 /datum/equipment_preset/upp/squadlead/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -383,6 +387,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/navallead
@@ -398,8 +403,6 @@
 	minimap_icon = "leader"
 
 /datum/equipment_preset/upp/navallead/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -426,6 +429,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/military_police
@@ -439,8 +443,6 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
 
 /datum/equipment_preset/upp/military_police/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
@@ -458,6 +460,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/officer
@@ -474,7 +477,7 @@
 
 /datum/equipment_preset/upp/officer/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel, WEAR_BACK)
 	//face
@@ -494,6 +497,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
+
 
 /datum/equipment_preset/upp/officer/senior
 	name = "UPP Senior Lieutenant"
@@ -539,7 +543,7 @@
 
 /datum/equipment_preset/upp/officer/naval/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "Naval Infantry Telnyashka"
+
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/naval(new_human), WEAR_BODY)
@@ -571,7 +575,7 @@
 	new_human.set_species(SYNTH_GEN_THREE)
 
 /datum/equipment_preset/upp/synth/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
@@ -593,6 +597,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/synth, WEAR_R_STORE)
+
 
 /datum/equipment_preset/upp/synth/commando
 	name = "UPP Synthetic Commando"
@@ -633,7 +638,6 @@
 
 /datum/equipment_preset/upp/synth/commando/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/type23, WEAR_BACK)
 	//face
@@ -664,6 +668,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavybuck, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/upp, WEAR_R_STORE)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/commando
@@ -680,7 +685,7 @@
 /datum/equipment_preset/upp/commando/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
 
-	new_human.undershirt = "Naval Infantry Telnyashka"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/scout_cloak/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
@@ -722,6 +727,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/commando/leader
@@ -746,7 +752,7 @@
 
 /datum/equipment_preset/upp/tank/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "Naval Infantry Telnyashka"
+
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//head
@@ -767,6 +773,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
+
 /datum/equipment_preset/upp/pilot
 	name = "UPP Pilot"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -779,7 +786,7 @@
 
 /datum/equipment_preset/upp/pilot/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "Naval Infantry Telnyashka"
+
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//head
@@ -796,6 +803,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/mildoctor
@@ -840,255 +848,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/oxycodone, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/tricordrazine, WEAR_IN_L_STORE)
 
-//CIVILIANS
-
-/datum/equipment_preset/upp/colonist
-	name = "UPP Civilian"
-	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
-	assignment = "Grazhdanin"
-	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/civilian
-	access = list(ACCESS_CIVILIAN_PUBLIC)
-	idtype = /obj/item/card/id
-
-/datum/equipment_preset/upp/colonist/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
-	//back
-	add_random_satchel(new_human)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
-	//uniform
-	add_civilian_uniform(new_human)
-	//jacket
-	add_civilian_jacket(new_human)
-	//limbs
-	var/random_civilian_shoe = rand(1,7)
-	switch(random_civilian_shoe)
-		if(1 to 2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
-		if(3 to 4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
-		if(5)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
-		if(6)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
-		if(7)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
-
-/datum/equipment_preset/upp/researcher
-	name = "UPP Civilian Researcher"
-	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
-	assignment = "Ministry of Education Research Associate"
-	paygrades = list(PAY_SHORT_CCMO = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/researcher
-	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH)
-	idtype = /obj/item/card/id
-
-/datum/equipment_preset/upp/researcher/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
-	//back
-	add_random_satchel(new_human)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
-	//uniform
-	add_professionalwear(new_human)
-	add_tie(new_human)
-	//jacket
-	var/random_researcher_suit = rand(1,5)
-	switch(random_researcher_suit)
-		if(1 to 2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(new_human), WEAR_JACKET)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/vest/tan(new_human), WEAR_JACKET)
-		if(4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/vest(new_human), WEAR_JACKET)
-		if(5)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/vest/grey(new_human), WEAR_JACKET)
-	//limb
-	add_dress_shoes(new_human)
-
-/datum/equipment_preset/upp/doctor
-
-	name = "UPP Civilian Doctor"
-	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
-	assignment = "Ministry of Health Medical Doctor"
-	paygrades = list(PAY_SHORT_CDOC = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/civilian/survivor/doctor
-	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDBAY)
-	idtype = /obj/item/card/id
-
-/datum/equipment_preset/upp/doctor/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
-	var/random_civilian_satchel= rand(1,3)
-	switch(random_civilian_satchel)
-		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
-		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
-
-	var/random_professional_uniform= rand(1,3)
-	switch(random_professional_uniform)
-		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/brown(new_human), WEAR_BODY)
-		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/blue(new_human), WEAR_BODY)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black(new_human), WEAR_BODY)
-
-	var/random_tie= rand(1,6)
-	switch(random_tie)
-		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
-		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/blue(new_human), WEAR_ACCESSORY)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/green(new_human), WEAR_ACCESSORY)
-		if(4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/purple(new_human), WEAR_ACCESSORY)
-		if(6)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/red(new_human), WEAR_ACCESSORY)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(new_human), WEAR_JACKET)
-
-	var/random_professional_shoe = rand(1,2)
-	switch(random_professional_shoe)
-		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
-		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
-
-/datum/equipment_preset/upp/admin
-	name = "UPP Civilian Administrator"
-	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
-	faction_group = FACTION_LIST_UPP_COLONY
-	assignment = "Administrator"
-	role_comm_title = "ADMIN"
-	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/civilian
-	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND)
-	idtype = /obj/item/card/id
-
-/datum/equipment_preset/upp/admin/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
-	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/brown(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/black(new_human), WEAR_ACCESSORY)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
-
-/datum/equipment_preset/upp/cargo
-	name = "UPP Civilian Logistics Worker"
-	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
-	assignment = "Logistical Technician"
-	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/civilian
-	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS)
-	idtype = /obj/item/card/id
-
-/datum/equipment_preset/upp/cargo/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
-	//uniform
-	var/random_boilersuit= rand(1,3)
-	switch(random_boilersuit)
-		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki(new_human), WEAR_BODY)
-		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/cyan(new_human), WEAR_BODY)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey(new_human), WEAR_BODY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/utility_vest(new_human), WEAR_JACKET)
-	//limb
-	var/random_worker_shoe = rand(1,5)
-	switch(random_worker_shoe)
-		if(1 to 2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
-		if(3 to 4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
-		if(5)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
-
-/datum/equipment_preset/upp/engineer
-	name = "UPP Civilian Engineer"
-	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
-	assignment = "Maintenance Technician"
-	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/MT
-	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_ENGINEERING)
-	idtype = /obj/item/card/id
-
-/datum/equipment_preset/upp/engineer/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
-	//uniform
-	var/random_boilersuit= rand(1,3)
-	switch(random_boilersuit)
-		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki(new_human), WEAR_BODY)
-		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/cyan(new_human), WEAR_BODY)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey(new_human), WEAR_BODY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/utility_vest(new_human), WEAR_JACKET)
-	//limbs
-	var/random_worker_shoe = rand(1,5)
-	switch(random_worker_shoe)
-		if(1 to 2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
-		if(3 to 4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
-		if(5)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
-
-/datum/equipment_preset/upp/operations
-	name = "UPP Civilian Operations Technician"
-	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
-	assignment = "Operations Technician"
-	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/civilian
-	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_COMMAND)
-	idtype = /obj/item/card/id
-
-/datum/equipment_preset/upp/operations/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
-	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/workwear(new_human), WEAR_BODY)
-	//limb
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
-
 /datum/equipment_preset/upp/police
 	name = "UPP People's Armed Police Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -1101,9 +860,11 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND)
 	idtype = /obj/item/card/id/silver
 
+/datum/equipment_preset/upp/police/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_civilian_underwear(new_human)
+
 /datum/equipment_preset/upp/police/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked/police, WEAR_HEAD)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
@@ -1111,29 +872,30 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/pap, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/waist, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/t73, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/t73, WEAR_IN_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/jacket/pap, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/UPP/jacket/pap, WEAR_JACKET)
 	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/UPP/full, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/CMB/full/upp, WEAR_WAIST)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
-
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/upp/police/riot
 	name = "UPP People's Armed Police Officer - Riot"
 
 /datum/equipment_preset/upp/police/riot/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/military/upp, WEAR_FACE)
@@ -1141,12 +903,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/peaked/police, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/pap, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest/brown_vest, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/waist, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/t73, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/t73, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light, WEAR_JACKET)
 	//waist
@@ -1154,29 +914,9 @@
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
-
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/heavybean, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23/riot, WEAR_R_HAND)
-
-/datum/equipment_preset/upp/prisoner
-	name = "UPP Prisoner"
-	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
-	assignment = "Inmate"
-	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/civilian
-	access = list(null)
-	idtype = /obj/item/card/id/lanyard
-
-/datum/equipment_preset/upp/prisoner/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
-	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/prison_boiler(new_human), WEAR_BODY)
-	//limb
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 
 /datum/equipment_preset/upp/police/mss
 	name = "UPP MSS Agent"
@@ -1188,8 +928,6 @@
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/upp/police/mss/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -1207,12 +945,11 @@
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup, WEAR_FEET)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
-
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
 	//back
 	//face
 	//head

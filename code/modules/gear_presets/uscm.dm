@@ -92,6 +92,8 @@
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m46c(new_human), WEAR_J_STORE)
 
+/datum/equipment_preset/uscm/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_uscm_underwear(new_human)
 
 //*****************************************************************************************************/
 /datum/equipment_preset/uscm/pfc
@@ -122,7 +124,7 @@
 	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/pfc/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank
@@ -130,7 +132,7 @@
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/pfc/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/pfc/forecon
@@ -174,7 +176,7 @@
 	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/sg/upp/lesser_rank
@@ -182,7 +184,7 @@
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/sg/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/sg/forecon
@@ -245,7 +247,7 @@
 	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/medic/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/medic/upp/lesser_rank
@@ -253,7 +255,7 @@
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/medic/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/medic/forecon
@@ -293,7 +295,7 @@
 	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/tl/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/tl/upp/lesser_rank
@@ -301,7 +303,7 @@
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/tl/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/tl/forecon
@@ -366,7 +368,7 @@
 	faction = FACTION_UPP
 
 /datum/equipment_preset/uscm/leader/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank
@@ -374,7 +376,7 @@
 	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/leader/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/leader/forecon
@@ -409,8 +411,6 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/private_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -423,6 +423,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
 	add_uscm_goggles(new_human)
+	add_helmet_cigarettes(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -443,12 +444,11 @@
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 
+
 /datum/equipment_preset/uscm/private_equipped/eva
 	name = "USCM Squad Rifleman (Equipped, EVA)"
 
 /datum/equipment_preset/uscm/private_equipped/eva/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -496,8 +496,6 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/smartgunner_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
 	//back
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
@@ -509,6 +507,7 @@
 			add_uscm_cover(new_human)
 		if(3)
 			new_human.equip_to_slot_or_del(new 	/obj/item/device/overwatch_camera(new_human), WEAR_R_EAR)
+	add_helmet_cigarettes(new_human)
 	add_uscm_goggles(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
@@ -551,8 +550,6 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/tl_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -566,6 +563,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
 	add_uscm_goggles(new_human)
+	add_helmet_cigarettes(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -609,8 +607,8 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/medic_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
+	new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)")
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/tech(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -626,6 +624,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
 	add_uscm_goggles(new_human)
+	add_helmet_cigarettes(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -663,8 +662,7 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/leader_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -678,6 +676,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
 	add_uscm_goggles(new_human)
+	add_helmet_cigarettes(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -724,8 +723,7 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/engineer_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/tech(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -737,6 +735,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
 	add_uscm_goggles(new_human)
+	add_helmet_cigarettes(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -774,8 +773,8 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/specialist_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "Marine Boxers"
-	new_human.undershirt = "Marine Undershirt"
+
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/rocketpack(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket(new_human), WEAR_IN_BACK)
@@ -789,6 +788,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/M3T(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
 	add_uscm_goggles(new_human)
+	add_helmet_cigarettes(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -833,8 +833,8 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/specialist_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "Marine Boxers"
-	new_human.undershirt = "Marine Undershirt"
+
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/rocketpack(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket(new_human), WEAR_IN_BACK)
@@ -848,6 +848,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/M3T(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
 	add_uscm_goggles(new_human)
+	add_helmet_cigarettes(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -885,8 +886,8 @@
 	role_comm_title = "B18"
 	skills = /datum/skills/pfc
 /datum/equipment_preset/uscm/specialist_equipped/b18/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "Marine Boxers"
-	new_human.undershirt = "Marine Undershirt"
+
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/tech(new_human), WEAR_BACK)
 	//face
@@ -922,8 +923,8 @@
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/specialist_equipped/sniper/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "Marine Boxers"
-	new_human.undershirt = "Marine Undershirt"
+
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -938,6 +939,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/boonie(new_human), WEAR_HEAD)
 	add_uscm_goggles(new_human)
+	add_helmet_cigarettes(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -971,8 +973,8 @@
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/specialist_equipped/spotter/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "Marine Boxers"
-	new_human.undershirt = "Marine Undershirt"
+
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -987,6 +989,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/boonie(new_human), WEAR_HEAD)
 	add_uscm_goggles(new_human)
+	add_helmet_cigarettes(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -1030,8 +1033,8 @@
 	minimap_icon = "vc"
 
 /datum/equipment_preset/uscm/tank/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "Marine Boxers"
-	new_human.undershirt = "Marine Undershirt"
+
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -1042,6 +1045,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/M3T(new_human), WEAR_HEAD)
 	add_uscm_cover(new_human)
 	add_uscm_goggles(new_human)
+	add_helmet_cigarettes(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
@@ -1078,7 +1082,7 @@
 	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/marsoc/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/uscm/marsoc/load_gear(mob/living/carbon/human/new_human)

@@ -5,7 +5,7 @@
 	supervisors = "the chief medical officer"
 	selection_class = "job_doctor"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
-	gear_preset = /datum/equipment_preset/uscm_ship/uscm_medical/nurse
+	gear_preset = /datum/equipment_preset/uscm/medical/nurse
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are tasked with keeping the Marines healthy and strong.</a> You are also an expert when it comes to medication and treatment, and can do minor surgical procedures. Focus on assisting doctors and triaging wounded marines."
 
 /obj/effect/landmark/start/nurse

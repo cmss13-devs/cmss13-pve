@@ -47,6 +47,8 @@
 			uniform.sensor_faction = FACTION_PMC
 	return ..()
 
+/datum/equipment_preset/pmc/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_civilian_underwear(new_human)
 
 //*****************************************************************************************************/
 /datum/equipment_preset/pmc/pmc_standard
@@ -110,6 +112,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_L_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_L_STORE)
 
+
 //*****************************************************************************************************/
 /datum/equipment_preset/pmc/pmc_medic
 	name = "Weyland-Yutani PMC (Corporate Medic)"
@@ -120,6 +123,7 @@
 	skills = /datum/skills/pmc/medic
 
 /datum/equipment_preset/pmc/pmc_medic/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
@@ -171,6 +175,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/extended, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/extended, WEAR_IN_R_STORE)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/pmc/pmc_leader
@@ -184,10 +189,11 @@
 	skills = /datum/skills/pmc/SL
 
 /datum/equipment_preset/pmc/pmc_leader/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_WY_PMC) + list(ACCESS_WY_LEADERSHIP, ACCESS_WY_PMC_TL)
 
 /datum/equipment_preset/pmc/pmc_leader/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive, WEAR_IN_BACK)
@@ -237,6 +243,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 
+
 	var/obj/item/device/radio/headset/R = new_human.wear_l_ear
 	if(istype(R))
 		R.volume = RADIO_VOLUME_IMPORTANT
@@ -254,6 +261,7 @@
 	skills = /datum/skills/pmc/smartgunner
 
 /datum/equipment_preset/pmc/pmc_gunner/load_gear(mob/living/carbon/human/new_human)
+
 	//TODO: add backpacks and satchels
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
 	//face
@@ -290,6 +298,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/pmc/pmc_sniper
@@ -303,6 +312,7 @@
 	skills = /datum/skills/pmc/specialist
 
 /datum/equipment_preset/pmc/pmc_sniper/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
@@ -346,6 +356,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/pmc_sniper, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
+
 //*****************************************************************************************************/
 /datum/equipment_preset/pmc/pmc_crewman
 	name = "Weyland-Yutani PMC (Crewman)"
@@ -356,6 +367,7 @@
 	skills = /datum/skills/pmc/tank_crew
 
 /datum/equipment_preset/pmc/pmc_crewman/load_gear(mob/living/carbon/human/new_human)
+
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
@@ -370,8 +382,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/vp78, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tank, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/pmc_m39, WEAR_L_STORE)
-
 	spawn_weapon(/obj/item/weapon/gun/smg/m39, /obj/item/ammo_magazine/smg/m39, new_human, 0, 0)
+
 
 /*****************************************************************************************************/
 
@@ -421,6 +433,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
 
+
 /*****************************************************************************************************/
 
 /datum/equipment_preset/pmc/doctor
@@ -465,6 +478,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_advanced, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pressurized_reagent_canister/oxycodone, WEAR_R_STORE) //surgery
 
+
 /*****************************************************************************************************/
 
 /datum/equipment_preset/pmc/technician
@@ -506,6 +520,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full, WEAR_R_STORE)
 
+
 /*****************************************************************************************************/
 
 /datum/equipment_preset/pmc/director
@@ -519,6 +534,7 @@
 	role_comm_title = "Dir"
 	skills = /datum/skills/pmc/director
 /datum/equipment_preset/pmc/director/load_gear(mob/living/carbon/human/new_human)
+
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light, WEAR_JACKET)
@@ -533,6 +549,7 @@
 	var/obj/item/device/radio/headset/R = new_human.wear_l_ear
 	if(istype(R))
 		R.volume = RADIO_VOLUME_CRITICAL
+
 
 //*****************************************************************************************************/
 
@@ -615,3 +632,4 @@
 		new_human.equip_to_slot_or_del(new /obj/item/device/multitool, WEAR_IN_L_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/hugetank, WEAR_IN_L_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire, WEAR_R_STORE)
+
