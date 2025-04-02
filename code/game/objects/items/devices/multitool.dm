@@ -81,3 +81,8 @@
 		return
 	user_client.images -= highlight_image
 
+
+/obj/item/device/multitool/upp
+	icon_state = "multitool_upp"
+	item_state = "multitool_upp"
+

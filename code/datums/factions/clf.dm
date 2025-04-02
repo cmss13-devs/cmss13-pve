@@ -90,7 +90,7 @@
 		list("Type 80 Bayonet", 3, /obj/item/attachable/bayonet/upp, null, VENDOR_ITEM_REGULAR),
 		list("Lunge Mine", 120, /obj/item/weapon/twohanded/lungemine, null, VENDOR_ITEM_REGULAR),
 		list("Melee Weapon (Random)", 7, /obj/effect/essentials_set/random/clf_melee, null, VENDOR_ITEM_REGULAR),
-		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/m94, null, VENDOR_ITEM_RECOMMENDED),
+		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/flare, null, VENDOR_ITEM_RECOMMENDED),
 		list("Smoke Grenade", 7, /obj/item/explosive/grenade/smokebomb, null, VENDOR_ITEM_REGULAR)
 	)
 
@@ -150,7 +150,7 @@
 		list("Spear", 10, /obj/item/weapon/twohanded/spear, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", -1, null, null),
-		list("M94 Marking Flare Pack", 20, /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", 20, /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
 		list("Smoke Grenade", 5, /obj/item/explosive/grenade/smokebomb, VENDOR_ITEM_REGULAR),
 		list("Type 80 Bayonet", 40, /obj/item/attachable/bayonet/upp, VENDOR_ITEM_REGULAR),
 	)

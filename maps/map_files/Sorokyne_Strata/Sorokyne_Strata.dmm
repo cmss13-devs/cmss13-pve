@@ -31963,8 +31963,8 @@
 /area/strata/ag/interior/nearlz1)
 "wex" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot/upp,
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/engi)

@@ -169,6 +169,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_tl, list(
 /obj/effect/essentials_set/tl
 	spawned_gear_list = list(
 		/obj/item/device/binoculars/range/designator,
-		/obj/item/storage/box/m94/signal,
-		/obj/item/storage/box/m94/signal,
+		/obj/item/storage/box/flare/signal,
+		/obj/item/storage/box/flare/signal,
 	)

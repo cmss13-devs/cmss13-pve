@@ -26535,7 +26535,7 @@
 	dir = 8
 	},
 /obj/structure/surface/table,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
 /obj/structure/pipes/vents/pump{
 	dir = 1
 	},

@@ -576,8 +576,8 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /obj/item/storage/box/zipcuffs,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
