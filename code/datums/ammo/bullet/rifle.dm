@@ -247,7 +247,7 @@
 	damage = 45
 
 /datum/ammo/bullet/rifle/heavy/impdet/dirty
-	name = "irradiated mpact-detonating 10x28 bullet"
+	name = "irradiated impact-detonating 10x28 bullet"
 	damage = 45
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
 
