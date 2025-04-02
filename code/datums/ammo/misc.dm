@@ -481,7 +481,7 @@
 
 
 /datum/ammo/sentry_grenade
-	name = "M74 AGM-F 40mm Grenade"
+	name = "M74 AGM-F 40mm grenade"
 	icon_state = "sentry_grenade"
 	shrapnel_type = /datum/ammo/bullet/shrapnel/jagged
 	shell_speed = AMMO_SPEED_TIER_5
