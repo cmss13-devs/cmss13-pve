@@ -146,3 +146,7 @@
 	elevator_network = "garrow_cargo"
 	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO
 	elevator_network = "ArrowCargo"
+
+/datum/map_template/shuttle/wallace_and_gromit
+	name = "wallace and gromit"
+	shuttle_id = DROPSHIP_WALLACE_AND_GROMIT

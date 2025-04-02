@@ -81,6 +81,29 @@
 	. = ..()
 	INVOKE_ASYNC(humanoidmob, TYPE_PROC_REF(/mob, emote), pick("pain", "scream"))
 
+/datum/species/monkey/penguin
+	name = "Penguin"
+	name = "Penguins"
+
+	icobase = 'icons/mob/humans/species/monkeys/r_penguin.dmi'
+	deform = 'icons/mob/humans/species/monkeys/r_penguin.dmi'
+	pain_type = null
+	death_message = "falls down dead, directly."
+	unarmed_type = /datum/unarmed_attack/punch/strong
+
+	cold_level_1 = -1
+	cold_level_2 = -1
+	cold_level_3 = -1
+	knock_down_reduction = 2
+	stun_reduction = 2
+	weed_slowdown_mult = 0.5
+	darksight = 100
+	brute_mod = 0.5
+	burn_mod = 0.5
+
+	tail = null
+	eyes = "blank_s"
+
 /datum/species/monkey/yiren
 	name = "Yiren"
 	name_plural = "Yiren"
