@@ -45,7 +45,7 @@
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 
 /obj/item/ammo_magazine/sentry/grenade
-	name = "M74 AGM-F airburst grenade drum"
+	name = "M74 AGM-F airburst grenade drum (40x53mm)"
 	desc = "An ammo drum of 50 linked M74 AGM-F grenades for the UA 571-F Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
 	caliber = "40x53mm"
 	icon_state = "ua571f"
