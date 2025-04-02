@@ -729,17 +729,14 @@
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/hangar)
 "hM" = (
-/obj/structure/closet/coffin/woodencrate,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
-/obj/item/ammo_magazine/rifle/m49a/pve,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/gun/rifle/m49a/pve,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/heavy/m49a_pve{
+	pixel_y = 6
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "hR" = (
