@@ -297,7 +297,6 @@
 	desc = "One-time disposable research plate packing all kinds of chemicals injected at the will of the user by pressing two buttons on the sides simultaneously. The injection is painless, instant and packs much more chemicals than your normal emergency injector. Features OD Protection in three modes."
 	var/od_protection_mode = EMERGENCY_PLATE_OD_PROTECTION_STRICT
 	var/datum/action/item_action/activation
-	var/mob/living/wearer
 	var/used = FALSE
 	/// 1 means the player overdosed with OD_OFF mode. 2 means the plate adjusted the chemicals injected.
 	var/warning_type = FALSE
@@ -401,7 +400,6 @@
 /obj/item/clothing/accessory/health/research_plate/anti_decay
 	name = "experimental preservation plate"
 	desc = "preservation plate which activates once the user is dead, uses variety of different substances and sensors to slow down the decay and increase the time before the user is permanently dead, due to small tank of preservatives, it needs to be replaced on each death."
-	var/mob/living/carbon/human/wearer
 	var/used = FALSE
 
 
