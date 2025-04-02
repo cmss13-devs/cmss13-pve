@@ -32,3 +32,6 @@ endmap
 
 map golden_arrow_classic
 endmap
+
+map lv_818_firebase_zulu
+endmap
