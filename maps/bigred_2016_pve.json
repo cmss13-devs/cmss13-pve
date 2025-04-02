@@ -1,0 +1,11 @@
+{
+	"map_name": "Big Red 2016 PVE",
+    "short_name": "Big Red 2016 PVE",
+	"map_path": "map_files/BigRed_2016_pve",
+	"map_file": "bigred_2016_pve.dmm",
+    "map_item_type": "/obj/item/map/big_red_map",
+    "webmap_url": "Solaris",
+    "weather_holder": "/datum/weather_ss_map_holder/big_red/classic",
+
+    "camouflage": "desert"
+}
