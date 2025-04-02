@@ -1000,8 +1000,11 @@
 
 /obj/structure/machinery/defenses/sentry/upp/light
 	name = "UPP SDS-R8 Light Sentry"
-	defense_type = "Light"
 	icon = 'icons/obj/structures/machinery/defenses/upp_defenses.dmi'
+	icon_state = "defense_base"
+	icon_on = "defense_base"
+	icon_off = "defense_base_off"
+	defense_type = "Light"
 	sentry_type = "upp_sentry"
 	fire_delay = 0.3 SECONDS
 	accuracy_mult = 0.6
