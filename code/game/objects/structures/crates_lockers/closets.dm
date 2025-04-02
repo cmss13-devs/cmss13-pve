@@ -382,3 +382,13 @@
 	if(!opened)
 		welded = FALSE
 		open()
+
+/obj/structure/closet/yautja
+	name = "alien closet"
+	desc = "A suspicious dark metal alien closet, what horrors can be stored inside?"
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	storage_capacity = 100
+
+/obj/structure/closet/yautja/big
+	icon = 'icons/obj/structures/props/hunter/32x32-hunter_props.dmi'
+	storage_capacity = 100
