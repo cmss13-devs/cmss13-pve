@@ -139,6 +139,12 @@
 	defense_type = /obj/structure/machinery/defenses/sentry/mini
 	deployment_time = 0.75 SECONDS
 
+/obj/item/defenses/handheld/sentry/grenade
+	name = "handheld UA 571-F AGL sentry"
+	icon_state = "DMR uac_sentry_handheld"
+	deployment_time = 1.5 SECONDS
+	defense_type = /obj/structure/machinery/defenses/sentry/grenade
+
 /obj/item/defenses/handheld/sentry/wy
 	name = "handheld WY 202-GMA1 smart sentry"
 	desc = "A compact version of the Weyland-Yutani defenses. Designed for deployment in the field."

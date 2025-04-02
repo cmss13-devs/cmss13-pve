@@ -28,12 +28,29 @@
 	max_rounds = 350
 	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
 
+/obj/item/ammo_magazine/sentry/upp/mini
+	name = "SR32 ammo drum (10x27mm Caseless)"
+	desc = "An ammo drum of 200 10x27mm caseless rounds for the UPP SDS-R3 Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "uppsds4"
+	caliber = "10x42mm"
+	max_rounds = 400
+	default_ammo = /datum/ammo/bullet/rifle/upp
+
 /obj/item/ammo_magazine/sentry/shotgun
 	name = "12g buckshot drum"
 	desc = "An ammo drum of 50 12g buckshot drums for the UA 12-G Shotgun Sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."
 	caliber = "12g"
 	max_rounds = 50
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
+
+/obj/item/ammo_magazine/sentry/grenade
+	name = "M74 AGM-F airburst grenade drum"
+	desc = "An ammo drum of 50 linked M74 AGM-F grenades for the UA 571-F Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
+	caliber = "40x53mm"
+	icon_state = "ua571f"
+	max_rounds = 50
+	default_ammo = /datum/ammo/sentry_grenade
 
 /obj/item/ammo_magazine/sentry/wy
 	name = "H20 ammo drum (10x42mm Caseless)"
@@ -50,14 +67,6 @@
 	icon_state = "wy22e5"
 	caliber = "10x12mm"
 	max_rounds = 1000
-
-/obj/item/ammo_magazine/sentry/upp
-	name = "SR32 ammo drum (10x32mm Caseless)"
-	desc = "An ammo drum of 200 10x32mm caseless rounds for the UPP SDS-R3 Sentry Gun. Just feed it into the sentry gun's ammo port when its ammo is depleted."
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
-	icon_state = "uppsds4"
-	caliber = "10x42mm"
-	max_rounds = 200
 
 // FLAMER Sentry
 /obj/item/ammo_magazine/sentry_flamer

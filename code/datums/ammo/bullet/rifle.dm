@@ -436,6 +436,11 @@
 //10X31 AK500
 /datum/ammo/bullet/rifle/heavy/upp
 	name = "10x31 bullet"
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_3
+	shell_speed = AMMO_SPEED_TIER_7
+	effective_range_max = 5
+	damage_falloff = DAMAGE_FALLOFF_TIER_8
 
 // Misc
 

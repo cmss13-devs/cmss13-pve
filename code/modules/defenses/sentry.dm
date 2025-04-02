@@ -912,12 +912,22 @@
 		new /obj/item/stack/sheet/plasteel/medium_stack(loc)
 	return ..()
 
+/obj/structure/machinery/defenses/sentry/grenade
+	name = "UA 571-F AGL sentry gun"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M76AE1 Automatic Grenade Launcher and a 50-round drum magazine."
+	defense_type = "DMR" //Fits close enough, isn't used otherwise
+	fire_delay = 12
+	sentry_range = 10
+	handheld_type = /obj/item/defenses/handheld/sentry/grenade
+	ammo = new /obj/item/ammo_magazine/sentry/grenade
+	firing_sound = 'sound/weapons/gun_ugl_fire.ogg'
+
 /obj/structure/machinery/defenses/sentry/wy
 	name = "WY 202-GMA1 Smart Sentry"
 	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the PMC."
 	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
 	sentry_type = "wy_sentry"
-	fire_delay = 2 SECONDS
+	fire_delay = 1.8
 	health = 350
 	health_max = 350
 	damage_mult = 3.5
@@ -954,7 +964,7 @@
 	defense_type = "Heavy"
 	icon = 'icons/obj/structures/machinery/defenses/wy_heavy.dmi'
 	sentry_type = "wy_sentry"
-	fire_delay = 4 SECONDS
+	fire_delay = 15
 	health = 600
 	health_max = 600
 	damage_mult = 5
@@ -983,20 +993,25 @@
 	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
 	defense_type = "UPP"
 	handheld_type = /obj/item/defenses/handheld/sentry/upp
-	fire_delay = 1.2
+	fire_delay = 1.8
+	accuracy_mult = 0.8
 	firing_sound = 'sound/weapons/gun_type71.ogg'
 	ammo = new /obj/item/ammo_magazine/sentry/upp
 
 /obj/structure/machinery/defenses/sentry/upp/light
 	name = "UPP SDS-R8 Light Sentry"
 	defense_type = "Light"
+	icon = 'icons/obj/structures/machinery/defenses/upp_defenses.dmi'
+	sentry_type = "upp_sentry"
 	fire_delay = 0.3 SECONDS
+	accuracy_mult = 0.6
 	health = 200
 	health_max = 200
 	disassemble_time = 2 SECONDS
 	sentry_range = 3
 	omni_directional = TRUE
 	handheld_type = /obj/item/defenses/handheld/sentry/upp/light
+	ammo = new /obj/item/ammo_magazine/sentry/upp/mini
 
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE
