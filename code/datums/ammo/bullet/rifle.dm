@@ -183,17 +183,29 @@
 	name = "armor-piercing 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 40
-	penetration = ARMOR_PENETRATION_TIER_8
+	penetration = ARMOR_PENETRATION_TIER_7
 
 /datum/ammo/bullet/rifle/heavy/ap/tracer
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
 
-/datum/ammo/bullet/rifle/heavy/heap
-	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	name = "high explosive armor-piercing 10x28 bullet"
+/datum/ammo/bullet/rifle/heavy/impdet
+	name = "impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	damage = 40
+	penetration = -ARMOR_PENETRATION_TIER_2
+	damage_falloff = DAMAGE_FALLOFF_TIER_5
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
+
+/datum/ammo/bullet/rifle/heavy/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
+
+/datum/ammo/bullet/rifle/heavy/heap
+	name = "high explosive armor-piercing 10x28 bullet"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	damage = 70
 	penetration = ARMOR_PENETRATION_TIER_10
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
@@ -234,6 +246,11 @@
 	debilitate = list(0,0,0,3,0,0,0,1)
 	damage = 45
 
+/datum/ammo/bullet/rifle/heavy/impdet/dirty
+	name = "irradiated impact-detonating 10x28 bullet"
+	damage = 45
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
+
 // RMC Smartgun
 
 /datum/ammo/bullet/rifle/heavy/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks and less damage
@@ -257,6 +274,17 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_8
+
+/datum/ammo/bullet/rifle/heavy/holo_target/impdet
+	name = "holo-targetting impact-detonating 10x28 bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	holo_stacks = 25 //holo's all over targets, or something
+	damage = 35
+	penetration = -ARMOR_PENETRATION_TIER_2
+	damage_falloff = DAMAGE_FALLOFF_TIER_5
+
+/datum/ammo/bullet/rifle/heavy/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 // Specialist M42A rounds
 
@@ -466,3 +494,36 @@
 
 /datum/ammo/bullet/rifle/heap/twe
 	name = "high-explosive armor-piercing 8.5x33 bullet"
+//9.7x16 AG80
+
+/datum/ammo/bullet/rifle/ag80
+	name = "9.7x16 bullet"
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_2
+
+/datum/ammo/bullet/rifle/ag80/tracer
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
+
+/datum/ammo/bullet/rifle/ag80/ap
+	name = "armor-piercing 9.7x16 bullet"
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_9
+
+/datum/ammo/bullet/rifle/ag80/ap/tracer
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
+
+/datum/ammo/bullet/rifle/ag80/heap
+	name = "high-explosive armor-piercing 9.7x16 bullet"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 50 //big damage, doesn't actually blow up because thats stupid.
+	penetration = ARMOR_PENETRATION_TIER_8
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_9
+
+/datum/ammo/bullet/rifle/ag80/heap/tracer
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
