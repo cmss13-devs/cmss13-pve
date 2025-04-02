@@ -47,6 +47,19 @@
 	default_ammo = /datum/ammo/bullet/pistol/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
+/obj/item/ammo_magazine/pistol/l54
+	name = "\improper L54 magazine (9mm)"
+	desc = "A pistol magazine."
+	caliber = "9mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
+	icon_state = "l54"
+	max_rounds = 12
+	w_class = SIZE_SMALL
+	default_ammo = /datum/ammo/bullet/pistol
+	gun_type = /obj/item/weapon/gun/pistol/l54
+	ammo_band_icon = "+m4a3_band"
+	ammo_band_icon_empty = "+m4a3_band_e"
+
 //-------------------------------------------------------
 //M4A3 45 //Inspired by the 1911
 
