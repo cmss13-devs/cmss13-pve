@@ -194,7 +194,7 @@
 	name = "impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 40
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
@@ -278,8 +278,9 @@
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet
 	name = "holo-targetting impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	holo_stacks = 25 //holo's all over targets, or something
 	damage = 35
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
