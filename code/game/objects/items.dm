@@ -1033,7 +1033,7 @@ cases. Override_icon_state should be a list.*/
  * @param target: table which is being used to host the item.
  */
 /obj/item/proc/set_to_table(obj/structure/surface/target)
-	if (do_after(usr, 1 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))
+	if (do_after(usr, 5, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))
 		table_setup = TRUE
 		usr.drop_inv_item_to_loc(src, target.loc)
 	else
