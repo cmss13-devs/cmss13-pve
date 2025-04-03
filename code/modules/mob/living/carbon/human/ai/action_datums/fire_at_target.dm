@@ -220,4 +220,8 @@
 	else if(brain.primary_weapon.gun_firemode == GUN_FIREMODE_AUTOMATIC)
 		rounds_burst_fired++
 
+	else if(brain.primary_weapon.gun_firemode == GUN_FIREMODE_BURSTFIRE)
+		currently_firing = FALSE
+		addtimer(CALLBACK(brain.primary_weapon, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), null, brain.current_target, null, null, null, TRUE), brain.primary_weapon.burst_delay)
+
 	brain.primary_weapon?.set_target(shoot_next)
