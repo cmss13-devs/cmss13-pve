@@ -453,7 +453,7 @@
 
 /datum/ammo/bullet/rifle/ag80
 	name = "9.7x16 bullet"
-	damage = 35
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_2
 
 /datum/ammo/bullet/rifle/ag80/tracer
@@ -463,7 +463,7 @@
 
 /datum/ammo/bullet/rifle/ag80/ap
 	name = "armor-piercing 9.7x16 bullet"
-	damage = 35
+	damage = 25
 	penetration = ARMOR_PENETRATION_TIER_9
 
 /datum/ammo/bullet/rifle/ag80/ap/tracer
