@@ -509,6 +509,12 @@
 	num_of_magazines = 10
 	magazine_type = /obj/item/ammo_magazine/rifle/ag80
 
+/obj/item/ammo_box/magazine/ag80/heap
+	name = "magazine box (AG80 HEAP x 10)"
+	overlay_ammo_type = "_type71_heap"
+	overlay_content = "_type71_heap"
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80/heap
+
 //-----------------------LARGE AG80 Rifle Mag Boxes-----------------------
 /obj/item/ammo_box/magazine/type71/large/ag80
 	name = "magazine box (AG80 x 32)"
