@@ -313,13 +313,6 @@ Defined in conflicts.dm of the #defines folder.
 	..()
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
 
-/obj/item/attachable/bayonet/upp_replica
-	name = "\improper Type 80 bayonet"
-	icon_state = "upp_bayonet"
-	item_state = "knife"
-	attach_icon = "upp_bayonet_a"
-	desc = "The standard-issue bayonet of the UPP, it's dulled from heavy use."
-
 /obj/item/attachable/bayonet/upp
 	name = "\improper Type 80 bayonet"
 	desc = "The standard-issue bayonet of the UPP, the Type 80 is balanced to also function as an effective throwing knife."
@@ -330,6 +323,10 @@ Defined in conflicts.dm of the #defines folder.
 	throw_speed = SPEED_REALLY_FAST
 	throw_range = 7
 	pry_delay = 1 SECONDS
+
+/obj/item/attachable/bayonet/upp/surplus
+	desc = "The standard-issue bayonet of the UPP, this one is somewhat dulled."
+	throwforce = MELEE_FORCE_STRONG
 
 /obj/item/attachable/bayonet/co2
 	name = "\improper M8 cartridge bayonet"
@@ -2165,6 +2162,71 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/stock/m20a/New()
 	..()
 
+/obj/item/attachable/stock/rifle/ag80/collapsible
+	name = "\improper AG80 extendable stock"
+	desc = "The AG80's standard polymer extendable stock. When extended, it improves scatter, accuracy, and recoil, but slightly hinders agility."
+	slot = "stock"
+	melee_mod = 5
+	size_mod = 1
+	icon_state = "ag80_folding"
+	attach_icon = "ag80_folding_a"
+	pixel_shift_x = 40
+	pixel_shift_y = 14
+	hud_offset_mod = 3
+	collapsible = TRUE
+	stock_activated = FALSE
+	wield_delay_mod = WIELD_DELAY_NONE //starts collapsed so no delay mod
+	collapse_delay = 0.5 SECONDS
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+
+/obj/item/attachable/stock/rifle/ag80/collapsible/New()
+	..()
+
+	//rifle stock starts collapsed so we zero out everything
+	accuracy_mod = 0
+	recoil_mod = 0
+	scatter_mod = 0
+	movement_onehanded_acc_penalty_mod = 0
+	accuracy_unwielded_mod = 0
+	recoil_unwielded_mod = 0
+	scatter_unwielded_mod = 0
+	aim_speed_mod = 0
+	wield_delay_mod = WIELD_DELAY_NONE
+
+/obj/item/attachable/stock/rifle/ag80/collapsible/apply_on_weapon(obj/item/weapon/gun/gun)
+	if(stock_activated)
+		accuracy_mod = HIT_ACCURACY_MULT_TIER_2
+		recoil_mod = -RECOIL_AMOUNT_TIER_5
+		scatter_mod = -SCATTER_AMOUNT_TIER_9
+		//it makes stuff worse when one handed
+		movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+		accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
+		recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
+		scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
+		aim_speed_mod = CONFIG_GET(number/slowdown_med)
+		hud_offset_mod = 5
+		icon_state = "ag80_folding_on"
+		attach_icon = "ag80_folding_a_on"
+		wield_delay_mod = WIELD_DELAY_VERY_FAST //added 0.2 seconds for wield, basic solid stock adds 0.4
+
+	else
+		accuracy_mod = 0
+		recoil_mod = 0
+		scatter_mod = 0
+		movement_onehanded_acc_penalty_mod = 0
+		accuracy_unwielded_mod = 0
+		recoil_unwielded_mod = 0
+		scatter_unwielded_mod = 0
+		aim_speed_mod = 0
+		hud_offset_mod = 3
+		icon_state = "ag80_folding"
+		attach_icon = "ag80_folding_a"
+		wield_delay_mod = WIELD_DELAY_NONE //stock is folded so no wield delay
+
+	gun.recalculate_attachment_bonuses()
+	gun.update_overlays(src, "stock")
+
 /obj/item/attachable/stock/m16
 	name = "\improper M16 bump stock"
 	desc = "Technically illegal in the state of California."
@@ -3109,7 +3171,7 @@ Defined in conflicts.dm of the #defines folder.
 	. = ..()
 	grenade_pass_flags = NO_FLAGS
 
-/obj/item/attachable/attached_gun/grenade/upp
+/obj/item/attachable/attached_gun/grenade/type71
 	name = "\improper Type 83 overslung grenade launcher"
 	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."
 	icon_state = "type83"
@@ -3121,6 +3183,35 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 20
 	pixel_shift_y = 13
 	has_breech = FALSE
+
+/obj/item/attachable/attached_gun/grenade/type71/Initialize()
+	. = ..()
+	grenade_pass_flags = NO_FLAGS
+
+/obj/item/attachable/attached_gun/grenade/type71/preloaded
+
+/obj/item/attachable/attached_gun/grenade/type71/preloaded/New()
+	. = ..()
+	current_rounds = 1
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/impact/upp(src))
+
+/obj/item/attachable/attached_gun/grenade/type71/ag80
+	name = "\improper GP-45 grenade launcher"
+	desc = "Integrated grenade launcher yipee"
+	icon_state = "grenade-ag80"
+	attach_icon = "grenade-ag80_a"
+	has_breech = TRUE
+
+/obj/item/attachable/attached_gun/grenade/type71/ag80/Initialize()
+	. = ..()
+	grenade_pass_flags = NO_FLAGS
+
+/obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded
+
+/obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded/New()
+	. = ..()
+	current_rounds = 1
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/impact/upp(src))
 
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
 /obj/item/attachable/attached_gun/flamer
