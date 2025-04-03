@@ -434,12 +434,9 @@
 /obj/item/weapon/gun/rifle/ag80/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
-	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
 	scatter = SCATTER_AMOUNT_TIER_10
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 
 /obj/item/weapon/gun/rifle/ag80/preloaded
@@ -1248,7 +1245,7 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	flags_equip_slot = SLOT_BACK
 	start_semiauto = FALSE
-	burst_amount = BURST_AMOUNT_TIER_2
+	burst_amount = BURST_AMOUNT_TIER_3
 
 /obj/item/weapon/gun/rifle/type71/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 13, "stock_x" = 11, "stock_y" = 13, "side_rail_x" = 23, "side_rail_y" = 16)
@@ -1264,7 +1261,6 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-
 
 /obj/item/weapon/gun/rifle/type71/preloaded
 	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/attached_gun/grenade/type71/preloaded)
