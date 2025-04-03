@@ -44,7 +44,7 @@
 
 /obj/item/explosive/mine/emp_act()
 	. = ..()
-	prime() //Same here. Don't care about the effect strength.
+	disarm() //breaks the thing instead of exploding it.
 
 
 //checks for things that would prevent us from placing the mine.
@@ -257,9 +257,7 @@
 
 /obj/item/explosive/mine/flamer_fire_act(damage, flame_cause_data) //adding mine explosions
 	cause_data = flame_cause_data
-	prime()
-	if(!QDELETED(src))
-		disarm()
+	disarm()//insensitive explosives. but it destroys the electronics.
 
 
 /obj/effect/mine_tripwire
@@ -339,14 +337,6 @@
 /obj/item/explosive/mine/m760ap/attackby(obj/item/W, mob/user)
 	return
 
-/obj/item/explosive/mine/sharp/set_tripwire()
-	if(!active && !tripwire)
-		for(var/direction in CARDINAL_ALL_DIRS)
-			var/tripwire_loc = get_turf(get_step(loc,direction))
-			tripwire = new(tripwire_loc)
-			tripwire.linked_claymore = src
-			active = TRUE
-
 /obj/item/explosive/mine/m760ap/prime(mob/user)
 	set waitfor = 0
 	if(!cause_data)
@@ -384,6 +374,64 @@
 		src.try_to_prime(mob)
 
 /obj/item/explosive/mine/m760ap/attack_alien()
+	if(disarmed)
+		..()
+	else
+		return
+
+/obj/item/explosive/mine/m5a3betty
+	name = "M5A3 bounding mine"
+	desc = "An intelligent blast-resistant bounding landmine with enhanced fragmentation."
+	icon_state = "m5"
+	angle = 360
+	var/disarmed = FALSE
+	var/explosion_power = 175
+	var/explosion_falloff = 75
+
+/obj/item/explosive/mine/m5a3betty/check_for_obstacles(mob/living/user)
+	return FALSE
+
+/obj/item/explosive/mine/m5a3betty/attackby(obj/item/W, mob/user)
+	return
+
+/obj/item/explosive/mine/m5a3betty/prime(mob/user)
+	set waitfor = 0
+	if(!cause_data)
+		cause_data = create_cause_data(initial(name), user)
+	create_shrapnel(loc, 72, dir, 360, /datum/ammo/bullet/shrapnel/landmine/bounding, cause_data)
+	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
+	qdel(src)
+
+/obj/item/explosive/mine/m5a3betty/disarm()
+	anchored = FALSE
+	active = FALSE
+	triggered = FALSE
+	QDEL_NULL(tripwire)
+	disarmed = TRUE
+	add_to_garbage(src)
+
+/obj/item/explosive/mine/m5a3betty/attack_self(mob/living/user)
+	if(disarmed)
+		return
+	. = ..()
+
+/obj/item/explosive/mine/m5a3betty/deploy_mine(mob/user)
+	if(disarmed)
+		return
+	if(!hard_iff_lock && user)
+		iff_signal = user.faction
+
+	cause_data = create_cause_data(initial(name), user)
+	if(user)
+		user.drop_inv_item_on_ground(src)
+	setDir(user ? user.dir : dir) //The direction it is planted in is the direction the user faces at that time
+	activate_sensors()
+	update_icon()
+	for(var/mob/living/carbon/mob in range(1, src))
+		src.try_to_prime(mob)
+
+/obj/item/explosive/mine/m5a3betty/attack_alien()
 	if(disarmed)
 		..()
 	else

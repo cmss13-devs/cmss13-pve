@@ -25,6 +25,38 @@
 		B.health -= rand(2, 5)
 		B.update_health(1)
 
+/datum/ammo/bullet/shrapnel/landmine
+	name = "landmine shrapnel"
+	icon_state = "buckshot"
+	accurate_range_min = 4
+	flags_ammo_behavior = AMMO_BOMB|AMMO_STOPPED_BY_COVER
+
+	accuracy = HIT_ACCURACY_TIER_3
+	accurate_range = 32
+	max_range = 6
+	damage = 30
+	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
+	damage_var_high = PROJECTILE_VARIANCE_TIER_6
+	penetration = -ARMOR_PENETRATION_TIER_3
+	shell_speed = AMMO_SPEED_TIER_2
+	shrapnel_chance = 5
+
+/datum/ammo/bullet/shrapnel/landmine/bounding
+	name = "airburst shrapnel"
+	icon_state = "buckshot"
+	accurate_range_min = 4
+	flags_ammo_behavior = AMMO_BOMB|AMMO_STOPPED_BY_COVER //if claymoreest merges it needs to be pronetarget...
+
+	accuracy = HIT_ACCURACY_TIER_3
+	accurate_range = 32
+	max_range = 10
+	damage = 20
+	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
+	damage_var_high = PROJECTILE_VARIANCE_TIER_6
+	penetration = 0
+	shell_speed = AMMO_SPEED_TIER_2
+	shrapnel_chance = 5
+
 /datum/ammo/bullet/shrapnel/rubber
 	name = "rubber pellets"
 	icon_state = "rubber_pellets"
