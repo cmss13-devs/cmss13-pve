@@ -18,6 +18,8 @@
 
 /obj/item/weapon/gun/rifle/set_gun_config_values()
 	..()
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	set_burst_delay(FIRE_DELAY_TIER_11)
 	set_fire_delay(FIRE_DELAY_TIER_5)
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
