@@ -27,6 +27,16 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	if(src)
 		open_game_master_panel(src)
 
+/client/proc/set_xeno_amount()
+	set name = "Set Xeno Amount"
+	set category = "Game Master.Extras"
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(src)
+		var/new_amount = tgui_input_number(usr, "How Many Xenos?!?!", "Xenos Count", 1000, 9999999, 0)
+		GLOB.xenos_per_mission = new_amount
+
 /client/proc/toggle_barricade_creation()
 	set name = "Toggle Barricade Creation"
 	set category = "Game Master.Flags"
@@ -43,6 +53,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 // Spawn stuff
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
+#define GAME_MASTER_AI_STRAINS list(RUNNER_ACIDER)
 #define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
 #define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
 
@@ -174,7 +185,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	// Communication stuff
 	data["radio_clarity"] = GLOB.radio_communication_clarity
 	data["radio_clarity_example"] = stars("The quick brown fox jumped over the lazy dog.", GLOB.radio_communication_clarity)
-
+	data["xenos_spawned"] = GLOB.xenos_spawned
+	data["xenos_died"] = GLOB.xenos_died
 	return data
 
 /datum/game_master/ui_static_data(mob/user)
@@ -182,7 +194,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	var/list/data = list()
 
-	data["spawnable_xenos"] = GAME_MASTER_AI_XENOS
+	data["spawnable_xenos"] = GAME_MASTER_AI_XENOS + GAME_MASTER_AI_STRAINS
 
 	data["spawnable_hives"] = ALL_XENO_HIVES
 
@@ -366,6 +378,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 			for(var/i = 1 to xeno_spawn_count)
 				new spawning_xeno_type(spawn_turf, null, selected_hive, !spawn_ai)
+			GLOB.xenos_spawned += xeno_spawn_count
 
 			return TRUE
 
@@ -474,9 +487,25 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	SSminimaps.remove_marker(removing_datum)
 
+/client/proc/blackshift()
+	set name = "Toggle Blackshift"
+	set category = "Game Master.Extras"
+	if(!check_rights(R_ADMIN))
+		return
+	GLOB.blackshift = !GLOB.blackshift
+	message_admins(SPAN_NOTICE("Blackshift: [GLOB.blackshift ? "<b>ON</b>" : "OFF"]."))
+
+/client/proc/xenos_target_synths()
+	set name = "Toggle Synth Targetting"
+	set category = "Game Master.Extras"
+	if(!check_rights(R_ADMIN))
+		return
+	GLOB.xenos_target_synths = !GLOB.xenos_target_synths
+	message_admins(SPAN_NOTICE("Xenos <b>WILL[GLOB.xenos_target_synths ? "" : " NOT"]</b> target Synthetics."))
 
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AI_XENOS
+#undef GAME_MASTER_AI_STRAINS
 #undef DEFAULT_SPAWN_HIVE_STRING
 #undef DEFAULT_XENO_AMOUNT_TO_SPAWN
 
