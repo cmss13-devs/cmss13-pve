@@ -496,37 +496,3 @@
 /datum/ammo/bullet/rifle/ar10
 	name = "7.62x51 rifle bullet"
 	damage = 55
-
-//9.7x16 AG80
-
-/datum/ammo/bullet/rifle/ag80
-	name = "9.7x16 bullet"
-	damage = 35
-	penetration = ARMOR_PENETRATION_TIER_2
-
-/datum/ammo/bullet/rifle/ag80/tracer
-	icon_state = "bullet_green"
-	ammo_glowing = TRUE
-	bullet_light_color = COLOR_SOFT_GREEN
-
-/datum/ammo/bullet/rifle/ag80/ap
-	name = "armor-piercing 9.7x16 bullet"
-	damage = 35
-	penetration = ARMOR_PENETRATION_TIER_9
-
-/datum/ammo/bullet/rifle/ag80/ap/tracer
-	icon_state = "bullet_green"
-	ammo_glowing = TRUE
-	bullet_light_color = COLOR_SOFT_RED
-
-/datum/ammo/bullet/rifle/ag80/heap
-	name = "high-explosive armor-piercing 9.7x16 bullet"
-	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 50 //big damage, doesn't actually blow up because thats stupid.
-	penetration = ARMOR_PENETRATION_TIER_8
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_9
-
-/datum/ammo/bullet/rifle/ag80/heap/tracer
-	icon_state = "bullet_green"
-	ammo_glowing = TRUE
-	bullet_light_color = COLOR_SOFT_GREEN
