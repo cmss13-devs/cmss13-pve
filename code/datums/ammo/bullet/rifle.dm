@@ -431,6 +431,11 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	effective_range_max = 7
 
+/datum/ammo/bullet/rifle/type71/tracer
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
+
 /datum/ammo/bullet/rifle/type71/ap
 	name = "armor-piercing 11.7x22 bullet"
 	damage = 35
@@ -444,7 +449,7 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
 
-//====== 11.7x22 Type 71
+//====== 9.7x16 AG80
 
 /datum/ammo/bullet/rifle/ag80
 	name = "9.7x16 bullet"
