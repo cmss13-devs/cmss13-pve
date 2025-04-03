@@ -320,3 +320,13 @@
 
 /datum/ammo/rocket/custom/do_at_max_range(obj/projectile/projectile)
 	prime(null, projectile)
+
+// UPP ROCKETS/MISSILES
+/datum/ammo/rocket/ap/hj35_launcher
+	icon_state = "hj35_missile"
+	max_range = 8
+
+/datum/ammo/rocket/ap/hj35_launcher/aa
+	name = "hypervelocity missile"
+	damage = 200
+	max_range = 16
