@@ -105,8 +105,9 @@
 	. = ..()
 	if(!destination)
 		in_flyby = TRUE
-	if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
-		SSticker.mode.ds_first_drop(src)
+	if(!(MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_INTRO_BLURB)))
+		if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
+			SSticker.mode.ds_first_drop(src)
 
 /obj/docking_port/mobile/marine_dropship/beforeShuttleMove(turf/newT, rotation, move_mode, obj/docking_port/mobile/moving_dock)
 	. = ..()
@@ -165,6 +166,7 @@
 	dwidth = 4
 	dheight = 8
 
+
 /obj/docking_port/mobile/marine_dropship/cyclone/get_transit_path_type()
 	return /turf/open/space/transit/dropship/cyclone
 
@@ -203,6 +205,19 @@
 
 /obj/docking_port/mobile/marine_dropship/tripoli/get_transit_path_type()
 	return /turf/open/space/transit/dropship/tripoli
+
+/obj/docking_port/mobile/marine_dropship/pmc
+	name = "Cash Flow"
+	id = DROPSHIP_PMC
+
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/pmc/get_transit_path_type()
+	return /turf/open/space/transit/dropship/pmc
 
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
@@ -336,8 +351,9 @@
 		var/obj/structure/machinery/computer/shuttle/dropship/flight/console = dropship.getControlConsole()
 		console?.update_equipment()
 	if(is_ground_level(z))
-		SSticker.mode.ds_first_landed(src)
-		SSticker.mode.flags_round_type |= MODE_DS_LANDED
+		if(!(MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_INTRO_BLURB)))
+			SSticker.mode.ds_first_landed(src)
+			SSticker.mode.flags_round_type |= MODE_DS_LANDED
 
 	if(xeno_announce)
 		xeno_announcement(SPAN_XENOANNOUNCE("The dropship has landed."), "everything")
@@ -431,6 +447,10 @@
 /datum/map_template/shuttle/cyclone
 	name = "Cyclone"
 	shuttle_id = DROPSHIP_CYCLONE
+
+/datum/map_template/shuttle/pmc
+	name = "Cash Flow"
+	shuttle_id = DROPSHIP_PMC
 
 /datum/map_template/shuttle/typhoon
 	name = "CMD-Typhoon"

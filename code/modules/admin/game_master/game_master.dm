@@ -37,6 +37,20 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 		var/new_amount = tgui_input_number(usr, "How Many Xenos?!?!", "Xenos Count", 1000, 9999999, 0)
 		GLOB.xenos_per_mission = new_amount
 
+/client/proc/toggle_barricade_creation()
+	set name = "Toggle Barricade Creation"
+	set category = "Game Master.Flags"
+
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(!SSticker.mode)
+		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
+		return
+
+	SSticker.mode.toggleable_flags ^= MODE_NO_MAKE_BARRICADES
+	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES) ? "disabled" : "enabled"] Barricade Creation.")
+
 // Spawn stuff
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
 #define GAME_MASTER_AI_STRAINS list(RUNNER_ACIDER)
