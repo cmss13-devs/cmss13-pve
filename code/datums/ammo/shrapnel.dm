@@ -117,6 +117,7 @@
 	damage = 10
 	penetration = 0
 	shrapnel_chance = 0
+	flags_ammo_behavior = AMMO_ROCKET|AMMO_STOPPED_BY_COVER
 
 /datum/ammo/bullet/shrapnel/claymore/confetti/on_hit_mob(mob/entity, obj/projectile/bullet)
 	. = ..()
