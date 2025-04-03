@@ -1203,6 +1203,34 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
 	zoom_offset = 4
 
+//Combi mini-scope & mag-harn/sling for the scout rifle
+
+/obj/item/attachable/scope/mini/scout
+	name = "M49A targeting relay"
+	desc = "An ARMAT M49A5 optical interface, type designation AN/PVX-56. Wirelessly links to the operators M49A eyepiece to give a one-to-one boresighted picture of where the rifle is aiming. Includes a Computer-Calculated-Impact-Point system for precision shooting."
+	icon_state = "d_boomslang-scope"
+	zoom_offset = 7
+	dynamic_aim_slowdown = SLOWDOWN_ADS_NONE
+	var/retrieval_slot = WEAR_J_STORE
+
+/obj/item/attachable/scope/mini/scout/New()
+	..()
+	attach_icon = icon_state
+
+/obj/item/attachable/scope/mini/scout/can_be_attached_to_gun(mob/user, obj/item/weapon/gun/G)
+	if(SEND_SIGNAL(G, COMSIG_DROP_RETRIEVAL_CHECK) & COMPONENT_DROP_RETRIEVAL_PRESENT)
+		to_chat(user, SPAN_WARNING("[G] already has a retrieval system installed!"))
+		return FALSE
+	return ..()
+
+/obj/item/attachable/scope/mini/scout/Attach(obj/item/weapon/gun/G)
+	. = ..()
+	G.AddElement(/datum/element/drop_retrieval/gun, retrieval_slot)
+
+/obj/item/attachable/scope/mini/scout/Detach(mob/user, obj/item/weapon/gun/detaching_gub, drop_attachment = TRUE)
+	. = ..()
+	detaching_gub.RemoveElement(/datum/element/drop_retrieval/gun, retrieval_slot)
+
 // PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
 
 /obj/item/attachable/scope/pve
