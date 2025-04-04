@@ -184,11 +184,11 @@
 		if(ROF_SINGLE)
 			burst = 1
 			accuracy_mult = 0.9
-			fire_delay = 4
+			fire_delay = 5
 		if(ROF_BURST)
 			burst = 3
 			accuracy_mult = 0.7
-			fire_delay = 2.5
+			fire_delay = 3
 		if(ROF_FULL_AUTO)
 			burst = 1
 			accuracy_mult = 0.5
@@ -770,6 +770,12 @@
 	QDEL_NULL(linked_cam)
 	. = ..()
 
+/obj/item/defenses/handheld/sentry/dmr
+	name = "handheld UA 725-D sniper sentry"
+	icon_state = "DMR uac_sentry_handheld"
+	deployment_time = 2 SECONDS
+	defense_type = /obj/structure/machinery/defenses/sentry/dmr
+
 /obj/structure/machinery/defenses/sentry/shotgun
 	name = "\improper UA 12-G Shotgun Sentry"
 	defense_type = "Shotgun"
@@ -916,7 +922,7 @@
 	name = "UA 571-F AGL sentry gun"
 	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M76AE1 Automatic Grenade Launcher and a 50-round drum magazine."
 	defense_type = "DMR" //Fits close enough, isn't used otherwise
-	fire_delay = 12
+	fire_delay = 18
 	sentry_range = 10
 	handheld_type = /obj/item/defenses/handheld/sentry/grenade
 	ammo = new /obj/item/ammo_magazine/sentry/grenade
@@ -931,6 +937,7 @@
 		SENTRY_CATEGORY_IFF = FACTION_MARINE,
 	)
 
+
 /obj/structure/machinery/defenses/sentry/wy
 	name = "WY 202-GMA1 Smart Sentry"
 	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the PMC."
@@ -941,38 +948,38 @@
 	disassemble_time = 5 SECONDS
 	hack_time = 25 SECONDS
 	sentry_range = 6
-	omni_directional = TRUE
 	handheld_type = /obj/item/defenses/handheld/sentry/wy
 	ammo = new /obj/item/ammo_magazine/sentry/wy
 	selected_categories = list(
-		SENTRY_CATEGORY_ROF = list(ROF_FULL_AUTO),
+		SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_FULL_AUTO),
 		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
 	)
 
-/obj/structure/machinery/defenses/sentry/mini/wy
+/obj/structure/machinery/defenses/sentry/wy/mini
 	name = "WY 14-GRA2 Mini Sentry"
 	desc = "A deployable, semi-automated turret with AI targeting capabilities used by the PMC."
-	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
-	sentry_type = "wy_sentry"
+	defense_type = "Mini"
 	fire_delay = 0.5
 	health = 200
 	health_max = 200
 	disassemble_time = 2 SECONDS
 	hack_time = 25 SECONDS
+	sentry_range = 4
+	omni_directional = TRUE
 	handheld_type = /obj/item/defenses/handheld/sentry/wy/mini
 	ammo = new /obj/item/ammo_magazine/sentry/wy/mini
 	selected_categories = list(
-		SENTRY_CATEGORY_ROF = list(ROF_FULL_AUTO),
+		SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_FULL_AUTO),
 		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
 	)
 
 /obj/structure/machinery/defenses/sentry/dmr/wy
 	name = "WY 2-ADT-A3 Heavy Sentry"
 	desc = "A deployable, semi-automated turret with AI targeting capabilities used by the PMC."
-	defense_type = "Heavy"
 	icon = 'icons/obj/structures/machinery/defenses/wy_heavy.dmi'
 	sentry_type = "wy_sentry"
-	fire_delay = 5
+	defense_type = "Heavy"
+	fire_delay = 16
 	health = 600
 	health_max = 600
 	damage_mult = 1.2 //Longer barrel, better muzzle velocity, yadda yadda
@@ -985,6 +992,21 @@
 		SENTRY_CATEGORY_ROF = list(ROF_SINGLE),
 		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
 	)
+
+/obj/structure/machinery/defenses/sentry/wy/handle_rof(level)
+	switch(level)
+		if(ROF_SINGLE)
+			burst = 1
+			accuracy_mult = 0.95
+			fire_delay = 6
+		if(ROF_BURST)
+			burst = 4
+			accuracy_mult = 0.75
+			fire_delay = 4
+		if(ROF_FULL_AUTO)
+			burst = 1
+			accuracy_mult = 0.55
+			fire_delay = 2
 
 /obj/structure/machinery/defenses/sentry/upp
 	name = "\improper UPPA 32-H sentry gun"
@@ -1031,11 +1053,11 @@
 	switch(level)
 		if(ROF_SINGLE)
 			burst = 1
-			accuracy_mult = 0.95
+			accuracy_mult = 0.9
 			fire_delay = 4.8
 		if(ROF_BURST)
 			burst = 2
-			accuracy_mult = 0.8
+			accuracy_mult = 0.75
 			fire_delay = 3.6
 		if(ROF_FULL_AUTO)
 			burst = 1

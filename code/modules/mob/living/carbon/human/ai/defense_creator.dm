@@ -133,11 +133,11 @@
 	desc = /obj/structure/machinery/defenses/sentry/premade/deployable/almayer::desc
 	path_to_spawn = /obj/structure/machinery/defenses/sentry/premade/deployable/almayer
 
-/datum/human_ai_defense/defense/sentry/uscm/dmr
-	name = "USCM Sentry - DMR"
-	desc = /obj/structure/machinery/defenses/sentry/dmr::desc
+/datum/human_ai_defense/defense/sentry/uscm/grenade
+	name = "USCM Sentry - Grenade"
+	desc = /obj/structure/machinery/defenses/sentry/grenade::desc
 	icon_state = "uscm_sentry_dmr"
-	path_to_spawn = /obj/structure/machinery/defenses/sentry/dmr
+	path_to_spawn = /obj/structure/machinery/defenses/sentry/grenade
 
 /datum/human_ai_defense/defense/sentry/uscm/shotgun
 	name = "USCM Sentry - Shotgun"
@@ -195,9 +195,9 @@
 
 /datum/human_ai_defense/defense/sentry/wy/mini
 	name = "W-Y Sentry - Mini Sentry"
-	desc = /obj/structure/machinery/defenses/sentry/mini/wy::desc
+	desc = /obj/structure/machinery/defenses/sentry/wy/mini::desc
 	icon_state = "wy_sentry_mini"
-	path_to_spawn = /obj/structure/machinery/defenses/sentry/mini/wy
+	path_to_spawn = /obj/structure/machinery/defenses/sentry/wy/mini
 
 /datum/human_ai_defense/defense/sentry/wy/heavy
 	name = "W-Y Sentry - Heavy"

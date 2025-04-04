@@ -122,12 +122,6 @@
 		if("Mini-Sentry Upgrade")
 			return /obj/item/defenses/handheld/sentry/mini
 
-/obj/item/defenses/handheld/sentry/dmr
-	name = "handheld UA 725-D sniper sentry"
-	icon_state = "DMR uac_sentry_handheld"
-	deployment_time = 2 SECONDS
-	defense_type = /obj/structure/machinery/defenses/sentry/dmr
-
 /obj/item/defenses/handheld/sentry/shotgun
 	name = "handheld UA 12-G shotgun sentry"
 	icon_state = "Shotgun uac_sentry_handheld"
@@ -156,7 +150,7 @@
 /obj/item/defenses/handheld/sentry/wy/mini
 	name = "handheld WY 14-GRA2 mini sentry"
 	icon_state = "Mini wy_sentry_handheld"
-	defense_type = /obj/structure/machinery/defenses/sentry/mini/wy
+	defense_type = /obj/structure/machinery/defenses/sentry/wy/mini
 	deployment_time = 2 SECONDS
 
 /obj/item/defenses/handheld/sentry/wy/heavy
