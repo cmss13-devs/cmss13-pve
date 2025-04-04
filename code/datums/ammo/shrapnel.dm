@@ -57,6 +57,12 @@
 	shell_speed = AMMO_SPEED_TIER_2
 	shrapnel_chance = 5
 
+/datum/ammo/bullet/shrapnel/landmine/light
+	name = "jagged landmine fragmentation"
+	damage = 15
+	penetration = -ARMOR_PENETRATION_TIER_2
+	shrapnel_chance = 0
+
 /datum/ammo/bullet/shrapnel/rubber
 	name = "rubber pellets"
 	icon_state = "rubber_pellets"

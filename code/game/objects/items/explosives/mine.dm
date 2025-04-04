@@ -27,6 +27,8 @@
 	var/triggered = FALSE
 	var/hard_iff_lock = FALSE
 	var/obj/effect/mine_tripwire/tripwire
+	var/base_disarm_fail_chance = 50
+	var/base_disarm_time = 45
 
 	var/map_deployed = FALSE
 
@@ -116,17 +118,41 @@
 			if(user.action_busy)
 				return
 			if(user.faction == iff_signal)
-				user.visible_message(SPAN_NOTICE("[user] starts disarming [src]."), \
-				SPAN_NOTICE("You start disarming [src]."))
+				user.visible_message(SPAN_NOTICE("[user] starts deactivating [src]."), \
+				SPAN_NOTICE("You start deactivating [src]."))
 			else
-				user.visible_message(SPAN_NOTICE("[user] starts fiddling with \the [src], trying to disarm it."), \
-				SPAN_NOTICE("You start disarming [src], but you don't know its IFF data. This might end badly..."))
-			if(!do_after(user, 30, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
+				user.visible_message(SPAN_NOTICE("[user] starts attempting to disarm \the [src], while being careful to not set it off."), \
+				SPAN_NOTICE("You start disarming [src], handling it with care."))
+			//handles custom skill dependent disarm chances.
+			var/disarm_time = base_disarm_time
+			var/disarm_fail_chance = base_disarm_fail_chance
+			if(user.skills)
+				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_UNTRAINED))
+					to_chat(user, SPAN_WARNING("You aren't trained in demining... This might be tricky."))
+					disarm_time = 50
+				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_NOVICE))
+					to_chat(user, SPAN_WARNING("The basics are pretty basic, and some of these look unfamiliar. Steady, steady..."))
+					disarm_time = 40
+					disarm_fail_chance = 20
+				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_TRAINED))
+					to_chat(user, SPAN_WARNING("Just like camp. The M20's LIDAR cone can be looped decently easily now that you have your hands on it."))
+					disarm_fail_chance = 0
+					disarm_time = 20
+				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_ENGI))
+					to_chat(user, SPAN_WARNING("Suddenly, all those hours doing demining training feel very, very justified."))
+					disarm_fail_chance = 0
+					disarm_time = 15
+				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_MASTER))
+					to_chat(user, SPAN_WARNING("Intelligent landmine, Claymore, M20. Make it quick."))
+					disarm_fail_chance = 0
+					disarm_time = 10
+
+			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
 				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
 					SPAN_WARNING("You stop disarming [src]."))
 				return
 			if(user.faction != iff_signal) //ow!
-				if(prob(5))
+				if(prob(disarm_fail_chance))
 					triggered = TRUE
 					if(tripwire)
 						var/direction = GLOB.reverse_dir[src.dir]
@@ -322,6 +348,7 @@
 	matter = list("metal" = 3750)
 	has_blast_wave_dampener = TRUE
 
+
 /obj/item/explosive/mine/m760ap
 	name = "M760 antipersonnel landmine"
 	desc = "A standard issue American antipersonnel landmine. Minimum metal and blast-resistant, with integrated anti-tamper features. Due to counter-demining design, it contains little primary fragmentation liner."
@@ -330,6 +357,8 @@
 	var/disarmed = FALSE
 	var/explosion_power = 300
 	var/explosion_falloff = 100
+	base_disarm_fail_chance = 70
+	base_disarm_time = 40
 
 /obj/item/explosive/mine/m760ap/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -344,6 +373,63 @@
 	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
 	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
 	qdel(src)
+
+/obj/item/explosive/mine/m760ap/attackby(obj/item/W, mob/user)
+	if(HAS_TRAIT(W, TRAIT_TOOL_MULTITOOL))
+		if(active)
+			if(user.action_busy)
+				return
+			if(user.faction == iff_signal)
+				user.visible_message(SPAN_NOTICE("[user] starts unearthing and deactivating [src]."), \
+				SPAN_NOTICE("You start unearthing and deactivating [src]."))
+			else
+				user.visible_message(SPAN_NOTICE("[user] starts attempting to disarm \the [src], while being careful to not set it off."), \
+				SPAN_NOTICE("You start disarming [src], handling it with care."))
+			//handles custom skill dependent disarm chances.
+			var/disarm_time = base_disarm_time
+			var/disarm_fail_chance = base_disarm_fail_chance
+			if(user.skills)
+				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_UNTRAINED))
+					to_chat(user, SPAN_WARNING("You aren't trained in demining... This is almost impossible."))
+					disarm_time = 60
+					disarm_fail_chance = 80
+				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_NOVICE))
+					to_chat(user, SPAN_WARNING("The M760 is notoriously difficult, even in "))
+					disarm_time = 40
+					disarm_fail_chance = 20
+				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_TRAINED))
+					to_chat(user, SPAN_WARNING("Just like camp. The M20's LIDAR cone can be looped decently easily now that you have your hands on it."))
+					disarm_fail_chance = 0
+					disarm_time = 20
+				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_ENGI))
+					to_chat(user, SPAN_WARNING("Suddenly, all those hours doing demining training feel very, very justified."))
+					disarm_fail_chance = 0
+					disarm_time = 15
+				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_MASTER))
+					to_chat(user, SPAN_WARNING("Intelligent landmine, Claymore, M20. Make it quick."))
+					disarm_fail_chance = 0
+					disarm_time = 10
+
+			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
+				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
+					SPAN_WARNING("You stop disarming [src]."))
+				return
+			if(user.faction != iff_signal) //ow!
+				if(prob(disarm_fail_chance))
+					triggered = TRUE
+					if(tripwire)
+						var/direction = GLOB.reverse_dir[src.dir]
+						var/step_direction = get_step(src, direction)
+						tripwire.forceMove(step_direction)
+					prime()
+			if(!active)//someone beat us to it
+				return
+			user.visible_message(SPAN_NOTICE("[user] finishes disarming [src]."), \
+			SPAN_NOTICE("You finish disarming [src]."))
+			disarm()
+
+	else
+		return ..()
 
 /obj/item/explosive/mine/m760ap/disarm()
 	anchored = FALSE
@@ -378,6 +464,7 @@
 		..()
 	else
 		return
+
 
 /obj/item/explosive/mine/m5a3betty
 	name = "M5A3 bounding mine"
@@ -436,6 +523,148 @@
 		..()
 	else
 		return
+
+/obj/item/explosive/mine/fzd91
+	name = "FZD-91 Landmine"
+	desc = "Regular issue area denial landmine for Union of Progressive Peoples' forces in the field. Powerful, with a strong fragmentation liner. Produced by Gruppo Meccanico Militare Vasella."
+	icon_state = "fzd91"
+	angle = 360
+	var/disarmed = FALSE
+	var/explosion_power = 250
+	var/explosion_falloff = 125
+
+/obj/item/explosive/mine/fzd91/check_for_obstacles(mob/living/user)
+	return FALSE
+
+/obj/item/explosive/mine/fzd91/attackby(obj/item/W, mob/user)
+	return
+
+/obj/item/explosive/mine/fzd91/prime(mob/user)
+	set waitfor = 0
+	if(!cause_data)
+		cause_data = create_cause_data(initial(name), user)
+	create_shrapnel(loc, 36, dir, 360, /datum/ammo/bullet/shrapnel/landmine, cause_data)
+	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
+	qdel(src)
+
+/obj/item/explosive/mine/fzd91/disarm()
+	anchored = FALSE
+	active = FALSE
+	triggered = FALSE
+	QDEL_NULL(tripwire)
+	disarmed = TRUE
+	add_to_garbage(src)
+
+/obj/item/explosive/mine/fzd91/attack_self(mob/living/user)
+	if(disarmed)
+		return
+	. = ..()
+
+/obj/item/explosive/mine/fzd91/deploy_mine(mob/user)
+	if(disarmed)
+		return
+	if(!hard_iff_lock && user)
+		iff_signal = user.faction
+
+	cause_data = create_cause_data(initial(name), user)
+	if(user)
+		user.drop_inv_item_on_ground(src)
+	setDir(user ? user.dir : dir) //The direction it is planted in is the direction the user faces at that time
+	activate_sensors()
+	update_icon()
+	for(var/mob/living/carbon/mob in range(1, src))
+		src.try_to_prime(mob)
+
+/obj/item/explosive/mine/fzd91/attack_alien()
+	if(disarmed)
+		..()
+	else
+		return
+
+
+/obj/item/explosive/mine/tn13
+	name = "TN-13"
+	desc = "A somewhat basic landmine. It has no intelligent or electronic components, but is easily disarmed with a pair of wirecutters. Formerly produced by the Oberon Mechanical Concern's military ordinance division. While not in use anymore, vast stockpiles still exist."
+	icon_state = "tn13"
+	angle = 360
+	var/disarmed = FALSE
+	var/explosion_power = 75
+	var/explosion_falloff = 25
+
+/obj/item/explosive/mine/tn13/check_for_obstacles(mob/living/user)
+	return FALSE
+
+/obj/item/explosive/mine/tn13/attackby(obj/item/W, mob/user)
+	return
+
+/obj/item/explosive/mine/tn13/prime(mob/user)
+	set waitfor = 0
+	if(!cause_data)
+		cause_data = create_cause_data(initial(name), user)
+	create_shrapnel(loc, 36, dir, 360, /datum/ammo/bullet/shrapnel/landmine/light, cause_data)
+	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
+	qdel(src)
+
+/obj/item/explosive/mine/tn13/disarm()
+	anchored = FALSE
+	active = FALSE
+	triggered = FALSE
+	QDEL_NULL(tripwire)
+	disarmed = TRUE
+	add_to_garbage(src)
+
+/obj/item/explosive/mine/tn13/attack_self(mob/living/user)
+	if(disarmed)
+		return
+	. = ..()
+
+/obj/item/explosive/mine/tn13/deploy_mine(mob/user)
+	if(disarmed)
+		return
+	if(!hard_iff_lock && user)
+		iff_signal = user.faction
+
+	cause_data = create_cause_data(initial(name), user)
+	if(user)
+		user.drop_inv_item_on_ground(src)
+	setDir(user ? user.dir : dir) //The direction it is planted in is the direction the user faces at that time
+	activate_sensors()
+	update_icon()
+	for(var/mob/living/carbon/mob in range(1, src))
+		src.try_to_prime(mob)
+
+/obj/item/explosive/mine/tn13/attack_alien()
+	if(disarmed)
+		..()
+	else
+		return
+
+//guaranteed disarming.
+/obj/item/explosive/mine/attackby(obj/item/W, mob/user)
+	if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS))
+		if(active)
+			if(user.action_busy)
+				return
+			if(user.faction == iff_signal)
+				user.visible_message(SPAN_NOTICE("[user] starts disarming [src]."), \
+				SPAN_NOTICE("You start disarming [src]."))
+			else
+				user.visible_message(SPAN_NOTICE("[user] starts working with \the [src], trying to disarm it."), \
+				SPAN_NOTICE("You start disarming [src], opening the case with care."))
+			if(!do_after(user, 30, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
+				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
+					SPAN_WARNING("You stop disarming [src]."))
+				return
+			if(!active)//someone beat us to it
+				return
+			user.visible_message(SPAN_NOTICE("[user] finishes disarming [src]. Whew."), \
+			SPAN_NOTICE("You finish disarming [src]."))
+			disarm()
+
+	else
+		return ..()
 
 
 /obj/item/explosive/mine/sharp
