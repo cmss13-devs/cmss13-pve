@@ -86,7 +86,7 @@
 /obj/item/device/helmet_visor/medical
 	name = "basic medical optic"
 	icon_state = "med_sight"
-	hud_type = MOB_HUD_MEDICAL_ADVANCED
+	hud_type = list(MOB_HUD_MEDICAL_ADVANCED)
 	action_icon_string = "med_sight_down"
 	helmet_overlay = "med_sight_right"
 
