@@ -12088,7 +12088,7 @@
 	dir = 4
 	},
 /obj/structure/surface/table,
-/obj/item/weapon/gun/flamer,
+/obj/item/weapon/gun/flamer/weak,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/electrical)
 "jVR" = (
