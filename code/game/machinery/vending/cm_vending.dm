@@ -8,6 +8,7 @@
 	density = TRUE
 	anchored = TRUE
 	layer = BELOW_OBJ_LAYER
+	projectile_coverage = PROJECTILE_COVERAGE_MAX
 
 	req_access = list()
 	req_one_access = list()
