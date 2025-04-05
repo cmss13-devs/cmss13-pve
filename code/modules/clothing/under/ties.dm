@@ -1445,6 +1445,7 @@
 	storage_slots = 4
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/rifle/ag80,
 		/obj/item/ammo_magazine/pistol/t73,
 		/obj/item/ammo_magazine/pistol/np92,
 		/obj/item/ammo_magazine/handful/shotgun/heavy,
