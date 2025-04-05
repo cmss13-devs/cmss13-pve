@@ -988,6 +988,7 @@
 /datum/equipment_preset/colonist/security/guard
 	name = "US Colonial Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_COLONIST
 	faction_group = FACTION_LIST_UA_COLONY
 	assignment = "Colonial Militiaman"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)

@@ -2,13 +2,6 @@
 /datum/human_ai_squad_preset/uscm
 	faction = FACTION_MARINE
 
-/datum/human_ai_squad_preset/uscm/uacg
-	name = "UACG, Patrol"
-	desc = "Small Colonial Guard militia patrol armed with M20A rifles and carrying IFAKs containing gauze, ointment, splints and an injector."
-	ai_to_spawn = list(
-		/datum/equipment_preset/colonist/security/guard = 3,
-	)
-
 /datum/human_ai_squad_preset/uscm/rifleteam
 	name = "USCM, Rifle Team"
 	desc = "USCM patrol armed with M41A rifles and carrying IFAKs containing gauze, ointment, splints and an injector."
