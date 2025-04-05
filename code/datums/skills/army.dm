@@ -138,7 +138,7 @@ United States Army
 	)
 
 /datum/skills/cargoofficer
-	name = "Logistics Specialist"
+	name = "Logistics Officer"
 	skills = list(
 		SKILL_FIREMAN = SKILL_FIREMAN_TRAINED,
 		SKILL_LEADERSHIP = SKILL_LEAD_EXPERT,

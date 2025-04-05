@@ -2,13 +2,13 @@
 
 // USASF, the evolution of the USN & USAF, still considered Naval for the branch prefix
 
-/// NE1, Voidsman Recruit
+/// NE1, Crewman Recruit
 #define PAY_SHORT_NE1 "NE1"
 
-/// NE2, Voidsman Apprentice
+/// NE2, Crewman Apprentice
 #define PAY_SHORT_NE2 "NE2"
 
-/// NE3, Voidsman
+/// NE3, Crewman
 #define PAY_SHORT_NE3 "NE3"
 
 /// NE4, Petty Officer 3rd Class

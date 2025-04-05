@@ -8,24 +8,24 @@
 
 /datum/paygrade/navy/e1
 	paygrade = PAY_SHORT_NE1
-	name = "Voidsman Recruit"
-	prefix = "VR"
+	name = "Crewman Recruit"
+	prefix = "CR"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/e1
 	ranking = 0
 	pay_multiplier = 1.8
 
 /datum/paygrade/navy/e2
 	paygrade = PAY_SHORT_NE2
-	name = "Voidsman Apprentice"
-	prefix = "VA"
+	name = "Crewman Apprentice"
+	prefix = "CA"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/e2
 	ranking = 1
 	pay_multiplier = 1.9
 
 /datum/paygrade/navy/e3
 	paygrade = PAY_SHORT_NE3
-	name = "Voidsman"
-	prefix = "VN"
+	name = "Crewman"
+	prefix = "CMN"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/e3
 	ranking = 2
 	pay_multiplier = 2.1
