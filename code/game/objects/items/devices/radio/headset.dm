@@ -693,6 +693,13 @@
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general."
 	initial_keys = list(/obj/item/device/encryptionkey/upp/command)
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/canc
+	name = "CANC headset"
+	desc = "A special headset used by CANC military."
+	icon_state = "upp_headset"
+	item_state = "upp_headset"
+	frequency = CLF_FREQ
+
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
 	name = "marine alpha radio headset"
@@ -1286,3 +1293,4 @@
 	desc = "A standard headset used by colonists, but this one has been tampered with. To access the colony channel use :o."
 	frequency = JSC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
+

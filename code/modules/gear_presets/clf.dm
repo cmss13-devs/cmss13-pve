@@ -1,4 +1,5 @@
 /datum/equipment_preset/clf
+	name "TWE Rebel"
 	languages = list(LANGUAGE_JAPANESE)
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_INSURRECTIONTWE

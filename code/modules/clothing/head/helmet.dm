@@ -1024,8 +1024,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list()
 
 /obj/item/clothing/head/helmet/marine/veteran/canc
-	name = "\improper CANC helmet"
-	desc = "Outdated CANC style helmet."
+	name = "\improper Type 93 helmet"
+	desc = "Outdated CANC-style helmet."
 	icon_state = "canc"
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 

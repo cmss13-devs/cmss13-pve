@@ -1,4 +1,5 @@
 /datum/equipment_preset/rebel
+	name "UA Rebel"
 	languages = list(LANGUAGE_ENGLISH)
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_INSURRECTIONUA

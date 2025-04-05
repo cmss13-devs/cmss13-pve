@@ -1523,6 +1523,21 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		if(5)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black(new_human), WEAR_FACE)
 
+
+/datum/equipment_preset/proc/add_neckerchief(mob/living/carbon/human/new_human)
+	var/random_face_wrap = rand(1,6)
+	switch(random_face_wrap)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/black(new_human), WEAR_FACE)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/gray(new_human), WEAR_FACE)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/red(new_human), WEAR_FACE)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief(new_human), WEAR_FACE)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/green(new_human), WEAR_FACE)
+
 	//UPP
 /datum/equipment_preset/proc/add_upp_head(mob/living/carbon/human/new_human)
 	var/maybeberet = rand(1,3)

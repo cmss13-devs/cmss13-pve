@@ -361,6 +361,11 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper Type 12"
 
+/obj/item/clothing/suit/marine/faction/UPP/CANC/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	src.attach_accessory(null, webbing, TRUE)
+
 /obj/item/clothing/suit/marine/faction/UPP/jacket
 	name = "\improper UH4 camouflaged jacket"
 	icon_state = "upp_coat"
