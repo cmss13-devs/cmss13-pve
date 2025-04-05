@@ -37,7 +37,7 @@
 		"cooldown" = 1
 	)
 
-	movement_sound = 'sound/vehicles/box_van_driving.ogg'
+	engine_sound = list('sound/vehicles/box_van_driving.ogg')
 	honk_sound = 'sound/vehicles/box_van_horn.ogg'
 
 	vehicle_light_range = 8
