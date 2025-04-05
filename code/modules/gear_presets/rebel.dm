@@ -1,13 +1,24 @@
-/datum/equipment_preset/colonist/bluecollar/rebel
+/datum/equipment_preset/rebel
+	languages = list(LANGUAGE_ENGLISH)
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_INSURRECTIONUA
+	faction_group = FACTION_LIST_INSURRECTIONUA
+	skills = /datum/skills/pfc
+	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
+	origin_override = ORIGIN_CIVILIAN
+
+/datum/equipment_preset/rebel/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE)
+
+/datum/equipment_preset/rebel/guerilla
 	name = "UA Rebel, Guerilla"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_INSURRECTIONUA
 	faction_group = FACTION_LIST_INSURRECTIONUA
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/pfc
-	access = list(ACCESS_LIST_CLF_BASE)
 
-/datum/equipment_preset/colonist/bluecollar/rebel/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/guerilla/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
@@ -32,17 +43,17 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier
+/datum/equipment_preset/rebel/soldier
 	name = "UA Rebel, Soldier (Rifle)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/get_assignment(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/soldier/get_assignment(mob/living/carbon/human/new_human)
 	return "Rifleman"
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/soldier/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
@@ -75,10 +86,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/shotgun
+/datum/equipment_preset/rebel/soldier/shotgun
 	name = "UA Rebel, Soldier (Shotgun)"
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/shotgun/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/soldier/shotgun/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
@@ -108,10 +119,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/flamer
+/datum/equipment_preset/rebel/soldier/flamer
 	name = "UA Rebel, Soldier (Incinerator)"
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/flamer/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/soldier/flamer/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
@@ -143,13 +154,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/weak, WEAR_IN_R_STORE)
 
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/leader
+/datum/equipment_preset/rebel/soldier/leader
 	name = "UA Rebel, Soldier (Squad Leader)"
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/leader/get_assignment(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/soldier/leader/get_assignment(mob/living/carbon/human/new_human)
 	return "Squad Leader"
 
-/datum/equipment_preset/colonist/bluecollar/rebel/soldier/leader/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/soldier/leader/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
@@ -182,7 +193,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
 
-/datum/equipment_preset/colonist/bluecollar/rebel/medic
+/datum/equipment_preset/rebel/medic
 	name = "UA Rebel, Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
@@ -190,12 +201,12 @@
 	access = list(ACCESS_LIST_CLF_BASE)
 	skills = /datum/skills/corpsman
 
-/datum/equipment_preset/colonist/bluecollar/rebel/medic/get_assignment(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/medic/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(50))
 		return "Medic"
 	return "Corpsman"
 
-/datum/equipment_preset/colonist/bluecollar/rebel/medic/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/medic/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
@@ -230,7 +241,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
-/datum/equipment_preset/colonist/bluecollar/rebel/at
+/datum/equipment_preset/rebel/at
 	name = "UA Rebel, Anti-Tank"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
@@ -238,12 +249,12 @@
 	access = list(ACCESS_LIST_CLF_BASE)
 	skills = /datum/skills/corpsman
 
-/datum/equipment_preset/colonist/bluecollar/rebel/at/get_assignment(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/at/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(50))
 		return "Rifleman"
 	return "Rocketeer"
 
-/datum/equipment_preset/colonist/bluecollar/rebel/at/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/at/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/intel/chestrig(new_human), WEAR_BACK)
@@ -270,17 +281,17 @@
 	new_human.put_in_active_hand(new /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable(new_human))
 
 
-/datum/equipment_preset/colonist/bluecollar/rebel/commander
+/datum/equipment_preset/rebel/commander
 	name = "UA Rebel, Cell Commander"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
 
-/datum/equipment_preset/colonist/bluecollar/rebel/commander/get_assignment(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/commander/get_assignment(mob/living/carbon/human/new_human)
 	return "Commander"
 
-/datum/equipment_preset/colonist/bluecollar/rebel/commander/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/commander/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	//face
@@ -316,7 +327,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
 
-/datum/equipment_preset/colonist/bluecollar/rebel/sniper
+/datum/equipment_preset/rebel/sniper
 	name = "UA Rebel, Sniper (M42A)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
@@ -324,12 +335,12 @@
 	access = list(ACCESS_LIST_CLF_BASE)
 	skills = /datum/skills/specialist
 
-/datum/equipment_preset/colonist/bluecollar/rebel/sniper/get_assignment(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/sniper/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(85))
 		return "Sniper"
 	return "Marksman"
 
-/datum/equipment_preset/colonist/bluecollar/rebel/sniper/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/sniper/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)

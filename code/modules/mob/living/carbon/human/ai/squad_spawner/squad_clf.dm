@@ -47,43 +47,43 @@
 /datum/human_ai_squad_preset/clf/ua/patrol
 	name = "UA Rebel, Patrol"
 	ai_to_spawn = list(
-		/datum/equipment_preset/colonist/bluecollar/rebel/soldier = 2,
+		/datum/equipment_preset/rebel/soldier = 2,
 	)
 
 /datum/human_ai_squad_preset/clf/ua/at
 	name = "UA Rebel, Anti-Tank Team"
 	ai_to_spawn = list(
-/datum/equipment_preset/colonist/bluecollar/rebel/at = 1,
-		/datum/equipment_preset/colonist/bluecollar/rebel/soldier = 1,
+/datum/equipment_preset/rebel/at = 1,
+		/datum/equipment_preset/rebel/soldier = 1,
 	)
 
 /datum/human_ai_squad_preset/clf/ua/fortified
 	name = "UA Rebel, Flamethrower Team"
 	ai_to_spawn = list(
-		/datum/equipment_preset/colonist/bluecollar/rebel/soldier = 2,
-	/datum/equipment_preset/colonist/bluecollar/rebel/soldier/flamer = 1,
-		/datum/equipment_preset/colonist/bluecollar/rebel/medic = 1,
+		/datum/equipment_preset/rebel/soldier = 2,
+	/datum/equipment_preset/rebel/soldier/flamer = 1,
+		/datum/equipment_preset/rebel/medic = 1,
 	)
 
 /datum/human_ai_squad_preset/clf/ua/leader_escort
 	name = "UA Rebel, Squad"
 	ai_to_spawn = list(
-		/datum/equipment_preset/colonist/bluecollar/rebel/soldier/leader = 1,
-		/datum/equipment_preset/colonist/bluecollar/rebel/soldier = 2,
-		/datum/equipment_preset/colonist/bluecollar/rebel/medic = 1,
+		/datum/equipment_preset/rebel/soldier/leader = 1,
+		/datum/equipment_preset/rebel/soldier = 2,
+		/datum/equipment_preset/rebel/medic = 1,
 	)
 
 /datum/human_ai_squad_preset/clf/ua/leader_escort
 	name = "UA Rebel, Medic Element"
 	ai_to_spawn = list(
-		/datum/equipment_preset/colonist/bluecollar/rebel/medic = 2,
+		/datum/equipment_preset/rebel/medic = 2,
 	)
 
 /datum/human_ai_squad_preset/clf/ua/honor_guard
 	name = "UA Rebel, Command Element"
 	ai_to_spawn = list(
-		/datum/equipment_preset/colonist/bluecollar/rebel/commander = 1,
-		/datum/equipment_preset/colonist/bluecollar/rebel/soldier/leader = 1,
-		/datum/equipment_preset/colonist/bluecollar/rebel/soldier = 2,
-		/datum/equipment_preset/colonist/bluecollar/rebel/medic = 1,
+		/datum/equipment_preset/rebel/commander = 1,
+		/datum/equipment_preset/rebel/soldier/leader = 1,
+		/datum/equipment_preset/rebel/soldier = 2,
+		/datum/equipment_preset/rebel/medic = 1,
 	)

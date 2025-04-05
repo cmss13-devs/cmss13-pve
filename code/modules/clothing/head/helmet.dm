@@ -1023,6 +1023,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE //Let's make these keep their name and icon.
 	built_in_visors = list()
 
+/obj/item/clothing/head/helmet/marine/veteran/canc
+	name = "\improper CANC helmet"
+	desc = "Outdated CANC style helmet."
+	icon_state = "canc"
+	flags_inv_hide = HIDEEARS|HIDETOPHAIR
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc
 	name = "\improper tactical helmet"
 	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries. This configuration lacks the iconic ballistic mask popularized by Soldier of Fortune magazine."

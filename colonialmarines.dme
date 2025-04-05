@@ -1814,6 +1814,7 @@
 #include "code\modules\flufftext\Japanese.dm"
 #include "code\modules\flufftext\TextFilters.dm"
 #include "code\modules\gear_presets\_select_equipment.dm"
+#include "code\modules\gear_presets\canc.dm"
 #include "code\modules\gear_presets\cbrn.dm"
 #include "code\modules\gear_presets\clf.dm"
 #include "code\modules\gear_presets\cmb.dm"
