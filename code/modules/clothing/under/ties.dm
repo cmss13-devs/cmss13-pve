@@ -1531,7 +1531,7 @@
 		select_gamemode_skin(type)
 	update_icon()
 
-//Partial Pre-load For Props
+//Pre-load For Props
 
 /obj/item/clothing/accessory/storage/webbing/m56/preset
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
