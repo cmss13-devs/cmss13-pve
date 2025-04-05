@@ -152,8 +152,8 @@
 /obj/item/ammo_box/magazine/nade_box/incen
 	name = "\improper M77 HIAM grenade box"
 	desc = "A secure box holding 25 M77 High-explosive-Incendiary, Anti-Mobility grenades. Highly flammable, don't store near the flamer fuel."
-	magazine_type = /obj/item/explosive/grenade/phosphorus
-	allowed_magazines = list(/obj/item/explosive/grenade/phosphorus)
+	magazine_type = /obj/item/explosive/grenade/incendiary
+	allowed_magazines = list(/obj/item/explosive/grenade/incendiary)
 	overlay_model_type = "model_m77"
 	overlay_icon_type = "hiam"
 	overlay_grenade_type = "hiam"
