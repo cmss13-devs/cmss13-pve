@@ -87,6 +87,9 @@
 	light_color = LIGHT_COLOR_TUNGSTEN
 	light_system = MOVABLE_LIGHT
 
+	var/custom_light_range = 4
+	var/custom_light_power = 3
+
 	var/flashlight_cooldown = 0 //Cooldown for toggling the light
 	var/locate_cooldown = 0 //Cooldown for SL locator
 	var/armor_overlays[]
@@ -125,6 +128,9 @@
 		/obj/item/ammo_magazine/sniper,
 	)
 	pockets.max_storage_space = 8
+
+	if(GLOB.blackshift)
+		custom_light_range = 1
 
 	light_holder = new(src)
 
@@ -187,8 +193,12 @@
 	. = ..()
 	if(. != CHECKS_PASSED)
 		return
-	set_light_range(initial(light_range))
-	set_light_power(floor(initial(light_power) * 0.5))
+	if(!GLOB.blackshift)
+		set_light_range(initial(light_range))
+		set_light_power(floor(initial(light_power) * 0.5))
+	else
+		set_light_range(custom_light_range)
+		set_light_power(floor(custom_light_power) * 0.5)
 	set_light_on(toggle_on)
 	flags_marine_armor ^= ARMOR_LAMP_ON
 

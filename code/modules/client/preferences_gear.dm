@@ -1056,6 +1056,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 //================================================
 */
 
+/datum/gear/weapon/tracer_unit
+	display_name = "Tracer Unit"
+	cost = 3
+	path = /obj/item/attachable/tracer
+
 /datum/gear/drink
 	category = "Canned drinks"
 
@@ -1469,3 +1474,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/weapon/swiss_army_knife
 	cost = 4 // Two tools & a knife in one package
 
+/datum/gear/misc/minesweeper
+	display_name = "Minesweeper Game"
+	path = /obj/item/toy/minesweeper
+	cost = 2
