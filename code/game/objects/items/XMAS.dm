@@ -54,8 +54,8 @@
 			qdel(src)
 			return
 		if(exFancy > 15)
-			to_chat(M, SPAN_NOTICE(" Oh, just what I needed... Fucking HEFA's."))
-			gift_type = /obj/item/storage/box/nade_box/frag
+			to_chat(M, SPAN_NOTICE(" Oh, just what I needed... Fucking BFAB's."))
+			gift_type = /obj/item/ammo_box/magazine/nade_box/bfab
 			var/obj/item/I = new gift_type(M)
 			M.temp_drop_inv_item(src)
 			M.put_in_hands(I)

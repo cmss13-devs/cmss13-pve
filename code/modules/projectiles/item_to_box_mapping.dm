@@ -61,17 +61,17 @@
 		add_pairing(item_box_pairing)
 
 	//Big grenade boxes
-	for(var/obj/item/storage/box/nade_box/ammo_box as anything in typesof(/obj/item/storage/box/nade_box))
-		if(!initial(ammo_box.grenade_type))
+	for(var/obj/item/ammo_box/magazine/nade_box/ammo_box as anything in typesof(/obj/item/ammo_box/magazine/nade_box))
+		if(!initial(ammo_box.magazine_type))
 			//Ignore all the empty boxes
 			continue
 		var/datum/item_box_pairing/item_box_pairing = new()
 		item_box_pairing.box = ammo_box
-		item_box_pairing.item = initial(ammo_box.grenade_type)
+		item_box_pairing.item = initial(ammo_box.magazine_type)
 		if(!item_box_pairing.item)
 			//if the item is null somehow
 			continue
-		item_box_pairing.items_in_box = initial(ammo_box.storage_slots)
+		item_box_pairing.items_in_box = initial(ammo_box.num_of_magazines)
 		add_pairing(item_box_pairing)
 
 	//*******Snowflakes*******//

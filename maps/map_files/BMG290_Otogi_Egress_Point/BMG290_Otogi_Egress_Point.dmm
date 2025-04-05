@@ -47867,7 +47867,7 @@
 /area/bmg290/wilderness/road)
 "wIM" = (
 /obj/item/weapon/gun/launcher/grenade/m81,
-/obj/item/storage/box/nade_box/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,

@@ -53,8 +53,8 @@
 	new /obj/item/ammo_magazine/shotgun/beanbag(drop_spawn)
 
 	drop_spawn = get_spawn_point(TRUE)
-	new /obj/item/storage/box/nade_box/tear_gas(drop_spawn)
-	new /obj/item/storage/box/nade_box/tear_gas(drop_spawn)
+	new /obj/item/ammo_box/magazine/nade_box/ltl/tear_gas(drop_spawn)
+	new /obj/item/ammo_box/magazine/nade_box/ltl/tear_gas(drop_spawn)
 
 	drop_spawn = get_spawn_point(TRUE)
 	new /obj/item/ammo_magazine/shotgun/buckshot(drop_spawn)

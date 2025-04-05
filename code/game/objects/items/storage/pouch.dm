@@ -610,8 +610,8 @@
 	)
 
 /obj/item/storage/pouch/explosive/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/nade_box))
-		var/obj/item/storage/box/nade_box/M = W
+	if(istype(W, /obj/item/ammo_box/magazine/nade_box))
+		var/obj/item/ammo_box/magazine/nade_box/M = W
 		dump_into(M,user)
 	else
 		return ..()
