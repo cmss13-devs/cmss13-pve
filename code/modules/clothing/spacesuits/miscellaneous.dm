@@ -18,10 +18,7 @@
 	slowdown = 0
 	allowed = list(/obj/item) //for stuffing extra special presents
 
-
-/obj/item/clothing/suit/space/emergency
-
-/obj/item/clothing/head/helmet/space/pressure
+/obj/item/clothing/head/helmet/marine/pressure
 	name = "\improper pressure helmet"
 	desc = "A heavy space helmet."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
@@ -38,23 +35,31 @@
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bio = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_HARDCORE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|BYPASSFORINJECTOR
+	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|BYPASSFORINJECTOR|ALLOWINTERNALS
+	flags_cold_protection = BODY_FLAG_HEAD
+	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROT
+	flags_heat_protection = BODY_FLAG_HEAD
+	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROT
 	actions_types = list(/datum/action/item_action/toggle)
-	time_to_unequip = 10
-	time_to_equip = 10
+	time_to_unequip = 20
+	time_to_equip = 20
 	var/helmet_color = "white"
 	var/toggleable = TRUE
 	var/can_be_broken = TRUE
 	var/breaking_sound = 'sound/handling/click_2.ogg'
 
-/obj/item/clothing/head/helmet/space/pressure/Initialize()
+/obj/item/clothing/head/helmet/marine/pressure/New()
+	. = ..()
+	flags_atom |= NO_NAME_OVERRIDE
+
+/obj/item/clothing/head/helmet/marine/pressure/Initialize()
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/head/helmet/space/pressure/update_icon()
+/obj/item/clothing/head/helmet/marine/pressure/update_icon()
 	. = ..()
 	if(light_on)
 		icon_state = "pressure_[helmet_color]_[light_on]"
@@ -63,7 +68,7 @@
 		icon_state = initial(icon_state)
 		item_state = initial(item_state)
 
-/obj/item/clothing/head/helmet/space/pressure/attack_self(mob/user)
+/obj/item/clothing/head/helmet/marine/pressure/attack_self(mob/user)
 	. = ..()
 
 	if(!toggleable)
@@ -76,7 +81,7 @@
 
 	turn_light(user, !light_on)
 
-/obj/item/clothing/head/helmet/space/pressure/turn_light(mob/user, toggle_on)
+/obj/item/clothing/head/helmet/marine/pressure/turn_light(mob/user, toggle_on)
 
 	. = ..()
 	if(. != CHECKS_PASSED)
@@ -98,7 +103,7 @@
 	playsound(src, 'sound/handling/suitlight_on.ogg', 50, 1)
 	update_icon(user)
 
-/obj/item/clothing/head/helmet/space/pressure/attack_alien(mob/living/carbon/xenomorph/attacking_xeno)
+/obj/item/clothing/head/helmet/marine/pressure/attack_alien(mob/living/carbon/xenomorph/attacking_xeno)
 
 	if(!can_be_broken)
 		return
@@ -126,12 +131,15 @@
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bio = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_HARDCORE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	time_to_unequip = 50
 	time_to_equip = 50
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|PROTECTFROMWEATHER
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
+	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROT
+	siemens_coefficient = 0.1
 	breach_vulnerability = SPACESUIT_BREACH_STANDARD
 	actions_types = list(/datum/action/item_action/spacesuit/toggle_motion_detector)
 	var/obj/item/device/motiondetector/spacesuit/MD
@@ -205,7 +213,7 @@
 		MD.scan()
 	..()*/
 
-/obj/item/clothing/head/helmet/space/pressure/orange
+/obj/item/clothing/head/helmet/marine/pressure/orange
 	item_state = "pressure_orange"
 	icon_state = "pressure_orange"
 	helmet_color = "orange"
@@ -213,7 +221,7 @@
 	item_state = "pressure_orange"
 	icon_state = "pressure_orange"
 
-/obj/item/clothing/head/helmet/space/pressure/yellow
+/obj/item/clothing/head/helmet/marine/pressure/yellow
 	item_state = "pressure_yellow"
 	icon_state = "pressure_yellow"
 	helmet_color = "yellow"
@@ -222,7 +230,7 @@
 	item_state = "pressure_yellow"
 	icon_state = "pressure_yellow"
 
-/obj/item/clothing/head/helmet/space/pressure/cyan
+/obj/item/clothing/head/helmet/marine/pressure/cyan
 	item_state = "pressure_cyan"
 	icon_state = "pressure_cyan"
 	helmet_color = "cyan"
@@ -231,7 +239,7 @@
 	item_state = "pressure_cyan"
 	icon_state = "pressure_cyan"
 
-/obj/item/clothing/head/helmet/space/pressure/red
+/obj/item/clothing/head/helmet/marine/pressure/red
 	item_state = "pressure_red"
 	icon_state = "pressure_red"
 	helmet_color = "red"
@@ -244,21 +252,16 @@
 	item_state = "pressure_dark"
 	icon_state = "pressure_dark"
 
-/obj/item/clothing/head/helmet/space/pressure/uscm
+/obj/item/clothing/head/helmet/space/pressure/uscm/New()
+	new /obj/item/clothing/head/helmet/space/pressure(loc)
+	qdel(src)
+
+/obj/item/clothing/head/helmet/marine/pressure/uscm
 	name = "\improper USCM MK.35 pressure helmet"
 	desc = "A heavy space helmet, designed to be coupled with the MK.35 pressure suit utilized by the United States Colonial Marines and a few other American or UA organizations. Feels like you could hotbox in here."
 	item_state = "pressure_uscm"
 	icon_state = "pressure_uscm"
 	helmet_color = "uscm"
-	var/obj/structure/machinery/camera/camera
-
-/obj/item/clothing/head/helmet/space/pressure/uscm/Initialize(mapload)
-	camera = new /obj/structure/machinery/camera/overwatch(src)
-	return ..()
-
-/obj/item/clothing/head/helmet/space/pressure/uscm/Destroy(force)
-	QDEL_NULL(camera)
-	return ..()
 
 /obj/item/clothing/suit/space/pressure/uscm
 	name = "\improper USCM MK.35 pressure suit"
@@ -297,7 +300,7 @@
 	. = ..()
 	MD.iff_signal = FACTION_MARINE
 
-/obj/item/clothing/head/helmet/space/pressure/upp
+/obj/item/clothing/head/helmet/marine/pressure/upp
 	name = "\improper UPPAC Sokol-KV2 pressure helmet"
 	desc = "A heavy space helmet, designed to be coupled with the Sokol-KV2 pressure suit utilized by the Union of Progressive Peoples Armed Collective and a few other UPP organizations."
 	item_state = "pressure_upp"

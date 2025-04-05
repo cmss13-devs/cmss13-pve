@@ -1,6 +1,7 @@
 //A 'wound' system for space suits.
 //Breaches make a process() in spacesuits.dm lower the temperature of the human wearing them
 //A workaround for the bitflag, binary based temperature clothing system in handle_enviroment.dm
+#define SPACESUIT_BREACH_SOFTSUIT 3
 #define SPACESUIT_BREACH_CIVILIAN 2.5
 #define SPACESUIT_BREACH_STANDARD 1.5
 #define SPACESUIT_BREACH_COMBAT 1

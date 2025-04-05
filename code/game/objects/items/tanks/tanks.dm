@@ -25,6 +25,8 @@
 	var/volume = 50
 	var/manipulated_by = null //Used by _onclick/hud/screen_objects.dm internals to determine if someone has messed with our tank or not.
 						//If they have and we haven't scanned it with the PDA or gas analyzer then we might just breath whatever they put in it.
+	//Location of the overlay that gets applied
+	var/overlay_location = 'icons/mob/humans/onmob/belt.dmi'
 	pickup_sound = 'sound/effects/metal_drum_pickup.ogg'
 	drop_sound = 'sound/effects/metal_drum_drop.ogg'
 
@@ -102,13 +104,29 @@
 		var/mob/living/carbon/location = loc
 		if(location.internal == src)
 			using_internal = TRUE
-		if(location.internal == src || (location.wear_mask && (location.wear_mask.flags_inventory & ALLOWINTERNALS)))
+		if(location.internal == src || location.check_for_oxygen_mask())
 			mask_connected = TRUE
 
 	data["mask_connected"] = mask_connected
 	data["valve_open"] = using_internal
 
 	return data
+
+/mob/living/carbon/proc/check_for_oxygen_mask()
+	if(wear_mask && (wear_mask.flags_inventory & ALLOWINTERNALS))
+		return TRUE
+	if(ishuman(src))
+		var/mob/living/carbon/human/human_check = src
+		if(human_check.head && (human_check.head.flags_inventory & ALLOWINTERNALS))
+			return TRUE
+	return FALSE
+
+/mob/living/carbon/human/proc/check_for_weather_protection()
+	if(wear_suit && (wear_mask.flags_inventory & PROTECTFROMWEATHER))
+		return TRUE
+	if(w_uniform && (w_uniform.flags_inventory & PROTECTFROMWEATHER))
+		return TRUE
+	return FALSE
 
 /obj/item/tank/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
@@ -130,13 +148,13 @@
 			. = TRUE
 
 		if("valve")
-			if(istype(loc,/mob/living/carbon))
-				var/mob/living/carbon/location = loc
+			if(istype(loc,/mob/living/carbon/human))
+				var/mob/living/carbon/human/location = loc
 				if(location.internal == src)
 					location.internal = null
 					to_chat(usr, SPAN_NOTICE("You close the tank release valve."))
 				else
-					if(location.wear_mask && (location.wear_mask.flags_inventory & ALLOWINTERNALS))
+					if(location.check_for_oxygen_mask())
 						location.internal = src
 						to_chat(usr, SPAN_NOTICE("You open \the [src]'s valve."))
 						playsound(src, 'sound/effects/internals.ogg', 40, TRUE)

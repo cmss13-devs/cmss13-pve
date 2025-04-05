@@ -54,6 +54,7 @@
 	var/on_fire = FALSE //The "Are we on fire?" var
 	var/fire_stacks = 0 //Tracks how many stacks of fire we have on, max is
 	var/datum/reagent/fire_reagent
+	var/ignore_weather_effects = FALSE //Damage from blizzards and such. Stops the flavour message too.
 
 	var/is_being_hugged = 0 //Is there a hugger humping our face?
 	var/chestburst = 0 // 0: normal, 1: bursting, 2: bursted.

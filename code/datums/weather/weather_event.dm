@@ -41,9 +41,11 @@
 
 /datum/weather_event/proc/process_mob_effect(mob/living/carbon/affected_mob, delta_time = 1)
 	if(effect_message && prob(WEATHER_MESSAGE_PROB))
+		if(affected_mob.ignore_weather_effects)
+			return
 		if(ishuman(affected_mob))
 			var/mob/living/carbon/human/affected_human = affected_mob
-			if(affected_human.wear_suit && affected_human.wear_suit.flags_inventory & PROTECTFROMWEATHER || affected_human.w_uniform && affected_human.w_uniform.flags_inventory & PROTECTFROMWEATHER)
+			if(affected_human.check_for_weather_protection())
 				if(prob(50))
 					to_chat(affected_mob, SPAN_DANGER(pick("Your equipment protects you from the weather conditions","Your suit buffers the harmful weather.", "The extreme weather beats against your protective clothing")))
 				return

@@ -61,7 +61,7 @@
 	w_class = SIZE_SMALL
 	force = 4
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
-	volume = 1 //Tiny. Real life equivalents only have 21 breaths of oxygen in them. They're EMERGENCY tanks anyway -errorage (dangercon 2011)
+	volume = 1.2 //Tiny. Real life equivalents only have 21 breaths of oxygen in them. They're EMERGENCY tanks anyway -errorage (dangercon 2011)
 	gas_type = GAS_TYPE_OXYGEN
 	pressure = 3*ONE_ATMOSPHERE
 	pressure_full = 3*ONE_ATMOSPHERE

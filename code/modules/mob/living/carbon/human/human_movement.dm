@@ -84,6 +84,15 @@
 
 	if(slowed && !superslowed)
 		. += HUMAN_SLOWED_AMOUNT
+	/*
+	var/area/area_with_gravity = get_area(src.loc)
+	if(!area_with_gravity.gravity)
+		if(!Check_Dense_Object())
+			if(istype(back, /obj/item/tank/jetpack))
+				var/obj/item/tank/jetpack/J = back
+				if(J.on)
+					if((J.allow_thrust(STD_BREATH_VOLUME/5, src)))
+						. -= 1*/
 
 	. += CONFIG_GET(number/human_delay)
 	var/list/movedata = list("move_delay" = .)
@@ -108,15 +117,21 @@
 	//Do we have a working jetpack
 	if(istype(back, /obj/item/tank/jetpack))
 		var/obj/item/tank/jetpack/J = back
-		if(((!check_drift) || (check_drift && J.on && J.stabilization_on)) && (body_position == STANDING_UP) && (J.allow_thrust(STD_BREATH_VOLUME/5, src)))
-			inertia_dir = 0 //this stops us if stablization is turned on while drifting
-		if(J.on && (J.allow_thrust(STD_BREATH_VOLUME/5, src)))
+		if(((!check_drift) || (check_drift && J.on && J.stabilization_on)) && (body_position == STANDING_UP))
+			if((J.allow_thrust(STD_BREATH_VOLUME/5, src)))
+				J.ion_trail.start()
+				inertia_dir = 0 //this stops us if stablization is turned on while drifting
+		if(J.on)
 			if(!J.stabilization_on) //let us move one turf at a time if so
 				if(inertia_dir != direct)
 					if(direct != null)
-						inertia_dir = direct //Can coast on inertia by moving only one turf
+						if((J.allow_thrust(STD_BREATH_VOLUME/5, src)))
+							J.ion_trail.start()
+							inertia_dir = direct //Can coast on inertia by moving only one turf
+					J.ion_trail.stop()
 					return 0
 			else
+				J.ion_trail.stop()
 				return 1 //stop Goku teleporting
 
 
@@ -138,7 +153,7 @@
 		prob_slip = 0 // Changing this to zero to make it line up with the comment, and also, make more sense.
 
 	//Do we have magboots or such on if so no slip
-	if(istype(shoes, /obj/item/clothing/shoes/magboots) && (shoes.flags_inventory & NOSLIPPING))
+	if(istype(shoes, /obj/item/clothing/shoes/marine/magboots) && (shoes.flags_inventory & NOSLIPPING))
 		prob_slip = 0
 
 	//Check hands and mod slip

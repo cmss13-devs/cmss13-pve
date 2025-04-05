@@ -195,7 +195,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_FACE)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure/upp, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/upp, WEAR_HEAD)
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
@@ -233,7 +233,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_FACE)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure/upp, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/upp, WEAR_HEAD)
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
@@ -268,7 +268,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_FACE)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure/upp, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/upp, WEAR_HEAD)
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket

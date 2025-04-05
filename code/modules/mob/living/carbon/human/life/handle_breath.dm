@@ -46,7 +46,7 @@
 					smoke.reagents.reaction(src, INGEST)
 					smoke.reagents.copy_to(src, 10) //I dunno, maybe the reagents enter the blood stream through the lungs?
 					break //If they breathe in the nasty stuff once, no need to continue checking
-	if(losebreath > 0) //ung damage is a little weird, leaving this here
+	if(losebreath > 0) //lung damage is a little weird, leaving this here
 		losebreath--
 	handle_breath(air_info)
 
@@ -59,7 +59,7 @@
 			return null
 		if(get_dist(internal.loc, loc) > 1)
 			internal = null
-		if(!wear_mask || !(wear_mask.flags_inventory & ALLOWINTERNALS))
+		if(!(check_for_oxygen_mask()))
 			internal = null
 		if(internal)
 			return internal.take_air()
@@ -94,7 +94,7 @@ GLOBAL_VAR_INIT(all_human_breathe_space, FALSE)
 	if(status_flags & GODMODE)
 		return
 	var/oxygen_pressure = air_info[3]*air_info[4]
-	if(losebreath)
+	if(losebreath) //lung damage reduces effective oxygen, so you can compensate by being in oxygen rich atmosphere
 		oxygen_pressure = oxygen_pressure*0.2
 	if(!air_info || oxygen_pressure < ARMSTRONG_LIMIT*O2STANDARD)
 		apply_damage(HUMAN_MAX_OXYLOSS, OXY)

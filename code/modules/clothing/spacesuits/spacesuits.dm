@@ -15,7 +15,7 @@
 	armor_bio = CLOTHING_ARMOR_ULTRAHIGH
 	armor_rad = CLOTHING_ARMOR_ULTRAHIGH
 	armor_internaldamage = CLOTHING_ARMOR_LOW
-	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER
+	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|ALLOWINTERNALS
 	flags_inv_hide = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEALLHAIR
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_cold_protection = BODY_FLAG_HEAD
@@ -33,17 +33,17 @@
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.02
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
-	allowed = list(/obj/item/device/flashlight,/obj/item/tank/emergency_oxygen)
+	allowed = list(/obj/item/device/flashlight,/obj/item/tank/emergency_oxygen,/obj/item/tool/crowbar)
 	slowdown = 2
 	armor_melee = CLOTHING_ARMOR_NONE
 	armor_bullet = CLOTHING_ARMOR_NONE
 	armor_laser = CLOTHING_ARMOR_NONE
 	armor_energy = CLOTHING_ARMOR_NONE
 	armor_bomb = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_rad = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_LOW
-	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|PROTECTFROMWEATHER
+	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|PROTECTFROMWEATHER
 	flags_inv_hide = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
@@ -111,3 +111,49 @@
 		if(supporting_limbs.len)
 			to_chat(H, SPAN_DANGER("\The [src] stops supporting your [jointext(supporting_limbs, ", ")]."))
 		supporting_limbs.Cut()
+
+/obj/item/clothing/suit/space/emergency
+	name = "Emergency SoftSuit™"
+	desc = "An off-brand emergency compression suit made from flexible material and tubing apart from the plastic chestplate, which sits a 16x2 LCD monochrome screen you have to crane your neck to see. Is quite fragile, does not offer protection against high heat, high pressure and sharp objects. Lacks equipment clippings."
+	icon_state = "softsuit_emergency"
+	gas_transfer_coefficient = 0.05
+	permeability_coefficient = 0.04
+	slowdown = 3
+	breach_vulnerability = SPACESUIT_BREACH_SOFTSUIT
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	siemens_coefficient = 1.1
+	can_support_limbs = FALSE
+
+//folded version of the sadar
+/obj/item/prop/folded_emergency_spacesuit
+	name = "\improper emergency spacesuit and helmet (folded)"
+	desc = "An off-brand emergency spacesuit and helmet, vacuum packed so that they can fit into a backpack. Not a proper substitue for pressure suits like the MK.35, and only protects you from the cold of space."
+	icon = 'icons/obj/items/misc.dmi'
+	icon_state = "spacesuit_bag"
+	w_class = SIZE_MEDIUM
+	garbage = FALSE
+
+/obj/item/prop/folded_emergency_spacesuit/attack_self(mob/user)
+	user.visible_message(SPAN_NOTICE("[user] begins to unfold \the [src]."), SPAN_NOTICE("You start to unfold and expand \the [src]."))
+	playsound(src, 'sound/items/component_pickup.ogg', 20, TRUE, 5)
+
+	if(!do_after(user, 4 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+		to_chat(user, SPAN_NOTICE("You stop unfolding \the [src]"))
+		return
+
+	unfold(user)
+
+	user.visible_message(SPAN_NOTICE("[user] finishes unfolding \the [src]."), SPAN_NOTICE("You finish unfolding \the [src]."))
+	playsound(src, 'sound/items/component_pickup.ogg', 20, TRUE, 5)
+	. = ..()
+
+/obj/item/prop/folded_emergency_spacesuit/proc/unfold(mob/user)
+	var/obj/item/prop/folded_emergency_spacesuit/suit = new /obj/item/clothing/suit/space/emergency(user.loc)
+	transfer_label_component(suit)
+	qdel(src)
+	user.put_in_active_hand(suit)
+	var/obj/helmet = new /obj/item/clothing/head/helmet/space(user.loc)
+	transfer_label_component(helmet)
+	user.put_in_any_hand_if_possible(helmet)

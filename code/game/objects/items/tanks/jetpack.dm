@@ -5,7 +5,7 @@
 	w_class = SIZE_LARGE
 	item_state = "jetpack"
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
-	//var/datum/effect_system/ion_trail_follow/ion_trail
+	var/datum/effect_system/ion_trail_follow/ion_trail
 	var/on = 1
 	var/stabilization_on = 0
 	var/volume_rate = 500   //Needed for borg jetpack transfer
@@ -37,11 +37,11 @@
 
 /obj/item/tank/jetpack/Initialize()
 	. = ..()
-	//src.ion_trail = new /datum/effect_system/ion_trail_follow()
-	//src.ion_trail.set_up(src)
+	src.ion_trail = new /datum/effect_system/ion_trail_follow()
+	src.ion_trail.set_up(src)
 
 /obj/item/tank/jetpack/Destroy()
-	//QDEL_NULL(ion_trail)
+	QDEL_NULL(ion_trail)
 	return ..()
 
 
@@ -66,7 +66,7 @@
 		on = !on
 		if(on)
 			icon_state = "[icon_state]-on"
-			//ion_trail.start()
+
 		else
 			icon_state = initial(icon_state)
 	else
@@ -100,7 +100,7 @@
 	desc = "A tank of compressed oxygen for use as propulsion in zero-gravity areas. Use with caution. Can be used as an air supply"
 	icon_state = "jetpack"
 	item_state = "jetpack"
-	volume = 40
+	volume = 30
 	pressure = ONE_ATMOSPHERE*5
 
 /obj/item/tank/jetpack/carbondioxide

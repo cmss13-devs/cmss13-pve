@@ -460,7 +460,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_FACE)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure/uscm(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket

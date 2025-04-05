@@ -146,7 +146,7 @@
 	. = ..()
 	if(!.)
 		return FALSE
-	if(affected_mob.internal != null && affected_mob.wear_mask && (affected_mob.wear_mask.flags_inventory & ALLOWINTERNALS))
+	if(affected_mob.internal != null && affected_mob.check_for_oxygen_mask())
 		return FALSE
 	if(issynth(affected_mob))
 		return FALSE
@@ -350,7 +350,8 @@
 
 	var/damage = burn_damage
 	if(ishuman(affected_mob))
-		if(affected_mob.internal != null && affected_mob.wear_mask && (affected_mob.wear_mask.flags_inventory & ALLOWINTERNALS))
+		var/mob/living/carbon/human/check_for_protection = affected_mob
+		if(check_for_protection.get_flags_heat_protection(500) < 1) //This returns a 0 - 1 value, which corresponds to the percentage of protection based on what you're wearing and what you're exposed to.
 			return FALSE
 
 		if(prob(20))
