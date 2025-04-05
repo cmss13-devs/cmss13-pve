@@ -120,8 +120,8 @@
 
 ///Alcohol bottles and their contents.
 /obj/item/reagent_container/food/drinks/bottle/gin
-	name = "\improper Griffeater Gin"
-	desc = "A bottle of high-quality gin, produced in the New London Space Station."
+	name = "\improper Tanqueray Gin"
+	desc = "A bottle of high-quality London gin."
 	icon_state = "ginbottle"
 	center_of_mass = "x=16;y=4"
 
@@ -163,7 +163,6 @@
 	name = "\improper Stolichnaya Vodka"
 	desc = "A premier export from the UPP member state of Russia. Because of meticulous enforcement of state regulations, it is considered one of the highest quality vodkas available."
 	icon_state = "vodkabottle"
-	
 
 //chess bottles
 

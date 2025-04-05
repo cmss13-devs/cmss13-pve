@@ -69,7 +69,7 @@
 
 ///Extra text to append when attached to another clothing item and the host clothing is examined.
 /obj/item/clothing/accessory/proc/additional_examine_text()
-	return "."
+	return "attached to it."
 
 /obj/item/clothing/accessory/blue
 	name = "blue tie"
@@ -883,6 +883,9 @@
 	icon_state = "drop_pouch"
 	hold = /obj/item/storage/internal/accessory/drop_pouch
 
+/obj/item/clothing/accessory/storage/droppouch/upp
+	icon_state = "upp_drop_pouch_alt"
+
 /obj/item/storage/internal/accessory/drop_pouch
 	w_class = SIZE_LARGE //Allow storage containers that's medium or below
 	storage_slots = null
@@ -901,23 +904,15 @@
 	icon_state = "pouch"
 	hold = /obj/item/storage/internal/accessory/smallpouch
 
+/obj/item/clothing/accessory/storage/smallpouch/upp
+	icon_state = "upp_pouch_alt"
+
 /obj/item/storage/internal/accessory/smallpouch
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_SMALL
 	storage_flags = NONE
 	storage_slots = 4
-	can_hold = list(
-		/obj/item/stack/medical/ointment,
-		/obj/item/reagent_container/hypospray/autoinjector,
-		/obj/item/storage/pill_bottle/packet,
-		/obj/item/stack/medical/bruise_pack,
-		/obj/item/stack/medical/splint,
-		/obj/item/storage/box/MRE,
-		/obj/item/tool/pen,
-		/obj/item/folder,
-		/obj/item/ammo_magazine/pistol,
-		/obj/item/tool/lighter,
-	)
+
 /obj/item/clothing/accessory/storage/holster
 	name = "shoulder holster"
 	desc = "A handgun holster with an attached pouch, allowing two magazines or speedloaders to be stored along with it."
@@ -998,10 +993,10 @@
 	icon_state = "holster"
 
 /obj/item/clothing/accessory/storage/holster/waist
-	name = "shoulder holster"
-	desc = "A handgun holster. Made of expensive leather."
-	icon_state = "holster"
-	item_state = "holster_low"
+	name = "waist holster"
+	desc = "A handgun holster."
+	icon_state = "holster_hip"
+	item_state = "holster_hip"
 
 /*
 	Holobadges are worn on the belt or neck, and can be used to show that the holder is an authorized
@@ -1103,6 +1098,120 @@
 	icon_state = "flakod"
 	item_state = "flakod"
 
+//===========================//Wrist-worn accessories, just watches currently\\================================\\
+
+/obj/item/clothing/accessory/wrist
+	name = "bracelet"
+	desc = "A simple bracelet made from a strip of fabric."
+	icon_state = "bracelet"
+	item_state = null
+	slot = ACCESSORY_SLOT_WRIST_L
+	var/which_wrist = "left wrist"
+
+/obj/item/clothing/accessory/wrist/get_examine_text(mob/user)
+	. = ..()
+
+	switch(slot)
+		if(ACCESSORY_SLOT_WRIST_L)
+			which_wrist = "left wrist"
+		if(ACCESSORY_SLOT_WRIST_R)
+			which_wrist = "right wrist"
+	. += "It will be worn on the [which_wrist]."
+
+/obj/item/clothing/accessory/wrist/additional_examine_text()
+	return "on the [which_wrist]."
+
+/obj/item/clothing/accessory/wrist/attack_self(mob/user)
+	..()
+
+	switch(slot)
+		if(ACCESSORY_SLOT_WRIST_L)
+			slot = ACCESSORY_SLOT_WRIST_R
+			to_chat(user, SPAN_NOTICE("[src] will be worn on the right wrist."))
+		if(ACCESSORY_SLOT_WRIST_R)
+			slot = ACCESSORY_SLOT_WRIST_L
+			to_chat(user, SPAN_NOTICE("[src] will be worn on the left wrist."))
+
+/obj/item/clothing/accessory/wrist/watch
+	name = "Seiko Pulsemeter wristwatch"
+	desc = "Model S234-501A, a durable quartz-based wristwatch issued to most Colonial Marines who pass through basic training."
+	icon_state = "wristwatch_basic"
+	item_state = "wristwatch_black"
+	w_class = SIZE_SMALL
+	flags_equip_slot = SLOT_HANDS
+
+/obj/item/clothing/accessory/wrist/watch/get_examine_text(mob/user)
+	. = ..()
+
+	. += "It reads: [SPAN_NOTICE("[worldtime2text()]")]"
+
+/obj/item/clothing/accessory/wrist/watch/additional_examine_text()
+	. = ..()
+
+	. += " It reads: [SPAN_NOTICE("[worldtime2text()]")]"
+
+/obj/item/storage/box/watch_box
+	name = "\improper Seiko Pulsemeter wristwatch storage case"
+	desc = "A tough-wearing case to keep an expensive wristwatch safe when not being worn."
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "pdt_box"
+	can_hold = list(/obj/item/clothing/accessory/wrist/watch)
+	foldable = /obj/item/stack/sheet/cardboard
+	storage_slots = 1
+	w_class = SIZE_SMALL
+	max_w_class = SIZE_SMALL
+
+/obj/item/storage/box/watch_box/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch(src)
+
+/obj/item/clothing/accessory/wrist/watch/bishop
+	name = "Seiko 7A28-6000 wristwatch"
+	desc = "A fancy black-bodied wristwatch. Once set correctly, it always holds the right time. For the connoisseurs of precision."
+	icon_state = "wristwatch_bishop"
+	item_state = "wristwatch_black"
+
+/obj/item/storage/box/watch_box/bishop
+	name = "\improper Seiko 7A28-6000 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/bishop/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/bishop(src)
+
+/obj/item/clothing/accessory/wrist/watch/ripley
+	name = "Seiko 7A28-7000 wristwatch"
+	desc = "With the pioneering design of analog quartz chronographs beating inside it, this asymetric wristwatch is perfect for anyone who can remain standing where others have all fallen."
+	icon_state = "wristwatch_ripley"
+	item_state = "wristwatch_silver"
+
+/obj/item/storage/box/watch_box/ripley
+	name = "\improper Seiko 7A28-7000 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/ripley/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/ripley(src)
+
+/obj/item/clothing/accessory/wrist/watch/burke
+	name = "Seiko H556-5050 wristwatch"
+	desc = "A more upmarket wristwatch tailored towards junior executives & 'company guys' all across the galaxy. Flashy, but not horribly ostentatious."
+	icon_state = "wristwatch_burke"
+	item_state = "wristwatch_silver"
+
+/obj/item/storage/box/watch_box/burke
+	name = "\improper Seiko H556-5050 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/burke/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/burke(src)
+
+/obj/item/clothing/accessory/wrist/watch/dallas
+	name = "Samani E-125 wristwatch"
+	desc = "Advertised as being 'A new dawn of precision digital watches', the E-125 became a popular hit with members of the civil aerospace industry."
+	icon_state = "wristwatch_dallas"
+	item_state = "wristwatch_fancy"
+
+/obj/item/storage/box/watch_box/dallas
+	name = "\improper Samani E-125 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/dallas/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/dallas(src)
+
 //===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
 
 /obj/item/clothing/accessory/pads
@@ -1166,6 +1275,29 @@
 	item_state = "groinplate_uacg"
 	slot = ACCESSORY_SLOT_DECORGROIN
 	flags_atom = NO_SNOW_TYPE
+
+//===========================//UPP CUSTOM ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/upppads
+	name = "\improper 6B90 Arm Plates"
+	desc = "A set of arm plates designed for the 6B90 armor system."
+	icon_state = "upp_arms"
+	item_state = "upp_arms"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/upppads/legs
+	name = "\improper 6B90 Leg Guards"
+	desc = "A set of leg greaves designed for the 6B90 armor system."
+	icon_state = "upp_greaves"
+	item_state = "upp_greaves"
+	slot = ACCESSORY_SLOT_DECORSHIN
+
+/obj/item/clothing/accessory/upppads/crotch
+	name = "\improper 6B90 Crotch Guard"
+	desc = "A crotch plate designed for the 6B90 armor system."
+	icon_state = "upp_crotch"
+	item_state = "upp_crotch"
+	slot = ACCESSORY_SLOT_DECORGROIN
 
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
@@ -1284,7 +1416,7 @@
 		/obj/item/explosive/grenade/smokebomb,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
-		/obj/item/explosive/grenade/high_explosive/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
 	)
@@ -1297,6 +1429,42 @@
 
 /obj/item/storage/internal/accessory/webbing/m3mag/recon
 	storage_slots = 4
+
+
+//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags
+	name = "\improper Type 90 Pattern Magazine Webbing"
+	desc = "A set of UPP magazine webbing that can carry four magazines."
+	icon_state = "upp_webbing_magazine"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/webbing/m3mag/upp
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/pistol/t73,
+		/obj/item/ammo_magazine/pistol/np92,
+		/obj/item/ammo_magazine/handful/shotgun/heavy,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
+	name = "\improper Type 78 Pattern Small Pouch Webbing"
+	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	icon_state = "upp_webbing_small"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
+	name = "\improper Type 78 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
+	icon_state = "upp_webbing_large"
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Partial Pre-load For Props
 //===
@@ -1385,7 +1553,7 @@
 		/obj/item/explosive/grenade/smokebomb,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
-		/obj/item/explosive/grenade/high_explosive/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
 	)

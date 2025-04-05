@@ -1,0 +1,12 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "The sling now offers a slight buff to unwielded firing"
+  - qol: "The M41A stock is no longer removable 😈"
+  - qol: "The rail flashlight no longer takes up your 'rail' slot, occupying the 'special' one instead."
+  - qol: "The laser sight attachment similarly uses the 'special' slot now, instead of the underbarrel."
+  - code_imp: "Back-end stuff for the random attachment spawning code, now works with special slot attachies."
+  - code_imp: "Attachment offsets for all guns adjusted to take into account the changes made r.e. flashlights & laser sights."
+  - spellcheck: "A typo in the M49A6's extended lore description was caught & corrected."
+  - balance: "The M49A accepted attachements list was standardized across the family."
+  - balance: "The M41A stock (extended) no longer makes your aim HORRIBLE when fired with one hand. More controlable with it extended in one hand fire than without"

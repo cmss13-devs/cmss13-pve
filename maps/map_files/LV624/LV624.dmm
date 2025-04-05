@@ -13,6 +13,11 @@
 	icon_state = "pwall"
 	},
 /area/space)
+"aad" = (
+/obj/structure/surface/rack,
+/obj/item/fishing_pole,
+/turf/open/floor/vault,
+/area/lv624/lazarus/quartstorage)
 "aag" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_east_caves)
@@ -1954,18 +1959,14 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
 /area/lv624/ground/jungle/south_west_jungle)
 "auE" = (
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "auM" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirtgrassborder/south,
 /area/lv624/ground/jungle/east_jungle)
 "auO" = (
-/obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
-	name = "\improper River Snack Bar";
-	req_access_txt = "100";
-	req_one_access = null
-	},
+/obj/structure/curtain/red,
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "auP" = (
@@ -1974,7 +1975,7 @@
 /area/lv624/ground/river/west_river)
 "auZ" = (
 /obj/item/toy/inflatable_duck,
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "ave" = (
 /obj/structure/surface/rack,
@@ -2013,7 +2014,7 @@
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "avw" = (
 /obj/effect/landmark/good_item,
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "avy" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
@@ -3533,7 +3534,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_east_caves)
 "aPR" = (
-/obj/structure/lz_sign/lazarus_sign{
+/obj/structure/lz_sign/lazarus_sign/damaged{
 	density = 0
 	},
 /turf/open/gm/grass/grass1,
@@ -6849,7 +6850,7 @@
 /area/lv624/ground/river/east_river)
 "eiX" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/red,
 /area/lv624/lazarus/security)
@@ -8073,10 +8074,10 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
 "goz" = (
-/obj/structure/machinery/vending/cigarette,
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/whiteblue/southeast,
 /area/lv624/lazarus/corporate_dome)
 "gpf" = (
@@ -10812,7 +10813,7 @@
 /turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "kgB" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "kgS" = (
@@ -11809,7 +11810,7 @@
 /turf/open/floor/redcorner/east,
 /area/lv624/lazarus/security)
 "lAI" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/main_hall)
 "lAN" = (
@@ -13046,7 +13047,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/river/west_river)
 "nsA" = (
-/obj/structure/lz_sign/lazarus_sign{
+/obj/structure/lz_sign/lazarus_sign/damaged{
 	layer = 4
 	},
 /turf/open/gm/dirt,
@@ -18237,8 +18238,8 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/east_jungle)
 "uux" = (
-/obj/structure/machinery/vending/cigarette/colony,
 /obj/effect/landmark/crap_item,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "uuE" = (
@@ -53362,7 +53363,7 @@ lyS
 ati
 ati
 ati
-wWs
+aad
 ati
 wWs
 ati
