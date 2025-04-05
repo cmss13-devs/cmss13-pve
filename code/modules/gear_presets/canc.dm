@@ -39,6 +39,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
 	add_canc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/preloaded(new_human), WEAR_J_STORE)

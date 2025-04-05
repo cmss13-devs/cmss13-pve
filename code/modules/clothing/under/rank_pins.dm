@@ -447,3 +447,8 @@
 	name = "rank boards"
 	rank_short = "PvI"
 	icon_state = "ranks_pvstofficer"
+
+/obj/item/clothing/accessory/ranks/canc
+	name = "CANC collar tabs"
+	rank_short = null
+	icon_state = "ranks_canc"
