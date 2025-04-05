@@ -1,5 +1,5 @@
 /datum/equipment_preset/canc
-	name "CANC Rebel"
+	name = "CANC Rebel"
 	languages = list(LANGUAGE_CHINESE)
 	ethnicity = CHINESE_ETHNICITY
 	flags = EQUIPMENT_PRESET_EXTRA
