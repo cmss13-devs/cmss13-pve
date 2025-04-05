@@ -362,8 +362,9 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "xm99a"
 	item_state = "xm99a"
-	muzzle_flash = "muzzle_flash_blue"
+	muzzleflash_iconstate  = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_PURPLE
+	muzzle_flash_lum = 5
 	w_class = SIZE_LARGE
 	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
 	unacidable = TRUE
@@ -386,7 +387,7 @@
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_INTERNAL_MAG
 	flags_item = TWOHANDED
 
-	var/obj/effect/ebeam/plasma_beam_type = /obj/effect/ebeam/plasma
+	var/obj/effect/ebeam/plasma_beam_type = /obj/effect/ebeam/laser/plasma
 	///world.time value, to prevent a lightshow without actually firing
 	var/beam_cooldown = 0
 	///Delay before another beam can start again, in tenths of seconds
@@ -502,7 +503,7 @@
 	if(current_mag.current_rounds <= 0)
 		return
 	plasma_beam = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
-	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, easing = SINE_EASING|EASE_OUT)
+	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
 	. = ..()
 
 //-------------------------------------------------------

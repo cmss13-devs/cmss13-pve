@@ -87,6 +87,8 @@
 	scatter = SCATTER_AMOUNT_NONE
 	accuracy = HIT_ACCURACY_MULT_TIER_10
 	damage_falloff = DAMAGE_FALLOFF_TIER_1
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_PURPLE
 
 /datum/ammo/energy/plasma/set_bullet_traits()
 	. = ..()
