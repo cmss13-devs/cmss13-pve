@@ -334,9 +334,9 @@
 //UPP AG80 RIFLE
 
 /obj/item/ammo_magazine/rifle/ag80
-	name = "\improper AG80 magazine (9.7x16mm)"
-	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle."
-	caliber = "9.7x16mm"
+	name = "\improper AG80 magazine (9.7x22mm)"
+	desc = "A 9.7x22mm high-capacity magazine for the AG80 rifle."
+	caliber = "9.7x22mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "ag80"
 	ammo_band_icon = "+ag80_band"
@@ -346,20 +346,20 @@
 	gun_type = /obj/item/weapon/gun/rifle/ag80
 
 /obj/item/ammo_magazine/rifle/ag80/tracer
-	name = "\improper AG80 tracer magazine (9.7x16mm)"
-	desc = "A 9.7x16mm high-capacity magazine containing tracer rounds for the AG80 rifle."
+	name = "\improper AG80 tracer magazine (9.7x22mm)"
+	desc = "A 9.7x22mm high-capacity magazine containing tracer rounds for the AG80 rifle."
 	default_ammo = /datum/ammo/bullet/rifle/ag80
 	ammo_band_color = AMMO_BAND_COLOR_EXPLOSIVE
 
 /obj/item/ammo_magazine/rifle/ag80/ap
-	name = "\improper AG80 AP magazine (9.7x16mm)"
-	desc = "A 9.7x16mm high-capacity magazine containing armor-piercing rounds for the AG80 rifle."
+	name = "\improper AG80 AP magazine (9.7x22mm)"
+	desc = "A 9.7x22mm high-capacity magazine containing armor-piercing rounds for the AG80 rifle."
 	default_ammo = /datum/ammo/bullet/rifle/ag80/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/ag80/heap
-	name = "\improper AG80 HEAP magazine (9.7x16mm)"
-	desc = "A 9.7x16mm high-capacity magazine containing high-explosive armor-piercing rounds for the AG80 rifle."
+	name = "\improper AG80 HEAP magazine (9.7x22mm)"
+	desc = "A 9.7x22mm high-capacity magazine containing high-explosive armor-piercing rounds for the AG80 rifle."
 	default_ammo = /datum/ammo/bullet/rifle/ag80/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 

@@ -100,7 +100,7 @@
 		list("Type 71 Pulse Rifle", 30, /obj/item/weapon/gun/rifle/type71, null, VENDOR_ITEM_REGULAR),
 
 		list("PRIMARY AMMUNITION", 0, null, null, null),
-		list("AG80 Magazine (9.7x16mm)", 5, /obj/item/ammo_magazine/rifle/ag80, null, VENDOR_ITEM_REGULAR),
+		list("AG80 Magazine (9.7x22mm)", 5, /obj/item/ammo_magazine/rifle/ag80, null, VENDOR_ITEM_REGULAR),
 		list("Type 71 AP Magazine (10x27mm)", 15, /obj/item/ammo_magazine/rifle/type71/ap, null, VENDOR_ITEM_REGULAR),
 		list("Type 71 Magazine (10x27mm)", 5, /obj/item/ammo_magazine/rifle/type71, null, VENDOR_ITEM_REGULAR),
 
@@ -138,7 +138,7 @@
 		list("Type 71 Pulse Rifle", 20, /obj/item/weapon/gun/rifle/type71, VENDOR_ITEM_REGULAR),
 
 		list("PRIMARY AMMUNITION", -1, null, null),
-		list("AG80 Magazine (9.7x16mm)", 5, /obj/item/ammo_magazine/rifle/ag80, null, VENDOR_ITEM_REGULAR),
+		list("AG80 Magazine (9.7x22mm)", 5, /obj/item/ammo_magazine/rifle/ag80, null, VENDOR_ITEM_REGULAR),
 		list("Type 71 AP Magazine (10x27mm)", 60, /obj/item/ammo_magazine/rifle/type71/ap, VENDOR_ITEM_REGULAR),
 		list("Type 71 Magazine (10x27mm)", 60, /obj/item/ammo_magazine/rifle/type71, VENDOR_ITEM_REGULAR),
 

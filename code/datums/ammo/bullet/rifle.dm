@@ -428,8 +428,7 @@
 /datum/ammo/bullet/rifle/type71
 	name = "11.7x22 bullet"
 	damage = 45
-	accuracy = HIT_ACCURACY_TIER_2
-	effective_range_max = 7
+	penetration = ARMOR_PENETRATION_TIER_1
 
 /datum/ammo/bullet/rifle/type71/tracer
 	icon_state = "bullet_green"
@@ -449,12 +448,12 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
 
-//====== 9.7x16 AG80
+//====== 9.7x22 AG80
 
 /datum/ammo/bullet/rifle/ag80
-	name = "9.7x16 bullet"
-	damage = 30
-	penetration = ARMOR_PENETRATION_TIER_2
+	name = "9.7x22 bullet"
+	damage = 45
+	penetration= -ARMOR_PENETRATION_TIER_2
 
 /datum/ammo/bullet/rifle/ag80/tracer
 	icon_state = "bullet_green"
@@ -462,8 +461,8 @@
 	bullet_light_color = COLOR_SOFT_GREEN
 
 /datum/ammo/bullet/rifle/ag80/ap
-	name = "armor-piercing 9.7x16 bullet"
-	damage = 25
+	name = "armor-piercing 9.7x22 bullet"
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_9
 
 /datum/ammo/bullet/rifle/ag80/ap/tracer
@@ -472,7 +471,7 @@
 	bullet_light_color = COLOR_SOFT_RED
 
 /datum/ammo/bullet/rifle/ag80/heap
-	name = "high-explosive armor-piercing 9.7x16 bullet"
+	name = "high-explosive armor-piercing 9.7x22 bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	damage = 50 //big damage, doesn't actually blow up because thats stupid.
 	penetration = ARMOR_PENETRATION_TIER_8
