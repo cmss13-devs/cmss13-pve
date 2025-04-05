@@ -8,6 +8,7 @@
 	skills = /datum/skills/pfc
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	origin_override = ORIGIN_CANC
+	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/canc/New()
 	. = ..()
@@ -20,6 +21,7 @@
 	faction_group = FACTION_LIST_CANC
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	assignment = "Rifleman"
+	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/canc/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -36,7 +38,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/canc(new_human), WEAR_BODY)
+	add_canc_uniform(new_human)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/preloaded(new_human), WEAR_J_STORE)

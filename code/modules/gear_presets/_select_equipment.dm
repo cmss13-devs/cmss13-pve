@@ -1525,17 +1525,15 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 
 
 /datum/equipment_preset/proc/add_neckerchief(mob/living/carbon/human/new_human)
-	var/random_face_wrap = rand(1,6)
+	var/random_face_wrap = rand(1,5)
 	switch(random_face_wrap)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/black(new_human), WEAR_FACE)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/gray(new_human), WEAR_FACE)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/red(new_human), WEAR_FACE)
-		if(4)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief(new_human), WEAR_FACE)
-		if(5)
+		if(4)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/green(new_human), WEAR_FACE)
 
 	//UPP
@@ -1632,3 +1630,13 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/wypacket, WEAR_IN_HELMET)
 		if(6)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/arcturian_ace, WEAR_IN_HELMET)
+
+/datum/equipment_preset/proc/add_canc_uniform(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/marine/veteran/canc/uniform = new()
+	var/random_uniform = rand(1,3)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)

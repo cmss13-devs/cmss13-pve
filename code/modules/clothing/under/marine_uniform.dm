@@ -549,12 +549,16 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_HOLSTER)
 
 
-/obj/item/clothing/under/marine/veteran/UPP/canc
+/obj/item/clothing/under/marine/veteran/canc
 	name = "\improper CANC fatigues"
 	desc = "It's a set of standard-issue CANC combat fatigues featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "canc_uniform"
-	icon_state = "canc_uniform"
+	worn_state = "canc_uniform"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	has_sensor = UNIFORM_HAS_SENSORS
+	sensor_faction = FACTION_CANC
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 
 //=========================//Freelancer\\================================\\
 
