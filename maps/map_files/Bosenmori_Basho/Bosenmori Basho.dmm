@@ -12254,7 +12254,7 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/weapon/gun/shotgun/combat/marsoc,
+/obj/item/clothing/gloves/marine/veteran/pmc/commando,
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "gui" = (
@@ -20018,6 +20018,7 @@
 	light_color = "#C02526";
 	color = "#C02526"
 	},
+/obj/item/weapon/gun/smartgun/rmc,
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "kyg" = (
@@ -25796,7 +25797,6 @@
 /obj/item/attachable/bayonet/rmc,
 /obj/item/clothing/gloves/marine/brown/fingerless,
 /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
-/obj/item/toy/plush/random_plushie,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "nCa" = (
@@ -29101,14 +29101,12 @@
 /turf/open/floor/strata/white_cyan1,
 /area/bosenmori/interior_glass/food_processing)
 "poq" = (
-/obj/item/ammo_magazine/rifle/xm40,
 /obj/structure/closet/crate/secure{
 	req_one_access = list(213);
 	name = "Secure Research and Development Crate";
 	color = "#527a7a"
 	},
-/obj/item/ammo_magazine/rifle/xm40,
-/obj/item/ammo_box/rounds/ap,
+/obj/item/weapon/gun/shotgun/combat/marsoc,
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "pou" = (
@@ -29679,6 +29677,14 @@
 /obj/item/pamphlet/trait/vulture{
 	pixel_x = -5;
 	pixel_y = 6
+	},
+/obj/item/ammo_box/magazine/shotgun/incendiarybuck/empty{
+	pixel_x = 1;
+	pixel_y = 13
+	},
+/obj/item/ammo_box/magazine/shotgun/flechette/empty{
+	pixel_x = -2;
+	pixel_y = 2
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
@@ -30989,7 +30995,7 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/weapon/gun/rifle/m41a/elite/xm40,
+/obj/item/ammo_box/magazine/shotgun/special_buck,
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "qma" = (
@@ -38726,15 +38732,14 @@
 /turf/open/gm/river/desert/deep/no_overlay,
 /area/bosenmori/outside/river)
 "uhN" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/commando,
-/obj/item/storage/backpack/commando,
-/obj/item/clothing/head/helmet/marine/veteran/pmc/commando,
 /obj/structure/closet/crate/secure{
 	req_one_access = list(213);
 	name = "Secure Research and Development Crate";
 	color = "#527a7a"
 	},
-/obj/item/clothing/gloves/marine/veteran/pmc/commando,
+/obj/item/weapon/gun/rifle/sharp,
+/obj/item/ammo_magazine/rifle/sharp/track,
+/obj/item/ammo_magazine/rifle/sharp/flechette,
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "uhV" = (
@@ -39715,7 +39720,7 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/weapon/gun/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun/dirty,
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "uDi" = (
