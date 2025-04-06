@@ -39,7 +39,6 @@
 		update_icon()
 	else
 		to_chat(user, SPAN_NOTICE("\The [src] is empty."))
-	..()
 
 /obj/structure/magazine_box/nade_box/attackby(obj/item/W, mob/living/user)
 	if(burning)
@@ -60,7 +59,6 @@
 			to_chat(user, SPAN_WARNING("[src] is full."))
 	else
 		to_chat(user, SPAN_WARNING("You don't want to mix different grenades in one box."))
-	..()
 
 //---------------------FIRE HANDLING PROCS
 

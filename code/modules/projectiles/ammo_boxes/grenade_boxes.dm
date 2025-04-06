@@ -26,15 +26,6 @@
 
 //---------------------GENERAL PROCS
 
-/obj/item/ammo_box/magazine/nade_box/Initialize()
-	. = ..()
-	if(!empty)
-		var/i = 0
-		while(i < num_of_magazines)
-			contents += new magazine_type(src)
-			i++
-	update_icon()
-
 /obj/item/ammo_box/magazine/nade_box/update_icon()
 	if(overlays)
 		overlays.Cut()
@@ -346,5 +337,14 @@
 	magazine_type = /obj/item/explosive/grenade/high_explosive/impact/upp
 	allowed_magazines = list(/obj/item/explosive/grenade/high_explosive/impact/upp)
 	overlay_model_type = "model_vog"
-	overlay_icon_type = "40mm"
-	overlay_grenade_type = "upp_40mm"
+	overlay_icon_type = "40mmhe"
+	overlay_grenade_type = "upp_40mm_he"
+
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/ap
+	name = "\improper VPG-77 AP grenade box"
+	desc = "A secure box holding 15 VPG-77 AP grenades. Don't store near open flames."
+	magazine_type = /obj/item/explosive/grenade/high_explosive/impact/upp/ap
+	allowed_magazines = list(/obj/item/explosive/grenade/high_explosive/impact/upp/ap)
+	overlay_model_type = "model_vpg"
+	overlay_icon_type = "40mmap"
+	overlay_grenade_type = "upp_40mm_ap"

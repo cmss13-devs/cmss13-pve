@@ -346,13 +346,24 @@
 
 /obj/item/explosive/grenade/high_explosive/impact/upp
 	name = "\improper VOG-73 HE grenade"
-	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one bears markings of the UPP."
+	desc = "This is a caseless 40mm grenade, designed to be launched by a grenade launcher and detonate on impact with an injury radius of 3 metres. This one bears markings of the UPP."
 	icon_state = "grenade_40mm_upp"
 	item_state = "grenade_hedp"
+	dangerous = FALSE
 	explosion_power = 180 //Stronger than HEDP to make up for one shot in the tube
 	explosion_falloff = 40 //But quicker to lose blast damage
 	shrapnel_count = 16
-	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
+
+/obj/item/explosive/grenade/high_explosive/impact/upp/ap
+	name = "\improper VPG-77 AP grenade"
+	desc = "This is a caseless armor-piercing 40mm grenade, designed to be launched by a grenade launcher and used against armored targets. This one bears markings of the UPP. Beware of what's in front of you when firing."
+	icon_state = "grenade_40mm_upp_ap"
+	item_state = "grenade_hedp"
+	explosion_power = 300 //Stronger than a HEAP grenade, to make up for one shot in the tube
+	explosion_falloff = 900 //But no blast to speak of
+	shrapnel_count = 0
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
 
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	name = "\improper 40mm Buckshot Shell"
