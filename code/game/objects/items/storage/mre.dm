@@ -165,7 +165,7 @@
 
 /obj/item/storage/box/mre/pmc
 	name = "\improper PMC CFR ration"
-	desc = "A Combat Field Ration. Uses similar to USCM MRE format, but utilizes expensive preserving materials and methods and not less expensive foods, not much different from going to a restaurant. Eating better worlds."
+	desc = "A Combat Field Ration. Uses similar to USCM MRE format, but utilizes cutting-edge preservative chemicals, preservation methods and quality ingredients. Eating better worlds."
 	icon_state = "pmc_mealpack"
 	icon_closed = "pmc_mealpack"
 	icon_opened = "pmc_mealpackopened"
@@ -208,7 +208,7 @@
 
 /obj/item/storage/box/mre/twe
 	name = "\improper TWE ORP ration"
-	desc = "An Operation Ration Pack. Uses similar to USCM MRE format, but utilizes expensive preserving materials and methods and not less expensive meals from TWE cuisine."
+	desc = "An Operation Ration Pack. Uses similar to USCM MRE format, but utilizes utilizes cutting-edge preservative chemicals, preservation methods and relatively lavish meals from TWE cuisine."
 	icon_state = "twe_mealpack"
 	icon_closed = "twe_mealpack"
 	icon_opened = "twe_mealpackopened"
