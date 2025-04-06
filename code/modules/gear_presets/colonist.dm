@@ -1044,10 +1044,6 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-#undef AMERICAN_ETHNICITY
-#undef LATIN_AMERICAN_ETHNICITY
-#undef JAPANESE_ETHNICITY
-
 /datum/equipment_preset/colonist/security/guard/medic
 	name = "US Colonial Guard Medic"
 	assignment = "Colonial Militiaman Medic"
@@ -1097,9 +1093,6 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-#undef AMERICAN_ETHNICITY
-#undef LATIN_AMERICAN_ETHNICITY
-#undef JAPANESE_ETHNICITY
 
 /datum/equipment_preset/colonist/security/guard/tech
 	name = "US Colonial Guard Technician"
@@ -1154,10 +1147,6 @@
 	name = "LatAm Colonial Guard Technician"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
-
-#undef AMERICAN_ETHNICITY
-#undef LATIN_AMERICAN_ETHNICITY
-#undef JAPANESE_ETHNICITY
 
 /datum/equipment_preset/colonist/security/guard/nco
 	name = "US Colonial Guard Unit Leader"
@@ -1214,10 +1203,6 @@
 	name = "LatAm Colonial Guard Unit Leader"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
-
-#undef AMERICAN_ETHNICITY
-#undef LATIN_AMERICAN_ETHNICITY
-#undef JAPANESE_ETHNICITY
 
 /datum/equipment_preset/colonist/security/guard/co
 	name = "US Colonial Guard Officer"
