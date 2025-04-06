@@ -1152,7 +1152,7 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/guard, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/M3T/guard, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/M3T/guard, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/e2, WEAR_ACCESSORY)
@@ -1231,7 +1231,7 @@
 	skills = /datum/skills/snco
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_COMMAND)
 
-/datum/equipment_preset/colonist/security/guard/nco/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/colonist/security/guard/co/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
 	//back
@@ -1246,7 +1246,7 @@
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/guard, WEAR_JACKET)
 	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full, WEAR_WAIST)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
 	add_worker_gloves(new_human)
