@@ -5,7 +5,7 @@
 	icon_state = "hud_sight"
 	w_class = SIZE_TINY
 
-	hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = list(MOB_HUD_FACTION_MARINE)
 
 	///The sound when toggling on the visor
 	var/toggle_on_sound = 'sound/handling/hud_on.ogg'
@@ -80,7 +80,7 @@
 /obj/item/device/helmet_visor/upp
 	name = "squad optic"
 	desc = "An insertable visor HUD into a standard UPP helmet."
-	hud_type = MOB_HUD_FACTION_UPP
+	hud_type = list(MOB_HUD_FACTION_UPP)
 
 /obj/item/device/helmet_visor/medical
 	name = "basic medical optic"
@@ -177,7 +177,7 @@
 /obj/item/device/helmet_visor/security
 	name = "security optic"
 	icon_state = "sec_sight"
-	hud_type = MOB_HUD_SECURITY_ADVANCED
+	hud_type = list(MOB_HUD_SECURITY_ADVANCED)
 	action_icon_string = "sec_sight_down"
 	helmet_overlay = "sec_sight_right"
 
@@ -345,7 +345,7 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider
 	name = "advanced night vision optic"
 	desc = "An insertable visor HUD into a standard USCM helmet. This type gives a form of night vision and is standard issue in special forces units."
-	hud_type = MOB_HUD_MEDICAL_ADVANCED
+	hud_type = list(MOB_HUD_MEDICAL_ADVANCED)
 	helmet_overlay = "nvg_sight_right_raider"
 	power_use = 0
 	visor_glows = FALSE
