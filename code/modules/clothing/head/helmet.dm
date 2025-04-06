@@ -928,6 +928,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	unacidable = TRUE
 
+/obj/item/clothing/head/helmet/marine/M3T/guard
+	name = "\improper Adjusted M10 Ballistic Helmet"
+	desc = "A variation of the M10 Ballistic Helmet, specifically one used by the UACG, fitted to support against loud noises and firing of high-concussion weapons."
+	icon_state = "ua_riot"
+	built_in_visors = list()
+
 /obj/item/clothing/head/helmet/upp/marinepilot //just so it uses the wide overlay for garbs
 	name = "\improper Mk30 tactical helmet"
 	desc = "Standard flight helmet of the UA treaty forces. Probably one of the few good things that came out of the Joint Procurement Office. Eyepiece allows for augmented reality effects, giving relevant data in real time."
