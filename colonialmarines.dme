@@ -1830,6 +1830,8 @@
 #include "code\modules\gear_presets\rebel.dm"
 #include "code\modules\gear_presets\royal_marines.dm"
 #include "code\modules\gear_presets\synths.dm"
+#include "code\modules\gear_presets\ua_rebel.dm"
+#include "code\modules\gear_presets\twe_rebel.dm"
 #include "code\modules\gear_presets\upp.dm"
 #include "code\modules\gear_presets\usa.dm"
 #include "code\modules\gear_presets\usasf.dm"
