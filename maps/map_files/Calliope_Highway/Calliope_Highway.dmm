@@ -787,6 +787,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/holding)
+"aKz" = (
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/gm/dirt,
+/area/calliope/highway/checkpoint)
 "aLV" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/floor_plate,
@@ -2159,7 +2163,22 @@
 /turf/open/floor/corsat/marked,
 /area/calliope/bunker/cargo_under)
 "cdR" = (
-/obj/item/ammo_magazine/rifle/sharp/flechette,
+/obj/item/ammo_magazine/rifle/sharp/flechette{
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/obj/item/ammo_magazine/rifle/sharp/track{
+	pixel_x = 5;
+	pixel_y = -3
+	},
+/obj/item/ammo_magazine/rifle/sharp/explosive{
+	pixel_x = -5;
+	pixel_y = -9
+	},
+/obj/structure/surface/table/reinforced/prison{
+	pixel_x = 0;
+	pixel_y = 0
+	},
 /turf/open/floor/almayer/plating,
 /area/calliope/bunker/cargo_under)
 "ceb" = (
@@ -2307,6 +2326,22 @@
 /obj/item/stack/folding_barricade/three{
 	pixel_x = -1;
 	pixel_y = 18
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = 0;
+	pixel_y = 9
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -12;
+	pixel_y = 6
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -8;
+	pixel_y = 0
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/closet)
@@ -2652,6 +2687,29 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/calliope/bunker/command)
+"czj" = (
+/obj/structure/surface/table/reinforced/prison{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/weapon/gun/rifle/sharp{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/ammo_magazine/rifle/sharp{
+	pixel_x = 4;
+	pixel_y = -9
+	},
+/obj/item/ammo_magazine/rifle/sharp{
+	pixel_x = -9;
+	pixel_y = -3
+	},
+/obj/item/ammo_magazine/rifle/sharp{
+	pixel_x = -9;
+	pixel_y = -9
+	},
+/turf/open/floor/almayer/plating,
+/area/calliope/bunker/cargo_under)
 "czl" = (
 /obj/structure/ladder{
 	height = 1;
@@ -2899,7 +2957,11 @@
 	pixel_x = -19;
 	pixel_y = -13
 	},
+/obj/structure/largecrate/random/barrel/yellow,
 /turf/open/asphalt/cement/cement2,
+/area/calliope/highway/checkpoint)
+"cMN" = (
+/turf/open/gm/coast/south_east,
 /area/calliope/highway/checkpoint)
 "cNg" = (
 /obj/structure/largecrate/random/barrel/true_random{
@@ -2993,20 +3055,14 @@
 	pixel_x = -3;
 	pixel_y = -4
 	},
-/obj/item/clothing/suit/armor/vest/ballistic{
-	pixel_x = -3;
-	pixel_y = 8
-	},
-/obj/item/clothing/suit/armor/vest/ballistic{
-	pixel_x = -3;
-	pixel_y = 8
-	},
 /obj/structure/closet/secure_closet/guncabinet{
 	name = "confiscated items cabinet";
 	req_access = null;
 	req_one_access = list(12,9)
 	},
 /obj/item/clothing/head/helmet/marine/veteran/ua_riot,
+/obj/item/clothing/suit/marine/guard,
+/obj/item/clothing/suit/marine/guard,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/entry_checkpoint)
 "cSY" = (
@@ -3112,6 +3168,19 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/entry_checkpoint)
+"dbf" = (
+/obj/structure/desertdam/decals/road_stop{
+	dir = 8;
+	icon_state = "stop_decal5";
+	pixel_x = -2;
+	pixel_y = -8
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = 8;
+	pixel_y = 13
+	},
+/turf/open/asphalt,
+/area/calliope/highway/checkpoint)
 "dbp" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -3525,6 +3594,18 @@
 	name = "Memorial Slab"
 	},
 /area/calliope/exterior_buildings/ghost_town)
+"drq" = (
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	dir = 1;
+	pixel_y = 3
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope/highway/checkpoint)
 "dsu" = (
 /turf/open/floor/plating,
 /area/calliope/oob/gate)
@@ -3917,6 +3998,8 @@
 /area/calliope/shuttles/drop3)
 "dLe" = (
 /obj/structure/closet/crate/medical,
+/obj/item/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
 /turf/open/floor/asteroidfloor/north,
 /area/calliope/bunker/sterlingtransfer)
 "dLq" = (
@@ -4098,6 +4181,9 @@
 	pixel_x = -4
 	},
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/cat{
+	name = "Mori"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cafeteria)
 "dRX" = (
@@ -4364,6 +4450,18 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope/highway/northbound)
+"edE" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/box/bodybags{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/item/storage/box/bodybags{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/turf/open/floor/almayer/plating,
+/area/calliope/bunker/hospital)
 "eef" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -4603,6 +4701,7 @@
 	pixel_x = 4;
 	pixel_y = -4
 	},
+/obj/item/clothing/glasses/mbcg,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cafeteria)
 "eso" = (
@@ -5606,6 +5705,11 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/abandoned_section)
+"fpw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/roller/hospital_empty/bigrollerempty2,
+/turf/open/floor/prison/whitegreen/west,
+/area/calliope/bunker/hospital)
 "frg" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -5615,6 +5719,7 @@
 	pixel_x = 19;
 	pixel_y = -19
 	},
+/obj/structure/largecrate/random/barrel/yellow,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/checkpoint)
 "fri" = (
@@ -5677,6 +5782,13 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
+"ftN" = (
+/obj/structure/machinery/crema_switch{
+	pixel_x = -24;
+	req_access_txt = "25"
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/calliope/bunker/hospital)
 "fuh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -6559,6 +6671,7 @@
 	icon_state = "road_edge_decal3";
 	pixel_y = -19
 	},
+/obj/structure/largecrate/random/barrel/yellow,
 /turf/open/asphalt/cement/cement14,
 /area/calliope/highway/checkpoint)
 "gme" = (
@@ -6644,6 +6757,12 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope/highway/southbound)
+"gqm" = (
+/obj/structure/morgue{
+	dir = 2
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/calliope/bunker/hospital)
 "gqD" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4
@@ -6727,6 +6846,10 @@
 "gtT" = (
 /turf/open/auto_turf/strata_grass/layer1,
 /area/calliope/highway/southbound)
+"gvt" = (
+/obj/structure/gun_rack/m41,
+/turf/open/floor/almayer/plating,
+/area/calliope/bunker/cargo_under)
 "gvE" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4
@@ -7519,25 +7642,8 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/southbound)
 "gXa" = (
-/obj/item/weapon/gun/rifle/sharp{
-	pixel_x = 8;
-	pixel_y = 6
-	},
-/obj/item/ammo_magazine/rifle/sharp{
-	pixel_x = 12;
-	pixel_y = -12
-	},
-/obj/item/ammo_magazine/rifle/sharp{
-	pixel_x = 0;
-	pixel_y = -19
-	},
-/obj/item/ammo_magazine/rifle/sharp{
-	pixel_x = -6;
-	pixel_y = -5
-	},
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/almayer/plating,
-/area/calliope/bunker/cargo_under)
+/turf/open/gm/river/no_overlay_lighted,
+/area/calliope/highway/checkpoint)
 "gXb" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -7644,6 +7750,18 @@
 /obj/effect/spawner/random/toy,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cafeteria)
+"heT" = (
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	dir = 1;
+	pixel_y = 3
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt,
+/area/calliope/highway/northbound)
 "hfF" = (
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "highway_south"
@@ -8007,10 +8125,22 @@
 	},
 /turf/open/asphalt/cement/cement9,
 /area/calliope/highway/checkpoint)
+"hoP" = (
+/obj/item/tool/warning_cone{
+	pixel_x = -3;
+	pixel_y = 21
+	},
+/turf/open/gm/dirt2,
+/area/calliope/highway/checkpoint)
 "hoX" = (
 /obj/structure/machinery/light/blue,
 /turf/open/floor/asteroidfloor/north,
 /area/calliope/bunker/sterlingtransfer)
+"hpA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/plating,
+/area/calliope/bunker/north_section)
 "hpJ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -8292,7 +8422,10 @@
 /obj/structure/barricade/handrail/medical{
 	dir = 8
 	},
-/obj/structure/machinery/cm_vending/sorted/medical/blood,
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	req_access = null;
+	req_one_access = null
+	},
 /turf/open/floor/prison/whitegreenfull,
 /area/calliope/bunker/hospital)
 "hDB" = (
@@ -8364,6 +8497,13 @@
 /obj/structure/girder/reinforced,
 /turf/open/floor/plating,
 /area/calliope/bunker/engineering_under)
+"hJB" = (
+/obj/structure/machinery/door/airlock/almayer/maint/colony/autoname{
+	dir = 2;
+	req_one_access = null
+	},
+/turf/open/floor/corsat/marked,
+/area/calliope/bunker/cargo_under)
 "hJP" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/auto_turf/sand_white/layer1,
@@ -8555,6 +8695,9 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/abandoned_section)
+"hSw" = (
+/turf/open/gm/coast/east,
+/area/calliope/highway/checkpoint)
 "hSz" = (
 /obj/structure/prop/wooden_cross{
 	pixel_x = 7;
@@ -8728,6 +8871,7 @@
 	req_access = null;
 	req_one_access = list(12,9)
 	},
+/obj/item/weapon/knife/marine/sas,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/holding)
 "iet" = (
@@ -9176,6 +9320,18 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/west_checkpoint)
+"izW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/beerkeg/alt{
+	pixel_x = 7;
+	pixel_y = 8
+	},
+/obj/structure/reagent_dispensers/beerkeg/alt_dark{
+	pixel_x = -3;
+	pixel_y = 0
+	},
+/turf/open/floor/plating,
+/area/calliope/bunker/north_section)
 "iAS" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /turf/open/gm/dirt2,
@@ -9298,6 +9454,22 @@
 "iGS" = (
 /turf/open/floor/almayer/plating,
 /area/calliope/bunker/hospital)
+"iHa" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 9;
+	pixel_y = -9
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/turf/open/asphalt,
+/area/calliope/highway/checkpoint)
 "iHm" = (
 /obj/structure/fence,
 /obj/structure/desertdam/decals/road_edge{
@@ -9373,6 +9545,7 @@
 	pixel_x = -19;
 	pixel_y = 19
 	},
+/obj/structure/largecrate/random/barrel/yellow,
 /turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
 "iOr" = (
@@ -9515,6 +9688,18 @@
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirt2,
 /area/calliope/highway/southbound)
+"iUE" = (
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	dir = 1;
+	pixel_y = 3
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt,
+/area/calliope/highway/northbound)
 "iUJ" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -9728,6 +9913,20 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/tool/surgery/bonegel{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/tool/surgery/bonegel{
+	pixel_x = 0;
+	pixel_y = -3
+	},
+/obj/structure/closet/crate/medical,
+/obj/item/tool/surgery/scalpel,
+/obj/item/tool/surgery/drapes,
+/obj/item/tool/surgery/FixOVein,
+/obj/item/tool/surgery/hemostat,
+/obj/item/tool/surgery/surgicaldrill,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cargo_under)
 "jii" = (
@@ -10102,6 +10301,7 @@
 	pixel_x = 5;
 	pixel_y = 11
 	},
+/obj/item/stack/folding_barricade,
 /turf/open/floor/plating,
 /area/calliope/bunker/north_section)
 "jxg" = (
@@ -10648,6 +10848,7 @@
 	pixel_x = 19;
 	pixel_y = 19
 	},
+/obj/structure/largecrate/random/barrel/yellow,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/checkpoint)
 "jSj" = (
@@ -11190,6 +11391,19 @@
 	},
 /turf/open/gm/dirt2,
 /area/calliope/highway/southbound)
+"knj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/item/tool/warning_cone{
+	pixel_x = 8;
+	pixel_y = -14
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = 9;
+	pixel_y = 23
+	},
+/turf/open/floor/plating,
+/area/calliope/bunker/north_section)
 "knV" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/gm/dirt,
@@ -11229,6 +11443,14 @@
 	icon_state = "road_edge_decal11";
 	pixel_x = 9;
 	pixel_y = -9
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = 2;
+	pixel_y = 22
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -16;
+	pixel_y = 5
 	},
 /turf/open/asphalt,
 /area/calliope/highway/checkpoint)
@@ -11495,6 +11717,10 @@
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/exterior_buildings/north_buildings)
+"kyV" = (
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope/highway/northbound)
 "kzB" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 1;
@@ -11817,6 +12043,22 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/hospital)
+"kQl" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 9;
+	pixel_y = -9
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = 5;
+	pixel_y = 29
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -17;
+	pixel_y = 1
+	},
+/turf/open/asphalt,
+/area/calliope/highway/checkpoint)
 "kRx" = (
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/floor_plate,
@@ -12162,6 +12404,9 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/closet)
+"ljw" = (
+/turf/open/gm/coast/beachcorner/south_east,
+/area/calliope/highway/checkpoint)
 "ljO" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -12657,6 +12902,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope/bunker/engineering)
+"lLV" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19
+	},
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/gm/dirt,
+/area/calliope/highway/checkpoint)
 "lLY" = (
 /obj/structure/prop/invuln/overhead{
 	icon_state = "flammable_pipe_2";
@@ -12724,6 +12977,18 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/barracks)
+"lOO" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 9;
+	pixel_y = -9
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = 7;
+	pixel_y = 10
+	},
+/turf/open/asphalt,
+/area/calliope/highway/checkpoint)
 "lOR" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
@@ -12800,6 +13065,14 @@
 /obj/structure/flora/tree/joshua,
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/northbound)
+"lTx" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Heavy Shutter";
+	id = "extramorgue";
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/calliope/bunker/hospital)
 "lUl" = (
 /turf/open/floor/wood/wood_broken,
 /area/calliope/exterior_buildings/ghost_town)
@@ -13069,6 +13342,28 @@
 /obj/item/tool/shovel,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/calliope/exterior_buildings/ghost_town)
+"mhG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_y = 1
+	},
+/obj/item/storage/box/nade_box/smoke,
+/obj/item/storage/box/nade_box/smoke/red,
+/obj/item/storage/box/nade_box/smoke/green,
+/obj/item/clothing/suit/bomb_suit/security,
+/obj/item/clothing/head/bomb_hood/security,
+/obj/structure/closet/crate/explosives,
+/obj/item/explosive/grenade/sebb,
+/obj/item/explosive/grenade/sebb,
+/obj/item/explosive/grenade/sebb,
+/obj/item/explosive/grenade/sebb,
+/obj/item/explosive/grenade/sebb,
+/turf/open/floor/prison/floor_plate,
+/area/calliope/bunker/cargo_under)
 "mhM" = (
 /turf/open/floor/plating/wood_broken5,
 /area/calliope/exterior_buildings/ghost_town)
@@ -13341,6 +13636,23 @@
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/gm/dirt2,
 /area/calliope/highway/northbound)
+"mwM" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11";
+	pixel_x = 19;
+	pixel_y = -19
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 23;
+	pixel_y = 1
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -19
+	},
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/asphalt/cement/cement15,
+/area/calliope/highway/checkpoint)
 "mxn" = (
 /obj/structure/fence,
 /turf/open/auto_turf/sand_white/layer1,
@@ -13355,6 +13667,19 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/abandoned_section)
+"mye" = (
+/obj/structure/desertdam/decals/road_stop{
+	dir = 8;
+	icon_state = "stop_decal5";
+	pixel_x = -2;
+	pixel_y = 8
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -8;
+	pixel_y = 5
+	},
+/turf/open/asphalt,
+/area/calliope/highway/checkpoint)
 "myx" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4
@@ -14066,12 +14391,8 @@
 /turf/open/floor/prison,
 /area/calliope/bunker/cargo_under)
 "nhB" = (
-/obj/structure/roof/cargocrane_tracks/horizontal{
-	pixel_y = 14
-	},
-/obj/item/ammo_magazine/rifle/sharp/explosive,
-/turf/open/floor/almayer/plating,
-/area/calliope/bunker/cargo_under)
+/turf/closed/wall/rock,
+/area/calliope/bunker/hospital)
 "nhP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -14092,6 +14413,10 @@
 "niY" = (
 /turf/closed/shuttle/elevator,
 /area/calliope/bunker/cargo_under)
+"nji" = (
+/obj/structure/morgue/crematorium,
+/turf/open/floor/almayer/plating,
+/area/calliope/bunker/hospital)
 "njL" = (
 /turf/open/asphalt/cement/cement9,
 /area/calliope/highway/checkpoint)
@@ -14675,6 +15000,7 @@
 	pixel_y = -2
 	},
 /obj/item/device/defibrillator,
+/obj/item/storage/belt/medical/lifesaver,
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/hospital)
 "nLx" = (
@@ -14889,8 +15215,8 @@
 /obj/structure/machinery/door/airlock/almayer/medical{
 	dir = 2;
 	name = "Morgue";
-	req_one_access = "9";
-	req_one_access_txt = "8;12";
+	req_one_access = null;
+	req_one_access_txt = "8;9;12";
 	req_access = null
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -14960,6 +15286,7 @@
 	pixel_x = 7;
 	pixel_y = 12
 	},
+/obj/item/clothing/glasses/mbcg,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/barracks)
 "nYd" = (
@@ -15030,6 +15357,7 @@
 	pixel_x = -6;
 	pixel_y = 26
 	},
+/obj/item/stack/barbed_wire/full_stack,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/closet)
 "nZB" = (
@@ -15068,6 +15396,9 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/hospital)
+"obt" = (
+/turf/open/floor/almayer/plating_striped,
+/area/calliope/bunker/hospital)
 "obJ" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal9";
@@ -15096,7 +15427,7 @@
 "odc" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	req_access = null;
-	req_one_access = list(12)
+	req_one_access = list(12,9)
 	},
 /obj/item/weapon/gun/rifle/lmg,
 /obj/item/ammo_box/rounds,
@@ -15110,6 +15441,8 @@
 /obj/item/weapon/gun/shotgun/pump,
 /obj/item/ammo_magazine/shotgun/flechette,
 /obj/item/attachable/scope/pve,
+/obj/item/ammo_magazine/shotgun/flechette,
+/obj/item/ammo_magazine/shotgun/buckshot,
 /turf/open/floor/prison/floor_marked,
 /area/calliope/bunker/cargo_under)
 "odI" = (
@@ -15455,7 +15788,10 @@
 /obj/structure/barricade/handrail/medical{
 	dir = 8
 	},
-/obj/structure/machinery/cm_vending/sorted/medical,
+/obj/structure/machinery/cm_vending/sorted/medical{
+	req_access = null;
+	req_one_access = null
+	},
 /turf/open/floor/prison/whitegreenfull,
 /area/calliope/bunker/hospital)
 "oxN" = (
@@ -16253,6 +16589,10 @@
 	},
 /turf/open/floor/prison,
 /area/calliope/bunker/hallway)
+"pkn" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/plating,
+/area/calliope/bunker/cargo_under)
 "pkK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random/secure{
@@ -16387,6 +16727,7 @@
 	pixel_x = -3;
 	pixel_y = 31
 	},
+/obj/item/stack/folding_barricade/three,
 /turf/open/floor/prison/floor_marked,
 /area/calliope/bunker/cargo_under)
 "ptE" = (
@@ -16613,9 +16954,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/cat{
-	name = "Mori"
-	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cafeteria)
 "pDi" = (
@@ -16925,6 +17263,14 @@
 /area/calliope/bunker/cargo_under)
 "pRc" = (
 /obj/structure/largecrate/random/case,
+/obj/item/storage/box/bodybags{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/item/storage/box/bodybags{
+	pixel_x = -7;
+	pixel_y = 4
+	},
 /turf/open/floor/plating,
 /area/calliope/bunker/abandoned_section)
 "pSl" = (
@@ -17608,6 +17954,27 @@
 /obj/item/clothing/head/helmet/marine/veteran/ua_riot,
 /obj/item/clothing/head/helmet/marine/veteran/ua_riot,
 /obj/item/clothing/head/helmet/marine/veteran/ua_riot,
+/obj/item/clothing/accessory/pads/kneepads{
+	color = "#293d3d"
+	},
+/obj/item/clothing/accessory/pads/kneepads{
+	color = "#293d3d"
+	},
+/obj/item/clothing/accessory/pads/bracers{
+	color = "#293d3d"
+	},
+/obj/item/clothing/accessory/pads/bracers{
+	color = "#293d3d"
+	},
+/obj/item/storage/belt/marine,
+/obj/item/storage/belt/marine,
+/obj/item/storage/belt/marine,
+/obj/item/storage/belt/marine,
+/obj/item/clothing/accessory/storage/webbing/m3/mag,
+/obj/item/clothing/accessory/storage/webbing/m3/small,
+/obj/item/clothing/accessory/storage/webbing/m3/small,
+/obj/item/clothing/accessory/storage/webbing/m3/m40,
+/obj/item/storage/pouch/sling,
 /turf/open/floor/prison/floor_marked,
 /area/calliope/bunker/cargo_under)
 "qDx" = (
@@ -17834,6 +18201,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
 /area/calliope/bunker/command)
+"qKJ" = (
+/obj/structure/closet/crate/freezer/cooler,
+/obj/item/storage/beer_pack,
+/turf/open/gm/dirt,
+/area/calliope/highway/checkpoint)
 "qLd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -17956,6 +18328,7 @@
 	pixel_x = -19;
 	pixel_y = -19
 	},
+/obj/structure/largecrate/random/barrel/yellow,
 /turf/open/gm/dirt/desert0,
 /area/calliope/highway/checkpoint)
 "qPF" = (
@@ -18426,6 +18799,7 @@
 	icon_state = "road_edge_decal3";
 	pixel_y = 23
 	},
+/obj/structure/largecrate/random/barrel/yellow,
 /turf/open/asphalt/cement/cement9,
 /area/calliope/highway/checkpoint)
 "rlp" = (
@@ -18758,6 +19132,14 @@
 	pixel_y = 9;
 	id = "sterling entryL";
 	name = "Inner Security Door-control"
+	},
+/obj/item/clothing/accessory/pads/kneepads{
+	color = "#293d3d"
+	},
+/obj/item/clothing/accessory/pads/bracers{
+	color = "#293d3d";
+	pixel_x = -8;
+	pixel_y = -2
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/entry_checkpoint)
@@ -19515,6 +19897,13 @@
 	},
 /turf/open/gm/dirt,
 /area/calliope/highway/northbound)
+"srN" = (
+/obj/item/tool/warning_cone{
+	pixel_x = -4;
+	pixel_y = 23
+	},
+/turf/open/gm/dirt2,
+/area/calliope/highway/checkpoint)
 "ssO" = (
 /turf/open/floor/prison/floor_plate,
 /area/calliope/highway/northbound)
@@ -19662,6 +20051,14 @@
 	},
 /turf/open/floor/plating,
 /area/calliope/bunker/north_section)
+"sAz" = (
+/obj/item/prop/folded_anti_tank_sadar,
+/obj/item/ammo_box/magazine/m2c,
+/obj/item/device/m2c_gun,
+/obj/item/ammo_box/magazine/m56d,
+/obj/structure/closet/crate/weapon,
+/turf/open/floor/almayer/plating,
+/area/calliope/bunker/cargo_under)
 "sBe" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -19857,6 +20254,14 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/hallway)
+"sLV" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/item/stool,
+/turf/open/auto_turf/sand_white/layer1,
+/area/calliope/highway/checkpoint)
 "sLW" = (
 /obj/item/prop/colony/used_flare,
 /turf/open/auto_turf/sand_white/layer0,
@@ -19974,6 +20379,9 @@
 /obj/item/tool/weldingtool/largetank{
 	pixel_x = 3;
 	pixel_y = 17
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
 	},
 /turf/open/floor/prison,
 /area/calliope/bunker_exterior_buildings/complex)
@@ -20568,6 +20976,25 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/calliope/bunker/south_section)
+"tux" = (
+/obj/structure/surface/table/reinforced/prison{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/mk1/large/ap{
+	pixel_x = 0;
+	pixel_y = 12
+	},
+/obj/item/ammo_box/magazine/mk1/large/heap/empty{
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/mk1/large/rubber{
+	pixel_x = -1;
+	pixel_y = -12
+	},
+/turf/open/floor/almayer/plating,
+/area/calliope/bunker/cargo_under)
 "tuI" = (
 /turf/open/gm/dirt/desert2,
 /area/calliope/highway/southbound)
@@ -20586,6 +21013,14 @@
 /obj/structure/prop/almayer/computers/sensor_computer1,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/fuel_depot)
+"txw" = (
+/obj/structure/surface/table,
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/obj/item/storage/beer_pack,
+/turf/open/floor/plating,
+/area/calliope/bunker/north_section)
 "txN" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/spawner/prop_gun/m41aMK1{
@@ -20678,6 +21113,10 @@
 	icon_state = "psychbed"
 	},
 /obj/item/bedsheet/brown,
+/obj/structure/prop/almayer/sadar_decoration{
+	pixel_x = 6;
+	pixel_y = 32
+	},
 /turf/open/floor/carpet,
 /area/calliope/bunker/command)
 "tDv" = (
@@ -22223,7 +22662,15 @@
 /turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
 "veQ" = (
-/obj/item/ammo_magazine/rifle/sharp/track,
+/obj/structure/surface/table/reinforced/prison{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/storage/box/nade_box/frag{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/weapon/gun/launcher/grenade/m81/m79,
 /turf/open/floor/almayer/plating,
 /area/calliope/bunker/cargo_under)
 "vfl" = (
@@ -22937,6 +23384,12 @@
 /obj/structure/barricade/handrail/wire,
 /turf/open/gm/dirt,
 /area/calliope/highway/southbound)
+"vXa" = (
+/obj/structure/surface/table,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/glasses/mgoggles/black,
+/turf/open/floor/plating,
+/area/calliope/bunker/north_section)
 "vXi" = (
 /obj/structure/machinery/power/apc/power/east,
 /obj/structure/cable/heavyduty{
@@ -23084,6 +23537,19 @@
 	icon_state = "S";
 	layer = 3.3
 	},
+/obj/item/tool/warning_cone,
+/obj/item/tool/warning_cone{
+	pixel_x = 2;
+	pixel_y = 10
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = 4;
+	pixel_y = 2
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -4;
+	pixel_y = 3
+	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/cargo_under)
 "wgP" = (
@@ -23166,6 +23632,15 @@
 "wkE" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/powercell,
+/obj/item/fishing_pole,
+/obj/item/fishing_pole{
+	pixel_x = 5;
+	pixel_y = -2
+	},
+/obj/item/fishing_pole{
+	pixel_x = -1;
+	pixel_y = 7
+	},
 /turf/open/floor/plating,
 /area/calliope/bunker/north_section)
 "wkR" = (
@@ -23620,6 +24095,17 @@
 	pixel_y = 23
 	},
 /turf/open/asphalt/cement/cement4,
+/area/calliope/highway/checkpoint)
+"wAO" = (
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
 "wBb" = (
 /obj/structure/machinery/door/poddoor/almayer/blended/aicore{
@@ -24490,6 +24976,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
+/obj/item/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
 /turf/open/floor/plating,
 /area/calliope/bunker/north_section)
 "xnh" = (
@@ -24565,6 +25053,7 @@
 	pixel_x = -9;
 	pixel_y = 3
 	},
+/obj/item/tool/surgery/scalpel/manager,
 /turf/open/floor/prison/sterile_white,
 /area/calliope/bunker/abandoned_section)
 "xpe" = (
@@ -24728,6 +25217,11 @@
 "xzM" = (
 /obj/structure/fence,
 /turf/open/floor/prison/floor_plate,
+/area/calliope/highway/checkpoint)
+"xAe" = (
+/obj/item/stool,
+/obj/item/fishing_pole,
+/turf/open/gm/dirt,
 /area/calliope/highway/checkpoint)
 "xAg" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -28116,14 +28610,14 @@ kNQ
 kNQ
 kNQ
 jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+nhB
+nhB
+puV
+puV
+puV
+puV
+nhB
+nhB
 jFK
 jFK
 jFK
@@ -28368,14 +28862,14 @@ uRK
 kNQ
 kNQ
 jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+nhB
+puV
+puV
+gRY
+gRY
+puV
+puV
+nhB
 jFK
 jFK
 jFK
@@ -28620,14 +29114,14 @@ dgH
 xYF
 kNQ
 jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+nhB
+puV
+gqm
+lkT
+lkT
+xUS
+puV
+nhB
 jFK
 jFK
 jFK
@@ -28872,14 +29366,14 @@ vIA
 bpm
 kNQ
 jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+nhB
+puV
+gqm
+lkT
+lkT
+xUS
+puV
+nhB
 jFK
 jFK
 jFK
@@ -29124,14 +29618,14 @@ vIA
 itd
 kNQ
 jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+nhB
+puV
+puV
+lkT
+lkT
+puV
+puV
+nhB
 jFK
 jFK
 jFK
@@ -29376,14 +29870,14 @@ vIA
 lsR
 kNQ
 jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+nhB
+puV
+gqm
+lkT
+lkT
+xUS
+puV
+nhB
 jFK
 jFK
 jFK
@@ -29628,14 +30122,14 @@ vIA
 pFe
 kNQ
 jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+nhB
+puV
+gqm
+lkT
+lkT
+xUS
+puV
+nhB
 jFK
 jFK
 jFK
@@ -29880,14 +30374,14 @@ vIA
 sJe
 kNQ
 kNQ
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+puV
+puV
+puV
+lTx
+lTx
+puV
+puV
+nhB
 jFK
 jFK
 jFK
@@ -30132,14 +30626,14 @@ vIA
 lsR
 plf
 kNQ
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+puV
+nji
+ftN
+lkT
+lkT
+xUS
+puV
+nhB
 jFK
 jFK
 jFK
@@ -30384,14 +30878,14 @@ vIA
 lsR
 plf
 kNQ
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
-jFK
+puV
+edE
+obt
+lkT
+lkT
+xUS
+puV
+nhB
 jFK
 jFK
 jFK
@@ -30639,11 +31133,11 @@ puV
 puV
 puV
 puV
+lkT
+lkT
 puV
 puV
-puV
-jFK
-jFK
+nhB
 jFK
 jFK
 jFK
@@ -30891,11 +31385,11 @@ puV
 gRY
 gRY
 puV
-gRY
-gRY
+lkT
+lkT
 puV
 puV
-jFK
+nhB
 jFK
 jFK
 jFK
@@ -31147,7 +31641,7 @@ mep
 kXS
 xUS
 puV
-jFK
+nhB
 jFK
 jFK
 jFK
@@ -31399,7 +31893,7 @@ lkT
 obd
 xUS
 puV
-jFK
+nhB
 jFK
 jFK
 jFK
@@ -31632,7 +32126,7 @@ ujH
 wBW
 jww
 lnB
-xAh
+fpw
 xAh
 adF
 fmA
@@ -31651,7 +32145,7 @@ jkj
 jkj
 gUE
 puV
-jFK
+nhB
 jFK
 jFK
 jFK
@@ -31903,7 +32397,7 @@ iGS
 iGS
 fES
 puV
-jFK
+nhB
 jFK
 jFK
 jFK
@@ -37403,11 +37897,11 @@ jFK
 jFK
 jFK
 ikV
-ikV
-ikV
-ikV
-ikV
-ikV
+gXa
+gXa
+gXa
+gXa
+cMN
 ikV
 ikV
 ikV
@@ -37655,12 +38149,12 @@ ikV
 ikV
 ikV
 ikV
-ikV
-ikV
-ikV
-ikV
-ikV
-ikV
+gXa
+gXa
+gXa
+cMN
+ljw
+qKJ
 ikV
 ikV
 fjg
@@ -37906,12 +38400,12 @@ ikV
 ikV
 ikV
 ikV
-ikV
-ikV
-ikV
-ikV
-ikV
-fjg
+gXa
+gXa
+cMN
+hSw
+ljw
+xAe
 fjg
 pFo
 fjg
@@ -38158,11 +38652,11 @@ ikV
 ikV
 ikV
 ikV
-ikV
-ikV
-ikV
+gXa
+cMN
+ljw
 bXY
-jox
+sLV
 hoc
 gdh
 hoc
@@ -41706,7 +42200,7 @@ fag
 xaI
 iuB
 iuB
-aWS
+lLV
 uNc
 tKM
 aag
@@ -43975,10 +44469,10 @@ iGE
 cYg
 iaH
 aiX
-uNc
+dbf
 tKM
 aag
-dgx
+mye
 vPT
 ose
 iBl
@@ -44204,7 +44698,7 @@ fFE
 fFE
 fFE
 fFE
-fFE
+iUE
 fFE
 fFE
 fFE
@@ -44456,7 +44950,7 @@ fFE
 fFE
 bYB
 fFE
-fFE
+heT
 qBm
 eeH
 eeH
@@ -44708,7 +45202,7 @@ fFE
 fFE
 fFE
 fFE
-qBm
+kyV
 luk
 dZD
 sHv
@@ -45224,7 +45718,7 @@ sjG
 sjG
 sjG
 sjG
-kpB
+kQl
 iMz
 fvC
 fvC
@@ -45998,7 +46492,7 @@ sjG
 sjG
 dNA
 ylY
-wPs
+mwM
 wzD
 wzD
 wzD
@@ -47003,7 +47497,7 @@ lgw
 lgw
 rEQ
 sjG
-kpB
+lOO
 sSj
 iHm
 epn
@@ -47254,7 +47748,7 @@ sjG
 sjG
 sjG
 sjG
-kpB
+iHa
 aax
 oad
 hzx
@@ -48499,8 +48993,8 @@ tZr
 tZr
 fjg
 fjg
-tZr
-fjg
+drq
+wAO
 fjg
 fjg
 dgM
@@ -49264,8 +49758,8 @@ fjg
 tZr
 tZr
 fjg
-fjg
-fjg
+aKz
+aKz
 nvA
 tZr
 jDB
@@ -50024,7 +50518,7 @@ tZr
 fjg
 nHm
 tZr
-jDB
+srN
 jDB
 jDB
 hzx
@@ -50276,7 +50770,7 @@ nzc
 fjg
 gXw
 jox
-jDB
+hoP
 jDB
 jDB
 hzx
@@ -58082,9 +58576,9 @@ udI
 tHK
 qmf
 tHK
-nhB
+luB
 tHK
-tHK
+gvt
 veQ
 udI
 jFK
@@ -58333,11 +58827,11 @@ lgy
 udI
 tHK
 wUC
-tHK
+sAz
 luB
-gXa
 tHK
 tHK
+czj
 udI
 lgy
 jFK
@@ -58585,10 +59079,10 @@ lgy
 udI
 tHK
 pFK
-tHK
+pkn
 luB
 tHK
-tHK
+tux
 cdR
 udI
 lgy
@@ -58844,10 +59338,10 @@ udI
 udI
 udI
 udI
-lMA
-lMA
-lMA
-lMA
+pbc
+pbc
+pbc
+pbc
 pbc
 pbc
 pbc
@@ -59096,10 +59590,10 @@ nzE
 sRN
 sbl
 aWg
-lMA
-lMA
-lMA
-lMA
+pbc
+pbc
+pbc
+pbc
 pbc
 pbc
 pbc
@@ -59348,13 +59842,13 @@ utr
 hVF
 pkK
 aWg
-lMA
-lMA
-lMA
-lMA
-pbc
-pbc
-pbc
+wUY
+wUY
+wUY
+wUY
+wUY
+wUY
+wUY
 wUY
 wUY
 wUY
@@ -59582,7 +60076,7 @@ yhs
 hmO
 qEa
 hmO
-lYR
+vXa
 mMb
 bvi
 bvi
@@ -59600,15 +60094,15 @@ qQI
 aWg
 aWg
 aWg
-lMA
-lMA
-lMA
-lMA
-pbc
-pbc
-pbc
-wUY
 dfU
+atH
+myM
+pDq
+atH
+atH
+myM
+atH
+myM
 myM
 atH
 atH
@@ -59850,18 +60344,18 @@ bDC
 enp
 dzu
 uZm
-cYl
-aWg
-lMA
-lMA
-lMA
-lMA
-pbc
-pbc
-pbc
-wUY
+uZm
+hJB
+atH
+atH
+atH
+myM
+myM
 myM
 atH
+myM
+dfU
+dfU
 atH
 atH
 atH
@@ -60101,19 +60595,19 @@ pxZ
 iUJ
 phR
 lKD
-gRl
+cYl
 oFX
 aWg
-pbc
-pbc
-pbc
-pbc
-pbc
-pbc
-pbc
+iVc
+iVc
+iVc
+iVc
+iVc
+iVc
+iVc
+iVc
 wUY
-myM
-myM
+wUY
 wUY
 wUY
 pDq
@@ -60363,9 +60857,9 @@ wUY
 wUY
 wUY
 wUY
-wUY
+iVc
 dfU
-atH
+dfU
 wUY
 pbc
 pbc
@@ -60615,7 +61109,7 @@ opP
 qqA
 pyb
 wUY
-wUY
+iVc
 atH
 atH
 wUY
@@ -63356,7 +63850,7 @@ oUq
 tkh
 mJx
 lsi
-lsi
+knj
 lsi
 dnU
 mJx
@@ -64106,7 +64600,7 @@ opl
 opl
 hac
 mMb
-dTr
+txw
 cZg
 fyz
 fmX
@@ -66374,7 +66868,7 @@ hac
 hac
 hac
 mMb
-hmO
+hpA
 wlG
 mMb
 opl
@@ -66626,7 +67120,7 @@ hac
 hac
 hac
 hac
-hmO
+hpA
 ege
 jOS
 opl
@@ -66878,7 +67372,7 @@ hac
 hac
 hac
 hac
-hmO
+izW
 rlC
 fmX
 opl
@@ -66903,7 +67397,7 @@ udI
 yjk
 wcr
 fzv
-ivu
+mhG
 jhy
 aWg
 dMP
