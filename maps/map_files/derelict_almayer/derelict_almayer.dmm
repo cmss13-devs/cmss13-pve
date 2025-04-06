@@ -29841,7 +29841,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/cm_vending/gear/sea,
+/obj/structure/machinery/cm_vending/gear/di,
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/shipboard/sea_office)
 "leU" = (
@@ -61834,7 +61834,7 @@
 /turf/open/floor/almayer/sterile_green_side/northeast,
 /area/almayer/medical/medical_science)
 "xtQ" = (
-/obj/structure/machinery/cm_vending/clothing/sea,
+/obj/structure/machinery/cm_vending/clothing/di,
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/shipboard/sea_office)
 "xuc" = (
