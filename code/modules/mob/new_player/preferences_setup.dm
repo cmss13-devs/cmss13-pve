@@ -273,7 +273,7 @@
 		if(JOB_INTEL)
 			return /datum/equipment_preset/uscm/intel/full
 		if(JOB_CAS_PILOT)
-			return /datum/equipment_preset/uscm_ship/gp/full
+			return /datum/equipment_preset/uscm/ship/gp/full
 		*/
 		if(JOB_TANK_CREW)
 			return /datum/equipment_preset/uscm/tank
@@ -281,7 +281,7 @@
 		if(JOB_DROPSHIP_PILOT)
 			return /datum/equipment_preset/uscm/ship/dp/full
 		if(JOB_DROPSHIP_CREW_CHIEF)
-			return /datum/equipment_preset/uscm_ship/dcc/full
+			return /datum/equipment_preset/uscm/ship/dcc/full
 		*/
 		if(JOB_CORPORATE_LIAISON)
 			return /datum/equipment_preset/uscm/ship/liaison
@@ -297,9 +297,9 @@
 		if(JOB_CHIEF_POLICE)
 			return /datum/equipment_preset/uscm/police/cmp
 		if(JOB_WARDEN)
-			return /datum/equipment_preset/uscm_ship/uscm_police/warden
+			return /datum/equipment_preset/uscm/ship/uscm_police/warden
 		if(JOB_DI)
-			return /datum/equipment_preset/uscm_ship/di
+			return /datum/equipment_preset/uscm/ship/di
 		if(JOB_CHIEF_ENGINEER)
 			return /datum/equipment_preset/uscm/ship/chief_engineer
 		if(JOB_ORDNANCE_TECH)
