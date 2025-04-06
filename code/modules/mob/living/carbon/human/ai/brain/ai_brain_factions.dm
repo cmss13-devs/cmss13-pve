@@ -373,12 +373,91 @@
 		"ALL THREATS; FOREIGN *AND* DOMESTIC!",
 	)
 
+/datum/human_ai_faction/ua_colonial_forces //CMB & UACG mostly
+	faction = FACTION_MARSHAL
+	friendly_factions = list(
+		FACTION_ARMY,
+		FACTION_NAVY,
+		FACTION_COLONIST,
+		FACTION_MARINE,
+		FACTION_WY,
+	)
+	neutral_factions = list(
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_TWE,
+		FACTION_UPP,
+		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
+	)
+	enter_combat_lines = list(
+		"Woah, woah!",
+		"Taking fire!",
+		"Shots fired!",
+		"Unit taking fire!",
+		"Don't do it!",
+		"Shit! Shots fired!",
+		"Gun! Gun!",
+		"Time to cowboy up!",
+		"You're gonna wish you stayed at home.",
+		"Never should have come here!",
+	)
+	exit_combat_lines = list(
+		"Sweep and clear.",
+		"Stay sharp.",
+		"Make sure that's the last of them",
+		"Stay sharp!",
+		"Glad that's done with...",
+		"I need a smoke...",
+		"Is that all of them?",
+		"What the hell am I doing here...",
+		"Clear? We clear? Sound off!",
+		"Jesus Christ...",
+		"Put 'em on safe and let them hang, guys.",
+	)
+	squad_member_death_lines = list(
+		"Man down!",
+		"We got a man down here!",
+		"Shit! They're wasted!",
+		"Oh shit, shit, shit...",
+		"Get back! Get back!",
+		"I got a bad feeling about this...",
+		"Shit! This can't be happening...",
+		"They're down, get a medic up here now!",
+		"Oh fuck! It's fucked!",
+		"This was just supposed to be civil disturbances!",
+		"Jesus, I didn't sign up for this!",
+		"Oh god... What am I gonna tell their family..?",
+	)
+	reload_lines = list(
+		"Reloading!",
+		"I'm out!",
+		"Cover me, down to harsh language here!",
+		"New mag going in.",
+		"Changing mag!",
+		"I'm dry! Reloading!",
+		"Reloadi- Oops, dropped my mag there.",
+		"Dammit, I'm dry!",
+		"Should've spent more time on the range..!",
+	)
+	grenade_thrown_lines = list(
+		"Grenade!",
+		"Throwing grenade!",
+		"Frag, frag!",
+		"Banger, out!",
+		"Suck on this!",
+		"Hope I don't blow myself up with this!",
+	)
+
 /datum/human_ai_faction/uscm
 	faction = FACTION_MARINE
 	friendly_factions = list(
+		FACTION_ARMY,
+		FACTION_NAVY,
 		FACTION_COLONIST,
 	)
 	neutral_factions = list(
+		FACTION_MARSHAL,
 		FACTION_TWE,
 		FACTION_WY,
 		FACTION_FREELANCER,
@@ -506,6 +585,21 @@
 		"DON'T YOU FUCKIN' DIE ON ME, MOTHERFUCKER- STAY ALIVE!",
 		"THEY FUCKIN' KILLED THEM!",
 		"FUBAR, MAN!",
+		"Marine's gone!",
+		"I don't believe this!",
+		"I didn't sign up for this!",
+		"Man down!",
+		"Damn it!",
+		"Squad member KIA!",
+	)
+	need_healing_lines = list(
+		"Is that all you got?",
+		"You got nothing!",
+		"I'm hit!",
+		"Argh, medic!",
+		"Medic!",
+		"Doc! Get up here!",
+		"*medic",
 	)
 	reload_lines = list(
 		"RELOADING!",
@@ -572,17 +666,214 @@
 		"CORPSMAN!",
 		"I'M FUBAR, MAN!",
 	)
-/datum/human_ai_faction/upp
-	faction = FACTION_UPP
+
+/datum/human_ai_faction/usa
+	faction = FACTION_ARMY
 	friendly_factions = list(
+		FACTION_NAVY,
+		FACTION_MARINE,
 		FACTION_COLONIST,
+		FACTION_MARSHAL,
+		FACTION_TWE,
+		FACTION_WY,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
 		FACTION_CONTRACTOR,
-		FACTION_MARINE,
+		FACTION_UPP,
 		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
+	)
+	enter_combat_lines = list(
+		"Bring them down!",
+		"Light 'em up!",
+		"Contact!",
+		"Shoot! Contact!",
+		"I got contact!",
+		"Tango, dead ahead!",
+		"Bring it on!",
+		"Enemy on approach!",
+		"Look alive!",
+		"Look alive, tango!",
+		"They're making a move!",
+		"We got activity!",
+		"I've got hostiles!",
+		"Hostiles!",
+		"Engaging hostiles!",
+		"Hostile spotted!",
+		"Shit! We got hostiles!",
+		"Move in!",
+		"Bogies, my sector!",
+		"Hostiles forces here!",
+		"Got 'em in my sights!",
+		"You see what I see?",
+		"There!",
+		"Over there!",
+		"There's one!",
+		"Engaging!",
+		"Take them down!",
+		"Target in sight!",
+		"Pour it on 'em!",
+		"Weapons hot!",
+		"Drop 'em!",
+		"I got company!",
+		"Kill that bastard!",
+		"We're gonna kick your ass!",
+	)
+	exit_combat_lines = list(
+		"Stay quiet.",
+		"Stay sharp.",
+		"Stay sharp!",
+		"Clear.",
+		"Check your vitals.",
+		"Anyone wounded?",
+		"I ain't paid enough for this...",
+		"Stay frosty.",
+		"Take a breather now...",
+		"Sound off...!",
+		"Don't mess with me.",
+		"Hooah...",
+		"I don't hear them. We're clear.",
+		"Nothing around here.",
+		"Don't get too comfortable now.",
+		"Contacts silent.",
+		"No hostiles located, resuming positions.",
+		"No threats remaining.",
+		"I'm a natural born alien killer.",
+		"That's what I'm talking about.",
+		"Watch those corners.",
+	)
+	squad_member_death_lines = list(
+		"Trooper's gone!",
+		"I don't believe this!",
+		"I didn't sign up for this!",
+		"Someone get the doc up here!",
+		"Dammit, get their tags...",
+		"Man down!",
+		"Damn it!",
+		"Squad member KIA!",
+	)
+	need_healing_lines = list(
+		"Is that all you got?",
+		"You got nothing!",
+		"I'm hit!",
+		"Argh, medic!",
+		"Medic!",
+		"Doc! Get up here!",
+		"*medic",
+	)
+	reload_lines = list(
+		"Reloading!",
+		"Shoot-! I'm out!",
+		"Changing mag.",
+		"Changing mag!",
+		"Swapping mags!",
+		"Cover me, reloading!",
+		"I'm dry! Reloading!",
+	)
+	reload_internal_mag_lines = list(
+		"Reloading!",
+		"Shoot-! I'm out!",
+		"Watch my back, I'm reloading!",
+	)
+	grenade_thrown_lines = list(
+		"Grenade!",
+		"Fire in the hole!",
+		"Take this!",
+		"Throwing grenade!",
+		"Throwing a 'nade!",
+		"Primed! Clear blast!",
+	)
+
+/datum/human_ai_faction/usasf
+	faction = FACTION_NAVY
+	friendly_factions = list(
+		FACTION_ARMY,
+		FACTION_MARINE,
+		FACTION_COLONIST,
+		FACTION_MARSHAL,
 		FACTION_TWE,
+		FACTION_WY,
+	)
+	neutral_factions = list(
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_UPP,
+		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
+	)
+	enter_combat_lines = list(
+		"Contact!",
+		"Shoot! Contact!",
+		"I got contact!",
+		"Bandit, dead ahead!",
+		"Bandit on approach!",
+		"Look alive, bandit!",
+		"I've got bandits!",
+		"Engaging bandits!",
+		"Bandit spotted!",
+		"Shit! We got bandits!",
+		"Bogies, my sector!",
+		"Engaging!",
+		"Take them down!",
+		"I got company!",
+	)
+	exit_combat_lines = list(
+		"Stay quiet.",
+		"Stay sharp.",
+		"Stay sharp!",
+		"Clear.",
+		"Check your vitals.",
+		"Anyone wounded?",
+		"Don't mess with me.",
+		"I don't hear them. We're clear.",
+		"Nothing around here.",
+		"Don't get too comfortable now.",
+		"Contacts silent.",
+		"Watch those corners.",
+	)
+	squad_member_death_lines = list(
+		"I don't believe this!",
+		"I didn't sign up for this!",
+		"Someone get the doc up here!",
+		"Man down!",
+		"Damn it!",
+	)
+	need_healing_lines = list(
+		"I'm hit!",
+		"Argh, Corpsman!",
+		"Corpsman!",
+		"Doc! Get up here!",
+	)
+	reload_lines = list(
+		"Reloading!",
+		"Changing mag!",
+		"Swapping mags!",
+		"Cover me, reloading!",
+		"I'm dry! Reloading!",
+	)
+	reload_internal_mag_lines = list(
+		"Reloading!",
+		"Shoot-! I'm out!",
+		"Watch my back, I'm reloading!",
+	)
+
+/datum/human_ai_faction/upp
+	faction = FACTION_UPP
+	friendly_factions = list(
+		FACTION_ARMY,
+		FACTION_MARINE,
+		FACTION_COLONIST,
+	)
+	neutral_factions = list(
+		FACTION_TWE,
+		FACTION_WY,
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_MARINE,
+		FACTION_ARMY,
+		FACTION_NAVY,
+		FACTION_MERCENARY,
 		FACTION_SURVIVOR,
 	)
 	enter_combat_lines = list(
@@ -726,17 +1017,22 @@
 		"COVER ME!",
 	)
 
-/datum/human_ai_faction/wy
-	faction = FACTION_WY
+/datum/human_ai_faction/upp
+	faction = FACTION_UPP
 	friendly_factions = list(
 		FACTION_COLONIST,
 		FACTION_PMC,
 		FACTION_TWE,
 		FACTION_MARINE,
+		FACTION_ARMY,
+		FACTION_NAVY,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
 		FACTION_CONTRACTOR,
+		FACTION_MARINE,
+		FACTION_ARMY,
+		FACTION_NAVY,
 		FACTION_MERCENARY,
 	)
 
@@ -1014,4 +1310,5 @@
 		"This is for you...!",
 	)
 
-
+/datum/human_ai_faction/xeno_cultist/corrupted
+	faction = FACTION_XENOMORPH_CORRPUTED
