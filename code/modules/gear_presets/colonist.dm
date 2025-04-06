@@ -1104,7 +1104,7 @@
 /datum/equipment_preset/colonist/security/guard/tech
 	name = "US Colonial Guard Technician"
 	assignment = "Colonial Militiaman Technician"
-	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal/tech
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
 
