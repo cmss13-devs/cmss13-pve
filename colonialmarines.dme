@@ -627,6 +627,7 @@
 #include "code\datums\paygrades\helper.dm"
 #include "code\datums\paygrades\paygrade.dm"
 #include "code\datums\paygrades\factions\other\civilian.dm"
+#include "code\datums\paygrades\factions\canc\canc.dm"
 #include "code\datums\paygrades\factions\other\cmb.dm"
 #include "code\datums\paygrades\factions\other\contractors.dm"
 #include "code\datums\paygrades\factions\other\dutch_dozen.dm"
