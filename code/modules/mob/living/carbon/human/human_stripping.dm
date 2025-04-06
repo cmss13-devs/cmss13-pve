@@ -49,32 +49,9 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 
 	sourcehuman.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their internals toggled by [key_name(user)]</font>")
 	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to toggle [key_name(src)]'s' internals</font>")
-	if(sourcehuman.internal)
-		user.visible_message(SPAN_DANGER("<B>[user] is trying to disable [sourcehuman]'s internals</B>"), null, null, 3)
-	else
-		user.visible_message(SPAN_DANGER("<B>[user] is trying to enable [sourcehuman]'s internals.</B>"), null, null, 3)
-
-	if(!do_after(user, POCKET_STRIP_DELAY, INTERRUPT_ALL, BUSY_ICON_GENERIC, sourcehuman, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
-		return
-
-	if(sourcehuman.internal)
-		sourcehuman.internal.add_fingerprint(user)
-		sourcehuman.internal = null
-		sourcehuman.visible_message("[sourcehuman] is no longer running on internals.", max_distance = 1)
-		return
-
-	if(!sourcehuman.check_for_oxygen_mask())
-		return
 
 	//Automatically select tank, maybe manually select later
 	sourcehuman.toggle_internals(user)
-
-	if(!sourcehuman.internal)
-		return
-
-	sourcehuman.visible_message(SPAN_NOTICE("[sourcehuman] is now running on internals."), max_distance = 1)
-	playsound(sourcehuman, 'sound/effects/internals.ogg', 40, TRUE)
-	sourcehuman.internal.add_fingerprint(user)
 
 
 /datum/strippable_item/mob_item_slot/back
@@ -105,31 +82,11 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 
 	sourcehuman.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their internals toggled by [key_name(user)]</font>")
 	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to toggle [key_name(src)]'s' internals</font>")
-	if(sourcehuman.internal)
-		user.visible_message(SPAN_DANGER("<B>[user] is trying to disable [sourcehuman]'s internals</B>"), null, null, 3)
-	else
-		user.visible_message(SPAN_DANGER("<B>[user] is trying to enable [sourcehuman]'s internals.</B>"), null, null, 3)
-
-	if(!do_after(user, POCKET_STRIP_DELAY, INTERRUPT_ALL, BUSY_ICON_GENERIC, sourcehuman, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
-		return
-
-	if(sourcehuman.internal)
-		sourcehuman.internal.add_fingerprint(user)
-		sourcehuman.internal = null
-		sourcehuman.visible_message("[sourcehuman] is no longer running on internals.", max_distance = 1)
-		return
-
-	if(!istype(sourcehuman.wear_mask, /obj/item/clothing/mask))
-		return
 
 	//Automatically select tank, maybe manually select later
 	sourcehuman.toggle_internals(user)
 
-	if(!sourcehuman.internal)
-		return
 
-	sourcehuman.visible_message(SPAN_NOTICE("[sourcehuman] is now running on internals."), max_distance = 1)
-	sourcehuman.internal.add_fingerprint(user)
 
 /datum/strippable_item/mob_item_slot/eyes
 	key = STRIPPABLE_ITEM_EYES

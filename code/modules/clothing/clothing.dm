@@ -253,12 +253,20 @@
 		var/mob/M = src.loc
 		M.update_inv_wear_mask()
 
-/mob/living/carbon/human/proc/toggle_internals(user)
-
+/mob/living/carbon/human/proc/toggle_internals(mob/user = src, obj/item/tank/specified_tank)
+	if(user != src)
+		visible_message(SPAN_NOTICE("<B>[user] is trying to [internal ? "disable" : "enable"] [src]'s internals</B>"), null, null, 3)
+		if(!do_after(user, POCKET_STRIP_DELAY*4, INTERRUPT_ALL, BUSY_ICON_GENERIC, src, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
+			return
 	if(internal)
+		internal.add_fingerprint(user)
+		to_chat(user, SPAN_NOTICE("You close \the [internal]'s release valve."))
+		visible_message(SPAN_WARNING("[src] is no longer breathing from [internal]."), SPAN_WARNING("You are no longer breathing from [internal]"), SPAN_NOTICE("You hear a small valve being turned."), max_distance = 2)
 		internal = null
-		to_chat(user, SPAN_NOTICE("You close \the [src]'s release valve."))
 		return FALSE
+	if(specified_tank)
+		internal = specified_tank
+		internal.add_fingerprint(user)
 	else
 		var/breathes = species.breath_type
 		var/list/L = get_contents()
@@ -286,12 +294,17 @@
 				if(best)
 					to_chat(user, SPAN_NOTICE("You choose the fullest [breathes=="oxygen" ? "oxygen" : addtext(" ",breathes)] tank you have, and open \the [best]'s valve."))
 					internal = best
+					internal.add_fingerprint(user)
 					if(t.gas_type == GAS_TYPE_AIR)
 						t.distribute_pressure = ONE_ATMOSPHERE
 					else
 						t.distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
-		if(!internal)
-			to_chat(user, SPAN_NOTICE("You don't have a[breathes=="oxygen" ? "n oxygen" : addtext(" ",breathes)] tank."))
+	if(!internal)
+		//to_chat(user, SPAN_NOTICE("You don't have a[species.breathes=="oxygen" ? "n oxygen" : addtext(" ",species.breathes)] tank."))
+		to_chat(user, SPAN_NOTICE("You don't have an oxygen or air tank."))
+	else
+		visible_message(SPAN_NOTICE("[src] is now breathing from [internal]."), SPAN_NOTICE("You are now breathing from [internal]."), SPAN_NOTICE("You hear a small valve being opened."), max_distance = 2)
+		playsound(src, 'sound/effects/internals.ogg', 40, TRUE)
 
 
 /obj/item/clothing/mask/verb/toggle_internals_action()
