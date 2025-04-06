@@ -933,18 +933,6 @@
 	var/obj/item/clothing/accessory/pads/groin/uacg/crotchplate = new()
 	src.attach_accessory(null, crotchplate, TRUE)
 
-/obj/item/clothing/suit/marine/guard/leader
-	desc = "Standard UACG issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp. This one has a small insignia on it."
-
-/obj/item/clothing/suit/marine/guard/leader/Initialize(mapload)
-	. = ..()
-	var/obj/item/clothing/accessory/pads/groin/uacg/crotchplate = new()
-	src.attach_accessory(null, crotchplate, TRUE)
-	var/obj/item/clothing/accessory/pads/greaves/uacg/shinguards = new()
-	src.attach_accessory(null, shinguards, TRUE)
-	var/obj/item/clothing/accessory/pads/uacg/shoulderpads = new()
-	src.attach_accessory(null, shoulderpads, TRUE)
-
 //Army & USASF custom-armors\\
 
 /obj/item/clothing/suit/marine/medium/rto/navy
