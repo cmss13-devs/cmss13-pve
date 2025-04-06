@@ -450,5 +450,5 @@
 
 /obj/item/clothing/accessory/ranks/canc
 	name = "CANC collar tabs"
-	rank_short = PAY_SHORT_CA1
+	rank_short = null
 	icon_state = "ranks_canc"
