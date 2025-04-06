@@ -985,13 +985,15 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+//UACG
+
 /datum/equipment_preset/colonist/security/guard
 	name = "US Colonial Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_COLONIST
 	faction_group = FACTION_LIST_UA_COLONY
 	assignment = "Colonial Militiaman"
-	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP)
 	idtype = /obj/item/card/id/dogtag
@@ -1049,7 +1051,7 @@
 /datum/equipment_preset/colonist/security/guard/medic
 	name = "US Colonial Guard Medic"
 	assignment = "Colonial Militiaman Medic"
-	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal/medic
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_CIVILIAN_MEDBAY)
 
@@ -1090,10 +1092,19 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 
+/datum/equipment_preset/colonist/security/guard/medic/spanish
+	name = "LatAm Colonial Guard Medic"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+#undef AMERICAN_ETHNICITY
+#undef LATIN_AMERICAN_ETHNICITY
+#undef JAPANESE_ETHNICITY
+
 /datum/equipment_preset/colonist/security/guard/tech
 	name = "US Colonial Guard Technician"
 	assignment = "Colonial Militiaman Technician"
-	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal/tech
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
 
@@ -1139,10 +1150,19 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 
+/datum/equipment_preset/colonist/security/guard/tech/spanish
+	name = "LatAm Colonial Guard Technician"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+#undef AMERICAN_ETHNICITY
+#undef LATIN_AMERICAN_ETHNICITY
+#undef JAPANESE_ETHNICITY
+
 /datum/equipment_preset/colonist/security/guard/nco
 	name = "US Colonial Guard Unit Leader"
 	assignment = "Colonial Militiaman Unit Leader"
-	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_AE7 = JOB_PLAYTIME_TIER_0)
 
 
 /datum/equipment_preset/colonist/security/guard/nco/load_gear(mob/living/carbon/human/new_human)
@@ -1190,10 +1210,19 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 
+/datum/equipment_preset/colonist/security/guard/nco/spanish
+	name = "LatAm Colonial Guard Unit Leader"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+#undef AMERICAN_ETHNICITY
+#undef LATIN_AMERICAN_ETHNICITY
+#undef JAPANESE_ETHNICITY
+
 /datum/equipment_preset/colonist/security/guard/co
 	name = "US Colonial Guard Officer"
 	assignment = "Colonial Militiaman Officer"
-	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_AO1 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/snco
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_COMMAND)
 
@@ -1226,3 +1255,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/colonist/security/guard/co/spanish
+	name = "LatAm Colonial Guard Officer"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+#undef AMERICAN_ETHNICITY
+#undef LATIN_AMERICAN_ETHNICITY
+#undef JAPANESE_ETHNICITY
