@@ -14,19 +14,19 @@ GLOBAL_LIST_INIT(cm_vending_gear_sea, list(
 		list("Rail Flashlight", 0, /obj/item/attachable/flashlight, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
 	))
 
-/obj/structure/machinery/cm_vending/gear/sea
-	name = "ColMarTech SEA Weapon Rack"
-	desc = "An automated gear rack for the Senior Enlisted Advisor."
+/obj/structure/machinery/cm_vending/gear/di
+	name = "ColMarTech DI Weapon Rack"
+	desc = "An automated gear rack for the Drill Instructor."
 	req_access = list(ACCESS_MARINE_SEA)
-	vendor_role = list(JOB_SEA)
+	vendor_role = list(JOB_DI)
 	icon_state = "guns"
 
-/obj/structure/machinery/cm_vending/gear/sea/get_listed_products(mob/user)
+/obj/structure/machinery/cm_vending/gear/di/get_listed_products(mob/user)
 	return GLOB.cm_vending_gear_sea
 
 //------------CLOTHING VENDOR---------------
 
-GLOBAL_LIST_INIT(cm_vending_clothing_sea, list(
+GLOBAL_LIST_INIT(cm_vending_clothing_di, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Drill Hat", 0, /obj/item/clothing/head/drillhat, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
 		list("Officer Uniform", 0, /obj/item/clothing/under/marine/dress, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
@@ -77,11 +77,11 @@ GLOBAL_LIST_INIT(cm_vending_clothing_sea, list(
 		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 	))
 
-/obj/structure/machinery/cm_vending/clothing/sea
+/obj/structure/machinery/cm_vending/clothing/di
 	name = "ColMarTech SEA Equipment Rack"
 	desc = "An automated rack hooked up to a colossal storage of Senior Enlisted Advisor standard-issue equipment."
 	req_access = list(ACCESS_MARINE_SEA)
-	vendor_role = list(JOB_SEA)
+	vendor_role = list(JOB_DI)
 
-/obj/structure/machinery/cm_vending/clothing/sea/get_listed_products(mob/user)
-	return GLOB.cm_vending_clothing_sea
+/obj/structure/machinery/cm_vending/clothing/di/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_di
