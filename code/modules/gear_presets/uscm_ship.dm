@@ -180,7 +180,7 @@
 	minimap_icon = "correspondent"
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 
-/datum/equipment_preset/uscm_ship/reporter_uscm/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/reporter_uscm/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -239,7 +239,7 @@
 	minimap_icon = list("engi" = MINIMAP_ICON_COLOR_HEAD)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 
-/datum/equipment_preset/uscm_ship/chief_engineer/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/chief_engineer/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -258,7 +258,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
-
 
 //*****************************************************************************************************/
 
@@ -280,7 +279,7 @@
 
 	minimap_icon = "engi"
 
-/datum/equipment_preset/uscm_ship/maint/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/maint/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -355,7 +354,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/qm
+/datum/equipment_preset/uscm/ship/qm
 	name = "USCM Logistics Officer"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
@@ -379,7 +378,7 @@
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 	minimap_icon = list("ct" = MINIMAP_ICON_COLOR_HEAD)
 
-/datum/equipment_preset/uscm_ship/qm/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/qm/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -401,14 +400,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
 
-/datum/equipment_preset/uscm_ship/qm/lesser_rank
+/datum/equipment_preset/uscm/ship/qm/lesser_rank
 	name = "USCM Logistics Chief"
 	paygrades = list(PAY_SHORT_MW2 = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_CARGO_CHIEF
 	rank = JOB_CARGO_CHIEF
 	role_comm_title = "LC"
 
-/datum/equipment_preset/uscm_ship/qm/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/qm/lesser_rank/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/cargo(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/service(new_human), WEAR_JACKET)
@@ -416,7 +415,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/cargo
+/datum/equipment_preset/uscm/ship/cargo
 	name = "USCM Logistics Specialist"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -430,7 +429,7 @@
 
 	minimap_icon = "ct"
 
-/datum/equipment_preset/uscm_ship/cargo/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/cargo/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -455,7 +454,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/armorer
+/datum/equipment_preset/uscm/ship/armorer
 	name = "USCM Armorer"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -467,7 +466,7 @@
 	role_comm_title = "ARM"
 	skills = /datum/skills/armorer
 
-/datum/equipment_preset/uscm_ship/armorer/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/armorer/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -707,7 +706,7 @@
 	faction = FACTION_PMC
 	access_list = ACCESS_LIST_WY_SENIOR
 
-/datum/equipment_preset/uscm_ship/so/pmc/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/so/pmc/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc/platoon/cmd(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/formal(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
@@ -767,7 +766,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/io
+/datum/equipment_preset/uscm/ship/io
 	name = "USCM Intelligence Officer (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -781,10 +780,10 @@
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
-/datum/equipment_preset/uscm_ship/io/load_status(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/io/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
 
-/datum/equipment_preset/uscm_ship/io/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/io/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/intel/chestrig(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -823,7 +822,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/di
+/datum/equipment_preset/uscm/ship/di
 	name = "USCM Drill Instructor"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
@@ -840,11 +839,11 @@
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
-/datum/equipment_preset/uscm_ship/di/New()
+/datum/equipment_preset/uscm/ship/di/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_MAIN)
 
-/datum/equipment_preset/uscm_ship/di/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/di/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -866,18 +865,18 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
 
-/datum/equipment_preset/uscm_ship/di/lesser_rank
+/datum/equipment_preset/uscm/ship/di/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm_ship/di/upper_rank
+/datum/equipment_preset/uscm/ship/di/upper_rank
 	name = parent_type::name + " (Upper Rank)"
 	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
 
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/dp
+/datum/equipment_preset/uscm/ship/dp
 	name = "USCM Dropship Pilot (Baggies)"
 	idtype = /obj/item/card/id/dogtag
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
@@ -892,7 +891,7 @@
 
 	utility_under = list(/obj/item/clothing/under/marine/officer/pilot)
 
-/datum/equipment_preset/uscm_ship/dp/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/dp/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -915,18 +914,18 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 
-/datum/equipment_preset/uscm_ship/dp/alt
+/datum/equipment_preset/uscm/ship/dp/alt
 	name = "USCM Dropship Pilot (Comp. Suit)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
-/datum/equipment_preset/uscm_ship/dp/alt/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/dp/alt/load_gear(mob/living/carbon/human/new_human)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight(new_human), WEAR_BODY)
 	..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_ship/dcc
+/datum/equipment_preset/uscm/ship/dcc
 	name = "USCM Dropship Crew Chief"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	idtype = /obj/item/card/id/dogtag
@@ -939,7 +938,7 @@
 
 	minimap_icon = "dcc"
 
-/datum/equipment_preset/uscm_ship/dcc/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/ship/dcc/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
