@@ -414,6 +414,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of USCM FORECON. Swift, Silent, Deadly."
 	icon_state = "forecon_patch"
 
+/obj/item/clothing/accessory/patch/sapper
+	name = "USCM Combat Engineering patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 4th Combat Engineering Battalion, part of the USCM 2nd Colonial Support Group."
+	icon_state = "sapper_patch"
+
 /obj/item/clothing/accessory/patch/royal_marines
 	name = "TWE Royal Marines Commando patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the Royal Marines Commando."
@@ -1421,6 +1426,39 @@
 		/obj/item/ammo_magazine/handful/shotgun,
 	)
 
+//Pre-load For Army Props
+//===
+/obj/item/clothing/accessory/storage/webbing/m3/small/army
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
+	new /obj/item/storage/box/MRE(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyalt
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
+	new /obj/item/storage/box/MRE(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyleader
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
+	new /obj/item/storage/box/MRE(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/device/binoculars/range/designator(src)
+
+//===
+
 /obj/item/clothing/accessory/storage/webbing/m3/m40
 	name = "\improper M3 Pattern Grenade Webbing"
 	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40 grenades."
@@ -1464,6 +1502,7 @@
 	storage_slots = 4
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/rifle/ag80,
 		/obj/item/ammo_magazine/pistol/t73,
 		/obj/item/ammo_magazine/pistol/np92,
 		/obj/item/ammo_magazine/handful/shotgun/heavy,
