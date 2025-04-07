@@ -991,7 +991,7 @@
 	name = "US Colonial Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_UACG
-	faction_group = FACTION_LIST_UA_COLONY
+	faction_group = FACTION_LIST_MARINE
 	assignment = "Colonial Militiaman"
 	role_comm_title = "uacg_Rifle"
 	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
