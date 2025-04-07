@@ -39,6 +39,9 @@
 	armor_rad = CLOTHING_ARMOR_HARDCORE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|BYPASSFORINJECTOR|ALLOWINTERNALS
+	flags_inv_hide = HIDETOPHAIR
+	flags_atom = FPRINT|CONDUCT|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROT
 	flags_heat_protection = BODY_FLAG_HEAD
@@ -50,10 +53,6 @@
 	var/toggleable = TRUE
 	var/can_be_broken = TRUE
 	var/breaking_sound = 'sound/handling/click_2.ogg'
-
-/obj/item/clothing/head/helmet/marine/pressure/New()
-	. = ..()
-	flags_atom |= NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/pressure/Initialize()
 	. = ..()
@@ -157,6 +156,7 @@
 	detector_mode = MOTION_DETECTOR_LONG
 	detector_range = 7
 	blip_type = "tracker"
+	idle_sound_volume = 20
 
 /obj/item/device/motiondetector/spacesuit/get_user()
 	if(ishuman(loc.loc))

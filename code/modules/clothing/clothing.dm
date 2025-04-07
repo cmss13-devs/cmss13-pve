@@ -263,6 +263,7 @@
 		to_chat(user, SPAN_NOTICE("You close \the [internal]'s release valve."))
 		visible_message(SPAN_WARNING("[src] is no longer breathing from [internal]."), SPAN_WARNING("You are no longer breathing from [internal]"), SPAN_NOTICE("You hear a small valve being turned."), max_distance = 2)
 		internal = null
+		playsound(src, 'sound/effects/internals_close.ogg', 60, TRUE)
 		return FALSE
 	if(specified_tank)
 		internal = specified_tank
@@ -316,6 +317,23 @@
 		if(!using_human.is_mob_incapacitated())
 			using_human.toggle_internals(usr)
 
+/obj/item/clothing/head/helmet/space/verb/toggle_internals_action()
+	set category = "Object"
+	set name = "Toggle Internals"
+	set src in usr
+	if(ishuman(usr))
+		var/mob/living/carbon/human/using_human = usr
+		if(!using_human.is_mob_incapacitated())
+			using_human.toggle_internals(usr)
+
+/obj/item/clothing/head/helmet/marine/pressure/verb/toggle_internals_action()
+	set category = "Object"
+	set name = "Toggle Internals"
+	set src in usr
+	if(ishuman(usr))
+		var/mob/living/carbon/human/using_human = usr
+		if(!using_human.is_mob_incapacitated())
+			using_human.toggle_internals(usr)
 
 //some gas masks modify the air that you breathe in.
 /obj/item/clothing/mask/proc/filter_air(list/air_info)

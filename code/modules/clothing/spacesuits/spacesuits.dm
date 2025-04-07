@@ -93,7 +93,7 @@
 		for(var/obj/limb/O in H.limbs)
 			if(!(O.status & LIMB_SPLINTED) && (O.status & LIMB_BROKEN))
 				to_chat(H, SPAN_HELPFUL("You feel the internal cushioning of the [src] begin to inflate against your [O.display_name]."))
-				if(do_after(H, 5 SECONDS, INTERRUPT_NONE))
+				if(do_after(H, 15 SECONDS, INTERRUPT_NONE))
 					if(loc != H)
 						return
 					playsound(loc, 'sound/machines/hiss.ogg', 20, TRUE)
@@ -129,7 +129,7 @@
 //folded version of the sadar
 /obj/item/prop/folded_emergency_spacesuit
 	name = "\improper emergency spacesuit and helmet (folded)"
-	desc = "An off-brand emergency spacesuit and helmet, vacuum packed so that they can fit into a backpack. Not a proper substitue for pressure suits like the MK.35, and only protects you from the cold of space."
+	desc = "An off-brand emergency spacesuit and helmet, vacuum packed so that they can fit into a backpack. Not a proper substitue for pressure suits like the MK.35, and only protects you from the cold of space. Does not include an oxygen tank."
 	icon = 'icons/obj/items/misc.dmi'
 	icon_state = "spacesuit_bag"
 	w_class = SIZE_MEDIUM

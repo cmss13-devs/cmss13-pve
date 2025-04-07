@@ -71,7 +71,7 @@
 
 /obj/item/proc/can_remove_battery(mob/user, obj/item/cell/battery, needs_to_be_in_hand = TRUE)
 	if(needs_to_be_in_hand)
-		if(user.get_inactive_hand() == src)
+		if(user.get_inactive_hand() != src)
 			return FALSE
 	if(!battery)
 		to_chat(user, SPAN_WARNING("\The [src] doesn't have a battery installed."))

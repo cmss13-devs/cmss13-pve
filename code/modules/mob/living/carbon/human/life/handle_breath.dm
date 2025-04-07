@@ -59,8 +59,10 @@
 			return null
 		if(get_dist(internal.loc, loc) > 1)
 			internal = null
+			playsound(src, 'sound/effects/internals_close.ogg', 60, TRUE)
 		if(!(check_for_oxygen_mask()))
 			internal = null
+			playsound(src, 'sound/effects/internals_close.ogg', 60, TRUE)
 		if(internal)
 			return internal.take_air()
 	return null

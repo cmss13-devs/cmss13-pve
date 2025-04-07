@@ -100,6 +100,7 @@
 	desc = "A tank of compressed oxygen for use as propulsion in zero-gravity areas. Use with caution. Can be used as an air supply"
 	icon_state = "jetpack"
 	item_state = "jetpack"
+	gas_type = GAS_TYPE_OXYGEN
 	volume = 30
 	pressure = ONE_ATMOSPHERE*5
 

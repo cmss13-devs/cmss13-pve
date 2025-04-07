@@ -807,7 +807,7 @@
 
 		list("ADDITIONAL EQUIPMENT", -1, null, null),
 		list("Folded Emergency Spacesuit", round(scale * 12), /obj/item/prop/folded_emergency_spacesuit, VENDOR_ITEM_REGULAR),
-		list("Magnetic Boots", round(scale * 2), /obj/item/clothing/shoes/marine/magboots, VENDOR_ITEM_RECOMMENDED),
+		list("Magnetic Boots", round(scale * 3), /obj/item/clothing/shoes/marine/magboots, VENDOR_ITEM_RECOMMENDED),
 		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_RECOMMENDED),
 
 		list("WEBBINGS", -1, null, null),
@@ -821,7 +821,7 @@
 		list("Breath Mask", round(scale * 5), /obj/item/clothing/mask/breath, VENDOR_ITEM_REGULAR),
 		list("Medium Oxygen Tank", round(scale * 4), /obj/item/tank/emergency_oxygen/double, VENDOR_ITEM_RECOMMENDED),
 		list("Small Oxygen Tank", round(scale * 4), /obj/item/tank/emergency_oxygen/engi, VENDOR_ITEM_REGULAR),
-		list("Emergency Oxygen Tank", round(scale * 6), /obj/item/tank/emergency_oxygen, VENDOR_ITEM_REGULAR),
+		list("Emergency Oxygen Tank", round(scale * 10), /obj/item/tank/emergency_oxygen, VENDOR_ITEM_REGULAR),
 		list("Jetpack (Oxygen Internals)", round(scale * 2), /obj/item/tank/jetpack/oxygen, VENDOR_ITEM_REGULAR),
 
 		list("FLARE AND LIGHT", -1, null, null),

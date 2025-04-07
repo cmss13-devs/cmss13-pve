@@ -153,11 +153,12 @@
 				if(location.internal == src)
 					location.internal = null
 					to_chat(usr, SPAN_NOTICE("You close the tank release valve."))
+					playsound(src, 'sound/effects/internals_close.ogg', 60, TRUE)
 				else
 					if(location.check_for_oxygen_mask())
 						location.internal = src
 						to_chat(usr, SPAN_NOTICE("You open \the [src]'s valve."))
-						playsound(src, 'sound/effects/internals.ogg', 40, TRUE)
+						playsound(src, 'sound/effects/internals.ogg', 60, TRUE)
 					else
 						to_chat(usr, SPAN_NOTICE("You need something to connect to \the [src]."))
 				. = TRUE
