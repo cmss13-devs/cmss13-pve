@@ -194,6 +194,9 @@
 	if(!can_move_and_apply_move_delay())
 		return TRUE
 
+	if(!Process_Spacemove(TRUE, get_dir(src, T)))
+		return TRUE
+
 	var/turf/next_turf = current_path[current_path.len]
 	var/list/L = LinkBlocked(src, loc, next_turf, list(src), TRUE)
 	L += SSpathfinding.check_special_blockers(src, next_turf)
