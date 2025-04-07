@@ -170,8 +170,8 @@
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/officer/pilot
-	name = "pilot officer bodysuit"
-	desc = "A bodysuit worn by pilot officers of the USCM, good for operating express elevators to hell. Some armor protection provided by the venlar armor weave against shrapnel and ballistics."
+	name = "pilot bodysuit"
+	desc = "A bodysuit worn by pilots of the USCM & USASF, good for operating express elevators to hell. Some armor protection provided by the venlar armor weave against shrapnel and ballistics."
 	icon_state = "pilot_flightsuit"
 	item_state = "pilot_flightsuit"
 	worn_state = "pilot_flightsuit"
@@ -181,8 +181,8 @@
 	suit_restricted = list(/obj/item/clothing/suit/armor/vest/pilot, /obj/item/clothing/suit/storage/marine/light/vest/dcc, /obj/item/clothing/suit/storage/jacket/marine/pilot, /obj/item/clothing/suit/storage/marine/light/vest)
 
 /obj/item/clothing/under/marine/officer/pilot/flight
-	name = "tactical pilot officer flightsuit"
-	desc = "A flightsuit worn by pilot officers of the USCM, with plenty of leather straps, pouches, and other essential gear you will never use. Looks badass."
+	name = "tactical pilot flightsuit"
+	desc = "A flightsuit worn by pilots of the USCM & USASF, with plenty of leather straps, pouches, and other essential gear you will never use. Looks badass."
 	icon_state = "pilot_flightsuit_alt"
 	item_state = "pilot_flightsuit_alt"
 	worn_state = "pilot_flightsuit_alt"
@@ -226,8 +226,23 @@
 	item_state = "command_jumpsuit"
 	worn_state = "command_jumpsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
-	flags_atom = NO_SNOW_TYPE
-	specialty = "marine operations"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
+/obj/item/clothing/under/marine/officer/qm_suit
+	name = "logistics officer uniform"
+	desc = "A nicely-fitting military uniform for a logistics officer, combining style & practicality. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	icon_state = "RO_jumpsuit"
+	worn_state = "RO_jumpsuit"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
+/obj/item/clothing/under/marine/officer/cargo
+	name = "support uniform"
+	desc = "A pair of hard-wearing BDU pants & a short-sleeve breathable shirt. Perfect for those who work to support the frontline troops in various ways."
+	icon_state = "cargotech"
+	worn_state = "cargotech"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/officer/command
 	name = "\improper USCM officer uniform"
@@ -262,7 +277,7 @@
 	armor_rad = CLOTHING_ARMOR_LOW
 	icon_state = "mt_jumpsuit"
 	worn_state = "mt_jumpsuit"
-	specialty = "engineer"
+	specialty = "crew"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	flags_atom = NO_SNOW_TYPE
 	item_state_slots = list(WEAR_BODY = "mt_jumpsuit")
@@ -950,13 +965,6 @@
 	desc = "A formal white undersuit."
 	flags_jumpsuit = FALSE
 
-/obj/item/clothing/under/rank/qm_suit
-	name = "quartermaster suit"
-	desc = "A nicely-fitting military suit for a quartermaster. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
-	icon_state = "RO_jumpsuit"
-	worn_state = "RO_jumpsuit"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-
 /obj/item/clothing/under/rank/synthetic
 	name = "\improper USCM Support Uniform"
 	desc = "A simple uniform made for Synthetic crewmembers."
@@ -1309,11 +1317,13 @@
 /obj/item/clothing/under/marine/officer/pilot/flight/para
 	name = "\improper para-rescue flightsuit"
 	desc = "A flightsuit worn by the elite para-rescue forces of the USASF, with all the necessary straps and rigging for supporting the sheer balls these servicemen have. Looks badass."
+	suit_restricted = null
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/intel/navy
 	name = "\improper USASF combat uniform"
 	desc = "Forward-observation work is dangerous, but it's slightly less dangerous when your duty uniform can almost stop a bullet. Also features many pockets and attachment points for all storage needs."
+	suit_restricted = null
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/standard/army
