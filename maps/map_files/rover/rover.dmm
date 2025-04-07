@@ -660,14 +660,16 @@
 /obj/structure/closet/coffin/woodencrate,
 /obj/item/ammo_box/magazine/nade_box{
 	pixel_x = 2;
-	pixel_y = -4
+	pixel_y = -4;
+	layer = 3.02
 	},
 /obj/structure/machinery/power/apc/almayer/north{
 	cell_type = /obj/item/cell/hyper
 	},
 /obj/item/ammo_box/magazine/nade_box{
 	pixel_x = -9;
-	pixel_y = -4
+	pixel_y = -4;
+	layer = 3.02
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
