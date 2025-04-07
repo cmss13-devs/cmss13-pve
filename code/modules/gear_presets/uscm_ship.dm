@@ -224,10 +224,6 @@
 
 	minimap_icon = "correspondent"
 
-
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
-	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
-
 /datum/equipment_preset/uscm_ship/reporter_uscm/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
@@ -284,9 +280,6 @@
 	skills = /datum/skills/CE
 
 	minimap_icon = list("engi")
-
-
-	utility_under = list(/obj/item/clothing/under/marine/officer/ce)
 
 /datum/equipment_preset/uscm_ship/chief_engineer/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -423,10 +416,6 @@
 
 
 	minimap_icon = list("ct")
-
-	utility_under = list(/obj/item/clothing/under/rank/qm_suit)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
-	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
 /datum/equipment_preset/uscm_ship/qm/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -870,14 +859,17 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	idtype = /obj/item/card/id/dogtag
-	assignment = JOB_AUXILIARY_OFFICER
-	rank = JOB_AUXILIARY_OFFICER
-	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_3)
-	role_comm_title = "ASO"
-	minimum_age = 27
-	skills = /datum/skills/auxiliary_officer
+	assignment = JOB_DI
+	rank = JOB_DI
+	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "DI"
+	skills = /datum/skills/DI
 
-	minimap_icon = "cic"
+	minimap_icon = "sea"
+
+	service_hat = list(/obj/item/clothing/head/cmcap, /obj/item/clothing/head/drillhat)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
+	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
 
 /datum/equipment_preset/uscm_ship/di/New()
