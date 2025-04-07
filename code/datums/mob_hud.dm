@@ -22,7 +22,7 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	MOB_HUD_HUNTER = new /datum/mob_hud/hunter_hud(),
 	MOB_HUD_HUNTER_CLAN = new /datum/mob_hud/hunter_clan(),
 	MOB_HUD_EXECUTE = new /datum/mob_hud/execute_hud(),
-	MOB_HUD_FACTION_UACG = new /datum/mob_hud/faction/guard
+	MOB_HUD_FACTION_UACG = new /datum/mob_hud/faction/guard(),
 	))
 
 /datum/mob_hud
