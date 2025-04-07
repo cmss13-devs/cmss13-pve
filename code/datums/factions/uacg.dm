@@ -12,12 +12,12 @@
 		_role = ID.rank
 	switch(_role)
 		if(JOB_UACG_TECH)
-			hud_icon_state = "uacg_tech"
+			hud_icon_state = "engi_guard"
 		if(JOB_UACG_MEDIC)
-			hud_icon_state = "uacg_medic"
+			hud_icon_state = "medic_guard"
 		if(JOB_UACG_LEAD)
-			hud_icon_state = "uacg_lead"
+			hud_icon_state = "leader_guard"
 		if(JOB_UACG_OFFICER)
-			hud_icon_state = "uacg_officer"
+			hud_icon_state = "officer_guard"
 	if(hud_icon_state)
 		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "uacg_[hud_icon_state]")
