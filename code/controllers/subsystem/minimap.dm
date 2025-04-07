@@ -414,7 +414,8 @@ SUBSYSTEM_DEF(minimaps)
 	name = "Minimap"
 	icon = null
 	icon_state = ""
-	layer = ABOVE_HUD_LAYER
+	layer = TACMAP_LAYER
+	plane = TACMAP_PLANE
 	screen_loc = "1,1"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	appearance_flags = TILE_BOUND
@@ -529,6 +530,7 @@ SUBSYSTEM_DEF(minimaps)
 	name = "You are here"
 	icon = 'icons/ui_icons/map_blips.dmi'
 	icon_state = "locator"
+	plane = TACMAP_PLANE
 	layer = INTRO_LAYER // 1 above minimap
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	var/atom/movable/screen/minimap/current_map
@@ -822,6 +824,8 @@ SUBSYSTEM_DEF(minimaps)
 	desc = "Close the minimap"
 	icon = 'icons/ui_icons/minimap_buttons.dmi'
 	icon_state = "close"
+	layer = TACMAP_LAYER
+	plane = TACMAP_PLANE
 	screen_loc = "RIGHT,TOP"
 	/// what minimap table is linked to this button
 	var/obj/structure/machinery/prop/almayer/CICmap/linked_map
@@ -851,6 +855,8 @@ SUBSYSTEM_DEF(minimaps)
 	desc = "Stop the scrolling of the minimap(shared)"
 	icon = 'icons/ui_icons/minimap_buttons.dmi'
 	icon_state = "scroll"
+	layer = TACMAP_LAYER
+	plane = TACMAP_PLANE
 	screen_loc = "CENTER,TOP"
 	/// what minimap screen is linked to this button
 	var/atom/movable/screen/minimap/linked_map
@@ -882,6 +888,8 @@ SUBSYSTEM_DEF(minimaps)
 
 /atom/movable/screen/minimap_tool
 	icon = 'icons/ui_icons/minimap_buttons.dmi'
+	layer = TACMAP_LAYER
+	plane = TACMAP_PLANE
 	///x offset of the minimap icon for this zlevel. mostly used for shorthand
 	var/x_offset
 	///y offset of the minimap icon for this zlevel. mostly used for shorthand
