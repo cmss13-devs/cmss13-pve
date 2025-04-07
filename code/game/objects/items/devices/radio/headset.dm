@@ -982,6 +982,22 @@
 		"Corporate Liaison" = TRACKER_CL
 	)
 
+/obj/item/device/radio/headset/distress/pmc/platoon
+	desc = "A special headset used by corporate PMCs.  Channels are as follows: #p - general, #y - WY."
+	initial_keys = list(/obj/item/device/encryptionkey/pmc)
+	locate_setting = TRACKER_SL
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Platoon Sergeant" = TRACKER_SL,
+		"Squad Sergeant" = TRACKER_FTL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
+/obj/item/device/radio/headset/distress/pmc/platoon/cmd
+	name = "overwatch headset"
+	desc = "A special headset used by PMC Overwatch.  Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
+	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
+
 /obj/item/device/radio/headset/distress/cbrn
 	name = "\improper CBRN headset"
 	desc = "A headset given to CBRN marines. Channels are as follows: :g - public, :v - marine command, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel"
@@ -1211,7 +1227,7 @@
 	icon_state = "nav_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/usasf)
 	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = MOB_HUD_FACTION_NAVY
 
 /obj/item/device/radio/headset/distress/USASF/attache
 	desc = "A sleek headset used by members of the United States Aerospace Force, manufactured in Sol. Low profile and surprisngly comfortable. Featured channels include: ; - USASF, :o - Colony, :a Local USCM Forces."
@@ -1238,7 +1254,7 @@
 	icon_state = "arm_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/army)
 	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = MOB_HUD_FACTION_ARMY
 
 /obj/item/device/radio/headset/distress/army/attache
 	desc = "A robust headset used by members of the United States Army. Built to outlast those it's issued to. Featured channels include: ; - US Army, :o - Colony, :a Local USCM Forces."

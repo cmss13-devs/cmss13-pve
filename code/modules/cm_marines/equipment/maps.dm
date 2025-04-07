@@ -9,7 +9,6 @@
 	// color = ... (Colors can be names - "red, green, grey, cyan" or a HEX color code "#FF0000")
 	var/dat // Page content
 	var/html_link = ""
-	var/window_size = "1280x720"
 
 /obj/item/map/attack_self(mob/user) //Open the map
 	..()
@@ -54,7 +53,7 @@
 
 				</html>
 			"}
-	show_browser(usr, dat, name, "papermap", "size=[window_size]")
+	show_browser(usr, dat, name, "papermap", width = 1280, height = 720)
 
 /obj/item/map/lazarus_landing_map
 	name = "\improper Lazarus Landing Map"
@@ -174,6 +173,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
+		MAP_LV295_BLACKSITE = new /obj/item/map/lv522_map(),
 		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 	)

@@ -275,6 +275,8 @@
 	ID.registered_gid = new_human.gid
 	ID.blood_type = new_human.blood_type
 	ID.paygrade = load_rank(new_human, mob_client) || ID.paygrade
+	var/datum/money_account/acct = create_account(new_human, rand(30, 50), GLOB.paygrades[ID.paygrade])
+	ID.associated_account_number = acct.account_number
 	ID.uniform_sets = uniform_sets
 	new_human.equip_to_slot_or_del(ID, WEAR_ID)
 	new_human.faction = faction
@@ -1449,12 +1451,16 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/green, WEAR_IN_HELMET)
 
 /datum/equipment_preset/proc/add_combat_gloves(mob/living/carbon/human/new_human)
-	var/add_combat_gloves = rand(1,4)
+	var/add_combat_gloves = rand(1,5)
 	switch(add_combat_gloves)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/fingerless, WEAR_HANDS)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown/fingerless, WEAR_HANDS)
 
 /datum/equipment_preset/proc/add_helmet_cigarettes(mob/living/carbon/human/new_human)
 	var/add_helmet_cigarettes = rand(1,10)
