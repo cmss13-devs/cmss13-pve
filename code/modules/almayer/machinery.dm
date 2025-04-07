@@ -186,6 +186,9 @@
 /obj/structure/machinery/prop/almayer/CICmap/pmc
 	minimap_flag = MINIMAP_FLAG_PMC
 
+/obj/structure/machinery/prop/almayer/CICmap/colony
+	minimap_flag = MINIMAP_FLAG_COLONIST
+
 /obj/structure/machinery/prop/almayer/CICmap/toc
 	name = "tactical map screen"
 	desc = "A screen on the TOC computer displaying the tactical map."

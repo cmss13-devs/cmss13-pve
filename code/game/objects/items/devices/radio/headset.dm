@@ -952,12 +952,14 @@
 	name = "colony headset"
 	desc = "A standard headset used by colonists."
 	frequency = COLONY_FREQ
+	minimap_flag = MINIMAP_FLAG_COLONIST
 
 /obj/item/device/radio/headset/distress/WY
 	name = "WY corporate headset"
 	desc = "A headset commonly worn by WY corporate personnel."
 	frequency = WY_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/WY)
+	minimap_flag = MINIMAP_FLAG_PMC
 
 /obj/item/device/radio/headset/distress/dutch
 	name = "Dutch's Dozen headset"
@@ -965,6 +967,7 @@
 	frequency = DUT_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	ignore_z = TRUE
+	minimap_flag = MINIMAP_FLAG_USCM
 
 /obj/item/device/radio/headset/distress/pmc
 	name = "PMC headset"
@@ -1013,6 +1016,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom)
 	ignore_z = TRUE
 	has_hud = TRUE
+	minimap_flag = MINIMAP_FLAG_USCM
 
 /obj/item/device/radio/headset/distress/pmc/hvh
 	desc = "A special headset used by corporate personnel. Channels are as follows: :o - colony."
