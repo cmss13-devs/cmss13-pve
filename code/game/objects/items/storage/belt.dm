@@ -206,7 +206,7 @@
 	var/mode = 1 //Picking from pill bottle mode
 
 	can_hold = list(
-		/obj/item/device/healthanalyzer,
+//		/obj/item/device/healthanalyzer/soul,
 		/obj/item/reagent_container/dropper,
 		/obj/item/reagent_container/glass/beaker,
 		/obj/item/reagent_container/glass/bottle,
@@ -257,7 +257,7 @@
 /obj/item/storage/belt/medical/full/with_defib_and_analyzer/fill_preset_inventory()
 	. = ..()
 	new /obj/item/device/defibrillator(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/device/healthanalyzer/soul(get_turf(src))
 
 /obj/item/storage/belt/medical/full/with_suture_and_graft/fill_preset_inventory()
 	. = ..()
@@ -386,7 +386,7 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/device/healthanalyzer/soul(get_turf(src))
 
 /obj/item/storage/belt/medical/lifesaver/upp
 	name = "\improper Type 41 pattern lifesaver bag"
@@ -451,7 +451,7 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/device/healthanalyzer/soul(get_turf(src))
 
 /obj/item/storage/belt/security
 	name = "\improper duty belt"
