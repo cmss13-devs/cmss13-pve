@@ -1613,7 +1613,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Squad Sergeant";
+	job = "Squad Leader";
 	pixel_x = 8;
 	can_block_movement = 0
 	},
@@ -1681,7 +1681,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Squad Sergeant";
+	job = "Squad Leader";
 	pixel_x = -7;
 	can_block_movement = 0
 	},
@@ -4440,28 +4440,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
-"kb" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/prep_hallway)
 "kc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -4870,10 +4848,10 @@
 	},
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/marine/smartgunner/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ld" = (
@@ -4920,10 +4898,10 @@
 	},
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/marine/smartgunner/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ll" = (
@@ -20811,7 +20789,7 @@ kl
 kl
 kx
 kn
-kb
+jY
 jU
 jI
 jw
