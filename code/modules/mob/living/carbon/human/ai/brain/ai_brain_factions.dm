@@ -165,6 +165,7 @@
 		FACTION_COLONIST,
 		FACTION_MARINE,
 		FACTION_WY,
+		FACTION_UACG,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
@@ -242,6 +243,7 @@
 		FACTION_MARSHAL,
 		FACTION_TWE,
 		FACTION_WY,
+		FACTION_UACG
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
@@ -345,6 +347,7 @@
 		FACTION_MARSHAL,
 		FACTION_TWE,
 		FACTION_WY,
+		FACTION_UACG
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
@@ -463,6 +466,7 @@
 		FACTION_MARSHAL,
 		FACTION_TWE,
 		FACTION_WY,
+		FACTION_UACG
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
@@ -541,6 +545,7 @@
 		FACTION_MERCENARY,
 		FACTION_TWE,
 		FACTION_SURVIVOR,
+		FACTION_UACG
 	)
 	enter_combat_lines = list(
 		"*warcry",
@@ -606,6 +611,7 @@
 		FACTION_MARINE,
 		FACTION_ARMY,
 		FACTION_NAVY,
+		FACTION_UACG
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,

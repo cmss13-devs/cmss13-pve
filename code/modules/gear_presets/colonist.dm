@@ -993,7 +993,8 @@
 	faction = FACTION_COLONIST
 	faction_group = FACTION_LIST_UA_COLONY
 	assignment = "Colonial Militiaman"
-	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "uacg_Rifle"
+	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP)
 	idtype = /obj/item/card/id/dogtag
@@ -1048,6 +1049,7 @@
 	name = "US Colonial Guard Medic"
 	assignment = "Colonial Militiaman Medic"
 	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "uacg_medic"
 	skills = /datum/skills/civilian/survivor/marshal/medic
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_CIVILIAN_MEDBAY)
 
@@ -1062,13 +1064,13 @@
 	var/maybecap = rand(1,3)
 	switch(maybecap)
 		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic/white, WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_IN_BACK)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_HEAD)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic/white, WEAR_IN_BACK)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic/white, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_IN_BACK)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
@@ -1098,6 +1100,7 @@
 	name = "US Colonial Guard Technician"
 	assignment = "Colonial Militiaman Technician"
 	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "uacg_tech"
 	skills = /datum/skills/civilian/survivor/marshal/tech
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
 
@@ -1136,6 +1139,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
 	//storage
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/medium_stack, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded, WEAR_IN_BACK)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
@@ -1152,6 +1157,7 @@
 	name = "US Colonial Guard Unit Leader"
 	assignment = "Colonial Militiaman Unit Leader"
 	paygrades = list(PAY_SHORT_AE7 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "uacg_lead"
 
 
 /datum/equipment_preset/colonist/security/guard/nco/load_gear(mob/living/carbon/human/new_human)
@@ -1190,7 +1196,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
 	//storage
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/misc/flares, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke, WEAR_IN_BACK)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
@@ -1208,6 +1213,7 @@
 	name = "US Colonial Guard Officer"
 	assignment = "Colonial Militiaman Officer"
 	paygrades = list(PAY_SHORT_AO1 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "uacg_officer"
 	skills = /datum/skills/snco
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_COMMAND)
 
@@ -1233,7 +1239,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
 	//storage
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/misc/flares, WEAR_IN_BACK)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
