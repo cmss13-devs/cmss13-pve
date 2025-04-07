@@ -235,9 +235,9 @@
 
 /obj/item/device/motiondetector/proc/scan()
 	set waitfor = 0
-	new /obj/effect/temp_visual/minimap_pulse(get_turf(src), minimap_flag, detector_mode)
 	if(scanning)
 		return
+	new /obj/effect/temp_visual/minimap_pulse(get_turf(src), minimap_flag, detector_mode)
 	scanning = TRUE
 	var/mob/living/carbon/human/human_user = get_user()
 
