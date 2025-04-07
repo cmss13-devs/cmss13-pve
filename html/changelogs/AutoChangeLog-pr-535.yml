@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "New smartgun ammo type; Impact Detonating. Negative AP, slows down non-huge bugs"
+  - balance: "smartguns now use more power depending on the ammo type selected. Baseline usage is increased too"
+  - imageadd: "Icon for the ammo mode when toggled to"
