@@ -995,6 +995,7 @@
 		"Squad Sergeant" = TRACKER_FTL,
 		"Landing Zone" = TRACKER_LZ
 	)
+	minimap_type = /datum/action/minimap/pmc
 
 /obj/item/device/radio/headset/distress/pmc/platoon/cmd
 	name = "overwatch headset"
