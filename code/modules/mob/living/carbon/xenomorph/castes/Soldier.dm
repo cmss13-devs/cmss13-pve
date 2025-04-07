@@ -35,7 +35,7 @@
 
 	gib_chance = 100
 	claw_type = CLAW_TYPE_SHARP
-	pull_multiplier = 0.2 /// Pretty much no pull delay, for those quick drags.
+	pull_multiplier = 0.4 /// Pretty much no pull delay, for those quick drags. EDIT - slight increase to reduce the Soldier "Dance"
 
 	acid_blood_damage = 35 /// Strong acid blood. Should be a define in the future.
 	acid_blood_spatter = TRUE /// Testing variable, means that their blood can melt objects in the environment. Primarily barricades.
@@ -57,7 +57,7 @@
 /// The maximum aggression it is possible to accumulate.
 #define AGGRESSION_MAXIMUM 100
 /// Aggression required to go full-on lethals instead of capture.
-#define AGGRESSION_ENABLE_LETHAL 50
+#define AGGRESSION_ENABLE_LETHAL 40
 /// If there is no hive to drag people to, this is the aggression the alien starts with.
 #define AGGRESSION_NO_HIVE AGGRESSION_ENABLE_LETHAL
 /// The cap on aggression increase when something significant happens, like taking damage.
