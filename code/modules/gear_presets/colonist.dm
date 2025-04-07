@@ -990,7 +990,7 @@
 /datum/equipment_preset/colonist/security/guard
 	name = "US Colonial Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
+	faction = FACTION_UACG
 	faction_group = FACTION_LIST_UA_COLONY
 	assignment = "Colonial Militiaman"
 	role_comm_title = "uacg_Rifle"
@@ -1083,6 +1083,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
 	add_worker_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
+	//storage
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_BACK)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
