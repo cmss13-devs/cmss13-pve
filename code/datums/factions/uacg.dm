@@ -20,4 +20,4 @@
 		if(JOB_UACG_OFFICER)
 			hud_icon_state = "uacg_officer"
 	if(hud_icon_state)
-		holder.overlays += image('icons/mob/hud/marine_hud.dmi', human, "uacg_[hud_icon_state]")
+		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "uacg_[hud_icon_state]")
