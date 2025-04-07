@@ -640,7 +640,7 @@
 		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Type 80 Bayonet", round(scale * 5), /obj/item/attachable/bayonet/upp, null, VENDOR_ITEM_REGULAR),
-		list("Type 83 Grenade Launcher", 3, /obj/item/attachable/attached_gun/grenade/upp, null, VENDOR_ITEM_REGULAR),
+		list("Type 83 Grenade Launcher", 3, /obj/item/attachable/attached_gun/grenade/type71, null, VENDOR_ITEM_REGULAR),
 
 		list("CLOTHING", -1, null, null),
 		list("Balaclava", round(scale * 5), /obj/item/clothing/mask/rebreather/scarf/tan, VENDOR_ITEM_REGULAR),
@@ -715,6 +715,7 @@
 		list("Boonie Hat (olive)", round(scale * 5), /obj/item/clothing/head/cmcap/boonie, VENDOR_ITEM_REGULAR),
 		list("Boonie Hat (tan)", round(scale * 5), /obj/item/clothing/head/cmcap/boonie/tan, VENDOR_ITEM_REGULAR),
 		list("Cap", round(scale * 5), /obj/item/clothing/head/cmcap, VENDOR_ITEM_REGULAR),
+		list("USCM Headset", round(scale * 5), /obj/item/clothing/head/headset, VENDOR_ITEM_REGULAR),
 		list("Headband (brown)", round(scale * 5), /obj/item/clothing/head/headband/brown, VENDOR_ITEM_REGULAR),
 		list("Headband (gray)", round(scale * 5), /obj/item/clothing/head/headband/brown, VENDOR_ITEM_REGULAR),
 		list("Headband (red)", round(scale * 5), /obj/item/clothing/head/headband/red, VENDOR_ITEM_REGULAR),
