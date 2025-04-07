@@ -808,8 +808,7 @@
 	role_comm_title = "IO"
 	minimum_age = 22
 	skills = /datum/skills/SO
-	minimap_icon = list("io" = COLOR_SILVER)
-	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
+	minimap_icon = "io"
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
 /datum/equipment_preset/uscm_ship/io/load_status(mob/living/carbon/human/new_human)
