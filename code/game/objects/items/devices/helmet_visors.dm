@@ -345,7 +345,7 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider
 	name = "advanced night vision optic"
 	desc = "An insertable visor HUD into a standard USCM helmet. This type gives a form of night vision and is standard issue in special forces units."
-	hud_type = list(MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_MEDICAL_ADVANCED)
 	helmet_overlay = "nvg_sight_right_raider"
 	power_use = 0
 	visor_glows = FALSE
@@ -366,3 +366,7 @@
 
 /obj/item/device/helmet_visor/night_vision/marine_raider/process(delta_time)
 	return PROCESS_KILL
+
+/obj/item/device/helmet_visor/night_vision/marine_raider/twe
+	desc = "A high-tech visor often seen used by the Royal Marine Commando forces of the TWE. Offers various tactical readouts as well as providing night-vision capabilities."
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)

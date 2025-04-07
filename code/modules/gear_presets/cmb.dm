@@ -46,11 +46,11 @@
 
 //*****************************************************************************************************/
 /datum/equipment_preset/cmb/deputy
-	name = "US Colonial Marshals Deputy"
+	name = "CMB - US Colonial Marshals Deputy"
 	paygrades = list(PAY_SHORT_CMBD = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CMB Dep"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "Office of Colonial Marshals Deputy"
+	assignment = JOB_CMB
 	rank = JOB_CMB
 	skills = /datum/skills/cmb
 
@@ -85,12 +85,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/cmb/deputy/spanish
-	name = "LatAm Colonial Marshals Deputy"
+	name = "CMB - LatAm Colonial Marshals Deputy"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
 
 /datum/equipment_preset/cmb/deputy/emergency
-	name = "US Colonial Marshals Deputy (Emergency, SMG)"
+	name = "CMB - US Colonial Marshals Deputy (Emergency, SMG)"
 
 /datum/equipment_preset/cmb/deputy/emergency/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -142,12 +142,12 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/cmb/deputy/emergency/spanish
-	name = "LatAm Colonial Marshals Deputy (Emergency, SMG)"
+	name = "CMB - LatAm Colonial Marshals Deputy (Emergency, SMG)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner
-	name = "CMB - Colonial Marshals Deputy (Emergency, Shotgun)"
+	name = "CMB - US Colonial Marshals Deputy (Emergency, Shotgun)"
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -196,18 +196,18 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/spanish
-	name = "LatAm Colonial Marshals Deputy (Emergency, Shotgun)"
+	name = "CMB - LatAm Colonial Marshals Deputy (Emergency, Shotgun)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/marshal
-	name = "US Colonial Marshal"
+	name = "CMB - US Colonial Marshal"
 	paygrades = list(PAY_SHORT_CMBM = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/marshal
 	role_comm_title = "CMB Mar"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "Colonial Marshal"
+	assignment = JOB_CMB_TL
 	rank = JOB_CMB_TL
 	skills = /datum/skills/cmb/leader
 	minimum_age = 30
@@ -256,7 +256,7 @@
 	idtype = /obj/item/card/id/deputy
 	role_comm_title = "CMB Synth"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "CMB Investigative Synthetic"
+	assignment = JOB_CMB_SYN
 	rank = JOB_CMB_SYN
 	languages = ALL_SYNTH_LANGUAGES
 
@@ -329,7 +329,7 @@
 	role_comm_title = "ICC Rep"
 	flags = EQUIPMENT_PRESET_EXTRA
 
-	assignment = "Interstellar Commerce Commission Liaison"
+	assignment = JOB_CMB_ICC
 	rank = JOB_CMB_ICC
 	skills = /datum/skills/civilian
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE)
@@ -362,7 +362,7 @@
 	role_comm_title = "Observer"
 	flags = EQUIPMENT_PRESET_EXTRA
 
-	assignment = "Interstellar Human Rights Observer"
+	assignment = JOB_CMB_OBS
 	rank = JOB_CMB_OBS
 	skills = /datum/skills/civilian
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_RUSSIAN)

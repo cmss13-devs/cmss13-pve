@@ -1,7 +1,7 @@
 /datum/equipment_preset/uscm_ship
 	name = "USCM (ship roles)"
 	faction = FACTION_MARINE
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	minimum_age = 20
 	languages = list(LANGUAGE_ENGLISH)
 	idtype = /obj/item/card/id/dogtag
