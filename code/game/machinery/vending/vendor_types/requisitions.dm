@@ -5,7 +5,7 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns
 	name = "\improper ColMarTech Automated Armaments Vendor"
 	desc = "An automated supply rack hooked up to a big storage of various firearms and explosives. Can be accessed by the Requisitions Officer and Cargo Techs."
-	icon_state = "req_guns"
+	icon_state = "prep"
 	req_access = list(ACCESS_MARINE_CARGO)
 	vendor_theme = VENDOR_THEME_USCM
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND | VEND_LOAD_AMMO_BOXES
