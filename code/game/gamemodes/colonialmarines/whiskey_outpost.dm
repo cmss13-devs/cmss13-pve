@@ -15,7 +15,6 @@
 	role_mappings = list(
 		/datum/job/command/commander/whiskey = JOB_CO,
 		/datum/job/command/executive/whiskey = JOB_XO,
-		/datum/job/civilian/synthetic/whiskey = JOB_SYNTH,
 		/datum/job/command/warrant/whiskey = JOB_CHIEF_POLICE,
 		/datum/job/command/bridge/whiskey = JOB_SO,
 		/datum/job/command/tank_crew/whiskey = JOB_TANK_CREW,

@@ -572,14 +572,7 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon/synth
 	name = "USCM reconnaissance synth headset"
 	desc = "Issued only to USCM synthetics attached to FORECON & MARSOC units."
-	icon_override = 'icons/mob/humans/onmob/head_1.dmi'
-	icon_state = "uscm_headset"
-	item_state = "uscm_headset"
-	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/head_1.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/head_1.dmi',
-		)
-	initial_keys = list(/obj/item/device/encryptionkey/cmpcom/synth)
+	initial_keys = list(/obj/item/device/encryptionkey/po)
 	volume = RADIO_VOLUME_CRITICAL
 	has_tracker = TRUE
 	misc_tracking = TRUE
