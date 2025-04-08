@@ -1160,8 +1160,8 @@
 	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
 
 /obj/item/storage/pouch/flare/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/m94))
-		var/obj/item/storage/box/m94/M = W
+	if(istype(W, /obj/item/storage/box/flare))
+		var/obj/item/storage/box/flare/M = W
 		dump_into(M,user)
 	else
 		return ..()

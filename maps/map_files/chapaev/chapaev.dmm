@@ -158,6 +158,11 @@
 	color = "#8B9490";
 	pixel_x = 3
 	},
+/obj/item/device/multitool/upp,
+/obj/item/device/multitool/upp{
+	pixel_x = 6;
+	pixel_y = -2
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "az" = (
@@ -4479,6 +4484,10 @@
 	light_range = 5
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/misc/mre/upp{
+	pixel_y = 10;
+	pixel_x = 3
+	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "ke" = (
@@ -5083,6 +5092,18 @@
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 8
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lH" = (
@@ -5149,6 +5170,12 @@
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lP" = (
@@ -5168,6 +5195,14 @@
 	color = "#8B9490"
 	},
 /obj/item/ammo_box/magazine/nade_box/upp/smoke,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lT" = (
@@ -8069,6 +8104,7 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
+/obj/item/storage/box/flare/upp,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "CN" = (
