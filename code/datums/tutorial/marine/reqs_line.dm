@@ -84,7 +84,7 @@
 		/obj/item/storage/backpack/general_belt = list("G8", "G8 belt"),
 		/obj/item/storage/pouch/magazine/large = list("Large mag pouch", "Large magazine pouch"),
 		/obj/item/storage/pouch/shotgun/large = list("Shotgun pouch", "Shotgun shells pouch", "Shells pouch", "Large shells pouch"),
-		/obj/item/storage/box/m94/signal = list("Signal flares", "box of signals", "CAS flares"),
+		/obj/item/storage/box/flare/signal = list("Signal flares", "box of signals", "CAS flares"),
 		/obj/item/device/motiondetector = list("MD", "Motion Detector"),
 		/obj/item/device/binoculars = list("Binos", "Binoculars"),
 		/obj/item/device/binoculars/range/designator = list("LD", "Designator", "Laser Designator", "Tac Binos"),
