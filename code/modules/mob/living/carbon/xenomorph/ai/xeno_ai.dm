@@ -199,7 +199,6 @@
 			if(prob(10))
 				KnockDown(0.2)
 				inertia_dir = get_dir(src, T)
-				var/turf/space_turf = get_turf(src)
 				step(src, inertia_dir)
 				apply_damage(30)
 				var/obj/item/thrown_piece
