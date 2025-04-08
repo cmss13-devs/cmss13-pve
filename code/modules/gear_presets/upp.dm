@@ -180,7 +180,6 @@
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 
-
 /datum/equipment_preset/upp/rifleman/ag80
 	name = "UPP Squad Rifleman (Equipped, AG80)"
 
