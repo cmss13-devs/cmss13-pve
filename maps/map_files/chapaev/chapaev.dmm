@@ -5080,12 +5080,6 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/medical)
 "lG" = (
-/obj/structure/machinery/light/double{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5;
-	dir = 8
-	},
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
