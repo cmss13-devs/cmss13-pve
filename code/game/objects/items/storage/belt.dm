@@ -1862,8 +1862,8 @@
 		new /obj/item/device/flashlight/flare(src)
 
 /obj/item/storage/belt/gun/flaregun/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/m94))
-		var/obj/item/storage/box/m94/M = W
+	if(istype(W, /obj/item/storage/box/flare))
+		var/obj/item/storage/box/flare/M = W
 		dump_into(M,user)
 	else
 		return ..()
