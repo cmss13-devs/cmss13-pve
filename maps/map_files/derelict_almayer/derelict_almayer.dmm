@@ -58967,9 +58967,9 @@
 /area/almayer/command/lifeboat)
 "wlk" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /obj/item/stack/sheet/mineral/plastic/small_stack,
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/req)

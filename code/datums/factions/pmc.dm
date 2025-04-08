@@ -95,7 +95,7 @@
 		list("Vertical Grip", 15, /obj/item/attachable/verticalgrip, null, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", 0, null, null, null),
-		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/m94, null, VENDOR_ITEM_RECOMMENDED),
+		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/flare, null, VENDOR_ITEM_RECOMMENDED),
 		list("Smoke Grenade", 7, /obj/item/explosive/grenade/smokebomb, null, VENDOR_ITEM_REGULAR)
 	)
 
@@ -123,6 +123,6 @@
 		list("VP70 Magazine (9x19mm)", 50, /obj/item/ammo_magazine/pistol/vp70, null, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", 0, null, null, null),
-		list("M94 Marking Flare Pack", 30, /obj/item/storage/box/m94, null, VENDOR_ITEM_RECOMMENDED),
+		list("M94 Marking Flare Pack", 30, /obj/item/storage/box/flare, null, VENDOR_ITEM_RECOMMENDED),
 		list("Smoke Grenade", 30, /obj/item/explosive/grenade/smokebomb, null, VENDOR_ITEM_REGULAR)
 	)
