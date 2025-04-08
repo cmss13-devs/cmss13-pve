@@ -388,13 +388,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/squad_one)
-"aR" = (
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
-	pixel_y = 25
-	},
-/obj/structure/largecrate/random/case/double,
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "aS" = (
 /obj/structure/sign/safety/elevator{
 	pixel_x = 13;
@@ -408,10 +401,6 @@
 	icon_state = "NE-out";
 	pixel_y = 1;
 	pixel_x = 1
-	},
-/obj/structure/largecrate/random/case,
-/obj/structure/largecrate/supply/ammo/m41amk1/forecon{
-	pixel_y = 10
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -714,6 +703,10 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/hangar)
+"bC" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
 "bD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -735,6 +728,13 @@
 	id = "cmdcorridor"
 	},
 /turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+"bF" = (
+/obj/structure/largecrate/random/case,
+/obj/structure/largecrate/supply/ammo/m41amk1/forecon{
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "bG" = (
 /obj/effect/decal/warning_stripes{
@@ -762,6 +762,36 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
+"bJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.5;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"bK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	light_power = 0.5;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "bL" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -786,6 +816,25 @@
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"bO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/light/small/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.5
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"bP" = (
+/obj/vehicle/powerloader,
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/hangar)
 "bQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -1268,6 +1317,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
+"cY" = (
+/obj/structure/sign/safety/flightcontrol{
+	pixel_x = 31;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/hangar)
 "dc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1640,9 +1696,13 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/vehicle/powerloader,
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "gg" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_y = -25
+	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/hangar)
 "gj" = (
@@ -2354,11 +2414,6 @@
 "mT" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
-	},
-/obj/structure/machinery/light/small/blue{
-	light_color = "#dae2ff";
-	light_power = 0.5;
-	pixel_y = -1
 	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/hangar)
@@ -3366,15 +3421,6 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
-"uO" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.5
-	},
-/obj/vehicle/powerloader,
-/turf/open/floor/almayer/cargo,
-/area/golden_arrow/hangar)
 "uS" = (
 /obj/item/folder/black_random{
 	pixel_x = -9;
@@ -3920,14 +3966,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"zQ" = (
-/obj/structure/machinery/light/small/blue{
-	light_color = "#dae2ff";
-	light_power = 0.5;
-	pixel_y = -1
-	},
-/turf/open/floor/almayer/cargo,
-/area/golden_arrow/hangar)
 "zT" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/almayer,
@@ -4109,14 +4147,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/synthcloset)
-"BB" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.5
-	},
-/turf/open/floor/almayer/cargo,
-/area/golden_arrow/hangar)
 "BF" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -4183,17 +4213,6 @@
 	pixel_x = -22
 	},
 /turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/hangar)
-"Ca" = (
-/obj/structure/sign/safety/flightcontrol{
-	pixel_x = 31;
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	dir = 4
-	},
-/turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "Cb" = (
 /obj/structure/machinery/power/smes/buildable,
@@ -7594,7 +7613,7 @@ Sn
 Sn
 Sn
 TX
-BB
+bo
 EO
 Wi
 aY
@@ -7696,7 +7715,7 @@ Sn
 Sn
 Sn
 TX
-EK
+bO
 EK
 vi
 aY
@@ -7708,7 +7727,7 @@ Uq
 vi
 Ww
 rF
-rF
+bJ
 QG
 QG
 QG
@@ -7798,7 +7817,7 @@ Sn
 Sn
 Sn
 TX
-bo
+bP
 EO
 Wi
 aY
@@ -7900,7 +7919,7 @@ Sn
 Sn
 Sn
 TX
-EK
+bO
 EK
 vi
 aY
@@ -7912,7 +7931,7 @@ Uq
 vi
 kh
 mC
-EK
+bK
 QG
 Yj
 kQ
@@ -8002,7 +8021,7 @@ Sn
 Sn
 Sn
 TX
-uO
+bP
 EO
 Wi
 aY
@@ -8014,7 +8033,7 @@ YB
 vi
 vK
 Eb
-zQ
+bo
 QG
 QG
 va
@@ -9939,8 +9958,8 @@ CO
 Ho
 Ho
 mP
-Ho
-Ca
+cY
+Un
 Un
 ZS
 Ho
@@ -10162,8 +10181,8 @@ bi
 bi
 bh
 bc
-TX
-aR
+bC
+YB
 lM
 pi
 qh
@@ -10876,7 +10895,7 @@ bi
 bi
 bi
 bc
-TX
+bF
 WJ
 aH
 WJ
