@@ -354,7 +354,7 @@
 
 /obj/item/device/binoculars/range/designator/upp
 
-	icon_state = "binoculars_upp"
+	icon_state = "binoculars_upp_alt"
 	cas_laser_overlay = "binoculars_laser_civ"
 	range_laser_overlay = "binoculars_range_civ"
 
