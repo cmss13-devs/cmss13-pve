@@ -448,6 +448,13 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
 
+/datum/ammo/bullet/rifle/type71/hv
+	name = "high velocity 11.7x22 bullet"
+	penetration = 0
+	effective_range_max = 12
+	damage_falloff = DAMAGE_FALLOFF_TIER_9
+	max_range = 24
+
 //====== 9.7x22 AG80
 
 /datum/ammo/bullet/rifle/ag80

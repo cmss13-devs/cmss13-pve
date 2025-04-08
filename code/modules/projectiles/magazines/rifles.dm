@@ -330,6 +330,12 @@
 	default_ammo = /datum/ammo/bullet/rifle/type71/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
+/obj/item/ammo_magazine/rifle/type71/hv
+	name = "\improper Type 71 HV magazine (11.7x22mm)"
+	desc = "A 11.7x22mm high-capacity casket magazine containing high velocity rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/type71/hv
+	ammo_band_color = AMMO_BAND_COLOR_HIGH_VELOCITY
+
 //-------------------------------------------------------
 //UPP AG80 RIFLE
 

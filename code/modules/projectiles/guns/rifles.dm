@@ -1274,6 +1274,7 @@
 	icon_state = "type73"
 	item_state = "type73"
 	fire_sound = "gun_silenced"
+	current_mag = /obj/item/ammo_magazine/rifle/type71/hv
 	wield_delay = 0 //Ends up being .5 seconds due to scope
 	wield_delay = WIELD_DELAY_VERY_FAST
 	inherent_traits = list(TRAIT_GUN_SILENCED)
@@ -1288,7 +1289,7 @@
 	random_spawn_muzzle = list()
 	bonus_overlay_x = 1
 	bonus_overlay_y = 0
-	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/type73suppressor, /obj/item/attachable/scope/upp/integrated)
+	starting_attachment_types = null
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_config_values()
 	..()
@@ -1300,6 +1301,26 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	scatter_unwielded = SCATTER_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+
+/obj/item/weapon/gun/rifle/type71/carbine/handle_starting_attachment()
+	..()
+	//suppressor
+	var/obj/item/attachable/type73suppressor/suppressor = new(src)
+	suppressor.flags_attach_features &= ~ATTACH_REMOVABLE
+	suppressor.Attach(src)
+	update_attachable(suppressor.slot)
+	//scope
+	var/obj/item/attachable/scope/upp/scope = new(src)
+	scope.hidden = TRUE
+	scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	scope.Attach(src)
+	update_attachable(scope.slot)
+	//stock
+	var/obj/item/attachable/stock/type71/stock = new(src)
+	stock.hidden = TRUE
+	stock.flags_attach_features &= ~ATTACH_REMOVABLE
+	stock.Attach(src)
+	update_attachable(stock.slot)
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 22, "under_x" = 23, "under_y" = 14, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 24, "side_rail_y" = 17)
