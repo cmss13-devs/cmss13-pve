@@ -591,6 +591,14 @@
 	pixel_x = 7;
 	pixel_y = 7
 	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 32;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/three{
+	pixel_x = 32;
+	pixel_y = -6
+	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "bo" = (
@@ -614,7 +622,7 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/squad_one)
 "br" = (
-/obj/structure/largecrate/random/case/double,
+/obj/structure/dropship_equipment/paradrop_system,
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
 "bs" = (
@@ -1403,7 +1411,17 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "dP" = (
-/obj/structure/largecrate/random/case/small,
+/obj/item/rappel_harness/extract/cyclone,
+/obj/item/rappel_harness/extract/cyclone,
+/obj/item/rappel_harness/extract/cyclone,
+/obj/item/rappel_harness/extract/cyclone,
+/obj/item/rappel_harness/extract/cyclone,
+/obj/item/rappel_harness/extract/cyclone,
+/obj/item/rappel_harness/extract/cyclone,
+/obj/item/rappel_harness/extract/cyclone,
+/obj/structure/closet/crate/green{
+	name = "paradrop harness crate"
+	},
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
 "dS" = (
@@ -1787,14 +1805,6 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoon_commander_rooms)
 "gZ" = (
-/obj/structure/sign/safety/bulkhead_door{
-	pixel_x = 32;
-	pixel_y = 6
-	},
-/obj/structure/sign/safety/three{
-	pixel_x = 32;
-	pixel_y = -6
-	},
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
@@ -6041,17 +6051,6 @@
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
-"Ta" = (
-/obj/structure/sign/safety/bulkhead_door{
-	pixel_x = 32;
-	pixel_y = 6
-	},
-/obj/structure/sign/safety/three{
-	pixel_x = 32;
-	pixel_y = -6
-	},
-/turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/hangar)
 "Te" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -9972,7 +9971,7 @@ gZ
 AD
 sO
 Ho
-Ta
+Ho
 Un
 Un
 Un
