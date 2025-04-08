@@ -808,13 +808,13 @@
 		list("Nutrition Autoinjector", floor(scale * 12), /obj/item/reagent_container/hypospray/autoinjector/nutriment, VENDOR_ITEM_RECOMMENDED),
 
 		list("MEDICAL", -1, null, null),
-		list("Gauze", round(scale * 4), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
-		list("Ointment", round(scale * 4), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
-		list("Emergency Autoinjector", round(scale * 4), /obj/item/reagent_container/hypospray/autoinjector/emergency, VENDOR_ITEM_REGULAR),
-		list("Bicaridine Autoinjector", round(scale * 4), /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless, VENDOR_ITEM_REGULAR),
-		list("Kelotane Autoinjector", round(scale * 4), /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless, VENDOR_ITEM_REGULAR),
-		list("Tricordrazine Autoinjector", round(scale * 4), /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
-		list("Tramadol Injector", round(scale * 4), /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, VENDOR_ITEM_REGULAR),
+		list("Gauze", round(scale * 0), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Ointment", round(scale * 0), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
+		list("Emergency Autoinjector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/emergency, VENDOR_ITEM_REGULAR),
+		list("Bicaridine Autoinjector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless, VENDOR_ITEM_REGULAR),
+		list("Kelotane Autoinjector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless, VENDOR_ITEM_REGULAR),
+		list("Tricordrazine Autoinjector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
+		list("Tramadol Injector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, VENDOR_ITEM_REGULAR),
 
 		list("SUIT REPAIR", -1, null, null),
 		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_RECOMMENDED),
@@ -824,6 +824,7 @@
 		list("Folded Emergency Spacesuit", round(scale * 12), /obj/item/prop/folded_emergency_spacesuit, VENDOR_ITEM_REGULAR),
 		list("Magnetic Boots", round(scale * 3), /obj/item/clothing/shoes/marine/magboots, VENDOR_ITEM_RECOMMENDED),
 		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_RECOMMENDED),
+		list("M40 MFHS Metal Foam Grenade", round(scale * 3), /obj/item/explosive/grenade/metal_foam, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("M3 Pattern Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3, VENDOR_ITEM_REGULAR),
@@ -845,14 +846,16 @@
 		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
 		list("M94 Marking Flare Pack", round(scale * 2), /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
 		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
-		list("M72A2 HIPF Starshell Grenade Packet", round(scale * 0), /obj/item/storage/box/packet/flare, VENDOR_ITEM_REGULAR),
+		list("M72A2 HIPF Starshell Grenade Packet", round(scale * 2), /obj/item/storage/box/packet/flare, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 1), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
 		list("Extinguisher", round(scale * 2), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
 		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
+		list("Spare Magnetic Boots/PDT Batteries.", round(scale * 4), /obj/item/cell/crap, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Gas Analyzer", round(scale * 5), /obj/item/device/analyzer, VENDOR_ITEM_REGULAR),
+		list("Inflatable Barrier Case", round(scale * 1), /obj/item/storage/briefcase/inflatable, VENDOR_ITEM_REGULAR),
 		)
 
 //--------------SQUAD ATTACHMENTS VENDOR--------------

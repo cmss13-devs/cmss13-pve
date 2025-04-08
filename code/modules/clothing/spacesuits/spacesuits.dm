@@ -119,7 +119,7 @@
 	gas_transfer_coefficient = 0.05
 	permeability_coefficient = 0.04
 	slowdown = 3
-	breach_vulnerability = SPACESUIT_BREACH_SOFTSUIT
+	breach_vulnerability = SPACESUIT_BREACH_CIVILIAN
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_LOW

@@ -310,6 +310,9 @@
 /turf/proc/inertial_drift(atom/movable/A as mob|obj)
 	if(A.anchored)
 		return
+	//.if(istype(A, /obj/item))
+		//var/obj/item/AB = A
+	//	addtimer(CALLBACK(AB, TYPE_PROC_REF(/obj/item, step), A.last_move_dir), 20)
 	if(!(A.last_move_dir)) return
 	if((istype(A, /mob/) && src.x > 2 && src.x < (world.maxx - 1) && src.y > 2 && src.y < (world.maxy-1)))
 		var/mob/M = A

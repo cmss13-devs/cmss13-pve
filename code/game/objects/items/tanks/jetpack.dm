@@ -1,7 +1,7 @@
 /obj/item/tank/jetpack
 	name = "Jetpack (Empty)"
 	desc = "A tank of compressed gas for use as propulsion in zero-gravity areas. Use with caution."
-	icon_state = "jetpack"
+	icon_state = "jetpack-on"
 	w_class = SIZE_LARGE
 	item_state = "jetpack"
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
@@ -16,6 +16,7 @@
 	. = ..()
 	name = "Toggle Jetpack Stablization"
 	action_icon_state = "smartpack_immobile"
+	button.alpha = 128
 	button.name = name
 	button.overlays.Cut()
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
