@@ -316,7 +316,7 @@
 		if(M.Process_Spacemove(1))
 			if(!M.inertia_dir)
 				return
-		spawn(5)
+		spawn(M.move_delay)
 			if((M && !(M.anchored) && !(M.pulledby) && (M.loc == src)))
 				if(!M.Check_Dense_Object())
 					if(M.inertia_dir)

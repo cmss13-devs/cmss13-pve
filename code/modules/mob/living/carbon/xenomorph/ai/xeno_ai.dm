@@ -195,7 +195,7 @@
 		return TRUE
 	var/area/check_for_gravity = get_area(src)
 	if(!check_for_gravity.gravity)
-		if(!Process_Spacemove(TRUE, get_dir(src, T)))
+		if(!Check_Dense_Object())
 			if(prob(10))
 				KnockDown(0.2)
 				inertia_dir = get_dir(src, T)
