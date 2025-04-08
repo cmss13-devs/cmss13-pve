@@ -5092,11 +5092,6 @@
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
 	light_power = 0.8;
@@ -5170,11 +5165,6 @@
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5195,11 +5185,6 @@
 	color = "#8B9490"
 	},
 /obj/item/ammo_box/magazine/nade_box/upp/smoke,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
