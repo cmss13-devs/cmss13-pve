@@ -717,6 +717,7 @@
 		list("Boonie Hat (olive)", round(scale * 5), /obj/item/clothing/head/cmcap/boonie, VENDOR_ITEM_REGULAR),
 		list("Boonie Hat (tan)", round(scale * 5), /obj/item/clothing/head/cmcap/boonie/tan, VENDOR_ITEM_REGULAR),
 		list("Cap", round(scale * 5), /obj/item/clothing/head/cmcap, VENDOR_ITEM_REGULAR),
+		list("USCM Headset", round(scale * 5), /obj/item/clothing/head/headset, VENDOR_ITEM_REGULAR),
 		list("Headband (brown)", round(scale * 5), /obj/item/clothing/head/headband/brown, VENDOR_ITEM_REGULAR),
 		list("Headband (gray)", round(scale * 5), /obj/item/clothing/head/headband/brown, VENDOR_ITEM_REGULAR),
 		list("Headband (red)", round(scale * 5), /obj/item/clothing/head/headband/red, VENDOR_ITEM_REGULAR),
