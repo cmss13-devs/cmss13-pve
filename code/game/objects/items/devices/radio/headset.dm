@@ -569,6 +569,23 @@
 	initial_keys = list(/obj/item/device/encryptionkey/soc/forecon)
 	volume = RADIO_VOLUME_QUIET
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/forecon/synth
+	name = "USCM reconnaissance synth headset"
+	desc = "Issued only to USCM synthetics attached to FORECON & MARSOC units."
+	icon_state = "ms_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/cmpcom/synth)
+	volume = RADIO_VOLUME_CRITICAL
+	has_tracker = TRUE
+	misc_tracking = TRUE
+	has_hud = TRUE	// Synth retains as they don't often wear helmets
+	locate_setting = TRACKER_ASL
+
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Section Sergeant" = TRACKER_ASL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
 
@@ -901,9 +918,9 @@
 	has_hud = FALSE
 	locate_setting = TRACKER_SL
 	inbuilt_tracking_options = list(
-		"Platoon Commander" = TRACKER_PLTCO,
-		"Platoon Sergeant" = TRACKER_SL,
-		"Squad Sergeant" = TRACKER_FTL,
+		"Overwatch" = TRACKER_PLTCO,
+		"Operation Leader" = TRACKER_SL,
+		"Team Leader" = TRACKER_FTL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
@@ -919,8 +936,8 @@
 	locate_setting = TRACKER_ASL
 
 	inbuilt_tracking_options = list(
-		"Platoon Commander" = TRACKER_PLTCO,
-		"Platoon Sergeant" = TRACKER_ASL,
+		"Overwatch" = TRACKER_PLTCO,
+		"Operation Leader" = TRACKER_ASL,
 		"Landing Zone" = TRACKER_LZ
 	)
 

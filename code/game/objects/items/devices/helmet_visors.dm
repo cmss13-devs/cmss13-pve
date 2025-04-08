@@ -101,6 +101,12 @@
 	helmet_overlay = "med_sight_left"
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_MEDICAL_ADVANCED)
 
+/obj/item/device/helmet_visor/medical/advanced/pmc
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_MEDICAL_ADVANCED)
+
+/obj/item/device/helmet_visor/medical/advanced/upp
+	hud_type = list(MOB_HUD_FACTION_UPP, MOB_HUD_MEDICAL_ADVANCED)
+
 /obj/item/device/helmet_visor/medical/advanced/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
 	for(var/type in hud_type)

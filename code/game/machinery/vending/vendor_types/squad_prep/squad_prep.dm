@@ -225,6 +225,7 @@
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("6b82 Combat Helmet (Green)", round(scale * 15), /obj/item/clothing/head/helmet/upp, VENDOR_ITEM_REGULAR),
 		list("6b82 Combat Helmet (Brown)", round(scale * 15), /obj/item/clothing/head/helmet/upp/alt, VENDOR_ITEM_REGULAR),
+		list("1PN77M \"Periskop\" Camera Unit", floor(scale * 15), /obj/item/device/overwatch_camera/upp, VENDOR_ITEM_REGULAR),
 		list("Radio Headset", round(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils/upp, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
@@ -298,6 +299,7 @@
 		list("PMC Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Tactical Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
+		list("Mk3 TOCU Headcam", floor(scale * 15), /obj/item/device/overwatch_camera/pmc, VENDOR_ITEM_REGULAR),
 		list("PMC Radio Headset", round(scale * 15), /obj/item/device/radio/headset/distress/pmc/platoon, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
