@@ -67,12 +67,9 @@
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
 
-/datum/equipment_preset/upp/militia/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+/datum/equipment_preset/upp/militia/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Territorial Guard Telnyashka"
 	new_human.underwear = "UPP Boxers"
-
-/datum/equipment_preset/upp/militia/load_gear(mob/living/carbon/human/new_human)
-
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/ushanka, WEAR_HEAD)
@@ -151,8 +148,7 @@
 	access = list(ACCESS_UPP_GENERAL)
 
 /datum/equipment_preset/upp/rifleman/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -189,8 +185,7 @@
 	name = "UPP Squad Rifleman (Equipped, AG80)"
 
 /datum/equipment_preset/upp/rifleman/ag80/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -225,8 +220,7 @@
 	name = "UPP Squad Rifleman (Equipped, EVA)"
 
 /datum/equipment_preset/upp/rifleman/eva/load_gear(mob/living/carbon/human/new_human)
-
-
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -269,6 +263,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDICAL, ACCESS_UPP_MEDPREP)
 
 /datum/equipment_preset/upp/sanitar/load_gear(mob/living/carbon/human/new_human)
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
@@ -322,6 +317,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 
 /datum/equipment_preset/upp/machinegunner/load_gear(mob/living/carbon/human/new_human)
+	add_upp_underwear(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	//head
@@ -361,6 +357,7 @@
 	role_comm_title = "SQSGT"
 
 /datum/equipment_preset/upp/squadlead/load_gear(mob/living/carbon/human/new_human)
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -403,6 +400,7 @@
 	minimap_icon = "leader"
 
 /datum/equipment_preset/upp/navallead/load_gear(mob/living/carbon/human/new_human)
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
@@ -443,6 +441,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
 
 /datum/equipment_preset/upp/military_police/load_gear(mob/living/carbon/human/new_human)
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
@@ -476,7 +475,6 @@
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/upp/officer/load_gear(mob/living/carbon/human/new_human)
-
 
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel, WEAR_BACK)
@@ -542,8 +540,7 @@
 	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/upp/officer/naval/load_gear(mob/living/carbon/human/new_human)
-
-
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/naval(new_human), WEAR_BODY)
@@ -575,7 +572,7 @@
 	new_human.set_species(SYNTH_GEN_THREE)
 
 /datum/equipment_preset/upp/synth/load_gear(mob/living/carbon/human/new_human)
-
+	add_upp_underwear(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
@@ -637,7 +634,7 @@
 		new_human.h_style = pick("Undercut, Top", "Shaved Head", "Bald")
 
 /datum/equipment_preset/upp/synth/commando/load_gear(mob/living/carbon/human/new_human)
-
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/type23, WEAR_BACK)
 	//face
@@ -683,9 +680,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
 
 /datum/equipment_preset/upp/commando/load_gear(mob/living/carbon/human/new_human)
-	//TODO: add backpacks and satchels
-
-
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/scout_cloak/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
@@ -751,8 +746,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_ENGINEERING)
 
 /datum/equipment_preset/upp/tank/load_gear(mob/living/carbon/human/new_human)
-
-
+	add_upp_underwear(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//head
@@ -785,8 +779,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_ENGINEERING)
 
 /datum/equipment_preset/upp/pilot/load_gear(mob/living/carbon/human/new_human)
-
-
+	add_upp_underwear(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
 	//head
@@ -817,6 +810,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDICAL, ACCESS_UPP_RESEARCH, ACCESS_CLF_LEADERSHIP, ACCESS_UPP_MEDPREP)
 
 /datum/equipment_preset/upp/mildoctor/load_gear(mob/living/carbon/human/new_human)
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
