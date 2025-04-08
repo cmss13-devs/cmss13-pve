@@ -132,13 +132,13 @@
 		return
 	if(!item_box.handfuls)
 		if(istypestrict(W,item_box.magazine_type) || is_type_in_list(W, item_box.allowed_magazines))
-			if(istype(W, /obj/item/storage/box/m94))
-				var/obj/item/storage/box/m94/flare_pack = W
+			if(istype(W, /obj/item/storage/box/flare))
+				var/obj/item/storage/box/flare/flare_pack = W
 				if(length(flare_pack.contents) < flare_pack.max_storage_space)
 					to_chat(user, SPAN_WARNING("[W] is not full."))
 					return
 				var/flare_type
-				if(istype(W, /obj/item/storage/box/m94/signal))
+				if(istype(W, /obj/item/storage/box/flare/signal))
 					flare_type = /obj/item/device/flashlight/flare/signal
 				else
 					flare_type = /obj/item/device/flashlight/flare

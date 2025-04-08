@@ -13568,7 +13568,7 @@
 /area/kutjevo/interior/power)
 "uAl" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
 /turf/open/floor/kutjevo/colors/purple/inner_corner/west,
 /area/kutjevo/interior/construction)
 "uAz" = (
