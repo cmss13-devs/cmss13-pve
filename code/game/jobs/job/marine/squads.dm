@@ -712,7 +712,7 @@
 		if(JOB_SQUAD_SPECIALIST)
 			old_lead.comm_title = "Spc"
 		if(JOB_SQUAD_ENGI)
-			old_lead.comm_title = "ComTech"
+			old_lead.comm_title = "ComEng"
 		if(JOB_SQUAD_MEDIC)
 			old_lead.comm_title = "HM"
 		if(JOB_SQUAD_TEAM_LEADER)
