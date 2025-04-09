@@ -2013,6 +2013,10 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 /obj/item/weapon/gun/proc/get_fire_delay(value)
 	return fire_delay
 
+/// getter for burst_delay
+/obj/item/weapon/gun/proc/get_burst_fire_delay(value)
+	return burst_delay
+
 /// setter for burst_amount
 /obj/item/weapon/gun/proc/set_burst_amount(value, mob/user)
 	burst_amount = value

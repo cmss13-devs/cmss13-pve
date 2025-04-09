@@ -601,7 +601,7 @@
 	for(var/i in 1 to 5)
 		new /obj/item/explosive/mine/pmc(src)
 
-/obj/item/storage/box/m94
+/obj/item/storage/box/flare
 	name = "\improper M94 marking flare pack"
 	desc = "A packet of fourteen M94 Marking Flares. Carried by USCM soldiers to light dark areas that cannot be reached with the usual TNR Shoulder Lamp."
 	icon_state = "m94"
@@ -611,32 +611,49 @@
 	max_storage_space = 14
 	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
 
-/obj/item/storage/box/m94/fill_preset_inventory()
+/obj/item/storage/box/flare/fill_preset_inventory()
 	for(var/i = 1 to max_storage_space)
 		new /obj/item/device/flashlight/flare(src)
 
-/obj/item/storage/box/m94/update_icon()
+/obj/item/storage/box/flare/update_icon()
 	if(!length(contents))
 		icon_state = "m94_e"
 	else
 		icon_state = "m94"
 
-
-/obj/item/storage/box/m94/signal
+/obj/item/storage/box/flare/signal
 	name = "\improper M89-S signal flare pack"
 	desc = "A packet of fourteen M89-S Signal Marking Flares."
 	icon_state = "m89"
 
-/obj/item/storage/box/m94/signal/fill_preset_inventory()
+/obj/item/storage/box/flare/signal/fill_preset_inventory()
 	for(var/i = 1 to max_storage_space)
 		new /obj/item/device/flashlight/flare/signal(src)
 
-/obj/item/storage/box/m94/signal/update_icon()
+/obj/item/storage/box/flare/signal/update_icon()
 	if(!length(contents))
 		icon_state = "m89_e"
 	else
 		icon_state = "m89"
 
+/obj/item/storage/box/flare/upp
+	name = "\improper R52 marking flare pack"
+	desc = "A packet of fourteen R52 Marking Flares. Carried by UPPAC soldiers to light dark areas that cannot be reached with the usual Shoulder Lamp."
+	icon_state = "r52"
+	icon = 'icons/obj/items/storage/packets.dmi'
+	storage_slots = 14
+	max_storage_space = 14
+	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
+
+/obj/item/storage/box/flare/upp/fill_preset_inventory()
+	for(var/i = 1 to max_storage_space)
+		new /obj/item/device/flashlight/flare/upp(src)
+
+/obj/item/storage/box/flare/upp/update_icon()
+	if(!length(contents))
+		icon_state = "r52_e"
+	else
+		icon_state = "r52"
 
 /obj/item/storage/box/nade_box
 	name = "\improper M40 HEDP grenade box"
