@@ -53,9 +53,6 @@
 	else
 		new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
 
-/datum/equipment_preset/upp/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
-	add_upp_underwear(new_human)
-
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/militia
@@ -472,6 +469,9 @@
 	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
 	idtype = /obj/item/card/id/silver
+
+/datum/equipment_preset/upp/officer/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_civilian_underwear(new_human)
 
 /datum/equipment_preset/upp/officer/load_gear(mob/living/carbon/human/new_human)
 
