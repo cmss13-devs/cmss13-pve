@@ -246,7 +246,7 @@
 	allowed_mortar = /obj/structure/mortar/himat
 
 /obj/item/mortar_shell/himat/training
-	name = "HIMAT training missile"
+	name = "\improper HIMAT training missile"
 	desc = "This is a small, two-stage missile used by HIMAT launcher. This one dispenses short-living burning ash and is used during training exercises."
 	icon_state = "missile_training"
 
