@@ -472,7 +472,7 @@
 	kit_type = /obj/item/mortar_kit/himat
 	firesound = 'sound/weapons/gun_rocketlauncher.ogg'
 	warning_text = "A MISSILE IS COMING DOWN"
-	warning_text = "A MISSILE IS ABOUT TO IMPACT"
+	close_warning_text = "A MISSILE IS ABOUT TO IMPACT"
 	travel_time = 2 SECONDS
 	has_camo = FALSE
 	var/obj/item/mortar_shell/loaded_shell = null
