@@ -28423,9 +28423,9 @@
 /area/almayer/hallways/hangar)
 "kkT" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /obj/item/stack/sheet/mineral/plastic/small_stack,
 /obj/item/frame/rack,
 /obj/item/frame/rack,

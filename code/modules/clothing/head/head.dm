@@ -182,7 +182,7 @@
 
 /obj/item/clothing/head/headset
 	name = "\improper USCM headset"
-	desc = "A headset typically found in use by radio-operators and officers. This one appears to be malfunctioning."
+	desc = "A large headset used in conjunction with the standard one. Large enough that it doesn't fit with any other headwear. Typically found in use by radio-operators and officers."
 	icon_state = "headset"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
