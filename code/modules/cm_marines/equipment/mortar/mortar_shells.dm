@@ -204,7 +204,7 @@
 		playsound(loc, 'sound/items/Screwdriver2.ogg', 25, 0, 6)
 
 /obj/item/mortar_shell/himat
-	name = "HIMAT missile"
+	name = "\improper HIMAT missile"
 	desc = "This is a small, two-stage missile used by HIMAT launcher. This one has a standard anti-tank package."
 	icon_state = "missile"
 	allowed_mortar = /obj/structure/mortar/himat
