@@ -31,8 +31,13 @@
 	var/delay_to_impact = 4 SECONDS
 	///visual when impact starts
 	var/start_visual = /obj/effect/temp_visual/dropship_flyby
+	///visual when impact starts, spawns for every turf impacted
+	var/impact_start_visual = null
 	///sound when impact starts
 	var/start_sound = 'sound/weapons/fire_support/casplane_flyby.ogg'
+
+/datum/fire_support/New()
+	name = "[name] ([cost])"
 
 ///Enables the firesupport option
 /datum/fire_support/proc/enable_firesupport()
@@ -54,7 +59,7 @@
 	if(initiate_chat_message)
 		to_chat(user, SPAN_NOTICE(initiate_chat_message))
 	if(portrait_type && initiate_title && initiate_screen_message)
-		user.play_screen_text("<span class='langchat' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(initiate_title)]</u></span><br>" + pick(initiate_screen_message), new /atom/movable/screen/text/screen_text/potrait(null, null, name, 'icons/ui_icons/screen_alert_images.dmi', portrait_type))
+		user.play_screen_text("<span class='langchat' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(name)]</u></span><br>" + pick(initiate_screen_message), new /atom/movable/screen/text/screen_text/potrait(null, null, initiate_title, 'icons/ui_icons/screen_alert_images.dmi', portrait_type))
 
 ///Actually begins the fire support attack
 /datum/fire_support/proc/start_fire_support(turf/target_turf)
@@ -71,6 +76,8 @@
 	var/list/turf_list = RANGE_TURFS(scatter_range, target_turf)
 	for(var/i = 1 to impact_quantity)
 		var/turf/impact_turf = pick(turf_list)
+		if(impact_start_visual)
+			new impact_start_visual(impact_turf)
 		addtimer(CALLBACK(src, PROC_REF(do_impact), impact_turf), 0.15 SECONDS * i)
 
 ///The actual impact of the fire support

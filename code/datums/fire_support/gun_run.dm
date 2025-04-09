@@ -47,7 +47,7 @@
 	name = "Laser run"
 	fire_support_type = FIRESUPPORT_TYPE_LASER
 	impact_quantity = 4
-	icon_state = "cas_laser"
+	icon_state = "laser"
 	initiate_chat_message = "TARGET ACQUIRED LASER RUN INBOUND."
 	initiate_screen_message = list(
 		"Target received, laser inbound",

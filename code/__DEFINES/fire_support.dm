@@ -21,7 +21,7 @@
 ///Smoke mortar barrage
 #define FIRESUPPORT_TYPE_SMOKE_MORTAR "smoke_mortar"
 ///Acid smoke mortar barrage
-#define FIRESUPPORT_TYPE_ACID_SMOKE_MORTAR "acid_smoke_mortar"
+#define FIRESUPPORT_TYPE_NERVE_SMOKE_MORTAR "nerve_smoke_mortar"
 ///SOM HE Mortar barrage
 #define FIRESUPPORT_TYPE_HE_MORTAR_SOM "he_mortar_som"
 ///SOM Incendiary mortar barrage
@@ -41,7 +41,7 @@ GLOBAL_LIST_INIT(fire_support_types, list(
 	FIRESUPPORT_TYPE_HE_MORTAR = new /datum/fire_support/mortar,
 	FIRESUPPORT_TYPE_INCENDIARY_MORTAR = new /datum/fire_support/mortar/incendiary,
 	FIRESUPPORT_TYPE_SMOKE_MORTAR = new /datum/fire_support/mortar/smoke,
-	FIRESUPPORT_TYPE_ACID_SMOKE_MORTAR = new /datum/fire_support/mortar/smoke/cn,
+	FIRESUPPORT_TYPE_NERVE_SMOKE_MORTAR = new /datum/fire_support/mortar/smoke/cn,
 	FIRESUPPORT_TYPE_HE_MORTAR_SOM = new /datum/fire_support/mortar/som,
 	FIRESUPPORT_TYPE_INCENDIARY_MORTAR_SOM = new /datum/fire_support/mortar/incendiary/som,
 	FIRESUPPORT_TYPE_SMOKE_MORTAR_SOM = new /datum/fire_support/mortar/smoke/som,

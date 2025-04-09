@@ -328,7 +328,7 @@ DEFINES in setup.dm, referenced here.
 				//  \\
 //----------------------------------------------------------
 
-/obj/item/weapon/unique_action(mob/user) //moved this up a path to make macroing for other weapons easier -spookydonut
+/obj/item/weapon/proc/unique_action(mob/user) //moved this up a path to make macroing for other weapons easier -spookydonut
 	return
 
 /obj/item/weapon/gun/proc/check_inactive_hand(mob/user)

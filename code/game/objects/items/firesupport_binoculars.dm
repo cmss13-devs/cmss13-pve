@@ -1,7 +1,8 @@
 /obj/item/device/binoculars/fire_support
 	name = "tactical binoculars"
 	desc = "A pair of binoculars, used to mark targets for airstrikes and orbital support. Unique action to toggle mode. Ctrl+Click when using to target something."
-	icon_state = "range_finders"
+	icon = 'icons/obj/items/binoculars.dmi'
+	icon_state = "advanced_binoculars"
 	w_class = SIZE_SMALL
 	///Faction locks this item if specified
 	var/faction = null
@@ -19,6 +20,10 @@
 		FIRESUPPORT_TYPE_LASER,
 		FIRESUPPORT_TYPE_ROCKETS,
 		FIRESUPPORT_TYPE_MISSILE,
+		FIRESUPPORT_TYPE_HE_MORTAR,
+		FIRESUPPORT_TYPE_INCENDIARY_MORTAR,
+		FIRESUPPORT_TYPE_SMOKE_MORTAR,
+		FIRESUPPORT_TYPE_NERVE_SMOKE_MORTAR,
 	)
 	///How much fire support points does this binocular have
 	var/fire_support_points = 10
@@ -29,10 +34,25 @@
 	for(var/fire_support_type in mode_list)
 		mode_list[fire_support_type] = GLOB.fire_support_types[fire_support_type]
 
-/obj/item/device/binoculars/fire_support/unique_action(mob/user)
-	. = ..()
-	select_radial(user)
-	return TRUE
+/obj/item/device/binoculars/fire_support/proc/InterceptClickOn(mob/user, params, atom/object)
+	var/list/pa = params2list(params)
+	if(!pa.Find("ctrl") && pa.Find("shift"))
+		acquire_coordinates(object, user)
+		return TRUE
+
+	if(pa.Find("ctrl") && !pa.Find("shift"))
+		acquire_target(object, user)
+		return TRUE
+
+	return FALSE
+
+/obj/item/device/binoculars/fire_support/clicked(mob/user, list/mods)
+	if(mods["ctrl"])
+		if(!CAN_PICKUP(user, src))
+			return ..()
+		select_radial(user)
+		return TRUE
+	return ..()
 
 /obj/item/device/binoculars/fire_support/examine(mob/user)
 	. = ..()
@@ -78,19 +98,11 @@
 	user.reset_perspective(user)
 	user.update_sight()
 
-/obj/item/device/binoculars/fire_support/verb/use_unique_action()
-	set category = "Object"
-	set name = "Unique Action"
-	set desc = "Use anything unique your firearm is capable of. Includes pumping a shotgun or spinning a revolver. If you have an active attachment, this will activate on the attachment instead."
-	set src = usr.contents
-
-	unique_action(usr)
-
 ///Selects a firemode
 /obj/item/device/binoculars/fire_support/proc/select_radial(mob/user)
 	var/list/radial_options = list()
 	for(var/fire_support_type in mode_list)
-		if(!mode_list[fire_support_type].uses || !(mode_list[fire_support_type].fire_support_flags & FIRESUPPORT_AVAILABLE))
+		if(!(mode_list[fire_support_type].fire_support_flags & FIRESUPPORT_AVAILABLE))
 			continue
 		radial_options[mode_list[fire_support_type].name] = image(icon = 'icons/mob/radial.dmi', icon_state = mode_list[fire_support_type].icon_state)
 
@@ -123,18 +135,21 @@
 	playsound(src, 'sound/effects/nightvision.ogg', 35)
 	to_chat(user, SPAN_NOTICE("INITIATING LASER TARGETING. Stand still."))
 	target_atom = target
-	laser_overlay = image('icons/obj/items/weapons/projectiles.dmi', icon_state = "sniper_laser", layer =-ABOVE_MOB_LAYER)
+	laser_overlay = image('icons/obj/items/weapons/projectiles.dmi', icon_state = "laser_target2", layer =- LASER_LAYER)
 	target_atom.apply_fire_support_laser(laser_overlay)
-	if(!do_after(user, target_acquisition_delay, NONE, user, BUSY_ICON_HOSTILE, extra_checks = CALLBACK(src, PROC_REF(can_see_target), target, user)))
+	if(!do_after(user, target_acquisition_delay, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, user, BUSY_ICON_HOSTILE, extra_checks = CALLBACK(src, PROC_REF(can_see_target), target, user)))
 		to_chat(user, SPAN_DANGER("You lose sight of your target!"))
 		playsound(user,'sound/machines/click.ogg', 25, 1)
 		unset_target()
 		return
 	if(!bino_checks(target, user))
 		return
+	if(!target_atom)
+		return
 
 	playsound(src, 'sound/effects/binoctarget.ogg', 35)
 	mode.initiate_fire_support(get_turf(target_atom), user)
+	fire_support_points -= mode.cost
 	unset_target()
 
 ///Internal bino checks, mainly around firemode
@@ -183,11 +198,12 @@
 	overlays += (laser_overlay)
 
 /mob/living/carbon/apply_fire_support_laser(image/laser_overlay)
-	overlays -= ABOVE_MOB_LAYER
+	overlays_standing[LASER_LAYER] = laser_overlay
+	apply_overlay(LASER_LAYER)
 
 ///Removes a laser overlay for fire support binos
 /atom/proc/remove_fire_support_laser(image/laser_overlay)
 	overlays -= laser_overlay
 
 /mob/living/carbon/remove_fire_support_laser(image/laser_overlay)
-	remove_overlay(ABOVE_MOB_LAYER)
+	remove_overlay(LASER_LAYER)

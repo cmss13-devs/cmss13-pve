@@ -160,3 +160,30 @@
 /obj/effect/temp_visual/heavyimpact/Initialize(mapload)
 	. = ..()
 	flick("heavyimpact", src)
+
+/obj/effect/temp_visual/mortar_falling
+	icon = 'icons/obj/structures/mortar.dmi'
+	icon_state = "mortar_ammo_he"
+	appearance_flags = PIXEL_SCALE
+	layer = FLY_LAYER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	duration = 0.2 SECONDS
+	pixel_x = -16
+	pixel_z = 200
+
+/obj/effect/temp_visual/mortar_falling/Initialize()
+	. = ..()
+	var/angle = -135
+	pixel_x = cos(angle) * -400
+	pixel_z = sin(angle) * -400
+	transform = matrix().Turn(angle)
+	animate(src, pixel_z = 0, pixel_x = -16, time = 0.2 SECONDS, , easing = LINEAR_EASING)
+
+/obj/effect/temp_visual/mortar_falling/incend
+	icon_state = "mortar_ammo_inc"
+
+/obj/effect/temp_visual/mortar_falling/smoke
+	icon_state = "mortar_ammo_smk"
+
+/obj/effect/temp_visual/mortar_falling/nerve
+	icon_state = "mortar_ammo_smk"

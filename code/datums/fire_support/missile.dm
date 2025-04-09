@@ -3,7 +3,7 @@
 	fire_support_type = FIRESUPPORT_TYPE_MISSILE
 	scatter_range = 1
 	cost = 2
-	icon_state = "cruise"
+	icon_state = "missile"
 	initiate_chat_message = "TARGET ACQUIRED MISSILE INBOUND."
 	initiate_screen_message = list(
 		"TGP on lase, one out.",
