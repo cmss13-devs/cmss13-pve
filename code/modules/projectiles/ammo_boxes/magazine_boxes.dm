@@ -202,7 +202,7 @@
 	overlay_content = "_expl"
 	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/explosive
 
-/obj/item/ammo_box/magazine/m49a/a19/impact/empty
+/obj/item/ammo_box/magazine/m49a/a19/explosive/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m49a/a19/incen

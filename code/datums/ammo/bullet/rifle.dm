@@ -397,7 +397,7 @@
 	if(isxeno(M))
 		var/mob/living/carbon/xenomorph/target = M
 		if(target.mob_size >= MOB_SIZE_BIG)
-			slow_duration = 4
+			slow_duration = 2 // Crushers & such are still a threat, recovering much quicker
 		M.adjust_effect(slow_duration, SUPERSLOW)
 		L.apply_armoured_damage(damage, ARMOR_BULLET, BRUTE, null, penetration)
 	else
