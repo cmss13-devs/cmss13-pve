@@ -87,6 +87,7 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep
 	name = "\improper ColMarTech Surplus Uniform Vendor"
 	desc = "An automated supply rack hooked up to a small storage of standard marine uniforms."
+	icon_state = "uscm_gear"
 	req_access = list(ACCESS_MARINE_PREP)
 	req_one_access = list()
 	listed_products = list()
@@ -354,6 +355,7 @@
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon
 	name = "\improper ColMarTech FORECON Uniform Vendor"
+	icon_state = "forecon_gear"
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon/populate_product_list(scale)
 	listed_products = list(
@@ -583,7 +585,6 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp
 	name = "\improper UnTech Automated Utilities Squad Vendor"
 	desc = "An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any UPP Rifleman."
-	icon_state = "upp_armory"
 	req_access = list()
 	req_one_access = list(ACCESS_UPP_GENERAL)
 	hackable = TRUE
