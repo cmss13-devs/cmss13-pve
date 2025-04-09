@@ -349,7 +349,7 @@
 	role_comm_title = "RMC MKSN"
 	assignment = "Marksman"
 	rank = JOB_TWE_RMC_MARKSMAN
-	skills = /datum/skills/rmc
+	skills = /datum/skills/rmc/specialist
 	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
 
 /datum/equipment_preset/royal_marine/sniper/load_gear(mob/living/carbon/human/new_human)
@@ -379,7 +379,7 @@
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/elite, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/M42A, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/elite, WEAR_IN_BELT)
