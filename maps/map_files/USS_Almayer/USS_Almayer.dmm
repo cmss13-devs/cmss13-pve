@@ -7206,7 +7206,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/maint/hull/upper/u_f_s)
 "cMk" = (
-/obj/structure/machinery/cm_vending/clothing/sea,
+/obj/structure/machinery/cm_vending/clothing/di,
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/shipboard/sea_office)
 "cMl" = (
@@ -12542,7 +12542,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/cm_vending/gear/sea,
+/obj/structure/machinery/cm_vending/gear/di,
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/shipboard/sea_office)
 "eHM" = (
@@ -24175,7 +24175,6 @@
 /turf/open/floor/wood/ship,
 /area/almayer/engineering/ce_room)
 "iKP" = (
-/obj/effect/landmark/start/pilot/cas_pilot,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/pilotbunks)
 "iKR" = (
@@ -24661,7 +24660,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/maint/upper/u_m_p)
 "iTD" = (
-/obj/effect/landmark/start/auxiliary_officer,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/bridgebunks)
 "iTI" = (
@@ -28425,9 +28423,9 @@
 /area/almayer/hallways/hangar)
 "kkT" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /obj/item/stack/sheet/mineral/plastic/small_stack,
 /obj/item/frame/rack,
 /obj/item/frame/rack,
