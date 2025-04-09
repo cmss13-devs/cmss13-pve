@@ -213,7 +213,7 @@
 	cell_explosion(T, 2400, 2400, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
 /obj/item/mortar_shell/himat/explosive
-	name = "HIMAT HE missile"
+	name = "\improper HIMAT HE missile"
 	desc = "This is a small, two-stage missile used by HIMAT launcher. This one has a high-explosive package, primarily used for demolition."
 	icon_state = "missile_he"
 
