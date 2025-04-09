@@ -354,7 +354,7 @@
 
 /obj/item/device/binoculars/range/designator/upp
 
-	icon_state = "binoculars_upp"
+	icon_state = "binoculars_upp_alt"
 	cas_laser_overlay = "binoculars_laser_civ"
 	range_laser_overlay = "binoculars_range_civ"
 
@@ -449,9 +449,6 @@
 
 /datum/action/item_action/specialist/spotter_target/can_use_action()
 	var/mob/living/carbon/human/human = owner
-	if(!(GLOB.character_traits[/datum/character_trait/skills/spotter] in human.traits))
-		to_chat(human, SPAN_WARNING("You have no idea how to use this!"))
-		return FALSE
 	if(istype(human) && !human.is_mob_incapacitated() && (holder_item == human.r_hand || holder_item || human.l_hand))
 		return TRUE
 

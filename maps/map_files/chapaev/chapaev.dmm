@@ -158,6 +158,11 @@
 	color = "#8B9490";
 	pixel_x = 3
 	},
+/obj/item/device/multitool/upp,
+/obj/item/device/multitool/upp{
+	pixel_x = 6;
+	pixel_y = -2
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "az" = (
@@ -1613,7 +1618,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Squad Sergeant";
+	job = "Squad Leader";
 	pixel_x = 8;
 	can_block_movement = 0
 	},
@@ -1681,7 +1686,7 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal{
 	has_cryo_gear = 0;
-	job = "Squad Sergeant";
+	job = "Squad Leader";
 	pixel_x = -7;
 	can_block_movement = 0
 	},
@@ -4440,28 +4445,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
-"kb" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/prep_hallway)
 "kc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -4501,6 +4484,10 @@
 	light_range = 5
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/misc/mre/upp{
+	pixel_y = 10;
+	pixel_x = 3
+	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "ke" = (
@@ -4870,10 +4857,10 @@
 	},
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/marine/smartgunner/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ld" = (
@@ -4920,10 +4907,10 @@
 	},
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/marine/smartgunner/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ll" = (
@@ -5099,37 +5086,7 @@
 	light_range = 5;
 	dir = 8
 	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/structure/closet/crate/secure/upp,
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lH" = (
@@ -5193,22 +5150,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "lN" = (
-/obj/item/storage/box/packet/high_explosive/upp/impact{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp/impact{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp/impact{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp/impact{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp/impact{
-	color = "#8B795C"
-	},
-/obj/structure/closet/crate/secure/upp,
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lP" = (
@@ -5227,9 +5169,6 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lT" = (
@@ -8131,6 +8070,7 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
+/obj/item/storage/box/flare/upp,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "CN" = (
@@ -20811,7 +20751,7 @@ kl
 kl
 kx
 kn
-kb
+jY
 jU
 jI
 jw
