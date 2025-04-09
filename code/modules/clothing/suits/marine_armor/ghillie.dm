@@ -1,4 +1,5 @@
 #define FULL_CAMOUFLAGE_ALPHA 5
+#define VISIBLE_CAMOUFLAGE_ALPHA 60
 
 /obj/item/clothing/suit/storage/marine/ghillie
 	name = "\improper M45 pattern ghillie armor"
@@ -17,6 +18,7 @@
 	var/full_camo_alpha = FULL_CAMOUFLAGE_ALPHA
 	var/incremental_shooting_camo_penalty = 20
 	var/current_camo = FULL_CAMOUFLAGE_ALPHA
+	var/visible_camo_alpha = VISIBLE_CAMOUFLAGE_ALPHA
 	var/camouflage_break = 5 SECONDS
 	var/camouflage_enter_delay = 2 SECONDS
 	var/can_camo = TRUE
@@ -117,11 +119,14 @@
 			current_camo = full_camo_alpha
 		current_camo = clamp(current_camo + incremental_shooting_camo_penalty, full_camo_alpha, 255)
 		H.alpha = current_camo
+		if(current_camo > visible_camo_alpha)
+			REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
 		addtimer(CALLBACK(src, PROC_REF(fade_out_finish), H), camouflage_break, TIMER_OVERRIDE|TIMER_UNIQUE)
 		animate(H, alpha = full_camo_alpha + 5, time = camouflage_break, easing = LINEAR_EASING, flags = ANIMATION_END_NOW)
 
 /obj/item/clothing/suit/storage/marine/ghillie/proc/fade_out_finish(mob/living/carbon/human/H)
 	if(camo_active && H.wear_suit == src)
+		ADD_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
 		to_chat(H, SPAN_BOLDNOTICE("The smoke clears and your position is once again hidden completely!"))
 		animate(H, alpha = full_camo_alpha)
 		current_camo = full_camo_alpha
@@ -148,6 +153,7 @@
 	GS.camouflage()
 
 #undef FULL_CAMOUFLAGE_ALPHA
+#undef VISIBLE_CAMOUFLAGE_ALPHA
 
 /obj/item/clothing/suit/storage/marine/ghillie/forecon
 	name = "UDEP Thermal Poncho"
