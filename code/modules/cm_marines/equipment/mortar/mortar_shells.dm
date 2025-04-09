@@ -221,7 +221,7 @@
 	explosion(T, 1, 4, 6, 8, explosion_cause_data = cause_data)
 
 /obj/item/mortar_shell/himat/antipersonnel
-	name = "HIMAT AP missile"
+	name = "\improper HIMAT AP missile"
 	desc = "This is a small, two-stage missile used by HIMAT launcher. This one has an anti-personnel package, air-bursting for maximum soft-target damage."
 	icon_state = "missile_ap"
 	var/number_of_airburst = 10
