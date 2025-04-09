@@ -235,7 +235,7 @@
 		cell_explosion(impact_tile, 20, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
 /obj/item/mortar_shell/incendiary/himat
-	name = "HIMAT IN missile"
+	name = "\improper HIMAT IN missile"
 	desc = "This is a small, two-stage missile used by HIMAT launcher. This one has an incendiary package, covering area of impact with burning flames."
 	icon_state = "missile_inc"
 	radius = 5
