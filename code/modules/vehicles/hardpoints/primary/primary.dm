@@ -7,3 +7,4 @@
 	damage_multiplier = 0.15
 
 	activatable = TRUE
+	destroyed_smoke = TRUE
