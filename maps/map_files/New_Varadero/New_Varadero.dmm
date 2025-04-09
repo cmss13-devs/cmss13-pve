@@ -1,4 +1,17 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/item/fishing_pole,
+/turf/open/gm/dirt,
+/area/varadero/exterior/monsoon)
+"aab" = (
+/obj/structure/surface/rack,
+/obj/item/fishing_pole,
+/turf/open/floor/plating/icefloor/asteroidplating,
+/area/varadero/interior/maintenance/north)
+"aac" = (
+/obj/item/fishing_pole,
+/turf/open/gm/coast/west,
+/area/varadero/exterior/pontoon_beach)
 "aae" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/shiva,
@@ -45712,7 +45725,7 @@ mMJ
 krO
 doL
 mWE
-cDG
+aab
 wHk
 qyw
 aVQ
@@ -46034,7 +46047,7 @@ vjs
 uod
 uod
 eGX
-hKK
+aac
 fLY
 cOZ
 uod
@@ -61419,7 +61432,7 @@ bEF
 fnU
 ghN
 bGU
-bGU
+aaa
 bGU
 bGU
 rvD
