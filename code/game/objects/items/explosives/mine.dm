@@ -31,6 +31,9 @@
 	var/base_disarm_time = 45
 
 	var/map_deployed = FALSE
+	var/has_tripwire = TRUE //this should provide an easy way of just letting us configure this for alternative mines.
+	var/blast_tolerance = 15 //This represents the absolute minimum threshold of explosion damage necessary before the mine is disarmed. Meet or beat.
+	//var/blast_hardening = 0 //This is additional threshold, but also pseudohealth. Repeated explosions will eventually reduce it to the base blast_tolerance. Not yet implemented.
 
 /obj/item/explosive/mine/Initialize()
 	. = ..()
@@ -41,8 +44,9 @@
 	QDEL_NULL(tripwire)
 	. = ..()
 
-/obj/item/explosive/mine/ex_act()
-	prime() //We don't care about how strong the explosion was.
+/obj/item/explosive/mine/ex_act(severity)
+	if(severity >= blast_tolerance)
+		prime()
 
 /obj/item/explosive/mine/emp_act()
 	. = ..()
@@ -127,26 +131,27 @@
 			var/disarm_time = base_disarm_time
 			var/disarm_fail_chance = base_disarm_fail_chance
 			if(user.skills)
-				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
-					to_chat(user, SPAN_WARNING("You aren't trained in demining... This might be tricky."))
-					disarm_time = 50
-					disarm_fail_chance = 80
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
-					to_chat(user, SPAN_WARNING("The manuals had a lot to say about the M20, but not much about how to disarm them, other than staying out of the front arc."))
-					disarm_time = 40
-					disarm_fail_chance = 20
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
-					to_chat(user, SPAN_WARNING("You take stock. It's just like training. The LIDAR sensors are what you need to start with..."))
-					disarm_time = 30
+				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
+					to_chat(user, SPAN_WARNING("Intelligent landmine, Claymore, M20. You pick out the right procedure and do it in seconds."))
+					disarm_time = 10
 					disarm_fail_chance = 0
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 					to_chat(user, SPAN_WARNING("You quickly and efficiently set to work disarming the [src]."))
 					disarm_time = 20
 					disarm_fail_chance = 0
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
-					to_chat(user, SPAN_WARNING("Intelligent landmine, Claymore, M20. You pick out the right procedure and do it in seconds."))
-					disarm_time = 10
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+					to_chat(user, SPAN_WARNING("You take stock. It's just like training. The LIDAR sensors are what you need to start with..."))
+					disarm_time = 30
 					disarm_fail_chance = 0
+
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+					to_chat(user, SPAN_WARNING("The manuals had a lot to say about the M20, but not much about how to disarm them, other than staying out of the front arc."))
+					disarm_time = 40
+					disarm_fail_chance = 20
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
+					to_chat(user, SPAN_WARNING("You aren't trained in demining... This might be tricky."))
+					disarm_time = 50
+					disarm_fail_chance = 80
 
 			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
 				user.visible_message(SPAN_WARNING("[user] stops disarming the [src]."), \
@@ -182,7 +187,7 @@
 	if(active)
 		return
 
-	if(!customizable)
+	if(!customizable && has_tripwire == TRUE)
 		set_tripwire()
 		return;
 
@@ -202,7 +207,7 @@
 
 
 /obj/item/explosive/mine/proc/set_tripwire()
-	if(!active && !tripwire)
+	if(!active && !tripwire && has_tripwire == TRUE)
 		var/tripwire_loc = get_turf(get_step(loc, dir))
 		tripwire = new(tripwire_loc)
 		tripwire.linked_claymore = src
@@ -360,6 +365,12 @@
 	var/explosion_falloff = 100
 	base_disarm_fail_chance = 70
 	base_disarm_time = 40
+	blast_tolerance = 85 //A C4 directly next to it will disarm the mine. Mostly for giving an option for disarming it.
+
+
+/obj/item/explosive/mine/emp_act()
+	. = ..()
+	disarm() //breaks the thing instead of exploding it.
 
 /obj/item/explosive/mine/m760ap/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -439,6 +450,9 @@
 	disarmed = TRUE
 	add_to_garbage(src)
 
+/obj/item/explosive/mine/m760ap/proc/set_tripwire()
+	return
+
 /obj/item/explosive/mine/m760ap/attack_self(mob/living/user)
 	if(disarmed)
 		return
@@ -476,6 +490,7 @@
 	var/explosion_falloff = 75
 	base_disarm_time = 60 //innately sensitive...
 	base_disarm_fail_chance = 30 //...but lacks robust anti-tamper implementation.
+	blast_tolerance = 25 //Even at its furthest point, C4 will disarm the mine.
 
 /obj/item/explosive/mine/m5a3betty/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -507,23 +522,23 @@
 			var/disarm_time = base_disarm_time
 			var/disarm_fail_chance = base_disarm_fail_chance
 			if(user.skills)
-				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
-					to_chat(user, SPAN_WARNING("You ignore the lingering sense of dread and start tinkering with the landmine."))
-					disarm_fail_chance = 60
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
-					to_chat(user, SPAN_WARNING("You examine the mine and remember how sensitive even training versions were. Following procedure, you start disarming the [src]."))
-					disarm_fail_chance = 15
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
-					to_chat(user, SPAN_WARNING("Spoof the sensor like so, and start work on the mechanism. You've got this."))
+				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
+					to_chat(user, SPAN_WARNING("Landmine, M5A3. Trivial to break."))
+					disarm_time = 20
 					disarm_fail_chance = 0
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 					to_chat(user, SPAN_WARNING("This shouldn't be too hard. The M5A3's actually pretty easy to disarm, to your experience."))
 					disarm_time = 40
 					disarm_fail_chance = 0
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
-					to_chat(user, SPAN_WARNING("Landmine, M5A3. Trivial to break."))
-					disarm_time = 20
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+					to_chat(user, SPAN_WARNING("Spoof the sensor like so, and start work on the mechanism. You've got this."))
 					disarm_fail_chance = 0
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+					to_chat(user, SPAN_WARNING("You examine the mine and remember how sensitive even training versions were. Following procedure, you start disarming the [src]."))
+					disarm_fail_chance = 15
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
+					to_chat(user, SPAN_WARNING("You ignore the lingering sense of dread and start tinkering with the landmine."))
+					disarm_fail_chance = 60
 
 			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
 				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
@@ -588,6 +603,7 @@
 	var/explosion_falloff = 125
 	base_disarm_time = 45
 	base_disarm_fail_chance = 50
+	blast_tolerance = 95 //Will require a C4 directly on top of it...!
 
 /obj/item/explosive/mine/fzd91/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -619,22 +635,22 @@
 			var/disarm_time = base_disarm_time
 			var/disarm_fail_chance = base_disarm_fail_chance
 			if(user.skills)
-				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
-					to_chat(user, SPAN_WARNING("It looks just like how they do on TV. Hopefully you have better luck than the stuntmen..."))
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
-					to_chat(user, SPAN_WARNING("You examine the mine. It's Union issue for sure. With some caution, you begin disarming the [src]."))
-					disarm_fail_chance = 15
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
-					to_chat(user, SPAN_WARNING("You examine the [src] for a moment. It's an FZD-91, not the hardest nut to crack."))
+				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
+					to_chat(user, SPAN_WARNING("The FZD-91 is tamper resistant but its anti-handling features are outdated. You can make short work of it."))
+					disarm_time = 25
 					disarm_fail_chance = 0
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 					to_chat(user, SPAN_WARNING("Could be worse. Could be a lot worse, honestly. You start rapidly disarming and making safe the landmine."))
 					disarm_time = 35
 					disarm_fail_chance = 0
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
-					to_chat(user, SPAN_WARNING("The FZD-91 is tamper resistant but its anti-handling features are outdated. You can make short work of it."))
-					disarm_time = 25
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+					to_chat(user, SPAN_WARNING("You examine the [src] for a moment. It's an FZD-91, not the hardest nut to crack."))
 					disarm_fail_chance = 0
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+					to_chat(user, SPAN_WARNING("You examine the mine. It's Union issue for sure. With some caution, you begin disarming the [src]."))
+					disarm_fail_chance = 15
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
+					to_chat(user, SPAN_WARNING("It looks just like how they do on TV. Hopefully you have better luck than the stuntmen..."))
 
 			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
 				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
@@ -697,6 +713,7 @@
 	var/disarmed = FALSE
 	var/explosion_power = 75
 	var/explosion_falloff = 25
+	blast_tolerance = 0 //always goes off.
 
 /obj/item/explosive/mine/tn13/check_for_obstacles(mob/living/user)
 	return FALSE
