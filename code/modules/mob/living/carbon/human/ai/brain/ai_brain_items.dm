@@ -431,7 +431,9 @@
 
 			if(thing.flags_human_ai & GRENADE_ITEM)
 				var/obj/item/explosive/grenade/nade = thing
-				if(nade.active)
+				if(nade.active && (nade.fuse_type == IMPACT_FUSE))
+					return
+				else if(nade.active && (nade.fuse_type == TIMED_FUSE))
 					active_grenade_found = thing
 					continue
 

@@ -1036,7 +1036,7 @@
 		new /obj/item/explosive/grenade/high_explosive(src)
 
 /obj/item/storage/belt/grenade/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))
+	if(istype(W, /obj/item/ammo_box/magazine/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))
 		dump_into(W,user)
 	else
 		return ..()
@@ -1860,8 +1860,8 @@
 		new /obj/item/device/flashlight/flare(src)
 
 /obj/item/storage/belt/gun/flaregun/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/m94))
-		var/obj/item/storage/box/m94/M = W
+	if(istype(W, /obj/item/storage/box/flare))
+		var/obj/item/storage/box/flare/M = W
 		dump_into(M,user)
 	else
 		return ..()

@@ -2562,11 +2562,11 @@
 /area/whiskey_outpost/inside/living)
 "lF" = (
 /obj/structure/surface/table,
-/obj/item/storage/box/uscm_mre{
+/obj/item/storage/box/mre{
 	pixel_x = 4;
 	pixel_y = 11
 	},
-/obj/item/storage/box/uscm_mre{
+/obj/item/storage/box/mre{
 	pixel_x = -3;
 	pixel_y = 4
 	},
@@ -4869,7 +4869,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/whiskey_outpost/inside/engineering)
 "wn" = (
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
 /turf/open/floor/plating,
 /area/whiskey_outpost/outside/lane/four_north)
 "wp" = (
@@ -5355,7 +5355,7 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/outside/lane/three_south)
 "yD" = (
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
 /turf/open/floor/plating/platebot,
 /area/whiskey_outpost/outside/lane/one_north)
 "yF" = (
@@ -6054,7 +6054,7 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/outside/lane/three_north)
 "BS" = (
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
 /turf/open/jungle/impenetrable,
 /area/whiskey_outpost/outside/lane/one_north)
 "BT" = (
@@ -7059,7 +7059,7 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/outside/lane/four_south)
 "GO" = (
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/whiskey_outpost/outside/lane/four_north)
 "GQ" = (
@@ -8960,7 +8960,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area)
 "RV" = (
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
 /turf/open/shuttle/dropship/light_grey_left_to_right,
 /area/whiskey_outpost/outside/lane/four_north)
 "RW" = (

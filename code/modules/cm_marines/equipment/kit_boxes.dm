@@ -436,8 +436,8 @@
 /obj/item/storage/box/kit/mini_jtac/fill_preset_inventory()
 	new /obj/item/weapon/gun/flare(src)
 	new /obj/item/storage/belt/gun/flaregun/full_nogun(src)
-	new /obj/item/storage/box/m94/signal(src)
-	new /obj/item/storage/box/m94/signal(src)
+	new /obj/item/storage/box/flare/signal(src)
+	new /obj/item/storage/box/flare/signal(src)
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/encryptionkey/jtac(src)
 	new /obj/item/storage/backpack/marine/satchel/rto(src)
@@ -491,7 +491,7 @@
 	new /obj/item/weapon/gun/pistol/vp70/flashlight(src)
 	new /obj/item/attachable/bayonet(src)
 	new /obj/item/tool/crowbar/red(src)
-	new /obj/item/reagent_container/food/snacks/packaged_meal(src, pick("boneless pork ribs", "grilled chicken", "pizza square", "spaghetti chunks", "chicken tender"))
+	new /obj/item/mre_food_packet/entree/uscm(src)
 
 /obj/item/storage/box/kit/exp_trooper
 	name = "\improper Experimental Trooper Kit"

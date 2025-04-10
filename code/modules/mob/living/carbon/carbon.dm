@@ -200,8 +200,8 @@
 			apply_effect(1, STUN)//Sadly, something has to stop them from bumping them 10 times in a second
 			apply_effect(1, WEAKEN)
 		else
-			apply_effect(6, STUN)//This should work for now, more is really silly and makes you lay there forever
-			apply_effect(6, WEAKEN)
+			apply_effect(3, STUN)//This should work for now, more is really silly and makes you lay there forever
+			apply_effect(3, WEAKEN)
 
 		count_niche_stat(STATISTICS_NICHE_SHOCK)
 
