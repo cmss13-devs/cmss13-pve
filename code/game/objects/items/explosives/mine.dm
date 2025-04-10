@@ -368,11 +368,6 @@
 	has_tripwire = FALSE
 	blast_tolerance = 85 //A C4 directly next to it will disarm the mine. Mostly for giving an option for disarming it.
 
-
-/obj/item/explosive/mine/emp_act()
-	. = ..()
-	disarm() //breaks the thing instead of exploding it.
-
 /obj/item/explosive/mine/m760ap/check_for_obstacles(mob/living/user)
 	return FALSE
 
