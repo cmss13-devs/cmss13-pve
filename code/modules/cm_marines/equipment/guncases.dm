@@ -318,7 +318,7 @@
 	else
 		overlays += image(src.icon, "r2case_lid")
 		return
-	if(locate(/obj/item/weapon/gun/rifle/m49a/pve/unloaded) in src.contents)
+	if(locate(/obj/item/weapon/gun/rifle/m49a/pve) in src.contents)
 		overlays += image(src.icon, "+r2")
 
 /obj/item/storage/box/guncase/heavy/XM99

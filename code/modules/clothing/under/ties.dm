@@ -1445,7 +1445,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/m40
 	name = "\improper M3 Pattern Grenade Webbing"
-	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40 grenades."
+	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40-hull grenades."
 	icon_state = "m3webbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
 
@@ -1453,13 +1453,20 @@
 	storage_slots = 7
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/super,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
 		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/flare,
+		/obj/item/explosive/grenade/high_explosive/training,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/smokebomb/green,
+		/obj/item/explosive/grenade/smokebomb/red,
+		/obj/item/explosive/grenade/metal_foam,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
+		/obj/item/explosive/grenade/tear/marine,
 	)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon
@@ -1521,7 +1528,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
 	name = "\improper M3-R Pattern Grenade Webbing"
-	desc = "An alternative to the M3-R Pattern webbing fitted to store M40 grenades."
+	desc = "An alternative to the M3-R Pattern webbing fitted to store M40-hull grenades."
 	icon_state = "m3rwebbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
 
@@ -1566,7 +1573,7 @@
 		select_gamemode_skin(type)
 	update_icon()
 
-//Partial Pre-load For Props
+//Pre-load For Props
 
 /obj/item/clothing/accessory/storage/webbing/m56/preset
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
@@ -1591,11 +1598,18 @@
 	storage_slots = 4
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/super,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
 		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/flare,
+		/obj/item/explosive/grenade/high_explosive/training,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/smokebomb/green,
+		/obj/item/explosive/grenade/smokebomb/red,
+		/obj/item/explosive/grenade/metal_foam,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
+		/obj/item/explosive/grenade/tear/marine,
 	)

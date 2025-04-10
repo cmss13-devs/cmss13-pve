@@ -20768,7 +20768,7 @@
 /turf/open/floor/strata/orange_tile,
 /area/strata/ag/interior/dorms)
 "lHI" = (
-/obj/item/storage/box/nade_box/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
 /obj/structure/closet/secure_closet/security/soro,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/outpost/security)
