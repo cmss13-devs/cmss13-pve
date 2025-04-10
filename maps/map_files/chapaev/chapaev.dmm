@@ -8087,7 +8087,7 @@
 	name = "---Merge Conflict Marker---";
 	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/storage/box/flare/upp,

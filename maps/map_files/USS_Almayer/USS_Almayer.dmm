@@ -39095,7 +39095,6 @@
 /obj/structure/surface/table,
 /obj/merge_conflict_marker{
 	name = "---Merge Conflict Marker---";
-	
 	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
@@ -39103,7 +39102,7 @@
 	pixel_x = 3;
 	pixel_y = 5
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/shipboard/brig/armory)
 "nVA" = (

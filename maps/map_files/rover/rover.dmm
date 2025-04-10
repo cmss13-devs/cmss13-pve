@@ -2489,7 +2489,7 @@
 	name = "---Merge Conflict Marker---";
 	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/flare/signal,
 /obj/item/storage/box/flare/signal{
 	pixel_x = 5;
