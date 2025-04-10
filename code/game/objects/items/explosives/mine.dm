@@ -722,7 +722,7 @@
 	var/explosion_falloff = 25
 	blast_tolerance = 0 //always goes off.
 	has_tripwire = FALSE
-	world_detonation_flavor = "makes a dull clunk as [L] steps on it!
+	world_detonation_flavor = "makes a dull clunk as [L] steps on it!"
 	person_detonation_flavor = "makes a dull clunk as you step on it!"
 	hear_prime_flavor = "You hear a dull clunk."
 
