@@ -497,6 +497,23 @@
 /obj/item/ammo_box/magazine/type71/large/empty
 	empty = TRUE
 
+//-----------------------AG80 Rifle Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/ag80
+	name = "magazine box (AG80 x 10)"
+	icon_state = "base_type64"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_type71_reg"
+	overlay_gun_type = "_ag80"
+	overlay_content = "_type71_reg"
+	num_of_magazines = 10
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80
+
+//-----------------------LARGE AG80 Rifle Mag Boxes-----------------------
+/obj/item/ammo_box/magazine/type71/large/ag80
+	name = "magazine box (AG80 x 32)"
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80
+
 //-----------------------Nailgun Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/nailgun

@@ -223,7 +223,7 @@
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
 		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp_replica,
+		/obj/item/attachable/bayonet/upp/surplus,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
@@ -548,6 +548,9 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 
+/obj/item/weapon/gun/pistol/es4/unloaded
+	current_mag = null
+
 //-------------------------------------------------------
 //VP78 - High power pistol?
 
@@ -599,6 +602,8 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
+/obj/item/weapon/gun/pistol/vp78/unloaded
+	current_mag = null
 
 //-------------------------------------------------------
 /*
