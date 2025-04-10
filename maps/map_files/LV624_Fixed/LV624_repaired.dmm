@@ -1794,11 +1794,7 @@
 "cqs" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/tool/kitchen/knife/butcher,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/fishing_pole,
 /obj/item/fish_bait,
 /turf/open/floor/wood/wood_broken6,
@@ -3076,11 +3072,7 @@
 	pixel_x = 6;
 	pixel_y = 3
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/candle{
 	pixel_x = 4;
 	pixel_y = 8
@@ -15179,11 +15171,7 @@
 "tEl" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/clothing/mask/cigarette/cigar,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/kitchen/knife/butcher,
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)

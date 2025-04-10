@@ -3243,7 +3243,7 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
 "Yy" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/cans/ale{
 	pixel_x = -7;
 	pixel_y = 3

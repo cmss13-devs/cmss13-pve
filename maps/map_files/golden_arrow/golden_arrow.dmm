@@ -2322,10 +2322,6 @@
 	color = "#C02526"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -2561,10 +2557,6 @@
 	dir = 4;
 	pixel_x = 1;
 	pixel_y = 3
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -3099,10 +3091,6 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -3606,10 +3594,6 @@
 	dir = 8;
 	light_color = "#dae2ff";
 	light_power = 0.7
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/surface/table,
 /obj/structure/barricade/handrail{
@@ -12948,10 +12932,6 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/surface/table,
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
@@ -14121,10 +14101,6 @@
 	light_power = 0.7
 	},
 /obj/structure/disposalpipe/segment,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/surface/table,
 /obj/item/toy/deck,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -17137,10 +17113,6 @@
 /obj/structure/sign/safety/synth_storage{
 	pixel_y = 28;
 	pixel_x = 10
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
@@ -20443,10 +20415,6 @@
 	dir = 4;
 	light_color = "#dae2ff";
 	light_power = 0.5
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder/industrial{

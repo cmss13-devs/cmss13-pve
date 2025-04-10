@@ -12,10 +12,6 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/machinery/power/apc/power/east,
 /obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
 /obj/item/ammo_box/magazine/nade_box/ltl/tear_gas{
