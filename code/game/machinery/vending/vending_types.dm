@@ -308,7 +308,6 @@
 	)
 	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
 
-
 /obj/structure/machinery/vending/cigarette/marine
 	name = "cigarette machine"
 	icon_state = "cigs"
