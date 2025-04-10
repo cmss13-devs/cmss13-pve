@@ -90,8 +90,21 @@
 	var/damage_falloff_mult = 1
 	///Multiplier. Increased and decreased through attachments. Multiplies the projectile's damage bleed (buildup) by this number.
 	var/damage_buildup_mult = 1
-	///Screen shake when the weapon is fired.
+	///Recoil applied when gun is fired wielded.
 	var/recoil = 0
+	///Recoil applied when gun is fired unwielded.
+	var/recoil_unwielded = 0
+	///a multiplier of the duration the recoil takes to go back to normal view, this is (recoil*recoil_backtime_multiplier)+1
+	var/recoil_backtime_multiplier = 2
+	///this is how much deviation the gun recoil can have, recoil pushes the screen towards the reverse angle you shot + some deviation which this is the max.
+	var/recoil_deviation = 22.5
+	/// How much recoil_buildup is lost per second. Builds up as time passes, and is set to 0 when a single shot is fired
+	var/recoil_loss_per_second = 10
+	/// The recoil on a dynamic recoil gun
+	var/recoil_buildup = 0
+	///The limit at which the recoil on a gun can reach. Usually the maximum value
+	var/recoil_buildup_limit = 0
+	var/last_recoil_update = 0
 	///How much the bullet scatters when fired.
 	var/scatter = 0
 	/// Added velocity to fired bullet.
@@ -106,8 +119,6 @@
 
 	///Multiplier. Increased and decreased through attachments. Multiplies the projectile's accuracy when unwielded by this number.
 	var/accuracy_mult_unwielded = 1
-	///Multiplier. Increased and decreased through attachments. Multiplies the gun's recoil when unwielded by this number.
-	var/recoil_unwielded = 0
 	///Multiplier. Increased and decreased through attachments. Multiplies the projectile's scatter when the gun is unwielded by this number.
 	var/scatter_unwielded = 0
 
@@ -209,16 +220,6 @@
 	var/has_open_icon = FALSE
 	var/bonus_overlay_x = 0
 	var/bonus_overlay_y = 0
-
-	/// How much recoil_buildup is lost per second. Builds up as time passes, and is set to 0 when a single shot is fired
-	var/recoil_loss_per_second = 10
-	/// The recoil on a dynamic recoil gun
-	var/recoil_buildup = 0
-
-	///The limit at which the recoil on a gun can reach. Usually the maximum value
-	var/recoil_buildup_limit = 0
-
-	var/last_recoil_update = 0
 
 	var/auto_retrieval_slot
 
@@ -1269,7 +1270,7 @@ and you're good to go.
 	play_firing_sounds(projectile_to_fire, user)
 
 	if(targloc != curloc)
-		simulate_recoil(dual_wield, user, target)
+		simulate_recoil(dual_wield, Get_Angle(user, target))
 
 		//This is where the projectile leaves the barrel and deals with projectile code only.
 		//vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -1362,7 +1363,7 @@ and you're good to go.
 			else actual_sound = pick(fire_sounds)
 			var/sound_volume = (flags_gun_features & GUN_SILENCED && !active_attachable) ? 25 : 60
 			playsound(user, actual_sound, sound_volume, 1)
-			simulate_recoil(2, user)
+			simulate_recoil(2, Get_Angle(user, attacked_mob))
 			var/t
 			var/datum/cause_data/cause_data
 			if(projectile_to_fire.ammo.damage == 0)
@@ -1505,7 +1506,7 @@ and you're good to go.
 
 		SEND_SIGNAL(projectile_to_fire, COMSIG_BULLET_USER_EFFECTS, user)
 		SEND_SIGNAL(user, COMSIG_BULLET_DIRECT_HIT, attacked_mob)
-		simulate_recoil(1, user)
+		simulate_recoil(1, Get_Angle(user, attacked_mob))
 
 		if(projectile_to_fire.ammo.bonus_projectiles_amount)
 			var/obj/projectile/BP
@@ -1838,37 +1839,33 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 
 	last_recoil_update = world.timeofday
 
-/obj/item/weapon/gun/proc/simulate_recoil(total_recoil = 0, mob/user, atom/target)
+///Generates screenshake if the gun has recoil
+/obj/item/weapon/gun/proc/simulate_recoil(recoil_bonus = 0, firing_angle)
+	var/total_recoil = recoil_bonus
 	if(flags_gun_features & GUN_RECOIL_BUILDUP)
 		update_recoil_buildup()
 
 		recoil_buildup = min(recoil + recoil_buildup, recoil_buildup_limit)
 		total_recoil += (recoil_buildup*RECOIL_BUILDUP_VIEWPUNCH_MULTIPLIER)
 
-	if(flags_item & WIELDED)
-		if(!(flags_gun_features & GUN_RECOIL_BUILDUP)) // We're nesting this if loop, because we don't want the "else" to run if we are wielding
-			total_recoil += recoil
+	if((flags_item & WIELDED))
+		total_recoil += recoil
 	else
 		total_recoil += recoil_unwielded
 		if(flags_gun_features & GUN_BURST_FIRING)
-			total_recoil++
-
-	if(user && user.mind && user.skills)
-		if(user?.skills?.get_skill_level(SKILL_FIREARMS) == SKILL_FIREARMS_CIVILIAN && !is_civilian_usable(user))
+			total_recoil += 1
+	if(gun_user && gun_user.mind && gun_user.skills)
+		if(gun_user?.skills?.get_skill_level(SKILL_FIREARMS) == SKILL_FIREARMS_CIVILIAN && !is_civilian_usable(gun_user))
 			total_recoil += RECOIL_AMOUNT_TIER_5
 		else
-			total_recoil -= user.skills.get_skill_level(SKILL_FIREARMS)*RECOIL_AMOUNT_TIER_5
-
-	if(total_recoil > 0 && (ishuman(user) || HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS)))
-		if(total_recoil >= 4)
-			shake_camera(user, total_recoil * 0.5, total_recoil)
-		else
-			shake_camera(user, 1, total_recoil)
+			total_recoil -= gun_user.skills.get_skill_level(SKILL_FIREARMS)*RECOIL_AMOUNT_TIER_5
+	var/actual_angle = firing_angle + rand(-recoil_deviation, recoil_deviation) + 180
+	if(actual_angle > 360)
+		actual_angle -= 360
+	if(total_recoil > 0)
+		recoil_camera(gun_user, total_recoil + 1, (total_recoil * recoil_backtime_multiplier)+1, total_recoil, actual_angle)
 		return TRUE
 
-	return FALSE
-
-///muzzle flash
 /obj/item/weapon/gun/proc/muzzle_flash(firing_angle)
 	if(!muzzle_flash || flags_gun_features & GUN_SILENCED || isnull(firing_angle))
 		return //We have to check for null angle here, as 0 can also be an angle.
