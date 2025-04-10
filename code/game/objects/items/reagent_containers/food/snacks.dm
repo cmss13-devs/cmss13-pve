@@ -3264,18 +3264,18 @@
 		icon_state = "open-hotdog"
 
 /*
-/obj/item/reagent_container/food/snacks/upp
+/obj/item/storage/box/mre/upp
 	name = "\improper UPP survival ration"
 	desc = "A small compressed package containing a single portion of food you cannot distinguish. Mass produced as emergency rations they are available in abundance anywhere in the Union and are packed with nutritional additives. They are commonplace in the diets of many citizens of the Union who eat them out of convenience in place of more flavourful nutrient bars, or as nutritional additives to dishes. Despite popular myths in the UA, they are not the standard MRE of the UPPAC, but are utilized in scenarios where the actual MRE supply has been depleted, as one would expect of survival food."
 	icon_state = "upp_ration"
 	bitesize = 4
 	package = 1
 
-/obj/item/reagent_container/food/snacks/upp/Initialize()
+/obj/item/storage/box/mre/upp/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 14)
 
-/obj/item/reagent_container/food/snacks/upp/attack_self(mob/user)
+/obj/item/storage/box/mre/upp/attack_self(mob/user)
 	..()
 
 	if(package)
