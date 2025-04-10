@@ -29,7 +29,7 @@
 	name = "landmine shrapnel"
 	icon_state = "buckshot"
 	accurate_range_min = 4
-	flags_ammo_behavior = AMMO_BOMB|AMMO_STOPPED_BY_COVER
+	flags_ammo_behavior = AMMO_ROCKET|AMMO_STOPPED_BY_COVER
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
@@ -45,7 +45,7 @@
 	name = "airburst shrapnel"
 	icon_state = "buckshot"
 	accurate_range_min = 4
-	flags_ammo_behavior = AMMO_BOMB|AMMO_STOPPED_BY_COVER //if claymoreest merges it needs to be pronetarget...
+	flags_ammo_behavior = AMMO_ROCKET|AMMO_STOPPED_BY_COVER //if claymoreest merges it needs to be pronetarget...
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32

@@ -130,19 +130,19 @@
 				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_UNTRAINED))
 					to_chat(user, SPAN_WARNING("You aren't trained in demining... This might be tricky."))
 					disarm_time = 50
-				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_NOVICE))
+				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_NOVICE))
 					to_chat(user, SPAN_WARNING("The basics are pretty basic, and some of these look unfamiliar. Steady, steady..."))
 					disarm_time = 40
 					disarm_fail_chance = 20
-				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_TRAINED))
+				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_TRAINED))
 					to_chat(user, SPAN_WARNING("Just like camp. The M20's LIDAR cone can be looped decently easily now that you have your hands on it."))
 					disarm_fail_chance = 0
 					disarm_time = 20
-				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_ENGI))
+				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_ENGI))
 					to_chat(user, SPAN_WARNING("Suddenly, all those hours doing demining training feel very, very justified."))
 					disarm_fail_chance = 0
 					disarm_time = 15
-				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_MASTER))
+				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_MASTER))
 					to_chat(user, SPAN_WARNING("Intelligent landmine, Claymore, M20. Make it quick."))
 					disarm_fail_chance = 0
 					disarm_time = 10
@@ -389,26 +389,25 @@
 			var/disarm_time = base_disarm_time
 			var/disarm_fail_chance = base_disarm_fail_chance
 			if(user.skills)
-				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_UNTRAINED))
+				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
 					to_chat(user, SPAN_WARNING("You aren't trained in demining... This is almost impossible."))
 					disarm_time = 60
 					disarm_fail_chance = 80
-				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_NOVICE))
-					to_chat(user, SPAN_WARNING("The M760 is notoriously difficult, even in "))
-					disarm_time = 40
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+					to_chat(user, SPAN_WARNING("...even with the diagrams the M760 was painful to disarm in training. Careful..."))
+					disarm_time = 50
 					disarm_fail_chance = 20
-				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_TRAINED))
-					to_chat(user, SPAN_WARNING("Just like camp. The M20's LIDAR cone can be looped decently easily now that you have your hands on it."))
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+					to_chat(user, SPAN_WARNING("Yeesh, this thing. Okay, steady hands and steady nerves. Remember the routine."))
 					disarm_fail_chance = 0
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+					to_chat(user, SPAN_WARNING("Done this a thousand times. It doesn't get any easier, but at least you've gotten faster."))
+					disarm_time = 30
+					disarm_fail_chance = 0
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
+					to_chat(user, SPAN_WARNING("Landmine, M760. Antitamper can be defeated like so... And its fuze can be broken like this."))
 					disarm_time = 20
-				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_ENGI))
-					to_chat(user, SPAN_WARNING("Suddenly, all those hours doing demining training feel very, very justified."))
 					disarm_fail_chance = 0
-					disarm_time = 15
-				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_MASTER))
-					to_chat(user, SPAN_WARNING("Intelligent landmine, Claymore, M20. Make it quick."))
-					disarm_fail_chance = 0
-					disarm_time = 10
 
 			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
 				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
@@ -474,6 +473,8 @@
 	var/disarmed = FALSE
 	var/explosion_power = 175
 	var/explosion_falloff = 75
+	base_disarm_time = 60 //innately sensitive...
+	base_disarm_fail_chance = 30 //...but lacks robust anti-tamper implementation.
 
 /obj/item/explosive/mine/m5a3betty/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -489,6 +490,58 @@
 	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
 	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
 	qdel(src)
+
+/obj/item/explosive/mine/m5a3betty/attackby(obj/item/W, mob/user)
+	if(HAS_TRAIT(W, TRAIT_TOOL_MULTITOOL))
+		if(active)
+			if(user.action_busy)
+				return
+			if(user.faction == iff_signal)
+				user.visible_message(SPAN_NOTICE("[user] starts unearthing and deactivating [src]."), \
+				SPAN_NOTICE("You start unearthing and deactivating [src]."))
+			else
+				user.visible_message(SPAN_NOTICE("[user] starts attempting to disarm \the [src], while being careful to not set it off."), \
+				SPAN_NOTICE("You start disarming [src], handling it with care."))
+			//handles custom skill dependent disarm chances.
+			var/disarm_time = base_disarm_time
+			var/disarm_fail_chance = base_disarm_fail_chance
+			if(user.skills)
+				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
+					to_chat(user, SPAN_WARNING("This feels like a horrible idea. Isn't this one of those jumping ones?"))
+					disarm_fail_chance = 60
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+					to_chat(user, SPAN_WARNING("You examine the mine and remember how sensitive even training versions were. Following procedure, you start disarming the [src]."))
+					disarm_fail_chance = 15
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+					to_chat(user, SPAN_WARNING("You examine the [src] for a moment and nod. You've got this."))
+					disarm_fail_chance = 0
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+					to_chat(user, SPAN_WARNING("With your training and experience, you've learned a few corners you can cut and best practices for field operations."))
+					disarm_time = 45
+					disarm_fail_chance = 0
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
+					to_chat(user, SPAN_WARNING("Landmine, M760. Antitamper can be defeated like so... And its fuze can be broken like this."))
+					disarm_time = 20
+					disarm_fail_chance = 0
+
+			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
+				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
+					SPAN_WARNING("You stop disarming [src]."))
+				return
+			if(user.faction != iff_signal) //ow!
+				if(prob(disarm_fail_chance))
+					triggered = TRUE
+					if(tripwire)
+						var/direction = GLOB.reverse_dir[src.dir]
+						var/step_direction = get_step(src, direction)
+						tripwire.forceMove(step_direction)
+					prime()
+			if(!active)//someone beat us to it
+				return
+			user.visible_message(SPAN_NOTICE("[user] finishes disarming [src]."), \
+			SPAN_NOTICE("You finish disarming [src]."))
+			disarm()
+
 
 /obj/item/explosive/mine/m5a3betty/disarm()
 	anchored = FALSE
@@ -668,8 +721,8 @@
 
 
 /obj/item/explosive/mine/sharp
-	name = "\improper P9 SHARP explosive dart"
-	desc = "An experimental P9 SHARP proximity triggered explosive dart designed by Armat Systems for use by the United States Colonial Marines. This one has full 360 detection range."
+	name = "\improper XM9 SHARP explosive dart"
+	desc = "An experimental XM9 SHARP proximity mine designed by Armat Systems for use in the SHARP rifle. A series of passive IR sensors give it coverage in a 360 perimeter once embedded into the ground."
 	icon_state = "sonicharpoon_g"
 	angle = 360
 	var/disarmed = FALSE
