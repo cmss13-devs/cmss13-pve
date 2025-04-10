@@ -130,22 +130,23 @@
 				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_UNTRAINED))
 					to_chat(user, SPAN_WARNING("You aren't trained in demining... This might be tricky."))
 					disarm_time = 50
+					disarm_fail_chance = 80
 				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_NOVICE))
-					to_chat(user, SPAN_WARNING("The basics are pretty basic, and some of these look unfamiliar. Steady, steady..."))
+					to_chat(user, SPAN_WARNING("The manuals had a lot to say about the M20, but not much about how to disarm them, other than staying out of the front arc."))
 					disarm_time = 40
 					disarm_fail_chance = 20
 				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_TRAINED))
-					to_chat(user, SPAN_WARNING("Just like camp. The M20's LIDAR cone can be looped decently easily now that you have your hands on it."))
+					to_chat(user, SPAN_WARNING("You take stock. It's just like training. The LIDAR sensors are what you need to start with..."))
+					disarm_time = 30
 					disarm_fail_chance = 0
-					disarm_time = 20
 				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_ENGI))
-					to_chat(user, SPAN_WARNING("Suddenly, all those hours doing demining training feel very, very justified."))
+					to_chat(user, SPAN_WARNING("You quickly and efficiently set to work disarming the [src]."))
+					disarm_time = 20
 					disarm_fail_chance = 0
-					disarm_time = 15
 				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_MASTER))
-					to_chat(user, SPAN_WARNING("Intelligent landmine, Claymore, M20. Make it quick."))
-					disarm_fail_chance = 0
+					to_chat(user, SPAN_WARNING("Intelligent landmine, Claymore, M20. You pick out the right procedure and do it in seconds."))
 					disarm_time = 10
+					disarm_fail_chance = 0
 
 			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
 				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
@@ -394,14 +395,14 @@
 					disarm_time = 60
 					disarm_fail_chance = 80
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
-					to_chat(user, SPAN_WARNING("...even with the diagrams the M760 was painful to disarm in training. Careful..."))
+					to_chat(user, SPAN_WARNING("Even with the diagrams the M760 was painful to disarm in training. Careful..."))
 					disarm_time = 50
 					disarm_fail_chance = 20
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
-					to_chat(user, SPAN_WARNING("Yeesh, this thing. Okay, steady hands and steady nerves. Remember the routine."))
+					to_chat(user, SPAN_WARNING("You take a moment to remember the manual for handling the M760, before setting to work."))
 					disarm_fail_chance = 0
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
-					to_chat(user, SPAN_WARNING("Done this a thousand times. It doesn't get any easier, but at least you've gotten faster."))
+					to_chat(user, SPAN_WARNING("You've done this a thousand times. It doesn't get any easier, but at least you've gotten faster."))
 					disarm_time = 30
 					disarm_fail_chance = 0
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
@@ -491,7 +492,7 @@
 	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
 	qdel(src)
 
-/obj/item/explosive/mine/m5a3betty/attackby(obj/item/W, mob/user)
+/obj/item/explosive/mine/m5a3betty/attackby(obj/item/W, mob/user)//technically this won't matter due to the omnidirectional tripwire.
 	if(HAS_TRAIT(W, TRAIT_TOOL_MULTITOOL))
 		if(active)
 			if(user.action_busy)
@@ -507,20 +508,20 @@
 			var/disarm_fail_chance = base_disarm_fail_chance
 			if(user.skills)
 				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
-					to_chat(user, SPAN_WARNING("This feels like a horrible idea. Isn't this one of those jumping ones?"))
+					to_chat(user, SPAN_WARNING("You ignore the lingering sense of dread and start tinkering with the landmine."))
 					disarm_fail_chance = 60
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
 					to_chat(user, SPAN_WARNING("You examine the mine and remember how sensitive even training versions were. Following procedure, you start disarming the [src]."))
 					disarm_fail_chance = 15
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
-					to_chat(user, SPAN_WARNING("You examine the [src] for a moment and nod. You've got this."))
+					to_chat(user, SPAN_WARNING("Spoof the sensor like so, and start work on the mechanism. You've got this."))
 					disarm_fail_chance = 0
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
-					to_chat(user, SPAN_WARNING("With your training and experience, you've learned a few corners you can cut and best practices for field operations."))
-					disarm_time = 45
+					to_chat(user, SPAN_WARNING("This shouldn't be too hard. The M5A3's actually pretty easy to disarm, to your experience."))
+					disarm_time = 40
 					disarm_fail_chance = 0
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
-					to_chat(user, SPAN_WARNING("Landmine, M760. Antitamper can be defeated like so... And its fuze can be broken like this."))
+					to_chat(user, SPAN_WARNING("Landmine, M5A3. Trivial to break."))
 					disarm_time = 20
 					disarm_fail_chance = 0
 
@@ -585,6 +586,8 @@
 	var/disarmed = FALSE
 	var/explosion_power = 250
 	var/explosion_falloff = 125
+	base_disarm_time = 45
+	base_disarm_fail_chance = 50
 
 /obj/item/explosive/mine/fzd91/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -600,6 +603,56 @@
 	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
 	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
 	qdel(src)
+
+/obj/item/explosive/mine/fzd91/attackby(obj/item/W, mob/user)
+	if(HAS_TRAIT(W, TRAIT_TOOL_MULTITOOL))
+		if(active)
+			if(user.action_busy)
+				return
+			if(user.faction == iff_signal)
+				user.visible_message(SPAN_NOTICE("[user] starts unearthing and deactivating [src]."), \
+				SPAN_NOTICE("You start unearthing and deactivating [src]."))
+			else
+				user.visible_message(SPAN_NOTICE("[user] starts attempting to disarm \the [src], while being careful to not set it off."), \
+				SPAN_NOTICE("You start disarming [src], handling it with care."))
+			//handles custom skill dependent disarm chances.
+			var/disarm_time = base_disarm_time
+			var/disarm_fail_chance = base_disarm_fail_chance
+			if(user.skills)
+				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
+					to_chat(user, SPAN_WARNING("It looks just like how they do on TV. Hopefully you have better luck than the stuntmen..."))
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+					to_chat(user, SPAN_WARNING("You examine the mine. It's Union issue for sure. With some caution, you begin disarming the [src]."))
+					disarm_fail_chance = 15
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+					to_chat(user, SPAN_WARNING("You examine the [src] for a moment. It's an FZD-91, not the hardest nut to crack."))
+					disarm_fail_chance = 0
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+					to_chat(user, SPAN_WARNING("Could be worse. Could be a lot worse, honestly. You start rapidly disarming and making safe the landmine."))
+					disarm_time = 35
+					disarm_fail_chance = 0
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
+					to_chat(user, SPAN_WARNING("The FZD-91 is tamper resistant but its anti-handling features are outdated. You can make short work of it."))
+					disarm_time = 25
+					disarm_fail_chance = 0
+
+			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
+				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
+					SPAN_WARNING("You stop disarming [src]."))
+				return
+			if(user.faction != iff_signal) //ow!
+				if(prob(disarm_fail_chance))
+					triggered = TRUE
+					if(tripwire)
+						var/direction = GLOB.reverse_dir[src.dir]
+						var/step_direction = get_step(src, direction)
+						tripwire.forceMove(step_direction)
+					prime()
+			if(!active)//someone beat us to it
+				return
+			user.visible_message(SPAN_NOTICE("[user] finishes disarming [src]."), \
+			SPAN_NOTICE("You finish disarming [src]."))
+			disarm()
 
 /obj/item/explosive/mine/fzd91/disarm()
 	anchored = FALSE
