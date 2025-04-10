@@ -2479,8 +2479,8 @@
 /area/golden_arrow/squad_one)
 "BY" = (
 /obj/structure/surface/table,
-/obj/item/storage/box/m94/signal,
-/obj/item/storage/box/m94/signal{
+/obj/item/storage/box/flare/signal,
+/obj/item/storage/box/flare/signal{
 	pixel_x = 5;
 	pixel_y = 5
 	},
