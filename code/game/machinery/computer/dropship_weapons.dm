@@ -26,7 +26,6 @@
 	var/datum/cas_fire_mission/configuration
 
 	// groundside maps
-	var/datum/tacmap/tacmap
 	var/minimap_type = MINIMAP_FLAG_USCM
 
 	// Cameras
@@ -42,7 +41,6 @@
 /obj/structure/machinery/computer/dropship_weapons/Initialize()
 	. = ..()
 	simulation = new()
-	tacmap = new(src, minimap_type)
 
 	RegisterSignal(src, COMSIG_CAMERA_MAPNAME_ASSIGNED, PROC_REF(camera_mapname_update))
 
@@ -144,13 +142,9 @@
 		RegisterSignal(dropship, COMSIG_DROPSHIP_REMOVE_EQUIPMENT, PROC_REF(equipment_update))
 		registered = TRUE
 
-	if(!tacmap.map_holder)
-		var/level = SSmapping.levels_by_trait(tacmap.targeted_ztrait)
-		tacmap.map_holder = SSminimaps.fetch_tacmap_datum(level[1], tacmap.allowed_flags)
 
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		user.client.register_map_obj(tacmap.map_holder.map)
 		SEND_SIGNAL(src, COMSIG_CAMERA_REGISTER_UI, user)
 		ui = new(user, src, "DropshipWeaponsConsole", "Weapons Console")
 		ui.open()
@@ -176,7 +170,6 @@
 
 /obj/structure/machinery/computer/dropship_weapons/ui_static_data(mob/user)
 	. = list()
-	.["tactical_map_ref"] = tacmap.map_holder.map_ref
 	.["camera_map_ref"] = camera_map_name
 
 /obj/structure/machinery/computer/dropship_weapons/ui_data(mob/user)
@@ -955,7 +948,6 @@
 /obj/structure/machinery/computer/dropship_weapons/Destroy()
 	. = ..()
 	QDEL_NULL(firemission_envelope)
-	QDEL_NULL(tacmap)
 
 /obj/structure/machinery/computer/dropship_weapons/proc/simulate_firemission(mob/living/user)
 

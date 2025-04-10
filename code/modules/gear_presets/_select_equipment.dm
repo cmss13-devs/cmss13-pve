@@ -27,7 +27,6 @@
 	var/origin_override
 
 	var/minimap_icon = "private"
-	var/minimap_background = MINIMAP_ICON_BACKGROUND_USCM
 	var/always_minimap_visible = TRUE
 
 	//Uniform data
@@ -528,32 +527,6 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	for(var/trait in real_client.prefs.traits)
 		var/datum/character_trait/CT = GLOB.character_traits[trait]
 		CT.apply_trait(new_human, src)
-
-/datum/equipment_preset/proc/get_minimap_icon(mob/living/carbon/human/user)
-	var/image/background = mutable_appearance('icons/ui_icons/map_blips.dmi', "background")
-	if(user.assigned_squad)
-		background.color = user.assigned_squad.minimap_color
-	else if(minimap_background)
-		background.color = minimap_background
-	else
-		background.color = MINIMAP_ICON_BACKGROUND_CIVILIAN
-
-	if(islist(minimap_icon))
-		for(var/icons in minimap_icon)
-			var/iconstate = icons ? icons : "unknown"
-			var/mutable_appearance/icon = image('icons/ui_icons/map_blips.dmi', icon_state = iconstate)
-			icon.appearance_flags = RESET_COLOR
-
-			if(minimap_icon[icons])
-				icon.color = minimap_icon[icons]
-			background.overlays += icon
-	else
-		var/iconstate = minimap_icon ? minimap_icon : "unknown"
-		var/mutable_appearance/icon = image('icons/ui_icons/map_blips.dmi', icon_state = iconstate)
-		icon.appearance_flags = RESET_COLOR
-		background.overlays += icon
-
-	return background
 
 /datum/equipment_preset/proc/handle_late_join(mob/living/carbon/human/new_human, late_join)
 	return

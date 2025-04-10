@@ -115,9 +115,6 @@
 			. += "Primary Objective: [html_decode(assigned_squad.primary_objective)]"
 		if(assigned_squad.secondary_objective)
 			. += "Secondary Objective: [html_decode(assigned_squad.secondary_objective)]"
-	if(job in GLOB.ROLES_USCM)
-		. += ""
-		. += "<a href='byond://?MapView=1'>View Tactical Map</a>"
 	if(mobility_aura)
 		. += "Active Order: MOVE"
 	if(protection_aura)
