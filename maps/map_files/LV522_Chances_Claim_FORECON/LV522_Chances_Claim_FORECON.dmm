@@ -15800,7 +15800,8 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "hKv" = (
-/obj/structure/machinery/vending/cigarette/turf/open/floor/prison/darkpurplefull2,
+/obj/structure/machinery/vending/cigarette,
+/turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
 "hKE" = (
 /obj/structure/prop/ice_colony/ground_wire{
