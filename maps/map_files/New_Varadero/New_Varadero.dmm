@@ -3347,7 +3347,7 @@
 /turf/open/floor/carpet,
 /area/varadero/interior/maintenance/north)
 "cLd" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/blue/southeast,
 /area/varadero/interior/administration)
 "cLz" = (

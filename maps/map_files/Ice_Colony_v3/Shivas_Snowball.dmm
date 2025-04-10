@@ -13083,7 +13083,7 @@
 /turf/open/floor/shiva/north,
 /area/shiva/exterior/lz2_fortress)
 "lxp" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "lxu" = (
@@ -21700,7 +21700,7 @@
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/interior/warehouse/caves)
 "vFc" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "vFi" = (
@@ -23230,7 +23230,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/shiva/interior/caves/cp_camp)
 "xGu" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/n_admin)
 "xHv" = (

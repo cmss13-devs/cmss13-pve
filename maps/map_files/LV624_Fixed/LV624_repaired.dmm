@@ -1389,7 +1389,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/whiteblue/southeast,
 /area/lv624/lazarus/corporate_dome)
 "bLa" = (
@@ -12672,7 +12672,7 @@
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "pXU" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "pYI" = (

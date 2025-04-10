@@ -18972,7 +18972,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/medical)
 "qcy" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/shiva/blue/southeast,
 /area/varadero/interior/administration)
 "qcN" = (

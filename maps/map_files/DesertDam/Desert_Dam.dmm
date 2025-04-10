@@ -26148,7 +26148,7 @@
 /turf/open/floor/prison/sterile_white,
 /area/desert_dam/interior/dam_interior/central_tunnel)
 "jKN" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/dark2,
 /area/desert_dam/building/administration/hallway)
 "jLd" = (

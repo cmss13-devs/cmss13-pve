@@ -14854,7 +14854,7 @@
 /turf/open/floor/darkpurple2/north,
 /area/bigredv2/caves/lambda/research)
 "kDx" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/carpet,
 /area/bigredv2/caves/lambda/breakroom)
 "kDA" = (
@@ -29423,7 +29423,7 @@
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/oob)
 "wWs" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkish,
 /area/bigredv2/caves/lambda/breakroom)
 "wWE" = (
@@ -29461,7 +29461,7 @@
 /turf/open/floor/darkish,
 /area/bigredv2/outside/medical)
 "wXZ" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/darkyellow2/southwest,
 /area/bigredv2/caves/eta/research)
 "wYt" = (

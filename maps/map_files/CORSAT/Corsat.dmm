@@ -8580,7 +8580,7 @@
 /turf/open/floor/corsat/purplewhite/northeast,
 /area/corsat/sigma/south/complex)
 "dTw" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/corsat/bluegrey/northwest,
 /area/corsat/omega/offices)
 "dTA" = (
@@ -10596,7 +10596,7 @@
 /turf/open/floor/corsat/tan/north,
 /area/corsat/gamma/residential/west)
 "eXG" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/corsat/officesquares,
 /area/corsat/sigma/south/offices)
 "eXK" = (
@@ -19279,7 +19279,7 @@
 /turf/open/floor/corsat/darkgreen,
 /area/corsat/gamma/foyer)
 "jBC" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/wood,
 /area/corsat/theta/biodome/complex)
 "jBD" = (

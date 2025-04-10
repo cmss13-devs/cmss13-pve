@@ -8077,7 +8077,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/whiteblue/southeast,
 /area/lv624/lazarus/corporate_dome)
 "gpf" = (
@@ -10813,7 +10813,7 @@
 /turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "kgB" = (
-/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "kgS" = (
