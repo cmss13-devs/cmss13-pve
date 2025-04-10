@@ -823,7 +823,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/tool/hatchet = null,
 		/obj/item/tool/hatchet = null,
 		/obj/item/tool/hatchet = null,
-		/obj/item/storage/box/MRE = null,
+		/obj/item/storage/box/mre = null,
 		/obj/item/storage/box/handcuffs = null,
 		/obj/item/storage/pill_bottle/happy = null,
 		/obj/item/weapon/twohanded/fireaxe = null,
