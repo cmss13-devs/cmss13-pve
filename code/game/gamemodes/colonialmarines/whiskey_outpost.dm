@@ -402,7 +402,7 @@
 								/obj/item/explosive/grenade/high_explosive/m15,
 								/obj/item/explosive/grenade/high_explosive/m15,
 								/obj/item/explosive/grenade/high_explosive,
-								/obj/item/storage/box/nade_box
+								/obj/item/ammo_box/magazine/nade_box
 								)
 			if(41 to 44)
 				crate = new /obj/structure/closet/crate/ammo(T)
