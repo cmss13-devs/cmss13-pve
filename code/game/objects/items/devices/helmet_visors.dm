@@ -5,8 +5,7 @@
 	icon_state = "hud_sight"
 	w_class = SIZE_TINY
 
-	///The type of HUD our visor shows
-	var/hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = list(MOB_HUD_FACTION_MARINE)
 
 	///The sound when toggling on the visor
 	var/toggle_on_sound = 'sound/handling/hud_on.ogg'
@@ -81,7 +80,7 @@
 /obj/item/device/helmet_visor/upp
 	name = "squad optic"
 	desc = "An insertable visor HUD into a standard UPP helmet."
-	hud_type = MOB_HUD_FACTION_UPP
+	hud_type = list(MOB_HUD_FACTION_UPP)
 
 /obj/item/device/helmet_visor/medical
 	name = "basic medical optic"
@@ -99,7 +98,29 @@
 
 /obj/item/device/helmet_visor/medical/advanced
 	name = "advanced medical optic"
-	helmet_overlay = "med_sight_right"
+	helmet_overlay = "med_sight_left"
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_MEDICAL_ADVANCED)
+
+/obj/item/device/helmet_visor/medical/advanced/pmc
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_MEDICAL_ADVANCED)
+
+/obj/item/device/helmet_visor/medical/advanced/upp
+	hud_type = list(MOB_HUD_FACTION_UPP, MOB_HUD_MEDICAL_ADVANCED)
+
+/obj/item/device/helmet_visor/medical/advanced/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+	for(var/type in hud_type)
+		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
+		current_mob_hud.add_hud_to(user, attached_helmet)
+
+/obj/item/device/helmet_visor/medical/advanced/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+	for(var/type in hud_type)
+		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
+		current_mob_hud.remove_hud_from(user, attached_helmet)
+
+/obj/item/device/helmet_visor/medical/advanced/process(delta_time)
+	return PROCESS_KILL
 
 /obj/item/device/helmet_visor/medical/advanced/can_toggle(mob/living/carbon/human/user)
 	. = ..()
@@ -162,7 +183,7 @@
 /obj/item/device/helmet_visor/security
 	name = "security optic"
 	icon_state = "sec_sight"
-	hud_type = MOB_HUD_SECURITY_ADVANCED
+	hud_type = list(MOB_HUD_SECURITY_ADVANCED)
 	action_icon_string = "sec_sight_down"
 	helmet_overlay = "sec_sight_right"
 
@@ -172,6 +193,7 @@
 	hud_type = null
 	action_icon_string = "blank_hud_sight_down"
 	helmet_overlay = "weld_visor"
+	has_tracker = FALSE
 
 /obj/item/device/helmet_visor/welding_visor/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	attached_helmet.vision_impair = VISION_IMPAIR_MAX
@@ -350,3 +372,7 @@
 
 /obj/item/device/helmet_visor/night_vision/marine_raider/process(delta_time)
 	return PROCESS_KILL
+
+/obj/item/device/helmet_visor/night_vision/marine_raider/twe
+	desc = "A high-tech visor often seen used by the Royal Marine Commando forces of the TWE. Offers various tactical readouts as well as providing night-vision capabilities."
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
