@@ -2302,10 +2302,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
-"JH" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
-/turf/closed/wall/almayer/white/hull,
-/area/firefly/cryo_cell)
 "JJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/plate,
@@ -3029,13 +3025,6 @@
 /area/firefly/briefing)
 "Vd" = (
 /turf/open/floor/corsat/arrow_west,
-/area/firefly/cryo_cell)
-"Vh" = (
-/obj/structure/machinery/cryopod{
-	dir = 4
-	},
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
-/turf/open/floor/almayer/plate,
 /area/firefly/cryo_cell)
 "Vv" = (
 /obj/structure/machinery/light{
@@ -15157,7 +15146,7 @@ mH
 mH
 DY
 py
-JH
+mH
 mH
 mH
 gR
@@ -15310,7 +15299,7 @@ aq
 oQ
 oQ
 jZ
-Vh
+hb
 mH
 gR
 gR
@@ -15462,7 +15451,7 @@ mH
 oQ
 oQ
 mH
-JH
+mH
 mH
 gR
 gR
