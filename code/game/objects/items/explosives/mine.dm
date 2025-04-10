@@ -34,6 +34,9 @@
 	var/has_tripwire = TRUE //this should provide an easy way of just letting us configure this for alternative mines.
 	var/blast_tolerance = 15 //This represents the absolute minimum threshold of explosion damage necessary before the mine is disarmed. Meet or beat.
 	//var/blast_hardening = 0 //This is additional threshold, but also pseudohealth. Repeated explosions will eventually reduce it to the base blast_tolerance. Not yet implemented.
+	var/world_detonation_flavor = "clicks as [L] steps in front of it!"
+	var/person_detonation_flavor = "clicks as you step in front of it!"
+	var/hear_prime_flavor = "You hear a click."
 
 /obj/item/explosive/mine/Initialize()
 	. = ..()
@@ -239,9 +242,9 @@
 		return
 	if(HAS_TRAIT(L, TRAIT_ABILITY_BURROWED))
 		return
-	L.visible_message(SPAN_DANGER("[icon2html(src, viewers(src))] The [name] clicks as [L] triggers it!"), \
-	SPAN_DANGER("[icon2html(src, L)] The [name] clicks as you trigger it!"), \
-	SPAN_DANGER("You hear a click."))
+	L.visible_message(SPAN_DANGER("[icon2html(src, viewers(src))] The [name] [world_detonation_flavor]"), \
+	SPAN_DANGER("[icon2html(src, L)] The [name] [person_detonation_flavor]"), \
+	SPAN_DANGER("[hear_prime_flavor]"))
 
 	triggered = TRUE
 	playsound(loc, 'sound/weapons/mine_tripped.ogg', 25, 1)
@@ -367,6 +370,9 @@
 	base_disarm_time = 40
 	has_tripwire = FALSE
 	blast_tolerance = 85 //A C4 directly next to it will disarm the mine. Mostly for giving an option for disarming it.
+	world_detonation_flavor = "clicks as [L] steps on it!"
+	person_detonation_flavor = "clicks as you step on it!"
+	hear_prime_flavor = "You hear a click."
 
 /obj/item/explosive/mine/m760ap/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -485,6 +491,9 @@
 	base_disarm_fail_chance = 30 //...but lacks robust anti-tamper implementation.
 	blast_tolerance = 25 //Even at its furthest point, C4 will disarm the mine. Gives some form of counterplay.
 	has_tripwire = TRUE
+	world_detonation_flavor = "beeps as [L] steps in front of it and jumps into the air!"
+	person_detonation_flavor = "beeps as you step in front of it and jumps to chest height!"
+	hear_prime_flavor = "You hear a beep and see something bounce to chest height!"
 
 /obj/item/explosive/mine/m5a3betty/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -599,6 +608,9 @@
 	base_disarm_fail_chance = 50
 	blast_tolerance = 95 //Will require a C4 directly on top of it...!
 	has_tripwire = FALSE
+	world_detonation_flavor = "clicks as [L] steps in front of it!"
+	person_detonation_flavor = "clicks as you step in front of it!"
+	hear_prime_flavor = "You hear a click."
 
 /obj/item/explosive/mine/fzd91/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -702,7 +714,7 @@
 
 /obj/item/explosive/mine/tn13
 	name = "TN-13"
-	desc = "A somewhat basic landmine. It has no intelligent or electronic components, but is easily disarmed. Formerly produced by the Oberon Mechanical Concern's military ordinance division. While not in use anymore, vast stockpiles still exist."
+	desc = "A simple vintage landmine. It has no intelligent or electronic components, and is easily disarmed. Formerly produced by the Oberon Mechanical Concern's military ordinance division. While not in use anymore, vast stockpiles still exist."
 	icon_state = "tn13"
 	angle = 360
 	var/disarmed = FALSE
@@ -710,6 +722,9 @@
 	var/explosion_falloff = 25
 	blast_tolerance = 0 //always goes off.
 	has_tripwire = FALSE
+	world_detonation_flavor = "makes a dull clunk as [L] steps on it!
+	person_detonation_flavor = "makes a dull clunk as you step on it!"
+	hear_prime_flavor = "You hear a dull clunk."
 
 /obj/item/explosive/mine/tn13/check_for_obstacles(mob/living/user)
 	return FALSE
