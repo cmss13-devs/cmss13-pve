@@ -2317,6 +2317,8 @@
 #include "code\modules\projectiles\projectile.dm"
 #include "code\modules\projectiles\ammo_boxes\ammo_boxes.dm"
 #include "code\modules\projectiles\ammo_boxes\box_structures.dm"
+#include "code\modules\projectiles\ammo_boxes\grenade_box_structures.dm"
+#include "code\modules\projectiles\ammo_boxes\grenade_boxes.dm"
 #include "code\modules\projectiles\ammo_boxes\grenade_packets.dm"
 #include "code\modules\projectiles\ammo_boxes\handful_boxes.dm"
 #include "code\modules\projectiles\ammo_boxes\magazine_boxes.dm"
