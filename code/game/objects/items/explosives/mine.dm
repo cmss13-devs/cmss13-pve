@@ -702,7 +702,7 @@
 
 /obj/item/explosive/mine/tn13
 	name = "TN-13"
-	desc = "A somewhat basic landmine. It has no intelligent or electronic components, but is easily disarmed with a pair of wirecutters. Formerly produced by the Oberon Mechanical Concern's military ordinance division. While not in use anymore, vast stockpiles still exist."
+	desc = "A somewhat basic landmine. It has no intelligent or electronic components, but is easily disarmed. Formerly produced by the Oberon Mechanical Concern's military ordinance division. While not in use anymore, vast stockpiles still exist."
 	icon_state = "tn13"
 	angle = 360
 	var/disarmed = FALSE
@@ -762,7 +762,7 @@
 
 //guaranteed disarming.
 /obj/item/explosive/mine/attackby(obj/item/W, mob/user)
-	if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS))
+	if(HAS_TRAIT(W, TRAIT_TOOL_MULTITOOL))
 		if(active)
 			if(user.action_busy)
 				return
