@@ -4101,6 +4101,14 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table,
 /obj/item/storage/box/wy_mre,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/mre/wy,
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/road)
 "bXW" = (
@@ -14466,6 +14474,20 @@
 	pixel_x = 6;
 	pixel_y = 0
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -6;
+	pixel_y = 12
+	},
+/obj/item/storage/box/mre/wy{
+	pixel_x = 6;
+	pixel_y = 0
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/synthetic)
 "gKX" = (
@@ -15186,7 +15208,7 @@
 	pixel_x = -8;
 	pixel_y = 12
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
 	},
@@ -17310,7 +17332,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "iaQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 6;
 	pixel_y = 0
 	},
@@ -19019,6 +19041,20 @@
 	pixel_x = -7;
 	pixel_y = -4
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/mre/wy{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = -7;
+	pixel_y = -4
+	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/bmg290/relay/hallway)
 "iPv" = (
@@ -19587,6 +19623,37 @@
 	pixel_y = -1
 	},
 /obj/item/storage/box/wy_mre{
+	pixel_x = -2;
+	pixel_y = -14
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/vehicle_locker/cabinet/cups{
+	pixel_y = 27;
+	pixel_x = -8
+	},
+/obj/structure/vehicle_locker/cabinet/cups/flip{
+	pixel_x = 7;
+	pixel_y = 27
+	},
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/food/drinks/coffeecup{
+	pixel_x = -7;
+	pixel_y = 10
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/item/reagent_container/food/drinks/coffeecup{
+	pixel_x = 9;
+	pixel_y = -1
+	},
+/obj/item/storage/box/mre/wy{
 	pixel_x = -2;
 	pixel_y = -14
 	},
@@ -20641,6 +20708,15 @@
 /obj/item/maintenance_jack,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/box/wy_mre,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/maintenance_jack,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/entry_pub)
 "jCX" = (
@@ -27825,6 +27901,18 @@
 	dir = 8
 	},
 /obj/item/storage/box/wy_mre,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/structure/machinery/door/window{
+	dir = 8
+	},
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics)
 "neT" = (
@@ -41470,7 +41558,7 @@
 	pixel_y = 6
 	},
 /obj/item/ammo_box/magazine/misc/mre/empty,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/strata/fake_wood,
 /area/bmg290/wilderness/beach)
 "tCN" = (
@@ -45255,7 +45343,7 @@
 	density = 0;
 	pixel_y = 18
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics_hub)
 "vCB" = (
@@ -45265,6 +45353,14 @@
 /obj/structure/surface/table,
 /obj/item/trash/USCMtray,
 /obj/item/storage/box/wy_mre,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/trash/USCMtray,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/interior/wood/alt,
 /area/bmg290/wilderness/beach)
 "vCR" = (

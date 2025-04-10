@@ -401,6 +401,14 @@
 /obj/structure/surface/table/reinforced,
 /obj/item/trash/plate,
 /obj/item/reagent_container/food/snacks/upp,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/trash/plate,
+/obj/item/storage/box/mre/upp,
 /turf/open/floor/strata/green3/east,
 /area/adminlevel/ert_station/upp_station)
 "gR" = (
@@ -414,6 +422,31 @@
 	pixel_x = 2
 	},
 /obj/item/reagent_container/food/snacks/upp{
+	pixel_y = 4;
+	pixel_x = 3
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka{
+	pixel_y = 9;
+	pixel_x = -7
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/box/mre/upp{
+	pixel_y = 1;
+	pixel_x = -3
+	},
+/obj/item/storage/box/mre/upp{
+	pixel_y = 10;
+	pixel_x = 2
+	},
+/obj/item/storage/box/mre/upp{
 	pixel_y = 4;
 	pixel_x = 3
 	},
@@ -1149,6 +1182,14 @@
 /obj/structure/surface/table/reinforced,
 /obj/item/trash/plate,
 /obj/item/reagent_container/food/snacks/upp,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/trash/plate,
+/obj/item/storage/box/mre/upp,
 /turf/open/floor/strata/green3/west,
 /area/adminlevel/ert_station/upp_station)
 "vz" = (
@@ -1505,6 +1546,13 @@
 "BN" = (
 /obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/upp,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/box/mre/upp,
 /turf/open/floor/strata/red3/north,
 /area/adminlevel/ert_station/upp_station)
 "BW" = (
@@ -1800,8 +1848,8 @@
 /area/adminlevel/ert_station/upp_station)
 "HD" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
+/obj/item/storage/box/mre/upp,
+/obj/item/storage/box/mre/upp,
 /turf/open/floor/strata/multi_tiles/west,
 /area/adminlevel/ert_station/upp_station)
 "HE" = (

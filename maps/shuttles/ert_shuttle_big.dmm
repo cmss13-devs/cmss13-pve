@@ -223,6 +223,22 @@
 /obj/item/tool/pen,
 /obj/item/tool/pen,
 /obj/item/tool/pen,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/storage/box/mre/wy,
+/obj/item/storage/box/mre/wy,
+/obj/item/storage/box/mre/wy,
+/obj/item/tool/pen,
+/obj/item/tool/pen,
+/obj/item/tool/pen,
 /turf/open/floor/almayer/plate,
 /area/shuttle/ert)
 "pq" = (
