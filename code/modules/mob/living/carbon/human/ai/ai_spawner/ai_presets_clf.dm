@@ -1,52 +1,80 @@
 /datum/human_ai_equipment_preset/clf
-	faction = FACTION_CLF
+	faction = "Insurrectionists"
 
 /datum/human_ai_equipment_preset/clf/soldier
-	name = "CLF Soldier"
-	desc = "The bread & butter of the CLF’s attack forces. Disposable. Large variety of weapons and armor."
-	path = /datum/equipment_preset/clf/soldier/ai
-
-/datum/human_ai_equipment_preset/clf/engineer
-	name = "CLF Engineer"
-	desc = "Engineers are the technicians of the CLF, having a lot of utility items but less firepower than the soldiers."
-	path = /datum/equipment_preset/clf/engineer/ai
+	name = "TWE Rebel, Soldier (Rifle)"
+	desc = "Armed with either a Bizon SMG, MAR variant rifle and very rarely an F90 rifle."
+	path = /datum/equipment_preset/clf/soldier
 
 /datum/human_ai_equipment_preset/clf/shotgunner
-	name = "CLF Shotgunner"
-	desc = "Close-quarters specialist. Fairly poorly equipped except for a shotgun, which can shred marines who get too close."
-	path = /datum/equipment_preset/clf/soldier/ai/shotgunner
-
-/datum/human_ai_equipment_preset/clf/sadar
-	name = "CLF Specialist - SADAR"
-	desc = "CLF powerhouse. Lightly equipped and armed aside from their one-use SADAR, capable of instantly killing unaware marines."
-	path = /datum/equipment_preset/clf/specialist/ai
+	name = "TWE Rebel, Soldier (Shotgunner)"
+	desc = "Armed with an HG-37 shotgun."
+	path = /datum/equipment_preset/clf/soldier/shotgun
 
 /datum/human_ai_equipment_preset/clf/flamer
-	name = "CLF Specialist - Flamer"
-	desc = "Utilizing a stolen USCM flamer, this specialist is capable of laying down heavy area denial and damage over time. Lightly armed aside from it."
-	path = /datum/equipment_preset/clf/specialist/ai/flamer
+	name = "TWE Rebel, Soldier (Incinerator)"
+	desc = "Armed with a M240A1 incinerator unit."
+	path = /datum/equipment_preset/clf/soldier/flamer
 
-/datum/human_ai_equipment_preset/clf/combat_synth
-	name = "CLF Combat Synthetic"
-	desc = "Tanky support/combat unit. The CLF combat synth is capable of putting out a lot of damage and taking a load of it before going down. Due to its wide-ranging skill set, it’s also capable of medicating other CLF."
-	path = /datum/equipment_preset/clf/synth/combat
+/datum/human_ai_equipment_preset/clf/engineer
+	name = "TWE Rebel, Anti-Tank"
+	desc = "Armed with a few M83 SADARs."
+	path = /datum/equipment_preset/clf/engineer
 
 /datum/human_ai_equipment_preset/clf/medic
-	name = "CLF Medic"
-	desc = "The guy who tries to keep the rest of the team alive. Comes equipped with medical supplies, though they don’t always live long enough to do treatment."
-	path = /datum/equipment_preset/clf/synth/combat
+	name = "TWE Rebel Medic"
+	desc = "Armed with either a Bizon SMG, L54 pistol or a HG-45 pistol."
+	path = /datum/equipment_preset/clf/medic
 
 /datum/human_ai_equipment_preset/clf/multipurpose_synth
-	name = "CLF Multipurpose Synthetic"
+	name = "TWE Rebel Multipurpose Synthetic"
 	desc = "Tanky support unit. The multipurpose synth is a neutered version of the combat synth that can’t use firearms. Combat synth recommended to be used instead."
 	path = /datum/equipment_preset/clf/synth
 
 /datum/human_ai_equipment_preset/clf/leader
-	name = "CLF Leader"
-	desc = "A local commander of the CLF’s forces. They may be in charge of handling a squad, or even an entire colony depending on their distance from the cell’s base."
+	name = "TWE Rebel Leader"
+	desc = "Armed with either a MAR variant or a F90."
 	path = /datum/equipment_preset/clf/leader
 
 /datum/human_ai_equipment_preset/clf/cell_commander
-	name = "CLF Cell Commander"
-	desc = "The head honcho of the CLF’s operations in a given area. The cell is led by one of these guys. Their smartgun lets them shred anyone in their path. Use sparingly."
+	name = "TWE Rebel Cell Commander"
+	desc = "Armed with a M56B smartgun."
 	path = /datum/equipment_preset/clf/commander
+
+//UA Rebels
+
+/datum/human_ai_equipment_preset/clf/ua/soldier
+	name = "UA Rebel, Soldier (Rifle)"
+	desc = "Armed with a M20A, L42A or very rarely a M41A. Even more rarely, will only be equipped with a M1911, M4A3 or VP70."
+	path = /datum/equipment_preset/rebel/soldier
+
+/datum/human_ai_equipment_preset/clf/ua/shotgunner
+	name = "UA Rebel, Soldier (Shotgunner)"
+	desc = "Armed with either a M120 combat shotgun or a Ithaca-37 pump-shotgun."
+	path = /datum/equipment_preset/rebel/soldier/shotgun
+
+/datum/human_ai_equipment_preset/clf/ua/flamer
+	name = "UA Rebel, Soldier (Incinerator)"
+	desc = "Armed with a M240A1 incinerator unit."
+	path = /datum/equipment_preset/rebel/soldier/flamer
+
+/datum/human_ai_equipment_preset/clf/ua/engineer
+	name = "UA Rebel, Anti-Tank"
+	desc = "Armed with a few M83 SADARs."
+	path = /datum/equipment_preset/rebel/at
+
+/datum/human_ai_equipment_preset/clf/ua/medic
+	name = "UA Rebel Medic"
+	desc = "Armed with either a M1911, M4A3 or VP70. Rarely, will be armed with a M20A, L42A or very rarely a M41A"
+	path = /datum/equipment_preset/rebel/medic
+
+/datum/human_ai_equipment_preset/clf/ua/leader
+	name = "UA Rebel Leader"
+	desc = "Armed with a M41A."
+	path = /datum/equipment_preset/rebel/soldier/leader
+
+/datum/human_ai_equipment_preset/clf/ua/cell_commander
+	name = "UA Rebel Cell Commander"
+	desc = "Armed with a M56A2 smartgun."
+	path = /datum/equipment_preset/rebel/commander
+
