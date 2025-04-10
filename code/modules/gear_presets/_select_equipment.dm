@@ -766,49 +766,72 @@ GLOBAL_LIST_EMPTY(personal_closets)
 /datum/equipment_preset/proc/add_rebel_specialist_weapon(atom/M, ammo_amount = 4)
 	if(!M) return
 
-	var/list/rebel_gunner_firearms = list(
-		/obj/item/weapon/gun/m60 = /obj/item/ammo_magazine/m60,
+	var/list/rebel_firearms = list(
+		/obj/item/weapon/gun/shotgun/double = /obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/weapon/gun/shotgun/double/with_stock = /obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/weapon/gun/shotgun/double/sawn = /obj/item/ammo_magazine/handful/shotgun/buckshot,
+		/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
+		/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
+		/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
+		/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
 		/obj/item/weapon/gun/rifle/mar40/lmg = /obj/item/ammo_magazine/rifle/mar40/lmg,
+		/obj/item/weapon/gun/rifle/mar40/lmg = /obj/item/ammo_magazine/rifle/mar40/lmg,
+		/obj/item/weapon/gun/rifle/m16 = /obj/item/ammo_magazine/rifle/m16,
+		/obj/item/weapon/gun/rifle/ar10 = /obj/item/ammo_magazine/rifle/ar10,
+		/obj/item/weapon/gun/rifle/l42a/abr40 = /obj/item/ammo_magazine/rifle/l42a/abr40,
+		/obj/item/weapon/gun/rifle/l42a/abr40 = /obj/item/ammo_magazine/rifle/l42a/abr40,
+		/obj/item/weapon/gun/rifle/l42a/abr40 = /obj/item/ammo_magazine/rifle/l42a/abr40,
+		/obj/item/weapon/gun/rifle/l42a/abr40 = /obj/item/ammo_magazine/rifle/l42a/abr40,
+		/obj/item/weapon/gun/pistol/b92fs = /obj/item/ammo_magazine/pistol/b92fs,
+		/obj/item/weapon/gun/smg/mp27 = /obj/item/ammo_magazine/smg/mp27,
+		/obj/item/weapon/gun/smg/mp5 = /obj/item/ammo_magazine/smg/mp5,
+		/obj/item/weapon/gun/smg/bizon = /obj/item/ammo_magazine/smg/bizon,
+		/obj/item/weapon/gun/smg/mac15 = /obj/item/ammo_magazine/smg/mac15,
+		/obj/item/weapon/gun/smg/uzi = /obj/item/ammo_magazine/smg/uzi
 		)
 
-	var/gunpath = pick(rebel_gunner_firearms)
-	var/ammopath = rebel_gunner_firearms[gunpath]
+	//no guns in sidearms list, we don't want players spawning with a gun in hand.
+	var/list/rebel_sidearms = list(
+		/obj/item/weapon/twohanded/lungemine = null,
+		/obj/item/weapon/twohanded/lungemine = null,
+		/obj/item/attachable/bayonet = null,
+		/obj/item/attachable/bayonet/upp = null,
+		/obj/item/explosive/grenade/custom/ied = null,
+		/obj/item/explosive/grenade/custom/ied = null,
+		/obj/item/clothing/accessory/storage/webbing = null,
+		/obj/item/clothing/accessory/storage/webbing = null,
+		/obj/item/storage/belt/marine = null,
+		/obj/item/storage/pill_bottle/tramadol/skillless = null,
+		/obj/item/explosive/grenade/phosphorus = null,
+		/obj/item/clothing/glasses/welding = null,
+		/obj/item/reagent_container/ld50_syringe/choral = null,
+		/obj/item/storage/firstaid/regular = null,
+		/obj/item/reagent_container/pill/cyanide = null,
+		/obj/item/device/megaphone = null,
+		/obj/item/storage/belt/utility/full = null,
+		/obj/item/storage/belt/utility/full = null,
+		/obj/item/storage/bible = null,
+		/obj/item/weapon/baseballbat = null,
+		/obj/item/weapon/baseballbat = null,
+		/obj/item/weapon/baseballbat = null,
+		/obj/item/weapon/baseballbat/metal = null,
+		/obj/item/explosive/grenade/empgrenade = null,
+		/obj/item/explosive/grenade/smokebomb = null,
+		/obj/item/explosive/grenade/smokebomb = null,
+		/obj/item/explosive/grenade/smokebomb = null,
+		/obj/item/tool/hatchet = null,
+		/obj/item/tool/hatchet = null,
+		/obj/item/tool/hatchet = null,
+		/obj/item/storage/box/MRE = null,
+		/obj/item/storage/box/handcuffs = null,
+		/obj/item/storage/pill_bottle/happy = null,
+		/obj/item/weapon/twohanded/fireaxe = null,
+		/obj/item/weapon/twohanded/spear = null
+		)
 
-	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
-
-	return 1
-
-//*****************************************************************************************************/
-
-//TWE GUNS
-GLOBAL_LIST_INIT(rebel_twe_shotguns, list(
-	/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/buckshot,
-	))
-
-GLOBAL_LIST_INIT(rebel_twe_smgs, list(
-	/obj/item/weapon/gun/smg/bizon/upp = /obj/item/ammo_magazine/smg/bizon,
-	/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
-	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
-	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
-	))
-
-GLOBAL_LIST_INIT(rebel_twe_rifles, list(
-	/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
-	/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
-	/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
-	/obj/item/weapon/gun/rifle/rmc_f90 = /obj/item/ammo_magazine/rifle/rmc_f90
-	))
-
-GLOBAL_LIST_INIT(rebel_twe_pistols, list(
-	/obj/item/weapon/gun/pistol/l54 = /obj/item/ammo_magazine/pistol/l54,
-	/obj/item/weapon/gun/pistol/highpower = /obj/item/ammo_magazine/pistol/highpower
-	))
-
-/datum/equipment_preset/proc/add_rebel_twe_smg(atom/M, ammo_amount = 4)
-	if(!M) return
-
-	var/gunpath = pick(GLOB.rebel_twe_smgs)
-	var/ammopath = GLOB.rebel_twe_smgs[gunpath]
+	var/gunpath = sidearm? pick(rebel_sidearms) : pick(rebel_firearms)
+	var/ammopath = sidearm? rebel_sidearms[gunpath] : rebel_firearms[gunpath]
 
 	spawn_weapon(gunpath, ammopath, M, FALSE, ammo_amount)
 
@@ -1061,7 +1084,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/self_setting(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/proc/add_ice_colony_survivor_equipment(mob/living/carbon/human/new_human)
 	if((SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD]) && (SSmapping.configs[GROUND_MAP].map_name != MAP_CORSAT))
