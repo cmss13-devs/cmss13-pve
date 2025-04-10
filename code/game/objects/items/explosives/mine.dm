@@ -79,10 +79,10 @@
 		msg_admin_niche("[key_name(user)] attempted to plant \a [name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
 		return
 
-	user.visible_message(SPAN_NOTICE("[user] starts deploying [src]."),
-		SPAN_NOTICE("You start deploying [src]."))
+	user.visible_message(SPAN_NOTICE("[user] starts deploying the [src]."),
+		SPAN_NOTICE("You start deploying the [src]."))
 	if(!do_after(user, 40, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
-		user.visible_message(SPAN_NOTICE("[user] stops deploying [src]."), \
+		user.visible_message(SPAN_NOTICE("[user] stops deploying the [src]."), \
 			SPAN_NOTICE("You stop deploying \the [src]."))
 		return
 
@@ -92,8 +92,8 @@
 	if(check_for_obstacles(user))
 		return
 
-	user.visible_message(SPAN_NOTICE("[user] finishes deploying [src]."), \
-		SPAN_NOTICE("You finish deploying [src]."))
+	user.visible_message(SPAN_NOTICE("[user] finishes deploying the [src]."), \
+		SPAN_NOTICE("You finish deploying the [src]."))
 
 	deploy_mine(user)
 
@@ -118,11 +118,11 @@
 			if(user.action_busy)
 				return
 			if(user.faction == iff_signal)
-				user.visible_message(SPAN_NOTICE("[user] starts deactivating [src]."), \
+				user.visible_message(SPAN_NOTICE("[user] starts deactivating the [src]."), \
 				SPAN_NOTICE("You start deactivating [src]."))
 			else
 				user.visible_message(SPAN_NOTICE("[user] starts attempting to disarm \the [src], while being careful to not set it off."), \
-				SPAN_NOTICE("You start disarming [src], handling it with care."))
+				SPAN_NOTICE("You start disarming the [src], handling it with care."))
 			//handles custom skill dependent disarm chances.
 			var/disarm_time = base_disarm_time
 			var/disarm_fail_chance = base_disarm_fail_chance
@@ -149,8 +149,8 @@
 					disarm_fail_chance = 0
 
 			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
-				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
-					SPAN_WARNING("You stop disarming [src]."))
+				user.visible_message(SPAN_WARNING("[user] stops disarming the [src]."), \
+					SPAN_WARNING("You stop disarming the [src]."))
 				return
 			if(user.faction != iff_signal) //ow!
 				if(prob(disarm_fail_chance))
@@ -162,8 +162,8 @@
 					prime()
 			if(!active)//someone beat us to it
 				return
-			user.visible_message(SPAN_NOTICE("[user] finishes disarming [src]."), \
-			SPAN_NOTICE("You finish disarming [src]."))
+			user.visible_message(SPAN_NOTICE("[user] finishes disarming the [src]."), \
+			SPAN_NOTICE("You finish disarming the [src]."))
 			disarm()
 
 	else
@@ -381,38 +381,38 @@
 			if(user.action_busy)
 				return
 			if(user.faction == iff_signal)
-				user.visible_message(SPAN_NOTICE("[user] starts unearthing and deactivating [src]."), \
-				SPAN_NOTICE("You start unearthing and deactivating [src]."))
+				user.visible_message(SPAN_NOTICE("[user] starts unearthing and deactivating the [src]."), \
+				SPAN_NOTICE("You start unearthing and deactivating the [src]."))
 			else
 				user.visible_message(SPAN_NOTICE("[user] starts attempting to disarm \the [src], while being careful to not set it off."), \
 				SPAN_NOTICE("You start disarming [src], handling it with care."))
 			//handles custom skill dependent disarm chances.
 			var/disarm_time = base_disarm_time
 			var/disarm_fail_chance = base_disarm_fail_chance
-			if(user.skills)
-				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
-					to_chat(user, SPAN_WARNING("You aren't trained in demining... This is almost impossible."))
-					disarm_time = 60
-					disarm_fail_chance = 80
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
-					to_chat(user, SPAN_WARNING("Even with the diagrams the M760 was painful to disarm in training. Careful..."))
-					disarm_time = 50
-					disarm_fail_chance = 20
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
-					to_chat(user, SPAN_WARNING("You take a moment to remember the manual for handling the M760, before setting to work."))
+			if(user.skills) //in reverse order. do not make the oldest if/else tree mistake in the book like I did.
+				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
+					to_chat(user, SPAN_WARNING("Landmine, M760. Antitamper can be defeated like so... And its fuze can be broken like this."))
+					disarm_time = 20
 					disarm_fail_chance = 0
 				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 					to_chat(user, SPAN_WARNING("You've done this a thousand times. It doesn't get any easier, but at least you've gotten faster."))
 					disarm_time = 30
 					disarm_fail_chance = 0
-				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
-					to_chat(user, SPAN_WARNING("Landmine, M760. Antitamper can be defeated like so... And its fuze can be broken like this."))
-					disarm_time = 20
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+					to_chat(user, SPAN_WARNING("You take a moment to remember the manual for handling the M760, before setting to work."))
 					disarm_fail_chance = 0
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+					to_chat(user, SPAN_WARNING("Even with the diagrams the M760 was painful to disarm in training. Careful..."))
+					disarm_time = 50
+					disarm_fail_chance = 20
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
+					to_chat(user, SPAN_WARNING("You aren't trained in demining... This is almost impossible."))
+					disarm_time = 60
+					disarm_fail_chance = 80
 
 			if(!do_after(user, disarm_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
-				user.visible_message(SPAN_WARNING("[user] stops disarming [src]."), \
-					SPAN_WARNING("You stop disarming [src]."))
+				user.visible_message(SPAN_WARNING("[user] stops disarming the [src]."), \
+					SPAN_WARNING("You stop disarming the [src]."))
 				return
 			if(user.faction != iff_signal) //ow!
 				if(prob(disarm_fail_chance))
@@ -424,8 +424,8 @@
 					prime()
 			if(!active)//someone beat us to it
 				return
-			user.visible_message(SPAN_NOTICE("[user] finishes disarming [src]."), \
-			SPAN_NOTICE("You finish disarming [src]."))
+			user.visible_message(SPAN_NOTICE("[user] finishes disarming the [src]."), \
+			SPAN_NOTICE("You finish disarming the [src]."))
 			disarm()
 
 	else
