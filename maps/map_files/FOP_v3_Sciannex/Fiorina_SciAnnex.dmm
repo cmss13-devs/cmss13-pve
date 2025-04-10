@@ -8,7 +8,7 @@
 /turf/open/space,
 /area/fiorina/oob)
 "aab" = (
-/obj/structure/machinery/vending/cigarette/koorlander/free,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/plating/prison,
 /area/fiorina/tumor/aux_engi)
 "aak" = (
