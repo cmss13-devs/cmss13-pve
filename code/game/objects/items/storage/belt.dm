@@ -138,7 +138,7 @@
 
 /obj/item/storage/belt/utility/construction
 	name = "\improper M277 pattern construction rig"
-	desc = "The M277 is a common rig used by Combat Technicians to carry around materials and other supplies. It consists of a modular belt with various clips. This version sarafices storage space for specialized material loading clips."
+	desc = "The M277 is an uncommon rig used by specialist combat engineers to carry around materials and other supplies. It consists of a modular belt with various clips. This version sarafices storage space for specialized material loading clips."
 	storage_slots = 6
 	can_hold = list(
 		/obj/item/tool/crowbar,
@@ -179,6 +179,14 @@
 		/obj/item/stack/sandbags,
 		/obj/item/defenses/handheld/sentry,
 	)
+
+/obj/item/storage/belt/utility/construction/full/fill_preset_inventory()
+	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/defenses/handheld/sentry(src)
+	new /obj/item/weapon/gun/smg/nailgun/compact(src)
+	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/stack/sheet/plasteel(src, 30)
+	new /obj/item/stack/sheet/metal(src, 50)
 
 /obj/item/storage/belt/utility/full/pred
 	name = "\improper Yautja toolbelt"
@@ -471,6 +479,14 @@
 		/obj/item/device/clue_scanner,
 		/obj/item/notepad/blue,
 	)
+
+/obj/item/storage/belt/security/full/fill_preset_inventory()
+	new /obj/item/weapon/baton(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
 
 /obj/item/storage/belt/security/MP
 	name = "\improper M276 pattern military police rig"
@@ -1020,7 +1036,7 @@
 		new /obj/item/explosive/grenade/high_explosive(src)
 
 /obj/item/storage/belt/grenade/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))
+	if(istype(W, /obj/item/ammo_box/magazine/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))
 		dump_into(W,user)
 	else
 		return ..()
@@ -1844,8 +1860,8 @@
 		new /obj/item/device/flashlight/flare(src)
 
 /obj/item/storage/belt/gun/flaregun/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/m94))
-		var/obj/item/storage/box/m94/M = W
+	if(istype(W, /obj/item/storage/box/flare))
+		var/obj/item/storage/box/flare/M = W
 		dump_into(M,user)
 	else
 		return ..()
