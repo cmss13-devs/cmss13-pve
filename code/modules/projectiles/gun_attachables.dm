@@ -1044,6 +1044,10 @@ Defined in conflicts.dm of the #defines folder.
 	name = "PO-M 4x Optic"
 	desc = "Old fashioned 4x scope. Sturdy, but a little unergonomic. UPP tradition. Reduces RoF and increases wield time. Major accuracy bonus when scoped."
 
+/obj/item/attachable/scope/upp/integrated
+	icon_state = null
+	attach_icon = null
+
 /obj/item/attachable/scope/variable_zoom
 	name = "S10 variable zoom telescopic scope"
 	desc = "An ARMAT S10 telescopic eye piece. Can be switched between 2x zoom, which allows the user to move while scoped in, and 4x zoom. Press the 'use rail attachment' HUD icon or use the verb of the same name to zoom."

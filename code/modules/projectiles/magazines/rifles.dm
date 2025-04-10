@@ -301,43 +301,73 @@
 //UPP TYPE 71 RIFLE
 
 /obj/item/ammo_magazine/rifle/type71
-	name = "\improper Type 71 magazine (10x27mm)"
-	desc = "A 10x27mm high-capacity casket magazine for the Type 71 rifle."
-	caliber = "10x27mm"
+	name = "\improper Type 71 magazine (11.7x22mm)"
+	desc = "A 11.7x22mm high-capacity casket magazine for the Type 71 rifle."
+	caliber = "11.7x22mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "type71"
 	ammo_band_icon = "+type71_band"
 	ammo_band_icon_empty = "+type71_band_e"
-	default_ammo = /datum/ammo/bullet/rifle/upp
+	default_ammo = /datum/ammo/bullet/rifle/type71
 	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/type71
 
+/obj/item/ammo_magazine/rifle/type71/tracer
+	name = "\improper Type 71 tracer magazine (11.7x22mm)"
+	desc = "A 11.7x22mm high-capacity casket magazine containing green tracer rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/type71/tracer
+	ammo_band_color = AMMO_BAND_COLOR_EXPLOSIVE
+
 /obj/item/ammo_magazine/rifle/type71/ap
-	name = "\improper Type 71 AP magazine (10x27mm)"
-	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/upp/ap
+	name = "\improper Type 71 AP magazine (11.7x22mm)"
+	desc = "A 11.7x22mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/type71/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/type71/heap
-	name = "\improper Type 71 HEAP magazine (10x27mm)"
-	desc = "A 10x27mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap
+	name = "\improper Type 71 HEAP magazine (11.7x22mm)"
+	desc = "A 11.7x22mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/type71/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/type71/hv
+	name = "\improper Type 71 HV magazine (11.7x22mm)"
+	desc = "A 11.7x22mm high-capacity casket magazine containing high velocity rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/type71/hv
+	ammo_band_color = AMMO_BAND_COLOR_HIGH_VELOCITY
 
 //-------------------------------------------------------
 //UPP AG80 RIFLE
 
 /obj/item/ammo_magazine/rifle/ag80
-	name = "\improper AG80 magazine (9.7x16mm)"
-	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle."
-	caliber = "9.7x16mm"
+	name = "\improper AG80 magazine (9.7x22mm)"
+	desc = "A 9.7x22mm high-capacity magazine for the AG80 rifle."
+	caliber = "9.7x22mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "ag80"
 	ammo_band_icon = "+ag80_band"
 	ammo_band_icon_empty = "+ag80_band_e"
-	default_ammo = /datum/ammo/bullet/rifle
+	default_ammo = /datum/ammo/bullet/rifle/ag80
 	max_rounds = 99
 	gun_type = /obj/item/weapon/gun/rifle/ag80
+
+/obj/item/ammo_magazine/rifle/ag80/tracer
+	name = "\improper AG80 tracer magazine (9.7x22mm)"
+	desc = "A 9.7x22mm high-capacity magazine containing tracer rounds for the AG80 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/ag80
+	ammo_band_color = AMMO_BAND_COLOR_EXPLOSIVE
+
+/obj/item/ammo_magazine/rifle/ag80/ap
+	name = "\improper AG80 AP magazine (9.7x22mm)"
+	desc = "A 9.7x22mm high-capacity magazine containing armor-piercing rounds for the AG80 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/ag80/heap
+	name = "\improper AG80 HEAP magazine (9.7x22mm)"
+	desc = "A 9.7x22mm high-capacity magazine containing high-explosive armor-piercing rounds for the AG80 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 //-------------------------------------------------------
 //L42A Battle Rifle
