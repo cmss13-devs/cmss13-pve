@@ -12815,7 +12815,7 @@
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	pixel_y = -1
 	},
-/obj/item/storage/box/nade_box{
+/obj/item/ammo_box/magazine/nade_box{
 	pixel_y = 15;
 	layer = 3.2;
 	pixel_x = -4
@@ -15418,7 +15418,7 @@
 /area/golden_arrow/medical)
 "cMX" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/storage/box/nade_box/smoke/red{
+/obj/item/ammo_box/magazine/nade_box/smoke/red{
 	pixel_x = 4;
 	pixel_y = 7
 	},
@@ -15579,7 +15579,7 @@
 	pixel_x = 1;
 	layer = 3.2
 	},
-/obj/item/storage/box/nade_box/flare{
+/obj/item/ammo_box/magazine/nade_box/flare{
 	pixel_x = 1
 	},
 /turf/open/floor/almayer,
@@ -15899,7 +15899,7 @@
 /area/golden_arrow/engineering)
 "exo" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/storage/box/nade_box/smoke{
+/obj/item/ammo_box/magazine/nade_box/smoke{
 	pixel_y = -7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -17403,7 +17403,7 @@
 /area/golden_arrow/synthcloset)
 "kBG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/nade_box{
+/obj/item/ammo_box/magazine/nade_box{
 	pixel_y = 13;
 	layer = 3.2
 	},
