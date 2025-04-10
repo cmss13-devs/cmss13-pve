@@ -118,6 +118,7 @@
 #define DROPSHIP_SAIPAN "dropship_saipan"
 #define DROPSHIP_UPP "dropship_upp"
 #define DROPSHIP_CYCLONE "dropship_cyclone"
+#define DROPSHIP_PMC "dropship_pmc"
 #define DROPSHIP_TORNADO "dropship_tornado"
 #define DROPSHIP_TYPHOON "dropship_typhoon"
 #define DROPSHIP_TRIPOLI "dropship_tripoli"
