@@ -1508,6 +1508,7 @@
 	},
 /obj/item/device/binoculars/range/designator,
 /obj/item/clothing/under/marine/veteran/pmc/leader,
+/obj/item/ammo_box/magazine/nade_box/super,
 /turf/open/floor/wood/ship,
 /area/firefly/ptsgt)
 "xg" = (
