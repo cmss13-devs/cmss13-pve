@@ -157,7 +157,6 @@
 
 	prices = list()
 
-
 /obj/structure/machinery/vending/generic
 	name = "\improper vending machine"
 	desc = "A generic snack and soft drink vendor with a small plate on the back reading, 'Veni Vendi Vici'"
@@ -198,6 +197,7 @@
 	name = "cigarette machine"
 	icon_state = "cigs"
 	desc = "A vending machine dealing in all sorts of cigarettes, lighters and cigars."
+	partially_unstocked = TRUE
 	product_slogans = list(
 		"Light up and enjoy the rich, comfortably familiar taste of Koorlander Gold.",
 		"Always by your side, Koorlander Gold!",

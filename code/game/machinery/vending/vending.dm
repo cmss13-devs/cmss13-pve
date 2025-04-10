@@ -71,7 +71,7 @@ GLOBAL_LIST_EMPTY_TYPED(total_vending_machines, /obj/structure/machinery/vending
 	/// when did we last pitch?
 	var/last_slogan = 0
 	/// how long until we can pitch again?
-	var/slogan_delay = 120
+	var/slogan_delay = 30
 	/// icon_state when vending
 	var/icon_vend
 	/// icon_state when failing to vend
@@ -84,6 +84,8 @@ GLOBAL_LIST_EMPTY_TYPED(total_vending_machines, /obj/structure/machinery/vending
 	var/shut_up = FALSE
 	/// can we access the hidden inventory?
 	var/extended_inventory = FALSE
+	// are we partially unstocked?
+	var/partially_unstocked = FALSE
 	/// if the vendor is currently being hacked
 	var/panel_open = FALSE
 	var/wires = 15
@@ -153,14 +155,22 @@ GLOBAL_LIST_EMPTY_TYPED(total_vending_machines, /obj/structure/machinery/vending
 		var/price = prices[typepath]
 		if(isnull(amount)) amount = 1
 
+
 		var/obj/item/temp_path = typepath
 		var/datum/data/vending_product/product = new /datum/data/vending_product()
 
 		product.product_path = typepath
-		product.amount = amount
 		product.price = price
 		product.max_amount = amount
 
+		//Empty it
+		if(partially_unstocked)
+			if(prob(25)) 		// Chance to just be empty
+				product.amount = 0
+			else
+				product.amount = rand(1, amount) //between one and max number
+		else
+			product.amount = amount
 		if(ispath(typepath, /obj/item/weapon/gun) || ispath(typepath, /obj/item/ammo_magazine) || ispath(typepath, /obj/item/explosive/grenade) || ispath(typepath, /obj/item/weapon/gun/flamer) || ispath(typepath, /obj/item/storage) )
 			product.display_color = "black"
 		else
