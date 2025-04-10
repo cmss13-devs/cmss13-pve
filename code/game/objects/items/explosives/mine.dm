@@ -365,6 +365,7 @@
 	var/explosion_falloff = 100
 	base_disarm_fail_chance = 70
 	base_disarm_time = 40
+	has_tripwire = FALSE
 	blast_tolerance = 85 //A C4 directly next to it will disarm the mine. Mostly for giving an option for disarming it.
 
 
@@ -450,9 +451,6 @@
 	disarmed = TRUE
 	add_to_garbage(src)
 
-/obj/item/explosive/mine/m760ap/proc/set_tripwire()
-	return
-
 /obj/item/explosive/mine/m760ap/attack_self(mob/living/user)
 	if(disarmed)
 		return
@@ -490,7 +488,8 @@
 	var/explosion_falloff = 75
 	base_disarm_time = 60 //innately sensitive...
 	base_disarm_fail_chance = 30 //...but lacks robust anti-tamper implementation.
-	blast_tolerance = 25 //Even at its furthest point, C4 will disarm the mine.
+	blast_tolerance = 25 //Even at its furthest point, C4 will disarm the mine. Gives some form of counterplay.
+	has_tripwire = TRUE
 
 /obj/item/explosive/mine/m5a3betty/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -604,6 +603,7 @@
 	base_disarm_time = 45
 	base_disarm_fail_chance = 50
 	blast_tolerance = 95 //Will require a C4 directly on top of it...!
+	has_tripwire = FALSE
 
 /obj/item/explosive/mine/fzd91/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -714,6 +714,7 @@
 	var/explosion_power = 75
 	var/explosion_falloff = 25
 	blast_tolerance = 0 //always goes off.
+	has_tripwire = FALSE
 
 /obj/item/explosive/mine/tn13/check_for_obstacles(mob/living/user)
 	return FALSE
