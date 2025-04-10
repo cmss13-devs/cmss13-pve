@@ -71,6 +71,86 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_8
 
+/datum/ammo/energy/plasma
+	name = "plasma bolt"
+	icon_state = "arcane_barrage"
+	flags_ammo_behavior = AMMO_ENERGY|AMMO_HITS_TARGET_TURF|AMMO_ANTISTRUCT
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 150
+	damage_type = BURN
+	penetration = ARMOR_PENETRATION_TIER_8 //It's a freaking plasma beam
+	accurate_range = 20
+	effective_range_max = 11
+	max_range = 20
+	var/vehicle_slowdown_time = 2 SECONDS
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
+	scatter = SCATTER_AMOUNT_NONE
+	accuracy = HIT_ACCURACY_MULT_TIER_10
+	damage_falloff = DAMAGE_FALLOFF_TIER_1
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_PURPLE
+
+/datum/ammo/energy/plasma/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/deathsquad),
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak)
+	))
+
+/datum/ammo/energy/plasma/on_hit_mob(mob/M,obj/projectile/P)
+	if(M.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = M
+		L.apply_armoured_damage(damage*1.6, ARMOR_ENERGY, BURN, null, penetration)
+	burst(get_turf(M),P,damage_type, 1 , 5)
+	new /obj/effect/overlay/temp/plasma_impact(M)
+
+/datum/ammo/energy/plasma/on_near_target(turf/T, obj/projectile/P)
+	burst(get_turf(T),P,damage_type, 1 , 5)
+	return 1
+
+/datum/ammo/energy/plasma/on_hit_obj(obj/O,obj/projectile/P)
+	if(istype(O, /obj/vehicle/multitile))
+		var/obj/vehicle/multitile/mob = O
+		mob.next_move = world.time + vehicle_slowdown_time
+		playsound(mob, 'sound/effects/meteorimpact.ogg', 35)
+		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("Plasma Blast"))
+		mob.interior_crash_effect()
+		mob.ex_act(150, P.dir, P.weapon_cause_data, 100)
+		return
+	burst(get_turf(P),P,damage_type, 1 , 5)
+	new /obj/effect/overlay/temp/plasma_impact(O)
+
+/datum/ammo/energy/plasma/on_hit_turf(turf/T,obj/projectile/P)
+	burst(get_turf(T),P,damage_type, 1 , 5)
+	new /obj/effect/overlay/temp/plasma_impact(T)
+
+/datum/ammo/energy/plasma/heavy
+	name = "heavy plasma bolt"
+	damage = 300
+	penetration = ARMOR_PENETRATION_TIER_10
+	accurate_range = 13
+	effective_range_max = 8
+	max_range = 13 // As far as a mini-scope will let them see
+	vehicle_slowdown_time = 5 SECONDS
+
+/datum/ammo/energy/plasma/heavy/on_hit_mob(mob/M,obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(M), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+	if(iscarbon(M))
+		M.ex_act(280, null, P.weapon_cause_data, 350)
+
+/datum/ammo/energy/plasma/heavy/on_near_target(turf/T, obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(T), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+
+/datum/ammo/energy/plasma/heavy/on_hit_obj(obj/O,obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(O), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+
+/datum/ammo/energy/plasma/heavy/on_hit_turf(turf/T,obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(T), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+
 /datum/ammo/energy/yautja
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	accurate_range = 12
