@@ -368,7 +368,7 @@
 	base_disarm_time = 40
 	has_tripwire = FALSE
 	blast_tolerance = 85 //A C4 directly next to it will disarm the mine. Mostly for giving an option for disarming it.
-	world_detonation_flavor = "step on it!"
+	detonation_flavor = "step on it!"
 
 /obj/item/explosive/mine/m760ap/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -487,7 +487,7 @@
 	base_disarm_fail_chance = 30 //...but lacks robust anti-tamper implementation.
 	blast_tolerance = 25 //Even at its furthest point, C4 will disarm the mine. Gives some form of counterplay.
 	has_tripwire = TRUE
-	world_detonation_flavor = "step in front of it and the mine jump to chest height!"
+	detonation_flavor = "step in front of it and the mine jump to chest height!"
 
 /obj/item/explosive/mine/m5a3betty/check_for_obstacles(mob/living/user)
 	return FALSE
