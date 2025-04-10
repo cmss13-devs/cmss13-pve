@@ -127,23 +127,23 @@
 			var/disarm_time = base_disarm_time
 			var/disarm_fail_chance = base_disarm_fail_chance
 			if(user.skills)
-				if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_UNTRAINED))
+				if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_UNTRAINED))
 					to_chat(user, SPAN_WARNING("You aren't trained in demining... This might be tricky."))
 					disarm_time = 50
 					disarm_fail_chance = 80
-				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_NOVICE))
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
 					to_chat(user, SPAN_WARNING("The manuals had a lot to say about the M20, but not much about how to disarm them, other than staying out of the front arc."))
 					disarm_time = 40
 					disarm_fail_chance = 20
-				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_TRAINED))
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 					to_chat(user, SPAN_WARNING("You take stock. It's just like training. The LIDAR sensors are what you need to start with..."))
 					disarm_time = 30
 					disarm_fail_chance = 0
-				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_ENGI))
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
 					to_chat(user, SPAN_WARNING("You quickly and efficiently set to work disarming the [src]."))
 					disarm_time = 20
 					disarm_fail_chance = 0
-				else if(skillcheck(user, SKILL_ENGINEERING, SKILL_ENGINEER_MASTER))
+				else if(skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_MASTER))
 					to_chat(user, SPAN_WARNING("Intelligent landmine, Claymore, M20. You pick out the right procedure and do it in seconds."))
 					disarm_time = 10
 					disarm_fail_chance = 0
