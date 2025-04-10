@@ -374,6 +374,25 @@
 /obj/item/explosive/mine/m760ap/attackby(obj/item/W, mob/user)
 	return
 
+/obj/item/explosive/mine/m760/proc/try_to_prime(mob/living/L)
+	if(!active || triggered || (customizable && !detonator))
+		return
+	if(!istype(L))
+		return
+	if(L.stat == DEAD)
+		return
+	if(L.get_target_lock(iff_signal))
+		return
+	if(HAS_TRAIT(L, TRAIT_ABILITY_BURROWED))
+		return
+	L.visible_message(SPAN_DANGER("[icon2html(src, viewers(src))] The [name] clicks as [L] steps on it."), \
+	SPAN_DANGER("[icon2html(src, L)] The [name] clicks as you step on it."), \
+	SPAN_DANGER("You hear a click."))
+
+	triggered = TRUE
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 25, 1)
+	prime()
+
 /obj/item/explosive/mine/m760ap/prime(mob/user)
 	set waitfor = 0
 	if(!cause_data)
@@ -492,6 +511,25 @@
 /obj/item/explosive/mine/m5a3betty/attackby(obj/item/W, mob/user)
 	return
 
+/obj/item/explosive/mine/m5a3betty/proc/try_to_prime(mob/living/L)
+	if(!active || triggered || (customizable && !detonator))
+		return
+	if(!istype(L))
+		return
+	if(L.stat == DEAD)
+		return
+	if(L.get_target_lock(iff_signal))
+		return
+	if(HAS_TRAIT(L, TRAIT_ABILITY_BURROWED))
+		return
+	L.visible_message(SPAN_DANGER("[icon2html(src, viewers(src))] The [name] beeps as [L] moves in front of it, and jumps into the air!"), \
+	SPAN_DANGER("[icon2html(src, L)] The [name] beeps as you step too close, and jumps into the air!"), \
+	SPAN_DANGER("You hear a beep and see something bounce to chest height!"))
+
+	triggered = TRUE
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 25, 1)
+	prime()
+
 /obj/item/explosive/mine/m5a3betty/prime(mob/user)
 	set waitfor = 0
 	if(!cause_data)
@@ -606,6 +644,25 @@
 /obj/item/explosive/mine/fzd91/attackby(obj/item/W, mob/user)
 	return
 
+/obj/item/explosive/mine/fzd91/proc/try_to_prime(mob/living/L)
+	if(!active || triggered || (customizable && !detonator))
+		return
+	if(!istype(L))
+		return
+	if(L.stat == DEAD)
+		return
+	if(L.get_target_lock(iff_signal))
+		return
+	if(HAS_TRAIT(L, TRAIT_ABILITY_BURROWED))
+		return
+	L.visible_message(SPAN_DANGER("[icon2html(src, viewers(src))] The [name] clicks as [L] steps on top of it."), \
+	SPAN_DANGER("[icon2html(src, L)] The [name] clicks as you step on top of it."), \
+	SPAN_DANGER("You hear a click."))
+
+	triggered = TRUE
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 25, 1)
+	prime()
+
 /obj/item/explosive/mine/fzd91/prime(mob/user)
 	set waitfor = 0
 	if(!cause_data)
@@ -716,6 +773,25 @@
 
 /obj/item/explosive/mine/tn13/attackby(obj/item/W, mob/user)
 	return
+
+/obj/item/explosive/mine/tn13/proc/try_to_prime(mob/living/L)
+	if(!active || triggered || (customizable && !detonator))
+		return
+	if(!istype(L))
+		return
+	if(L.stat == DEAD)
+		return
+	if(L.get_target_lock(iff_signal))
+		return
+	if(HAS_TRAIT(L, TRAIT_ABILITY_BURROWED))
+		return
+	L.visible_message(SPAN_DANGER("[icon2html(src, viewers(src))] The [name] makes a loud clank as [L] steps on top of it."), \
+	SPAN_DANGER("[icon2html(src, L)] The [name] makes a loud clank as you step on top of it."), \
+	SPAN_DANGER("You hear a loud clunk."))
+
+	triggered = TRUE
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 25, 1)
+	prime()
 
 /obj/item/explosive/mine/tn13/prime(mob/user)
 	set waitfor = 0
