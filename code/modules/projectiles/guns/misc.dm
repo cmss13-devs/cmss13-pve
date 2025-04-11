@@ -409,31 +409,24 @@
 		current_mag.current_rounds++
 	return TRUE
 
-/obj/item/weapon/gun/XM99/proc/make_battery_drum(mob/user, drop_override = 0, remaining_rounds = 0)
+/obj/item/weapon/gun/XM99/proc/make_battery_drum(mob/user, remaining_rounds = 0)
 	if(!current_mag)
 		return
 
 	var/obj/item/ammo_magazine/plasma/cell = new current_mag.type()
 	if(remaining_rounds <= 0)
 		cell.current_rounds = 0
-	if(drop_override || !user) //If we want to drop it on the ground or there's no user.
-		cell.forceMove(get_turf(src)) //Drop it on the ground.
 	else
 		cell.current_rounds = remaining_rounds
 		user.put_in_hands(cell)
 		cell.update_icon()
 
 /obj/item/weapon/gun/XM99/reload(mob/user, obj/item/ammo_magazine/plasma)
-	if(!current_mag)
-		return
-	if(flags_gun_features & GUN_BURST_FIRING)
-		return
-
 	if(!plasma || !istype(plasma) || !istype(src, plasma.gun_type))
 		to_chat(user, SPAN_WARNING("That's not going to fit!"))
 		return
 
-	if(current_mag.current_rounds > 0)
+	if(current_mag)
 		to_chat(user, SPAN_WARNING("[src] is already loaded!"))
 		return
 
@@ -441,10 +434,9 @@
 		to_chat(user, SPAN_WARNING("That battery drum is empty!"))
 		return
 
-	if(user)
+	else
 		to_chat(user, SPAN_NOTICE("You begin reloading [src]. Hold still..."))
-		if(do_after(user,current_mag.reload_delay, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
-			qdel(current_mag)
+		if(do_after(user, 10, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 			user.drop_inv_item_on_ground(plasma)
 			current_mag = plasma
 			plasma.forceMove(src)
@@ -454,26 +446,25 @@
 		else
 			to_chat(user, SPAN_WARNING("Your reload was interrupted!"))
 			return
-	else
-		qdel(current_mag)
-		current_mag = plasma
-		plasma.forceMove(src)
-		replace_ammo(,plasma)
 	update_icon()
 	return TRUE
 
-/obj/item/weapon/gun/XM99/unload(mob/user,  reload_override = 0, drop_override = 0)
+/obj/item/weapon/gun/XM99/unload(mob/user, reload_override = 0)
+	if(user && !current_mag)
+		to_chat(user, SPAN_WARNING("[src] is already empty!"))
+		return
 	if(user && current_mag)
 		to_chat(user, SPAN_NOTICE("You begin unloading [src]. Hold still..."))
 		if(do_after(user,current_mag.reload_delay, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 			playsound(user, unload_sound, 25, 1)
-			user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src]."),
-			SPAN_NOTICE("You unload [current_mag] from [src]."))
 			if(current_mag.current_rounds > 0)
-				make_battery_drum(user, drop_override, current_mag.current_rounds)
+				user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src]."),
+				SPAN_NOTICE("You unload [current_mag] from [src]."))
+				make_battery_drum(user, current_mag.current_rounds)
 			else
-				make_battery_drum(user, drop_override, 0)
-			current_mag.current_rounds = 0
+				user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src] and discards it."),
+				SPAN_NOTICE("You unload the spent [current_mag] from [src] and toss it away."))
+			current_mag = null
 		update_icon()
 
 /obj/item/weapon/gun/XM99/set_gun_attachment_offsets()
