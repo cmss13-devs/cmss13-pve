@@ -1,24 +1,5 @@
 /datum/equipment_preset/uscm_ship/uscm_medical
-
-	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	access = list(ACCESS_MARINE_MEDBAY, ACCESS_MARINE_CHEMISTRY, ACCESS_MARINE_MORGUE)
-
-	utility_under = list(/obj/item/clothing/under/marine)
-	utility_hat = list(/obj/item/clothing/head/cmcap)
-	utility_gloves = list(/obj/item/clothing/gloves/marine)
-	utility_shoes = list(/obj/item/clothing/shoes/marine)
-	utility_extra = list(/obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/cm/tan)
-
-	service_under = list(/obj/item/clothing/under/marine/officer/bridge)
-	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service, /obj/item/clothing/suit/storage/jacket/marine/service/mp)
-	service_hat = list(/obj/item/clothing/head/cmcap)
-	service_shoes = list(/obj/item/clothing/shoes/laceup)
-
-	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
-	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
-	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
-	dress_shoes = list(/obj/item/clothing/shoes/laceup)
+	name = "USCM (Medical Roles)"
 
 /datum/equipment_preset/uscm_ship/uscm_medical/cmo
 	name = "USCM Chief Medical Officer (CMO)"
@@ -84,7 +65,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_BACK)
 
-
 //Surgeon this part of the code is to change the name on your ID
 
 /datum/equipment_preset/uscm_ship/uscm_medical/doctor/surgeon
@@ -99,6 +79,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/green(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+
 
 //*****************************************************************************************************/
 
@@ -128,6 +109,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/lightblue(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/nurse(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+
 
 //*****************************************************************************************************/
 /datum/equipment_preset/uscm_ship/uscm_medical/researcher
@@ -161,3 +143,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/paper/research_notes/bad(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/syringe(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+

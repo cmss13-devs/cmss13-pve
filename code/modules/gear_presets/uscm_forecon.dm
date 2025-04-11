@@ -1,4 +1,5 @@
 /datum/equipment_preset/uscm/forecon
+	name = "FORECON TO BE DESTROYED"
 	assignment = JOB_SQUAD_MARINE
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)

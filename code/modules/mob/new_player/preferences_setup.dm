@@ -266,22 +266,18 @@
 			return /datum/equipment_preset/uscm_ship/so
 		if(JOB_XO)
 			return /datum/equipment_preset/uscm_ship/xo
-		/*
-		if(JOB_AUXILIARY_OFFICER)
+/* 		if(JOB_AUXILIARY_OFFICER)
 			return /datum/equipment_preset/uscm_ship/auxiliary_officer
 		if(JOB_INTEL)
 			return /datum/equipment_preset/uscm/intel/full
 		if(JOB_CAS_PILOT)
-			return /datum/equipment_preset/uscm_ship/gp/full
-		*/
+			return /datum/equipment_preset/uscm_ship/gp/full */
 		if(JOB_TANK_CREW)
 			return /datum/equipment_preset/uscm/tank
-		/*
-		if(JOB_DROPSHIP_PILOT)
+/* 		if(JOB_DROPSHIP_PILOT)
 			return /datum/equipment_preset/uscm_ship/dp/full
 		if(JOB_DROPSHIP_CREW_CHIEF)
-			return /datum/equipment_preset/uscm_ship/dcc/full
-		*/
+			return /datum/equipment_preset/uscm_ship/dcc/full */
 		if(JOB_CORPORATE_LIAISON)
 			return /datum/equipment_preset/uscm_ship/liaison
 		if(JOB_COMBAT_REPORTER)

@@ -23,8 +23,8 @@
 	name = "Civilian Gathering (UPP)"
 	desc = "A small gathering of UPP colonists."
 	ai_to_spawn = list(
-		/datum/equipment_preset/upp/colonist = 2,
-		/datum/equipment_preset/upp/admin = 1,
+		/datum/equipment_preset/colonist/bluecollar/upp = 2,
+		/datum/equipment_preset/colonist/admin/upp = 1,
 	)
 
 /datum/human_ai_squad_preset/civ/gathering/twe
@@ -80,8 +80,8 @@
 	name = "Civilian MedSci Team (UPP)"
 	desc = "A small group of UPP doctors."
 	ai_to_spawn = list(
-		/datum/equipment_preset/upp/researcher = 2,
-		/datum/equipment_preset/upp/doctor = 2,
+		/datum/equipment_preset/colonist/researcher/upp = 2,
+		/datum/equipment_preset/colonist/doctor/upp = 2,
 	)
 
 /datum/human_ai_squad_preset/civ/medsci/twe
@@ -116,7 +116,7 @@
 	name = "Civilian Laborer Team (UPP)"
 	desc = "A small group of UPP engineers & general laborers."
 	ai_to_spawn = list(
-		/datum/equipment_preset/upp/engineer = 4,
+		/datum/equipment_preset/colonist/technician/upp = 4,
 	)
 
 /datum/human_ai_squad_preset/civ/laborers/twe
@@ -150,8 +150,8 @@
 	name = "Civilian Logistics Group (UPP)"
 	desc = "A small group of UPP cargo & logistics workers."
 	ai_to_spawn = list(
-		/datum/equipment_preset/upp/cargo = 3,
-		/datum/equipment_preset/upp/operations = 1,
+		/datum/equipment_preset/colonist/cargo/upp = 3,
+		/datum/equipment_preset/colonist/operations/upp = 1,
 	)
 
 /datum/human_ai_squad_preset/civ/logi/twe

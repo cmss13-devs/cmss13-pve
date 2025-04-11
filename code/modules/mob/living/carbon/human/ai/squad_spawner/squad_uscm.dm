@@ -27,7 +27,7 @@
 		/datum/equipment_preset/uscm/tl_equipped = 1,
 	)
 
-/datum/human_ai_squad_preset/uscm/medical
+/datum/human_ai_squad_preset/uscm_ship/uscm_medical
 	name = "USCM, Medical Element"
 	desc = "USCM team armed with M41A rifles and carrying ample medical supplies."
 	ai_to_spawn = list(

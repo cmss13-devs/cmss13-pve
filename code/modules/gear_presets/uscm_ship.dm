@@ -1,53 +1,8 @@
 /datum/equipment_preset/uscm_ship
-	name = "USCM (ship roles)"
-	faction = FACTION_MARINE
-	faction_group = FACTION_LIST_MARINE
-	minimum_age = 20
-	languages = list(LANGUAGE_ENGLISH)
-	idtype = /obj/item/card/id/dogtag
+	name = "USCM (Ship Roles)"
 
-/datum/equipment_preset/uscm_ship/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(75;MALE,25;FEMALE)
-	var/datum/preferences/A = new
-	A.randomize_appearance(new_human)
-	var/random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
-	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
-	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
-	var/hair_color = pick(hair_colors)
-	new_human.r_hair = hair_colors[hair_color][1]
-	new_human.g_hair = hair_colors[hair_color][2]
-	new_human.b_hair = hair_colors[hair_color][3]
-	new_human.r_facial = hair_colors[hair_color][1]
-	new_human.g_facial = hair_colors[hair_color][2]
-	new_human.b_facial = hair_colors[hair_color][3]
-	var/eye_color = pick(colors)
-	new_human.r_eyes = colors[eye_color][1]
-	new_human.g_eyes = colors[eye_color][2]
-	new_human.b_eyes = colors[eye_color][3]
-	if(new_human.gender == MALE)
-		new_human.h_style = pick("Undercut", "Partly Shaved", "Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top", "Medium Fade", "High Fade", "Coffee House Cut")
-		new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
-	else
-		new_human.h_style = pick("Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top", "CIA", "Mulder", "Pvt. Redding", "Pixie Cut Left", "Pixie Cut Right", "Bun")
-	new_human.change_real_name(new_human, random_name)
-	new_human.age = rand(20,35)
-
-	utility_under = list(/obj/item/clothing/under/marine/officer/command)
-	utility_hat = list(/obj/item/clothing/head/cmcap)
-	utility_gloves = list(/obj/item/clothing/gloves/marine)
-	utility_shoes = list(/obj/item/clothing/shoes/marine/knife)
-	utility_extra = list(/obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/cm/tan)
-
-	service_under = list(/obj/item/clothing/under/marine/officer/bridge)
-	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/service, /obj/item/clothing/suit/storage/jacket/marine/service/mp)
-	service_hat = list(/obj/item/clothing/head/cmcap)
-	service_shoes = list(/obj/item/clothing/shoes/laceup)
-
-	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
-	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
-	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
-	dress_shoes = list(/obj/item/clothing/shoes/laceup)
+/datum/equipment_preset/uscm_ship/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_uscm_underwear(new_human)
 
 //*****************************************************************************************************/
 
@@ -149,7 +104,7 @@
 	)
 
 /datum/equipment_preset/uscm_ship/liaison/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_LIAISON)
 
 /datum/equipment_preset/uscm_ship/liaison/load_gear(mob/living/carbon/human/new_human)
@@ -197,6 +152,7 @@
 	dress_hat = list()
 
 /datum/equipment_preset/uscm_ship/reporter/load_gear(mob/living/carbon/human/new_human)
+	add_civilian_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/reporter(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/reporter(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/reporter(new_human), WEAR_JACKET)
@@ -205,7 +161,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/camera(new_human), WEAR_WAIST)
 
 /datum/equipment_preset/uscm_ship/reporter/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
-	. = ..()
+
 	new_human.marine_buyable_categories[CIVILIAN_CAN_BUY_BACKPACK] = 1
 	new_human.marine_buyable_categories[CIVILIAN_CAN_BUY_UTILITY] = 1
 
@@ -256,6 +212,7 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+
 
 //*****************************************************************************************************/
 
@@ -346,6 +303,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/ordn
@@ -394,6 +352,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+
 
 //*****************************************************************************************************/
 
@@ -563,7 +522,7 @@
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
 /datum/equipment_preset/uscm_ship/commander/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
 /datum/equipment_preset/uscm_ship/commander/load_race(mob/living/carbon/human/new_human, client/mob_client)
@@ -571,6 +530,7 @@
 	ADD_TRAIT(new_human, TRAIT_EMOTE_CD_EXEMPT, TRAIT_SOURCE_JOB)
 
 /datum/equipment_preset/uscm_ship/commander/load_gear(mob/living/carbon/human/new_human)
+
 	var/sidearm = "Mateba"
 	var/kit = null
 	var/sidearmpath = /obj/item/storage/belt/gun/mateba/cmateba/full
@@ -624,10 +584,11 @@
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
 /datum/equipment_preset/uscm_ship/xo/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_MAIN)
 
 /datum/equipment_preset/uscm_ship/xo/load_gear(mob/living/carbon/human/new_human)
+
 	var/back_item = /obj/item/storage/backpack/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/marine
@@ -641,6 +602,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_STORE)
+
 
 //*****************************************************************************************************/
 
@@ -659,11 +621,11 @@
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
 /datum/equipment_preset/uscm_ship/so/New()
-	. = ..()
+
 	access = get_access(access_list)
 
 /datum/equipment_preset/uscm_ship/so/load_status(mob/living/carbon/human/new_human, client/mob_client)
-	. = ..()
+
 	new_human.nutrition = NUTRITION_VERYLOW
 	if(!new_human.client)
 		return
@@ -696,6 +658,7 @@
 
 /datum/equipment_preset/uscm_ship/so/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.underwear = "UPP Boxers"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
@@ -715,6 +678,7 @@
 
 /datum/equipment_preset/uscm_ship/so/upp/equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.underwear = "UPP Boxers"
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/naval(new_human), WEAR_BODY)
@@ -772,10 +736,11 @@
 	var/access_list = ACCESS_LIST_MARINE_MAIN
 
 /datum/equipment_preset/uscm_ship/so_equipped/New()
-	. = ..()
+
 	access = get_access(access_list)
 
 /datum/equipment_preset/uscm_ship/so_equipped/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -799,6 +764,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_R_STORE)
+
 
 //*****************************************************************************************************/
 
@@ -909,6 +875,7 @@
 	name = parent_type::name + " (Upper Rank)"
 	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/dp
@@ -996,6 +963,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/officer
@@ -1021,7 +989,7 @@
 	dress_extra = list(/obj/item/storage/large_holster/ceremonial_sword/full)
 
 /datum/equipment_preset/uscm_ship/officer/New()
-	. = ..()
+
 	access = get_access(ACCESS_LIST_MARINE_ALL)
 
 /datum/equipment_preset/uscm_ship/officer/load_gear(mob/living/carbon/human/new_human)
@@ -1034,6 +1002,7 @@
 
 	new_human.equip_if_possible(new /obj/item/clothing/glasses/sunglasses(new_human), WEAR_EYES)
 	new_human.equip_if_possible(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+
 
 //*****************************************************************************************************/
 
@@ -1056,6 +1025,7 @@
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
 /datum/equipment_preset/uscm_ship/chef/load_gear(mob/living/carbon/human/new_human)
+
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
@@ -1072,3 +1042,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+
