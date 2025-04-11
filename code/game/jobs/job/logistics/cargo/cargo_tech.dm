@@ -7,7 +7,7 @@
 	supervisors = "the requisitions officer"
 	selection_class = "job_ct"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
-	gear_preset = /datum/equipment_preset/uscm/ship/cargo
+	gear_preset = /datum/equipment_preset/uscm_ship/cargo
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>Your job</a> is to dispense supplies to the marines, including weapon attachments. Stay in your department when possible to ensure the marines have full access to the supplies they may require. Listen to the radio in case someone requests a supply drop via the overwatch system."
 
 /datum/job/logistics/cargo/set_spawn_positions(count)
@@ -32,8 +32,8 @@
 
 /datum/job/logistics/chief
 	title = JOB_CARGO_CHIEF
-	gear_preset = /datum/equipment_preset/uscm/ship/qm/lesser_rank
+	gear_preset = /datum/equipment_preset/uscm_ship/qm/lesser_rank
 
 /datum/job/logistics/armorer
 	title = JOB_ARMORER
-	gear_preset = /datum/equipment_preset/uscm/ship/armorer
+	gear_preset = /datum/equipment_preset/uscm_ship/armorer

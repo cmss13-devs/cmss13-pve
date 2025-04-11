@@ -5,12 +5,12 @@
 	selection_class = "job_co"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADMIN_NOTIFY|ROLE_WHITELISTED
 	flags_whitelist = WHITELIST_COMMANDER
-	gear_preset = /datum/equipment_preset/uscm/ship/commander
+	gear_preset = /datum/equipment_preset/uscm_ship/commander
 
 /datum/job/command/commander/New()
 	. = ..()
 	gear_preset_whitelist = list(
-		"[JOB_CO][WHITELIST_NORMAL]" = /datum/equipment_preset/uscm/ship/commander,
+		"[JOB_CO][WHITELIST_NORMAL]" = /datum/equipment_preset/uscm_ship/commander,
 	)
 
 /datum/job/command/commander/generate_entry_message()
