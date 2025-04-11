@@ -310,6 +310,45 @@
 	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
 	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
 
+/obj/item/storage/box/teabags
+	name = "box of Earl Grey tea bags"
+	desc = "A box of instant tea bags."
+	icon_state = "teabag_box"
+	item_state = "teabag_box"
+	can_hold = list(/obj/item/reagent_container/pill/teabag)
+	w_class = SIZE_SMALL
+	storage_slots = 8
+
+/obj/item/storage/box/teabags/fill_preset_inventory()
+	new /obj/item/reagent_container/pill/teabag/earl_grey(src)
+	new /obj/item/reagent_container/pill/teabag/earl_grey(src)
+	new /obj/item/reagent_container/pill/teabag/earl_grey(src)
+	new /obj/item/reagent_container/pill/teabag/earl_grey(src)
+	new /obj/item/reagent_container/pill/teabag/earl_grey(src)
+	new /obj/item/reagent_container/pill/teabag/earl_grey(src)
+	new /obj/item/reagent_container/pill/teabag/earl_grey(src)
+	new /obj/item/reagent_container/pill/teabag/earl_grey(src)
+
+/obj/item/storage/box/lemondrop
+	name = "box of Lemon Drop candies"
+	desc = "A box of lemon flavored hard candies."
+	icon_state = "lemon_drop_box"
+	item_state = "lemon_drop_box"
+	can_hold = list(/obj/item/reagent_container/food/snacks/lemondrop)
+	w_class = SIZE_SMALL
+	storage_slots = 8
+
+/obj/item/storage/box/lemondrop/fill_preset_inventory()
+	new /obj/item/reagent_container/food/snacks/lemondrop(src)
+	new /obj/item/reagent_container/food/snacks/lemondrop(src)
+	new /obj/item/reagent_container/food/snacks/lemondrop(src)
+	new /obj/item/reagent_container/food/snacks/lemondrop(src)
+	new /obj/item/reagent_container/food/snacks/lemondrop(src)
+	new /obj/item/reagent_container/food/snacks/lemondrop(src)
+	new /obj/item/reagent_container/food/snacks/lemondrop(src)
+	new /obj/item/reagent_container/food/snacks/lemondrop(src)
+
+
 /obj/item/storage/box/monkeycubes
 	name = "monkey cube box"
 	desc = "Drymate brand monkey cubes. Just add water!"
@@ -601,7 +640,7 @@
 	for(var/i in 1 to 5)
 		new /obj/item/explosive/mine/pmc(src)
 
-/obj/item/storage/box/m94
+/obj/item/storage/box/flare
 	name = "\improper M94 marking flare pack"
 	desc = "A packet of fourteen M94 Marking Flares. Carried by USCM soldiers to light dark areas that cannot be reached with the usual TNR Shoulder Lamp."
 	icon_state = "m94"
@@ -611,77 +650,47 @@
 	max_storage_space = 14
 	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
 
-/obj/item/storage/box/m94/fill_preset_inventory()
+/obj/item/storage/box/flare/fill_preset_inventory()
 	for(var/i = 1 to max_storage_space)
 		new /obj/item/device/flashlight/flare(src)
 
-/obj/item/storage/box/m94/update_icon()
+/obj/item/storage/box/flare/update_icon()
 	if(!length(contents))
 		icon_state = "m94_e"
 	else
 		icon_state = "m94"
 
-
-/obj/item/storage/box/m94/signal
+/obj/item/storage/box/flare/signal
 	name = "\improper M89-S signal flare pack"
 	desc = "A packet of fourteen M89-S Signal Marking Flares."
 	icon_state = "m89"
 
-/obj/item/storage/box/m94/signal/fill_preset_inventory()
+/obj/item/storage/box/flare/signal/fill_preset_inventory()
 	for(var/i = 1 to max_storage_space)
 		new /obj/item/device/flashlight/flare/signal(src)
 
-/obj/item/storage/box/m94/signal/update_icon()
+/obj/item/storage/box/flare/signal/update_icon()
 	if(!length(contents))
 		icon_state = "m89_e"
 	else
 		icon_state = "m89"
 
-
-/obj/item/storage/box/nade_box
-	name = "\improper M40 HEDP grenade box"
-	desc = "A secure box holding 25 M40 High-Explosive Dual-Purpose grenades. High explosive, don't store near the flamer fuel."
-	icon_state = "nade_placeholder"
+/obj/item/storage/box/flare/upp
+	name = "\improper R52 marking flare pack"
+	desc = "A packet of fourteen R52 Marking Flares. Carried by UPPAC soldiers to light dark areas that cannot be reached with the usual Shoulder Lamp."
+	icon_state = "r52"
 	icon = 'icons/obj/items/storage/packets.dmi'
-	w_class = SIZE_LARGE
-	storage_slots = 25
-	max_storage_space = 50
-	can_hold = list(/obj/item/explosive/grenade/high_explosive)
-	var/base_icon
-	var/model_icon = "model_m40"
-	var/type_icon = "hedp"
-	var/grenade_type = /obj/item/explosive/grenade/high_explosive
-	has_gamemode_skin = FALSE
+	storage_slots = 14
+	max_storage_space = 14
+	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
 
-/obj/item/storage/box/nade_box/Initialize()
-	. = ..()
-	RegisterSignal(src, COMSIG_ITEM_DROPPED, PROC_REF(try_forced_folding))
+/obj/item/storage/box/flare/upp/fill_preset_inventory()
+	for(var/i = 1 to max_storage_space)
+		new /obj/item/device/flashlight/flare/upp(src)
 
-/obj/item/storage/box/nade_box/proc/try_forced_folding(datum/source, mob/user)
-	SIGNAL_HANDLER
-
-	if(!isturf(loc))
-		return
-
-	if(length(contents))
-		return
-
-	UnregisterSignal(src, COMSIG_ITEM_DROPPED)
-	storage_close(user)
-	to_chat(user, SPAN_NOTICE("You throw away [src]."))
-	qdel(src)
-
-/obj/item/storage/box/nade_box/post_skin_selection()
-	base_icon = icon_state
-
-/obj/item/storage/box/nade_box/fill_preset_inventory()
-	for(var/i = 1 to storage_slots)
-		new grenade_type(src)
-
-/obj/item/storage/box/nade_box/update_icon()
-	overlays.Cut()
+/obj/item/storage/box/flare/upp/update_icon()
 	if(!length(contents))
-		icon_state = "[base_icon]_e"
+		icon_state = "r52_e"
 	else
 		icon_state = base_icon
 		if(type_icon)
@@ -828,7 +837,6 @@
 			grenade_count++
 	UnregisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP)
 
-
 //ITEMS-----------------------------------//
 /obj/item/storage/box/lightstick
 	name = "box of lightsticks"
@@ -857,88 +865,6 @@
 	new /obj/item/lightstick/red(src)
 	new /obj/item/lightstick/red(src)
 	new /obj/item/lightstick/red(src)
-
-/obj/item/storage/box/MRE
-	name = "\improper USCM MRE"
-	desc = "A Meal, Ready-to-Eat. A single-meal combat ration designed to provide a soldier with enough nutrients for a day of strenuous work. Its expiration date is at least 20 years ahead of your combat life expectancy."
-	icon_state = "mealpack"
-	icon = 'icons/obj/items/storage/mre.dmi'
-	w_class = SIZE_SMALL
-	can_hold = list()
-	storage_slots = 8
-	max_w_class = 0
-	use_sound = "rip"
-	var/isopened = FALSE
-
-/obj/item/storage/box/MRE/fill_preset_inventory()
-	pickflavor()
-
-/obj/item/storage/box/MRE/proc/pickflavor()
-	var/main = pick("boneless pork ribs", "grilled chicken", "pizza square", "spaghetti chunks", "chicken tender")
-	var/second = pick("cracker", "cheese spread", "rice onigiri", "mashed potatoes", "risotto")
-	var/side = pick("biscuit", "meatballs", "pretzels", "peanuts", "sushi")
-	var/desert = pick("spiced apples", "chocolate brownie", "sugar cookie", "coco bar", "flan", "honey flan")
-	name = "[initial(name)] ([main])"
-	//1 in 3 chance of getting a fortune cookie
-	var/cookie = rand(1,3)
-	var/matches_type = rand(1, 5)
-	var/juice_type = rand(1, 5)
-	if(cookie == 1)
-		storage_slots = 9
-	new /obj/item/reagent_container/food/snacks/packaged_meal(src, main)
-	new /obj/item/reagent_container/food/snacks/packaged_meal(src, second)
-	new /obj/item/reagent_container/food/snacks/packaged_meal(src, side)
-	new /obj/item/reagent_container/food/snacks/packaged_meal(src, desert)
-	if(cookie == 1)
-		new /obj/item/reagent_container/food/snacks/fortunecookie/prefilled(src)
-	new /obj/item/storage/fancy/cigarettes/lucky_strikes_4(src)
-	switch(matches_type)
-		if(1)
-			new /obj/item/storage/fancy/cigar/matchbook(src)
-		if(2)
-			new /obj/item/storage/fancy/cigar/matchbook/koorlander(src)
-		if(3)
-			new /obj/item/storage/fancy/cigar/matchbook/exec_select(src)
-		if(4)
-			new /obj/item/storage/fancy/cigar/matchbook/wy_gold(src)
-		if(5)
-			new /obj/item/storage/fancy/cigar/matchbook/brown(src)
-	switch(juice_type)
-		if(1)
-			new /obj/item/reagent_container/food/condiment/juice/orange(src)
-		if(2)
-			new /obj/item/reagent_container/food/condiment/juice/apple(src)
-		if(3)
-			new /obj/item/reagent_container/food/condiment/juice/watermelon(src)
-		if(4)
-			new /obj/item/reagent_container/food/condiment/juice/grape(src)
-		if(5)
-			new /obj/item/reagent_container/food/condiment/juice/pineapple(src)
-
-/obj/item/storage/box/MRE/Initialize()
-	. = ..()
-	isopened = FALSE
-	icon_state = "mealpack"
-	RegisterSignal(src, COMSIG_ITEM_DROPPED, PROC_REF(try_forced_folding))
-
-/obj/item/storage/box/MRE/proc/try_forced_folding(datum/source, mob/user)
-	SIGNAL_HANDLER
-
-	if(!isturf(loc))
-		return
-
-	if(locate(/obj/item/reagent_container/food/snacks/packaged_meal) in src)
-		return
-
-	UnregisterSignal(src, COMSIG_ITEM_DROPPED)
-	storage_close(user)
-	to_chat(user, SPAN_NOTICE("You throw away [src]."))
-	qdel(src)
-
-/obj/item/storage/box/MRE/update_icon()
-	if(!isopened)
-		isopened = TRUE
-		icon_state = "mealpackopened"
 
 //food boxes for storage in bulk
 
