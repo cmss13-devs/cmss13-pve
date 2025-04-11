@@ -4100,7 +4100,7 @@
 "bXV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table,
 /obj/item/storage/box/mre/wy,
@@ -14465,7 +14465,7 @@
 	pixel_x = -6;
 	pixel_y = 12
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre{
 	pixel_x = 6;
 	pixel_y = 0
 	},
@@ -19023,7 +19023,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "iOX" = (
 /obj/structure/surface/table,
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre{
 	pixel_x = 5;
 	pixel_y = 6
 	},
@@ -19607,7 +19607,7 @@
 	pixel_x = 9;
 	pixel_y = -1
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre{
 	pixel_x = -2;
 	pixel_y = -14
 	},
@@ -20687,7 +20687,7 @@
 /obj/structure/surface/table,
 /obj/item/maintenance_jack,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre,
 /obj/structure/surface/table,
 /obj/item/maintenance_jack,
 /obj/effect/decal/cleanable/dirt,
@@ -27875,7 +27875,7 @@
 /obj/structure/machinery/door/window{
 	dir = 8
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre,
 /obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
@@ -45322,7 +45322,7 @@
 "vCO" = (
 /obj/structure/surface/table,
 /obj/item/trash/USCMtray,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre,
 /obj/structure/surface/table,
 /obj/item/trash/USCMtray,
 /obj/item/storage/box/mre/wy,
