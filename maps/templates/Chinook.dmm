@@ -2975,7 +2975,7 @@
 /area/adminlevel/chinook/offices)
 "ln" = (
 /obj/structure/surface/table,
-/obj/item/storage/box/uscm_mre{
+/obj/item/storage/box/mre{
 	pixel_x = 3;
 	pixel_y = 3
 	},
