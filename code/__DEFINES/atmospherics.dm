@@ -9,7 +9,7 @@
 /// Similar to the BODYTEMP_AUTORECOVERY_DIVISOR, but this is the divisor which is applied at the stage that follows autorecovery. This is the divisor which comes into play when the human's loc temperature is higher than their body temperature. Make it lower to gain bodytemp faster.
 #define BODYTEMP_HEAT_DIVISOR 6
 /// The maximum number of degrees that your body can cool in 1 tick, when in a cold area.
-#define BODYTEMP_COOLING_MAX -30
+#define BODYTEMP_COOLING_MAX -999 //death to space
 /// The maximum number of degrees that your body can heat up in 1 tick, when in a hot area.
 #define BODYTEMP_HEATING_MAX 30
 /// The limit the human body can take before it starts taking damage from heat.
@@ -18,6 +18,15 @@
 #define BODYTEMP_COLD_DAMAGE_LIMIT 260.15
 
 #define ONE_ATMOSPHERE 101.325 //kPa
+
+// Pressure limits.
+#define HAZARD_HIGH_PRESSURE 550 // not used right now
+#define WARNING_HIGH_PRESSURE 325 // not used right now
+#define WARNING_LOW_PRESSURE  70  // This is when the yellow oxygen icon is displayed
+#define HAZARD_LOW_PRESSURE  20  // This is when the red oxygen icon is displayed
+#define ARMSTRONG_LIMIT 6.25 //assume same as space
+#define R_IDEAL_GAS_EQUATION 8.31 // kPa*L/(K*mol).
+#define STD_BREATH_VOLUME 12 //litres if it matters
 
 #define O2STANDARD 0.21
 
