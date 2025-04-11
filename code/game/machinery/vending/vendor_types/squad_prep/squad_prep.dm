@@ -844,8 +844,8 @@
 		list("Combat Flashlight", round(scale * 2), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
 		list("Box of Flashlight", round(scale * 1), /obj/item/ammo_box/magazine/misc/flashlight, VENDOR_ITEM_REGULAR),
 		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
-		list("M94 Marking Flare Pack", round(scale * 2), /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
-		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", round(scale * 2), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
+		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
 		list("M72A2 HIPF Starshell Grenade Packet", round(scale * 2), /obj/item/storage/box/packet/flare, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 1), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
