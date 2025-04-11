@@ -287,6 +287,11 @@
 					if ("carbon dioxide")
 						if(t.gas_type == GAS_TYPE_CO2)
 							goodtank = TRUE
+				if(t.ignore_by_auto_toggle)
+					if(t.loc == head)
+						to_chat(user, SPAN_DANGER("You can't setup [src]'s breath mask! There is the [head] in the way!"))
+						return
+					goodtank = FALSE
 				if(goodtank)
 					if(t.pressure >= 20 && t.pressure > bestpressure)
 						best = potential_tank
