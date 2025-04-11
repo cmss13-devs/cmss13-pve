@@ -782,7 +782,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/pride
 	display_name = "Box of Prideful Crayons"
-	path = /obj/item/storage/box/pride
+	path = /obj/item/storage/box/pridze
 
 /*
 //================================================
@@ -1052,81 +1052,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /*
 //================================================
-				Canned Drinks
-//================================================
-*/
-
-/datum/gear/drink
-	category = "Canned drinks"
-
-/datum/gear/drink/water
-	display_name = "Bottled water"
-	path = /obj/item/reagent_container/food/drinks/cans/waterbottle
-	cost = 1
-
-/datum/gear/drink/grape_juice
-	display_name = "Grape juice"
-	path = /obj/item/reagent_container/food/drinks/cans/grape_juice
-
-/datum/gear/drink/lemon_lime
-	display_name = "Lemon lime"
-	path = /obj/item/reagent_container/food/drinks/cans/lemon_lime
-
-/datum/gear/drink/iced_tea
-	display_name = "Iced tea"
-	path = /obj/item/reagent_container/food/drinks/cans/iced_tea
-
-/datum/gear/drink/cola
-	display_name = "Classic Cola"
-	path = /obj/item/reagent_container/food/drinks/cans/classcola
-
-/datum/gear/drink/mountain_wind
-	display_name = "Mountain Wind"
-	path = /obj/item/reagent_container/food/drinks/cans/space_mountain_wind
-
-/datum/gear/drink/space_up
-	display_name = "Space Up"
-	path = /obj/item/reagent_container/food/drinks/cans/space_up
-
-/datum/gear/drink/souto_classic
-	display_name = "Classic Souto"
-	path = /obj/item/reagent_container/food/drinks/cans/souto/classic
-
-/datum/gear/drink/souto_diet
-	display_name = "Diet Souto"
-	path = /obj/item/reagent_container/food/drinks/cans/souto/diet/classic
-
-/datum/gear/drink/boda
-	display_name = "Boda Soda"
-	path = /obj/item/reagent_container/food/drinks/cans/boda
-	cost = 3 //Legally imported from UPP.
-
-/datum/gear/drink/boda/plus
-	display_name = "Boda Cola"
-	path = /obj/item/reagent_container/food/drinks/cans/bodaplus
-
-/datum/gear/drink/alcohol
-	cost = 3 //Illegal in military.
-	allowed_origins = USCM_ORIGINS // UPP stricter on enforcement, I figure
-
-/datum/gear/drink/alcohol/ale
-	display_name = "Weyland-Yutani IPA Ale"
-	path = /obj/item/reagent_container/food/drinks/cans/ale
-
-/datum/gear/drink/alcohol/aspen
-	display_name = "Weyland-Yutani Aspen Beer"
-	path = /obj/item/reagent_container/food/drinks/cans/aspen
-
-/datum/gear/drink/alcohol/beer
-	display_name = "Weyland-Yutani Lite Beer"
-	path = /obj/item/reagent_container/food/drinks/cans/beer
-
-/datum/gear/drink/alcohol/loko
-	display_name = "Thirteen Loko"
-	path = /obj/item/reagent_container/food/drinks/cans/thirteenloko
-
-/*
-//================================================
 				Flasks
 //================================================
 */
@@ -1185,31 +1110,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Bar of chocolate"
 	path = /obj/item/reagent_container/food/snacks/chocolatebar
 
-/datum/gear/snack_sweet/candy_apple
-	display_name = "Candied apple"
-	path = /obj/item/reagent_container/food/snacks/candiedapple
-
-/datum/gear/snack_sweet/cookie
-	display_name = "Cookie"
-	path = /obj/item/reagent_container/food/snacks/cookie
-
-/datum/gear/snack_sweet/fortune_cookie
-	display_name = "Fortune cookie"
-	path = /obj/item/reagent_container/food/snacks/fortunecookie/prefilled
-	cost = 3
-
-/datum/gear/snack_sweet/donut_normal
-	display_name = "Donut"
-	path = /obj/item/reagent_container/food/snacks/donut/normal
-
-/datum/gear/snack_sweet/donut_jelly
-	display_name = "Jelly donut"
-	path = /obj/item/reagent_container/food/snacks/donut/jelly
-
-/datum/gear/snack_sweet/donut_cherry
-	display_name = "Cherry donut"
-	path = /obj/item/reagent_container/food/snacks/donut/cherryjelly
-
 /*
 //================================================
 				Packaged Foods
@@ -1226,63 +1126,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/snack_packaged/meat_bar
 	display_name = "MEAT bar"
 	path = /obj/item/reagent_container/food/snacks/eat_bar
-
-/datum/gear/snack_packaged/kepler_crisps
-	display_name = "Kepler Crisps"
-	path = /obj/item/reagent_container/food/snacks/kepler_crisps
-
-/datum/gear/snack_packaged/burrito
-	display_name = "Packaged burrito"
-	path = /obj/item/reagent_container/food/snacks/microwavable/packaged_burrito
-
-/datum/gear/snack_packaged/cheeseburger
-	display_name = "Packaged cheeseburger"
-	path = /obj/item/reagent_container/food/snacks/microwavable/packaged_burger
-
-/datum/gear/snack_packaged/hotdog
-	display_name = "Packaged hotdog"
-	path = /obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs
-
-/datum/gear/snack_packaged/chips_pepper
-	display_name = "W-Y Pepper Chips"
-	path = /obj/item/reagent_container/food/snacks/wy_chips/pepper
-
-/*
-//================================================
-				Healthy Foods
-//================================================
-*/
-
-/datum/gear/snack_grown
-	category = "Food (healthy)"
-
-/datum/gear/snack_grown/apple
-	display_name = "Apple"
-	path = /obj/item/reagent_container/food/snacks/grown/apple
-
-/datum/gear/snack_grown/carrot
-	display_name = "Carrot"
-	path = /obj/item/reagent_container/food/snacks/grown/carrot
-
-/datum/gear/snack_grown/corn
-	display_name = "Corn"
-	path = /obj/item/reagent_container/food/snacks/grown/corn
-
-/datum/gear/snack_grown/lemon
-	display_name = "Lemon"
-	path = /obj/item/reagent_container/food/snacks/grown/lemon
-
-/datum/gear/snack_grown/lime
-	display_name = "Lime"
-	path = /obj/item/reagent_container/food/snacks/grown/lime
-
-/datum/gear/snack_grown/orange
-	display_name = "Orange"
-	path = /obj/item/reagent_container/food/snacks/grown/orange
-
-/datum/gear/snack_grown/potato
-	display_name = "Potato"
-	path = /obj/item/reagent_container/food/snacks/grown/potato
 
 /*
 //================================================

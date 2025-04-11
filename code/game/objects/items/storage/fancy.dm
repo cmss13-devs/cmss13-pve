@@ -141,10 +141,10 @@
 
 /obj/item/storage/fancy/cigarettes/fill_preset_inventory()
 	if(loadout)
-		for(var/i = 1 to storage_slots)
+		for(var/i in 1 to rand(0,3))
 			new default_cig_type(src)
 	else
-		for(var/i in 1 to rand(0,3))
+		for(var/i = 1 to storage_slots)
 			new default_cig_type(src)
 	create_reagents(15 * storage_slots)//so people can inject cigarettes without opening a packet, now with being able to inject the whole one
 	flags_atom |= NOREACT
