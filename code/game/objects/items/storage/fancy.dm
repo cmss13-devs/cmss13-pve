@@ -167,20 +167,20 @@
 		..()
 
 /obj/item/storage/fancy/cigarettes/emeraldgreen
-	name = "\improper Emerald Green Packet"
-	desc = "They remind you of a gross, tar-filled version of Ireland. These cheap cigarettes are Weyland-Yutani's entry into the general market."
+	name = "\improper Emerald Green packet"
+	desc = "A cheap Koorlander-affiliated brand known for their heavy tar. Their popularity is largely limited to the frontier, given the highly competitive legacy market on Earth."
 	icon_state = "cigpacket"
 	item_state = "cigpacket"
 
 /obj/item/storage/fancy/cigarettes/wypacket
 	name = "\improper Weyland-Yutani Gold packet"
-	desc = "Building Better Worlds, and rolling better cigarettes. These fancy cigarettes are Weyland-Yutani's entry into the premium tobacco market. Comes backed by a fierce legal team."
+	desc = "Weyland Yutani's entrance to the tobacco market. Despite the luxurious branding and high price, they aren't known to be especially high quality."
 	icon_state = "wypacket"
 	item_state = "wypacket"
 
 /obj/item/storage/fancy/cigarettes/wypacket_4
 	name = "\improper Weyland-Yutani Gold mini packet"
-	desc = "Building Better Worlds, and rolling better cigarettes. Compact and ready for your executive ventures, protecting corporate assets never felt cooler."
+	desc = "Weyland Yutani's entrance to the tobacco market. Despite the luxurious branding and high price, they aren't known to be especially high quality."
 	icon_state = "wy4packet"
 	item_state = "wypacket"
 	item_state_slots = list(WEAR_AS_GARB = "cig_wypack")
@@ -188,27 +188,27 @@
 
 /obj/item/storage/fancy/cigarettes/balaji
 	name = "\improper Balaji Imperial packet"
-	desc = "Smoke 'em if you gottem! Quite popular amongst people living in the Three World Empire."
+	desc = "A well-established TWE cigarette brand out of India known for their lightness and smooth taste. Despite an attempted buy-out from Weyland-Yutani, Balaji has remained independent."
 	icon_state = "bpacket"
 	item_state = "bpacket"
 
 /obj/item/storage/fancy/cigarettes/balaji_4
 	name = "\improper Balaji Imperial Mini packet"
-	desc = "Smoke 'em if you gottem! Now a field, in the new compact package!"
+	desc = "A well-established TWE cigarette brand out of India known for their lightness and smooth taste. Despite an attempted buy-out from Weyland-Yutani, Balaji has remained independent."
 	icon_state = "b4packet"
 	item_state = "bpacket"
 	item_state_slots = list(WEAR_AS_GARB = "cig_bpack")
 	storage_slots = 4
 
 /obj/item/storage/fancy/cigarettes/lucky_strikes
-	name = "\improper Lucky Strikes Packet"
-	desc = "Lucky Strikes Means Fine Tobacco! 9/10 doctors agree on Lucky Strikes... as the leading cause of marine lung cancer."
+	name = "\improper Lucky Strikes Red packet"
+	desc = "Long time friend to the Marine Corps, and one of the most popular American cigarette brands on the market. Unfiltered, all-American goodness."
 	icon_state = "lspacket"
 	item_state = "lspacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
 
 /obj/item/storage/fancy/cigarettes/lucky_strikes_4
-	name = "\improper Lucky Strikes Mini Packet"
+	name = "\improper Lucky Strikes Mini packet"
 	desc = "These four-packs of Luckies come in every MRE. They're not as good as the Habana Reals that come in the LACN MREs, but at least they're free."
 	icon_state = "ls4packet"
 	item_state = "lspacket"
@@ -218,14 +218,14 @@
 
 /obj/item/storage/fancy/cigarettes/blackpack
 	name = "\improper Executive Select packet"
-	desc = "These cigarettes are the height of luxury. They're smooth, they're cool, and they smell like victory... and cigarette smoke."
+	desc = "Known by their distinct black colour, blue glow, and smooth taste, these are the most expensive cigarettes on the market today and make a very good case for their being so."
 	icon_state = "blackpacket"
 	item_state = "blackpacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/bcigarette
 
 /obj/item/storage/fancy/cigarettes/blackpack_4
 	name = "\improper Executive Select mini packet"
-	desc = "Luxury right in your ration. You will have them just in time to use them while observing a nuclear blast and enjoying it."
+	desc = "Known by their distinct black colour, blue glow, and smooth taste, these are the most expensive cigarettes on the market today and make a very good case for their being so."
 	icon_state = "black4packet"
 	item_state = "blackpacket"
 	item_state_slots = list(WEAR_AS_GARB = "cig_blackpack")
@@ -234,39 +234,39 @@
 
 /obj/item/storage/fancy/cigarettes/kpack
 	name = "\improper Koorlander Gold packet"
-	desc = "Lovingly machine-rolled for YOUR pleasure. For when you want to look cool and the risk of a slow horrible death isn't really a factor."
+	desc = "A well-established TWE based cigarette brand primarily manufactured in the colonies, it is the primary competitior to Balaji Imperial. Despite this, there are ongoing discussions about a merger for the sake of remaining independent of Weyland-Yutani."
 	icon_state = "kpacket"
 	item_state = "kpacket"
 
 /obj/item/storage/fancy/cigarettes/arcturian_ace
 	name = "\improper Arcturian Ace packet"
-	desc = "An entry level brand of cigarettes with a bright blue packaging. You're guessing these aren't really good for you, but it doesn't matter when it's Arcturian baby!"
+	desc = "An exotic brand of cigarettes affiliated with Koorlander that utilizes hybrid tobacco grown on Arctura. They're supposedly healthier for you as a result, and with how smooth they are you might actually believe it."
 	icon_state = "aapacket"
 	item_state = "aapacket"
 
 /obj/item/storage/fancy/cigarettes/lady_finger
 	name = "\improper Lady Fingers packet"
-	desc = "These intensely strong unfiltered menthol cigarettes don't seem very ladylike. They don't seem very fingerlike for that matter, either. Smoking may kill, but poor branding is almost as bad."
+	desc = "A cheap Koorlander-affiliated brand of unfiltered menthol cigarettes. You've never seen these outside of the colonies."
 	icon_state = "lfpacket"
 	item_state = "lfpacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
 
 /obj/item/storage/fancy/cigarettes/spirit
-	name = "\improper American Spirit Turquoise Packet"
-	desc = "A pack of turquoise American Spirit cigarettes, for that strong full-bodied flavour you know and love."
+	name = "\improper American Spirit Turquoise packet"
+	desc = "A well-established UA based cigarette brand. The turquois packaging hints at their strong full-bodied flavour."
 	icon_state = "naspacket"
 	item_state = "naspacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette
 
 /obj/item/storage/fancy/cigarettes/spirit/yellow
-	name = "\improper American Spirit Yellow Packet"
-	desc = "A pack of yellow American Spirit cigarettes, for that mellow flavour you know and love."
+	name = "\improper American Spirit Yellow packet"
+	desc = "A well-established UA based cigarette brand. The yellow packaging hints at their mellow flavour."
 	icon_state = "y_naspacket"
 	item_state = "y_naspacket"
 
 /obj/item/storage/fancy/cigarettes/laika
 	name = "\improper Laika packet"
-	desc = "A Russian brand of cigarettes maintaining and honoring the legacy of the dog Laika, a space pioneer."
+	desc = "One of the many state-owned cigarette brands in the UPP, these come from Russia and honor the space pioneer Laika. Strong and heavily filtered, they're said to bring good luck to those in space transit, if not a lot of tobacco."
 	icon_state = "laikapacket"
 	item_state = "laikapacket"
 
@@ -374,8 +374,8 @@
 // MATCH BOX
 
 /obj/item/storage/fancy/cigar/matchbook
-	name = "\improper Lucky Strikes matchbook"
-	desc = "A small book of cheap paper matches. Good luck getting them to light. Made by Lucky Strikes, but you'll be anything but lucky when you burn your hand trying to light a match on this."
+	name = "\improper matchbook"
+	desc = "A small book of cheap paper matches. Good luck getting them to light. Made with generic tan paper."
 	icon_state = "mpacket"
 	item_state = "zippo"
 	storage_slots = 6
@@ -405,7 +405,7 @@
 		to_chat(user, SPAN_NOTICE("\The [W] fails to light."))
 
 /obj/item/storage/fancy/cigar/matchbook/brown
-	name = "brown matchbook"
+	name = "matchbook"
 	desc = "A small book of cheap paper matches. Good luck getting them to light. Made with generic brown paper."
 	icon_state = "mpacket_br"
 

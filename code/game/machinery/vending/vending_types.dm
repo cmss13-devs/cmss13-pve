@@ -47,6 +47,7 @@
 /obj/structure/machinery/vending/snack
 	name = "\improper Hot Foods Machine"
 	desc = "A vending machine full of ready to cook meals, mhmmmm taste the nutritional goodness!"
+	partially_unstocked = TRUE
 	product_slogans = "Kepler Crisps! Try a snack that's out of this world!;Eat an EAT!;Eat a Weyland-Yutani brand packaged hamburger.;Eat a Weyland-Yutani brand packaged hot dog.;Eat a Weyland-Yutani brand packaged burrito.;"
 	product_ads = "Kepler Crisps! Try a snack that's out of this world!;Eat an EAT!"
 	icon_state = "snack"
@@ -161,6 +162,7 @@
 	name = "\improper vending machine"
 	desc = "A generic snack and soft drink vendor with a small plate on the back reading, 'Veni Vendi Vici'"
 	icon_state = "snackvend"
+	partially_unstocked = TRUE
 	product_slogans = ""
 	product_ads = ""
 	products = list(
@@ -226,11 +228,10 @@
 		/obj/item/storage/fancy/cigarettes/spirit/yellow = 10,
 		/obj/item/storage/fancy/cigarettes/emeraldgreen = 10,
 		/obj/item/storage/fancy/cigarettes/wypacket = 10,
-		/obj/item/storage/fancy/cigarettes/trading_card = 10,
 		/obj/item/storage/fancy/cigarettes/lady_finger = 10,
 		/obj/item/storage/fancy/cigarettes/blackpack = 10,
 		/obj/item/storage/fancy/cigar/tarbacktube = 10,
-		/obj/item/storage/box/matches = 10,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 10,
 		/obj/item/tool/lighter/random = 10,
 		/obj/item/tool/lighter/zippo = 5,
 		/obj/item/tool/lighter/zippo/black = 5,
@@ -242,14 +243,13 @@
 		/obj/item/storage/fancy/cigarettes/kpack = 40,
 		/obj/item/storage/fancy/cigarettes/spirit = 40,
 		/obj/item/storage/fancy/cigarettes/spirit/yellow = 40,
-		/obj/item/storage/fancy/cigarettes/arcturian_ace = 25,
+		/obj/item/storage/fancy/cigarettes/arcturian_ace = 45,
 		/obj/item/storage/fancy/cigarettes/emeraldgreen = 25,
-		/obj/item/storage/fancy/cigarettes/wypacket = 50,
-		/obj/item/storage/fancy/cigarettes/trading_card = 50,
+		/obj/item/storage/fancy/cigarettes/wypacket = 65,
 		/obj/item/storage/fancy/cigarettes/lady_finger = 30,
 		/obj/item/storage/fancy/cigarettes/blackpack = 75,
 		/obj/item/storage/fancy/cigar/tarbacktube = 35,
-		/obj/item/storage/box/matches = 2,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 2,
 		/obj/item/tool/lighter/random = 5,
 		/obj/item/tool/lighter/zippo = 25,
 		/obj/item/tool/lighter/zippo/black = 27,
@@ -279,28 +279,24 @@
 		"The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue.")
 	product_ads = "The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue."
 	products = list(
-		/obj/item/storage/fancy/cigarettes/kpack = 10,
-		/obj/item/storage/fancy/cigarettes/kpack = 10,
+		/obj/item/storage/fancy/cigarettes/kpack = 20,
 		/obj/item/storage/fancy/cigarettes/arcturian_ace = 10,
 		/obj/item/storage/fancy/cigarettes/emeraldgreen = 10,
 		/obj/item/storage/fancy/cigarettes/lady_finger = 10,
 		/obj/item/storage/fancy/cigar/tarbacktube = 10,
-		/obj/item/storage/box/matches = 10,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 10,
 		/obj/item/tool/lighter/random = 10,
 		/obj/item/tool/lighter/zippo = 5,
 		/obj/item/tool/lighter/zippo/black = 5,
 		/obj/item/tool/lighter/zippo/blue = 5,
 	)
-
-	premium = list(/obj/item/clothing/mask/cigarette/cigar = 5)
 	prices = list(
 		/obj/item/storage/fancy/cigarettes/kpack = 40,
-		/obj/item/storage/fancy/cigarettes/kpack = 40,
-		/obj/item/storage/fancy/cigarettes/arcturian_ace = 25,
+		/obj/item/storage/fancy/cigarettes/arcturian_ace = 45,
 		/obj/item/storage/fancy/cigarettes/emeraldgreen = 25,
 		/obj/item/storage/fancy/cigarettes/lady_finger = 30,
 		/obj/item/storage/fancy/cigar/tarbacktube = 35,
-		/obj/item/storage/box/matches = 2,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 2,
 		/obj/item/tool/lighter/random = 5,
 		/obj/item/tool/lighter/zippo = 25,
 		/obj/item/tool/lighter/zippo/black = 27,
@@ -312,55 +308,47 @@
 	name = "cigarette machine"
 	icon_state = "cigs"
 	desc = "A vending machine dealing in all sorts of cigarettes, lighters and cigars."
+	partially_unstocked = FALSE
 	product_slogans = list(
 		"Light up and enjoy the rich, comfortably familiar taste of Koorlander Gold.",
 		"Always by your side, Koorlander Gold!",
 		"For the man who knows his place is at the top, Koorlander Gold shows the world that you're the best and no-one can say otherwise.",
-		"Enjoy the delicate touch of Lady Fingers.",
-		"Lady Fingers, the compliment to any evening.",
-		"For the cool, filtered feel, Lady Finger vigarettes provide the smoothest draw of any cigarette on the market.",
 		"Real. Simple. Different. American Spirit.",
 		"American Spirit, America's best cigarette.",
 		"Lucky Strike, it's toasted!",
 		"L.S./M.F.T.! Lucky Strikes Means Fine Tobacco!",
-		"A taste of the Emerald Isles at the touch of your finger-tips, Emerald Green.",
 		"Forge new frontiers with Arcturian Ace.",
 		"For a classic style that lights up every time, there's always Zippo!",
 		"Zippo, it works or we fix it for free.",
 		"On a budget? Buy a Bic.",
 		"Bic, proudly lighting the way since 1973.",
 		"The Interstellar Commerce Commission would like to remind you that smoking kills.",
-		"The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue.")
+		"The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue.",
+		"Proudly serving the US Armed Forces for over two-hundred years!")
 	product_ads = "The Surgeon General would like to remind you that tobacco products cause cancer and increased fatigue."
 	products = list(
-		/obj/item/storage/fancy/cigarettes/lucky_strikes = 5,
-		/obj/item/storage/fancy/cigarettes/kpack = 5,
-		/obj/item/storage/fancy/cigarettes/spirit = 5,
-		/obj/item/storage/fancy/cigarettes/spirit/yellow = 5,
-		/obj/item/storage/fancy/cigarettes/emeraldgreen = 5,
-		/obj/item/storage/fancy/cigarettes/wypacket = 5,
-		/obj/item/storage/fancy/cigarettes/lady_finger = 5,
-		/obj/item/storage/fancy/cigarettes/blackpack = 5,
+		/obj/item/storage/fancy/cigarettes/lucky_strikes = 10,
+		/obj/item/storage/fancy/cigarettes/kpack = 3,
+		/obj/item/storage/fancy/cigarettes/spirit = 3,
+		/obj/item/storage/fancy/cigarettes/spirit/yellow = 3,
+		/obj/item/storage/fancy/cigarettes/wypacket = 2,
+		/obj/item/storage/fancy/cigarettes/arcturian_ace = 2,
 		/obj/item/storage/fancy/cigar/tarbacktube = 5,
-		/obj/item/storage/box/matches = 20,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 20,
 		/obj/item/tool/lighter/random = 10,
 		/obj/item/tool/lighter/zippo = 5,
 		/obj/item/tool/lighter/zippo/black = 2,
 		/obj/item/tool/lighter/zippo/blue = 2,
 	)
-	premium = list(/obj/item/clothing/mask/cigarette/cigar = 5)
 	prices = list(
 		/obj/item/storage/fancy/cigarettes/lucky_strikes = 70,
 		/obj/item/storage/fancy/cigarettes/kpack = 80,
 		/obj/item/storage/fancy/cigarettes/spirit = 80,
 		/obj/item/storage/fancy/cigarettes/spirit/yellow = 80,
-		/obj/item/storage/fancy/cigarettes/arcturian_ace = 50,
-		/obj/item/storage/fancy/cigarettes/emeraldgreen = 50,
 		/obj/item/storage/fancy/cigarettes/wypacket = 100,
-		/obj/item/storage/fancy/cigarettes/lady_finger = 60,
-		/obj/item/storage/fancy/cigarettes/blackpack = 75,
+		/obj/item/storage/fancy/cigarettes/arcturian_ace = 45,
 		/obj/item/storage/fancy/cigar/tarbacktube = 70,
-		/obj/item/storage/box/matches = 2,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 2,
 		/obj/item/tool/lighter/random = 5,
 		/obj/item/tool/lighter/zippo = 50,
 		/obj/item/tool/lighter/zippo/black = 54,
@@ -375,12 +363,12 @@
 	icon_state = "china_cig_vending"
 	products = list(
 		/obj/item/storage/fancy/cigarettes/laika = 10,
-		/obj/item/storage/box/matches = 10,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 10,
 		/obj/item/tool/lighter/zippo = 10,
 	)
 	prices = list(
 		/obj/item/storage/fancy/cigarettes/laika = 55,
-		/obj/item/storage/box/matches = 1,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 1,
 		/obj/item/tool/lighter/zippo = 15,
 	)
 
