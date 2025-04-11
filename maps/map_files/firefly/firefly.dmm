@@ -4,7 +4,7 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "ab" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_box/magazine/mk1/ap,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_theta)
@@ -306,7 +306,7 @@
 /turf/open/floor/wood/ship,
 /area/firefly/co)
 "el" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/helmet_visor/medical/advanced,
 /turf/open/floor/corsat/green/northeast,
 /area/firefly/medical)
@@ -328,7 +328,7 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "eK" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
@@ -365,7 +365,7 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
 "fp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/syringes,
 /turf/open/floor/corsat/green,
 /area/firefly/medical)
@@ -910,7 +910,7 @@
 /obj/item/ammo_magazine/smg/m39/pve,
 /obj/item/ammo_magazine/smg/m39/pve,
 /obj/item/ammo_magazine/smg/m39/pve,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light/double{
 	dir = 4;
 	pixel_x = 10;
@@ -1203,7 +1203,7 @@
 /turf/open/floor/almayer/mono,
 /area/firefly/cryo_cell)
 "sM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/prop/helmetgarb/gunoil{
 	pixel_x = -9;
 	pixel_y = 4
@@ -1522,7 +1522,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/firefly/medical)
 "xA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_magazine/flamer_tank/EX{
 	pixel_y = 7;
 	pixel_x = -2
@@ -1542,7 +1542,7 @@
 /obj/item/ammo_magazine/smg/m39/pve,
 /obj/item/ammo_magazine/smg/m39/pve,
 /obj/item/ammo_magazine/smg/m39/pve,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "xX" = (
@@ -1699,7 +1699,7 @@
 /turf/open/floor/corsat/green/west,
 /area/firefly/medical)
 "Aa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_magazine/flamer_tank/EX{
 	pixel_y = 7;
 	pixel_x = 7
@@ -1708,7 +1708,7 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "Ad" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/syringe/drugs,
 /obj/item/reagent_container/syringe/drugs{
 	pixel_y = 3;
@@ -2330,7 +2330,7 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "JW" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/crew/alt,
 /turf/open/floor/corsat/green/northwest,
 /area/firefly/medical)
@@ -2532,7 +2532,7 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "Of" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/prop/helmetgarb/compass{
 	layer = 3.5;
 	pixel_x = 4
@@ -2730,7 +2730,7 @@
 /turf/open/floor/plating,
 /area/firefly/medical)
 "QN" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ammo_box/magazine/mk1/ap{
 	pixel_x = 5;
 	pixel_y = 6
@@ -2927,7 +2927,7 @@
 /turf/open/floor/corsat/marked,
 /area/firefly/supply)
 "Tx" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/med_data/laptop,
 /turf/open/floor/corsat/green/north,
 /area/firefly/medical)
@@ -3302,7 +3302,7 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
 "YW" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/prop/geiger_counter{
 	desc = "An attempted upgrade to the B8 smart-scope that used an onboard AGI to automatically resolve firing solutions, resulting in IFF with none of the downsides of the B8. Unfortunately, it was not to be- the battery pack was too big and clumsy, and the electronics too fragile.";
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi';
