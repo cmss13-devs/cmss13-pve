@@ -1,6 +1,9 @@
 /datum/equipment_preset/uscm_ship
 	name = "USCM (Ship Roles)"
 
+/datum/equipment_preset/uscm_ship/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_uscm_underwear(new_human)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/liaison

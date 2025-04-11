@@ -288,11 +288,11 @@
 		if(JOB_WORKING_JOE)
 			return /datum/equipment_preset/synth/working_joe
 		if(JOB_POLICE)
-			return /datum/equipment_preset/uscm/police/mp
+			return /datum/equipment_preset/uscm_ship/uscm_police/mp
 		if(JOB_CHIEF_POLICE)
-			return /datum/equipment_preset/uscm/police/cmp
+			return /datum/equipment_preset/uscm_ship/uscm_police/cmp
 		if(JOB_WARDEN)
-			return /datum/equipment_preset/uscm/police/warden
+			return /datum/equipment_preset/uscm_ship/uscm_police/warden
 		if(JOB_DI)
 			return /datum/equipment_preset/uscm_ship/di
 		if(JOB_CHIEF_ENGINEER)
