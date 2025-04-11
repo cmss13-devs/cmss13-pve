@@ -90,6 +90,9 @@
 /obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
+"aam" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
 "aan" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -151,6 +154,12 @@
 	pixel_x = 9
 	},
 /turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/cryo_cells)
+"aar" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/smartgunner/alpha,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aas" = (
 /obj/effect/decal/warning_stripes{
@@ -813,7 +822,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "acV" = (
-/obj/effect/landmark/start/bridge,
+/obj/effect/landmark/start/marine/tl/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -5392,9 +5401,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "asK" = (
-/obj/effect/landmark/start/marine/leader/alpha,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/bridge,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "asL" = (
@@ -5959,6 +5968,9 @@
 	dir = 8;
 	light_power = 0.7
 	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/leader/alpha,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "avb" = (
@@ -6724,9 +6736,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "axL" = (
-/obj/effect/landmark/start/marine/smartgunner/alpha,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/alpha,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "axM" = (
@@ -9062,12 +9074,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"aEI" = (
-/obj/effect/landmark/start/marine/medic/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
 "aEK" = (
 /turf/open/floor/almayer/empty/golden_arrow,
 /area/golden_arrow/cargo_shuttle/upper)
@@ -12155,6 +12161,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/smartgunner/alpha,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aPM" = (
@@ -14114,6 +14123,9 @@
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
 	},
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aWX" = (
@@ -16885,11 +16897,6 @@
 "hRK" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
-"hSW" = (
-/obj/effect/landmark/start/marine/leader/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
 "hUp" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
@@ -20775,12 +20782,6 @@
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/synthcloset)
-"wSf" = (
-/obj/effect/landmark/start/bridge,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
 "wYO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -24294,25 +24295,25 @@ aEG
 aEG
 aWh
 aEZ
-asK
+aam
 aQQ
-wSf
+aam
 asK
 aAU
-hSW
-aEI
-acV
-asK
-aPL
 aFy
+aam
+acV
+aam
+aPL
+aam
 axL
-azh
+aam
 azh
 abh
-aFy
-axL
-azh
-azh
+aar
+aam
+aam
+aam
 aUY
 aWh
 aEG
