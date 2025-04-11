@@ -87,7 +87,7 @@
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "ahu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/coffeecup/wy,
 /turf/open/floor/whiteyellow,
 /area/lv624/lazarus/corporate_dome)
@@ -456,7 +456,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/east_central_jungle)
 "aEB" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/lighter,
 /obj/item/device/analyzer,
 /obj/item/device/multitool,
@@ -608,7 +608,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/landing_zones/lz2)
 "aKP" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/snacks/stew{
@@ -766,7 +766,7 @@
 /turf/open/gm/dirtgrassborder/south,
 /area/lv624/lazarus/quartstorage/outdoors)
 "aVe" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/stack/cable_coil,
@@ -802,7 +802,7 @@
 /area/lv624/ground/jungle/west_jungle)
 "aVF" = (
 /obj/item/device/flashlight,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/red/east,
 /area/lv624/lazarus/security)
 "aVH" = (
@@ -923,7 +923,7 @@
 /turf/open/floor/grimy,
 /area/lv624/lazarus/captain)
 "bcU" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "bde" = (
@@ -1246,7 +1246,7 @@
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
 "byw" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/cigarettes/wypacket{
 	pixel_x = 5;
 	pixel_y = 6
@@ -1255,7 +1255,7 @@
 /turf/open/floor/whiteyellow/southeast,
 /area/lv624/lazarus/corporate_dome)
 "byF" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/hunting_trap{
@@ -1366,7 +1366,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/south_west_jungle)
 "bIE" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/stack/sheet/mineral/sandstone{
@@ -1792,7 +1792,9 @@
 /turf/open/floor/vault2/west,
 /area/lv624/lazarus/quartstorage)
 "cqs" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
+/obj/item/tool/kitchen/knife/butcher,
+/obj/structure/surface/table/woodentable,
 /obj/item/fishing_pole,
 /obj/item/fish_bait,
 /turf/open/floor/wood/wood_broken6,
@@ -1978,7 +1980,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/west_central_jungle)
 "czF" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/candle,
 /turf/open/floor/carpet/bcarpet03,
 /area/lv624/ground/caves/north_central_caves)
@@ -2112,7 +2114,7 @@
 /turf/open/floor/sandstone/runed,
 /area/lv624/ground/caves/sand_temple)
 "cHw" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/weapon/twohanded/yautja/spear,
@@ -2716,7 +2718,7 @@
 /turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
 "doB" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/meat/human{
 	pixel_y = 6
 	},
@@ -2796,7 +2798,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
 /area/lv624/ground/caves/sand_temple)
 "dsz" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/faxmachine/corporate/liaison,
 /turf/open/floor/whiteyellow/northwest,
 /area/lv624/lazarus/corporate_dome)
@@ -2862,7 +2864,7 @@
 /turf/closed/wall/r_wall,
 /area/lv624/lazarus/corporate_dome)
 "dwI" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/flora/jungle/vines/heavy,
@@ -3064,7 +3066,13 @@
 /turf/open/floor/brown/northwest,
 /area/lv624/lazarus/comms)
 "dNd" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
+/obj/item/tool/candle,
+/obj/item/tool/match{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/candle{
 	pixel_x = 4;
 	pixel_y = 8
@@ -3123,7 +3131,7 @@
 /turf/open/floor,
 /area/lv624/ground/barrens/containers)
 "dRd" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/cult,
@@ -3166,7 +3174,7 @@
 /turf/open/floor/whiteyellow/southwest,
 /area/lv624/lazarus/corporate_dome)
 "dSU" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/drinks/bottle/whiskey{
 	pixel_x = -7
 	},
@@ -3961,7 +3969,7 @@
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/caves/sand_temple)
 "eTx" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/prop/server_equipment/laptop/closed,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
@@ -4060,7 +4068,7 @@
 /turf/open/floor/purple/northwest,
 /area/lv624/lazarus/sleep_female)
 "faa" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -4282,7 +4290,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
 "fnR" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/candle,
 /turf/open/floor/carpet/bcarpet01,
 /area/lv624/ground/caves/north_central_caves)
@@ -4346,7 +4354,7 @@
 /turf/open/gm/coast/north,
 /area/lv624/ground/jungle/west_jungle)
 "fqW" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/structure/machinery/microwave{
 	pixel_x = 2;
 	pixel_y = 3
@@ -4460,7 +4468,7 @@
 /turf/open/floor/plating/warnplate,
 /area/lv624/lazarus/engineering)
 "fxX" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/stack/sheet/metal{
 	amount = 30;
 	pixel_x = 4;
@@ -4540,7 +4548,7 @@
 /turf/open/gm/grass/grass2,
 /area/lv624/lazarus/yggdrasil)
 "fBH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/deck,
 /turf/open/floor/airless/asteroidfloor/northeast,
 /area/lv624/ground/barrens/north_east_barrens)
@@ -4597,7 +4605,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_west_jungle)
 "fEH" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/mask/cigarette/pipe,
 /turf/open/floor/dark,
 /area/lv624/lazarus/engineering)
@@ -4813,7 +4821,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_west_caves)
 "fOQ" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -5016,7 +5024,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/central_jungle)
 "gbL" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/fries,
 /turf/open/floor/carpet/bcarpet07,
 /area/lv624/ground/caves/north_central_caves)
@@ -5166,7 +5174,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_east_jungle)
 "gna" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -5772,7 +5780,7 @@
 /turf/open/floor/dark,
 /area/lv624/lazarus/engineering)
 "gUJ" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/clothing/mask/gas/yautja/damaged,
@@ -5840,7 +5848,7 @@
 /turf/open/floor/corsat/squareswood/north,
 /area/lv624/ground/caves/sand_temple)
 "gYp" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/snacks/xemeatpie{
@@ -6005,7 +6013,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/east_jungle)
 "hfL" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/fancy/cigarettes/emeraldgreen,
 /turf/open/floor/whiteblue/west,
 /area/lv624/lazarus/corporate_dome)
@@ -6230,7 +6238,7 @@
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "hsn" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/folder,
 /obj/item/device/assembly/signaller,
 /obj/structure/platform_decoration{
@@ -6494,7 +6502,7 @@
 /turf/open/gm/dirtgrassborder/north,
 /area/lv624/lazarus/quartstorage/outdoors)
 "hIh" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/device/flashlight/lantern,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
@@ -6551,7 +6559,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/barrens/north_east_barrens)
 "hNY" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/weapon/gun/energy/yautja/plasma_caster{
@@ -6740,7 +6748,7 @@
 /turf/closed/wall,
 /area/lv624/lazarus/research)
 "igv" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/hardhat/white{
 	pixel_x = -8;
 	pixel_y = 4
@@ -6819,7 +6827,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/landing_zones/lz2)
 "ilF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight,
 /obj/effect/spawner/random/tool,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -6919,7 +6927,7 @@
 /area/lv624/ground/jungle/central_jungle)
 "isx" = (
 /obj/effect/spawner/random/toolbox,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/radio,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /obj/structure/machinery/light,
@@ -7049,7 +7057,7 @@
 /area/lv624/ground/jungle/west_jungle)
 "iEf" = (
 /obj/item/storage/medicomp/full,
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/cult,
@@ -7556,7 +7564,7 @@
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/caves/sand_temple)
 "jkP" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/stack/sheet/metal{
 	amount = 5;
 	pixel_x = -2;
@@ -7655,7 +7663,7 @@
 /area/lv624/ground/caves/north_east_caves)
 "jqb" = (
 /obj/effect/spawner/random/toolbox,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/dark,
@@ -7674,7 +7682,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_east_caves)
 "jqz" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/restraint/handcuffs,
 /obj/item/storage/firstaid/adv,
 /turf/open/floor/red/north,
@@ -8259,7 +8267,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_west_caves)
 "kbO" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/snacks/stew,
@@ -9041,7 +9049,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/north_east_caves)
 "lig" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/chocolatecakeslice,
 /turf/open/floor/wood/wood_broken,
 /area/lv624/ground/caves/north_central_caves)
@@ -9174,7 +9182,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_west_caves)
 "lpK" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/weldingtool/hugetank,
@@ -9582,7 +9590,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
 "lOk" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/whiteyellowfull/east,
@@ -9606,7 +9614,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_west_jungle)
 "lPt" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/folder/red,
 /turf/open/floor/red/north,
 /area/lv624/lazarus/security)
@@ -9627,7 +9635,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/lv624/ground/caves/sand_temple)
 "lSl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/head/hardhat/orange{
 	pixel_x = -7;
 	pixel_y = 13
@@ -9725,7 +9733,7 @@
 /turf/open/floor/vault2/west,
 /area/lv624/lazarus/quartstorage)
 "lWO" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/kitchen/utensil/spoon{
@@ -9886,7 +9894,7 @@
 /turf/open/floor/greengrid,
 /area/lv624/lazarus/secure_storage)
 "miI" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -9935,7 +9943,7 @@
 /turf/open/floor/wood,
 /area/lv624/lazarus/hop)
 "mmn" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/ashtray/bronze,
 /obj/item/storage/donut_box,
 /turf/open/floor/red/west,
@@ -10413,7 +10421,7 @@
 /turf/closed/wall/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "mQI" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/boiledspagetti,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
@@ -10668,7 +10676,7 @@
 /turf/open/floor/warnwhite/east,
 /area/lv624/lazarus/fitness)
 "ngF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/tomatosoup{
 	desc = "Why would you ever drink this? Its full of mold and yucky slime!";
 	pixel_y = 3
@@ -10941,7 +10949,7 @@
 	},
 /area/lv624/lazarus/crashed_ship_containers)
 "nyk" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/sandstone/runed,
@@ -11054,7 +11062,7 @@
 /area/lv624/ground/jungle/east_central_jungle)
 "nGc" = (
 /obj/item/device/flash,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/explosive/grenade/flashbang{
 	pixel_x = 7;
 	pixel_y = 2
@@ -11129,7 +11137,7 @@
 /turf/open/floor/wood/wood_broken3,
 /area/lv624/ground/caves/north_central_caves)
 "nKQ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/folder/blue,
 /turf/open/floor/whiteblue,
 /area/lv624/lazarus/corporate_dome)
@@ -11501,7 +11509,7 @@
 /area/lv624/ground/caves/west_caves)
 "orJ" = (
 /obj/item/clothing/under/chainshirt/hunter,
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/floor/cult,
@@ -11662,7 +11670,7 @@
 /turf/open/floor/redfull/northwest,
 /area/lv624/lazarus/security)
 "oCc" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -12029,7 +12037,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
 "phv" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/head/hardhat{
 	pixel_x = 3;
 	pixel_y = 1
@@ -12753,7 +12761,7 @@
 /turf/open/floor/loadingarea/west,
 /area/lv624/lazarus/landing_zones/lz1)
 "qdf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/wy_chips/pepper,
 /turf/open/floor/whiteblue/west,
 /area/lv624/lazarus/corporate_dome)
@@ -13014,7 +13022,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
 "quM" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/binoculars,
 /turf/open/floor/redfull/northwest,
 /area/lv624/lazarus/security)
@@ -13213,7 +13221,7 @@
 /turf/open/gm/dirtgrassborder/east,
 /area/lv624/ground/barrens/south_eastern_jungle_barrens)
 "qJg" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/kitchen/knife/butcher{
 	pixel_x = -7
 	},
@@ -13302,7 +13310,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
 /area/lv624/ground/caves/north_central_caves)
 "qRp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin/wy{
 	pixel_y = 8
 	},
@@ -13394,7 +13402,7 @@
 /turf/open/gm/grass/grass2,
 /area/lv624/ground/jungle/east_jungle)
 "qXf" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /turf/open/gm/dirt,
@@ -13752,7 +13760,7 @@
 /turf/open/floor/plating/warnplate,
 /area/lv624/ground/barrens/east_barrens/ceiling)
 "ryT" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -13769,7 +13777,7 @@
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/caves/sand_temple)
 "rzu" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/tool/kitchen/utensil/spoon{
@@ -13896,7 +13904,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "rJO" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -13977,7 +13985,7 @@
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
 "rOV" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/device/flashlight/lantern,
 /turf/open/floor/wood/wood_broken6,
 /area/lv624/ground/caves/north_central_caves)
@@ -14061,7 +14069,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/east_central_jungle)
 "rWx" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/surgical_tray,
 /obj/item/reagent_container/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
@@ -14285,10 +14293,6 @@
 "sjL" = (
 /turf/closed/wall/rock/brown,
 /area/lv624/ground/caves/south_central_caves)
-"skd" = (
-/obj/structure/surface/table/holotable,
-/turf/open/floor/whitepurple/northeast,
-/area/lv624/lazarus/research)
 "sks" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
@@ -14425,7 +14429,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_jungle)
 "svf" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/device/flashlight/lantern{
 	pixel_x = 1;
 	pixel_y = 9
@@ -14433,7 +14437,7 @@
 /turf/open/floor/carpet/bcarpet09,
 /area/lv624/ground/caves/north_central_caves)
 "svo" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/cheeseburger,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
@@ -14649,7 +14653,7 @@
 /turf/open/floor/whitepurplecorner/east,
 /area/lv624/lazarus/fitness)
 "sPX" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/prop/flower_vase/bluewhiteflowers,
 /turf/open/floor/whiteblue/southeast,
 /area/lv624/lazarus/corporate_dome)
@@ -15044,7 +15048,7 @@
 /turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "tyO" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/tomatomeat,
 /obj/item/reagent_container/food/snacks/tomatomeat{
 	pixel_y = 4
@@ -15136,7 +15140,7 @@
 /turf/open/floor/whiteblue/north,
 /area/lv624/lazarus/medbay)
 "tCQ" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/carrotcakeslice,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
@@ -15165,7 +15169,9 @@
 /turf/open/floor/plating/warnplate/southeast,
 /area/lv624/lazarus/engineering)
 "tEl" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
+/obj/item/clothing/mask/cigarette/cigar,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/kitchen/knife/butcher,
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
@@ -15519,7 +15525,7 @@
 /area/lv624/lazarus/secure_storage)
 "tZx" = (
 /obj/effect/landmark/hunter_secondary,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/fire{
 	pixel_x = 5
 	},
@@ -15561,7 +15567,7 @@
 	pixel_x = 3;
 	pixel_y = 5
 	},
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_central_caves)
 "ubb" = (
@@ -15595,7 +15601,7 @@
 /turf/open/floor/vault,
 /area/lv624/lazarus/quartstorage)
 "ufn" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -15645,7 +15651,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
 /area/lv624/ground/colony/north_nexus_road)
 "uiS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/item/ammo_magazine/shotgun/buckshot,
 /turf/open/floor/red,
@@ -15683,7 +15689,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/south_west_jungle/ceiling)
 "ulV" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/structure/window/reinforced{
@@ -15722,7 +15728,7 @@
 /turf/open/floor/plating/platebot,
 /area/lv624/lazarus/robotics)
 "uoa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp{
 	pixel_x = -7;
 	pixel_y = 15
@@ -15938,7 +15944,7 @@
 /turf/open/gm/dirtgrassborder/east,
 /area/lv624/ground/barrens/south_eastern_barrens)
 "uCU" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/tool/candle,
 /obj/item/tool/match{
 	pixel_x = 6;
@@ -15947,7 +15953,7 @@
 /turf/open/floor/carpet/bcarpet08,
 /area/lv624/ground/caves/north_central_caves)
 "uDh" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/adv{
 	pixel_x = 6;
 	pixel_y = 6
@@ -16235,7 +16241,7 @@
 /turf/open/gm/grass/grass2,
 /area/lv624/ground/jungle/east_jungle)
 "uVA" = (
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /obj/item/reagent_container/food/snacks/enchiladas,
 /turf/open/floor/carpet/bcarpet02,
 /area/lv624/ground/caves/north_central_caves)
@@ -16507,7 +16513,7 @@
 /turf/open/floor/whitepurple/northeast,
 /area/lv624/lazarus/research)
 "vqh" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/under/cmb,
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/red,
@@ -16803,7 +16809,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/east_caves)
 "vKH" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = 6
 	},
@@ -17233,7 +17239,7 @@
 /area/lv624/lazarus/corporate_dome)
 "wtV" = (
 /obj/item/reagent_container/food/snacks/wy_chips/pepper,
-/obj/structure/surface/table/woodentable/poor,
+/obj/structure/surface/table/woodentable,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_central_caves)
 "wub" = (
@@ -17351,7 +17357,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_jungle)
 "wAJ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/door/window/westright{
 	dir = 2;
 	layer = 2.9
@@ -17435,7 +17441,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/landing_zones/lz1)
 "wGI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/kitchen/knife/butcher{
 	pixel_x = -1;
 	pixel_y = 5
@@ -17454,7 +17460,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
 /area/lv624/ground/jungle/west_jungle)
 "wHx" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/reagent_container/food/snacks/stew{
@@ -17907,7 +17913,7 @@
 /turf/open/floor/warning,
 /area/lv624/lazarus/landing_zones/lz2)
 "xnu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/explosive/grenade/high_explosive/stick,
 /obj/item/explosive/grenade/high_explosive/stick{
 	pixel_x = 6
@@ -18168,7 +18174,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/corporate_dome)
 "xGp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/device/flashlight/lamp{
 	pixel_x = 6;
 	pixel_y = 14
@@ -18349,7 +18355,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/east_caves)
 "xQn" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/stack/yautja_rope,
@@ -18459,7 +18465,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/captain)
 "xWI" = (
-/obj/structure/surface/table/reinforced/prison{
+/obj/structure/surface/table/reinforced{
 	color = "#6b675e"
 	},
 /obj/item/weapon/gun/energy/yautja/plasma_caster{
@@ -18531,7 +18537,7 @@
 	pixel_x = 7;
 	pixel_y = -32
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/tool/extinguisher,
 /obj/effect/spawner/random/powercell,
 /obj/item/device/assembly/infra,
@@ -37024,7 +37030,7 @@ lwG
 lwG
 lwG
 gjx
-skd
+fiO
 wyP
 vHR
 wUM

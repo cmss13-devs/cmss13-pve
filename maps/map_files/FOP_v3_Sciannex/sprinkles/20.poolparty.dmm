@@ -35,7 +35,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "cq" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/head/cueball{
 	pixel_x = 32;
 	pixel_y = -2
@@ -195,7 +195,7 @@
 /turf/open/floor/prison/darkbrown2/east,
 /area/template_noop)
 "iY" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cup{
 	pixel_x = 6;
 	pixel_y = 5
@@ -217,7 +217,7 @@
 /turf/open/floor/prison/darkbrown2,
 /area/template_noop)
 "jt" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/wood,
 /area/template_noop)
 "jT" = (
@@ -239,7 +239,7 @@
 /turf/open/floor/prison/darkbrown2/northeast,
 /area/template_noop)
 "ks" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/toy/plush/therapy/blue{
 	pixel_y = 4
 	},
@@ -262,7 +262,7 @@
 /turf/open/floor/prison/darkbrown2/west,
 /area/template_noop)
 "lc" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/toy/deck,
 /obj/item/toy/dice{
 	pixel_x = 11;
@@ -291,7 +291,7 @@
 /turf/open/floor/prison,
 /area/template_noop)
 "lS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/cheeseburger{
 	pixel_x = -6;
 	pixel_y = 12
@@ -344,7 +344,7 @@
 /turf/open/floor/prison/darkbrown2/west,
 /area/template_noop)
 "nA" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/bottle/beer/craft/mono{
 	pixel_x = 6;
 	pixel_y = 5;
@@ -566,7 +566,7 @@
 /turf/open/floor/prison/darkbrown2/east,
 /area/template_noop)
 "vU" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/hotdog{
 	pixel_x = 6;
 	pixel_y = 16
@@ -602,7 +602,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "vX" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
 	pixel_x = 10;
@@ -693,7 +693,7 @@
 /turf/open/floor/prison,
 /area/template_noop)
 "Ao" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
 	pixel_x = 10;
@@ -728,7 +728,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "Ci" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/beer_pack{
 	pixel_y = 5;
 	layer = 4
@@ -856,7 +856,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "Jf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cup{
 	pixel_x = -17;
 	pixel_y = -21
@@ -892,7 +892,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/template_noop)
 "KL" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cup{
 	pixel_x = -8;
 	pixel_y = 5
@@ -912,7 +912,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "KO" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cup{
 	pixel_x = -8;
 	layer = 3.2
@@ -931,7 +931,7 @@
 /turf/open/floor/prison/darkbrown2/north,
 /area/template_noop)
 "Ls" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/prop/souto_land/pole{
 	dir = 1
 	},
@@ -941,7 +941,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "LI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cans/beer{
 	pixel_y = 11;
 	pixel_x = 9
@@ -1073,7 +1073,7 @@
 /turf/open/floor/prison/darkbrown2,
 /area/template_noop)
 "RW" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cup{
 	pixel_x = 6;
 	layer = 3.2
@@ -1150,7 +1150,7 @@
 /turf/open/floor/prison/darkbrown2/northeast,
 /area/template_noop)
 "Vi" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/bottle/cognac{
 	pixel_x = 7;
 	pixel_y = 7
@@ -1231,7 +1231,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "Yr" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/trash/plate{
 	pixel_x = -7
 	},

@@ -18,7 +18,7 @@
 /turf/open/floor/wood,
 /area/shiva/interior/colony/s_admin)
 "ba" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/alarm{
 	dir = 4;
 	pixel_x = -24
@@ -34,7 +34,7 @@
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
 "bI" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
@@ -158,7 +158,7 @@
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	pixel_y = 7
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "gB" = (
@@ -177,7 +177,7 @@
 /obj/structure/machinery/computer/communications{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "gR" = (
@@ -226,7 +226,7 @@
 /turf/open/floor/wood,
 /area/shiva/interior/colony/s_admin)
 "jP" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/head/soft/sec/corp{
 	pixel_y = 10
 	},
@@ -279,7 +279,7 @@
 	},
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "mC" = (
@@ -309,7 +309,7 @@
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "ob" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/drinks/cans/ale{
 	pixel_x = -7;
 	pixel_y = 3
@@ -416,7 +416,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clipboard,
 /obj/item/tool/stamp,
 /turf/open/floor/shiva/north,
@@ -503,7 +503,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced/tinted,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clipboard,
 /obj/item/tool/stamp,
 /turf/open/floor/shiva/north,
@@ -565,7 +565,7 @@
 /obj/item/shard{
 	icon_state = "large"
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "wW" = (
@@ -661,7 +661,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/shiva/north,
@@ -721,7 +721,7 @@
 /obj/structure/machinery/computer/cameras{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "Bv" = (
@@ -755,7 +755,7 @@
 /turf/open/floor/plating/platingdmg3,
 /area/shiva/interior/colony/s_admin)
 "Cd" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/landmark/good_item,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
@@ -764,7 +764,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced/tinted,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clipboard,
 /obj/item/tool/stamp,
 /obj/effect/landmark/crap_item,
@@ -904,7 +904,7 @@
 /obj/structure/machinery/computer/station_alert{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "Ik" = (
@@ -972,7 +972,7 @@
 /obj/structure/machinery/computer/cameras{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/shard{
 	icon_state = "large"
 	},
@@ -1100,7 +1100,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clipboard,
 /obj/item/tool/stamp,
 /obj/effect/landmark/crap_item,
@@ -1151,7 +1151,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/shiva/north,
@@ -1218,7 +1218,7 @@
 /obj/structure/machinery/computer/station_alert{
 	dir = 4
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/shard{
 	icon_state = "medium"
 	},
@@ -1285,7 +1285,7 @@
 	dir = 4;
 	pixel_y = -5
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/landmark/crap_item,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
@@ -1333,13 +1333,13 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced/tinted,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "YD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/cameras{
 	dir = 1
 	},
@@ -1358,7 +1358,7 @@
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "Zi" = (

@@ -476,7 +476,7 @@
 	pixel_y = 3;
 	pixel_x = -3
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "bg" = (
@@ -1775,7 +1775,7 @@
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/dorms)
 "ef" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/bedsheetbin{
 	pixel_y = 10;
 	layer = 5
@@ -1957,7 +1957,7 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/dorms)
 "ez" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_color = "#e7c0a4";
@@ -2558,7 +2558,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "fQ" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /turf/open/floor/strata/floor3/east,
@@ -2582,7 +2582,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/sign/safety/bathunisex{
@@ -2836,7 +2836,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/book/codebook/upp{
@@ -3368,7 +3368,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/canteen)
 "hF" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/extinguisher_cabinet/alt{
@@ -3671,7 +3671,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "ih" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/machinery/computer/secure_data/noaccess{
@@ -3992,7 +3992,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /turf/open/floor/strata/floor2,
@@ -4024,7 +4024,7 @@
 	desc = "A small chipped teacup.";
 	pixel_x = 6
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /turf/open/floor/strata/floor2,
@@ -4787,7 +4787,7 @@
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
 "kW" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/machinery/light/small{
@@ -4809,7 +4809,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
 "kX" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/clothing/accessory/stethoscope{
@@ -5288,7 +5288,7 @@
 	network = list("Chapaev");
 	c_tag = "Triage Room"
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/roller,
@@ -5569,7 +5569,7 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/prep_hallway)
 "mK" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/machinery/recharger{
@@ -5791,7 +5791,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "nq" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/machinery/light/double{
@@ -5847,7 +5847,7 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
 "nB" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/clipboard{
@@ -5966,7 +5966,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/hangar)
 "nP" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/machinery/cell_charger,
@@ -6007,7 +6007,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "nV" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/tool/wrench,
@@ -6437,7 +6437,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_commander_rooms)
 "oY" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/effect/decal/warning_stripes{
@@ -6524,7 +6524,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/platoon_commander_rooms)
 "pj" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/device/flashlight/lamp{
@@ -6578,7 +6578,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/platoon_commander_rooms)
 "pr" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/effect/decal/warning_stripes{
@@ -6597,7 +6597,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "ps" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/device/camera,
@@ -6685,7 +6685,7 @@
 /turf/open/floor/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "pG" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/machinery/prop/almayer/computer{
@@ -6701,7 +6701,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "pH" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/machinery/prop/almayer/computer{
@@ -6722,7 +6722,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "pK" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/clipboard{
@@ -6940,7 +6940,7 @@
 /turf/open/floor/corsat/squares,
 /area/golden_arrow/platoon_commander_rooms)
 "qj" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/barricade/handrail/strata{
@@ -7101,7 +7101,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_commander_rooms)
 "qA" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/paper_bin{
@@ -7133,7 +7133,7 @@
 	light_color = "#67bb94";
 	light_range = 1
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /turf/open/floor/corsat/plate,
@@ -7506,7 +7506,7 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "rC" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/paper_bin{
@@ -7542,7 +7542,7 @@
 	light_power = 0.7;
 	light_range = 1
 	},
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/barricade/handrail/strata{
@@ -7671,7 +7671,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "rU" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/machinery/prop/almayer/computer,
@@ -7741,7 +7741,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "sj" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/structure/machinery/alarm/almayer{
@@ -7788,7 +7788,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "so" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/effect/decal/warning_stripes{
@@ -7856,7 +7856,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "tu" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/reagent_container/food/drinks/coffeecup{
@@ -8080,7 +8080,10 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "Bn" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
+	color = "#8B9490"
+	},
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/storage/box/flare/upp,
@@ -8218,7 +8221,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "Mi" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/prop/almayer/comp_closed{
@@ -8273,7 +8276,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "PV" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/toy/deck{
@@ -8300,7 +8303,7 @@
 /turf/open/floor/corsat,
 /area/golden_arrow/hangar)
 "TV" = (
-/obj/structure/surface/table/almayer{
+/obj/structure/surface/table{
 	color = "#8B9490"
 	},
 /obj/item/prop/almayer/comp_open{

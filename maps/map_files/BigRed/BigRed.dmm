@@ -8,6 +8,10 @@
 	icon_state = "pwall"
 	},
 /area/space)
+"aac" = (
+/obj/structure/surface/table/reinforced,
+/turf/open/floor/dark,
+/area/bigredv2/outside/marshal_office)
 "aae" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/outside/space_port)
@@ -4313,7 +4317,7 @@
 /turf/open/floor/dark,
 /area/bigredv2/outside/chapel)
 "bGp" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/spawner/random/tool,
 /obj/item/tool/hand_labeler,
 /turf/open/floor,
@@ -5253,7 +5257,7 @@
 	pixel_x = 3;
 	pixel_y = 12
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
 "cyw" = (
@@ -6104,7 +6108,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/bigred/ground/garage_workshop)
 "dkJ" = (
-/obj/structure/surface/table,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/white,
 /area/bigredv2/outside/marshal_office)
 "dkU" = (
@@ -8042,7 +8046,7 @@
 /area/bigredv2/outside/space_port)
 "eUs" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 8;
 	pixel_x = 3;
@@ -9104,7 +9108,7 @@
 /area/bigredv2/caves_lambda)
 "fML" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo,
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
@@ -9173,10 +9177,10 @@
 /turf/open/floor/freezerfloor,
 /area/bigredv2/outside/dorms)
 "fPm" = (
-/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/white,
 /area/bigredv2/outside/marshal_office)
 "fPB" = (
@@ -9806,7 +9810,7 @@
 /turf/open/floor/delivery,
 /area/bigredv2/outside/lz2_south_cas)
 "gqS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/spawner/random/tool,
 /obj/structure/machinery/light,
 /turf/open/floor,
@@ -15529,7 +15533,7 @@
 /turf/open/floor/darkyellow2/north,
 /area/bigredv2/outside/engineering)
 "lcu" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/clothing/mask/cigarette,
 /obj/item/clothing/mask/cigarette{
 	pixel_x = 5;
@@ -18033,7 +18037,7 @@
 /turf/open/mars_cave/mars_cave_19,
 /area/bigredv2/caves/mining)
 "npL" = (
-/obj/structure/surface/table/holotable/wood,
+/obj/structure/surface/table,
 /obj/item/paper_bin,
 /obj/item/tool/pen/clicky,
 /turf/open/floor/carpet,
@@ -18928,7 +18932,7 @@
 /turf/open/mars_cave/mars_dirt_4,
 /area/bigredv2/outside/c)
 "nYD" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/general_air_control/large_tank_control{
 	name = "Oxygen Supply Console"
 	},
@@ -21644,7 +21648,7 @@
 /turf/open/floor/dark,
 /area/bigredv2/outside/general_offices)
 "qrZ" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/firstaid/fire,
 /turf/open/floor,
 /area/bigred/ground/garage_workshop)
@@ -23105,7 +23109,7 @@
 	pixel_x = 4;
 	pixel_y = 5
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/folder{
 	pixel_x = -9;
 	pixel_y = -14
@@ -24023,7 +24027,7 @@
 /obj/item/toy/prize/fireripley{
 	pixel_y = 19
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
 "sBg" = (
@@ -24668,7 +24672,7 @@
 /turf/open/floor/dark,
 /area/bigredv2/caves/eta/research)
 "tcb" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/pizzabox/meat,
 /turf/open/floor,
 /area/bigred/ground/garage_workshop)
@@ -24723,7 +24727,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/reagent_container/food/snacks/cheeseburger{
 	pixel_y = 22
 	},
@@ -25059,10 +25063,10 @@
 /turf/open/floor/whitepurple/southwest,
 /area/bigredv2/caves/lambda/research)
 "tps" = (
-/obj/structure/surface/table,
 /obj/structure/machinery/camera/autoname{
 	dir = 1
 	},
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/white,
 /area/bigredv2/outside/marshal_office)
 "tpt" = (
@@ -25245,7 +25249,7 @@
 /turf/open/floor/asteroidwarning/north,
 /area/bigredv2/outside/filtration_plant)
 "tvY" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /turf/open/floor/asteroidwarning/north,
@@ -25782,7 +25786,7 @@
 /turf/open/mars_cave/mars_cave_3,
 /area/bigredv2/caves/mining)
 "tWf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/blood/oil/streak,
 /obj/structure/machinery/light{
 	dir = 8
@@ -28122,7 +28126,7 @@
 	dir = 1
 	},
 /obj/structure/cable,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/general_air_control/large_tank_control,
 /obj/structure/cable{
 	icon_state = "11-2"
@@ -28624,7 +28628,7 @@
 /turf/open/mars_cave/mars_dirt_6,
 /area/bigredv2/caves/mining)
 "wmE" = (
-/obj/structure/surface/table/holotable/wood,
+/obj/structure/surface/table,
 /obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Lambda Labs";
 	phone_color = "blue";
@@ -28995,8 +28999,8 @@
 /turf/open/floor/redfull/northwest,
 /area/bigredv2/outside/lambda_cave_cas)
 "wEB" = (
-/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/white,
 /area/bigredv2/outside/marshal_office)
 "wFd" = (
@@ -29055,7 +29059,7 @@
 "wJd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
 "wJV" = (
@@ -30080,7 +30084,7 @@
 	pixel_y = 13
 	},
 /obj/item/ashtray/plastic,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
 "xAa" = (
@@ -30310,7 +30314,7 @@
 /turf/open/floor/darkyellow2/northeast,
 /area/bigredv2/outside/engineering)
 "xHS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /obj/item/tool/extinguisher,
 /turf/open/floor/asteroidwarning/north,
@@ -46208,7 +46212,7 @@ acr
 iqD
 xkb
 aer
-kzS
+aac
 jLy
 acp
 amj
@@ -47076,7 +47080,7 @@ bJP
 iqD
 bOy
 aer
-kzS
+aac
 jLy
 acp
 anZ
@@ -47944,7 +47948,7 @@ kzS
 tkD
 xkb
 aer
-kzS
+aac
 jLy
 acp
 lHB
@@ -48812,7 +48816,7 @@ dhl
 ahn
 xkb
 aer
-kzS
+aac
 jLy
 acp
 lHB

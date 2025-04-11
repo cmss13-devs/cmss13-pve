@@ -68,7 +68,7 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/dorms)
 "dG" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
 	},
@@ -117,7 +117,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/prop{
 	desc = "A small computer hooked up into the ship's computer network. The screen is absolutely shattered in what looks to be a fit of rage.";
 	icon = 'icons/obj/structures/machinery/computer.dmi';
@@ -132,7 +132,7 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger{
 	pixel_y = -14
 	},
@@ -152,7 +152,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "hf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/magazine/book/bladerunner,
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/dorms)
@@ -183,7 +183,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "iP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bedsheetbin{
 	pixel_y = 6
 	},
@@ -283,7 +283,7 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "nP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
@@ -306,7 +306,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "oo" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/prize/apc{
 	pixel_x = 6;
 	pixel_y = 19;
@@ -443,7 +443,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper/colonial_grunts{
 	pixel_y = 6;
 	pixel_x = -5
@@ -473,7 +473,7 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/dorms)
 "we" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/disposalpipe/segment,
 /obj/item/clothing/glasses/regular/hipster{
 	pixel_y = 10
@@ -588,7 +588,7 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/cigbutt{
 	pixel_y = 10;
 	pixel_x = -7
@@ -711,7 +711,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
 "NN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/clothing/suit/storage/jacket/marine/service{
 	pixel_x = 11
 	},
@@ -729,7 +729,7 @@
 	dir = 2;
 	icon_state = "pipe-j2"
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = -1;
 	pixel_y = 9

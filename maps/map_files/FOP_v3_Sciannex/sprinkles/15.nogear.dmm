@@ -153,7 +153,7 @@
 /turf/closed/wall/r_wall/prison,
 /area/template_noop)
 "aS" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/flora/pottedplant{
 	pixel_y = 9
 	},

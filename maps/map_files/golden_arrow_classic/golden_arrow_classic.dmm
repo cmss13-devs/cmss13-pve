@@ -90,7 +90,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_sergeant)
 "aJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
@@ -103,7 +103,7 @@
 /area/golden_arrow/squad_one)
 "aK" = (
 /obj/structure/machinery/power/apc/almayer/south,
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "aM" = (
@@ -118,7 +118,7 @@
 /area/golden_arrow/cryo_cells)
 "aO" = (
 /obj/item/prop/colony/game,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "aT" = (
@@ -256,7 +256,7 @@
 	pixel_y = 6
 	},
 /obj/item/prop/helmetgarb/gunoil,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/sign/poster{
 	desc = "Koorlander Golds, lovingly machine rolled for YOUR pleasure.";
 	icon_state = "poster10";
@@ -325,7 +325,7 @@
 /obj/item/tool/pen{
 	pixel_x = 12
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "ch" = (
@@ -390,7 +390,7 @@
 /area/golden_arrow/prep_hallway)
 "cM" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/flare{
 	pixel_x = 8;
 	pixel_y = -1
@@ -405,7 +405,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/coffeecup/wy{
 	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Looks like someone spat in it.";
 	name = "dip cup";
@@ -641,7 +641,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/canteen)
 "eK" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/bedsheetbin{
 	pixel_y = 6
 	},
@@ -653,7 +653,7 @@
 /area/golden_arrow/hangar)
 "eP" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/misc/flares/empty{
 	pixel_x = -1;
 	pixel_y = 16
@@ -699,7 +699,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
@@ -717,7 +717,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
 "fb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 11;
 	pixel_y = -10
@@ -738,7 +738,7 @@
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
 "fu" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 4
 	},
@@ -874,7 +874,7 @@
 /turf/open/floor/almayer/redfull,
 /area/golden_arrow/firingrange)
 "gk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/fancy/cigarettes/lucky_strikes{
 	pixel_x = -7;
@@ -994,7 +994,7 @@
 /area/golden_arrow/engineering)
 "hC" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/smartgun_battery{
 	pixel_x = 4;
 	pixel_y = -5
@@ -1062,7 +1062,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "hX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -1148,7 +1148,7 @@
 /obj/structure/closet/secure_closet/surgical{
 	pixel_x = -30
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/synthcloset)
 "iv" = (
@@ -1212,7 +1212,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "iM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
 "iO" = (
@@ -1246,7 +1246,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/firingrange)
 "jh" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "jm" = (
@@ -1425,7 +1425,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "ky" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/folder/yellow,
 /obj/item/book/manual/engineering_construction,
@@ -1480,7 +1480,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_sergeant)
 "kJ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
@@ -1561,7 +1561,7 @@
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/synthcloset)
 "lf" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "lh" = (
@@ -1611,7 +1611,7 @@
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
 "lr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/guncase/shotguncombat,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
@@ -1671,7 +1671,7 @@
 /area/golden_arrow/hangar)
 "lH" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger{
 	pixel_y = 6
 	},
@@ -1763,7 +1763,7 @@
 /area/golden_arrow/supply)
 "mf" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/item/storage/fancy/cigarettes/lucky_strikes{
 	pixel_x = -6;
@@ -2120,7 +2120,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/firingrange)
 "oO" = (
@@ -2139,7 +2139,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "oV" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/ceramic_plate{
 	pixel_y = 19
@@ -2187,7 +2187,7 @@
 /area/golden_arrow/platoon_sergeant)
 "pf" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/heap/empty,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/squad_two)
@@ -2314,7 +2314,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin/uscm,
 /obj/item/tool/pen,
 /obj/effect/decal/cleanable/dirt,
@@ -2472,7 +2472,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "rN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/firstaid/rad{
 	pixel_x = -7;
 	pixel_y = 2
@@ -2521,7 +2521,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_sergeant)
 "se" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	dir = 1
@@ -2570,7 +2570,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/platoon_commander_rooms)
 "sl" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = -11;
 	pixel_y = -10
@@ -2650,7 +2650,7 @@
 "sJ" = (
 /obj/structure/machinery/power/apc/almayer/north,
 /obj/structure/pipes/vents/scrubber,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/mk1,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_two)
@@ -2662,7 +2662,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "sT" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/megaphone,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
@@ -2748,7 +2748,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "ty" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/pdt_kit{
 	pixel_x = 7;
 	pixel_y = 9
@@ -2790,7 +2790,7 @@
 /obj/structure/machinery/computer/atmos_alert{
 	dir = 4
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
@@ -2822,7 +2822,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/canteen)
 "tU" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate{
 	pixel_x = -6;
 	pixel_y = 19
@@ -2958,7 +2958,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "uO" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/flashlight/lamp{
 	pixel_x = 11;
 	pixel_y = 5
@@ -3159,7 +3159,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "wf" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
@@ -3183,7 +3183,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "wm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/radio,
 /obj/item/device/lightreplacer,
 /turf/open/floor/almayer/plate,
@@ -3263,7 +3263,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supply)
 "xk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/engineering{
 	dir = 1
 	},
@@ -3288,7 +3288,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
 "xy" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/recharger,
 /obj/item/reagent_container/spray/cleaner,
 /turf/open/floor/almayer/sterile_green,
@@ -3337,7 +3337,7 @@
 /area/golden_arrow/engineering)
 "xN" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/hand_labeler{
 	pixel_x = 4;
 	pixel_y = 11
@@ -3430,12 +3430,12 @@
 /area/golden_arrow/cryo_cells)
 "yw" = (
 /obj/item/toy/deck/uno,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "yB" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/toy/beach_ball/holoball,
 /obj/structure/sign/poster{
 	desc = "One of those hot, tanned babes back the beaches of good ol' Earth.";
@@ -3511,7 +3511,7 @@
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/engineering)
 "yN" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/belt/utility/full,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
@@ -3572,7 +3572,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_commander_rooms)
 "zd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/spacecash/c10{
 	pixel_x = 5;
 	pixel_y = 7
@@ -3633,7 +3633,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "zm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/condiment/hotsauce/cholula{
 	pixel_x = -9;
 	pixel_y = -3
@@ -3777,7 +3777,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_two)
 "Al" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/stamp/denied{
 	pixel_x = 2;
 	pixel_y = 10
@@ -3810,7 +3810,7 @@
 /turf/open/floor/almayer/bluefull,
 /area/golden_arrow/platoon_commander_rooms)
 "Ap" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -3831,7 +3831,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "Az" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/ceramic_plate{
 	pixel_x = 18;
 	pixel_y = 3
@@ -3959,7 +3959,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/canteen)
 "BE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/med_data/laptop{
 	pixel_y = 6
 	},
@@ -4018,7 +4018,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_sergeant)
 "Cg" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/folder/black_random,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_sergeant)
@@ -4030,7 +4030,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Cj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ashtray/bronze{
 	pixel_x = 7;
 	pixel_y = 9
@@ -4196,7 +4196,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "Dx" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
@@ -4274,7 +4274,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "DW" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/roller,
 /obj/item/storage/box/bodybags,
 /obj/structure/machinery/light{
@@ -4392,7 +4392,7 @@
 /area/golden_arrow/engineering)
 "Ex" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Ey" = (
@@ -4403,7 +4403,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "Ez" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/med_data/laptop,
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
@@ -4496,7 +4496,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "Fb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray{
 	pixel_y = -10
 	},
@@ -4516,7 +4516,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/canteen)
 "Fc" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -4544,7 +4544,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "Fj" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -4718,7 +4718,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "Gb" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/cameras/wooden_tv/prop{
 	dir = 8;
 	layer = 3.2;
@@ -4828,7 +4828,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/prep_hallway)
 "GE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/paper_bin{
 	pixel_x = 5;
 	pixel_y = 22
@@ -4877,7 +4877,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "GR" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/toolbox/mechanical/green{
 	pixel_y = 10
 	},
@@ -4896,7 +4896,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
 "GX" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -5084,7 +5084,7 @@
 "Ir" = (
 /obj/structure/machinery/power/apc/almayer/north,
 /obj/structure/pipes/vents/scrubber,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/ammo_box/magazine/mk1,
 /obj/item/ammo_magazine/rifle/m41aMK1/heap{
 	desc = "A long rectangular box of rounds that is only compatible with the older M41A MK1. Holds up to 99 rounds. This one contained High-Explosive Armor-Piercing bullets. It also has some... notches on the side..?";
@@ -5095,7 +5095,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "Iw" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_sergeant)
 "Ix" = (
@@ -5118,7 +5118,7 @@
 /area/golden_arrow/squad_two)
 "IE" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -5143,7 +5143,7 @@
 /area/golden_arrow/firingrange)
 "II" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/wrench{
 	pixel_y = 7
 	},
@@ -5221,7 +5221,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "IO" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -5245,7 +5245,7 @@
 /area/golden_arrow/prep_hallway)
 "Jf" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/recharger{
 	pixel_y = 5
 	},
@@ -5259,7 +5259,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "Jn" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/waterbottle{
 	pixel_x = 9;
 	pixel_y = 3
@@ -5306,7 +5306,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
 "JC" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	dir = 1
 	},
@@ -5525,7 +5525,7 @@
 /area/golden_arrow/hangar)
 "Lj" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/emails{
 	pixel_y = 4
 	},
@@ -5838,7 +5838,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "Nr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/effect/spawner/prop_gun/anti_tank,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_two)
@@ -5962,7 +5962,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "Ox" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/cell_charger,
 /obj/structure/machinery/light,
 /turf/open/floor/almayer/plate,
@@ -5988,7 +5988,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
 "OM" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/guncase/flamer/special,
 /obj/item/trash/cigbutt/cigarbutt{
 	pixel_y = 18
@@ -5996,7 +5996,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "OP" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/storage/box/guncase/flamer/special,
 /obj/item/explosive/grenade/smokebomb{
 	pixel_y = 14;
@@ -6009,7 +6009,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_two)
 "OS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/trash/plate,
 /obj/item/trash/ceramic_plate{
 	pixel_x = 6;
@@ -6110,7 +6110,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "PE" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/general_air_control/large_tank_control{
 	dir = 4;
 	name = "Lower Deck Waste Tank Control"
@@ -6156,7 +6156,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/device/cassette_tape/nam{
 	layer = 2.9;
 	pixel_x = -6;
@@ -6191,7 +6191,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "Qe" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -6237,7 +6237,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "Qs" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/kitchen/tray{
 	pixel_y = -10
 	},
@@ -6526,7 +6526,7 @@
 /obj/structure/machinery/firealarm{
 	pixel_y = 28
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/reagent_container/food/drinks/cans/souto/classic{
 	pixel_x = 10;
 	pixel_y = 3
@@ -6585,7 +6585,7 @@
 /area/golden_arrow/platoon_commander_rooms)
 "Tb" = (
 /obj/item/toy/deck,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "Tc" = (
@@ -6606,7 +6606,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_two)
 "Th" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -6628,7 +6628,7 @@
 /area/golden_arrow/medical)
 "Tt" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/tool/screwdriver,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
@@ -6690,7 +6690,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "TS" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/reagentgrinder/industrial{
 	pixel_y = 9
 	},
@@ -6740,7 +6740,7 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/canteen)
 "Uk" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/spacecash/c10{
 	pixel_x = 5;
 	pixel_y = 7
@@ -6810,7 +6810,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "Uz" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/prop/almayer/CICmap{
 	pixel_y = 29
 	},
@@ -7023,7 +7023,7 @@
 /area/golden_arrow/cryo_cells)
 "VY" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/helmetgarb/gunoil{
 	pixel_x = -7;
 	pixel_y = 4
@@ -7114,7 +7114,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "WF" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/structure/machinery/computer/crew/alt,
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
@@ -7277,7 +7277,7 @@
 /area/golden_arrow/hangar)
 "XD" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -7372,7 +7372,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/prep_hallway)
 "Yd" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
@@ -7461,7 +7461,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "YD" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/structure/machinery/computer/secure_data{
 	pixel_y = 6
 	},
@@ -7529,7 +7529,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "Zm" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /obj/item/prop/helmetgarb/spent_slug{
 	pixel_y = -9;
 	pixel_x = 8;
@@ -7562,7 +7562,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/synthcloset)
 "Zr" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/surface/table,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/firingrange)
 "Zt" = (
@@ -7631,7 +7631,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/reinforced,
 /obj/item/storage/box/pillbottles,
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
