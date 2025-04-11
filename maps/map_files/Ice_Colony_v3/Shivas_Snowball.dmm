@@ -16728,7 +16728,6 @@
 /obj/item/storage/box/wy_mre,
 /obj/merge_conflict_marker{
 	name = "---Merge Conflict Marker---";
-	
 	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/surface/table/reinforced/prison,

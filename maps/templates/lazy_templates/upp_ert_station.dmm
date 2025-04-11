@@ -403,7 +403,6 @@
 /obj/item/reagent_container/food/snacks/upp,
 /obj/merge_conflict_marker{
 	name = "---Merge Conflict Marker---";
-	
 	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/surface/table/reinforced/prison,
@@ -434,7 +433,6 @@
 	},
 /obj/merge_conflict_marker{
 	name = "---Merge Conflict Marker---";
-	
 	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/surface/table/reinforced/prison,
@@ -1184,7 +1182,6 @@
 /obj/item/reagent_container/food/snacks/upp,
 /obj/merge_conflict_marker{
 	name = "---Merge Conflict Marker---";
-	
 	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/surface/table/reinforced/prison,
@@ -1548,7 +1545,6 @@
 /obj/item/reagent_container/food/snacks/upp,
 /obj/merge_conflict_marker{
 	name = "---Merge Conflict Marker---";
-	
 	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
 /obj/structure/surface/table/reinforced/prison,
