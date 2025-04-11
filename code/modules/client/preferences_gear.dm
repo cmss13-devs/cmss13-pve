@@ -1311,41 +1311,40 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/smoking/pack_lucky_strikes
 	display_name = "Pack Of Lucky Strikes"
-	path = /obj/item/storage/fancy/cigarettes/lucky_strikes
+	path = /obj/item/storage/fancy/cigarettes/lucky_strikes/loadout
 	cost = 0
 
 /datum/gear/smoking/pack_emeraldgreen
 	display_name = "Pack Of Emerald Greens"
-	path = /obj/item/storage/fancy/cigarettes/emeraldgreen
+	path = /obj/item/storage/fancy/cigarettes/emeraldgreen/loadout
 
 /datum/gear/smoking/pack_wygold
 	display_name = "Pack Of Weyland Yutani Golds"
-	path = /obj/item/storage/fancy/cigarettes/wypacket
+	path = /obj/item/storage/fancy/cigarettes/wypacket/loadout
 
 /datum/gear/smoking/pack_koorlander
 	display_name = "Pack Of Koorlander Golds"
-	path = /obj/item/storage/fancy/cigarettes/kpack
+	path = /obj/item/storage/fancy/cigarettes/kpack/loadout
 
 /datum/gear/smoking/pack_arcturian
 	display_name = "Pack Of Arcturian Aces"
-	path = /obj/item/storage/fancy/cigarettes/arcturian_ace
+	path = /obj/item/storage/fancy/cigarettes/arcturian_ace/loadout
 
 /datum/gear/smoking/pack_ladyfingers
 	display_name = "Pack Of Lady Fingers"
-	path = /obj/item/storage/fancy/cigarettes/lady_finger
+	path = /obj/item/storage/fancy/cigarettes/lady_finger/loadout
 
 /datum/gear/smoking/spirit
 	display_name = "Pack Of American Spirit, Turquoise"
-	path = /obj/item/storage/fancy/cigarettes/spirit
+	path = /obj/item/storage/fancy/cigarettes/spirit/loadout
 
 /datum/gear/smoking/spirit_yellow
 	display_name = "Pack Of American Spirit, Yellow"
-	path = /obj/item/storage/fancy/cigarettes/spirit/yellow
+	path = /obj/item/storage/fancy/cigarettes/spirit/yellow/loadout
 
 /datum/gear/smoking/pack_exec
 	display_name = "Pack Of Executive Selects"
-	path = /obj/item/storage/fancy/cigarettes/blackpack
-	cost = 4
+	path = /obj/item/storage/fancy/cigarettes/blackpack/loadout
 
 /datum/gear/smoking/weed_joint
 	display_name = "Joint of weed"

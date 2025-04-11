@@ -137,12 +137,17 @@
 	)
 	icon_type = "cigarette"
 	var/default_cig_type=/obj/item/clothing/mask/cigarette
+	var/loadout = FALSE
 
 /obj/item/storage/fancy/cigarettes/fill_preset_inventory()
-	flags_atom |= NOREACT
-	for(var/i = 1 to storage_slots)
-		new default_cig_type(src)
+	if(loadout)
+		for(var/i = 1 to storage_slots)
+			new default_cig_type(src)
+	else
+		for(var/i in 1 to rand(0,3))
+			new default_cig_type(src)
 	create_reagents(15 * storage_slots)//so people can inject cigarettes without opening a packet, now with being able to inject the whole one
+	flags_atom |= NOREACT
 
 /obj/item/storage/fancy/cigarettes/Initialize()
 	. = ..()
@@ -172,11 +177,17 @@
 	icon_state = "cigpacket"
 	item_state = "cigpacket"
 
+/obj/item/storage/fancy/cigarettes/emeraldgreen/loadout
+	loadout = TRUE
+
 /obj/item/storage/fancy/cigarettes/wypacket
 	name = "\improper Weyland-Yutani Gold packet"
 	desc = "Weyland Yutani's entrance to the tobacco market. Despite the luxurious branding and high price, they aren't known to be especially high quality."
 	icon_state = "wypacket"
 	item_state = "wypacket"
+
+/obj/item/storage/fancy/cigarettes/wypacket/loadout
+	loadout = TRUE
 
 /obj/item/storage/fancy/cigarettes/wypacket_4
 	name = "\improper Weyland-Yutani Gold mini packet"
@@ -192,6 +203,9 @@
 	icon_state = "bpacket"
 	item_state = "bpacket"
 
+/obj/item/storage/fancy/cigarettes/balaji/loadout
+	loadout = TRUE
+
 /obj/item/storage/fancy/cigarettes/balaji_4
 	name = "\improper Balaji Imperial Mini packet"
 	desc = "A well-established TWE cigarette brand out of India known for their lightness and smooth taste. Despite an attempted buy-out from Weyland-Yutani, Balaji has remained independent."
@@ -206,6 +220,9 @@
 	icon_state = "lspacket"
 	item_state = "lspacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
+
+/obj/item/storage/fancy/cigarettes/lucky_strikes/loadout
+	loadout = TRUE
 
 /obj/item/storage/fancy/cigarettes/lucky_strikes_4
 	name = "\improper Lucky Strikes Mini packet"
@@ -223,6 +240,9 @@
 	item_state = "blackpacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/bcigarette
 
+/obj/item/storage/fancy/cigarettes/blackpack/loadout
+	loadout = TRUE
+
 /obj/item/storage/fancy/cigarettes/blackpack_4
 	name = "\improper Executive Select mini packet"
 	desc = "Known by their distinct black colour, blue glow, and smooth taste, these are the most expensive cigarettes on the market today and make a very good case for their being so."
@@ -238,11 +258,17 @@
 	icon_state = "kpacket"
 	item_state = "kpacket"
 
+/obj/item/storage/fancy/cigarettes/kpack/loadout
+	loadout = TRUE
+
 /obj/item/storage/fancy/cigarettes/arcturian_ace
 	name = "\improper Arcturian Ace packet"
 	desc = "An exotic brand of cigarettes affiliated with Koorlander that utilizes hybrid tobacco grown on Arctura. They're supposedly healthier for you as a result, and with how smooth they are you might actually believe it."
 	icon_state = "aapacket"
 	item_state = "aapacket"
+
+/obj/item/storage/fancy/cigarettes/arcturian_ace/loadout
+	loadout = TRUE
 
 /obj/item/storage/fancy/cigarettes/lady_finger
 	name = "\improper Lady Fingers packet"
@@ -251,6 +277,9 @@
 	item_state = "lfpacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
 
+/obj/item/storage/fancy/cigarettes/lady_finger/loadout
+	loadout = TRUE
+
 /obj/item/storage/fancy/cigarettes/spirit
 	name = "\improper American Spirit Turquoise packet"
 	desc = "A well-established UA based cigarette brand. The turquois packaging hints at their strong full-bodied flavour."
@@ -258,17 +287,26 @@
 	item_state = "naspacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette
 
+/obj/item/storage/fancy/cigarettes/spirit/loadout
+	loadout = TRUE
+
 /obj/item/storage/fancy/cigarettes/spirit/yellow
 	name = "\improper American Spirit Yellow packet"
 	desc = "A well-established UA based cigarette brand. The yellow packaging hints at their mellow flavour."
 	icon_state = "y_naspacket"
 	item_state = "y_naspacket"
 
+/obj/item/storage/fancy/cigarettes/spirit/yellow/loadout
+	loadout = TRUE
+
 /obj/item/storage/fancy/cigarettes/laika
 	name = "\improper Laika packet"
 	desc = "One of the many state-owned cigarette brands in the UPP, these come from Russia and honor the space pioneer Laika. Strong and heavily filtered, they're said to bring good luck to those in space transit, if not a lot of tobacco."
 	icon_state = "laikapacket"
 	item_state = "laikapacket"
+
+/obj/item/storage/fancy/cigarettes/laika/loadout
+	loadout = TRUE
 
 /obj/item/storage/fancy/cigarettes/trading_card
 	name = "\improper WeyYu Gold Military Trading Card packet"
