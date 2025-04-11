@@ -14,7 +14,7 @@
 						//also useful for items with many icon_state values when you don't want to make an inhand sprite for each value.
 	/// When set to true, every single sprite can be found in the one icon .dmi, rather than being spread into onmobs, inhands, and objects
 	var/contained_sprite = FALSE
-
+	var/use_initial_icon_for_helmetgarb = TRUE //many items, like cigarettes, change their icon when opened.
 	var/r_speed = 1
 	var/force = 0
 	var/damtype = BRUTE

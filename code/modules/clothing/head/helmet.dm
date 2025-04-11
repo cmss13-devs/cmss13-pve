@@ -579,16 +579,22 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 		var/list/above_band_layer = list()
 		var/list/below_band_layer = list()
 		var/has_helmet_band = FALSE
-		for(var/obj/O in pockets.contents)
+		for(var/obj/item/O in pockets.contents)
 			if(GLOB.allowed_helmet_items[O.type])
 				var/has_band = !HAS_FLAG(O.flags_obj, OBJ_NO_HELMET_BAND)
 				if(has_band)
 					has_helmet_band = TRUE
 				if(GLOB.allowed_helmet_items[O.type] == HELMET_GARB_RELAY_ICON_STATE)
 					if(has_band)
-						above_band_layer += "helmet_[O.icon_state]"
+						if(O.use_initial_icon_for_helmetgarb)
+							above_band_layer += "helmet_[initial(O.icon_state)]"
+						else
+							above_band_layer += "helmet_[O.icon_state]"
 					else
-						below_band_layer += "helmet_[O.icon_state]"
+						if(O.use_initial_icon_for_helmetgarb)
+							below_band_layer += "helmet_[initial(O.icon_state)]"
+						else
+							below_band_layer += "helmet_[O.icon_state]"
 				else
 					if(has_band)
 						above_band_layer += GLOB.allowed_helmet_items[O.type]
