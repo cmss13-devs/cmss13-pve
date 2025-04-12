@@ -136,11 +136,10 @@
 	icon = 'icons/obj/structures/props/flyby_shadows.dmi'
 	icon_state = "ud"
 	layer = FLY_LAYER
-	plane = ABOVE_GAME_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	duration = 3 SECONDS
-	pixel_x = -48
-	pixel_y = -120
+	pixel_x = -134
+	pixel_y = -134
 	pixel_z = -480
 
 /obj/effect/temp_visual/dropship_flyby/Initialize()
@@ -149,7 +148,47 @@
 
 /obj/effect/temp_visual/dropship_flyby/krokodil
 	icon = 'icons/obj/structures/props/flyby_shadows.dmi'
+	icon_state = "krokodil"
+
+/particles/shuttle_dust_hover
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "smoke"
+	width = 750
+	height = 750
+	count = 1000
+	spawning = 20
+	lifespan = 8
+	fade = 50
+	grow = 0.3
+	velocity = list(0, 0)
+	position = generator(GEN_CIRCLE, 180, 170, NORMAL_RAND)
+	gravity = list(0, 0)
+	scale = generator(GEN_VECTOR, list(1, 1), list(2,2), NORMAL_RAND)
+	rotation = 0
+	spin = generator(GEN_NUM, -20, 20)
+
+/obj/effect/temp_visual/dropship_hover
+	icon = 'icons/obj/structures/props/flyby_shadows.dmi'
 	icon_state = "ud"
+	layer = FLY_LAYER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	duration = 5 SECONDS
+	pixel_x = -134
+	pixel_y = -134
+	alpha = 0
+
+/obj/effect/temp_visual/dropship_hover/Initialize()
+	. = ..()
+	particles = new /particles/shuttle_dust_hover
+	animate(src, alpha = 255, time = 1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(fade_away)), 4 SECONDS)
+
+/obj/effect/temp_visual/dropship_hover/proc/fade_away()
+	animate(src, alpha = 0, time = 1 SECONDS)
+	particles.spawning = 0
+
+/obj/effect/temp_visual/dropship_hover/krokodil
+	icon_state = "krokodil"
 
 /obj/effect/temp_visual/heavyimpact
 	name = "heavy impact"
@@ -161,29 +200,62 @@
 	. = ..()
 	flick("heavyimpact", src)
 
-/obj/effect/temp_visual/mortar_falling
+/obj/effect/temp_visual/falling_obj
 	icon = 'icons/obj/structures/mortar.dmi'
 	icon_state = "mortar_ammo_he"
 	appearance_flags = PIXEL_SCALE
 	layer = FLY_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	duration = 0.2 SECONDS
-	pixel_x = -16
 	pixel_z = 200
+	pixel_x = 16
 
-/obj/effect/temp_visual/mortar_falling/Initialize()
+/obj/effect/temp_visual/falling_obj/Initialize()
 	. = ..()
 	var/angle = -135
+	add_filter("blur", 2, motion_blur_filter(-1, -1))
 	pixel_x = cos(angle) * -400
 	pixel_z = sin(angle) * -400
 	transform = matrix().Turn(angle)
 	animate(src, pixel_z = 0, pixel_x = -16, time = 0.2 SECONDS, , easing = LINEAR_EASING)
 
-/obj/effect/temp_visual/mortar_falling/incend
+/obj/effect/temp_visual/falling_obj/incend
 	icon_state = "mortar_ammo_inc"
 
-/obj/effect/temp_visual/mortar_falling/smoke
+/obj/effect/temp_visual/falling_obj/smoke
 	icon_state = "mortar_ammo_smk"
 
-/obj/effect/temp_visual/mortar_falling/nerve
+/obj/effect/temp_visual/falling_obj/nerve
 	icon_state = "mortar_ammo_smk"
+
+/obj/effect/temp_visual/falling_obj/flare
+	icon_state = "mortar_ammo_smk"
+	duration = 0.1 SECONDS
+
+/obj/effect/temp_visual/falling_obj/mlrs
+	icon_state = "mlrs_rocket"
+
+/obj/effect/temp_visual/falling_obj/mlrs_smoke
+	icon_state = "mlrs_smoke_rocket"
+
+/obj/effect/temp_visual/falling_obj/ob
+	icon = 'icons/obj/structures/props/almayer_props.dmi'
+	icon_state = "he_ob_upright"
+
+/obj/effect/temp_visual/falling_obj/keeper
+	icon = 'icons/obj/structures/props/almayer_props64.dmi'
+	icon_state = "paveway_rackless"
+	pixel_x = -64
+	pixel_y = -64
+
+/obj/effect/temp_visual/falling_obj/napalm
+	icon = 'icons/obj/structures/props/almayer_props64.dmi'
+	icon_state = "napalm_rackless"
+	pixel_x = -64
+	pixel_y = -64
+
+/obj/effect/temp_visual/falling_obj/banshee
+	icon = 'icons/obj/structures/props/almayer_props64.dmi'
+	icon_state = "banshee_rackless"
+	pixel_x = -64
+	pixel_y = -64

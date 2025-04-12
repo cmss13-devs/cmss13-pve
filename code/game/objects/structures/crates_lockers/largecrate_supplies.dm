@@ -215,6 +215,27 @@
 	desc = "An ammunition case containing 20 Type 71 magazines."
 	supplies = list(/obj/item/ammo_magazine/rifle/type71 = 20)
 
+/obj/structure/largecrate/supply/ammo/supply_drop
+	icon_state = "secure_crate_strapped"
+	desc = "An ammunition case containing everything you need."
+	supplies = list(
+		/obj/item/ammo_box/magazine/mk1/large = 1,
+		/obj/item/ammo_box/rounds/smartgun = 2,
+		/obj/item/ammo_box/magazine/shotgun/buckshot = 1,
+		/obj/item/ammo_box/magazine/shotgun = 1,
+		/obj/item/storage/box/guncase/heavy/fuel = 1,
+		/obj/item/ammo_magazine/sentry = 4,)
+
+/obj/structure/largecrate/supply/ammo/supply_drop_upp
+	icon_state = "secure_crate_strapped"
+	desc = "An ammunition case containing everything you need."
+	supplies = list(
+		/obj/item/ammo_box/magazine/mk1/large = 1,
+		/obj/item/ammo_box/rounds/smartgun = 2,
+		/obj/item/ammo_box/magazine/shotgun/buckshot = 1,
+		/obj/item/ammo_box/magazine/shotgun = 1,
+		/obj/item/ammo_box/magazine/flamer = 1,
+		/obj/item/ammo_magazine/sentry = 4,)
 
 /obj/structure/largecrate/supply/explosives
 	name = "explosives supply crate"

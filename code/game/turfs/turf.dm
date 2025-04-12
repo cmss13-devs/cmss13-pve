@@ -137,9 +137,6 @@
 		return FALSE
 	. = ..()
 
-/turf/ex_act(severity)
-	return 0
-
 /turf/proc/update_icon() //Base parent. - Abby
 	return
 

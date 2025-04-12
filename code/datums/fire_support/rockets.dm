@@ -1,9 +1,11 @@
 /datum/fire_support/rockets
-	name = "Rocket barrage"
+	name = "HE Rockets"
+	fire_support_firer = FIRESUPPORT_CAS
 	fire_support_type = FIRESUPPORT_TYPE_ROCKETS
-	scatter_range = 9
-	impact_quantity = 15
+	scatter_range = 7
+	impact_quantity = 10
 	icon_state = "rockets"
+	start_visual = /obj/effect/temp_visual/dropship_flyby
 	initiate_chat_message = "TARGET ACQUIRED ROCKET RUN INBOUND."
 	initiate_screen_message = list(
 		"Rockets hot, incoming!",
@@ -12,18 +14,35 @@
 		)
 
 /datum/fire_support/rockets/do_impact(turf/target_turf)
-	explosion(target_turf, 0, 2, 4, 6, 2)
+	cell_explosion(target_turf, 150, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("HE rockets"))
+
+/datum/fire_support/rockets/upp
+	fire_support_firer = FIRESUPPORT_CAS_UPP
+	faction = FACTION_UPP
+	fire_support_type = FIRESUPPORT_TYPE_ROCKETS_UPP
+	portrait_type = "pilot_red"
+	initiate_title = "Pig-1"
+	start_visual = /obj/effect/temp_visual/dropship_flyby/krokodil
 
 /datum/fire_support/incendiary_rockets
-	name = "Incendiary rocket barrage"
+	name = "INC rockets"
+	fire_support_firer = FIRESUPPORT_CAS
 	fire_support_type = FIRESUPPORT_TYPE_INCEND_ROCKETS
-	scatter_range = 9
-	impact_quantity = 9
-	icon_state = "incendiary_rockets"
-	initiate_chat_message = "TARGET ACQUIRED ROCKET RUN INBOUND."
-	initiate_screen_message = "Rockets hot, incoming!"
-	initiate_title = "Avenger-4"
+	icon_state = "incend_rockets"
+	scatter_range = 7
+	impact_quantity = 10
+	initiate_chat_message = "TARGET ACQUIRED INC ROCKET RUN INBOUND."
+	initiate_screen_message = list("Rockets hot, incoming!")
 	start_visual = /obj/effect/temp_visual/dropship_flyby
 
 /datum/fire_support/incendiary_rockets/do_impact(turf/target_turf)
-	explosion(target_turf, weak_impact_range = 4, flame_range = 4, throw_range = 2)
+	cell_explosion(target_turf, 100, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("Incendiary rockets"))
+	fire_spread(target_turf, create_cause_data("Incendiary rockets"), 3, 25, 20, "#EE6515")
+
+/datum/fire_support/incendiary_rockets/upp
+	fire_support_firer = FIRESUPPORT_CAS_UPP
+	faction = FACTION_UPP
+	fire_support_type = FIRESUPPORT_TYPE_INCEND_ROCKETS_UPP
+	portrait_type = "pilot_red"
+	initiate_title = "Pig-1"
+	start_visual = /obj/effect/temp_visual/dropship_flyby/krokodil

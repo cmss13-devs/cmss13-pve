@@ -1,6 +1,6 @@
 /obj/item/device/binoculars/fire_support
 	name = "tactical binoculars"
-	desc = "A pair of binoculars, used to mark targets for airstrikes and orbital support. Unique action to toggle mode. Ctrl+Click when using to target something."
+	desc = "A pair of binoculars, used to mark targets for fire support. Ctrl+Click on binoculars to change mode. Ctrl+Click when using to target something."
 	icon = 'icons/obj/items/binoculars.dmi'
 	icon_state = "advanced_binoculars"
 	w_class = SIZE_SMALL
@@ -19,14 +19,23 @@
 		FIRESUPPORT_TYPE_GUN,
 		FIRESUPPORT_TYPE_LASER,
 		FIRESUPPORT_TYPE_ROCKETS,
+		FIRESUPPORT_TYPE_INCEND_ROCKETS,
 		FIRESUPPORT_TYPE_MISSILE,
+		FIRESUPPORT_TYPE_NAPALM_MISSILE,
+		FIRESUPPORT_TYPE_SMOKE_MISSILE,
+		FIRESUPPORT_TYPE_NERVE_MISSILE,
+		FIRESUPPORT_TYPE_LSD_MISSILE,
 		FIRESUPPORT_TYPE_HE_MORTAR,
 		FIRESUPPORT_TYPE_INCENDIARY_MORTAR,
 		FIRESUPPORT_TYPE_SMOKE_MORTAR,
+		FIRESUPPORT_TYPE_LSD_SMOKE_MORTAR,
 		FIRESUPPORT_TYPE_NERVE_SMOKE_MORTAR,
+		FIRESUPPORT_TYPE_HE_MLRS,
+		FIRESUPPORT_TYPE_NERVE_MLRS,
+		FIRESUPPORT_TYPE_OB,
+		FIRESUPPORT_TYPE_SUPPLY_DROP,
+		FIRESUPPORT_TYPE_SENTRY_POD,
 	)
-	///How much fire support points does this binocular have
-	var/fire_support_points = 10
 
 /obj/item/device/binoculars/fire_support/Initialize()
 	. = ..()
@@ -121,7 +130,7 @@
 		user.balloon_alert(user, "Can't use here")
 		return
 	if(faction && user.faction != faction)
-		balloon_alert_to_viewers("Security locks engaged")
+		balloon_alert_to_viewers("No access")
 		return
 	if(laser_overlay)
 		to_chat(user, SPAN_WARNING("You're already targeting something."))
@@ -135,9 +144,9 @@
 	playsound(src, 'sound/effects/nightvision.ogg', 35)
 	to_chat(user, SPAN_NOTICE("INITIATING LASER TARGETING. Stand still."))
 	target_atom = target
-	laser_overlay = image('icons/obj/items/weapons/projectiles.dmi', icon_state = "laser_target2", layer =- LASER_LAYER)
+	laser_overlay = image('icons/obj/items/weapons/projectiles.dmi', icon_state = "laser_target2", layer =-LASER_LAYER)
 	target_atom.apply_fire_support_laser(laser_overlay)
-	if(!do_after(user, target_acquisition_delay, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, user, BUSY_ICON_HOSTILE, extra_checks = CALLBACK(src, PROC_REF(can_see_target), target, user)))
+	if(!do_after(user, target_acquisition_delay, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_GENERIC, extra_checks = CALLBACK(src, PROC_REF(can_see_target), target, user)))
 		to_chat(user, SPAN_DANGER("You lose sight of your target!"))
 		playsound(user,'sound/machines/click.ogg', 25, 1)
 		unset_target()
@@ -146,10 +155,12 @@
 		return
 	if(!target_atom)
 		return
-
 	playsound(src, 'sound/effects/binoctarget.ogg', 35)
 	mode.initiate_fire_support(get_turf(target_atom), user)
-	fire_support_points -= mode.cost
+	if(faction)
+		GLOB.fire_support_points[faction] -= mode.cost
+		balloon_alert_to_viewers("[GLOB.fire_support_points[faction]] points left")
+	message_admins("[user] has fired [mode.name] at [target_atom].")
 	unset_target()
 
 ///Internal bino checks, mainly around firemode
@@ -160,6 +171,10 @@
 	if(!(mode.fire_support_flags & FIRESUPPORT_AVAILABLE))
 		balloon_alert_to_viewers("[mode.name] unavailable")
 		return FALSE
+	if(faction)
+		if(GLOB.fire_support_points[faction] < mode.cost)
+			balloon_alert_to_viewers("Not enough fire support points")
+			return FALSE
 	if(mode.cooldown_timer)
 		balloon_alert_to_viewers("On cooldown")
 		return FALSE
@@ -177,6 +192,11 @@
 		return FALSE
 	if(!(user in viewers(zoom_offset + view_range + 1, target)))
 		return FALSE
+	if(user.sight & SEE_TURFS)
+		var/list/turf/path = get_line(user, target, include_start_atom = FALSE)
+		for(var/turf/T in path)
+			if(T.opacity)
+				return FALSE
 	return TRUE
 
 ///Unsets the target and cleans up
@@ -207,3 +227,34 @@
 
 /mob/living/carbon/remove_fire_support_laser(image/laser_overlay)
 	remove_overlay(LASER_LAYER)
+
+/obj/item/device/binoculars/fire_support/uscm
+	faction = FACTION_MARINE
+
+/obj/item/device/binoculars/fire_support/upp
+	icon_state = "binoculars_upp"
+	faction = FACTION_UPP
+	mode_list = list(
+		FIRESUPPORT_TYPE_GUN_UPP,
+		FIRESUPPORT_TYPE_LASER_UPP,
+		FIRESUPPORT_TYPE_ROCKETS_UPP,
+		FIRESUPPORT_TYPE_INCEND_ROCKETS_UPP,
+		FIRESUPPORT_TYPE_MISSILE_UPP,
+		FIRESUPPORT_TYPE_SMOKE_MISSILE_UPP,
+		FIRESUPPORT_TYPE_NAPALM_MISSILE_UPP,
+		FIRESUPPORT_TYPE_NERVE_MISSILE_UPP,
+		FIRESUPPORT_TYPE_LSD_MISSILE_UPP,
+		FIRESUPPORT_TYPE_HE_MORTAR_UPP,
+		FIRESUPPORT_TYPE_INCENDIARY_MORTAR_UPP,
+		FIRESUPPORT_TYPE_SMOKE_MORTAR_UPP,
+		FIRESUPPORT_TYPE_LSD_SMOKE_MORTAR_UPP,
+		FIRESUPPORT_TYPE_NERVE_SMOKE_MORTAR_UPP,
+		FIRESUPPORT_TYPE_HE_MLRS_UPP,
+		FIRESUPPORT_TYPE_NERVE_MLRS_UPP,
+		FIRESUPPORT_TYPE_OB_UPP,
+		FIRESUPPORT_TYPE_SUPPLY_DROP_UPP,
+		FIRESUPPORT_TYPE_SENTRY_POD_UPP,
+	)
+
+/obj/item/device/binoculars/fire_support/pmc
+	faction = FACTION_PMC
