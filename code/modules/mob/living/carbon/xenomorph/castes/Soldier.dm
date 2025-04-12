@@ -200,7 +200,7 @@
 
 /datum/action/xeno_action/activable/fling/soldier
 	default_ai_action = TRUE
-	ai_prob_chance = 30
+	ai_prob_chance = 25
 	xeno_cooldown = 10 SECONDS
 
 /datum/action/xeno_action/activable/fling/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
