@@ -122,10 +122,7 @@
 		H.alpha = current_camo
 		if(current_camo > visible_camo_alpha)
 			REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
-			if(world.time < camouflage_break_message)
-				return
-			else
-				to_chat(H, SPAN_BOLDNOTICE("Your ghillie suit can't keep you perfectly hidden anymore!"))
+			to_chat(H, SPAN_BOLDNOTICE("Your ghillie suit can't keep you perfectly hidden anymore!"))
 		addtimer(CALLBACK(src, PROC_REF(fade_out_finish), H), camouflage_break, TIMER_OVERRIDE|TIMER_UNIQUE)
 		animate(H, alpha = full_camo_alpha + 5, time = camouflage_break, easing = LINEAR_EASING, flags = ANIMATION_END_NOW)
 
