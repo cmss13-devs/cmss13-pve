@@ -488,8 +488,8 @@
 /area/almayer/engineering/airmix)
 "ahc" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/almayer,
 /area/almayer/living/cafeteria_officer)
 "ahh" = (
@@ -8550,8 +8550,8 @@
 /area/almayer/engineering/upper_engineering)
 "dkK" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/uscm_mre,
-/obj/item/storage/box/uscm_mre,
+/obj/item/storage/box/mre,
+/obj/item/storage/box/mre,
 /obj/item/book/manual/chef_recipes,
 /obj/structure/sign/safety/coffee{
 	pixel_x = 15;
@@ -12217,8 +12217,8 @@
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/storage/box/uscm_mre,
-/obj/item/storage/box/uscm_mre,
+/obj/item/storage/box/mre,
+/obj/item/storage/box/mre,
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/req)
 "eBE" = (
@@ -21906,7 +21906,7 @@
 	pixel_x = 4;
 	pixel_y = 15
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 5;
 	pixel_y = 2
 	},
@@ -39087,8 +39087,8 @@
 /turf/open/floor/almayer/sterile_green_side/northeast,
 /area/almayer/medical/medical_science)
 "nVr" = (
-/obj/item/storage/box/nade_box/tear_gas,
-/obj/item/storage/box/nade_box/tear_gas{
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas{
 	pixel_x = 3;
 	pixel_y = 5
 	},
@@ -51828,7 +51828,7 @@
 /area/almayer/squads/alpha_bravo_shared)
 "spt" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/effect/spawner/random/tool,
 /obj/item/tool/hand_labeler,
 /obj/item/clipboard,
