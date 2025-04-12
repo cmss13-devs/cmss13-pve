@@ -1413,7 +1413,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/shovel/etool(src)
@@ -1422,7 +1422,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/shovel/etool(src)
@@ -1432,7 +1432,7 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/shovel/etool(src)
@@ -1579,7 +1579,7 @@
 	storage_slots = 3
 
 /obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 
