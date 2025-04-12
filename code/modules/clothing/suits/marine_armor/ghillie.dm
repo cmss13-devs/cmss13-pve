@@ -22,6 +22,7 @@
 	var/camouflage_break = 5 SECONDS
 	var/camouflage_enter_delay = 2 SECONDS
 	var/can_camo = TRUE
+	var/camouflage_break_message = 2 SECONDS
 
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/specialist/prepare_position)
 
@@ -78,7 +79,7 @@
 
 	playsound(H.loc, 'sound/effects/cloak_scout_on.ogg', 15, TRUE)
 	anim(H.loc, H, 'icons/mob/mob.dmi', null, "cloak", null, H.dir)
-
+	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY //No super speed whilst invis, you're moving slow to ensure you stay hidden
 
 /obj/item/clothing/suit/storage/marine/ghillie/proc/deactivate_camouflage(mob/user)
 	SIGNAL_HANDLER
@@ -102,7 +103,7 @@
 	REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
 	H.alpha = 255
 	H.FF_hit_evade = initial(H.FF_hit_evade)
-
+	slowdown = SLOWDOWN_ARMOR_LIGHT //Back to schmoving quick
 
 	var/datum/mob_hud/security/advanced/SA = GLOB.huds[MOB_HUD_SECURITY_ADVANCED]
 	SA.add_to_hud(H)
@@ -121,13 +122,17 @@
 		H.alpha = current_camo
 		if(current_camo > visible_camo_alpha)
 			REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
+			if(world.time < camouflage_break_message)
+				return
+			else
+				to_chat(H, SPAN_BOLDNOTICE("Your ghillie suit can't keep you perfectly hidden anymore!"))
 		addtimer(CALLBACK(src, PROC_REF(fade_out_finish), H), camouflage_break, TIMER_OVERRIDE|TIMER_UNIQUE)
 		animate(H, alpha = full_camo_alpha + 5, time = camouflage_break, easing = LINEAR_EASING, flags = ANIMATION_END_NOW)
 
 /obj/item/clothing/suit/storage/marine/ghillie/proc/fade_out_finish(mob/living/carbon/human/H)
 	if(camo_active && H.wear_suit == src)
 		ADD_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
-		to_chat(H, SPAN_BOLDNOTICE("The smoke clears and your position is once again hidden completely!"))
+		to_chat(H, SPAN_BOLDNOTICE("The smoke clears and your once again hidden completely by your ghillie suit!"))
 		animate(H, alpha = full_camo_alpha)
 		current_camo = full_camo_alpha
 

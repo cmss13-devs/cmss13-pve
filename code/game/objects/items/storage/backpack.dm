@@ -696,8 +696,9 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/incremental_shooting_camo_penalty = 30
 	var/current_camo = FULL_CAMO_ALPHA
 	var/visible_camo_alpha = VISIBLE_CAMO_ALPHA
-	var/camouflage_break = 5 SECONDS
+	var/camouflage_break = 8 SECONDS
 	var/cloak_cooldown
+	var/camouflage_break_message = 2 SECONDS
 
 	actions_types = list(/datum/action/item_action/specialist/toggle_cloak)
 
@@ -774,6 +775,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 			H.alpha = current_camo
 			if(current_camo > visible_camo_alpha)
 				REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
+				if(world.time < camouflage_break_message)
+					return
+				else
+					to_chat(H, SPAN_BOLDNOTICE("Your cloak can't keep you perfectly hidden anymore!"))
 			addtimer(CALLBACK(src, PROC_REF(fade_out_finish), H), camouflage_break, TIMER_OVERRIDE|TIMER_UNIQUE)
 			animate(H, alpha = full_camo_alpha + 5, time = camouflage_break, easing = LINEAR_EASING, flags = ANIMATION_END_NOW)
 
