@@ -77,7 +77,7 @@
 	)
 	gib_chance = 100
 
-	acid_blood_damage = 25 /// Stronger acid blood. "Should be a define in the future" per 32bitguy
+	acid_blood_damage = 20 /// Stronger acid blood. "Should be a define in the future" per 32bitguy
 
 	icon_xeno = 'icons/mob/xenos/drone.dmi'
 	icon_xenonid = 'icons/mob/xenonids/drone.dmi'
