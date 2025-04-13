@@ -376,6 +376,13 @@
 	key_third_person = "whimpers"
 	message = "whimpers."
 
+/datum/emote/living/carbon/human/whimper
+	key = "whistle"
+	key_third_person = "whistles"
+	message = "whistles."
+	emote_type = EMOTE_AUDIBLE
+	sound = "whistle"
+	audio_cooldown =  = 3 SECONDS
 /datum/emote/living/carbon/human/whimper/run_emote(mob/living/user, params, type_override, intentional)
 	. = ..()
 	if(!.)
