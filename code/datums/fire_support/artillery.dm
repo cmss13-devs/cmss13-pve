@@ -176,6 +176,7 @@
 
 /datum/fire_support/mortar/smoke/mlrs_cn
 	name = "CN-20 MLRS"
+	icon_state = "nerve_mlrs"
 	fire_support_type = FIRESUPPORT_TYPE_NERVE_MLRS
 	cost = 2
 	scatter_range = 11
