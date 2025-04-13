@@ -38,7 +38,7 @@
 		list("UPP Prepared Meal (Shrimp)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal7, VENDOR_ITEM_REGULAR),
 		list("UPP Prepared Meal (Cuban Rice)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal8, VENDOR_ITEM_REGULAR),
 		list("UPP Prepared Meal (Meatballs)", 0, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal9, VENDOR_ITEM_REGULAR),
-		list("UPP Survival Ration", 50, /obj/item/reagent_container/food/snacks/upp, VENDOR_ITEM_REGULAR),
+		list("UPP Survival Ration", 50, /obj/item/storage/box/mre/upp, VENDOR_ITEM_REGULAR),
 		list("DRINKS", -1, null, null),
 		list("Water", 10, /obj/item/reagent_container/food/drinks/water, VENDOR_ITEM_REGULAR),
 		list("Tea", 10, /obj/item/reagent_container/food/drinks/tea/upp, VENDOR_ITEM_REGULAR),
