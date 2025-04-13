@@ -83,6 +83,23 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison,
 /area/firebase_zulu/inside)
+"aj" = (
+/obj/structure/flora/grass/desert/lightgrass_1{
+	layer = 2.9
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Section Sergeant"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/outside/compound)
+"ak" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Section Sergeant"
+	},
+/turf/open/auto_turf/sand/layer2,
+/area/firebase_zulu/outside/compound)
 "al" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
@@ -144,6 +161,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firebase_zulu/inside/engineering)
+"at" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Corpsman"
+	},
+/turf/open/auto_turf/sand/layer2,
+/area/firebase_zulu/outside/compound)
 "au" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -185,6 +208,21 @@
 	},
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside)
+"aA" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7;
+	layer = 3.1
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	layer = 3.1
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/outside/compound)
 "aB" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-8"
@@ -433,6 +471,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
+"bj" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7;
+	layer = 3.1
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	layer = 3.1
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/outside/compound)
 "bk" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/kutjevo/rock,
@@ -478,16 +530,6 @@
 /turf/closed/wall/shiva/prefabricated/reinforced/hull,
 /area/firebase_zulu/inside)
 "bs" = (
-/obj/structure/toilet{
-	pixel_y = 16
-	},
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -11
-	},
-/obj/structure/machinery/light/small{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -496,7 +538,13 @@
 	pixel_x = -2;
 	pixel_y = 39
 	},
-/turf/open/floor/strata/white_cyan2/west,
+/obj/structure/mirror{
+	pixel_x = -29
+	},
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/firebase_zulu/inside/dorms)
 "bt" = (
 /obj/structure/surface/rack,
@@ -513,6 +561,20 @@
 /obj/structure/platform_decoration/strata/metal,
 /turf/open/mars_cave/mars_dirt_4,
 /area/firebase_zulu/outside)
+"bv" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7;
+	layer = 3.1
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	layer = 3.1
+	},
+/turf/open/auto_turf/sand/layer2,
+/area/firebase_zulu/outside/compound)
 "bw" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -562,17 +624,8 @@
 	icon_state = "door_warning";
 	dir = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out"
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer/plate,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
 /area/firebase_zulu/inside/dorms)
 "bC" = (
 /obj/structure/surface/table/almayer,
@@ -632,6 +685,23 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
+"bJ" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7;
+	job = "Smartgunner";
+	layer = 3.1
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Smartgunner";
+	layer = 3.1
+	},
+/turf/open/auto_turf/sand/layer2,
+/area/firebase_zulu/outside/compound)
 "bK" = (
 /obj/structure/kitchenspike,
 /obj/effect/decal/cleanable/dirt,
@@ -649,20 +719,15 @@
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
 "bM" = (
-/obj/structure/machinery/light/small{
-	dir = 4
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7;
+	job = "Smartgunner"
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	layer = 3.3
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Smartgunner"
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/barricade/handrail,
-/obj/structure/mirror{
-	pixel_y = 29
-	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/dorms)
 "bN" = (
@@ -677,6 +742,18 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
+"bP" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Smartgunner"
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7;
+	job = "Smartgunner"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/dorms)
 "bQ" = (
 /obj/structure/platform,
 /turf/open/auto_turf/sand/layer1,
@@ -763,6 +840,12 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/firebase_zulu/inside)
+"cc" = (
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Platoon Commander"
+	},
+/turf/open/auto_turf/sand/layer2,
+/area/firebase_zulu/outside/compound)
 "cd" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -772,6 +855,23 @@
 /obj/item/clothing/head/welding,
 /turf/open/asphalt/cement/cement14,
 /area/firebase_zulu/outside)
+"ce" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1;
+	pixel_x = -3
+	},
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	name = "Shower Pod"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 3
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
 "cf" = (
 /obj/structure/platform{
 	dir = 8;
@@ -779,7 +879,21 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Section Sergeant"
+	},
 /turf/open/auto_turf/sand/layer2,
+/area/firebase_zulu/outside/compound)
+"cg" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Corpsman"
+	},
+/turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
 "ch" = (
 /obj/structure/closet/crate/trashcart,
@@ -896,6 +1010,22 @@
 	},
 /turf/open/floor/prison,
 /area/firebase_zulu/inside)
+"cr" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3;
+	pixel_x = -3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 3;
+	layer = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/firebase_zulu/inside/dorms)
 "cs" = (
 /obj/structure/platform{
 	dir = 4
@@ -925,6 +1055,14 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/hangar)
+"cv" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal,
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/outside/compound)
 "cw" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -934,12 +1072,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
-"cy" = (
-/obj/structure/machinery/shower{
+"cx" = (
+/obj/structure/platform{
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firebase_zulu/inside/dorms)
+/obj/structure/closet/secure_closet/marine_personal,
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/outside/compound)
 "cz" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "vent4";
@@ -1002,10 +1141,22 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
 /area/firebase_zulu/inside)
+"cI" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal,
+/turf/open/auto_turf/sand/layer2,
+/area/firebase_zulu/outside/compound)
 "cJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
 /area/firebase_zulu/inside)
+"cK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal,
+/turf/open/auto_turf/sand/layer1,
+/area/firebase_zulu/outside/compound)
 "cL" = (
 /obj/structure/platform_decoration/strata/metal,
 /obj/effect/decal/cleanable/dirt,
@@ -1294,22 +1445,18 @@
 /turf/open/asphalt/cement,
 /area/firebase_zulu/outside)
 "dx" = (
-/obj/structure/toilet{
-	pixel_y = 16
-	},
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "vent4";
 	pixel_x = -2;
 	pixel_y = 39
 	},
-/turf/open/floor/strata/white_cyan2/west,
+/obj/structure/mirror{
+	pixel_x = 29
+	},
+/obj/structure/machinery/shower{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/firebase_zulu/inside/dorms)
 "dy" = (
 /obj/structure/platform_decoration,
@@ -5416,19 +5563,18 @@
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/inside/motor_pool)
 "nl" = (
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	layer = 3.3
-	},
-/obj/structure/barricade/handrail,
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "vent4";
 	pixel_x = -2;
 	pixel_y = 39
 	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/dorms)
 "nm" = (
@@ -5984,13 +6130,15 @@
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/motor_pool)
 "oF" = (
-/obj/structure/machinery/shower{
-	dir = 8
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -6;
+	job = "Squad Leader"
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Squad Leader"
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/dorms)
 "oG" = (
 /obj/structure/prop/dam/crane/cargo,
@@ -9464,18 +9612,6 @@
 /obj/structure/platform/stair_cut,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
-"xk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Smartgunner"
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Squad Leader"
-	},
-/turf/open/floor/almayer/plate,
-/area/firebase_zulu/inside/platoonarmory)
 "xl" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/window/reinforced{
@@ -10130,10 +10266,15 @@
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside)
 "yK" = (
-/obj/structure/machinery/shower{
-	dir = 8
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8;
+	job = "Squad Leader"
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -6;
+	job = "Squad Leader"
+	},
+/turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/dorms)
 "yL" = (
 /obj/structure/barricade/sandbags/full,
@@ -10242,19 +10383,8 @@
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
 "zb" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 3.3
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1;
-	layer = 2
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/strata/white_cyan2/west,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
 /area/firebase_zulu/inside/dorms)
 "zd" = (
 /obj/structure/machinery/cm_vending/sorted/medical{
@@ -11604,20 +11734,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/firebase_zulu/outside)
 "Ct" = (
-/obj/structure/machinery/light/small,
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 3.3
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1;
-	layer = 2
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/strata/white_cyan2/west,
+/turf/open/floor/almayer,
 /area/firebase_zulu/inside/dorms)
 "Cu" = (
 /obj/structure/closet/emcloset,
@@ -12439,18 +12556,6 @@
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/strata/white_cyan2,
 /area/firebase_zulu/inside)
-"EK" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 3.3
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1;
-	layer = 2
-	},
-/turf/open/floor/strata/white_cyan2/west,
-/area/firebase_zulu/inside/dorms)
 "EM" = (
 /obj/structure/surface/table/almayer,
 /obj/item/stack/sandbags_empty/small_stack,
@@ -12678,7 +12783,7 @@
 "Fp" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
-	name = "Shower Pod"
+	name = "Equipment Storage"
 	},
 /turf/open/floor/corsat/marked,
 /area/firebase_zulu/inside/dorms)
@@ -14341,9 +14446,8 @@
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
 "Jc" = (
-/obj/structure/bed/chair{
-	dir = 4;
-	pixel_y = 3
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Corpsman"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer2,
@@ -14807,8 +14911,10 @@
 	dir = 4
 	},
 /obj/structure/flora/grass/desert/lightgrass_1{
-	pixel_x = -6
+	pixel_x = -6;
+	layer = 2
 	},
+/obj/structure/closet/secure_closet/marine_personal,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
 "Ki" = (
@@ -14971,12 +15077,6 @@
 	pixel_x = 29;
 	pixel_y = 12
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8
-	},
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
 	light_color = "#dae2ff";
@@ -15015,8 +15115,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside)
 "KI" = (
-/obj/structure/flora/grass/desert/lightgrass_1,
-/obj/structure/largecrate/random,
+/obj/structure/closet/secure_closet/marine_personal{
+	job = "Platoon Commander"
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
@@ -16966,12 +17067,6 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/firebase_zulu/inside)
 "PE" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8
-	},
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
 	light_color = "#dae2ff";
@@ -18884,13 +18979,14 @@
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside/compound)
 "Uv" = (
-/obj/structure/machinery/shower{
-	dir = 4
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = -7
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/structure/closet/secure_closet/marine_personal{
+	pixel_x = 8
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/dorms)
 "Uw" = (
 /obj/structure/platform_decoration/kutjevo/rock,
@@ -49814,7 +49910,7 @@ zq
 FJ
 XI
 zq
-xk
+XI
 Ha
 Ha
 aR
@@ -50416,7 +50512,7 @@ zq
 zq
 UD
 zq
-xk
+XI
 QW
 Ha
 aR
@@ -71506,7 +71602,7 @@ iI
 iI
 iI
 iI
-yZ
+aA
 wB
 lS
 YY
@@ -72097,18 +72193,18 @@ Xm
 zC
 iI
 bs
-YB
+iI
 Tr
 Xm
 Ts
 iI
 nl
-cy
+Uv
 Uv
 Uv
 Uv
 iI
-yZ
+aA
 wB
 Qn
 RA
@@ -72698,19 +72794,19 @@ Xm
 Xm
 Fu
 iI
-iI
-iI
+cr
+ce
 Tr
 Xm
 Aq
 Fp
 bB
-EK
-EK
+zb
+zb
 zb
 Ct
 iI
-yZ
+aA
 wB
 tT
 LC
@@ -73301,18 +73397,18 @@ Xm
 zC
 iI
 dx
-YB
+iI
 Tr
 Xm
 Pj
 iI
 bM
-oF
+bP
 yK
 yK
 oF
 iI
-XE
+bj
 wB
 Qn
 FH
@@ -73914,7 +74010,7 @@ iI
 iI
 iI
 iI
-vQ
+bv
 wB
 lt
 FH
@@ -74505,7 +74601,7 @@ Xm
 qu
 RJ
 qL
-vL
+cg
 WD
 Xm
 RS
@@ -75117,7 +75213,7 @@ KN
 iI
 iI
 iI
-zE
+bJ
 Ba
 wB
 lS
@@ -76900,11 +76996,11 @@ uX
 Ba
 Ba
 dy
-dm
-tp
+cI
+cx
 Kg
-OE
-OE
+cv
+cv
 OE
 OE
 UO
@@ -76927,7 +77023,7 @@ XE
 st
 wB
 lS
-jU
+aj
 LC
 PI
 lS
@@ -77529,7 +77625,7 @@ zE
 lS
 wB
 Ba
-Fo
+ak
 LC
 gn
 Gf
@@ -84753,7 +84849,7 @@ dn
 Ba
 wB
 Qn
-Qn
+at
 LC
 Yh
 CF
@@ -91937,11 +92033,11 @@ Qa
 dP
 lS
 LC
-Ba
-Ba
+cK
+cK
 LC
-Ba
-Ba
+cK
+cK
 LC
 LA
 LA
@@ -91966,10 +92062,10 @@ dh
 iC
 LC
 Kw
-MQ
+KI
 LC
-FH
-FH
+cc
+cc
 LC
 KI
 ki
