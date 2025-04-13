@@ -37,6 +37,8 @@
 		FIRESUPPORT_TYPE_SUPPLY_DROP,
 		FIRESUPPORT_TYPE_SENTRY_POD,
 	)
+	///Can this fire shipside
+	var/usable_shipside = FALSE
 
 /obj/item/device/binoculars/fire_support/Initialize()
 	. = ..()
@@ -129,9 +131,10 @@
 ///lases a target and calls fire support on it
 /obj/item/device/binoculars/fire_support/proc/acquire_target(atom/target, mob/living/carbon/human/user)
 	set waitfor = 0
-	if(is_mainship_level(user.z))
-		user.balloon_alert(user, "can't use here")
-		return
+	if(!usable_shipside)
+		if(is_mainship_level(user.z))
+			user.balloon_alert(user, "can't use here")
+			return
 	if(faction && user.faction != faction)
 		balloon_alert_to_viewers("no access")
 		return
@@ -238,6 +241,9 @@
 /obj/item/device/binoculars/fire_support/uscm
 	faction = FACTION_MARINE
 
+/obj/item/device/binoculars/fire_support/uscm/usable_shipside
+	usable_shipside = TRUE
+
 /obj/item/device/binoculars/fire_support/upp
 	icon_state = "binoculars_upp"
 	faction = FACTION_UPP
@@ -264,6 +270,9 @@
 		FIRESUPPORT_TYPE_SENTRY_POD_UPP,
 	)
 
+/obj/item/device/binoculars/fire_support/upp/usable_shipside
+	usable_shipside = TRUE
+
 /obj/item/device/binoculars/fire_support/pmc
 	faction = FACTION_PMC
 	mode_list = list(
@@ -286,3 +295,6 @@
 		FIRESUPPORT_TYPE_NERVE_MLRS,
 		FIRESUPPORT_TYPE_OB,
 	)
+
+/obj/item/device/binoculars/fire_support/pmc/usable_shipside
+	usable_shipside = TRUE
