@@ -376,7 +376,7 @@
 	key_third_person = "whimpers"
 	message = "whimpers."
 
-/datum/emote/living/carbon/human/whimper
+/datum/emote/living/carbon/human/whistle
 	key = "whistle"
 	key_third_person = "whistles"
 	message = "whistles."
