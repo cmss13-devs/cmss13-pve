@@ -87,6 +87,7 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep
 	name = "\improper ColMarTech Surplus Uniform Vendor"
 	desc = "An automated supply rack hooked up to a small storage of standard marine uniforms."
+	icon_state = "uscm_gear"
 	req_access = list(ACCESS_MARINE_PREP)
 	req_one_access = list()
 	listed_products = list()
@@ -354,6 +355,7 @@
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon
 	name = "\improper ColMarTech FORECON Uniform Vendor"
+	icon_state = "forecon_gear"
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon/populate_product_list(scale)
 	listed_products = list(
@@ -552,7 +554,7 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/populate_product_list(scale)
 	listed_products = list(
 		list("FOOD", -1, null, null),
-		list("MRE", floor(scale * 5), /obj/item/storage/box/MRE, VENDOR_ITEM_REGULAR),
+		list("MRE", floor(scale * 5), /obj/item/storage/box/mre, VENDOR_ITEM_REGULAR),
 		list("MRE Box", floor(scale * 1), /obj/item/ammo_box/magazine/misc/mre, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL", -1, null, null),
@@ -606,7 +608,6 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp
 	name = "\improper UnTech Automated Utilities Squad Vendor"
 	desc = "An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any UPP Rifleman."
-	icon_state = "upp_armory"
 	req_access = list()
 	req_one_access = list(ACCESS_UPP_GENERAL)
 	hackable = TRUE
@@ -619,8 +620,8 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp/populate_product_list(scale)
 	listed_products = list(
 		list("FOOD", -1, null, null),
-		list("Box of Survival Rations", round(scale * 1), /obj/item/ammo_box/magazine/misc/mre/upp, VENDOR_ITEM_REGULAR),
-		list("Survival Ration", round(scale * 15), /obj/item/reagent_container/food/snacks/upp, VENDOR_ITEM_REGULAR),
+		list("Individual Meal Ration", round(scale * 15), /obj/item/storage/box/mre/upp, VENDOR_ITEM_REGULAR),
+		list("IMR Box", floor(scale * 1), /obj/item/ammo_box/magazine/misc/mre/upp, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL", -1, null, null),
 		list("Gauze", round(scale * 15), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
@@ -674,8 +675,8 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/forecon/populate_product_list(scale)
 	listed_products = list(
 		list("FOOD", -1, null, null),
-		list("MRE", floor(scale * 7), /obj/item/storage/box/MRE, VENDOR_ITEM_REGULAR),
-		list("MRE Box", floor(scale * 1), /obj/item/ammo_box/magazine/misc/mre, VENDOR_ITEM_REGULAR),
+		list("Extended Patrol MRE", round(scale * 5), /obj/item/storage/box/mre/fsr, VENDOR_ITEM_REGULAR),
+		list("MRE Box", round(scale * 1), /obj/item/ammo_box/magazine/misc/mre/fsr, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL", -1, null, null),
 		list("Gauze", round(scale * 15), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
@@ -765,8 +766,8 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc/populate_product_list(scale)
 	listed_products = list(
 		list("FOOD", -1, null, null),
-		list("MRE", floor(scale * 5), /obj/item/storage/box/MRE, VENDOR_ITEM_REGULAR),
-		list("MRE Box", floor(scale * 1), /obj/item/ammo_box/magazine/misc/mre, VENDOR_ITEM_REGULAR),
+		list("Premium MRE", round(scale * 5), /obj/item/storage/box/mre/pmc, VENDOR_ITEM_REGULAR),
+		list("MRE Box", round(scale * 1), /obj/item/ammo_box/magazine/misc/mre/pmc, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL", -1, null, null),
 		list("Gauze", round(scale * 15), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
