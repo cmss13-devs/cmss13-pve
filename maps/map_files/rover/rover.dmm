@@ -4824,8 +4824,6 @@
 "Id" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/green,
-/obj/item/storage/box/nade_box/smoke,
-/obj/item/storage/box/nade_box/smoke,
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/supply)
 "Ig" = (
@@ -5411,11 +5409,9 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
-/obj/item/storage/box/nade_box{
-	pixel_y = 4
-	},
-/obj/item/storage/box/nade_box{
-	pixel_y = 15
+/obj/item/ammo_box/magazine/nade_box,
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_y = 7
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/golden_arrow/platoonarmory)
