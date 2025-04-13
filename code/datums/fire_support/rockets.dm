@@ -2,6 +2,7 @@
 	name = "HE Rockets"
 	fire_support_firer = FIRESUPPORT_CAS
 	fire_support_type = FIRESUPPORT_TYPE_ROCKETS
+	cost = 3
 	scatter_range = 7
 	impact_quantity = 10
 	icon_state = "rockets"
@@ -28,6 +29,7 @@
 	name = "INC rockets"
 	fire_support_firer = FIRESUPPORT_CAS
 	fire_support_type = FIRESUPPORT_TYPE_INCEND_ROCKETS
+	cost = 3
 	icon_state = "incend_rockets"
 	scatter_range = 7
 	impact_quantity = 10

@@ -2,6 +2,7 @@
 	name = "Gun run"
 	fire_support_firer = FIRESUPPORT_CAS
 	fire_support_type = FIRESUPPORT_TYPE_GUN
+	cost = 3
 	impact_quantity = 4
 	scatter_range = 3
 	icon_state = "gau"
@@ -77,6 +78,7 @@
 	name = "Laser run"
 	fire_support_firer = FIRESUPPORT_CAS
 	fire_support_type = FIRESUPPORT_TYPE_LASER
+	cost = 2
 	impact_quantity = 7
 	scatter_range = 3
 	icon_state = "laser"

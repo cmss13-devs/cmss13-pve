@@ -7,7 +7,7 @@
 	var/faction = FACTION_MARINE
 	///define name of the firesupport, used for assoc
 	var/fire_support_type
-	///How frequently this canbe used
+	///How frequently this can be used
 	var/cooldown_duration = 2 MINUTES
 	///Holder for the cooldown timer
 	var/cooldown_timer

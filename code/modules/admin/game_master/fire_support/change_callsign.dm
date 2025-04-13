@@ -18,3 +18,4 @@
 		var/datum/fire_support/fire_support_option = GLOB.fire_support_types[firesupport_type]
 		if(fire_support_option.fire_support_firer == callsign_to_change)
 			fire_support_option.initiate_title = new_callsign
+	message_admins("[key_name_admin(src)] has set [callsign_to_change] fire support callsign to [new_callsign].")

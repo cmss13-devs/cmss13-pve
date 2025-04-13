@@ -26,6 +26,7 @@
 		if(!support_to_enable)
 			break
 		support_to_enable.enable_firesupport()
+		message_admins("[key_name_admin(src)] has enabled [support_to_enable] fire support for [faction].")
 
 /client/proc/disable_fire_support()
 	set name = "Disable a Fire Support"
@@ -55,3 +56,4 @@
 		if(!support_to_enable)
 			break
 		support_to_enable.disable()
+		message_admins("[key_name_admin(src)] has disabled [support_to_enable] fire support for [faction].")

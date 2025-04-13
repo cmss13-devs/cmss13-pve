@@ -27,6 +27,7 @@
 		FIRESUPPORT_TYPE_LSD_MISSILE,
 		FIRESUPPORT_TYPE_HE_MORTAR,
 		FIRESUPPORT_TYPE_INCENDIARY_MORTAR,
+		FIRESUPPORT_TYPE_FLARE_MORTAR,
 		FIRESUPPORT_TYPE_SMOKE_MORTAR,
 		FIRESUPPORT_TYPE_LSD_SMOKE_MORTAR,
 		FIRESUPPORT_TYPE_NERVE_SMOKE_MORTAR,
@@ -63,8 +64,10 @@
 		return TRUE
 	return ..()
 
-/obj/item/device/binoculars/fire_support/examine(mob/user)
+/obj/item/device/binoculars/fire_support/get_examine_text(mob/user)
 	. = ..()
+	if(faction)
+		. += SPAN_BOLDNOTICE("[GLOB.fire_support_points[faction]] points left.")
 	if(!mode)
 		return
 	. += SPAN_BOLDNOTICE("They are currently set to [mode.name] mode.")
@@ -152,8 +155,12 @@
 		unset_target()
 		return
 	if(!bino_checks(target, user))
+		playsound(user,'sound/machines/click.ogg', 25, 1)
+		unset_target()
 		return
 	if(!target_atom)
+		playsound(user,'sound/machines/click.ogg', 25, 1)
+		unset_target()
 		return
 	playsound(src, 'sound/effects/binoctarget.ogg', 35)
 	mode.initiate_fire_support(get_turf(target_atom), user)
@@ -246,6 +253,7 @@
 		FIRESUPPORT_TYPE_LSD_MISSILE_UPP,
 		FIRESUPPORT_TYPE_HE_MORTAR_UPP,
 		FIRESUPPORT_TYPE_INCENDIARY_MORTAR_UPP,
+		FIRESUPPORT_TYPE_FLARE_MORTAR_UPP,
 		FIRESUPPORT_TYPE_SMOKE_MORTAR_UPP,
 		FIRESUPPORT_TYPE_LSD_SMOKE_MORTAR_UPP,
 		FIRESUPPORT_TYPE_NERVE_SMOKE_MORTAR_UPP,
@@ -258,3 +266,23 @@
 
 /obj/item/device/binoculars/fire_support/pmc
 	faction = FACTION_PMC
+	mode_list = list(
+		FIRESUPPORT_TYPE_GUN,
+		FIRESUPPORT_TYPE_LASER,
+		FIRESUPPORT_TYPE_ROCKETS,
+		FIRESUPPORT_TYPE_INCEND_ROCKETS,
+		FIRESUPPORT_TYPE_MISSILE,
+		FIRESUPPORT_TYPE_NAPALM_MISSILE,
+		FIRESUPPORT_TYPE_SMOKE_MISSILE,
+		FIRESUPPORT_TYPE_NERVE_MISSILE,
+		FIRESUPPORT_TYPE_LSD_MISSILE,
+		FIRESUPPORT_TYPE_HE_MORTAR,
+		FIRESUPPORT_TYPE_INCENDIARY_MORTAR,
+		FIRESUPPORT_TYPE_FLARE_MORTAR,
+		FIRESUPPORT_TYPE_SMOKE_MORTAR,
+		FIRESUPPORT_TYPE_LSD_SMOKE_MORTAR,
+		FIRESUPPORT_TYPE_NERVE_SMOKE_MORTAR,
+		FIRESUPPORT_TYPE_HE_MLRS,
+		FIRESUPPORT_TYPE_NERVE_MLRS,
+		FIRESUPPORT_TYPE_OB,
+	)

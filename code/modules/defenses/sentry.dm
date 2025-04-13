@@ -920,10 +920,10 @@
 	choice_categories = list(
 		SENTRY_CATEGORY_IFF = list(FACTION_UPP, SENTRY_FACTION_HUMAN),
 	)
-
 	selected_categories = list(
 		SENTRY_CATEGORY_IFF = FACTION_UPP,
 	)
+	faction_group = FACTION_LIST_UPP
 	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
 	defense_type = "UPP"
 	handheld_type = /obj/item/defenses/handheld/sentry/upp

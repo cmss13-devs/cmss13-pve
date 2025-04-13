@@ -2,11 +2,11 @@
 	name = "Ammo drop"
 	fire_support_firer = FIRESUPPORT_CAS
 	fire_support_type = FIRESUPPORT_TYPE_SUPPLY_DROP
+	cost = 2
 	scatter_range = 1
 	icon_state = "ammo"
 	initiate_chat_message = "TARGET ACQUIRED AMMO CRATE LAUNCHING."
 	initiate_screen_message = list("Make sure to tip!")
-	cooldown_duration = 1 SECONDS
 	delay_to_impact = 2 SECONDS
 	start_visual = null
 	initiate_visual = /obj/effect/temp_visual/dropship_hover
@@ -47,16 +47,17 @@
 	portrait_type = "pilot_red"
 	initiate_title = "Pig-1"
 	initiate_visual = /obj/effect/temp_visual/dropship_hover/krokodil
+	delivered = /obj/structure/largecrate/supply/ammo/supply_drop_upp
 
 /datum/fire_support/sentry_drop
 	name = "Sentry drop"
 	fire_support_firer = FIRESUPPORT_CAS
 	fire_support_type = FIRESUPPORT_TYPE_SENTRY_POD
+	cost = 2
 	scatter_range = 1
 	icon_state = "sentry"
 	initiate_chat_message = "TARGET ACQUIRED SENTRY POD LAUNCHING."
 	initiate_screen_message = list("Make sure to tip!")
-	cooldown_duration = 1 SECONDS
 	delay_to_impact = 2 SECONDS
 	start_visual = null
 	initiate_visual = /obj/effect/temp_visual/dropship_hover

@@ -364,6 +364,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/disable_fire_support)
 		add_verb(src, /client/proc/set_fire_support_points)
 		add_verb(src, /client/proc/change_callsign)
+		add_verb(src, /client/proc/set_cooldown)
 		add_verb(src, /client/proc/toggle_intro)
 		add_verb(src, /client/proc/game_master_rename_platoon)
 		add_verb(src, /client/proc/toggle_vehicle_blockers)
@@ -409,6 +410,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/enable_fire_support,
 		/client/proc/set_fire_support_points,
 		/client/proc/change_callsign,
+		/client/proc/set_cooldown,
 		/client/proc/disable_fire_support,
 		/client/proc/toggle_intro,
 		GLOB.admin_verbs_admin,

@@ -3,7 +3,7 @@
 	fire_support_firer = FIRESUPPORT_CAS
 	fire_support_type = FIRESUPPORT_TYPE_MISSILE
 	scatter_range = 1
-	cost = 2
+	cost = 4
 	icon_state = "missile"
 	initiate_chat_message = "TARGET ACQUIRED MISSILE INBOUND."
 	initiate_screen_message = list(
@@ -32,12 +32,11 @@
 	fire_support_type = FIRESUPPORT_TYPE_MISSILE_UPP
 	portrait_type = "pilot_red"
 	initiate_title = "Pig-1"
-	start_visual = /obj/effect/temp_visual/dropship_flyby/krokodil
 
 /datum/fire_support/missile/napalm
 	name = "Napalm strike"
 	fire_support_type = FIRESUPPORT_TYPE_NAPALM_MISSILE
-	cost = 2
+	cost = 3
 	icon_state = "napalm_missile"
 	initiate_chat_message = "TARGET ACQUIRED NAPALM MISSILE INBOUND."
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/napalm
@@ -52,11 +51,11 @@
 	fire_support_type = FIRESUPPORT_TYPE_NAPALM_MISSILE_UPP
 	portrait_type = "pilot_red"
 	initiate_title = "Pig-1"
-	start_visual = /obj/effect/temp_visual/dropship_flyby/krokodil
 
 /datum/fire_support/missile/smoke
 	name = "SMK missile"
 	fire_support_type = FIRESUPPORT_TYPE_SMOKE_MISSILE
+	cost = 2
 	icon_state = "smoke_missile"
 	initiate_chat_message = "TARGET ACQUIRED SMOKE MISSILE INBOUND."
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/banshee
@@ -79,11 +78,11 @@
 	fire_support_type = FIRESUPPORT_TYPE_SMOKE_MISSILE_UPP
 	portrait_type = "pilot_red"
 	initiate_title = "Pig-1"
-	start_visual = /obj/effect/temp_visual/dropship_flyby/krokodil
 
 /datum/fire_support/missile/smoke/nerve
 	name = "CN-20 missile"
 	fire_support_type = FIRESUPPORT_TYPE_NERVE_MISSILE_UPP
+	cost = 3
 	icon_state = "nerve_missile"
 	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
 	initiate_screen_message = list("Coordinates confirmed, nerve gas inbound!")
@@ -96,11 +95,11 @@
 	fire_support_type = FIRESUPPORT_TYPE_NERVE_MISSILE_UPP
 	portrait_type = "pilot_red"
 	initiate_title = "Pig-1"
-	start_visual = /obj/effect/temp_visual/dropship_flyby/krokodil
 
 /datum/fire_support/missile/smoke/lsd
 	name = "LSD missile"
 	fire_support_type = FIRESUPPORT_TYPE_LSD_MISSILE_UPP
+	cost = 2
 	icon_state = "lsd_missile"
 	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
 	initiate_screen_message = list("Coordinates confirmed, LSD gas inbound!")
@@ -113,4 +112,3 @@
 	fire_support_type = FIRESUPPORT_TYPE_LSD_MISSILE_UPP
 	portrait_type = "pilot_red"
 	initiate_title = "Pig-1"
-	start_visual = /obj/effect/temp_visual/dropship_flyby/krokodil

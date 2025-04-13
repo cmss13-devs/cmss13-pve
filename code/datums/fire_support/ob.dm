@@ -3,7 +3,7 @@
 	fire_support_firer = FIRESUPPORT_ORBITAL
 	fire_support_type = FIRESUPPORT_TYPE_OB
 	scatter_range = 1
-	cost = 2
+	cost = 5
 	icon_state = "cruise"
 	initiate_title = "CIC"
 	initiate_chat_message = "TARGET ACQUIRED OB INBOUND."

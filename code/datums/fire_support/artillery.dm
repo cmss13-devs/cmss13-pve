@@ -2,6 +2,7 @@
 	name = "HE mortar"
 	fire_support_firer = FIRESUPPORT_ARTY
 	fire_support_type = FIRESUPPORT_TYPE_HE_MORTAR
+	cost = 2
 	scatter_range = 6
 	impact_quantity = 5
 	cooldown_duration = 20 SECONDS
@@ -59,6 +60,7 @@
 /datum/fire_support/mortar/flare
 	name = "FLR mortar"
 	fire_support_type = FIRESUPPORT_TYPE_FLARE_MORTAR
+	cost = 1
 	impact_quantity = 4
 	icon_state = "flare_mortar"
 	initiate_chat_message = "COORDINATES CONFIRMED. FLARE SUPPORT INCOMING."
@@ -79,6 +81,7 @@
 /datum/fire_support/mortar/smoke
 	name = "SMK mortar"
 	fire_support_type = FIRESUPPORT_TYPE_SMOKE_MORTAR
+	cost = 1
 	impact_quantity = 4
 	icon_state = "smoke_mortar"
 	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
@@ -107,6 +110,7 @@
 /datum/fire_support/mortar/smoke/cn
 	name = "CN-20 mortar"
 	fire_support_type = FIRESUPPORT_TYPE_NERVE_SMOKE_MORTAR
+	cost = 2
 	icon_state = "nerve_mortar"
 	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
 	initiate_screen_message = list("Coordinates confirmed, nerve gas inbound!")
@@ -123,6 +127,7 @@
 /datum/fire_support/mortar/smoke/lsd
 	name = "LSD mortar"
 	fire_support_type = FIRESUPPORT_TYPE_LSD_SMOKE_MORTAR
+	cost = 1
 	icon_state = "lsd_mortar"
 	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
 	initiate_screen_message = list("Coordinates confirmed, LSD gas inbound!")
@@ -139,6 +144,7 @@
 /datum/fire_support/mortar/mlrs
 	name = "HE MLRS"
 	fire_support_type = FIRESUPPORT_TYPE_HE_MLRS
+	cost = 3
 	scatter_range = 11
 	impact_quantity = 35
 	cooldown_duration = 20 SECONDS
@@ -167,6 +173,7 @@
 /datum/fire_support/mortar/smoke/mlrs_cn
 	name = "CN-20 MLRS"
 	fire_support_type = FIRESUPPORT_TYPE_NERVE_MLRS
+	cost = 2
 	scatter_range = 11
 	impact_quantity = 35
 	cooldown_duration = 20 SECONDS
