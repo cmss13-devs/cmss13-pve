@@ -18,10 +18,10 @@
 #define MINIMAP_FLAG_ALL (1<<17) - 1
 
 ///The minimap zoom scale
-#define MINIMAP_SCALE 1
+#define MINIMAP_SCALE 1.5
 
 ///Converts the overworld x and y to minimap x and y values
-#define MINIMAP_PIXEL_FROM_WORLD(val) (val*2-3)
+#define MINIMAP_PIXEL_FROM_WORLD(val) (val * MINIMAP_SCALE-3)
 
 //actual size of a users screen in pixels
 #define SCREEN_PIXEL_SIZE 480
