@@ -130,10 +130,10 @@
 /obj/item/device/binoculars/fire_support/proc/acquire_target(atom/target, mob/living/carbon/human/user)
 	set waitfor = 0
 	if(is_mainship_level(user.z))
-		user.balloon_alert(user, "Can't use here")
+		user.balloon_alert(user, "can't use here")
 		return
 	if(faction && user.faction != faction)
-		balloon_alert_to_viewers("No access")
+		balloon_alert_to_viewers("no access")
 		return
 	if(laser_overlay)
 		to_chat(user, SPAN_WARNING("You're already targeting something."))
@@ -141,7 +141,7 @@
 	if(!bino_checks(target, user))
 		return
 	if(!can_see_target(target, user))
-		balloon_alert_to_viewers("No clear view")
+		balloon_alert_to_viewers("no clear view")
 		return
 
 	playsound(src, 'sound/effects/nightvision.ogg', 35)
@@ -173,17 +173,17 @@
 ///Internal bino checks, mainly around firemode
 /obj/item/device/binoculars/fire_support/proc/bino_checks(atom/target, mob/living/user)
 	if(!mode)
-		balloon_alert_to_viewers("Select a mode!")
+		balloon_alert_to_viewers("select a mode!")
 		return FALSE
 	if(!(mode.fire_support_flags & FIRESUPPORT_AVAILABLE))
 		balloon_alert_to_viewers("[mode.name] unavailable")
 		return FALSE
 	if(faction)
 		if(GLOB.fire_support_points[faction] < mode.cost)
-			balloon_alert_to_viewers("Not enough fire support points")
+			balloon_alert_to_viewers("not enough fire support points")
 			return FALSE
 	if(mode.cooldown_timer)
-		balloon_alert_to_viewers("On cooldown")
+		balloon_alert_to_viewers("on cooldown")
 		return FALSE
 	var/area/targ_area = get_area(target)
 	if(targ_area.ceiling >= CEILING_UNDERGROUND_BLOCK_CAS)

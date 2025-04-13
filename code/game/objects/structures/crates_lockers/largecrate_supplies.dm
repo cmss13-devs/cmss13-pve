@@ -226,7 +226,7 @@
 		/obj/item/storage/box/guncase/heavy/fuel = 1,
 		/obj/item/ammo_magazine/sentry = 2,
 		/obj/item/ammo_box/magazine/m49a/a19/pve = 1,
-		)
+	)
 
 /obj/structure/largecrate/supply/ammo/supply_drop_upp
 	icon_state = "secure_crate_strapped"
@@ -238,7 +238,7 @@
 		/obj/item/ammo_magazine/shotgun/slug/heavy = 2,
 		/obj/item/storage/box/guncase/heavy/uppfuel = 1,
 		/obj/item/ammo_magazine/sentry/upp = 2,
-		)
+	)
 
 /obj/structure/largecrate/supply/explosives
 	name = "explosives supply crate"
