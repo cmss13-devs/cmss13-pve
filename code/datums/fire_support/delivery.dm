@@ -6,7 +6,12 @@
 	scatter_range = 1
 	icon_state = "ammo"
 	initiate_chat_message = "TARGET ACQUIRED AMMO CRATE LAUNCHING."
-	initiate_screen_message = list("Make sure to tip!")
+	initiate_screen_message = list(
+		"Make sure to tip!",
+		"Your ammo's here, enjoy.",
+		"Watch your head, crate dropping.",
+		"Dropping it.. now.",
+	)
 	delay_to_impact = 2 SECONDS
 	start_visual = null
 	initiate_visual = /obj/effect/temp_visual/dropship_hover
@@ -57,7 +62,12 @@
 	scatter_range = 1
 	icon_state = "sentry"
 	initiate_chat_message = "TARGET ACQUIRED SENTRY POD LAUNCHING."
-	initiate_screen_message = list("Make sure to tip!")
+	initiate_screen_message = list(
+		"Sending you a little friend.",
+		"Watch your head, sentry dropping.",
+		"Take good care of him, would you?.",
+		"Sentry, on the way."
+	)
 	delay_to_impact = 2 SECONDS
 	start_visual = null
 	initiate_visual = /obj/effect/temp_visual/dropship_hover

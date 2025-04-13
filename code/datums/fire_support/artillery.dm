@@ -13,7 +13,8 @@
 	initiate_screen_message = list(
 		"Artillery brings dignity to what would otherwise be an ugly brawl.",
 		"The world consists of 2 types of people, artillery men and targets.",
-		"Firing for effect, over."
+		"Firing for effect, over.",
+		"Shells, on the way!",
 	)
 	initiate_title = "Rhino-1"
 	initiate_sound = 'sound/weapons/gun_mortar_travel.ogg'
@@ -154,6 +155,9 @@
 	initiate_chat_message = "COORDINATES CONFIRMED. MLRS BARRAGE INCOMING."
 	initiate_screen_message = list(
 		"At my signal, unleash hell!",
+		"Firing for effect, over.",
+		"Full salvo, on the way!",
+		"Their gonna dance to our tune!",
 	)
 	initiate_title = "Rhino-1"
 	initiate_sound = 'sound/weapons/gun_mortar_travel.ogg'
@@ -180,11 +184,14 @@
 	impact_delay = 0.2 SECONDS
 	visual_impact_delay = 1
 	icon_state = "mlrs"
-	initiate_chat_message = "COORDINATES CONFIRMED. MLRS BARRAGE INCOMING."
+	initiate_chat_message = "COORDINATES CONFIRMED. MLRS CN-20 BARRAGE INCOMING."
+	initiate_title = "Rhino-1"
 	initiate_screen_message = list(
 		"At my signal, unleash hell!",
+		"Firing for effect, over.",
+		"Full salvo, on the way!",
+		"Their gonna dance to our tune!",
 	)
-	initiate_title = "Rhino-1"
 	initiate_sound = 'sound/weapons/gun_mortar_travel.ogg'
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/mlrs_smoke
 	impact_sound = 'sound/weapons/fire_support/rocket_whistle.ogg'

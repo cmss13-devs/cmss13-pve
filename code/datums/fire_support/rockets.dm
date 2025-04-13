@@ -7,11 +7,12 @@
 	impact_quantity = 10
 	icon_state = "rockets"
 	start_visual = /obj/effect/temp_visual/dropship_flyby
-	initiate_chat_message = "TARGET ACQUIRED ROCKET RUN INBOUND."
+	initiate_chat_message = "TARGET ACQUIRED HE ROCKET RUN INBOUND."
 	initiate_screen_message = list(
 		"Rockets hot, incoming!",
 		"Heres a little firework show for you all!",
-		"Salvo sent, watch the spread!"
+		"Salvo sent, watch the spread!",
+		"Flying in hot, rockets inbound!",
 		)
 
 /datum/fire_support/rockets/do_impact(turf/target_turf)
@@ -34,7 +35,6 @@
 	scatter_range = 7
 	impact_quantity = 10
 	initiate_chat_message = "TARGET ACQUIRED INC ROCKET RUN INBOUND."
-	initiate_screen_message = list("Rockets hot, incoming!")
 	start_visual = /obj/effect/temp_visual/dropship_flyby
 
 /datum/fire_support/incendiary_rockets/do_impact(turf/target_turf)

@@ -65,13 +65,6 @@
 	fire_support_type = FIRESUPPORT_TYPE_GUN_UPP
 	portrait_type = "pilot_red"
 	initiate_title = "Pig-1"
-	initiate_screen_message = list(
-		"Target received, gun run inbound",
-		"Lase sighted, sending lead delivery hot and ready",
-		"Im coming in, keep your heads down!",
-		"Finally some targets! Strafe incomin'",
-		"Time to let these guns roar, were inbound.",
-	)
 	start_visual = /obj/effect/temp_visual/dropship_flyby/krokodil
 
 /datum/fire_support/laser
@@ -130,11 +123,4 @@
 	fire_support_type = FIRESUPPORT_TYPE_LASER_UPP
 	portrait_type = "pilot_red"
 	initiate_title = "Pig-1"
-	initiate_screen_message = list(
-		"Target received, laser inbound",
-		"Flash, flash! Don't look up!",
-		"Going to get real hot down there, watch your step.",
-		"Close your eyes or put some goggles on, laser pulsing!",
-		"Lets grill some motherfuckers!",
-	)
 	start_visual = /obj/effect/temp_visual/dropship_flyby/krokodil

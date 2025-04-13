@@ -9,7 +9,8 @@
 	initiate_screen_message = list(
 		"TGP on lase, one out.",
 		"Hope that target's worth it, sending one.",
-		"One big boom, on the way."
+		"One big boom, on the way.",
+		"Missile inbound, keep your heads down.",
 		)
 	initiate_sound = 'sound/effects/IncomingRocket.ogg'
 	start_visual = null
@@ -84,8 +85,7 @@
 	fire_support_type = FIRESUPPORT_TYPE_NERVE_MISSILE_UPP
 	cost = 3
 	icon_state = "nerve_missile"
-	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
-	initiate_screen_message = list("Coordinates confirmed, nerve gas inbound!")
+	initiate_screen_message = list("Nerve gas, inbound!")
 	smoketype = /datum/effect_system/smoke_spread/cn20
 	smoke_duration = 30
 
@@ -101,8 +101,7 @@
 	fire_support_type = FIRESUPPORT_TYPE_LSD_MISSILE_UPP
 	cost = 2
 	icon_state = "lsd_missile"
-	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
-	initiate_screen_message = list("Coordinates confirmed, LSD gas inbound!")
+	initiate_screen_message = list("LSD gas, inbound!")
 	smoketype = /datum/effect_system/smoke_spread/LSD
 	smoke_duration = 30
 
