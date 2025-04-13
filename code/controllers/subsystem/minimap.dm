@@ -1,5 +1,4 @@
 #define CANVAS_COOLDOWN_TIME 10 SECONDS
-#define FLATTEN_MAP_COOLDOWN_TIME 10 SECONDS
 ///A player needs to be unbanned from ALL these roles in order to be able to use the minimap drawing tool
 GLOBAL_LIST_INIT(roles_allowed_minimap_draw, list(JOB_SQUAD_LEADER, JOB_SQUAD_TEAM_LEADER, JOB_SO, JOB_XO, JOB_CO))
 GLOBAL_PROTECT(roles_allowed_minimap_draw)
@@ -139,8 +138,8 @@ SUBSYSTEM_DEF(minimaps)
 	icon_gen.Crop(xmin, ymin, MINIMAP_PIXEL_SIZE + xmin - 1, MINIMAP_PIXEL_SIZE + ymin - 1) //then trim it down also cutting anything unused on the bottom left
 
 	// Determine and assign the offsets
-	minimaps_by_z["[level]"].x_offset = floor((MINIMAP_PIXEL_SIZE - xmax - 1) / MINIMAP_SCALE) - xmin
-	minimaps_by_z["[level]"].y_offset = floor((MINIMAP_PIXEL_SIZE - ymax - 1) / MINIMAP_SCALE) - ymin
+	minimaps_by_z["[level]"].x_offset = floor((MINIMAP_PIXEL_SIZE - xmax - 1) / 2) - xmin
+	minimaps_by_z["[level]"].y_offset = floor((MINIMAP_PIXEL_SIZE - ymax - 1) / 2) - ymin
 	minimaps_by_z["[level]"].x_max = xmax
 	minimaps_by_z["[level]"].y_max = ymax
 
@@ -150,12 +149,12 @@ SUBSYSTEM_DEF(minimaps)
 	minimaps_by_z["[level]"].hud_image = icon_gen //done making the image!
 
 	//lateload icons
-	if(!earlyadds["[level]"])
+	if(!LAZYACCESS(earlyadds, "[level]"))
 		return
 
-	for(var/datum/callback/callback as anything in earlyadds["[level]"])
+	for(var/datum/callback/callback as anything in LAZYACCESS(earlyadds, "[level]"))
 		callback.Invoke()
-	earlyadds["[level]"] = null //then clear them
+	LAZYREMOVE(earlyadds, "[level]")
 
 /**
  * Adds an atom to the processing updators that will have blips drawn on them
@@ -241,15 +240,22 @@ SUBSYSTEM_DEF(minimaps)
 	if(!isatom(target) || !hud_flags || !blip)
 		CRASH("Invalid marker added to subsystem")
 
-	if(!initialized || !(minimaps_by_z["[target.z]"])) //the minimap doesn't exist yet, z level was probably loaded after init
-		for(var/datum/callback/callback as anything in earlyadds["[target.z]"])
+	var/actual_z = target.z
+	if(ismob(target) && target.loc && !isturf(target.loc))
+		actual_z = target.loc.z
+
+	if(!initialized || !(minimaps_by_z["[actual_z]"])) //the minimap doesn't exist yet, z level was probably loaded after init
+		for(var/datum/callback/callback as anything in LAZYACCESS(earlyadds, "[actual_z]"))
 			if(callback.arguments[1] == target)
 				return
-		LAZYADDASSOCLIST(earlyadds, "[target.z]", CALLBACK(src, PROC_REF(add_marker), target, hud_flags, blip))
+		LAZYADDASSOCLIST(earlyadds, "[actual_z]", CALLBACK(src, PROC_REF(add_marker), target, hud_flags, blip))
 		RegisterSignal(target, COMSIG_PARENT_QDELETING, PROC_REF(remove_earlyadd), override = TRUE) //Override required for late z-level loading to prevent hard dels where an atom is initiated during z load, but is qdel'd before it finishes
 		return
 
+
 	var/turf/target_turf = get_turf(target)
+	if(ismob(target) && target.loc && !isturf(target.loc))
+		target_turf = get_turf(target.loc)
 
 	blip.pixel_x = MINIMAP_PIXEL_FROM_WORLD(target_turf.x) + minimaps_by_z["[target_turf.z]"].x_offset + image_x
 	blip.pixel_y = MINIMAP_PIXEL_FROM_WORLD(target_turf.y) + minimaps_by_z["[target_turf.z]"].y_offset + image_y
@@ -271,10 +277,13 @@ SUBSYSTEM_DEF(minimaps)
 /datum/controller/subsystem/minimaps/proc/remove_earlyadd(atom/source)
 	SIGNAL_HANDLER
 	remove_marker(source)
-	for(var/datum/callback/callback in earlyadds["[source.z]"])
+	var/actual_z = source.z
+	if(ismob(source) && source.loc && !isturf(source.loc))
+		actual_z = source.loc.z
+	for(var/datum/callback/callback in LAZYACCESS(earlyadds, "[actual_z]"))
 		if(callback.arguments[1] != source)
 			continue
-		earlyadds["[source.z]"] -= callback
+		earlyadds["[actual_z]"] -= callback
 		UnregisterSignal(source, COMSIG_PARENT_QDELETING)
 		return
 
@@ -516,11 +525,14 @@ SUBSYSTEM_DEF(minimaps)
 /atom/movable/screen/minimap/proc/on_click(datum/source, atom/A, params)
 	SIGNAL_HANDLER
 	var/list/modifiers = params2list(params)
+	// Only shift click because otherwise this conflicts with clicking on other stuff
+	if(!modifiers[SHIFT_CLICK])
+		return
 	// we only care about absolute coords because the map is fixed to 1,1 so no client stuff
 	var/list/pixel_coords = params2screenpixel(modifiers["screen-loc"])
 	var/zlevel = SSminimaps.updators_by_datum[src].ztarget
-	var/x = (pixel_coords[1] - SSminimaps.minimaps_by_z["[zlevel]"].x_offset + cur_x_shift)  / 2
-	var/y = (pixel_coords[2] - SSminimaps.minimaps_by_z["[zlevel]"].y_offset + cur_y_shift)  / 2
+	var/x = (pixel_coords[1] - SSminimaps.minimaps_by_z["[zlevel]"].x_offset + cur_x_shift)  / MINIMAP_SCALE
+	var/y = (pixel_coords[2] - SSminimaps.minimaps_by_z["[zlevel]"].y_offset + cur_y_shift)  / MINIMAP_SCALE
 	var/c_x = clamp(CEILING(x, 1), 1, world.maxx)
 	var/c_y = clamp(CEILING(y, 1), 1, world.maxy)
 	choices_by_mob[source] = list(c_x, c_y)
@@ -531,7 +543,7 @@ SUBSYSTEM_DEF(minimaps)
 	icon = 'icons/ui_icons/map_blips.dmi'
 	icon_state = "locator"
 	plane = TACMAP_PLANE
-	layer = INTRO_LAYER // 1 above minimap
+	layer = INTRO_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	var/atom/movable/screen/minimap/current_map
 	var/currently_tracking
@@ -553,8 +565,8 @@ SUBSYSTEM_DEF(minimaps)
 	SIGNAL_HANDLER
 	link_locator()
 	var/turf/mover_turf = get_turf(currently_tracking)
-	var/x_coord = mover_turf.x * 2
-	var/y_coord = mover_turf.y * 2
+	var/x_coord = mover_turf.x * MINIMAP_SCALE
+	var/y_coord = mover_turf.y * MINIMAP_SCALE
 	x_coord += SSminimaps.minimaps_by_z["[mover_turf.z]"].x_offset - shift_x
 	y_coord += SSminimaps.minimaps_by_z["[mover_turf.z]"].y_offset - shift_y
 	// + 1 because tiles start at 1
@@ -824,9 +836,9 @@ SUBSYSTEM_DEF(minimaps)
 	desc = "Close the minimap"
 	icon = 'icons/ui_icons/minimap_buttons.dmi'
 	icon_state = "close"
-	layer = TACMAP_LAYER
-	plane = TACMAP_PLANE
 	screen_loc = "RIGHT,TOP"
+	plane = TACMAP_PLANE
+	layer = INTRO_LAYER
 	/// what minimap table is linked to this button
 	var/obj/structure/machinery/prop/almayer/CICmap/linked_map
 
@@ -855,9 +867,9 @@ SUBSYSTEM_DEF(minimaps)
 	desc = "Stop the scrolling of the minimap(shared)"
 	icon = 'icons/ui_icons/minimap_buttons.dmi'
 	icon_state = "scroll"
-	layer = TACMAP_LAYER
-	plane = TACMAP_PLANE
 	screen_loc = "CENTER,TOP"
+	plane = TACMAP_PLANE
+	layer = INTRO_LAYER
 	/// what minimap screen is linked to this button
 	var/atom/movable/screen/minimap/linked_map
 
@@ -917,8 +929,8 @@ SUBSYSTEM_DEF(minimaps)
 
 ///Setter for the offsets of the x and y of drawing based on the input z, and the drawn_image
 /atom/movable/screen/minimap_tool/proc/set_zlevel(zlevel, minimap_flag)
-	x_offset = SSminimaps.minimaps_by_z["[zlevel]"].x_offset
-	y_offset = SSminimaps.minimaps_by_z["[zlevel]"].y_offset
+	x_offset = SSminimaps.minimaps_by_z["[zlevel]"] ? SSminimaps.minimaps_by_z["[zlevel]"].x_offset : 0
+	y_offset = SSminimaps.minimaps_by_z["[zlevel]"] ? SSminimaps.minimaps_by_z["[zlevel]"].y_offset : 0
 	drawn_image = SSminimaps.get_drawing_image(zlevel, minimap_flag)
 
 /atom/movable/screen/minimap_tool/MouseEntered(location, control, params)
@@ -1058,22 +1070,22 @@ SUBSYSTEM_DEF(minimaps)
 	drawn_image.icon = mona_lisa
 
 /atom/movable/screen/minimap_tool/draw_tool/red
-	screen_loc = "16,14"
+	screen_loc = "15,14"
 	active_mouse_icon = 'icons/ui_icons/minimap_mouse/draw_red.dmi'
 	color = MINIMAP_DRAWING_RED
 
 /atom/movable/screen/minimap_tool/draw_tool/yellow
-	screen_loc = "16,13"
+	screen_loc = "15,13"
 	active_mouse_icon = 'icons/ui_icons/minimap_mouse/draw_yellow.dmi'
 	color = MINIMAP_DRAWING_YELLOW
 
 /atom/movable/screen/minimap_tool/draw_tool/purple
-	screen_loc = "16,12"
+	screen_loc = "15,12"
 	active_mouse_icon = 'icons/ui_icons/minimap_mouse/draw_purple.dmi'
 	color = MINIMAP_DRAWING_PURPLE
 
 /atom/movable/screen/minimap_tool/draw_tool/blue
-	screen_loc = "16,11"
+	screen_loc = "15,11"
 	active_mouse_icon = 'icons/ui_icons/minimap_mouse/draw_blue.dmi'
 	color = MINIMAP_DRAWING_BLUE
 
@@ -1081,14 +1093,14 @@ SUBSYSTEM_DEF(minimaps)
 	icon_state = "erase"
 	desc = "Drag to erase a line, middle click to erase a dot. Middle click this button to unselect."
 	active_mouse_icon = 'icons/ui_icons/minimap_mouse/draw_erase.dmi'
-	screen_loc = "16,10"
+	screen_loc = "15,10"
 	color = null
 
 /atom/movable/screen/minimap_tool/label
 	icon_state = "label"
 	desc = "Click to place a label. Middle click a label to remove it. Middle click this button to remove all labels."
 	active_mouse_icon = 'icons/ui_icons/minimap_mouse/label.dmi'
-	screen_loc = "16,8"
+	screen_loc = "15,9"
 	/// List of turfs that have labels attached to them. kept around so it can be cleared
 	var/list/turf/labelled_turfs = list()
 
@@ -1115,8 +1127,8 @@ SUBSYSTEM_DEF(minimaps)
 	// want to also cancel the click if they click src and I cant be bothered to make it even more generic rn
 	var/list/modifiers = params2list(params)
 	var/list/pixel_coords = params2screenpixel(modifiers["screen-loc"])
-	var/x = (pixel_coords[1] - x_offset + linked_map.cur_x_shift) / 2
-	var/y = (pixel_coords[2] - y_offset + linked_map.cur_y_shift) / 2
+	var/x = (pixel_coords[1] - x_offset + linked_map.cur_x_shift) / MINIMAP_SCALE
+	var/y = (pixel_coords[2] - y_offset + linked_map.cur_y_shift) / MINIMAP_SCALE
 	var/c_x = clamp(CEILING(x, 1), 1, world.maxx)
 	var/c_y = clamp(CEILING(y, 1), 1, world.maxy)
 	var/turf/target = locate(c_x, c_y, zlevel)
@@ -1154,7 +1166,7 @@ SUBSYSTEM_DEF(minimaps)
 /atom/movable/screen/minimap_tool/clear
 	icon_state = "clear"
 	desc = "Remove all current labels and drawings."
-	screen_loc = "16,9"
+	screen_loc = "15,8"
 
 /atom/movable/screen/minimap_tool/clear/clicked(location, list/modifiers)
 	drawn_image.icon = icon('icons/ui_icons/minimap.dmi')
