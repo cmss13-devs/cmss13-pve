@@ -658,16 +658,18 @@
 /area/golden_arrow/supply)
 "gX" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/storage/box/nade_box{
+/obj/item/ammo_box/magazine/nade_box{
 	pixel_x = 2;
-	pixel_y = -4
+	pixel_y = -4;
+	layer = 3.02
 	},
 /obj/structure/machinery/power/apc/almayer/north{
 	cell_type = /obj/item/cell/hyper
 	},
-/obj/item/storage/box/nade_box{
+/obj/item/ammo_box/magazine/nade_box{
 	pixel_x = -9;
-	pixel_y = -4
+	pixel_y = -4;
+	layer = 3.02
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
@@ -2477,8 +2479,8 @@
 /area/golden_arrow/squad_one)
 "BY" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/m94/signal,
-/obj/item/storage/box/m94/signal{
+/obj/item/storage/box/flare/signal,
+/obj/item/storage/box/flare/signal{
 	pixel_x = 5;
 	pixel_y = 5
 	},
