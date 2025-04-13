@@ -466,7 +466,7 @@ SUBSYSTEM_DEF(minimaps)
 		if(findtext(screen_loc, "1") != 1) // We're detecting the first position matching, not the 1 there
 			CRASH("Shifting a minimap screen_loc of '[screen_loc]' is not currently implemented!") // Just need to do string manip in process to support it
 	add_filter("border_outline", 1, outline_filter(2, COLOR_BLACK))
-	add_filter("map_glow", 2, drop_shadow_filter(x = 0, y = 0, size = 3, offset = 1, color = "#c0f7ff"))
+	add_filter("map_glow", 2, drop_shadow_filter(x = 0, y = 0, size = 2, offset = 0, color = "#c0f7ff"))
 	add_filter("overlay", 3, layering_filter(x = 0, y = 0, icon = 'icons/mob/hud/minimap_overlay.dmi', blend_mode = BLEND_INSET_OVERLAY))
 
 /atom/movable/screen/minimap/process()
