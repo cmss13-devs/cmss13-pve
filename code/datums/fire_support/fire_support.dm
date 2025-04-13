@@ -80,7 +80,7 @@
 		alert_receivers += GLOB.observer_list
 		for(var/mob/mob_receiver in alert_receivers)
 			playsound_client(mob_receiver.client, 'sound/effects/radiostatic.ogg', 35, channel = CHANNEL_ANNOUNCEMENTS)
-			mob_receiver.play_screen_text("<span class='langchat' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(name)]</u></span><br>" + pick(initiate_screen_message), new /atom/movable/screen/text/screen_text/potrait(null, null, initiate_title, 'icons/ui_icons/screen_alert_images.dmi', portrait_type))
+			mob_receiver.play_screen_text("<span class='langchat' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(name)]</u></span><br>" + pick(initiate_screen_message), new /atom/movable/screen/text/screen_text/potrait/faster(null, null, initiate_title, 'icons/ui_icons/screen_alert_images.dmi', portrait_type))
 
 ///Actually begins the fire support attack
 /datum/fire_support/proc/start_fire_support(turf/target_turf)
