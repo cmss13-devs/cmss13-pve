@@ -15,7 +15,7 @@
 	damage = 25
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_1
 	shell_speed = AMMO_SPEED_TIER_2
 	shrapnel_chance = 5
 
@@ -45,7 +45,7 @@
 	name = "airburst shrapnel"
 	icon_state = "buckshot"
 	accurate_range_min = 4
-	flags_ammo_behavior = AMMO_ROCKET|AMMO_STOPPED_BY_COVER //if claymoreest merges it needs to be pronetarget...
+	flags_ammo_behavior = AMMO_ROCKET|AMMO_STOPPED_BY_COVER|AMMO_PRONETARGET
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
