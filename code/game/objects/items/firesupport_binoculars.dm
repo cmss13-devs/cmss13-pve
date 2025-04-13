@@ -167,7 +167,7 @@
 	if(faction)
 		GLOB.fire_support_points[faction] -= mode.cost
 		balloon_alert_to_viewers("[GLOB.fire_support_points[faction]] points left")
-	message_admins("[user] has fired [mode.name] at [target_atom].")
+	message_admins("[user] has fired [mode.name] at [target_atom.x],[target_atom.y],[target_atom.z] to [target_atom] [ADMIN_JMP(target_atom)].")
 	unset_target()
 
 ///Internal bino checks, mainly around firemode
