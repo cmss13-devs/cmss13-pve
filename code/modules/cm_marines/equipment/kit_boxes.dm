@@ -170,6 +170,16 @@
 	new /obj/item/clothing/head/helmet/marine/specialist(src)
 	new /obj/item/clothing/suit/storage/marine/specialist(src)
 
+/obj/item/storage/box/spec/B18/smartgunner
+	name = "\improper B18 heavy smartgunner armor case"
+	desc = "A large case containing the experimental B18 armor platform with additional Smartgun harness integration. Handle with care, it's more expensive than all of your battallion combined.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = "b18"
+
+/obj/item/storage/box/spec/B18/fill_preset_inventory()
+	new /obj/item/clothing/gloves/marine/specialist(src)
+	new /obj/item/clothing/head/helmet/marine/specialist(src)
+	new /obj/item/clothing/suit/storage/marine/specialist/smartgunner(src)
+
 //-----------------SPEC KIT BOX------------------
 //For events/WO, allows the user to choose a specalist kit out of available ones in spec_kit_boxes_left list in gloabl_lists.dm
 
