@@ -40,13 +40,14 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|BYPASSFORINJECTOR|ALLOWINTERNALS
 	flags_inv_hide = HIDETOPHAIR
-	flags_atom = FPRINT|CONDUCT|NO_NAME_OVERRIDE
+	flags_atom = FPRINT|CONDUCT|NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROT
 	flags_heat_protection = BODY_FLAG_HEAD
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROT
 	actions_types = list(/datum/action/item_action/toggle)
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	time_to_unequip = 20
 	time_to_equip = 20
 	var/helmet_color = "white"
@@ -141,6 +142,27 @@
 	siemens_coefficient = 0.1
 	breach_vulnerability = SPACESUIT_BREACH_STANDARD
 	actions_types = list(/datum/action/item_action/spacesuit/toggle_motion_detector)
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/prop/prop_gun,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/belt/gun/type47,
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+		/obj/item/storage/belt/gun/smartpistol,
+		/obj/item/storage/belt/gun/flaregun,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+		/obj/item/storage/belt/gun/m39,
+		/obj/item/storage/belt/utility,
+		/obj/item/storage/belt/gun/utility,
+	)
 	var/obj/item/device/motiondetector/spacesuit/MD
 
 /obj/item/clothing/suit/space/pressure/Initialize()
@@ -268,29 +290,9 @@
 	desc = "A heavy, bulky military-grade space suit utilized by the United States Colonial Marines and a few other American or UA organizations."
 	item_state = "pressure_uscm"
 	icon_state = "pressure_uscm"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/prop/prop_gun,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/storage/bible,
-		/obj/item/attachable/bayonet,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/storage/large_holster/machete,
-		/obj/item/storage/belt/gun/type47,
-		/obj/item/storage/belt/gun/m4a3,
-		/obj/item/storage/belt/gun/m44,
-		/obj/item/storage/belt/gun/smartpistol,
-		/obj/item/storage/belt/gun/flaregun,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-		/obj/item/storage/belt/gun/m39,
-	)
 	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS|PROTECTFROMWEATHER
@@ -306,35 +308,16 @@
 	item_state = "pressure_upp"
 	icon_state = "pressure_upp"
 	helmet_color = "upp"
+	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
 
 /obj/item/clothing/suit/space/pressure/upp
 	name = "\improper UPPAC Sokol-KV2 pressure suit"
 	desc = "A heavy, bulky military-grade space suit utilized by the Union of Progressive Peoples Armed Collective and a few other UPP organizations."
 	item_state = "pressure_upp"
 	icon_state = "pressure_upp"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/prop/prop_gun,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/storage/bible,
-		/obj/item/attachable/bayonet,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/storage/large_holster/machete,
-		/obj/item/storage/belt/gun/type47,
-		/obj/item/storage/belt/gun/m4a3,
-		/obj/item/storage/belt/gun/m44,
-		/obj/item/storage/belt/gun/smartpistol,
-		/obj/item/storage/belt/gun/flaregun,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-		/obj/item/storage/belt/gun/m39,
-	)
 	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS|PROTECTFROMWEATHER
