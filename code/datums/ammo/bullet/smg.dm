@@ -136,6 +136,7 @@
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_6
 	accuracy = HIT_ACCURACY_TIER_2
+	shell_casing = /obj/item/ammo_casing
 
 // less damage than the m39, but better falloff, range, and AP
 
@@ -147,6 +148,7 @@
 	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_5
+	shell_casing = /obj/item/ammo_casing
 
 /datum/ammo/bullet/smg/pps43
 	name = "simple submachinegun bullet"
@@ -156,3 +158,4 @@
 	penetration = -ARMOR_PENETRATION_TIER_4
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_6
+	shell_casing = /obj/item/ammo_casing
