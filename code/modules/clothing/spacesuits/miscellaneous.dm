@@ -25,7 +25,7 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
-	light_range = 6
+	light_range = 5
 	light_power = 0.8
 	item_state = "pressure_white"
 	icon_state = "pressure_white"
@@ -54,10 +54,18 @@
 	var/toggleable = TRUE
 	var/can_be_broken = TRUE
 	var/breaking_sound = 'sound/handling/click_2.ogg'
+	var/atom/movable/marine_light/light_holder
+	light
+
 
 /obj/item/clothing/head/helmet/marine/pressure/Initialize()
 	. = ..()
 	update_icon()
+	light_holder = new(src)
+
+/obj/item/clothing/head/helmet/marine/pressure/Destroy()
+	QDEL_NULL(light_holder)
+	return ..()
 
 /obj/item/clothing/head/helmet/marine/pressure/update_icon()
 	. = ..()
@@ -86,8 +94,14 @@
 	. = ..()
 	if(. != CHECKS_PASSED)
 		return
-
+	set_light_range(0)
+	set_light_power(0)
 	set_light_on(toggle_on)
+	light_holder.set_light_flags(LIGHT_ATTACHED)
+	light_holder.set_light_range(initial(light_range))
+	light_holder.set_light_power(initial(light_power))
+	light_holder.set_light_on(light_on)
+	light_holder.set_light_color(light_color)
 
 	update_icon()
 
@@ -309,6 +323,9 @@
 	icon_state = "pressure_upp"
 	helmet_color = "upp"
 	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
+	light_color = COLOR_VIVID_RED
+	light_power = 1.3
+	light_range = 5
 
 /obj/item/clothing/suit/space/pressure/upp
 	name = "\improper UPPAC Sokol-KV2 pressure suit"
