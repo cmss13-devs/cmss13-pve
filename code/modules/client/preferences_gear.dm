@@ -916,7 +916,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/plush/gnarp_alt
 	display_name = "Gnarp plush (Alt)"
-	path = /obj/item/toy/plush/gnarp_alt
+	path = /obj/item/toy/plush/gnarp/alt
 
 /datum/gear/plush/therapy
 	display_name = "Therapy plush"
