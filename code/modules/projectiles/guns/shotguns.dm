@@ -572,6 +572,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 	if (current_mag.chamber_closed)
 		playsound(user, break_sound, 25, 1)
+		eject_casing()
 	else
 		playsound(user, seal_sound, 25, 1)
 
@@ -1117,6 +1118,8 @@ can cause issues with ammo types getting mixed up during the burst.
 	ready_shotgun_tube()
 
 	playsound(user, pump_sound, 10, 1)
+	eject_casing()
+
 	recent_pump = world.time
 	if (in_chamber)
 		pumped = TRUE
