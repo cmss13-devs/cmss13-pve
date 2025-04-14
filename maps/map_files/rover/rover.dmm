@@ -338,7 +338,7 @@
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/leader/forecon,
 /obj/effect/landmark/late_join/forecon,
-/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/forecon,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aK" = (
@@ -388,6 +388,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/squad_one)
+"aR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/lower_cargo)
 "aS" = (
 /obj/structure/sign/safety/elevator{
 	pixel_x = 13;
@@ -401,6 +408,10 @@
 	icon_state = "NE-out";
 	pixel_y = 1;
 	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -712,7 +723,12 @@
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/hangar)
 "bC" = (
-/obj/structure/largecrate/random/case/double,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/ladder{
+	id = "cargobay"
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "bD" = (
@@ -1176,13 +1192,6 @@
 	},
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/supply)
-"cG" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/largecrate/random/barrel/true_random,
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/lower_cargo)
 "cH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -1197,10 +1206,10 @@
 /area/golden_arrow/hangar)
 "cJ" = (
 /obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
+	icon_state = "S";
+	layer = 3.3
 	},
-/obj/structure/largecrate/random/case/double,
-/turf/open/floor/almayer/edge/smooth/west,
+/turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "cK" = (
 /obj/structure/machinery/landinglight/ds1{
@@ -1212,13 +1221,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"cL" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/largecrate/random/barrel/true_random,
-/turf/open/floor/almayer,
-/area/golden_arrow/lower_cargo)
 "cM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1293,7 +1295,11 @@
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/lower_cargo)
 "cT" = (
-/turf/open/floor/plating,
+/obj/structure/ladder{
+	id = "cargobay";
+	height = -1
+	},
+/turf/open/floor/almayer/pod_landing_floor,
 /area/golden_arrow/lower_cargo)
 "cU" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
@@ -1332,6 +1338,21 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
+"cZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"da" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/ashtray/plastic{
+	pixel_x = -9;
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/squad_one)
 "dc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1420,7 +1441,7 @@
 /obj/item/rappel_harness/extract/cyclone,
 /obj/item/rappel_harness/extract/cyclone,
 /obj/structure/closet/crate/green{
-	name = "paradrop harness crate"
+	name = "retrieval harness crate"
 	},
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
@@ -1625,6 +1646,9 @@
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
 	pixel_y = -4
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8
 	},
 /turf/open/floor/almayer/sterile_green_corner,
 /area/golden_arrow/medical)
@@ -2068,7 +2092,6 @@
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	req_access = list()
 	},
-/obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/golden_arrow/medical)
 "jD" = (
@@ -2599,7 +2622,7 @@
 "oM" = (
 /obj/structure/machinery/door_control/brbutton{
 	pixel_y = 28;
-	id = "vehiclebay2";
+	id = "vehiclebay";
 	name = "vehicle bay blast door control"
 	},
 /obj/structure/surface/table/almayer,
@@ -2607,10 +2630,6 @@
 /area/golden_arrow/hangar)
 "oN" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/ashtray/plastic{
-	pixel_x = 8;
-	pixel_y = -3
-	},
 /obj/item/reagent_container/food/snacks/resin_fruit{
 	desc = "Never let Joes cook alien cuisine. Eugh.";
 	name = "arcturian curry"
@@ -2761,7 +2780,7 @@
 	pixel_x = -16;
 	pixel_y = 6
 	},
-/obj/structure/sign/safety/two{
+/obj/structure/sign/safety/one{
 	pixel_x = -16;
 	pixel_y = -6
 	},
@@ -2862,7 +2881,7 @@
 	pixel_x = -16;
 	pixel_y = 6
 	},
-/obj/structure/sign/safety/one{
+/obj/structure/sign/safety/two{
 	pixel_x = -16;
 	pixel_y = -6
 	},
@@ -3221,7 +3240,7 @@
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join/forecon,
 /obj/effect/landmark/start/marine/smartgunner/forecon,
-/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/forecon,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "tk" = (
@@ -3324,12 +3343,12 @@
 	pixel_x = 1
 	},
 /obj/effect/landmark/start/marine/smartgunner/alpha,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/smartgunner/forecon,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	layer = 3.3
 	},
+/obj/effect/landmark/late_join/forecon,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "ui" = (
@@ -4037,8 +4056,8 @@
 "At" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	name = "\improper Vehicle Bay Two Blast Door";
-	id = "vehiclebay2"
+	name = "\improper Vehicle Bay Blast Door";
+	id = "vehiclebay"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
@@ -4439,8 +4458,8 @@
 "Et" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	dir = 4;
-	name = "\improper Vehicle Bay Two Blast Door";
-	id = "vehiclebay2"
+	name = "\improper Vehicle Bay Blast Door";
+	id = "vehiclebay"
 	},
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/almayer/test_floor4,
@@ -5159,6 +5178,7 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
+/obj/structure/flora/pottedplant/random,
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "Kt" = (
@@ -5183,11 +5203,6 @@
 	density = 0;
 	layer = 3.2;
 	pixel_y = 16
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.7
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -5889,6 +5904,11 @@
 	layer = 3.2;
 	pixel_y = 16
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "Rm" = (
@@ -6087,7 +6107,7 @@
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/forecon,
 /obj/effect/landmark/late_join/forecon,
-/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/forecon,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "Tj" = (
@@ -6839,7 +6859,7 @@
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/forecon,
 /obj/effect/landmark/late_join/forecon,
-/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/forecon,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "Zl" = (
@@ -10173,7 +10193,7 @@ bi
 bh
 bc
 bC
-YB
+cZ
 lM
 pi
 qh
@@ -14740,7 +14760,7 @@ LH
 SZ
 so
 oN
-so
+da
 Zt
 Fl
 Pm
@@ -15583,10 +15603,10 @@ aN
 aK
 az
 cT
-ae
+ci
 cJ
-cG
-cf
+co
+co
 cw
 co
 ch
@@ -15686,9 +15706,9 @@ aN
 ax
 ae
 ae
-cL
+cJ
 cu
-aO
+cu
 cx
 cp
 ci
@@ -15788,7 +15808,7 @@ aN
 cW
 cU
 cO
-cC
+aR
 cC
 cC
 cy
