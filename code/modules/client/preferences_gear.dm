@@ -910,6 +910,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Carp plush"
 	path = /obj/item/toy/plush/carp
 
+/datum/gear/plush/gnarp
+	display_name = "Gnarp plush"
+	path = /obj/item/toy/plush/gnarp
+
+/datum/gear/plush/gnarp_alt
+	display_name = "Gnarp plush (Alt)"
+	path = /obj/item/toy/plush/gnarp_alt
+
 /datum/gear/plush/therapy
 	display_name = "Therapy plush"
 	path = /obj/item/toy/plush/therapy
