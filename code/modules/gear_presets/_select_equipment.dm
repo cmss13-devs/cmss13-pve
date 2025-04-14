@@ -700,7 +700,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/tool/hatchet = null,
 		/obj/item/tool/hatchet = null,
 		/obj/item/tool/hatchet = null,
-		/obj/item/storage/box/MRE = null,
+		/obj/item/storage/box/mre = null,
 		/obj/item/storage/box/handcuffs = null,
 		/obj/item/storage/pill_bottle/happy = null,
 		/obj/item/weapon/twohanded/fireaxe = null,
@@ -946,7 +946,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/self_setting(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/proc/add_ice_colony_survivor_equipment(mob/living/carbon/human/new_human)
 	if((SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD]) && (SSmapping.configs[GROUND_MAP].map_name != MAP_CORSAT))
@@ -1042,7 +1042,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 		if(0)
 			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/molotov(new_human), WEAR_IN_BACK)
 		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/nailgun(new_human), WEAR_IN_BACK)
 		if(3)
@@ -1478,12 +1478,16 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/green, WEAR_IN_HELMET)
 
 /datum/equipment_preset/proc/add_combat_gloves(mob/living/carbon/human/new_human)
-	var/add_combat_gloves = rand(1,4)
+	var/add_combat_gloves = rand(1,5)
 	switch(add_combat_gloves)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/fingerless, WEAR_HANDS)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown/fingerless, WEAR_HANDS)
 
 /datum/equipment_preset/proc/add_helmet_cigarettes(mob/living/carbon/human/new_human)
 	var/add_helmet_cigarettes = rand(1,10)
