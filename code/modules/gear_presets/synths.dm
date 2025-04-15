@@ -100,9 +100,9 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/synth/uscm/usasf
+/datum/equipment_preset/synth/usasf
 	name = "USASF Synthetic"
-	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_NAVY
 	faction_group = FACTION_LIST_MARINE
 	idtype = /obj/item/card/id/gold
@@ -110,7 +110,7 @@
 	rank = "Synthetic"
 	role_comm_title = "USASF Syn"
 
-/datum/equipment_preset/synth/uscm/usasf/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/usasf/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/industrial
@@ -378,7 +378,7 @@
 		WEAR_FACE = /obj/item/clothing/mask/tornscarf,
 		WEAR_BODY = /obj/item/clothing/under/rank/synthetic/utility,
 		WEAR_BACK = /obj/item/storage/backpack/lightpack/five_slot,
-		WEAR_IN_BACK = /obj/item/storage/box/m94,
+		WEAR_IN_BACK = /obj/item/storage/box/flare,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/windbreaker/windbreaker_covenant,
 		WEAR_IN_JACKET = /obj/item/device/binoculars,
 		WEAR_WAIST = /obj/item/storage/backpack/general_belt,
@@ -427,7 +427,7 @@
 		WEAR_HEAD = /obj/item/clothing/head/cmcap,
 		WEAR_BODY = /obj/item/clothing/under/rank/synthetic/utility/yellow,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/norm,
-		WEAR_IN_BACK = /obj/item/storage/box/m94,
+		WEAR_IN_BACK = /obj/item/storage/box/flare,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest,
 		WEAR_IN_JACKET = /obj/item/device/binoculars,
 		WEAR_WAIST = /obj/item/storage/backpack/general_belt,

@@ -156,11 +156,11 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
 "adl" = (
-/obj/item/storage/box/MRE{
+/obj/item/storage/box/mre{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/storage/box/MRE{
+/obj/item/storage/box/mre{
 	pixel_x = -1;
 	pixel_y = -6
 	},
@@ -41133,7 +41133,6 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/engineering)
 "ttf" = (
-/obj/effect/landmark/corpsespawner/forecon_spotter,
 /obj/item/weapon/gun/rifle/m41a{
 	current_mag = null
 	},

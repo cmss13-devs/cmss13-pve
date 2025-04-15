@@ -428,7 +428,7 @@
 	icon_state = "stamp-intaff"
 
 /obj/item/tool/stamp/weyyu
-	name = "WY rubber stamp"
+	name = "W-Y rubber stamp"
 	icon_state = "stamp-weyyu"
 
 /obj/item/tool/stamp/uscm
