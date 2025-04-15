@@ -371,8 +371,8 @@
 	map_specific_decoration = TRUE
 	indestructible = 1
 	fire_sound = 'sound/weapons/gun_xm99.ogg'
-	reload_sound = 'sound/weapons/handling/gun_xm99_reload.ogg'
-	unload_sound = 'sound/weapons/handling/gun_xm99_unload.ogg'
+	reload_sound = 'sound/weapons/handling/nsg23_reload.ogg'
+	unload_sound = 'sound/weapons/handling/nsg23_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/plasma
 	force = 12
 	wield_delay = WIELD_DELAY_SLOW
@@ -416,10 +416,11 @@
 	var/obj/item/ammo_magazine/plasma/cell = new current_mag.type()
 	if(remaining_rounds <= 0)
 		cell.current_rounds = 0
+		user.put_in_hands(cell)
 	else
 		cell.current_rounds = remaining_rounds
 		user.put_in_hands(cell)
-		cell.update_icon()
+	cell.update_icon()
 
 /obj/item/weapon/gun/XM99/reload(mob/user, obj/item/ammo_magazine/plasma)
 	if(!plasma || !istype(plasma) || !istype(src, plasma.gun_type))
@@ -436,7 +437,7 @@
 
 	else
 		to_chat(user, SPAN_NOTICE("You begin reloading [src]. Hold still..."))
-		if(do_after(user, 10, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+		if(do_after(user, 20, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 			user.drop_inv_item_on_ground(plasma)
 			current_mag = plasma
 			plasma.forceMove(src)
@@ -453,18 +454,18 @@
 	if(user && !current_mag)
 		to_chat(user, SPAN_WARNING("[src] is already empty!"))
 		return
-	if(user && current_mag)
-		to_chat(user, SPAN_NOTICE("You begin unloading [src]. Hold still..."))
-		if(do_after(user,current_mag.reload_delay, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
-			playsound(user, unload_sound, 25, 1)
-			if(current_mag.current_rounds > 0)
-				user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src]."),
-				SPAN_NOTICE("You unload [current_mag] from [src]."))
-				make_battery_drum(user, current_mag.current_rounds)
-			else
-				user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src] and discards it."),
-				SPAN_NOTICE("You unload the spent [current_mag] from [src] and toss it away."))
-			current_mag = null
+	if(user && (current_mag != null))
+		to_chat(user, SPAN_NOTICE("You unload [src]."))
+		playsound(user, unload_sound, 25, 1)
+		if(current_mag.current_rounds > 0)
+			user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src]."),
+			SPAN_NOTICE("You unload [current_mag] from [src]."))
+			make_battery_drum(user, current_mag.current_rounds)
+		if(current_mag.current_rounds <= 0)
+			user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src]."),
+			SPAN_NOTICE("You unload [current_mag] from [src]."))
+			make_battery_drum(user, current_mag.current_rounds)
+		current_mag = null
 		update_icon()
 
 /obj/item/weapon/gun/XM99/set_gun_attachment_offsets()
@@ -490,6 +491,7 @@
 
 	var/datum/beam/plasma_beam
 	if(!current_mag)
+		click_empty(user)
 		return
 	if(current_mag.current_rounds <= 0)
 		return
