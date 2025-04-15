@@ -148,8 +148,8 @@
 /obj/docking_port/mobile/marine_dropship/somme
 	name = "Somme"
 	id = DROPSHIP_SOMME
-	width = 11
-	height = 21
+	width = 9
+	height = 18
 
 	dwidth = 4
 	dheight = 8

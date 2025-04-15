@@ -904,7 +904,7 @@
 	shuttle_tag = DROPSHIP_MIDWAY
 
 /obj/structure/machinery/computer/dropship_weapons/somme
-	icon = 'icons/obj/structures/machinery/dropship_ud4_props.dmi'
+	icon = 'icons/turf/dropship5-2.dmi'
 	icon_state = "weaponcontrols"
 	name = "\improper 'Somme' weapons controls"
 	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
