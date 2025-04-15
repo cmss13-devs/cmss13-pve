@@ -754,6 +754,8 @@
 	var/disarmed = FALSE
 	var/explosion_power = 75
 	var/explosion_falloff = 25
+	base_disarm_time = 30
+	base_disarm_fail_chance = 0
 	blast_tolerance = 0 //always goes off.
 	has_tripwire = FALSE
 	detonation_flavor = "step on it!"
@@ -809,14 +811,14 @@
 		return
 
 //guaranteed disarming.
-/obj/item/explosive/mine/attackby(obj/item/W, mob/user)
+/obj/item/explosive/mine/tn13/attackby(obj/item/W, mob/user)
 	if(HAS_TRAIT(W, TRAIT_TOOL_MULTITOOL))
 		if(active)
 			if(user.action_busy)
 				return
 			if(user.faction == iff_signal)
-				user.visible_message(SPAN_NOTICE("[user] starts disarming [src]."), \
-				SPAN_NOTICE("You start disarming [src]."))
+				user.visible_message(SPAN_NOTICE("[user] starts deactivating [src]."), \
+				SPAN_NOTICE("You start deactivating [src]."))
 			else
 				user.visible_message(SPAN_NOTICE("[user] starts working with \the [src], trying to disarm it."), \
 				SPAN_NOTICE("You start disarming [src], opening the case with care."))
