@@ -384,7 +384,7 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/pve,
 	)
-	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
 	flags_item = TWOHANDED
 
 	var/obj/effect/ebeam/plasma_beam_type = /obj/effect/ebeam/laser/plasma
@@ -399,6 +399,8 @@
 	return ready_in_chamber()
 
 /obj/item/weapon/gun/XM99/reload_into_chamber(mob/user)
+	if(current_mag.current_rounds <= 0)
+		playsound(src, empty_sound, 25, 1)
 	return TRUE
 
 /obj/item/weapon/gun/XM99/delete_bullet(obj/projectile/projectile_to_fire, refund = 0)
