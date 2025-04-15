@@ -332,3 +332,16 @@
 
 #undef DOUBLE_BAND
 #undef TRIPLE_BAND
+
+
+/obj/structure/dropship_tail
+	name = "UD-4 dropship"
+	desc = "The tail of the UD-4 Cheyenne dropship, your trip on or off whatever world you find yourself on."
+	icon = 'icons/turf/dropship5-2.dmi'
+	icon_state = "dropship_tail"
+	anchored = TRUE
+	density = FALSE
+	unslashable = TRUE
+	layer = ABOVE_MOB_LAYER
+	pixel_x = -176
+	pixel_y = -176

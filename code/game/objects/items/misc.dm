@@ -425,5 +425,8 @@
 /obj/item/rappel_harness/extract/normandy
 	shuttle_id = DROPSHIP_NORMANDY
 
+/obj/item/rappel_harness/extract/somme
+	shuttle_id = DROPSHIP_SOMME
+
 /obj/item/rappel_harness/extract/nauk
 	shuttle_id = DROPSHIP_UPP

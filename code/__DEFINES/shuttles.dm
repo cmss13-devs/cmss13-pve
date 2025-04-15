@@ -115,6 +115,7 @@
 #define DROPSHIP_MIDWAY "dropship_midway"
 #define DROPSHIP_ALAMO "dropship_alamo"
 #define DROPSHIP_NORMANDY "dropship_normandy"
+#define DROPSHIP_SOMME "dropship_somme"
 #define DROPSHIP_SAIPAN "dropship_saipan"
 #define DROPSHIP_UPP "dropship_upp"
 #define DROPSHIP_CYCLONE "dropship_cyclone"
