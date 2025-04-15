@@ -424,7 +424,7 @@
 		close_browser(src, t1)
 
 	if(href_list["flavor_more"])
-		show_browser(usr, "<BODY><TT>[replacetext(flavor_text, "\n", "<BR>")]</TT></BODY>", name, name, "size=500x200")
+		show_browser(usr, "<BODY><TT>[replacetext(flavor_text, "\n", "<BR>")]</TT></BODY>", name, name, width = 500, height = 200)
 		onclose(usr, "[name]")
 	if(href_list["flavor_change"])
 		update_flavor_text()

@@ -30,3 +30,10 @@
 		/datum/equipment_preset/cmb/marshal = 1,
 		/datum/equipment_preset/cmb/deputy/emergency = 2,
 	)
+
+/datum/human_ai_squad_preset/cmb/uacg
+	name = "UACG, Patrol"
+	desc = "Small Colonial Guard militia patrol armed with M20A rifles and carrying IFAKs containing gauze, ointment, splints and an injector."
+	ai_to_spawn = list(
+		/datum/equipment_preset/colonist/security/guard = 3,
+	)
