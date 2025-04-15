@@ -9,7 +9,7 @@
 
 /obj/item/clothing/shoes/marine/magboots/Initialize()
 	. = ..()
-	//battery = new(src)
+	battery = new(src)
 
 /obj/item/clothing/shoes/marine/magboots/attackby(obj/item/W, mob/user)
 	if(!can_insert_battery(user, W, battery))
