@@ -35,7 +35,7 @@
 
 	gib_chance = 100
 	claw_type = CLAW_TYPE_SHARP
-	pull_multiplier = 0.4 /// Pretty much no pull delay, for those quick drags. EDIT - slight increase to reduce the Soldier "Dance"
+	pull_multiplier = 0.6 /// Pretty much no pull delay, for those quick drags. EDIT - slight increase to reduce the Soldier "Dance"
 
 	acid_blood_damage = 25 /// Strong acid blood. Should be a define in the future.
 	acid_blood_spatter = TRUE /// Testing variable, means that their blood can melt objects in the environment. Primarily barricades.
