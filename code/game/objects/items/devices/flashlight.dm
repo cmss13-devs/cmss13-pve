@@ -643,7 +643,7 @@
 	..()
 
 //Violet (long) Signal Flare
-/obj/item/device/flashlight/flare/signal_blue
+/obj/item/device/flashlight/flare/signal_violet
 	name = "signal flare"
 	desc = "A violet USCM-issue signal flare. The telemetry computer works on chemical reaction that releases smoke and light and thus works only while the flare is burning. This series of flares has an adjusted chemical mix, allowing it to burn longer"
 	icon_state = "cas_flare"
@@ -657,14 +657,14 @@
 	flame_base_tint = "#4100aa"
 	flame_tint = "#b9aacc"
 
-/obj/item/device/flashlight/flare/signal_blue/Initialize()
+/obj/item/device/flashlight/flare/signal_violet/Initialize()
 	. = ..()
 	fuel = rand(560 SECONDS, 600 SECONDS)
 
-/obj/item/device/flashlight/flare/signal_blue/flare_burn_down() // Empty proc to override parent.
+/obj/item/device/flashlight/flare/signal_violet/flare_burn_down() // Empty proc to override parent.
 	return
 
-/obj/item/device/flashlight/flare/signal_blue/attack_self(mob/living/carbon/human/user)
+/obj/item/device/flashlight/flare/signal_violet/attack_self(mob/living/carbon/human/user)
 	if(!istype(user))
 		return
 
@@ -674,7 +674,7 @@
 		faction = user.faction
 		addtimer(CALLBACK(src, PROC_REF(activate_signal), user), 5 SECONDS)
 
-/obj/item/device/flashlight/flare/signal_blue/activate_signal(mob/living/carbon/human/user)
+/obj/item/device/flashlight/flare/signal_violet/activate_signal(mob/living/carbon/human/user)
 	..()
 	if(faction && GLOB.cas_groups[faction])
 		signal = new(src)
@@ -691,7 +691,7 @@
 		log_game("Flare target [src] has been activated by [key_name(user, 1)] at ([target_turf.x], [target_turf.y], [target_turf.z]).")
 		return TRUE
 
-/obj/item/device/flashlight/flare/signal_blue/attack_hand(mob/user)
+/obj/item/device/flashlight/flare/signal_violet/attack_hand(mob/user)
 	if (!user) return
 
 	if(anchored)
@@ -699,14 +699,14 @@
 		return
 	..()
 
-/obj/item/device/flashlight/flare/signal_blue/Destroy()
+/obj/item/device/flashlight/flare/signal_violet/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	if(signal)
 		GLOB.cas_groups[faction].remove_signal(signal)
 		QDEL_NULL(signal)
 	return ..()
 
-/obj/item/device/flashlight/flare/signal_blue/turn_off()
+/obj/item/device/flashlight/flare/signal_violet/turn_off()
 	anchored = FALSE
 	if(signal)
 		GLOB.cas_groups[faction].remove_signal(signal)

@@ -675,16 +675,16 @@
 	else
 		icon_state = "m89"
 
-/obj/item/storage/box/flare/signal_blue
+/obj/item/storage/box/flare/signal_violet
 	name = "\improper M90-B signal flare pack"
 	desc = "A packet of fourteen M90-B Signal Marking Flares."
 	icon_state = "m90"
 
-/obj/item/storage/box/flare/signal_blue/fill_preset_inventory()
+/obj/item/storage/box/flare/signal_violet/fill_preset_inventory()
 	for(var/i = 1 to max_storage_space)
-		new /obj/item/device/flashlight/flare/signal_blue(src)
+		new /obj/item/device/flashlight/flare/signal_violet(src)
 
-/obj/item/storage/box/flare/signal_blue/update_icon()
+/obj/item/storage/box/flare/signal_violet/update_icon()
 	if(!length(contents))
 		icon_state = "m90_e"
 	else
