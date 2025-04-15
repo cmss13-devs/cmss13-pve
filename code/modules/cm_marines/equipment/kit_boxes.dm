@@ -23,14 +23,13 @@
 
 /obj/item/storage/box/spec/rocketeer
 	name = "\improper Rocketeer equipment case"
-	desc = "A large case containing a heavy-caliber anti-tank M5 RPG rocket launcher, M3-T light armor, five 84mm rockets and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing a heavy-caliber anti-tank M5 RPG rocket launcher, M3-T light armor, three spare 84mm rockets, loader equipment and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "demo"
 
 /obj/item/storage/box/spec/rocketeer/fill_preset_inventory()
 	new /obj/item/clothing/head/helmet/marine/M3T(src)
 	new /obj/item/weapon/gun/launcher/rocket/marine(src)
 	new /obj/item/storage/backpack/marine/rocketpack(src)
-	new /obj/item/ammo_magazine/rocket(src)
 	new /obj/item/ammo_magazine/rocket(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/wp(src)
@@ -55,6 +54,7 @@
 	new /obj/item/clothing/head/helmet/marine/M3T(src)
 	new /obj/item/storage/backpack/marine/rocketpack(src)
 	// most the ammo
+	new /obj/item/ammo_magazine/rocket(src)
 	new /obj/item/ammo_magazine/rocket(src)
 	new /obj/item/ammo_magazine/rocket(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
@@ -156,7 +156,7 @@
 
 /obj/item/storage/box/spec/sharp_operator
 	name = "\improper SHARP Operator equipment case"
-	desc = "A large case containing a P9 SHARP rifle, M3-G4 Grenadier armor and helmet, and various pieces of additional equipment.\nDrag this sprite onto yourself to open it up!"
+	desc = "A large case containing a P9 SHARP rifle, a set of blast-resistant armor and helmet, and various pieces of additional equipment.\nDrag this sprite onto yourself to open it up!"
 	kit_overlay = "sharp"
 
 /obj/item/storage/box/spec/sharp_operator/fill_preset_inventory()

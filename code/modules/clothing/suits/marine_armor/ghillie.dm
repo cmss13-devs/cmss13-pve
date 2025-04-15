@@ -79,7 +79,7 @@
 
 	playsound(H.loc, 'sound/effects/cloak_scout_on.ogg', 15, TRUE)
 	anim(H.loc, H, 'icons/mob/mob.dmi', null, "cloak", null, H.dir)
-	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY //No super speed whilst invis, you're moving slow to ensure you stay hidden
+	slowdown = SLOWDOWN_ARMOR_CLOAKED_GHILLIE //No super speed whilst invis, you're moving slow to ensure you stay hidden
 
 /obj/item/clothing/suit/storage/marine/ghillie/proc/deactivate_camouflage(mob/user)
 	SIGNAL_HANDLER

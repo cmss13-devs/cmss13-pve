@@ -692,7 +692,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	has_gamemode_skin = FALSE //same sprite for all gamemode.
 	var/camo_active = FALSE
 	var/full_camo_alpha = FULL_CAMO_ALPHA
-	var/shooting_visibility = FALSE
 	var/incremental_shooting_camo_penalty = 30
 	var/current_camo = FULL_CAMO_ALPHA
 	var/visible_camo_alpha = VISIBLE_CAMO_ALPHA
@@ -765,19 +764,18 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 
 /obj/item/storage/backpack/marine/satchel/scout_cloak/proc/fade_in(mob/user)
-	if(shooting_visibility != FALSE)
-		SIGNAL_HANDLER
-		var/mob/living/carbon/human/H = user
-		if(camo_active)
-			if(current_camo < full_camo_alpha)
-				current_camo = full_camo_alpha
-			current_camo = clamp(current_camo + incremental_shooting_camo_penalty, full_camo_alpha, 255)
-			H.alpha = current_camo
-			if(current_camo > visible_camo_alpha)
-				REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
-				to_chat(H, SPAN_BOLDNOTICE("Your cloak can't keep you perfectly hidden anymore!"))
-			addtimer(CALLBACK(src, PROC_REF(fade_out_finish), H), camouflage_break, TIMER_OVERRIDE|TIMER_UNIQUE)
-			animate(H, alpha = full_camo_alpha + 5, time = camouflage_break, easing = LINEAR_EASING, flags = ANIMATION_END_NOW)
+	SIGNAL_HANDLER
+	var/mob/living/carbon/human/H = user
+	if(camo_active)
+		if(current_camo < full_camo_alpha)
+			current_camo = full_camo_alpha
+		current_camo = clamp(current_camo + incremental_shooting_camo_penalty, full_camo_alpha, 255)
+		H.alpha = current_camo
+		if(current_camo > visible_camo_alpha)
+			REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
+			to_chat(H, SPAN_BOLDNOTICE("Your cloak can't keep you perfectly hidden anymore!"))
+		addtimer(CALLBACK(src, PROC_REF(fade_out_finish), H), camouflage_break, TIMER_OVERRIDE|TIMER_UNIQUE)
+		animate(H, alpha = full_camo_alpha + 5, time = camouflage_break, easing = LINEAR_EASING, flags = ANIMATION_END_NOW)
 
 /obj/item/storage/backpack/marine/satchel/scout_cloak/proc/fade_out_finish(mob/living/carbon/human/H)
 	if(camo_active && H.back == src)
@@ -848,11 +846,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	. = ..()
 	var/obj/item/storage/backpack/marine/satchel/scout_cloak/SC = holder_item
 	SC.camouflage()
-
-/obj/item/storage/backpack/marine/satchel/scout_cloak/imperfect
-	name = "\improper XM67 Thermal Cloak"
-	desc = "The lightweight thermal dampeners and optical camouflage provided by this cloak are weaker than those found in standard USCM ghillie suits. In exchange, the cloak can be worn over combat armor and offers the wearer high maneuverability and adaptability to many environments. This one is a prototype model with imperfect camouflage preservation when shooting."
-	shooting_visibility = TRUE
 
 // Welder Backpacks //
 
@@ -1128,9 +1121,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper V86 Thermal Cloak"
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."
 	max_storage_space = 21
-
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp/imperfect
-	shooting_visibility = TRUE
 
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp/weak
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units. This one is less effective than normal."
