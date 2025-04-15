@@ -403,3 +403,6 @@
 			C.apply_effect(4, STUN) //For good measure
 			C.apply_effect(6, STUTTER)
 			C.emote("pain")
+
+/obj/item/weapon/gun/launcher/rocket/upp/set_bullet_traits()
+	. = ..()
