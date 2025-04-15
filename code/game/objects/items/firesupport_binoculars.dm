@@ -1,6 +1,6 @@
 /obj/item/device/binoculars/fire_support
 	name = "tactical binoculars"
-	desc = "A pair of binoculars, used to mark targets for fire support. Ctrl+Click on binoculars to change mode. Ctrl+Click when using to target something."
+	desc = "A pair of binoculars, used to mark targets for fire support. Ctrl+Click on binoculars while not zoomed to change mode. Ctrl+Click on a target while zoomed to track and fire at it."
 	icon = 'icons/obj/items/binoculars.dmi'
 	icon_state = "advanced_binoculars"
 	w_class = SIZE_SMALL
