@@ -219,7 +219,7 @@
 /obj/effect/landmark/start/marine/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/forecon,
-/obj/effect/landmark/late_join/forecon,
+/obj/effect/landmark/late_join,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -1364,7 +1364,7 @@
 /obj/effect/landmark/start/marine/medic/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/medic/forecon,
-/obj/effect/landmark/late_join/forecon,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "de" = (
@@ -3348,7 +3348,7 @@
 	icon_state = "S";
 	layer = 3.3
 	},
-/obj/effect/landmark/late_join/forecon,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "ui" = (
@@ -6652,7 +6652,7 @@
 /obj/effect/landmark/start/marine/tl/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/tl/forecon,
-/obj/effect/landmark/late_join/forecon,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "Xr" = (
