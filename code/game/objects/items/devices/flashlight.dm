@@ -642,6 +642,78 @@
 		qdel(signal)
 	..()
 
+//Violet (long) Signal Flare
+/obj/item/device/flashlight/flare/signal_blue
+	name = "signal flare"
+	desc = "A violet USCM-issue signal flare. The telemetry computer works on chemical reaction that releases smoke and light and thus works only while the flare is burning. This series of flares has an adjusted chemical mix, allowing it to burn longer"
+	icon_state = "cas_flare"
+	item_state = "cas_flare"
+	layer = ABOVE_FLY_LAYER
+	ammo_datum = /datum/ammo/flare/signal
+	light_range = 5
+	var/faction = ""
+	var/datum/cas_signal/signal
+	var/activate_message = TRUE
+	flame_base_tint = "#4100aa"
+	flame_tint = "#b9aacc"
+
+/obj/item/device/flashlight/flare/signal_blue/Initialize()
+	. = ..()
+	fuel = rand(560 SECONDS, 600 SECONDS)
+
+/obj/item/device/flashlight/flare/signal_blue/flare_burn_down() // Empty proc to override parent.
+	return
+
+/obj/item/device/flashlight/flare/signal_blue/attack_self(mob/living/carbon/human/user)
+	if(!istype(user))
+		return
+
+	. = ..()
+
+	if(.)
+		faction = user.faction
+		addtimer(CALLBACK(src, PROC_REF(activate_signal), user), 5 SECONDS)
+
+/obj/item/device/flashlight/flare/signal_blue/activate_signal(mob/living/carbon/human/user)
+	..()
+	if(faction && GLOB.cas_groups[faction])
+		signal = new(src)
+		signal.target_id = ++GLOB.cas_tracking_id_increment
+		name = "[user.assigned_squad ? user.assigned_squad.name : "X"]-[signal.target_id] flare"
+		signal.name = name
+		signal.linked_cam = new(loc, name)
+		GLOB.cas_groups[user.faction].add_signal(signal)
+		anchored = TRUE
+		if(activate_message)
+			visible_message(SPAN_DANGER("[src]'s flame reaches full strength. It's fully active now."), null, 5)
+		var/turf/target_turf = get_turf(src)
+		msg_admin_niche("Flare target [src] has been activated by [key_name(user, 1)] at ([target_turf.x], [target_turf.y], [target_turf.z]). (<A href='byond://?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];adminplayerobservecoodjump=1;X=[target_turf.x];Y=[target_turf.y];Z=[target_turf.z]'>JMP LOC</a>)")
+		log_game("Flare target [src] has been activated by [key_name(user, 1)] at ([target_turf.x], [target_turf.y], [target_turf.z]).")
+		return TRUE
+
+/obj/item/device/flashlight/flare/signal_blue/attack_hand(mob/user)
+	if (!user) return
+
+	if(anchored)
+		to_chat(user, "[src] is too hot. You will burn your hand if you pick it up.")
+		return
+	..()
+
+/obj/item/device/flashlight/flare/signal_blue/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	if(signal)
+		GLOB.cas_groups[faction].remove_signal(signal)
+		QDEL_NULL(signal)
+	return ..()
+
+/obj/item/device/flashlight/flare/signal_blue/turn_off()
+	anchored = FALSE
+	if(signal)
+		GLOB.cas_groups[faction].remove_signal(signal)
+		qdel(signal)
+	..()
+
+
 /obj/effect/landmark/rappel
 	name = "Rappel Point"
 	var/datum/cas_signal/signal
