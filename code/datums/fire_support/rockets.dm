@@ -16,7 +16,7 @@
 		)
 
 /datum/fire_support/rockets/do_impact(turf/target_turf)
-	cell_explosion(target_turf, 150, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("HE rockets"))
+	cell_explosion(target_turf, 180, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("HE rockets"))
 
 /datum/fire_support/rockets/upp
 	fire_support_firer = FIRESUPPORT_CAS_UPP

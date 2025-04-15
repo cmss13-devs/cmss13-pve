@@ -244,6 +244,12 @@
 /obj/item/device/binoculars/fire_support/uscm/usable_shipside
 	usable_shipside = TRUE
 
+/obj/item/device/binoculars/fire_support/twe
+	faction = FACTION_TWE
+
+/obj/item/device/binoculars/fire_support/twe/usable_shipside
+	usable_shipside = TRUE
+
 /obj/item/device/binoculars/fire_support/upp
 	icon_state = "binoculars_upp"
 	faction = FACTION_UPP

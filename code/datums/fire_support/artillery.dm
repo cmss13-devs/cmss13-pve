@@ -25,7 +25,7 @@
 	impact_sound = 'sound/weapons/fire_support/mortar_long_whistle.ogg'
 
 /datum/fire_support/mortar/do_impact(turf/target_turf)
-	cell_explosion(target_turf, 250, 60, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("HE mortar"))
+	cell_explosion(target_turf, 225, 60, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("HE mortar"))
 
 /datum/fire_support/mortar/upp
 	faction = FACTION_UPP

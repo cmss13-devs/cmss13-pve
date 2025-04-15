@@ -74,13 +74,14 @@
 		to_chat(user, SPAN_NOTICE(initiate_chat_message))
 	if(portrait_type && initiate_title && initiate_screen_message)
 		var/list/alert_receivers = list()
+		var/picked_screen_message = pick(initiate_screen_message)
 		for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
 			if(human.faction == user.faction)
 				alert_receivers += human
 		alert_receivers += GLOB.observer_list
 		for(var/mob/mob_receiver in alert_receivers)
 			playsound_client(mob_receiver.client, 'sound/effects/radiostatic.ogg', 35, channel = CHANNEL_ANNOUNCEMENTS)
-			mob_receiver.play_screen_text("<span class='langchat' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(name)]</u></span><br>" + pick(initiate_screen_message), new /atom/movable/screen/text/screen_text/potrait/faster(null, null, initiate_title, 'icons/ui_icons/screen_alert_images.dmi', portrait_type))
+			mob_receiver.play_screen_text("<span class='langchat' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(name)]</u></span><br>" + picked_screen_message, new /atom/movable/screen/text/screen_text/potrait/faster(null, null, initiate_title, 'icons/ui_icons/screen_alert_images.dmi', portrait_type))
 
 ///Actually begins the fire support attack
 /datum/fire_support/proc/start_fire_support(turf/target_turf)

@@ -12,7 +12,7 @@
 		"Lase sighted, sending lead delivery hot and ready",
 		"Im coming in, keep your heads down!",
 		"Finally some targets! Strafe incomin'",
-		"Time to let these guns roar, were inbound.",
+		"Time to let these guns roar, we're inbound.",
 	)
 
 /datum/fire_support/gau/do_impact(turf/target_turf)
@@ -44,7 +44,7 @@
 		for(var/target in strafed)
 			if(isliving(target))
 				var/mob/living/living_target = target
-				living_target.apply_damage(200, BRUTE)
+				living_target.apply_damage(250, BRUTE)
 			else if(isVehicleMultitile(target))
 				var/obj/vehicle/multitile/vic = target
 				vic.ex_act(800)
@@ -53,7 +53,7 @@
 				vic.interior_crash_effect()
 			else if(isobj(target))
 				var/obj/obj_target = target
-				obj_target.update_health(200)
+				obj_target.update_health(250)
 		new /obj/effect/temp_visual/heavyimpact(strafed)
 
 	if(length(strafelist))
