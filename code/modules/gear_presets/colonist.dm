@@ -993,7 +993,7 @@
 	faction = FACTION_UACG
 	faction_group = FACTION_LIST_MARINE
 	assignment = "Colonial Militiaman"
-	role_comm_title = "uacg_Rifle"
+	role_comm_title = "UACG"
 	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/civilian/survivor/marshal
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP)
@@ -1049,8 +1049,8 @@
 	name = "US Colonial Guard Medic"
 	assignment = "Colonial Militiaman Medic"
 	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "uacg_medic"
-	skills = /datum/skills/civilian/survivor/marshal/medic
+	role_comm_title = "UACG-M"
+	skills = /datum/skills/civilian/survivor/marshal/doctor
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_CIVILIAN_MEDBAY)
 
 /datum/equipment_preset/colonist/security/guard/medic/load_gear(mob/living/carbon/human/new_human)
@@ -1084,10 +1084,10 @@
 	add_worker_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
 	//storage
-	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/surgical_case/regular, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_BACK)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full/surgery, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
@@ -1103,7 +1103,7 @@
 	name = "US Colonial Guard Technician"
 	assignment = "Colonial Militiaman Technician"
 	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "uacg_tech"
+	role_comm_title = "UACG-T"
 	skills = /datum/skills/civilian/survivor/marshal/tech
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
 
@@ -1143,6 +1143,7 @@
 	//storage
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/medium_stack, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded, WEAR_IN_BACK)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
@@ -1160,7 +1161,7 @@
 	name = "US Colonial Guard Unit Leader"
 	assignment = "Colonial Militiaman Unit Leader"
 	paygrades = list(PAY_SHORT_AE7 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "uacg_lead"
+	role_comm_title = "UACG-L"
 
 
 /datum/equipment_preset/colonist/security/guard/nco/load_gear(mob/living/carbon/human/new_human)
@@ -1216,7 +1217,7 @@
 	name = "US Colonial Guard Officer"
 	assignment = "Colonial Militiaman Officer"
 	paygrades = list(PAY_SHORT_AO1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "uacg_officer"
+	role_comm_title = "UACG-CO"
 	skills = /datum/skills/snco
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_COMMAND)
 
