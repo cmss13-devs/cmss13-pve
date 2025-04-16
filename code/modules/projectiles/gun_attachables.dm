@@ -3171,6 +3171,13 @@ Defined in conflicts.dm of the #defines folder.
 	. = ..()
 	grenade_pass_flags = NO_FLAGS
 
+/obj/item/attachable/attached_gun/grenade/l7a4
+	name = "L7A4 underslung grenade launcher"
+	desc = "A compensated grenade launcher for the L46. Loads a single 20mm hybrid-grenade cartridge. Internal minaturized fire control complex comes with multiple fuzing modes for airburst munitions."
+	current_rounds = 0
+	max_rounds = 1
+	has_breech = FALSE
+
 /obj/item/attachable/attached_gun/grenade/type71
 	name = "\improper Type 83 overslung grenade launcher"
 	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."

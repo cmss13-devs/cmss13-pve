@@ -511,44 +511,30 @@
 
 //=ROYAL MARINES=\\
 
-/obj/item/ammo_magazine/rifle/rmc_f90
-	name = "\improper F903 magazine (10x24mm)"
-	desc = "A 10mm assault rifle magazine used by the royal marines."
+/obj/item/ammo_magazine/rifle/l46a3
+	name = "\improper L46A3 magazine (8.1x22mm)"
+	desc = "A 8.1mm ammunition magazine for the L46A3 pulse rifle. Contains the L41A3 Improved Ball standard ammunition."
 	caliber = "10x24mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
-	icon_state = "aug"
-	item_state = "aug"
+	icon_state = "l46a3"
+	item_state = "l46a3"
 	w_class = SIZE_MEDIUM
 	default_ammo = /datum/ammo/bullet/rifle
-	max_rounds = 30
-	gun_type = /obj/item/weapon/gun/rifle/rmc_f90
-	ammo_band_icon = "+aug_band"
-	ammo_band_icon_empty = "+aug_band_e"
+	max_rounds = 125
+	gun_type = /obj/item/weapon/gun/rifle/l46a3
+	ammo_band_icon = "+l46a3_band"
+	ammo_band_icon_empty = "+l46a3_band_e"
 
-/obj/item/ammo_magazine/rifle/rmc_f90/marksman
-	name = "\improper F903A1 Marksman magazine (10x24mm)"
-	desc = "A 10mm armor-piercing assault rifle magazine used by the royal marines."
-	icon_state = "aug_dmr"
-	item_state = "aug_dmr"
-	default_ammo = /datum/ammo/bullet/rifle/ap
-	gun_type = /obj/item/weapon/gun/rifle/rmc_f90/scope
-	max_rounds = 20
-	ammo_band_color = AMMO_BAND_COLOR_AP
-	ammo_band_icon = "+aug_dmr_band"
-	ammo_band_icon_empty = "+aug_dmr_band_e"
+/obj/item/ammo_magazine/rifle/l46a3/explosive
+	name = "\improper L46A3 superfuzed magazine (8.1x22mm)"
+	desc = "A 8.1mm ammunition magazine for the L46A3 pulse rifle. Contains the L45A2 8.1mm Improved Soft Target round. A small octaazacubane bursting charge improves terminal effect at cost of armor and barrier defeat."
+	default_ammo = /datum/ammo/bullet/rifle/imperial/explosive
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
 
-/obj/item/ammo_magazine/rifle/rmc_f90/heap
-	name = "\improper F903 HEAP magazine (10x24mm)"
-	desc = "A 10mm armor piercing high explosive assault rifle magazine used by the royal marines."
-	default_ammo = /datum/ammo/bullet/rifle/heap
-	ammo_band_color = AMMO_BAND_COLOR_HEAP
-
-/obj/item/ammo_magazine/rifle/rmc_f90/marksman/heap
-	name = "\improper F903A1 Marksman magazine (10x24mm)"
-	desc = "A 10mm armor piercing high explosive assault rifle magazine used by the royal marines."
-	icon_state = "aug_dmr"
-	item_state = "aug_dmr"
-	default_ammo = /datum/ammo/bullet/rifle/heap
+/obj/item/ammo_magazine/rifle/l46a3/heap
+	name = "\improper L46A3 HEAP magazine (8.1x22mm)"
+	desc = "A 8.1mm ammunition magazine for the L46A3 pulse rifle. Contains the L41A2 8.1mm General Purpose round. Service ammunition for large scale conflicts, but considered too dangerous in the stations and colonies the RMC usually polices."
+	default_ammo = /datum/ammo/bullet/rifle/imperial/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 //--------------------------------------------------------
