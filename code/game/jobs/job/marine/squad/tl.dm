@@ -61,6 +61,11 @@
 	gear_preset = /datum/equipment_preset/uscm/tl/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/tl/forecon/lesser_rank
 
+/datum/job/marine/tl/ai/guard
+	title = JOB_SQUAD_TEAM_LEADER_GUARD
+	gear_preset = /datum/equipment_preset/uscm/tl/guard
+	job_options = null
+
 /obj/effect/landmark/start/marine/tl/upp
 	name = JOB_SQUAD_TEAM_LEADER_UPP
 	squad = SQUAD_UPP
@@ -83,6 +88,10 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/tl/ai/forecon
 
+/obj/effect/landmark/start/marine/tl/guard
+	name = JOB_SQUAD_TEAM_LEADER_GUARD
+	squad = "Colonial Guard"
+	job = /datum/job/marine/tl/ai/guard
 
 #undef SGT_VARIANT
 #undef CPL_VARIANT

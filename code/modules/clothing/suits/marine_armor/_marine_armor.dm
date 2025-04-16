@@ -938,11 +938,6 @@
 	name = "\improper M3 pattern armor"
 	specialty = "M3 pattern"
 
-/obj/item/clothing/suit/marine/guard/Initialize(mapload)
-	. = ..()
-	var/obj/item/clothing/accessory/pads/groin/uacg/crotchplate = new()
-	src.attach_accessory(null, crotchplate, TRUE)
-
 //Army & USASF custom-armors\\
 
 /obj/item/clothing/suit/marine/medium/rto/navy

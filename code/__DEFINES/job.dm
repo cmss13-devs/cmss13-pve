@@ -45,6 +45,12 @@
 #define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
 
+#define JOB_SQUAD_MARINE_GUARD "Guardsman"
+#define JOB_SQUAD_LEADER_GUARD "Guard Section Sergeant"
+#define JOB_SQUAD_MEDIC_GUARD "Medic"
+#define JOB_SQUAD_TEAM_LEADER_GUARD "Guard Squad Leader"
+#define JOB_SQUAD_SMARTGUN_GUARD "Guard Automatic Rifleman"
+
 GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 
 #define JOB_COLONIST "Colonist"

@@ -65,6 +65,11 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/lesser_rank
 
+/datum/job/marine/leader/ai/guard
+	title = JOB_SQUAD_LEADER_GUARD
+	gear_preset = /datum/equipment_preset/uscm/leader/guard
+	job_options = null
+
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP
 	squad = SQUAD_UPP
@@ -85,6 +90,11 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	name = JOB_SQUAD_LEADER_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/leader/ai/forecon
+
+/obj/effect/landmark/start/marine/leader/guard
+	name = JOB_SQUAD_LEADER_GUARD
+	squad = "Colonial Guard"
+	job = /datum/job/marine/leader/ai/guard
 
 #undef GYSGT_VARIANT
 #undef SSGT_VARIANT

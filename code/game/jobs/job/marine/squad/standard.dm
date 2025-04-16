@@ -77,6 +77,11 @@
 	gear_preset = /datum/equipment_preset/uscm/rto
 	gear_preset_secondary = /datum/equipment_preset/uscm/rto/lesser_rank
 
+/datum/job/marine/standard/ai/guard
+	title = JOB_SQUAD_MARINE_GUARD
+	gear_preset = /datum/equipment_preset/uscm/pfc/guard
+	job_options = null
+
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP
 	squad = SQUAD_UPP
@@ -97,6 +102,11 @@
 	name = JOB_SQUAD_MARINE_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/standard/ai/forecon
+
+/obj/effect/landmark/start/marine/guard
+	name = JOB_SQUAD_MARINE_GUARD
+	squad = "Colonial Guard"
+	job = /datum/job/marine/standard/ai/guard
 
 /obj/effect/landmark/start/marine/rto
 	name = JOB_SQUAD_RTO

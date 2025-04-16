@@ -389,6 +389,7 @@
 
 // Runner strain flags
 #define RUNNER_ACIDER "Acider"
+#define RUNNER_SLOWER "Slower"
 
 // Lurker strain flags
 #define LURKER_VAMPIRE "Vampire"
@@ -402,6 +403,7 @@
 
 // Crusher strain flags
 #define CRUSHER_CHARGER "Charger"
+#define CRUSHER_RUNNER "Runner"
 
 // Praetorian strain flags
 #define PRAETORIAN_VANGUARD "Vanguard"

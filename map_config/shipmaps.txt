@@ -35,3 +35,6 @@ endmap
 
 map golden_arrow_support
 endmap
+
+map louise
+endmap

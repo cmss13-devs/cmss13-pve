@@ -93,6 +93,10 @@
 	name = "\improper Motor Pool"
 	icon_state = "workshop"
 
+/area/golden_arrow/maintenance
+	name = "\improper Maintenance Tunnels"
+	icon_state = "lowerhull"
+
 /area/golden_arrow/lower_cargo
 	name = "\improper Lower Cargo Bays"
 	icon_state = "req"
