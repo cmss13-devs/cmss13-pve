@@ -6,10 +6,10 @@
 	var/delayt
 	var/whattoannounce
 
-	var/sstrength = tgui_input_number(src, "How Strong?", "Don't go overboard.", 0, 10)
+	var/sstrength = tgui_input_number(src, "How Strong (intensity of camera shake)?", "Don't go overboard.", 0, 10)
 	if(!sstrength)
 		return
-	var/stime = tgui_input_number(src, "Time Between Shakes?", "Don't make it too long", 0, 30)
+	var/stime = tgui_input_number(src, "Time Between Shakes (Essentially how long the shake lasts, in deci-seconds)?", "Don't make it too long", 0, 30)
 	if(!stime)
 		return
 
@@ -57,10 +57,10 @@
 	var/drop = FALSE
 	var/delayt
 
-	var/sstrength = tgui_input_number(src, "How Strong?", "Don't go overboard.", 0, 10)
+	var/sstrength = tgui_input_number(src, "How Strong (intensity of camera shake)?", "Don't go overboard.", 0, 10)
 	if(!sstrength)
 		return
-	var/stime = tgui_input_number(src, "Time Between Shakes?", "Don't make it too long", 0, 30)
+	var/stime = tgui_input_number(src, "Time Between Shakes (Essentially how long the shaking lasts, in deci-seconds)?", "Don't make it too long", 0, 30)
 	if(!stime)
 		return
 
