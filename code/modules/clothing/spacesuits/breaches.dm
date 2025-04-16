@@ -5,7 +5,7 @@
 #define SPACESUIT_BREACH_CIVILIAN 2.5
 #define SPACESUIT_BREACH_STANDARD 1.5
 #define SPACESUIT_BREACH_COMBAT 1
-#define SPACESUIT_BREACH_THRESHOLD_CONSTANT 8 // to be made smaller by breach_vulnerability, inversely
+#define SPACESUIT_BREACH_THRESHOLD_CONSTANT 6 // to be made smaller by breach_vulnerability, inversely
 #define SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER 2.1
 
 /datum/spacesuit_configuration
@@ -78,7 +78,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 	if(!can_breach || !amount || (amount < SPACESUIT_BREACH_THRESHOLD_CONSTANT/breach_vulnerability)) //fire is soul, and napalm is below threshold of combat suits
 		return
 
-	if(!breaches)
+		if(!breaches)
 		breaches = list()
 
 	if(damage > 35) return //We don't need to keep tracking it when it's so high.
