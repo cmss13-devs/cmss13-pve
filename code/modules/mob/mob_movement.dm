@@ -269,7 +269,7 @@
 
 		if(istype(src,/mob/living/carbon/human/))  // Only humans can wear magboots, so we give them a chance to.
 			var/mob/living/carbon/human/H = src
-			if((istype(turf,/turf/open/floor)) && !H.check_for_magboots(drain_power = 0.25))
+			if((istype(turf,/turf/open/floor)) && !H.check_for_magboots(drain_power = 0.5))
 				continue
 
 
