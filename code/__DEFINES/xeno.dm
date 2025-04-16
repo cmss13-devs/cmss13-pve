@@ -403,7 +403,7 @@
 
 // Crusher strain flags
 #define CRUSHER_CHARGER "Charger"
-#define CRUSHER_RUNNER "Runner"
+#define CRUSHER_RUNNER "Running"
 
 // Praetorian strain flags
 #define PRAETORIAN_VANGUARD "Vanguard"
