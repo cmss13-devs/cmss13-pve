@@ -411,6 +411,7 @@
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 /obj/item/storage/pouch/magazine/attackby(obj/item/W, mob/user)
