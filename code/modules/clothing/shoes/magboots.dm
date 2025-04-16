@@ -3,6 +3,8 @@
 	name = "magboots"
 	icon_state = "magboots0"
 	var/magpulse = FALSE
+	var/auto_turn_off = TRUE
+	var/turn_off_timer
 	actions_types = list(/datum/action/item_action/toggle)
 	allowed_items_typecache = null
 	var/obj/item/cell/crap/battery
@@ -36,22 +38,27 @@
 	if(flags_inventory&NOSLIPPING)
 		state = "enabled"
 	. += "Its mag-pulse traction system appears to be [state]."
+	if(auto_turn_off)
+	. += "This will automatically turn itself off after "
 	if(battery)
 		. += "\nThe charge meter reads <b>[floor(battery.percent() )]%</b>"
 
 /obj/item/clothing/shoes/marine/magboots/proc/toggle(force_off = FALSE, mob/user)
+	var/no_battery = FALSE
 	if(battery != null)
 		if(battery.charge < 1)
+			no_battery = TRUE
 			force_off = TRUE
 	else
+		no_battery = TRUE
 		force_off = TRUE
 	if(magpulse || force_off)
 		flags_inventory &= ~NOSLIPPING
 		slowdown = SHOES_SLOWDOWN
 		magpulse = FALSE
 		icon_state = "magboots0"
-		to_chat(user, SPAN_NOTICE("[force_off ? "The mag-pulse traction system shuts down due to lack of power." : "You disable the mag-pulse traction system."]"))
-		if(force_off)
+		to_chat(user, SPAN_NOTICE("[no_battery ? "The mag-pulse traction system shuts down due to lack of power." : "The mag-pulse traction system auto-shuts off."]"))
+		if(no_battery)
 			playsound(loc, 'sound/effects/zzzt.ogg', 10, TRUE)
 		else
 			playsound(loc, 'sound/effects/magnet.ogg', 10, TRUE)
@@ -64,6 +71,8 @@
 			icon_state = "magboots1"
 			to_chat(user, SPAN_NOTICE("You enable the mag-pulse traction system."))
 			playsound(loc, 'sound/effects/magnet.ogg', 10, TRUE)
+			if(auto_turn_off)
+				turn_off_timer = addtimer(CALLBACK(src, PROC_REF(toggle), TRUE, user), 100, TIMER_UNIQUE|TIMER_OVERRIDE)
 	user.update_inv_shoes() //so our mob-overlays update
 
 	for(var/X in actions)

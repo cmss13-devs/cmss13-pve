@@ -319,7 +319,7 @@
 		if(M.Process_Spacemove(1))
 			if(!M.inertia_dir)
 				return
-		spawn(M.move_delay)
+		spawn(GLOB.spacesuit_config.movement_delay_while_drifting)
 			if((M && !(M.anchored) && !(M.pulledby) && (M.loc == src)))
 				if(!M.Check_Dense_Object())
 					if(M.inertia_dir)

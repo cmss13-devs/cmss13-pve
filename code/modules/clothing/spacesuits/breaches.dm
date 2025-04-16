@@ -5,8 +5,16 @@
 #define SPACESUIT_BREACH_CIVILIAN 2.5
 #define SPACESUIT_BREACH_STANDARD 1.5
 #define SPACESUIT_BREACH_COMBAT 1
-#define SPACESUIT_BREACH_THRESHOLD_CONSTANT 10 // to be made smaller by breach_vulnerability, inversely
+#define SPACESUIT_BREACH_THRESHOLD_CONSTANT 8 // to be made smaller by breach_vulnerability, inversely
 #define SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER 2.1
+
+/datum/spacesuit_configuration
+	var/breach_probabability_scale = 15 //Log scale based on damage after armour is used to prob if a breach should happen
+	var/breach_magnitude_scale = 0.1 //Size of breach after above
+	var/breach_prob_of_new_vs_widen = 40 //prob of making a new breach over widening an existing one
+	var/oxygen_usage_multiplier = 1
+	var/movement_delay_while_drifting = 3
+GLOBAL_DATUM_INIT(spacesuit_config, /datum/spacesuit_configuration, new)
 
 /datum/breach
 	var/class = 0    // Size. Lower is smaller.
@@ -67,7 +75,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 /obj/item/clothing/suit/space/proc/create_breaches(damtype, amount)
 
-	if(!can_breach || !amount || (damtype != BURN && amount < SPACESUIT_BREACH_THRESHOLD_CONSTANT/breach_vulnerability)) //fire is soul, and napalm is below threshold of combat suits
+	if(!can_breach || !amount || (amount < SPACESUIT_BREACH_THRESHOLD_CONSTANT/breach_vulnerability)) //fire is soul, and napalm is below threshold of combat suits
 		return
 
 	if(!breaches)
@@ -79,18 +87,20 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 	var/turf/T = get_turf(src)
 	if(!T) return
 	var/sound_already_played = FALSE
-	amount = (amount*breach_vulnerability)*0.05 //0.05 is to get it within the 1-5 value at min(amount, 5)
-
+	var/prob_chance = clamp(log(1 + amount) * GLOB.spacesuit_config.breach_probabability_scale, 1, 100)
+	if (!prob(prob_chance))
+		return // No hole created
+	amount = (amount*breach_vulnerability)*GLOB.spacesuit_config.breach_magnitude_scale //0.1 is to get it within the 1-5 value at min(amount, 5)
 	//Increase existing breaches.
 	for(var/datum/breach/existing in breaches)
-		if(prob(60))
+		if(prob(GLOB.spacesuit_config.breach_prob_of_new_vs_widen))
 			break //Want mix of new and widening old breaches
 		if(existing.damtype != damtype)
 			continue
 
 		if (existing.class < 5 || existing.patched)
 			if(existing.patched)
-				playsound(loc, 'sound/effects/hull_bang.ogg', 50+(amount*5), TRUE, falloff = 5)
+				playsound(loc, 'sound/effects/hull_bang.ogg', 40+(amount*5), TRUE, falloff = 3)
 				sound_already_played = TRUE
 				if (existing.damtype == BRUTE)
 					var/message = "\The [existing.descriptor] on \the [src] gapes wider[existing.patched ? ", tearing the patch" : ""]!"
@@ -117,7 +127,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 			else if(existing.damtype == BURN)
 				T.visible_message(SPAN_WARNING("\The [old_descriptor] on [src] widens, turning to a [existing.descriptor][existing.patched ? ", tearing the patch" : ""]"))
 	if(!sound_already_played)
-		playsound(loc, pick('sound/effects/hull_hit1.ogg', 'sound/effects/hull_hit2.ogg', 'sound/effects/hull_hit3.ogg'), 50+(amount*5), TRUE, falloff = 5)
+		playsound(loc, pick('sound/effects/hull_hit1.ogg', 'sound/effects/hull_hit2.ogg', 'sound/effects/hull_hit3.ogg'), 40+(amount*5), TRUE, falloff = 3)
 	if (amount)
 		//Spawn a new breach.
 		var/datum/breach/B = new()

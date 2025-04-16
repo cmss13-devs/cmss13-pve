@@ -175,7 +175,7 @@ would spawn and follow the beaker, even if it is carried or thrown.
 				qdel(src)
 				return
 			if(turf != oldposition)
-				if(istype(turf, /turf/open/space))
+				if(istype(turf, /turf/open))
 					var/obj/effect/particle_effect/ion_trails/trails = new /obj/effect/particle_effect/ion_trails(src)
 					if(istype(holder.loc, /mob/living/carbon/human))
 						var/mob/living/carbon/human/human_jetpack = holder.loc

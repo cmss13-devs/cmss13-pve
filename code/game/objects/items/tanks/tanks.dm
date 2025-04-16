@@ -202,7 +202,7 @@
 
 	// moles in tank
 	var/moles_in_tank = (pressure * volume_litres) / (R_IDEAL_GAS_EQUATION * temperature)
-	moles_in_tank -= removed // Remove the amount taken out
+	moles_in_tank -= removed*GLOB.spacesuit_config.oxygen_usage_multiplier // Remove the amount taken out
 
 
 	// Recalculate the new pressure
