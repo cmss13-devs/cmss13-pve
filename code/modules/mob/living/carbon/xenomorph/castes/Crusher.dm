@@ -313,6 +313,16 @@
 		bound_xeno.icon_state = "[bound_xeno.get_strain_icon()] Crusher Charging"
 		return TRUE
 
+/mob/living/carbon/xenomorph/crusher/runner
+	base_actions = list(
+		/datum/action/xeno_action/onclick/xeno_resting,
+		/datum/action/xeno_action/onclick/regurgitate,
+		/datum/action/xeno_action/watch_xeno,
+		/datum/action/xeno_action/activable/tail_stab,
+		/datum/action/xeno_action/onclick/charger_charge,
+		/datum/action/xeno_action/onclick/tacmap,
+	)
+
 /mob/living/carbon/xenomorph/crusher/runner/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
 	. = ..()
 	var/datum/xeno_strain/strain_instance = new /datum/xeno_strain/crusherrunner()
