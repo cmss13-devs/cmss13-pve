@@ -306,8 +306,8 @@
 
 /obj/item/explosive/grenade/high_explosive/impact //omega hell killer grenade of doom from hell
 	name = "\improper 40mm HE grenade"
-	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one is marked as a High-Explosive grenade, watch your fire."
-	icon_state = "grenade_40mm_he"
+	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one is marked as a High-Explosive Dual-Purpose grenade, watch your fire."
+	icon_state = "grenade_40mm_hedp"
 	item_state = "grenade_hedp"
 	det_time = 0
 	hand_throwable = FALSE
@@ -330,17 +330,40 @@
 	if(active && detonate) // Active, and we reached our destination.
 		if(explosion_power)
 			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
+		if(shrapnel_count)
+			create_shrapnel(loc, shrapnel_count, , ,shrapnel_type, cause_data)
 		qdel(src)
+
+/obj/item/explosive/grenade/high_explosive/impact/frag
+	name = "\improper 40mm frag grenade"
+	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one is marked as a High-Explosive Fragmenting-Antipersonnel grenade, watch your fire."
+	icon_state = "grenade_40mm_he"
+	item_state = "grenade_hefa"
+	explosion_power = 75
+	shrapnel_count = 32
+	shrapnel_type = /datum/ammo/bullet/shrapnel/heavy
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/high_explosive/impact/upp
 	name = "\improper VOG-73 HE grenade"
-	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one bears markings of the UPP."
+	desc = "This is a caseless 40mm grenade, designed to be launched by a grenade launcher and detonate on impact with an injury radius of 3 metres. This one bears markings of the UPP."
 	icon_state = "grenade_40mm_upp"
 	item_state = "grenade_hedp"
+	dangerous = FALSE
 	explosion_power = 180 //Stronger than HEDP to make up for one shot in the tube
 	explosion_falloff = 40 //But quicker to lose blast damage
 	shrapnel_count = 16
-	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL_HALF
+
+/obj/item/explosive/grenade/high_explosive/impact/upp/ap
+	name = "\improper VPG-77 AP grenade"
+	desc = "This is a caseless armor-piercing 40mm grenade, designed to be launched by a grenade launcher and used against armored targets. This one bears markings of the UPP. Beware of what's in front of you when firing."
+	icon_state = "grenade_40mm_upp_ap"
+	item_state = "grenade_hedp"
+	explosion_power = 300 //Stronger than a HEAP grenade, to make up for one shot in the tube
+	explosion_falloff = 900 //But no blast to speak of
+	shrapnel_count = 0
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
 
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	name = "\improper 40mm Buckshot Shell"
@@ -361,7 +384,7 @@
 /obj/item/explosive/grenade/high_explosive/impact/heap
 	name = "\improper M38 HEAP blast grenade"
 	desc = "High-Explosive, Armour Piercing. A small, but deceptively strong blast grenade that can penetrate appreciable quantities of armor, whilst retaining a similar casualty radius as the standard M40. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only. Due to faulty primers, it is inadvisable to fire them directly at hard surfaces like walls, landing them just in front is recommended."
-	icon_state = "grenade_chem"
+	icon_state = "grenade_heap"
 	item_state = "grenade_chem"
 	explosion_power = 250
 	explosion_falloff = 200
@@ -641,7 +664,7 @@
 /obj/item/explosive/grenade/phosphorus
 	name = "\improper M60 WPSI grenade"
 	desc = "The M60 WPSI is a small, but powerful chemical compound grenade, designated as such with a white cap. Usable for both smoke-screen purposes and as an incendiary device. Two second fuse."
-	icon_state = "training_grenade"
+	icon_state = "grenade_phos"
 	det_time = 20
 	item_state = "grenade_training"
 	underslug_launchable = TRUE
@@ -1159,9 +1182,9 @@
 /obj/item/explosive/grenade/high_explosive/training
 	name = "M07 training grenade"
 	desc = "A harmless reusable version of the M40 HEDP, used for training. Capable of being loaded in the M92 Launcher, or thrown by hand."
-	icon_state = "training_grenade"
+	icon_state = "grenade_training"
 	item_state = "grenade_training"
-	dangerous = FALSE
+	dangerous = TRUE
 	harmful = FALSE
 	antigrief_protection = FALSE
 
@@ -1201,7 +1224,7 @@
 /obj/item/explosive/grenade/baton/flamer_fire_act()
 	return
 
-/obj/item/explosive/grenade/baton/m79
+/obj/item/explosive/grenade/slug/baton/m79
 	name = "\improper LTL 40mm grenade"
 	desc = "It's a Less Than Lethal 40mm rubber projectile."
 	icon_state = "grenade_40mm_ltl"
@@ -1224,8 +1247,8 @@
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/metal_foam
-	name = "\improper M40 MFHS grenade"
-	desc = "A Metal-Foam Hull-Sealant grenade originally used for emergency repairs but have found other practical applications on the field. Based off the same platform as the M40 HEDP. Has a 2 second fuse."
+	name = "\improper M42 MFHS grenade"
+	desc = "A Metal-Foam Hull-Sealant grenade originally used for emergency repairs but have found other practical applications on the field. Based off the same hull as the M40 HEDP. Has a 2 second fuse."
 	icon_state = "grenade_metal_foam"
 	item_state = "grenade_metal_foam"
 	det_time = 20
