@@ -431,7 +431,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_xo, list(
 		list("Patrol Cap", 0, /obj/item/clothing/head/cmcap, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
 		list("Officer Cap", 0, /obj/item/clothing/head/cmcap/bridge, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
 
-		list("PATCHES", 0, null, null, null)
+		list("PATCHES", 0, null, null, null),
 		list("Solar Devils Shoulder Patch", 1, /obj/item/clothing/accessory/patch/devils, null, VENDOR_ITEM_REGULAR),
 		list("USCM Shoulder Patch", 1, /obj/item/clothing/accessory/patch, null, VENDOR_ITEM_REGULAR),
 
