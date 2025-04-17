@@ -2,8 +2,8 @@
 	name = "TWE Rebel"
 	languages = list(LANGUAGE_JAPANESE)
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_INSURRECTIONTWE
-	faction_group = FACTION_LIST_INSURRECTIONTWE
+	faction = FACTION_TWE_REBEL
+	faction_group = FACTION_LIST_TWE_REBEL
 	skills = /datum/skills/pfc
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	origin_override = ORIGIN_CIVILIAN

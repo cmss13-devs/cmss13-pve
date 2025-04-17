@@ -98,7 +98,7 @@
 	return shoot_to_kill
 
 /datum/human_ai_faction/twerebel
-	faction = FACTION_INSURRECTIONTWE
+	faction = FACTION_TWE_REBEL
 	friendly_factions = list(
 		FACTION_COLONIST,
 	)
@@ -203,7 +203,7 @@
 		"I HAVE TO RELOAD!",
 	)
 /datum/human_ai_faction/uarebels
-	faction = FACTION_INSURRECTIONUA
+	faction = FACTION_UA_REBEL
 	friendly_factions = list(
 		FACTION_COLONIST,
 	)

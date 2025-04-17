@@ -2,8 +2,8 @@
 	name = "UA Rebel"
 	languages = list(LANGUAGE_ENGLISH)
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_INSURRECTIONUA
-	faction_group = FACTION_LIST_INSURRECTIONUA
+	faction = FACTION_UA_REBEL
+	faction_group = FACTION_LIST_UA_REBEL
 	skills = /datum/skills/pfc
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	origin_override = ORIGIN_CIVILIAN
@@ -15,8 +15,8 @@
 /datum/equipment_preset/rebel/guerilla
 	name = "UA Rebel, Guerilla"
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_INSURRECTIONUA
-	faction_group = FACTION_LIST_INSURRECTIONUA
+	faction = FACTION_UA_REBEL
+	faction_group = FACTION_LIST_UA_REBEL
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/rebel/guerilla/load_gear(mob/living/carbon/human/new_human)
