@@ -423,6 +423,14 @@
 		/obj/item/attachable/lasersight,
 	)
 
+/obj/item/weapon/gun/revolver/m44/custom/pkd_special/l_series/set_gun_config_values()
+	..()
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_delay(FIRE_DELAY_TIER_12)
+
 /obj/item/weapon/gun/revolver/m44/custom/webley //Van Bandolier's Webley.
 	name = "\improper Webley Mk VI service pistol"
 	desc = "A heavy top-break revolver. Bakelite grips, and older than most nations. .455 was good enough for angry tribesmen and <i>les boche</i>, and by Gum it'll do for Colonial Marines and xenomorphs as well."
