@@ -457,127 +457,143 @@ const SquadMonitor = (props) => {
       <Input
         fluid
         placeholder="Search.."
-        mb="4px"
         m="0"
         value={marineSearch}
         onInput={(e, value) => setMarineSearch(value)}
       />
-      <Section m="0" pb="2px" fill scrollable>
-        <Table>
-          <Table.Row bold fontSize="14px">
-            <Table.Cell textAlign="center">Name</Table.Cell>
-            <Table.Cell textAlign="center">Role</Table.Cell>
-            <Table.Cell textAlign="center" collapsing>
-              State
-            </Table.Cell>
-            <Table.Cell textAlign="center">Location</Table.Cell>
-            <Table.Cell textAlign="center" collapsing fontSize="12px">
-              SL Dist.
-            </Table.Cell>
-            <Table.Cell textAlign="center" />
-          </Table.Row>
-          {squad_leader && (
-            <Table.Row key="index" bold>
-              <Table.Cell collapsing p="2px">
-                {(squad_leader.has_helmet && (
-                  <Button
-                    onClick={() =>
-                      act('watch_camera', { target_ref: squad_leader.ref })
-                    }
-                  >
-                    {squad_leader.name}
-                  </Button>
-                )) || <Box color="yellow">{squad_leader.name} (NO CAMERA)</Box>}
-              </Table.Cell>
-              <Table.Cell p="2px">{squad_leader.role}</Table.Cell>
-              <Table.Cell
-                p="2px"
-                color={determine_status_color(squad_leader.state)}
-              >
-                {squad_leader.state}
-              </Table.Cell>
-              <Table.Cell p="2px">{squad_leader.area_name}</Table.Cell>
-              <Table.Cell p="2px" collapsing>
-                {squad_leader.distance}
-              </Table.Cell>
-              <Table.Cell />
-            </Table.Row>
-          )}
-          {marines &&
-            marines
-              .sort(sortByRole)
-              .filter((marine) => {
-                if (marineSearch && !marineSearch.includes('\\')) {
-                  const searchableString = String(marine.name).toLowerCase();
-                  return searchableString.match(new RegExp(marineSearch, 'i'));
-                }
-                return marine;
-              })
-              .map((marine, index) => {
-                if (squad_leader) {
-                  if (marine.ref === squad_leader.ref) {
-                    return;
-                  }
-                }
-                if (hidden_marines.includes(marine.ref) && !showHiddenMarines) {
-                  return;
-                }
-                if (marine.state === 'Dead' && !showDeadMarines) {
-                  return;
-                }
-
-                return (
-                  <Table.Row key={index}>
-                    <Table.Cell collapsing p="2px">
-                      {(marine.has_helmet && (
-                        <Button
-                          onClick={() =>
-                            act('watch_camera', { target_ref: marine.ref })
-                          }
-                        >
-                          {marine.name}
-                        </Button>
-                      )) || <Box color="yellow">{marine.name} (NO CAMERA)</Box>}
-                    </Table.Cell>
-                    <Table.Cell p="2px">{marine.role}</Table.Cell>
-                    <Table.Cell
-                      p="2px"
-                      color={determine_status_color(marine.state)}
-                    >
-                      {marine.state}
-                    </Table.Cell>
-                    <Table.Cell p="2px">{marine.area_name}</Table.Cell>
-                    <Table.Cell p="2px" collapsing>
-                      {marine.distance}
-                    </Table.Cell>
-                    <Table.Cell p="2px">
-                      {(hidden_marines.includes(marine.ref) && (
-                        <Button
-                          icon="plus"
-                          color="green"
-                          tooltip="Show marine"
-                          onClick={() => toggle_marine_hidden(marine.ref)}
-                        />
-                      )) || (
-                        <Button
-                          icon="minus"
-                          color="red"
-                          tooltip="Hide marine"
-                          onClick={() => toggle_marine_hidden(marine.ref)}
-                        />
-                      )}
+      <Stack vertical fill>
+        <Stack.Item grow align="center">
+          <Section mt="2px" width="96vw" fill scrollable>
+            <Table>
+              <Table.Row bold fontSize="14px">
+                <Table.Cell textAlign="center">Name</Table.Cell>
+                <Table.Cell textAlign="center">Role</Table.Cell>
+                <Table.Cell textAlign="center" collapsing>
+                  State
+                </Table.Cell>
+                <Table.Cell textAlign="center">Location</Table.Cell>
+                <Table.Cell textAlign="center" collapsing fontSize="12px">
+                  SL Dist.
+                </Table.Cell>
+                <Table.Cell textAlign="center" />
+              </Table.Row>
+              {squad_leader && (
+                <Table.Row key="index" bold>
+                  <Table.Cell collapsing p="2px">
+                    {(squad_leader.has_helmet && (
                       <Button
-                        icon="arrow-up"
-                        color="green"
-                        tooltip="Promote marine to Unit Leader"
-                        onClick={() => act('replace_lead', { ref: marine.ref })}
-                      />
-                    </Table.Cell>
-                  </Table.Row>
-                );
-              })}
-        </Table>
-      </Section>
+                        onClick={() =>
+                          act('watch_camera', { target_ref: squad_leader.ref })
+                        }
+                      >
+                        {squad_leader.name}
+                      </Button>
+                    )) || (
+                      <Box color="yellow">{squad_leader.name} (NO CAMERA)</Box>
+                    )}
+                  </Table.Cell>
+                  <Table.Cell p="2px">{squad_leader.role}</Table.Cell>
+                  <Table.Cell
+                    p="2px"
+                    color={determine_status_color(squad_leader.state)}
+                  >
+                    {squad_leader.state}
+                  </Table.Cell>
+                  <Table.Cell p="2px">{squad_leader.area_name}</Table.Cell>
+                  <Table.Cell p="2px" collapsing>
+                    {squad_leader.distance}
+                  </Table.Cell>
+                  <Table.Cell />
+                </Table.Row>
+              )}
+              {marines &&
+                marines
+                  .sort(sortByRole)
+                  .filter((marine) => {
+                    if (marineSearch && !marineSearch.includes('\\')) {
+                      const searchableString = String(
+                        marine.name,
+                      ).toLowerCase();
+                      return searchableString.match(
+                        new RegExp(marineSearch, 'i'),
+                      );
+                    }
+                    return marine;
+                  })
+                  .map((marine, index) => {
+                    if (squad_leader) {
+                      if (marine.ref === squad_leader.ref) {
+                        return;
+                      }
+                    }
+                    if (
+                      hidden_marines.includes(marine.ref) &&
+                      !showHiddenMarines
+                    ) {
+                      return;
+                    }
+                    if (marine.state === 'Dead' && !showDeadMarines) {
+                      return;
+                    }
+
+                    return (
+                      <Table.Row key={index}>
+                        <Table.Cell collapsing p="2px">
+                          {(marine.has_helmet && (
+                            <Button
+                              onClick={() =>
+                                act('watch_camera', { target_ref: marine.ref })
+                              }
+                            >
+                              {marine.name}
+                            </Button>
+                          )) || (
+                            <Box color="yellow">{marine.name} (NO CAMERA)</Box>
+                          )}
+                        </Table.Cell>
+                        <Table.Cell p="2px">{marine.role}</Table.Cell>
+                        <Table.Cell
+                          p="2px"
+                          color={determine_status_color(marine.state)}
+                        >
+                          {marine.state}
+                        </Table.Cell>
+                        <Table.Cell p="2px">{marine.area_name}</Table.Cell>
+                        <Table.Cell p="2px" collapsing>
+                          {marine.distance}
+                        </Table.Cell>
+                        <Table.Cell p="2px">
+                          {(hidden_marines.includes(marine.ref) && (
+                            <Button
+                              icon="plus"
+                              color="green"
+                              tooltip="Show marine"
+                              onClick={() => toggle_marine_hidden(marine.ref)}
+                            />
+                          )) || (
+                            <Button
+                              icon="minus"
+                              color="red"
+                              tooltip="Hide marine"
+                              onClick={() => toggle_marine_hidden(marine.ref)}
+                            />
+                          )}
+                          <Button
+                            icon="arrow-up"
+                            color="green"
+                            tooltip="Promote marine to Unit Leader"
+                            onClick={() =>
+                              act('replace_lead', { ref: marine.ref })
+                            }
+                          />
+                        </Table.Cell>
+                      </Table.Row>
+                    );
+                  })}
+            </Table>
+          </Section>
+        </Stack.Item>
+      </Stack>
     </Section>
   );
 };
