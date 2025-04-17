@@ -619,6 +619,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 /mob/proc/dizzy_process()
 	is_dizzy = 1
 	while(dizziness > 100)
+		SEND_SIGNAL(src, COMSIG_MOB_ANIMATING)
 		if(client)
 			if(buckled || resting)
 				client.pixel_x = 0
@@ -660,6 +661,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	var/jittering_old_y = pixel_y
 	is_jittery = 1
 	while(jitteriness > 100)
+		SEND_SIGNAL(src, COMSIG_MOB_ANIMATING)
 		var/amplitude = min(4, jitteriness / 100)
 		pixel_x = jittering_old_x + rand(-amplitude, amplitude)
 		pixel_y = jittering_old_y + rand(-amplitude/3, amplitude/3)
