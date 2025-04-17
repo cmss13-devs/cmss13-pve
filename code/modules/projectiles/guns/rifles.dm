@@ -7,7 +7,7 @@
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_LARGE
 	force = 5
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 	gun_category = GUN_CATEGORY_RIFLE
 	aim_slowdown = SLOWDOWN_ADS_RIFLE
 	wield_delay = WIELD_DELAY_NORMAL
@@ -70,7 +70,7 @@
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
 	)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade, /obj/item/attachable/stock/rifle/collapsible)
 	map_specific_decoration = TRUE
 	start_automatic = TRUE
@@ -136,7 +136,7 @@
 		/obj/item/attachable/scope/mini/nsg23,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini/nsg23,
@@ -178,7 +178,7 @@
 	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
 
 /obj/item/weapon/gun/rifle/nsg23/no_lock
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini/nsg23,
 		/obj/item/attachable/attached_gun/flamer,//non-op flamer for normal spawns
@@ -200,7 +200,7 @@
 	indestructible = TRUE
 
 	current_mag = /obj/item/ammo_magazine/rifle/xm40/heap
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	wield_delay = WIELD_DELAY_FAST
 	map_specific_decoration = FALSE
@@ -282,7 +282,7 @@
 		/obj/item/attachable/sling,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1, /obj/item/attachable/stock/rifle/collapsible)
 	start_automatic = TRUE
 
@@ -308,7 +308,7 @@
 
 /obj/item/weapon/gun/rifle/m41aMK1/unloaded //for making it start unloaded and with the safety on
 	current_mag = null
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/rifle/m41aMK1/preloaded
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/stock/rifle/collapsible)
@@ -424,7 +424,7 @@
 		/obj/item/attachable/attached_gun/grenade/type71/ag80,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/ag80/collapsible, /obj/item/attachable/attached_gun/grenade/type71/ag80)
 	start_automatic = TRUE
 
@@ -446,7 +446,7 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/ag80/collapsible, /obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded)
 
 /obj/item/weapon/gun/rifle/ag80/unloaded
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY|GUN_AUTO_EJECT_CASINGS
 	current_mag = null
 
 //M20A Harrington rifle
@@ -476,7 +476,7 @@
 		/obj/item/attachable/attached_gun/shotgun,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	wield_delay = WIELD_DELAY_NORMAL
 	aim_slowdown = SLOWDOWN_ADS_RIFLE
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a)
@@ -499,7 +499,7 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
 
 /obj/item/weapon/gun/rifle/m20a/unloaded
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY|GUN_AUTO_EJECT_CASINGS
 	current_mag = null
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
@@ -544,7 +544,7 @@
 		/obj/item/attachable/flashlight, // Side Rail
 		/obj/item/attachable/lasersight,
 	)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/recon, /obj/item/attachable/stock/rifle/collapsible)
 	start_automatic = TRUE
 	map_specific_decoration = FALSE
@@ -661,7 +661,7 @@
 		/obj/item/attachable/attached_gun/shotgun,
 		/obj/item/attachable/scope/slavic,
 	)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 	start_automatic = TRUE
 
 
@@ -687,7 +687,7 @@
 /obj/item/weapon/gun/rifle/mar40/tactical
 	desc = "A cheap, reliable assault rifle chambered in 8.8x29mm. Commonly found in the hands of criminals or mercenaries, or in the hands of the UPP or CLF. This one has been equipped with an after-market ammo-counter."
 	starting_attachment_types = list(/obj/item/attachable/angledgrip, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness)
-	flags_gun_features = GUN_AMMO_COUNTER|GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
+	flags_gun_features = GUN_AMMO_COUNTER|GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/rifle/mar40/carbine
 	name = "\improper MAR-30 battle carbine"
@@ -734,7 +734,7 @@
 /obj/item/weapon/gun/rifle/mar40/carbine/tactical
 	desc = "A cheap, reliable carbine chambered in 8.8x29mm. Commonly found in the hands of criminals or mercenaries. This one has been equipped with an after-market ammo-counter."
 	starting_attachment_types = list(/obj/item/attachable/verticalgrip, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness)
-	flags_gun_features = GUN_AMMO_COUNTER|GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
+	flags_gun_features = GUN_AMMO_COUNTER|GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/rifle/mar40/lmg
 	name = "\improper MAR-50 light machine gun"
@@ -1246,7 +1246,7 @@
 		/obj/item/attachable/flashlight,
 		)
 	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/attached_gun/grenade/type71)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	flags_equip_slot = SLOT_BACK
 	start_automatic = TRUE
 
@@ -1272,7 +1272,7 @@
 
 /obj/item/weapon/gun/rifle/type71/unloaded
 	current_mag = null
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/rifle/type71/carbine
 	name = "\improper Type 71 'Commando' pulse rifle"
@@ -1351,7 +1351,7 @@
 		/obj/item/attachable/flashlight,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	wield_delay = WIELD_DELAY_VERY_FAST
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	//map_specific_decoration = TRUE
@@ -1407,7 +1407,7 @@
 
 	current_mag = /obj/item/ammo_magazine/rifle/m49a/pve
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	wield_delay = WIELD_DELAY_VERY_FAST
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	map_specific_decoration = FALSE
@@ -1438,7 +1438,7 @@
 
 /obj/item/weapon/gun/rifle/m49a/pve/unloaded
 	current_mag = null
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY|GUN_AUTO_EJECT_CASINGS
 
 //-------------------------------------------------------
 
@@ -1474,7 +1474,7 @@
 		/obj/item/attachable/flashlight/grip,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	wield_delay = WIELD_DELAY_VERY_FAST
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	starting_attachment_types = list(/obj/item/attachable/stock/carbine)
@@ -1528,7 +1528,7 @@
 		/obj/item/attachable/stock/carbine/wood,
 		/obj/item/attachable/stock/carbine/wood/tactical,
 	)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	wield_delay = WIELD_DELAY_FAST
 	starting_attachment_types = list(/obj/item/attachable/stock/carbine/wood, /obj/item/attachable/scope/mini/hunting)
 	map_specific_decoration = FALSE
@@ -1604,7 +1604,7 @@
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/magnetic_harness,
 	)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	map_specific_decoration = FALSE
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 
@@ -1748,7 +1748,7 @@
 		/obj/item/attachable/stock/xm51,
 	)
 	flags_equip_slot = SLOT_BACK
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	gun_category = GUN_CATEGORY_SHOTGUN
 	aim_slowdown = SLOWDOWN_ADS_SHOTGUN
 	map_specific_decoration = TRUE

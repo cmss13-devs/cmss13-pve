@@ -184,8 +184,10 @@
 		list("Patrol Cap, Snow", floor(scale * 15), /obj/item/clothing/head/cmcap/snow, VENDOR_ITEM_REGULAR),
 		list("Patrol Cap, Desert", floor(scale * 15), /obj/item/clothing/head/cmcap/desert, VENDOR_ITEM_REGULAR),
 		list("Boonie Hat, Desert", floor(scale * 15), /obj/item/clothing/head/cmcap/boonie/tan, VENDOR_ITEM_REGULAR),
-		list("Solar Devils Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/devils, VENDOR_ITEM_REGULAR),
 		list("USCM Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch, VENDOR_ITEM_REGULAR),
+		list("Poncho (green)", round(scale * 10), /obj/item/clothing/accessory/poncho/green, VENDOR_ITEM_REGULAR),
+		list("Poncho (brown)", round(scale * 10), /obj/item/clothing/accessory/poncho/brown, VENDOR_ITEM_REGULAR),
+		list("Poncho (black)", round(scale * 10), /obj/item/clothing/accessory/poncho/black, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/item/storage/box/guncase/m3armor //forgive me, father
@@ -557,12 +559,13 @@
 		list("Plastic Explosives", round(scale * 2), /obj/item/explosive/plastic, VENDOR_ITEM_REGULAR),
 		list("Breaching Charge", round(scale * 2), /obj/item/explosive/plastic/breaching_charge, VENDOR_ITEM_REGULAR),
 
-		list("FLARE AND LIGHT", -1, null, null),
+		list("FLARES AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 5), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
 		list("Box of Flashlight", round(scale * 1), /obj/item/ammo_box/magazine/misc/flashlight, VENDOR_ITEM_REGULAR),
 		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
 		list("M94 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
 		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
+		list("M90-A Signal Flare Pack", round(scale * 0.5), /obj/item/storage/box/flare/signal_violet, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null),
 		list("VP70 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp70/unloaded, VENDOR_ITEM_REGULAR),

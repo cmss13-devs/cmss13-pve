@@ -567,6 +567,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/po)
 	volume = RADIO_VOLUME_CRITICAL
 	multibroadcast_cooldown = LOW_MULTIBROADCAST_COOLDOWN
+	frequency = ALPHA_FREQ
 
 /obj/item/device/radio/headset/almayer/intel
 	name = "marine intel radio headset"

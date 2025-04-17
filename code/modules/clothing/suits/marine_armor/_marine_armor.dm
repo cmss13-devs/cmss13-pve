@@ -539,6 +539,12 @@
 	unacidable = TRUE
 	var/injections = 4
 
+/obj/item/clothing/suit/storage/marine/specialist/smartgunner
+	name = "\improper B18-B smartgunner defensive armor"
+	desc = "A heavy, rugged set of armor plates as well as the computers, straps, and armature required for operating the M56 Smartgun. For when you really, really need to kill something bad. Slows you down though.\nComes with two tricord injectors in each arm guard."
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
+	specialty = "B18B experimental"
+
 /obj/item/clothing/suit/storage/marine/specialist/verb/inject()
 	set name = "Create Injector"
 	set category = "Object"
