@@ -194,9 +194,16 @@
 	strength = EYE_PROTECTION_WELDING
 	probability = 80
 
+/obj/effect/ebeam/laser/plasma/laser_pistol
+	name = "light laser beam"
+	alpha = 255
+	strength = EYE_PROTECTION_FLAVOR
+	probability = 80
+
 /obj/effect/ebeam/Destroy()
 	owner = null
 	return ..()
+
 
 /obj/effect/overlay/beam //Not actually a projectile, just an effect.
 	name="beam"

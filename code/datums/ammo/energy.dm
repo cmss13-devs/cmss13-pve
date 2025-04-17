@@ -41,22 +41,20 @@
 
 /datum/ammo/energy/taser/precise
 	name = "precise taser bolt"
-	flags_ammo_behavior = AMMO_ENERGY|AMMO_IGNORE_RESIST|AMMO_MP
+	flags_ammo_behavior = AMMO_ENERGY
 
 /datum/ammo/energy/rxfm_eva
-	name = "laser blast"
+	name = "light laser beam"
 	icon_state = "laser_new"
 	flags_ammo_behavior = AMMO_LASER
-	accurate_range = 14
-	max_range = 22
+	accurate_range = 7//its... not great.
+	max_range = 24
 	damage = 45
-	stamina_damage = 25 //why not
-	shell_speed = AMMO_SPEED_TIER_3
-
-/datum/ammo/energy/rxfm_eva/on_hit_mob(mob/living/M, obj/projectile/P)
-	..()
-	if(prob(10)) //small chance for one to ignite on hit
-		M.fire_act()
+	penetration = -ARMOR_PENETRATION_TIER_3 //shittylaser
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
+	scatter = SCATTER_AMOUNT_NONE
+	accuracy = HIT_ACCURACY_MULT_TIER_10
+	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
 /datum/ammo/energy/laz_uzi
 	name = "laser bolt"

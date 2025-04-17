@@ -353,6 +353,147 @@
 	create_reagents(15)
 	. = ..()
 
+//HORRISCUFFED LASER PISTOL
+//this is using M2C code to simulate an internal capacitor system.
+/obj/item/weapon/gun/rxfm
+	name = "RXF-M5 EVA pistol"
+	desc = "A common laser handgun designed by Brookvale Armory, and produced under license by a variety of enterprises. ~8.2hJ per shot. Eight shot capacitor, battery holds ~72 more. Recharge is about two seconds for each shot."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "rxfm"
+	item_state = "eva"
+	muzzleflash_iconstate = "muzzle_laser"
+	muzzle_flash_color = COLOR_LASER_RED
+	muzzle_flash_lum = 4
+	w_class = SIZE_MEDIUM
+	flags_equip_slot = SLOT_WAIST|SLOT_SUIT_STORE
+	unacidable = FALSE
+	gun_category = GUN_CATEGORY_HANDGUN
+
+	fire_sound = 'sound/weapons/Laser4.ogg'
+	reload_sound = 'sound/weapons/flash.ogg'
+	unload_sound = 'sound/weapons/flipblade.ogg'
+	current_mag = obj/item/ammo_magazine/energy_pistol
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_ONE_HAND_WIELDED
+	ammo = /datum/ammo/energy/rxfm_eva
+	attachable_allowed = list(/obj/item/attachable/scope/variable_zoom/eva, /obj/item/attachable/eva_doodad)
+	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom/eva, /obj/item/attachable/eva_doodad)
+	//direcrly copying rom pandora XM99 lol
+	var/obj/effect/ebeam/beam_type = /obj/effect/ebeam/laser/plasma/laser_pistol
+	///world.time value, to prevent a lightshow without actually firing
+	var/beam_cooldown = 0
+	///Delay before another beam can start again, in tenths of seconds
+	var/beam_delay = 20
+
+	//the energy clip mechanic variables
+	var/shots_remaining = 0
+	var/max_shots = 8
+
+/obj/item/weapon/gun/rxfm/process()
+	shots_remaining += 1
+	if(shots_remaining >= 8)
+		shots_remaining = 8
+		STOP_PROCESSING(SSobj, src)
+
+/obj/item/weapon/gun/rxfm/load_into_chamber(mob/user)
+	return ready_in_chamber()
+
+/obj/item/weapon/gun/rxfm/reload_into_chamber(mob/user)
+	if(current_mag.current_rounds <= 0)
+		playsound(src, empty_sound, 25, 1)
+	return TRUE
+
+/obj/item/weapon/gun/rxfm/delete_bullet(obj/projectile/projectile_to_fire, refund = 0)
+	if(!current_mag)
+		return
+	qdel(projectile_to_fire)
+	if(refund)
+		current_mag.current_rounds++
+	return TRUE
+
+/obj/item/weapon/gun/rxfm/reload(mob/user, obj/item/ammo_magazine/energy_pistol)
+	if(!energy_pistol || !istype(energy_pistol))
+		to_chat(user, SPAN_WARNING("That's not going to fit!"))
+		return
+
+	if(current_mag)
+		to_chat(user, SPAN_WARNING("[src] is already loaded!"))
+		return
+
+	else
+		to_chat(user, SPAN_NOTICE("You reload [src]."))
+		user.drop_inv_item_on_ground(energy_pistol)
+		current_mag = energy_pistol
+		energy_pistol.forceMove(src)
+		replace_ammo(,energy_pistol)
+		playsound(user, reload_sound, 25, 1)
+	update_icon()
+	return TRUE
+
+/obj/item/weapon/gun/rxfm/unload(mob/user, reload_override = 0)
+	if(user && !current_mag)
+		to_chat(user, SPAN_WARNING("[src] is already empty!"))
+		return
+	if(user && (current_mag != null))
+		to_chat(user, SPAN_NOTICE("You unload [src]."))
+		playsound(user, unload_sound, 25, 1)
+		if(current_mag.current_rounds > 0)
+			user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src]."),
+			SPAN_NOTICE("You unload [current_mag] from [src]."))
+			make_battery_drum(user, current_mag.current_rounds)
+		if(current_mag.current_rounds <= 0)
+			user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src]."),
+			SPAN_NOTICE("You unload [current_mag] from [src]."))
+			make_battery_drum(user, current_mag.current_rounds)
+		current_mag = null
+		update_icon()
+
+/obj/item/weapon/gun/rxfm/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0,"rail_x" = 12, "rail_y" = 21, "under_x" = 16, "under_y" = 10, "stock_x" = 0, "stock_y" = 0)
+
+/obj/item/weapon/gun/energy/rxfm/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	accuracy_mult = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_NONE
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_OFF
+	recoil_unwielded = RECOIL_OFF
+
+/obj/item/weapon/gun/rxfm/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
+
+	var/datum/beam/plasma_beam
+	if(!current_mag  || shots_remaining <= 0)
+		click_empty(user)
+		return
+	if(current_mag.current_rounds <= 0)
+		return
+	laser_pistol = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
+	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_RED, luminosity = 2 , easing = SINE_EASING|EASE_OUT)
+	. = ..()
+
+// Funny procs to force the item_states to look right.
+
+/obj/item/weapon/gun/rxfm/update_icon()
+	..()
+	item_state = "eva"
+	for(var/i in attachments)
+		if(istype(attachments[i], /obj/item/attachable/scope/variable_zoom/eva))
+			item_state += "_s"
+		if(istype(attachments[i], /obj/item/attachable/eva_doodad))
+			item_state += "_d"
+
+/obj/item/weapon/gun/rxfm/attach_to_gun(mob/user, obj/item/attachable/attachment)
+	. = ..()
+	update_icon()
+	user.update_inv_r_hand()
+	user.update_inv_l_hand()
+
+/obj/item/weapon/gun/rxfm/on_detach(mob/user, obj/item/attachable/attachment)
+	. = ..()
+	update_icon()
+	user.update_inv_r_hand()
+	user.update_inv_l_hand()
+
 
 // XM99A, The quintesential phased plasma rifle in the 40 watt range
 
