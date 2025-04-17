@@ -410,8 +410,21 @@
 		current_mag.current_rounds++
 	return TRUE
 
-/obj/item/weapon/gun/rxfm/reload(mob/user, obj/item/ammo_magazine/energy_pistol)
-	if(!energy_pistol || !istype(energy_pistol))
+/obj/item/weapon/gun/rxfm/proc/make_laser_mag(mob/user, remaining_rounds = 0)
+	if(!current_mag)
+		return
+
+	var/obj/item/ammo_magazine/plasma/cell = new current_mag.type()
+	if(remaining_rounds <= 0)
+		cell.current_rounds = 0
+		user.put_in_hands(cell)
+	else
+		cell.current_rounds = remaining_rounds
+		user.put_in_hands(cell)
+	cell.update_icon()
+
+/obj/item/weapon/gun/rxfm/reload(mob/user, obj/item/ammo_magazine/laserpistol)
+	if(!laserpistol || !istype(laserpistol))
 		to_chat(user, SPAN_WARNING("That's not going to fit!"))
 		return
 
@@ -421,10 +434,10 @@
 
 	else
 		to_chat(user, SPAN_NOTICE("You reload [src]."))
-		user.drop_inv_item_on_ground(energy_pistol)
-		current_mag = energy_pistol
-		energy_pistol.forceMove(src)
-		replace_ammo(,energy_pistol)
+		user.drop_inv_item_on_ground(laserpistol)
+		current_mag = laserpistol
+		laserpistol.forceMove(src)
+		replace_ammo(,laserpistol)
 		playsound(user, reload_sound, 25, 1)
 	update_icon()
 	return TRUE
@@ -439,11 +452,11 @@
 		if(current_mag.current_rounds > 0)
 			user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src]."),
 			SPAN_NOTICE("You unload [current_mag] from [src]."))
-			make_battery_drum(user, current_mag.current_rounds)
+			make_laser_mag(user, current_mag.current_rounds)
 		if(current_mag.current_rounds <= 0)
 			user.visible_message(SPAN_NOTICE("[user] unloads [current_mag] from [src]."),
 			SPAN_NOTICE("You unload [current_mag] from [src]."))
-			make_battery_drum(user, current_mag.current_rounds)
+			make_laser_mag(user, current_mag.current_rounds)
 		current_mag = null
 		update_icon()
 

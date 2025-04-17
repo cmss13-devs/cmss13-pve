@@ -398,16 +398,16 @@
 
 //-------------------------------------------------------
 // RXF clips
-obj/item/ammo_magazine/energy_pistol
+obj/item/ammo_magazine/laserpistol
 	name = "\improper RXF-M5 magazine"
 	desc = "The high capacity battery system for the RXF-M5. Intentionally made quite safe, but difficult to recharge."
 	caliber = "lithium-ion"
-	icon = 'icons\obj\items\weapons\guns\ammo_by_faction\colony.dmi'
-	icon_state = pkd_44//placeholder
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "pkd_44"//placeholder
 
 	max_rounds = 72
 	default_ammo = /datum/ammo/energy/rxfm_eva
-	gun_type = /obj/item/weapon/gun/rxfm5_eva
+	gun_type = /obj/item/weapon/gun/rxfm
 
 //-------------------------------------------------------
 // XM99 power/fuel cells
