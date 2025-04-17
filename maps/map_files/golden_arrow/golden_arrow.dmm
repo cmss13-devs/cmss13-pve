@@ -1296,7 +1296,7 @@
 "aPO" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/closet/secure_closet/engineering_welding,/turf/open/floor/almayer/plate,/area/golden_arrow/hangar)
 "aPS" = (/obj/structure/pipes/standard/simple/hidden/supply,/turf/open/floor/plating/plating_catwalk,/area/golden_arrow/dorms)
 "aPU" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/turf/open/floor/almayer/edge/smooth/corner/east,/area/golden_arrow/motor_pool)
-"aQa" = (/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{name = "Hangar Bay Aft"; id = "golden arrow lz2"},/turf/open/floor/almayer/mono,/area/golden_arrow/hangar)
+"aQa" = (/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{name = "Hangar Bay Aft"; id = "golden arrow lz2"; roundstart_template = /datum/map_template/shuttle/somme},/turf/open/floor/almayer/mono,/area/golden_arrow/hangar)
 "aQb" = (/obj/structure/machinery/disposal{density = 0; layer = 3.2; pixel_y = 16},/obj/effect/decal/cleanable/dirt{layer = 2.52},/turf/open/floor/almayer/edge/north,/area/golden_arrow/prep_hallway)
 "aQc" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 1},/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/plating/plating_catwalk,/area/golden_arrow/hangar)
 "aQd" = (/turf/open/floor/almayer/edge/smooth/endcap_right/east,/area/golden_arrow/cryo_cells)
