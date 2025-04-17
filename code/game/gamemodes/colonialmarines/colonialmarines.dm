@@ -415,7 +415,7 @@
 					if(human.assigned_squad && human.assigned_squad.name == SQUAD_LRRP)
 						human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "███<br>" + "█:█, ██<br>" + "Snake Eaters<br>" + "[human.job], ███<br>", /atom/movable/screen/text/screen_text/picture/snake_eater)
 					else
-						human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "3rd Bat. 'Solar Devils<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/solar_devils)
+						human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "2nd Bat. 'Double Deuce'<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/solar_devils)
 				if(FACTION_UPP)
 					human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Red Dawn<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/red_dawn)
 				if(FACTION_PMC)
