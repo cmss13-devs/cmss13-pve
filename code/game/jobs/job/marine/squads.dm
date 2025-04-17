@@ -48,7 +48,7 @@
 	/// maximum # of squad medics allowed in the squad
 	var/max_medics = 4
 	/// maximum # of specs allowed in the squad
-	var/max_specialists = 1
+	var/max_specialists = 5
 	/// maximum # of fireteam leaders allowed in the suqad
 	var/max_tl = 2
 	/// maximum # of smartgunners allowed in the squad
