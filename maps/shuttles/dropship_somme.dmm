@@ -1,7 +1,6 @@
 "bo" = (/obj/structure/shuttle/part/somme/transparent{icon_state = "dropship_interior 3,18"},/obj/effect/attach_point/weapon/somme/left_fore{plane = -5},/turf/template_noop,/area/shuttle/somme)
 "bU" = (/obj/structure/shuttle/part/somme/transparent{icon_state = "dropship_interior 2,12"},/turf/template_noop,/area/shuttle/somme)
 "cU" = (/obj/structure/shuttle/part/somme/transparent{icon_state = "dropship_interior 2,14"},/turf/template_noop,/area/shuttle/somme)
-"dz" = (/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4{id = "aft_door"; name = "\improper Somme cargo door"},/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 4,9"},/area/shuttle/somme)
 "dS" = (/obj/structure/machinery/cm_vending/sorted/medical/wall_med{pixel_y = 26; pixel_x = 8},/obj/structure/extinguisher_cabinet/lifeboat{pixel_y = 27; pixel_x = -4},/obj/structure/bed/chair/dropship/passenger{dir = 4},/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 3,16"},/area/shuttle/somme)
 "eL" = (/obj/structure/shuttle/part/somme{icon_state = "dropship_interior 2,17"},/turf/template_noop,/area/shuttle/somme)
 "hh" = (/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 6,15"},/area/shuttle/somme)
@@ -11,10 +10,11 @@
 "jQ" = (/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 6,14"},/area/shuttle/somme)
 "ko" = (/turf/closed/shuttle/dropship1{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 4,17"; name = "Somme"},/area/shuttle/somme)
 "kJ" = (/obj/structure/shuttle/part/somme/transparent{icon_state = "dropship_interior 5,18"; density = 0; plane = -7},/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{dir = 1; pixel_x = 8; pixel_y = -2; layer = 4.0},/obj/structure/machinery/computer/shuttle/dropship/flight/small/somme,/obj/structure/machinery/light/small/blue/golden_arrow{plane = -8; light_color = "#a2c4fc"},/turf/open/floor/almayer_hull{mouse_opacity = 0},/area/shuttle/somme)
+"kU" = (/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4{id = "aft_door"; name = "\improper Somme cargo door"},/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 4,9"},/area/shuttle/somme)
 "md" = (/obj/structure/shuttle/part/somme{icon_state = "dropship_interior 3,9"},/turf/template_noop,/area/shuttle/somme{base_lighting_color = "#eb4034"; light_color = "#eb4034"})
 "na" = (/obj/structure/machinery/camera/autoname/golden_arrow/somme{dir = 4},/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 4,12"},/area/shuttle/somme)
 "nK" = (/obj/structure/shuttle/part/somme{icon_state = "dropship_interior 3,11"},/turf/template_noop,/area/shuttle/somme{base_lighting_color = "#eb4034"; light_color = "#eb4034"})
-"oS" = (/obj/structure/dropship_tail{pixel_x = -160; pixel_y = -332; mouse_opacity = 0},/obj/structure/machinery/light/double/blue{layer = -5},/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 4,9"},/area/shuttle/somme)
+"oS" = (/obj/structure/machinery/light/double/blue{layer = -5},/obj/structure/dropship_tail{pixel_x = -160; pixel_y = -288; mouse_opacity = 0; icon_state = "dropship_tail_fade_3"},/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 4,9"},/area/shuttle/somme)
 "pg" = (/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 5,15"},/area/shuttle/somme)
 "pv" = (/obj/docking_port/mobile/marine_dropship/somme,/obj/effect/attach_point/computer/somme,/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 5,14"},/area/shuttle/somme)
 "pF" = (/obj/structure/shuttle/part/somme{icon_state = "dropship_interior 7,11"},/turf/template_noop,/area/shuttle/somme{base_lighting_color = "#eb4034"; light_color = "#eb4034"})
@@ -78,5 +78,5 @@ UrFNhqKgMJsoXU
 bUhMnaqpyvyaiz
 EZnKMOBDvvpFEZ
 EZvEHlZYRuKFEZ
-EZmddzoSMAxWEZ
+EZmdkUoSMAxWEZ
 "}
