@@ -609,15 +609,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/equipped(mob/living/carbon/human/mob, slot)
 	if(camera)
 		camera.c_tag = mob.name
-		camera.status = TRUE
 	if(active_visor)
 		recalculate_visors(mob)
 	..()
 
 /obj/item/clothing/head/helmet/marine/unequipped(mob/user, slot)
 	. = ..()
-	if(camera)
-		camera.status = FALSE
 	if(pockets)
 		for(var/obj/item/attachable/flashlight/F in pockets)
 			if(F.light_on)
