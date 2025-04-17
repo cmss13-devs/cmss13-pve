@@ -1512,6 +1512,39 @@
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
+//===========================//CUSTOM RMC ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/goshawk
+	name = "\improper Combat Loading System/Utility"
+	desc = "Constructed out of a sturdy fire-retardant synthetic rip-stop fabric. Intended to carry smaller items instead of gun clips."
+	icon_state = "m3webbing"
+	hold = /obj/item/storage/internal/accessory/webbing/goshawk
+	slot = ACCESSORY_SLOT_M3UTILITY
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/accessory/storage/webbing/goshawk/Initialize(mapload)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
+
+/obj/item/storage/internal/accessory/webbing/goshawk
+	cant_hold = list(
+		/obj/item/ammo_magazine/rifle,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/goshawk/ammo
+	name = "\improper Combat Loading System/Magazine"
+	desc = "Constructed out of a sturdy fire-retardant synthetic rip-stop fabric. Has sturdy semi-shielded pouches for standard longarm clips."
+	icon_state = "m3webbingmag"
+	hold = /obj/item/storage/internal/accessory/webbing/goshawk_ammo
+
+/obj/item/storage/internal/accessory/webbing/goshawk_ammo
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg/m39,
+	)
+
 //Partial Pre-load For Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1

@@ -191,6 +191,12 @@
 /obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
 	return
 
+/obj/item/explosive/grenade/high_explosive/airburst/canister/imperial
+	name = "\improper L2A4 kinetic grenade"
+	desc = "A unique weapon of the RMC, this grenade is a non-explosive 20mm projectile intended to decisively incapacitate personnel and disable light vehicles. It is exclusively compatible with the L7A4 USGL."
+	shrapnel_count = 1
+	shrapnel_type = shrapnel_type = /datum/ammo/bullet/shrapnel/slug
+
 /*
 //================================================
 				Airburst Grenades
@@ -258,6 +264,12 @@
 	shrapnel_type = /datum/ammo/flare/starshell
 	direct_hit_shrapnel = 5
 	dispersion_angle = 360 //beeg circle
+
+/obj/item/explosive/grenade/high_explosive/airburst/imperial
+	name = "\improper L4A6 high explosive airburst grenade"
+	desc = "20mm antipersonnel grenade intended to tackle opponents in cover. Lacks blast effects, but precision airbursting allows the shrapnel to target opponents effectively."
+	shrapnel_count = 12
+	shrapnel_type = /datum/ammo/bullet/shrapnel/light_airburst
 
 /*
 //================================================

@@ -122,7 +122,7 @@
 	passive_block = 40
 	readied_block = 60
 
-/obj/item/weapon/shield/riot/ballistic //nah
+/obj/item/weapon/shield/ballistic //nah
 	name = "L12A3 Ballistic shield"
 	desc = "Ballistic shield in low-rate use with the Royal Marines Commando. Lightweight polymer composition and armored glass viewport, handles on the back. With rising troubles in their few colonial holdings, it's seen wider and wider service."
 	icon_state = "ballisticshield"

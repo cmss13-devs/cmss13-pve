@@ -1618,23 +1618,18 @@
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_8
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
 	scatter = SCATTER_AMOUNT_TIER_9
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_NONE
-	scatter_unwielded = SCATTER_AMOUNT_TIER_5
+	burst_scatter_mult = SCATTER_AMOUNT_NONE
+	scatter_unwielded = SCATTER_AMOUNT_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
 /obj/item/weapon/gun/rifle/l46a3/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/attached_gun/grenade/l7a4 = new(src)
-	var/obj/item/attachable/l46a3_barrel = new(src)
 	l7a4.flags_attach_features &= ~ATTACH_REMOVABLE
-	l46a3_barrel.flags_attach_features &= ~ATTACH_REMOVABLE
-	f90_shotgun_barrel.hidden = FALSE
-	f90_shotgun.hidden = TRUE
-	f90_shotgun.Attach(src)
-	f90_shotgun_barrel.Attach(src)
-	update_attachable(f90_shotgun.slot)
-	update_attachable(f90_shotgun_barrel.slot)
+	l7a4.hidden = TRUE
+	l7a4.Attach(src)
+	update_attachable(l7a3.slot)
 
 //-------------------------------------------------------
 //XM51, Breaching Scattergun
