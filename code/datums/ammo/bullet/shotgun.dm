@@ -171,8 +171,8 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
-/datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M,P)
+/datum/ammo/bullet/shotgun/buckshot/incendiary/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P)
 
 /datum/ammo/bullet/shotgun/buckshot/special
 	name = "buckshot shell, USCM special type"

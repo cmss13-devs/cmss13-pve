@@ -313,6 +313,7 @@
 
 /datum/action/item_action/toggle_iff_pkp/action_activate()
 	. = ..()
+
 	var/obj/item/weapon/gun/pkp/iff/G = holder_item
 	if(!ishuman(owner))
 		return
@@ -320,9 +321,6 @@
 	if(H.is_mob_incapacitated() || G.get_active_firearm(H, FALSE) != holder_item)
 		return
 
-/datum/action/item_action/toggle_iff_pkp/action_activate()
-	. = ..()
-	var/obj/item/weapon/gun/pkp/iff/G = holder_item
 	G.toggle_lethal_mode(usr)
 	if(G.iff_enabled)
 		action_icon_state = "iff_toggle_on"
