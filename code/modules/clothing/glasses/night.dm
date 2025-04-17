@@ -49,7 +49,7 @@
 	icon_state = "m49a_goggles"
 	deactive_state = "m49a_goggles_0"
 	vision_flags = SEE_TURFS
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_MEDICAL_BASIC)
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_BASIC)
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
@@ -64,7 +64,7 @@
 	icon_state = "m4_goggles"
 	deactive_state = "m4_goggles_0"
 	vision_flags = SEE_TURFS
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
@@ -73,7 +73,7 @@
 /obj/item/clothing/glasses/night/medhud/no_nvg
 	name = "\improper Mark 2 Battle Medic sight"
 	desc = "A headset and biomonitor readout system. Allows the ability to view the biofunction monitor readouts of other marines and linking to the Command & Control network. Click it to toggle."
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_MEDICAL_ADVANCED) // Need to redefine or it won't work
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED) // Need to redefine or it won't work
 	darkness_view = 0
 	vision_flags = 0
 	lighting_alpha = 255
@@ -86,7 +86,7 @@
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
 	vision_flags = SEE_TURFS
-	hud_type = list(MOB_HUD_FACTION_MARINE)
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
@@ -110,7 +110,7 @@
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
 	vision_flags = SEE_TURFS|SEE_MOBS
-	hud_type = list(MOB_HUD_FACTION_PMC)
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE)
 
 /obj/item/clothing/glasses/night/m42_night_goggles/upp
 	name = "\improper Type 9 commando goggles"
@@ -132,7 +132,7 @@
 	toggleable = TRUE
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/m56_goggles/far_sight)
 	vision_flags = SEE_TURFS
-	hud_type = list(MOB_HUD_FACTION_MARINE)
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 	flags_inventory = SMARTGUN_OPTIC
 	fullscreen_vision = null
 	eye_protection = EYE_PROTECTION_FLAVOR
@@ -249,6 +249,7 @@
 	name = "\improper M56T head mounted sight"
 	desc = "A headset and goggles system for the M56T 'Terminator' Smartgun. Has a low-light vision processor as well as a system allowing detection of thermal signatures though solid surfaces."
 	vision_flags = SEE_TURFS|SEE_MOBS
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE)
 
 /obj/item/clothing/glasses/night/yautja
 	name = "bio-mask nightvision"
