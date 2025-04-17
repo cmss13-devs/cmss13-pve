@@ -65,6 +65,11 @@
 				return
 			message_admins("[key_name_admin(usr)] unpowered all SMESs and APCs")
 			power_failure()
+		if("unpower_all")
+			if(alert(usr, "Are you sure you want to do this?", "Confirmation", "Yes", "No") != "Yes")
+				return
+			message_admins("[key_name_admin(usr)] unpowered all SMESs and APCs everywhere")
+			power_failure_all()
 		if("quickpower")
 			if(alert(usr, "Are you sure you want to do this? It will laaag.", "Confirmation", "Yes", "No") != "Yes")
 				return

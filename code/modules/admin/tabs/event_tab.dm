@@ -785,6 +785,7 @@
 		<BR>
 		<B>Power</B><BR>
 		<A href='byond://?src=\ref[src];[HrefToken()];events=unpower'>Unpower ship SMESs and APCs</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];events=unpower_all'>Unpower ship SMESs and APCs everywhere(also disable reactors)</A><BR>
 		<A href='byond://?src=\ref[src];[HrefToken()];events=power'>Power ship SMESs and APCs</A><BR>
 		<A href='byond://?src=\ref[src];[HrefToken()];events=quickpower'>Power ship SMESs</A><BR>
 		<A href='byond://?src=\ref[src];[HrefToken()];events=powereverything'>Power ALL SMESs and APCs everywhere</A><BR>

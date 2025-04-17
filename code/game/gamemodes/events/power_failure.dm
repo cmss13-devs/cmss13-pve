@@ -24,6 +24,31 @@
 	if(announce)
 		marine_announcement("Abnormal activity detected in the ship power system. As a precaution, power must be shut down for an indefinite duration.", "Critical Power Failure", 'sound/AI/poweroff.ogg')
 
+/proc/power_failure_all(announce = 1)
+	var/ground_zlevels = SSmapping.levels_by_trait(ZTRAIT_GROUND)
+
+	for(var/obj/structure/machinery/power/smes/S in GLOB.machines)
+		S.last_charge = S.charge
+		S.last_output = S.output_level
+		S.last_outputting = S.outputting
+		S.charge = 0
+		S.output_level = 0
+		S.outputting = 0
+		S.updateicon()
+		S.power_change()
+
+	for(var/obj/structure/machinery/power/apc/C in GLOB.machines)
+		C.cell.charge = 0
+
+	for(var/obj/structure/machinery/power/reactor/reactor in GLOB.machines)
+		reactor.is_on = 0
+
+	playsound_z(ground_zlevels, 'sound/effects/powerloss.ogg')
+
+	sleep(100)
+	if(announce)
+		marine_announcement("Abnormal activity detected in the power system. As a precaution, power must be shut down for an indefinite duration.", "Critical Power Failure", 'sound/AI/poweroff.ogg')
+
 /proc/power_restore(announce = 1)
 	for(var/obj/structure/machinery/power/smes/S in GLOB.machines)
 		if(!is_mainship_level(S.z))
