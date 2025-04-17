@@ -872,6 +872,14 @@ Defined in conflicts.dm of the #defines folder.
 		to_chat(user, SPAN_NOTICE("You are unable to modify it."))
 	return
 
+/obj/item/attachable/flashlight/eva_doodad
+	name = "EVA-Rlite underbarrel flashlight"
+	desc = "A ruggedized flashlight for the RXF-M5 EVA laser pistol."
+	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
+	icon_state = "rxfm5_eva_doodad"
+	attach_icon = "rxfm5_eva_doodad_a"
+	slot = "under"
+
 /obj/item/attachable/magnetic_harness
 	name = "magnetic harness"
 	desc = "A magnetically attached harness kit that attaches to the rail mount of a weapon. When dropped, the weapon will sling to any set of USCM armor."
@@ -936,6 +944,12 @@ Defined in conflicts.dm of the #defines folder.
 			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+
+/obj/item/attachable/eva_scope
+	name = "RXF-M5 Optical Sight"
+	icon_state = "rxfm5_eva_scope"
+	attach_icon = "rxfm5_eva_scope_a"
+	desc = "Some decent shooting glass to go with the shitty laser gun."
 
 /obj/item/attachable/sling //Mostly cosmetic, some one-handed fire adjustments
 	name = "two-point sling"
@@ -3936,17 +3950,3 @@ Defined in conflicts.dm of the #defines folder.
 	burst_mod = BURST_AMOUNT_TIER_2
 
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_4
-
-/obj/item/attachable/eva_doodad
-	name = "RXF-M5 EVA beam projector"
-	desc = "A strange little doodad that projects an invisible beam that the EVA pistol's actual laser travels in, used as a focus that slightly weakens the laser's intensity. Or at least that's what the manual said."
-	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
-	icon_state = "rxfm5_eva_doodad"
-	attach_icon = "rxfm5_eva_doodad_a"
-	slot = "under"
-
-/obj/item/attachable/eva_doodad/New()
-	..()
-	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
-	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_5
-	damage_mod -= BULLET_DAMAGE_MULT_TIER_4

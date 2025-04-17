@@ -398,7 +398,7 @@
 
 //-------------------------------------------------------
 // RXF clips
-obj/item/ammo_magazine/laserpistol
+/obj/item/ammo_magazine/laserpistol
 	name = "\improper RXF-M5 magazine"
 	desc = "The high capacity battery system for the RXF-M5. Intentionally made quite safe, but difficult to recharge."
 	caliber = "lithium-ion"

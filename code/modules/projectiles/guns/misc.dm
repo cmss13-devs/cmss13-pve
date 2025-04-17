@@ -359,7 +359,7 @@
 	name = "RXF-M5 EVA pistol"
 	desc = "A common laser handgun designed by Brookvale Armory, and produced under license by a variety of enterprises. ~8.2hJ per shot. Eight shot capacitor, battery holds ~72 more. Recharge is about two seconds for each shot."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
-	icon_state = "rxfm"
+	icon_state = "rxfm5_eva"
 	item_state = "eva"
 	muzzleflash_iconstate = "muzzle_laser"
 	muzzle_flash_color = COLOR_LASER_RED
@@ -372,11 +372,11 @@
 	fire_sound = 'sound/weapons/Laser4.ogg'
 	reload_sound = 'sound/weapons/flash.ogg'
 	unload_sound = 'sound/weapons/flipblade.ogg'
-	current_mag = obj/item/ammo_magazine/energy_pistol
+	current_mag = /obj/item/ammo_magazine/laserpistol
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_ONE_HAND_WIELDED
 	ammo = /datum/ammo/energy/rxfm_eva
-	attachable_allowed = list(/obj/item/attachable/scope/variable_zoom/eva, /obj/item/attachable/eva_doodad)
-	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom/eva, /obj/item/attachable/eva_doodad)
+	attachable_allowed = list(/obj/item/attachable/eva_scope, /obj/item/attachable/flashlight/eva_doodad)
+	starting_attachment_types = list(/obj/item/attachable/eva_scope, /obj/item/attachable/flashlight/eva_doodad)
 	//direcrly copying rom pandora XM99 lol
 	var/obj/effect/ebeam/beam_type = /obj/effect/ebeam/laser/plasma/laser_pistol
 	///world.time value, to prevent a lightshow without actually firing
@@ -474,14 +474,14 @@
 
 /obj/item/weapon/gun/rxfm/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
 
-	var/datum/beam/plasma_beam
+	var/datum/beam/laser_beam
 	if(!current_mag  || shots_remaining <= 0)
 		click_empty(user)
 		return
 	if(current_mag.current_rounds <= 0)
 		return
-	laser_pistol = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
-	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_RED, luminosity = 2 , easing = SINE_EASING|EASE_OUT)
+	laser_beam = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = beam_type, always_turn = TRUE)
+	animate(laser_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_RED, luminosity = 2 , easing = SINE_EASING|EASE_OUT)
 	. = ..()
 
 // Funny procs to force the item_states to look right.
@@ -490,9 +490,9 @@
 	..()
 	item_state = "eva"
 	for(var/i in attachments)
-		if(istype(attachments[i], /obj/item/attachable/scope/variable_zoom/eva))
+		if(istype(attachments[i], /obj/item/attachable/eva_scope))
 			item_state += "_s"
-		if(istype(attachments[i], /obj/item/attachable/eva_doodad))
+		if(istype(attachments[i], /obj/item/attachable/flashlight/eva_doodad))
 			item_state += "_d"
 
 /obj/item/weapon/gun/rxfm/attach_to_gun(mob/user, obj/item/attachable/attachment)
