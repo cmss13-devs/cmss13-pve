@@ -113,9 +113,6 @@
 /obj/structure/machinery/camera/autoname/golden_arrow/midway
 	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_MIDWAY)
 
-/obj/structure/machinery/camera/autoname/golden_arrow/somme
-	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_SOMME)
-
 /obj/structure/machinery/camera/autoname/golden_arrow/cyclone
 	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_CYCLONE)
 
