@@ -155,6 +155,8 @@
 			continue
 		if(istype(blocking_obj, /obj/effect/alien/weeds))
 			continue // No need to push
+		if(istype(blocking_obj, /obj/structure/machinery/door/poddoor/filler_object))
+			continue
 
 		// Skip anything that'd just get crushed instead
 		if(istype(door, /obj/structure/machinery/door/airlock))
