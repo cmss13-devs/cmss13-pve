@@ -256,7 +256,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	/// Dropship camo used when spawning as LT
 	var/dropship_camo = DROPSHIP_CAMO_JUNGLE
 	/// Dropship name used when spawning as LT
-	var/dropship_name = "Midway"
+	var/dropship_name = "Somme"
 
 /datum/preferences/New(client/C)
 	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
