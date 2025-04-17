@@ -976,7 +976,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "mp_helmet"
 	item_state = "mp_helmet"
 	specialty = "M10 pattern military police"
-	built_in_visors = list(new /obj/item/device/helmet_visor)
+	built_in_visors = list(new /obj/item/device/helmet_visor/security)
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/helmet/marine/MP/WO

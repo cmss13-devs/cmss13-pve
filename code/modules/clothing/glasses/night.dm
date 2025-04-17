@@ -86,7 +86,7 @@
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
 	vision_flags = SEE_TURFS
-	hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = list(MOB_HUD_FACTION_MARINE)
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
@@ -110,7 +110,7 @@
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
 	vision_flags = SEE_TURFS|SEE_MOBS
-	hud_type = MOB_HUD_FACTION_PMC
+	hud_type = list(MOB_HUD_FACTION_PMC)
 
 /obj/item/clothing/glasses/night/m42_night_goggles/upp
 	name = "\improper Type 9 commando goggles"
@@ -120,7 +120,7 @@
 	deactive_state = "upp_goggles_0"
 	req_skill = null
 	req_skill_level = null
-	hud_type = MOB_HUD_FACTION_UPP
+	hud_type = list(MOB_HUD_FACTION_UPP)
 
 /obj/item/clothing/glasses/night/m56_goggles
 	name = "\improper M56 head mounted sight"
@@ -132,7 +132,7 @@
 	toggleable = TRUE
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/m56_goggles/far_sight)
 	vision_flags = SEE_TURFS
-	hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = list(MOB_HUD_FACTION_MARINE)
 	flags_inventory = SMARTGUN_OPTIC
 	fullscreen_vision = null
 	eye_protection = EYE_PROTECTION_FLAVOR

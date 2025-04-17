@@ -183,7 +183,7 @@
 /obj/item/device/helmet_visor/security
 	name = "security optic"
 	icon_state = "sec_sight"
-	hud_type = list(MOB_HUD_SECURITY_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_SECURITY_ADVANCED)
 	action_icon_string = "sec_sight_down"
 	helmet_overlay = "sec_sight_right"
 
