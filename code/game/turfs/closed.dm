@@ -282,6 +282,11 @@
 /turf/closed/shuttle/midway/transparent
 	opacity = FALSE
 
+/turf/closed/shuttle/somme
+	name = "\improper Somme"
+	icon = 'icons/turf/dropship4.dmi'
+	icon_state = "1"
+
 /turf/closed/shuttle/cyclone
 	name = "\improper Cyclone"
 	icon = 'icons/turf/dropship2.dmi'
