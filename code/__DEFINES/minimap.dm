@@ -23,7 +23,7 @@
 ///Converts the overworld x and y to minimap x and y values
 #define MINIMAP_PIXEL_FROM_WORLD(val) (val * MINIMAP_SCALE-3)
 
-//actual size of a users screen in pixels
+//The actual size of a users screen in pixels
 #define SCREEN_PIXEL_SIZE 480
 ///The actual size of the minimap in pixels
 #define MINIMAP_PIXEL_SIZE 512
