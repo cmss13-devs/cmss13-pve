@@ -34,7 +34,7 @@ Defined in conflicts.dm of the #defines folder.
 	matter = list("metal" = 100)
 	w_class = SIZE_SMALL
 	force = 1
-	var/slot = null //"muzzle", "rail", "under", "stock", "special"
+	var/slot = null //"muzzle", "rail", "side_rail", "under", "stock", "special"
 
 	/*
 	Anything that isn't used as the gun fires should be a flat number, never a percentange. It screws with the calculations,
@@ -231,6 +231,8 @@ Defined in conflicts.dm of the #defines folder.
 	switch(slot)
 		if("rail")
 			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the top."
+		if("side_rail")
+			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the side."
 		if("muzzle")
 			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the front."
 		if("stock")
@@ -311,23 +313,20 @@ Defined in conflicts.dm of the #defines folder.
 	..()
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
 
-/obj/item/attachable/bayonet/upp_replica
-	name = "\improper Type 80 bayonet"
-	icon_state = "upp_bayonet"
-	item_state = "combat_knife"
-	attach_icon = "upp_bayonet_a"
-	desc = "The standard-issue bayonet of the UPP, it's dulled from heavy use."
-
 /obj/item/attachable/bayonet/upp
 	name = "\improper Type 80 bayonet"
 	desc = "The standard-issue bayonet of the UPP, the Type 80 is balanced to also function as an effective throwing knife."
 	icon_state = "upp_bayonet"
-	item_state = "combat_knife"
+	item_state = "knife"
 	attach_icon = "upp_bayonet_a"
 	throwforce = MELEE_FORCE_TIER_10 //doubled by throwspeed to 100
 	throw_speed = SPEED_REALLY_FAST
 	throw_range = 7
 	pry_delay = 1 SECONDS
+
+/obj/item/attachable/bayonet/upp/surplus
+	desc = "The standard-issue bayonet of the UPP, this one is somewhat dulled."
+	throwforce = MELEE_FORCE_STRONG
 
 /obj/item/attachable/bayonet/co2
 	name = "\improper M8 cartridge bayonet"
@@ -421,7 +420,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/compensator
 	name = "recoil compensator"
-	desc = "A muzzle attachment that reduces recoil by diverting expelled gasses upwards. \nIncreases accuracy and reduces recoil, at the cost of a small amount of weapon damage."
+	desc = "A muzzle attachment that reduces recoil by diverting expelled gasses upwards. \nIncreases accuracy and reduces recoil."
 	slot = "muzzle"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "comp"
@@ -432,7 +431,6 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/compensator/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
-	damage_mod = -BULLET_DAMAGE_MULT_TIER_2
 	recoil_mod = -RECOIL_AMOUNT_TIER_3
 
 	damage_falloff_mod = 0.1
@@ -510,6 +508,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "supsniperbarrel"
 	desc = "A heavy barrel. CANNOT BE REMOVED."
 	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
 	gun_traits = list(TRAIT_GUN_SILENCED)
 	hud_offset_mod = -3
 
@@ -691,7 +690,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "flashlight"
 	attach_icon = "flashlight_a"
 	light_mod = 5
-	slot = "rail"
+	slot = "side_rail"
 	matter = list("metal" = 50,"glass" = 20)
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION
 	attachment_action_type = /datum/action/item_action/toggle
@@ -938,7 +937,7 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
-/obj/item/attachable/sling //Purely cosmetic
+/obj/item/attachable/sling //Mostly cosmetic, some one-handed fire adjustments
 	name = "two-point sling"
 	desc = "A traditional strip of toughened nylon fabric with clips on either end for attaching to suitable mounting points on most longarms in the UA armed forces arsenals."
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
@@ -946,12 +945,18 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "pve-sling_a"
 	slot = "rail"
 
+/obj/item/attachable/sling/New()
+	..()
+	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
+	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_2
+	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_2
+
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "sniperscope"
 	attach_icon = "sniperscope_a"
-	desc = "An ARMAT S8 scope, type designation AN/PVQ-31. Fixed 4x zoom, reduces fire rate and increases wield time but increases accuracy while scoped."
+	desc = "An ARMAT S8 scope, type designation AN/PVQ-31. Fixed 4x zoom, increased time to settle on target, but increases accuracy while scoped."
 	slot = "rail"
 	aim_speed_mod = SLOWDOWN_ADS_SCOPE //Extra slowdown when wielded
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -968,13 +973,11 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/New()
 	..()
-	delay_mod = FIRE_DELAY_TIER_12
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_1
 	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_4
 	accuracy_unwielded_mod = 0
 
 	accuracy_scoped_buff = HIT_ACCURACY_MULT_TIER_8 //to compensate initial debuff
-	delay_scoped_nerf = FIRE_DELAY_TIER_11 //to compensate initial debuff. We want "high_fire_delay"
 	damage_falloff_scoped_buff = -0.4 //has to be negative
 
 /obj/item/attachable/scope/Attach(obj/item/weapon/gun/gun)
@@ -995,14 +998,12 @@ Defined in conflicts.dm of the #defines folder.
 
 	if(using_scope)
 		source.accuracy_mult += accuracy_scoped_buff
-		source.modify_fire_delay(delay_scoped_nerf)
 		source.damage_falloff_mult += damage_falloff_scoped_buff
 
 
 /obj/item/attachable/scope/proc/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
 	if(G.zoom)
 		G.accuracy_mult += accuracy_scoped_buff
-		G.modify_fire_delay(delay_scoped_nerf)
 		G.damage_falloff_mult += damage_falloff_scoped_buff
 		using_scope = TRUE
 		RegisterSignal(user, COMSIG_LIVING_ZOOM_OUT, PROC_REF(remove_scoped_buff))
@@ -1012,7 +1013,6 @@ Defined in conflicts.dm of the #defines folder.
 	UnregisterSignal(user, COMSIG_LIVING_ZOOM_OUT)
 	using_scope = FALSE
 	G.accuracy_mult -= accuracy_scoped_buff
-	G.modify_fire_delay(-delay_scoped_nerf)
 	G.damage_falloff_mult -= damage_falloff_scoped_buff
 
 /obj/item/attachable/scope/activate_attachment(obj/item/weapon/gun/G, mob/living/carbon/user, turn_off)
@@ -1127,7 +1127,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "S4 2x telescopic mini-scope"
 	icon_state = "miniscope"
 	attach_icon = "miniscope_a"
-	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed. \nZero often, first production batch suffered from drifting under heavy use and some of them might be in circulation still."
+	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped. \nZero often, first production batch suffered from drifting under heavy use and some of them might be in circulation still."
 	slot = "rail"
 	zoom_offset = 6
 	zoom_viewsize = 7
@@ -1137,8 +1137,6 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/mini/New()
 	..()
-	delay_mod = 0
-	delay_scoped_nerf = FIRE_DELAY_TIER_SMG
 	damage_falloff_scoped_buff = -0.2 //has to be negative
 
 /obj/item/attachable/scope/mini/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
@@ -1169,7 +1167,6 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = 0
 
 	accuracy_scoped_buff = HIT_ACCURACY_MULT_TIER_8
-	delay_scoped_nerf = FIRE_DELAY_TIER_9
 
 /obj/item/attachable/scope/mini/hunting
 	name = "2x hunting mini-scope"
@@ -1219,8 +1216,6 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/pve/New()
 	..()
-	delay_mod = 0
-	delay_scoped_nerf = FIRE_DELAY_TIER_SMG
 	damage_falloff_scoped_buff = -0.2
 
 /obj/item/attachable/scope/pve/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
@@ -1837,9 +1832,9 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_mod = -SCATTER_AMOUNT_TIER_8
 	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 	//it makes stuff much worse when one handed
-	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
-	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
-	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
+	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
+	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_5
+	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_10
 	//but at the same time you are slow when 2 handed
 	aim_speed_mod = CONFIG_GET(number/slowdown_med)
 
@@ -1984,8 +1979,8 @@ Defined in conflicts.dm of the #defines folder.
 	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 	//it makes stuff much worse when one handed
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
-	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
-	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
+	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_5
+	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_10
 	//but at the same time you are slow when 2 handed
 	aim_speed_mod = CONFIG_GET(number/slowdown_med)
 
@@ -2102,7 +2097,7 @@ Defined in conflicts.dm of the #defines folder.
 	stock_activated = FALSE
 	wield_delay_mod = WIELD_DELAY_NONE //starts collapsed so no delay mod
 	collapse_delay = 0.5 SECONDS
-	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION
+	flags_attach_features = ATTACH_ACTIVATION
 	attachment_action_type = /datum/action/item_action/toggle
 
 /obj/item/attachable/stock/rifle/collapsible/New()
@@ -2124,16 +2119,16 @@ Defined in conflicts.dm of the #defines folder.
 		accuracy_mod = HIT_ACCURACY_MULT_TIER_2
 		recoil_mod = -RECOIL_AMOUNT_TIER_5
 		scatter_mod = -SCATTER_AMOUNT_TIER_9
-		//it makes stuff worse when one handed
+		//it makes stuff slightly worse when one handed
 		movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
-		accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
+		accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_1
 		recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
-		scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
+		scatter_unwielded_mod = SCATTER_AMOUNT_TIER_7
 		aim_speed_mod = CONFIG_GET(number/slowdown_med)
 		hud_offset_mod = 5
 		icon_state = "m41_folding_on"
 		attach_icon = "m41_folding_a_on"
-		wield_delay_mod = WIELD_DELAY_VERY_FAST //added 0.2 seconds for wield, basic solid stock adds 0.4
+		wield_delay_mod = WIELD_DELAY_MIN //added 0.2 seconds for wield, basic solid stock adds 0.4
 
 	else
 		accuracy_mod = 0
@@ -2166,6 +2161,71 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/m20a/New()
 	..()
+
+/obj/item/attachable/stock/rifle/ag80/collapsible
+	name = "\improper AG80 extendable stock"
+	desc = "The AG80's standard polymer extendable stock. When extended, it improves scatter, accuracy, and recoil, but slightly hinders agility."
+	slot = "stock"
+	melee_mod = 5
+	size_mod = 1
+	icon_state = "ag80_folding"
+	attach_icon = "ag80_folding_a"
+	pixel_shift_x = 40
+	pixel_shift_y = 14
+	hud_offset_mod = 3
+	collapsible = TRUE
+	stock_activated = FALSE
+	wield_delay_mod = WIELD_DELAY_NONE //starts collapsed so no delay mod
+	collapse_delay = 0.5 SECONDS
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+
+/obj/item/attachable/stock/rifle/ag80/collapsible/New()
+	..()
+
+	//rifle stock starts collapsed so we zero out everything
+	accuracy_mod = 0
+	recoil_mod = 0
+	scatter_mod = 0
+	movement_onehanded_acc_penalty_mod = 0
+	accuracy_unwielded_mod = 0
+	recoil_unwielded_mod = 0
+	scatter_unwielded_mod = 0
+	aim_speed_mod = 0
+	wield_delay_mod = WIELD_DELAY_NONE
+
+/obj/item/attachable/stock/rifle/ag80/collapsible/apply_on_weapon(obj/item/weapon/gun/gun)
+	if(stock_activated)
+		accuracy_mod = HIT_ACCURACY_MULT_TIER_2
+		recoil_mod = -RECOIL_AMOUNT_TIER_5
+		scatter_mod = -SCATTER_AMOUNT_TIER_9
+		//it makes stuff worse when one handed
+		movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+		accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
+		recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
+		scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
+		aim_speed_mod = CONFIG_GET(number/slowdown_med)
+		hud_offset_mod = 5
+		icon_state = "ag80_folding_on"
+		attach_icon = "ag80_folding_a_on"
+		wield_delay_mod = WIELD_DELAY_VERY_FAST //added 0.2 seconds for wield, basic solid stock adds 0.4
+
+	else
+		accuracy_mod = 0
+		recoil_mod = 0
+		scatter_mod = 0
+		movement_onehanded_acc_penalty_mod = 0
+		accuracy_unwielded_mod = 0
+		recoil_unwielded_mod = 0
+		scatter_unwielded_mod = 0
+		aim_speed_mod = 0
+		hud_offset_mod = 3
+		icon_state = "ag80_folding"
+		attach_icon = "ag80_folding_a"
+		wield_delay_mod = WIELD_DELAY_NONE //stock is folded so no wield delay
+
+	gun.recalculate_attachment_bonuses()
+	gun.update_overlays(src, "stock")
 
 /obj/item/attachable/stock/m16
 	name = "\improper M16 bump stock"
@@ -3061,9 +3121,30 @@ Defined in conflicts.dm of the #defines folder.
 	max_range = 10
 	attachment_firing_delay = 15
 
+/obj/item/attachable/attached_gun/grenade/mk1/preloaded
+
+/obj/item/attachable/attached_gun/grenade/mk1/preloaded/New()
+	. = ..()
+	current_rounds = 2
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
+
+/obj/item/attachable/attached_gun/grenade/mk1/preloaded/army
+
+/obj/item/attachable/attached_gun/grenade/mk1/preloaded/army/New()
+	. = ..()
+	current_rounds = 4
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
+
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
 	attach_icon = "green_grenade-mk1_a"
+
+/obj/item/attachable/attached_gun/grenade/mk1/recon/preloaded
+
+/obj/item/attachable/attached_gun/grenade/mk1/recon/preloaded/New()
+	. = ..()
+	current_rounds = 2
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
 
 /obj/item/attachable/attached_gun/grenade/m120
 	name = "\improper PN/c 30mm underslung grenade launcher"
@@ -3090,19 +3171,47 @@ Defined in conflicts.dm of the #defines folder.
 	. = ..()
 	grenade_pass_flags = NO_FLAGS
 
-/obj/item/attachable/attached_gun/grenade/upp
+/obj/item/attachable/attached_gun/grenade/type71
 	name = "\improper Type 83 overslung grenade launcher"
-	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures. Can be quickly swapped to using the 'Toggle-Attachment' keybind."
+	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."
 	icon_state = "type83"
 	attach_icon = "type83_a"
 	current_rounds = 0
 	max_rounds = 1
 	max_range = 14
 	attachment_firing_delay = 5
-	slot = "special"
-	pixel_shift_x = 0
-	pixel_shift_y = 0
+	pixel_shift_x = 20
+	pixel_shift_y = 13
 	has_breech = FALSE
+
+/obj/item/attachable/attached_gun/grenade/type71/Initialize()
+	. = ..()
+	grenade_pass_flags = NO_FLAGS
+
+/obj/item/attachable/attached_gun/grenade/type71/preloaded
+
+/obj/item/attachable/attached_gun/grenade/type71/preloaded/New()
+	. = ..()
+	current_rounds = 1
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/impact/upp(src))
+
+/obj/item/attachable/attached_gun/grenade/type71/ag80
+	name = "\improper GP-45 grenade launcher"
+	desc = "Integrated grenade launcher yipee"
+	icon_state = "grenade-ag80"
+	attach_icon = "grenade-ag80_a"
+	has_breech = TRUE
+
+/obj/item/attachable/attached_gun/grenade/type71/ag80/Initialize()
+	. = ..()
+	grenade_pass_flags = NO_FLAGS
+
+/obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded
+
+/obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded/New()
+	. = ..()
+	current_rounds = 1
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/impact/upp(src))
 
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
 /obj/item/attachable/attached_gun/flamer
@@ -3459,11 +3568,10 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/verticalgrip
 	name = "vertical grip"
-	desc = "A vertical foregrip that offers better accuracy, less recoil, and less scatter, especially during burst fire. \nHowever, it also increases weapon size."
+	desc = "A vertical foregrip that offers better accuracy, less recoil, and less scatter, especially during burst fire."
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "verticalgrip"
 	attach_icon = "verticalgrip_a"
-	size_mod = 1
 	slot = "under"
 	pixel_shift_x = 20
 
@@ -3483,12 +3591,11 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/angledgrip
 	name = "angled grip"
-	desc = "An angled foregrip that improves weapon ergonomics resulting in faster wielding time. \nHowever, it also increases weapon size."
+	desc = "An angled foregrip that improves weapon ergonomics resulting in faster wielding time."
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "angledgrip"
 	attach_icon = "angledgrip_a"
 	wield_delay_mod = -WIELD_DELAY_FAST
-	size_mod = 1
 	slot = "under"
 	pixel_shift_x = 20
 
@@ -3527,7 +3634,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "lasersight"
 	attach_icon = "lasersight_a"
-	slot = "under"
+	slot = "side_rail"
 	pixel_shift_x = 17
 	pixel_shift_y = 17
 

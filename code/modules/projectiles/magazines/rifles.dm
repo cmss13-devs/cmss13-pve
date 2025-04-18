@@ -74,6 +74,11 @@
 	default_ammo = /datum/ammo/bullet/rifle/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
+/obj/item/ammo_magazine/rifle/tracer
+	name = "\improper M41A tracer magazine (10x24mm)"
+	desc = "A 10mm assault rifle magazine filled with tracer bullets."
+	default_ammo = /datum/ammo/bullet/rifle/tracer
+
 //-------------------------------------------------------
 //M41A (MK1) TRUE AND ORIGINAL
 
@@ -128,6 +133,12 @@
 	icon_state = "m41a_mk1_recon"
 	current_rounds = 95
 	bonus_overlay = "m41a_mk1_recon_overlay"
+
+/obj/item/ammo_magazine/rifle/m41aMK1/tracer
+	name = "\improper M41A MK1 tracer magazine (10x24mm)"
+	desc = "A 10mm assault rifle magazine filled with tracer bullets."
+	default_ammo = /datum/ammo/bullet/rifle/tracer
+
 //-------------------------------------------------------
 //M49A, l42 reskin, same stats as before but different, lore friendly, shell.
 
@@ -195,7 +206,7 @@
 	desc = "A stubby and wide, high-capacity double stack magazine used in the XM40 pulse rifle. Fires 10x24mm Armor Piercing rounds, holding up to 60 + 1 in the chamber."
 	icon_state = "m40_sd"
 	max_rounds = 60
-	gun_type = /obj/item/weapon/gun/rifle/m41a/elite/xm40
+	gun_type = /obj/item/weapon/gun/rifle/m41aMK1/xm40
 	default_ammo = /datum/ammo/bullet/rifle/ap
 
 /obj/item/ammo_magazine/rifle/xm40/heap
@@ -203,7 +214,6 @@
 	desc = "A stubby and wide, high-capacity double stack magazine used in the XM40 pulse rifle. Fires 10x24mm High Explosive Armor Piercing rounds, holding up to 60 + 1 in the chamber."
 	icon_state = "m40_sd_heap"
 	max_rounds = 60
-	gun_type = /obj/item/weapon/gun/rifle/m41a/elite/xm40
 	default_ammo = /datum/ammo/bullet/rifle/heap
 
 //-------------------------------------------------------
@@ -291,28 +301,43 @@
 //UPP TYPE 71 RIFLE
 
 /obj/item/ammo_magazine/rifle/type71
-	name = "\improper Type 71 magazine (10x31mm)"
-	desc = "A 10x31mm high-capacity casket magazine for the Type 71 rifle."
-	caliber = "10x31mm"
+	name = "\improper Type 71 magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine for the Type 71 rifle."
+	caliber = "10x27mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "type71"
 	ammo_band_icon = "+type71_band"
 	ammo_band_icon_empty = "+type71_band_e"
-	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
+	default_ammo = /datum/ammo/bullet/rifle/upp
 	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/type71
 
 /obj/item/ammo_magazine/rifle/type71/ap
-	name = "\improper Type 71 AP magazine (10x31mm)"
-	desc = "A 10x31mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/heavy/ap/upp
+	name = "\improper Type 71 AP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/type71/heap
-	name = "\improper Type 71 HEAP magazine (10x31mm)"
-	desc = "A 10x31mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/heavy/heap/upp
+	name = "\improper Type 71 HEAP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+//-------------------------------------------------------
+//UPP AG80 RIFLE
+
+/obj/item/ammo_magazine/rifle/ag80
+	name = "\improper AG80 magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle."
+	caliber = "9.7x16mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "ag80"
+	ammo_band_icon = "+ag80_band"
+	ammo_band_icon_empty = "+ag80_band_e"
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 99
+	gun_type = /obj/item/weapon/gun/rifle/ag80
 
 //-------------------------------------------------------
 //L42A Battle Rifle

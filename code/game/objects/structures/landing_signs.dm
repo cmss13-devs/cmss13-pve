@@ -10,9 +10,14 @@
 
 /obj/structure/lz_sign/lazarus_sign
 	name = "Lazarus Landing Sign"
-	desc = "A large sign reading 'lazarus landing por-' the rest of it is smeared in blood."
+	desc = "A large sign reading 'Lazarus Landing - POP. 73'. The Company logo is emblazoned in the corner."
 	icon = 'icons/obj/structures/props/landing_signs.dmi'
 	icon_state = "laz_sign"
+
+/obj/structure/lz_sign/lazarus_sign/damaged
+	name = "Lazarus Landing Sign"
+	desc = "A large sign reading 'Lazarus Landing' the rest of it is smeared in blood."
+	icon_state = "laz_sign_d"
 
 /obj/structure/lz_sign/solaris_sign
 	name = "Solaris Ridge Sign"
@@ -66,3 +71,13 @@
 	desc = "A large sign reading 'Ravdonika Archaeo' in Romanized characters."
 	icon = 'icons/obj/structures/props/landing_signs.dmi'
 	icon_state = "ravdonika_sign"
+
+/obj/structure/lz_sign/otogi
+	name = "Otogi Egress Point - Landing Zone one sign"
+	desc = "A large sign that reads Otogi Egress Point, the Weyland Yutani symbol placed upon it seems recently stamped on amongst all the colony information that it offers."
+	icon_state = "otogi_sign_1"
+
+/obj/structure/lz_sign/otogi/blacksite
+	name = "Otogi Egress Point - Keppitz Hangar - Landing Zone two sign"
+	desc = "A large sign that reads Keppitz Hangar, it has clear markings of Weyland Yutani along with warnings about trespassing and lethal force."
+	icon_state = "otogi_sign_2"
