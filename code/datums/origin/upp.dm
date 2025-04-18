@@ -21,3 +21,7 @@
 /datum/origin/upp/excanc
 	name = ORIGIN_UPP_EXCANC
 	desc = "You hail from the now extinct Chinese/Asian-Nation Cooperative, a once powerful colonizing entity, which was absorbed into the UPP after the disastrous Dog War."
+
+/datum/origin/upp/canc
+	name = ORIGIN_CANC
+	desc = "You hail from the now extinct Chinese/Asian-Nation Cooperative, a once powerful colonizing entity, which was absorbed into the UPP after the disastrous Dog War. You fight on."
