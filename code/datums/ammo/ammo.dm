@@ -31,6 +31,8 @@
 	var/shrapnel_chance = 0
 	/// The shrapnel type the ammo will embed, if the chance rolls
 	var/shrapnel_type = 0
+	/// Type path of the ricochet projectiles
+	var/ricochet_projectiles_type
 	/// Type path of the extra projectiles
 	var/bonus_projectiles_type
 	/// How many extra projectiles it shoots out. Works kind of like firing on burst, but all of the projectiles travel together
@@ -91,12 +93,20 @@
 
 	/// Changes the freq of firing sound based on ammo type
 	var/firing_freq_offset = FALSE
+	///Particle attached to the projectile
+	var/attached_particle
+	///Changes icon state of particle
+	var/particle_icon_state
 
 	/// If the ammo has light
 	var/ammo_glowing = FALSE
 
 	/// Color of the light of the bullet
 	var/bullet_light_color = COLOR_WHITE
+	/// Light range of the bullet
+	var/bullet_light_range = 1.5
+	/// Light power of the bullet
+	var/bullet_light_power = 3
 
 /datum/ammo/New()
 	set_bullet_traits()
@@ -259,3 +269,43 @@
 	var/datum/reagent/chemical = GLOB.chemical_reagents_list[flamer_reagent_id]
 
 	new /obj/flamer_fire(turf, cause_data, chemical)
+
+///bounces the projectile by creating a new projectile and calculating an angle of reflection
+/datum/ammo/proc/reflect(turf/T, obj/projectile/proj, scatter_variance, range)
+	if(!ricochet_projectiles_type)
+		return
+	if(!range)
+		range = proj.ammo.max_range - proj.distance_travelled
+	if(range <= 0)
+		return
+
+	var/dir_to_proj = get_dir(T, proj)
+	if(IS_DIAGONAL_DIR(dir_to_proj))
+		var/list/cardinals = list(turn(dir_to_proj, 45), turn(dir_to_proj, -45))
+		for(var/direction in cardinals)
+			var/turf/turf_to_check = get_step(T, direction)
+			if(turf_to_check.density)
+				cardinals -= direction
+		dir_to_proj = pick(cardinals)
+
+	var/perpendicular_angle = Get_Angle(T, get_step(T, dir_to_proj))
+	var/new_angle = (perpendicular_angle + (perpendicular_angle - proj.angle - 180) + rand(-scatter_variance, scatter_variance))
+
+	if(new_angle < -360)
+		new_angle += 720 //north is 0 instead of 360
+	else if(new_angle < 0)
+		new_angle += 360
+	else if(new_angle > 360)
+		new_angle -= 360
+
+	var/turf/new_target = get_angle_target_turf(get_step(T, dir_to_proj), new_angle, range)
+	var/obj/projectile/new_proj = new /obj/projectile(get_step(T, dir_to_proj), proj.weapon_cause_data)
+	new_proj.generate_bullet(GLOB.ammo_list[ricochet_projectiles_type])
+	//this is ass but whatever
+	if(istype(proj.ammo, /datum/ammo/flamethrower))
+		new_proj.ammo.flamer_reagent_id = proj.ammo.flamer_reagent_id
+		new_proj.ammo.bullet_light_color = proj.ammo.bullet_light_color
+		new_proj.ammo.particle_icon_state = proj.ammo.particle_icon_state
+	new_proj.accuracy = floor(new_proj.accuracy * proj.accuracy/initial(proj.accuracy)) //if the gun changes the accuracy of the main projectile, it also affects the bonus ones.
+	new_proj.ammo.max_range = range
+	new_proj.fire_at(new_target, proj.firer, proj.shot_from, range, new_proj.ammo.shell_speed, proj.original) //Fire!

@@ -172,10 +172,10 @@
 /area/shiva/exterior/cp_lz2)
 "aaJ" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/flamer_tank{
+/obj/item/ammo_magazine/flamer_tank/weak{
 	pixel_x = -5
 	},
-/obj/item/ammo_magazine/flamer_tank{
+/obj/item/ammo_magazine/flamer_tank/weak{
 	pixel_x = 4
 	},
 /turf/open/auto_turf/ice/layer1,
@@ -192,7 +192,7 @@
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/exterior/cp_lz2)
 "aaN" = (
-/obj/item/weapon/gun/flamer,
+/obj/item/weapon/gun/flamer/weak,
 /obj/structure/surface/rack,
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/exterior/cp_colony_grounds)
@@ -2012,7 +2012,7 @@
 /turf/open/floor/shiva/wred/west,
 /area/shiva/interior/colony/medseceng)
 "ayE" = (
-/obj/item/weapon/gun/flamer,
+/obj/item/weapon/gun/flamer/weak,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/central)
 "ayH" = (
@@ -8583,7 +8583,7 @@
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/aux_power)
 "gNl" = (
-/obj/item/ammo_magazine/flamer_tank,
+/obj/item/ammo_magazine/flamer_tank/weak,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/central)
 "gNs" = (
@@ -19957,7 +19957,7 @@
 /turf/open/floor/shiva/bluefull/west,
 /area/shiva/interior/aerodrome)
 "txH" = (
-/obj/item/ammo_magazine/flamer_tank,
+/obj/item/ammo_magazine/flamer_tank/weak,
 /obj/structure/machinery/light/double{
 	dir = 1;
 	pixel_y = 9
