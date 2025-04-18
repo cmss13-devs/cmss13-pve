@@ -144,6 +144,10 @@
 	siemens_coefficient = 0.7
 	flags_armor_protection = BODY_FLAG_FACE|BODY_FLAG_EYES
 
+/obj/item/clothing/mask/gas/swat/navy
+	name = "\improper flight mask"
+	desc = "A close-fitting mask used by pilots who might end up exposed to the vacuum of space during sorties."
+
 /obj/item/clothing/mask/gas/syndicate
 	name = "syndicate mask"
 	desc = "A close-fitting tactical mask that can be connected to an air supply."

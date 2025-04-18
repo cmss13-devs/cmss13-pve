@@ -294,7 +294,7 @@
 
 	var/height = 50+24*length(pref_buttons)
 
-	show_browser(src, dat, "Toggle Preferences", "togglepreferences", "size=475x[height]")
+	show_browser(src, dat, "Toggle Preferences", "togglepreferences", width = 475, height = height)
 
 /client/proc/toggle_ignore_self() // Toggle whether anything will happen when you click yourself in non-help intent
 	prefs.toggle_prefs ^= TOGGLE_IGNORE_SELF
@@ -686,6 +686,10 @@
 			H = GLOB.huds[MOB_HUD_FACTION_OBSERVER]
 		if("Xeno Status HUD")
 			H = GLOB.huds[MOB_HUD_XENO_STATUS]
+		if("Faction US Army HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_ARMY]
+		if("Faction USASF HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_NAVY]
 		if("Faction UPP HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_UPP]
 		if("Faction Wey-Yu HUD")

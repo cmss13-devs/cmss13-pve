@@ -10,7 +10,7 @@
 	ground_offset_y = 6
 	/// is it currently on fire and about to explode?
 	var/burning = FALSE
-
+	var/allowed_mortar = /obj/structure/mortar
 
 /obj/item/mortar_shell/Destroy()
 	. = ..()
@@ -203,6 +203,56 @@
 		icon_state = initial(icon_state) +"_unlocked"
 		playsound(loc, 'sound/items/Screwdriver2.ogg', 25, 0, 6)
 
+/obj/item/mortar_shell/himat
+	name = "\improper HIMAT missile"
+	desc = "This is a small, two-stage missile used by HIMAT launcher. This one has a standard anti-tank package."
+	icon_state = "missile"
+	allowed_mortar = /obj/structure/mortar/himat
+
+/obj/item/mortar_shell/himat/detonate(turf/T)
+	cell_explosion(T, 2400, 2400, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
+
+/obj/item/mortar_shell/himat/explosive
+	name = "\improper HIMAT HE missile"
+	desc = "This is a small, two-stage missile used by HIMAT launcher. This one has a high-explosive package, primarily used for demolition."
+	icon_state = "missile_he"
+
+/obj/item/mortar_shell/himat/explosive/detonate(turf/T)
+	explosion(T, 1, 4, 6, 8, explosion_cause_data = cause_data)
+
+/obj/item/mortar_shell/himat/antipersonnel
+	name = "\improper HIMAT AP missile"
+	desc = "This is a small, two-stage missile used by HIMAT launcher. This one has an anti-personnel package, air-bursting for maximum soft-target damage."
+	icon_state = "missile_ap"
+	var/number_of_airburst = 10
+
+/obj/item/mortar_shell/himat/antipersonnel/detonate(turf/T)
+	var/list/turf_list = RANGE_TURFS(7, T)
+	for(var/i = 1 to number_of_airburst)
+		sleep(1)
+		var/turf/impact_tile = pick(turf_list)
+		create_shrapnel(impact_tile, 60, shrapnel_type = /datum/ammo/bullet/shrapnel/himat, cause_data = cause_data)
+		cell_explosion(impact_tile, 20, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
+
+/obj/item/mortar_shell/incendiary/himat
+	name = "\improper HIMAT IN missile"
+	desc = "This is a small, two-stage missile used by HIMAT launcher. This one has an incendiary package, covering area of impact with burning flames."
+	icon_state = "missile_inc"
+	radius = 5
+	flame_level = BURN_TIME_TIER_5 + 5
+	burn_level = BURN_LEVEL_TIER_5
+	flameshape = FLAMESHAPE_DEFAULT
+	fire_type = FIRE_VARIANT_DEFAULT
+	allowed_mortar = /obj/structure/mortar/himat
+
+/obj/item/mortar_shell/himat/training
+	name = "\improper HIMAT training missile"
+	desc = "This is a small, two-stage missile used by HIMAT launcher. This one dispenses short-living burning ash and is used during training exercises."
+	icon_state = "missile_training"
+
+/obj/item/mortar_shell/himat/training/detonate(turf/T)
+	create_shrapnel(T, 10, shrapnel_type = /datum/ammo/flare/starshell, cause_data = cause_data)
+
 /obj/item/mortar_shell/ex_act(severity, explosion_direction)
 	if(!burning)
 		return ..()
@@ -316,3 +366,16 @@
 
 /obj/structure/closet/crate/secure/mortar_ammo/mortar_kit/hvh/clf
 	jtac_key_type = /obj/item/device/encryptionkey/clf/engi
+
+/obj/structure/closet/crate/secure/mortar_ammo/himat
+	name = "\improper M112 HIMAT crate"
+	desc = "A crate containing a basic set of a HIMAT launcher and some additional tools."
+	req_one_access = list()
+
+/obj/structure/closet/crate/secure/mortar_ammo/himat/Initialize()
+	. = ..()
+	new /obj/item/mortar_kit/himat(src)
+	new /obj/item/device/binoculars/range/designator/monocular(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/device/multitool(src)
+	new /obj/item/clothing/ears/earmuffs(src)
