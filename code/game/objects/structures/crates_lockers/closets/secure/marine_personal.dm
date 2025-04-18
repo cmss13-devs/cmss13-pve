@@ -31,9 +31,18 @@
 		return TRUE
 	return FALSE
 
+/obj/structure/closet/secure_closet/marine_personal/proc/load_contents()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
+
 /obj/structure/closet/secure_closet/marine_personal/Initialize()
 	. = ..()
 	if(has_cryo_gear)
-		new /obj/item/clothing/under/marine(src)
-		new /obj/item/clothing/shoes/marine/jungle/knife(src)
-		new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
+		load_contents()
+
+/obj/structure/closet/secure_closet/marine_personal/sof/load_contents()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/sof(src)
+
