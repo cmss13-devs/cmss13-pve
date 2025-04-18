@@ -46,8 +46,8 @@
 	squad = SQUAD_MARINE_4
 
 /datum/job/marine/tl/ai
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 
 /datum/job/marine/tl/ai/upp
 	title = JOB_SQUAD_TEAM_LEADER_UPP
