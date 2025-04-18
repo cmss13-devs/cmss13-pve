@@ -1170,7 +1170,15 @@
 /turf/open/floor/almayer/research/containment/floor2/west
 	dir = WEST
 
+/turf/open/floor/almayer/fake_outerhull
+	icon_state = "outerhull"
 
+/turf/open/floor/almayer/research/containment/yautja
+	icon ='icons/turf/floors/corsat.dmi'
+	icon_state = "box"
+
+/turf/open/floor/almayer/research/containment/yautja/alt
+	icon_state = "squares"
 
 
 //Outerhull
@@ -2576,6 +2584,9 @@
 
 /turf/open/floor/corsat/yellowcorner/east
 	dir = EAST
+
+/turf/open/floor/corsat/box
+	icon_state = "box"
 
 /turf/open/floor/corsat/blue/northeast
 	dir = NORTHEAST
