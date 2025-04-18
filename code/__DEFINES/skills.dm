@@ -64,7 +64,7 @@
 #define SKILL_SPEC_ALL 9
 
 //construction skill
-#define SKILL_CONSTRUCTION_DEFAULT 2
+#define SKILL_CONSTRUCTION_DEFAULT 1
 #define SKILL_CONSTRUCTION_UNTRAINED 0	//No training to build anything
 #define SKILL_CONSTRUCTION_TRAINED 1   //metal barricade construction (CT, mini-engis)
 #define SKILL_CONSTRUCTION_ENGI 2   //plasteel barricade, windows and girder construction, building machine&computer frames, (Combat Engi, OT, etc.)
@@ -72,7 +72,7 @@
 #define SKILL_CONSTRUCTION_MAX 3
 
 // engineer skill
-#define SKILL_ENGINEER_DEFAULT 2
+#define SKILL_ENGINEER_DEFAULT 1
 #define SKILL_ENGINEER_UNTRAINED 0	//no training
 #define SKILL_ENGINEER_NOVICE 1   //barricade repair && c4 use (mini-engis, specs)
 #define SKILL_ENGINEER_TRAINED 2   //plasteel barricade deconstruction, hacking&&planet engine fixing&&apc building, Telecomms fixing  (OT, etc.)

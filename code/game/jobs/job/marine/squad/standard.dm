@@ -52,8 +52,8 @@
 	squad = SQUAD_MARINE_4
 
 /datum/job/marine/standard/ai
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 6
+	spawn_positions = 6
 
 /datum/job/marine/standard/ai/set_spawn_positions(count)
 	return spawn_positions
