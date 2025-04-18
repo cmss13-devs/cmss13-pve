@@ -146,7 +146,7 @@
 		/obj/item/tool/weldingtool,
 		/obj/item/tool/wirecutters,
 		/obj/item/tool/wrench,
-		/obj/item/tool/extinguisher/mini,
+		/obj/item/tool/extinguisher,
 		/obj/item/tool/shovel/etool,
 		/obj/item/stack/cable_coil,
 		/obj/item/weapon/gun/smg/nailgun/compact,
@@ -178,6 +178,7 @@
 		/obj/item/stack/sandbags_empty,
 		/obj/item/stack/sandbags,
 		/obj/item/defenses/handheld/sentry,
+		/obj/item/tool/extinguisher,
 	)
 
 /obj/item/storage/belt/utility/construction/full/fill_preset_inventory()

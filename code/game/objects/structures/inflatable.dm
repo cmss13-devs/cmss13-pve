@@ -3,7 +3,7 @@
 	desc = "A folded membrane which rapidly expands into a large cubical shape on activation."
 	icon = 'icons/obj/items/inflatable.dmi'
 	icon_state = "folded_wall"
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_SMALL
 	var/inflatable_type = /obj/structure/inflatable
 
 /obj/item/inflatable/attack_self(mob/user)
@@ -110,6 +110,7 @@
 	playsound(loc, 'sound/machines/hiss.ogg', 25, 1)
 	if(violent)
 		visible_message("[src] rapidly deflates!")
+		density = FALSE
 		flick("wall_popping", src)
 		sleep(10)
 		deconstruct(FALSE)

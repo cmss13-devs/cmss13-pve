@@ -377,9 +377,8 @@
 			return
 		visible_message(SPAN_WARNING("[src] has thrown [thrown_thing]."), null, null, 5)
 
-		if(!lastarea)
-			lastarea = get_area(src.loc)
-		if(istype(loc, /turf/open/space))
+		lastarea = get_area(src.loc)
+		if(!lastarea.gravity)
 			inertia_dir = get_dir(target, src)
 			step(src, inertia_dir)
 
