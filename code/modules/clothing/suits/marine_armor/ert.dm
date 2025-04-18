@@ -49,11 +49,18 @@
 		/obj/item/tool/crowbar,
 		/obj/item/storage/large_holster/katana,
 		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/m39,
 		/obj/item/weapon/sword/machete,
 		/obj/item/attachable/bayonet,
 		/obj/item/device/motiondetector,
 		/obj/item/tool/crew_monitor,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+		/obj/item/storage/belt/gun/flaregun,
 		/obj/item/device/walkman,
+		/obj/item/storage/belt/gun/m39,
+		/obj/item/storage/belt/gun/xm51,
 	)
 	item_state_slots = list(WEAR_JACKET = "pmc_armor")
 

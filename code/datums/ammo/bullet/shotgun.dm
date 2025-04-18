@@ -79,7 +79,7 @@
 
 /datum/ammo/bullet/shotgun/incendiary/on_hit_mob(mob/M,obj/projectile/P)
 	burst(get_turf(M),P,damage_type)
-	knockback(M,P)
+	knockback(M, P)
 
 /datum/ammo/bullet/shotgun/incendiary/on_hit_obj(obj/O,obj/projectile/P)
 	burst(get_turf(P),P,damage_type)
@@ -145,6 +145,7 @@
 
 /datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 3)
+
 /datum/ammo/bullet/shotgun/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
@@ -164,6 +165,7 @@
 	name = "incendiary buckshot shell"
 	handful_state = "incen_buckshot"
 	handful_type = /obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/incendiary
 
 /datum/ammo/bullet/shotgun/buckshot/incendiary/set_bullet_traits()
 	. = ..()
@@ -171,8 +173,8 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
-/datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M,P)
+/datum/ammo/bullet/shotgun/buckshot/incendiary/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P)
 
 /datum/ammo/bullet/shotgun/buckshot/special
 	name = "buckshot shell, USCM special type"
@@ -235,6 +237,18 @@
 	max_range = 8
 	damage = 90
 	firing_freq_offset = SOUND_FREQ_LOW
+
+/datum/ammo/bullet/shotgun/spread/incendiary
+	name = "additional incendiary buckshot"
+
+/datum/ammo/bullet/shotgun/spread/incendiary/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
+	))
+
+/datum/ammo/bullet/shotgun/spread/incendiary/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P)
 
 /*
 					8 GAUGE SHOTGUN AMMO
