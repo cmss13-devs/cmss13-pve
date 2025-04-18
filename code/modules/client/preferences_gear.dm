@@ -78,6 +78,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Prescription ballistic goggles, M1A1"
 	path = /obj/item/clothing/glasses/mgoggles/v2/prescription
 
+/datum/gear/eyewear/tintedglasses
+	name = "Tinted Glasses"
+	path = /obj/item/clothing/glasses/tinted
+	allowed_origins = USCM_ORIGINS
 /datum/gear/eyewear/bimex_shades
 	display_name = "BiMex personal shades"
 	path = /obj/item/clothing/glasses/sunglasses/big
