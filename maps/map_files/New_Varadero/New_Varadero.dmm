@@ -1,4 +1,17 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/item/fishing_pole,
+/turf/open/gm/dirt,
+/area/varadero/exterior/monsoon)
+"aab" = (
+/obj/structure/surface/rack,
+/obj/item/fishing_pole,
+/turf/open/floor/plating/icefloor/asteroidplating,
+/area/varadero/interior/maintenance/north)
+"aac" = (
+/obj/item/fishing_pole,
+/turf/open/gm/coast/west,
+/area/varadero/exterior/pontoon_beach)
 "aae" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/shiva,
@@ -18926,7 +18939,7 @@
 "oYq" = (
 /obj/structure/surface/table,
 /obj/item/prop/helmetgarb/flair_uscm,
-/obj/item/storage/box/uscm_mre{
+/obj/item/storage/box/mre{
 	pixel_x = -4;
 	pixel_y = 13
 	},
@@ -23813,7 +23826,7 @@
 /area/varadero/interior/maintenance)
 "sKz" = (
 /obj/structure/closet/crate/supply,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/item/storage/beer_pack,
 /obj/item/spacecash,
 /turf/open/gm/dirt,
@@ -45758,7 +45771,7 @@ mMJ
 krO
 doL
 mWE
-cDG
+aab
 wHk
 qyw
 aVQ
@@ -46080,7 +46093,7 @@ vjs
 uod
 uod
 eGX
-hKK
+aac
 fLY
 cOZ
 uod
@@ -61465,7 +61478,7 @@ bEF
 fnU
 ghN
 bGU
-bGU
+aaa
 bGU
 bGU
 rvD
