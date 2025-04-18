@@ -31,7 +31,7 @@ def replace_strings_in_file(input_filename, replacements):
 
 def main():
     replacements = read_replacement_pairs('baycode.txt')
-    replace_strings_in_file('full nerva.dmm', replacements)
+    replace_strings_in_file('constructed_station.dmm', replacements)
 
 if __name__ == "__main__":
     main()
