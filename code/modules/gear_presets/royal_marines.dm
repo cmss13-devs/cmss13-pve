@@ -21,7 +21,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RMC"
-	assignment = "Rifleman"
+	assignment = JOB_TWE_RMC_RIFLEMAN
 	rank = JOB_TWE_RMC_RIFLEMAN
 	skills = /datum/skills/rmc
 	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
@@ -71,11 +71,11 @@
 		new_human.equip_to_slot_or_del(/obj/item/clothing/under/marine/veteran/marsoc, WEAR_BODY)
 
 /datum/equipment_preset/royal_marine/medic
-	name = "TWE Royal Marine Commando, Medic"
+	name = "TWE Royal Marine Commando, Medical Assistant"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RMC MED"
-	assignment = "Medic"
+	role_comm_title = "RMC MA"
+	assignment = JOB_TWE_RMC_MEDIC
 	rank = JOB_TWE_RMC_MEDIC
 	skills = /datum/skills/rmc
 	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO, ACCESS_TWE_MEDICAL)
@@ -134,7 +134,7 @@
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	flags = EQUIPMENT_PRESET_EXTRA
 	role_comm_title = "RMC SG"
-	assignment = "Smartgunner"
+	assignment = JOB_TWE_RMC_SMARTGUNNER
 	rank = JOB_TWE_RMC_SMARTGUNNER
 	skills = /datum/skills/rmc/smartgun
 	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
@@ -190,7 +190,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RMC TL"
-	assignment = "Team Leader"
+	assignment = JOB_TWE_RMC_TEAMLEADER
 	rank = JOB_TWE_RMC_TEAMLEADER
 	skills = /datum/skills/rmc/leader
 	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP)
@@ -244,9 +244,9 @@
 /datum/equipment_preset/royal_marine/lieuteant //they better say it Lef-tenant or they should be banned for LRP. More importantly this guy doesn't spawn in the ERT
 	name = "TWE Royal Marine Commando, Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RNO1 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMO1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RMC LT"
-	assignment = "Commander"
+	assignment = JOB_TWE_RMC_LIEUTENANT
 	rank = JOB_TWE_RMC_LIEUTENANT
 	skills = /datum/skills/rmc/leader
 	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
@@ -343,11 +343,11 @@
 
 
 /datum/equipment_preset/royal_marine/sniper
-	name = "TWE Royal Marine Commando, Marksman"
+	name = "TWE Royal Marine Commando, Sniper" //Sniper until they get a proper DMR
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RMC MKSN"
-	assignment = "Marksman"
+	role_comm_title = "RMC SWS"
+	assignment = JOB_TWE_RMC_MARKSMAN
 	rank = JOB_TWE_RMC_MARKSMAN
 	skills = /datum/skills/rmc/specialist
 	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
@@ -379,7 +379,7 @@
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/M42A, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/M42A/silenced, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper, WEAR_IN_BELT)

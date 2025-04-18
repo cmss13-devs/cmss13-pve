@@ -7,86 +7,86 @@
 /datum/paygrade/twe/e1
 	paygrade = PAY_SHORT_RMC1
 	name = "Marine"
-	prefix = "Mne."
+	prefix = "Mne"
 
 /datum/paygrade/twe/e2
 	paygrade = PAY_SHORT_RMC2
 	name = "Lance Corporal"
-	prefix = "LCpl."
+	prefix = "LCpl"
 	pay_multiplier = 2.1
 
 /datum/paygrade/twe/e3
 	paygrade = PAY_SHORT_RMC3
 	name = "Corporal"
-	prefix = "Cpl."
+	prefix = "Cpl"
 	pay_multiplier = 2.2
 
 /datum/paygrade/twe/e4
 	paygrade = PAY_SHORT_RMC4
 	name = "Sergeant"
-	prefix = "Sgt."
+	prefix = "Sgt"
 	pay_multiplier = 2.3
 
 /datum/paygrade/twe/e5
 	paygrade = PAY_SHORT_RMC5
 	name = "Colour Sergeant"
-	prefix = "Clr-Sgt."
+	prefix = "CSgt"
 	pay_multiplier = 2.4
 
-//TWE Warrent Officer
+//RMC Warrent Officer
 /datum/paygrade/twe/wo1
-	paygrade = PAY_SHORT_RNOW
+	paygrade = PAY_SHORT_RMOW
 	name = "Warrant Officer"
-	prefix = "WO."
+	prefix = "WO"
 	pay_multiplier = 3.5
 	officer_grade = GRADE_OFFICER
 
-//TWE Naval Officers
+//RMC Officers
 /datum/paygrade/twe/o1
-	paygrade = PAY_SHORT_RNO1
+	paygrade = PAY_SHORT_RMO1
 	name = "Second Lieutenant"
 	prefix = "2nd LT"
 	pay_multiplier = 3
 	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/twe/o2
-	paygrade = PAY_SHORT_RNO2
-	name = "First Lieutenant"
-	prefix = "1st LT"
+	paygrade = PAY_SHORT_RMO2
+	name = "Lieutenant"
+	prefix = "LT"
 	pay_multiplier = 3.25
 	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/twe/o3
-	paygrade = PAY_SHORT_RNO3
-	name = "Commander"
-	prefix = "Cdr."
+	paygrade = PAY_SHORT_RMO3
+	name = "Captain"
+	prefix = "Capt"
 	pay_multiplier = 3.5
 	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/twe/o4
-	paygrade = PAY_SHORT_RNO4
-	name = "Captain"
-	prefix = "Cpt."
+	paygrade = PAY_SHORT_RMO4
+	name = "Major"
+	prefix = "Maj"
 	pay_multiplier = 5
 	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/twe/o5
-	paygrade = PAY_SHORT_RNO5
-	name = "Admiral"
-	prefix = "Adm."
+	paygrade = PAY_SHORT_RMO5
+	name = "Lieutenant Colonel"
+	prefix = "Lt Col"
 	pay_multiplier = 7
-	officer_grade = GRADE_FLAG
+	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/twe/o6
-	paygrade = PAY_SHORT_RNO6
-	name = "Grand Admiral"
-	prefix = "GAdm."
+	paygrade = PAY_SHORT_RMO6
+	name = "Colonel"
+	prefix = "Col"
 	pay_multiplier = 9
 	officer_grade = GRADE_FLAG
 
 /datum/paygrade/twe/o7
-	paygrade = PAY_SHORT_EMP
-	name = "Emperor"
-	prefix = "HRH."
-	pay_multiplier = 1000
+	paygrade = PAY_SHORT_RMO7
+	name = "Brigadier"
+	prefix = "Brig"
+	pay_multiplier = 10
 	officer_grade = GRADE_FLAG
