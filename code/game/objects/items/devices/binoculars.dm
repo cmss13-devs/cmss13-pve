@@ -100,7 +100,7 @@
 		QDEL_NULL(coord)
 
 /obj/item/device/binoculars/range/clicked(mob/user, list/mods)
-	if(mods["ctrl"])
+	if(mods[CTRL_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		stop_targeting(user)
@@ -110,13 +110,13 @@
 /obj/item/device/binoculars/range/handle_click(mob/living/carbon/human/user, atom/targeted_atom, list/mods)
 	if(!istype(user))
 		return
-	if(mods["ctrl"])
+	if(mods[CTRL_CLICK])
 		if(user.stat != CONSCIOUS)
 			to_chat(user, SPAN_WARNING("You cannot use [src] while incapacitated."))
 			return FALSE
 		if(SEND_SIGNAL(user, COMSIG_BINOCULAR_HANDLE_CLICK, src))
 			return FALSE
-		if(mods["click_catcher"])
+		if(mods[CLICK_CATCHER])
 			return FALSE
 		if(user.z != targeted_atom.z && !coord)
 			to_chat(user, SPAN_WARNING("You cannot get a direct laser from where you are."))
@@ -243,7 +243,7 @@
 	. += SPAN_NOTICE("[src] is currently set to [range_mode ? "range finder" : "CAS marking"] mode.")
 
 /obj/item/device/binoculars/range/designator/clicked(mob/user, list/mods)
-	if(mods["alt"])
+	if(mods[ALT_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		toggle_bino_mode(user)
@@ -515,18 +515,16 @@
 		return
 	var/mob/living/carbon/human/human = owner
 	if(human.selected_ability == src)
-		to_chat(human, "You will no longer use [name] with \
-			[human.client && human.client.prefs && human.client.prefs.toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK ? "middle-click" : "shift-click"].")
+		to_chat(human, "You will no longer use [name] with [human.get_ability_mouse_name()].")
 		button.icon_state = "template"
-		human.selected_ability = null
+		human.set_selected_ability(null)
 	else
-		to_chat(human, "You will now use [name] with \
-			[human.client && human.client.prefs && human.client.prefs.toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK ? "middle-click" : "shift-click"].")
+		to_chat(human, "You will now use [name] with [human.get_ability_mouse_name()].")
 		if(human.selected_ability)
 			human.selected_ability.button.icon_state = "template"
-			human.selected_ability = null
+			human.set_selected_ability(null)
 		button.icon_state = "template_on"
-		human.selected_ability = src
+		human.set_selected_ability(src)
 
 /datum/action/item_action/specialist/spotter_target/can_use_action()
 	var/mob/living/carbon/human/human = owner
@@ -702,7 +700,7 @@
 		return FALSE
 
 	var/list/modifiers = params2list(params) //Only single clicks.
-	if(modifiers["middle"] || modifiers["shift"] || modifiers["alt"] || modifiers["ctrl"])
+	if(modifiers[MIDDLE_CLICK] || modifiers[SHIFT_CLICK] || modifiers[ALT_CLICK] || modifiers[CTRL_CLICK])
 		return FALSE
 
 	var/turf/SS = get_turf(src) //Stand Still, not what you're thinking.

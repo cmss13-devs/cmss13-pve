@@ -22,6 +22,11 @@
 	if(x_to_linked_spawn_turf || y_to_linked_spawn_turf)
 		linked_spawn_turf = locate(x + x_to_linked_spawn_turf, y + y_to_linked_spawn_turf, z)
 
+	if(has_cryo_gear)
+		new /obj/item/clothing/under/marine(src)
+		new /obj/item/clothing/shoes/marine/jungle/knife(src)
+		new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
+
 /obj/structure/closet/secure_closet/marine_personal/Destroy()
 	GLOB.personal_closets -= src
 	return ..()
@@ -30,10 +35,3 @@
 	if(owner == M.real_name)
 		return TRUE
 	return FALSE
-
-/obj/structure/closet/secure_closet/marine_personal/Initialize()
-	. = ..()
-	if(has_cryo_gear)
-		new /obj/item/clothing/under/marine(src)
-		new /obj/item/clothing/shoes/marine/jungle/knife(src)
-		new /obj/item/device/radio/headset/almayer/marine/solardevils(src)

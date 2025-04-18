@@ -331,6 +331,11 @@
 	new_human.hud_set_squad()
 	new_human.add_to_all_mob_huds()
 
+	// Every AI with a preset should appraise inventory on spawn
+	var/datum/human_ai_brain/ai_brain = new_human.get_ai_brain()
+	if(ai_brain)
+		ai_brain.appraise_inventory()
+
 /datum/equipment_preset/proc/do_vanity(mob/living/carbon/human/new_human, client/mob_client)
 	var/turf/T = get_turf(new_human)
 	if(!T)

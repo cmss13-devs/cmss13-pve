@@ -32,16 +32,10 @@
 	drop_sound = "armorequip"
 
 /obj/item/clothing/shoes/marine/update_icon()
-	if(stored_item)
-		icon_state = "[initial(icon_state)]-1"
-	else
-		icon_state = initial(icon_state)
-
-/obj/item/clothing/shoes/marine/update_icon()
-	if(stored_item && !armor_stage)
-		icon_state = "[initial(icon_state)]-1"
-	else
-		if(!armor_stage)
+	if(!armor_stage)
+		if(stored_item)
+			icon_state = "[initial(icon_state)]-1"
+		else
 			icon_state = initial(icon_state)
 
 /obj/item/clothing/shoes/marine/knife
