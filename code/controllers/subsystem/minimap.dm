@@ -205,10 +205,6 @@ SUBSYSTEM_DEF(minimaps)
 	var/x_max = 1
 	///max y for this zlevel
 	var/y_max = 1
-	///max x for this zlevel
-	var/x_max = 1
-	///max y for this zlevel
-	var/y_max = 1
 
 /datum/hud_displays/New()
 	..()
@@ -400,13 +396,10 @@ SUBSYSTEM_DEF(minimaps)
  */
 /datum/controller/subsystem/minimaps/proc/fetch_minimap_object(zlevel, flags, shifting = FALSE)
 	var/hash = "[zlevel]-[flags]-[shifting]"
-/datum/controller/subsystem/minimaps/proc/fetch_minimap_object(zlevel, flags, shifting = FALSE)
-	var/hash = "[zlevel]-[flags]-[shifting]"
 	if(hashed_minimaps[hash])
 		return hashed_minimaps[hash]
 	var/atom/movable/screen/minimap/map = new(null, null, zlevel, flags, shifting)
 	if (!map.icon) //Don't wanna save an unusable minimap for a z-level.
-		CRASH("Empty and unusable minimap generated for '[zlevel]-[flags]-[shifting]'") //Can be caused by atoms calling this proc before minimap subsystem initializing.
 		CRASH("Empty and unusable minimap generated for '[zlevel]-[flags]-[shifting]'") //Can be caused by atoms calling this proc before minimap subsystem initializing.
 	hashed_minimaps[hash] = map
 	return map
