@@ -1,3 +1,7 @@
+//just for bookkeeping, I think.
+/atom/movable/marine_light
+	light_system = DIRECTIONAL_LIGHT
+
 //=============================//Marine Raiders\\==================================\\
 //=======================================================================\\
 
@@ -373,6 +377,85 @@
 	desc = "A People's Armed Police service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_pap"
 
+//================//=ROYAL MARINES=\\====================================\\
+//=======================================================================\\
+
+//regular armor.
+/obj/item/clothing/suit/storage/marine/faction/royal_marine
+	name = "Mk21C Goshawk personal armor"
+	desc = "Personal armor complex designed by Lindenthal-Ehrenfeld Militärindustrie and in production by Weyland-Yutani. Improves ergonomics and increased optimization for ballistic/fragment protection."
+	icon_state = "rmc_light"
+	item_state = "rmc_light"
+	flags_marine_armor = ARMOR_LAMP_OVERLAY
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	storage_slots = 4
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/ammo_magazine/,
+		/obj/item/weapon/baton,
+		/obj/item/restraint/handcuffs,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/explosive/grenade,
+		/obj/item/storage/bible,
+		/obj/item/weapon/sword/machete,
+		/obj/item/attachable/bayonet,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+	)
+
+/obj/item/clothing/suit/storage/marine/faction/royal_marine/nco //RMC TL & LT Armor
+	name = "Mk21F Goshawk personal armor"
+	desc = "Personal armor complex designed by Lindenthal-Ehrenfeld Militärindustrie and in production by Weyland-Yutani. Foxtrot versions are usually provided with a specialist webbing system for NCOs to manage their mission equipment."
+	icon_state = "rmc_light_padded"
+	item_state = "rmc_light_padded"
+	storage_slots = 7
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_SPECIALUTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_SPECIALUTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+
+/obj/item/clothing/suit/storage/marine/faction/royal_marine/support_gunner //i am heavy weapons guy...
+	name = "Mk22C Goshawk machine weapons harness"
+	desc = "A modification of the existing Mk21 Goshawk armor, allowing it to accept the Common Weapon Mount used by the RMC for manportable support weapons. Coverage has been reduced to keep weight and usability."
+	icon_state = "rmc_smartgun"
+	item_state = "rmc_smartgun"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
+
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine/super //Special issue rig. Only for gamerunner spawn!
+	name = "Mk21K Goshawk personal armor"
+	desc = "The Mk21K sports a refitted armor scheme for high-intensity moderate threat environments. Rather than battlefield use, it's designed primarily for the increasing amount of internal high-risk peacekeeping the RMC has seen, but occasionally sees alternate issue as company leaders see fit."
+	icon_state = "rmc_pointman"
+	item_state = "rmc_pointman"
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGH
+	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
+	storage_slots = 4
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
+	flags_inventory = BLOCK_KNOCKDOWN
+
 
 //===========================//FREELANCER\\================================\\
 //=====================================================================\\
@@ -732,71 +815,6 @@
 	storage_slots = 3
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_marine_armor = ARMOR_SQUAD_OVERLAY|ARMOR_LAMP_OVERLAY|SYNTH_ALLOWED
-
-//================//=ROYAL MARINES=\\====================================\\
-//=======================================================================\\
-
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine
-	name = "kestrel armoured vest"
-	desc = "A customizable personal armor system used by the Three World Empire's Royal Marines Commandos. Designers from a Weyland Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie, iterated on the USCMC's M3 pattern personal armor in their Tokonigara lab to create an armor systemed to suit the unique needs of the Three World Empire's smaller but better equipped Royal Marines."
-	icon_state = "rmc_light"
-	item_state = "rmc_light"
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine/,
-		/obj/item/weapon/baton,
-		/obj/item/restraint/handcuffs,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/explosive/grenade,
-		/obj/item/storage/bible,
-		/obj/item/weapon/sword/machete,
-		/obj/item/attachable/bayonet,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-	)
-
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light //RMC Rifleman Armor
-	icon_state = "rmc_light"
-	item_state = "rmc_light"
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	slowdown = SLOWDOWN_ARMOR_LIGHT
-
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/team_leader //RMC TL & LT Armor
-	name = "kestrel armoured carry vest"
-	icon_state = "rmc_light_padded"
-	item_state = "rmc_light_padded"
-	storage_slots = 7
-
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/smartgun //Smartgun Spec Armor
-	name = "kestrel armoured smartgun harness"
-	icon_state = "rmc_smartgun"
-	item_state = "rmc_smartgun"
-	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
-
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/pointman //Pointman Spec Armor
-	name = "kestrel pointman armour"
-	desc = "A heavier version of the armor system used by the Three World Empire's Royal Marines Commandos. Designers from a Weyland Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie, iterated on the USCMC's M3 pattern personal armor in their Tokonigara lab to create an armor systemed to suit the unique needs of the Three World Empire's smaller but better equipped Royal Marines."
-	icon_state = "rmc_pointman"
-	item_state = "rmc_pointman"
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	storage_slots = 7
-	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
-	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
-
-/atom/movable/marine_light
-	light_system = DIRECTIONAL_LIGHT
 
 //CBRN
 /obj/item/clothing/suit/storage/marine/cbrn

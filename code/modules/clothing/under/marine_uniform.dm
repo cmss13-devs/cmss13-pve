@@ -1080,24 +1080,35 @@
 
 //=ROYAL MARINES=\\
 
-/obj/item/clothing/under/marine/veteran/royal_marine
+/obj/item/clothing/under/marine/royal_marine
 	name = "royal marines commando uniform"
-	desc = "The field uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment."
+	desc = "Standard issue field fatigues of the Royal Marines Commando. Positions for venlar anti-frag inserts improve shrapnel protection, at cost of comfort."
 	icon_state = "rmc_uniform"
 	worn_state = "rmc_uniform"
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	flags_jumpsuit = FALSE
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	contained_sprite = TRUE
 	icon = 'icons/mob/humans/onmob/contained/royal_marines_commando.dmi'
 
-/obj/item/clothing/under/marine/veteran/royal_marine/tl
+/obj/item/clothing/under/marine/royal_marine/tl
 	icon_state = "rmc_uniform_teaml"
 	worn_state = "rmc_uniform_teaml"
 
-/obj/item/clothing/under/marine/veteran/royal_marine/lt
-	name = "royal marines commando officers uniform"
-	desc = "The officers uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment."
+/obj/item/clothing/under/marine/royal_marine/lt
+	name = "RMC officer's uniform"
+	desc = "A variant of the standard uniform usually worn by royal marines commando commissioned officers. Positions for venlar anti-frag inserts improve shrapnel protection, at cost of comfort."
 	icon_state = "rmc_uniform_lt"
 	worn_state = "rmc_uniform_lt"
+
+//=USCMC MOPP=\\
 
 /obj/item/clothing/under/marine/pve_mopp
 	name = "\improper M2 MOPP suit"
