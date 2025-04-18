@@ -421,8 +421,8 @@
 
 /obj/item/clothing/accessory/patch/royal_marines
 	name = "TWE Royal Marines Commando patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the royal marines commando."
-	icon_state = "commandopatch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Royal Marines Commando."
+	icon_state = "rmcpatch"
 
 /obj/item/clothing/accessory/patch/upp
 	name = "UPP patch"
@@ -913,6 +913,9 @@
 /obj/item/clothing/accessory/storage/smallpouch/upp
 	icon_state = "upp_pouch_alt"
 
+/obj/item/clothing/accessory/storage/smallpouch/rmc
+	icon_state = "rmc_pouch_alt"
+
 /obj/item/storage/internal/accessory/smallpouch
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_SMALL
@@ -1305,6 +1308,22 @@
 	item_state = "upp_crotch"
 	slot = ACCESSORY_SLOT_DECORGROIN
 
+//===========================//TWE CUSTOM ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/twepads
+	name = "\improper Kestrel Shoulder Pads"
+	desc = "A set of ashoulder pads designed for the Kestrel armor system."
+	icon_state = "rmc_arms"
+	item_state = "rmc_arms"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/twepads/legs
+	name = "\improper Kestrel Leg Guards"
+	desc = "A set of leg greaves designed for the Kestrel armor system."
+	icon_state = "rmc_greaves"
+	item_state = "rmc_greaves"
+	slot = ACCESSORY_SLOT_DECORSHIN
+
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
 /obj/item/clothing/accessory/paint
@@ -1515,8 +1534,23 @@
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc
+	name = "\improper 67 Pattern Webbing"
+	icon_state = "rmc_webbing_small"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Royal Marine armor. This one is the slimmed down model designed for general purpose storage."
+
+
 //Partial Pre-load For Props
 //===
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/rmc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/rmc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/clothing/mask/gas/pmc/royal_marine(src)
+
 /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1
 

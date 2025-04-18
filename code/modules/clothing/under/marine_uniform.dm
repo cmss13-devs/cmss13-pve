@@ -461,8 +461,8 @@
 
 /obj/item/clothing/under/marine/veteran/marsoc
 	name = "black uniform"
-	desc = "Black BDU utilized by USCM forces on night operations."
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	desc = "Non-standard black battle dress uniform, with venlar armor inserts at critical areas to protect from blades and ballistics."
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 	icon_state = "marsoc_jumpsuit"
 	worn_state = "marsoc_jumpsuit"
 	flags_item = NO_SNOW_TYPE

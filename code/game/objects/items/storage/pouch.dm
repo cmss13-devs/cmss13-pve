@@ -495,7 +495,7 @@
 
 /obj/item/storage/pouch/magazine/large/nsg_ext/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+		new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/storage/pouch/magazine/large/nsg_heap/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
