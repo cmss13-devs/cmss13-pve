@@ -1,7 +1,7 @@
 /datum/equipment_preset/usasf
 	name = "USASF"
 	faction = FACTION_NAVY
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	minimum_age = 20
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	///Gives the sailors their radios
