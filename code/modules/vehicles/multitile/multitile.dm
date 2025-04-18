@@ -169,6 +169,10 @@
 	icon_state = "cargo_engine"
 
 	var/move_on_turn = FALSE
+	///Minimap flags to use for this vehicle
+	var/minimap_flags = MINIMAP_FLAG_USCM
+	///Minimap iconstate to use for this vehicle
+	var/minimap_icon_state
 
 /obj/vehicle/multitile/Initialize()
 	. = ..()
@@ -188,6 +192,7 @@
 
 	healthcheck()
 	update_icon()
+	update_minimap_icon()
 
 	GLOB.all_multi_vehicles += src
 
@@ -385,6 +390,7 @@
 
 	//vehicle is dead, no more lights
 	if(health <= 0 && light_holder.light_range)
+		update_minimap_icon()
 		set_light_on(FALSE)
 		light_holder.set_light_on(FALSE)
 	update_icon()
@@ -445,3 +451,13 @@
 
 /atom/movable/vehicle_light
 	light_system = DIRECTIONAL_LIGHT
+
+///Updates the vehicles minimap icon
+/obj/vehicle/multitile/proc/update_minimap_icon(modules_broken)
+	if(!minimap_icon_state)
+		return
+	SSminimaps.remove_marker(src)
+	minimap_icon_state = initial(minimap_icon_state)
+	if(health <= 0 || modules_broken)
+		minimap_icon_state += "_wreck"
+	SSminimaps.add_marker(src, minimap_flags, image('icons/ui_icons/map_blips_large.dmi', null, minimap_icon_state, HIGH_FLOAT_LAYER))
