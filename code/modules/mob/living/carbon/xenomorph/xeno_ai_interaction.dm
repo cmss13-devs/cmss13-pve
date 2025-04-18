@@ -201,7 +201,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 /mob/living/carbon/human/ai_can_target(mob/living/carbon/xenomorph/X)
 	. = ..()
 
-	if(species.flags & IS_SYNTHETIC)
+	if(species.flags & IS_SYNTHETIC && !GLOB.xenos_target_synths)
 		return FALSE
 
 /mob/living/carbon/human/ai_check_stat(mob/living/carbon/xenomorph/X)

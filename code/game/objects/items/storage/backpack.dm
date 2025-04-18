@@ -426,6 +426,12 @@
 /obj/item/storage/backpack/marine/standard
 	has_gamemode_skin = FALSE
 
+/obj/item/storage/backpack/marine/old
+	name = "\improper dated assault pack"
+	desc = "One of the many backpacks used by UA militaries prior to widespread adoption of M3 armor and Intuitive Mounting Point system."
+	icon_state = "marinepack"
+	item_state = "marinepack"
+
 /obj/item/storage/backpack/marine/ammo_rack
 	name = "\improper IMP ammo rack"
 	desc = "A bare IMP frame with buckles designed to hold multiple ammo cans, but can fit any cumbersome box thanks to Marine ingenuity. Helps you lug around extra rounds or supplies."

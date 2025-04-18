@@ -409,3 +409,36 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 	name = "\improper UnTech Squad Medical Equipment Rack"
 	req_access = list(ACCESS_UPP_MEDPREP)
 	vendor_theme = VENDOR_THEME_UPP
+
+
+/obj/structure/machinery/cm_vending/gear/medic/guard
+	name = "\improper dusty Medical Gear Rack"
+	desc = "An automated gear rack for UACG medics."
+	icon_state = "med_gear"
+	show_points = TRUE
+	vendor_role = list(JOB_SQUAD_MEDIC)
+	req_access = list(ACCESS_MARINE_MEDPREP)
+
+/obj/structure/machinery/cm_vending/gear/medic/guard/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_medic_guard
+
+//------------CLOTHING VENDOR---------------
+
+GLOBAL_LIST_INIT(cm_vending_clothing_medic_guard, list(
+
+		list("ARMOR PAINT (CHOOSE 1)", 0, null, null, null),
+		list("Red Cross Paint", 0, /obj/item/clothing/accessory/paint/medic, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+
+		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Medical Pouch", 0, /obj/item/storage/pouch/medical, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+	))

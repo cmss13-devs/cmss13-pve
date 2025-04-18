@@ -154,6 +154,7 @@ GLOBAL_LIST_INIT(admin_verbs_minor_event, list(
 	/client/proc/toggle_events,
 	/client/proc/toggle_shipside_sd,
 	/client/proc/shakeshipverb,
+	/client/proc/shakegroundverb,
 	/client/proc/adminpanelweapons,
 	/client/proc/admin_general_quarters,
 	/client/proc/admin_biohazard_alert,
@@ -355,6 +356,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	if(CLIENT_HAS_RIGHTS(src, R_BUILDMODE))
 		add_verb(src, /client/proc/togglebuildmodeself)
 		add_verb(src, /client/proc/toggle_game_master)
+		add_verb(src, /client/proc/set_xeno_amount)
 		add_verb(src, /client/proc/open_resin_panel)
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
@@ -366,6 +368,9 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_ai_xeno_weeding)
 		add_verb(src, /client/proc/toggle_rappel_menu)
 		add_verb(src, /client/proc/toggle_fire_support_menu)
+		add_verb(src, /client/proc/blackshift)
+		add_verb(src, /client/proc/skeletify)
+		add_verb(src, /client/proc/xenos_target_synths)
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, GLOB.admin_verbs_server)
 	if(CLIENT_HAS_RIGHTS(src, R_DEBUG))
@@ -392,6 +397,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		GLOB.admin_verbs_default,
 		/client/proc/togglebuildmodeself,
 		/client/proc/toggle_game_master,
+		/client/proc/set_xeno_amount,
 		/client/proc/open_resin_panel,
 		/client/proc/open_sound_panel,
 		/client/proc/toggle_join_xeno,
@@ -400,6 +406,9 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/toggle_ai_xeno_weeding,
 		/client/proc/toggle_rappel_menu,
 		/client/proc/toggle_fire_support_menu,
+		/client/proc/xenos_target_synths,
+		/client/proc/blackshift,
+		/client/proc/skeletify,
 		/client/proc/admin_marine_announcement,
 		/client/proc/screen_alert_menu,
 		/client/proc/toggle_intro,
