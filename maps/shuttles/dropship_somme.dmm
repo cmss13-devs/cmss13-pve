@@ -13,7 +13,7 @@
 "md" = (/obj/structure/shuttle/part/somme{icon_state = "dropship_interior 3,9"},/turf/template_noop,/area/shuttle/somme{base_lighting_color = "#eb4034"; light_color = "#eb4034"})
 "na" = (/obj/structure/machinery/camera/autoname/golden_arrow/somme{dir = 4},/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 4,12"},/area/shuttle/somme)
 "nK" = (/obj/structure/shuttle/part/somme{icon_state = "dropship_interior 3,11"},/turf/template_noop,/area/shuttle/somme{base_lighting_color = "#eb4034"; light_color = "#eb4034"})
-"oS" = (/obj/structure/machinery/light/double/blue{layer = -5},/obj/structure/dropship_tail{pixel_x = -160; pixel_y = -288; mouse_opacity = 0; icon_state = "dropship_tail_fade"; plane = -3},/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 4,9"},/area/shuttle/somme)
+"oS" = (/obj/structure/machinery/light/double/blue{layer = -5},/obj/structure/dropship_tail{pixel_x = -160; pixel_y = -288; mouse_opacity = 0; icon_state = "dropship_tail_fade"; plane = -5},/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 4,9"},/area/shuttle/somme)
 "pg" = (/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 5,15"},/area/shuttle/somme)
 "pv" = (/obj/docking_port/mobile/marine_dropship/somme,/obj/effect/attach_point/computer/somme,/turf/open/shuttle/dropship/can_surgery{icon = 'icons/turf/dropship5.dmi'; icon_state = "dropship_interior 5,14"},/area/shuttle/somme)
 "pF" = (/obj/structure/shuttle/part/somme{icon_state = "dropship_interior 7,11"},/turf/template_noop,/area/shuttle/somme{base_lighting_color = "#eb4034"; light_color = "#eb4034"})
