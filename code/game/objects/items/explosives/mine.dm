@@ -3,18 +3,18 @@
 //Stepping directly on the mine will also blow it up
 /obj/item/explosive/mine
 	name = "\improper M20 Claymore anti-personnel mine"
-	desc = "The M20 Claymore is a directional proximity-triggered anti-personnel mine designed by Armat Systems for use by the United States Colonial Marines. The mine is triggered by movement both on the mine itself, and on the space immediately in front of it. Detonation sprays shrapnel forwards in a 120-degree cone. The words \"FRONT TOWARD ENEMY\" are embossed on the front."
+	desc = "The M20 Claymore is a directional anti-personnel smart mine of the USCMC. Generates 120 degree cone of shrapnel if a valid target crosses before or over it. On its face, it reads \"FRONT TOWARD ENEMY\"."
 	icon = 'icons/obj/items/weapons/grenade.dmi'
 	icon_state = "m20"
 	force = 5
 	w_class = SIZE_SMALL
-	//layer = MOB_LAYER - 0.1 //You can't just randomly hide claymores under boxes. Booby-trapping bodies is fine though
+	// whoever commented that they wanted to prevent claymores from being hidden was a dork (derogatory).
 	throwforce = 5
 	throw_range = 6
 	throw_speed = SPEED_VERY_FAST
-	unacidable = TRUE
+	// claymores are now acidable.
 	flags_atom = FPRINT|CONDUCT
-	antigrief_protection = TRUE
+	// antigrief off. kino fragging rp.
 	allowed_sensors = list(/obj/item/device/assembly/prox_sensor)
 	max_container_volume = 120
 	reaction_limits = list( "max_ex_power" = 105, "base_ex_falloff" = 60, "max_ex_shards" = 32,
@@ -170,7 +170,8 @@
 			return
 		else
 			..()
-			use_dir = FALSE // Claymore defaults to radial in these case. Poor man C4
+			// that's stupid. also prevents people from triggering it manually which is cool.
+			//use_dir = FALSE // Claymore defaults to radial in these case. Poor man C4
 			triggered = TRUE // Delegating the tripwire/crossed function to the sensor.
 
 
@@ -222,8 +223,9 @@
 	set waitfor = 0
 
 	if(!customizable)
-		create_shrapnel(loc, 12, dir, angle, , cause_data)
-		cell_explosion(loc, 60, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		create_shrapnel(loc, 60, dir, angle, /datum/ammo/bullet/shrapnel/claymore, cause_data)
+		// a claymore is essentially a block of C4 with metal in the front. Shit's fuckin nasty.
+		cell_explosion(loc, 120, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
 		qdel(src)
 	else
 		. = ..()
@@ -303,10 +305,31 @@
 /obj/item/explosive/mine/active/no_iff
 	iff_signal = null
 
+//low lethality claymore.
+/obj/item/explosive/mine/confetti
+
+/obj/item/explosive/mine/confetti/prime()
+	set waitfor = 0
+
+	if(!customizable)
+		create_shrapnel(loc, 15, dir, angle, /datum/ammo/bullet/shrapnel/claymore/confetti, cause_data)
+		// low lethality edition
+		cell_explosion(loc, 60, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		qdel(src)
+	else
+		. = ..()
+		if(!QDELETED(src))
+			disarm()
+
+//ditto, but armed.
+/obj/item/explosive/mine/confetti/active
+	icon_state = "m20_active"
+	base_icon_state = "m20"
+	map_deployed = TRUE
 
 /obj/item/explosive/mine/pmc
 	name = "\improper M20P Claymore anti-personnel mine"
-	desc = "The M20P Claymore is a directional proximity triggered anti-personnel mine designed by Armat Systems for use by the United States Colonial Marines. It has been modified for use by the Wey-Yu PMC forces."
+	desc = "The M20P Claymore is a directional anti-personnel smart mine modified for corporate PMC use. Generates 120 degree cone of shrapnel if a valid target crosses before or over it. On its face, it reads \"FRONT TOWARD ENEMY\"."
 	icon_state = "m20p"
 	iff_signal = FACTION_PMC
 	hard_iff_lock = TRUE
@@ -315,6 +338,22 @@
 	icon_state = "m20p_active"
 	base_icon_state = "m20p"
 	map_deployed = TRUE
+
+//low lethality claymore the second, PMC version
+/obj/item/explosive/mine/pmc/confetti
+
+/obj/item/explosive/mine/pmc/confetti/prime()
+	set waitfor = 0
+
+	if(!customizable)
+		create_shrapnel(loc, 30, dir, angle, /datum/ammo/bullet/shrapnel/claymore/confetti, cause_data)
+		// low lethality edition
+		cell_explosion(loc, 60, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		qdel(src)
+	else
+		. = ..()
+		if(!QDELETED(src))
+			disarm()
 
 /obj/item/explosive/mine/custom
 	name = "custom mine"
