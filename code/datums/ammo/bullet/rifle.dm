@@ -484,6 +484,16 @@
 	name = "7.62x51 rifle bullet"
 	damage = 55
 
+//NSG TWE RMC AMMO
+
+/datum/ammo/bullet/rifle/twe
+	name = "8.5x33 bullet"
+
+/datum/ammo/bullet/rifle/ap/twe
+	name = "armor-piercing 8.5x33 bullet"
+
+/datum/ammo/bullet/rifle/heap/twe
+	name = "high-explosive armor-piercing 8.5x33 bullet"
 //9.7x16 AG80
 
 /datum/ammo/bullet/rifle/ag80
