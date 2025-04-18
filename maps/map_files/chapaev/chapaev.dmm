@@ -1390,20 +1390,15 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Section Sergeant";
-	pixel_x = -7;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_leader{
+	can_block_movement = 0;
+	pixel_x = -7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1448,21 +1443,16 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Smartgunner";
-	pixel_x = 8;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/prop/magazine/book/littleredbook,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1560,16 +1550,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/weapon/butterfly,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Corpsman";
-	pixel_x = -7;
-	can_block_movement = 0
-	},
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
@@ -1578,6 +1559,10 @@
 	dir = 4;
 	pixel_y = 10;
 	pixel_x = -13
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/corpsman{
+	pixel_x = -7;
+	can_block_movement = 0
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1616,15 +1601,6 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Squad Leader";
-	pixel_x = 8;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
@@ -1633,6 +1609,10 @@
 	dir = 4;
 	pixel_y = 10;
 	pixel_x = 11
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
+	can_block_movement = 0;
+	pixel_x = 7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1684,20 +1664,15 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Squad Leader";
-	pixel_x = -7;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
+	can_block_movement = 0;
+	pixel_x = -7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1732,21 +1707,16 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Smartgunner";
-	pixel_x = 8;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/weapon/butterfly,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1833,15 +1803,11 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	pixel_x = -7;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/prop/magazine/book/littleredbook,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -7
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "ep" = (
@@ -1849,14 +1815,10 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	pixel_x = 8;
-	can_block_movement = 0
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 7
 	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "eq" = (
@@ -2037,19 +1999,15 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	pixel_x = -7;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -2065,24 +2023,16 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
 "eF" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_y = 14;
-	job = "Platoon Commander";
-	can_block_movement = 0;
-	has_cryo_gear = 0
-	},
-/obj/item/clothing/accessory/patch/upp/naval,
-/obj/item/clothing/accessory/patch/upp,
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
-/obj/item/clothing/under/marine/veteran/UPP/naval,
-/obj/item/clothing/suit/storage/jacket/marine/upp/naval,
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
 	},
 /obj/structure/pipes/standard/manifold/visible/supply{
 	dir = 1
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander{
+	can_block_movement = 0;
+	pixel_y = 10
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
@@ -2109,20 +2059,16 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	pixel_x = 8;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/weapon/butterfly,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)

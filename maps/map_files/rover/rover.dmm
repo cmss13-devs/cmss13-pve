@@ -797,6 +797,7 @@
 	pixel_y = 30
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/forecon/corpsman,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "iB" = (
@@ -1198,16 +1199,10 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/canteen)
 "mX" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Section Sergeant"
-	},
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine/standard,
-/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
+/obj/structure/closet/secure_closet/marine_personal/forecon/platoon_leader,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "mZ" = (
@@ -1533,16 +1528,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"qI" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Corpsman"
-	},
-/obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine/standard,
-/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
-/turf/open/floor/almayer/sterile_green,
-/area/golden_arrow/medical)
 "qN" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
@@ -1651,13 +1636,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "rJ" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Squad Sergeant"
-	},
-/obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine/standard,
-/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
+/obj/structure/closet/secure_closet/marine_personal/forecon/squad_leader,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "rL" = (
@@ -2223,12 +2202,7 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0
-	},
-/obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine/standard,
-/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
+/obj/structure/closet/secure_closet/marine_personal/forecon/rifleman,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "yP" = (
@@ -3191,23 +3165,11 @@
 	pixel_x = -30
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Smartgunner"
-	},
-/obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine/standard,
-/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
+/obj/structure/closet/secure_closet/marine_personal/forecon/smartgunner,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Mw" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Radio Telephone Operator"
-	},
-/obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine/standard,
-/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
+/obj/structure/closet/secure_closet/marine_personal/forecon/rto,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "My" = (
@@ -4231,12 +4193,7 @@
 	pixel_x = -27
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0
-	},
-/obj/item/clothing/shoes/marine/jungle/knife,
-/obj/item/clothing/under/marine/standard,
-/obj/item/device/radio/headset/almayer/marine/solardevils/forecon,
+/obj/structure/closet/secure_closet/marine_personal/forecon/rifleman,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Zx" = (
@@ -14278,7 +14235,7 @@ Cr
 Cr
 Cr
 Kk
-qI
+rc
 Kf
 RK
 aO

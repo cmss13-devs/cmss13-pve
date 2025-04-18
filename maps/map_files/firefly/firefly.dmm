@@ -8,16 +8,6 @@
 /obj/item/ammo_box/magazine/mk1/ap,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_theta)
-"ac" = (
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Squad Leader";
-	has_cryo_gear = 0
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "ai" = (
 /obj/structure/barricade/handrail{
 	dir = 1;
@@ -707,13 +697,7 @@
 /turf/open/floor/corsat/white/west,
 /area/firefly/hangar)
 "ko" = (
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Squad Sergeant";
-	has_cryo_gear = 0
-	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/squad_leader,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "ku" = (
@@ -1062,12 +1046,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/engineer)
 "qn" = (
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0
-	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/rifleman,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "qo" = (
@@ -1188,16 +1167,6 @@
 "se" = (
 /turf/closed/shuttle/elevator/button/freight,
 /area/firefly/supply)
-"sj" = (
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Smartgunner";
-	has_cryo_gear = 0
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "sz" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer/mono,
@@ -1962,13 +1931,7 @@
 /turf/open/floor/corsat/white/west,
 /area/firefly/hangar)
 "El" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Corpsman";
-	has_cryo_gear = 0
-	},
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal/pmc/corpsman,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "Es" = (
@@ -2907,13 +2870,7 @@
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "Tp" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Section Sergeant";
-	has_cryo_gear = 0
-	},
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal/pmc/platoon_leader,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "Ts" = (
@@ -3091,13 +3048,7 @@
 /turf/open/floor/corsat/white,
 /area/firefly/hangar)
 "Wi" = (
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Platoon Commander"
-	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "Wt" = (
@@ -3326,24 +3277,8 @@
 	},
 /turf/open/floor/wood/ship,
 /area/firefly/ptsgt)
-"Ze" = (
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Squad Leader"
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "Zl" = (
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Smartgunner"
-	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/smartgunner,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "Zo" = (
@@ -13025,7 +12960,7 @@ DE
 UY
 UY
 lV
-sj
+Zl
 Yl
 lg
 lg
@@ -13329,12 +13264,12 @@ UY
 UY
 UY
 lV
-Ze
+ko
 Yl
 lg
 lg
 jT
-ac
+ko
 lV
 jb
 It
