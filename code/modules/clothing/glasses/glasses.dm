@@ -255,7 +255,7 @@
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
 /obj/item/clothing/glasses/tinted
-	name = "Tinted Glasses"
+	name = "tinted glasses"
 	desc = "Don't you want to be a Big Shot?"
 	icon_state = "t_glasses"
 	item_state = "t_glasses"
