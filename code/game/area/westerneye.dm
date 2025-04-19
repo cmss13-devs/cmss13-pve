@@ -5,7 +5,7 @@
 	icon = 'icons/turf/area_almayer.dmi'
 	//ambience = list('sound/ambience/shipambience.ogg')
 	icon_state = "almayer"
-	ceiling = CEILING_METAL
+	ceiling = CEILING_DEEP_UNDERGROUND_METAL
 	powernet_name = "almayer"
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 	soundscape_interval = 30
