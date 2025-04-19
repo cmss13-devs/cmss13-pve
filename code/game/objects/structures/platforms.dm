@@ -209,3 +209,29 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed
 	name = "sandstone temple platform corner"
 	color = "#b29082"
+
+// Simple metal post
+
+/obj/structure/platform_decoration/metal/post
+	name = "metal post"
+	desc = "A simple metal post."
+	icon_state = "post_deco"
+
+/obj/structure/platform_decoration/metal/post/north
+	dir = NORTH
+/obj/structure/platform_decoration/metal/post/east
+	dir = EAST
+/obj/structure/platform_decoration/metal/post/west
+	dir = WEST
+
+/obj/structure/platform_decoration/metal/post_small
+	name = "metal post"
+	desc = "A simple metal post."
+	icon_state = "post_small_deco"
+
+/obj/structure/platform_decoration/metal/post_small/north
+	dir = NORTH
+/obj/structure/platform_decoration/metal/post_small/east
+	dir = EAST
+/obj/structure/platform_decoration/metal/post_small/west
+
