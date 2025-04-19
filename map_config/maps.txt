@@ -81,3 +81,12 @@ endmap
 
 map canyon_32b
 endmap
+
+map lv671
+endmap
+
+map oil_depot
+endmap
+
+map derelict_almayer_infested
+endmap

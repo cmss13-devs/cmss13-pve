@@ -150,6 +150,18 @@
 	html_link = ""
 	color = "white"
 
+/obj/item/map/lv_671
+	name = "\improper LV-671 Map"
+	desc = "An orbital scan printout of the LV-671 colony."
+	html_link = ""
+	color = "cyan"
+
+/obj/item/map/oil_depot
+	name = "\improper Oil Depot Map"
+	desc = "A satellite printout of the oil depots on planet."
+	html_link = ""
+	color = "#e88a10"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -176,6 +188,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_LV295_BLACKSITE = new /obj/item/map/lv522_map(),
 		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
+		MAP_LV_671 = new /obj/item/map/lv_671(),
+		MAP_OIL_DEPOT = new /obj/item/map/oil_depot(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
