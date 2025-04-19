@@ -162,6 +162,12 @@
 	html_link = ""
 	color = "#e88a10"
 
+/obj/item/map/almayer/infested
+	name = "\improper USS Almayer map"
+	desc = "A labeled blueprint of the USS Almayer"
+	html_link = "images/5/54/USS_Almayer.png"
+	color = "cyan"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -190,6 +196,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 		MAP_LV_671 = new /obj/item/map/lv_671(),
 		MAP_OIL_DEPOT = new /obj/item/map/oil_depot(),
+		MAP_DERELICT_ALMAYER_INFESTED = new /obj/item/map/almayer/infested(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
