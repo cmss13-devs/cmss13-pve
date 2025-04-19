@@ -84,3 +84,6 @@ endmap
 
 map nerva
 endmap
+
+map westeye
+endmap

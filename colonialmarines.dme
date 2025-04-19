@@ -767,6 +767,7 @@
 #include "code\game\world.dm"
 #include "code\game\area\admin_level.dm"
 #include "code\game\area\almayer.dm"
+#include "code\game\area\westerneye.dm"
 #include "code\game\area\areas.dm"
 #include "code\game\area\areas_event.dm"
 #include "code\game\area\BigRed.dm"
