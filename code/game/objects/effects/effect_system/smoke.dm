@@ -132,8 +132,10 @@
 /////////////////////////////////////////////
 
 /obj/effect/particle_effect/smoke/bad
-	time_to_live = 10
+	time_to_live = 25
+	spread_speed = 2
 	smokeranking = SMOKE_RANK_LOW
+	color = "#adadad"
 
 /obj/effect/particle_effect/smoke/bad/Move()
 	. = ..()
@@ -149,7 +151,7 @@
 	if(issynth(affected_mob))
 		return FALSE
 
-	if(prob(20))
+	if(prob(5))
 		affected_mob.drop_held_item()
 	affected_mob.apply_damage(1, OXY)
 
@@ -158,6 +160,12 @@
 		if(ishuman(affected_mob)) //Humans only to avoid issues
 			affected_mob.emote("cough")
 	return TRUE
+
+/obj/effect/particle_effect/smoke/bad/green
+	color = "#288e76ea"
+
+/obj/effect/particle_effect/smoke/bad/red
+	color = "#ca3d33e8"
 
 /////////////////////////////////////////////
 // Miasma smoke (for LZs)
@@ -308,15 +316,24 @@
 /////////////////////////////////////////////
 
 /obj/effect/particle_effect/smoke/phosphorus
-	time_to_live = 3
+	time_to_live = 25
 	smokeranking = SMOKE_RANK_MED
+	color = "#dddddd"
 	var/next_cough = 2 SECONDS
 	var/burn_damage = 40
-	var/applied_fire_stacks = 5
+	var/applied_fire_stacks = 3
 	var/xeno_yautja_reduction = 0.75
 
+//WP mortar-shell smoke
+/obj/effect/particle_effect/smoke/phosphorus/strong
+	time_to_live = 40
+	spread_speed = 0.5
+	smokeranking = SMOKE_RANK_HIGH
+	next_cough = 5 SECONDS
+	applied_fire_stacks = 6
+
 /obj/effect/particle_effect/smoke/phosphorus/weak
-	time_to_live = 2
+	time_to_live = 15
 	smokeranking = SMOKE_RANK_MED
 	burn_damage = 30
 	xeno_yautja_reduction = 0.5
@@ -351,7 +368,7 @@
 	if(isyautja(affected_mob) || isxeno(affected_mob))
 		damage *= xeno_yautja_reduction
 
-	var/reagent = new /datum/reagent/napalm/ut()
+	var/reagent = new /datum/reagent/napalm/blue()
 	affected_mob.burn_skin(damage)
 	affected_mob.adjust_fire_stacks(applied_fire_stacks, reagent)
 	affected_mob.IgniteMob()
@@ -492,6 +509,43 @@
 	if(prob(stun_chance))
 		creature.apply_effect(1, WEAKEN)
 
+/////////////////////////////////////////////
+// Tear Gas
+/////////////////////////////////////////////
+
+/obj/effect/particle_effect/smoke/tear
+	name = "Tear Gas"
+	smokeranking = SMOKE_RANK_HIGH
+	color = "#a82620" // rgb: 179, 16, 8
+	alpha = 75
+	opacity = FALSE
+	time_to_live = 180
+
+/obj/effect/particle_effect/smoke/tear/Move()
+	. = ..()
+	for(var/mob/living/carbon/human/human in get_turf(src))
+		affect(human)
+
+/obj/effect/particle_effect/smoke/tear/affect(mob/living/carbon/human/creature)
+	. = ..()
+	if(!istype(creature) || issynth(creature) || creature.stat == DEAD || isyautja(creature))
+		return FALSE
+
+	if(creature.wear_mask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
+		return FALSE
+	if(creature.head.flags_inventory & BLOCKGASEFFECT)
+		return FALSE
+
+	if(skillcheck(creature, SKILL_POLICE, SKILL_POLICE_SKILLED))
+		creature.AdjustEyeBlur(5)
+		to_chat(creature, SPAN_WARNING("Your training protects you from the tear gas!"))
+	else
+		to_chat(creature, SPAN_WARNING("You feel the sting of the tear gas!"))
+		creature.AdjustEyeBlur(25)
+		creature.AdjustEyeBlind(10)
+
+	creature.emote("scream")
+	creature.apply_effect(3, SLOW)
 
 //////////////////////////////////////
 // FLASHBANG SMOKE
@@ -793,6 +847,12 @@
 /datum/effect_system/smoke_spread/bad
 	smoke_type = /obj/effect/particle_effect/smoke/bad
 
+/datum/effect_system/smoke_spread/bad/green
+	smoke_type = /obj/effect/particle_effect/smoke/bad/green
+
+/datum/effect_system/smoke_spread/bad/red
+	smoke_type = /obj/effect/particle_effect/smoke/bad/red
+
 /datum/effect_system/smoke_spread/sleepy
 	smoke_type = /obj/effect/particle_effect/smoke/sleepy
 
@@ -801,6 +861,9 @@
 
 /datum/effect_system/smoke_spread/phosphorus
 	smoke_type = /obj/effect/particle_effect/smoke/phosphorus
+
+/datum/effect_system/smoke_spread/phosphorus/strong //used by mortar shells
+	smoke_type = /obj/effect/particle_effect/smoke/phosphorus/strong
 
 /datum/effect_system/smoke_spread/phosphorus/weak
 	smoke_type = /obj/effect/particle_effect/smoke/phosphorus/weak
@@ -813,6 +876,9 @@
 
 /datum/effect_system/smoke_spread/LSD
 	smoke_type = /obj/effect/particle_effect/smoke/LSD
+
+/datum/effect_system/smoke_spread/tear
+	smoke_type = /obj/effect/particle_effect/smoke/tear
 
 // XENO SMOKES
 

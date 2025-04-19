@@ -156,11 +156,11 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/dorms)
 "adl" = (
-/obj/item/storage/box/MRE{
+/obj/item/storage/box/mre{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/storage/box/MRE{
+/obj/item/storage/box/mre{
 	pixel_x = -1;
 	pixel_y = -6
 	},
@@ -748,16 +748,16 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/reactor_garage)
 "apJ" = (
-/obj/item/ammo_magazine/rifle/m4ra/ext{
+/obj/item/ammo_magazine/rifle/m49a/ext{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/m4ra/ext{
+/obj/item/ammo_magazine/rifle/m49a/ext{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/m4ra/ext{
+/obj/item/ammo_magazine/rifle/m49a/ext{
 	current_rounds = 0
 	},
-/obj/item/ammo_magazine/rifle/m4ra/ext{
+/obj/item/ammo_magazine/rifle/m49a/ext{
 	current_rounds = 0
 	},
 /obj/structure/closet/crate/ammo,
@@ -3725,7 +3725,6 @@
 /area/lv522/indoors/a_block/fitness/glass)
 "bNy" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/brown/west,
 /area/lv522/atmos/east_reactor/south)
@@ -5206,7 +5205,6 @@
 /area/lv522/indoors/a_block/security)
 "cvM" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /turf/open/floor/corsat/brown,
 /area/lv522/atmos/east_reactor/south)
 "cvT" = (
@@ -6438,7 +6436,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "ddH" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
 "ddK" = (
@@ -9036,7 +9034,6 @@
 /obj/item/tool/pen/blue/clicky,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
 /obj/effect/landmark/xeno_spawn,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "esa" = (
@@ -12618,11 +12615,6 @@
 /obj/item/clothing/glasses/kutjevo,
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/outdoor_bot)
-"geo" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor/south)
 "get" = (
 /turf/open/floor/carpet,
 /area/lv522/atmos/east_reactor/east)
@@ -13961,7 +13953,7 @@
 /area/lv522/indoors/c_block/cargo)
 "gPk" = (
 /obj/structure/surface/table/almayer,
-/obj/item/weapon/gun/rifle/m4ra{
+/obj/item/weapon/gun/rifle/m49a{
 	current_mag = null
 	},
 /turf/open/floor/prison/blue_plate/north,
@@ -14207,10 +14199,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen,
 /area/lv522/indoors/a_block/kitchen)
-"gTO" = (
-/obj/effect/landmark/corpsespawner/colonist/burst,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor/south)
 "gUi" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/floor/grass,
@@ -15812,7 +15800,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "hKv" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
 "hKE" = (
@@ -18052,7 +18040,7 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/lv522/oob)
 "iTF" = (
-/obj/item/ammo_box/magazine/m4ra/ap/empty,
+/obj/item/ammo_box/magazine/m49a/ap/empty,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -18186,7 +18174,6 @@
 /area/lv522/indoors/c_block/cargo)
 "iXA" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /turf/open/floor/corsat/browncorner,
 /area/lv522/atmos/east_reactor/south)
 "iXM" = (
@@ -19132,7 +19119,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/central_streets)
 "juq" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
@@ -21034,7 +21021,6 @@
 "kjQ" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat,
 /area/lv522/atmos/east_reactor/south)
@@ -21194,7 +21180,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -21407,7 +21393,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "kso" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -22888,7 +22874,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/a_block/admin)
 "kZj" = (
-/obj/item/ammo_magazine/rifle/m4ra/ap{
+/obj/item/ammo_magazine/rifle/m49a/ap{
 	current_rounds = 0
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -23309,7 +23295,7 @@
 	pixel_y = 20
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jaccuzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jaccuzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	pixel_x = -5;
@@ -23871,7 +23857,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "lwZ" = (
-/obj/item/ammo_box/magazine/m4ra/ap/empty,
+/obj/item/ammo_box/magazine/m49a/ap/empty,
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
 	},
@@ -25743,7 +25729,6 @@
 	pixel_x = -1;
 	pixel_y = -1
 	},
-/obj/effect/landmark/corpsespawner/wy/manager,
 /turf/open/floor/whiteyellowfull/east,
 /area/lv522/oob/w_y_vault)
 "mox" = (
@@ -30059,7 +30044,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -32941,7 +32926,6 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -39600,7 +39584,7 @@
 	icon_state = "Synthetic_Template";
 	name = "Display synthetic"
 	},
-/obj/item/clothing/under/CM_uniform{
+/obj/item/clothing/under/cmb{
 	pixel_y = -2
 	},
 /obj/structure/window/reinforced,
@@ -40132,7 +40116,6 @@
 "sXI" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -41150,7 +41133,6 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/lv522/indoors/lone_buildings/engineering)
 "ttf" = (
-/obj/effect/landmark/corpsespawner/forecon_spotter,
 /obj/item/weapon/gun/rifle/m41a{
 	current_mag = null
 	},
@@ -41392,12 +41374,6 @@
 /obj/structure/platform,
 /turf/open/floor/plating,
 /area/lv522/landing_zone_1/tunnel/far)
-"tzM" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
-/obj/effect/landmark/xeno_spawn,
-/turf/open/floor/corsat,
-/area/lv522/atmos/east_reactor/south)
 "tAk" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/snacks/tofukabob,
@@ -42106,7 +42082,8 @@
 	dir = 4
 	},
 /obj/structure/closet/crate/ammo,
-/obj/item/ammo_magazine/rifle/lmg/holo_target,
+/obj/item/ammo_magazine/hpr_box,
+/obj/item/ammo_magazine/hpr_box,
 /obj/item/weapon/gun/rifle/lmg{
 	current_mag = null
 	},
@@ -44738,7 +44715,7 @@
 /turf/open/floor/almayer/w_y0/north,
 /area/lv522/atmos/way_in_command_centre)
 "vaB" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -44969,7 +44946,7 @@
 	dir = 8;
 	pixel_y = -5
 	},
-/obj/item/ammo_magazine/rifle/m4ra{
+/obj/item/ammo_magazine/rifle/m49a{
 	pixel_x = 5;
 	pixel_y = 6
 	},
@@ -45633,7 +45610,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/north_command_centre)
 "vux" = (
-/obj/item/ammo_magazine/rifle/m4ra/ap{
+/obj/item/ammo_magazine/rifle/m49a/ap{
 	current_rounds = 0
 	},
 /turf/open/floor/prison/blue/southwest,
@@ -47421,12 +47398,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522/atmos/east_reactor/north)
-"wni" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
-/obj/effect/landmark/xeno_spawn,
-/turf/open/floor/corsat/plate,
-/area/lv522/atmos/east_reactor/south)
 "wnq" = (
 /obj/structure/bed/sofa/south/grey/right{
 	pixel_y = 16
@@ -47736,7 +47707,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
 "wuB" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -50406,7 +50377,6 @@
 	dir = 8
 	},
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_nest,
-/obj/effect/landmark/corpsespawner/colonist/burst,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
@@ -50484,7 +50454,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/hydro)
 "xKH" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
 "xKO" = (
@@ -72455,7 +72425,7 @@ aci
 bZx
 trX
 xHA
-wni
+eQJ
 tiQ
 tiQ
 exW
@@ -72912,7 +72882,7 @@ rBm
 bZx
 gof
 gof
-gTO
+gof
 evt
 saC
 saC
@@ -73144,12 +73114,12 @@ evt
 saC
 saC
 saC
-tzM
+mPY
 yaj
 qjG
 qjG
 qjG
-tzM
+mPY
 oUq
 oUq
 gYv
@@ -73366,17 +73336,17 @@ pFm
 sXI
 mYC
 gof
-gTO
+gof
 buc
 saC
 saC
 saC
-tzM
+mPY
 yaj
 qjG
 qjG
 qjG
-tzM
+mPY
 saC
 saC
 afL
@@ -76099,7 +76069,7 @@ kXk
 gof
 gof
 hjt
-geo
+gnL
 dfb
 dfb
 nCs

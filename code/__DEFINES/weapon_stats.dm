@@ -248,6 +248,9 @@ As such, don't expect any values assigned to common firearms to even consider ho
 #define AMMO_SPEED_TIER_4 4
 #define AMMO_SPEED_TIER_5 5
 #define AMMO_SPEED_TIER_6 6
+#define AMMO_SPEED_TIER_7 7
+#define AMMO_SPEED_TIER_8 8
+#define AMMO_SPEED_TIER_HITSCAN 300
 
 /*
 ////ARMOR PENETRATION////
@@ -325,5 +328,7 @@ Fire Variant = Markers for special fire types that behave outside of chemfire co
 #define FIRE_VARIANT_DEFAULT 0
 ///"Type B" Armor Shredding Greenfire: Burn Time T5, Burn Level T2, Slows on Tile, Increased Tile Damage, Easier Extinguishing.
 #define FIRE_VARIANT_TYPE_B 1
+///"Type X" Bluefire: Burn Time T4, Burn Level T7. Hellish concoction
+#define FIRE_VARIANT_TYPE_X 2
 // Lowers burn damage to humans
 #define HUMAN_BURN_DIVIDER 5

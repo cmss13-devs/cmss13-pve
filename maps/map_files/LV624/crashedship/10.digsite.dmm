@@ -173,11 +173,6 @@
 /obj/effect/decal/remains/human,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
-"LQ" = (
-/obj/effect/landmark/corpsespawner/security,
-/obj/effect/decal/cleanable/blood,
-/turf/open/gm/dirt,
-/area/lv624/lazarus/crashed_ship_containers)
 "MI" = (
 /obj/structure/bed/chair/dropship/pilot,
 /turf/open/shuttle/bright_red,
@@ -267,7 +262,7 @@
 /area/lv624/lazarus/crashed_ship_containers)
 "Yf" = (
 /obj/structure/bed/chair/dropship/pilot,
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/obj/item/clothing/head/helmet/marine/veteran/pmc,
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 
@@ -323,7 +318,7 @@ Xk
 Ri
 yV
 Uy
-LQ
+SX
 nt
 Uy
 Dw
@@ -417,7 +412,7 @@ so
 zH
 yw
 Wb
-LQ
+SX
 hd
 UG
 Uy

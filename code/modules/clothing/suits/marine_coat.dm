@@ -68,9 +68,6 @@
 
 /obj/item/clothing/suit/storage/jacket/marine/Initialize()
 	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
-		select_gamemode_skin(type)
-		initial_icon_state = icon_state
 	if(has_buttons)
 		verbs += /obj/item/clothing/suit/storage/jacket/marine/proc/toggle
 
@@ -79,14 +76,15 @@
 	name = "marine service jacket"
 	desc = "A USCMC service jacket, usually officer issue. While technically armored to frag/handgun ammunition, it's best if you don't try your luck."
 	has_buttons = TRUE
+	flags_atom = NO_SNOW_TYPE
 	icon_state = "coat_officer"
+	initial_icon_state = "coat_officer"
 
 /obj/item/clothing/suit/storage/jacket/marine/pilot
 	name = "\improper M70B1 light flak jacket"
 	desc = "M70 variant that reduces bulk and protective for ergonomics. Consider this to have the same amount of protection from flak as an officer's service jacket."
 	icon_state = "pilot_alt"
 	has_buttons = TRUE
-	flags_atom = NO_SNOW_TYPE
 	initial_icon_state = "pilot_alt"
 
 /obj/item/clothing/suit/storage/jacket/marine/RO
@@ -377,6 +375,13 @@
 	item_state = "corporate_blue"
 	has_buttons = FALSE
 
+/obj/item/clothing/suit/storage/jacket/marine/corporate/grey
+	name = "grey suit jacket"
+	desc = "A grey suit jacket."
+	icon_state = "corporate_grey"
+	item_state = "corporate_grey"
+	has_buttons = FALSE
+
 /obj/item/clothing/suit/storage/jacket/marine/bomber
 	name = "khaki bomber jacket"
 	desc = "A khaki bomber jacket popular among stationeers and blue-collar workers everywhere."
@@ -405,6 +410,7 @@
 	name = "\improper UPP service uniform jacket"
 	desc = "A UPP service uniform jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
 	icon_state = "upp_coat_service"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss
 	name = "\improper MSS uniform jacket"
@@ -415,3 +421,8 @@
 	name = "\improper UL2 coldweather service jacket"
 	desc = "A standard issue coldweather UPP military service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_officer"
+
+/obj/item/clothing/suit/storage/jacket/marine/upp/naval
+	name = "\improper UPP naval infantry jacket"
+	desc = "A standard issue naval infantry service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
+	icon_state = "upp_coat_naval"

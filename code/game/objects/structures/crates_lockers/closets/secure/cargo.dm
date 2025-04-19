@@ -32,8 +32,8 @@
 
 /obj/structure/closet/secure_closet/quartermaster_uscm/Initialize()
 	. = ..()
-	new /obj/item/clothing/under/rank/qm_suit(src)
-	new /obj/item/clothing/head/cmcap/req/ro(src)
+	new /obj/item/clothing/under/marine/officer/qm_suit(src)
+	new /obj/item/clothing/head/cmcap/khaki(src)
 	new /obj/item/clothing/shoes/marine(src)
 	new /obj/item/clothing/gloves/yellow(src)
 	new /obj/item/device/flashlight(src)

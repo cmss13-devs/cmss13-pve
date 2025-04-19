@@ -1,0 +1,4 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - bugfix: "type 80 knife onmob mistake rectified"

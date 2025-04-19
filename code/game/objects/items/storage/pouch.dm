@@ -93,6 +93,12 @@
 		/obj/item/tool/extinguisher,
 	)
 
+/obj/item/storage/pouch/flamertank/weak
+
+/obj/item/storage/pouch/flamertank/weak/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/flamer_tank/weak(src)
+
 /obj/item/storage/pouch/general/large/m39ap
 	storage_slots = 1
 
@@ -190,7 +196,7 @@
 
 /obj/item/storage/pouch/firstaid
 	name = "first-aid pouch"
-	desc = "It contains, by default, autoinjectors. But it may also hold ointments, bandages, and pill packets."
+	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, and pill packets."
 	icon_state = "firstaid"
 	storage_slots = 4
 	can_hold = list(
@@ -211,8 +217,8 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
 
 /obj/item/storage/pouch/firstaid/full/alternate/fill_preset_inventory()
-	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
-	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/stack/medical/bruise_pack(src)
 
@@ -405,6 +411,7 @@
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 /obj/item/storage/pouch/magazine/attackby(obj/item/W, mob/user)
@@ -500,7 +507,7 @@
 
 /obj/item/storage/pouch/magazine/large/pmc_lmg/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/lmg(src)
+		new /obj/item/ammo_magazine/hpr_box(src)
 
 /obj/item/storage/pouch/magazine/large/pmc_sniper/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -511,6 +518,10 @@
 		new /obj/item/ammo_magazine/rifle/ap(src)
 
 /obj/item/storage/pouch/magazine/large/pmc_sg/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/smartgun(src)
+
+/obj/item/storage/pouch/magazine/large/wo_sg/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/smartgun/dirty(src)
 
@@ -600,8 +611,8 @@
 	)
 
 /obj/item/storage/pouch/explosive/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/nade_box))
-		var/obj/item/storage/box/nade_box/M = W
+	if(istype(W, /obj/item/ammo_box/magazine/nade_box))
+		var/obj/item/ammo_box/magazine/nade_box/M = W
 		dump_into(M,user)
 	else
 		return ..()
@@ -1150,8 +1161,8 @@
 	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
 
 /obj/item/storage/pouch/flare/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/m94))
-		var/obj/item/storage/box/m94/M = W
+	if(istype(W, /obj/item/storage/box/flare))
+		var/obj/item/storage/box/flare/M = W
 		dump_into(M,user)
 	else
 		return ..()

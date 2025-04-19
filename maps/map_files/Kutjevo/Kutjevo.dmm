@@ -174,9 +174,6 @@
 /turf/closed/wall/kutjevo/colony/reinforced,
 /area/kutjevo/interior/complex/med/operating)
 "amw" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/filtration/machine_32x64/indestructible{
 	bound_height = 32;
@@ -1303,10 +1300,6 @@
 	},
 /turf/open/floor/kutjevo/colors/orange/tile,
 /area/kutjevo/interior/complex/Northwest_Security_Checkpoint)
-"bUI" = (
-/obj/effect/landmark/corpsespawner/colonist/kutjevo,
-/turf/open/auto_turf/sand/layer0,
-/area/kutjevo/exterior/complex_border/med_rec)
 "bVK" = (
 /obj/structure/stairs/perspective/kutjevo{
 	dir = 9;
@@ -3011,7 +3004,6 @@
 	},
 /obj/structure/machinery/optable,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/colonist/kutjevo/burst,
 /turf/open/floor/kutjevo/colors/cyan/edge/west,
 /area/kutjevo/interior/complex/med/operating)
 "ewL" = (
@@ -3114,7 +3106,7 @@
 /turf/open/floor/kutjevo/colors/orange/edge/northwest,
 /area/kutjevo/interior/foremans_office)
 "eCB" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -3167,10 +3159,6 @@
 /obj/item/stack/rods,
 /turf/open/floor/plating/kutjevo,
 /area/kutjevo/interior/construction)
-"eJo" = (
-/obj/effect/landmark/corpsespawner/security/marshal,
-/turf/open/floor/kutjevo/colors/orange,
-/area/kutjevo/interior/colony_South/power2)
 "eKL" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
 	pixel_x = 5;
@@ -3326,10 +3314,6 @@
 "eSP" = (
 /turf/open/auto_turf/sand/layer2,
 /area/kutjevo/interior/complex/botany)
-"eTc" = (
-/obj/effect/landmark/corpsespawner/colonist/kutjevo,
-/turf/open/floor/kutjevo/colors/green/tile,
-/area/kutjevo/interior/complex/botany)
 "eTj" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/plating/kutjevo,
@@ -3350,10 +3334,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/interior/colony_S_East)
-"eWP" = (
-/obj/effect/landmark/corpsespawner/colonist/kutjevo,
-/turf/open/floor/kutjevo/multi_tiles,
-/area/kutjevo/interior/power)
 "eXm" = (
 /turf/closed/wall/kutjevo/colony/reinforced,
 /area/kutjevo/interior/complex/botany)
@@ -3857,10 +3837,6 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/interior/colony_central)
-"fMd" = (
-/obj/effect/landmark/corpsespawner/security/marshal,
-/turf/open/floor/kutjevo/tan,
-/area/kutjevo/interior/construction)
 "fNo" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
@@ -4148,7 +4124,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/complex_border/med_rec)
 "glU" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /obj/structure/sign/poster{
 	pixel_y = 32
 	},
@@ -4206,7 +4182,6 @@
 /area/kutjevo/interior/complex/botany)
 "gqX" = (
 /obj/structure/bed/bedroll,
-/obj/effect/landmark/corpsespawner/colonist/kutjevo,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/spring)
@@ -4779,10 +4754,6 @@
 /obj/structure/largecrate,
 /turf/open/floor/kutjevo/colors/orange,
 /area/kutjevo/exterior/lz_pad)
-"hkq" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/kutjevo/tan,
-/area/kutjevo/interior/construction)
 "hku" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
@@ -5425,10 +5396,6 @@
 "ijO" = (
 /turf/open/gm/river/desert/shallow_edge/east,
 /area/kutjevo/exterior/runoff_river)
-"ilS" = (
-/obj/effect/landmark/corpsespawner/colonist/kutjevo,
-/turf/open/floor/kutjevo/multi_tiles/east,
-/area/kutjevo/exterior/runoff_bridge)
 "inR" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	dir = 6
@@ -5715,7 +5682,7 @@
 /turf/open/floor/kutjevo/colors/cyan/edge/west,
 /area/kutjevo/interior/complex/med/triage)
 "iRk" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1
 	},
@@ -6387,10 +6354,6 @@
 /obj/structure/platform/kutjevo/rock,
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
-"jFr" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/kutjevo/colors/purple/edge/north,
-/area/kutjevo/interior/construction)
 "jFB" = (
 /obj/item/stack/sheet/wood,
 /turf/open/floor/kutjevo/tan/multi_tiles,
@@ -6737,7 +6700,7 @@
 /turf/open/floor/kutjevo/grey/plate,
 /area/kutjevo/interior/colony_central)
 "kkB" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/kutjevo/colors/cyan,
 /area/kutjevo/interior/complex/med)
 "kkH" = (
@@ -7491,10 +7454,6 @@
 "lkC" = (
 /turf/open/floor/kutjevo/tan/multi_tiles,
 /area/kutjevo/interior/complex/med/auto_doc)
-"lkP" = (
-/obj/effect/landmark/corpsespawner/colonist/kutjevo,
-/turf/open/gm/river/desert/deep/covered,
-/area/kutjevo/interior/power/comms)
 "llg" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/auto_turf/sand/layer0,
@@ -8394,10 +8353,6 @@
 /obj/structure/largecrate/random,
 /turf/open/floor/kutjevo/tan/multi_tiles,
 /area/kutjevo/interior/complex/botany/east_tech)
-"mCf" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/kutjevo/colors/cyan/tile,
-/area/kutjevo/interior/complex/med/operating)
 "mCI" = (
 /obj/structure/prop/dam/crane{
 	icon_state = "tractor";
@@ -8835,10 +8790,6 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/runoff_dunes)
-"njQ" = (
-/obj/effect/landmark/corpsespawner/security/marshal,
-/turf/open/floor/kutjevo/tan/multi_tiles,
-/area/kutjevo/interior/complex/botany/east)
 "njY" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
@@ -8920,7 +8871,6 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/complex_border/med_rec)
 "nsk" = (
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/kutjevo/colors/cyan/inner_corner/west,
 /area/kutjevo/interior/complex/med/operating)
 "nsU" = (
@@ -9975,7 +9925,6 @@
 	pixel_y = 22;
 	range = 15
 	},
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/kutjevo/tan/grey_edge/north,
 /area/kutjevo/interior/complex/med)
 "oNG" = (
@@ -10617,10 +10566,6 @@
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/complex_border/botany_medical_cave)
-"pLS" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/kutjevo/colors/red,
-/area/kutjevo/interior/complex/botany)
 "pMw" = (
 /turf/open/floor/kutjevo/tan/multi_tiles,
 /area/kutjevo/interior/complex/med/locks)
@@ -11951,10 +11896,6 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/auto_turf/sand/layer2,
 /area/kutjevo/interior/colony_S_East)
-"scY" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/kutjevo/tan,
-/area/kutjevo/interior/complex/botany)
 "sdn" = (
 /obj/structure/stairs/perspective/kutjevo{
 	dir = 4;
@@ -12574,7 +12515,7 @@
 /turf/open/floor/kutjevo/tan/grey_edge/west,
 /area/kutjevo/interior/complex/Northwest_Dorms)
 "tdG" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/kutjevo/colors/green,
 /area/kutjevo/interior/complex/botany)
 "tdT" = (
@@ -13141,7 +13082,6 @@
 /obj/structure/barricade/wooden{
 	dir = 4
 	},
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/kutjevo/multi_tiles/east,
 /area/kutjevo/interior/complex/botany)
 "tOe" = (
@@ -13628,7 +13568,7 @@
 /area/kutjevo/interior/power)
 "uAl" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
 /turf/open/floor/kutjevo/colors/purple/inner_corner/west,
 /area/kutjevo/interior/construction)
 "uAz" = (
@@ -15142,10 +15082,6 @@
 	},
 /turf/open/floor/almayer/research/containment/floor2,
 /area/kutjevo/interior/complex/med/auto_doc)
-"wLt" = (
-/obj/effect/landmark/corpsespawner/colonist/kutjevo,
-/turf/open/floor/kutjevo/grey/plate,
-/area/kutjevo/interior/construction)
 "wMw" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/kutjevo/multi_tiles,
@@ -15919,11 +15855,6 @@
 	icon_state = "pwall"
 	},
 /area/kutjevo/interior/oob)
-"yce" = (
-/obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/corpsespawner/security/marshal,
-/turf/open/gm/river/desert/deep/toxic,
-/area/kutjevo/interior/power)
 "ycq" = (
 /obj/item/prop/alien/hugger,
 /turf/open/floor/kutjevo/tan,
@@ -22400,7 +22331,7 @@ lUg
 ixA
 hQj
 hQj
-eWP
+hQj
 hQj
 hQj
 hWX
@@ -23354,7 +23285,7 @@ tlN
 tlN
 tlN
 scu
-lkP
+tXm
 wqD
 adX
 tlN
@@ -23687,7 +23618,7 @@ sYd
 gzv
 ezX
 fYp
-lkP
+tXm
 esi
 tXm
 fYp
@@ -24067,7 +23998,7 @@ rwj
 wMw
 wMw
 wMw
-yce
+hBj
 xyQ
 byl
 vFv
@@ -25574,7 +25505,7 @@ hQj
 ftY
 iLE
 loI
-eWP
+hQj
 akH
 pBV
 hbK
@@ -31032,7 +30963,7 @@ vDS
 vDS
 vDS
 vDS
-scY
+kDS
 lfm
 vDS
 lHs
@@ -31204,7 +31135,7 @@ ezJ
 uhV
 qhw
 nOG
-eTc
+nOG
 tKY
 sbX
 tKY
@@ -32138,7 +32069,7 @@ iaR
 bIT
 kkH
 gVV
-mCf
+bKl
 cbg
 qvK
 gRi
@@ -32205,10 +32136,10 @@ kDS
 cAt
 cAt
 cAt
-scY
+kDS
 wnw
 lry
-ilS
+qQq
 jiz
 cqX
 fyD
@@ -33207,7 +33138,7 @@ xIJ
 gAy
 tRp
 pSs
-pLS
+pSs
 tRp
 brL
 kDS
@@ -34877,7 +34808,7 @@ iSO
 nCM
 kDS
 kDS
-scY
+kDS
 kif
 fiE
 fyD
@@ -35198,7 +35129,7 @@ yir
 xkk
 xkk
 hqA
-njQ
+xkk
 hqA
 xkk
 jnS
@@ -36668,7 +36599,7 @@ gld
 msK
 msK
 uAz
-bUI
+gld
 rES
 aAg
 gof
@@ -37485,10 +37416,10 @@ sbz
 oUP
 sBh
 fyF
-wLt
+fyF
 alo
 qAF
-hkq
+euj
 dKO
 euj
 euj
@@ -37988,9 +37919,9 @@ fyF
 fyF
 lxc
 kFF
-jFr
+qAF
 euj
-fMd
+euj
 ssj
 euj
 euj
@@ -37999,7 +37930,7 @@ dOJ
 twn
 ylf
 anE
-bUI
+gld
 gld
 gld
 msK
@@ -40712,7 +40643,7 @@ qGx
 duw
 qGx
 qGx
-eJo
+qGx
 qGx
 qGx
 qGx
@@ -41025,7 +40956,7 @@ dQv
 xWK
 qaI
 cUm
-wLt
+fyF
 cUm
 lxc
 eTT

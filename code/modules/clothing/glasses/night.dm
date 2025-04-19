@@ -26,13 +26,13 @@
 	flags_item = NODROP|DELONDROP|ITEM_ABSTRACT
 	flags_inventory = CANTSTRIP
 
-/obj/item/clothing/glasses/night/M4RA
-	name = "\improper M4RA Battle sight"
+/obj/item/clothing/glasses/night/M49A
+	name = "\improper M49A Battle sight"
 	gender = NEUTER
-	desc = "A headset and night vision goggles system for the M4RA Battle Rifle. Allows highlighted imaging of surroundings, as well as the ability to view the suit sensor health status readouts of other marines. Click it to toggle."
+	desc = "A headset and night vision goggles system for the M49A Battle Rifle. Allows highlighted imaging of surroundings, as well as the ability to view the suit sensor health status readouts of other marines. Click it to toggle."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
-	icon_state = "m4ra_goggles"
-	deactive_state = "m4ra_goggles_0"
+	icon_state = "m49a_goggles"
+	deactive_state = "m49a_goggles_0"
 	vision_flags = SEE_TURFS
 	hud_type = MOB_HUD_MEDICAL_BASIC
 	toggleable = TRUE
@@ -43,7 +43,7 @@
 /obj/item/clothing/glasses/night/medhud
 	name = "\improper Mark 4 Battle Medic sight"
 	gender = NEUTER
-	desc = "A headset and night vision goggles system for the M4RA Battle Rifle. Allows highlighted imaging of surroundings, as well as the ability to view the health statuses of others. Click it to toggle."
+	desc = "A headset and night vision goggles system for the M49A Battle Rifle. Allows highlighted imaging of surroundings, as well as the ability to view the health statuses of others. Click it to toggle."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "m4_goggles"
 	deactive_state = "m4_goggles_0"
@@ -58,13 +58,13 @@
 	gender = NEUTER
 	desc = "A headset and night vision goggles system for the M42 Scout Rifle. Allows highlighted imaging of surroundings. Click it to toggle."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
-	icon_state = "m42_goggles"
-	deactive_state = "m42_goggles_0"
+	icon_state = "m56_goggles"
+	deactive_state = "m56_goggles_0"
 	vision_flags = SEE_TURFS
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_item = NO_CRYO_STORE
 
 /obj/item/clothing/glasses/night/m42_night_goggles/spotter
 	name = "\improper M42 spotter sight"

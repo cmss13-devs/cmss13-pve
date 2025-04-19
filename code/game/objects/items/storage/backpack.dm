@@ -419,11 +419,9 @@
 /obj/item/storage/backpack/marine
 	name = "\improper lightweight IMP backpack"
 	desc = "The standard-issue pack of the USCM and US Army forces. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 armor."
-	icon_state = "marinepack"
-	item_state = "marinepack"
-	has_gamemode_skin = TRUE //replace this with the atom_flag NO_SNOW_TYPE at some point, just rename it to like, NO_MAP_VARIANT_SKIN
-	xeno_icon_state = "marinepack"
-	xeno_types = list(/mob/living/carbon/xenomorph/runner, /mob/living/carbon/xenomorph/praetorian, /mob/living/carbon/xenomorph/drone, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/defender, /mob/living/carbon/xenomorph/sentinel, /mob/living/carbon/xenomorph/spitter)
+	icon_state = "imp"
+	item_state = "imp"
+	has_gamemode_skin = FALSE //replace this with the atom_flag NO_SNOW_TYPE at some point, just rename it to like, NO_MAP_VARIANT_SKIN
 
 /obj/item/storage/backpack/marine/standard
 	has_gamemode_skin = FALSE
@@ -625,7 +623,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	xeno_types = null
 
 /obj/item/storage/backpack/marine/grenadepack/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack) || istype(W, /obj/item/storage/belt/grenade))
+	if(istype(W, /obj/item/ammo_box/magazine/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack) || istype(W, /obj/item/storage/belt/grenade))
 		dump_into(W,user)
 	else
 		return ..()
@@ -650,7 +648,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon = 'icons/obj/items/clothing/belts.dmi'
 	icon_state = "g8pouch"
 	item_state = "g8pouch"
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 	can_hold_skill = list()
 
 /obj/item/storage/backpack/general_belt/equipped(mob/user, slot)
@@ -672,6 +670,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "upp_g8pouch"
 	item_state = "upp_g8pouch"
 	has_gamemode_skin = FALSE
+
+//this preset is for the US Army machinegunner.
+/obj/item/storage/backpack/general_belt/army
+	desc = "A small light pouch that can be fitted around the waist or back. Used as a mass pouch for bulkier magazines."
+//this fills the preset's ammo belt
+/obj/item/storage/backpack/general_belt/army/fill_preset_inventory()
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
 
 // Scout Cloak
 /obj/item/storage/backpack/marine/satchel/scout_cloak
@@ -709,9 +715,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	if(!ishuman(usr))
 		return
 	var/mob/living/carbon/human/H = usr
-	if(!skillcheck(H, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && H.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_SCOUT)
-		to_chat(H, SPAN_WARNING("You don't seem to know how to use [src]..."))
-		return
 
 	if(H.back != src)
 		to_chat(H, SPAN_WARNING("You must be wearing the cloak to activate it!"))
@@ -833,7 +836,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/fuel_type = "fuel"
 	max_storage_space = 18
 	storage_slots = null
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 	xeno_types = null
 
 /obj/item/storage/backpack/marine/engineerpack/Initialize()
@@ -931,7 +934,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "flamethrower_tank"
 	max_fuel = 500
 	fuel_type = "utnapthal"
-	has_gamemode_skin = TRUE
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/backpack/marine/engineerpack/flamethrower/verb/remove_reagents()
 	set name = "Empty canister"
@@ -1050,7 +1053,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/list/smartguns = typesof(/obj/item/weapon/gun/smartgun)
 	var/list/training_guns = list(
 		/obj/item/weapon/gun/rifle/m41a/training,
-		/obj/item/weapon/gun/rifle/m4ra/training,
+		/obj/item/weapon/gun/rifle/m49a/training,
 		/obj/item/weapon/gun/smg/m39/training,
 		/obj/item/weapon/gun/pistol/m4a3/training,
 		/obj/item/weapon/gun/pistol/vp70/training) //Ivan doesn't carry toys.

@@ -105,6 +105,34 @@ GLOBAL_LIST_INIT(RESTRICTED_CAMERA_NETWORKS, list( //Those networks can only be 
 #define IS_SHARP_ITEM_ACCURATE 2 //knife, scalpel
 #define IS_SHARP_ITEM_BIG 3 //fireaxe, hatchet, energy sword
 
+#define CAN_OPENER_EFFECTIVE list(\
+	/obj/item/tool/kitchen/can_opener,\
+	/obj/item/tool/kitchen/can_opener/compact,\
+	/obj/item/weapon/swiss_army_knife/can_opener,\
+	)
+
+///slow can opening with a chance of jamming
+#define CAN_OPENER_CRUDE list(\
+	/obj/item/attachable/bayonet,\
+	/obj/item/attachable/bayonet/upp,\
+	/obj/item/attachable/bayonet/upp/surplus,\
+	/obj/item/weapon/knife/marine/baker,\
+	/obj/item/weapon/swiss_army_knife/knife,\
+	/obj/item/attachable/bayonet/co2,\
+	/obj/item/weapon/knife/marine,\
+	/obj/item/weapon/knife/marine/kabar,\
+	/obj/item/weapon/knife/marine/bowie,\
+	/obj/item/weapon/knife/marine/sas,\
+	/obj/item/tool/kitchen/knife,\
+	/obj/item/tool/kitchen/knife/butcher,\
+	/obj/item/weapon/sword,\
+	/obj/item/weapon/sword/claymore,\
+	/obj/item/weapon/sword/ceremonial,\
+	/obj/item/weapon/sword/machete,\
+	/obj/item/weapon/sword/machete/arnold,\
+	/obj/item/weapon/sword/machete/arnold/weak\
+	)
+
 
 //pry capable item defines
 #define IS_PRY_CAPABLE_SIMPLE 1
@@ -154,7 +182,7 @@ GLOBAL_LIST_INIT(RESTRICTED_CAMERA_NETWORKS, list( //Those networks can only be 
 #define ONE_TYPE_PER_BORDER 2
 
 #define RESULT_REQUIRES_SNOW (1<<0)
-
+#define CAN_MAKE_BARRICADE (1<<1)
 
 /// Reaction type from touching it
 #define TOUCH 1

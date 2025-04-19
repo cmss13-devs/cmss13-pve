@@ -70,15 +70,6 @@
 	var/override_map
 
 /datum/map_config/New()
-	survivor_types = list(
-		/datum/equipment_preset/survivor/scientist,
-		/datum/equipment_preset/survivor/doctor,
-		/datum/equipment_preset/survivor/chef,
-		/datum/equipment_preset/survivor/chaplain,
-		/datum/equipment_preset/survivor/miner,
-		/datum/equipment_preset/survivor/colonial_marshal,
-		/datum/equipment_preset/survivor/engineer,
-	)
 
 	synth_survivor_types = list(
 		/datum/equipment_preset/synth/survivor/medical_synth,
@@ -93,7 +84,6 @@
 		/datum/equipment_preset/synth/survivor/trucker_synth,
 		/datum/equipment_preset/synth/survivor/bartender_synth,
 		/datum/equipment_preset/synth/survivor/atc_synth,
-		/datum/equipment_preset/synth/survivor/cmb_synth,
 		/datum/equipment_preset/synth/survivor/wy/security_synth,
 		/datum/equipment_preset/synth/survivor/wy/protection_synth,
 		/datum/equipment_preset/synth/survivor/wy/corporate_synth,

@@ -369,7 +369,7 @@ Class Procs:
 	unslashable = TRUE
 	unacidable = TRUE
 	wrenchable = FALSE
-	
+
 /obj/structure/machinery/fuelpump/ex_act(severity)
 	return
 

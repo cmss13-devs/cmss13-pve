@@ -31,10 +31,6 @@
 /obj/structure/bed/chair/comfy/black,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
-"au" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/carpet,
-/area/bigredv2/outside/admin_building)
 "aB" = (
 /obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/on,
@@ -90,7 +86,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/obj/item/clothing/head/helmet/marine/veteran/pmc,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
 "bb" = (
@@ -100,7 +96,6 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
 "bc" = (
@@ -137,10 +132,6 @@
 /obj/item/storage/toolbox/syndicate,
 /turf/open/floor/darkred2/east,
 /area/bigredv2/outside/admin_building)
-"fR" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
 "gb" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor/dark,
@@ -168,15 +159,6 @@
 	name = "\improper Operations Office"
 	},
 /turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
-"jq" = (
-/obj/item/weapon/gun/rifle/m41a/corporate{
-	current_mag = /obj/item/ammo_magazine/rifle/rubber;
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. It seems to be pretty battered and broken up.";
-	name = "battered M41A pulse rifle MK2";
-	pixel_x = 4
-	},
-/turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
 "jH" = (
 /obj/structure/machinery/door/airlock/almayer/command/colony{
@@ -473,7 +455,7 @@ ab
 Jy
 aD
 Od
-fR
+WP
 as
 WP
 Li
@@ -508,7 +490,7 @@ oS
 (5,1,1) = {"
 Jy
 ae
-jq
+aQ
 aC
 aQ
 aC
@@ -520,7 +502,7 @@ WP
 (6,1,1) = {"
 NX
 jH
-au
+aQ
 aW
 aL
 aS

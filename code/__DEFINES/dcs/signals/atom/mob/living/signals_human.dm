@@ -56,6 +56,9 @@
 //from /mob/living/carbon/human/equip_to_slot()
 #define COMSIG_HUMAN_EQUIPPED_ITEM "human_equipped_item"
 
+//from /mob/living/carbon/human/u_equip()
+#define COMSIG_HUMAN_UNEQUIPPED_ITEM "human_unequipped_item"
+
 /// From /mob/proc/equip_to_slot_if_possible()
 #define COMSIG_HUMAN_ATTEMPTING_EQUIP "human_attempting_equip"
 	#define COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP (1<<0)
@@ -72,5 +75,17 @@
 #define COMSIG_HUMAN_SHRAPNEL_REMOVED "human_shrapnel_removed"
 
 /// From /mob/living/carbon/human/UnarmedAttack()
+#define COMSIG_HUMAN_UNARMED_ATTACK "human_unarmed_attack"
+
+/// From /mob/living/carbon/human/UnarmedAttack()
 #define COMSIG_HUMAN_BEFORE_ATTACK_HAND "human_before_attack_hand"
 	#define COMPONENT_CANCEL_HUMAN_ATTACK_HAND (1<<0)
+
+/// From /obj/item/restraint/proc/place_handcuffs() : ()
+#define COMSIG_HUMAN_HANDCUFFED "human_handcuffed"
+
+/// From /mob/living/carbon/human/proc/set_species() : (new_species)
+#define COMSIG_HUMAN_SET_SPECIES "human_set_species"
+
+/// From /mob/living/carbon/human/proc/get_human_ai_brain() : (datum/human_ai_brain/out_brain)
+#define COMSIG_HUMAN_GET_AI_BRAIN "human_get_ai_brain"
