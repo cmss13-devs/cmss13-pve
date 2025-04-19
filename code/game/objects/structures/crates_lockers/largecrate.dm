@@ -551,8 +551,8 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 
 /obj/structure/largecrate/hunter_games_supplies/Initialize()
 	. = ..()
-	new /obj/item/storage/box/m94(src)
-	new /obj/item/storage/box/m94(src)
+	new /obj/item/storage/box/flare(src)
+	new /obj/item/storage/box/flare(src)
 	new /obj/item/storage/pouch/general/medium(src)
 	new /obj/item/storage/pouch/survival(src)
 	new /obj/item/device/flashlight (src)
@@ -571,10 +571,10 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 	new /obj/item/attachable/bayonet(src)
 	new /obj/item/weapon/throwing_knife(src)
 	new /obj/item/weapon/throwing_knife(src)
-	new /obj/item/storage/box/uscm_mre(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/storage/box/donkpockets(src)
-	new /obj/item/storage/box/MRE(src)
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/storage/box/pizza(src)
 
 
