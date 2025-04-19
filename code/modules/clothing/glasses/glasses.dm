@@ -220,6 +220,13 @@
 	flags_armor_protection = 0
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
+/obj/item/clothing/glasses/tinted
+	name = "Tinted Glasses"
+	desc = "Don't you want to be a Big Shot?"
+	icon_state = "t_glasses"
+	item_state = "t_glasses"
+	flags_equip_slot = SLOT_EYES|SLOT_FACE
+
 /obj/item/clothing/glasses/regular/hipster
 	name = "Prescription Glasses"
 	desc = "Boring glasses, makes you look smart and potentially reputable."
@@ -655,13 +662,6 @@
 	item_state = "bigsunglasses"
 	eye_protection = EYE_PROTECTION_FLASH
 	clothing_traits = list(TRAIT_BIMEX)
-	flags_equip_slot = SLOT_EYES|SLOT_FACE
-
-/obj/item/clothing/glasses/tinted
-	name = "Tinted Glasses"
-	desc = "Don't you want to be a Big Shot?"
-	icon_state = "tintedglasses"
-	item_state = "tintedglasses"
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
 /obj/item/clothing/glasses/sunglasses/big/orange

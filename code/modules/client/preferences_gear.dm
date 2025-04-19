@@ -81,6 +81,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/eyewear/tintedglasses
 	display_name = "Tinted Glasses"
 	path = /obj/item/clothing/glasses/tinted
+	allowed_origins = USCM_ORIGINS
 
 /datum/gear/eyewear/bimex_shades
 	display_name = "BiMex personal shades"
