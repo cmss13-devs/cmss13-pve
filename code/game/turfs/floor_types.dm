@@ -2781,17 +2781,26 @@
 /turf/open/floor/corsat/lightplate
 	icon_state = "lightplate"
 
+/turf/open/floor/corsat/lightspiral
+	icon_state = "lightspiral"
+
 /turf/open/floor/corsat/marked
 	icon_state = "marked"
 
 /turf/open/floor/corsat/officesquares
 	icon_state = "officesquares"
 
+/turf/open/floor/corsat/officetiles
+	icon_state = "officetiles"
+
 /turf/open/floor/corsat/omega
 	icon_state = "omega"
 
 /turf/open/floor/corsat/plate
 	icon_state = "plate"
+
+/turf/open/floor/corsat/box
+	icon_state = "box"
 
 /turf/open/floor/corsat/red/southwest
 	dir = SOUTHWEST
@@ -2831,6 +2840,12 @@
 
 /turf/open/floor/corsat/spiralplate
 	icon_state = "spiralplate"
+
+/turf/open/floor/corsat/spiraloffice
+	icon_state = "spiraloffice"
+
+/turf/open/floor/corsat/spiralblueoffice
+	icon_state = "spiralblueoffice"
 
 /turf/open/floor/corsat/spiralwoodalt
 	icon_state = "spiralwoodalt"
