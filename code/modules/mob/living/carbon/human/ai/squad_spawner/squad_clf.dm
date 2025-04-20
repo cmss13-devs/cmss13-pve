@@ -8,9 +8,11 @@
 		/datum/equipment_preset/jovian = 3,
 	)
 
-/datum/human_ai_squad_preset/clf/jovian
+/datum/human_ai_squad_preset/clf/shotgun
 	name = "Jovian Squad+Shotgun"
 	desc = "A small squad of UJL."
 	ai_to_spawn = list(
-		/datum/equipment_preset/jovian = 3,
+		/datum/equipment_preset/jovian = 2,
+		/datum/equipment_preset/jovian/shotgunner = 1
 	)
+

@@ -78,6 +78,7 @@
 		/datum/equipment_preset/upp/sniper::name = /datum/equipment_preset/upp/sniper,
 		/datum/equipment_preset/uscm/specialist_equipped/sniper::name = /datum/equipment_preset/uscm/specialist_equipped/sniper,
 		/datum/equipment_preset/other/freelancer/marksman::name = /datum/equipment_preset/other/freelancer/marksman,
+		/datum/equipment_preset/jovian/sniper::name = /datum/equipment_preset/jovian/sniper,
 	)
 
 	if(!check_rights(R_DEBUG))
