@@ -1,6 +1,7 @@
 // ALAMO
 /obj/effect/attach_point/weapon/dropship1
 	ship_tag = DROPSHIP_ALAMO
+	base_category = DROPSHIP_WEAPON
 
 /obj/effect/attach_point/weapon/dropship1/left_wing
 	name = "port wing weapon attach point"
@@ -43,6 +44,7 @@
 // NORMANDY
 /obj/effect/attach_point/weapon/dropship2
 	ship_tag = DROPSHIP_NORMANDY
+	base_category = DROPSHIP_WEAPON
 
 /obj/effect/attach_point/weapon/dropship2/left_wing
 	name = "port wing weapon attach point"
@@ -84,6 +86,7 @@
 
 /obj/effect/attach_point/weapon/dropship3
 	ship_tag = DROPSHIP_SAIPAN
+	base_category = DROPSHIP_WEAPON
 
 /obj/effect/attach_point/weapon/dropship3/left_wing
 	name = "port wing weapon attach point"
@@ -126,6 +129,7 @@
 // MIDWAY
 /obj/effect/attach_point/weapon/midway
 	ship_tag = DROPSHIP_MIDWAY
+	base_category = DROPSHIP_WEAPON
 
 /obj/effect/attach_point/weapon/midway/left_wing
 	name = "port wing weapon attach point"
@@ -168,6 +172,7 @@
 // SOMME
 /obj/effect/attach_point/weapon/somme
 	ship_tag = DROPSHIP_SOMME
+	base_category = SOMME_DROPSHIP_WEAPON
 	icon = 'icons/turf/dropship5.dmi'
 
 /obj/effect/attach_point/weapon/somme/left_wing
@@ -213,6 +218,7 @@
 // CYCLONE
 /obj/effect/attach_point/weapon/cyclone
 	ship_tag = DROPSHIP_CYCLONE
+	base_category = DROPSHIP_WEAPON
 
 /obj/effect/attach_point/weapon/cyclone/left_wing
 	name = "port wing weapon attach point"
@@ -255,6 +261,7 @@
 // TORNADO
 /obj/effect/attach_point/weapon/tornado
 	ship_tag = DROPSHIP_TORNADO
+	base_category = DROPSHIP_WEAPON
 
 /obj/effect/attach_point/weapon/tornado/left_wing
 	name = "port wing weapon attach point"
@@ -297,6 +304,7 @@
 // TYPHOON
 /obj/effect/attach_point/weapon/typhoon
 	ship_tag = DROPSHIP_TYPHOON
+	base_category = DROPSHIP_WEAPON
 
 /obj/effect/attach_point/weapon/typhoon/left_wing
 	name = "port wing weapon attach point"
@@ -339,6 +347,7 @@
 // TORNADO
 /obj/effect/attach_point/weapon/tripoli
 	ship_tag = DROPSHIP_TRIPOLI
+	base_category = DROPSHIP_WEAPON
 
 /obj/effect/attach_point/weapon/tripoli/left_wing
 	name = "port wing weapon attach point"
@@ -466,6 +475,7 @@
 	ship_tag = DROPSHIP_NORMANDY
 
 /obj/effect/attach_point/fuel/somme
+	icon_state = "somme_fuel_base"
 	ship_tag = DROPSHIP_SOMME
 
 /obj/effect/attach_point/fuel/dropship3

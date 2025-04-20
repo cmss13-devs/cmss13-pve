@@ -478,6 +478,23 @@
 	icon_state = "cooling_system"
 	point_cost = 800
 
+//Somme fuel equipment - On hold
+
+/obj/structure/dropship_equipment/fuel/somme
+	icon = null
+	equip_categories = list(SOMME_DROPSHIP_FUEL_EQP)
+
+/obj/structure/dropship_equipment/fuel/fuel_enhancer/somme
+	name = "\improper EG-615 fuel enhancer"
+	desc = "A fuel enhancement system for use by the UD-4 dropship. It improves the thrust produced by the fuel combustion for faster travels. Fits inside the engine attach points. You need a powerloader to lift it."
+	icon_state = "somme_fuel_enhancer"
+	point_cost = 800
+
+/obj/structure/dropship_equipment/fuel/cooling_system/somme
+	name = "\improper GO.AG-163 mk. II cooling system"
+	desc = "A cooling system for use by the UD-4 dropship. It produces additional cooling reducing delays between launch. Fits inside the engine attach points. You need a powerloader to lift it."
+	icon_state = "somme_cooling_system"
+	point_cost = 800
 
 //================= ELECTRONICS =================//
 
@@ -746,6 +763,19 @@
 		if(ship_base) icon_state = "30mm_cannon_installed"
 		else icon_state = "30mm_cannon"
 
+/obj/structure/dropship_equipment/weapon/heavygun/somme
+	name = "\improper GAU-116/AB 25mm rotary autocannon"
+	desc = "A later iteration of the GAU-113, the GAU-116/AB is designed for use specifically aboard UD-4 Cheyenne dropships. Strengthened mounting points along with increased ammo-feeder reliability make this gun the workhorse of USCM's CAS capability."
+	icon_state = "somme_30mm_cannon"
+	shorthand = "CNN"
+	equip_categories = list(SOMME_DROPSHIP_WEAPON)
+
+/obj/structure/dropship_equipment/weapon/heavygun/somme/update_icon()
+	if(ammo_equipped)
+		icon_state = "somme_30mm_cannon_loaded[ammo_equipped.ammo_count?"1":"0"]"
+	else
+		if(ship_base) icon_state = "somme_30mm_cannon_installed"
+		else icon_state = "somme_30mm_cannon"
 
 /obj/structure/dropship_equipment/weapon/rocket_pod
 	name = "\improper LAU-444 Guided Missile Launcher"
@@ -754,7 +784,7 @@
 	firing_sound = 'sound/effects/rocketpod_fire.ogg'
 	firing_delay = 5
 	point_cost = 600
-	shorthand = "MSL"
+	shorthand = "MSL-MW"
 
 /obj/structure/dropship_equipment/weapon/rocket_pod/deplete_ammo()
 	ammo_equipped = null //nothing left to empty after firing
@@ -767,6 +797,19 @@
 		if(ship_base) icon_state = "rocket_pod_installed"
 		else icon_state = "rocket_pod"
 
+/obj/structure/dropship_equipment/weapon/rocket_pod/somme
+	name = "\improper LAU-444/B Guided Missile Launcher."
+	desc = "A missile hardpoint fit to carry any of the 46 variants of missiles that the modernized UD-4S Cheyenne is capable of carrying."
+	icon_state = "somme_rocket_pod"
+	shorthand = "MSL-MW"
+	equip_categories = list(SOMME_DROPSHIP_WEAPON)
+
+/obj/structure/dropship_equipment/weapon/rocket_pod/somme/update_icon()
+	if(ammo_equipped && ammo_equipped.ammo_count)
+		icon_state = "somme_rocket_pod_loaded[ammo_equipped.ammo_id]"
+	else
+		if(ship_base) icon_state = "somme_rocket_pod_installed"
+		else icon_state = "somme_rocket_pod"
 
 /obj/structure/dropship_equipment/weapon/minirocket_pod
 	name = "\improper Mk.10 Zeus Rocket Pod"
@@ -783,9 +826,28 @@
 		icon_state = "minirocket_pod_loaded"
 	else
 		if(ship_base) icon_state = "minirocket_pod_installed"
-		else icon_state = "minirocket_pod"
+		else icon_state = "minirocket_pod_installed"
 
 /obj/structure/dropship_equipment/weapon/minirocket_pod/deplete_ammo()
+	..()
+	if(ammo_equipped && !ammo_equipped.ammo_count) //fired last minirocket
+		ammo_equipped = null
+
+/obj/structure/dropship_equipment/weapon/minirocket_pod/somme
+	name = "\improper Mk. 11 'Squall' Rocket Pod."
+	desc = "An unguided rocket launcher system designed to deliver a lot of firepower to a lot of places really quickly. The sticker on it's top surface says it's fit for use in any weather or environment. Somehow you doubt that."
+	icon_state = "somme_minirocket_pod"
+	shorthand = "UG-RKT"
+	equip_categories = list(SOMME_DROPSHIP_WEAPON)
+
+/obj/structure/dropship_equipment/weapon/minirocket_pod/somme/update_icon()
+	if(ammo_equipped && ammo_equipped.ammo_count)
+		icon_state = "somme_minirocket_pod_loaded"
+	else
+		if(ship_base) icon_state = "somme_minirocket_pod_installed"
+		else icon_state = "somme_minirocket_pod"
+
+/obj/structure/dropship_equipment/weapon/minirocket_pod/somme/deplete_ammo()
 	..()
 	if(ammo_equipped && !ammo_equipped.ammo_count) //fired last minirocket
 		ammo_equipped = null
@@ -808,6 +870,20 @@
 	else
 		if(ship_base) icon_state = "laser_beam_installed"
 		else icon_state = "laser_beam"
+
+/obj/structure/dropship_equipment/weapon/laser_beam_gun/somme
+	name = "\improper AN/AEQ-22/B particle phalanx"
+	desc = "A multiphasic energy weapon capable of delivering enormous masses of thermal energy across vast distances with pinpoint precision. A secondary soft/hardkill self protection mode for the carrying aircraft is included. In directfire mode, it is rated for anti-materiel and anti-personnel operation, with the pulsed emitter inflicting 230kJ per shot."
+	icon_state = "somme_laser_beam"
+	shorthand = "LSR"
+	equip_categories = list(SOMME_DROPSHIP_WEAPON)
+
+/obj/structure/dropship_equipment/weapon/laser_beam_gun/somme/update_icon()
+	if(ammo_equipped && ammo_equipped.ammo_count)
+		icon_state = "somme_laser_beam_loaded"
+	else
+		if(ship_base) icon_state = "somme_laser_beam_installed"
+		else icon_state = "somme_laser_beam"
 
 /obj/structure/dropship_equipment/weapon/launch_bay
 	name = "\improper LAG-14 Internal Sentry Launcher"
