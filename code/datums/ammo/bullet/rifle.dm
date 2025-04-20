@@ -401,6 +401,7 @@
 		M.adjust_effect(slow_duration, SUPERSLOW)
 		L.apply_armoured_damage(damage, ARMOR_BULLET, BRUTE, null, penetration)
 	else
+		M.adjust_effect(slow_duration, SUPERSLOW)
 		burst(get_turf(M),P,damage_type, 2 , 2)
 		burst(get_turf(M),P,damage_type, 1 , 2 , 0)
 
