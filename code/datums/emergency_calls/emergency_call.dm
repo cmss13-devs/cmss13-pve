@@ -17,7 +17,7 @@
 
 /datum/game_mode/proc/titan_online()
 	var/name = "TITAN 1200 Report"
-	var/input = "TITAN unit online. Destination reached. Initiating alert 1 procedures. Platoon Commander presence required at: CIC. Good morning, marines."
+	var/input = "TITAN unit online. Destination reached. Good morning, marines."
 	shipwide_ai_announcement(input, name, 'sound/theme/movie_theme.ogg')
 
 /datum/game_mode/proc/request_ert(user, ares = FALSE)
