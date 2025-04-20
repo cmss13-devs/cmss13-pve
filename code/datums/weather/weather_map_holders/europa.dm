@@ -25,7 +25,7 @@
 
 	ambience = 'sound/ambience/strata/strata_blizzard.ogg'
 
-	fire_smothering_strength = 6
+	fire_smothering_strength = 15
 
 /datum/weather_event/strong_winds/process_mob_effect(mob/living/carbon/affected_mob, delta_time = 1)
 	if(ishuman(affected_mob))
