@@ -127,6 +127,7 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	time_to_unequip = 25
 	time_to_equip = 25
+	allowed = list(/obj/item/weapon/gun,/obj/item/weapon/baton,/obj/item/restraint/handcuffs,/obj/item/tank)
 
 /obj/item/clothing/head/helmet/space/pressure/orange
 	item_state = "pressure_orange"

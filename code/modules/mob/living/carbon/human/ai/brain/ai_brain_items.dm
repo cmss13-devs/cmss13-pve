@@ -267,6 +267,11 @@
 	item_slot_appraisal_loop(tied_human.r_store, "right_pocket")
 
 /datum/human_ai_brain/proc/appraise_armor()
+	if(istype(tied_human.head, /obj/item/clothing/head/helmet/space/pressure))
+		var/obj/item/clothing/head/helmet/space/pressure/pr = tied_human.head
+		if(!pr.light_on)
+			pr.turn_light(tied_human, TRUE)
+
 	if(!istype(tied_human.wear_suit, /obj/item/clothing/suit/storage))
 		return
 

@@ -738,6 +738,7 @@
 #include "code\datums\weather\weather_events\sorokyne.dm"
 #include "code\datums\weather\weather_map_holders\big_red.dm"
 #include "code\datums\weather\weather_map_holders\bmg290_otogi_egress_point.dm"
+#include "code\datums\weather\weather_map_holders\europa.dm"
 #include "code\datums\weather\weather_map_holders\faction_clash.dm"
 #include "code\datums\weather\weather_map_holders\lv295_blacksite.dm"
 #include "code\datums\weather\weather_map_holders\lv522_chances_claim.dm"

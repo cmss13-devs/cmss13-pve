@@ -96,3 +96,8 @@
 	// Remove this once effects have been ported to trait signals (blinded, dazed, etc)
 	if(stat != .)
 		handle_regular_hud_updates()
+
+/mob/living/carbon/human/proc/full_spacesuit_check()
+	if(istype(head, /obj/item/clothing/head/helmet/space) && istype(wear_suit, /obj/item/clothing/suit/space))
+		return TRUE
+	return FALSE
