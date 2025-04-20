@@ -2,11 +2,16 @@
 	faction = FACTION_CLF
 
 /datum/human_ai_equipment_preset/clf/jovian
-	name = "UJI Soldier"
+	name = "UJL Soldier"
 	desc = "Just a dude."
 	path = /datum/equipment_preset/jovian
 
 /datum/human_ai_equipment_preset/clf/jovian/rocket
-	name = "UJI Soldier"
+	name = "UJL Rocket"
 	desc = "Just a dude with a rocket launcher."
-	path = /datum/equipment_preset/jovian
+	path = /datum/equipment_preset/jovian/rocket
+
+/datum/human_ai_equipment_preset/clf/jovian/shotgun
+	name = "UJL Shotgun"
+	desc = "Just a dude with a shotgun."
+	path = /datum/equipment_preset/jovian/shotgun
