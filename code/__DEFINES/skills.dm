@@ -72,7 +72,7 @@
 #define SKILL_CONSTRUCTION_MAX 3
 
 // engineer skill
-#define SKILL_ENGINEER_DEFAULT 1
+#define SKILL_ENGINEER_DEFAULT 2
 #define SKILL_ENGINEER_UNTRAINED 0	//no training
 #define SKILL_ENGINEER_NOVICE 1   //barricade repair && c4 use (mini-engis, specs)
 #define SKILL_ENGINEER_TRAINED 2   //plasteel barricade deconstruction, hacking&&planet engine fixing&&apc building, Telecomms fixing  (OT, etc.)
