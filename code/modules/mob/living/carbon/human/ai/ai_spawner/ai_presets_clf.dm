@@ -14,4 +14,4 @@
 /datum/human_ai_equipment_preset/clf/jovian_shotgun
 	name = "UJL Shotgun"
 	desc = "Just a dude with a shotgun."
-	path = /datum/equipment_preset/jovian/shotgun
+	path = /datum/equipment_preset/jovian/shotgunner
