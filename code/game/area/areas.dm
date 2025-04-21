@@ -82,6 +82,7 @@
 	/// Doesn't need to be set for areas/Z levels that are marked as admin-only
 	var/block_game_interaction = FALSE
 
+	var/gravity_slowdown = 0
 
 /area/New()
 	// This interacts with the map loader, so it needs to be set immediately

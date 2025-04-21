@@ -441,3 +441,29 @@
 	name = "Medic Autoinjector (M-L)"
 	volume = 180
 	amount_per_transfer_from_this = 30
+
+/obj/item/reagent_container/hypospray/autoinjector/quikclot
+	name = "quikclot autoinjector"
+	chemname = "quickclot"
+	desc = "An auto-injector loaded with 3 uses of Quikclot, an uncommon hemostatic."
+	amount_per_transfer_from_this = REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD
+	volume = (REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD) * INJECTOR_USES
+	display_maptext = TRUE
+	maptext_label = "QC"
+
+/obj/item/reagent_container/hypospray/autoinjector/quikclot/skillless
+	name = "quikclot EZ autoinjector"
+	desc = "An auto-injector loaded with 3 uses of Quikclot, an uncommon hemostatic. Doesn't require any training to use."
+	icon_state = "emptyskill"
+	item_state = "emptyskill"
+	skilllock = SKILL_MEDICAL_DEFAULT
+
+/obj/item/reagent_container/hypospray/autoinjector/nutriment
+	name = "nutriment autoinjector"
+	chemname = "nutriment"
+	desc = "An auto-injector loaded with 3 doses of nutriments, potent mixture of liquid food."
+	amount_per_transfer_from_this = 8
+	volume = 8 * INJECTOR_USES
+	display_maptext = TRUE
+	maptext_label = "Nu"
+	skilllock = SKILL_MEDICAL_DEFAULT

@@ -424,3 +424,14 @@
 	custom_metabolism = AMOUNT_PER_TIME(1, 200 SECONDS)
 	data = 0
 	properties = list(PROPERTY_CURING = 2)
+
+/datum/reagent/medical/quikclot
+	name = "Quikclot"
+	id = "quikclot"
+	description = "wordswordswords
+	reagent_state = LIQUID
+	color = "#b40000"
+	overdose = LOWH_REAGENTS_OVERDOSE
+	overdose_critical = LOWH_REAGENTS_OVERDOSE_CRITICAL
+	chemclass = CHEM_CLASS_UNCOMMON
+	properties = list(PROPERTY_HEMOSTATIC = 1)
