@@ -578,8 +578,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/accessory/paint/heart
 
 /datum/gear/paint/uaflag
-	display_name = "M3 Pattern Flag Paint"
+	display_name = "M3 Pattern UA Flag Paint"
 	path = /obj/item/clothing/accessory/paint/uaflag
+
+/datum/gear/paint/usflag
+	display_name = "M3 Pattern US Flag Paint"
+	path = /obj/item/clothing/accessory/paint/usflag
 
 /datum/gear/paint/facepaint_green
 	display_name = "Facepaint, green"
