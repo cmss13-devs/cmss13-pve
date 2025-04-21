@@ -2,6 +2,7 @@
 
 #define PFC_VARIANT "Private First Class"
 #define PVT_VARIANT "Private"
+#define LCPL_VARIANT "Lance Corporal"
 
 /datum/job/marine/standard
 	title = JOB_SQUAD_MARINE
@@ -10,7 +11,8 @@
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/pfc
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/lesser_rank
-	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC")
+	gear_preset_tertiary = /datum/equipment_preset/uscm/pfc/lance_corporal
+	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL")
 
 /datum/job/marine/standard/on_config_load()
 	entry_message_body = "You are a rank-and-file <a href='[CONFIG_GET(string/wikiarticleurl)]/[URL_WIKI_MARINE_QUICKSTART]'>Soldier of your standing army</a>, and that is your strength. What you lack alone, you gain standing shoulder to shoulder with the men and women of the platoon. Ooh-rah!<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
@@ -20,9 +22,11 @@
 	spawn_positions = max((floor(count * STANDARD_MARINE_TO_TOTAL_SPAWN_RATIO)), 8)
 
 /datum/job/marine/standard/handle_job_options(option)
-	if(option != PVT_VARIANT)
+	if(option == PFC_VARIANT)
 		gear_preset = initial(gear_preset)
-	else
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == PVT_VARIANT)
 		gear_preset = gear_preset_secondary
 
 /datum/job/marine/standard/whiskey

@@ -694,6 +694,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/toy/camera
 	display_name = "Camera"
 	path = /obj/item/device/camera
+	cost = 1
 
 /datum/gear/toy/mags
 	cost = 1
