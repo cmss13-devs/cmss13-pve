@@ -444,7 +444,7 @@
 
 /obj/item/reagent_container/hypospray/autoinjector/quikclot
 	name = "quikclot autoinjector"
-	chemname = "quickclot"
+	chemname = "quikclot"
 	desc = "An auto-injector loaded with 3 uses of Quikclot, an uncommon hemostatic."
 	amount_per_transfer_from_this = REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD
 	volume = (REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD) * INJECTOR_USES
