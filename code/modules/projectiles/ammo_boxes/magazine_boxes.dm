@@ -719,6 +719,10 @@
 	. = ..()
 	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
 
+/obj/item/ammo_box/magazine/mk1/large/recon
+	name = "magazine box (M41A MK1 Recon x 32)"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/recon
+
 /obj/item/ammo_box/magazine/mk1/large/empty
 	empty = TRUE
 
