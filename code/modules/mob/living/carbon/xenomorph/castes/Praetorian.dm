@@ -58,13 +58,18 @@
 		/datum/action/xeno_action/onclick/xeno_resting,
 		/datum/action/xeno_action/onclick/regurgitate,
 		/datum/action/xeno_action/watch_xeno,
-		/datum/action/xeno_action/activable/tail_stab,
+		/datum/action/xeno_action/activable/pounce/base_prae_dash,
+		/datum/action/xeno_action/activable/fling/praetorian,
+		/datum/action/xeno_action/activable/lunge/praetorian,
+		/datum/action/xeno_action/activable/headbite/praetorian,
+		/datum/action/xeno_action/activable/prae_acid_ball, //These are only gonna be used by player-controlled ones, but better to leave them in than nix them
+		/datum/action/xeno_action/activable/spray_acid/base_prae_spray_acid,
 		/datum/action/xeno_action/activable/corrosive_acid,
 		/datum/action/xeno_action/activable/xeno_spit,
-		/datum/action/xeno_action/activable/pounce/base_prae_dash,
-		/datum/action/xeno_action/activable/prae_acid_ball,
-		/datum/action/xeno_action/activable/spray_acid/base_prae_spray_acid,
 		/datum/action/xeno_action/onclick/tacmap,
+	)
+	inherent_verbs = list(
+		/mob/living/carbon/xenomorph/proc/vent_crawl,
 	)
 
 	gib_chance = 20
@@ -111,21 +116,9 @@
 	var/aggression_min = AGGRESSION_MINIMUM ///Aggression cannot fall below this value.
 
 /mob/living/carbon/xenomorph/praetorian/Initialize()
-	base_actions = list(
-		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/onclick/regurgitate,
-		/datum/action/xeno_action/watch_xeno,
-		/datum/action/xeno_action/activable/fling/praetorian,
-		/datum/action/xeno_action/activable/lunge/praetorian,
-		/datum/action/xeno_action/activable/headbite/praetorian,
-		/datum/action/xeno_action/onclick/tacmap,
-	)
-	inherent_verbs = list(
-		/mob/living/carbon/xenomorph/proc/vent_crawl,
-	)
-
 	. = ..()
 
+	AddComponent(/datum/component/footstep, 4, 25, 11, 2, "alien_footstep_medium") //Big bug, makes sense it can be heard moving around
 	if(!length(GLOB.ai_hives)) ///We check for this first. If there is a hive, we want to make sure the aliens drag people there.
 		aggression_cur = AGGRESSION_NO_HIVE ///If we do not have a hive, bump up aggression to go lethal instead.
 		aggression_min = AGGRESSION_NO_HIVE
