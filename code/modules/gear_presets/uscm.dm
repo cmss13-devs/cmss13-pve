@@ -113,6 +113,10 @@
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/pfc/lance_corporal
+	name = parent_type::name + " (Lance Corporal)"
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+
 /datum/equipment_preset/uscm/pfc/upp
 	name = "UPP Squad Rifleman"
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
