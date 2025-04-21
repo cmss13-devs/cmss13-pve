@@ -1,0 +1,5 @@
+author: "nauticall"
+delete-after: True
+changes:
+  - maptweak: "Revised USS Rover, for FORECON operations."
+  - imageadd: "Added segmented vertical tactical map table variant."
