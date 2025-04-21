@@ -6,7 +6,7 @@
 	desc = "A lightweight ghillie camouflage suit, used by USCM scout-snipers on recon missions. Very lightweight, but doesn't protect much."
 	icon_state = "ghillie_armor"
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	slowdown = SLOWDOWN_ARMOR_LIGHT
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
 	flags_marine_armor = ARMOR_LAMP_OVERLAY
 	specialty = "M45 pattern ghillie"
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PONCHO)
