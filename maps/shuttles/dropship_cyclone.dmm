@@ -1,4 +1,20 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/attach_point/crew_weapon/cyclone,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/cyclone)
+"ab" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/cyclone)
+"ac" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/cyclone)
 "ag" = (
 /turf/closed/shuttle/cyclone/transparent{
 	icon_state = "86b"
@@ -158,7 +174,7 @@
 /area/shuttle/cyclone)
 "lV" = (
 /turf/closed/shuttle/cyclone{
-	icon_state = "18"
+	icon_state = "103"
 	},
 /area/shuttle/cyclone)
 "mI" = (
@@ -183,7 +199,9 @@
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/cyclone)
 "ob" = (
-/obj/structure/stairs/perspective,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/cyclone)
 "od" = (
@@ -229,6 +247,10 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "py" = (
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 20;
+	layer = 2.9
+	},
 /turf/open/shuttle/dropship/light_grey_top_left,
 /area/shuttle/cyclone)
 "pz" = (
@@ -292,6 +314,10 @@
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/cyclone)
 "tu" = (
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 20;
+	layer = 2.9
+	},
 /turf/open/shuttle/dropship/light_grey_top_right,
 /area/shuttle/cyclone)
 "tU" = (
@@ -497,7 +523,9 @@
 /turf/template_noop,
 /area/shuttle/cyclone)
 "NS" = (
-/obj/structure/stairs/perspective,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
 /obj/structure/platform{
 	dir = 4
 	},
@@ -546,7 +574,9 @@
 	},
 /area/shuttle/cyclone)
 "VV" = (
-/obj/structure/stairs/perspective,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
 /obj/structure/platform{
 	dir = 8
 	},
@@ -559,7 +589,7 @@
 /area/shuttle/cyclone)
 "Ws" = (
 /turf/closed/shuttle/cyclone{
-	icon_state = "19"
+	icon_state = "104"
 	},
 /area/shuttle/cyclone)
 "Wv" = (
@@ -665,7 +695,7 @@ eQ
 eQ
 BI
 VV
-eQ
+ab
 gx
 QS
 Oi
@@ -684,7 +714,7 @@ ta
 ba
 ob
 el
-el
+aa
 el
 Ea
 wk
@@ -701,7 +731,7 @@ eQ
 eQ
 fF
 NS
-eQ
+ac
 eQ
 XH
 Ea
