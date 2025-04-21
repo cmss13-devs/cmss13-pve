@@ -1039,7 +1039,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure/yellow(new_human), WEAR_HEAD)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/yellow(new_human), WEAR_JACKET)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/svd(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l42a/abr40(new_human), WEAR_J_STORE)
 
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/svd(new_human), WEAR_WAIST)

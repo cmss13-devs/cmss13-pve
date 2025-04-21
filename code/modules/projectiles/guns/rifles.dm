@@ -1538,6 +1538,7 @@
 // Identical to the L42 in stats, *except* for extra recoil and scatter that are nulled by keeping the stock on.
 /obj/item/weapon/gun/rifle/l42a/abr40/set_gun_config_values()
 	..()
+	set_fire_delay(FIRE_DELAY_TIER_VULTURE)
 	accuracy_mult = (BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5) - HIT_ACCURACY_MULT_TIER_10
 	recoil = RECOIL_AMOUNT_TIER_4
 	scatter = (SCATTER_AMOUNT_TIER_8) + SCATTER_AMOUNT_TIER_5

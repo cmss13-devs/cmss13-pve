@@ -428,7 +428,7 @@
 /datum/reagent/medical/quikclot
 	name = "Quikclot"
 	id = "quikclot"
-	description = "wordswordswords
+	description = "wordswordswords"
 	reagent_state = LIQUID
 	color = "#b40000"
 	overdose = LOWH_REAGENTS_OVERDOSE
