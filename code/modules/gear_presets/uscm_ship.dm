@@ -445,7 +445,7 @@
 
 /datum/equipment_preset/uscm_ship/qm/lesser_rank
 	name = "USCM Logistics Chief"
-	paygrades = list(PAY_SHORT_MW2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MCW1 = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_CARGO_CHIEF
 	rank = JOB_CARGO_CHIEF
 	role_comm_title = "LC"
@@ -918,7 +918,7 @@
 	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_PREP)
 	assignment = JOB_DROPSHIP_PILOT
 	rank = JOB_DROPSHIP_PILOT
-	paygrades = list(PAY_SHORT_MW2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MCW1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "PO"
 	skills = /datum/skills/pilot
 
