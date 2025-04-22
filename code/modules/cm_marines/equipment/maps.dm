@@ -150,6 +150,12 @@
 	html_link = ""
 	color = "white"
 
+/obj/item/map/furidamu
+	name = "\improper Outpost Furidamu map"
+	desc = "A satellite view of Outpost Furidamu"
+	html_link = ""
+	color = "#964B00"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -176,6 +182,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_LV295_BLACKSITE = new /obj/item/map/lv522_map(),
 		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
+		MAP_LV624_OUTPOST_FURIDAMU = new /obj/item/map/furidamu(),
 	)
 
 //used by marine equipment machines to spawn the correct map.

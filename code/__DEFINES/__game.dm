@@ -38,6 +38,7 @@
 #define MAP_LV522_CHANCES_CLAIM_FORECON "LV-522 Chance's Claim Forecon"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
+#define MAP_LV624_OUTPOST_FURIDAMU "LV624 Outpost Furidamu" //Jungle Swamp, CLF Colony, Ruined UA Bunker, CLF survivors
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_LV295_BLACKSITE "LV295 Blacksite"
