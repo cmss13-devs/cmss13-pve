@@ -545,6 +545,19 @@
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
 	specialty = "B18B experimental"
 
+/obj/item/clothing/suit/storage/marine/specialist/breacher
+	name = "\improper B16 breacher armor"
+	desc = "A variant of the B18 suit slated for mass production, the B16 is a hell of a mass of cera-plast plates backed by trauma meshes. It doesn't provide nearly as much protection as the coveted B18, however it still is quite a big step up from the regular-issue USCM armors available."
+	icon_state = "xarmor"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_LOW
+	specialty = "B16 breacher"
+
 /obj/item/clothing/suit/storage/marine/specialist/verb/inject()
 	set name = "Create Injector"
 	set category = "Object"

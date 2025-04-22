@@ -55,6 +55,18 @@
 	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
 	unacidable = TRUE
 
+/obj/item/clothing/gloves/marine/specialist/breacher
+	name = "\improper B16 breacher gauntlets"
+	desc = "A pair of heavily armored gloves."
+	icon_state = "black"
+	item_state = "bgloves"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH //save the hands from fracs
+
 /obj/item/clothing/gloves/marine/M3G
 	name = "\improper M3-G4 Grenadier gloves"
 	desc = "A pair of plated, but nimble, gloves."

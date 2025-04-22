@@ -180,6 +180,19 @@
 	new /obj/item/clothing/head/helmet/marine/specialist(src)
 	new /obj/item/clothing/suit/storage/marine/specialist/smartgunner(src)
 
+/obj/item/storage/box/spec/B16/breacher
+	name = "\improper B16 breacher case"
+	desc = "A large case containing the B16 breacher armor kit, based on a heavily modified B18 defensive armor rig. A small castle-variation logo of the USCM is painted on one of the sides of the case."
+	kit_overlay = "b18"
+
+/obj/item/storage/box/spec/B16/fill_preset_inventory()
+	new /obj/item/clothing/gloves/marine/specialist/breacher(src)
+	new /obj/item/clothing/head/helmet/marine/specialist/breacher(src)
+	new /obj/item/clothing/suit/storage/marine/specialist/breacher(src)
+	new /obj/item/weapon/gun/shotgun/combat/marsoc(src)
+	new /obj/item/ammo_magazine/shotgun/buckshot(src)
+	new /obj/item/prop/helmetgarb/riot_shield(src)
+
 //-----------------SPEC KIT BOX------------------
 //For events/WO, allows the user to choose a specalist kit out of available ones in spec_kit_boxes_left list in gloabl_lists.dm
 
