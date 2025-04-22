@@ -727,7 +727,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/toy/film
 	display_name = "Camera film"
 	path = /obj/item/device/camera_film
-	cost = 1
+	cost = 0
 
 /datum/gear/toy/card
 	cost = 1
@@ -771,14 +771,17 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/d6
 	display_name = "Die, 6 sides"
+	cost = 1
 	path = /obj/item/toy/dice
 
 /datum/gear/toy/d20
 	display_name = "Die, 20 sides"
+	cost = 1
 	path = /obj/item/toy/dice/d20
 
 /datum/gear/toy/crayon
 	display_name = "Crayon"
+	cost = 1
 	path = /obj/item/toy/crayon/rainbow
 
 /datum/gear/toy/pride
@@ -1450,6 +1453,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
 	path = /obj/item/prop/helmetgarb/family_photo
+	cost = 1
 
 /datum/gear/misc/compass
 	display_name = "Compass"
@@ -1459,6 +1463,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/bug_spray
 	display_name = "Bug spray"
 	path = /obj/item/prop/helmetgarb/bug_spray
+	cost = 1
 
 /datum/gear/misc/straight_razor
 	display_name = "Cut-throat razor"

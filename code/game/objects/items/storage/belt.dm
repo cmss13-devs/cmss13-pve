@@ -589,10 +589,12 @@
 		/obj/item/explosive/grenade,
 		/obj/item/explosive/mine,
 		/obj/item/reagent_container/food/snacks,
+		/obj/item/ammo_magazine/plasma,
 	)
 	bypass_w_limit = list(
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/plasma,
 	)
 	has_gamemode_skin = FALSE
 
