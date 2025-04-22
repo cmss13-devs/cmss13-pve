@@ -156,6 +156,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_heavy/research)
+"aeb" = (
+/obj/structure/largecrate/random/secure,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/sekhmet/outside/temple_outer)
 "aeK" = (
 /obj/structure/cargo_container/canc/left{
 	layer = 2.98
@@ -539,12 +543,6 @@
 "aoO" = (
 /turf/closed/wall/upp_wall/grey,
 /area/sekhmet/int_glass/complex_generic)
-"aoP" = (
-/obj/structure/prop/ice_colony/surveying_device{
-	dir = 1
-	},
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
 "aoZ" = (
 /obj/structure/surface/table/woodentable{
 	color = "#8B7B5B"
@@ -552,10 +550,6 @@
 /obj/structure/prop/server_equipment/laptop/on,
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_heavy/low_level_gen)
-"apl" = (
-/obj/structure/largecrate/random/barrel/true_random,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/sekhmet/outside/temple_outer)
 "apm" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/gm/river/ocean/deep_ocean,
@@ -1101,13 +1095,6 @@
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/gm/coast/north,
 /area/sekhmet/outside/airfield)
-"aCK" = (
-/obj/structure/platform/mineral/sandstone/runed{
-	dir = 1
-	},
-/obj/structure/largecrate/random/secure,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/outside/temple_outer)
 "aCZ" = (
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/shuttles/drop3)
@@ -1251,9 +1238,10 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/southeast_road)
 "aFt" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/prop/rock/black_ground,
-/turf/open/floor/sandstone/runed,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/floor/kutjevo/plate,
 /area/sekhmet/caves/temple)
 "aGr" = (
 /obj/structure/flora/jungle/vines/light_1,
@@ -1390,6 +1378,17 @@
 /obj/item/reagent_container/food/drinks/cans/souto/peach,
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_heavy/low_level_gen)
+"aKB" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/fishing_pole,
+/obj/item/fishing_pole{
+	pixel_x = 8;
+	pixel_y = -2
+	},
+/turf/open/floor/plating/kutjevo,
+/area/sekhmet/int_reg/catwalk)
 "aKO" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp_leftengine"
@@ -1986,16 +1985,9 @@
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/research)
 "bio" = (
-/obj/item/weapon/unathiknife{
-	desc = "A curved blade made of a strange material. It looks both old and very sharp.";
-	force = 30;
-	name = "\improper alien blade";
-	throwforce = 26;
-	pixel_x = -2;
-	pixel_y = -3
-	},
-/turf/open/gm/dirt/desert_dug,
-/area/sekhmet/outside/temple_outer)
+/obj/structure/closet/crate/freezer/cooler,
+/turf/open/floor/plating/kutjevo,
+/area/sekhmet/int_reg/catwalk)
 "bjk" = (
 /obj/structure/cargo_container/upp/mk6/mid,
 /turf/open/floor/kutjevo/grey,
@@ -2186,10 +2178,6 @@
 	},
 /turf/open/gm/river,
 /area/sekhmet/outside/temple_outer)
-"bpV" = (
-/obj/structure/largecrate/random/secure,
-/turf/open/floor/strata/floor3,
-/area/sekhmet/int_reg/air_filters)
 "bqD" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -2751,6 +2739,15 @@
 "bLQ" = (
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_glass/south_complex)
+"bLW" = (
+/obj/structure/ladder/rope{
+	height = 1;
+	id = "sekh_ruin1";
+	layer = 6.01
+	},
+/obj/structure/prop/invuln/darkness,
+/turf/open/gm/river,
+/area/sekhmet/outside/temple_outer)
 "bLZ" = (
 /obj/structure/mirror{
 	pixel_x = 0;
@@ -2832,11 +2829,10 @@
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_rsr)
 "bNS" = (
-/obj/structure/stairs/perspective/kutjevo,
-/obj/structure/platform/mineral/sandstone/runed{
-	dir = 4
+/obj/structure/prop/ice_colony/surveying_device/measuring_device{
+	dir = 8
 	},
-/turf/open/floor/sandstone/runed,
+/turf/open/gm/dirt2,
 /area/sekhmet/caves/temple)
 "bOd" = (
 /obj/structure/surface/table/almayer{
@@ -2853,12 +2849,22 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_glass/complex_generic)
+"bOf" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/turf/open/gm/dirt/desert_dug,
+/area/sekhmet/outside/temple_outer)
 "bOr" = (
 /obj/vehicle/train/cargo/engine{
 	dir = 8
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/low_level_gen)
+"bOI" = (
+/obj/effect/decal/remains/human,
+/turf/open/gm/dirt/desert_dug,
+/area/sekhmet/outside/temple_outer)
 "bOQ" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -2950,6 +2956,12 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/military_hangar)
+"bQF" = (
+/obj/structure/prop/ice_colony/surveying_device{
+	dir = 8
+	},
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "bQJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump,
@@ -3075,6 +3087,12 @@
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/central_road)
+"bTW" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/sekhmet/outside/temple_outer)
 "bUq" = (
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_reg/ship2)
@@ -3115,10 +3133,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/research/containment/floor2/north,
 /area/sekhmet/int_heavy/low_level_gen)
-"bVm" = (
-/obj/structure/tunnel,
-/turf/open/gm/dirt2,
-/area/sekhmet/outside/temple_outer)
 "bVq" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4;
@@ -3915,10 +3929,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_glass/hosptial)
-"cux" = (
-/obj/structure/largecrate/random/case/double,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/sekhmet/outside/temple_outer)
 "cuY" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.25
@@ -4145,6 +4155,12 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_reg/air_filters)
+"cBH" = (
+/obj/structure/prop/ice_colony/surveying_device{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/temple_outer)
 "cCd" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
@@ -4308,14 +4324,6 @@
 /turf/closed/wall/rock{
 	color = "#a39e99"
 	},
-/area/sekhmet/outside/temple_outer)
-"cIr" = (
-/obj/structure/flora/jungle/vines/light_1,
-/turf/closed/wall/shiva/prefabricated/reinforced,
-/area/sekhmet/outside/central_road)
-"cIA" = (
-/obj/effect/decal/remains/human,
-/turf/open/gm/dirt/desert_dug,
 /area/sekhmet/outside/temple_outer)
 "cIL" = (
 /obj/structure/window/reinforced/tinted{
@@ -4856,12 +4864,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/southwest_complex)
-"cZY" = (
-/obj/structure/prop/ice_colony/surveying_device{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/outside/temple_outer)
 "dal" = (
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/space)
@@ -4904,20 +4906,6 @@
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/east_jungle)
-"dbR" = (
-/obj/item/weapon/unathiknife{
-	desc = "A curved blade made of a strange material. It looks both old and very sharp.";
-	force = 30;
-	name = "\improper alien blade";
-	throwforce = 26;
-	pixel_x = -2;
-	pixel_y = -3
-	},
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 8
-	},
-/turf/open/gm/dirt/desert_dug,
-/area/sekhmet/outside/temple_outer)
 "dcb" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -5429,10 +5417,6 @@
 /obj/structure/stairs,
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_reg/military_hangar)
-"dsm" = (
-/obj/structure/largecrate/random/secure,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/outside/temple_outer)
 "dsE" = (
 /obj/item/prop/rock,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -5707,6 +5691,10 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_heavy/low_level_gen)
+"dBp" = (
+/obj/structure/prop/rock/black_ground,
+/turf/open/gm/dirt2,
+/area/sekhmet/caves/temple)
 "dBq" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
@@ -5793,8 +5781,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/sekhmet/int_reg/ship2)
 "dCY" = (
-/obj/structure/tunnel,
-/turf/open/gm/dirt2,
+/turf/open/auto_turf/sand/layer0,
 /area/sekhmet/caves/temple)
 "dDe" = (
 /obj/structure/fence,
@@ -6047,6 +6034,10 @@
 /obj/structure/closet/crate/trashcart,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/sekhmet/outside/southroad)
+"dLs" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/sekhmet/outside/temple_outer)
 "dLt" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -6222,10 +6213,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/research)
-"dSr" = (
-/obj/structure/prop/ice_colony/surveying_device/measuring_device,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/outside/temple_outer)
 "dTp" = (
 /obj/structure/platform/shiva/catwalk,
 /obj/structure/flora/jungle/vines/light_1,
@@ -7731,7 +7718,6 @@
 	pixel_x = -1;
 	pixel_y = 8
 	},
-/obj/item/storage/box/m94,
 /obj/item/device/flashlight/tnr,
 /turf/open/floor/strata/multi_tiles/west,
 /area/sekhmet/outside/temple_outer)
@@ -8053,6 +8039,12 @@
 	},
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_rsr)
+"fad" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/turf/open/floor/sandstone/runed,
+/area/sekhmet/outside/temple_outer)
 "fbc" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -8119,12 +8111,6 @@
 /obj/structure/machinery/door/airlock/multi_tile/upp_utility,
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_gen)
-"fdP" = (
-/obj/structure/prop/ice_colony/surveying_device/measuring_device{
-	dir = 4
-	},
-/turf/open/floor/sandstone/runed,
-/area/sekhmet/outside/temple_outer)
 "fej" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -8372,10 +8358,6 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_heavy/low_level_gen)
-"fkQ" = (
-/obj/structure/largecrate/random/secure,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/sekhmet/outside/temple_outer)
 "fkR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -8677,10 +8659,9 @@
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/research)
 "ftM" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/prop/rock,
-/turf/open/floor/sandstone/runed,
-/area/sekhmet/caves/temple)
+/obj/structure/prop/ice_colony/ground_wire,
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "ftV" = (
 /obj/structure/prop/invuln/darkness,
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
@@ -8978,12 +8959,6 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/southwest_complex)
-"fEJ" = (
-/obj/structure/prop/ice_colony/surveying_device{
-	dir = 8
-	},
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
 "fEO" = (
 /obj/effect/decal/siding{
 	icon_state = "siding10"
@@ -9161,9 +9136,10 @@
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/warehouse)
 "fIR" = (
-/obj/structure/prop/ice_colony/surveying_device,
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
+/obj/effect/decal/cleanable/dirt,
+/obj/item/prop/rock,
+/turf/open/floor/sandstone/runed,
+/area/sekhmet/caves/temple)
 "fJi" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp20"
@@ -9509,9 +9485,16 @@
 "fSF" = (
 /turf/open/gm/dirt,
 /area/sekhmet/outside/southroad)
+"fTI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/sekhmet/int_reg/air_filters)
 "fUo" = (
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 1
+/obj/structure/prop/ice_colony/surveying_device{
+	dir = 4
 	},
 /turf/open/gm/dirt,
 /area/sekhmet/outside/temple_outer)
@@ -9923,7 +9906,8 @@
 /turf/open/floor/interior/tatami,
 /area/sekhmet/int_heavy/low_level_gen)
 "gdT" = (
-/turf/open/auto_turf/sand/layer0,
+/obj/structure/tunnel,
+/turf/open/auto_turf/sand_white/layer0,
 /area/sekhmet/caves/temple)
 "gdZ" = (
 /obj/structure/closet/secure_closet/freezer/meat,
@@ -10753,6 +10737,12 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_reg/military_hangar)
+"gxQ" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "gyG" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -11029,6 +11019,10 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_rsr)
+"gIB" = (
+/obj/structure/tunnel,
+/turf/open/gm/dirt2,
+/area/sekhmet/caves/temple)
 "gIN" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp16"
@@ -11066,6 +11060,15 @@
 	},
 /turf/open/gm/coast/beachcorner/south_west,
 /area/sekhmet/outside/swamp)
+"gKk" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "gKt" = (
 /obj/item/prop/rock,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -11128,8 +11131,12 @@
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_reg/southwest_complex)
 "gOr" = (
-/obj/structure/largecrate/random/case/double,
-/turf/open/auto_turf/strata_grass/layer1,
+/obj/effect/decal/remains/xeno,
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/turf/open/gm/dirt/desert_dug,
 /area/sekhmet/outside/temple_outer)
 "gOF" = (
 /obj/structure/surface/table/almayer{
@@ -12055,6 +12062,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/green1,
 /area/sekhmet/int_heavy/low_level_rsr)
+"hnV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/strata/floor3,
+/area/sekhmet/int_reg/air_filters)
 "hnZ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
@@ -12144,6 +12158,23 @@
 /obj/structure/window/framed/upp/green,
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_glass/south_complex)
+"hrR" = (
+/obj/structure/closet{
+	pixel_x = -8;
+	pixel_y = 15;
+	can_be_stacked = 1
+	},
+/obj/structure/closet{
+	pixel_x = 8;
+	pixel_y = 15;
+	can_be_stacked = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/item/storage/backpack/lightpack,
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_reg/air_filters)
 "hsh" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -12541,20 +12572,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/air_filters)
-"hCk" = (
-/obj/item/weapon/unathiknife{
-	desc = "A curved blade made of a strange material. It looks both old and very sharp.";
-	force = 30;
-	name = "\improper alien blade";
-	throwforce = 26;
-	pixel_x = -2;
-	pixel_y = -3
-	},
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 1
-	},
-/turf/open/gm/dirt/desert_dug,
-/area/sekhmet/outside/temple_outer)
 "hCr" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 1
@@ -12656,7 +12673,10 @@
 	},
 /area/sekhmet/outside/swamp)
 "hGC" = (
-/obj/structure/prop/ice_colony/ground_wire,
+/obj/effect/decal/remains/xeno,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
 /turf/open/gm/dirt/desert_dug,
 /area/sekhmet/outside/temple_outer)
 "hGF" = (
@@ -12786,6 +12806,16 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/low_level_rsr)
+"hKD" = (
+/obj/effect/decal/remains/xeno,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/turf/open/gm/dirt/desert_dug,
+/area/sekhmet/outside/temple_outer)
 "hKK" = (
 /obj/structure/machinery/light/double{
 	dir = 1
@@ -13551,6 +13581,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_heavy/low_level_rsr)
+"ikY" = (
+/obj/structure/prop/rock/black_ground,
+/turf/open/auto_turf/sand/layer1,
+/area/sekhmet/caves/temple)
 "ilc" = (
 /obj/item/prop/rock,
 /turf/open/gm/dirt,
@@ -14303,15 +14337,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/low_level_rsr)
-"iHj" = (
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 4
-	},
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 1
-	},
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
 "iHY" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/gm/river,
@@ -14510,6 +14535,10 @@
 /obj/structure/tunnel,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/central_road)
+"iQu" = (
+/obj/structure/prop/ice_colony/surveying_device,
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "iQO" = (
 /obj/structure/plasticflaps,
 /obj/structure/machinery/conveyor{
@@ -14572,6 +14601,10 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/outside/temple_outer)
+"iSR" = (
+/obj/structure/prop/rock/black_ground,
+/turf/open/auto_turf/sand/layer0,
+/area/sekhmet/caves/temple)
 "iTv" = (
 /obj/structure/closet/secure_closet/personal{
 	pixel_x = -7;
@@ -14847,6 +14880,13 @@
 	},
 /turf/open/floor/interior/tatami,
 /area/sekhmet/int_heavy/low_level_gen)
+"jaf" = (
+/obj/effect/decal/remains/xeno,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/turf/open/gm/dirt/desert_dug,
+/area/sekhmet/outside/temple_outer)
 "jal" = (
 /obj/structure/largecrate/random/case/small,
 /obj/effect/decal/cleanable/dirt,
@@ -15098,9 +15138,6 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
 /turf/open/floor/strata/red1,
 /area/sekhmet/int_heavy/low_level_gen)
 "jgD" = (
@@ -15140,17 +15177,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_glass/complex_generic)
-"jiR" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/item/fishing_pole,
-/obj/item/fishing_pole{
-	pixel_x = 8;
-	pixel_y = -2
-	},
-/turf/open/floor/plating/kutjevo,
-/area/sekhmet/int_reg/catwalk)
 "jja" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	color = "#999900";
@@ -15173,10 +15199,6 @@
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
 /area/sekhmet/outside/central_road)
-"jjD" = (
-/obj/structure/closet/crate/freezer/cooler,
-/turf/open/floor/plating/kutjevo,
-/area/sekhmet/int_reg/catwalk)
 "jjE" = (
 /obj/structure/stairs/perspective/kutjevo,
 /turf/open/floor/plating/kutjevo,
@@ -15737,8 +15759,11 @@
 /turf/open/floor/carpet,
 /area/sekhmet/int_heavy/low_level_rsr)
 "jAI" = (
-/turf/open/gm/river,
-/area/sekhmet/caves/temple)
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/strata_ice/jungle{
+	color = "#ffcc33"
+	},
+/area/sekhmet/outside/temple_outer)
 "jAP" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/coast/east,
@@ -16056,6 +16081,12 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_reg/engineering)
+"jKT" = (
+/obj/structure/prop/ice_colony/surveying_device/measuring_device{
+	dir = 8
+	},
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "jLq" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -16179,16 +16210,6 @@
 /area/sekhmet/int_reg/complex_operation)
 "jNZ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
 /obj/structure/surface/rack{
 	color = "#6b675e";
 	layer = 2.79
@@ -16345,6 +16366,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_reg/complex_operation)
+"jTj" = (
+/obj/structure/prop/ice_colony/surveying_device{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/sekhmet/caves/temple)
 "jTo" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -16799,10 +16826,9 @@
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_reg/southwest_complex)
 "kfK" = (
-/obj/structure/flora/jungle/vines/light_1,
-/turf/closed/wall/strata_ice/jungle{
-	color = "#ffcc33"
-	},
+/obj/effect/decal/remains/xeno,
+/obj/structure/prop/ice_colony/ground_wire,
+/turf/open/gm/dirt/desert_dug,
 /area/sekhmet/outside/temple_outer)
 "kgb" = (
 /obj/effect/decal/siding{
@@ -17077,13 +17103,6 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/research)
-"kqI" = (
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 4
-	},
-/obj/structure/prop/ice_colony/ground_wire,
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
 "kqK" = (
 /obj/structure/prop/almayer/whiteboard{
 	pixel_y = 19;
@@ -18484,8 +18503,10 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/sekhmet/int_reg/engineering)
 "loB" = (
-/obj/structure/flora/jungle/vines/light_1,
-/turf/closed/wall/mineral/sandstone/runed,
+/obj/structure/prop/ice_colony/surveying_device/measuring_device{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
 /area/sekhmet/outside/temple_outer)
 "loX" = (
 /obj/effect/decal/warning_stripes{
@@ -19010,6 +19031,13 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
+"lCC" = (
+/obj/structure/largecrate/random,
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_reg/air_filters)
 "lCJ" = (
 /obj/structure/machinery/door/airlock/upp_grey{
 	dir = 2;
@@ -19179,12 +19207,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/sekhmet/int_heavy/research)
-"lHI" = (
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 1
-	},
-/turf/open/gm/dirt/desert_dug,
-/area/sekhmet/outside/temple_outer)
 "lHJ" = (
 /obj/structure/cargo_container/kelland/right{
 	color = "#cc66ff";
@@ -19252,13 +19274,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/warehouse)
-"lJr" = (
-/obj/structure/platform_decoration/mineral/sandstone/runed{
-	dir = 8
-	},
-/obj/item/prop/rock,
-/turf/open/floor/sandstone/runed,
-/area/sekhmet/caves/temple)
 "lJs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -19691,9 +19706,14 @@
 /turf/open/gm/dirt2,
 /area/sekhmet/int_reg/catwalk)
 "lVx" = (
-/obj/structure/prop/ice_colony/ground_wire,
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
+/obj/structure/stairs/perspective/kutjevo{
+	dir = 1
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/sekhmet/caves/temple)
 "lVB" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 16;
@@ -20170,6 +20190,10 @@
 	},
 /turf/closed/wall/mineral/sandstone/runed,
 /area/sekhmet/caves/temple)
+"miq" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/sekhmet/outside/temple_outer)
 "miP" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -20206,13 +20230,6 @@
 	},
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/research)
-"mjq" = (
-/obj/item/device/flashlight/lamp/tripod/grey{
-	light_power = 0.3;
-	light_range = 4
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/outside/central_road)
 "mjt" = (
 /obj/structure/sign/safety/biohazard{
 	pixel_x = 14;
@@ -20267,10 +20284,6 @@
 "mkN" = (
 /turf/open/gm/coast/beachcorner/north_east,
 /area/sekhmet/outside/swamp)
-"mlw" = (
-/obj/structure/prop/rock/black_ground,
-/turf/open/auto_turf/sand/layer0,
-/area/sekhmet/caves/temple)
 "mma" = (
 /turf/open/gm/dirt2,
 /area/sekhmet/outside/central_road)
@@ -20626,6 +20639,12 @@
 /obj/structure/machinery/photocopier,
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_heavy/low_level_gen)
+"mAm" = (
+/obj/structure/prop/ice_colony/surveying_device/measuring_device{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/temple_outer)
 "mAu" = (
 /obj/structure/window/framed/shiva,
 /turf/open/floor/plating/kutjevo,
@@ -20990,11 +21009,6 @@
 	},
 /turf/open/gm/dirt,
 /area/sekhmet/outside/temple_outer)
-"mNe" = (
-/obj/effect/decal/remains/xeno,
-/obj/structure/prop/ice_colony/ground_wire,
-/turf/open/gm/dirt/desert_dug,
-/area/sekhmet/outside/temple_outer)
 "mNh" = (
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_glass/hosptial)
@@ -21079,9 +21093,16 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/southeast_road)
 "mOF" = (
-/obj/structure/prop/rock/black_ground,
-/turf/open/gm/dirt2,
-/area/sekhmet/caves/temple)
+/obj/structure/platform/strata{
+	layer = 2.99;
+	color = "#ffb366"
+	},
+/obj/structure/ladder/rope{
+	height = 2;
+	id = "sekh_ruin2"
+	},
+/turf/open/void,
+/area/sekhmet/outside/temple_outer)
 "mPs" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -21386,12 +21407,6 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/research)
-"mZG" = (
-/obj/structure/prop/ice_colony/surveying_device/measuring_device{
-	dir = 8
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/outside/temple_outer)
 "mZK" = (
 /obj/structure/grille{
 	density = 0;
@@ -21508,12 +21523,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_reg/military_hangar)
-"neD" = (
-/obj/structure/platform/mineral/sandstone/runed{
-	dir = 1
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/sekhmet/outside/temple_outer)
 "nfb" = (
 /obj/structure/safe/floor{
 	name = "safe";
@@ -21661,19 +21670,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/sekhmet/int_glass/hosptial)
-"njg" = (
-/obj/structure/prop/ice_colony/surveying_device/measuring_device{
-	dir = 8
-	},
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
-"njo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/strata/floor3,
-/area/sekhmet/int_reg/air_filters)
 "njC" = (
 /obj/structure/flora/bush/ausbushes/palebush,
 /obj/structure/flora/jungle/vines/light_1,
@@ -22035,6 +22031,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_heavy/low_level_rsr)
+"nsm" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/sekhmet/outside/temple_outer)
 "nsp" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/closed/wall/wood,
@@ -22480,10 +22480,6 @@
 	color = "#a39e99"
 	},
 /area/sekhmet/int_heavy/low_level_gen)
-"nFD" = (
-/obj/item/prop/rock,
-/turf/open/gm/dirt2,
-/area/sekhmet/caves/temple)
 "nGt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -23058,11 +23054,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/low_level_rsr)
-"nWw" = (
-/obj/structure/tunnel,
-/mob/living/simple_animal/hostile/retaliate/giant_lizard,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/outside/temple_outer)
 "nWX" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -23474,12 +23465,8 @@
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_heavy/entry_zone)
 "ohO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/sekhmet/int_reg/air_filters)
+/turf/open/gm/river,
+/area/sekhmet/caves/temple)
 "ohU" = (
 /obj/structure/platform{
 	dir = 1
@@ -24224,11 +24211,6 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_rsr)
-"oDm" = (
-/obj/item/prop/rock,
-/obj/structure/flora/jungle/vines/light_1,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/outside/temple_outer)
 "oDs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -24266,13 +24248,6 @@
 /obj/structure/machinery/chem_master/industry_mixer,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_glass/south_complex)
-"oEb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_reg/air_filters)
 "oFv" = (
 /obj/structure/prop/invuln/darkness,
 /turf/open/gm/coast/south,
@@ -24384,6 +24359,12 @@
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/int_reg/catwalk)
+"oJC" = (
+/obj/structure/prop/ice_colony/surveying_device/measuring_device{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/temple_outer)
 "oJM" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -24456,6 +24437,20 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
+"oLT" = (
+/obj/item/weapon/unathiknife{
+	desc = "A curved blade made of a strange material. It looks both old and very sharp.";
+	force = 30;
+	name = "\improper alien blade";
+	throwforce = 26;
+	pixel_x = -2;
+	pixel_y = -3
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/turf/open/gm/dirt/desert_dug,
+/area/sekhmet/outside/temple_outer)
 "oMv" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -25265,12 +25260,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_glass/complex_generic)
-"psj" = (
-/obj/structure/prop/ice_colony/surveying_device{
-	dir = 4
-	},
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
 "psu" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -25327,10 +25316,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/military_hangar)
-"puH" = (
-/obj/item/prop/rock,
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
 "pvc" = (
 /obj/structure/machinery/power/apc/power/west,
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -25561,14 +25546,12 @@
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/catwalk)
 "pCS" = (
-/obj/structure/stairs/perspective/kutjevo{
-	dir = 1
+/obj/item/device/flashlight/lamp/tripod/grey{
+	light_power = 0.3;
+	light_range = 4
 	},
-/obj/structure/platform/mineral/sandstone/runed{
-	dir = 4
-	},
-/turf/open/floor/sandstone/runed,
-/area/sekhmet/caves/temple)
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/central_road)
 "pDA" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -25676,12 +25659,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/water_filters)
-"pGv" = (
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 1
-	},
-/turf/open/floor/sandstone/runed,
-/area/sekhmet/outside/temple_outer)
 "pGx" = (
 /obj/structure/platform_decoration/shiva/catwalk,
 /turf/open/floor/strata/floor2,
@@ -26187,6 +26164,13 @@
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/airfield)
+"pZq" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/item/prop/rock,
+/turf/open/floor/sandstone/runed,
+/area/sekhmet/caves/temple)
 "pZy" = (
 /obj/structure/machinery/light/double,
 /turf/open/floor/plating/plating_catwalk/strata,
@@ -26489,6 +26473,13 @@
 /obj/structure/prop/invuln/darkness,
 /turf/open/gm/river,
 /area/sekhmet/outside/temple_outer)
+"qkr" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 4
+	},
+/obj/structure/prop/brazier/frame,
+/turf/open/floor/kutjevo/plate,
+/area/sekhmet/caves/temple)
 "qkY" = (
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
 /obj/structure/flora/jungle/vines/light_1,
@@ -26880,13 +26871,6 @@
 /obj/structure/platform/shiva/catwalk,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/central_road)
-"qvL" = (
-/obj/structure/prop/ice_colony/ground_wire,
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 4
-	},
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
 "qvT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -27127,9 +27111,9 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_glass/offices)
 "qDT" = (
-/obj/item/prop/rock,
-/turf/open/auto_turf/sand_white/layer0,
-/area/sekhmet/caves/temple)
+/obj/structure/prop/ice_colony/surveying_device/measuring_device,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/temple_outer)
 "qEe" = (
 /turf/closed/wall/upp_wall,
 /area/sekhmet/outside/airfield)
@@ -27274,10 +27258,12 @@
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/research)
 "qLO" = (
-/obj/structure/platform/mineral/sandstone/runed,
-/obj/item/prop/rock,
-/turf/open/gm/dirt2,
-/area/sekhmet/caves/temple)
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/obj/structure/prop/server_equipment/laptop/on,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/sekhmet/outside/temple_outer)
 "qLS" = (
 /obj/structure/window_frame/wood,
 /obj/item/stack/sheet/wood{
@@ -27652,6 +27638,20 @@
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/sekhmet/int_reg/catwalk)
+"qVQ" = (
+/obj/item/weapon/unathiknife{
+	desc = "A curved blade made of a strange material. It looks both old and very sharp.";
+	force = 30;
+	name = "\improper alien blade";
+	throwforce = 26;
+	pixel_x = -2;
+	pixel_y = -3
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/turf/open/gm/dirt/desert_dug,
+/area/sekhmet/outside/temple_outer)
 "qVS" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -28112,9 +28112,8 @@
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_gen)
 "rmP" = (
-/obj/structure/largecrate/random/barrel/true_random,
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/sekhmet/outside/temple_outer)
+/turf/closed/wall/rock,
+/area/sekhmet/outside/east_jungle)
 "rnj" = (
 /obj/structure/machinery/light{
 	light_power = 0.5;
@@ -28717,6 +28716,24 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/sekhmet/int_glass/complex_generic)
+"rDP" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 8;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_reg/air_filters)
+"rDU" = (
+/obj/structure/platform/mineral/sandstone/runed,
+/obj/item/prop/rock,
+/turf/open/gm/dirt2,
+/area/sekhmet/caves/temple)
 "rDV" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -29159,10 +29176,9 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/warehouse)
 "rQZ" = (
-/obj/structure/prop/rock/black_ground,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/sandstone/runed,
-/area/sekhmet/caves/temple)
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/mineral/sandstone/runed,
+/area/sekhmet/outside/temple_outer)
 "rRj" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -29182,17 +29198,6 @@
 	},
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/research)
-"rRw" = (
-/obj/structure/platform/strata{
-	layer = 2.99;
-	color = "#ffb366"
-	},
-/obj/structure/ladder/rope{
-	height = 2;
-	id = "sekh_ruin2"
-	},
-/turf/open/void,
-/area/sekhmet/outside/temple_outer)
 "rRA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -29963,6 +29968,12 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_reg/complex_intel)
+"snt" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1
+	},
+/turf/open/gm/dirt/desert_dug,
+/area/sekhmet/outside/temple_outer)
 "snv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/camera{
@@ -30077,6 +30088,10 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
+"sqI" = (
+/obj/item/prop/rock,
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "sqS" = (
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/air_filters)
@@ -30145,8 +30160,7 @@
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_heavy/low_level_rsr)
 "ssZ" = (
-/obj/structure/tunnel,
-/turf/open/auto_turf/sand_white/layer0,
+/turf/open/auto_turf/sand/layer1,
 /area/sekhmet/caves/temple)
 "stj" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
@@ -30365,6 +30379,13 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/low_level_rsr)
+"sBz" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "sBG" = (
 /obj/structure/morgue{
 	dir = 1
@@ -30698,6 +30719,13 @@
 "sNc" = (
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/sekhmet/int_reg/ship1)
+"sNv" = (
+/obj/structure/stairs/perspective/kutjevo,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/sekhmet/caves/temple)
 "sOb" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
@@ -30749,13 +30777,6 @@
 /obj/item/map,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/military_hangar)
-"sPH" = (
-/obj/effect/decal/remains/xeno,
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 1
-	},
-/turf/open/gm/dirt/desert_dug,
-/area/sekhmet/outside/temple_outer)
 "sPW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -31023,6 +31044,13 @@
 /obj/structure/prop/server_equipment,
 /turf/open/floor/corsat/tcomms/southwest,
 /area/sekhmet/int_heavy/low_level_rsr)
+"sWj" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/obj/structure/prop/ice_colony/ground_wire,
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "sWz" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/microwave{
@@ -31144,6 +31172,10 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_heavy/low_level_rsr)
+"tae" = (
+/obj/structure/largecrate/random/secure,
+/turf/open/floor/strata/floor3,
+/area/sekhmet/int_reg/air_filters)
 "tbg" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4;
@@ -31271,11 +31303,11 @@
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/outside/east_jungle)
 "tgW" = (
-/obj/structure/surface/table/holotable{
-	color = "#424a50"
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 1
 	},
-/obj/structure/prop/server_equipment/laptop/on,
-/turf/open/auto_turf/strata_grass/layer0_mud,
+/obj/structure/largecrate/random/secure,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/temple_outer)
 "thC" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
@@ -31977,13 +32009,6 @@
 	},
 /turf/open/gm/coast/beachcorner/north_west,
 /area/space)
-"tFO" = (
-/obj/docking_port/stationary/emergency_response/port1{
-	name = "Short Range Vessel Field Clearing";
-	id = "almayer-ert2"
-	},
-/turf/open/gm/dirt2,
-/area/sekhmet/shuttles/drop2)
 "tFR" = (
 /obj/structure/phone_base/colony_net{
 	phone_category = "Sekhmet Net";
@@ -32198,10 +32223,9 @@
 /turf/open/floor/cmo,
 /area/sekhmet/int_heavy/low_level_gen)
 "tMa" = (
-/obj/structure/prop/ice_colony/surveying_device{
-	dir = 4
-	},
-/turf/open/gm/dirt2,
+/obj/structure/prop/rock/black_ground,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
 /area/sekhmet/caves/temple)
 "tMg" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -32572,12 +32596,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/sekhmet/int_heavy/entry_zone)
-"tYp" = (
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 4
-	},
-/turf/open/gm/dirt/desert_dug,
-/area/sekhmet/outside/temple_outer)
 "tYz" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/prison/bright_clean2,
@@ -32635,19 +32653,6 @@
 /obj/item/storage/briefcase/stowaway,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_heavy/research)
-"ucc" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/prop/almayer/computer/PC{
-	dir = 8;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_reg/air_filters)
 "ucq" = (
 /obj/structure/bed/chair/wood/normal{
 	dir = 8
@@ -33249,14 +33254,6 @@
 /obj/structure/machinery/colony_floodlight,
 /turf/open/gm/dirt,
 /area/sekhmet/outside/swamp)
-"uvn" = (
-/obj/structure/largecrate/random,
-/obj/structure/machinery/light{
-	light_power = 0.5;
-	dir = 1
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_reg/air_filters)
 "uvA" = (
 /obj/structure/bed/chair/wood/normal{
 	dir = 4
@@ -33283,6 +33280,14 @@
 	},
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_rsr)
+"uws" = (
+/obj/structure/largecrate/random,
+/obj/structure/machinery/light{
+	light_power = 0.5;
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_reg/air_filters)
 "uwB" = (
 /obj/structure/platform/strata{
 	dir = 4;
@@ -33495,11 +33500,9 @@
 /turf/open/floor/carpet,
 /area/sekhmet/int_glass/complex_generic)
 "uCG" = (
-/obj/structure/prop/ice_colony/surveying_device/measuring_device{
-	dir = 8
-	},
-/turf/open/gm/dirt2,
-/area/sekhmet/caves/temple)
+/obj/structure/largecrate/random/secure,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/temple_outer)
 "uCR" = (
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/outside/southeast_road)
@@ -33800,6 +33803,12 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_glass/offices)
+"uJs" = (
+/obj/structure/prop/ice_colony/surveying_device{
+	dir = 1
+	},
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "uJw" = (
 /obj/effect/decal/siding{
 	icon_state = "siding5"
@@ -34067,15 +34076,6 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/research)
-"uQu" = (
-/obj/structure/prop/invuln/darkness,
-/obj/structure/ladder/rope{
-	height = 1;
-	id = "sekh_ruin2";
-	layer = 6.01
-	},
-/turf/open/gm/river,
-/area/sekhmet/outside/temple_outer)
 "uQK" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -34179,13 +34179,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/sekhmet/outside/central_road)
-"uTQ" = (
-/obj/structure/platform/mineral/sandstone/runed{
-	dir = 8
-	},
-/obj/structure/prop/ice_colony/surveying_device/measuring_device,
-/turf/open/gm/dirt,
-/area/sekhmet/outside/temple_outer)
 "uUp" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
@@ -34386,16 +34379,6 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
-"vcx" = (
-/obj/effect/decal/remains/xeno,
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 8
-	},
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 1
-	},
-/turf/open/gm/dirt/desert_dug,
-/area/sekhmet/outside/temple_outer)
 "vdt" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -34727,6 +34710,15 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_rsr)
+"voJ" = (
+/obj/structure/prop/invuln/darkness,
+/obj/structure/ladder/rope{
+	height = 1;
+	id = "sekh_ruin2";
+	layer = 6.01
+	},
+/turf/open/gm/river,
+/area/sekhmet/outside/temple_outer)
 "voM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -34922,17 +34914,6 @@
 "vuB" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_utility,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/sekhmet/int_reg/air_filters)
-"vuD" = (
-/obj/structure/prop/rock/black_ground,
-/turf/open/auto_turf/sand/layer1,
-/area/sekhmet/caves/temple)
-"vvd" = (
-/obj/structure/largecrate/random,
-/obj/structure/machinery/light{
-	light_power = 0.5
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/air_filters)
 "vvv" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -35179,6 +35160,17 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/low_level_rsr)
+"vEb" = (
+/obj/item/weapon/unathiknife{
+	desc = "A curved blade made of a strange material. It looks both old and very sharp.";
+	force = 30;
+	name = "\improper alien blade";
+	throwforce = 26;
+	pixel_x = -2;
+	pixel_y = -3
+	},
+/turf/open/gm/dirt/desert_dug,
+/area/sekhmet/outside/temple_outer)
 "vEu" = (
 /obj/structure/prop/static_tank,
 /turf/open/floor/prison/sterile_white,
@@ -35538,23 +35530,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/water_filters)
-"vNV" = (
-/obj/structure/closet{
-	pixel_x = -8;
-	pixel_y = 15;
-	can_be_stacked = 1
-	},
-/obj/structure/closet{
-	pixel_x = 8;
-	pixel_y = 15;
-	can_be_stacked = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/item/storage/backpack/lightpack,
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/sekhmet/int_reg/air_filters)
 "vOo" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
@@ -35700,11 +35675,9 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/military_hangar)
 "vWJ" = (
-/obj/effect/decal/remains/xeno,
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 4
-	},
-/turf/open/gm/dirt/desert_dug,
+/obj/item/prop/rock,
+/obj/structure/flora/jungle/vines/light_1,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/temple_outer)
 "vWX" = (
 /obj/structure/prop/structure_lattice{
@@ -35880,6 +35853,10 @@
 /obj/item/weapon/swiss_army_knife,
 /turf/open/floor/cmo,
 /area/sekhmet/int_heavy/low_level_gen)
+"wbb" = (
+/obj/item/prop/rock,
+/turf/open/gm/dirt2,
+/area/sekhmet/caves/temple)
 "wbd" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 4
@@ -35939,11 +35916,9 @@
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_rsr)
 "wcQ" = (
-/obj/structure/surface/table/holotable{
-	color = "#424a50"
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/sekhmet/outside/temple_outer)
+/obj/item/prop/rock,
+/turf/open/auto_turf/sand_white/layer0,
+/area/sekhmet/caves/temple)
 "wda" = (
 /turf/open/shuttle/black,
 /area/sekhmet/int_reg/ship2)
@@ -36230,6 +36205,10 @@
 	color = "#ffb366"
 	},
 /turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
+"wkU" = (
+/obj/structure/tunnel,
+/turf/open/gm/dirt2,
 /area/sekhmet/outside/temple_outer)
 "wlf" = (
 /obj/structure/platform/shiva/catwalk{
@@ -36529,8 +36508,9 @@
 /turf/open/floor/carpet,
 /area/sekhmet/int_heavy/low_level_rsr)
 "wuu" = (
-/turf/open/auto_turf/sand/layer1,
-/area/sekhmet/caves/temple)
+/obj/structure/prop/ice_colony/ground_wire,
+/turf/open/gm/dirt/desert_dug,
+/area/sekhmet/outside/temple_outer)
 "wuy" = (
 /obj/item/weapon/dart{
 	pixel_x = -3;
@@ -36608,9 +36588,13 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/research)
-"wwz" = (
-/turf/closed/wall/rock,
-/area/sekhmet/outside/east_jungle)
+"wwM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	light_power = 0.5
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/sekhmet/int_reg/air_filters)
 "wwR" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/sekhmet/outside/southeast_road)
@@ -36821,6 +36805,13 @@
 /obj/structure/flora/jungle/vines/light_1,
 /turf/closed/wall/upp_wall,
 /area/sekhmet/outside/swamp)
+"wEF" = (
+/obj/docking_port/stationary/emergency_response/port1{
+	name = "Short Range Vessel Field Clearing";
+	id = "almayer-ert2"
+	},
+/turf/open/gm/dirt2,
+/area/sekhmet/shuttles/drop2)
 "wEH" = (
 /obj/structure/bed/chair,
 /turf/open/floor/strata/floor3,
@@ -37054,6 +37045,13 @@
 "wMQ" = (
 /turf/closed/wall/mineral/sandstone/runed,
 /area/sekhmet/outside/east_jungle)
+"wNa" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/prop/ice_colony/surveying_device/measuring_device,
+/turf/open/gm/dirt,
+/area/sekhmet/outside/temple_outer)
 "wNs" = (
 /obj/structure/prop/almayer/computers/mission_planning_system{
 	pixel_x = -7;
@@ -38180,14 +38178,6 @@
 	},
 /turf/open/floor/prison/bright_clean/southwest,
 /area/sekhmet/int_reg/water_filters)
-"xvb" = (
-/obj/effect/decal/remains/xeno,
-/obj/structure/prop/ice_colony/ground_wire,
-/obj/structure/prop/ice_colony/ground_wire{
-	dir = 4
-	},
-/turf/open/gm/dirt/desert_dug,
-/area/sekhmet/outside/temple_outer)
 "xvd" = (
 /obj/structure/surface/table/woodentable{
 	color = "#8B7B5B"
@@ -38373,12 +38363,6 @@
 /obj/structure/stairs,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_glass/hosptial)
-"xzq" = (
-/obj/structure/prop/ice_colony/surveying_device/measuring_device{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/sekhmet/outside/temple_outer)
 "xzB" = (
 /obj/effect/decal/siding{
 	icon_state = "siding6"
@@ -38406,6 +38390,10 @@
 /obj/item/prop/rock,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/southeast_road)
+"xAK" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/temple_outer)
 "xBu" = (
 /obj/structure/machinery/camera{
 	c_tag = "UPP - East Hangar";
@@ -38477,6 +38465,12 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/central_road)
+"xDg" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/sekhmet/outside/temple_outer)
 "xDK" = (
 /obj/structure/platform_decoration/shiva/catwalk{
 	dir = 1
@@ -38802,15 +38796,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_heavy/research)
-"xPZ" = (
-/obj/structure/ladder/rope{
-	height = 1;
-	id = "sekh_ruin1";
-	layer = 6.01
-	},
-/obj/structure/prop/invuln/darkness,
-/turf/open/gm/river,
-/area/sekhmet/outside/temple_outer)
 "xQa" = (
 /obj/structure/closet/crate/freezer,
 /turf/open/floor/prison/kitchen,
@@ -38892,6 +38877,11 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/sekhmet/int_heavy/low_level_rsr)
+"xUB" = (
+/obj/structure/tunnel,
+/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/temple_outer)
 "xUQ" = (
 /obj/structure/stairs{
 	dir = 4
@@ -38991,9 +38981,6 @@
 	light_power = 0.5;
 	dir = 8
 	},
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
 /turf/open/floor/strata/red1,
 /area/sekhmet/int_heavy/low_level_gen)
 "xYu" = (
@@ -39142,10 +39129,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/temple_outer)
 "ybk" = (
-/obj/structure/platform/mineral/sandstone/runed{
-	dir = 4
-	},
-/turf/open/floor/kutjevo/plate,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/rock/black_ground,
+/turf/open/floor/sandstone/runed,
 /area/sekhmet/caves/temple)
 "ybn" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
@@ -39219,6 +39205,10 @@
 /obj/structure/gun_rack/type71/empty,
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_reg/military_hangar)
+"yfb" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/sekhmet/outside/central_road)
 "yfc" = (
 /obj/structure/machinery/vending/cigarette/upp{
 	pixel_x = -5;
@@ -39234,13 +39224,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/sekhmet/int_glass/offices)
-"yff" = (
-/obj/structure/platform/mineral/sandstone/runed{
-	dir = 4
-	},
-/obj/structure/prop/brazier/frame,
-/turf/open/floor/kutjevo/plate,
-/area/sekhmet/caves/temple)
 "yfu" = (
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_glass/complex_generic)
@@ -42821,7 +42804,7 @@ bFR
 bFR
 bFR
 bFR
-tFO
+wEF
 bFR
 bFR
 bFR
@@ -48122,7 +48105,7 @@ dIS
 dIS
 nBA
 dIS
-jiR
+aKB
 jZi
 ybn
 pBz
@@ -48444,7 +48427,7 @@ wKY
 acV
 dIS
 dIS
-jjD
+bio
 dIS
 dIS
 acV
@@ -57126,7 +57109,7 @@ qoh
 vhq
 iiB
 iOH
-oDm
+vWJ
 iOH
 iOH
 iOH
@@ -57776,8 +57759,8 @@ iiB
 iiB
 iOH
 iOH
-kfK
-kfK
+jAI
+jAI
 hRw
 hRw
 iOH
@@ -58750,11 +58733,11 @@ qzh
 iOH
 iOH
 klo
-kfK
+jAI
 hRw
 hRw
 hRw
-cIr
+yfb
 qSP
 qSP
 bsP
@@ -58917,7 +58900,7 @@ iOH
 iOH
 iOH
 ihO
-mjq
+pCS
 bsP
 bsP
 kkC
@@ -59059,7 +59042,7 @@ hka
 rED
 nlt
 htW
-njo
+hnV
 nlt
 rED
 xTI
@@ -59565,7 +59548,7 @@ rED
 rED
 iOH
 ihO
-mjq
+pCS
 kkC
 bsP
 bsP
@@ -59707,17 +59690,17 @@ kUr
 ljK
 sbj
 okB
-ohO
+fTI
 nlt
 emG
 nAK
-vvd
+lCC
 nlt
 iOH
 iOH
 klo
 klo
-kfK
+jAI
 iOH
 iOH
 iOH
@@ -59726,7 +59709,7 @@ rED
 rED
 iOH
 iOH
-cIr
+yfb
 qSP
 dkY
 kkC
@@ -59873,14 +59856,14 @@ tUL
 pxQ
 hsh
 htW
-bpV
+tae
 kMe
 iOH
 iOH
 klo
 klo
-kfK
-kfK
+jAI
+jAI
 iOH
 iOH
 iOH
@@ -60042,7 +60025,7 @@ iOH
 rED
 klo
 klo
-kfK
+jAI
 iOH
 iOH
 iOH
@@ -60189,7 +60172,7 @@ iOH
 iOH
 iOH
 nlt
-ucc
+rDP
 gRy
 bgm
 tUL
@@ -60675,13 +60658,13 @@ klo
 ead
 iOH
 nlt
-uvn
+uws
 hCj
 hCj
 hCj
-oEb
+wwM
 nlt
-vNV
+hrR
 tUL
 tUL
 kMe
@@ -60845,7 +60828,7 @@ hpm
 nlt
 phh
 tUL
-ohO
+fTI
 nlt
 iOH
 iOH
@@ -61338,8 +61321,8 @@ qzh
 iOH
 iOH
 iOH
-njg
-lVx
+jKT
+ftM
 iiB
 iOH
 fNy
@@ -61501,7 +61484,7 @@ cmX
 iOH
 iOH
 iiB
-hGC
+wuu
 iiB
 iOH
 rED
@@ -61661,9 +61644,9 @@ rED
 iOH
 iOH
 iOH
-pGv
+fad
 iiB
-lVx
+ftM
 iiB
 iOH
 rED
@@ -61823,9 +61806,9 @@ rED
 iOH
 iOH
 fNy
-lHI
+snt
 uzA
-lVx
+ftM
 uqM
 iOH
 iOH
@@ -61985,9 +61968,9 @@ rED
 iOH
 lTE
 lmv
-lHI
+snt
 uzA
-lVx
+ftM
 lTE
 dkY
 dkY
@@ -62130,7 +62113,7 @@ wwR
 rEu
 nld
 mmR
-aFt
+ybk
 nld
 lTd
 lTd
@@ -62147,7 +62130,7 @@ rED
 rED
 iOH
 iiB
-fUo
+gxQ
 iiB
 fNy
 iOH
@@ -62309,7 +62292,7 @@ rED
 rED
 iOH
 iiB
-aoP
+uJs
 iOH
 iOH
 iOH
@@ -62792,13 +62775,13 @@ iiB
 iOH
 rED
 rED
-rmP
+dLs
 lTE
 iOH
 rED
 rED
 iOH
-loB
+rQZ
 hRw
 cmX
 iOH
@@ -62834,7 +62817,7 @@ iOH
 iOH
 iOH
 hRw
-kfK
+jAI
 klo
 klo
 iOH
@@ -62945,7 +62928,7 @@ gXs
 gXs
 mmR
 gXs
-tMa
+jTj
 gXs
 nJL
 tTE
@@ -62987,7 +62970,7 @@ iOH
 iOH
 iOH
 iOH
-kfK
+jAI
 klo
 rED
 iOH
@@ -63101,12 +63084,12 @@ pNj
 (147,1,1) = {"
 rEu
 rEu
-nFD
+wbb
 gXs
 gXs
 lTd
 gXs
-mOF
+dBp
 gXs
 lTd
 mjX
@@ -63149,7 +63132,7 @@ iOH
 iOH
 iOH
 hRw
-kfK
+jAI
 dNB
 dNB
 iOH
@@ -63271,7 +63254,7 @@ lTd
 lTd
 gXs
 gXs
-qLO
+rDU
 nld
 nld
 nld
@@ -63317,7 +63300,7 @@ dNB
 dNB
 iOH
 klo
-kfK
+jAI
 iOH
 iOH
 iOH
@@ -63467,7 +63450,7 @@ klo
 klo
 klo
 klo
-nWw
+xUB
 iOH
 klo
 klo
@@ -63587,7 +63570,7 @@ pNj
 (150,1,1) = {"
 rEu
 gXs
-mOF
+dBp
 gXs
 gXs
 mmR
@@ -63602,12 +63585,12 @@ uoZ
 byR
 iOH
 rED
-apl
+miq
 lTE
 iOH
 iOH
 iOH
-fdP
+loB
 lTE
 ead
 ead
@@ -63632,7 +63615,7 @@ klo
 klo
 klo
 klo
-kfK
+jAI
 hRw
 iOH
 iOH
@@ -63755,13 +63738,13 @@ nld
 uqw
 uqw
 nld
-uCG
+bNS
 gXs
 gXs
 xzG
 fCg
 iiB
-psj
+fUo
 iOH
 rED
 rED
@@ -64239,12 +64222,12 @@ mmR
 mmR
 nld
 mmR
-ftM
+fIR
 nld
 rEu
 rEu
 iiB
-puH
+sqI
 klo
 iOH
 vvA
@@ -64450,8 +64433,8 @@ ead
 ead
 iOH
 iiB
-vWJ
-kqI
+hGC
+sWj
 iiB
 iOH
 iOH
@@ -64613,7 +64596,7 @@ iiB
 iiB
 iiB
 iiB
-mNe
+kfK
 iiB
 iOH
 xIf
@@ -64769,13 +64752,13 @@ iOH
 vvA
 iOH
 iOH
-dsm
-dsm
+uCG
+uCG
 iOH
 iOH
-xzq
+oJC
 iiB
-aoP
+uJs
 iOH
 iOH
 iOH
@@ -64932,7 +64915,7 @@ iOH
 iOH
 iOH
 iOH
-gOr
+xAK
 iOH
 iOH
 iOH
@@ -65240,7 +65223,7 @@ lTE
 uUF
 uzA
 iOH
-cZY
+cBH
 iOH
 iOH
 iOH
@@ -65722,7 +65705,7 @@ iOH
 iOH
 iOH
 iOH
-dSr
+qDT
 sLD
 lAY
 azf
@@ -65906,7 +65889,7 @@ nmm
 iOH
 iOH
 iiB
-fIR
+iQu
 iiB
 iOH
 iOH
@@ -66054,7 +66037,7 @@ azf
 sLD
 iOH
 iOH
-fIR
+iQu
 lmv
 iOH
 iOH
@@ -66068,8 +66051,8 @@ iOH
 iOH
 iiB
 iiB
-vWJ
-qvL
+hGC
+sBz
 iiB
 iOH
 iOH
@@ -66229,9 +66212,9 @@ gfq
 iOH
 iOH
 iiB
-iHj
+gKk
 iiB
-lVx
+ftM
 iiB
 iiB
 iOH
@@ -66380,7 +66363,7 @@ lTE
 lTE
 bJh
 uUF
-xvb
+gOr
 ano
 vjG
 vjG
@@ -66391,7 +66374,7 @@ aIc
 gfq
 iiB
 iiB
-fUo
+gxQ
 ead
 iiB
 iiB
@@ -66542,7 +66525,7 @@ lTE
 lTE
 lTE
 uUF
-lVx
+ftM
 ano
 vjG
 vjG
@@ -66553,7 +66536,7 @@ vjG
 oQQ
 iiB
 iiB
-hCk
+oLT
 ead
 ead
 iiB
@@ -66704,7 +66687,7 @@ bJh
 lTE
 lTE
 gXy
-lVx
+ftM
 ano
 vjG
 vjG
@@ -66715,7 +66698,7 @@ vjG
 oQQ
 iiB
 iiB
-lHI
+snt
 ead
 ead
 iOH
@@ -66866,7 +66849,7 @@ aqX
 aqX
 aqX
 fMe
-xzq
+oJC
 szq
 ead
 ead
@@ -67168,8 +67151,8 @@ klo
 qzh
 klo
 klo
-dsm
-gOr
+uCG
+xAK
 rED
 rED
 qcy
@@ -67339,7 +67322,7 @@ rED
 gwr
 iOH
 iiB
-njg
+jKT
 wFy
 ixJ
 vjG
@@ -67487,7 +67470,7 @@ rED
 xTI
 goq
 ahA
-fkQ
+aeb
 klo
 klo
 ama
@@ -67500,8 +67483,8 @@ rED
 gwr
 iOH
 vvA
-iHj
-vWJ
+gKk
+hGC
 ano
 vjG
 vjG
@@ -67662,13 +67645,13 @@ gwr
 iOH
 iOH
 iOH
-fUo
-cIA
+gxQ
+bOI
 ano
 vjG
 vjG
 vjG
-bVm
+wkU
 ead
 ead
 iOH
@@ -67824,8 +67807,8 @@ gwr
 iOH
 iOH
 iiB
-vcx
-dbR
+hKD
+qVQ
 ano
 vjG
 vjG
@@ -67987,7 +67970,7 @@ iOH
 iOH
 iiB
 iiB
-aoP
+uJs
 ano
 vjG
 vjG
@@ -68613,7 +68596,7 @@ rEu
 rEu
 iiB
 iiB
-fIR
+iQu
 iOH
 iOH
 iOH
@@ -68774,11 +68757,11 @@ rEu
 rEu
 rEu
 rEu
-tYp
+bOf
 ugd
-kqI
+sWj
 iiB
-mZG
+mAm
 klo
 klo
 iOH
@@ -68938,7 +68921,7 @@ gXs
 wkI
 gfq
 iiB
-bio
+vEb
 ugd
 ugd
 ugd
@@ -69102,9 +69085,9 @@ wkI
 sYm
 gfq
 iiB
-cIA
-lVx
-psj
+bOI
+ftM
+fUo
 iOH
 iOH
 iOH
@@ -69265,7 +69248,7 @@ gXs
 oQQ
 rEu
 iiB
-hGC
+wuu
 iUh
 iZT
 iZT
@@ -69286,7 +69269,7 @@ tTq
 xoq
 iOH
 iOH
-fIR
+iQu
 iiB
 vvA
 aZO
@@ -69420,7 +69403,7 @@ pNj
 rEu
 rEu
 rEu
-dCY
+gIB
 gXs
 rEu
 gXs
@@ -69432,7 +69415,7 @@ eaR
 lTE
 lTE
 lTE
-neD
+xDg
 gwr
 rED
 rED
@@ -69445,10 +69428,10 @@ fsN
 lTE
 lTE
 lTE
-aCK
+tgW
 iOH
 ugd
-vWJ
+hGC
 ugd
 iiB
 rEu
@@ -69607,7 +69590,7 @@ fsN
 lTE
 lTE
 lTE
-aCK
+tgW
 iOH
 iiB
 wFy
@@ -69756,7 +69739,7 @@ rEu
 lTE
 lTE
 lTE
-neD
+xDg
 rED
 rED
 rED
@@ -69771,7 +69754,7 @@ lTE
 lTE
 gXy
 iiB
-fUo
+gxQ
 ano
 gXs
 gXs
@@ -69930,10 +69913,10 @@ iOH
 bMB
 aqX
 aqX
-uTQ
+wNa
 byR
-fEJ
-sPH
+bQF
+jaf
 ano
 gXs
 gXs
@@ -70404,15 +70387,15 @@ iOH
 rEu
 rEu
 iOH
-dsm
-wcQ
-tgW
+uCG
+bTW
+qLO
 rED
 qcy
 qcy
 rED
 rED
-cux
+nsm
 iOH
 rEu
 rEu
@@ -72840,7 +72823,7 @@ rjJ
 rsk
 nld
 nld
-rRw
+mOF
 uqw
 lTd
 mmR
@@ -73151,7 +73134,7 @@ rCP
 cit
 cit
 cit
-lJr
+pZq
 mmR
 mmR
 lTd
@@ -73661,7 +73644,7 @@ nld
 nld
 dHu
 rqb
-wwz
+rmP
 rqb
 rqb
 rqb
@@ -73824,7 +73807,7 @@ grS
 rqb
 rqb
 rqb
-wwz
+rmP
 rqb
 rqb
 rqb
@@ -73987,7 +73970,7 @@ qrT
 lTn
 izc
 rqb
-wwz
+rmP
 mVW
 mVW
 mVW
@@ -74474,7 +74457,7 @@ bsA
 qQw
 rqb
 rqb
-wwz
+rmP
 rqb
 rqb
 rqb
@@ -74637,7 +74620,7 @@ rqb
 rqb
 grS
 grS
-wwz
+rmP
 grS
 grS
 grS
@@ -98741,7 +98724,7 @@ gAD
 (367,1,1) = {"
 rEu
 rEu
-ssZ
+gdT
 jAR
 jAR
 jAR
@@ -98754,7 +98737,7 @@ rEu
 nld
 lTd
 lTd
-aFt
+ybk
 mmR
 mmR
 nld
@@ -98772,7 +98755,7 @@ rEu
 rEu
 rEu
 rEu
-ssZ
+gdT
 rEu
 rEu
 rEu
@@ -98917,7 +98900,7 @@ nld
 lTd
 mmR
 mmR
-ftM
+fIR
 mmR
 adR
 lTd
@@ -98926,7 +98909,7 @@ adR
 lTd
 lTd
 mmR
-ftM
+fIR
 lTd
 nld
 nld
@@ -99066,7 +99049,7 @@ gAD
 rEu
 rEu
 rEu
-ssZ
+gdT
 jAR
 jAR
 jAR
@@ -99083,7 +99066,7 @@ mmR
 mmR
 nld
 mmR
-aFt
+ybk
 nld
 mmR
 mmR
@@ -99261,7 +99244,7 @@ jAR
 jAR
 jAR
 jAR
-ssZ
+gdT
 jAR
 rEu
 gAD
@@ -99551,7 +99534,7 @@ gAD
 (372,1,1) = {"
 rEu
 rEu
-ssZ
+gdT
 jAR
 jAR
 jAR
@@ -99723,7 +99706,7 @@ lTd
 lTd
 lTd
 mmR
-ftM
+fIR
 lTd
 lTd
 lTd
@@ -99748,7 +99731,7 @@ nld
 jAR
 jAR
 rEu
-ssZ
+gdT
 rEu
 gAD
 gAD
@@ -99902,7 +99885,7 @@ lTd
 lTd
 lTd
 mmR
-ftM
+fIR
 mmR
 lTd
 lTd
@@ -100043,24 +100026,24 @@ rEu
 nld
 lTd
 lTd
-aFt
+ybk
 mmR
 lTd
 lTd
 lTd
 lTd
-wuu
-wuu
-wuu
-wuu
+ssZ
+ssZ
+ssZ
+ssZ
 keO
 nld
 nld
 keO
-wuu
-wuu
-wuu
-wuu
+ssZ
+ssZ
+ssZ
+ssZ
 lTd
 lTd
 lTd
@@ -100211,18 +100194,18 @@ mmR
 mmR
 lTd
 lTd
-wuu
-vuD
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-vuD
-wuu
+ssZ
+ikY
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ikY
+ssZ
 lTd
 lTd
 lTd
@@ -100372,20 +100355,20 @@ lTd
 lTd
 lTd
 lTd
-wuu
-wuu
-wuu
-wuu
-gdT
-gdT
-gdT
-gdT
-gdT
-wuu
-wuu
-wuu
-wuu
-wuu
+ssZ
+ssZ
+ssZ
+ssZ
+dCY
+dCY
+dCY
+dCY
+dCY
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
 lTd
 lTd
 mmR
@@ -100534,26 +100517,26 @@ lTd
 lTd
 lTd
 lTd
-wuu
-wuu
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-wuu
-wuu
-wuu
+ssZ
+ssZ
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+ssZ
+ssZ
+ssZ
 lTd
 lTd
 lTd
 lTd
 lTd
-aFt
+ybk
 mmR
 mmR
 mmR
@@ -100696,20 +100679,20 @@ nld
 nld
 nld
 lTd
-wuu
-wuu
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-wuu
-wuu
+ssZ
+ssZ
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+ssZ
+ssZ
 lTd
 nld
 nld
@@ -100717,7 +100700,7 @@ nld
 lTd
 mmR
 mmR
-ftM
+fIR
 lTd
 nld
 rEu
@@ -100850,7 +100833,7 @@ rEu
 rEu
 nld
 mmR
-ftM
+fIR
 lTd
 lTd
 lTd
@@ -100858,20 +100841,20 @@ nld
 nld
 nld
 xYD
-wuu
-wuu
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-wuu
-wuu
+ssZ
+ssZ
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+ssZ
+ssZ
 lEd
 nld
 nld
@@ -101020,20 +101003,20 @@ lTd
 lTd
 lTd
 mnj
-wuu
-wuu
-wuu
-wuu
-gdT
-mlw
-gdT
-gdT
-gdT
-gdT
-gdT
-gdT
-wuu
-wuu
+ssZ
+ssZ
+ssZ
+ssZ
+dCY
+iSR
+dCY
+dCY
+dCY
+dCY
+dCY
+dCY
+ssZ
+ssZ
 eUG
 lTd
 lTd
@@ -101182,20 +101165,20 @@ lTd
 lTd
 lTd
 mnj
-wuu
-wuu
-wuu
-wuu
-wuu
-gdT
-gdT
-gdT
-gdT
-gdT
-wuu
-wuu
-wuu
-wuu
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+dCY
+dCY
+dCY
+dCY
+dCY
+ssZ
+ssZ
+ssZ
+ssZ
 eUG
 lTd
 lTd
@@ -101345,18 +101328,18 @@ lTd
 lTd
 jeC
 xYD
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-vuD
-wuu
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ikY
+ssZ
 lEd
 fGc
 lTd
@@ -101507,23 +101490,23 @@ lTd
 lTd
 lTd
 mnj
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
-wuu
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
+ssZ
 eUG
 lTd
 lTd
 mmR
-ftM
+fIR
 mmR
 lTd
 lTd
@@ -101686,7 +101669,7 @@ lTd
 lTd
 mmR
 mmR
-ftM
+fIR
 lTd
 nld
 nld
@@ -101820,7 +101803,7 @@ gAD
 rEu
 rEu
 rEu
-ssZ
+gdT
 jAR
 rEu
 nld
@@ -101834,19 +101817,19 @@ lTd
 nld
 nld
 uGs
-ybk
-yff
-ybk
-ybk
-yff
-ybk
+aFt
+qkr
+aFt
+aFt
+qkr
+aFt
 aua
 nld
 nld
 lTd
 mmR
 mmR
-ftM
+fIR
 lTd
 lTd
 lTd
@@ -102793,7 +102776,7 @@ rEu
 rEu
 rEu
 rEu
-ssZ
+gdT
 jAR
 jAR
 rEu
@@ -102805,14 +102788,14 @@ nld
 lTd
 lEd
 cit
-pCS
+lVx
 lTd
 mmR
 lTd
 mmR
 mmR
 lTd
-bNS
+sNv
 cit
 xYD
 lTd
@@ -102984,10 +102967,10 @@ jAR
 jAR
 jAR
 jAR
-ssZ
+gdT
 jAR
 jAR
-ssZ
+gdT
 rEu
 rEu
 gAD
@@ -103284,7 +103267,7 @@ jAR
 jAR
 jAR
 jAR
-ssZ
+gdT
 rEu
 rEu
 rEu
@@ -103467,7 +103450,7 @@ rEu
 rEu
 rEu
 jAR
-ssZ
+gdT
 jAR
 jAR
 jAR
@@ -103942,7 +103925,7 @@ uqw
 mnj
 mmR
 lTd
-ftM
+fIR
 lTd
 mmR
 lTd
@@ -104094,7 +104077,7 @@ rEu
 rEu
 rEu
 rEu
-ssZ
+gdT
 jAR
 jAR
 jAR
@@ -104420,7 +104403,7 @@ rEu
 rEu
 rEu
 rEu
-qDT
+wcQ
 jAR
 rEu
 rEu
@@ -104750,7 +104733,7 @@ nld
 nld
 nld
 mnj
-ftM
+fIR
 lTd
 lTd
 lTd
@@ -104904,7 +104887,7 @@ rEu
 rEu
 rEu
 rEu
-ssZ
+gdT
 jAR
 jAR
 jAR
@@ -105389,7 +105372,7 @@ rEu
 rEu
 rEu
 jAR
-ssZ
+gdT
 rEu
 jAR
 jAR
@@ -105412,7 +105395,7 @@ rEu
 jAR
 jAR
 jAR
-ssZ
+gdT
 jAR
 jAR
 rEu
@@ -105554,7 +105537,7 @@ jAR
 jAR
 jAR
 jAR
-qDT
+wcQ
 jAR
 rEu
 rEu
@@ -105736,7 +105719,7 @@ rEu
 rEu
 rEu
 jAR
-qDT
+wcQ
 jAR
 jAR
 rEu
@@ -106197,7 +106180,7 @@ rEu
 rEu
 rEu
 rEu
-ssZ
+gdT
 rEu
 jAR
 jAR
@@ -106686,7 +106669,7 @@ rEu
 rEu
 jAR
 jAR
-qDT
+wcQ
 rEu
 rEu
 rEu
@@ -107022,7 +107005,7 @@ lTd
 kXT
 lTd
 mmR
-aFt
+ybk
 lTd
 eUG
 nld
@@ -107355,7 +107338,7 @@ rEu
 rEu
 rEu
 jAR
-qDT
+wcQ
 jAR
 rEu
 rEu
@@ -107979,7 +107962,7 @@ rEu
 rEu
 rEu
 rEu
-qDT
+wcQ
 jAR
 jAR
 jAR
@@ -108308,7 +108291,7 @@ rEu
 jAR
 jAR
 jAR
-qDT
+wcQ
 jAR
 jAR
 jAR
@@ -108473,8 +108456,8 @@ jAR
 jAR
 jAR
 jAR
-jAI
-jAI
+ohO
+ohO
 nld
 nld
 lTd
@@ -108634,9 +108617,9 @@ rEu
 jAR
 jAR
 jAR
-jAI
-jAI
-jAI
+ohO
+ohO
+ohO
 irc
 lTd
 lTd
@@ -108796,9 +108779,9 @@ jAR
 jAR
 jAR
 jAR
-jAI
-jAI
-jAI
+ohO
+ohO
+ohO
 irc
 mmR
 mmR
@@ -108807,7 +108790,7 @@ lTd
 mmR
 mmR
 qoo
-jAI
+ohO
 rEu
 rEu
 rEu
@@ -108955,22 +108938,22 @@ rEu
 rEu
 rEu
 jAR
-ssZ
+gdT
 jAR
 jAR
-jAI
-jAI
-jAI
+ohO
+ohO
+ohO
 irc
 lTd
-aFt
+ybk
 lTd
 lTd
 mmR
 mmR
 qoo
-jAI
-jAI
+ohO
+ohO
 rEu
 rEu
 rEu
@@ -109121,8 +109104,8 @@ jAR
 jAR
 jAR
 jAR
-jAI
-jAI
+ohO
+ohO
 irc
 lTd
 lTd
@@ -109131,7 +109114,7 @@ lTd
 lTd
 mmR
 qoo
-jAI
+ohO
 rEu
 rEu
 jAR
@@ -109284,7 +109267,7 @@ jAR
 jAR
 jAR
 jAR
-jAI
+ohO
 irc
 kXT
 lTd
@@ -109296,7 +109279,7 @@ qoo
 rEu
 rEu
 jAR
-ssZ
+gdT
 jAR
 rEu
 rEu
@@ -109465,8 +109448,8 @@ jAR
 jAR
 jAR
 jAR
-qDT
-ssZ
+wcQ
+gdT
 jAR
 rEu
 rEu
@@ -109768,7 +109751,7 @@ rEu
 rEu
 rEu
 jAR
-qDT
+wcQ
 jAR
 jAR
 nld
@@ -110427,7 +110410,7 @@ lTd
 lTd
 mmR
 qoo
-jAI
+ohO
 rEu
 rEu
 jAR
@@ -110580,7 +110563,7 @@ rEu
 rEu
 rEu
 rEu
-jAI
+ohO
 irc
 lTd
 mmR
@@ -110589,7 +110572,7 @@ kXT
 mmR
 mmR
 qoo
-jAI
+ohO
 rEu
 rEu
 jAR
@@ -110742,10 +110725,10 @@ rEu
 rEu
 rEu
 rEu
-jAI
+ohO
 irc
 mmR
-aFt
+ybk
 mmR
 lTd
 mmR
@@ -111404,7 +111387,7 @@ rEu
 rEu
 rEu
 jAR
-qDT
+wcQ
 jAR
 jAR
 rEu
@@ -111563,7 +111546,7 @@ nld
 rEu
 rEu
 rEu
-ssZ
+gdT
 rEu
 jAR
 jAR
@@ -112031,7 +112014,7 @@ rEu
 rEu
 rEu
 jAR
-ssZ
+gdT
 jAR
 jAR
 rEu
@@ -112676,7 +112659,7 @@ rEu
 rEu
 rEu
 rEu
-ssZ
+gdT
 rEu
 jAR
 jAR
@@ -113489,7 +113472,7 @@ rEu
 rEu
 rEu
 jAR
-ssZ
+gdT
 jAR
 jAR
 jAR
@@ -114160,7 +114143,7 @@ rEu
 rEu
 rEu
 jAR
-qDT
+wcQ
 jAR
 jAR
 rEu
@@ -114485,7 +114468,7 @@ rEu
 rEu
 jAR
 jAR
-ssZ
+gdT
 jAR
 rEu
 rEu
@@ -114632,7 +114615,7 @@ nld
 nld
 nld
 kHb
-aFt
+ybk
 mmR
 lTd
 lTd
@@ -115111,7 +115094,7 @@ rEu
 rEu
 jAR
 jAR
-ssZ
+gdT
 jAR
 jAR
 rEu
@@ -115455,7 +115438,7 @@ nld
 jAR
 jAR
 jAR
-ssZ
+gdT
 jAR
 rEu
 rEu
@@ -115595,7 +115578,7 @@ rEu
 rEu
 rEu
 jAR
-ssZ
+gdT
 jAR
 jAR
 jAR
@@ -117878,9 +117861,9 @@ xSw
 rQO
 rQO
 xYE
-jAI
+ohO
 lTd
-rQZ
+tMa
 lTd
 vkj
 mmR
@@ -118031,17 +118014,17 @@ mmR
 lTd
 xxm
 lTd
-jAI
+ohO
 mmR
-jAI
-jAI
-jAI
-jAI
-jAI
+ohO
+ohO
+ohO
+ohO
+ohO
 mmR
-jAI
+ohO
 mxI
-jAI
+ohO
 mmR
 lTd
 vkj
@@ -118194,14 +118177,14 @@ lTd
 hzc
 lTd
 lTd
-jAI
-jAI
-jAI
-jAI
-jAI
-jAI
-jAI
-jAI
+ohO
+ohO
+ohO
+ohO
+ohO
+ohO
+ohO
+ohO
 lTd
 lTd
 lTd
@@ -118358,15 +118341,15 @@ lTd
 lTd
 uqw
 uqw
-jAI
+ohO
 qkq
 qkq
 qkq
 qkq
-jAI
-jAI
+ohO
+ohO
 lTd
-jAI
+ohO
 lTd
 uGs
 lTd
@@ -118519,15 +118502,15 @@ bRI
 uqw
 uqw
 uqw
-jAI
-jAI
+ohO
+ohO
 qkq
 nld
 rCP
-xPZ
-jAI
-jAI
-jAI
+bLW
+ohO
+ohO
+ohO
 lTd
 lTd
 jDr
@@ -118681,16 +118664,16 @@ gsT
 uqw
 uqw
 uqw
-jAI
-jAI
+ohO
+ohO
 qkq
 rCP
 nld
-uQu
-jAI
-jAI
+voJ
+ohO
+ohO
 mmR
-jAI
+ohO
 lTd
 bMc
 kVN
@@ -118841,16 +118824,16 @@ mmR
 lTd
 aua
 lTd
-jAI
+ohO
 uqw
-jAI
-jAI
+ohO
+ohO
 qkq
 qkq
 qkq
 qkq
-jAI
-jAI
+ohO
+ohO
 mmR
 lTd
 lTd
@@ -119003,23 +118986,23 @@ mmR
 lTd
 mhI
 lTd
-jAI
-jAI
-jAI
-jAI
-jAI
-jAI
-jAI
-jAI
-jAI
-jAI
+ohO
+ohO
+ohO
+ohO
+ohO
+ohO
+ohO
+ohO
+ohO
+ohO
 cgj
 lTd
 lTd
 kqc
 lTd
 mmR
-ftM
+fIR
 fhb
 cit
 cit
@@ -119166,15 +119149,15 @@ kXT
 xxm
 lTd
 lTd
-rQZ
+tMa
 lTd
-jAI
-jAI
-jAI
-jAI
-jAI
-jAI
-jAI
+ohO
+ohO
+ohO
+ohO
+ohO
+ohO
+ohO
 lTd
 lTd
 lTd
@@ -119329,11 +119312,11 @@ xxm
 lTd
 mmR
 mmR
-jAI
+ohO
 lEd
 cit
-jAI
-jAI
+ohO
+ohO
 dHa
 xYD
 mmR
