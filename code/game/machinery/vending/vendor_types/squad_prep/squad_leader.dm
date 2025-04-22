@@ -47,7 +47,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_leader, list(
 		list("Breaching Charge", 7, /obj/item/explosive/plastic/breaching_charge, null, VENDOR_ITEM_RECOMMENDED),
 		list("Sandbags x25", 10, /obj/item/stack/sandbags_empty/half, null, VENDOR_ITEM_RECOMMENDED),
 		list("Signal Flare Pack", 7, /obj/item/storage/box/flare/signal, null, VENDOR_ITEM_REGULAR),
-		list("Signal Flare Pack", 2, /obj/item/storage/box/flare/signal_violet, null, VENDOR_ITEM_REGULAR),
+		list("Signal Flare Pack", 5, /obj/item/storage/box/flare/signal_violet, null, VENDOR_ITEM_REGULAR),
 		list("Tools Pouch (Full)", 5, /obj/item/storage/pouch/tools/full, null, VENDOR_ITEM_REGULAR),
 		list("Welding Goggles", 5, /obj/item/clothing/glasses/welding, null, VENDOR_ITEM_REGULAR),
 
