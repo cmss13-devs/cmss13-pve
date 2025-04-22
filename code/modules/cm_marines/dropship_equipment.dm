@@ -918,6 +918,7 @@
 	var/obj/structure/bed/medevac_stretcher/linked_stretcher
 	var/medevac_cooldown
 	var/busy_winch
+
 	combat_equipment = FALSE
 
 /obj/structure/dropship_equipment/medevac_system/Destroy()
@@ -1065,7 +1066,6 @@
 		return
 	position_dropship(user, selected_stretcher)
 
-
 //on arrival we break any link
 /obj/structure/dropship_equipment/medevac_system/on_arrival()
 	if(linked_stretcher)
@@ -1181,6 +1181,10 @@
 		linked_stretcher.linked_medevac = null
 		linked_stretcher = null
 		return
+
+	var/start_visual = /obj/effect/temp_visual/dropship_hover
+	var/turf/T = get_turf(linked_stretcher)
+	new start_visual(T)
 
 	flick("winched_stretcher", linked_stretcher)
 	linked_stretcher.visible_message(SPAN_NOTICE("A winch hook falls from the sky and starts lifting [linked_stretcher] up."))
