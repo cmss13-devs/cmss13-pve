@@ -135,9 +135,6 @@
 		if(is_mainship_level(user.z))
 			user.balloon_alert(user, "can't use here")
 			return
-	if(faction && user.faction != faction)
-		balloon_alert_to_viewers("no access")
-		return
 	if(laser_overlay)
 		to_chat(user, SPAN_WARNING("You're already targeting something."))
 		return
