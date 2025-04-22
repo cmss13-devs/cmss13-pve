@@ -972,8 +972,13 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Baker-pattern fighting knife"
 	path = 	/obj/item/weapon/knife/marine/baker
 
+/datum/gear/weapon/chinese
+	display_name = "Type 4 bayonet"
+	path = 	/obj/item/weapon/knife/marine/chinese
+	allowed_origins = UPP_ORIGINS
+
 /datum/gear/weapon/type_80_Bayonet
-	display_name = "Type 80 Bayonet"
+	display_name = "Type 80 bayonet"
 	path = /obj/item/attachable/bayonet/upp/surplus
 	cost = 3
 	allowed_origins = USCM_ORIGINS
