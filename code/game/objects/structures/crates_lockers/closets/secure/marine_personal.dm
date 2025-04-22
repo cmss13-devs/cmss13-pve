@@ -36,7 +36,6 @@
 	new /obj/item/clothing/shoes/marine/jungle/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
 
-
 /obj/structure/closet/secure_closet/marine_personal/Initialize()
 	. = ..()
 	if(has_cryo_gear)
