@@ -1,6 +1,6 @@
 /obj/item/device/binoculars/fire_support
 	name = "tactical binoculars"
-	desc = "A pair of binoculars, used to mark targets for fire support. Ctrl+Click on binoculars while not zoomed to change mode. Ctrl+Click on a target while zoomed to track and fire at it."
+	desc = "A pair of binoculars, used to mark targets for fire support. Ctrl+Click on binoculars while not zoomed to change mode. Ctrl+Click on a target while zoomed to track and fire at it. Cooldowns between modes are not shared"
 	icon = 'icons/obj/items/binoculars.dmi'
 	icon_state = "advanced_binoculars"
 	w_class = SIZE_SMALL
@@ -9,7 +9,7 @@
 	///lase effect
 	var/image/laser_overlay
 	///lasing time
-	var/target_acquisition_delay = 5 SECONDS
+	var/target_acquisition_delay = 2.5 SECONDS
 	///Last stored turf targetted by rangefinders
 	var/turf/target_atom
 	///Current mode for support request
@@ -75,7 +75,7 @@
 	. += SPAN_BOLDNOTICE("They are currently set to [mode.name] mode.")
 	if(!mode.cooldown_timer)
 		return
-	. += SPAN_WARNING("Available in [round(timeleft(mode.cooldown_timer) MILLISECONDS)] seconds.")
+	. += SPAN_WARNING("Available in [round(timeleft(mode.cooldown_timer) * 0.10)] seconds.")
 
 /obj/item/device/binoculars/fire_support/Destroy()
 	unset_target()

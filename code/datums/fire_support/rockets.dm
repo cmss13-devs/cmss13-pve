@@ -4,7 +4,7 @@
 	fire_support_type = FIRESUPPORT_TYPE_ROCKETS
 	cost = 3
 	scatter_range = 7
-	impact_quantity = 10
+	impact_quantity = 16
 	icon_state = "rockets"
 	start_visual = /obj/effect/temp_visual/dropship_flyby
 	initiate_chat_message = "TARGET ACQUIRED HE ROCKET RUN INBOUND."
