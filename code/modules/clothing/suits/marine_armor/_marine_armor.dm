@@ -944,7 +944,7 @@
 /obj/item/clothing/suit/marine/medium/rto/navy
 	name = "\improper M4 pattern shore-deployment armor"
 	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
-	movement_compensation = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
+	slowdown = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/marine/medium/rto/navy/Initialize(mapload)
@@ -980,11 +980,12 @@
 	name = "\improper PLU lamp rig"
 	icon_state = "lamp_rig"
 	desc = "A lightweight rig designed to support a shoulder lamp."
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	blood_overlay_type = "coat"
 	flags_armor_protection = BODY_FLAG_CHEST
 	flags_cold_protection = BODY_FLAG_CHEST
 	min_cold_protection_temperature = null
+	slowdown = SLOWDOWN_ARMOR_NONE
 	armor_melee = CLOTHING_ARMOR_NONE
 	armor_bullet = CLOTHING_ARMOR_NONE
 	armor_laser = CLOTHING_ARMOR_NONE
