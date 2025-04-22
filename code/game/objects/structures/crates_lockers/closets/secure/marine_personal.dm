@@ -100,8 +100,8 @@
 	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)
 
 /obj/structure/closet/secure_closet/marine_personal/forecon/spawn_gear()
-	new /obj/item/clothing/under/marine/veteran/UPP(src)
-	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/clothing/under/marine/standard(src)
+	new /obj/item/clothing/shoes/marine/jungle/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/forecon(src)
 
 /obj/structure/closet/secure_closet/marine_personal/forecon/rifleman
