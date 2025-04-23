@@ -122,8 +122,6 @@
 
 	addtimer(CALLBACK(src, PROC_REF(titan_online)), 15 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(map_announcement)), 40 SECONDS)
-	addtimer(CALLBACK(src, PROC_REF(sit_rep)), 500 SECONDS)
-
 	//addtimer(CALLBACK(src, PROC_REF(start_lz_hazards)), LZ_HAZARD_START)
 
 	return ..()
