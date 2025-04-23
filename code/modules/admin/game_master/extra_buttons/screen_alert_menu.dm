@@ -19,7 +19,6 @@
 		"robot",
 		"pilot",
 		"pilot_2",
-		"pilot_3",
 		"beret",
 		"beret_2",
 		"trooper",
