@@ -1,12 +1,33 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "bo" = (
 /obj/structure/shuttle/part/inchon/transparent{
-	icon_state = "dropship_interior 3,18"
+	icon_state = "dropship_interior 5,18";
+	density = 0;
+	layer = 2.69
 	},
-/obj/effect/attach_point/weapon/inchon/left_fore{
-	plane = -5
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	plane = -8;
+	light_color = "#a2c4fc"
 	},
-/turf/template_noop,
+/obj/structure/bed/chair/vehicle/dropship_cockpit/compact/wizzo{
+	dir = 1;
+	layer = 2.73;
+	pixel_y = -7;
+	pixel_x = -6
+	},
+/obj/structure/machinery/computer/dropship_weapons/inchon{
+	layer = 2.72;
+	density = 0
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/compact{
+	dir = 1;
+	pixel_y = 13;
+	pixel_x = 3;
+	layer = 2.71
+	},
+/turf/open/floor/almayer_hull{
+	mouse_opacity = 0
+	},
 /area/shuttle/inchon)
 "bU" = (
 /obj/structure/shuttle/part/inchon/transparent{
@@ -32,10 +53,7 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 3,16"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon,
 /area/shuttle/inchon)
 "eL" = (
 /obj/structure/shuttle/part/inchon{
@@ -44,16 +62,10 @@
 /turf/template_noop,
 /area/shuttle/inchon)
 "hh" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 6,15"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/nine,
 /area/shuttle/inchon)
 "hq" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 4,13"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/fourteen,
 /area/shuttle/inchon)
 "hM" = (
 /obj/structure/shuttle/part/inchon{
@@ -61,17 +73,34 @@
 	},
 /turf/template_noop,
 /area/shuttle/inchon)
+"ii" = (
+/obj/effect/attach_point/computer/inchon,
+/turf/open/shuttle/dropship/can_surgery/inchon/twelve,
+/area/shuttle/inchon)
 "iz" = (
 /obj/structure/shuttle/part/inchon/transparent{
 	icon_state = "dropship_interior 8,12"
 	},
 /turf/template_noop,
 /area/shuttle/inchon)
-"jQ" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 6,14"
+"jA" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/four{
+	icon = 'icons/obj/structures/doors/dropship5.dmi';
+	pixel_x = -1;
+	layer = 3.03
 	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/roof/dropship_canopy{
+	pixel_x = -32
+	},
+/obj/structure/roof/dropship_canopy{
+	pixel_x = -32;
+	icon_state = "canopyglass"
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentynine,
+/area/shuttle/inchon)
+"jQ" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/thirteen,
 /area/shuttle/inchon)
 "ko" = (
 /turf/closed/shuttle/dropship1{
@@ -81,33 +110,8 @@
 	},
 /area/shuttle/inchon)
 "kJ" = (
-/obj/structure/shuttle/part/inchon/transparent{
-	icon_state = "dropship_interior 5,18";
-	density = 0;
-	plane = -7
-	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	plane = -8;
-	light_color = "#a2c4fc"
-	},
-/obj/structure/bed/chair/vehicle/dropship_cockpit/compact/wizzo{
-	dir = 1;
-	layer = 3.02;
-	pixel_y = -7;
-	pixel_x = -6
-	},
-/obj/structure/machinery/computer/dropship_weapons/inchon{
-	layer = 3.01;
-	density = 0
-	},
-/obj/structure/bed/chair/vehicle/dropship_cockpit/compact{
-	dir = 1;
-	pixel_y = 13;
-	pixel_x = 3
-	},
-/turf/open/floor/almayer_hull{
-	mouse_opacity = 0
-	},
+/obj/docking_port/mobile/marine_dropship/inchon,
+/turf/open/shuttle/dropship/can_surgery/inchon/eighteen,
 /area/shuttle/inchon)
 "md" = (
 /obj/structure/shuttle/part/inchon{
@@ -119,10 +123,7 @@
 /obj/structure/machinery/camera/autoname/golden_arrow/inchon{
 	dir = 4
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 4,12"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/seventeen,
 /area/shuttle/inchon)
 "nK" = (
 /obj/structure/shuttle/part/inchon{
@@ -134,31 +135,20 @@
 /obj/structure/machinery/light/double/blue{
 	layer = -5
 	},
-/obj/structure/dropship_tail{
+/obj/structure/roof/dropship_tail{
 	pixel_x = -160;
 	pixel_y = -288;
 	mouse_opacity = 0;
-	icon_state = "dropship_tail_fade";
-	plane = -3
+	icon_state = "dropship_tail_fade"
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 4,9"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyseven,
 /area/shuttle/inchon)
 "pg" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 5,15"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/eight,
 /area/shuttle/inchon)
 "pv" = (
-/obj/docking_port/mobile/marine_dropship/inchon,
-/obj/effect/attach_point/computer/inchon,
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 5,14"
-	},
+/obj/effect/roof_node,
+/turf/template_noop,
 /area/shuttle/inchon)
 "pF" = (
 /obj/structure/shuttle/part/inchon{
@@ -176,12 +166,6 @@
 	},
 /turf/template_noop,
 /area/shuttle/inchon)
-"qp" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 5,12"
-	},
-/area/shuttle/inchon)
 "re" = (
 /obj/structure/shuttle/part/inchon/transparent{
 	icon_state = "dropship_interior 8,14"
@@ -189,10 +173,7 @@
 /turf/template_noop,
 /area/shuttle/inchon)
 "rz" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 4,14"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/eleven,
 /area/shuttle/inchon)
 "so" = (
 /turf/closed/shuttle/dropship1{
@@ -212,10 +193,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 5,16"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/three,
 /area/shuttle/inchon)
 "uY" = (
 /obj/structure/shuttle/part/inchon{
@@ -224,10 +202,7 @@
 /turf/template_noop,
 /area/shuttle/inchon)
 "vv" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 6,11"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentytwo,
 /area/shuttle/inchon)
 "vE" = (
 /obj/structure/shuttle/part/inchon{
@@ -248,16 +223,10 @@
 /turf/template_noop,
 /area/shuttle/inchon)
 "yv" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 6,12"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/nineteen,
 /area/shuttle/inchon)
 "BD" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 5,11"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyone,
 /area/shuttle/inchon)
 "BZ" = (
 /turf/closed/shuttle/dropship1{
@@ -270,9 +239,7 @@
 /obj/structure/shuttle/part/inchon/transparent{
 	icon_state = "dropship_interior 7,18"
 	},
-/obj/effect/attach_point/weapon/inchon/right_fore{
-	plane = -5
-	},
+/obj/effect/attach_point/weapon/inchon/right_fore,
 /turf/template_noop,
 /area/shuttle/inchon)
 "EZ" = (
@@ -286,10 +253,7 @@
 	pixel_y = 20;
 	layer = 2.9
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 4,16"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/two,
 /area/shuttle/inchon)
 "FN" = (
 /turf/closed/shuttle/dropship1{
@@ -306,32 +270,20 @@
 	dir = 4;
 	light_color = "#a2c4fc"
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 7,15"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/ten,
 /area/shuttle/inchon)
 "Hl" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
 	light_color = "#a2c4fc"
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 4,10"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentythree,
 /area/shuttle/inchon)
 "HN" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 4,15"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/seven,
 /area/shuttle/inchon)
 "Kg" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 5,13"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/fifteen,
 /area/shuttle/inchon)
 "KF" = (
 /obj/structure/shuttle/part/inchon{
@@ -350,20 +302,15 @@
 /obj/structure/machinery/camera/autoname/golden_arrow/inchon{
 	dir = 8
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 7,16"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/five,
 /area/shuttle/inchon)
 "Ln" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4{
 	id = "aft_door";
 	name = "Inchon cargo door"
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 4,9"
-	},
+/obj/effect/roof_node,
+/turf/open/shuttle/dropship/can_surgery/inchon/twentysix,
 /area/shuttle/inchon)
 "LQ" = (
 /obj/effect/attach_point/weapon/inchon/left_wing,
@@ -374,22 +321,14 @@
 	},
 /area/shuttle/inchon)
 "MA" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 4,9"
-	},
+/obj/effect/roof_node,
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyeight,
 /area/shuttle/inchon)
 "MJ" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 6,13"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/sixteen,
 /area/shuttle/inchon)
 "MO" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 4,11"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twenty,
 /area/shuttle/inchon)
 "NA" = (
 /obj/structure/shuttle/part/inchon/transparent{
@@ -419,10 +358,7 @@
 	dir = 4;
 	light_color = "#a2c4fc"
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 6,10"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyfive,
 /area/shuttle/inchon)
 "RH" = (
 /turf/closed/shuttle/dropship1{
@@ -439,10 +375,7 @@
 	dir = 8;
 	light_color = "#a2c4fc"
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 3,15"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/six,
 /area/shuttle/inchon)
 "SK" = (
 /obj/structure/shuttle/part/inchon/transparent{
@@ -456,7 +389,8 @@
 	layer = 2
 	},
 /obj/structure/machinery/computer/shuttle/dropship/flight/small/inchon{
-	pixel_y = -5
+	pixel_y = -5;
+	layer = 2.7
 	},
 /turf/template_noop,
 /area/shuttle/inchon)
@@ -488,25 +422,11 @@
 	},
 /area/shuttle/inchon)
 "Xz" = (
-/obj/structure/machinery/door/airlock/hatch/cockpit/four{
-	icon = 'icons/obj/structures/doors/dropship5.dmi';
-	pixel_x = -1;
-	layer = 3.03
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 3,18"
 	},
-/obj/structure/blocker/forcefield/multitile_vehicles,
-/obj/structure/dropship_canopy{
-	pixel_x = -32;
-	plane = -5
-	},
-/obj/structure/dropship_canopy{
-	pixel_x = -32;
-	icon_state = "canopyglass";
-	plane = -4
-	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 5,17"
-	},
+/obj/effect/attach_point/weapon/inchon/left_fore,
+/turf/template_noop,
 /area/shuttle/inchon)
 "XU" = (
 /obj/structure/shuttle/part/inchon/transparent{
@@ -528,10 +448,7 @@
 	pixel_y = 20;
 	layer = 2.9
 	},
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 6,16"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/four,
 /area/shuttle/inchon)
 "ZB" = (
 /obj/structure/shuttle/part/inchon/transparent{
@@ -540,10 +457,7 @@
 /turf/template_noop,
 /area/shuttle/inchon)
 "ZY" = (
-/turf/open/shuttle/dropship/can_surgery{
-	icon = 'icons/turf/dropship5.dmi';
-	icon_state = "dropship_interior 5,10"
-	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyfour,
 /area/shuttle/inchon)
 
 (1,1,1) = {"
@@ -559,11 +473,17 @@ bU
 EZ
 EZ
 EZ
+EZ
+EZ
+EZ
+EZ
+pv
+pv
 "}
 (2,1,1) = {"
 EZ
 EZ
-bo
+Xz
 OT
 dS
 So
@@ -573,6 +493,12 @@ hM
 nK
 vE
 md
+EZ
+EZ
+EZ
+EZ
+pv
+pv
 "}
 (3,1,1) = {"
 EZ
@@ -587,20 +513,32 @@ na
 MO
 Hl
 Ln
+pv
+pv
+pv
+pv
+pv
+pv
 "}
 (4,1,1) = {"
 SK
 SL
-kJ
-Xz
+bo
+jA
 uW
 pg
-pv
+ii
 Kg
-qp
+kJ
 BD
 ZY
 oS
+pv
+pv
+pv
+pv
+pv
+EZ
 "}
 (5,1,1) = {"
 EZ
@@ -615,6 +553,12 @@ yv
 vv
 Ru
 MA
+pv
+pv
+pv
+pv
+pv
+pv
 "}
 (6,1,1) = {"
 EZ
@@ -629,6 +573,12 @@ ya
 pF
 KF
 xW
+EZ
+EZ
+EZ
+EZ
+pv
+pv
 "}
 (7,1,1) = {"
 EZ
@@ -643,4 +593,10 @@ iz
 EZ
 EZ
 EZ
+EZ
+EZ
+EZ
+EZ
+pv
+pv
 "}

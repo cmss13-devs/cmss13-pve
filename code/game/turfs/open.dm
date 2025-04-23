@@ -1315,7 +1315,93 @@
 /turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down
 	icon_state = "rasputin15"
 
+/turf/open/shuttle/dropship/can_surgery/inchon //forgive me father, for I have sinned
+	icon = 'icons/turf/dropship5.dmi'
+	icon_state = "dropship_interior 3,16"
 
+/turf/open/shuttle/dropship/can_surgery/inchon/two
+	icon_state = "dropship_interior 4,16"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/three
+	icon_state = "dropship_interior 5,16"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/four
+	icon_state = "dropship_interior 6,16"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/five
+	icon_state = "dropship_interior 7,16"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/six
+	icon_state = "dropship_interior 3,15"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/seven
+	icon_state = "dropship_interior 4,15"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/eight
+	icon_state = "dropship_interior 5,15"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/nine
+	icon_state = "dropship_interior 6,15"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/ten
+	icon_state = "dropship_interior 7,15"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/eleven
+	icon_state = "dropship_interior 4,14"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twelve
+	icon_state = "dropship_interior 5,14"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/thirteen
+	icon_state = "dropship_interior 6,14"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/fourteen
+	icon_state = "dropship_interior 4,13"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/fifteen
+	icon_state = "dropship_interior 5,13"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/sixteen
+	icon_state = "dropship_interior 6,13"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/seventeen
+	icon_state = "dropship_interior 4,12"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/eighteen
+	icon_state = "dropship_interior 5,12"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/nineteen
+	icon_state = "dropship_interior 6,12"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twenty
+	icon_state = "dropship_interior 4,11"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyone
+	icon_state = "dropship_interior 5,11"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentytwo
+	icon_state = "dropship_interior 6,11"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentythree
+	icon_state = "dropship_interior 4,10"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyfour
+	icon_state = "dropship_interior 5,10"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyfive
+	icon_state = "dropship_interior 6,10"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentysix
+	icon_state = "dropship_interior 4,9"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyseven
+	icon_state = "dropship_interior 5,9"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyeight
+	icon_state = "dropship_interior 6,9"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentynine
+	icon_state = "dropship_interior 5,17"
 
 /turf/open/shuttle/predship
 	name = "ship floor"

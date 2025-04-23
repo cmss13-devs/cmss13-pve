@@ -164,7 +164,7 @@
 	height = 18
 
 	dwidth = 4
-	dheight = 8
+	dheight = 9
 
 /obj/docking_port/mobile/marine_dropship/upp/get_transit_path_type()
 	return /turf/open/space/transit/dropship/upp

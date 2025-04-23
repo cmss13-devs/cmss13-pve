@@ -441,6 +441,20 @@
 /obj/structure/shuttle/part/inchon/transparent/nosecone
 	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor complex."
 
+/obj/structure/shuttle/part/inchon/prop
+	name = "\improper Inchon"
+	desc = "A grounded USCM dropship. Looks locked down, no way aboard that thing."
+	icon = 'icons/turf/dropship5-1.dmi'
+	icon_state = "dropship_fore"
+	opacity = TRUE
+	pixel_x = -160
+
+/obj/structure/shuttle/part/inchon/prop/tail
+	name = "\improper Inchon"
+	icon_state = "dropship_tail"
+	pixel_x = -160
+	pixel_y = -320
+
 /obj/structure/shuttle/part/cyclone
 	name = "\improper Cyclone"
 	icon = 'icons/turf/dropship2.dmi'
