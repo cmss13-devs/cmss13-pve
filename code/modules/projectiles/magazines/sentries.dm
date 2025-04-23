@@ -59,9 +59,6 @@
 	caliber = "10x42mm"
 	max_rounds = 200
 
-/obj/item/ammo_magazine/sentry/upp/dropped
-	max_rounds = 100
-
 // FLAMER Sentry
 /obj/item/ammo_magazine/sentry_flamer
 	name = "sentry incinerator tank"
