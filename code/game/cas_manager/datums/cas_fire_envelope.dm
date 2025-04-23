@@ -24,6 +24,8 @@
 	var/obj/effect/firemission_guidance/guidance
 	var/atom/tracked_object
 
+	var/start_visual = /obj/effect/temp_visual/dropship_flyby
+
 /datum/cas_fire_envelope/New()
 	..()
 	missions = list()
@@ -283,11 +285,15 @@
 	mission.execute_firemission(linked_console, target_turf, dir, fire_length, step_delay, src)
 	stat = FIRE_MISSION_STATE_OFF_TARGET
 
-/// Step 6: Sets the fire mission stat to FIRE_MISSION_STATE_COOLDOWN
+/// Step 6: Shows fly-by shadow of the dropship when it's time to fire.
+/datum/cas_fire_envelope/proc/show_visuals(atom/target_turf)
+	new start_visual(target_turf)
+
+/// Step 7: Sets the fire mission stat to FIRE_MISSION_STATE_COOLDOWN
 /datum/cas_fire_envelope/proc/flyoff()
 	stat = FIRE_MISSION_STATE_COOLDOWN
 
-/// Step 7: Sets the fire mission stat to FIRE_MISSION_STATE_IDLE
+/// Step 8: Sets the fire mission stat to FIRE_MISSION_STATE_IDLE
 /datum/cas_fire_envelope/proc/end_cooldown()
 	stat = FIRE_MISSION_STATE_IDLE
 
@@ -310,7 +316,7 @@
 	firemission_effect.icon_state = "laser_target2"
 	firemission_effect.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	firemission_effect.invisibility = INVISIBILITY_MAXIMUM
-	QDEL_IN(firemission_effect, 12 SECONDS)
+	QDEL_IN(firemission_effect, 8 SECONDS)
 
 
 	notify_ghosts(header = "CAS Fire Mission", message = "[usr ? usr : "Someone"] is launching Fire Mission '[mission.name]' at [get_area(target_turf)].", source = firemission_effect)
@@ -322,6 +328,7 @@
 	addtimer(CALLBACK(src, PROC_REF(chat_warning), target_turf, 15, 2), second_warning)
 	addtimer(CALLBACK(src, PROC_REF(chat_warning), target_turf, 10, 3), third_warning)
 	addtimer(CALLBACK(src, PROC_REF(open_fire), target_turf, mission,dir), execution_start)
+	addtimer(CALLBACK(src, PROC_REF(show_visuals), target_turf), execution_start)
 	addtimer(CALLBACK(src, PROC_REF(flyoff)), flyoff_period)
 	addtimer(CALLBACK(src, PROC_REF(end_cooldown)), cooldown_period)
 
