@@ -908,6 +908,14 @@
 	icon_state = "cameras"
 	density = FALSE
 
+/obj/structure/machinery/computer/dropship_weapons/inchon
+	icon = 'icons/turf/dropship5-2.dmi'
+	icon_state = "weaponcontrols"
+	name = "\improper 'Inchon' weapons controls"
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
+	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
+	shuttle_tag = DROPSHIP_INCHON
+
 /obj/structure/machinery/computer/dropship_weapons/cyclone
 	name = "\improper 'Cyclone' weapons controls"
 	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)

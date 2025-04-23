@@ -145,6 +145,18 @@
 /obj/docking_port/mobile/marine_dropship/midway/get_transit_path_type()
 	return /turf/open/space/transit/dropship/midway
 
+/obj/docking_port/mobile/marine_dropship/inchon
+	name = "Inchon"
+	id = DROPSHIP_INCHON
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/inchon/get_transit_path_type()
+	return /turf/open/space/transit/dropship/inchon
+
 /obj/docking_port/mobile/marine_dropship/upp
 	name = "Akademia Nauk"
 	id = DROPSHIP_UPP
@@ -427,6 +439,10 @@
 /datum/map_template/shuttle/midway
 	name = "Midway"
 	shuttle_id = DROPSHIP_MIDWAY
+
+/datum/map_template/shuttle/inchon
+	name = "Inchon"
+	shuttle_id = DROPSHIP_INCHON
 
 /datum/map_template/shuttle/alamo
 	name = "Alamo"
