@@ -720,13 +720,6 @@
 	invisibility_value = SEE_INVISIBLE_OBSERVER
 	icon_state = "o_green"
 
-/obj/effect/landmark/target
-	name = "Rappel Point"
-	var/datum/cas_signal/signal
-	invisibility_value = SEE_INVISIBLE_OBSERVER
-	icon_state = "o_green"
-
-
 /obj/effect/landmark/rappel/New()
 	. = ..()
 	signal = new(src)

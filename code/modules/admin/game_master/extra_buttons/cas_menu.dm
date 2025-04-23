@@ -1,5 +1,5 @@
 GLOBAL_LIST_EMPTY(game_master_targets)
-GLOBAL_DATUM_INIT(target_panel, /datum/target_menu, new)
+GLOBAL_DATUM_INIT(rappel_panel, /datum/target_menu, new)
 #define target_click_intercept_ACTION "target_click_intercept_action"
 
 /client/proc/toggle_marker_menu()
@@ -8,7 +8,7 @@ GLOBAL_DATUM_INIT(target_panel, /datum/target_menu, new)
 	if(!check_rights(R_ADMIN))
 		return
 
-	GLOB.target_panel.tgui_interact(mob)
+	GLOB.rappel_panel.tgui_interact(mob)
 
 /datum/target_menu
 	var/target_click_intercept = FALSE
@@ -27,17 +27,17 @@ GLOBAL_DATUM_INIT(target_panel, /datum/target_menu, new)
 	if(target_click_intercept)
 		var/turf/object_turf = get_turf(object)
 		if(LAZYACCESS(modifiers, MIDDLE_CLICK))
-			for(var/obj/effect/landmark/target/R in object_turf)
+			for(var/obj/effect/landmark/rappel/R in object_turf)
 				GLOB.game_master_targets -= R
 				QDEL_NULL(R)
 			return TRUE
 
-		var/obj/effect/landmark/target/target = new(object_turf)
-		var/target_ref = REF(target)
+		var/obj/effect/landmark/rappel/rappel = new(object_turf)
+		var/rappel_ref = REF(rappel)
 		GLOB.game_master_targets += list(list(
-			"target" = target,
-			"target_name" = target.name,
-			"target_ref" = target_ref,
+			"rappel" = rappel,
+			"rappel_name" = rappel.name,
+			"rappel_ref" = rappel_ref,
 			))
 		return TRUE
 
@@ -56,40 +56,40 @@ GLOBAL_DATUM_INIT(target_panel, /datum/target_menu, new)
 	. = ..()
 
 	switch(action)
-		if("remove_target")
+		if("remove_rappel")
 			if(!params["val"])
 				return
 
-			var/list/target = params["val"]
+			var/list/rappel = params["val"]
 
-			var/atom/target_atom = locate(target["target_ref"])
+			var/atom/rappel_atom = locate(rappel["rappel_ref"])
 
-			if(!target_atom)
+			if(!rappel_atom)
 				return TRUE
 
-			if(tgui_alert(ui.user, "Do you want to remove [target_atom] ?", "Confirmation", list("Yes", "No")) != "Yes")
+			if(tgui_alert(ui.user, "Do you want to remove [rappel_atom] ?", "Confirmation", list("Yes", "No")) != "Yes")
 				return TRUE
 
-			remove_target(target_atom)
+			remove_rappel(rappel_atom)
 
-		if("jump_to_target")
+		if("jump_to_rappel")
 			if(!params["val"])
 				return
 
-			var/list/target = params["val"]
+			var/list/rappel = params["val"]
 
-			var/atom/target_atom = locate(target["target_ref"])
+			var/atom/rappel_atom = locate(rappel["rappel_ref"])
 
-			var/turf/target_turf = get_turf(target_atom)
+			var/turf/rappel_turf = get_turf(rappel_atom)
 
-			if(!target_turf)
+			if(!rappel_turf)
 				return TRUE
 
 			var/client/jumping_client = ui.user.client
-			jumping_client.jump_to_turf(target_turf)
+			jumping_client.jump_to_turf(rappel_turf)
 			return TRUE
 
-		if("toggle_click_target")
+		if("toggle_click_rappel")
 			target_click_intercept = !target_click_intercept
 			return
 
@@ -100,10 +100,10 @@ GLOBAL_DATUM_INIT(target_panel, /datum/target_menu, new)
 
 	target_click_intercept = FALSE
 
-/datum/target_menu/proc/remove_target(obj/removing_datum)
+/datum/target_menu/proc/remove_rappel(obj/removing_datum)
 	SIGNAL_HANDLER
 
-	for(var/list/cycled_target in GLOB.game_master_targets)
-		if(cycled_target["target"] == removing_datum)
-			GLOB.game_master_targets.Remove(list(cycled_target))
+	for(var/list/cycled_rappel in GLOB.game_master_targets)
+		if(cycled_rappel["rappel"] == removing_datum)
+			GLOB.game_master_targets.Remove(list(cycled_rappel))
 			QDEL_NULL(removing_datum)
