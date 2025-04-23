@@ -114,10 +114,7 @@
 	icon_state = "dropship_interior 3,9"
 	},
 /turf/template_noop,
-/area/shuttle/inchon{
-	base_lighting_color = "#eb4034";
-	light_color = "#eb4034"
-	})
+/area/shuttle/inchon)
 "na" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/inchon{
 	dir = 4
@@ -132,10 +129,7 @@
 	icon_state = "dropship_interior 3,11"
 	},
 /turf/template_noop,
-/area/shuttle/inchon{
-	base_lighting_color = "#eb4034";
-	light_color = "#eb4034"
-	})
+/area/shuttle/inchon)
 "oS" = (
 /obj/structure/machinery/light/double/blue{
 	layer = -5
@@ -171,10 +165,7 @@
 	icon_state = "dropship_interior 7,11"
 	},
 /turf/template_noop,
-/area/shuttle/inchon{
-	base_lighting_color = "#eb4034";
-	light_color = "#eb4034"
-	})
+/area/shuttle/inchon)
 "pQ" = (
 /obj/structure/shuttle/part/inchon/transparent{
 	icon_state = "dropship_interior 6,18"
@@ -243,19 +234,13 @@
 	icon_state = "dropship_interior 3,10"
 	},
 /turf/template_noop,
-/area/shuttle/inchon{
-	base_lighting_color = "#eb4034";
-	light_color = "#eb4034"
-	})
+/area/shuttle/inchon)
 "xW" = (
 /obj/structure/shuttle/part/inchon{
 	icon_state = "dropship_interior 7,9"
 	},
 /turf/template_noop,
-/area/shuttle/inchon{
-	base_lighting_color = "#eb4034";
-	light_color = "#eb4034"
-	})
+/area/shuttle/inchon)
 "ya" = (
 /obj/structure/shuttle/part/inchon{
 	icon_state = "dropship_interior 7,12"
@@ -353,10 +338,7 @@
 	icon_state = "dropship_interior 7,10"
 	},
 /turf/template_noop,
-/area/shuttle/inchon{
-	base_lighting_color = "#eb4034";
-	light_color = "#eb4034"
-	})
+/area/shuttle/inchon)
 "Le" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 26;
