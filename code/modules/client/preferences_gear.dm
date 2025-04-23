@@ -1011,6 +1011,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 4
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/weapon/m48a4
+	display_name = "M48A4 Service Pistol"
+	path = /obj/item/storage/box/loadout/M48A4_loadout
+	cost = 4
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/weapon/m44
 	display_name = "M44 Revolver"
 	path = /obj/item/storage/box/loadout/M44_loadout
