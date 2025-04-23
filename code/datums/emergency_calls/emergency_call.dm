@@ -20,6 +20,11 @@
 	var/input = "TITAN unit online. Destination reached. Good morning, marines."
 	shipwide_ai_announcement(input, name, 'sound/theme/movie_theme.ogg')
 
+/datum/game_mode/proc/sit_rep()
+	var/name = "Situational Report"
+	var/input = "Combat Drop authorized by discretion. PLTCO presence required at the CIC. All hands, prepare for condition Zebra."
+	shipwide_ai_announcement(input, name, 'sound/theme/combat_drop.ogg')
+
 /datum/game_mode/proc/request_ert(user, ares = FALSE)
 	if(!user)
 		return FALSE
