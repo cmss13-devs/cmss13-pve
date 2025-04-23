@@ -229,6 +229,7 @@
 	accurate_range = 12
 	damage = 45 //7.62x51 is scary
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	shell_casing = /obj/item/ammo_casing/cartridge
 
 /datum/ammo/bullet/pkp
 	name = "machinegun bullet"
