@@ -6,7 +6,6 @@
 	layer = 2.69
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
-	plane = -8;
 	light_color = "#a2c4fc"
 	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/compact/wizzo{
@@ -25,9 +24,7 @@
 	pixel_x = 3;
 	layer = 2.71
 	},
-/turf/open/floor/almayer_hull{
-	mouse_opacity = 0
-	},
+/turf/open/floor/almayer_hull,
 /area/shuttle/inchon)
 "bU" = (
 /obj/structure/shuttle/part/inchon/transparent{
