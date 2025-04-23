@@ -1,6 +1,6 @@
 /client/proc/set_cooldown()
 	set name = "Set Cooldowns"
-	set category = "Game Master.Fire Support Binos"
+	set category = "Game Master.Fire Support"
 
 	if(!admin_holder || !check_rights(R_MOD, FALSE))
 		return

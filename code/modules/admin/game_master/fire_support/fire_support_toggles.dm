@@ -1,6 +1,6 @@
 /client/proc/enable_fire_support()
 	set name = "Enable a Fire Support"
-	set category = "Game Master.Fire Support Binos"
+	set category = "Game Master.Fire Support"
 
 	if(!admin_holder || !check_rights(R_MOD, FALSE))
 		return

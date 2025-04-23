@@ -1,6 +1,6 @@
 /client/proc/set_fire_support_points()
 	set name = "Set Fire Support Points"
-	set category = "Game Master.Fire Support Binos"
+	set category = "Game Master.Fire Support"
 
 	if(!admin_holder || !check_rights(R_MOD, FALSE))
 		return
