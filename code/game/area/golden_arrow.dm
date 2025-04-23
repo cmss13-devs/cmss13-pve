@@ -133,3 +133,10 @@
 /area/golden_arrow/vehicle_shuttle/two/upper
 	name = "\improper Vehicle Elevator Two Upper"
 
+/area/golden_arrow/vehicle_shuttle/two/upper
+	name = "\improper Vehicle Elevator Two Upper"
+
+/area/golden_arrow/outside
+	name = "\improper LV-624"
+	temperature = T40C
+	icon_state = "red2"
