@@ -213,7 +213,7 @@
 /obj/item/storage/box/loadout/M48A4_loadout
 	name = "M48A4 storage case"
 	desc = "A relatively large storage case containing a loaded M48A4 and additional magazines."
-	can_hold = list(/obj/item/weapon/gun/pistol/m1911/socom)
+	can_hold = list(/obj/item/weapon/gun/pistol/m1911/socom, /obj/item/ammo_magazine/pistol/m1911)
 
 /obj/item/storage/box/loadout/M48A4_loadout/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911/socom())
