@@ -292,3 +292,10 @@
 /obj/structure/barricade/handrail/hybrisa/handrail
 	name = "handrail"
 	icon_state = "handrail_hybrisa"
+
+/obj/structure/barricade/handrail/strata/navalis
+	stack_amount = 0
+	destroyed_stack_amount = 0
+	can_be_reinforced = FALSE
+	projectile_coverage = PROJECTILE_COVERAGE_MINIMAL
+	color = "#f50000"

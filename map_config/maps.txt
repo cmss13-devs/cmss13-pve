@@ -90,6 +90,12 @@ endmap
 map bmg290_otogi_egress_point
 endmap
 
+map navalis_platform_13
+endmap
+
+map navalis_platform_13_singlez
+endmap
+
 map canyon_32b
 endmap
 
