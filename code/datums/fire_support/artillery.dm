@@ -16,7 +16,6 @@
 		"Firing for effect, over.",
 		"Shells, on the way!",
 	)
-	call_in_line = "Station this is observer, requesting HE rounds on my target, over!"
 	initiate_title = "Rhino-1"
 	initiate_sound = 'sound/weapons/gun_mortar_travel.ogg'
 	portrait_type = "marine_green"
@@ -41,7 +40,6 @@
 	icon_state = "incendiary_mortar"
 	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
 	initiate_screen_message = list("Coordinates confirmed, incendiary inbound!")
-	call_in_line = "Station this is observer, requesting incendiary rounds on my target, over!"
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/incend
 	var/radius = 5
 	var/flame_level = BURN_TIME_TIER_5 + 5 //Type B standard, 50 base + 5 from chemfire code.
@@ -68,7 +66,6 @@
 	icon_state = "flare_mortar"
 	initiate_chat_message = "COORDINATES CONFIRMED. FLARE SUPPORT INCOMING."
 	initiate_screen_message = "Coordinates confirmed, illumination inbound!"
-	call_in_line = "Station this is observer, requesting illumination rounds on my target, over!"
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/flare
 
 /datum/fire_support/mortar/flare/do_impact(turf/target_turf)
@@ -90,7 +87,6 @@
 	icon_state = "smoke_mortar"
 	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
 	initiate_screen_message = "Coordinates confirmed, smoke inbound!"
-	call_in_line = "Station this is observer, requesting smoke rounds on my target, over!"
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/smoke
 	///smoke type created when the grenade is primed
 	var/datum/effect_system/smoke_spread/smoketype = /datum/effect_system/smoke_spread/bad
@@ -119,7 +115,6 @@
 	icon_state = "nerve_mortar"
 	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
 	initiate_screen_message = list("Coordinates confirmed, nerve gas inbound!")
-	call_in_line = "Station this is observer, requesting CN-20 rounds on my target, over!"
 	smoketype = /datum/effect_system/smoke_spread/cn20
 	smoke_duration = 30
 
@@ -137,7 +132,6 @@
 	icon_state = "lsd_mortar"
 	initiate_chat_message = "COORDINATES CONFIRMED. MORTAR BARRAGE INCOMING."
 	initiate_screen_message = list("Coordinates confirmed, LSD gas inbound!")
-	call_in_line = "Station this is observer, requesting LSD rounds on my target, over!"
 	smoketype = /datum/effect_system/smoke_spread/LSD
 	smoke_duration = 30
 
@@ -165,7 +159,6 @@
 		"Full salvo, on the way!",
 		"Their gonna dance to our tune!",
 	)
-	call_in_line = "Station this is observer, requesting HE barrage on my target, over!"
 	initiate_title = "Rhino-1"
 	initiate_sound = 'sound/weapons/gun_mortar_travel.ogg'
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/mlrs
@@ -200,7 +193,6 @@
 		"Full salvo, on the way!",
 		"Their gonna dance to our tune!",
 	)
-	call_in_line = "Station this is observer, requesting CN-20 rounds on my target, over!"
 	initiate_sound = 'sound/weapons/gun_mortar_travel.ogg'
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/mlrs_smoke
 	impact_sound = 'sound/weapons/fire_support/rocket_whistle.ogg'

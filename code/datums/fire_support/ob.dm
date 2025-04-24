@@ -10,7 +10,6 @@
 	initiate_screen_message = list(
 		"Orbital support request received, HE inbound.",
 		)
-	call_in_line = "Station this is observer, requesting an HE OB on my target, over!"
 	initiate_sound = 'sound/weapons/gun_orbital_travel.ogg'
 	start_visual = /obj/effect/temp_visual/falling_obj/ob
 	start_sound = 'sound/weapons/fire_support/ob_whistle.ogg'

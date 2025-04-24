@@ -29,7 +29,6 @@
 	var/initiate_chat_message = "TARGET ACQUIRED. FIRE SUPPORT INBOUND."
 	///screentext message when initiating fire support
 	var/list/initiate_screen_message = list("fire support inbound")
-	var/call_in_line = "Station this is observer, requesting fire support on my target, over!"
 	///Screentext message title
 	var/initiate_title = "Falcon-1"
 	///Portrait used for screentext message

@@ -14,7 +14,6 @@
 		"Salvo sent, watch the spread!",
 		"Flying in hot, rockets inbound!",
 		)
-	call_in_line = "Station this is observer, requesting a HE rocket run on my target, over!"
 
 /datum/fire_support/rockets/do_impact(turf/target_turf)
 	cell_explosion(target_turf, 180, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("HE rockets"))
@@ -42,7 +41,6 @@
 		"Salvo sent, watch the spread!",
 		"Flying in hot, rockets inbound!",
 		)
-	call_in_line = "Station this is observer, requesting an incendiary rocket run on my target, over!"
 	start_visual = /obj/effect/temp_visual/dropship_flyby
 
 /datum/fire_support/incendiary_rockets/do_impact(turf/target_turf)

@@ -149,29 +149,25 @@
 	target_atom = target
 	laser_overlay = image('icons/obj/items/weapons/projectiles.dmi', icon_state = "laser_target2", layer =-LASER_LAYER)
 	target_atom.apply_fire_support_laser(laser_overlay)
-	user.say(mode.call_in_line)
 	if(!do_after(user, target_acquisition_delay, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_GENERIC, extra_checks = CALLBACK(src, PROC_REF(can_see_target), target, user)))
 		to_chat(user, SPAN_DANGER("You lose sight of your target!"))
 		playsound(user,'sound/machines/click.ogg', 25, 1)
 		unset_target()
-		user.say("Disregard last, over")
 		return
 	if(!bino_checks(target, user))
 		playsound(user,'sound/machines/click.ogg', 25, 1)
 		unset_target()
-		user.say("Disregard last, over")
 		return
 	if(!target_atom)
 		playsound(user,'sound/machines/click.ogg', 25, 1)
 		unset_target()
-		user.say("Disregard last, over")
 		return
 	playsound(src, 'sound/effects/binoctarget.ogg', 35)
 	mode.initiate_fire_support(get_turf(target_atom), user)
 	if(faction)
 		GLOB.fire_support_points[faction] -= mode.cost
 		balloon_alert_to_viewers("[GLOB.fire_support_points[faction]] points left")
-	message_admins("[user] has fired [mode.name] at [target_atom.x],[target_atom.y],[target_atom.z] to [target_atom] [ADMIN_JMP(target_atom)].")
+	notify_ghosts(header = "Fire support", message = "[user] has fired [mode.name] to [target_atom.x],[target_atom.y],[target_atom.z] towards [target_atom]", source = target_atom, action = NOTIFY_JUMP)
 	unset_target()
 
 ///Internal bino checks, mainly around firemode
