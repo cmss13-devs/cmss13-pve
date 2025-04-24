@@ -367,9 +367,17 @@ Turn() or Shift() as there is virtually no overhead. ~N
 	name = "spent cartridge"
 	icon_state = "cartridge"
 
-/obj/item/ammo_casing/shell
+/obj/item/ammo_casing/greenshell
 	name = "spent shell"
-	icon_state = "shell"
+	icon_state = "greenshell"
+
+/obj/item/ammo_casing/redshell
+	name = "spent shell"
+	icon_state = "redshell"
+
+/obj/item/ammo_casing/blueshell
+	name = "spent shell"
+	icon_state = "blueshell"
 
 /obj/item/ammo_box/magazine/lever_action/xm88
 	name = "\improper .458 bullets box (.458 x 300)"
