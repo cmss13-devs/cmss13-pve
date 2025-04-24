@@ -1185,6 +1185,7 @@
 	var/start_visual = /obj/effect/temp_visual/dropship_hover
 	var/turf/T = get_turf(linked_stretcher)
 	new start_visual(T)
+	playsound(T, 'sound/weapons/fire_support/dropship_hover.ogg')
 
 	flick("winched_stretcher", linked_stretcher)
 	linked_stretcher.visible_message(SPAN_NOTICE("A winch hook falls from the sky and starts lifting [linked_stretcher] up."))
