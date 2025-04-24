@@ -157,6 +157,8 @@
 	siemens_coefficient = 0.1
 	breach_vulnerability = SPACESUIT_BREACH_STANDARD
 	actions_types = list(/datum/action/item_action/spacesuit/toggle_motion_detector)
+	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_ARMBAND)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMBAND)
 	allowed = list(
 		/obj/item/weapon/gun,
 		/obj/item/prop/prop_gun,
@@ -308,8 +310,6 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS|PROTECTFROMWEATHER
 	breach_vulnerability = SPACESUIT_BREACH_COMBAT
 
@@ -335,8 +335,6 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS|PROTECTFROMWEATHER
 	breach_vulnerability = SPACESUIT_BREACH_COMBAT
 

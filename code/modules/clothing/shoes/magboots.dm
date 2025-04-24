@@ -3,7 +3,7 @@
 	name = "magboots"
 	icon_state = "magboots0"
 	var/magpulse = FALSE
-	var/auto_turn_off = TRUE
+	var/auto_turn_off = FALSE
 	var/turn_off_timer
 	actions_types = list(/datum/action/item_action/toggle)
 	allowed_items_typecache = null
