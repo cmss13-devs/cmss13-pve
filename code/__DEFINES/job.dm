@@ -376,14 +376,15 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_TWE_REPRESENTATIVE "TWE Representative"
 
 //RMC
-#define JOB_TWE_RMC_RIFLEMAN "RMC Rifleman"
-#define JOB_TWE_RMC_MEDIC "RMC Medical Assistant"
-#define JOB_TWE_RMC_MARKSMAN "RMC Marksman"
-#define JOB_TWE_RMC_SMARTGUNNER "RMC Smartgunner"
-#define JOB_TWE_RMC_BREACHER "RMC Breacher"
-#define JOB_TWE_RMC_TEAMLEADER "RMC Team Leader"
-#define JOB_TWE_RMC_LIEUTENANT "RMC Troop Commander"
-#define JOB_TWE_RMC_COMMANDER "RMC Squadron Commander"
+#define JOB_TWE_RMC_RIFLEMAN "Marine Commando"
+#define JOB_TWE_RMC_MEDIC "Marine Commando Medical Assistant"
+#define JOB_TWE_RMC_ENGI "Marine Commando Combat Engineer"
+#define JOB_TWE_RMC_MARKSMAN "Marine Commando Marksman"
+#define JOB_TWE_RMC_SMARTGUNNER "Marine Commando Smartgunner"
+#define JOB_TWE_RMC_BREACHER "Marine Commando Breacher"
+#define JOB_TWE_RMC_TEAMLEADER "Marine Commando Team Leader"
+#define JOB_TWE_RMC_LIEUTENANT "Marine Commando Troop Commander"
+#define JOB_TWE_RMC_COMMANDER "Marine Commando Squadron Commander"
 
 #define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_MEDIC, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER,JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER,)
 

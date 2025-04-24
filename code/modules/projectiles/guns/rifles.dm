@@ -110,7 +110,7 @@
 
 /obj/item/weapon/gun/rifle/nsg23
 	name = "\improper NSG L23A1 pulse rifle"
-	desc = "Pulse action 10x24mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."
+	desc = "Pulse action 10x24mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine Commando. Features an integrated 30mm grenade launcher and ammo tube that can hold two grenades on backup."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
@@ -145,7 +145,7 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_11)
+	set_burst_delay(FIRE_DELAY_TIER_12)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_9
@@ -163,14 +163,14 @@
 /obj/item/weapon/gun/rifle/nsg23/preloaded
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/attached_gun/grenade/mk1/nsg/preloaded,
+		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
 		/obj/item/attachable/stock/nsg23,
 	)
 
 /obj/item/weapon/gun/rifle/nsg23/preloaded/tactical
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/attached_gun/grenade/mk1/nsg/preloaded,
+		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
 		/obj/item/attachable/stock/nsg23,
 		/obj/item/attachable/suppressor,
 	)

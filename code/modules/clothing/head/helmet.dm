@@ -1038,6 +1038,19 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY|HELMET_GARB_OVERLAY
 
+/obj/item/clothing/head/helmet/marine/veteran/pmc/sniper
+	name = "\improper Mk12 marksman helmet"
+	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
+	icon_state = "pmc_sniper_hat"
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc
+	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
+	icon_state = "rmc_sniper_hat"
+	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc, new /obj/item/device/helmet_visor/twe)
+	start_down_visor_type = /obj/item/device/helmet_visor/night_vision/marine_raider/rmc
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner
 	name = "\improper Mk16 tactical helmet"
 	desc = "Standard issue high molecular density polymer combat helmet and ballistic mask of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."

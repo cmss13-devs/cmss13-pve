@@ -7,6 +7,12 @@
 /// RMC2, Lance Corporal
 #define PAY_SHORT_RMC2 "RMC2"
 
+/// RMC2N, Leading Medical Assistant
+#define PAY_SHORT_RMC2N "RMC2N"
+
+/// RMC2E, Sapper
+#define PAY_SHORT_RMC2E "RMC2E"
+
 /// RMC3, Corporal
 #define PAY_SHORT_RMC3 "RMC3"
 

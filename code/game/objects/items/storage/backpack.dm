@@ -1117,6 +1117,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "backpack_large"
 	max_storage_space = 21
 
+/obj/item/storage/backpack/rmc/medic
+	name = "RMC medical backpack"
+	desc = "A TWE military standard-carry RMC combat pack MK3. Modified by Medical Assistants to fit their needs better."
+	icon_state = "backpack_medium_medic"
+	item_state = "backpack_medium_medic"
+	worn_accessible = TRUE
+	max_storage_space = 21
+
 /obj/item/storage/backpack/rmc/medium
 	name = "standard RMC backpack"
 	desc = "A TWE military standard-carry RMC combat pack MK3."

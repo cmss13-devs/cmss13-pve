@@ -769,7 +769,10 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
 
-/obj/item/clothing/suit/marine/veteran/royal_marine/Initialize(mapload)
+/obj/item/clothing/suit/marine/veteran/royal_marine/heavy
+//Just the normal armor with attachies
+
+/obj/item/clothing/suit/marine/veteran/royal_marine/heavy/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/twepads/shoulders = new()
 	src.attach_accessory(null, shoulders, TRUE)

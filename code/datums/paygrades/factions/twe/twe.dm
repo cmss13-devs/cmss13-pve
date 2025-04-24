@@ -15,6 +15,18 @@
 	prefix = "LCpl"
 	pay_multiplier = 2.1
 
+/datum/paygrade/twe/e2n //RMC medics are attached naval personnel, don't see them forgoing this tradition even in the aliens universe
+	paygrade = PAY_SHORT_RMC2N
+	name = "Leading Medical Assistant"
+	prefix = "LMA"
+	pay_multiplier = 2.2
+
+/datum/paygrade/twe/e2e //RMC gets combat engineering support from the army royal engineers, as above, don't see them changing that tradition
+	paygrade = PAY_SHORT_RMC2E
+	name = "Sapper"
+	prefix = "Spr"
+	pay_multiplier = 2
+
 /datum/paygrade/twe/e3
 	paygrade = PAY_SHORT_RMC3
 	name = "Corporal"

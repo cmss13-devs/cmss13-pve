@@ -3109,6 +3109,20 @@ Defined in conflicts.dm of the #defines folder.
 	cocked = FALSE // we have fired so uncock the gun
 	loaded_grenades.Cut(1,2)
 
+//NSG L23 variant
+/obj/item/attachable/attached_gun/grenade/nsg
+	name = "\improper L34 30mm underslung grenade launcher"
+	desc = "Standard TWE pump action underslung grenade launcher. Fits the L23, two round tube, chambers one."
+	icon_state = "grenade-mk1"
+	attach_icon = "grenade-mk1_a"
+
+/obj/item/attachable/attached_gun/grenade/nsg/preloaded
+
+/obj/item/attachable/attached_gun/grenade/nsg/preloaded/New()
+	. = ..()
+	current_rounds = 2
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/rmc(src), new/obj/item/explosive/grenade/high_explosive/rmc(src))
+
 //For the Mk1
 /obj/item/attachable/attached_gun/grenade/mk1
 	name = "\improper PN 30mm underslung grenade launcher"
@@ -3145,13 +3159,6 @@ Defined in conflicts.dm of the #defines folder.
 	. = ..()
 	current_rounds = 2
 	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
-
-/obj/item/attachable/attached_gun/grenade/mk1/nsg/preloaded
-
-/obj/item/attachable/attached_gun/grenade/mk1/nsg/preloaded/New()
-	. = ..()
-	current_rounds = 2
-	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/rmc(src), new/obj/item/explosive/grenade/high_explosive/rmc(src))
 
 
 /obj/item/attachable/attached_gun/grenade/m120
