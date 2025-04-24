@@ -12,6 +12,7 @@
 		"Watch your head, crate dropping.",
 		"Dropping it.. now.",
 	)
+	call_in_line = "Station this is observer, requesting supplies on my lase, over!"
 	delay_to_impact = 2 SECONDS
 	start_visual = null
 	initiate_visual = /obj/effect/temp_visual/dropship_hover
@@ -68,6 +69,7 @@
 		"Take good care of him, would you?.",
 		"Sentry, on the way."
 	)
+	call_in_line = "Station this is observer, requesting a sentry pod on my target, over!"
 	delay_to_impact = 2 SECONDS
 	start_visual = null
 	initiate_visual = /obj/effect/temp_visual/dropship_hover

@@ -14,6 +14,7 @@
 		"Finally some targets! Strafe incomin'",
 		"Time to let these guns roar, we're inbound.",
 	)
+	call_in_line = "Station this is observer, requesting a strafing run on my target, over!"
 
 /datum/fire_support/gau/do_impact(turf/target_turf)
 	var/revdir = REVERSE_DIR(NORTH)
@@ -83,6 +84,7 @@
 		"Close your eyes or put some goggles on, laser pulsing!",
 		"Lets grill some motherfuckers!",
 	)
+	call_in_line = "Station this is observer, requesting a laser run on my target, over!"
 
 /datum/fire_support/laser/do_impact(turf/target_turf)
 	var/turf/start_turf = locate(clamp(target_turf.x + rand(-3, 3), 1, world.maxx), clamp(target_turf.y - 6, 1, world.maxy), target_turf.z)

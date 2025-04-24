@@ -13,6 +13,7 @@
 		"Missile inbound, keep your heads down.",
 		)
 	initiate_sound = 'sound/effects/IncomingRocket.ogg'
+	call_in_line = "Station this is observer, requesting a missile strike on my target, over!"
 	start_visual = null
 	start_sound = null
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/keeper
@@ -40,6 +41,7 @@
 	cost = 3
 	icon_state = "napalm_missile"
 	initiate_chat_message = "TARGET ACQUIRED NAPALM MISSILE INBOUND."
+	call_in_line = "Station this is observer, requesting napalm strike on my target, over!"
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/napalm
 
 /datum/fire_support/missile/napalm/do_impact(turf/target_turf)
@@ -59,6 +61,7 @@
 	cost = 2
 	icon_state = "smoke_missile"
 	initiate_chat_message = "TARGET ACQUIRED SMOKE MISSILE INBOUND."
+	call_in_line = "Station this is observer, requesting smoke strike on my target, over!"
 	impact_start_visual = /obj/effect/temp_visual/falling_obj/banshee
 	///smoke type created when the grenade is primed
 	var/datum/effect_system/smoke_spread/smoketype = /datum/effect_system/smoke_spread/bad
@@ -86,6 +89,7 @@
 	cost = 3
 	icon_state = "nerve_missile"
 	initiate_screen_message = list("Nerve gas, inbound!")
+	call_in_line = "Station this is observer, requesting CN-20 strike on my target, over!"
 	smoketype = /datum/effect_system/smoke_spread/cn20
 	smoke_duration = 30
 
@@ -102,6 +106,7 @@
 	cost = 2
 	icon_state = "lsd_missile"
 	initiate_screen_message = list("LSD gas, inbound!")
+	call_in_line = "Station this is observer, requesting LSD strike on my target, over!"
 	smoketype = /datum/effect_system/smoke_spread/LSD
 	smoke_duration = 30
 
