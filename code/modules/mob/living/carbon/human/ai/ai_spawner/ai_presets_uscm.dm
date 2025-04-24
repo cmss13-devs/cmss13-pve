@@ -25,3 +25,14 @@
 	name = "USCM Section Leader"
 	desc = "Functionally a rifleman. Armed with a M41A rifle, carries a simple IFAK with gauze, ointment, splints and an injector."
 	path = /datum/equipment_preset/uscm/leader_equipped
+
+/datum/human_ai_equipment_preset/uscm/rifleman/eva
+	name = "EVA USCM Squad Rifleman"
+	desc = "Armed with a M41A rifle, carries a simple IFAK with gauze, ointment, splints and an injector."
+	path = /datum/equipment_preset/uscm/private_equipped/eva
+
+/datum/human_ai_equipment_preset/uscm/medic/eva
+	name = "EVA USCM Squad Corpsman"
+	desc = "Able to stablize wounded. Armed with a M41A rifle, carries medical equipment."
+	path = /datum/equipment_preset/uscm/medic_equipped/eva
+

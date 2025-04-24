@@ -39,7 +39,7 @@
 		state = "enabled"
 	. += "Its mag-pulse traction system appears to be [state]."
 	if(auto_turn_off)
-	. += "This will automatically turn itself off after "
+		. += "This will automatically turn itself off after "
 	if(battery)
 		. += "\nThe charge meter reads <b>[floor(battery.percent() )]%</b>"
 

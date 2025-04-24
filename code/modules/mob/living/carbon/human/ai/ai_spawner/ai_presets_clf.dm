@@ -59,8 +59,14 @@
 
 /datum/human_ai_equipment_preset/clf/eva_rifle
 	name = "CLF Rifleman (Eva)"
-	desc = "Armed with a AR10. Relatively high damage output."
+	desc = "Armed with a AR10. Relatively high damage output. Can kill marines if not careful."
 	path = /datum/equipment_preset/clf/soldier/eva/rifle
+
+/datum/human_ai_equipment_preset/clf/eva_rifle
+	name = "CLF SMG+Grenade (Eva, grenades and SMG)"
+	desc = "Armed with a AP SMG and grenades. The SMG can be lethal in close quarters. Might not actually throw any grenades."
+	path = /datum/equipment_preset/clf/soldier/eva/grenades
+
 
 /datum/human_ai_equipment_preset/clf/eva_sniper
 	name = "CLF Sniper (Eva)"
@@ -68,7 +74,7 @@
 	path = /datum/equipment_preset/clf/soldier/eva/sniper
 
 /datum/human_ai_equipment_preset/clf/eva_engie
-	name = "CLF Engineer (Eva)"
+	name = "CLF Engineer (Eva, flamethower(!!!))"
 	desc = "Engineer. ARMED WITH FLAMER."
 	path = /datum/equipment_preset/clf/engineer/eva
 

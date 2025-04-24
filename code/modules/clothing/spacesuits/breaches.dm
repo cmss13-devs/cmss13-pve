@@ -79,7 +79,7 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 		return
 
 		if(!breaches)
-		breaches = list()
+			breaches = list()
 
 	if(damage > 35) return //We don't need to keep tracking it when it's so high.
 
