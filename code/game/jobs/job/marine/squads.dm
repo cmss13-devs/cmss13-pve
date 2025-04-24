@@ -50,7 +50,7 @@
 	/// maximum # of specs allowed in the squad
 	var/max_specialists = 5
 	/// maximum # of fireteam leaders allowed in the suqad
-	var/max_tl = 3
+	var/max_tl = 4
 	/// maximum # of smartgunners allowed in the squad
 	var/max_smartgun = 2
 	/// maximum # of squad leaders allowed in the squad
@@ -556,12 +556,13 @@
 		if(JOB_SQUAD_MARINE)
 			assignment = JOB_SQUAD_MARINE
 			num_riflemen++
-			var/squad_number = (ceil(num_riflemen / 2) > 2) ? pick(1, 2) : ceil(num_riflemen / 2)
+			var/squad_number = (ceil(num_riflemen / 2) > 4) ? pick(1, 2, 3, 4) : ceil(num_riflemen / 2)
 			assign_fireteam("SQ[squad_number]", M)
 		if(JOB_SQUAD_ENGI)
 			assignment = JOB_SQUAD_ENGI
 			num_engineers++
 			C.claimedgear = FALSE
+			assign_fireteam("SQ3", M)
 		if(JOB_SQUAD_MEDIC)
 			assignment = JOB_SQUAD_MEDIC
 			num_medics++
@@ -573,7 +574,7 @@
 			assignment = JOB_SQUAD_TEAM_LEADER
 			num_tl++
 			M.important_radio_channels += radio_freq
-			var/squad_number = (num_tl > 2) ? pick(1, 2) : num_tl
+			var/squad_number = (num_tl > 4)	? pick(1, 2, 3, 4) : num_tl
 			assign_fireteam("SQ[squad_number]", M)
 			assign_ft_leader("SQ[squad_number]", M)
 		if(JOB_SQUAD_SMARTGUN)
