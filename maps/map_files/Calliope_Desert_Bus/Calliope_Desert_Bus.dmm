@@ -4445,7 +4445,6 @@
 	pixel_x = -5;
 	pixel_y = 1
 	},
-/obj/item/storage/box/wy_mre,
 /turf/open/floor/prison,
 /area/calliope_route/tunnel/generator_maints)
 "qo" = (
@@ -6101,7 +6100,6 @@
 	light_power = 0.5;
 	pixel_y = 10
 	},
-/obj/item/storage/box/wy_mre,
 /turf/open/floor/prison/floor_plate,
 /area/calliope_route/exterior_buildings/buildings)
 "wd" = (
@@ -12378,13 +12376,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/warnplate/north,
 /area/calliope_route/tunnel/maintenance_hall)
-"RA" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/item/storage/box/wy_mre,
-/turf/open/floor/prison/floor_plate,
-/area/calliope_route/exterior_buildings/buildings)
 "RB" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 23;
@@ -84227,7 +84218,7 @@ do
 Np
 zt
 Rx
-RA
+Np
 do
 do
 do
