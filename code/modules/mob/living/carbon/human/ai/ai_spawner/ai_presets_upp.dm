@@ -55,6 +55,11 @@
 	desc = "Standard soldier apart from carrying plastic explosives and a tool belt."
 	path = /datum/equipment_preset/upp/rifleman/enginner_eva_basic
 
+/datum/human_ai_equipment_preset/upp/eva_rocket
+	name = "EVA UPP Squad AP Rocketeer(!!)"
+	desc = "Carries a UPP rocket launcher loaded with a single AP rocket, and a sidearm."
+	path = /datum/equipment_preset/upp/rifleman/eva_rocket
+
 /datum/human_ai_equipment_preset/upp/grenade_eva
 	name = "EVA UPP Squad Grenadier"
 	desc = "The standard UPP soldiers but with a SMG and an excess of grenades to throw. Might not actually throw any."

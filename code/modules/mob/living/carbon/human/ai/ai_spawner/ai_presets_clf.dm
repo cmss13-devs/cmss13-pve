@@ -53,7 +53,7 @@
 	path = /datum/equipment_preset/clf/commander
 
 /datum/human_ai_equipment_preset/clf/eva_shotgun
-	name = "CLF Shotgunner (Eva)"
+	name = "CLF Shotgunner(!!) (Eva)"
 	desc = "Close-quarters specialist. Fairly poorly equipped except for a shotgun, which can shred marines who get too close."
 	path = /datum/equipment_preset/clf/soldier/eva
 
@@ -66,7 +66,6 @@
 	name = "CLF SMG+Grenade (Eva, grenades and SMG)"
 	desc = "Armed with a AP SMG and grenades. The SMG can be lethal in close quarters. Might not actually throw any grenades."
 	path = /datum/equipment_preset/clf/soldier/eva/grenades
-
 
 /datum/human_ai_equipment_preset/clf/eva_sniper
 	name = "CLF Sniper (Eva)"

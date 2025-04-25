@@ -187,6 +187,7 @@
 	. = ..()
 	MD = new(src)
 	integrated_tank = new /obj/item/tank/emergency_oxygen/double(src)
+	integrated_tank.name = name + " Integrated Tank"
 /obj/item/clothing/suit/space/pressure/Destroy()
 	QDEL_NULL(MD)
 	. = ..()
@@ -199,11 +200,24 @@
 /obj/item/clothing/suit/space/pressure/attackby(obj/item/W as obj, mob/user as mob)
 	. = ..()
 	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+		if(istype(user, /mob/living/carbon/human))
+			var/mob/living/carbon/human/is_wearing_self = user
+			if(is_wearing_self.wear_suit == src)
+				to_chat(user, SPAN_NOTICE("You can't reach around to the integrated tank slot while your suit is being worn. Ask somewhere else to help you."))
+				return
 		if(integrated_tank != null)
-			user.drop_inv_item_on_ground(integrated_tank)
+			playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
+			if(!do_after(user, 20, INTERRUPT_ALL, BUSY_ICON_BUILD))
+				return
+			playsound(src.loc, 'sound/effects/hatch_open.ogg', 25, 1)
+			user.put_in_any_hand_if_possible(integrated_tank)
 			integrated_tank = null
 	else
 		if(istype(W, /obj/item/tank/emergency_oxygen))
+			playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
+			if(!do_after(user, 20, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+				return
+			playsound(src.loc, 'sound/effects/metal_clink.ogg', 25, 1)
 			integrated_tank = W
 			user.drop_inv_item_to_loc(W, src)
 

@@ -66,6 +66,17 @@
 	pressure = 3*ONE_ATMOSPHERE
 	pressure_full = 3*ONE_ATMOSPHERE
 
+/obj/item/tank/emergency_oxygen/attack(mob/M as mob, mob/user as mob)
+	. = ..()
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+
+	//Address the integrated tank on Spacesuit on the person being targeted
+		var/obj/item/clothing/suit/space/pressure/tank_to_replace = H.wear_suit
+		if((istype(H.wear_suit, /obj/item/clothing/suit/space/pressure)))
+			tank_to_replace.attackby(src, user)
+			return
+
 /obj/item/tank/get_examine_text(mob/user)
 	. = ..()
 	if(pressure < 100 && loc==user)
