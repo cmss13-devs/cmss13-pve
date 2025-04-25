@@ -84,6 +84,7 @@
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "Tank", name)
+		ui.keep_open_if_on_same_loc = TRUE
 		ui.open()
 
 /obj/item/tank/ui_state(mob/user)
@@ -102,8 +103,8 @@
 	var/mask_connected = FALSE
 	var/using_internal = FALSE
 
-	if(istype(loc,/mob/living/carbon))
-		var/mob/living/carbon/location = loc
+	if(istype(get_atom_on_turf(loc),/mob/living/carbon))
+		var/mob/living/carbon/location = get_atom_on_turf(loc)
 		if(location.internal == src)
 			using_internal = TRUE
 		if(location.internal == src || location.check_for_oxygen_mask())
@@ -150,8 +151,8 @@
 			. = TRUE
 
 		if("valve")
-			if(istype(loc,/mob/living/carbon/human))
-				var/mob/living/carbon/human/location = loc
+			if(istype(get_atom_on_turf(loc),/mob/living/carbon/human))
+				var/mob/living/carbon/human/location = get_atom_on_turf(loc)
 				if(location.internal == src)
 					location.internal = null
 					to_chat(usr, SPAN_NOTICE("You close the tank release valve."))

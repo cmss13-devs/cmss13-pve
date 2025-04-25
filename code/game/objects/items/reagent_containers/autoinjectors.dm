@@ -124,6 +124,10 @@
 	display_maptext = TRUE
 	maptext_label = "Ad"
 
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated/New(loc, ...)
+	. = ..()
+	new /obj/item/device/helmet_visor/medical/advanced(loc)
+
 /obj/item/reagent_container/hypospray/autoinjector/dexalinp
 	name = "dexalin plus autoinjector"
 	chemname = "dexalinp"

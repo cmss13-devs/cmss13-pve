@@ -156,7 +156,7 @@
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROT
 	siemens_coefficient = 0.1
 	breach_vulnerability = SPACESUIT_BREACH_STANDARD
-	actions_types = list(/datum/action/item_action/spacesuit/toggle_motion_detector)
+	actions_types = list(/datum/action/item_action/spacesuit/toggle_motion_detector, /datum/action/item_action/toggle)
 	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_ARMBAND)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMBAND)
 	allowed = list(
@@ -181,14 +181,31 @@
 		/obj/item/storage/belt/gun/utility,
 	)
 	var/obj/item/device/motiondetector/spacesuit/MD
+	var/obj/item/tank/emergency_oxygen/integrated_tank
 
 /obj/item/clothing/suit/space/pressure/Initialize()
 	. = ..()
 	MD = new(src)
-
+	integrated_tank = new /obj/item/tank/emergency_oxygen/double(src)
 /obj/item/clothing/suit/space/pressure/Destroy()
 	QDEL_NULL(MD)
 	. = ..()
+
+/obj/item/clothing/suit/space/pressure/attack_self(mob/user)
+	..()
+	if(integrated_tank)
+		integrated_tank.attack_self(user)
+
+/obj/item/clothing/suit/space/pressure/attackby(obj/item/W as obj, mob/user as mob)
+	. = ..()
+	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+		if(integrated_tank != null)
+			user.drop_inv_item_on_ground(integrated_tank)
+			integrated_tank = null
+	else
+		if(istype(W, /obj/item/tank/emergency_oxygen))
+			integrated_tank = W
+			user.drop_inv_item_to_loc(W, src)
 
 //Delay of long mode with range of short mode
 /obj/item/device/motiondetector/spacesuit
