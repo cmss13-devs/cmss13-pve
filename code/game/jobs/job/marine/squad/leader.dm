@@ -14,6 +14,8 @@
 
 	job_options = list(SSGT_VARIANT = "SSGT", GYSGT_VARIANT = "GYSGT")
 
+	preview_gear_preset = /datum/equipment_preset/uscm/leader_equipped
+
 /datum/job/marine/leader/handle_job_options(option)
 	if(option != SSGT_VARIANT)
 		gear_preset = initial(gear_preset)
@@ -59,6 +61,7 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	title = JOB_SQUAD_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/leader/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/upp/lesser_rank
+	preview_gear_preset = /datum/equipment_preset/upp/navallead
 
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
