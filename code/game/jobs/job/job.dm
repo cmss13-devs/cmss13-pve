@@ -44,6 +44,9 @@
 	/// Whether or not having enough playtime will allow you to primeroll
 	var/prime_priority = FALSE
 
+	/// For showing presets during character creation.
+	var/preview_gear_preset
+
 /datum/job/New()
 	. = ..()
 

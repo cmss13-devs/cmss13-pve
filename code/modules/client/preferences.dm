@@ -772,14 +772,11 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 				if(LOW_PRIORITY)
 					b_color = "orange"
 					priority_text = "LOW"
-
 			if(j == PRIME_PRIORITY && !host_bypass && (!job.prime_priority || user.client?.get_total_human_playtime() < JOB_PLAYTIME_TIER_2))
 				continue
-
 			HTML += "<a class='[j == cur_priority ? b_color : "inactive"]' href='byond://?_src_=prefs;preference=job;task=input;text=[job.title];target_priority=[j];'>[priority_text]</a>"
 			if (j < 4)
 				HTML += "&nbsp"
-
 		HTML += "</td></tr>"
 
 	HTML += "</td></tr></table>"
@@ -800,7 +797,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	HTML += "<center><a href='byond://?_src_=prefs;preference=job;task=reset'>Reset</a></center>"
 	HTML += "</tt></body>"
-
+	update_preview_icon()
 	close_browser(user, "preferences")
 	show_browser(user, HTML, "Job Preferences", "mob_occupation", width = width, height = height)
 	onclose(user, "mob_occupation", user.client, list("_src_" = "prefs", "preference" = "job", "task" = "close"))
