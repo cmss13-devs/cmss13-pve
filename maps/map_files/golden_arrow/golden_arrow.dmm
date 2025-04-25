@@ -90,6 +90,15 @@
 /obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
+"aam" = (
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "aan" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -151,6 +160,15 @@
 	pixel_x = 9
 	},
 /turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/cryo_cells)
+"aar" = (
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aas" = (
 /obj/effect/decal/warning_stripes{
@@ -3174,13 +3192,11 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "alc" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Section Sergeant"
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Corpsman"
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -4298,10 +4314,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "aoU" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -7802,13 +7818,11 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "aAI" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Squad Leader"
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -8854,13 +8868,11 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/prep_hallway)
 "aEe" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Squad Leader"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -9212,13 +9224,7 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoonprep)
 "aFo" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Commander"
-	},
-/obj/item/clothing/under/marine/officer/boiler,
-/obj/item/clothing/suit/storage/jacket/marine/service,
-/obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber,
-/obj/item/clothing/under/marine/officer/bridge,
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aFr" = (
@@ -12847,7 +12853,7 @@
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	pixel_y = -1
 	},
-/obj/item/storage/box/nade_box{
+/obj/item/ammo_box/magazine/nade_box{
 	pixel_y = 15;
 	layer = 3.2;
 	pixel_x = -4
@@ -15453,7 +15459,7 @@
 /area/golden_arrow/medical)
 "cMX" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/storage/box/nade_box/smoke/red{
+/obj/item/ammo_box/magazine/nade_box/smoke/red{
 	pixel_x = 4;
 	pixel_y = 7
 	},
@@ -15614,7 +15620,7 @@
 	pixel_x = 1;
 	layer = 3.2
 	},
-/obj/item/storage/box/nade_box/flare{
+/obj/item/ammo_box/magazine/nade_box/flare{
 	pixel_x = 1
 	},
 /turf/open/floor/almayer,
@@ -15934,7 +15940,7 @@
 /area/golden_arrow/engineering)
 "exo" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/storage/box/nade_box/smoke{
+/obj/item/ammo_box/magazine/nade_box/smoke{
 	pixel_y = -7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -17438,7 +17444,7 @@
 /area/golden_arrow/synthcloset)
 "kBG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/nade_box{
+/obj/item/ammo_box/magazine/nade_box{
 	pixel_y = 13;
 	layer = 3.2
 	},
@@ -25713,7 +25719,7 @@ aFo
 awW
 apm
 alD
-alc
+aam
 aog
 alc
 awW
@@ -26063,7 +26069,7 @@ aWh
 aWh
 aWh
 aWh
-aAI
+aar
 aZw
 amS
 azT

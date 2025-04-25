@@ -46,7 +46,7 @@
 	log_game("[key_name(human_owner)] has broadcasted the hud message [text] at [AREACOORD(human_owner)]")
 	var/override_color
 	var/list/alert_receivers = list()
-	var/sound_alert
+	var/sound_alert = 'sound/effects/radiostatic.ogg'
 	var/announcement_title
 
 	if(human_owner.assigned_squad)
@@ -72,12 +72,10 @@
 				override_color = "green"
 			else
 				override_color = "grey"
-		sound_alert = 'sound/misc/notice2.ogg'
 	else
 		for(var/mob/living/carbon/human/alerted in GLOB.alive_human_list)
 			if(alerted.faction == human_owner.faction)
 				alert_receivers += alerted
-		sound_alert = 'sound/effects/sos-morse-code.ogg'
 		announcement_title = "[human_owner.job]'s Announcement"
 	alert_receivers += GLOB.observer_list
 	if(GLOB.radio_communication_clarity < 100)

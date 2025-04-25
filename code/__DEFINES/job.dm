@@ -15,14 +15,17 @@
 #define SQUAD_FORECON "FORECON"
 #define SQUAD_SOLAR "Solar Devils"
 #define SQUAD_UPP "Red Dawn"
+#define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_LRRP "Snake Eaters"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
 #define JOB_SQUAD_LEADER "Section Sergeant"
-#define JOB_SQUAD_ENGI "Combat Technician"
+#define JOB_SQUAD_ENGI "Combat Engineer"
 #define JOB_SQUAD_MEDIC "Corpsman"
 #define JOB_SQUAD_SPECIALIST "Weapons Specialist"
+#define JOB_SQUAD_SPOTTER "Spotter"
+#define JOB_SQUAD_LOADER "Weapons Loader"
 #define JOB_SQUAD_TEAM_LEADER "Squad Leader"
 #define JOB_SQUAD_SMARTGUN "Smartgunner"
 #define JOB_SQUAD_ROLES /datum/timelock/squad
@@ -109,7 +112,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_POLICE_ROLES /datum/timelock/mp
 #define JOB_POLICE_ROLES_LIST    list(JOB_POLICE, JOB_WARDEN, JOB_CHIEF_POLICE)
 
-#define JOB_SEA "Senior Enlisted Advisor"
+#define JOB_DI "Drill Instructor"
 
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
 #define JOB_MAINT_TECH "Maintenance Technician"
@@ -117,8 +120,10 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_ENGINEER_ROLES   /datum/timelock/engineer
 #define JOB_ENGINEER_ROLES_LIST  list(JOB_SQUAD_ENGI, JOB_MAINT_TECH, JOB_ORDNANCE_TECH, JOB_CHIEF_ENGINEER)
 
-#define JOB_CHIEF_REQUISITION "Quartermaster"
-#define JOB_CARGO_TECH "Cargo Technician"
+#define JOB_CHIEF_REQUISITION "Logistics Officer"
+#define JOB_CARGO_CHIEF "Logistics Chief"
+#define JOB_ARMORER "Armorer"
+#define JOB_CARGO_TECH "Logistics Specialist"
 #define JOB_REQUISITION_ROLES    /datum/timelock/requisition
 #define JOB_REQUISITION_ROLES_LIST   list(JOB_CHIEF_REQUISITION, JOB_CARGO_TECH)
 
@@ -202,12 +207,14 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_ARMY_ATFIRE "Army AT Gunner"
 #define JOB_ARMY_ENGI "Army Combat Engineering Technician"
 #define JOB_ARMY_MT "Army Technical Engineer"
+#define JOB_ARMY_CT "Army Logistics Specialist"
 #define JOB_ARMY_MEDIC "Army Combat Medical Technician"
 #define JOB_ARMY_NCO "Army Fireteam Lead"
 #define JOB_ARMY_SNCO "Army Squad Leader"
 #define JOB_ARMY_LT "Army Lieutenant"
 #define JOB_ARMY_INTEL "Army Intelligence Officer"
 #define JOB_ARMY_RESEARCHER "Army Science Officer"
+#define JOB_ARMY_QM "Army Logistics Officer"
 
 //-------- USASF --------//
 #define JOB_NAVY_CREWMAN "USASF Crewman"
@@ -217,6 +224,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_NAVY_JTAC "USASF Orbital Fire-Support Liason Officer"
 #define JOB_NAVY_PARA_TECH "USASF Para-Rescue Support Technician"
 #define JOB_NAVY_SYNTH "USASF Support Synthetic"
+#define JOB_NAVY_PILOT "USASF Pilot"
 #define JOB_NAVY_CHIEF_ENGINEER "USASF Engineering Duty Officer"
 #define JOB_NAVY_FLIGHT_BOSS "USASF Flight-Deck Officer"
 #define JOB_NAVY_SO "USASF Duty Officer"
@@ -266,6 +274,16 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_WY_GOON_RESEARCHER "WY Research Consultant"
 
 #define ROLES_WY_GOONS list(JOB_WY_GOON_LEAD, JOB_WY_GOON_TECH, JOB_WY_GOON)
+
+////-------- PMC PLATOON --------//
+
+#define JOB_PMCPLAT_OW "Overwatch Operator"
+#define JOB_PMCPLAT_LEADER "Operations Leader"
+#define JOB_PMCPLAT_FTL "Team Leader"
+#define JOB_PMCPLAT_SG "Heavy Weapons Specialist"
+#define JOB_PMCPLAT_STANDARD "Tactical Unit"
+#define JOB_PMCPLAT_MEDIC "Medical Specialist"
+
 
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
