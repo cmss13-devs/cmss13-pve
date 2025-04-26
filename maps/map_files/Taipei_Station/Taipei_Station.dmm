@@ -250,16 +250,6 @@
 "akC" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/platform/kutjevo/smooth{
-	light_power = 2;
-	light_range = 5;
-	light_on = 1
-	},
-/obj/structure/platform/kutjevo/smooth{
-	light_power = 2;
-	light_range = 5;
-	light_on = 1
-	},
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /area/taipei/theatre)
 "alc" = (
@@ -3635,11 +3625,6 @@
 	luminosity = 15
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/platform/kutjevo/smooth{
-	light_power = 2;
-	light_range = 5;
-	light_on = 1
-	},
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /area/taipei/theatre)
 "dap" = (
@@ -5216,7 +5201,9 @@
 "epx" = (
 /obj/structure/machinery/door/airlock/almayer/generic/autoname,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered,
+/turf/open/floor/whitered{
+	dir = 4
+	},
 /area/taipei/atrium/restaurant)
 "epz" = (
 /obj/structure/surface/table,
@@ -5514,11 +5501,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/biodome,
 /area/taipei/atrium)
-"eCH" = (
-/obj/structure/window/framed/corsat,
-/obj/structure/machinery/door/poddoor/shutters/almayer/open,
-/turf/closed/wall/biodome,
-/area/taipei/atrium/store)
 "eCP" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -8280,10 +8262,6 @@
 	dir = 8
 	},
 /area/taipei/atrium)
-"hnF" = (
-/obj/structure/window/framed/almayer,
-/turf/closed/wall/almayer,
-/area/taipei/telecomms)
 "hnO" = (
 /obj/structure/platform_decoration,
 /obj/effect/decal/cleanable/dirt,
@@ -8480,12 +8458,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/taipei/hangar)
-"hvr" = (
-/obj/structure/platform/kutjevo/smooth,
-/obj/structure/platform/kutjevo/smooth,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/tan/alt_edge/north,
-/area/taipei/atrium)
 "hvt" = (
 /obj/structure/surface/table,
 /obj/item/storage/fancy/cigarettes/lady_finger{
@@ -17442,11 +17414,6 @@
 /area/taipei/cargo)
 "pza" = (
 /obj/structure/platform/kutjevo/smooth,
-/obj/structure/platform/kutjevo/smooth{
-	light_power = 2;
-	light_range = 5;
-	light_on = 1
-	},
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /area/taipei/theatre)
 "pzg" = (
@@ -17879,16 +17846,6 @@
 /turf/open/floor/prison,
 /area/taipei/club)
 "pOp" = (
-/obj/item/trash/popcorn{
-	dir = 1;
-	pixel_y = 10
-	},
-/obj/structure/platform/kutjevo/smooth{
-	light_power = 2;
-	light_range = 5;
-	light_on = 1
-	},
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/platform/kutjevo/smooth{
 	light_power = 2;
 	light_range = 5;
@@ -18627,13 +18584,6 @@
 	},
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
-"qxh" = (
-/obj/structure/platform/kutjevo/smooth,
-/obj/structure/platform/kutjevo/smooth,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/tan/alt_edge/north,
-/area/taipei/atrium)
 "qxw" = (
 /turf/closed/wall/biodome,
 /area/taipei/atrium/restaurant)
@@ -21311,7 +21261,6 @@
 	},
 /area/taipei/club)
 "sFd" = (
-/obj/structure/platform/kutjevo/smooth,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform/kutjevo/smooth{
 	light_power = 2;
@@ -26092,10 +26041,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor,
 /area/taipei/atrium)
-"wVE" = (
-/obj/structure/window/reinforced/toughened,
-/turf/closed/wall/r_wall/prison,
-/area/taipei/cmb)
 "wVX" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2,
 /turf/open/floor/prison,
@@ -26574,11 +26519,6 @@
 "xor" = (
 /obj/structure/platform/kutjevo/smooth{
 	luminosity = 15
-	},
-/obj/structure/platform/kutjevo/smooth{
-	light_power = 2;
-	light_range = 5;
-	light_on = 1
 	},
 /turf/open/floor/prison/chapel_carpet/doubleside/north,
 /area/taipei/theatre)
@@ -34548,7 +34488,7 @@ vqo
 vqo
 pTu
 pJt
-wVE
+vqo
 pJt
 pTu
 vqo
@@ -42640,7 +42580,7 @@ ccY
 orR
 oAr
 jEW
-eCH
+bBX
 foN
 cEB
 ryw
@@ -43433,7 +43373,7 @@ vNo
 lGV
 iQN
 wZZ
-hvr
+dAe
 pZV
 jJr
 mmO
@@ -43668,7 +43608,7 @@ hlR
 fNo
 hlR
 aTY
-akC
+sFd
 brs
 uot
 iaN
@@ -44072,7 +44012,7 @@ sad
 aTY
 rkq
 aTY
-pza
+pOp
 brs
 uot
 omI
@@ -44274,7 +44214,7 @@ sad
 kWp
 hlR
 kWp
-pza
+pOp
 brs
 uot
 iaN
@@ -44847,7 +44787,7 @@ gak
 juE
 oAr
 jEW
-qxh
+mmU
 nIY
 mSG
 ayj
@@ -45082,7 +45022,7 @@ gHz
 reM
 hlR
 lgD
-cZQ
+sFd
 brs
 uot
 iaN
@@ -45476,7 +45416,7 @@ iJo
 tYE
 mAf
 vGe
-wuw
+kJO
 dvN
 sjQ
 aTY
@@ -45688,7 +45628,7 @@ sad
 aTY
 hlR
 fNo
-pza
+pOp
 brs
 uot
 iaN
@@ -61005,7 +60945,6 @@ glh
 glh
 bYy
 bYy
-hnF
 mpR
 mpR
 mpR
@@ -61013,7 +60952,8 @@ mpR
 mpR
 mpR
 mpR
-hnF
+mpR
+mpR
 bYy
 bYy
 nvl
