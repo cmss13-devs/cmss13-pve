@@ -3113,8 +3113,6 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/attached_gun/grenade/nsg
 	name = "\improper L34 30mm underslung grenade launcher"
 	desc = "Standard TWE pump action underslung grenade launcher. Fits the L23, two round tube, chambers one."
-	icon_state = "grenade-mk1"
-	attach_icon = "grenade-mk1_a"
 
 /obj/item/attachable/attached_gun/grenade/nsg/preloaded
 

@@ -110,7 +110,7 @@
 
 /obj/item/weapon/gun/rifle/nsg23
 	name = "\improper NSG L23A1 pulse rifle"
-	desc = "Pulse action 10x24mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine Commando. Features an integrated 30mm grenade launcher and ammo tube that can hold two grenades on backup."
+	desc = "Pulse action 8.5x33mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine Commando. Features an integrated 30mm grenade launcher and ammo tube that can hold two grenades on backup."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
@@ -130,11 +130,12 @@
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/stock/nsg23,
 		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/attached_gun/grenade/nsg,
 	)
 
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/attached_gun/grenade/nsg,
 		/obj/item/attachable/stock/nsg23,
 	)
 
