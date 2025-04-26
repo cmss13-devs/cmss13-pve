@@ -291,14 +291,6 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4*4)
 
-/obj/item/weapon/gun/launcher/grenade/m92/able_to_fire(mob/living/user)
-	. = ..()
-	if (. && istype(user))
-		if(!skillcheck(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_GRENADIER)
-			to_chat(user, SPAN_WARNING("You don't seem to know how to use \the [src]..."))
-			return FALSE
-
-
 //-------------------------------------------------------
 //M81 GRENADE LAUNCHER
 
@@ -349,7 +341,7 @@
 	preload = null
 	is_lobbing = TRUE
 	actions_types = list(/datum/action/item_action/toggle_firing_level)
-	valid_munitions = list(/obj/item/explosive/grenade/baton/m79, /obj/item/explosive/grenade/smokebomb/airburst, /obj/item/explosive/grenade/high_explosive/airburst/starshell, /obj/item/explosive/grenade/incendiary/impact, /obj/item/explosive/grenade/high_explosive/impact, /obj/item/explosive/grenade/high_explosive/airburst/buckshot)
+	valid_munitions = list(/obj/item/explosive/grenade/slug/baton/m79, /obj/item/explosive/grenade/smokebomb/airburst, /obj/item/explosive/grenade/high_explosive/airburst/starshell, /obj/item/explosive/grenade/incendiary/impact, /obj/item/explosive/grenade/high_explosive/impact, /obj/item/explosive/grenade/high_explosive/impact/frag, /obj/item/explosive/grenade/high_explosive/airburst/buckshot)
 
 	fire_sound = 'sound/weapons/handling/m79_shoot.ogg'
 	cocked_sound = 'sound/weapons/handling/m79_break_open.ogg'
@@ -358,7 +350,6 @@
 
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/stock/m79,

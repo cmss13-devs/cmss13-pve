@@ -132,6 +132,9 @@
 	///datum that controls the displaying and hiding of tooltips
 	var/datum/tooltip/tooltips
 
+	/// If this client has any windows scaling applied
+	var/window_scaling
+
 	/// Holds the game master datum for this client
 	var/datum/game_master/game_master_menu
 
