@@ -239,7 +239,7 @@
 /datum/equipment_preset/royal_marine/mortar
 	name = "TWE Royal Marine Commando, Mortar Gunner"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC2G = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM HW(MOR)"
 	assignment = JOB_TWE_RMC_BREACHER
 	rank = JOB_TWE_RMC_BREACHER

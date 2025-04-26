@@ -27,6 +27,12 @@
 	prefix = "Spr"
 	pay_multiplier = 2
 
+/datum/paygrade/twe/e2g //RMC also gets indirect fire support from the army royal artillery. Again, don't see them changing that tradition
+	paygrade = PAY_SHORT_RMC2G
+	name = "Gunner"
+	prefix = "Gnr"
+	pay_multiplier = 2
+
 /datum/paygrade/twe/e3
 	paygrade = PAY_SHORT_RMC3
 	name = "Corporal"
