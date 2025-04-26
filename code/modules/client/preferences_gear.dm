@@ -1452,9 +1452,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
 
-/datum/gear/misc/patch_uscm/devils
-	display_name = "Solar Devils shoulder patch"
-	path = /obj/item/clothing/accessory/patch/devils
+/datum/gear/misc/patch_uscm/deuce
+	display_name = "Double Deuce shoulder patch"
+	path = /obj/item/clothing/accessory/patch/deuce
 
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
