@@ -45,13 +45,12 @@
 	prefix = "CSgt"
 	pay_multiplier = 2.4
 
-//RMC Warrent Officer
+//RMC Warrant Officer - Different from US ones, equiv to US E8 & E9 technical & command track ranks for the brits
 /datum/paygrade/twe/wo1
 	paygrade = PAY_SHORT_RMOW
 	name = "Warrant Officer"
 	prefix = "WO"
 	pay_multiplier = 3.5
-	officer_grade = GRADE_OFFICER
 
 //RMC Officers
 /datum/paygrade/twe/o1

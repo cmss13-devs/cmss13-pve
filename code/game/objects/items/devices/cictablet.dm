@@ -199,4 +199,4 @@
 	announcement_title = TWE_COMMAND_ANNOUNCE
 	announcement_faction = FACTION_TWE
 	req_access = list(ACCESS_TWE_LEADERSHIP)
-	minimap_type = MINIMAP_FLAG_PMC
+	minimap_type = MINIMAP_FLAG_TWE

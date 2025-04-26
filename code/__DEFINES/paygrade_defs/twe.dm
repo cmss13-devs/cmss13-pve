@@ -19,7 +19,7 @@
 /// RMC4, Sergeant
 #define PAY_SHORT_RMC4 "RMC4"
 
-/// RMC4, Colour-Sergeant
+/// RMC5, Colour-Sergeant
 #define PAY_SHORT_RMC5 "RMC5"
 
 /// RMOW, Warrant Officer

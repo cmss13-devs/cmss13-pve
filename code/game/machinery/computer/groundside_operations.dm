@@ -398,7 +398,7 @@
 	add_pmcs = FALSE
 	lz_selection = FALSE
 	has_squad_overwatch = FALSE
-	minimap_type = MINIMAP_FLAG_PMC
+	minimap_type = MINIMAP_FLAG_TWE
 
 /obj/structure/machinery/computer/groundside_operations/arc
 	icon = 'icons/obj/vehicles/interiors/arc.dmi'

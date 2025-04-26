@@ -698,6 +698,7 @@
 	desc = "A special headset used by the TWE's elite Royal Marine Commandos."
 	icon_state = "upp_headset"
 	item_state = "upp_headset"
+	minimap_type = MINIMAP_FLAG_TWE
 	frequency = RMC_FREQ
 	initial_keys = null
 	has_hud = FALSE

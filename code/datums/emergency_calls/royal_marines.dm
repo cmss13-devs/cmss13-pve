@@ -28,7 +28,7 @@
 	if(!leader && HAS_FLAG(mob.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(mob.client, JOB_SQUAD_LEADER, time_required_for_job))
 		leader = mob
 		to_chat(mob, SPAN_ROLE_HEADER("You are an Officer in the Royal Marines Commando. Born in the Three World Empire."))
-		arm_equipment(mob, /datum/equipment_preset/royal_marine/team_leader, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/royal_marine/leader, TRUE, TRUE)
 	else if(heavies < max_heavies && HAS_FLAG(mob.client.prefs.toggles_ert, PLAY_HEAVY) && check_timelock(mob.client, JOB_SQUAD_SPECIALIST))
 		var/specialist_kit = pick("Sniper", "Smartgun", "Breach")
 		switch(specialist_kit)
