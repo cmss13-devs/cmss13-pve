@@ -5201,9 +5201,7 @@
 "epx" = (
 /obj/structure/machinery/door/airlock/almayer/generic/autoname,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 4
-	},
+/turf/open/floor/whitered,
 /area/taipei/atrium/restaurant)
 "epz" = (
 /obj/structure/surface/table,
