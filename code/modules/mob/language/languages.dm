@@ -200,7 +200,7 @@
 	speech_verb = "states"
 	ask_verb = "queries"
 	exclaim_verb = "declares"
-	key = "6"
+	key = "a"
 	flags = RESTRICTED|HIVEMIND
 
 /datum/language/apollo/broadcast(mob/living/speaker, message, speaker_mask)
@@ -251,5 +251,5 @@
 	ask_verb = "resonates"
 	exclaim_verb = "resonates"
 	color = "tajaran"
-	key = "8"
+	key = "t"
 	flags = RESTRICTED|HIVEMIND
