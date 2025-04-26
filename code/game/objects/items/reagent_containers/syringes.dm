@@ -442,6 +442,16 @@
 	mode = SYRINGE_INJECT
 	update_icon()
 
+/obj/item/reagent_container/syringe/leporazine
+	name = "syringe (temperature stabilizer)"
+	desc = "Contains used to steady body temperature, whatever from burns or exposure to space."
+
+/obj/item/reagent_container/syringe/drugs/Initialize()
+	. = ..()
+	reagents.add_reagent("leporazine", 15)
+	mode = SYRINGE_INJECT
+	update_icon()
+
 /obj/item/reagent_container/syringe/drugs
 	name = "syringe (drugs)"
 	desc = "Contains aggressive drugs meant for torture."

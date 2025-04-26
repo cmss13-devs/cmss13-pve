@@ -65,6 +65,11 @@
 		return FALSE
 
 	if(istype(M, /mob/living/carbon))
+		if(istype(M, /mob/living/carbon/human) )
+			var/mob/living/carbon/human/H = M
+			if(H.helmet_blocking_mouth())
+				to_chat(user, SPAN_WARNING("You can't make [user == M ? "yourself" : "[M]"] eat the [src], the [H.head] is in the way!."))
+				return
 		var/mob/living/carbon/C = M
 		var/fullness = M.nutrition + (M.reagents.get_reagent_amount("nutriment") * 25)
 		if(fullness > NUTRITION_HIGH && world.time < C.overeat_cooldown)

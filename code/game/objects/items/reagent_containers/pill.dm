@@ -92,6 +92,10 @@
 			to_chat(H, SPAN_DANGER("They have a monitor for a head, where do you think you're going to put that?"))
 			return
 
+		if(H.helmet_blocking_mouth())
+			to_chat(user, SPAN_WARNING("You can't give [H] the pill, their [H.head] is blocking their mouth."))
+			return
+
 		user.affected_message(M,
 			SPAN_HELPFUL("You <b>start feeding</b> [M] a [fluff_text]."),
 			SPAN_HELPFUL("[user] <b>starts feeding</b> you a [fluff_text]."),

@@ -203,28 +203,34 @@
 		var/mob/living/carbon/human/is_wearing_self = user
 		if(is_wearing_self.wear_suit == src)
 			to_chat(user, SPAN_NOTICE("You can't reach around to the integrated tank slot while your suit is being worn. Ask somewhere else to help you."))
-			return
+			return TRUE
 	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+		if(user.a_intent == INTENT_HARM)
+			return FALSE
 		if(integrated_tank != null)
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 			if(!do_after(user, 20, INTERRUPT_ALL, BUSY_ICON_BUILD))
-				return
+				return TRUE
 			playsound(src.loc, 'sound/effects/hatch_open.ogg', 25, 1)
-			user.drop_inv_item_on_ground(integrated_tank)
+			user.put_in_hands(integrated_tank)
 			integrated_tank = null
+			return TRUE
 		else
 			to_chat(user, SPAN_NOTICE("The suit doesn't have an installed oxygen tank."))
+			return TRUE
 	else
 		if(istype(W, /obj/item/tank/emergency_oxygen))
 			if(integrated_tank == null)
 				playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 				if(!do_after(user, 20, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
-					return
+					return TRUE
 				playsound(src.loc, 'sound/effects/metal_clink.ogg', 25, 1)
 				integrated_tank = W
 				user.drop_inv_item_to_loc(W, src)
+				return TRUE
 			else
 				to_chat(user, SPAN_NOTICE("The suit already has an oxygen tank installed."))
+				return TRUE
 
 /obj/item/clothing/suit/space/pressure/get_examine_text(mob/user)
 	. = ..()

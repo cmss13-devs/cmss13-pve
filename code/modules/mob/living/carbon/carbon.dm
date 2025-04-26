@@ -158,8 +158,8 @@
 		//Address the integrated tank on Spacesuit on the person being targeted
 		var/obj/item/clothing/suit/space/pressure/tank_to_replace = wear_suit
 		if((istype(wear_suit, /obj/item/clothing/suit/space/pressure)))
-			tank_to_replace.attackby(W, user)
-			return
+			if(tank_to_replace.attackby(W, user))
+				return
 	. = ..()
 
 /mob/living/carbon/attack_hand(mob/M as mob)
