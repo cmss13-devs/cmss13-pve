@@ -74,7 +74,7 @@
 	name = "TWE Royal Marine Commando, Medical Assistant"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC2N = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RMMA"
+	role_comm_title = "RM MA"
 	assignment = JOB_TWE_RMC_MEDIC
 	rank = JOB_TWE_RMC_MEDIC
 	skills = /datum/skills/rmc/medic
@@ -134,7 +134,7 @@
 	name = "TWE Royal Marine Commando, Assault Engineer"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC2E = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RMAE"
+	role_comm_title = "RM AE"
 	assignment = JOB_TWE_RMC_ENGI
 	rank = JOB_TWE_RMC_ENGI
 	skills = /datum/skills/rmc/medic
@@ -184,7 +184,7 @@
 	name = "TWE Royal Marine Commando, Smartgunner"
 	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
 	flags = EQUIPMENT_PRESET_EXTRA
-	role_comm_title = "RMSG"
+	role_comm_title = "RM HW(SG)"
 	assignment = JOB_TWE_RMC_SMARTGUNNER
 	rank = JOB_TWE_RMC_SMARTGUNNER
 	skills = /datum/skills/rmc/smartgun
@@ -236,7 +236,7 @@
 	name = "TWE Royal Marine Commando, Team Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RMTL"
+	role_comm_title = "RM TL"
 	assignment = JOB_TWE_RMC_TEAMLEADER
 	rank = JOB_TWE_RMC_TEAMLEADER
 	skills = /datum/skills/rmc/leader
@@ -291,7 +291,7 @@
 	name = "TWE Royal Marine Commando, Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMO1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RMTC"
+	role_comm_title = "RM TC"
 	assignment = JOB_TWE_RMC_LIEUTENANT
 	rank = JOB_TWE_RMC_LIEUTENANT
 	skills = /datum/skills/rmc/officer
@@ -394,7 +394,7 @@
 	name = "TWE Royal Marine Commando, Sniper" //Sniper until they get a proper DMR
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RMSWS"
+	role_comm_title = "RM ScS" //Intended, going by current royal marine role/specialisation abbreviations
 	assignment = JOB_TWE_RMC_MARKSMAN
 	rank = JOB_TWE_RMC_MARKSMAN
 	skills = /datum/skills/rmc
