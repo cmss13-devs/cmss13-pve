@@ -102,11 +102,11 @@
 	if (speaking)
 		var/ending = copytext(message, length(message))
 		if(ending=="!")
-			verb = speaking.exclaim_verb
+			verb = pick(speaking.exclaim_verb)
 		else if(ending=="?")
-			verb = speaking.ask_verb
+			verb = pick(speaking.ask_verb)
 		else
-			verb = speaking.speech_verb
+			verb = pick(speaking.speech_verb)
 		// This is broadcast to all mobs with the language,
 		// irrespective of distance or anything else.
 		if(speaking.flags & HIVEMIND)
