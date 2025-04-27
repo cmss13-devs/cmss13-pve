@@ -1,0 +1,8 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Adds the M42A2 Suppressed Scoped Rifle"
+  - qol: "Changes all instances of the M4RA into the M49A, to be in-line with the naming conventions of other USCM weapons"
+  - spellcheck: "Typo in flare-grenade desc fixed"
+  - imageadd: "Sprite for the M42A2 barrel"
+  - imageadd: "The missing in-hand sprite for the M42A returns."

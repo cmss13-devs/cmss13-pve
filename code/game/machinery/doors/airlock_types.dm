@@ -901,7 +901,6 @@
 /obj/structure/machinery/door/airlock/dropship_hatch/upp
 	icon = 'icons/obj/structures/doors/dropshipupp_side.dmi' //Tiles with is here FOR SAFETY PURPOSES
 
-
 /obj/structure/machinery/door/airlock/dropship_hatch/monorail
 	icon = 'icons/obj/structures/doors/pod_doors.dmi' //TEMPLATE NEED TO REPLACE LATER
 	name = "monorail door"
@@ -930,6 +929,9 @@
 /obj/structure/machinery/door/airlock/hatch/cockpit/upp
 	icon = 'icons/obj/structures/doors/dropshipupp_pilot.dmi'
 
+/obj/structure/machinery/door/airlock/hatch/cockpit/pmc
+	icon = 'icons/obj/structures/doors/dropshippmc_pilot.dmi'
+
 //PRISON AIRLOCKS
 /obj/structure/machinery/door/airlock/prison
 	name = "cell Door"
@@ -939,4 +941,33 @@
 /obj/structure/machinery/door/airlock/prison/horizontal
 	dir = SOUTH
 
+/obj/structure/machinery/door/airlock/upp_green
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/uppdoor_green.dmi'
+	openspeed = 5
+	req_access = null
+	req_one_access = null
 
+/obj/structure/machinery/door/airlock/upp_green/window
+	icon = 'icons/obj/structures/doors/upp/uppdoor_glass_green.dmi'
+	opacity = FALSE
+	glass = TRUE
+
+/obj/structure/machinery/door/airlock/upp_grey
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/uppdoor_grey.dmi'
+	openspeed = 5
+	req_access = null
+	req_one_access = null
+
+/obj/structure/machinery/door/airlock/upp_grey/window
+	icon = 'icons/obj/structures/doors/upp/uppdoor_glass_grey.dmi'
+	opacity = FALSE
+	glass = TRUE
+
+/obj/structure/machinery/door/airlock/upp_utility
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/uppdoor_utility.dmi'
+	openspeed = 6
+	req_access = null
+	req_one_access = null

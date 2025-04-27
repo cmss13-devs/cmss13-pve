@@ -4,6 +4,8 @@
 /obj/item/weapon/gun/pistol
 	icon_state = "" //should return the honk-error sprite if there's no assigned icon.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	mouse_pointer = 'icons/effects/mouse_pointer/pistol_mouse.dmi'
+
 	reload_sound = 'sound/weapons/flipblade.ogg'
 	cocked_sound = 'sound/weapons/gun_pistol_cocked.ogg'
 	empty_sound = 'sound/weapons/gun_empty.ogg'
@@ -15,7 +17,6 @@
 	movement_onehanded_acc_penalty_mult = 3
 	wield_delay = WIELD_DELAY_VERY_FAST //If you modify your pistol to be two-handed, it will still be fast to aim
 	fire_sound = "m4a3"
-	firesound_volume = 25
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
@@ -38,9 +39,6 @@
 
 /obj/item/weapon/gun/pistol/unique_action(mob/user)
 		cock(user)
-
-/obj/item/weapon/gun/pistol/get_mouse_pointer()
-	return 'icons/effects/mouse_pointer/pistol_mouse.dmi'
 
 /obj/item/weapon/gun/pistol/set_gun_config_values()
 	..()
@@ -71,7 +69,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/m4a3/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "side_rail_x" = 19, "side_rail_y" = 15)
 
 
 /obj/item/weapon/gun/pistol/m4a3/set_gun_config_values()
@@ -117,7 +115,6 @@
 	icon_state = "vp70"
 	item_state = "vp70"
 	fire_sound = "vp70"
-	firesound_volume = 20
 	reload_sound = 'sound/weapons/gun_vp70_reload.ogg'
 	unload_sound = 'sound/weapons/gun_vp70_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/vp70
@@ -139,7 +136,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/vp70/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21,"rail_x" = 8, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 18, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21,"rail_x" = 8, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 11, "stock_y" = 14, "side_rail_x" = 19, "side_rail_y" = 16)
 
 
 /obj/item/weapon/gun/pistol/vp70/set_gun_config_values()
@@ -178,7 +175,7 @@
 	current_mag = /obj/item/ammo_magazine/pistol/m1911
 
 /obj/item/weapon/gun/pistol/m1911/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "side_rail_x" = 19, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/pistol/m1911/set_gun_config_values()
 	..()
@@ -226,7 +223,7 @@
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
 		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp_replica,
+		/obj/item/attachable/bayonet/upp/surplus,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
@@ -243,7 +240,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/highpower/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 20,"rail_x" = 6, "rail_y" = 22, "under_x" = 20, "under_y" = 15, "stock_x" = 0, "stock_y" = 0)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 20,"rail_x" = 6, "rail_y" = 22, "under_x" = 20, "under_y" = 15, "stock_x" = 0, "stock_y" = 0, "side_rail_x" = 20, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/pistol/highpower/set_gun_config_values()
 	..()
@@ -304,7 +301,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/np92/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 21, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 19, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/pistol/np92/set_gun_config_values()
 	..()
@@ -361,7 +358,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/t73/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 22, "under_y" = 15, "stock_x" = 21, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 22, "under_y" = 15, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 22, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/pistol/t73/set_gun_config_values()
 	..()
@@ -429,7 +426,7 @@
 	current_mag = /obj/item/ammo_magazine/pistol/kt42
 
 /obj/item/weapon/gun/pistol/kt42/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 20,"rail_x" = 8, "rail_y" = 22, "under_x" = 22, "under_y" = 17, "stock_x" = 22, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 20,"rail_x" = 8, "rail_y" = 22, "under_x" = 22, "under_y" = 17, "stock_x" = 22, "stock_y" = 17, "side_rail_x" = 21, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/pistol/kt42/set_gun_config_values()
 	..()
@@ -464,7 +461,7 @@
 
 
 /obj/item/weapon/gun/pistol/holdout/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 25, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 17, "under_y" = 15, "stock_x" = 22, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 25, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 17, "under_y" = 15, "stock_x" = 22, "stock_y" = 17, "side_rail_x" = 17, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/pistol/holdout/set_gun_config_values()
 	..()
@@ -498,7 +495,7 @@
 	attachable_allowed = null
 
 /obj/item/weapon/gun/pistol/clfpistol/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "side_rail_x" = 20, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/pistol/clfpistol/set_gun_config_values()
 	..()
@@ -524,12 +521,11 @@
 	icon_state = "es4"
 	item_state = "es4"
 	fire_sound = 'sound/weapons/gun_es4.ogg'
-	firesound_volume = 20
 	reload_sound = 'sound/weapons/gun_vp70_reload.ogg'
 	unload_sound = 'sound/weapons/gun_vp70_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/pistol/es4
 	force = 8
-	muzzle_flash = "muzzle_flash_blue"
+	muzzleflash_iconstate = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MUZZLE_BLUE
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
 	attachable_allowed = list(
@@ -540,7 +536,7 @@
 	)
 
 /obj/item/weapon/gun/pistol/es4/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21, "rail_x" = 10, "rail_y" = 22, "under_x" = 25, "under_y" = 18, "stock_x" = 18, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21, "rail_x" = 10, "rail_y" = 22, "under_x" = 25, "under_y" = 18, "stock_x" = 18, "stock_y" = 15, "side_rail_x" = 25, "side_rail_y" = 18)
 
 
 /obj/item/weapon/gun/pistol/es4/set_gun_config_values()
@@ -551,6 +547,9 @@
 	scatter = SCATTER_AMOUNT_TIER_7
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
+
+/obj/item/weapon/gun/pistol/es4/unloaded
+	current_mag = null
 
 //-------------------------------------------------------
 //VP78 - High power pistol?
@@ -571,7 +570,6 @@
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/flashlight/laser_light_combo,
 		/obj/item/attachable/extended_barrel,
@@ -587,7 +585,7 @@
 	update_attachable(VP.slot)
 
 /obj/item/weapon/gun/pistol/vp78/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 17, "stock_x" = 18, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 17, "stock_x" = 18, "stock_y" = 14, "side_rail_x" = 20, "side_rail_y" = 17)
 
 
 /obj/item/weapon/gun/pistol/vp78/set_gun_config_values()
@@ -604,6 +602,8 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
+/obj/item/weapon/gun/pistol/vp78/unloaded
+	current_mag = null
 
 //-------------------------------------------------------
 /*
@@ -641,11 +641,12 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 //Beretta 92FS, the gun McClane carries around in Die Hard. Very similar to the service pistol, all around.
 
 /obj/item/weapon/gun/pistol/b92fs
-	name = "\improper Beretta 92FS pistol"
-	desc = "A popular police firearm in the 20th century, often employed by hardboiled cops while confronting terrorists. A classic of its time, chambered in 9mm."
+	name = "\improper Beretta 92FS M9 pistol"
+	desc = "Semi-automatic 9mm service pistol of the United States military with the exception of the United States Colonial Marine Corps. Also enjoys popularity in the civilian market among law enforcement and private security."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "b92fs"
 	item_state = "b92fs"
+	fire_sound = "vp70"
 	current_mag = /obj/item/ammo_magazine/pistol/b92fs
 
 /obj/item/weapon/gun/pistol/b92fs/Initialize(mapload, spawn_empty)
@@ -660,7 +661,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 		add_firemode(GUN_FIREMODE_BURSTFIRE)
 
 /obj/item/weapon/gun/pistol/b92fs/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 22, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "side_rail_x" = 21, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/pistol/b92fs/set_gun_config_values()
 	..()
@@ -670,7 +671,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	scatter = SCATTER_AMOUNT_TIER_7
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_5
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
-	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 
 
 //-------------------------------------------------------
@@ -683,7 +684,6 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	icon_state = "deagle"
 	item_state = "deagle"
 	fire_sound = 'sound/weapons/gun_DE50.ogg'
-	firesound_volume = 40
 	current_mag = /obj/item/ammo_magazine/pistol/heavy
 	force = 13
 
@@ -699,7 +699,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 
 
 /obj/item/weapon/gun/pistol/heavy/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 17, "rail_y" = 21, "under_x" = 20, "under_y" = 17, "stock_x" = 20, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 17, "rail_y" = 21, "under_x" = 20, "under_y" = 17, "stock_x" = 20, "stock_y" = 17, "side_rail_x" = 20, "side_rail_y" = 17)
 
 
 /obj/item/weapon/gun/pistol/heavy/set_gun_config_values()
@@ -791,7 +791,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
 
 /obj/item/weapon/gun/pistol/smart/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 24, "under_y" = 17, "stock_x" = 24, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 22, "under_x" = 24, "under_y" = 17, "stock_x" = 24, "stock_y" = 17, "side_rail_x" = 24, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/pistol/smart/set_gun_config_values()
 	..()
@@ -840,7 +840,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/pistol/skorpion/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 18,"rail_x" = 16, "rail_y" = 21, "under_x" = 23, "under_y" = 15, "stock_x" = 23, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 18,"rail_x" = 16, "rail_y" = 21, "under_x" = 23, "under_y" = 15, "stock_x" = 23, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/pistol/skorpion/set_gun_config_values()
 	..()

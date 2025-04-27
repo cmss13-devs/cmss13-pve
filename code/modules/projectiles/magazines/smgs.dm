@@ -9,66 +9,73 @@
 //M39 SMG ammo
 
 /obj/item/ammo_magazine/smg/m39
-	name = "\improper M39 HV magazine (10x20mm)"
-	desc = "A 10x20mm caseless high-velocity submachinegun magazine. Powerful propellant allows the bullet increased velocity and minor penetration capabilities, noticeably improving its efficacy at medium ranges, although it still suffers significantly compared to a rifle bullet."
-	caliber = "10x20mm"
+	name = "\improper Viper 9 magazine (9mm)"
+	desc = "A 9mm submachinegun magazine."
+	caliber = "9mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
-	icon_state = "m39_HV"
+	icon_state = "m39"
 	max_rounds = 48
 	w_class = SIZE_MEDIUM
 	gun_type = /obj/item/weapon/gun/smg/m39
-	default_ammo = /datum/ammo/bullet/smg/m39
+	default_ammo = /datum/ammo/bullet/pistol
 	ammo_band_icon = "+m39_band"
 	ammo_band_icon_empty = "+m39_band_e"
 
 /obj/item/ammo_magazine/smg/m39/ap
-	name = "\improper M39 AP magazine (10x20mm)"
-	desc = "A 10x20mm caseless armor-piercing submachinegun magazine. The bullet tips are made out of high-density material, allowing them to pierce straight through armor, but also reducing the raw stopping power and velocity of the ammunition."
-	default_ammo = /datum/ammo/bullet/smg/ap
+	name = "\improper Viper 9 AP magazine (9mm)"
+	desc = "A 9mm armor-piercing submachinegun magazine."
+	default_ammo = /datum/ammo/bullet/pistol/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/smg/m39/le
-	name = "\improper M39 LE magazine (10x20mm)"
-	desc = "A 10x20mm caseless light-explosive submachinegun magazine containing special light explosive rounds, designed to rapidly decimate armor, at the cost of vastly reduced damage and penetration."
-	default_ammo = /datum/ammo/bullet/smg/le
+	name = "\improper Viper 9 LE magazine (9mm)"
+	desc = "A 9mm light-explosive submachinegun magazine."
+	default_ammo = /datum/ammo/bullet/pistol/le
 	ammo_band_color = AMMO_BAND_COLOR_LIGHT_EXPLOSIVE
 
 /obj/item/ammo_magazine/smg/m39/rubber
-	name = "\improper M39 rubber magazine (10x20mm)"
-	desc = "A 10x20mm caseless rubber bullet submachinegun magazine, containing rubber bullets. Non-lethal, but terrible on bioforms."
-	default_ammo = /datum/ammo/bullet/smg/rubber
+	name = "\improper Viper 9 rubber magazine (9mm)"
+	desc = "A 9mm rubber bullet submachinegun magazine/"
+	default_ammo = /datum/ammo/bullet/pistol/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 /obj/item/ammo_magazine/smg/m39/heap
-	name = "\improper M39 HEAP magazine (10x20mm)"
-	desc = "A 10x20mm caseless armor-piercing high-explosive submachinegun magazine. The bullet tips are made out of a special explosive, designed to penetrate armor then detonate for maximum soft-tissue damage."
+	name = "\improper Viper 9 HEAP magazine (9mm)"
+	desc = "A 9mm armor-piercing high-explosive submachinegun magazine."
 	default_ammo = /datum/ammo/bullet/smg/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 /obj/item/ammo_magazine/smg/m39/penetrating
-	name = "\improper M39 wall-penetrating magazine (10x20mm)"
-	desc = "A 10x20mm caseless wall-penetrating bullet submachinegun magazine, containing wall-penetrating bullets. Designed to penetrate straight through objects and walls."
-	default_ammo = /datum/ammo/bullet/smg/ap/penetrating
+	name = "\improper Viper 9 wall-penetrating magazine (9mm)"
+	desc = "A 9mm wall-penetrating bullet submachinegun magazine."
+	default_ammo = /datum/ammo/bullet/pistol/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
 /obj/item/ammo_magazine/smg/m39/toxin
-	name = "\improper M39 toxin magazine (10x20mm)"
-	desc = "A 10x20mm caseless toxin bullet submachinegun magazine, containing toxin bullets. Great at stripping away armor and destroying biological structures."
-	default_ammo = /datum/ammo/bullet/smg/ap/toxin
+	name = "\improper Viper 9 toxin magazine (9mm)"
+	desc = "A 9mm toxin bullet submachinegun magazine."
+	default_ammo = /datum/ammo/bullet/pistol/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
 /obj/item/ammo_magazine/smg/m39/incendiary
-	name = "\improper M39 incendiary magazine (10x20mm)"
-	desc = "A 10x20mm caseless incendiary submachinegun magazine. Incendiary payload sets targets ablaze, but causes the gun to have low stopping power and strongly decreased accuracy."
-	default_ammo = /datum/ammo/bullet/smg/incendiary
+	name = "\improper Viper 9 incendiary magazine (9mm)"
+	desc = "A 9mm incendiary submachinegun magazine."
+	default_ammo = /datum/ammo/bullet/pistol/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 /obj/item/ammo_magazine/smg/m39/extended
-	name = "\improper M39 HV extended magazine (10x20mm)"
-	desc = "A 10x20mm caseless HV extended submachinegun magazine. Powerful propellant allows the bullet increased travel speed and minor penetration capabilities, noticeably improving its efficacy at long ranges, although it still suffers significantly compared to a rifle bullet."
+	name = "\improper Viper 9 extended magazine (9mm)"
+	desc = "A 9mm extended submachinegun magazine."
 	max_rounds = 72
 	icon_state = "m39_HV_extended"
 	bonus_overlay = "m39_ex"
+
+/obj/item/ammo_magazine/smg/m39/pve
+	name = "\improper Viper 9 duplex magazine (9mm)"
+	desc = "A 9mm submachinegun magazine containing special duplex rounds, designed to increase your overall firepower per pull. Reduced bullet velocity due to two slugs per bullet."
+	max_rounds = 54
+	default_ammo = /datum/ammo/bullet/smg/pve
+	ammo_band_color = AMMO_BAND_COLOR_LIGHT_EXPLOSIVE
 
 //-------------------------------------------------------
 //M5, a classic SMG used in a lot of action movies.

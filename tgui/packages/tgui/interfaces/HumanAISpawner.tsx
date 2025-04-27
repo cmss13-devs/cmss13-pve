@@ -35,7 +35,7 @@ export const HumanAISpawner = (props) => {
                 {Object.keys(presets).map((dictKey) => (
                   <Collapsible title={dictKey} key={dictKey} color="good">
                     {presets[dictKey].map((squad) => (
-                      <Box pb={12} key={squad.path}>
+                      <Box pb={'12px'} key={squad.path}>
                         <Button
                           fontSize="15px"
                           textAlign="center"
