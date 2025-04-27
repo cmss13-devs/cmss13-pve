@@ -336,6 +336,17 @@
 	squad_two_access = ACCESS_PMC_SQUAD_TWO
 	faction = FACTION_PMC
 
+//##############################
+
+/datum/squad/marine/rmc
+	name = SQUAD_TWE
+	chat_color = "#aa740f"
+	minimap_color = MINIMAP_SQUAD_TWE
+	use_stripe_overlay = FALSE
+	radio_freq = RMC_FREQ
+	usable = TRUE
+	faction = FACTION_TWE
+
 //###############################
 /datum/squad/clf
 	name = "Root"

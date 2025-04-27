@@ -1,11 +1,11 @@
 /datum/equipment_preset/royal_marine
 	name = FACTION_TWE
 	faction = FACTION_TWE
-	faction_group = list(FACTION_TWE)
+	faction_group = FACTION_LIST_TWE
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 	flags = EQUIPMENT_PRESET_EXTRA
 	origin_override = ORIGIN_TWE
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
 	idtype = /obj/item/card/id/dogtag
 
 //*****************************************************************************************************/
@@ -27,7 +27,7 @@
 	assignment = JOB_TWE_RMC_RIFLEMAN
 	rank = JOB_TWE_RMC_RIFLEMAN
 	skills = /datum/skills/rmc
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
 
 /datum/equipment_preset/royal_marine/standard/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -81,7 +81,7 @@
 	assignment = JOB_TWE_RMC_SMARTGUNNER
 	rank = JOB_TWE_RMC_SMARTGUNNER
 	skills = /datum/skills/rmc/smartgun
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
 
 /datum/equipment_preset/royal_marine/machinegun/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -134,7 +134,7 @@
 	assignment = JOB_TWE_RMC_RIFLEMAN
 	rank = JOB_TWE_RMC_RIFLEMAN
 	skills = /datum/skills/rmc
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
 
 /datum/equipment_preset/royal_marine/stealth/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -187,7 +187,7 @@
 	assignment = JOB_TWE_RMC_MARKSMAN
 	rank = JOB_TWE_RMC_MARKSMAN
 	skills = /datum/skills/rmc
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
 
 /datum/equipment_preset/royal_marine/sniper/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -244,7 +244,7 @@
 	assignment = JOB_TWE_RMC_BREACHER
 	rank = JOB_TWE_RMC_BREACHER
 	skills = /datum/skills/rmc
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
 
 /datum/equipment_preset/royal_marine/mortar/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -290,7 +290,7 @@
 	assignment = JOB_TWE_RMC_MEDIC
 	rank = JOB_TWE_RMC_MEDIC
 	skills = /datum/skills/rmc/medic
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO, ACCESS_TWE_MEDICAL)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_MEDICAL)
 
 /datum/equipment_preset/royal_marine/medic/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -350,7 +350,7 @@
 	assignment = JOB_TWE_RMC_ENGI
 	rank = JOB_TWE_RMC_ENGI
 	skills = /datum/skills/rmc/engi
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO, ACCESS_TWE_ENGINEERING)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_ENGINEERING)
 
 /datum/equipment_preset/royal_marine/engi/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -402,7 +402,7 @@
 	assignment = JOB_TWE_RMC_SECTIONLEADER
 	rank = JOB_TWE_RMC_SECTIONLEADER
 	skills = /datum/skills/rmc/leader
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP)
 
 /datum/equipment_preset/royal_marine/leader/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -466,7 +466,7 @@
 	assignment = JOB_TWE_RMC_TROOPLEADER
 	rank = JOB_TWE_RMC_TROOPLEADER
 	skills = /datum/skills/rmc/officer
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
 
 /datum/equipment_preset/royal_marine/coloursergeant/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -517,7 +517,7 @@
 	assignment = JOB_TWE_RMC_LIEUTENANT
 	rank = JOB_TWE_RMC_LIEUTENANT
 	skills = /datum/skills/rmc/officer
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
 
 /datum/equipment_preset/royal_marine/lieuteant/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -559,6 +559,9 @@
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
 
+/datum/equipment_preset/royal_marine/lieuteant/upper_Rank
+	paygrades = list(PAY_SHORT_RMO2 = JOB_PLAYTIME_TIER_0)
+
 /datum/equipment_preset/royal_marine/captain
 	name = "TWE Royal Marine Commando, Squadron Commander"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -567,7 +570,7 @@
 	assignment = JOB_TWE_RMC_COMMANDER
 	rank = JOB_TWE_RMC_COMMANDER
 	skills = /datum/skills/rmc/officer
-	access = list(ACCESS_LIST_WY_ALL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
 
 /datum/equipment_preset/royal_marine/captain/load_gear(mob/living/carbon/human/new_human)
 	//face

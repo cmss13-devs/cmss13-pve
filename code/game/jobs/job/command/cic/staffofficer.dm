@@ -97,5 +97,14 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	name = JOB_PMCPLAT_OW
 	job = /datum/job/command/bridge/ai/pmc
 
+/datum/job/command/bridge/ai/rmc
+	title = JOB_RMCTROOP_LIEUTENANT
+	gear_preset = /datum/equipment_preset/uscm_ship/so/rmc
+	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/rmc/lesser_Rank
+
+/obj/effect/landmark/start/bridge/rmc
+	name = JOB_RMCTROOP_LIEUTENANT
+	job = /datum/job/command/bridge/ai/rmc
+
 #undef FIRST_LT_VARIANT
 #undef SECOND_LT_VARIANT

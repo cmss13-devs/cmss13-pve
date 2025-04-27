@@ -16,6 +16,7 @@
 #define SQUAD_SOLAR "Solar Devils"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_PMCPLT "AZURE-15"
+#define SQUAD_TWE "Gamma Troop"
 #define SQUAD_LRRP "Snake Eaters"
 
 // Job name defines
@@ -375,7 +376,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 //-------- TWE --------//
 #define JOB_TWE_REPRESENTATIVE "TWE Representative"
 
-//RMC
+//-------- RMC --------//
 #define JOB_TWE_RMC_RIFLEMAN "Marine Commando"
 #define JOB_TWE_RMC_MEDIC "Marine Commando Medical Assistant"
 #define JOB_TWE_RMC_ENGI "Marine Commando Assault Engineer"
@@ -390,16 +391,17 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 #define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_MEDIC, JOB_TWE_RMC_ENGI, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER, JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_SECTIONLEADER, JOB_TWE_RMC_TROOPLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER,)
 
-#define JOB_TWE_SEAMAN "TWE Seaman"
-#define JOB_TWE_LSEAMAN "TWE Leading Seaman"
-#define JOB_TWE_SO "TWE Standing Officer"
-#define JOB_TWE_WO "TWE Warrant Officer"
-#define JOB_TWE_CPT "TWE Captain"
-#define JOB_TWE_ADM "TWE Admiral"
-#define JOB_TWE_GADM "TWE Grand Admiral"
-#define JOB_TWE_ER "TWE Emperor"
-
-#define TWE_OFFICER_JOB_LIST list(JOB_TWE_SEAMAN, JOB_TWE_LSEAMAN, JOB_TWE_SO, JOB_TWE_WO, JOB_TWE_CPT, JOB_TWE_ADM, JOB_TWE_GADM, JOB_TWE_ER)
+//-------- RMC PLATOON --------//
+#define JOB_RMCTROOP_RIFLEMAN "Marine Commando"
+#define JOB_RMCTROOP_MEDIC "Marine Commando Medical Assistant"
+#define JOB_RMCTROOP_ENGI "Marine Commando Assault Engineer"
+#define JOB_RMCTROOP_MARKSMAN "Marine Commando Marksman"
+#define JOB_RMCTROOP_SMARTGUNNER "Marine Commando Smartgunner"
+#define JOB_RMCTROOP_BREACHER "Marine Commando Gunner"
+#define JOB_RMCTROOP_TEAMLEADER "Marine Commando Team Leader"
+#define JOB_RMCTROOP_SECTIONLEADER "Marine Commando Section Leader"
+#define JOB_RMCTROOP_TROOPLEADER "Marine Commando Troop Sergeant"
+#define JOB_RMCTROOP_LIEUTENANT "Marine Commando Troop Commander"
 
 //-------- PROVOST --------//
 #define JOB_PROVOST_ENFORCER "Provost Enforcer"
