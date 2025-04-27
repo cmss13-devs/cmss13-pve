@@ -193,14 +193,14 @@
 /area/golden_arrow/briefing)
 "aau" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
-/turf/open/floor/prison/floor_plate/southwest,
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aav" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 8
 	},
-/turf/open/floor/prison/floor_plate/southwest,
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aaw" = (
 /obj/structure/disposalpipe/segment,
@@ -240,26 +240,33 @@
 /obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
-"aaB" = (
-/turf/open/floor/prison/floor_plate/southwest,
-/area/golden_arrow/cryo_cells)
 "aaC" = (
 /obj/structure/machinery/shower{
 	dir = 4
 	},
-/obj/structure/window/reinforced,
-/turf/open/floor/plating/plating_catwalk/prison,
+/obj/structure/barricade/handrail/type_b{
+	layer = 3.2
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aaD" = (
 /obj/structure/machinery/shower{
 	dir = 8
 	},
-/obj/structure/window/reinforced,
 /obj/item/toy/bikehorn/rubberducky{
-	pixel_x = 7;
-	pixel_y = -7
+	pixel_x = -9;
+	pixel_y = -6
 	},
-/turf/open/floor/plating/plating_catwalk/prison,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/barricade/handrail/type_b{
+	layer = 3.2
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aaE" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -291,19 +298,39 @@
 /obj/structure/machinery/shower{
 	pixel_y = 16
 	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 80
-	},
-/obj/structure/window/reinforced{
+/obj/effect/decal/cleanable/cobweb2,
+/obj/structure/barricade/metal{
 	dir = 4;
-	health = 80
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 11
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1;
+	pixel_y = 11
 	},
 /obj/structure/curtain/open/shower{
 	pixel_y = -6
 	},
-/obj/effect/decal/cleanable/cobweb2,
 /turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
+"aaH" = (
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aaI" = (
 /turf/closed/wall/almayer/outer,
@@ -865,12 +892,17 @@
 /obj/structure/machinery/shower{
 	dir = 4
 	},
-/obj/structure/window/reinforced,
 /obj/item/tool/soap{
 	pixel_x = -6;
 	pixel_y = -6
 	},
-/turf/open/floor/plating/plating_catwalk/prison,
+/obj/structure/barricade/handrail/type_b{
+	layer = 3.2
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "acP" = (
 /obj/effect/decal/warning_stripes{
@@ -1375,7 +1407,8 @@
 	},
 /obj/item/reagent_container/glass/rag/polishing_rag{
 	pixel_x = 7;
-	pixel_y = -1
+	pixel_y = -1;
+	name = "towel"
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
@@ -1726,13 +1759,23 @@
 /obj/structure/machinery/shower{
 	pixel_y = 16
 	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 80
-	},
-/obj/structure/window/reinforced{
+/obj/structure/barricade/metal{
 	dir = 4;
-	health = 80
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1;
+	pixel_y = 11
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 11
 	},
 /obj/structure/curtain/open/shower{
 	pixel_y = -6
@@ -5640,7 +5683,8 @@
 /area/golden_arrow/cryo_cells)
 "ato" = (
 /obj/effect/decal/strata_decals/grime/grime3,
-/turf/open/floor/plating/plating_catwalk/prison,
+/obj/structure/bed/chair/comfy/bench/north,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "atq" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -7434,7 +7478,7 @@
 	pixel_x = -6;
 	pixel_y = -6
 	},
-/turf/open/floor/plating/plating_catwalk/prison,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "azr" = (
 /obj/item/hardpoint/primary/arc_frontalcannon{
@@ -9873,13 +9917,23 @@
 /obj/structure/toilet{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
+/obj/structure/barricade/metal{
 	dir = 8;
-	health = 80
+	pixel_x = -1
 	},
-/obj/structure/window/reinforced{
+/obj/structure/barricade/metal{
 	dir = 4;
-	health = 80
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1;
+	pixel_y = 11
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 11
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
@@ -11731,7 +11785,7 @@
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 4
 	},
-/turf/open/floor/prison/floor_plate/southwest,
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aNV" = (
 /obj/effect/decal/cleanable/dirt{
@@ -12039,7 +12093,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
 "aPf" = (
-/turf/open/floor/prison/cell_stripe/north,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aPg" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -12677,7 +12735,10 @@
 /obj/structure/machinery/shower{
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/prison,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aRA" = (
 /obj/structure/cable/heavyduty{
@@ -12974,8 +13035,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "aSu" = (
-/obj/effect/decal/strata_decals/grime/grime1,
-/turf/open/floor/prison/floor_plate/southwest,
+/obj/structure/bed/chair/comfy/bench/south,
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_x = 7;
+	pixel_y = -1;
+	name = "towel"
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aSv" = (
 /obj/effect/decal/cleanable/dirt{
@@ -14647,8 +14713,10 @@
 /obj/structure/machinery/shower{
 	dir = 8
 	},
-/obj/structure/window/reinforced,
-/turf/open/floor/plating/plating_catwalk/prison,
+/obj/structure/barricade/handrail/type_b{
+	layer = 3.2
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aYI" = (
 /obj/effect/decal/cleanable/dirt{
@@ -16318,7 +16386,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "fBD" = (
-/obj/structure/bed/chair/comfy/bench/north/east,
+/obj/structure/bed/chair/comfy/bench/north/east{
+	dir = 2
+	},
 /obj/structure/prop/almayer/sadar_decoration{
 	pixel_y = 29
 	},
@@ -26700,7 +26770,7 @@ aQr
 aBw
 atm
 aPf
-aaB
+aQr
 aau
 aog
 atY
@@ -26876,7 +26946,7 @@ aNn
 aAs
 agh
 aUh
-aPf
+aaH
 ato
 aSu
 aog
