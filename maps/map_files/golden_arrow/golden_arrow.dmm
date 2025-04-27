@@ -91,12 +91,14 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "aam" = (
-/obj/item/tool/dumbbell/alt{
-	pixel_x = -7;
-	pixel_y = -11
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
 	},
-/turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/hangar)
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "aan" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -160,16 +162,14 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aar" = (
-/obj/structure/sign/poster{
-	pixel_x = 3;
-	icon_state = "poster32";
-	pixel_y = -1;
-	desc = "This poster depicts Lance McDonell, the winner of Mr. Universe 2170-74. Don't ask how you know that. He bears a striking resemblance to the 42nd President of the United States, Arnold Schwarzenegger.";
-	name = "Mr. Universe 2170-74";
-	serial_number = 32
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
 	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/hangar)
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "aas" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -192,27 +192,22 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "aau" = (
-/obj/item/trash/cigbutt,
-/turf/open/floor/almayer,
+/obj/item/tool/dumbbell/alt{
+	pixel_x = -7;
+	pixel_y = -11
+	},
+/turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
 "aav" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 8
-	},
-/obj/structure/surface/rack,
-/obj/item/tool/dumbbell{
-	pixel_y = 5;
-	pixel_x = -2
-	},
-/obj/item/tool/dumbbell{
+/obj/structure/sign/poster{
+	pixel_x = 3;
+	icon_state = "poster32";
 	pixel_y = -1;
-	pixel_x = 1
+	desc = "This poster depicts Lance McDonell, the winner of Mr. Universe 2170-74. Don't ask how you know that. He bears a striking resemblance to the 42nd President of the United States, Arnold Schwarzenegger.";
+	name = "Mr. Universe 2170-74";
+	serial_number = 32
 	},
-/obj/item/tool/dumbbell{
-	pixel_y = -8;
-	pixel_x = 4
-	},
-/turf/open/floor/almayer/plate,
+/turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
 "aaw" = (
 /obj/structure/disposalpipe/segment,
@@ -253,17 +248,40 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aaB" = (
+/obj/item/trash/cigbutt,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"aaC" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8
+	},
+/obj/structure/surface/rack,
+/obj/item/tool/dumbbell{
+	pixel_y = 5;
+	pixel_x = -2
+	},
+/obj/item/tool/dumbbell{
+	pixel_y = -1;
+	pixel_x = 1
+	},
+/obj/item/tool/dumbbell{
+	pixel_y = -8;
+	pixel_x = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"aaD" = (
 /obj/item/reagent_container/food/drinks/cans/thirteenloko{
 	pixel_x = -12;
 	pixel_y = 20
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"aaC" = (
+"aaE" = (
 /obj/structure/punching_bag,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"aaD" = (
+"aaF" = (
 /obj/structure/sign/poster{
 	pixel_x = -5;
 	icon_state = "poster3";
@@ -273,7 +291,7 @@
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
-"aaE" = (
+"aaG" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -286,38 +304,19 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"aaF" = (
+"aaH" = (
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/hangar)
-"aaG" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/weightmachine/stacklifter,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
-"aaH" = (
-/obj/structure/sign/poster{
-	pixel_x = 5;
-	pixel_y = 5;
-	icon_state = "poster12";
-	desc = "This poster features Roxanne Straski. She was the January 2180 centerfold in Playboy Magazine. Don't ask how you know that.";
-	name = "'Miss January' pinup";
-	serial_number = 12
-	},
-/turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
 "aaI" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/medical)
 "aaJ" = (
-/obj/item/trash/cigbutt,
-/obj/item/trash/cigbutt,
-/obj/item/trash/cigbutt,
-/obj/item/trash/cigbutt,
-/obj/item/trash/cigbutt,
-/turf/open/floor/almayer,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/weightmachine/stacklifter,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aaK" = (
 /obj/structure/disposalpipe/segment,
@@ -345,20 +344,12 @@
 /area/golden_arrow/motor_pool)
 "aaN" = (
 /obj/structure/sign/poster{
-	pixel_x = -6;
-	icon_state = "poster33";
-	pixel_y = -1;
-	desc = "This poster depicts Rockwell Jordan, the winner of Mr. Universe 2174-76. Don't ask how you know that.";
-	name = "Mr. Universe 2174-76";
-	serial_number = 33
-	},
-/obj/structure/sign/poster{
 	pixel_x = 5;
-	pixel_y = 3;
-	icon_state = "poster34";
-	name = "Mr. Universe 2176-present";
-	serial_number = 34;
-	desc = "This poster depicts Wilson Winslow, the current Mr. Universe reigning champion. Don't ask how you know that."
+	pixel_y = 5;
+	icon_state = "poster12";
+	desc = "This poster features Roxanne Straski. She was the January 2180 centerfold in Playboy Magazine. Don't ask how you know that.";
+	name = "'Miss January' pinup";
+	serial_number = 12
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
@@ -370,18 +361,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "aaP" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = 1
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/reagent_container/food/drinks/cans/waterbottle{
-	pixel_x = 13;
-	pixel_y = -5
-	},
-/turf/open/floor/almayer/cargo_arrow/north,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aaQ" = (
 /obj/effect/decal/warning_stripes{
@@ -402,6 +387,25 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
+"aaS" = (
+/obj/structure/sign/poster{
+	pixel_x = -6;
+	icon_state = "poster33";
+	pixel_y = -1;
+	desc = "This poster depicts Rockwell Jordan, the winner of Mr. Universe 2174-76. Don't ask how you know that.";
+	name = "Mr. Universe 2174-76";
+	serial_number = 33
+	},
+/obj/structure/sign/poster{
+	pixel_x = 5;
+	pixel_y = 3;
+	icon_state = "poster34";
+	name = "Mr. Universe 2176-present";
+	serial_number = 34;
+	desc = "This poster depicts Wilson Winslow, the current Mr. Universe reigning champion. Don't ask how you know that."
+	},
+/turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
 "aaT" = (
 /obj/effect/decal/warning_stripes{
@@ -440,6 +444,20 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
+"aaX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/reagent_container/food/drinks/cans/waterbottle{
+	pixel_x = 13;
+	pixel_y = -5
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/hangar)
 "aaZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -3313,13 +3331,11 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "alc" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Section Sergeant"
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Corpsman"
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -4437,10 +4453,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "aoU" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -7933,13 +7949,11 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "aAI" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Squad Leader"
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -8985,13 +8999,11 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/prep_hallway)
 "aEe" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Squad Leader"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -9343,13 +9355,7 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoonprep)
 "aFo" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Commander"
-	},
-/obj/item/clothing/under/marine/officer/boiler,
-/obj/item/clothing/suit/storage/jacket/marine/service,
-/obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber,
-/obj/item/clothing/under/marine/officer/bridge,
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aFr" = (
@@ -25801,7 +25807,7 @@ aFo
 awW
 apm
 alD
-alc
+aam
 aog
 alc
 awW
@@ -26151,7 +26157,7 @@ aWh
 aWh
 aWh
 aWh
-aAI
+aar
 aZw
 amS
 azT
@@ -36053,9 +36059,9 @@ aVr
 azS
 amf
 aSw
-aau
-aaE
 aaB
+aaG
+aaD
 aMz
 aWa
 aFf
@@ -36759,13 +36765,13 @@ axH
 aHu
 aVr
 aEF
+aaX
 aaP
-aaJ
-aaF
+aaH
 aph
 aVD
 aLy
-aam
+aau
 aFf
 avh
 azF
@@ -37118,7 +37124,7 @@ aez
 aWa
 arJ
 aWa
-aau
+aaB
 aWa
 aKa
 aKX
@@ -37291,11 +37297,11 @@ aHI
 adz
 aEG
 adz
-aaN
-aaG
+aaS
+aaJ
 ahT
+aaE
 aaC
-aav
 dJo
 fuL
 aZQ
@@ -37469,11 +37475,11 @@ aEG
 aEG
 aEG
 adz
-aaH
+aaN
 adz
-aaD
+aaF
 adz
-aar
+aav
 adz
 aJf
 aok
