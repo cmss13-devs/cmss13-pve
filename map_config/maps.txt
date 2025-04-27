@@ -76,6 +76,7 @@ endmap
 
 map lv295_blacksite
 endmap
+
 map bmg290_otogi_egress_point
 endmap
 
@@ -83,4 +84,10 @@ map canyon_32b
 endmap
 
 map bigred_2016_pve
+endmap
+
+map calliope_highway
+endmap
+
+map calliope_desert_bus
 endmap

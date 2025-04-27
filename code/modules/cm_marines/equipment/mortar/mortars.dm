@@ -577,7 +577,7 @@
 	playsound(loc, firesound, 50, 1)
 	visible_message("[icon2html(src, viewers(src))] [SPAN_DANGER("The [name] fires!")]")
 
-	for(var/mob/mob in range(7))
+	for(var/mob/mob in range(7, src))
 		shake_camera(mob, 3, 1)
 		if(ishuman(mob) && !HAS_TRAIT(mob, TRAIT_EAR_PROTECTION))
 			var/mob/living/carbon/human/human = mob
