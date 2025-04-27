@@ -240,7 +240,7 @@
 /obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
-"aaC" = (
+"aaB" = (
 /obj/structure/machinery/shower{
 	dir = 4
 	},
@@ -251,6 +251,16 @@
 	layer = 2.52
 	},
 /turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
+"aaC" = (
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aaD" = (
 /obj/structure/machinery/shower{
@@ -321,16 +331,6 @@
 	pixel_y = -6
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
-"aaH" = (
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aaI" = (
 /turf/closed/wall/almayer/outer,
@@ -26592,7 +26592,7 @@ adW
 avj
 agG
 adt
-aaC
+aaB
 acO
 aRz
 aog
@@ -26946,7 +26946,7 @@ aNn
 aAs
 agh
 aUh
-aaH
+aaC
 ato
 aSu
 aog
