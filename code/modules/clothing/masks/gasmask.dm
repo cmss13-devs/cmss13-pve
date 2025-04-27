@@ -79,8 +79,6 @@
 	item_icons = list(
 		WEAR_FACE = 'icons/mob/humans/onmob/head_1.dmi'
 	)
-	var/gas_filter_strength = 3
-	var/list/filtered_gases = list("phoron", "sleeping_agent", "carbon_dioxide")
 
 /obj/item/clothing/mask/gas/pmc
 	name = "\improper tactical filtration mask"
