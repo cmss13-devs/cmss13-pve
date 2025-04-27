@@ -91,8 +91,13 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "aam" = (
-/obj/structure/machinery/light/double/blue/golden_arrow,
-/turf/open/floor/prison/floor_plate/southwest,
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aan" = (
 /obj/effect/decal/cleanable/dirt{
@@ -157,11 +162,13 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aar" = (
-/obj/structure/machinery/light/double/blue/golden_arrow,
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 8
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
 	},
-/turf/open/floor/prison/floor_plate/southwest,
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aas" = (
 /obj/effect/decal/warning_stripes{
@@ -185,14 +192,15 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "aau" = (
+/obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/prison/floor_plate/southwest,
 /area/golden_arrow/cryo_cells)
 "aav" = (
-/obj/structure/machinery/shower{
-	dir = 4
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 8
 	},
-/obj/structure/window/reinforced,
-/turf/open/floor/plating/plating_catwalk/prison,
+/turf/open/floor/prison/floor_plate/southwest,
 /area/golden_arrow/cryo_cells)
 "aaw" = (
 /obj/structure/disposalpipe/segment,
@@ -233,6 +241,16 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aaB" = (
+/turf/open/floor/prison/floor_plate/southwest,
+/area/golden_arrow/cryo_cells)
+"aaC" = (
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/cryo_cells)
+"aaD" = (
 /obj/structure/machinery/shower{
 	dir = 8
 	},
@@ -243,7 +261,7 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/golden_arrow/cryo_cells)
-"aaC" = (
+"aaE" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
@@ -258,7 +276,7 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"aaD" = (
+"aaF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
@@ -269,7 +287,7 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
-"aaE" = (
+"aaG" = (
 /obj/structure/machinery/shower{
 	pixel_y = 16
 	},
@@ -3255,13 +3273,11 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "alc" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Section Sergeant"
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Corpsman"
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -4376,10 +4392,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "aoU" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -7891,13 +7907,11 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "aAI" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Squad Leader"
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -8944,13 +8958,11 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/prep_hallway)
 "aEe" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Squad Leader"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -9302,13 +9314,7 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoonprep)
 "aFo" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Commander"
-	},
-/obj/item/clothing/under/marine/officer/boiler,
-/obj/item/clothing/suit/storage/jacket/marine/service,
-/obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber,
-/obj/item/clothing/under/marine/officer/bridge,
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aFr" = (
@@ -25802,7 +25808,7 @@ aFo
 awW
 apm
 alD
-alc
+aam
 aog
 alc
 awW
@@ -26152,7 +26158,7 @@ aWh
 aWh
 aWh
 aWh
-aAI
+aar
 aZw
 amS
 azT
@@ -26516,7 +26522,7 @@ adW
 avj
 agG
 adt
-aav
+aaC
 acO
 aRz
 aog
@@ -26694,8 +26700,8 @@ aQr
 aBw
 atm
 aPf
+aaB
 aau
-aam
 aog
 atY
 ayJ
@@ -26858,7 +26864,7 @@ aEG
 aEG
 aWh
 afI
-aaD
+aaF
 aHd
 aog
 fSy
@@ -27034,8 +27040,8 @@ aEG
 aEG
 aEG
 aWh
-aaE
-aaD
+aaG
+aaF
 aHd
 aog
 ajq
@@ -27049,7 +27055,7 @@ aBw
 aGr
 aPf
 aNT
-aar
+aav
 aog
 aCH
 adj
@@ -27222,9 +27228,9 @@ aht
 aCB
 aQm
 aBk
-aaC
+aaE
 aog
-aaB
+aaD
 aYH
 azq
 aog
