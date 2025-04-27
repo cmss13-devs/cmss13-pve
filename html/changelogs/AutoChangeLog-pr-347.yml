@@ -1,0 +1,7 @@
+author: "KoishiVibe"
+delete-after: True
+changes:
+  - rscadd: "Ammo flag AMMO_PRONETARGET, which ignores prone hitprotection."
+  - rscadd: "'confetti' M20 landmines, which do very low damage."
+  - balance: "Claymores now deal more damage in blast"
+  - balance: "Claymores now have more lethal and numerous shrapnel"
