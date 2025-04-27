@@ -80,7 +80,7 @@
 
 /datum/ammo/bullet/shotgun/incendiary/on_hit_mob(mob/M,obj/projectile/P)
 	burst(get_turf(M),P,damage_type)
-	knockback(M,P)
+	knockback(M, P)
 
 /datum/ammo/bullet/shotgun/incendiary/on_hit_obj(obj/O,obj/projectile/P)
 	burst(get_turf(P),P,damage_type)
@@ -105,6 +105,9 @@
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	handful_state = "flechette_shell"
 	multiple_handful_name = TRUE
+
+/datum/ammo/bullet/shotgun/flechette/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P, 2)
 
 /datum/ammo/bullet/shotgun/flechette_spread
 	name = "additional flechette"
@@ -165,6 +168,9 @@
 	name = "incendiary buckshot shell"
 	handful_state = "incen_buckshot"
 	handful_type = /obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/incendiary
+	damage = 40
+	shell_speed = AMMO_SPEED_TIER_1
 
 /datum/ammo/bullet/shotgun/buckshot/incendiary/set_bullet_traits()
 	. = ..()
@@ -172,8 +178,8 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
-/datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M,P)
+/datum/ammo/bullet/shotgun/buckshot/incendiary/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P)
 
 /datum/ammo/bullet/shotgun/buckshot/special
 	name = "buckshot shell, USCM special type"
@@ -236,6 +242,20 @@
 	max_range = 8
 	damage = 90
 	firing_freq_offset = SOUND_FREQ_LOW
+
+/datum/ammo/bullet/shotgun/spread/incendiary
+	name = "additional incendiary buckshot"
+	damage = 40
+	shell_speed = AMMO_SPEED_TIER_1
+
+/datum/ammo/bullet/shotgun/spread/incendiary/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
+	))
+
+/datum/ammo/bullet/shotgun/spread/incendiary/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P)
 
 /*
 					8 GAUGE SHOTGUN AMMO

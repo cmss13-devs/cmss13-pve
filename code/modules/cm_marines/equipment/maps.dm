@@ -132,6 +132,12 @@
 	html_link = "images/b/bb/C_claim.png"
 	color = "cyan"
 
+/obj/item/map/lv759_map
+	name = "\improper LV-759 Map"
+	desc = "An overview of LV-759 schematics."
+	html_link = "images/6/60/LV759_Hybrisa_Prospera.png" //needs proper image still.
+	color = "#005eab"
+
 /obj/item/map/new_varadero
 	name = "\improper New Varadero map"
 	desc = "A labeled blueprint of the UA outpost New Varadero"
@@ -176,6 +182,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_KUTJEVO = new /obj/item/map/kutjevo_map(),
 		MAP_LV522_CHANCES_CLAIM = new /obj/item/map/lv522_map(),
 		MAP_LV522_CHANCES_CLAIM_FORECON = new /obj/item/map/lv522_map(),
+		MAP_LV759_HYBRISA_PROSPERA = new /obj/item/map/lv759_map(),
+		MAP_LV759_HYBRISA_PROSPERA_REPAIRED = new /obj/item/map/lv759_map(),
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
@@ -183,6 +191,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 		MAP_LV624_OUTPOST_FURIDAMU = new /obj/item/map/furidamu(),
+		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
+		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
 	)
 
 //used by marine equipment machines to spawn the correct map.

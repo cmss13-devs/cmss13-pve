@@ -719,6 +719,18 @@
 	new /obj/item/stack/cable_coil(src)
 	new /obj/item/device/multitool(src)
 
+/obj/item/clothing/accessory/storage/tool_webbing/tactical
+	hold = /obj/item/storage/internal/accessory/tool_webbing/tactical
+
+/obj/item/storage/internal/accessory/tool_webbing/tactical/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/device/multitool(src)
+
 /obj/item/storage/internal/accessory/surg_vest
 	storage_slots = 14
 	can_hold = list(
