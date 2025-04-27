@@ -21297,11 +21297,11 @@
 /obj/structure/surface/table{
 	color = "#8B7B5B"
 	},
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine{
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc{
 	pixel_x = 8;
 	pixel_y = 5
 	},
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine{
+/obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc{
 	pixel_x = 5;
 	pixel_y = 10
 	},
