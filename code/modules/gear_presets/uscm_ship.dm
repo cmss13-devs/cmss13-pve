@@ -756,15 +756,12 @@
 
 /datum/equipment_preset/uscm_ship/so/rmc
 	name = "Royal Marine Commando, Troop Commander"
-	paygrades = list(PAY_SHORT_RMO2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMO1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM TC"
 	assignment = JOB_TWE_RMC_LIEUTENANT
 	rank = JOB_TWE_RMC_LIEUTENANT
 	skills = /datum/skills/rmc/officer
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
-
-/datum/equipment_preset/uscm_ship/so/rmc/lesser_Rank
-	paygrades = list(PAY_SHORT_RMO1 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 

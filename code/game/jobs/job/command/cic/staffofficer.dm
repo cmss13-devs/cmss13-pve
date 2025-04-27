@@ -100,7 +100,7 @@ OverrideTimelock(/datum/job/command/bridge, list(
 /datum/job/command/bridge/ai/rmc
 	title = JOB_RMCTROOP_LIEUTENANT
 	gear_preset = /datum/equipment_preset/uscm_ship/so/rmc
-	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/rmc/lesser_Rank
+	job_options = null
 
 /obj/effect/landmark/start/bridge/rmc
 	name = JOB_RMCTROOP_LIEUTENANT
