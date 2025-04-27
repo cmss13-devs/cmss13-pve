@@ -559,9 +559,6 @@
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
 
-/datum/equipment_preset/royal_marine/lieuteant/upper_Rank
-	paygrades = list(PAY_SHORT_RMO2 = JOB_PLAYTIME_TIER_0)
-
 /datum/equipment_preset/royal_marine/captain
 	name = "TWE Royal Marine Commando, Squadron Commander"
 	flags = EQUIPMENT_PRESET_EXTRA
