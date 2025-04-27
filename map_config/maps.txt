@@ -85,3 +85,9 @@ endmap
 
 map kleschers_research_site
 endmap
+
+map calliope_highway
+endmap
+
+map calliope_desert_bus
+endmap
