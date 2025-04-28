@@ -414,6 +414,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of USCM FORECON. Swift, Silent, Deadly."
 	icon_state = "forecon_patch"
 
+/obj/item/clothing/accessory/patch/sapper
+	name = "USCM Combat Engineering patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 4th Combat Engineering Battalion, part of the USCM 2nd Colonial Support Group."
+	icon_state = "sapper_patch"
+
 /obj/item/clothing/accessory/patch/royal_marines
 	name = "TWE Royal Marines Commando patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the royal marines commando."
@@ -592,6 +597,7 @@
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 /obj/item/clothing/accessory/storage/webbing
@@ -705,6 +711,18 @@
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/crowbar(src)
 	new /obj/item/tool/wirecutters(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/device/multitool(src)
+
+/obj/item/clothing/accessory/storage/tool_webbing/tactical
+	hold = /obj/item/storage/internal/accessory/tool_webbing/tactical
+
+/obj/item/storage/internal/accessory/tool_webbing/tactical/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
 	new /obj/item/stack/cable_coil(src)
 	new /obj/item/device/multitool(src)
 
@@ -1366,6 +1384,7 @@
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg/m39,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 //Partial Pre-load For Props
@@ -1400,11 +1419,45 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(
 		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/plasma,
 	)
+
+//Pre-load For Army Props
+//===
+/obj/item/clothing/accessory/storage/webbing/m3/small/army
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyalt
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyleader
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/device/binoculars/range/designator(src)
+
+//===
 
 /obj/item/clothing/accessory/storage/webbing/m3/m40
 	name = "\improper M3 Pattern Grenade Webbing"
-	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40 grenades."
+	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40-hull grenades."
 	icon_state = "m3webbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
 
@@ -1412,13 +1465,20 @@
 	storage_slots = 7
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/super,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
 		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/flare,
+		/obj/item/explosive/grenade/high_explosive/training,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/smokebomb/green,
+		/obj/item/explosive/grenade/smokebomb/red,
+		/obj/item/explosive/grenade/metal_foam,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
+		/obj/item/explosive/grenade/tear/marine,
 	)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon
@@ -1445,6 +1505,7 @@
 	storage_slots = 4
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/rifle/ag80,
 		/obj/item/ammo_magazine/pistol/t73,
 		/obj/item/ammo_magazine/pistol/np92,
 		/obj/item/ammo_magazine/handful/shotgun/heavy,
@@ -1479,7 +1540,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
 	name = "\improper M3-R Pattern Grenade Webbing"
-	desc = "An alternative to the M3-R Pattern webbing fitted to store M40 grenades."
+	desc = "An alternative to the M3-R Pattern webbing fitted to store M40-hull grenades."
 	icon_state = "m3rwebbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
 
@@ -1524,7 +1585,7 @@
 		select_gamemode_skin(type)
 	update_icon()
 
-//Partial Pre-load For Props
+//Pre-load For Props
 
 /obj/item/clothing/accessory/storage/webbing/m56/preset
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
@@ -1533,7 +1594,7 @@
 	storage_slots = 3
 
 /obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 
@@ -1549,11 +1610,18 @@
 	storage_slots = 4
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/super,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
 		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/flare,
+		/obj/item/explosive/grenade/high_explosive/training,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/smokebomb/green,
+		/obj/item/explosive/grenade/smokebomb/red,
+		/obj/item/explosive/grenade/metal_foam,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
+		/obj/item/explosive/grenade/tear/marine,
 	)
