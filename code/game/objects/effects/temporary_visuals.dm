@@ -67,23 +67,25 @@
 	duration = 0.5 SECONDS
 	randomdir = FALSE
 	layer = ABOVE_XENO_LAYER
-	alpha = 200
+	alpha = 175
 	var/splatter_type = "splatter"
 
-/obj/effect/temp_visual/dir_setting/bloodsplatter/Initialize(mapload, angle, blood_color)
-	if(!blood_color)
+/obj/effect/temp_visual/dir_setting/bloodsplatter/Initialize(mapload, angle, fx_duration, color_override)
+	if(!color_override)
 		CRASH("Tried to create a blood splatter without a blood_color")
 	var/x_component = sin(angle) * -20
 	var/y_component = cos(angle) * -20
 	var/obj/effect/abstract/particle_holder/reset_transform/splatter_visuals
 	splatter_visuals = new(src, /particles/splatter)
 	splatter_visuals.particles.velocity = list(x_component, y_component)
-	splatter_visuals.particles.color = blood_color
-	color = blood_color
+	splatter_visuals.particles.color = color_override
+	color = color_override
 	icon_state = "[splatter_type][pick(1, 2, 3, 4, 5, 6)]"
 	. = ..()
 	var/target_pixel_x = 0
 	var/target_pixel_y = 0
+	if(fx_duration)
+		duration = fx_duration
 	switch(angle)
 		if(0, 360)
 			target_pixel_x = 0
