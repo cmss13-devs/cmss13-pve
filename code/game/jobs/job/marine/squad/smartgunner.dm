@@ -105,5 +105,18 @@
 	job = JOB_SQUAD_SMARTGUN_FORECON
 	squad = SQUAD_LRRP
 
+//-- RMC Platoon --//
+//Smartgunner//
+
+/datum/job/marine/smartgunner/ai/rmc
+	title = JOB_RMCTROOP_SMARTGUNNER
+	gear_preset = /datum/equipment_preset/uscm/rmc/sg
+	job_options = null
+
+/obj/effect/landmark/start/marine/smartgunner/rmc
+	name = JOB_RMCTROOP_SMARTGUNNER
+	job = JOB_RMCTROOP_SMARTGUNNER
+	squad = SQUAD_TWE
+
 #undef CPL_VARIANT
 #undef LCPL_VARIANT

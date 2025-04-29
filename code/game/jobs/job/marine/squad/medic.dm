@@ -107,5 +107,18 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/medic/ai/forecon
 
+//-- RMC Platoon --//
+//Medical Assistant//
+
+/datum/job/marine/medic/ai/rmc
+	title = JOB_RMCTROOP_MEDIC
+	gear_preset = /datum/equipment_preset/uscm/rmc/med
+	job_options = null
+
+/obj/effect/landmark/start/marine/medic/rmc
+	name = JOB_RMCTROOP_MEDIC
+	squad = SQUAD_TWE
+	job = /datum/job/marine/medic/ai/rmc
+
 #undef CPL_VARIANT
 #undef LCPL_VARIANT

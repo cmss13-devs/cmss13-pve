@@ -86,5 +86,17 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/leader/ai/forecon
 
+//-- RMC Platoon --//
+// Second-in-command under LT, handles the mortar calls //
+/datum/job/marine/leader/ai/rmc
+	title = JOB_RMCTROOP_TROOPLEADER
+	gear_preset = /datum/equipment_preset/uscm/rmc/cs
+	job_options = null
+
+/obj/effect/landmark/start/marine/leader/rmc
+	name = JOB_RMCTROOP_TROOPLEADER
+	squad = SQUAD_TWE
+	job = /datum/job/marine/leader/ai/rmc
+
 #undef GYSGT_VARIANT
 #undef SSGT_VARIANT

@@ -103,5 +103,17 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/standard/ai/rto
 
+/datum/job/marine/standard/ai/rmc
+	title = JOB_RMCTROOP_RIFLEMAN
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/rmc
+	job_options = null
+
+/obj/effect/landmark/start/marine/rmc
+	name = JOB_RMCTROOP_RIFLEMAN
+	squad = SQUAD_TWE
+	job = /datum/job/marine/standard/ai/rmc
+
 #undef PFC_VARIANT
 #undef PVT_VARIANT

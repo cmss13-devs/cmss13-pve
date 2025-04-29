@@ -424,6 +424,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the Royal Marines Commando."
 	icon_state = "rmcpatch"
 
+/obj/item/clothing/accessory/patch/twe
+	name = "Three World Empire patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women loyal to the Three World Empire, An older style symbol of the TWE."
+	icon_state = "rmcpatch"
+
 /obj/item/clothing/accessory/patch/upp
 	name = "UPP patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the Union of Progressive Peoples Armed Collective."
@@ -903,6 +908,9 @@
 
 /obj/item/clothing/accessory/storage/droppouch/upp
 	icon_state = "upp_drop_pouch_alt"
+
+/obj/item/clothing/accessory/storage/droppouch/rmc
+	icon_state = "rmc_drop_pouch_alt"
 
 /obj/item/storage/internal/accessory/drop_pouch
 	w_class = SIZE_LARGE //Allow storage containers that's medium or below
@@ -1551,6 +1559,21 @@
 	icon_state = "rmc_webbing_small"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Royal Marine armor. This one is the slimmed down model designed for general purpose storage."
 
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags/rmc
+	name = "\improper 82 Pattern Magazine Webbing"
+	desc = "A set of webbing pouches that can carry four magazines. Comes with clips to mount to the standard armor system in use by the Royal Marines."
+	icon_state = "rmc_webbing_magazine"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/rmc
+
+/obj/item/storage/internal/accessory/webbing/m3mag/rmc
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/nsg23,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/pistol/vp78,
+		/obj/item/ammo_magazine/pistol/vp70,
+		/obj/item/ammo_magazine/smg/m39,
+	)
 
 //Partial Pre-load For Props
 //===

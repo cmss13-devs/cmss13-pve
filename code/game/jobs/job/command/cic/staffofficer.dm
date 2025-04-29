@@ -97,6 +97,9 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	name = JOB_PMCPLAT_OW
 	job = /datum/job/command/bridge/ai/pmc
 
+//-- RMC Platoon --//
+//Groundside command, no overwatch. Lead by example, chip chip cheerio and all that rubbish//
+
 /datum/job/command/bridge/ai/rmc
 	title = JOB_RMCTROOP_LIEUTENANT
 	gear_preset = /datum/equipment_preset/uscm_ship/so/rmc
@@ -104,6 +107,7 @@ OverrideTimelock(/datum/job/command/bridge, list(
 
 /obj/effect/landmark/start/bridge/rmc
 	name = JOB_RMCTROOP_LIEUTENANT
+	squad = SQUAD_TWE
 	job = /datum/job/command/bridge/ai/rmc
 
 #undef FIRST_LT_VARIANT

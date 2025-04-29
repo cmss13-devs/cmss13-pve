@@ -83,6 +83,32 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/tl/ai/forecon
 
+//-- RMC Platoon --//
+//Section/squad leader & team leader//
+
+/datum/job/marine/tl/ai/rmc
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_RMCTROOP_SECTIONLEADER
+	gear_preset = /datum/equipment_preset/uscm/rmc/sl
+	job_options = null
+
+/obj/effect/landmark/start/marine/tl/rmc
+	name = JOB_RMCTROOP_SECTIONLEADER
+	squad = SQUAD_TWE
+	job = /datum/job/marine/tl/ai/rmc
+
+/datum/job/marine/tl/ai/rmc2ic
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_RMCTROOP_TEAMLEADER
+	gear_preset = /datum/equipment_preset/uscm/rmc/tl
+	job_options = null
+
+/obj/effect/landmark/start/marine/tl/rmc2ic
+	name = JOB_RMCTROOP_TEAMLEADER
+	squad = SQUAD_TWE
+	job = /datum/job/marine/tl/ai/rmc2ic
 
 #undef SGT_VARIANT
 #undef CPL_VARIANT

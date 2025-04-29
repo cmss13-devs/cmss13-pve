@@ -52,3 +52,37 @@
 /obj/effect/landmark/start/marine/engineer/delta
 	icon_state = "engi_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/datum/job/marine/engineer/ai
+	total_positions = 0
+	spawn_positions = 0
+
+/datum/job/marine/engineer/ai/set_spawn_positions(count)
+	return spawn_positions
+
+/datum/job/marine/engineer/ai/get_total_positions(latejoin=0)
+	return latejoin ? total_positions : spawn_positions
+
+/datum/job/marine/engineer/ai/rmc
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_RMCTROOP_ENGI
+	gear_preset = /datum/equipment_preset/uscm/rmc/eng
+	job_options = null
+
+/obj/effect/landmark/start/marine/engineer/rmc
+	name = JOB_RMCTROOP_ENGI
+	squad = SQUAD_TWE
+	job = /datum/job/marine/engineer/ai/rmc
+
+/datum/job/marine/engineer/ai/rmcmortar
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_RMCTROOP_BREACHER
+	gear_preset = /datum/equipment_preset/uscm/rmc/mor
+	job_options = null
+
+/obj/effect/landmark/start/marine/engineer/rmcmortar
+	name = JOB_RMCTROOP_BREACHER
+	squad = SQUAD_TWE
+	job = /datum/job/marine/engineer/ai/rmcmortar

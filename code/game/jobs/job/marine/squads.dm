@@ -118,6 +118,8 @@
 
 	var/squad_one_access = ACCESS_SQUAD_ONE
 	var/squad_two_access = ACCESS_SQUAD_TWO
+	var/squad_three_access = null
+	var/squad_four_access = null
 
 /datum/squad/marine
 	name = "Root"
@@ -345,6 +347,9 @@
 	use_stripe_overlay = FALSE
 	radio_freq = RMC_FREQ
 	usable = TRUE
+	squad_one_access = ACCESS_TWE_SQUAD_ONE
+	squad_two_access = ACCESS_TWE_SQUAD_TWO
+	squad_three_access = ACCESS_TWE_SQUAD_THREE
 	faction = FACTION_TWE
 
 //###############################
