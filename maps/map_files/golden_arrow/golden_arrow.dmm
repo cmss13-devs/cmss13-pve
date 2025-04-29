@@ -9515,11 +9515,8 @@
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/m49a_pve{
-	pixel_y = 18
-	},
-/obj/item/storage/box/guncase/heavy/shotgun{
-	pixel_y = 6;
-	pixel_x = 9
+	pixel_y = 10;
+	pixel_x = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -16111,6 +16108,7 @@
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "fbw" = (
