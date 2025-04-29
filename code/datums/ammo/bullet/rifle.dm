@@ -465,6 +465,30 @@
 /datum/ammo/bullet/rifle/heavy/upp
 	name = "10x31 bullet"
 
+//8.1x22mm, TWE standard
+//standard FMJ-equivalent. Steelcore improved capability ammo.
+/datum/ammo/bullet/rifle/imperial
+	name = "8.1x22 rifle bullet"
+	penetration = ARMOR_PENETRATION_TIER_2
+	damage = 30
+	accurate_range = 10
+	accuracy = HIT_ACCURACY_TIER_8
+
+//anti-personnel load, explosive. beware using it against armor or hard targets...
+/datum/ammo/bullet/rifle/imperial/explosive
+	name = "superfuzed 8.1x22 rifle bullet"
+	penetration = -ARMOR_PENETRATION_TIER_8
+	damage = 60 //kill
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_4
+
+//APHE equivalent. More damage, full AP.
+/datum/ammo/bullet/rifle/imperial/heap
+	name = "high explosive armor-piercing 8.1x22 rifle bullet"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_5
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+
 // Misc
 
 /datum/ammo/bullet/rifle/mar40

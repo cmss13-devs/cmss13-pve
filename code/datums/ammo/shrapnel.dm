@@ -76,6 +76,35 @@
 		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_pylons)
 	))
 
+//20mm KE 'shrapnel'
+/datum/ammo/bullet/shrapnel/canister/slug
+	name = "20mm KE projectile"
+	icon_state = "buckshot"//TODO: FIX
+
+	flags_ammo_behavior = AMMO_ANTIVEHICLE|AMMO_IGNORE_COVER
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_10
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_10
+	damage = 120
+	penetration = ARMOR_PENETRATION_TIER_2
+	shell_speed = AMMO_SPEED_TIER_2
+	damage_armor_punch = 1
+	pen_armor_punch = 0
+	accurate_range = 7
+	effective_range_max = 4
+	damage_falloff = DAMAGE_FALLOFF_TIER_1
+	max_range = 14
+
+/datum/ammo/bullet/shrapnel/canister/slug/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 4)
+/datum/ammo/bullet/shrapnel/canister/slug/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You feel something punch clear through you!"))
+		target.KnockDown(2.5)
+		target.Stun(2.5)
+		target.Slow(4)
+
+
 /datum/ammo/bullet/shrapnel/heavy
 	name = "shrapnel cloud"
 	icon_state = "shrapnel_light"
