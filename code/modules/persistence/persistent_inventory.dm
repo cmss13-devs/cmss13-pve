@@ -251,7 +251,7 @@
 				qdel(MO)
 				listclearnulls(current_inventory.stored_items)
 				withdrawing = FALSE
-				var/savefile/stash = new("[CONFIG_GET(string/playersave_path)]/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav")
+				var/savefile/stash = new("[CONFIG_GET(string/playersave_path)]/[copytext(usr.ckey,1,2)]/[usr.ckey]/stash.sav")
 				Write(stash)
 
 

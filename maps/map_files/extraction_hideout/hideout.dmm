@@ -1,0 +1,3240 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ah" = (
+/turf/open/floor/almayer/pod_landing_floor,
+/area/golden_arrow/shared_office)
+"bE" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"cD" = (
+/obj/structure/closet/coffin/woodencrate,
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/shared_office)
+"cR" = (
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"dJ" = (
+/turf/open/floor/almayer/blue/southwest,
+/area/golden_arrow/platoon_commander_rooms)
+"dM" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"dP" = (
+/obj/structure/machinery/cryopod/big{
+	dir = 4;
+	layer = 3.1;
+	pixel_x = -5
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/cryo_cells)
+"ea" = (
+/obj/structure/window/framed/almayer,
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
+"fg" = (
+/turf/open/floor/almayer/edge/smooth/corner/north,
+/area/golden_arrow/cryo_cells)
+"fy" = (
+/obj/structure/surface/table/almayer,
+/obj/item/toy/deck/uno,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"gf" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"gH" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/tableflag/uscm{
+	pixel_y = 2;
+	pixel_x = -3
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"hy" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/golden_arrow/cryo_cells)
+"hA" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"hF" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
+"iL" = (
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
+"iS" = (
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"iV" = (
+/turf/open/floor/almayer/sterile_green_side,
+/area/golden_arrow/cryo_cells)
+"jp" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/prop/almayer/CICmap{
+	pixel_y = 5;
+	pixel_x = -1;
+	layer = 4
+	},
+/turf/open/floor/almayer/blue/west,
+/area/golden_arrow/platoon_commander_rooms)
+"jt" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	name = "\improper Prep";
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"kk" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3
+	},
+/turf/open/floor/almayer/pod_landing_floor,
+/area/golden_arrow/shared_office)
+"kO" = (
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"lk" = (
+/obj/structure/closet/crate/alpha,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/shared_office)
+"mi" = (
+/obj/structure/surface/table/almayer,
+/obj/item/toy/deck,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"mm" = (
+/obj/structure/inventory_machine,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"mn" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/smartgunner/alpha,
+/turf/open/floor/almayer/sterile_green,
+/area/golden_arrow/cryo_cells)
+"mt" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"nv" = (
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"ny" = (
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/shared_office)
+"nI" = (
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/cryo_cells)
+"od" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/golden_arrow/cryo_cells)
+"of" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_y = 13;
+	pixel_x = -3
+	},
+/obj/item/device/flashlight/lamp{
+	pixel_x = 4;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
+"op" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoon_commander_rooms)
+"pa" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/colony/game,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"pe" = (
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/cryo_cells)
+"pm" = (
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/golden_arrow/cryo_cells)
+"pL" = (
+/obj/structure/phone_base{
+	pixel_y = 30;
+	pixel_x = 9;
+	phone_id = "Overwatch";
+	name = "overwatch receiver";
+	phone_category = "Overwatch"
+	},
+/turf/open/floor/almayer/blue/west,
+/area/golden_arrow/platoon_commander_rooms)
+"pO" = (
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"qo" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/cryo_cells)
+"qX" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"rf" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/alpha,
+/turf/open/floor/almayer/sterile_green,
+/area/golden_arrow/cryo_cells)
+"rZ" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"sf" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/glass{
+	dir = 2;
+	name = "\improper Requisitions"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/shared_office)
+"tC" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
+"tZ" = (
+/obj/structure/sign/poster/pinup,
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
+"uN" = (
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"vg" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"vF" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/leader/alpha,
+/turf/open/floor/almayer/sterile_green_side/northeast,
+/area/golden_arrow/cryo_cells)
+"xv" = (
+/obj/structure/bed/chair/comfy,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"xI" = (
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"xM" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	name = "\improper Storage";
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"yT" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/overwatch/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
+"zo" = (
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/shared_office)
+"Ae" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/shared_office)
+"BC" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Briefing"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"Cg" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"CE" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/briefing)
+"CL" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/shared_office)
+"CM" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/dorms)
+"Da" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door/window/southright,
+/turf/open/floor/almayer,
+/area/golden_arrow/shared_office)
+"Df" = (
+/obj/structure/closet/crate/bravo,
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/shared_office)
+"DN" = (
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"DY" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"El" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"EC" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"EE" = (
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/golden_arrow/cryo_cells)
+"ET" = (
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"FJ" = (
+/obj/structure/machinery/cryopod/big{
+	dir = 4;
+	layer = 3.1;
+	pixel_x = -5
+	},
+/turf/open/floor/almayer/sterile_green,
+/area/golden_arrow/cryo_cells)
+"FQ" = (
+/obj/structure/sign/poster/clf,
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"FT" = (
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"GG" = (
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/cryo_cells)
+"Hz" = (
+/obj/structure/bed/chair/comfy,
+/turf/open/floor/almayer,
+/area/golden_arrow/shared_office)
+"HA" = (
+/turf/open/floor/almayer/blue,
+/area/golden_arrow/platoon_commander_rooms)
+"HI" = (
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
+	},
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 28;
+	pixel_x = 15
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"Iq" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"Jb" = (
+/turf/open/space/basic,
+/area/space)
+"JL" = (
+/obj/structure/machinery/cryopod/big{
+	dir = 4;
+	layer = 3.1;
+	pixel_x = -5
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/cryo_cells)
+"Kw" = (
+/obj/structure/sign/poster/hunk,
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"Kz" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoon_commander_rooms)
+"Lh" = (
+/obj/structure/bed/chair,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"Lp" = (
+/obj/structure/closet/crate/secure/gear{
+	name = "helmet camera crate"
+	},
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/obj/item/device/overwatch_camera,
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/cryo_cells)
+"LO" = (
+/obj/structure/sign/poster/ad,
+/turf/closed/wall/almayer,
+/area/golden_arrow/shared_office)
+"LU" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/bridge,
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/golden_arrow/cryo_cells)
+"Mi" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"NK" = (
+/obj/structure/machinery/chem_dispenser/canteen,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"Oj" = (
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"Oz" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"OY" = (
+/obj/structure/bed/chair,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"Pu" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/shared_office)
+"Qb" = (
+/obj/structure/closet/crate/green,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/shared_office)
+"Rv" = (
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"RA" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/medic/alpha,
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/golden_arrow/cryo_cells)
+"SC" = (
+/obj/structure/machinery/prop/almayer/CICmap{
+	pixel_y = 5;
+	pixel_x = -1;
+	layer = 4
+	},
+/obj/structure/surface/table/almayer,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"Td" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/platoon_commander_rooms)
+"TK" = (
+/obj/structure/window/framed/almayer,
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"Um" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/alpha,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/sterile_green,
+/area/golden_arrow/cryo_cells)
+"Up" = (
+/obj/structure/closet/crate/charlie,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/shared_office)
+"Us" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/tl/alpha,
+/turf/open/floor/almayer/sterile_green,
+/area/golden_arrow/cryo_cells)
+"Uu" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor{
+	name = "\improper Overwatch"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"UT" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/shared_office)
+"Vf" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/leader/alpha,
+/turf/open/floor/almayer/sterile_green_side/southeast,
+/area/golden_arrow/cryo_cells)
+"Vo" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
+"WE" = (
+/obj/structure/inventory_machine,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"Xj" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"ZG" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"ZO" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+
+(1,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+qo
+qo
+qo
+qo
+qo
+qo
+qo
+qo
+qo
+"}
+(2,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+dP
+JL
+dP
+dP
+dP
+dP
+JL
+dP
+qo
+"}
+(3,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+Vf
+RA
+LU
+vF
+Vf
+RA
+LU
+vF
+qo
+"}
+(4,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+iV
+FJ
+FJ
+pm
+iV
+FJ
+FJ
+pm
+qo
+"}
+(5,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+hy
+Us
+mn
+pm
+iV
+rf
+Us
+od
+qo
+"}
+(6,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+iV
+FJ
+FJ
+pm
+iV
+FJ
+FJ
+pm
+qo
+"}
+(7,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+iV
+mn
+Um
+pm
+iV
+rf
+Um
+pm
+qo
+"}
+(8,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+bE
+TK
+TK
+Oz
+xM
+TK
+TK
+FQ
+qo
+"}
+(9,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+xI
+tC
+ET
+tC
+tC
+iS
+tC
+cR
+qo
+"}
+(10,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+HI
+tC
+Lp
+pe
+pe
+fg
+tC
+Oj
+qo
+"}
+(11,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+kO
+tC
+nI
+GG
+GG
+EE
+tC
+kO
+qo
+"}
+(12,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+qo
+nv
+tC
+FT
+tC
+tC
+uN
+tC
+pO
+qo
+"}
+(13,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+CL
+CL
+CL
+CL
+qo
+Kw
+TK
+TK
+Oz
+jt
+TK
+TK
+bE
+qo
+"}
+(14,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+CL
+Qb
+Ae
+Up
+UT
+mm
+WE
+WE
+gf
+gf
+WE
+WE
+mm
+CM
+"}
+(15,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+CL
+cD
+Ae
+zo
+LO
+El
+gf
+gf
+gf
+gf
+gf
+gf
+ZG
+CM
+"}
+(16,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+CL
+cD
+Ae
+ny
+sf
+gf
+gf
+xv
+mi
+vg
+xv
+Mi
+vg
+CM
+"}
+(17,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+CL
+Ae
+Ae
+Ae
+Pu
+gf
+gf
+xv
+Mi
+vg
+xv
+Mi
+vg
+CM
+"}
+(18,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+CL
+Ae
+Ae
+Hz
+Da
+gf
+gf
+xv
+Mi
+vg
+xv
+pa
+vg
+CM
+"}
+(19,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+CL
+zo
+zo
+ah
+UT
+qX
+gf
+xv
+Mi
+vg
+xv
+fy
+Cg
+CM
+"}
+(20,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+CL
+lk
+Df
+kk
+UT
+NK
+gf
+xv
+Mi
+vg
+xv
+Mi
+hA
+CM
+"}
+(21,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+CL
+Pu
+Pu
+Pu
+Vo
+Vo
+BC
+Vo
+ea
+ea
+ea
+ea
+tZ
+CE
+"}
+(22,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Td
+Kz
+op
+op
+DY
+rZ
+DN
+Iq
+DN
+DN
+DN
+dM
+EC
+CE
+"}
+(23,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Td
+pL
+jp
+dJ
+Uu
+DN
+OY
+OY
+OY
+OY
+DN
+SC
+Rv
+CE
+"}
+(24,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Td
+iL
+of
+HA
+mt
+DN
+OY
+OY
+OY
+Lh
+DN
+gH
+Rv
+CE
+"}
+(25,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Td
+hF
+yT
+HA
+Vo
+rZ
+Xj
+DN
+DN
+DN
+DN
+ZO
+EC
+CE
+"}
+(26,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Td
+Td
+Td
+Td
+CE
+CE
+CE
+CE
+CE
+CE
+CE
+CE
+CE
+CE
+"}
+(27,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(28,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(29,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(30,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(31,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(32,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(33,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(34,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(35,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(36,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(37,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(38,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(39,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(40,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(41,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(42,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(43,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(44,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(45,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(46,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(47,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(48,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(49,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
+(50,1,1) = {"
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+Jb
+"}
