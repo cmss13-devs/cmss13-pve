@@ -364,7 +364,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 	lever_super_sound = 'sound/weapons/handling/gun_lever_action_superload.ogg'
 	lever_hitsound = 'sound/weapons/handling/gun_boomslang_hitsound.ogg'
 	flags_equip_slot = SLOT_BACK
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AMMO_COUNTER
 	levering_sprite = null
 	flags_gun_lever_action = USES_STREAKS
@@ -543,3 +543,6 @@ their unique feature is that a direct hit will buff your damage and firerate
 #undef FLOATING_PENETRATION_TIER_2
 #undef FLOATING_PENETRATION_TIER_3
 #undef FLOATING_PENETRATION_TIER_4
+
+/obj/item/weapon/gun/lever_action/xm88/built
+	starting_attachment_types = list(/obj/item/attachable/stock/xm88,/obj/item/attachable/scope/mini/xm88)
