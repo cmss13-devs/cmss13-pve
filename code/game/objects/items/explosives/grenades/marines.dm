@@ -14,6 +14,7 @@
 	icon_state = "grenade"
 	det_time = 40
 	item_state = "grenade_hedp"
+	caliber = "30mm"
 	dangerous = TRUE
 	underslug_launchable = TRUE
 	dual_purpose = TRUE
@@ -83,6 +84,7 @@
 	desc = "A high-explosive grenade produced for private security firms. It explodes around 3 seconds after the pin has been pulled."
 	icon_state = "grenade_pmc"
 	item_state = "grenade_ex"
+	caliber = "non-standard"
 	underslug_launchable = FALSE
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	explosion_power = 200
@@ -95,6 +97,7 @@
 	desc = "A blast grenade produced in the colonies, most commonly using old designs and schematics. It explodes 3 seconds after the pin has been pulled."
 	icon_state = "grenade_stick"
 	item_state = "grenade_stick"
+	caliber = "non-standard"
 	force = 10
 	w_class = SIZE_SMALL
 	throwforce = 15
@@ -112,6 +115,7 @@
 	desc = "The standard issue fragmentation grenade of the UPP military. It explodes 3 seconds after the pin has been pulled."
 	icon_state = "grenade_upp"
 	item_state = "grenade_upp"
+	caliber = "non-standard"
 	throw_speed = SPEED_FAST
 	throw_range = 6
 	underslug_launchable = FALSE
@@ -150,6 +154,7 @@
 	desc = "An outdated USCM Fragmentation Grenade. With decades of service in the USCM, the old M15 Fragmentation Grenade is slowly being replaced by the slightly safer M40-series grenades. It is set to detonate in 4 seconds."
 	icon_state = "grenade_ex"
 	item_state = "grenade_ex"
+	caliber = "non-standard"
 	throw_speed = SPEED_FAST
 	dual_purpose = FALSE
 	throw_range = 6
@@ -202,6 +207,7 @@
 	desc = "M74 - Airburst Grenade Munition - Fragmentation. This grenade must be launched with a grenade launcher, and detonates once it reaches its destination. It disperses jagged shrapnel in a cone in front of itself, tearing through sinews and armor alike. Dispersion pattern is optimized against large target. Suffers from overpenetration on a direct hit."
 	icon_state = "grenade_m74_airburst_f"
 	item_state = "grenade_m74_airburst_f_active"
+	caliber = "40x53mm"
 	explosion_power = 0
 	explosion_falloff = 25
 	shrapnel_count = 16
@@ -271,6 +277,7 @@
 	icon_state = "grenade_40mm_inc"
 	det_time = 0
 	item_state = "grenade_fire"
+	caliber = "40x53mm"
 	hand_throwable = FALSE
 	dangerous = TRUE
 	underslug_launchable = TRUE
@@ -309,6 +316,7 @@
 	desc = "This is a 40mm grenade, designed to be launched by a grenade launcher and detonate on impact. This one is marked as a High-Explosive Dual-Purpose grenade, watch your fire."
 	icon_state = "grenade_40mm_hedp"
 	item_state = "grenade_hedp"
+	caliber = "40x53mm"
 	det_time = 0
 	hand_throwable = FALSE
 	dangerous = TRUE
@@ -349,6 +357,7 @@
 	desc = "This is a caseless 40mm grenade, designed to be launched by a grenade launcher and detonate on impact with an injury radius of 3 metres. This one bears markings of the UPP."
 	icon_state = "grenade_40mm_upp"
 	item_state = "grenade_hedp"
+	caliber = "40x103mm"
 	dangerous = FALSE
 	explosion_power = 180 //Stronger than HEDP to make up for one shot in the tube
 	explosion_falloff = 40 //But quicker to lose blast damage
@@ -386,6 +395,7 @@
 	desc = "High-Explosive, Armour Piercing. A small, but deceptively strong blast grenade that can penetrate appreciable quantities of armor, whilst retaining a similar casualty radius as the standard M40. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only. Due to faulty primers, it is inadvisable to fire them directly at hard surfaces like walls, landing them just in front is recommended."
 	icon_state = "grenade_heap"
 	item_state = "grenade_chem"
+	caliber = "30mm"
 	explosion_power = 250
 	explosion_falloff = 200
 	shrapnel_count = 0
@@ -402,6 +412,7 @@
 	desc = "Bounding Fragmentation, Air-Burst. Rather than traditionally detonating on impact, this round propels itself up into the air prior to exploding into a lethal hail of shrapnel a second later. Effective against troops in the open or in foxholes. Not a hand-grenade, as marked by the yellow color-band on its hull, launcher-fired only."
 	icon_state = "grenade_bfab"
 	item_state = "grenade_bfab"
+	caliber = "30mm"
 	explosion_power = 40
 	shrapnel_count = 48
 	shrapnel_type = /datum/ammo/bullet/shrapnel/heavy
@@ -439,6 +450,7 @@
 	desc = "High-Illumination, Parachute-Flare. Fired into the air, the M72A2 releases a parachute and ignites, illuminating the surrounding area for several minutes. Longer lasting than the A1 models, is is unfortunately not as bright. Can also be fired into ceilings where it will partially embed and serve as an overhead light source until it burns out."
 	icon_state = "grenade_hipf"
 	item_state = "grenade_hipf"
+	caliber = "30mm"
 	dangerous = TRUE	//kept so marines don't punt flare grenades up aboard the Garrow
 	explosion_power = 0
 	shrapnel_count = 0
@@ -471,6 +483,7 @@
 	icon_state = "grenade_fire"
 	det_time = 40
 	item_state = "grenade_fire"
+	caliber = "30mm"
 	arm_sound = 'sound/weapons/grenade.ogg'
 	dangerous = TRUE
 	underslug_launchable = TRUE
@@ -526,6 +539,7 @@
 	desc = "A potent, improvised firebomb, coupled with a pinch of gunpowder. Cheap, very effective, and deadly in confined spaces. Commonly found in the hands of rebels and terrorists. It can be difficult to predict how many seconds you have before it goes off, so be careful. Chances are, it might explode in your face."
 	icon_state = "molotov"
 	item_state = "molotov"
+	caliber = "non-standard"
 	arm_sound = 'sound/items/Welder2.ogg'
 	underslug_launchable = FALSE
 	fire_type = FIRE_VARIANT_DEFAULT
@@ -551,6 +565,7 @@
 	desc = "M74 - Airburst Grenade Munition - Incendiary. This grenade must be launched with a grenade launcher, and detonates once it reaches its destination. It disperses a cone of lingering flames in a small area in front of it. The warped pieces of the grenade can also set fire as they fly away."
 	icon_state = "grenade_m74_airburst_i"
 	item_state = "grenade_m74_airburst_i_active"
+	caliber = "40x53mm"
 	det_time = 0 // Unused, because we don't use prime.
 	hand_throwable = FALSE
 	flame_level = 15
@@ -597,6 +612,7 @@
 	icon_state = "grenade_smoke"
 	det_time = 20
 	item_state = "grenade_smoke"
+	caliber = "30mm"
 	underslug_launchable = TRUE
 	harmful = FALSE
 	antigrief_protection = FALSE
@@ -659,6 +675,7 @@
 	name = "RDG-17 smoke grenade"
 	desc = "Handgrenade, smoke, model 17. Simple, old and efficient design, these grenades are produced basically everywhere for use in the UPP Armed Collective."
 	icon_state = "grenade_upp_smoke"
+	caliber = "non-standard"
 	arm_sound = 'sound/weapons/pinpull.ogg'
 
 /obj/item/explosive/grenade/phosphorus
@@ -667,6 +684,7 @@
 	icon_state = "grenade_phos"
 	det_time = 20
 	item_state = "grenade_training"
+	caliber = "30mm"
 	underslug_launchable = TRUE
 	dual_purpose = TRUE
 	arm_sound = 'sound/weapons/grenade.ogg'
@@ -720,6 +738,7 @@
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	icon_state = "grenade_upp_wp"
 	item_state = "grenade_upp_wp"
+	caliber = "non-standard"
 
 /obj/item/explosive/grenade/phosphorus/clf
 	name = "\improper improvised phosphorus bomb"
@@ -729,6 +748,7 @@
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	icon_state = "grenade_phos_clf"
 	item_state = "grenade_phos_clf"
+	caliber = "non-standard"
 
 /*
 //================================================
@@ -743,6 +763,7 @@
 		A bounding landmine mode is available for this weapon which activates a small drill to self-bury itself when planted. Simply plant it at your feet and walk away."
 	icon_state = "grenade_sebb"
 	item_state = "grenade_sebb"
+	caliber = "non-standard"
 	det_time = 3 SECONDS
 	underslug_launchable = TRUE
 	/// Maximum range of effect
@@ -926,6 +947,7 @@
 	icon_state = "flashbang2"//temp icon
 	det_time = 40
 	item_state = "grenade_phos_clf"//temp icon
+	caliber = "non-standard"
 	underslug_launchable = FALSE
 	harmful = TRUE
 	antigrief_protection = TRUE
@@ -968,6 +990,7 @@
 	icon_state = "flashbang2"//temp icon
 	det_time = 40
 	item_state = "grenade_phos_clf"//temp icon
+	caliber = "non-standard"
 	underslug_launchable = FALSE
 	harmful = TRUE
 	antigrief_protection = FALSE
@@ -1002,6 +1025,7 @@
 	icon_state = "flashbang2"//temp icon
 	det_time = 40
 	item_state = "grenade_phos_clf"//temp icon
+	caliber = "non-standard"
 	underslug_launchable = FALSE
 	harmful = TRUE
 	antigrief_protection = FALSE
@@ -1031,6 +1055,7 @@
 	icon_state = "grenade_gas"
 	det_time = 40
 	item_state = "grenade_phos"//temp icon
+	caliber = "30mm"
 	underslug_launchable = TRUE
 	tear_gas_radius = 4
 	arm_sound = 'sound/weapons/grenade.ogg'
@@ -1160,6 +1185,7 @@
 	icon_state = "grenade_ltl"
 	item_state = "baton_slug"
 	inactive_icon = "grenade_ltl"
+	caliber = "30mm"
 	antigrief_protection = FALSE
 	underslug_launchable = TRUE
 	hand_throwable = FALSE
@@ -1237,6 +1263,7 @@
 	desc = "And Saint Attila raised the hand grenade up on high, saying, \"O LORD, bless this Thy hand grenade that with it Thou mayest blow Thine enemies to tiny bits, in Thy mercy.\" And the LORD did grin and the people did feast upon the lambs and sloths and carp and anchovies... And the LORD spake, saying, \"First shalt thou take out the Holy Pin, then shalt thou count to three, no more, no less. Three shall be the number thou shalt count, and the number of the counting shall be three. Four shalt thou not count, neither count thou two, excepting that thou then proceed to three. Five is right out. Once the number three, being the third number, be reached, then lobbest thou thy Holy Hand Grenade of Antioch towards thy foe, who, being naughty in My sight, shall snuff it.\""
 	icon_state = "grenade_antioch"
 	item_state = "grenade_antioch"
+	caliber = "non-standard"
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 10
 	underslug_launchable = FALSE
@@ -1251,6 +1278,7 @@
 	desc = "A Metal-Foam Hull-Sealant grenade originally used for emergency repairs but have found other practical applications on the field. Based off the same hull as the M40 HEDP. Has a 2 second fuse."
 	icon_state = "grenade_metal_foam"
 	item_state = "grenade_metal_foam"
+	caliber = "30mm"
 	det_time = 20
 	underslug_launchable = TRUE
 	harmful = FALSE
@@ -1287,6 +1315,7 @@
 	desc = "High-Explosive Dual-Purpose. A small, but deceptively strong blast grenade that has recently been added to the arsenal of the RMC."
 	icon_state = "rmc_grenade"
 	item_state = "grenade_hedp"
+	caliber = "30mm"
 	explosion_power = 130
 	explosion_falloff = 30
 
@@ -1295,6 +1324,7 @@
 	desc = "The R2175/B HIDP is a small, but deceptively strong incendiary grenade designed to rapidly clear areas with fast-acting potent fire. It is set to detonate in 4 seconds."
 	icon_state = "rmc_grenade_fire"
 	item_state = "grenade_fire"
+	caliber = "30mm"
 	flame_level = BURN_TIME_TIER_1
 	burn_level = BURN_LEVEL_TIER_8
 	radius = 3
