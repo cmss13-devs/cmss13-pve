@@ -1,10 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = -7
+/obj/structure/closet/secure_closet/marine_personal/forecon/rifleman{
+	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = 8
+/obj/structure/closet/secure_closet/marine_personal/forecon/rifleman{
+	pixel_x = 7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -1892,11 +1892,11 @@
 	light_color = "#dae2ff";
 	light_power = 0.5
 	},
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = 8
+/obj/structure/closet/secure_closet/marine_personal/forecon/smartgunner{
+	pixel_x = 7
 	},
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = -7
+/obj/structure/closet/secure_closet/marine_personal/forecon/squad_leader{
+	pixel_x = -8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -3190,11 +3190,11 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "sW" = (
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = 8
+/obj/structure/closet/secure_closet/marine_personal/forecon/platoon_leader{
+	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = -7
+/obj/structure/closet/secure_closet/marine_personal/forecon/rifleman{
+	pixel_x = 7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -4933,13 +4933,11 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "IQ" = (
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = -7;
-	job = "Corpsman"
+/obj/structure/closet/secure_closet/marine_personal/forecon/corpsman{
+	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = 8;
-	job = "Radio Telephone Operator"
+/obj/structure/closet/secure_closet/marine_personal/forecon/platoon_leader{
+	pixel_x = 7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -5253,13 +5251,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "KS" = (
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = -7;
-	job = "Squad Leader"
+/obj/structure/closet/secure_closet/marine_personal/forecon/squad_leader{
+	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = 8;
-	job = "Section Sergeant"
+/obj/structure/closet/secure_closet/marine_personal/forecon/corpsman{
+	pixel_x = 7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -6119,12 +6115,11 @@
 	light_power = 0.5;
 	pixel_y = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = -7
+/obj/structure/closet/secure_closet/marine_personal/forecon/rto{
+	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal/sof{
-	pixel_x = 8;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/forecon/smartgunner{
+	pixel_x = 7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
