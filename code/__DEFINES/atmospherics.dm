@@ -23,7 +23,7 @@
 
 #define T0C 273.15 // 0degC
 #define T20C 293.15 // 20degC
-#define T40C 313,15 // 40degC
+#define T40C 313.5 // 40degC
 #define T90C 363.15 // 90degC
 #define T120C 393.15 // 120degC
 #define TCMB 2.7 // -270.3degC

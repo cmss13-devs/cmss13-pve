@@ -58,6 +58,13 @@
 	max_rounds = 7
 	gun_type = /obj/item/weapon/gun/pistol/m1911
 
+/obj/item/ammo_magazine/pistol/grizzly
+	name = "\improper modified M1911 magazine (.50AE)"
+	default_ammo = /datum/ammo/bullet/pistol/deagle
+	caliber = ".50"
+	icon_state = "grizzly"//rename later
+	max_rounds = 6
+	gun_type = /obj/item/weapon/gun/pistol/grizzly
 
 //-------------------------------------------------------
 //vp70 based off VP70
