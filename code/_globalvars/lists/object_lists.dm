@@ -31,3 +31,6 @@ GLOBAL_LIST_EMPTY_TYPED(lifeboat_doors, /obj/structure/machinery/door/airlock/mu
 
 GLOBAL_LIST_EMPTY_TYPED(teleporters, /datum/teleporter)
 GLOBAL_LIST_EMPTY(teleporters_by_id)
+
+GLOBAL_LIST_EMPTY(inventory_boxes)
+GLOBAL_LIST_EMPTY(persistent_inventories)
