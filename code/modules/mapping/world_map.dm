@@ -1,5 +1,14 @@
 // This will save things to a sav file, sadly can't be a map export. But I may make a converter for that in-game to help out. ~Cass
 
+/atom
+	var/unique_save_vars = list()
+
+/atom/proc/vars_to_save()
+ 	return list("x","y","z","color","dir","name","pixel_x","pixel_y","tagged_price")+unique_save_vars
+
+/atom/proc/get_saveable_contents()
+	return contents
+
 proc/isemptylist(list/list)
 	if(!list.len)
 		return 1
@@ -42,6 +51,34 @@ proc/clearlist(list/list)
 
 	MO.name = O.name
 
+	for(var/V in O.vars_to_save() )
+		var/save_var = TRUE
+		if(!(V in O.vars))
+			save_var = FALSE
+			continue
+		if(!(O.vars[V] == initial(O.vars[V])))
+			if(islist(O.vars[V]))
+				var/list/M = O.vars[V]
+				for(var/P in M)
+					if(!istext(P) && !isnum(P) && !ispath(P))
+						save_var = FALSE
+						continue
+					if(listgetindex(M,P))
+						var/asso_var = listgetindex(M,P)
+						if(asso_var && (!istext(asso_var) && !isnum(asso_var) && !ispath(asso_var)) )
+							save_var = FALSE
+							continue
+
+			else
+				if(!istext(O.vars[V]) && !isnum(O.vars[V]) && !ispath(O.vars[V]))	// make sure all references to mobs/objs/turfs etc, are fully cut!
+					save_var = FALSE
+					continue
+
+		if(save_var)
+			MO.object_vars[V] = O.vars[V]
+
+		CHECK_TICK
+
 	return MO
 
 /proc/full_item_save(obj/O)
@@ -53,6 +90,36 @@ proc/clearlist(list/list)
 
 	var/datum/map_object/MO = get_object_data(O)
 	if(!MO) return
+
+	CHECK_TICK
+
+
+	for(var/obj/A in O.get_saveable_contents())
+		var/datum/map_object/MO_2 = get_object_data(A)
+		if(!MO_2)
+			continue
+
+		MO.contents += MO_2
+
+		CHECK_TICK
+
+		for(var/obj/B in A.get_saveable_contents())
+			var/datum/map_object/MO_3 = get_object_data(B)
+			if(!MO_3) continue
+
+			MO_2.contents += MO_3
+
+			CHECK_TICK
+
+			for(var/obj/C in B.get_saveable_contents())
+				var/datum/map_object/MO_4 = get_object_data(C)
+				if(!MO_4) continue
+
+				MO_3.contents += MO_4
+
+				CHECK_TICK
+
+		CHECK_TICK
 
 	return MO
 
@@ -116,8 +183,9 @@ proc/clearlist(list/list)
 
 	clearlist(O.contents)
 
-	if(!isemptylist(reagent_data) && O.reagents)
-		var/obj/item/weapon/reagent_containers/container = O
+	for(var/V in O.vars_to_save())
+		if(object_vars[V])
+			O.vars[V] = object_vars[V]
 
 	var/turf/turfmoveto = locate(x,y,z)	// this should fix display sign issues
 	if(turfmoveto && (turfmoveto != get_turf(O)) )

@@ -73,7 +73,7 @@
 
     dat = get_full_data(user)
 
-    var/datum/browser/popup = new(usr, "inventory_machine", "le epic stash", nwidth = 550, nheight = 650)
+    var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
     popup.set_content(jointext(dat,null))
     popup.open()
 
@@ -89,7 +89,7 @@
 
 	if(current_inventory)
 		if(current_inventory.max_possible_items <= length(current_inventory.stored_items))
-			visible_message("<b>[src]</b> beeps, \"<span class='danger'>I'm sorry! You've reached your inventory limit!</span>\" ")
+			visible_message("<b>[src]</b> beeps, \"<span class='danger'>Your stash is at maximum capacity.</span>\" ")
 			return
 
 
@@ -98,7 +98,7 @@
 		I.forceMove(src) // move item into it to prevent glitches.
 
 		current_inventory.add_item(I, user)
-		var/savefile/stash = new("[CONFIG_GET(string/playersave_path)]/[copytext(user.ckey,1,2)]/[user.ckey]/stash.sav")
+		var/savefile/stash = new("data/player_saves/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav")
 		Write(stash)
 
 		item_processing = FALSE
@@ -106,20 +106,16 @@
 		update_icon()
 		return
 
-		if(!current_inventory)
-			current_inventory = make_new_inventory(H.ckey)
-			to_chat(user, "Created a new stash!")
-			updateDialog()
-			update_icon()
-
-/obj/structure/inventory_machine/proc/load_stash(mob/user,filename="stash.sav")
-	var/mob/living/carbon/human/H = user
-	if(!H.ckey)
-		return
-	var/savefile/stash = new("[CONFIG_GET(string/playersave_path)]/[copytext(H.ckey,1,2)]/[H.ckey]/[filename]")
-	Write(stash)
+///obj/structure/inventory_machine/proc/load_stash(mob/user,filename="stash.sav")
+//	var/mob/living/carbon/human/H = user
+//	if(!H.ckey)
+//		return
+//	var/savefile/stash = new("data/player_saves/[copytext(H.ckey,1,2)]/[H.ckey]/[filename]")
+//	Write(stash)
 
 /obj/structure/inventory_machine/proc/check_inventory_lists(mob/user, var/mob/living/carbon/human/H)
+
+	H = user
 
 	if(!H || !H.ckey)
 		return FALSE
@@ -137,22 +133,22 @@
 	new_inv = make_new_inventory(H.ckey)
 
 	if(new_inv)
-		var/full_path = "[CONFIG_GET(string/playersave_path)]/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav"
+		var/full_path = "data/player_saves/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav"
 		if(fexists(full_path))
 			new_inv.load_inventory()
 			new_inv.save_inventory()
 		else
-			load_stash(H.ckey,filename="stash.sav")
+			var/savefile/stash = new("data/player_saves/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav")
+			Read(stash)
 			new_inv.load_inventory()
 			new_inv.save_inventory()
 
 		return new_inv
 
 
-/obj/structure/inventory_machine/proc/make_new_inventory(owner_nm, uid)
+/obj/structure/inventory_machine/proc/make_new_inventory(uid)
 	var/datum/persistent_inventory/new_inv = new /datum/persistent_inventory(src)
 
-	new_inv.owner_name = owner_nm
 	new_inv.unique_id = uid
 
 	return new_inv
@@ -169,15 +165,15 @@
 			to_chat(usr, "<b>You're not a human!</b>")
 
 		if(!check_persistent_storage_exists(H.ckey))
-			to_chat(usr, "<b>You're eligible, but don't have an account! Creating an account for you now...</b>")
-			load_stash(H.ckey,filename="stash.sav")
+			to_chat(usr, "<b>Eligibility of user confirmed, but no stash is currently on-record. Opening a new stash...</b>")
+//			load_stash(H.ckey,filename="stash.sav")
 			current_inventory = make_new_inventory(H.ckey)
-			to_chat(user, "Created a new stash!")
-			var/savefile/stash = new("[CONFIG_GET(string/playersave_path)]/[copytext(usr.ckey,1,2)]/[usr.ckey]/stash.sav")
+			to_chat(user, "A new stash has been opened.")
+			var/savefile/stash = new("data/player_saves/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav")
 			Write(stash)
 			var/dat
 			dat = get_full_data(user)
-			var/datum/browser/popup = new(usr, "inventory_machine", "le epic stash", nwidth = 550, nheight = 650)
+			var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
 			popup.set_content(jointext(dat,null))
 			popup.open()
 			return
@@ -185,17 +181,16 @@
 			var/datum/persistent_inventory/new_inv = check_inventory_lists(usr, H)
 
 			if(!new_inv)
-				visible_message("<b>[src]</b> beeps, \"<span class='danger'>Oh no! [usr] I wasn't able to access your inventory account, it either exists already or is open elsewhere!</span>\" ")
+				visible_message("<b>[src]</b> beeps, \"<span class='danger'>Your stash is currently busy. Ensure that you have logged out of all Stash Access Points.</span>\" ")
 				flick("inv-tri_warn",src)
 				return
 
-			visible_message("<b>[src]</b> beeps, \"<span class='notice'>Welcome back!</span>\" ")
-			flick("inv-tri_accept",src)
-			var/savefile/stash = new("[CONFIG_GET(string/playersave_path)]/[copytext(usr.ckey,1,2)]/[usr.ckey]/stash.sav")
-			Read(stash)
+			visible_message("<b>[src]</b> beeps, \"<span class='notice'>Access to stash granted.</span>\" ")
+			var/savefile/stash = new("data/player_saves/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav")
+			Write(stash)
 			var/dat
 			dat = get_full_data(user)
-			var/datum/browser/popup = new(usr, "inventory_machine", "le epic stash", nwidth = 550, nheight = 650)
+			var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
 			popup.set_content(jointext(dat,null))
 			popup.open()
 
@@ -238,12 +233,6 @@
 
 				playsound(src, 'sound/machines/chime.ogg', 25)
 				flick("inv-tri_accept",src)
-				var/dat
-				dat = get_full_data(user)
-				var/datum/browser/popup = new(usr, "inventory_machine", "le epic stash", nwidth = 550, nheight = 650)
-				popup.set_content(jointext(dat,null))
-				popup.open()
-				return
 
 				to_chat(usr, "\icon[src] <b>[withdraw_item]</b> has been withdrawn.")
 
@@ -251,9 +240,14 @@
 				qdel(MO)
 				listclearnulls(current_inventory.stored_items)
 				withdrawing = FALSE
-				var/savefile/stash = new("[CONFIG_GET(string/playersave_path)]/[copytext(usr.ckey,1,2)]/[usr.ckey]/stash.sav")
+				var/savefile/stash = new("data/player_saves/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav")
 				Write(stash)
-
+				var/dat
+				dat = get_full_data(user)
+				var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
+				popup.set_content(jointext(dat,null))
+				popup.open()
+				return
 
 
 
@@ -269,7 +263,7 @@
 		if(ST.unique_id == unique_id)
 			return ST
 
-	var/full_path = "[CONFIG_GET(string/playersave_path)]/[copytext(unique_id,1,2)]/[unique_id]/stash.sav"
+	var/full_path = "data/player_saves/[copytext(unique_id,1,2)]/[unique_id]/stash.sav"
 	if(!full_path)			return FALSE
 	if(fexists(full_path)) return TRUE
 
@@ -308,8 +302,8 @@
 	return MO
 
 /datum/persistent_inventory/proc/save_inventory()
-	var/full_path = "[CONFIG_GET(string/playersave_path)]/[copytext(unique_id,1,2)]/[unique_id]/stash.sav"
-	var/savefile/stash = new("[CONFIG_GET(string/playersave_path)]/[copytext(unique_id,1,2)]/[unique_id]/stash.sav")
+	var/full_path = "data/player_saves/[copytext(unique_id,1,2)]/[unique_id]/stash.sav"
+	var/savefile/stash = new("data/player_saves/[copytext(unique_id,1,2)]/[unique_id]/stash.sav")
 	Write(stash)
 	if(!full_path)			return 0
 
@@ -326,10 +320,10 @@
 
 /datum/persistent_inventory/proc/load_inventory()
 	var/init_uid = unique_id
-	var/savefile/stash = new("[CONFIG_GET(string/playersave_path)]/[copytext(unique_id,1,2)]/[unique_id]/stash.sav")
+	var/savefile/stash = new("data/player_saves/[copytext(unique_id,1,2)]/[unique_id]/stash.sav")
 	Read(stash)
 
-	var/full_path = "[CONFIG_GET(string/playersave_path)]/[copytext(unique_id,1,2)]/[unique_id]/stash.sav"
+	var/full_path = "data/player_saves/[copytext(unique_id,1,2)]/[unique_id]/stash.sav"
 	if(!full_path)			return 0
 	if(!fexists(full_path)) return 0
 
@@ -354,7 +348,7 @@
 
 
 /proc/delete_persistent_inventory(unique_id)
-	var/full_path = "[CONFIG_GET(string/playersave_path)]/[copytext(unique_id,1,2)]/[unique_id]/stash.sav"
+	var/full_path = "data/player_saves/[copytext(unique_id,1,2)]/[unique_id]/stash.sav"
 	if(!full_path)			return 0
 
 	if(!fexists(full_path)) return 0
