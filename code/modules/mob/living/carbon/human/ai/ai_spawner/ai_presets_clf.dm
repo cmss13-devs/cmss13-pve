@@ -1,6 +1,93 @@
 /datum/human_ai_equipment_preset/clf
 	faction = "Insurrectionists"
 
+/datum/equipment_preset/rebel/handgunner
+	name = "UA Rebel, Soldier (Pistol)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	idtype = /obj/item/card/id/dogtag
+	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_LIST_CLF_BASE)
+
+/datum/equipment_preset/rebel/handgunner/get_assignment(mob/living/carbon/human/new_human)
+	return "Rifleman"
+
+/datum/equipment_preset/rebel/handgunner/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
+	if(prob(45))
+		add_facewrap(new_human)
+	//uniform
+	add_rebel_ua_uniform(new_human)
+	//jacket
+	if(prob(20))
+		add_rebel_ua_suit(new_human)
+	//waist
+	if (prob(20))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
+	else if (prob(40))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911(new_human), WEAR_WAIST)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/vp70(new_human), WEAR_WAIST)
+	//limbs
+	add_rebel_ua_shoes(new_human)
+	if(prob(35))
+		add_rebel_gloves(new_human)
+
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+
+/datum/equipment_preset/clf/handgunner
+	name = "TWE Rebel, Soldier (Pistol)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/pfc
+	idtype = /obj/item/card/id/dogtag
+	assignment = "Revolutionary Guardsman"
+
+/datum/equipment_preset/clf/handgunner/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CLF_ARMORY)
+
+/datum/equipment_preset/clf/handgunner/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/l54(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/l54(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/l54(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/l54(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	if(prob(20))
+		add_rebel_twe_suit(new_human)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/l54(new_human), WEAR_WAIST)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+
+/datum/human_ai_equipment_preset/clf/ua/handgunner
+	name = "UA Rebel, Soldier (Pistol)"
+	desc = "Will only be equipped with a M1911, M4A3 or VP70."
+	path = /datum/equipment_preset/rebel/handgunner
+
+/datum/human_ai_equipment_preset/clf/handgunner
+	name = "TWE Rebel, Soldier (Pistol)"
+	desc = "Armed with either a L54 pistol or a HG-45 pistol."
+	path = /datum/equipment_preset/clf/handgunner
+
 /datum/human_ai_equipment_preset/clf/soldier
 	name = "TWE Rebel, Soldier (Rifle)"
 	desc = "Armed with either a Bizon SMG, MAR variant rifle and very rarely an F90 rifle."
