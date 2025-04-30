@@ -69,7 +69,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "ap" = (
-/turf/open/mars,
+/turf/open/desert/dirt,
 /area/golden_arrow/hangar)
 "aq" = (
 /obj/structure/machinery/power/apc/almayer/hardened/north,
@@ -120,7 +120,7 @@
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/dorms)
 "aB" = (
-/turf/closed/wall/solaris/rock,
+/turf/closed/wall/rock/orange,
 /area/golden_arrow/maintenance)
 "aC" = (
 /turf/open/floor/almayer/edge,
@@ -138,7 +138,7 @@
 /turf/closed/wall/shiva/prefabricated,
 /area/golden_arrow/medical)
 "aH" = (
-/turf/closed/wall/solaris/rock,
+/turf/closed/wall/rock/orange,
 /area/golden_arrow/medical)
 "aI" = (
 /obj/structure/machinery/light/double{
@@ -304,9 +304,6 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
-/area/space)
-"bo" = (
-/turf/open/mars_cave/mars_cave_2,
 /area/space)
 "bp" = (
 /obj/effect/decal/warning_stripes{
@@ -584,6 +581,59 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"ck" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cl" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cn" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"co" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cp" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
 "cq" = (
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_one_access = list()
@@ -593,11 +643,234 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"cr" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cs" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"ct" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cu" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cv" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
 "cy" = (
 /obj/structure/machinery/defenses/sentry{
 	dir = 1
 	},
-/turf/open/mars,
+/turf/open/desert/dirt,
+/area/space)
+"cz" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cA" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cB" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cC" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cD" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cE" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
 /area/space)
 "cF" = (
 /obj/structure/closet/secure_closet/marine_personal{
@@ -608,6 +881,235 @@
 	},
 /turf/open/floor/almayer/edge/smooth/northwest,
 /area/golden_arrow/dorms)
+"cG" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cH" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cK" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/space)
+"cL" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/open/asphalt,
+/area/space)
+"cM" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/open/asphalt,
+/area/space)
+"cN" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/open/asphalt,
+/area/space)
+"cO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/open/asphalt,
+/area/space)
+"cP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/open/asphalt,
+/area/space)
+"cQ" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter_vector,
+/turf/open/asphalt,
+/area/space)
+"cR" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter_vector,
+/turf/open/asphalt,
+/area/space)
+"cS" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter_vector,
+/turf/open/asphalt,
+/area/space)
+"cT" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/closed/wall/rock/orange,
+/area/space)
+"cU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/closed/wall/rock/orange,
+/area/space)
+"cV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/closed/wall/rock/orange,
+/area/space)
+"cW" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/closed/wall/rock/orange,
+/area/space)
 "dl" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 1;
@@ -682,7 +1184,7 @@
 /area/golden_arrow/dorms)
 "fK" = (
 /obj/structure/fence,
-/turf/open/mars_cave/mars_dirt_4,
+/turf/open/desert/rock,
 /area/space)
 "fR" = (
 /obj/structure/machinery/vending/coffee/simple,
@@ -836,7 +1338,7 @@
 /area/golden_arrow/engineering)
 "la" = (
 /obj/structure/window_frame/prefab,
-/turf/open/mars,
+/turf/open/desert/dirt,
 /area/space)
 "lb" = (
 /obj/structure/vehicle_locker/cabinet/utensils/flip{
@@ -849,9 +1351,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/canteen)
-"lu" = (
-/turf/open/mars_cave/mars_dirt_7,
-/area/space)
 "lC" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -1106,9 +1605,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/canteen)
-"qW" = (
-/turf/open/mars_cave/mars_cave_20,
-/area/space)
 "qY" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer/plate,
@@ -1176,7 +1672,7 @@
 	pixel_y = -13;
 	density = 0
 	},
-/turf/open/mars,
+/turf/open/desert/dirt,
 /area/space)
 "rY" = (
 /obj/structure/window_frame/prefab,
@@ -1297,9 +1793,6 @@
 /obj/structure/machinery/light/double,
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/dorms)
-"wd" = (
-/turf/open/mars_cave/mars_cave_9,
-/area/space)
 "wm" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -1323,7 +1816,7 @@
 /area/golden_arrow/engineering)
 "wF" = (
 /obj/structure/fence,
-/turf/open/mars,
+/turf/open/desert/dirt,
 /area/space)
 "wP" = (
 /obj/structure/machinery/light/double{
@@ -1501,9 +1994,6 @@
 	},
 /turf/open/asphalt,
 /area/golden_arrow/motor_pool)
-"CS" = (
-/turf/open/mars_cave/mars_cave_10,
-/area/space)
 "Dg" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	req_access = list()
@@ -1590,7 +2080,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/canteen)
 "EP" = (
-/turf/closed/wall/solaris/rock,
+/turf/closed/wall/rock/orange,
 /area/space)
 "FE" = (
 /obj/structure/pipes/standard/tank/air{
@@ -1655,7 +2145,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "HM" = (
-/turf/open/mars,
+/turf/open/desert/dirt,
 /area/golden_arrow/motor_pool)
 "HV" = (
 /obj/structure/machinery/power/terminal{
@@ -1668,7 +2158,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
 	dir = 1
 	},
-/turf/open/mars,
+/turf/open/desert/dirt,
 /area/golden_arrow/hangar)
 "Ic" = (
 /obj/item/hardpoint/locomotion/van_wheels{
@@ -1746,9 +2236,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"Lf" = (
-/turf/open/mars_cave/mars_cave_14,
-/area/space)
 "Lt" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five,
 /turf/open/floor/almayer/mono,
@@ -1756,15 +2243,12 @@
 "LE" = (
 /turf/open/floor/corsat,
 /area/golden_arrow/maintenance)
-"LL" = (
-/turf/open/mars_cave/mars_cave_15,
-/area/space)
 "LW" = (
 /obj/structure/cargo_container/horizontal/blue/middle,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "Ms" = (
-/turf/open/mars,
+/turf/open/desert/dirt,
 /area/space)
 "Mv" = (
 /obj/structure/sign/safety/synth_storage{
@@ -1880,9 +2364,6 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
-"QS" = (
-/turf/open/mars_cave/mars_cave_13,
-/area/space)
 "QT" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal8"
@@ -1956,9 +2437,6 @@
 	icon_state = "road_edge_decal12"
 	},
 /turf/open/asphalt,
-/area/space)
-"ST" = (
-/turf/open/mars_cave/mars_cave_6,
 /area/space)
 "SV" = (
 /turf/open/floor/almayer/edge,
@@ -2038,7 +2516,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/canteen)
 "WA" = (
-/turf/open/mars_cave/mars_dirt_4,
+/turf/open/desert/rock,
 /area/space)
 "WZ" = (
 /obj/structure/barricade/handrail{
@@ -2098,7 +2576,7 @@
 /turf/open/asphalt,
 /area/space)
 "Zd" = (
-/turf/open/mars_cave/mars_dirt_4,
+/turf/open/desert/rock,
 /area/golden_arrow/motor_pool)
 "Ze" = (
 /turf/open/floor/almayer/edge/smooth/southwest,
@@ -2117,9 +2595,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
-"Zo" = (
-/turf/open/mars_cave/mars_cave_17,
-/area/space)
 "Zz" = (
 /obj/structure/surface/rack,
 /obj/item/hardpoint/locomotion/van_treads,
@@ -2575,10 +3050,10 @@ EP
 EP
 EP
 EP
-ST
-ST
-ST
-bo
+WA
+WA
+WA
+WA
 EP
 EP
 EP
@@ -2726,12 +3201,12 @@ EP
 EP
 EP
 EP
-ST
-bo
-bo
-bo
-bo
-LL
+WA
+WA
+WA
+WA
+WA
+WA
 WA
 EP
 EP
@@ -2877,13 +3352,13 @@ EP
 EP
 EP
 EP
-ST
-bo
-bo
-bo
-bo
-bo
-Lf
+WA
+WA
+WA
+WA
+WA
+WA
+WA
 WA
 WA
 EP
@@ -3026,15 +3501,15 @@ Ms
 Ms
 EP
 EP
-CS
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-LL
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
 WA
 WA
 EP
@@ -3177,18 +3652,18 @@ Ms
 EP
 EP
 EP
-CS
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-LL
 WA
-lu
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
 EP
 EP
 EP
@@ -3329,16 +3804,16 @@ Ms
 Ms
 Ms
 EP
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-LL
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
 WA
 WA
 WA
@@ -3481,16 +3956,16 @@ EP
 Ms
 Ms
 EP
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-LL
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
 WA
 WA
 WA
@@ -3633,17 +4108,17 @@ EP
 EP
 Ms
 EP
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-wd
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
 WA
 EP
 EP
@@ -3785,17 +4260,17 @@ EP
 EP
 EP
 EP
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
 EP
 EP
 EP
@@ -3935,19 +4410,19 @@ WA
 EP
 EP
 EP
-QS
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
 EP
 EP
 EP
@@ -4088,15 +4563,15 @@ WA
 WA
 WA
 WA
-QS
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
 EP
 EP
 EP
@@ -4241,15 +4716,15 @@ Ms
 WA
 WA
 WA
-Zo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
 EP
 EP
 EP
@@ -4393,12 +4868,12 @@ Ms
 WA
 Ms
 WA
-Zo
-bo
-bo
+WA
+WA
+WA
 EP
 EP
-bo
+WA
 EP
 EP
 EP
@@ -4545,8 +5020,8 @@ Ms
 WA
 WA
 WA
-qW
-QS
+WA
+WA
 EP
 EP
 EP
@@ -7764,19 +8239,19 @@ EP
 Ms
 "}
 (38,1,1) = {"
-bR
-bR
-bR
-bR
-bR
-bR
-bR
-bR
-bR
-bR
-bR
-bR
-bR
+cT
+cQ
+cL
+cL
+cL
+cL
+cH
+cD
+cA
+cv
+cs
+co
+ck
 bR
 bR
 bR
@@ -7916,19 +8391,19 @@ EP
 Ms
 "}
 (39,1,1) = {"
-ar
-bb
-bb
-ar
-bb
-bb
-ar
-bb
-bb
-ar
-bb
-bb
-ar
+cU
+cR
+cM
+cO
+cM
+cM
+cI
+cE
+cB
+cw
+ct
+cp
+cl
 bb
 bb
 ar
@@ -8068,19 +8543,19 @@ EP
 EP
 "}
 (40,1,1) = {"
-ol
-bb
-bb
-ol
-bb
-bb
-ol
-bb
-bb
-ol
-bb
-bb
-ol
+cV
+cR
+cM
+cP
+cM
+cM
+cJ
+cE
+cB
+cx
+ct
+cp
+cm
 bb
 bb
 ol
@@ -8220,19 +8695,19 @@ EP
 EP
 "}
 (41,1,1) = {"
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
-zN
+cW
+cS
+cN
+cN
+cN
+cN
+cK
+cG
+cC
+cz
+cu
+cr
+cn
 zN
 zN
 zN
