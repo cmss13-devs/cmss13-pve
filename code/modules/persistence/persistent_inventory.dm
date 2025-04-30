@@ -1,8 +1,8 @@
 /obj/structure/inventory_machine
-	name = "inv-tri"
-	desc = "The inv-tri bot 4500 is a friendly and helpful bot that will allow you to store your possessions."
-	icon = 'icons/obj/vehicles/interiors/general.dmi'
-	icon_state = "med"
+	name = "ColMarTech Personal Stash Access Point"
+	desc = "A jury-rigged ColMarTech vendor which pulls from the mostly-empty bowels of the ship. It can be used to save various objects for use between operations."
+	icon = 'icons/obj/structures/machinery/vending.dmi'
+	icon_state = "prep"
 	anchored = TRUE
 	density = TRUE
 
@@ -26,22 +26,10 @@
 
 /obj/structure/inventory_machine/update_icon()
 	if(disabled)
-		icon_state = "med"
+		icon_state = "prep"
 		return
 
-	icon_state = "med"
-
-
-/obj/structure/inventory_machine/examine(mob/user)
-	..()
-	if(!anchored)
-		to_chat(user, "<b>It is loose from the floor!</b>")
-	else
-		to_chat(user, "<b>It is firmly anchored to the floor.</b>")
-	if(!disabled)
-		to_chat(user, "<b>It is ready for use.</b>")
-	else
-		to_chat(user, "<b>It is disabled.</b>")
+	icon_state = "prep"
 
 /obj/structure/inventory_machine/proc/get_full_data(mob/user)
 	var/dat
@@ -50,12 +38,12 @@
 	dat += "<b>[name]</b><br>"
 
 	if(!current_inventory)
-		dat += "<i>Welcome to the future of inventory storage</i> - this [name] will allow you store your items via bluespace and request them at any time.<br><br>"
-		dat += "You can access existing accounts from this terminal. <br><br>"
+		dat += "Welcome to your stash. Please press 'access stash' to open your stash, allowing you to add new items or remove items you've placed inside in previous operations.<br>"
+		dat += "If you don't have a stash account yet, one will be made for you automatically. <i>Stashes are tied to your ckey.</i>"
 
-		dat += "<a href='?src=\ref[src];access_inv=1'>Access Inventory</a>"
+		dat += "<a href='?src=\ref[src];access_inv=1'>Access Stash</a>"
 	else
-		dat += "Welcome <b>[current_inventory.owner_name]</b>,<br><br> You can withdraw or deposit items here. To deposit items, please place them into the bottom flap of the machine.<br>"
+		dat += "Welcome <b>[current_inventory.owner_name]</b>,<br><br> You can withdraw or deposit items here. To deposit items, simply insert them into the machine.<br>"
 
 		dat += "<b>[length(current_inventory.stored_items) ? "[length(current_inventory.stored_items)]" : "0"]/[current_inventory.max_possible_items]</b> inventory slots<br><br>"
 
@@ -247,15 +235,15 @@
 
 				if(!withdraw_item)
 					withdrawing = FALSE
-					var/dat
-					dat = get_full_data(user)
-					var/datum/browser/popup = new(usr, "inventory_machine", "le epic stash", nwidth = 550, nheight = 650)
-					popup.set_content(jointext(dat,null))
-					popup.open()
-					return
 
 				playsound(src, 'sound/machines/chime.ogg', 25)
 				flick("inv-tri_accept",src)
+				var/dat
+				dat = get_full_data(user)
+				var/datum/browser/popup = new(usr, "inventory_machine", "le epic stash", nwidth = 550, nheight = 650)
+				popup.set_content(jointext(dat,null))
+				popup.open()
+				return
 
 				to_chat(usr, "\icon[src] <b>[withdraw_item]</b> has been withdrawn.")
 
