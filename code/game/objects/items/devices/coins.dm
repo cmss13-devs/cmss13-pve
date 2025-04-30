@@ -145,3 +145,45 @@
 	desc = "Insert this into a synthetic experimental tools vendor in order to access a variety of experimental support tools."
 	icon_state = "coin_synth"
 	token_type = VEND_TOKEN_SYNTH
+
+// requisition tokens for extraction
+
+/obj/item/coin/requisitionpoint
+	name = "null-credit requisition token"
+	desc = "You probably shouldn't have this.."
+	icon_state = "coin_iron"
+	black_market_value = 0
+
+/obj/item/coin/requisitionpoint/one
+	name = "one-credit requisition token"
+	desc = "A stamped iron coin that can be redeemed at the Hideout requisitions bay for goods or services worth 1RP."
+
+/obj/item/coin/requisitionpoint/five
+	name = "five-credit requisition token"
+	desc = "A stamped copper coin that can be redeemed at the Hideout requisitions bay for goods or services worth 5RP."
+	icon_state = "coin_copper"
+
+/obj/item/coin/requisitionpoint/ten
+	name = "ten-credit requisition token"
+	desc = "A stamped silver coin that can be redeemed at the Hideout requisitions bay for goods or services worth 10RP."
+	icon_state = "coin_silver"
+
+/obj/item/coin/requisitionpoint/twenty
+	name = "twenty-credit requisition token"
+	desc = "A stamped golden coin that can be redeemed at the Hideout requisitions bay for goods or services worth 20RP."
+	icon_state = "coin_gold"
+
+/obj/item/coin/requisitionpoint/fifty
+	name = "fifty-credit requisition token"
+	desc = "A stamped platinum coin that can be redeemed at the Hideout requisitions bay for goods or services worth 50RP."
+	icon_state = "coin_platinum"
+
+/obj/item/coin/requisitionpoint/onehundred
+	name = "one-hundred-credit requisition token"
+	desc = "A stamped diamond coin that can be redeemed at the Hideout requisitions bay for goods or services worth 100RP."
+	icon_state = "coin_diamond"
+
+/obj/item/coin/requisitionpoint/twohundred
+	name = "two-hundred-credit requisition token"
+	desc = "A stamped phoron coin that can be redeemed at the Hideout requisitions bay for goods or services worth 200RP."
+	icon_state = "coin_phoron"
