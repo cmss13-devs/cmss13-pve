@@ -25,6 +25,10 @@
 /datum/ammo/bullet/smg/m39
 	name = "high-velocity submachinegun bullet" //i don't want all smgs to inherit 'high velocity'
 
+/datum/ammo/bullet/smg/squash
+	name = "squash-head submachinegun bullet"
+	penetration = ARMOR_PENETRATION_TIER_4
+
 /datum/ammo/bullet/smg/pve
 	name = "squash-head submachinegun duplex bullet"
 	shell_speed = AMMO_SPEED_TIER_4 //high velocitisn't

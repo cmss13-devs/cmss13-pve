@@ -931,8 +931,8 @@
 
 		list("SIDEARMS", -1, null, null),
 		list("VP70 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp70/unloaded, VENDOR_ITEM_REGULAR),
+		list("L54 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/l54/unloaded, VENDOR_ITEM_REGULAR),
 		list("L165A1 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp78/unloaded, VENDOR_ITEM_REGULAR),
-		// Todo: Add the other funny TWE pistol whenever the insurgents PR is merged
 
 		list("SIDEARM AMMUNITION", -1, null, null),
 		list("VP70 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),

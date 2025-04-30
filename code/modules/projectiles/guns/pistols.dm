@@ -106,11 +106,11 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 
 
-//VP70 - Counterpart to M1911, offers burst and capacity ine exchange of low accuracy and damage.
+//L54, browning hi-power but in space
 
 /obj/item/weapon/gun/pistol/l54
 	name = "\improper L54 service pistol"
-	desc = "Standard issue semi-automatic service pistol of the NSPA. Chambered in 9mm, it is comparable to the popular M4A3 pistol utilized by the USCM."
+	desc = "Standard issue semi-automatic service pistol of the NSPA. Chambered in 9mm, it is comparable to the popular M4A3 pistol utilized by the USCM. Until recently, it was also the standard issue pistol for the RMC before being replace by the L165A1."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "l54"
 	item_state = "l54"
@@ -120,8 +120,7 @@
 	attachable_allowed = null
 
 /obj/item/weapon/gun/pistol/l54/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
-
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "side_rail_x" = 19, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/pistol/l54/set_gun_config_values()
 	..()
@@ -132,6 +131,11 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT
+
+/obj/item/weapon/gun/pistol/l54/unloaded
+	current_mag = null
+
+//VP70
 
 /obj/item/weapon/gun/pistol/vp70
 	name = "\improper VP70 M5 service pistol"

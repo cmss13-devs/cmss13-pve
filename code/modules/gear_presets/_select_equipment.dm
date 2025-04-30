@@ -663,7 +663,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/suit/marine/lamp,
 		/obj/item/clothing/suit/storage/windbreaker/windbreaker_brown,
 		/obj/item/clothing/suit/storage/windbreaker/windbreaker_blue,
-		/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
+		/obj/item/clothing/suit/marine/veteran/royal_marine,
 		/obj/item/clothing/suit/armor/bulletproof,
 		/obj/item/clothing/suit/armor/vest/ballistic,
 		)
