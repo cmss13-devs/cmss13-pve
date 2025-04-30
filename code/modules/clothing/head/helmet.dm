@@ -1603,7 +1603,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "upp_beret_naval"
 
 /obj/item/clothing/head/uppcap/beret/guerilla
-	name = "\improper red beret beret"
+	name = "\improper red beret"
 	desc = "A red beret popular with communist revolutionaries."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_beret_revolution"
