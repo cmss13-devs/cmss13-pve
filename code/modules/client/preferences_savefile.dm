@@ -630,6 +630,8 @@
 	S["plat_name"] >> platoon_name
 	S["ds_name"] >> dropship_name
 
+	S["personal_weapon"] >> personal_weapon
+
 	S.Unlock()
 
 	//Sanitize
@@ -682,6 +684,8 @@
 	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : "Sun Riders"
 	dropship_camo = sanitize_inlist(dropship_camo, GLOB.dropship_camos, initial(dropship_camo))
 	dropship_name = dropship_name ? sanitize_text(dropship_name, initial(dropship_name)) : "Midway"
+
+	personal_weapon = sanitize_inlist(personal_weapon, GLOB.personal_weapons_list, initial(personal_weapon))
 
 	alternate_option = sanitize_integer(alternate_option, 0, 2, initial(alternate_option))
 	if(!job_preference_list)
@@ -797,6 +801,8 @@
 	S["ds_camo"] << dropship_camo
 	S["plat_name"] << platoon_name
 	S["ds_name"] << dropship_name
+
+	S["personal_weapon"] << personal_weapon
 
 	S.Unlock()
 
