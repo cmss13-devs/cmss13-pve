@@ -629,6 +629,13 @@
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general."
 	initial_keys = list(/obj/item/device/encryptionkey/upp/command)
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/canc
+	name = "CANC headset"
+	desc = "A special headset used by CANC military."
+	icon_state = "upp_headset"
+	item_state = "upp_headset"
+	frequency = CLF_FREQ
+
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
 	name = "marine alpha radio headset"
@@ -1049,8 +1056,8 @@
 
 //CLF Headsets
 /obj/item/device/radio/headset/distress/CLF
-	name = "CLF headset"
-	desc = "A special headset used by small groups of trained operatives. Or terrorists. To access the colony channel use :o."
+	name = "colony headset"
+	desc = "A standard headset used by colonists, but this one has been tampered with. To access the colony channel use :o."
 	frequency = CLF_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	has_hud = TRUE
@@ -1230,3 +1237,16 @@
 	initial_keys = list(/obj/item/device/encryptionkey/guard)
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_MARINE
+
+/obj/item/device/radio/headset/distress/rebel_ua
+	name = "colony headset"
+	desc = "A standard headset used by colonists, but this one has been tampered with. To access the colony channel use :o."
+	frequency = PFA_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/colony)
+
+/obj/item/device/radio/headset/distress/rebel_twe
+	name = "colony headset"
+	desc = "A standard headset used by colonists, but this one has been tampered with. To access the colony channel use :o."
+	frequency = JSC_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/colony)
+
