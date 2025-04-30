@@ -10,7 +10,7 @@
 	text_box.play_to_client()
 	sleep(3 SECONDS)
 	var/atom/movable/screen/text/screen_text/body = new /atom/movable/screen/text/screen_text/simulacrum_message/body()
-	body.text_to_play = "The UD-4 Cheyenne slides into the welcoming embrace of it's airlock. Your mind drifts, the disembark feels like a dream..."
+	body.text_to_play = "The UD-4 Cheyenne slides into the welcoming embrace of it's airlock. Your mind drifts as you're jostled awake, the disembark feels like a dream..."
 	body.player = human.client
 	body.color = "#9f53a9"
 	LAZYADD(human.client.screen_texts, body)
@@ -32,12 +32,12 @@
 	body3.color = "#535ca9"
 	LAZYADD(human.client.screen_texts, body3)
 	body3.play_to_client()
-	sleep(5 SECONDS)
+	sleep(15 SECONDS)
 	text_box.after_play()
 	body.after_play()
 	body2.after_play()
 	body3.after_play()
-	sleep(15 SECONDS)
+	sleep(5 SECONDS)
 	message_admins("END THE ROUND NOW")
 	if(human.client)
 		winset(human.client, "infowindow", "is-visible=true")

@@ -35,21 +35,20 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 	ko_everyone()
 
 /proc/ko_single_mob(mob/living/carbon/human/human)
-	to_chat(human, SPAN_WARNING("A low whirring fills your mind."))
+	to_chat(human, SPAN_WARNING("Your eyelids start to grow heavy."))
 	human.clear_fullscreens()
 	var/atom/movable/screen/fullscreen/overlay_screen = human.overlay_fullscreen("simulacrum_ko", /atom/movable/screen/fullscreen/impaired)
 	overlay_screen.icon_state = "impairedoverlay1"
 	sleep(5 SECONDS)
-	to_chat(human, SPAN_WARNING("The whirring grows louder, it's a bit harder to think..."))
+	to_chat(human, SPAN_WARNING("For once, you're given a moment to rest."))
 	overlay_screen.icon_state = "impairedoverlay3"
 	sleep(12 SECONDS)
-	to_chat(human, SPAN_WARNING("The drone in your mind grows ever louder. It hurts."))
+	to_chat(human, SPAN_WARNING("Not even the turbulence of atmospheric flight can dash off the prospect of peaceful sleep."))
 	overlay_screen.icon_state = "impairedoverlay5"
 	sleep(10 SECONDS)
-	to_chat(human, SPAN_BOLDWARNING("MAKE IT STOP!"))
 	overlay_screen.icon_state = "impairedoverlay6"
 	sleep(10 SECONDS)
-	to_chat(human, SPAN_BOLDWARNING("You collapse, drifting to unconsciousness as this cacaphony of sound assaults your senses."))
+	to_chat(human, SPAN_BOLD("Your eyes shut fully, and your mind revels in the sudden slackness of your body."))
 	overlay_screen.icon_state = "impairedoverlay7"
 	human.Stun(100000000)
 	human.loc = null
