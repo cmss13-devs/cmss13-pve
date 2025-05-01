@@ -247,7 +247,6 @@ proc/listclearnulls(list/list)
 					withdrawing = FALSE
 
 				playsound(src, 'sound/machines/chime.ogg', 25)
-				flick("inv-tri_accept",src)
 
 				to_chat(usr, "\icon[src] <b>[withdraw_item]</b> has been withdrawn.")
 

@@ -4,7 +4,7 @@
 	var/unique_save_vars = list()
 
 /atom/proc/vars_to_save()
- 	return list("x","y","z","color","dir","name","pixel_x","pixel_y","tagged_price")+unique_save_vars
+ 	return list("color","name","amount")+unique_save_vars
 
 /atom/proc/get_saveable_contents()
 	return contents
