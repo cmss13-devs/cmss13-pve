@@ -41,6 +41,12 @@
 	paint_type = "skull_camo"
 	icon_state = "skull_camo"
 
+/obj/item/facepaint/asphalt
+	name = "asphalt paint"
+	desc = "Weird paint."
+	paint_type = "asphalt"
+	icon_state = "skull_camo"
+
 /obj/item/facepaint/sunscreen_stick
 	name= "\improper USCM issue sunscreen"
 	desc = "A stick of SPF 50 sunscreen, issued to you by the good brass of the Corps. Whereas the previously issued sunscreen was toxic upon ingestion, this batch improves upon that by only containing excessive amounts of cadmium."
