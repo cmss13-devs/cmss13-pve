@@ -10,7 +10,7 @@
 	light_power = 2
 	light_color = "#ebf7fe"  //white blue
 
-	var/currently_accessed = FALSE
+//	var/currently_accessed = FALSE
 
 	var/disabled = FALSE
 
@@ -73,13 +73,13 @@
 //	else
 //		return
 
-	if(currently_accessed == TRUE)
-		visible_message("<b>[src]</b> beeps, \"<span class='danger'>The stash is currently busy. Wait for the other person to finish, or use a different stash.</span>\" ")
-		return
+//	if(currently_accessed == TRUE)
+//		visible_message("<b>[src]</b> beeps, \"<span class='danger'>The stash is currently busy. Wait for the other person to finish, or use a different stash.</span>\" ")
+//		return
 
 	var/dat
 
-	currently_accessed = TRUE
+//	currently_accessed = TRUE
 
 	dat = get_full_data(user)
 
@@ -159,7 +159,7 @@
 
 /obj/structure/inventory_machine/Topic(href, href_list)
 	if(href_list["close"])
-		currently_accessed = FALSE
+//		currently_accessed = FALSE
 		visible_message("<b>[src]</b> beeps, \"<span class='notice'>YOU WIN......... EPIC..............</span>\" ")
 		return
 
