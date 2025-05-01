@@ -9,42 +9,42 @@
 /datum/paygrade/upp/ue1
 	paygrade = PAY_SHORT_UE1
 	name = "Private"
-	prefix = "Pvt"
+	prefix = "Pvt."
 
 /datum/paygrade/upp/ue2
 	paygrade = PAY_SHORT_UE2
 	name = "Senior Private"
-	prefix = "SrPvt"
+	prefix = "SrPvt."
 	pay_multiplier = 0.2
 
 /datum/paygrade/upp/ue3
 	paygrade = PAY_SHORT_UE3
 	name = "Corporal"
-	prefix = "Cpl"
+	prefix = "Cpl."
 	pay_multiplier = 0.3
 
 /datum/paygrade/upp/ue4
 	paygrade = PAY_SHORT_UE4
 	name = "Junior Sergeant"
-	prefix = "JrSgt"
+	prefix = "JrSgt."
 	pay_multiplier = 0.5
 
 /datum/paygrade/upp/ue5
 	paygrade = PAY_SHORT_UE5
 	name = "Sergeant"
-	prefix = "Sgt"
+	prefix = "Sgt."
 	pay_multiplier = 0.7
 
 /datum/paygrade/upp/ue6
 	paygrade = PAY_SHORT_UE6
 	name = "Senior Sergeant"
-	prefix = "SrSgt"
+	prefix = "SrSgt."
 	pay_multiplier = 0.9
 
 /datum/paygrade/upp/ue7
 	paygrade = PAY_SHORT_UE7
 	name = "Sergeant Major"
-	prefix = "SgtMaj"
+	prefix = "SgtMaj."
 	pay_multiplier = 1
 
 //UPP Commandos
@@ -113,14 +113,14 @@
 
 /datum/paygrade/upp/uo7
 	paygrade = PAY_SHORT_UO7
-	name = "Mayjor General"
+	name = "Major General"
 	prefix = "May. Gen."
 	pay_multiplier = 5
 	officer_grade = GRADE_FLAG
 
 /datum/paygrade/upp/uo8
 	paygrade = PAY_SHORT_UO8
-	name = "Leytenant General"
+	name = "Lieutenant General"
 	prefix = "Lt. Gen."
 	pay_multiplier = 6
 	officer_grade = GRADE_FLAG
