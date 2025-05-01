@@ -32,14 +32,3 @@
 	default_ammo = /datum/ammo/rocket/ap/hj35_launcher
 	max_rounds = 3
 	gun_type = /obj/item/hardpoint/secondary/hj35launcher
-
-/obj/item/ammo_magazine/hardpoint/hj35launcher/aa
-	name = "HJ-35 HEAP Magazine"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
-	desc = "A magazine of ground-to-ground missiles for the HJ-38 HEAP"
-	caliber = "rocket" //correlates to any rocket mags
-	icon_state = "hj35_aa"
-	w_class = SIZE_LARGE
-	default_ammo = /datum/ammo/rocket/ap/hj35_launcher/aa
-	max_rounds = 3
-	gun_type = /obj/item/hardpoint/secondary/hj35launcher

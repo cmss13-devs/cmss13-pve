@@ -64,3 +64,7 @@
 /area/interior/vehicle/uppapc
 	name = "\improper UPP ZSL-68 interior"
 	icon_state = "upp_apc"
+
+/area/interior/vehicle/upptank
+	name = "\improper UPP tank interior"
+	icon_state = "upp_tank"

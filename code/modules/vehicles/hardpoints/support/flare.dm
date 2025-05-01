@@ -76,3 +76,25 @@
 
 	scatter = 6
 	fire_delay = 3.0 SECONDS
+
+// UPP TANK
+/obj/item/hardpoint/support/flare_launcher/upptank
+	name = "\improper VT/CZ-Flare Launcher"
+	desc = "A support module for Tanks that shoots flares."
+	icon = 'icons/obj/vehicles/hardpoints/upptank.dmi'
+
+	icon_state = "turret_slauncher"
+	disp_icon = "upptank"
+	disp_icon_state = "turret_slauncher"
+	activation_sounds = list('sound/weapons/gun_m92_attachable.ogg')
+
+	damage_multiplier = 0.15
+
+	activatable = TRUE
+
+	health = 1500
+	firing_arc = 120
+
+	allowed_seat = VEHICLE_GUNNER
+
+	use_muzzle_flash = FALSE

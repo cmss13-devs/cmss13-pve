@@ -46,6 +46,10 @@
 	name = "Tank"
 	interior_id = "tank"
 
+/datum/map_template/interior/upptank
+	name = "UPP Tank"
+	interior_id = "upptank"
+
 /datum/map_template/interior/aev
 	name = "AEV"
 	interior_id = "aev"

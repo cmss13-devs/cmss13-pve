@@ -40,3 +40,29 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
+// for upp tank
+/obj/item/hardpoint/secondary/hj35launcher/upptank
+	name = "\improper HJ-35-T Launcher"
+	desc = "A secondary weapon for upp tank that shoots rockets"
+	icon = 'icons/obj/vehicles/hardpoints/upptank.dmi'
+
+	icon_state = "hj35tlauncher"
+	disp_icon = "upptank"
+	disp_icon_state = "hj35t"
+
+	health = 2000
+	firing_arc = 120
+
+	ammo = new /obj/item/ammo_magazine/hardpoint/hj35launcher
+	max_clips = 1
+
+	use_muzzle_flash = FALSE
+	angle_muzzleflash = FALSE
+	muzzleflash_icon_state = "muzzle_flash"
+
+	muzzle_flash_pos = list(
+		"1" = list(33, 20),
+		"2" = list(-33, -25),
+		"4" = list(39, 0),
+		"8" = list(-5, 10)
+	)
