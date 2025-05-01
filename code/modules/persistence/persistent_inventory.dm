@@ -1,3 +1,9 @@
+proc/listclearnulls(list/list)
+	if(istype(list))
+		while(null in list)
+			list -= null
+	return
+
 /obj/structure/inventory_machine
 	name = "ColMarTech Personal Stash Access Point"
 	desc = "A jury-rigged ColMarTech vendor which pulls from the mostly-empty bowels of the ship. It can be used to save various objects for use between operations."
