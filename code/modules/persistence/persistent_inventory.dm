@@ -43,6 +43,8 @@
 		dat += "Welcome to your stash. Please press 'access stash' to open your stash, allowing you to add new items or remove items you've placed inside in previous operations.<br>"
 		dat += "If you don't have a stash account yet, one will be made for you automatically. <i>Stashes are tied to your ckey.</i>"
 
+		dat += "</div><br>"
+
 		dat += "<a href='?src=\ref[src];access_inv=1'>Access Stash</a>"
 	else
 		dat += "Welcome <b>[current_inventory.owner_name]</b>,<br><br> You can withdraw or deposit items here. To deposit items, simply insert them into the machine.<br>"
@@ -57,7 +59,7 @@
 
 		dat += "</div><br>"
 
-		dat += "<br><br><a href='?src=\ref[src];cancel=1'>Exit Inventory</a>"
+		dat += "<br><br><a href='?src=\ref[src];cancel=1'>Exit Stash</a>"
 
 	return dat
 
@@ -72,7 +74,7 @@
 //		return
 
 	if(currently_accessed == TRUE)
-		visible_message("<b>[src]</b> beeps, \"<span class='danger'>The stash is currently in use by somebody else.</span>\" ")
+		visible_message("<b>[src]</b> beeps, \"<span class='danger'>The stash is currently busy. Wait for the other person to finish, or use a different stash.</span>\" ")
 		return
 
 	var/dat
@@ -84,9 +86,7 @@
 	var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
 	popup.set_content(jointext(dat,null))
 	popup.open()
-
-	onclose(user, "inventory_machine")
-	onclose(currently_accessed = FALSE)
+	onclose(usr, "inventory_machine")
 
 
 /obj/structure/inventory_machine/attackby(obj/item/I, mob/user)
@@ -158,6 +158,11 @@
 	return new_inv
 
 /obj/structure/inventory_machine/Topic(href, href_list)
+	if(href_list["close"])
+		currently_accessed = FALSE
+		visible_message("<b>[src]</b> beeps, \"<span class='notice'>YOU WIN......... EPIC..............</span>\" ")
+		return
+
 	if(..())
 		return 1
 
@@ -180,6 +185,7 @@
 			var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
 			popup.set_content(jointext(dat,null))
 			popup.open()
+			onclose(usr, "inventory_machine")
 			return
 		else
 			var/datum/persistent_inventory/new_inv = check_inventory_lists(usr, H)
@@ -196,7 +202,7 @@
 			var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
 			popup.set_content(jointext(dat,null))
 			popup.open()
-
+			onclose(usr, "inventory_machine")
 			current_inventory = new_inv
 			return
 
@@ -212,6 +218,7 @@
 		popup.set_content(jointext(dat,null))
 		popup.open()
 		visible_message("<b>[src]</b> beeps, \"<span class='notice'>Logged out of stash successfully. Have a productive day.</span>\" ")
+		onclose(usr, "Personal Storage")
 		return
 
 	if(href_list["choice"])
@@ -249,6 +256,7 @@
 				var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
 				popup.set_content(jointext(dat,null))
 				popup.open()
+				onclose(usr, "Personal Storage")
 				return
 
 

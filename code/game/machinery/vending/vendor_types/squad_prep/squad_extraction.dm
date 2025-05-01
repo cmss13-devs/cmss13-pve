@@ -35,7 +35,8 @@ GLOBAL_LIST_INIT(cm_vending_extraction, list(
 	desc = "An automated rack hooked up to an autofab of cheap, low-quality equipment."
 	icon_state = "clothing"
 	req_access = list()
-	vendor_role = list(JOB_SQUAD_MEDIC, JOB_SQUAD_LEADER, JOB_SQUAD_SMARTGUN, JOB_SQUAD_ENGI, JOB_SQUAD_TEAM_LEADER, JOB_SQUAD_MARINE)
+//	vendor_role = list(JOB_SQUAD_MEDIC, JOB_SQUAD_LEADER, JOB_SQUAD_SMARTGUN, JOB_SQUAD_ENGI, JOB_SQUAD_TEAM_LEADER, JOB_SQUAD_MARINE)
+	vendor_role = list()
 
 /obj/structure/machinery/cm_vending/gear/extraction/get_listed_products(mob/user)
 	return GLOB.cm_vending_extraction
