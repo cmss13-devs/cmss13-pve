@@ -899,11 +899,12 @@
 		list("Operation Ration Pack", round(scale * 5), /obj/item/storage/box/mre/twe, VENDOR_ITEM_REGULAR),
 		list("Operation Ration Pack Box", round(scale * 1), /obj/item/ammo_box/magazine/misc/mre/twe, VENDOR_ITEM_REGULAR),
 
-//Everyone has medical skill, so no need for the skillless injectors. ATK & ABK's as standard so the little shits don't empty the medics vendor too
+//Everyone has medical skill, so no need for the skillless injectors.
+//ATK & ABK's as standard so the little shits don't empty the medics vendor too, because I KNOW they will otherwise
 //Don't be gentle with them. >:3
 		list("MEDICAL", -1, null, null),
-		list("Gauze", round(scale * 15), /obj/item/stack/medical/advanced/bruise_pack, VENDOR_ITEM_REGULAR),
-		list("Ointment", round(scale * 15), /obj/item/stack/medical/advanced/ointment, VENDOR_ITEM_REGULAR),
+		list("Trauma Treatment Pack", round(scale * 15), /obj/item/stack/medical/advanced/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Burn Treatment Pack", round(scale * 15), /obj/item/stack/medical/advanced/ointment, VENDOR_ITEM_REGULAR),
 		list("Splints", round(scale * 15), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
 		list("Emergency Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/emergency, VENDOR_ITEM_REGULAR),
 		list("Bicaridine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/bicaridine, VENDOR_ITEM_REGULAR),
@@ -926,8 +927,7 @@
 
 		list("FLARE AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 10), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
-		list("M94 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
-		list("M89-S Signal Flare Pack", round(scale * 3), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
+		list("L96 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/flare/rmc, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null),
 		list("VP70 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp70/unloaded, VENDOR_ITEM_REGULAR),
@@ -943,9 +943,9 @@
 		list("Fire Extinguisher (Portable)", round(scale * 1), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", round(scale * 2), /obj/item/roller, VENDOR_ITEM_REGULAR),
 		list("Machete Scabbard (Full)", round(scale * 5), /obj/item/storage/large_holster/machete/full, VENDOR_ITEM_REGULAR),
-		list("Laser Designator", round(scale * 2), /obj/item/device/binoculars/range/designator, VENDOR_ITEM_REGULAR),
+		list("Binoculars", round(scale * 2), /obj/item/device/binoculars/civ, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
-		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
+		list("Two-point Sling", round(scale * 1), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("Fairbairn-Sykes Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine/sas, VENDOR_ITEM_REGULAR),
 		)
 

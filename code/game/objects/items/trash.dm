@@ -259,6 +259,11 @@
 	desc = "A used tear gas grenade. This is trash."
 	icon_state = "grenade_spent"
 
+/obj/item/trash/grenade/gas/rmc
+	name = "spent R2175/CN20 gas grenade"
+	desc = "A used RMC CN20 gas grenade. This is trash."
+	icon_state = "grenade_spent"
+
 /obj/item/trash/grenade/Initialize()
 	. = ..()
 	animation_spin(5, 1,)
