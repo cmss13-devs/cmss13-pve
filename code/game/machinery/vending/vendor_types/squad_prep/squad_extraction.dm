@@ -24,9 +24,10 @@ GLOBAL_LIST_INIT(cm_vending_extraction, list(
 		list("Shotgun Shell Pouch", 0, /obj/item/storage/pouch/shotgun, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 	))
 
-/obj/structure/machinery/cm_vending/extraction
-	name = "\improper ColMarTech Squad Fabricated Munitions Rack"
-	desc = "An automated rack hooked up to a colossal storage of cheaply fabricated, low-quality equipment."
+/obj/structure/machinery/cm_vending/gear/extraction
+	name = "\improper ColMarTech Surplus Munitions Rack"
+	desc = "An automated rack hooked up to an autofab of cheap, low-quality equipment."
+	icon_state = "clothing"
 	req_access = list()
 	vendor_role = list()
 

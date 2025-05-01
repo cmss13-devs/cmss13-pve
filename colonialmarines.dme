@@ -1052,6 +1052,7 @@
 #include "code\game\machinery\vending\vendor_types\crew\synthetic.dm"
 #include "code\game\machinery\vending\vendor_types\crew\vehicle_crew.dm"
 #include "code\game\machinery\vending\vendor_types\squad_prep\squad_engineer.dm"
+#include "code\game\machinery\vending\vendor_types\squad_prep\squad_extraction.dm"
 #include "code\game\machinery\vending\vendor_types\squad_prep\squad_leader.dm"
 #include "code\game\machinery\vending\vendor_types\squad_prep\squad_medic.dm"
 #include "code\game\machinery\vending\vendor_types\squad_prep\squad_prep.dm"
