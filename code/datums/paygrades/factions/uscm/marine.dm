@@ -113,33 +113,33 @@
 	pay_multiplier = 2.75	//Pay on par with E7 to begin with
 
 /datum/paygrade/marine/w2
-	paygrade = PAY_SHORT_MW2
-	name = "Chief Warrant Officer 2"
-	prefix = "CWO2"
+	paygrade = PAY_SHORT_MCW1
+	name = "Chief Warrant Officer 4th Grade"
+	prefix = "CWO"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/w2
 	ranking = 13
 	pay_multiplier = 2.9
 
 /datum/paygrade/marine/w3
-	paygrade = PAY_SHORT_MW3
-	name = "Chief Warrant Officer 3"
-	prefix = "CWO3."
+	paygrade = PAY_SHORT_MCW2
+	name = "Chief Warrant Officer 3rd Grade"
+	prefix = "CWO"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/w3
 	ranking = 14
 	pay_multiplier = 3
 
 /datum/paygrade/marine/w4
-	paygrade = PAY_SHORT_MW4
-	name = "Chief Warrant Officer 4"
-	prefix = "CWO4"
+	paygrade = PAY_SHORT_MCW3
+	name = "Chief Warrant Officer 2nd Grade"
+	prefix = "CWO"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/w4
 	ranking = 15
 	pay_multiplier = 3.2
 
 /datum/paygrade/marine/w5
-	paygrade = PAY_SHORT_MW5
-	name = "Chief Warrant Officer 5"
-	prefix = "CWO5"
+	paygrade = PAY_SHORT_MCW4
+	name = "Chief Warrant Officer 1st Grade"
+	prefix = "CWO"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/w5
 	ranking = 16
 	pay_multiplier = 3.5

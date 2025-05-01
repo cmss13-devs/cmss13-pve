@@ -694,6 +694,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/toy/camera
 	display_name = "Camera"
 	path = /obj/item/device/camera
+	cost = 1
 
 /datum/gear/toy/mags
 	cost = 1
@@ -1007,6 +1008,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/weapon/m1911
 	display_name = "M1911 Pistol"
 	path = /obj/item/storage/box/loadout/M1911_loadout
+	cost = 4
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/weapon/m48a4
+	display_name = "M48A4 Service Pistol"
+	path = /obj/item/storage/box/loadout/M48A4_loadout
 	cost = 4
 	allowed_origins = USCM_ORIGINS
 
@@ -1445,9 +1452,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
 
-/datum/gear/misc/patch_uscm/devils
-	display_name = "Solar Devils shoulder patch"
-	path = /obj/item/clothing/accessory/patch/devils
+/datum/gear/misc/patch_uscm/deuce
+	display_name = "Double Deuce shoulder patch"
+	path = /obj/item/clothing/accessory/patch/deuce
 
 /datum/gear/misc/family_photo
 	display_name = "Family photo"

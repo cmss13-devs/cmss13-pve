@@ -409,6 +409,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 3rd Battalion 'Solar Devils', part of the USCM 2nd Division, 1st Regiment."
 	icon_state = "solardevilspatch"
 
+/obj/item/clothing/accessory/patch/deuce
+	name = "USCM Double Deuce patch"
+	desc = "A fire resistant shoulder patch, worn by the men and women of the 2nd Battalion Double Deuce, 2nd Marines."
+	icon_state = "doubledeucepatch"
+
 /obj/item/clothing/accessory/patch/forecon
 	name = "USCM Force Reconnaissance patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of USCM FORECON. Swift, Silent, Deadly."
