@@ -2,13 +2,13 @@
 
 // USASF, the evolution of the USN & USAF, still considered Naval for the branch prefix
 
-/// NE1, Seaman Recruit
+/// NE1, Crewman Recruit
 #define PAY_SHORT_NE1 "NE1"
 
-/// NE2, Seaman Apprentice
+/// NE2, Crewman Apprentice
 #define PAY_SHORT_NE2 "NE2"
 
-/// NE3, Seaman
+/// NE3, Crewman
 #define PAY_SHORT_NE3 "NE3"
 
 /// NE4, Petty Officer 3rd Class
@@ -86,5 +86,5 @@
 /// NO10, Admiral
 #define PAY_SHORT_NO10 "NO10"
 
-/// NO10C, Chief of Naval Operations
+/// NO10C, Chief of Aerospace Operations
 #define PAY_SHORT_NO10C "NO10C"
