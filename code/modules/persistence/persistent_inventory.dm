@@ -186,7 +186,6 @@
 
 			if(!new_inv)
 				visible_message("<b>[src]</b> beeps, \"<span class='danger'>Your stash is currently busy. Ensure that you have logged out of all Stash Access Points.</span>\" ")
-				flick("inv-tri_warn",src)
 				return
 
 			visible_message("<b>[src]</b> beeps, \"<span class='notice'>Access to stash granted.</span>\" ")
@@ -204,8 +203,16 @@
 	if(href_list["cancel"])
 		if(item_processing)
 			return FALSE
+		var/mob/user = usr
 
 		current_inventory = null
+		var/dat
+		dat = get_full_data(user)
+		var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
+		popup.set_content(jointext(dat,null))
+		popup.open()
+		visible_message("<b>[src]</b> beeps, \"<span class='notice'>Logged out of stash successfully. Have a productive day.</span>\" ")
+		return
 
 	if(href_list["choice"])
 		switch(href_list["choice"])
