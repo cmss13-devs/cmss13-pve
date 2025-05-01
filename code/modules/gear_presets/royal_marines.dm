@@ -20,7 +20,7 @@
 	return ..()
 
 /datum/equipment_preset/royal_marine/standard
-	name = "TWE Royal Marine Commando, Rifleman"
+	name = "Royal Marine Commando, Rifleman (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM"
@@ -74,8 +74,8 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/machinegun
-	name = "TWE Royal Marine Commando, Smartgunner"
-	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
+	name = "Royal Marine Commando, Smartgunner (Equipped)"
+	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	flags = EQUIPMENT_PRESET_EXTRA
 	role_comm_title = "RM HW(SG)"
 	assignment = JOB_TWE_RMC_SMARTGUNNER
@@ -127,9 +127,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/stealth
-	name = "TWE Royal Marine Commando, Stealth"
+	name = "Royal Marine Commando, Stealth (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM"
 	assignment = JOB_TWE_RMC_RIFLEMAN
 	rank = JOB_TWE_RMC_RIFLEMAN
@@ -141,7 +141,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/heavy(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/gas(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge(new_human), WEAR_IN_BACK)
@@ -180,9 +180,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/sniper
-	name = "TWE Royal Marine Commando, Sniper" //Sniper until they get a proper DMR
+	name = "Royal Marine Commando, Sniper (Equipped)" //Sniper until they get a proper DMR
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM ScS" //Intended, going by current royal marine role/specialisation abbreviations
 	assignment = JOB_TWE_RMC_MARKSMAN
 	rank = JOB_TWE_RMC_MARKSMAN
@@ -237,7 +237,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
 
 /datum/equipment_preset/royal_marine/mortar
-	name = "TWE Royal Marine Commando, Mortar Gunner"
+	name = "Royal Marine Commando, Mortar Gunner (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC2G = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM HW(MOR)"
@@ -283,7 +283,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/medic
-	name = "TWE Royal Marine Commando, Medical Assistant"
+	name = "Royal Marine Commando, Medical Assistant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC2N = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM MA"
@@ -343,7 +343,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/engi
-	name = "TWE Royal Marine Commando, Assault Engineer"
+	name = "Royal Marine Commando, Assault Engineer (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC2E = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM AE"
@@ -395,9 +395,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/leader
-	name = "TWE Royal Marine Commando, Section Leader"
+	name = "Royal Marine Commando, Section Leader (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM STL"
 	assignment = JOB_TWE_RMC_SECTIONLEADER
 	rank = JOB_TWE_RMC_SECTIONLEADER
@@ -449,9 +449,9 @@
 
 
 /datum/equipment_preset/royal_marine/leader/lesser_rank
-	name = "TWE Royal Marine Commando, Team Leader"
+	name = "Royal Marine Commando, Team Leader (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM TL"
 	assignment = JOB_TWE_RMC_TEAMLEADER
 	rank = JOB_TWE_RMC_TEAMLEADER
@@ -459,9 +459,9 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/coloursergeant
-	name = "TWE Royal Marine Commando, Troop Sergeant"
+	name = "Royal Marine Commando, Troop Sergeant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC5 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM TS"
 	assignment = JOB_TWE_RMC_TROOPLEADER
 	rank = JOB_TWE_RMC_TROOPLEADER
@@ -510,7 +510,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/lieuteant
-	name = "TWE Royal Marine Commando, Troop Commander"
+	name = "Royal Marine Commando, Troop Commander (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMO1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM TC"
@@ -560,7 +560,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
 
 /datum/equipment_preset/royal_marine/captain
-	name = "TWE Royal Marine Commando, Squadron Commander"
+	name = "Royal Marine Commando, Squadron Commander (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMO3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM OC"

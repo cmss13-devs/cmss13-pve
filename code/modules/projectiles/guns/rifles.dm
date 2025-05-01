@@ -158,7 +158,7 @@
 	fa_max_scatter = SCATTER_AMOUNT_TIER_5
 
 /obj/item/weapon/gun/rifle/nsg23/unloaded
-	current_mag = /obj/item/ammo_magazine/rifle/nsg23
+	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
 /obj/item/weapon/gun/rifle/nsg23/preloaded

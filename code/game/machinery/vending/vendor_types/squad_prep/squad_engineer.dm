@@ -229,7 +229,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 
 GLOBAL_LIST_INIT(cm_vending_clothing_rmc_engi, list(
 		list("ENGINEERING SET (MANDATORY)", 0, null, null, null),
-		list("Essential Engineering Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential Engineering Set", 0, /obj/effect/essentials_set/rmcengi, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Heavy-duty Backpack", 0, /obj/item/storage/backpack/rmc/heavy, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),

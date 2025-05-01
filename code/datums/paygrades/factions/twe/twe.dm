@@ -17,8 +17,8 @@
 
 /datum/paygrade/twe/e2n //RMC medics are attached naval personnel, don't see them forgoing this tradition even in the aliens universe
 	paygrade = PAY_SHORT_RMC2N
-	name = "Leading Medical Assistant"
-	prefix = "LMA"
+	name = "Medical Assistant"
+	prefix = "MA"
 	pay_multiplier = 2.2
 
 /datum/paygrade/twe/e2e //RMC gets combat engineering support from the army royal engineers, as above, don't see them changing that tradition
