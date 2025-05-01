@@ -470,10 +470,12 @@
 /datum/ammo/bullet/rifle/mar40
 	name = "8.8x29 rifle bullet"
 	damage = 45
+	shell_casing = /obj/item/ammo_casing/cartridge
 
 /datum/ammo/bullet/rifle/m16
 	name = "5.56x45 rifle bullet"
 	damage = 35
+	shell_casing = /obj/item/ammo_casing/cartridge
 
 /datum/ammo/bullet/rifle/m16/ap
 	name = "armor-piercing 5.56x45 rifle bullet"
@@ -483,6 +485,7 @@
 /datum/ammo/bullet/rifle/ar10
 	name = "7.62x51 rifle bullet"
 	damage = 55
+	shell_casing = /obj/item/ammo_casing/cartridge
 
 //9.7x16 AG80
 
@@ -490,6 +493,7 @@
 	name = "9.7x16 bullet"
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_2
+	shell_casing = /obj/item/ammo_casing/cartridge
 
 /datum/ammo/bullet/rifle/ag80/tracer
 	icon_state = "bullet_green"

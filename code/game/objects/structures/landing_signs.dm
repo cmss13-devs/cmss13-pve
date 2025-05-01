@@ -81,3 +81,24 @@
 	name = "Otogi Egress Point - Keppitz Hangar - Landing Zone two sign"
 	desc = "A large sign that reads Keppitz Hangar, it has clear markings of Weyland Yutani along with warnings about trespassing and lethal force."
 	icon_state = "otogi_sign_2"
+
+/obj/structure/lz_sign/hybrisa_sign
+	name = "Hybrisa Prospera welcome sign"
+	desc = "A large sign that reads 'Welcome to Hybrisa Prospera', The Weyland Yutani 'Wings' and logo adorn the sign, as well as some information about the colony."
+	icon = 'icons/obj/structures/props/landing_signs.dmi'
+	icon_state = "hybrisa_sign"
+
+/obj/structure/lz_sign/hybrisa_sign/damaged
+	name = "Hybrisa Prospera Welcome sign"
+	desc = "A large sign that reads 'Welcome to Hybrisa Prospera', The Weyland Yutani corporate 'Wings' and logo adorn the sign, as well as some information about the colony."
+	icon_state = "hybrisa_sign_d"
+
+/obj/structure/lz_sign/hybrisa_sign/medical
+	name = "Hybrisa Prospera - Emergency Medical Landing Zone one sign"
+	desc = "A large sign that reads 'Emergency Medical - HBP - LZ - 01'."
+	icon_state = "hybrisamedical_sign"
+
+/obj/structure/lz_sign/hybrisa_sign/mining
+	name = "Hybrisa Prospera - Weyland-Yutani Kelland Mining - Landing Zone two sign"
+	desc = "A large sign that reads 'WY - KMCC Mining - HBP - LZ - 01' The Kelland Mining logo is adorns the sign."
+	icon_state = "hybrisamining_sign"

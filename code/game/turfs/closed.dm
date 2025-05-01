@@ -282,6 +282,11 @@
 /turf/closed/shuttle/midway/transparent
 	opacity = FALSE
 
+/turf/closed/shuttle/somme
+	name = "\improper Somme"
+	icon = 'icons/turf/dropship4.dmi'
+	icon_state = "1"
+
 /turf/closed/shuttle/cyclone
 	name = "\improper Cyclone"
 	icon = 'icons/turf/dropship2.dmi'
@@ -437,3 +442,19 @@
 
 /turf/closed/shuttle/transit/r_end
 	icon_state = "swall8"
+
+// Hybrisa Shuttles
+
+/turf/closed/shuttle/dropship2/WY/HorizonRunner
+	name = "\improper WY-LWI Horizon Runner HR-150"
+	desc = "The WY-LWI Horizon Runner HR-150, a collaborative creation of Lunnar-Welsun Industries and Weyland-Yutani. This small dropship is designed for short-range commercial transport."
+	icon = 'icons/turf/dropship6.dmi'
+
+/turf/closed/shuttle/dropship2/WY/StarGlider
+	name = "\improper WY-LWI StarGlider SG-200"
+	desc = "The WY-LWI StarGlider SG-200, a product of the collaborative ingenuity between Weyland Yutani and Lunnar-Welsun Industries, This small dropship is designed for short-range commercial transport."
+	icon = 'icons/turf/dropship6.dmi'
+
+/turf/closed/shuttle/dropship2/WY/transparent
+	icon = 'icons/turf/dropship6.dmi'
+	opacity = FALSE

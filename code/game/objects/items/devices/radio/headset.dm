@@ -567,6 +567,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/po)
 	volume = RADIO_VOLUME_CRITICAL
 	multibroadcast_cooldown = LOW_MULTIBROADCAST_COOLDOWN
+	frequency = ALPHA_FREQ
 
 /obj/item/device/radio/headset/almayer/intel
 	name = "marine intel radio headset"
@@ -1167,6 +1168,14 @@
 	desc = "An expensive headset used by The Interstellar Commerce Commission. This one in particular has a liaison chip with the CMB. Featured channels include: ; - CMB, :o - Colony, :g - public, :v - marine command, :m - medbay, :t - intel, :y - Weyland-Yutani."
 	icon_state = "wy_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/cmb)
+
+/obj/item/device/radio/headset/distress/NSPA
+	name = "NSPA Headset"
+	desc = "NSPA headset."
+	frequency = RMC_FREQ
+	icon_state = "vai_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/royal_marine)
+	volume = RADIO_VOLUME_IMPORTANT
 
 /obj/item/device/radio/headset/almayer/highcom
 	name = "USCM High Command headset"

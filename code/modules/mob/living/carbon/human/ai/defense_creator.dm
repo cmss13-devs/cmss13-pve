@@ -205,12 +205,6 @@
 	icon_state = "wy_sentry_heavy"
 	path_to_spawn = /obj/structure/machinery/defenses/sentry/dmr/wy
 
-/datum/human_ai_defense/defense/sentry/wy/static_gun
-	name = "W-Y Sentry - Static"
-	desc = /obj/structure/machinery/defenses/sentry/premade/deployable/wy::desc
-	icon_state = "wy_sentry_static"
-	path_to_spawn = /obj/structure/machinery/defenses/sentry/premade/deployable/wy
-
 // Bell towers
 
 /datum/human_ai_defense/defense/bell_tower

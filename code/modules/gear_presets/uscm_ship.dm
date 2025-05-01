@@ -445,7 +445,7 @@
 
 /datum/equipment_preset/uscm_ship/qm/lesser_rank
 	name = "USCM Logistics Chief"
-	paygrades = list(PAY_SHORT_MW2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MCW1 = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_CARGO_CHIEF
 	rank = JOB_CARGO_CHIEF
 	role_comm_title = "LC"
@@ -918,13 +918,23 @@
 	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_PREP)
 	assignment = JOB_DROPSHIP_PILOT
 	rank = JOB_DROPSHIP_PILOT
-	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "PLT"
+	paygrades = list(PAY_SHORT_MCW1 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "PO"
 	skills = /datum/skills/pilot
 
 	minimap_icon = "pilot"
 
 	utility_under = list(/obj/item/clothing/under/marine/officer/pilot)
+
+/datum/equipment_preset/uscm_ship/dp/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_MW1 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm_ship/dp/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/po(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 
 /datum/equipment_preset/uscm_ship/dp/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -934,7 +944,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
 	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/po(new_human), WEAR_L_EAR)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot(new_human), WEAR_HEAD)
 	//uniform
@@ -995,6 +1005,10 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+
+/datum/equipment_preset/uscm_ship/dcc/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 

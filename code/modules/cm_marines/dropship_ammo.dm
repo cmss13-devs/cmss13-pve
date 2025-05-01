@@ -150,6 +150,12 @@
 	var/directhit_damage = 150 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
 	var/penetration = 15 //AP value pretty much
 
+/obj/structure/ship_ammo/heavygun/somme
+	name = "\improper 30mm multipurpose ammunition crate"
+	desc = "A 400rnd reinforced crate of Armor Piercing High Explosive and Incendiary 30mm ammunition for use with the GAU-116 rotary autocannon. Best used against light structures, personnel in the open, or thinskin vehicles. Entirely ineffective against heavier armor."
+	travelling_time = 25
+	equipment_type = /obj/structure/dropship_equipment/weapon/heavygun/somme
+
 /obj/structure/ship_ammo/heavygun/get_examine_text(mob/user)
 	. = ..()
 	. += "It has [ammo_count] round\s."
@@ -207,6 +213,12 @@
 	directhit_damage = 100 //how much damage is to be inflicted to a mob, this is here so that we can hit resting mobs.
 	penetration = 40 //AP value pretty much
 
+/obj/structure/ship_ammo/heavygun/antitank/somme
+	name = "\improper 30mm armor piercing ammunition crate"
+	desc = "A 400rnd reinforced crate of Armor Piercing High Explosive and Incendiary 30mm ammunition for use with the GAU-116 rotary autocannon. Best used against light structures, personnel in the open, or thinskin vehicles. Entirely ineffective against heavier armor."
+	travelling_time = 35
+	equipment_type = /obj/structure/dropship_equipment/weapon/heavygun/somme
+
 //laser battery
 
 /obj/structure/ship_ammo/laser_battery
@@ -215,7 +227,7 @@
 	desc = "A high-capacity laser battery used to power laser beam weapons.  Can be loaded into the AN/AEQ-22 laser system."
 	travelling_time = 10
 	ammo_count = 100
-	max_ammo_count = 100
+	max_ammo_count = 400
 	ammo_used_per_firing = 40
 	equipment_type = /obj/structure/dropship_equipment/weapon/laser_beam_gun
 	ammo_name = "charge"
@@ -226,6 +238,9 @@
 	warning_sound = 'sound/effects/nightvision.ogg'
 	point_cost = 200
 	fire_mission_delay = 4 //very good but long cooldown
+
+/obj/structure/ship_ammo/laser_battery/somme
+	equipment_type = /obj/structure/dropship_equipment/weapon/laser_beam_gun/somme
 
 
 /obj/structure/ship_ammo/laser_battery/get_examine_text(mob/user)
@@ -397,10 +412,17 @@
 	point_cost = 300
 	fire_mission_delay = 3 //high cooldown
 
+/obj/structure/ship_ammo/minirocket/somme
+	desc = "The M362 blast fragmentation warhead for the Mk.11 'Squall' unguided rocket system is a good choice for antipersonnel or light structure defeat work. A larger salvo size also enables some class of air defense saturation."
+	equipment_type = /obj/structure/dropship_equipment/weapon/minirocket_pod/somme
+	ammo_count = 8
+	max_ammo_count = 8
+	travelling_time = 25 //on par with the GAU
+
 /obj/structure/ship_ammo/minirocket/detonate_on(turf/impact, obj/structure/dropship_equipment/weapon/fired_from)
 	impact.ceiling_debris_check(2)
 	spawn(5)
-		cell_explosion(impact, 200, 44, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), source_mob))
+		cell_explosion(impact, 300, 54, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), source_mob))
 		var/datum/effect_system/expl_particles/P = new/datum/effect_system/expl_particles()
 		P.set_up(4, 0, impact)
 		P.start()
@@ -422,15 +444,18 @@
 
 /obj/structure/ship_ammo/minirocket/incendiary
 	name = "\improper M322 70mm incendiary rocket"
-	desc = "Strinctly speaking, the M322 incendiary warhead for the Mk.10 Zeus is no longer supposed to be in service. However, some stocks still exist. Great for antistructure and defoliant work, but poor hard target defeat."
+	desc = "Strictly speaking, the M322 incendiary warhead for the Mk.10 Zeus is no longer supposed to be in service. However, some stocks still exist. Great for antistructure and defoliant work, but poor hard target defeat."
 	icon_state = "minirocket_inc"
 	point_cost = 500
 	fire_mission_delay = 3 //high cooldown
 
+/obj/structure/ship_ammo/minirocket/incendiary/somme
+	desc = "Strictly speaking, the M322 incendiary warhead for the Mk.11 Squall is no longer supposed to be in service. However, some stocks still exist. Great for antistructure and defoliant work, but poor hard target defeat."
+
 /obj/structure/ship_ammo/minirocket/incendiary/detonate_on(turf/impact, obj/structure/dropship_equipment/weapon/fired_from)
 	..()
-	spawn(5)
-		fire_spread(impact, create_cause_data(initial(name), source_mob), 3, 25, 20, "#EE6515")
+	spawn(8)
+		fire_spread(impact, create_cause_data(initial(name), source_mob), 5, 30, 30, "#eeba10")
 
 /obj/structure/ship_ammo/sentry
 	name = "\improper UA/571-P paradrop sentry weapons system"

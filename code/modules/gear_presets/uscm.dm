@@ -113,6 +113,10 @@
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/pfc/lance_corporal
+	name = parent_type::name + " (Lance Corporal)"
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+
 /datum/equipment_preset/uscm/pfc/upp
 	name = "UPP Squad Rifleman"
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
@@ -324,7 +328,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
 	assignment = JOB_SQUAD_ENGI
 	rank = JOB_SQUAD_ENGI
-	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "ComEng"
 	skills = /datum/skills/combat_engineer
 
@@ -341,7 +345,7 @@
 
 /datum/equipment_preset/uscm/engineer/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
-	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 

@@ -428,6 +428,19 @@
 	icon_state = "101a"
 	opacity = FALSE
 
+/obj/structure/shuttle/part/somme
+	name = "\improper Somme"
+	icon = 'icons/turf/dropship5.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/somme/transparent
+	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
+	opacity = FALSE
+
+/obj/structure/shuttle/part/somme/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor complex."
+
 /obj/structure/shuttle/part/cyclone
 	name = "\improper Cyclone"
 	icon = 'icons/turf/dropship2.dmi'
@@ -506,4 +519,18 @@
 	desc = "The nose of a UD-4 Cheyenne dropship. Contains the AESA radar system and the chin-mounted powered gunpod containing the GAU-113/B 25mm rotary autocannon with a 900 round drum."
 	icon = 'icons/turf/dropship.dmi'
 	icon_state = "101a"
+	opacity = FALSE
+
+// TWE Ship Cosmetic
+
+/obj/structure/shuttle/part/twe_cosmetic1
+	name = "\improper UD4-UK"
+	icon = 'icons/turf/twedropship.dmi'
+	icon_state = "0,0"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/twe_cosmetic1/ex_act(severity, direction)
+	return FALSE
+
+/obj/structure/shuttle/part/twe_cosmetic1/transparent
 	opacity = FALSE

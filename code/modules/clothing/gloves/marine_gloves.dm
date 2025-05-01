@@ -55,6 +55,18 @@
 	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
 	unacidable = TRUE
 
+/obj/item/clothing/gloves/marine/specialist/breacher
+	name = "\improper B16 breacher gauntlets"
+	desc = "A pair of heavily armored gloves."
+	icon_state = "black"
+	item_state = "bgloves"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH //save the hands from fracs
+
 /obj/item/clothing/gloves/marine/M3G
 	name = "\improper M3-G4 Grenadier gloves"
 	desc = "A pair of plated, but nimble, gloves."
@@ -129,6 +141,30 @@
 	armor_rad = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	unacidable = TRUE
+
+/obj/item/clothing/gloves/marine/veteran/cbrn
+	name = "\improper M3 MOPP gloves"
+	desc = "M3 MOPP gloves are made of treated venlar designed to protect the user’s hands against contamination whilst working in CBRN environments. Special care has been taken to give the user’s hands enough dexterity to fully service a rifle or utilize most handheld tools, while circular adhesive patterns on the fingers provide the user with enhanced grips. Standard CBRN protocol dictates that the gloves are expected to have a lifespan of maximum effectiveness of around twenty-four hours once exposed to moderate levels of contamination and that users are recommended to discard and replace them afterwards."
+	icon_state = "cbrn"
+	item_state = "cbrn"
+	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+
+
+//=ROYAL MARINES=\\
+
+/obj/item/clothing/gloves/marine/veteran/royal_marine
+	name = "\improper L6 pattern combat gloves"
+	desc = "Standard issue tactical gloves used by the royal marines."
+	icon_state = "rmc_gloves"
+	flags_atom = NO_NAME_OVERRIDE
+
+/obj/item/clothing/gloves/marine/veteran/royal_marine/medical
+	name = "\improper L6 pattern combat medic gloves"
+	desc = "Standard issue tactical gloves used by the royal marines combat medics. Sterile and still efficient for combat use."
+	icon_state = "latex"
+	item_state = "latex"
+	armor_bio = CLOTHING_ARMOR_MEDIUM
 
 /obj/item/clothing/gloves/marine/veteran/cbrn
 	name = "\improper M3 MOPP gloves"

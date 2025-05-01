@@ -71,7 +71,7 @@
 /obj/effect/attach_point/weapon
 	name = "weapon system attach point"
 	icon_state = "equip_base_front"
-	base_category = DROPSHIP_WEAPON
+	base_category = null
 	layer = ABOVE_OBJ_LAYER
 	var/firing_arc_min
 	var/firing_arc_max
