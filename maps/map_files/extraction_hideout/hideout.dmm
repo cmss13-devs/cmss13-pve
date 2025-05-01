@@ -1,12 +1,20 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ah" = (
-/turf/open/floor/almayer/pod_landing_floor,
-/area/golden_arrow/shared_office)
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "bE" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/cryo_cells)
 "cD" = (
-/obj/structure/closet/coffin/woodencrate,
+/obj/structure/closet/crate/bravo,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/shared_office)
 "cR" = (
@@ -36,9 +44,19 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "ea" = (
-/obj/structure/window/framed/almayer,
-/turf/closed/wall/almayer,
-/area/golden_arrow/briefing)
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/obj/structure/inventory_machine,
+/obj/structure/window/reinforced/ultra{
+	dir = 4
+	},
+/obj/structure/window/reinforced/ultra{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/shared_office)
 "fg" = (
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/cryo_cells)
@@ -66,9 +84,6 @@
 /turf/open/floor/almayer/sterile_green_side,
 /area/golden_arrow/cryo_cells)
 "hA" = (
-/obj/structure/bed/chair/comfy{
-	dir = 1
-	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
 	light_power = 0.7
@@ -117,7 +132,7 @@
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
 	},
-/turf/open/floor/almayer/pod_landing_floor,
+/turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "kO" = (
 /obj/structure/closet/secure_closet/marine_personal/rifleman{
@@ -129,22 +144,28 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "lk" = (
-/obj/structure/closet/crate/alpha,
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
 	light_power = 0.7
 	},
-/turf/open/floor/almayer/cargo,
+/obj/structure/inventory_machine,
+/obj/structure/window/reinforced/ultra{
+	dir = 4
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "mi" = (
-/obj/structure/surface/table/almayer,
 /obj/item/toy/deck,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "mm" = (
-/obj/structure/inventory_machine,
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
+	light_power = 0.7
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
 	light_power = 0.7
 	},
 /turf/open/floor/almayer,
@@ -235,10 +256,6 @@
 /area/golden_arrow/cryo_cells)
 "qX" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food,
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "rf" = (
@@ -316,23 +333,27 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "zo" = (
-/turf/open/floor/almayer/cargo,
+/obj/structure/inventory_machine,
+/obj/structure/window/reinforced/ultra{
+	dir = 4
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "Ae" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "BC" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
 	name = "\improper Briefing"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "Cg" = (
-/obj/structure/bed/chair/comfy{
-	dir = 1
-	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
+	},
+/obj/structure/bed/chair/comfy{
+	dir = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -346,13 +367,18 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/dorms)
 "Da" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/door/window/southright,
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	dir = 2;
+	name = "\improper Stash Access"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "Df" = (
-/obj/structure/closet/crate/bravo,
-/turf/open/floor/almayer/cargo,
+/obj/structure/window/reinforced/ultra{
+	dir = 4
+	},
+/obj/structure/machinery/door/window/brigdoor/southleft,
+/turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "DN" = (
 /turf/open/floor/almayer/plate,
@@ -362,12 +388,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "El" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/dorms)
+/obj/structure/closet/crate/alpha,
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/shared_office)
 "EC" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
@@ -419,7 +442,8 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/cryo_cells)
 "Hz" = (
-/obj/structure/bed/chair/comfy,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door/window/brigdoor/southleft,
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "HA" = (
@@ -518,6 +542,10 @@
 	dir = 4;
 	light_power = 0.7
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "Oj" = (
@@ -573,7 +601,7 @@
 /area/golden_arrow/platoon_commander_rooms)
 "TK" = (
 /obj/structure/window/framed/almayer,
-/turf/closed/wall/almayer,
+/turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "Um" = (
 /obj/effect/landmark/late_join,
@@ -614,9 +642,9 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/briefing)
 "WE" = (
-/obj/structure/inventory_machine,
-/turf/open/floor/almayer,
-/area/golden_arrow/dorms)
+/obj/structure/bed/chair/comfy,
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/shared_office)
 "Xj" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -625,11 +653,15 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
 "ZG" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3
+/obj/structure/window/reinforced/ultra{
+	dir = 4
 	},
+/obj/structure/window/reinforced/ultra{
+	dir = 8
+	},
+/obj/structure/machinery/door/window/brigdoor/southleft,
 /turf/open/floor/almayer,
-/area/golden_arrow/dorms)
+/area/golden_arrow/shared_office)
 "ZO" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -1355,15 +1387,15 @@ CL
 Qb
 Ae
 Up
-UT
+Pu
 mm
-WE
-WE
 gf
 gf
-WE
-WE
-mm
+gf
+gf
+gf
+gf
+ah
 CM
 "}
 (15,1,1) = {"
@@ -1404,18 +1436,18 @@ Jb
 Jb
 Jb
 CL
-cD
-Ae
-zo
-LO
 El
+Ae
+WE
+Hz
 gf
 gf
-gf
-gf
-gf
-gf
-ZG
+xv
+Mi
+vg
+xv
+Mi
+Cg
 CM
 "}
 (16,1,1) = {"
@@ -1508,17 +1540,17 @@ Jb
 Jb
 Jb
 CL
-Ae
-Ae
-Ae
 Pu
+Pu
+Pu
+LO
 gf
 gf
 xv
 Mi
 vg
 xv
-Mi
+pa
 vg
 CM
 "}
@@ -1560,9 +1592,9 @@ Jb
 Jb
 Jb
 CL
+ea
+ZG
 Ae
-Ae
-Hz
 Da
 gf
 gf
@@ -1570,7 +1602,7 @@ xv
 Mi
 vg
 xv
-pa
+fy
 vg
 CM
 "}
@@ -1613,8 +1645,8 @@ Jb
 Jb
 CL
 zo
-zo
-ah
+Df
+Ae
 UT
 qX
 gf
@@ -1622,7 +1654,7 @@ xv
 Mi
 vg
 xv
-fy
+Mi
 Cg
 CM
 "}
@@ -1670,11 +1702,11 @@ kk
 UT
 NK
 gf
-xv
-Mi
-vg
-xv
-Mi
+gf
+gf
+gf
+gf
+gf
 hA
 CM
 "}
@@ -1723,10 +1755,10 @@ Vo
 Vo
 BC
 Vo
-ea
-ea
-ea
-ea
+DY
+DY
+DY
+DY
 tZ
 CE
 "}

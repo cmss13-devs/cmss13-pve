@@ -10,6 +10,8 @@
 	light_power = 2
 	light_color = "#ebf7fe"  //white blue
 
+	var/currently_accessed = FALSE
+
 	var/disabled = FALSE
 
 	var/datum/persistent_inventory/current_inventory
@@ -69,15 +71,22 @@
 //	else
 //		return
 
-    var/dat
+	if(currently_accessed == TRUE)
+		visible_message("<b>[src]</b> beeps, \"<span class='danger'>The stash is currently in use by somebody else.</span>\" ")
+		return
 
-    dat = get_full_data(user)
+	var/dat
 
-    var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
-    popup.set_content(jointext(dat,null))
-    popup.open()
+	currently_accessed = TRUE
 
-    onclose(user, "inventory_machine")
+	dat = get_full_data(user)
+
+	var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
+	popup.set_content(jointext(dat,null))
+	popup.open()
+
+	onclose(user, "inventory_machine")
+	onclose(currently_accessed = FALSE)
 
 
 /obj/structure/inventory_machine/attackby(obj/item/I, mob/user)
@@ -133,15 +142,10 @@
 	new_inv = make_new_inventory(H.ckey)
 
 	if(new_inv)
-		var/full_path = "data/player_saves/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav"
-		if(fexists(full_path))
-			new_inv.load_inventory()
-			new_inv.save_inventory()
-		else
-			var/savefile/stash = new("data/player_saves/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav")
-			Read(stash)
-			new_inv.load_inventory()
-			new_inv.save_inventory()
+		var/savefile/stash = new("data/player_saves/[copytext(H.ckey,1,2)]/[H.ckey]/stash.sav")
+		Read(stash)
+		new_inv.load_inventory()
+		new_inv.save_inventory()
 
 		return new_inv
 
@@ -202,15 +206,6 @@
 			return FALSE
 
 		current_inventory = null
-
-	if(href_list["toggle_anchor"])
-
-		anchored = !anchored
-
-		if(anchored)
-			to_chat(usr, "<b>The anchors tether themselves back into the floor. It is now secured.</b>")
-		else
-			to_chat(usr, "<b>You toggle the anchors of the display case. It can now be moved.</b>")
 
 	if(href_list["choice"])
 		switch(href_list["choice"])
