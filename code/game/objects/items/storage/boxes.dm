@@ -956,3 +956,13 @@
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
+
+// stash expanders
+
+/obj/item/storage/box/stash
+	name = "ColMarTech Auxiliary Stash"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff."
+	icon_state = "inf_box"
+	foldable = FALSE
+	storage_slots = 32
+	max_w_class = SIZE_LARGE
