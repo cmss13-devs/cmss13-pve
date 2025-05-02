@@ -97,7 +97,7 @@
 
 /obj/effect/landmark/start/marine/tl/rmc
 	name = JOB_TWE_RMC_SECTIONLEADER
-	squad = SQUAD_TWE
+	squad = SQUAD_RMC
 	job = /datum/job/marine/tl/ai/rmc
 
 /datum/job/marine/tl/ai/rmc2ic
@@ -111,7 +111,7 @@
 
 /obj/effect/landmark/start/marine/tl/rmc2ic
 	name = JOB_TWE_RMC_TEAMLEADER
-	squad = SQUAD_TWE
+	squad = SQUAD_RMC
 	job = /datum/job/marine/tl/ai/rmc2ic
 
 #undef SGT_VARIANT

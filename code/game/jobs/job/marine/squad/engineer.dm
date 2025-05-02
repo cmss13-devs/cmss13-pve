@@ -74,7 +74,7 @@
 
 /obj/effect/landmark/start/marine/engineer/rmc
 	name = JOB_TWE_RMC_ENGI
-	squad = SQUAD_TWE
+	squad = SQUAD_RMC
 	job = /datum/job/marine/engineer/ai/rmc
 
 /datum/job/marine/engineer/ai/rmcmortar
@@ -88,5 +88,5 @@
 
 /obj/effect/landmark/start/marine/engineer/rmcmortar
 	name = JOB_TWE_RMC_BREACHER
-	squad = SQUAD_TWE
+	squad = SQUAD_RMC
 	job = /datum/job/marine/engineer/ai/rmcmortar

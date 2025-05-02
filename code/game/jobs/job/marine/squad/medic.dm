@@ -119,7 +119,7 @@
 
 /obj/effect/landmark/start/marine/medic/rmc
 	name = JOB_TWE_RMC_MEDIC
-	squad = SQUAD_TWE
+	squad = SQUAD_RMC
 	job = /datum/job/marine/medic/ai/rmc
 
 #undef CPL_VARIANT

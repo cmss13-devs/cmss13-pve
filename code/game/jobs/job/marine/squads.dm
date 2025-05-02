@@ -348,9 +348,10 @@
 //##############################
 
 /datum/squad/marine/rmc
-	name = SQUAD_TWE
+	name = SQUAD_RMC
+	equipment_color = "#27412D"
 	chat_color = "#aa740f"
-	minimap_color = MINIMAP_SQUAD_TWE
+	minimap_color = MINIMAP_SQUAD_RMC
 	use_stripe_overlay = FALSE
 	radio_freq = RMC_FREQ
 	usable = TRUE

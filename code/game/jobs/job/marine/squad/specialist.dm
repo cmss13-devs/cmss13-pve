@@ -76,5 +76,5 @@
 
 /obj/effect/landmark/start/marine/specialist/rmc
 	name = JOB_TWE_RMC_MARKSMAN
-	squad = SQUAD_TWE
+	squad = SQUAD_RMC
 	job = /datum/job/marine/specialist/ai/rmc

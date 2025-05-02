@@ -114,7 +114,7 @@
 
 /obj/effect/landmark/start/marine/rmc
 	name = JOB_TWE_RMC_RIFLEMAN
-	squad = SQUAD_TWE
+	squad = SQUAD_RMC
 	job = /datum/job/marine/standard/ai/rmc
 
 #undef PFC_VARIANT

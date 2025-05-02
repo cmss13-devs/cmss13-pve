@@ -10,7 +10,7 @@
 	faction = FACTION_TWE
 	idtype = /obj/item/card/id/dogtag
 	assignment = JOB_TWE_RMC_RIFLEMAN
-	rank = JOB_SQUAD_MARINE
+	rank = JOB_TWE_RMC_RIFLEMAN
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	skills = /datum/skills/rmc
 
@@ -20,7 +20,7 @@
 	role_comm_title = "RM TS"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP, ACCESS_TWE_ARMORY)
 	assignment = JOB_TWE_RMC_TROOPLEADER
-	rank = JOB_SQUAD_LEADER
+	rank = JOB_TWE_RMC_TROOPLEADER
 	skills = /datum/skills/rmc/officer
 
 /datum/equipment_preset/uscm/rmc/sl
@@ -29,7 +29,7 @@
 	role_comm_title = "RM STL"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP)
 	assignment = JOB_TWE_RMC_SECTIONLEADER
-	rank = JOB_SQUAD_TEAM_LEADER
+	rank = JOB_TWE_RMC_SECTIONLEADER
 	skills = /datum/skills/rmc/leader
 
 /datum/equipment_preset/uscm/rmc/tl
@@ -38,7 +38,7 @@
 	role_comm_title = "RM TL"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP)
 	assignment = JOB_TWE_RMC_TEAMLEADER
-	rank = JOB_SQUAD_TEAM_LEADER
+	rank = JOB_TWE_RMC_TEAMLEADER
 	skills = /datum/skills/rmc/leader
 
 /datum/equipment_preset/uscm/rmc/sg
@@ -47,7 +47,7 @@
 	role_comm_title = "RM HW(SG)"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_HEVWEAPPREP)
 	assignment = JOB_TWE_RMC_SMARTGUNNER
-	rank = JOB_SQUAD_SMARTGUN
+	rank = JOB_TWE_RMC_SMARTGUNNER
 	skills = /datum/skills/rmc/smartgun
 
 /datum/equipment_preset/uscm/rmc/med
@@ -56,7 +56,7 @@
 	role_comm_title = "RM MA"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_MEDICAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_MEDPREP)
 	assignment = JOB_TWE_RMC_MEDIC
-	rank = JOB_SQUAD_MEDIC
+	rank = JOB_TWE_RMC_MEDIC
 	skills = /datum/skills/rmc/medic
 
 /datum/equipment_preset/uscm/rmc/eng
@@ -65,7 +65,7 @@
 	role_comm_title = "RM AE"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_ENGINEERING, ACCESS_TWE_COMMANDO, ACCESS_TWE_ENGPREP)
 	assignment = JOB_TWE_RMC_ENGI
-	rank = JOB_SQUAD_ENGI
+	rank = JOB_TWE_RMC_ENGI
 	skills = /datum/skills/rmc/engi
 
 /datum/equipment_preset/uscm/rmc/snp
@@ -74,7 +74,7 @@
 	role_comm_title = "RM ScS"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_SNIPERPREP)
 	assignment = JOB_TWE_RMC_MARKSMAN
-	rank = JOB_SQUAD_SPECIALIST
+	rank = JOB_TWE_RMC_MARKSMAN
 
 /datum/equipment_preset/uscm/rmc/mor
 	name = "Royal Marine Commando, Mortar Gunner"
@@ -82,4 +82,4 @@
 	role_comm_title = "RM HW(MOR)"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_HEVWEAPPREP)
 	assignment = JOB_TWE_RMC_BREACHER
-	rank = JOB_SQUAD_ENGI
+	rank = JOB_TWE_RMC_BREACHER

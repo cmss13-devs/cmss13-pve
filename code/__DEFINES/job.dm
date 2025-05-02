@@ -16,7 +16,7 @@
 #define SQUAD_SOLAR "Solar Devils"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_PMCPLT "AZURE-15"
-#define SQUAD_TWE "Gamma Troop"
+#define SQUAD_RMC "Gamma Troop"
 #define SQUAD_LRRP "Snake Eaters"
 
 // Job name defines

@@ -97,7 +97,7 @@ OverrideTimelock(/datum/job/marine/leader, list(
 
 /obj/effect/landmark/start/marine/leader/rmc
 	name = JOB_TWE_RMC_TROOPLEADER
-	squad = SQUAD_TWE
+	squad = SQUAD_RMC
 	job = /datum/job/marine/leader/ai/rmc
 
 #undef GYSGT_VARIANT

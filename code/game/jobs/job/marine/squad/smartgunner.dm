@@ -118,7 +118,7 @@
 /obj/effect/landmark/start/marine/smartgunner/rmc
 	name = JOB_TWE_RMC_SMARTGUNNER
 	job = JOB_TWE_RMC_SMARTGUNNER
-	squad = SQUAD_TWE
+	squad = SQUAD_RMC
 
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
