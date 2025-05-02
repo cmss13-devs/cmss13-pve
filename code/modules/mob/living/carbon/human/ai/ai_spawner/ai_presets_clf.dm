@@ -15,6 +15,7 @@
 	name = "UJL Shotgun"
 	desc = "Just a dude with a shotgun."
 	path = /datum/equipment_preset/jovian/shotgunner
+
 /datum/human_ai_equipment_preset/clf/soldier
 	name = "TWE Rebel, Soldier (Rifle)"
 	desc = "Armed with either a Bizon SMG, MAR variant rifle and very rarely an F90 rifle."

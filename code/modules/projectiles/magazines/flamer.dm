@@ -262,6 +262,14 @@
 	flamer_chem = null
 	custom = TRUE
 
+/obj/item/ammo_magazine/flamer_tank/smoke/acid
+	name = "custom incinerator smoke tank"
+	desc = "A tank holding powdered smoke that expands when exposed to an open flame and carries any chemicals along with it."
+	matter = list("metal" = 3750)
+	flamer_chem = "pacid"
+	custom = TRUE
+
+
 //tanks printable by the research biomass machine
 /obj/item/ammo_magazine/flamer_tank/custom/upgraded
 	name = "upgraded custom incinerator tank"

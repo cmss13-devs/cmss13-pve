@@ -150,6 +150,8 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	if(istype(target))
 		if(target.species && HAS_TRAIT(target, TRAIT_FOREIGN_BIO)) //so you can't tell a pred's health with hud glasses.
 			return
+		if(target.faction != user.faction)
+			return
 	..()
 
 //medical hud used by ghosts

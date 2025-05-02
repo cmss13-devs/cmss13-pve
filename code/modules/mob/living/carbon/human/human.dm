@@ -965,9 +965,9 @@
 		else if(is_sharp(W))
 			if(organ.status & LIMB_SPLINTED) //Splints prevent movement.
 				continue
-			if(prob(20)) //Let's not make throwing knives too good in HvH
+			if(prob(20) && !istype(W, /obj/item/implant)) //Let's not make throwing knives too good in HvH
 				organ.take_damage(rand(1,2), 0, 0)
-		if(prob(30)) // Spam chat less
+		if(prob(30) && !istype(W, /obj/item/implant)) // Spam chat less
 			to_chat(src, SPAN_HIGHDANGER("Your movement jostles [W] in your [organ.display_name] painfully."))
 
 /mob/living/carbon/human/proc/check_status(mob/living/carbon/human/target)

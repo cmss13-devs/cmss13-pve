@@ -202,6 +202,8 @@
 	if(uniform && isclothing(tied_human.w_uniform))
 		appraise_uniform()
 
+	ignore_looting = tied_human?.assigned_equipment_preset.ai_looting
+
 /datum/human_ai_brain/proc/appraise_belt()
 	if(isgun(tied_human.belt) && (tied_human.belt != primary_weapon))
 		add_secondary_weapon(tied_human.belt)

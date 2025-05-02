@@ -469,8 +469,8 @@
 	if(chestburst == 2)
 		msg += SPAN_WARNING("<b>[t_He] has a giant hole in [t_his] chest!</b>\n")
 
-	for(var/implant in get_visible_implants())
-		msg += SPAN_WARNING("<b>[t_He] has \a [implant] sticking out of [t_his] flesh!\n")
+	for(var/obj/item/implant in get_visible_implants())
+		msg += SPAN_WARNING("<b>[t_He] has \a [implant] sticking out of [t_his] [implant.embedded_organ ? implant.embedded_organ.name : "flesh"]!\n")
 
 	if(hasHUD(user,"security") || (observer && observer.HUD_toggled["Security HUD"]))
 		var/perpref

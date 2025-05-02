@@ -515,3 +515,23 @@
 	density = FALSE
 	chemical = "virusfood"
 
+/obj/structure/reagent_dispensers/fueltank/smoke
+	name = "pressurized tank"
+	desc = "Some kind of reagent tank."
+	icon_state = "methanetank"
+	chemical = "pacid"
+	var/reagent_amount = 15
+
+/obj/structure/reagent_dispensers/fueltank/smoke/explode(force)
+	var/location = get_turf(src)
+	var/datum/effect_system/smoke_spread/chem/S = new /datum/effect_system/smoke_spread/chem
+	S.attach(location)
+	S.set_up(reagents, reagent_amount, 0, location)
+	playsound(location, 'sound/effects/smoke.ogg', 25, 1)
+	INVOKE_ASYNC(S, TYPE_PROC_REF(/datum/effect_system/smoke_spread/chem, start))
+	reagents.clear_reagents()
+	deconstruct(FALSE)
+	return
+
+	exploding = FALSE
+	update_icon()

@@ -896,3 +896,4 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	accuracy_mult = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_7
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+
