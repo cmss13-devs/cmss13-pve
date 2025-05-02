@@ -1,3 +1,9 @@
+/obj/item/storage/pouch/firstaid/full/tending/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/packet/tramadol(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/stack/medical/bruise_pack(src)
+
 GLOBAL_LIST_INIT(cm_vending_extraction, list(
 
 		list("WEAPONS (CHOOSE 1)", 0, null, null, null),
@@ -19,7 +25,7 @@ GLOBAL_LIST_INIT(cm_vending_extraction, list(
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("First-Aid Pouch (Refillable Injectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
-		list("First-Aid Pouch (Splints, Gauze, Ointment)", 0, /obj/item/storage/pouch/firstaid/full/alternate, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("First-Aid Pouch (Tending Suite)", 0, /obj/item/storage/pouch/firstaid/full/tending, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("First-Aid Pouch (Pill Packets)", 0, /obj/item/storage/pouch/firstaid/full/pills, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Flare Pouch (Full)", 0, /obj/item/storage/pouch/flare/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Magazine Pouch", 0, /obj/item/storage/pouch/magazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
