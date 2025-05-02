@@ -964,5 +964,11 @@
 	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff."
 	icon_state = "inf_box"
 	foldable = FALSE
-	storage_slots = 32
-	max_w_class = SIZE_LARGE
+	storage_slots = 38
+	max_w_class = SIZE_MASSIVE
+	w_class = SIZE_MASSIVE
+
+/obj/item/storage/box/stash/big
+	name = "ColMarTech Auxiliary Stash Deluxe"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one in particular is an ultra-large model."
+	storage_slots = 59
