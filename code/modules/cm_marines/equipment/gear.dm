@@ -232,13 +232,13 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6
 	name = "\improper USCM Prepared Meal (tofu)"
-	desc = "The USCM doesn't serve tofu you grass sucking hippie. The flag signifies your defeat."
+	desc = "A tray of standard USCM food. Mushy tofu, tasteless beans, and a stale dinner roll fill this tray."
 	icon_state = "MREf"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 2)
-	bitesize = 1
+	reagents.add_reagent("nutriment", 8)
+	bitesize = 2
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1
 	name = "\improper USCM M25 'X-MAS' Meal: Sugar Cookies"

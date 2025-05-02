@@ -58,13 +58,14 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "fg" = (
-/obj/structure/closet/secure_closet/marine_personal/rifleman{
-	pixel_x = 8
+/obj/structure/mirror{
+	pixel_x = 26
 	},
-/obj/structure/closet/secure_closet/marine_personal/rifleman{
-	pixel_x = -7
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 12
 	},
-/turf/open/floor/almayer/edge/smooth/corner/north,
+/turf/open/floor/almayer/silverfull,
 /area/golden_arrow/cryo_cells)
 "fy" = (
 /obj/structure/surface/table/almayer,
@@ -118,10 +119,15 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "iS" = (
-/obj/structure/closet/secure_closet/marine_personal/platoon_commander,
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = 8
+	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
 	light_power = 0.7
+	},
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = -7
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -174,17 +180,26 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "mi" = (
-/obj/structure/surface/table/almayer,
-/obj/item/prop/colony/game,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/dorms)
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/obj/structure/mirror{
+	pixel_x = 26
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 12
+	},
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
 "mm" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
 	light_power = 0.7
 	},
 /obj/structure/flora/pottedplant/random,
-/obj/item/clothing/mask/cigarette/weed,
+/obj/item/clothing/mask/cigarette/weed{
+	pixel_x = -10;
+	pixel_y = -9
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "mn" = (
@@ -215,8 +230,30 @@
 "ny" = (
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/shared_office)
+"nB" = (
+/obj/structure/machinery/shower{
+	pixel_y = 15
+	},
+/obj/structure/curtain/open/shower,
+/obj/structure/window/reinforced/ultra{
+	dir = 4
+	},
+/obj/structure/machinery/door/window/southleft,
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
 "nI" = (
-/turf/open/floor/almayer/edge/smooth/corner,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/obj/structure/mirror{
+	pixel_x = 26
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 12
+	},
+/turf/open/floor/almayer/silverfull,
 /area/golden_arrow/cryo_cells)
 "od" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -256,8 +293,16 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "pe" = (
-/turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/cryo_cells)
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3
+	},
+/obj/structure/flora/pottedplant/random,
+/obj/item/explosive/grenade/high_explosive/training{
+	pixel_x = 15;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
 "pm" = (
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/golden_arrow/cryo_cells)
@@ -294,6 +339,13 @@
 /obj/effect/landmark/start/marine/alpha,
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/cryo_cells)
+"rC" = (
+/mob/living/simple_animal/cat{
+	name = "Kiki";
+	desc = "The Hideout's pet cat. It was found on Fiorina in the prison district by a rifleman and sold to Lieutenant Michael Brown; instead of turning the cat into a meal, he adopted her."
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/dorms)
 "rZ" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
@@ -316,8 +368,16 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/briefing)
 "uN" = (
-/obj/structure/closet/secure_closet/marine_personal/platoon_commander,
-/turf/open/floor/almayer,
+/obj/item/tool/soap,
+/obj/structure/closet{
+	name = "cleaning supplies";
+	pixel_x = -7
+	},
+/obj/item/tool/mop,
+/obj/item/reagent_container/glass/bucket,
+/obj/item/reagent_container/spray/cleaner,
+/obj/item/tool/soap,
+/turf/open/floor/almayer/silverfull,
 /area/golden_arrow/cryo_cells)
 "vg" = (
 /obj/structure/bed/chair/comfy{
@@ -411,6 +471,10 @@
 /area/golden_arrow/briefing)
 "El" = (
 /obj/structure/closet/crate/alpha,
+/obj/structure/sign/banners/usa_worn{
+	pixel_x = -16;
+	pixel_y = 27
+	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/shared_office)
 "EC" = (
@@ -421,7 +485,18 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "EE" = (
-/turf/open/floor/almayer/edge/smooth/corner/west,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
+"EL" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/structure/machinery/door/window/northleft,
+/obj/structure/window/reinforced/ultra{
+	dir = 4
+	},
+/obj/structure/curtain/open/shower,
+/turf/open/floor/almayer/silverfull,
 /area/golden_arrow/cryo_cells)
 "ET" = (
 /obj/structure/closet/secure_closet/marine_personal/squad_leader{
@@ -436,6 +511,9 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"Fp" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/shared_office)
 "Fr" = (
 /obj/structure/surface/table/almayer,
 /obj/item/mre_food_packet/wy/cookie_brick,
@@ -469,7 +547,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
 "GG" = (
-/turf/open/floor/almayer/edge/smooth/west,
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "Bathroom";
+	dir = 2
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "Hz" = (
 /obj/structure/surface/table/almayer,
@@ -485,10 +567,6 @@
 	},
 /obj/structure/closet/secure_closet/marine_personal/corpsman{
 	pixel_x = 8
-	},
-/obj/structure/sign/banners/united_americas_flag{
-	pixel_y = 28;
-	pixel_x = 15
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -535,7 +613,7 @@
 /obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = -7
 	},
-/turf/open/floor/almayer/edge/smooth/corner/east,
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "LO" = (
 /obj/structure/sign/poster/ad,
@@ -588,6 +666,12 @@
 "Oz" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"OR" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/shared_office)
 "OY" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -631,6 +715,37 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
+"SY" = (
+/obj/structure/closet{
+	pixel_x = 8;
+	name = "spare uniforms"
+	},
+/obj/item/clothing/under/marine,
+/obj/item/clothing/under/marine,
+/obj/item/clothing/under/marine,
+/obj/item/clothing/under/marine,
+/obj/item/clothing/under/marine,
+/obj/item/clothing/under/marine,
+/obj/item/clothing/under/marine,
+/obj/item/clothing/under/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/device/radio/headset/almayer/marine/solardevils,
+/obj/item/device/radio/headset/almayer/marine/solardevils,
+/obj/item/device/radio/headset/almayer/marine/solardevils,
+/obj/item/device/radio/headset/almayer/marine/solardevils,
+/obj/item/device/radio/headset/almayer/marine/solardevils,
+/obj/item/device/radio/headset/almayer/marine/solardevils,
+/obj/item/device/radio/headset/almayer/marine/solardevils,
+/obj/item/device/radio/headset/almayer/marine/solardevils,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
 "Td" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -649,11 +764,9 @@
 /area/golden_arrow/cryo_cells)
 "Up" = (
 /obj/structure/surface/table/almayer,
-/obj/item/reagent_container/food/drinks/bottle/beer/craft/partypopper{
-	name = "Beer-Ready-to-Drink";
-	desc = "A bottle of homemade beer created out of whatever the guys in logistics could scrounge together. It smells like an MRE.";
-	pixel_x = -7;
-	pixel_y = 16
+/obj/item/reagent_container/food/drinks/cans/beer{
+	pixel_x = -9;
+	pixel_y = 12
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
@@ -683,10 +796,25 @@
 "Vo" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/briefing)
+"We" = (
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
 "WE" = (
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
+"WG" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/structure/window/reinforced/ultra{
+	dir = 4
+	},
+/obj/structure/machinery/door/window/northleft,
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
 "Xj" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -694,6 +822,28 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
+"XO" = (
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 28;
+	pixel_x = 15
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"XZ" = (
+/obj/structure/machinery/shower{
+	pixel_y = 15
+	},
+/obj/structure/curtain/open/shower,
+/obj/structure/window/reinforced/ultra{
+	dir = 4
+	},
+/obj/structure/machinery/door/window/southleft,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/silverfull,
+/area/golden_arrow/cryo_cells)
 "ZG" = (
 /obj/structure/window/reinforced/ultra{
 	dir = 4
@@ -1113,10 +1263,10 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
+qo
+qo
+qo
+qo
 qo
 bE
 TK
@@ -1165,11 +1315,11 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
 qo
+XZ
+We
+WG
+bE
 xI
 tC
 ET
@@ -1217,17 +1367,17 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
 qo
+nB
+We
+EL
+bE
 HI
 tC
 Lp
-pe
-pe
-fg
+EE
+EE
+Lp
 tC
 Oj
 qo
@@ -1269,16 +1419,16 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
 qo
-kO
+uN
+We
+We
+GG
+Oz
 tC
-nI
-GG
-GG
+EE
+EE
+EE
 EE
 tC
 LW
@@ -1321,17 +1471,17 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
 qo
+nI
+fg
+mi
+bE
 nv
-tC
+SY
 kO
 tC
 tC
-uN
+kO
 tC
 pO
 qo
@@ -1374,10 +1524,10 @@ Jb
 Jb
 Jb
 CL
-CL
-CL
-CL
-qo
+UT
+UT
+UT
+bE
 Kw
 TK
 TK
@@ -1427,8 +1577,8 @@ Jb
 Jb
 CL
 Qb
-Ae
-kk
+Fp
+OR
 Pu
 mm
 lQ
@@ -1537,7 +1687,7 @@ sf
 Jh
 gf
 xv
-mi
+QF
 vg
 xv
 SC
@@ -1587,7 +1737,7 @@ Pu
 Pu
 LO
 Jh
-gf
+rC
 xv
 Up
 vg
@@ -2002,7 +2152,7 @@ hF
 yT
 HA
 Vo
-DN
+XO
 DN
 DN
 DN
@@ -2165,7 +2315,7 @@ DN
 DN
 dM
 ZO
-EC
+pe
 CE
 "}
 (29,1,1) = {"
