@@ -1225,8 +1225,8 @@
 /obj/structure/prop/invuln/darkness //I cant take credit for this, whoever made LV671 this was all you
 	name = "Darkness"
 	icon = 'icons/turf/areas.dmi'
-	icon_state = "dark128"
-	alpha = 200
+	icon_state = "dark255"
+	alpha = 255
 	opacity = 0
 	mouse_opacity = 0
 	layer = 6
@@ -1234,7 +1234,7 @@
 
 /obj/structure/prop/invuln/lore_computer
 	name = "UACG status computer"
-	desc = "Computer terminal allowing access to status of remote locations within the tactical network."
+	desc = "Computer terminal allowing access to status of remote locations within the strategic network."
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "largecomp_dark"
 	opacity = 0

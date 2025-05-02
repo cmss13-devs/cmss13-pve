@@ -52,6 +52,15 @@
 "ak" = (
 /turf/closed/wall/shiva/prefabricated,
 /area/golden_arrow/hangar)
+"al" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/effect/step_trigger/teleporter_vector{
+	vector_z = 4;
+	vector_x = 15;
+	vector_y = -121
+	},
+/turf/open/asphalt,
+/area/space)
 "am" = (
 /turf/closed/wall/shiva/prefabricated,
 /area/golden_arrow/synthcloset)
@@ -483,6 +492,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"bQ" = (
+/obj/effect/step_trigger/teleporter_vector{
+	vector_z = 4;
+	vector_x = 15;
+	vector_y = -121
+	},
+/turf/open/asphalt,
+/area/space)
 "bR" = (
 /obj/structure/desertdam/decals/road_edge,
 /turf/open/asphalt,
@@ -1044,27 +1061,30 @@
 /area/space)
 "cQ" = (
 /obj/structure/desertdam/decals/road_edge,
-/obj/structure/prop/invuln/darkness{
-	alpha = 255
+/obj/effect/step_trigger/teleporter_vector{
+	vector_z = 4;
+	vector_x = 15;
+	vector_y = -122
 	},
-/obj/effect/step_trigger/teleporter_vector,
 /turf/open/asphalt,
 /area/space)
 "cR" = (
-/obj/structure/prop/invuln/darkness{
-	alpha = 255
+/obj/effect/step_trigger/teleporter_vector{
+	vector_z = 4;
+	vector_x = 15;
+	vector_y = -122
 	},
-/obj/effect/step_trigger/teleporter_vector,
 /turf/open/asphalt,
 /area/space)
 "cS" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal2"
 	},
-/obj/structure/prop/invuln/darkness{
-	alpha = 255
+/obj/effect/step_trigger/teleporter_vector{
+	vector_z = 4;
+	vector_x = 15;
+	vector_y = -122
 	},
-/obj/effect/step_trigger/teleporter_vector,
 /turf/open/asphalt,
 /area/space)
 "cT" = (
@@ -1172,6 +1192,17 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"dm" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_z = 4;
+	vector_x = 15;
+	vector_y = -121
+	},
+/turf/open/asphalt,
+/area/space)
 "dn" = (
 /obj/structure/machinery/vending/hydroseeds,
 /turf/open/floor/almayer,
@@ -8282,7 +8313,7 @@ bo
 (38,1,1) = {"
 cT
 cQ
-cL
+al
 cL
 cL
 cL
@@ -8434,7 +8465,7 @@ bo
 (39,1,1) = {"
 cU
 cR
-cM
+bQ
 cO
 cM
 cM
@@ -8586,7 +8617,7 @@ cX
 (40,1,1) = {"
 cV
 cR
-cM
+bQ
 cP
 cM
 cM
@@ -8738,7 +8769,7 @@ cX
 (41,1,1) = {"
 cW
 cS
-cN
+dm
 cN
 cN
 cN
