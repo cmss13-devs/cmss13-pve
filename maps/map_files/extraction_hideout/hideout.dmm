@@ -18,16 +18,20 @@
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/shared_office)
 "cR" = (
-/obj/structure/closet/secure_closet/marine_personal/smartgunner{
-	pixel_x = -7
-	},
 /obj/structure/closet/secure_closet/marine_personal/squad_leader{
 	pixel_x = 8
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
 	},
-/turf/open/floor/almayer,
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = -7
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "dJ" = (
 /turf/open/floor/almayer/blue/southwest,
@@ -58,12 +62,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "fg" = (
-/obj/structure/closet/secure_closet/marine_personal/rifleman{
-	pixel_x = 8
-	},
-/obj/structure/closet/secure_closet/marine_personal/rifleman{
-	pixel_x = -7
-	},
+/obj/structure/machinery/cm_vending/gear/extraction,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "fy" = (
@@ -118,17 +117,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "iS" = (
-/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
-	pixel_x = 8
-	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
-	},
-/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
-	pixel_x = -7
-	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "iV" = (
 /turf/open/floor/almayer/sterile_green_side,
@@ -156,13 +145,10 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "kO" = (
-/obj/structure/closet/secure_closet/marine_personal/rifleman{
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
 	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal/rifleman{
-	pixel_x = 8
-	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "lk" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -205,12 +191,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "nv" = (
-/obj/structure/closet/secure_closet/marine_personal/smartgunner{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/squad_leader{
-	pixel_x = 8
-	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
 	light_power = 0.7
@@ -219,7 +199,13 @@
 	dir = 4;
 	light_power = 0.7
 	},
-/turf/open/floor/almayer,
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "ny" = (
 /turf/open/floor/almayer/cargo_arrow/north,
@@ -276,6 +262,10 @@
 	dir = 4;
 	pixel_x = 12
 	},
+/obj/item/reagent_container/syringe/drugs{
+	pixel_x = 4;
+	pixel_y = 15
+	},
 /turf/open/floor/almayer/silverfull,
 /area/golden_arrow/cryo_cells)
 "pm" = (
@@ -302,12 +292,17 @@
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
 	},
-/obj/structure/machinery/cm_vending/gear/extraction,
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
 	light_power = 0.7
 	},
-/turf/open/floor/almayer,
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "qo" = (
 /turf/closed/wall/almayer/outer,
@@ -387,8 +382,17 @@
 	dir = 1;
 	light_power = 0.7
 	},
-/obj/structure/machinery/cm_vending/gear/extraction,
-/turf/open/floor/almayer,
+/obj/structure/closet/secure_closet/marine_personal/engineer{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/engineer{
+	pixel_x = -7
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "xM" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
@@ -519,20 +523,17 @@
 	dir = 4
 	},
 /obj/structure/curtain/open/shower,
+/obj/item/reagent_container/pill/happy,
 /turf/open/floor/almayer/silverfull,
 /area/golden_arrow/cryo_cells)
 "ET" = (
-/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = 8
 	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
-	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "Fr" = (
 /obj/structure/surface/table/almayer,
@@ -585,13 +586,13 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
 "HI" = (
-/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/corpsman{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = 8
 	},
-/turf/open/floor/almayer,
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "Iq" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -656,7 +657,7 @@
 /obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = 8
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "Mi" = (
 /obj/structure/surface/table/almayer,
@@ -680,7 +681,7 @@
 /area/golden_arrow/cryo_cells)
 "MW" = (
 /obj/structure/closet{
-	pixel_x = 8;
+	pixel_x = -7;
 	name = "spare uniforms"
 	},
 /obj/item/clothing/under/marine,
@@ -688,17 +689,17 @@
 /obj/item/clothing/under/marine,
 /obj/item/clothing/under/marine,
 /obj/item/clothing/under/marine,
-/obj/item/clothing/shoes/marine,
-/obj/item/clothing/shoes/marine,
+/obj/item/device/radio/headset/almayer/marine/solardevils,
+/obj/item/device/radio/headset/almayer/marine/solardevils,
 /obj/item/clothing/shoes/marine,
 /obj/item/clothing/shoes/marine,
 /obj/item/clothing/shoes/marine,
 /obj/item/device/radio/headset/almayer/marine/solardevils,
 /obj/item/device/radio/headset/almayer/marine/solardevils,
 /obj/item/device/radio/headset/almayer/marine/solardevils,
-/obj/item/device/radio/headset/almayer/marine/solardevils,
-/obj/item/device/radio/headset/almayer/marine/solardevils,
-/turf/open/floor/plating/plating_catwalk,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "NK" = (
 /obj/structure/machinery/chem_dispenser/canteen,
@@ -712,15 +713,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
-"Oj" = (
-/obj/structure/closet/secure_closet/marine_personal/squad_leader{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/smartgunner{
-	pixel_x = 8
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
 "Oz" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -833,7 +825,7 @@
 	name = "Bathroom";
 	dir = 2
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ZG" = (
 /obj/structure/window/reinforced/ultra{
@@ -1312,12 +1304,12 @@ nI
 xE
 bE
 xI
-tC
-ET
-tC
-tC
+kO
+fg
 iS
-tC
+GG
+fg
+MW
 cR
 qo
 "}
@@ -1364,13 +1356,13 @@ nI
 EE
 bE
 HI
-tC
-fg
-GG
 GG
 fg
-tC
-Oj
+GG
+iS
+fg
+GG
+ET
 qo
 "}
 (11,1,1) = {"
@@ -1415,12 +1407,12 @@ Es
 nI
 nI
 Yj
-Oz
+GG
 tC
+fg
+iS
 GG
-GG
-GG
-GG
+fg
 tC
 LW
 qo
@@ -1468,11 +1460,11 @@ uN
 Lp
 bE
 nv
-MW
-kO
 tC
 tC
-kO
+tC
+tC
+tC
 tC
 pO
 qo

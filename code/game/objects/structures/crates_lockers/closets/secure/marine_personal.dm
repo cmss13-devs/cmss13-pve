@@ -44,11 +44,24 @@
 /obj/structure/closet/secure_closet/marine_personal/rifleman
 	job = JOB_SQUAD_MARINE
 
+/obj/structure/closet/secure_closet/marine_personal/engineer
+	job = JOB_SQUAD_ENGI
+
+/obj/structure/closet/secure_closet/marine_personal/engineer/spawn_gear()
+	new /obj/item/clothing/under/marine/engineer(src)
+	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
+
 /obj/structure/closet/secure_closet/marine_personal/smartgunner
 	job = JOB_SQUAD_SMARTGUN
 
 /obj/structure/closet/secure_closet/marine_personal/corpsman
 	job = JOB_SQUAD_MEDIC
+
+/obj/structure/closet/secure_closet/marine_personal/corpsman/spawn_gear()
+	new /obj/item/clothing/under/marine/medic(src)
+	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
 
 /obj/structure/closet/secure_closet/marine_personal/squad_leader
 	job = JOB_SQUAD_TEAM_LEADER

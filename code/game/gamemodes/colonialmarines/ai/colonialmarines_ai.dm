@@ -104,10 +104,6 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/smartgunner/ai/pmc = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/leader/ai/pmc = JOB_SQUAD_LEADER,\
 		/datum/job/command/bridge/ai/pmc = JOB_PMCPLAT_OW),\
-		/datum/squad/marine/extraction = list(/datum/job/command/bridge/ai = JOB_SO,\
-		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,\
-		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,\
-		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE),\
 		/datum/squad/marine/forecon = list(/datum/job/marine/standard/ai/forecon = JOB_SQUAD_MARINE,\
 		/datum/job/marine/standard/ai/rto = JOB_SQUAD_RTO,\
 		/datum/job/marine/leader/ai/forecon = JOB_SQUAD_LEADER,\
@@ -118,5 +114,6 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
-												/datum/squad/marine/forecon = ROLES_AI_FORECON))
+												/datum/squad/marine/forecon = ROLES_AI_FORECON,\
+												/datum/squad/marine/extraction = ROLES_AI_EXTRACTION))
 
