@@ -126,7 +126,7 @@
 	lead_icon = "leader"
 
 /datum/squad/marine/extraction
-	name = SQUAD_MARINE_1
+	name = SQUAD_EXTRACTION
 	equipment_color = "#4148c8"
 	chat_color = "#828cff"
 	access = list(ACCESS_MARINE_ALPHA)
