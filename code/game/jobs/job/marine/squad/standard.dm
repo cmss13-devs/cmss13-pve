@@ -104,14 +104,16 @@
 	job = /datum/job/marine/standard/ai/rto
 
 /datum/job/marine/standard/ai/rmc
-	title = JOB_RMCTROOP_RIFLEMAN
+	title = JOB_TWE_RMC_RIFLEMAN
 	total_positions = 2
 	spawn_positions = 2
 	gear_preset = /datum/equipment_preset/uscm/rmc
 	job_options = null
+	supervisors = "the section leader and troop commander"
+	entry_message_body = "You are a highly trained member of the Royal Marines Commando. Whilst you may not have a primary specialisation, that offers you a greater degree of flexibility in additional equipment you can bring to the field.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms.</b>"
 
 /obj/effect/landmark/start/marine/rmc
-	name = JOB_RMCTROOP_RIFLEMAN
+	name = JOB_TWE_RMC_RIFLEMAN
 	squad = SQUAD_TWE
 	job = /datum/job/marine/standard/ai/rmc
 

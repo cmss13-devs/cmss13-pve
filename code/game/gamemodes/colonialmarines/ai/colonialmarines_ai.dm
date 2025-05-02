@@ -104,16 +104,16 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai/forecon = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/forecon = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN),\
-		/datum/squad/marine/rmc = list(/datum/job/command/bridge/ai/rmc = JOB_RMCTROOP_LIEUTENANT,\
-		/datum/job/marine/leader/ai/rmc = JOB_RMCTROOP_TROOPLEADER,\
-		/datum/job/marine/tl/ai/rmc = JOB_RMCTROOP_SECTIONLEADER,\
-		/datum/job/marine/tl/ai/rmc2ic = JOB_RMCTROOP_TEAMLEADER,\
-		/datum/job/marine/smartgunner/ai/rmc = JOB_RMCTROOP_SMARTGUNNER,\
-		/datum/job/marine/medic/ai/rmc = JOB_RMCTROOP_MEDIC,\
-		/datum/job/marine/engineer/ai/rmc = JOB_RMCTROOP_ENGI,\
-		/datum/job/marine/engineer/ai/rmcmortar = JOB_RMCTROOP_BREACHER,\
-		/datum/job/marine/specialist/ai/rmc = JOB_RMCTROOP_MARKSMAN,\
-		/datum/job/marine/standard/ai/rmc = JOB_RMCTROOP_RIFLEMAN)))
+		/datum/squad/marine/rmc = list(/datum/job/command/bridge/ai/rmc = JOB_TWE_RMC_LIEUTENANT,\
+		/datum/job/marine/leader/ai/rmc = JOB_TWE_RMC_TROOPLEADER,\
+		/datum/job/marine/tl/ai/rmc = JOB_TWE_RMC_SECTIONLEADER,\
+		/datum/job/marine/tl/ai/rmc2ic = JOB_TWE_RMC_TEAMLEADER,\
+		/datum/job/marine/smartgunner/ai/rmc = JOB_TWE_RMC_SMARTGUNNER,\
+		/datum/job/marine/medic/ai/rmc = JOB_TWE_RMC_MEDIC,\
+		/datum/job/marine/engineer/ai/rmc = JOB_TWE_RMC_ENGI,\
+		/datum/job/marine/engineer/ai/rmcmortar = JOB_TWE_RMC_BREACHER,\
+		/datum/job/marine/specialist/ai/rmc = JOB_TWE_RMC_MARKSMAN,\
+		/datum/job/marine/standard/ai/rmc = JOB_TWE_RMC_RIFLEMAN)))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\

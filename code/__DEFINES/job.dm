@@ -378,30 +378,18 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 //-------- RMC --------//
 #define JOB_TWE_RMC_RIFLEMAN "Marine Commando"
-#define JOB_TWE_RMC_MEDIC "Marine Commando Medical Assistant"
-#define JOB_TWE_RMC_ENGI "Marine Commando Assault Engineer"
-#define JOB_TWE_RMC_MARKSMAN "Marine Commando Marksman"
-#define JOB_TWE_RMC_SMARTGUNNER "Marine Commando Smartgunner"
-#define JOB_TWE_RMC_BREACHER "Marine Commando Gunner"
-#define JOB_TWE_RMC_TEAMLEADER "Marine Commando Team Leader"
-#define JOB_TWE_RMC_SECTIONLEADER "Marine Commando Section Leader"
-#define JOB_TWE_RMC_TROOPLEADER "Marine Commando Troop Sergeant"
-#define JOB_TWE_RMC_LIEUTENANT "Marine Commando Troop Commander"
-#define JOB_TWE_RMC_COMMANDER "Marine Commando Squadron Commander"
+#define JOB_TWE_RMC_MEDIC "Medical Assistant"
+#define JOB_TWE_RMC_ENGI "Assault Engineer"
+#define JOB_TWE_RMC_MARKSMAN "Marksman"
+#define JOB_TWE_RMC_SMARTGUNNER "Smartgunner"
+#define JOB_TWE_RMC_BREACHER "Gunner"
+#define JOB_TWE_RMC_TEAMLEADER "Team Leader"
+#define JOB_TWE_RMC_SECTIONLEADER "Section Leader"
+#define JOB_TWE_RMC_TROOPLEADER "Troop Sergeant"
+#define JOB_TWE_RMC_LIEUTENANT "Troop Commander"
+#define JOB_TWE_RMC_COMMANDER "Squadron Commander"
 
 #define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_MEDIC, JOB_TWE_RMC_ENGI, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER, JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_SECTIONLEADER, JOB_TWE_RMC_TROOPLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER,)
-
-//-------- RMC PLATOON --------//
-#define JOB_RMCTROOP_RIFLEMAN "Marine Commando"
-#define JOB_RMCTROOP_MEDIC "Marine Commando Medical Assistant"
-#define JOB_RMCTROOP_ENGI "Marine Commando Assault Engineer"
-#define JOB_RMCTROOP_MARKSMAN "Marine Commando Marksman"
-#define JOB_RMCTROOP_SMARTGUNNER "Marine Commando Smartgunner"
-#define JOB_RMCTROOP_BREACHER "Marine Commando Gunner"
-#define JOB_RMCTROOP_TEAMLEADER "Marine Commando Team Leader"
-#define JOB_RMCTROOP_SECTIONLEADER "Marine Commando Section Leader"
-#define JOB_RMCTROOP_TROOPLEADER "Marine Commando Troop Sergeant"
-#define JOB_RMCTROOP_LIEUTENANT "Marine Commando Troop Commander"
 
 //-------- PROVOST --------//
 #define JOB_PROVOST_ENFORCER "Provost Enforcer"

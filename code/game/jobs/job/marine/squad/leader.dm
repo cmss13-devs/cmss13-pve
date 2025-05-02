@@ -89,12 +89,14 @@ OverrideTimelock(/datum/job/marine/leader, list(
 //-- RMC Platoon --//
 // Second-in-command under LT, handles the mortar calls //
 /datum/job/marine/leader/ai/rmc
-	title = JOB_RMCTROOP_TROOPLEADER
+	title = JOB_TWE_RMC_TROOPLEADER
 	gear_preset = /datum/equipment_preset/uscm/rmc/cs
 	job_options = null
+	supervisors = "the troop commander"
+	entry_message_body = "You are the second in command of the whole Troop, ensuring the orders of the Troop Commander are followed through. Make sure they are on task, working together, and adequately supplied. You are also in charge of communicating with the Mortar Gunner and coordinating indirect fire support. Keep out of harm's way. You report to the Troop Commander under normal circumstances, but may be required to take command should they die.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Sergeants Mess.</b>"
 
 /obj/effect/landmark/start/marine/leader/rmc
-	name = JOB_RMCTROOP_TROOPLEADER
+	name = JOB_TWE_RMC_TROOPLEADER
 	squad = SQUAD_TWE
 	job = /datum/job/marine/leader/ai/rmc
 

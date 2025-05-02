@@ -252,7 +252,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_rmc_engi, list(
 	desc = "An automated rack hooked up to a colossal storage of standard-issue Engineering equipment."
 	icon_state = "eng_gear"
 	req_access = list(ACCESS_TWE_ENGPREP)
-	vendor_role = list(JOB_RMCTROOP_ENGI)
+	vendor_role = list(JOB_TWE_RMC_ENGI)
 	vendor_theme = VENDOR_THEME_COMPANY
 
 /obj/structure/machinery/cm_vending/clothing/engi/rmc/get_listed_products(mob/user)

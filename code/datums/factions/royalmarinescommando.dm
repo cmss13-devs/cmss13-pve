@@ -36,6 +36,44 @@
 	if(hud_icon_state)
 		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "rmc_[hud_icon_state]")
 
+	var/datum/squad/squad = H.assigned_squad
+	if(istype(squad, /datum/squad/marine/rmc))
+		var/squad_clr = H.assigned_squad.equipment_color
+		switch(GET_DEFAULT_ROLE(_role))
+			if(JOB_TWE_RMC_RIFLEMAN) hud_icon_state = "rifleman"
+			if(JOB_TWE_RMC_MEDIC) hud_icon_state = "medic"
+			if(JOB_TWE_RMC_ENGI) hud_icon_state = "engi"
+			if(JOB_TWE_RMC_BREACHER) hud_icon_state = "breacher"
+			if(JOB_TWE_RMC_MARKSMAN) hud_icon_state = "marksman"
+			if(JOB_TWE_RMC_SMARTGUNNER) hud_icon_state = "smartgunner"
+			if(JOB_TWE_RMC_TEAMLEADER) hud_icon_state = "teamleader"
+			if(JOB_TWE_RMC_SECTIONLEADER) hud_icon_state = "sectionleader"
+			if(JOB_TWE_RMC_TROOPLEADER) hud_icon_state = "troopleader"
+			if(JOB_TWE_RMC_LIEUTENANT) hud_icon_state = "lieutenant"
+		if(squad.fireteam_leaders["SQ1"] == H || squad.fireteam_leaders["SQ2"] == H || squad.fireteam_leaders["SQ3"] == H)
+			H.langchat_styles = "langchat_smaller_bolded"
+		else
+			H.langchat_styles = initial(H.langchat_styles)
+		H.langchat_color = H.assigned_squad.chat_color
+
+		if(!hud_icon_state) hud_icon_state = H.rank_fallback
+		if(hud_icon_state)
+			var/image/IMG = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad")
+			if(squad_clr)
+				IMG.color = squad_clr
+			else
+				IMG.color = "#5A934A"
+			holder.overlays += IMG
+			holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_[hud_icon_state]")
+		if(H.assigned_squad && H.assigned_fireteam)
+			var/image/IMG2 = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_[H.assigned_fireteam]")
+			IMG2.color = squad_clr
+			holder.overlays += IMG2
+			if(H.assigned_squad.fireteam_leaders[H.assigned_fireteam] == H)
+				var/image/IMG3 = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_ftl")
+				IMG3.color = squad_clr
+				holder.overlays += IMG3
+
 /datum/faction/royal_marines_commando/get_antag_guns_snowflake_equipment()
 	return list(
 		list("PRIMARY FIREARMS", 0, null, null, null),

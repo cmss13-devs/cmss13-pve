@@ -302,7 +302,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_rmc_sniper, list(
 	desc = "An automated rack hooked up to a colossal storage of standard-issue equipment for Royal Marine Scout-Snipers."
 	icon_state = "spec_gear"
 	req_access = list(ACCESS_TWE_SNIPERPREP)
-	vendor_role = list(JOB_RMCTROOP_MARKSMAN)
+	vendor_role = list(JOB_TWE_RMC_MARKSMAN)
 	vendor_theme = VENDOR_THEME_COMPANY
 
 /obj/structure/machinery/cm_vending/clothing/specialist/rmc/get_listed_products(mob/user)

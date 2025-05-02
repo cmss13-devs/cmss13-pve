@@ -101,12 +101,13 @@ OverrideTimelock(/datum/job/command/bridge, list(
 //Groundside command, no overwatch. Lead by example, chip chip cheerio and all that rubbish//
 
 /datum/job/command/bridge/ai/rmc
-	title = JOB_RMCTROOP_LIEUTENANT
+	title = JOB_TWE_RMC_LIEUTENANT
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm_ship/so/rmc
 	job_options = null
 
 /obj/effect/landmark/start/bridge/rmc
-	name = JOB_RMCTROOP_LIEUTENANT
+	name = JOB_TWE_RMC_LIEUTENANT
 	squad = SQUAD_TWE
 	job = /datum/job/command/bridge/ai/rmc
 

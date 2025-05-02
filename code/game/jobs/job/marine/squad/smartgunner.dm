@@ -109,13 +109,15 @@
 //Smartgunner//
 
 /datum/job/marine/smartgunner/ai/rmc
-	title = JOB_RMCTROOP_SMARTGUNNER
+	title = JOB_TWE_RMC_SMARTGUNNER
 	gear_preset = /datum/equipment_preset/uscm/rmc/sg
 	job_options = null
+	supervisors = "the team leader and troop commander"
+	entry_message_body = "You are a specialized automatic rifleman in the Royal Marines Commando. Your task is to provide heavy weapons support for the Rifle Section as part of the Fire Support Team.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Smartgunners Workshop.</b>"
 
 /obj/effect/landmark/start/marine/smartgunner/rmc
-	name = JOB_RMCTROOP_SMARTGUNNER
-	job = JOB_RMCTROOP_SMARTGUNNER
+	name = JOB_TWE_RMC_SMARTGUNNER
+	job = JOB_TWE_RMC_SMARTGUNNER
 	squad = SQUAD_TWE
 
 #undef CPL_VARIANT

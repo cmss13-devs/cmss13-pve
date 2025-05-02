@@ -332,7 +332,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 	spawned_gear_list = list(
 		/obj/item/storage/firstaid/adv,
 		/obj/item/storage/firstaid/adv,
-		/obj/item/storage/surgical_case/rmc_surgical_case,
+		/obj/item/storage/surgical_case/rmc_surgical_case/full,
 		/obj/item/device/healthanalyzer,
 		/obj/item/roller/surgical,
 		/obj/item/tool/surgery/synthgraft,
@@ -368,9 +368,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_rmc_medic, list(
 /obj/structure/machinery/cm_vending/clothing/medic/rmc
 	name = "\improper WeyTech Section Medical Equipment Rack"
 	desc = "An automated rack hooked up to a colossal storage of standard-issue medical equipment."
-	icon_state = "med_gear"
+	icon_state = "rmc_gear"
 	req_access = list(ACCESS_TWE_MEDPREP)
-	vendor_role = list(JOB_RMCTROOP_MEDIC)
+	vendor_role = list(JOB_TWE_RMC_MEDIC)
 	vendor_theme = VENDOR_THEME_COMPANY
 
 /obj/structure/machinery/cm_vending/clothing/medic/rmc/get_listed_products(mob/user)
@@ -415,3 +415,4 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 	name = "\improper WeyTech Section Medical Chemical Rack"
 	req_access = list(ACCESS_TWE_MEDPREP)
 	vendor_theme = VENDOR_THEME_COMPANY
+	vendor_role = list(JOB_TWE_RMC_MEDIC)

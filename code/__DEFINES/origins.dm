@@ -6,14 +6,14 @@
 
 // USCM
 #define ORIGIN_USCM "United Americas (United States)"
-#define ORIGIN_USCM_LUNA "United Americas (Luna)"
-#define ORIGIN_USCM_OTHER "United Americas (Other)"
-#define ORIGIN_USCM_COLONY "Limited Service (Colony)"
-#define ORIGIN_USCM_CONVICT_MINOR "Convict (Minor Crimes)"
-#define ORIGIN_USCM_CONVICT_GANG "Convict (Gang Affiliated)"
-#define ORIGIN_USCM_CONVICT_SMUGGLING "Convict (Smuggling)"
-#define ORIGIN_USCM_FOREIGN "Green Card (Foreign)"
-#define ORIGIN_USCM_AW "Artificial-Womb"
+#define ORIGIN_USCM_LUNA "UA (Luna)"
+#define ORIGIN_USCM_OTHER "UA (Continental America)"
+#define ORIGIN_USCM_COLONY "UA (Colony)"
+#define ORIGIN_USCM_CONVICT_MINOR "UA (Convict (Minor Crimes))"
+#define ORIGIN_USCM_CONVICT_GANG "UA (Convict (Gang Affiliated))"
+#define ORIGIN_USCM_CONVICT_SMUGGLING "UA (Convict (Smuggling))"
+#define ORIGIN_USCM_FOREIGN "UA (Green Card)"
+#define ORIGIN_USCM_AW "UA (Artificial-Womb)"
 
 #define USCM_ORIGINS list(ORIGIN_USCM, ORIGIN_USCM_LUNA, ORIGIN_USCM_OTHER, ORIGIN_USCM_COLONY, ORIGIN_USCM_FOREIGN, ORIGIN_USCM_AW, ORIGIN_USCM_CONVICT_MINOR, ORIGIN_USCM_CONVICT_GANG, ORIGIN_USCM_CONVICT_SMUGGLING)
 
