@@ -811,7 +811,8 @@ W is always an item. stop_warning prevents messaging. user may be null.**/
 
 	post_skin_selection()
 
-	fill_preset_inventory()
+	if(was_stashed == FALSE)
+		fill_preset_inventory()
 
 	update_icon()
 

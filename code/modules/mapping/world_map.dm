@@ -2,9 +2,10 @@
 
 /atom
 	var/unique_save_vars = list()
+	var/was_stashed = FALSE
 
 /atom/proc/vars_to_save()
- 	return list("color","name","amount")+unique_save_vars
+ 	return list("color","name","amount","was_stashed")+unique_save_vars
 
 /atom/proc/get_saveable_contents()
 	return contents
@@ -21,6 +22,7 @@ proc/clearlist(list/list)
 
 /datum/map_object
 	var/savedtype
+	var/was_stashed
 	var/object_vars = list()
 	var/contents = list()
 	var/list/forensic_data = list()
@@ -50,6 +52,11 @@ proc/clearlist(list/list)
 	MO.savedtype = O.type
 
 	MO.name = O.name
+
+	if(MO.was_stashed != TRUE)
+		O.was_stashed = TRUE
+	else
+		MO.was_stashed = O.was_stashed
 
 	for(var/V in O.vars_to_save() )
 		var/save_var = TRUE
