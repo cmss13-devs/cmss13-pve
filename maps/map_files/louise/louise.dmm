@@ -57,7 +57,7 @@
 /obj/effect/step_trigger/teleporter_vector{
 	vector_z = 4;
 	vector_x = 15;
-	vector_y = -121
+	vector_y = -118
 	},
 /turf/open/asphalt,
 /area/space)
@@ -496,7 +496,7 @@
 /obj/effect/step_trigger/teleporter_vector{
 	vector_z = 4;
 	vector_x = 15;
-	vector_y = -121
+	vector_y = -118
 	},
 /turf/open/asphalt,
 /area/space)
@@ -1064,7 +1064,7 @@
 /obj/effect/step_trigger/teleporter_vector{
 	vector_z = 4;
 	vector_x = 15;
-	vector_y = -122
+	vector_y = -119
 	},
 /turf/open/asphalt,
 /area/space)
@@ -1072,7 +1072,7 @@
 /obj/effect/step_trigger/teleporter_vector{
 	vector_z = 4;
 	vector_x = 15;
-	vector_y = -122
+	vector_y = -119
 	},
 /turf/open/asphalt,
 /area/space)
@@ -1083,7 +1083,7 @@
 /obj/effect/step_trigger/teleporter_vector{
 	vector_z = 4;
 	vector_x = 15;
-	vector_y = -122
+	vector_y = -119
 	},
 /turf/open/asphalt,
 /area/space)
@@ -1199,7 +1199,7 @@
 /obj/effect/step_trigger/teleporter_vector{
 	vector_z = 4;
 	vector_x = 15;
-	vector_y = -121
+	vector_y = -118
 	},
 /turf/open/asphalt,
 /area/space)
@@ -1440,19 +1440,6 @@
 "lC" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
-"lT" = (
-/obj/structure/surface/rack,
-/obj/item/prop/helmetgarb/riot_shield,
-/obj/item/prop/helmetgarb/riot_shield,
-/obj/item/prop/helmetgarb/riot_shield,
-/obj/item/prop/helmetgarb/riot_shield,
-/obj/item/prop/helmetgarb/riot_shield,
-/obj/item/prop/helmetgarb/riot_shield,
-/obj/item/prop/helmetgarb/riot_shield,
-/obj/item/prop/helmetgarb/riot_shield,
-/obj/item/prop/helmetgarb/riot_shield,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/platoonarmory)
 "mg" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	req_access = null
@@ -1515,7 +1502,6 @@
 	pixel_x = -4;
 	pixel_y = -6
 	},
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "nl" = (
@@ -2032,9 +2018,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "AZ" = (
-/obj/item/weapon/shield/riot,
-/obj/item/weapon/shield/riot,
-/obj/structure/surface/rack,
+/obj/structure/closet/crate/explosives,
+/obj/item/ammo_box/magazine/nade_box/m15,
+/obj/item/ammo_box/magazine/nade_box/m15,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "Bi" = (
@@ -2376,11 +2362,6 @@
 /obj/structure/machinery/disposal,
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/canteen)
-"OX" = (
-/obj/structure/closet/crate/explosives,
-/obj/item/ammo_box/magazine/nade_box/m15,
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/platoonarmory)
 "Pa" = (
 /obj/structure/cargo_container/kelland/right,
 /obj/structure/cargo_container/kelland/right{
@@ -14204,7 +14185,7 @@ bV
 lC
 lC
 TR
-lT
+qS
 bA
 br
 bl
@@ -14508,7 +14489,7 @@ bA
 mX
 lC
 TR
-qS
+lC
 bA
 bt
 be
@@ -14660,7 +14641,7 @@ bA
 Rs
 TR
 lC
-OX
+lC
 bA
 bu
 be
