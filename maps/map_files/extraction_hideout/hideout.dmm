@@ -33,6 +33,21 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
+"do" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.7
+	},
+/obj/item/storage/fancy/cigarettes/lucky_strikes_4{
+	pixel_x = -10;
+	pixel_y = 9
+	},
+/obj/item/prop/tableflag/upp{
+	pixel_x = 9;
+	pixel_y = -2
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "dJ" = (
 /turf/open/floor/almayer/blue/southwest,
 /area/golden_arrow/platoon_commander_rooms)
@@ -61,6 +76,17 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
+"eE" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"eJ" = (
+/obj/structure/sign/banners/usa_worn{
+	pixel_x = -2;
+	pixel_y = 27
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "fg" = (
 /obj/structure/machinery/cm_vending/gear/extraction,
 /turf/open/floor/almayer/mono,
@@ -80,7 +106,6 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
 "gH" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal,
 /obj/item/storage/fancy/cigarettes/balaji_4{
 	pixel_x = 7;
 	pixel_y = 15
@@ -89,6 +114,7 @@
 	pixel_y = 9;
 	pixel_x = -1
 	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
 "hy" = (
@@ -144,6 +170,11 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
+"kF" = (
+/obj/structure/closet,
+/obj/item/reagent_container/food/drinks/cans/soylent,
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "kO" = (
 /obj/structure/closet/secure_closet/marine_personal/corpsman{
 	pixel_x = -7
@@ -189,6 +220,10 @@
 /area/golden_arrow/cryo_cells)
 "mt" = (
 /turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"mX" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
 "nv" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -276,6 +311,10 @@
 	pixel_y = 28;
 	pixel_x = 15
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
 "pL" = (
@@ -307,6 +346,12 @@
 "qo" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cryo_cells)
+"qC" = (
+/obj/structure/machinery/door/airlock/maintenance/colony{
+	dir = 2
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/briefing)
 "qX" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food,
 /turf/open/floor/almayer/plate,
@@ -320,12 +365,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/shared_office)
 "rZ" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
+/obj/structure/bed/chair{
 	dir = 1;
-	light_power = 0.7
+	pixel_y = 7;
+	buckling_y = 7
 	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/briefing)
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "sf" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/glass{
 	dir = 2;
@@ -333,13 +379,29 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
+"sj" = (
+/obj/structure/closet/crate/freezer/cooler/oj,
+/obj/item/mre_food_packet/clf,
+/obj/item/reagent_container/food/drinks/cans/waterbottle,
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "tC" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
+"tV" = (
+/obj/structure/sign/poster/corporate,
+/turf/closed/wall/almayer,
+/area/golden_arrow/engineering)
 "tZ" = (
 /obj/structure/sign/poster/pinup,
 /turf/closed/wall/almayer,
 /area/golden_arrow/briefing)
+"ud" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "uN" = (
 /obj/structure/mirror{
 	pixel_x = 26
@@ -424,9 +486,22 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
+"zB" = (
+/obj/structure/machinery/door/airlock/maintenance/colony{
+	dir = 2
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "Ae" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
+"Ai" = (
+/obj/structure/sign/banners/maximumeffort{
+	pixel_y = 25;
+	desc = "A large banner strung up on the wall intended to give the marines a boost in confidence."
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "Ap" = (
 /obj/structure/machinery/shower{
 	pixel_y = 15
@@ -442,6 +517,14 @@
 	},
 /turf/open/floor/almayer/silverfull,
 /area/golden_arrow/cryo_cells)
+"AK" = (
+/obj/structure/closet,
+/obj/item/explosive/grenade/flashbang/noskill,
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
+"Bn" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/engineering)
 "BC" = (
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
 	name = "\improper Briefing"
@@ -461,11 +544,25 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/briefing)
 "CL" = (
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/shared_office)
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "CM" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/dorms)
+"CX" = (
+/obj/structure/largecrate/random/barrel/brown{
+	pixel_x = 7
+	},
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = 8;
+	pixel_y = 16
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "Da" = (
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
 	dir = 2;
@@ -480,19 +577,49 @@
 /obj/structure/machinery/door/window/southleft,
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/shared_office)
+"Dr" = (
+/obj/structure/bed/chair/office/light,
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
+"Ds" = (
+/obj/structure/machinery/door/airlock/maintenance/colony{
+	dir = 2
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/cryo_cells)
 "DN" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
+"DW" = (
+/obj/structure/surface/table/almayer,
+/obj/item/weapon/dart{
+	pixel_x = -6;
+	pixel_y = 10
+	},
+/obj/item/weapon/dart{
+	pixel_y = 6
+	},
+/obj/item/weapon/dart{
+	pixel_y = 3;
+	pixel_x = -11
+	},
+/obj/item/weapon/dart/green,
+/obj/item/weapon/dart/green{
+	pixel_x = 10;
+	pixel_y = -7
+	},
+/obj/item/weapon/dart/green{
+	pixel_x = -2;
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/dorms)
 "DY" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "El" = (
 /obj/structure/closet/crate/alpha,
-/obj/structure/sign/banners/usa_worn{
-	pixel_x = -16;
-	pixel_y = 27
-	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/shared_office)
 "Es" = (
@@ -565,6 +692,7 @@
 	pixel_x = 6;
 	pixel_y = 15
 	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
 "GG" = (
@@ -607,6 +735,10 @@
 "Jh" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
+"JF" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
 "JL" = (
 /obj/structure/machinery/cryopod/big{
 	dir = 4;
@@ -642,9 +774,16 @@
 /turf/open/floor/almayer/silverfull,
 /area/golden_arrow/cryo_cells)
 "LO" = (
-/obj/structure/sign/poster/ad,
-/turf/closed/wall/almayer,
-/area/golden_arrow/shared_office)
+/obj/structure/dartboard{
+	pixel_y = 41;
+	layer = 3.2
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/dorms)
+"LR" = (
+/obj/structure/largecrate/random/barrel/black,
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "LU" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/bridge,
@@ -713,6 +852,17 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
+"NM" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/device/flashlight/lantern{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "Oz" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -733,8 +883,23 @@
 	light_power = 0.7
 	},
 /obj/structure/closet/crate/charlie,
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 28;
+	pixel_x = 15
+	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/shared_office)
+"Qi" = (
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
+"Qq" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_y = 6;
+	pixel_x = 4
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "QF" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/plate,
@@ -747,6 +912,10 @@
 /obj/effect/landmark/start/marine/medic/alpha,
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/golden_arrow/cryo_cells)
+"RD" = (
+/obj/structure/machinery/door/airlock/maintenance/colony,
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "SC" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/fancy/cigarettes/lucky_strikes_4{
@@ -760,8 +929,14 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
 "Td" = (
-/turf/closed/wall/almayer/outer,
+/turf/closed/wall/almayer,
 /area/golden_arrow/platoon_commander_rooms)
+"Ts" = (
+/obj/structure/sign/banners/upp_worn{
+	pixel_y = 30
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "TK" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer,
@@ -794,6 +969,9 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"UF" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/engineering)
 "UR" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/mono,
@@ -801,6 +979,10 @@
 "UT" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/shared_office)
+"UZ" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
 "Vf" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/leader/alpha,
@@ -880,12 +1062,12 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-Jb
+UF
+UF
+UF
+UF
+UF
+UF
 qo
 qo
 qo
@@ -932,13 +1114,13 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-qo
+UF
+CL
+rZ
+Bn
+Qi
+sj
+bE
 dP
 JL
 dP
@@ -984,13 +1166,13 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-qo
+UF
+Qi
+Qi
+zB
+Qi
+do
+bE
 Vf
 RA
 LU
@@ -1036,13 +1218,13 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-qo
+UF
+Ts
+Qi
+tV
+Dr
+Qq
+bE
 iV
 FJ
 FJ
@@ -1088,13 +1270,13 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-qo
+UF
+Qi
+CX
+Bn
+Bn
+Bn
+bE
 hy
 Us
 mn
@@ -1140,13 +1322,13 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-qo
+UF
+RD
+Bn
+Bn
+AK
+Qi
+bE
 iV
 FJ
 FJ
@@ -1192,13 +1374,13 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-qo
+UF
+Qi
+Qi
+Qi
+Qi
+Qi
+Ds
 iV
 mn
 Um
@@ -1244,13 +1426,13 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-qo
-qo
-qo
-qo
-qo
+UF
+RD
+bE
+bE
+bE
+bE
+bE
 bE
 TK
 TK
@@ -1296,9 +1478,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-qo
+UF
+Qi
+bE
 Ap
 nI
 xE
@@ -1348,9 +1530,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-qo
+UF
+Qi
+bE
 Mv
 nI
 EE
@@ -1400,9 +1582,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-qo
+UF
+Qi
+bE
 Es
 nI
 nI
@@ -1452,9 +1634,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-qo
+UF
+Qi
+bE
 pe
 uN
 Lp
@@ -1504,9 +1686,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-CL
+UF
+Qi
+UT
 UT
 UT
 UT
@@ -1556,9 +1738,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-CL
+UF
+Qi
+UT
 Qb
 rl
 mi
@@ -1608,9 +1790,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-CL
+UF
+Qi
+UT
 El
 Ae
 WE
@@ -1660,9 +1842,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-CL
+UF
+ud
+UT
 cD
 Ae
 ny
@@ -1712,14 +1894,14 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-CL
+UF
+Qi
+UT
 Pu
 Pu
 Pu
+UT
 LO
-Jh
 HB
 xv
 Up
@@ -1764,9 +1946,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-CL
+UF
+Qi
+UT
 ea
 ZG
 Ae
@@ -1774,7 +1956,7 @@ Da
 Jh
 gf
 xv
-QF
+DW
 vg
 xv
 fy
@@ -1816,9 +1998,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-CL
+UF
+Qi
+UT
 zo
 Df
 Ae
@@ -1868,9 +2050,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-CL
+UF
+Ai
+UT
 lk
 Df
 kk
@@ -1920,9 +2102,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-CL
+UF
+Qi
+UT
 Pu
 Pu
 Pu
@@ -1972,14 +2154,14 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
+UF
+Qi
 Td
 Kz
 op
 op
 DY
-rZ
+DN
 DN
 Iq
 DN
@@ -2024,8 +2206,8 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
+UF
+Qi
 Td
 pL
 jp
@@ -2076,8 +2258,8 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
+UF
+Qi
 Td
 iL
 of
@@ -2088,7 +2270,7 @@ OY
 OY
 OY
 DN
-dM
+UZ
 gH
 Rv
 CE
@@ -2128,8 +2310,8 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
+UF
+Qi
 Td
 hF
 yT
@@ -2141,7 +2323,7 @@ DN
 DN
 DN
 FT
-dM
+JF
 Rv
 CE
 "}
@@ -2180,20 +2362,20 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
+UF
+RD
 Td
 Td
 Td
 Td
-CE
+Vo
 DN
 OY
 OY
 OY
 DN
-dM
-dM
+eE
+mX
 Rv
 CE
 "}
@@ -2232,13 +2414,13 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-CE
+UF
+eJ
+Qi
+Qi
+LR
+kF
+Vo
 DN
 OY
 OY
@@ -2284,14 +2466,14 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-CE
+UF
+NM
 rZ
+Qi
+Qi
+Qi
+qC
+DN
 Xj
 DN
 DN
@@ -2336,12 +2518,12 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
-Jb
-Jb
-Jb
+UF
+UF
+UF
+UF
+UF
+UF
 CE
 CE
 CE
