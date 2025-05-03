@@ -81,9 +81,3 @@ endmap
 
 map canyon_32b
 endmap
-
-map calliope_highway
-endmap
-
-map calliope_desert_bus
-endmap
