@@ -1692,3 +1692,31 @@
 /mob/living/carbon/human/sleepyjim/LateInitialize()
 	. = ..()
 	arm_equipment(src, /datum/equipment_preset/colonist/security/guard/spanish/sleepyjim, FALSE, TRUE, FALSE)
+
+/mob/living/carbon/human/mute/Initialize(mapload, new_species = null)
+	blood_type = pick(7;"O-", 38;"O+", 6;"A-", 34;"A+", 2;"B-", 9;"B+", 1;"AB-", 3;"AB+")
+	GLOB.human_mob_list += src
+	GLOB.alive_human_list += src
+	SShuman.processable_human_list += src
+
+	if(!species)
+		if(new_species)
+			set_species(new_species)
+		else
+			set_species()
+
+	create_reagents(1000)
+	AddElement(/datum/element/strippable, GLOB.strippable_human_items, TYPE_PROC_REF(/mob/living/carbon/human, should_strip))
+	. = ..()
+
+	prev_gender = gender // Debug for plural genders
+
+	if(SSticker?.mode?.hardcore)
+		hardcore = TRUE //For WO disposing of corpses
+	return INITIALIZE_HINT_LATELOAD
+
+/mob/living/carbon/human/mute/LateInitialize()
+	. = ..()
+	arm_equipment(src, /datum/equipment_preset/colonist/security/guard/mute, FALSE, TRUE, FALSE)
+	AddComponent(/datum/component/human_ai)
+	get_ai_brain().appraise_inventory()

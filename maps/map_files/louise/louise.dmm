@@ -580,7 +580,7 @@
 	pixel_x = -5;
 	pixel_y = 10;
 	name = "printed paper";
-	info = "[large][b]Subject[/b]: Project Rattlesnake - Termination Report[/large][br][large][b]Date[/b]: May 3rd, 2180[br][b]Prepared by[/b]: [i]Executive Alexandra Wachowski[/i][br][b]Reporting Code[/b]: R21-T221-F[br][b]Executive Summary[/b]:[/large] [br]Project Rattlesnake was initiated to develop a secure and clandestine operating base in Great Middle Canyon of LV-834 to serve as a contingency command center. The project progressed through the conceptual design, site selection, construction, and initial fit-out phases. However, after thorough risk assessment and strategic re-evaluation, the decision was made to terminate Project Rattlesnake and decline to activate the completed facility. Risk report and further justification for project termination can be found in file R21-T221-F-J1.";
+	info = "[large][b]Subject[/b]: Project Rattlesnake - Termination Report[/large][br][large][b]Date[/b]: May 3rd, 2175[br][b]Prepared by[/b]: [i]Executive Alexandra Wachowski[/i][br][b]Reporting Code[/b]: R21-T221-F[br][b]Executive Summary[/b]:[/large] [br]Project Rattlesnake was initiated to develop a secure and clandestine operating base in Great Middle Canyon of LV-834 to serve as a contingency command center. The project progressed through the conceptual design, site selection, construction, and initial fit-out phases. However, after thorough risk assessment and strategic re-evaluation, the decision was made to terminate Project Rattlesnake and decline to activate the completed facility. Risk report and further justification for project termination can be found in file R21-T221-F-J1.";
 	icon_state = "paper_words"
 	},
 /turf/open/floor/almayer/plate,
@@ -592,7 +592,7 @@
 	pixel_x = -1;
 	pixel_y = 3;
 	name = "printed paper";
-	info = "[large][b]Subject[/b]: Project Rattlesnake - Transfer of Operational Control to UAAC[br][b]Date[/b]: October 26, 2182[br][b]Prepared by[/b]: [i]Executive Alexandra Wachowski[/i][br][b]Reporting Code: R21-T221-F-11X[/b][br][b]Executive Summary:[/b][/large] [br]This - final - report documents the transfer of operational control of Project Rattlesnake, a secure operating base located in Great Middle Canyon of LV-834, from Weyland-Yutani Intelligence Department to United Americas Allied Command. No futher information will be disclosed in public reports. All inquiries about Project Rattlesnake will be ignored.";
+	info = "[large][b]Subject[/b]: Project Rattlesnake - Transfer of Operational Control to UAAC[br][b]Date[/b]: October 26, 2177[br][b]Prepared by[/b]: [i]Executive Alexandra Wachowski[/i][br][b]Reporting Code: R21-T221-F-11X[/b][br][b]Executive Summary:[/b][/large] [br]This - final - report documents the transfer of operational control of Project Rattlesnake, a secure operating base located in Great Middle Canyon of LV-834, from Weyland-Yutani Intelligence Department to United Americas Allied Command. No futher information will be disclosed in public reports. All inquiries about Project Rattlesnake will be ignored.";
 	icon_state = "paper_words"
 	},
 /obj/item/clothing/glasses/regular,
@@ -2017,6 +2017,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
+/mob/living/carbon/human/mute,
 /turf/open/floor/almayer,
 /area/louise/checkpoint)
 "fE" = (
