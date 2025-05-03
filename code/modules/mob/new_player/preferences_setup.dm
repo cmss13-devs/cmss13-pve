@@ -263,7 +263,7 @@
 			var/datum/job/J = GLOB.RoleAuthority.roles_by_name[JOB_CO]
 			return J.gear_preset_whitelist["[JOB_CO][J.get_whitelist_status(owner)]"]
 		if(JOB_SO)
-			return /datum/equipment_preset/uscm_ship/so
+			return /datum/equipment_preset/uscm_ship/so_equipped
 		if(JOB_XO)
 			return /datum/equipment_preset/uscm_ship/xo
 		/*
