@@ -176,6 +176,9 @@
 	max_range = 5
 	stripe_icon = FALSE
 
+/obj/item/ammo_magazine/flamer_tank/weak/empty
+	flamer_chem = null
+
 /obj/item/ammo_magazine/flamer_tank/custom
 	name = "custom incinerator tank"
 	desc = "A fuel tank used to store fuel for use in the M240 incinerator unit. This one has been modified with a pressure regulator and an internal propellant tank."
