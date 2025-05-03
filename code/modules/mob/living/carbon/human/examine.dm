@@ -193,10 +193,6 @@
 	if(legcuffed)
 		msg += SPAN_ORANGE("[capitalize(t_his)] ankles are restrained by [legcuffed].\n")
 
-	//Admin-slept
-	if(sleeping > 8000000)
-		msg += SPAN_HIGHDANGER("<B>This player has been slept by staff.</B>\n")
-
 	//Jitters
 	if(is_jittery)
 		if(jitteriness >= 300)

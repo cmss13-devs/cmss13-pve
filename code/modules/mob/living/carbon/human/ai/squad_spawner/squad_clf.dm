@@ -1,6 +1,6 @@
 /datum/human_ai_squad_preset/clf
 	faction = "Insurrectionists"
-
+/*
 /datum/human_ai_squad_preset/clf/jovian
 	name = "Jovian Squad"
 	desc = "A small squad of UJL."
@@ -15,7 +15,23 @@
 		/datum/equipment_preset/jovian = 2,
 		/datum/equipment_preset/jovian/shotgunner = 1
 	)
+*/
+/datum/human_ai_squad_preset/clf/gbm
+	name = "Green Banner Squad"
+	desc = "A small squad of GBM."
+	ai_to_spawn = list(
+		/datum/equipment_preset/other/ecoterrorist/soldier = 3,
+	)
 
+/datum/human_ai_squad_preset/clf/gbm
+	name = "Green Banner Squad+Shotgun"
+	desc = "A small squad of UJL."
+	ai_to_spawn = list(
+		/datum/equipment_preset/other/ecoterrorist/soldier = 2,
+		/datum/equipment_preset/other/ecoterrorist/shotgunner = 1
+	)
+
+/*
 /datum/human_ai_squad_preset/clf/patrol
 	name = "TWE Rebel, Patrol"
 	desc = "A rebel patrol armed with Bizon SMGs, MAR variant rifles and very rarely an F90 rifle, and carrying IFAKs with gauze, ointment, splints and an injector."
@@ -109,3 +125,4 @@
 		/datum/equipment_preset/canc/remnant = 2,
 		/datum/equipment_preset/canc/remnant/leader = 1,
 	)
+*/

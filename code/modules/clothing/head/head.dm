@@ -113,6 +113,10 @@
 	name = "Black Beret"
 	icon_state = "beret_black"
 
+/obj/item/clothing/head/beret/cm/guard
+	name = "khaki beret"
+	desc = "A uniform beret matching colonial guard's most widespread uniform color - khaki."
+	icon_state = "beret_guard"
 
 /obj/item/clothing/head/headband
 	name = "headband"

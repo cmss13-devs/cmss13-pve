@@ -1166,6 +1166,8 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/sling,
+		/obj/item/attachable/stock/wisefire,
+		/obj/item/attachable/wisefire,
 	)
 	starting_attachment_types = list(/obj/item/attachable/bipod/integral, /obj/item/attachable/stock/rifle/collapsible)
 
@@ -1207,6 +1209,29 @@
 /obj/item/weapon/gun/rifle/lmg/army/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
+
+/obj/item/weapon/gun/rifle/lmg/guard
+	desc = "Heavy barreled higher capacity variant of the M41A. This one has been modified with aftermarket parts in order to install a rudimentary IFF-system."
+	starting_attachment_types = list(/obj/item/attachable/bipod/integral, /obj/item/attachable/stock/wisefire,/obj/item/attachable/wisefire)
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/bipod/integral,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/stock/wisefire,
+		/obj/item/attachable/wisefire,
+	)
+
+/obj/item/weapon/gun/rifle/lmg/guard/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 27, "stock_y" = 10, "side_rail_x" = 24, "side_rail_y" = 16)
+
 //-------------------------------------------------------
 
 

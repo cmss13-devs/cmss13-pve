@@ -145,3 +145,32 @@
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander
 	job = JOB_SO
+
+/obj/structure/closet/secure_closet/marine_personal/guard/spawn_gear()
+	new /obj/item/clothing/head/cmcap/khaki(src)
+	new /obj/item/device/radio/headset/distress/guard(src)
+	new /obj/item/clothing/under/colonist/boilersuit/khaki(src)
+	new /obj/item/clothing/shoes/marine/civilian(src)
+
+/obj/structure/closet/secure_closet/marine_personal/guard/rifleman
+	job = JOB_SQUAD_MARINE
+
+/obj/structure/closet/secure_closet/marine_personal/guard/smartgunner
+	job = JOB_SQUAD_SMARTGUN
+
+/obj/structure/closet/secure_closet/marine_personal/guard/corpsman
+	job = JOB_SQUAD_MEDIC
+
+/obj/structure/closet/secure_closet/marine_personal/guard/squad_leader
+	job = JOB_SQUAD_TEAM_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/guard/platoon_leader
+	job = JOB_SQUAD_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/guard/platoon_leader/spawn_gear()
+	new /obj/item/clothing/head/beret/cm/guard(src)
+	new /obj/item/clothing/head/cmcap/khaki(src)
+	new /obj/item/device/radio/headset/distress/guard(src)
+	new /obj/item/clothing/under/colonist/boilersuit/khaki(src)
+	new /obj/item/clothing/shoes/marine/civilian(src)
+	new /obj/item/card/data/access/sergeant(src)
