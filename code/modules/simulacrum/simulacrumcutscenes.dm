@@ -10,7 +10,7 @@
 	text_box.play_to_client()
 	sleep(3 SECONDS)
 	var/atom/movable/screen/text/screen_text/body = new /atom/movable/screen/text/screen_text/simulacrum_message/body()
-	body.text_to_play = "You're awakened about an hour later- shaken up by a small army of techs in biohazard gear. The hours melt into days, a blur of screenings, testimonies- all in the refuge of some unknown blacksite."
+	body.text_to_play = "The UD-4 Cheyenne slides into the welcoming embrace of it's airlock. Your mind drifts as you're jostled awake, the disembark feels like a dream..."
 	body.player = human.client
 	body.color = "#9f53a9"
 	LAZYADD(human.client.screen_texts, body)
@@ -20,16 +20,19 @@
 	body.after_play()
 	sleep(3 SECONDS)
 	var/atom/movable/screen/text/screen_text/body2 = new /atom/movable/screen/text/screen_text/simulacrum_message/body/secondary()
-	body2.text_to_play = "But, you made it. An unmarked shuttle burns through the blockade of Union ships, it's cargo too valuable to be guarded by anything but a section's worth of battle-hardened Marines. Your fate is now interwoven with the Company, but you've delivered them their prize. Whatever path you take, the blessings of the most powerful corporate entity in human history are behind you."
+	body2.text_to_play = "But, you made it. You drink down the curated warmth of the USS Schwarzenegger's atmosphere like booze. As the initial bliss fades, you move to mourn those who couldn't join you."
 	body2.player = human.client
-	body2.color = "#FAF9F6"
+	body2.color = "#535ca9"
 	LAZYADD(human.client.screen_texts, body2)
 	body2.play_to_client()
 	sleep(5 SECONDS)
 	var/atom/movable/screen/text/screen_text/body3 = new /atom/movable/screen/text/screen_text/simulacrum_message/body/fatelist()
-	body3.text_to_play = "SPECIMEN DELIVERED SUCCESSFULLY. THE WEYLAND-YUTANI CORPORATION IS GRATEFUL FOR YOUR SERVICE."
+	body3.text_to_play = "PEACEKEEPING OPERATION 512-BRAVO 'FORLORN HOPE' CONCLUDED. SENDING UPDATE AND MEDAL COMMENDATIONS TO USCMC HIGH COMMAND."
 	body3.player = human.client
-	body3.color = "#FF8b3d"
+	body3.color = "#535ca9"
+	LAZYADD(human.client.screen_texts, body3)
+	body3.play_to_client()
+	sleep(15 SECONDS)
 	LAZYADD(human.client.screen_texts, body3)
 	body3.play_to_client()
 	sleep(15 SECONDS)
