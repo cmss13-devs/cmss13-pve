@@ -11,6 +11,23 @@
 /*
  * DATA CARDS - Used for the teleporter
  */
+/obj/item/loyalty
+	name = "Loyalty Chit (null)"
+	desc = "A stamped and signed card which denotes the holder as having earned some goodwill with a particular trader; with enough of these, a trader would be willing to offer you better deals. This one is blank."
+	icon = 'icons/obj/items/card.dmi'
+	icon_state = "fingerprint0"
+	w_class = SIZE_TINY
+
+/obj/item/loyalty/quartermaster
+	name = "Loyalty Chit (Quartermaster)"
+	desc = "A stamped and signed card which denotes the holder as having earned some goodwill with the trader known as 'Quartermaster'; with enough of these, Quartermaster would be willing to offer you better deals."
+	icon_state = "loyaltyqm"
+
+/obj/item/loyalty/quartermaster/levelone
+	name = "Loyalty Medallion, LL1 (Quartermaster)"
+	desc = "A silver badge given by Quartermaster to those he, more or less, trusts. Show this to Quartermaster to gain access to his Loyalty Level 1 catalog."
+	icon_state = "nspa_silver"
+
 /obj/item/card
 	name = "card"
 	desc = "Does card things."
