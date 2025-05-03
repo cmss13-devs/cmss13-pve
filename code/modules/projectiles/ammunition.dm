@@ -43,6 +43,8 @@ They're all essentially identical when it comes to getting the job done.
 
 	var/description_ammo = "rounds"
 
+	unique_save_vars = list("current_rounds")
+
 
 /obj/item/ammo_magazine/Initialize(mapload, spawn_empty)
 	. = ..()

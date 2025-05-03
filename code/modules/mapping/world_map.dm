@@ -5,7 +5,7 @@
 	var/was_stashed = FALSE
 
 /atom/proc/vars_to_save()
- 	return list("color","name","amount","was_stashed")+unique_save_vars
+ 	return list("amount","was_stashed")+unique_save_vars
 
 /atom/proc/get_saveable_contents()
 	return contents

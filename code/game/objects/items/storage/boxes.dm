@@ -962,13 +962,55 @@
 /obj/item/storage/box/stash
 	name = "ColMarTech Auxiliary Stash"
 	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff."
-	icon_state = "inf_box"
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "kit_case_old"
 	foldable = FALSE
 	storage_slots = 38
 	max_w_class = SIZE_MASSIVE
 	w_class = SIZE_MASSIVE
 
+/obj/item/storage/box/stash/rations
+	name = "ColMarTech Auxiliary Stash (Rations)"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one has been labeled 'RATIONS', but it can store anything."
+	icon_state = "kit_case_rations"
+
+/obj/item/storage/box/stash/medicine
+	name = "ColMarTech Auxiliary Stash (Medicine)"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one has been labeled 'MEDICINE', but it can store anything."
+	icon_state = "kit_case_medicine"
+
+/obj/item/storage/box/stash/armor
+	name = "ColMarTech Auxiliary Stash (Armor)"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one has been labeled 'ARMOR', but it can store anything."
+	icon_state = "kit_case_armor"
+
+/obj/item/storage/box/stash/weapons
+	name = "ColMarTech Auxiliary Stash (Weapons)"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one has been labeled 'WEAPONS', but it can store anything."
+	icon_state = "kit_case_weapons"
+
 /obj/item/storage/box/stash/big
-	name = "ColMarTech Auxiliary Stash Deluxe"
+	name = "ColMarTech Auxiliary Deluxe Stash"
 	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one in particular is an ultra-large model."
 	storage_slots = 59
+	icon_state = "kit_case"
+
+/obj/item/storage/box/stash/big/rations
+	name = "ColMarTech Auxiliary Deluxe Stash (Rations)"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one in particular is an ultra-large model. This one has been labeled 'RATIONS', but it can store anything."
+	icon_state = "kit_case_rations_alt"
+
+/obj/item/storage/box/stash/big/medicine
+	name = "ColMarTech Auxiliary Deluxe Stash (Medicine)"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one in particular is an ultra-large model. This one has been labeled 'MEDICINE', but it can store anything."
+	icon_state = "kit_case_medicine_alt"
+
+/obj/item/storage/box/stash/big/armor
+	name = "ColMarTech Auxiliary Deluxe Stash (Armor)"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one in particular is an ultra-large model. This one has been labeled 'ARMOR', but it can store anything."
+	icon_state = "kit_case_armor_alt"
+
+/obj/item/storage/box/stash/big/weapons
+	name = "ColMarTech Auxiliary Deluxe Stash (Weapons)"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one in particular is an ultra-large model. This one has been labeled 'WEAPONS', but it can store anything."
+	icon_state = "kit_case_weapons_alt"

@@ -348,7 +348,8 @@
 /area/golden_arrow/cryo_cells)
 "qC" = (
 /obj/structure/machinery/door/airlock/maintenance/colony{
-	dir = 2
+	dir = 2;
+	req_one_access = null
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/briefing)
@@ -488,7 +489,8 @@
 /area/golden_arrow/shared_office)
 "zB" = (
 /obj/structure/machinery/door/airlock/maintenance/colony{
-	dir = 2
+	dir = 2;
+	req_one_access = null
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
@@ -583,7 +585,8 @@
 /area/golden_arrow/engineering)
 "Ds" = (
 /obj/structure/machinery/door/airlock/maintenance/colony{
-	dir = 2
+	dir = 2;
+	req_one_access = null
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/cryo_cells)
@@ -913,7 +916,10 @@
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/golden_arrow/cryo_cells)
 "RD" = (
-/obj/structure/machinery/door/airlock/maintenance/colony,
+/obj/structure/machinery/door/airlock/maintenance/colony{
+	dir = 8;
+	req_one_access = null
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
 "SC" = (
