@@ -12,8 +12,13 @@
 /turf/open/shuttle/vehicle/floor_3_12,
 /area/interior/vehicle/van)
 "d" = (
-/obj/structure/bed/chair/comfy,
-/obj/effect/vehicle_roof/van,
+/obj/structure/bed/chair/comfy{
+	pixel_x = -8;
+	pixel_y = 16;
+	layer = 3.3;
+	buckling_x = -8;
+	buckling_y = 16
+	},
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
 	exit_type = /obj/structure/interior_exit/vehicle/van/backleft;
@@ -21,21 +26,20 @@
 	pixel_x = -32;
 	tag = "back_left"
 	},
+/obj/structure/bed/chair/comfy{
+	pixel_x = 8;
+	pixel_y = 16;
+	layer = 3.3;
+	buckling_x = -8;
+	buckling_y = 16
+	},
+/obj/effect/vehicle_roof/van,
 /turf/open/shuttle/vehicle/floor_1_7,
 /area/interior/vehicle/van)
 "e" = (
 /obj/structure/interior_wall/van{
 	alpha = 50;
 	icon_state = "exterior_door_truck";
-	layer = 5.2;
-	pixel_y = 32
-	},
-/turf/open/void/vehicle,
-/area/space)
-"h" = (
-/obj/structure/interior_wall/van{
-	alpha = 50;
-	icon_state = "exterior_3";
 	layer = 5.2;
 	pixel_y = 32
 	},
@@ -50,18 +54,22 @@
 	},
 /turf/open/void/vehicle,
 /area/space)
-"k" = (
+"q" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1;
+	pixel_x = -8;
+	buckling_x = -8
+	},
+/obj/structure/bed/chair/comfy{
+	dir = 1;
+	pixel_x = 8;
+	buckling_x = 8
+	},
 /obj/structure/interior_wall/van{
 	alpha = 50;
 	icon_state = "background_1";
 	layer = 5.2;
 	pixel_y = 32
-	},
-/turf/open/void/vehicle,
-/area/space)
-"q" = (
-/obj/structure/bed/chair/comfy{
-	dir = 1
 	},
 /turf/open/shuttle/vehicle/floor_1_9,
 /area/interior/vehicle/van)
@@ -83,18 +91,11 @@
 	},
 /turf/open/void/vehicle,
 /area/space)
-"z" = (
-/obj/structure/interior_wall/van{
-	alpha = 50;
-	icon_state = "exterior_2";
-	layer = 5.2;
-	pixel_y = 32
-	},
-/turf/open/void/vehicle,
-/area/space)
 "B" = (
 /obj/structure/bed/chair/comfy{
-	dir = 1
+	dir = 1;
+	pixel_x = -8;
+	buckling_x = -8
 	},
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
@@ -103,15 +104,39 @@
 	pixel_x = -32;
 	tag = "back_right"
 	},
+/obj/structure/interior_wall/van{
+	alpha = 50;
+	icon_state = "background_1";
+	layer = 5.2;
+	pixel_y = 32
+	},
+/obj/structure/bed/chair/comfy{
+	dir = 1;
+	pixel_x = 8;
+	buckling_x = 8
+	},
 /turf/open/shuttle/vehicle/floor_1_10,
 /area/interior/vehicle/van)
 "D" = (
-/obj/structure/bed/chair/comfy{
-	dir = 1
-	},
 /obj/effect/landmark/interior/spawn/interior_viewport/simple{
 	alpha = 100;
 	pixel_y = -2
+	},
+/obj/structure/bed/chair/comfy{
+	dir = 1;
+	pixel_x = -8;
+	buckling_x = -8
+	},
+/obj/structure/bed/chair/comfy{
+	dir = 1;
+	pixel_x = 8;
+	buckling_x = 8
+	},
+/obj/structure/interior_wall/van{
+	alpha = 50;
+	icon_state = "background_1";
+	layer = 5.2;
+	pixel_y = 32
 	},
 /turf/open/shuttle/vehicle/floor_1_1,
 /area/interior/vehicle/van)
@@ -135,7 +160,20 @@
 /turf/open/shuttle/vehicle/floor_3_11,
 /area/interior/vehicle/van)
 "I" = (
-/obj/structure/bed/chair/comfy,
+/obj/structure/bed/chair/comfy{
+	pixel_x = -8;
+	pixel_y = 16;
+	layer = 3.3;
+	buckling_x = -8;
+	buckling_y = 16
+	},
+/obj/structure/bed/chair/comfy{
+	pixel_x = 8;
+	pixel_y = 16;
+	layer = 3.3;
+	buckling_x = -8;
+	buckling_y = 16
+	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "roof_3"
 	},
@@ -164,9 +202,22 @@
 /turf/open/void/vehicle,
 /area/space)
 "Q" = (
-/obj/structure/bed/chair/comfy,
 /obj/effect/landmark/interior/spawn/interior_viewport/simple{
 	pixel_y = 30
+	},
+/obj/structure/bed/chair/comfy{
+	pixel_x = -8;
+	pixel_y = 16;
+	layer = 3.3;
+	buckling_x = -8;
+	buckling_y = 16
+	},
+/obj/structure/bed/chair/comfy{
+	pixel_x = 8;
+	pixel_y = 16;
+	layer = 3.3;
+	buckling_x = -8;
+	buckling_y = 16
 	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "roof_2"
@@ -213,21 +264,21 @@ i
 L
 d
 B
-k
+i
 "}
 (3,1,1) = {"
 i
 N
 Q
 D
-z
+i
 "}
 (4,1,1) = {"
 i
 U
 I
 q
-h
+i
 "}
 (5,1,1) = {"
 i

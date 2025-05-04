@@ -302,6 +302,7 @@
 	layer = ABOVE_XENO_LAYER
 
 	icon = 'icons/obj/vehicles/miltruck.dmi'
+	passengers_slots = 16 //yeah baby
 
 	interior_map = /datum/map_template/interior/truck
 
