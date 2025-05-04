@@ -20,7 +20,7 @@
 	body.after_play()
 	sleep(3 SECONDS)
 	var/atom/movable/screen/text/screen_text/body2 = new /atom/movable/screen/text/screen_text/simulacrum_message/body/secondary()
-	body2.text_to_play = "But, you made it. You drink down the curated warmth of the USS Schwarzenegger's atmosphere like booze. As the initial bliss fades, you move to mourn those who couldn't join you."
+	body2.text_to_play = "But, you made it. You drink down the curated warmth of the USS Schwarzenegger's atmosphere like booze."
 	body2.player = human.client
 	body2.color = "#535ca9"
 	LAZYADD(human.client.screen_texts, body2)
