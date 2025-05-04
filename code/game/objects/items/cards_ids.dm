@@ -25,8 +25,13 @@
 
 /obj/item/loyalty/quartermaster/levelone
 	name = "Loyalty Medallion, LL1 (Quartermaster)"
-	desc = "A silver badge given by Quartermaster to those he, more or less, trusts. Show this to Quartermaster to gain access to his Loyalty Level 1 catalog."
-	icon_state = "nspa_silver"
+	desc = "A brass badge given by Quartermaster to those he, more or less, trusts with things that his usual operators are too busy to deal with. Show this to Quartermaster to gain access to his Loyalty Level 1 catalog."
+	icon_state = "loyaltyqm_llone"
+
+/obj/item/loyalty/quartermaster/leveltwo
+	name = "Loyalty Medallion, LL2 (Quartermaster)"
+	desc = "A brass badge given by Quartermaster to those he trusts to deal with issues that his usual operators can't. Show this to Quartermaster to gain access to his Loyalty Level 2 catalog."
+	icon_state = "loyaltyqm_lltwo"
 
 /obj/item/card
 	name = "card"
