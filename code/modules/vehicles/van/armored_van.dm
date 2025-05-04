@@ -7,7 +7,7 @@
 
 	health = 800
 
-	interior_map = /datum/map_template/interior/van/armored
+	interior_map = /datum/map_template/interior/van_armored
 
 	passengers_slots = 1 //4  total
 	xenos_slots = 2
@@ -24,7 +24,7 @@
 	// Rest (all the guns) is handled by the tank turret hardpoint
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/locomotion/van_wheels,
-		/obj/item/hardpoint/secondary/m56cupola,
+		/obj/item/hardpoint/secondary/m56cupola/van,
 	)
 
 	seats = list(
@@ -148,9 +148,9 @@
 
 /obj/effect/vehicle_spawner/van/armored/load_hardpoints(obj/vehicle/multitile/apc/arc/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
-	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/van)
 
 //PRESET: MG
 /obj/effect/vehicle_spawner/van/armored/mg/load_hardpoints(obj/vehicle/multitile/apc/arc/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
-	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/van)

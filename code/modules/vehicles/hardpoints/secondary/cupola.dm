@@ -32,3 +32,11 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
+
+/obj/item/hardpoint/secondary/m56cupola/van
+	name = "\improper Adjusted M56 Cupola"
+	desc = "A secondary weapon for tanks that shoots bullets, this one has been slightly adjusted to fit onto a UACG Armored Van."
+
+	icon_state = "m56_cupola"
+	disp_icon = "van_armored"
+	disp_icon_state = "van_mg"
