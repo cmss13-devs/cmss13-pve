@@ -9,6 +9,17 @@
 "bE" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/cryo_cells)
+"bV" = (
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = -26;
+	pixel_y = 26
+	},
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = -38;
+	pixel_y = 9
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "cD" = (
 /obj/structure/closet/crate/bravo,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -164,6 +175,49 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"jz" = (
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = -8;
+	pixel_y = -4
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = 4;
+	pixel_y = -8
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
+"jD" = (
+/obj/structure/machinery/vending/sovietsoda{
+	desc = "An old sweet water vending machine. It isn't really clear who's been stocking it, considering how deep in maintenance it is.";
+	pixel_x = -4;
+	pixel_y = 21
+	},
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = 15;
+	pixel_y = 14
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = 17;
+	pixel_y = 20
+	},
+/obj/structure/largecrate/random/barrel/brown{
+	pixel_x = -6;
+	pixel_y = -6
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = 10;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "kk" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
@@ -533,6 +587,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"BO" = (
+/mob/living/simple_animal/cat{
+	name = "Kiki";
+	desc = "The platoon's pet cat. She was a stray found in Fiorina Station's prison district by Private Locus. Lieutenant Brown's taken a liking to her."
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
 "Cg" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
@@ -710,12 +771,11 @@
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoon_commander_rooms)
 "HB" = (
-/mob/living/simple_animal/cat{
-	name = "Kiki";
-	desc = "The Hideout's pet cat. It was found on Fiorina in the prison district by a rifleman and sold to Lieutenant Michael Brown; instead of turning the cat into a meal, he adopted her."
+/mob/living/simple_animal/corgi/Lisa{
+	desc = "It's a corgi with a cute pink bow. She was found on LV-624 by a squad led by Sergeant Rohtin. She's become fast friends with Kiki, the platoon's resident cat."
 	},
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/dorms)
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
 "HI" = (
 /obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = 8
@@ -725,6 +785,26 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
+"Id" = (
+/obj/structure/prop/hybrisa/supermart/souto_man_prop{
+	density = 0;
+	pixel_x = -1;
+	pixel_y = 25
+	},
+/obj/item/reagent_container/food/drinks/cans/souto{
+	pixel_x = -15;
+	pixel_y = 23
+	},
+/obj/item/reagent_container/food/drinks/cans/souto{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/obj/structure/largecrate/random/mini{
+	pixel_x = 6;
+	pixel_y = 12
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "Iq" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
@@ -947,6 +1027,13 @@
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"TN" = (
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = 16;
+	pixel_y = 15
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "Um" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/alpha,
@@ -1065,9 +1152,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
+UF
+UF
+UF
 UF
 UF
 UF
@@ -1117,10 +1204,10 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
 UF
+jD
+jz
+Bn
 CL
 rZ
 Bn
@@ -1169,10 +1256,10 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
 UF
+ud
+Qi
+zB
 Qi
 Qi
 zB
@@ -1221,9 +1308,9 @@ Jb
 Jb
 Jb
 Jb
-Jb
-Jb
-Jb
+UF
+UF
+UF
 UF
 Ts
 Qi
@@ -1641,7 +1728,7 @@ Jb
 Jb
 Jb
 UF
-Qi
+TN
 bE
 pe
 uN
@@ -1693,7 +1780,7 @@ Jb
 Jb
 Jb
 UF
-Qi
+Id
 UT
 UT
 UT
@@ -1745,7 +1832,7 @@ Jb
 Jb
 Jb
 UF
-Qi
+bV
 UT
 Qb
 rl
@@ -1908,7 +1995,7 @@ Pu
 Pu
 UT
 LO
-HB
+gf
 xv
 Up
 vg
@@ -2324,9 +2411,9 @@ yT
 HA
 Vo
 po
+BO
 DN
-DN
-DN
+HB
 DN
 FT
 JF
