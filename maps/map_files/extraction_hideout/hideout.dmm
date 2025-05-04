@@ -106,15 +106,15 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/dorms)
 "gH" = (
-/obj/item/storage/fancy/cigarettes/balaji_4{
-	pixel_x = 7;
-	pixel_y = 15
-	},
 /obj/item/storage/fancy/cigar/matchbook/brown{
 	pixel_y = 9;
 	pixel_x = -1
 	},
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one,
+/obj/item/storage/fancy/cigarettes/balaji_4{
+	pixel_x = 7;
+	pixel_y = 15
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
 "hy" = (
@@ -720,7 +720,7 @@
 /obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal/rifleman{
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
 	pixel_x = -7
 	},
 /turf/open/floor/almayer/plate,
