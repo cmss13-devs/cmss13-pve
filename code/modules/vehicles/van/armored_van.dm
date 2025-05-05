@@ -95,19 +95,6 @@
 			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
-/obj/vehicle/multitile/van/armored/Initialize()
-	. = ..()
-	under_image = image(icon, src, icon_state, layer = BELOW_MOB_LAYER)
-	under_image.alpha = 127
-
-	normal_image = image(icon, src, icon_state, layer = layer)
-
-	icon_state = null
-
-	RegisterSignal(SSdcs, COMSIG_GLOB_MOB_LOGGED_IN, PROC_REF(add_default_image))
-
-	for(var/I in GLOB.player_list)
-		add_default_image(SSdcs, I)
 /*
 ** PRESETS SPAWNERS
 */
@@ -137,7 +124,7 @@
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
 
 //PRESET: default hardpoints, destroyed
-/obj/effect/vehicle_spawner/van/armored/spawn_vehicle()
+/obj/effect/vehicle_spawner/van/armored/decrepid/spawn_vehicle()
 	var/obj/vehicle/multitile/van/armored/ARM_VAN = new (loc)
 
 	load_misc(ARM_VAN)
