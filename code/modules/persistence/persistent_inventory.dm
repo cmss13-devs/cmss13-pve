@@ -103,6 +103,9 @@ proc/listclearnulls(list/list)
 	var/mob/living/carbon/human/H = user
 
 	if(current_inventory)
+		if(H.ckey != current_inventory.unique_id)
+			visible_message("<b>[src]</b> beeps, \"<span class='danger'>This stash does not belong to you. Please log out and log in with your account.</span>\" ")
+			return
 		if(current_inventory.max_possible_items <= length(current_inventory.stored_items))
 			visible_message("<b>[src]</b> beeps, \"<span class='danger'>Your stash is at maximum capacity.</span>\" ")
 			return
@@ -234,6 +237,9 @@ proc/listclearnulls(list/list)
 				var/item = locate(href_list["item"])
 				var/mob/user = usr
 				var/mob/living/carbon/human/H = user
+				if(H.ckey != current_inventory.unique_id)
+					visible_message("<b>[src]</b> beeps, \"<span class='danger'>This stash does not belong to you. Please log out and log in with your account.</span>\" ")
+					return
 
 				if(withdrawing || !current_inventory || !item || !(item in current_inventory.stored_items) )
 					return

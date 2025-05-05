@@ -33,6 +33,21 @@
 	desc = "A brass badge given by Quartermaster to those he trusts to deal with issues that his usual operators can't. Show this to Quartermaster to gain access to his Loyalty Level 2 catalog."
 	icon_state = "loyaltyqm_lltwo"
 
+/obj/item/loyalty/scholar
+	name = "Loyalty Chit (Scholar)"
+	desc = "A stamped and signed card which denotes the holder as having earned some goodwill with the trader known as 'Scholar'; with enough of these, Scholar would be willing to offer you better deals."
+	icon_state = "loyaltysch"
+
+/obj/item/loyalty/scholar/levelone
+	name = "Loyalty Seal, LL1 (Scholar)"
+	desc = "A violet wax given by Scholar to those he, more or less, trusts with things that his usual operators are too busy to deal with. Show this to Scholar to gain access to his Loyalty Level 1 catalog."
+	icon_state = "loyaltysch_llone"
+
+/obj/item/loyalty/scholar/leveltwo
+	name = "Loyalty Seal, LL2 (Scholar)"
+	desc = "A brass badge given by Scholar to those he trusts to deal with issues that his usual operators can't. Show this to Scholar to gain access to his Loyalty Level 2 catalog."
+	icon_state = "loyaltysch_lltwo"
+
 /obj/item/card
 	name = "card"
 	desc = "Does card things."
