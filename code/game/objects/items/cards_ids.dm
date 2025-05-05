@@ -40,12 +40,12 @@
 
 /obj/item/loyalty/scholar/levelone
 	name = "Loyalty Seal, LL1 (Scholar)"
-	desc = "A violet wax given by Scholar to those he, more or less, trusts with things that his usual operators are too busy to deal with. Show this to Scholar to gain access to his Loyalty Level 1 catalog."
+	desc = "A violet wax seal given by Scholar to those he, more or less, trusts with things that his usual operators are too busy to deal with. Show this to Scholar to gain access to his Loyalty Level 1 catalog."
 	icon_state = "loyaltysch_llone"
 
 /obj/item/loyalty/scholar/leveltwo
 	name = "Loyalty Seal, LL2 (Scholar)"
-	desc = "A brass badge given by Scholar to those he trusts to deal with issues that his usual operators can't. Show this to Scholar to gain access to his Loyalty Level 2 catalog."
+	desc = "A violet wax seal given by Scholar to those he trusts to deal with issues that his usual operators can't. Show this to Scholar to gain access to his Loyalty Level 2 catalog."
 	icon_state = "loyaltysch_lltwo"
 
 /obj/item/card
