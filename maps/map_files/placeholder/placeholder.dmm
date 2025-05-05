@@ -5028,7 +5028,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/item/clothing/under/marine/officer/boiler,
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "arB" = (
@@ -9470,22 +9469,10 @@
 /obj/item/ammo_box/magazine/vp70{
 	pixel_y = 5
 	},
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
-/obj/item/ammo_magazine/pistol/l54,
+/obj/item/ammo_box/magazine/l54{
+	pixel_y = -4;
+	pixel_x = -3
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "aGo" = (
@@ -10159,9 +10146,6 @@
 /area/golden_arrow/hangar)
 "aIK" = (
 /obj/structure/surface/table/almayer,
-/obj/item/clothing/suit/storage/jacket/marine/service{
-	pixel_x = 11
-	},
 /obj/item/prop/magazine/dirty/torn{
 	pixel_x = -6;
 	pixel_y = 6
@@ -10445,11 +10429,6 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/ammo_box/magazine/mk1{
-	layer = 3.1;
-	pixel_y = 13;
-	pixel_x = 3
-	},
 /obj/item/facepaint/sunscreen_stick{
 	pixel_y = 2;
 	pixel_x = -2;
@@ -15544,6 +15523,9 @@
 	pixel_y = 5;
 	pixel_x = -3
 	},
+/obj/item/ammo_box/magazine/l54{
+	pixel_y = -3
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "dAO" = (
@@ -19574,6 +19556,10 @@
 /obj/item/ammo_box/magazine/nsg23{
 	pixel_y = 8;
 	pixel_x = -6
+	},
+/obj/item/ammo_box/magazine/nsg23{
+	pixel_y = -6;
+	pixel_x = 7
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)

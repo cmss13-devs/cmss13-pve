@@ -58,13 +58,8 @@
 
 		if(!hud_icon_state) hud_icon_state = H.rank_fallback
 		if(hud_icon_state)
-			var/image/IMG = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad")
-			if(squad_clr)
-				IMG.color = squad_clr
-			else
-				IMG.color = "#5A934A"
+			var/image/IMG = image('icons/mob/hud/marine_hud.dmi', H, "rmc_[hud_icon_state]")
 			holder.overlays += IMG
-			holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_[hud_icon_state]")
 		if(H.assigned_squad && H.assigned_fireteam)
 			var/image/IMG2 = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_[H.assigned_fireteam]")
 			IMG2.color = squad_clr

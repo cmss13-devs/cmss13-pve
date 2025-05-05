@@ -427,7 +427,7 @@
 /obj/item/clothing/accessory/patch/twe
 	name = "Three World Empire patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women loyal to the Three World Empire, An older style symbol of the TWE."
-	icon_state = "rmcpatch"
+	icon_state = "twepatch"
 
 /obj/item/clothing/accessory/patch/upp
 	name = "UPP patch"

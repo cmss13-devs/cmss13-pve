@@ -424,7 +424,7 @@
 //-----------------------VP78 Pistol Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/vp78
-	name = "magazine box (VP78 x 16)"
+	name = "magazine box (L165A1 x 16)"
 	icon_state = "base_vp78"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_reg"
@@ -433,6 +433,20 @@
 	magazine_type = /obj/item/ammo_magazine/pistol/vp78
 
 /obj/item/ammo_box/magazine/vp78/empty
+	empty = TRUE
+
+//-----------------------VP78 Pistol Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/l54
+	name = "magazine box (L54 x 16)"
+	icon_state = "base_vp78"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_reg"
+	overlay_gun_type = "_l54"
+	num_of_magazines = 16
+	magazine_type = /obj/item/ammo_magazine/pistol/l54
+
+/obj/item/ammo_box/magazine/l54/empty
 	empty = TRUE
 
 //-----------------------Type71 Rifle Mag Box-----------------------

@@ -69,6 +69,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	title = JOB_TWE_RMC_MARKSMAN
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/rmc/snp
 	job_options = null
 	supervisors = "the team leader and troop commander"

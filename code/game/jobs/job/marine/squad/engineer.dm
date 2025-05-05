@@ -67,6 +67,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	title = JOB_TWE_RMC_ENGI
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/rmc/eng
 	job_options = null
 	supervisors = "the section leader and troop commander"
@@ -81,6 +82,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	title = JOB_TWE_RMC_BREACHER
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/rmc/mor
 	job_options = null
 	supervisors = "the troop commander and troop sergeant"
