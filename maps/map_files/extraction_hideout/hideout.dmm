@@ -9,17 +9,6 @@
 "bE" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/cryo_cells)
-"bV" = (
-/obj/structure/largecrate/random/mini/small_case/c{
-	pixel_x = -26;
-	pixel_y = 26
-	},
-/obj/structure/largecrate/random/mini/small_case/c{
-	pixel_x = -38;
-	pixel_y = 9
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/engineering)
 "cD" = (
 /obj/structure/closet/crate/bravo,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -44,6 +33,17 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
+"db" = (
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = -26;
+	pixel_y = 26
+	},
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = -38;
+	pixel_y = 9
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "do" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -87,6 +87,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
+"ew" = (
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = 16;
+	pixel_y = 15
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "eE" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
 /turf/open/floor/plating/plating_catwalk,
@@ -175,49 +182,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"jz" = (
-/obj/structure/largecrate/random/mini/small_case/c{
-	pixel_x = -8;
-	pixel_y = -4
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = -7;
-	pixel_y = 3
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = 4;
-	pixel_y = -8
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/engineering)
-"jD" = (
-/obj/structure/machinery/vending/sovietsoda{
-	desc = "An old sweet water vending machine. It isn't really clear who's been stocking it, considering how deep in maintenance it is.";
-	pixel_x = -4;
-	pixel_y = 21
-	},
-/obj/structure/largecrate/random/mini/small_case/c{
-	pixel_x = 15;
-	pixel_y = 14
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = 17;
-	pixel_y = 20
-	},
-/obj/structure/largecrate/random/barrel/brown{
-	pixel_x = -6;
-	pixel_y = -6
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = 10;
-	pixel_y = 5
-	},
-/obj/item/reagent_container/food/drinks/cans/boda{
-	pixel_x = -8;
-	pixel_y = 8
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/engineering)
 "kk" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
@@ -275,6 +239,34 @@
 "mt" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"mE" = (
+/obj/structure/machinery/vending/sovietsoda{
+	desc = "An old sweet water vending machine. It isn't really clear who's been stocking it, considering how deep in maintenance it is.";
+	pixel_x = -4;
+	pixel_y = 21
+	},
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = 15;
+	pixel_y = 14
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = 17;
+	pixel_y = 20
+	},
+/obj/structure/largecrate/random/barrel/brown{
+	pixel_x = -6;
+	pixel_y = -6
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = 10;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "mX" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
 /turf/open/floor/plating/plating_catwalk,
@@ -328,6 +320,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
+"ol" = (
+/mob/living/simple_animal/corgi/Lisa{
+	desc = "It's a corgi with a cute pink bow. She was found on LV-624 by a squad led by Sergeant Rohtin. She's become fast friends with Kiki, the platoon's resident cat."
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
 "op" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
@@ -587,13 +585,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
-"BO" = (
-/mob/living/simple_animal/cat{
-	name = "Kiki";
-	desc = "The platoon's pet cat. She was a stray found in Fiorina Station's prison district by Private Locus. Lieutenant Brown's taken a liking to her."
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/briefing)
 "Cg" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
@@ -771,8 +762,9 @@
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoon_commander_rooms)
 "HB" = (
-/mob/living/simple_animal/corgi/Lisa{
-	desc = "It's a corgi with a cute pink bow. She was found on LV-624 by a squad led by Sergeant Rohtin. She's become fast friends with Kiki, the platoon's resident cat."
+/mob/living/simple_animal/cat{
+	name = "Kiki";
+	desc = "The platoon's pet cat. She was a stray found in Fiorina Station's prison district by Private Locus. Lieutenant Brown's taken a liking to her."
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
@@ -785,26 +777,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
-"Id" = (
-/obj/structure/prop/hybrisa/supermart/souto_man_prop{
-	density = 0;
-	pixel_x = -1;
-	pixel_y = 25
-	},
-/obj/item/reagent_container/food/drinks/cans/souto{
-	pixel_x = -15;
-	pixel_y = 23
-	},
-/obj/item/reagent_container/food/drinks/cans/souto{
-	pixel_x = 6;
-	pixel_y = 3
-	},
-/obj/structure/largecrate/random/mini{
-	pixel_x = 6;
-	pixel_y = 12
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/engineering)
 "Iq" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
@@ -845,6 +817,26 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
+"Lk" = (
+/obj/structure/prop/hybrisa/supermart/souto_man_prop{
+	density = 0;
+	pixel_x = -1;
+	pixel_y = 25
+	},
+/obj/item/reagent_container/food/drinks/cans/souto{
+	pixel_x = -15;
+	pixel_y = 23
+	},
+/obj/item/reagent_container/food/drinks/cans/souto{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/obj/structure/largecrate/random/mini{
+	pixel_x = 6;
+	pixel_y = 12
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "Lp" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /obj/structure/mirror{
@@ -1027,13 +1019,6 @@
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"TN" = (
-/obj/structure/largecrate/random/mini/small_case/c{
-	pixel_x = 16;
-	pixel_y = 15
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/engineering)
 "Um" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/alpha,
@@ -1084,6 +1069,21 @@
 "Vo" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/briefing)
+"VB" = (
+/obj/structure/largecrate/random/mini/small_case/c{
+	pixel_x = -8;
+	pixel_y = -4
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = 4;
+	pixel_y = -8
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
 "WE" = (
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/almayer,
@@ -1205,8 +1205,8 @@ Jb
 Jb
 Jb
 UF
-jD
-jz
+mE
+VB
 Bn
 CL
 rZ
@@ -1728,7 +1728,7 @@ Jb
 Jb
 Jb
 UF
-TN
+ew
 bE
 pe
 uN
@@ -1780,7 +1780,7 @@ Jb
 Jb
 Jb
 UF
-Id
+Lk
 UT
 UT
 UT
@@ -1832,7 +1832,7 @@ Jb
 Jb
 Jb
 UF
-bV
+db
 UT
 Qb
 rl
@@ -2411,9 +2411,9 @@ yT
 HA
 Vo
 po
-BO
-DN
 HB
+DN
+ol
 DN
 FT
 JF
