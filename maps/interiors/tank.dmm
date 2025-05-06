@@ -48,7 +48,6 @@
 /obj/structure/bed/chair/dropship{
 	icon = 'icons/obj/structures/handrail.dmi';
 	icon_state = "handrail_strata";
-	indestructible = 1;
 	name = "handrail seat";
 	dir = 4;
 	pixel_y = 2;
