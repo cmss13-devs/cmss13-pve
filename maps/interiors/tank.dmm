@@ -50,9 +50,9 @@
 	icon_state = "handrail_strata";
 	indestructible = 1;
 	name = "handrail seat";
-	dir = 8;
+	dir = 4;
 	pixel_y = 2;
-	pixel_x = 2
+	pixel_x = -28
 	},
 /obj/effect/landmark/interior/spawn/interior_viewport{
 	dir = 4;
