@@ -411,6 +411,7 @@
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 /obj/item/storage/pouch/magazine/attackby(obj/item/W, mob/user)
@@ -1320,6 +1321,16 @@
 	new /obj/item/stack/cable_coil(src)
 	new /obj/item/device/multitool(src)
 	new /obj/item/tool/wrench(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+
+/obj/item/storage/pouch/tools/tactical/parajumper/fill_preset_inventory()
+	new /obj/item/weapon/gun/smg/nailgun/compact(src)
+	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/circuitboard/apc(src)
+	new /obj/item/cell/high(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 
