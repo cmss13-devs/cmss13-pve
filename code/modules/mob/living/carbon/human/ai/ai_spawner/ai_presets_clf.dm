@@ -16,6 +16,10 @@
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
 	if(prob(45))
@@ -26,12 +30,7 @@
 	if(prob(20))
 		add_rebel_ua_suit(new_human)
 	//waist
-	if (prob(20))
-		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
-	else if (prob(40))
-		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911(new_human), WEAR_WAIST)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/vp70(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70(new_human), WEAR_IN_BACK)
 	//limbs
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
@@ -80,12 +79,12 @@
 
 /datum/human_ai_equipment_preset/clf/ua/handgunner
 	name = "UA Rebel, Soldier (Pistol)"
-	desc = "Will only be equipped with a M1911, M4A3 or VP70."
+	desc = "Will only be equipped with a VP70 pistol."
 	path = /datum/equipment_preset/rebel/handgunner
 
 /datum/human_ai_equipment_preset/clf/handgunner
 	name = "TWE Rebel, Soldier (Pistol)"
-	desc = "Armed with either a L54 pistol or a HG-45 pistol."
+	desc = "Armed with a L54 pistol.."
 	path = /datum/equipment_preset/clf/handgunner
 
 /datum/human_ai_equipment_preset/clf/soldier

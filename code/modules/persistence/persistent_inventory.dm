@@ -216,8 +216,6 @@ proc/listclearnulls(list/list)
 			return
 
 	if(href_list["cancel"])
-		if(item_processing)
-			return FALSE
 		var/mob/user = usr
 
 		current_inventory = null
