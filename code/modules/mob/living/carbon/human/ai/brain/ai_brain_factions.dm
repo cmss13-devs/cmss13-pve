@@ -1248,23 +1248,6 @@
 		FACTION_MARINE,
 	)
 
-/datum/human_ai_faction/wy/rmc
-	faction = FACTION_TWE
-	friendly_factions = list(
-		FACTION_COLONIST,
-		FACTION_PMC,
-		FACTION_WY,
-	)
-	neutral_factions = list(
-		FACTION_MARINE,
-		FACTION_ARMY,
-		FACTION_NAVY,
-		FACTION_FREELANCER,
-		FACTION_CONTRACTOR,
-		FACTION_MERCENARY,
-		FACTION_SURVIVOR,
-	)
-
 /datum/human_ai_faction/wy_deathsquad
 	faction = FACTION_WY_DEATHSQUAD
 	friendly_factions = list(
@@ -1299,12 +1282,16 @@
 	friendly_factions = list(
 		FACTION_COLONIST,
 		FACTION_WY,
+		FACTION_PMC,
 	)
 	neutral_factions = list(
+		FACTION_MARINE,
+		FACTION_ARMY,
+		FACTION_NAVY,
 		FACTION_FREELANCER,
 		FACTION_CONTRACTOR,
 		FACTION_MERCENARY,
-		FACTION_MARINE,
+		FACTION_SURVIVOR,
 	)
 	enter_combat_lines = list(
 		"CONTACT!",

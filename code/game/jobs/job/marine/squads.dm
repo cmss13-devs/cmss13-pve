@@ -349,7 +349,7 @@
 
 /datum/squad/marine/rmc
 	name = SQUAD_RMC
-	equipment_color = "#27412D"
+	equipment_color = "#2f5a39"
 	chat_color = "#aa740f"
 	minimap_color = MINIMAP_SQUAD_RMC
 	use_stripe_overlay = FALSE

@@ -110,6 +110,8 @@
 
 /datum/job/marine/smartgunner/ai/rmc
 	title = JOB_TWE_RMC_SMARTGUNNER
+	total_positions = 1
+	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/rmc/sg
 	job_options = null
 	supervisors = "the team leader and troop commander"

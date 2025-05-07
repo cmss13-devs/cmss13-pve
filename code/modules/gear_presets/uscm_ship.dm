@@ -761,6 +761,8 @@
 	assignment = JOB_TWE_RMC_LIEUTENANT
 	rank = JOB_TWE_RMC_LIEUTENANT
 	skills = /datum/skills/rmc/officer
+	faction_group = FACTION_LIST_TWE
+	faction = FACTION_TWE
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
 
 //*****************************************************************************************************/

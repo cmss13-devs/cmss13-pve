@@ -771,7 +771,8 @@
 /area/golden_arrow/hangar)
 "acH" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
-	dir = 1
+	dir = 1;
+	req_one_access = list(300,302)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
@@ -1381,7 +1382,8 @@
 	icon_state = "map";
 	layer = 2.97;
 	name = "Tactical Map Display";
-	pixel_y = 10
+	pixel_y = 10;
+	faction = "TWE"
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -1588,7 +1590,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "afv" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four{
+	faction = "TWE"
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "afx" = (
@@ -1690,7 +1694,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "afP" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five{
+	faction = "TWE"
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "afQ" = (
@@ -4758,7 +4764,7 @@
 /obj/structure/machinery/door/airlock/almayer/secure{
 	name = "\improper Platoon Commander's Quarters";
 	req_access = list();
-	req_one_access_txt = "19;12"
+	req_one_access_txt = "300;301"
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -8700,7 +8706,8 @@
 "aDO" = (
 /obj/structure/machinery/cm_vending/sorted/medical{
 	pixel_y = 18;
-	density = 0
+	density = 0;
+	req_access = list(302)
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
@@ -9243,7 +9250,9 @@
 	layer = 2.9;
 	pixel_y = 2
 	},
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six{
+	faction = "TWE"
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "aFF" = (
@@ -11224,7 +11233,8 @@
 /obj/structure/machinery/prop/almayer/CICmap{
 	pixel_y = 5;
 	pixel_x = -1;
-	layer = 4
+	layer = 4;
+	faction = "TWE"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -13180,7 +13190,7 @@
 	dir = 1;
 	name = "\improper Platoon Commander's Office";
 	req_access = list();
-	req_one_access_txt = "19;12"
+	req_one_access_txt = "300;301"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
@@ -14566,7 +14576,7 @@
 	dir = 8;
 	name = "\improper Medical Office";
 	req_one_access = list();
-	req_one_access_txt = "8;12"
+	req_one_access_txt = "300;302"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -16469,7 +16479,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two{
+	faction = "TWE"
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "gLu" = (
@@ -17393,7 +17405,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three{
+	faction = "TWE"
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "kNU" = (
@@ -18790,7 +18804,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one{
+	faction = "TWE"
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "pwX" = (
