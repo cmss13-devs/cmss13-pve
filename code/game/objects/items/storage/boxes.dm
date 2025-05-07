@@ -1025,3 +1025,8 @@
 	name = "ColMarTech Auxiliary Deluxe Stash (Ammunition)"
 	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one in particular is an ultra-large model. This one has been labeled 'AMMO', but it can store anything."
 	icon_state = "kit_case_ammo_alt"
+
+/obj/item/storage/box/stash/debug
+	name = "DebugMarTech Auxiliary Ultra-Super-Crazy-Huge Stash"
+	desc = "You really shouldn't have this."
+	storage_slots = 500

@@ -224,6 +224,16 @@
 		crit_fail = 1
 		icon_state = "brokenpack"
 
+/obj/item/storage/backpack/debug
+	name = "absolutely massive backpack"
+	desc = "This thing is huge!"
+	icon_state = "backpack_large"
+	item_state = "backpack_large"
+	w_class = 7
+	max_w_class = SIZE_MASSIVE
+	worn_accessible = TRUE
+	max_storage_space = 300
+
 
 //==========================//JOKE PACKS\\================================\\
 
