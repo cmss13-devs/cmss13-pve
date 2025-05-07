@@ -361,15 +361,14 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 	req_access = list(ACCESS_UPP_MEDPREP)
 	vendor_theme = VENDOR_THEME_UPP
 
-/obj/structure/machinery/cm_vending/gear/medic/guard
+/obj/structure/machinery/cm_vending/clothing/medic/guard
 	name = "\improper dusty Medical Gear Rack"
 	desc = "An automated gear rack for UACG medics."
-	icon_state = "med_gear"
 	show_points = TRUE
 	vendor_role = list(JOB_SQUAD_MEDIC)
 	req_access = list(ACCESS_MARINE_MEDPREP)
 
-/obj/structure/machinery/cm_vending/gear/medic/guard/get_listed_products(mob/user)
+/obj/structure/machinery/cm_vending/clothing/medic/guard/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_medic_guard
 
 //------------CLOTHING VENDOR---------------

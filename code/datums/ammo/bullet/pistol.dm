@@ -276,5 +276,5 @@
 /datum/ammo/bullet/pistol/ap/bone/on_hit_mob(mob/M,obj/projectile/P)
 	if(ishuman(M))
 		var/mob/living/carbon/human/human = M
-		human.reagents.add_reagent("stoxin", rand(15, 30))
+		human.reagents.add_reagent("stoxin", rand(5, 15))
 		to_chat(human, SPAN_HIGHDANGER("You feel sick."))

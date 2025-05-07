@@ -275,17 +275,19 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/double/bone(new_human), WEAR_WAIST)
 	qdel(new_human.wear_id)
+	new_human.plane = -7
 
 /datum/equipment_preset/other/ecoterrorist/ambusher/sand
 	name = "Green Banner Ambusher (Sand)"
 
-/datum/equipment_preset/other/ecoterrorist/ambusher/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/other/ecoterrorist/ambusher/sand/load_gear(mob/living/carbon/human/new_human)
 	var/obj/item/facepaint/sand/paint = new()
 	paint.paint_face(new_human, new_human)
 	qdel(paint)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/double/bone(new_human), WEAR_WAIST)
 	qdel(new_human.wear_id)
+	new_human.plane = -7
 
 /datum/equipment_preset/other/ecoterrorist/shotgunner
 	name = "Green Banner Shotgunner"

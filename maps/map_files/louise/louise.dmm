@@ -82,6 +82,13 @@
 /obj/structure/machinery/power/apc/almayer/west,
 /turf/open/floor/almayer,
 /area/louise/hangar)
+"ap" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -24
+	},
+/turf/open/floor/almayer,
+/area/louise/survival)
 "aq" = (
 /obj/structure/machinery/power/apc/almayer/hardened/north,
 /turf/open/floor/almayer/plating/northeast,
@@ -102,6 +109,13 @@
 	},
 /turf/open/floor/almayer,
 /area/louise/entrancetunnel)
+"at" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
 "au" = (
 /turf/closed/wall/shiva/prefabricated,
 /area/louise/dorms)
@@ -110,6 +124,7 @@
 	dir = 2;
 	req_one_access = list()
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/corsat,
 /area/louise/exterior)
 "aw" = (
@@ -132,6 +147,14 @@
 "aA" = (
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/louise/northeasthall)
+"aB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
 "aC" = (
 /turf/open/floor/almayer/mono,
 /area/louise/hangar)
@@ -148,6 +171,11 @@
 "aG" = (
 /turf/closed/wall/shiva/prefabricated,
 /area/louise/northeasthall)
+"aH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/recharge_station,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/synth)
 "aI" = (
 /obj/structure/machinery/light/double{
 	dir = 4
@@ -165,6 +193,14 @@
 /area/louise/medical)
 "aM" = (
 /obj/structure/surface/table/almayer,
+/obj/item/toy/deck{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/toy/deck/uno{
+	pixel_x = 1;
+	pixel_y = 0
+	},
 /turf/open/floor/almayer/edge/smooth,
 /area/louise/dorms)
 "aN" = (
@@ -181,6 +217,10 @@
 /area/louise/medical)
 "aP" = (
 /obj/structure/machinery/power/apc/power/south,
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/bathroom)
 "aQ" = (
@@ -249,11 +289,15 @@
 /obj/structure/machinery/light/double,
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/canteen)
+"bd" = (
+/obj/structure/machinery/cm_vending/clothing/synth,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/synth)
 "be" = (
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/medical)
 "bf" = (
-/obj/structure/machinery/iv_drip,
+/obj/structure/machinery/cm_vending/gear/medic_chemical,
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/medical)
 "bg" = (
@@ -324,6 +368,7 @@
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
+/obj/structure/machinery/iv_drip,
 /turf/open/floor/almayer/plate,
 /area/louise/medical)
 "bo" = (
@@ -333,6 +378,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/louise/canteen)
@@ -349,7 +397,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/medical)
 "bs" = (
-/obj/structure/machinery/cm_vending/clothing/medic,
+/obj/structure/machinery/cm_vending/clothing/medic/guard,
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/medical)
 "bt" = (
@@ -361,6 +409,10 @@
 /obj/item/storage/firstaid/regular{
 	pixel_y = 0;
 	pixel_x = 0
+	},
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/medical{
+	pixel_x = 9;
+	pixel_y = 8
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/medical)
@@ -448,6 +500,10 @@
 	pixel_x = -7;
 	pixel_y = -1
 	},
+/obj/item/storage/box/drinkingglasses{
+	pixel_x = 10;
+	pixel_y = 8
+	},
 /turf/open/floor/almayer/plate,
 /area/louise/canteen)
 "bE" = (
@@ -487,6 +543,12 @@
 /obj/structure/surface/rack,
 /turf/open/floor/almayer,
 /area/louise/northwesthall)
+"bL" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 26
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
 "bM" = (
 /obj/structure/surface/table/almayer,
 /obj/item/tool/lighter{
@@ -551,6 +613,7 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/guard,
 /turf/open/floor/almayer/plate,
 /area/louise/armory)
 "bT" = (
@@ -574,6 +637,13 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
 /turf/open/floor/plating/plating_catwalk,
 /area/louise/opcenter)
+"bY" = (
+/obj/structure/flora/grass/tallgrass/desert,
+/mob/living/simple_animal/scorpion/wounded{
+	layer = 2.9
+	},
+/turf/open/desert/rock,
+/area/louise/exterior)
 "bZ" = (
 /obj/structure/machinery/photocopier,
 /obj/item/paper{
@@ -605,6 +675,10 @@
 /obj/structure/machinery/power/apc/almayer/hardened/south,
 /turf/open/floor/almayer/plate,
 /area/louise/opcenter)
+"cd" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
 "ce" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
@@ -615,6 +689,14 @@
 "cf" = (
 /turf/open/floor/almayer/edge/smooth/east,
 /area/louise/opcenter)
+"cg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
 "ch" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -1256,6 +1338,10 @@
 	},
 /turf/open/asphalt,
 /area/louise/exterior)
+"dh" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
 "di" = (
 /obj/structure/surface/rack,
 /obj/item/ammo_magazine/m2c,
@@ -1268,6 +1354,13 @@
 	},
 /turf/open/floor/almayer,
 /area/louise/checkpoint)
+"dk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
 "dl" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 1;
@@ -1908,6 +2001,10 @@
 /turf/open/floor/almayer,
 /area/louise/canteen)
 "fm" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/louise/canteen)
 "fn" = (
@@ -2098,6 +2195,12 @@
 /obj/effect/landmark/observer_start,
 /turf/open/floor/almayer,
 /area/louise/opcenter)
+"fT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northeasthall)
 "fU" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -2127,6 +2230,14 @@
 /obj/structure/sign/banners/usa_flag{
 	pixel_x = 15;
 	pixel_y = 30
+	},
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/tool/pen{
+	pixel_x = -3;
+	pixel_y = 0
 	},
 /turf/open/floor/almayer/plate,
 /area/louise/opcenter)
@@ -2390,6 +2501,12 @@
 /obj/structure/flora/grass/desert/lightgrass_7,
 /turf/open/desert/dirt,
 /area/louise/exterior)
+"gw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
 "gx" = (
 /obj/structure/flora/grass/tallgrass/desert,
 /turf/open/desert/dirt,
@@ -2515,6 +2632,89 @@
 	},
 /turf/open/asphalt,
 /area/louise/exterior)
+"gQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
+"gR" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"gS" = (
+/obj/structure/machinery/power/apc/almayer/hardened/east,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large/m20,
+/obj/item/ammo_box/magazine/mk1/large/m20{
+	pixel_x = 0;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"gT" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/m44{
+	pixel_x = -2;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/m44{
+	pixel_x = -2;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"gU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"gV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"gW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"gX" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"gY" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 2;
+	req_one_access = list()
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"gZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/item/trash/USCMtray,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"ha" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
 "hb" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -2522,12 +2722,95 @@
 /obj/structure/machinery/computer/arcade,
 /turf/open/floor/almayer,
 /area/louise/dorms)
+"hc" = (
+/obj/structure/surface/rack,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hd" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"he" = (
+/obj/item/trash/burger,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hf" = (
+/obj/structure/surface/rack,
+/obj/item/storage/bag/trash,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
 "hg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N"
 	},
 /turf/open/asphalt,
 /area/louise/exterior)
+"hh" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hk" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/maintenance)
+"hl" = (
+/obj/structure/disposalpipe/junction,
+/turf/closed/wall/rock/orange,
+/area/louise/exterior)
+"hm" = (
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hn" = (
+/obj/structure/machinery/conveyor{
+	dir = 8;
+	id = "gym_1";
+	name = "treadmill"
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"ho" = (
+/obj/structure/machinery/conveyor{
+	dir = 8;
+	id = "gym_1";
+	name = "treadmill"
+	},
+/obj/structure/plasticflaps,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hp" = (
+/obj/structure/machinery/recycler,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
 "hG" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/microwave{
@@ -2549,6 +2832,7 @@
 	pixel_x = -17;
 	pixel_y = -4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/louise/northeasthall)
 "hY" = (
@@ -2566,12 +2850,6 @@
 /area/louise/armory)
 "iH" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal/guard/squad_leader{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/guard/smartgunner{
-	pixel_x = 8
-	},
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/louise/dorms)
 "iM" = (
@@ -2641,19 +2919,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/canteen)
-"lC" = (
-/obj/structure/closet/crate/secure/gear{
-	req_one_access = list(12,14);
-	name = "automatic rifleman gear crate"
-	},
-/obj/item/ammo_magazine/hpr_box,
-/obj/item/ammo_magazine/hpr_box,
-/obj/item/ammo_magazine/hpr_box/ap,
-/obj/item/ammo_magazine/hpr_box/ap,
-/obj/item/ammo_magazine/hpr_box/ap,
-/obj/item/weapon/gun/rifle/lmg/guard,
-/turf/open/floor/almayer/plate,
-/area/louise/armory)
 "mg" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	req_access = null
@@ -2670,54 +2935,15 @@
 /obj/structure/machinery/vending/walkman,
 /turf/open/floor/almayer/edge/smooth,
 /area/louise/dorms)
-"mX" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_x = -3;
-	pixel_y = 13
-	},
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_x = -3;
-	pixel_y = 22
-	},
-/obj/item/ammo_box/magazine/m44{
-	pixel_x = -2;
-	pixel_y = 0
-	},
-/obj/item/ammo_box/magazine/m44{
-	pixel_x = -2;
-	pixel_y = 6
-	},
-/turf/open/floor/almayer/plate,
-/area/louise/armory)
 "mY" = (
-/obj/structure/surface/table/almayer,
-/obj/item/toy/deck{
-	pixel_x = -6;
-	pixel_y = 8
+/obj/structure/closet/secure_closet/marine_personal/guard/rifleman{
+	pixel_x = 8
 	},
-/obj/item/toy/deck/uno{
-	pixel_x = 1;
-	pixel_y = 3
+/obj/structure/closet/secure_closet/marine_personal/guard/smartgunner{
+	pixel_x = -7
 	},
 /turf/open/floor/almayer/edge/smooth/southwest,
 /area/louise/dorms)
-"nc" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/m20a{
-	pixel_x = 7;
-	pixel_y = 10
-	},
-/obj/item/ammo_box/magazine/m20a{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/ammo_box/magazine/m20a{
-	pixel_x = -4;
-	pixel_y = -6
-	},
-/turf/open/floor/almayer/plate,
-/area/louise/armory)
 "nl" = (
 /turf/open/floor/almayer/mono,
 /area/louise/garage)
@@ -2882,10 +3108,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating/northeast,
 /area/louise/synth)
-"qL" = (
-/obj/structure/bed/chair,
-/turf/open/floor/almayer,
-/area/louise/dorms)
 "qS" = (
 /obj/structure/closet/crate/explosives,
 /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable,
@@ -2894,6 +3116,9 @@
 "qT" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	req_access = null
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/louise/canteen)
@@ -2924,7 +3149,6 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/bathroom)
 "rB" = (
-/obj/structure/bed/chair,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/louise/dorms)
 "rM" = (
@@ -3072,8 +3296,13 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/bathroom)
 "vZ" = (
-/obj/structure/surface/table/almayer,
 /obj/structure/machinery/light/double,
+/obj/structure/closet/secure_closet/marine_personal/guard/smartgunner{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/guard/squad_leader{
+	pixel_x = -7
+	},
 /turf/open/floor/almayer/edge/smooth,
 /area/louise/dorms)
 "wm" = (
@@ -3242,7 +3471,8 @@
 "AV" = (
 /obj/structure/largecrate/random/barrel/white{
 	pixel_x = -8;
-	pixel_y = 12
+	pixel_y = 12;
+	layer = 2.9
 	},
 /obj/structure/largecrate/random/barrel/red{
 	pixel_x = 7;
@@ -3403,6 +3633,7 @@
 /area/louise/exterior)
 "GA" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/edge/smooth/northwest,
 /area/louise/northeasthall)
 "GD" = (
@@ -3422,10 +3653,12 @@
 /turf/open/floor/almayer/plate,
 /area/louise/armory)
 "Hl" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
 /obj/structure/machinery/power/apc/almayer/south,
+/obj/structure/surface/table/almayer,
+/obj/item/toy/minesweeper{
+	pixel_x = -8;
+	pixel_y = 8
+	},
 /turf/open/floor/almayer/edge/smooth,
 /area/louise/dorms)
 "Hm" = (
@@ -3589,6 +3822,7 @@
 /obj/structure/machinery/light/double{
 	dir = 1
 	},
+/obj/structure/machinery/cm_vending/clothing/synth/snowflake,
 /turf/open/floor/almayer/plating/northeast,
 /area/louise/synth)
 "OH" = (
@@ -3599,6 +3833,9 @@
 /area/louise/bathroom)
 "OL" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/louise/canteen)
 "Pa" = (
@@ -3658,6 +3895,10 @@
 /obj/structure/machinery/power/terminal{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 32
+	},
 /turf/open/floor/almayer/plating/northeast,
 /area/louise/engineering)
 "QT" = (
@@ -3680,19 +3921,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/louise/bathroom)
 "Rs" = (
-/obj/structure/machinery/power/apc/almayer/hardened/north,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/guard,
 /turf/open/floor/almayer/plate,
 /area/louise/armory)
 "Rz" = (
 /turf/open/floor/almayer/plating/northeast,
 /area/louise/engineering)
-"RD" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/open/floor/almayer,
-/area/louise/dorms)
 "RH" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -3798,15 +4033,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating/northeast,
 /area/louise/engineering)
-"VU" = (
-/obj/structure/closet/secure_closet/marine_personal/guard/smartgunner{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/guard/rifleman{
-	pixel_x = 8
-	},
-/turf/open/floor/almayer/edge/smooth/west,
-/area/louise/dorms)
 "Wp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
@@ -3849,6 +4075,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/louise/bathroom)
@@ -4807,7 +5037,7 @@ cY
 cY
 cY
 cY
-cY
+bY
 cY
 cY
 cY
@@ -6028,7 +6258,7 @@ bo
 bo
 bo
 bo
-Ms
+bo
 bo
 bo
 bo
@@ -6179,8 +6409,8 @@ bo
 bo
 bo
 bo
-Ms
-Ms
+bo
+bo
 bo
 bo
 bo
@@ -6480,7 +6710,7 @@ bo
 bo
 bo
 bo
-Ms
+bo
 bo
 bo
 bo
@@ -6939,8 +7169,8 @@ bo
 bo
 bo
 bo
-Ms
-Ms
+bo
+bo
 bo
 bo
 bo
@@ -7089,7 +7319,7 @@ WA
 WA
 bo
 bo
-Ms
+bo
 bo
 bo
 bo
@@ -7242,9 +7472,9 @@ WA
 WA
 bo
 bo
-Ms
 bo
-Ms
+bo
+bo
 bo
 bo
 bo
@@ -8010,7 +8240,7 @@ bo
 bo
 bo
 bo
-Ms
+bo
 bo
 bo
 bo
@@ -14697,7 +14927,7 @@ aj
 DL
 dp
 dp
-ql
+ap
 dn
 Nj
 LE
@@ -15580,7 +15810,7 @@ cb
 cb
 fG
 bA
-nc
+bE
 fr
 TR
 AZ
@@ -15732,10 +15962,10 @@ wm
 cb
 bZ
 bA
-mX
+bN
 fr
 TR
-lC
+fp
 bA
 bt
 be
@@ -15753,7 +15983,7 @@ dv
 dv
 dv
 ea
-dv
+bL
 dB
 dB
 Pa
@@ -16188,10 +16418,10 @@ cb
 cb
 fG
 bA
-bN
-bE
-bN
-bE
+gX
+fr
+gT
+gS
 bA
 bv
 bm
@@ -16669,11 +16899,11 @@ UU
 UX
 SV
 aa
-rQ
+aB
 rQ
 tq
 ab
-iY
+at
 nt
 yp
 Hz
@@ -16960,7 +17190,7 @@ eG
 oc
 Ya
 Xx
-eN
+cd
 aP
 eG
 bo
@@ -17253,17 +17483,17 @@ bo
 bo
 bo
 UU
-LE
+gU
 av
 GA
-eA
-eW
-eW
-eA
-eA
-eA
+dh
+gQ
+dk
+dh
+dh
+dh
 hX
-eW
+cg
 eA
 eA
 eA
@@ -17405,12 +17635,12 @@ bo
 bo
 bo
 UU
-LE
+gV
 fs
 gq
 fk
 fi
-uY
+fT
 DX
 aI
 uY
@@ -17557,7 +17787,7 @@ bo
 bo
 bo
 UU
-LE
+gV
 eZ
 eZ
 eZ
@@ -17709,7 +17939,7 @@ bo
 bo
 bo
 UU
-LE
+gV
 eZ
 sz
 bD
@@ -17719,7 +17949,7 @@ fR
 eZ
 cF
 eY
-VU
+rB
 AT
 rB
 mY
@@ -17861,19 +18091,19 @@ bo
 bo
 bo
 UU
-LE
+gV
 eZ
 Sq
 zx
 bq
-bq
+gw
 sY
 eZ
 AI
 eL
 eL
 eL
-qL
+eL
 vZ
 au
 LE
@@ -18013,7 +18243,7 @@ bo
 bo
 bo
 UU
-LE
+gV
 eZ
 bG
 fl
@@ -18025,7 +18255,7 @@ nn
 Zk
 iH
 eL
-RD
+eL
 aM
 au
 LE
@@ -18165,7 +18395,7 @@ bo
 bo
 bo
 UU
-LE
+gV
 eZ
 bF
 Mw
@@ -18186,7 +18416,7 @@ bo
 UU
 LE
 am
-aq
+bd
 qD
 an
 am
@@ -18317,7 +18547,7 @@ bo
 bo
 bo
 UU
-LE
+gV
 eZ
 bF
 bC
@@ -18463,13 +18693,13 @@ bo
 bo
 bo
 bo
-bo
-bo
-bo
-bo
-bo
 UU
-LE
+UU
+UU
+UU
+UU
+UU
+gV
 eZ
 bF
 wu
@@ -18490,9 +18720,9 @@ bo
 UU
 LE
 am
+aq
 an
-an
-qD
+aH
 am
 LE
 UU
@@ -18615,13 +18845,13 @@ bo
 bo
 bo
 bo
-bo
-bo
-bo
-bo
-bo
 UU
-LE
+hm
+hh
+hd
+gZ
+UU
+gV
 eZ
 bF
 Wz
@@ -18767,13 +18997,13 @@ bo
 bo
 bo
 bo
-bo
-bo
-bo
-bo
-bo
 UU
+hn
+hi
 LE
+gV
+UU
+gV
 eZ
 bI
 TL
@@ -18919,13 +19149,13 @@ bo
 bo
 bo
 bo
-bo
-bo
-bo
-bo
-bo
 UU
-LE
+hn
+hj
+he
+gV
+UU
+gV
 eZ
 bJ
 Hm
@@ -19071,13 +19301,13 @@ bo
 bo
 bo
 bo
-bo
-bo
-bo
-bo
-bo
 UU
+ho
+hk
 LE
+ha
+gY
+gW
 eZ
 yw
 bz
@@ -19223,11 +19453,11 @@ bo
 bo
 bo
 bo
-bo
-bo
-bo
-bo
-bo
+UU
+hp
+hk
+hf
+hc
 UU
 LE
 eZ
@@ -19375,17 +19605,17 @@ bo
 bo
 bo
 bo
-bo
-bo
-bo
-bo
-bo
+UU
+UU
+UU
+UU
+UU
 UU
 LE
 LE
 LE
 LE
-LE
+gR
 LE
 LE
 LE
@@ -19681,7 +19911,7 @@ bo
 bo
 bo
 bo
-bo
+hl
 bo
 bo
 bo
@@ -20857,7 +21087,7 @@ bo
 bo
 bo
 bo
-WA
+bo
 bo
 bo
 bo

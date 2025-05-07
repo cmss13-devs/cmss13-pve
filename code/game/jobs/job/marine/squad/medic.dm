@@ -88,8 +88,8 @@
 
 /datum/job/marine/medic/ai/guard
 	title = JOB_SQUAD_MEDIC_GUARD
-	gear_preset = /datum/equipment_preset/uscm/medic/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/medic/forecon/lesser_rank
+	gear_preset = /datum/equipment_preset/uscm/medic/guard
+	gear_preset_secondary = null
 	job_options = null
 
 /obj/effect/landmark/start/marine/medic/upp

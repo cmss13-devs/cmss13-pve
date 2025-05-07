@@ -1115,6 +1115,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "ua_riot"
 	flags_atom = NO_SNOW_TYPE
 
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/medical
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
 // KUTJEVO HELMET
 
 /obj/item/clothing/head/helmet/marine/veteran/kutjevo

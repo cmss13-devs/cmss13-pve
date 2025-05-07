@@ -280,7 +280,7 @@
 
 /datum/equipment_preset/uscm/medic/guard
 	name = "Guard Medic"
-	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
 	assignment = "Medic"
 	role_comm_title = "Med"
 
@@ -335,7 +335,7 @@
 
 /datum/equipment_preset/uscm/tl/guard
 	name = "Guard Squad Leader"
-	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
 
 /*****************************************************************************************************/
 
@@ -419,7 +419,7 @@
 	assignment = "Unit Leader"
 	role_comm_title = "UL"
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
-	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_AE5 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON

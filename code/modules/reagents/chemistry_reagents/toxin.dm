@@ -26,7 +26,7 @@
 
 /datum/reagent/toxin/stoxin
 	name = "Toxin"
-	id = "stoxin"
+	id = "sttoxin"
 	description = "A toxic chemical."
 	custom_metabolism = AMOUNT_PER_TIME(1, 2 SECONDS)
 	properties = list(PROPERTY_TOXIC = 4)
