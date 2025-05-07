@@ -1341,6 +1341,13 @@
 	dual_purpose = TRUE
 	spent_case = /obj/item/trash/grenade/gas/rmc
 
+/obj/item/explosive/grenade/nerve_gas/xeno/rmc/prime()
+	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 12)
+	nerve_gas.start()
+	new spent_case(get_turf(src))
+	qdel(src)
+
 /obj/item/explosive/grenade/nerve_gas/xeno/rmc/launch_impact(atom/hit_atom)
 	if(fuse_type != IMPACT_FUSE)
 		return
@@ -1351,7 +1358,7 @@
 		detonate = FALSE
 	if(active && detonate) // Active, and we reached our destination.
 		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-		nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 6)
+		nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 12)
 		nerve_gas.start()
 		new spent_case(get_turf(src))
 		qdel(src)

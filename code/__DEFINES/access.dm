@@ -213,6 +213,11 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///All access levels associated with Weyland Yutani
 #define ACCESS_LIST_WY_ALL "Wey-Yu (ALL)"
 
+///Access levels for RMC platoon members
+#define ACCESS_LIST_TWE_TROOP "RMC (Troop)"
+///All access levels associated with the RMC & TWE
+#define ACCESS_LIST_TWE_ALL "TWE (ALL)"
+
 ///All the access levels in the civillian category, excluding Press.
 #define ACCESS_LIST_COLONIAL_ALL "Colonial (ALL)"
 ///Used by the Wey-Yu - Civil Authority Liaison

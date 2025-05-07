@@ -1,4 +1,18 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/machinery/cm_vending/clothing/medic/rmc{
+	pixel_y = -8;
+	pixel_x = -1
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/medical)
+"ab" = (
+/obj/structure/machinery/cm_vending/gear/medic_chemical/rmc{
+	pixel_y = -8;
+	pixel_x = -1
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/medical)
 "ak" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/light/double/blue{
@@ -280,18 +294,14 @@
 /area/golden_arrow/medical)
 "uK" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
-	dir = 1
+	dir = 1;
+	req_one_access = list(300,302)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "uX" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/accessory/stethoscope,
-/obj/item/device/flashlight/pen{
-	pixel_y = 6;
-	pixel_x = -5
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "vH" = (
@@ -313,25 +323,7 @@
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/golden_arrow/medical)
 "vX" = (
-/obj/structure/machinery/cm_vending/clothing/medic{
-	pixel_y = 20;
-	density = 0
-	},
 /turf/open/floor/almayer/dark_sterile,
-/area/golden_arrow/medical)
-"wQ" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/firstaid/softpack{
-	pixel_y = 11;
-	pixel_x = 5
-	},
-/obj/item/storage/firstaid/softpack/brute,
-/obj/item/storage/firstaid/softpack/burn{
-	pixel_y = 9;
-	pixel_x = -9;
-	layer = 3.01
-	},
-/turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "xo" = (
 /obj/structure/pipes/vents/pump{
@@ -390,10 +382,6 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "Au" = (
-/obj/structure/machinery/cm_vending/gear/medic_chemical{
-	pixel_y = 20;
-	density = 0
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 1
@@ -405,7 +393,7 @@
 	dir = 8;
 	name = "\improper Medical Office";
 	req_one_access = list();
-	req_one_access_txt = "8;12"
+	req_one_access_txt = "300;302"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -547,11 +535,12 @@
 "KR" = (
 /obj/structure/machinery/cm_vending/sorted/medical{
 	pixel_y = 18;
-	density = 0
+	density = 0;
+	req_access = list(302)
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff"
+	light_power = 0.7
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
@@ -597,16 +586,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
-"LS" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/surgical_case/regular{
-	pixel_y = 13
-	},
-/obj/item/roller{
-	pixel_y = 6
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/medical)
 "MR" = (
 /obj/effect/decal/cleanable/blood/gibs/core,
 /turf/open/floor/almayer/dark_sterile,
@@ -648,9 +627,9 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "Pr" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff"
+	light_power = 0.7
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -798,7 +777,7 @@ OV
 CI
 fy
 hc
-Fh
+aa
 vX
 Cj
 uX
@@ -809,10 +788,10 @@ Fh
 Fh
 BR
 Fh
-Fh
+ab
 Au
 qR
-LS
+uX
 aP
 "}
 (5,1,1) = {"
@@ -823,7 +802,7 @@ rL
 Fh
 Pr
 Vj
-wQ
+uX
 aP
 "}
 (6,1,1) = {"

@@ -763,7 +763,7 @@
 	skills = /datum/skills/rmc/officer
 	faction_group = FACTION_LIST_TWE
 	faction = FACTION_TWE
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
+	access_list = ACCESS_LIST_TWE_TROOP
 
 //*****************************************************************************************************/
 

@@ -464,14 +464,15 @@
 		list("Royal Marine Uniform", round(scale * 10), /obj/item/clothing/under/marine/veteran/royal_marine, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 10), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Mk16 Tactical Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc, VENDOR_ITEM_REGULAR),
+		list("Tactical Beanie", round(scale * 10), /obj/item/clothing/head/beanie/royal_marine, VENDOR_ITEM_REGULAR),
 		list("Radio Headset", round(scale * 10), /obj/item/device/radio/headset/almayer/marine/solardevils/rmc, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("82 Pattern Magazine Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppmags/rmc, VENDOR_ITEM_REGULAR),
 		list("67 Pattern Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc, VENDOR_ITEM_REGULAR),
-		list("Drop Pouch", round(scale * 4), /obj/item/clothing/accessory/storage/droppouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
-		list("Small Pouch", round(scale * 4), /obj/item/clothing/accessory/storage/smallpouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Waist Holster", round(scale * 2), /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", round(scale * 4), /obj/item/clothing/accessory/storage/droppouch/rmc, VENDOR_ITEM_RECOMMENDED),
+		list("Small Pouch", round(scale * 4), /obj/item/clothing/accessory/storage/smallpouch/rmc, VENDOR_ITEM_REGULAR),
+		list("Waist Holster", round(scale * 2), /obj/item/clothing/accessory/storage/holster/waist, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
 		list("Kestrel Armoured Cuirass", round(scale * 10), /obj/item/clothing/suit/marine/veteran/royal_marine, VENDOR_ITEM_REGULAR),

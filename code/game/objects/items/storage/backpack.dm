@@ -1154,6 +1154,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		/obj/item/ammo_box,
 		/obj/item/mortar_shell,
 	)
+	can_hold_skill = list(
+		/obj/item/ammo_box/magazine/nsg23/large = list(SKILL_DOMESTIC, SKILL_DOMESTIC_MASTER),
+		/obj/item/ammo_box/magazine/mk1/large = list(SKILL_DOMESTIC, SKILL_DOMESTIC_MASTER),
+		) //Jank, but amusing to think that the janitor can store these things in a frame pack whilst a marine commando can't
 
 	var/base_icon_state = "backpack_frame"
 

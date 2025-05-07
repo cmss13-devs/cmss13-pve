@@ -167,7 +167,7 @@
 	desc = "A secure storage unit for the senior sergeant of the Royal Marines Commando troop."
 	req_one_access = list(ACCESS_TWE_ARMORY, ACCESS_TWE_TLPREP)
 
-/obj/structure/closet/secure_closet/troop_sergeant/Initialize()
+/obj/structure/closet/secure_closet/rmc_troop_sergeant/Initialize()
 	. = ..()
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/storage/backpack/rmc/frame(src)
@@ -191,7 +191,6 @@
 
 /obj/structure/closet/secure_closet/rmc_smartgunner/Initialize()
 	. = ..()
-	new /obj/item/weapon/gun/smartgun/rmc(src)
 	new /obj/item/smartgun_battery(src)
 	new /obj/item/clothing/suit/marine/veteran/royal_marine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun/holo_targetting(src)

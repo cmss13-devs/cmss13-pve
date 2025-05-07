@@ -186,6 +186,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"aau" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/engineer/rmc,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
+"aav" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/smartgunner/rmc,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
 "aaw" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/almayer/outer,
@@ -224,6 +234,20 @@
 /obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
+"aaB" = (
+/obj/effect/landmark/start/marine/rmc,
+/obj/effect/landmark/late_join,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
+"aaC" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/rmcsmg,
+/obj/item/ammo_box/magazine/m39/squash{
+	pixel_y = 11;
+	pixel_x = 16
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonarmory)
 "aaI" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/medical)
@@ -2480,11 +2504,11 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "aiz" = (
-/obj/structure/largecrate/supply/ammo/m41amk1{
+/obj/structure/largecrate/supply/ammo/nsg23{
 	layer = 3.1;
 	pixel_y = -1
 	},
-/obj/structure/largecrate/supply/ammo/m41amk1{
+/obj/structure/largecrate/supply/ammo/nsg23{
 	pixel_y = 10;
 	layer = 3.2;
 	pixel_x = -2
@@ -4079,7 +4103,27 @@
 "aoj" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/mortar_kit/rmc{
-	pixel_y = 5
+	pixel_y = 11
+	},
+/obj/item/mortar_shell/he{
+	pixel_x = -1;
+	pixel_y = -9
+	},
+/obj/item/mortar_shell/he{
+	pixel_y = -9;
+	pixel_x = -7
+	},
+/obj/item/mortar_shell/he{
+	pixel_y = -9;
+	pixel_x = -13
+	},
+/obj/item/mortar_shell/smoke{
+	pixel_y = -9;
+	pixel_x = 11
+	},
+/obj/item/mortar_shell/smoke{
+	pixel_y = -9;
+	pixel_x = 5
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
@@ -6715,6 +6759,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "axL" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/medic/rmc,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "axM" = (
@@ -19428,11 +19474,11 @@
 	pixel_y = 31;
 	opacity = 0
 	},
-/obj/structure/largecrate/supply/ammo/m41amk1{
+/obj/structure/largecrate/supply/ammo/nsg23{
 	layer = 3.1;
 	pixel_y = -1
 	},
-/obj/structure/largecrate/supply/ammo/m41amk1{
+/obj/structure/largecrate/supply/ammo/nsg23{
 	pixel_y = 10;
 	layer = 3.2
 	},
@@ -19561,21 +19607,12 @@
 /area/golden_arrow/lower_cargo)
 "rZR" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/nsg23{
-	pixel_y = -6;
-	pixel_x = -14
+/obj/item/ammo_box/magazine/nsg23/large{
+	pixel_y = -3
 	},
-/obj/item/ammo_box/magazine/nsg23{
-	pixel_y = 5;
-	pixel_x = 7
-	},
-/obj/item/ammo_box/magazine/nsg23{
-	pixel_y = 8;
-	pixel_x = -6
-	},
-/obj/item/ammo_box/magazine/nsg23{
-	pixel_y = -6;
-	pixel_x = 7
+/obj/item/ammo_box/magazine/nsg23/large{
+	pixel_y = 9;
+	pixel_x = 3
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -20145,7 +20182,12 @@
 /area/golden_arrow/lower_cargo)
 "uwt" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/nade_box/rmc,
+/obj/item/ammo_box/magazine/nade_box/rmc{
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/nade_box/rmc{
+	pixel_y = 8
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "uxq" = (
@@ -20451,6 +20493,14 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/nsg23{
+	pixel_y = -6;
+	pixel_x = 7
+	},
+/obj/item/ammo_box/magazine/nsg23{
+	pixel_y = 5;
+	pixel_x = 7
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -24224,11 +24274,11 @@ aPL
 aFy
 nno
 azh
-axL
+aaB
 abh
-axL
-axL
-axL
+aaB
+aav
+aau
 axL
 aUY
 aWh
@@ -32169,7 +32219,7 @@ pcJ
 afz
 kYQ
 aHZ
-afk
+aaC
 agS
 wDL
 awQ

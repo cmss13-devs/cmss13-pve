@@ -606,7 +606,7 @@
 	starting_attachment_types = null
 
 /obj/item/weapon/gun/pistol/vp78/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 10, "rail_y" = 23, "under_x" = 22, "under_y" = 15, "stock_x" = 18, "stock_y" = 14, "side_rail_x" = 22, "side_rail_y" = 12)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 10, "rail_y" = 23, "under_x" = 22, "under_y" = 15, "stock_x" = 18, "stock_y" = 14, "side_rail_x" = 21, "side_rail_y" = 14)
 
 
 /obj/item/weapon/gun/pistol/vp78/set_gun_config_values()

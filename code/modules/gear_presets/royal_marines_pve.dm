@@ -18,7 +18,7 @@
 	name = "Royal Marine Commando, Troop Sergeant"
 	paygrades = list(PAY_SHORT_RMC5 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM TS"
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP, ACCESS_TWE_ARMORY)
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP, ACCESS_TWE_ARMORY)
 	assignment = JOB_TWE_RMC_TROOPLEADER
 	rank = JOB_TWE_RMC_TROOPLEADER
 	skills = /datum/skills/rmc/officer
@@ -27,7 +27,7 @@
 	name = "Royal Marine Commando, Section Leader"
 	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM STL"
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP)
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP)
 	assignment = JOB_TWE_RMC_SECTIONLEADER
 	rank = JOB_TWE_RMC_SECTIONLEADER
 	skills = /datum/skills/rmc/leader
@@ -36,7 +36,7 @@
 	name = "Royal Marine Commando, Team Leader"
 	paygrades = list(PAY_SHORT_RMC3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM TL"
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP)
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP)
 	assignment = JOB_TWE_RMC_TEAMLEADER
 	rank = JOB_TWE_RMC_TEAMLEADER
 	skills = /datum/skills/rmc/leader
