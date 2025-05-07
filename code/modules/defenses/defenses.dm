@@ -161,8 +161,12 @@
 			faction_group = FACTION_LIST_WY
 		if(FACTION_UPP)
 			faction_group = FACTION_LIST_UPP
-		if(FACTION_CLF)
-			faction_group = FACTION_LIST_CLF
+		if(FACTION_UA_REBEL)
+			faction_group = FACTION_LIST_UA_REBEL
+		if(FACTION_TWE_REBEL)
+			faction_group = FACTION_LIST_TWE_REBEL
+		if(FACTION_CANC)
+			faction_group = FACTION_LIST_CANC
 		if(FACTION_FREELANCER)
 			faction_group = FACTION_LIST_FREELANCER
 		if(FACTION_TWE)

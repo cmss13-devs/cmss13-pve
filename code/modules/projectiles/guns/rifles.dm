@@ -1200,7 +1200,10 @@
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/sling,
 	)
-	starting_attachment_types = list(/obj/item/attachable/bipod/integral, /obj/item/attachable/stock/rifle/collapsible)
+	starting_attachment_types = list(
+		/obj/item/attachable/bipod/integral,
+		/obj/item/attachable/stock/rifle/collapsible,
+	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	gun_category = GUN_CATEGORY_HEAVY
@@ -1228,15 +1231,46 @@
 	wield_delay = WIELD_DELAY_SLOW
 
 /obj/item/weapon/gun/rifle/lmg/tactical
+	desc = "A modification of a modification. Swaps the bipod for a grip, returning it closer to its original assault rifle state."
 	current_mag = /obj/item/ammo_magazine/hpr_box/ap
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip)
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/sling,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/angledgrip,
+	)
+
 /obj/item/weapon/gun/rifle/lmg/tactical/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
 
+/obj/item/weapon/gun/rifle/lmg/tactical/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 13, "stock_x" = 24, "stock_y" = 13)
+
 /obj/item/weapon/gun/rifle/lmg/army
+	desc = "The US Army's adoption of the M41AE2 adds a longer barrel and improved retention system, operating in a more traditional machine gun role."
 	current_mag = /obj/item/ammo_magazine/hpr_box/ap
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel, /obj/item/attachable/bipod/integral, /obj/item/attachable/stock/rifle/collapsible)
+	starting_attachment_types = list(
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/bipod/integral,
+	)
+
 /obj/item/weapon/gun/rifle/lmg/army/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
