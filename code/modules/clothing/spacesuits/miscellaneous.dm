@@ -25,8 +25,8 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
-	light_range = 4.5
-	light_power = 0.8
+	light_range = 5
+	light_power = 1
 	var/emergency_var_edit_light_boost_in_increments_of_zero_and_a_half = 0
 	item_state = "pressure_white"
 	icon_state = "pressure_white"
@@ -37,7 +37,7 @@
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_rad = CLOTHING_ARMOR_HARDCORE
+	armor_rad = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|BYPASSFORINJECTOR|ALLOWINTERNALS
 	flags_inv_hide = HIDETOPHAIR
@@ -147,7 +147,7 @@
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_rad = CLOTHING_ARMOR_HARDCORE
+	armor_rad = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	time_to_unequip = 50
 	time_to_equip = 50
@@ -350,14 +350,18 @@
 	item_state = "pressure_uscm"
 	icon_state = "pressure_uscm"
 	helmet_color = "uscm"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 
 /obj/item/clothing/suit/space/pressure/uscm
 	name = "\improper USCM MK.35 pressure suit"
 	desc = "A heavy, bulky military-grade space suit utilized by the United States Colonial Marines and a few other American or UA organizations."
 	item_state = "pressure_uscm"
 	icon_state = "pressure_uscm"
-	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS|PROTECTFROMWEATHER
 	breach_vulnerability = SPACESUIT_BREACH_COMBAT
@@ -372,17 +376,22 @@
 	item_state = "pressure_upp"
 	icon_state = "pressure_upp"
 	helmet_color = "upp"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
 	light_color = COLOR_VIVID_RED
-	light_power = 1.1
+	light_power = 1.2
 
 /obj/item/clothing/suit/space/pressure/upp
 	name = "\improper UPPAC Sokol-KV2 pressure suit"
 	desc = "A heavy, bulky military-grade space suit utilized by the Union of Progressive Peoples Armed Collective and a few other UPP organizations."
 	item_state = "pressure_upp"
 	icon_state = "pressure_upp"
-	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|SMARTGUN_HARNESS|PROTECTFROMWEATHER
 	breach_vulnerability = SPACESUIT_BREACH_COMBAT
