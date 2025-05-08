@@ -272,6 +272,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/clothing/glasses/night/m42_night_goggles,
+		/obj/item/attachable/bipod,
 	)
 
 GLOBAL_LIST_INIT(cm_vending_clothing_rmc_sniper, list(

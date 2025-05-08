@@ -139,6 +139,11 @@
 		aim_multiplier = 0.6
 		aiming_buffs++
 
+	var/mob/living/carbon/xenomorph/bug
+	if(target == bug)
+		aim_multiplier = 0.5
+		aiming_buffs++
+
 	if(HAS_TRAIT(target, TRAIT_SPOTTER_LAZED))
 		aim_multiplier = 0.5
 		aiming_buffs++
