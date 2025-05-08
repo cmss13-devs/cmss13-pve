@@ -239,8 +239,7 @@
 					suit_to_repair.attackby(src, target)
 					return
 				else
-					to_chat(user, SPAN_NOTICE("The spacesuit is already patched!"))
-					return
+					to_chat(user, SPAN_NOTICE("The [suit_to_repair] is already patched!"))
 
 
 		if (!limb) return

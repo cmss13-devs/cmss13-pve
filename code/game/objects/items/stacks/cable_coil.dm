@@ -318,8 +318,8 @@
 				suit_to_repair.attackby(src, M)
 				return
 			else
-				to_chat(user, SPAN_NOTICE("The spacesuit is already patched!"))
-				return
+				to_chat(user, SPAN_NOTICE("The [suit_to_repair] is already patched!"))
+
 
 		var/obj/limb/S = H.get_limb(user.zone_selected)
 		if(!(S.status & (LIMB_ROBOT|LIMB_SYNTHSKIN)) || user.a_intent != INTENT_HELP)
