@@ -54,6 +54,7 @@
 	speak_emote = list("clicks")
 	emote_hear = list("clicks")
 	emote_see = list("clacks")
+	stop_automated_movement = FALSE
 	speak_chance = 1
 	turns_per_move = 5
 	meat_type = /obj/item/reagent_container/food/snacks/meat
