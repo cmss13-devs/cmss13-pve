@@ -58,7 +58,7 @@
 		list("Vertical Grip", 15, /obj/item/attachable/verticalgrip, null, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", 0, null, null, null),
-		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/m94, null, VENDOR_ITEM_RECOMMENDED),
+		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/flare, null, VENDOR_ITEM_RECOMMENDED),
 		list("Smoke Grenade", 7, /obj/item/explosive/grenade/smokebomb, null, VENDOR_ITEM_REGULAR),
 		list("R2175/B HIDP grenade packet", 7, /obj/item/storage/box/packet/rmc/incin, null, VENDOR_ITEM_REGULAR),
 		list("R2175/A HEDP grenade packet", 7, /obj/item/storage/box/packet/rmc/he, null, VENDOR_ITEM_REGULAR),
@@ -86,7 +86,7 @@
 		list("VP70 Magazine (9mm)", 5, /obj/item/ammo_magazine/pistol/vp70, null, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", -1, null, null),
-		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/m94, null, VENDOR_ITEM_RECOMMENDED),
+		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/flare, null, VENDOR_ITEM_RECOMMENDED),
 		list("Smoke Grenade", 7, /obj/item/explosive/grenade/smokebomb, null, VENDOR_ITEM_REGULAR),
 		list("R2175/B HIDP grenade packet", 7, /obj/item/storage/box/packet/rmc/incin, null, VENDOR_ITEM_REGULAR),
 		list("R2175/A HEDP grenade packet", 7, /obj/item/storage/box/packet/rmc/he, null, VENDOR_ITEM_REGULAR),

@@ -21,6 +21,7 @@
 
 			var/atom/movable/mob_container
 			mob_container = M
+			M.invisibility = initial(invisibility)
 			mob_container.forceMove(get_turf(src))
 			M.reset_view()
 
@@ -62,6 +63,7 @@
 	mob_holder.desc = desc
 	mob_holder.gender = gender
 	mob_holder.attack_hand(grabber)
+	invisibility = INVISIBILITY_MAXIMUM
 
 	to_chat(grabber, "You scoop up [src].")
 	to_chat(src, "[grabber] scoops you up.")

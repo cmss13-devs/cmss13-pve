@@ -107,7 +107,7 @@
 	icon_state = "m56_drum"
 	max_rounds = 500 //Should be 500 in total.
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/rifle/heavy
+	default_ammo = /datum/ammo/bullet/rifle/heavy/tracer
 	gun_type = /obj/item/weapon/gun/smartgun
 
 /obj/item/ammo_magazine/smartgun/dirty
@@ -395,3 +395,60 @@
 	default_ammo = /datum/ammo/rocket/wp/upp
 	gun_type = /obj/item/weapon/gun/launcher/rocket/upp
 	reload_delay = 85
+
+//-------------------------------------------------------
+// XM99 power/fuel cells
+
+/obj/item/ammo_magazine/plasma
+	name = "\improper XM99A1 battery drum"
+	desc = "A hybrid battery cell and CdTe-pellet magazine designed to fit the XM99A series of phased plasma pulse rifles. Do not puncture or put in a microwave."
+	caliber = "40W"
+	icon_state = "xm99a_cell"
+	w_class = SIZE_MEDIUM
+	flags_magazine = NO_FLAGS //It's a battery, can't yank bullets or shells outa this
+	max_rounds = 4
+	default_ammo = /datum/ammo/energy/plasma
+	gun_type = /obj/item/weapon/gun/XM99
+
+// The "round-remover" power/fuel cell for the XM99
+/obj/item/ammo_magazine/plasma/gibber
+	name = "\improper XM99A1 lithium battery drum"
+	desc = "A hybrid battery cell and LiTe-pellet magazine designed to fit the XM99A series of phased plasma pulse rifles. Do not puncture, put in a microwave, submerge in water or look at funny. Highly volatile."
+	icon_state = "xm99a_lcell"
+	max_rounds = 2
+	default_ammo = /datum/ammo/energy/plasma/heavy
+
+//-------------------------------------------------------
+//P9 SHARP Rifle
+
+/obj/item/ammo_magazine/rifle/sharp
+	name = "sharp rifle magazine"
+	icon_state = "sharprifle"
+	item_state = "sharprifle"
+
+	w_class = SIZE_MEDIUM
+	max_rounds = 10
+	default_ammo = /datum/ammo/rifle/sharp/explosive
+	gun_type = /obj/item/weapon/gun/rifle/sharp
+	flags_magazine = NO_FLAGS
+
+	description_ammo = "darts"
+
+/obj/item/ammo_magazine/rifle/sharp/explosive
+	name = "\improper 9X-E sticky explosive dart magazine"
+	desc = "A specialized sticky explosive dart magazine."
+
+/obj/item/ammo_magazine/rifle/sharp/track
+	name = "\improper 9X-T sticky tracking dart magazine"
+	desc = "A specialized tracking dart magazine."
+	icon_state = "sharprifle_tracker"
+	default_ammo = /datum/ammo/rifle/sharp/track
+
+/obj/item/ammo_magazine/rifle/sharp/track/infinite
+	default_ammo = /datum/ammo/rifle/sharp/track/infinite
+
+/obj/item/ammo_magazine/rifle/sharp/flechette
+	name = "\improper 9X-F flechette dart magazine"
+	desc = "A specialized flechette dart magazine."
+	icon_state = "sharprifle_flechette"
+	default_ammo = /datum/ammo/rifle/sharp/flechette

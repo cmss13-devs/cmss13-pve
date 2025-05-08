@@ -89,6 +89,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/toggle_human_ai_tweaks,
 	/client/proc/open_human_squad_spawner_panel,
 	/client/proc/open_human_ai_spawner_panel,
+	/client/proc/toggle_barricade_creation, // Stops cades from being built
 	))
 
 
@@ -153,6 +154,7 @@ GLOBAL_LIST_INIT(admin_verbs_minor_event, list(
 	/client/proc/toggle_events,
 	/client/proc/toggle_shipside_sd,
 	/client/proc/shakeshipverb,
+	/client/proc/shakegroundverb,
 	/client/proc/adminpanelweapons,
 	/client/proc/admin_general_quarters,
 	/client/proc/admin_biohazard_alert,
@@ -238,6 +240,7 @@ GLOBAL_LIST_INIT(admin_verbs_debug, list(
 	/datum/admins/proc/view_tgui_log, /*shows the server TGUI log for this round*/
 	/client/proc/admin_blurb,
 	/datum/admins/proc/open_shuttlepanel,
+	/client/proc/allow_browser_inspect,
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_debug_advanced, list(
@@ -357,6 +360,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
 		add_verb(src, /client/proc/admin_marine_announcement)
+		add_verb(src, /client/proc/screen_alert_menu)
+		add_verb(src, /client/proc/toggle_intro)
 		add_verb(src, /client/proc/game_master_rename_platoon)
 		add_verb(src, /client/proc/toggle_vehicle_blockers)
 		add_verb(src, /client/proc/toggle_ai_xeno_weeding)
@@ -397,6 +402,8 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/toggle_rappel_menu,
 		/client/proc/toggle_fire_support_menu,
 		/client/proc/admin_marine_announcement,
+		/client/proc/screen_alert_menu,
+		/client/proc/toggle_intro,
 		GLOB.admin_verbs_admin,
 		GLOB.admin_verbs_ban,
 		GLOB.admin_verbs_minor_event,
