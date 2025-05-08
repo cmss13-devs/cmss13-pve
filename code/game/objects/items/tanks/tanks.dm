@@ -125,10 +125,12 @@
 	return FALSE
 
 /mob/living/carbon/human/proc/check_for_weather_protection()
-	if(wear_suit && (wear_mask.flags_inventory & PROTECTFROMWEATHER))
-		return TRUE
-	if(w_uniform && (w_uniform.flags_inventory & PROTECTFROMWEATHER))
-		return TRUE
+	if(wear_suit)
+		if(wear_suit && (wear_mask.flags_inventory & PROTECTFROMWEATHER))
+			return TRUE
+	if(w_uniform)
+		if(w_uniform && (w_uniform.flags_inventory & PROTECTFROMWEATHER))
+			return TRUE
 	return FALSE
 
 /obj/item/tank/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)

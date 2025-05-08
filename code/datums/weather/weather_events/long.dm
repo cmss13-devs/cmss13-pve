@@ -77,6 +77,7 @@
 	turf_overlay_icon = 'icons/effects/weather_spacesuit.dmi'
 	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
 	lightning_chance = 5
+	turf_overlay_alpha = 200
 
 /datum/weather_event/blizzard/infinite/rain
 	name = "GM smooth rain"
