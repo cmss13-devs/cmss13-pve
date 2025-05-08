@@ -9,7 +9,7 @@
 	access = list(ACCESS_LIST_CLF_BASE)
 
 /datum/equipment_preset/rebel/handgunner/get_assignment(mob/living/carbon/human/new_human)
-	return "Rifleman"
+	return "Recruit"
 
 /datum/equipment_preset/rebel/handgunner/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -30,7 +30,7 @@
 	if(prob(20))
 		add_rebel_ua_suit(new_human)
 	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_BACK)
 	//limbs
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
@@ -45,7 +45,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/pfc
 	idtype = /obj/item/card/id/dogtag
-	assignment = "Revolutionary Guardsman"
+	assignment = "Recruit"
 
 /datum/equipment_preset/clf/handgunner/New()
 	. = ..()
