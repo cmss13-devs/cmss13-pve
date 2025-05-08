@@ -40,7 +40,11 @@
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
+#define MAP_LV295_BLACKSITE "LV295 Blacksite"
 #define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
+#define MAP_CANYON_32B "Canyon 32B"
+#define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
+#define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
@@ -192,7 +196,7 @@
 /// how long in ticks we wait before assuming the docking controller is broken or blown up.
 #define DOCK_ATTEMPT_TIMEOUT 20 SECONDS
 #define DROPSHIP_WARMUP_TIME 10 SECONDS
-#define DROPSHIP_DROP_MSG_DELAY 30 SECONDS
+#define DROPSHIP_DROP_MSG_DELAY 5 SECONDS
 #define DROPSHIP_TRANSIT_DURATION 100 SECONDS
 #define DROPSHIP_CORSAT_DURATION 30 SECONDS
 #define ELEVATOR_TRANSIT_DURATION 5 SECONDS

@@ -325,13 +325,13 @@ their unique feature is that a direct hit will buff your damage and firerate
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/gyro, // Under
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/magnetic_harness/lever_sling,
 		/obj/item/attachable/stock/r4t, // Stock
+		/obj/item/attachable/lasersight, // Special
+		/obj/item/attachable/flashlight,
 		)
 	map_specific_decoration = TRUE
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AMMO_COUNTER
@@ -339,7 +339,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 	civilian_usable_override = TRUE
 
 /obj/item/weapon/gun/lever_action/r4t/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 21, "under_x" = 24, "under_y" = 16, "stock_x" = 15, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 21, "under_x" = 24, "under_y" = 16, "stock_x" = 15, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 17)
 
 //===================THE XM88===================\\
 
@@ -362,7 +362,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 	lever_super_sound = 'sound/weapons/handling/gun_lever_action_superload.ogg'
 	lever_hitsound = 'sound/weapons/handling/gun_boomslang_hitsound.ogg'
 	flags_equip_slot = SLOT_BACK
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AMMO_COUNTER
 	levering_sprite = null
 	flags_gun_lever_action = USES_STREAKS
@@ -541,3 +541,6 @@ their unique feature is that a direct hit will buff your damage and firerate
 #undef FLOATING_PENETRATION_TIER_2
 #undef FLOATING_PENETRATION_TIER_3
 #undef FLOATING_PENETRATION_TIER_4
+
+/obj/item/weapon/gun/lever_action/xm88/built
+	starting_attachment_types = list(/obj/item/attachable/stock/xm88,/obj/item/attachable/scope/mini/xm88)

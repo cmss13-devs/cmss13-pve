@@ -197,7 +197,7 @@ GLOBAL_DATUM(Banlist, /savefile)
 
 	data += "</table>"
 
-	show_browser(usr, data, "Unban Panel", "unbanp", "size=875x400")
+	show_browser(usr, data, "Unban Panel", "unbanp", width = 875, height = 400)
 
 /datum/admins/proc/stickypanel()
 	var/add_sticky = "<a href='byond://?src=\ref[src];[HrefToken()];sticky=1;new_sticky=1'>Add Sticky Ban</a>"
@@ -223,7 +223,7 @@ GLOBAL_DATUM(Banlist, /savefile)
 
 	data += "</table>"
 
-	show_browser(owner, data, "Stickyban Panel", "sticky", "size=875x400")
+	show_browser(owner, data, "Stickyban Panel", "sticky", width = 875, height = 400)
 
 //////////////////////////////////// DEBUG ////////////////////////////////////
 

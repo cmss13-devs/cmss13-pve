@@ -69,7 +69,7 @@
 
 ///Extra text to append when attached to another clothing item and the host clothing is examined.
 /obj/item/clothing/accessory/proc/additional_examine_text()
-	return "."
+	return "attached to it."
 
 /obj/item/clothing/accessory/blue
 	name = "blue tie"
@@ -414,6 +414,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of USCM FORECON. Swift, Silent, Deadly."
 	icon_state = "forecon_patch"
 
+/obj/item/clothing/accessory/patch/sapper
+	name = "USCM Combat Engineering patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 4th Combat Engineering Battalion, part of the USCM 2nd Colonial Support Group."
+	icon_state = "sapper_patch"
+
 /obj/item/clothing/accessory/patch/royal_marines
 	name = "TWE Royal Marines Commando patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the royal marines commando."
@@ -592,6 +597,7 @@
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 /obj/item/clothing/accessory/storage/webbing
@@ -705,6 +711,18 @@
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/crowbar(src)
 	new /obj/item/tool/wirecutters(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/device/multitool(src)
+
+/obj/item/clothing/accessory/storage/tool_webbing/tactical
+	hold = /obj/item/storage/internal/accessory/tool_webbing/tactical
+
+/obj/item/storage/internal/accessory/tool_webbing/tactical/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
 	new /obj/item/stack/cable_coil(src)
 	new /obj/item/device/multitool(src)
 
@@ -993,10 +1011,10 @@
 	icon_state = "holster"
 
 /obj/item/clothing/accessory/storage/holster/waist
-	name = "shoulder holster"
-	desc = "A handgun holster. Made of expensive leather."
-	icon_state = "holster"
-	item_state = "holster_low"
+	name = "waist holster"
+	desc = "A handgun holster."
+	icon_state = "holster_hip"
+	item_state = "holster_hip"
 
 /*
 	Holobadges are worn on the belt or neck, and can be used to show that the holder is an authorized
@@ -1097,6 +1115,120 @@
 /obj/item/clothing/accessory/flak/od
 	icon_state = "flakod"
 	item_state = "flakod"
+
+//===========================//Wrist-worn accessories, just watches currently\\================================\\
+
+/obj/item/clothing/accessory/wrist
+	name = "bracelet"
+	desc = "A simple bracelet made from a strip of fabric."
+	icon_state = "bracelet"
+	item_state = null
+	slot = ACCESSORY_SLOT_WRIST_L
+	var/which_wrist = "left wrist"
+
+/obj/item/clothing/accessory/wrist/get_examine_text(mob/user)
+	. = ..()
+
+	switch(slot)
+		if(ACCESSORY_SLOT_WRIST_L)
+			which_wrist = "left wrist"
+		if(ACCESSORY_SLOT_WRIST_R)
+			which_wrist = "right wrist"
+	. += "It will be worn on the [which_wrist]."
+
+/obj/item/clothing/accessory/wrist/additional_examine_text()
+	return "on the [which_wrist]."
+
+/obj/item/clothing/accessory/wrist/attack_self(mob/user)
+	..()
+
+	switch(slot)
+		if(ACCESSORY_SLOT_WRIST_L)
+			slot = ACCESSORY_SLOT_WRIST_R
+			to_chat(user, SPAN_NOTICE("[src] will be worn on the right wrist."))
+		if(ACCESSORY_SLOT_WRIST_R)
+			slot = ACCESSORY_SLOT_WRIST_L
+			to_chat(user, SPAN_NOTICE("[src] will be worn on the left wrist."))
+
+/obj/item/clothing/accessory/wrist/watch
+	name = "Seiko Pulsemeter wristwatch"
+	desc = "Model S234-501A, a durable quartz-based wristwatch issued to most Colonial Marines who pass through basic training."
+	icon_state = "wristwatch_basic"
+	item_state = "wristwatch_black"
+	w_class = SIZE_SMALL
+	flags_equip_slot = SLOT_HANDS
+
+/obj/item/clothing/accessory/wrist/watch/get_examine_text(mob/user)
+	. = ..()
+
+	. += "It reads: [SPAN_NOTICE("[worldtime2text()]")]"
+
+/obj/item/clothing/accessory/wrist/watch/additional_examine_text()
+	. = ..()
+
+	. += " It reads: [SPAN_NOTICE("[worldtime2text()]")]"
+
+/obj/item/storage/box/watch_box
+	name = "\improper Seiko Pulsemeter wristwatch storage case"
+	desc = "A tough-wearing case to keep an expensive wristwatch safe when not being worn."
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "pdt_box"
+	can_hold = list(/obj/item/clothing/accessory/wrist/watch)
+	foldable = /obj/item/stack/sheet/cardboard
+	storage_slots = 1
+	w_class = SIZE_SMALL
+	max_w_class = SIZE_SMALL
+
+/obj/item/storage/box/watch_box/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch(src)
+
+/obj/item/clothing/accessory/wrist/watch/bishop
+	name = "Seiko 7A28-6000 wristwatch"
+	desc = "A fancy black-bodied wristwatch. Once set correctly, it always holds the right time. For the connoisseurs of precision."
+	icon_state = "wristwatch_bishop"
+	item_state = "wristwatch_black"
+
+/obj/item/storage/box/watch_box/bishop
+	name = "\improper Seiko 7A28-6000 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/bishop/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/bishop(src)
+
+/obj/item/clothing/accessory/wrist/watch/ripley
+	name = "Seiko 7A28-7000 wristwatch"
+	desc = "With the pioneering design of analog quartz chronographs beating inside it, this asymetric wristwatch is perfect for anyone who can remain standing where others have all fallen."
+	icon_state = "wristwatch_ripley"
+	item_state = "wristwatch_silver"
+
+/obj/item/storage/box/watch_box/ripley
+	name = "\improper Seiko 7A28-7000 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/ripley/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/ripley(src)
+
+/obj/item/clothing/accessory/wrist/watch/burke
+	name = "Seiko H556-5050 wristwatch"
+	desc = "A more upmarket wristwatch tailored towards junior executives & 'company guys' all across the galaxy. Flashy, but not horribly ostentatious."
+	icon_state = "wristwatch_burke"
+	item_state = "wristwatch_silver"
+
+/obj/item/storage/box/watch_box/burke
+	name = "\improper Seiko H556-5050 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/burke/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/burke(src)
+
+/obj/item/clothing/accessory/wrist/watch/dallas
+	name = "Samani E-125 wristwatch"
+	desc = "Advertised as being 'A new dawn of precision digital watches', the E-125 became a popular hit with members of the civil aerospace industry."
+	icon_state = "wristwatch_dallas"
+	item_state = "wristwatch_fancy"
+
+/obj/item/storage/box/watch_box/dallas
+	name = "\improper Samani E-125 wristwatch storage case"
+
+/obj/item/storage/box/watch_box/dallas/fill_preset_inventory()
+	new /obj/item/clothing/accessory/wrist/watch/dallas(src)
 
 //===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
 
@@ -1252,6 +1384,7 @@
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg/m39,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 //Partial Pre-load For Props
@@ -1286,11 +1419,45 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(
 		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/plasma,
 	)
+
+//Pre-load For Army Props
+//===
+/obj/item/clothing/accessory/storage/webbing/m3/small/army
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyalt
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyleader
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/device/binoculars/range/designator(src)
+
+//===
 
 /obj/item/clothing/accessory/storage/webbing/m3/m40
 	name = "\improper M3 Pattern Grenade Webbing"
-	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40 grenades."
+	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40-hull grenades."
 	icon_state = "m3webbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
 
@@ -1298,13 +1465,20 @@
 	storage_slots = 7
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/super,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
-		/obj/item/explosive/grenade/high_explosive/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/flare,
+		/obj/item/explosive/grenade/high_explosive/training,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/smokebomb/green,
+		/obj/item/explosive/grenade/smokebomb/red,
+		/obj/item/explosive/grenade/metal_foam,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
+		/obj/item/explosive/grenade/tear/marine,
 	)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon
@@ -1331,6 +1505,7 @@
 	storage_slots = 4
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/rifle/ag80,
 		/obj/item/ammo_magazine/pistol/t73,
 		/obj/item/ammo_magazine/pistol/np92,
 		/obj/item/ammo_magazine/handful/shotgun/heavy,
@@ -1365,7 +1540,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
 	name = "\improper M3-R Pattern Grenade Webbing"
-	desc = "An alternative to the M3-R Pattern webbing fitted to store M40 grenades."
+	desc = "An alternative to the M3-R Pattern webbing fitted to store M40-hull grenades."
 	icon_state = "m3rwebbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
 
@@ -1410,7 +1585,7 @@
 		select_gamemode_skin(type)
 	update_icon()
 
-//Partial Pre-load For Props
+//Pre-load For Props
 
 /obj/item/clothing/accessory/storage/webbing/m56/preset
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
@@ -1419,7 +1594,7 @@
 	storage_slots = 3
 
 /obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 
@@ -1435,11 +1610,18 @@
 	storage_slots = 4
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/super,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
-		/obj/item/explosive/grenade/high_explosive/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/flare,
+		/obj/item/explosive/grenade/high_explosive/training,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/smokebomb/green,
+		/obj/item/explosive/grenade/smokebomb/red,
+		/obj/item/explosive/grenade/metal_foam,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
+		/obj/item/explosive/grenade/tear/marine,
 	)

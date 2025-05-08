@@ -253,6 +253,7 @@
 	icon_state = "menorah"
 	item_state = "menorah"
 	light_range = 2
+	light_color = LIGHT_COLOR_CANDLE
 	w_class = SIZE_LARGE
 	on = 1
 	breaking_sound = null
@@ -264,6 +265,7 @@
 	icon_state = "candelabra"
 	force = 15
 	on = TRUE
+	light_color = LIGHT_COLOR_CANDLE
 
 	breaking_sound = null
 
@@ -279,6 +281,7 @@
 	desc = "An emergency light tube mounted onto a tripod. It seemingly lasts forever."
 	icon_state = "tripod_lamp"
 	light_range = 6//pretty good
+	light_color = LIGHT_COLOR_XENON
 	w_class = SIZE_LARGE
 	on = 1
 
@@ -531,6 +534,12 @@
 		return INITIALIZE_HINT_QDEL
 	set_light(light_range)
 	fuel = amount * 5 SECONDS
+
+/obj/item/device/flashlight/flare/upp
+	name = "\improper R52 flare"
+	desc = "A red UPPAC-issued flare."
+	icon_state = "upp_flare"
+	item_state = "upp_flare"
 
 /obj/item/device/flashlight/slime
 	gender = PLURAL
