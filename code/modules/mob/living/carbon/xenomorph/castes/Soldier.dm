@@ -257,8 +257,8 @@
 
 /datum/action/xeno_action/activable/headbite/soldier
 	default_ai_action = TRUE
-	ai_prob_chance = 95 // Absolutely DEAD if the alien is angry enough.
-	xeno_cooldown = 30 SECONDS // Don't want to chain these, as unlikely as that could be.
+	ai_prob_chance = 90 // Absolutely DEAD if the alien is angry enough.
+	xeno_cooldown = 60 SECONDS // Don't want to chain these, as unlikely as that could be.
 
 /datum/action/xeno_action/activable/headbite/soldier/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	return parent.check_additional_ai_activation(AGGRESSION_HEADBITE) && DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target)
