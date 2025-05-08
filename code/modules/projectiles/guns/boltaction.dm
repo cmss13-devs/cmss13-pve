@@ -120,6 +120,8 @@
 	if(reload_sound)
 		playsound(user, reload_sound, 25, 1, 5)
 
+/obj/item/weapon/gun/boltaction/noscope
+	starting_attachment_types = list(/obj/item/attachable/stock/hunting, /obj/item/attachable/bayonet)
 
 /obj/item/weapon/gun/boltaction/vulture
 	name = "\improper M707 \"Vulture\" anti-materiel rifle"

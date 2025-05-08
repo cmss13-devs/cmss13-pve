@@ -733,6 +733,77 @@
 	new_human.g_facial = 255
 	new_human.b_facial = 255
 
+/datum/equipment_preset/synth/working_joe/evil
+	name = "Synthetic - Evil Joe"
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_WJ
+	faction_group = list(FACTION_WJ)
+
+/datum/equipment_preset/synth/working_joe/evil/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = null
+	new_human.underwear = null
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/spray/cleaner(new_human.back), WEAR_IN_BACK)
+	var/item = pick(/obj/item/maintenance_jack, /obj/item/tool/hatchet, /obj/item/tool/kitchen/rollingpin, /obj/item/tool/kitchen/knife, /obj/item/tool/kitchen/knife/butcher, /obj/item/tool/pickaxe, /obj/item/tool/shovel, /obj/item/tool/surgery/circular_saw, /obj/item/tool/surgery/surgicaldrill)
+	if(prob(75))
+		new_human.equip_to_slot_or_del(new item(new_human), WEAR_R_HAND)
+
+/datum/equipment_preset/synth/working_joe/evil/gun
+	name = "Synthetic - Evil Joe (Nailgun)"
+
+/datum/equipment_preset/synth/working_joe/evil/gun/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = null
+	new_human.underwear = null
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/nailgun(new_human.back), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/nailgun(new_human.back), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/nailgun(new_human.back), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/nailgun(new_human.back), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/nailgun(new_human), WEAR_WAIST)
+
+
+/datum/equipment_preset/synth/working_joe/evil/flamer
+	name = "Synthetic - Evil Joe (Flamer)"
+	joe_type = SYNTH_HAZARD_JOE
+
+/datum/equipment_preset/synth/working_joe/evil/flamer/load_gear(mob/living/carbon/human/new_human)
+	var/choice = rand(1,2)
+	new_human.undershirt = null
+	new_human.underwear = null
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/joe(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/joe(new_human), WEAR_HANDS)
+
+	switch(choice)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe/engi(new_human), WEAR_BODY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe/engi/overalls(new_human), WEAR_BODY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flamertank/weak(new_human.back), WEAR_IN_BACK)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/flamer/weak(new_human))
+
+/datum/equipment_preset/synth/working_joe/evil/security
+	name = "Synthetic - Evil Joe (Baton)"
+
+/datum/equipment_preset/synth/working_joe/evil/security/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = null
+	new_human.underwear = null
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET) //don't remove shrap by yourself, go to android maintenance or have ARES call a human handler!
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	var/baton = pick(/obj/item/weapon/baton/cattleprod/on, /obj/item/weapon/baton/on)
+	new_human.put_in_active_hand(new baton(new_human))
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/shield/riot(new_human), WEAR_L_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/riot(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/riot(new_human), WEAR_JACKET)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/synth/survivor/cultist_synth
@@ -760,6 +831,7 @@
 	var/obj/item/clothing/head/cultist_hood/hood = new /obj/item/clothing/head/cultist_hood(new_human)
 	hood.flags_item |= NODROP|DELONDROP
 	new_human.equip_to_slot_or_del(hood, WEAR_HEAD)
+
 
 //*****************************************************************************************************/
 

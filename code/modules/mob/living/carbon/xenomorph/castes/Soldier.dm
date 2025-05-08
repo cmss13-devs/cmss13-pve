@@ -193,6 +193,12 @@
 	charge_time = null /// AI soldiers can just use this whenever instead of having to charge it up.
 	xeno_cooldown = 11 SECONDS
 
+/datum/action/xeno_action/activable/tail_stab/crusher /// Specific to soldiers, so that not all xenos get it.
+	default_ai_action = TRUE
+	ai_prob_chance = 50 //So they are not spamming it quite as often.
+	charge_time = null /// AI soldiers can just use this whenever instead of having to charge it up.
+	xeno_cooldown = 11 SECONDS
+
 /datum/action/xeno_action/activable/tail_stab/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	/// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
 	/// We do not need to check for distance here as the tailstab itself will do that; that distance being 2.
