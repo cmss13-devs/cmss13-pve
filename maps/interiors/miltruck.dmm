@@ -19,6 +19,18 @@
 	pixel_x = -32;
 	tag = "back_left"
 	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	pixel_y = 16;
+	buckle_offset_y = 16;
+	buckle_offset_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 16;
+	buckle_offset_y = 16;
+	buckle_offset_x = 8
+	},
 /obj/effect/vehicle_roof/van,
 /turf/open/shuttle/vehicle/floor_1_7,
 /area/interior/vehicle/van)
@@ -28,6 +40,13 @@
 	icon_state = "exterior_door_truck";
 	layer = 5.2;
 	pixel_y = 32
+	},
+/obj/structure/interior_wall/van{
+	alpha = 50;
+	icon_state = "background_1";
+	layer = 5.2;
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/void/vehicle,
 /area/space)
@@ -54,12 +73,6 @@
 	buckle_offset_y = 2;
 	dir = 1;
 	buckle_offset_x = -8
-	},
-/obj/structure/interior_wall/van{
-	alpha = 50;
-	icon_state = "background_1";
-	layer = 5.2;
-	pixel_y = 32
 	},
 /turf/open/shuttle/vehicle/floor_1_9,
 /area/interior/vehicle/van)
@@ -103,12 +116,6 @@
 	dir = 1;
 	buckle_offset_x = 2
 	},
-/obj/structure/interior_wall/van{
-	alpha = 50;
-	icon_state = "background_1";
-	layer = 5.2;
-	pixel_y = 32
-	},
 /turf/open/shuttle/vehicle/floor_1_10,
 /area/interior/vehicle/van)
 "D" = (
@@ -129,12 +136,6 @@
 	buckle_offset_y = 2;
 	dir = 1;
 	buckle_offset_x = -8
-	},
-/obj/structure/interior_wall/van{
-	alpha = 50;
-	icon_state = "background_1";
-	layer = 5.2;
-	pixel_y = 32
 	},
 /turf/open/shuttle/vehicle/floor_1_1,
 /area/interior/vehicle/van)
@@ -158,6 +159,18 @@
 /turf/open/shuttle/vehicle/floor_3_11,
 /area/interior/vehicle/van)
 "I" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	pixel_y = 16;
+	buckle_offset_y = 16;
+	buckle_offset_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 16;
+	buckle_offset_y = 16;
+	buckle_offset_x = 8
+	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "roof_3"
 	},
@@ -166,19 +179,8 @@
 "L" = (
 /obj/structure/interior_wall/van{
 	icon_state = "background_1";
-	layer = 2.9
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
-	pixel_y = -16;
-	buckle_offset_y = -16;
-	buckle_offset_x = -8
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 9;
-	pixel_y = -16;
-	buckle_offset_y = -16;
-	buckle_offset_x = 9
+	layer = 2.9;
+	density = 0
 	},
 /obj/effect/vehicle_roof/van,
 /turf/open/void/vehicle,
@@ -194,18 +196,6 @@
 	icon_state = "background_2";
 	layer = 2.9
 	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 9;
-	pixel_y = -16;
-	buckle_offset_y = -16;
-	buckle_offset_x = 9
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
-	pixel_y = -16;
-	buckle_offset_y = -16;
-	buckle_offset_x = -8
-	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "roof_2"
 	},
@@ -214,6 +204,18 @@
 "Q" = (
 /obj/effect/landmark/interior/spawn/interior_viewport/simple{
 	pixel_y = 30
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	pixel_y = 16;
+	buckle_offset_y = 16;
+	buckle_offset_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 16;
+	buckle_offset_y = 16;
+	buckle_offset_x = 8
 	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "roof_2"
@@ -224,18 +226,6 @@
 /obj/structure/interior_wall/van{
 	icon_state = "background_3";
 	layer = 2.9
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 9;
-	pixel_y = -16;
-	buckle_offset_y = -16;
-	buckle_offset_x = 9
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8;
-	pixel_y = -16;
-	buckle_offset_y = -16;
-	buckle_offset_x = -8
 	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "roof_3"
