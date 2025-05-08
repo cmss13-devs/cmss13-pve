@@ -12,6 +12,7 @@
 
 	//// Optional vars
 	var/turf_overlay_icon_state // The icon to set on the VFX holder instanced into every turf at round start
+	var/turf_overlay_icon = 'icons/effects/weather.dmi'
 	var/turf_overlay_alpha = 255
 
 	var/effect_message = "tell a coder to fix this | WEATHER EVENT EFFECT MESSAGE"

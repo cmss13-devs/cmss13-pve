@@ -116,6 +116,10 @@
 	name = "Emergency SoftSuit™"
 	desc = "An off-brand emergency compression suit made from flexible material and tubing apart from the plastic chestplate, which sits a 16x2 LCD monochrome screen you have to crane your neck to see. Is quite fragile, does not offer protection against high heat, high pressure and sharp objects. Lacks equipment clippings."
 	icon_state = "softsuit_emergency"
+	icon = 'icons/mob/humans/onmob/spacesuits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/spacesuits_onmob.dmi',
+	)
 	gas_transfer_coefficient = 0.05
 	permeability_coefficient = 0.04
 	slowdown = 3
@@ -131,6 +135,10 @@
 	name = "\improper emergency spacesuit and helmet (folded)"
 	desc = "An off-brand emergency spacesuit and helmet, vacuum packed so that they can fit into a backpack. Not a proper substitue for pressure suits like the MK.35, and only protects you from the cold of space. Does not include an oxygen tank."
 	icon = 'icons/obj/items/misc.dmi'
+	item_icons = list(
+		WEAR_R_HAND = 'icons/mob/humans/onmob/spacesuits.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/spacesuits_onmob.dmi',
+	)
 	icon_state = "spacesuit_bag"
 	w_class = SIZE_MEDIUM
 	garbage = FALSE
