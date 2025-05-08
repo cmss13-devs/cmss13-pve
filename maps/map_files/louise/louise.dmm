@@ -2811,6 +2811,14 @@
 /obj/structure/machinery/recycler,
 /turf/open/floor/corsat,
 /area/louise/maintenance)
+"hq" = (
+/obj/item/ammo_box/magazine/shotgun/buckshot{
+	pixel_x = 6;
+	pixel_y = 52;
+	layer = 3.1
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
 "hG" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/microwave{
@@ -15658,7 +15666,7 @@ cb
 fG
 fG
 bV
-fr
+hq
 fr
 TR
 qS
