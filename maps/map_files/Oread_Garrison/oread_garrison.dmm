@@ -177,7 +177,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -1269,7 +1269,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
@@ -1639,7 +1639,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
@@ -2080,7 +2080,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -3230,7 +3230,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -3521,7 +3521,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -3912,7 +3912,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -4918,11 +4918,6 @@
 /obj/structure/pipes/standard/simple/hidden/yellow,
 /turf/open/floor/airless/asteroidfloor,
 /area/Oread_Garrison/inside/dorms)
-"xF" = (
-/obj/structure/platform,
-/obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Oread_Garrison/inside)
 "xG" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -5521,15 +5516,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/asphalt/cement,
 /area/Oread_Garrison/inside)
-"Am" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Oread_Garrison/inside)
 "An" = (
 /obj/structure/sign/safety/terminal{
 	pixel_x = 7
@@ -5699,7 +5685,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -5857,7 +5843,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -6347,7 +6333,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -6610,7 +6596,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -8450,14 +8436,6 @@
 /obj/item/storage/box/explosive_mines,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
-"MY" = (
-/obj/structure/platform,
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/platform,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Oread_Garrison/inside)
 "Na" = (
 /turf/open/floor/kutjevo/colors/yellow,
 /area/Oread_Garrison/inside)
@@ -8753,7 +8731,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -8927,7 +8905,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -10061,7 +10039,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
 	icon_state = "sandbag_0";
-	pixel_y = -4
+	layer = 2
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -10615,18 +10593,6 @@
 /obj/structure/flora/jungle/planttop1,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
-"XJ" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Oread_Garrison/inside)
 "XK" = (
 /obj/structure/sign/safety/stairs{
 	pixel_x = 7
@@ -10673,18 +10639,6 @@
 	layer = 3.3
 	},
 /turf/open/asphalt/cement,
-/area/Oread_Garrison/inside)
-"XV" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/auto_turf/strata_grass/layer0,
 /area/Oread_Garrison/inside)
 "XX" = (
 /obj/structure/barricade/metal/wired,
@@ -24635,7 +24589,7 @@ wR
 NZ
 wR
 ed
-XJ
+CE
 Vj
 Vj
 Vj
@@ -24948,7 +24902,7 @@ oT
 oT
 oT
 oH
-xF
+NA
 au
 au
 au
@@ -25437,7 +25391,7 @@ oH
 YI
 YI
 eo
-Am
+Ns
 Ns
 Ns
 Yh
@@ -32244,7 +32198,7 @@ Eg
 Mf
 Mf
 Mf
-MY
+de
 au
 NG
 ud
@@ -33059,7 +33013,7 @@ wR
 Wy
 IJ
 ed
-XV
+nb
 pr
 pr
 pr
