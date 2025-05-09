@@ -3131,10 +3131,6 @@ Defined in conflicts.dm of the #defines folder.
 			if(flags_attach_features & ATTACH_WEAPON)
 				output += " ([current_rounds]/[max_rounds]) mounted underneath[in_chamber ? ", with an [shorten] chambered." : "."]"
 			base_attachment_desc = output
-			if(flags_attach_features & ATTACH_WEAPON)
-				output += " ([current_rounds]/[max_rounds]) [in_chamber ? "with an [in_chamber.name] chambered" : ""]"
-			output += " mounted underneath."
-			base_attachment_desc = output
 		else
 			base_attachment_desc = "It has a [icon2html(src)] [name] attached."
 	return handle_pre_break_attachment_description(base_attachment_desc) + "<br>"
