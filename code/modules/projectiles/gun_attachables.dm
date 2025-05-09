@@ -3124,7 +3124,8 @@ Defined in conflicts.dm of the #defines folder.
 			base_attachment_desc = "It has a [icon2html(src)] [name] for a stock."
 		if("under")
 			var/output = "It has a [icon2html(src)] [name]"
-			var/shorten = in_chamber?.name
+			var/shorten = ""
+			shorten = in_chamber?.name
 			var/list/select_text = splittext(shorten, " ")
 			if(length(select_text) > 1)
 				shorten = select_text?[1] + " " + select_text?[2]
