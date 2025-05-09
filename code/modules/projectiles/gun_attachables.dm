@@ -3124,6 +3124,13 @@ Defined in conflicts.dm of the #defines folder.
 			base_attachment_desc = "It has a [icon2html(src)] [name] for a stock."
 		if("under")
 			var/output = "It has a [icon2html(src)] [name]"
+			var/shorten = in_chamber?.name
+			var/list/select_text = splittext(shorten, " ")
+			if(length(select_text) > 1)
+				shorten = select_text?[1] + " " + select_text?[2]
+			if(flags_attach_features & ATTACH_WEAPON)
+				output += " ([current_rounds]/[max_rounds]) mounted underneath[in_chamber ? ", with an [shorten] chambered." : "."]"
+			base_attachment_desc = output
 			if(flags_attach_features & ATTACH_WEAPON)
 				output += " ([current_rounds]/[max_rounds]) [in_chamber ? "with an [in_chamber.name] chambered" : ""]"
 			output += " mounted underneath."
