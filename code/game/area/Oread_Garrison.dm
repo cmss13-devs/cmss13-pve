@@ -12,7 +12,7 @@
 
 /area/Oread_Garrison/outside/jungle
 	minimap_color = MINIMAP_AREA_JUNGLE
-	ceiling = CEILING_METAL
+	ceiling = CEILING_NONE
 	icon_state = "central"
 	//ambience = list('sound/ambience/jungle_amb1.ogg')
 
@@ -33,7 +33,7 @@
 /area/Oread_Garrison/inside
 	name = "Garrison Interior"
 	icon_state = "purple"
-	ceiling = CEILING_REINFORCED_METAL
+	ceiling = CEILING_METAL
 	ambience_exterior = AMBIENCE_ALMAYER
 	//ambience = list('sound/ambience/shipambience.ogg)
 
