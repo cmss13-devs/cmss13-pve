@@ -3111,6 +3111,27 @@ Defined in conflicts.dm of the #defines folder.
 	cocked = FALSE // we have fired so uncock the gun
 	loaded_grenades.Cut(1,2)
 
+/obj/item/attachable/attached_gun/grenade/handle_attachment_description()
+	var/base_attachment_desc
+	switch(slot)
+		if("rail")
+			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the top."
+		if("side_rail")
+			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the side."
+		if("muzzle")
+			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the front."
+		if("stock")
+			base_attachment_desc = "It has a [icon2html(src)] [name] for a stock."
+		if("under")
+			var/output = "It has a [icon2html(src)] [name]"
+			if(flags_attach_features & ATTACH_WEAPON)
+				output += " ([current_rounds]/[max_rounds]) [in_chamber ? "with an [in_chamber.name] in the chamber" : ""]"
+			output += " mounted underneath."
+			base_attachment_desc = output
+		else
+			base_attachment_desc = "It has a [icon2html(src)] [name] attached."
+	return handle_pre_break_attachment_description(base_attachment_desc) + "<br>"
+
 //For the Mk1
 /obj/item/attachable/attached_gun/grenade/mk1
 	name = "\improper PN 30mm underslung grenade launcher"
@@ -3227,26 +3248,29 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/mk1/preloaded/New()
 	. = ..()
-	current_rounds = 2
-	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
+	current_rounds = 1
+	in_chamber = new/obj/item/explosive/grenade/high_explosive(src)
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src))
 
 /obj/item/attachable/attached_gun/grenade/mk1/preloaded/army
 
 /obj/item/attachable/attached_gun/grenade/mk1/preloaded/army/New()
 	. = ..()
-	current_rounds = 4
-	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
+	current_rounds = 3
+	in_chamber = new/obj/item/explosive/grenade/high_explosive(src)
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
 
 /obj/item/attachable/attached_gun/grenade/mk1/recon
 	icon_state = "green_grenade-mk1"
-	attach_icon = "green_grenade-mk1_a"
+	attach_icon = "green_grenade-mk1_a" //the UBGLs on these are outdated, by the way
 
 /obj/item/attachable/attached_gun/grenade/mk1/recon/preloaded
 
 /obj/item/attachable/attached_gun/grenade/mk1/recon/preloaded/New()
 	. = ..()
-	current_rounds = 2
-	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
+	current_rounds = 1
+	in_chamber = new/obj/item/explosive/grenade/high_explosive(src)
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src))
 
 /obj/item/attachable/attached_gun/grenade/mk1/m120
 	name = "\improper PN/c 30mm underslung grenade launcher"
