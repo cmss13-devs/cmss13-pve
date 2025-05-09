@@ -149,8 +149,8 @@
 	desc = "A blank map, or at least you THINK there should be a map on this piece of laminated paper."
 	html_link = ""
 	color = "white"
-  
-  /obj/item/map/oread_map
+
+/obj/item/map/oread_map
 	name = "\improper Oread Garrison map"
 	desc = "A distorted orbital scan of the Oread Garrison"
 	html_link = ""
