@@ -129,6 +129,25 @@
 	icon = 'icons/obj/vehicles/interiors/tank.dmi'
 	icon_state = "locker"
 
+/obj/structure/vehicle_locker/tank/upp
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
+	icon_state = "locker"
+
+/obj/structure/vehicle_locker/tank/upp1
+	name = "storage ammunition"
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
+	icon_state = "storage_ammo"
+
+/obj/structure/vehicle_locker/tank/upp2
+	name = "Locker"
+	desc = "Small storage unit allowing vehicle crewmen to store their personal possessions. Only vehicle crewmen can access these."
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
+	icon_state = "small_locker"
+
+/obj/structure/vehicle_locker/tank/upp3
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
+	icon_state = "small_locker1"
+
 /obj/structure/vehicle_locker/movie
 	name = "storage compartment"
 	desc = "A wide storage unit to allow it's users to store a wide variety of objects, from equipment to weapons and their ammo. Very versatile."
