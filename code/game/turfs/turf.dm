@@ -66,6 +66,9 @@
 	/// Is fishing allowed on this turf
 	var/fishing_allowed = FALSE
 
+	///hybrid lights affecting this turf
+	var/tmp/list/atom/movable/lighting_mask/hybrid_lights_affecting
+
 /turf/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE) // this doesn't parent call for optimisation reasons
 	if(flags_atom & INITIALIZED)
@@ -107,6 +110,11 @@
 	return INITIALIZE_HINT_NORMAL
 
 /turf/Destroy(force)
+	if(hybrid_lights_affecting)
+		for(var/atom/movable/lighting_mask/mask as anything in hybrid_lights_affecting)
+			LAZYREMOVE(mask.affecting_turfs, src)
+		hybrid_lights_affecting.Cut()
+
 	. = QDEL_HINT_IWILLGC
 	if(!changing_turf)
 		stack_trace("Incorrect turf deletion")

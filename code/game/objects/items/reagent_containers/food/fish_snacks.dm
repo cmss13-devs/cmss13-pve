@@ -261,12 +261,6 @@
 	. = ..()
 	reagents.add_reagent("fish", 1)
 
-/obj/item/reagent_container/food/snacks/fishable/urchin/purple/Initialize()
-	. = ..()
-	reagents.add_reagent("fish", 1)
-	bitesize = 1
-
-
 /obj/item/reagent_container/food/snacks/fishable/urchin/red
 	name = "red urchin"
 	desc = "Glad I didn't step on it, it looks angry!"
