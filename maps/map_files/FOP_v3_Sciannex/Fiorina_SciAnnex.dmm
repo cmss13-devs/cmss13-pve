@@ -7879,7 +7879,7 @@
 /turf/open/floor/prison/blue/southwest,
 /area/fiorina/station/chapel)
 "fQB" = (
-/obj/item/ammo_casing/shell{
+/obj/item/ammo_casing/redshell{
 	icon_state = "shell_9_1"
 	},
 /obj/effect/spawner/random/gun/shotgun/highchance,
@@ -21769,7 +21769,7 @@
 /area/fiorina/station/civres_blue)
 "qUe" = (
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/item/ammo_casing/shell{
+/obj/item/ammo_casing/redshell{
 	icon_state = "shell_9_1"
 	},
 /obj/structure/barricade/metal{

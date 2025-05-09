@@ -98,6 +98,9 @@
 	/// Color of the light of the bullet
 	var/bullet_light_color = COLOR_WHITE
 
+	/// Type of empty shell casing
+	var/shell_casing = null
+
 /datum/ammo/New()
 	set_bullet_traits()
 
