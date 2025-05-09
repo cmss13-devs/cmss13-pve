@@ -14,6 +14,27 @@
 	layer = BELOW_FULLSCREEN_LAYER
 	plane = FULLSCREEN_PLANE
 
+/obj/effect/temp_visual/minimap_pulse
+	icon = null
+	duration = 0.75 SECONDS
+
+/obj/effect/temp_visual/minimap_pulse/Initialize(mapload, minimap_flag = MINIMAP_FLAG_ALL, type)
+	. = ..()
+	var/pulse_icon
+	if(type == MOTION_DETECTOR_LONG)
+		pulse_icon = "motion_long_pulse"
+	else
+		pulse_icon = "motion_short_pulse"
+	SSminimaps.add_marker(src, minimap_flag, image('icons/ui_icons/map_blips_larger.dmi', null, pulse_icon), -28.25, -28.25)
+
+/obj/effect/temp_visual/minimap_blip
+	icon = null
+	duration = 1 SECONDS
+
+/obj/effect/temp_visual/minimap_blip/Initialize(mapload, minimap_flags = MINIMAP_FLAG_ALL)
+	. = ..()
+	SSminimaps.add_marker(src, minimap_flags, image('icons/ui_icons/map_blips.dmi', null, "motion", HIGH_FLOAT_LAYER))
+
 /obj/effect/detector_blip/m717
 	icon_state = "tracker_blip"
 
@@ -35,6 +56,8 @@
 	var/recycletime = 120
 	var/blip_type = "detector"
 	var/iff_signal = FACTION_MARINE
+	///Flag for minimap icon
+	var/minimap_flag = MINIMAP_FLAG_USCM
 	actions_types = list(/datum/action/item_action/toggle)
 	var/scanning = FALSE // controls if MD is in process of scan
 	var/datum/shape/rectangle/square/range_bounds
@@ -214,6 +237,7 @@
 	set waitfor = 0
 	if(scanning)
 		return
+	new /obj/effect/temp_visual/minimap_pulse(get_turf(src), minimap_flag, detector_mode)
 	scanning = TRUE
 	var/mob/living/carbon/human/human_user = get_user()
 
@@ -297,6 +321,7 @@
 
 		DB.screen_loc = "[clamp(c_view + 1 - view_x_offset + (target.x - user.x), 1, 2*c_view+1)],[clamp(c_view + 1 - view_y_offset + (target.y - user.y), 1, 2*c_view+1)]"
 		user.client.add_to_screen(DB)
+		new /obj/effect/temp_visual/minimap_blip(get_turf(target), minimap_flag)
 		addtimer(CALLBACK(src, PROC_REF(clear_pings), user, DB), 1 SECONDS)
 
 /obj/item/device/motiondetector/proc/clear_pings(mob/user, obj/effect/detector_blip/DB)
@@ -311,6 +336,7 @@
 	icon_state = "detector"
 	item_state = "upp_motion_detector"
 	iff_signal = FACTION_UPP
+	minimap_flag = MINIMAP_FLAG_UPP
 
 /obj/item/device/motiondetector/m717
 	name = "M717 pocket motion detector"
@@ -327,11 +353,13 @@
 	name = "modified M717 pocket motion detector"
 	desc = "This prototype motion detector sacrifices versatility, having only the long-range mode, for size, being so small it can even fit in pockets. This one has been modified with an after-market IFF sensor to filter out Vanguard's Arrow Incorporated signals instead of USCM ones. Fight fire with fire!"
 	iff_signal = FACTION_CONTRACTOR
+	minimap_flag = MINIMAP_FLAG_CLF
 
 /obj/item/device/motiondetector/hacked
 	name = "hacked motion detector"
 	desc = "A device that usually picks up non-USCM signals, but this one's been hacked to detect all non-UPP movement instead. Fight fire with fire!"
 	iff_signal = FACTION_UPP
+	minimap_flag = MINIMAP_FLAG_UPP
 
 /obj/item/device/motiondetector/hacked/elite_merc
 	name = "hacked motion detector"
@@ -342,6 +370,7 @@
 	name = "corporate motion detector"
 	desc = "A device that usually picks up non-USCM signals, but this one's been reprogrammed to detect all non-PMC movement instead. Very corporate."
 	iff_signal = FACTION_PMC
+	minimap_flag = MINIMAP_FLAG_PMC
 
 /obj/item/device/motiondetector/hacked/dutch
 	name = "hacked motion detector"

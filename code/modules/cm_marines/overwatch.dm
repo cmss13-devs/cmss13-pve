@@ -27,27 +27,34 @@
 	var/marine_filter_enabled = TRUE
 	var/faction = FACTION_MARINE
 
-	var/datum/tacmap/tacmap
-	var/minimap_type = MINIMAP_FLAG_USCM
-
+	/// List of references to the tools we will be using to shape what the map looks like
+	var/list/atom/movable/screen/drawing_tools = list(
+		/atom/movable/screen/minimap_tool/draw_tool/red,
+		/atom/movable/screen/minimap_tool/draw_tool/yellow,
+		/atom/movable/screen/minimap_tool/draw_tool/purple,
+		/atom/movable/screen/minimap_tool/draw_tool/blue,
+		/atom/movable/screen/minimap_tool/draw_tool/erase,
+		/atom/movable/screen/minimap_tool/label,
+		/atom/movable/screen/minimap_tool/clear,
+	)
+	///Toggle for scrolling map
+	var/scroll_toggle
+	///flags that we want to be shown when you interact with this table
+	var/minimap_flag = MINIMAP_FLAG_USCM
+	///by default Zlevel 2, groundside is targetted
+	var/targetted_zlevel = 2
+	///minimap obj ref that we will display to users
+	var/atom/movable/screen/minimap/map
+	///Is user currently interacting with minimap
+	var/interacting_minimap = FALSE
 
 	///List of saved coordinates, format of ["x", "y", "comment"]
 	var/list/saved_coordinates = list()
 	///Currently selected UI theme
 	var/ui_theme = "crtblue"
 
-
-/obj/structure/machinery/computer/overwatch/Initialize()
-	. = ..()
-
-	var/datum/squad/main_squad_path = MAIN_SHIP_PLATOON
-	if (faction == main_squad_path::faction)
-		tacmap = new /datum/tacmap/drawing(src, minimap_type)
-	else
-		tacmap = new(src, minimap_type) // Non-drawing version
-
 /obj/structure/machinery/computer/overwatch/Destroy()
-	QDEL_NULL(tacmap)
+	map = null
 	return ..()
 
 /obj/structure/machinery/computer/overwatch/attackby(obj/I as obj, mob/user as mob)  //Can't break or disassemble.
@@ -89,22 +96,10 @@
 		return TRUE
 	. = ..()
 
-/obj/structure/machinery/computer/overwatch/ui_static_data(mob/user)
-	var/list/data = list()
-	data["mapRef"] = tacmap.map_holder.map_ref
-	return data
 
 /obj/structure/machinery/computer/overwatch/tgui_interact(mob/user, datum/tgui/ui)
-
-	if(!tacmap.map_holder)
-		var/level = SSmapping.levels_by_trait(tacmap.targeted_ztrait)
-		if(!level[1])
-			return
-		tacmap.map_holder = SSminimaps.fetch_tacmap_datum(level[1], tacmap.allowed_flags)
-
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		user.client.register_map_obj(tacmap.map_holder.map)
 		ui = new(user, src, "OverwatchConsole", "Overwatch Console")
 		ui.open()
 
@@ -485,7 +480,21 @@
 					z_hidden = HIDE_NONE
 					to_chat(user, "[icon2html(src, usr)] [SPAN_NOTICE("No location is ignored anymore.")]")
 		if("tacmap_unpin")
-			tacmap.tgui_interact(user)
+			if(!map)
+				map = SSminimaps.fetch_minimap_object(targetted_zlevel, minimap_flag, TRUE)
+				var/list/atom/movable/screen/actions = list()
+				for(var/path in drawing_tools)
+					actions += new path(null, targetted_zlevel, minimap_flag, map)
+				drawing_tools = actions
+				scroll_toggle = new /atom/movable/screen/stop_scroll(null, map)
+			if(!interacting_minimap)
+				user.client.screen += map
+				user.client.screen += drawing_tools
+				user.client.screen += scroll_toggle
+				interacting_minimap = TRUE
+			else
+				remove_minimap(user)
+				interacting_minimap = FALSE
 		if("dropbomb")
 			if(!params["x"] || !params["y"])
 				return
@@ -652,6 +661,7 @@
 			user.UnregisterSignal(cam, COMSIG_PARENT_QDELETING)
 		cam = null
 		user.reset_view(null)
+	remove_minimap(user)
 
 /// checks if the human has an overwatch camera at all
 /obj/structure/machinery/computer/overwatch/proc/marine_has_camera(mob/living/carbon/human/marine)
@@ -922,6 +932,15 @@
 	visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("'[crate.name]' supply drop launched! Another launch will be available in five minutes.")]")
 	busy = FALSE
 
+/obj/structure/machinery/computer/overwatch/proc/remove_minimap(mob/user)
+	user?.client?.screen -= map
+	user?.client?.screen -= drawing_tools
+	user?.client.screen -= scroll_toggle
+	user?.client?.mouse_pointer_icon = null
+	interacting_minimap = FALSE
+	for(var/atom/movable/screen/minimap_tool/tool as anything in drawing_tools)
+		tool.UnregisterSignal(user, list(COMSIG_MOB_MOUSEDOWN, COMSIG_MOB_MOUSEUP))
+
 /obj/structure/machinery/computer/overwatch/almayer
 	density = FALSE
 	icon = 'icons/obj/structures/machinery/computer.dmi'
@@ -933,6 +952,14 @@
 /obj/structure/machinery/computer/overwatch/almayer/small
 	icon = 'icons/obj/vehicles/interiors/arc.dmi'
 	icon_state = "overwatch_computer"
+
+/obj/structure/machinery/computer/overwatch/almayer/upp
+	faction = FACTION_UPP
+	minimap_flag = MINIMAP_FLAG_UPP
+
+/obj/structure/machinery/computer/overwatch/almayer/pmc
+	faction = FACTION_PMC
+	minimap_flag = MINIMAP_FLAG_PMC
 
 /obj/structure/machinery/computer/overwatch/clf
 	faction = FACTION_CLF
