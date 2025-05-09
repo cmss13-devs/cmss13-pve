@@ -20251,15 +20251,15 @@
 	pixel_x = -5;
 	pixel_y = -2
 	},
-/obj/item/ammo_magazine/rifle/m49a/pve{
+/obj/item/ammo_magazine/rifle/m49a/custom/pve{
 	pixel_x = 7;
 	pixel_y = 25
 	},
-/obj/item/ammo_magazine/rifle/m49a/pve{
+/obj/item/ammo_magazine/rifle/m49a/custom/pve{
 	pixel_x = 4;
 	pixel_y = 17
 	},
-/obj/item/ammo_box/magazine/m49a/a19/impact{
+/obj/item/ammo_box/magazine/m49a/a19/explosive{
 	pixel_x = -2;
 	pixel_y = 15
 	},
