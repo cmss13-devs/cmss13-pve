@@ -3125,7 +3125,7 @@ Defined in conflicts.dm of the #defines folder.
 		if("under")
 			var/output = "It has a [icon2html(src)] [name]"
 			if(flags_attach_features & ATTACH_WEAPON)
-				output += " ([current_rounds]/[max_rounds]) [in_chamber ? "with an [in_chamber.name] in the chamber" : ""]"
+				output += " ([current_rounds]/[max_rounds]) [in_chamber ? "with an [in_chamber.name] chambered" : ""]"
 			output += " mounted underneath."
 			base_attachment_desc = output
 		else
