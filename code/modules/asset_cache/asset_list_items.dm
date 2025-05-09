@@ -254,11 +254,12 @@
 	var/list/icon_data = list(
 		list("Mar", null),
 		list("ass", "hudsquad_ass"),
+		list("load", "hudsquad_load"),
 		list("Eng", "hudsquad_engi"),
 		list("HM", "hudsquad_med"),
 		list("SG", "hudsquad_gun"),
 		list("Spc", "hudsquad_spec"),
-		list("SqSgt", "hudsquad_tl"),
+		list("SqLdr", "hudsquad_tl"),
 		list("SctSgt", "hudsquad_leader"),
 		list("RTO", "hudsquad_rto"),
 	)
@@ -408,6 +409,17 @@
 /datum/asset/spritesheet/gun_lineart_modes/register()
 	InsertAll("", 'icons/obj/items/weapons/guns/lineart_modes.dmi')
 	..()
+
+/datum/asset/spritesheet/defense_menu
+	name = "defensemenu"
+
+/datum/asset/spritesheet/defense_menu/register()
+	for(var/icon_state in icon_states('icons/misc/human_defense_menu.dmi'))
+		var/icon/icon_sprite = icon('icons/misc/human_defense_menu.dmi', icon_state)
+		icon_sprite.Scale(128, 128)
+		Insert(icon_state, icon_sprite)
+
+	return ..()
 
 /datum/asset/simple/orbit
 	assets = list(

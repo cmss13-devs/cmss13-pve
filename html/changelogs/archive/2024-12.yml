@@ -39,3 +39,53 @@
 2024-12-15:
   Amoryblaine:
   - rscadd: Naval Infantry uniform
+2024-12-24:
+  Max-023:
+  - imageadd: Several new icons specifically for UPP/Pilot helmets for commonly used
+      garb items.
+  SpartanBobby:
+  - maptweak: Fixes wrong dropship Typhoon walls on Dropship Tornado
+  private-tristan:
+  - balance: PMC and RMC smartguns now use irradiated/holotarget 10x28mm instead of
+      snowflake SG bullets, meaning damage has also been increased to standard levels.
+  - balance: Terminator smartguns now also use irradiated 10x28mm, and do more damage
+      per shot.
+  - bugfix: PMC smartgunner loadout now properly spawns with its imager, allowing
+      IFF to be used.
+2024-12-27:
+  AmoryBlaine:
+  - rscadd: Two cowboy hats, two fedoras.
+  - rscdel: unused legacy hat icons.
+  BonniePandora:
+  - qol: Adjusts the OD limit for alcoholic drinks
+  - qol: Adjusts the buildup rate of damage from overdosing and critical overdosing
+      on alcohol
+  Ediblebomb:
+  - spellcheck: Removes the warning to CPR slower than you actually have to.
+  ILikeToGammon:
+  - balance: Increased GAU Multipurpose ammo damage by 50
+  - balance: Increased GAU Multipurpose ammo Penetration by 5
+  - balance: Changed GAU Multipurpose ammo bullet spread range from 3 to 2
+  - balance: Changed GAU Multipurpose ammo travelling time from default 10 seconds
+      to 5 seconds
+  - balance: Increased GAU Armor Piercing ammo damage by 50
+  - balance: Changed GAU Armor Piercing ammo travelling time to 6 seconds
+  - balance: Changed Mini Rocket travelling time to 4 seconds
+  private-tristan:
+  - bugfix: Chances Claim [Forecon] can now be properly selected by GMs
+2024-12-28:
+  AmoryBlaine:
+  - rscadd: New palettes, civilian binos redesign
+  - rscdel: Unused map variances
+2024-12-29:
+  AmoryBlaine:
+  - rscadd: overhaul of USCM gear presets, clothing, ect
+  - rscdel: PvP centric presets for marines
+  AndroBetel:
+  - rscadd: Wall leaning.
+  DexterDude:
+  - balance: Changes prime rolls to now work with anyone with 25 human hours
+  - qol: Tutorial no longer is suggested to new players
+  - qol: New players now have +2 weight between 0-5 hours and +1 weight for 5-8 hours.
+  mesnomer:
+  - config: define UPLOAD_LIMIT value doubled (10485760 to 20971520)

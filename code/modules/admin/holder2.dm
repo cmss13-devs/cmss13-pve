@@ -36,6 +36,11 @@ GLOBAL_PROTECT(href_token)
 /datum/admins/vv_edit_var(var_name, var_value)
 	return FALSE
 
+/datum/admins/can_vv_get(var_name)
+	if(var_name == NAMEOF(src, href_token))
+		return FALSE
+	return ..()
+
 /datum/admins/proc/associate(client/C)
 	if(istype(C))
 		owner = C
@@ -98,7 +103,7 @@ you will have to do something like if(client.admin_holder.rights & R_ADMIN) your
 	if(!other)
 		return FALSE
 	if(rights_required && other.admin_holder?.rank)
-		if(check_client_rights(usr.client, rights_required, show_msg))
+		if(check_client_rights(other, rights_required, show_msg))
 			return TRUE
 		else if(show_msg)
 			to_chat(usr, SPAN_WARNING("You do not have sufficient rights to do that. You require one of the following flags:[rights2text(rights_required," ")]."))

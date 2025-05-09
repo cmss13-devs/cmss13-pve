@@ -1,6 +1,6 @@
 
-#define SSGT_VARIANT "Staff Sergeant"
 #define GYSGT_VARIANT "Gunnery Sergeant"
+#define SSGT_VARIANT "Staff Sergeant"
 
 /datum/job/marine/leader
 	title = JOB_SQUAD_LEADER
@@ -12,13 +12,13 @@
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are responsible for the men and women of your entire section.</a> Make sure they are on task, working together, and communicating. You are also in charge of communicating with command and letting them know about the situation first hand. Keep out of harm's way.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
-	job_options = list(GYSGT_VARIANT = "GYSGT", SSGT_VARIANT = "SSGT")
+	job_options = list(SSGT_VARIANT = "SSGT", GYSGT_VARIANT = "GYSGT")
 
 /datum/job/marine/leader/handle_job_options(option)
-	if(option != GYSGT_VARIANT)
-		gear_preset = gear_preset_secondary
-	else
+	if(option != SSGT_VARIANT)
 		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /datum/job/marine/leader/whiskey
 	title = JOB_WO_SQUAD_LEADER
@@ -70,10 +70,21 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_UPP
 	job = /datum/job/marine/leader/ai/upp
 
+
+/datum/job/marine/leader/ai/pmc
+	title = JOB_PMCPLAT_LEADER
+	gear_preset = /datum/equipment_preset/uscm/pmc/sl
+	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/sl
+
+/obj/effect/landmark/start/marine/leader/pmc
+	name = JOB_PMCPLAT_LEADER
+	squad = SQUAD_PMCPLT
+	job = /datum/job/marine/leader/ai/pmc
+
 /obj/effect/landmark/start/marine/leader/forecon
 	name = JOB_SQUAD_LEADER_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/leader/ai/forecon
 
-#undef SSGT_VARIANT
 #undef GYSGT_VARIANT
+#undef SSGT_VARIANT

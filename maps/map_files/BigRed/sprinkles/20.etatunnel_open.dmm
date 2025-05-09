@@ -407,7 +407,7 @@
 /obj/item/explosive/grenade/high_explosive/airburst{
 	pixel_y = 8
 	},
-/obj/item/storage/box/packet/baton_slug{
+/obj/item/storage/box/packet/baton{
 	pixel_x = -7;
 	pixel_y = -3
 	},

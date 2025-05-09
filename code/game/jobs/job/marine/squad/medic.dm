@@ -1,6 +1,6 @@
 
-#define LCPL_VARIANT "Lance Corporal"
 #define CPL_VARIANT "Corporal"
+#define LCPL_VARIANT "Lance Corporal"
 
 /datum/job/marine/medic
 	title = JOB_SQUAD_MEDIC
@@ -10,9 +10,9 @@
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/medic
 	gear_preset_secondary = /datum/equipment_preset/uscm/medic/lesser_rank
-	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You tend the wounds of your fellow Marines</a> and make sure they are healthy and active. You may not be a fully-fledged doctor, but you stand between life and death when it matters.<br><b>You remember that you've stored your personal gear and uniform are located in your medical office.</b>"
+	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You tend the wounds of your fellow Marines</a> and make sure they are healthy and active. You may not be a fully-fledged doctor, but you stand between life and death when it matters.<br>You might be the same rank as a squad leader, but they have precedence over you for command should the situation call upon it.<br><b>You remember that you've stored your personal gear and uniform are located in your medical office.</b>"
 
-	job_options = list(CPL_VARIANT = "CPL", LCPL_VARIANT = "LCPL")
+	job_options = list(LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL")
 
 /datum/job/marine/medic/set_spawn_positions(count)
 	for(var/datum/squad/sq in GLOB.RoleAuthority.squads)
@@ -35,10 +35,10 @@
 	return (slots*4)
 
 /datum/job/marine/medic/handle_job_options(option)
-	if(option != CPL_VARIANT)
-		gear_preset = gear_preset_secondary
-	else
+	if(option != LCPL_VARIANT)
 		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /datum/job/marine/medic/whiskey
 	title = JOB_WO_SQUAD_MEDIC
@@ -91,10 +91,21 @@
 	squad = SQUAD_UPP
 	job = /datum/job/marine/medic/ai/upp
 
+
+/datum/job/marine/medic/ai/pmc
+	title = JOB_PMCPLAT_MEDIC
+	gear_preset = /datum/equipment_preset/uscm/pmc/med
+	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/med
+
+/obj/effect/landmark/start/marine/medic/pmc
+	name = JOB_PMCPLAT_MEDIC
+	squad = SQUAD_PMCPLT
+	job = /datum/job/marine/medic/ai/pmc
+
 /obj/effect/landmark/start/marine/medic/forecon
 	name = JOB_SQUAD_MEDIC_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/medic/ai/forecon
 
-#undef LCPL_VARIANT
 #undef CPL_VARIANT
+#undef LCPL_VARIANT

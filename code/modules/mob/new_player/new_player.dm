@@ -163,10 +163,11 @@
 				to_chat(src, SPAN_WARNING("Sorry, you cannot late join during [SSticker.mode.name]. You have to start at the beginning of the round. You may observe or try to join as an alien, if possible."))
 				return
 
-			if(client.player_data?.playtime_loaded && (client.get_total_human_playtime() < CONFIG_GET(number/notify_new_player_age)) && !length(client.prefs.completed_tutorials))
-				if(tgui_alert(src, "You have little playtime and haven't completed any tutorials. Would you like to go to the tutorial menu?", "Tutorial", list("Yes", "No")) == "Yes")
-					tutorial_menu()
-					return
+			// commented out tutorial due to its lack of relevance on pve
+			//if(client.player_data?.playtime_loaded && (client.get_total_human_playtime() < CONFIG_GET(number/notify_new_player_age)) && !length(client.prefs.completed_tutorials))
+				//if(tgui_alert(src, "You have little playtime and haven't completed any tutorials. Would you like to go to the tutorial menu?", "Tutorial", list("Yes", "No")) == "Yes")
+					//tutorial_menu()
+					//return
 
 			LateChoices()
 
@@ -251,7 +252,6 @@
 
 	var/mob/living/carbon/human/character = create_character(TRUE) //creates the human and transfers vars and mind
 	GLOB.RoleAuthority.equip_role(character, player_rank, late_join = TRUE)
-	EquipCustomItems(character)
 
 	if((GLOB.security_level > SEC_LEVEL_BLUE || SShijack.hijack_status) && player_rank.gets_emergency_kit)
 		to_chat(character, SPAN_HIGHDANGER("As you stagger out of hypersleep, the sleep bay blares: '[SShijack.evac_status ? "VESSEL UNDERGOING EVACUATION PROCEDURES, SELF DEFENSE KIT PROVIDED" : "VESSEL IN HEIGHTENED ALERT STATUS, SELF DEFENSE KIT PROVIDED"]'."))
@@ -362,7 +362,7 @@
 	dat += positions ? position_dat : "There are no available jobs. This mode has limited slotting per round. Please see the discord for more info and future playtimes: [CONFIG_GET(string/discordurl)]"
 
 	dat += "</center>"
-	show_browser(src, dat, "Late Join", "latechoices", "size=420x700")
+	show_browser(src, dat, "Late Join", "latechoices", width = 420, height = 700)
 
 
 /mob/new_player/proc/create_character(is_late_join = FALSE)
@@ -387,7 +387,7 @@
 	dat += "<h4><center>Crew Manifest:</center></h4>"
 	dat += GLOB.data_core.get_manifest(FALSE, TRUE)
 
-	show_browser(src, dat, "Crew Manifest", "manifest", "size=450x750")
+	show_browser(src, dat, "Crew Manifest", "manifest", width = 450, height = 750)
 
 /mob/new_player/proc/ViewHiveLeaders()
 	if(!GLOB.hive_leaders_tgui)

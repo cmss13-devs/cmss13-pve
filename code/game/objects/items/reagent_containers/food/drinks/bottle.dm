@@ -120,8 +120,8 @@
 
 ///Alcohol bottles and their contents.
 /obj/item/reagent_container/food/drinks/bottle/gin
-	name = "\improper Griffeater Gin"
-	desc = "A bottle of high-quality gin, produced in the New London Space Station."
+	name = "\improper Tanqueray Gin"
+	desc = "A bottle of high-quality London gin."
 	icon_state = "ginbottle"
 	center_of_mass = "x=16;y=4"
 
@@ -151,13 +151,18 @@
 
 /obj/item/reagent_container/food/drinks/bottle/vodka
 	name = "\improper Red Star Vodka"
-	desc = "Red Star Vodka: A staple of the enemy's diet. Who knew that liquid potato could smell this potent. The bottle reads, 'Ra Ra Red Star Man: Lover of the Finer Things.' Or at least that's what you assume...you can't read Russian."
+	desc = "A cheap, popular vodka brand with a Soviet theme. The bottle reads, 'Ra Ra Red Star Man: Lover of the Finer Things.'"
 	icon_state = "red_star_vodka"
 	center_of_mass = "x=17;y=3"
 
 /obj/item/reagent_container/food/drinks/bottle/vodka/Initialize()
 	. = ..()
 	reagents.add_reagent("vodka", 100)
+
+/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya
+	name = "\improper Stolichnaya Vodka"
+	desc = "A premier export from the UPP member state of Russia. Because of meticulous enforcement of state regulations, it is considered one of the highest quality vodkas available."
+	icon_state = "vodkabottle"
 
 //chess bottles
 

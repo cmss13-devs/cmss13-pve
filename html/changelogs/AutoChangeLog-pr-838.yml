@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Adds four new mag-boxes for the A19 types of ammo the M49A5/6 uses"
+  - balance: "Swaps the NVG eyepiece out for the no-NVG subtype in the M56 kit"
+  - spellcheck: "Some references to the M56B swapped to refer to it as the M56A2"

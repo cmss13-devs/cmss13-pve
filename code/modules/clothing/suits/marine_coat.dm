@@ -68,9 +68,6 @@
 
 /obj/item/clothing/suit/storage/jacket/marine/Initialize()
 	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
-		select_gamemode_skin(type)
-		initial_icon_state = icon_state
 	if(has_buttons)
 		verbs += /obj/item/clothing/suit/storage/jacket/marine/proc/toggle
 
@@ -79,14 +76,15 @@
 	name = "marine service jacket"
 	desc = "A USCMC service jacket, usually officer issue. While technically armored to frag/handgun ammunition, it's best if you don't try your luck."
 	has_buttons = TRUE
+	flags_atom = NO_SNOW_TYPE
 	icon_state = "coat_officer"
+	initial_icon_state = "coat_officer"
 
 /obj/item/clothing/suit/storage/jacket/marine/pilot
 	name = "\improper M70B1 light flak jacket"
 	desc = "M70 variant that reduces bulk and protective for ergonomics. Consider this to have the same amount of protection from flak as an officer's service jacket."
 	icon_state = "pilot_alt"
 	has_buttons = TRUE
-	flags_atom = NO_SNOW_TYPE
 	initial_icon_state = "pilot_alt"
 
 /obj/item/clothing/suit/storage/jacket/marine/RO

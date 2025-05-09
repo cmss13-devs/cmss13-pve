@@ -467,10 +467,12 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	if(target_mob.getBrainLoss() >= 100 || !target_mob.has_brain())
 		data["ssd"] = "Subject has taken extreme amounts of brain damage."
 	else if(target_mob.has_brain() && target_mob.stat != DEAD && ishuman(target_mob))
-		if(!target_mob.key)
-			data["ssd"] = "No soul detected." // they ghosted
-		else if(!target_mob.client)
-			data["ssd"] = "SSD detected." // SSD
+		var/mob/living/carbon/human/target_human = target_mob
+		if(!target_human.get_ai_brain())
+			if(!target_mob.key)
+				data["ssd"] = "No soul detected." // they ghosted
+			else if(!target_mob.client)
+				data["ssd"] = "SSD detected." // SSD
 
 	return data
 
@@ -738,7 +740,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 		dat = replacetext(dat, "class='scannerb'", "style='font-weight: bold;' class='[INTERFACE_RED]'")
 		dat = replacetext(dat, "class='scannerburn'", "class='[INTERFACE_ORANGE]'")
 		dat = replacetext(dat, "class='scannerburnb'", "style='font-weight: bold;' class='[INTERFACE_ORANGE]'")
-		show_browser(user, dat, name, "handscanner", "size=500x400")
+		show_browser(user, dat, name, "handscanner", width = 500, height = 400)
 	else
 		user.show_message(dat, 1)
 
