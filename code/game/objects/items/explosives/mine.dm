@@ -386,6 +386,12 @@
 		if(!QDELETED(src))
 			disarm()
 
+//PMC claymore predeployed
+/obj/item/explosive/mine/pmc/confetti/active
+	icon_state = "m20p_active"
+	base_icon_state = "m20p"
+	map_deployed = TRUE
+
 /obj/item/explosive/mine/custom
 	name = "custom mine"
 	desc = "A custom chemical mine built from an M20 casing."
@@ -402,7 +408,7 @@
 	angle = 360
 	var/disarmed = FALSE
 	var/explosion_power = 300
-	var/explosion_falloff = 100
+	var/explosion_falloff = 140
 	base_disarm_fail_chance = 70
 	base_disarm_time = 40
 	has_tripwire = FALSE
@@ -514,20 +520,45 @@
 	else
 		return
 
+//M760 but already active
+/obj/item/explosive/mine/m760ap/active
+	icon_state = "m760_active"
+	base_icon_state = "m760"
+	map_deployed = TRUE
 
+//M760 confetti version.
+/obj/item/explosive/mine/m760ap/confetti
+	explosion_power = 60
+	explosion_falloff = 25
+
+/obj/item/explosive/mine/m760ap/confetti/prime(mob/user)
+	set waitfor = 0
+	if(!cause_data)
+		cause_data = create_cause_data(initial(name), user)
+	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
+	qdel(src)
+
+//M760 confetti but already active
+/obj/item/explosive/mine/m760ap/confetti/active
+	icon_state = "m760_active"
+	base_icon_state = "m760"
+	map_deployed = TRUE
+
+//M5A3 bounding landmine.
 /obj/item/explosive/mine/m5a3betty
 	name = "M5A3 bounding mine"
 	desc = "An intelligent blast-resistant bounding landmine with enhanced fragmentation."
 	icon_state = "m5"
 	angle = 360
 	var/disarmed = FALSE
-	var/explosion_power = 175
-	var/explosion_falloff = 75
+	var/explosion_power = 120
+	var/explosion_falloff = 70
 	base_disarm_time = 60 //innately sensitive...
 	base_disarm_fail_chance = 30 //...but lacks robust anti-tamper implementation.
 	blast_tolerance = 25 //Even at its furthest point, C4 will disarm the mine. Gives some form of counterplay.
 	has_tripwire = TRUE
-	detonation_flavor = "step in front of it and the mine jump to chest height!"
+	detonation_flavor = "step in front of it and the mine jumps to chest height!"
 
 /obj/item/explosive/mine/m5a3betty/check_for_obstacles(mob/living/user)
 	return FALSE
@@ -631,14 +662,34 @@
 	else
 		return
 
+//M5A3 prearmed
+/obj/item/explosive/mine/m5a3betty/active
+	icon_state = "m5_active"
+	base_icon_state = "m5"
+	map_deployed = TRUE
+
+//M5A3 confetti.
+/obj/item/explosive/mine/m5a3betty/confetti
+	explosion_power = 30
+	explosion_falloff = 30
+
+/obj/item/explosive/mine/m5a3betty/confetti/prime(mob/user)
+	set waitfor = 0
+	if(!cause_data)
+		cause_data = create_cause_data(initial(name), user)
+	create_shrapnel(loc, 12, dir, 360, /datum/ammo/bullet/shrapnel/landmine/bounding/confetti, cause_data)
+	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
+	qdel(src)
+
 /obj/item/explosive/mine/fzd91
 	name = "FZD-91 Landmine"
 	desc = "Regular issue area denial landmine for Union of Progressive Peoples' forces in the field. Powerful, with a strong fragmentation liner. Produced by Gruppo Meccanico Militare Vasella."
 	icon_state = "fzd91"
 	angle = 360
 	var/disarmed = FALSE
-	var/explosion_power = 250
-	var/explosion_falloff = 125
+	var/explosion_power = 210
+	var/explosion_falloff = 100
 	base_disarm_time = 45
 	base_disarm_fail_chance = 50
 	blast_tolerance = 95 //Will require a C4 directly on top of it...!
@@ -745,6 +796,31 @@
 	else
 		return
 
+//FZD-91 but already active
+/obj/item/explosive/mine/fzd91/active
+	icon_state = "fzd91_active"
+	base_icon_state = "fzd91"
+	map_deployed = TRUE
+
+//FZD-91 Confetti version.
+/obj/item/explosive/mine/fzd91/confetti
+	explosion_power = 40
+	explosion_falloff = 25
+
+/obj/item/explosive/mine/fzd91/confetti/prime(mob/user)
+	set waitfor = 0
+	if(!cause_data)
+		cause_data = create_cause_data(initial(name), user)
+	create_shrapnel(loc, 9, dir, 360, /datum/ammo/bullet/shrapnel/landmine/confetti, cause_data)
+	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
+	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
+	qdel(src)
+
+//FZD-91 confetti but already active
+/obj/item/explosive/mine/fzd91/active/confetti
+	icon_state = "fzd91_active"
+	base_icon_state = "fzd91"
+	map_deployed = TRUE
 
 /obj/item/explosive/mine/tn13
 	name = "TN-13"
@@ -835,6 +911,11 @@
 	else
 		return ..()
 
+//TN-13 but active.
+/obj/item/explosive/mine/tn13/active
+	icon_state = "tn13_active"
+	base_icon_state = "tn13"
+	map_deployed = TRUE
 
 /obj/item/explosive/mine/sharp
 	name = "\improper XM9 SHARP explosive dart"
