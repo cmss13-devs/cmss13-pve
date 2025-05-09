@@ -3130,7 +3130,7 @@ Defined in conflicts.dm of the #defines folder.
 			if(length(select_text) > 1)
 				shorten = select_text?[1] + " " + select_text?[2]
 			if(flags_attach_features & ATTACH_WEAPON)
-				output += " ([current_rounds]/[max_rounds]) mounted underneath[in_chamber ? ", with an [shorten] chambered." : "."]"
+				output += " ([current_rounds]/[max_rounds]) mounted underneath[in_chamber ? ", with an [shorten] chambered" : "."]"
 			base_attachment_desc = output
 		else
 			base_attachment_desc = "It has a [icon2html(src)] [name] attached."
