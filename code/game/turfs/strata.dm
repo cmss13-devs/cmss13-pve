@@ -64,35 +64,11 @@
 /turf/open/floor/strata/blue4/north
 	dir = NORTH
 
-/turf/open/floor/strata/blue4/east
-	dir = EAST
-
-/turf/open/floor/strata/blue4/west
-	dir = WEST
-
 /turf/open/floor/strata/red3
 	icon_state = "red3"
 
 /turf/open/floor/strata/red3/north
 	dir = NORTH
-
-/turf/open/floor/strata/red3/south
-	dir = SOUTH
-
-/turf/open/floor/strata/red3/west
-	dir = WEST
-
-/turf/open/floor/strata/red3/southwest
-	dir = SOUTHWEST
-
-/turf/open/floor/strata/red3/northeast
-	dir = NORTHEAST
-
-/turf/open/floor/strata/red3/southeast
-	dir = SOUTHEAST
-
-/turf/open/floor/strata/red3/northwest
-	dir = NORTHWEST
 
 /turf/open/floor/strata/white_cyan3/north
 	dir = NORTH
@@ -102,6 +78,9 @@
 
 /turf/open/floor/strata/white_cyan4/north
 	dir = NORTH
+
+/turf/open/floor/strata/red3/south
+	dir = SOUTH
 
 /turf/open/floor/strata/white_cyan3/south
 	dir = SOUTH
@@ -151,12 +130,6 @@
 /turf/open/floor/strata/orange_edge/east
 	dir = EAST
 
-/turf/open/floor/strata/orange_edge/north
-	dir = NORTH
-
-/turf/open/floor/strata/orange_edge/west
-	dir = WEST
-
 /turf/open/floor/strata/red3/east
 	dir = EAST
 
@@ -191,6 +164,9 @@
 	dir = WEST
 
 /turf/open/floor/strata/orange_edge/west
+	dir = WEST
+
+/turf/open/floor/strata/red3/west
 	dir = WEST
 
 /turf/open/floor/strata/white_cyan2
@@ -270,9 +246,6 @@
 
 /turf/open/floor/strata/orange_icorner/north
 	dir = NORTH
-
-/turf/open/floor/strata/orange_icorner/east
-	dir = EAST
 
 /turf/open/floor/strata/orange_icorner/west
 	dir = WEST
