@@ -63,6 +63,8 @@
 	var/fire_rattle = null
 	var/unload_sound = 'sound/weapons/flipblade.ogg'
 	var/empty_sound = 'sound/weapons/smg_empty_alarm.ogg'
+	///Sound to play when first firing the gun
+	var/initiate_sound = null
 	//We don't want these for guns that don't have them.
 	var/reload_sound = null
 	var/cocked_sound = null
@@ -2129,6 +2131,8 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		display_ammo()
 		return TRUE
 	SEND_SIGNAL(src, COMSIG_GUN_FIRE)
+	if(initiate_sound)
+		playsound(get_turf(src), initiate_sound, 50)
 	return TRUE
 
 /// Wrapper proc for the autofire subsystem to ensure the important args aren't null
