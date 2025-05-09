@@ -792,6 +792,10 @@
 	. = ..()
 	MD.iff_signal = FACTION_TWE
 
+//For the RMC ship, giving them access to weapons early but no ammo
+/obj/item/weapon/gun/smartgun/rmc/unloaded
+	current_mag = null
+
 /obj/item/weapon/gun/smartgun/silenced
 	name = "XM56A4 smartgun"
 	desc = "An experimental smartgun variant currently undergoing field testing. This model is outfitted with integrated suppressor and modified internal mechanism."

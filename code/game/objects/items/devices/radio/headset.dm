@@ -663,6 +663,17 @@
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_MARINE
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/rmc
+	name = "Royal Marine Commando headset"
+	desc = "A special headset used by the TWE's elite Royal Marine Commandos."
+	icon_state = "upp_headset"
+	item_state = "upp_headset"
+	minimap_type = MINIMAP_FLAG_TWE
+	frequency = RMC_FREQ
+	initial_keys = null
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_TWE
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
 
@@ -685,7 +696,7 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/medic
 	name = "UPP-MED headset"
 	desc = "A special headset used by UPP military. Channels are as follows: #m - medical."
-	frequency = UPP_GRD_FREQ
+	frequency = UPP_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/upp/medic)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/command
@@ -1139,12 +1150,11 @@
 
 /obj/item/device/radio/headset/distress/royal_marine
 	name = "Royal Marine headset"
-	desc = "A sleek headset used by the Royal Marines Commando. Low profile enough to fit under their unique helmets."
+	desc = "A special headset used by the TWE's elite Royal Marine Commandos."
 	frequency = RMC_FREQ
 	icon_state = "vai_headset"
-	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/royal_marine)
-	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_TWE
+	initial_keys = list(/obj/item/device/encryptionkey/royal_marine)
+	has_hud = FALSE
 	volume = RADIO_VOLUME_IMPORTANT
 
 //CMB Headsets

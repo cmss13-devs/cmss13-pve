@@ -189,3 +189,14 @@
 	req_access = list(ACCESS_UPP_LEADERSHIP)
 
 	minimap_type = MINIMAP_FLAG_UPP
+
+/obj/item/device/cotablet/rmc
+
+	desc = "A special device used by field RMC commanders."
+
+	tablet_name = "RMC Field Commander's Tablet"
+
+	announcement_title = TWE_COMMAND_ANNOUNCE
+	announcement_faction = FACTION_TWE
+	req_access = list(ACCESS_TWE_LEADERSHIP)
+	minimap_type = MINIMAP_FLAG_TWE

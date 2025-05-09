@@ -145,3 +145,45 @@
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander
 	job = JOB_SO
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/spawn_gear()
+	new /obj/item/clothing/head/cmcap/royal_marine(src)
+	new /obj/item/clothing/under/marine/veteran/royal_marine(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(src)
+	new /obj/item/clothing/shoes/marine/rmc/knife(src)
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander/spawn_gear()
+	new /obj/item/clothing/head/cmcap/royal_marine(src)
+	new /obj/item/clothing/under/marine/veteran/royal_marine/lt(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(src)
+	new /obj/item/clothing/shoes/marine/rmc/knife(src)
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/rifleman
+	job = JOB_TWE_RMC_RIFLEMAN
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/smartgunner
+	job = JOB_TWE_RMC_SMARTGUNNER
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/marksman
+	job = JOB_TWE_RMC_MARKSMAN
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/medic
+	job = JOB_TWE_RMC_MEDIC
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/engi
+	job = JOB_TWE_RMC_ENGI
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/gunner
+	job = JOB_TWE_RMC_BREACHER
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/team_leader
+	job = JOB_TWE_RMC_TEAMLEADER
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/section_leader
+	job = JOB_TWE_RMC_SECTIONLEADER
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/troop_leader
+	job = JOB_TWE_RMC_TROOPLEADER
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander
+	job = JOB_TWE_RMC_LIEUTENANT

@@ -186,3 +186,10 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	storage_slots = 3
 	packet_icon = "hiam-p"
 	content_type = /obj/item/explosive/grenade/incendiary/rmc
+
+/obj/item/storage/box/packet/rmc/gas
+	name = "\improper R2175/A HEDP grenade packet"
+	desc = "It contains three R2175/CN20 grenades. Handle with care."
+	storage_slots = 3
+	packet_icon = "bfab-p"
+	content_type = /obj/item/explosive/grenade/nerve_gas/xeno/rmc

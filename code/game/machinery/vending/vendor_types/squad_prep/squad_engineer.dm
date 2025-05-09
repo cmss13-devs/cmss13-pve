@@ -213,3 +213,47 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 		/obj/item/device/lightreplacer,
 		/obj/item/weapon/gun/smg/nailgun/compact/tactical,
 	)
+
+// RMC engi-vendor
+
+/obj/effect/essentials_set/rmcengi
+	spawned_gear_list = list(
+		/obj/item/clothing/accessory/storage/tool_webbing/tactical,
+		/obj/item/tool/shovel/etool/rmc/folded,
+		/obj/item/storage/toolkit,
+		/obj/item/circuitboard/apc,
+		/obj/item/cell/high,
+		/obj/item/explosive/plastic,
+		/obj/item/stack/cable_coil/random,
+	)
+
+GLOBAL_LIST_INIT(cm_vending_clothing_rmc_engi, list(
+		list("ENGINEERING SET (MANDATORY)", 0, null, null, null),
+		list("Essential Engineering Set", 0, /obj/effect/essentials_set/rmcengi, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
+		list("Heavy-duty Backpack", 0, /obj/item/storage/backpack/rmc/heavy, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Standard Backpack", 0, /obj/item/storage/backpack/rmc/medium, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("Lightweight Backpack", 0, /obj/item/storage/backpack/rmc/light, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("L70 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("L26 Pattern General Utility Belt", 0, /obj/item/storage/backpack/general_belt/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("L165 Gunbelt", 0, /obj/item/storage/belt/gun/l905, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/engi/rmc
+	name = "\improper WeyTech Section Engineering Equipment Rack"
+	desc = "An automated rack hooked up to a colossal storage of standard-issue Engineering equipment."
+	icon_state = "eng_gear"
+	req_access = list(ACCESS_TWE_ENGPREP)
+	vendor_role = list(JOB_TWE_RMC_ENGI)
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/clothing/engi/rmc/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_rmc_engi

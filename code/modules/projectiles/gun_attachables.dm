@@ -850,7 +850,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Folding grip with an integrated flashlight. Reduces recoil and scatter marginally, boosts accuracy slightly. \nStatistically udentical to the underbarrel flashlight grip."
 
 /obj/item/attachable/flashlight/laser_light_combo //Unique attachment for the VP78 based on the fact it has a Laser-Light Module in AVP2010
-	name = "VP78 Laser-Light Module"
+	name = "L165A1 Laser-Light Module"
 	desc = "A Laser-Light module for the VP78 Service Pistol which is currently undergoing limited field testing as part of the USCMs next generation pistol program. All VP78 pistols come equipped with the module."
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "vplaserlight"
@@ -2842,7 +2842,7 @@ Defined in conflicts.dm of the #defines folder.
 		R.flags_equip_slot |= SLOT_WAIST
 
 /obj/item/attachable/stock/nsg23
-	name = "NSG 23 stock"
+	name = "NSG L23A1 stock"
 	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
 	icon_state = "nsg23_stock"
 	slot = "stock"
@@ -2936,7 +2936,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "U1 grenade launcher"
 	desc = "A weapon-mounted, reloadable grenade launcher."
 	icon_state = "grenade"
-	attach_icon = "grenade"
+	attach_icon = "grenade_a"
 	w_class = SIZE_MEDIUM
 	current_rounds = 0
 	max_rounds = 3
@@ -3110,6 +3110,18 @@ Defined in conflicts.dm of the #defines folder.
 	cocked = FALSE // we have fired so uncock the gun
 	loaded_grenades.Cut(1,2)
 
+//NSG L23 variant
+/obj/item/attachable/attached_gun/grenade/nsg
+	name = "\improper L34 30mm underslung grenade launcher"
+	desc = "Standard TWE pump action underslung grenade launcher. Fits the L23, two round tube, chambers one."
+
+/obj/item/attachable/attached_gun/grenade/nsg/preloaded
+
+/obj/item/attachable/attached_gun/grenade/nsg/preloaded/New()
+	. = ..()
+	current_rounds = 2
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/rmc(src), new/obj/item/explosive/grenade/high_explosive/rmc(src))
+
 //For the Mk1
 /obj/item/attachable/attached_gun/grenade/mk1
 	name = "\improper PN 30mm underslung grenade launcher"
@@ -3146,6 +3158,7 @@ Defined in conflicts.dm of the #defines folder.
 	. = ..()
 	current_rounds = 2
 	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive(src), new/obj/item/explosive/grenade/high_explosive(src))
+
 
 /obj/item/attachable/attached_gun/grenade/m120
 	name = "\improper PN/c 30mm underslung grenade launcher"

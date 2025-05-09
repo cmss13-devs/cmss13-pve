@@ -136,6 +136,15 @@
 /obj/item/ammo_box/magazine/m39/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/m39/squash
+	name = "magazine box (Squash-Head L6A2 x 12)"
+	overlay_ammo_type = "_impact"
+	overlay_content = "_impact"
+	magazine_type = /obj/item/ammo_magazine/smg/m39/squash
+
+/obj/item/ammo_box/magazine/m39/squash/empty
+	empty = TRUE
+
 //-----------------------M49A Battle Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m49a
@@ -424,7 +433,7 @@
 //-----------------------VP78 Pistol Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/vp78
-	name = "magazine box (VP78 x 16)"
+	name = "magazine box (L165A1 x 16)"
 	icon_state = "base_vp78"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_reg"
@@ -433,6 +442,20 @@
 	magazine_type = /obj/item/ammo_magazine/pistol/vp78
 
 /obj/item/ammo_box/magazine/vp78/empty
+	empty = TRUE
+
+//-----------------------VP78 Pistol Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/l54
+	name = "magazine box (L54 x 16)"
+	icon_state = "base_vp78"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_reg"
+	overlay_gun_type = "_l54"
+	num_of_magazines = 16
+	magazine_type = /obj/item/ammo_magazine/pistol/l54
+
+/obj/item/ammo_box/magazine/l54/empty
 	empty = TRUE
 
 //-----------------------Type71 Rifle Mag Box-----------------------
@@ -755,7 +778,7 @@
 //-----------------------NSG 23 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/nsg23
-	name = "magazine box (NSG 23 x 16)"
+	name = "magazine box (NSG L23A1 x 16)"
 	flags_equip_slot = SLOT_BACK
 	icon_state = "base_nsg23"
 	overlay_gun_type = "_nsg23"
@@ -767,7 +790,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/nsg23/ap
-	name = "magazine box (NSG 23 AP x 12)"
+	name = "magazine box (NSG L23A1 AP x 12)"
 	overlay_ammo_type = "_ap"
 	overlay_content = "_ap"
 	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/ap
@@ -776,22 +799,61 @@
 /obj/item/ammo_box/magazine/nsg23/ap/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/nsg23/ex
-	name = "magazine box (NSG 23 Extended x 8)"
-	overlay_ammo_type = "_ext"
-	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/extended
-	num_of_magazines = 8
-
-/obj/item/ammo_box/magazine/nsg23/ex/empty
-	empty = TRUE
-
 /obj/item/ammo_box/magazine/nsg23/heap
-	name = "magazine box (NSG 23 HEAP x 16)"
+	name = "magazine box (NSG L23A1 HEAP x 16)"
 	overlay_ammo_type = "_heap"
 	overlay_content = "_heap"
 	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/heap
 
 /obj/item/ammo_box/magazine/nsg23/heap/empty
+	empty = TRUE
+
+//-----------------------LARGE NSG 23 Rifle Mag Boxes-----------------------
+
+/obj/item/ammo_box/magazine/nsg23/large
+	name = "magazine box (NSG L23A1 x 32)"
+	icon_state = "base_rmclarge"
+	overlay_ammo_type = "_reglarge"
+	overlay_gun_type = "_blank"
+	overlay_content = "_reglarge"
+	limit_per_tile = 1
+	flags_equip_slot = null
+	magazine_type = /obj/item/ammo_magazine/rifle/nsg23
+	num_of_magazines = 32
+	var/move_delay_mult = 2
+
+/obj/item/ammo_box/magazine/nsg23/large/pickup(mob/user, silent)
+	. = ..()
+	RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
+
+/obj/item/ammo_box/magazine/nsg23/large/proc/handle_movedelay(mob/user, list/movedata)
+	SIGNAL_HANDLER
+	if(locate(/obj/item/ammo_box/magazine/nsg23/large) in user.contents)
+		movedata["move_delay"] += move_delay_mult
+
+/obj/item/ammo_box/magazine/nsg23/large/dropped(mob/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
+
+/obj/item/ammo_box/magazine/nsg23/large/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/nsg23/large/ap
+	name = "magazine box (AP NSG L23A1 x 32)"
+	overlay_ammo_type = "_aplarge"
+	overlay_content = "_aplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/ap
+
+/obj/item/ammo_box/magazine/nsg23/large/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/nsg23/large/heap
+	name = "magazine box (HEAP NSG L23A1 x 32)"
+	overlay_ammo_type = "_heaplarge"
+	overlay_content = "_heaplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/heap
+
+/obj/item/ammo_box/magazine/nsg23/large/heap/empty
 	empty = TRUE
 
 //-----------------------Spearhead Autorevolver Speed Loaders Box-----------------------

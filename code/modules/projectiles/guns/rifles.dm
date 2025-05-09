@@ -106,56 +106,47 @@
 	current_mag = /obj/item/ammo_magazine/rifle/ap
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/stock/rifle/collapsible)
 //-------------------------------------------------------
-//NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
+//NSG 23 ASSAULT RIFLE - RMC PRIMARY RIFLE
 
 /obj/item/weapon/gun/rifle/nsg23
-	name = "\improper NSG 23 assault rifle"
-	desc = "A rare sight, this rifle is seen most commonly in the hands of Weyland-Yutani PMCs. Compared to the M41A MK2, it has noticeably improved handling and vastly improved performance at long and medium range, but compares similarly up close."
+	name = "\improper NSG L23A1 pulse rifle"
+	desc = "Pulse action 8.5x33mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine Commando. Features an integrated 30mm grenade launcher and ammo tube that can hold two grenades on backup."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
 	fire_sound = "gun_nsg23"
-	reload_sound = 'sound/weapons/handling/nsg23_reload.ogg'
-	unload_sound = 'sound/weapons/handling/nsg23_unload.ogg'
+	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
+	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
 	cocked_sound = 'sound/weapons/handling/nsg23_cocked.ogg'
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	wield_delay = WIELD_DELAY_VERY_FAST
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	current_mag = /obj/item/ammo_magazine/rifle/nsg23
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/rmc,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/stock/nsg23,
-		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/flamer/advanced,
-		/obj/item/attachable/attached_gun/grenade,
-		/obj/item/attachable/scope/mini/nsg23,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/attached_gun/grenade/nsg,
 	)
-
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
 	starting_attachment_types = list(
-		/obj/item/attachable/scope/mini/nsg23,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/attached_gun/grenade/nsg,
+		/obj/item/attachable/stock/nsg23,
 	)
-	start_semiauto = FALSE
-	start_automatic = TRUE
-
-/obj/item/weapon/gun/rifle/nsg23/Initialize(mapload, spawn_empty)
-	. = ..()
-	update_icon()
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 10, "stock_x" = 5, "stock_y" = 17, "side_rail_x" = 24, "side_rail_y" = 16)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 20, "under_x" = 19, "under_y" = 11, "stock_x" = 5, "stock_y" = 17, "side_rail_x" = 24, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_9)
+	set_burst_delay(FIRE_DELAY_TIER_12)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_9
@@ -166,26 +157,25 @@
 	damage_falloff_mult = 0
 	fa_max_scatter = SCATTER_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/rifle/nsg23/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/stock/nsg23/S = new(src)
-	S.flags_attach_features &= ~ATTACH_REMOVABLE
-	S.Attach(src)
-	update_attachable(S.slot)
+/obj/item/weapon/gun/rifle/nsg23/unloaded
+	current_mag = null
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
-//has no scope or underbarrel
-/obj/item/weapon/gun/rifle/nsg23/stripped
-	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
-
-/obj/item/weapon/gun/rifle/nsg23/no_lock
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+/obj/item/weapon/gun/rifle/nsg23/preloaded
 	starting_attachment_types = list(
-		/obj/item/attachable/scope/mini/nsg23,
-		/obj/item/attachable/attached_gun/flamer,//non-op flamer for normal spawns
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
+		/obj/item/attachable/stock/nsg23,
 	)
 
-/obj/item/weapon/gun/rifle/nsg23/no_lock/stripped
-	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
+/obj/item/weapon/gun/rifle/nsg23/preloaded/tactical
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
+		/obj/item/attachable/stock/nsg23,
+		/obj/item/attachable/suppressor,
+	)
+
 
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
@@ -301,6 +291,7 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
 	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_falloff_mult = 0
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
 /obj/item/weapon/gun/rifle/m41aMK1/ap //for making it start with ap loaded

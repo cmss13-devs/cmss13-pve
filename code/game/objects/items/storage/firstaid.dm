@@ -372,9 +372,9 @@
 		/obj/item/tool/surgery/scalpel,
 		/obj/item/tool/surgery/hemostat,
 		/obj/item/tool/surgery/retractor,
-		/obj/item/tool/surgery/FixOVein,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
+		/obj/item/tool/surgery/FixOVein,
 	)
 
 /obj/item/storage/surgical_case/regular
@@ -383,6 +383,20 @@
 	new /obj/item/tool/surgery/scalpel(src)
 	new /obj/item/tool/surgery/hemostat(src)
 	new /obj/item/tool/surgery/retractor(src)
+
+
+/obj/item/storage/surgical_case/rmc_surgical_case
+	name = "\improper RMC surgical case"
+	desc = "It's a medical case for storing basic surgical tools. This one was made specifically for Royal Marine Commandos, allowing them to suture their wounds during prolonged operations or perform emergency organ-repair surgeries."
+	icon_state = "rmc_surgical_case"
+	storage_slots = 5
+
+/obj/item/storage/surgical_case/rmc_surgical_case/full/fill_preset_inventory()
+	new /obj/item/tool/surgery/scalpel(src)
+	new /obj/item/tool/surgery/hemostat(src)
+	new /obj/item/tool/surgery/retractor(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
 
 //---------PILL BOTTLES---------
 

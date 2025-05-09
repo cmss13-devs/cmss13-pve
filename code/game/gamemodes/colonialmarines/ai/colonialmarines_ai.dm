@@ -103,10 +103,21 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/leader/ai/forecon = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai/forecon = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/forecon = JOB_SQUAD_TEAM_LEADER,\
-		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN)))
+		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN),\
+		/datum/squad/marine/rmc = list(/datum/job/command/bridge/ai/rmc = JOB_TWE_RMC_LIEUTENANT,\
+		/datum/job/marine/leader/ai/rmc = JOB_TWE_RMC_TROOPLEADER,\
+		/datum/job/marine/tl/ai/rmc = JOB_TWE_RMC_SECTIONLEADER,\
+		/datum/job/marine/tl/ai/rmc2ic = JOB_TWE_RMC_TEAMLEADER,\
+		/datum/job/marine/smartgunner/ai/rmc = JOB_TWE_RMC_SMARTGUNNER,\
+		/datum/job/marine/medic/ai/rmc = JOB_TWE_RMC_MEDIC,\
+		/datum/job/marine/engineer/ai/rmc = JOB_TWE_RMC_ENGI,\
+		/datum/job/marine/engineer/ai/rmcmortar = JOB_TWE_RMC_BREACHER,\
+		/datum/job/marine/specialist/ai/rmc = JOB_TWE_RMC_MARKSMAN,\
+		/datum/job/marine/standard/ai/rmc = JOB_TWE_RMC_RIFLEMAN)))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
-												/datum/squad/marine/forecon = ROLES_AI_FORECON))
+												/datum/squad/marine/forecon = ROLES_AI_FORECON,\
+												/datum/squad/marine/rmc = ROLES_RMCTROOP))
 

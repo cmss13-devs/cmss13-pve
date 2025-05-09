@@ -621,6 +621,7 @@
 	var/smoke_type = /datum/effect_system/smoke_spread/bad
 	var/smoke_radius = 3
 	dual_purpose = TRUE
+	spent_case = /obj/item/trash/grenade
 
 /obj/item/explosive/grenade/smokebomb/New()
 	..()
@@ -639,7 +640,7 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	smoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
 	smoke.start()
-	new /obj/item/trash/grenade(get_turf(src))
+	new spent_case(get_turf(src))
 	qdel(src)
 
 /obj/item/explosive/grenade/smokebomb/launch_impact(atom/hit_atom)
@@ -654,7 +655,7 @@
 		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 		smoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
 		smoke.start()
-		new /obj/item/trash/grenade(get_turf(src))
+		new spent_case(get_turf(src))
 		qdel(src)
 
 /obj/item/explosive/grenade/smokebomb/green
@@ -958,6 +959,7 @@
 	var/nerve_gas_type = /datum/effect_system/smoke_spread/cn20
 	/// The radius the gas will reach
 	var/nerve_gas_radius = 4
+	spent_case = /obj/item/trash/grenade/gas
 
 /obj/item/explosive/grenade/nerve_gas/Initialize(mapload, ...)
 	. = ..()
@@ -972,7 +974,7 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 6)
 	nerve_gas.start()
-	new /obj/item/trash/grenade/gas(get_turf(src))
+	new spent_case(get_turf(src))
 	qdel(src)
 
 /obj/item/explosive/grenade/nerve_gas/xeno
@@ -997,6 +999,7 @@
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	var/datum/effect_system/smoke_spread/LSD/LSD_gas
 	var/LSD_gas_radius = 4
+	spent_case = /obj/item/trash/grenade/gas
 
 /obj/item/explosive/grenade/LSD/Initialize()
 	. = ..() //if it ain't broke don't fix it
@@ -1011,7 +1014,7 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	LSD_gas.set_up(LSD_gas_radius, 0, get_turf(src), null, 6)
 	LSD_gas.start()
-	new /obj/item/trash/grenade/gas(get_turf(src))
+	new spent_case(get_turf(src))
 	qdel(src)
 
 /*
@@ -1032,6 +1035,7 @@
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	var/datum/effect_system/smoke_spread/tear/tear_gas
 	var/tear_gas_radius = 3
+	spent_case = /obj/item/trash/grenade/gas
 
 /obj/item/explosive/grenade/tear/Initialize()
 	. = ..() //if it ain't broke don't fix it
@@ -1046,7 +1050,7 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	tear_gas.set_up(tear_gas_radius, 0, get_turf(src), null, 90)
 	tear_gas.start()
-	new /obj/item/trash/grenade/gas(get_turf(src))
+	new spent_case(get_turf(src))
 	qdel(src)
 
 /obj/item/explosive/grenade/tear/marine
@@ -1059,13 +1063,7 @@
 	underslug_launchable = TRUE
 	tear_gas_radius = 4
 	arm_sound = 'sound/weapons/grenade.ogg'
-
-/obj/item/explosive/grenade/tear/marine/prime()
-	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	tear_gas.set_up(tear_gas_radius, 0, get_turf(src), null, 90)
-	tear_gas.start()
-	new /obj/item/trash/grenade/gas/marine(get_turf(src))
-	qdel(src)
+	spent_case = /obj/item/trash/grenade/gas/marine
 
 /*
 //================================================
@@ -1329,3 +1327,38 @@
 	burn_level = BURN_LEVEL_TIER_8
 	radius = 3
 	fire_type = FIRE_VARIANT_DEFAULT
+
+/obj/item/explosive/grenade/nerve_gas/xeno/rmc
+	name = "\improper R2175/CN20 grenade"
+	desc = "A small grenade containing a vial of deadly nerve gas. Usually knocks out the targets for long enough to allow RMCs to take them out. You can almost hear your Instructor's screaming in the back of your head, mentioning something about a gas mask. It is set to detonate in 3.5 seconds."
+	icon_state = "rmc_grenade_gas"
+	item_state = "grenade_smoke"
+	caliber = "30mm"
+	det_time = 35
+	item_state = "grenade_smoke"
+	arm_sound = 'sound/weapons/grenade.ogg'
+	underslug_launchable = TRUE
+	dual_purpose = TRUE
+	spent_case = /obj/item/trash/grenade/gas/rmc
+
+/obj/item/explosive/grenade/nerve_gas/xeno/rmc/prime()
+	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 12)
+	nerve_gas.start()
+	new spent_case(get_turf(src))
+	qdel(src)
+
+/obj/item/explosive/grenade/nerve_gas/xeno/rmc/launch_impact(atom/hit_atom)
+	if(fuse_type != IMPACT_FUSE)
+		return
+	var/detonate = TRUE
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom) && hit_atom.density && !rebounding)
+		detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+		nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 12)
+		nerve_gas.start()
+		new spent_case(get_turf(src))
+		qdel(src)

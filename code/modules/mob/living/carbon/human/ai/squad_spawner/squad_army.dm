@@ -1,5 +1,5 @@
 /datum/human_ai_squad_preset/army
-	faction = FACTION_ARMY
+	faction = "United States Army"
 
 /datum/human_ai_squad_preset/army/patrol
 	name = "Army Patrol Team"

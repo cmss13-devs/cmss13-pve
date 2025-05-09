@@ -139,6 +139,11 @@
 		aim_multiplier = 0.6
 		aiming_buffs++
 
+	var/mob/living/carbon/xenomorph/bug
+	if(target == bug)
+		aim_multiplier = 0.5
+		aiming_buffs++
+
 	if(HAS_TRAIT(target, TRAIT_SPOTTER_LAZED))
 		aim_multiplier = 0.5
 		aiming_buffs++
@@ -389,6 +394,10 @@
 	desc = "The M42A2 Suppressed Scoped Rifle (SSR for short), is a heavy sniper rifle manufactured by Armat Systems. Modified with an integral suppressor, it has a scope system and fires armor penetrating rounds out of a 15-round magazine.\n'Peace Through Superior Firepower'"
 	starting_attachment_types = list(/obj/item/attachable/supsniperbarrel)
 	loud = FALSE
+
+/obj/item/weapon/gun/rifle/sniper/M42A/silenced/unloaded
+	current_mag = null
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
 /obj/item/weapon/gun/rifle/sniper/XM43E1
 	name = "\improper XM43E1 experimental anti-materiel rifle"

@@ -23,6 +23,8 @@ endmap
 map chapaev
 endmap
 
+map hms_placeholder
+endmap
 
 map firefly
 endmap

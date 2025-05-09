@@ -495,7 +495,7 @@
 
 /obj/item/storage/pouch/magazine/large/nsg_ext/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+		new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/storage/pouch/magazine/large/nsg_heap/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -1150,13 +1150,13 @@
 
 /obj/item/storage/pouch/flare
 	name = "flare pouch"
-	desc = "A pouch designed to hold flares. Refillable with an M94 flare pack."
+	desc = "A pouch designed to hold flares. Refillable with a flare pack."
 	max_w_class = SIZE_SMALL
 	storage_slots = 21
 	max_storage_space = 21
 	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_USING_DRAWING_METHOD
 	icon_state = "flare"
-	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
+	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/rmc,/obj/item/device/flashlight/flare/upp,/obj/item/device/flashlight/flare/signal)
 
 /obj/item/storage/pouch/flare/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/storage/box/flare))
@@ -1168,6 +1168,10 @@
 /obj/item/storage/pouch/flare/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/device/flashlight/flare(src)
+
+/obj/item/storage/pouch/flare/rmc/full/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/device/flashlight/flare/rmc(src)
 
 /obj/item/storage/pouch/radio
 	name = "radio pouch"

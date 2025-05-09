@@ -243,6 +243,16 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/clfpistol(src)
 
+/obj/item/storage/box/loadout/L54_loadout
+	name = "L54 storage box"
+	desc = "A slim storage case containing a loaded L54 pistol and additional magazines."
+	can_hold = list(/obj/item/weapon/gun/pistol/l54, /obj/item/ammo_magazine/pistol/l54)
+
+/obj/item/storage/box/loadout/L54_loadout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/l54())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/l54(src)
+
 /obj/item/storage/box/loadout/co2_knife
 	name = "M8 cartridge bayonet packaging"
 	desc = "Contains one M8 Cartridge Bayonet and two sister CO2 cartridges. Thanks for being a dedicated Boots magazine subscriber!"

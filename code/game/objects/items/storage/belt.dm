@@ -2182,24 +2182,36 @@
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	has_gamemode_skin = FALSE
 
-/obj/item/storage/belt/marine/rmc/rmc_f90_ammo/fill_preset_inventory()
+/obj/item/storage/belt/marine/rmc/nsg/fill_preset_inventory()
 	for(var/i in 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/rmc_f90(src)
-
-/obj/item/storage/belt/marine/rmc/rmc_f90_ammo/marksman/fill_preset_inventory()
-	for(var/i in 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/rmc_f90/marksman(src)
+		new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/storage/belt/medical/rmc
 	name = "\improper L75 pattern medical storage rig"
-	desc = "The L75 is the standard load-bearing equipment of the RMC. It consists of a modular belt with various clips. This version is designed to transport medical supplies and pistol ammunition. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
+	desc = "The L75 is the standard load-bearing equipment of the RMC. It consists of a modular belt with spacious pouches attached that are designed to transport bulkier medical supplies. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
 	icon_state = "rmc_medical"
 	item_state = "rmc_medical"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 
+/obj/item/storage/belt/medical/rmc/full/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/merabica(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/keloderm(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/storage/pill_bottle/imialk(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+
 /obj/item/storage/belt/gun/l905
-	name = "\improper L905 gunbelt"
-	desc = "Finely-tooled leather, a L905, and six magazines. More than enough for the standard RMC commando."
+	name = "\improper L165 gunbelt"
+	desc = "Finely-tooled leather, an L165 pistol, and six magazines. More than enough for a Royal Marine Commando."
 	icon_state = "rmc_pistol"
 	item_state = "rmc_pistol"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
