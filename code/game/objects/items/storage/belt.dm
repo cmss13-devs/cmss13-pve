@@ -1446,8 +1446,8 @@
 #define MAXIMUM_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/gun/xm51
-	name = "\improper M276 pattern XM51 holster rig"
-	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
+	name = "\improper M276 pattern shotgun holster rig"
+	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is a jury rigged shotgun holster using a cannibalized l44 shotgun scabbard and some magazine pouches."
 	icon_state = "xm51_holster"
 	has_gamemode_skin = FALSE
 	gun_has_gamemode_skin = FALSE
@@ -1457,6 +1457,8 @@
 		/obj/item/weapon/gun/rifle/xm51,
 		/obj/item/ammo_magazine/rifle/xm51,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/weapon/gun/shotgun/pump,
+		/obj/item/weapon/gun/shotgun/combat,
 	)
 	holster_slots = list(
 		"1" = list(
