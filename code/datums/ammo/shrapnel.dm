@@ -147,7 +147,8 @@
 	accuracy = HIT_ACCURACY_TIER_MAX
 	accurate_range = 14
 	max_range = 18
-	damage = 40
+	damage = 35
+	damage_falloff = DAMAGE_FALLOFF_TIER_8//hopefully reduces offscreen broken bone problems.
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_5
 	//justifying the AP as being the sheer density of stuff ig.
