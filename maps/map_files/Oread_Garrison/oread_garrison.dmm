@@ -176,7 +176,8 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -1267,7 +1268,8 @@
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
@@ -1636,7 +1638,8 @@
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/inside)
@@ -2076,7 +2079,8 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -3225,7 +3229,8 @@
 /obj/item/stack/sheet/metal/large_stack,
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -3515,7 +3520,8 @@
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -3905,7 +3911,8 @@
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -5691,7 +5698,8 @@
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -5848,7 +5856,8 @@
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -6337,7 +6346,8 @@
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -6599,7 +6609,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -8741,7 +8752,8 @@
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -8914,7 +8926,8 @@
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
@@ -10047,7 +10060,8 @@
 	},
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
-	icon_state = "sandbag_0"
+	icon_state = "sandbag_0";
+	pixel_y = -4
 	},
 /turf/open/gm/dirt2,
 /area/Oread_Garrison/outside/jungle/clearing)
