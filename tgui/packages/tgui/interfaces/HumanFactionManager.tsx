@@ -24,21 +24,23 @@ const FactionContext = (props, context) => {
   const [selectedToCreateFaction, setSelectedToCreateFaction] = useState('');
   return (
     <Stack vertical>
-      <Dropdown
-        selected={selectedToCreateFaction}
-        options={data.datumless_factions}
-        onSelected={(value) => setSelectedToCreateFaction(value)}
-      />
-      <Button
-        onClick={() => {
-          act('create_faction', {
-            faction: selectedToCreateFaction,
-          });
-          setSelectedToCreateFaction('');
-        }}
-      >
-        Create Faction Datum
-      </Button>
+      <Stack.Item>
+        <Dropdown
+          selected={selectedToCreateFaction}
+          options={data.datumless_factions}
+          onSelected={(value) => setSelectedToCreateFaction(value)}
+        />
+        <Button
+          onClick={() => {
+            act('create_faction', {
+              faction: selectedToCreateFaction,
+            });
+            setSelectedToCreateFaction('');
+          }}
+        >
+          Create Faction Datum
+        </Button>
+      </Stack.Item>
       <Divider />
       <Stack fill justify="space-around" align="baseline" wrap>
         {data.factions.map((faction) => (
