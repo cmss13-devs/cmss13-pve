@@ -898,7 +898,7 @@
 	new /obj/item/stack/medical/advanced/ointment(src)
 
 /obj/item/storage/pouch/medkit/full/army/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/syringe_case/regular(src)
 	new /obj/item/roller(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/tool/surgery/surgical_line(src)
