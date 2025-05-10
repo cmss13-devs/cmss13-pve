@@ -8,7 +8,7 @@
 //---------FIRST AID KITS---------
 /obj/item/storage/firstaid
 	name = "first-aid kit"
-	desc = "It's an emergency medical kit for those serious boo-boos. With medical training you can fit this in a backpack."
+	desc = "It's an emergency medical kit for those serious boo-boos."
 	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "firstaid"
 	var/open_state = "kit_empty"
@@ -34,8 +34,6 @@
 		/obj/item/reagent_container/blood,
 	)
 	storage_flags = STORAGE_FLAGS_BOX
-	required_skill_for_nest_opening = SKILL_MEDICAL
-	required_skill_level_for_nest_opening = SKILL_MEDICAL_MEDIC
 	max_w_class = SIZE_MEDIUM
 
 	var/icon_full //icon state to use when kit is full
@@ -67,7 +65,7 @@
 
 /obj/item/storage/firstaid/fire
 	name = "fire first-aid kit"
-	desc = "It's an emergency medical kit for when the dropship ammo storage <i>-spontaneously-</i> burns down. With medical training you can fit this in a backpack."
+	desc = "It's an emergency medical kit for when the dropship ammo storage <i>-spontaneously-</i> burns down."
 	icon_state = "ointment"
 	item_state = "firstaid-ointment"
 	possible_icons_full = list("ointment","firefirstaid")
@@ -87,7 +85,7 @@
 
 /obj/item/storage/firstaid/regular
 	icon_state = "firstaid"
-	desc = "It's an emergency medical kit containing basic medication and equipment. No training required to use. With medical training you can fit this in a backpack."
+	desc = "It's an emergency medical kit containing basic medication and equipment."
 
 /obj/item/storage/firstaid/regular/fill_preset_inventory()
 	new /obj/item/reagent_container/blood/saline(src)
@@ -102,9 +100,7 @@
 	return
 
 /obj/item/storage/firstaid/regular/response
-	desc = "It's an emergency medical kit containing basic medication and equipment. No training required to use. This one is simpler and requires no training to store."
-	required_skill_for_nest_opening = SKILL_MEDICAL
-	required_skill_level_for_nest_opening = SKILL_MEDICAL_DEFAULT
+	desc = "It's an emergency medical kit containing basic medication and equipment."
 
 
 /obj/item/storage/firstaid/robust
@@ -127,7 +123,7 @@
 
 /obj/item/storage/firstaid/toxin
 	name = "toxin first-aid kit"
-	desc = "It's an emergency medical kit containing lifesaving anti-toxic medication. With medical training you can fit this in a backpack."
+	desc = "It's an emergency medical kit containing lifesaving anti-toxic medication."
 	icon_state = "antitoxin"
 	item_state = "firstaid-toxin"
 	possible_icons_full = list("antitoxin","antitoxfirstaid","antitoxfirstaid2","antitoxfirstaid3")
@@ -147,7 +143,7 @@
 
 /obj/item/storage/firstaid/o2
 	name = "oxygen deprivation first-aid kit"
-	desc = "A box full of reoxygenating goodies. With medical training you can fit this in a backpack."
+	desc = "A box full of reoxygenating goodies."
 	icon_state = "o2"
 	item_state = "firstaid-o2"
 
@@ -165,7 +161,7 @@
 
 /obj/item/storage/firstaid/adv
 	name = "advanced first-aid kit"
-	desc = "Contains more effective methods of medical treatment than a basic first-aid kit, such as burn and trauma kits. With medical training you can fit this in a backpack."
+	desc = "Contains more effective methods of medical treatment than a basic first-aid kit, such as burn and trauma kits."
 	icon_state = "advfirstaid"
 	item_state = "firstaid-advanced"
 
@@ -183,7 +179,7 @@
 
 /obj/item/storage/firstaid/synth
 	name = "synthetic repair kit"
-	desc = "Contains equipment to repair a damaged synthetic. A tag on the back reads: 'Does not contain a shocking tool to repair disabled synthetics, nor a scanning device to detect specific damage; pack separately.' With medical training you can fit this in a backpack."
+	desc = "Contains equipment to repair a damaged synthetic. A tag on the back reads: 'Does not contain a shocking tool to repair disabled synthetics, nor a scanning device to detect specific damage; pack separately.'"
 	icon_state = "bezerk"
 	item_state = "firstaid-advanced"
 	can_hold = list(
@@ -217,7 +213,7 @@
 
 /obj/item/storage/firstaid/rad
 	name = "radiation first-aid kit"
-	desc = "Contains treatment for radiation exposure. With medical training you can fit this in a backpack."
+	desc = "Contains treatment for radiation exposure."
 	icon_state = "purplefirstaid"
 
 /obj/item/storage/firstaid/rad/fill_preset_inventory()

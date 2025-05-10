@@ -160,45 +160,70 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/usasf/helljumper
-	name = "USASF Para-Rescue Support Technician (Medical)"
+	name = "USASF Para-Rescue Support Technician"
 	assignment = JOB_NAVY_PARA_TECH
 	rank = JOB_NAVY_PARA_TECH
 	paygrades = list(PAY_SHORT_NE8 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "ParaTech"
-	flags = EQUIPMENT_PRESET_EXTRA
+	role_comm_title = "PJ"
+	flags = null
 	skills = /datum/skills/para_tech
 	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/usasf/helljumper/load_gear(mob/living/carbon/human/new_human)
+//Head
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command/attache(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight/para(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/tech/tanker/para(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat/navy(new_human), WEAR_FACE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf/helljumper(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/medgreen(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/drop_green/equipped(new_human), WEAR_ACCESSORY)
+//Shoes & gloves
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full/dutch(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/not_op(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full/army(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/navy(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1(new_human), WEAR_ACCESSORY)
-
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/tactical(new_human), WEAR_J_STORE)
+//Back
 	new_human.equip_to_slot_or_del(new /obj/item/parachute(new_human), WEAR_BACK)
-
 
 /datum/equipment_preset/usasf/helljumper/technical
 	name = "USASF Para-Rescue Support Technician (Engineering)"
+	role_comm_title = "PJ-ENGR"
+	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/usasf/helljumper/technical/load_gear(mob/living/carbon/human/new_human)
+
+//Uniform & accessories
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight/para(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf/helljumper(new_human), WEAR_ACCESSORY)
+//Armor, webbing & weapon
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/navy(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/navy(new_human), WEAR_J_STORE)
+//Role specific
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/equipped(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/tactical(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/construction/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/parajumper(new_human), WEAR_R_STORE)
+	..()
+
+/datum/equipment_preset/usasf/helljumper/medical
+	name = "USASF Para-Rescue Support Technician (Medical)"
+	role_comm_title = "PJ-MED"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/usasf/helljumper/medical/load_gear(mob/living/carbon/human/new_human) //Redefined between the two subtypes due to weirdness, only way for it to apply
+
+//Uniform & accessories
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight/para(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf/helljumper(new_human), WEAR_ACCESSORY)
+//Armor, webbing & weapon
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/navy(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/navy(new_human), WEAR_J_STORE)
+//Role specific
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/medgreen(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/drop_green/equipped(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/not_op(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full/army(new_human), WEAR_R_STORE)
 	..()
 
 //*****************************************************************************************************/
@@ -232,7 +257,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/navy(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/tactical(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/navy(new_human), WEAR_J_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/rto/navy(new_human), WEAR_BACK)
 
