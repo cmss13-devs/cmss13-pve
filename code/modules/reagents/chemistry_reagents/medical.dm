@@ -40,17 +40,17 @@
 /datum/reagent/medical/saline
 	name = "Saline Solution"
 	id = "saline"
-	description = "A mixture of water, sodium chloride and glucose made to treat blood loss, the symptoms of minor poisoning or hyperthermia. It is not a proper substitute for blood, and overuse will cause fatigue, swelling of the eyes and eventually muscle seizures."
+	description = "A mixture of water, sodium chloride and glucose made to treat blood loss, the symptoms of minor poisoning or hyperthermia.."
 	reagent_state = LIQUID
 	color = COLOR_SILVER
 	chemfiresupp = TRUE
 	intensitymod = 0.1
 	burncolor = "#ffff00"
 	burncolormod = 2
-	overdose = REAGENTS_OVERDOSE_CRITICAL //50
-	overdose_critical = REAGENTS_OVERDOSE_CRITICAL*1.5 //75
+	overdose = 900 //50
+	overdose_critical = 900 //75
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_RELAXING = 1, PROPERTY_HYPOTHERMIC = 0.5, PROPERTY_HEMOGENIC = 2, PROPERTY_ANTITOXIC = 1, PROPERTY_OXYGENATING = 1)
+	properties = list(PROPERTY_RELAXING = 1, PROPERTY_HYPOTHERMIC = 0.5, PROPERTY_HEMOGENIC = 1.5, PROPERTY_ANTITOXIC = 1, PROPERTY_OXYGENATING = 1)
 
 /datum/reagent/medical/tramadol
 	name = "Tramadol"

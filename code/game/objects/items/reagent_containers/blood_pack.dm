@@ -204,7 +204,7 @@
 
 /obj/item/reagent_container/blood/saline/Initialize()
 	. = ..()
-	desc = "A mixture of water, sodium chloride and glucose made to treat " + SPAN_HELPFUL("blood loss, the symptoms of minor poisoning and hyperthermia. ") + "It is not a proper substitute for blood, and " + SPAN_DANGER("administering more than half the bag within a short timeframe will cause dizziness, swelling of the eyes and eventually muscle seizures.")
+	desc = "A mixture of water, sodium chloride and glucose made to treat " + SPAN_HELPFUL("blood loss, the symptoms of minor poisoning and hyperthermia. ")
 
 #undef BLOOD_BAG_INJECTING
 #undef BLOOD_BAG_TAKING
