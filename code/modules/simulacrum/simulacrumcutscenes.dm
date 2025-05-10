@@ -3,40 +3,21 @@
 /proc/simulacrum_text_ending_bad(mob/living/carbon/human/human)
 	human.in_cutscene = TRUE
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
-	text_box.text_to_play = "You're out. You made it."
+	text_box.text_to_play = "REPORT LOGGED TO HIGH COMMAND: USS ROVER MISSING, CONSIDERED LOST WITH ALL HANDS."
 	text_box.player = human.client
-	text_box.color = "#8a2398"
+	text_box.color = "#9b4b0a"
 	LAZYADD(human.client.screen_texts, text_box)
 	text_box.play_to_client()
-	sleep(3 SECONDS)
+	sleep(15 SECONDS)
 	var/atom/movable/screen/text/screen_text/body = new /atom/movable/screen/text/screen_text/simulacrum_message/body()
-	body.text_to_play = "The UD-4 Cheyenne slides into the welcoming embrace of it's airlock. Your mind drifts as you're jostled awake, the disembark feels like a dream..."
+	body.text_to_play = "WARNING. EARLY DETECTION ARRAY REPORTS UNIDENTIFIED OBJECT, CLOSING ON SOL SYSTEM"
 	body.player = human.client
-	body.color = "#9f53a9"
+	body.color = "#990e0e"
 	LAZYADD(human.client.screen_texts, body)
 	body.play_to_client()
 	sleep(5 SECONDS)
 	text_box.after_play()
 	body.after_play()
-	sleep(3 SECONDS)
-	var/atom/movable/screen/text/screen_text/body2 = new /atom/movable/screen/text/screen_text/simulacrum_message/body/secondary()
-	body2.text_to_play = "But, you made it. You drink down the curated warmth of the USS Schwarzenegger's atmosphere like booze."
-	body2.player = human.client
-	body2.color = "#535ca9"
-	LAZYADD(human.client.screen_texts, body2)
-	body2.play_to_client()
-	sleep(5 SECONDS)
-	var/atom/movable/screen/text/screen_text/body3 = new /atom/movable/screen/text/screen_text/simulacrum_message/body/fatelist()
-	body3.text_to_play = "PEACEKEEPING OPERATION 512-BRAVO 'FORLORN HOPE' CONCLUDED. SENDING UPDATE AND MEDAL COMMENDATIONS TO USCMC HIGH COMMAND."
-	body3.player = human.client
-	body3.color = "#535ca9"
-	LAZYADD(human.client.screen_texts, body3)
-	body3.play_to_client()
-	sleep(15 SECONDS)
-	text_box.after_play()
-	body.after_play()
-	body2.after_play()
-	body3.after_play()
 	sleep(5 SECONDS)
 	message_admins("END THE ROUND NOW")
 	if(human.client)

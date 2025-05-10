@@ -23,7 +23,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(ko_single_mob), human)
 
 /client/proc/ko_everyone_verb()
-	set name = "KO Everyone"
+	set name = "Conclude"
 	set category = "Admin.Simulation"
 
 	if(!check_rights(R_EVENT))
@@ -35,21 +35,6 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 	ko_everyone()
 
 /proc/ko_single_mob(mob/living/carbon/human/human)
-	to_chat(human, SPAN_WARNING("Your eyelids start to grow heavy."))
-	human.clear_fullscreens()
-	var/atom/movable/screen/fullscreen/overlay_screen = human.overlay_fullscreen("simulacrum_ko", /atom/movable/screen/fullscreen/impaired)
-	overlay_screen.icon_state = "impairedoverlay1"
-	sleep(5 SECONDS)
-	to_chat(human, SPAN_WARNING("For once, you're given a moment to rest."))
-	overlay_screen.icon_state = "impairedoverlay3"
-	sleep(12 SECONDS)
-	to_chat(human, SPAN_WARNING("Not even the turbulence of atmospheric flight can dash off the prospect of peaceful sleep."))
-	overlay_screen.icon_state = "impairedoverlay5"
-	sleep(10 SECONDS)
-	overlay_screen.icon_state = "impairedoverlay6"
-	sleep(10 SECONDS)
-	to_chat(human, SPAN_BOLD("Your eyes shut fully, and your mind revels in the sudden slackness of your body."))
-	overlay_screen.icon_state = "impairedoverlay7"
 	human.Stun(100000000)
 	human.loc = null
 	human.SetEyeBlind(100000000)
