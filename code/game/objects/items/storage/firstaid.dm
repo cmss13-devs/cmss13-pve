@@ -34,7 +34,7 @@
 		/obj/item/reagent_container/blood,
 	)
 	storage_flags = STORAGE_FLAGS_BOX
-	max_w_class = SIZE_MEDIUM
+	max_w_class = SIZE_SMALL
 
 	var/icon_full //icon state to use when kit is full
 	var/possible_icons_full

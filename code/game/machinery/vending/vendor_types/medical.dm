@@ -94,7 +94,7 @@
 		/obj/item/stack/medical/ointment = 3,
 		/obj/item/stack/medical/bruise_pack = 2,
 		/obj/item/stack/medical/splint = 2,
-		/obj/item/device/healthanalyzer = 1,
+		/obj/item/device/healthanalyzer/soul = 1,
 	)
 
 /obj/structure/restock_cart/medical/reagent

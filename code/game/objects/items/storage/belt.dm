@@ -208,7 +208,7 @@
 	var/mode = 1 //Picking from pill bottle mode
 
 	can_hold = list(
-//		/obj/item/device/healthanalyzer/soul,
+		/obj/item/device/healthanalyzer,
 		/obj/item/reagent_container/dropper,
 		/obj/item/reagent_container/glass/beaker,
 		/obj/item/reagent_container/glass/bottle,
