@@ -38,5 +38,5 @@
 	desc = "A secondary weapon for tanks that shoots bullets, this one has been slightly adjusted to fit onto a UACG Armored Van."
 
 	icon_state = "m56_cupola"
-	disp_icon = "van_armored"
+	disp_icon = "van"
 	disp_icon_state = "van_mg"
