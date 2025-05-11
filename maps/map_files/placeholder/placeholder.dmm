@@ -4101,30 +4101,7 @@
 /turf/closed/wall/almayer,
 /area/golden_arrow/cryo_cells)
 "aoj" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/mortar_kit/rmc{
-	pixel_y = 11
-	},
-/obj/item/mortar_shell/he{
-	pixel_x = -1;
-	pixel_y = -9
-	},
-/obj/item/mortar_shell/he{
-	pixel_y = -9;
-	pixel_x = -7
-	},
-/obj/item/mortar_shell/he{
-	pixel_y = -9;
-	pixel_x = -13
-	},
-/obj/item/mortar_shell/smoke{
-	pixel_y = -9;
-	pixel_x = 11
-	},
-/obj/item/mortar_shell/smoke{
-	pixel_y = -9;
-	pixel_x = 5
-	},
+/obj/structure/machinery/cm_vending/gear/mortar_stuff,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "aok" = (

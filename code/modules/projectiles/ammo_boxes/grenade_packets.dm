@@ -173,10 +173,11 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	packet_icon = "hsdp-p"
 	content_type = /obj/item/explosive/grenade/smokebomb/airburst
 
-/obj/item/storage/box/packet/rmc/he
+/obj/item/storage/box/packet/rmc
 	name = "\improper R2175/A HEDP grenade packet"
 	desc = "It contains three R2175/A HEDP grenades. Handle with care."
 	storage_slots = 3
+	icon_state = "rmc_packet"
 	packet_icon = "hedp-p"
 	content_type = /obj/item/explosive/grenade/high_explosive/rmc
 
@@ -188,8 +189,46 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	content_type = /obj/item/explosive/grenade/incendiary/rmc
 
 /obj/item/storage/box/packet/rmc/gas
-	name = "\improper R2175/A HEDP grenade packet"
+	name = "\improper R2175/CN20 gas grenade packet"
 	desc = "It contains three R2175/CN20 grenades. Handle with care."
 	storage_slots = 3
 	packet_icon = "bfab-p"
 	content_type = /obj/item/explosive/grenade/nerve_gas/xeno/rmc
+
+/obj/item/storage/box/packet/rmc/mini
+	name = "\improper L103A1 20mm HE grenade packet"
+	desc = "It contains six L103A1 20mm HE grenades. Handle with care."
+	storage_slots = 6
+	icon_state = "rmc_packet"
+	packet_icon = "bfab-p"
+	content_type = /obj/item/explosive/grenade/high_explosive/impact/rmc20mm
+
+/obj/item/storage/box/packet/rmc/mini/frag
+	name = "\improper L104A1 20mm fragmentation grenade packet"
+	desc = "It contains six L104A1 20mm frag grenades. Handle with care."
+	packet_icon = "wpsi-p"
+	content_type = /obj/item/explosive/grenade/high_explosive/impact/frag/rmc20mm
+
+/obj/item/storage/box/packet/rmc/mini/incen
+	name = "\improper L103A1/I 20mm incendiary grenade packet"
+	desc = "It contains six L103A1/I 20mm incendiary grenades. Handle with care."
+	packet_icon = "sebb-p"
+	content_type = /obj/item/explosive/grenade/incendiary/airburst/rmc20mm
+
+/obj/item/storage/box/packet/rmc/mini/gas
+	name = "\improper L101A2 20mm nerve-agent grenade packet"
+	desc = "It contains six L101A2 20mm nerve gas grenades. Handle with care."
+	packet_icon = "hirr-p"
+	content_type = /obj/item/explosive/grenade/smokebomb/airburst/rmc20mm
+
+/obj/item/storage/box/packet/rmc/mini/holo
+	name = "\improper L104A1/H 20mm holo-targetting grenade packet"
+	desc = "It contains six L104A1/H 20mm holo-targetting grenades. Handle with care."
+	packet_icon = "hiaf-p"
+	content_type = /obj/item/explosive/grenade/high_explosive/airburst/hornet_shell/rmc20mm
+
+/obj/item/storage/box/packet/rmc/mini/squash
+	name = "\improper L108A1 20mm HESH grenade packet"
+	desc = "It contains six L108A1 high-explosive, squash-head grenades. Handle with care."
+	packet_icon = "heap-p"
+	content_type = /obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm

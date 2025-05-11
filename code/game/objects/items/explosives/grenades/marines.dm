@@ -620,6 +620,7 @@
 	var/datum/effect_system/smoke_spread/bad/smoke
 	var/smoke_type = /datum/effect_system/smoke_spread/bad
 	var/smoke_radius = 3
+	var/smoke_duration = 40
 	dual_purpose = TRUE
 	spent_case = /obj/item/trash/grenade
 
@@ -638,7 +639,7 @@
 		to_chat(user, SPAN_WARNING("This grenade is set for impact-fusing!"))
 		return
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	smoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
+	smoke.set_up(smoke_radius, 0, get_turf(src), null, smoke_duration)
 	smoke.start()
 	new spent_case(get_turf(src))
 	qdel(src)
@@ -653,9 +654,10 @@
 		detonate = FALSE
 	if(active && detonate) // Active, and we reached our destination.
 		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-		smoke.set_up(smoke_radius, 0, get_turf(src), null, 40)
+		smoke.set_up(smoke_radius, 0, get_turf(src), null, smoke_duration)
 		smoke.start()
-		new spent_case(get_turf(src))
+		if(spent_case)
+			new spent_case(get_turf(src))
 		qdel(src)
 
 /obj/item/explosive/grenade/smokebomb/green
@@ -1079,6 +1081,7 @@
 	det_time = 0 // Unused, because we don't use prime.
 	hand_throwable = FALSE
 	smoke_radius = 2
+	spent_case = null
 
 /obj/item/explosive/grenade/smokebomb/airburst/New()
 	..()
@@ -1088,22 +1091,6 @@
 
 /obj/item/explosive/grenade/smokebomb/airburst/prime()
 // We don't prime, we use launch_impact.
-
-/obj/item/explosive/grenade/smokebomb/airburst/launch_impact(atom/hit_atom)
-	..()
-	var/detonate = TRUE
-	var/turf/hit_turf = null
-	if(isobj(hit_atom) && !rebounding)
-		detonate = FALSE
-	if(isturf(hit_atom))
-		hit_turf = hit_atom
-		if(hit_turf.density && !rebounding)
-			detonate = FALSE
-	if(active && detonate) // Active, and we reached our destination.
-		playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-		smoke.set_up(radius = smoke_radius, c = 0, loca = get_turf(src), direct = null, smoke_time = 6)
-		smoke.start()
-		qdel(src)
 
 /*
 //================================================
@@ -1362,3 +1349,66 @@
 		nerve_gas.start()
 		new spent_case(get_turf(src))
 		qdel(src)
+
+// RMC 20mm baby-nades
+
+/obj/item/explosive/grenade/high_explosive/impact/rmc20mm
+	name = "\improper L103A1 20mm HE grenade"
+	desc = "A 20mm grenade that explodes upon impact. Less powerful than full-sized grenades."
+	icon_state = "grenade_20mm_he"
+	item_state = "grenade_hedp"
+	caliber = "20mm"
+	explosion_power = 80
+	shrapnel_count = 8
+
+/obj/item/explosive/grenade/high_explosive/impact/frag/rmc20mm
+	name = "\improper L104A1 20mm fragmentation grenade"
+	desc = "A 20mm grenade that explodes into shrapnel upon impact."
+	icon_state = "grenade_20mm_frag"
+	item_state = "grenade_hefa"
+	caliber = "20mm"
+	explosion_power = 50
+	shrapnel_count = 48
+
+/obj/item/explosive/grenade/incendiary/airburst/rmc20mm
+	name = "\improper L103A1/I 20mm incendiary grenade"
+	desc = "A 20mm grenade that explodes into flaming shrapnel & a pool of incendiary compound upon impact."
+	icon_state = "grenade_20mm_inc"
+	item_state = "grenade_fire"
+	caliber = "20mm"
+	flame_level = BURN_TIME_TIER_1
+	burn_level = BURN_LEVEL_TIER_8
+	shrapnel_count = 7
+	shrapnel_type = /datum/ammo/bullet/shrapnel/incendiary/heavy
+
+/obj/item/explosive/grenade/smokebomb/airburst/rmc20mm
+	name = "\improper L101A2 20mm nerve-agent grenade"
+	desc = "A 20mm grenade that explodes into a voluminous cloud of nerve gas upon impact."
+	icon_state = "grenade_20mm_gas"
+	item_state = "grenade_smoke"
+	caliber = "20mm"
+	spent_case = null
+	smoke_duration = 8
+
+/obj/item/explosive/grenade/smokebomb/airburst/rmc20mm/New()
+	..()
+	smoke = new /datum/effect_system/smoke_spread/cn20/xeno
+	smoke.attach(src)
+
+/obj/item/explosive/grenade/high_explosive/airburst/hornet_shell/rmc20mm
+	name = "\improper L104A1/H 20mm holo-targetting grenade"
+	desc = "A 20mm grenade that explodes into shrapnel upon impact. The shrapenl of this one douses the target in a chemical compound which aids in target acquisition by sensors."
+	icon_state = "grenade_20mm_holo"
+	item_state = "grenade_phos"
+	caliber = "20mm"
+	shrapnel_count = 8
+	shrapnel_type = /datum/ammo/bullet/shrapnel/hornet_rounds/rmc
+	dispersion_angle = 25
+
+/obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm
+	name = "\improper L108A1 HESH grenade"
+	desc = "A powerful high-explosive squash-head 20mm grenade that explodes upon impact."
+	icon_state = "grenade_20mm_squash"
+	item_state = "grenade_training"
+	caliber = "20mm"
+	explosion_power = 220

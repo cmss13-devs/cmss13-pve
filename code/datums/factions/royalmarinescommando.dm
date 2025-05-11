@@ -104,7 +104,7 @@
 		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/flare, null, VENDOR_ITEM_RECOMMENDED),
 		list("Smoke Grenade", 7, /obj/item/explosive/grenade/smokebomb, null, VENDOR_ITEM_REGULAR),
 		list("R2175/B HIDP grenade packet", 7, /obj/item/storage/box/packet/rmc/incin, null, VENDOR_ITEM_REGULAR),
-		list("R2175/A HEDP grenade packet", 7, /obj/item/storage/box/packet/rmc/he, null, VENDOR_ITEM_REGULAR),
+		list("R2175/A HEDP grenade packet", 7, /obj/item/storage/box/packet/rmc, null, VENDOR_ITEM_REGULAR),
 		list("L5 bayonet", 3, /obj/item/attachable/bayonet/rmc, null, VENDOR_ITEM_REGULAR),
 	)
 
@@ -132,6 +132,6 @@
 		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/flare, null, VENDOR_ITEM_RECOMMENDED),
 		list("Smoke Grenade", 7, /obj/item/explosive/grenade/smokebomb, null, VENDOR_ITEM_REGULAR),
 		list("R2175/B HIDP grenade packet", 7, /obj/item/storage/box/packet/rmc/incin, null, VENDOR_ITEM_REGULAR),
-		list("R2175/A HEDP grenade packet", 7, /obj/item/storage/box/packet/rmc/he, null, VENDOR_ITEM_REGULAR),
+		list("R2175/A HEDP grenade packet", 7, /obj/item/storage/box/packet/rmc, null, VENDOR_ITEM_REGULAR),
 		list("L5 bayonet", 3, /obj/item/attachable/bayonet/rmc, null, VENDOR_ITEM_REGULAR),
 	)

@@ -342,6 +342,34 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
+/obj/item/weapon/gun/shotgun/combat/rmcgl
+	name = "\improper L164A3 multiple grenade launcher"
+	desc = "A successor to the Benelli M4 Super 90, the M120 tactical shotgun is in service with the USCM due its easy maneuverability in close quarters, 12 gauge chambering, high firerate and integrated U1 underslung grenade launcher. While not part of the standard doctrine, they are common none the less. The internal tube magazine stores 6 shells and the U1 grenade launcher stores three grenades."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "rmcgl"
+	item_state = "rmcgl"
+	fire_sound = 'sound/weapons/gun_ugl_fire.ogg'
+	reload_sound = "shell_load"
+	cocked_sound = 'sound/weapons/gun_minigun_cocked.ogg'
+	flags_equip_slot = SLOT_BACK
+	flags_gun_features = GUN_INTERNAL_MAG|GUN_WIELDED_FIRING_ONLY
+	auto_retrieval_slot = WEAR_BACK
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/rmcgl
+	attachable_allowed = null
+	starting_attachment_types = null
+	var/grenade_pass_flags
+
+/obj/item/weapon/gun/shotgun/combat/rmcgl/Initialize(mapload, spawn_empty)
+	. = ..()
+	if(current_mag && current_mag.current_rounds > 0)
+		load_into_chamber()
+
+/obj/item/weapon/gun/shotgun/combat/rmcgl/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_5)
+	scatter = SCATTER_AMOUNT_TIER_2
+	recoil = RECOIL_AMOUNT_TIER_5
+
 //-------------------------------------------------------
 //TYPE 23. SEMI-AUTO UPP SHOTGUN, BASED ON KS-23
 

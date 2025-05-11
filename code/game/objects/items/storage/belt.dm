@@ -2230,3 +2230,54 @@
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
 	for(var/i in 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/vp78(src)
+
+#define MAXIMUM_MORTARSHELL_COUNT 3
+
+/obj/item/storage/belt/gun/mortarbelt/rmc
+	name = "\improper L84 pattern ammo load rig"
+	desc = "An L84 pattern load-bearing rig configured to carry ammunition for the L53A1 light mortar, along with a sidearm & magazine. Made of special rot-resistant fabric."
+	icon_state = "mortarutility"
+	item_state = "s_mortarbelt"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	has_gamemode_skin = FALSE
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = -9,
+			"icon_y" = -6))
+	can_hold = list(
+		/obj/item/weapon/gun/pistol,
+		/obj/item/weapon/gun/revolver/m44,
+		/obj/item/weapon/gun/flare,
+		/obj/item/mortar_shell,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/handful,
+	)
+	bypass_w_limit = list(/obj/item/mortar_shell)
+
+	//Keep a track of how many mortar shells are inside the belt.
+	var/shells = 0
+
+/obj/item/storage/belt/gun/mortarbelt/rmc/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(shells >= MAXIMUM_MORTARSHELL_COUNT && istype(item, /obj/item/mortar_shell))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more mortar shells."))
+		return FALSE
+
+/obj/item/storage/belt/gun/mortarbelt/rmc/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/mortar_shell))
+		shells++
+
+/obj/item/storage/belt/gun/mortarbelt/rmc/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/mortar_shell))
+		shells--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/gun/mortarbelt/rmc/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/mortar_shell))
+		shells--
+
+#undef MAXIMUM_MORTARSHELL_COUNT
