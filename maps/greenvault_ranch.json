@@ -1,0 +1,13 @@
+{
+    "override_map": true,
+    "map_name": "Greenvault Ranch",
+    "short_name": "Greenvault",
+    "map_path": "map_files/Greenvault_Ranch",
+    "map_file": "Greenvault_Ranch.dmm",
+
+    "map_item_type": "/obj/item/map/greenvault_ranch",
+
+    "traits": [{ "Ground": true }],
+    "camouflage": "jungle"
+}
+
