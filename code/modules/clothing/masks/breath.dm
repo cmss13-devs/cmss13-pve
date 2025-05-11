@@ -133,6 +133,9 @@
 	flags_inv_hide = HIDEFACE|HIDELOWHAIR
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	can_become_accessory = TRUE
+	worn_accessory_slot = ACCESSORY_SLOT_MASK
+	worn_accessory_limit = 2
 
 /obj/item/clothing/mask/rebreather/scarf/tacticalmask/red
 	icon_state = "scarf_red"
@@ -198,6 +201,9 @@
 	flags_inventory = ALLOWCPR
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	can_become_accessory = TRUE
+	worn_accessory_slot = ACCESSORY_SLOT_MASK
+	worn_accessory_limit = 2
 
 /obj/item/clothing/mask/tornscarf/green
 	icon_state = "torn_scarf_green"
@@ -225,13 +231,13 @@
 	icon_state = "neckerchief"
 	item_state = "neckerchief"
 	icon = 'icons/obj/items/clothing/masks.dmi'
-	item_icons = list(
-		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi'
-	)
 	flags_inventory = ALLOWREBREATH|ALLOWCPR
 	var/adjust = FALSE
 	var/original_state = "neckerchief"
 	actions_types = list(/datum/action/item_action/toggle)
+	can_become_accessory = TRUE
+	worn_accessory_slot = ACCESSORY_SLOT_MASK
+	worn_accessory_limit = 2
 
 /obj/item/clothing/mask/neckerchief/ui_action_click()
 	adjust()

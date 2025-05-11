@@ -41,7 +41,6 @@
 		/obj/item/storage/large_holster/machete,
 	)
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK)
 
 	//Buttons
 	var/has_buttons = FALSE
@@ -165,7 +164,6 @@
 	icon_state = "co_jacket"
 	has_buttons = FALSE
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 
 /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber
 	name = "commanding officer bomber jacket"
