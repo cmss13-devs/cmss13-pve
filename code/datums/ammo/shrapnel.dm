@@ -53,9 +53,9 @@
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 2
-	max_range = 32
+	max_range = 7
 	damage = 20
-	damage_falloff = DAMAGE_FALLOFF_TIER_3
+	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
 	penetration = 0

@@ -570,7 +570,7 @@
 	set waitfor = 0
 	if(!cause_data)
 		cause_data = create_cause_data(initial(name), user)
-	create_shrapnel(loc, 72, dir, 360, /datum/ammo/bullet/shrapnel/landmine/bounding, cause_data)
+	create_shrapnel(loc, 54, dir, 360, /datum/ammo/bullet/shrapnel/landmine/bounding, cause_data)
 	cell_explosion(loc, explosion_power, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
 	playsound(loc, 'sound/weapons/mine_tripped.ogg', 45)
 	qdel(src)
