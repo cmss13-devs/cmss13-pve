@@ -421,6 +421,13 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
+"qa" = (
+/mob/living/simple_animal/cat/blackcat{
+	name = "Buttons";
+	desc = "A cute black cat that the Raiders found on Hybrisa Prospera. Mortal enemies of Kiki, the original platoon cat."
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
 "qo" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cryo_cells)
@@ -1046,6 +1053,13 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
+"NN" = (
+/obj/structure/machinery/bot/medbot/mysterious{
+	desc = "A little Weyland-Yutani medical robot that the Raiders picked up from CORSAT. It's become favored by the logistic technicians onboard due to it being self-cleaning.";
+	name = "Tracey"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
 "Oz" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -2535,7 +2549,7 @@ HA
 Vo
 po
 HB
-DN
+qa
 ol
 DN
 FT
@@ -2691,7 +2705,7 @@ Qi
 qC
 DN
 Xj
-DN
+NN
 DN
 DN
 dM
