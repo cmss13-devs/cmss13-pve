@@ -965,9 +965,31 @@
 	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "kit_case_old"
 	foldable = FALSE
-	storage_slots = 38
+	storage_slots = 50
 	max_w_class = SIZE_MASSIVE
 	w_class = SIZE_MASSIVE
+
+/obj/item/storage/box/stash/micro
+	name = "ColMarTech Auxiliary Micro Substash"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one can go inside another stash crate!"
+	icon = 'icons/obj/items/storage/boxes.dmi'
+	icon_state = "flashbang_e"
+	foldable = FALSE
+	storage_slots = 50
+	max_w_class = SIZE_HUGE
+	w_class = SIZE_HUGE
+
+/obj/item/storage/box/stash/micro/big
+	name = "ColMarTech Auxiliary Deluxe Micro Substash"
+	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one can go inside another stash crate and can hold a lot of stuff!"
+	icon_state = "emp_e"
+	storage_slots = 75
+
+/obj/item/storage/box/stash/micro/big/debug
+	name = "DebugMarTech Auxiliary Ultra-Super-Deluxe-Extreme Micro-Macro Sub-sub-substash"
+	desc = "Okay, this is getting stupid."
+	icon_state = "stomper_box_e"
+	storage_slots = 500
 
 /obj/item/storage/box/stash/rations
 	name = "ColMarTech Auxiliary Stash (Rations)"
@@ -994,11 +1016,10 @@
 	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one has been labeled 'AMMO', but it can store anything."
 	icon_state = "kit_case_ammo"
 
-
 /obj/item/storage/box/stash/big
 	name = "ColMarTech Auxiliary Deluxe Stash"
 	desc = "Despite the fancy name, this is just a really big box that you can shove into a stash to be able to store more stuff. This one in particular is an ultra-large model."
-	storage_slots = 59
+	storage_slots = 75
 	icon_state = "kit_case"
 
 /obj/item/storage/box/stash/big/rations
