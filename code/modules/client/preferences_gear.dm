@@ -268,6 +268,50 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Durag, jungle"
 	path = /obj/item/clothing/head/durag
 
+/datum/gear/headwear/redcap
+	display_name = "Trucker cap, red"
+	path = /obj/item/clothing/head/soft/trucker/red
+
+/datum/gear/headwear/bluecap
+	display_name = "Trucker cap, blue"
+	path = /obj/item/clothing/head/soft/trucker
+
+/datum/gear/headwear/cap_prison
+	display_name = "Baseball cap, dark blue"
+	path = /obj/item/clothing/head/cmcap/corrections
+
+/datum/gear/headwear/cap_wy
+	display_name = "Baseball cap, Weyland-Yutani"
+	path = /obj/item/clothing/head/cmcap/weyyu
+
+/datum/gear/headwear/cap_marshal
+	display_name = "Baseball cap, Colonial Marshal"
+	path = /obj/item/clothing/head/CMB
+
+/datum/gear/headwear/beanie_tan
+	display_name = "Beanie, tan"
+	path = /obj/item/clothing/head/beanie/tan
+
+/datum/gear/headwear/beanie_green
+	display_name = "Beanie, green"
+	path = /obj/item/clothing/head/beanie/green
+
+/datum/gear/headwear/beanie_gray
+	display_name = "Beanie, gray"
+	path = /obj/item/clothing/head/beanie/gray
+
+/datum/gear/headwear/beanie_rmc
+	display_name = "Beanie, Royal Marines Commando"
+	path = /obj/item/clothing/head/beanie/royal_marine
+
+/datum/gear/headwear/headband_rebel
+	display_name = "Headband, rebel"
+	path = /obj/item/clothing/head/headband/rebel
+
+/datum/gear/headwear/uscm/cap_mp
+	display_name = "USCM cap, Military Police"
+	path = /obj/item/clothing/head/beret/marine/mp/mpcap
+
 /datum/gear/headwear/uscm
 	allowed_origins = USCM_ORIGINS
 
@@ -497,6 +541,54 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/clothing
 	category = "Non-standard clothing"
+
+/datum/gear/clothing/uniform_prison
+	display_name = "prisoner jumpsuit"
+	path = /obj/item/clothing/under/colonist/prison_boiler
+
+/datum/gear/clothing/uniform_boiler_lightblue
+	display_name = "light blue boilersuit"
+	path = /obj/item/clothing/under/colonist/boilersuit
+
+/datum/gear/clothing/uniform_boiler_cyan
+	display_name = "cyan boilersuit"
+	path = /obj/item/clothing/under/colonist/boilersuit/cyan
+
+/datum/gear/clothing/uniform_boiler_darkblue
+	display_name = "dark blue boilersuit"
+	path = /obj/item/clothing/under/colonist/boilersuit/darkblue
+
+/datum/gear/clothing/uniform_boiler_gray
+	display_name = "gray boilersuit"
+	path = /obj/item/clothing/under/colonist/boilersuit/grey
+
+/datum/gear/clothing/uniform_boiler_khaki
+	display_name = "khaki boilersuit"
+	path = /obj/item/clothing/under/colonist/boilersuit/khaki
+
+/datum/gear/clothing/uniform_boiler_white
+	display_name = "white boilersuit"
+	path = /obj/item/clothing/under/colonist/boilersuit/white
+
+/datum/gear/clothing/uniform_upp
+	display_name = "Union of Progressive Peoples uniform"
+	path = /obj/item/clothing/under/marine/veteran/UPP
+
+/datum/gear/clothing/uniform_rmc
+	display_name = "Royal Marine Commando uniform"
+	path = /obj/item/clothing/under/marine/veteran/royal_marine
+
+/datum/gear/clothing/uniform_upp
+	display_name = "Weyland-Yutani PMC uniform"
+	path = /obj/item/clothing/under/marine/veteran/pmc
+
+/datum/gear/clothing/uniform_clf
+	display_name = "Colonial Liberation Front uniform"
+	path = /obj/item/clothing/under/colonist/clf
+
+/datum/gear/clothing/uniform_freelancer
+	display_name = "Freelancer uniform"
+	path = /obj/item/clothing/under/marine/veteran/freelancer
 
 /datum/gear/clothing/black_boots
 	display_name = "black combat boots"
@@ -1473,10 +1565,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 0
 	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
-
-/datum/gear/misc/patch_uscm/deuce
-	display_name = "Double Deuce shoulder patch"
-	path = /obj/item/clothing/accessory/patch/deuce
 
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
