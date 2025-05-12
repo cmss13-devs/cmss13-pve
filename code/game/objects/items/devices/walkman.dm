@@ -549,3 +549,16 @@
 	desc = "The shell on this cassette is broken, it still looks like it'll work, though!"
 	icon_state = "cassette_worstmap"
 	side1_icon = "cassette_worstmap"
+
+/obj/item/device/cassette_tape/quartermaster
+	name = "quartermaster cassette"
+	id = 19
+	desc = "A cassette with a brown and gold sticker. It's labeled 'QM'S PLAYLIST'."
+	icon_state = "cassette_qm"
+	side1_icon = "cassette_qm"
+	songs = list("side1" = list("sound/music/walkman/quartermaster/18-1-1.ogg",\
+								"sound/music/walkman/quartermaster/18-1-2.ogg",\
+								"sound/music/walkman/quartermaster/18-1-3.ogg"),\
+				"side2" = list("sound/music/walkman/quartermaster/18-2-1.ogg",\
+								"sound/music/walkman/quartermaster/18-2-2.ogg",\
+								"sound/music/walkman/quartermaster/18-2-3.ogg"))
