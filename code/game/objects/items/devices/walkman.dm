@@ -375,8 +375,7 @@
 								"sound/music/walkman/pop1/1-1-2.ogg",\
 								"sound/music/walkman/pop1/1-1-3.ogg"),\
 				"side2" = list("sound/music/walkman/pop1/1-2-1.ogg",\
-								"sound/music/walkman/pop1/1-2-2.ogg",\
-								"sound/music/walkman/pop1/1-2-3.ogg"))
+								"sound/music/walkman/pop1/1-2-2.ogg"))
 
 /obj/item/device/cassette_tape/pop2
 	name = "rainbow cassette"
@@ -544,14 +543,20 @@
 	side1_icon = "cassette_dam"
 
 /obj/item/device/cassette_tape/prison
-	name = "broken cassette"
+	name = "worn cassette"
 	id = 18
-	desc = "The shell on this cassette is broken, it still looks like it'll work, though!"
+	desc = "The shell on this cassette is broken - but it still looks like it'll work. It's labelled 'SLOP'. Ominous."
 	icon_state = "cassette_worstmap"
 	side1_icon = "cassette_worstmap"
+	songs = list("side1" = list("sound/music/walkman/slop/17-1-1.ogg",\
+								"sound/music/walkman/slop/17-1-2.ogg",\
+								"sound/music/walkman/slop/17-1-3.ogg"),\
+				"side2" = list("sound/music/walkman/slop/17-2-1.ogg",\
+								"sound/music/walkman/slop/17-2-2.ogg",\
+								"sound/music/walkman/slop/17-2-3.ogg"))
 
 /obj/item/device/cassette_tape/quartermaster
-	name = "quartermaster cassette"
+	name = "brown-gold cassette"
 	id = 19
 	desc = "A cassette with a brown and gold sticker. It's labeled 'QM'S PLAYLIST'."
 	icon_state = "cassette_qm"
@@ -562,3 +567,18 @@
 				"side2" = list("sound/music/walkman/quartermaster/18-2-1.ogg",\
 								"sound/music/walkman/quartermaster/18-2-2.ogg",\
 								"sound/music/walkman/quartermaster/18-2-3.ogg"))
+
+/obj/item/device/cassette_tape/nanotrasen
+	name = "blue-white cassette"
+	id = 19
+	desc = "A cassette with a blue sticker with a white 'N' on the top. It's labeled 'THIRTEEN'. You're overwhelmed with a sense of nostalgia when you hold it, but you aren't sure why."
+	icon_state = "cassette_nt"
+	side1_icon = "cassette_nt"
+	songs = list("side1" = list("sound/music/walkman/nanotrasen/19-1-1.ogg",\
+								"sound/music/walkman/nanotrasen/19-1-2.ogg",\
+								"sound/music/walkman/nanotrasen/19-1-3.ogg"),\
+								"sound/music/walkman/nanotrasen/19-1-4.ogg"),\
+				"side2" = list("sound/music/walkman/nanotrasen/19-2-1.ogg",\
+								"sound/music/walkman/nanotrasen/19-2-2.ogg",\
+								"sound/music/walkman/nanotrasen/19-2-3.ogg"),\
+								"sound/music/walkman/nanotrasen/19-2-4.ogg"))

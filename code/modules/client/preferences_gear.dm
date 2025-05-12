@@ -506,9 +506,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "brown combat boots"
 	path = /obj/item/clothing/shoes/marine/civilian/brown
 
-/datum/gear/clothing/brown_gloves
-	display_name = "brown combat gloves"
-	path = /obj/item/clothing/gloves/marine/brown
+///datum/gear/clothing/brown_gloves
+//	display_name = "brown combat gloves"
+//	path = /obj/item/clothing/gloves/marine/brown
 
 /datum/gear/clothing/black_fingerless_gloves
 	display_name = "black fingerless combat gloves"
@@ -518,15 +518,15 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "brown fingerless combat gloves"
 	path = /obj/item/clothing/gloves/marine/brown/fingerless
 
-/datum/gear/clothing/flak
-	display_name = "M67 flak jacket (Blue)"
-	path = /obj/item/clothing/accessory/flak
-	cost = 3
-	allowed_origins = USCM_ORIGINS
+///datum/gear/clothing/flak
+//	display_name = "M67 flak jacket (Blue)"
+//	path = /obj/item/clothing/accessory/flak
+//	cost = 3
+//	allowed_origins = USCM_ORIGINS
 
-/datum/gear/clothing/flak/od
-	display_name = "M67 flak jacket (Green)"
-	path = /obj/item/clothing/accessory/flak/od
+///datum/gear/clothing/flak/od
+//	display_name = "M67 flak jacket (Green)"
+//	path = /obj/item/clothing/accessory/flak/od
 
 /datum/gear/clothing/windbreaker_green
 	display_name = "Windbreaker, Green"
@@ -799,7 +799,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/cassettes/walkman
 	display_name = "Walkman"
-	path = /obj/item/device/walkman
+	path = /obj/item/device/walkman/black
+	cost = 3
 
 /datum/gear/cassettes/pop1
 	display_name = "Blue Cassette"
@@ -854,6 +855,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/cassettes/pouch
 	display_name = "Cassette Pouch"
 	path = 	/obj/item/storage/pouch/cassette
+	cost = 1
+
+/datum/gear/cassettes/nanotrasen
+	display_name = "Blue-White Cassette"
+	path = /obj/item/device/cassette_tape/nanotrasen
+	cost = 1
 
 /*
 //================================================
@@ -959,10 +966,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/weapon/bayonet
 	display_name = "M5 bayonet"
 	path = 	/obj/item/attachable/bayonet
+	cost = 1
 
 /datum/gear/weapon/kabar
 	display_name = "KA-BAR utility knife"
 	path = 	/obj/item/weapon/knife/marine/kabar
+	cost = 2
 
 /datum/gear/weapon/bowie
 	display_name = "Bowie fighting knife"
@@ -972,6 +981,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/weapon/baker
 	display_name = "Baker-pattern fighting knife"
 	path = 	/obj/item/weapon/knife/marine/baker
+	cost = 2
 
 /datum/gear/weapon/type_80_Bayonet
 	display_name = "Type 80 Bayonet"
@@ -983,82 +993,83 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "M8 Cartridge Bayonet"
 	path = /obj/item/storage/box/loadout/co2_knife
 	allowed_origins = USCM_ORIGINS
+	cost = 2
 
-/datum/gear/weapon/clfpistol
-	display_name = "Hummingbird Pistol"
-	path = /obj/item/storage/box/loadout/CLF_loadout
-	cost = 4
+///datum/gear/weapon/clfpistol
+//	display_name = "Hummingbird Pistol"
+//	path = /obj/item/storage/box/loadout/CLF_loadout
+//	cost = 4
 
-/datum/gear/weapon/t73
-	display_name = "Type 73 Pistol"
-	path = /obj/item/storage/box/loadout/T73_loadout
-	cost = 4
+///datum/gear/weapon/t73
+//	display_name = "Type 73 Pistol"
+//	path = /obj/item/storage/box/loadout/T73_loadout
+//	cost = 4
 
-/datum/gear/weapon/zhnk72
-	display_name = "ZHNK-72 Revolver"
-	path = /obj/item/storage/box/loadout/ZHNK72_loadout
-	cost = 4
+///datum/gear/weapon/zhnk72
+//	display_name = "ZHNK-72 Revolver"
+//	path = /obj/item/storage/box/loadout/ZHNK72_loadout
+//	cost = 4
 
-/datum/gear/weapon/m4a3_custom
-	display_name = "Custom M4A3 Pistol"
-	path = /obj/item/storage/box/loadout/M4A3_custom_loadout
-	cost = 4
-	allowed_origins = USCM_ORIGINS
+///datum/gear/weapon/m4a3_custom
+//	display_name = "Custom M4A3 Pistol"
+//	path = /obj/item/storage/box/loadout/M4A3_custom_loadout
+//	cost = 4
+//	allowed_origins = USCM_ORIGINS
 
-/datum/gear/weapon/m1911
-	display_name = "M1911 Pistol"
-	path = /obj/item/storage/box/loadout/M1911_loadout
-	cost = 4
-	allowed_origins = USCM_ORIGINS
+///datum/gear/weapon/m1911
+//	display_name = "M1911 Pistol"
+//	path = /obj/item/storage/box/loadout/M1911_loadout
+//	cost = 4
+//	allowed_origins = USCM_ORIGINS
 
-/datum/gear/weapon/m48a4
-	display_name = "M48A4 Service Pistol"
-	path = /obj/item/storage/box/loadout/M48A4_loadout
-	cost = 4
-	allowed_origins = USCM_ORIGINS
+///datum/gear/weapon/m48a4
+//	display_name = "M48A4 Service Pistol"
+//	path = /obj/item/storage/box/loadout/M48A4_loadout
+//	cost = 4
+//	allowed_origins = USCM_ORIGINS
 
-/datum/gear/weapon/m44
-	display_name = "M44 Revolver"
-	path = /obj/item/storage/box/loadout/M44_loadout
-	cost = 4
+///datum/gear/weapon/m44
+//	display_name = "M44 Revolver"
+//	path = /obj/item/storage/box/loadout/M44_loadout
+//	cost = 4
 
-/datum/gear/weapon/m44_custom_revolver
-	display_name = "Custom M44 Revolver"
-	path = /obj/item/storage/box/loadout/M44_custom_loadout
-	cost = 4
-	allowed_origins = USCM_ORIGINS
+///datum/gear/weapon/m44_custom_revolver
+//	display_name = "Custom M44 Revolver"
+//	path = /obj/item/storage/box/loadout/M44_custom_loadout
+//	cost = 4
+//	allowed_origins = USCM_ORIGINS
 
-/datum/gear/weapon/hg45_civilian
-	display_name = "HG 45 'Aguila' Pistol"
-	path = /obj/item/storage/box/loadout/HG45_civilian_loadout
-	cost = 4
+///datum/gear/weapon/hg45_civilian
+//	display_name = "HG 45 'Aguila' Pistol"
+//	path = /obj/item/storage/box/loadout/HG45_civilian_loadout
+//	cost = 4
 
-/datum/gear/weapon/hg45_marine
-	display_name = "HG 45 'Marina' Pistol"
-	path = /obj/item/storage/box/loadout/HG45_marine_loadout
-	cost = 4
-	allowed_origins = USCM_ORIGINS
+///datum/gear/weapon/hg45_marine
+//	display_name = "HG 45 'Marina' Pistol"
+//	path = /obj/item/storage/box/loadout/HG45_marine_loadout
+//	cost = 4
+//	allowed_origins = USCM_ORIGINS
 
-/datum/gear/weapon/hg44
-	display_name = "HG 44 'Automag' Pistol"
-	path = /obj/item/storage/box/loadout/HG44_loadout
-	cost = 4
+///datum/gear/weapon/hg44
+//	display_name = "HG 44 'Automag' Pistol"
+//	path = /obj/item/storage/box/loadout/HG44_loadout
+//	cost = 4
 
-/datum/gear/weapon/spearhead
-	display_name = "Spearhead Armoury Revolver"
-	path = /obj/item/storage/box/loadout/Spearhead_loadout
-	cost = 4
+///datum/gear/weapon/spearhead
+//	display_name = "Spearhead Armoury Revolver"
+//	path = /obj/item/storage/box/loadout/Spearhead_loadout
+//	cost = 4
 
-/datum/gear/weapon/spearhead_custom
-	display_name = "Custom Spearhead Armoury Revolver"
-	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
-	cost = 4
-	allowed_origins = USCM_ORIGINS
+///datum/gear/weapon/spearhead_custom
+//	display_name = "Custom Spearhead Armoury Revolver"
+//	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
+//	cost = 4
+//	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m2100_machete
 	display_name = "M2100 Machete"
 	path = /obj/item/storage/large_holster/machete/arnold/weak
-	cost = 4
+	cost = 5
 
 /*
 //================================================
@@ -1322,40 +1333,47 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/smoking/pack_lucky_strikes
 	display_name = "Pack Of Lucky Strikes"
 	path = /obj/item/storage/fancy/cigarettes/lucky_strikes
-	cost = 0
+	cost = 1
 
 /datum/gear/smoking/pack_emeraldgreen
 	display_name = "Pack Of Emerald Greens"
 	path = /obj/item/storage/fancy/cigarettes/emeraldgreen
+	cost = 1
 
 /datum/gear/smoking/pack_wygold
 	display_name = "Pack Of Weyland Yutani Golds"
 	path = /obj/item/storage/fancy/cigarettes/wypacket
+	cost = 3
 
 /datum/gear/smoking/pack_koorlander
 	display_name = "Pack Of Koorlander Golds"
 	path = /obj/item/storage/fancy/cigarettes/kpack
+	cost = 2
 
 /datum/gear/smoking/pack_arcturian
 	display_name = "Pack Of Arcturian Aces"
 	path = /obj/item/storage/fancy/cigarettes/arcturian_ace
+	cost = 2
 
 /datum/gear/smoking/pack_ladyfingers
 	display_name = "Pack Of Lady Fingers"
 	path = /obj/item/storage/fancy/cigarettes/lady_finger
+	cost = 2
 
 /datum/gear/smoking/spirit
 	display_name = "Pack Of American Spirit, Turquoise"
 	path = /obj/item/storage/fancy/cigarettes/spirit
+	cost = 2
 
 /datum/gear/smoking/spirit_yellow
 	display_name = "Pack Of American Spirit, Yellow"
 	path = /obj/item/storage/fancy/cigarettes/spirit/yellow
+	cost = 2
 
 /datum/gear/smoking/pack_exec
 	display_name = "Pack Of Executive Selects"
 	path = /obj/item/storage/fancy/cigarettes/blackpack
-	cost = 4
+	cost = 3
 
 /datum/gear/smoking/weed_joint
 	display_name = "Joint of weed"
@@ -1370,14 +1388,17 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/smoking/zippo
 	display_name = "Lighter, zippo"
 	path = /obj/item/tool/lighter/zippo
+	cost = 2
 
 /datum/gear/smoking/zippo/black
 	display_name = "Black lighter, zippo"
 	path = /obj/item/tool/lighter/zippo/black
+	cost = 2
 
 /datum/gear/smoking/zippo/blue
 	display_name = "Blue lighter, zippo"
 	path = /obj/item/tool/lighter/zippo/blue
+	cost = 2
 
 /datum/gear/smoking/goldzippo
 	display_name = "Lighter, golden zippo"
@@ -1387,6 +1408,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/smoking/electronic_cigarette
 	display_name = "Electronic cigarette"
 	path = /obj/item/clothing/mask/electronic_cigarette
+	cost = 1
 
 /datum/gear/smoking/electronic_cigarette/cigar
 	display_name = "Electronic cigar"
