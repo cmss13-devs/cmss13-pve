@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - bugfix: "Can no longer fit UPP caseless 40mm grenades or old-style cased 40mm grenades into the USCM 30mm UGL and vice versa. Use the right kind of launcher, stinky."
