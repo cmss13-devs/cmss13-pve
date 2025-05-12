@@ -590,6 +590,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Freelancer uniform"
 	path = /obj/item/clothing/under/marine/veteran/freelancer
 
+/datum/gear/clothing/uniform_security
+	display_name = "civilian security officer uniform"
+	path = /obj/item/clothing/under/marine/ua_riot
+
 /datum/gear/clothing/black_boots
 	display_name = "black combat boots"
 	path = /obj/item/clothing/shoes/marine/civilian
@@ -597,6 +601,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/clothing/brown_boots
 	display_name = "brown combat boots"
 	path = /obj/item/clothing/shoes/marine/civilian/brown
+
+/datum/gear/clothing/rmc_boots
+	display_name = "Royal Marine Commando boots"
+	path = /obj/item/clothing/shoes/royal_marine
 
 ///datum/gear/clothing/brown_gloves
 //	display_name = "brown combat gloves"
