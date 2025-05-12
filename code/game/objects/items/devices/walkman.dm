@@ -16,7 +16,7 @@
 	var/mob/current_listener
 	var/pl_index = 1
 	var/volume = 25
-	var/design = 1 // What kind of walkman design style to use
+	var/design = 0 // What kind of walkman design style to use
 	item_icons = list(
 		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
 		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
@@ -54,6 +54,11 @@
 	name = "orange Seegson C-Series magnetic tape recorder"
 	desc = "A classic-style portable audio recorder used to record or play music and audio tapes. This one is colored orange."
 	design = 4
+
+/obj/item/device/walkman/purple
+	name = "purple Seegson C-Series magnetic tape recorder"
+	desc = "A classic-style portable audio recorder used to record or play music and audio tapes. This one is colored purple."
+	design = 6
 
 /obj/item/device/walkman/rainbow
 	name = "rainbow Seegson C-Series magnetic tape recorder"
