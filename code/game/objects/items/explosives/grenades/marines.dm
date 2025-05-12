@@ -178,6 +178,7 @@
 	hand_throwable = FALSE
 	underslug_launchable = TRUE
 	dual_purpose = FALSE
+	caliber = "30mm"
 	explosion_power = 0
 	explosion_falloff = 25
 	det_time = 0 //this should mean that it will explode instantly when fired and thus generate the shotshell effect.
