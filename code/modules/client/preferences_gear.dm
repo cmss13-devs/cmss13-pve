@@ -618,15 +618,15 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "brown fingerless combat gloves"
 	path = /obj/item/clothing/gloves/marine/brown/fingerless
 
-///datum/gear/clothing/flak
-//	display_name = "M67 flak jacket (Blue)"
-//	path = /obj/item/clothing/accessory/flak
-//	cost = 3
-//	allowed_origins = USCM_ORIGINS
+/datum/gear/clothing/flak
+	display_name = "M67 flak jacket (Blue)"
+	path = /obj/item/clothing/accessory/flak
+	cost = 3
+	allowed_origins = USCM_ORIGINS
 
-///datum/gear/clothing/flak/od
-//	display_name = "M67 flak jacket (Green)"
-//	path = /obj/item/clothing/accessory/flak/od
+/datum/gear/clothing/flak/od
+	display_name = "M67 flak jacket (Green)"
+	path = /obj/item/clothing/accessory/flak/od
 
 /datum/gear/clothing/windbreaker_green
 	display_name = "Windbreaker, Green"
