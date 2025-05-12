@@ -1,82 +1,88 @@
-//==================================================================GREENVAULT RANCH
+//==================================================================Greenvault Ranch
 //BASE
-/area/greenvault
+/area/Greenvault_Ranch
 	name = "Greenvault Ranch"
 	icon_state = "blue"
 	can_build_special = TRUE
 	powernet_name = "ground"
 	minimap_color = MINIMAP_AREA_COLONY
 //============================================================PARENTS
-/area/greenvault/outside
-	name = "Greenvault Outside"
+/area/Greenvault_Ranch/outside
+	name = "Greenvault Ranch Outside"
 	ceiling = CEILING_NONE
-/area/greenvault/int_glass
-	name = "Greenvault Glass"
+/area/Greenvault_Ranch/int_glass
+	name = "Greenvault Ranch Glass"
 	ceiling = CEILING_GLASS
-/area/greenvault/int_reg
-	name = "Greenvault Metal"
+/area/Greenvault_Ranch/int_reg
+	name = "Greenvault Ranch Metal"
 	ceiling = CEILING_METAL
-/area/greenvault/int_heavy
-	name = "Greenvault Reinforced"
+/area/Greenvault_Ranch/int_heavy
+	name = "Greenvault Ranch Reinforced"
 	ceiling = CEILING_REINFORCED_METAL
-/area/greenvault/caves
-	name = "Greenvault Caves"
+/area/Greenvault_Ranch/caves
+	name = "Greenvault Ranch Caves"
 	ceiling = CEILING_DEEP_UNDERGROUND
 //============================================================SHUTTLES
-/area/greenvault/shuttles/drop1
-	name = "greenvault - Spaceport"
+/area/Greenvault_Ranch/shuttles/drop1
+	name = "Greenvault Ranch Spaceport"
 	icon_state = "shuttle"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
 //============================================================MAIN MAP
-/area/greenvault/int_reg/clinic
+/area/Greenvault_Ranch/int_reg/clinic
 	name = "Clinic"
 	icon_state = "medbay"
-/area/greenvault/int_reg/marshals
+/area/Greenvault_Ranch/int_reg/marshals
 	name = "Colonial Marshals Complex"
 	icon_state = "security"
-/area/greenvault/int_reg/virology
+/area/Greenvault_Ranch/int_reg/virology
 	name = "Veterinarian Clinic"
 	icon_state = "virology"
-/area/greenvault/outside/northwest
-	name = "Greenvault Fields"
+/area/Greenvault_Ranch/outside/northwest
+	name = "Greenvault Ranch Fields"
 	icon_state = "northwest"
-/area/greenvault/int_reg/telecomms
+/area/Greenvault_Ranch/int_reg/telecomms
 	name = "Spaceport Telecommunication Hub"
 	icon_state = "yellow"
-/area/greenvault/int_reg/telecomms_yard
+/area/Greenvault_Ranch/int_reg/telecomms_yard
 	name = "Spaceport Telecommunication Yard"
 	icon_state = "blue-red"
-/area/greenvault/int_reg/garage
+/area/Greenvault_Ranch/int_reg/garage
 	name = "Spaceport"
 	icon_state = "storage"
-/area/greenvault/outside/north_river
+/area/Greenvault_Ranch/outside/north_river
 	name = "Northern River"
-	icon_state = "north"
-/area/greenvault/outside/pens
+	icon_state = "varadero2"
+/area/Greenvault_Ranch/outside/pens
 	name = "Animal Pens"
 	icon_state = "northwest"
-/area/greenvault/outside/wildplace
+/area/Greenvault_Ranch/outside/wildplace
 	name = "Southeasten Wilderness"
 	icon_state = "purple"
-/area/greenvault/int_reg/housing
+/area/Greenvault_Ranch/int_reg/housing
 	name = "Farm Dormitories"
 	icon_state = "blue"
-/area/greenvault/int_reg/kitchen
+/area/Greenvault_Ranch/int_reg/kitchen
 	name = "Farm Canteen"
 	icon_state = "blue"
-/area/greenvault/int_reg/farmbay
+/area/Greenvault_Ranch/int_reg/farmbay
 	name = "Farming Vehicle Storage"
 	icon_state = "storage"
-/area/greenvault/int_reg/trailerpark
+/area/Greenvault_Ranch/int_reg/trailerpark
 	name = "Trailer Park"
 	icon_state = "northeast"
-/area/greenvault/outside/wheatfields
+/area/Greenvault_Ranch/outside/wheatfields
 	name = "Southeast Wheat Fields"
 	icon_state = "southwest"
-/area/greenvault/int_heavy/researchlab
+/area/Greenvault_Ranch/int_heavy/researchlab
 	name = "Hidden Research Lab"
 	icon_state = "south"
-/area/greenvault/int_heavy/powerplace
+/area/Greenvault_Ranch/int_heavy/powerplace
 	name = "Power Generators"
 	icon_state = "yellow"
+
+/area/Greenvault_Ranch/int_heavyoutofbounds
+	name = "Greenvault Ranch Out Of Bounds"
+	icon_state = "unknown"
+	is_resin_allowed = FALSE
+	flags_area = AREA_NOTUNNEL
