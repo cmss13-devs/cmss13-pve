@@ -576,9 +576,9 @@
 	side1_icon = "cassette_nt"
 	songs = list("side1" = list("sound/music/walkman/nanotrasen/19-1-1.ogg",\
 								"sound/music/walkman/nanotrasen/19-1-2.ogg",\
-								"sound/music/walkman/nanotrasen/19-1-3.ogg"),\
+								"sound/music/walkman/nanotrasen/19-1-3.ogg",\
 								"sound/music/walkman/nanotrasen/19-1-4.ogg"),\
 				"side2" = list("sound/music/walkman/nanotrasen/19-2-1.ogg",\
 								"sound/music/walkman/nanotrasen/19-2-2.ogg",\
-								"sound/music/walkman/nanotrasen/19-2-3.ogg"),\
+								"sound/music/walkman/nanotrasen/19-2-3.ogg",\
 								"sound/music/walkman/nanotrasen/19-2-4.ogg"))
