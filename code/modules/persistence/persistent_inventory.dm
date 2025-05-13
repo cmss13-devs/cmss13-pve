@@ -104,7 +104,7 @@ proc/listclearnulls(list/list)
 
 	if(current_inventory)
 		if(H.ckey != current_inventory.unique_id)
-			visible_message("<b>[src]</b> beeps, \"<span class='danger'>This stash does not belong to you. Please log out and log in with your account.</span>\" ")
+			visible_message("<b>[src]</b> beeps, \"<span class='danger'>This stash does not belong to you. Please use a different stash point.</span>\" ")
 			return
 		if(current_inventory.max_possible_items <= length(current_inventory.stored_items))
 			visible_message("<b>[src]</b> beeps, \"<span class='danger'>Your stash is at maximum capacity.</span>\" ")
@@ -218,15 +218,19 @@ proc/listclearnulls(list/list)
 	if(href_list["cancel"])
 		var/mob/user = usr
 
-		current_inventory = null
-		var/dat
-		dat = get_full_data(user)
-		var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
-		popup.set_content(jointext(dat,null))
-		popup.open()
-		visible_message("<b>[src]</b> beeps, \"<span class='notice'>Logged out of stash successfully. Have a productive day.</span>\" ")
-		onclose(usr, "Personal Storage")
-		return
+		if(H.ckey != current_inventory.unique_id)
+			visible_message("<b>[src]</b> beeps, \"<span class='danger'>This stash does not belong to you. Please use a different stash point.</span>\" ")
+			return
+		else
+			current_inventory = null
+			var/dat
+			dat = get_full_data(user)
+			var/datum/browser/popup = new(usr, "inventory_machine", "Personal Stash", nwidth = 550, nheight = 650)
+			popup.set_content(jointext(dat,null))
+			popup.open()
+			visible_message("<b>[src]</b> beeps, \"<span class='notice'>Logged out of stash successfully. Have a productive day.</span>\" ")
+			onclose(usr, "Personal Storage")
+			return
 
 	if(href_list["choice"])
 		switch(href_list["choice"])
@@ -236,7 +240,7 @@ proc/listclearnulls(list/list)
 				var/mob/user = usr
 				var/mob/living/carbon/human/H = user
 				if(H.ckey != current_inventory.unique_id)
-					visible_message("<b>[src]</b> beeps, \"<span class='danger'>This stash does not belong to you. Please log out and log in with your account.</span>\" ")
+					visible_message("<b>[src]</b> beeps, \"<span class='danger'>This stash does not belong to you. Please use a different stash point.</span>\" ")
 					return
 
 				if(withdrawing || !current_inventory || !item || !(item in current_inventory.stored_items) )
